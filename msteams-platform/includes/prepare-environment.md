@@ -1,0 +1,3 @@
+## <a name="prepare-your-development-environment"></a>Préparer votre environnement de développement
+
+La première chose à faire est de préparer votre environnement de développement. Vous devez vous assurer que le téléchargement d’applications personnalisées est activé pour l’organisation Office 365 que vous souhaitez utiliser pour créer votre application. Si vous avez besoin d’un client de développement dédié, vous pouvez vous inscrire au programme pour les [développeurs Office 365](https://developer.microsoft.com/office/dev-program). Pour plus d’informations, consultez [la rubrique Configuration de votre environnement de développement](~/concepts/build-and-test/prepare-your-o365-tenant.md).

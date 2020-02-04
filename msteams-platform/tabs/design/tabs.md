@@ -1,0 +1,119 @@
+---
+title: Instructions de conception pour les onglets
+description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
+keywords: instructions de conception de l’infrastructure de référence
+ms.openlocfilehash: adf86678a42e2267af00734e1ef85efced882488
+ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41673517"
+---
+# <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
+
+> [!Important]
+> **Onglets sur les clients mobiles**
+>
+> Suivez les [instructions pour les onglets sur mobile](~/tabs/design/tabs-mobile.md) lors de la création de vos onglets. Si votre onglet utilise l’authentification, vous devez mettre à niveau votre SDK teams JavaScript vers la version 1.4.1 ou une version ultérieure, sinon l’authentification échouera.
+>
+> **Onglets personnels (statiques) sur mobile :**
+>
+> * Les onglets statiques (application personnelle) sont disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md).
+> * Lors de la création de vos onglets statiques, assurez-vous de suivre les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
+>
+> **Onglets canal/groupe (configurable) sur mobile :**
+>
+> * Les clients mobiles affichent uniquement les onglets dont `websiteUrl`la valeur est. Si vous souhaitez que votre onglet apparaisse sur les clients mobiles Teams, vous devez définir la `websiteUrl`valeur de.
+> * Le comportement d’ouverture par défaut sur mobile consiste à ouvrir l’extérieur `websiteUrl`dans le navigateur à l’aide du. Pour les applications publiées dans le magasin d’applications public, si vous voulez que les onglets de votre canal s’ouvrent dans teams par défaut, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)et contactez votre représentant du support technique pour demander à être inclus dans la liste d’autorisation.
+
+Les onglets sont des canevas que vous pouvez utiliser pour partager du contenu, organiser des conversations et héberger des services tiers dans le flux de travail Organic d’une équipe. Lorsque vous créez un onglet dans Microsoft Teams, il place le centre et le centre de votre application Web où il est facilement accessible à partir des conversations clés.
+
+## <a name="guidelines"></a>Conseils
+
+Un onglet approprié doit présenter les caractéristiques suivantes :
+
+### <a name="focused-functionality"></a>Fonctionnalités ciblées
+
+Les onglets fonctionnent mieux lorsqu’ils sont conçus pour répondre à un besoin spécifique. Concentrez-vous sur un petit ensemble de tâches ou sur un sous-ensemble de données correspondant au canal dans lequel se trouve l’onglet.
+
+### <a name="reduced-chrome"></a>Chrome réduit
+
+Évitez de créer plusieurs panneaux dans un onglet, d’ajouter des couches de navigation ou de demander aux utilisateurs de faire défiler verticalement et horizontalement dans un onglet. En d’autres termes, essayez de ne pas avoir d’onglets dans votre onglet.
+
+> [!TIP]
+> Évitez de créer plusieurs panneaux dans un onglet, d’ajouter des couches de navigation ou de demander aux utilisateurs de faire défiler verticalement et horizontalement dans un onglet.
+
+### <a name="integration"></a>Intégration
+
+Découvrez comment informer les utilisateurs de l’activité de l’onglet en publiant des cartes dans une conversation, par exemple.
+
+### <a name="conversational"></a>Conversation
+
+Trouver un moyen de faciliter la conversation sur un onglet. Cela garantit que le Centre des conversations est sur le contenu, les données ou le processus à portée de main.
+
+### <a name="streamlined-access"></a>Accès simplifié
+
+Assurez-vous que vous accordez l’accès aux bonnes personnes au bon moment. Le simple maintien de votre processus de connexion évite de créer des obstacles à la collaboration et à la collaboration.
+
+### <a name="personality"></a>Caractéristique
+
+Votre zone de dessin de tabulation constitue une excellente occasion de personnaliser votre expérience. Incorporez vos propres logos, couleurs et dispositions pour communiquer la personnalité.
+
+Votre logo est une partie importante de votre identité et une connexion avec vos utilisateurs. Veillez donc à l’inclure.
+
+* Placer votre logo dans le coin gauche ou droit ou le long du bord inférieur
+* Garder votre logo petit et discret
+
+> [!TIP]
+> Utilisez notre style visuel pour que votre service ressemble à une partie de teams.
+
+---
+
+## <a name="tab-layouts"></a>Mises en page d’onglets
+
+[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+
+---
+
+## <a name="types-of-tabs"></a>Types d’onglets
+
+[!include[Tab types](~/includes/design/tab-types.html)]
+
+---
+
+## <a name="configuration-page-height"></a>Hauteur de la page de configuration
+
+>[!NOTE]
+>En septembre 2018, la hauteur de la [page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) des onglets a été augmentée, tandis que la largeur est restée inchangée. Si votre application est conçue pour une taille plus ancienne, votre page de configuration d’onglet aura une grande quantité d’espacement vertical. Les applications de magasin héritées exemptées de cette modification devront contacter Microsoft après la mise à jour pour prendre en compte les nouvelles dimensions.
+
+Les dimensions de la page de configuration de l’onglet :
+
+<img width="450px" title="Tailles des onglets de configuration" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+### <a name="guidelines-for-tab-configuration-page-format"></a>Instructions pour le format de page de configuration d’onglet
+
+* Basez la hauteur minimale de votre zone de contenu sur la page de configuration de votre onglet sur les éléments graphiques de hauteur fixe.
+* Calculer l’espacement vertical disponible (hauteur de la zone de contenu dans la page de `window.innerHeight`Configuration) à l’aide de. Cette valeur renvoie la taille du `<iframe>` dans lequel votre page de configuration se trouve, ce qui peut changer dans les versions ultérieures. À l’aide de cette valeur, votre contenu s’ajuste automatiquement aux modifications ultérieures.
+* Allouer de l’espace vertical aux éléments de hauteur variable moins ce qui est nécessaire pour les éléments de hauteur fixe.
+* Pour l’état de *connexion* , centrez verticalement et horizontalement le contenu.
+* Si vous souhaitez une image d’arrière-plan, vous avez besoin d’une nouvelle image ajustée pour s’adapter à la zone (par défaut) ou vous pouvez conserver la même image et choisir entre :
+  * alignement sur le coin supérieur gauche.
+  * mise à l’échelle de l’image pour l’ajuster.
+
+Lorsque la taille est correcte, votre page de configuration d’onglet doit ressembler à ceci :
+
+<img width="450px" title="Onglet nouvelle configuration" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+
+## <a name="best-practices"></a>Meilleures pratiques
+
+### <a name="always-include-a-default-state"></a>Toujours inclure un État par défaut
+
+Incluez un État par défaut pour faciliter la configuration des onglets, même si votre onglet est configurable.
+
+### <a name="deep-linking"></a>Liaison profonde
+
+Chaque fois que possible, les cartes et les robots doivent créer des liens approfondis vers des données plus riches dans un onglet hébergé. Par exemple, une carte peut afficher un résumé des données de bogue, mais vous pouvez cliquer dessus pour afficher l’intégralité du bogue dans un onglet.
+
+### <a name="naming"></a>Donnant
+
+Dans de nombreux cas, le nom de votre application peut donner un excellent nom d’onglet. Vous pouvez également nommer vos onglets en fonction de la fonctionnalité qu’ils fournissent.
