@@ -1,0 +1,10 @@
+## <a name="learn-more"></a><span data-ttu-id="419b7-101">En savoir plus</span><span class="sxs-lookup"><span data-stu-id="419b7-101">Learn more</span></span>
+
+<span data-ttu-id="419b7-102">Essayez-le dans un démarrage rapide :</span><span class="sxs-lookup"><span data-stu-id="419b7-102">Try it out in a quickstart:</span></span>
+
+* <span data-ttu-id="419b7-103">Démarrages rapides pour C #</span><span class="sxs-lookup"><span data-stu-id="419b7-103">Quickstarts for C#</span></span>
+  * [<span data-ttu-id="419b7-104">Extension de messagerie avec des commandes basées sur l’action</span><span class="sxs-lookup"><span data-stu-id="419b7-104">Messaging extension with action-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
+  * [<span data-ttu-id="419b7-105">Extension de messagerie avec des commandes basées sur la recherche</span><span class="sxs-lookup"><span data-stu-id="419b7-105">Messaging extension with search-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
+* <span data-ttu-id="419b7-106">Démarrages rapides pour JavaScript</span><span class="sxs-lookup"><span data-stu-id="419b7-106">Quickstarts for JavaScript</span></span>
+  * [<span data-ttu-id="419b7-107">Extension de messagerie avec des commandes basées sur l’action</span><span class="sxs-lookup"><span data-stu-id="419b7-107">Messaging extension with action-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
+  * [<span data-ttu-id="419b7-108">Extension de messagerie avec des commandes basées sur la recherche</span><span class="sxs-lookup"><span data-stu-id="419b7-108">Messaging extension with search-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
