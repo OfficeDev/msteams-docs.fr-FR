@@ -2,14 +2,17 @@
 title: Liste de vérification du manifeste de l’application
 description: Liste de vérification de votre manifeste d’application pour la publication de votre application Microsoft teams sur AppSource
 keywords: Microsoft teams publier la liste de vérification de la publication Office
-ms.openlocfilehash: e684bb4f578944c6f37eeb43541a491d42ec3479
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6186daf264f04e04d6037ddfb7d9208994cc3c57
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673877"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783877"
 ---
 # <a name="app-manifest-checklist"></a>Liste de vérification du manifeste de l’application
+
+>[!IMPORTANT]
+>Nous effectuons la migration de la gestion des solutions Office du Tableau de bord vendeur à l’Espace partenaires. Pour plus d’informations, voir [Déplacement du Tableau de bord vendeur vers l’Espace partenaires](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/) et [FAQ](https://docs.microsoft.com/office/dev/store/partner-center-faq).
 
 Le manifeste de votre application doit être conforme aux instructions décrites ci-dessous.
 
@@ -19,13 +22,13 @@ Le manifeste de votre application doit être conforme aux instructions décrites
 ## <a name="tips"></a>Conseils
 
 * N’utilisez pas « Teams », « Microsoft » ou « app » dans le nom de votre application.
-* Le developerName dans le manifeste de l’application doit être le même que le nom du fournisseur défini dans le Centre des partenaires ou le service mon tableau de bord vendeur.
+* Le developerName dans votre manifeste doit être le même que le nom du fournisseur défini dans le centre de partenaires.
 * Assurez-vous que la description de l’application, les captures d’écran, le texte et les images promotionnelles décrivent uniquement l’application et qu’elles ne contiennent aucune publicité, promotion ou nom de marque protégé supplémentaire.
 * Si votre produit nécessite un compte sur votre service ou un autre service, répertoriez-le dans la description et vérifiez qu’il existe des liens pour vous inscrire, connectez-vous et déconnectez-vous.
 * Si votre produit nécessite des achats supplémentaires pour fonctionner correctement, répertoriez-le dans la description.
-* Fournissez les conditions requises et les liens de politique de confidentialité dans le manifeste et le Centre des partenaires ou le tableau de bord vendeur. Vérifiez que les liens correspondent correctement à la documentation appropriée, à l’idéal pour les équipes spécifiques. Pour les robots, vous devez fournir ces mêmes informations dans la section envoi de la page d’inscription de l’infrastructure bot.
-* Assurez-vous que les métadonnées du manifeste correspondent exactement aux métadonnées du centre de partenaires ou du tableau de bord vendeur (et, pour les robots, dans l’inscription de l’infrastructure de robot). Notez que l’entrée de mon tableau de bord vendeur doit contenir une description plus détaillée et mise en forme pour l’utiliser dans la page du produit AppSource.
-* Assurez-vous que le titre de l’application utilisé dans votre manifeste correspond exactement au titre de l’application entré dans le centre partenaires ou dans l’envoi du tableau de bord vendeur.
+* Fournissez les conditions requises et les liens de politique de confidentialité dans le manifeste et le Centre des partenaires ou le tableau de bord. Vérifiez que les liens correspondent correctement à la documentation appropriée, à l’idéal pour les équipes spécifiques. Pour les robots, vous devez fournir ces mêmes informations dans la section envoi de la page d’inscription de l’infrastructure bot.
+* Assurez-vous que les métadonnées dans le manifeste correspondent exactement aux métadonnées du centre de partenaires (et, pour les robots, dans l’inscription de l’infrastructure de robot). Notez que votre entrée du centre partenaires peut contenir une description plus détaillée et mise en forme pour l’utiliser dans la page du produit AppSource.
+* Assurez-vous que le titre de l’application utilisé dans votre manifeste est une **correspondance exacte** avec le titre de l’application entré dans l’envoi du centre partenaire. *Consultez la rubrique* [créer des listes efficaces dans Microsoft AppSource et dans Office, utilisez un nom de complément cohérent ](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name).
 
 ## <a name="metadata-requirement"></a>Exigences de métadonnées
 

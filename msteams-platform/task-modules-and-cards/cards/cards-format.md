@@ -3,12 +3,12 @@ title: Mise en forme de texte dans les cartes
 description: Décrit la mise en forme de texte de carte dans Microsoft teams
 keywords: format des cartes robots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 4a467c5b0b21cc3c19977bf7caa25e6790904b10
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673980"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783968"
 ---
 # <a name="card-formatting"></a>Mise en forme de carte
 
@@ -105,14 +105,16 @@ Sous Android, la mise en forme de la démarque de carte adaptative apparaît com
     ]
 }
 ```
+
 ## <a name="mention-support-within-adaptive-cards"></a>Mentionner la prise en charge dans les cartes adaptatives 
 
 > [!NOTE]
-> Mentionner la prise en charge des cartes est actuellement prise en charge en version préliminaire pour les [développeurs](~/resources/dev-preview/developer-preview-intro) .
+> Mentionner la prise en charge des cartes est actuellement prise en charge en version préliminaire pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md) .
 
 Les robots et les extensions de messagerie peuvent désormais inclure des mentions dans le contenu des cartes dans les éléments bloc de texte et FactSet. 
 
 ### <a name="constructing-mentions"></a>Création de mentions
+
 Pour inclure une mention dans une carte adaptative, votre application doit inclure les éléments suivants
 
 * `<at>username</at>`dans les éléments de carte adaptative pris en charge
@@ -121,6 +123,7 @@ Pour inclure une mention dans une carte adaptative, votre application doit inclu
 Notez que les cartes avec des mentions ne sont pas prises en charge sur les clients mobiles pour le moment.
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Exemple de carte adaptative avec une mention
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
