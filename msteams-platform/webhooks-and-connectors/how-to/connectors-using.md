@@ -3,12 +3,12 @@ title: Envoi de messages à des connecteurs et Webhooks
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: cf720bb8193c6b61ba37e8d89fafc044555222ac
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673971"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783912"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -230,14 +230,15 @@ Pour vérifier qu’une action `HttpPOST` fonctionne correctement, utilisez votr
 
 ## <a name="rate-limiting-for-connectors"></a>Limitation du taux pour les connecteurs
 
-Cette limite détermine le trafic qu’un connecteur ou un webhook entrant est autorisé à générer sur un canal.
+Cette limite détermine le trafic qu’un connecteur ou un webhook entrant est autorisé à générer sur un canal. Les demandes effectuées par votre webhook ou connecteur sont limitées lorsque le seuil du taux limite est dépassé. La durée du comportement de limitation est directement corrélée aux paramètres de taux de demande dépassés. Par exemple, si un connecteur ou un webhook dépasse 100 demandes de message dans 3600 secondes, le connecteur est limité pour les 3600 prochaines secondes :
 
 | Période de temps (sec)  | Nombre maximal de demandes de message autorisées  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 heure)  | 100  | 
 | 7200 | 150  | 
+| 86400 (1 jour) | 1800  | 
 
 Une [logique des nouvelles tentatives avec une sauvegarde exponentielle](/azure/architecture/patterns/retry) comme ci-dessous permet de limiter les débits pour les cas où les demandes dépassent les limites en une seconde. Veuillez suivre les [meilleures pratiques](../../bots/how-to/rate-limit.md#best-practices) pour éviter d’atteindre les limites de débit.
 
