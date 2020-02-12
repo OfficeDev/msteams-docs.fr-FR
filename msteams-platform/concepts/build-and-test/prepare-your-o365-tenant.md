@@ -2,16 +2,16 @@
 title: Préparer votre client Office 365
 description: Prise en main de teams dans Office 365
 keywords: Configurer le chargement des équipes client Office 365
-ms.openlocfilehash: 62cd640196631f50c72762253ff1bd75a143337d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 634392ea3f0228aef69ff920d3b369eb49dd3965
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673902"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953494"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Préparer votre client Office 365
 
-Pour développer des applications pour Microsoft Teams, vous devez être un [client Office 365 avec l’un des plans suivants](https://products.office.com/business/compare-more-office-365-for-business-plans).
+Si vous êtes un abonné Office 365, vous pouvez développer des applications pour Microsoft teams à l’aide de l’un des [plans](https://products.office.com/business/compare-more-office-365-for-business-plans)suivants :
 
 * Business Essentials
 * Business Premium
@@ -19,24 +19,25 @@ Pour développer des applications pour Microsoft Teams, vous devez être un [cli
 * Développeur
 * Éducation, éducation plus et éducation E5
 
-Microsoft teams est également disponible pour les clients qui ont acheté E4 avant sa retraite.
+Microsoft teams sera également disponible pour les clients abonnés à E4 avant sa [retraite](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
 
 ## <a name="just-need-a-development-environment"></a>Vous avez besoin d’un environnement de développement ?
 
-Si vous ne disposez pas d’un compte Office 365, vous pouvez vous inscrire au [programme pour les développeurs office 365](https://dev.office.com/devprogram) pour obtenir un service *gratuit* 90 jours (vous pouvez le renouveler aussi longtemps que vous l’utilisez pour une activité de développement) client Office 365 développeur. Ce compte peut uniquement être utilisé à des fins de test. Pour plus d’informations sur [la configuration de vos comptes de test](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US).
+Si vous ne disposez pas d’un compte Office 365, vous pouvez vous inscrire pour obtenir un abonnement [office 365 Developer Program](https://dev.office.com/devprogram) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement. Si vous disposez d’un abonnement Visual Studio *entreprise* ou *professionnel* , les deux programmes incluent un abonnement Office 365 [développeur](https://aka.ms/MyVisualStudioBenefits)gratuit, actif pendant toute la durée de votre abonnement Visual Studio. *Consultez la rubrique* [configurer un abonnement développeur Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>Activer Microsoft teams pour votre organisation
 
-Si Microsoft teams n’est pas encore activé pour votre organisation, vous devez tout d’abord le faire. Consultez nos conseils détaillés pour [l’activation de teams pour votre organisation](/microsoftteams/how-to-roll-out-teams).
+Si Microsoft teams n’a pas été activé pour votre organisation, vous devez tout d’abord le faire. Consultez nos conseils détaillés pour [l’activation de teams pour votre organisation](https://docs.microsoft.com/microsoftteams/enable-features-office-365).
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Activer les applications de teams personnalisées et activer le téléchargement de l’application personnalisée
 
-> Remarque : Si vous utilisez une organisation de développement O365 pour créer votre application, ces paramètres doivent déjà être configurés pour vous permettre de créer, de charger et de tester votre application.
+> [!Note] 
+> Si vous utilisez la plateforme de développement Office 365 pour créer votre application, ces paramètres doivent déjà être configurés pour vous permettre de créer, de télécharger et de tester votre application.
 
-Il y a trois paramètres impliqués dans l’activation des applications personnalisées et le téléchargement d’applications personnalisées :
+Trois paramètres sont pertinents pour activer les applications personnalisées et le téléchargement d’applications personnalisées :
 
-* **Paramètre de l’application personnalisée** à l’échelle de l’Organisation : ce paramètre active ou désactive les applications personnalisées pour votre organisation. Il doit être activé. 
-* **Paramètre de l’application personnalisée d’équipe** : ce paramètre est pour chaque équipe individuelle dans Microsoft Teams. Si vous souhaitez installer votre application pour une équipe spécifique, celle-ci doit être activée pour cette équipe.
-* **Stratégie d’application personnalisée** par l’utilisateur : cet ensemble de paramètres contrôle les autorisations d’un utilisateur individuel. Vous devez activer cette activation pour les utilisateurs qui souhaitent télécharger des applications personnalisées.
+* **Paramètre** =>  => **de** l’application personnalisée à l’échelle de l’organisation autoriser une**interaction avec des applications personnalisées**: ce paramètre active ou désactive les applications personnalisées pour votre organisation. Il doit être activé. 
+* **Paramètre** => de l’application personnalisée d’équipe => **autoriser les membres à télécharger des applications personnalisées****activées ou désactivées** : ce paramètre s’applique à chaque équipe individuelle dans Microsoft Teams. Si vous souhaitez installer votre application pour une équipe spécifique, celle-ci doit être activée pour cette équipe.
+* **La stratégie** => d’application personnalisée utilisateur**peut télécharger des applications** => personnalisées**activées ou désactivées** : ce paramètre contrôle les autorisations d’un utilisateur individuel. Vous devrez activer ceci pour les personnes qui sont autorisées à télécharger des applications personnalisées.
 
-Pour plus d’informations sur le mode d’interaction de ces paramètres, consultez la rubrique [Manage Custom App Policies and Settings in Microsoft teams](/MicrosoftTeams/teams-custom-app-policies-and-settings).
+Pour plus d’informations sur la façon dont ces paramètres interagissent, *voir* [gérer les stratégies et les paramètres d’application personnalisée dans Microsoft teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) et [gérer les stratégies de configuration d’application dans Microsoft teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

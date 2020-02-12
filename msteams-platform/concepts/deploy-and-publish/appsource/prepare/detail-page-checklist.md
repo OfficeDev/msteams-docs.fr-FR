@@ -2,12 +2,12 @@
 title: Créer une page de détails d’application intéressante
 description: Décrit les pages de détails de l’application qui doivent avoir
 keywords: publication des équipes publier le magasin de la stratégie de publication Office AppSource contenu
-ms.openlocfilehash: 4a98cca7b1ddd87d79e38d863fd3868171b7749e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673634"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953515"
 ---
 # <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application intéressante
 
@@ -41,7 +41,7 @@ Il s’agit de l’un des premiers éléments que voient les utilisateurs. Elle 
 
 ## <a name="outline-icon"></a>Icône de plan
 
-Cette option est utilisée dans les extensions de messagerie marquées comme favoris par l’utilisateur et le menu de navigation de gauche. Assurez-vous qu’il est simple et reconnaissable.
+Cette option est utilisée dans les extensions de messagerie marquées comme favoris par l’utilisateur et le menu de navigation de gauche. Assurez-vous qu’il est simple et reconnaissable. Votre icône de contour ne doit contenir que le blanc et la transparence (aucune autre couleur). Pour connaître les spécifications requises, *voir* [Create an App package for Your Microsoft teams App-Icons](../../../build-and-test/apps-package.md#icons).
 
 ![Icône d’application icône magasin](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![de vue de l’application icône plan appStudio affichage](~/assets/images/store-detail-page/AppIconOutline-01.png)
