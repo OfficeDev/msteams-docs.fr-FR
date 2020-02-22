@@ -3,12 +3,12 @@ title: Conversations de conversation de groupe et de canal avec les robots
 description: Décrit le scénario de bout en bout d’une conversation avec un bot dans un canal dans Microsoft teams
 keywords: scénarios teams-robots de conversation des canaux
 ms.date: 06/25/2019
-ms.openlocfilehash: 168abd1e3894b95983eec01541d470f1b5384a66
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673591"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42227999"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversations de conversation de groupe et de canal avec un robot Microsoft teams
 
@@ -136,8 +136,6 @@ await client.Conversations.ReplyToActivityAsync(replyActivity);
 
 #### <a name="nodejs-example"></a>Exemple node. js
 
-Cet exemple utilise le package NPM [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) .
-
 ```javascript
 // User to mention
 var toMention: builder.IIdentity = {
@@ -199,3 +197,5 @@ session.send(generalMessage);
 ## <a name="accessing-groupchat-or-channel-scope"></a>Accès à l’étendue groupChat ou Channel
 
 Votre robot peut faire plus que d’envoyer et de recevoir des messages dans les groupes et les équipes. Par exemple, il peut également extraire la liste des membres, y compris leurs informations de profil, ainsi que la liste des canaux. Pour en savoir plus, consultez [la rubrique obtenir le contexte de votre robot Microsoft teams](~/resources/bot-v3/bots-context.md) .
+
+*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

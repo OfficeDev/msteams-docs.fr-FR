@@ -2,12 +2,12 @@
 title: Prise en main du générateur Yeoman pour Microsoft teams
 description: Commencer à créer des applications intéressantes avec le générateur Yeoman pour Microsoft teams
 keywords: nœud de mise en route. js NodeJS Yeoman
-ms.openlocfilehash: b0a9ae8d526286790d266e4291ef95d4ed7ce90f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673723"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228086"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Créer votre première application Microsoft teams
 

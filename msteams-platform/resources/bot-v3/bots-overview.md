@@ -3,12 +3,12 @@ title: Ajouter des robots aux applications Microsoft teams
 description: Décrit comment commencer à développer des robots dans Microsoft teams
 keywords: développement de robots de teams
 ms.date: 05/20/2018
-ms.openlocfilehash: 0ecb268c34275e958103c9905b2ed1f0858cafda
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 58221e94520ef6e748bbd6c17fa7933813874c56
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673573"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228051"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Ajouter des robots aux applications Microsoft teams
 
@@ -42,9 +42,9 @@ Microsoft teams prend en charge la plupart de [Microsoft bot Framework](https://
 
 Les extensions du SDK installent des dépendances, notamment le kit de développement logiciel (SDK) du générateur.
 
-* **.Net** Pour utiliser les extensions de Microsoft teams pour le kit de développement logiciel (SDK) du générateur de robots pour .NET, installez le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) dans votre projet Visual Studio.
-* **Node. js** pour utiliser les extensions Microsoft teams pour le kit de développement logiciel (SDK) du générateur de robots pour node. js, ajoutez le package NPM [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) .
-* **Code source** Vous pouvez trouver le code source complet des extensions dans le [BotBuilder-MicrosoftTeams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams) référentiel sur GitHub.
+* **.Net** Pour utiliser les extensions de Microsoft teams pour le kit de développement logiciel (SDK) du générateur de robots pour .NET, installez le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) dans votre projet Visual Studio. Pour le développement node. js, la fonctionnalité BotBuilder pour Microsoft teams a été incorporée dans le [Kit de développement logiciel (SDK) Framework](https://github.com/microsoft/botframework-sdk) à la version 4.6.
+
+*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 > [!IMPORTANT]
 > Vous pouvez développer des applications teams dans n’importe quelle autre technologie de programmation Web et appeler directement les [API REST de l’infrastructure bot](/bot-framework/rest-api/bot-framework-rest-overview) , mais vous devez effectuer toutes les manipulations de jetons.

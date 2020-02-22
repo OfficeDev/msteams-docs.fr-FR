@@ -2,12 +2,12 @@
 title: Initier des actions à l’aide des extensions de messagerie
 description: Créer des extensions de messagerie basées sur des actions pour permettre aux utilisateurs de déclencher des services externes
 keywords: extensions de messagerie teams
-ms.openlocfilehash: 9b7d3bd53ba45d55e80f858a3c89be265c13482b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a38b4f7bfb413defd28950ca9b97f7411cf9c09
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673828"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228030"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initier des actions à l’aide des extensions de messagerie
 
@@ -496,9 +496,7 @@ Votre extension de message doit maintenant répondre à deux nouveaux types d’
 
 Lors de la réponse `edit` à la demande, vous devez `task` répondre avec une réponse dont les valeurs sont remplies avec les informations que l’utilisateur a déjà envoyées. Lors de la réponse `send` à la demande, vous devez envoyer un message au canal contenant la carte adaptative finalisée.
 
-# <a name="typescriptnodejstabtypescript"></a>[Machine à écrire/node. js](#tab/typescript)
-
-L’exemple ci-dessous montre comment effectuer cette opération à l’aide du [Kit de développement logiciel (SDK) teams Builder du node. js](https://www.npmjs.com/package/botbuilder-teams).
+# <a name="typescriptnodejs"></a>[Machine à écrire/node. js](#tab/typescript)
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -558,7 +556,9 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 Cet exemple illustre ce flux à l’aide du [Kit de développement logiciel (SDK) Microsoft. Bot. Connector. Teams (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
 

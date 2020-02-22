@@ -4,12 +4,12 @@ author: laujan
 description: Guide de démarrage rapide pour la création d’un onglet de canal et de groupe personnalisé avec ASP.NET Core.
 ms.topic: quickstart
 ms.author: laujan
-ms.openlocfilehash: 7fdc4b042aac0664ae9d62c73c90689c75823592
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 47a0c98d630501944c7a5f4baf4620dbb70cdbcd
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674017"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228005"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>Créer un onglet de canal et de groupe personnalisé avec ASP.NET Core
 
@@ -113,4 +113,3 @@ Dans *Tab. cshtml* , l’application présente à l’utilisateur deux boutons d
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

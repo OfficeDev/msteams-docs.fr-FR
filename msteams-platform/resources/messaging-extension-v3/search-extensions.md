@@ -2,13 +2,13 @@
 title: Recherche à l’aide des extensions de messagerie
 description: Décrit comment développer des extensions de messagerie basées sur la recherche
 keywords: extensions de messagerie teams
-ms.date: 05/20/2019
-ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 07/20/2019
+ms.openlocfilehash: c220d976fa3e9920c8d4bb332a793b23d9b294c4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673825"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228044"
 ---
 # <a name="search-with-messaging-extensions"></a>Recherche à l’aide des extensions de messagerie
 
@@ -135,7 +135,7 @@ En plus des propriétés d’activité de robot standard, la charge utile contie
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.channel.id`| ID de canal (si la demande a été effectuée dans un canal). |
 |`channelData.team.id`| ID d’équipe (si la demande a été effectuée dans un canal). |
-|`clientInfo`morale | Métadonnées supplémentaires sur le client, telles que les paramètres régionaux/la langue et le type de client. |
+|`clientInfo`|Métadonnées facultatives relatives au logiciel client utilisé pour envoyer le message d’un utilisateur. L’entité peut contenir deux propriétés :<br>Le `country` champ contient l’emplacement détecté par l’utilisateur.<br>Le `platform` champ décrit la plateforme du client de messagerie. <br>Pour plus d’informations, *consultez la rubrique* [types d’entités non IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 Les paramètres de la demande sont trouvés dans l’objet value, qui inclut les propriétés suivantes :
 
@@ -183,11 +183,9 @@ Les paramètres de la demande sont trouvés dans l’objet value, qui inclut les
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -524,10 +522,10 @@ Lorsque la demande de connexion se termine et redirige vers votre page, elle doi
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -602,8 +600,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-Les [Extensions teams](https://www.npmjs.com/package/botbuilder-teams) pour le kit de développement logiciel (SDK) du générateur de robots pour node. js fournissent des objets et des méthodes d’assistance pour simplifier la réception, le traitement et la réponse aux demandes d’extension de messagerie.
-
 #### <a name="example-code-in-nodejs"></a>Exemple de code dans node. js
 
 ```javascript
@@ -659,3 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

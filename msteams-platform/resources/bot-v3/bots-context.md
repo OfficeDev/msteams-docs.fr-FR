@@ -3,12 +3,12 @@ title: Obtenir le contexte de votre robot
 description: Décrit comment obtenir le contexte des robots dans Microsoft teams
 keywords: contexte des robots teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 2dea6fd51e7274fa899d9ae882441a21618d7e09
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674024"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42227998"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtenir le contexte de votre robot Microsoft teams
 
@@ -17,7 +17,7 @@ ms.locfileid: "41674024"
 Votre robot peut accéder à un contexte supplémentaire concernant l’équipe ou la conversation, comme le profil utilisateur. Ces informations peuvent être utilisées pour enrichir les fonctionnalités de votre robot et fournir une expérience plus personnalisée.
 
 > [!NOTE]
-> Ces API de&ndash;robot spécifiques de Microsoft teams sont les meilleurs accessibles via nos extensions pour le kit de développement logiciel (SDK) du générateur de robots. Pour C#/.NET, téléchargez notre package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Pour le développement de node. js, vous pouvez installer le package NPM [botbuilder-teams](https://www.npmjs.com/package/botbuilder-teams) . Les deux SDK Target Builder v3.
+> Ces API de&ndash;robot spécifiques de Microsoft teams sont les meilleurs accessibles via nos extensions pour le kit de développement logiciel (SDK) du générateur de robots. Pour C#/.NET, téléchargez notre package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Pour le développement node. js, la fonctionnalité BotBuilder pour Microsoft teams a été incorporée dans le [Kit de développement logiciel (SDK) Framework](https://github.com/microsoft/botframework-sdk) à la version 4.6.
 
 ## <a name="fetching-the-team-roster"></a>Extraction de la liste de l’équipe
 
@@ -90,8 +90,6 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 
 ### <a name="nodejstypescript-example"></a>Exemple node. js/machine à écrire
 
-L’exemple suivant utilise les [extensions Microsoft teams pour le kit de développement logiciel (SDK) du générateur de robots pour node. js](https://www.npmjs.com/package/botbuilder-teams).
-
 ```typescript
 
 [...]
@@ -112,6 +110,8 @@ connector.fetchMembers(
   }
 );
 ```
+
+*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 ## <a name="fetching-user-profile-or-roster-in-personal-or-group-chat"></a>Extraction d’un profil utilisateur ou d’une liste dans la conversation personnelle ou de groupe
 

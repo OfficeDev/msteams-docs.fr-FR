@@ -2,12 +2,12 @@
 title: Référence des instructions de conception
 description: Décrit les instructions pour la conception d’une application personnelle
 keywords: instructions de conception teams structure de référence des applications personnelles
-ms.openlocfilehash: 6a07b618d78a3ad79850713052c88ef178c1ecc1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673611"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228072"
 ---
 # <a name="personal-apps"></a>Applications personnelles
 
@@ -34,7 +34,7 @@ Une application personnelle contient généralement les onglets suivants :
 
 ### <a name="your-tab"></a>Votre onglet
 
-C’est ici que vos utilisateurs verront toutes leurs choses. Il s’agit de son espace personnel. L’onglet peut être organisé sous la forme d’une liste, d’une grille, de colonnes ou d’une seule toile... tout ce qui convient le mieux à votre application. Pour plus d’informations sur la conception d’onglets effectifs, voir : [Tabs Design (~/Tabs/Design/Tabs.MD).
+C’est ici que vos utilisateurs verront toutes leurs choses. Il s’agit de son espace personnel. L’onglet peut être organisé sous la forme d’une liste, d’une grille, de colonnes ou d’une seule toile... tout ce qui convient le mieux à votre application. Pour plus d’informations sur la conception d’onglets effectifs, consultez la rubrique : [Tabs Design](../../tabs/design/tabs.md).
 
 Dans la mesure où cet onglet permet d’afficher des éléments provenant de plusieurs canaux, chaque élément doit afficher sa propre équipe, le canal et l’onglet de sorte que l’utilisateur puisse voir facilement où il provient.
 
@@ -54,7 +54,7 @@ Il s’agit d’une liste de tous les onglets de l’organisation de la personne
 
 Un bot n’est pas obligatoire, mais il s’agit d’un excellent moyen de communiquer directement et en privé avec vos utilisateurs. La notification est l’une des fonctions les plus importantes d’une application personnelle et quelle est la meilleure façon de les avertir qu’avec la communication directe ?
 
-Les robots fournissent des messages sous la forme de cartes, qui peuvent fournir des informations spécifiques (par exemple, une alerte indiquant que le nouveau contenu est disponible) ou des mises à jour étendues (par exemple, une liste de tâches quotidiennes). Pour plus d’informations sur la conception de robots efficaces, voir : [Bot Design (~/bots/Design/bots.MD).
+Les robots fournissent des messages sous la forme de cartes, qui peuvent fournir des informations spécifiques (par exemple, une alerte indiquant que le nouveau contenu est disponible) ou des mises à jour étendues (par exemple, une liste de tâches quotidiennes). Pour plus d’informations sur la conception de robots efficaces, consultez la rubrique : [Design bot](../../bots/design/bots.md).
 
 ![Message d’accueil bot](~/assets/images/Personal-apps-Bot.png)
 
