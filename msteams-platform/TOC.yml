@@ -79,7 +79,7 @@
             - name: Préparer votre application
               items:
                 - name: Liste de contrôle de présoumission
-                  href: concepts/deploy-and-publish/appsource/prepare/overview.md
+                  href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
                 - name: Liste de vérification de la page détaillée de l’application
                   href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
                 - name: Liste de vérification du manifeste de l’application
@@ -210,7 +210,7 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Médias hébergés par l’application
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Expériences Web incorporées avec des onglets
+- name: Expérience web incorporée avec les onglets
   items:
     - name: "Qu’est-ce qu’un onglet personnalisé\_?"
       href: tabs/what-are-tabs.md
@@ -308,7 +308,7 @@
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: Créer un connecteur O365
           href: webhooks-and-connectors/how-to/connectors-creating.md
-        - name: Envoi de messages à des connecteurs et des webhooks
+        - name: Envoi de messages à des connecteurs et Webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Ressources
   items:
@@ -342,6 +342,8 @@
           href: resources/bot-v3/bots-menus.md
         - name: Robots avec onglets
           href: resources/bot-v3/bots-with-tabs.md
+        - name: Mise en forme des messages du bot
+          href: resources/bot-v3/bots-text-formats.md
         - name: Tester un robot
           href: resources/bot-v3/bots-test.md
     - name: Extensions de messagerie-Kit de développement logiciel V3
