@@ -3,12 +3,12 @@ title: Localisation des applications d’équipe
 description: Décrit les problèmes liés à la localisation de votre application
 keywords: teams publier le magasin Office publication AppSource langue de localisation
 ms.date: 05/15/2018
-ms.openlocfilehash: b09f33e53303587e81b445c012de92b11dd90580
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673656"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279760"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localisation pour les applications Microsoft teams
 
@@ -66,7 +66,7 @@ Vous pouvez ensuite ajouter la propriété « localizationInfo » avec la lang
 }
 ```
 
-Vous pouvez fournir des fichiers. JSON supplémentaires avec des traductions de toutes les chaînes accessibles par l’utilisateur dans votre manifeste. Ces fichiers doivent adhérer au [schéma JSON fichier de localisation](~/resources/schema/localization-schema.md) et ils doivent être ajoutés à la propriété « localizationInfo » de votre manifeste. Chaque fichier correspond à une balise de langue que le client teams utilise pour choisir les chaînes appropriées. La balise de <language> - <region> langue prend la forme, mais il est recommandé d' <region> omettre la partie pour cibler toutes les régions qui prennent en charge la langue souhaitée.
+Vous pouvez fournir des fichiers. JSON supplémentaires avec des traductions de toutes les chaînes accessibles par l’utilisateur dans votre manifeste. Ces fichiers doivent adhérer au [schéma JSON fichier de localisation](../../resources/schema/localization-schema.md) et ils doivent être ajoutés à la propriété « localizationInfo » de votre manifeste. Chaque fichier correspond à une balise de langue que le client teams utilise pour choisir les chaînes appropriées. La balise de <language> - <region> langue prend la forme, mais il est recommandé d' <region> omettre la partie pour cibler toutes les régions qui prennent en charge la langue souhaitée.
 
 Le client teams applique les chaînes dans l’ordre suivant : chaînes de langue par défaut-> langue de l’utilisateur uniquement chaînes-> langue de l’utilisateur + chaînes de région de l’utilisateur.
 
