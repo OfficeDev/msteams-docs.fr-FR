@@ -2,12 +2,12 @@
 title: Limitation du débit
 description: Limitation du débit et meilleures pratiques dans Microsoft teams
 keywords: limitation du débit des robots teams
-ms.openlocfilehash: 4e9efab539ec7817d259fd6c149c438ba02e3ce5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
+ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673664"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42371764"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimiser votre robot : limitation du débit et meilleures pratiques dans Microsoft teams
 
@@ -46,26 +46,29 @@ Il est recommandé d’utiliser une interruption exponentielle avec une gigue al
 
 Voici un exemple d’utilisation d’une interruption exponentielle via le bloc d’application de traitement des erreurs passager.
 
-Vous pouvez effectuer une interruption et de nouvelles tentatives à l’aide de [bibliothèques de traitement des erreurs passagères](/previous-versions/msp-n-p/hh680901(v=pandp.50)). Pour obtenir des instructions sur l’obtention et l’installation du package NuGet, voir [Ajout du bloc d’application de traitement des erreurs temporaires à votre solution](/previous-versions/msp-n-p/hh680891(v=pandp.50)) .
+Vous pouvez effectuer une interruption et de nouvelles tentatives à l’aide de la [gestion des erreurs passagère](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Pour obtenir des instructions sur l’obtention et l’installation du package NuGet, reportez-vous [à la rubrique Ajout du bloc d’application de traitement des erreurs temporaires à votre solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). *Voir aussi* [gestion des erreurs passagère](/azure/architecture/best-practices/transient-faults).
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
-{
-    // List of error codes to retry on
-    List<int> transientErrorStatusCodes = new List<int>() { 429 };
-
-    public bool IsTransient(Exception ex)
     {
-        var httpOperationException = ex as HttpOperationException;
-        if (httpOperationException != null)
-        {
-            return httpOperationException.Response != null &&
-                    transientErrorStatusCodes.Contains((int) httpOperationException.Response.StatusCode);
-        }
+        // List of error codes to retry on
+        List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        return false;
+        public bool IsTransient(Exception ex)
+        {
+            if (ex.Message.Contains("429"))
+                return true;
+
+            var httpOperationException = ex as HttpOperationException;
+            if (httpOperationException != null)
+            {
+                return httpOperationException.Response != null &&
+                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
+            }
+
+            return false;
+        }
     }
-}
 ```
 
 ## <a name="example-backoff"></a>Exemple : intervalle
@@ -83,10 +86,10 @@ var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSec
 
 
 // Define the Retry Policy
-var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), fixedIntervalRetryStrategy);
+var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), exponentialBackoffRetryStrategy);
 
 //Execute any bot sdk action
-await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
+await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
 Vous pouvez également effectuer une `System.Action` exécution de méthode à l’aide de la stratégie de nouvelle tentative décrite ci-dessus. La bibliothèque référencée vous permet également de spécifier un intervalle fixe ou un mécanisme d’interruption linéaire.
@@ -102,52 +105,48 @@ Pour plus d’informations, consultez ce guide pratique sur les différents mod�
 
 Cette limite contrôle le trafic qu’un bot est autorisé à générer sur une conversation unique. Une conversation est 1:1 entre le bot et l’utilisateur, un groupe de conversation ou un canal dans une équipe.
 
-| **Scénario** | **Période (s)** | **Nombre maximal d’opérations autorisées** |
+| **Scénario** | **Période de temps (sec)** | **Nombre maximal d’opérations autorisées** |
 | --- | --- | --- |
-| NewMessage | 1  | 7  |
-| NewMessage | 2  | 8  |
-| NewMessage | 0,30 | 60 |
-| NewMessage | 3600 | 1800 |
-| UpdateMessage | 1  | 7  |
-| UpdateMessage | 2  | 8  |
-| UpdateMessage | 0,30 | 60 |
-| UpdateMessage | 3600 | 1800 |
-| NewThread | 1  | 7  |
-| NewThread | 2  | 8  |
-| NewThread | 0,30 | 60 |
-| NewThread | 3600 | 1800 |
-| GetThreadMembers | 1  | 14  |
-| GetThreadMembers | 2  | 16  |
-| GetThreadMembers | 0,30 | 120 |
-| GetThreadMembers | 3600 | 3600 |
-| GetThread | 1  | 14  |
-| GetThread | 2  | 16  |
-| GetThread | 0,30 | 120 |
-| GetThread | 3600 | 3600 |
+|| 0,1 | 7j/7 |
+| Envoyer à une conversation | n°2 | 8bits |
+| Envoyer à une conversation | 0,30 | 60 |
+| Envoyer à une conversation | 3600 | 1800 |
+| Créer une conversation | 0,1 | 7j/7 |
+| Créer une conversation | n°2 | 8bits |
+| Créer une conversation | 0,30 | 60 |
+| Créer une conversation | 3600 | 1800 |
+| Obtenir des membres de conversation| 0,1 | 14  |
+| Obtenir des membres de conversation| n°2 | 16  |
+| Obtenir des membres de conversation| 0,30 | 120 |
+| Obtenir des membres de conversation| 3600 | 3600 |
+| Obtenir des conversations | 0,1 | 14  |
+| Obtenir des conversations | n°2 | 16  |
+| Obtenir des conversations | 0,30 | 120 |
+| Obtenir des conversations | 3600 | 3600 |
 
 ## <a name="per-thread-limit-for-all-bots"></a>Limite par thread pour tous les robots
 
 Cette limite contrôle le trafic que tous les robots sont autorisés à générer au sein d’une conversation unique. Une conversation est 1:1 entre le bot et l’utilisateur, un groupe de conversation ou un canal dans une équipe.
 
-| **Scénario** | **Période (s)** | **Nombre maximal d’opérations autorisées** |
+| **Scénario** | **Période de temps (sec)** | **Nombre maximal d’opérations autorisées** |
 | --- | --- | --- |
-| NewMessage | 1  | 14  |
-| NewMessage | 2  | 16  |
-| UpdateMessage | 1  | 14  |
-| UpdateMessage | 2  | 16  |
-| NewThread | 1  | 14  |
-| NewThread | 2  | 16  |
-| GetThreadMembers | 1  | vingt |
-| GetThreadMembers | 2  | 32 |
-| GetThread | 1  | vingt |
-| GetThread | 2  | 32 |
+| Envoyer à une conversation | 0,1 | 14  |
+| Envoyer à une conversation | n°2 | 16  |
+| Créer une conversation | 0,1 | 14  |
+| Créer une conversation | n°2 | 16  |
+| CreateConversation| 0,1 | 14  |
+| CreateConversation| n°2 | 16  |
+| Obtenir des membres de conversation| 0,1 | vingt |
+| Obtenir des membres de conversation| n°2 | 32 |
+| Obtenir des conversations | 0,1 | vingt |
+| Obtenir des conversations | n°2 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>Fonction de robot par centre de données
 
 Cette limite contrôle le trafic qu’un bot est autorisé à générer sur tous les threads dans un centre de données (sur plusieurs clients).
 
-|**Période (s)** | **Nombre maximal d’opérations autorisées** |
+|**Période de temps (sec)** | **Nombre maximal d’opérations autorisées** |
 | --- | --- |
-| 1  | vingtaine |
+| 0,1 | vingtaine |
 | 1800 | 8000 |
 | 3600 | 15000 |

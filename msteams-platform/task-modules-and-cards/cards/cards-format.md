@@ -3,18 +3,18 @@ title: Mise en forme de texte dans les cartes
 description: Décrit la mise en forme de texte de carte dans Microsoft teams
 keywords: format des cartes robots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279780"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365247"
 ---
 # <a name="format-cards-in-teams"></a>Cartes de format dans teams
 
 Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l’aide de la démarque ou du code HTML, selon le type de carte.
 
-Les cartes prennent en charge la mise en forme uniquement dans la propriété Text, pas dans les propriétés Title ou title. La mise en forme peut être spécifiée à l’aide d’un sous-ensemble de la mise en forme XML (HTML) ou de la démarque selon le type de carte. Pour les cartes adaptatives actuelles de développement à l’avenir, l’utilisation de la mise en forme de démarque est recommandée.
+Les cartes prennent en charge la mise en forme uniquement dans la propriété Text, pas dans les propriétés Title ou title. La mise en forme peut être spécifiée à l’aide d’un sous-ensemble de la mise en forme XML (HTML) ou de la démarque selon le type de carte. Pour les cartes adaptatives de développement actuelles et futures, il est recommandé d’utiliser la mise en forme de démarque.
 
 La prise en charge de la mise en forme diffère selon les types de carte et le rendu de la carte peut légèrement varier entre le bureau et les clients teams mobiles, ainsi que teams dans le navigateur de bureau.
 
