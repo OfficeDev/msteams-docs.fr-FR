@@ -2,12 +2,12 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
+ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365268"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416851"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -38,7 +38,7 @@ Elle permet de créer des fonctionnalités de communication ciblées personnalis
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![Forum aux questions et GIF](~/assets/images/CompanyCommunicatorCompose.png)
+![Forum aux questions et GIF](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>Forum aux questions
 
@@ -61,7 +61,7 @@ Q conversation&les robots sont un moyen simple de fournir des réponses aux ques
 >
 >
 
-![Forum aux questions et GIF](~/assets/images/FAQPlusEndUser.gif)
+![Forum aux questions et GIF](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="hr-support"></a>Prise en charge RH
 
@@ -69,7 +69,7 @@ HR support bot est un Q convivial&un bot qui fournit un spécialiste/expert du s
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![Prise en charge RH](~/assets/images/expert-user.png)
+![Prise en charge RH](../assets/images/expert-user.png)
 
 ## <a name="list-search"></a>Recherche de liste
 
@@ -79,7 +79,7 @@ Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’appl
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![Application de recherche de liste](~/assets/images/list-search-template.png)
+![Application de recherche de liste](../assets/images/list-search-template.png)
 
 ## <a name="custom-stickers"></a>Autocollants personnalisés
 
@@ -89,7 +89,7 @@ Cette application permet également de partager facilement des images/des images
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![Application d’autocollants](~/assets/images/stickers.png)
+![Application d’autocollants](../assets/images/stickers.png)
 
 ## <a name="icebreaker"></a>Brise-glace
 
@@ -99,13 +99,13 @@ En plus d’encourager les connexions personnelles à l’ensemble de votre équ
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Application brise-glace](~/assets/images/icebreaker.png)
+![Application brise-glace](../assets/images/icebreaker.png)
 
 ## <a name="scrum-status-bot"></a>Bot d’état de Scrum
 
 Scrum Status bot est un robot Assistant de Scrum simple qui permettra aux utilisateurs d’exécuter des réunions de mise en attente asynchrones et de permettre aux utilisateurs de partager leurs mises à jour quotidiennes et facilement. Il est conçu pour fonctionner dans les conversations de groupe teams et tous les membres peuvent contribuer à Scrum. Une possibilité de démarrer et de terminer un Scrum et de consulter les mises à jour effectuées par d’autres personnes dans un Scrum en cours d’exécution.
 
-[Git sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[Git sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Bot d’état de Scrum](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -135,10 +135,27 @@ Book-a-Room est un [robot Microsoft teams](../bots/what-are-bots.md) qui permet 
 
 ## <a name="attendance-app"></a>Application assiduité
 
-L’application de participation est un onglet [d’applications puissantes](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) qui peut être épinglé dans une équipe. Elle est conçue pour enregistrer la présence, généralement dans des paramètres tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier la participation pendant 30 jours au plus et afficher des rapports de présence résumés pour un groupe entier ou des participants individuels.
+L’application de participation est un onglet [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui peut être épinglé dans une équipe. Elle est conçue pour enregistrer la présence, généralement dans des paramètres tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier la participation pendant 30 jours au plus et afficher des rapports de présence résumés pour un groupe entier ou des participants individuels.
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![Démonstration de l’application assiduité](../assets/images/attendance-app.png)
+
+## <a name="associate-insights-app"></a>Associer l’application Insights
+
+Associate Insights est un modèle [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui permet aux employés terrain de capturer et d’envoyer directement des avis sur le client, des sentiments et des idées. Les travailleurs terrain sont souvent le premier représentant de la société à s’adresser à des clients dans un point de contact un-à-un. Les données collectées peuvent être partagées et utilisées de façon collaborative par Teams, par exemple, via un onglet Team BI Teams, pour améliorer les produits et améliorer l’expérience client.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![Affichage de commentaires des analyses générées par l’application](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Vue Power BI des informations générées par l’application](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 Vous avez une idée pour un modèle d’application que vous aimeriez voir ? [Faites-nous part](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)de vos commentaires.
