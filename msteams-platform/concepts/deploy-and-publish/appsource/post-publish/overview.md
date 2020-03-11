@@ -2,12 +2,12 @@
 title: Publication post
 description: Ce qu’il faut faire après avoir publié votre application
 keywords: teams post publier le certificat de mise à jour
-ms.openlocfilehash: 05e4ea47bbf81967ccf086230bf0ad8c633f6e0b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673633"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582859"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Gérer et prendre en charge votre application publiée 
 
@@ -27,7 +27,9 @@ Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672
 
 * N’utilisez pas le bouton *Ajouter une nouvelle application* pour renvoyer votre application. Utilisez plutôt la mosaïque de votre application sous l’onglet vue d’ensemble.
 * L’appId dans le manifeste mis à jour doit être le même que dans le manifeste actuel, avec un numéro de version incrémentiel.
-* Incrémentez votre numéro de version dans votre manifeste.
+* Incrémentez votre numéro de version dans le manifeste si vous effectuez des modifications de manifeste dans votre envoi.
+* Les soumissions mises à jour doivent être soumises à un nouveau processus de révision et de validation.
+
 
 ### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>Quand la mise à jour de votre application déclenche-t-elle le flux de consentement de l’utilisateur ?
 
@@ -35,4 +37,4 @@ Lorsqu’un utilisateur installe votre application, il est autorisé à accorder
 
 * Ajout d’une nouvelle fonctionnalité à une application, telle que l’ajout d’un bot à une application de type onglet uniquement.
 * Modification du tableau d’autorisations dans le manifeste.
-* Incrémentez le numéro de version de votre application dans votre manifeste.
+* Incrémentation du numéro de version de votre application dans votre manifeste.

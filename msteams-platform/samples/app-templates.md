@@ -2,12 +2,12 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
-ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
+ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42416851"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42587330"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -63,7 +63,7 @@ Q conversation&les robots sont un moyen simple de fournir des réponses aux ques
 
 ![Forum aux questions et GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>Prise en charge RH
+## <a name="hr-support-bot"></a>Robot de prise en charge des RH
 
 HR support bot est un Q convivial&un bot qui fournit un spécialiste/expert du support technique de l’équipe RH dans la boucle lorsqu’il ne peut pas aider. Un peut poser une question au bot et le bot répond avec une réponse si elle est contenue dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe d’experts préconfigurée qui aide à fournir une assistance en agissant sur les notifications à partir de son équipe. De plus, le bot propose des liens vers des questions/stratégies RH recommandées en recherchant des balises préconfigurées dans la question. Ces vignettes sont également disponibles dans l’onglet associé sous forme de référence rapide. La prise en charge des RH fonctionne bien pour les QnA de poids léger et pour fournir une assistance rapide lors du lancement de nouveaux projets/initiatives au sein de l’organisation.
 
@@ -71,7 +71,7 @@ HR support bot est un Q convivial&un bot qui fournit un spécialiste/expert du s
 
 ![Prise en charge RH](../assets/images/expert-user.png)
 
-## <a name="list-search"></a>Recherche de liste
+## <a name="list-search-app"></a>Application de recherche de liste
 
 La collaboration dans Microsoft teams fait souvent référence à des informations contenues dans les éléments d’une liste SharePoint. Le simple collage d’un lien vers l’élément en question force tout le monde à basculer le contexte à l’extérieur de la conversation, à trouver les informations nécessaires, puis à revenir à teams pour poursuivre la conversation. Au fur et à mesure de la conversation, les personnes devront généralement revenir à l’élément de référence plusieurs fois pour vérifier les nouveaux commentaires et actualiser leurs souvenirs des informations contenues dans l’élément. Ce changement de contexte crée une barrière à des fins de collaboration et constitue une recette pour les choses qui passent par les fissures.
 
@@ -81,7 +81,7 @@ Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’appl
 
 ![Application de recherche de liste](../assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>Autocollants personnalisés
+## <a name="custom-stickers-app"></a>Application d’autocollants personnalisés
 
 L’auto-expression est essentielle pour une culture d’équipe saine. Ce modèle d’application est une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md) qui permet à vos utilisateurs d’utiliser des autocollants et des images gif personnalisées dans Microsoft Teams. Ce modèle offre une expérience de configuration Web simple où un utilisateur disposant d’un accès à la configuration peut télécharger les images gif/autocollantes/images dont il veut que les utilisateurs finals disposent, ce qui permet à l’ensemble de votre équipe d’utiliser n’importe quel ensemble d’autocollants que vous avez choisis.
 
@@ -91,7 +91,7 @@ Cette application permet également de partager facilement des images/des images
 
 ![Application d’autocollants](../assets/images/stickers.png)
 
-## <a name="icebreaker"></a>Brise-glace
+## <a name="icebreaker-bot"></a>Bot brise-glace
 
 Il s’agit d’un [robot Microsoft teams](../bots/what-are-bots.md) qui permet à votre équipe de se rapprocher en appariant deux membres d’équipe aléatoires, chaque semaine, pour répondre à vos besoins. Le bot facilite la planification en suggérant automatiquement des temps libres qui fonctionnent pour les deux membres. Renforcer les connexions personnelles et créer une communauté étroitement à l’aide de cette application.
 
@@ -158,4 +158,13 @@ Associate Insights est un modèle [d’applications puissantes](/powerapps/maker
 :::column-end:::
 :::row-end:::
 
+## <a name="incentives-app"></a>Application d’incentives
+
+Incentives est un modèle [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui gère et effectue le suivi de la participation des employés incentivized aux activités désignées, telles que les formations et les initiatives de gestion des modifications. Les administrateurs utilisent l’application pour établir des activités désignées, affecter des points pour terminer et spécifier les niveaux de points d’admissibilité requis pour les récompenses. Les employés utilisent l’application pour afficher leurs points cumulés et, lors de la demande d’éligibilité, de demande et de revendication de récompenses remboursables.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+
+![Démonstration de l’application incentives](../assets/images/incentives-app.png)
+
 Vous avez une idée pour un modèle d’application que vous aimeriez voir ? [Faites-nous part](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)de vos commentaires.
+
