@@ -2,12 +2,12 @@
 title: Messages proactifs
 description: Décrit les robots pouvant démarrer une conversation dans Microsoft teams
 keywords: scénarios de teams robot de conversation de messagerie proactive
-ms.openlocfilehash: 2f644820da33acc885a7972b13a1f61c167d6d8f
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: 30a21a15126e489ec50f8d3b7307880921d6062b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228065"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635318"
 ---
 # <a name="proactive-messaging-for-bots"></a>Messagerie proactive pour les robots
 
@@ -65,7 +65,7 @@ Les robots peuvent créer de nouvelles conversations avec un utilisateur individ
 > [!Note]
 > L’installation proactive d’applications à l’aide de Graph est actuellement en version bêta.
 
-Parfois, il peut s’avérer nécessaire de messageer de manière proactive les utilisateurs qui n’ont pas installé ou interagi avec votre application précédemment. Par exemple, vous souhaitez utiliser l' [entreprise Communicator](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs `conversationUpdate` nécessaires à partir de l’événement que votre application recevra lors de l’installation.
+Parfois, il peut s’avérer nécessaire de messageer de manière proactive les utilisateurs qui n’ont pas installé ou interagi avec votre application précédemment. Par exemple, vous souhaitez utiliser l' [entreprise Communicator](~/samples/app-templates.md#company-communicator-app) pour envoyer des messages à l’ensemble de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs `conversationUpdate` nécessaires à partir de l’événement que votre application recevra lors de l’installation.
 
 Vous ne pouvez installer que les applications figurant dans le catalogue d’applications de votre organisation ou dans le magasin d’applications Teams.
 

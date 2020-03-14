@@ -2,12 +2,12 @@
 title: Instructions de conception pour les robots
 description: Décrit les instructions pour la création de robots
 keywords: Guide de conception des équipes
-ms.openlocfilehash: f59a1e9c280f27567692b4d10341db79d05c3464
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673954"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635283"
 ---
 # <a name="start-talking-with-bots"></a>Commencer à parler avec les robots
 
@@ -31,27 +31,43 @@ Nous allons prendre en charge jusqu’à six boutons par carte. Soyez concis lor
 
 Les graphiques sont un moyen efficace d’indiquer un récit, mais les conversations de robots ne nécessitent pas toutes des graphiques, c’est pourquoi vous pouvez les utiliser pour un impact maximal.
 
+### <a name="onboarding-users"></a>Utilisateurs d’intégration
+
+Il est essentiel que les robots s’introduisent et envoient ce qu’ils peuvent faire aux utilisateurs. Cette *valeur* permet aux utilisateurs de comprendre ce qu’ils doivent faire avec le bot, où les limitations peuvent être, et, plus important encore, permet aux utilisateurs de tolérer l’interaction avec un ordinateur qui n’est pas aussi intuitif qu’une personne réelle. En outre, il accorde une autorisation pour les données utilisateur dans Exchange pour la valeur réelle fournie par le service.
+
+#### <a name="welcome-messages"></a>Messages de bienvenue
+
+Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot et doivent être utilisés dans les scénarios personnels et d’équipe ou de groupe. Le message indique ce que fait le bot, ainsi que des méthodes courantes pour interagir avec lui. Utiliser des exemples de fonctionnalité spécifiques comme, «*essayez de demander....*» dans une liste à puces. Dans la mesure du possible, ces suggestions doivent renvoyer des réponses stockées. Il est essentiel que les exemples de fonctionnalités fonctionnent sans que les utilisateurs aient besoin de se connecter.
+
+#### <a name="tours"></a>Voyages
+
+Inclure un attribut de *visite guidée* avec des messages de bienvenue et des réponses à l’entrée utilisateur équivalente à «*aide*». Il s’agit de la méthode la plus efficace pour permettre aux utilisateurs de découvrir ce qu’un robot peut faire. Les carrousels dans les expériences un-à-un constituent un excellent moyen d’indiquer cette histoire et d' *essayer de créer* des boutons informatiques renvoyant à des exemples de réponses possibles. Les visites guidées sont également des emplacements très intéressants pour parler des autres fonctionnalités d’une application. Par exemple, vous pouvez inclure des captures d’écran des onglets extensions de messagerie et Teams.  Les utilisateurs ne doivent pas se connecter pour accéder à et utiliser une visite guidée.
+
+Lorsque des visites guidées sont utilisées dans des scénarios d’équipe ou de groupe, elles doivent s’ouvrir dans un module de tâches afin de ne pas ajouter plus de bruit de carte aux conversations en cours entre les utilisateurs.
+
 ### <a name="responding-to-users-and-failing-gracefully"></a>Réponse aux utilisateurs et échec normal
 
-Votre robot doit également pouvoir répondre à des éléments tels que « Bonjour », « aide » et « merci » tout en prenant en compte les fautes d’orthographe et d’familières courantes. Par exemple :
+Votre robot doit également pouvoir répondre à des éléments tels que «*Bonjour*», «*aide*» et «*Merci*», tout en prenant en compte les fautes d’orthographe courantes et familières. Par exemple :
 
 #### <a name="x2713-hello"></a>&#x2713; Hello
 
-`Hi` `how are you` `howdy`
+`"Hi"`  `"How are you"`  `"Howdy"`
 
 #### <a name="x2713-help"></a>Aide &#x2713;
 
-`What do you do?` `How does this work?` `What the heck?`
+`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
 
 #### <a name="x2713-thanks"></a>&#x2713; Merci
 
-`Thank you` `thankyou` `thx`
+`"Thank you"`  `"Thankyou"`  `"Thx"`
 
 Votre robot doit pouvoir gérer les types de requêtes et d’entrées suivants :
 
-* **Questions reconnues**: il s’agit des questions les plus fréquemment posées par les utilisateurs.
-* **Non-questions reconnues**: les requêtes sur les fonctionnalités non prises en charge, des éléments d’information aléatoires ou quand une personne souhaite traiter votre robot.
-* **Questions non reconnues**: entrées inintelligibles (par exemple, comprises).
+> [!div class="checklist"]
+>
+> * **Questions reconnues**. Il s’agit des questions de scénario les plus optimistes pour les utilisateurs.
+> * **Non-questions reconnues**. Les requêtes relatives aux fonctionnalités non prises en charge et/ou aux entrées à inconvenances, non liées ou aléatoires.
+> * **Questions non reconnues**: entrées ou entrées inintelligibles, sans signification ou sans sens.
 
 Exemples de personnalité et de types de réponse de robot :
 
@@ -96,7 +112,11 @@ Dans les conversations personnelles entre un bot et une seule personne, les ongl
 
 ### <a name="x2713-a-place-to-finish-a-conversation"></a>&#x2713; un emplacement pour terminer une conversation
 
-Vous pouvez créer un lien vers un onglet à partir d’une carte. Si votre bot fournit une réponse qui nécessite quelques étapes supplémentaires, il peut créer un lien vers un onglet pour effectuer la tâche ou le flux.
+Vous pouvez créer un lien vers un onglet à partir d’une carte. Si votre bot fournit une réponse qui nécessite quelques étapes supplémentaires, il peut créer un lien vers un onglet pour effectuer la tâche ou le flux. Par exemple, en réponse à la question suivante : « How do I Formating My iPhone ? », une réponse appropriée peut être une carte qui décrit les premières étapes et dispose d’un bouton permettant d' *afficher plus* , qui amène ensuite l’utilisateur à l’onglet d' *aide* du robot et des liens détaillés vers les instructions spécifiques.
+
+### <a name="x2713-a-place-to-host-a-settings-page"></a>&#x2713; un emplacement d’hébergement d’une page de paramètres
+
+Les robots doivent disposer d’un contrôle utilisateur. Pour de nombreux robots, il est autorisé par le biais d’une interface de conversation ; Toutefois, il est difficile de se souvenir de ces paramètres. Un onglet Paramètres permet d’afficher les paramètres des utilisateurs, d’autoriser les utilisateurs à les modifier tous en même temps, et peut également être un bon point de départ pour les comportements de robot personnalisés plus complexes.
 
 ### <a name="x2713-a-place-to-provide-some-help"></a>&#x2713; un emplacement pour fournir de l’aide
 
@@ -105,13 +125,27 @@ Ajoutez un onglet qui informe les utilisateurs sur la façon de communiquer avec
 ![Fourniture d’aide](~/assets/images/framework/framework_bots_tbot-help.png)
 
 > [!TIP]
-> L’incorporation de parties de votre site dans un onglet permet à quelqu’un de gérer le contexte d’une conversation quand il utilise votre service. Il supprime la nécessité de lancer votre service dans un navigateur et de basculer entre les applications.
+> L’incorporation de parties de votre site dans un onglet permettra aux utilisateurs de maintenir le contexte d’une conversation quand ils utilisent votre service. Il supprime la nécessité de lancer votre service dans un navigateur et de basculer entre les applications.
 
 ---
 
-## <a name="best-practices"></a>Meilleures pratiques
+## <a name="bots-in-channels"></a>Robots dans les canaux
 
-### <a name="x2713-bots-arent-assistants"></a>Les robots &#x2713; ne sont pas des assistants
+L’appel d’un bot dans un canal peut être effectué `@mention`par. La boîte de dialogue bot doit être unique dans les canaux et les groupes, ainsi que dans les scénarios un-à-un et il est généralement judicieux de prendre en compte les différentes approches. Cela est particulièrement vrai dans les cas suivants :
+
+### <a name="sensitive-data-sent-by-a-bot"></a>Données sensibles envoyées par un bot
+
+Tandis que les utilisateurs d’une équipe peuvent être connus du service, les rôles d’utilisateur réels ne le peuvent pas. Cela signifie que, par exemple, dans un scénario d’éducation impliquant intimidation, les informations de contact parent et étudiant ne sont pas partagées dans un paramètre d’équipe. Au lieu de cela, le message du robot peut être « deux incidents de intimidation s’est produit aujourd’hui », ainsi qu’un bouton pour afficher les détails.
+
+Lancement des détails dans une page Web, ou un module de tâches peut demander des informations d’identification de l’utilisateur ou effectuer une requête sur un index pour les rôles d’utilisateur associés aux comptes AAD. Dans ces deux options, les données se trouvent dans une étendue d’affichage privée et aucune fuite de données ne se produira. Si les mêmes données sont envoyées dans une conversation un-à-un entre un utilisateur et le bot, les données ne sont visibles que par l’utilisateur dans ce contexte et, par conséquent, sûres dans le message de robot. Le fait de prendre les utilisateurs d’un canal à une conversation un-à-un doit être évité Toutefois, car la navigation forcée est très perturbante.
+
+### <a name="sending-cards-as-a-response-to-interactions"></a>Envoi de cartes en guise de réponse aux interactions
+
+Lors de l’envoi d’une carte de carrousel en réponse à une *visite guidée* dans une conversation un-à-un est parfaitement acceptable, le même modèle peut produire des dizaines ou des centaines de *carrousels de tour* dans un canal actif avec un grand nombre d’utilisateurs. Pour éviter ce, les cartes secondaires doivent être hébergées dans un module de tâches. Ce modèle permet aux utilisateurs de consigner le canal, de nettoyer le canal en trop de réponses de robot et peut éventuellement prendre en compte différents rôles d’utilisateur lors de l’affichage de la *visite guidée* .
+
+## <a name="useful-tips"></a>Conseils utiles
+
+### <a name="x2713-remember-bots-arent-assistants"></a>&#x2713; n’oubliez pas que les robots ne sont pas des assistants
 
 Contrairement aux agents, par exemple, Cortana, les robots agissent en tant que spécialistes.
 

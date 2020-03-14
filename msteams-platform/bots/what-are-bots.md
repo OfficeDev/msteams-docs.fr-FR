@@ -4,22 +4,46 @@ author: clearab
 description: Vue d’ensemble des robots de conversation dans Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7bde886b67788a355181c83287d999a3bfb9727a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673660"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635304"
 ---
 # <a name="what-are-conversational-bots"></a>Qu’est-ce que les robots de conversation ?
 
-Les robots de conversation permettent aux utilisateurs d’interagir avec votre service Web par le biais de textes, de cartes interactives et de modules de tâches. Ils sont incroyablement flexibles : les robots de conversation peuvent être délimités pour gérer quelques commandes simples ou des assistants virtuels complexes, équipés d’intelligence artificielle et de traitement de langage naturel. Il peut s’agir d’un aspect d’une application plus grande ou totalement autonome.
+Les robots de conversation permettent aux utilisateurs d’interagir avec votre service Web par le biais de textes, de cartes interactives et de modules de tâches. Ils sont incroyablement flexibles : les robots de conversation peuvent être délimités pour gérer quelques commandes simples ou des assistants virtuels complexes, équipés d’intelligence artificielle et de traitement naturel en langue naturelle. Il peut s’agir d’un aspect d’une application plus grande ou totalement autonome.
 
 L’image GIF ci-dessous montre un utilisateur qui contourne un bot dans une conversation un-à-un en utilisant des cartes de texte et des cartes interactives. Trouver le bon mélange de cartes, de texte et de modules de tâches est essentiel pour créer un bot utile. N’oubliez pas que les robots sont bien plus qu’un simple texte !
 
 ![Forum aux questions et GIF](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="what-tasks-are-best-handled-by-bots"></a>Quelles sont les tâches les mieux gérées par les robots ?
+## <a name="how-bots-work"></a>Fonctionnement des robots
+
+Votre bot teams se compose de trois éléments :
+
+* Service Web accessible au public que vous hébergez.
+* Enregistrement de votre bot avec l’infrastructure bot.
+* Votre package d’application de teams avec votre manifeste d’application. Il s’agit de ce que vos utilisateurs installeront et connectent le client teams à votre service Web, routé via le service bot.
+
+Les robots pour Microsoft teams sont basés sur [Microsoft bot Framework](https://dev.botframework.com/). Si vous disposez déjà d’un bot basé sur l’infrastructure de robot, vous pouvez facilement l’adapter pour qu’elle fonctionne dans Microsoft Teams. Nous vous recommandons d’utiliser C# ou node. js pour tirer parti de nos [Kits de développement](/microsoftteams/platform/#pivot=sdk-tools)logiciel (SDK). Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) de base, comme suit :
+
+* Utilisez des types de carte spéciaux comme la carte connecteur Office 365.
+* Utiliser et définir des données de canal spécifiques aux équipes sur les activités.
+* Traiter les demandes d’extension de messagerie.
+
+> [!IMPORTANT]
+> Vous pouvez développer des applications teams dans n’importe quelle technologie de programmation Web et appeler directement les [API REST de l’infrastructure bot](/bot-framework/rest-api/bot-framework-rest-overview) , mais vous devez effectuer toutes les manipulations de jetons.
+
+> [!TIP]
+> Teams App Studio * vous permet de créer et de configurer votre manifeste d’application et peut enregistrer votre service Web en tant que bot sur l’infrastructure bot. Il contient également une bibliothèque de contrôle REACT et un générateur de carte interactive. *Consultez la rubrique* [prise en main de Team App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+## <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
+
+Les connecteurs et les webhooks vous permettent de créer un robot simple pour une interaction de base, comme le lancement d’un flux de travail ou d’autres commandes simples. Ils vivent uniquement dans l’équipe dans laquelle vous les créez et sont destinés à des processus simples spécifiques au flux de travail de votre entreprise. *Voir* [qu’est-ce qu’un webhooks et un connecteur ?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) pour plus d’informations.
+
+## <a name="where-bots-work-best"></a>Fonctionnement optimal des robots
 
 Les robots de Microsoft teams peuvent faire partie d’une conversation un-à-un, d’une conversation de groupe ou d’un canal dans une équipe. Chaque étendue fournit des opportunités et des défis uniques pour votre robot de conversation.
 
@@ -44,28 +68,31 @@ Les scénarios qui fonctionnent correctement dans un canal fonctionnent généra
 
 Il s’agit de la manière la plus classique pour un bot de conversation d’interagir avec un utilisateur. Ils peuvent activer des charges de travail incroyablement diverses. Q&les robots, les robots qui lancent des flux de travail dans d’autres systèmes, les robots qui indiquent des blagues et les robots qui prennent des notes, sont simplement quelques exemples. N’oubliez pas de déterminer si une interface basée sur une conversation est la meilleure façon de présenter vos fonctionnalités.
 
-## <a name="how-do-bots-work"></a>Comment fonctionnent les robots ?
+## <a name="bot-fails"></a>Échec du bot
 
-Votre bot se compose de trois parties :
+### <a name="having-multi-turn-experiences-in-chat"></a>Utilisation de plusieurs expériences dans la conversation
 
-* Service Web accessible au public que vous hébergez.
-* L’inscription de votre robot à l’aide de l’infrastructure bot.
-* Votre package d’application de teams qui contient le manifeste de votre application. Il s’agit de ce que vos utilisateurs installent et connectent le client teams à votre service Web (acheminé via le service bot).
+Une boîte de dialogue complète entre votre robot et l’utilisateur est une façon lente et excessivement complexe de faire en sorte qu’une tâche soit terminée et nécessite également que le développeur conserve son état. Pour quitter cet État, un utilisateur doit avoir dépassé le délai d’attente ou taper «*Annuler*». Au-dessus de tout, le processus est inutilement fastidieux :
 
-Les robots pour Microsoft teams sont basés sur [Microsoft bot Framework](https://dev.botframework.com/). (Si vous disposez déjà d’un bot basé sur l’infrastructure de robot, vous pouvez facilement l’adapter pour fonctionner dans Microsoft Teams.) Nous vous recommandons d’utiliser C# ou node. js pour tirer parti de nos [Kits de développement](/microsoftteams/platform/#pivot=sdk-tools)logiciel (SDK). Ces packages étendent les méthodes et classes du kit de développement logiciel (SDK) de base de générateur de robots :
+UTILISATEUR : planifier une réunion avec Megan.
 
-* Utilisation de types de cartes spécialisés comme la carte connecteur Office 365.
-* Consommation et définition des données de canal spécifiques aux équipes sur les activités.
-* Traitement des demandes d’extension de messagerie.
+BOT : J’ai trouvé 200 résultats, veuillez inclure un prénom et un nom de famille.
 
-> [!IMPORTANT]
-> Vous pouvez développer des applications teams dans n’importe quelle technologie de programmation Web et appeler directement les [API REST de l’infrastructure bot](/bot-framework/rest-api/bot-framework-rest-overview) , mais vous devez effectuer toutes les manipulations de jetons.
+UTILISATEUR : planifier une réunion avec Megan Bowen.
 
-*Teams App Studio* vous permet de créer et de configurer votre manifeste d’application et peut enregistrer votre service Web en tant que bot sur l’infrastructure bot. Il contient également une bibliothèque de contrôle REACT et un générateur de carte interactive. *Consultez la rubrique* [prise en main de Team App Studio](~/concepts/build-and-test/app-studio-overview.md).
+BOT : OK, quelle heure souhaitez-vous rencontrer avec Megan Bowen ?
 
-## <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
+UTILISATEUR : 1:00 pm.
 
-Les connecteurs et les webhooks vous permettent de créer un robot simple pour une interaction de base, comme le lancement d’un flux de travail ou d’autres commandes simples. Ils vivent uniquement dans l’équipe dans laquelle vous les créez et sont destinés à des processus simples spécifiques au flux de travail de votre entreprise. *Voir* [qu’est-ce qu’un webhooks et un connecteur ?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) pour plus d’informations.
+ROBOT : le jour où ?
+
+### <a name="supporting-too-many-commands"></a>Prise en charge d’un trop grand nombre de commandes
+
+Un bot qui prend en charge des commandes excessives, en particulier un large éventail de commandes, ne réussit pas ou ne s’affiche pas positivement par les utilisateurs. Étant donné qu’il y a seulement 6 commandes visibles dans le menu robot actuel, il est peu probable qu’il n’y ait aucune fréquence. Les robots qui s’approfondient à une zone spécifique plutôt que d’essayer d’être un Assistant plus large fonctionneront et seront mieux adaptés.
+
+### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Maintenance d’une base de connaissances de récupération volumineuse avec des réponses sans classement
+
+Les robots sont les plus adaptés aux interactions courtes et rapides, sans passer en revue les longues listes cherchant une réponse.
 
 ## <a name="get-started"></a>Prise en main
 
@@ -74,5 +101,8 @@ Les connecteurs et les webhooks vous permettent de créer un robot simple pour u
 
 ## <a name="learn-more"></a>En savoir plus
 
-* [Notions de base sur les robots dans teams](~/bots/bot-basics.md)
-* [Créer un bot pour teams](~/bots/how-to/create-a-bot-for-teams.md)
+> [!div class="nextstepaction"]
+> [Notions de base sur les robots dans teams](~/bots/bot-basics.md)
+
+> [!div class="nextstepaction"]
+> [Créer un bot pour teams](~/bots/how-to/create-a-bot-for-teams.md)
