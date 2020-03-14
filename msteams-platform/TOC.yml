@@ -19,6 +19,8 @@
       href: samples/code-samples.md
     - name: Modèles d’application prêts pour la production
       href: samples/app-templates.md
+    - name: Connecteurs de déplacement prêts pour la production
+      href: samples/shifts-wfm-connectors.md
 - name: Concepts
   expanded: true
   items:
