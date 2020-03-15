@@ -5,12 +5,12 @@ description: Comment créer un bot dans Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 9e0bd603772cf4da8465a638c4a7f5b426a1fbfb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673935"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635297"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Créer un bot dans Microsoft Teams
 
@@ -62,9 +62,9 @@ Scénarios dans lesquels vous **devez** faire inscrire votre bot dans Azure (soi
 
 #### <a name="using-app-studio"></a>Utilisation de App Studio
 
-*App Studio* est une application de Teams qui vous aide à créer des applications Teams, y compris l’inscription de votre service web en tant que bot, la création d’un manifeste d’application et votre package d’application. Elle contient également une bibliothèque de contrôle React et des exemples configurables pour les cartes. Consultez [Commencer à gérer App Studio de Teams](../../concepts/build-and-test/app-studio-overview.md).
+*App Studio* est une application de Teams qui vous aide à créer des applications Teams, y compris l’inscription de votre service web en tant que bot, la création d’un manifeste d’application et votre package d’application et la mise à jour des paramètres et des configurations. Elle contient également une bibliothèque de contrôle React et des exemples configurables pour les cartes. Consultez [Commencer à gérer App Studio de Teams](../../concepts/build-and-test/app-studio-overview.md).
 
-N’oubliez pas que si vous utilisez App Studio pour inscrire votre service web, vous devez accéder à https://dev.botframework.com/bots pour gérer votre inscription. Certains paramètres (par exemple, votre point de terminaison de messagerie) peuvent également être mis à jour dans App Studio.
+N’oubliez pas que si vous utilisez App Studio pour inscrire votre service web, vous devez accéder à https://dev.botframework.com/bots pour gérer votre inscription.
 
 #### <a name="in-the-legacy-portal"></a>Dans le portail hérité
 
