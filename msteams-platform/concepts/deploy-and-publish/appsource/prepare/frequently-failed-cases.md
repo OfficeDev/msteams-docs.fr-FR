@@ -4,12 +4,12 @@ description: Décrit des conseils pour l’envoi et la plupart des stratégies a
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 75ac2a01f1ccd8e38977e1cd099544e7dd160733
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279787"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896519"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -51,7 +51,7 @@ Cet article aborde les principales raisons d’échec de validation des applicat
 
 Pour plus d’informations sur l’authentification, consultez la rubrique suivante :
 
-* [Documentation de l’authentification](/concepts/authentication/authentication.md)
+* [Documentation de l’authentification](../../../authentication/authentication.md)
 * [Exemple d’authentification bot dans le nœud](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Exemple d’authentification d’onglet dans le nœud](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [Authentification Tab/bot dans C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

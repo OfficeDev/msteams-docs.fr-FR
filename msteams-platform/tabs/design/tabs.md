@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception de l’infrastructure de référence
-ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365261"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896498"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -139,7 +139,7 @@ Il existe deux modes de notification pour les modifications apportées au conten
 
 > [!div class="checklist"]
 >
-> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **Utiliser un bot**. Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
 
   L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous `@mention` avez des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.
