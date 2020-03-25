@@ -2,12 +2,12 @@
 title: Demander des autorisations de périphérique pour votre onglet Microsoft teams
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui requièrent généralement le consentement de l’utilisateur
 keywords: développement d’onglets teams
-ms.openlocfilehash: 454466ff17ecf275f6ae6c7413df8e117335f3c8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928516"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Demander des autorisations de périphérique pour votre onglet Microsoft teams
 
@@ -15,7 +15,7 @@ Vous souhaiterez peut-être enrichir votre onglet avec des fonctionnalités qui 
 
 * Appareil photo
 * Micro
-* L’emplacement
+* Emplacement
 * Notifications
 
 ![Écran des paramètres d’autorisations des appareils](~/assets/images/tabs/device-permissions.png)
@@ -106,3 +106,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![Invite des autorisations des appareils de tabulation](~/assets/images/tabs/device-permissions-prompt.png)
+
+## <a name="permission-behavior-across-login-sessions"></a>Comportement des autorisations entre les sessions de connexion
+
+Les autorisations natives des appareils sont stockées par session de connexion. Cela signifie que si vous vous connectez à une autre instance de Teams (par exemple, sur un autre ordinateur), les autorisations de votre appareil pour vos sessions précédentes ne seront pas disponibles. Au lieu de cela, vous devrez redéfinir les autorisations des appareils pour le nouveau sessoin de connexion. Cela signifie également que si vous vous déconnectez de Teams (ou que vous changez de locataire dans Teams), vos autorisations sur les appareils seront supprimées pour cette session précédente. Gardez cela à l’esprit lorsque vous développez des autorisations d’appareil Native : les fonctionnalités natives que vous acceptez pour votre connexion _actuelle_ sessoin.

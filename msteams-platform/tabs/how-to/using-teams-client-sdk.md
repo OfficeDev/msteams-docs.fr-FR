@@ -4,12 +4,12 @@ author: laujan
 description: Comment utiliser le kit de développement logiciel (SDK) Team client pour ajouter une fonctionnalité de teams à vos onglets personnalisés
 keywords: onglets teams groupe de kit de développement logiciel (SDK) statique Java personnel
 ms.topic: conceptual
-ms.openlocfilehash: eac5a8ec03ba12d926346afb40ca9bc6e9dda8d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928509"
 ---
 # <a name="using-the-teams-client-sdk"></a>Utilisation du kit de développement logiciel (SDK) Team client
 
@@ -23,6 +23,8 @@ Le tableau suivant présente les fonctions de la bibliothèque teams généralem
 | -----     | -----     | -----    | -----        |
 | `microsoftTeams.initialize()` | Initialise la bibliothèque Teams. Cette fonction doit être appelée avant tout autre appel SDK.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Obtient l’état actuel dans lequel la page est en cours d’exécution. Le rappel récupère l’objet de **contexte** .|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-)<br/>[obj de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Initialise la bibliothèque teams et définit le contexte d' [image](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) de l’onglet en fonction des ContentUrl et websiteUrl. Cela garantit que la fonctionnalité d’accès au site Web/de chargement fonctionne sur l’URL correcte.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Définit le contexte d' [image](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest) de l’onglet en fonction des ContentUrl et websiteUrl. Cela garantit que la fonctionnalité d’accès au site Web/de chargement fonctionne sur l’URL correcte.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |Gestionnaire inscrit lorsque l’utilisateur active ou désactive l’affichage plein écran d’un onglet.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest#isfullscreen)|
 |`microsoftTeams.registerChangeSettingsHandler()` |Gestionnaire enregistré lorsque l’utilisateur sélectionne le bouton **paramètres** activés pour reconfigurer un onglet.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Obtient les onglets appartenant à l’application. Le rappel récupère l’objet **TabInformation** . L’objet **TabInstanceParameters** est un paramètre facultatif.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest)|
