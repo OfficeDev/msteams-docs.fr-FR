@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: ad02795c7ab84e290b83e781ea413dd3ef797fdb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f8550070ed010d99c0c33202ada95b64c05cdc4f
+ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673513"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42982143"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -15,8 +15,9 @@ ms.locfileid: "41673513"
 
 Le journal des modifications répertorie les modifications apportées à la plateforme Microsoft teams et à cet ensemble de documents. Les entrées peuvent être utilisées pour attirer l’attention sur une nouvelle fonctionnalité qui est simplement intéressante pour les développeurs de teams.
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+| 03/24/2020 | Ajout de la prise en charge de la récupération d’un membre d’une conversation et de la prise en charge supplémentaire pour la récupération des membres de la page. | [Obtenir le contexte teams de votre robot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour construire deeplinks à ces messages. Les charges utiles de message incluent les valeurs chiffrées dans `legacy.replyToId`le paramètre.  |
 | 11/5/2019 | L’authentification unique à l’aide du kit de développement logiciel (SDK) Team JavaScript dans une page de contenu Web est en aperçu développeur | [Authentification unique](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | La documentation sur les robots de conversation et les extensions de messagerie mise à jour pour refléter le kit de développement logiciel (SDK) de robot 4,6. La documentation du kit de développement logiciel (SDK) v3 est disponible dans la section ressources. | Tout le robot et la documentation d’extension de messagerie. |
