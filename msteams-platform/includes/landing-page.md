@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: c13530dfcd5841f6a843e8f6f94a44180a2e4927
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 4bfbef38bdafac6afc6c19b01666d2df111f8d17
+ms.sourcegitcommit: 301be564aabaa7e1437a436053805cb9abecda21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42638592"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "42949475"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -860,6 +860,28 @@ ms.locfileid: "42638592"
                                                 </p>
                                                 <p>
                                                     <a href="https://github.com/Microsoft/botbuilder-dotnet/">GitHub</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="assets/icons/graph-icon-1.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Kits de développement logiciel (SDK) Microsoft Graph</h3>
+                                                <p>
+                                                    <a href="https://docs.microsoft.com/graph/sdks/sdks-overview">Présentation des graphiques SDK</a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://docs.microsoft.com/graph/sdks/sdk-installation">Installer les graphiques SDKs</a>
                                                 </p>
                                             </div>
                                         </div>
