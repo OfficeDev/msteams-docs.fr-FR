@@ -2,13 +2,15 @@
 title: Prise en main de C#/.NET
 description: Commencer à créer des applications intéressantes dans Microsoft teams à l’aide de C#/.NET
 keywords: mise en route .net c# CSharp
+ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: de133894042baaba897a9f046d613cd5dbb94eee
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d38491ec1d152e8710e52530e3903a4bad3e1459
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673730"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034056"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Prise en main de la plateforme Microsoft teams avec C#/.NET et App Studio
 

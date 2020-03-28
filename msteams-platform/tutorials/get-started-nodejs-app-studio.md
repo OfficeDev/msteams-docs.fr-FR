@@ -3,12 +3,14 @@ title: Prise en main d’App Studio et node. js
 description: Commencer à créer des applications intéressantes dans Microsoft teams à l’aide de node. js et d’App Studio
 keywords: nœud de mise en route. js NodeJS App Studio
 ms.date: 11/09/2018
-ms.openlocfilehash: 36da6d7445ad7780f6bbbf52ccce3e558c76be72
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.topic: tutorial
+ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
+ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673970"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034049"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Prise en main de la plateforme Microsoft teams avec node. js et App Studio
 

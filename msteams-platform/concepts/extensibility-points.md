@@ -4,12 +4,12 @@ author: clearab
 description: Comprenez les points d’extensibilité disponibles pour votre application dans le client Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f65a5111bf59b08347291caa15c557dc0a48e886
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673608"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034028"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>Points extensibles dans le client teams
 
@@ -23,11 +23,11 @@ Les équipes, les canaux et les conversations de groupe permettent à plusieurs 
 
 Elles peuvent être étendues par les éléments suivants :
 
-* Les **[robots de conversation](~/bots/what-are-bots.md)** interagissent avec les membres de la conversation par le biais de la conversation et répondent aux événements (par exemple, un nouveau membre ajouté ou un canal renommé). Toutes les conversations avec un bot dans ce contexte sont visibles par tous les membres du canal ou du groupe, vous devez donc vous assurer que la conversation est pertinente pour tout le monde.
+* Les [**robots de conversation**](~/bots/what-are-bots.md) interagissent avec les membres de la conversation par le biais de la conversation et répondent aux événements (par exemple, un nouveau membre ajouté ou un canal renommé). Toutes les conversations avec un bot dans ce contexte sont visibles par tous les membres du canal ou du groupe, vous devez donc vous assurer que la conversation est pertinente pour tout le monde.
 
-* **[Onglets configurables](~/tabs/what-are-tabs.md)** offrant une expérience Web intégrée en plein écran configurée pour le canal ou la conversation de groupe dans laquelle il est installé. Tous les membres interagissent sur la même application Web partagée, de sorte qu’une expérience d’application de page unique sans état est typique.
+* [**Onglets configurables**](~/tabs/what-are-tabs.md) offrant une expérience Web intégrée en plein écran configurée pour le canal ou la conversation de groupe dans laquelle il est installé. Tous les membres interagissent sur la même application Web partagée, de sorte qu’une expérience d’application de page unique sans état est typique.
 
-* **[Webhooks et connecteurs](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)** permettant aux services externes de publier des messages dans la conversation et à vos utilisateurs d’envoyer des messages à votre service. Vous pouvez tirer parti des cartes et des actions de carte pour créer des messages riches et actionnables.
+* [**Webhooks et connecteurs**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) permettant aux services externes de publier des messages dans la conversation et à vos utilisateurs d’envoyer des messages à votre service. Vous pouvez tirer parti des cartes et des actions de carte pour créer des messages riches et actionnables.
 
 ### <a name="personal-apps"></a>Applications personnelles
 
@@ -35,13 +35,13 @@ Les [applications personnelles](~/concepts/design/personal-apps.md) sont la part
 
 Ils peuvent contenir :
 
-* Les **[bots de conversation](~/bots/what-are-bots.md)** ayant une conversation un-à-un avec l’utilisateur. Étant donné qu’il s’agit d’une conversation privée, si votre application doit avoir une conversation à tour de rôle ou fournir une notification qui s’applique uniquement à un seul utilisateur, il est généralement préférable de disposer de cette interaction dans une application personnelle.
+* Les [**bots de conversation**](~/bots/what-are-bots.md) ayant une conversation un-à-un avec l’utilisateur. Étant donné qu’il s’agit d’une conversation privée, si votre application doit avoir une conversation à tour de rôle ou fournir une notification qui s’applique uniquement à un seul utilisateur, il est généralement préférable de disposer de cette interaction dans une application personnelle.
 
-* **[Onglets personnels](~/tabs/what-are-tabs.md)** offrant une expérience Web intégrée en plein écran.
+* [**Onglets personnels**](~/tabs/what-are-tabs.md)offrant une expérience Web intégrée en plein écran.
 
 ## <a name="messages"></a>Messages
 
-Les messages sont le cœur de la collaboration dans Teams. Avec une **[commande action d’extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md)**, votre application peut permettre aux utilisateurs d’appeler l’API de votre application à partir d’un message, en envoyant le contenu du message à votre application à des fins de traitement ou d’action. Votre application peut répondre en présentant un formulaire (un module de tâches) à l’utilisateur pour recueillir des informations supplémentaires, envoyer une réponse au message d’origine ou envoyer un message directement à l’utilisateur.
+Les messages sont le cœur de la collaboration dans Teams. Avec une [**commande action d’extension de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md), votre application peut permettre aux utilisateurs d’appeler l’API de votre application à partir d’un message, en envoyant le contenu du message à votre application à des fins de traitement ou d’action. Votre application peut répondre en présentant un formulaire (un module de tâches) à l’utilisateur pour recueillir des informations supplémentaires, envoyer une réponse au message d’origine ou envoyer un message directement à l’utilisateur.
 
 ## <a name="writing-messages"></a>Écriture de messages
 
@@ -49,11 +49,11 @@ Votre application peut aider les utilisateurs à concevoir des messages plus eff
 
 Votre application peut aider les utilisateurs à créer des messages plus efficaces de trois façons :
 
-* **[Extension de messagerie : commandes de recherche](~/messaging-extensions/what-are-messaging-extensions.md)** leur permettant de rechercher rapidement un système externe, de prévisualiser les résultats de cette recherche, puis d’insérer le résultat dans la conversation sous forme de carte enrichie.
+* [**Extension de messagerie : commandes de recherche**](~/messaging-extensions/what-are-messaging-extensions.md) leur permettant de rechercher rapidement un système externe, de prévisualiser les résultats de cette recherche, puis d’insérer le résultat dans la conversation sous forme de carte enrichie.
 
-* **[Extension de messagerie-Link unfurling](~/messaging-extensions/what-are-messaging-extensions.md)** permet à votre application de surveiller les domaines Web qui vous intéressent. Lorsqu’une URL contenant ce domaine est collée dans la boîte de message de composition, l’API de votre application est appelée, ce qui vous permet d’ajouter une carte enrichie au message avec des informations supplémentaires sur l’élément lié.
+* [**Extension de messagerie-Link unfurling**](~/messaging-extensions/what-are-messaging-extensions.md) permet à votre application de surveiller les domaines Web qui vous intéressent. Lorsqu’une URL contenant ce domaine est collée dans la boîte de message de composition, l’API de votre application est appelée, ce qui vous permet d’ajouter une carte enrichie au message avec des informations supplémentaires sur l’élément lié.
 
-* **[Extension de messagerie : les commandes d’action](~/messaging-extensions/what-are-messaging-extensions.md)** présentent votre utilisateur avec un formulaire modal (un module de tâches), soumettez les résultats du formulaire à votre application, puis insérez un message directement dans la conversation ou créez une partie d’un message que l’utilisateur peut modifier avant de l’envoyer à la conversation.
+* [**Extension de messagerie : les commandes d’action**](~/messaging-extensions/what-are-messaging-extensions.md) présentent votre utilisateur avec un formulaire modal (un module de tâches), soumettez les résultats du formulaire à votre application, puis insérez un message directement dans la conversation ou créez une partie d’un message que l’utilisateur peut modifier avant de l’envoyer à la conversation.
 
 ## <a name="user-interface-ui-elements"></a>Éléments de l’interface utilisateur (IU)
 

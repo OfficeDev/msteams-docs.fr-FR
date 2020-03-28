@@ -2,12 +2,12 @@
 title: Demander des autorisations de périphérique pour votre onglet Microsoft teams
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui requièrent généralement le consentement de l’utilisateur
 keywords: développement d’onglets teams
-ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928516"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034035"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Demander des autorisations de périphérique pour votre onglet Microsoft teams
 
@@ -21,13 +21,10 @@ Vous souhaiterez peut-être enrichir votre onglet avec des fonctionnalités qui 
 ![Écran des paramètres d’autorisations des appareils](~/assets/images/tabs/device-permissions.png)
 
 > [!IMPORTANT]
-> La fonctionnalité d’appareil Native n’est actuellement pas prise en charge pour les onglets sur les clients mobiles, mais la prise en charge complète sera bientôt disponible. Pour vous préparer à ce changement, suivez les [instructions pour les onglets sur mobile](~/tabs/design/tabs-mobile.md) lors de la création des onglets. Les applications personnelles (onglets statiques) sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md).
 >
-> Lorsque la prise en charge complète des onglets est publiée :
+> Les fonctionnalités d’appareil Native ne sont actuellement pas prises en charge pour les onglets sur les clients mobiles.
 >
-> * Tous les onglets seront toujours disponibles sur mobile
-> * Votre `contentUrl` **sera chargé dans le client teams mobile**.
-> * Pour les onglets canal/groupe, les utilisateurs peuvent toujours ouvrir l’onglet dans un navigateur `websiteUrl`distinct via votre `contentUrl` , mais votre sera chargé en premier.  
+> L’API de géolocalisation n’est actuellement pas entièrement prise en charge sur tous les clients de bureau.
 
 ## <a name="device-permissions"></a>Autorisations de l’appareil
 
@@ -57,7 +54,7 @@ Chaque propriété vous permet d’inviter l’utilisateur à demander son conse
 
 | Propriété      | Description   |
 | --- | --- |
-| panne         | autorisation d’utilisation de l’appareil photo, du microphone et des haut-parleurs |
+| media         | autorisation d’utilisation de l’appareil photo, du microphone et des haut-parleurs |
 | géolocalisation   | autorisation de retourner l’emplacement de l’utilisateur      |
 | notifications | autorisation d’envoyer les notifications de l’utilisateur      |
 | midi          | autorisation d’envoyer et de recevoir des informations midi à partir d’un instrument musical numérique   |
@@ -109,4 +106,4 @@ Notification.requestPermission(function(result) { /* ... */ });
 
 ## <a name="permission-behavior-across-login-sessions"></a>Comportement des autorisations entre les sessions de connexion
 
-Les autorisations natives des appareils sont stockées par session de connexion. Cela signifie que si vous vous connectez à une autre instance de Teams (par exemple, sur un autre ordinateur), les autorisations de votre appareil pour vos sessions précédentes ne seront pas disponibles. Au lieu de cela, vous devrez redéfinir les autorisations des appareils pour le nouveau sessoin de connexion. Cela signifie également que si vous vous déconnectez de Teams (ou que vous changez de locataire dans Teams), vos autorisations sur les appareils seront supprimées pour cette session précédente. Gardez cela à l’esprit lorsque vous développez des autorisations d’appareil Native : les fonctionnalités natives que vous acceptez pour votre connexion _actuelle_ sessoin.
+Les autorisations natives des appareils sont stockées par session de connexion. Cela signifie que si vous vous connectez à une autre instance de Teams (par exemple, sur un autre ordinateur), les autorisations de votre appareil pour vos sessions précédentes ne seront pas disponibles. Au lieu de cela, vous devrez redéfinir les autorisations des appareils pour la nouvelle session de connexion. Cela signifie également que si vous vous déconnectez de Teams (ou que vous changez de locataire dans Teams), vos autorisations sur les appareils seront supprimées pour cette session précédente. Gardez cela à l’esprit lorsque vous développez des autorisations d’appareil natives : les fonctionnalités natives que vous acceptez pour votre session de connexion _actuelle_ .
