@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: 4bfbef38bdafac6afc6c19b01666d2df111f8d17
-ms.sourcegitcommit: 301be564aabaa7e1437a436053805cb9abecda21
+ms.openlocfilehash: 85fb1f4f3112da1022613ac7d9a9cd5f64081abd
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "42949475"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43035599"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -354,7 +354,7 @@ ms.locfileid: "42949475"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Présence</h3>
+                                                    <h3>Application Participation</h3>
                                                     <p>Aide les membres de votre équipe à enregistrer la participation et générer des rapports synthétisés.</p>
                                                 </div>
                                             </div>
@@ -373,7 +373,7 @@ ms.locfileid: "42949475"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Informations du collaborateur</h3>
+                                                    <h3>Application Informations du collaborateur</h3>
                                                     <p>Donnez aux employés de terrain la possibilité de mesurer les commentaires des clients.</p>
                                                 </div>
                                             </div>
@@ -394,6 +394,44 @@ ms.locfileid: "42949475"
                                                 <div class="cardText">
                                                     <h3>Application primes</h3>
                                                     <p>Gère et suit la participation rémunérée à des activités et événements.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-openbadges">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Ouvrir l’application Pastilles</h3>
+                                                    <p>Récompense et suivi des badges d’informations d’identification pour l’apprentissage numérique.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Application Activités de groupe</h3>
+                                                    <p>Créez et gérez rapidement des groupes d’activités et des flux de travail de collaboration.</p>
                                                 </div>
                                             </div>
                                         </div>
