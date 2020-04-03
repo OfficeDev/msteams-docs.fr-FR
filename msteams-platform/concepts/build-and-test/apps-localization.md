@@ -3,12 +3,12 @@ title: Localisation des applications d’équipe
 description: Décrit les problèmes liés à la localisation de votre application
 keywords: teams publier le magasin Office publication AppSource langue de localisation
 ms.date: 05/15/2018
-ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279760"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120281"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localisation pour les applications Microsoft teams
 
@@ -78,7 +78,7 @@ Par exemple, vous fournissez une langue par défaut de « fr » (français, to
 Si la langue de l’utilisateur est définie sur « en-ca » : 
 
 1. Le client teams prendra les chaînes « fr » les remplacer par les chaînes « en ».
-2. Étant donné qu’aucune localazation « en-ca » n’est fournie, les localisations « en » seront utilisées.
+2. Étant donné qu’aucune localisation « en-ca » n’est fournie, les localisations « en » seront utilisées.
 
 Si la langue de l’utilisateur est définie sur « es-es », le client teams prend les chaînes « fr » et ne les remplace pas par l’un des fichiers de langue.
 

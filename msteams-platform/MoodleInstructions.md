@@ -3,12 +3,12 @@ title: Installation de l’intégration de Moodle avec Microsoft teams
 description: Procédure d’installation et de configuration de l’application d’intégration Moodle pour Microsoft teams
 keywords: Plug-in teams Moodle d’intégration des applications
 ms.date: 01/31/2019
-ms.openlocfilehash: 012d6e9c979386e892b5a47b7655208eca95e11a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2b48cfb0bbef9a531e69ae5620c11a8258acdc64
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673509"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120296"
 ---
 # <a name="installing-the-moodle-integration-with-microsoft-teams"></a>Installation de l’intégration de Moodle avec Microsoft teams
 
@@ -24,7 +24,7 @@ Pour aider les administrateurs informatiques à configurer facilement cette int�
 * Installation automatique de l’onglet Moodle et du bot Assistant Moodle dans chaque équipe synchronisée. (Bientôt disponible)
 * Publication en un clic de l’application Moodle dans le magasin d’applications de teams privées. (Bientôt disponible)
 
-Pour en savoir plus sur les fonctionnalités de cette intégration, cliquez [ici](https://education.microsoft.com/courses-and-resources/resources/microsoft-teams-moodle).
+Pour en savoir plus sur les fonctionnalités de cette intégration, cliquez [ici](https://education.microsoft.com/resource/3dffb3a8).
 
 ## <a name="prerequisites"></a>Conditions préalables
 

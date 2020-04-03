@@ -4,16 +4,16 @@ author: clearab
 description: Vue d’ensemble des robots de conversation dans Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635304"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120289"
 ---
 # <a name="what-are-conversational-bots"></a>Qu’est-ce que les robots de conversation ?
 
-Les robots de conversation permettent aux utilisateurs d’interagir avec votre service Web par le biais de textes, de cartes interactives et de modules de tâches. Ils sont incroyablement flexibles : les robots de conversation peuvent être délimités pour gérer quelques commandes simples ou des assistants virtuels complexes, équipés d’intelligence artificielle et de traitement naturel en langue naturelle. Il peut s’agir d’un aspect d’une application plus grande ou totalement autonome.
+Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web via du texte, des cartes interactives et des modules de tâches. Ils sont incroyablement flexibles : les robots de conversation peuvent être délimités pour gérer quelques commandes simples ou des assistants virtuels complexes, équipés d’intelligence artificielle et de traitement naturel en langue naturelle. Il peut s’agir d’un aspect d’une application plus grande ou totalement autonome.
 
 L’image GIF ci-dessous montre un utilisateur qui contourne un bot dans une conversation un-à-un en utilisant des cartes de texte et des cartes interactives. Trouver le bon mélange de cartes, de texte et de modules de tâches est essentiel pour créer un bot utile. N’oubliez pas que les robots sont bien plus qu’un simple texte !
 
@@ -92,7 +92,7 @@ Un bot qui prend en charge des commandes excessives, en particulier un large év
 
 ### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Maintenance d’une base de connaissances de récupération volumineuse avec des réponses sans classement
 
-Les robots sont les plus adaptés aux interactions courtes et rapides, sans passer en revue les longues listes cherchant une réponse.
+Les robots sont les plus adaptés aux interactions courtes et rapides, sans passer par les longues listes cherchant une réponse.
 
 ## <a name="get-started"></a>Prise en main
 
