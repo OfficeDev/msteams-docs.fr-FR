@@ -1,4 +1,4 @@
-- name: Vue d’ensemble
+- name: Vue d'ensemble
   expanded: true
   items:
     - name: "Qu’est-ce que les applications Microsoft teams\_?"
@@ -143,7 +143,7 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: Ajouter une page de configuration
           href: messaging-extensions/how-to/add-configuration-page.md
-- name: Bots de conversation
+- name: Bots
   items:
     - name: "Qu’est-ce que les robots dans Microsoft teams\_?"
       href: bots/what-are-bots.md
