@@ -1,15 +1,15 @@
 ---
-title: Envoyer un commentaire
-description: Fournissez vos commentaires sur la plateforme de développement Microsoft teams
-keywords: questions sur les commentaires sur les équipes problèmes de contribution des bogues
-ms.openlocfilehash: 1f92a1f685632a9bb1bcae9e382b3b651561ead7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Prise en charge et commentaires
+description: Commentaires et support pour les développeurs Microsoft teams
+keywords: questions de développement de teams
+ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673864"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225783"
 ---
-# <a name="send-feedback-about-the-microsoft-teams-developer-platform"></a>Envoyer des commentaires sur la plateforme de développement Microsoft teams
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Commentaires et support pour les développeurs Microsoft teams  
 
 L’équipe produit Microsoft Team répond à la communauté des développeurs sur plusieurs canaux.
 
