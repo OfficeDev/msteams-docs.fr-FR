@@ -5,12 +5,12 @@ description: Guide de création d’un onglet
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptual
 ms.author: ''
-ms.openlocfilehash: 3f3b0ac8bc141672f25d9db2470cb71a856e0ed8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9f12f9eb39e4dfac4d5b725638bdbd2d7c2b4de6
+ms.sourcegitcommit: b8b06929981ebbeef4ae489f338271bf09d349a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673798"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43537270"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Étendre votre application teams avec un onglet personnalisé
 
@@ -38,7 +38,9 @@ Il existe trois types de pages d’onglets. Consultez la page de documentation c
 Quel que soit le type de page, vous devez respecter les conditions suivantes :
 
 * Vous devez autoriser le renvoi de vos pages dans un IFrame, via les en-têtes X-Frame-options et/ou Content-Security-Policy.
-
+  * En-tête Set :`Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`        
+  * Pour la compatibilité avec Internet Explorer 11 `X-Content-Security-Policy` , définissez-la également.    
+  * Vous pouvez également définir en `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`-tête. Cet en-tête est déconseillé, mais il est toujours respecté par la plupart des navigateurs.
 * En règle générale, comme protection contre les prises de rendez-vous, les pages de connexion ne s’affichent pas dans les IFrames. Par conséquent, votre logique d’authentification doit utiliser une méthode autre que Redirect (par exemple, utiliser l’authentification basée sur des jetons ou une authentification par cookie).
 
 > [!NOTE]
@@ -68,7 +70,7 @@ Vous pouvez utiliser l’application App Studio à partir du client Microsoft te
 1. Dans la section *domaines et autorisations* , les *domaines de votre champ d’onglets* doivent contenir votre URL d’hôte ou de proxy inverse, sans le préfixe https.
 1. À partir de l’onglet **Terminer** => le**test et répartir** , vous pouvez **Télécharger** votre package d’application, **installer** le package dans une équipe ou l' **Envoyer** au magasin d’applications teams pour approbation. *Si vous utilisez un proxy inverse, vous obtiendrez un avertissement dans le **champ Description** à droite. L’avertissement peut être ignoré lors du test de votre onglet*.
 
-## <a name="create-your-app-package-manually"></a>Création manuelle de votre package d’application
+## <a name="create-your-app-package-manually"></a>Créer manuellement votre package de l’application
 
 Comme avec les robots et les extensions de messagerie, vous mettez à jour le [manifeste d’application](~/resources/schema/manifest-schema.md) de votre application pour inclure les propriétés de l’onglet. Ces propriétés régissent les étendues disponibles dans votre onglet, les URL à utiliser et diverses autres propriétés.
 
@@ -78,11 +80,11 @@ Le contenu affiché pour les onglets personnels est le même pour tous les utili
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`entityId`|Chaîne|64 caractères|✔|Identificateur unique de l’entité que l’onglet affiche.|
+|`entityId`|String|64 caractères|✔|Identificateur unique de l’entité que l’onglet affiche.|
 |`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
 |`contentUrl`|Chaîne|2 048 caractères|✔|URL https://qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de dessin de teams.|
 |`websiteUrl`|Chaîne|2 048 caractères||URL https://vers laquelle pointer si un utilisateur choisit de l’afficher dans un navigateur.|
-|`scopes`|Tableau d’énumération|1 |✔|Les onglets statiques `personal` prennent en charge uniquement l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre d’une application personnelle.|
+|`scopes`|Tableau de l’énum|0,1|✔|Les onglets statiques `personal` prennent en charge uniquement l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre d’une application personnelle.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Exemple de manifeste d’onglet personnel simple
 
@@ -109,7 +111,7 @@ Les onglets canal/groupe sont ajoutés `configurableTabs` dans le tableau. Vous 
 |---|---|---|---|---|
 |`configurationUrl`|Chaîne|2 048 caractères|✔|URL https://vers la page de configuration.|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default`true`|
-|`scopes`|Tableau d’énumération|1 |✔|Les onglets configurables prennent `team` en `groupchat` charge uniquement les étendues et. |
+|`scopes`|Tableau de l’énum|0,1|✔|Les onglets configurables prennent `team` en `groupchat` charge uniquement les étendues et. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Exemple de manifeste de l’onglet canal/groupe simple
 
