@@ -5,12 +5,12 @@ keywords: mise en route .net c# CSharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: d38491ec1d152e8710e52530e3903a4bad3e1459
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034056"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550958"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Prise en main de la plateforme Microsoft teams avec C#/.NET et App Studio
 
@@ -29,7 +29,7 @@ Ce didacticiel vous permet de commencer à créer une application Microsoft team
 Pour effectuer ce didacticiel, vous devez obtenir les outils suivants :
 
 - [Installer Git](https://git-scm.com/downloads)
-- [Installez Visual Studio 2017](https://www.visualstudio.com/downloads/). Vous pouvez installer la version gratuite de la communauté.
+- [Installez Visual Studio](https://www.visualstudio.com/downloads/). Vous pouvez installer la version gratuite de la communauté.
 
 Si vous voyez une option à ajouter `git` au chemin d’accès pendant l’installation, choisissez de le faire. Il sera pratique.
 
@@ -43,7 +43,7 @@ git version 2.17.1.windows.2
 
 ```
 
-Veillez à lancer Visual Studio 2017 et à installer toutes les mises à jour, le cas échéant.
+Veillez à lancer la dernière version de Visual Studio et à installer toutes les mises à jour, le cas échéant.
 
 Vous pouvez continuer à utiliser cette fenêtre de terminal pour exécuter les commandes qui suivent dans ce didacticiel.
 

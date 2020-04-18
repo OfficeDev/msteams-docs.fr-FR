@@ -1,6 +1,6 @@
-1. Dans le [Azure Portal] [Azure-Portal], dans le volet de navigation de gauche, sélectionnez **créer une ressource**.
-1. Dans la zone de sélection du volet de droite, entrez « bot ». Dans la liste déroulante, sélectionnez **enregistrement des canaux de robots**.
-1. Cliquez sur le bouton **Créer**.
+1. Dans le [portail Azure](https://ms.portal.azure.com/#home), sous Azure services, sélectionnez **créer une ressource**.
+1. Dans la zone de recherche, entrez « bot ». Dans la liste déroulante, sélectionnez **enregistrement des canaux de robots**.
+1. Sélectionnez le bouton **créer** .
 1. Dans le panneau **d’enregistrement du canal bot** , fournissez les informations requises concernant votre robot.
 1. Laissez la zone **point de terminaison de messagerie** vide pour le moment, vous entrez l’URL requise après le déploiement du bot. L’image suivante montre un exemple des paramètres d’enregistrement :
 

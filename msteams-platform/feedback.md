@@ -1,17 +1,19 @@
 ---
-title: Prise en charge et commentaires
-description: Commentaires et support pour les développeurs Microsoft teams
+title: Commentaires et support pour les développeurs Microsoft teams
+description: L’équipe produit Microsoft teams répond à la communauté des développeurs sur plusieurs commentaires et canaux d’assistance.
 keywords: questions de développement de teams
-ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: dc152fc9445e3fc9583638d522c03e9f2052bcd9
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225783"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550944"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Commentaires et support pour les développeurs Microsoft teams  
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Commentaires et support pour les développeurs Microsoft teams
 
-L’équipe produit Microsoft Team répond à la communauté des développeurs sur plusieurs canaux.
+L’équipe produit Microsoft teams répond à la communauté des développeurs sur plusieurs commentaires et canaux d’assistance.
+
+## <a name="support-and-feedback-channels"></a>Canaux de prise en charge et de Feedback
 
 - **Questions générales sur la plateforme de développement Microsoft teams :** Envoyez un message électronique à la [prise en charge du développeur Microsoft teams](mailto:microsoftteamsdev@microsoft.com). Cette adresse de messagerie n’est _pas_ destinée à des commentaires ou des suggestions sur les fonctionnalités non liées à la plateforme de Microsoft Teams. Par ailleurs, pendant que nous Lisez tous les messages envoyés à cette adresse, nous ne répondons pas à chacun d’eux.
 

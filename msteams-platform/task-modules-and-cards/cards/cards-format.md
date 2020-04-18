@@ -3,12 +3,12 @@ title: Mise en forme de texte dans les cartes
 description: Décrit la mise en forme de texte de carte dans Microsoft teams
 keywords: format des cartes robots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365247"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550951"
 ---
 # <a name="format-cards-in-teams"></a>Cartes de format dans teams
 
@@ -61,15 +61,15 @@ La mise en forme diffère légèrement entre le bureau et les versions mobiles d
 
 Sur le bureau, le format des démarques de carte adaptative apparaît comme dans les navigateurs Web et dans l’application cliente teams :
 
-![Mise en forme adaptative de la démarque de carte dans le client de bureau](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Mise en forme adaptative de la démarque de carte dans le client de bureau](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 Sous iOS, la mise en forme adaptative de carte de visite apparaît comme suit :
 
-![Mise en forme adaptative de la démarque de carte dans iOS](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Mise en forme adaptative de la démarque de carte dans iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 Sous Android, la mise en forme de la démarque de carte adaptative apparaît comme suit :
 
-![Mise en forme adaptative de la démarque de carte dans Android](/assets/images/cards/Adaptive-markdown-Android.png)
+![Mise en forme adaptative de la démarque de carte dans Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>Plus d’informations sur les cartes adaptatives
 
@@ -164,7 +164,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| en-tête (&ndash;niveaux 1 à 3) | **Text** | `### Text`|
+| en-tête (&ndash;niveaux 1 à 3) | **Texte** | `### Text`|
 | doubles | ~~text~~ | `~~text~~` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -179,11 +179,11 @@ Dans les cartes de connecteur, les nouvelles `\n\n`lignes sont affichées pour `
 
 Sur le bureau, la mise en forme de démarque pour les cartes de connecteur se présente comme suit :
 
-![Mise en forme des démarques pour les cartes de connecteur dans le client de bureau](/assets/images/cards/connector-desktop-markdown-combined.png)
+![Mise en forme des démarques pour les cartes de connecteur dans le client de bureau](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 Sur iOS, la mise en forme de démarque pour les cartes de connecteur se présente comme suit :
 
-![Mise en forme des démarques pour les cartes de connecteur dans le client iOS](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![Mise en forme des démarques pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 Problèmes :
 
@@ -192,7 +192,7 @@ Problèmes :
 
 Sur Android, la mise en forme des démarques pour les cartes de connecteur se présente comme suit :
 
-![Mise en forme des démarques pour les cartes de connecteur dans le client Android](/assets/images/cards/connector-android-markdown-combined.png)
+![Mise en forme des démarques pour les cartes de connecteur dans le client Android](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### <a name="formatting-example-for-markdown-connector-cards"></a>Exemple de mise en forme pour les fiches de connecteur de démarque
 
@@ -253,7 +253,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (&ndash;niveaux 1 à 3) | **Text** | `<h3>Text</h3>` |
+| en-tête (&ndash;niveaux 1 à 3) | **Texte** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -268,11 +268,11 @@ Dans les cartes de connecteur, les nouvelles lignes sont affichées `<p>` en HTM
 
 Sur le bureau, la mise en forme HTML des cartes de connecteur se présente comme suit :
 
-![Mise en forme HTML pour les cartes de connecteur dans le client de bureau](/assets/images/cards/Connector-desktop-html-combined.png)
+![Mise en forme HTML pour les cartes de connecteur dans le client de bureau](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 Sur iOS, la mise en forme HTML se présente comme suit :
 
-![Mise en forme HTML pour les cartes de connecteur dans le client iOS](/assets/images/cards/connector-iphone-html-combined-80.png)
+![Mise en forme HTML pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 Problèmes :
 
@@ -281,7 +281,7 @@ Problèmes :
 
 Sur Android, la mise en forme HTML se présente comme suit :
 
-![Mise en forme HTML pour les cartes de connecteur dans le client Android](/assets/images/cards/connector-android-html-combined.png)
+![Mise en forme HTML pour les cartes de connecteur dans le client Android](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>Exemple de mise en forme des cartes de connecteur HTML
 
@@ -341,7 +341,7 @@ Les balises HTML sont prises en charge pour les cartes simples telles que le hé
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (&ndash;niveaux 1 à 3) | **Text** | `<h3>Text</h3>` |
+| en-tête (&ndash;niveaux 1 à 3) | **Texte** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -356,11 +356,11 @@ En raison des différences de résolution entre le bureau et la plateforme mobil
 
 Sur le bureau, la mise en forme HTML se présente comme suit :
 
-![Mise en forme HTML dans le client de bureau](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![Mise en forme HTML dans le client de bureau](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 Sous iOS, la mise en forme HTML se présente comme suit :
 
-![Mise en forme HTML dans le client iOS](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![Mise en forme HTML dans le client iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 Problèmes :
 
@@ -368,7 +368,7 @@ Problèmes :
 
 Sous Android, la mise en forme HTML se présente comme suit :
 
-![Mise en forme HTML dans le client Android](/assets/images/cards/card-formatting-xml-android-60.png)
+![Mise en forme HTML dans le client Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 La mise en forme des caractères comme gras et italique s’affiche correctement sur Android.
 
