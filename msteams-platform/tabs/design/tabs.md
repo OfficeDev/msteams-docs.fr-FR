@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception de l’infrastructure de référence
-ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896498"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914552"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -38,13 +38,13 @@ Les onglets fonctionnent mieux lorsqu’ils sont conçus pour répondre à un be
 
 ### <a name="reduced-chrome"></a>Chrome réduit
 
-Évitez de créer plusieurs panneaux dans un onglet, d’ajouter des couches de navigation ou de demander aux utilisateurs de faire défiler verticalement et horizontalement dans un onglet. En d’autres termes, essayez de ne pas avoir d’onglets dans votre onglet.
+Évitez de créer plusieurs panneaux au sein d’un même onglet, d’y ajouter des couches de navigation ou d’obliger les utilisateurs à faire défiler son contenu verticalement et horizontalement. En d’autres termes, essayez de ne pas avoir d’onglets dans votre onglet.
 
 ### <a name="integration"></a>Intégration
 
-Découvrez comment informer les utilisateurs de l’activité de l’onglet en publiant des cartes dans une conversation, par exemple.
+Découvrez comment informer les utilisateurs de l’activité des onglets en publiant des [cartes adaptatives](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) sur une conversation.
 
-### <a name="conversational"></a>Conversation
+### <a name="conversational"></a>Conversationnel
 
 Trouver un moyen de faciliter la conversation sur un onglet. Cela garantit que le Centre des conversations est sur le contenu, les données ou le processus à portée de main.
 

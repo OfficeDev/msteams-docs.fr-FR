@@ -4,12 +4,12 @@ description: Décrit des conseils pour l’envoi et la plupart des stratégies a
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896519"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914573"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -30,6 +30,7 @@ Cet article aborde les principales raisons d’échec de validation des applicat
 * Votre application ne doit pas télécharger, installer ou lancer automatiquement un code exécutable dans l’environnement de l’utilisateur. Tous les téléchargements doivent demander une autorisation explicite à l’utilisateur.
 * Tous les éléments que vous associez à votre expérience, tels que les descriptions et la documentation de support, doivent être précis. Utilisez correctement l'orthographe, les majuscules, la ponctuation et la grammaire.
 * Fournir des informations d’aide et de support. Il est vivement recommandé que votre application comprenne un lien Aide/FAQ pour l’expérience utilisateur de première exécution. Pour toutes les applications personnelles, nous vous recommandons de fournir votre page d’aide sous la forme d’un onglet personnel pour une meilleure expérience utilisateur.
+* Incrémentez le numéro de version de votre application dans le manifeste si vous effectuez des modifications de manifeste de votre envoi.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fournir une expérience de connexion/déconnexion claire et simple d’accès
 

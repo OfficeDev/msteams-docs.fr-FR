@@ -4,12 +4,12 @@ author: clearab
 description: Vue d’ensemble des extensions de messagerie sur la plateforme Microsoft teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225790"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914601"
 ---
 # <a name="what-are-messaging-extensions"></a>Que sont les extensions de messagerie ?
 
@@ -42,7 +42,7 @@ Le type de commande d’extension de messagerie définit les éléments d’inte
 
 ### <a name="action-commands"></a>Commandes d’action
 
-Les commandes d’action vous permettent de présenter une fenêtre contextuelle modale à vos utilisateurs afin de collecter ou d’afficher des informations. Lors de l’envoi du formulaire, votre service Web peut répondre en insérant un message directement dans la conversation ou en insérant un message dans la zone de message de composition et en permettant à l’utilisateur d’envoyer le message. Vous pouvez même regrouper plusieurs formulaires pour des flux de travail plus complexes.
+Les commandes d’action vous permettent de présenter à vos utilisateurs une fenêtre contextuelle modale pour collecter ou afficher des informations. Lors de l’envoi du formulaire, votre service Web peut répondre en insérant un message directement dans la conversation ou en insérant un message dans la zone de message de composition et en permettant à l’utilisateur d’envoyer le message. Vous pouvez même regrouper plusieurs formulaires pour des flux de travail plus complexes.
 
 Elles peuvent être déclenchées à partir de la zone de message de composition, de la zone de commande ou d’un message. Lorsqu’elle est appelée à partir d’un message, la charge utile JSON initiale envoyée à votre bot inclut l’intégralité du message à partir duquel elle a été appelée.
 

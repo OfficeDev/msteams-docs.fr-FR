@@ -2,12 +2,12 @@
 title: Appels et robots de réunions en ligne
 description: Découvrez comment vos applications Microsoft teams peuvent interagir avec les utilisateurs à l’aide de la voix et de la vidéo à l’aide des API Microsoft Graph pour les appels et les réunions en ligne.
 keywords: appel des appels vocaux audio de vidéo
-ms.openlocfilehash: 03bd7e085908a49f070fe84aba87138ecabafb83
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e89fc576a0688a65e86c03696619569c41b6a3a2
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673706"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914615"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Appels et robots de réunions en ligne
 
@@ -36,8 +36,8 @@ Pour utiliser ces API Microsoft Graph dans une application Microsoft Teams, vous
 Voici plus d’informations sur la façon de créer et de tester les appels et les robots de réunions en ligne :
 
 * [Référence de l’API Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
-* [Exemples d’applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Inscription d’un bot qui prend en charge les appels et les réunions en ligne](./registering-calling-bot.md) et les [autorisations Microsoft Graph pour les appels et les robots de réunions en ligne](/registering-calling-bot.md#add-microsoft-graph-permissions)
+* [Exemple d’applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Inscription d’un bot qui prend en charge les appels et les réunions en ligne](./registering-calling-bot.md) et les [autorisations Microsoft Graph pour les appels et les robots de réunions en ligne](./registering-calling-bot.md#add-microsoft-graph-permissions)
 * [Comment développer des robots d’appels et de réunions en ligne sur votre PC local](./debugging-local-testing-calling-meeting-bots.md)
 * [Plus d’informations sur le traitement multimédia en temps réel](./real-time-media-concepts.md)et sur [les besoins de prise en charge des médias hébergés](./requirements-considerations-application-hosted-media-bots.md) par l’application
 * [Informations techniques sur le traitement des notifications d’appel entrant](./call-notifications.md)

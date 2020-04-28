@@ -2,12 +2,12 @@
 title: Référence des instructions de conception
 description: Décrit les instructions relatives à l’utilisation des boutons, des liens et des contrôles dans vos applications
 keywords: instructions de conception des équipes les composants de référence boutons de liens couleurs
-ms.openlocfilehash: 09dad651fee9c97fd52e672ea055e2c24b549a59
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9325980c38048ee250ace6b00f1ed29c6cbea8d
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673866"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914587"
 ---
 # <a name="buttons-links-and-controls"></a>Boutons, liens et contrôles
 
@@ -18,6 +18,10 @@ ms.locfileid: "41673866"
 Le style des boutons permet de communiquer le type d’action qu’ils déclenchent. Nous mettons à jour un large éventail de boutons qui sont mis en forme pour afficher différents niveaux de mise en relief.
 
 Les boutons peuvent contenir du texte, une icône ou une combinaison de texte et d’icône. Pour communiquer différents niveaux dans une hiérarchie, nous avons conçu les boutons principal et secondaire dans chaque catégorie.
+
+### <a name="fluent-design-system"></a>Système de conception Fluent
+
+L’interface utilisateur Fluent fournit des conseils pour les États des composants Web et de bureau, le style et l’accessibilité. Les boutons de la plateforme teams peuvent être mis en forme pour afficher différents niveaux de mise en relief. *Voir*les[couleurs de bouton de l’interface utilisateur Fluent](https://fluentsite.z22.web.core.windows.net/components/button/definition?showCode=false&showRtl=false&showTransparent=false&showVariables=true#types-emphasis) pour les valeurs de couleur hexadécimales html et CSS.  
 
 ### <a name="text-buttons"></a>Boutons de texte
 
@@ -55,7 +59,7 @@ Boutons circulaires, cases à cocher et commutateurs à bascule.<br/>
 
 ---
 
-## <a name="links"></a>Liens
+## <a name="links"></a>Links
 
 Voici nos styles approuvés pour les liens de texte incorporés.
 [!include[Approved link styles](~/includes/design/links-image-text.html)]

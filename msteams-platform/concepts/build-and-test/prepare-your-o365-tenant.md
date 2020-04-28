@@ -1,15 +1,15 @@
 ---
-title: Préparer votre client Office 365
+title: Préparer votre client Office 365
 description: Prise en main de teams dans Office 365
 keywords: Configurer le chargement des équipes client Office 365
-ms.openlocfilehash: 35f102223a5f8e6a8e12268e22aedca07a61b1fa
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120268"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914566"
 ---
-# <a name="prepare-your-office-365-tenant"></a>Préparer votre client Office 365
+# <a name="prepare-your-office-365-tenant"></a>Préparer votre client Office 365
 
 Si vous êtes un abonné Office 365, vous pouvez développer des applications pour Microsoft teams à l’aide de l’un des [plans](https://products.office.com/business/compare-more-office-365-for-business-plans)suivants :
 
@@ -23,7 +23,7 @@ Microsoft teams sera également disponible pour les clients abonnés à E4 avant
 
 ## <a name="just-need-a-development-environment"></a>Vous avez besoin d’un environnement de développement ?
 
-Si vous ne disposez pas d’un compte Office 365, vous pouvez vous inscrire pour obtenir un abonnement [office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement. Si vous disposez d’un abonnement Visual Studio *entreprise* ou *professionnel* , les deux programmes incluent un abonnement Office 365 [développeur](https://aka.ms/MyVisualStudioBenefits)gratuit, actif pendant toute la durée de votre abonnement Visual Studio. *Consultez la rubrique* [configurer un abonnement développeur Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+Si vous ne disposez pas d’un compte Office 365, vous pouvez vous inscrire pour obtenir un abonnement au [programme de développement Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement. Si vous disposez d’un abonnement Visual Studio *entreprise* ou *professionnel* , les deux programmes incluent un [abonnement de développeur](https://aka.ms/MyVisualStudioBenefits)gratuit Microsoft 365, actif pendant la durée de vie de votre abonnement Visual Studio. *Consultez la rubrique* [configurer un abonnement développeur Microsoft 365](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>Activer Microsoft teams pour votre organisation
 
