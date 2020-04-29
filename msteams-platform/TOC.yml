@@ -5,7 +5,7 @@
       href: overview.md
     - name: "Quelles sont les nouveautés\_?"
       href: whats-new.md
-- name: Prise en main
+- name: Didacticiels et exemples de code
   items:
     - name: 'Créer une application à l’aide de C#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Créer une application avec le générateur Yeoman
       href: tutorials/get-started-yeoman.md
-- name: Exemples et modèles
+    - name: Développer le client Teams avec des applications personnalisées
+      href: tutorials/code-samples.md
+- name: Modèles d’applications et intégrations
   items:
     - name: Modèles d'application prêts pour la production
       href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
       href: samples/shifts-wfm-connectors.md
-    - name: Exemple d’applications
-      href: samples/code-samples.md
 - name: Concepts
   expanded: true
   items:
@@ -104,7 +104,11 @@
   items:
     - name: "Qu’est-ce qu’une extension de messagerie\_?"
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Démarrage rapide
+    - name: Conception
+      items:
+        - name: Instructions de conception des extensions de messagerie
+          href: messaging-extensions/design/messaging-extension-design.md
+    - name: Démarrages rapides
       items:
         - name: Avec commande d’action
           items:
