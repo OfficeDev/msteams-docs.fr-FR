@@ -2,12 +2,12 @@
 title: Guide sur le processus d’approbation de l’application Microsoft teams
 description: Décrit le processus d’approbation pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
 keywords: teams publier le magasin de publication Office AppSource
-ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 0f4a93f6c93ab0dd4147d7e6b8dce0beac26ed95
+ms.sourcegitcommit: 5207af18a032763fecf2b932d7e29ced1ee11ccd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914545"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "43937349"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envoi de votre application à AppSource
 
@@ -25,8 +25,8 @@ La publication de votre application dans [AppSource](https://appsource.microsoft
 
 >[!NOTE]
 >
-> * Si votre application teams contient un bot, vous devez vous conformer au [Code de conduite de](https://aka.ms/bf-conduct)l’infrastructure de développement de robots.
-> * Si votre application contient un connecteur Office 365, des conditions supplémentaires peuvent s’appliquer. *Consultez* le [tableau de bord du développeur de connecteurs](https://aka.ms/connectorsdashboard) et des développeurs d' [applications](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- Si votre application teams contient un bot, vous devez vous conformer au [Code de conduite de](https://aka.ms/bf-conduct)l’infrastructure de développement de robots.
+>- Si votre application contient un connecteur Office 365, des conditions supplémentaires peuvent s’appliquer. *Consultez* le [tableau de bord du développeur de connecteurs](https://aka.ms/connectorsdashboard) et des développeurs d' [applications](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQ — applications teams et comptes partenaires
 
@@ -34,14 +34,34 @@ La publication de votre application dans [AppSource](https://appsource.microsoft
 
 Il existe deux façons de créer un compte de centre partenaire :
 
-* Si vous débutez avec le centre de partenaires et que vous n’avez pas de compte dans le réseau Microsoft, [créez un compte à l’aide de la page d’enregistrement du centre partenaires](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
-* Si vous êtes déjà dans le réseau partenaire, [créez un compte directement dans le centre de partenaires à l’aide d’une inscriptions existante](/office/dev/store/).
+- Si vous débutez avec le centre de partenaires et que vous n’avez pas de compte dans le réseau Microsoft, [créez un compte à l’aide de la page d’enregistrement du centre partenaires](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
+- Si vous êtes déjà dans le réseau partenaire, [créez un compte directement dans le centre de partenaires à l’aide d’une inscriptions existante](/office/dev/store/).
 
-## <a name="how-do-i-add-my-phone-number-to-the-contact-info-section"></a>Comment puis-je ajouter mon numéro de téléphone à la section informations sur le contact ?
+## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Comment puis-je ajouter mon numéro de téléphone à la section contact du profil partenaire ?
 
-Le numéro de téléphone comprend trois parties : indicatif du pays, indicatif régional et numéro de téléphone. Si aucune section n’est applicable, entrez le numéro `0`.
+Le numéro de téléphone comprend trois parties : indicatif du pays, indicatif régional et numéro de téléphone. Si votre numéro de téléphone n’inclut pas d’indicatif régional, laissez la deuxième zone vide et complétez la troisième zone.
 
-## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Pourquoi est-ce que je reçois le message « ce compte n’est pas autorisé à publier » lorsque j’essaie d’envoyer mon complément via le centre de partenariat ?
+## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>Que se passe-t-il si je ne trouve pas mon compte Office Store dans le centre partenaires ?
+
+Ouvrez un [ticket de support partenaire](https://partner.microsoft.com/en-US/support/v2/?stage=1) et sélectionnez ce qui suit dans les menus déroulants :
+
+| Menu | Option |
+| -------   | -------  |
+|Catégorie| Marché commercial|
+| Rubrique | Aide générale sur Marketplace et questions sur les procédures |
+| Sujet secondaire| Complément Office |
+
+*Voir aussi* [Comment ouvrir un ticket de support de centre partenaire](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
+
+## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>Comment puis-je gérer mes paramètres de compte et mon profil partenaire dans le centre de partenaires ?
+
+Pour obtenir des instructions sur la gestion des paramètres de votre compte centre partenaires, consultez notre page [gérer les paramètres de compte et les informations de profil](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) .
+
+## <a name="how-do-i-manage-my-office-store-account"></a>Comment puis-je gérer mon compte Office Store ?
+
+Pour obtenir des instructions sur la gestion de votre compte Office Store via le centre de partenaires, consultez notre [compte Manage Your Office Store dans le Centre des partenaires](/office/dev/store/manage-account-settings-and-profile) .
+
+## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>Pourquoi est-ce que je reçois le message « ce compte n’est pas autorisé à publier » lorsque j’essaie d’envoyer mon complément via le centre de partenariat ?
 
 Vous recevrez le message d’erreur ci-dessus lorsque l' [État de vérification](/partner-center/verification-responses) de votre compte est en attente. Vous pouvez vérifier l’état de la vérification de votre compte dans le [tableau de bord](https://partner.microsoft.com/dashboard) du centre partenaires en sélectionnant l’option **paramètres** (icône d’engrenage) dans le coin supérieur droit de l’environnement d’en-tête de page et en sélectionnant paramètres**du compte de** **compte**  => pour les **développeurs** => .
 
@@ -49,23 +69,20 @@ Vous recevrez le message d’erreur ci-dessus lorsque l' [État de vérification
 
 ![Statut de vérification du centre de partenaires](../../../assets/images/partner-center-verification-status.png)
 
-Pendant le processus de vérification de compte, l’état de chaque étape requise (la propriété de l’e-mail, la vérification de l’emploi et la vérification de l’entreprise) s’affiche. Une fois le processus de vérification terminé, l’état de vérification de votre enregistrement sur la page de profil passe de « en attente » à « autorisé » et les étapes du processus ne s’affichent plus.
+Pendant le processus de vérification de compte, l’état de chaque étape requise (la propriété de l’E-mail, la vérification de l’emploi et la vérification de l’entreprise) s’affiche. Une fois le processus de vérification terminé, l’état de vérification de votre enregistrement sur la page de profil passe de « en attente » à « autorisé » et les étapes du processus ne s’affichent plus.
 
 ![Erreur de vérification du centre partenaire](../../../assets/images/partner-center-acct-verification-error.png)
 
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>Mon état de vérification de compte n’a pas avancé au-delà de la propriété de messagerie. Comment procéder ?
+
+Pendant le processus de vérification de la **propriété de messagerie** , un message électronique de vérification est envoyé à l’adresse de messagerie du contact principal. Consultez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@<span>Microsoft</span>. com** en fonction de la ligne d’objet *requise : Vérifiez votre compte de messagerie auprès de Microsoft*, en vous demandant d’effectuer le processus de vérification du courrier électronique. Le message électronique de vérification sera envoyé à l’adresse de messagerie indiquée dans la page Paramètres de votre compte dans le centre de partenaires.
+
+> [!NOTE]
+ >Le lien de vérification de la messagerie n’est valide que pendant 7 jours. Vous pouvez demander à ce que nous puissions vous renvoyer le courrier électronique en visitant votre page de profil partenaire et en sélectionnant le lien **renvoyer le message électronique de vérification** . Pour vous assurer que le courrier électronique est reçu, la liste des messages autorisés d’microsoft.com en tant que domaine approuvé et vérifiez vos dossiers de courrier indésirable.
+
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Comment puis-je obtenir une assistance supplémentaire pour les problèmes liés à mon compte ?
 
-Visitez la [page aide et support partenaires](https://aka.ms/marketplacepublishersupport) et recherchez des solutions utiles pour obtenir une documentation relative à votre problème. Si les solutions ou les documents en libre-service fournis ne sont pas utiles pour résoudre votre problème, Veuillez classer un ticket de support en sélectionnant **fournir les détails du problème** dans la section **étape suivante** . Vous pouvez rechercher votre rubrique de problème dans la zone de recherche ou sélectionner **Parcourir les rubriques**, sous la zone de recherche, pour approfondir votre exploration.
-
-> [!TIP]
-> Si vous souhaitez obtenir de l’aide sur un problème de **vérification de compte** :
->
->1. Sous la **zone de recherche**, sélectionnez **Parcourir les rubriques**.
->1. Dans le menu déroulant **catégorie** , sélectionnez **tous les programmes** .
-> 1. Sélectionnez **compte, intégration, accès** dans le menu déroulant **rubrique** .
->1. **Sélectionnez une option** dans le menu déroulant sous- **sujet** .
->1. Pour obtenir de l’aide. Sélectionnez **fournir les détails du problème** dans la section **étape suivante** .
->
+Pour obtenir des instructions et des étapes de création d’un ticket d’assistance, consultez notre [support pour le programme de marché commercial dans la page Centre de partenaires](/azure/marketplace/partner-center-portal/support) .
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what--should-i-do-next"></a>J’ai vérifié mes dossiers de courrier et je n’ai pas reçu le message électronique de vérification. Que dois-je faire maintenant ?
 
@@ -79,9 +96,13 @@ Procédez comme suit :
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Combien de temps dure le processus de vérification de l’emploi ?
 
-Si tous les détails sont fournis correctement, la vérification de l’emploi se termine dans 1 à 2 heures.
+Si tous les détails envoyés sont corrects, la vérification de l’emploi se termine dans 1 à 2 heures.
 
-## <a name="ive-already-reached-out-to-support-is-there-a-way-to-expedite-my-case"></a>J’ai déjà accédé à la prise en charge, est-il possible d’expédier mon dossier ?
+## <a name="how-long-does-the-business-verification-process-usually-take"></a>Combien de temps dure le processus de « vérification de l’activité » ?
+
+La vérification de l’activité prend entre 1 et 2 jours ouvrés, à condition que tous les documents requis aient été envoyés.
+
+## <a name="if-ive-already-reached-out-to-the-support-team-will-my-ticket-be-expedited"></a>Si j’ai déjà accédé à l’équipe de support technique, mon ticket sera-t-il expédié ?
 
 Les tickets de support seront résolus au cours d’une semaine. Recherchez les mises à jour qui seront envoyées à l’e-mail fourni lorsque le ticket de support était généré.
 
@@ -90,10 +111,11 @@ Les tickets de support seront résolus au cours d’une semaine. Recherchez les 
 Envoyez un courrier électronique **<teamsubm@microsoft.com>** avec les informations suivantes :
 
 1. **Ligne d’objet**. *Problème de compte du centre partenaire pour <App_Name>* (spécifiez le nom de votre application).
-2. **Corps du message :**
+1. **Corps du message :**
     * Numéro de ticket d’assistance :
     * Votre IDENTIFIant vendeur :
-    * Une capture d’écran du problème.
+    * Une capture d’écran du problème (si possible) :
 
+>
 > [!div class="nextstepaction"]
 > [En savoir plus sur les stratégies de validation d’application pour Microsoft teams](https://docs.microsoft.com/legal/marketplace/certification-policies)
