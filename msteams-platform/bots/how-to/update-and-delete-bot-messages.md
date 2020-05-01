@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Procédure de mise à jour et de suppression des messages envoyés à partir de votre robot Microsoft teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 222409fa0d02a571b7295dedb0c60b1ca3f90cca
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 46994c6810197002ef1c108af4f725426395b37f
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914608"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "43957186"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Mettre à jour et supprimer des messages envoyés à partir de votre robot
 
@@ -53,6 +53,22 @@ update_result = await context.update_activity(new_activity)
 
 ```
 
+# <a name="rest-api"></a>[API REST](#tab/rest)
+
+>[!NOTE]
+>Vous pouvez développer des applications teams dans n’importe quelle technologie de programmation Web et appeler directement les [API REST du service du connecteur bot](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). Pour ce faire, vous devez implémenter les procédures de sécurité [d’authentification](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) avec vos demandes d’API.
+
+Pour mettre à jour une activité existante au sein d’une `conversationId` conversation `activityId` , incluez le et dans le point de terminaison de la demande. Pour effectuer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel POST d’origine.
+
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Corps de la demande** | Un objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) |
+| **Renvoie** | Objet [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) |
+
 ---
 
 ## <a name="deleting-messages"></a>Suppression de messages
@@ -90,5 +106,17 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
----
+# <a name="rest-api"></a>[API REST](#tab/rest)
 
+ Pour supprimer une activité existante au sein d’une conversation, `conversationId` incluez le et `activityId` dans le point de terminaison de la demande.
+
+```http
+DELETE /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **Corps de la demande** | s/o |
+| **Renvoie** | Un code d’état HTTP qui indique le résultat de l’opération. Nothing est spécifié dans le corps de la réponse. |
+
+---
