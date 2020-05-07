@@ -4,12 +4,12 @@ author: laujan
 description: Vue d’ensemble des onglets personnalisés sur la plateforme Microsoft teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
+ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365254"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "44119048"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Qu’est-ce que les onglets personnalisés de Microsoft teams ?
 
@@ -24,7 +24,6 @@ Il existe deux types d’onglets disponibles dans teams Channel/Group et Persona
 
 > [!div class="checklist"]
 >
-> * Conscience de la liste entière d’une équipe.
 > * Si un onglet est ajouté à une application qui a également un bot, le bot est également ajouté à l’équipe.
 > * Sensibilisation de l’ID AAD de l’utilisateur actuel.
 > * Détection des paramètres régionaux de l’utilisateur pour indiquer la langue, c’est-à-dire `en-us`. 
