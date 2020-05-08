@@ -100,54 +100,70 @@
           href: concepts/authentication/authentication.md
         - name: Configurer les fournisseurs d’identité
           href: concepts/authentication/configure-identity-provider.md
-- name: Extensions de messagerie
+- name: "Onglets\_: expériences web incorporées"
   items:
-    - name: "Qu’est-ce qu’une extension de messagerie\_?"
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Conception
+    - name: "Que sont les onglets personnalisés\_?"
+      href: tabs/what-are-tabs.md
+    - name: Démarrage rapide
       items:
-        - name: Instructions de conception des extensions de messagerie
-          href: messaging-extensions/design/messaging-extension-design.md
-    - name: Démarrages rapides
+        - name: Node.js et React
+          items:
+            - name: Créer un onglet de canal et de groupe
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+            - name: Créer un onglet personnel
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
+          items:
+            - name: Créer un onglet de canal et de groupe
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+            - name: Créer un onglet personnel
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+            - name: Créer un onglet de canal et de groupe
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+            - name: Créer un onglet personnel
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: Concevoir vos onglets
       items:
-        - name: Avec commande d’action
-          items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Avec commande de recherche
-          items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+        - name: Vue d’ensemble de la conception
+          href: tabs/design/tabs.md
+        - name: Onglets sur les clients mobiles
+          href: tabs/design/tabs-mobile.md
     - name: Guides pratiques
       expanded: true
       items:
-        - name: Créer une extension de messagerie
-          href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: Commandes basées sur l’action
+        - name: Ajouter des onglets à votre application
+          href: tabs/how-to/add-tab.md
+        - name: Créer des pages d’onglets
           items:
-            - name: Définir les commandes d’action
-              href: messaging-extensions/how-to/action-commands/define-action-command.md
-            - name: Créer et envoyer le module de tâches
-              href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: Envoyer une réponse à l’action de soumission
-              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: Commandes basées sur la recherche
+            - name: Créer une page de contenu
+              href: tabs/how-to/create-tab-pages/content-page.md
+            - name: Créer une page de configuration
+              href: tabs/how-to/create-tab-pages/configuration-page.md
+            - name: Créer une page de suppression d’onglets
+              href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Ajouter une authentification à vos onglets
           items:
-            - name: Définir les commandes de recherche
-              href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: Recevoir et répondre aux requêtes de recherche
-              href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Déploiement de lien
-          href: messaging-extensions/how-to/link-unfurling.md
-        - name: Ajouter une authentification
-          href: messaging-extensions/how-to/add-authentication.md
-        - name: Ajouter une page de configuration
-          href: messaging-extensions/how-to/add-configuration-page.md
-- name: Bots
+            - name: Flux d’authentification
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: "Utilisation de l’authentification Azure\_AD"
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Utilisation de l’authentification en mode silencieux
+              href: tabs/how-to/authentication/auth-silent-aad.md
+            - name: Utilisation de l’authentification unique
+              href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: Utilisation du kit de développement logiciel client Teams
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: Obtenir un contexte Teams supplémentaire
+          href: tabs/how-to/access-teams-context.md
+        - name: DevTools pour les onglets Microsoft Teams
+          href: tabs/how-to/developer-tools.md
+        - name: Ajout de votre onglet personnalisé à SharePoint
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: Demande des autorisations d’appareil
+          href: tabs/how-to/native-device-permissions.md
+- name: "Bots\_: interactions basées sur des conversations"
   items:
     - name: "Qu’est-ce qu’un bot dans Microsoft Teams\_?"
       href: bots/what-are-bots.md
@@ -218,70 +234,54 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: Médias hébergés par l’application
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: Onglets
+- name: "Extensions de messagerie\_: interactions orientées tâche"
   items:
-    - name: "Que sont les onglets personnalisés\_?"
-      href: tabs/what-are-tabs.md
-    - name: Démarrage rapide
+    - name: "Qu’est-ce qu’une extension de messagerie\_?"
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Conception
       items:
-        - name: Node.js et React
-          items:
-            - name: Créer un onglet de canal et de groupe
-              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-            - name: Créer un onglet personnel
-              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
-          items:
-            - name: Créer un onglet de canal et de groupe
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-            - name: Créer un onglet personnel
-              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
-          items:
-            - name: Créer un onglet de canal et de groupe
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-            - name: Créer un onglet personnel
-              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Concevoir vos onglets
+        - name: Instructions de conception des extensions de messagerie
+          href: messaging-extensions/design/messaging-extension-design.md
+    - name: Démarrages rapides
       items:
-        - name: Vue d’ensemble de la conception
-          href: tabs/design/tabs.md
-        - name: Onglets sur les clients mobiles
-          href: tabs/design/tabs-mobile.md
+        - name: Avec commande d’action
+          items:
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+        - name: Avec commande de recherche
+          items:
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
     - name: Guides pratiques
       expanded: true
       items:
-        - name: Ajouter des onglets à votre application
-          href: tabs/how-to/add-tab.md
-        - name: Créer des pages d’onglets
+        - name: Créer une extension de messagerie
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: Commandes basées sur l’action
           items:
-            - name: Créer une page de contenu
-              href: tabs/how-to/create-tab-pages/content-page.md
-            - name: Créer une page de configuration
-              href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: Créer une page de suppression d’onglets
-              href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Ajouter une authentification à vos onglets
+            - name: Définir les commandes d’action
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: Créer et envoyer le module de tâches
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: Envoyer une réponse à l’action de soumission
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: Commandes basées sur la recherche
           items:
-            - name: Flux d’authentification
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: "Utilisation de l’authentification Azure\_AD"
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Utilisation de l’authentification en mode silencieux
-              href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Utilisation de l’authentification unique
-              href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Utilisation du kit de développement logiciel client Teams
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: Obtenir un contexte Teams supplémentaire
-          href: tabs/how-to/access-teams-context.md
-        - name: DevTools pour les onglets Microsoft Teams
-          href: tabs/how-to/developer-tools.md
-        - name: Ajout de votre onglet personnalisé à SharePoint
-          href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Demande des autorisations d’appareil
-          href: tabs/how-to/native-device-permissions.md
-- name: Modules et cartes de tâche
+            - name: Définir les commandes de recherche
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: Recevoir et répondre aux requêtes de recherche
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Déploiement de lien
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: Ajouter une authentification
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: Ajouter une page de configuration
+          href: messaging-extensions/how-to/add-configuration-page.md
+- name: "Modules de tâche et cartes\_: messagerie et notifications enrichies"
   items:
     - name: "Qu-est-ce qu’un module de tâche\_?"
       href: task-modules-and-cards/what-are-task-modules.md
@@ -303,7 +303,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: À partir d’un onglet
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: Webhooks et connecteurs
+- name: "Webhooks et connecteurs\_: messagerie programmée et notifications"
   items:
     - name: "Qu’est-ce qu’un webhook et un connecteur\_?"
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
