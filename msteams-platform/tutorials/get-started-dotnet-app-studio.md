@@ -5,12 +5,12 @@ keywords: mise en route .net c# CSharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550958"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210693"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Prise en main de la plateforme Microsoft teams avec C#/.NET et App Studio
 
@@ -64,7 +64,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 
 ## <a name="build-and-run-the-sample"></a>Création et exécution de l’exemple
 
-Une fois le référentiel cloné, utilisez Visual Studio pour ouvrir le fichier `Microsoft.Teams.Samples.HelloWorld.sln` de solution à partir du répertoire racine de l’exemple, `Build Solution` puis cliquez `Build` sur dans le menu. Vous pouvez exécuter l’exemple en appuyant `F5` sur `Start Debugging` ou en `Debug` sélectionnant dans le menu.
+Une fois le référentiel cloné, utilisez Visual Studio pour ouvrir le fichier de solution `Microsoft.Teams.Samples.HelloWorld.sln` à partir du répertoire racine de l’exemple, puis cliquez sur `Build Solution` dans le `Build` menu. Vous pouvez exécuter l’exemple en appuyant sur `F5` ou en sélectionnant `Start Debugging` dans le `Debug` menu.
 
 Lorsque l’application démarre, une fenêtre de navigateur s’ouvre avec la racine de l’application lancée. Vous pouvez accéder aux URL suivantes pour vérifier que toutes les URL d’application sont en cours de chargement :
 
@@ -76,15 +76,15 @@ Lorsque l’application démarre, une fenêtre de navigateur s’ouvre avec la r
 <a name="HostSample"></a>
 
 > [!Note]
-> Si vous recevez une erreur telle `Could not find a part of the path … bin\roslyn\csc.exe`que, essayez de mettre à jour le package `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`à l’aide de la commande. Pour plus d’informations, consultez [cette question sur StackOverflow](https://stackoverflow.com/questions/32780315) .
+> Si vous recevez une erreur telle que `Could not find a part of the path … bin\roslyn\csc.exe` , essayez de mettre à jour le package à l’aide de la commande `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` . Pour plus d’informations, consultez [cette question sur StackOverflow](https://stackoverflow.com/questions/32780315) .
 
 ## <a name="host-the-sample-app"></a>Héberger l’exemple d’application
 
-N’oubliez pas que les applications dans Microsoft teams sont des applications Web qui exposent une ou plusieurs fonctionnalités. Pour que la plateforme teams charge votre application, votre application doit être accessible à partir d’Internet. Pour permettre à votre application d’être accessible à partir d’Internet, vous devez héberger votre application. Vous pouvez l’héberger dans Microsoft Azure gratuitement ou créer un tunnel vers le processus local sur votre ordinateur de développement à `ngrok`l’aide de. Une fois que vous avez terminé d’héberger votre application, prenez note de son URL racine. Il ressemblera à ceci `https://yourteamsapp.ngrok.io` : `https://yourteamsapp.azurewebsites.net`ou.
+N’oubliez pas que les applications dans Microsoft teams sont des applications Web qui exposent une ou plusieurs fonctionnalités. Pour que la plateforme teams charge votre application, votre application doit être accessible à partir d’Internet. Pour permettre à votre application d’être accessible à partir d’Internet, vous devez héberger votre application. Vous pouvez l’héberger dans Microsoft Azure gratuitement ou créer un tunnel vers le processus local sur votre ordinateur de développement à l’aide de `ngrok` . Une fois que vous avez terminé d’héberger votre application, prenez note de son URL racine. Il ressemblera à ceci : `https://yourteamsapp.ngrok.io` ou `https://yourteamsapp.azurewebsites.net` .
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel à l’aide de ngrok
 
-Pour un test rapide, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel via un point de terminaison Web. [ngrok](https://ngrok.com) est un outil gratuit qui vous permet d’effectuer cette opération. Avec ngrok, vous pouvez obtenir une adresse Web telle `https://d0ac14a5.ngrok.io` que (cette URL n’est qu’un exemple). Vous pouvez [Télécharger et installer](https://ngrok.com/download) ngrok pour votre environnement. Veillez à l’ajouter à un emplacement dans votre `PATH`.
+Pour un test rapide, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel via un point de terminaison Web. [ngrok](https://ngrok.com) est un outil gratuit qui vous permet d’effectuer cette opération. Avec ngrok, vous pouvez obtenir une adresse Web telle que `https://d0ac14a5.ngrok.io` (cette URL n’est qu’un exemple). Vous pouvez [Télécharger et installer](https://ngrok.com/download) ngrok pour votre environnement. Veillez à l’ajouter à un emplacement dans votre `PATH` .
 
 Une fois que vous l’avez installé, vous pouvez ouvrir une nouvelle fenêtre de terminal et exécuter la commande suivante pour créer un tunnel. L’exemple utilise le port 3333, veillez donc à le spécifier ici.
 
@@ -95,7 +95,7 @@ ngrok http 3333 -host-header=localhost:3333
 Ngrok écoutera les demandes en provenance d’Internet et les acheminera vers votre application en cours d’exécution sur le port 3333. Vous pouvez vérifier en ouvrant votre navigateur et en accédant à `https://d0ac14a5.ngrok.io/hello` pour charger la page Hello de votre application. Veillez à utiliser l’adresse de transfert affichée par ngrok dans votre session de console au lieu de cette URL.
 
 > [!NOTE]
-> Si vous avez utilisé un autre port dans l’étape de [création et d’exécution](#build-and-run-the-sample) ci-dessus, vérifiez que vous utilisez le même numéro `ngrok` de port pour configurer le tunnel.
+> Si vous avez utilisé un autre port dans l’étape de [création et d’exécution](#build-and-run-the-sample) ci-dessus, vérifiez que vous utilisez le même numéro de port pour configurer le `ngrok` tunnel.
 > [!TIP]
 > Il est judicieux de s’exécuter `ngrok` dans une autre fenêtre de terminal pour qu’elle continue de s’exécuter sans interférer avec l’application que vous devrez peut-être arrêter, reconstruire et réexécuter. La `ngrok` session renverra des informations utiles sur le débogage dans cette fenêtre.
 
@@ -115,7 +115,7 @@ Visual Studio prend en charge le déploiement d’applications sur différents f
 
 L’exemple d’application requiert que les variables d’environnement suivantes soient définies sur les valeurs que vous avez notées précédemment.
 
-Ouvrez le fichier Web. config et recherchez la section *appSettings* . Mettez à jour la valeur *MicrosoftAppId* avec votre ID bot que vous avez enregistré précédemment. Mettez à jour le *MicrosoftAppPassword* avec le mot de passe du bot que vous avez enregistré précédemment.
+Ouvrez le fichier appSettings. JSON. Mettez à jour la valeur *MicrosoftAppId* avec votre ID bot que vous avez enregistré précédemment. Mettez à jour le *MicrosoftAppPassword* avec le mot de passe du bot que vous avez enregistré précédemment.
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="définition des clés"/>
 
@@ -123,13 +123,13 @@ Une fois ces modifications effectuées, régénérez l’application. Si vous ut
 
 ## <a name="configure-the-app-tab"></a>Configurer l’onglet application
 
-Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Accédez à un canal de l’équipe où vous avez installé l’exemple d’application, puis cliquez sur le bouton **« + »** pour ajouter un nouvel onglet. Vous pouvez ensuite choisir `Hello World` dans la liste **Ajouter un onglet** . Une boîte de dialogue de configuration s’affiche. Cette boîte de dialogue vous permet de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet `Save` , puis cliqué sur, `Hello World` vous pouvez voir l’onglet chargé avec l’onglet que vous avez choisi.
+Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Accédez à un canal de l’équipe où vous avez installé l’exemple d’application, puis cliquez sur le bouton **« + »** pour ajouter un nouvel onglet. Vous pouvez ensuite choisir `Hello World` dans la liste **Ajouter un onglet** . Une boîte de dialogue de configuration s’affiche. Cette boîte de dialogue vous permet de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet, puis cliqué sur `Save` , vous pouvez voir l' `Hello World` onglet chargé avec l’onglet que vous avez choisi.
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Capture d’écran de la configuration" />
 
 ### <a name="test-your-bot-in-teams"></a>Tester votre robot dans teams
 
-Vous pouvez désormais interagir avec le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez enregistré votre application, puis `@your-bot-name`tapez. Il s’agit d’une ** \@mention**. Tout message que vous envoyez au bot vous sera renvoyé en tant que réponse.
+Vous pouvez désormais interagir avec le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez enregistré votre application, puis tapez `@your-bot-name` . Il s’agit d’une ** \@ mention**. Tout message que vous envoyez au bot vous sera renvoyé en tant que réponse.
 
 <img width="450px" title="Réponses de robot" src="~/assets/images/samples-hello-world-bot.png" />
 

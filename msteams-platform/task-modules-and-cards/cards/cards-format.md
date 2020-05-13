@@ -3,12 +3,12 @@ title: Mise en forme de texte dans les cartes
 description: Décrit la mise en forme de texte de carte dans Microsoft teams
 keywords: format des cartes robots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550951"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210686"
 ---
 # <a name="format-cards-in-teams"></a>Cartes de format dans teams
 
@@ -18,19 +18,19 @@ Les cartes prennent en charge la mise en forme uniquement dans la propriété Te
 
 La prise en charge de la mise en forme diffère selon les types de carte et le rendu de la carte peut légèrement varier entre le bureau et les clients teams mobiles, ainsi que teams dans le navigateur de bureau.
 
-Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Images un format `.png`, `.jpg`ou `.gif` des fichiers, ne doit pas dépasser 1024 × 1024 PX ou 1 Mo. L’image GIF animée n’est pas officiellement prise en charge. *Voir* [référence des fiches](./cards-reference.md#inline-card-images)
+Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Images un format `.png` , `.jpg` ou `.gif` des fichiers, ne doit pas dépasser 1024 × 1024 PX ou 1 Mo. L’image GIF animée n’est pas officiellement prise en charge. *Voir* [référence des fiches](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Mise en forme de cartes avec démarque
 
 Il existe deux types de cartes qui prennent en charge la démarque dans teams :
 
 > [!div class="checklist"]
-> * **Cartes adaptatives**: la démarque est prise en charge `Textblock` dans le champ carte adaptative `Fact.Title` , `Fact.Value`ainsi que et. HTML n’est pas pris en charge dans les cartes adaptatives.
+> * **Cartes adaptatives**: la démarque est prise en charge dans le champ carte adaptative `Textblock` , ainsi que `Fact.Title` et `Fact.Value` . HTML n’est pas pris en charge dans les cartes adaptatives.
 > * **Cartes de connecteur O365**: la démarque et le code html limité sont pris en charge dans les cartes de connecteur Office 365 dans les champs de texte.
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Mise en forme des démarques : cartes adaptatives**](#tab/adaptive-md)
 
- Les styles pris en `Textblock`charge `Fact.Title` pour `Fact.Value` et sont les suivants :
+ Les styles pris en charge pour `Textblock` `Fact.Title` et `Fact.Value` sont les suivants :
 
 | Style | Exemple | Markdown |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Les balises de démarques suivantes ne sont pas prises en charge :
 
 * En-têtes
 * Tables
-* Des images
+* Images
 * Texte déjà mis en forme
 * Blockquotes
 
@@ -53,7 +53,7 @@ Les balises de démarques suivantes ne sont pas prises en charge :
 
 ### <a name="newlines-for-adaptive-cards"></a>Nouvelles lignes de cartes adaptatives
 
-Dans les listes, vous pouvez `\r` utiliser `\n` les séquences d’échappement ou pour les nouvelles lignes. L' `\n\n` utilisation d’une liste entraîne le retrait de l’élément suivant dans la liste. Si vous avez besoin de nouvelles lignes ailleurs dans TextBlock `\n\n`, utilisez.
+Dans les listes, vous pouvez utiliser les `\r` `\n` séquences d’échappement ou pour les nouvelles lignes. L’utilisation `\n\n` d’une liste entraîne le retrait de l’élément suivant dans la liste. Si vous avez besoin de nouvelles lignes ailleurs dans TextBlock, utilisez `\n\n` .
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Différences entre les appareils mobiles et de bureau pour les cartes adaptatives
 
@@ -109,21 +109,21 @@ Sous Android, la mise en forme de la démarque de carte adaptative apparaît com
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a>Mentionner la prise en charge dans les cartes adaptatives
+### <a name="mention-support-within-adaptive-cards-v12"></a>Mentionner la prise en charge dans les cartes adaptatives v 1.2
+
+Les mentions basées sur les cartes sont prises en charge dans les clients Web, de bureau et mobiles. Vous pouvez ajouter des @ mentions dans un corps de carte adaptative pour les réponses d’extension de messagerie et les robots.  Pour ajouter des marques de @ mentions dans les cartes, suivez la même logique de notification et le même rendu que celui des mentions basées sur les messages [dans les conversations de conversation de groupe et de canal](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+
+Les robots et les extensions de messagerie peuvent inclure des mentions dans le contenu des cartes dans les éléments [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) et [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
-> Mentionner la prise en charge des cartes est actuellement prise en charge en version préliminaire pour les [développeurs](../../resources/dev-preview/developer-preview-intro.md) .
-
-Les robots et les extensions de messagerie peuvent désormais inclure des mentions dans le contenu des cartes dans les éléments bloc de texte et FactSet.
+>Les [éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans les cartes adaptative v 1.2 sur la plateforme Teams.
 
 ### <a name="constructing-mentions"></a>Création de mentions
 
 Pour inclure une mention dans une carte adaptative, votre application doit inclure les éléments suivants
 
 * `<at>username</at>`dans les éléments de carte adaptative pris en charge
-* `mention` Objet à l’intérieur d' `msteams` une propriété dans le contenu de la carte, qui inclut l’ID utilisateur teams de l’utilisateur mentionné
-
-Notez que les cartes avec des mentions ne sont pas prises en charge sur les clients mobiles pour le moment.
+* `mention`Objet à l’intérieur d’une `msteams` propriété dans le contenu de la carte, qui inclut l’ID utilisateur teams de l’utilisateur mentionné
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Exemple de carte adaptative avec une mention
 
@@ -164,7 +164,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| en-tête (&ndash;niveaux 1 à 3) | **Texte** | `### Text`|
+| en-tête (niveaux 1 à &ndash; 3) | **Text** | `### Text`|
 | doubles | ~~text~~ | `~~text~~` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -173,7 +173,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | lien hypertexte | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | lien de l’image |![Canard sur une roche](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-Dans les cartes de connecteur, les nouvelles `\n\n`lignes sont affichées pour `\n` , `\r`mais pas pour ou.
+Dans les cartes de connecteur, les nouvelles lignes sont affichées pour `\n\n` , mais pas pour `\n` ou `\r` .
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Différences de bureau et de téléphone pour les cartes de connecteur utilisant la démarque
 
@@ -253,7 +253,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (&ndash;niveaux 1 à 3) | **Texte** | `<h3>Text</h3>` |
+| en-tête (niveaux 1 à &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -262,7 +262,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | lien hypertexte | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | lien de l’image | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-Dans les cartes de connecteur, les nouvelles lignes sont affichées `<p>` en HTML à l’aide de la balise.
+Dans les cartes de connecteur, les nouvelles lignes sont affichées en HTML à l’aide de la `<p>` balise.
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>Différences entre les appareils mobiles et de bureau pour les cartes de connecteur à l’aide de HTML
 
@@ -341,7 +341,7 @@ Les balises HTML sont prises en charge pour les cartes simples telles que le hé
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (&ndash;niveaux 1 à 3) | **Texte** | `<h3>Text</h3>` |
+| en-tête (niveaux 1 à &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

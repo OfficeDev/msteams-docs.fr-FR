@@ -3,12 +3,12 @@ title: Résoudre les problèmes de votre application
 description: Résoudre des problèmes ou des erreurs lors de la création d’applications pour Microsoft teams
 keywords: résolution des problèmes de développement des applications teams
 ms.date: 07/09/2018
-ms.openlocfilehash: f7fe42e7c1f3ff2c4d8d1cbe81ed8f71e6c04384
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 5f6c8b2d5496d1c49ea35b069c16f4ede507f5e1
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673560"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210707"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Résolution des problèmes liés à votre application Microsoft teams
 
@@ -22,7 +22,7 @@ Vous pouvez ouvrir [devtools dans le client teams](~/tabs/how-to/developer-tools
 
 Si vous ne voyez pas votre contenu dans l’affichage de l’onglet, il peut s’agir des éléments suivants :
 
-* votre contenu ne peut pas être affiché `<iframe>`dans un.
+* votre contenu ne peut pas être affiché dans un `<iframe>` .
 * le domaine de contenu n’est pas dans la liste [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le manifeste.
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>Le bouton enregistrer n’est pas activé dans la boîte de dialogue Paramètres.
@@ -33,24 +33,24 @@ Veillez à appeler `microsoftTeams.settings.setValidityState(true)` une fois que
 
 Lors de l’ajout d’un onglet, si vous cliquez sur les boutons enregistrer mais que vous voyez s’afficher un message d’erreur indiquant que les paramètres ne peuvent pas être enregistrés, le problème peut être l’une des deux catégories de problèmes :
 
-* Le message de réussite de l’enregistrement n’a jamais été reçu. Si un gestionnaire d’enregistrement a été `microsoftTeams.settings.registerOnSaveHandler(handler)`inscrit à l’aide de `saveEvent.notifySuccess()`, le rappel doit appeler. Si le rappel ne l’appelle pas dans un délai de `saveEvent.notifyFailure(reason)` 30 secondes ou appelle à la place, cette erreur est affichée.
+* Le message de réussite de l’enregistrement n’a jamais été reçu. Si un gestionnaire d’enregistrement a été inscrit à l’aide de `microsoftTeams.settings.registerOnSaveHandler(handler)` , le rappel doit appeler `saveEvent.notifySuccess()` . Si le rappel ne l’appelle pas dans un délai de 30 secondes ou appelle `saveEvent.notifyFailure(reason)` à la place, cette erreur est affichée.
 
-* Si aucun gestionnaire d’enregistrement n’a été `saveEvent.notifySuccess()` enregistré, l’appel est automatiquement effectué dès que l’utilisateur sélectionne le bouton enregistrer.
+* Si aucun gestionnaire d’enregistrement n’a été enregistré, l' `saveEvent.notifySuccess()` appel est automatiquement effectué dès que l’utilisateur sélectionne le bouton enregistrer.
 
-* Les paramètres fournis n’étaient pas valides. L’autre raison pour laquelle les paramètres ne sont pas enregistrés est le fait `microsoftTeams.setSettings(settings)` que l’appel à fourni un objet de paramètres non valide ou l’appel n’a pas été effectué. Consultez la section suivante, problèmes courants liés à l’objet Settings.
+* Les paramètres fournis n’étaient pas valides. L’autre raison pour laquelle les paramètres ne sont pas enregistrés est le fait que l’appel à `microsoftTeams.setSettings(settings)` fourni un objet de paramètres non valide ou l’appel n’a pas été effectué. Consultez la section suivante, problèmes courants liés à l’objet Settings.
 
 ### <a name="common-problems-with-the-settings-object"></a>Problèmes courants avec l’objet Settings
 
 * `settings.entityId`est manquant. Ce champ est obligatoire.
 * `settings.contentUrl`est manquant. Ce champ est obligatoire.
-* `settings.contentUrl`ou facultatif `settings.removeUrl`, ou `settings.websiteUrl` sont fournis mais ne sont pas valides. Les URL doivent utiliser le protocole HTTPs et doivent également être le même domaine que la page de paramètres ou spécifié dans la `validDomains` liste du manifeste.
+* `settings.contentUrl`ou facultatif `settings.removeUrl` , ou `settings.websiteUrl` sont fournis mais ne sont pas valides. Les URL doivent utiliser le protocole HTTPs et doivent également être le même domaine que la page de paramètres ou spécifié dans la `validDomains` liste du manifeste.
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Impossible d’authentifier l’utilisateur ou d’afficher votre fournisseur d’authentification dans votre onglet
 
 Sauf si vous effectuez une authentification sans assistance, vous devez suivre le processus d’authentification fourni par le [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client.md).
 
 > [!NOTE]
->Tout le flux d’authentification doit être démarré et se terminer sur votre domaine, qui doit être mentionné `validDomains` dans l’objet de votre manifeste.
+>Tout le flux d’authentification doit être démarré et se terminer sur votre domaine, qui doit être mentionné dans l' `validDomains` objet de votre manifeste.
 
 Pour plus d’informations sur l’authentification, consultez [la rubrique authentifier un utilisateur](~/concepts/authentication/authentication.md).
 
@@ -70,11 +70,11 @@ Les robots doivent d’abord être téléchargés dans une équipe pour être ac
 
 ### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>Mon bot n’obtient pas mon message dans un canal
 
-Les robots des canaux reçoivent des messages uniquement lorsqu’ils sont explicitement @mentioneds, même si vous répondez à un message de robot précédent. La seule exception où le nom du bot peut ne pas s’afficher dans un message est si le bot `imBack` reçoit une action à la suite d’un CardAction qu’il a envoyé à l’origine.
+Les robots des canaux reçoivent des messages uniquement lorsqu’ils sont explicitement @mentioneds, même si vous répondez à un message de robot précédent. La seule exception où le nom du bot peut ne pas s’afficher dans un message est si le bot reçoit une `imBack` action à la suite d’un CardAction qu’il a envoyé à l’origine.
 
 ### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>Mon bot ne comprends pas mes commandes dans un canal
 
-Étant donné que les robots des canaux reçoivent uniquement les messages lorsqu’ils sont @mentioned, tous les messages que votre bot reçoit dans un canal incluent ce @mention dans le champ de texte. Il est recommandé de supprimer le nom du robot lui-même de tous les messages texte entrants avant de passer à votre logique d’analyse. Consultez les [mentions](~/bots/how-to/conversations/channel-and-group-conversations.md#working-with--mentions) pour obtenir des conseils sur la façon de gérer ce cas.
+Étant donné que les robots des canaux reçoivent uniquement les messages lorsqu’ils sont @mentioned, tous les messages que votre bot reçoit dans un canal incluent ce @mention dans le champ de texte. Il est recommandé de supprimer le nom du robot lui-même de tous les messages texte entrants avant de passer à votre logique d’analyse. Consultez les [mentions](../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions) pour obtenir des conseils sur la façon de gérer ce cas.
 
 ## <a name="issues-with-packaging-and-uploading"></a>Problèmes liés à l’empaquetage et au chargement
 

@@ -22,3 +22,13 @@
 1. Revenez à la fenêtre **d’enregistrement du canal bot** et copiez l’ID de l' *application* et la *clé secrète client* dans les zones ID de l’application et **mot de passe** **Microsoft** , respectivement.
 1. Cliquez sur **OK**.
 1. Enfin, cliquez sur **créer**.
+
+Une fois que Azure a créé la ressource d’inscription, elle est incluse dans la liste des groupes de ressources.  
+
+![Groupe d’enregistrement des canaux de l’application bot](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
+
+Une fois que vous avez créé votre enregistrement de canaux de robots, vous devez activer le canal Teams.
+
+1. Dans le [portail Azure](https://ms.portal.azure.com/#home), sous Azure services, sélectionnez l' **enregistrement du canal de bot** que vous venez de créer.
+1. Dans le volet gauche, cliquez sur **canaux**.
+1. Cliquez sur l’icône Microsoft Teams, puis choisissez **Enregistrer**.
