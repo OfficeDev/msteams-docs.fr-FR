@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: de3366594d58996b689fc3d50f41a70ff80facee
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281831"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453853"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -15,26 +15,27 @@ ms.locfileid: "44281831"
 
 Le journal des modifications répertorie les modifications apportées à la plateforme Microsoft teams et à cet ensemble de documents. Les entrées peuvent être utilisées pour attirer l’attention sur une nouvelle fonctionnalité qui est simplement intéressante pour les développeurs de teams.
 
-| **Date** | **Remarques** | **Rubriques modifiées** |
+| **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+| 05/20/2020 | Les autorisations de consentement propres aux ressources à l’aide des API Microsoft Graph sont dans la version préliminaire pour les développeurs. |[Consentement propre à la ressource (RSC) — Aperçu pour les développeurs](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | Ajout de la prise en charge de la récupération d’un membre d’une conversation et de la prise en charge supplémentaire pour la récupération des membres de la page. | [Obtenir un contexte Teams pour votre bot](~/bots/how-to/get-teams-context.md)
-| 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour construire deeplinks à ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre `legacy.replyToId` .  |
-| 11/5/2019 | L’authentification unique à l’aide du kit de développement logiciel (SDK) Team JavaScript dans une page de contenu Web est en aperçu développeur | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
+| 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour construire deeplinks à ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre. `legacy.replyToId`.  |
+| 11/5/2019 | L’authentification unique à l’aide du kit de développement logiciel (SDK) Team JavaScript dans une page de contenu Web est dans l’aperçu développeur. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | La documentation sur les robots de conversation et les extensions de messagerie mise à jour pour refléter le kit de développement logiciel (SDK) de robot 4,6. La documentation du kit de développement logiciel (SDK) v3 est disponible dans la section ressources. | Tout le robot et la documentation d’extension de messagerie. |
-| 10/31/2019 | Nouvelle structure de la documentation et refactorisation d’article principal. Veuillez signaler les liens morts ou les 404s en créant un problème GitHub | Tous! |
-| 9/13/2019 | Le moteur de demande est installé à partir de l’extension de messagerie basée sur les actions | [Initier des actions à l’aide des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 8/28/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs | [Obtenir le contexte de votre onglet](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
-| 06/20/2019 | Partager un site Web externe, depuis un site Web externe, vers un canal teams | [Partager avec teams](~/share-to-teams.md) |
-| 05/25/2019 | Répondre avec un message de robot à partir du module de tâche | [Répondre avec un message de robot à partir du module de tâche](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
-| 05/25/2019 | Bots dans les conversations de groupe | [Interagir avec un bot dans une conversation ou un canal de groupe](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
-| 05/20/2019 | Localisation de manifeste d’application | [Localisation de l’application](~/publishing/apps-localization.md) |
-| 05/20/2019 | Actions de message | [Actions de message](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
-| 05/20/2019 | Link unfurling (aperçus d’URL personnalisées) | [Déploiement de lien](messaging-extensions/how-to/link-unfurling.md)|
-| 05/06/2019 | Programme de certification d’application pour les applications du Store | [Certification d’application](~/publishing/application-certification.md) |
+| 10/31/2019 | Nouvelle structure de la documentation et refactorisation d’article principal. Veuillez signaler les liens morts ou les 404s en créant un problème GitHub. | Tous! |
+| 9/13/2019 | Le moteur de demande est installé à partir de l’extension de messagerie basée sur une action. | [Initier des actions à l’aide des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 8/28/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs. | [Obtenir le contexte de votre onglet](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 06/20/2019 | Partager un site Web externe, depuis un site Web externe, vers un canal Teams. | [Partager avec teams](~/share-to-teams.md) |
+| 05/25/2019 | Répondre avec un message bot à partir du module de tâche. | [Répondre avec un message de robot à partir du module de tâche](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
+| 05/25/2019 | Robots dans les conversations de groupe. | [Interagir avec un bot dans une conversation ou un canal de groupe](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
+| 05/20/2019 | Localisation de manifeste d’application. | [Localisation de l’application](~/publishing/apps-localization.md) |
+| 05/20/2019 | Actions de message. | [Actions de message](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
+| 05/20/2019 | Link unfurling (aperçus d’URL personnalisées). | [Déploiement de lien](messaging-extensions/how-to/link-unfurling.md)|
+| 05/06/2019 | Programme de certification d’application pour les applications du Store. | [Certification d’application](~/publishing/application-certification.md) |
 | 05/06/2019 | Les modèles d’application sont maintenant disponibles. | [Modèles d’application](~/samples/app-templates.md) |
-| 04/23/2019 | Les extensions de messagerie basées sur les actions sont désormais disponibles | [Extensions de message basées sur des actions](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | La création de liens détaillés vers la conversation privée n’est pas disponible pour les développeurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
-| 01/23/2019 | Référence SKU et informations licenceType dans le contexte d’onglets | [Contexte d’onglet](~/concepts/tabs/tabs-context.md) |
+| 04/23/2019 | Les extensions de messagerie basées sur les actions sont désormais disponibles. | [Extensions de message basées sur des actions](~/concepts/messaging-extensions/create-extensions.md) |
+| 02/18/2019 | Il n’est pas possible de créer des liens approfondis vers la conversation privée pour les développeurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 01/23/2019 | LicenceType les informations SKU et les informations de référence dans le contexte d’onglet. | [Contexte d’onglet](~/concepts/tabs/tabs-context.md) |
 | 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version finale de teams et ont été déplacés de l’aperçu développeur. Dans le cadre de cette tâche, la section onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La mise en route du nœud JS et de .NET/C# a été mise à jour pour utiliser app Studio dans Teams, et une nouvelle section a été ajoutée sur les applications teams basées sur des nœuds d’hébergement dans Azure. | [Prise en main de la plateforme Microsoft teams avec C#/.net et App Studio](~/get-started/get-started-dotnet-app-studio.md), [prise en main de la plateforme Microsoft teams avec node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [héberger votre application de nœud teams dans Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Vous pouvez désormais créer des liens détaillés vers des conversations privées entre les utilisateurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
@@ -54,7 +55,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 | 07/12/2018 | Informations sur l’accès invité. | [Accès invité dans Microsoft Teams](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Les informations de version préliminaire du catalogue d’applications client Microsoft teams ont été ajoutées. | [Publier votre application Microsoft teams](~/publishing/apps-publish.md)|
 | 05/31/2018 | Team Developer Preview (Ring 3,6) a été mis à jour pour inclure la possibilité d’ajouter des robots et des onglets à Group chat. | [Fonctionnalités dans l’aperçu du développeur, le schéma d'](~/resources/dev-preview/developer-preview-features.md) [Aperçu développeur](~/resources/schema/manifest-schema-dev-preview.md)|
-| 05/29/2018 | Les cartes adaptatives sont désormais prises en charge dans teams dans les [actions de carte adaptative dans teams](task-modules-and-cards/cards/cards-reference.md) . |
+| 05/29/2018 | Les cartes adaptatives sont désormais prises en charge dans teams dans les [actions de carte adaptative dans teams](task-modules-and-cards/cards/cards-reference.md). |
 | 05/29/2018 | Si vous utilisez la version [préliminaire pour développeurs](~/resources/dev-preview/developer-preview-intro.md), votre robot peut désormais envoyer et recevoir des fichiers.| [Envoyer et recevoir des fichiers via votre robot](~/concepts/bots/bots-files.md), [fonctionnalités de la version préliminaire pour développeurs de Microsoft teams](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | replyToID a été ajouté à la charge utile pour `Invoke` les `MessageBack` actions de carte et. Ceci est particulièrement utile si vous devez mettre à jour le message depuis lequel l’action de la carte provient. | [Actions de carte](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Ajout de cette rubrique pour suivre les modifications apportées à l’interface de programmation de teams et à cette documentation. | [Nouveautés](~/whats-new.md)|

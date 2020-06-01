@@ -2,12 +2,12 @@
 title: Charger votre application personnalisée dans Microsoft teams
 description: Décrit comment télécharger votre application dans Microsoft teams
 keywords: Téléchargement d’applications teams
-ms.openlocfilehash: b5807644a0c9afa26b81d07c71d5f45ab3c8ba00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673632"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453881"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Téléchargement d’un package d’application dans Microsoft Teams
 
@@ -20,7 +20,7 @@ Pour tester l’expérience de votre application dans Microsoft Teams, vous deve
 
 Pour le développement et l’envoi AppSource (anciennement Office Store), vous devez créer un package pouvant être chargé contenant les informations pour décrire votre expérience. Le package, un fichier. zip, contient le manifeste de l’application et des icônes qui définissent votre expérience de manière unique.
 
-Pour créer un package de téléchargement, voir [créer le package pour votre application Microsoft teams](~/concepts/build-and-test/apps-package.md).
+Pour créer un package de téléchargement, voir [créer le package pour votre application Microsoft teams](../build-and-test/apps-package.md).
 
 Une fois votre package créé, vous pouvez le charger dans une équipe. Une fois téléchargée, elle est disponible pour tous les utilisateurs de l’équipe sélectionnée et uniquement les utilisateurs de cette équipe.
 
@@ -40,16 +40,16 @@ Il existe deux façons de charger votre application dans teams :
 
 1. Dans le coin inférieur gauche de teams, sélectionnez l’icône Store. Sur la page Store, choisissez « Télécharger une application personnalisée ».
 
-   ![Afficher l’équipe](~/assets/images/store-upload-a-custom-app.png)
+   ![Afficher l’équipe](../../assets/images/store-upload-a-custom-app.png)
 
 2. Dans la boîte de dialogue *ouvrir* , accédez au package à télécharger, puis choisissez *ouvrir*.
 
 Le package téléchargé doit maintenant être disponible pour une utilisation dans l’équipe ou la conversation spécifiée dans la boîte de dialogue de consentement. Si votre application ne s’affiche pas, la cause la plus fréquente est une erreur dans le manifeste, en particulier les ID pour les extensions App, bot et Messaging. Si l’application n’est pas étendue pour les conversations, cette option n’apparaît pas.
 
 >[!NOTE]
-> Les applications dans les conversations sont actuellement en version préliminaire pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md)et l’option ne s’affiche pas si teams n’est pas en cours d’exécution dans ce mode.
+> Les applications dans les conversations sont actuellement en version préliminaire pour les [développeurs](../../resources/dev-preview/developer-preview-intro.md)et l’option ne s’affiche pas si teams n’est pas en cours d’exécution dans ce mode.
 
-![Exemple de bot dans la liste des robots téléchargés](~/assets/images/botinlist.jpg)
+![Exemple de bot dans la liste des robots téléchargés](../../assets/images/botinlist.jpg)
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Charger votre package dans une équipe à l’aide de l’onglet applications
 
@@ -60,13 +60,13 @@ Le package téléchargé doit maintenant être disponible pour une utilisation d
 
 2. Sélectionnez l’onglet applications, puis *Télécharger une application personnalisée* dans la partie inférieure droite.
 
-   ![Télécharger le point d’entrée](~/assets/images/uploadACustomApp.png)
+   ![Télécharger le point d’entrée](../../assets/images/UploadACustomApp.png)
 
 3. Naviguez jusqu’à votre package. zip et sélectionnez-le sur votre ordinateur.
 
 4. Après une brève pause, vous verrez votre application téléchargée dans la liste.
 
-   ![Exemple de bot dans la liste des robots téléchargés](~/assets/images/botinlist.jpg)
+   ![Exemple de bot dans la liste des robots téléchargés](../../assets/images/botinlist.jpg)
 
 Si votre application ne se charge pas, la cause la plus fréquente est une erreur dans le manifeste, en particulier les ID pour les extensions App, bot et Messaging.
 
@@ -80,9 +80,9 @@ Si l’application contient des onglets, les utilisateurs peuvent les épingler 
 
 3. Acceptez l’invite de consentement.
 
-4. Configurez votre onglet par le biais de sa [page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) , puis choisissez *Enregistrer*.
+4. Configurez votre onglet par le biais de sa [page de configuration](../../tabs/how-to/create-tab-pages/configuration-page.md) , puis choisissez *Enregistrer*.
 
-  ![Boîte de dialogue Ajouter un onglet, comprenant une galerie des onglets disponibles](~/assets/images/tab_gallery.png)
+  ![Boîte de dialogue Ajouter un onglet, comprenant une galerie des onglets disponibles](../../assets/images/tab_gallery.png)
 
 ## <a name="accessing-your-uploaded-bot"></a>Accès à votre bot chargé
 
@@ -102,15 +102,15 @@ Une fois l’application chargée dans l’équipe ou la conversation, les utili
 
 2. Sélectionnez votre connecteur dans la section **chargé** en bas.
 
-3. Configurez votre connecteur via sa [page de configuration](~/webhooks-and-connectors/how-to/connectors-creating.md) et sélectionnez *Enregistrer*.
+3. Configurez votre connecteur via sa [page de configuration](../../webhooks-and-connectors/how-to/connectors-creating.md) et sélectionnez *Enregistrer*.
 
-  ![La boîte de dialogue Ajouter un onglet, qui propose une galerie des onglets disponibles.](~/assets/images/connector_gallery.png)
+  ![La boîte de dialogue Ajouter un onglet, qui propose une galerie des onglets disponibles.](../../assets/images/connector_gallery.png)
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>Accès à votre extension de messagerie chargée
 
 Une application téléchargée avec une extension de messagerie apparaît automatiquement dans le menu *plus d’options* (*&#8943;*) de la zone de composition.
 
-![Extensions de messagerie](~/assets/images/compose-extensions/cesampleapp.png)
+![Extensions de messagerie](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## <a name="removing-or-updating-your-app"></a>Suppression ou mise à jour de votre application
 
@@ -123,5 +123,5 @@ Si vous modifiez les informations de manifeste, vous devez d’abord supprimer l
 
 ## <a name="troubleshooting-notes"></a>Remarques sur la résolution des problèmes
 
-* Si le manifeste ne se charge pas, vérifiez que vous avez suivi toutes les instructions de [Create the package](~/concepts/build-and-test/apps-package.md) et validé votre manifeste par rapport au [schéma](~/resources/schema/manifest-schema.md).
+* Si le manifeste ne se charge pas, vérifiez que vous avez suivi toutes les instructions de [Create the package](../../concepts/build-and-test/apps-package.md) et validé votre manifeste par rapport au [schéma](../../resources/schema/manifest-schema.md).
 

@@ -2,27 +2,19 @@
 title: Référence des instructions de conception
 description: Décrit les instructions pour la conception d’une application personnelle
 keywords: instructions de conception teams structure de référence des applications personnelles
-ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228072"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455498"
 ---
 # <a name="personal-apps"></a>Applications personnelles
 
-> [!Important]
-> La prise en charge complète des onglets sur les clients mobiles bientôt disponible. Pour vous préparer à ce changement, suivez les [instructions pour les onglets sur mobile](~/tabs/design/tabs-mobile.md) lors de la création des onglets. Les applications personnelles (onglets statiques) sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md).
->
-> Lorsque la prise en charge complète des onglets est publiée :
->
-> * Tous les onglets seront toujours disponibles sur mobile
-> * Votre `contentUrl` **sera chargé dans le client teams mobile**.
-> * Pour les onglets canal/groupe, les utilisateurs peuvent toujours ouvrir l’onglet dans un navigateur `websiteUrl`distinct via votre `contentUrl` , mais votre sera chargé en premier.
+> [!NOTE]
+> La prise en charge complète des onglets sur les clients mobiles est prise en charge dans Teams. Vous devez suivre les [instructions pour les onglets sur mobile](../../tabs/design/tabs-mobile.md) lors de la création d’onglets pour les plateformes mobiles.
 
-Une application personnelle est une application avec une portée personnelle. En tant que développeur d’applications, vous avez la possibilité de fournir une version de votre application conçue pour l’utilisateur individuel. Dans cette version, la collection d’onglets (et le bot, si vous en avez inclus un), est conçue pour la personne. De cette manière, vous pouvez créer une interaction un-à-un avec vos utilisateurs.
-
-Une application personnelle est l’endroit où quelqu’un peut voir tout ce qu’il y a et tous les éléments qu’il a consultés récemment dans l’application. Il met tout le tout en même lieu. Dans la capture d’écran suivante, contoso est une application personnelle dans le lanceur d’applications personnelles.
+Une application personnelle est une application de teams avec une portée personnelle.  En tant que développeur d’applications, vous avez la possibilité de fournir une version de votre application qui se concentre sur les interactions avec un seul utilisateur. Il peut s’agir d’un [bot de conversation](../../bots/what-are-bots.md) pour engager des conversations un-à-un avec un utilisateur ou un [onglet personnel](../../tabs/what-are-tabs.md) qui fournit une expérience Web intégrée. Les applications personnelles permettent aux utilisateurs d’afficher leur contenu sélectionné à un seul endroit. Dans la capture d’écran suivante, contoso est une application personnelle dans le lanceur d’applications personnelles.
 
 ![image du menu de dépassement de l’application](~/assets/images/Personal-apps-App-flyout.png)
 

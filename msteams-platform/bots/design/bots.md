@@ -2,12 +2,12 @@
 title: Instructions de conception pour les robots
 description: Décrit les instructions pour la création de robots
 keywords: Guide de conception des équipes
-ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635283"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453888"
 ---
 # <a name="start-talking-with-bots"></a>Commencer à parler avec les robots
 
@@ -35,7 +35,7 @@ Les graphiques sont un moyen efficace d’indiquer un récit, mais les conversat
 
 Il est essentiel que les robots s’introduisent et envoient ce qu’ils peuvent faire aux utilisateurs. Cette *valeur* permet aux utilisateurs de comprendre ce qu’ils doivent faire avec le bot, où les limitations peuvent être, et, plus important encore, permet aux utilisateurs de tolérer l’interaction avec un ordinateur qui n’est pas aussi intuitif qu’une personne réelle. En outre, il accorde une autorisation pour les données utilisateur dans Exchange pour la valeur réelle fournie par le service.
 
-#### <a name="welcome-messages"></a>Messages de bienvenue
+#### <a name="welcome-messages"></a>Les messages de bienvenue
 
 Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot et doivent être utilisés dans les scénarios personnels et d’équipe ou de groupe. Le message indique ce que fait le bot, ainsi que des méthodes courantes pour interagir avec lui. Utiliser des exemples de fonctionnalité spécifiques comme, «*essayez de demander....*» dans une liste à puces. Dans la mesure du possible, ces suggestions doivent renvoyer des réponses stockées. Il est essentiel que les exemples de fonctionnalités fonctionnent sans que les utilisateurs aient besoin de se connecter.
 
@@ -129,9 +129,9 @@ Ajoutez un onglet qui informe les utilisateurs sur la façon de communiquer avec
 
 ---
 
-## <a name="bots-in-channels"></a>Robots dans les canaux
+## <a name="bots-in-channels"></a>Bots dans les canaux
 
-L’appel d’un bot dans un canal peut être effectué `@mention`par. La boîte de dialogue bot doit être unique dans les canaux et les groupes, ainsi que dans les scénarios un-à-un et il est généralement judicieux de prendre en compte les différentes approches. Cela est particulièrement vrai dans les cas suivants :
+L’appel d’un bot dans un canal peut être effectué par `@mention` . La boîte de dialogue bot doit être unique dans les canaux et les groupes, ainsi que dans les scénarios un-à-un et il est généralement judicieux de prendre en compte les différentes approches. Cela est particulièrement vrai dans les cas suivants :
 
 ### <a name="sensitive-data-sent-by-a-bot"></a>Données sensibles envoyées par un bot
 
@@ -165,4 +165,4 @@ Déterminez si vous voulez que votre ton soit convivial et clair, « uniquement
 
 Prendre en charge les interactions à rotation multiple tout en continuant à répondre aux questions entièrement formulées. L’anticipation de l’étape suivante permettra aux utilisateurs d’utiliser beaucoup plus facilement les flux de tâches.
 
-Si un utilisateur effectue plusieurs étapes pour effectuer une tâche, autorisez-le à le faire tout au long de chaque étape, mais terminez-le en lui permettant de suggérer un chemin plus rapide. Par exemple, si un utilisateur a pris plusieurs tentatives de conversation pour définir une réunion (en commençant par spécifier une réunion, puis en spécifiant l’heure, puis en indiquant le jour), terminez la conversation avec la suggestion suivante : prochaine fois, essayez de vous demander si vous possibilité de planifier une réunion avec Bob à 1:00 demain.
+Si un utilisateur effectue plusieurs étapes pour effectuer une tâche, autorisez-le à le faire tout au long de chaque étape, mais terminez-le en lui permettant de suggérer un chemin plus rapide. Par exemple, si un utilisateur a pris plusieurs tentatives de conversation pour définir une réunion (en spécifiant d’abord une réunion, puis en spécifiant l’heure, puis en indiquant le jour), terminez la conversation avec la suggestion suivante : la prochaine fois, essayez de confirmer si vous pouvez planifier une réunion avec Bob à 1:00 demain.

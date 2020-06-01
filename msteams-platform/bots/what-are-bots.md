@@ -4,12 +4,12 @@ author: clearab
 description: Vue d’ensemble des robots de conversation dans Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281845"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453867"
 ---
 # <a name="what-are-conversational-bots"></a>Qu’est-ce que les robots de conversation ?
 
@@ -53,7 +53,7 @@ Les robots de Microsoft teams peuvent faire partie d’une conversation un-à-un
 
 ### <a name="in-a-channel"></a>Dans un canal
 
-Les canaux contiennent des conversations thématiques entre plusieurs personnes, potentiellement de nombreuses personnes (actuellement, jusqu’à 2000). Cela donne potentiellement une très grande portée à votre bot, mais les interactions individuelles doivent être concises. Les interactions classiques à plusieurs tours ne fonctionneront probablement pas très bien. Cherchez plutôt à utiliser des cartes interactives ou des modules de tâche, ou à transformer la conversation en conversation à deux si vous avez besoin de recueillir de nombreuses informations. Votre bot n’aura également accès qu’aux messages qui s’y trouvent `@mentioned` directement, vous ne pouvez pas récupérer des messages supplémentaires à l’aide de Microsoft Graph et des autorisations de niveau organisation élevées.
+Les canaux contiennent des conversations thématiques entre plusieurs personnes, potentiellement de nombreuses personnes (actuellement, jusqu’à 2000). Cela donne potentiellement une très grande portée à votre bot, mais les interactions individuelles doivent être concises. Les interactions classiques à plusieurs tours ne fonctionneront probablement pas très bien. Cherchez plutôt à utiliser des cartes interactives ou des modules de tâche, ou à transformer la conversation en conversation à deux si vous avez besoin de recueillir de nombreuses informations. Votre robot n’aura également accès qu’aux messages qui s’y trouvent `@mentioned` directement, même si vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide de Microsoft Graph et des autorisations de niveau organisation élevées.
 
 Voici quelques scénarios dans lesquels les bots fonctionnent très bien dans un canal :
 

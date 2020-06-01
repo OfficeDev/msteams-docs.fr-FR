@@ -4,16 +4,16 @@ author: clearab
 description: Page de présentation décrivant la plateforme de développement Microsoft teams et comment commencer à créer des applications pour Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: cb9d91f2de29bac00f4cdcd9672adf9d7d4ee734
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674034"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455484"
 ---
-# <a name="what-are-microsoft-teams-apps"></a>Qu’est-ce que les applications Microsoft teams ?
+# <a name="what-are-microsoft-teams-apps"></a>Qu-est-ce qu’une application Microsoft Teams ?
 
-Microsoft teams est un espace de travail de collaboration dans Office 365 qui s’intègre aux applications et services que les personnes utilisent pour effectuer des tâches. La plateforme de développement Microsoft teams permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer la productivité, prendre des décisions plus rapidement, fournir le focus (en réduisant le changement de contexte) et créer une collaboration sur le contenu existant et travail. Les applications créées sur la plateforme Microsoft teams sont des ponts entre le client teams et vos services et flux de travail ; les plaçant directement dans le contexte de votre plateforme de collaboration ;
+Microsoft teams est un espace de travail de collaboration dans Office 365 qui s’intègre aux applications et services que les personnes utilisent pour effectuer des tâches. La plateforme de développement Microsoft teams permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer la productivité, prendre des décisions plus rapidement, fournir le focus (en réduisant le changement de contexte) et créer une collaboration sur le contenu et les flux de travail existants. Les applications créées sur la plateforme Microsoft teams sont des ponts entre le client teams et vos services et flux de travail ; les plaçant directement dans le contexte de votre plateforme de collaboration ;
 
 ## <a name="what-can-teams-apps-do"></a>Que peuvent faire les applications teams ?
 
@@ -37,22 +37,22 @@ Une application teams se compose de trois éléments principaux :
 * **Votre package d’application de teams** qui crée l’application installée par vos utilisateurs, et contient les métadonnées et pointeurs de votre application vers vos services.
 * **Votre service, flux de travail ou site Web** qui effectue la logique nécessaire, le stockage des données et les appels d’API pour alimenter votre application.
 
-Il est important de garder à l’esprit que toute fonctionnalité que vous exposez dans une application Microsoft teams est publiquement disponible sur Internet, sauf si vous effectuez des étapes supplémentaires pour la sécuriser. Si vous fournissez un accès à des informations confidentielles ou protégées, vous devez vous assurer que vos services authentifient au minimum le point de terminaison qui se connecte à votre application ou [authentifient vos utilisateurs](~/concepts/authentication/authentication.md).
+Il est important de garder à l’esprit que toute fonctionnalité que vous exposez dans une application Microsoft teams est publiquement disponible sur Internet, sauf si vous effectuez des étapes supplémentaires pour la sécuriser. Si vous fournissez un accès à des informations confidentielles ou protégées, vous devez vous assurer que vos services authentifient au minimum le point de terminaison qui se connecte à votre application ou [authentifient vos utilisateurs](concepts/authentication/authentication.md).
 
 ## <a name="how-can-you-share-your-teams-app"></a>Comment pouvez-vous partager votre application teams ?
 
 Lorsque vous êtes prêt à partager vos applications Microsoft Teams, vous disposez de trois options en fonction de vos audiences ciblées.
 
-* **[Télécharger directement votre application](~/concepts/deploy-and-publish/apps-upload.md)** Si votre application doit uniquement être partagée par votre équipe ou quelques personnes de votre organisation, vous pouvez partager votre package d’application et le charger directement.
-* **[Publier dans le catalogue d’applications de votre organisation](~/concepts/deploy-and-publish/apps-publish.md)** Vous pouvez partager votre application avec l’ensemble de votre organisation via votre catalogue d’applications.
-* **[Publier dans le magasin d’applications public](~/concepts/deploy-and-publish/apps-publish.md)** Si votre application est pour tout le monde, vous pouvez la publier dans notre magasin d’applications public. En fonction de vos objectifs, vous pouvez bénéficier de l’assistance marketing et commerciale.
+* **[Télécharger directement votre application](concepts/deploy-and-publish/apps-upload.md)** Si votre application doit uniquement être partagée par votre équipe ou quelques personnes de votre organisation, vous pouvez partager votre package d’application et le charger directement.
+* **[Publier dans le catalogue d’applications de votre organisation](concepts/deploy-and-publish/apps-upload.md)** Vous pouvez partager votre application avec l’ensemble de votre organisation via votre catalogue d’applications.
+* **[Publier dans le magasin d’applications public](concepts/deploy-and-publish/apps-upload.md)** Si votre application est pour tout le monde, vous pouvez la publier dans notre magasin d’applications public. En fonction de vos objectifs, vous pouvez bénéficier de l’assistance marketing et commerciale.
 
 ## <a name="get-started"></a>Prise en main
 
-* [Créer une application de robot et d’onglet dans C #](~/tutorials/get-started-dotnet-app-studio.md)
-* [Créer une application bot et TAB dans JavaScript/node. js](~/tutorials/get-started-nodejs-app-studio.md)
+* [Créer une application de robot et d’onglet dans C #](tutorials/get-started-dotnet-app-studio.md)
+* [Créer une application bot et TAB dans JavaScript/node. js](tutorials/get-started-nodejs-app-studio.md)
 
 ## <a name="learn-more"></a>En savoir plus
 
-* [Points d’extensibilité dans le client teams](~/concepts/extensibility-points.md)
-* [Création d’applications pour teams](~/concepts/building-an-app.md)
+* [Points d’extensibilité dans le client Teams](concepts/extensibility-points.md)
+* [Création d’applications pour teams](concepts/building-an-app.md)

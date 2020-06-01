@@ -2,32 +2,22 @@
 title: Onglets sur les appareils mobiles
 description: Décrit les instructions permettant de concevoir des onglets qui fonctionnent sur mobile.
 keywords: instructions de conception teams structure de référence des applications personnelles onglets mobiles
-ms.openlocfilehash: 928fb8586434eca9cc1577fd45c6b94594724d7f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673803"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455519"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
-
-> [!Important]
-> La prise en charge complète des onglets sur les clients mobiles bientôt disponible. Pour vous préparer à ce changement, suivez les instructions ci-dessous lors de la création des onglets. Les applications personnelles (onglets statiques) sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md). et les onglets de conversation de canal/groupe `...` sont disponibles dans le menu de dépassement de capacité pour l’onglet.
->
-> Lorsque la prise en charge complète des onglets est publiée :
->
-> * Tous les onglets seront toujours disponibles sur mobile
-> * Votre `contentUrl` **sera chargé dans le client teams mobile**.
-> * Pour les onglets canal/groupe, les utilisateurs peuvent toujours ouvrir l’onglet dans un navigateur `websiteUrl`distinct via votre `contentUrl` , mais votre sera chargé en premier.
-> * Si votre onglet utilise l’authentification, vous devez mettre à niveau votre SDK teams JavaScript vers la version 1.4.1 ou une version ultérieure, sinon l’authentification échouera.
 
 Les onglets personnalisés peuvent faire partie d’un canal, d’une conversation de groupe ou d’une application personnelle (applications qui contiennent des onglets statiques et/ou un bot un-à-un).
 
 Les applications personnelles sont disponibles sur les clients mobiles dans le tiroir d’application. L’application ne peut être installée qu’à partir d’un client de bureau ou Web, et peut prendre jusqu’à 24 heures pour apparaître sur les clients mobiles.
 
-Les onglets de groupe et de canal sont également disponibles sur les clients mobiles. Le comportement par défaut consiste à utiliser votre `websiteUrl` pour lancer votre onglet dans une fenêtre de navigateur. Toutefois, ils peuvent être chargés sur un client mobile en cliquant sur `...` le menu de dépassement de capacité en regard de l’onglet et en choisissant `contentUrl` **ouvrir**, qui utilisera votre pour charger l’onglet à l’intérieur du client mobile Teams.
+Les onglets de groupe et de canal sont également disponibles sur les clients mobiles. Le comportement par défaut consiste à utiliser votre `websiteUrl` pour lancer votre onglet dans une fenêtre de navigateur. Toutefois, ils peuvent être chargés sur un client mobile en cliquant sur le `...` menu de dépassement de capacité en regard de l’onglet et en choisissant **ouvrir**, qui utilisera votre `contentUrl` pour charger l’onglet à l’intérieur du client mobile Teams.
 
-![tiroir d’application mobile](~/assets/images/app-drawer.png)
+![tiroir d’application mobile](../../assets/images/personal-app-mobile.png)
 
 ## <a name="developer-considerations-for-mobile-support"></a>Considérations pour les développeurs concernant la prise en charge mobile
 
@@ -63,7 +53,7 @@ Il s’agit d’une grande zone dans laquelle le travail est exécuté. L’appl
 
 ![disposition sur une seule zone de dessin](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Liste
+#### <a name="list"></a>Répertorier
 
 Les listes sont idéales pour le tri et le filtrage de grandes quantités de données et sont idéales pour conserver les choses les plus importantes en haut. Il est utile d’utiliser des colonnes à trier. Les actions peuvent être ajoutées à chaque élément de liste sous le menu points de suspension.
 
@@ -81,7 +71,7 @@ Voici un exemple d’application personnelle qui contient deux onglets statiques
 
 ![onglets et bots sur mobile](~/assets/images/mobile-tab-with-bot.png)
 
-### <a name="ui-components"></a>Composants de l’interface utilisateur
+### <a name="ui-components"></a>Composants interface utilisateur
 
 #### <a name="color-palettes"></a>Palettes de couleurs
 
@@ -111,7 +101,7 @@ La typographie doit être claire et volontaire. Insistez sur les informations im
 
 ![Typograph mobile](~/assets/images/mobile-typography.png)
 
-#### <a name="fields-and-flyouts"></a>Champs et lanceurs
+#### <a name="fields-and-flyouts"></a>Champs et menus volants
 
 Les champs sont des zones dans lesquelles les utilisateurs peuvent entrer du texte. Les lanceurs sont plus légers que les boîtes de dialogue et s’affichent dans le volet supérieur.
 
