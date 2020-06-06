@@ -4,12 +4,12 @@ author: clearab
 description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b5a246db1838d19d81e42e9a60efa74bb5363573
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 2b9765a2f295e85dc9b4d2c1b1ddcae4d642e268
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210725"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590871"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre robot teams
 
@@ -107,7 +107,7 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres
    1. Pour l' **URI de redirection**:<br/>
        &#x2713;sélectionnez **Web**. <br/>
        &#x2713; définissez l’URL sur `https://token.botframework.com/.auth/web/redirect` .
-   1. Sélectionner **Inscription**.
+   1. Sélectionnez **Inscrire**.
 
 1. Une fois créé, Azure affiche la page de **vue d’ensemble** de l’application. Copiez et enregistrez les informations suivantes dans un fichier :
 
@@ -143,11 +143,11 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres
         - Si vous avez sélectionné *comptes dans n’importe quel annuaire d’organisation (tous les comptes Microsoft AAD Directory-clients multiples et personnels, par exemple Skype, Xbox, Outlook)* , entrez le mot **commun** au lieu d’un ID de client. Dans le cas contraire, l’application AAD vérifie via le client dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     h. Pour **URL de ressource**, entrez `https://graph.microsoft.com/` . Cela n’est pas utilisé dans l’exemple de code actuel.  
-    Je. Laissez les **étendues** vides. L’image suivante est un exemple :
+    i. Laissez les **étendues** vides. L’image suivante est un exemple :
 
     ![chaîne de connexion d’authentification de l’application bots de teams ADV1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. Sélectionnez **Enregistrer**.
+1. Cliquez sur **Enregistrer**.
 
 ### <a name="test-the-connection"></a>Tester la connexion
 
@@ -159,7 +159,7 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres
     ![chaîne de connexion d’authentification de l’application bots de teams ADV1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Sélectionnez **Accepter**.
-1. Cela doit ensuite vous rediriger vers une **connexion test à \< votre page-Connection-Name> Succeeded** . Actualisez la page si vous obtenez une erreur. L’image suivante est un exemple :
+1. Cela doit ensuite vous rediriger vers une page de **test de connexion à la \<your-connection-name> réussite** . Actualisez la page si vous obtenez une erreur. L’image suivante est un exemple :
 
   ![chaîne de connexion d’authentification de l’application bots de teams ADV1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -390,7 +390,7 @@ Ce manifeste contient les informations nécessaires à Microsoft teams pour se c
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
