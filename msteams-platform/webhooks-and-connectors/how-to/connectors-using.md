@@ -3,12 +3,12 @@ title: Envoi de messages à des connecteurs et Webhooks
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: df91dfc68dbafb5e32d8c0e5732eb820c21a51b0
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 1b3fc9da27d4226bafcc772f77b1a42bca7c5800
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225776"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590793"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -185,7 +185,7 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
