@@ -4,12 +4,12 @@ description: Décrit des conseils pour l’envoi et la plupart des stratégies a
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914573"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704480"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -70,9 +70,10 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 
 * Les onglets doivent fournir du contenu ciblé et éviter des éléments d’interface utilisateur inutiles. En règle générale, il s’agit généralement d’une navigation imbriquée/superposée inutile, d’une interface utilisateur superflue ou inappropriée en regard du contenu, ou de liens permettant à l’utilisateur d’accéder à du contenu non lié. Par exemple, voici un affichage d’onglet qui omet les menus de navigation et qui présente le contenu principal uniquement :
 
-![Vue SharePoint du](~/assets/images/faq/web-sp.png)
-![mode Web SharePoint](~/assets/images/faq/tab-sp.png)
+![Vue Web SharePoint](~/assets/images/faq/web-sp.png)  
+![Affichage de l’onglet SharePoint](~/assets/images/faq/tab-sp.png)
 
+* Les tabulations doivent être claires et ne pas inclure une navigation complexe.
 * S’il existe plusieurs options d’affichage, vous pouvez choisir d’utiliser un menu de configuration d’onglet pour l’utilisateur. Par exemple, au lieu d’incorporer un menu à l’intérieur de l’onglet, placez le menu dans la page de configuration de sorte que la vue réelle de l’onglet soit propre et centrée.
 
 ![Page de configuration de l’idée large](~/assets/images/faq/wideidea.png)
@@ -80,10 +81,13 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 ### <a name="9989-tab-configuration-must-happen-in-the-configuration-screen"></a>La configuration de l’onglet &#9989; doit avoir lieu dans l’écran de configuration
 
 * L’écran de configuration doit expliquer clairement la valeur de l’expérience et comment configurer l’onglet.
-* Le processus de configuration ne doit pas inactifr l’expérience de l’utilisateur et offrir aux utilisateurs un moyen de continuer.
+* Le processus de configuration doit toujours permettre aux utilisateurs de continuer à ne pas inactifr l’expérience de l’utilisateur. Par exemple, ne pas afficher une carte vide une fois que l’utilisateur a configuré l’onglet
+* Le processus de connexion de l’utilisateur doit faire partie du processus de configuration et doit se terminer dans l’interface utilisateur de l’onglet. Une fois que l’utilisateur a terminé la configuration et chargé votre onglet, aucune autre action n’est nécessaire.
+* Ne pas afficher l’intégralité de votre page Web dans la fenêtre contextuelle de configuration de connexion.
 * Un utilisateur doit toujours pouvoir terminer l’expérience de configuration, même s’il ne parvient pas à trouver immédiatement le contenu qu’il recherche.
 * L’expérience de configuration doit fournir des options permettant à l’utilisateur de trouver son contenu, d’épingler une URL ou de créer du contenu s’il n’existe pas.
-* L’utilisateur ne doit pas laisser l’expérience de configuration pour créer du contenu, puis revenir à teams pour l’épingler.
+* L’expérience de configuration doit rester dans le contexte de teams. L’utilisateur ne doit pas laisser l’expérience de configuration pour créer du contenu, puis revenir à teams pour l’épingler.
+* Utilisez efficacement la zone de la fenêtre d’affichage disponible. Ne les gaspillez pas à l’aide de logos énormes dans la fenêtre contextuelle configuration
 
 ![OneNote permet aux utilisateurs de coller un lien OneNote dans les notes de cas est introuvable](~/assets/images/faq/tab-onenote-config.png)
 
@@ -105,26 +109,44 @@ Votre robot doit répondre à n’importe quelle commande et ne pas être inacti
 
 * **Inclure le contenu de l’aide ou des conseils en cas de perte de votre bot**. Lorsque votre bot ne peut pas comprendre la saisie de l’utilisateur, elle doit suggérer une autre action. Par exemple, *«je suis désolée, je ne comprends pas. Tapez « aide » pour plus d’informations.* Ne répondez pas avec un message d’erreur ou simplement, *« je ne comprends pas »*. Utilisez cette chance pour enseigner vos utilisateurs.
 
-* **Examinez toutes les étendues**. Assurez-vous que votre robot fournit les réponses appropriées`@*botname*`lorsqu’il est mentionné () dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
+* **Utilisation de cartes adaptatives et de modules de tâches pour que la réponse de votre bot soit claire et exploitable** 
+ [Des cartes adaptatives avec des boutons appelant des modules de tâches](/task-modules-and-cards/task-modules/task-modules-bots) améliorent l’expérience utilisateur du robot. Ces cartes et boutons sont plus faciles à utiliser dans un appareil mobile que si votre utilisateur tape les commandes.
+
+* **Examinez toutes les étendues**. Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
 
 ### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>Les robots &#9989; doivent envoyer un message de bienvenue lors du premier lancement
 
-Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot. Il s’agit de la première interaction d’un utilisateur avec le bot. Un message de bienvenue peut inciter l’utilisateur à continuer à explorer l’application. Si le message de bienvenue ou d’introduction est confus ou non clair, les utilisateurs ne verront pas immédiatement la valeur de l’application et perdront des intérêts. Le message de bienvenue doit inclure les éléments suivants :
+Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot. Il s’agit de la première interaction d’un utilisateur avec le bot. Un message de bienvenue peut inciter l’utilisateur à continuer à explorer l’application. Si le message de bienvenue ou d’introduction est confus ou non clair, les utilisateurs ne verront pas immédiatement la valeur de l’application et perdront des intérêts.
 
-* Une commande aide.
-* La proposition de valeur
-* Toutes les commandes valides.
+### <a name="welcome-message-requirements"></a>Conditions requises pour les messages d’accueil
 
-Voici quelques considérations à prendre en compte lors de la conception de votre message de bienvenue :
+* Identifier qui a ajouté le robot à un canal.
+* Inclure une proposition de valeur.
+* Fournissez des conseils pour l’utilisation du bot.
+* Présenter un texte facile à lire et un dialogue simple, de préférence une carte avec un bouton de présentation de l’accueil actionnable qui charge un module de tâches.
+* Restez simple, évitez la boîte de dialogue de mot/conversation.
+* Invoquer le message de bienvenue avec une commande ping, pas deux ou plusieurs pings simultanés.
+* Dans la conversation personnelle, le message de bienvenue doit uniquement être affiché à l’utilisateur qui a configuré l’application.  
+* Ne jamais envoyer de conversation personnelle à tous les membres de l’équipe.
+* Ne jamais envoyer le message de bienvenue plusieurs fois. Le fait de répéter le même message d’accueil à intervalles réguliers n’est pas autorisé et est considéré comme du courrier indésirable.
 
-#### <a name="personal-scope"></a>Étendue personnelle
+#### <a name="avoid-welcome-message-spamming"></a>Éviter le courrier indésirable des messages de bienvenue
 
-* **Rendez vos messages concis et instructifs**. Il est très probable que les expériences des utilisateurs et les connaissances de votre application varient. Ils ont peut-être utilisé votre application sur une autre plateforme ou ne connaissent rien sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
+* **Canal message par robot**. Ne pas échanger des courriers indésirables en créant des billets de conversation distincts. Créez un billet de thread unique avec des réponses dans le même thread.
+* **Conversation personnelle par robot**. N’envoyez pas plusieurs messages. Envoyer un message avec des informations complètes.
+
+#### <a name="notification-only-bot-welcome-messages"></a>Messages d’accueil des robots uniquement
+
+Les robots de notification uniquement doivent envoyer un message de bienvenue comprenant un message indiquant *« je suis un robot de notification uniquement et ne pourra pas répondre à vos conversations »*.
+
+#### <a name="welcome-messages-in-the-personal-scope"></a>Messages de bienvenue dans l’étendue personnelle
+
+* **Rendez vos messages concis et instructifs**.  Il est très probable que l’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou n’a rien à faire sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
 ![Café et robot dinning](~/assets/images/faq/cafe-bot.png)
 
 * **Rendez votre message exploitable**. Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »*, *« Voici ce que je peux faire.*.. ».
 
-#### <a name="team-scope"></a>Étendue de l’équipe
+#### <a name="welcome-messages-in-the-teamchannel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe/du canal
 
 Les choses sont un peu différentes lorsque le bot est d’abord ajouté à un canal. Normalement, vous ne devez pas envoyer un message 1:1 à tous les membres de l’équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
 

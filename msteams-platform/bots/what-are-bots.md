@@ -4,12 +4,12 @@ author: clearab
 description: Vue d’ensemble des robots de conversation dans Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 140be426ac789efbf044130b0683f60af9f617d6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453867"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704466"
 ---
 # <a name="what-are-conversational-bots"></a>Qu’est-ce que les robots de conversation ?
 
@@ -21,7 +21,7 @@ L’image GIF ci-dessous montre un utilisateur qui contourne un bot dans une con
 
 ## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Créer un bot pour teams avec Microsoft bot Framework
 
-Microsoft bot Framework] ( https://dev.botframework.com/) Kit de développement logiciel (SDK) enrichi pour la création de robots à l’aide de C#, Java, Python et JavaScript. Si vous disposez déjà d’un bot basé sur l’infrastructure de robot, vous pouvez facilement l’adapter pour qu’elle fonctionne dans Microsoft Teams. Nous vous recommandons d’utiliser C# ou node. js pour tirer parti de nos [Kits de développement](/microsoftteams/platform/#pivot=sdk-tools)logiciel (SDK). Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) de base, comme suit :
+[Microsoft bot Framework](https://dev.botframework.com/) est un kit de développement logiciel (SDK) enrichi pour la création de robots à l’aide de C#, Java, Python et JavaScript. Si vous disposez déjà d’un bot basé sur l’infrastructure de robot, vous pouvez facilement l’adapter pour qu’elle fonctionne dans Microsoft Teams. Nous vous recommandons d’utiliser C# ou Node.js pour tirer parti de nos [Kits de développement](/microsoftteams/platform/#pivot=sdk-tools)logiciel (SDK). Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) de base, comme suit :
 
 * Utilisez des types de carte spéciaux comme la carte connecteur Office 365.
 * Utiliser et définir des données de canal spécifiques aux équipes sur les activités.

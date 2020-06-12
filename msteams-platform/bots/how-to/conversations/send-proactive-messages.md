@@ -1,26 +1,26 @@
 ---
-title: Envoyer des messages proactifs
+title: Envoi de messages proactifs
 author: clearab
 description: Comment envoyer des messages proactifs avec votre robot Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 566b93f519001cbc2470b43e4729fa8b4aa0a9d2
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 6e387dcf0e73124d57996a56c835f5a99fc6f1c6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635276"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704459"
 ---
-# <a name="send-proactive-messages"></a>Envoyer des messages proactifs
+# <a name="send-proactive-messages"></a>Envoi de messages proactifs
 
 > [!Note]
 > Les exemples de code de cet article utilisent le kit de développement logiciel (SDK) de l’infrastructure de robot v3 et les extensions du kit de développement logiciel V3 teams bot Builder. D’un plan conceptuel, les informations s’appliquent lors de l’utilisation des versions v4 du kit de développement logiciel (SDK), mais le code est légèrement différent.
 
-Un message proactif est un message qui est envoyé par un bot pour démarrer une conversation. Vous souhaiterez peut-être que votre bot entame une conversation pour plusieurs raisons, notamment :
+Un message proactif est un message qui est envoyé par un bot pour démarrer une conversation. Vous voudrez peut-être que votre bot démarre une conversation pour diverses raisons, notamment :
 
-* Messages de bienvenue pour les conversations personnelles de robots
-* Interrogation des réponses
-* Notifications d’événements externes
+* L’envoi de messages de bienvenue pour les conversations personnelles par bot
+* Les réponses aux sondages
+* Les notifications d’événements externes
 
 L’envoi d’un message pour démarrer un nouveau thème de conversation est différent de celui de l’envoi d’un message en réponse à une conversation existante : lorsque votre bot démarre une nouvelle conversation, il n’existe pas de conversation préexistante vers laquelle publier le message. Pour envoyer un message proactif, vous devez :
 
@@ -28,15 +28,20 @@ L’envoi d’un message pour démarrer un nouveau thème de conversation est di
 1. [Obtenir l’ID unique et l’ID de client uniques de l’utilisateur](#obtain-necessary-user-information)
 1. [Envoyer le message](#examples)
 
-Lors de la création de messages proactifs que vous **devez** appeler `MicrosoftAppCredentials.TrustServiceUrl`, et transmettre l' `ConnectorClient` URL du service avant de créer le message que vous allez utiliser pour envoyer le message. Si vous ne le faites pas, votre application recevra une `401: Unauthorized` réponse. 
+Lors de la création de messages proactifs que vous **devez** appeler `MicrosoftAppCredentials.TrustServiceUrl` , et transmettre l’URL du service avant de créer le [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) message que vous allez utiliser pour envoyer le message. Si vous ne le faites pas, votre application recevra une `401: Unauthorized` réponse.
+
+> [!Tip]
+> Pour plus d’informations sur la configuration des `ConnectorClient` clients pour .net, reportez-vous à la rubrique [activités d’envoi et de réception](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client)
+>
+> D’autres exemples d’envoi de messages proactifs sont disponibles dans la documentation [.net](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages) et [Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages) de service Azure bot.
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques pour la messagerie proactive
 
 L’envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs. Toutefois, à partir de leur perspective, ce message peut sembler indésirable et, dans le cas de messages de bienvenue, il s’agit de la première fois qu’ils interagissent avec votre application. Par conséquent, il est très important d’utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable) et de leur fournir suffisamment d’informations pour les informer de la raison pour laquelle ils reçoivent des messages.
 
-Les messages proactifs font généralement partie de l’une des deux catégories suivantes : messages d’accueil ou notifications.
+Les messages proactifs sont généralement classés en deux catégories : les messages de bienvenue ou les messages de notification.
 
-### <a name="welcome-messages"></a>Messages de bienvenue
+### <a name="welcome-messages"></a>Les messages de bienvenue
 
 Lors de l’utilisation de la messagerie proactive pour envoyer un message de bienvenue à un utilisateur, vous devez garder à l’esprit que pour la plupart des personnes qui reçoivent le message, il n’y aura pas de contexte pour la raison pour laquelle ils le reçoivent. Il s’agit également de la première fois qu’ils interagissent avec votre application ; Il s’agit de votre opportunité de créer une bonne première impression. Les meilleurs messages d’accueil sont les suivants :
 
@@ -44,7 +49,7 @@ Lors de l’utilisation de la messagerie proactive pour envoyer un message de bi
 * **Ce que vous proposez.** Qu’est-il possible de faire avec votre application ? Quelle valeur pouvez-vous leur apporter ?
 * **Que dois-je faire ensuite ?** Invitez-les à essayer une commande ou à interagir avec votre application d’une certaine façon.
 
-### <a name="notification-messages"></a>Messages de notification
+### <a name="notification-messages"></a>Les messages de notification
 
 Lors de l’utilisation de la messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs disposent d’un chemin d’accès clair afin de prendre des mesures courantes en fonction de votre notification et de bien comprendre la raison pour laquelle la notification s’est produite. Les messages de notification valides sont généralement les suivants :
 
@@ -68,7 +73,7 @@ Les robots peuvent créer de nouvelles conversations avec un utilisateur individ
 > [!Note]
 > L’installation proactive d’applications à l’aide de Graph est actuellement en version bêta.
 
-Parfois, il peut s’avérer nécessaire de messageer de manière proactive les utilisateurs qui n’ont pas installé ou interagi avec votre application précédemment. Par exemple, vous souhaitez utiliser l' [entreprise Communicator](~/samples/app-templates.md#company-communicator-app) pour envoyer des messages à l’ensemble de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs `conversationUpdate` nécessaires à partir de l’événement que votre application recevra lors de l’installation.
+Parfois, il peut s’avérer nécessaire de messageer de manière proactive les utilisateurs qui n’ont pas installé ou interagi avec votre application précédemment. Par exemple, vous souhaitez utiliser l' [entreprise Communicator](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs nécessaires à partir de l’événement que votre application recevra lors de l' `conversationUpdate` installation.
 
 Vous ne pouvez installer que les applications figurant dans le catalogue d’applications de votre organisation ou dans le magasin d’applications Teams.
 
@@ -110,7 +115,7 @@ Cet ID est l’ID de conversation unique de la conversation personnelle. Veuille
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Cet exemple utilise le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .
+Cet exemple utilise le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Dans cet exemple, `client` est une `ConnectorClient` instance qui a déjà été créée et authentifiée comme indiqué dans [Send and Receive Activities](/azure/bot-service/dotnet/bot-builder-dotnet-connector)
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -172,11 +177,11 @@ async def _send_proactive_message():
 
 ---
 
-## <a name="creating-a-channel-conversation"></a>Création d’une conversation de canal
+## <a name="creating-a-channel-conversation"></a>Créer une conversation de canal
 
-Votre robot ajouté en équipe peut effectuer des publications dans un canal pour créer une chaîne de réponse. Si vous utilisez le kit de développement logiciel (SDK) node `startReplyChain()` . js Teams, utilisez qui vous fournit une adresse complète avec l’ID d’activité et l’ID de conversation corrects. Si vous utilisez C#, consultez l’exemple ci-dessous.
+Le bot de votre équipe peut créer une chaîne de réponse dans un canal. Si vous utilisez le kit de développement logiciel (SDK) Node.js Teams, utilisez `startReplyChain()` qui vous fournit une adresse complète avec l’ID d’activité et l’ID de conversation corrects. Si vous utilisez C#, consultez l’exemple ci-dessous.
 
-Vous pouvez également utiliser l’API REST et émettre une requête POST à [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) la ressource.
+Vous pouvez également utiliser l’API REST et émettre une requête POST à la [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) ressource.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -228,7 +233,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-L’extrait de code suivant provient de [teamsConversationBot. js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
+L’extrait de code suivant provient de [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 
