@@ -3,17 +3,17 @@ title: Inscription d’un robot de réunion et d’appel pour Microsoft teams
 description: Découvrez comment enregistrer un nouveau robot d’appel audio/vidéo pour Microsoft teams
 keywords: appels audio/vidéo vidéo audio/vidéo
 ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673951"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801069"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>Inscription d’un bot appelant pour Microsoft teams
 
 Un bot qui participe à des appels audio/vidéo et des réunions en ligne est un robot Microsoft teams ordinaire avec quelques fonctionnalités supplémentaires :
 
-* Il existe une nouvelle version du manifeste de l’application teams avec deux paramètres `supportsCalling` supplémentaires `supportsVideo`, et. Ces paramètres sont inclus dans la version d' [évaluation du développeur](../../resources/dev-preview/developer-preview-intro.md) du manifeste de l’application Microsoft Teams.
+* Il existe une nouvelle version du manifeste de l’application teams avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo` . Ces paramètres sont inclus dans la version d' [évaluation du développeur](../../resources/dev-preview/developer-preview-intro.md) du manifeste de l’application Microsoft Teams.
 * Les [autorisations Microsoft Graph](./registering-calling-bot.md#add-microsoft-graph-permissions) doivent être configurées pour l’ID d’application Microsoft de votre robot.
 * Les autorisations d’appels et d’API de réunions en ligne de Microsoft Graph nécessitent un consentement de l’administrateur client.
 
@@ -21,12 +21,12 @@ Nous allons étudier ce qui précède plus en détail.
 
 ## <a name="new-manifest-settings"></a>Nouveaux paramètres de manifeste
 
-Les robots d’appels et de réunions en ligne ont deux paramètres supplémentaires dans le fichier manifest. JSON qui activent l’audio et la vidéo pour votre bot dans Teams.
+Les robots d’appels et de réunions en ligne ont deux paramètres supplémentaires dans la manifest.jssur qui activent l’audio/vidéo pour votre robot dans Teams.
 
-* `bots[0].supportsCalling`. S’il est présent et `true`défini sur, teams permettra à votre bot de participer à des appels et réunions en ligne.
-* `bots[0].supportsVideo`. S’il est présent et `true`défini sur, teams sait que votre bot prend en charge la vidéo.
+* `bots[0].supportsCalling`. S’il est présent et défini sur `true` , teams permettra à votre bot de participer à des appels et réunions en ligne.
+* `bots[0].supportsVideo`. S’il est présent et défini sur `true` , teams sait que votre bot prend en charge la vidéo.
 
-Si vous souhaitez que votre IDE valide correctement le schéma manifest. JSON pour votre appel et votre robot de réunion pour ces valeurs, vous pouvez `$schema` modifier l’attribut comme suit :
+Si vous souhaitez que votre IDE valide correctement les manifest.jssur le schéma de votre appel et de votre robot de réunion pour ces valeurs, vous pouvez modifier l' `$schema` attribut comme suit :
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -36,8 +36,8 @@ Si vous souhaitez que votre IDE valide correctement le schéma manifest. JSON po
 
 La création d’un nouveau Bot est décrite plus en détail dans la rubrique [créer un bot pour Microsoft teams](../how-to/create-a-bot-for-teams.md) , mais nous allons répéter une partie de celle-ci ici :
 
-1. Utilisez ce lien pour créer un nouveau robot : `https://dev.botframework.com/bots/new`. Si, au lieu de cela, vous sélectionnez le bouton *créer un bot* dans le portail de l’infrastructure bot, vous allez créer votre robot dans Microsoft Azure, pour lequel vous aurez besoin d’un compte Azure.
-1. Ajoutez le canal Microsoft Teams. Cliquez sur l’onglet « appel » de la page de la chaîne Microsoft teams et sélectionnez **activer l’appel**, puis mettez à jour **webhook (pour les appels)** avec votre URL https dans laquelle vous`https://contoso.com/teamsapp/api/calling`recevrez des notifications entrantes, par exemple. Reportez-vous à la rubrique [Configuring Channels](/bot-framework/portal-configure-channels) pour plus d’informations sur la configuration des canaux.
+1. Utilisez ce lien pour créer un nouveau robot : `https://dev.botframework.com/bots/new` . Si, au lieu de cela, vous sélectionnez le bouton *créer un bot* dans le portail de l’infrastructure bot, vous allez créer votre robot dans Microsoft Azure, pour lequel vous aurez besoin d’un compte Azure.
+1. Ajoutez le canal Microsoft Teams. Cliquez sur l’onglet « appel » de la page de la chaîne Microsoft teams et sélectionnez **activer l’appel**, puis mettez à jour **webhook (pour les appels)** avec votre URL https dans laquelle vous recevrez des notifications entrantes, par exemple `https://contoso.com/teamsapp/api/calling` . Reportez-vous à la rubrique [Configuring Channels](/bot-framework/portal-configure-channels) pour plus d’informations sur la configuration des canaux.
   ![Configurer les informations de canal Microsoft teams](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>Ajouter des autorisations Microsoft Graph
@@ -72,10 +72,10 @@ Vous devez configurer les autorisations d’application pour votre robot à l’
 
 Pour les applications qui utilisent le point de terminaison Azure AD v1, un administrateur client peut accorder des autorisations d’application à l’aide du [portail Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation, ou vous pouvez fournir une expérience d’inscription dans votre application grâce à laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois le consentement de l’administrateur enregistré par Azure AD, votre application peut demander des jetons sans avoir à demander de nouveau l’autorisation.
 
-Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure](https://portal.azure.com); Toutefois, il est souvent préférable de fournir une expérience d’abonnement pour les administrateurs à l’aide du point de terminaison `/adminconsent` Azure ad v2.  Pour plus d’informations, reportez-vous aux [instructions sur la création d’une URL de consentement d’administrateur](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent) .
+Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure](https://portal.azure.com); Toutefois, il est souvent préférable de fournir une expérience d’abonnement pour les administrateurs à l’aide du point de terminaison Azure AD v2 `/adminconsent` .  Pour plus d’informations, reportez-vous aux [instructions sur la création d’une URL de consentement d’administrateur](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent) .
 
 > [!NOTE]
-> La construction de l’URL de consentement de l’administrateur client nécessite une URL de redirection/URL de réponse dans le [portail d’inscription des applications](https://apps.dev.microsoft.com/). Pour ajouter des URL de réponse pour votre bot, accédez à votre enregistrement de robot, choisissez Options avancées-> modifier le manifeste d’application.  Ajoutez votre URL de redirection à `replyUrls` la collection.
+> La construction de l’URL de consentement de l’administrateur client nécessite une URL de redirection/URL de réponse dans le [portail d’inscription des applications](https://apps.dev.microsoft.com/). Pour ajouter des URL de réponse pour votre bot, accédez à votre enregistrement de robot, choisissez Options avancées-> modifier le manifeste d’application.  Ajoutez votre URL de redirection à la `replyUrls` collection.
 
 > [!IMPORTANT]
 > Chaque fois que vous modifiez les autorisations de votre application, vous devez également répéter le processus de consentement de l’administrateur. Les modifications apportées dans le portail d’inscription des applications prennent effet uniquement lorsque le consentement a été donné par l’administrateur du client.

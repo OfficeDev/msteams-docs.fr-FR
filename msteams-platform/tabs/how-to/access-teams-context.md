@@ -3,11 +3,11 @@ title: Obtenir le contexte de votre onglet
 description: Indique comment obtenir le contexte utilisateur dans vos onglets
 keywords: contexte utilisateur des onglets teams
 ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673548"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801075"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtenir le contexte de votre onglet Microsoft teams
 
@@ -15,7 +15,7 @@ Votre onglet peut nécessiter des informations contextuelles pour afficher le co
 
 * L’onglet peut nécessiter des informations de base sur l’utilisateur, l’équipe ou la société.
 * L’onglet peut nécessiter des paramètres régionaux et des informations sur les thèmes.
-* Il se peut que votre onglet doive `entityId` lire `subEntityId` le ou identifie le contenu de cet onglet.
+* Il se peut que votre onglet doive lire le `entityId` ou `subEntityId` identifie le contenu de cet onglet.
 
 ## <a name="user-context"></a>Contexte utilisateur
 
@@ -43,15 +43,15 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 * {loginHint} : valeur appropriée en tant qu’indication de connexion pour Azure AD. Il s’agit généralement du nom de connexion de l’utilisateur actuel, dans son client d’origine.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel, dans le client actuel.
 * {userObjectId} : ID d’objet Azure AD de l’utilisateur actuel, dans le client actuel.
-* {Theme} : le thème `default`de l’interface utilisateur `dark`actuel, `contrast`, ou.
+* {Theme} : le thème de l’interface utilisateur actuel, `default` `dark` , ou `contrast` .
 * {groupId} : ID du groupe Office 365 dans lequel réside l’onglet.
 * {TID} : ID de client Azure AD de l’utilisateur actuel.
 * {locale} : paramètres régionaux actuels de l’utilisateur mis en forme en tant que languageId-countryId (par exemple, en-US).
 
 >[!NOTE]
->L’espace `{upn}` réservé précédent est maintenant obsolète. Pour des raisons de compatibilité descendante, il s' `{loginHint}`agit actuellement d’un synonyme de.
+>L' `{upn}` espace réservé précédent est maintenant obsolète. Pour des raisons de compatibilité descendante, il s’agit actuellement d’un synonyme de `{loginHint}` .
 
-Par exemple, supposons dans votre manifeste d’onglets `configURL` que vous avez défini l’attribut sur
+Par exemple, supposons dans votre manifeste d’onglets que vous avez défini l' `configURL` attribut sur
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
@@ -68,7 +68,7 @@ Lorsqu’ils configurent votre onglet, teams appelle cette URL :
 
 ### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Obtention de contexte à l’aide de la bibliothèque JavaScript Microsoft teams
 
-Vous pouvez également récupérer les informations ci-dessus à l’aide du [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })`.
+Vous pouvez également récupérer les informations ci-dessus à l’aide du [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })` .
 
 La variable de contexte se présente comme dans l’exemple suivant.
 
@@ -100,7 +100,7 @@ La variable de contexte se présente comme dans l’exemple suivant.
 > [!Note]
 > Les canaux privés sont actuellement en version préliminaire pour les développeurs privés.
 
-Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez `getContext` de l’appel seront obscurcies pour protéger la confidentialité du canal. Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé. Si votre page utilise l’une des valeurs ci-dessous, vous devez vérifier le `channelType` champ afin de déterminer si votre page est chargée dans un canal privé et de répondre de manière appropriée.
+Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l' `getContext` appel seront obscurcies pour protéger la confidentialité du canal. Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé. Si votre page utilise l’une des valeurs ci-dessous, vous devez vérifier le `channelType` champ afin de déterminer si votre page est chargée dans un canal privé et de répondre de manière appropriée.
 
 * `groupId`-Non défini pour les canaux privés
 * `teamId`-Défini sur le threadId du canal privé
@@ -111,6 +111,6 @@ Lorsque votre page de contenu est chargée dans un canal privé, les données qu
 
 ## <a name="theme-change-handling"></a>Gestion des modifications de thème
 
-Vous pouvez inscrire votre application pour être informée si le thème change en `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`appelant.
+Vous pouvez inscrire votre application pour être informée si le thème change en appelant `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
 
-L' `theme` argument de la fonction sera une chaîne avec la valeur `default`, `dark`ou. `contrast`
+L' `theme` argument de la fonction sera une chaîne avec la valeur `default` , `dark` ou `contrast` .

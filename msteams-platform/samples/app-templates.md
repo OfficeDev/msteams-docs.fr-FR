@@ -2,23 +2,58 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 222128596dab2c7795cb15b63cc0520d3be970c4
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42587330"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44801391"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
 Les modèles d’application sont des applications prêtes pour la production pour Microsoft Teams, basées sur la Communauté, la source ouverte et disponibles sur GitHub. Chacun d’eux contient des instructions détaillées pour le déploiement et l’installation de cette application pour votre organisation, en fournissant une application prête à l’emploi que vous pouvez installer et commencer à utiliser immédiatement. Le code source complet est également disponible, ce qui vous permet de l’Explorer en détail ou de le modifier pour répondre à vos besoins spécifiques.
 
-## <a name="key-benefits-of-using-app-templates"></a>Principaux avantages de l’utilisation des modèles d’application
+**&#9734; indique des modèles d’application récemment publiés.**
+
+### <a name="key-benefits"></a>Principaux avantages
 
 * **Expérience plug-and-Play :** Tous les modèles d’application incluent des scripts de déploiement qui vous permettront d’héberger tous les services nécessaires dans Microsoft Azure. Aucun codage n’est requis pour déployer les applications.
 * **Code prêt pour la production :** Les modèles d’application sont conformes aux meilleures pratiques recommandées en matière de sécurité et d’infrastructure, et toutes les modifications apportées à celles-ci sont examinées afin de garantir une poursuite de la conformité.
 * **Personnalisable et extensible :** Alors que tous les modèles d’application sont prêts à être déployés tels quels, nous fournissons la base de code et les scripts de déploiement complets afin que vous puissiez facilement les personnaliser ou les étendre afin de répondre à vos besoins spécifiques.
 * **Documentation détaillée & la prise en charge :** Tous les modèles d’application sont accompagnés d’une documentation de bout en bout sur l’architecture de la solution, le déploiement et les étapes de configuration. Les référentiels étant également surveillés, veuillez signaler tous les problèmes que vous rencontrez en générant un problème sur GitHub.
+
+## <a name="associate-insights"></a>Informations du collaborateur
+
+Associate Insights est un modèle [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui permet aux employés terrain de capturer et d’envoyer directement des avis sur le client, des sentiments et des idées. Les travailleurs terrain sont souvent le premier représentant de la société à s’adresser à des clients dans un point de contact un-à-un. Les données collectées peuvent être partagées et utilisées de façon collaborative par Teams, par exemple, via un onglet Team BI Teams, pour améliorer les produits et améliorer l’expérience client.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![Affichage de commentaires des analyses générées par l’application](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Vue Power BI des informations générées par l’application](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="attendance"></a>Présence
+
+L’application de participation est un onglet [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui peut être épinglé dans une équipe. Elle est conçue pour enregistrer la présence, généralement dans des paramètres tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier la participation pendant 30 jours au plus et afficher des rapports de présence résumés pour un groupe entier ou des participants individuels.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
+
+![Démonstration de l’application assiduité](../assets/images/attendance-app.png)
+
+## <a name="book-a-room"></a>Livre-a-room
+
+Book-a-Room est un [robot Microsoft teams](../bots/what-are-bots.md) qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pour 30 (par défaut), 60 ou 90 minutes à compter de l’heure actuelle. Les étendues de bot livre-a-room aux conversations personnelles ou 1:1.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
+
+![Livre-démo de salle](../assets/images/book-a-room.png)
 
 ## <a name="celebrations"></a>Célébrations
 
@@ -40,48 +75,15 @@ Elle permet de créer des fonctionnalités de communication ciblées personnalis
 
 ![Forum aux questions et GIF](../assets/images/CompanyCommunicatorCompose.png)
 
-## <a name="faq-plus"></a>Forum aux questions
+## <a name="crowdsourcer"></a>CrowdSourcer
 
-Q conversation&les robots sont un moyen simple de fournir des réponses aux questions fréquemment posées par les utilisateurs. Toutefois, la plupart des bots ne s’engagent pas correctement avec les utilisateurs, car il n’y a aucun humain dans la boucle lorsque le bot échoue. Le bot FAQ est un Q convivial&un bot qui amène un humain dans la boucle lorsqu’il n’est pas en mesure d’aider. Un peut poser une question au bot et le bot répond avec une réponse si elle est contenue dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe d’experts préconfigurée qui aide à fournir une assistance en agissant sur les notifications à partir de son équipe.
+CrowdSourcer est un [robot Microsoft teams](../bots/what-are-bots.md) qui donne aux équipes des informations de la part des membres du groupe. Il s’agit d’un excellent moyen de répondre aux questions fréquemment posées, tout en permettant aux participants de s’engager activement et de contribuer à une ressource d’informations amusantes et utiles.
 
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app)
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
-> [!NOTE]
-> La version 2020 de **FAQ plus, version 2** prend en charge des Q&s améliorées en permettant à l’équipe d’experts de réaliser les opérations suivantes :
->
-> &#x2714; ajouter de nouvelles&Q directement à la base de connaissances à l’aide des extensions de message.
->
-> &#x2714; modifier et supprimer Q&une paire ajoutée par un bot.
->
-> &#x2714; effectuer le suivi de l’historique des révisions de Q&en tant que.
->
-> &#x2714; configurer une réponse avec des détails supplémentaires à afficher sous forme de [carte adaptative](/task-modules-and-cards/cards/cards-reference#adaptive-card).
->
->[**L’obtenir sur GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
->
->
+![Interaction de l’utilisateur final échangez](../assets/images/crowdsourcer.png)
 
-![Forum aux questions et GIF](../assets/images/FAQPlusEndUser.gif)
-
-## <a name="hr-support-bot"></a>Robot de prise en charge des RH
-
-HR support bot est un Q convivial&un bot qui fournit un spécialiste/expert du support technique de l’équipe RH dans la boucle lorsqu’il ne peut pas aider. Un peut poser une question au bot et le bot répond avec une réponse si elle est contenue dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe d’experts préconfigurée qui aide à fournir une assistance en agissant sur les notifications à partir de son équipe. De plus, le bot propose des liens vers des questions/stratégies RH recommandées en recherchant des balises préconfigurées dans la question. Ces vignettes sont également disponibles dans l’onglet associé sous forme de référence rapide. La prise en charge des RH fonctionne bien pour les QnA de poids léger et pour fournir une assistance rapide lors du lancement de nouveaux projets/initiatives au sein de l’organisation.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
-
-![Prise en charge RH](../assets/images/expert-user.png)
-
-## <a name="list-search-app"></a>Application de recherche de liste
-
-La collaboration dans Microsoft teams fait souvent référence à des informations contenues dans les éléments d’une liste SharePoint. Le simple collage d’un lien vers l’élément en question force tout le monde à basculer le contexte à l’extérieur de la conversation, à trouver les informations nécessaires, puis à revenir à teams pour poursuivre la conversation. Au fur et à mesure de la conversation, les personnes devront généralement revenir à l’élément de référence plusieurs fois pour vérifier les nouveaux commentaires et actualiser leurs souvenirs des informations contenues dans l’élément. Ce changement de contexte crée une barrière à des fins de collaboration et constitue une recette pour les choses qui passent par les fissures.
-
-Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’application de recherche de liste. Des millions d’utilisateurs utilisent SharePoint pour alimenter certains des flux de travail de base au sein de leur organisation. Toutefois, la collaboration sur les listes peut être particulièrement fastidieuse. À l’aide du modèle d’application de recherche de liste de Microsoft Teams, les utilisateurs peuvent insérer des informations à partir d’éléments de liste SharePoint directement au sein d’une conversation de conversation afin d’atténuer le changement de contexte provoqué lors de l’insertion d’un lien dans une conversation. Les informations sont insérées sous la forme d’une carte à format automatique facile à lire, permettant ainsi à vos utilisateurs de participer à la conversation.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
-
-![Application de recherche de liste](../assets/images/list-search-template.png)
-
-## <a name="custom-stickers-app"></a>Application d’autocollants personnalisés
+## <a name="custom-stickers"></a>Autocollants personnalisés
 
 L’auto-expression est essentielle pour une culture d’équipe saine. Ce modèle d’application est une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md) qui permet à vos utilisateurs d’utiliser des autocollants et des images gif personnalisées dans Microsoft Teams. Ce modèle offre une expérience de configuration Web simple où un utilisateur disposant d’un accès à la configuration peut télécharger les images gif/autocollantes/images dont il veut que les utilisateurs finals disposent, ce qui permet à l’ensemble de votre équipe d’utiliser n’importe quel ensemble d’autocollants que vous avez choisis.
 
@@ -91,7 +93,59 @@ Cette application permet également de partager facilement des images/des images
 
 ![Application d’autocollants](../assets/images/stickers.png)
 
-## <a name="icebreaker-bot"></a>Bot brise-glace
+## <a name="expert-finder"></a>Finder expert
+
+Le Finder expert est un [robot Microsoft teams](../bots/what-are-bots.md) qui identifie les membres spécifiques de l’organisation en fonction de leurs compétences, de leurs centres d’intérêt et de leurs attributs d’éducation. Les membres recherchent des experts au sein d’une organisation qui correspondent à une recherche par mot clé des profils utilisateur Azure Active Directory.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
+
+![Démonstration des résultats de recherche expert Finder](../assets/images/expert-finder.png)
+
+## <a name="faq-plus"></a>Forum aux questions 
+
+Q conversation&les robots sont un moyen simple de fournir des réponses aux questions fréquemment posées par les utilisateurs. Toutefois, la plupart des bots ne s’engagent pas correctement avec les utilisateurs, car il n’y a aucun humain dans la boucle lorsque le bot échoue. Le bot FAQ est un Q convivial&un bot qui amène un humain dans la boucle lorsqu’il n’est pas en mesure d’aider. Un peut poser une question au bot et le bot répond avec une réponse si elle est contenue dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe d’experts préconfigurée qui aide à prendre en charge les notifications à partir de l’équipe elle-même.
+
+> [!NOTE]
+> La dernière version de **FAQ plus** prend en charge les meilleures&une résolution en permettant à une équipe d’experts d’effectuer les opérations suivantes :
+>
+> &#x2714; ajouter de nouvelles&Q directement à la base de connaissances à l’aide des extensions de message.
+>
+> &#x2714; modifier et supprimer Q&une paire ajoutée par un bot.
+>
+> &#x2714; effectuer le suivi de l’historique des révisions de Q&en tant que.
+>
+> &#x2714; configurer une réponse avec des détails supplémentaires à afficher sous forme de [carte adaptative](/task-modules-and-cards/cards/cards-reference#adaptive-card).
+>
+[**L’obtenir sur GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+
+![Forum aux questions et GIF](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="group-activities"></a>Activités de groupe
+
+Activités de groupe est une application Microsoft teams qui permet aux propriétaires d’équipe de créer facilement des groupes d’activités et de gérer les flux de travail de collaboration dans le contexte de Microsoft Teams. Les auteurs d’activité sont activés pour créer des activités, distribuent de manière aléatoire les membres de l’équipe dans des groupes et, éventuellement, le bot envoie des rappels jusqu’à ce que les activités soient terminées.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities)
+
+:::row:::
+  :::column span="2":::
+    ![Liste des activités de groupe dans teams](../assets/images/group-activities-1.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Message de notification d’activité de groupe dans un canal](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="hr-support"></a>Prise en charge RH
+
+HR support bot est un Q convivial&un bot qui fournit un spécialiste/expert du support technique de l’équipe RH dans la boucle lorsqu’il ne peut pas aider. Un peut poser une question au bot et le bot répond avec une réponse si elle est contenue dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe d’experts préconfigurée qui aide à fournir une assistance en agissant sur les notifications à partir de son équipe. De plus, le bot propose des liens vers des questions/stratégies RH recommandées en recherchant des balises préconfigurées dans la question. Ces vignettes sont également disponibles dans l’onglet associé sous forme de référence rapide. La prise en charge des RH fonctionne bien pour les QnA de poids léger et pour fournir une assistance rapide lors du lancement de nouveaux projets/initiatives au sein de l’organisation.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
+
+![Prise en charge RH](../assets/images/expert-user.png)
+
+## <a name="icebreaker"></a>Brise-glace
 
 Il s’agit d’un [robot Microsoft teams](../bots/what-are-bots.md) qui permet à votre équipe de se rapprocher en appariant deux membres d’équipe aléatoires, chaque semaine, pour répondre à vos besoins. Le bot facilite la planification en suggérant automatiquement des temps libres qui fonctionnent pour les deux membres. Renforcer les connexions personnelles et créer une communauté étroitement à l’aide de cette application.
 
@@ -101,64 +155,7 @@ En plus d’encourager les connexions personnelles à l’ensemble de votre équ
 
 ![Application brise-glace](../assets/images/icebreaker.png)
 
-## <a name="scrum-status-bot"></a>Bot d’état de Scrum
-
-Scrum Status bot est un robot Assistant de Scrum simple qui permettra aux utilisateurs d’exécuter des réunions de mise en attente asynchrones et de permettre aux utilisateurs de partager leurs mises à jour quotidiennes et facilement. Il est conçu pour fonctionner dans les conversations de groupe teams et tous les membres peuvent contribuer à Scrum. Une possibilité de démarrer et de terminer un Scrum et de consulter les mises à jour effectuées par d’autres personnes dans un Scrum en cours d’exécution.
-
-[Git sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
-
-![Bot d’état de Scrum](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
-
-## <a name="crowdsourcer-bot"></a>Robot Crowdsourcer
-
-Crowdsourcer est un [robot Microsoft teams](../bots/what-are-bots.md) qui donne aux équipes des informations de la part des membres du groupe. Il s’agit d’un excellent moyen de répondre aux questions fréquemment posées, tout en permettant aux participants de s’engager activement et de contribuer à une ressource d’informations amusantes et utiles.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
-
-![Interaction de l’utilisateur final échangez](../assets/images/crowdsourcer.png)
-
-## <a name="expert-finder-bot"></a>Robot de recherche d’expert
-
-Le Finder expert est un [robot Microsoft teams](../bots/what-are-bots.md) qui identifie les membres spécifiques de l’organisation en fonction de leurs compétences, de leurs centres d’intérêt et de leurs attributs d’éducation. Les membres recherchent des experts au sein d’une organisation qui correspondent à une recherche par mot clé des profils utilisateur Azure Active Directory.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
-
-![Démonstration des résultats de recherche expert Finder](../assets/images/expert-finder.png)
-
-## <a name="book-a-room-bot"></a>Livre-un bot de salle
-
-Book-a-Room est un [robot Microsoft teams](../bots/what-are-bots.md) qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pour 30 (par défaut), 60 ou 90 minutes à compter de l’heure actuelle. Les étendues de bot livre-a-room aux conversations personnelles ou 1:1.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
-
-![Livre-démo de salle](../assets/images/book-a-room.png)
-
-## <a name="attendance-app"></a>Application assiduité
-
-L’application de participation est un onglet [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui peut être épinglé dans une équipe. Elle est conçue pour enregistrer la présence, généralement dans des paramètres tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier la participation pendant 30 jours au plus et afficher des rapports de présence résumés pour un groupe entier ou des participants individuels.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
-
-![Démonstration de l’application assiduité](../assets/images/attendance-app.png)
-
-## <a name="associate-insights-app"></a>Associer l’application Insights
-
-Associate Insights est un modèle [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui permet aux employés terrain de capturer et d’envoyer directement des avis sur le client, des sentiments et des idées. Les travailleurs terrain sont souvent le premier représentant de la société à s’adresser à des clients dans un point de contact un-à-un. Les données collectées peuvent être partagées et utilisées de façon collaborative par Teams, par exemple, via un onglet Team BI Teams, pour améliorer les produits et améliorer l’expérience client.
-
-[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
-
-:::row:::
-  :::column span="2":::
-    ![Affichage de commentaires des analyses générées par l’application](../assets/images/associate-insights-app.png)  
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="2":::
-    ![Vue Power BI des informations générées par l’application](../assets/images/associate-insights-app2.png)
-:::column-end:::
-:::row-end:::
-
-## <a name="incentives-app"></a>Application d’incentives
+## <a name="incentives"></a>Encouragement
 
 Incentives est un modèle [d’applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app) qui gère et effectue le suivi de la participation des employés incentivized aux activités désignées, telles que les formations et les initiatives de gestion des modifications. Les administrateurs utilisent l’application pour établir des activités désignées, affecter des points pour terminer et spécifier les niveaux de points d’admissibilité requis pour les récompenses. Les employés utilisent l’application pour afficher leurs points cumulés et, lors de la demande d’éligibilité, de demande et de revendication de récompenses remboursables.
 
@@ -166,5 +163,121 @@ Incentives est un modèle [d’applications puissantes](/powerapps/maker/canvas-
 
 ![Démonstration de l’application incentives](../assets/images/incentives-app.png)
 
-Vous avez une idée pour un modèle d’application que vous aimeriez voir ? [Faites-nous part](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)de vos commentaires.
+## <a name="incident-reporter-9734"></a>&#9734; de l’incident Rapporteur
 
+Incident reporter est un [robot Microsoft teams](../bots/what-are-bots.md) qui optimise la gestion des incidents au sein de votre organisation. Le robot facilite la collecte automatisée des données d’incidents, les rapports d’incident personnalisés, les notifications des parties prenantes pertinentes et le suivi des incidents de bout en bout.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
+
+:::row:::
+  :::column span="2":::
+    ![Affichage de l’étendue du groupe d’incidents reporter](../assets/images/incident-reporter-02.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Vue d’étendue personnelle de l’événement Rapporteur](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="open-badges"></a>Ouvrir les badges
+
+Open badges est une application Microsoft teams qui permet aux utilisateurs de gagner des badges d’informations d’identification de formation numérique dans le contexte teams et de les partager partout. L’utilisation des fonctionnalités de l’autorité de certification numérique tierce, [Badgr](https://badgr.org/), les badges attribués sont enregistrées dans le profil Badgr d’un destinataire et disponible pour créer et partager une vue d’ensemble des parcours de formation.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
+
+:::row:::
+  :::column span="2":::
+    ![Image des badges disponibles](../assets/images/open-badges-1.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Vue des badges attribués](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="quick-responses"></a>Réponses rapides
+
+Les réponses rapides sont une application Microsoft teams qui fournit une solution robuste pour répondre efficacement aux questions fréquemment posées des utilisateurs (FAQ). Au lieu de répondre à chaque requête et de répéter des informations en continu, l’application créera une bibliothèque de réponses pour une expérience utilisateur interactive via les [extensions de messagerie](../messaging-extensions/what-are-messaging-extensions.md)Teams.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
+
+![Exemple d’affichage des réponses](../assets/images/quick-responses.png)
+
+## <a name="remote-support-9734"></a>&#9734; de support à distance
+
+Le support à distance est un [robot Microsoft teams](../bots/what-are-bots.md) qui fournit une interface ciblée entre les demandeurs de support au sein de votre organisation et l’équipe de support interne.  Les utilisateurs finals peuvent envoyer, modifier ou retirer des demandes de support et l’équipe de support technique peut répondre, gérer et mettre à jour les demandes au sein de la plateforme Teams.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
+
+:::row:::
+  :::column span="2":::
+    ![Formulaire demande de support](../assets/images/remote-support-request-form.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Demander des détails de prise en charge](../assets/images/remote-support-request-details.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="request-a-team-9734"></a>Request-a-Team &#9734;
+
+Request-a-Team est une application Microsoft teams qui optimise la création d’une nouvelle équipe pour votre organisation d’entreprise. L’application prend en charge la normalisation et les meilleures pratiques lors de la création de nouvelles instances d’équipe via l’intégration d’un formulaire de demande guidé par un Assistant, d’un processus d’approbation incorporée, d’un tableau de bord d’état de demande et de la création d’une équipe automatisée.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-requestateam)
+
+:::row:::
+  :::column span="2":::
+    ![Demande-affichage de page de démarrage de l’équipe](../assets/images/request-a-team-two.jpg)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Demande-mode page de l’Assistant d’équipe](../assets/images/request-a-team-three.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="scrums-for-channels-9734"></a>Scrums pour les canaux &#9734;
+
+Scrums for Channels est une application Assistant Scrum qui permet aux utilisateurs de planifier et d’exécuter des scrums dans des canaux dans Microsoft Teams. L’application est idéale pour les équipes distantes et les équipes qui reposent sur des membres de différents emplacements géographiques et fuseaux horaires pour partager des mises à jour quotidiennes et s’assurer de la participation à des réunions de Scrum.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
+
+> [!NOTE]
+> Pour organiser des réunions de Scrum dans une conversation de groupe, consultez notre modèle [d’application scrums for Group chat](#scrums-for-group-chat-) .
+
+:::row:::
+  :::column span="2":::
+    ![Affichage des paramètres des scrums pour les canaux](../assets/images/scrum-for-channels-settings.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Affichage de l’état du membre de l’équipe scrums for Channels](../assets/images/scrum-for-channels-status.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="scrums-for-group-chat-9734"></a>Scrums pour les &#9734; de conversation de groupe
+
+> [!NOTE]
+> Le modèle d’application de statut scrums a été mis à jour et est désormais Scrum pour la conversation de groupe.
+
+Scrums for Group chat est un Assistant Scrum de support qui permet aux membres de la conversation de groupe d’exécuter des réunions de participation asynchrones et de partager facilement leurs mises à jour quotidiennes. Elle permet à tous les membres de la conversation de groupe de contribuer au Scrum et d’afficher les mises à jour effectuées par d’autres personnes dans le Scrum en cours d’exécution.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforgroupchat)
+
+![Démonstration de scrums pour la conversation de groupe](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
+
+## <a name="sharepoint-list-search"></a>Recherche de liste SharePoint
+
+La collaboration dans Microsoft teams fait souvent référence à des informations contenues dans les éléments d’une liste SharePoint. Le simple collage d’un lien vers l’élément en question force tout le monde à basculer le contexte à l’extérieur de la conversation, à trouver les informations nécessaires, puis à revenir à teams pour poursuivre la conversation. Au fur et à mesure de la conversation, les personnes devront généralement revenir à l’élément de référence plusieurs fois pour vérifier les nouveaux commentaires et actualiser leurs souvenirs des informations contenues dans l’élément. Ce changement de contexte crée une barrière à des fins de collaboration et constitue une recette pour les choses qui passent par les fissures.
+
+Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’application de recherche de liste. Des millions d’utilisateurs utilisent SharePoint pour alimenter certains des flux de travail de base au sein de leur organisation. Toutefois, la collaboration sur les listes peut être particulièrement fastidieuse. À l’aide du modèle d’application de recherche de liste de Microsoft Teams, les utilisateurs peuvent insérer des informations à partir d’éléments de liste SharePoint directement au sein d’une conversation de conversation afin d’atténuer le changement de contexte provoqué lors de l’insertion d’un lien dans une conversation. Les informations sont insérées sous la forme d’une carte à format automatique facile à lire, permettant ainsi à vos utilisateurs de participer à la conversation.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
+
+![Application de recherche de liste](../assets/images/list-search-template.png)
+
+Vous avez une idée pour un modèle d’application que vous aimeriez voir ? [Faites-nous part](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)de vos commentaires.

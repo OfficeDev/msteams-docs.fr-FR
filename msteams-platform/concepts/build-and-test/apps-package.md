@@ -3,12 +3,12 @@ title: Empaquetage de votre application
 description: Découvrez comment empaqueter votre application à des fins de test, de chargement et de publication dans Microsoft teams
 keywords: empaquetage d’applications teams
 ms.topic: conceptual
-ms.openlocfilehash: b76041b129e766dba2b401aaac0e12958a4e9b0d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673908"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44801366"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Créer un package d’application pour votre application Microsoft teams
 
@@ -16,19 +16,19 @@ Les applications dans teams sont définies par un fichier JSON de manifeste d’
 
 Un package d’applications teams est un fichier. zip contenant les éléments suivants :
 
-* Un fichier manifeste nommé « manifest. JSON », qui spécifie les attributs de votre application et pointe vers les ressources requises pour votre expérience, telles que l’emplacement de sa page de configuration d’onglets ou l’ID d’application Microsoft pour son bot.
+* Un fichier manifeste nommé « manifest.json », qui spécifie les attributs de votre application et pointe vers les ressources requises pour votre expérience, telles que l’emplacement de sa page de configuration d’onglets ou l’ID d’application Microsoft pour son bot.
 * Une icône « plan » transparente et une icône « couleur » complète. Pour plus d’informations, consultez la section [icônes](#icons) plus loin dans cette rubrique.
 
 ## <a name="creating-a-manifest"></a>Création d’un manifeste
 
-*Teams App Studio* peut vous aider à configurer votre manifeste. Il contient également une bibliothèque de contrôle REACT et des exemples configurables pour cartes. Voir [application Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
+*Teams App Studio* peut vous aider à configurer votre manifeste. Elle contient également une bibliothèque de contrôle React et des exemples configurables pour les cartes. Voir [application Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
 
-Votre fichier manifeste doit être nommé « manifest. JSON » et se trouver au niveau supérieur du package de téléchargement. Notez que les manifestes et les packages créés précédemment peuvent prendre en charge une version plus ancienne du schéma. Pour les applications teams et en particulier la soumission AppSource (anciennement Office Store), vous devez utiliser le [schéma de manifeste](~/resources/schema/manifest-schema.md)actuel.
+Votre fichier manifeste doit être nommé « manifest.js » et se trouver au niveau supérieur du package de téléchargement. Notez que les manifestes et les packages créés précédemment peuvent prendre en charge une version plus ancienne du schéma. Pour les applications teams et en particulier la soumission AppSource (anciennement Office Store), vous devez utiliser le [schéma de manifeste](~/resources/schema/manifest-schema.md)actuel.
 
 > [!TIP]
 > Spécifiez le schéma au début de votre manifeste pour activer IntelliSense ou une prise en charge similaire à partir de votre éditeur de code :
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>Icônes
 

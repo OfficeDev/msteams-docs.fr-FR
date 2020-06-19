@@ -4,11 +4,11 @@ description: Découvrez les conditions requises et les considérations important
 keywords: ordinateur virtuel Windows Server Azure hébergé par une application
 ms.date: 11/16/2018
 ms.openlocfilehash: f5b721edacb11e867d05c8213b74036cb51f419c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673700"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801070"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Configuration requise et considérations relatives aux robots multimédia hébergés par l’application
 
@@ -19,7 +19,7 @@ Toutes les instructions pour le développement de la messagerie et des robots de
 
 ## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>Le développement de Media bot hébergé par l’application requiert C#/.NET et Windows Server
 
-- Un robot multimédia hébergé par une application requiert `Microsoft.Graph.Communications.Calls.Media` la bibliothèque .net ([disponible ici](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) pour accéder aux flux multimédia audio et vidéo, et le bot doit être déployé sur un ordinateur Windows Server (ou système d’exploitation Windows Server invité dans Azure). Par conséquent, le bot doit être développé en C# et dans .NET Framework standard et déployé dans Microsoft Azure. Vous ne pouvez pas utiliser les API C++ ou node. js pour accéder aux médias en temps réel et .NET Core n’est pas pris en charge pour un robot multimédia hébergé par une application.
+- Un robot multimédia hébergé par une application requiert la `Microsoft.Graph.Communications.Calls.Media` bibliothèque .net ([disponible ici](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) pour accéder aux flux multimédia audio et vidéo, et le bot doit être déployé sur un ordinateur Windows Server (ou système d’exploitation Windows Server invité dans Azure). Par conséquent, le bot doit être développé en C# et dans .NET Framework standard et déployé dans Microsoft Azure. Vous ne pouvez pas utiliser des API C++ ou Node.js pour accéder à des médias en temps réel et .NET Core n’est pas pris en charge pour un robot multimédia hébergé par une application.
 
 - Un robot multimédia hébergé par une application peut être hébergé dans l’un des environnements de service Azure suivants :
   - Service Cloud.
@@ -28,7 +28,7 @@ Toutes les instructions pour le développement de la messagerie et des robots de
   
 - Un bot multimédia hébergé par l’application ne peut pas être déployé en tant qu’application Web Azure.
 
-- Un robot multimédia hébergé par une application doit s’exécuter sur une version récente de `Microsoft.Graph.Communications.Calls.Media` la bibliothèque .net. Le bot doit utiliser la version disponible la plus récente du [package NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ou une version qui n’est pas postérieure à trois mois. Les versions antérieures de la bibliothèque seront déconseillées et risquent de ne pas fonctionner après quelques mois. La mise `Microsoft.Graph.Communications.Calls.Media` à jour de la bibliothèque garantit une meilleure interopérabilité entre le bot et Microsoft Teams.
+- Un robot multimédia hébergé par une application doit s’exécuter sur une version récente de la `Microsoft.Graph.Communications.Calls.Media` bibliothèque .net. Le bot doit utiliser la version disponible la plus récente du [package NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ou une version qui n’est pas postérieure à trois mois. Les versions antérieures de la bibliothèque seront déconseillées et risquent de ne pas fonctionner après quelques mois. La mise à jour de la `Microsoft.Graph.Communications.Calls.Media` bibliothèque garantit une meilleure interopérabilité entre le bot et Microsoft Teams.
 
 ## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>Les appels multimédia en temps réel restent sur l’ordinateur où ils ont été créés.
 

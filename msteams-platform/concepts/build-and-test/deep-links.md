@@ -3,11 +3,11 @@ title: Créer des liens détaillés
 description: Décrit les liens détaillés et leur utilisation dans vos applications
 keywords: teams de liens deeplink
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673903"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801082"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams
 
@@ -38,7 +38,7 @@ Renseignez les champs suivants :
 ### <a name="generating-a-deep-link-to-your-tab"></a>Génération d’un lien profond vers votre onglet
 
 > [!NOTE]
-> Les onglets statiques ont une portée de « personnel » et les onglets configurables ont une portée de « Team ». Les deux types d’onglets ont une syntaxe légèrement différente étant donné que seul l’onglet `channel` configurable a une propriété associée à son objet de contexte. Pour plus d’informations sur les étendues personnelles et d’équipe, voir la référence de [manifeste](~/resources/schema/manifest-schema.md) .
+> Les onglets statiques ont une portée de « personnel » et les onglets configurables ont une portée de « Team ». Les deux types d’onglets ont une syntaxe légèrement différente étant donné que seul l’onglet configurable a une `channel` propriété associée à son objet de contexte. Pour plus d’informations sur les étendues personnelles et d’équipe, voir la référence de [manifeste](~/resources/schema/manifest-schema.md) .
 > [!NOTE]
 > Les liens détaillés fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v 0.4 ou version ultérieure et, en raison de l’ID d’entité. Les liens détaillés vers les onglets sans ID d’entité continuent à accéder à l’onglet mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
 
@@ -50,8 +50,8 @@ Les paramètres de requête sont les suivants :
 
 * `appId`&emsp;ID de votre manifeste ; par exemple, « fe4a8eba-2a31-4737-8E33-e5fae6fee194 »
 * `entityId`&emsp;ID de l’élément dans l’onglet, que vous avez fourni lors de la [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md); par exemple, « tasklist123 »
-* `entityWebUrl`ou `subEntityWebUrl` &emsp;un champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet ; par exemple, "https://tasklist.example.com/123" ou "https://tasklist.example.com/list123/task456"
-* `entityLabel`ou `subEntityLabel` &emsp;une étiquette pour l’élément de votre onglet, à utiliser lors de l’affichage du lien profond ; par exemple, « liste des tâches 123 » ou « tâche 456 »
+* `entityWebUrl`ou `subEntityWebUrl` &emsp; un champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet ; par exemple, « https://tasklist.example.com/123 » ou « https://tasklist.example.com/list123/task456 »
+* `entityLabel`ou `subEntityLabel` &emsp; une étiquette pour l’élément de votre onglet, à utiliser lors de l’affichage du lien profond ; par exemple, « liste des tâches 123 » ou « tâche 456 »
 * `context`&emsp;Objet JSON contenant les champs suivants :
   * `subEntityId`&emsp;ID de l’élément _dans_ l’onglet ; par exemple, « task456 »
   * `channelId`&emsp;ID de canal Microsoft Teams (disponible à partir du [contexte](~/tabs/how-to/access-teams-context.md)d’onglet, par exemple, « 19 : cbe3683f25094106b826c9cada3afbe0@thread. Skype ». Cette propriété est disponible uniquement dans les onglets configurables avec une portée de « Team ». Elle n’est pas disponible dans les onglets statiques, dont l’étendue est « personnel ».
@@ -115,7 +115,7 @@ Les paramètres de requête sont les suivants :
 * `topicName`&emsp;Champ facultatif pour le nom d’affichage de la conversation, dans le cas d’une conversation avec 3 utilisateurs ou plus. Si ce champ n’est pas spécifié, le nom d’affichage de la conversation sera basé sur les noms des participants.
 * `message`&emsp;Champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel pendant que la conversation est à l’état Brouillon.
 
-Pour utiliser ce lien profond avec votre robot, vous pouvez le spécifier en tant qu’URL cible dans le bouton de votre carte ou cliquer sur `openUrl` action par le biais du type d’action.
+Pour utiliser ce lien profond avec votre robot, vous pouvez le spécifier en tant qu’URL cible dans le bouton de votre carte ou cliquer sur action par le biais du `openUrl` type d’action.
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Liaison à la boîte de dialogue planification
 
@@ -140,4 +140,4 @@ Les paramètres de requête sont les suivants :
 
 Actuellement, la spécification de l’emplacement n’est pas prise en charge. Lors de la génération des heures de début et de fin, veillez à spécifier le décalage UTC (fuseaux horaires).
 
-Pour utiliser ce lien profond avec votre robot, vous pouvez le spécifier en tant qu’URL cible dans le bouton de votre carte ou cliquer sur `openUrl` action par le biais du type d’action.
+Pour utiliser ce lien profond avec votre robot, vous pouvez le spécifier en tant qu’URL cible dans le bouton de votre carte ou cliquer sur action par le biais du `openUrl` type d’action.

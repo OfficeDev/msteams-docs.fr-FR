@@ -2,12 +2,12 @@
 title: Référence des cartes
 description: Décrit toutes les cartes et les actions de carte disponibles pour les robots dans teams
 keywords: Référence des cartes robots
-ms.openlocfilehash: 76b9cb7e2508d300deb2e3cd4f392fdb9850062d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673743"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801114"
 ---
 # <a name="cards-reference"></a>Référence des cartes
 
@@ -43,7 +43,7 @@ Ce tableau indique les types de cartes à votre disposition.
 
 ### <a name="inline-card-images"></a>Images de carte en ligne
 
-Votre carte peut contenir une image incluse en incluant un lien vers votre image publiquement disponible. Pour des raisons de performances, nous vous recommandons vivement d’héberger votre image sur un réseau de distribution de contenu public (CDN).
+Votre carte peut contenir une image incluse en incluant un lien vers votre image accessible au public. Pour des raisons de performances, nous vous recommandons vivement d’héberger votre image sur un réseau de distribution de contenu public (CDN).
 
 Les images sont mises à l’horizontale ou verticalement tout en conservant les proportions pour redimensionner la zone d’image, puis rognées du Centre pour obtenir les proportions appropriées pour la carte.
 
@@ -52,7 +52,7 @@ Les images doivent être d’au moins 1024 × 1024 et 1 Mo au format PNG, JPEG o
 | Propriété | Type  | Description |
 | --- | --- | --- |
 | url | URL | URL HTTPs vers l’image |
-| alt | Chaîne | Description accessible de l’image |
+| alt | String | Description accessible de l’image |
 
 ### <a name="buttons"></a>Boutons
 
@@ -66,10 +66,7 @@ Pour plus d’informations sur la mise en forme de texte dans les cartes, voir [
 
 ## <a name="adaptive-card"></a>Carte adaptative
 
-> [!NOTE]
-> Seule la version 1,0 des cartes adaptatives est prise en charge pour tous les utilisateurs. La version 1,2 est actuellement disponible uniquement dans l’aperçu du développeur
-
-Carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de paroles, d’images, de boutons et de champs d’entrée.
+Carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de paroles, d’images, de boutons et de champs d’entrée. *Voir* [cartes adaptatives v 1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Prise en charge des cartes adaptatives
 
@@ -393,15 +390,15 @@ Chaque carte de connecteur peut afficher un maximum de 10 sections et chaque sec
 > [!NOTE]
 > Les sections, images ou actions supplémentaires dans un message ne s’affichent pas.
 
-Tous les champs de texte prennent en charge le démarque et le code HTML. Vous pouvez contrôler les sections qui utilisent la démarque ou le `markdown` code HTML en définissant la propriété dans un message. Par défaut, `markdown` est défini sur `true`; Si vous préférez utiliser du code HTML, affectez `false`la valeur `markdown` .
+Tous les champs de texte prennent en charge le démarque et le code HTML. Vous pouvez contrôler les sections qui utilisent la démarque ou le code HTML en définissant la `markdown` propriété dans un message. Par défaut, `markdown` est défini sur `true` ; si vous préférez utiliser HTML à la place, définissez `markdown` sur `false` .
 
-Si vous spécifiez `themeColor` la propriété, elle se substitue `accentColor` à la propriété dans le manifeste de l’application.
+Si vous spécifiez la `themeColor` propriété, elle se substitue `accentColor` à la propriété dans le manifeste de l’application.
 
-Pour spécifier le style de rendu `activityImage`de, vous pouvez `activityImageType` définir comme suit.
+Pour spécifier le style de rendu de `activityImage` , vous pouvez définir `activityImageType` comme suit.
 
 | Valeur | Description |
 | --- | --- |
-| `avatar` | Default `activityImage` sera rognée en tant que cercle |
+| `avatar` | Default `activityImage`sera rognée en tant que cercle |
 | `article` | `activityImage`s’affiche sous la forme d’un rectangle et conserve ses proportions |
 
 Pour tous les autres détails sur les propriétés de la carte de connecteur, consultez la [référence de carte de message](/outlook/actionable-messages/card-reference)intégrant des actions. Les seules propriétés de la carte de connecteur que Microsoft Teams ne prend pas en charge sont les suivantes :
@@ -497,7 +494,7 @@ Référence de l’infrastructure bot :
 
 ## <a name="signin-card"></a>Carte de connexion
 
-Carte qui permet à un bot de demander à un utilisateur de se connecter. Pris en charge dans teams sous une forme légèrement différente de celle de l’infrastructure de robot. La carte de connexion dans teams est similaire à la carte de connexion dans l’infrastructure de robot, à l’exception que la carte de connexion dans Teams ne `signin` prend `openUrl`en charge que deux actions : et.
+Carte qui permet à un bot de demander à un utilisateur de se connecter. Pris en charge dans teams sous une forme légèrement différente de celle de l’infrastructure de robot. La carte de connexion dans teams est similaire à la carte de connexion dans l’infrastructure de robot, à l’exception que la carte de connexion dans Teams ne prend en charge que deux actions : `signin` et `openUrl` .
 
 L' *action de connexion* peut être utilisée à partir de n’importe quelle carte dans Teams, et pas seulement à partir de la carte de connexion. Pour plus d’informations sur l’authentification, voir la rubrique [Microsoft teams Authentication Flow for bots](~/bots/how-to/authentication/auth-flow-bot.md) .
 
@@ -583,7 +580,7 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 }
 ```
 
-### <a name="for-more-information"></a>Pour plus d'informations
+### <a name="for-more-information"></a>Pour plus d’informations
 
 Référence de l’infrastructure bot :
 
@@ -594,7 +591,7 @@ Référence de l’infrastructure bot :
 
 Les collections de cartes sont prises en charge dans Teams.
 
-Les collections de cartes sont fournies par l’infrastructure `builder.AttachmentLayout.carousel` de `builder.AttachmentLayout.list`robot : et. Ces collections peuvent contenir des cartes adaptative, héros ou miniatures.
+Les collections de cartes sont fournies par l’infrastructure de robot : `builder.AttachmentLayout.carousel` et `builder.AttachmentLayout.list` . Ces collections peuvent contenir des cartes adaptative, héros ou miniatures.
 
 ## <a name="carousel-collection"></a>Collection carrousel
 

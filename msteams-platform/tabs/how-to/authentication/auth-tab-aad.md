@@ -2,12 +2,12 @@
 title: Authentification pour les onglets à l’aide d’Azure Active Directory
 description: Décrit l’authentification dans teams et son utilisation dans des onglets
 keywords: onglets d’authentification de teams AAD
-ms.openlocfilehash: 760fce99a51dc722905035bade6db008072ee0b4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 211c08ce1a51a8f0f13e622856a808661dc97b39
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673792"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801089"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifier un utilisateur sous un onglet Microsoft teams
 
@@ -34,7 +34,7 @@ Le flux d’authentification doit être déclenché par une action de l’utilis
 
 Ajoutez un bouton à votre page de configuration ou de contenu pour permettre à l’utilisateur de se connecter lorsque cela est nécessaire. Cette opération peut être exécutée sur la page de [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) de l’onglet ou sur une page de [contenu](~/tabs/how-to/create-tab-pages/content-page.md) .
 
-Azure AD, comme la plupart des fournisseurs d’identité, ne permet pas de placer son contenu dans un IFRAME. Cela signifie que vous devrez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page `/tab-auth/simple-start`est. Utilisez la `microsoftTeams.authenticate()` fonction du kit de développement logiciel (SDK) client Microsoft teams pour lancer cette page lorsque votre bouton est sélectionné.
+Azure AD, comme la plupart des fournisseurs d’identité, ne permet pas de placer son contenu dans un IFRAME. Cela signifie que vous devrez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start` . Utilisez la `microsoftTeams.authenticate()` fonction du kit de développement logiciel (SDK) client Microsoft teams pour lancer cette page lorsque votre bouton est sélectionné.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 
 ### <a name="notes"></a>Notes
 
-* L’URL que vous transmettez `microsoftTeams.authentication.authenticate()` est la page de démarrage du flux d’authentification. Dans cet exemple, il `/tab-auth/simple-start`s’agit de. Cela doit correspondre à ce que vous avez enregistré dans le [portail d’inscription des applications Azure ad](https://apps.dev.microsoft.com).
+* L’URL que vous transmettez `microsoftTeams.authentication.authenticate()` est la page de démarrage du flux d’authentification. Dans cet exemple, il s’agit de `/tab-auth/simple-start` . Cela doit correspondre à ce que vous avez enregistré dans le [portail d’inscription des applications Azure ad](https://apps.dev.microsoft.com).
 
 * Le flux d’authentification doit démarrer sur une page qui se trouve sur votre domaine. Ce domaine doit également figurer dans la [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section du manifeste. Si ce n’est pas le cas, une fenêtre contextuelle vide est générée.
 
@@ -60,7 +60,7 @@ microsoftTeams.authentication.authenticate({
 
 ## <a name="navigate-to-the-authorization-page-from-your-popup-page"></a>Accéder à la page d’autorisation à partir de votre page contextuelle
 
-Lorsque votre page contextuelle (`/tab-auth/simple-start`) s’affiche, le code suivant est exécuté. L’objectif principal de cette page est de rediriger vers votre fournisseur d’identité afin que l’utilisateur puisse se connecter. Cette redirection a pu être réalisée côté serveur à l’aide du protocole HTTP 302, mais dans ce cas, elle est exécutée côté client en utilisant un `window.location.assign()`appel à. Cela permet `microsoftTeams.getContext()` également de récupérer des informations d’indication qui peuvent être transmises à Azure ad.
+Lorsque votre page contextuelle ( `/tab-auth/simple-start` ) s’affiche, le code suivant est exécuté. L’objectif principal de cette page est de rediriger vers votre fournisseur d’identité afin que l’utilisateur puisse se connecter. Cette redirection a pu être réalisée côté serveur à l’aide du protocole HTTP 302, mais dans ce cas, elle est exécutée côté client en utilisant un appel à `window.location.assign()` . Cela permet également de `microsoftTeams.getContext()` récupérer des informations d’indication qui peuvent être transmises à Azure ad.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -82,25 +82,25 @@ microsoftTeams.getContext(function (context) {
         login_hint: context.loginHint,
     };
 
-    let authorizeEndpoint = "https://login.microsoftonline.com/" + context.tid + "/oauth2/authorize?" + toQueryString(queryParams);
+    let authorizeEndpoint = "https://login.microsoftonline.com/" + context.tid + "/oauth2/v2.0/authorize?" + toQueryString(queryParams);
     window.location.assign(authorizeEndpoint);
 });
 ```
 
-Une fois que l’utilisateur a terminé l’autorisation, l’utilisateur est redirigé vers la page de rappel que vous avez `/tab-auth/simple-end`spécifiée pour votre application sur.
+Une fois que l’utilisateur a terminé l’autorisation, l’utilisateur est redirigé vers la page de rappel que vous avez spécifiée pour votre application sur `/tab-auth/simple-end` .
 
 ### <a name="notes"></a>Notes
 
-* Voir [obtenir des informations de contexte utilisateur pour obtenir](~/tabs/how-to/access-teams-context.md) de l’aide sur la création des requêtes d’authentification et des URL. Par exemple, vous pouvez utiliser le nom de connexion de l’utilisateur `login_hint` comme valeur pour la connexion à Azure ad, ce qui signifie que l’utilisateur peut avoir besoin de taper moins. N’oubliez pas que vous ne devez pas utiliser ce contexte directement comme preuve d’identité, car un agresseur pourrait charger votre page dans un navigateur malveillant et lui fournir toutes les informations dont il a besoin.
-* Bien que le contexte d’onglet fournit des informations utiles sur l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez comme paramètres d’URL de `microsoftTeams.getContext()` votre URL de contenu de tabulation ou en appelant la fonction dans le kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant peut appeler votre URL de contenu de tabulation avec ses propres paramètres, et une page Web qui emprunte l’identité de Microsoft teams pourrait charger votre URL de contenu d’onglet dans `getContext()` un IFRAME et renvoyer ses propres données à la fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser.
+* Voir [obtenir des informations de contexte utilisateur pour obtenir](~/tabs/how-to/access-teams-context.md) de l’aide sur la création des requêtes d’authentification et des URL. Par exemple, vous pouvez utiliser le nom de connexion de l’utilisateur comme `login_hint` valeur pour la connexion à Azure ad, ce qui signifie que l’utilisateur peut avoir besoin de taper moins. N’oubliez pas que vous ne devez pas utiliser ce contexte directement comme preuve d’identité, car un agresseur pourrait charger votre page dans un navigateur malveillant et lui fournir toutes les informations dont il a besoin.
+* Bien que le contexte d’onglet fournit des informations utiles sur l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez comme paramètres d’URL de votre URL de contenu de tabulation ou en appelant la `microsoftTeams.getContext()` fonction dans le kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant peut appeler votre URL de contenu de tabulation avec ses propres paramètres, et une page Web qui emprunte l’identité de Microsoft teams pourrait charger votre URL de contenu d’onglet dans un IFRAME et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser.
 * Le `state` paramètre est utilisé pour confirmer que le service qui appelle l’URI de rappel est le service que vous avez appelé. Si le `state` paramètre dans le rappel ne correspond pas au paramètre que vous avez envoyé pendant l’appel, l’appel de retour n’est pas vérifié et doit être arrêté.
-* Il n’est pas nécessaire d’inclure le domaine du fournisseur d’identité `validDomains` dans la liste du fichier manifest. JSON de l’application.
+* Il n’est pas nécessaire d’inclure le domaine du fournisseur d’identité dans la `validDomains` liste dans le fichier manifest.jsde l’application.
 
 ## <a name="the-callback-page"></a>Page de rappel
 
-Dans la dernière section, vous avez appelé le service d’autorisation Azure AD et transmis des informations sur l’utilisateur et l’application de sorte qu’Azure AD puisse présenter son propre mode d’autorisation monolithique à l’utilisateur. Votre application n’a pas de contrôle sur ce qui se passe dans cette expérience. Il sait qu’il est renvoyé lorsque Azure AD appelle la page de rappel que vous avez fournie`/tab-auth/simple-end`().
+Dans la dernière section, vous avez appelé le service d’autorisation Azure AD et transmis des informations sur l’utilisateur et l’application de sorte qu’Azure AD puisse présenter son propre mode d’autorisation monolithique à l’utilisateur. Votre application n’a pas de contrôle sur ce qui se passe dans cette expérience. Il sait qu’il est renvoyé lorsque Azure AD appelle la page de rappel que vous avez fournie ( `/tab-auth/simple-end` ).
 
-Dans cette page, vous devez déterminer la réussite ou l’échec en fonction des informations renvoyées par Azure `microsoftTeams.authentication.notifySuccess()` ad `microsoftTeams.authentication.notifyFailure()`, appeler ou. Si la connexion a été établie, vous aurez accès aux ressources de service.
+Dans cette page, vous devez déterminer la réussite ou l’échec en fonction des informations renvoyées par Azure AD, appeler `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()` . Si la connexion a été établie, vous aurez accès aux ressources de service.
 
 ````javascript
 // Split the key-value pairs passed from Azure AD
@@ -132,7 +132,7 @@ if (hashParams["error"]) {
 }
 ````
 
-Ce code analyse les paires clé-valeur reçues à partir d’Azure AD `window.location.hash` à l' `getHashParameters()` aide de la fonction d’assistance. S’il trouve un `access_token`et que la `state` valeur est la même que celle fournie au début du flux d’authentification, il renvoie le jeton d’accès à l’onglet en appelant `notifySuccess()`; dans le cas contraire, il `notifyFailure()`signale une erreur avec.
+Ce code analyse les paires clé-valeur reçues à partir d’Azure AD à `window.location.hash` l’aide de la `getHashParameters()` fonction d’assistance. S’il trouve un `access_token` et que la `state` valeur est la même que celle fournie au début du flux d’authentification, il renvoie le jeton d’accès à l’onglet en appelant `notifySuccess()` ; sinon, il signale une erreur avec `notifyFailure()` .
 
 ### <a name="notes"></a>Notes
 

@@ -4,11 +4,11 @@ description: Décrit comment obtenir le contexte des robots dans Microsoft teams
 keywords: contexte des robots teams
 ms.date: 05/20/2019
 ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42227998"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801077"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtenir le contexte de votre robot Microsoft teams
 
@@ -17,7 +17,7 @@ ms.locfileid: "42227998"
 Votre robot peut accéder à un contexte supplémentaire concernant l’équipe ou la conversation, comme le profil utilisateur. Ces informations peuvent être utilisées pour enrichir les fonctionnalités de votre robot et fournir une expérience plus personnalisée.
 
 > [!NOTE]
-> Ces API de&ndash;robot spécifiques de Microsoft teams sont les meilleurs accessibles via nos extensions pour le kit de développement logiciel (SDK) du générateur de robots. Pour C#/.NET, téléchargez notre package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Pour le développement node. js, la fonctionnalité BotBuilder pour Microsoft teams a été incorporée dans le [Kit de développement logiciel (SDK) Framework](https://github.com/microsoft/botframework-sdk) à la version 4.6.
+> Ces &ndash; API de robot spécifiques de Microsoft teams sont les meilleurs accessibles via nos extensions pour le kit de développement logiciel (SDK) du générateur de robots. Pour C#/.NET, téléchargez notre package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) . Pour le développement de Node.js, la fonctionnalité BotBuilder pour Microsoft teams a été incorporée dans le [Kit de développement logiciel (SDK) Framework](https://github.com/microsoft/botframework-sdk) à partir de la version 4.6.
 
 ## <a name="fetching-the-team-roster"></a>Extraction de la liste de l’équipe
 
@@ -25,7 +25,7 @@ Votre robot peut demander la liste des membres de l’équipe et leurs profils d
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 
-Vous pouvez directement émettre une requête GET sur [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), en utilisant la valeur `serviceUrl` de comme point de terminaison.
+Vous pouvez directement émettre une requête GET sur [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) , en utilisant la valeur de `serviceUrl` comme point de terminaison.
 
 Le `teamId` peut être trouvé dans l' `channeldata` objet de la charge utile d’activité que votre robot reçoit dans les scénarios suivants :
 * Quand un utilisateur entre ou interagit avec votre robot dans un contexte d’équipe (voir [réception de messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages))
@@ -33,7 +33,7 @@ Le `teamId` peut être trouvé dans l' `channeldata` objet de la charge utile d�
 
 > [!NOTE]
 >* Veillez à utiliser l’ID d’équipe lors de l’appel de l’API.
->* La valeur de `serviceUrl` tend à être stable mais peut varier. Lors de l’arrivée d’un nouveau message, votre robot doit vérifier sa `serviceUrl`valeur stockée.
+>* La valeur de `serviceUrl` tend à être stable mais peut varier. Lors de l’arrivée d’un nouveau message, votre robot doit vérifier sa valeur stockée `serviceUrl` .
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -88,7 +88,7 @@ foreach (var member in members.AsTeamsChannelAccounts())
 await context.PostAsync($"People in this conversation: {sb.ToString()}");
 ```
 
-### <a name="nodejstypescript-example"></a>Exemple node. js/machine à écrire
+### <a name="nodejstypescript-example"></a>Exemple de/TypeScript Node.js
 
 ```typescript
 
@@ -117,7 +117,7 @@ connector.fetchMembers(
 
 Vous pouvez également effectuer la même appel d’API pour toute conversation personnelle afin d’obtenir les informations de profil de l’utilisateur en conversation avec votre robot.
 
-Les méthodes de l’appel de l’API et du kit de développement logiciel sont identiques à la récupération de la liste de l’équipe, comme l’est l’objet de réponse. La seule différence est que vous transmettez la `conversationId` à `teamId`la place de.
+Les méthodes de l’appel de l’API et du kit de développement logiciel sont identiques à la récupération de la liste de l’équipe, comme l’est l’objet de réponse. La seule différence est que vous transmettez la à la `conversationId` place de `teamId` .
 
 ## <a name="fetching-the-list-of-channels-in-a-team"></a>Extraction de la liste des canaux dans une équipe
 
@@ -125,17 +125,17 @@ Votre robot peut interroger la liste des canaux d’une équipe.
 
 > [!NOTE]
 >
->* Le nom du canal général par défaut est renvoyé en `null` tant que pour permettre la localisation.
+>* Le nom du canal général par défaut est renvoyé en tant que `null` pour permettre la localisation.
 >* L’ID de canal pour le canal général correspond toujours à l’ID d’équipe.
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 
-Vous pouvez directement émettre une requête GET sur `/teams/{teamId}/conversations/`, en utilisant la valeur `serviceUrl` de comme point de terminaison.
+Vous pouvez directement émettre une requête GET sur `/teams/{teamId}/conversations/` , en utilisant la valeur de `serviceUrl` comme point de terminaison.
 
 La seule source pour `teamId` est un message provenant du contexte de l’équipe, c’est-à-dire un message provenant d’un utilisateur ou d’un message que votre bot reçoit lorsqu’il est ajouté à une équipe (voir [bot ou User ajouté à une équipe](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)).
 
 > [!NOTE]
-> La valeur de `serviceUrl` tend à être stable mais peut varier. Lors de l’arrivée d’un nouveau message, votre robot doit vérifier sa `serviceUrl`valeur stockée.
+> La valeur de `serviceUrl` tend à être stable mais peut varier. Lors de l’arrivée d’un nouveau message, votre robot doit vérifier sa valeur stockée `serviceUrl` .
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -166,9 +166,9 @@ L’exemple suivant utilise l' `FetchChannelList` appel de la part des [extensio
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
 ```
 
-#### <a name="nodejs-example"></a>Exemple node. js
+#### <a name="nodejs-example"></a>Exemple de Node.js
 
-L’exemple suivant utilise `fetchChannelList` Call à partir des [extensions Microsoft teams pour le kit de développement logiciel (SDK) du générateur de robots pour node. js](https://www.npmjs.com/package/botbuilder-teams).
+L’exemple suivant utilise `fetchChannelList` Call à partir des [extensions Microsoft teams pour le kit de développement logiciel (SDK) du générateur de robots pour Node.js](https://www.npmjs.com/package/botbuilder-teams).
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

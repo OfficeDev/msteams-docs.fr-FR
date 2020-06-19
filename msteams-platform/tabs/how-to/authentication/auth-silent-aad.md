@@ -3,11 +3,11 @@ title: Authentification en mode silencieux
 description: Décrit l’authentification sans assistance
 keywords: authentification unique sans assistance d’authentification de teams
 ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673552"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801074"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
@@ -18,14 +18,14 @@ L’authentification sans assistance dans Azure Active Directory (Azure AD) mini
 
 Si vous souhaitez conserver votre code entièrement côté client, vous pouvez utiliser la [bibliothèque d’authentification Azure Active Directory](/azure/active-directory/develop/active-directory-authentication-libraries) pour que JavaScript tente d’acquérir un jeton d’accès Azure AD en mode silencieux. Cela signifie que l’utilisateur peut ne jamais voir une boîte de dialogue contextuelle s’il s’y est connecté récemment.
 
-Même si la bibliothèque ADAL. js est optimisée pour les applications AngularJS, elle fonctionne également avec des applications JavaScript pures uniques.
+Même si la bibliothèque de ADAL.js est optimisée pour les applications AngularJS, elle fonctionne également avec des applications JavaScript pures uniques.
 
 > [!NOTE]
 > Actuellement, l’authentification sans assistance fonctionne uniquement pour les onglets. Il ne fonctionne pas encore lors de la connexion à partir d’un bot.
 
 ## <a name="how-silent-authentication-works"></a>Fonctionnement de l’authentification sans assistance
 
-La bibliothèque ADAL. js crée un IFRAME masqué pour le flux d’octroi implicite OAuth 2,0, `prompt=none` mais il indique de sorte qu’Azure ad n’affiche jamais la page de connexion. Si l’intervention de l’utilisateur est requise parce que l’utilisateur doit se connecter ou accorder l’accès à l’application, Azure AD renvoie immédiatement une erreur indiquant que ADAL. js fait état de votre application. À ce stade, votre application peut afficher un bouton de connexion si nécessaire.
+La bibliothèque ADAL.js crée un IFRAME masqué pour le flux d’octroi implicite OAuth 2,0, mais il indique `prompt=none` de sorte qu’Azure ad n’affiche jamais la page de connexion. Si l’intervention de l’utilisateur est requise parce que l’utilisateur doit se connecter ou accorder l’accès à l’application, Azure AD renvoie immédiatement une erreur qui ADAL.js ensuite des rapports à votre application. À ce stade, votre application peut afficher un bouton de connexion si nécessaire.
 
 ## <a name="how-to-do-silent-authentication"></a>Procédure d’authentification sans assistance
 
@@ -33,7 +33,7 @@ Le code de cet article provient de l’exemple [d’authentification Microsoft t
 
 ### <a name="include-and-configure-adal"></a>inclure et configurer ADAL
 
-Incluez la bibliothèque ADAL. js dans vos pages d’onglets et configurez ADAL avec votre ID client et l’URL de redirection :
+Incluez la bibliothèque ADAL.js dans vos pages d’onglets et configurez ADAL avec votre ID client et l’URL de redirection :
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -51,7 +51,7 @@ Incluez la bibliothèque ADAL. js dans vos pages d’onglets et configurez ADAL 
 
 ### <a name="get-the-user-context"></a>Obtenir le contexte de l’utilisateur
 
-Dans la page de contenu de l’onglet `microsoftTeams.getContext()` , appelez pour obtenir une indication de connexion pour l’utilisateur actuel. Il sera utilisé comme un login_hint dans l’appel à Azure AD.
+Dans la page de contenu de l’onglet, appelez `microsoftTeams.getContext()` pour obtenir une indication de connexion pour l’utilisateur actuel. Il sera utilisé comme un login_hint dans l’appel à Azure AD.
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -66,7 +66,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Authentifier
 
-Si ADAL a un jeton non expiré mis en cache pour l’utilisateur, utilisez-le. Sinon, essayez d’obtenir un jeton en mode silencieux en `acquireToken(resource, callback)`appelant. ADAL. js appelle votre fonction de rappel avec le jeton demandé, ou une erreur en cas d’échec de l’authentification.
+Si ADAL a un jeton non expiré mis en cache pour l’utilisateur, utilisez-le. Sinon, essayez d’obtenir un jeton en mode silencieux en appelant `acquireToken(resource, callback)` . ADAL.js appelle votre fonction de rappel avec le jeton demandé, ou une erreur en cas d’échec de l’authentification.
 
 Si vous obtenez une erreur dans la fonction de rappel, affichez un bouton de connexion et basculez vers une connexion explicite.
 
@@ -101,9 +101,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Traiter la valeur de retour
 
-Laissez ADAL. js prendre en charge l’analyse du résultat à partir d’Azure AD `AuthenticationContext.handleWindowCallback(hash)` en appelant la page de rappel de connexion.
+Laissez ADAL.js prendre soin d’analyser le résultat d’Azure AD en appelant `AuthenticationContext.handleWindowCallback(hash)` la page de rappel de connexion.
 
-Vérifiez que nous disposons d’un utilisateur et d' `microsoftTeams.authentication.notifySuccess()` un `microsoftTeams.authentication.notifyFailure()` appel valides ou que vous revenez à la page de contenu de votre onglet principal.
+Vérifiez que nous disposons d’un utilisateur et d’un appel valides ou que vous `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` revenez à la page de contenu de votre onglet principal.
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
