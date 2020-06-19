@@ -1,0 +1,183 @@
+---
+title: Consentement propre à la ressource dans teams
+description: Décrit le consentement propre à la ressource dans teams et la façon de l’utiliser.
+localization_priority: Normal
+author: laujan
+ms.author: lajanuar
+ms.topic: Overview
+keywords: Graphique RSC AAD d’authentification unique de teams
+ms.openlocfilehash: eb6fe0e0da03b355a4fb16d8ca5b046080af0db8
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44801154"
+---
+# <a name="resource-specific-consent-rsc--developer-preview"></a><span data-ttu-id="9adba-104">Consentement propre à la ressource (RSC) — Aperçu pour les développeurs</span><span class="sxs-lookup"><span data-stu-id="9adba-104">Resource-specific consent (RSC) — Developer Preview</span></span>
+
+>[!NOTE]
+><span data-ttu-id="9adba-105">Les autorisations de consentement propres aux ressources sont disponibles uniquement dans les clients de bureau et Android après l’activation de l’aperçu développeur.</span><span class="sxs-lookup"><span data-stu-id="9adba-105">The resource-specific consent permissions are only available in desktop and Android clients after Developer Preview has been enabled.</span></span> <span data-ttu-id="9adba-106">Pour plus d’informations, voir [Comment activer l’aperçu](../../resources/dev-preview/developer-preview-intro.md) pour les développeurs.</span><span class="sxs-lookup"><span data-stu-id="9adba-106">See [How do I enable Developer Preview](../../resources/dev-preview/developer-preview-intro.md) for more information.</span></span>
+
+<span data-ttu-id="9adba-107">Le consentement propre à la ressource (RSC) est une intégration de Microsoft teams et Graph API qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des équipes spécifiques au sein d’une organisation.</span><span class="sxs-lookup"><span data-stu-id="9adba-107">Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization.</span></span> <span data-ttu-id="9adba-108">Le modèle d’autorisations RSC (Resource Specification) permet aux *propriétaires d’équipe* d’accorder le consentement d’une application pour accéder à des données d’une équipe et/ou les modifier.</span><span class="sxs-lookup"><span data-stu-id="9adba-108">The resource-specific consent (RSC) permissions model enables *team owners* to grant consent for an application to access and/or modify a team's data.</span></span> <span data-ttu-id="9adba-109">Les autorisations de RSC granulaire spécifiques aux équipes définissent ce qu’une application peut faire dans une équipe spécifique :</span><span class="sxs-lookup"><span data-stu-id="9adba-109">The granular, Teams-specific, RSC permissions define what an application can do within a specific team:</span></span>
+
+## <a name="resource-specific-permissions"></a><span data-ttu-id="9adba-110">Autorisations propres aux ressources</span><span class="sxs-lookup"><span data-stu-id="9adba-110">Resource-specific permissions</span></span>
+
+|<span data-ttu-id="9adba-111">Autorisation de l’application</span><span class="sxs-lookup"><span data-stu-id="9adba-111">Application permission</span></span>| <span data-ttu-id="9adba-112">Action</span><span class="sxs-lookup"><span data-stu-id="9adba-112">Action</span></span> |
+| ----- | ----- |
+|<span data-ttu-id="9adba-113">TeamSettings. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-113">TeamSettings.Read.Group</span></span> | <span data-ttu-id="9adba-114">Obtenir les paramètres de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-114">Get the settings for this team.</span></span>|
+|<span data-ttu-id="9adba-115">TeamSettings. Edit. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-115">TeamSettings.Edit.Group</span></span>|<span data-ttu-id="9adba-116">Mettre à jour les paramètres de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-116">Update the settings for this team.</span></span>|
+|<span data-ttu-id="9adba-117">ChannelSettings. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-117">ChannelSettings.Read.Group</span></span>|<span data-ttu-id="9adba-118">Obtenir les noms de canal, les descriptions de canal et les paramètres de canal de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-118">Get the channel names, channel descriptions, and channel settings for this team.</span></span>|
+|<span data-ttu-id="9adba-119">ChannelSettings. Edit. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-119">ChannelSettings.Edit.Group</span></span>|<span data-ttu-id="9adba-120">Mettre à jour les noms de canaux, les descriptions de canal et les paramètres de canal de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-120">Update the channel names, channel descriptions, and channel settings for this team.</span></span>|
+|<span data-ttu-id="9adba-121">Channel. Create. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-121">Channel.Create.Group</span></span>|<span data-ttu-id="9adba-122">Créer des canaux dans cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-122">Create channels in this team.</span></span>|
+|<span data-ttu-id="9adba-123">Channel. Delete. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-123">Channel.Delete.Group</span></span>|<span data-ttu-id="9adba-124">Supprimer des canaux dans cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-124">Delete channels in this team.</span></span>|
+|<span data-ttu-id="9adba-125">ChannelMessage. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-125">ChannelMessage.Read.Group</span></span> |<span data-ttu-id="9adba-126">Obtenir les messages du canal de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-126">Get this team's channel messages.</span></span>|
+|<span data-ttu-id="9adba-127">TeamsApp. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-127">TeamsApp.Read.Group</span></span>|<span data-ttu-id="9adba-128">Obtenir la liste des applications installées de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-128">Get a list of this team's installed apps.</span></span>|
+|<span data-ttu-id="9adba-129">Teamstab.. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-129">TeamsTab.Read.Group</span></span>|<span data-ttu-id="9adba-130">Obtenir la liste des onglets de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-130">Get a list of this team's tabs.</span></span>|
+|<span data-ttu-id="9adba-131">Teamstab.. Create. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-131">TeamsTab.Create.Group</span></span>|<span data-ttu-id="9adba-132">Créer des onglets dans cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-132">Create tabs in this team.</span></span>|
+|<span data-ttu-id="9adba-133">Teamstab.. Edit. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-133">TeamsTab.Edit.Group</span></span>|<span data-ttu-id="9adba-134">Mettre à jour les onglets de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-134">Update this team's tabs.</span></span>|
+|<span data-ttu-id="9adba-135">Teamstab.. Delete. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-135">TeamsTab.Delete.Group</span></span>|<span data-ttu-id="9adba-136">Supprimez les onglets de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-136">Delete this team's tabs.</span></span>|
+|<span data-ttu-id="9adba-137">Member. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-137">Member.Read.Group</span></span>|<span data-ttu-id="9adba-138">Obtenir les membres de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-138">Get this team's members.</span></span>|
+|<span data-ttu-id="9adba-139">Owner. Read. Group</span><span class="sxs-lookup"><span data-stu-id="9adba-139">Owner.Read.Group</span></span>|<span data-ttu-id="9adba-140">Obtenir les propriétaires de cette équipe.</span><span class="sxs-lookup"><span data-stu-id="9adba-140">Get this team's owners.</span></span>|
+
+>[!NOTE]
+><span data-ttu-id="9adba-141">Les autorisations propres aux ressources ne sont disponibles que pour les applications teams installées sur le client teams et qui ne font actuellement pas partie du portail Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="9adba-141">Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.</span></span>
+
+## <a name="enabling-resource-specific-consent-in-your-application"></a><span data-ttu-id="9adba-142">Activation du consentement propre à une ressource dans votre application</span><span class="sxs-lookup"><span data-stu-id="9adba-142">Enabling resource-specific consent in your application</span></span>
+
+<span data-ttu-id="9adba-143">Les étapes à suivre pour activer RSC dans votre application sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="9adba-143">The steps for enabling RSC in your application are as follows:</span></span>
+
+1. <span data-ttu-id="9adba-144">[Configurez les paramètres de consentement du propriétaire du groupe dans le portail Azure Active Directory](#configure-group-owner-consent-settings-in-the-azure-ad-portal).</span><span class="sxs-lookup"><span data-stu-id="9adba-144">[Configure group owner consent settings in the Azure Active Directory portal](#configure-group-owner-consent-settings-in-the-azure-ad-portal).</span></span>
+1. <span data-ttu-id="9adba-145">[Enregistrez votre application avec Microsoft Identity Platform via le portail Azure ad](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).</span><span class="sxs-lookup"><span data-stu-id="9adba-145">[Register your app with Microsoft identity platform via the Azure AD portal](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).</span></span>
+1. [<span data-ttu-id="9adba-146">Vérifier les autorisations de votre application dans le portail Azure AD</span><span class="sxs-lookup"><span data-stu-id="9adba-146">Review your application permissions in the Azure AD portal</span></span>](#review-your-application-permissions-in-the-azure-ad-portal)
+1. <span data-ttu-id="9adba-147">[Obtenir un jeton d’accès à partir de la plateforme d’identité Microsoft](#obtain-an-access-token-from-the-microsoft-identity-platform).</span><span class="sxs-lookup"><span data-stu-id="9adba-147">[Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).</span></span>
+1. <span data-ttu-id="9adba-148">[Mettez à jour le manifeste d’application de teams](#update-your-teams-app-manifest).</span><span class="sxs-lookup"><span data-stu-id="9adba-148">[Update your Teams app manifest](#update-your-teams-app-manifest).</span></span>
+1. <span data-ttu-id="9adba-149">[Installez votre application directement dans teams](#install-your-app-directly-in-teams).</span><span class="sxs-lookup"><span data-stu-id="9adba-149">[Install your app directly in Teams](#install-your-app-directly-in-teams).</span></span>
+1. <span data-ttu-id="9adba-150">[Vérifiez que votre application dispose des autorisations RSC ajoutées](#check-your-app-for-added-rsc-permissions).</span><span class="sxs-lookup"><span data-stu-id="9adba-150">[Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).</span></span>
+
+## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a><span data-ttu-id="9adba-151">Configurer les paramètres de consentement du propriétaire du groupe dans le portail Azure AD</span><span class="sxs-lookup"><span data-stu-id="9adba-151">Configure group owner consent settings in the Azure AD portal</span></span>
+
+<span data-ttu-id="9adba-152">Vous pouvez activer ou désactiver le [consentement du propriétaire de groupe](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directement dans le portail Azure :</span><span class="sxs-lookup"><span data-stu-id="9adba-152">You can enable or disable  [group owner consent](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directly within the Azure portal:</span></span>
+
+> [!div class="checklist"]
+>
+>- <span data-ttu-id="9adba-153">Connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général [/administrateur de société](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).</span><span class="sxs-lookup"><span data-stu-id="9adba-153">Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator/Company Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).</span></span>  
+ > - <span data-ttu-id="9adba-154">Sélectionnez **Azure Active Directory**  => **Enterprise applications**  => **paramètres utilisateur**des applications d’entreprise Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="9adba-154">Select **Azure Active Directory** =>**Enterprise applications** =>**User settings**.</span></span>
+> - <span data-ttu-id="9adba-155">Activer, désactiver ou limiter le consentement de l’utilisateur avec le contrôle étiqueté **les utilisateurs peuvent consentir aux applications d’accéder aux données de l’entreprise pour les groupes qu’ils possèdent** (cette fonctionnalité est activée par défaut).</span><span class="sxs-lookup"><span data-stu-id="9adba-155">Enable, disable, or limit user consent with the control labeled **Users can consent to apps accessing company data for the groups they own** (This capability is enabled by default).</span></span>
+
+![configuration de RSC Azure](../../assets/images/azure-rsc-configuration.svg)
+
+| <span data-ttu-id="9adba-157">Valeur</span><span class="sxs-lookup"><span data-stu-id="9adba-157">Value</span></span> | <span data-ttu-id="9adba-158">Description</span><span class="sxs-lookup"><span data-stu-id="9adba-158">Description</span></span>|
+|--- | --- |
+|<span data-ttu-id="9adba-159">Oui</span><span class="sxs-lookup"><span data-stu-id="9adba-159">Yes</span></span> | <span data-ttu-id="9adba-160">Activer le consentement propre au groupe pour tous les propriétaires de groupe.</span><span class="sxs-lookup"><span data-stu-id="9adba-160">Enable group-specific consent for all group owners.</span></span>|
+|<span data-ttu-id="9adba-161">Non</span><span class="sxs-lookup"><span data-stu-id="9adba-161">No</span></span> |<span data-ttu-id="9adba-162">Désactivez le consentement propre au groupe pour tous les utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="9adba-162">Disable group-specific consent for all users.</span></span>| 
+|<span data-ttu-id="9adba-163">Peu</span><span class="sxs-lookup"><span data-stu-id="9adba-163">Limited</span></span> | <span data-ttu-id="9adba-164">Activer le consentement propre au groupe pour les membres d’un groupe sélectionné.</span><span class="sxs-lookup"><span data-stu-id="9adba-164">Enable group-specific consent for members of a selected group.</span></span>|
+
+<span data-ttu-id="9adba-165">Pour activer ou désactiver le consentement du propriétaire d’un groupe dans le portail Azure à l’aide de PowerShell, suivez les étapes décrites dans [configurer le consentement du propriétaire du groupe à l’aide de PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).</span><span class="sxs-lookup"><span data-stu-id="9adba-165">To enable or disable group owner consent within the Azure portal using PowerShell, follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).</span></span>
+
+## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a><span data-ttu-id="9adba-166">Enregistrer votre application avec Microsoft Identity Platform via le portail Azure AD</span><span class="sxs-lookup"><span data-stu-id="9adba-166">Register your app with Microsoft identity platform via the Azure AD portal</span></span>
+
+<span data-ttu-id="9adba-167">Le portail Azure Active Directory fournit une plateforme centrale pour vous inscrire et configurer vos applications.</span><span class="sxs-lookup"><span data-stu-id="9adba-167">The Azure Active Directory portal provides a central platform for you to register and configure your apps.</span></span> <span data-ttu-id="9adba-168">Votre application doit être enregistrée dans le portail Azure AD pour être intégrée à la plateforme d’identité Microsoft et aux API Graph de l’appel.</span><span class="sxs-lookup"><span data-stu-id="9adba-168">Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Graph APIs.</span></span> <span data-ttu-id="9adba-169">*Consultez la rubrique* [enregistrer une application avec la plateforme d’identité Microsoft](/graph/auth-register-app-v2).</span><span class="sxs-lookup"><span data-stu-id="9adba-169">*See* [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).</span></span>
+
+>[!WARNING]
+><span data-ttu-id="9adba-170">N’enregistrez pas plusieurs applications teams sur le même ID d’application Azure AD. L’ID de l’application doit être unique pour chaque application.</span><span class="sxs-lookup"><span data-stu-id="9adba-170">Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app.</span></span> <span data-ttu-id="9adba-171">Les tentatives d’installation de plusieurs applications sur le même ID d’application échouent.</span><span class="sxs-lookup"><span data-stu-id="9adba-171">Attempts to install multiple apps to the same app id will fail.</span></span>
+
+## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a><span data-ttu-id="9adba-172">Vérifier les autorisations de votre application dans le portail Azure AD</span><span class="sxs-lookup"><span data-stu-id="9adba-172">Review your application permissions in the Azure AD portal</span></span>
+
+<span data-ttu-id="9adba-173">Accédez à la **Home**  =>  page**inscriptions des applications** personnelles et sélectionnez votre application RSC.</span><span class="sxs-lookup"><span data-stu-id="9adba-173">Navigate to the **Home** => **App registrations** page and select your RSC app.</span></span> <span data-ttu-id="9adba-174">Sélectionnez **autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application.</span><span class="sxs-lookup"><span data-stu-id="9adba-174">Choose **API permissions** from the left nav bar and examine the list of configured permissions for your app.</span></span> <span data-ttu-id="9adba-175">Si votre application effectue uniquement des appels de graphique RSC, supprimez toutes les autorisations sur cette page.</span><span class="sxs-lookup"><span data-stu-id="9adba-175">If your app will only make RSC Graph calls, delete all the permission on that page.</span></span> <span data-ttu-id="9adba-176">Si votre application effectue également des appels non RSC, conservez ces autorisations autant que nécessaire.</span><span class="sxs-lookup"><span data-stu-id="9adba-176">If your app will also make non-RSC calls, keep those permissions as needed.</span></span>
+
+>[!IMPORTANT]
+><span data-ttu-id="9adba-177">Le portail Azure AD ne peut pas être utilisé pour demander des autorisations RSC.</span><span class="sxs-lookup"><span data-stu-id="9adba-177">The Azure AD portal cannot be used to request RSC permissions.</span></span> <span data-ttu-id="9adba-178">Les autorisations RSC sont actuellement exclusives aux applications teams installées dans le client teams et déclarées dans le fichier de manifeste de l’application (JSON).</span><span class="sxs-lookup"><span data-stu-id="9adba-178">RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the app manifest (JSON) file.</span></span>
+
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a><span data-ttu-id="9adba-179">Obtenir un jeton d’accès à partir de la plateforme d’identité Microsoft</span><span class="sxs-lookup"><span data-stu-id="9adba-179">Obtain an access token from the Microsoft identity platform</span></span>
+
+<span data-ttu-id="9adba-180">Pour effectuer des appels d’API Graph, vous devez obtenir un jeton d’accès pour votre application à partir de la plateforme d’identité.</span><span class="sxs-lookup"><span data-stu-id="9adba-180">To make Graph API calls, you must obtain an access token for your app from the identity platform.</span></span> <span data-ttu-id="9adba-181">Pour que votre application puisse obtenir un jeton à partir de la plateforme d’identité Microsoft, elle doit être enregistrée dans le portail Azure AD.</span><span class="sxs-lookup"><span data-stu-id="9adba-181">Before your app can get a token from the Microsoft identity platform, it must be registered in the Azure AD portal.</span></span> <span data-ttu-id="9adba-182">Le jeton d’accès contient des informations sur votre application et les autorisations dont elle dispose pour les ressources et les API disponibles via Microsoft Graph.</span><span class="sxs-lookup"><span data-stu-id="9adba-182">The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.</span></span>
+
+<span data-ttu-id="9adba-183">Vous devez avoir les valeurs suivantes du processus d’inscription Azure AD pour récupérer un jeton d’accès à partir de la plateforme d’identité :</span><span class="sxs-lookup"><span data-stu-id="9adba-183">You'll need to have the following values from the Azure AD registration process to retrieve an access token from the identity platform:</span></span>
+
+- <span data-ttu-id="9adba-184">ID de l' **application** affecté par le portail d’inscription des applications.</span><span class="sxs-lookup"><span data-stu-id="9adba-184">The **Application ID** assigned by the app registration portal.</span></span> <span data-ttu-id="9adba-185">Si votre application prend en charge l’authentification unique (SSO), vous devez utiliser le même ID d’application pour votre application et votre authentification unique.</span><span class="sxs-lookup"><span data-stu-id="9adba-185">If your app supports single sign-on (SSO) you should use the same Application ID for your app and SSO.</span></span>
+- <span data-ttu-id="9adba-186">La clé secrète ou le **mot de passe du client** ou une paire de clés publique/privée (**certificat**).</span><span class="sxs-lookup"><span data-stu-id="9adba-186">The  **Client secret/password** or a public/private key pair (**Certificate**).</span></span> <span data-ttu-id="9adba-187">N’est pas nécessaire pour les applications natives.</span><span class="sxs-lookup"><span data-stu-id="9adba-187">This is not required for native apps.</span></span>
+- <span data-ttu-id="9adba-188">Un **URI de redirection** (ou URL de réponse) pour que votre application reçoive des réponses d’Azure ad.</span><span class="sxs-lookup"><span data-stu-id="9adba-188">A **Redirect URI** (or reply URL) for your app to receive responses from Azure AD.</span></span>
+
+ <span data-ttu-id="9adba-189">*Voir* [obtenir l’accès de la part d’un utilisateur](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) et [obtenir l’accès sans utilisateur](/graph/auth-v2-service)</span><span class="sxs-lookup"><span data-stu-id="9adba-189">*See* [Get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) and [Get access without a user](/graph/auth-v2-service)</span></span>
+
+## <a name="update-your-teams-app-manifest"></a><span data-ttu-id="9adba-190">Mettre à jour le manifeste d’application de teams</span><span class="sxs-lookup"><span data-stu-id="9adba-190">Update your Teams app manifest</span></span>
+
+<span data-ttu-id="9adba-191">Les autorisations RSC sont déclarées dans votre fichier de manifeste d’application (JSON).</span><span class="sxs-lookup"><span data-stu-id="9adba-191">The RSC permissions are declared in you app manifest (JSON) file.</span></span>  <span data-ttu-id="9adba-192">Ajoutez une clé [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) à votre manifeste d’application avec les valeurs suivantes :</span><span class="sxs-lookup"><span data-stu-id="9adba-192">Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:</span></span>
+
+> [!div class="checklist"]
+>
+> - <span data-ttu-id="9adba-193">**ID** : votre ID d’application Azure ad. *Voir* [enregistrer votre application dans le portail Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).</span><span class="sxs-lookup"><span data-stu-id="9adba-193">**id**  — your Azure AD app id. *See* [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).</span></span>
+> - <span data-ttu-id="9adba-194">**ressource** : n’importe quelle chaîne.</span><span class="sxs-lookup"><span data-stu-id="9adba-194">**resource**  — any string.</span></span> <span data-ttu-id="9adba-195">Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne fera.</span><span class="sxs-lookup"><span data-stu-id="9adba-195">This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.</span></span>
+> - <span data-ttu-id="9adba-196">**autorisations d’application** — autorisations RSC pour votre application.</span><span class="sxs-lookup"><span data-stu-id="9adba-196">**application permissions** — RSC permissions for  your app.</span></span> <span data-ttu-id="9adba-197">*Voir* [autorisations propres aux ressources](resource-specific-consent.md#resource-specific-permissions).</span><span class="sxs-lookup"><span data-stu-id="9adba-197">*See* [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).</span></span>
+
+>
+>[!IMPORTANT]
+> <span data-ttu-id="9adba-198">Les autorisations non RSC sont stockées dans le portail Azure.</span><span class="sxs-lookup"><span data-stu-id="9adba-198">Non-RSC permissions are stored in the Azure portal.</span></span> <span data-ttu-id="9adba-199">Ne les ajoutez pas au manifeste de l’application.</span><span class="sxs-lookup"><span data-stu-id="9adba-199">Do not add them to the app manifest.</span></span>
+>
+
+```json
+"webApplicationInfo": {
+
+        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
+
+"resource": "https://RscBasedStoreApp",
+
+        "applicationPermissions": [
+
+    "TeamSettings.Read.Group",
+
+   "ChannelMessage.Read.Group",
+
+  "TeamSettings.Edit.Group",
+
+  "ChannelSettings.Edit.Group",
+
+  "Channel.Create.Group",
+
+  "Channel.Delete.Group",
+
+  "TeamsApp.Read.Group",
+
+  "TeamsTab.Read.Group",
+
+  "TeamsTab.Create.Group",
+
+  "TeamsTab.Edit.Group",
+
+  "TeamsTab.Delete.Group",
+
+  "Member.Read.Group",
+
+  "Owner.Read.Group"
+
+        ]
+
+    }
+```
+
+## <a name="install-your-app-directly-in-teams"></a><span data-ttu-id="9adba-200">Installer votre application directement dans teams</span><span class="sxs-lookup"><span data-stu-id="9adba-200">Install your app directly in Teams</span></span>
+
+<span data-ttu-id="9adba-201">Une fois que vous avez créé votre application, vous pouvez [charger votre package d’application](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directement dans une équipe spécifique.</span><span class="sxs-lookup"><span data-stu-id="9adba-201">Once you've created your app you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team.</span></span>  <span data-ttu-id="9adba-202">Pour ce faire, le paramètre de stratégie **charger des applications personnalisées** doit être activé dans le cadre des stratégies de configuration d’application personnalisées.</span><span class="sxs-lookup"><span data-stu-id="9adba-202">To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies.</span></span> <span data-ttu-id="9adba-203">*Voir* [paramètres de stratégie d’application personnalisée](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).</span><span class="sxs-lookup"><span data-stu-id="9adba-203">*See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).</span></span>
+
+## <a name="check-your-app-for-added-rsc-permissions"></a><span data-ttu-id="9adba-204">Vérifiez si votre application dispose d’autorisations RSC ajoutées</span><span class="sxs-lookup"><span data-stu-id="9adba-204">Check your app for added RSC permissions</span></span>
+
+>[!IMPORTANT]
+><span data-ttu-id="9adba-205">Les autorisations RSC ne sont pas attribuées à un utilisateur.</span><span class="sxs-lookup"><span data-stu-id="9adba-205">The RSC permissions are not attributed to a user.</span></span> <span data-ttu-id="9adba-206">Les appels sont effectués avec des autorisations d’application, et non avec des autorisations déléguées par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="9adba-206">Calls are made with app permissions, not user delegated permissions.</span></span> <span data-ttu-id="9adba-207">Par conséquent, l’application peut être autorisée à effectuer des actions que l’utilisateur ne peut pas, comme la création d’un canal ou la suppression d’un onglet. Vous devez examiner l’intention du propriétaire de l’équipe pour votre cas d’utilisation avant d’effectuer des appels d’API RSC.</span><span class="sxs-lookup"><span data-stu-id="9adba-207">Thus, the app may be allowed to perform actions that the user cannot, such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls.</span></span> <span data-ttu-id="9adba-208">*Consultez la rubrique* [vue d’ensemble de l’API Microsoft teams](/graph/teams-concept-overview).</span><span class="sxs-lookup"><span data-stu-id="9adba-208">*See* [Microsoft Teams API overview](/graph/teams-concept-overview).</span></span>
+
+<span data-ttu-id="9adba-209">Une fois que l’application a été installée dans une équipe, vous pouvez utiliser l’afficheur [Graph](https://developer.microsoft.com/graph/graph-explorer) pour afficher les autorisations qui ont été accordées à l’application dans une équipe :</span><span class="sxs-lookup"><span data-stu-id="9adba-209">Once the app has been installed to a team, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in a team:</span></span>
+
+> [!div class="checklist"]
+>
+>- <span data-ttu-id="9adba-210">Obtenir le **GroupID** de l’équipe à partir du client Teams.</span><span class="sxs-lookup"><span data-stu-id="9adba-210">Get the team's **groupId** from the Teams client.</span></span>
+> - <span data-ttu-id="9adba-211">Dans le client Teams, sélectionnez **teams** dans la barre de navigation la plus à gauche.</span><span class="sxs-lookup"><span data-stu-id="9adba-211">In the Teams client, select **Teams** from the far left nav bar.</span></span>
+> - <span data-ttu-id="9adba-212">Dans le menu déroulant, sélectionnez l’équipe où l’application est installée.</span><span class="sxs-lookup"><span data-stu-id="9adba-212">Select the team where the app is installed from the drop-down menu.</span></span>
+> - <span data-ttu-id="9adba-213">Sélectionnez l’icône **autres options** (&#8943;).</span><span class="sxs-lookup"><span data-stu-id="9adba-213">Select the **More options** icon (&#8943;).</span></span>
+> - <span data-ttu-id="9adba-214">Sélectionnez **obtenir un lien vers une équipe**.</span><span class="sxs-lookup"><span data-stu-id="9adba-214">Select **Get link to team**.</span></span>
+> - <span data-ttu-id="9adba-215">Copiez et enregistrez la valeur **GroupID** à partir de la chaîne.</span><span class="sxs-lookup"><span data-stu-id="9adba-215">Copy and save the **groupId** value from the string.</span></span>
+> - <span data-ttu-id="9adba-216">Connectez-vous à l’afficheur **Graph**.</span><span class="sxs-lookup"><span data-stu-id="9adba-216">Log into **Graph Explorer**.</span></span>
+> - <span data-ttu-id="9adba-217">Effectuer un appel **Get** vers le point de terminaison suivant : `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` .</span><span class="sxs-lookup"><span data-stu-id="9adba-217">Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`.</span></span> <span data-ttu-id="9adba-218">Le champ clientAppId dans la réponse est mappé sur l’appId spécifié dans le manifeste de l’application Teams.</span><span class="sxs-lookup"><span data-stu-id="9adba-218">The clientAppId field in the response will map to the appId specified in the Teams app manifest.</span></span>
+
+ ![Réponse de l’Explorateur Graph pour obtenir un appel.](../../assets/images/graph-permissions.png)
+
+ > [!div class="nextstepaction"]
+> [<span data-ttu-id="9adba-220">Tester les autorisations de consentement propres aux ressources dans teams</span><span class="sxs-lookup"><span data-stu-id="9adba-220">Test resource-specific consent permissions in Teams</span></span>](test-resource-specific-consent.md)
