@@ -2,12 +2,12 @@
 title: Publication post
 description: Ce qu’il faut faire après avoir publié votre application
 keywords: teams post publier le certificat de mise à jour
-ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42582859"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867092"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Gérer et prendre en charge votre application publiée 
 
@@ -30,11 +30,19 @@ Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672
 * Incrémentez votre numéro de version dans le manifeste si vous effectuez des modifications de manifeste dans votre envoi.
 * Les soumissions mises à jour doivent être soumises à un nouveau processus de révision et de validation.
 
+## <a name="app-updates-and-the-user-consent-flow"></a>Mises à jour de l’application et flux de consentement de l’utilisateur
 
-### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>Quand la mise à jour de votre application déclenche-t-elle le flux de consentement de l’utilisateur ?
+Lorsqu’un utilisateur installe votre application, il est autorisé à accorder à l’application l’autorisation d’accéder aux services et informations dont elle a besoin pour faire son travail. Dans la plupart des cas, une fois que vous avez terminé une mise à jour de l’application, la nouvelle version s’affiche automatiquement pour les utilisateurs finaux. Toutefois, certaines mises à jour du manifeste de l' [application teams](../../../../resources/schema/manifest-schema.md) nécessitent l’acceptation de l’utilisateur et peuvent déclencher à nouveau ce comportement de consentement :
 
-Lorsqu’un utilisateur installe votre application, il est autorisé à accorder à l’application l’autorisation d’accéder aux services et informations dont elle a besoin pour faire son travail. Lorsque vous mettez à jour votre application, vous pouvez réactiver ce comportement de consentement, en particulier si vous avez effectué une ou plusieurs des modifications suivantes :
-
-* Ajout d’une nouvelle fonctionnalité à une application, telle que l’ajout d’un bot à une application de type onglet uniquement.
-* Modification du tableau d’autorisations dans le manifeste.
-* Incrémentation du numéro de version de votre application dans votre manifeste.
+ >[!div class="checklist"]
+>
+> * Un bot a été ajouté ou supprimé.
+> * La valeur unique d’un bot existant `botId` a changé.
+> * La valeur booléenne d’un bot existant `isNotificationOnly` a changé.
+> * La valeur booléenne d’un bot existant `supportsFiles` a changé.
+> * Une extension de messagerie ( `composeExtensions` ) a été ajoutée ou supprimée.
+> * Un nouveau connecteur a été ajouté.
+> * Un nouvel onglet statique/personnel a été ajouté.
+> * Un nouvel onglet de groupe/canal configurable a été ajouté.
+> * Les `webApplicationInfo` valeurs ont changé.
+>

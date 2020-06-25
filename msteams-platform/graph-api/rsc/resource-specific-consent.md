@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Graphique RSC AAD d’authentification unique de teams
-ms.openlocfilehash: eb6fe0e0da03b355a4fb16d8ca5b046080af0db8
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 7d0927fc360d8c005326cdff6453796fb45bf113
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44801154"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867138"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>Consentement propre à la ressource (RSC) — Aperçu pour les développeurs
 
@@ -117,42 +117,24 @@ Les autorisations RSC sont déclarées dans votre fichier de manifeste d’appli
 
 ```json
 "webApplicationInfo": {
-
-        "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX", 
-
-"resource": "https://RscBasedStoreApp",
-
-        "applicationPermissions": [
-
-    "TeamSettings.Read.Group",
-
-   "ChannelMessage.Read.Group",
-
-  "TeamSettings.Edit.Group",
-
-  "ChannelSettings.Edit.Group",
-
-  "Channel.Create.Group",
-
-  "Channel.Delete.Group",
-
-  "TeamsApp.Read.Group",
-
-  "TeamsTab.Read.Group",
-
-  "TeamsTab.Create.Group",
-
-  "TeamsTab.Edit.Group",
-
-  "TeamsTab.Delete.Group",
-
-  "Member.Read.Group",
-
-  "Owner.Read.Group"
-
-        ]
-
-    }
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelMessage.Read.Group",
+      "TeamSettings.Edit.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group"
+    ]
+  }
 ```
 
 ## <a name="install-your-app-directly-in-teams"></a>Installer votre application directement dans teams

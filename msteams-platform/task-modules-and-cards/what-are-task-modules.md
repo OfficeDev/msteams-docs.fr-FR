@@ -4,12 +4,12 @@ author: clearab
 description: Ajoutez des expériences contextuelles modales pour collecter ou afficher des informations pour vos utilisateurs à partir de vos applications Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801087"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867117"
 ---
 # <a name="what-are-task-modules"></a>Qu-est-ce qu’un module de tâche ?
 
@@ -54,17 +54,17 @@ Les modules de tâches peuvent être appelés à partir de tabulations, robots o
 
 ## <a name="the-taskinfo-object"></a>L’objet TaskInfo
 
-L' `TaskInfo` objet contient les métadonnées d’un module de tâche. La définition de l’objet est ci-dessous. Vous **devez** définir soit `url` (pour un IFRAME en Embedded), soit `card` (pour une carte adaptative).
+L' `TaskInfo` objet contient les métadonnées d’un module de tâche. La définition de l’objet est ci-dessous. Vous **devez** définir `url` (pour un IFRAME incorporé) ou `card` (pour une carte adaptative).
 
 | Attribut | Type | Description |
 | --- | --- | --- |
 | `title` | string | Apparaît sous le nom de l’application et à droite de l’icône de l’application |
 | `height` | valeur numérique ou chaîne | Il peut s’agir d’un nombre représentant la hauteur du module de tâche en pixels, ou `small` , `medium` ou `large` . [Voir ci-dessous la manière dont la hauteur et la largeur sont gérées](#task-module-sizing). |
 | `width` | valeur numérique ou chaîne | Il peut s’agir d’un nombre représentant la largeur du module de tâche en pixels, ou `small` , `medium` ou `large` . [Voir ci-dessous la manière dont la hauteur et la largeur sont gérées](#task-module-sizing). |
-| `url` | chaîne | URL de la page chargée en tant que `<iframe>` module dans le module de tâches. Le domaine de l’URL doit se trouver dans le [tableau validDomains](~/resources/schema/manifest-schema.md#validdomains) de l’application dans le manifeste de votre application. |
+| `url` | string | URL de la page chargée en tant que `<iframe>` module dans le module de tâches. Le domaine de l’URL doit se trouver dans le [tableau validDomains](~/resources/schema/manifest-schema.md#validdomains) de l’application dans le manifeste de votre application. |
 | `card` | Carte adaptative ou pièce jointe de carte de robot de carte adaptative | JSON de la carte adaptative à apparaître dans le module de tâches. Si vous appelez à partir d’un bot, vous devrez utiliser le JSON de la carte adaptative dans un objet de l’infrastructure bot `attachment` . À partir d’un onglet, vous n’utiliserez qu’une carte adaptative. [Voici un exemple.](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | chaîne | Si un client ne prend pas en charge la fonctionnalité de module de tâche, cette URL est ouverte dans un onglet de navigateur. |
-| `completionBotId` | chaîne | Spécifie un ID d’application bot pour envoyer le résultat de l’interaction de l’utilisateur avec le module de tâche. S’il est spécifié, le bot reçoit un `task/submit invoke` événement avec un objet JSON dans la charge utile de l’événement. |
+| `fallbackUrl` | string | Si un client ne prend pas en charge la fonctionnalité de module de tâche, cette URL est ouverte dans un onglet de navigateur. |
+| `completionBotId` | string | Spécifie un ID d’application bot pour envoyer le résultat de l’interaction de l’utilisateur avec le module de tâche. S’il est spécifié, le bot reçoit un `task/submit invoke` événement avec un objet JSON dans la charge utile de l’événement. |
 
 > [!NOTE]
 > La fonctionnalité de module de tâche nécessite que les domaines des URL que vous souhaitez charger soient inclus dans le `validDomains` tableau dans le manifeste de votre application.

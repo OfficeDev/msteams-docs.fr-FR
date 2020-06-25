@@ -2,12 +2,12 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 222128596dab2c7795cb15b63cc0520d3be970c4
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
+ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44801391"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44873398"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -75,6 +75,23 @@ Elle permet de créer des fonctionnalités de communication ciblées personnalis
 
 ![Forum aux questions et GIF](../assets/images/CompanyCommunicatorCompose.png)
 
+## <a name="contact-group-lookup-9734"></a>&#9734; de recherche de groupe de contacts
+
+L’application de recherche de groupe de contacts offre une approche pratique et utile de la création, de l’accès et de la gestion des groupes de contacts de votre organisation (anciennement appelé listes de distribution ou groupes de communication). Les utilisateurs peuvent rapidement afficher et converser avec les membres d’un groupe, afficher le statut des membres et créer une conversation de groupe avec des membres sélectionnés dans le groupe de contacts, dans l’environnement de teams.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
+
+:::row:::
+:::column span="2":::
+    ![Vue des favoris épinglés dans le groupe de contacts](../assets/images/contact-group-lookup-favorites.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Démonstration de la recherche de groupe de contacts démarrer une conversation](../assets/images/contact-group-lookup-chat.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
 CrowdSourcer est un [robot Microsoft teams](../bots/what-are-bots.md) qui donne aux équipes des informations de la part des membres du groupe. Il s’agit d’un excellent moyen de répondre aux questions fréquemment posées, tout en permettant aux participants de s’engager activement et de contribuer à une ressource d’informations amusantes et utiles.
@@ -101,7 +118,7 @@ Le Finder expert est un [robot Microsoft teams](../bots/what-are-bots.md) qui id
 
 ![Démonstration des résultats de recherche expert Finder](../assets/images/expert-finder.png)
 
-## <a name="faq-plus"></a>Forum aux questions 
+## <a name="faq-plus"></a>Forum aux questions
 
 Q conversation&les robots sont un moyen simple de fournir des réponses aux questions fréquemment posées par les utilisateurs. Toutefois, la plupart des bots ne s’engagent pas correctement avec les utilisateurs, car il n’y a aucun humain dans la boucle lorsque le bot échoue. Le bot FAQ est un Q convivial&un bot qui amène un humain dans la boucle lorsqu’il n’est pas en mesure d’aider. Un peut poser une question au bot et le bot répond avec une réponse si elle est contenue dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe d’experts préconfigurée qui aide à prendre en charge les notifications à partir de l’équipe elle-même.
 

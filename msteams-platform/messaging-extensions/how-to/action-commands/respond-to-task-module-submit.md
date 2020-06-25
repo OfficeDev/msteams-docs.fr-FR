@@ -4,18 +4,18 @@ author: clearab
 description: Indique comment répondre à l’action d’envoi d’un module de tâche à partir d’une commande action d’extension de messagerie
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120261"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867110"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action soumettre du module de tâche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois qu’un utilisateur soumet le module de tâche, votre service Web reçoit `composeExtension/submitAction` un message d’appel avec l’ID de commande et les valeurs de paramètre définies. Votre application disposera de cinq secondes pour répondre à l’appel, sinon l’utilisateur recevra un message d’erreur « Impossible d’atteindre l’application », et toute réponse à l’appel sera ignorée par le client Teams.
+Une fois qu’un utilisateur soumet le module de tâche, votre service Web reçoit un `composeExtension/submitAction` message d’appel avec l’ID de commande et les valeurs de paramètre définies. Votre application disposera de cinq secondes pour répondre à l’appel, sinon l’utilisateur recevra un message d’erreur « Impossible d’atteindre l’application », et toute réponse à l’appel sera ignorée par le client Teams.
 
 Vous disposez des options suivantes pour répondre.
 
@@ -26,7 +26,7 @@ Vous disposez des options suivantes pour répondre.
 * [Demander à l’utilisateur de s’authentifier](~/messaging-extensions/how-to/add-authentication.md)
 * [Demander à l’utilisateur de fournir une configuration supplémentaire](~/messaging-extensions/how-to/add-configuration-page.md)
 
-Le tableau ci-dessous indique les types de réponses disponibles en fonction de l’emplacement`commandContext`d’appel () de l’extension de messagerie. Pour l’authentification ou la configuration, une fois que l’utilisateur a terminé le flux, l’appel d’origine sera renvoyé à votre service Web.
+Le tableau ci-dessous indique les types de réponses disponibles en fonction de l’emplacement `commandContext` d’appel () de l’extension de messagerie. Pour l’authentification ou la configuration, une fois que l’utilisateur a terminé le flux, l’appel d’origine sera renvoyé à votre service Web.
 
 |Type de réponse | composition | barre de commande | message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -93,7 +93,7 @@ Voici un exemple de l’objet JSON que vous recevrez. Le `commandContext` param�
 
 ## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>Répondre avec une carte insérée dans la zone de message de composition
 
-La façon la plus courante de répondre à `composeExtension/submitAction` la demande est d’insérer une carte insérée dans la zone de message de composition. L’utilisateur peut alors choisir de soumettre la carte à la conversation. Pour plus d’informations sur l’utilisation des cartes [, voir cartes et](~/task-modules-and-cards/cards/cards-actions.md)cartes.
+La façon la plus courante de répondre à la `composeExtension/submitAction` demande est d’insérer une carte insérée dans la zone de message de composition. L’utilisateur peut alors choisir de soumettre la carte à la conversation. Pour plus d’informations sur l’utilisation des cartes [, voir cartes et](~/task-modules-and-cards/cards/cards-actions.md)cartes.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -194,22 +194,22 @@ Vous pouvez choisir de répondre à l' `submitAction` événement à l’aide d�
 * Si vous devez modifier dynamiquement les informations que vous collectez en fonction de l’entrée de l’utilisateur
 * Si vous devez valider les informations envoyées par l’utilisateur et éventuellement renvoyer le formulaire avec un message d’erreur si un problème se produit. 
 
-La méthode pour la réponse est la même que pour [répondre à `fetchTask` l’événement initial](~/messaging-extensions/how-to/action-commands/create-task-module.md). Si vous utilisez le kit de développement logiciel (SDK) de robot, le même événement se déclenche pour les deux actions d’envoi. Cela signifie que vous devez être sûr d’ajouter une logique qui détermine la bonne réponse.
+La méthode pour la réponse est la même que pour [répondre à l' `fetchTask` événement initial](~/messaging-extensions/how-to/action-commands/create-task-module.md). Si vous utilisez le kit de développement logiciel (SDK) de robot, le même événement se déclenche pour les deux actions d’envoi. Cela signifie que vous devez être sûr d’ajouter une logique qui détermine la bonne réponse.
 
 ## <a name="bot-response-with-adaptive-card"></a>Réponse à un bot avec carte adaptative
 
 >[!Note]
->Ce flux nécessite que vous ajoutiez `bot` l’objet à votre manifeste d’application et que vous disposez de l’étendue nécessaire définie pour le bot. Utilisez le même ID que votre extension de messagerie pour votre robot.
+>Ce flux nécessite que vous ajoutiez l' `bot` objet à votre manifeste d’application et que vous disposez de l’étendue nécessaire définie pour le bot. Utilisez le même ID que votre extension de messagerie pour votre robot.
 
 Vous pouvez également répondre à l’action d’envoi en insérant un message avec une carte adaptative dans le canal avec un bot. Votre utilisateur pourra prévisualiser le message avant de l’envoyer et éventuellement modifier/interagir avec. Cela peut être très utile dans les scénarios où vous devez recueillir des informations auprès de vos utilisateurs avant de créer une réponse de carte adaptative, ou lorsque vous devez mettre à jour la carte après qu’une personne interagit avec elle. Le scénario suivant montre comment l’application Polly utilise ce flux pour configurer un sondage sans inclure les étapes de configuration dans la conversation de canal.
 
 1. L’utilisateur clique sur l’extension de messagerie pour déclencher le module de tâches.
 2. L’utilisateur configure le sondage avec le module tâches.
-3. Après avoir soumis le module de tâches, l’application utilise les informations fournies pour créer le sondage en tant que carte adaptative et l' `botMessagePreview` envoie en réponse au client.
-4. L’utilisateur peut alors prévisualiser le message de la carte adaptative avant de l’insérer dans le canal. Si l’application n’est pas déjà membre du canal, le fait `Send` de cliquer sur l’ajoutera.
+3. Après avoir soumis le module de tâches, l’application utilise les informations fournies pour créer le sondage en tant que carte adaptative et l’envoie en `botMessagePreview` réponse au client.
+4. L’utilisateur peut alors prévisualiser le message de la carte adaptative avant de l’insérer dans le canal. Si l’application n’est pas déjà membre du canal, le fait de cliquer sur `Send` l’ajoutera.
    1. L’utilisateur peut également choisir d' `Edit` utiliser le message, qui le renvoie au module de tâche d’origine.
 5. L’interaction avec la carte adaptative modifie le message avant de l’envoyer.
-6. Une fois que l' `Send` utilisateur clique sur le robot envoie le message au canal.
+6. Une fois que l’utilisateur clique sur `Send` le robot envoie le message au canal.
 
 ### <a name="respond-to-initial-submit-action"></a>Répondre à l’action d’envoi initiale
 
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -321,7 +321,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>Événements d’envoi et de modification botMessagePreview
 
-Votre extension de message doit maintenant répondre à deux nouvelles variétés de l' `composeExtension/submitAction` appel, où `value.botMessagePreviewAction = "send"`et. `value.botMessagePreviewAction = "edit"`
+Votre extension de message doit maintenant répondre à deux nouvelles variétés de l' `composeExtension/submitAction` appel, où `value.botMessagePreviewAction = "send"` et `value.botMessagePreviewAction = "edit"` .
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -392,13 +392,13 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>Répondre à botMessagePreview modifier
 
-Si l’utilisateur décide de modifier la carte avant de l’envoyer en cliquant sur le bouton **modifier** , vous `composeExtension/submitAction` recevrez `value.botMessagePreviewAction = edit`un appel avec. Vous devez généralement répondre en renvoyant le module de tâches que vous avez envoyé en `composeExtension/fetchTask` réponse à l’appel initial qui a commencé l’interaction. Cela permet à l’utilisateur de commencer le processus en entrant de nouveau les informations d’origine. Vous devez également envisager d’utiliser les informations dont vous disposez maintenant pour pré-remplir le module de tâche afin que l’utilisateur n’ait pas rempli toutes les informations de toutes pièces.
+Si l’utilisateur décide de modifier la carte avant de l’envoyer en cliquant sur le bouton **modifier** , vous recevrez un `composeExtension/submitAction` appel avec `value.botMessagePreviewAction = edit` . Vous devez généralement répondre en renvoyant le module de tâches que vous avez envoyé en réponse à l' `composeExtension/fetchTask` appel initial qui a commencé l’interaction. Cela permet à l’utilisateur de commencer le processus en entrant de nouveau les informations d’origine. Vous devez également envisager d’utiliser les informations dont vous disposez maintenant pour pré-remplir le module de tâche afin que l’utilisateur n’ait pas rempli toutes les informations de toutes pièces.
 
-Consultez [la rubrique relative à `fetchTask` la réponse à l’événement initial](~/messaging-extensions/how-to/action-commands/create-task-module.md).
+Consultez [la rubrique relative à la réponse à l' `fetchTask` événement initial](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### <a name="respond-to-botmessagepreview-send"></a>Répondre à l’envoi botMessagePreview
 
-Une fois que l’utilisateur clique sur le bouton **Envoyer** , `composeExtension/submitAction` vous recevrez un appel avec `value.botMessagePreviewAction = send`. Votre service Web devra créer et envoyer un message proactif avec la carte adaptative à la conversation, ainsi que répondre à l’appel.
+Une fois que l’utilisateur clique sur le bouton **Envoyer** , vous recevrez un `composeExtension/submitAction` appel avec `value.botMessagePreviewAction = send` . Votre service Web devra créer et envoyer un message proactif avec la carte adaptative à la conversation, ainsi que répondre à l’appel.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -421,13 +421,27 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
   };
   responseActivity.Attachments.Add(attachment);
   
+  // Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+  };
+  
   await turnContext.SendActivityAsync(responseActivity);
 
   return new MessagingExtensionActionResponse();
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -469,7 +483,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         type: 'AdaptiveCard',
         version: '1.0'
       });
-      const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+      const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+          onBehalfOf: [
+              { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
+          ]
+      }};
     
       await context.sendActivity(responseActivity);
     }
@@ -515,6 +533,6 @@ Vous recevrez un nouveau `composeExtension/submitAction` message similaire à ce
 
 Ajouter une commande de recherche
 
-* [Définir des commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Définir les commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

@@ -3,12 +3,12 @@ title: Ajouter des données de test à votre client de test Office 365
 description: Configurer votre abonnement Office 365 Developer Program pour tester correctement les applications Microsoft teams
 keywords: test des équipes de programme de développement d’applications
 ms.date: 11/01/2019
-ms.openlocfilehash: 2d32b0bf4243d540eeb5e2cc89ea2518d737ae17
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673653"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867091"
 ---
 # <a name="add-test-data-to-your-office-365-test-tenant"></a>Ajouter des données de test à votre client de test Office 365
 
