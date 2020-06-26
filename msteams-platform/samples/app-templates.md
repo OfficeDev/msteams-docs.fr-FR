@@ -2,12 +2,12 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
-ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
+ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
+ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44873398"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888801"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -131,7 +131,7 @@ Q conversation&les robots sont un moyen simple de fournir des réponses aux ques
 >
 > &#x2714; effectuer le suivi de l’historique des révisions de Q&en tant que.
 >
-> &#x2714; configurer une réponse avec des détails supplémentaires à afficher sous forme de [carte adaptative](/task-modules-and-cards/cards/cards-reference#adaptive-card).
+> &#x2714; configurer une réponse avec des détails supplémentaires à afficher sous forme de [carte adaptative](../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 >
 [**L’obtenir sur GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -296,5 +296,22 @@ Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’appl
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Application de recherche de liste](../assets/images/list-search-template.png)
+
+## <a name="workplace-awards-9734"></a>&#9734; de l’espace de travail
+
+Workplace Awards est un modèle d’application de teams qui fournit une infrastructure positive pour favoriser la reconnaissance et encourager la culture de l’appréciation des employés dans l’espace de travail moderne. L’application vous permet de configurer et de gérer un programme de récompense et de reconnaissance de l’employé (R&R) où les employés peuvent facilement nommer et endosser des collègues et que votre R&R vous permet d’afficher les candidatures envoyées, d’accorder des récompenses et d’annoncer des destinataires.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Carte de nomination de récompenses pour les lieux de travail ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Onglet de liste des récompenses de l’espace de travail](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 Vous avez une idée pour un modèle d’application que vous aimeriez voir ? [Faites-nous part](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)de vos commentaires.
