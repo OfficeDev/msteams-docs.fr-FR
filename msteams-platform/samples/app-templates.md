@@ -2,12 +2,12 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
-ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
+ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
+ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888801"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44943808"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -136,6 +136,23 @@ Q conversation&les robots sont un moyen simple de fournir des réponses aux ques
 [**L’obtenir sur GitHub**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![Forum aux questions et GIF](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="goal-tracker-9734"></a>&#9734; du suivi des objectifs
+
+L’application de suivi des objectifs est une solution complète pour votre organisation afin de prendre en charge la définition des objectifs, d’observer la progression et de reconnaître la réussite de Microsoft Teams. L’application permet aux utilisateurs de définir, suivre et mettre à jour les objectifs au niveau professionnel, personnel et d’équipe. Les membres de l’équipe reçoivent également des rappels et des mises à jour d’État opportuns pour rester concentrés et rester sur le suivi.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![Définir les objectifs](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Afficher les objectifs du jeu](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="group-activities"></a>Activités de groupe
 
@@ -287,6 +304,14 @@ Scrums for Group chat est un Assistant Scrum de support qui permet aux membres d
 
 ![Démonstration de scrums pour la conversation de groupe](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## <a name="share-now-9734"></a>Partager maintenant &#9734;
+
+L’application partager maintenant encourage l’échange d’informations positif entre les collègues en permettant à vos utilisateurs de partager facilement du contenu au sein de l’environnement de teams. Les utilisateurs accèdent à l’application pour partager des éléments intéressants avec les membres de l’équipe, découvrir de nouveaux contenus partagés, définir des préférences et des favoris de signet pour une lecture ultérieure.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![Sélectionner l’affichage du contenu](../assets/images/share-now-suggested-content.png)
+
 ## <a name="sharepoint-list-search"></a>Recherche de liste SharePoint
 
 La collaboration dans Microsoft teams fait souvent référence à des informations contenues dans les éléments d’une liste SharePoint. Le simple collage d’un lien vers l’élément en question force tout le monde à basculer le contexte à l’extérieur de la conversation, à trouver les informations nécessaires, puis à revenir à teams pour poursuivre la conversation. Au fur et à mesure de la conversation, les personnes devront généralement revenir à l’élément de référence plusieurs fois pour vérifier les nouveaux commentaires et actualiser leurs souvenirs des informations contenues dans l’élément. Ce changement de contexte crée une barrière à des fins de collaboration et constitue une recette pour les choses qui passent par les fissures.
@@ -296,6 +321,23 @@ Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’appl
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Application de recherche de liste](../assets/images/list-search-template.png)
+
+## <a name="visitor-management-9734"></a>&#9734; de gestion des visiteurs
+
+L’application de gestion des visiteurs permet à votre organisation et aux employés de gérer facilement et efficacement le processus de visiteur sur site, directement à partir de Microsoft Teams. L’application permet aux employés de créer des demandes de visiteurs, de suivre de manière centralisée l’état d’une demande via le tableau de bord du visiteur et de recevoir des notifications en temps réel lorsqu’un visiteur arrive.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![Créer une vue de requête](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Notification d’arrivée de visiteur](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="workplace-awards-9734"></a>&#9734; de l’espace de travail
 
