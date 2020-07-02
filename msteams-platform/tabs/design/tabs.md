@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception de l’infrastructure de référence
-ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914552"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021614"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -23,8 +23,8 @@ ms.locfileid: "43914552"
 >
 > **Onglets canal/groupe (configurable) sur mobile :**
 >
-> * Les clients mobiles affichent uniquement les onglets dont `websiteUrl`la valeur est. Si vous souhaitez que votre onglet apparaisse sur les clients mobiles Teams, vous devez définir la `websiteUrl`valeur de.
-> * Le comportement d’ouverture par défaut sur mobile consiste à ouvrir l’extérieur `websiteUrl`dans le navigateur à l’aide du. Pour les applications publiées dans le magasin d’applications public, si vous voulez que les onglets de votre canal s’ouvrent dans teams par défaut, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)et contactez votre représentant du support technique pour demander à être inclus dans la liste d’autorisation.
+> * Les clients mobiles affichent uniquement les onglets dont la valeur est `websiteUrl` . Si vous souhaitez que votre onglet apparaisse sur les clients mobiles Teams, vous devez définir la valeur de `websiteUrl` .
+> * Le comportement d’ouverture par défaut sur mobile consiste à ouvrir l’extérieur dans le navigateur à l’aide du `websiteUrl` . Pour les applications publiées dans le magasin d’applications public, si vous voulez que les onglets de votre canal s’ouvrent dans teams par défaut, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)et contactez votre représentant du support technique pour demander à être inclus dans la liste d’autorisation.
 
 Les onglets sont des canevas que vous pouvez utiliser pour partager du contenu, organiser des conversations et héberger des services tiers dans le flux de travail Organic d’une équipe. Lorsque vous créez un onglet dans Microsoft Teams, il place le centre et le centre de votre application Web où il est facilement accessible à partir des conversations clés.
 
@@ -80,7 +80,7 @@ Votre zone de dessin de tabulation constitue une excellente occasion de personna
 L’incorporation de vos propres couleurs et dispositions twill facilite également la communication de la personnalité.
 
 > [!TIP]
-> Utilisez notre style visuel pour que votre service ressemble à une partie de teams. *Voir*, par exemple, [couleurs teams] (/concepts/design/Components/Typography.MD
+> Utilisez notre style visuel pour que votre service ressemble à une partie de teams. *Voir*, par exemple, les [couleurs de teams](../../concepts/design/components/color.md)
 
 ---
 
@@ -108,7 +108,7 @@ Les dimensions de la page de configuration de l’onglet :
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Instructions pour le format de page de configuration d’onglet
 
 * Basez la hauteur minimale de votre zone de contenu sur la page de configuration de votre onglet sur les éléments graphiques de hauteur fixe.
-* Calculer l’espacement vertical disponible (hauteur de la zone de contenu dans la page de `window.innerHeight`Configuration) à l’aide de. Cette valeur renvoie la taille du `<iframe>` dans lequel votre page de configuration se trouve, ce qui peut changer dans les versions ultérieures. À l’aide de cette valeur, votre contenu s’ajuste automatiquement aux modifications ultérieures.
+* Calculer l’espacement vertical disponible (hauteur de la zone de contenu dans la page de configuration) à l’aide de `window.innerHeight` . Cette valeur renvoie la taille du `<iframe>` dans lequel votre page de configuration se trouve, ce qui peut changer dans les versions ultérieures. À l’aide de cette valeur, votre contenu s’ajuste automatiquement aux modifications ultérieures.
 * Allouer de l’espace vertical aux éléments de hauteur variable moins ce qui est nécessaire pour les éléments de hauteur fixe.
 * Pour l’état de *connexion* , centrez verticalement et horizontalement le contenu.
 * Si vous souhaitez une image d’arrière-plan, vous avez besoin d’une nouvelle image ajustée pour s’adapter à la zone (par défaut) ou vous pouvez conserver la même image et choisir entre :
@@ -142,4 +142,4 @@ Il existe deux modes de notification pour les modifications apportées au conten
 > * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **Utiliser un bot**. Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
 
-  L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous `@mention` avez des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.
+  L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous avez `@mention` des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.

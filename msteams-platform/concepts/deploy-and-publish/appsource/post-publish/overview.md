@@ -2,20 +2,20 @@
 title: Publication post
 description: Ce qu’il faut faire après avoir publié votre application
 keywords: teams post publier le certificat de mise à jour
-ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021572"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Gérer et prendre en charge votre application publiée 
 
-Une fois que votre application est approuvée et inscrite dans le catalogue d’applications public, vous pouvez augmenter votre portée en obtenant la certification de l’application ou en ajoutant un bouton de téléchargement de votre site Web.
+Une fois que votre application est approuvée et inscrite dans le catalogue d’applications public, vous pouvez augmenter votre portée en terminant le programme de conformité des applications Microsoft 365 ou en ajoutant un bouton Télécharger sur votre site Web.
 
-## <a name="application-certificate"></a>Certificat d’application
+## <a name="m365-certified"></a>Certification M365
 
-Microsoft fournit un [programme de certification d’application](./application-certification.md) qui compile vos informations d’application et les présente sur la [page de sécurité et de conformité des applications Microsoft teams](https://aka.ms/AppCertification). Ces informations visent à aider les administrateurs à choisir les applications qui sont sûres pour leur organisation.
+Le [programme de conformité des applications Microsoft 365](./application-certification.md)est une approche à trois niveaux de la sécurité et de la conformité des applications. Chaque niveau est basé sur le suivant : Offrez un programme en couches pour répondre aux besoins de vos clients. Pour en savoir plus sur la sécurité et la conformité des applications Teams, consultez la [page conformité](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Ajouter un bouton de téléchargement à votre site de produit
 
