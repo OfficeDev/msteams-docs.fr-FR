@@ -2,12 +2,12 @@
 title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
-ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
+ms.openlocfilehash: 7e818f18e97da71fee0f51bd7502bedf2de3d465
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44943808"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091342"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -154,6 +154,23 @@ L’application de suivi des objectifs est une solution complète pour votre org
 :::column-end:::
 :::row-end:::
 
+## <a name="great-ideas-9734"></a>Idées intéressantes &#9734;
+
+L’application Great Ideas prend en charge l’innovation et la créativité au sein de votre organisation. L’application permet à vos employés de partager des idées avec des collègues et un leadership, de découvrir de nouvelles soumissions, de tenir des contributions à l’équipe et de diffuser leur vote pour les meilleures propositions au sein de Microsoft Teams.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![Afficher des idées envoyées](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Afficher des idées](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="group-activities"></a>Activités de groupe
 
 Activités de groupe est une application Microsoft teams qui permet aux propriétaires d’équipe de créer facilement des groupes d’activités et de gérer les flux de travail de collaboration dans le contexte de Microsoft Teams. Les auteurs d’activité sont activés pour créer des activités, distribuent de manière aléatoire les membres de l’équipe dans des groupes et, éventuellement, le bot envoie des rappels jusqu’à ce que les activités soient terminées.
@@ -168,6 +185,23 @@ Activités de groupe est une application Microsoft teams qui permet aux proprié
 :::row:::
 :::column span="2":::
     ![Message de notification d’activité de groupe dans un canal](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="grow-your-skills-9734"></a>Développez vos compétences &#9734;
+
+L’application développer vos compétences prend en charge la croissance et le développement professionnels en permettant aux employés de contribuer à des projets supplémentaires pour votre organisation tout en apprenant de nouvelles compétences. Les employés peuvent utiliser l’application pour localiser les opportunités qui correspondent à leurs centres d’intérêt, profiter d’une collaboration efficace avec des pairs et acquérir de nouveaux niveaux de compétences et de fonctionnalités, tout au sein de l’environnement Teams.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![Affichage des projets disponibles](../assets/images/grow-your-skills-all-projects-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Vue des compétences acquises de la visionneuse](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
@@ -321,6 +355,14 @@ Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’appl
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![Application de recherche de liste](../assets/images/list-search-template.png)
+
+## <a name="staff-check-ins-9734"></a>&#9734; d’archivage du personnel
+
+L’archivage du personnel est une application, basée sur les [applications d’alimentation](/powerapps/powerapps-overview), qui permet une communication de supervision entre votre entreprise et le personnel du domaine. Le personnel peut facilement fournir des informations critiques et des mises à jour d’État à une base planifiée ou ad hoc directement à partir de teams. L’application prend en charge l’emplacement, les photos et les notes en temps réel, ainsi que les notifications de rappel et les flux de travail automatisés.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![Créer une vue de l’archivage](../assets/images/staff-check-ins-create.png)
 
 ## <a name="visitor-management-9734"></a>&#9734; de gestion des visiteurs
 

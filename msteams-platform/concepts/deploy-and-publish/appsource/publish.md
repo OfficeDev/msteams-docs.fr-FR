@@ -1,13 +1,13 @@
 ---
 title: Guide sur le processus d’approbation de l’application Microsoft teams
 description: Décrit le processus d’approbation pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
-keywords: teams publier le magasin de publication Office AppSource
-ms.openlocfilehash: e93a17453e514b1e89f3f7070ff1f31000719260
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+keywords: teams publier le magasin Office Publishing Publish AppSource Partner Center Verification de compte
+ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704487"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091304"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envoi de votre application à AppSource
 

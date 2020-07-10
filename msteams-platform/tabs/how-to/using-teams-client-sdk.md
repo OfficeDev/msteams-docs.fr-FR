@@ -1,19 +1,19 @@
 ---
-title: Utilisation du kit de développement logiciel (SDK) Team client
+title: Utilisation du kit de développement logiciel client Teams
 author: laujan
 description: Comment utiliser le kit de développement logiciel (SDK) Team client pour ajouter une fonctionnalité de teams à vos onglets personnalisés
 keywords: onglets teams groupe de kit de développement logiciel (SDK) statique Java personnel
 ms.topic: conceptual
-ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: 07903d766ac67f2dbc9fc09268618ac5c2ae33c2
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928509"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091297"
 ---
-# <a name="using-the-teams-client-sdk"></a>Utilisation du kit de développement logiciel (SDK) Team client
+# <a name="using-the-teams-client-sdk"></a>Utilisation du kit de développement logiciel client Teams
 
-Le **Kit de développement logiciel (SDK) JavaScript de teams** et la **bibliothèque JavaScript teams** font partie de la [plateforme de développement Microsoft teams](https://msdn.microsoft.com/microsoft-teams) et fournissent des outils et des processus pour faciliter la création d’applications Teams. Le kit de développement logiciel (SDK) Team client est distribué sous la forme d’un package NPM. La dernière version est disponible ici : <https://www.npmjs.com/package/@microsoft/teams-js>. La bibliothèque teams se trouve <https://github.com/OfficeDev/microsoft-teams-library-js>à l’adresse.
+Le **Kit de développement logiciel (SDK) JavaScript de teams** et la **bibliothèque JavaScript teams** font partie de la [plateforme de développement Microsoft teams](/microsoftteams/platform/) et fournissent des outils et des processus pour faciliter la création d’applications Teams. Le kit de développement logiciel (SDK) Team client est distribué sous la forme d’un package NPM. La dernière version est disponible ici : <https://www.npmjs.com/package/@microsoft/teams-js> . La bibliothèque teams se trouve à l’adresse <https://github.com/OfficeDev/microsoft-teams-library-js> .
 
 Le tableau suivant présente les fonctions de la bibliothèque teams généralement utilisées dans le développement d’onglets :
 
