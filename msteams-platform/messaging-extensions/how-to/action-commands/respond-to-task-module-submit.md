@@ -4,12 +4,12 @@ author: clearab
 description: Indique comment répondre à l’action d’envoi d’un module de tâche à partir d’une commande action d’extension de messagerie
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867110"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103012"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action soumettre du module de tâche
 
@@ -451,7 +451,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
       const attachmentContent = activityPreview.attachments[0].content;
       const userText = attachmentContent.body[1].text;
       const choiceSet = attachmentContent.body[3];
-      
+
       const submitData = {
         MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
         Option1: choiceSet.choices[0].title,
@@ -459,7 +459,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         Option3: choiceSet.choices[2].title,
         Question: userText
       };
-    
+
       const adaptiveCard = CardFactory.adaptiveCard({
         actions: [
           { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
@@ -488,7 +488,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
           ]
       }};
-    
+
       await context.sendActivity(responseActivity);
     }
 }
@@ -529,6 +529,61 @@ Vous recevrez un nouveau `composeExtension/submitAction` message similaire à ce
 
 * * *
 
+### <a name="user-attribution-for-bots-messages"></a>Attribution d’utilisateur pour les messages robots 
+
+Dans les scénarios où un bot envoie des messages au nom d’un utilisateur, l’attribution du message à cet utilisateur peut contribuer à l’engagement et présenter un flux d’interaction plus naturel. Cette fonctionnalité vous permet d’envoyer des messages au nom de l’utilisateur qui initie le message.
+
+Dans l’image ci-dessous, à gauche se trouve un message de carte envoyé par un bot *sans* attribution d’utilisateur et à droite est une carte envoyée par un bot *avec* attribution utilisateur.
+
+![Capture d’écran](../../../assets/images/messaging-extension/user-attribution-bots.png)
+
+Pour utiliser l’attribution utilisateur dans Teams, vous devez ajouter l' `OnBehalfOf` entité mentionner à `ChannelData` dans votre `Activity` charge utile envoyée à Teams.
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
+
+```csharp
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+
+```
+
+# <a name="json"></a>[JSON](#tab/json-1)
+
+```json
+{
+    "text": "Hello World!",
+    "ChannelData": {
+        "OnBehalfOf": [{
+            "itemid": 0,
+            "mentionType": "person",
+            "mri": "29:orgid:89e6508d-6c0f-4ffe-9f6a-b58416d965ae",
+            "displayName": "Sowrabh N R S"
+        }]
+    }
+}
+```
+
+* * *
+
+Vous trouverez ci-dessous une description des entités du `OnBehalfOf` tableau :
+
+#### <a name="details-of--onbehalfof-entity-schema"></a>Détails du `OnBehalfOf` schéma d’entité
+
+|Champ|Type|Description|
+|:---|:---|:---|
+|`itemId`|Entier|Doit être égal à 0|
+|`mentionType`|Chaîne|Doit être « person »|
+|`mri`|Chaîne|Identificateur de ressource de message (MRI) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message apparaît sous la forme « \<user\> via \<bot name\> ».|
+|`displayName`|Chaîne|Nom de la personne. Utilisé comme secours en cas d’indisponibilité de la résolution de noms.|
+  
 ## <a name="next-steps"></a>Étapes suivantes
 
 Ajouter une commande de recherche

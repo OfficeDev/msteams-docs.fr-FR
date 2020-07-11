@@ -2,12 +2,12 @@
 title: Inscription d’un robot de réunion et d’appel pour Microsoft teams
 description: Découvrez comment enregistrer un nouveau robot d’appel audio/vidéo pour Microsoft teams
 keywords: appels audio/vidéo vidéo audio/vidéo
-ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 9b932e6a330b495aef97e65c7bb1f297fdfc1336
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801069"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103004"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>Inscription d’un bot appelant pour Microsoft teams
 
@@ -66,7 +66,7 @@ Microsoft Graph expose des autorisations granulaires qui contrôlent l’accès 
 
 ### <a name="assigning-permissions"></a>Attribution d'autorisations
 
-Vous devez configurer les autorisations d’application pour votre robot à l’avance. Nous vous recommandons d’utiliser le [portail d’inscription de l’application Microsoft](https://apps.dev.microsoft.com/) comme décrit [ici](/graph/docs/concepts/auth_register_app_v2) , car c’est là que se trouve votre bot. Toutefois, vous pouvez toujours utiliser le [portail Azure](https://aka.ms/aadapplist) si vous préférez utiliser le [point de terminaison Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Vous devez configurer les autorisations d’application pour votre robot à l’avance. Nous vous recommandons d’utiliser le [portail d’inscription de l’application Microsoft](https://apps.dev.microsoft.com/) comme décrit [ici](/graph/auth_register_app_v2) , car c’est là que se trouve votre bot. Toutefois, vous pouvez toujours utiliser le [portail Azure](https://aka.ms/aadapplist) si vous préférez utiliser le [point de terminaison Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="getting-tenant-administrator-consent"></a>Obtention du consentement de l’administrateur client
 

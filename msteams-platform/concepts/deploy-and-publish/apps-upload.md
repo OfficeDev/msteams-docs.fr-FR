@@ -2,12 +2,12 @@
 title: Charger votre application personnalisée dans Microsoft teams
 description: Décrit comment télécharger votre application dans Microsoft teams
 keywords: Téléchargement d’applications teams
-ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453881"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103025"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Téléchargement d’un package d’application dans Microsoft Teams
 
@@ -100,7 +100,7 @@ Une fois l’application chargée dans l’équipe ou la conversation, les utili
 
 1. Accéder à un canal dans l’équipe. Sélectionnez *plus d’options* (*&#8943;*) et choisissez *connecteurs*.
 
-2. Sélectionnez votre connecteur dans la section **chargé** en bas.
+2. Sélectionnez votre connecteur dans la section **versions test chargées** en bas.
 
 3. Configurez votre connecteur via sa [page de configuration](../../webhooks-and-connectors/how-to/connectors-creating.md) et sélectionnez *Enregistrer*.
 
