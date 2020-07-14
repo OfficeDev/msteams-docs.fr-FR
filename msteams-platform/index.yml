@@ -10,16 +10,16 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: f0cd5ae499497dad227a62f2938df2449a09dc81
-  ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+  ms.openlocfilehash: bca90313836aa8cad55a99009ac99042ca5062d3
+  ms.sourcegitcommit: 3b24514f33cd01634620cfa94529b2e0e2a7d434
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 06/06/2020
-  ms.locfileid: "44801361"
+  ms.lasthandoff: 07/13/2020
+  ms.locfileid: "45117825"
 highlightedContent:
   items:
-  - title: Applications Microsoft teams
-    itemType: overview
+  - title: "Nouveautés du développement Microsoft teams \U0001F680Commencez ici !"
+    itemType: get-started
     url: /microsoftteams/platform/overview
   - title: 'Onglets : expériences web incorporées'
     itemType: overview
@@ -58,7 +58,7 @@ conceptualContent:
       text: Mapper des cas d’utilisation aux fonctionnalités Microsoft teams
     - url: /microsoftteams/platform/whats-new
       itemType: whats-new
-      text: Nouveautés
+      text: Quoi de neuf ?
   - title: Apprendre
     links:
     - url: /learn/modules/intro-microsoft-teams-apps
