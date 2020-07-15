@@ -4,12 +4,12 @@ author: clearab
 description: Indique comment répondre à l’action d’envoi d’un module de tâche à partir d’une commande action d’extension de messagerie
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103012"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137660"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action soumettre du module de tâche
 
@@ -531,7 +531,7 @@ Vous recevrez un nouveau `composeExtension/submitAction` message similaire à ce
 
 ### <a name="user-attribution-for-bots-messages"></a>Attribution d’utilisateur pour les messages robots 
 
-Dans les scénarios où un bot envoie des messages au nom d’un utilisateur, l’attribution du message à cet utilisateur peut contribuer à l’engagement et présenter un flux d’interaction plus naturel. Cette fonctionnalité vous permet d’envoyer des messages au nom de l’utilisateur qui initie le message.
+Dans les scénarios où un bot envoie des messages au nom d’un utilisateur, l’attribution du message à cet utilisateur peut contribuer à l’engagement et présenter un flux d’interaction plus naturel. Cette fonctionnalité vous permet d’attribuer un message à partir de votre robot à un utilisateur au nom duquel il a été envoyé.
 
 Dans l’image ci-dessous, à gauche se trouve un message de carte envoyé par un bot *sans* attribution d’utilisateur et à droite est une carte envoyée par un bot *avec* attribution utilisateur.
 

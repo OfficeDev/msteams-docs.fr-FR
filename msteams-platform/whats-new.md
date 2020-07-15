@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453853"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137635"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -15,8 +15,9 @@ ms.locfileid: "44453853"
 
 Le journal des modifications répertorie les modifications apportées à la plateforme Microsoft teams et à cet ensemble de documents. Les entrées peuvent être utilisées pour attirer l’attention sur une nouvelle fonctionnalité qui est simplement intéressante pour les développeurs de teams.
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+| 07/01/2020 |Commencer à créer des applications teams à l’aide de Visual Studio code Toolkit.|[Créer des applications avec Microsoft teams Toolkit et Visual Studio code](toolkit/visual-studio-code-overview.md) |
 | 05/20/2020 | Les autorisations de consentement propres aux ressources à l’aide des API Microsoft Graph sont dans la version préliminaire pour les développeurs. |[Consentement propre à la ressource (RSC) — Aperçu pour les développeurs](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | Ajout de la prise en charge de la récupération d’un membre d’une conversation et de la prise en charge supplémentaire pour la récupération des membres de la page. | [Obtenir un contexte Teams pour votre bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour construire deeplinks à ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre. `legacy.replyToId`.  |

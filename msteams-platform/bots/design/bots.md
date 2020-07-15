@@ -2,12 +2,12 @@
 title: Instructions de conception pour les robots
 description: Décrit les instructions pour la création de robots
 keywords: Guide de conception des équipes
-ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453888"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137674"
 ---
 # <a name="start-talking-with-bots"></a>Commencer à parler avec les robots
 
@@ -33,7 +33,7 @@ Les graphiques sont un moyen efficace d’indiquer un récit, mais les conversat
 
 ### <a name="onboarding-users"></a>Utilisateurs d’intégration
 
-Il est essentiel que les robots s’introduisent et envoient ce qu’ils peuvent faire aux utilisateurs. Cette *valeur* permet aux utilisateurs de comprendre ce qu’ils doivent faire avec le bot, où les limitations peuvent être, et, plus important encore, permet aux utilisateurs de tolérer l’interaction avec un ordinateur qui n’est pas aussi intuitif qu’une personne réelle. En outre, il accorde une autorisation pour les données utilisateur dans Exchange pour la valeur réelle fournie par le service.
+Il est essentiel que les robots s’introduisent et envoient ce qu’ils peuvent faire pour les utilisateurs. Cette *valeur* permet aux utilisateurs de comprendre ce qu’ils doivent faire avec le bot, où les limitations peuvent être, et, plus important encore, permet aux utilisateurs de tolérer l’interaction avec un ordinateur qui n’est pas aussi intuitif qu’une personne réelle. En outre, il accorde une autorisation pour les données utilisateur dans Exchange pour la valeur réelle fournie par le service.
 
 #### <a name="welcome-messages"></a>Les messages de bienvenue
 

@@ -10,17 +10,17 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: bca90313836aa8cad55a99009ac99042ca5062d3
-  ms.sourcegitcommit: 3b24514f33cd01634620cfa94529b2e0e2a7d434
+  ms.openlocfilehash: 3ddefb1b0f01c5b2add719dbe61972eae405a959
+  ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/13/2020
-  ms.locfileid: "45117825"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "45137667"
 highlightedContent:
   items:
   - title: "Nouveautés du développement Microsoft teams \U0001F680Commencez ici !"
     itemType: get-started
-    url: /microsoftteams/platform/overview
+    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
   - title: 'Onglets : expériences web incorporées'
     itemType: overview
     url: /microsoftteams/platform/tabs/what-are-tabs
