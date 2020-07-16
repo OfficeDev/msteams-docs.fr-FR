@@ -2,14 +2,17 @@
 title: Onglets sur les appareils mobiles
 description: Décrit les instructions permettant de concevoir des onglets qui fonctionnent sur mobile.
 keywords: instructions de conception teams structure de référence des applications personnelles onglets mobiles
-ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455519"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145929"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
+
+> [!NOTE]
+> Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété (voir ci-dessous). Les onglets personnels sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md). La prise en charge complète des onglets sur les clients mobiles sera bientôt disponible. Pour préparer la mise à jour, vous devez suivre les instructions présentées ici lors de la création des onglets.
 
 Les onglets personnalisés peuvent faire partie d’un canal, d’une conversation de groupe ou d’une application personnelle (applications qui contiennent des onglets statiques et/ou un bot un-à-un).
 
@@ -53,7 +56,7 @@ Il s’agit d’une grande zone dans laquelle le travail est exécuté. L’appl
 
 ![disposition sur une seule zone de dessin](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Répertorier
+#### <a name="list"></a>Répertorier la liste
 
 Les listes sont idéales pour le tri et le filtrage de grandes quantités de données et sont idéales pour conserver les choses les plus importantes en haut. Il est utile d’utiliser des colonnes à trier. Les actions peuvent être ajoutées à chaque élément de liste sous le menu points de suspension.
 

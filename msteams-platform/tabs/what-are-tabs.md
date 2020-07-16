@@ -4,12 +4,12 @@ author: laujan
 description: Vue d’ensemble des onglets personnalisés sur la plateforme Microsoft teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: d8aba99210369bf92ad1e600b13cf1d20984d06f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44119048"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145906"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Qu’est-ce que les onglets personnalisés de Microsoft teams ?
 
@@ -26,7 +26,7 @@ Il existe deux types d’onglets disponibles dans teams Channel/Group et Persona
 >
 > * Si un onglet est ajouté à une application qui a également un bot, le bot est également ajouté à l’équipe.
 > * Sensibilisation de l’ID AAD de l’utilisateur actuel.
-> * Détection des paramètres régionaux de l’utilisateur pour indiquer la langue, c’est-à-dire `en-us`. 
+> * Détection des paramètres régionaux de l’utilisateur pour indiquer la langue, c’est-à-dire `en-us` . 
 > * Fonctionnalité SSO, si prise en charge.
 > * Possibilité d’utiliser des robots ou des notifications d’application pour établir un lien profond vers l’onglet ou une sous-entité au sein du service, par exemple un élément de travail individuel.
 > * Possibilité d’ouvrir un module de tâches à partir de liens dans un onglet.
@@ -47,12 +47,12 @@ Il existe deux types d’onglets disponibles dans teams Channel/Group et Persona
 
 Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page Web que vous souhaitez inclure sous la forme d’un onglet dans votre application, vous définissez une URL et une étendue. En outre, vous devez ajouter le [Kit de développement logiciel (SDK) du client JavaScript teams](/javascript/api/overview/msteams-client) à votre page et appeler `microsoftTeams.initialize()` après le chargement de votre page. Cette opération permettra à teams d’afficher votre page, vous donne accès à des informations spécifiques à Teams (par exemple, si le client teams exécute le thème sombre) et vous permet d’agir en fonction des résultats.
 
-Que vous choisissiez d’exposer votre onglet au sein de la chaîne/du groupe ou de l’étendue personnelle, vous devrez présenter une [page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) html iframe dans votre onglet. Pour les onglets personnels, l’URL de contenu est définie directement dans votre `contentUrl` manifeste par la `staticTabs` propriété dans le tableau. Le contenu de votre onglet sera le même pour tous les utilisateurs.
+Que vous choisissiez d’exposer votre onglet au sein de la chaîne/du groupe ou de l’étendue personnelle, vous devrez présenter une [page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) html iframe dans votre onglet. Pour les onglets personnels, l’URL de contenu est définie directement dans votre manifeste par la `contentUrl` propriété dans le `staticTabs` tableau. Le contenu de votre onglet sera le même pour tous les utilisateurs.
 
-Pour les onglets canal/groupe, vous devez également créer une page de configuration supplémentaire qui permet aux utilisateurs de configurer votre URL de page de contenu, généralement à l’aide des paramètres de chaîne de requête d’URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet de canal/groupe peut être ajouté à plusieurs équipes ou conversations de groupe différentes. Lors de chaque installation suivante, vos utilisateurs peuvent configurer l’onglet, ce qui vous permet de personnaliser l’expérience en fonction de vos besoins. Lorsque les utilisateurs ajoutent un onglet ou configurent un onglet, une URL est associée à l’onglet présenté dans l’interface utilisateur de teams. La configuration d’un onglet consiste simplement à ajouter des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet de la carte DevOps Azure, la page Configuration vous permet de choisir la carte chargée par l’onglet. L’URL de la page de configuration est `configurationUrl` spécifiée par la `configurableTabs` propriété dans le tableau dans le manifeste de votre application.
+Pour les onglets canal/groupe, vous devez également créer une page de configuration supplémentaire qui permet aux utilisateurs de configurer votre URL de page de contenu, généralement à l’aide des paramètres de chaîne de requête d’URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet de canal/groupe peut être ajouté à plusieurs équipes ou conversations de groupe différentes. Lors de chaque installation suivante, vos utilisateurs peuvent configurer l’onglet, ce qui vous permet de personnaliser l’expérience en fonction de vos besoins. Lorsque les utilisateurs ajoutent un onglet ou configurent un onglet, une URL est associée à l’onglet présenté dans l’interface utilisateur de teams. La configuration d’un onglet consiste simplement à ajouter des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet de la carte DevOps Azure, la page Configuration vous permet de choisir la carte chargée par l’onglet. L’URL de la page de configuration est spécifiée par la `configurationUrl` propriété dans le `configurableTabs` tableau dans le manifeste de votre application.
 
 Vous pouvez disposer d’un (1) onglet de canal/groupe et jusqu’à seize (16) d’onglets personnels par application.
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, `setSettings()` la configuration doit avoir une valeur pour `websiteUrl` la propriété (voir ci-dessous). Les onglets personnels sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md). La prise en charge complète des onglets sur les clients mobiles sera bientôt disponible. Pour préparer la mise à jour, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md) lors de la création des onglets.
+Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété. Les onglets personnels sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md). La prise en charge complète des onglets sur les clients mobiles sera bientôt disponible. Pour préparer la mise à jour, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md) lors de la création des onglets.
