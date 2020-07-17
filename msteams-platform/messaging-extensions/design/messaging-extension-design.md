@@ -4,12 +4,12 @@ description: Décrit les instructions pour la création d’extensions de messag
 keywords: recommandations pour la conception des équipes de référence des extensions de messagerie conseils
 author: EmilyyC
 ms.author: qinch
-ms.openlocfilehash: cf2862b8c8544efcab21616c420d66937fb7406a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 5d62646c5757f93cc4f6ae6e089ef3a0918f9eea
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801122"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152685"
 ---
 # <a name="start-sharing-with-powerful-messaging-extensions"></a>Démarrer le partage avec des extensions de messagerie puissantes
 
@@ -46,4 +46,4 @@ N’affiche pas simplement le texte pour les utilisateurs. Qu’ils peuvent inte
 
 ### <a name="keep-users-in-the-app-context"></a>Conserver les utilisateurs dans le contexte de l’application
 
-Si une carte n’est pas suffisante et que vous devez fournir un lien pour plus d’informations, envisagez d’ouvrir un onglet au lieu d’ouvrir un navigateur pour une meilleure expérience utilisateur. *Consultez la rubrique* [Extend up teams application Wit un onglet personnalisé](../../tabs/how-to/add-tab.md)
+Si une carte n’est pas suffisante et que vous devez fournir un lien pour plus d’informations, envisagez d’ouvrir un onglet au lieu d’ouvrir un navigateur pour une meilleure expérience utilisateur. *Voir* [étendre votre application teams avec un onglet personnalisé](../../tabs/how-to/add-tab.md)
