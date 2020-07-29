@@ -3,12 +3,12 @@ title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
-ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
+ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45152700"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434537"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -359,7 +359,7 @@ Pour vous aider à résoudre ce problème, nous vous offrons le modèle d’appl
 
 ## <a name="staff-check-ins-9734"></a>&#9734; d’archivage du personnel
 
-L’archivage du personnel est une application, basée sur les [applications d’alimentation](/powerapps/powerapps-overview), qui permet une communication de supervision entre votre entreprise et le personnel du domaine. Le personnel peut facilement fournir des informations critiques et des mises à jour d’État à une base planifiée ou ad hoc directement à partir de teams. L’application prend en charge l’emplacement, les photos et les notes en temps réel, ainsi que les notifications de rappel et les flux de travail automatisés.
+L’archivage du personnel est une application basée sur les [applications puissantes](/powerapps/powerapps-overview)qui permet une communication de supervision entre votre entreprise et le personnel de terrain. Le personnel peut facilement fournir des informations critiques et des mises à jour d’État à une base planifiée ou ad hoc directement à partir de teams. L’application prend en charge l’emplacement, les photos et les notes en temps réel, ainsi que les notifications de rappel et les flux de travail automatisés.
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

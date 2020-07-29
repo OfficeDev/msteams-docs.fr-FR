@@ -2,23 +2,33 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137635"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434530"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
+
+>[!TIP]
+> Consultez nos modèles prêts pour la production dans le [**catalogue des modèles d’applications teams**](samples/app-templates.md). Le catalogue est classé par ordre alphabétique et les compléments les plus récents sont balisés avec une étoile **&#9734;**.
 
 ## <a name="change-log"></a>Journal des modifications
 
 Le journal des modifications répertorie les modifications apportées à la plateforme Microsoft teams et à cet ensemble de documents. Les entrées peuvent être utilisées pour attirer l’attention sur une nouvelle fonctionnalité qui est simplement intéressante pour les développeurs de teams.
 
-| **Date** | **Remarques** | **Rubriques modifiées** |
+| **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+| 07/22/2020 |Mises à jour des capacités des appareils mobiles.|[Demander des autorisations de périphérique pour votre onglet Microsoft teams](~/tabs/how-to/native-device-permissions.md) |
+|07/15/2020|Créer un assistant virtuel pour teams|[Assistant virtuel pour Microsoft teams](samples/virtual-assistant.md)|
+|07/14/2020|Revêtement d’une documentation d’indicateur de chargement natif|[Affichage d’un indicateur de chargement natif](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 | 07/01/2020 |Commencer à créer des applications teams à l’aide de Visual Studio code Toolkit.|[Créer des applications avec Microsoft teams Toolkit et Visual Studio code](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Authentification unique pour les onglets GA pour les clients Web et de bureau teams|[Authentification unique (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|06/05/2020| Schéma de manifeste mis à jour vers la version 1,7| [Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Les autorisations de consentement propres aux ressources à l’aide des API Microsoft Graph sont dans la version préliminaire pour les développeurs. |[Consentement propre à la ressource (RSC) — Aperçu pour les développeurs](graph-api/rsc/resource-specific-consent.md) |
+|5/18/2020|Intégrer des agents virtuels de puissance à teams|[Intégration d’un système d’agents virtuels chatbot à Microsoft teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|04/01/2020|Intégration de systèmes WFM avec le connecteur de mutations pour teams|[Microsoft teams décale les connecteurs WFM](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Ajout de la prise en charge de la récupération d’un membre d’une conversation et de la prise en charge supplémentaire pour la récupération des membres de la page. | [Obtenir un contexte Teams pour votre bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour construire deeplinks à ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre. `legacy.replyToId`.  |
 | 11/5/2019 | L’authentification unique à l’aide du kit de développement logiciel (SDK) Team JavaScript dans une page de contenu Web est dans l’aperçu développeur. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |

@@ -5,12 +5,12 @@ description: ''
 keywords: onglets teams groupe de canaux configurable statique
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137632"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434488"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -66,7 +66,7 @@ Un module de tâches est une expérience de type popup modale que vous pouvez d�
 
 Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclus dans le `validDomains` tableau dans votre [manifeste](~/concepts/build-and-test/apps-package.md). Pour plus d’informations, consultez la rubrique [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans la référence de schéma de manifeste. Toutefois, gardez à l’esprit que la fonctionnalité principale de votre onglet existe dans teams et non en dehors de teams.
 
-## <a name="showing-a-native-loading-indicator"></a>Affichage d’un indicateur de chargement natif
+## <a name="show-a-native-loading-indicator"></a>Afficher un indicateur de chargement natif
 
 À partir [du schéma de manifeste version 1.7](../../../resources/schema/manifest-schema.md), vous pouvez fournir un indicateur de [chargement natif](../../../resources/schema/manifest-schema.md#showloadingindicator) où le contenu de votre site Web est chargé dans Teams, par exemple, page de contenu de l' [onglet](#integrate-your-code-with-teams), page de [configuration](configuration-page.md), [page de suppression](removal-page.md) et [modules de tâches dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 

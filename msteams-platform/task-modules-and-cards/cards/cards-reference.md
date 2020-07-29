@@ -2,12 +2,12 @@
 title: Référence des cartes
 description: Décrit toutes les cartes et les actions de carte disponibles pour les robots dans teams
 keywords: Référence des cartes robots
-ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434544"
 ---
 # <a name="cards-reference"></a>Référence des cartes
 
@@ -74,6 +74,9 @@ Carte personnalisable qui peut contenir n’importe quelle combinaison de texte,
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+> [!NOTE]
+> Les éléments multimédias ne sont actuellement pas pris en charge dans les cartes adaptative v 1.2 sur la plateforme Teams.
 
 ### <a name="example-adaptive-card"></a>Exemple de carte adaptative
 
@@ -580,7 +583,7 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 }
 ```
 
-### <a name="for-more-information"></a>Pour plus d’informations
+### <a name="for-more-information"></a>Pour plus d'informations
 
 Référence de l’infrastructure bot :
 
