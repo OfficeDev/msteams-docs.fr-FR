@@ -3,12 +3,12 @@ title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434537"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531284"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -110,6 +110,23 @@ Cette application permet également de partager facilement des images/des images
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![Application d’autocollants](../assets/images/stickers.png)
+
+## <a name="e-prescriptions-9734"></a>&#9734; des prescriptions E 
+
+E-prescription est une application basée sur les [applications puissantes](/powerapps/maker/canvas-apps/embed-teams-app)qui améliore le télémédecin et la fonction Virtual Care en automatisant le processus d’émission de préscriptions pour les patients. Les professionnels de l’médecine peuvent rapidement consulter les rendez-vous, générer des préscriptions et envoyer des courriers électroniques avec des pièces jointes aux patients directement dans la plateforme Teams.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![Capture d’écran de l’application E-prescription. Indique comment un fournisseur de soins d’intégrité peut sélectionner un bouton générer pour commander une prescription pour un patient.](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Capture d’écran de l’application E-prescription. Explique comment les administrateurs peuvent gérer les fournisseurs de soins de santé qui utilisent l’application.](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="expert-finder"></a>Finder expert
 

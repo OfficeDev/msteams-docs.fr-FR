@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: How-to
 keywords: autorisation teams graphique des messages RSC
-ms.openlocfilehash: c1c02c2ba0051193aa459d0df26fadfc9fa55550
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
-ms.translationtype: Auto
+ms.openlocfilehash: a7384222e5e4cba164f918186ce53b4c1b702016
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867101"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531265"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Tester les autorisations de consentement propres aux ressources dans teams
 
@@ -29,19 +29,20 @@ Le consentement propre à la ressource (RSC) est une intégration de Microsoft t
       "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
       "resource":"https://AnyString",
       "applicationPermissions":[
-         "TeamSettings.Read.Group",
-         "ChannelMessage.Read.Group",
-         "TeamSettings.Edit.Group",
-         "ChannelSettings.Edit.Group",
          "Channel.Create.Group",
          "Channel.Delete.Group",
+         "ChannelMessage.Read.Group",
+         "ChannelSettings.Read.Group",
+         "ChannelSettings.Edit.Group",
+         "Member.Read.Group",
+         "Owner.Read.Group",
          "TeamsApp.Read.Group",
          "TeamsTab.Read.Group",
          "TeamsTab.Create.Group",
          "TeamsTab.Edit.Group",
          "TeamsTab.Delete.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group"
+         "TeamSettings.Read.Group",
+         "TeamSettings.Edit.Group"
       ]
    }
 ```
@@ -55,6 +56,7 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de la
 
 1. `azureADAppId`: ID de l’application Azure AD de votre application.
 1. `azureADAppSecret`— votre code secret d’application Azure AD (mot de passe)
+1. `token_scope`: l’étendue est requise pour obtenir un jeton-définissez la valeur surhttps://graph.microsoft.com/.default
 1. `teamGroupId`— vous pouvez obtenir l’ID de groupe d’équipe à partir du client teams comme suit :
 
 > [!div class="checklist"]
