@@ -1,21 +1,24 @@
 ---
-title: Lien unfurling
+title: Déploiement de lien
 author: clearab
 description: Comment effectuer un lien unfurling avec l’extension de messagerie dans une application Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279773"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587803"
 ---
-# <a name="link-unfurling"></a>Lien unfurling
+# <a name="link-unfurling"></a>Déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Avec Link unfurling, votre application peut s’inscrire pour `invoke` recevoir une activité lorsque des URL avec un domaine particulier sont collées dans la zone de message de composition. L `invoke` 'contient l’URL complète qui a été collée dans la zone de message de composition, et vous pouvez répondre avec une carte que l’utilisateur peut *Unfurl*, fournissant des informations ou des actions supplémentaires. Cela fonctionne de façon très similaire à une [commande de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md), avec l’URL servant de terme de recherche.
+> [!NOTE]
+> Actuellement, Link unfurling n’est pas pris en charge sur les clients mobiles.
+
+Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité `invoke` lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. L' `invoke` contient l’URL complète qui a été collée dans la zone de message de composition, et vous pouvez répondre avec une carte que l’utilisateur peut *Unfurl*, fournissant des informations ou des actions supplémentaires. Cela fonctionne de façon très similaire à une [commande de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md), avec l’URL servant de terme de recherche.
 
 L’extension de messagerie Azure DevOps utilise le lien unfurling pour rechercher les URL collées dans la zone de message de composition pointant vers un élément de travail. Dans la capture d’écran ci-dessous, un utilisateur a collé une URL pour un élément de travail dans Azure DevOps laquelle l’extension de messagerie a été résolue en carte.
 
@@ -23,7 +26,7 @@ L’extension de messagerie Azure DevOps utilise le lien unfurling pour recherch
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Ajouter un lien unfurling à votre manifeste d’application
 
-Pour ce faire, vous allez ajouter un `messageHandlers` nouveau tableau à `composeExtensions` la section de votre manifeste d’application JSON. Vous pouvez le faire à l’aide de l’aide d’App Studio ou manuellement. Les listes de domaine peuvent inclure des caractères génériques `*.example.com`, par exemple. Cela correspond exactement à un segment du domaine ; Si vous devez faire correspondre `a.b.example.com` , utilisez `*.*.example.com`.
+Pour ce faire, vous allez ajouter un nouveau `messageHandlers` tableau à la `composeExtensions` section de votre manifeste d’application JSON. Vous pouvez le faire à l’aide de l’aide d’App Studio ou manuellement. Les listes de domaine peuvent inclure des caractères génériques, par exemple `*.example.com` . Cela correspond exactement à un segment du domaine ; Si vous devez faire correspondre `a.b.example.com` , utilisez `*.*.example.com` .
 
 ### <a name="using-app-studio"></a>Utilisation de App Studio
 
@@ -89,7 +92,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {

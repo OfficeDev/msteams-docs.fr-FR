@@ -4,12 +4,12 @@ author: clearab
 description: Vue d’ensemble des extensions de messagerie sur la plateforme Microsoft teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 3ea9649a22ecc134e983037d1ef109be918a26b3
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914601"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587796"
 ---
 # <a name="what-are-messaging-extensions"></a>Que sont les extensions de messagerie ?
 

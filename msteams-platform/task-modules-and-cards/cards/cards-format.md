@@ -3,12 +3,12 @@ title: Mise en forme de texte dans les cartes
 description: Décrit la mise en forme de texte de carte dans Microsoft teams
 keywords: format des cartes robots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210686"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587810"
 ---
 # <a name="format-cards-in-teams"></a>Cartes de format dans teams
 
@@ -116,7 +116,8 @@ Les mentions basées sur les cartes sont prises en charge dans les clients Web, 
 Les robots et les extensions de messagerie peuvent inclure des mentions dans le contenu des cartes dans les éléments [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) et [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
->Les [éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans les cartes adaptative v 1.2 sur la plateforme Teams.
+> * Les [éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans les cartes adaptative v 1.2 sur la plateforme Teams.
+> * Canal & les mentions d’équipe ne sont pas prises en charge dans les messages bot.
 
 ### <a name="constructing-mentions"></a>Création de mentions
 
@@ -164,7 +165,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| en-tête (niveaux 1 à &ndash; 3) | **Text** | `### Text`|
+| en-tête (niveaux 1 à &ndash; 3) | **Texte** | `### Text`|
 | doubles | ~~text~~ | `~~text~~` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -253,7 +254,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (niveaux 1 à &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| en-tête (niveaux 1 à &ndash; 3) | **Texte** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -341,7 +342,7 @@ Les balises HTML sont prises en charge pour les cartes simples telles que le hé
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (niveaux 1 à &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| en-tête (niveaux 1 à &ndash; 3) | **Texte** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

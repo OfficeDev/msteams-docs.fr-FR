@@ -2,12 +2,12 @@
 title: Préparer votre client Office 365
 description: Prise en main de teams dans Office 365
 keywords: Configurer le chargement des équipes client Office 365
-ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 447968c9b56010e515fc1d1346eac4d8485c7f80
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914566"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587772"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Préparer votre client Office 365
 
@@ -31,13 +31,25 @@ Si Microsoft teams n’a pas été activé pour votre organisation, vous devez t
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Activer les applications de teams personnalisées et activer le téléchargement de l’application personnalisée
 
+Activez l’application personnalisée chargement pour votre client développeur comme suit :
+
+1. Connectez-vous au [Centre d’administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur. 
+
+2. Sélectionnez **afficher toutes les**  -->  **équipes**. 
+
+![image du menu de dépassement de l’application](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. Accéder aux stratégies d’installation des **applications teams**  -->  **Setup Policies**  -->  **global (par défaut** à l’échelle de l’organisation)  
+
+![image du menu de dépassement de l’application](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. Basculez **charger les applications personnalisées** vers la position **en** place.
+
+Voilà ! Votre client de test autorisera maintenant l’application personnalisée chargement.
+
 > [!Note] 
-> Si vous utilisez la plateforme de développement Office 365 pour créer votre application, ces paramètres doivent déjà être configurés pour vous permettre de créer, de télécharger et de tester votre application.
+> L’activation de la chargement peut prendre jusqu’à 24 heures. Pendant un intervalle de temps, vous pouvez utiliser le **chargement pour \<your tenant> ** tester votre application.
 
-Trois paramètres sont pertinents pour activer les applications personnalisées et le téléchargement d’applications personnalisées :
+![image du menu de dépassement de l’application](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-* **Paramètre** =>  => **de** l’application personnalisée à l’échelle de l’organisation autoriser une**interaction avec des applications personnalisées**: ce paramètre active ou désactive les applications personnalisées pour votre organisation. Il doit être activé. 
-* **Paramètre** => de l’application personnalisée d’équipe => **autoriser les membres à télécharger des applications personnalisées****activées ou désactivées** : ce paramètre s’applique à chaque équipe individuelle dans Microsoft Teams. Si vous souhaitez installer votre application pour une équipe spécifique, celle-ci doit être activée pour cette équipe.
-* **La stratégie** => d’application personnalisée utilisateur**peut télécharger des applications** => personnalisées**activées ou désactivées** : ce paramètre contrôle les autorisations d’un utilisateur individuel. Vous devrez activer ceci pour les personnes qui sont autorisées à télécharger des applications personnalisées.
-
-Pour plus d’informations sur la façon dont ces paramètres interagissent, *voir* [gérer les stratégies et les paramètres d’application personnalisée dans Microsoft teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) et [gérer les stratégies de configuration d’application dans Microsoft teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+Pour plus d’informations sur la façon dont ces paramètres interagissent, *voir* [gérer les stratégies et les paramètres d’application personnalisés dans Microsoft teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) et [gérer les stratégies de configuration d’application dans Microsoft teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).

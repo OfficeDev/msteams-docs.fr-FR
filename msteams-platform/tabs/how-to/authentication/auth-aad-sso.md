@@ -2,17 +2,14 @@
 title: Authentification unique
 description: Décrit l’authentification unique (SSO)
 keywords: API SSO d’authentification unique AAD pour l’authentification de teams
-ms.openlocfilehash: 849e2c357859a1e8980aaa4662a55319cd7b2493
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587733"
 ---
 # <a name="single-sign-on-sso"></a>Authentification unique (SSO)
-
-> [!NOTE]
-> * L’API d’authentification unique (SSO) est généralement disponible sur le Web et sur le bureau. Mobile sera bientôt disponible. En attendant, nous vous recommandons de revenir en douceur à notre [API d’authentification classique](auth-flow-tab.md) sur mobile.
 
 Les utilisateurs se connectent à Microsoft teams par le biais de leurs comptes professionnels, scolaires ou Microsoft (Office 365, Outlook, etc.). Vous pouvez en tirer parti en autorisant une authentification unique pour autoriser l’utilisation de votre onglet Microsoft Teams (ou module tâches) sur des clients de bureau ou mobiles. Par conséquent, si un utilisateur consent à utiliser votre application, il n’aura pas à s’accorder à nouveau un consentement sur un autre appareil : il se connectera automatiquement. De plus, nous récupérons votre jeton d’accès pour améliorer les performances et les temps de chargement.
 
@@ -87,6 +84,21 @@ Enregistrez votre application dans le[portail Azure ad](https://azure.microsoft.
     * offline_access
     * OpenId
     * profil
+
+13. Accéder à **l’authentification**
+
+    Si une application n’a pas reçu le consentement de l’administrateur informatique, les utilisateurs devront fournir un consentement lors de la première utilisation d’une application.
+
+    Définissez un URI de redirection :
+    * Sélectionnez **Ajouter une plateforme**.
+    * Sélectionnez **Web**.
+    * Entrez l' **URI de redirection** pour votre application. Il s’agit de la page dans laquelle un flux d’octroi implicite réussit la redirection de l’utilisateur.
+
+    Activez l’octroi implicite en cochant les cases suivantes :  
+    Jeton d’ID ✔  
+    Jeton d’accès ✔  
+    
+    
 
 > [!NOTE]
 >
