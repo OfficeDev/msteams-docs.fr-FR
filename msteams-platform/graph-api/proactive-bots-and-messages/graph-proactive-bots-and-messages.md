@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Graphique d’installation de conversation de messagerie proactive teams
-ms.openlocfilehash: 735dbfa39222f312b4f3714b5c009dfd1bf28b05
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434495"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587740"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Activation de l’installation proactive du bot et de la messagerie proactive dans teams avec Microsoft Graph (préversion publique)
 
@@ -20,7 +20,7 @@ ms.locfileid: "45434495"
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans teams
 
-Les messages proactifs sont initiés par les robots pour démarrer des conversations avec des utilisateurs. Elles répondent à de nombreux objectifs, notamment en envoyant des messages de bienvenue, en effectuant des enquêtes ou des sondages et en diffusant des notifications à l’échelle de l’organisation.  Les messages proactifs dans teams peuvent être fournis sous la forme de conversations **ad hoc** ou **basées sur des boîtes de dialogue** :
+Les messages proactifs sont initiés par les robots pour démarrer des conversations avec un utilisateur. Elles répondent à de nombreux objectifs, notamment en envoyant des messages de bienvenue, en effectuant des enquêtes ou des sondages et en diffusant des notifications à l’échelle de l’organisation.  Les messages proactifs dans teams peuvent être fournis sous la forme de conversations **ad hoc** ou **basées sur des boîtes de dialogue** :
 
 |Type de message | Description |
 |----------------|-------------- |
@@ -79,7 +79,7 @@ Le `teamsAppId` peut être récupéré à partir du catalogue d’applications d
 Requête **Get http** :
 
 ```http
-GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 La demande renverra un `teamsApp` objet. L’objet renvoyé `id` est l’ID de l’application générée par le catalogue de l’application et est différent du « ID : » que vous avez fourni dans le manifeste de votre application teams :
@@ -156,7 +156,7 @@ Le `chatId` peut également être récupéré comme suit :
 
 **Référence Microsoft Graph :** [obtenir une conversation](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** vous aurez besoin de votre application `{teamsAppInstallationId}` si vous ne l’avez pas, utilisez les éléments suivants :
+**1.** vous aurez besoin de votre application `{teamsAppInstallationId}` . Si vous ne l’avez pas, procédez comme suit :
 
 Requête **Get http** :
 
