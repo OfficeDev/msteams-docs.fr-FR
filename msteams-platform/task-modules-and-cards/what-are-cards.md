@@ -2,14 +2,14 @@
 title: Présentation des cartes
 description: Décrit les cartes et leur utilisation dans les robots, les connecteurs et les extensions de messagerie
 keywords: messages de la fiche robots de connecteurs
-ms.openlocfilehash: a260313c6e9442ce7bd76524e41e6465617bafb5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6d850f83183f12fa0c228a7a89b23e58f523e15b
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673738"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651655"
 ---
-# <a name="cards"></a>Fiche
+# <a name="cards"></a>Cartes
 
 Une *carte* est un conteneur d’interface utilisateur (IU) pour des informations courtes ou associées. Les cartes peuvent avoir plusieurs propriétés et pièces jointes. Les cartes peuvent inclure des boutons qui peuvent déclencher des [actions de carte](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -29,6 +29,15 @@ Teams utilise les cartes de trois façons différentes :
 * Connecteurs
 * Bots
 * Extensions de messagerie
+
+## <a name="adaptive-cards-and-incoming-webhooks"></a>Cartes adaptatives et webhooks entrants
+
+> [!NOTE]
+> Les cartes adaptatives sont prises en charge dans les webhooks entrants dans le cadre du [programme public developer preview](../resources/dev-preview/developer-preview-intro.md). Les aperçus publics sont disponibles pour l’accès anticipé et les commentaires. Bien que la publication soit stable et qu’elle ait subi des tests approfondis, elle n’est pas destinée à être utilisée en production.
+>
+> ✔ Au sein de l’aperçu du développeur, tous les éléments de schéma de carte adaptative native, à l’exception `Action.Submit` de, sont entièrement pris en charge.
+>
+> ✔ Les actions prises en charge sont [**action. OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**action. ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)et [**action. ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 ## <a name="cards-in-connectors"></a>Cartes dans les connecteurs
 

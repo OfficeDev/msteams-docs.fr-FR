@@ -2,13 +2,12 @@
 title: Créer des applications avec Microsoft teams Toolkit et Visual Studio code
 description: Commencer à créer des applications personnalisées directement dans Visual Studio code avec Microsoft teams Toolkit
 keywords: Kit de développement Visual Studio Visual Studio teams
-ms.date: 06/30/2020
-ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 7b8a32c099d85bec2584da2b42dcf5a524ecddbc
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531258"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651662"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Créer des applications avec Microsoft teams Toolkit et Visual Studio code
 
@@ -71,7 +70,7 @@ Lorsqu’une application est installée, le client teams analyse le fichier mani
 
 ## <a name="package-your-app"></a>Empaquetage de votre application
 
-Modification vous êtes la page de détails de l' **application** ou vous mettez à jour le **manifeste**, ou les fichiers **. env** dans le dossier **. Publish** de votre application généreront automatiquement votre fichier **Development.zip** . Vous devez inclure [deux icônes](../concepts/build-and-test/apps-package.md#icons) dans ce même dossier.
+Modification vous êtes la page de détails de l' **application** ou vous mettez à jour le **manifeste**, ou les fichiers **. env** dans le dossier  **. Publish** de votre application généreront automatiquement votre fichier **Development.zip** . Vous devez inclure [deux icônes](../concepts/build-and-test/apps-package.md#icons) dans ce même dossier.
 
 ## <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
 
@@ -86,21 +85,21 @@ Si vous souhaitez déboguer votre application basée sur les onglets sur localho
   <summary>Développer ici</summary>
 
 * Création et exécution de votre application
-  * Suivez le instuctions dans la section **Build and Run** de votre projet Lisez-moi afin qu’il soit pris en charge par https://localhost:3000/tab . En règle générale, cette opération implique l’exécution de `npm install` Then`npm start`
+  * Suivez le instuctions dans la section **Build and Run** de votre projet Lisez-moi afin qu’il soit pris en charge par https://localhost:3000/tab . En règle générale, cette opération implique l’exécution de `npm install` Then `npm start`
   * Accédez à https://localhost:3000/tab à partir de Google Chrome ou du chrome de bordure.
 
 * Acquérir le certificat SSL :
   * Ouvrez la fenêtre outils de développement chrome ( `ctrl + shift + i`  /  `cmd + option + i` ).
   * Cliquez sur l' `Security` onglet
-  * Cliquez sur activé `View certificate` et vous avez la possibilité de télécharger le certificat, soit en le faisant glisser sur votre bureau dans OS X, soit en cliquant sur l' `Details` onglet dans Windows et en cliquant sur`Copy to File…`
+  * Cliquez sur activé `View certificate` et vous avez la possibilité de télécharger le certificat, soit en le faisant glisser sur votre bureau dans OS X, soit en cliquant sur l' `Details` onglet dans Windows et en cliquant sur `Copy to File…`
   * Nommez le fichier <*tout*>. cer et enregistrez-le dans un dossier qui ne requiert pas le consentement de l’administrateur pour effectuer une action d’écriture.
   
 * Installer le certificat sur **Windows**
   * Sélectionnez l' `DER encoded binary X.509 (.CER)` option (la première) et enregistrez-la.
   * Double-cliquez sur le certificat et installez-le.
-  * Opte`Local Machine`
-  * Choisir`Place all certificates in the following store`
-  * Opte`Trusted Root Certification Authorities`
+  * Opte `Local Machine`
+  * Choisir `Place all certificates in the following store`
+  * Opte `Trusted Root Certification Authorities`
   * Confirmer votre installation
   
 * Installer le certificat **Mac OS X**
