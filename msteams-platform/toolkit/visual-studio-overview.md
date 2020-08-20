@@ -3,18 +3,18 @@ title: Créer des applications avec Microsoft teams Toolkit et Visual Studio
 description: Commencer à créer des applications personnalisées directement dans Visual Studio à l’aide du kit de développement Microsoft teams
 keywords: Kit de développement Visual Studio teams
 ms.topic: overview
-ms.openlocfilehash: 33005174dc1e12e6473522e7d7ee09920a989689
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: 79ea22cfd154313247132c22684d444c0813c66f
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819202"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio"></a>Créer des applications avec Microsoft teams Toolkit et Visual Studio
 
 Le kit de développement Microsoft teams vous permet de créer des applications teams personnalisées directement dans l’environnement de développement intégré (IDE) de Visual Studio. Le kit de développement Microsoft teams vous guide tout au long du processus et vous fournit tout ce dont vous avez besoin pour créer, déboguer et lancer votre application Teams.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 1. [Activer l’Aperçu pour les développeurs](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
@@ -22,7 +22,7 @@ Le kit de développement Microsoft teams vous permet de créer des applications 
 
 ![module asp.net Visual Studio](../assets/images/visual-studio-web-dev-module.png)
 
-3. Si vous souhaitez tester votre application en la déployant à partir de Visual Studio, IIS (Internet Information Services) doit être installé dans votre environnement de développement. Visual Studio n’inclut pas les services Internet (IIS) et il n’est pas inclus dans la configuration par défaut de Windows 10, Windows 8 ou Windows 7 ; Toutefois, vous pouvez télécharger la dernière version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=48264.)
+3. Si vous souhaitez tester votre application en la déployant à partir de Visual Studio, IIS (Internet Information Services) doit être installé dans votre environnement de développement. Visual Studio n’inclut pas les services Internet (IIS) et il n’est pas inclus dans la configuration par défaut de Windows 10, Windows 8 ou Windows 7 ; Toutefois, vous pouvez télécharger la dernière version à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=48264).
 
 ![Affichage de la page de téléchargement IIS](../assets/images/iis.png)
 

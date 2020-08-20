@@ -6,17 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Graphique d’installation de conversation de messagerie proactive teams
-ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587740"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819160"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Activation de l’installation proactive du bot et de la messagerie proactive dans teams avec Microsoft Graph (préversion publique)
 
 >[!IMPORTANT]
-> Les aperçus publics de Microsoft Graph sont disponibles pour l’accès anticipé et les commentaires. Bien que cette version ait subi des tests approfondis, elle n’est pas destinée à être utilisée en production.
+> Les aperçus publics de Microsoft Graph et Microsoft teams sont disponibles pour l’accès anticipé et les commentaires. Bien que cette version ait subi des tests approfondis, elle n’est pas destinée à être utilisée en production.
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans teams
 
@@ -46,7 +46,7 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 > [!div class="checklist"]
 > [!div class="checklist"]
 >
-> * **ID** : votre ID d’application Azure ad.
+> * **ID**  : votre ID d’application Azure ad.
 > * **ressource** — l’URL de la ressource pour l’application.
 >
 
@@ -63,14 +63,14 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 
 ### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a>✔ Créer et publier votre robot de messagerie proactive pour teams
 
-Pour commencer, vous aurez besoin d’un [bot pour teams](../../bots/how-to/create-a-bot-for-teams.md) avec des fonctionnalités de [messagerie proactive](../../concepts/bots/bot-conversations/bots-conv-proactive.md) et [publié](../../concepts/deploy-and-publish/overview.md) dans le [catalogue d’applications](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) de votre organisation ou dans [AppSource](https://appsource.microsoft.com/).
+Pour commencer, vous aurez besoin d’un [bot pour teams](../../bots/how-to/create-a-bot-for-teams.md) avec des fonctionnalités de [messagerie proactive](../../concepts/bots/bot-conversations/bots-conv-proactive.md) et  [publié](../../concepts/deploy-and-publish/overview.md) dans le [catalogue d’applications](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) de votre organisation ou dans [AppSource](https://appsource.microsoft.com/).
 
 >[!TIP]
 > Le modèle d’application [**Communicator**](../..//samples/app-templates.md#company-communicator) de l’entreprise prête pour la production permet la messagerie de diffusion et constitue une base intéressante pour la création de votre application bot proactive.
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔ Obtenir le `teamsAppId` pour votre application
 
-**1.** vous en aurez besoin `teamsAppId` pour les étapes suivantes.
+**1.** vous en aurez besoin `teamsAppId`  pour les étapes suivantes.
 
 Le `teamsAppId` peut être récupéré à partir du catalogue d’applications de votre organisation :
 
@@ -82,7 +82,7 @@ Requête **Get http** :
 GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-La demande renverra un `teamsApp` objet. L’objet renvoyé `id` est l’ID de l’application générée par le catalogue de l’application et est différent du « ID : » que vous avez fourni dans le manifeste de votre application teams :
+La demande renverra un `teamsApp`  objet. L’objet renvoyé `id`  est l’ID de l’application générée par le catalogue de l’application et est différent du « ID : » que vous avez fourni dans le manifeste de votre application teams :
 
 ```json
 {
@@ -98,14 +98,14 @@ La demande renverra un `teamsApp` objet. L’objet renvoyé `id` est l’ID de l
 }
 ```
 
-**2.** si votre application a déjà été téléchargée/versions test chargées pour un utilisateur dans l’étendue personnelle, vous pouvez récupérer les `teamsAppId` éléments suivants :
+**2.**  si votre application a déjà été téléchargée/versions test chargées pour un utilisateur dans l’étendue personnelle, vous pouvez récupérer les `teamsAppId` éléments suivants :
 
 **Référence de la page Microsoft Graph :** [répertorier les applications installées pour l’utilisateur](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
 Requête **Get http** :
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 **3.** si votre application a déjà été téléchargée/versions test chargées pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les `teamsAppId` éléments suivants :
@@ -115,7 +115,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 Requête **Get http** :
 
 ```http
-GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
+GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
@@ -176,7 +176,7 @@ Requête **http Get** (autorisation `TeamsAppInstallation.ReadWriteSelfForUser.A
 
 La propriété **ID** de la réponse est l' `chatId` .
 
-Vous pouvez également récupérer les `chatId` avec la demande ci-dessous, mais cela nécessite une autorisation plus large `Chat.Read.All` :
+Vous pouvez également récupérer les `chatId`  avec la demande ci-dessous, mais cela nécessite une autorisation plus large `Chat.Read.All` :
 
 Requête **http Get** (autorisation `Chat.Read.All` ) :
 
