@@ -344,6 +344,10 @@
       items:
         - name: Activer l’installation proactive du bot et la messagerie proactive
           href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: Importer des messages
+      items:
+        - name: Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
+          href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Ressources
   items:
     - name: Bots – SDK v3
