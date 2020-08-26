@@ -3,12 +3,12 @@ title: Prise en main d’App Studio pour Microsoft teams
 description: Commencer à créer des applications intéressantes dans Microsoft teams à l’aide d’App Studio
 keywords: mise en route de teams App Studio
 ms.date: 03/20/2019
-ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: b8bae38ae2a3044d87389b4bd5ee3d5a7d1e029d
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453860"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874876"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Développer rapidement des applications avec App Studio pour Microsoft teams
 
@@ -40,7 +40,7 @@ C’est ici que vous pouvez voir les [cartes que vous créez dans App Studio](#c
 
 ### <a name="manifest-editor"></a>Éditeur de manifeste
 
-Comme indiqué précédemment, la partie la plus significative d’un package d’application Microsoft teams est son fichier manifest. JSON. Ce fichier, qui doit être conforme au [schéma d’application de teams](~/resources/schema/manifest-schema.md), contient des métadonnées qui permettent à teams de présenter correctement votre application aux utilisateurs.
+Comme indiqué précédemment, la partie la plus significative d’un package d’application Microsoft teams est son manifest.jssur fichier. Ce fichier, qui doit être conforme au [schéma d’application de teams](~/resources/schema/manifest-schema.md), contient des métadonnées qui permettent à teams de présenter correctement votre application aux utilisateurs.
 
 L’onglet Éditeur de manifeste dans App Studio simplifie la création du manifeste, ce qui vous permet de décrire l’application, de télécharger vos icônes, d’ajouter des fonctionnalités d’application et de produire un fichier. zip pouvant facilement être téléchargé dans teams à des fins de test ou distribué à d’autres personnes. Notez que l’application Studio ne produit pas de code fonctionnel pour votre application ou héberge votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement d’application se traduit par une application de travail.
 
@@ -92,13 +92,16 @@ Chaque commande nécessite un titre et un ID. La commande peut éventuellement c
 
 #### <a name="test-and-distribute"></a>Test et distribution
 
-Une fois que vous avez terminé la définition de votre application, la section test et distribution vous permet d’exporter la définition de votre application sous la forme d’un fichier zip, qui peut ensuite être partagé et téléchargé dans le client teams à des fins de test. Si vous cliquez sur Exporter, le fichier zip est téléchargé en tant que *appname. zip* dans le répertoire de téléchargement par défaut.
+Une fois que vous avez terminé la définition de votre application, la section test et distribution vous permet d’exporter la définition de votre application sous la forme d’un fichier zip, qui peut ensuite être partagé et téléchargé dans le client teams à des fins de test. Si vous cliquez sur Exporter, le fichier zip est téléchargé en *appname.zip* dans le répertoire de téléchargement par défaut.
+
+##### <a name="publish-your-app-to-teams"></a>Publier votre application dans teams
+Sur la page d’accueil de votre projet, vous pouvez charger votre application dans une équipe, envoyer votre application à votre magasin d’applications personnalisé d’entreprise pour les utilisateurs de votre organisation ou soumettre votre application à la source de l’application pour tous les utilisateurs de teams. Votre administrateur informatique examinera ces envois. Vous pouvez revenir à la page *publier* pour vérifier l’état de votre envoi et savoir si votre application a été approuvée ou rejetée par votre administrateur informatique. Il s’agit également de l’endroit où vous allez envoyer des mises à jour à votre application ou d’annuler les envois actuellement actifs.
 
 ### <a name="card-editor"></a>Éditeur de carte
 
 Une carte est un conteneur pour des informations courtes ou associées. Microsoft teams prend en charge les cartes, qui peuvent avoir plusieurs propriétés et pièces jointes. Les cartes sont une façon dont les robots et les connecteurs relaient les informations exploitables aux utilisateurs. 
 
-Pour simplifier ce processus et réduire les risques d’erreurs, l’onglet Éditeur de carte vous permet de créer des cartes de héros ou des cartes miniatures à l’aide d’un formulaire et de vérifier et tester la carte obtenue (exactement comme un utilisateur le verrait) via un bot. Il fournit également le code JSON, C# ou node. js correspondant pour la carte que vous pouvez copier/coller dans le code source de votre application.
+Pour simplifier ce processus et réduire les risques d’erreurs, l’onglet Éditeur de carte vous permet de créer des cartes de héros ou des cartes miniatures à l’aide d’un formulaire et de vérifier et tester la carte obtenue (exactement comme un utilisateur le verrait) via un bot. Il fournit également le code JSON, C# ou Node.js correspondant pour la carte que vous pouvez copier/coller dans le code source de votre application.
 
 Si vous disposez déjà d’une carte que vous souhaitez vérifier dans Teams, vous pouvez coller le JSON de cette carte dans l’onglet JSON sous *Ajouter des informations* sur la carte et vous l’envoyer à vous-même pour voir à quoi il ressemble dans une conversation.
 

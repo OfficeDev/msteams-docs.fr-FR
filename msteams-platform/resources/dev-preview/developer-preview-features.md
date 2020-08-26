@@ -1,21 +1,17 @@
 ---
 title: Fonctionnalités de l’aperçu public pour les développeurs
-description: Décrit les fonctionnalités de la version d’évaluation pour développeurs publics de Microsoft teams
+description: Détails des fonctionnalités de Microsoft teams public developer preview
 keywords: fonctionnalités de développeur d’aperçu teams
-ms.openlocfilehash: e607a6c65253a5fd94f8a805f1264a567bb8fd24
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 773e0334bddf45b7b86d31329b99607f3b70c534
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819174"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874841"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Fonctionnalités de l’aperçu public pour les développeurs pour Microsoft teams
 
 L’aperçu des développeurs inclut les nouvelles fonctionnalités suivantes :
-
-## <a name="adaptive-cards-v12-support"></a>Prise en charge des cartes adaptatives v 1.2
-
-La prise en charge des [cartes adaptatives v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) dans teams est désormais disponible pour le grand public. Toutefois, les [éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans les cartes adaptative v 1.2 sur la plateforme Teams.
 
 ## <a name="tabs-single-sign-on-sso"></a>Authentification unique (SSO) des onglets
 
@@ -28,3 +24,19 @@ Notre Aperçu pour les développeurs est disponible dans les versions de manifes
 Avec l’ajout d' [API Microsoft Graph pour les appels et les réunions en ligne](/graph/api/resources/communications-api-overview?view=graph-rest-beta), les applications Microsoft teams peuvent désormais interagir avec les utilisateurs de façon enrichie à l’aide de la voix et de la vidéo. Ces API vous permettent d’ajouter de nouvelles fonctionnalités d’application, telles que la réponse vocale interactive (IVR), le contrôle d’appel et l’accès à des flux audio et/ou vidéo en temps réel pour les appels et les réunions, y compris le partage de bureau et d’application.
 
 Nous avons ajouté une nouvelle section sur la façon de créer et de développer des appels et des robots de réunions en ligne, en commençant par la [vue d’ensemble](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+
+## <a name="image-enlarge-support"></a>Prise en charge de l’image
+
+Il est désormais possible pour les robots d’indiquer les images partagées dans les cartes adaptatives de teams qui peuvent être agrandies. Cela est utile pour des scénarios tels que le partage de guides détaillés pas à pas via des robots qui pourraient être difficiles à lire pour les utilisateurs. Pour qu’une image soit extensible, il vous suffit de la marquer `allowExpand: true` comme indiqué ci-dessous.
+
+```json
+    {
+      "type": "Image",
+      "url": "https://picsum.photos/200/200?image=110",
+      "msTeams": {
+        "allowExpand": true
+      }
+    }
+```
+Cela entraînera le rendu par le client teams Web/de bureau d’un élément sur l’image pour permettre à l’utilisateur de développer l’image.
+

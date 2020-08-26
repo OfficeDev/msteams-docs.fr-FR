@@ -2,21 +2,31 @@
 title: Authentification unique
 description: Décrit l’authentification unique (SSO)
 keywords: API SSO d’authentification unique AAD pour l’authentification de teams
-ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 503d5ff9779224d922ab0d45c6e2a3b33d7e0de7
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587733"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874855"
 ---
 # <a name="single-sign-on-sso"></a>Authentification unique (SSO)
 
 Les utilisateurs se connectent à Microsoft teams par le biais de leurs comptes professionnels, scolaires ou Microsoft (Office 365, Outlook, etc.). Vous pouvez en tirer parti en autorisant une authentification unique pour autoriser l’utilisation de votre onglet Microsoft Teams (ou module tâches) sur des clients de bureau ou mobiles. Par conséquent, si un utilisateur consent à utiliser votre application, il n’aura pas à s’accorder à nouveau un consentement sur un autre appareil : il se connectera automatiquement. De plus, nous récupérons votre jeton d’accès pour améliorer les performances et les temps de chargement.
 
+>[!NOTE]
+> **Versions du client mobile teams prenant en charge SSO**  
+>
+> ✔ Teams pour Android (1416/1.0.0.2020073101 et versions ultérieures)
+>
+> ✔ Teams pour iOS (_version_: 2.0.18 et versions ultérieures)  
+>
+> Pour une expérience optimale avec Teams, utilisez la dernière version d’iOS et Android.
+
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 
 Le diagramme suivant illustre le fonctionnement du processus d’authentification unique :
 
+<!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. Dans l’onglet, un appel JavaScript est effectué vers `getAuthToken()` . Cette option indique à teams d’obtenir un jeton d’authentification pour l’application d’onglets.
@@ -37,7 +47,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
 
 ### <a name="1-create-your-azure-active-directory-azure-ad-application"></a>1. créer votre application Azure Active Directory (Azure AD)
 
-Enregistrez votre application dans le[portail Azure ad](https://azure.microsoft.com/features/azure-portal/). Il s’agit d’un processus de 5 à 10 minutes qui inclut les tâches suivantes:
+#### <a name="registering-your-application-in-theazure-ad-portal-overview"></a>Inscription de votre application dans le[portail Azure ad Portal](https://azure.microsoft.com/features/azure-portal/) :
 
 1. Obtenir l' [ID de votre application Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison Azure AD et, éventuellement, Microsoft Graph.
@@ -52,7 +62,7 @@ Enregistrez votre application dans le[portail Azure ad](https://azure.microsoft.
 > * Nous ne prenons actuellement pas en charge plusieurs domaines par application.
 > * Nous ne prenons pas en charge les applications qui utilisent le `azurewebsites.net` domaine car elles sont trop courantes et peuvent présenter un risque de sécurité. Toutefois, nous cherchons activement à supprimer cette restriction.
 
-#### <a name="steps"></a>Étapes
+#### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Enregistrement approfondi de votre application via le portail Azure Active Directory :
 
 1. Enregistrez une nouvelle application dans le portail [Azure Active Directory-inscriptions des applications](https://go.microsoft.com/fwlink/?linkid=2083908) .
 2. Sélectionnez **nouvelle inscription** et, dans la *page inscrire une application*, définissez les valeurs suivantes :
@@ -64,6 +74,8 @@ Enregistrez votre application dans le[portail Azure ad](https://azure.microsoft.
 4. Sélectionnez **Exposer une API** sous **Gérer**. 
 5. Sélectionnez le lien **définir** pour générer l’URI de l’ID de l’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet (avec une barre oblique « / » ajoutée à la fin) entre les deux barres obliques et le GUID. L’ID entier doit avoir la forme suivante : `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex : `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
+    
+    Le nom de domaine complet est le nom de domaine lisible par l’utilisateur à partir duquel votre application est fournie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok est modifié. 
 6. Sélectionnez le bouton **Ajouter une étendue**. Dans le volet qui s’ouvre, entrez `access_as_user` en tant que **nom de l’étendue**.
 7. Définir **qui peut consentir ?**`Admins and users`
 8. Renseignez les champs de configuration des invites d’administrateur et de consentement de l’utilisateur avec des valeurs appropriées pour l' `access_as_user` étendue :
@@ -72,13 +84,13 @@ Enregistrez votre application dans le[portail Azure ad](https://azure.microsoft.
     * **Titre du consentement**de l’utilisateur : teams peut accéder au profil utilisateur et faire des demandes au nom de l’utilisateur.
     * **Description du consentement de l’utilisateur :** Permettre aux équipes d’appeler les API de cette application avec les mêmes droits que l’utilisateur.
 9. Vérifiez que l' **État** est défini sur **activé** .
-10. Sélectionnez **Ajouter une étendue**
+10. Sélectionnez le bouton **Ajouter une étendue** à enregistrer. 
     * La partie domaine du **nom d’étendue** affiché juste en dessous du champ de texte doit correspondre automatiquement à l’URI d' **ID d’application** défini à l’étape précédente, avec `/access_as_user` ajouté à la fin :
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. Dans la section **applications clientes autorisées** , identifiez les applications que vous souhaitez autoriser pour l’application Web de votre application. Chacun des ID suivants doit être entré :
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Team mobile/application de bureau)
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`(Application Web Teams)
-12. Accédez à **autorisations d’API**et assurez-vous d’ajouter les autorisations suivantes :
+11. Dans la section **applications clientes autorisées** , identifiez les applications que vous souhaitez autoriser pour l’application Web de votre application. Sélectionnez *Ajouter une application cliente*. Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Team mobile/application de bureau)
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Application Web Teams)
+12. Accédez à **autorisations d’API**. Sélectionnez *Ajouter une autorisation délégation de*  >  *Microsoft Graph*  >  *autorisations*, puis ajoutez les autorisations suivantes :
     * User. Read (activé par défaut)
     * email
     * offline_access
@@ -92,13 +104,13 @@ Enregistrez votre application dans le[portail Azure ad](https://azure.microsoft.
     Définissez un URI de redirection :
     * Sélectionnez **Ajouter une plateforme**.
     * Sélectionnez **Web**.
-    * Entrez l' **URI de redirection** pour votre application. Il s’agit de la page dans laquelle un flux d’octroi implicite réussit la redirection de l’utilisateur.
+    * Entrez l' **URI de redirection** pour votre application. Il s’agit de la page dans laquelle un flux d’octroi implicite réussit la redirection de l’utilisateur. Il s’agit du même nom de domaine complet que celui que vous avez entré à l’étape 5, suivi de l’itinéraire de l’API à partir duquel une réponse d’authentification doit être envoyée. Si vous configurez l’un des exemples de teams, voici ce qui suit : `https://subdomain.example.com/auth-end`
 
-    Activez l’octroi implicite en cochant les cases suivantes :  
+    Ensuite, activez l’octroi implicite en cochant les cases suivantes :  
     Jeton d’ID ✔  
     Jeton d’accès ✔  
     
-    
+Félicitations ! Vous avez terminé le prerequsities d’inscription de l’application pour poursuivre l’application d’authentification unique de votre onglet.     
 
 > [!NOTE]
 >
@@ -174,11 +186,11 @@ Une autre approche pour obtenir des étendues Microsoft Graph supplémentaires c
 
 1. Le jeton récupéré à l’aide de `getAuthToken()` doit être échangé côté serveur à l’aide du flux Azure ad [de la part de](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) pour accéder à ces API Microsoft Graph supplémentaires.
     * Veillez à utiliser le point de terminaison Microsoft Graph v2 pour ce Exchange.
-2. Si l’échange échoue, Azure AD renvoie une exception Grant non valide. Il y a généralement l’un des deux messages d’erreur suivants : `invalid_grant` ou`interaction_required`
+2. Si l’échange échoue, Azure AD renvoie une exception Grant non valide. Il y a généralement l’un des deux messages d’erreur suivants : `invalid_grant` ou `interaction_required`
 3. Lorsque l’échange échoue, vous devez demander un consentement supplémentaire. Nous vous recommandons d’afficher une interface utilisateur demandant à l’utilisateur d’accorder un consentement supplémentaire. Cette interface utilisateur doit inclure un bouton qui déclenche une boîte de dialogue d’autorisation Azure AD à l’aide de notre [API d’authentification Azure ad](~/concepts/authentication/auth-silent-aad.md).
 4. Lorsque vous demandez un consentement supplémentaire d’Azure AD, vous devez inclure `prompt=consent` dans votre [paramètre de chaîne de requête](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) dans Azure ad, sinon Azure ad ne demandera pas les étendues supplémentaires.
-    * Au lieu de:`?scope={scopes}`
-    * Utilisez ce qui suit :`?prompt=consent&scope={scopes}`
+    * Au lieu de: `?scope={scopes}`
+    * Utilisez ce qui suit : `?prompt=consent&scope={scopes}`
     * Assurez- `{scopes}` vous que inclut toutes les étendues que vous invitez l’utilisateur (par exemple : mail. Read ou User. Read).
 5. Une fois que l’utilisateur a accordé une autorisation supplémentaire, essayez de nouveau pour accéder à ces API supplémentaires.
 

@@ -1,13 +1,13 @@
 ---
-title: Guide sur le processus d’approbation de l’application Microsoft teams
-description: Décrit le processus d’approbation pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
+title: Guide du processus de soumission d’approbation d’application Microsoft teams
+description: Décrit le processus d’approbation d’envoi pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
 keywords: teams publier le magasin Office Publishing Publish AppSource Partner Center Verification de compte
-ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434474"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874869"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envoi de votre application à AppSource
 
@@ -28,6 +28,7 @@ La publication de votre application dans [AppSource](https://appsource.microsoft
 >
 >- Si votre application teams contient un bot, vous devez vous conformer au [Code de conduite de](https://aka.ms/bf-conduct)l’infrastructure de développement de robots.
 >- Si votre application contient un connecteur Office 365, des conditions supplémentaires peuvent s’appliquer. *Consultez* le [tableau de bord du développeur de connecteurs](https://aka.ms/connectorsdashboard) et des développeurs d' [applications](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
+>- Pour que votre application soit disponible pour les utilisateurs de GCC et pour éviter les listes d’applications en double dans la Banque, le processus/flux d’authentification doit identifier et acheminer l’utilisateur vers l’URL de contenu attendue pour les utilisateurs de GCC.
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQ — applications teams et comptes partenaires
 
@@ -54,7 +55,7 @@ Consultez notre [page de support des éditeurs](https://aka.ms/marketplacepublis
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>Comment puis-je gérer mon compte Office Store ?
 
-Pour obtenir des instructions sur la gestion de votre compte Office Store via le centre de partenaires, consultez notre [compte Manage Your Office Store dans le Centre des partenaires](/office/dev/store/manage-account-settings-and-profile) .
+Pour obtenir des instructions sur la gestion de votre compte Office Store via le centre de partenaires, consultez notre  [compte Manage Your Office Store dans le Centre des partenaires](/office/dev/store/manage-account-settings-and-profile) .
 
 ## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>Comment puis-je ajouter mon numéro de téléphone à la section contact du profil partenaire ?
 
@@ -93,7 +94,7 @@ Procédez comme suit :
 
 1. Vérifiez votre dossier de courrier indésirable.
 1. Effacez le cache du navigateur, accédez à votre tableau de bord du compte centre partenaire, puis sélectionnez le lien **renvoyer le message électronique de vérification** pour renvoyer le message électronique de vérification à votre adresse de messagerie.
-1. Essayez d’accéder au lien **renvoyer la messagerie de vérification** à partir d’un autre navigateur.
+1. Essayez d’accéder au lien  **renvoyer la messagerie de vérification** à partir d’un autre navigateur.
 1. Collaborez avec votre service informatique pour vous assurer que les e-mails de vérification ne sont pas bloqués par le serveur de messagerie.
 1. Réglez le filtre de courrier indésirable de votre serveur pour autoriser/autoriser tous les messages électroniques provenant d' **maccount@microsoft. <span></span> com**.
 
