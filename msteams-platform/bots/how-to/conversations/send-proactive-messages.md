@@ -4,84 +4,218 @@ author: clearab
 description: Comment envoyer des messages proactifs avec votre robot Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6e387dcf0e73124d57996a56c835f5a99fc6f1c6
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 2dfb8e18243079ca38d505f4b80deb7abf2de32f
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874848"
 ---
-# <a name="send-proactive-messages"></a><span data-ttu-id="14238-103">Envoi de messages proactifs</span><span class="sxs-lookup"><span data-stu-id="14238-103">Send proactive messages</span></span>
+# <a name="send-proactive-messages"></a><span data-ttu-id="3afe2-103">Envoi de messages proactifs</span><span class="sxs-lookup"><span data-stu-id="3afe2-103">Send proactive messages</span></span>
+
+[!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
+
+<span data-ttu-id="3afe2-104">Un message proactif est un message envoyé par un bot qui n’est pas en réponse directe à une demande d’un utilisateur.</span><span class="sxs-lookup"><span data-stu-id="3afe2-104">A proactive message is any message sent by a bot that is not in direct response to a request from a user.</span></span> <span data-ttu-id="3afe2-105">Cela peut inclure des messages comme :</span><span class="sxs-lookup"><span data-stu-id="3afe2-105">This can include messages like:</span></span>
+
+* <span data-ttu-id="3afe2-106">Les messages de bienvenue</span><span class="sxs-lookup"><span data-stu-id="3afe2-106">Welcome messages</span></span>
+* <span data-ttu-id="3afe2-107">Notifications</span><span class="sxs-lookup"><span data-stu-id="3afe2-107">Notifications</span></span>
+* <span data-ttu-id="3afe2-108">Messages planifiés</span><span class="sxs-lookup"><span data-stu-id="3afe2-108">Scheduled messages</span></span>
+
+<span data-ttu-id="3afe2-109">Pour que votre bot puisse envoyer un message proactif, il doit avoir accès à l’utilisateur, à la conversation de groupe ou à l’équipe à laquelle vous souhaitez envoyer le message.</span><span class="sxs-lookup"><span data-stu-id="3afe2-109">In order for your bot to send a proactive message, it must have access to the user, group chat, or team that you wish to send the message to.</span></span> <span data-ttu-id="3afe2-110">Pour une conversation de groupe ou une équipe, cela signifie que l’application qui contient votre robot doit d’abord être installée à cet emplacement.</span><span class="sxs-lookup"><span data-stu-id="3afe2-110">For a group chat or team, this means the app that contains your bot must first be installed to that location.</span></span> <span data-ttu-id="3afe2-111">Vous pouvez [installer votre application de façon proactive en utilisant Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une [stratégie d’application](/microsoftteams/teams-custom-app-policies-and-settings) pour envoyer des applications à des équipes et des utilisateurs de votre client.</span><span class="sxs-lookup"><span data-stu-id="3afe2-111">You can [proactively install your app using Graph](#proactively-install-your-app-using-graph) in a team if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant.</span></span> <span data-ttu-id="3afe2-112">Pour les utilisateurs, votre application doit être installée pour cet utilisateur ou votre utilisateur doit faire partie d’une équipe où votre application est installée.</span><span class="sxs-lookup"><span data-stu-id="3afe2-112">For users, your app either needs to be installed for that user, or your user needs to be part of a team where your app is installed.</span></span>
+
+<span data-ttu-id="3afe2-113">L’envoi d’un message proactif est différent de l’envoi d’un message standard dans lequel vous n’aurez pas `turnContext` à utiliser une réponse pour répondre.</span><span class="sxs-lookup"><span data-stu-id="3afe2-113">Sending a proactive message is different than sending a regular message in that you won't have an active `turnContext` to use for a reply.</span></span> <span data-ttu-id="3afe2-114">Vous devrez peut-être également créer la conversation (par exemple, une nouvelle conversation un-à-un ou un nouveau fil de conversation dans un canal) avant d’envoyer le message.</span><span class="sxs-lookup"><span data-stu-id="3afe2-114">You may also need to create the conversation (for example a new one-to-one chat, or a new conversation thread in a channel) before sending the message.</span></span> <span data-ttu-id="3afe2-115">Vous ne pouvez pas créer une nouvelle conversation de groupe ou une nouvelle chaîne dans une équipe avec la messagerie proactive.</span><span class="sxs-lookup"><span data-stu-id="3afe2-115">You cannot create a new group chat or a new channel in a team with proactive messaging.</span></span>
+
+<span data-ttu-id="3afe2-116">À un niveau élevé, les étapes que vous devez effectuer pour envoyer un message proactif sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="3afe2-116">At a high level the steps you'll need to complete to send a proactive message are:</span></span>
+
+1. <span data-ttu-id="3afe2-117">[Obtenir l’ID d’utilisateur ou l’ID d’équipe/de canal](#get-the-user-id-or-teamchannel-id) (le cas échéant).</span><span class="sxs-lookup"><span data-stu-id="3afe2-117">[Get the user ID or team/channel ID](#get-the-user-id-or-teamchannel-id) (if needed).</span></span>
+1. <span data-ttu-id="3afe2-118">[Créez le thème conversation ou conversation](#create-the-conversation) (le cas échéant).</span><span class="sxs-lookup"><span data-stu-id="3afe2-118">[Create the conversation or conversation thread](#create-the-conversation) (if needed).</span></span>
+1. <span data-ttu-id="3afe2-119">[Obtenir l’ID de conversation](#get-the-conversation-id).</span><span class="sxs-lookup"><span data-stu-id="3afe2-119">[Get the conversation ID](#get-the-conversation-id).</span></span>
+1. <span data-ttu-id="3afe2-120">[Envoyer le message](#send-the-message).</span><span class="sxs-lookup"><span data-stu-id="3afe2-120">[Send the message](#send-the-message).</span></span>
+
+<span data-ttu-id="3afe2-121">Les extraits de code dans la section [exemples](#examples) ci-dessous permettent de créer une conversation un-à-un, consultez la section [références](#references) pour obtenir des liens vers des exemples de travail complets pour les conversations et les groupes/canaux un-à-un.</span><span class="sxs-lookup"><span data-stu-id="3afe2-121">The code snippets in the [examples](#examples) section below are for creating a one-to-one conversation, see the [references](#references) section for links to complete working samples for both one-to-once conversations and group/channels.</span></span>
+
+## <a name="get-the-user-id-or-teamchannel-id"></a><span data-ttu-id="3afe2-122">Obtenir l’ID d’utilisateur ou l’ID d’équipe/de canal</span><span class="sxs-lookup"><span data-stu-id="3afe2-122">Get the user ID or team/channel ID</span></span>
+
+<span data-ttu-id="3afe2-123">Si vous devez créer un nouveau thème de conversation ou de conversation dans un canal, vous aurez d’abord besoin de l’ID approprié pour créer la conversation.</span><span class="sxs-lookup"><span data-stu-id="3afe2-123">If you need to create a new conversation or conversation thread in a channel you'll first need the right ID to create the conversation.</span></span> <span data-ttu-id="3afe2-124">Vous pouvez recevoir/récupérer cet ID de plusieurs façons :</span><span class="sxs-lookup"><span data-stu-id="3afe2-124">You can receive/retrieve this ID in multiple ways:</span></span>
+
+1. <span data-ttu-id="3afe2-125">Lorsque votre application est installée dans un contexte particulier, vous recevez une [ `onMembersAdded` activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span><span class="sxs-lookup"><span data-stu-id="3afe2-125">When your app is installed in any particular context, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+1. <span data-ttu-id="3afe2-126">Lorsqu’un nouvel utilisateur est ajouté à un contexte dans lequel votre application est installée, vous recevez une [ `onMembersAdded` activité](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span><span class="sxs-lookup"><span data-stu-id="3afe2-126">When a new user is added to a context where your app is installed, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+1. <span data-ttu-id="3afe2-127">Vous pouvez récupérer la [liste des canaux](~/bots/how-to/get-teams-context.md) d’une équipe installée sur votre application.</span><span class="sxs-lookup"><span data-stu-id="3afe2-127">You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team your app is installed.</span></span>
+1. <span data-ttu-id="3afe2-128">Vous pouvez récupérer la [liste des membres](~/bots/how-to/get-teams-context.md) d’une équipe installée sur votre application.</span><span class="sxs-lookup"><span data-stu-id="3afe2-128">You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team your app is installed.</span></span>
+1. <span data-ttu-id="3afe2-129">Chaque activité reçue par votre robot contient les informations nécessaires.</span><span class="sxs-lookup"><span data-stu-id="3afe2-129">Every Activity your bot receives will contain the necessary information.</span></span>
+
+<span data-ttu-id="3afe2-130">Quelle que soit la façon dont vous obtenez les informations, vous devez stocker le `tenantId` et le `userId` ou `channelId` pour créer une conversation.</span><span class="sxs-lookup"><span data-stu-id="3afe2-130">Regardless of how you gain the information, you'll need to store the `tenantId` and either the `userId` or `channelId` in order to create a new conversation.</span></span> <span data-ttu-id="3afe2-131">Vous pouvez également utiliser le `teamId` pour créer un fil de conversation dans le canal général/par défaut d’une équipe.</span><span class="sxs-lookup"><span data-stu-id="3afe2-131">You can also use the `teamId` to create a new conversation thread in the general/default channel of a team.</span></span>
+
+<span data-ttu-id="3afe2-132">Le `userId` est unique pour votre ID de robot et un utilisateur particulier, vous ne pouvez pas les réutiliser entre les robots.</span><span class="sxs-lookup"><span data-stu-id="3afe2-132">The `userId` is unique to your bot Id and a particular user, you cannot re-use them between bots.</span></span> <span data-ttu-id="3afe2-133">Le `channelId` est global, toutefois, votre robot _doit_ être installé dans l’équipe avant de pouvoir envoyer un message proactif à un canal.</span><span class="sxs-lookup"><span data-stu-id="3afe2-133">The `channelId` is global, however your bot _must_ be installed in the team before you can send a proactive message to a channel.</span></span>
+
+## <a name="create-the-conversation"></a><span data-ttu-id="3afe2-134">Créer la conversation</span><span class="sxs-lookup"><span data-stu-id="3afe2-134">Create the conversation</span></span>
+
+<span data-ttu-id="3afe2-135">Une fois que vous avez les informations de l’utilisateur/du canal, vous devez créer la conversation si elle n’existe pas déjà (ou si vous ne connaissez pas le `conversationId` ).</span><span class="sxs-lookup"><span data-stu-id="3afe2-135">Once you have the user/channel information, you'll need to create the conversation if it doesn't already exist (or you don't know the `conversationId`).</span></span> <span data-ttu-id="3afe2-136">Vous devez uniquement créer la conversation une seule fois ; Veillez à stocker la `conversationId` valeur ou l' `conversationReference` objet à utiliser à l’avenir.</span><span class="sxs-lookup"><span data-stu-id="3afe2-136">You should only create the conversation once; make sure you store the `conversationId` value or `conversationReference` object to use in the future.</span></span>
+
+## <a name="get-the-conversation-id"></a><span data-ttu-id="3afe2-137">Obtenir l’ID de conversation</span><span class="sxs-lookup"><span data-stu-id="3afe2-137">Get the conversation ID</span></span>
+
+<span data-ttu-id="3afe2-138">Une fois la conversation créée, vous devez utiliser l' `conversationReference` objet ou le `conversationId` et le `tenantId` pour envoyer le message.</span><span class="sxs-lookup"><span data-stu-id="3afe2-138">Once the conversation has been created, you will use either the `conversationReference` object or the `conversationId` and the `tenantId` to send the message.</span></span> <span data-ttu-id="3afe2-139">Vous pouvez obtenir cet ID en créant la conversation ou en la stockant à partir de n’importe quelle activité qui vous a été envoyée à partir de ce contexte.</span><span class="sxs-lookup"><span data-stu-id="3afe2-139">You can get this Id by either creating the conversation, or storing it from any Activity sent to you from that context.</span></span> <span data-ttu-id="3afe2-140">Assurez-vous que vous stockez cet ID.</span><span class="sxs-lookup"><span data-stu-id="3afe2-140">Make certain that you store this Id.</span></span>
+
+## <a name="send-the-message"></a><span data-ttu-id="3afe2-141">Envoyer le message</span><span class="sxs-lookup"><span data-stu-id="3afe2-141">Send the message</span></span>
+
+<span data-ttu-id="3afe2-142">Maintenant que vous disposez des informations d’adresse appropriées, vous pouvez envoyer votre message.</span><span class="sxs-lookup"><span data-stu-id="3afe2-142">Now that you have the right address information, you can send your message.</span></span> <span data-ttu-id="3afe2-143">Si vous utilisez le kit de développement logiciel (SDK), vous pouvez le faire à l’aide de la `continueConversation` méthode et du `conversationId` et `tenantId` pour effectuer un appel d’API direct.</span><span class="sxs-lookup"><span data-stu-id="3afe2-143">If you're using the SDK, you'll do so using the `continueConversation` method,and the `conversationId` and `tenantId` to make a direct API call.</span></span>  <span data-ttu-id="3afe2-144">Vous devrez définir `conversationParameters` correctement l’envoi de votre message : consultez les [exemples](#examples) ci-dessous ou utilisez l’un des exemples figurant dans la section [références](#references) .</span><span class="sxs-lookup"><span data-stu-id="3afe2-144">You'll need to set the `conversationParameters` correctly to successfully send your message - see the [examples](#examples) below or use one of the samples listed in the [references](#references) section.</span></span>
+
+## <a name="best-practices-for-proactive-messaging"></a><span data-ttu-id="3afe2-145">Meilleures pratiques pour la messagerie proactive</span><span class="sxs-lookup"><span data-stu-id="3afe2-145">Best practices for proactive messaging</span></span>
+
+<span data-ttu-id="3afe2-146">L’envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="3afe2-146">Sending proactive messages to users can be a very effective way to communicate with your users.</span></span> <span data-ttu-id="3afe2-147">Toutefois, à partir de leur perspective, ce message peut sembler totalement indésirable et, dans le cas de messages de bienvenue, il sera la première fois qu’il interagit avec votre application.</span><span class="sxs-lookup"><span data-stu-id="3afe2-147">However, from their perspective this message can appear completely unprompted and, in the case of welcome messages, it will be the first time they've interacted with your app.</span></span> <span data-ttu-id="3afe2-148">Par conséquent, il est très important d’utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable) et de fournir suffisamment d’informations pour permettre aux utilisateurs de comprendre la raison pour laquelle ils reçoivent des messages.</span><span class="sxs-lookup"><span data-stu-id="3afe2-148">As such, it is very important to use this functionality sparingly (don't spam your users) and to provide enough information to let users understand why they are being messaged.</span></span>
+
+### <a name="welcome-messages"></a><span data-ttu-id="3afe2-149">Les messages de bienvenue</span><span class="sxs-lookup"><span data-stu-id="3afe2-149">Welcome messages</span></span>
+
+<span data-ttu-id="3afe2-150">Lors de l’utilisation de la messagerie proactive pour envoyer un message de bienvenue à un utilisateur, vous devez garder à l’esprit que, pour la plupart des personnes qui reçoivent le message, il n’y aura pas de contexte pour les raisons pour lesquelles ils le reçoivent.</span><span class="sxs-lookup"><span data-stu-id="3afe2-150">When using proactive messaging to send a welcome message to a user you must keep in mind that, for most people receiving the message, there will be no context for why they are receiving it.</span></span> <span data-ttu-id="3afe2-151">Il s’agit également de la première fois qu’ils interagissent avec votre application ; Il s’agit de votre opportunité de créer une bonne première impression.</span><span class="sxs-lookup"><span data-stu-id="3afe2-151">This is also the first time they will have interacted with your app; it is your opportunity to create a good first impression.</span></span> <span data-ttu-id="3afe2-152">Les meilleurs messages d’accueil sont les suivants :</span><span class="sxs-lookup"><span data-stu-id="3afe2-152">The best welcome messages will include:</span></span>
+
+* <span data-ttu-id="3afe2-153">**Raisons pour lesquelles un utilisateur reçoit le message.**</span><span class="sxs-lookup"><span data-stu-id="3afe2-153">**Why a user is receiving the message.**</span></span> <span data-ttu-id="3afe2-154">Il doit être très clair que les utilisateurs reçoivent le message.</span><span class="sxs-lookup"><span data-stu-id="3afe2-154">It should be very clear to the user why they are receiving the message.</span></span> <span data-ttu-id="3afe2-155">Si votre robot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, indiquez-lui quel canal il a été installé et éventuellement qui l’a installé.</span><span class="sxs-lookup"><span data-stu-id="3afe2-155">If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.</span></span>
+* <span data-ttu-id="3afe2-156">**Ce que vous proposez.**</span><span class="sxs-lookup"><span data-stu-id="3afe2-156">**What do you offer.**</span></span> <span data-ttu-id="3afe2-157">Qu’est-il possible de faire avec votre application ?</span><span class="sxs-lookup"><span data-stu-id="3afe2-157">What can they do with your app?</span></span> <span data-ttu-id="3afe2-158">Quelle valeur pouvez-vous leur apporter ?</span><span class="sxs-lookup"><span data-stu-id="3afe2-158">What value can you bring to them?</span></span>
+* <span data-ttu-id="3afe2-159">**Que dois-je faire ensuite ?**</span><span class="sxs-lookup"><span data-stu-id="3afe2-159">**What should they do next.**</span></span> <span data-ttu-id="3afe2-160">Invitez-les à essayer une commande ou à interagir avec votre application d’une certaine façon.</span><span class="sxs-lookup"><span data-stu-id="3afe2-160">Invite them to try out a command, or interact with your app in some way.</span></span>
+
+<span data-ttu-id="3afe2-161">N’oubliez pas que les messages de bienvenue médiocres peuvent amener les utilisateurs à bloquer votre robot.</span><span class="sxs-lookup"><span data-stu-id="3afe2-161">Remember, poor welcome messages can lead to users blocking your bot.</span></span> <span data-ttu-id="3afe2-162">Vous devez consacrer suffisamment de temps à la conception de vos messages de bienvenue et les parcourir s’ils n’ont pas l’effet escompté.</span><span class="sxs-lookup"><span data-stu-id="3afe2-162">You should spend plenty of time crafting your welcome messages, and iterate on them if they are not having the desired effect.</span></span>
+
+### <a name="notification-messages"></a><span data-ttu-id="3afe2-163">Les messages de notification</span><span class="sxs-lookup"><span data-stu-id="3afe2-163">Notification messages</span></span>
+
+<span data-ttu-id="3afe2-164">Lors de l’utilisation de la messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs disposent d’un chemin d’accès clair afin de prendre des mesures courantes en fonction de votre notification et de bien comprendre la raison pour laquelle la notification s’est produite.</span><span class="sxs-lookup"><span data-stu-id="3afe2-164">When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification and a clear understanding of why the notification occurred.</span></span> <span data-ttu-id="3afe2-165">Les messages de notification valides sont généralement les suivants :</span><span class="sxs-lookup"><span data-stu-id="3afe2-165">Good notification messages will generally include:</span></span>
+
+* <span data-ttu-id="3afe2-166">**Que s'est-il passé.**</span><span class="sxs-lookup"><span data-stu-id="3afe2-166">**What happened.**</span></span> <span data-ttu-id="3afe2-167">Indication claire de l’origine de la notification.</span><span class="sxs-lookup"><span data-stu-id="3afe2-167">A clear indication of what happened to cause the notification.</span></span>
+* <span data-ttu-id="3afe2-168">**Quel a été le résultat.**</span><span class="sxs-lookup"><span data-stu-id="3afe2-168">**What was the result.**</span></span> <span data-ttu-id="3afe2-169">Il doit être clair quel élément/élément a été mis à jour pour déclencher la notification.</span><span class="sxs-lookup"><span data-stu-id="3afe2-169">It should be clear what item/thing was updated to cause the notification.</span></span>
+* <span data-ttu-id="3afe2-170">**OMS/ce qui a été déclenché.**</span><span class="sxs-lookup"><span data-stu-id="3afe2-170">**Who/what triggered it.**</span></span> <span data-ttu-id="3afe2-171">Les personnes ou les actions qui ont entraîné l’envoi de la notification.</span><span class="sxs-lookup"><span data-stu-id="3afe2-171">Who or what took action that caused the notification to be sent.</span></span>
+* <span data-ttu-id="3afe2-172">**Ce que les utilisateurs peuvent faire en réponse.**</span><span class="sxs-lookup"><span data-stu-id="3afe2-172">**What can users do in response.**</span></span> <span data-ttu-id="3afe2-173">Permettre aux utilisateurs de prendre facilement des mesures en fonction de vos notifications.</span><span class="sxs-lookup"><span data-stu-id="3afe2-173">Make it easy for your users to take actions based on your notifications.</span></span>
+* <span data-ttu-id="3afe2-174">**Comment les utilisateurs peuvent-ils les désactiver** ? Vous devez fournir un chemin d’accès permettant aux utilisateurs de désactiver les notifications supplémentaires.</span><span class="sxs-lookup"><span data-stu-id="3afe2-174">**How can users opt out.** You need to provide a path for users to opt out of additional notifications.</span></span>
+
+## <a name="proactively-install-your-app-using-graph"></a><span data-ttu-id="3afe2-175">Installer de manière proactive votre application à l’aide de Graph</span><span class="sxs-lookup"><span data-stu-id="3afe2-175">Proactively install your app using Graph</span></span>
 
 > [!Note]
-> <span data-ttu-id="14238-104">Les exemples de code de cet article utilisent le kit de développement logiciel (SDK) de l’infrastructure de robot v3 et les extensions du kit de développement logiciel V3 teams bot Builder.</span><span class="sxs-lookup"><span data-stu-id="14238-104">The code samples in this article make use of the v3 Bot Framework SDK, and v3 Teams Bot Builder SDK extensions.</span></span> <span data-ttu-id="14238-105">D’un plan conceptuel, les informations s’appliquent lors de l’utilisation des versions v4 du kit de développement logiciel (SDK), mais le code est légèrement différent.</span><span class="sxs-lookup"><span data-stu-id="14238-105">Conceptually, the information applies when using the v4 versions of the SDK, but the code is slightly different.</span></span>
+> <span data-ttu-id="3afe2-176">L’installation proactive d’applications à l’aide de Microsoft Graph est actuellement en version bêta.</span><span class="sxs-lookup"><span data-stu-id="3afe2-176">Proactively installing apps using the Microsoft Graph is currently in beta.</span></span>
 
-<span data-ttu-id="14238-106">Un message proactif est un message qui est envoyé par un bot pour démarrer une conversation.</span><span class="sxs-lookup"><span data-stu-id="14238-106">A proactive message is a message that is sent by a bot to start a conversation.</span></span> <span data-ttu-id="14238-107">Vous voudrez peut-être que votre bot démarre une conversation pour diverses raisons, notamment :</span><span class="sxs-lookup"><span data-stu-id="14238-107">You may want your bot to start a conversation for a number of reasons, including:</span></span>
+<span data-ttu-id="3afe2-177">Parfois, il peut s’avérer nécessaire de messageer de manière proactive les utilisateurs qui n’ont pas installé ou interagi avec votre application précédemment.</span><span class="sxs-lookup"><span data-stu-id="3afe2-177">Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously.</span></span> <span data-ttu-id="3afe2-178">Par exemple, vous souhaitez utiliser l' [entreprise Communicator](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation.</span><span class="sxs-lookup"><span data-stu-id="3afe2-178">For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization.</span></span> <span data-ttu-id="3afe2-179">Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs nécessaires à partir de l’événement que votre application recevra lors de l' `conversationUpdate` installation.</span><span class="sxs-lookup"><span data-stu-id="3afe2-179">For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.</span></span>
 
-* <span data-ttu-id="14238-108">L’envoi de messages de bienvenue pour les conversations personnelles par bot</span><span class="sxs-lookup"><span data-stu-id="14238-108">Welcome messages for personal bot conversations</span></span>
-* <span data-ttu-id="14238-109">Les réponses aux sondages</span><span class="sxs-lookup"><span data-stu-id="14238-109">Poll responses</span></span>
-* <span data-ttu-id="14238-110">Les notifications d’événements externes</span><span class="sxs-lookup"><span data-stu-id="14238-110">External event notifications</span></span>
+<span data-ttu-id="3afe2-180">Vous ne pouvez installer que les applications figurant dans le catalogue d’applications de votre organisation ou dans le magasin d’applications Teams.</span><span class="sxs-lookup"><span data-stu-id="3afe2-180">You can only install apps that are in your organizational app catalogue, or the Teams app store.</span></span>
 
-<span data-ttu-id="14238-111">L’envoi d’un message pour démarrer un nouveau thème de conversation est différent de celui de l’envoi d’un message en réponse à une conversation existante : lorsque votre bot démarre une nouvelle conversation, il n’existe pas de conversation préexistante vers laquelle publier le message.</span><span class="sxs-lookup"><span data-stu-id="14238-111">Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.</span></span> <span data-ttu-id="14238-112">Pour envoyer un message proactif, vous devez :</span><span class="sxs-lookup"><span data-stu-id="14238-112">In order to send a proactive message you need to:</span></span>
+<span data-ttu-id="3afe2-181">Voir [installer des applications pour les utilisateurs](/graph/teams-proactive-messaging) dans la documentation Graph et l' [installation et la messagerie de robots proactifs dans teams avec Microsoft Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).</span><span class="sxs-lookup"><span data-stu-id="3afe2-181">See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation and [Proactive bot installation and messaging in Teams with Microsoft Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).</span></span> <span data-ttu-id="3afe2-182">Il existe également un [exemple Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)  sur la plateforme github.</span><span class="sxs-lookup"><span data-stu-id="3afe2-182">There is also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)  on the GitHub platform.</span></span>
 
-1. [<span data-ttu-id="14238-113">Décider de ce que vous allez dire</span><span class="sxs-lookup"><span data-stu-id="14238-113">Decide what you're going to say</span></span>](#best-practices-for-proactive-messaging)
-1. [<span data-ttu-id="14238-114">Obtenir l’ID unique et l’ID de client uniques de l’utilisateur</span><span class="sxs-lookup"><span data-stu-id="14238-114">Obtain the user's unique Id and tenant Id</span></span>](#obtain-necessary-user-information)
-1. [<span data-ttu-id="14238-115">Envoyer le message</span><span class="sxs-lookup"><span data-stu-id="14238-115">Send the message</span></span>](#examples)
+## <a name="examples"></a><span data-ttu-id="3afe2-183">Exemples</span><span class="sxs-lookup"><span data-stu-id="3afe2-183">Examples</span></span>
 
-<span data-ttu-id="14238-116">Lors de la création de messages proactifs que vous **devez** appeler `MicrosoftAppCredentials.TrustServiceUrl` , et transmettre l’URL du service avant de créer le [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) message que vous allez utiliser pour envoyer le message.</span><span class="sxs-lookup"><span data-stu-id="14238-116">When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) you will use to send the message.</span></span> <span data-ttu-id="14238-117">Si vous ne le faites pas, votre application recevra une `401: Unauthorized` réponse.</span><span class="sxs-lookup"><span data-stu-id="14238-117">If you do not, your app will receive a `401: Unauthorized` response.</span></span>
+# <a name="cnet"></a>[<span data-ttu-id="3afe2-184">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="3afe2-184">C#/.NET</span></span>](#tab/dotnet)
 
-> [!Tip]
-> <span data-ttu-id="14238-118">Pour plus d’informations sur la configuration des `ConnectorClient` clients pour .net, reportez-vous à la rubrique [activités d’envoi et de réception](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client)</span><span class="sxs-lookup"><span data-stu-id="14238-118">For more details on setting up the `ConnectorClient` for .NET clients, see the [Send and receive activities](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client) topic</span></span>
->
-> <span data-ttu-id="14238-119">D’autres exemples d’envoi de messages proactifs sont disponibles dans la documentation [.net](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages) et [Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages) de service Azure bot.</span><span class="sxs-lookup"><span data-stu-id="14238-119">More examples for sending proactive messages can be found in the Azure Bot Service [.NET](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages) and [Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages) documentation</span></span>
+```csharp
+private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var teamsChannelId = turnContext.Activity.TeamsGetChannelId();
+    var serviceUrl = turnContext.Activity.ServiceUrl;
+    var credentials = new MicrosoftAppCredentials(_appId, _appPassword);
+    ConversationReference conversationReference = null;
 
-## <a name="best-practices-for-proactive-messaging"></a><span data-ttu-id="14238-120">Meilleures pratiques pour la messagerie proactive</span><span class="sxs-lookup"><span data-stu-id="14238-120">Best practices for proactive messaging</span></span>
+    //Get the set of member IDs to send the message to
+    var members = await GetPagedMembers(turnContext, cancellationToken);
 
-<span data-ttu-id="14238-121">L’envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="14238-121">Sending proactive messages to users can be a very effective way to communicate with your users.</span></span> <span data-ttu-id="14238-122">Toutefois, à partir de leur perspective, ce message peut sembler indésirable et, dans le cas de messages de bienvenue, il s’agit de la première fois qu’ils interagissent avec votre application.</span><span class="sxs-lookup"><span data-stu-id="14238-122">However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app.</span></span> <span data-ttu-id="14238-123">Par conséquent, il est très important d’utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable) et de leur fournir suffisamment d’informations pour les informer de la raison pour laquelle ils reçoivent des messages.</span><span class="sxs-lookup"><span data-stu-id="14238-123">As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.</span></span>
+    foreach (var teamMember in members)
+    {
+        var proactiveMessage = MessageFactory.Text($"Hello {teamMember.GivenName} {teamMember.Surname}. I'm a Teams conversation bot.");
 
-<span data-ttu-id="14238-124">Les messages proactifs sont généralement classés en deux catégories : les messages de bienvenue ou les messages de notification.</span><span class="sxs-lookup"><span data-stu-id="14238-124">Proactive messages generally fall into one of two categories, welcome messages or notifications.</span></span>
+        var conversationParameters = new ConversationParameters
+        {
+            IsGroup = false,
+            Bot = turnContext.Activity.Recipient,
+            Members = new ChannelAccount[] { teamMember },
+            TenantId = turnContext.Activity.Conversation.TenantId,
+        };
+        //create the new one-to-one conversations
+        await ((BotFrameworkAdapter)turnContext.Adapter).CreateConversationAsync(
+            teamsChannelId,
+            serviceUrl,
+            credentials,
+            conversationParameters,
+            async (t1, c1) =>
+            {
+                //Get the conversationReference
+                conversationReference = t1.Activity.GetConversationReference();
+                //Send the proactive message
+                await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(
+                    _appId,
+                    conversationReference,
+                    async (t2, c2) =>
+                    {
+                        await t2.SendActivityAsync(proactiveMessage, c2);
+                    },
+                    cancellationToken);
+            },
+            cancellationToken);
+    }
 
-### <a name="welcome-messages"></a><span data-ttu-id="14238-125">Les messages de bienvenue</span><span class="sxs-lookup"><span data-stu-id="14238-125">Welcome messages</span></span>
+    await turnContext.SendActivityAsync(MessageFactory.Text("All messages have been sent."), cancellationToken);
+}
+```
 
-<span data-ttu-id="14238-126">Lors de l’utilisation de la messagerie proactive pour envoyer un message de bienvenue à un utilisateur, vous devez garder à l’esprit que pour la plupart des personnes qui reçoivent le message, il n’y aura pas de contexte pour la raison pour laquelle ils le reçoivent.</span><span class="sxs-lookup"><span data-stu-id="14238-126">When using proactive messaging to send a welcome message to a user you must keep in mind that for most people receiving the message they will have no context for why they are receiving it.</span></span> <span data-ttu-id="14238-127">Il s’agit également de la première fois qu’ils interagissent avec votre application ; Il s’agit de votre opportunité de créer une bonne première impression.</span><span class="sxs-lookup"><span data-stu-id="14238-127">This is also the first time they will have interacted with your app; it is your opportunity to create a good first impression.</span></span> <span data-ttu-id="14238-128">Les meilleurs messages d’accueil sont les suivants :</span><span class="sxs-lookup"><span data-stu-id="14238-128">The best welcome messages will include:</span></span>
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="3afe2-185">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="3afe2-185">TypeScript/Node.js</span></span>](#tab/typescript)
 
-* <span data-ttu-id="14238-129">**Pourquoi reçoit-il ce message ?**</span><span class="sxs-lookup"><span data-stu-id="14238-129">**Why are they receiving this message.**</span></span> <span data-ttu-id="14238-130">Il doit être très clair que les utilisateurs reçoivent le message.</span><span class="sxs-lookup"><span data-stu-id="14238-130">It should be very clear to the user why they are receiving the message.</span></span> <span data-ttu-id="14238-131">Si votre robot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, indiquez-lui quel canal il a été installé et éventuellement qui l’a installé.</span><span class="sxs-lookup"><span data-stu-id="14238-131">If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.</span></span>
-* <span data-ttu-id="14238-132">**Ce que vous proposez.**</span><span class="sxs-lookup"><span data-stu-id="14238-132">**What do you offer.**</span></span> <span data-ttu-id="14238-133">Qu’est-il possible de faire avec votre application ?</span><span class="sxs-lookup"><span data-stu-id="14238-133">What can they do with your app?</span></span> <span data-ttu-id="14238-134">Quelle valeur pouvez-vous leur apporter ?</span><span class="sxs-lookup"><span data-stu-id="14238-134">What value can you bring to them?</span></span>
-* <span data-ttu-id="14238-135">**Que dois-je faire ensuite ?**</span><span class="sxs-lookup"><span data-stu-id="14238-135">**What should they do next.**</span></span> <span data-ttu-id="14238-136">Invitez-les à essayer une commande ou à interagir avec votre application d’une certaine façon.</span><span class="sxs-lookup"><span data-stu-id="14238-136">Invite them to try out a command, or interact with your app in some way.</span></span>
+```javascript
 
-### <a name="notification-messages"></a><span data-ttu-id="14238-137">Les messages de notification</span><span class="sxs-lookup"><span data-stu-id="14238-137">Notification messages</span></span>
+async messageAllMembersAsync(context) {
+    const members = await this.getPagedMembers(context);
 
-<span data-ttu-id="14238-138">Lors de l’utilisation de la messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs disposent d’un chemin d’accès clair afin de prendre des mesures courantes en fonction de votre notification et de bien comprendre la raison pour laquelle la notification s’est produite.</span><span class="sxs-lookup"><span data-stu-id="14238-138">When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification occurred.</span></span> <span data-ttu-id="14238-139">Les messages de notification valides sont généralement les suivants :</span><span class="sxs-lookup"><span data-stu-id="14238-139">Good notification messages will generally include:</span></span>
+    members.forEach(async (teamMember) => {
+        const message = MessageFactory.text('Hello ${ teamMember.givenName } ${ teamMember.surname }. I\'m a Teams conversation bot.');
 
-* <span data-ttu-id="14238-140">**Que s'est-il passé.**</span><span class="sxs-lookup"><span data-stu-id="14238-140">**What happened.**</span></span> <span data-ttu-id="14238-141">Indication claire de l’origine de la notification.</span><span class="sxs-lookup"><span data-stu-id="14238-141">A clear indication of what happened to cause the notification.</span></span>
-* <span data-ttu-id="14238-142">**Ce qu’il y a eu.**</span><span class="sxs-lookup"><span data-stu-id="14238-142">**What it happened to.**</span></span> <span data-ttu-id="14238-143">Il doit être clair quel élément/élément a été mis à jour pour déclencher la notification.</span><span class="sxs-lookup"><span data-stu-id="14238-143">It should be clear what item/thing was updated to cause the notification.</span></span>
-* <span data-ttu-id="14238-144">**Qui a fait ça.**</span><span class="sxs-lookup"><span data-stu-id="14238-144">**Who did it.**</span></span> <span data-ttu-id="14238-145">Qui a effectué l’action qui a provoqué l’envoi de la notification.</span><span class="sxs-lookup"><span data-stu-id="14238-145">Who took the action that caused the notification to be sent.</span></span>
-* <span data-ttu-id="14238-146">**Ce qu’ils peuvent faire.**</span><span class="sxs-lookup"><span data-stu-id="14238-146">**What they can do about it.**</span></span> <span data-ttu-id="14238-147">Permettre aux utilisateurs de prendre facilement des mesures en fonction de vos notifications.</span><span class="sxs-lookup"><span data-stu-id="14238-147">Make it easy for your users to take actions based on your notifications.</span></span>
-* <span data-ttu-id="14238-148">**Comment les désactiver.** Vous devez fournir un chemin d’accès permettant aux utilisateurs de désactiver les notifications supplémentaires.</span><span class="sxs-lookup"><span data-stu-id="14238-148">**How they can opt out.** You need to provide a path for users to opt out of additional notifications.</span></span>
+        var ref = TurnContext.getConversationReference(context.activity);
+        ref.user = teamMember;
 
-## <a name="obtain-necessary-user-information"></a><span data-ttu-id="14238-149">Obtenir les informations utilisateur nécessaires</span><span class="sxs-lookup"><span data-stu-id="14238-149">Obtain necessary user information</span></span>
+        await context.adapter.createConversation(ref,
+            async (t1) => {
+                const ref2 = TurnContext.getConversationReference(t1.activity);
+                await t1.adapter.continueConversation(ref2, async (t2) => {
+                    await t2.sendActivity(message);
+                });
+            });
+    });
 
-<span data-ttu-id="14238-150">Les robots peuvent créer de nouvelles conversations avec un utilisateur individuel de Microsoft teams en obtenant l’ID *unique* et l' *ID de client* de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="14238-150">Bots can create new conversations with an individual Microsoft Teams user by obtaining the user's *unique ID* and *tenant ID.*</span></span> <span data-ttu-id="14238-151">Vous pouvez obtenir ces valeurs à l’aide de l’une des méthodes suivantes :</span><span class="sxs-lookup"><span data-stu-id="14238-151">You can obtain these values using one of the following methods:</span></span>
+    await context.sendActivity(MessageFactory.text('All messages have been sent.'));
+}
+```
 
-* <span data-ttu-id="14238-152">En [extrayant la liste de l’équipe](../get-teams-context.md#fetching-the-roster-or-user-profile) à partir d’un canal dans lequel votre application est installée.</span><span class="sxs-lookup"><span data-stu-id="14238-152">By [fetching the team roster](../get-teams-context.md#fetching-the-roster-or-user-profile) from a channel your app is installed in.</span></span>
-* <span data-ttu-id="14238-153">En les mettant en cache lorsqu’un utilisateur [interagit avec votre robot dans un canal](./channel-and-group-conversations.md).</span><span class="sxs-lookup"><span data-stu-id="14238-153">By caching them when a user [interacts with your bot in a channel](./channel-and-group-conversations.md).</span></span>
-* <span data-ttu-id="14238-154">Lorsqu’un utilisateur est [@mentioned dans une conversation de canal](./channel-and-group-conversations.md#retrieving-mentions) dont le robot fait partie.</span><span class="sxs-lookup"><span data-stu-id="14238-154">When a users is [@mentioned in a channel conversation](./channel-and-group-conversations.md#retrieving-mentions) the bot is a part of.</span></span>
-* <span data-ttu-id="14238-155">En les mettant en cache lorsque vous [recevez l' `conversationUpdate` ](./subscribe-to-conversation-events.md#team-members-added) événement lorsque votre application est installée dans une étendue personnelle, ou que de nouveaux membres sont ajoutés à un canal ou à une conversation de groupe qui</span><span class="sxs-lookup"><span data-stu-id="14238-155">By caching them when you [receive the `conversationUpdate`](./subscribe-to-conversation-events.md#team-members-added) event when your app is installed in a personal scope, or new members are added to a channel or group chat that</span></span>
+# <a name="python"></a>[<span data-ttu-id="3afe2-186">Python</span><span class="sxs-lookup"><span data-stu-id="3afe2-186">Python</span></span>](#tab/python)
 
-### <a name="proactively-install-your-app-using-graph"></a><span data-ttu-id="14238-156">Installer de manière proactive votre application à l’aide de Graph</span><span class="sxs-lookup"><span data-stu-id="14238-156">Proactively install your app using Graph</span></span>
+```python
+async def _message_all_members(self, turn_context: TurnContext):
+    team_members = await self._get_paged_members(turn_context)
 
-> [!Note]
-> <span data-ttu-id="14238-157">L’installation proactive d’applications à l’aide de Graph est actuellement en version bêta.</span><span class="sxs-lookup"><span data-stu-id="14238-157">Proactively installing apps using graph is currently in beta.</span></span>
+    for member in team_members:
+        conversation_reference = TurnContext.get_conversation_reference(
+            turn_context.activity
+        )
 
-<span data-ttu-id="14238-158">Parfois, il peut s’avérer nécessaire de messageer de manière proactive les utilisateurs qui n’ont pas installé ou interagi avec votre application précédemment.</span><span class="sxs-lookup"><span data-stu-id="14238-158">Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously.</span></span> <span data-ttu-id="14238-159">Par exemple, vous souhaitez utiliser l' [entreprise Communicator](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation.</span><span class="sxs-lookup"><span data-stu-id="14238-159">For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization.</span></span> <span data-ttu-id="14238-160">Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs nécessaires à partir de l’événement que votre application recevra lors de l' `conversationUpdate` installation.</span><span class="sxs-lookup"><span data-stu-id="14238-160">For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.</span></span>
+        conversation_parameters = ConversationParameters(
+            is_group=False,
+            bot=turn_context.activity.recipient,
+            members=[member],
+            tenant_id=turn_context.activity.conversation.tenant_id,
+        )
 
-<span data-ttu-id="14238-161">Vous ne pouvez installer que les applications figurant dans le catalogue d’applications de votre organisation ou dans le magasin d’applications Teams.</span><span class="sxs-lookup"><span data-stu-id="14238-161">You can only install apps that are in your organizational app catalogue, or the Teams app store.</span></span>
+        async def get_ref(tc1):
+            conversation_reference_inner = TurnContext.get_conversation_reference(
+                tc1.activity
+            )
+            return await tc1.adapter.continue_conversation(
+                conversation_reference_inner, send_message, self._app_id
+            )
 
-<span data-ttu-id="14238-162">Pour plus d’informations, consultez la rubrique [installer des applications pour les utilisateurs](/graph/teams-proactive-messaging) dans la documentation Graph.</span><span class="sxs-lookup"><span data-stu-id="14238-162">See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation for complete details.</span></span> <span data-ttu-id="14238-163">Il existe également un [exemple dans .net](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).</span><span class="sxs-lookup"><span data-stu-id="14238-163">There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).</span></span>
+        async def send_message(tc2: TurnContext):
+            return await tc2.send_activity(
+                f"Hello {member.name}. I'm a Teams conversation bot."
+            )
 
-## <a name="examples"></a><span data-ttu-id="14238-164">Exemples</span><span class="sxs-lookup"><span data-stu-id="14238-164">Examples</span></span>
+        await turn_context.adapter.create_conversation(
+            conversation_reference, get_ref, conversation_parameters
+        )
 
-<span data-ttu-id="14238-165">Assurez-vous d’authentifier et de posséder un jeton de support avant de créer une conversation à l’aide de l’API REST.</span><span class="sxs-lookup"><span data-stu-id="14238-165">Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.</span></span> <span data-ttu-id="14238-166">Le `members.id` champ dans l’objet ci-dessous est unique à la combinaison de votre bot et d’un utilisateur.</span><span class="sxs-lookup"><span data-stu-id="14238-166">The `members.id` field in the object below is unique to the combination of your bot and a user.</span></span> <span data-ttu-id="14238-167">Vous ne pouvez pas l’obtenir via une autre méthode que les autres méthodes décrites ci-dessus.</span><span class="sxs-lookup"><span data-stu-id="14238-167">You cannot obtain it via any other method than those outlined above.</span></span>
+    await turn_context.send_activity(
+        MessageFactory.text("All messages have been sent")
+    )
+
+```
+
+# <a name="json"></a>[<span data-ttu-id="3afe2-187">JSON</span><span class="sxs-lookup"><span data-stu-id="3afe2-187">JSON</span></span>](#tab/json)
 
 ```json
 POST /v3/conversations
@@ -103,7 +237,7 @@ POST /v3/conversations
 }
 ```
 
-<span data-ttu-id="14238-168">Vous devez fournir l’ID d’utilisateur et l’ID de client.</span><span class="sxs-lookup"><span data-stu-id="14238-168">You must supply the user ID and the tenant ID.</span></span> <span data-ttu-id="14238-169">Si l’appel réussit, l’API renvoie avec l’objet de réponse suivant.</span><span class="sxs-lookup"><span data-stu-id="14238-169">If the call succeeds, the API returns with the following response object.</span></span>
+<span data-ttu-id="3afe2-188">Vous devez fournir l’ID d’utilisateur et l’ID de client.</span><span class="sxs-lookup"><span data-stu-id="3afe2-188">You must supply the user ID and the tenant ID.</span></span> <span data-ttu-id="3afe2-189">Si l’appel réussit, l’API renvoie avec l’objet de réponse suivant.</span><span class="sxs-lookup"><span data-stu-id="3afe2-189">If the call succeeds, the API returns with the following response object.</span></span>
 
 ```json
 {
@@ -111,134 +245,23 @@ POST /v3/conversations
 }
 ```
 
-<span data-ttu-id="14238-170">Cet ID est l’ID de conversation unique de la conversation personnelle.</span><span class="sxs-lookup"><span data-stu-id="14238-170">This ID is the personal chat's unique conversation ID.</span></span> <span data-ttu-id="14238-171">Veuillez stocker cette valeur et la réutiliser pour les futures interactions avec l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="14238-171">Please store this value and reuse it for future interactions with the user.</span></span>
-
-# <a name="cnet"></a>[<span data-ttu-id="14238-172">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="14238-172">C#/.NET</span></span>](#tab/dotnet)
-
-<span data-ttu-id="14238-173">Cet exemple utilise le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .</span><span class="sxs-lookup"><span data-stu-id="14238-173">This example uses the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.</span></span> <span data-ttu-id="14238-174">Dans cet exemple, `client` est une `ConnectorClient` instance qui a déjà été créée et authentifiée comme indiqué dans [Send and Receive Activities](/azure/bot-service/dotnet/bot-builder-dotnet-connector)</span><span class="sxs-lookup"><span data-stu-id="14238-174">In this example, `client` is a `ConnectorClient` instance that has already been created and authenticated as described in [Send and receive activities](/azure/bot-service/dotnet/bot-builder-dotnet-connector)</span></span>
-
-```csharp
-// Create or get existing chat conversation with user
-var response = client.Conversations.CreateOrGetDirectConversation(activity.Recipient, activity.From, activity.GetTenantId());
-
-// Construct the message to post to conversation
-Activity newActivity = new Activity()
-{
-    Text = "Hello",
-    Type = ActivityTypes.Message,
-    Conversation = new ConversationAccount
-    {
-        Id = response.Id
-    },
-};
-
-// Post the message to chat conversation with user
-await client.Conversations.SendToConversationAsync(newActivity, response.Id);
-```
-
-# <a name="javascript"></a>[<span data-ttu-id="14238-175">JavaScript</span><span class="sxs-lookup"><span data-stu-id="14238-175">JavaScript</span></span>](#tab/javascript)
-
-<span data-ttu-id="14238-176">*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).</span><span class="sxs-lookup"><span data-stu-id="14238-176">*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).</span></span>
-
-```javascript
-var address =
-{
-    channelId: 'msteams',
-    user: { id: userId },
-    channelData: {
-        tenant: {
-            id: tenantId
-        }
-    },
-    bot:
-    {
-        id: appId,
-        name: appName
-    },
-    serviceUrl: session.message.address.serviceUrl,
-    useAuth: true
-}
-
-var msg = new builder.Message().address(address);
-msg.text('Hello, this is a notification');
-bot.send(msg);
-```
-
-# <a name="python"></a>[<span data-ttu-id="14238-177">Python</span><span class="sxs-lookup"><span data-stu-id="14238-177">Python</span></span>](#tab/python)
-
-```python
-async def _send_proactive_message():
-  for conversation_reference in CONVERSATION_REFERENCES.values():
-    return await ADAPTER.continue_conversation(APP_ID, conversation_reference,
-      lambda turn_context: turn_context.send_activity("proactive hello")
-    )
-
-```
-
 ---
 
-## <a name="creating-a-channel-conversation"></a><span data-ttu-id="14238-178">Créer une conversation de canal</span><span class="sxs-lookup"><span data-stu-id="14238-178">Creating a channel conversation</span></span>
+## <a name="references"></a><span data-ttu-id="3afe2-190">Références</span><span class="sxs-lookup"><span data-stu-id="3afe2-190">References</span></span>
 
-<span data-ttu-id="14238-179">Le bot de votre équipe peut créer une chaîne de réponse dans un canal.</span><span class="sxs-lookup"><span data-stu-id="14238-179">Your team-added bot can post into a channel to create a new reply chain.</span></span> <span data-ttu-id="14238-180">Si vous utilisez le kit de développement logiciel (SDK) Node.js Teams, utilisez `startReplyChain()` qui vous fournit une adresse complète avec l’ID d’activité et l’ID de conversation corrects. Si vous utilisez C#, consultez l’exemple ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="14238-180">If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.</span></span>
+<span data-ttu-id="3afe2-191">Les exemples officiels de messagerie proactive sont répertoriés ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="3afe2-191">The official proactive messaging samples are listed below.</span></span>
 
-<span data-ttu-id="14238-181">Vous pouvez également utiliser l’API REST et émettre une requête POST à la [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) ressource.</span><span class="sxs-lookup"><span data-stu-id="14238-181">Alternatively, you can use the REST API and issue a POST request to [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.</span></span>
+|  <span data-ttu-id="3afe2-192">Non.</span><span class="sxs-lookup"><span data-stu-id="3afe2-192">No.</span></span>  | <span data-ttu-id="3afe2-193">Exemple de nom</span><span class="sxs-lookup"><span data-stu-id="3afe2-193">Sample Name</span></span>           | <span data-ttu-id="3afe2-194">Description</span><span class="sxs-lookup"><span data-stu-id="3afe2-194">Description</span></span>                                                                      | <span data-ttu-id="3afe2-195">.NET</span><span class="sxs-lookup"><span data-stu-id="3afe2-195">.NET</span></span>    | <span data-ttu-id="3afe2-196">JavaScript</span><span class="sxs-lookup"><span data-stu-id="3afe2-196">JavaScript</span></span>   | <span data-ttu-id="3afe2-197">Python</span><span class="sxs-lookup"><span data-stu-id="3afe2-197">Python</span></span>  |
+|:--:|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|<span data-ttu-id="3afe2-198">57</span><span class="sxs-lookup"><span data-stu-id="3afe2-198">57</span></span>|<span data-ttu-id="3afe2-199">Concepts de base des conversations de teams</span><span class="sxs-lookup"><span data-stu-id="3afe2-199">Teams Conversation Basics</span></span>  | <span data-ttu-id="3afe2-200">Présente des notions de base des conversations dans Teams, y compris l’envoi de messages proactifs un-à-un.</span><span class="sxs-lookup"><span data-stu-id="3afe2-200">Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.</span></span>|[<span data-ttu-id="3afe2-201">.NET &nbsp; Core</span><span class="sxs-lookup"><span data-stu-id="3afe2-201">.NET&nbsp;Core</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="3afe2-202">JavaScript</span><span class="sxs-lookup"><span data-stu-id="3afe2-202">JavaScript</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [<span data-ttu-id="3afe2-203">Python</span><span class="sxs-lookup"><span data-stu-id="3afe2-203">Python</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
+|<span data-ttu-id="3afe2-204">58</span><span class="sxs-lookup"><span data-stu-id="3afe2-204">58</span></span>|<span data-ttu-id="3afe2-205">Démarrer un nouveau thread dans un canal</span><span class="sxs-lookup"><span data-stu-id="3afe2-205">Start new thread in a channel</span></span>     | <span data-ttu-id="3afe2-206">Illustre la création d’un nouveau thread dans un canal.</span><span class="sxs-lookup"><span data-stu-id="3afe2-206">Demonstrates creating a new thread in a channel.</span></span> |[<span data-ttu-id="3afe2-207">.NET &nbsp; Core</span><span class="sxs-lookup"><span data-stu-id="3afe2-207">.NET&nbsp;Core</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[<span data-ttu-id="3afe2-208">JavaScript</span><span class="sxs-lookup"><span data-stu-id="3afe2-208">JavaScript</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[<span data-ttu-id="3afe2-209">Python</span><span class="sxs-lookup"><span data-stu-id="3afe2-209">Python</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
-# <a name="cnet"></a>[<span data-ttu-id="14238-182">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="14238-182">C#/.NET</span></span>](#tab/dotnet)
+<span data-ttu-id="3afe2-210">L’exemple ci-dessous illustre la quantité minimale d’informations nécessaires à l’envoi d’un message proactif (sans utiliser d' `conversationReference` objet).</span><span class="sxs-lookup"><span data-stu-id="3afe2-210">The sample below demonstrates the minimal amount of information needed to send a proactive message (without using a `conversationReference` object).</span></span> <span data-ttu-id="3afe2-211">Cet exemple peut être utile si vous utilisez des appels d’API REST directement ou si vous n’avez pas stocké d' `conversationReference` objets complets.</span><span class="sxs-lookup"><span data-stu-id="3afe2-211">This sample can be useful if you're using REST API calls directly, or haven't been storing full `conversationReference` objects.</span></span>
 
-<span data-ttu-id="14238-183">L’extrait de code suivant provient de [cet exemple](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs).</span><span class="sxs-lookup"><span data-stu-id="14238-183">The following code snippet is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs).</span></span>
+* [<span data-ttu-id="3afe2-212">Messagerie proactive teams</span><span class="sxs-lookup"><span data-stu-id="3afe2-212">Teams Proactive Messaging</span></span>](https://github.com/clearab/teamsProactiveMessaging)
 
-```csharp
-using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Connector;
-using Microsoft.Bot.Connector.Teams.Models;
-using Microsoft.Teams.TemplateBotCSharp.Properties;
-using System;
-using System.Threading.Tasks;
-
-namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
-{
-    [Serializable]
-    public class ProactiveMsgTo1to1Dialog : IDialog<object>
-    {
-        public async Task StartAsync(IDialogContext context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            var channelData = context.Activity.GetChannelData<TeamsChannelData>();
-            var message = Activity.CreateMessageActivity();
-            message.Text = "Hello World";
-
-            var conversationParameters = new ConversationParameters
-            {
-                  IsGroup = true,
-                  ChannelData = new TeamsChannelData
-                  {
-                      Channel = new ChannelInfo(channelData.Channel.Id),
-                  },
-                  Activity = (Activity) message
-            };
-
-            MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
-            var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
-            var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
-
-            context.Done<object>(null);
-        }
-    }
-}
-```
-
-# <a name="javascript"></a>[<span data-ttu-id="14238-184">JavaScript</span><span class="sxs-lookup"><span data-stu-id="14238-184">JavaScript</span></span>](#tab/javascript)
-
-<span data-ttu-id="14238-185">L’extrait de code suivant provient de [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).</span><span class="sxs-lookup"><span data-stu-id="14238-185">The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).</span></span>
-
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
-
-# <a name="python"></a>[<span data-ttu-id="14238-186">Python</span><span class="sxs-lookup"><span data-stu-id="14238-186">Python</span></span>](#tab/python)
-
-[!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
-
----
+## <a name="view-additional-code"></a><span data-ttu-id="3afe2-213">Afficher du code supplémentaire</span><span class="sxs-lookup"><span data-stu-id="3afe2-213">View additional code</span></span>
+>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3afe2-214">**Exemples de code de messagerie proactive teams**</span><span class="sxs-lookup"><span data-stu-id="3afe2-214">**Teams proactive messaging code samples**</span></span>](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+>
