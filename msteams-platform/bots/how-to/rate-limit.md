@@ -2,12 +2,12 @@
 title: Limitation du débit
 description: Limitation du débit et meilleures pratiques dans Microsoft teams
 keywords: limitation du débit des robots teams
-ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801123"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303709"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Optimiser votre robot : limitation du débit et meilleures pratiques dans Microsoft teams
 
@@ -107,20 +107,20 @@ Cette limite contrôle le trafic qu’un bot est autorisé à générer sur une 
 
 | **Scénario** | **Période de temps (sec)** | **Nombre maximal d’opérations autorisées** |
 | --- | --- | --- |
-| Envoyer à une conversation | 1  | 7  |
-| Envoyer à une conversation | n°2 | 8  |
+| Envoyer à une conversation | 1  | 7  |
+| Envoyer à une conversation | 2  | 8  |
 | Envoyer à une conversation | 0,30 | 60 |
 | Envoyer à une conversation | 3600 | 1800 |
-| Créer une conversation | 1  | 7  |
-| Créer une conversation | n°2 | 8  |
+| Créer une conversation | 1  | 7  |
+| Créer une conversation | 2  | 8  |
 | Créer une conversation | 0,30 | 60 |
 | Créer une conversation | 3600 | 1800 |
-| Obtenir des membres de conversation| 1  | 14  |
-| Obtenir des membres de conversation| n°2 | 16  |
+| Obtenir des membres de conversation| 1  | 14  |
+| Obtenir des membres de conversation| 2  | 16  |
 | Obtenir des membres de conversation| 0,30 | 120 |
 | Obtenir des membres de conversation| 3600 | 3600 |
-| Obtenir des conversations | 1  | 14  |
-| Obtenir des conversations | n°2 | 16  |
+| Obtenir des conversations | 1  | 14  |
+| Obtenir des conversations | 2  | 16  |
 | Obtenir des conversations | 0,30 | 120 |
 | Obtenir des conversations | 3600 | 3600 |
 
@@ -130,23 +130,13 @@ Cette limite contrôle le trafic que tous les robots sont autorisés à génére
 
 | **Scénario** | **Période de temps (sec)** | **Nombre maximal d’opérations autorisées** |
 | --- | --- | --- |
-| Envoyer à une conversation | 1  | 14  |
-| Envoyer à une conversation | n°2 | 16  |
-| Créer une conversation | 1  | 14  |
-| Créer une conversation | n°2 | 16  |
-| CreateConversation| 1  | 14  |
-| CreateConversation| n°2 | 16  |
-| Obtenir des membres de conversation| 1  | vingt |
-| Obtenir des membres de conversation| n°2 | 32 |
-| Obtenir des conversations | 1  | vingt |
-| Obtenir des conversations | n°2 | 32 |
-
-## <a name="bot-per-data-center-limit"></a>Fonction de robot par centre de données
-
-Cette limite contrôle le trafic qu’un bot est autorisé à générer sur tous les threads dans un centre de données (sur plusieurs clients).
-
-|**Période de temps (sec)** | **Nombre maximal d’opérations autorisées** |
-| --- | --- |
-| 1  | vingtaine |
-| 1800 | 8000 |
-| 3600 | 15000 |
+| Envoyer à une conversation | 1  | 14  |
+| Envoyer à une conversation | 2  | 16  |
+| Créer une conversation | 1  | 14  |
+| Créer une conversation | 2  | 16  |
+| CreateConversation| 1  | 14  |
+| CreateConversation| 2  | 16  |
+| Obtenir des membres de conversation| 1  | vingt |
+| Obtenir des membres de conversation| 2  | 32 |
+| Obtenir des conversations | 1  | vingt |
+| Obtenir des conversations | 2  | 32 |

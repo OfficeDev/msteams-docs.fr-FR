@@ -2,17 +2,17 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587726"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303716"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
 >[!TIP]
-> Consultez nos modèles prêts pour la production dans le [**catalogue des modèles d’applications teams**](samples/app-templates.md). Le catalogue est classé par ordre alphabétique et les compléments les plus récents sont balisés avec une étoile **&#9734;**.
+> Consultez nos modèles prêts pour la production dans le   [**catalogue des modèles d’applications teams**](samples/app-templates.md). Le catalogue est classé par ordre alphabétique et les compléments les plus récents sont balisés avec une étoile **&#9734;**.
 
 ## <a name="change-log"></a>Journal des modifications
 
@@ -20,6 +20,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+| 08/12/2020 |Prise en charge des cartes adaptatives dans le webhook entrant déplacée vers GA.|[Envoyer des cartes adaptatives à l'aide d'un webhook entrant](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 | 07/22/2020 |Mises à jour des capacités des appareils mobiles.|[Demander des autorisations de périphérique pour votre onglet Microsoft teams](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Outil de validation des applications teams pour les envois AppSource.|[Outil de validation des applications teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Créer un assistant virtuel pour teams|[Assistant virtuel pour Microsoft teams](samples/virtual-assistant.md)|
@@ -49,10 +50,10 @@ Le journal des modifications répertorie les modifications apportées à la plat
 | 02/18/2019 | Il n’est pas possible de créer des liens approfondis vers la conversation privée pour les développeurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | LicenceType les informations SKU et les informations de référence dans le contexte d’onglet. | [Contexte d’onglet](~/concepts/tabs/tabs-context.md) |
 | 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version finale de teams et ont été déplacés de l’aperçu développeur. Dans le cadre de cette tâche, la section onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | La mise en route du nœud JS et de .NET/C# a été mise à jour pour utiliser app Studio dans Teams, et une nouvelle section a été ajoutée sur les applications teams basées sur des nœuds d’hébergement dans Azure. | [Prise en main de la plateforme Microsoft teams avec C#/.net et App Studio](~/get-started/get-started-dotnet-app-studio.md), [prise en main de la plateforme Microsoft teams avec node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [héberger votre application de nœud teams dans Azure](~/get-started/get-started-nodejs-in-azure.md)|
+| 11/11/2018 | La mise en route du nœud JS et de .NET/C# a été mise à jour pour utiliser app Studio dans Teams, et une nouvelle section a été ajoutée sur les applications teams basées sur des nœuds d’hébergement dans Azure. | [Prise en main de la plateforme Microsoft teams avec C#/.net et App Studio](~/get-started/get-started-dotnet-app-studio.md),  [prise en main de la plateforme Microsoft teams avec node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [héberger votre application de nœud teams dans Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Vous pouvez désormais créer des liens détaillés vers des conversations privées entre les utilisateurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1,7 a été livré avec une nouvelle fonctionnalité d’utilisation de l’onglet Microsoft teams en tant que composant WebPart SharePoint Framework. | [Onglets dans SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | La fonctionnalité « module de tâche » a été publiée. Un module de tâches vous permet de créer des expériences de menu contextuel modal dans votre application Teams, à partir des robots et des onglets. À l’intérieur de la fenêtre contextuelle, vous pouvez exécuter votre propre code HTML/JavaScript personnalisé, afficher un `<iframe>` widget basé sur une vidéo YouTube ou une vidéo Microsoft Stream, ou afficher une [carte adaptative](https://docs.microsoft.com/adaptive-cards/). | [Vue d’ensemble du module de tâche](~/concepts/task-modules/task-modules-overview.md), [module tâches dans les onglets](~/concepts/task-modules/task-modules-tabs.md), [module de tâches dans les robots](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | La fonctionnalité « module de tâche » a été publiée. Un module de tâches vous permet de créer des expériences de menu contextuel modal dans votre application Teams, à partir des robots et des onglets. À l’intérieur de la fenêtre contextuelle, vous pouvez exécuter votre propre code HTML/JavaScript personnalisé, afficher un `<iframe>` widget basé sur une vidéo YouTube ou une vidéo Microsoft Stream, ou afficher une [carte adaptative](https://docs.microsoft.com/adaptive-cards/). | [Vue d’ensemble du module de tâche](~/concepts/task-modules/task-modules-overview.md), [module tâches dans les onglets](~/concepts/task-modules/task-modules-tabs.md),  [module de tâches dans les robots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | Les informations de mise en forme pour les cartes ont été mises à jour et testées sur les clients de bureau, iOS et Android pour Teams. | [Cartes](~/concepts/cards/cards.md), [mise en forme de carte](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | Les appels et les API de réunion en ligne pour Microsoft Graph ont été publiés dans la version bêta, et les applications teams peuvent désormais interagir avec les utilisateurs de manière enrichie à l’aide de la voix et de la vidéo. | [Appels et robots de réunions en ligne](~/concepts/calls-and-meetings/registering-calling-bot.md), [concepts de média en temps réel](~/concepts/calls-and-meetings/real-time-media-concepts.md), [enregistrement d’un bot appelant](~/concepts/calls-and-meetings/registering-calling-bot.md), [débogage et test local](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), [multimédia hébergé par l’application](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), [gestion des notifications d’appels entrants](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Les pages de configuration d’onglet sont maintenant sensiblement plus haut. | [Création d’onglets](tabs/design/tabs.md) |

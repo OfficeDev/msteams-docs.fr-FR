@@ -3,12 +3,12 @@ title: Conversations de conversation de groupe et de canal avec les robots
 description: Décrit le scénario de bout en bout d’une conversation avec un bot dans un canal dans Microsoft teams
 keywords: scénarios teams-robots de conversation des canaux
 ms.date: 06/25/2019
-ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f44db4a88ab5e6541c52395a58fc643cb07df606
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801094"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303723"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversations par chat de canal et de groupe avec un robot Microsoft Teams
 
@@ -20,16 +20,13 @@ La conversation dans les canaux et les conversations de groupe diffèrent de la 
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Conception d’un robot idéal pour les canaux ou les groupes
 
-Les robots ajoutés à une équipe deviennent un autre membre de l’équipe, qui peut être @mentioned dans le cadre de la conversation. En fait, les robots reçoivent uniquement les messages lorsqu’ils sont @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
+Les robots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent être @mentioned dans le cadre de la conversation. En fait, les robots reçoivent uniquement les messages lorsqu’ils sont @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
 
-> [!NOTE]
-> Pour plus de commodité lors de la réponse à des messages de bot dans un canal, le nom du bot est automatiquement ajouté à la zone composer un message.
+Un bot d’un groupe ou d’un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Si votre robot peut certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations sont visibles par tous les utilisateurs. Par conséquent, un bon robot d’un groupe ou d’un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance les informations de façon plus appropriée à une conversation un-à-un.
 
-Un bot d’un groupe ou d’un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Si votre robot peut certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations sont visibles par tous les utilisateurs. Par conséquent, un bon robot d’un groupe ou d’un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance les informations de façon plus appropriée dans une conversation un-à-un.
+Votre robot, tout comme il est, peut être entièrement pertinent dans toutes les étendues sans nécessiter de travail supplémentaire. Dans Microsoft Teams, il n’y a aucune attente que votre robot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre robot fournit la valeur de l’utilisateur dans n’importe quelle étendue que vous choisissez de prendre en charge. Pour plus d’informations sur les étendues, consultez la rubrique [applications dans Microsoft teams](~/concepts/build-and-test/app-studio-overview.md).
 
-Votre robot peut être entièrement pertinent dans toutes les étendues telles quelles et aucun travail supplémentaire significatif n’est nécessaire pour permettre à votre robot de travailler dessus. Dans Microsoft Teams, il n’y a aucune attente que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre robot fournit la valeur de l’utilisateur dans n’importe quelle étendue que vous choisissez de prendre en charge. Pour plus d’informations sur les étendues, consultez la rubrique [applications dans Microsoft teams](~/concepts/build-and-test/app-studio-overview.md).
-
-Le développement d’un bot qui fonctionne dans des groupes ou des canaux utilise la plupart des fonctionnalités des conversations personnelles. Les autres événements et données de la charge utile fournissent des informations sur le groupe teams et le canal. Ces différences, ainsi que les principales différences entre les fonctionnalités communes, sont décrites dans les sections suivantes.
+Le développement d’un bot qui fonctionne dans des groupes ou des canaux utilise une grande partie des mêmes fonctionnalités que les conversations personnelles. Les autres événements et données de la charge utile fournissent des informations sur le groupe teams et le canal. Ces différences, ainsi que les principales différences entre les fonctionnalités communes, sont décrites dans les sections suivantes.
 
 ### <a name="creating-messages"></a>Création de messages
 
@@ -39,11 +36,11 @@ Pour plus d’informations sur les robots de création de messages dans les cana
 
 Pour un bot d’un groupe ou d’un canal, outre le [schéma de message normal](https://docs.botframework.com/core-concepts/reference/#activity), votre bot reçoit également les propriétés suivantes :
 
-* `channelData`Voir [teams Channel Data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
-* `conversation.id`ID de la chaîne de réponse, composé de l’ID du canal plus l’ID du premier message de la chaîne de réponse.
-* `conversation.isGroup`Est `true` destiné aux messages bot dans les canaux ou les conversations de groupe
-* `conversation.conversationType`Soit `groupChat` ou`channel`
-* `entities`Peut contenir une ou plusieurs mentions (voir [mentions](#-mentions))
+* `channelData` Voir [teams Channel Data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
+* `conversation.id` ID de la chaîne de réponse, composé de l’ID du canal plus l’ID du premier message de la chaîne de réponse.
+* `conversation.isGroup` Est `true` destiné aux messages bot dans les canaux ou les conversations de groupe
+* `conversation.conversationType` Soit `groupChat` ou `channel`
+* `entities` Peut contenir une ou plusieurs mentions (voir [mentions](#-mentions))
 
 ### <a name="replying-to-messages"></a>Réponse aux messages
 
