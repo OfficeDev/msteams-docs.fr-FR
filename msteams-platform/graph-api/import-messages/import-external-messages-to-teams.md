@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: marge des équipes importation de messages de l’API Microsoft Migrate migration post
-ms.openlocfilehash: 8e8b21c9a38570d7ede745e27b9316b7aba29956
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
+ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46820366"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47340948"
 ---
-# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces vers teams à l’aide de Microsoft Graph
+# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
 >[!IMPORTANT]
 > Les aperçus publics de Microsoft Graph et Microsoft teams sont disponibles pour l’accès anticipé et les commentaires. Bien que cette version ait subi des tests approfondis, elle n’est pas destinée à être utilisée en production.
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.067Z"
 }
 ```
