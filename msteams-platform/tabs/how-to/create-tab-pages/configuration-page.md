@@ -1,16 +1,16 @@
 ---
 title: Créer une page de configuration
 author: laujan
-description: ''
+description: procédure de création d’une page de configuration
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptualF
-ms.author: laujan
-ms.openlocfilehash: 55fe1efca4defacf10b9be34f788704b7b4491f5
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434481"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819024"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -102,7 +102,7 @@ L' [interface de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.co
 
 1. Utilisez la méthode du [Kit de développement logiciel teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` .
 
-#### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservés dans le`configurationURL`
+#### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservés dans le `configurationURL`
 
 Des espaces réservés d’interface de contexte peuvent être ajoutés à votre base `configurationUrl` . Par exemple :
 
@@ -162,7 +162,7 @@ Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont ré
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
 
-Les options de suppression prises en charge peuvent affiner l’expérience utilisateur. Vous pouvez permettre aux utilisateurs de modifier, de reconfigurer ou de renommer un onglet de groupe/canal en définissant la propriété de votre manifeste `canUpdateConfiguration` sur `true` .  En outre, vous pouvez indiquer ce qu’il advient du contenu lorsqu’un onglet est supprimé en incluant une page Options de suppression dans votre application et en définissant une valeur pour la `removeUrl` propriété dans la `setSettings()` Configuration (voir ci-dessous). Les onglets personnels ne peuvent pas être modifiés, mais peuvent être désinstallés par l’utilisateur. Pour plus d’informations, consultez [la rubrique créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
+Les options de suppression prises en charge peuvent affiner l’expérience utilisateur. Vous pouvez permettre aux utilisateurs de modifier, de reconfigurer ou de renommer un onglet de groupe/canal en définissant la propriété de votre manifeste `canUpdateConfiguration` sur `true` .  En outre, vous pouvez indiquer ce qu’il advient du contenu lorsqu’un onglet est supprimé en incluant une page Options de suppression dans votre application et en définissant une valeur pour la `removeUrl` propriété dans la  `setSettings()` Configuration (voir ci-dessous). Les onglets personnels ne peuvent pas être modifiés, mais peuvent être désinstallés par l’utilisateur. Pour plus d’informations, consultez [la rubrique créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 ## <a name="mobile-clients"></a>Clients mobiles
 

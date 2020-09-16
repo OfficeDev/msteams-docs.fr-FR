@@ -1,15 +1,15 @@
 ---
 title: Présentation des fonctionnalités des applications teams
 author: heath-hamilton
-description: ''
+description: vue d’ensemble des fonctionnalités de teams et des points d’extension
 ms.topic: overview
-ms.author: heath-hamilton
-ms.openlocfilehash: 580d75b648bde1caf0e85647c89635804c91fb70
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.author: v-heha
+ms.openlocfilehash: f83cf0240b32d35028135b48e7d4c56b939777a9
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651970"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819080"
 ---
 # <a name="understanding-teams-app-capabilities"></a>Présentation des fonctionnalités des applications teams
 

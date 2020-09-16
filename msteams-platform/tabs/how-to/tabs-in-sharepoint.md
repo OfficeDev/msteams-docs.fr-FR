@@ -4,13 +4,13 @@ author: laujan
 description: Comment déployer votre onglet teams existant vers SharePoint en tant que composant WebPart SharePoint Framework.
 keywords: onglet teams développement SharePoint Framework
 ms.topic: conceptual
-ms.author: ''
-ms.openlocfilehash: b29cd29891779a69a0342f10d383792b3818590a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673773"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818940"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Ajout d’un onglet Microsoft teams dans SharePoint en tant que composant WebPart SPFx
 
@@ -29,7 +29,7 @@ Avec la version de novembre de teams et de SharePoint Framework v. 1,7, les dév
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/image084.png" alt="tab-in-sharepoint view"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -48,7 +48,7 @@ Avec la version de novembre de teams et de SharePoint Framework v. 1,7, les dév
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage bgdAccent1">
-                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" />
+                            <img src="~/assets/images/tabs/tabs-in-sharepoint/SharePoint-web-part-exposed-as-a-Tab-in-Microsoft-Teams.png" alt="web-part-exposed-as-a-tab" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -87,37 +87,37 @@ L’exemple d’application que nous utilisons est une application de gestion de
 
 Téléchargez l’exemple de manifeste d’application à partir de [**cet emplacement**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
-Dans Microsoft Teams, cliquez sur l’icône de la boutique située en bas à gauche, puis sur « Télécharger une application personnalisée » en bas à gauche. Le fichier à télécharger sera situé dans votre dossier téléchargements ; Il est appelé TalentMgmt-Azure. zip. Si tout se passe bien, vous verrez l’écran d’installation/de consentement pour l’application de gestion des compétences. Choisissez l’équipe sur laquelle vous souhaitez effectuer l’installation, puis cliquez sur le bouton installer. Vous êtes maintenant libre de tester l’application.
+Dans Microsoft Teams, cliquez sur l’icône de la boutique située en bas à gauche, puis sur « Télécharger une application personnalisée » en bas à gauche. Le fichier à télécharger sera situé dans votre dossier téléchargements ; Il est appelé TalentMgmt-Azure.zip. Si tout se passe bien, vous verrez l’écran d’installation/de consentement pour l’application de gestion des compétences. Choisissez l’équipe sur laquelle vous souhaitez effectuer l’installation, puis cliquez sur le bouton installer. Vous êtes maintenant libre de tester l’application.
 
 ## <a name="step-2-using-the-teams-tab-in-sharepoint"></a>Étape 2 : utilisation de l’onglet teams dans SharePoint
 
-Téléchargez et déployez votre package d’applications teams dans votre catalogue d' `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`applications SharePoint en `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`visitant, par exemple.
+Téléchargez et déployez votre package d’applications teams dans votre catalogue d’applications SharePoint en visitant `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` , par exemple `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` .
 
 Lorsque vous y êtes invité, activez la « rendre cette solution disponible pour tous les sites de l’Organisation » :
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+![Onglets dans l’affichage SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
 Dans votre site, créez une page en cliquant sur le bouton engrenage dans le coin supérieur droit, puis ajoutez une page :
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+![Vue SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
 Vous verrez l’expérience de création de pages SharePoint. Nommez votre page « onglet My Teams ».
 
 Ouvrez la boîte à outils du composant WebPart en appuyant sur le bouton +, puis sélectionnez l’onglet Teams (nommé « Contoso HR »). Les composants WebPart sont triés par ordre alphabétique ; s’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour la trouver. Cette opération crée un composant WebPart dans la zone de dessin qui contient l’onglet teams :
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+![Affichage onglet](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
 Appuyez sur le bouton « Publier » lorsque vous avez terminé les modifications.
 
 Vous souhaiterez peut-être cliquer sur Ajouter une page à la navigation pour obtenir une référence rapide à votre page dans la barre de navigation de gauche :
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+![Onglet dans l’image SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## <a name="step-3-explore-app-pages-in-sharepoint"></a>Étape 3 : explorer les pages d’application dans SharePoint
 
 Une fois votre page publiée, vous pouvez explorer [la transformation de votre application teams en une expérience plus complète dans SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Cette fonction convertit la page actuelle en page d’application, affichant la mise en page SharePoint normale avec une expérience pleine page pour l’onglet teams :
 
-![](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+![Image d’onglets dans SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="more-information"></a>Plus d’informations
 

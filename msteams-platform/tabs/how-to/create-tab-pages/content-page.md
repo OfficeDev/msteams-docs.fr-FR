@@ -1,16 +1,16 @@
 ---
 title: Créer une page de contenu
 author: laujan
-description: ''
+description: procédure de création d’une page de contenu
 keywords: onglets teams groupe de canaux configurable statique
 ms.topic: conceptual
-ms.author: v-laujan
-ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434488"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818905"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -60,7 +60,7 @@ Vous pouvez créer des liens approfondis vers des entités dans Teams. En règle
 
 ### <a name="task-modules"></a>Modules de tâches
 
-Un module de tâches est une expérience de type popup modale que vous pouvez déclencher à partir de votre onglet. généralement dans une page de contenu, vous ne souhaitez pas parcourir votre utilisateur sur plusieurs pages. Au lieu de cela, vous utiliserez des modules de tâches pour présenter des formulaires permettant de collecter des informations supplémentaires, en affichant les détails d’un élément dans une liste ou à tout autre moment pour présenter à l’utilisateur des informations supplémentaires. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou être entièrement créés à l’aide de cartes adaptatives. Pour obtenir des informations complètes, voir [utilisation des modules de tâches dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md) .
+Un module de tâches est une expérience de type popup modale que vous pouvez déclencher à partir de votre onglet. En règle générale, dans une page de contenu, vous ne souhaitez pas parcourir votre utilisateur sur plusieurs pages. Au lieu de cela, vous utiliserez des modules de tâches pour présenter des formulaires permettant de collecter des informations supplémentaires, en affichant les détails d’un élément dans une liste ou à tout autre moment pour présenter à l’utilisateur des informations supplémentaires. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou être entièrement créés à l’aide de cartes adaptatives. Pour obtenir des informations complètes, voir [utilisation des modules de tâches dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md) .
 
 ### <a name="valid-domains"></a>Domaines valides
 
@@ -71,12 +71,12 @@ Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclu
 À partir [du schéma de manifeste version 1.7](../../../resources/schema/manifest-schema.md), vous pouvez fournir un indicateur de [chargement natif](../../../resources/schema/manifest-schema.md#showloadingindicator) où le contenu de votre site Web est chargé dans Teams, par exemple, page de contenu de l' [onglet](#integrate-your-code-with-teams), page de [configuration](configuration-page.md), [page de suppression](removal-page.md) et [modules de tâches dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> Si vous indiquez `"showLoadingIndicator : true` dans votre manifeste d’application, toutes les pages de configuration d’onglet, de contenu et de suppression, ainsi que tous les modules de tâches basés sur iframe doivent suivre le protocole obligatoire, ci-dessous :
+> Si vous indiquez  `"showLoadingIndicator : true`  dans votre manifeste d’application, toutes les pages de configuration d’onglet, de contenu et de suppression, ainsi que tous les modules de tâches basés sur iframe doivent suivre le protocole obligatoire, ci-dessous :
 
 1. Pour afficher l’indicateur de chargement, ajoutez `"showLoadingIndicator": true` à votre manifeste. 
 2. N’oubliez pas d’appeler `microsoftTeams.initialize();` .
-3. **Facultatif**. Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant`microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatoire**. Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si `notifySuccess` n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
+3. **Facultatif**. Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatoire**. Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si  `notifySuccess`  n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
 5. Si votre application ne se charge pas, vous pouvez appeler `microsoftTeams.appInitialization.notifyFailure(reason);` pour informer les équipes qu’une erreur s’est produite. Un écran d’erreur s’affiche ensuite à l’utilisateur :
 
 ```typescript

@@ -10,12 +10,12 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 3ddefb1b0f01c5b2add719dbe61972eae405a959
-  ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+  ms.openlocfilehash: b67453a5d8f190dd03bd369dc6e019afe0950d4c
+  ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/15/2020
-  ms.locfileid: "45137667"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "47819087"
 highlightedContent:
   items:
   - title: "Nouveautés du développement Microsoft teams \U0001F680Commencez ici !"
@@ -58,7 +58,7 @@ conceptualContent:
       text: Mapper des cas d’utilisation aux fonctionnalités Microsoft teams
     - url: /microsoftteams/platform/whats-new
       itemType: whats-new
-      text: Quoi de neuf ?
+      text: Nouveautés
   - title: Apprendre
     links:
     - url: /learn/modules/intro-microsoft-teams-apps
@@ -106,9 +106,11 @@ conceptualContent:
     - url: https://aka.ms/microsoftteamscommunitycall
       itemType: overview
       text: Appel de communauté Microsoft Teams
+  - title: Aide communautaire
+    links:
     - url: /microsoftteams/platform/feedback
       itemType: overview
-      text: Prise en charge des commentaires &
+      text: Communauté de développeurs Microsoft teams et réponse
 tools:
   title: Outils de & SDK
   items:

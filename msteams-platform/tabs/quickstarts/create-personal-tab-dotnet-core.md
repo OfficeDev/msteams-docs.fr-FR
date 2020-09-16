@@ -1,16 +1,6 @@
 ---
-title: Créer un onglet personnel avec ASP.NET Core
-author: laujan
-description: Guide de démarrage rapide pour la création d’un onglet personnel personnalisé avec ASP.NET Core.
-ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: b279c96f47265fe1928ae90d661e7dc042085b39
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674002"
----
+title : "créer un onglet personnel avec ASP.NET Core" auteur : laujan Description : Guide de démarrage rapide pour la création d’un onglet personnel personnalisé avec ASP.NET Core.
+ms. topic : démarrage rapide ms. Author : lajanuar
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Créer un onglet personnel personnalisé avec ASP.NET Core
 
 Dans ce démarrage rapide, nous allons passer en revue la création d’un onglet personnel personnalisé avec C# et ASP.Net pages Razor principales. Nous allons également utiliser [app Studio pour Microsoft teams](~/concepts/build-and-test/app-studio-overview.md) pour finaliser votre manifeste de l’application et déployer votre onglet sur Teams.
@@ -38,7 +28,7 @@ Pour générer et exécuter votre application, appuyez sur **F5** ou choisissez 
 
 ### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir d’un modèle vide d’application Web ASP.NET Core 2,2 et la case à cocher *Advanced-configure for HTTPS* est activée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure `ConfigureServices()` d’injection de dépendance. En outre, le modèle vide ne permet pas de traiter le contenu statique par défaut, de sorte que l’intergiciel de fichiers `Configure()` statiques est ajouté à la méthode :
+Ce projet a été créé à partir d’un modèle vide d’application Web ASP.NET Core 2,2 et la case à cocher *Advanced-configure for HTTPS* est activée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendance `ConfigureServices()` . En outre, le modèle vide ne permet pas de traiter le contenu statique par défaut, de sorte que l’intergiciel de fichiers statiques est ajouté à la `Configure()` méthode :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -66,7 +56,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 - Une **icône de couleur complète** mesurant 192 x 192 pixels.
 - **Icône de contour transparent** mesurant 32 x 32 pixels.
-- Un fichier **Manifest. JSON** qui spécifie les attributs de votre application.
+- Un fichier **manifest.js** qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être Zippés dans un package d’application pour être utilisés dans le téléchargement de votre onglet vers Teams. Microsoft teams chargera le `contentUrl` spécifié dans votre manifeste, l’incorporera dans un IFRAME et le restituera sous votre onglet.
 
@@ -102,7 +92,7 @@ Dans la fenêtre de l’Explorateur de solutions Visual Studio, cliquez avec le 
 ngrok http https://localhost:44325 -host-header="localhost:44325"
 ```
 
-- Ngrok écoutera les demandes en provenance d’Internet et les acheminera vers votre application lorsqu’elle s’exécutera sur le port 44325.  Il doit ressembler à l' `https://y8rPrT2b.ngrok.io/` emplacement où *y8rPrT2b* est remplacé par votre URL HTTPS alphanumériques ngrok.
+- Ngrok écoutera les demandes en provenance d’Internet et les acheminera vers votre application lorsqu’elle s’exécutera sur le port 44325.  Il doit ressembler `https://y8rPrT2b.ngrok.io/` à l’emplacement où *y8rPrT2b* est remplacé par votre URL HTTPS alphanumériques ngrok.
 
 - Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution et à prendre note de l’URL, vous en aurez besoin plus tard.
 

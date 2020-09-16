@@ -3,13 +3,13 @@ title: Démarrer la planification de votre application Microsoft teams
 author: heath-hamilton
 description: Découvrez comment planifier votre application Teams.
 ms.topic: conceptual
-ms.author: heath-hamilton
-ms.openlocfilehash: 0a0c7881676f2126509d58b3b04c518343945750
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.author: v-heha
+ms.openlocfilehash: b30b54e20c35a745132197464538f4d5a29f3c17
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651966"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819073"
 ---
 # <a name="start-planning-your-microsoft-teams-app"></a>Démarrer la planification de votre application Microsoft teams
 

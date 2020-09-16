@@ -1,17 +1,17 @@
 ---
-title: Créer un onglet de canal et de groupe personnalisé avec node. js et le générateur Yeoman pour Microsoft teams
+title: Créer un onglet de canal et de groupe personnalisé avec Node.js et le générateur Yeoman pour Microsoft teams
 author: laujan
 description: Guide de démarrage rapide pour la création d’un onglet de canal et de groupe avec le générateur Yeoman pour Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: c5e028dcc117d729f2bf366923d03568b7f557a4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 77081f83c753f812032ccfebe2accd3cb8859f99
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673747"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818933"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Créer un onglet de canal et de groupe personnalisé avec node. js et le générateur Yeoman pour Microsoft teams
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Créer un onglet de canal et de groupe personnalisé avec Node.js et le générateur Yeoman pour Microsoft teams
 
 >[!NOTE]
 >Ce démarrage rapide suit les étapes décrites dans le wiki de [création de votre première application Microsoft teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) dans le référentiel GitHub de Microsoft OfficeDev.
@@ -35,7 +35,7 @@ Sélectionnez **n**.
 >[!IMPORTANT]
 >Le composant de chemin d’accès **yourDefaultTabNameTab**, référencé dans ce démarrage rapide, est la valeur que vous avez entrée dans le générateur pour le nom de l' **onglet par défaut** , ainsi que l' **onglet**mot.
 >
->Par exemple : DefaultTabName : **MyTab** => **/MyTabTab/**
+>Par exemple : DefaultTabName : **MyTab**  =>  **/MyTabTab/**
 
 Dans le répertoire de votre projet, accédez à l’un des éléments suivants :
 
@@ -43,7 +43,7 @@ Dans le répertoire de votre projet, accédez à l’un des éléments suivants�
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-C’est ici que vous trouverez votre logique d’onglet. Recherchez la `render()` méthode et ajoutez la balise et le contenu suivants `<div>` en haut du `<PanelBody>` code de conteneur :
+C’est ici que vous trouverez votre logique d’onglet. Recherchez la `render()` méthode et ajoutez la `<div>` balise et le contenu suivants en haut du `<PanelBody>` Code de conteneur :
 
 ```html
     <PanelBody>
@@ -61,7 +61,7 @@ Ouvrez une invite de commandes dans le répertoire de votre projet pour effectue
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Pour afficher la page de configuration de votre `https://localhost:3007/<yourDefaultAppNameTab>/config.html`onglet, accédez à. Vous devez voir les éléments ci-après :
+Pour afficher la page de configuration de votre onglet, accédez à `https://localhost:3007/<yourDefaultAppNameTab>/config.html` . Vous devez voir les éléments ci-après :
 
 ![capture d’écran de la page de configuration](~/assets/images/tab-images/configurationPage.png)
 

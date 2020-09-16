@@ -1,17 +1,17 @@
 ---
-title: 'QuickStart : créer un onglet personnel personnalisé avec node. js et le générateur Yeoman pour Microsoft teams'
+title: 'QuickStart : créer un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft teams'
 author: laujan
 description: Guide de démarrage rapide pour la création d’un onglet personnel avec le générateur Yeoman pour Microsoft Teams.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 2d1b17360b92a161179091c1f6ba06ffa194e958
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: e39878d117b0b1b1f8c0e2450021d9238f5b7877
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673532"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818884"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>QuickStart : créer un onglet personnel personnalisé avec node. js et le générateur Yeoman pour Microsoft teams
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>QuickStart : créer un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft teams
 
 >[!NOTE]
 >Ce démarrage rapide suit les étapes décrites dans le wiki de [création de votre première application Microsoft teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) dans le référentiel GitHub de Microsoft OfficeDev.
@@ -27,13 +27,13 @@ Utilisez les touches de direction pour sélectionner l’onglet statique.
 >[!IMPORTANT]
 >Le composant de chemin d’accès *yourDefaultTabNameTab*, référencé dans ce démarrage rapide, est la valeur que vous avez entrée dans le générateur pour le nom de l' *onglet par défaut* , ainsi que l' *onglet*mot.
 >
->Par exemple : DefaultTabName : *MyTab* => */MyTabTab/*
+>Par exemple : DefaultTabName : *MyTab*  =>  */MyTabTab/*
 
 ## <a name="create-your-personal-tab"></a>Créer votre onglet personnel
 
 Pour ajouter un onglet personnel à cette application, vous allez créer une page de contenu et mettre à jour les fichiers existants :
 
-- Dans votre éditeur de code, créez un fichier HTML, **Personal. html** et ajoutez le balisage suivant :
+- Dans votre éditeur de code, créez un nouveau fichier HTML, **personal.html** et ajoutez le balisage suivant :
 
 ```html
 <!DOCTYPE html>
@@ -55,19 +55,19 @@ Pour ajouter un onglet personnel à cette application, vous allez créer une pag
 </html>
 ```
 
-- Enregistrez **Personal. html** dans le dossier **Web** de votre application :
+- Enregistrez **personal.html** dans le dossier **Web** de votre application :
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- Ouvrez **Manifest. JSON** dans votre éditeur de code :
+- Ouvrez **manifest.js** dans votre éditeur de code :
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-Ajoutez ce qui suit dans le `staticTabs` tableau vide`staticTabs":[]`() et ajoutez l’objet JSON suivant :
+Ajoutez ce qui suit dans le `staticTabs` tableau vide ( `staticTabs":[]` ) et ajoutez l’objet JSON suivant :
 
 ```json
 {
@@ -82,7 +82,7 @@ Ajoutez ce qui suit dans le `staticTabs` tableau vide`staticTabs":[]`() et ajout
 
 N’oubliez pas de mettre à jour le composant de chemin d’accès **« contentURL »** **yourDefaultTabNameTab** avec votre nom d’onglet réel.
 
-- Enregistrez la mise à jour de **Manifest. JSON**.
+- Enregistrez lemanifest.jsmis à jour ** sur**.
 
 - Votre page de contenu doit être fournie dans un IFrame. Ouvrez **Tab. TS** dans votre éditeur de code :
 
@@ -104,7 +104,7 @@ Ouvrez une invite de commandes dans le répertoire de votre projet pour effectue
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Pour afficher votre onglet personnel, accédez à`http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+Pour afficher votre onglet personnel, accédez à `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![capture d’écran de l’onglet personnel](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -132,4 +132,4 @@ gulp ngrok-serve
 
 ## <a name="view-your-personal-tabs"></a>Afficher vos onglets personnels
 
-Dans la barre de navigation située à l’extrême gauche du client Teams, sélectionnez `...` le menu et choisissez votre application dans la liste.
+Dans la barre de navigation située à l’extrême gauche du client Teams, sélectionnez le `...` menu et choisissez votre application dans la liste.

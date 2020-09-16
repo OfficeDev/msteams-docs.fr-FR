@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception de l’infrastructure de référence
-ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021614"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819038"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -16,14 +16,9 @@ ms.locfileid: "45021614"
 >
 > Suivez les [instructions pour les onglets sur mobile](./tabs-mobile.md) lors de la création de vos onglets. Si votre onglet utilise l’authentification, vous devez mettre à niveau votre SDK teams JavaScript vers la version 1.4.1 ou une version ultérieure, sinon l’authentification échouera.
 >
-> **Onglets personnels (statiques) sur mobile :**
->
-> * Les onglets statiques (application personnelle) sont disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md).
-> * Lors de la création de vos onglets statiques, assurez-vous de suivre les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
->
 > **Onglets canal/groupe (configurable) sur mobile :**
 >
-> * Les clients mobiles affichent uniquement les onglets dont la valeur est `websiteUrl` . Si vous souhaitez que votre onglet apparaisse sur les clients mobiles Teams, vous devez définir la valeur de `websiteUrl` .
+> * Les clients mobiles affichent uniquement les onglets configurables dont la valeur est `websiteUrl` . Si vous souhaitez que votre onglet apparaisse sur les clients mobiles Teams, vous devez définir la valeur de `websiteUrl` .
 > * Le comportement d’ouverture par défaut sur mobile consiste à ouvrir l’extérieur dans le navigateur à l’aide du `websiteUrl` . Pour les applications publiées dans le magasin d’applications public, si vous voulez que les onglets de votre canal s’ouvrent dans teams par défaut, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)et contactez votre représentant du support technique pour demander à être inclus dans la liste d’autorisation.
 
 Les onglets sont des canevas que vous pouvez utiliser pour partager du contenu, organiser des conversations et héberger des services tiers dans le flux de travail Organic d’une équipe. Lorsque vous créez un onglet dans Microsoft Teams, il place le centre et le centre de votre application Web où il est facilement accessible à partir des conversations clés.
@@ -58,7 +53,7 @@ Les équipes peuvent être utilisées dans des tailles de fenêtre aussi petites
 
 ### <a name="flat-navigation"></a>Navigation plate
 
-Nous demandons aux développeurs de ne pas ajouter l’intégralité de leur portail à un onglet. le maintien de la navigation relativement plat contribue à maintenir un modèle de conversation plus simple. En d’autres termes, la conversation concerne une liste d’éléments, tels que les éléments de travail triage, ou une seule chose, comme une spécification.
+Nous demandons aux développeurs de ne pas ajouter leur portail entier à un onglet. Le maintien de la navigation relativement plat permet de conserver un modèle de conversation plus simple. En d’autres termes, la conversation concerne une liste d’éléments, tels que les éléments de travail triage, ou une seule chose, comme une spécification.
 
 Il existe des défis de navigation inhérents à la hiérarchie de navigation profonde, dans les conversations thématiques. Pour une expérience utilisateur optimale, votre navigation par onglet doit être réduite à un minimum et être conçue comme suit :
 
@@ -103,7 +98,9 @@ L’incorporation de vos propres couleurs et dispositions twill facilite égalem
 
 Les dimensions de la page de configuration de l’onglet :
 
-<img width="450px" title="Tailles des onglets de configuration" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="Tailles des onglets de configuration" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### <a name="guidelines-for-tab-configuration-page-format"></a>Instructions pour le format de page de configuration d’onglet
 
@@ -117,7 +114,7 @@ Les dimensions de la page de configuration de l’onglet :
 
 Lorsque la taille est correcte, votre page de configuration d’onglet doit ressembler à ceci :
 
-<img width="450px" title="Onglet nouvelle configuration" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title="Onglet nouvelle configuration" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -139,7 +136,7 @@ Il existe deux modes de notification pour les modifications apportées au conten
 
 > [!div class="checklist"]
 >
-> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 > * **Utiliser un bot**. Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
 
-  L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous avez `@mention` des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.
+  L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous avez `@mention`  des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.

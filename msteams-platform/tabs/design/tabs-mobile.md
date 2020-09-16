@@ -2,17 +2,17 @@
 title: Onglets sur les appareils mobiles
 description: Décrit les instructions permettant de concevoir des onglets qui fonctionnent sur mobile.
 keywords: instructions de conception teams structure de référence des applications personnelles onglets mobiles
-ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: d47039c245b8e262af6e1f60bc0c644dc7e65bd6
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145929"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819045"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
 > [!NOTE]
-> Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété (voir ci-dessous). Les onglets personnels sont actuellement disponibles dans l’Aperçu pour les [développeurs](~/resources/dev-preview/developer-preview-intro.md). La prise en charge complète des onglets sur les clients mobiles sera bientôt disponible. Pour préparer la mise à jour, vous devez suivre les instructions présentées ici lors de la création des onglets.
+> Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété (voir ci-dessous).
 
 Les onglets personnalisés peuvent faire partie d’un canal, d’une conversation de groupe ou d’une application personnelle (applications qui contiennent des onglets statiques et/ou un bot un-à-un).
 
@@ -56,7 +56,7 @@ Il s’agit d’une grande zone dans laquelle le travail est exécuté. L’appl
 
 ![disposition sur une seule zone de dessin](~/assets/images/mobile-single-canvas.png)
 
-#### <a name="list"></a>Répertorier la liste
+#### <a name="list"></a>Liste
 
 Les listes sont idéales pour le tri et le filtrage de grandes quantités de données et sont idéales pour conserver les choses les plus importantes en haut. Il est utile d’utiliser des colonnes à trier. Les actions peuvent être ajoutées à chaque élément de liste sous le menu points de suspension.
 
@@ -92,7 +92,7 @@ L’utilisation de notre palette de couleurs neutre approuvée pour les arrière
 
 Le style des boutons permet de communiquer le type d’action qu’ils déclenchent. Nous mettons à jour un large éventail de boutons qui sont mis en forme pour afficher différents niveaux de mise en relief. Les boutons peuvent contenir du texte, une icône ou une combinaison de texte et d’icône. Pour communiquer différents niveaux dans une hiérarchie, nous avons conçu les boutons principal et secondaire dans chaque catégorie.
 
-![descendre](~/assets/images/buttons.png)
+![image des boutons](~/assets/images/buttons.png)
 
 ![contrôles de sélection](~/assets/images/selection-controls.png)
 

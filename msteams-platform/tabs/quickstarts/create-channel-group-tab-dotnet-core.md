@@ -3,13 +3,13 @@ title: Créer un onglet de canal et de groupe avec ASP.NET Core
 author: laujan
 description: Guide de démarrage rapide pour la création d’un onglet de canal et de groupe personnalisé avec ASP.NET Core.
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 47a0c98d630501944c7a5f4baf4620dbb70cdbcd
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.author: lajanuar
+ms.openlocfilehash: 6a21d40d4d474fd587b43760d818082b4ab2502d
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228005"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818919"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>Créer un onglet de canal et de groupe personnalisé avec ASP.NET Core
 
@@ -37,7 +37,7 @@ Pour générer et exécuter votre application, appuyez sur **F5** ou choisissez 
 
 ### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir d’un modèle vide d’application Web ASP.NET Core 2,2 et la case à cocher *Advanced-configure for HTTPS* est activée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure `ConfigureServices()` d’injection de dépendance. En outre, le modèle vide ne permet pas de traiter le contenu statique par défaut, de sorte que l’intergiciel de fichiers `Configure()` statiques est ajouté à la méthode :
+Ce projet a été créé à partir d’un modèle vide d’application Web ASP.NET Core 2,2 et la case à cocher *Advanced-configure for HTTPS* est activée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendance `ConfigureServices()` . En outre, le modèle vide ne permet pas de traiter le contenu statique par défaut, de sorte que l’intergiciel de fichiers statiques est ajouté à la `Configure()` méthode :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -69,9 +69,9 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 - Une **icône de couleur complète** mesurant 192 x 192 pixels.
 - **Icône de contour transparent** mesurant 32 x 32 pixels.
-- Un fichier **Manifest. JSON** qui spécifie les attributs de votre application.
+- Un fichier **manifest.js** qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être Zippés dans un package d’application pour être utilisés dans le téléchargement de votre onglet vers Teams. Lorsqu’un utilisateur choisit d’ajouter ou de mettre à jour votre onglet, Microsoft teams charge le spécifié dans votre manifeste, l' `configurationUrl` incorpore dans un IFRAME et l’affiche dans votre onglet.
+Ces fichiers doivent être Zippés dans un package d’application pour être utilisés dans le téléchargement de votre onglet vers Teams. Lorsqu’un utilisateur choisit d’ajouter ou de mettre à jour votre onglet, Microsoft teams charge le `configurationUrl` spécifié dans votre manifeste, l’incorpore dans un IFRAME et l’affiche dans votre onglet.
 
 ### <a name="csproj"></a>. csproj
 
@@ -103,13 +103,13 @@ Dans la fenêtre de l’Explorateur de solutions Visual Studio, cliquez avec le 
 ngrok http https://localhost:44355 -host-header="localhost:44355"
 ```
 
-- Ngrok écoutera les demandes en provenance d’Internet et les acheminera vers votre application lorsqu’elle s’exécutera sur le port 44355. Il doit ressembler à l' `https://y8rCgT2b.ngrok.io/` emplacement où *y8rCgT2b* est remplacé par votre URL HTTPS alphanumériques ngrok.
+- Ngrok écoutera les demandes en provenance d’Internet et les acheminera vers votre application lorsqu’elle s’exécutera sur le port 44355. Il doit ressembler `https://y8rCgT2b.ngrok.io/` à l’emplacement où *y8rCgT2b* est remplacé par votre URL HTTPS alphanumériques ngrok.
 
 - Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution et à prendre note de l’URL, vous en aurez besoin plus tard.
 
 ## <a name="update-your-application"></a>Mettre à jour votre application
 
-Dans *Tab. cshtml* , l’application présente à l’utilisateur deux boutons d’options permettant d’afficher l’onglet avec une icône rouge ou grise. Le choix du bouton **Sélectionner le gris** ou sélectionner `saveGray()` le `saveRed()`bouton **rouge** déclenche ou `settings.setValidityState(true)`, respectivement, définit et active le bouton **Enregistrer** dans la page de configuration. Ce code permet aux équipes de déterminer que vous êtes satisfait de la configuration requise et que l’installation peut se poursuivre. Lors de l’enregistrement, les `settings.setSettings` paramètres de sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue avec succès.
+Dans *Tab. cshtml* , l’application présente à l’utilisateur deux boutons d’options permettant d’afficher l’onglet avec une icône rouge ou grise. Le choix du bouton **Sélectionner le gris** ou sélectionner le bouton **rouge** déclenche `saveGray()` ou `saveRed()` , respectivement, définit `settings.setValidityState(true)` et active le bouton **Enregistrer** dans la page de configuration. Ce code permet aux équipes de déterminer que vous êtes satisfait de la configuration requise et que l’installation peut se poursuivre. Lors de l’enregistrement, les paramètres de `settings.setSettings` sont définis. Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue avec succès.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

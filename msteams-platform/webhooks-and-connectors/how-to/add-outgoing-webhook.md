@@ -1,16 +1,16 @@
 ---
 title: Ajouter des robots personnalisés à Microsoft teams avec des webhooks sortants
 author: laujan
-description: ''
+description: procédure d’ajout d’un webhook sortant
 keywords: onglet teams webhook sortant *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: 4881dc8768c7c51947f6a80a55affe78c28874d3
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.author: lajanuar
+ms.openlocfilehash: 04fc86fc3df7601235cb7f6bb7e53da59777f49f
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45102997"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819059"
 ---
 # <a name="add-custom-bots-to-microsoft-teams-with-outgoing-webhooks"></a>Ajouter des robots personnalisés à Microsoft teams avec des webhooks sortants
 
@@ -44,7 +44,7 @@ Pour vous assurer que votre service reçoit des appels uniquement à partir de c
 
 Votre code doit toujours valider la signature HMAC incluse dans la demande :
 
-* *Générez* le jeton HMAC à partir du corps de la demande du message. Il existe des bibliothèques standard pour effectuer cette opération sur la plupart des plateformes (*reportez-vous* à [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js ou *voir* [Team webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft teams utilise le chiffrement HMAC standard SHA256. Vous devrez convertir le corps en un tableau d’octets en UTF8.
+* *Générez* le jeton HMAC à partir du corps de la demande du message. Il existe des bibliothèques standard pour effectuer cette opération sur la plupart des plateformes (*reportez-vous* à [crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js ou  *voir* [Team webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft teams utilise le chiffrement HMAC standard SHA256. Vous devrez convertir le corps en un tableau d’octets en UTF8.
 * *Calculer* le hachage à partir du tableau d’octets du jeton de sécurité **fourni par teams** lorsque vous avez enregistré le webhook sortant dans le client teams]. *Voir* [créer un webhook sortant](#create-an-outgoing-webhook), ci-dessous.
 * *Convertissez* le hachage en une chaîne à l’aide de l’encodage UTF-8.
 * *Comparez* la valeur de chaîne du hachage généré à la valeur fournie dans la demande http.

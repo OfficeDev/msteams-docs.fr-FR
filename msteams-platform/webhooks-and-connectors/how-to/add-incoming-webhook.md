@@ -1,16 +1,16 @@
 ---
 title: Publier des demandes externes à Microsoft teams avec des webhooks entrants
 author: laujan
-description: ''
+description: procédure d’ajout d’une application webhook entrante à teams
 keywords: onglet teams webhook sortant *
 ms.topic: conceptual
-ms.author: laujan
-ms.openlocfilehash: c2b3f5dd581441f89aff344c35fe7e110d4d2e68
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 3aa795170af9695fc375043c94e794f814b38646
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673972"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819066"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Publier des demandes externes dans teams avec des webhooks entrants
 
@@ -30,7 +30,7 @@ Les webhooks entrants sont des types de connecteur spéciaux dans teams qui offr
 |Définitions de ressources sécurisées|Les messages sont mis en forme comme charges utiles JSON. Cette structure de messagerie déclarative empêche l’injection de code malveillant lorsqu’il n’y a pas d’exécution de code sur le client.|
 |Prise en charge de la messagerie actionnable|Si vous choisissez d’envoyer des messages via des cartes, vous devez utiliser le format de **carte de message** intégrant des actions. Les cartes de message actionnables sont prises en charge dans tous les groupes Office 365, y compris Teams. Voici des liens vers la [référence de carte de message actionnable héritée](/outlook/actionable-messages/message-card-reference) et le [laboratoire de carte de message](https://messagecardplayground.azurewebsites.net).|
 |Prise en charge de la messagerie HTTPs indépendante| Les cartes sont un excellent moyen de présenter des informations de façon claire et cohérente. Tout outil ou infrastructure pouvant envoyer des requêtes POST HTTPs peut envoyer des messages à teams via un webhook entrant.|
-|Prise en charge des démarques|Tous les champs de texte des cartes de messagerie actionnable prennent en charge la démarque de base. **N’utilisez pas de balises HTML dans vos cartes**. HTML est ignoré et traité en tant que texte brut.|
+|Prise en charge des démarques|Tous les champs de texte des cartes de messagerie actionnable prennent en charge la démarque de base. **N’utilisez pas de balises HTML dans vos cartes**. Le code HTML est ignoré et traité comme texte brut.|
 
 > [!Note]  
 > Les robots Teams, les extensions de messagerie et l’infrastructure de robot prennent en charge les cartes adaptatives, une infrastructure de plateformes entre cartes ouverte. Les connecteurs Teams ne prennent actuellement pas en charge les cartes adaptatives. Toutefois, il est possible de créer un [flux](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) qui publie des cartes adaptatives sur un canal Teams.
@@ -38,7 +38,7 @@ Les webhooks entrants sont des types de connecteur spéciaux dans teams qui offr
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Ajouter un webhook entrant à un canal teams
 
 > [!Important]  
-> Si les**autorisations** => membres **des paramètres** => de votre équipe**permettent aux membres de créer, mettre à jour et supprimer des connecteurs** , tous les membres de l’équipe peuvent ajouter, modifier ou supprimer un connecteur.
+> Si les autorisations membres des **paramètres**de votre équipe  =>  **Member permissions**  =>  **permettent aux membres de créer, mettre à jour et supprimer des connecteurs** , tous les membres de l’équipe peuvent ajouter, modifier ou supprimer un connecteur.
 
 1. Accédez au canal auquel vous souhaitez ajouter le webhook et sélectionnez (&#8226;&#8226;&#8226;) d' *autres options* dans la barre de navigation supérieure.
 1. Dans le menu déroulant, sélectionnez **connecteurs** , puis recherchez **webhook entrant**.
