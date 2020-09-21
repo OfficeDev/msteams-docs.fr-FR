@@ -1,6 +1,16 @@
 ---
-title : "créer un onglet personnel avec ASP.NET Core" auteur : laujan Description : Guide de démarrage rapide pour la création d’un onglet personnel personnalisé avec ASP.NET Core.
-ms. topic : démarrage rapide ms. Author : lajanuar
+title: Créer un onglet personnel avec ASP.NET Core
+author: laujan
+description: Guide de démarrage rapide pour la création d’un onglet personnel personnalisé avec ASP.NET Core.
+ms.topic: quickstart
+ms.author: lajanuar
+ms.openlocfilehash: 21d1de18bfa8b7959cbecfe6eb50430ed8d3f3ec
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964577"
+---
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Créer un onglet personnel personnalisé avec ASP.NET Core
 
 Dans ce démarrage rapide, nous allons passer en revue la création d’un onglet personnel personnalisé avec C# et ASP.Net pages Razor principales. Nous allons également utiliser [app Studio pour Microsoft teams](~/concepts/build-and-test/app-studio-overview.md) pour finaliser votre manifeste de l’application et déployer votre onglet sur Teams.

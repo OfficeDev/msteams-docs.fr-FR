@@ -1,15 +1,15 @@
 ---
 title: Présentation des fonctionnalités des applications teams
 author: heath-hamilton
-description: vue d’ensemble des fonctionnalités de teams et des points d’extension
+description: Vue d’ensemble des fonctionnalités de la plateforme Teams, qui sont les points d’extension pour la création d’applications Teams.
 ms.topic: overview
-ms.author: v-heha
-ms.openlocfilehash: f83cf0240b32d35028135b48e7d4c56b939777a9
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.author: lajanuar
+ms.openlocfilehash: 9bb94d2cfd5c30b2245c5ccf580d374972315e72
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819080"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964563"
 ---
 # <a name="understanding-teams-app-capabilities"></a>Présentation des fonctionnalités des applications teams
 
@@ -36,6 +36,6 @@ Lorsque vous vous familiarisez avec le développement d’applications Teams, vo
 
 Le choix de la combinaison appropriée de fonctionnalités et de conventions de l’interface utilisateur, des contrôles et des éléments ne revient pas à [comprendre les cas d’utilisation de votre audience](../concepts/design/understand-use-cases.md).
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 * [Démarrer la planification de votre application](../concepts/extensibility-points.md)

@@ -3,14 +3,14 @@ title: Créer une page de configuration
 author: laujan
 description: procédure de création d’une page de configuration
 keywords: onglet teams groupe de canaux configurable
-ms.topic: conceptualF
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819024"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964605"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -22,7 +22,7 @@ Une page de configuration est un type spécial de [page de contenu](content-page
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuration d’un onglet de conversation de canal ou de groupe
 
-Une page de configuration informe la page de contenu de la façon dont elle doit s’afficher. Votre application doit référencer le [Kit de développement logiciel (SDK) du client JavaScript Microsoft teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) et appeler `microsoft.initialize()` . En outre, vos URL doivent être des points de terminaison HTTPs sécurisés et disponibles dans le Cloud. Vous trouverez ci-dessous un exemple de page de configuration.
+Une page de configuration informe la page de contenu de la façon dont elle doit s’afficher. Votre application doit référencer le [Kit de développement logiciel (SDK) du client JavaScript Microsoft teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et appeler `microsoft.initialize()` . En outre, vos URL doivent être des points de terminaison HTTPs sécurisés et disponibles dans le Cloud. Vous trouverez ci-dessous un exemple de page de configuration.
 
 ```html
 <head>
@@ -85,7 +85,7 @@ Ici, l’utilisateur voit apparaître deux cases d’option, **Sélectionner le 
 1. Le `microsoftTeams.settings.registerOnSaveHandler()` Gestionnaire d’événements est déclenché.
 1. Le bouton **Enregistrer** de la page de configuration de l’application, chargé dans Teams, est activé.
 
-Ce code permet aux équipes de reconnaître que les exigences de configuration ont été satisfaites et que l’installation peut être effectuée. Lors de l' **enregistrement**, les paramètres de `settings.setSettings()` sont définis, comme défini par l' `Settings` interface, pour l’instance actuelle (voir [interface des paramètres](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) ). Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue avec succès.
+Ce code permet aux équipes de reconnaître que les exigences de configuration ont été satisfaites et que l’installation peut être effectuée. Lors de l' **enregistrement**, les paramètres de `settings.setSettings()` sont définis, comme défini par l' `Settings` interface, pour l’instance actuelle (voir [interface des paramètres](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue avec succès.
 
 >[!NOTE]
 >
@@ -96,15 +96,15 @@ Ce code permet aux équipes de reconnaître que les exigences de configuration o
 
 Votre onglet peut nécessiter des informations contextuelles pour afficher le contenu pertinent. Les informations contextuelles peuvent améliorer davantage l’attrait de votre onglet en fournissant une expérience utilisateur plus personnalisée.
 
-L' [interface de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) teams définit les propriétés qui peuvent être utilisées pour votre configuration d’onglets. Vous pouvez collecter les valeurs des variables de données de contexte de deux façons :
+L' [interface de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) teams définit les propriétés qui peuvent être utilisées pour votre configuration d’onglets. Vous pouvez collecter les valeurs des variables de données de contexte de deux façons :
 
 1. Insérez des espaces réservés de chaîne de requête d’URL dans votre manifeste `configurationURL` .
 
-1. Utilisez la méthode du [Kit de développement logiciel teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` .
+1. Utilisez la méthode du [Kit de développement logiciel teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{}` .
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservés dans le `configurationURL`
 
-Des espaces réservés d’interface de contexte peuvent être ajoutés à votre base `configurationUrl` . Par exemple :
+Des espaces réservés d’interface de contexte peuvent être ajoutés à votre base `configurationUrl` . Par exemple:
 
 ##### <a name="base-url"></a>URL de base
 
@@ -139,7 +139,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Utiliser la `getContext()` fonction pour extraire le contexte
 
-Lorsqu’elle est appelée, la `microsoftTeams.getContext((context) => {})` fonction récupère l' [interface de contexte](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest). Vous pouvez ajouter cette fonction à votre page de configuration pour extraire les valeurs de contexte :
+Lorsqu’elle est appelée, la `microsoftTeams.getContext((context) => {})` fonction récupère l' [interface de contexte](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Vous pouvez ajouter cette fonction à votre page de configuration pour extraire les valeurs de contexte :
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->

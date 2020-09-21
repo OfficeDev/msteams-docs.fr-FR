@@ -5,12 +5,12 @@ description: Procédure de création d’une page de suppression d’onglets
 keywords: onglets teams groupe canal configurable supprimer supprimer
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818898"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964591"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modifier ou supprimer un onglet de groupe de canaux
 
@@ -39,7 +39,7 @@ La page de suppression facultative est une page HTML que vous hébergez et qui s
 
 ### <a name="register-a-remove-handler"></a>Inscrire un gestionnaire de suppression
 
-Éventuellement, dans la logique de votre page de suppression, vous pouvez appeler le `registerOnRemoveHandler((RemoveEvent) => {}` Gestionnaire d’événements lorsque l’utilisateur supprime une configuration d’onglet existante. La méthode prend l' [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) interface et exécute le code dans le gestionnaire lorsqu’un utilisateur tente de supprimer du contenu. Il est utilisé pour effectuer des opérations de nettoyage, telles que la suppression de la ressource sous-jacente qui alimente le contenu de l’onglet. Un seul gestionnaire de suppression peut être inscrit à la fois.
+Éventuellement, dans la logique de votre page de suppression, vous pouvez appeler le `registerOnRemoveHandler((RemoveEvent) => {}` Gestionnaire d’événements lorsque l’utilisateur supprime une configuration d’onglet existante. La méthode prend l' [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface et exécute le code dans le gestionnaire lorsqu’un utilisateur tente de supprimer du contenu. Il est utilisé pour effectuer des opérations de nettoyage, telles que la suppression de la ressource sous-jacente qui alimente le contenu de l’onglet. Un seul gestionnaire de suppression peut être inscrit à la fois.
 
 L' `RemoveEvent` interface décrit un objet avec deux méthodes :
 
@@ -49,11 +49,11 @@ L' `RemoveEvent` interface décrit un objet avec deux méthodes :
 
 #### <a name="use-the-getsettings-function"></a>Utiliser la `getSettings()` fonction
 
-Vous pouvez utiliser `getSettings()` pour désigner le contenu des onglets à supprimer. La `getSettings((Settings) =>{})` fonction prend le [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) et fournit les valeurs de propriété de paramètres valides qui peuvent être récupérées.
+Vous pouvez utiliser `getSettings()` pour désigner le contenu des onglets à supprimer. La `getSettings((Settings) =>{})` fonction prend le [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) et fournit les valeurs de propriété de paramètres valides qui peuvent être récupérées.
 
 #### <a name="use-the-getcontext-function"></a>Utiliser la `getContext()` fonction
 
-Vous pouvez utiliser `getContext()` pour extraire le contexte actuel dans lequel le cadre est en cours d’exécution. La `getContext((Context) =>{})` fonction prend en [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) et fournit des valeurs de propriété valides `Context` que vous pouvez utiliser dans la logique de votre page de suppression pour déterminer le contenu à afficher dans la page de suppression.
+Vous pouvez utiliser `getContext()` pour extraire le contexte actuel dans lequel le cadre est en cours d’exécution. La `getContext((Context) =>{})` fonction prend en [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) et fournit des valeurs de propriété valides `Context` que vous pouvez utiliser dans la logique de votre page de suppression pour déterminer le contenu à afficher dans la page de suppression.
 
 #### <a name="include-authentication"></a>Inclure l’authentification
 
