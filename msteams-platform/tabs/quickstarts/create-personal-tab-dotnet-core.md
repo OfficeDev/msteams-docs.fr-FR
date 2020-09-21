@@ -4,12 +4,12 @@ author: laujan
 description: Guide de démarrage rapide pour la création d’un onglet personnel personnalisé avec ASP.NET Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 21d1de18bfa8b7959cbecfe6eb50430ed8d3f3ec
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: c6b58ffd09f952a6237b765e5457fe7a8e943390
+ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964577"
+ms.locfileid: "48097878"
 ---
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>Créer un onglet personnel personnalisé avec ASP.NET Core
 
