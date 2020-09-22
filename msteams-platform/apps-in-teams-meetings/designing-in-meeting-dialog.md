@@ -1,17 +1,17 @@
 ---
-title: Conception d’une boîte de dialogue de réunion Microsoft teams
+title: Créer une boîte de dialogue de réunion Microsoft teams
 author: heath-hamilton
 description: Conseils et meilleures pratiques pour la conception d’une boîte de dialogue de réunion pour Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 449e6cdf9aecefba9fe70099c961ab56955306f8
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 8e9671d8d284311d3d0a299573d3f0e08b195e97
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098033"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178329"
 ---
-# <a name="designing-an-in-meeting-dialog"></a>Conception d’une boîte de dialogue de réunion
+# <a name="design-an-in-meeting-dialog"></a>Créer une boîte de dialogue de réunion
 
 Les boîtes de dialogue de réunion sont affichées à l’étape de réunion Teams. Elles requièrent l’attention, la confirmation ou l’interaction d’un utilisateur, mais elles sont subtiles et n’interrompent pas la réunion.
 

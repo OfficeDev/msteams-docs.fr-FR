@@ -1,17 +1,17 @@
 ---
-title: Création d’un onglet de réunion dans Microsoft teams
+title: Créer un onglet de réunion dans Microsoft teams
 author: heath-hamilton
 description: Conseils et meilleures pratiques pour la conception de l’onglet dans la réunion pour Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: ec095654f4a0816478b1b32a45c931d74dbb3209
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 91981ab79c8e50483568dd0dc750b4e9b3fdef24
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098009"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178322"
 ---
-# <a name="designing-an-in-meeting-tab"></a>Conception d’un onglet de réunion
+# <a name="design-an-in-meeting-tab"></a>Concevoir un onglet de réunion
 
 L’onglet dans la réunion est un canevas permettant d’augmenter la collaboration pendant les réunions. En fonction de l’onglet Teams, les participants peuvent voir et interagir avec le contenu de l’application dans un espace dédié en dehors de la phase de la réunion via des affichages partagés ou basés sur des rôles.
 
