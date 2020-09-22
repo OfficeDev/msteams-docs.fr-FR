@@ -5,12 +5,12 @@ description: Comment créer un bot dans Microsoft Teams.
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635297"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178315"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Créer un bot dans Microsoft Teams
 
@@ -171,7 +171,14 @@ Pour créer un package de l’application, vous devez ajouter votre manifeste d�
 
 ## <a name="upload-your-package-to-microsoft-teams"></a>Télécharger votre package dans Microsoft Teams
 
+> [!NOTE]
+> Pour charger votre robot, l’administrateur de votre client doit d’abord [autoriser le chargement](/microsoftteams/manage-apps#manage-org-wide-app-settings) d’applications tierces ou personnalisées dans Teams.
+
 Si vous utilisez App Studio, vous pouvez installer votre application à partir de l'onglet **Tester et distribuer** de l’**Éditeur de manifeste**. Vous pouvez également installer votre package d’application en cliquant sur le menu `...` dépassement sur le rail gauche de la barre de navigation, en cliquant sur **Autres applications**, puis sur le lien **Télécharger une application personnalisée**. Vous pouvez également importer un manifeste d’application ou un package d’application dans App Studio pour effectuer des mises à jour supplémentaires avant de les télécharger.
+
+## <a name="bots-in-teams-meetings"></a>Robots dans les réunions Teams
+
+Teams prend en charge l’invocation des robots pendant les réunions. Lorsque votre robot reçoit le message d’appel, il peut identifier l’utilisateur et le client grâce à `userId` et `tenantId`. `meetingId` fait partie de l’objet `channelData`. Votre robot peut utiliser `userId` et `meetingId` pour la demande d’API `GetParticipant` afin de récupérer les rôles d’utilisateur.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
