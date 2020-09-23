@@ -1,16 +1,16 @@
 ---
 title: Étendre votre application teams avec un onglet personnalisé
 author: laujan
-description: Guide de création d’un onglet
+description: Comment créer un onglet pour Microsoft teams à l’aide d’App Studio ou manuellement.
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819031"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209717"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>Étendre votre application teams avec un onglet personnalisé
 
@@ -81,10 +81,10 @@ Le contenu affiché pour les onglets personnels est le même pour tous les utili
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité que l’onglet affiche.|
-|`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
-|`contentUrl`|Chaîne|2 048 caractères|✔|URL https://qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de dessin de teams.|
-|`websiteUrl`|Chaîne|2 048 caractères||URL https://vers laquelle pointer si un utilisateur choisit de l’afficher dans un navigateur.|
-|`scopes`|Tableau de l’énum|1 |✔|Les onglets statiques prennent en charge uniquement l' `personal` étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre d’une application personnelle.|
+|`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
+|`contentUrl`|String|2 048 caractères|✔|URL https://qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de dessin de teams.|
+|`websiteUrl`|String|2 048 caractères||URL https://vers laquelle pointer si un utilisateur choisit de l’afficher dans un navigateur.|
+|`scopes`|Tableau de l’énum|0,1|✔|Les onglets statiques prennent en charge uniquement l' `personal` étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre d’une application personnelle.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Exemple de manifeste d’onglet personnel simple
 
@@ -109,9 +109,9 @@ Les onglets canal/groupe sont ajoutés dans le `configurableTabs` tableau. Vous 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|Chaîne|2 048 caractères|✔|URL https://vers la page de configuration.|
+|`configurationUrl`|String|2 048 caractères|✔|URL https://vers la page de configuration.|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default `true`|
-|`scopes`|Tableau de l’énum|1 |✔|Les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
+|`scopes`|Tableau de l’énum|0,1|✔|Les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Exemple de manifeste de l’onglet canal/groupe simple
 
@@ -146,7 +146,7 @@ Une fois que vous avez effectué le `manifest.json` regroupement dans un dossier
     * Revenez à votre équipe, choisissez le canal où vous souhaitez afficher l’onglet, sélectionnez ➕ dans la barre d’onglets, puis choisissez votre onglet dans la Galerie.
     * Suivez les instructions relatives à l’ajout d’un onglet. Notez qu’il existe une boîte de dialogue de configuration personnalisée pour l’onglet canal/groupe. Sélectionnez **Enregistrer** et votre onglet est ajouté à la barre d’onglets de la chaîne.
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 * [Créer une page de contenu pour votre onglet](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Créer une page de configuration pour votre onglet](~/tabs/how-to/create-tab-pages/configuration-page.md)

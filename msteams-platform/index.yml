@@ -10,17 +10,17 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: b67453a5d8f190dd03bd369dc6e019afe0950d4c
-  ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+  ms.openlocfilehash: 9f28ab18339cba951c3830cb1a8ba229154ed11a
+  ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/15/2020
-  ms.locfileid: "47819087"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "48209724"
 highlightedContent:
   items:
   - title: "Nouveautés du développement Microsoft teams \U0001F680Commencez ici !"
     itemType: get-started
-    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+    url: /microsoftteams/platform/overview
   - title: 'Onglets : expériences web incorporées'
     itemType: overview
     url: /microsoftteams/platform/tabs/what-are-tabs
@@ -39,6 +39,9 @@ highlightedContent:
   - title: Microsoft teams et API Microsoft Graph
     itemType: overview
     url: /graph/teams-concept-overview
+  - title: Applications, robots, flux et rapports à faible code à l’aide de Microsoft Power Platform
+    itemType: overview
+    url: /microsoftteams/platform/samples/teams-low-code-solutions/
 conceptualContent:
   title: Guides et ressources
   items:

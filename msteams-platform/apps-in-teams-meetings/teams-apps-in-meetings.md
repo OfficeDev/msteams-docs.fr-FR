@@ -5,12 +5,12 @@ description: vue d’ensemble des applications dans les réunions teams en fonct
 ms.topic: overview
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: f60f09283827ee8b22db4e77154ee986b26b54f8
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
+ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182007"
+ms.locfileid: "48204023"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Applications dans les réunions Teams (aperçu)
 
@@ -62,7 +62,7 @@ Les applications de réunion ✔ seront hébergées dans la barre supérieure su
 Les ✔ d’une application peuvent être visibles dans une réunion teams dans deux domaines :
 
 &emsp;&emsp;&#9679; **panneau latéral**. </br>
-> **Remarque**: Si votre _manifeste d’application_ spécifie que votre onglet est [optimisé pour le panneau de configuration](create-apps-for-teams-meetings.md#in-meeting), c’est ici qu’il sera affiché. Je peux également faire partie d’une expérience de bac à papier, sous réserve des instructions de conception spécifiées.
+> **Remarque**: Si votre _manifeste d’application_ spécifie que votre onglet est [optimisé pour le panneau de configuration](create-apps-for-teams-meetings.md#in-meeting), c’est ici qu’il sera affiché. Il peut également faire partie d’une expérience de bac à papier, sous réserve des instructions de conception spécifiées.
 
 &emsp;&emsp;&#9679; **boîte de dialogue de réunion**. Utilisez la boîte de dialogue de réunion pour présenter un contenu actionnable pour les participants à la réunion. *Consultez la rubrique* [créer des applications pour les réunions teams](create-apps-for-teams-meetings.md).
 
@@ -120,7 +120,7 @@ Vous pouvez accéder à la page Options de la  **réunion** comme suit :
 > Les types d’utilisateurs peuvent participer à des réunions et assumer l’un des rôles de participant décrits ci-dessus. Le type d’utilisateur n’est pas exposé dans le cadre de l’API **getParticipantRole** .
 
 1. **Dans le client**. Ces utilisateurs appartiennent à l’organisation et disposent d’informations d’identification dans Azure Active Directory pour le client. Il s’agit généralement d’employés à temps plein, sur site ou à distance.
-1. **Invité**. Un invité est un participant d’une autre organisation qui a été invité à accéder aux équipes ou à d’autres ressources dans le client de votre organisation. Les invités sont ajoutés à Active Directory de votre organisation et peuvent être attribués à presque toutes les mêmes fonctionnalités teams qu’un membre d’équipe natif avec un accès total aux conversations, réunions et fichiers d’équipe. _Voir_ [deviner l’accès dans Microsoft teams](/microsoftteams/guest-access)
+1. **Invité**. Un invité est un participant d’une autre organisation qui a été invité à accéder aux équipes ou à d’autres ressources dans le client de votre organisation. Les invités sont ajoutés à Active Directory de votre organisation et peuvent être attribués à presque toutes les mêmes fonctionnalités teams qu’un membre d’équipe natif avec un accès total aux conversations, réunions et fichiers d’équipe. _Voir_ [accès invité dans Microsoft teams](/microsoftteams/guest-access)
 1. **Fédéré/externe**. Un utilisateur fédéré est un utilisateur de teams externes d’une autre organisation qui a été invité à participer à une réunion. Étant donné que ces utilisateurs ont des informations d’identification valides avec des partenaires fédérés, ils sont traités comme étant authentifiés par Teams, mais n’ont pas accès à vos équipes ou aux autres ressources partagées de votre organisation. Si vous souhaitez que les utilisateurs externes aient accès aux équipes et aux canaux, l’accès invité peut être une meilleure solution. _Voir_ [gérer l’accès externe dans Microsoft teams](/microsoftteams/manage-external-access)
 1. **Anonyme**. Les utilisateurs anonymes n’ont pas d’identité Active Directory et ne sont pas fédérés avec un client. Le participant anonyme est comme un utilisateur externe, mais son identité n’est pas projetée dans la réunion. Les utilisateurs anonymes ne pourront pas accéder aux applications dans une fenêtre de réunion.
 

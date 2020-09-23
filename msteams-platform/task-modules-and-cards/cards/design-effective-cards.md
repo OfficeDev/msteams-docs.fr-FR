@@ -2,14 +2,14 @@
 title: Conception de cartes efficaces
 description: Décrit les instructions de conception pour la création de cartes
 keywords: instructions de conception teams fiches d’infrastructure de référence (cartes simplifiées)
-ms.openlocfilehash: 33ee0b59a3a5a1490d6e2106f8532094ed852598
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673979"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209836"
 ---
-# <a name="designing-effective-cards"></a>Conception de cartes efficaces
+# <a name="design-effective-cards"></a>Conception de cartes efficaces
 
 Les cartes sont des extraits de code actionnables, que vous pouvez ajouter à une conversation via un bot, un connecteur ou une application. En utilisant du texte, des graphiques et des boutons, les cartes vous permettent de communiquer avec une audience.
 
@@ -65,7 +65,7 @@ Short et doux. Ces cartes sont idéales pour des réponses courtes ou si vous so
 
 [!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
 
-### <a name="sign-in"></a>Se connecter
+### <a name="sign-in"></a>Connexion
 
 Certains services exigent que les utilisateurs se connectent indépendamment de notre authentification. Dans ce cas, vous devez présenter une carte de connexion avant que l’utilisateur ne puisse se connecter à votre service.
 

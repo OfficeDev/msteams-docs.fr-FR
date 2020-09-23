@@ -1,58 +1,145 @@
 ---
-title: Plateforme pour les développeurs de Microsoft Teams
-author: clearab
-description: Page de présentation décrivant la plateforme de développement Microsoft teams et comment commencer à créer des applications pour Microsoft Teams.
+title: Créer des applications pour la plateforme Microsoft teams
+author: heath-hamilton
+description: Vue d’ensemble de la façon dont les développeurs peuvent étendre et personnaliser les fonctionnalités de Microsoft teams avec des applications personnalisées.
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455484"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209792"
 ---
-# <a name="what-are-microsoft-teams-apps"></a>Qu-est-ce qu’une application Microsoft Teams ?
+# <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft teams
 
-Microsoft teams est un espace de travail de collaboration dans Office 365 qui s’intègre aux applications et services que les personnes utilisent pour effectuer des tâches. La plateforme de développement Microsoft teams permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer la productivité, prendre des décisions plus rapidement, fournir le focus (en réduisant le changement de contexte) et créer une collaboration sur le contenu et les flux de travail existants. Les applications créées sur la plateforme Microsoft teams sont des ponts entre le client teams et vos services et flux de travail ; les plaçant directement dans le contexte de votre plateforme de collaboration ;
+Les applications Microsoft teams apportent des informations clés, des outils courants et des processus approuvés à des endroits où les utilisateurs recueillent, apprennent et travaillent de plus en plus.
 
-## <a name="what-can-teams-apps-do"></a>Que peuvent faire les applications teams ?
+Les applications vous permettent d’étendre les équipes pour répondre à vos besoins. Créez un article nouveau pour teams ou intégrez une application existante.
 
-Les applications créées sur la plateforme Microsoft teams se concentrent principalement sur la collaboration croissante et l’amélioration de la productivité. Votre application peut être une solution simple, par exemple, publier des notifications à partir d’autres systèmes ou des applications complexes à plusieurs facettes. N’oubliez pas que teams est une plateforme de collaboration sociale ; les meilleures applications s’emploient à aider les utilisateurs à s’exprimer et à collaborer efficacement.
+## <a name="what-are-teams-apps"></a>Qu’est-ce que les applications teams ?
 
-* **Collaborer sur des éléments dans des systèmes externes.** L’un des principaux scénarios pour une application teams personnalisée est d’apporter des informations ou des éléments à teams à partir d’un autre endroit et de faire une conversation. Vous pouvez diffuser des informations dans Teams, permettre à vos utilisateurs de les Rechercher et de les extraire à la demande, ou de les rendre disponibles dans une vue Web incorporée.
+Les applications teams sont une combinaison de [fonctionnalités](concepts/capabilities-overview.md) et de [points d’entrée](concepts/extensibility-points.md). Par exemple, les utilisateurs peuvent discuter avec le *robot* de votre application (fonctionnalité) dans un *canal* (point d’entrée).
 
-* **Déclenchez des flux de travail à partir de conversations.** Les conversations entraînent souvent la nécessité de lancer un flux de travail ou de terminer une action ; Prenez note de ce sujet, passez en revue ma demande de tirage, convertissez-la en prospectus de ventes, etc. Votre application teams peut accéder à ce flux de travail directement à l’intérieur de teams.
+Certaines applications sont simples (envoyer des notifications), tandis que d’autres sont complexes (gérer les enregistrements des patients). Lors de la planification de votre application, rappelez-vous que teams est un hub de collaboration. Les meilleures applications teams aident les utilisateurs à s’exprimer et à collaborer efficacement.
 
-* **Informer votre équipe des événements importants.** Maladie des notifications par courrier électronique ? Envoyez des notifications à teams à la place. Envoyer des notifications directement aux utilisateurs, à un canal, au flux d’activité, ou à quiconque s’y abonner.
+:::row:::
+   :::column span="":::
 
-* **Incorporer les fonctionnalités d’autres sites/services.** Parfois, il vous suffit de rendre votre application plus facile à découvrir. Incorporez votre application à page unique existante ou créez des éléments à partir de rien pour Teams.
+### <a name="tabs"></a>Onglets
 
-## <a name="how-do-teams-apps-work"></a>Comment fonctionnent les applications teams ?
+**Obtenir des informations plus facilement**: parfois, vous avez simplement besoin de faciliter la recherche. Afficher une page Web importante dans un [onglet](tabs/what-are-tabs.md), qui fournit une expérience Web en plein écran pour le contenu statique et dynamique dans Teams.
 
-La première chose à savoir sur les applications personnalisées pour Microsoft Teams (autres que leur incroyable) est que teams n’est pas un service d’hébergement. Votre package d’application contient des métadonnées sur votre application (nom, icônes, etc.) et des pointeurs vers les services Web que vous hébergez qui alimentent votre application. Microsoft teams fournit le mécanisme de distribution, les structures de l’interface utilisateur/UX pour vous permettre de tirer parti de, et les API que vous pouvez utiliser pour augmenter les informations et les actions disponibles pour votre application.
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Représentation conceptuelle des onglets qui ressemblent dans le client Teams." border="false":::
 
-Une application teams se compose de trois éléments principaux :
+   :::column-end:::
+   :::column span="":::
 
-* **Le client Microsoft Teams (Web, de bureau ou mobile)** où les utilisateurs vont interagir avec votre application.
-* **Votre package d’application de teams** qui crée l’application installée par vos utilisateurs, et contient les métadonnées et pointeurs de votre application vers vos services.
-* **Votre service, flux de travail ou site Web** qui effectue la logique nécessaire, le stockage des données et les appels d’API pour alimenter votre application.
+### <a name="messaging-extensions"></a>Extensions de messagerie
 
-Il est important de garder à l’esprit que toute fonctionnalité que vous exposez dans une application Microsoft teams est publiquement disponible sur Internet, sauf si vous effectuez des étapes supplémentaires pour la sécuriser. Si vous fournissez un accès à des informations confidentielles ou protégées, vous devez vous assurer que vos services authentifient au minimum le point de terminaison qui se connecte à votre application ou [authentifient vos utilisateurs](concepts/authentication/authentication.md).
+Facilitez **le multitâche**: avec les [extensions de messagerie](messaging-extensions/what-are-messaging-extensions.md), vous pouvez partager rapidement des informations externes dans une conversation. Vous pouvez également agir sur un message, tel que la création d’un ticket d’aide basé sur le contenu d’un billet de canal.
 
-## <a name="how-can-you-share-your-teams-app"></a>Comment pouvez-vous partager votre application teams ?
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Représentation conceptuelle de l’apparence des extensions de messagerie dans le client Teams." border="false":::
 
-Lorsque vous êtes prêt à partager vos applications Microsoft Teams, vous disposez de trois options en fonction de vos audiences ciblées.
+   :::column-end:::
+:::row-end:::
 
-* **[Télécharger directement votre application](concepts/deploy-and-publish/apps-upload.md)** Si votre application doit uniquement être partagée par votre équipe ou quelques personnes de votre organisation, vous pouvez partager votre package d’application et le charger directement.
-* **[Publier dans le catalogue d’applications de votre organisation](concepts/deploy-and-publish/apps-upload.md)** Vous pouvez partager votre application avec l’ensemble de votre organisation via votre catalogue d’applications.
-* **[Publier dans le magasin d’applications public](concepts/deploy-and-publish/apps-upload.md)** Si votre application est pour tout le monde, vous pouvez la publier dans notre magasin d’applications public. En fonction de vos objectifs, vous pouvez bénéficier de l’assistance marketing et commerciale.
+:::row:::
+   :::column span="":::
+
+### <a name="bots"></a>Bots
+
+**Transformer les mots en actions**: les conversations entraînent souvent une action (générer une commande, vérifier mon code, vérifier l’état du ticket, etc.). Un [bot](bots/what-are-bots.md) peut lancer ces types de flux de travail directement dans Teams.
+
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Représentation conceptuelle des robots qui se ressemblent dans le client Teams." border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+### <a name="webhooks"></a>Webhooks
+
+**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers un canal Teams. Avec les [webhooks sortants, envoyez](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)un message à votre service Web à l’aide d’une @mention.
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Représentation conceptuelle des connecteurs qui ressemblent au client Teams." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph pour teams
+
+**Utiliser les données teams**: l' [API Microsoft Graph pour teams](https://docs.microsoft.com/graph/teams-concept-overview) fournit un accès aux informations sur les équipes, les canaux, les utilisateurs et les messages qui peuvent vous aider à créer ou améliorer les fonctionnalités de votre application.
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Représentation conceptuelle de l’API Microsoft Graph pour Teams." border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
 
 ## <a name="get-started"></a>Prise en main
 
-* [Créer une application de robot et d’onglet dans C #](tutorials/get-started-dotnet-app-studio.md)
-* [Créer une application bot et TAB dans JavaScript/node. js](tutorials/get-started-nodejs-app-studio.md)
+Accédez directement à l’aide de nos didacticiels d’application ou Découvrez comment intégrer et importer des applications existantes.
 
-## <a name="learn-more"></a>En savoir plus
+:::row:::
+   :::column span="2":::
 
-* [Points d’extensibilité dans le client Teams](concepts/extensibility-points.md)
-* [Création d’applications pour teams](concepts/building-an-app.md)
+### <a name="start-building"></a>Commencer à créer
+
+   Familiarisez-vous rapidement avec la création de teams en créant une application simple et en ajoutant des fonctionnalités couramment utilisées.
+
+   > [!div class="nextstepaction"]
+   > [Créer votre première application maintenant](build-your-first-app/build-first-app-overview.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="integrate-with-teams"></a>Intégration à teams
+
+   Combinez les fonctionnalités que les utilisateurs aiment à une application Web existante, un service ou un système avec les fonctionnalités collaboratives de teams.
+
+   > [!div class="nextstepaction"]
+   > [Intégration d’une application existante](samples/integrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="a-little-code-goes-a-long-way"></a>Un petit code est long
+
+   Vous n’avez pas besoin d’être un programmeur expert pour créer une application de qualité de teams. Essayez l’une des solutions à faible code.
+
+   > [!div class="nextstepaction"]
+   > [Créer une application à code bas](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## <a name="resources"></a>Ressources
+
+* [Ajouter un bouton partager à teams à votre site Web](concepts/build-and-test/share-to-teams.md)
+* [Système de conception Fluent](https://fluentsite.z22.web.core.windows.net/)
+* [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Kit de développement logiciel (SDK) robot for JavaScript](https://github.com/Microsoft/botbuilder-js) and [bot Framework SDK pour .net](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Publier votre application dans une organisation ou AppSource](concepts/deploy-and-publish/overview.md)

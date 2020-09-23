@@ -2,14 +2,14 @@
 title: Inscription d’un robot de réunion et d’appel pour Microsoft teams
 description: Découvrez comment enregistrer un nouveau robot d’appel audio/vidéo pour Microsoft teams
 keywords: appels audio/vidéo vidéo audio/vidéo
-ms.openlocfilehash: 9b932e6a330b495aef97e65c7bb1f297fdfc1336
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103004"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209752"
 ---
-# <a name="registering-a-calling-bot-for-microsoft-teams"></a>Inscription d’un bot appelant pour Microsoft teams
+# <a name="register-a-calling-bot-for-microsoft-teams"></a>Enregistrer un bot appelant pour Microsoft teams
 
 Un bot qui participe à des appels audio/vidéo et des réunions en ligne est un robot Microsoft teams ordinaire avec quelques fonctionnalités supplémentaires :
 
