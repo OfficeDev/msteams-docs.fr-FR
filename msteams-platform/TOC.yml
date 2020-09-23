@@ -1,10 +1,25 @@
 - name: Vue d’ensemble
   expanded: true
   items:
-    - name: "Qu-est-ce qu’une application Microsoft Teams\_?"
+    - name: "Créer des applications pour Microsoft\_Teams"
       href: overview.md
     - name: "Quelles sont les nouveautés\_?"
       href: whats-new.md
+- name: Créer votre première application
+  expanded: true
+  items:
+    - name: Vue d’ensemble et conditions préalables
+      href: build-your-first-app/build-first-app-overview.md
+    - name: "Créer un «\_Hello, World!\_» application"
+      href: build-your-first-app/build-and-run.md
+    - name: Créer un onglet personnel
+      href: build-your-first-app/build-personal-tab.md
+    - name: Créer un onglet de canal
+      href: build-your-first-app/build-channel-tab.md
+    - name: Créer un bot
+      href: build-your-first-app/build-bot.md
+    - name: Créer une extension de messagerie
+      href: build-your-first-app/build-messaging-extension.md
 - name: Didacticiels et exemples de code
   items:
     - name: Créer une application à l’aide de C#
@@ -15,8 +30,12 @@
       href: tutorials/get-started-yeoman.md
     - name: En savoir plus sur les applications personnalisées pour Teams
       href: tutorials/code-samples.md
-- name: Modèles et intégrations
+- name: Intégrations et modèles
   items:
+    - name: Intégrer les applications Web
+      href: samples/integrating-web-apps.md
+    - name: Créer des applications à faible code
+      href: samples/teams-low-code-solutions.md
     - name: Modèles d'application prêts pour la production
       href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
@@ -44,9 +63,9 @@
 - name: Concepts
   expanded: true
   items:
-    - name: "Création d’applications pour Microsoft\_Teams"
-      href: concepts/building-an-app.md
-    - name: Points d’extensibilité dans le client Teams
+    - name: Fonctionnalités de l’application
+      href: concepts/capabilities-overview.md
+    - name: Points d'entrée de l’application
       href: concepts/extensibility-points.md
     - name: Concevoir votre application
       items:
@@ -167,19 +186,19 @@
           items:
             - name: Flux d’authentification
               href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: "Utilisation de l’authentification Azure\_AD"
+            - name: "Utiliser l’authentification Azure\_AD"
               href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Utilisation de l’authentification en mode silencieux
+            - name: Utiliser l’authentification en mode silencieux
               href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: Utilisation de l’authentification unique
+            - name: Utiliser l’authentification unique
               href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Utilisation du kit de développement logiciel client Teams
+        - name: Utiliser le kit de développement logiciel client Teams
           href: tabs/how-to/using-teams-client-sdk.md
         - name: Obtenir un contexte Teams supplémentaire
           href: tabs/how-to/access-teams-context.md
-        - name: DevTools pour les onglets Microsoft Teams
+        - name: "DevTools pour les onglets Microsoft\_Teams"
           href: tabs/how-to/developer-tools.md
-        - name: Ajout de votre onglet personnalisé à SharePoint
+        - name: Ajouter votre onglet personnalisé à SharePoint
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: Demande des autorisations d’appareil
           href: tabs/how-to/native-device-permissions.md
@@ -248,7 +267,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Concepts de réseaux sociaux en temps réel
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Enregistrement d’un bot appelant
+        - name: Enregistrer un bot appelant
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notifications d’appel entrant
           href: bots/calls-and-meetings/call-notifications.md
@@ -311,9 +330,9 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: Cartes
       items:
-        - name: Conception de cartes efficaces
+        - name: Concevoir des cartes efficaces
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: Mettre en forme le texte de la carte
+        - name: Mettre en forme un texte de carte
           href: task-modules-and-cards/cards/cards-format.md
         - name: Envoyer et répondre aux actions de carte
           href: task-modules-and-cards/cards/cards-actions.md
@@ -338,7 +357,7 @@
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: "Créer un connecteur\_O365"
           href: webhooks-and-connectors/how-to/connectors-creating.md
-        - name: Envoi de messages à des connecteurs et des webhooks
+        - name: Envoyer de messages à des connecteurs et des webhooks
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Applications dans les réunions
   items:
@@ -390,7 +409,7 @@
           href: resources/bot-v3/bots-notifications.md
         - name: Contexte pour les bots
           href: resources/bot-v3/bots-context.md
-        - name: Envoi et réception de fichiers
+        - name: Envoyer et recevoir des fichiers
           href: resources/bot-v3/bots-files.md
         - name: Bots avec notification seulement
           href: resources/bot-v3/bots-notification-only.md
@@ -398,7 +417,7 @@
           href: resources/bot-v3/bots-menus.md
         - name: Bots avec onglets
           href: resources/bot-v3/bots-with-tabs.md
-        - name: Mettre en forme les messages du bot
+        - name: Mettre en forme des messages bot
           href: resources/bot-v3/bots-text-formats.md
         - name: Tester un bot
           href: resources/bot-v3/bots-test.md
