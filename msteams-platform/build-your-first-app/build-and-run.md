@@ -5,18 +5,18 @@ description: Créez et exécutez votre première application Microsoft Teams, un
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 5be2e8f2932a91ed11137f3a7be544e12bd65559
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210150"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237831"
 ---
-# <a name="build-a-hello-world-teams-app"></a>Créer un « Hello, World ! » Application Teams
+# <a name="build-a-hello-world-teams-app"></a>Créer un « Hello, World! » Application Teams
 
 Vous pouvez accéder directement au développement de la plateforme Microsoft teams en créant un onglet personnel qui affiche « Hello, World ! ».
 
-## <a name="create-your-app-project"></a>Créer votre projet d’application
+## <a name="1-create-your-app-project"></a>1. créer votre projet d’application
 
 Utilisez la boîte à outils Microsoft teams dans Visual Studio code pour configurer votre premier projet d’application.
 
@@ -27,7 +27,7 @@ Utilisez la boîte à outils Microsoft teams dans Visual Studio code pour config
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Capture d’écran indiquant comment configurer votre projet d’application avec Visual Studio code teams Toolkit.":::
 1. Activez l’option **onglet personnel** et sélectionnez **Terminer** en bas de l’écran pour configurer votre projet.
 
-## <a name="understand-important-app-project-components"></a>Comprendre les composants importants du projet d’application
+## <a name="2-understand-important-app-project-components"></a>2. comprendre les composants importants du projet d’application
 
 Une fois que le kit d’outils configure votre projet, vous disposez des composants permettant de créer un onglet personnel de base pour Teams. Les répertoires et les fichiers du projet sont affichés dans la zone Explorateur de Visual Studio code.
 
@@ -57,7 +57,7 @@ Voici quelques détails sur les fichiers de package d’application :
 |**Logo couleur**|`.png`|192 &times; 192 pixels|`icon.color`|`.publish/color.png`|
 |**Logo de plan**|`.png`|32 &times; 32 pixels|`icon.outline`|`.publish/outline.png`|
 
-## <a name="run-your-app"></a>Exécuter votre application
+## <a name="3-run-your-app"></a>3. exécuter votre application
 
 Pour des raisons de temps, vous allez créer et exécuter votre application localement.
 
@@ -68,7 +68,7 @@ Pour des raisons de temps, vous allez créer et exécuter votre application loca
 1. Ouvrez un navigateur et accédez à `https://localhost:3000` la page Web vierge intitulée **Microsoft teams**. (Ne vous inquiétez pas que vous ne pouvez pas voir le contenu sur la page.)<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Capture d’écran illustrant l’apparence de votre application en cours d’exécution dans un navigateur.":::
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurer un tunnel sécurisé pour votre application
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurer un tunnel sécurisé pour votre application
 
 Votre application est en cours d’exécution sur votre serveur Web local. Pour exécuter votre application dans Teams, vous devez faire en sorte qu’elle soit `localhost` accessible via HTTPS.
 
@@ -82,7 +82,7 @@ Installez [ngrok](https://ngrok.com/download) si vous ne l’avez pas encore fai
 
 Le manifeste de votre application pointe maintenant vers l’emplacement où vous hébergez l’application.
 
-## <a name="sideload-your-app-in-teams"></a>Chargement de votre application dans teams
+## <a name="5-sideload-your-app-in-teams"></a>5. chargement de votre application dans teams
 
 Une fois que votre application est en cours d’exécution et accessible via HTTPs, vous êtes prêt à la télécharger vers Teams.
 
@@ -105,6 +105,6 @@ Développez l’onglet personnel que vous venez de créer ou créez un autre typ
 > [!div class="nextstepaction"]
 > [Ajouter à votre onglet personnel](../build-your-first-app/build-personal-tab.md)
 > [!div class="nextstepaction"]
-> [Onglet créer un canal](../build-your-first-app/build-channel-tab.md)
+> [Créer un onglet de canal](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
 > [Créer un bot](../build-your-first-app/build-bot.md)

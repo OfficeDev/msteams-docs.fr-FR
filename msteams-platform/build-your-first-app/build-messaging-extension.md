@@ -5,12 +5,12 @@ description: Découvrez comment créer une extension de messagerie pour votre pr
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 0475fcea7d865849fa60c5b3b23788bf90ee5e25
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210130"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237817"
 ---
 # <a name="build-a-teams-messaging-extension"></a>Créer une extension de messagerie teams
 
@@ -36,7 +36,7 @@ Le service d’assistance de votre organisation communique avec les utilisateurs
 
 Si vous ne l’avez pas encore fait, assurez-vous de [bien comprendre et installer les conditions préalables au développement de teams](build-first-app-overview.md#get-prerequisites).
 
-## <a name="create-your-app-project"></a>Créer votre projet d’application
+## <a name="1-create-your-app-project"></a>1. créer votre projet d’application
 
 Microsoft teams Toolkit vous permet de configurer les composants suivants pour votre extension de messagerie :
 
@@ -58,7 +58,7 @@ Microsoft teams Toolkit vous permet de configurer les composants suivants pour v
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Illustration illustrant comment, dans Team Toolkit, connectez-vous à votre compte Microsoft 365 afin de créer un nouveau bot pour votre extension de messagerie.":::
 1. Sélectionnez **Terminer** en bas de l’écran pour configurer votre projet.
 
-## <a name="identify-relevant-app-project-components"></a>Identifier les composants de projet d’application pertinents
+## <a name="2-identify-relevant-app-project-components"></a>2. identifier les composants de projet d’application pertinents
 
 La plupart du manifeste de l’application et de la génération de modèles automatique sont configurés automatiquement lorsque vous créez votre projet avec le kit de outils Teams.
 
@@ -108,9 +108,9 @@ Nous allons comprendre quelques-unes des propriétés que le kit de outils a cr�
 
 Le échafaudage de l’application inclut un `.env` fichier, situé dans le répertoire racine de votre projet, qui stocke l’ID et le mot de passe du bot de votre extension de messagerie.
 
-Dans le répertoire racine, il existe un `botActivityHandler.js` fichier permettant de gérer la manière dont votre extension de messagerie (ou techniquement, le [bot de l’extension de messagerie](#configuring-the-bot-for-your-messaging-extension)) répond aux requêtes de recherche dans Teams.
+Dans le répertoire racine, il existe un `botActivityHandler.js` fichier permettant de gérer la manière dont votre extension de messagerie (ou techniquement, le [bot de l’extension de messagerie](#4-configure-the-bot-for-your-messaging-extension)) répond aux requêtes de recherche dans Teams.
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>Configurer un tunnel sécurisé pour votre application
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. configurer un tunnel sécurisé pour votre application
 
 À des fins de test, nous allons héberger votre extension de messagerie sur un serveur Web local (port 3978).
 
@@ -121,7 +121,7 @@ Dans le répertoire racine, il existe un `botActivityHandler.js` fichier permett
 
 Votre manifeste d’application pointe vers l’emplacement où vous hébergez le bot utilisé par l’extension de messagerie.
 
-## <a name="configuring-the-bot-for-your-messaging-extension"></a>Configuration du bot pour votre extension de messagerie
+## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. configurer le bot pour votre extension de messagerie
 
 Les extensions de messagerie s’appuient sur les robots pour envoyer et traiter les demandes des utilisateurs de teams vers votre service hébergé.
 
@@ -145,7 +145,7 @@ Vous devez spécifier une URL de point de terminaison bot pour recevoir et trait
 
 Votre robot pourra gérer les requêtes dans votre extension de messagerie.
 
-## <a name="run-your-app"></a>Exécuter votre application
+## <a name="5-run-your-app"></a>5. exécuter votre application
 
 Vous avez configuré une URL pour héberger votre extension de messagerie et la configurer pour qu’elle gère les recherches. Il est temps de faire fonctionner votre application.
 
@@ -156,19 +156,19 @@ Si elle réussit, un message semblable au suivant s’affiche, indiquant que vot
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-messaging-extension-in-teams"></a>Chargement de votre extension de messagerie dans teams
+## <a name="6-sideload-your-messaging-extension-in-teams"></a>6. chargement votre extension de messagerie dans teams
 
 Une fois que votre extension de messagerie est en cours d’exécution, vous pouvez l’installer dans Teams.
 
 > [!TIP]
-> Si vous n’avez pas versions test chargées une application teams avant et rencontrez des problèmes, suivez ces [instructions](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
+> Si vous n’avez pas versions test chargées une application teams avant et rencontrez des problèmes, suivez ces [instructions](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Connectez-vous au client teams avec votre compte qui autorise l’application chargement.
 1. Sélectionnez **applications**, puis **Télécharger une application personnalisée**.
 1. Accédez à votre dossier de projet d’application `.publish` et sélectionnez `Development.zip` .
 1. Dans la fenêtre installation modale, sélectionnez **Ajouter** pour installer votre application.
 
-## <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
+## <a name="7-test-your-messaging-extension"></a>7. tester votre extension de messagerie
 
 Découvrez comment fonctionnent les extensions de messagerie dans une conversation Teams.
 
@@ -207,7 +207,7 @@ Si vous avez installé votre application, mais qu’elle ne fonctionne pas, vér
 
 Il est important de comprendre qu’il ne s’agit pas d’un canal dans Teams. Dans ce cas, un canal indique comment le service Azure bot connecte votre robot à teams ou une autre [application de communication Microsoft ou tierce prise en charge](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 * [Inclure une fonctionnalité de unfurling de liens](../messaging-extensions/how-to/link-unfurling.md)
 * [Ajouter une authentification](../messaging-extensions/how-to/add-authentication.md)

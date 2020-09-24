@@ -1,16 +1,16 @@
 ---
-title: Créer des applications pour les réunions teams
+title: Créer des applications pour les réunions Teams
 author: laujan
 description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: 83e0a5b53e363a090935b4afa9840dd96c5f7381
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48181987"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237985"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>Créer des applications pour les réunions Teams (aperçu)
 
@@ -27,7 +27,7 @@ ms.locfileid: "48181987"
 
 1. Certaines API de réunion, telles que `GetParticipant` nécessiteront un [ID d’enregistrement et d’application bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) pour générer des jetons d’authentification.
 
-1. Les développeurs doivent respecter les [conseils généraux de conception des onglets teams](../tabs/design/tabs.md) pour les scénarios antérieurs et postérieurs à la réunion, ainsi que les [recommandations](designing-in-meeting-dialog.md) pour la boîte de dialogue de réunion déclenchée lors d’une réunion Teams.
+1. Les développeurs doivent respecter [les conseils généraux de conception des onglets teams](../tabs/design/tabs.md) pour les scénarios pré-et post-réunion, ainsi que pendant les réunions (consultez les instructions [de la boîte de dialogue](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) et les [onglets de conception des onglets dans](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) les réunions).
 
 ## <a name="meeting-apps-api-reference"></a>Référence de l’API des applications de réunion
 
@@ -269,7 +269,7 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 
 #### <a name="in-meeting-dialog"></a>**boîte de dialogue de réunion**
 
-✔ Vous devez respecter les [instructions de conception de la boîte de dialogue de réunion](designing-in-meeting-dialog.md).
+✔ Vous devez respecter les [instructions de conception de la boîte de dialogue de réunion](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
 
 ✔ Reportez-vous au [flux d’authentification teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md).
 

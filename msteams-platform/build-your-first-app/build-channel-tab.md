@@ -1,24 +1,20 @@
 ---
 author: heath-hamilton
-description: Découvrez comment créer un onglet de canal pour votre première application Microsoft Teams.
+description: Découvrez comment créer un onglet de canal et de groupe pour votre première application Microsoft Teams.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Créer un onglet de canal teams
-ms.openlocfilehash: d0846c3af23fd9df6013f989e9f455f711d05a5f
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Créer un onglet de canal et de groupe teams
+ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210254"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237810"
 ---
-# <a name="build-a-teams-channel-tab"></a>Créer un onglet de canal teams
+# <a name="build-a-teams-channel-and-group-tab"></a>Créer un onglet de canal et de groupe teams
 
-Dans ce didacticiel, vous allez créer un *onglet de canal*de base, une page de contenu plein écran pour un canal d’équipe ou une conversation. Contrairement à un onglet personnel, les utilisateurs peuvent configurer certains aspects d’un onglet de canal (par exemple, renommer l’onglet de sorte qu’il soit significatif pour le canal).
-
-## <a name="before-you-begin"></a>Avant de commencer
-
-Vous avez besoin d’une application de base en cours d’exécution pour commencer. Si vous n’en avez pas, suivez les [instructions créer et exécuter les premières applications de teams](../build-your-first-app/build-and-run.md). Lorsque vous créez votre projet d’application, choisissez uniquement l’option de l' **onglet canal groupe ou teams** .
+Dans ce didacticiel, vous allez créer un *onglet de canal* de base (également appelé *onglet de groupe*), qui est une page plein écran pour un canal d’équipe ou une conversation. Contrairement à un onglet personnel, les utilisateurs peuvent configurer certains aspects de ce type d’onglet (par exemple, renommer l’onglet de sorte qu’il soit significatif pour son canal).
 
 ## <a name="your-assignment"></a>Votre affectation
 
@@ -30,19 +26,33 @@ Vous pouvez faciliter la recherche de ces informations en créant un onglet de c
 
 > [!div class="checklist"]
 >
-> * Identifier certaines des propriétés de manifeste de l’application et la structure correspondant aux onglets de canal
+> * Créer un projet d’application à l’aide de Microsoft teams Toolkit pour Visual Studio code
+> * Identifier certaines des propriétés de manifeste de l’application et la génération de modèles automatique correspondant aux onglets canal et groupe
+> * Héberger une application localement
 > * Créer un contenu de tabulation
 > * Créer du contenu pour la page de configuration d’un onglet
 > * Autoriser la configuration et l’installation d’un onglet
 > * Fournir un nom d’onglet suggéré
 
-## <a name="identify-relevant-app-project-components"></a>Identifier les composants de projet d’application pertinents
+## <a name="1-create-your-app-project"></a>1. créer votre projet d’application
 
-La plupart du manifeste de l’application et de la génération de modèles automatique sont configurés automatiquement lorsque vous créez votre projet avec le kit de outils Teams. Examinons les principaux composants de la création d’un onglet de canal.
+La boîte à outils Microsoft teams vous permet de configurer le manifeste de l’application et les onglets de canal et de groupe, notamment une page de configuration de base et une page de contenu qui affiche un « Hello, World ! ». Message.
+
+> [!TIP]
+> Si vous n’avez pas encore créé de projet d’application Teams, il peut s’avérer utile de suivre [ces instructions](../build-your-first-app/build-and-run.md) pour expliquer plus en détail les projets.
+
+1. Dans Visual Studio code, sélectionnez **Microsoft teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: dans la barre d’activité de gauche et choisissez **créer une nouvelle application teams**.
+1. Entrez un nom pour votre application Teams. (Il s’agit du nom par défaut de votre application, ainsi que du nom du répertoire du projet d’application sur votre ordinateur local.)
+1. Dans l’écran **Ajouter des fonctionnalités** , **Sélectionnez l’onglet** Groupe, puis **groupe ou Team Channel**.
+1. Sélectionnez **Terminer** en bas de l’écran pour configurer votre projet.  
+
+## <a name="2-identify-relevant-app-project-components"></a>2. identifier les composants de projet d’application pertinents
+
+La plupart du manifeste de l’application et de la génération de modèles automatique sont configurés automatiquement lorsque vous créez votre projet avec le kit de outils Teams. Examinons les principaux composants de création d’un onglet de canal et de groupe.
 
 ### <a name="app-manifest"></a>Manifeste de l’application
 
-L’extrait de code suivant du manifeste de l’application indique [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , qui inclut les propriétés et les valeurs par défaut pertinentes pour les onglets de canal.
+L’extrait de code suivant du manifeste de l’application indique [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) , qui inclut les propriétés et les valeurs par défaut pertinentes pour les onglets canal et groupe.
 
 ```JSON
 "configurableTabs": [
@@ -65,7 +75,27 @@ L’extrait de code suivant du manifeste de l’application indique [`configurab
 
 Le échafaudage de l’application fournit un `TabConfig.js` fichier, situé dans le `src/components` Répertoire de votre projet, pour afficher la page de configuration de votre onglet (en savoir plus sur cela prochainement).
 
-## <a name="create-your-tab-content"></a>Créer le contenu de votre onglet
+## <a name="3-run-your-app"></a>3. exécuter votre application
+
+Pour des raisons de temps, vous allez créer et exécuter votre application localement.
+
+1. Dans un terminal, accédez au répertoire racine de votre projet d’application et exécutez `npm install` .
+1. Exécuter `npm start` .
+
+Une fois terminé, une **compilation est effectuée.** message dans le terminal.
+
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurer un tunnel sécurisé pour votre application
+
+À des fins de test, nous allons héberger votre onglet sur un serveur Web local (port 3000).
+
+1. Dans un terminal, exécutez `ngrok http 3000` .
+1. Copiez l’URL HTTPs que vous avez fournie.
+1. Dans votre `.publish` répertoire, ouvrez `Development.env` .
+1. Remplacez la `baseUrl0` valeur par l’URL copiée. (Par exemple, remplacez `baseUrl0=http://localhost:3000` par `baseUrl0=https://85528b2b3ca5.ngrok.io` .)
+
+Le manifeste de votre application pointe vers l’emplacement où vous hébergez l’onglet.
+
+## <a name="5-customize-your-tab-content-page"></a>5. personnaliser votre page de contenu d’onglet
 
 Ouvrez le manifeste de l’application ( `manifest.json` ) dans le `.publish` répertoire et définissez les propriétés suivantes dans [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , qui définit la page de contenu de votre onglet.
 
@@ -121,9 +151,9 @@ a {
 }
 ```
 
-## <a name="create-your-tab-configuration-page"></a>Créer votre page de configuration d’onglet
+## <a name="6-create-your-tab-configuration-page"></a>6. créer votre page de configuration d’onglet
 
-Chaque onglet de canal comporte une page de configuration, modale avec au moins une option d’installation qui s’affiche lors de l’installation de l’application. La page Configuration par défaut demande à l’utilisateur s’il souhaite avertir le canal ou la conversation lorsque l’onglet est installé.
+Chaque onglet d’un canal ou d’une conversation comporte une page de configuration, modale avec au moins une option d’installation qui s’affiche lorsque les utilisateurs installent votre application. La page Configuration par défaut demande à l’utilisateur s’il souhaite avertir le canal ou la conversation lorsque l’onglet est installé.
 
 Ajoutez du contenu à votre page de configuration. Accédez au répertoire de votre projet `src/components` , ouvrez-le `TabConfig.js` et insérez du contenu dans `return()` (comme illustré).
 
@@ -141,9 +171,9 @@ return (
 > [!TIP]
 > Au minimum, fournissez des informations succinctes sur votre application sur cette page, car il peut s’agir de la première fois que les utilisateurs en apprennent à le faire. Vous pouvez également inclure des options de configuration personnalisées ou un [flux de travail d’authentification](../tabs/how-to/authentication/auth-aad-sso.md), qui est courant sur les pages de configuration d’onglet.
 
-## <a name="allow-the-tab-to-be-configured-and-installed"></a>Autoriser la configuration et l’installation de l’onglet
+## <a name="7-allow-the-tab-to-be-configured-and-installed"></a>7. autoriser la configuration et l’installation de l’onglet
 
-Pour que les utilisateurs puissent configurer et installer correctement l’onglet canal, vous devez ajouter l’URL d’hôte que vous avez configurée lors de la [création et de l’exécution de votre première application](../build-your-first-app/build-and-run.md) sur le composant de page de configuration.
+Pour que les utilisateurs puissent configurer et installer correctement l’onglet, vous devez ajouter l' [URL d’hôte sécurisé que vous avez définie](#4-set-up-a-secure-tunnel-to-your-app) au composant de page de configuration.
 
 Accédez à `TabConfig.js` et recherchez `microsoftTeams.settings.setSettings` . Pour `"contentUrl"` , remplacez la `localhost:3000` partie de l’URL par le domaine dans lequel vous hébergez le contenu de l’onglet (comme illustré ci-dessous).
 
@@ -155,9 +185,9 @@ microsoftTeams.settings.setSettings({
 
 Assurez-vous également que `microsoftTeams.settings.setValidityState(true);` . C’est par défaut, mais si ce paramètre est défini sur `false` , le bouton **Enregistrer** est désactivé sur la page de configuration.
 
-## <a name="provide-a-suggested-tab-name"></a>Fournir un nom d’onglet suggéré
+## <a name="8-provide-a-suggested-tab-name"></a>8. fournir un nom d’onglet suggéré
 
-Lorsque vous installez un onglet pour une utilisation personnelle, le nom d’affichage est la `name` propriété dans la `staticTabs` partie du manifeste de l’application (par exemple, **mes contacts**). Lorsque vous installez un onglet canal, le nom de l’application s’affiche par défaut (par exemple, **First-App**).
+Lorsque vous installez un onglet pour une utilisation personnelle, le nom complet est la `name` propriété dans la `staticTabs` partie du manifeste de l’application (par exemple, **mes contacts**). Lorsque vous installez un onglet canal, le nom de l’application s’affiche par défaut (par exemple, **First-App**).
 
 Cela peut être approprié en fonction de ce que vous appelez votre application, mais vous souhaiterez peut-être attribuer un nom plus évocateur dans le contexte de la collaboration de groupe (par exemple, **contacts d’équipe**).
 
@@ -170,9 +200,9 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## <a name="view-the-channel-tab"></a>Affichage de l’onglet canal
+## <a name="9-view-the-tab"></a>9. afficher l’onglet
 
-Pour afficher les pages de configuration et de contenu de l’onglet canal, vous devez l’installer dans un canal ou une conversation.
+Pour afficher les pages de configuration et de contenu de votre onglet, vous devez l’installer dans un canal ou une conversation.
 
 1. Dans le client Teams, sélectionnez **applications**.
 1. Sélectionnez **Télécharger une application personnalisée** et choisissez l’application `Development.zip` .
@@ -184,9 +214,9 @@ Pour afficher les pages de configuration et de contenu de l’onglet canal, vous
 
 ## <a name="well-done"></a>Bien jouer
 
-Félicitations ! Vous disposez d’une application teams avec un onglet Channel pour afficher du contenu utile dans des canaux et des conversations.
+Félicitations ! Vous disposez d’une application teams avec un onglet qui permet d’afficher du contenu utile dans les canaux et les conversations.
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 * [Authentifier les utilisateurs avec l’authentification](../tabs/how-to/authentication/auth-aad-sso.md)unique : Si vous souhaitez uniquement que les utilisateurs autorisés visualisent votre onglet, configurez l’authentification unique (SSO) via Azure Active Directory (AD).
 * [Incorporer du contenu à partir d’une application Web ou d’une page Web existante](../tabs/how-to/add-tab.md#tab-requirements): nous vous avons expliqué comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.

@@ -2,12 +2,12 @@
 title: Authentification pour les onglets à l’aide d’Azure Active Directory
 description: Décrit l’authentification dans teams et son utilisation dans des onglets
 keywords: onglets d’authentification de teams AAD
-ms.openlocfilehash: 211c08ce1a51a8f0f13e622856a808661dc97b39
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: a1d3a96e23706012b643b5827701b49e2306d847
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801089"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237782"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifier un utilisateur sous un onglet Microsoft teams
 
@@ -136,10 +136,10 @@ Ce code analyse les paires clé-valeur reçues à partir d’Azure AD à `window
 
 ### <a name="notes"></a>Notes
 
-`NotifyFailure()`a les causes d’échec prédéfinies suivantes :
+`NotifyFailure()` a les causes d’échec prédéfinies suivantes :
 
-* `CancelledByUser`l’utilisateur a fermé la fenêtre contextuelle avant de terminer le flux d’authentification.
-* `FailedToOpenWindow`la fenêtre contextuelle n’a pas pu être ouverte. Lorsque Microsoft teams est exécuté dans un navigateur, cela signifie généralement que la fenêtre a été bloquée par un bloqueur de fenêtres publicitaires intempestives.
+* `CancelledByUser` l’utilisateur a fermé la fenêtre contextuelle avant de terminer le flux d’authentification.
+* `FailedToOpenWindow` la fenêtre contextuelle n’a pas pu être ouverte. Lorsque Microsoft teams est exécuté dans un navigateur, cela signifie généralement que la fenêtre a été bloquée par un bloqueur de fenêtres publicitaires intempestives.
 
 Si elle réussit, vous pouvez actualiser ou recharger la page et afficher le contenu pertinent pour l’utilisateur authentifié. Si l’authentification échoue, un message d’erreur s’affiche.
 
@@ -147,6 +147,9 @@ Votre application peut définir son propre cookie de session de sorte que l’ut
 
 > [!NOTE]
 > Chrome 80, planifié pour la publication au début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookies par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies au lieu de vous appuyer sur le comportement par défaut du navigateur. *Voir* [SameSite cookie Attribute (mise à jour 2020)](../../../resources/samesite-cookie-update.md).
+
+>[!NOTE]
+>Pour obtenir le jeton approprié pour les utilisateurs gratuits et invités de Microsoft Teams, il est important que les applications utilisent un point de terminaison spécifique au client https://login.microsoftonline.com/ **{tenantId}**. Vous pouvez obtenir tenantId à partir du message bot ou du contexte de l’onglet. Si les applications utilisent https://login.microsoftonline.com/common , les utilisateurs obtiennent des jetons incorrects et se connectent au client « Home » au lieu du client auquel ils sont actuellement connectés.
 
 Pour plus d’informations sur l’authentification unique (SSO), consultez l’article [authentification sans assistance](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

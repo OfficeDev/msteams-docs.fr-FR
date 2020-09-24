@@ -5,12 +5,12 @@ description: vue d’ensemble des applications dans les réunions teams en fonct
 ms.topic: overview
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
-ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
+ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48204023"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237887"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Applications dans les réunions Teams (aperçu)
 
@@ -62,7 +62,9 @@ Les applications de réunion ✔ seront hébergées dans la barre supérieure su
 Les ✔ d’une application peuvent être visibles dans une réunion teams dans deux domaines :
 
 &emsp;&emsp;&#9679; **panneau latéral**. </br>
-> **Remarque**: Si votre _manifeste d’application_ spécifie que votre onglet est [optimisé pour le panneau de configuration](create-apps-for-teams-meetings.md#in-meeting), c’est ici qu’il sera affiché. Il peut également faire partie d’une expérience de bac à papier, sous réserve des instructions de conception spécifiées.
+
+> [!NOTE]
+> Si votre _manifeste d’application_ spécifie que votre onglet est [optimisé pour le panneau de configuration](create-apps-for-teams-meetings.md#in-meeting), c’est ici qu’il sera affiché. Il peut également faire partie d’une expérience de bac à papier, sous réserve des instructions de conception spécifiées.
 
 &emsp;&emsp;&#9679; **boîte de dialogue de réunion**. Utilisez la boîte de dialogue de réunion pour présenter un contenu actionnable pour les participants à la réunion. *Consultez la rubrique* [créer des applications pour les réunions teams](create-apps-for-teams-meetings.md).
 

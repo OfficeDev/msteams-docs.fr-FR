@@ -1,15 +1,15 @@
 ---
 title: Prise en main du générateur Yeoman pour Microsoft teams
 description: Commencer à créer des applications intéressantes avec le générateur Yeoman pour Microsoft teams
-keywords: nœud de mise en route. js NodeJS Yeoman
+keywords: mise en route node.js NodeJS Yeoman
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: f9b3f165d3b5387f8e7d30563134ed4889920ca5
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034042"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237992"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>Créer votre première application Microsoft teams
 
@@ -26,7 +26,7 @@ Vous devez installer les éléments suivants sur votre ordinateur avant de comme
 
 ### <a name="install-node"></a>Nœud Installer
 
-NodeJS doit être installé sur votre ordinateur. Vous devez utiliser la dernière [version d’LTS](https://nodejs.org/dist/latest-v8.x/).
+NodeJS doit être installé sur votre ordinateur. Vous devez utiliser la dernière [version d’LTS](https://nodejs.org).
 
 ### <a name="install-a-code-editor"></a>Installer un éditeur de code
 
@@ -60,7 +60,7 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>Générer votre projet
 
-Ouvrez une invite de commandes et créez un répertoire dans lequel vous souhaitez créer votre projet, puis tapez la commande `yo teams`dans ce répertoire. Cette opération démarre le générateur d’applications teams et vous demande un ensemble de questions.
+Ouvrez une invite de commandes et créez un répertoire dans lequel vous souhaitez créer votre projet, puis tapez la commande dans ce répertoire `yo teams` . Cette opération démarre le générateur d’applications teams et vous demande un ensemble de questions.
 
 ![Yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,7 +68,7 @@ La première question concerne le nom de votre projet, vous pouvez la laisser te
 
 L’étape suivante demande un titre de votre projet, ce titre sera utilisé dans le manifeste et la description de votre application. Puis vous serez invité à indiquer un nom d’entreprise, qui sera également utilisé dans le manifeste.
 
-La cinquième question vous demande quelle version du manifeste vous souhaitez utiliser. Pour ce didacticiel, `v1.5`sélectionnez, qui est le schéma actuellement disponible général.
+La cinquième question vous demande quelle version du manifeste vous souhaitez utiliser. Pour ce didacticiel `v1.5` , sélectionnez, qui est le schéma actuellement disponible général.
 
 Une fois que ce générateur vous demandera quels éléments vous souhaitez ajouter à votre projet. Vous pouvez sélectionner une seule combinaison ou une combinaison d’éléments. Pour le moment, il vous suffit de sélectionner *un onglet*.
 
@@ -88,7 +88,7 @@ Le prochain ensemble de questions sera basé sur votre sélection d’éléments
 
 Une fois le générateur exécuté, vous pouvez ouvrir la solution dans votre éditeur de code favori. Prenez une ou deux minutes et familiarisez-vous avec la façon dont le code est organisé, vous pouvez en savoir plus à ce sujet dans la documentation sur la [structure du projet](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) .
 
-Votre onglet sera situé dans le `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` fichier. Il s’agit de la classe basée sur les réplications de `render()` type dactylographié pour votre onglet. Recherchez la méthode `<PanelBody>` et ajoutez une ligne de code à l’intérieur du contrôle afin qu’elle se présente comme suit :
+Votre onglet sera situé dans le `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` fichier. Il s’agit de la classe basée sur les réplications de type dactylographié pour votre onglet. Recherchez la `render()` méthode et ajoutez une ligne de code à l’intérieur du `<PanelBody>` contrôle afin qu’elle se présente comme suit :
 
 ``` TypeScript
 <PanelBody>
@@ -104,15 +104,15 @@ Enregistrez le fichier et revenez à l’invite de commandes.
 
 Vous pouvez maintenant générer votre projet. Cette opération est réalisée en deux étapes (ou une seule étape, voir ci-dessous).
 
-Tout d’abord, vous devez créer le fichier manifeste de l’application teams que vous téléchargez/chargement dans Microsoft Teams. Cette opération est exécutée par la `gulp manifest`tâche Gulp. Cela permet de valider le manifeste et de créer un fichier zip `./package` dans le répertoire.
+Tout d’abord, vous devez créer le fichier manifeste de l’application teams que vous téléchargez/chargement dans Microsoft Teams. Cette opération est exécutée par la tâche Gulp `gulp manifest` . Cela permet de valider le manifeste et de créer un fichier zip dans le `./package` répertoire.
 
-Pour créer votre solution, utilisez la `gulp build` commande. Cela permet de transpiler votre solution `./dist` dans le dossier. 
+Pour créer votre solution, utilisez la `gulp build` commande. Cela permet de transpiler votre solution dans le `./dist` dossier. 
 
 ## <a name="run-your-app"></a>Exécuter votre application
 
-Pour exécuter votre application, vous utilisez `gulp serve` la commande. Cela permet de créer et de démarrer un serveur Web local pour tester votre application. La commande reconstruira également l’application chaque fois que vous enregistrerez un fichier dans votre projet. 
+Pour exécuter votre application, vous utilisez la `gulp serve` commande. Cela permet de créer et de démarrer un serveur Web local pour tester votre application. La commande reconstruira également l’application chaque fois que vous enregistrerez un fichier dans votre projet. 
 
-Vous devez maintenant être en mesure d’accéder `http://localhost:3007/myFirstAppTab/` à pour vérifier que votre onglet est rendu. Toutefois, vous ne disposez pas encore de Microsoft Teams.
+Vous devez maintenant être en mesure d’accéder à pour `http://localhost:3007/myFirstAppTab/` vérifier que votre onglet est rendu. Toutefois, vous ne disposez pas encore de Microsoft Teams.
 
 ![afficher votre site dans un navigateur](~/assets/yeoman-images/teams-first-app-3.png)
 
@@ -120,9 +120,9 @@ Vous devez maintenant être en mesure d’accéder `http://localhost:3007/myFirs
 
 Microsoft Teams ne vous permet pas d’héberger votre application sur localhost, c’est pourquoi vous devez la publier sur une URL publique ou utiliser un proxy tel que ngrok.
 
-La bonne nouvelle est que le projet de génération de modèles automatique dispose de cette configuration intégrée. Lorsque vous exécutez `gulp ngrok-serve` le service ngrok est démarré en arrière-plan, avec une entrée DNS unique et publique, et il compresse également le manifeste avec cette URL unique, puis effectue exactement la même chose que `gulp serve`.
+La bonne nouvelle est que le projet de génération de modèles automatique dispose de cette configuration intégrée. Lorsque vous exécutez `gulp ngrok-serve` le service ngrok est démarré en arrière-plan, avec une entrée DNS unique et publique, et il compresse également le manifeste avec cette URL unique, puis effectue exactement la même chose que `gulp serve` .
 
-Après avoir `gulp ngrok-serve`exécuté, créez une nouvelle équipe Microsoft teams et, lorsqu’elle est créée, cliquez sur le nom de l’équipe, pour accéder aux paramètres Teams, puis sélectionnez *applications*. Dans le coin inférieur droit, vous devriez voir un lien *charger une application personnalisée*, sélectionnez-le, puis accédez à votre dossier de projet et le `package`sous-dossier appelé. Sélectionnez le fichier zip dans ce dossier, puis cliquez sur Ouvrir. Votre application est désormais versions test chargées dans Microsoft Teams.
+Après avoir exécuté `gulp ngrok-serve` , créez une nouvelle équipe Microsoft teams et, lorsqu’elle est créée, cliquez sur le nom de l’équipe, pour accéder aux paramètres Teams, puis sélectionnez *applications*. Dans le coin inférieur droit, vous devriez voir un lien *charger une application personnalisée*, sélectionnez-le, puis accédez à votre dossier de projet et le sous-dossier appelé `package` . Sélectionnez le fichier zip dans ce dossier, puis cliquez sur Ouvrir. Votre application est désormais versions test chargées dans Microsoft Teams.
 
 ![application versions test chargées](~/assets/yeoman-images/teams-first-app-4.png)
 

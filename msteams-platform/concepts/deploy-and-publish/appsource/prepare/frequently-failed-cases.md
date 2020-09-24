@@ -4,12 +4,12 @@ description: Décrit des conseils pour l’envoi et la plupart des stratégies a
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 93b772f6868c50df6810c09f06bc9d1c99a00896
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704480"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237859"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -114,19 +114,22 @@ Votre robot doit répondre à n’importe quelle commande et ne pas être inacti
 
 * **Examinez toutes les étendues**. Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
 
-### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>Les robots &#9989; doivent envoyer un message de bienvenue lors du premier lancement
+### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; les robots personnels doivent envoyer un message de bienvenue lors du premier lancement
 
-Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot. Il s’agit de la première interaction d’un utilisateur avec le bot. Un message de bienvenue peut inciter l’utilisateur à continuer à explorer l’application. Si le message de bienvenue ou d’introduction est confus ou non clair, les utilisateurs ne verront pas immédiatement la valeur de l’application et perdront des intérêts.
+Un message de bienvenue est le meilleur moyen de définir la tonalité pour votre robot personnel/de conversation. Il s’agit de la première interaction d’un utilisateur avec le bot. Un message de bienvenue peut inciter l’utilisateur à continuer à explorer l’application. Si le message de bienvenue ou d’introduction est confus ou non clair, les utilisateurs ne verront pas immédiatement la valeur de l’application et perdront des intérêts.
+
+> [!Note]
+> Un message de bienvenue est facultatif pour un robot de canal.
 
 ### <a name="welcome-message-requirements"></a>Conditions requises pour les messages d’accueil
 
-* Identifier qui a ajouté le robot à un canal.
-* Inclure une proposition de valeur.
-* Fournissez des conseils pour l’utilisation du bot.
+* Incluez une proposition de valeur dans la visite d’accueil.
+* Fournissez des instructions pour l’utilisation du bot.
 * Présenter un texte facile à lire et un dialogue simple, de préférence une carte avec un bouton de présentation de l’accueil actionnable qui charge un module de tâches.
 * Restez simple, évitez la boîte de dialogue de mot/conversation.
+* Incluez des cartes et des boutons adaptatifs pour faciliter l’utilisation du message de bienvenue.
 * Invoquer le message de bienvenue avec une commande ping, pas deux ou plusieurs pings simultanés.
-* Dans la conversation personnelle, le message de bienvenue doit uniquement être affiché à l’utilisateur qui a configuré l’application.  
+* Un message de bienvenue doit uniquement être affiché à l’utilisateur qui a configuré l’application, de préférence dans une conversation personnelle 1:1.
 * Ne jamais envoyer de conversation personnelle à tous les membres de l’équipe.
 * Ne jamais envoyer le message de bienvenue plusieurs fois. Le fait de répéter le même message d’accueil à intervalles réguliers n’est pas autorisé et est considéré comme du courrier indésirable.
 

@@ -5,12 +5,12 @@ description: Découvrez comment créer un onglet personnel pour votre première 
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3b54efa9b7ed8019b5d4901eeaaf0864e1afc7ac
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210123"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237803"
 ---
 # <a name="build-a-teams-personal-tab"></a>Créer un onglet personnel teams
 
@@ -34,7 +34,7 @@ Les personnes de votre organisation ont des difficultés à trouver des informat
 > * Créer un contenu de tabulation
 > * Mettre à jour le thème de couleurs d’un onglet en fonction de la préférence de l’utilisateur
 
-## <a name="identify-relevant-app-project-components"></a>Identifier les composants de projet d’application pertinents
+## <a name="1-identify-relevant-app-project-components"></a>1. identifier les composants de projet d’application pertinents
 
 La plupart du manifeste de l’application et de la génération de modèles automatique sont configurés automatiquement lorsque vous créez votre projet avec le kit de outils Teams. Examinons les principaux composants de création d’un onglet personnel.
 
@@ -65,7 +65,7 @@ Le échafaudage de l’application fournit les composants pour le rendu de votre
 * `Tab.js` fichier dans le `src/components` Répertoire de votre projet
 * Kit de développement logiciel (SDK) JavaScript de Microsoft Teams, qui est préinstallé dans les composants frontaux de votre projet
 
-## <a name="create-your-tab-content"></a>Créer le contenu de votre onglet
+## <a name="2-customize-your-tab-content-page"></a>2. personnaliser votre page de contenu d’onglet
 
 Compilez une liste de contacts importants dans votre organisation. Copiez et mettez à jour l’extrait de code suivant avec les informations qui vous concernent ou, pour des raisons de temps, utilisez le code tel quel.
 
@@ -112,7 +112,7 @@ Enregistrez vos modifications. Accédez à l’onglet de votre application dans 
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="Capture d’écran d’un onglet personnel avec du contenu statique.":::
 
-## <a name="update-the-tab-theme"></a>Mettre à jour le thème d’onglet
+## <a name="3-update-the-tab-theme"></a>3. mettre à jour le thème de l’onglet
 
 Les applications intéressantes semblent natives pour Teams, c’est pourquoi il est important que votre onglet se mélange avec le thème des équipes que vos utilisateurs préfèrent : par défaut (clair), foncé ou contraste élevé. Comme vous avez pu le remarquer dans la dernière capture d’écran, votre onglet présente toujours un arrière-plan clair lorsque le client utilise le thème foncé. Il ne s’agit pas d’une expérience utilisateur recommandée.
 
@@ -187,7 +187,7 @@ Vérifiez l’onglet dans Teams. L’apparence doit correspondre au thème fonc�
 
 Félicitations ! Vous disposez d’une application teams avec un onglet personnel qui facilite la recherche de contacts importants dans votre organisation.
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 * [Authentifier les utilisateurs avec l’authentification](../tabs/how-to/authentication/auth-aad-sso.md)unique : Si vous souhaitez uniquement que les utilisateurs autorisés visualisent votre onglet, configurez l’authentification unique (SSO) via Azure Active Directory (AD).
 * [Incorporer du contenu à partir d’une application Web ou d’une page Web existante](../tabs/how-to/add-tab.md#tab-requirements): nous vous avons expliqué comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.
@@ -201,4 +201,4 @@ Félicitations ! Vous disposez d’une application teams avec un onglet personn
 Vous saurez comment créer un onglet pour une utilisation personnelle. Examinons ce qu’il faut faire pour créer un onglet pour les canaux d’équipe et les conversations.
 
 > [!div class="nextstepaction"]
-> [Onglet créer un canal](../build-your-first-app/build-channel-tab.md)
+> [Créer un onglet de canal](../build-your-first-app/build-channel-tab.md)
