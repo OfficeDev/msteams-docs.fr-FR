@@ -4,18 +4,18 @@ author: clearab
 description: Vue d’ensemble des extensions de messagerie sur la plateforme Microsoft teams
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7eb734258aa34c69fa34d1413b2d3dab88e0113a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 89cf92260418701ef4809f5a13750b991b9f7acb
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673598"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279680"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir les commandes d’action d’extension de messagerie
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Les commandes d’action vous permettent de présenter à vos utilisateurs un menu contextuel modal (appelé module de tâches dans Teams) pour collecter ou afficher des informations, puis traiter leurs interactions et renvoyer des informations à Teams. Avant de créer votre commande, vous devez décider :
+Les commandes d’action vous permettent de présenter une fenêtre contextuelle modale (appelée module de tâches dans Teams) à vos utilisateurs afin de collecter ou d’afficher des informations, puis de traiter leur interaction et de renvoyer des informations à Teams. Avant de créer votre commande, vous devez décider :
 
 1. À partir de quel emplacement la commande d’action peut-elle être déclenchée ?
 1. Comment le module de tâche sera-t-il créé ?
@@ -23,7 +23,7 @@ Les commandes d’action vous permettent de présenter à vos utilisateurs un me
 
 ## <a name="choose-action-command-invoke-locations"></a>Choisir les emplacements d’appel de commande d’action
 
-La première chose que vous devez décider est l’emplacement où votre commande d’action peut être déclenchée (ou plus spécifiquement *appelée*). En spécifiant `context` le dans votre manifeste d’application, votre commande peut être appelée à partir d’un ou plusieurs des emplacements suivants :
+La première chose que vous devez décider est l’emplacement où votre commande d’action peut être déclenchée (ou plus spécifiquement *appelée*). En spécifiant le `context` dans votre manifeste d’application, votre commande peut être appelée à partir d’un ou plusieurs des emplacements suivants :
 
 * Boutons situés en bas de la zone de message de composition.
 * En @mentioning votre application dans la zone commande. Remarque : vous ne pouvez pas répondre avec un message bot inséré directement dans la conversation si votre extension de messagerie est appelée à partir de la zone de commande.
@@ -43,11 +43,11 @@ Si vous choisissez de créer votre module de tâches avec une liste statique de 
 
 Dans la plupart des cas, la commande action entraîne l’insertion d’une carte insérée dans la boîte de message composer. Votre utilisateur peut alors décider de l’envoyer au canal ou à la conversation. Dans ce cas, le message provient de l’utilisateur et votre bot ne pourra plus modifier ou mettre à jour la carte.
 
-Si votre extension de messagerie est déclenchée à partir de la zone de composition ou directement à partir d’un message, votre service Web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot peut le mettre à jour et peut également répondre au thread de conversation, le cas échéant. Vous devrez ajouter l' `bot` objet à votre manifeste d’application à l’aide du même ID et en définissant les étendues appropriées.
+Si votre extension de messagerie est déclenchée à partir de la zone de composition ou directement à partir d’un message, votre service Web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot pourra le mettre à jour, et le robot peut également répondre au thread de conversation si nécessaire. Vous devrez ajouter l' `bot` objet à votre manifeste d’application à l’aide du même ID et en définissant les étendues appropriées.
 
 ## <a name="add-the-command-to-your-app-manifest"></a>Ajouter la commande à votre manifeste d’application
 
-Maintenant que vous avez décidé de la façon dont les utilisateurs interagissent avec votre commande action, il est temps de l’ajouter à votre manifeste d’application. Pour ce faire, vous allez ajouter un `composeExtension` nouvel objet au niveau supérieur de votre fichier JSON de manifeste d’application. Vous pouvez le faire à l’aide de l’aide d’App Studio ou manuellement.
+Maintenant que vous avez décidé de la façon dont les utilisateurs interagissent avec votre commande action, il est temps de l’ajouter à votre manifeste d’application. Pour ce faire, vous allez ajouter un nouvel `composeExtension` objet au niveau supérieur de votre fichier JSON de manifeste d’application. Vous pouvez le faire à l’aide de l’aide d’App Studio ou manuellement.
 
 ### <a name="create-a-command-using-app-studio"></a>Créer une commande à l’aide d’App Studio
 
@@ -66,27 +66,27 @@ Les étapes suivantes supposent que vous avez déjà [créé une extension de me
 
 ### <a name="manually-create-a-command"></a>Créer manuellement une commande
 
-Pour ajouter manuellement votre commande d’extension de messagerie basée sur une action à votre manifeste d’application, vous devez ajouter les paramètres follow `composeExtension.commands` à votre tableau d’objets.
+Pour ajouter manuellement votre commande d’extension de messagerie basée sur une action à votre manifeste d’application, vous devez ajouter les paramètres follow à votre `composeExtension.commands` tableau d’objets.
 
 | Nom de la propriété | Objectif | Obligatoire ? | Version de manifeste minimale |
 |---|---|---|---|
 | `id` | ID unique que vous affectez à cette commande. La demande de l’utilisateur contiendra cet ID. | Oui | 1.0 |
 | `title` | Nom de la commande. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |
-| `type` | Doivent être`action` | Non | 1.4 |
-| `fetchTask` | `true`pour une carte adaptative ou une vue Web incorporée pour votre module de `false` tâches, pour une liste statique de paramètres ou lors du chargement de l’affichage Web par un`taskInfo` | Non | 1.4 |
-| `context` | Tableau facultatif de valeurs qui définit l’emplacement à partir duquel l’extension de messagerie peut être appelée. Les valeurs possibles `message`sont `compose`, ou `commandBox`. La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
+| `type` | Doivent être `action` | Non | 1.4 |
+| `fetchTask` | `true` pour une carte adaptative ou une vue Web incorporée pour votre module de tâches, `false` pour une liste statique de paramètres ou lors du chargement de l’affichage Web par un `taskInfo` | Non | 1.4 |
+| `context` | Tableau facultatif de valeurs qui définit l’emplacement à partir duquel l’extension de messagerie peut être appelée. Les valeurs possibles sont `message` , `compose` ou `commandBox` . La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
 
 Si vous utilisez une liste statique de paramètres, vous allez également les ajouter.
 
 | Nom de la propriété | Objectif | Obligatoire ? | Version de manifeste minimale |
 |---|---|---|---|
-| `parameters` | Liste statique des paramètres de la commande. Utilisez uniquement lorsque `fetchTask` est`false` | Non | 1.0 |
+| `parameters` | Liste statique des paramètres de la commande. Utilisez uniquement lorsque `fetchTask` est `false` | Non | 1.0 |
 | `parameter.name` | Le nom du paramètre. Cette adresse est envoyée à votre service dans la demande de l’utilisateur. | Oui | 1.0 |
 | `parameter.description` | Décrit ce paramètre ou un exemple de la valeur qui doit être fournie. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |
 | `parameter.title` | Titre de paramètre court convivial ou étiquette. | Oui | 1.0 |
-| `parameter.inputType` | Défini sur le type d’entrée requis. Les valeurs possibles `text`sont `textarea`, `number`, `date`, `time`, `toggle`et. La valeur par défaut est définie sur`text` | Non | 1.4 |
+| `parameter.inputType` | Défini sur le type d’entrée requis. Les valeurs possibles sont `text` ,,,, `textarea` `number` `date` `time` et `toggle` . La valeur par défaut est définie sur `text` | Non | 1.4 |
 
-Si vous utilisez une vue Web incorporée, vous pouvez éventuellement ajouter l' `taskInfo` objet pour récupérer votre vue Web sans appeler directement votre bot. Si vous choisissez d’utiliser cette option, le comportement est similaire à l’utilisation d’une liste statique de paramètres dans la mesure où la première interaction avec votre bot [répond à l’action de soumission du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si vous utilisez un `taskInfo` objet, veillez à définir également le `fetchTask` paramètre sur. `false`
+Si vous utilisez une vue Web incorporée, vous pouvez éventuellement ajouter l' `taskInfo` objet pour récupérer votre vue Web sans appeler directement votre bot. Si vous choisissez d’utiliser cette option, le comportement est similaire à l’utilisation d’une liste statique de paramètres dans la mesure où la première interaction avec votre bot [répond à l’action de soumission du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si vous utilisez un `taskInfo` objet, veillez à définir également le `fetchTask` paramètre sur `false` .
 
 | Nom de la propriété | Objectif | Obligatoire ? | Version de manifeste minimale |
 |---|---|---|---|
@@ -154,7 +154,7 @@ Si vous utilisez une carte adaptative ou une vue Web incorporée sans `taskInfo`
 
 * [Créer et répondre à l’aide d’un module de tâches](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Si vous utilisez des paramètres ou une vue Web incorporée avec `taskInfo` un objet, l’étape suivante consiste à :
+Si vous utilisez des paramètres ou une vue Web incorporée avec un `taskInfo` objet, l’étape suivante consiste à :
 
 * [Répondre à l’envoi du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 

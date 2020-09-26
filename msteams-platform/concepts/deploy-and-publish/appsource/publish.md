@@ -2,12 +2,12 @@
 title: Guide du processus de soumission d’approbation d’application Microsoft teams
 description: Décrit le processus d’approbation d’envoi pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
 keywords: teams publier le magasin Office Publishing Publish AppSource Partner Center Verification de compte
-ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874869"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279688"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envoi de votre application à AppSource
 
@@ -30,7 +30,7 @@ La publication de votre application dans [AppSource](https://appsource.microsoft
 >- Si votre application contient un connecteur Office 365, des conditions supplémentaires peuvent s’appliquer. *Consultez* le [tableau de bord du développeur de connecteurs](https://aka.ms/connectorsdashboard) et des développeurs d' [applications](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).
 >- Pour que votre application soit disponible pour les utilisateurs de GCC et pour éviter les listes d’applications en double dans la Banque, le processus/flux d’authentification doit identifier et acheminer l’utilisateur vers l’URL de contenu attendue pour les utilisateurs de GCC.
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>FAQ — applications teams et comptes partenaires
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>FAQ — processus de vérification de compte partenaire et d’applications de teams dans le centre de partenaires
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>Comment puis-je créer un compte de centre partenaire ?
 
@@ -49,11 +49,11 @@ Ouvrez un [ticket de support de centre partenaire](https://partner.microsoft.com
 | Rubrique | Aide générale sur Marketplace et questions sur les procédures |
 | Sujet secondaire| Complément Office |
 
-## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>Où puis-je obtenir de l’aide pour mes problèmes de mon centre partenaires ?
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>Où puis-je obtenir de l’aide pour les problèmes de mon compte centre partenaires ?
 
 Consultez notre [page de support des éditeurs](https://aka.ms/marketplacepublishersupport) pour rechercher votre rubrique de problèmes et obtenir des conseils. Si les instructions fournies ne sont pas utiles, [ouvrez un ticket de support de centre partenaire](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
-## <a name="how-do-i-manage-my-office-store-account"></a>Comment puis-je gérer mon compte Office Store ?
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>Comment puis-je gérer mon compte Office Store dans le Centre des partenaires ?
 
 Pour obtenir des instructions sur la gestion de votre compte Office Store via le centre de partenaires, consultez notre  [compte Manage Your Office Store dans le Centre des partenaires](/office/dev/store/manage-account-settings-and-profile) .
 
@@ -77,12 +77,12 @@ Pendant le processus de vérification de compte, l’état de chaque étape requ
 
 ![Erreur de vérification du centre partenaire](../../../assets/images/partner-center-acct-verification-error.png)
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>Mon état de vérification de compte n’a pas avancé au-delà de la propriété de messagerie. Comment procéder ?
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Mon état de vérification de compte n’a pas avancé au-delà de la propriété de messagerie dans le centre de partenaires. Comment procéder ?
 
 Pendant le processus de vérification de la **propriété de messagerie** , un message électronique de vérification est envoyé à l’adresse de messagerie du contact principal. Consultez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@<span>Microsoft</span>. com** en fonction de la ligne d’objet *requise : Vérifiez votre compte de messagerie auprès de Microsoft*, en vous demandant d’effectuer le processus de vérification du courrier électronique. Le message électronique de vérification sera envoyé à l’adresse de messagerie indiquée dans la page Paramètres de votre compte dans le centre de partenaires.
 
 > [!NOTE]
- >Le lien de vérification de la messagerie n’est valide que pendant 7 jours. Vous pouvez demander à ce que nous puissions vous renvoyer le courrier électronique en visitant votre page de profil partenaire et en sélectionnant le lien **renvoyer le message électronique de vérification** . Pour vous assurer que le courrier électronique est reçu, la liste des messages autorisés d’microsoft.com en tant que domaine approuvé et vérifiez vos dossiers de courrier indésirable.
+ >Le lien de vérification de la messagerie n’est valide que pendant 7 jours. Vous pouvez demander à ce que nous puissions vous renvoyer le courrier électronique en visitant votre page de profil partenaire et en sélectionnant le lien **renvoyer le message électronique de vérification** . Pour vous assurer que le courrier électronique est reçu, un message de liste d’adresses de messagerie provenant d’microsoft.com en tant que domaine sécurisé et vérifiez vos dossiers de courrier indésirable.
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>Comment puis-je obtenir une assistance supplémentaire pour les problèmes liés à mon compte ?
 
@@ -96,7 +96,7 @@ Procédez comme suit :
 1. Effacez le cache du navigateur, accédez à votre tableau de bord du compte centre partenaire, puis sélectionnez le lien **renvoyer le message électronique de vérification** pour renvoyer le message électronique de vérification à votre adresse de messagerie.
 1. Essayez d’accéder au lien  **renvoyer la messagerie de vérification** à partir d’un autre navigateur.
 1. Collaborez avec votre service informatique pour vous assurer que les e-mails de vérification ne sont pas bloqués par le serveur de messagerie.
-1. Réglez le filtre de courrier indésirable de votre serveur pour autoriser/autoriser tous les messages électroniques provenant d' **maccount@microsoft. <span></span> com**.
+1. Réglez le filtre de courrier indésirable de votre serveur pour autoriser/safelir tous les messages électroniques provenant d' **maccount@microsoft. <span></span> com**.
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Combien de temps dure le processus de vérification de l’emploi ?
 

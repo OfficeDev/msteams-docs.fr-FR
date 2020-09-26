@@ -5,12 +5,12 @@ description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: a489a2a439c8aaacc2900e4c62084f13b34b3e30
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237985"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279675"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>Créer des applications pour les réunions Teams (aperçu)
 
@@ -98,11 +98,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
+   "meetingRole":"Presenter",
+   "conversation":{
+      "isGroup":true,
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+   }
 }
 ```
 
@@ -112,11 +112,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-    "meetingRole": "Attendee",
-    "conversation": {
-        "isGroup": true,
-        "id": "19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
-        }
+   "meetingRole":"Attendee",
+   "conversation":{
+      "isGroup":true,
+      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+   }
 }
 ```
 
@@ -149,17 +149,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-    "type": "message",
-    "text": "John Phillips assigned you a weekly todo",
-    "summary": "Don't forget to meet with Marketing next week",
-    "channelData": {
-    "notification": {
-    "alert": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-    }
-},
-    "replyToId": "1493070356924"
-    }
+   "type":"message",
+   "text":"John Phillips assigned you a weekly todo",
+   "summary":"Don't forget to meet with Marketing next week",
+   "channelData":{
+      "notification":{
+         "alert":true,
+         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+      }
+   },
+   "replyToId":"1493070356924"
+}
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)

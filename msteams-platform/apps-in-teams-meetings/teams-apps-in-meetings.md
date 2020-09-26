@@ -5,12 +5,12 @@ description: vue d’ensemble des applications dans les réunions teams en fonct
 ms.topic: overview
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237887"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279717"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Applications dans les réunions Teams (aperçu)
 
@@ -129,4 +129,4 @@ Vous pouvez accéder à la page Options de la  **réunion** comme suit :
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
-> [Activer les applications dans les réunions teams] (Apps-in-teams-meetings/Enable-Apps-in-meetings. MD
+> [Créer des applications pour les réunions Teams](create-apps-for-teams-meetings.md)

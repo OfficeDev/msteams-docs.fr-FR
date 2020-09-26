@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303716"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279661"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -20,7 +20,13 @@ Le journal des modifications répertorie les modifications apportées à la plat
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|09/22/2020|Nouvelles instructions de prise en main de teams|[Vue d’ensemble de la création de votre première application teams](build-your-first-app/build-first-app-overview.md)|
+|9/18/2020|Prise en charge des applications teams de réunion (préversion publique)|[Créer des applications pour les réunions](apps-in-teams-meetings/create-apps-for-teams-meetings.md) et les applications teams [dans les réunions teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|8/19/2020|Importer des messages teams avec Microsoft Graph|[Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Prise en charge des cartes adaptatives dans le webhook entrant déplacée vers GA.|[Envoyer des cartes adaptatives à l'aide d'un webhook entrant](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/10/2020|Commencer à créer des applications teams avec Visual Studio Toolkit.|[Créer des applications avec Microsoft teams Toolkit et Visual Studio code](toolkit/visual-studio-overview.md) |
+|08/06/2020|Prise en charge de l’authentification unique des onglets|[Développer un onglet Microsoft teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|07/27/2020 | Robots et messages proactifs de Graph (préversion publique)|[Activation de l’installation proactive du bot et de la messagerie proactive dans teams avec Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Mises à jour des capacités des appareils mobiles.|[Demander des autorisations de périphérique pour votre onglet Microsoft teams](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|Outil de validation des applications teams pour les envois AppSource.|[Outil de validation des applications teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Créer un assistant virtuel pour teams|[Assistant virtuel pour Microsoft teams](samples/virtual-assistant.md)|

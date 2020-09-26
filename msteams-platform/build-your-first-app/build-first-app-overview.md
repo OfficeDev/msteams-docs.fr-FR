@@ -5,14 +5,14 @@ description: Vue d’ensemble et conditions préalables à la création d’une 
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: bcfbcaa9de85f4b7135483aed3d1d11bf8bffad6
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210108"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279708"
 ---
-# <a name="building-your-first-teams-app-overview"></a>Présentation de la création de votre première application teams
+# <a name="build-your-first-teams-app-overview"></a>Vue d’ensemble de la création de votre première application teams
 
 Dans les leçons créer **votre première application** , vous créez des applications teams de base. Chaque Didacticiel explique comment créer une application de teams simple et réelle de teams tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
 
