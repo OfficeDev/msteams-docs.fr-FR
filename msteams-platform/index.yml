@@ -10,12 +10,12 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 9f28ab18339cba951c3830cb1a8ba229154ed11a
-  ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+  ms.openlocfilehash: 0595dff854382c2a5e95c551f93d76ca3b8616fa
+  ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "48209724"
+  ms.lasthandoff: 09/25/2020
+  ms.locfileid: "48279720"
 highlightedContent:
   items:
   - title: "Nouveautés du développement Microsoft teams \U0001F680Commencez ici !"
@@ -27,7 +27,7 @@ highlightedContent:
   - title: 'Bots : interactions basées sur des conversations'
     itemType: overview
     url: /microsoftteams/platform/bots/what-are-bots
-  - title: 'Extensions de messagerie : interactions orientées tâche'
+  - title: Extensions de messagerie — interactions orientées vers les tâches
     itemType: overview
     url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
   - title: 'Modules de tâche et cartes : messagerie et notifications enrichies'
