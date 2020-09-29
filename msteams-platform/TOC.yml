@@ -157,7 +157,7 @@
       items:
         - name: Vue d’ensemble de la conception
           href: tabs/design/tabs.md
-        - name: Onglets sur les clients mobiles
+        - name: Onglets sur les appareils mobiles
           href: tabs/design/tabs-mobile.md
     - name: Guides pratiques
       expanded: true
