@@ -5,17 +5,14 @@ description: Comment déployer votre onglet teams existant vers SharePoint en ta
 keywords: onglet teams développement SharePoint Framework
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: d7f617f0967743eab84423cd31f78d4700db1c1c
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818940"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326346"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>Ajout d’un onglet Microsoft teams dans SharePoint en tant que composant WebPart SPFx
-
-> [!IMPORTANT]
-> Cette fonctionnalité est encore en phase préliminaire et est sujette à modifications. Elle n’est pas prise en charge dans les environnements de production. Vos commentaires et suggestions concernant cette fonctionnalité sont les bienvenus via la [liste des problèmes liés aux documents de développement SharePoint](https://github.com/SharePoint/sp-dev-docs/issues).
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Intégration enrichie entre teams et SharePoint
 

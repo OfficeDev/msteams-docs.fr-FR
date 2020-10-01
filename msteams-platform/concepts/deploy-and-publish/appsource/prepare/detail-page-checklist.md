@@ -1,50 +1,79 @@
 ---
 title: Créer une page de détails d’application intéressante
-description: Décrit les pages de détails de l’application qui doivent avoir
+description: Décrit les conditions requises pour la page des détails de l’application
 keywords: publication des équipes publier le magasin de la stratégie de publication Office AppSource contenu
-ms.openlocfilehash: 741bc7b623e97b338c54c4dcfec5b1ca75201867
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 90ce6962668c6a7a66bb10d33b1315340de29b4d
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42582866"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326325"
 ---
 # <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application intéressante
 
-La page de détails est la première impression de votre application. Chaque élément de votre page de détails peut être utilisé pour véhiculer votre vision et effectuer des téléchargements : réfléchissez à la façon dont vous souhaitez présenter votre application dans un espace limité. Voici quelques conseils et astuces pour vous aider à contacter vos utilisateurs avant même d’installer votre application.
+La page de détails présente la première impression de votre application pour les utilisateurs. Chaque élément de votre page de détails peut être utilisé pour véhiculer votre vision et effectuer des téléchargements : réfléchissez à la façon dont vous souhaitez présenter votre application dans un espace limité. Voici quelques conseils et astuces pour vous aider à contacter vos utilisateurs avant même d’installer votre application.
 
 > [!NOTE]
 > Assurez-vous que vos informations d’application suivent nos [conseils AppSource pour créer une liste de magasins efficace](/office/dev/store/create-effective-office-store-listings).
 
 ## <a name="app-name"></a>Nom de l'application
 
-Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la Découvre dans AppSource App Store. Le nom court de votre application s’affiche sur la page Détails.
+> [!div class="checklist"]
+>
+> * Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le magasin d’applications AppSource. Le nom abrégé de votre application s’affiche sur la page Détails.
+>* Le nom de l’application doit refléter votre application sans aucune référence à Microsoft ou aux produits Microsoft.
+>
+
+> **Remarque**: Si votre application est un partenariat officiel avec Microsoft, le nom de l’application tierce doit être le premier, par exemple, le *connecteur Salesforce pour Microsoft teams*.
+
+> [!div class="checklist"]
+>
+>* Utilisez ces ressources pour obtenir des conseils :
+
+* [Guide des noms d’applications](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
+* [Instructions de marque et de marque Microsoft](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)
 
 **À faire :**
 
 * Choisissez un nom simple et facile à retenir qui vous permet d’identifier votre application.
 * Être distinctive.
+* Si nécessaire, utilisez les références Microsoft 365 au lieu de Office 365.
 
 **Don’t**
 
-* N’utilisez pas de termes ou de noms génériques similaires aux noms d’application existants.
-* N’utilisez pas « Teams », « Microsoft » ou « app » dans le nom de votre application.
-![](~/assets/images/store-detail-page/AppName-02.png)
-Nom de l’application nom de l’application nom de l’application App![Studio affichage](~/assets/images/store-detail-page/AppName-01.png)
+* Ne pas omettre les espaces, avoir une casse incorrecte ou contenir des erreurs de langue dans le nom de l’application.
+* N’utilisez pas de termes ou de noms génériques similaires aux applications existantes.
+* N’utilisez pas « Teams », « Microsoft », les noms de produits Microsoft existants/à venir ou « app » dans le nom de votre application.
+* N’utilisez pas de parenthèses pour inclure les produits Microsoft, par exemple, *votre-App-Name (pour Microsoft Teams)*.
+
+![Affichage du magasin de noms d’application](../../../../assets/images/store-detail-page/AppName-02.png)
+
+![Nom de l’application App Studio View](../../../../assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>Icône couleur
 
 Il s’agit de l’un des premiers éléments que voient les utilisateurs. Elle doit être attrayante et attirer l’attention lorsque vous faites défiler le magasin d’applications. Assurez-vous qu’elle donne une bonne première impression et communique l’image et l’objectif de votre marque. AppSource propose des conseils supplémentaires sur [la création d’une identité visuelle cohérente](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).
 
-![Icône d’application de](~/assets/images/store-detail-page/AppIcon-02.png)
-![l’affichage magasin de l’application icône App Studio View](~/assets/images/store-detail-page/AppIcon-01.png)
+![Vue de magasin d’icônes d’application](~/assets/images/store-detail-page/AppIcon-02.png)
+
+![Icône de l’application App Studio View](~/assets/images/store-detail-page/AppIcon-01.png)
+
+**Don’t**
+
+* Votre icône ne doit pas imiter les produits protégés par des droits d’auteur que vous ne possédez pas.
+* Votre icône ne doit pas ressembler à une marque ou à un produit Microsoft.
 
 ## <a name="outline-icon"></a>Icône de plan
 
-Cette option est utilisée dans les extensions de messagerie marquées comme favoris par l’utilisateur et le menu de navigation de gauche. Assurez-vous qu’il est simple et reconnaissable. Votre icône de contour ne doit contenir que le blanc et la transparence (aucune autre couleur). Pour connaître les spécifications requises, *voir* [Create an App package for Your Microsoft teams App-Icons](../../../build-and-test/apps-package.md#icons).
+Cette option est utilisée dans les extensions de messagerie, les applications marquées comme favorites par l’utilisateur et le menu de navigation de gauche. Assurez-vous qu’il est simple et reconnaissable. Votre icône de contour ne doit contenir que des couleurs blanches et être transparentes. Pour connaître les spécifications requises, *voir* [Create an App package for Your Microsoft teams App-Icons](../../../build-and-test/apps-package.md#icons).
 
-![Icône d’application icône magasin](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![vue de l’application icône plan App Studio View](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![Icône d’application icône magasin vue de l' ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
+ ![ application icône plan App Studio View](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
+
+**Don’t**
+
+* Votre icône ne doit pas imiter les produits protégés par des droits d’auteur que vous ne possédez pas.
+* Votre icône ne doit pas ressembler à une marque ou à un produit Microsoft.
 
 ## <a name="short-description"></a>Description brève
 
@@ -54,11 +83,20 @@ Il s’agit d’un résumé concis de votre application. Il est donc essentiel d
 
 * Mettez les informations les plus importantes en premier.
 * Inclure les mots clés que les clients sont susceptibles de rechercher.
+* Si vous devez mentionner Microsoft Teams, la première mention de Microsoft teams doit être entièrement écrite en tant que *Microsoft teams*. Si teams est de nouveau mentionné dans la même description, le nom peut être réduit à *teams*.
+* Toutes les références à Microsoft ou Microsoft teams peuvent faire partie de la description et suivre les normes et directives de la marque Microsoft.
+* Toutes les descriptions doivent être corrigées par grammaire sans erreur de langue.
+* Évitez l’utilisation inutile de majuscules, par exemple, en indiquant « Users » au lieu de « Users ».
 
 **Don’t**
 
 * Ne répétez pas le titre.
+* Ne pas abréger Microsoft en « MS ».
 * N’utilisez pas de jargon ou de terminologie spécialisée : vous ne pouvez pas supposer que les utilisateurs connaissent les éléments à rechercher.
+* Évitez toute référence inutile aux noms de produits Microsoft, sauf en cas d’absolue nécessité.
+* N’indiquez pas que l’application est une offre de Microsoft.
+* N’utilisez pas de marques protégées par des droits d’auteur.
+* N’utilisez pas « pour teams » dans un nom court.
 
 ![Vue Store courte](~/assets/images/store-detail-page/ShortDescription-02.png)
 
@@ -68,10 +106,27 @@ Voici une vue dans [app Studio](https://aka.ms/InstallTeamsAppStudio):
 
 ## <a name="long-description"></a>Description longue
 
-Cela fournit une narration attrayante qui met en évidence les principales fonctionnalités de votre solution, les problèmes qu’elle résout et son public ciblé. Attirez l’attention de votre public sur la première phrase en communiquant les fonctionnalités uniques de votre application. Votre description doit comporter moins de 4000 caractères. Notez que la plupart des utilisateurs lisent uniquement les mots compris entre 300 et 500.
+> [!div class="checklist"]
+>
+>* Cela fournit une narration attrayante qui met en évidence les principales fonctionnalités de votre solution, les problèmes qu’elle résout et l’audience cible. Attirez l’attention de votre public sur la première phrase en communiquant les fonctionnalités uniques de votre application. Votre description doit comporter moins de 4000 caractères ; la plupart des utilisateurs lisent uniquement les mots compris entre 300 et 500.
+>* Qu’est-ce qui est autorisé ?
+
+* `<your_app>`  « fonctionne avec Microsoft teams »
+* `<for users>`  « utilisation de Microsoft teams »
+* `<for tasks>`  « au sein de Microsoft teams »
+* `<an app>`  « pour Microsoft teams »
+* `<your_app>`  « s’intègre à Microsoft teams »
+* "... intégré à Microsoft teams»
+* "... basé sur...
+* "... s’exécute sur...
+* "... activé par... "
+* "... développé pour... "
+* "... conçu pour... "
+
+> **Remarque**: les termes ci-dessus s’appliquent également à l’utilisation de Microsoft 365. Office 365 est désormais appelé Microsoft 365. Veuillez mettre à jour les descriptions de vos applications pour en faire la réflexion.
 
 >[!IMPORTANT]
-> Veillez à copier précisément les descriptions que vous avez écrites dans votre entrée AppSource dans votre manifeste, car les valeurs doivent correspondre. Teams utilisera uniquement les descriptions que vous fournissez dans le manifeste.
+> Veillez à copier précisément les descriptions que vous avez écrites dans votre entrée AppSource dans le manifeste de votre application, car les valeurs doivent correspondre. Microsoft teams utilisera uniquement les descriptions que vous fournissez dans le manifeste de l’application.
 
 **À faire :**
 
@@ -80,17 +135,23 @@ Cela fournit une narration attrayante qui met en évidence les principales fonct
 * Utiliser Active Voice et parler directement aux utilisateurs.
 * Utilisez des points à puces pour répertorier vos fonctionnalités.
 * Inclure un lien d’aide ou de support pour que vos utilisateurs sachent comment vous joindre s’ils ont des questions.
-* Veillez à appeler des limitations ou des contraintes pour obtenir de meilleurs conseils aux utilisateurs.
-
+* Assurez-vous que la première mention de Microsoft teams est écrite intégralement en tant que «*Microsoft teams*». Si teams est de nouveau mentionné dans la même description, le nom peut être réduit en «*teams*».
+* Toutes les références à Microsoft Teams (si nécessaire) peuvent faire partie de la description longue et suivre les normes et directives de la marque Microsoft.
+* Toutes les descriptions doivent être corrigées par grammaire sans erreur de langue.
+* Évitez l’utilisation inutile de majuscules pour les termes de votre description (exemple : « Users » au lieu de « Users ».
+* Évitez les acronymes.
+* N’oubliez pas d’appeler des limitations, une dépendance de compte, un paramétrage de configuration, des mises à jour futures dans les versions ou des contraintes d’utilisation.
 
 >[!NOTE]
->Teams prend en charge la syntaxe de démarque suivante :  
+> Microsoft teams prend en charge la syntaxe de démarque suivante :  
 > **Liens**. `[title](url/address/here)`.  
->**Images**. `![alt text](url/address/here)`.  
+>**Images**. `![alt text](url/address/here)` .  
 > En **gras**. `**bold text**`   `__bold text__`.  
 > **Italique**. `*italicized text*`  `_italicized text`.  
 >**[Listes triées](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
->`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>`1. first` 
+<br>` 1. second ` 
+<br>`1.third`<br>
 >**[Liste non triée](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
 ` - short` <br>`- bulleted` <br>`- list`<br>
 >**NewLine**. `Place two empty spaces or a backslash \`  \
@@ -100,6 +161,19 @@ Cela fournit une narration attrayante qui met en évidence les principales fonct
 **Don’t**
 
 * Ne placez pas trop de mots-clés dans votre Description : elle est gênante et ne sera pas à l’aide de la détectabilité de votre application.
+* N’utilisez pas «*teams*» ou «*Microsoft teams*» dans un nom court.
+* Évitez toute référence inutile aux noms de produits Microsoft, sauf en cas d’absolue nécessité.
+* N’indiquez pas que l’application est une offre de Microsoft.
+* N’utilisez pas de marques protégées par des droits d’auteur.
+* N’utilisez pas la langue suivante sauf si l’application a été soumise à un processus de certification officiel :
+
+  * "... certifié pour... "
+  * "... optimisé par... "
+
+* N’abrégez pas « Microsoft » en « MS » ou « MSFT », écrivez Microsoft entièrement.
+* Aucune partie de la description ou des métadonnées ne peut indiquer l’application en tant qu’offre Microsoft officielle.
+* Les partenaires ne peuvent pas utiliser ou imiter un slogan Microsoft, ni utiliser le nom de n’importe quel produit ou service Microsoft dans le slogan ou le slogan.
+* Le logo ne doit pas représenter incorrectement l’application en tant que produit/fonctionnalité Microsoft officiel, ni imiter les produits Microsoft existants ou à venir.
 
 ![Vue du magasin de description longue de l’application](~/assets/images/store-detail-page/LongDescription-02.png)
 
@@ -114,12 +188,12 @@ Vous pouvez fournir une à cinq captures d’écran formatées sous forme de fic
 
 **À faire :**
 
-* Insistez sur la mise en surbrillance de toutes les fonctionnalités de votre application.
+* Insistez sur la mise en évidence de toutes les fonctionnalités de votre application.
 * Le contenu doit représenter précisément votre application.
 * Le texte doit être bien rempli sans être excessif.
 * Vous pouvez entourer vos captures d’écran d’une couleur d’arrière-plan et ajouter du contenu marketing semblable à l’exemple [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) ; Toutefois, les dimensions ne seront pas de la capture d’écran seule, mais incluront l’image globale.
 
-<img width="800px" title="Capture d’écran Freshdesk" src="~/assets/images/freshdesk.png" />
+<img width="800px" alt="Freshdesk screenshot" src="../../../../assets/images/freshdesk.png" />
 
 **Don’t**
 
@@ -132,7 +206,14 @@ Pour connaître les meilleures pratiques, *voir*: élaboration d' [images effica
 
 ## <a name="videos"></a>Vidéos
 
-Si une image vaut un millier de mots, une vidéo vaut mille images. Les vidéos sont le moyen le plus efficace de communiquer les avantages liés à l’utilisation de votre application. Il sera placé devant toutes les captures d’écran de la page des détails de l’application. Assurez-vous que vous parlez de la façon dont votre application fonctionne, de ce qu’il est possible de faire avec elle, des avantages de son utilisation et de son rôle. N’oubliez pas de conserver votre présentation courte et douce, entre 30-90 secondes.
+Si une image vaut un millier de mots, une vidéo vaut mille images. Les vidéos sont le moyen le plus efficace de communiquer les avantages liés à l’utilisation de votre application. Il sera placé devant toutes vos captures d’écran sur la page des détails de l’application. Veillez à mentionner les points suivants :
+
+* Fonctionnement de votre application.
+* Ce que vous pouvez obtenir avec votre application.
+* Avantages liés à l’utilisation de votre application.
+* À qui votre est destinée.
+
+N’oubliez pas de conserver votre présentation courte et douce, entre 30-90 secondes.
 
 ## <a name="learn-more"></a>En savoir plus
 

@@ -5,17 +5,17 @@ description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: a489a2a439c8aaacc2900e4c62084f13b34b3e30
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279675"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326304"
 ---
-# <a name="create-apps-for-teams-meetings-preview"></a>Créer des applications pour les réunions Teams (aperçu)
+# <a name="create-apps-for-teams-meetings-release-preview"></a>Créer des applications pour les réunions Teams (version préliminaire)
 
 >[!IMPORTANT]
-> Les fonctionnalités incluses dans l’aperçu de Microsoft teams sont fournies à des fins d’accès anticipé, de test et de commentaires uniquement. Ils peuvent être soumis à des modifications avant de devenir disponibles dans la publication publique et ne doivent pas être utilisés dans les applications de production.
+> Les fonctionnalités mises en surbrillance dans la version d’évaluation de Microsoft teams sont fournies uniquement à des fins d’évaluation et de commentaires. Ils peuvent être soumis à des modifications avant de pouvoir être activés.
 
 ## <a name="prerequisites-and-considerations"></a>Conditions préalables et considérations
 
@@ -27,7 +27,7 @@ ms.locfileid: "48279675"
 
 1. Certaines API de réunion, telles que `GetParticipant` nécessiteront un [ID d’enregistrement et d’application bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) pour générer des jetons d’authentification.
 
-1. Les développeurs doivent respecter [les conseils généraux de conception des onglets teams](../tabs/design/tabs.md) pour les scénarios pré-et post-réunion, ainsi que pendant les réunions (consultez les instructions [de la boîte de dialogue](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) et les [onglets de conception des onglets dans](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) les réunions).
+1. Les développeurs doivent respecter les [conseils généraux de conception des onglets teams](../tabs/design/tabs.md) pour les scénarios antérieurs et postérieurs à la réunion, ainsi que les [recommandations](design/designing-in-meeting-dialog.md) pour la boîte de dialogue de réunion déclenchée lors d’une réunion Teams.
 
 ## <a name="meeting-apps-api-reference"></a>Référence de l’API des applications de réunion
 
@@ -98,11 +98,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
+    "meetingRole":"Presenter",
+    "conversation":{
+            "isGroup": true,
+            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+        }
 }
 ```
 
@@ -112,10 +112,10 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Attendee",
+   "meetingRole":"Presenter",
    "conversation":{
       "isGroup":true,
-      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
    }
 }
 ```
@@ -149,17 +149,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-   "type":"message",
-   "text":"John Phillips assigned you a weekly todo",
-   "summary":"Don't forget to meet with Marketing next week",
-   "channelData":{
-      "notification":{
-         "alert":true,
-         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-      }
-   },
-   "replyToId":"1493070356924"
-}
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+    "notification": {
+    "alertInMeeting": true,
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+    }
+},
+    "replyToId": "1493070356924"
+    }
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -210,6 +210,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 Les fonctionnalités des applications de réunion sont déclarées dans le manifeste **configurableTabs**de votre application via les  ->  **étendues** configurableTabs et les tableaux de **contexte** . L' *étendue* définit la personne et le *contexte* définissant où votre application sera disponible.
 
+> [!NOTE]
+> Veuillez utiliser le [schéma de manifeste d’aperçu développeur](../resources/schema/manifest-schema-dev-preview.md) pour essayer cela dans le manifeste de votre application.
+
 ```json
 "configurableTabs": [
     {
@@ -232,7 +235,7 @@ Les fonctionnalités des applications de réunion sont déclarées dans le manif
 
 ### <a name="context-property"></a>Context, propriété
 
-L’onglet `context` et les `scopes` propriétés fonctionnent en harmonie pour vous permettre de déterminer où vous souhaitez que votre application apparaisse. Alors que les onglets de l' `personal` étendue ne peuvent avoir qu’un seul contexte, c’est-à-dire, `personalTab`  `team` ou les `groupchat` onglets de portée peuvent contenir plusieurs contextes. Les valeurs possibles pour la propriété Context sont les suivantes :
+L’onglet `context` et les `scopes` propriétés fonctionnent en harmonie pour vous permettre de déterminer où vous souhaitez que votre application apparaisse. Les onglets de l' `team` `groupchat` étendue ou peuvent avoir plusieurs contextes. Les valeurs possibles pour la propriété Context sont les suivantes :
 
 * **channelTab**: onglet de l’en-tête d’un canal d’équipe.
 * **privateChatTab**: onglet de l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs qui n’est pas dans le contexte d’une équipe ou d’une réunion.
@@ -257,9 +260,9 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 
 ### <a name="in-meeting"></a>Réunion
 
-#### <a name="side-panel"></a>**panneau latéral**
+#### <a name="sidepanel"></a>**sidePanel**
 
-✔ Dans votre manifeste d’application, ajoutez **sidePanel** au tableau **meetingSurfaces** , comme décrit ci-dessus.
+✔ Dans votre manifeste d’application, ajoutez **sidePanel** au tableau de **contexte** , comme décrit ci-dessus.
 
 ✔ Dans la réunion, ainsi que dans tous les scénarios, l’application sera affichée sous la forme d’un onglet dans la réunion 320 px. Pour ce faire, vous devez optimiser l’onglet. *Voir*, [interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -269,7 +272,7 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 
 #### <a name="in-meeting-dialog"></a>**boîte de dialogue de réunion**
 
-✔ Vous devez respecter les [instructions de conception de la boîte de dialogue de réunion](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md).
+✔ Vous devez respecter les [instructions de conception de la boîte de dialogue de réunion](design/designing-in-meeting-dialog.md).
 
 ✔ Reportez-vous au [flux d’authentification teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -278,7 +281,10 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 ✔ Dans le cadre de la charge utile de la demande de notification, incluez l’URL où le contenu à présenter est hébergé.
 
 > [!NOTE]
-> Ces notifications sont permanentes. Vous devez appeler la fonction [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) pour faire une fermeture automatique après qu’un utilisateur a effectué une action dans l’affichage Web. Il s’agit d’une condition requise pour l’envoi d’une application. *Voir aussi*, [Kit de développement logiciel (SDK) teams : module de tâches](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * Ces notifications sont permanentes. Vous devez appeler la fonction [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) pour faire une fermeture automatique après qu’un utilisateur a effectué une action dans l’affichage Web. Il s’agit d’une condition requise pour l’envoi d’une application. *Voir aussi*, [Kit de développement logiciel (SDK) teams : module de tâches](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+>
+> * Si vous souhaitez que votre application prenne en charge les utilisateurs anonymes, votre charge utile de la demande d’appel initiale doit reposer sur les métadonnées de demande `from.id`  (ID de l’utilisateur) dans l' `from` objet, et non sur l' `from.aadObjectId` ID (Azure Active Directory ID de l’utilisateur). *Voir* [utilisation des modules de tâches dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) et [créer et envoyer le module de tâches](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="post-meeting"></a>Post-réunion
 

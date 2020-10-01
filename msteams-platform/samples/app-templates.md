@@ -3,12 +3,12 @@ title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279801"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326358"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -67,6 +67,21 @@ Book-a-Room est un [robot Microsoft teams](../bots/what-are-bots.md) qui permet 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![Livre-démo de salle](../assets/images/book-a-room.png)
+
+## <a name="building-access-9734"></a>Création d' &#9734; d’accès
+
+La création d’accès est une application Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)qui prend en charge l’administration des seuils d’occupation et des normes sociales Distancing en permettant aux directeurs d’installations de gérer, de suivre et de signaler la présence sur site des employés. L’application, créée à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview)et [Power automate](/power-automate/getting-started), s’intègre étroitement à Microsoft teams et permet aux organisations de déterminer la préparation de la construction, d’établir des critères d’éligibilité pour l’accès sur site et de collecter des informations pour une planification future.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![Création de la carte de réservation d’accès](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![Création de la vue des touches d’accès](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="celebrations"></a>Célébrations
 
