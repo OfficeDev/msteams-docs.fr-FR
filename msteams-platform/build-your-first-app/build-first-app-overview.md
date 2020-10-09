@@ -5,12 +5,12 @@ description: Vue d’ensemble et conditions préalables à la création d’une 
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279708"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397693"
 ---
 # <a name="build-your-first-teams-app-overview"></a>Vue d’ensemble de la création de votre première application teams
 
@@ -69,7 +69,7 @@ Vous pouvez obtenir un compte de test gratuit teams qui autorise l’application
 1. Sélectionnez **rejoindre** et suivez les instructions à l’écran.
 1. Lorsque vous accédez à l’écran d’accueil, sélectionnez **configurer l’abonnement E5**.
 1. Configurez votre compte d’administrateur. Une fois que vous avez terminé, un écran semblable à celui-ci s’affiche.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemple de ce que vous voyez après vous être inscrit au programme pour les développeurs Microsoft 365.":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Illustration montrant où, dans Teams, vous pouvez télécharger une application personnalisée.":::
 1. Connectez-vous à teams à l’aide du compte d’administrateur que vous venez de configurer.
 1. Vérifiez si vous disposez maintenant de l’option **Télécharger une application personnalisée** .
 
@@ -85,13 +85,14 @@ Teams affiche le contenu de l’application uniquement via les connexions HTTPs.
 1. Installez [ngrok](https://ngrok.com/download).
 1. Installez la dernière version de [Visual Studio code](https://code.visualstudio.com/download). (Les versions antérieures peuvent ne pas fonctionner avec la boîte à outils.)
 1. Dans Visual Studio code, sélectionnez **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: sur la barre d’activité de gauche et installez le kit de développement **Microsoft teams**.
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Illustration montrant où dans Visual Studio code vous pouvez installer l’extension Microsoft teams Toolkit.":::
+
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Illustration montrant où, dans Teams, vous pouvez télécharger une application personnalisée.":::
 
 ## <a name="about-the-tutorials"></a>À propos des didacticiels
 
 Vous pouvez commencer avec n’importe quelle équipe de **création de votre première** expérience d’application. Si vous ne savez pas où commencer, suivez notre chemin convivial et créez un « Hello, World ! ». Phone.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Arborescence des compétences montrant des cursus pour les didacticiels « créer vos premières applications » Teams." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Illustration montrant où, dans Teams, vous pouvez télécharger une application personnalisée." border="false":::
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -4,12 +4,12 @@ author: laujan
 description: intégration d’agents virtuels chatbot dans la plateforme teams
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 0a85738857015e4bce9627333ed6f1a74e489c43
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279698"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397686"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Intégration d’un système d’agents virtuels chatbot à Microsoft teams
 
@@ -39,11 +39,12 @@ Si le téléchargement d' [applications personnalisées est activé](/microsoftt
 
   * Sélectionnez l’icône App Store située en bas de la barre de navigation gauche dans votre instance de teams, puis recherchez **app Studio**.
 >
-&emsp;&emsp; <img  width="450px" title="Recherche d’App Studio dans le Store" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * Sélectionnez la vignette **app Studio** et choisissez **installer** dans la boîte de dialogue contextuelle.
 >
-&emsp;&emsp; <img  width="450px" title="Installation d’App Studio" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **Créez le manifeste d’application teams dans App Studio**.  Les robots dans teams sont définis par un fichier de manifeste d’application (JSON) qui fournit des informations de base sur votre robot et ses fonctionnalités. Dans **app Studio** , sélectionnez **éditeur de manifeste**   =>  **créer une application**.
 3. **Ajoutez les détails de votre robot**. Pour obtenir une description complète de chaque champ, voir [manifeste Schema Definition](../../resources/schema/manifest-schema.md). Veillez à renseigner tous les champs obligatoires.

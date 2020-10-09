@@ -3,12 +3,12 @@ title: Empaquetage de votre application
 description: Découvrez comment empaqueter votre application à des fins de test, de chargement et de publication dans Microsoft teams
 keywords: empaquetage d’applications teams
 ms.topic: conceptual
-ms.openlocfilehash: 66131f37f9f68c8fd54412d41068f6124da94453
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801366"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397700"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Créer un package d’application pour votre application Microsoft teams
 
@@ -45,6 +45,11 @@ L' `color` icône est utilisée dans Microsoft Teams (dans les galeries d’appl
 
 L' `outline` icône est utilisée aux emplacements suivants : la barre d’application et les extensions de messagerie que l’utilisateur a marquées comme « favoris ». Cette icône doit être de 32x32 pixels. Votre icône de contour ne doit contenir que le blanc et la transparence (aucune autre couleur). L’icône peut être blanche avec un arrière-plan transparent ou transparente avec un arrière-plan blanc. L’icône de contour ne doit pas avoir de remplissage supplémentaire autour de l’icône et doit être aussi rapprochée que possible tout en maintenant les dimensions 32x32. Voici quelques exemples intéressants :
 
+> [!TIP]
+>  * La couleur doit être « blanc » en RVB, (rouge : 255, vert : 255, bleu : 255).
+>  * Toute autre partie de l’icône doit être transparente.
+>  * Pour le passage, la petite icône doit être pleine transparence, canal alpha égal à 0 et toute autre valeur est échec.
+
 ![Exemples d’icônes de plan](~/assets/images/icons/sample20x20s.png)
 
 Imaginons, par exemple, que votre société est contoso. Vous devez envoyer deux icônes :
@@ -59,8 +64,8 @@ Voici comment les icônes apparaîtront dans l’interface utilisateur :
 
 #### <a name="flyout"></a>Menu
 
-![Exemples d’icônes contoso](~/assets/images/icons/flyout.png)
+![Exemple de menu volant contoso](~/assets/images/icons/flyout.png)
 
 #### <a name="app-bar-and-home-screen"></a>Barre d’application et écran d’accueil
 
-![Exemples d’icônes contoso](~/assets/images/icons/appbarhomescreen.png)
+![Exemple de barre d’application Contoso homescreen](~/assets/images/icons/appbarhomescreen.png)

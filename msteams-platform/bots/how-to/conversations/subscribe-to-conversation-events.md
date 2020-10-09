@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Comment s’abonner à des événements de conversation à partir de votre robot Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: c678690b1dc2c948cceacdf42c95f169fff753bb
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801073"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397679"
 ---
 # <a name="subscribe-to-conversation-events"></a>S’abonner à des événements de conversation
 
@@ -432,7 +432,9 @@ async def on_teams_members_added_activity(
 
 ### <a name="team-members-removed"></a>Membres d’équipe supprimés
 
-L' `teamMemberRemoved` événement est envoyé à votre bot s’il est supprimé d’une équipe et chaque fois qu’un utilisateur est supprimé d’une équipe dont votre robot est membre. Vous pouvez déterminer si le nouveau membre supprimé était le robot lui-même ou un utilisateur en examinant l' `Activity` objet du `turnContext` .  Si le `Id` champ de l' `MembersRemoved` objet est le même que le `Id` champ de l' `Recipient` objet, le membre supprimé est le bot, sinon il s’agit d’un utilisateur.  Les robots `Id` seront généralement :`28:<MicrosoftAppId>`
+L' `teamMemberRemoved` événement est envoyé à votre bot s’il est supprimé d’une équipe et chaque fois qu’un utilisateur est supprimé d’une équipe dont votre robot est membre. Vous pouvez déterminer si le nouveau membre supprimé était le robot lui-même ou un utilisateur en examinant l' `Activity` objet du `turnContext` .  Si le `Id` champ de l' `MembersRemoved` objet est le même que le `Id` champ de l' `Recipient` objet, le membre supprimé est le bot, sinon il s’agit d’un utilisateur.  Les robots `Id` seront généralement : `28:<MicrosoftAppId>`
+
+[!Note] Lorsqu’un utilisateur est supprimé définitivement d’un client, l' `membersRemoved conversationUpdate` événement est déclenché.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

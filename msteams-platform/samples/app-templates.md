@@ -3,12 +3,12 @@ title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326358"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397728"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -90,6 +90,18 @@ Celebrations est une application de teams qui permet aux membres de l’équipe 
 L’application fournit une interface simple permettant à tous les membres de l’équipe d’ajouter et d’afficher personnellement leurs événements et permet également à l’utilisateur de sélectionner les équipes dans lesquelles les événements sont partagés.
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+
+## <a name="checklist-9734"></a>Liste de vérification &#9734;
+
+Liste de contrôle est une application d' [extension de messagerie](../messaging-extensions/what-are-messaging-extensions.md) Microsoft teams personnalisée qui vous permet de collaborer avec votre équipe en créant une liste de vérification partagée dans une conversation ou un canal. L’application est prise en charge sur tous les clients de la plate-forme Teams (ordinateur de bureau, navigateur, iOS et Android) et est prête pour le déploiement dans le cadre de votre abonnement Microsoft 365.  
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![Créer une liste de vérification en mode teams](../assets/images/checklist-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="company-communicator"></a>Communicateur d’entreprise
 
@@ -276,7 +288,7 @@ Incentives est un modèle [d’applications puissantes](/powerapps/maker/canvas-
 
 ![Démonstration de l’application incentives](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>Rapporteur de l’incident 
+## <a name="incident-reporter"></a>Rapporteur de l’incident
 
 Incident reporter est un [robot Microsoft teams](../bots/what-are-bots.md)  qui optimise la gestion des incidents au sein de votre organisation. Le robot facilite la collecte automatisée des données d’incidents, les rapports d’incident personnalisés, les notifications des parties prenantes pertinentes et le suivi des incidents de bout en bout.
 
@@ -307,6 +319,18 @@ Open badges est une application Microsoft teams qui permet aux utilisateurs de g
 :::row:::
 :::column span="2":::
     ![Vue des badges attribués](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="poll-9734"></a>&#9734; de sondage
+
+Poll est une application d' [extension de messagerie](../messaging-extensions/what-are-messaging-extensions.md) Microsoft teams personnalisée qui vous permet de créer et d’envoyer rapidement des sondages dans une conversation ou un canal afin de recueillir les avis et les préférences de l’équipe. L’application est prise en charge sur tous les clients de la plate-forme Teams (ordinateur de bureau, navigateur, iOS et Android) et est prête pour le déploiement dans le cadre de votre abonnement Microsoft 365.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![Créer une interrogation en mode teams](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -408,6 +432,18 @@ L’archivage du personnel est une application basée sur les [applications puis
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![Créer une vue de l’archivage](../assets/images/staff-check-ins-create.png)
+
+## <a name="survey-9734"></a>&#9734; d’enquête
+
+Survey est une application d' [extension de messagerie](../messaging-extensions/what-are-messaging-extensions.md) Microsoft teams personnalisée qui vous permet de créer une enquête dans une conversation ou un canal pour recueillir des données et obtenir des informations sur les actions.  L’application est prise en charge sur tous les clients de la plate-forme Teams (ordinateur de bureau, navigateur, iOS et Android) et est prête pour le déploiement dans le cadre de votre abonnement Microsoft 365.  
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+:::row:::
+  :::column span="2":::
+    ![Créer une enquête en mode teams](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## <a name="visitor-management-9734"></a>&#9734; de gestion des visiteurs
 

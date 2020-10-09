@@ -2,12 +2,12 @@
 title: Charger votre application personnalisée dans Microsoft teams
 description: Décrit comment télécharger votre application dans Microsoft teams
 keywords: Téléchargement d’applications teams
-ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: 6fbcd7a81c113d25a26ee6db15865929a53def0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103025"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397707"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Téléchargement d’un package d’application dans Microsoft Teams
 
@@ -40,9 +40,11 @@ Il existe deux façons de charger votre application dans teams :
 
 1. Dans le coin inférieur gauche de teams, sélectionnez l’icône Store. Sur la page Store, choisissez « Télécharger une application personnalisée ».
 
-   ![Afficher l’équipe](../../assets/images/store-upload-a-custom-app.png)
+  ![Afficher l’équipe](../../assets/images/store-upload-a-custom-app2.png)
 
 2. Dans la boîte de dialogue *ouvrir* , accédez au package à télécharger, puis choisissez *ouvrir*.
+
+   ![Menu Ajouter](../../assets/images/NewappAddmenudropdown.png)
 
 Le package téléchargé doit maintenant être disponible pour une utilisation dans l’équipe ou la conversation spécifiée dans la boîte de dialogue de consentement. Si votre application ne s’affiche pas, la cause la plus fréquente est une erreur dans le manifeste, en particulier les ID pour les extensions App, bot et Messaging. Si l’application n’est pas étendue pour les conversations, cette option n’apparaît pas.
 
