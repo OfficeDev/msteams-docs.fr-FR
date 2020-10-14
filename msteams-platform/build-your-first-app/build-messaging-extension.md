@@ -1,18 +1,18 @@
 ---
-title: Créer une extension de messagerie teams
+title: Prise en main-créer une extension de messagerie
 author: heath-hamilton
-description: Découvrez comment créer une extension de messagerie pour votre première application Microsoft Teams.
+description: Créez rapidement une extension de messagerie Microsoft teams à l’aide du kit de développement Microsoft Teams.
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237817"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452833"
 ---
-# <a name="build-a-teams-messaging-extension"></a>Créer une extension de messagerie teams
+# <a name="build-a-messaging-extension-for-microsoft-teams"></a>Créer une extension de messagerie pour Microsoft teams
 
 Il existe deux types d' *extensions de messagerie*teams : [commandes de recherche](../messaging-extensions/how-to/search-commands/define-search-command.md) et commandes d' [action](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
@@ -173,9 +173,9 @@ Une fois que votre extension de messagerie est en cours d’exécution, vous pou
 Découvrez comment fonctionnent les extensions de messagerie dans une conversation Teams.
 
 1. Démarrez une nouvelle conversation. Dans la zone de composition, sélectionnez **plus** , :::image type="icon" source="../assets/icons/teams-client-more.png"::: puis choisissez l’application de l’extension de messagerie que vous venez de versions test chargées.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Illustration illustrant comment accéder à une extension de messagerie basée sur la recherche dans la zone de composition de teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Illustration illustrant comment, dans Team Toolkit, connectez-vous à votre compte Microsoft 365 afin de créer un nouveau bot pour votre extension de messagerie.":::
 1. Essayez de rechercher un article (par exemple, « tickets »). Si votre application fonctionne, vous verrez des exemples de résultats de recherche (vous pouvez ajouter votre propre version ultérieure).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Capture d’écran illustrant l’utilisation d’une extension de messagerie basée sur la recherche dans la zone de composition de teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Illustration illustrant comment, dans Team Toolkit, connectez-vous à votre compte Microsoft 365 afin de créer un nouveau bot pour votre extension de messagerie.":::
 
 ## <a name="well-done"></a>Bien jouer
 
@@ -207,7 +207,7 @@ Si vous avez installé votre application, mais qu’elle ne fonctionne pas, vér
 
 Il est important de comprendre qu’il ne s’agit pas d’un canal dans Teams. Dans ce cas, un canal indique comment le service Azure bot connecte votre robot à teams ou une autre [application de communication Microsoft ou tierce prise en charge](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 * [Inclure une fonctionnalité de unfurling de liens](../messaging-extensions/how-to/link-unfurling.md)
 * [Ajouter une authentification](../messaging-extensions/how-to/add-authentication.md)

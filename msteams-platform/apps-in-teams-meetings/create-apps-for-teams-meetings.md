@@ -5,17 +5,17 @@ description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326304"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452623"
 ---
-# <a name="create-apps-for-teams-meetings-release-preview"></a>Créer des applications pour les réunions Teams (version préliminaire)
+# <a name="create-apps-for-teams-meetings-developer-preview"></a>Créer des applications pour les réunions Teams (Aperçu pour les développeurs)
 
 >[!IMPORTANT]
-> Les fonctionnalités mises en surbrillance dans la version d’évaluation de Microsoft teams sont fournies uniquement à des fins d’évaluation et de commentaires. Ils peuvent être soumis à des modifications avant de pouvoir être activés.
+> Les fonctionnalités incluses dans l’aperçu du développeur Microsoft teams sont fournies à des fins d’accès anticipé, de test et de commentaires uniquement. Ils peuvent être soumis à des modifications avant de devenir disponibles dans la publication publique et ne doivent pas être utilisés dans les applications de production.
 
 ## <a name="prerequisites-and-considerations"></a>Conditions préalables et considérations
 
@@ -80,6 +80,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 {
     var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
     var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+}
 ```
 
 * * *
@@ -94,32 +95,34 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>Charge utile de réponse
 <!-- markdownlint-disable MD036 -->
 
+**meetingRole** peut être *organisateur*, *présentateur*ou *participant*.
+
 **Exemple 1**
 
 ```json
 {
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
+  "user":
+  {
+      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name": "Allan Deyoung",
+      "givenName": "Allan",
+      "surname": "Deyoung",
+      "email": "Allan.Deyoung@microsoft.com",
+      "userPrincipalName": "Allan.Deyoung@microsoft.com",
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+  },
+  "meeting":
+  {
+      "role ": "Presenter",
+      "inMeeting":true
+  },
+  "conversation":
+  {
+      "id": "<conversation id>"
+  }
 }
 ```
-
-**meetingRole** peut être *organisateur*, *présentateur*ou *participant*.
-
-**Exemple 2**
-
-```json
-{
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
-}
-```
-
 #### <a name="response-codes"></a>Codes de réponse
 
 **403**: l’application n’est pas autorisée à obtenir des informations sur les participants. Il s’agit de la réponse d’erreur la plus courante, qui est déclenchée lorsque l’application n’est pas installée dans la réunion, par exemple lorsque l’application est désactivée par l’administrateur client ou bloquée lors de l’atténuation du site actif.  
@@ -143,6 +146,8 @@ POST /v3/conversations/{conversationId}/activities
 
 **conversationId**: identificateur de conversation. Obligatoire
 
+**completionBotId**: il s’agit de l’ID du bot. Facultatif
+
 #### <a name="request-payload"></a>Charge utile de la demande
 
 # <a name="json"></a>[JSON](#tab/json)
@@ -153,13 +158,13 @@ POST /v3/conversations/{conversationId}/activities
     "text": "John Phillips assigned you a weekly todo",
     "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
-    "notification": {
-    "alertInMeeting": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-    }
-},
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+        }
+    },
     "replyToId": "1493070356924"
-    }
+}
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -167,14 +172,14 @@ POST /v3/conversations/{conversationId}/activities
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
-{
+  {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-};
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+  };
 activity.ChannelData = new TeamsChannelData
-{
+  {
     Notification = notification
-};
+  };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -186,10 +191,10 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
         replyActivity.channelData = {
             notification: {
                 alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>’
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
             }
         };
-        await context.sendActivity(replyActivity);
+await context.sendActivity(replyActivity);
 ```
 
 * * *
@@ -211,7 +216,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 Les fonctionnalités des applications de réunion sont déclarées dans le manifeste **configurableTabs**de votre application via les  ->  **étendues** configurableTabs et les tableaux de **contexte** . L' *étendue* définit la personne et le *contexte* définissant où votre application sera disponible.
 
 > [!NOTE]
-> Veuillez utiliser le [schéma de manifeste d’aperçu développeur](../resources/schema/manifest-schema-dev-preview.md) pour essayer cela dans le manifeste de votre application.
+> * Veuillez utiliser le [schéma de manifeste d’aperçu développeur](../resources/schema/manifest-schema-dev-preview.md) pour essayer cela dans le manifeste de votre application.
+> * La plateforme mobile ne prend actuellement en charge que le schéma de manifeste 1,6
+> * La plateforme mobile prend en charge les onglets uniquement dans les surfaces pre et post Meeting. Les expériences de réunion (boîte de dialogue et onglet de réunion) sur mobile seront bientôt disponibles.
 
 ```json
 "configurableTabs": [

@@ -1,17 +1,20 @@
 ---
-title: Créer une extension de messagerie
+title: Créer une extension de messagerie pour teams
 author: clearab
-description: Comment créer une extension de messagerie pour une application Microsoft Teams.
+description: En savoir plus sur la création d’une extension de messagerie teams
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178308"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452595"
 ---
-# <a name="create-a-messaging-extension-in-microsoft-teams"></a>Créer une extension de messagerie dans Microsoft teams
+# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Créer une extension de messagerie pour Microsoft teams
+
+> [!TIP]
+> Vous recherchez un moyen plus rapide de commencer ? Créer une [extension de messagerie](../../build-your-first-app/build-messaging-extension.md) à l’aide du kit de développement Microsoft Teams.
 
 À un niveau élevé, vous devez effectuer les étapes suivantes pour créer une extension de messagerie.
 
@@ -128,13 +131,13 @@ Une fois qu’une réunion commence, les participants peuvent interagir directem
 
 1. **Emplacement :** Votre extension de messagerie peut être appelée à partir de la zone de message de composition, de la zone de commande ou de la @mentioned dans la conversation de réunion.
 
-1. **Métadonnées**. Lorsque votre extension de messagerie est appelée, elle peut identifier l’utilisateur et le client à partir de `userId` et `tenantId` . Le `meetingId` peut être trouvé dans le cadre de l' `channelData` objet. Votre application peut utiliser le `userId` et `meetingId`  pour la `GetParticipant` demande d’API afin de récupérer les rôles d’utilisateur.
+1. **Métadonnées**. Lorsque votre extension de messagerie est appelée, elle peut identifier l’utilisateur et le client à partir de `userId` et `tenantId` . `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser le `userId` et `meetingId`  pour la `GetParticipant` demande d’API afin de récupérer les rôles d’utilisateur.
 
-1. **Type de commande**. Si votre extension de message utilise des [commandes basées sur l’action](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), elle doit suivre l’authentification [unique](../../tabs/how-to/authentication/auth-aad-sso.md) des onglets. 
+1. **Type de commande**. Si votre extension de message utilise des [commandes basées sur l’action](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), elle doit suivre l’authentification [unique](../../tabs/how-to/authentication/auth-aad-sso.md) des onglets.
 
 1. **Expérience utilisateur**. Vous devez déterminer l’expérience de l’utilisateur final pour les extensions de messagerie invoquées lors d’une conversation de réunion.
 
-## <a name="next-steps"></a>Prochaines étapes
+## <a name="next-steps"></a>Étapes suivantes
 
 * [Créer des commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Créer des commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)

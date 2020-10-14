@@ -4,16 +4,16 @@ description: Décrit le schéma pris en charge par le manifeste pour Microsoft t
 keywords: schéma de manifeste teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b514bbe8e04e674f5aafb3dff3acfe08072d814f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237978"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452735"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft teams
 
-Le manifeste Microsoft teams décrit la façon dont l’application s’intègre dans le produit Microsoft Teams. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . Les versions précédentes 1.0 à 1.4 sont également prises en charge (à l’aide de « v1. x » dans l’URL).
+Le manifeste Microsoft teams décrit la façon dont l’application s’intègre dans le produit Microsoft Teams. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) . Les versions précédentes 1.0 à 1.6 sont également prises en charge (à l’aide de « v1. x » dans l’URL).
 
 L’exemple de schéma suivant montre toutes les options d’extensibilité.
 
@@ -273,7 +273,7 @@ URL https://référençant le schéma JSON du manifeste.
 
 **Required** — String
 
-Version du schéma de manifeste utilisé par ce manifeste. Il doit être « 1,5 ».
+Version du schéma de manifeste utilisé par ce manifeste. Il doit être « 1,7 ».
 
 ## <a name="version"></a>version
 
@@ -383,7 +383,7 @@ Utilisé lorsque l’expérience de votre application dispose d’un onglet Chan
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔|URL https://à utiliser lors de la configuration de l’onglet.|
 |`scopes`|tableau de l’énum|0,1|✔|Actuellement, les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
-|`canUpdateConfiguration`|booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : **true**.|
+|`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : **true**.|
 |`sharePointPreviewImage`|string|2048||Chemin d’accès relatif à une image d’aperçu de tabulation à utiliser dans SharePoint. Taille 1024 x 768. |
 |`supportedSharePointHosts`|tableau de l’énum|0,1||Définit la manière dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
@@ -418,9 +418,9 @@ L’élément est un tableau (un seul élément un seul d' &mdash; entre eux est
 |---|---|---|---|---|
 |`botId`|string|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Il peut s’agir de la même chose que l' [ID d’application](#id)global.|
 |`scopes`|tableau de l’énum|3|✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
-|`needsChannelSelector`|booléen|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Default **`false`**|
-|`isNotificationOnly`|booléen|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Default `**false**`|
-|`supportsFiles`|booléen|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Default **`false`**|
+|`needsChannelSelector`|valeur booléenne|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Default **`false`**|
+|`isNotificationOnly`|valeur booléenne|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Default `**false**`|
+|`supportsFiles`|valeur booléenne|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Default **`false`**|
 
 ### <a name="botscommandlists"></a>bots. commandLists
 
@@ -467,7 +467,7 @@ L’élément est un tableau (un maximum de 1 élément) avec tous les élément
 |---|---|---|---|---|
 |`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui sauvegarde l’extension de messagerie, tel qu’inscrit auprès de l’infrastructure bot. Il peut s’agir de la même chose que l’ID d’application global.|
 |`commands`|tableau d’objets|10 |✔|Tableau de commandes prises en charge par l’extension de messagerie|
-|`canUpdateConfiguration`|booléen|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
+|`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|Tableau d’objets|5 ||Liste de gestionnaires permettant d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être affichés dans `validDomains`|
 |`messageHandlers.type`|string|||Type de gestionnaire de messages. Doit être `"link"`.|
 |`messageHandlers.value.domains`|Tableau de chaînes|||Tableau de domaines pour lesquels le gestionnaire de messages de liaison peut s’inscrire.|
@@ -484,9 +484,9 @@ Chaque élément de commande est un objet de la structure suivante :
 |`title`|string|32 caractères|✔|Nom de la commande conviviale.|
 |`type`|string|64 caractères||Type de la commande. L’une `query` ou l’autre `action` . Valeur par défaut : **requête**.|
 |`description`|string|128 caractères||Description qui apparaît pour les utilisateurs afin d’indiquer la finalité de cette commande.|
-|`initialRun`|booléen|||Valeur booléenne indiquant si la commande doit être exécutée initialement sans paramètre. Par défaut : **false**.|
+|`initialRun`|valeur booléenne|||Valeur booléenne indiquant si la commande doit être exécutée initialement sans paramètre. Par défaut : **false**.|
 |`context`|Tableau de chaînes|3||Définit l’emplacement à partir duquel l’extension de message peut être appelée. Toute combinaison de `compose` , `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
-|`fetchTask`|booléen|||Valeur booléenne qui indique s’il doit extraire le module de tâches de façon dynamique. Par défaut : **false**.|
+|`fetchTask`|valeur booléenne|||Valeur booléenne qui indique s’il doit extraire le module de tâches de façon dynamique. Par défaut : **false**.|
 |`taskInfo`|objet|||Spécifier le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue-soit un nombre en pixels, soit une mise en page par défaut telle que « grande », « moyen » ou « petite ».|

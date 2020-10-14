@@ -1,15 +1,15 @@
 ---
-title: Créer une boîte de dialogue de réunion Microsoft teams
+title: Concevoir une boîte de dialogue en réunion
 author: heath-hamilton
-description: Conseils et meilleures pratiques pour la conception d’une boîte de dialogue de réunion pour Microsoft Teams.
+description: Découvrez comment concevoir efficacement une boîte de dialogue de réunion pour Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 89e532e6dbd83e54269606f6e051fa377de68f62
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f2ac0df3ce28293d9e3f61f45dd2d460dc01f2e9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243326"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452672"
 ---
 # <a name="design-an-in-meeting-dialog"></a>Concevoir une boîte de dialogue en réunion
 
@@ -36,7 +36,7 @@ L’exemple suivant montre à quoi la boîte de dialogue de réunion peut ressem
 
 ## <a name="anatomy"></a>Anatomie
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Anatomie de l’interface utilisateur d’une vue de boîte de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 1. **Icône de l’application**
 1. **Nom de l'application**
@@ -51,7 +51,7 @@ Les boîtes de dialogue de réunion peuvent varier en fonction de la taille pour
 * **Height**: la hauteur de la boîte de dialogue est déterminée par le contenu dans le WebView. Le défilement vertical est pris en charge pour le contenu qui dépasse la hauteur maximale que vous spécifiez.
 * **Width**: la largeur de WebView est une valeur absolue comprise dans la plage que vous spécifiez.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Illustration des dimensions possibles d’une boîte de dialogue de réunion. Height : la hauteur de la boîte de dialogue est déterminée par le contenu dans le WebView. Le défilement vertical est pris en charge pour le contenu qui dépasse la hauteur maximale (définie par vous). Min : aucun. Max : 400 pixels (320 pixels WebView). Width : la largeur de WebView est une valeur absolue comprise dans la plage que vous spécifiez. Minimum : 288 pixels (256 pixels WebView). Max : 468 pixels (436 pixels WebView)." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 ## <a name="behavior"></a>Comportement
 
@@ -61,7 +61,7 @@ Voir comportement général de la boîte de dialogue de réunion, tel que REST, 
 
 Les boîtes de dialogue de réunion sont alignées au centre de l’étape de réunion. Elles ne peuvent pas être déplacées et ne fonctionnent pas dans l’infrastructure des notifications au niveau du système de teams.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’une boîte de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 ### <a name="aggregation"></a>Aggregat
 
@@ -76,7 +76,7 @@ Le défilement se produit dans la partie WebView d’une boîte de dialogue de r
 * Vous devez uniquement pouvoir faire défiler verticalement.
 * Vous ne pouvez voir que le contenu auquel vous avez fait défiler (rien au-dessus ou en dessous).
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Illustration illustrant le mode de défilement du contenu WebView dans la boîte de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 ### <a name="buttons"></a>Boutons
 
@@ -114,7 +114,7 @@ Tandis que les boîtes de dialogue de réunion peuvent faire des appels plus eff
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Illustration montrant comment limiter le contenu d’une boîte de dialogue dans un seul écran afin que les utilisateurs puissent se concentrer sur la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="do-keep-it-contained"></a>Do : conservez-le
 
@@ -122,7 +122,7 @@ Limitez le contenu de la boîte de dialogue de réunion à un seul écran pour p
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Illustration illustrant la façon dont les boîtes de dialogue de réunion ne doivent pas obliger les utilisateurs à naviguer dans le contenu." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="dont-include-multiple-steps"></a>Ne pas inclure plusieurs étapes
 
@@ -135,18 +135,18 @@ Les boîtes de dialogue de réunion ne doivent pas obliger les utilisateurs à n
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Illustration montrant pourquoi vous devez supprimer le contenu inutile qui ne permet pas aux utilisateurs d’effectuer une tâche rapidement." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Une autre illustration illustrant la raison pour laquelle vous devez supprimer le contenu inutile qui ne permet pas aux utilisateurs d’effectuer des choses rapidement." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Illustration montrant que, si vous avez besoin d’interactions complexes, il est recommandé d’utiliser à la place une seule colonne dans le volet droit de la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="do-limit-number-of-interactions"></a>Do : limiter le nombre d’interactions
 
@@ -154,7 +154,7 @@ Supprimer le contenu inutile qui ne permet pas aux utilisateurs d’effectuer un
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Illustration montrant qu’un trop grand nombre d’interactions dans la boîte de dialogue de réunion est gênant de la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>Ne pas faire : introduire des éléments inutiles
 
@@ -167,7 +167,7 @@ Il se peut que vous puissiez concevoir une seule boîte de dialogue de réunion 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Illustration d’une disposition idéale pour les boîtes de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="do-use-single-column-layouts"></a>Do : utiliser des mises en page à une seule colonne
 
@@ -175,7 +175,7 @@ Il se peut que vous puissiez concevoir une seule boîte de dialogue de réunion 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Illustration montrant la disposition des boîtes de dialogue de réunion qui ne sont pas recommandées." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="dont-clutter-the-space"></a>Ne pas : emcombrer l’espace
 
@@ -188,7 +188,7 @@ Le contenu dense ou très structuré peut être gênant et écrasant, en particu
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Illustration illustrant la manière dont la taille de la boîte de dialogue de réunion doit toujours être la même." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="do-keep-it-consistent"></a>Do : conservez la cohérence
 
@@ -196,7 +196,7 @@ Ceci est important, car les boîtes de dialogue de réunion s’affichent toujou
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Illustration montrant comment vous ne devez pas utiliser différentes tailles de boîte de dialogue." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="dont-always-fit-to-the-content"></a>Ne pas : toujours tenir dans le contenu
 
@@ -209,7 +209,7 @@ Il est possible que vous essayiez d’éviter le défilement horizontal, mais qu
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Illustration montrant où placer les boutons dans la boîte de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="do-right-align-the-primary-action"></a>Do : aligner à droite l’action principale
 
@@ -217,7 +217,7 @@ Nous vous recommandons de placer l’action la plus intense à l’emplacement l
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Illustration montrant où placer les boutons dans la boîte de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="Cet exemple montre comment la boîte de dialogue de réunion peut ressembler du point de vue d’un participant à la réunion." border="false":::
 
 #### <a name="dont-left-or-center-align-actions"></a>Ne pas : Left ou Center align actions
 

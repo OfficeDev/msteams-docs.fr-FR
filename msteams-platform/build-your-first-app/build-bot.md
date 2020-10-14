@@ -1,18 +1,18 @@
 ---
-title: Créer un bot teams
+title: Prise en main-créer un bot
 author: heath-hamilton
-description: Découvrez comment créer un bot pour votre première application Microsoft Teams.
+description: Créez rapidement un robot Microsoft teams à l’aide du kit de développement Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 78fe535137864a72dcacf20857572599a7c2409a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237824"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452791"
 ---
-# <a name="build-a-teams-bot"></a>Créer un bot teams
+# <a name="build-a-bot-for-microsoft-teams"></a>Créer un robot pour Microsoft teams
 
 Vous allez créer une application *bot* de base dans ce didacticiel. Un bot agit comme un intermédiaire entre les utilisateurs de teams et votre service Web. Les utilisateurs peuvent discuter avec un bot pour obtenir rapidement des informations ou initier des flux de travail et des tâches effectuées par votre service.
 
@@ -136,7 +136,7 @@ Vous devez spécifier une URL de point de terminaison pour recevoir et traiter l
 1. Accédez à **gestion des robots > inscriptions des robots existants** et sélectionnez le robot que vous avez créé lors de l’installation.
 1. Dans le champ **adresse du point de terminaison de robot** , entrez le serveur Web local où vous hébergez le bot ( `baseUrl10` valeur) et ajoutez `/api/messages` -y.
 
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration illustrant l’emplacement où vous pouvez configurer l’URL du point de terminaison du bot dans Team Toolkit.":::
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration illustrant comment, dans la boîte à outils Teams, connectez-vous à votre compte Microsoft 365 pour créer un nouveau Bot.":::
 
 Votre robot pourra répondre aux messages dans Teams.
 
@@ -169,12 +169,12 @@ Maintenant pour la partie amusante : disons « Hello » à votre bot dans une
 
 1. Dans Teams, sélectionnez **autres** :::image type="icon" source="../assets/icons/teams-client-more.png"::: sur le côté gauche.
 1. Recherchez et sélectionnez le robot que vous venez de versions test chargées.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration illustrant l’emplacement où vous accédez à votre bot dans Teams.":::
+   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Illustration illustrant comment, dans la boîte à outils Teams, connectez-vous à votre compte Microsoft 365 pour créer un nouveau Bot.":::
 1. Dans la zone de composition, envoyez un `Hello` message.
 
 Votre robot répond avec un message semblable à celui-ci.
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Capture d’écran illustrant un utilisateur dire « Hello » à un bot de teams et obtenant une réponse.":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Illustration illustrant comment, dans la boîte à outils Teams, connectez-vous à votre compte Microsoft 365 pour créer un nouveau Bot.":::
 
 ## <a name="well-done"></a>Bien jouer
 
@@ -199,7 +199,7 @@ Si vous avez installé votre application, mais que le bot ne fonctionne pas, vé
 
 Il est important de comprendre qu’il ne s’agit pas d’un canal dans Teams. Dans ce cas, un canal indique comment le service Azure bot connecte votre robot à teams ou une autre [application de communication Microsoft ou tierce prise en charge](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 * [Voir les autres robots que les robots peuvent faire avec l’un de nos exemples](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Concepts de base d’une conversation de bot](../bots/how-to/conversations/conversation-basics.md)

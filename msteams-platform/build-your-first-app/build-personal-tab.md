@@ -1,18 +1,18 @@
 ---
-title: Créer un onglet personnel teams
+title: Prise en main-créer un onglet personnel
 author: heath-hamilton
-description: Découvrez comment créer un onglet personnel pour votre première application Microsoft Teams.
+description: Créez rapidement un onglet personnel Microsoft teams à l’aide du kit de développement Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237803"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452742"
 ---
-# <a name="build-a-teams-personal-tab"></a>Créer un onglet personnel teams
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft teams
 
 Les onglets permettent d’exposer facilement du contenu dans votre application en incorporant essentiellement une page Web dans Teams.
 
@@ -181,13 +181,13 @@ if (isTheme === "default") {
 
 Vérifiez l’onglet dans Teams. L’apparence doit correspondre au thème foncé.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Capture d’écran d’un onglet personnel avec affichage de contenu statique.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Capture d’écran d’un onglet personnel avec du contenu statique.":::
 
 ## <a name="well-done"></a>Bien jouer
 
 Félicitations ! Vous disposez d’une application teams avec un onglet personnel qui facilite la recherche de contacts importants dans votre organisation.
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 * [Authentifier les utilisateurs avec l’authentification](../tabs/how-to/authentication/auth-aad-sso.md)unique : Si vous souhaitez uniquement que les utilisateurs autorisés visualisent votre onglet, configurez l’authentification unique (SSO) via Azure Active Directory (AD).
 * [Incorporer du contenu à partir d’une application Web ou d’une page Web existante](../tabs/how-to/add-tab.md#tab-requirements): nous vous avons expliqué comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.

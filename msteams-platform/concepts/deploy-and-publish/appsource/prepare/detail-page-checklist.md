@@ -2,12 +2,12 @@
 title: Créer une page de détails d’application intéressante
 description: Décrit les conditions requises pour la page des détails de l’application
 keywords: publication des équipes publier le magasin de la stratégie de publication Office AppSource contenu
-ms.openlocfilehash: 90ce6962668c6a7a66bb10d33b1315340de29b4d
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326325"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452770"
 ---
 # <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application intéressante
 
@@ -31,7 +31,7 @@ La page de détails présente la première impression de votre application pour 
 >* Utilisez ces ressources pour obtenir des conseils :
 
 * [Guide des noms d’applications](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Instructions de marque et de marque Microsoft](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)
+* [Instructions de marque et de marque Microsoft](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **À faire :**
 
@@ -215,7 +215,7 @@ Si une image vaut un millier de mots, une vidéo vaut mille images. Les vidéos 
 
 N’oubliez pas de conserver votre présentation courte et douce, entre 30-90 secondes.
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 [Liste de vérification pour l’envoi d’application](~/concepts/deploy-and-publish/appsource/publish.md).  
 [Créez un package d’application pour votre application Microsoft teams](~/concepts/build-and-test/apps-package.md).  

@@ -1,18 +1,18 @@
 ---
+title: Prise en main-créer un onglet de canal et de groupe
 author: heath-hamilton
-description: Découvrez comment créer un onglet de canal et de groupe pour votre première application Microsoft Teams.
+description: Créez rapidement un onglet de chaîne et de groupe Microsoft teams à l’aide du kit de développement Microsoft Teams.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: Créer un onglet de canal et de groupe teams
-ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f890754cdf4ca43f39c25e3ba24fcf47b08c5a9f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237810"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452854"
 ---
-# <a name="build-a-teams-channel-and-group-tab"></a>Créer un onglet de canal et de groupe teams
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Créer un onglet de canal et de groupe pour Microsoft teams
 
 Dans ce didacticiel, vous allez créer un *onglet de canal* de base (également appelé *onglet de groupe*), qui est une page plein écran pour un canal d’équipe ou une conversation. Contrairement à un onglet personnel, les utilisateurs peuvent configurer certains aspects de ce type d’onglet (par exemple, renommer l’onglet de sorte qu’il soit significatif pour son canal).
 
@@ -210,13 +210,13 @@ Pour afficher les pages de configuration et de contenu de votre onglet, vous dev
 1. Sélectionnez **configurer un onglet**. La page Configuration s’affiche.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Capture d’écran de la page de configuration de l’onglet canal.":::
 1. Sélectionnez **Enregistrer** pour configurer l’onglet. Le contenu s’affiche.<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Capture d’écran d’un onglet de canal avec affichage de contenu statique.":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Capture d’écran de la page de configuration de l’onglet canal.":::
 
 ## <a name="well-done"></a>Bien jouer
 
 Félicitations ! Vous disposez d’une application teams avec un onglet qui permet d’afficher du contenu utile dans les canaux et les conversations.
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 * [Authentifier les utilisateurs avec l’authentification](../tabs/how-to/authentication/auth-aad-sso.md)unique : Si vous souhaitez uniquement que les utilisateurs autorisés visualisent votre onglet, configurez l’authentification unique (SSO) via Azure Active Directory (AD).
 * [Incorporer du contenu à partir d’une application Web ou d’une page Web existante](../tabs/how-to/add-tab.md#tab-requirements): nous vous avons expliqué comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.

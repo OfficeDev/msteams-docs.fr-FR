@@ -2,12 +2,12 @@
 title: Référence des cartes
 description: Décrit toutes les cartes et les actions de carte disponibles pour les robots dans teams
 keywords: Référence des cartes robots
-ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434544"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452609"
 ---
 # <a name="cards-reference"></a>Référence des cartes
 
@@ -235,8 +235,8 @@ Une carte qui contient généralement une seule grande image, un ou plusieurs bo
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
-| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
-| sous-titre | Texte enrichi  | Sous-titre de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
+| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes. |
+| sous-titre | Texte enrichi  | Sous-titre de la carte. Maximum 2 lignes.|
 | text | Texte enrichi  | Le texte apparaît juste en dessous du sous-titre ; Voir [format des cartes](~/task-modules-and-cards/cards/cards-format.md) pour les options de mise en forme |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 16:9 |
 | descendre | Tableau d’objets action | Ensemble d’actions applicables à la carte actuelle. Maximum 6 |
@@ -281,7 +281,7 @@ Une carte qui contient généralement une seule grande image, un ou plusieurs bo
 Référence de l’infrastructure bot :
 
 * [Nœud de carte héros](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Carte héros C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
+* [Carte héros C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="list-card"></a>Fiche de liste
 
@@ -298,10 +298,9 @@ La carte de liste a été ajoutée par teams pour fournir des fonctions au-delà
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
-| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
+| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes.|
 | éléments | Tableau d’éléments de liste  ||
-| descendre | Tableau d’objets action | Ensemble d’actions applicables à la carte actuelle. Maximum 6. Ne s’affiche pas sur mobile. |
-|
+| descendre | Tableau d’objets action | Ensemble d’actions applicables à la carte actuelle. Maximum 6. |
 
 ### <a name="example-list-card"></a>Exemple de carte de liste
 
@@ -374,8 +373,8 @@ La carte de connecteur Office 365 offre une disposition flexible avec plusieurs 
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
-| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
-| résumé | Texte enrichi  | Résumé de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
+| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes. |
+| résumé | Texte enrichi  | Résumé de la carte. Maximum 2 lignes. |
 | text | Texte enrichi  | Le texte apparaît juste en dessous du sous-titre ; Voir [format des cartes](~/task-modules-and-cards/cards/cards-format.md) pour les options de mise en forme |
 | themeColor | Chaîne HEXADÉCIMALe | couleur qui remplace le accentColor fourni par le manifeste de l’application |
 
@@ -401,14 +400,14 @@ Pour spécifier le style de rendu de `activityImage` , vous pouvez définir `act
 
 | Valeur | Description |
 | --- | --- |
-| `avatar` | Default `activityImage`sera rognée en tant que cercle |
-| `article` | `activityImage`s’affiche sous la forme d’un rectangle et conserve ses proportions |
+| `avatar` | Default `activityImage` sera rognée en tant que cercle |
+| `article` | `activityImage` s’affiche sous la forme d’un rectangle et conserve ses proportions |
 
 Pour tous les autres détails sur les propriétés de la carte de connecteur, consultez la [référence de carte de message](/outlook/actionable-messages/card-reference)intégrant des actions. Les seules propriétés de la carte de connecteur que Microsoft Teams ne prend pas en charge sont les suivantes :
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`(toujours traité comme `true` dans Teams)
+* `startGroup` (toujours traité comme `true` dans Teams)
 * `originator`
 * `correlationId`
 
@@ -492,8 +491,8 @@ Carte qui permet à un bot de fournir un accusé de réception à l’utilisateu
 
 Référence de l’infrastructure bot :
 
-* [Nœud carte de réception](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
-* [Carte de réception C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
+* [Nœud carte de réception](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Carte de réception C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="signin-card"></a>Carte de connexion
 
@@ -512,8 +511,8 @@ L' *action de connexion* peut être utilisée à partir de n’importe quelle ca
 
 Référence de l’infrastructure bot :
 
-* [Nœud de la carte de connexion](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [Carte de connexion C #](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [Nœud de la carte de connexion](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Carte de connexion C #](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Carte miniature
 
@@ -532,8 +531,8 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
-| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
-| sous-titre | Texte enrichi  | Sous-titre de la carte. Maximum 2 lignes ; la mise en forme n’est pas prise en charge actuellement |
+| title | Texte enrichi  | Titre de la carte. Maximum 2 lignes.|
+| sous-titre | Texte enrichi  | Sous-titre de la carte. Maximum 2 lignes.|
 | text | Texte enrichi  | Le texte apparaît juste en dessous du sous-titre ; Voir [format des cartes](~/task-modules-and-cards/cards/cards-format.md) pour les options de mise en forme |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 1:1 (carrés) |
 | descendre | Tableau d’objets action | Ensemble d’actions applicables à la carte actuelle. Maximum 6 |
@@ -587,8 +586,8 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 
 Référence de l’infrastructure bot :
 
-* [Nœud de la carte miniature](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
-* [Carte miniature C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
+* [Nœud de la carte miniature](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Carte miniature C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="card-collections"></a>Collections de cartes
 
@@ -598,7 +597,7 @@ Les collections de cartes sont fournies par l’infrastructure de robot : `buil
 
 ## <a name="carousel-collection"></a>Collection carrousel
 
-La [disposition carrousel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0) affiche un carrousel de cartes, éventuellement avec des boutons d’action associés.
+La [disposition carrousel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) affiche un carrousel de cartes, éventuellement avec des boutons d’action associés.
 
 ### <a name="support-for-carousel-collections"></a>Prise en charge des regroupements de carrousel
 

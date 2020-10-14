@@ -1,21 +1,21 @@
 ---
-title: Réunions des applications vers teams
+title: Réunions des applications dans teams
 author: laujan
 description: vue d’ensemble des applications dans les réunions teams en fonction des participants et du rôle d’utilisateur
 ms.topic: overview
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: dbf12523d609d47193fb3c07bde2acd184292f64
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452637"
 ---
-# <a name="apps-in-teams-meetings-release-preview"></a>Réunions des applications dans Teams (version préliminaire)
+# <a name="apps-in-teams-meetings-developer-preview"></a>Réunions des applications dans Teams (Aperçu pour les développeurs)
 
 >[!IMPORTANT]
-> Les fonctionnalités mises en surbrillance dans la version d’évaluation de Microsoft teams sont fournies uniquement à des fins d’évaluation et de commentaires. Ils peuvent être soumis à des modifications avant de pouvoir être activés.
+> Les fonctionnalités incluses dans l’aperçu du développeur Microsoft teams sont fournies à des fins d’accès anticipé, de test et de commentaires uniquement. Ils peuvent être soumis à des modifications avant de devenir disponibles dans la publication publique et ne doivent pas être utilisés dans les applications de production.
 
 Les réunions sont les clés de la productivité dans Teams. Ils permettent la collaboration, le partenariat, la communication informée et le partage de commentaires dans un forum inclusif et actif. En tant que développeur, vous pouvez créer des applications de tabulation, de [robot](../bots/what-are-bots.md)et d' [extension de message](../messaging-extensions/what-are-messaging-extensions.md) [configurables](../tabs/what-are-tabs.md#how-do-tabs-work)pour améliorer et enrichir une expérience de réunion Teams. Les utilisateurs de la réunion peuvent accéder aux applications via la Galerie d’onglets pour activer des scénarios pertinents, tels que la pré-configuration d’un tableau kanban, le lancement d’une boîte de dialogue intégrant une action de réunion ou la création d’un sondage post-réunion. Votre application de réunion peut fournir une expérience utilisateur pour chaque étape du cycle de vie de la réunion en fonction de l’état des participants.
 

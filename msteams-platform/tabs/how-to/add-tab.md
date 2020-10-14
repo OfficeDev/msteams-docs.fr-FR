@@ -1,20 +1,23 @@
 ---
-title: Étendre votre application teams avec un onglet personnalisé
+title: Créer un onglet pour teams
 author: laujan
-description: Comment créer un onglet pour Microsoft teams à l’aide d’App Studio ou manuellement.
+description: En savoir plus sur la création d’un onglet teams
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209717"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452756"
 ---
-# <a name="extend-your-teams-app-with-a-custom-tab"></a>Étendre votre application teams avec un onglet personnalisé
+# <a name="create-a-tab-for-microsoft-teams"></a>Créer un onglet pour Microsoft teams
 
-Les onglets personnalisés vous permettent de prendre en charge le contenu Web que vous hébergez sur votre canal, la conversation de groupe et les utilisateurs personnels. À un niveau élevé, vous devez effectuer les étapes suivantes pour créer un onglet :
+> [!TIP]
+> Vous recherchez un moyen plus rapide de commencer ? Créez un onglet [personnel](../../build-your-first-app/build-personal-tab.md) ou de [canal et de groupe](../../build-your-first-app/build-channel-tab.md) à l’aide du kit de développement Microsoft Teams.
+
+Les onglets vous permettent de servir le contenu Web que vous hébergez à votre canal, à votre groupe de conversation et à vos utilisateurs personnels. À un niveau élevé, vous devez effectuer les étapes suivantes pour créer un onglet :
 
 1. Préparez votre environnement de développement.
 1. Créez vos pages.
@@ -110,7 +113,7 @@ Les onglets canal/groupe sont ajoutés dans le `configurableTabs` tableau. Vous 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2 048 caractères|✔|URL https://vers la page de configuration.|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default `true`|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default `true`|
 |`scopes`|Tableau de l’énum|0,1|✔|Les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Exemple de manifeste de l’onglet canal/groupe simple

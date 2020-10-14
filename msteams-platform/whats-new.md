@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397665"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452812"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -20,6 +20,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|9/30/2020|L’envoi et la réception de fichiers vers des robots sur des appareils mobiles sont désormais pris en charge.|[Envoyer et recevoir des fichiers via votre robot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nouvelles instructions de prise en main de teams|[Vue d’ensemble de la création de votre première application teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Prise en charge des applications teams de réunion (version préliminaire)|[Créer des applications pour les réunions](apps-in-teams-meetings/create-apps-for-teams-meetings.md) et les applications teams [dans les réunions teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |8/19/2020|Importer des messages teams avec Microsoft Graph|[Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)

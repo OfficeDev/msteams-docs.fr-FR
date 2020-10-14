@@ -3,12 +3,12 @@ title: Envoi et réception de fichiers à partir d’un bot
 description: Décrit comment envoyer et recevoir des fichiers à partir d’un bot
 keywords: fichiers robots teams envoyer réception
 ms.date: 05/20/2019
-ms.openlocfilehash: ee26b4031c6022ab30ec5b2b58b42105c2dc6b0f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b61e7f6934846b3abb1cfc16283cec1d264d7ecc
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674021"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452779"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Envoyer et recevoir des fichiers via votre robot
 
@@ -25,30 +25,26 @@ Il existe deux façons d’envoyer des fichiers vers et à partir d’un bot :
 
 ## <a name="using-the-microsoft-graph-apis"></a>Utilisation des API Microsoft Graph
 
-Vous pouvez publier des messages avec des pièces jointes référençant des fichiers SharePoint existants à l’aide des API Microsoft Graph pour [OneDrive et SharePoint](/onedrive/developer/rest-api/). À l’aide des API Graph, vous devez obtenir l’accès au dossier OneDrive `personal` d' `groupchat` un utilisateur (pour les fichiers et fichiers) ou aux fichiers `channel` des canaux d’une équipe (pour les fichiers) via le flux d’autorisation 2,0 OAuth standard. Cette méthode fonctionne dans toutes les étendues Teams.
+Vous pouvez publier des messages avec des pièces jointes référençant des fichiers SharePoint existants à l’aide des API Microsoft Graph pour [OneDrive et SharePoint](/onedrive/developer/rest-api/). À l’aide des API Graph, vous devez obtenir l’accès au dossier OneDrive d’un utilisateur (pour les fichiers `personal` et `groupchat` fichiers) ou aux fichiers des canaux d’une équipe (pour les `channel` fichiers) via le flux d’autorisation 2,0 OAuth standard. Cette méthode fonctionne dans toutes les étendues Teams.
 
 ## <a name="using-the-teams-bot-apis"></a>Utilisation des API du bot teams
 
 > [!NOTE]
-> Cette méthode fonctionne uniquement dans le `personal` contexte. Il ne fonctionne pas dans le `channel` contexte `groupchat` ou.
+> Cette méthode fonctionne uniquement dans le `personal` contexte. Il ne fonctionne pas dans le `channel` `groupchat` contexte ou.
 
-Votre robot peut directement envoyer et recevoir des fichiers avec des utilisateurs `personal` dans le contexte, également appelés conversations personnelles, à l’aide des API Teams. Cela vous permet de mettre en œuvre des notes de frais, la reconnaissance des images, l’archivage des fichiers, les signatures électroniques et d’autres scénarios impliquant une manipulation directe du contenu des fichiers. Les fichiers partagés dans teams s’affichent généralement sous forme de cartes et permettent un affichage enrichi dans les applications.
+Votre robot peut directement envoyer et recevoir des fichiers avec des utilisateurs dans le `personal` contexte, également appelés conversations personnelles, à l’aide des API Teams. Cela vous permet de mettre en œuvre des notes de frais, la reconnaissance des images, l’archivage des fichiers, les signatures électroniques et d’autres scénarios impliquant une manipulation directe du contenu des fichiers. Les fichiers partagés dans teams s’affichent généralement sous forme de cartes et permettent un affichage enrichi dans les applications.
 
 Les sections suivantes décrivent la procédure à suivre pour envoyer le contenu d’un fichier à la suite d’une interaction directe avec l’utilisateur, par exemple, l’envoi d’un message. Cette API est fournie dans le cadre de la plateforme Microsoft teams bot.
 
 ### <a name="configure-your-bot-to-support-files"></a>Configurer votre bot pour prendre en charge les fichiers
 
-Pour envoyer et recevoir des fichiers dans votre robot, vous devez définir la `supportsFiles` propriété dans le manifeste sur. `true` Cette propriété est décrite dans la section [bots](~/resources/schema/manifest-schema.md#bots) de la référence de manifeste.
+Pour envoyer et recevoir des fichiers dans votre robot, vous devez définir la `supportsFiles` propriété dans le manifeste sur `true` . Cette propriété est décrite dans la section [bots](~/resources/schema/manifest-schema.md#bots) de la référence de manifeste.
 
-La définition se présente comme suit : `"supportsFiles": true`. Si votre bot ne s’active `supportsFiles`pas, les fonctionnalités suivantes ne fonctionneront pas.
+La définition se présente comme suit : `"supportsFiles": true` . Si votre bot ne s’active pas `supportsFiles` , les fonctionnalités suivantes ne fonctionneront pas.
 
 ### <a name="receiving-files-in-personal-chat"></a>Réception de fichiers dans une conversation personnelle
 
 Lorsqu’un utilisateur envoie un fichier à votre bot, le fichier est d’abord téléchargé vers le stockage OneDrive entreprise de l’utilisateur. Votre bot recevra alors une activité de message vous avertissant du chargement de l’utilisateur. L’activité contiendra des métadonnées de fichier, telles que son nom et l’URL de contenu. Vous pouvez lire directement à partir de cette URL pour extraire son contenu binaire.
-
-### <a name="send-and-receive-files-through-bot-on-teams-mobile-app"></a>Envoyer et recevoir des fichiers via un bot sur une application mobile teams
-> [!NOTE] 
-> L’envoi et la réception de fichiers sur des robots sur des appareils mobiles ne sont pas pris en charge.
 
 #### <a name="message-activity-with-file-attachment-example"></a>Activité des messages avec un exemple de pièce jointe
 
@@ -72,7 +68,7 @@ Le tableau suivant décrit les propriétés de contenu de la pièce jointe :
 
 | Propriété | Objectif |
 | --- | --- |
-| `downloadUrl` | URL OneDrive pour l’extraction du contenu du fichier. Vous pouvez émettre une `HTTP GET` erreur directement à partir de cette URL. |
+| `downloadUrl` | URL OneDrive pour l’extraction du contenu du fichier. Vous pouvez émettre une erreur `HTTP GET` directement à partir de cette URL. |
 | `uniqueId` | ID de fichier unique. Il s’agit de l’ID d’élément de lecteur OneDrive, si l’utilisateur envoie un fichier à votre bot. |
 | `fileType` | Type d’extension de fichier, tel que PDF ou docx. |
 
@@ -84,14 +80,18 @@ Le téléchargement d’un fichier vers un utilisateur implique les étapes suiv
 
 1. Envoyer un message à l’utilisateur qui demande l’autorisation d’écriture du fichier. Ce message doit contenir une `FileConsentCard` pièce jointe avec le nom du fichier à télécharger.
 2. Si l’utilisateur accepte le téléchargement de fichier, votre bot reçoit une activité d' *appel* avec une URL d’emplacement.
-3. Pour transférer le fichier, votre bot effectue directement `HTTP POST` une URL d’emplacement fournie.
+3. Pour transférer le fichier, votre bot effectue `HTTP POST` directement une URL d’emplacement fournie.
 4. Vous pouvez également supprimer la carte de consentement d’origine si vous ne souhaitez pas autoriser l’utilisateur à accepter les téléchargements supplémentaires du même fichier.
 
 #### <a name="message-requesting-permission-to-upload"></a>Message demandant l’autorisation de téléchargement
 
-Ce message contient un objet Attachment simple qui demande à l’utilisateur l’autorisation de télécharger le fichier.
+Ce message de bureau contient un objet Attachment simple qui demande à l’utilisateur l’autorisation de télécharger le fichier :
 
-![Capture d’écran de la carte de consentement demandant à l’utilisateur de télécharger le fichier](~/assets/images/bots/bot-file-consent-card.png)
+![Capture d’écran de la carte de consentement demandant à l’utilisateur de télécharger le fichier](../../assets/images/bots/bot-file-consent-card.png)
+
+Ce message mobile contient un objet Attachment qui demande à l’utilisateur l’autorisation de télécharger le fichier :
+
+![Capture d’écran de la carte de consentement demandant à l’utilisateur de télécharger un fichier sur mobile](../../assets/images/bots/mobile-bot-file-consent-card.png)
 
 ```json
 {
@@ -121,7 +121,7 @@ Le tableau suivant décrit les propriétés de contenu de la pièce jointe :
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>Appeler l’activité lorsque l’utilisateur accepte le fichier
 
-Une activité d’appel est envoyée à votre bot si l’utilisateur accepte le fichier. Il contient l’URL de l’espace réservé OneDrive entreprise que votre robot peut ensuite `PUT` émettre dans pour transférer le contenu du fichier. Pour plus d’informations sur le téléchargement vers l’URL OneDrive, lisez cet article : [chargement des octets vers la session de chargement](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+Une activité d’appel est envoyée à votre bot si l’utilisateur accepte le fichier. Il contient l’URL de l’espace réservé OneDrive entreprise que votre robot peut ensuite émettre `PUT` dans pour transférer le contenu du fichier. Pour plus d’informations sur le téléchargement vers l’URL OneDrive, lisez cet article : [chargement des octets vers la session de chargement](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 L’exemple suivant montre une version abrégée de l’activité d’appel que votre bot recevra :
 
@@ -179,7 +179,7 @@ Après avoir téléchargé un fichier sur le OneDrive de l’utilisateur, que vo
 }
 ```
 
-Le tableau suivant décrit les propriétés de contenu de la pièce jointe : 
+Le tableau suivant décrit les propriétés de contenu de la pièce jointe :
 
 | Propriété | Objectif |
 | --- | --- |

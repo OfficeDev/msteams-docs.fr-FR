@@ -1,15 +1,15 @@
 ---
-title: Créer un onglet de réunion dans Microsoft teams
+title: Concevoir un onglet en réunion
 author: heath-hamilton
-description: Conseils et meilleures pratiques pour la conception de l’onglet dans la réunion pour Microsoft Teams.
+description: Découvrez comment concevoir efficacement un onglet de réunion pour Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4f75591468de41b5d4d3ac62a25b93412b3fccaa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: a5c4d0cc0d2c61f422ea9bc189f164d02b28aae0
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243330"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452658"
 ---
 # <a name="design-an-in-meeting-tab"></a>Concevoir un onglet en réunion
 
@@ -40,7 +40,7 @@ L’onglet dans la réunion affiche le contenu de votre application à l’aide 
 * **Largeur**: 280 pixels pour la zone WebView. Il y a 20 pixels de remplissage sur les côtés gauche et droit de l’affichage WebView.
 * **Hauteur**: fond perdu en bas de l’onglet. Il y a 20 pixels de remplissage entre la zone d’affichage WebView et l’en-tête d’onglet.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’une extension de réunion sous-onglet réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 1. **Icône**de l’application : point d’entrée de l’onglet dans la réunion.
 1. **En-tête**: inclut le nom de l’onglet.
@@ -62,13 +62,13 @@ Voici ce que vous devez savoir sur le défilement dans l’onglet dans la réuni
 * Vous ne pouvez voir que le contenu auquel vous avez fait défiler (rien au-dessus ou en dessous).
 * La barre de défilement fait partie du contenu WebView.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Illustration illustrant le mode de défilement du contenu WebView de l’onglet intégré à la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 ### <a name="navigation"></a>Navigation
 
 Pour les scénarios avec des calques de navigation ou du contenu lourd, il est recommandé d’autoriser les utilisateurs à accéder à un calque secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Illustration illustrant le fonctionnement de la navigation vers un calque secondaire dans l’onglet de réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 ## <a name="components"></a>Composants
 
@@ -100,7 +100,7 @@ Les mises en page d’onglets de réunion doivent pouvoir être redimensionnées
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Illustration montrant que le contenu de l’onglet dans la réunion ressemble à un onglet plein écran avant et après une réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="before-the-meeting"></a>Avant la réunion
 
@@ -108,7 +108,7 @@ Assurez-vous que la disposition des tabulations peut s’adapter à la dispositi
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Illustration illustrant la façon dont le contenu de l’onglet pre-Meeting est condensé dans l’onglet de réunion lors d’une réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="during-the-meeting"></a>Lors de la réunion
 
@@ -121,7 +121,7 @@ Le contenu de la tabulation s’ajuste à la mise en page et à l’emplacement 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Illustration illustrant la conception de l’onglet pour le thème sombre utilisé dans les réunions Teams." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="do-design-for-a-dark-theme"></a>Do : Design pour un thème sombre
 
@@ -129,7 +129,7 @@ Les réunions de teams sont optimisées pour le mode sombre afin de réduire le 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Illustration montrant que vous ne devez pas utiliser des couleurs qui ne sont pas favorables au thème sombre de teams." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>Ne pas utiliser de couleurs inhabituelles
 
@@ -142,7 +142,7 @@ Les couleurs qui sont en conflit avec l’environnement de la réunion peuvent �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Illustration montrant que vous devez autoriser le défilement vertical uniquement dans l’onglet dans la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="do-scroll-vertically"></a>Do : faites défiler verticalement
 
@@ -150,7 +150,7 @@ Les utilisateurs anticipent le défilement vertical dans Teams (et ailleurs).
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Illustration montrant que vous ne devez pas autoriser le défilement horizontal dans l’onglet de la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>Ne pas faire défiler horizontalement
 
@@ -163,7 +163,7 @@ Le défilement horizontal n’est pas un comportement attendu dans Teams. Les au
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Illustration illustrant la disposition sur une seule colonne recommandée dans l’onglet dans la réunion." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="do-single-columns"></a>Do : colonnes uniques
 
@@ -171,7 +171,7 @@ Le défilement horizontal n’est pas un comportement attendu dans Teams. Les au
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Illustration illustrant la façon dont une disposition sur deux colonnes dans l’onglet de réunion n’est pas idéale." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="dont-multiple-columns"></a>Ne pas : plusieurs colonnes
 
@@ -184,7 +184,7 @@ En raison de l’espace limité de l’onglet dans la réunion, les mises en pag
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Illustration montrant que vous devez toujours fournir un bouton précédent si votre application d’onglet de réunion dispose de plusieurs couches de navigation." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="do-have-a-back-button"></a>Do : avoir un bouton retour
 
@@ -192,7 +192,7 @@ Si vous disposez de plusieurs couches de navigation, les utilisateurs doivent po
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Une illustration montrant que l’ajout d’un autre bouton Fermer dans l’onglet de réunion pour la navigation est redondante et peut entraîner des problèmes." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="dont-include-another-close-button"></a>Ne pas inclure d’autre bouton Fermer
 
@@ -205,7 +205,7 @@ Une option permettant de fermer le contenu de l’onglet de la réunion peut ent
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Illustration montrant que vous devez être prudent lorsque vous utilisez des modaux (par exemple, des modules de tâches) dans l’onglet de la réunion en fonction de l’espace limité." border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="Exemple montre à quoi peut ressembler l’onglet réunion sous la forme d’un organisateur de réunion." border="false":::
 
 #### <a name="caution-using-dialogs-in-a-narrow-space"></a>ATTENTION : utilisation de boîtes de dialogue dans un espace étroit
 

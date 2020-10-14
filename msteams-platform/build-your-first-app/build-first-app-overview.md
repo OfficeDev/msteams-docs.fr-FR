@@ -1,18 +1,18 @@
 ---
-title: Commencer à créer une application de première équipe
+title: Prise en main-créer votre première application présentation et conditions préalables
 author: heath-hamilton
-description: Vue d’ensemble et conditions préalables à la création d’une application Microsoft teams
+description: Découvrez comment commencer à utiliser le développement d’applications Microsoft teams et configurer votre environnement.
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397693"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452602"
 ---
-# <a name="build-your-first-teams-app-overview"></a>Vue d’ensemble de la création de votre première application teams
+# <a name="build-your-first-microsoft-teams-app-overview"></a>Créer votre première vue d’ensemble de l’application Microsoft teams
 
 Dans les leçons créer **votre première application** , vous créez des applications teams de base. Chaque Didacticiel explique comment créer une application de teams simple et réelle de teams tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
 

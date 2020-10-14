@@ -93,7 +93,7 @@ Cliquez sur le bouton *Delete (supprimer* ) en regard du *bot importé* dans la 
 
 <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-Ajoutez un nom de bot tel que `Contoso bot` , puis cliquez sur les deux boutons sous *étendue*.
+Ajoutez un nom de robot `Contoso bot` , puis sélectionnez les trois boutons sous *étendue*.
 
 Sélectionnez *créer un bot* pour quitter la boîte de dialogue. App Studio passera un moment à l’inscription de votre robot auprès de Microsoft, puis affichera votre nouveau robot dans la liste des robots. Maintenant, nous vous conseillons d’ouvrir un fichier texte dans le bloc-notes et de copier et coller votre nouvel ID de robot dans celui-ci. Vous aurez besoin de cet ID ultérieurement.
 
