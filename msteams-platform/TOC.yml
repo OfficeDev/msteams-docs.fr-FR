@@ -164,7 +164,7 @@
     - name: Guides pratiques
       expanded: true
       items:
-        - name: Ajouter des onglets à votre application
+        - name: Créer un onglet pour Teams
           href: tabs/how-to/add-tab.md
         - name: Créer des pages d’onglets
           items:
@@ -212,10 +212,10 @@
       items:
         - name: Vue d’ensemble de la conception
           href: bots/design/bots.md
-    - name: Guides de procédures
+    - name: Guides pratiques
       expanded: true
       items:
-        - name: Créer un bot pour Teams
+        - name: Créer un robot pour Teams
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Intégrez votre agent chatbot Power Virtual Agent avec Teams
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: Guides pratiques
       expanded: true
       items:
-        - name: Créer une extension de messagerie
+        - name: Créer une extension de messagerie pour Teams
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: Commandes basées sur l’action
           items:
