@@ -1,13 +1,13 @@
 ---
 title: Publication post
 description: Ce qu’il faut faire après avoir publié votre application
-keywords: teams post publier le certificat de mise à jour
-ms.openlocfilehash: d2cc6c5427c5b4f7320f0ec2e022f2c69467a33d
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+keywords: Microsoft teams post Publish Update Certificate Update App manifest
+ms.openlocfilehash: 58e81688ab9a8b55d2b035fc9b43cb58dddb6133
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819153"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465914"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Maintenir et prendre en charge votre application publiée 
 
@@ -19,7 +19,7 @@ Le [programme de conformité des applications Microsoft 365](./application-certi
 
 ## <a name="add-a-download-button-to-your-product-site"></a>Ajouter un bouton de téléchargement à votre site de produit
 
-Si votre application se trouve dans le magasin Microsoft Teams, vous pouvez générer un lien vers votre site Web qui lance teams et affiche une boîte de dialogue de consentement et d’installation pour permettre aux utilisateurs d’ajouter l’application.
+Si votre application se trouve dans le magasin global Microsoft Teams, vous pouvez générer un lien vers votre site Web qui lance teams et affiche une boîte de dialogue de consentement et d’installation pour permettre aux utilisateurs d’ajouter l’application.
 Le format est :  `https://teams.microsoft.com/l/app/<appId>` où AppID est le GUID qu’il déclare dans le manifeste soumis.
 Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` est le lien pour installer Trello.
 
@@ -27,7 +27,7 @@ Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672
 
 * N’utilisez pas le bouton *Ajouter une nouvelle application* pour renvoyer votre application. Utilisez plutôt la mosaïque de votre application sous l’onglet vue d’ensemble.
 * L’appId dans le manifeste mis à jour doit être le même que dans le manifeste actuel, avec un numéro de version incrémentiel.
-* Incrémentez votre numéro de version dans le manifeste si vous effectuez des modifications de manifeste dans votre envoi.
+* Incrémentez votre numéro de version dans le manifeste si vous effectuez des modifications à votre envoi, y compris le nom de l’application ou des métadonnées dans le manifeste.
 * Les soumissions mises à jour doivent être soumises à un nouveau processus de révision et de validation.
 
 ## <a name="app-updates-and-the-user-consent-flow"></a>Mises à jour de l’application et flux de consentement de l’utilisateur

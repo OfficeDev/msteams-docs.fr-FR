@@ -5,13 +5,13 @@ localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: marge des équipes importation de messages de l’API Microsoft Migrate migration post
-ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
-ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
+keywords: graphique de l’API importation de messages teams Microsoft migrer le billet de migration
+ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "47340948"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465907"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
@@ -36,8 +36,8 @@ Avec Microsoft Graph, vous pouvez migrer l’historique et les données des mess
 
 ✔ Passer en revue les données tierces pour déterminer les éléments qui seront migrés.  
 ✔ Extraire les données sélectionnées du système de conversation tiers.  
+✔ Mapper la structure de conversation tierce à la structure Teams.  
 ✔ Convertir les données d’importation au format requis pour la migration.  
-✔ Mapper la structure de conversation tierce à la structure Teams.
 
 ### <a name="set-up-your-office-365-tenant"></a>Configuration de votre client Office 365
 
@@ -48,9 +48,9 @@ Avec Microsoft Graph, vous pouvez migrer l’historique et les données des mess
 
 Étant donné que les données existantes sont migrées, il est essentiel de conserver les estampilles du message d’origine et d’empêcher l’activité de messagerie pendant le processus de migration de recréer le flux de messages existant de l’utilisateur dans Teams. Pour ce faire, procédez comme suit :
 
-1. [Créer une nouvelle équipe](/graph/api/team-post?view=graph-rest-beta&tabs=http) avec un horodatage à l’arrière-dernière à l’aide de la propriété de ressource d’équipe  `createdDateTime`  .  
+> [Créer une nouvelle équipe](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) avec un horodatage à l’arrière-dernière à l’aide de la propriété de ressource d’équipe  `createdDateTime`  . Placez la nouvelle équipe dans `migration mode` , un état spécial qui barre les utilisateurs de la plupart des activités au sein de l’équipe jusqu’à ce que le processus de migration soit terminé. Incluez l' `teamCreationMode` attribut instance avec la `migration` valeur de la requête post pour identifier explicitement la nouvelle équipe comme étant créée pour la migration.  
 
-1. Placez la nouvelle équipe dans `migration mode` , un état spécial qui barre les utilisateurs de la plupart des activités au sein de l’équipe jusqu’à ce que le processus de migration soit terminé. Incluez l' `teamCreationMode` attribut instance avec la `migration` valeur de la requête post pour identifier explicitement la nouvelle équipe comme étant créée pour la migration.  
+> **Remarque**: le `createdDateTime` champ est renseigné uniquement pour les instances d’une équipe ou d’un canal qui ont été migrées.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -58,7 +58,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique et les données des mess
 
 |ScopeName|DisplayName|Description|Type|Consentement de l’administrateur ?|Entités/API couvertes|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Gérer la migration vers Microsoft teams|Création, gestion de ressources pour la migration vers Microsoft teams|**Application uniquement**|**Oui**|`POST /teams`|
+|`Teamwork.Migrate.All`|Gérer la migration vers Microsoft Teams|Création, gestion de ressources pour la migration vers Microsoft teams|**Application uniquement**|**Oui**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>Demande (créer une équipe dans l’état de migration)
 
@@ -70,8 +70,8 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "description": "My Sample Team’s Description"
+  "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
 
@@ -94,17 +94,15 @@ Content-Location: /teams/{teamId}
 
 ## <a name="step-two-create-a-channel"></a>Étape 2 : créer un canal
 
-La création d’un canal pour les messages importés est similaire au scénario créer une équipe : 
+La création d’un canal pour les messages importés est similaire au scénario créer une équipe :
 
-1. [Créez un canal](/graph/api/channel-post?view=graph-rest-beta&tabs=http) avec un horodatage à l’arrière-dernière à l’aide de la propriété Channel Resource `createdDateTime` .
-
-1. Placez le nouveau canal dans `migration mode` , un état spécial qui barre les utilisateurs de la plupart des activités de conversation au sein du canal jusqu’à ce que le processus de migration soit terminé.  Incluez l' `channelCreationMode` attribut instance avec la `migration` valeur de la requête post pour identifier explicitement la nouvelle équipe comme étant créée pour la migration.  
+> [Créez un canal](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) avec un horodatage à l’arrière-dernière à l’aide de la propriété Channel Resource `createdDateTime` . Placez le nouveau canal dans `migration mode` , un état spécial qui barre les utilisateurs de la plupart des activités de conversation au sein du canal jusqu’à ce que le processus de migration soit terminé.  Incluez l' `channelCreationMode` attribut instance avec la `migration` valeur de la requête post pour identifier explicitement la nouvelle équipe comme étant créée pour la migration.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>Autorisations
 
 |ScopeName|DisplayName|Description|Type|Consentement de l’administrateur ?|Entités/API couvertes|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Gérer la migration vers Microsoft teams|Création, gestion de ressources pour la migration vers Microsoft teams|**Application uniquement**|**Oui**|`POST /teams`|
+|`Teamwork.Migrate.All`|Gérer la migration vers Microsoft Teams|Création, gestion de ressources pour la migration vers Microsoft teams|**Application uniquement**|**Oui**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>Demande (créer un canal dans l’état de migration)
 
@@ -117,7 +115,7 @@ Content-Type: application/json
   "displayName": "Architecture Discussion",
   "description": "This channel is where we debate all future architecture plans",
   "membershipType": "standard",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "createdDateTime": "2020-03-14T11:22:17.047Z"
 }
 ```
 
@@ -125,11 +123,21 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/channels/{channelId}/operations/{operationId}
-Content-Location: /teams/{teamId}/channels/{channelId}
-```
 
-#### <a name="error-message"></a>Message d’erreur
+{
+   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
+   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "createdDateTime":null,
+   "displayName":"Architecture Discussion",
+   "description":"This channel is where we debate all future architecture plans",
+   "isFavoriteByDefault":null,
+   "email":null,
+   "webUrl":null,
+   "membershipType":null,
+   "moderationSettings":null
+}
+
+#### Error message
 
 ```http
 400 Bad Request
@@ -140,7 +148,10 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 
 ## <a name="step-three-import-messages"></a>Étape 3 : importer des messages
 
-Après avoir créé l’équipe et le canal, vous pouvez commencer à envoyer des messages à l’heure à l’aide des `createdDateTime` `from`  touches et dans le corps de la demande.
+Après avoir créé l’équipe et le canal, vous pouvez commencer à envoyer des messages à l’heure à l’aide des `createdDateTime` `from`  touches et dans le corps de la demande. **Remarque**: les messages importés avec une `createdDateTime` version antérieure à la thread de message ne `createdDateTime` sont pas pris en charge.
+
+> [!NOTE]
+> createdDateTime doit être unique pour tous les messages dans le même thread.
 
 #### <a name="request-post-message-that-is-text-only"></a>Demande (POST-message en texte seul)
 
@@ -148,33 +159,18 @@ Après avoir créé l’équipe et le canal, vous pouvez commencer à envoyer de
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 
 {
-    "replyToId": null,
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "createdDateTime":"2019-02-04T19:58:15.511Z",
+   "from":{
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   }
 }
 ```
 
@@ -184,40 +180,49 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
-    "id": "id-value",
-    "replyToId": null,
-    "etag": "id-value",
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "id":"id-value",
+   "replyToId":null,
+   "etag":"id-value",
+   "messageType":"message",
+   "createdDateTime":"2019-02-04T19:58:15.58Z",
+   "lastModifiedDateTime":null,
+   "deleted":false,
+   "subject":null,
+   "summary":null,
+   "importance":"normal",
+   "locale":"en-us",
+   "policyViolation":null,
+   "from":{
+      "application":null,
+      "device":null,
+      "conversation":null,
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   },
+   "attachments":[
+   ],
+   "mentions":[
+   ],
+   "reactions":[
+   ]
 }
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>Demande (publier un message avec l’image insérée)
+#### <a name="error-messages"></a>Messages d’erreur
+
+```http
+400 Bad Request
+```
+
+#### <a name="request-post-a-message-with-inline-image"></a>Demande (publier un message avec une image incluse)
 
 > **Remarque**: il n’existe pas d’étendues d’autorisation spéciales dans ce scénario, car la demande fait partie de collectionchatmessage ; les étendues pour Collectionchatmessage s’appliquent également ici.
 
@@ -268,7 +273,6 @@ HTTP/1.1 200 OK
             "userIdentityType": "aadUser"
         }
     },
-    {
       "body": {
         "contentType": "html",
         "content": "<div><div>\n<div><span><img height=\"250\" src=\"https://graph.microsoft.com/teams/teamId/channels/channelId/messages/id-value/hostedContents/hostedContentId/$value\" width=\"176.2295081967213\" style=\"vertical-align:bottom; width:176px; height:250px\"></span>\n\n</div>\n\n\n</div>\n</div>"
@@ -319,17 +323,18 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>Étape 5 : ajouter des membres de l’équipe
 
-Vous pouvez ajouter un membre à une équipe [à l’aide de l’interface utilisateur](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) de teams ou de l’API de [membre Add](/graph/api/group-post-members?view=graph-rest-beta&tabs=http) de Microsoft Graph :
+Vous pouvez ajouter un membre à une équipe [à l’aide de l’interface utilisateur](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) de teams ou de l’API de [membre Add](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) de Microsoft Graph :
 
 #### <a name="request-add-member"></a>Demande (ajouter un membre)
 
 ```http
-POST https://graph.microsoft.com/beta/groups/{id}/members/$ref
+POST https://graph.microsoft.com/beta/teams/{id}/members
 Content-type: application/json
 Content-length: 30
-
 {
-  "@odata.id": "https://graph.microsoft.com/beta/directoryObjects/{id}"
+"@odata.type": "#microsoft.graph.aadUserConversationMember",
+"roles": [],
+"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 
@@ -344,7 +349,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Vous pouvez importer des messages à partir d’utilisateurs qui ne sont pas dans Teams.
+* Vous pouvez importer des messages à partir d’utilisateurs qui ne sont pas dans Teams. **Remarque**: les messages importés pour les utilisateurs qui ne sont pas présents dans le client ne pourront pas être recherchés dans le client teams ou les portails de conformité pendant la préversion publique.
 
 * Une fois la `completeMigration` demande effectuée, vous ne pouvez pas importer d’autres messages dans l’équipe.
 

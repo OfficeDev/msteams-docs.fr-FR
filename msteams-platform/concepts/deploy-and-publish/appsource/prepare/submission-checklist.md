@@ -1,13 +1,13 @@
 ---
 title: Liste de vérification pour l’envoi
 description: Liste de vérification à utiliser avant la publication de votre application Microsoft teams vers AppSource
-keywords: teams publier le magasin de la liste de vérification de publication Office Publishing prepare
-ms.openlocfilehash: 86217cef542cc3f3a09e0dc64e429a675011a0c1
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+keywords: teams publier le magasin Office Publishing liste de vérification de la soumission applications teams AppSource validation
+ms.openlocfilehash: 4bbf5adb8594db0f7163db610b192dd8aaec37fb
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587751"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465921"
 ---
 # <a name="prepare-for-appsource-submission"></a>Préparer l’envoi de AppSource  
 
@@ -15,8 +15,8 @@ Pour figurer sur AppSource, votre application doit passer par un processus d’a
 
 * **Méthode de distribution :** Assurez-vous que votre application est destinée à être compubliée sur une plateforme de magasin. Il existe d' [autres options](../../overview.md) permettant de distribuer votre application sans la publier sur AppSource.
 * **Stratégies de validation :** Votre application doit transmettre toutes les [stratégies de validation AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)actuelles. Vérifiez votre application par rapport à l' [outil de validation](#teams-app-validation-tool) avant de l’envoyer. Veuillez noter que ces stratégies peuvent faire l’objet de modifications.
-* **Page de détails de l’application :** Votre application doit s’aligner sur la liste de vérification de la [page détaillée](detail-page-checklist.md)de l’application.
-* **Conseils et cas d’échec fréquents :** Prêtez une attention particulière aux [conseils cités et aux cas souvent infructueuses](frequently-failed-cases.md) pour améliorer le temps d’envoi et d’approbation de votre application.
+* **Page de détails de l’application :** Votre application doit s’aligner sur la liste de vérification de la  [page détaillée](detail-page-checklist.md)de l’application.
+* **Conseils et cas d’échec fréquents :** Prêtez une attention particulière aux [conseils cités et aux cas souvent infructueuses](frequently-failed-cases.md)  pour améliorer le temps d’envoi et d’approbation de votre application.
 * **Manifeste de l’application :** Vérifiez le manifeste de votre application par rapport à la [liste de vérification du manifeste](app-manifest-checklist.md)de l’application.
 * **Test et débogage :** Assurez-vous que vous avez entièrement [testé et débogué votre application](../../../build-and-test/debug.md).
 * **Test des notes :** Inclure vos [notes de test pour validation](#test-notes-for-validation)
@@ -82,7 +82,7 @@ Veuillez inclure les éléments suivants :
 
 * Vous pouvez choisir de télécharger vos notes de test sur SharePoint. Si c’est le cas, indiquez un lien public vers le fichier.
 
-* **Comptes de test**. Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou la liste d’autorisation à partir du serveur principal. En outre, si une étendue de conversation d’équipe/de groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d’équipe.
+* **Comptes de test**. Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou safelisting à partir du serveur principal. En outre, si une étendue de conversation d’équipe/de groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d’équipe.
 
 * **Étapes d’intégration**. Si une préconfiguration par un administrateur client est requise pour utiliser l’application, incluez les étapes et/ou fournissez les comptes administrateur et non administrateur configurés pour la validation. Remarque : vous pouvez vous inscrire pour obtenir un abonnement [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement.
 

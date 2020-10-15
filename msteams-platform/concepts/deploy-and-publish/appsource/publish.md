@@ -1,13 +1,13 @@
 ---
 title: Guide du processus de soumission d’approbation d’application Microsoft teams
 description: Décrit le processus d’approbation d’envoi pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
-keywords: teams publier le magasin Office Publishing Publish AppSource Partner Center Verification de compte
-ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+keywords: teams publier le magasin Office Publishing Publish AppSource Partner Verification Account Verification Apps compte ne pas publier éligible
+ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279688"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465928"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envoi de votre application à AppSource
 
@@ -76,6 +76,11 @@ Vous recevrez le message d’erreur ci-dessus lorsque l' [État de vérification
 Pendant le processus de vérification de compte, l’état de chaque étape requise (la propriété de l’E-mail, la vérification de l’emploi et la vérification de l’entreprise) s’affiche. Une fois le processus de vérification terminé, l’état de vérification de votre enregistrement sur la page de profil passe de « en attente » à « autorisé » et les étapes du processus ne s’affichent plus.
 
 ![Erreur de vérification du centre partenaire](../../../assets/images/partner-center-acct-verification-error.png)
+
+## <a name="what-is-verified-in-partner-center-account-verification-process-and-how-to-respond"></a>Qu’est-ce qui est vérifié dans le processus de vérification de compte centre partenaire et comment y répondre ?
+Il existe trois domaines de vérification : la propriété de l’E-mail, l’emploi et l’entreprise. Consultez les détails de [ce qui est vérifié et comment répondre](/partner-center/verification-responses#what-is-verified-and-how-to-respond) si vous êtes le contact principal (administrateur général ou administrateur de compte), nous vous recommandons d’accéder à votre profil partenaire pour surveiller l’état de la vérification et suivre l’avancement.
+
+Une fois le processus de vérification terminé, l’état de vérification de votre enregistrement sur la page de profil passe de *en attente* à *autorisé* et les étapes du processus avec l’État, affichées sur cette page, vont disparaître. Le contact principal reçoit un message électronique de Microsoft pendant quelques jours ouvrés après la fin de la vérification.
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Mon état de vérification de compte n’a pas avancé au-delà de la propriété de messagerie dans le centre de partenaires. Comment procéder ?
 

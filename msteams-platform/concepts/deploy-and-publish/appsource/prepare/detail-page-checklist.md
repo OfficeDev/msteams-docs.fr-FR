@@ -1,13 +1,13 @@
 ---
 title: Créer une page de détails d’application intéressante
 description: Décrit les conditions requises pour la page des détails de l’application
-keywords: publication des équipes publier le magasin de la stratégie de publication Office AppSource contenu
-ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+keywords: teams publier Store Office Publishing Policy AppSource Content Metadata capture d’écran Description du logo Description de l’application icônes description courte
+ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452770"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465942"
 ---
 # <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application intéressante
 
@@ -91,7 +91,7 @@ Il s’agit d’un résumé concis de votre application. Il est donc essentiel d
 **Don’t**
 
 * Ne répétez pas le titre.
-* Ne pas abréger Microsoft en « MS ».
+* N’abrégez pas Microsoft vers « MS » ou « MSFT ».
 * N’utilisez pas de jargon ou de terminologie spécialisée : vous ne pouvez pas supposer que les utilisateurs connaissent les éléments à rechercher.
 * Évitez toute référence inutile aux noms de produits Microsoft, sauf en cas d’absolue nécessité.
 * N’indiquez pas que l’application est une offre de Microsoft.
