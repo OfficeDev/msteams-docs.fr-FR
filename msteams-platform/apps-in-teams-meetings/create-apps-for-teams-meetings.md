@@ -5,12 +5,12 @@ description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 74f04ce9420110f721d95045fccee1d455cc7ea8
+ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452623"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48487839"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Créer des applications pour les réunions Teams (Aperçu pour les développeurs)
 
@@ -88,9 +88,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>Paramètres de requête
 
-**meetingId**. L’identificateur de la réunion est obligatoire.  
-**participantId**. L’identificateur du participant est obligatoire.  
-**tenantId**. [ID de client](/onedrive/find-your-office-365-tenant-id) du participant. Obligatoire pour l’utilisateur client.
+|Valeur|Type|Requis|Description|
+|---|---|----|---|
+|**meetingId**| string | Oui | L’identificateur de réunion est disponible via le kit de développement logiciel (SDK) et teams Client SDK.|
+|**participantId**| string | Oui | Ce champ est le nom d’utilisateur et est disponible dans les onglets SSO, d’appel de bot et teams Client SDK. L’authentification unique de l’onglet est fortement recommandée|
+|**tenantId**| string | Oui | Cela est nécessaire pour les utilisateurs clients. Elle est disponible dans les kits de développement logiciel SSO, de robot et teams client. L’authentification unique de l’onglet est fortement recommandée|
 
 #### <a name="response-payload"></a>Charge utile de réponse
 <!-- markdownlint-disable MD036 -->
@@ -144,9 +146,10 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>Paramètres de requête
 
-**conversationId**: identificateur de conversation. Obligatoire
-
-**completionBotId**: il s’agit de l’ID du bot. Facultatif
+|Valeur|Type|Requis|Description|
+|---|---|----|---|
+|**conversationId**| string | Oui | L’identificateur convdersation est disponible dans le cadre de l’appel de bot. |
+|**completionBotId**| string | Non | Ce champ est l’ID du bot déclaré dans le manifeste. Le bot reçoit un objet de résultat. |
 
 #### <a name="request-payload"></a>Charge utile de la demande
 
@@ -188,12 +191,12 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {
-            notification: {
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
-            }
-        };
+replyActivity.channelData = {
+    notification: {
+        alertInMeeting: true,
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+    }
+};
 await context.sendActivity(replyActivity);
 ```
 

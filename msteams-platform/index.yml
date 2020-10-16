@@ -10,12 +10,12 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 0595dff854382c2a5e95c551f93d76ca3b8616fa
-  ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+  ms.openlocfilehash: b49635a0bfc927e4c9323985842ef470fa895340
+  ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/25/2020
-  ms.locfileid: "48279720"
+  ms.lasthandoff: 10/16/2020
+  ms.locfileid: "48487846"
 highlightedContent:
   items:
   - title: "Nouveautés du développement Microsoft teams \U0001F680Commencez ici !"
@@ -117,6 +117,12 @@ conceptualContent:
 tools:
   title: Outils de & SDK
   items:
+  - title: Extension du kit de développement Microsoft teams pour Visual Studio code
+    imageSrc: /media/logos/logo_vs-code.svg
+    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+  - title: Extension de Microsoft teams Toolkit pour Visual Studio
+    imageSrc: /media/logos/logo_vs-ide.svg
+    url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: Kit de développement logiciel JavaScript pour les onglets
     imageSrc: ./assets/icons/logo_js.png
     url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
@@ -135,71 +141,3 @@ tools:
   - title: Générateur Yeoman pour Microsoft Teams
     imageSrc: ./assets/icons/Yeoman.png
     url: https://github.com/OfficeDev/generator-teams
-additionalContent:
-  sections:
-  - title: Modèles d’application A-H
-    summary: Applications prêtes à l’emploi
-    items:
-    - title: Informations du collaborateur
-      url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
-      summary: Donnez aux employés de terrain la possibilité de mesurer les commentaires des clients.
-    - title: Présence
-      url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
-      summary: Permettez à votre équipe d’enregistrer la participation et de générer des rapports résumés.
-    - title: Livre-a-room
-      url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
-      summary: Aide votre équipe à trouver et à réserver rapidement une salle de réunion.
-    - title: Célébrations
-      url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-      summary: Facilitez la célébration des anniversaires, des commémorations et d’autres événements périodiques.
-    - title: Communicateur d’entreprise
-      url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-      summary: Permettre aux équipes de créer et d’envoyer des messages de conversation aux employés.
-    - title: Source de sources de foule
-      url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
-      summary: Fournir des réponses aux requêtes d’équipe à partir d’informations provenant de la source de collaboration.
-    - title: Autocollants personnalisés
-      url: https://github.com/OfficeDev/microsoft-teams-stickers-app
-      summary: Ajouter des autocollants personnalisés au sein de votre équipe ou organisation.
-    - title: Finder expert
-      url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
-      summary: Permettez à votre équipe d’identifier des experts internes en fonction des compétences, des centres d’intérêt et de l’éducation.
-    - title: Forum aux questions
-      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-      summary: Améliorez la productivité de votre équipe à l’aide d’un robot de questions et réponses.
-    - title: Activités de groupe
-      url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
-      summary: Créez et gérez rapidement des groupes d’activités et des flux de travail de collaboration.
-    - title: Prise en charge RH
-      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-      summary: Fournir un support aux ressources humaines avec un robot de questions et réponses.
-  - title: Modèles d’application I-Z
-    summary: Applications prêtes à l’emploi
-    items:
-    - title: Brise-glace
-      url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
-      summary: Promouvoir la collaboration en appariant de façon aléatoire les membres d’équipe pour les meetups hebdomadaires.
-    - title: Encouragement
-      url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
-      summary: Gère et suit la participation rémunérée à des activités et événements.
-    - title: Rapporteur de l’incident
-      url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport
-      summary: Optimisez la gestion des incidents au sein de votre organisation.
-    - title: Ouvrir les badges
-      url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
-      summary: Suivre les badges d’informations d’identification de récompense et d’apprentissage numérique.
-    - title: Réponses rapides
-      url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
-      summary: Répondez efficacement aux questions fréquemment posées et créez une bibliothèque dynamique de réponses.
-    - title: Prise en charge à distance
-      url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
-      summary: Fournir une interface ciblée avec une équipe de support interne.
-    - title: Demande-a-Team
-      url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
-      summary: Améliorez le nouveau flux de création d’équipe de votre organisation.
-    - title: État de Scrum
-      url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
-      summary: Permet à votre équipe d'organiser des réunions Scrum asynchrones et de partager des mises à jour.
-    - title: Recherche de liste SharePoint
-      url: https://github.com/OfficeDev/microsoft-teams-list-search-app
-      summary: Recherchez une liste SharePoint et insérez un élément sous forme de carte adaptative dans Teams.
