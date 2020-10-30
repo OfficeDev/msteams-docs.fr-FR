@@ -1,18 +1,18 @@
 ---
-title: Créer un onglet pour teams
+title: Créer un onglet à l’aide d’App Studio
 author: laujan
-description: En savoir plus sur la création d’un onglet teams
+description: Découvrez comment créer un onglet Microsoft teams à l’aide d’App Studio.
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 4e6554a3fdba2ee53bf6d76cd6e25a55b14f7bdd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452756"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796154"
 ---
-# <a name="create-a-tab-for-microsoft-teams"></a>Créer un onglet pour Microsoft teams
+# <a name="create-a-tab-using-app-studio"></a>Créer un onglet à l’aide d’App Studio
 
 > [!TIP]
 > Vous recherchez un moyen plus rapide de commencer ? Créez un onglet [personnel](../../build-your-first-app/build-personal-tab.md) ou de [canal et de groupe](../../build-your-first-app/build-channel-tab.md) à l’aide du kit de développement Microsoft Teams.
@@ -67,11 +67,11 @@ Vous pouvez utiliser l’application App Studio à partir du client Microsoft te
 1. Ouvrez l’application Studio et sélectionnez l’onglet **éditeur de manifeste** .
 1. Sélectionnez la vignette **créer une nouvelle application** .
 1. Ajoutez les détails de votre application (consultez la [définition de schéma de manifeste](~/resources/schema/manifest-schema.md) pour obtenir une description complète de chaque champ).
-1. Dans la section fonctionnalités, sélectionnez **tabulations**.
-    * Pour un onglet personnel, choisissez *Ajouter un onglet personnel* , puis sélectionnez **Ajouter**. Une fenêtre de boîte de dialogue contextuelle s’affiche, dans laquelle vous pouvez ajouter les détails de votre onglet.
-    * Pour un onglet canal/groupe, sous l' *onglet équipe* , sélectionnez **Ajouter** et renseignez les champs de détails de l’onglet dans la fenêtre contextuelle de l’onglet équipe. Vérifier que la *mise à jour de la configuration est possible * Les zones de conversation d’équipe et de *groupe* sont cochées, puis sélectionnez **Enregistrer**.
+1. Dans la section fonctionnalités, sélectionnez **tabulations** .
+    * Pour un onglet personnel, choisissez *Ajouter un onglet personnel* , puis sélectionnez **Ajouter** . Une fenêtre de boîte de dialogue contextuelle s’affiche, dans laquelle vous pouvez ajouter les détails de votre onglet.
+    * Pour un onglet canal/groupe, sous l' *onglet équipe* , sélectionnez **Ajouter** et renseignez les champs de détails de l’onglet dans la fenêtre contextuelle de l’onglet équipe. Vérifier que la *mise à jour de la configuration est possible* Les zones de conversation d’équipe et de *groupe* sont cochées, puis sélectionnez **Enregistrer** .
 1. Dans la section *domaines et autorisations* , les *domaines de votre champ d’onglets* doivent contenir votre URL d’hôte ou de proxy inverse, sans le préfixe https.
-1. À partir de l’onglet **Terminer**le  =>  **test et répartir** , vous pouvez **Télécharger** votre package d’application, **installer** le package dans une équipe ou l' **Envoyer** au magasin d’applications teams pour approbation. *Si vous utilisez un proxy inverse, vous obtiendrez un avertissement dans le **champ Description** à droite. L’avertissement peut être ignoré lors du test de votre onglet*.
+1. À partir de l’onglet **Terminer** le  =>  **test et répartir** , vous pouvez **Télécharger** votre package d’application, **installer** le package dans une équipe ou l' **Envoyer** au magasin d’applications teams pour approbation. *Si vous utilisez un proxy inverse, vous obtiendrez un avertissement dans le **champ Description** à droite. L’avertissement peut être ignoré lors du test de votre onglet* .
 
 ## <a name="create-your-app-package-manually"></a>Créer manuellement votre package de l’application
 
@@ -84,9 +84,9 @@ Le contenu affiché pour les onglets personnels est le même pour tous les utili
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité que l’onglet affiche.|
-|`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
-|`contentUrl`|String|2 048 caractères|✔|URL https://qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de dessin de teams.|
-|`websiteUrl`|String|2 048 caractères||URL https://vers laquelle pointer si un utilisateur choisit de l’afficher dans un navigateur.|
+|`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
+|`contentUrl`|Chaîne|2 048 caractères|✔|URL https://qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de dessin de teams.|
+|`websiteUrl`|Chaîne|2 048 caractères||URL https://vers laquelle pointer si un utilisateur choisit de l’afficher dans un navigateur.|
 |`scopes`|Tableau de l’énum|0,1|✔|Les onglets statiques prennent en charge uniquement l' `personal` étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre d’une application personnelle.|
 
 #### <a name="simple-personal-tab-manifest-example"></a>Exemple de manifeste d’onglet personnel simple
@@ -112,8 +112,8 @@ Les onglets canal/groupe sont ajoutés dans le `configurableTabs` tableau. Vous 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2 048 caractères|✔|URL https://vers la page de configuration.|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default `true`|
+|`configurationUrl`|Chaîne|2 048 caractères|✔|URL https://vers la page de configuration.|
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default `true`|
 |`scopes`|Tableau de l’énum|0,1|✔|Les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>Exemple de manifeste de l’onglet canal/groupe simple
@@ -136,9 +136,9 @@ Une fois que vous avez effectué le `manifest.json` regroupement dans un dossier
 ### <a name="upload-app-package-directly-to-a-team"></a>Télécharger un package d’application directement dans une équipe
 
 1. Ouvrez le client Microsoft Teams. Si vous utilisez la [version basée sur le Web](https://teams.microsoft.com) , vous pouvez inspecter votre code frontal à l’aide des [outils de développement](~/tabs/how-to/developer-tools.md)de votre navigateur.
-1. Dans le volet *YourTeams* à gauche, sélectionnez le `...` menu en regard de l’équipe que vous utilisez pour tester votre onglet, puis sélectionnez **gérer l’équipe**.
+1. Dans le volet *YourTeams* à gauche, sélectionnez le `...` menu en regard de l’équipe que vous utilisez pour tester votre onglet, puis sélectionnez **gérer l’équipe** .
 1. Dans le panneau principal, sélectionnez **applications** dans la barre d’onglets et choisissez **Télécharger une application personnalisée** située dans l’angle inférieur droit de la page.
-1. Ouvrez le répertoire de votre projet, accédez au dossier **./Package** , sélectionnez le dossier zip du package d’application, puis choisissez **ouvrir**. Votre onglet est chargé dans Teams.
+1. Ouvrez le répertoire de votre projet, accédez au dossier **./Package** , sélectionnez le dossier zip du package d’application, puis choisissez **ouvrir** . Votre onglet est chargé dans Teams.
 
 ### <a name="view-your-tab-in-teams"></a>Afficher votre onglet dans teams
 
@@ -149,7 +149,7 @@ Une fois que vous avez effectué le `manifest.json` regroupement dans un dossier
     * Revenez à votre équipe, choisissez le canal où vous souhaitez afficher l’onglet, sélectionnez ➕ dans la barre d’onglets, puis choisissez votre onglet dans la Galerie.
     * Suivez les instructions relatives à l’ajout d’un onglet. Notez qu’il existe une boîte de dialogue de configuration personnalisée pour l’onglet canal/groupe. Sélectionnez **Enregistrer** et votre onglet est ajouté à la barre d’onglets de la chaîne.
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 * [Créer une page de contenu pour votre onglet](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Créer une page de configuration pour votre onglet](~/tabs/how-to/create-tab-pages/configuration-page.md)

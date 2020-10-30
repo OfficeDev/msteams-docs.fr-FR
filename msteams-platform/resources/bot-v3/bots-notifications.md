@@ -3,12 +3,13 @@ title: Gérer les événements bot
 description: Décrit comment gérer les événements dans les robots pour Microsoft teams
 keywords: événements bots de teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 06da5e6b0668e86012d87af3184493cdeb70aecd
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+author: laujan
+ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801078"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796175"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements bot dans Microsoft teams
 
@@ -154,11 +155,11 @@ Votre bot reçoit un `conversationUpdate` avec `membersAdded` lorsqu’un utilis
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -260,11 +261,11 @@ Votre robot est informé de la modification du nom de l’équipe dans laquelle 
 
 ## <a name="channel-updates"></a>Mises à jour de canal
 
-Votre robot est averti lorsqu’un canal est créé, renommé ou supprimé dans une équipe où il a été ajouté. Une fois encore, l' `conversationUpdate` événement est reçu et un identificateur d’événement spécifique à teams est envoyé dans le cadre de l' `channelData.eventType` objet, où les données du canal `channel.id` sont le GUID du canal et `channel.name` contient le nom du canal lui-même.
+Votre robot est averti lorsqu’un canal est créé, renommé ou supprimé dans une équipe où il a été ajouté. Une fois encore, l' `conversationUpdate` événement est reçu et un identificateur d’événement spécifique à teams est envoyé dans le cadre de l' `channelData.eventType` objet, où les données du canal  `channel.id` sont le GUID du canal et `channel.name` contient le nom du canal lui-même.
 
 Les événements de canal sont les suivants :
 
-* **channelCreated** &emsp; Un utilisateur ajoute un nouveau canal à l’équipe
+_ **channelCreated** &emsp; un utilisateur ajoute un nouveau canal à l’équipe
 * **channelRenamed** &emsp; Un utilisateur renomme un canal existant
 * **channelDeleted** &emsp; Un utilisateur supprime un canal
 
@@ -348,7 +349,7 @@ Les événements de canal sont les suivants :
 
 ## <a name="reactions"></a>Réactions
 
-L' `messageReaction` événement est envoyé lorsqu’un utilisateur ajoute ou supprime sa réaction à un message qui a été envoyé par votre bot. `replyToId`contient l’ID du message spécifique.
+L' `messageReaction` événement est envoyé lorsqu’un utilisateur ajoute ou supprime sa réaction à un message qui a été envoyé par votre bot. `replyToId` contient l’ID du message spécifique.
 
 ### <a name="schema-example-a-user-likes-a-message"></a>Exemple de schéma : un utilisateur aime un message
 

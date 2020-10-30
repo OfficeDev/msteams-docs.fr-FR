@@ -3,11 +3,11 @@ title: Authentification en mode silencieux
 description: Décrit l’authentification sans assistance
 keywords: authentification unique sans assistance d’authentification de teams
 ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801074"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796364"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 

@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Graphique RSC AAD d’authentification unique de teams
-ms.openlocfilehash: 7e3fc3faa111f4ba982c1c79e6b5b873b8773aef
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819181"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796190"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentement propre à la ressource (RSC)
 
@@ -25,19 +25,18 @@ Le consentement propre à la ressource (RSC) est une intégration de Microsoft t
 |Autorisation de l’application| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtenir les paramètres de cette équipe.|
-|TeamSettings. Edit. Group|Mettre à jour les paramètres de cette équipe.|
+|TeamSettings. ReadWrite. Group|Mettre à jour les paramètres de cette équipe.|
 |ChannelSettings.Read.Group|Obtenir les noms de canal, les descriptions de canal et les paramètres de canal de cette équipe.|
 |ChannelSettings. ReadWrite. Group|Mettre à jour les noms de canaux, les descriptions de canal et les paramètres de canal de cette équipe.|
 |Channel.Create.Group|Créer des canaux au sein de cette équipe.|
 |Channel.Delete.Group|Supprimer des canaux dans cette équipe.|
 |ChannelMessage.Read.Group |Obtenir les messages du canal de cette équipe.|
-|TeamsApp.Read.Group|Obtenir la liste des applications installées de cette équipe.|
+|TeamsAppInstallation. Read. Group|Obtenir la liste des applications installées de cette équipe.|
 |TeamsTab.Read.Group|Obtenir la liste des onglets de cette équipe.|
 |TeamsTab.Create.Group|Créer des onglets au sein cette équipe.|
 |Teamstab.. ReadWrite. Group|Mettre à jour les onglets de cette équipe.|
 |TeamsTab.Delete.Group|Supprimer les onglets de cette équipe.|
-|Member.Read.Group|Obtenir les membres de cette équipe.|
-|Owner.Read.Group|Obtenir les propriétaires de cette équipe.|
+|TeamMember. Read. Group|Obtenir les membres de cette équipe.|
 
 >[!NOTE]
 >Les autorisations propres aux ressources ne sont disponibles que pour les applications teams installées sur le client teams et qui ne font actuellement pas partie du portail Azure Active Directory.
@@ -56,21 +55,15 @@ Les étapes à suivre pour activer RSC dans votre application sont les suivantes
 
 ## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Configurer les paramètres de consentement du propriétaire du groupe dans le portail Azure AD
 
-Vous pouvez activer ou désactiver le  [consentement du propriétaire de groupe](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directement dans le portail Azure :
+Vous pouvez activer ou désactiver le [consentement du propriétaire de groupe](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) directement dans le portail Azure :
 
 > [!div class="checklist"]
 >
 >- Connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général [/administrateur de société](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).  
- > - Sélectionnez **Azure Active Directory**  => **Enterprise applications**  => **paramètres utilisateur**des applications d’entreprise Azure Active Directory.
-> - Activer, désactiver ou limiter le consentement de l’utilisateur avec le contrôle étiqueté **les utilisateurs peuvent consentir aux applications d’accéder aux données de l’entreprise pour les groupes qu’ils possèdent** (cette fonctionnalité est activée par défaut).
+ > - [Sélectionnez](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise applications**  =>  **autorisations de consentement et autorisations** d’utilisateur pour les applications d’entreprise Azure Active Directory  =>  **User consent settings** .
+> - Activer, désactiver ou limiter le consentement de l’utilisateur avec le contrôle du **consentement du propriétaire du groupe pour les applications accédant aux données** (la valeur par défaut est autoriser le consentement du propriétaire du groupe **pour tous les propriétaires de groupe** ). Pour qu’un propriétaire d’équipe installe une application à l’aide de RSC, le consentement du propriétaire du groupe doit être activé pour cet utilisateur.
 
-![configuration de RSC Azure](../../assets/images/azure-rsc-configuration.svg)
-
-| Valeur | Description|
-|--- | --- |
-|Oui | Activer le consentement propre au groupe pour tous les propriétaires de groupe.|
-|Non |Désactivez le consentement propre au groupe pour tous les utilisateurs.| 
-|Peu | Activer le consentement propre au groupe pour les membres d’un groupe sélectionné.|
+![configuration de RSC Azure](../../assets/images/azure-rsc-configuration.png)
 
 Pour activer ou désactiver le consentement du propriétaire d’un groupe dans le portail Azure à l’aide de PowerShell, suivez les étapes décrites dans [configurer le consentement du propriétaire du groupe à l’aide de PowerShell](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell).
 
@@ -83,7 +76,7 @@ Le portail Azure Active Directory fournit une plateforme centrale pour vous insc
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Vérifier les autorisations de votre application dans le portail Azure AD
 
-Accédez à la **Home**  =>  page**inscriptions des applications** personnelles et sélectionnez votre application RSC. Sélectionnez **autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application. Si votre application effectue uniquement des appels de graphique RSC, supprimez toutes les autorisations sur cette page. Si votre application effectue également des appels non RSC, conservez ces autorisations autant que nécessaire.
+Accédez à la **Home**  =>  page **inscriptions des applications** personnelles et sélectionnez votre application RSC. Sélectionnez **autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application. Si votre application effectue uniquement des appels de graphique RSC, supprimez toutes les autorisations sur cette page. Si votre application effectue également des appels non RSC, conservez ces autorisations autant que nécessaire.
 
 >[!IMPORTANT]
 >Le portail Azure AD ne peut pas être utilisé pour demander des autorisations RSC. Les autorisations RSC sont actuellement exclusives aux applications teams installées dans le client teams et déclarées dans le fichier de manifeste de l’application (JSON).
@@ -95,7 +88,7 @@ Pour effectuer des appels d’API Graph, vous devez obtenir un jeton d’accès 
 Vous devez avoir les valeurs suivantes du processus d’inscription Azure AD pour récupérer un jeton d’accès à partir de la plateforme d’identité :
 
 - ID de l' **application** affecté par le portail d’inscription des applications. Si votre application prend en charge l’authentification unique (SSO), vous devez utiliser le même ID d’application pour votre application et votre authentification unique.
-- La clé secrète ou le  **mot de passe du client** ou une paire de clés publique/privée (**certificat**). N’est pas nécessaire pour les applications natives.
+- La clé secrète ou le  **mot de passe du client** ou une paire de clés publique/privée ( **certificat** ). N’est pas nécessaire pour les applications natives.
 - Un **URI de redirection** (ou URL de réponse) pour que votre application reçoive des réponses d’Azure ad.
 
  *Voir* [obtenir l’accès de la part d’un utilisateur](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token) et [obtenir l’accès sans utilisateur](/graph/auth-v2-service)
@@ -106,7 +99,7 @@ Les autorisations RSC sont déclarées dans votre fichier de manifeste d’appli
 
 > [!div class="checklist"]
 >
-> - **ID**  : votre ID d’application Azure ad. *Voir* [enregistrer votre application dans le portail Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **ID**  : votre ID d’application Azure ad. *consultez la rubrique* [enregistrer votre application dans le portail Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 > - **ressource**  : n’importe quelle chaîne. Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne fera.
 > - **autorisations d’application** — autorisations RSC pour votre application. *Voir* [autorisations propres aux ressources](resource-specific-consent.md#resource-specific-permissions).
 
@@ -154,9 +147,9 @@ Une fois que l’application a été installée dans une équipe, vous pouvez ut
 > - Dans le client Teams, sélectionnez **teams** dans la barre de navigation la plus à gauche.
 > - Dans le menu déroulant, sélectionnez l’équipe où l’application est installée.
 > - Sélectionnez l’icône **autres options** (&#8943;).
-> - Sélectionnez **obtenir un lien vers une équipe**.
+> - Sélectionnez **obtenir un lien vers une équipe** .
 > - Copiez et enregistrez la valeur **GroupID** à partir de la chaîne.
-> - Connectez-vous à l’afficheur **Graph**.
+> - Connectez-vous à l’afficheur **Graph** .
 > - Effectuer un appel **Get** vers le point de terminaison suivant : `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . Le champ clientAppId dans la réponse est mappé sur l’appId spécifié dans le manifeste de l’application Teams.
   ![Réponse de l’Explorateur Graph pour obtenir un appel.](../../assets/images/graph-permissions.png)
  

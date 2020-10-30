@@ -5,12 +5,12 @@ description: Décrit les modifications à venir et en cours pour les API bot uti
 keywords: Liste des membres de l’équipe des API de l’infrastructure bot
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 926e4e39e4b5c3f1ba34a4458cf6f17612d86841
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 243969796d9d1dc427ab7736cf5e0f0d320731c7
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "44801102"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796142"
 ---
 # <a name="changes-to-teams-bot-apis-for-fetching-teamchat-members"></a>Modifications apportées aux API de robots teams pour la récupération des membres de l’équipe/conversation
 
@@ -26,34 +26,36 @@ Voici un exemple de représentation JSON de ce qui est renvoyé par ces API dès
 ```json
 [{
     "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-    "givenName": "Larry",
-    "surname": "Brown",
-    "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com"
+    "name": "Anon1 (Guest)",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "userRole": "anonymous"
 }, {
     "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
     "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
     "givenName": "John",
     "surname": "Patterson",
     "email": "johnp@fabrikam.com",
-    "userPrincipalName": "johnp@fabrikam.com"
+    "userPrincipalName": "johnp@fabrikam.com",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "userRole": "user"
 }, {
     "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
     "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
     "givenName": "Rick",
     "surname": "Stevens",
     "email": "Rick.Stevens@fabrikam.com",
-    "userPrincipalName": "rstevens@fabrikam.com"
+    "userPrincipalName": "rstevens@fabrikam.com",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "userRole": "user"
 }]
 ```
 
 ## <a name="api-changes"></a>Modifications de l’API
 Voici les modifications d’API à venir :
 
-* Nous avons créé une nouvelle API [`TeamsInfo.GetPagedMembersAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetching-the-roster-or-user-profile) pour récupérer des informations de profil pour les membres d’une conversation/équipe. Cette API est désormais disponible avec le kit de développement logiciel (SDK) de robot Framework 4,8. Pour le développement dans toutes les autres versions, utilisez la [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable) méthode. **Remarque**: dans la version 3 ou v4, la meilleure mesure consiste à effectuer une mise à niveau vers la version la plus récente (3.30.2 ou 4,8, respectivement). 
-* Nous avons créé une nouvelle API [`TeamsInfo.GetMemberAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) pour extraire les informations de profil pour un utilisateur unique. Il prend l’ID de l’équipe/conversation et un [UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) ( `userPrincipalName` , *voir ci-dessus*), Azure Active Directory Object ID ( `objectId` , *voir ci-dessus*) ou l’ID utilisateur Teams ( `id` *voir ci-dessus*) comme paramètres et renvoie les informations de profil de cet utilisateur. **Remarque**: nous modifions `objectId` pour qu' `aadObjectId` il corresponde à ce qu’il est appelé dans l' `Activity` objet d’un message de l’infrastructure bot. La nouvelle API est disponible avec la version 4,8 du kit de développement logiciel (SDK) de l’infrastructure bot. Il sera bientôt disponible dans l’infrastructure de l’extension du kit de développement logiciel (SDK) teams 3. x. en attendant, vous pouvez utiliser le point de terminaison [Rest](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) .
-* `TeamsInfo.GetMembersAsync`(C#) et `TeamsInfo.getMembers` (machine à écrire/Node.js) est explicitement déconseillée et cessera de fonctionner en fin de 2021. Nous annoncerons un calendrier spécifique en mai 2020 en fonction des commentaires des développeurs. Une fois la nouvelle API paginée disponible, les développeurs doivent mettre à jour leurs robots pour l’utiliser. (Ceci s’applique également à l' [API REST sous-jacente utilisée par ces API](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).)
+* Nous avons créé une nouvelle API [`TeamsInfo.GetPagedMembersAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetching-the-roster-or-user-profile) pour récupérer des informations de profil pour les membres d’une conversation/équipe. Cette API est désormais disponible avec le kit de développement logiciel (SDK) de robot Framework 4,8. Pour le développement dans toutes les autres versions, utilisez la [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable) méthode. **Remarque** : dans la version 3 ou v4, la meilleure mesure consiste à effectuer une mise à niveau vers la version la plus récente (3.30.2 ou 4,8, respectivement). 
+* Nous avons créé une nouvelle API [`TeamsInfo.GetMemberAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) pour extraire les informations de profil pour un utilisateur unique. Il prend l’ID de l’équipe/conversation et un [UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) ( `userPrincipalName` , *voir ci-dessus* ), Azure Active Directory Object ID ( `objectId` , *voir ci-dessus* ) ou l’ID utilisateur Teams ( `id` *voir ci-dessus* ) comme paramètres et renvoie les informations de profil de cet utilisateur. **Remarque** : nous modifions `objectId` pour qu' `aadObjectId` il corresponde à ce qu’il est appelé dans l' `Activity` objet d’un message de l’infrastructure bot. La nouvelle API est disponible avec la version 4,8 du kit de développement logiciel (SDK) de l’infrastructure bot. Il sera bientôt disponible dans l’infrastructure de l’extension du kit de développement logiciel (SDK) teams 3. x. en attendant, vous pouvez utiliser le point de terminaison [Rest](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) .
+* `TeamsInfo.GetMembersAsync` (C#) et `TeamsInfo.getMembers` (machine à écrire/Node.js) est explicitement déconseillée et cessera de fonctionner en fin de 2021. Nous annoncerons un calendrier spécifique en mai 2020 en fonction des commentaires des développeurs. Une fois la nouvelle API paginée disponible, les développeurs doivent mettre à jour leurs robots pour l’utiliser. (Ceci s’applique également à l' [API REST sous-jacente utilisée par ces API](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).)
 * En fin de 2021, les robots ne pourront pas récupérer de façon proactive les `userPrincipalName` `email` Propriétés ou pour les membres d’une équipe de conversation et devront utiliser Microsoft Graph pour les récupérer. Plus précisément `userPrincipalName` , `email` les propriétés ne seront pas renvoyées à partir de la nouvelle API à partir du `GetConversationPagedMembers` 2021. Les robots doivent utiliser Microsoft Graph avec un jeton d’accès pour récupérer ces informations. Il s’agit évidemment d’une modification majeure : nous devons permettre aux robots d’obtenir un jeton d’accès plus facilement, et nous devons rationaliser et simplifier le processus de consentement de l’utilisateur final.
 
 ## <a name="feedback-and-more-information"></a>Commentaires et informations supplémentaires

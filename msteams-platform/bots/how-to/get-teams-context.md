@@ -1,15 +1,15 @@
 ---
 title: Obtenir le contexte spécifique de l’équipe pour votre robot
-author: clearab
+author: laujan
 description: Comment obtenir le contexte spécifique de l’équipe Microsoft de votre robot, y compris la liste de conversation, les détails et la liste des canaux.
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 55f93a914cdb0f92885ff535424cd823072184aa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.author: lajanuar
+ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237791"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796343"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir le contexte spécifique de l’équipe pour votre robot
 
@@ -79,37 +79,42 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Vous pouvez directement émettre une requête GET sur `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` , en utilisant la valeur de `serviceUrl` comme point de terminaison. La valeur de `serviceUrl` tend à être stable mais peut varier. Lorsqu’un nouveau message arrive, votre robot doit vérifier sa valeur stockée pour `serviceUrl` .
+Vous pouvez directement émettre une requête GET sur `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` , en utilisant la valeur de `serviceUrl` comme point de terminaison. La valeur de `serviceUrl` tend à être stable mais peut varier. Lorsqu’un nouveau message arrive, votre robot doit vérifier sa valeur stockée pour `serviceUrl` . La charge utile de la réponse indique également si l’utilisateur est un utilisateur régulier ou anonyme.
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
+GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
 
 Response body
 {
-    "continuationToken": "asdfqwerueiqpiewr",
-    "members":
-        [{
-            "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-            "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-            "givenName": "Larry",
-            "surname": "Brown",
-            "email": "Larry.Brown@fabrikam.com",
-            "userPrincipalName": "labrown@fabrikam.com"
-        }, {
-            "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-            "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
-            "givenName": "John",
-            "surname": "Patterson",
-            "email": "johnp@fabrikam.com",
-            "userPrincipalName": "johnp@fabrikam.com"
-        }, {
-            "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-            "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-            "givenName": "Rick",
-            "surname": "Stevens",
-            "email": "Rick.Stevens@fabrikam.com",
-            "userPrincipalName": "rstevens@fabrikam.com"
-        }]
+   "continuationToken":"asdfqwerueiqpiewr",
+   "members":[
+      {
+         "id":"29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+         "name":"Anon1 (Guest)",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"anonymous"
+      },
+      {
+         "id":"29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
+         "objectId":"76b0b09f-d410-48fd-993e-84da521a597b",
+         "givenName":"John",
+         "surname":"Patterson",
+         "email":"johnp@fabrikam.com",
+         "userPrincipalName":"johnp@fabrikam.com",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"user"
+      },
+      {
+         "id":"29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
+         "objectId":"6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
+         "givenName":"Rick",
+         "surname":"Stevens",
+         "email":"Rick.Stevens@fabrikam.com",
+         "userPrincipalName":"rstevens@fabrikam.com",
+         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
+         "userRole":"user"
+      }
+   ]
 }
 ```
 
@@ -159,10 +164,12 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Vous pouvez directement émettre une requête GET sur `/v3/conversations/{conversationId}/members/{userId}` , en utilisant la valeur de `serviceUrl` comme point de terminaison. La valeur de `serviceUrl` tend à être stable mais peut varier. Lorsqu’un nouveau message arrive, votre robot doit vérifier sa valeur stockée pour `serviceUrl` .
+Vous pouvez directement émettre une requête GET sur `/v3/conversations/{conversationId}/members/{userId}` , en utilisant la valeur de `serviceUrl` comme point de terminaison. La valeur de `serviceUrl` tend à être stable mais peut varier. Lorsqu’un nouveau message arrive, votre robot doit vérifier sa valeur stockée pour `serviceUrl` . Cela peut être utilisé pour les utilisateurs d’régulière et les utilisateurs anonymes.
+
+Voici un exemple de réponse pour un utilisateur normal
 
 ```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/labrown@fabrikam.com"
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
 
 Response body
 {
@@ -171,7 +178,23 @@ Response body
     "givenName": "Larry",
     "surname": "Brown",
     "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com"
+    "userPrincipalName": "labrown@fabrikam.com",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
+    "userRole":"user"
+}
+```
+
+Voici la réponse pour un utilisateur anonyme
+
+```http
+GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
+
+Response body
+{
+    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
+    "name": "Anon1 (Guest)",
+    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
+    "userRole":"anonymous"
 }
 ```
 

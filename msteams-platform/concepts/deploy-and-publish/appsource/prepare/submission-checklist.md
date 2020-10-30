@@ -2,19 +2,20 @@
 title: Liste de vérification pour l’envoi
 description: Liste de vérification à utiliser avant la publication de votre application Microsoft teams vers AppSource
 keywords: teams publier le magasin Office Publishing liste de vérification de la soumission applications teams AppSource validation
-ms.openlocfilehash: 4bbf5adb8594db0f7163db610b192dd8aaec37fb
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 1b25a449901c303269334e5cea6de46fa3b6f6e5
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465921"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796301"
 ---
 # <a name="prepare-for-appsource-submission"></a>Préparer l’envoi de AppSource  
 
 Pour figurer sur AppSource, votre application doit passer par un processus d’approbation. Il s’agit d’un service gratuit fourni par le groupe Microsoft teams qui vérifie que votre application fonctionne comme décrit, contient toutes les métadonnées appropriées et fournit un contenu qui pourrait être utile à un utilisateur final. Pour vous aider à obtenir une approbation rapide, vérifiez que votre application remplit les conditions et exigences suivantes :
 
 * **Méthode de distribution :** Assurez-vous que votre application est destinée à être compubliée sur une plateforme de magasin. Il existe d' [autres options](../../overview.md) permettant de distribuer votre application sans la publier sur AppSource.
-* **Stratégies de validation :** Votre application doit transmettre toutes les [stratégies de validation AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)actuelles. Vérifiez votre application par rapport à l' [outil de validation](#teams-app-validation-tool) avant de l’envoyer. Veuillez noter que ces stratégies peuvent faire l’objet de modifications.
+* **Stratégies de validation :** Votre application doit transmettre toutes les [stratégies de validation AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) actuelles avant l’envoi. Veuillez noter que ces stratégies peuvent faire l’objet de modifications. 
+* * * Testez votre application avec l' [outil de validation de manifeste](#teams-app-validation-tool) .
 * **Page de détails de l’application :** Votre application doit s’aligner sur la liste de vérification de la  [page détaillée](detail-page-checklist.md)de l’application.
 * **Conseils et cas d’échec fréquents :** Prêtez une attention particulière aux [conseils cités et aux cas souvent infructueuses](frequently-failed-cases.md)  pour améliorer le temps d’envoi et d’approbation de votre application.
 * **Manifeste de l’application :** Vérifiez le manifeste de votre application par rapport à la [liste de vérification du manifeste](app-manifest-checklist.md)de l’application.
@@ -82,10 +83,10 @@ Veuillez inclure les éléments suivants :
 
 * Vous pouvez choisir de télécharger vos notes de test sur SharePoint. Si c’est le cas, indiquez un lien public vers le fichier.
 
-* **Comptes de test**. Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou safelisting à partir du serveur principal. En outre, si une étendue de conversation d’équipe/de groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d’équipe.
+* **Comptes de test** . Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou safelisting à partir du serveur principal. En outre, si une étendue de conversation d’équipe/de groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d’équipe.
 
-* **Étapes d’intégration**. Si une préconfiguration par un administrateur client est requise pour utiliser l’application, incluez les étapes et/ou fournissez les comptes administrateur et non administrateur configurés pour la validation. Remarque : vous pouvez vous inscrire pour obtenir un abonnement [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement.
+* **Étapes d’intégration** . Si une préconfiguration par un administrateur client est requise pour utiliser l’application, incluez les étapes et/ou fournissez les comptes administrateur et non administrateur configurés pour la validation. Remarque : vous pouvez vous inscrire pour obtenir un abonnement [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement.
 
-* **Remarques concernant les fonctionnalités de l’application dans teams**: détaillez toutes les fonctionnalités proposées par l’application dans teams et les étapes de test de chaque fonctionnalité.
+* **Remarques concernant les fonctionnalités de l’application dans teams** : détaillez toutes les fonctionnalités proposées par l’application dans teams et les étapes de test de chaque fonctionnalité.
 
-* **Vidéo illustrant la fonctionnalité de l’application (facultatif)**: vous pouvez fournir un enregistrement vidéo du produit pour que nous comprenions entièrement les fonctionnalités de l’application.
+* **Vidéo illustrant la fonctionnalité de l’application (facultatif)** : vous pouvez fournir un enregistrement vidéo du produit pour que nous comprenions entièrement les fonctionnalités de l’application.

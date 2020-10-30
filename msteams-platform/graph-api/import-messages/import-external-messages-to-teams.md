@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: graphique de l’API importation de messages teams Microsoft migrer le billet de migration
-ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 934e00541773140c90c270a616d6bc50aacac6e1
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465907"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796294"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
@@ -41,7 +41,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique et les données des mess
 
 ### <a name="set-up-your-office-365-tenant"></a>Configuration de votre client Office 365
 
-✔ Vous assurer qu’un client Office 365 existe pour les données d’importation. Pour plus d’informations sur la configuration d’une location Office 365 pour Teams, *reportez-vous*à [la rubrique prepare Your Office 365 client](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
+✔ Vous assurer qu’un client Office 365 existe pour les données d’importation. Pour plus d’informations sur la configuration d’une location Office 365 pour Teams, *reportez-vous* à [la rubrique prepare Your Office 365 client](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
 ✔ Vous assurer que les membres de l’équipe sont dans Azure Active Directory (AAD).  Pour plus d’informations, *consultez la rubrique* [Ajouter un nouvel utilisateur](/azure/active-directory/fundamentals/add-users-azure-active-directory) à Azure Active Directory.
 
 ## <a name="step-one-create-a-team"></a>Étape 1 : créer une équipe
@@ -50,7 +50,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique et les données des mess
 
 > [Créer une nouvelle équipe](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) avec un horodatage à l’arrière-dernière à l’aide de la propriété de ressource d’équipe  `createdDateTime`  . Placez la nouvelle équipe dans `migration mode` , un état spécial qui barre les utilisateurs de la plupart des activités au sein de l’équipe jusqu’à ce que le processus de migration soit terminé. Incluez l' `teamCreationMode` attribut instance avec la `migration` valeur de la requête post pour identifier explicitement la nouvelle équipe comme étant créée pour la migration.  
 
-> **Remarque**: le `createdDateTime` champ est renseigné uniquement pour les instances d’une équipe ou d’un canal qui ont été migrées.
+> **Remarque** : le `createdDateTime` champ est renseigné uniquement pour les instances d’une équipe ou d’un canal qui ont été migrées.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
@@ -136,8 +136,9 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
-#### Error message
+#### <a name="error-message"></a>Message d’erreur
 
 ```http
 400 Bad Request
@@ -148,7 +149,7 @@ HTTP/1.1 202 Accepted
 
 ## <a name="step-three-import-messages"></a>Étape 3 : importer des messages
 
-Après avoir créé l’équipe et le canal, vous pouvez commencer à envoyer des messages à l’heure à l’aide des `createdDateTime` `from`  touches et dans le corps de la demande. **Remarque**: les messages importés avec une `createdDateTime` version antérieure à la thread de message ne `createdDateTime` sont pas pris en charge.
+Après avoir créé l’équipe et le canal, vous pouvez commencer à envoyer des messages à l’heure à l’aide des `createdDateTime` `from`  touches et dans le corps de la demande. **Remarque** : les messages importés avec une `createdDateTime` version antérieure à la thread de message ne `createdDateTime` sont pas pris en charge.
 
 > [!NOTE]
 > createdDateTime doit être unique pour tous les messages dans le même thread.
@@ -224,7 +225,7 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>Demande (publier un message avec une image incluse)
 
-> **Remarque**: il n’existe pas d’étendues d’autorisation spéciales dans ce scénario, car la demande fait partie de collectionchatmessage ; les étendues pour Collectionchatmessage s’appliquent également ici.
+> **Remarque** : il n’existe pas d’étendues d’autorisation spéciales dans ce scénario, car la demande fait partie de collectionchatmessage ; les étendues pour Collectionchatmessage s’appliquent également ici.
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -349,7 +350,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Vous pouvez importer des messages à partir d’utilisateurs qui ne sont pas dans Teams. **Remarque**: les messages importés pour les utilisateurs qui ne sont pas présents dans le client ne pourront pas être recherchés dans le client teams ou les portails de conformité pendant la préversion publique.
+* Vous pouvez importer des messages à partir d’utilisateurs qui ne sont pas dans Teams. **Remarque** : les messages importés pour les utilisateurs qui ne sont pas présents dans le client ne pourront pas être recherchés dans le client teams ou les portails de conformité pendant la préversion publique.
 
 * Une fois la `completeMigration` demande effectuée, vous ne pouvez pas importer d’autres messages dans l’équipe.
 

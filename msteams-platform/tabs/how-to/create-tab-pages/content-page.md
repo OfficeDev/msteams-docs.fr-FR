@@ -5,12 +5,12 @@ description: procédure de création d’une page de contenu
 keywords: onglets teams groupe de canaux configurable statique
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818905"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796315"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -28,7 +28,7 @@ L’objectif général de votre onglet doit être de fournir un accès à du con
 
 ## <a name="integrate-your-code-with-teams"></a>Intégration de votre code à teams
 
-Pour que votre page s’affiche dans Teams, vous devez inclure le [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) et inclure un appel à `microsoftTeams.initialize()` après le chargement de votre page. Voici comment votre page et le client teams communiquent :
+Pour que votre page s’affiche dans Teams, vous devez inclure le [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) et inclure un appel à `microsoftTeams.initialize()` après le chargement de votre page. Voici comment votre page et le client teams communiquent :
 
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ Pour que votre page s’affiche dans Teams, vous devez inclure le [Kit de dével
 
 ### <a name="using-the-sdk-to-interact-with-teams"></a>Utilisation du kit de développement logiciel (SDK) pour interagir avec teams
 
-Le [Kit de développement logiciel (SDK) du client teams](~/tabs/how-to/using-teams-client-sdk.md) fournit de nombreuses fonctions supplémentaires que vous pouvez trouver utiles lorsque vous développez votre page de contenu.
+Le [Kit de développement logiciel (SDK) du client teams](~/tabs/how-to/using-teams-client-sdk.md) fournit de nombreuses fonctions supplémentaires que vous pouvez trouver utiles lors du développement de votre page de contenu.
 
 ### <a name="deep-links"></a>Liens profonds
 
@@ -75,8 +75,8 @@ Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclu
 
 1. Pour afficher l’indicateur de chargement, ajoutez `"showLoadingIndicator": true` à votre manifeste. 
 2. N’oubliez pas d’appeler `microsoftTeams.initialize();` .
-3. **Facultatif**. Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatoire**. Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si  `notifySuccess`  n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
+3. **Facultatif** . Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatoire** . Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si  `notifySuccess`  n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
 5. Si votre application ne se charge pas, vous pouvez appeler `microsoftTeams.appInitialization.notifyFailure(reason);` pour informer les équipes qu’une erreur s’est produite. Un écran d’erreur s’affiche ensuite à l’utilisateur :
 
 ```typescript

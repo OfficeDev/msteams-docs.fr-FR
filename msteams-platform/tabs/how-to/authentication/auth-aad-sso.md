@@ -2,23 +2,23 @@
 title: Authentification unique
 description: Décrit l’authentification unique (SSO)
 keywords: API SSO d’authentification unique AAD pour l’authentification de teams
-ms.openlocfilehash: 503d5ff9779224d922ab0d45c6e2a3b33d7e0de7
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874855"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796378"
 ---
-# <a name="single-sign-on-sso"></a>Authentification unique (SSO)
+# <a name="single-sign-on-sso"></a>Sign-On unique (SSO)
 
-Les utilisateurs se connectent à Microsoft teams par le biais de leurs comptes professionnels, scolaires ou Microsoft (Office 365, Outlook, etc.). Vous pouvez en tirer parti en autorisant une authentification unique pour autoriser l’utilisation de votre onglet Microsoft Teams (ou module tâches) sur des clients de bureau ou mobiles. Par conséquent, si un utilisateur consent à utiliser votre application, il n’aura pas à s’accorder à nouveau un consentement sur un autre appareil : il se connectera automatiquement. De plus, nous récupérons votre jeton d’accès pour améliorer les performances et les temps de chargement.
+Les utilisateurs se connectent à Microsoft teams par le biais de leurs comptes professionnels, scolaires ou Microsoft (Office 365, Outlook, etc.). Vous pouvez en tirer parti en autorisant une authentification unique pour autoriser l’utilisation de votre onglet Microsoft Teams (ou module tâches) sur des clients de bureau ou mobiles. Par conséquent, si un utilisateur consent à utiliser votre application, il n’aura pas à s’accorder à nouveau un consentement sur un autre appareil, il sera automatiquement connecté. De plus, nous récupérons votre jeton d’accès pour améliorer les performances et les temps de chargement.
 
 >[!NOTE]
 > **Versions du client mobile teams prenant en charge SSO**  
 >
 > ✔ Teams pour Android (1416/1.0.0.2020073101 et versions ultérieures)
 >
-> ✔ Teams pour iOS (_version_: 2.0.18 et versions ultérieures)  
+> ✔ Teams pour iOS ( _version_ : 2.0.18 et versions ultérieures)  
 >
 > Pour une expérience optimale avec Teams, utilisez la dernière version d’iOS et Android.
 
@@ -52,7 +52,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
 1. Obtenir l' [ID de votre application Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison Azure AD et, éventuellement, Microsoft Graph.
 3. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour les applications de bureau, Web et mobiles Teams.
-4. Pré-autoriser teams en sélectionnant le bouton **Ajouter une étendue** et dans le panneau qui s’ouvre, entrez `access_as_user` comme **nom d’étendue**.
+4. Pré-autoriser teams en sélectionnant le bouton **Ajouter une étendue** et dans le panneau qui s’ouvre, entrez `access_as_user` comme **nom d’étendue** .
 
 > [!NOTE]
 > Vous devez tenir compte de certaines restrictions importantes :
@@ -65,32 +65,32 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
 #### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Enregistrement approfondi de votre application via le portail Azure Active Directory :
 
 1. Enregistrez une nouvelle application dans le portail [Azure Active Directory-inscriptions des applications](https://go.microsoft.com/fwlink/?linkid=2083908) .
-2. Sélectionnez **nouvelle inscription** et, dans la *page inscrire une application*, définissez les valeurs suivantes :
+2. Sélectionnez **nouvelle inscription** et, dans la *page inscrire une application* , définissez les valeurs suivantes :
     * Définissez **Name** sur le nom de votre application.
     * Choisissez les **types de comptes pris en charge** (tout type de compte fonctionne) ¹
     * Laissez **Redirect URI** vide.
-    * Choisissez **Inscrire**.
-3. Sur la page vue d’ensemble, copiez et enregistrez l’ID de l' **application (client)**. Vous en aurez besoin plus tard lors de la mise à jour de votre manifeste d’application Teams.
-4. Sélectionnez **Exposer une API** sous **Gérer**. 
+    * Choisissez **Inscrire** .
+3. Sur la page vue d’ensemble, copiez et enregistrez l’ID de l' **application (client)** . Vous en aurez besoin plus tard lors de la mise à jour de votre manifeste d’application Teams.
+4. Sélectionnez **Exposer une API** sous **Gérer** . 
 5. Sélectionnez le lien **définir** pour générer l’URI de l’ID de l’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet (avec une barre oblique « / » ajoutée à la fin) entre les deux barres obliques et le GUID. L’ID entier doit avoir la forme suivante : `api://fully-qualified-domain-name.com/{AppID}` ²
     * ex : `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
     
     Le nom de domaine complet est le nom de domaine lisible par l’utilisateur à partir duquel votre application est fournie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok est modifié. 
-6. Sélectionnez le bouton **Ajouter une étendue**. Dans le volet qui s’ouvre, entrez `access_as_user` en tant que **nom de l’étendue**.
+6. Sélectionnez le bouton **Ajouter une étendue** . Dans le volet qui s’ouvre, entrez `access_as_user` en tant que **nom de l’étendue** .
 7. Définir **qui peut consentir ?**`Admins and users`
 8. Renseignez les champs de configuration des invites d’administrateur et de consentement de l’utilisateur avec des valeurs appropriées pour l' `access_as_user` étendue :
     * **Titre du consentement administratif :** Les équipes peuvent accéder au profil de l’utilisateur.
-    * **Description du consentement administratif**: permet à teams d’appeler les API Web de l’application en tant qu’utilisateur actuel.
-    * **Titre du consentement**de l’utilisateur : teams peut accéder au profil utilisateur et faire des demandes au nom de l’utilisateur.
+    * **Description du consentement administratif** : permet à teams d’appeler les API Web de l’application en tant qu’utilisateur actuel.
+    * **Titre du consentement** de l’utilisateur : teams peut accéder au profil utilisateur et faire des demandes au nom de l’utilisateur.
     * **Description du consentement de l’utilisateur :** Permettre aux équipes d’appeler les API de cette application avec les mêmes droits que l’utilisateur.
 9. Vérifiez que l' **État** est défini sur **activé** .
 10. Sélectionnez le bouton **Ajouter une étendue** à enregistrer. 
     * La partie domaine du **nom d’étendue** affiché juste en dessous du champ de texte doit correspondre automatiquement à l’URI d' **ID d’application** défini à l’étape précédente, avec `/access_as_user` ajouté à la fin :
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. Dans la section **applications clientes autorisées** , identifiez les applications que vous souhaitez autoriser pour l’application Web de votre application. Sélectionnez *Ajouter une application cliente*. Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
+11. Dans la section **applications clientes autorisées** , identifiez les applications que vous souhaitez autoriser pour l’application Web de votre application. Sélectionnez *Ajouter une application cliente* . Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Team mobile/application de bureau)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Application Web Teams)
-12. Accédez à **autorisations d’API**. Sélectionnez *Ajouter une autorisation délégation de*  >  *Microsoft Graph*  >  *autorisations*, puis ajoutez les autorisations suivantes :
+12. Accédez à **autorisations d’API** . Sélectionnez *Ajouter une autorisation délégation de*  >  *Microsoft Graph*  >  *autorisations* , puis ajoutez les autorisations suivantes :
     * User. Read (activé par défaut)
     * email
     * offline_access
@@ -102,15 +102,15 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
     Si une application n’a pas reçu le consentement de l’administrateur informatique, les utilisateurs devront fournir un consentement lors de la première utilisation d’une application.
 
     Définissez un URI de redirection :
-    * Sélectionnez **Ajouter une plateforme**.
-    * Sélectionnez **Web**.
+    * Sélectionnez **Ajouter une plateforme** .
+    * Sélectionnez **Web** .
     * Entrez l' **URI de redirection** pour votre application. Il s’agit de la page dans laquelle un flux d’octroi implicite réussit la redirection de l’utilisateur. Il s’agit du même nom de domaine complet que celui que vous avez entré à l’étape 5, suivi de l’itinéraire de l’API à partir duquel une réponse d’authentification doit être envoyée. Si vous configurez l’un des exemples de teams, voici ce qui suit : `https://subdomain.example.com/auth-end`
 
     Ensuite, activez l’octroi implicite en cochant les cases suivantes :  
     Jeton d’ID ✔  
     Jeton d’accès ✔  
     
-Félicitations ! Vous avez terminé le prerequsities d’inscription de l’application pour poursuivre l’application d’authentification unique de votre onglet.     
+Félicitations ! Vous avez terminé les conditions préalables à l’inscription de l’application pour poursuivre votre application d’authentification unique de tabulation.     
 
 > [!NOTE]
 >

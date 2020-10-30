@@ -1,13 +1,13 @@
 ---
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
-keywords: instructions de conception de l’infrastructure de référence
-ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+keywords: instructions de conception teams-onglets de l’infrastructure de référence
+ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819038"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796210"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -59,9 +59,9 @@ Il existe des défis de navigation inhérents à la hiérarchie de navigation pr
 
 > [!div class="checklist"]
 >
-> * **Ouvre un module de tâche, tel qu’un élément de travail ou une entité spécifique**. Cela exclut la conversation et est la meilleure option pour conserver la conversation en particulier sur l’onglet et non sur les sous-entités ou les expériences de modification.
->* **Ouvre une Pseudo boîte de dialogue dans un IFRAME**. Si elle est utilisée avec un arrière-plan filtré, nous vous recommandons d’utiliser la couleur la plus claire plutôt que l’obscurité. La `app-gray-10 at 30%` transparence fonctionne bien.
->* **Ouvre une page de navigateur**.
+> * **Ouvre un module de tâche, tel qu’un élément de travail ou une entité spécifique** . Cela exclut la conversation et est la meilleure option pour conserver la conversation en particulier sur l’onglet et non sur les sous-entités ou les expériences de modification.
+>* **Ouvre une Pseudo boîte de dialogue dans un IFRAME** . Si elle est utilisée avec un arrière-plan filtré, nous vous recommandons d’utiliser la couleur la plus claire plutôt que l’obscurité. La `app-gray-10 at 30%` transparence fonctionne bien.
+>* **Ouvre une page de navigateur** .
 
 ### <a name="personality"></a>Caractéristique
 
@@ -75,7 +75,7 @@ Votre zone de dessin de tabulation constitue une excellente occasion de personna
 L’incorporation de vos propres couleurs et dispositions twill facilite également la communication de la personnalité.
 
 > [!TIP]
-> Utilisez notre style visuel pour que votre service ressemble à une partie de teams. *Voir*, par exemple, les [couleurs de teams](../../concepts/design/components/color.md)
+> Utilisez notre style visuel pour que votre service ressemble à une partie de teams. *Voir* , par exemple, les [couleurs de teams](../../concepts/design/components/color.md)
 
 ---
 
@@ -136,7 +136,7 @@ Il existe deux modes de notification pour les modifications apportées au conten
 
 > [!div class="checklist"]
 >
-> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Utiliser un bot**. Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
+> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications** . Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+> * **Utiliser un bot** . Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
 
   L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous avez `@mention`  des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.

@@ -4,20 +4,20 @@ author: clearab
 description: Découvrez comment les webhooks et les connecteurs peuvent connecter vos services Web au client Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2be6f82bba0efe05a22a8da9da0acc1e0ad6fa00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6a2453cb7d0c2d55a8df938849313f47702e5585
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673528"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796371"
 ---
 # <a name="what-are-webhooks-and-connectors"></a>Qu’est-ce qu’un webhooks et un connecteur ?
 
-Les webhooks et les connecteurs sont un moyen simple de connecter vos services Web à des canaux et à des équipes internes à Microsoft Teams. 
+Les webhooks et les connecteurs vous permettent de connecter facilement vos services web à des canaux et équipes au sein de Microsoft Teams. 
 
 ## <a name="outgoing-webhooks"></a>Webhooks sortants
 
-Les webhooks sortants permettent à vos utilisateurs d’envoyer des messages texte à partir d’un canal vers vos services Web. Une fois configurés, vos utilisateurs pourront @mention votre webhook sortant et envoyer un message à votre service. Votre service disposera de cinq secondes pour envoyer une réponse au message, contenant éventuellement du texte ou une carte.
+Les webhooks sortants permettent à vos utilisateurs d’envoyer des messages texte d’un canal vers vos services web. Une fois configurés, vos utilisateurs pourront @mention votre webhook sortant et envoyer un message à votre service. Votre service disposera de cinq secondes pour envoyer une réponse au message, contenant éventuellement du texte ou une carte.
 
 Les webhooks sortants sont configurés au niveau de chaque équipe, et ne peuvent pas être inclus dans une application teams normale. Elles conviennent mieux à la réalisation de charges de travail spécifiques à l’équipe qui ne nécessitent pas de grandes quantités d’informations à collecter ou à échanger.
 
@@ -25,7 +25,7 @@ Consultez la rubrique [créer un webhook sortant](~/webhooks-and-connectors/how-
 
 ## <a name="connectors"></a>Connecteurs
 
-Les connecteurs permettent aux utilisateurs de s’abonner pour recevoir des notifications et des messages de vos services Web. Ils exposent un point de terminaison HTTPs pour votre service pour publier des messages, généralement sous la forme de cartes.
+Les connecteurs permettent aux utilisateurs de s’abonner pour recevoir les notifications et les messages de vos services web. Ils exposent un point de terminaison HTTPs pour votre service pour publier des messages, généralement sous la forme de cartes.
 
 ### <a name="incoming-webhooks"></a>Webhooks entrants
 

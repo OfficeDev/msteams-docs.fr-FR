@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Applications teams validation de la plupart des cas de test ayant échoué AppSource publier
-ms.openlocfilehash: 97130f7b943fb95b76356aa853e2fddd55d69a83
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465935"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796336"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -60,9 +60,9 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 
 ### <a name="9989-response-times-must-be-reasonable"></a>Les temps de réponse &#9989; doivent être raisonnables
 
-* **Onglets**. Si une réponse à une action prend plus de trois secondes, vous devez fournir un message de chargement ou un avertissement.
-* **Robots**. Une réponse à une commande utilisateur doit se produire dans les deux secondes. Si un traitement plus long est requis, votre application doit afficher un indicateur de saisie.
-* **Extensions de composition**. Une réponse à une commande utilisateur doit se produire dans les cinq secondes.
+* **Onglets** . Si une réponse à une action prend plus de trois secondes, vous devez fournir un message de chargement ou un avertissement.
+* **Robots** . Une réponse à une commande utilisateur doit se produire dans les deux secondes. Si un traitement plus long est requis, votre application doit afficher un indicateur de saisie.
+* **Extensions de composition** . Une réponse à une commande utilisateur doit se produire dans les cinq secondes.
 
 > [!TIP]
 > Assurez-vous que votre application affiche un indicateur de chargement ou une forme d’avertissement lorsque votre application prend plus de temps que prévu.
@@ -75,6 +75,8 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 ![Affichage de l’onglet SharePoint](~/assets/images/faq/tab-sp.png)
 
 * Les tabulations doivent être claires et ne pas inclure une navigation complexe.
+* Les onglets ne doivent pas présenter de barre d’application avec des icônes qui entrent en conflit avec la navigation principale de teams.
+* Les onglets disposant de fonctionnalités d’édition complexes dans l’application doivent ouvrir le mode éditeur dans plusieurs Windows plutôt que dans l’onglet.
 * S’il existe plusieurs options d’affichage, vous pouvez choisir d’utiliser un menu de configuration d’onglet pour l’utilisateur. Par exemple, au lieu d’incorporer un menu à l’intérieur de l’onglet, placez le menu dans la page de configuration de sorte que la vue réelle de l’onglet soit propre et centrée.
 
 ![Page de configuration de l’idée large](~/assets/images/faq/wideidea.png)
@@ -100,20 +102,20 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 
 Votre robot doit répondre à n’importe quelle commande et ne pas être inactif. Voici quelques conseils pour aider votre robot à répondre intelligemment aux utilisateurs :
 
-* **Utilisez des listes de commandes**. L’analyse de l’entrée utilisateur ou la prévision de l’intention de l’utilisateur est difficile. Au lieu de laisser les utilisateurs deviner ce que votre robot peut faire, fournissez une liste de commandes compréhensibles par votre robot.
+* **Utilisez des listes de commandes** . L’analyse de l’entrée utilisateur ou la prévision de l’intention de l’utilisateur est difficile. Au lieu de laisser les utilisateurs deviner ce que votre robot peut faire, fournissez une liste de commandes compréhensibles par votre robot.
 
 ![Liste de commandes de flux](~/assets/images/faq/flow-bot.png)
 
-* **Inclut une commande aide**. Les utilisateurs sont susceptibles de taper « aide » lorsqu’ils sont perdus ou lorsque votre bot ne répond pas comme prévu. Incluez une commande help qui décrit comment la valeur de votre application sera utilisée avec toutes les commandes valides.
+* **Inclut une commande aide** . Les utilisateurs sont susceptibles de taper « aide » lorsqu’ils sont perdus ou lorsque votre bot ne répond pas comme prévu. Incluez une commande help qui décrit comment la valeur de votre application sera utilisée avec toutes les commandes valides.
 
 ![Commande d’aide au flux](~/assets/images/faq/flow-help.png)
 
-* **Inclure le contenu de l’aide ou des conseils en cas de perte de votre bot**. Lorsque votre bot ne peut pas comprendre la saisie de l’utilisateur, elle doit suggérer une autre action. Par exemple, *«je suis désolée, je ne comprends pas. Tapez « aide » pour plus d’informations.* Ne répondez pas avec un message d’erreur ou simplement, *« je ne comprends pas »*. Utilisez cette chance pour enseigner vos utilisateurs.
+* **Inclure le contenu de l’aide ou des conseils en cas de perte de votre bot** . Lorsque votre bot ne peut pas comprendre la saisie de l’utilisateur, elle doit suggérer une autre action. Par exemple, *«je suis désolée, je ne comprends pas. Tapez « aide » pour plus d’informations.* Ne répondez pas avec un message d’erreur ou simplement, *« je ne comprends pas »* . Utilisez cette chance pour enseigner vos utilisateurs.
 
 * **Utilisation de cartes adaptatives et de modules de tâches pour que la réponse de votre bot soit claire et exploitable** 
  [Des cartes adaptatives avec des boutons appelant des modules de tâches](/task-modules-and-cards/task-modules/task-modules-bots) améliorent l’expérience utilisateur du robot. Ces cartes et boutons sont plus faciles à utiliser dans un appareil mobile que si votre utilisateur tape les commandes.
 
-* **Examinez toutes les étendues**. Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
+* **Examinez toutes les étendues** . Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
 
 ### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; les robots personnels doivent envoyer un message de bienvenue lors du premier lancement
 
@@ -136,19 +138,19 @@ Un message de bienvenue est le meilleur moyen de définir la tonalité pour votr
 
 #### <a name="avoid-welcome-message-spamming"></a>Éviter le courrier indésirable des messages de bienvenue
 
-* **Canal message par robot**. Ne pas échanger des courriers indésirables en créant des billets de conversation distincts. Créez un billet de thread unique avec des réponses dans le même thread.
-* **Conversation personnelle par robot**. N’envoyez pas plusieurs messages. Envoyer un message avec des informations complètes.
+* **Canal message par robot** . Ne pas échanger des courriers indésirables en créant des billets de conversation distincts. Créez un billet de thread unique avec des réponses dans le même thread.
+* **Conversation personnelle par robot** . N’envoyez pas plusieurs messages. Envoyer un message avec des informations complètes.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Messages d’accueil des robots uniquement
 
-Les robots de notification uniquement doivent envoyer un message de bienvenue comprenant un message indiquant *« je suis un robot de notification uniquement et ne pourra pas répondre à vos conversations »*.
+Les robots de notification uniquement doivent envoyer un message de bienvenue comprenant un message indiquant *« je suis un robot de notification uniquement et ne pourra pas répondre à vos conversations »* .
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Messages de bienvenue dans l’étendue personnelle
 
-* **Rendez vos messages concis et instructifs**.  Il est très probable que l’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou n’a rien à faire sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
+* **Rendez vos messages concis et instructifs** .  Il est très probable que l’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou n’a rien à faire sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
 ![Café et robot dinning](~/assets/images/faq/cafe-bot.png)
 
-* **Rendez votre message exploitable**. Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »*, *« Voici ce que je peux faire.*.. ».
+* **Rendez votre message exploitable** . Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »* , *« Voici ce que je peux faire.* .. ».
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe/du canal
 

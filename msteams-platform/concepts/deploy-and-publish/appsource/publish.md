@@ -2,12 +2,12 @@
 title: Guide du processus de soumission d’approbation d’application Microsoft teams
 description: Décrit le processus d’approbation d’envoi pour l’obtention de votre application publiée dans le magasin d’applications Microsoft teams
 keywords: teams publier le magasin Office Publishing Publish AppSource Partner Verification Account Verification Apps compte ne pas publier éligible
-ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 2879717aebd9d295cdf37cc0371b68f5f695b86b
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465928"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796308"
 ---
 # <a name="submit-your-app-to-appsource"></a>Envoi de votre application à AppSource
 
@@ -16,7 +16,8 @@ ms.locfileid: "48465928"
 La publication de votre application dans [AppSource](https://appsource.microsoft.com) le rend disponible dans le catalogue d’applications de teams et sur le Web. À un niveau élevé, le processus d’envoi de votre application à AppSource est le suivant :
 
 1. Développez votre application en suivant nos [instructions de conception](~/concepts/design/understand-use-cases.md). Les onglets doivent suivre [les instructions de conception d’onglet](~/tabs/design/tabs.md). Les robots doivent suivre les [instructions de conception de robot](~/bots/design/bots.md).
-1. Assurez-vous que votre application remplit les [stratégies de validation](/legal/marketplace/certification-policies) d’application pour Microsoft Teams.
+1. Assurez-vous que votre application remplit les [stratégies de validation](/legal/marketplace/certification-policies) d’application pour Microsoft Teams. 
+1. Testez votre application à l’aide de l' [outil de validation de manifeste](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool) .
 1. [Configurez un compte de développeur dans le](/office/dev/store/open-a-developer-account) [Centre de partenaires](https://support.microsoft.com/help/4499930/partner-center-overview). *Voir aussi* [comment créer un compte de centre partenaire](#how-do-i-create-a-partner-center-account) dans la section Forum aux questions, ci-dessous.
 1. Préparez votre application pour l’envoi en suivant notre [liste de vérification de soumission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 1. Consultez nos [conseils pour obtenir la soumission d’une application réussie](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
@@ -84,7 +85,7 @@ Une fois le processus de vérification terminé, l’état de vérification de v
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>Mon état de vérification de compte n’a pas avancé au-delà de la propriété de messagerie dans le centre de partenaires. Comment procéder ?
 
-Pendant le processus de vérification de la **propriété de messagerie** , un message électronique de vérification est envoyé à l’adresse de messagerie du contact principal. Consultez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@<span>Microsoft</span>. com** en fonction de la ligne d’objet *requise : Vérifiez votre compte de messagerie auprès de Microsoft*, en vous demandant d’effectuer le processus de vérification du courrier électronique. Le message électronique de vérification sera envoyé à l’adresse de messagerie indiquée dans la page Paramètres de votre compte dans le centre de partenaires.
+Pendant le processus de vérification de la **propriété de messagerie** , un message électronique de vérification est envoyé à l’adresse de messagerie du contact principal. Consultez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@ <span>Microsoft</span>. com** en fonction de la ligne d’objet *requise : Vérifiez votre compte de messagerie auprès de Microsoft* , en vous demandant d’effectuer le processus de vérification du courrier électronique. Le message électronique de vérification sera envoyé à l’adresse de messagerie indiquée dans la page Paramètres de votre compte dans le centre de partenaires.
 
 > [!NOTE]
  >Le lien de vérification de la messagerie n’est valide que pendant 7 jours. Vous pouvez demander à ce que nous puissions vous renvoyer le courrier électronique en visitant votre page de profil partenaire et en sélectionnant le lien **renvoyer le message électronique de vérification** . Pour vous assurer que le courrier électronique est reçu, un message de liste d’adresses de messagerie provenant d’microsoft.com en tant que domaine sécurisé et vérifiez vos dossiers de courrier indésirable.
@@ -101,7 +102,7 @@ Procédez comme suit :
 1. Effacez le cache du navigateur, accédez à votre tableau de bord du compte centre partenaire, puis sélectionnez le lien **renvoyer le message électronique de vérification** pour renvoyer le message électronique de vérification à votre adresse de messagerie.
 1. Essayez d’accéder au lien  **renvoyer la messagerie de vérification** à partir d’un autre navigateur.
 1. Collaborez avec votre service informatique pour vous assurer que les e-mails de vérification ne sont pas bloqués par le serveur de messagerie.
-1. Réglez le filtre de courrier indésirable de votre serveur pour autoriser/safelir tous les messages électroniques provenant d' **maccount@microsoft. <span></span> com**.
+1. Réglez le filtre de courrier indésirable de votre serveur pour autoriser/safelir tous les messages électroniques provenant d' **maccount@microsoft. <span></span> com** .
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>Combien de temps dure le processus de vérification de l’emploi ?
 
@@ -123,7 +124,7 @@ Pour plus d’informations, reportez-vous à notre documentation sur le [marché
 
 Envoyez un courrier électronique **<teamsubm@microsoft.com>** avec les informations suivantes :
 
-1. **Ligne d’objet**. *Problème de compte du centre partenaire pour <App_Name>* (spécifiez le nom de votre application).
+1. **Ligne d’objet** . *Problème de compte du centre partenaire pour <App_Name>* (spécifiez le nom de votre application).
 1. **Corps du message :**
     * Numéro de ticket d’assistance :
     * Votre IDENTIFIant vendeur :
