@@ -5,18 +5,18 @@ description: Créez rapidement une extension de messagerie Microsoft teams à l�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 68f2bf7c71182499dc8f6f50e03ea3d97f03ded2
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452833"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877080"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Créer une extension de messagerie pour Microsoft teams
 
-Il existe deux types d' *extensions de messagerie*teams : [commandes de recherche](../messaging-extensions/how-to/search-commands/define-search-command.md) et commandes d' [action](../messaging-extensions/how-to/action-commands/define-action-command.md).
+Il existe deux types d' *extensions de messagerie* teams : [commandes de recherche](../messaging-extensions/how-to/search-commands/define-search-command.md) et commandes d' [action](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
-Dans cette leçon, vous allez créer une *commande de recherche* (également appelée *extension de messagerie basée sur la recherche*), qui est un raccourci permettant de trouver du contenu externe et de le partager dans Teams. Les utilisateurs peuvent accéder aux commandes de recherche à partir de la [zone de composition ou de commande teams](../messaging-extensions/what-are-messaging-extensions.md).
+Dans cette leçon, vous allez créer une *commande de recherche* (également appelée *extension de messagerie basée sur la recherche* ), qui est un raccourci permettant de trouver du contenu externe et de le partager dans Teams. Les utilisateurs peuvent accéder aux commandes de recherche à partir de la [zone de composition ou de commande teams](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="your-assignment"></a>Votre affectation
 
@@ -164,7 +164,7 @@ Une fois que votre extension de messagerie est en cours d’exécution, vous pou
 > Si vous n’avez pas versions test chargées une application teams avant et rencontrez des problèmes, suivez ces [instructions](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams).
 
 1. Connectez-vous au client teams avec votre compte qui autorise l’application chargement.
-1. Sélectionnez **applications**, puis **Télécharger une application personnalisée**.
+1. Sélectionnez **applications** , puis **Télécharger une application personnalisée**.
 1. Accédez à votre dossier de projet d’application `.publish` et sélectionnez `Development.zip` .
 1. Dans la fenêtre installation modale, sélectionnez **Ajouter** pour installer votre application.
 
@@ -172,16 +172,15 @@ Une fois que votre extension de messagerie est en cours d’exécution, vous pou
 
 Découvrez comment fonctionnent les extensions de messagerie dans une conversation Teams.
 
-1. Démarrez une nouvelle conversation. Dans la zone de composition, sélectionnez **plus** , :::image type="icon" source="../assets/icons/teams-client-more.png"::: puis choisissez l’application de l’extension de messagerie que vous venez de versions test chargées.<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Illustration illustrant comment, dans Team Toolkit, connectez-vous à votre compte Microsoft 365 afin de créer un nouveau bot pour votre extension de messagerie.":::
+1. Démarrez une nouvelle conversation. Dans la zone de composition, sélectionnez **plus** , :::image type="icon" source="../assets/icons/teams-client-more.png"::: puis choisissez l’application de l’extension de messagerie que vous venez de versions test chargées.
 1. Essayez de rechercher un article (par exemple, « tickets »). Si votre application fonctionne, vous verrez des exemples de résultats de recherche (vous pouvez ajouter votre propre version ultérieure).<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Illustration illustrant comment, dans Team Toolkit, connectez-vous à votre compte Microsoft 365 afin de créer un nouveau bot pour votre extension de messagerie.":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Capture d’écran illustrant l’utilisation d’une extension de messagerie basée sur la recherche dans la zone de composition de teams.":::
 
 ## <a name="well-done"></a>Bien jouer
 
 Félicitations ! Vous disposez d’une extension de messagerie teams de base qui est configurée pour rechercher du contenu externe dans la zone de composition ou de commande.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 Consultez les pages suivantes pour continuer et créer une extension de messagerie complète :
 
@@ -203,11 +202,11 @@ Il peut s’agir d’un problème d’authentification. Procédez comme suit pou
 
 ### <a name="bot-isnt-connected-to-teams"></a>Le bot n’est pas connecté à teams
 
-Si vous avez installé votre application, mais qu’elle ne fonctionne pas, vérifiez que le robot de l’extension de messagerie est [connecté au *canal*teams du service Azure bot](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
+Si vous avez installé votre application, mais qu’elle ne fonctionne pas, vérifiez que le robot de l’extension de messagerie est [connecté au *canal* teams du service Azure bot](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
 
 Il est important de comprendre qu’il ne s’agit pas d’un canal dans Teams. Dans ce cas, un canal indique comment le service Azure bot connecte votre robot à teams ou une autre [application de communication Microsoft ou tierce prise en charge](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 * [Inclure une fonctionnalité de unfurling de liens](../messaging-extensions/how-to/link-unfurling.md)
 * [Ajouter une authentification](../messaging-extensions/how-to/add-authentication.md)

@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Applications teams validation de la plupart des cas de test ayant échoué AppSource publier
-ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796336"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877070"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -19,7 +19,7 @@ Cet article aborde les principales raisons d’échec de validation des applicat
 >[!NOTE]
 >La **[section 1140](/legal/marketplace/certification-policies#1140-teams)** est spécifique à Microsoft teams et à la **[sous-section 1140,4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** traite des fonctionnalités requises pour les applications Teams.
 
-## <a name="validation-guidelines"></a>Instructions de validation
+## <a name="validation-guidelines--most-failed-test-cases"></a>Instructions de validation & la plupart des cas de test ayant échoué
 
 ### <a name="9989-general-considerations"></a>Considérations d’ordre général sur les &#9989;
 
@@ -31,6 +31,7 @@ Cet article aborde les principales raisons d’échec de validation des applicat
 * Votre application ne doit pas télécharger, installer ou lancer automatiquement un code exécutable dans l’environnement de l’utilisateur. Tous les téléchargements doivent demander une autorisation explicite à l’utilisateur.
 * Tous les éléments que vous associez à votre expérience, tels que les descriptions et la documentation de support, doivent être précis. Utilisez correctement l'orthographe, les majuscules, la ponctuation et la grammaire.
 * Fournir des informations d’aide et de support. Il est vivement recommandé que votre application comprenne un lien Aide/FAQ pour l’expérience utilisateur de première exécution. Pour toutes les applications personnelles, nous vous recommandons de fournir votre page d’aide sous la forme d’un onglet personnel pour une meilleure expérience utilisateur.
+* Les applications ne doivent pas retirer l’utilisateur de teams pour les scénarios d’utilisateur de base. L’utilisation des onglets des modules de tâches AMD est recommandée pour afficher des informations à l’utilisateur dans Teams.
 * Incrémentez le numéro de version de votre application dans le manifeste si vous effectuez des modifications de manifeste de votre envoi.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fournir une expérience de connexion/déconnexion claire et simple d’accès
@@ -60,9 +61,9 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 
 ### <a name="9989-response-times-must-be-reasonable"></a>Les temps de réponse &#9989; doivent être raisonnables
 
-* **Onglets** . Si une réponse à une action prend plus de trois secondes, vous devez fournir un message de chargement ou un avertissement.
-* **Robots** . Une réponse à une commande utilisateur doit se produire dans les deux secondes. Si un traitement plus long est requis, votre application doit afficher un indicateur de saisie.
-* **Extensions de composition** . Une réponse à une commande utilisateur doit se produire dans les cinq secondes.
+* **Onglets**. Si une réponse à une action prend plus de trois secondes, vous devez fournir un message de chargement ou un avertissement.
+* **Robots**. Une réponse à une commande utilisateur doit se produire dans les deux secondes. Si un traitement plus long est requis, votre application doit afficher un indicateur de saisie.
+* **Extensions de composition**. Une réponse à une commande utilisateur doit se produire dans les cinq secondes.
 
 > [!TIP]
 > Assurez-vous que votre application affiche un indicateur de chargement ou une forme d’avertissement lorsque votre application prend plus de temps que prévu.
@@ -102,24 +103,25 @@ Pour plus d’informations sur l’authentification, consultez la rubrique suiva
 
 Votre robot doit répondre à n’importe quelle commande et ne pas être inactif. Voici quelques conseils pour aider votre robot à répondre intelligemment aux utilisateurs :
 
-* **Utilisez des listes de commandes** . L’analyse de l’entrée utilisateur ou la prévision de l’intention de l’utilisateur est difficile. Au lieu de laisser les utilisateurs deviner ce que votre robot peut faire, fournissez une liste de commandes compréhensibles par votre robot.
+* **Utilisez des listes de commandes**. L’analyse de l’entrée utilisateur ou la prévision de l’intention de l’utilisateur est difficile. Au lieu de laisser les utilisateurs deviner ce que votre robot peut faire, fournissez une liste de commandes compréhensibles par votre robot.
 
 ![Liste de commandes de flux](~/assets/images/faq/flow-bot.png)
 
-* **Inclut une commande aide** . Les utilisateurs sont susceptibles de taper « aide » lorsqu’ils sont perdus ou lorsque votre bot ne répond pas comme prévu. Incluez une commande help qui décrit comment la valeur de votre application sera utilisée avec toutes les commandes valides.
+* **Inclut une commande aide**. Les utilisateurs sont susceptibles de taper « aide » lorsqu’ils sont perdus ou lorsque votre bot ne répond pas comme prévu. Incluez une commande help qui décrit comment la valeur de votre application sera utilisée avec toutes les commandes valides.
 
 ![Commande d’aide au flux](~/assets/images/faq/flow-help.png)
 
-* **Inclure le contenu de l’aide ou des conseils en cas de perte de votre bot** . Lorsque votre bot ne peut pas comprendre la saisie de l’utilisateur, elle doit suggérer une autre action. Par exemple, *«je suis désolée, je ne comprends pas. Tapez « aide » pour plus d’informations.* Ne répondez pas avec un message d’erreur ou simplement, *« je ne comprends pas »* . Utilisez cette chance pour enseigner vos utilisateurs.
+* **Inclure le contenu de l’aide ou des conseils en cas de perte de votre bot**. Lorsque votre bot ne peut pas comprendre la saisie de l’utilisateur, elle doit suggérer une autre action. Par exemple, *«je suis désolée, je ne comprends pas. Tapez « aide » pour plus d’informations.* Ne répondez pas avec un message d’erreur ou simplement, *« je ne comprends pas »*. Utilisez cette chance pour enseigner vos utilisateurs.
 
 * **Utilisation de cartes adaptatives et de modules de tâches pour que la réponse de votre bot soit claire et exploitable** 
  [Des cartes adaptatives avec des boutons appelant des modules de tâches](/task-modules-and-cards/task-modules/task-modules-bots) améliorent l’expérience utilisateur du robot. Ces cartes et boutons sont plus faciles à utiliser dans un appareil mobile que si votre utilisateur tape les commandes.
 
-* **Examinez toutes les étendues** . Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
+* **Examinez toutes les étendues**. Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
 
-### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; les robots personnels doivent envoyer un message de bienvenue lors du premier lancement
+### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; les robots personnels doivent toujours envoyer un message de bienvenue lors du premier lancement
 
 Un message de bienvenue est le meilleur moyen de définir la tonalité pour votre robot personnel/de conversation. Il s’agit de la première interaction d’un utilisateur avec le bot. Un message de bienvenue peut inciter l’utilisateur à continuer à explorer l’application. Si le message de bienvenue ou d’introduction est confus ou non clair, les utilisateurs ne verront pas immédiatement la valeur de l’application et perdront des intérêts.
+Consultez la section ci-dessous pour connaître les conditions requises pour les messages d’accueil.
 
 > [!Note]
 > Un message de bienvenue est facultatif pour un robot de canal.
@@ -127,34 +129,54 @@ Un message de bienvenue est le meilleur moyen de définir la tonalité pour votr
 ### <a name="welcome-message-requirements"></a>Conditions requises pour les messages d’accueil
 
 * Incluez une proposition de valeur dans la visite d’accueil.
-* Fournissez des instructions pour l’utilisation du bot.
+* Fournissez des instructions pour l’utilisation de l’application.
+* Inclure des instructions sur la manière de vous inscrire et de configurer votre application
 * Présenter un texte facile à lire et un dialogue simple, de préférence une carte avec un bouton de présentation de l’accueil actionnable qui charge un module de tâches.
-* Restez simple, évitez la boîte de dialogue de mot/conversation.
+* Restez facile et utilisable avec des boutons et des cartes : Évitez la boîte de dialogue de texte long.
 * Incluez des cartes et des boutons adaptatifs pour faciliter l’utilisation du message de bienvenue.
 * Invoquer le message de bienvenue avec une commande ping, pas deux ou plusieurs pings simultanés.
 * Un message de bienvenue doit uniquement être affiché à l’utilisateur qui a configuré l’application, de préférence dans une conversation personnelle 1:1.
-* Ne jamais envoyer de conversation personnelle à tous les membres de l’équipe.
+* Les applications personnelles doivent toujours fournir un message de bienvenue à un utilisateur.
+* Ne jamais envoyer de conversation personnelle à chaque membre de l’équipe : il s’agit du courrier indésirable.
 * Ne jamais envoyer le message de bienvenue plusieurs fois. Le fait de répéter le même message d’accueil à intervalles réguliers n’est pas autorisé et est considéré comme du courrier indésirable.
 
 #### <a name="avoid-welcome-message-spamming"></a>Éviter le courrier indésirable des messages de bienvenue
 
-* **Canal message par robot** . Ne pas échanger des courriers indésirables en créant des billets de conversation distincts. Créez un billet de thread unique avec des réponses dans le même thread.
-* **Conversation personnelle par robot** . N’envoyez pas plusieurs messages. Envoyer un message avec des informations complètes.
+* **Canal message par robot**. Ne pas échanger des courriers indésirables en créant des billets de conversation distincts. Créez un billet de thread unique avec des réponses dans le même thread.
+* **Conversation personnelle par robot**. N’envoyez pas plusieurs messages. Envoyer un message avec des informations complètes. Le fait de répéter le même message d’accueil à intervalles réguliers n’est pas autorisé et est considéré comme du courrier indésirable.
 
 #### <a name="notification-only-bot-welcome-messages"></a>Messages d’accueil des robots uniquement
 
-Les robots de notification uniquement doivent envoyer un message de bienvenue comprenant un message indiquant *« je suis un robot de notification uniquement et ne pourra pas répondre à vos conversations »* .
+Les robots de notification uniquement doivent envoyer un message de bienvenue comprenant un message indiquant *« je suis un robot de notification uniquement et ne pourra pas répondre à vos conversations »*.
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>Messages de bienvenue dans l’étendue personnelle
 
-* **Rendez vos messages concis et instructifs** .  Il est très probable que l’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou n’a rien à faire sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
+* **Rendez vos messages concis et instructifs**.  Il est très probable que l’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou n’a rien à faire sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
 ![Café et robot dinning](~/assets/images/faq/cafe-bot.png)
 
-* **Rendez votre message exploitable** . Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »* , *« Voici ce que je peux faire.* .. ».
+* **Rendez votre message exploitable**. Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »* , *« Voici ce que je peux faire.*.. ».
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe/du canal
 
 Les choses sont un peu différentes lorsque le bot est d’abord ajouté à un canal. Normalement, vous ne devez pas envoyer un message 1:1 à tous les membres de l’équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
+
+### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; la réactivité mobile, pas de promotion directe ni paiement
+* Vos onglets, cartes adaptatives, messages robots et contenu dans les modules de tâches doivent être réactifs pour les écrans d’appareil mobile varios.
+* Les applications qui prennent en charge iOS doivent être entièrement fonctionnelles sur le dernier appareil iPad à l’aide de la dernière version d’iOS.
+* Ne doit pas inclure de références directes à des achats dans l’application, des offres d’essai, des interfaces utilisateur qui visent à vendre des versions payantes ou des liens vers des magasins en ligne dans lesquels les utilisateurs peuvent acheter ou acquérir du contenu, des applications ou des compléments à partir de votre application de teams sur un système d’exploitation mobile (Android, iOS).
+* La version iOS ou Android du complément ne doit pas afficher l’interface utilisateur ou la langue ni le lien vers les autres applications, compléments ou sites Web qui demandent à l’utilisateur de payer.
+* Les pages stratégie de confidentialité et conditions d’utilisation associées doivent également être dépourvues de liens de l’interface utilisateur ou de la boutique de commerce.
+
+### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; ne publiez pas de données sensibles dans une audience qui n’est pas destinée à afficher les données
+Votre application Teams ne doit pas publier d’informations sensibles telles que l’instrument de paiement par carte de crédit, les informations d’identification personnelle, les informations de suivi d’intégrité ou de contact pour un public non destiné à afficher ces données.
+
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; ne pas transmettre de détails sur les paiements financiers ni effectuer des transactions financières complètes via votre application teams
+* Votre application Teams ne doit pas demander aux utilisateurs d’effectuer un paiement directement dans l’interface teams
+* Il se peut que les applications ne transmettent pas les détails de l’instrument financier via l’interface de l’utilisateur. Les applications peuvent uniquement transmettre des liens vers des services de paiement sécurisés aux utilisateurs si cela est indiqué dans les conditions d’utilisation de l’application, la politique de confidentialité, ainsi que les pages de profil ou le site Web de l’application avant qu’un utilisateur accepte l’utilisation de l’application.
+
+### <a name="9989-clear-warning-before-downloading-any-files-or-exes-into-users-environment"></a>&#9989; avertissement de suppression avant le téléchargement de fichiers ou d’exe dans l’environnement de l’utilisateur
+Avertissez les utilisateurs avant que votre application télécharge des fichiers ou des exe sur l’ordinateur ou l’environnement de l’utilisateur.
+
 
 > [!div class="nextstepaction"]
 > [En savoir plus sur les stratégies d’approbation des applications teams](/legal/marketplace/certification-policies#1140-teams) 
