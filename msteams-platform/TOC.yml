@@ -243,6 +243,8 @@
               href: bots/how-to/authentication/auth-flow-bot.md
             - name: Ajouter une authentification à votre bot
               href: bots/how-to/authentication/add-authentication.md
+            - name: Support de l'identification unique pour les robots
+              href: bots/how-to/authentication/auth-aad-sso-bots.md
         - name: Mettre en forme le message de votre bot
           href: bots/how-to/format-your-bot-messages.md
         - name: Mettre à jour et supprimer des messages de bot
