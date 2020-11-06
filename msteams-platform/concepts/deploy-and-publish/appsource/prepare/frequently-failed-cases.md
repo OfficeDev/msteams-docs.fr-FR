@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Applications teams validation de la plupart des cas de test ayant échoué AppSource publier
-ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 6e3f6e09de68cdb00743c6954b999c35ceefcdf7
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877070"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931805"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -33,6 +33,10 @@ Cet article aborde les principales raisons d’échec de validation des applicat
 * Fournir des informations d’aide et de support. Il est vivement recommandé que votre application comprenne un lien Aide/FAQ pour l’expérience utilisateur de première exécution. Pour toutes les applications personnelles, nous vous recommandons de fournir votre page d’aide sous la forme d’un onglet personnel pour une meilleure expérience utilisateur.
 * Les applications ne doivent pas retirer l’utilisateur de teams pour les scénarios d’utilisateur de base. L’utilisation des onglets des modules de tâches AMD est recommandée pour afficher des informations à l’utilisateur dans Teams.
 * Incrémentez le numéro de version de votre application dans le manifeste si vous effectuez des modifications de manifeste de votre envoi.
+* L’application ne doit pas détenir les utilisateurs de teams pour les scénarios d’utilisateur de base. Les cibles de lien dans les applications ne doivent pas se lier à un navigateur externe, mais doivent être liées à des éléments div contenus dans Teams, par exemple à l’intérieur des onglets et des modules tâches.
+* Les applications personnelles permettent aux utilisateurs de partager du contenu d’une expérience d’application personnelle avec d’autres membres de l’équipe.
+* Les onglets de canal ne doivent pas fournir de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec la navigation principale de teams.
+* Les onglets de canal qui ont des fonctionnalités de modification complexes au sein de l’application doivent ouvrir le mode éditeur dans plusieurs fenêtres plutôt qu’un onglet.
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fournir une expérience de connexion/déconnexion claire et simple d’accès
 
@@ -50,6 +54,7 @@ Cet article aborde les principales raisons d’échec de validation des applicat
   * Autoriser un compte/service => Désautoriser/refuser un compte/service.
   * Inscrire un compte/service => annuler l’inscription/annuler l’abonnement à un compte/service.
 * Si votre application nécessite un compte ou un service, vous devez permettre à l’utilisateur de s’inscrire ou de créer une demande d’abonnement. Une exception peut être accordée si votre application est une application d’entreprise.
+* Assurez-vous que vous fournissez des instructions de transfert clair à un nouvel utilisateur pour vous inscrire afin d’utiliser vos services d’application. Si vous ne disposez pas d’un lien de connexion prêt, vous pouvez le faire dans la page Description de l’application, un message d’accueil, un message d’aide et la fenêtre de connexion dans laquelle vous demandez à un utilisateur de se connecter à vos services. Les applications qui n’ont pas de flux de connexion facile peuvent également inclure un onglet d’aide ou un lien vers une page Web où un nouvel utilisateur peut consulter des instructions détaillées sur la configuration de votre application avec Microsoft Teams.  Cela permet de s’assurer qu’un nouvel utilisateur n’est pas un obstacle lors de la première tentative de votre application.
 * La fonctionnalité de connexion/déconnexion doit fonctionner sur les clients mobiles. Assurez-vous que vous utilisez le [Kit de développement logiciel Microsoft teams](https://www.npmjs.com/package/@microsoft/teams-js) version 1.4.1 ou ultérieure.
 
 Pour plus d’informations sur l’authentification, consultez la rubrique suivante :
@@ -114,9 +119,13 @@ Votre robot doit répondre à n’importe quelle commande et ne pas être inacti
 * **Inclure le contenu de l’aide ou des conseils en cas de perte de votre bot**. Lorsque votre bot ne peut pas comprendre la saisie de l’utilisateur, elle doit suggérer une autre action. Par exemple, *«je suis désolée, je ne comprends pas. Tapez « aide » pour plus d’informations.* Ne répondez pas avec un message d’erreur ou simplement, *« je ne comprends pas »*. Utilisez cette chance pour enseigner vos utilisateurs.
 
 * **Utilisation de cartes adaptatives et de modules de tâches pour que la réponse de votre bot soit claire et exploitable** 
- [Des cartes adaptatives avec des boutons appelant des modules de tâches](/task-modules-and-cards/task-modules/task-modules-bots) améliorent l’expérience utilisateur du robot. Ces cartes et boutons sont plus faciles à utiliser dans un appareil mobile que si votre utilisateur tape les commandes.
+ [Des cartes adaptatives avec des boutons appelant des modules de tâches](/task-modules-and-cards/task-modules/task-modules-bots) améliorent l’expérience utilisateur du robot. Ces cartes et boutons sont plus faciles à utiliser dans un appareil mobile que si votre utilisateur tape les commandes. De même, les réponses de bot ne doivent pas être textuelles avec du texte long. Les robots doivent utiliser des cartes adaptatives & des modules de tâches au lieu de l’interface utilisateur basée sur conversation conversation et des longues réponses texte
 
 * **Examinez toutes les étendues**. Assurez-vous que votre robot fournit les réponses appropriées lorsqu’il est mentionné ( `@*botname*` ) dans un canal et dans les conversations personnelles. Si votre bot ne fournit pas de contexte explicite au sein de l’étendue personnelle ou Teams, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la [Référence du schéma de manifeste de Microsoft teams](~/resources/schema/manifest-schema.md#bots).)
+
+* **Ne pas transmettre les données sensibles**. Les robots ne doivent pas transmettre les données sensibles à une équipe, une conversation de groupe ou une conversation 1:1 où il existe une audience qui ne doit pas être en mesure d’afficher ces données.
+
+* **Fournissez un message de bienvenue**. Le bot doit fournir un message d’accueil FRE incluant un didacticiel interactif avec des cartes de carrousel ou des boutons « essayez » pour encourager l’engagement.
 
 ### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; les robots personnels doivent toujours envoyer un message de bienvenue lors du premier lancement
 

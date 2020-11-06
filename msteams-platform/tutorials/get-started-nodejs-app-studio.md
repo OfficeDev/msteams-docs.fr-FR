@@ -1,18 +1,17 @@
 ---
-title: Prise en main d’App Studio et node. js
-description: Commencer à créer des applications intéressantes dans Microsoft teams à l’aide de node. js et d’App Studio
-keywords: nœud de mise en route. js NodeJS App Studio
-ms.date: 11/09/2018
+title: Prise en main d’App Studio et de Node.js
+description: Commencer à créer des applications intéressantes dans Microsoft teams à l’aide de Node.js et d’App Studio
+keywords: mise en route node.js NodeJS App Studio
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 3d86738d32c049d31a84c6c47746e275db5e6349
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034049"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931812"
 ---
-# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Prise en main de la plateforme Microsoft teams avec node. js et App Studio
+# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Prise en main de la plateforme Microsoft teams avec Node.js et App Studio
 
 La plateforme de développement [Microsoft teams](/microsoftteams/) vous permet d’étendre facilement teams et d’intégrer vos propres applications et services de façon transparente dans l’espace de travail de teams. Ces applications peuvent ensuite être distribuées à votre entreprise ou pour teams dans le monde entier.
 
@@ -33,10 +32,10 @@ Procédez comme suit pour télécharger et héberger une application « Hello W
 Pour effectuer ce didacticiel, vous avez besoin des outils suivants. Si vous ne les avez pas encore installés, vous pouvez les installer à partir de ces liens.
 
 - [Git](https://git-scm.com/downloads)
-- [Node. js et NPM](https://nodejs.org/)
+- [Node.js et NPM](https://nodejs.org/)
 - Obtenir un éditeur de texte ou IDE. Vous pouvez installer et utiliser [Visual Studio code](https://code.visualstudio.com/download) gratuitement.
 
-Si vous voyez des options permettant `git`d' `node`ajouter `npm`,, `code` , et le chemin d’accès pendant l’installation, choisissez de le faire. Il sera pratique.
+Si vous voyez des options permettant d’ajouter `git` ,, `node` `npm` , et `code` le chemin d’accès pendant l’installation, choisissez de le faire. Il sera pratique.
 
 Vérifiez que les outils sont disponibles en exécutant ce qui suit dans une fenêtre de terminal :
 
@@ -54,12 +53,13 @@ $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 4.0.2
+CLI version 2.3.0
+Local version 4.0.2
 ```
 
 Vous disposez peut-être d’une autre version de ces applications. Cela ne doit pas être un problème, à l’exception de Gulp. Pour Gulp, vous devez utiliser la version 4.0.0 ou une version ultérieure.
 
-Si Gulp n’est pas installé (ou si vous n’avez pas installé la version incorrecte) `npm install gulp` , faites-le maintenant en exécutant la fenêtre de votre terminal.
+Si Gulp n’est pas installé (ou si vous n’avez pas installé la version incorrecte), faites-le maintenant en exécutant la `npm install gulp` fenêtre de votre terminal.
 
 Si vous avez installé Visual Studio code, vous pouvez vérifier l’installation en exécutant :
 
@@ -106,7 +106,7 @@ Vous devriez voir une série de dépendances installées. Une fois ces opératio
 npm start
 ```
 
-Lors du démarrage de l’application Hello-World, `App started listening on port 3333` celle-ci s’affiche dans la fenêtre du terminal.
+Lors du démarrage de l’application Hello-World, celle-ci s’affiche `App started listening on port 3333` dans la fenêtre du terminal.
 
 > [!NOTE]
 > Si vous voyez un numéro de port différent affiché dans le message ci-dessus, c’est qu’une variable d’environnement de PORT est définie. Vous pouvez continuer à utiliser ce port ou modifier votre variable d’environnement sur 3333.
@@ -124,7 +124,7 @@ Lors du démarrage de l’application Hello-World, `App started listening on por
 
 N’oubliez pas que les applications dans Microsoft teams sont des applications Web qui exposent une ou plusieurs fonctionnalités. Pour que la plateforme teams charge votre application, votre application doit être accessible à partir d’Internet. Pour permettre à votre application d’être accessible à partir d’Internet, vous devez *héberger* votre application.
 
-Pour les tests locaux, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel à l’aide d’un point de terminaison Web. [ngrok](https://ngrok.com) est un outil gratuit qui vous permet d’effectuer cette opération. Avec *ngrok* , vous pouvez obtenir une adresse Web telle `https://d0ac14a5.ngrok.io` que (cette URL n’est qu’un exemple). Vous pouvez [Télécharger et installer](https://ngrok.com/download) *ngrok* pour votre environnement. Veillez à l’ajouter à un emplacement dans votre `PATH`.
+Pour les tests locaux, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel à l’aide d’un point de terminaison Web. [ngrok](https://ngrok.com) est un outil gratuit qui vous permet d’effectuer cette opération. Avec *ngrok* , vous pouvez obtenir une adresse Web telle que `https://d0ac14a5.ngrok.io` (cette URL n’est qu’un exemple). Vous pouvez [Télécharger et installer](https://ngrok.com/download) *ngrok* pour votre environnement. Veillez à l’ajouter à un emplacement dans votre `PATH` .
 
 Une fois que vous l’avez installé, vous pouvez ouvrir une nouvelle fenêtre de terminal et exécuter la commande suivante pour créer un tunnel. L’exemple utilise le port 3333, veillez donc à le spécifier ici.
 
@@ -195,21 +195,21 @@ NODE_DEBUG vous montrera ce qui se passe dans votre bot dans la console de débo
 NODE_CONFIG_DIR pointe vers le répertoire situé à la racine du référentiel (par défaut, lorsque l’application est exécutée localement, elle la recherche dans le dossier src).
 
 > [!Note]
-> Si vous n’avez pas arrêté NPM de la version antérieure dans le didacticiel, vous devrez `npm stop` exécuter pour que Visual Studio code collecte correctement vos variables de configuration de lancement.
+> Si vous n’avez pas arrêté NPM de la version antérieure dans le didacticiel, vous devrez exécuter pour que `npm stop` Visual Studio code collecte correctement vos variables de configuration de lancement.
 
 <a name="ConfigureTheAppTab"></a>
 
 ## <a name="configure-the-app-tab"></a>Configurer l’onglet application
 
-Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Accédez à un canal de l’équipe et cliquez sur le bouton **« + »** pour ajouter un nouvel onglet. Vous pouvez ensuite choisir `Hello World` dans la liste **Ajouter un onglet** . Une boîte de dialogue de configuration s’affiche. Cette boîte de dialogue vous permet de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet `Save` , puis cliqué sur `Hello World` , vous pouvez voir l’onglet chargé avec l’onglet que vous avez choisi.
+Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Accédez à un canal de l’équipe et cliquez sur le bouton **« + »** pour ajouter un nouvel onglet. Vous pouvez ensuite choisir `Hello World` dans la liste **Ajouter un onglet** . Une boîte de dialogue de configuration s’affiche. Cette boîte de dialogue vous permet de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet, puis cliqué sur, `Save` vous pouvez voir l' `Hello World` onglet chargé avec l’onglet que vous avez choisi.
 
-<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" title="Capture d’écran de la configuration" />
+<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Screenshot of configure" />
 
 ### <a name="test-your-bot-in-teams"></a>Tester votre robot dans teams
 
-Vous pouvez désormais interagir avec le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez enregistré votre application, puis `@your-bot-name`tapez, suivi de votre message. Il s’agit d’une ** \@mention**. Tout message que vous envoyez au bot vous sera renvoyé en tant que réponse.
+Vous pouvez désormais interagir avec le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez enregistré votre application, puis tapez `@your-bot-name` , suivi de votre message. Il s’agit d’une **\@ mention**. Tout message que vous envoyez au bot vous sera renvoyé en tant que réponse.
 
-<img width="450px" title="Réponses de robot" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 <a name="ComposeRichMessages"></a>
 
@@ -217,10 +217,10 @@ Vous pouvez désormais interagir avec le bot dans Teams. Sélectionnez un canal 
 
 Pour tester votre extension de messagerie, vous pouvez cliquer sur les trois points sous la zone d’entrée de votre affichage conversation. Un menu s’affiche avec l’application **« Hello World »** . Lorsque vous cliquez dessus, vous verrez un certain nombre de textes aléatoires. Vous pouvez choisir l’un d’entre eux et l’insérer dans votre conversation.
 
-<img width="430px" title="Menu extension de messagerie" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="430px" title="Résultat de l’extension de messagerie" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Choisissez l’un des textes aléatoires, et vous verrez une carte formatée et prête à envoyer avec votre propre message en bas.
 
-<img width="430px" title="Envoi d’extension de messagerie" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

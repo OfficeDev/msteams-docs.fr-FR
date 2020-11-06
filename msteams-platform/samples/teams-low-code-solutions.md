@@ -4,12 +4,12 @@ author: laujan
 description: Détailler les solutions Microsoft faible et sans code disponibles pour teams
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 4b112a674df76d0bd33e1b461d6b2f194f764f7b
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210260"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931756"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft teams
 
@@ -94,3 +94,8 @@ Virtual Assistant est un modèle de source ouverte Microsoft qui vous permet de 
 [Annonce de la mise à jour de la plate-forme et des équipes pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams est le futur du travail avec des fonctionnalités peu codées pour améliorer votre espace de travail numérique](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### <a name="-managing-power-platform-apps"></a>✔ Gestion des applications de plateforme de puissance
+
+> [!div class="nextstepaction"]
+> [Gérer les applications Microsoft Power Platform dans le centre d’administration Microsoft teams](/microsoftteams/manage-power-platform-apps)

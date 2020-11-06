@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception teams-onglets de l’infrastructure de référence
-ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796210"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931798"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -59,9 +59,9 @@ Il existe des défis de navigation inhérents à la hiérarchie de navigation pr
 
 > [!div class="checklist"]
 >
-> * **Ouvre un module de tâche, tel qu’un élément de travail ou une entité spécifique** . Cela exclut la conversation et est la meilleure option pour conserver la conversation en particulier sur l’onglet et non sur les sous-entités ou les expériences de modification.
->* **Ouvre une Pseudo boîte de dialogue dans un IFRAME** . Si elle est utilisée avec un arrière-plan filtré, nous vous recommandons d’utiliser la couleur la plus claire plutôt que l’obscurité. La `app-gray-10 at 30%` transparence fonctionne bien.
->* **Ouvre une page de navigateur** .
+> * **Ouvre un module de tâche, tel qu’un élément de travail ou une entité spécifique**. Cela exclut la conversation et est la meilleure option pour conserver la conversation en particulier sur l’onglet et non sur les sous-entités ou les expériences de modification.
+>* **Ouvre une Pseudo boîte de dialogue dans un IFRAME**. Si elle est utilisée avec un arrière-plan filtré, nous vous recommandons d’utiliser la couleur la plus claire plutôt que l’obscurité. La `app-gray-10 at 30%` transparence fonctionne bien.
+>* **Ouvre une page de navigateur**.
 
 ### <a name="personality"></a>Caractéristique
 
@@ -130,13 +130,71 @@ Chaque fois que possible, les cartes et les robots doivent créer des liens appr
 
 Dans de nombreux cas, le nom de votre application fera un excellent nom d’onglet. Toutefois, vous pouvez également nommer vos onglets en fonction de la fonctionnalité qu’ils fournissent.
 
+### <a name="multi-window"></a>Multi-fenêtre
+
+Les onglets de canal dotés de fonctionnalités d’édition complexes doivent ouvrir le mode éditeur dans plusieurs fenêtres plutôt qu’un onglet.
+
+### <a name="no-horizontal-scrolling"></a>Pas de défilement horizontal
+
+La tabulation ne doit pas avoir de défilement horizontal.
+
+### <a name="easy-navigation"></a>Navigation facile
+
+La navigation à l’intérieur d’une application d’onglets doit être facile à suivre, c’est-à-dire, lorsque cela est nécessaire/applicable, les pages suivantes :
+* Boutons précédent
+* En-têtes de page
+* Barres
+* Menus de hamburger
+
+### <a name="undo-last-action"></a>Annuler la dernière action
+
+L’utilisateur doit pouvoir annuler sa dernière action dans l’application.
+
+### <a name="share-content"></a>Partager du contenu
+
+Les applications personnelles doivent permettre aux utilisateurs de partager du contenu d’une expérience d’application personnelle avec d’autres membres de l’équipe. L’onglet canal doit fournir une navigation qui complète la navigation principale dans Teams, au lieu d’entrer en conflit avec elle (par exemple, les barres de navigation du rail gauche).
+
+### <a name="single-view"></a>Vue unique
+
+Les applications personnelles doivent présenter du contenu provenant d’instances ou d’instances d’étendue de conversation de groupe de cette application dans une seule vue, par exemple, un utilisateur Trello doit être en mesure d’afficher toutes les instances des cartes Trello auxquelles elles participent au niveau de l’équipe dans leur application personnelle.
+
+### <a name="no-app-bar"></a>Aucune barre d’application
+
+Les onglets ne doivent pas fournir de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec la navigation principale de teams.
+
+### <a name="navigation"></a>Navigation
+
+Les onglets ne doivent pas comporter plus de 3 niveaux de navigation au sein de l’application.
+
+### <a name="l2l3-view"></a>Vue L2/L3
+
+Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans une vue L2/L3 dans la zone d’onglet principale qui est parcourue via le plan de navigation.
+
+### <a name="no-link-to-external-browser"></a>Aucun lien vers le navigateur externe
+
+Les cibles de liens dans les onglets ne doivent pas être liées à un navigateur externe, mais doivent être liées à des éléments div contenus dans Teams, par exemple, à l’intérieur de modules de tâches, d’onglets, etc.
+
 ## <a name="notifications-for-tabs"></a>Notifications pour les onglets
 
 Il existe deux modes de notification pour les modifications apportées au contenu des onglets :
 
 > [!div class="checklist"]
 >
-> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications** . Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **Utiliser un bot** . Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
+> * **Utiliser l’API de l’application pour avertir les utilisateurs des modifications**. Ce message s’affichera dans le flux d’activités de l’utilisateur et le lien profond vers l’onglet. *voir*  [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 
-  L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous avez `@mention`  des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.
+> * **Utiliser un bot**. Cette méthode est préférée en particulier si le thread de tabulation est ciblé. Le résultat est que la conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
+
+L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l’activité à tous les utilisateurs sans en informer explicitement tout le monde. Il s’agit d’une sensibilisation sans bruit. En outre, lorsque vous avez `@mention`  des utilisateurs spécifiques, la même notification est placée dans le flux, en les liant directement au fil d’onglets.
+
+### <a name="tab-design-best-practices"></a>Meilleures pratiques pour la création d’onglets
+
+* Les onglets personnel/statique doivent permettre aux utilisateurs de partager le contenu d’une expérience d’application personnelle avec d’autres membres de l’équipe.
+* Les onglets personnels/statiques peuvent présenter du contenu provenant d’instances ou d’instances d’étendues de conversation de groupe de cette application dans une seule vue.
+* Les cibles de liens dans les onglets ne doivent pas être liées à un navigateur externe, mais doivent être liées à des éléments div contenus dans Teams (par exemple, à l’intérieur, des modules de tâches, des onglets, etc.).
+* Les onglets doivent répondre aux thèmes de l’équipe. Lorsque le thème teams est modifié, le thème au sein de l’application doit également être modifié pour refléter ce thème.
+* Les onglets doivent utiliser des composants de style teams dans la mesure du possible. Cela signifie adopter des polices Teams, des rampes, des palettes de couleurs, un système de grille, un mouvement, un ton de voix, etc.
+* Les onglets doivent utiliser les comportements d’interaction de teams pour la navigation dans la page, la position et l’utilisation des boîtes de dialogue, des hiérarchies d’informations, etc.
+* Les onglets doivent utiliser le menu hamburger teams standard et/ou la barre de navigation pour la navigation dans l’application. Les onglets ne doivent pas fournir de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec la navigation principale de teams.
+* Les onglets ne doivent pas avoir plus de trois niveaux de navigation dans l’application.
+* Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans une vue L2/L3 dans la zone d’onglet principale qui est parcourue via le plan de navigation.
+* Les onglets disposant de fonctionnalités d’édition complexes dans l’application doivent ouvrir le mode éditeur dans plusieurs fenêtres plutôt qu’un onglet (pour le bureau et le Web).

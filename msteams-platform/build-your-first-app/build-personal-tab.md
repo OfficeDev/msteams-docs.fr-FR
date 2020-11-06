@@ -3,20 +3,20 @@ title: Prise en main-créer un onglet personnel
 author: heath-hamilton
 description: Créez rapidement un onglet personnel Microsoft teams à l’aide du kit de développement Microsoft Teams.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452742"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931728"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft teams
 
 Les onglets permettent d’exposer facilement du contenu dans votre application en incorporant essentiellement une page Web dans Teams.
 
-Il existe deux types d’onglets dans Teams. Dans ce didacticiel, vous allez créer un *onglet personnel*, une page de contenu en plein écran pour les utilisateurs individuels. (Les onglets personnels sont les plus proches de l’expérience d’un site Web classique dans Teams.)
+Il existe deux types d’onglets dans Teams. Dans ce didacticiel, vous allez créer un *onglet personnel* , une page de contenu en plein écran pour les utilisateurs individuels. (Les onglets personnels sont les plus proches de l’expérience d’un site Web classique dans Teams.)
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -30,40 +30,26 @@ Les personnes de votre organisation ont des difficultés à trouver des informat
 
 > [!div class="checklist"]
 >
-> * Identifier certaines des propriétés de manifeste de l’application et la structure correspondant aux onglets personnels
+> * Identifier certaines configurations d’application et la structure des onglets personnels
 > * Créer un contenu de tabulation
 > * Mettre à jour le thème de couleurs d’un onglet en fonction de la préférence de l’utilisateur
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. identifier les composants de projet d’application pertinents
 
-La plupart du manifeste de l’application et de la génération de modèles automatique sont configurés automatiquement lorsque vous créez votre projet avec le kit de outils Teams. Examinons les principaux composants de création d’un onglet personnel.
+La plupart des configurations et des modèles d’application sont configurés automatiquement lorsque vous créez votre projet à l’aide de Team Toolkit. Examinons les principaux composants de création d’un onglet personnel.
 
-### <a name="app-manifest"></a>Manifeste de l’application
+### <a name="app-configurations"></a>Configurations d’application
 
-L’extrait de code suivant du manifeste de l’application (le `manifest.json` fichier dans le répertoire de votre projet `.publish` ) affiche [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) , qui inclut les propriétés et les valeurs par défaut relatives aux onglets personnels.
+Vous pouvez afficher et mettre à jour les configurations de vos applications à l’aide d’App Studio, qui est inclus dans la boîte à outils.
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`: Identificateur unique de la page affichée par l’onglet.
-* `name`: Le nom complet de l’onglet (par exemple, « mes contacts »).
-* `contentUrl`: URL de l’hôte la page de contenu de l’onglet (doit être HTTPs).
-* `scopes`: Spécifie que l’onglet est réservé à un usage personnel.
+Lors de l’installation, le Toolkit a initialement configuré votre page de contenu d’onglet, qui est l’endroit où vous affichez votre contenu principal. Dans la boîte à outils, accédez à **app Studio** et sélectionnez **onglets** pour afficher la configuration.
 
 ### <a name="app-scaffolding"></a>Génération de modèles automatique d’application
 
-Le échafaudage de l’application fournit les composants pour le rendu de votre onglet dans Teams. Vous pouvez utiliser un grand nombre de choses, mais pour le moment, il vous suffit de vous concentrer sur les éléments suivants :
+Le échafaudage de l’application fournit les composants pour le rendu de votre onglet personnel dans Teams. Vous pouvez utiliser un grand nombre de choses, mais pour le moment, il vous suffit de vous concentrer sur les éléments suivants :
 
-* `Tab.js` fichier dans le `src/components` Répertoire de votre projet
-* Kit de développement logiciel (SDK) JavaScript de Microsoft Teams, qui est préinstallé dans les composants frontaux de votre projet
+* `Tab.js` fichier dans le `src/components` Répertoire de votre projet. Ceci est destiné au rendu de votre page de contenu d’onglet.
+* Le kit de développement logiciel (SDK) JavaScript de Microsoft Teams, qui est préchargé dans les composants frontaux de votre projet.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. personnaliser votre page de contenu d’onglet
 
@@ -181,19 +167,19 @@ if (isTheme === "default") {
 
 Vérifiez l’onglet dans Teams. L’apparence doit correspondre au thème foncé.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Capture d’écran d’un onglet personnel avec du contenu statique.":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Capture d’écran d’un onglet personnel avec affichage de contenu statique.":::
 
 ## <a name="well-done"></a>Bien jouer
 
 Félicitations ! Vous disposez d’une application teams avec un onglet personnel qui facilite la recherche de contacts importants dans votre organisation.
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 * [Authentifier les utilisateurs avec l’authentification](../tabs/how-to/authentication/auth-aad-sso.md)unique : Si vous souhaitez uniquement que les utilisateurs autorisés visualisent votre onglet, configurez l’authentification unique (SSO) via Azure Active Directory (AD).
 * [Incorporer du contenu à partir d’une application Web ou d’une page Web existante](../tabs/how-to/add-tab.md#tab-requirements): nous vous avons expliqué comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.
 * [Créez une expérience transparente pour votre onglet](../tabs/design/tabs.md): consultez les instructions recommandées pour la création d’onglets Teams.
 * [Créer des onglets pour les appareils mobiles](../tabs/design/tabs-mobile.md): Découvrez comment développer des onglets pour les téléphones et les tablettes.
-* [Intégration à l’API Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Utiliser des données de teams avec l’API Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Créer un onglet sans la boîte à outils](../tabs/how-to/add-tab.md)
 
 ## <a name="next-lesson"></a>Leçon suivante

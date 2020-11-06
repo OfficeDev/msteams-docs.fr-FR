@@ -3,14 +3,14 @@ title: Prise en main-créer et exécuter votre première application
 author: heath-hamilton
 description: Créez rapidement une application Microsoft teams qui affiche un « Hello, World ! ». message à l’aide de Microsoft teams Toolkit.
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 20c9eee14649cda23e1d682940f489e78cba24b9
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 62c4bd950183ceb64fb30b528661cf84e9210d89
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452644"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931775"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>Créer et exécuter votre première application Microsoft teams
 
@@ -21,23 +21,17 @@ Vous pouvez accéder directement au développement Microsoft teams en créant un
 Utilisez la boîte à outils Microsoft teams dans Visual Studio code pour configurer votre premier projet d’application.
 
 1. Dans Visual Studio code, sélectionnez **Microsoft teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: dans la barre d’activité de gauche et choisissez **créer une nouvelle application teams**.
-:::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
-1. Entrez un nom pour votre application Teams. (Il s’agit du nom par défaut de votre application, ainsi que du nom du répertoire du projet d’application sur votre ordinateur local.)
+1. Lorsque vous y êtes invité, connectez-vous à l’aide de votre compte de développement Microsoft 365.
 1. Sur l’écran **Ajouter des fonctionnalités** , sélectionnez **tabulation** puis **suivant**.
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
-1. Activez l’option **onglet personnel** et sélectionnez **Terminer** en bas de l’écran pour configurer votre projet.
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Capture d’écran indiquant comment configurer votre projet d’application avec Visual Studio code teams Toolkit.":::
+1. Entrez un nom pour votre application Teams. (Il s’agit du nom par défaut de votre application, ainsi que du nom du répertoire du projet d’application sur votre ordinateur local.)
+1. Activez uniquement l’option **onglet personnel** et sélectionnez **Terminer** en bas de l’écran pour configurer votre projet.
 
 ## <a name="2-understand-important-app-project-components"></a>2. comprendre les composants importants du projet d’application
 
 Une fois que le kit d’outils configure votre projet, vous disposez des composants permettant de créer un onglet personnel de base pour Teams. Les répertoires et les fichiers du projet sont affichés dans la zone Explorateur de Visual Studio code.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
-
-Nous allons prendre quelques instants pour comprendre quelques-uns des principaux fichiers que les développeurs d’applications teams utilisent.
-
-### <a name="app-manifest-manifestjson"></a>Manifeste de l’application ( `manifest.json` )
-
-Situé dans l' `.publish` annuaire, le manifeste de l’application est le point de départ de tout projet d’application. Le manifeste définit les attributs fondamentaux de votre application et pointe vers les ressources requises. Lorsque vous installez une application, teams analyse le manifeste pour comprendre comment afficher votre application dans le client.
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Capture d’écran illustrant les fichiers de projet d’application pour un onglet personnel dans Visual Studio code.":::
 
 ### <a name="app-scaffolding"></a>Génération de modèles automatique d’application
 
@@ -45,56 +39,34 @@ Le kit de fonctions crée automatiquement une structure pour vous dans le `src` 
 
 Si vous créez un onglet pendant l’installation, par exemple, le `App.js` fichier dans le `src/components` répertoire est important, car il gère l’initialisation et le routage de votre application. Il appelle le [Kit de développement logiciel (SDK) Microsoft teams](../tabs/how-to/using-teams-client-sdk.md) pour établir la communication entre votre application et Teams.
 
-### <a name="app-package-developmentzip"></a>Package d’application ( `Development.zip` )
+### <a name="app-id"></a>ID de l’application
 
-Situé dans l' `.publish` annuaire, vous avez besoin du package d’application pour [chargement votre application](../concepts/deploy-and-publish/overview.md#upload-your-app-directly) dans Teams. Le package est également utilisé lors [de la publication dans le catalogue d’applications de votre organisation](../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) ou [AppSource](../concepts/deploy-and-publish/appsource/publish.md).
+L’ID d’application de teams est nécessaire pour configurer votre application avec App Studio. Vous pouvez trouver l’ID dans l' `teamsAppId` objet, qui se trouve dans le fichier de votre projet `package.json` .
 
-Voici quelques détails sur les fichiers de package d’application :
-
-|Nom|Type|Size|Emplacement du manifeste|Nom de fichier du Toolkit|
-|---|---|:---:|:---:|-----|
-|**Manifeste de l’application**|`.json`| — | — |`.publish/manifest.json`|
-|**Logo couleur**|`.png`|192 &times; 192 pixels|`icon.color`|`.publish/color.png`|
-|**Logo de plan**|`.png`|32 &times; 32 pixels|`icon.outline`|`.publish/outline.png`|
-
-## <a name="3-run-your-app"></a>3. exécuter votre application
+## <a name="3-build-and-run-your-app"></a>3. générez et exécutez votre application
 
 Pour des raisons de temps, vous allez créer et exécuter votre application localement.
 
 (Ces informations sont également disponibles dans la boîte à outils `README` .)
 
 1. Dans un terminal, accédez au répertoire racine de votre projet d’application et exécutez `npm install` .
-1. Exécuter `npm start` . Une fois terminé, une **compilation est effectuée.** message dans le terminal.
-1. Ouvrez un navigateur et accédez à `https://localhost:3000` la page Web vierge intitulée **Microsoft teams**. (Ne vous inquiétez pas que vous ne pouvez pas voir le contenu sur la page.)<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
+1. Exécuter `npm start` .
 
-## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. configurer un tunnel sécurisé pour votre application
+Une fois terminé, une **compilation est effectuée.** message dans le terminal. Votre application est en cours d’exécution sur `https://localhost:3000` .
 
-Votre application est en cours d’exécution sur votre serveur Web local. Pour exécuter votre application dans Teams, vous devez faire en sorte qu’elle soit `localhost` accessible via HTTPS.
+## <a name="4-sideload-your-app-in-teams"></a>4. chargement de votre application dans teams
 
-Installez [ngrok](https://ngrok.com/download) si vous ne l’avez pas encore fait. Lorsque vous exécutez cet outil, vous créez deux URL globalement disponibles qui pointent vers votre serveur Web local ( `http://localhost:3000` ). Vous avez besoin de l’URL de transfert qui commence par `HTTPS` .
-
-1. Ouvrez un nouveau terminal et exécutez `ngrok http 3000` .
-1. Copiez l’URL HTTPs que vous avez fournie (Voir l’exemple ci-dessous).
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
-1. Dans votre `.publish` répertoire, ouvrez `Development.env` .
-1. Remplacez la `baseUrl0` valeur par l’URL copiée. (Par exemple, remplacez `baseUrl0=http://localhost:3000` par `baseUrl0=https://85528b2b3ba5.ngrok.io` .)
-
-Le manifeste de votre application pointe maintenant vers l’emplacement où vous hébergez l’application.
-
-## <a name="5-sideload-your-app-in-teams"></a>5. chargement de votre application dans teams
-
-Une fois que votre application est en cours d’exécution et accessible via HTTPs, vous êtes prêt à la télécharger vers Teams.
+Votre application est prête à être testée dans Teams. Pour ce faire, vous devez disposer d’un compte qui autorise l’application chargement. (Si vous n’êtes pas sûr, Découvrez comment obtenir un [compte de développement teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 
 > [!TIP]
-> Avant de chargement votre application, vérifiez les problèmes à l’aide de la [fonctionnalité de validation de la boîte à outils](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool). Les erreurs doivent être résolues pour chargement l’application.
+> Avant de chargement votre application, vérifiez les problèmes à l’aide de la [fonctionnalité de validation dans App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), qui est incluse dans la boîte à outils. Les erreurs doivent être résolues pour chargement l’application.
 
-1. Connectez-vous au client teams avec votre compte qui autorise l’application chargement. (Si vous n’êtes pas sûr, Découvrez comment obtenir un [compte de développement teams](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
-1. Sélectionnez **applications**, puis **Télécharger une application personnalisée**.
-1. Accédez à votre dossier de projet d’application `.publish` et sélectionnez `Development.zip` . Une installation modale d’installation s’affiche.
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
-1. Sélectionnez **Ajouter** pour installer votre application.
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Capture d’écran montrant comment créer une nouvelle application avec Visual Studio code teams Toolkit.":::
+1. Dans Visual Studio code, appuyez sur la touche **F5** pour lancer un client Web Teams.
+1. Pour afficher le contenu de votre application dans Teams, spécifiez le lieu de fiabilité de votre application ( `localhost` ).
+   1. Ouvrez un nouvel onglet dans la même fenêtre de navigateur (Google Chrome par défaut) qui s’est ouvert après avoir appuyé sur **F5**.
+   1. Accédez à `https://localhost:3000/tab` la page et passez à la page.
+1. Revenir à Teams. Dans la boîte de dialogue, sélectionnez **Ajouter pour moi** pour installer votre application.
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Capture d’écran illustrant un exemple d’application d’onglet personnelle « Hello, World ! » en cours d’exécution dans Teams.":::
 
 🎉 Félicitations ! Votre application est en cours d’exécution dans Teams.
 
