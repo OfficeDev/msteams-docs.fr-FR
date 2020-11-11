@@ -2,12 +2,12 @@
 title: Instructions de conception pour les robots
 description: Décrit les instructions pour la création de robots
 keywords: Guide de conception des équipes
-ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137674"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992637"
 ---
 # <a name="start-talking-with-bots"></a>Commencer à parler avec les robots
 
@@ -16,6 +16,20 @@ Les robots sont des applications de conversation qui effectuent un ensemble de t
 ---
 
 ## <a name="guidelines"></a>Conseils
+
+### <a name="bot-design-guidelines"></a>Instructions de conception de robot
+
+* Les robots doivent fournir des notifications pertinentes lorsqu’il y a eu une activité.
+* Les robots ne doivent pas transmettre les données sensibles à une équipe, une conversation de groupe ou une conversation 1:1 à une audience qui ne doit pas afficher ces données.
+* Les notifications de bot doivent inclure des données significatives pour informer la pertinence de la notification aux utilisateurs.
+* La tonalité du robot doit refléter la voix de teams, comme défini dans les instructions.
+* Les robots doivent fournir un message de bienvenue de première exécution qui met en évidence la valeur du bot et ses fonctions principales, comme suit : « visite guidée », un didacticiel interactif avec des cartes de carrousel ou des boutons « essayer ».
+* Le texte du bot ne doit pas contenir de fautes d’orthographe ou de grammaire.
+* Les robots doivent fournir un ensemble de commandes de bot prédéfinies qui sont exploitables.
+* Les messages de bot doivent être faciles à comprendre et exploitables.
+* Les robots doivent fournir des commandes d’aide au secours lorsqu’un message n’est pas compris.
+* Les formulaires, intégrés aux cartes, envoyés par un bot doivent fournir des entrées déterministes ne nécessitant pas de mise à jour séquentielle.
+* Les notifications de robot doivent être étendues à une conversation d’équipe, de groupe ou de 1:1, avec le contenu pertinent pour l’audience.
 
 ### <a name="avatars"></a>Avatars
 
@@ -37,17 +51,18 @@ Il est essentiel que les robots s’introduisent et envoient ce qu’ils peuvent
 
 #### <a name="welcome-messages"></a>Les messages de bienvenue
 
-Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot et doivent être utilisés dans les scénarios personnels et d’équipe ou de groupe. Le message indique ce que fait le bot, ainsi que des méthodes courantes pour interagir avec lui. Utiliser des exemples de fonctionnalité spécifiques comme, «*essayez de demander....*» dans une liste à puces. Dans la mesure du possible, ces suggestions doivent renvoyer des réponses stockées. Il est essentiel que les exemples de fonctionnalités fonctionnent sans que les utilisateurs aient besoin de se connecter.
+Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot et doivent être utilisés dans les scénarios personnels et d’équipe ou de groupe. Le message indique ce que fait le bot, ainsi que des méthodes courantes pour interagir avec lui. Utiliser des exemples de fonctionnalité spécifiques comme, « *essayez de demander....* » dans une liste à puces. Dans la mesure du possible, ces suggestions doivent renvoyer des réponses stockées. Il est essentiel que les exemples de fonctionnalités fonctionnent sans que les utilisateurs aient besoin de se connecter.
+Pour plus d’informations, *consultez la rubrique* [Welcome message Requirements](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) .
 
 #### <a name="tours"></a>Voyages
 
-Inclure un attribut de *visite guidée* avec des messages de bienvenue et des réponses à l’entrée utilisateur équivalente à «*aide*». Il s’agit de la méthode la plus efficace pour permettre aux utilisateurs de découvrir ce qu’un robot peut faire. Les carrousels dans les expériences un-à-un constituent un excellent moyen d’indiquer cette histoire et d' *essayer de créer* des boutons informatiques renvoyant à des exemples de réponses possibles. Les visites guidées sont également des emplacements très intéressants pour parler des autres fonctionnalités d’une application. Par exemple, vous pouvez inclure des captures d’écran des onglets extensions de messagerie et Teams.  Les utilisateurs ne doivent pas se connecter pour accéder à et utiliser une visite guidée.
+Inclure un attribut de *visite guidée* avec des messages de bienvenue et des réponses à l’entrée utilisateur équivalente à « *aide* ». Il s’agit de la méthode la plus efficace pour permettre aux utilisateurs de découvrir ce qu’un robot peut faire. Les carrousels dans les expériences un-à-un constituent un excellent moyen d’indiquer cette histoire et d' *essayer de créer* des boutons informatiques renvoyant à des exemples de réponses possibles. Les visites guidées sont également des emplacements très intéressants pour parler des autres fonctionnalités d’une application. Par exemple, vous pouvez inclure des captures d’écran des onglets extensions de messagerie et Teams.  Les utilisateurs ne doivent pas se connecter pour accéder à et utiliser une visite guidée.
 
 Lorsque des visites guidées sont utilisées dans des scénarios d’équipe ou de groupe, elles doivent s’ouvrir dans un module de tâches afin de ne pas ajouter plus de bruit de carte aux conversations en cours entre les utilisateurs.
 
 ### <a name="responding-to-users-and-failing-gracefully"></a>Réponse aux utilisateurs et échec normal
 
-Votre robot doit également pouvoir répondre à des éléments tels que «*Bonjour*», «*aide*» et «*Merci*», tout en prenant en compte les fautes d’orthographe courantes et familières. Par exemple :
+Votre robot doit également pouvoir répondre à des éléments tels que « *Bonjour* », « *aide* » et « *Merci* », tout en prenant en compte les fautes d’orthographe courantes et familières. Par exemple :
 
 #### <a name="x2713-hello"></a>&#x2713; Hello
 
@@ -67,7 +82,7 @@ Votre robot doit pouvoir gérer les types de requêtes et d’entrées suivants�
 >
 > * **Questions reconnues**. Il s’agit des questions de scénario les plus optimistes pour les utilisateurs.
 > * **Non-questions reconnues**. Les requêtes relatives aux fonctionnalités non prises en charge et/ou aux entrées à inconvenances, non liées ou aléatoires.
-> * **Questions non reconnues**: entrées ou entrées inintelligibles, sans signification ou sans sens.
+> * **Questions non reconnues** : entrées ou entrées inintelligibles, sans signification ou sans sens.
 
 Exemples de personnalité et de types de réponse de robot :
 
