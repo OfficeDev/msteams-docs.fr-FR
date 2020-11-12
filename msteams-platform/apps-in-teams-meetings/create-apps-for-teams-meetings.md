@@ -5,12 +5,12 @@ description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: cf42d660c9b4a82f8e28d4d4379194c1bcc681e1
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796168"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997971"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Créer des applications pour les réunions Teams (Aperçu pour les développeurs)
 
@@ -27,11 +27,13 @@ ms.locfileid: "48796168"
 
 1. Certaines API de réunion, telles que `GetParticipant` nécessiteront un [ID d’enregistrement et d’application bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) pour générer des jetons d’authentification.
 
-1. Les développeurs doivent respecter les [conseils généraux de conception des onglets teams](../tabs/design/tabs.md) pour les scénarios antérieurs et postérieurs à la réunion, ainsi que les [recommandations](design/designing-in-meeting-dialog.md) pour la boîte de dialogue de réunion déclenchée lors d’une réunion Teams.
+1. En tant que développeur, vous devez respecter les [instructions de conception d’onglet teams](../tabs/design/tabs.md) générales pour les scénarios pré-et post-réunion, ainsi que les [recommandations](design/designing-in-meeting-dialog.md) pour la boîte de dialogue de réunion déclenchée lors d’une réunion Teams.
+
+1. Veuillez noter que pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités liées aux événements dans la réunion. Ces événements peuvent se situer dans la boîte de dialogue de réunion (reportez-vous à la rubrique Complete `bot Id` Parameter in `Notification Signal API` ) et d’autres surfaces dans le cycle de vie de la réunion.
 
 ## <a name="meeting-apps-api-reference"></a>Référence de l’API des applications de réunion
 
-|API|Description|Demande|Source|
+|API|Description|Requête|Source|
 |---|---|----|---|
 |**GetUserContext**| Obtenir des informations contextuelles pour afficher le contenu pertinent dans un onglet Teams. |_**microsoftTeams. getContext (() => {/ *...* / } )**_|Kit de développement logiciel client Microsoft teams|
 |**GetParticipant**|Cette API permet à un bot d’extraire des informations sur les participants par ID de réunion et ID de participant.|**Obtenir** _**/v1/meetings/{meetingId}/participants/{participantId} ? tenantId = {tenantId}**_ |Kit de développement logiciel (SDK) Microsoft bot Framework|
@@ -53,7 +55,8 @@ Pour obtenir des instructions sur l’identification et la récupération des in
 >
 > * La prise en charge du kit de développement logiciel (SDK) de robot sera bientôt disponible.
 
-#### <a name="request"></a>Demande
+
+#### <a name="request"></a>Requête
 
 ```http
 GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
@@ -97,7 +100,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>Charge utile de réponse
 <!-- markdownlint-disable MD036 -->
 
-le **rôle** sous « réunion » peut être *organisateur* , *présentateur* ou *participant* .
+le **rôle** sous « réunion » peut être *organisateur* , *présentateur* ou *participant*.
 
 **Exemple 1**
 
@@ -128,10 +131,15 @@ le **rôle** sous « réunion » peut être *organisateur* , *présentateur* o
 ```
 #### <a name="response-codes"></a>Codes de réponse
 
-**403** : l’application n’est pas autorisée à obtenir des informations sur les participants. Il s’agit de la réponse d’erreur la plus courante, qui est déclenchée lorsque l’application n’est pas installée dans la réunion, par exemple lorsque l’application est désactivée par l’administrateur client ou bloquée lors de l’atténuation du site actif.  
-**200** : informations sur les participants récupérées avec succès  
-**401** : jeton non valide  
-**404** : la réunion n’existe pas ou le participant est introuvable.
+**403** : l’application n’est pas autorisée à obtenir des informations sur les participants. Il s’agit de la réponse d’erreur la plus courante, qui est déclenchée lorsque l’application n’est pas installée dans la réunion, par exemple lorsqu’elle est désactivée par l’administrateur client ou bloquée lors de la migration de site réel.  
+**200** : les informations sur les participants ont été récupérées.  
+**401** : jeton non valide.  
+**404** : le participant est introuvable. 
+**500** : la réunion a expiré (plus de 60 jours après la fin de la réunion) ou le participant ne dispose pas d’autorisations en fonction de son rôle.
+
+**Bientôt disponible**
+
+**404** : la réunion a expiré ou le participant est introuvable. 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>API NotificationSignal
@@ -139,7 +147,7 @@ le **rôle** sous « réunion » peut être *organisateur* , *présentateur* o
 > [!NOTE]
 > Lorsqu’une boîte de dialogue de réunion est appelée, le même contenu s’affiche également sous la forme d’un message de conversation.
 
-#### <a name="request"></a>Demande
+#### <a name="request"></a>Requête
 
 ```http
 POST /v3/conversations/{conversationId}/activities
@@ -155,7 +163,10 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> Le completionBotId dans le externalResourceUrl dans la charge utile de la requête ci-dessous est un paramètre facultatif. Il s’agit de l’ID du bot déclaré dans le manifeste. Le bot reçoit un objet de résultat.
+> *  Dans la charge demandée ci-dessous, le `completionBotId` paramètre de `externalResourceUrl` est un facultatif. Il s’agit de la `Bot ID` qui est déclarée dans le manifeste. Le bot reçoit un objet de résultat.
+> * Les paramètres de largeur et de hauteur externalResourceUrl doivent être en pixels. Reportez-vous aux [instructions de conception](design/designing-in-meeting-dialog.md) pour vous assurer que les dimensions respectent les limites autorisées.
+> * L’URL est la page chargée en tant que telle dans `<iframe>` la boîte de dialogue de réunion. Le domaine de l’URL doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
+
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -167,7 +178,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -181,7 +192,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -198,7 +209,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);
@@ -261,13 +272,13 @@ L’onglet `context` et les `scopes` propriétés fonctionnent en harmonie pour 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurer votre application pour les scénarios de réunion
 
 > [!NOTE]
-> * Pour que votre application soit visible dans la Galerie d’onglets, elle doit **prendre en charge les onglets configurables** et l' **étendue de conversation de groupe** .
+> * Pour que votre application soit visible dans la Galerie d’onglets, elle doit **prendre en charge les onglets configurables** et l' **étendue de conversation de groupe**.
 >
 > * Les clients mobiles prennent en charge les onglets uniquement dans les surfaces pre et post Meeting. Les expériences de réunion (boîte de dialogue et volet de réunion) sur mobile seront bientôt disponibles. Suivez les [instructions pour les onglets sur mobile](../tabs/design/tabs-mobile.md) lors de la création de vos onglets pour mobile. 
 
 ### <a name="pre-meeting"></a>Pré-réunion
 
-Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajoutent des onglets à une réunion en utilisant le bouton plus ➕ dans les pages **conversation** de réunion et **Détails** de la réunion. Les extensions de messagerie sont ajoutées à via le menu ellipses/Overflow &#x25CF;&#x25CF;&#x25CF; située sous la zone de message composer dans la conversation. Les robots sont ajoutés à une conversation de réunion à l’aide de la **@** touche «» et en sélectionnant **obtenir les bots** .
+Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajoutent des onglets à une réunion en utilisant le bouton plus ➕ dans les pages **conversation** de réunion et **Détails** de la réunion. Les extensions de messagerie sont ajoutées à via le menu ellipses/Overflow &#x25CF;&#x25CF;&#x25CF; située sous la zone de message composer dans la conversation. Les robots sont ajoutés à une conversation de réunion à l’aide de la **@** touche «» et en sélectionnant **obtenir les bots**.
 
 ✔ L’identité de l’utilisateur *doit* être confirmée via les [onglets SSO](../tabs/how-to/authentication/auth-aad-sso.md). À la suite de cette authentification, l’application peut récupérer le rôle d’utilisateur via l’API GetParticipant.
 

@@ -4,14 +4,14 @@ description: Décrit le consentement propre à la ressource dans teams et la fa�
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: Graphique RSC AAD d’authentification unique de teams
-ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796190"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995022"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentement propre à la ressource (RSC)
 
@@ -25,18 +25,18 @@ Le consentement propre à la ressource (RSC) est une intégration de Microsoft t
 |Autorisation de l’application| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Obtenir les paramètres de cette équipe.|
-|TeamSettings. ReadWrite. Group|Mettre à jour les paramètres de cette équipe.|
+|TeamSettings.ReadWrite.Group|Mettez à jour les paramètres de cette équipe.|
 |ChannelSettings.Read.Group|Obtenir les noms de canal, les descriptions de canal et les paramètres de canal de cette équipe.|
-|ChannelSettings. ReadWrite. Group|Mettre à jour les noms de canaux, les descriptions de canal et les paramètres de canal de cette équipe.|
+|ChannelSettings.ReadWrite.Group|Mettre à jour les noms de canaux, les descriptions de canal et les paramètres de canal de cette équipe.|
 |Channel.Create.Group|Créer des canaux au sein de cette équipe.|
 |Channel.Delete.Group|Supprimer des canaux dans cette équipe.|
 |ChannelMessage.Read.Group |Obtenir les messages du canal de cette équipe.|
-|TeamsAppInstallation. Read. Group|Obtenir la liste des applications installées de cette équipe.|
+|TeamsAppInstallation.Read.Group|Obtenir la liste des applications installées de cette équipe.|
 |TeamsTab.Read.Group|Obtenir la liste des onglets de cette équipe.|
 |TeamsTab.Create.Group|Créer des onglets au sein cette équipe.|
-|Teamstab.. ReadWrite. Group|Mettre à jour les onglets de cette équipe.|
+|TeamsTab.ReadWrite.Group|Mettez à jour les onglets de cette équipe.|
 |TeamsTab.Delete.Group|Supprimer les onglets de cette équipe.|
-|TeamMember. Read. Group|Obtenir les membres de cette équipe.|
+|TeamMember.Read.Group|Obtenir les membres de cette équipe.|
 
 >[!NOTE]
 >Les autorisations propres aux ressources ne sont disponibles que pour les applications teams installées sur le client teams et qui ne font actuellement pas partie du portail Azure Active Directory.
@@ -60,7 +60,7 @@ Vous pouvez activer ou désactiver le [consentement du propriétaire de groupe](
 > [!div class="checklist"]
 >
 >- Connectez-vous au [portail Azure](https://portal.azure.com) en tant qu’administrateur général [/administrateur de société](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator).  
- > - [Sélectionnez](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise applications**  =>  **autorisations de consentement et autorisations** d’utilisateur pour les applications d’entreprise Azure Active Directory  =>  **User consent settings** .
+ > - [Sélectionnez](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **Enterprise applications**  =>  **autorisations de consentement et autorisations** d’utilisateur pour les applications d’entreprise Azure Active Directory  =>  **User consent settings**.
 > - Activer, désactiver ou limiter le consentement de l’utilisateur avec le contrôle du **consentement du propriétaire du groupe pour les applications accédant aux données** (la valeur par défaut est autoriser le consentement du propriétaire du groupe **pour tous les propriétaires de groupe** ). Pour qu’un propriétaire d’équipe installe une application à l’aide de RSC, le consentement du propriétaire du groupe doit être activé pour cet utilisateur.
 
 ![configuration de RSC Azure](../../assets/images/azure-rsc-configuration.png)
@@ -147,9 +147,9 @@ Une fois que l’application a été installée dans une équipe, vous pouvez ut
 > - Dans le client Teams, sélectionnez **teams** dans la barre de navigation la plus à gauche.
 > - Dans le menu déroulant, sélectionnez l’équipe où l’application est installée.
 > - Sélectionnez l’icône **autres options** (&#8943;).
-> - Sélectionnez **obtenir un lien vers une équipe** .
+> - Sélectionnez **obtenir un lien vers une équipe**.
 > - Copiez et enregistrez la valeur **GroupID** à partir de la chaîne.
-> - Connectez-vous à l’afficheur **Graph** .
+> - Connectez-vous à l’afficheur **Graph**.
 > - Effectuer un appel **Get** vers le point de terminaison suivant : `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . Le champ clientAppId dans la réponse est mappé sur l’appId spécifié dans le manifeste de l’application Teams.
   ![Réponse de l’Explorateur Graph pour obtenir un appel.](../../assets/images/graph-permissions.png)
  

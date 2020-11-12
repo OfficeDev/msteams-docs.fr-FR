@@ -3,22 +3,22 @@ title: Référence du schéma JSON du fichier de localisation
 description: Décrit le schéma de localisation pris en charge par le fichier de localisation pour Microsoft teams
 keywords: Localisation de schéma de manifeste teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 061729ecb5110c99d8f85f144796f1a78b266c3d
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: 2c0f449ef0b018e0ed377ea8f5d79b285b36e829
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039278"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997964"
 ---
 # <a name="reference-localization-file-json-schema"></a>Référence : schéma JSON du fichier de localisation
 
-Le fichier de localisation Microsoft teams décrit les traductions de langue qui seront fournies en fonction des paramètres de langue du client. Votre fichier doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json) . Pour plus d’informations, consultez la rubrique [Localization App](~/concepts/build-and-test/apps-localization.md).
+Le fichier de localisation Microsoft teams décrit les traductions de langue qui seront fournies en fonction des paramètres de langue du client. Votre fichier doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) . Pour plus d’informations, consultez la rubrique [Localization App](~/concepts/build-and-test/apps-localization.md).
 
-## <a name="sample"></a>Exemple
+## <a name="sample"></a>Échantillon
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "name.short": "Le App Studio",
   "name.full": "App Studio pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio.",
@@ -40,7 +40,7 @@ Le schéma définit les propriétés suivantes :
 URL https://référençant le schéma JSON du manifeste.
 
 > [!TIP]
-> Spécifiez le schéma au début de votre manifeste pour activer IntelliSense ou une prise en charge similaire à partir de votre éditeur de code :`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
+> Spécifiez le schéma au début de votre manifeste pour activer IntelliSense ou une prise en charge similaire à partir de votre éditeur de code : `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>Name. Short
 

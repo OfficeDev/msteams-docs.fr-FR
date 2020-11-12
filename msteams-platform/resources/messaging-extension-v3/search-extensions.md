@@ -3,12 +3,12 @@ title: Recherche à l’aide des extensions de messagerie
 description: Décrit comment développer des extensions de messagerie basées sur la recherche
 keywords: extensions de messagerie teams
 ms.date: 07/20/2019
-ms.openlocfilehash: b791e7cc8f9a311d0610573f2fa3659578c29c7d
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f46548d2e7e03ecebd8bc0fb6685aeb82b8eec6e
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801367"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997999"
 ---
 # <a name="search-with-messaging-extensions"></a>Recherche à l’aide des extensions de messagerie
 
@@ -30,7 +30,7 @@ Pour l’extension de messagerie basée sur la recherche, définissez le `type` 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -87,7 +87,7 @@ Pour l’extension de messagerie basée sur la recherche, définissez le `type` 
 
 Vous pouvez tester votre extension de messagerie en téléchargeant votre application.
 
-Pour ouvrir votre extension de messagerie, accédez à l’une de vos conversations ou de vos canaux. Sélectionnez le bouton **autres options** (**&#8943;**) dans la zone de composition, puis choisissez votre extension de messagerie.
+Pour ouvrir votre extension de messagerie, accédez à l’une de vos conversations ou de vos canaux. Sélectionnez le bouton **autres options** ( **&#8943;** ) dans la zone de composition, puis choisissez votre extension de messagerie.
 
 ## <a name="add-event-handlers"></a>Ajouter des gestionnaires d’événements
 

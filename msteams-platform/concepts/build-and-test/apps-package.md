@@ -3,12 +3,12 @@ title: Empaquetage de votre application
 description: Découvrez comment empaqueter votre application à des fins de test, de chargement et de publication dans Microsoft teams
 keywords: empaquetage d’applications teams
 ms.topic: conceptual
-ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397700"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997985"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Créer un package d’application pour votre application Microsoft teams
 
@@ -28,7 +28,7 @@ Votre fichier manifeste doit être nommé « manifest.js » et se trouver au n
 > [!TIP]
 > Spécifiez le schéma au début de votre manifeste pour activer IntelliSense ou une prise en charge similaire à partir de votre éditeur de code :
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>Icônes
 

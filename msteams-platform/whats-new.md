@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452812"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997957"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -20,6 +20,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|11/11/2020| Schéma de manifeste mis à jour vers la version 1,8| [Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
 |9/30/2020|L’envoi et la réception de fichiers vers des robots sur des appareils mobiles sont désormais pris en charge.|[Envoyer et recevoir des fichiers via votre robot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nouvelles instructions de prise en main de teams|[Vue d’ensemble de la création de votre première application teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Prise en charge des applications teams de réunion (version préliminaire)|[Créer des applications pour les réunions](apps-in-teams-meetings/create-apps-for-teams-meetings.md) et les applications teams [dans les réunions teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|

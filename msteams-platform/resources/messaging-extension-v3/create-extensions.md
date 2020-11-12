@@ -2,12 +2,12 @@
 title: Initier des actions à l’aide des extensions de messagerie
 description: Créer des extensions de messagerie basées sur des actions pour permettre aux utilisateurs de déclencher des services externes
 keywords: extensions de messagerie teams
-ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801372"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997992"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Initier des actions à l’aide des extensions de messagerie
 
@@ -29,7 +29,7 @@ Pour initier des actions à partir d’une extension de messagerie, définissez 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -226,7 +226,7 @@ Vous trouverez ci-dessous un exemple de l' `value` objet contenant les détails 
 
 Vous pouvez tester votre extension de messagerie en téléchargeant votre application. Pour plus d’informations, consultez [la rubrique téléchargement de votre application dans une équipe](~/concepts/deploy-and-publish/apps-upload.md) .
 
-Pour ouvrir votre extension de messagerie, accédez à l’une de vos conversations ou de vos canaux. Sélectionnez le bouton **autres options** (**&#8943;**) dans la zone de composition, puis choisissez votre extension de messagerie.
+Pour ouvrir votre extension de messagerie, accédez à l’une de vos conversations ou de vos canaux. Sélectionnez le bouton **autres options** ( **&#8943;** ) dans la zone de composition, puis choisissez votre extension de messagerie.
 
 ## <a name="collecting-input-from-users"></a>Collecte d’entrées auprès des utilisateurs
 

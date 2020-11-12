@@ -3,13 +3,13 @@ title: Solutions de faible code pour les applications personnalisées teams
 author: laujan
 description: Détailler les solutions Microsoft faible et sans code disponibles pour teams
 ms.author: lajanuar
-ms.topic: overview
-ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.topic: conceptual
+ms.openlocfilehash: 089e436d43819f9aabe3ceb47760f521b014d93f
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931756"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995001"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft teams
 

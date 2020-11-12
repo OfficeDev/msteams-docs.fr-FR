@@ -3,12 +3,12 @@ title: Connecteurs Office 365
 description: Décrit comment se familiariser avec les connecteurs Office 365 dans Microsoft teams
 keywords: 'équipes connecteur O365 '
 ms.date: 04/19/2019
-ms.openlocfilehash: 9c89463830d46512e622dcf4c256a867d419de83
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137653"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998020"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création de connecteurs Office 365 pour Microsoft teams
 
@@ -42,16 +42,16 @@ Vous pouvez réutiliser votre expérience de configuration Web existante ou cré
 5. Appeler `microsoftTeams.settings.getSettings()` les propriétés webhook, y compris l’URL elle-même. Vous devez également l’appeler en plus de lors de l’événement Save, vous devez également l’appeler lorsque votre page est chargée pour la première fois en cas de reconfiguration.
 6. Module Enregistrer un `microsoftTeams.settings.registerOnRemoveHandler()` Gestionnaire d’événements, qui est appelé lorsque l’utilisateur supprime votre connecteur. Cet événement permet à votre service d’effectuer des actions de nettoyage.
 
-#### <a name="getsettings-response-properties"></a>`GetSettings()`Propriétés de la réponse
+#### <a name="getsettings-response-properties"></a>`GetSettings()` Propriétés de la réponse
 
 >[!Note]
->Les paramètres renvoyés par l' `getSettings` appel ici sont différents de ceux de l’appel de cette méthode à partir d’un onglet et diffèrent de ceux décrits [ici](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest).
+>Les paramètres renvoyés par l' `getSettings` appel ici sont différents de ceux de l’appel de cette méthode à partir d’un onglet et diffèrent de ceux décrits [ici](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Paramètre   | Détails |
 |-------------|---------|
 | `entityId`       | ID d’entité, tel que défini par votre code lors de l’appel `setSettings()` . |
 | `configName`  | Nom de la configuration, tel que défini par votre code lors de l’appel `setSettings()` . |
-| `contentUrl` | L’URL de la page de configuration, telle que définie par votre code lors de l’appel`setSettings()` |
+| `contentUrl` | L’URL de la page de configuration, telle que définie par votre code lors de l’appel `setSettings()` |
 | `webhookUrl` | URL de webhook créée pour ce connecteur. Conservez l’URL de webhook et utilisez-la pour publier un JSON structuré afin d’envoyer des cartes vers le canal. L’élément `webhookUrl` est renvoyé uniquement lorsque l’application effectue un renvoi. |
 | `appType` | Les valeurs renvoyées peuvent être `mail`, `groups` ou `teams` correspondant à la messagerie Office 365, aux groupes Office 365 ou à Microsoft Teams. |
 | `userObjectId` | Il s’agit de l’ID unique correspondant à l’utilisateur Office 365 qui a initié le programme d’installation du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365 qui a défini la configuration à l’utilisateur dans votre service. |
@@ -65,9 +65,9 @@ Si vous devez authentifier l’utilisateur dans le cadre du chargement de votre 
 
 Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier une configuration de connecteur existante. Pour ce faire, appelez `microsoftTeams.settings.setSettings()` lors de la configuration initiale avec les paramètres suivants :
 
-- `entityId`est l’ID personnalisé compris par votre service et représente ce que l’utilisateur a configuré.
-- `configName`est un nom convivial que votre code de configuration peut récupérer
-- `contentUrl`est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour permettre à votre code de gérer plus facilement le cas de modification.
+- `entityId` est l’ID personnalisé compris par votre service et représente ce que l’utilisateur a configuré.
+- `configName` est un nom convivial que votre code de configuration peut récupérer
+- `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour permettre à votre code de gérer plus facilement le cas de modification.
 
 En règle générale, cet appel est effectué dans le cadre de votre gestionnaire d’événements Save. Ensuite, lorsque le `contentUrl` code ci-dessus est chargé, votre code doit appeler `getSettings()` pour préremplir les paramètres ou les formulaires dans votre interface utilisateur de configuration.
 
@@ -91,7 +91,7 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -151,5 +151,5 @@ Une fois que vous avez téléchargé votre package d’application, pour configu
 1. Sélectionnez l’option **Ajouter à une barre d’équipe** .
 1. Dans la fenêtre de boîte de dialogue suivante, tapez le nom d’une équipe ou d’un canal.
 1. Sélectionnez l’option **configurer une** barre de liens dans le coin inférieur droit de la fenêtre de la boîte de dialogue.
-1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *plusieurs options*  =>  *connecteurs*  =>  de*tous les*  =>  *connecteurs de votre équipe* pour cette équipe. Vous pouvez naviguer en faisant défiler vers cette section ou Rechercher l’application connecteur.
+1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *plusieurs options*  =>  *connecteurs*  =>  de *tous les*  =>  *connecteurs de votre équipe* pour cette équipe. Vous pouvez naviguer en faisant défiler vers cette section ou Rechercher l’application connecteur.
 1. Pour configurer ou modifier le connecteur, sélectionnez la barre **configurer** .

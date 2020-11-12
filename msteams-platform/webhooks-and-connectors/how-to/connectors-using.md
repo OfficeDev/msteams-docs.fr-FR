@@ -3,12 +3,12 @@ title: Envoi de messages à des connecteurs et Webhooks
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: bfcee2c00d30517522621f61142324b4f81a93f8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237964"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998006"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -129,15 +129,15 @@ Si vous souhaitez afficher une liste de sélections à l’origine dans le style
 > [!NOTE]
 > Spécifier `compact` pour la propriété `style` dans Microsoft Teams revient à spécifier `normal` pour la propriété `style` dans Microsoft Outlook.
 
-Pour accéder à d’autres informations sur les actions de la carte de connecteur, consultez **[Actions ](/outlook/actionable-messages/card-reference#actions)** dans la référence de carte de message intégrant des actions.
+Pour accéder à d’autres informations sur les actions de la carte de connecteur, consultez **[Actions](/outlook/actionable-messages/card-reference#actions)** dans la référence de carte de message intégrant des actions.
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configuration d’un webhook entrant personnalisé
 
 Pour découvrir comment envoyer une carte simple à un connecteur, procédez comme suit.
 
-1. Dans Microsoft Teams, choisissez **Autres options** (**&#8943;**) à côté du nom de la chaîne, puis choisissez **Connecteurs**.
-2. Faites défiler la liste des Connecteurs à **Webhook entrant**, puis choisissez **Ajouter**.
-3. Entrez un nom pour le webhook, téléchargez une image à associer aux données du webhook, puis choisissez**Créer**.
+1. Dans Microsoft Teams, choisissez **Autres options** ( **&#8943;** ) à côté du nom de la chaîne, puis choisissez **Connecteurs**.
+2. Faites défiler la liste des Connecteurs à **Webhook entrant** , puis choisissez **Ajouter**.
+3. Entrez un nom pour le webhook, téléchargez une image à associer aux données du webhook, puis choisissez **Créer**.
 4. Copiez le webhook dans le presse-papiers et enregistrez-le. Vous aurez besoin de l’URL de webhook pour envoyer des informations à Microsoft Teams.
 5. Choisissez **OK**.
 
@@ -185,7 +185,7 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
@@ -227,7 +227,7 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 >
 > ✔ Tous les éléments du schéma de la carte adaptative native, à l'exception`Action.Submit`, sont entièrement pris en charge.
 >
-> ✔ Les actions soutenues sont [** Action.OpenURL **](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html),et [**Action.ToggleVisibility **](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+> ✔ Les actions soutenues sont [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html),et [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>Le flux pour l'envoi[de cartes adaptatives](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via un webhook entrant est le suivant :
 

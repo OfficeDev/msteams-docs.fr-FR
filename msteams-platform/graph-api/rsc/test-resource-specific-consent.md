@@ -4,14 +4,14 @@ description: Détails de test de consentement propre à une ressource dans teams
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
+ms.topic: tutorial
 keywords: autorisation teams graphique des messages RSC
-ms.openlocfilehash: a7384222e5e4cba164f918186ce53b4c1b702016
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531265"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995008"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Tester les autorisations de consentement propres aux ressources dans teams
 
@@ -20,8 +20,8 @@ Le consentement propre à la ressource (RSC) est une intégration de Microsoft t
 > [!NOTE]
 >Pour tester les autorisations RSC, votre fichier manifeste de l’application teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
 >
-> - **ID** : votre ID d’application Azure ad, *consultez la rubrique* [enregistrer votre application dans le portail Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **ressource** : n’importe quelle chaîne, *consultez* la remarque dans [mettre à jour votre manifeste d’application teams](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **ID**  : votre ID d’application Azure ad, *consultez la rubrique* [enregistrer votre application dans le portail Azure ad](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **ressource**  : n’importe quelle chaîne, *consultez* la remarque dans  [mettre à jour votre manifeste d’application teams](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **autorisations des applications** — autorisations RSC pour votre application, *voir* [autorisations spécifiques aux ressources](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -54,10 +54,10 @@ Le consentement propre à la ressource (RSC) est une intégration de Microsoft t
 
 Pour vérifier si les autorisations RSC sont honorées par la charge utile de la demande d’API, vous devez copier le [Code de test JSON RSC](test-rsc-json-file.md) dans votre environnement local et mettre à jour les valeurs suivantes :
 
-1. `azureADAppId`: ID de l’application Azure AD de votre application.
-1. `azureADAppSecret`— votre code secret d’application Azure AD (mot de passe)
-1. `token_scope`: l’étendue est requise pour obtenir un jeton-définissez la valeur surhttps://graph.microsoft.com/.default
-1. `teamGroupId`— vous pouvez obtenir l’ID de groupe d’équipe à partir du client teams comme suit :
+1. `azureADAppId`  : ID de l’application Azure AD de votre application.
+1. `azureADAppSecret`  — votre code secret d’application Azure AD (mot de passe)
+1. `token_scope`  : l’étendue est requise pour obtenir un jeton-définissez la valeur sur https://graph.microsoft.com/.default
+1. `teamGroupId` — vous pouvez obtenir l’ID de groupe d’équipe à partir du client teams comme suit :
 
 > [!div class="checklist"]
 >
@@ -72,7 +72,7 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de la
 > [!div class="checklist"]
 >
 > * Ouvrez l’application [post](https://www.postman.com) .
-> * Sélectionnez **File**  =>  **fichier**  =>  d'**importation** d’importation de fichier pour télécharger le fichier JSON mis à jour à partir de votre environnement.  
+> * Sélectionnez **File**  =>  **fichier**  =>  d' **importation** d’importation de fichier pour télécharger le fichier JSON mis à jour à partir de votre environnement.  
 > * Sélectionnez l’onglet **Collections** . 
 > * Sélectionnez le Chevron (>) en regard du **RSC de test** pour développer la vue des détails et voir les requêtes de l’API.
 

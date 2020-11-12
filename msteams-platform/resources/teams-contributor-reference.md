@@ -3,17 +3,17 @@ title: Documentation de Microsoft teams
 description: étapes de création et de publication de la documentation des équipes
 author: laujan
 ms.author: lajanuar
-ms.topic: how to
-ms.openlocfilehash: 5e76c6521792d7db1b589d7e6ad3fe0ac2bd8479
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.topic: contributor-guide
+ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "44801065"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995015"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Documentation de Microsoft teams
 
-La [documentation de teams](/microsoftteams/platform/overview) fait partie de la bibliothèque de documentation technique [Microsoft docs](https://docs.microsoft.com/) . Le contenu est organisé en groupes appelés docsets, chacun représentant un groupe de documents connexes gérés en tant qu’entité unique. Les articles du même docset ont la même extension de chemin d’URL après *docs <span></span> . Microsoft.com*.  Par exemple, `/docs.microsoft.com/microsoftteams/...` est le début du chemin d’accès au fichier docset Teams. Les Articles de teams sont écrits dans la syntaxe de [démarque](#markdown-reference) et hébergés sur [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+La [documentation de teams](/microsoftteams/platform/overview) fait partie de la bibliothèque de documentation technique [Microsoft docs](https://docs.microsoft.com/) . Le contenu est organisé en groupes appelés docsets, chacun représentant un groupe de documents connexes gérés en tant qu’entité unique. Les articles du même docset ont la même extension de chemin d’URL après *docs <span></span> . Microsoft.com*.  Par exemple,  `/docs.microsoft.com/microsoftteams/...`   est le début du chemin d’accès au fichier docset Teams. Les Articles de teams sont écrits dans la syntaxe de  [démarque](#markdown-reference) et hébergés sur [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
 ## <a name="set-up-your-workspace"></a>Configurer votre espace de travail
 
@@ -22,7 +22,7 @@ La [documentation de teams](/microsoftteams/platform/overview) fait partie de la
 > * Installez [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Installez [Visual Studio code](https://code.visualstudio.com/) (vs code).
 > * Installer le [Pack de création de docs](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directement à partir du vs code Marketplace
-<br>&emsp;&emsp;des
+<br>&emsp;&emsp; des
 
 > [!div class="checklist"]
 >
@@ -34,7 +34,7 @@ La [documentation de teams](/microsoftteams/platform/overview) fait partie de la
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Consulter le guide des contributeurs Microsoft docs
 
-Le [Guide sur les contributeurs](/contribute) offre une direction pour la création, la publication et la mise à jour de contenu technique sur Microsoft/docs. *Voir aussi*, [style docs et démarrage rapide de la voix](/contribute/style-quick-start) .
+Le [Guide sur les contributeurs](/contribute) offre une direction pour la création, la publication et la mise à jour de contenu technique sur Microsoft/docs. *Voir aussi* , [style docs et démarrage rapide de la voix](/contribute/style-quick-start) .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guides de rédaction, de style et de contenu Microsoft
 
@@ -58,10 +58,10 @@ Pour plus d’informations sur les liens hypertexte et les chemins d’accès au
 > Pour référencer un article qui fait *partie de* la plateforme teams docset :<br>
 > &emsp;&#x2714; utiliser un chemin d’accès relatif sans barre oblique de début.<br>
 > &emsp;&#x2714; inclure l’extension du fichier de démarques.<br>
->Ex : **répertoire parent/répertoire/chemin d’accès-à-article. MD** — >`[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+>Ex :  **répertoire parent/répertoire/chemin d’accès-à-article. MD** — > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
 > Pour référencer un article de bibliothèque Microsoft docs ( <https://docs.microsoft.com/> ) qui *ne fait pas partie de* la plateforme teams docset, procédez comme suit :<br>
 > &emsp;&#x2714; utiliser un chemin d’accès relatif qui commence par une barre oblique.<br>
-> &emsp;&#x2714; n’incluez pas l’extension de fichier. <br> Ex : **/docset/Address-to-file-location** — >`[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
+> &emsp;&#x2714; n’incluez pas l’extension de fichier. <br> Ex :  **/docset/Address-to-file-location** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
 >
 
 ## <a name="code-samples-and-snippets"></a>Exemples de code et extraits de code

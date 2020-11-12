@@ -3,12 +3,12 @@ title: Localisation des applications d’équipe
 description: Décrit les problèmes liés à la localisation de votre application
 keywords: teams publier le magasin Office publication AppSource langue de localisation
 ms.date: 05/15/2018
-ms.openlocfilehash: 8d14da5c773bcc422081b50fc530a32163260b4a
-ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
+ms.openlocfilehash: 7af8018414b6ec72c45639a2a370166c24185af6
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45152678"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997978"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localisation pour les applications Microsoft teams
 
@@ -40,13 +40,13 @@ Les images que vous chargez avec la langue anglaise seront celles utilisées dan
 
 ## <a name="localizing-the-strings-in-your-app-manifest"></a>Localisation des chaînes dans le manifeste de votre application
 
-Vous devez utiliser le schéma d’application Microsoft teams v 1.5 + pour localiser correctement votre application. Pour ce faire, définissez l' `$schema` attribut de votre manifest.jssur' https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json 'et mettez à jour la propriété’manifestVersion’sur' 1,7 '.
+Vous devez utiliser le schéma d’application Microsoft teams v 1.5 + pour localiser correctement votre application. Pour ce faire, définissez l' `$schema` attribut de votre manifest.jssur' https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json 'et mettez à jour la propriété’manifestVersion’sur' 1,7 '.
 
 ### <a name="example-manifestjson-change"></a>Exemple manifest.jsen modification
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -114,7 +114,7 @@ Par conséquent, il est vivement recommandé de fournir des traductions de nivea
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",
