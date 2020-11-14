@@ -3,12 +3,14 @@ title: Modèles d’applications Microsoft teams
 description: Liens et descriptions des modèles d’application pour la plateforme Microsoft teams
 ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft teams
-ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.author: lajanuar
+author: laujan
+ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
+ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397728"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "49019617"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -302,6 +304,23 @@ Incident reporter est un [robot Microsoft teams](../bots/what-are-bots.md)  qui 
 :::row:::
 :::column span="2":::
     ![Vue d’étendue personnelle de l’événement Rapporteur](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="new-employee-onboarding9734"></a>&#9734; d’intégration de nouveaux employés
+
+L’intégration de nouveaux employés est une [nouvelle solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) intégrée de Microsoft teams et SharePoint qui permet à votre organisation de fournir une expérience d’intégration cohérente et de haute qualité aux employés sur leur voyage de nouvelle embauche. L’application peut être utilisée par les équipes de ressources humaines et les responsables du recrutement pour fournir des informations pertinentes tout au long du processus d’orientation et d’accueil, ainsi que les nouvelles personnes qui partagent des commentaires, fournissent des introductions et des tâches d’intégration complètes.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    **Nouvelle carte** ![ d’accueil de l’employé Image de la nouvelle carte d’accueil de l’employé](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **Liste de vérification** ![ des nouveaux employés Image de la liste de vérification des nouveaux employés](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
