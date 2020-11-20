@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
-ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
+ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "49019617"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358027"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft teams
 
@@ -307,7 +307,7 @@ Incident reporter est un [robot Microsoft teams](../bots/what-are-bots.md)  qui 
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding9734"></a>&#9734; d’intégration de nouveaux employés
+## <a name="new-employee-onboarding-9734"></a>&#9734; d’intégration de nouveaux employés
 
 L’intégration de nouveaux employés est une [nouvelle solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) intégrée de Microsoft teams et SharePoint qui permet à votre organisation de fournir une expérience d’intégration cohérente et de haute qualité aux employés sur leur voyage de nouvelle embauche. L’application peut être utilisée par les équipes de ressources humaines et les responsables du recrutement pour fournir des informations pertinentes tout au long du processus d’orientation et d’accueil, ainsi que les nouvelles personnes qui partagent des commentaires, fournissent des introductions et des tâches d’intégration complètes.
 
@@ -360,6 +360,20 @@ Les réponses rapides sont une application Microsoft teams qui fournit une solut
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![Exemple d’affichage des réponses](../assets/images/quick-responses.png)
+
+## <a name="reflect-9734"></a>Refléter &#9734;
+
+Reflect est une application d' [extension de messagerie](../messaging-extensions/what-are-messaging-extensions.md) Microsoft teams personnalisée qui fournit une ressource fiable et inclusive pour les membres de votre équipe afin de partager l’état de leur bien-être émotionnel avec des collègues et/ou des chefs de groupe directement dans Teams. L’application est disponible dans les conversations Channel, Group, Meeting et 1:1 et la réponse d’archivage peut être définie sur public, Private-sender ou entièrement anonyme.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **Scrutation correcte**
+    
+    ![Vérifier l’interrogation utilisateur de l’application](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="remote-support"></a>Prise en charge à distance
 

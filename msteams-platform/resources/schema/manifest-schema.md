@@ -1,15 +1,15 @@
 ---
 title: Référence du schéma de manifeste
-description: Décrit le schéma pris en charge par le manifeste Microsoft teams
+description: Décrit le schéma de manifeste de Microsoft teams
 keywords: schéma de manifeste teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: a158f2ad760078e7d9d7ebb72589437136c24ac5
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 3bf8bcc0ff99228b5dafded319df6f21ade56c2b
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997950"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346685"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft teams
 
@@ -400,11 +400,11 @@ Utilisé lorsque l’expérience de votre application dispose d’un onglet Chan
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔|URL https://à utiliser lors de la configuration de l’onglet.|
-|`scopes`|Tableau d’énumérations|1 |✔|Actuellement, les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
+|`scopes`|Tableau d’énumérations|0,1|✔|Actuellement, les onglets configurables prennent en charge uniquement les `team` `groupchat` étendues et. |
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : **true**.|
 |`context` |Tableau d’énumérations|6 ||Ensemble des `contextItem` étendues dans lesquelles un onglet est pris en charge. Valeur par défaut : **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d’accès relatif à une image d’aperçu de tabulation à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|Tableau d’énumérations|1 ||Définit la manière dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
+|`supportedSharePointHosts`|Tableau d’énumérations|0,1||Définit la manière dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -421,8 +421,8 @@ Cet élément est un tableau (au maximum 16 éléments) avec tous les éléments
 |`contentUrl`|string||✔|URL https://qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de dessin de teams.|
 |`websiteUrl`|string|||URL https://pointant vers un utilisateur si celui-ci choisit de l’afficher dans un navigateur.|
 |`searchUrl`|string|||URL https://vers laquelle pointe les requêtes de recherche d’un utilisateur.|
-|`scopes`|Tableau d’énumérations|1 |✔|Actuellement, les onglets statiques prennent en charge uniquement l' `personal` étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de l’expérience personnelle.|
-|`context` | Tableau d’énumérations| 2 || Ensemble des `contextItem` étendues dans lesquelles un onglet est pris en charge.|
+|`scopes`|Tableau d’énumérations|0,1|✔|Actuellement, les onglets statiques prennent en charge uniquement l' `personal` étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de l’expérience personnelle.|
+|`context` | Tableau d’énumérations| n°2|| Ensemble des `contextItem` étendues dans lesquelles un onglet est pris en charge.|
 
 > [!NOTE]
 > Si vos onglets nécessitent des informations contextuelles pour afficher le contenu pertinent ou pour initier un flux d’authentification, *reportez-vous* à [la rubrique obtenir le contexte de votre onglet Microsoft teams](../../tabs/how-to/access-teams-context.md).
@@ -438,12 +438,12 @@ L’élément est un tableau (un seul élément un seul d' &mdash; entre eux est
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|string|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Il peut s’agir de la même chose que l' [ID d’application](#id)global.|
-|`scopes`|Tableau d’énumérations|3 |✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
+|`scopes`|Tableau d’énumérations|3|✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
 |`needsChannelSelector`|valeur booléenne|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Default **`false`**|
 |`isNotificationOnly`|valeur booléenne|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Default `**false**`|
 |`supportsFiles`|valeur booléenne|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Default **`false`**|
-|`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **Important** : cette propriété est actuellement expérimentale. Les propriétés expérimentales ne sont peut-être pas complètes et peuvent être sujettes à des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Default **`false`**|
-|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **Important** : cette propriété est actuellement expérimentale. Les propriétés expérimentales ne sont peut-être pas complètes et peuvent être sujettes à des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Default **`false`**|
+|`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **Important**: cette propriété est actuellement expérimentale. Les propriétés expérimentales ne sont peut-être pas complètes et peuvent être sujettes à des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Default **`false`**|
+|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **Important**: cette propriété est actuellement expérimentale. Les propriétés expérimentales ne sont peut-être pas complètes et peuvent être sujettes à des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Default **`false`**|
 
 ### <a name="botscommandlists"></a>bots. commandLists
 
@@ -451,7 +451,7 @@ Liste facultative de commandes que votre bot peut recommander aux utilisateurs. 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`items.scopes`|Tableau d’énumérations|3 |✔|Spécifie l’étendue pour laquelle la liste de commandes est valide. Les options sont `team`, `personal` et `groupchat`.|
+|`items.scopes`|Tableau d’énumérations|3|✔|Spécifie l’étendue pour laquelle la liste de commandes est valide. Les options sont `team`, `personal` et `groupchat`.|
 |`items.commands`|tableau d’objets|10 |✔|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots. commandLists. Commands
@@ -472,7 +472,7 @@ L’objet est un tableau (un maximum de 1 élément) avec tous les éléments de
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔|URL https://à utiliser lors de la configuration du connecteur.|
-|`scopes`|Tableau d’énumérations|1 |✔|Indique si le connecteur offre une expérience dans le contexte d’un canal dans un `team` , ou une expérience étendue à un utilisateur individuel ( `personal` ). Actuellement, seule l' `team` étendue est prise en charge.|
+|`scopes`|Tableau d’énumérations|0,1|✔|Indique si le connecteur offre une expérience dans le contexte d’un canal dans un `team` , ou une expérience étendue à un utilisateur individuel ( `personal` ). Actuellement, seule l' `team` étendue est prise en charge.|
 |`connectorId`|string|64 caractères|✔|Identificateur unique du connecteur correspondant à son ID dans le [tableau de bord du développeur de connecteurs](https://aka.ms/connectorsdashboard).|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -508,7 +508,7 @@ Chaque élément de commande est un objet de la structure suivante :
 |`type`|string|64 caractères||Type de la commande. L’une `query` ou l’autre `action` . Valeur par défaut : **requête**.|
 |`description`|string|128 caractères||Description qui apparaît pour les utilisateurs afin d’indiquer la finalité de cette commande.|
 |`initialRun`|valeur booléenne|||Valeur booléenne indiquant si la commande doit être exécutée initialement sans paramètre. Par défaut : **false**.|
-|`context`|Tableau de chaînes|3 ||Définit l’emplacement à partir duquel l’extension de message peut être appelée. Toute combinaison de `compose` , `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
+|`context`|Tableau de chaînes|3||Définit l’emplacement à partir duquel l’extension de message peut être appelée. Toute combinaison de `compose` , `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
 |`fetchTask`|valeur booléenne|||Valeur booléenne qui indique s’il doit extraire le module de tâches de façon dynamique. Par défaut : **false**.|
 |`taskInfo`|objet|||Spécifier le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
@@ -572,7 +572,7 @@ Spécifiez l’ID de votre application AAD et les informations graphiques pour a
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|ID de l’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères||URL de ressource de l’application pour l’acquisition du jeton d’authentification pour l’authentification unique.|
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton d’authentification pour l’authentification unique.|
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifier le [consentement spécifique](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions) à une ressource granulaire|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -590,7 +590,7 @@ Indique si l’indicateur de chargement est affiché ou non lors du chargement d
 
 Indiquer où une application personnelle est rendue avec ou sans barre d’en-tête d’onglet. Par défaut : **false**.
 
-## <a name="activities"></a>activités
+## <a name="activities"></a>activities
 
 **Facultatif** — Object
 

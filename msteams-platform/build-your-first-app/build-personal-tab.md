@@ -5,18 +5,18 @@ description: Créez rapidement un onglet personnel Microsoft teams à l’aide d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931728"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346804"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft teams
 
 Les onglets permettent d’exposer facilement du contenu dans votre application en incorporant essentiellement une page Web dans Teams.
 
-Il existe deux types d’onglets dans Teams. Dans ce didacticiel, vous allez créer un *onglet personnel* , une page de contenu en plein écran pour les utilisateurs individuels. (Les onglets personnels sont les plus proches de l’expérience d’un site Web classique dans Teams.)
+Il existe deux types d’onglets dans Teams. Dans ce didacticiel, vous allez créer un *onglet personnel*, une page de contenu en plein écran pour les utilisateurs individuels. (Les onglets personnels sont les plus proches de l’expérience d’un site Web classique dans Teams.)
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -106,7 +106,7 @@ Le [Kit de développement logiciel (SDK) du client JavaScript teams](https://doc
 
 ### <a name="get-context-about-the-teams-client"></a>Obtenir un contexte sur le client teams
 
-Dans votre `Tab.js` fichier, il existe un `microsoftTeams.getContext()` appel qui fournit des [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) informations sur le thème client configuré, entre autres. Grâce à la génération de modèles automatique d’application, utilisez ce code en tant que pour accéder à l' `context` interface et à ses propriétés.
+Dans votre `Tab.js` fichier, il existe un `microsoftTeams.getContext()` appel qui fournit des [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) informations sur le thème client configuré, entre autres. Grâce à la génération de modèles automatique d’application, utilisez ce code en tant que pour accéder à l' `context` interface et à ses propriétés.
 
 ```JavaScript
 componentDidMount(){

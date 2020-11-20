@@ -1,17 +1,17 @@
 ---
-title: Test du consentement propre à une ressource dans teams
+title: Tester le consentement propre à une ressource dans teams
 description: Détails de test de consentement propre à une ressource dans teams à l’aide de l’affranchissement
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorisation teams graphique des messages RSC
-ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995008"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366853"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Tester les autorisations de consentement propres aux ressources dans teams
 
@@ -72,7 +72,7 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de la
 > [!div class="checklist"]
 >
 > * Ouvrez l’application [post](https://www.postman.com) .
-> * Sélectionnez **File**  =>  **fichier**  =>  d' **importation** d’importation de fichier pour télécharger le fichier JSON mis à jour à partir de votre environnement.  
+> * Sélectionnez **File**  =>  **fichier**  =>  d'**importation** d’importation de fichier pour télécharger le fichier JSON mis à jour à partir de votre environnement.  
 > * Sélectionnez l’onglet **Collections** . 
 > * Sélectionnez le Chevron (>) en regard du **RSC de test** pour développer la vue des détails et voir les requêtes de l’API.
 
@@ -91,4 +91,5 @@ Exécutez toute la collection d’autorisations pour chaque appel d’API. Les a
 
 > [!div class="nextstepaction"]
 >
-> [En savoir plus sur l’API Graph et Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [En savoir plus : Microsoft Graph API et Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+

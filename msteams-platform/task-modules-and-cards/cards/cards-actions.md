@@ -2,18 +2,18 @@
 title: Ajouter des actions de carte dans un bot
 description: Décrit les actions de carte dans Microsoft teams et explique comment les utiliser dans vos robots
 keywords: actions des cartes des robots teams
-ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801090"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346776"
 ---
 # <a name="card-actions"></a>Actions de carte
 
 Les cartes utilisées par les robots et les extensions de messagerie dans teams prennent en charge les types d’activités ( [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) suivants. Notez que ces actions diffèrent des `potentialActions` cartes de connecteur Office 365 lorsqu’elles sont utilisées à partir de connecteurs.
 
-| Type | Action |
+| Tapez | Action |
 | --- | --- |
 | `openUrl` | Ouvre une URL dans le navigateur par défaut. |
 | `messageBack` | Envoie un message et une charge utile au bot (à partir de l’utilisateur qui a cliqué sur le bouton ou a cliqué sur la carte) et envoie un message distinct au flux de conversation. |
@@ -24,7 +24,7 @@ Les cartes utilisées par les robots et les extensions de messagerie dans teams 
 > [!NOTE]
 >* Teams ne prend pas en charge `CardAction` les types qui ne sont pas repris dans le tableau précédent.
 >* Teams ne prend pas en charge la `potentialActions` propriété.
->* Les actions de carte diffèrent des [actions suggérées](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button) dans l’infrastructure bot/service de robot Azure. Les actions suggérées ne sont pas prises en charge dans Microsoft teams : Si vous souhaitez que les boutons apparaissent dans un message Team bot, utilisez une carte.
+>* Les actions de carte diffèrent des [actions suggérées](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans l’infrastructure bot/service de robot Azure. Les actions suggérées ne sont pas prises en charge dans Microsoft teams : Si vous souhaitez que les boutons apparaissent dans un message Team bot, utilisez une carte.
 >* Si vous utilisez une action de carte dans le cadre d’une extension de messagerie, les actions ne fonctionnent pas tant que la carte n’est pas envoyée au canal (elles ne fonctionneront pas tant que la carte ne se trouve pas dans la boîte de message de composition).
 
 Teams prend également en charge les [actions de cartes adaptatives](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), qui ne sont utilisées que par des cartes adaptatives. Ces actions sont répertoriées dans leur propre section à la fin de cette référence.
@@ -74,7 +74,7 @@ La `value` propriété peut être une chaîne JSON sérialisée ou un objet JSON
 
 ### <a name="inbound-message-example"></a>Exemple de message entrant
 
-`replyToId`contient l’ID du message depuis lequel l’action de la carte provient. Utilisez-le si vous souhaitez mettre à jour le message.
+`replyToId` contient l’ID du message depuis lequel l’action de la carte provient. Utilisez-le si vous souhaitez mettre à jour le message.
 
 ```json
 {
@@ -229,13 +229,16 @@ Les cartes adaptatives prennent en charge trois types d’actions :
 
 Outre les actions mentionnées ci-dessus, vous pouvez modifier la `Action.Submit` charge utile de la carte adaptative pour prendre en charge les actions de l’infrastructure de robot existantes à l’aide d’une `msteams` propriété `data` de l’objet de `Action.Submit` . Les sections ci-dessous expliquent en détail comment utiliser les actions de l’infrastructure bot existantes avec des cartes adaptatives.
 
+> [!NOTE]
+> `msteams`L’ajout à des données à l’aide d’une action de l’infrastructure bot ne fonctionne pas avec un module de tâches de carte adaptative.
+
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartes adaptatives avec action messageBack
 
 Pour inclure une `messageBack` action avec une carte adaptative, incluez les détails suivants dans l' `msteams` objet. Notez que vous pouvez inclure des propriétés masquées supplémentaires dans l' `data` objet si nécessaire.
 
 | Propriété | Description |
 | --- | --- |
-| `type` | Défini sur`messageBack` |
+| `type` | Défini sur `messageBack` |
 | `displayText` | Facultatif. En écho par l’utilisateur dans le flux de conversation lors de l’exécution de l’action. Ce texte n’est *pas* envoyé à votre bot. |
 | `value` | Envoyé à votre bot lors de l’exécution de l’action. Vous pouvez coder le contexte de l’action, comme des identificateurs uniques ou un objet JSON. |
 | `text` | Envoyé à votre bot lors de l’exécution de l’action. Utilisez cette propriété pour simplifier le développement de robots : votre code peut vérifier une seule propriété de niveau supérieur pour répartir la logique du bot. |
@@ -263,7 +266,7 @@ Pour inclure une `imBack` action avec une carte adaptative, incluez les détails
 
 | Propriété | Description |
 | --- | --- |
-| `type` | Défini sur`imBack` |
+| `type` | Défini sur `imBack` |
 | `value` | Chaîne qui doit être renvoyée en écho dans la conversation |
 
 #### <a name="example"></a>Exemple
@@ -287,7 +290,7 @@ Pour inclure une `signin` action avec une carte adaptative, incluez les détails
 
 | Propriété | Description |
 | --- | --- |
-| `type` | Défini sur`signin` |
+| `type` | Défini sur `signin` |
 | `value` | Défini sur l’URL vers laquelle vous voulez rediriger  |
 
 #### <a name="example"></a>Exemple

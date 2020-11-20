@@ -5,12 +5,12 @@ keywords: événements bots de teams
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877042"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346727"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements bot dans Microsoft teams
 
@@ -30,7 +30,7 @@ Les événements teams et Group, généralement déclenchés `conversationUpdate
 
 Le tableau suivant répertorie les événements que votre bot peut recevoir et comment agir.
 
-|Type|Objet Payload|EventType teams |Description|Portée|
+|Tapez|Objet Payload|EventType teams |Description|Portée|
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Membre ajouté à Team](#team-member-or-bot-addition)| tous les |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Le membre a été supprimé de Team](#team-member-or-bot-removed)| `groupChat` & `team` |
@@ -185,7 +185,7 @@ L' `conversationUpdate` événement dont l' `membersAdded` objet est dans la cha
 Votre bot reçoit un `conversationUpdate` avec `membersAdded` lorsqu’un utilisateur l’ajoute directement pour la conversation personnelle. Dans ce cas, la charge utile que reçoit votre bot ne contient pas l' `channelData.team` objet. Vous devez l’utiliser comme filtre si vous souhaitez que votre bot propose un autre message d' [Accueil](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) en fonction de l’étendue.
 
 > [!NOTE]
-> Pour les robots personnels, votre robot ne recevra jamais l' `conversationUpdate` événement qu’une seule fois, même si le bot est supprimé et rajouté. Pour le développement et les tests, il peut s’avérer utile d’ajouter une fonction d’assistance qui vous permettra de réinitialiser entièrement votre robot. Pour plus d’informations sur l’implémentation de cet exemple, voir un exemple de [Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou [C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) .
+> Pour les robots personnels, votre robot reçoit l' `conversationUpdate` événement plusieurs fois, même si le bot est supprimé et rajouté. Pour le développement et les tests, il peut s’avérer utile d’ajouter une fonction d’assistance qui vous permettra de réinitialiser entièrement votre robot. Pour plus d’informations sur l’implémentation de cet exemple, voir un exemple de [Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou [C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) .
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>Exemple de schéma : Bot ajouté au contexte personnel
 

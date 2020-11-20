@@ -2,12 +2,12 @@
 title: Utilisation des modules de tâches dans les robots Microsoft teams
 description: Utilisation des modules de tâches avec les robots Microsoft Teams, y compris les cartes de l’infrastructure bot, des cartes adaptatives et des liens approfondis.
 keywords: modules de tâches bots de teams
-ms.openlocfilehash: 32fb6a4aa0a8bf2297a4f60331dc5c6c6aceb4e2
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: 1400fec0ef86448f8632018c7675999b6b1881a0
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44801138"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346720"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>Utilisation des modules de tâches dans les robots Microsoft teams
 
@@ -74,8 +74,8 @@ Cette section définit le schéma de ce que votre bot reçoit lorsqu’il reçoi
 
 | Propriété | Description                          |
 | -------- | ------------------------------------ |
-| `type`   | Sera toujours`invoke`              |
-| `name`   | Soit `task/fetch` ou`task/submit` |
+| `type`   | Sera toujours `invoke`              |
+| `name`   | Soit `task/fetch` ou `task/submit` |
 | `value`  | Charge utile définie par le développeur. En règle générale, la structure de l' `value` objet reflète ce qui a été envoyé par Teams. Dans ce cas, toutefois, il est différent, car nous souhaitons prendre en charge l’extraction dynamique ( `task/fetch` ) à la fois de l’infrastructure bot ( `value` ) et des actions de carte adaptative `Action.Submit` ( `data` ), et nous avons besoin d’un moyen de communiquer teams `context` au robot en plus de ce qui a été inclus dans `value` / `data` .<br/><br/>Pour ce faire, nous combinons les deux dans un objet parent :<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>Exemple : réception et réponse aux messages d’appel des tâches/extraction et tâches/envoi-Node.js
@@ -84,85 +84,51 @@ Cette section définit le schéma de ce que votre bot reçoit lorsqu’il reçoi
 > L’exemple de code ci-dessous a été modifié entre la version d’évaluation technique et la version finale de cette fonctionnalité : le schéma de la demande a été `task/fetch` modifié pour suivre ce qui a été [documenté dans la section précédente](#payload-of-taskfetch-and-tasksubmit-messages). Autrement dit, la documentation était correcte, mais l’implémentation ne l’était pas. Consultez les `// for Technical Preview [...]` commentaires ci-dessous pour en savoir plus sur ce qui a changé.
 
 ```typescript
-// Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
-// Assumes request is coming from an Adaptive card Action.Submit button that has a "taskModule" property indicating what to invoke
-private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status?: number) => void): Promise<void> {
-    let invokeType = (event as any).name;
-    let invokeValue = (event as any).value;
-    if (invokeType === undefined) {
-        invokeType = null;
-    }
-    switch (invokeType) {
-        case "task/fetch": {
-            if (invokeValue !== undefined && invokeValue.data.taskModule === "customform") { // for Technical Preview, was invokeValue.taskModule
-                // Return the specified task module response to the bot
-                let fetchTemplate: any = {
-                    "task": {
-                        "type": "continue",
-                        "value": {
-                            "title": "Custom Form",
-                            "height": 510,
-                            "width": 430,
-                            "fallbackUrl": "https://contoso.com/teamsapp/customform",
-                            "url": "https://contoso.com/teamsapp/customform",
-                        }
-                    }
-                };
-                cb(null, fetchTemplate, 200);
-            };
-            if (invokeValue !== undefined && invokeValue.data.taskModule === "adaptivecard") { // for Technical Preview, was invokeValue.taskModule
-                let adaptiveCard = {
-                    "type": "AdaptiveCard",
-                    "body": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Here is a ninja cat:"
-                        },
-                        {
-                            "type": "Image",
-                            "url": "http://adaptivecards.io/content/cats/1.png",
-                            "size": "Medium"
-                        }
-                    ],
-                    "version": "1.0"
-                };
-                // Return the specified task module response to the bot
-                let fetchTemplate: any = {
-                    "task": {
-                        "type": "continue",
-                        "value": {
-                            "title": "Ninja Cat",
-                            "height": "small",
-                            "width": "small",
-                            "card": {
-                                contentType: "application/vnd.microsoft.card.adaptive",
-                                content: adaptiveCard,
-                            }
-                        }
-                    }
-                };
-                cb(null, fetchTemplate, 200);
-            };
-            break;
+ handleTeamsTaskModuleFetch(context, taskModuleRequest) {
+        // Called when the user selects an options from the displayed HeroCard or
+        // AdaptiveCard.  The result is the action to perform.
+
+        const cardTaskFetchValue = taskModuleRequest.data.data;
+        var taskInfo = {}; // TaskModuleTaskInfo
+
+        if (cardTaskFetchValue === TaskModuleIds.YouTube) {
+            // Display the YouTube.html page
+            taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.YouTube + '.html';
+            this.setTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
+        } else if (cardTaskFetchValue === TaskModuleIds.CustomForm) {
+            // Display the CustomForm.html page, and post the form data back via
+            // handleTeamsTaskModuleSubmit.
+            taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.CustomForm + '.html';
+            this.setTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
+        } else if (cardTaskFetchValue === TaskModuleIds.AdaptiveCard) {
+            // Display an AdaptiveCard to prompt user for text, and post it back via
+            // handleTeamsTaskModuleSubmit.
+            taskInfo.card = this.createAdaptiveCardAttachment();
+            this.setTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
         }
-        case "task/submit": {
-            if (invokeValue.data !== undefined) {
-                // It's a valid task module response
-                let submitResponse: any = {
-                    "task": {
-                        "type": "message",
-                        "value": "Task complete!",
-                    }
-                };
-                cb(null, fetchTemplates.submitMessageResponse, 200)
+
+        return TaskModuleResponseFactory.toTaskModuleResponse(taskInfo);
+    }
+
+    async handleTeamsTaskModuleSubmit(context, taskModuleRequest) {
+        // Called when data is being returned from the selected option (see `handleTeamsTaskModuleFetch').
+
+        // Echo the users input back.  In a production bot, this is where you'd add behavior in
+        // response to the input.
+        await context.sendActivity(MessageFactory.text('handleTeamsTaskModuleSubmit: ' + JSON.stringify(taskModuleRequest.data)));
+
+        // Return TaskModuleResponse
+        return {
+            // TaskModuleMessageResponse
+            task: {
+                type: 'message',
+                value: 'Thanks!'
             }
-        }
+        };
     }
-}
+
+*See also*, [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) and  [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 ```
-
-*Voir aussi*l' [exemple de code du module de tâches de Microsoft Teams (NodeJS](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) et [robots](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)).
-
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>Exemple : réception et réponse aux messages d’appel des tâches/extraction et tâches/envoi-C #
 
 Dans les robots C#, `invoke` les messages sont traités par un `HttpResponseMessage()` contrôleur traitant un `Activity` message. Les `task/fetch` `task/submit` requêtes et réponses sont au format JSON. En C#, il n’est pas aussi commode de traiter le JSON brut en Node.js, donc vous avez besoin de classes wrapper pour gérer la sérialisation vers et à partir de JSON. Il n’existe pas encore de prise en charge directe de cette fonction dans le [Kit de développement logiciel (SDK) c#](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) de Microsoft Teams, mais vous pouvez voir un exemple de ce à quoi ressembleront ces classes wrapper simples dans l' [exemple d’application c#](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
@@ -170,64 +136,99 @@ Dans les robots C#, `invoke` les messages sont traités par un `HttpResponseMess
 Vous trouverez ci-dessous un exemple de code en C# pour `task/fetch` la gestion et les `task/submit` messages qui utilisent ces classes wrapper ( `TaskInfo` , `TaskEnvelope` ), extraits de l' [exemple](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
 
 ```csharp
-private HttpResponseMessage HandleInvokeMessages(Activity activity)
-{
-    var activityValue = activity.Value.ToString();
-    if (activity.Name == "task/fetch")
-    {
-        var action = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BotFrameworkCardValue<string>>(activityValue);
-
-        Models.TaskInfo taskInfo = GetTaskInfo(action.Data);
-        Models.TaskEnvelope taskEnvelope = new Models.TaskEnvelope
+protected override Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
         {
-            Task = new Models.Task()
+            var asJobject = JObject.FromObject(taskModuleRequest.Data);
+            var value = asJobject.ToObject<CardTaskFetchValue<string>>()?.Data;
+
+            var taskInfo = new TaskModuleTaskInfo();
+            switch (value)
             {
-                Type = Models.TaskType.Continue,
-                TaskInfo = taskInfo
+                case TaskModuleIds.YouTube:
+                    taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.YouTube;
+                    SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
+                    break;
+                case TaskModuleIds.CustomForm:
+                    taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.CustomForm;
+                    SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
+                    break;
+                case TaskModuleIds.AdaptiveCard:
+                    taskInfo.Card = CreateAdaptiveCardAttachment();
+                    SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
+                    break;
+                default:
+                    break;
             }
-        };
-        return Request.CreateResponse(HttpStatusCode.OK, taskEnvelope);
-    }
-    else if (activity.Name == "task/submit")
-    {
-        ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-        Activity reply = activity.CreateReply("Received = " + activity.Value.ToString());
-        connector.Conversations.ReplyToActivity(reply);
-    }
-    return new HttpResponseMessage(HttpStatusCode.Accepted);
-}
 
-// Helper function for building the TaskInfo object based on the incoming request
-private static Models.TaskInfo GetTaskInfo(string actionInfo)
-{
-    Models.TaskInfo taskInfo = new Models.TaskInfo();
-    switch (actionInfo)
-    {
-        case TaskModuleIds.YouTube:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.YouTube;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
-            break;
-        case TaskModuleIds.PowerApp:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.PowerApp;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.PowerApp);
-            break;
-        case TaskModuleIds.CustomForm:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.CustomForm;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
-            break;
-        case TaskModuleIds.AdaptiveCard:
-            taskInfo.Card = AdaptiveCardHelper.GetAdaptiveCard();
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
-            break;
-        default:
-            break;
-    }
-    return taskInfo;
-}
+            return Task.FromResult(taskInfo.ToTaskModuleResponse());
+        }
+
+        protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+        {
+            var reply = MessageFactory.Text("OnTeamsTaskModuleSubmitAsync Value: " + JsonConvert.SerializeObject(taskModuleRequest));
+            await turnContext.SendActivityAsync(reply, cancellationToken);
+
+            return TaskModuleResponseFactory.CreateResponse("Thanks!");
+        }
 ```
+## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---python"></a>Exemple : réception et réponse aux messages d’appel des tâches/extraction et tâches/envoi-python
+```
+async def on_teams_task_module_fetch(
+        self, turn_context: TurnContext, task_module_request: TaskModuleRequest
+    ) -> TaskModuleResponse:
+        """
+        Called when the user selects an options from the displayed HeroCard or
+        AdaptiveCard.  The result is the action to perform.
+        """
 
-L’exemple ci-dessus ne montre pas la `SetTaskInfo()` fonction qui définit les `height` `width` Propriétés, et `title` de l' `TaskInfo` objet pour chaque cas. Voici le [code source pour SetTaskInfo ()](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs).
+        card_task_fetch_value = task_module_request.data["data"]
 
+        task_info = TaskModuleTaskInfo()
+        if card_task_fetch_value == TaskModuleIds.YOUTUBE:
+            # Display the YouTube.html page
+            task_info.url = task_info.fallback_url = (
+                self.__base_url + "/" + TaskModuleIds.YOUTUBE + ".html"
+            )
+            TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.YOUTUBE)
+        elif card_task_fetch_value == TaskModuleIds.CUSTOM_FORM:
+            # Display the CustomForm.html page, and post the form data back via
+            # on_teams_task_module_submit.
+            task_info.url = task_info.fallback_url = (
+                self.__base_url + "/" + TaskModuleIds.CUSTOM_FORM + ".html"
+            )
+            TeamsTaskModuleBot.__set_task_info(
+                task_info, TaskModuleUIConstants.CUSTOM_FORM
+            )
+        elif card_task_fetch_value == TaskModuleIds.ADAPTIVE_CARD:
+            # Display an AdaptiveCard to prompt user for text, and post it back via
+            # on_teams_task_module_submit.
+            task_info.card = TeamsTaskModuleBot.__create_adaptive_card_attachment()
+            TeamsTaskModuleBot.__set_task_info(
+                task_info, TaskModuleUIConstants.ADAPTIVE_CARD
+            )
+
+        return TaskModuleResponseFactory.to_task_module_response(task_info)
+
+    async def on_teams_task_module_submit(
+        self, turn_context: TurnContext, task_module_request: TaskModuleRequest
+    ) -> TaskModuleResponse:
+        """
+        Called when data is being returned from the selected option (see `on_teams_task_module_fetch').
+        """
+
+        # Echo the users input back.  In a production bot, this is where you'd add behavior in
+        # response to the input.
+        await turn_context.send_activity(
+            MessageFactory.text(
+                f"on_teams_task_module_submit: {json.dumps(task_module_request.data)}"
+            )
+        )
+
+        message_response = TaskModuleMessageResponse(value="Thanks!")
+        return TaskModuleResponse(task=message_response)
+
+Not shown in the above example is the `SetTaskInfo()` function, which sets the `height`, `width`, and `title` properties of the `TaskInfo` object for each case. Here's the [source code for SetTaskInfo()](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs).
+```
 ### <a name="bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions"></a>Actions de carte d’infrastructure bot et action de carte adaptative. soumettre des actions
 
 Le schéma des actions de carte de l’infrastructure de robots est légèrement différent des actions de carte adaptative `Action.Submit` . Par conséquent, le mode d’appel des modules de tâches est légèrement différent : l' `data` objet dans `Action.Submit` contient un `msteams` objet de sorte qu’il ne gêne pas les autres propriétés de la carte. Le tableau suivant montre un exemple de chacun :

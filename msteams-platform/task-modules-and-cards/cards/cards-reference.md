@@ -2,12 +2,12 @@
 title: Référence des cartes
 description: Décrit toutes les cartes et les actions de carte disponibles pour les robots dans teams
 keywords: Référence des cartes robots
-ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7c37d05ae4cfd07049eaec6dec5eda0f3312cefa
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452609"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346741"
 ---
 # <a name="cards-reference"></a>Référence des cartes
 
@@ -47,7 +47,7 @@ Votre carte peut contenir une image incluse en incluant un lien vers votre image
 
 Les images sont mises à l’horizontale ou verticalement tout en conservant les proportions pour redimensionner la zone d’image, puis rognées du Centre pour obtenir les proportions appropriées pour la carte.
 
-Les images doivent être d’au moins 1024 × 1024 et 1 Mo au format PNG, JPEG ou GIF ; l’image GIF animée n’est pas officiellement prise en charge.
+Les images doivent être au plus 1024 × 1024 au format PNG, JPEG ou GIF ; l’image GIF animée n’est pas officiellement prise en charge.
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ Carte personnalisable qui peut contenir n’importe quelle combinaison de texte,
 
 ### <a name="support-for-adaptive-cards"></a>Prise en charge des cartes adaptatives
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -226,7 +226,7 @@ Une carte qui contient généralement une seule grande image, un ou plusieurs bo
 
 ### <a name="support-for-hero-cards"></a>Prise en charge des cartes héros
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -289,7 +289,7 @@ La carte de liste a été ajoutée par teams pour fournir des fonctions au-delà
 
 ### <a name="support-for-list-cards"></a>Prise en charge des cartes de visite
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 |
@@ -364,7 +364,7 @@ La carte de connecteur Office 365 offre une disposition flexible avec plusieurs 
 
 ### <a name="support-for-office-365-connector-cards"></a>Prise en charge des cartes de connecteur Office 365
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 |
@@ -482,7 +482,7 @@ Carte qui permet à un bot de fournir un accusé de réception à l’utilisateu
 
 ### <a name="support-for-receipts-cards"></a>Prise en charge des fiches de réception
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -502,7 +502,7 @@ L' *action de connexion* peut être utilisée à partir de n’importe quelle ca
 
 ### <a name="support-for-signin-cards"></a>Prise en charge des cartes de connexion
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -520,7 +520,7 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 
 ### <a name="support-for-thumbnail-cards"></a>Prise en charge des cartes miniatures
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -601,7 +601,7 @@ La [disposition carrousel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich
 
 ### <a name="support-for-carousel-collections"></a>Prise en charge des regroupements de carrousel
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -625,7 +625,7 @@ Les propriétés sont les mêmes que pour la carte héros ou miniature.
 
 La disposition liste affiche une liste de cartes verticalement empilées, éventuellement avec des boutons d’action associés.
 
-| Robots dans teams | Extensions de messagerie  | Connecteurs | Infrastructure de robot |
+| Robots dans teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |

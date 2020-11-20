@@ -4,12 +4,12 @@ author: laujan
 description: intégration d’agents virtuels chatbot dans la plateforme teams
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: 3f877505cb2ef20bbd74d236dc17816df04bbef1
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397686"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366867"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Intégration d’un système d’agents virtuels chatbot à Microsoft teams
 
@@ -19,17 +19,17 @@ ms.locfileid: "48397686"
 > En ajoutant votre chatbot à Microsoft Teams, certaines données, telles que le contenu des robots et le contenu de la conversation utilisateur final, seront partagées avec Microsoft Teams (ce qui signifie que vos données transitent en dehors de la [conformité et des frontières géographiques ou régionales](/power-virtual-agents/data-location)de votre organisation). <br/>
 > Pour plus d’informations, consultez la rubrique [sécurité et conformité dans Microsoft teams](/MicrosoftTeams/security-compliance-overview).
 
-## <a name="make-your-chatbot-reachable-in-teams-in-the-power-virtual-agents-portal"></a>Rendez vos chatbot accessibles dans teams dans le portail des agents Virtual Power
+## <a name="make-your-chatbot-available-in-teams-via-the-power-virtual-agents-portal"></a>Rendez vos chatbot disponibles dans teams via le portail des agents Virtual Power
 
 1. **Publiez le contenu de robot le plus récent**.  Une fois que vous avez créé un chatbot dans le [portail Power Virtual agents](https://powervirtualagents.microsoft.com), vous devez publier votre robot au moins une fois avant que les utilisateurs de teams puissent interagir avec lui. Voir [publier le contenu de robot le plus récent](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content).
 
 ![publier dans le portail des agents Virtual Power](../../assets/images/pva-publish.png)
 
-2. **Configurez le canal teams**. Après avoir publié votre robot, vous pouvez ajouter le canal teams pour permettre aux utilisateurs de teams d’accéder au bot.
+2. **Configurez le canal teams**. Après avoir publié votre robot, vous pouvez ajouter le canal teams pour mettre le robot à la disposition des utilisateurs de teams.
 
 ![canaux dans le portail des agents Virtual Power](../../assets/images/pva-channels.png)
 
-3. **Générer un ID d’application pour votre chatbot**  Une fois que le canal teams a été ajouté à votre chatbot, un **ID d’application** est généré dans la boîte de dialogue. L’ID de l’application est un identificateur Microsoft généré unique pour votre bot.  Copiez et enregistrez l’ID de l’application : vous en aurez besoin plus tard pour créer un package d’application pour Teams.
+3. **Générez un ID d’application pour votre chatbot**.  Une fois que le canal teams a été ajouté à votre chatbot, un **ID d’application** est généré dans la boîte de dialogue. L’ID de l’application est un identificateur Microsoft généré unique pour votre bot.  Copiez et enregistrez l’ID de l’application : vous en aurez besoin plus tard pour créer un package d’application pour Teams.
 
 ## <a name="add-your-bot-to-teams-using-app-studio"></a>Ajouter votre robot à teams à l’aide d’App Studio
 
@@ -60,4 +60,4 @@ token.botframework.com
 8. **Démarrez une conversation**. Le processus de configuration pour l’ajout de votre robot de conversation Power Virtual agents à teams est terminé. Vous pouvez maintenant démarrer une conversation avec votre robot dans une conversation personnelle.
 
 > [!div class="nextstepaction"]
-> [En savoir plus sur la publication de votre robot d’agents Virtual Power](/power-virtual-agents/publication-fundamentals-publish-channels)
+> [Pour plus d’informations, consultez la publication de votre robot d’agents Virtual Power.](/power-virtual-agents/publication-fundamentals-publish-channels)

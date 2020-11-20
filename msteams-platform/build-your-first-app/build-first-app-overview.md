@@ -5,12 +5,12 @@ description: Découvrez comment commencer à utiliser le développement d’appl
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931791"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346811"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Créer votre première vue d’ensemble de l’application Microsoft teams
 
@@ -22,11 +22,11 @@ Voici une idée de ce que vous saurez après les leçons.
 
 > [!div class="checklist"]
   >
-  > * **Soyez rapidement opérationnel avec Team Toolkit** : Microsoft teams Toolkit for Visual Studio code s’occupe de la création de votre projet d’application et de votre génération de modèles automatique afin que vous puissiez utiliser une application en cours d’exécution en quelques minutes.
-  > * **Configurer votre application avec App Studio** : spécifiez les fonctionnalités et les services utilisés par votre application Teams.
-  > * **Portée de l’audience de votre application** : créez une application de teams pour l’utilisation personnelle, la collaboration ou les deux.
-  > * **Obtenez de l’expérience avec les outils et les kits de développement logiciel de teams** : Personnalisez votre application (par exemple, modifiez son jeu de couleurs pour qu’elle corresponde au thème Teams) avec l’aide du kit de développement logiciel JavaScript Teams. En savoir plus sur les outils courants de création et de gestion des robots.
-  > * **Développez votre application** : tout au long des leçons, vous trouverez des rubriques connexes qui vous intéresseront probablement (telles que les instructions de conception et d’authentification).
+  > * **Soyez rapidement opérationnel avec Team Toolkit**: Microsoft teams Toolkit for Visual Studio code s’occupe de la création de votre projet d’application et de votre génération de modèles automatique afin que vous puissiez utiliser une application en cours d’exécution en quelques minutes.
+  > * **Configurer votre application avec App Studio**: spécifiez les fonctionnalités et les services utilisés par votre application Teams.
+  > * **Portée de l’audience de votre application**: créez une application de teams pour l’utilisation personnelle, la collaboration ou les deux.
+  > * **Obtenez de l’expérience avec les outils et les kits de développement logiciel de teams**: Personnalisez votre application (par exemple, modifiez son jeu de couleurs pour qu’elle corresponde au thème Teams) avec l’aide du kit de développement logiciel JavaScript Teams. En savoir plus sur les outils courants de création et de gestion des robots.
+  > * **Développez votre application**: tout au long des leçons, vous trouverez des rubriques connexes qui vous intéresseront probablement (telles que les instructions de conception et d’authentification).
 
 ## <a name="teams-app-fundamentals"></a>Principes fondamentaux des applications teams
 
@@ -74,6 +74,9 @@ Vous pouvez obtenir un compte de test gratuit teams qui autorise l’application
 1. Vérifiez si vous disposez maintenant de l’option **Télécharger une application personnalisée** .
 
 </details>
+
+> [!Note]
+> Si vous ne pouvez toujours pas les applications chargement, reportez-vous à la rubrique [activer les applications personnalisées de teams et activer le téléchargement d’applications personnalisées](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ### <a name="install-your-development-tools"></a>Installer vos outils de développement
 

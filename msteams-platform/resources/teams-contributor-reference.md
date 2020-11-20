@@ -4,12 +4,12 @@ description: étapes de création et de publication de la documentation des équ
 author: laujan
 ms.author: lajanuar
 ms.topic: contributor-guide
-ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 18aae61a674cf9c4c94831f22149cd4b9e7ebeda
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995015"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366895"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Documentation de Microsoft teams
 
@@ -34,7 +34,7 @@ La [documentation de teams](/microsoftteams/platform/overview) fait partie de la
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Consulter le guide des contributeurs Microsoft docs
 
-Le [Guide sur les contributeurs](/contribute) offre une direction pour la création, la publication et la mise à jour de contenu technique sur Microsoft/docs. *Voir aussi* , [style docs et démarrage rapide de la voix](/contribute/style-quick-start) .
+Le [Guide sur les contributeurs](/contribute) offre une direction pour la création, la publication et la mise à jour de contenu technique sur la plateforme Microsoft docs. *Voir aussi*, [style docs et démarrage rapide de la voix](/contribute/style-quick-start) .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guides de rédaction, de style et de contenu Microsoft
 
@@ -59,10 +59,10 @@ Pour plus d’informations sur les liens hypertexte et les chemins d’accès au
 > &emsp;&#x2714; utiliser un chemin d’accès relatif sans barre oblique de début.<br>
 > &emsp;&#x2714; inclure l’extension du fichier de démarques.<br>
 >Ex :  **répertoire parent/répertoire/chemin d’accès-à-article. MD** — > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> Pour référencer un article de bibliothèque Microsoft docs ( <https://docs.microsoft.com/> ) qui *ne fait pas partie de* la plateforme teams docset, procédez comme suit :<br>
+> Pour référencer un article de la bibliothèque Microsoft docs qui ne fait *pas partie de* la plateforme teams docset :<br>
 > &emsp;&#x2714; utiliser un chemin d’accès relatif qui commence par une barre oblique.<br>
-> &emsp;&#x2714; n’incluez pas l’extension de fichier. <br> Ex :  **/docset/Address-to-file-location** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
->
+> &emsp;&#x2714; n’incluez pas l’extension de fichier. <br> Ex :  **/docset/Address-to-file-location** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> Pour référencer une page en dehors de la bibliothèque Microsoft docs, telle que GitHub, utilisez le `https` chemin d’accès complet du fichier.<br>
 
 ## <a name="code-samples-and-snippets"></a>Exemples de code et extraits de code
 

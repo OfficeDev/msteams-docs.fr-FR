@@ -2,12 +2,12 @@
 title: Prise en charge de l’authentification unique pour les onglets
 description: Décrit l’authentification unique (SSO)
 keywords: API SSO d’authentification unique AAD pour l’authentification de teams
-ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877056"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346790"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l’authentification unique (SSO) pour les onglets
 
@@ -18,7 +18,7 @@ Les utilisateurs se connectent à Microsoft teams par le biais de leurs comptes 
 >
 > ✔ Teams pour Android (1416/1.0.0.2020073101 et versions ultérieures)
 >
-> ✔ Teams pour iOS ( _version_ : 2.0.18 et versions ultérieures)  
+> ✔ Teams pour iOS (_version_: 2.0.18 et versions ultérieures)  
 >
 > Pour une expérience optimale avec Teams, utilisez la dernière version d’iOS et Android.
 
@@ -65,7 +65,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
 #### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Enregistrement approfondi de votre application via le portail Azure Active Directory :
 
 1. Enregistrez une nouvelle application dans le portail [Azure Active Directory-inscriptions des applications](https://go.microsoft.com/fwlink/?linkid=2083908) .
-2. Sélectionnez **nouvelle inscription** et, dans la *page inscrire une application* , définissez les valeurs suivantes :
+2. Sélectionnez **nouvelle inscription** et, dans la *page inscrire une application*, définissez les valeurs suivantes :
     * Définissez **Name** sur le nom de votre application.
     * Choisissez les **types de comptes pris en charge** (tout type de compte fonctionne) ¹
     * Laissez **Redirect URI** vide.
@@ -80,7 +80,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
 7. Définir **qui peut consentir ?**`Admins and users`
 8. Renseignez les champs de configuration des invites d’administrateur et de consentement de l’utilisateur avec des valeurs appropriées pour l' `access_as_user` étendue :
     * **Titre du consentement administratif :** Les équipes peuvent accéder au profil de l’utilisateur.
-    * **Description du consentement administratif** : permet à teams d’appeler les API Web de l’application en tant qu’utilisateur actuel.
+    * **Description du consentement administratif**: permet à teams d’appeler les API Web de l’application en tant qu’utilisateur actuel.
     * **Titre du consentement** de l’utilisateur : teams peut accéder au profil utilisateur et faire des demandes au nom de l’utilisateur.
     * **Description du consentement de l’utilisateur :** Permettre aux équipes d’appeler les API de cette application avec les mêmes droits que l’utilisateur.
 9. Vérifiez que l' **État** est défini sur **activé** .
@@ -90,7 +90,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet te
 11. Dans la section **applications clientes autorisées** , identifiez les applications que vous souhaitez autoriser pour l’application Web de votre application. Sélectionnez *Ajouter une application cliente*. Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Team mobile/application de bureau)
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Application Web Teams)
-12. Accédez à **autorisations d’API**. Sélectionnez *Ajouter une autorisation délégation de*  >  *Microsoft Graph*  >  *autorisations* , puis ajoutez les autorisations suivantes :
+12. Accédez à **autorisations d’API**. Sélectionnez *Ajouter une autorisation*  >  délégation de *Microsoft Graph*  >  *autorisations*, puis ajoutez les autorisations suivantes à partir de l’API Microsoft Graph :
     * User. Read (activé par défaut)
     * email
     * offline_access
@@ -147,7 +147,7 @@ Voici à quoi ressemble l’API d’authentification :
 ```javascript
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```

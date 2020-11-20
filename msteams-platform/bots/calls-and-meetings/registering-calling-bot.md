@@ -2,12 +2,12 @@
 title: Inscription d’un robot de réunion et d’appel pour Microsoft teams
 description: Découvrez comment enregistrer un nouveau robot d’appel audio/vidéo pour Microsoft teams
 keywords: appels audio/vidéo vidéo audio/vidéo
-ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209752"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346846"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Enregistrer un bot appelant pour Microsoft teams
 
@@ -50,8 +50,8 @@ Microsoft Graph expose des autorisations granulaires qui contrôlent l’accès 
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|Lancer les appels sortants 1:1 depuis l’application (aperçu)|Permet à l’application de passer des appels sortants à un seul utilisateur et de transférer des appels à des utilisateurs dans l’annuaire de votre organisation, sans utilisateur connecté.|Oui|
 |_Calls.InitiateGroupCall.All_|Lancer les appels de groupe sortants 1:1 depuis l’application (aperçu)|Permet à l’application de passer des appels sortants à plusieurs utilisateurs et d’ajouter des participants à des réunions dans votre organisation, sans utilisateur connecté.|Oui|
-|_Calls.JoinGroupCall.All_|Participer à des réunions et à des appels de groupe en tant qu’application (aperçu)|Permet à l’application de rejoindre les appels de groupe et les réunions planifiées dans votre organisation, sans utilisateur connecté. L’application se joindra aux réunions avec les privilèges d’un utilisateur d’annuaire dans votre client.|Oui|
-|_Calls.JoinGroupCallasGuest.All_|Participer à des réunions et à des appels de groupe en tant qu’invité (aperçu)|Permet à l’application de rejoindre anonymement les appels de groupe et les réunions planifiées dans votre organisation, sans utilisateur connecté. L’application se joindra aux réunions en tant qu’invité dans votre client.|Oui|
+|_Calls.JoinGroupCall.All_|Participer à des réunions et à des appels de groupe en tant qu’application (aperçu)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|Oui|
+|_Calls.JoinGroupCallasGuest.All_|Participer à des réunions et à des appels de groupe en tant qu’invité (aperçu)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|Oui|
 |_Calls. AccessMedia. All_ <sup> _voir ci-dessous_</sup>|Accéder aux flux multimédias dans un appel en tant qu’application (aperçu)|Permet à l’application d’obtenir un accès direct aux flux multimédias dans un appel, sans utilisateur connecté.|Oui|
 
 > [!IMPORTANT]
@@ -66,7 +66,7 @@ Microsoft Graph expose des autorisations granulaires qui contrôlent l’accès 
 
 ### <a name="assigning-permissions"></a>Attribution d'autorisations
 
-Vous devez configurer les autorisations d’application pour votre robot à l’avance. Nous vous recommandons d’utiliser le [portail d’inscription de l’application Microsoft](https://apps.dev.microsoft.com/) comme décrit [ici](/graph/auth_register_app_v2) , car c’est là que se trouve votre bot. Toutefois, vous pouvez toujours utiliser le [portail Azure](https://aka.ms/aadapplist) si vous préférez utiliser le [point de terminaison Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Si vous préférez utiliser le [point de terminaison Azure ad v1](/azure/active-directory/develop/azure-ad-endpoint-comparison), vous devez configurer les autorisations d’application pour votre robot à l’aide du [portail Azure](https://aka.ms/aadapplist) .
 
 ### <a name="getting-tenant-administrator-consent"></a>Obtention du consentement de l’administrateur client
 

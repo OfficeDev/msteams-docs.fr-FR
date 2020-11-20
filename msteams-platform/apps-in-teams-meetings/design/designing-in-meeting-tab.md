@@ -4,18 +4,18 @@ author: heath-hamilton
 description: Découvrez comment concevoir efficacement un onglet de réunion pour Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: fc10c5b60672d243ac2e330ce93b4e01c2e7a278
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877028"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346671"
 ---
 # <a name="design-an-in-meeting-tab"></a>Concevoir un onglet en réunion
 
 L’onglet dans la réunion est un canevas permettant d’augmenter la collaboration pendant les réunions. En fonction de l’onglet Teams, les participants peuvent voir et interagir avec le contenu de l’application dans un espace dédié en dehors de la phase de la réunion via des affichages partagés ou basés sur des rôles.
 
-## <a name="use-cases"></a>Cas d'utilisation
+## <a name="use-cases"></a>Cas d’utilisation
 
 Les utilisateurs peuvent utiliser l’onglet dans la réunion pour :
 
@@ -37,16 +37,16 @@ L’exemple suivant montre l’onglet dans la réunion qui affiche le contenu de
 
 L’onglet dans la réunion affiche le contenu de votre application à l’aide des dimensions suivantes :
 
-* **Largeur** : 280 pixels pour la zone WebView. Il y a 20 pixels de remplissage sur les côtés gauche et droit de l’affichage WebView.
-* **Hauteur** : fond perdu en bas de l’onglet. Il y a 20 pixels de remplissage entre la zone d’affichage WebView et l’en-tête d’onglet.
+* **Largeur**: 280 pixels pour la zone WebView. Il y a 20 pixels de remplissage sur les côtés gauche et droit de l’affichage WebView.
+* **Hauteur**: fond perdu en bas de l’onglet. Il y a 20 pixels de remplissage entre la zone d’affichage WebView et l’en-tête d’onglet.
 
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’une extension de réunion sous-onglet réunion." border="false":::
 
 1. **Icône** de l’application : point d’entrée de l’onglet dans la réunion.
-1. **En-tête** : inclut le nom de l’onglet.
-1. **Name** : nom de l’instance d’onglet.
+1. **En-tête**: inclut le nom de l’onglet.
+1. **Name**: nom de l’instance d’onglet.
 1. **Faire disparaître : ferme** l’onglet. Toujours utiliser l’icône fermer en haut à droite au lieu d’une action dans le pied de page.
-1. **WebView** : affiche le contenu de l’application tierce.
+1. **WebView**: affiche le contenu de l’application tierce.
 
 ## <a name="behavior"></a>Comportement
 
@@ -125,7 +125,7 @@ Le contenu de la tabulation s’ajuste à la mise en page et à l’emplacement 
 
 #### <a name="do-design-for-a-dark-theme"></a>Do : Design pour un thème sombre
 
-Les réunions de teams sont optimisées pour le mode sombre afin de réduire le bruit visuel et cognitif afin que les utilisateurs puissent se concentrer sur la discussion et le contenu partagé.
+Les réunions de teams sont optimisées pour le mode sombre afin de réduire le bruit visuel et cognitif afin que les utilisateurs puissent se concentrer sur la discussion et le contenu partagé. L’onglet dans la réunion doit appliquer un thème foncé et suivre les instructions.
 
    :::column-end:::
    :::column span="":::

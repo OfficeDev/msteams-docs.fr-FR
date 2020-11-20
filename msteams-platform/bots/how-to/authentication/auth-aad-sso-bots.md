@@ -1,13 +1,13 @@
 ---
-title: Prise en charge de l’authentification unique pour les robots
+title: Support de l'identification unique pour les robots
 description: Indique comment obtenir un jeton utilisateur. Actuellement, un développeur de robots peut utiliser une carte de connexion ou le service de robot Azure avec la prise en charge de la carte OAuth.
 keywords: jeton, jeton d’utilisateur, prise en charge de l’authentification unique pour les robots
-ms.openlocfilehash: 0b896f7e13847f529075b5562a6c3eb2542482bf
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877851"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346853"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l’authentification unique (SSO) pour les robots
 
@@ -22,9 +22,9 @@ OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation ut
 1. Le bot envoie un message avec une OAuthCard qui contient la `tokenExchangeResource` propriété. Il indique à teams d’obtenir un jeton d’authentification pour l’application bot. L’utilisateur reçoit les messages à tous les points de terminaison actifs de l’utilisateur.
 
 > [!NOTE]
-> ✔ Un utilisateur peut avoir plus d’un point de terminaison actif à la fois.  
-> ✔ Le jeton bot est reçu à partir de chaque point de terminaison actif de l’utilisateur.
-> ✔ Prise en charge de l’authentification unique requiert actuellement que l’application soit installée dans l’étendue personnelle.
+>* Un utilisateur peut avoir plus d’un point de terminaison actif à la fois.  
+>* Le jeton bot est reçu à partir de chaque point de terminaison actif de l’utilisateur.
+>* La prise en charge de l’authentification unique requiert actuellement que l’application soit installée dans l’étendue personnelle.
 
 2. Si c’est la première fois que l’utilisateur actuel a utilisé votre application bot, une invite de demande s’affichera (si un consentement est requis) ou pour gérer l’authentification par étape (par exemple, authentification à deux facteurs).
 
@@ -36,7 +36,7 @@ OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation ut
   
 6. Le jeton sera analysé dans l’application bot pour extraire les informations nécessaires, telles que l’adresse de messagerie de l’utilisateur.
   
-## <a name="develop-an-single-sign-on-microsoft-teams-bot"></a>Développer une authentification unique Microsoft teams bot
+## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a>Développer une authentification unique Microsoft teams bot
   
 Les étapes suivantes : sont nécessaires pour développer un robot Microsoft teams de Microsoft teams :
 
@@ -46,7 +46,7 @@ Les étapes suivantes : sont nécessaires pour développer un robot Microsoft t
 
 ### <a name="create-an-azure-account"></a>Créer un compte Azure
 
-Cette étape est similaire au flux de [flux d’authentification unique](../../../tabs/how-to/authentication/auth-aad-sso.md) de l’onglet :
+Cette étape est similaire au [flux d’authentification unique](../../../tabs/how-to/authentication/auth-aad-sso.md)de l’onglet :
 
 1. Obtenir l' [ID de votre application Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 2. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison Azure AD et, éventuellement, Microsoft Graph.
@@ -79,7 +79,7 @@ Ajoutez de nouvelles propriétés à votre manifeste Microsoft teams :
 
 La demande d’obtention du jeton est une demande POST message normale (à l’aide du schéma de message existant). Il est inclus dans les pièces jointes d’un OAuthCard. Le schéma de la classe OAuthCard est défini dans le [schéma Microsoft Bot 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) et est très similaire à une carte de connexion. Teams traitera cette demande comme une acquisition en mode silencieux si la `TokenExchangeResource` propriété est renseignée sur la carte. Pour le canal Teams, nous honorons uniquement la `Id` propriété, qui identifie de manière unique une demande de jeton.
 
-S’il s’agit de la première fois que l’utilisateur utilise votre application et que le consentement de l’utilisateur est requis, une boîte de dialogue s’affiche pour poursuivre l’expérience de consentement semblable à celle ci-dessous. Lorsque l’utilisateur sélectionne **Continuer** , deux choses différentes se produisent selon que le bot est défini ou non et qu’un bouton de connexion est présent sur le OAuthCard.
+S’il s’agit de la première fois que l’utilisateur utilise votre application et que le consentement de l’utilisateur est requis, une boîte de dialogue s’affiche pour poursuivre l’expérience de consentement semblable à celle ci-dessous. Lorsque l’utilisateur sélectionne **Continuer**, deux choses différentes se produisent selon que le bot est défini ou non et qu’un bouton de connexion est présent sur le OAuthCard.
 
 ![Boîte de dialogue de consentement](../../../assets/images/bots/bots-consent-dialogbox.png)
 
@@ -87,7 +87,7 @@ Si le bot définit un bouton de connexion, le flux de connexion des robots se d�
 
 Si le bot ne fournit pas de bouton de connexion sur la carte, il déclenche le consentement de l’utilisateur pour un ensemble minimal d’autorisations. Ce jeton est utile pour l’authentification de base et l’obtention de l’adresse de messagerie de l’utilisateur.
 
-**Demande de jeton C# sans bouton de connexion** :
+**Demande de jeton C# sans bouton de connexion**:
 
 ```csharp
 var attachment = new Attachment
@@ -113,7 +113,7 @@ var attachment = new Attachment
 
 La réponse avec le jeton est envoyée par le biais d’une activité Invoke avec le même schéma que les autres utilisateurs appellent des activités que les robots reçoivent aujourd’hui. La seule différence est le nom d’appel, la **connexion/tokenExchange** et le champ de **valeur** qui contient l' **ID** (une chaîne) de la requête initiale pour obtenir le jeton et le champ de **jeton** (une valeur de chaîne incluant le jeton). Notez que vous pouvez recevoir plusieurs réponses pour une demande donnée si l’utilisateur dispose de plusieurs points de terminaison actifs. Il vous revient de dédupliquer les réponses avec le jeton.
 
-**Code C# pour répondre à la gestion de l’activité d’appel** :
+**Code C# pour répondre à la gestion de l’activité d’appel**:
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivity

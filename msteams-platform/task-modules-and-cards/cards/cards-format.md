@@ -3,12 +3,12 @@ title: Mise en forme de texte dans les cartes
 description: Décrit la mise en forme de texte de carte dans Microsoft teams
 keywords: format des cartes robots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587810"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346706"
 ---
 # <a name="format-cards-in-teams"></a>Cartes de format dans teams
 
@@ -18,7 +18,7 @@ Les cartes prennent en charge la mise en forme uniquement dans la propriété Te
 
 La prise en charge de la mise en forme diffère selon les types de carte et le rendu de la carte peut légèrement varier entre le bureau et les clients teams mobiles, ainsi que teams dans le navigateur de bureau.
 
-Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Images un format `.png` , `.jpg` ou `.gif` des fichiers, ne doit pas dépasser 1024 × 1024 PX ou 1 Mo. L’image GIF animée n’est pas officiellement prise en charge. *Voir* [référence des fiches](./cards-reference.md#inline-card-images)
+Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Images un format  `.png` , `.jpg` ou `.gif` des fichiers, ne doit pas dépasser 1024 × 1024 PX ou 1 Mo. L’image GIF animée n’est pas officiellement prise en charge. *Voir* [référence des fiches](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Mise en forme de cartes avec démarque
 
@@ -79,7 +79,7 @@ Sous Android, la mise en forme de la démarque de carte adaptative apparaît com
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -103,7 +103,7 @@ Sous Android, la mise en forme de la démarque de carte adaptative apparaît com
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -123,7 +123,7 @@ Les robots et les extensions de messagerie peuvent inclure des mentions dans le 
 
 Pour inclure une mention dans une carte adaptative, votre application doit inclure les éléments suivants
 
-* `<at>username</at>`dans les éléments de carte adaptative pris en charge
+* `<at>username</at>` dans les éléments de carte adaptative pris en charge
 * `mention`Objet à l’intérieur d’une `msteams` propriété dans le contenu de la carte, qui inclut l’ID utilisateur teams de l’utilisateur mentionné
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>Exemple de carte adaptative avec une mention
@@ -139,7 +139,7 @@ Pour inclure une mention dans une carte adaptative, votre application doit inclu
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -165,7 +165,7 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| en-tête (niveaux 1 à &ndash; 3) | **Texte** | `### Text`|
+| en-tête (niveaux 1 à &ndash; 3) | **Text** | `### Text`|
 | doubles | ~~text~~ | `~~text~~` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -202,7 +202,7 @@ Sur Android, la mise en forme des démarques pour les cartes de connecteur se pr
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -225,7 +225,7 @@ Sur Android, la mise en forme des démarques pour les cartes de connecteur se pr
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -254,14 +254,14 @@ Les cartes de connecteur prennent en charge la démarque limitée et la mise en 
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (niveaux 1 à &ndash; 3) | **Texte** | `<h3>Text</h3>` |
+| en-tête (niveaux 1 à &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texte déjà mis en forme | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | lien hypertexte | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| lien de l’image | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| lien de l’image | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 Dans les cartes de connecteur, les nouvelles lignes sont affichées en HTML à l’aide de la `<p>` balise.
 
@@ -291,7 +291,7 @@ Sur Android, la mise en forme HTML se présente comme suit :
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -317,7 +317,7 @@ Sur Android, la mise en forme HTML se présente comme suit :
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -342,14 +342,14 @@ Les balises HTML sont prises en charge pour les cartes simples telles que le hé
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| en-tête (niveaux 1 à &ndash; 3) | **Texte** | `<h3>Text</h3>` |
+| en-tête (niveaux 1 à &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | doubles | ~~text~~ | `<strike>text</strike>` |
 | liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | texte déjà mis en forme | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | lien hypertexte | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| lien de l’image |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| lien de l’image |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Différences entre les appareils mobiles et de bureau pour les cartes simples
 
@@ -377,6 +377,6 @@ La mise en forme des caractères comme gras et italique s’affiche correctement
 
 Ces captures d’écran ont été créées à l’aide de teams AppStudio, où la propriété Text d’une carte héros a été définie sur la chaîne suivante. Vous pouvez tester la mise en forme dans vos propres cartes en modifiant ce code.
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---
