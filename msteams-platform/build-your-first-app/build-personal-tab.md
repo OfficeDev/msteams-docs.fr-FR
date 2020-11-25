@@ -5,12 +5,12 @@ description: Créez rapidement un onglet personnel Microsoft teams à l’aide d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346804"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409070"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft teams
 
@@ -48,7 +48,7 @@ Lors de l’installation, le Toolkit a initialement configuré votre page de con
 
 Le échafaudage de l’application fournit les composants pour le rendu de votre onglet personnel dans Teams. Vous pouvez utiliser un grand nombre de choses, mais pour le moment, il vous suffit de vous concentrer sur les éléments suivants :
 
-* `Tab.js` fichier dans le `src/components` Répertoire de votre projet. Ceci est destiné au rendu de votre page de contenu d’onglet.
+* `Tab.js` fichier dans le `src/components` Répertoire de votre projet. Il s’agit de l’affichage de votre page de contenu d’onglet.
 * Le kit de développement logiciel (SDK) JavaScript de Microsoft Teams, qui est préchargé dans les composants frontaux de votre projet.
 
 ## <a name="2-customize-your-tab-content-page"></a>2. personnaliser votre page de contenu d’onglet

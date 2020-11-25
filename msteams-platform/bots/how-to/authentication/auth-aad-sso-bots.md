@@ -2,12 +2,12 @@
 title: Support de l'identification unique pour les robots
 description: Indique comment obtenir un jeton utilisateur. Actuellement, un développeur de robots peut utiliser une carte de connexion ou le service de robot Azure avec la prise en charge de la carte OAuth.
 keywords: jeton, jeton d’utilisateur, prise en charge de l’authentification unique pour les robots
-ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346853"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409098"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l’authentification unique (SSO) pour les robots
 
@@ -48,13 +48,16 @@ Les étapes suivantes : sont nécessaires pour développer un robot Microsoft t
 
 Cette étape est similaire au [flux d’authentification unique](../../../tabs/how-to/authentication/auth-aad-sso.md)de l’onglet :
 
-1. Obtenir l' [ID de votre application Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+1. Obtenir l' [ID de votre application Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) pour Team Desktop, Web ou mobile client.
 2. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison Azure AD et, éventuellement, Microsoft Graph.
 3. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour les applications de bureau, Web et mobiles Teams.
-4. Pré-autoriser teams en sélectionnant le bouton **Ajouter une étendue** et dans le panneau qui s’ouvre, entrez `access_as_user` comme **nom d’étendue**.
+4. Ajoutez une application cliente en sélectionnant le bouton **Ajouter une étendue** et dans le volet qui s’ouvre, entrez `access_as_user` comme **nom d’étendue**.
+
+>[!NOTE]
+> L’étendue « access_as_user » utilisée pour ajouter une application cliente est pour « administrateurs et utilisateurs ».
 
 > [!IMPORTANT]
-> * Si vous créez un bot autonome, définissez l’URI de l’ID d’application sur `api://botid-{YourBotId}` .
+> * Si vous créez un bot autonome, définissez l’URI de l’ID d’application sur `api://botid-{YourBotId}` ici, **YourBotId** fait référence à votre ID d’application Azure ad.
 > * Si vous créez une application avec un bot et un onglet, définissez l’URI de l’ID d’application sur `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
@@ -78,6 +81,9 @@ Ajoutez de nouvelles propriétés à votre manifeste Microsoft teams :
 ### <a name="request-a-bot-token"></a>Demander un jeton de robot
 
 La demande d’obtention du jeton est une demande POST message normale (à l’aide du schéma de message existant). Il est inclus dans les pièces jointes d’un OAuthCard. Le schéma de la classe OAuthCard est défini dans le [schéma Microsoft Bot 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) et est très similaire à une carte de connexion. Teams traitera cette demande comme une acquisition en mode silencieux si la `TokenExchangeResource` propriété est renseignée sur la carte. Pour le canal Teams, nous honorons uniquement la `Id` propriété, qui identifie de manière unique une demande de jeton.
+
+>[!NOTE]
+> L’infrastructure bot `OAuthPrompt` ou le `MultiProviderAuthDialog` est pris en charge pour l’authentification unique (SSO).
 
 S’il s’agit de la première fois que l’utilisateur utilise votre application et que le consentement de l’utilisateur est requis, une boîte de dialogue s’affiche pour poursuivre l’expérience de consentement semblable à celle ci-dessous. Lorsque l’utilisateur sélectionne **Continuer**, deux choses différentes se produisent selon que le bot est défini ou non et qu’un bouton de connexion est présent sur le OAuthCard.
 
@@ -116,14 +122,14 @@ La réponse avec le jeton est envoyée par le biais d’une activité Invoke ave
 **Code C# pour répondre à la gestion de l’activité d’appel**:
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivity
+protected override async Task<InvokeResponse> OnInvokeActivityAsync
   (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
                 if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
                 {
-                    await OnTokenResponse(turnContext, cancellationToken);
+                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
                     return new InvokeResponse() { Status = 200 };
                 }
                 else
@@ -155,6 +161,10 @@ Le `turnContext.activity.value` est de type [TokenExchangeInvokeRequest](/dotnet
 > * Entrez un nom pour votre nouveau paramètre de connexion. Il s’agit du nom qui est référencé à l’intérieur des paramètres de votre code de service bot à l' **étape 5**.
 > * Dans la liste déroulante fournisseur de services, sélectionnez **Azure Active Directory v2**.
 >* Entrez les informations d’identification du client pour l’application AAD.
+
+>[!NOTE]
+> Une **subvention implicite** peut être requise dans l’application AAD.
+
 >* Pour l’URL d’échange de jetons, utilisez la valeur de portée définie à l’étape précédente de votre application AAD. La présence de l’URL d’échange de jetons indique au SDK que cette application AAD est configurée pour l’authentification unique.
 >* Spécifiez « Common » comme **ID de client**.
 >* Ajoutez toutes les étendues configurées lors de la spécification des autorisations pour les API en aval de votre application AAD. Avec l’ID client et la clé secrète client fournis, le magasin de jetons échangera le jeton pour un jeton de graphique avec des autorisations définies pour vous.

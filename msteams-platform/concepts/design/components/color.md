@@ -2,12 +2,12 @@
 title: Référence des instructions de conception
 description: Décrit les instructions d’utilisation de la couleur dans les applications
 keywords: couleur des composants de référence des instructions de conception teams
-ms.openlocfilehash: c6c0a421abbfc23959c7873d95aa89ca7cc685f2
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dab223891e88615b52386d3692d4a98607d6d449
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673647"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409063"
 ---
 # <a name="color"></a>Couleur
 
@@ -52,6 +52,9 @@ Voir le stylo [Microsoft teams Design Guidelines-gamme de couleurs de thème fon
 
 <iframe height='798' scrolling='no' title='Instructions de conception de Microsoft teams-rampe couleur du thème foncé' src='//codepen.io/msteams/embed/BmBwjx/?height=846&theme-id=31655&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Voir le stylo <a href='https://codepen.io/msteams/pen/BmBwjx/'>Microsoft teams Design Guidelines-gamme de couleurs de thème foncé</a> par Microsoft Teams (<a href='https://codepen.io/msteams'>@msteams</a>) sur <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+> **Remarque :** La bibliothèque msteams-UI-styles-Core a les valeurs réelles codées en tant que variables. Ces variables s’avèrent utiles si les couleurs sont toujours mises à jour.
+
 
 ### <a name="other-dark-theme-colors"></a>Autres couleurs de thème foncé
 

@@ -1,17 +1,17 @@
 ---
-title: Créer une extension de messagerie à l’aide d’App Studio
+title: Créer une extension de messagerie à l’aide de App Studio
 author: clearab
 description: Découvrez comment créer une extension de messagerie Microsoft teams à l’aide d’App Studio.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 24d5736fcc7c88d903d30c6f1103a95154143058
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796182"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409056"
 ---
-# <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide d’App Studio
+# <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
 > [!TIP]
 > Vous recherchez un moyen plus rapide de commencer ? Créer une [extension de messagerie](../../build-your-first-app/build-messaging-extension.md) à l’aide du kit de développement Microsoft Teams.
@@ -127,17 +127,20 @@ Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez 
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Extensions de messagerie dans les réunions teams
 
+> [!NOTE]
+> Si une conversation de groupe ou de réunion comporte des utilisateurs fédérés dans la liste, teams supprime l’accès aux extensions de messagerie pour tous les utilisateurs, y compris l’organisateur.
+
 Une fois qu’une réunion commence, les participants peuvent interagir directement avec votre extension de messagerie lors d’un appel en direct. Tenez compte des éléments suivants lors de la création de votre extension de messagerie dans une réunion :
 
 1. **Emplacement :** Votre extension de messagerie peut être appelée à partir de la zone de message de composition, de la zone de commande ou de la @mentioned dans la conversation de réunion.
 
-1. **Métadonnées** . Lorsque votre extension de messagerie est appelée, elle peut identifier l’utilisateur et le client à partir de `userId` et `tenantId` . `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser le `userId` et `meetingId`  pour la `GetParticipant` demande d’API afin de récupérer les rôles d’utilisateur.
+1. **Métadonnées**. Lorsque votre extension de messagerie est appelée, elle peut identifier l’utilisateur et le client à partir de `userId` et `tenantId` . `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser le `userId` et `meetingId`  pour la `GetParticipant` demande d’API afin de récupérer les rôles d’utilisateur.
 
-1. **Type de commande** . Si votre extension de message utilise des [commandes basées sur l’action](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), elle doit suivre l’authentification [unique](../../tabs/how-to/authentication/auth-aad-sso.md) des onglets.
+1. **Type de commande**. Si votre extension de message utilise des [commandes basées sur l’action](../../messaging-extensions/what-are-messaging-extensions.md#action-commands), elle doit suivre l’authentification [unique](../../tabs/how-to/authentication/auth-aad-sso.md) des onglets.
 
-1. **Expérience utilisateur** . L’extension de messagerie doit ressembler et se comporter de la même manière qu’en dehors d’une réunion.
+1. **Expérience utilisateur**. L’extension de messagerie doit ressembler et se comporter de la même manière qu’en dehors d’une réunion.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 * [Créer des commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Créer des commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)

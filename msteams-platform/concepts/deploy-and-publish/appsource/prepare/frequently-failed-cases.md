@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: Applications teams validation de la plupart des cas de test ayant échoué AppSource publier
-ms.openlocfilehash: 180a12563d11f9089f8350521a40937edb2e6b3e
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: b1333448eb8b8e1e2310114bf95404b74aa95b58
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992650"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409105"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>Conseils relatifs à la soumission d’une application réussie
 
@@ -176,7 +176,7 @@ Les robots de notification uniquement doivent envoyer un message de bienvenue co
 * **Rendez vos messages concis et instructifs**.  Il est très probable que l’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou n’a rien à faire sur votre application. Vous souhaitez personnaliser votre message pour toutes les audiences et en quelques phrases Expliquez ce que fait votre bot et les moyens d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs peuvent l’utiliser.
 ![Café et robot dinning](../../../../assets/images/faq/cafe-bot.png)
 
-* **Rendez votre message exploitable**. Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »* , *« Voici ce que je peux faire.*.. ».
+* **Rendez votre message exploitable**. Réfléchissez à la première chose que les utilisateurs doivent faire après l’installation de votre application. S’agit-il d’une commande intéressante qu’il faut essayer ? Existe-t-il une autre expérience d’intégration ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que *« essayez de vous demander.... »*, *« Voici ce que je peux faire.*.. ».
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe/du canal
 
@@ -209,19 +209,6 @@ Avertissez les utilisateurs avant que votre application télécharge des fichier
 * Les modules de tâches doivent inclure une icône et un nom court qu’ils sont contenus ou créés à partir de l’application.
 * Les `@mention` fichiers exécutables d’extension de message doivent être clairs, faciles à comprendre et faciles à lire.
 ![Extension de message](../../../../assets/images/faq/message-extension.png)
-
-## <a name="app-category-mapping"></a>Mappage des catégories d’application
-
-| Catégorie teams       | Catégories de PC  |
-|:---------------------|:---------------|
-| Analyse et BI | Analyse, visualisation des données et BI |
-| Développeur et informatique | Outils de développement, administrateur informatique |
-| Éducation | Éducation |
-| ressources humaines ; | Ressources humaines et recrutement |
-| Productivité | Gestion de contenu, fichiers et documents, productivité, formation et didacticiels et utilitaires |
-| Gestion de projets | Communication, gestion de projet, flux de travail et gestion des activités |
-| Ventes et support | Gestion des clients et des contacts, support technique, gestion financière, ventes et marketing |
-| Sociales et loisirs | Galeries d’images et de vidéos, style de vie, Actualités et météo, réseaux sociaux, voyages et navigation |
 
 > [!div class="nextstepaction"]
 > [En savoir plus sur les stratégies d’approbation des applications teams](/legal/marketplace/certification-policies#1140-teams)
