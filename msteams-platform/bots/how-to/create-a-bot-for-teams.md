@@ -5,12 +5,12 @@ description: Découvrez comment créer un bot Microsoft Teams à l’aide de App
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 3d4f954afd56bf6ee442b57961c9d6b736ffa4d8
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 42b825ff2883e9b2b8b13dbd6774ed7ce6d0f40f
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796350"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49476958"
 ---
 # <a name="create-a-bot-using-app-studio"></a>Créer un bot à l’aide de App Studio
 
@@ -83,7 +83,8 @@ Vous pouvez également inscrire votre service web en créant une ressource d’i
 
 Le [portail Bot Framework](https://dev.botframework.com) est optimisé pour l’inscription des bots dans Microsoft Azure. Voici quelques opérations que vous pouvez prendre en compte :
 
-* Le canal Microsoft Teams pour les bots inscrits sur Azure est **gratuit** . Les messages envoyés sur le canal Teams ne sont PAS pris en compte dans les messages consommés pour le bot.
+* Veillez à ajouter Microsoft Teams en tant que canal à partir de la liste des canaux proposés après avoir créé votre bot.
+* Le canal Microsoft Teams pour les bots inscrits sur Azure est **gratuit**. Les messages envoyés sur le canal Teams ne sont PAS pris en compte dans les messages consommés pour le bot.
 * Si vous inscrivez votre bot à l’aide de Microsoft Azure, votre code bot n’a pas besoin d’être *hébergé* sur Microsoft Azure.
 * Si vous inscrivez un bot à l’aide du Portail Microsoft Azure, vous devez disposer d’un compte Microsoft Azure. Vous pouvez [en créer un gratuitement](https://azure.microsoft.com/free/). Pour vérifier votre identité lorsque vous créez un compte Azure, vous devez fournir une carte de crédit, mais celle-ci ne sera pas débitée. Il est toujours gratuit de créer et d’utiliser des bots avec Microsoft Teams.
 
@@ -94,14 +95,14 @@ Votre [manifeste d’application](~/resources/schema/manifest-schema.md) défini
 ### <a name="add-using-app-studio"></a>Ajouter à l’aide de App Studio
 
 1. Dans le client Teams, ouvrez App Studio à partir du menu **...** dépassement sur le rail de navigation gauche. Si App Studio n’est pas déjà installé, vous pouvez le faire en le recherchant.
-2. Dans l’onglet **Éditeur de manifeste** , sélectionnez **Créer une application** (ou si vous ajoutez un bot à une application existante, vous pouvez importer votre package d’application)
+2. Dans l’onglet **Éditeur de manifeste**, sélectionnez **Créer une application** (ou si vous ajoutez un bot à une application existante, vous pouvez importer votre package d’application)
 3. Ajoutez les détails de votre application (consultez [définition de schéma de manifeste](~/resources/schema/manifest-schema.md) pour obtenir une description complète de chaque champ).
-4. Sous l’onglet **Bots** sélectionnez le bouton **Configuration** .
-5. Vous pouvez soit créer une inscription de service web ( **Nouveau bot** ), soit sélectionner **Bot existant** .
+4. Sous l’onglet **Bots** sélectionnez le bouton **Configuration**.
+5. Vous pouvez soit créer une inscription de service web (**Nouveau bot**), soit sélectionner **Bot existant**.
 6. Sélectionnez les fonctionnalités et les étendues dont votre bot aura besoin.
 7. Si nécessaire, mettez à jour votre adresse de point de terminaison de bot pour qu’elle pointe vers votre bot. Celle-ci doit avoir la forme `https://someplace.com/api/messages`.
 8. Vous pouvez également ajouter des [commandes de bot](~/bots/how-to/create-a-bot-commands-menu.md).
-9. Vous pouvez également télécharger votre package de l’application terminé à partir de l’onglet **tester et distribuer** .
+9. Vous pouvez également télécharger votre package de l’application terminé à partir de l’onglet **tester et distribuer**.
 
 ### <a name="create-it-manually"></a>Créez-le manuellement
 
@@ -177,7 +178,7 @@ Pour créer un package de l’application, vous devez ajouter votre manifeste d�
 > [!NOTE]
 > Pour charger votre robot, l’administrateur de votre client doit d’abord [autoriser le chargement](/microsoftteams/manage-apps#manage-org-wide-app-settings) d’applications tierces ou personnalisées dans Teams.
 
-Si vous utilisez App Studio, vous pouvez installer votre application à partir de l'onglet **Tester et distribuer** de l’ **Éditeur de manifeste** . Vous pouvez également installer votre package d’application en cliquant sur le menu `...` dépassement sur le rail gauche de la barre de navigation, en cliquant sur **Autres applications** , puis sur le lien **Télécharger une application personnalisée** . Vous pouvez également importer un manifeste d’application ou un package d’application dans App Studio pour effectuer des mises à jour supplémentaires avant de les télécharger.
+Si vous utilisez App Studio, vous pouvez installer votre application à partir de l'onglet **Tester et distribuer** de l’**Éditeur de manifeste**. Vous pouvez également installer votre package d’application en cliquant sur le menu `...` dépassement sur le rail gauche de la barre de navigation, en cliquant sur **Autres applications**, puis sur le lien **Télécharger une application personnalisée**. Vous pouvez également importer un manifeste d’application ou un package d’application dans App Studio pour effectuer des mises à jour supplémentaires avant de les télécharger.
 
 ## <a name="bots-in-teams-meetings"></a>Robots dans les réunions Teams
 
