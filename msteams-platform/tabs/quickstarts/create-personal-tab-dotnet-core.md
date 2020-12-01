@@ -4,16 +4,16 @@ author: laujan
 description: Guide de démarrage rapide pour la création d’un onglet personnel personnalisé avec ASP.NET Core.
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: 39f45dd79606d1416f3924d01f75c5bedc11bfba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992630"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49476938"
 ---
 # <a name="create-a-personal-tab-with-aspnet-core"></a>Créer un onglet personnel avec ASP.NET Core
 
-Dans ce démarrage rapide, nous allons passer en revue la création d’un onglet personnel personnalisé avec C# et ASP.Net pages Razor principales. Nous allons également utiliser [app Studio pour Microsoft teams](~/concepts/build-and-test/app-studio-overview.md) pour finaliser votre manifeste de l’application et déployer votre onglet sur Teams.
+Dans ce démarrage rapide, nous allons passer en revue la création d’un onglet personnel personnalisé avec C# et les pages de rasoir principales ASP.Net. Nous allons également utiliser [app Studio pour Microsoft teams](~/concepts/build-and-test/app-studio-overview.md) pour finaliser votre manifeste de l’application et déployer votre onglet sur Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -68,7 +68,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 - **Icône de contour transparent** mesurant 32 x 32 pixels.
 - Un fichier **manifest.js** qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être Zippés dans un package d’application pour être utilisés dans le téléchargement de votre onglet vers Teams. Microsoft teams chargera le `contentUrl` spécifié dans votre manifeste, l’incorporera dans un IFRAME et le restituera sous votre onglet.
+Ces fichiers doivent être Zippés dans un package d’application pour être utilisés dans le téléchargement de votre onglet vers Teams. Microsoft teams chargera le `contentUrl` spécifié dans votre manifeste, l’incorporera dans un <iframe \> et l’affichera dans votre onglet.
 
 ### <a name="csproj"></a>. csproj
 

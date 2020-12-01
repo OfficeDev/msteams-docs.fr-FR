@@ -3,22 +3,23 @@ title: Créer des applications avec Microsoft teams Toolkit et Visual Studio
 description: Commencer à créer des applications personnalisées directement dans Visual Studio à l’aide du kit de développement Microsoft teams
 keywords: Kit de développement Visual Studio teams
 ms.topic: overview
-ms.openlocfilehash: 79ea22cfd154313247132c22684d444c0813c66f
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.author: lajanuar
+ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
+ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819202"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "49476985"
 ---
-# <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio"></a>Créer des applications avec Microsoft teams Toolkit et Visual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Créer des applications avec Team Toolkit et Visual Studio
 
-Le kit de développement Microsoft teams vous permet de créer des applications teams personnalisées directement dans l’environnement de développement intégré (IDE) de Visual Studio. Le kit de développement Microsoft teams vous guide tout au long du processus et vous fournit tout ce dont vous avez besoin pour créer, déboguer et lancer votre application Teams.
+Le Kit de ressources Microsoft teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement de développement intégré (IDE) Visual Studio. Le kit de ressources Microsoft Teams vous guide dans le processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application d’équipe.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 1. [Activer l’Aperçu pour les développeurs](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Assurez-vous que le ** <span>ASP.ne</span>T et le module de développement Web** a été ajouté à votre instance Visual Studio. Vous pouvez vérifier en suivant les étapes de la procédure [modifier Visual Studio en ajoutant ou en supprimant les charges de travail et](/visualstudio/install/modify-visual-studio?view=vs-2019) la documentation des composants.
+1. Assurez-vous que le **<span>ASP.ne</span>T et le module de développement Web** a été ajouté à votre instance Visual Studio. Vous pouvez vérifier en suivant les étapes de la procédure [modifier Visual Studio en ajoutant ou en supprimant les charges de travail et](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) la documentation des composants.
 
 ![module asp.net Visual Studio](../assets/images/visual-studio-web-dev-module.png)
 
@@ -43,7 +44,7 @@ Microsoft teams Toolkit pour Visual Studio peut être téléchargé à partir de
 
 1. Sélectionnez **créer un nouveau projet**.
 1. Choisissez **application Microsoft teams** , puis cliquez sur **suivant**.
-1. Vous arrivez à l’écran **configurer votre nouveau projet** , qui vous permet de choisir le **nom du projet**, son **emplacement**et le nom de la **solution**.
+1. Vous arrivez à l’écran **configurer votre nouveau projet** , qui vous permet de choisir le **nom du projet**, son **emplacement** et le nom de la **solution**.
 1. Activez la case à cocher **Placer la solution et le projet dans le même répertoire**.
 1. Une fenêtre contextuelle intitulée ajouter des **fonctionnalités** vous permet de choisir une ou plusieurs fonctionnalités pour la configuration de votre projet.
 1. Cliquez sur le bouton **suivant** pour terminer le processus de configuration.
