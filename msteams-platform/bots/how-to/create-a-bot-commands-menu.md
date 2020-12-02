@@ -4,12 +4,12 @@ author: clearab
 description: Procédure de création d’un menu de commandes pour votre robot Microsoft teams
 ms.topic: overview, command menu
 ms.author: anclear
-ms.openlocfilehash: 81efb94fc882aa4653ab162863d5d973aeae87b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673678"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552485"
 ---
 # <a name="bot-command-menus"></a>Menus de la commande bot
 
@@ -48,7 +48,7 @@ Les instructions fournies ici supposent que vous modifiez un manifeste d’appli
 
     ![Bouton Ajouter du menu de commandes d’App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Création d’un menu de commandes pour votre bot en modifiant **Manifest. JSON**
+### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Création d’un menu de commandes pour votre bot en modifiant **Manifest.js**
 
 Une autre approche valide pour la création d’un menu de commandes consiste à le créer directement dans le fichier manifeste lors du développement du code source de votre robot. Voici quelques éléments à garder à l’esprit lors de l’utilisation de cette approche :
 
@@ -148,26 +148,28 @@ Une autre approche valide pour la création d’un menu de commandes consiste à
 
 Les robots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés (« @botname ») dans un message. Par conséquent, chaque message reçu par un bot dans une étendue de groupe ou de canal contiendra son propre nom dans le texte du message renvoyé. Vous devez veiller à ce que les handles d’analyse de messages qui précèdent la commande renvoyée soient pris en charge.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+> **Note** Pour gérer les commandes dans le code, celles-ci sont envoyées à votre bot sous la forme d’un message ordinaire. Par conséquent, vous devez les gérer comme vous le feriez pour n’importe quel autre message de la part de vos utilisateurs. Il s’agit uniquement d’un traitement de l’interface utilisateur qui insère du texte préconfiguré dans la zone de texte. L’utilisateur doit alors envoyer ce texte comme s’il s’agissait de n’importe quel autre message.
 
-Vous pouvez analyser la `Activity` `RemoveRecipientMention` ** \@partie mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la classe nommée.
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+Vous pouvez analyser la partie **\@ mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la `Activity` classe nommée `RemoveRecipientMention` .
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node. js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-Vous pouvez analyser la `TurnContext` `removeMentionText` ** \@partie mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la classe nommée.
+Vous pouvez analyser la partie **\@ mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la `TurnContext` classe nommée `removeMentionText` .
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 
-Vous pouvez analyser la partie **@Mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de `TurnContext` la classe `remove_recipient_mention`nommée.
+Vous pouvez analyser la partie **@Mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la `TurnContext` classe nommée `remove_recipient_mention` .
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -180,3 +182,5 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 * **Restez simple**: le menu robot est conçu pour présenter les fonctionnalités clés de votre bot.
 * **Maintenez-le court**: les options de menu ne doivent pas être extrêmement longues et les instructions complexes en langage naturel : elles doivent être des commandes simples.
 * **Conservez-le invokable**: les actions/commandes du menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans laquelle se trouve le robot.
+
+> **Note** Si vous supprimez des commandes de votre manifeste, vous devrez redéployer votre application pour que les modifications prennent effet. En règle générale, toutes les modifications apportées au manifeste le requièrent.

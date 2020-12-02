@@ -4,12 +4,12 @@ author: laujan
 description: Comment obtenir le contexte spécifique de l’équipe Microsoft de votre robot, y compris la liste de conversation, les détails et la liste des canaux.
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796343"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552471"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir le contexte spécifique de l’équipe pour votre robot
 
@@ -19,7 +19,7 @@ Un bot peut accéder à des données de contexte supplémentaires sur une équip
 
 ## <a name="fetching-the-roster-or-user-profile"></a>Extraction de la liste ou du profil utilisateur
 
-Votre bot peut interroger la liste des membres et leurs profils de base, y compris les ID utilisateur teams et les informations Azure Active Directory (Azure AD), telles que nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs, par exemple, pour vérifier si un utilisateur s’est connecté à un onglet par le biais des informations d’identification Azure AD, est membre de l’équipe. L’exemple de code ci-dessous utilise le point de terminaison paginé pour extraire la liste. Bien que vous pouvez toujours utiliser la version non paginée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, consultez [cet article](~/resources/team-chat-member-api-changes.md) .
+Votre bot peut interroger la liste des membres et leurs profils de base, y compris les ID utilisateur teams et les informations Azure Active Directory (Azure AD), telles que nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs, par exemple, pour vérifier si un utilisateur s’est connecté à un onglet par le biais des informations d’identification Azure AD, est membre de l’équipe. L’exemple de code ci-dessous utilise le point de terminaison paginé pour extraire la liste. Pour obtenir les membres d’une conversation, la taille de page minimale ou maximale dépend de l’implémentation. La taille de page inférieure à 50 est considérée comme 50, et la taille de page supérieure à 500 est limitée à 500. Bien que vous pouvez toujours utiliser la version non paginée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, *consultez la rubrique* [modifications apportées aux API de robots teams pour la récupération des membres de l’équipe/conversation](~/resources/team-chat-member-api-changes.md) .
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

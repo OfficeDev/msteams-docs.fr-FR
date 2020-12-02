@@ -2,12 +2,12 @@
 title: Prise en charge de l’authentification unique pour les onglets
 description: Décrit l’authentification unique (SSO)
 keywords: API SSO d’authentification unique AAD pour l’authentification de teams
-ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346790"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552450"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l’authentification unique (SSO) pour les onglets
 
@@ -21,6 +21,12 @@ Les utilisateurs se connectent à Microsoft teams par le biais de leurs comptes 
 > ✔ Teams pour iOS (_version_: 2.0.18 et versions ultérieures)  
 >
 > Pour une expérience optimale avec Teams, utilisez la dernière version d’iOS et Android.
+
+>[!NOTE]
+> **Démarrage rapide**  
+>
+> Le chemin le plus simple pour commencer à utiliser l’authentification unique de l’onglet est avec la boîte à outils Microsoft teams pour Visual Studio code. [En savoir plus](../../../toolkit/visual-studio-code-tab-sso.md)
+
 
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 

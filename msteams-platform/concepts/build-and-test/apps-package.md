@@ -3,12 +3,12 @@ title: Empaquetage de votre application
 description: Découvrez comment empaqueter votre application à des fins de test, de chargement et de publication dans Microsoft teams
 keywords: empaquetage d’applications teams
 ms.topic: conceptual
-ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997985"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552569"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Créer un package d’application pour votre application Microsoft teams
 
@@ -45,12 +45,13 @@ L' `color` icône est utilisée dans Microsoft Teams (dans les galeries d’appl
 
 L' `outline` icône est utilisée aux emplacements suivants : la barre d’application et les extensions de messagerie que l’utilisateur a marquées comme « favoris ». Cette icône doit être de 32x32 pixels. Votre icône de contour ne doit contenir que le blanc et la transparence (aucune autre couleur). L’icône peut être blanche avec un arrière-plan transparent ou transparente avec un arrière-plan blanc. L’icône de contour ne doit pas avoir de remplissage supplémentaire autour de l’icône et doit être aussi rapprochée que possible tout en maintenant les dimensions 32x32. Voici quelques exemples intéressants :
 
-> [!TIP]
->  * La couleur doit être « blanc » en RVB, (rouge : 255, vert : 255, bleu : 255).
->  * Toute autre partie de l’icône doit être transparente.
->  * Pour le passage, la petite icône doit être pleine transparence, canal alpha égal à 0 et toute autre valeur est échec.
-
 ![Exemples d’icônes de plan](~/assets/images/icons/sample20x20s.png)
+
+[! Conseil pour créer une icône transparente]
+
+* La couleur doit être « blanc » en RVB, (rouge : 255, vert : 255, bleu : 255).
+* Toute autre partie de l’icône doit être transparente.
+* Pour le passage, la petite icône doit être pleine transparent avec une valeur de canal alpha de 0 : toute autre valeur est un échec.
 
 Imaginons, par exemple, que votre société est contoso. Vous devez envoyer deux icônes :
 

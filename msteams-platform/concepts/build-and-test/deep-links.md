@@ -2,12 +2,12 @@
 title: Créer des liens détaillés
 description: Décrit les liens détaillés et leur utilisation dans vos applications
 keywords: teams de liens deeplink
-ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: a3d5dac3fc83510ae47d91bd70390b9ca2860120
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796329"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552562"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams
 
@@ -15,6 +15,22 @@ Vous pouvez créer des liens vers des informations et des fonctionnalités dans 
 
 * Navigation entre l’utilisateur et le contenu dans l’un des onglets de votre application. Par exemple, votre application peut disposer d’un bot qui envoie des messages avertissant l’utilisateur d’une activité importante. Lorsque l’utilisateur clique sur la notification, le lien profond navigue vers l’onglet pour permettre à l’utilisateur d’afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d’une conversation ou la planification d’une réunion, en préremplissant les liens détaillés avec les paramètres requis. Cela évite que les utilisateurs aient besoin d’entrer manuellement les informations.
+
+> [!NOTE]
+>
+> Un deeplink lance le navigateur avant de naviguer vers le contenu et les informations comme suit :
+>
+> **Onglet**:  
+> ✔ Accède directement à l’URL deeplink.
+>
+> **Bot**:  
+> ✔ Deeplink dans le corps de la carte : s’ouvre d’abord dans le navigateur.  
+> ✔ Deeplink ajouté à l’action OpenURL dans la carte adaptative-navigue directement vers l’URL deeplink.  
+> ✔ Texte de la démarque du lien hypertexte de la carte-s’ouvre d’abord dans le navigateur.  
+>
+> **Conversation**:  
+> ✔ Texte du lien hypertexte de message : accède directement à l’URL deeplink.  
+> ✔ Lien collé dans General chat conversation-accède directement à l’URL deeplink.
 
 ## <a name="deep-linking-to-your-tab"></a>Liens détaillés vers votre onglet
 
@@ -24,6 +40,9 @@ Vous pouvez également générer des liens détaillés par programme, en utilisa
 
 > [!NOTE]
 > Cela est différent des liens fournis par l’élément de menu **copier le lien dans l’onglet** , qui génère uniquement un lien profond pointant vers cet onglet.
+
+>[!NOTE]
+> Actuellement, shareDeepLink ne fonctionne pas sur les plateformes mobiles.
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Affichage d’un lien profond vers un élément au sein de votre onglet
 
@@ -45,6 +64,10 @@ Renseignez les champs suivants :
 Utilisez ce format pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de messagerie :
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+
+> [!NOTE]
+> Si le bot envoie un message contenant un `TextBlock` avec un lien profond, un nouvel onglet de navigateur est ouvert lorsque l’utilisateur sélectionne le lien. Cela se produit dans le chrome et dans l’application de bureau Microsoft Teams, tous deux exécutés sous Linux.
+> Si le bot envoie la même URL de lien profond dans un `Action.OpenUrl` , l’onglet teams est alors ouvert dans l’onglet du navigateur actif lorsque l’utilisateur clique sur le lien. Aucun nouvel onglet de navigateur n’est ouvert.
 
 Les paramètres de requête sont les suivants :
 

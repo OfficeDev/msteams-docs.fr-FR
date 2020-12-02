@@ -5,18 +5,18 @@ description: procédure d’ajout d’un webhook sortant
 keywords: onglet teams webhook sortant *
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 04fc86fc3df7601235cb7f6bb7e53da59777f49f
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 61dc8441795925b53e5c8459f9c6eed5a28856e1
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819059"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552464"
 ---
 # <a name="add-custom-bots-to-microsoft-teams-with-outgoing-webhooks"></a>Ajouter des robots personnalisés à Microsoft teams avec des webhooks sortants
 
 ## <a name="what-are-outgoing-webhooks-in-teams"></a>Qu’est-ce qu’un webhooks sortants dans teams ?
 
-Les webhooks sont un excellent moyen pour les équipes de s’intégrer aux applications externes. Un webhook est essentiellement une requête POST envoyée à une URL de rappel. Dans Teams, les webhooks sortants offrent un moyen simple pour permettre aux utilisateurs d’envoyer des messages à votre service Web sans avoir à passer par le processus complet de création de robots via [Microsoft bot Framework](https://dev.botframework.com/). Webhooks sortants publiez des données à partir de teams vers tout service choisi capable d’accepter une charge utile JSON. Une fois qu’un webhook sortant est ajouté à une équipe, il se comporte comme du robot, à l’écoute de canaux pour les messages utilisant une ** \@ mention**, à l’envoi de notifications à des services Web externes et à la réponse avec des messages enrichis pouvant inclure des cartes et des images.
+Les webhooks sont un excellent moyen pour les équipes de s’intégrer aux applications externes. Un webhook est essentiellement une requête POST envoyée à une URL de rappel. Dans Teams, les webhooks sortants offrent un moyen simple pour permettre aux utilisateurs d’envoyer des messages à votre service Web sans avoir à passer par le processus complet de création de robots via [Microsoft bot Framework](https://dev.botframework.com/). Webhooks sortants publiez des données à partir de teams vers tout service choisi capable d’accepter une charge utile JSON. Une fois qu’un webhook sortant est ajouté à une équipe, il se comporte comme du robot, à l’écoute de canaux pour les messages utilisant une **\@ mention**, à l’envoi de notifications à des services Web externes et à la réponse avec des messages enrichis pouvant inclure des cartes et des images.
 
 ## <a name="outgoing-webhook-key-features"></a>Fonctionnalités clés de webhook sortantes
 
@@ -36,9 +36,15 @@ Les webhooks sont un excellent moyen pour les équipes de s’intégrer aux appl
 
 Votre service recevra les messages dans le schéma de messagerie du service Azure bot standard. Le connecteur de robot est un service RESTful qui permet à votre service de traiter l’échange de messages au format JSON via les protocoles HTTPs, comme indiqué dans l' [API du service Azure bot](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Vous pouvez également suivre le kit de développement logiciel (SDK) de Microsoft bot Framework pour traiter et analyser les messages. *Voir aussi*  [à propos du service de robots Azure](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
 
-Les webhooks sortants sont inclus dans le `team` niveau et sont visibles par tous les membres de l’équipe. Tout comme un bot, les utilisateurs doivent ** \@ mentionner** le nom du webhook sortant pour l’appeler dans le canal.
+Les webhooks sortants sont inclus dans le `team` niveau et sont visibles par tous les membres de l’équipe. Tout comme un bot, les utilisateurs doivent **\@ mentionner** le nom du webhook sortant pour l’appeler dans le canal.
 
 ### <a name="2-create-a-method-to-verify-the-outgoing-webhook-hmac-token"></a>2. créer une méthode pour vérifier le jeton HMAC de webhook sortant
+
+#### <a name="hmac-signature-for-testing-with-code-example"></a>Signature HMAC pour les tests avec un exemple de code
+
+Utilisation de l’exemple de message entrant et de l’ID : « contoso » de SigningKeyDictionary de {« contoso », « vqF0En + Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA = »}.
+
+Utilisez la valeur « HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U = » dans l’en-tête Authorization of Request.
 
 Pour vous assurer que votre service reçoit des appels uniquement à partir de clients teams réels, teams fournit un code HMAC dans l' `hmac` en-tête HTTP qui doit toujours être inclus dans votre protocole d’authentification.
 

@@ -2,12 +2,12 @@
 title: Obtenir le contexte de votre onglet
 description: Indique comment obtenir le contexte utilisateur dans vos onglets
 keywords: contexte utilisateur des onglets teams
-ms.openlocfilehash: 8c94c4fd895896186ddda20bfaafd1d6ccdc1e73
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5c52e6eea21f0c059f3cd650770e1076f903fb8e
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346797"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552436"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtenir le contexte de votre onglet Microsoft teams
 
@@ -25,7 +25,7 @@ Le contexte de l’utilisateur, de l’équipe ou de la société peut être par
 * Vous souhaitez lancer un flux d’authentification auprès d’Azure Active Directory ou d’un autre fournisseur d’identité, et vous ne voulez pas demander à l’utilisateur de saisir de nouveau son nom d’utilisateur. (Pour plus d’informations sur l’authentification au sein de votre onglet Microsoft Teams, consultez la rubrique [authentifier un utilisateur sous votre onglet Microsoft teams](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
-> Bien que ces informations utilisateur permettent d’assurer une expérience utilisateur sans complication, vous ne devez *pas* l’utiliser comme preuve d’identité. Par exemple, un agresseur peut charger votre page dans un « navigateur incorrect » et lui fournir toutes les informations souhaitées.
+> Bien que ces informations utilisateur permettent d’assurer une expérience utilisateur sans complication, vous ne devez *pas* l’utiliser comme preuve d’identité. Par exemple, un agresseur pourrait charger votre page dans un « navigateur incorrect » et afficher des informations ou des demandes nuisibles.
 
 ## <a name="accessing-context"></a>Contexte d’accès
 
@@ -36,7 +36,7 @@ Vous pouvez accéder aux informations de contexte de deux manières :
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obtenir le contexte en insérant des valeurs d’espace réservé URL
 
-Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft teams remplace les espaces réservés par les valeurs appropriées lors de la détermination de l’URL de contenu ou de configuration réelle à atteindre. Les espaces réservés disponibles incluent tous les champs de l’objet de [contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) . Les espaces réservés courants sont les suivants :
+Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft teams remplace les espaces réservés par les valeurs appropriées lors de la détermination de l’URL de contenu ou de configuration réelle. Les espaces réservés disponibles incluent tous les champs de l’objet de [contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) . Les espaces réservés courants sont les suivants :
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId} : ID que vous avez fourni lors de la génération d’un [lien profond](~/concepts/build-and-test/deep-links.md) pour un élément spécifique _dans_ cet onglet. Il doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, faire défiler ou activer une partie de contenu spécifique.
@@ -47,36 +47,6 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 * {groupId} : ID du groupe Office 365 dans lequel réside l’onglet.
 * {TID} : ID de client Azure AD de l’utilisateur actuel.
 * {locale} : paramètres régionaux actuels de l’utilisateur mis en forme en tant que languageId-countryId (par exemple, en-US).
-* {osLocaleInfo} : informations plus détaillées sur les paramètres régionaux du système d’exploitation de l’utilisateur, le cas échéant. Peut être utilisé conjointement avec :
-    * le @microsoft/Globe NPM package pour vérifier que votre application respecte la date de système d’exploitation de l’utilisateur et
-    * configuration du format de l’heure.
-* {sessionId} : ID unique de la session teams actuelle à utiliser pour corréler les données de télémétrie.
-* {channelId} : ID Microsoft teams pour le canal auquel le contenu est associé.
-* {channelName} : nom du canal auquel le contenu est associé.
-* {chatId} : ID Microsoft teams de la conversation à laquelle le contenu est associé.
-* {URL} : URL de contenu de cet onglet.
-* {websiteUrl} : URL du site Web de cet onglet.
-* {favoriteChannelsOnly} : indicateur qui autorise la sélection de canaux favoris uniquement.
-* {favoriteTeamsOnly} : indicateur autorisant à sélectionner les équipes favorites uniquement.
-* {userTeamRole} : rôle de l’utilisateur actuel dans l’équipe.
-* {teamType} : le type de l’équipe.
-* {isTeamLocked} : état verrouillé de l’équipe.
-* {isTeamArchived} : état archivé de l’équipe.
-* {isFullScreen} : indique si l’onglet est en mode plein écran.
-* {teamSiteUrl} : site SharePoint racine associé à l’équipe.
-* {teamSiteDomain} : domaine du site SharePoint racine associé à l’équipe.
-* {teamSitePath} : chemin d’accès relatif au site SharePoint associé à l’équipe.
-* {channelRelativeUrl} : chemin d’accès relatif au dossier SharePoint associé au canal.
-* {tenantSKU} : le type de licence pour le client actuel des utilisateurs.
-* {ringId} : ID d’appel en cours.
-* {appSessionId} : ID unique de la session en cours à utiliser pour corréler les données de télémétrie.
-* {completionBotId} : spécifie un ID de bot pour envoyer le résultat de l’interaction de l’utilisateur avec le module de tâche.
-* {conversationId} : ID de la conversation.
-* {hostClientType} : type du client hôte. (Les valeurs possibles sont les suivantes : Android, iOS, Web, Desktop et Rigel.)
-* {frameContext} : contexte dans lequel l’URL de l’onglet est chargée (contenu, tâche, définition, suppression, sidePanel).
-* {SharePoint} : cette date est disponible uniquement lorsqu’elle est hébergée dans SharePoint.
-* {meetingId} : elle est utilisée par Tab lors de l’exécution dans le contexte de la réunion.
-* {userLicenseType} Type de licence pour l’utilisateur actuel.
 
 >[!NOTE]
 >L' `{upn}` espace réservé précédent est maintenant obsolète. Pour des raisons de compatibilité descendante, il s’agit actuellement d’un synonyme de `{loginHint}` .
@@ -138,6 +108,9 @@ Lorsque votre page de contenu est chargée dans un canal privé, les données qu
 * `teamSiteUrl` -Défini sur l’URL d’un site SharePoint distinct unique pour le canal privé
 * `teamSitePath` -Défini sur le chemin d’accès à un site SharePoint distinct unique pour le canal privé
 * `teamSiteDomain` -Défini sur le domaine d’un domaine de site SharePoint distinct unique pour le canal privé
+
+> [!Note]
+>  teamSiteUrl fonctionne également pour les canaux standard.
 
 ## <a name="theme-change-handling"></a>Gestion des modifications de thème
 

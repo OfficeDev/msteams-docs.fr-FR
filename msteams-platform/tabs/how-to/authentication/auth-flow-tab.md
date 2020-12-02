@@ -2,12 +2,12 @@
 title: Flux d’authentification pour les onglets
 description: Décrit le flux d’authentification dans les onglets
 keywords: onglets de flux d’authentification des équipes
-ms.openlocfilehash: de5e0312e4523c3adef211dc03b0349c205f92cb
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346678"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552541"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flux d’authentification Microsoft teams pour les onglets
 
@@ -17,7 +17,7 @@ ms.locfileid: "49346678"
 
 OAuth 2,0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base de OAuth 2,0 est une condition préalable à l’utilisation de l’authentification dans teams ; [Voici une bonne présentation](https://aaronparecki.com/oauth-2-simplified/) qui est plus facile à suivre que les [spécifications formelles](https://oauth.net/2/). Le flux d’authentification pour les onglets et les robots est un peu différent, car les onglets sont très similaires aux sites Web afin qu’ils puissent utiliser OAuth 2,0 directement ; les robots ne sont pas et doivent effectuer quelques opérations différemment, mais les concepts de base sont identiques.
 
-pour obtenir un exemple illustrant le flux d’authentification des onglets et des bots à l’aide du nœud utilisant le [type d’autorisation implicite OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
+*Reportez-vous* à la rubrique [initiate Authentication Flow for Tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) pour obtenir un exemple de flux d’authentification pour les onglets et les robots utilisant le nœud et le [type d’autorisation implicite OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
 
 ![Diagramme de séquence d’authentification d’onglet](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -35,7 +35,7 @@ pour obtenir un exemple illustrant le flux d’authentification des onglets et d
 
 ## <a name="treat-tab-context-as-hints"></a>Considérer le contexte de l’onglet comme des conseils
 
-Bien que le contexte d’onglet fournit des informations utiles sur l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez comme paramètres d’URL de votre URL de contenu de tabulation ou en appelant la `microsoftTeams.getContext()` fonction dans le kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant peut appeler votre URL de contenu de tabulation avec ses propres paramètres, et une page Web qui emprunte l’identité de Microsoft teams pourrait charger votre URL de contenu d’onglet dans un IFRAME et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser.
+Bien que le contexte d’onglet fournisse des informations utiles sur l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez en tant que paramètres d’URL de votre URL de contenu de tabulation ou en appelant la `microsoftTeams.getContext()` fonction dans le kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant peut appeler votre URL de contenu de tabulation avec ses propres paramètres, et une page Web qui emprunte l’identité de Microsoft teams pourrait charger votre URL de contenu d’onglet dans un IFRAME et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser. Reportez-vous aux remarques dans [naviguer jusqu’à la page Authorization (autorisation) à partir de votre page contextuelle](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
 ## <a name="samples"></a>Exemples
 

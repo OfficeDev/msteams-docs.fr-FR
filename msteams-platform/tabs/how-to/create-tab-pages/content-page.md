@@ -5,12 +5,12 @@ description: procédure de création d’une page de contenu
 keywords: onglets teams groupe de canaux configurable statique
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796315"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552534"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -71,12 +71,14 @@ Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclu
 À partir [du schéma de manifeste version 1.7](../../../resources/schema/manifest-schema.md), vous pouvez fournir un indicateur de [chargement natif](../../../resources/schema/manifest-schema.md#showloadingindicator) où le contenu de votre site Web est chargé dans Teams, par exemple, page de contenu de l' [onglet](#integrate-your-code-with-teams), page de [configuration](configuration-page.md), [page de suppression](removal-page.md) et [modules de tâches dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> Si vous indiquez  `"showLoadingIndicator : true`  dans votre manifeste d’application, toutes les pages de configuration d’onglet, de contenu et de suppression, ainsi que tous les modules de tâches basés sur iframe doivent suivre le protocole obligatoire, ci-dessous :
+> 1. L’indicateur de chargement natif n’est pas encore pris en charge sur les appareils mobiles.
+> 2. Si vous indiquez  `"showLoadingIndicator : true`  dans votre manifeste d’application, toutes les pages de configuration d’onglet, de contenu et de suppression, ainsi que tous les modules de tâches basés sur iframe doivent suivre le protocole obligatoire, ci-dessous :
+
 
 1. Pour afficher l’indicateur de chargement, ajoutez `"showLoadingIndicator": true` à votre manifeste. 
 2. N’oubliez pas d’appeler `microsoftTeams.initialize();` .
-3. **Facultatif** . Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatoire** . Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si  `notifySuccess`  n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
+3. **Facultatif**. Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatoire**. Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si  `notifySuccess`  n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
 5. Si votre application ne se charge pas, vous pouvez appeler `microsoftTeams.appInitialization.notifyFailure(reason);` pour informer les équipes qu’une erreur s’est produite. Un écran d’erreur s’affiche ensuite à l’utilisateur :
 
 ```typescript

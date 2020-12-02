@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception teams-onglets de l’infrastructure de référence
-ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931798"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552548"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -75,7 +75,7 @@ Votre zone de dessin de tabulation constitue une excellente occasion de personna
 L’incorporation de vos propres couleurs et dispositions twill facilite également la communication de la personnalité.
 
 > [!TIP]
-> Utilisez notre style visuel pour que votre service ressemble à une partie de teams. *Voir* , par exemple, les [couleurs de teams](../../concepts/design/components/color.md)
+> Utilisez notre style visuel pour que votre service ressemble à une partie de teams. *Voir*, par exemple, les [couleurs de teams](../../concepts/design/components/color.md)
 
 ---
 
@@ -172,7 +172,7 @@ Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans un
 
 ### <a name="no-link-to-external-browser"></a>Aucun lien vers le navigateur externe
 
-Les cibles de liens dans les onglets ne doivent pas être liées à un navigateur externe, mais doivent être liées à des éléments div contenus dans Teams, par exemple, à l’intérieur de modules de tâches, d’onglets, etc.
+Les cibles de liens dans les onglets ne doivent pas être liées à un navigateur externe, mais doivent être liées à des éléments div contenus dans Teams. Par exemple, à l’intérieur des modules de tâches, des onglets, etc.
 
 ## <a name="notifications-for-tabs"></a>Notifications pour les onglets
 
@@ -198,3 +198,4 @@ L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l�
 * Les onglets ne doivent pas avoir plus de trois niveaux de navigation dans l’application.
 * Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans une vue L2/L3 dans la zone d’onglet principale qui est parcourue via le plan de navigation.
 * Les onglets disposant de fonctionnalités d’édition complexes dans l’application doivent ouvrir le mode éditeur dans plusieurs fenêtres plutôt qu’un onglet (pour le bureau et le Web).
+* Pour une expérience utilisateur améliorée, citons un bot personnel qui envoie un message de bienvenue à l’utilisateur lors de la première exécution et répond aux commandes **Hi**, **Help** et **Hello** . Vous pouvez vous reporter à la documentation sur les [bots conversation](../../bots/what-are-bots#in-a-one-to-one-chat) pour obtenir de l’aide.
