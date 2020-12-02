@@ -20,6 +20,17 @@
       href: build-your-first-app/build-bot.md
     - name: Créer une extension de messagerie
       href: build-your-first-app/build-messaging-extension.md
+- name: Extension de kit de ressources Microsoft Teams
+  expanded: true
+  items:
+    - name: Extension de kit de ressources Teams pour Visual Studio Code
+      href: toolkit/visual-studio-code-overview.md
+    - name: Extension de kit de ressources Teams pour Visual Studio
+      href: toolkit/visual-studio-overview.md
+    - name: Authentification unique des onglets avec l’extension de kit de ressources pour Visual Studio Code
+      href: toolkit/visual-studio-code-tab-sso.md
+- name: Modèles d'application prêts pour la production
+  href: samples/app-templates.md
 - name: Didacticiels et exemples de code
   items:
     - name: Créer une application à l’aide de C#
@@ -36,20 +47,12 @@
       href: samples/integrating-web-apps.md
     - name: Créer des applications à faible code
       href: samples/teams-low-code-solutions.md
-    - name: Modèles d'application prêts pour la production
-      href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
       href: samples/shifts-wfm-connectors.md
     - name: Créer un assistant virtuel pour Teams
       href: samples/virtual-assistant.md
     - name: Intégrer un agent chatbot Power Virtual Agent avec Teams
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Extension de kit de ressources Microsoft Teams
-      items:
-        - name: Extension de kit de ressources Teams pour Visual Studio Code
-          href: toolkit/visual-studio-code-overview.md
-        - name: Extension de kit de ressources Teams pour Visual Studio
-          href: toolkit/visual-studio-overview.md
 - name: Concepts
   expanded: true
   items:
