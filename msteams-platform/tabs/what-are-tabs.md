@@ -4,12 +4,12 @@ author: laujan
 description: Vue d’ensemble des onglets personnalisés sur la plateforme teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7400d5d2c7ffb1d56ec6dec01261e08de597fcdd
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: e89f07133f86b6c0700e6a71d8e53bf6d9831196
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366874"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576847"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Qu’est-ce que les onglets personnalisés de Microsoft teams ?
 
@@ -56,3 +56,9 @@ Vous pouvez disposer d’un (1) onglet de canal/groupe et jusqu’à seize (16) 
 ## <a name="mobile-clients"></a>Clients mobiles
 
 Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété. Pour garantir une expérience utilisateur optimale, suivez les [instructions pour les onglets sur mobile](~/tabs/design/tabs-mobile.md) lors de la création des onglets.
+
+> [!div class="nextstepaction"]
+> [En savoir plus : demander des autorisations de périphérique](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[En savoir plus : autorisations de Galerie d’images et de caméras](/concepts/device-capabilities/mobile-camera-image-permissions.md)

@@ -4,12 +4,12 @@ author: clearab
 description: Ajoutez des expériences contextuelles modales pour collecter ou afficher des informations pour vos utilisateurs à partir de vos applications Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 44d4e308614763b9da36c2abb7dd150778484c56
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867117"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576854"
 ---
 # <a name="what-are-task-modules"></a>Qu-est-ce qu’un module de tâche ?
 
@@ -214,7 +214,7 @@ Voici les informations sur `APP_ID` et `BOT_APP_ID` :
 | Valeur | Type | Obligatoire ? | Description |
 | --- | --- | --- | --- |
 | `APP_ID` | string | Oui | [ID](~/resources/schema/manifest-schema.md#id) de l’application appelant le module de tâches. Le [tableau validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le manifeste de `APP_ID` doit contenir le domaine pour `url` si `url` se trouve dans l’URL. (L’ID de l’application est déjà connu lorsqu’un module de tâche est appelé à partir d’un onglet ou d’un bot, c’est pourquoi il n’est pas inclus dans `TaskInfo` .) |
-| `BOT_APP_ID` | string | Non | Si une valeur `completionBotId` est spécifiée, l' `result` objet est envoyé par le biais d’un `task/submit invoke` message au bot spécifié. `BOT_APP_ID`doit être spécifié en tant que bot dans le manifeste de l’application, autrement dit, vous ne pouvez pas simplement l’envoyer à un bot. |
+| `BOT_APP_ID` | string | Non | Si une valeur `completionBotId` est spécifiée, l' `result` objet est envoyé par le biais d’un `task/submit invoke` message au bot spécifié. `BOT_APP_ID` doit être spécifié en tant que bot dans le manifeste de l’application, autrement dit, vous ne pouvez pas simplement l’envoyer à un bot. |
 
 Notez qu’il est valide pour `APP_ID` `BOT_APP_ID` le même nom et, dans de nombreux cas, s’il s’agit d’un robot, car il est recommandé de l’utiliser comme ID d’une application s’il en existe un.
 
@@ -238,5 +238,11 @@ Microsoft teams garantit que la navigation au clavier fonctionne correctement à
 
 ## <a name="task-module-samples"></a>Exemples de modules de tâches
 
-* [Exemple deNode.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
+* [ Exemple deNode.js/TypeScript](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
 * [Exemple de/.NET C#](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
+> [!div class="nextstepaction"]
+> [En savoir plus : demander des autorisations de périphérique](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[En savoir plus : autorisations de Galerie d’images et de caméras](/concepts/device-capabilities/mobile-camera-image-permissions.md)

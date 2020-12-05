@@ -2,12 +2,12 @@
 title: Instructions de conception pour les onglets
 description: Décrit les instructions pour la création d’onglets pour le contenu et la collaboration
 keywords: instructions de conception teams-onglets de l’infrastructure de référence
-ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552548"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576861"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>Contenu et conversations, tous à la fois à l’aide d’onglets
 
@@ -198,4 +198,4 @@ L’envoi d’un message à un fil d’onglet augmente la sensibilisation de l�
 * Les onglets ne doivent pas avoir plus de trois niveaux de navigation dans l’application.
 * Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans une vue L2/L3 dans la zone d’onglet principale qui est parcourue via le plan de navigation.
 * Les onglets disposant de fonctionnalités d’édition complexes dans l’application doivent ouvrir le mode éditeur dans plusieurs fenêtres plutôt qu’un onglet (pour le bureau et le Web).
-* Pour une expérience utilisateur améliorée, citons un bot personnel qui envoie un message de bienvenue à l’utilisateur lors de la première exécution et répond aux commandes **Hi**, **Help** et **Hello** . Vous pouvez vous reporter à la documentation sur les [bots conversation](../../bots/what-are-bots#in-a-one-to-one-chat) pour obtenir de l’aide.
+* Pour une expérience utilisateur améliorée, citons un bot personnel qui envoie un message de bienvenue à l’utilisateur lors de la première exécution et répond aux commandes **Hi**, **Help** et **Hello** . Vous pouvez vous reporter à la documentation sur les [bots conversation](../../bots/what-are-bots.md#in-a-one-to-one-chat) pour obtenir de l’aide.
