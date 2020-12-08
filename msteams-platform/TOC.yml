@@ -134,6 +134,12 @@
           href: concepts/authentication/authentication.md
         - name: Configurer les fournisseurs d’identité
           href: concepts/authentication/configure-identity-provider.md
+    - name: Activer les fonctionnalités de l’appareil
+      items:
+        - name: Demande des autorisations d’appareil
+          href: concepts/device-capabilities/native-device-permissions.md
+        - name: 'Caméra et galerie '
+          href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: "Onglets\_: expériences web incorporées"
   items:
     - name: "Que sont les onglets personnalisés\_?"
@@ -195,8 +201,6 @@
           href: tabs/how-to/developer-tools.md
         - name: Ajouter votre onglet personnalisé à SharePoint
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: Demande des autorisations d’appareil
-          href: tabs/how-to/native-device-permissions.md
 - name: "Bots\_: interactions basées sur des conversations"
   items:
     - name: "Qu’est-ce qu’un bot dans Microsoft Teams\_?"
