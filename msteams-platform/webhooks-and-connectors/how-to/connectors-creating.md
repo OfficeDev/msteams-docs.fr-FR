@@ -3,12 +3,12 @@ title: Connecteurs Office 365
 description: Décrit comment se familiariser avec les connecteurs Office 365 dans Microsoft teams
 keywords: 'équipes connecteur O365 '
 ms.date: 04/19/2019
-ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998020"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605341"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création de connecteurs Office 365 pour Microsoft teams
 
@@ -79,7 +79,7 @@ Vous pouvez éventuellement exécuter un gestionnaire d’événements lorsque l
 
 Vous pouvez télécharger le manifeste d’application teams généré automatiquement à partir du portail. Avant de pouvoir l’utiliser pour tester ou publier votre application, vous devez procéder comme suit :
 
-- Vous avez le choix entre deux icônes, en suivant les instructions figurant dans [Icônes](~/concepts/build-and-test/apps-package.md#icons).
+- [Inclut deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifiez la partie `icons` du manifeste pour faire référence aux noms de fichier des icônes au lieu des URL.
 
 Le fichier manifest.json suivant contient les éléments de base nécessaires pour tester et envoyer votre application.

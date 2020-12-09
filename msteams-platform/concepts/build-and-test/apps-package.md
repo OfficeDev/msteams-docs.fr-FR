@@ -1,23 +1,22 @@
 ---
 title: Empaquetage de votre application
-description: Découvrez comment empaqueter votre application à des fins de test, de chargement et de publication dans Microsoft teams
-keywords: empaquetage d’applications teams
+description: Découvrez comment empaqueter votre application Microsoft teams à des fins de test, de chargement et de publication en magasin.
 ms.topic: conceptual
-ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 6929375c8d6a1602f01d83d15bfa0dab7f02a664
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552569"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605273"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Créer un package d’application pour votre application Microsoft teams
 
-Les applications dans teams sont définies par un fichier JSON de manifeste d’application et regroupées dans un package d’application avec leurs icônes. Vous aurez besoin d’un package d’application pour télécharger et installer votre application dans Teams, et pour publier le catalogue d’applications de votre ligne de l’application métier ou vers AppSource.
+Les applications dans teams sont définies par un fichier JSON de manifeste d’application et regroupées dans un package d’application avec leurs icônes. Vous aurez besoin d’un package d’application pour télécharger et installer votre application dans teams et publier votre application dans votre catalogue d’applications métiers ou sur AppSource.
 
 Un package d’applications teams est un fichier. zip contenant les éléments suivants :
 
-* Un fichier manifeste nommé « manifest.json », qui spécifie les attributs de votre application et pointe vers les ressources requises pour votre expérience, telles que l’emplacement de sa page de configuration d’onglets ou l’ID d’application Microsoft pour son bot.
-* Une icône « plan » transparente et une icône « couleur » complète. Pour plus d’informations, consultez la section [icônes](#icons) plus loin dans cette rubrique.
+* Un fichier manifeste nommé `manifest.json` , qui spécifie les attributs de votre application et pointe vers les ressources requises pour votre expérience, telles que l’emplacement de sa page de configuration d’onglets ou l’ID d’application Microsoft pour son bot.
+* [Icônes de couleur et de plan de votre application](#app-icons).
 
 ## <a name="creating-a-manifest"></a>Création d’un manifeste
 
@@ -30,43 +29,65 @@ Votre fichier manifeste doit être nommé « manifest.js » et se trouver au n
 >
 > `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="icons"></a>Icônes
+## <a name="app-icons"></a>Icônes de l’application
+
+Votre package d’application doit inclure deux versions PNG de votre icône d’application, une icône de couleur et une icône en mode plan. Pour que votre application réussisse la révision AppSource, ces icônes doivent respecter les exigences de taille suivantes.
 
 > [!Note]
-> Si votre application contient un bot ou une extension de messagerie, les icônes utilisées seront les icônes chargées dans l’enregistrement de votre bot dans l’infrastructure de robot.
+> Si votre application dispose d’un bot ou d’une extension de messagerie, vos icônes seront également incluses dans votre inscription au service Microsoft Azure bot.
 
-Microsoft teams nécessite deux icônes pour l’expérience de votre application, à utiliser dans le produit. Les icônes doivent être incluses dans le package et référencées via des chemins d’accès relatifs dans le manifeste. La longueur maximale de chaque chemin d’accès est de 2048 octets, et le format de l’icône est. png.
+### <a name="color-icon"></a>Icône couleur
 
-### <a name="color"></a>color
+La version couleur de votre icône s’affiche dans la plupart des scénarios de teams et doit être 192x192 pixels. Le symbole de votre icône (96 x 96 pixels) peut être une couleur ou des couleurs, mais il doit être placé sur un arrière-plan Uni ou entièrement transparent.
 
-L' `color` icône est utilisée dans Microsoft Teams (dans les galeries d’applications et d’onglets, les robots, les lanceurs, etc.). Cette icône doit être 192x192 pixels. Votre icône peut être n’importe quelle couleur (ou couleurs), mais l’arrière-plan doit être votre couleur d’accentuation personnalisée. Elle doit également avoir une petite quantité de remplissage autour de l’icône pour prendre en charge le rognage hexagonal pour la version bot de l’icône.
+Teams rogne automatiquement votre icône pour afficher un carré avec des angles arrondis dans plusieurs scénarios et une forme hexagonale dans les scénarios de robot. Incluez 48 pixels de remplissage pour que ces cultures puissent être effectuées sans perte de détail.
 
-### <a name="outline"></a>outline
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Conseils de conception de l’icône couleur des équipes." border="false":::
 
-L' `outline` icône est utilisée aux emplacements suivants : la barre d’application et les extensions de messagerie que l’utilisateur a marquées comme « favoris ». Cette icône doit être de 32x32 pixels. Votre icône de contour ne doit contenir que le blanc et la transparence (aucune autre couleur). L’icône peut être blanche avec un arrière-plan transparent ou transparente avec un arrière-plan blanc. L’icône de contour ne doit pas avoir de remplissage supplémentaire autour de l’icône et doit être aussi rapprochée que possible tout en maintenant les dimensions 32x32. Voici quelques exemples intéressants :
+### <a name="outline-icon"></a>Icône de plan
 
-![Exemples d’icônes de plan](~/assets/images/icons/sample20x20s.png)
+Une icône en mode plan s’affiche dans deux scénarios :
 
-[! Conseil pour créer une icône transparente]
+* Lorsque votre application est en cours d’utilisation et « levée » dans la barre de l’application située à gauche de teams.
+* Lorsqu’un utilisateur épingle l’extension de messagerie de votre application.
 
-* La couleur doit être « blanc » en RVB, (rouge : 255, vert : 255, bleu : 255).
-* Toute autre partie de l’icône doit être transparente.
-* Pour le passage, la petite icône doit être pleine transparent avec une valeur de canal alpha de 0 : toute autre valeur est un échec.
+L’icône doit être de 32x32 pixels. Il peut être blanc avec un arrière-plan transparent ou transparent avec un arrière-plan blanc (aucune autre couleur n’est autorisée). L’icône de contour ne doit pas comporter de remplissage supplémentaire pour le symbole.
 
-Imaginons, par exemple, que votre société est contoso. Vous devez envoyer deux icônes :
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Conseils de conception de l’icône couleur des équipes." border="false":::
 
-![Présentation des icônes](~/assets/images/framework/framework_submit_icon.png)
+### <a name="best-practices"></a>Meilleures pratiques
 
-Voici comment les icônes apparaîtront dans l’interface utilisateur :
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="Illustration illustrant la conception de vos icônes d’application." border="false":::
 
-#### <a name="bot-and-chiclet-in-channel-view"></a>Robot et chiclet dans l’affichage des canaux
+#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Do : suivre les instructions d’icône de contour précises
 
-![Bot et chiclet UX](~/assets/images/icons/botandchiclet.png)
+Les valeurs RVB du blanc utilisé dans votre icône doivent être rouges : 255, vert : 255, bleu : 255. Toutes les autres parties de l’icône de contour doivent être entièrement transparentes, avec la couche alpha définie sur 0.
 
-#### <a name="flyout"></a>Menu
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="Illustration montrant comment ne pas concevoir vos icônes d’application." border="false":::
 
-![Exemple de menu volant contoso](~/assets/images/icons/flyout.png)
+#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>Ne pas : Rogner dans une forme circulaire ou en carré arrondi
 
-#### <a name="app-bar-and-home-screen"></a>Barre d’application et écran d’accueil
+L’icône de couleur soumise dans votre package d’application doit être carrée. N’arrondissez pas les coins de votre icône. Teams ajuste automatiquement le rayon d’arrondi.
 
-![Exemple de barre d’application Contoso homescreen](~/assets/images/icons/appbarhomescreen.png)
+   :::column-end:::
+:::row-end:::
+
+### <a name="examples"></a>Exemples
+
+Voici comment les icônes d’application apparaissent dans les différents contextes et fonctionnalités de teams.
+
+#### <a name="personal-app"></a>Application personnelle
+
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="Exemple illustrant l’apparence d’une icône d’application dans une application personnelle." border="false":::
+
+#### <a name="bot-channel"></a>Bot (canal)
+
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemple illustrant l’apparence d’une icône d’application sur un robot au sein d’un canal." border="false":::
+
+#### <a name="messaging-extension"></a>Extension de messagerie
+
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<>texte de remplacement " border="false":::

@@ -5,12 +5,12 @@ description: créer des applications pour les réunions teams
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: applications Team Apps Meeting User Role Role API
-ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576826"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605230"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Créer des applications pour les réunions Teams
 
@@ -24,7 +24,7 @@ ms.locfileid: "49576826"
 
 1. Certaines API de réunion, telles que `GetParticipant` nécessiteront un [ID d’enregistrement et d’application bot](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) pour générer des jetons d’authentification.
 
-1. En tant que développeur, vous devez respecter les [instructions de conception d’onglet teams](../tabs/design/tabs.md) générales pour les scénarios pré-et post-réunion, ainsi que les [recommandations](design/designing-in-meeting-dialog.md) pour la boîte de dialogue de réunion déclenchée lors d’une réunion Teams.
+1. En tant que développeur, vous devez respecter les [instructions de conception d’onglet teams](../tabs/design/tabs.md) générales pour les scénarios pré-et post-réunion, ainsi que les [recommandations](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) pour la boîte de dialogue de réunion déclenchée lors d’une réunion Teams.
 
 1. Veuillez noter que pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités liées aux événements dans la réunion. Ces événements peuvent se situer dans la boîte de dialogue de réunion (reportez-vous à la rubrique Complete `bot Id` Parameter in `Notification Signal API` ) et d’autres surfaces dans le cycle de vie de la réunion.
 
@@ -111,6 +111,7 @@ le **rôle** sous « réunion » peut être *organisateur*, *présentateur* ou
    }
 }
 ```
+
 #### <a name="response-codes"></a>Codes de réponse
 
 **403**: l’application n’est pas autorisée à obtenir des informations sur les participants. Il s’agit de la réponse d’erreur la plus courante, qui est déclenchée lorsque l’application n’est pas installée dans la réunion, par exemple lorsqu’elle est désactivée par l’administrateur client ou bloquée lors de la migration de site réel.  
@@ -146,7 +147,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > *  Dans la charge demandée ci-dessous, le `completionBotId` paramètre de `externalResourceUrl` est un facultatif. Il s’agit de la `Bot ID` qui est déclarée dans le manifeste. Le bot reçoit un objet de résultat.
-> * Les paramètres de largeur et de hauteur externalResourceUrl doivent être en pixels. Reportez-vous aux [instructions de conception](design/designing-in-meeting-dialog.md) pour vous assurer que les dimensions respectent les limites autorisées.
+> * Les paramètres de largeur et de hauteur externalResourceUrl doivent être en pixels. Reportez-vous aux [instructions de conception](design/designing-apps-in-meetings.md) pour vous assurer que les dimensions respectent les limites autorisées.
 > * L’URL est la page chargée en tant que telle dans `<iframe>` la boîte de dialogue de réunion. Le domaine de l’URL doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
 
 
@@ -256,9 +257,9 @@ L’onglet `context` et les `scopes` propriétés fonctionnent en harmonie pour 
 > [!NOTE]
 > * Pour que votre application soit visible dans la Galerie d’onglets, elle doit **prendre en charge les onglets configurables** et l' **étendue de conversation de groupe**.
 >
-> * Les clients mobiles prennent en charge les onglets uniquement dans les surfaces pre et post Meeting. Les expériences de réunion (boîte de dialogue et volet de réunion) sur mobile seront bientôt disponibles. Suivez les [instructions pour les onglets sur mobile](../tabs/design/tabs-mobile.md) lors de la création de vos onglets pour mobile. 
+> * Les clients mobiles prennent en charge les onglets uniquement dans les surfaces pre et post Meeting. Les expériences de réunion (boîte de dialogue et onglet de réunion) sur mobile seront disponibles prochainement. Suivez les [instructions pour les onglets sur mobile](../tabs/design/tabs-mobile.md) lors de la création de vos onglets pour mobile.
 
-### <a name="pre-meeting"></a>Pré-réunion
+### <a name="before-a-meeting"></a>Avant une réunion
 
 Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajoutent des onglets à une réunion en utilisant le bouton plus ➕ dans les pages **conversation** de réunion et **Détails** de la réunion. Les extensions de messagerie sont ajoutées à via le menu ellipses/Overflow &#x25CF;&#x25CF;&#x25CF; située sous la zone de message composer dans la conversation. Les robots sont ajoutés à une conversation de réunion à l’aide de la **@** touche «» et en sélectionnant **obtenir les bots**.
 
@@ -268,7 +269,7 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 
 > **Remarque**: les attributions de rôles peuvent être modifiées lorsqu’une réunion est en cours.  *Voir* [rôles dans une réunion teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
 
-### <a name="in-meeting"></a>Réunion
+### <a name="during-a-meeting"></a>Lors d’une réunion
 
 #### <a name="sidepanel"></a>**sidePanel**
 
@@ -285,9 +286,9 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 
 ✔ AppName dans la réunion-ToolTip doit indiquer le nom de l’application dans la barre U de la réunion.
 
-#### <a name="in-meeting-dialog"></a>**boîte de dialogue de réunion**
+#### <a name="in-meeting-dialog"></a>**Boîtes de dialogue en réunion**
 
-✔ Vous devez respecter les [instructions de conception de la boîte de dialogue de réunion](design/designing-in-meeting-dialog.md).
+✔ Vous devez respecter les [instructions de conception de la boîte de dialogue de réunion](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 ✔ Reportez-vous au [flux d’authentification teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -303,7 +304,7 @@ Les utilisateurs disposant de rôles d’organisateur et/ou de présentateur ajo
 >
 > * Si vous souhaitez que votre application prenne en charge les utilisateurs anonymes, votre charge utile de la demande d’appel initiale doit reposer sur les métadonnées de demande `from.id`  (ID de l’utilisateur) dans l' `from` objet, et non sur l' `from.aadObjectId` ID (Azure Active Directory ID de l’utilisateur). *Voir* [utilisation des modules de tâches dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) et [créer et envoyer le module de tâches](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-### <a name="post-meeting"></a>Post-réunion
+### <a name="after-a-meeting"></a>Après une réunion
 
 Les configurations post-réunion et de réunion sont équivalentes.
 

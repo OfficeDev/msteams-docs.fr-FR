@@ -5,12 +5,12 @@ description: procédure de création d’une page de configuration
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964605"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605324"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -104,7 +104,7 @@ L' [interface de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.co
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservés dans le `configurationURL`
 
-Des espaces réservés d’interface de contexte peuvent être ajoutés à votre base `configurationUrl` . Par exemple:
+Des espaces réservés d’interface de contexte peuvent être ajoutés à votre base `configurationUrl` . Par exemple :
 
 ##### <a name="base-url"></a>URL de base
 
@@ -166,7 +166,7 @@ Les options de suppression prises en charge peuvent affiner l’expérience util
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété (voir ci-dessous). La prise en charge complète des onglets sur les clients mobiles sera bientôt disponible. Pour préparer la mise à jour, suivez les [instructions pour les onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md) lors de la création des onglets.
+Si vous choisissez d’afficher l’onglet canal/groupe sur les clients mobiles Teams, la `setSettings()` configuration doit avoir une valeur pour la `websiteUrl` propriété (voir ci-dessous). Consultez [les instructions pour les onglets sur mobile](~/tabs/design/tabs-mobile.md).
 
 Microsoft teams setSettings () configuration pour la page de suppression et/ou les clients mobiles :
 

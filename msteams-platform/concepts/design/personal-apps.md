@@ -1,73 +1,178 @@
 ---
-title: Référence des instructions de conception
-description: Décrit les instructions pour la conception d’une application personnelle
-keywords: instructions de conception teams structure de référence des applications personnelles
-ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+title: Conception de votre application personnelle
+description: Découvrez comment concevoir une application personnelle teams et obtenir le kit d’interface utilisateur Microsoft Teams.
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 971071be9f345815f5461646d7970efdf05fd5c4
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455498"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604989"
 ---
-# <a name="personal-apps"></a>Applications personnelles
+# <a name="designing-your-personal-app-for-microsoft-teams"></a>Conception de votre application personnelle pour Microsoft teams
 
-> [!NOTE]
-> La prise en charge complète des onglets sur les clients mobiles est prise en charge dans Teams. Vous devez suivre les [instructions pour les onglets sur mobile](../../tabs/design/tabs-mobile.md) lors de la création d’onglets pour les plateformes mobiles.
+Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un emplacement de création ou d’affichage de contenu, d’autres fois qu’il offre à l’utilisateur un aperçu de tous ses éléments lorsque l’application a été configurée sous la forme d’un onglet dans plusieurs canaux.
 
-Une application personnelle est une application de teams avec une portée personnelle.  En tant que développeur d’applications, vous avez la possibilité de fournir une version de votre application qui se concentre sur les interactions avec un seul utilisateur. Il peut s’agir d’un [bot de conversation](../../bots/what-are-bots.md) pour engager des conversations un-à-un avec un utilisateur ou un [onglet personnel](../../tabs/what-are-tabs.md) qui fournit une expérience Web intégrée. Les applications personnelles permettent aux utilisateurs d’afficher leur contenu sélectionné à un seul endroit. Dans la capture d’écran suivante, contoso est une application personnelle dans le lanceur d’applications personnelles.
+Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les utilisateurs peuvent ajouter, utiliser et gérer des applications personnelles dans Teams.
 
-![image du menu de dépassement de l’application](~/assets/images/Personal-apps-App-flyout.png)
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur Microsoft teams
 
----
+Vous trouverez des instructions de conception d’applications personnelles complètes, notamment des éléments que vous pouvez saisir et modifier selon vos besoins, dans le kit d’interface utilisateur Microsoft Teams. Le kit d’interface utilisateur comporte également des rubriques essentielles, telles que l’accessibilité et le dimensionnement réactif, qui ne sont pas abordées ici.
 
-## <a name="guidelines"></a>Conseils
+> [!div class="nextstepaction"]
+> [Obtenir le kit d’interface utilisateur Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-Une application personnelle contient généralement les onglets suivants :
+## <a name="add-a-personal-app"></a>Ajouter une application personnelle
 
-### <a name="your-tab"></a>Votre onglet
+Vous pouvez ajouter une application personnelle à partir du magasin de Teams (AppSource) ou le menu volant d’application en sélectionnant l’icône **plus** sur le côté gauche de Teams (illustré dans l’exemple ci-dessous).
 
-C’est ici que vos utilisateurs verront toutes leurs choses. Il s’agit de son espace personnel. L’onglet peut être organisé sous la forme d’une liste, d’une grille, de colonnes ou d’une seule toile... tout ce qui convient le mieux à votre application. Pour plus d’informations sur la conception d’onglets effectifs, consultez la rubrique : [Tabs Design](../../tabs/design/tabs.md).
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Exemple montre comment ajouter une application personnelle à partir de la fenêtre mobile d’application." border="false":::
 
-Dans la mesure où cet onglet permet d’afficher des éléments provenant de plusieurs canaux, chaque élément doit afficher sa propre équipe, le canal et l’onglet de sorte que l’utilisateur puisse voir facilement où il provient.
+## <a name="use-a-personal-app-private-workspace"></a>Utiliser une application personnelle (espace de travail privé)
 
-![Onglet tâches personnelles](~/assets/images/Personal-apps-MY-tab.png)
+Avec un espace de travail privé, vous pouvez afficher le contenu de l’application qui est significatif pour vous dans un emplacement central sans quitter Teams.
 
-### <a name="recent"></a>Récents
+(Mise en œuvre Remarque : l’espace de travail privé est basé sur les fonctionnalités de l' [*onglet personnel*](../../build-your-first-app/build-personal-tab.md) .)
 
-L’onglet **récent** permet à quelqu’un de parcourir tous les utilisateurs qu’il a consultés récemment dans votre application. Elle est classée par ordre chronologique (de la plus récente à la moins récente). Si vous cliquez sur un élément de cette liste, l’utilisateur accède à son canal et à son onglet.
+### <a name="anatomy-personal-app-private-workspace"></a>Anatomie : application personnelle (espace de travail privé)
 
-![Onglet récent](~/assets/images/Personal-apps-Recent-tab.png)
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Exemple illustre l’anatomie du composant de l’onglet personnel." border="false":::
 
-### <a name="all"></a>Tous
+|Compteur|Description|
+|----------|-----------|
+|A|**Attribution d’application**: logo et nom de votre application.|
+|B|**Onglets**: permet de naviguer dans votre application personnelle. Par exemple, inclure un onglet **à propos** de ou **d’aide** .|
+|C|**Vue contextuelle**: envoie le contenu de votre application d’une fenêtre parente à une fenêtre enfant autonome.|
+|D|**Autres menus**: inclut des informations et des options d’application supplémentaires. (Vous pouvez également définir les **paramètres** d’un onglet.)|
 
-Il s’agit d’une liste de tous les onglets de l’organisation de la personne (ceux auxquels ils ont accès, quand même). En d’autres termes, il les affiche partout où l’application est utilisée. Comme avec l’onglet **récent** , si vous sélectionnez un article dans la liste, l’utilisateur est directement associé à l’onglet et au canal appropriés.
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Exemple illustre l’anatomie structurelle de l’onglet personnel." border="false":::
 
-### <a name="bot"></a>Bot
+|Compteur|Description|
+|----------|-----------|
+|A|**Onglets**: permet de naviguer dans votre application personnelle.|
+|1 |**IFRAME**: affiche le contenu de votre application.|
 
-Un bot n’est pas obligatoire, mais il s’agit d’un excellent moyen de communiquer directement et en privé avec vos utilisateurs. La notification est l’une des fonctions les plus importantes d’une application personnelle et quelle est la meilleure façon de les avertir qu’avec la communication directe ?
+### <a name="designing-with-ui-templates"></a>Conception avec des modèles d’interface utilisateur
 
-Les robots fournissent des messages sous la forme de cartes, qui peuvent fournir des informations spécifiques (par exemple, une alerte indiquant que le nouveau contenu est disponible) ou des mises à jour étendues (par exemple, une liste de tâches quotidiennes). Pour plus d’informations sur la conception de robots efficaces, consultez la rubrique : [Design bot](../../bots/design/bots.md).
+Utilisez l’un des modèles d’interface utilisateur teams suivants pour vous aider à concevoir votre onglet personnel :
 
-![Message d’accueil bot](~/assets/images/Personal-apps-Bot.png)
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format d’analyse et permettre aux utilisateurs d’effectuer des actions sur une liste entière ou des éléments individuels.
+* [Tableau des tâches](../../concepts/design/design-teams-app-ui-templates.md#task-board): un tableau des tâches, parfois appelé tableau kanban ou couloirs de natation, est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
+* [Tableau](../../concepts/design/design-teams-app-ui-templates.md#dashboard)de bord : un tableau de bord est une zone de dessin contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
+* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires permettent de collecter, de valider et de soumettre des entrées utilisateur de manière structurée.
+* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, notamment lors de la connexion, des expériences de première exécution, des messages d’erreur et bien plus encore.
+* Navigation de [gauche](../../concepts/design/design-teams-app-ui-templates.md#left-nav): le modèle de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation par onglets au minimum.
 
-### <a name="help-and-settings"></a>Aide et paramètres
+## <a name="use-a-personal-app-bot"></a>Utiliser une application personnelle (bot)
 
-Le contenu de l’aide permet aux utilisateurs de découvrir les nuances de votre application. Ajoutez un onglet **paramètres** pour leur donner la possibilité de le personnaliser.
+Les applications personnelles peuvent inclure un bot pour les conversations et les notifications privées en un seul (par exemple, lorsqu’un collègue envoie un commentaire sur votre planche graphique). Le bot est disponible sous un onglet que vous spécifiez.
 
-### <a name="about"></a>À propos
+### <a name="anatomy-personal-app-bot"></a>Anatomie : application personnelle (bot)
 
-Incluez un onglet à **propos** de pour fournir des informations telles que le numéro de version, les fonctionnalités, la confidentialité et les liens d’autorisations.
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Exemple illustre l’anatomie du composant bot personnel." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|A|**Onglet bot**: par exemple, inclure un onglet de **conversation** pour accéder aux conversations et notifications du robot.|
+|B|**Message bot**: les robots envoient souvent des messages et des notifications sous la forme d’une carte (telle qu’une carte adaptative).|
+|C|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
-### <a name="communicate-directly-with-your-users"></a>Communiquer directement avec vos utilisateurs
+### <a name="tab-priority"></a>Priorité de l’onglet
 
-Utilisez un bot pour informer les utilisateurs des modifications et des nouvelles fonctionnalités.
+#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a>Do : afficher le contenu le plus pertinent dans le premier onglet
 
-### <a name="customize-your-tabs"></a>Personnaliser vos onglets...
+Avec un dimensionnement réactif, les onglets à droite peuvent être tronqués ou en dehors de l’affichage.
 
-N’hésitez pas à ajouter d’autres onglets qui aideront vos utilisateurs à accomplir des tâches spécifiques.
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
 
-### <a name="and-make-them-relevant-to-every-user"></a>... et les rendre pertinentes pour chaque utilisateur
+#### <a name="dont-lead-with-secondary-content-or-metadata"></a>Ne pas : utiliser le contenu secondaire ou les métadonnées
 
-Chaque onglet que vous déclarez dans le manifeste de votre application est visible par tous les utilisateurs. Par exemple, si votre application personnelle est un outil de création de notes de frais qui est utilisé par les responsables et les employés, un onglet **approbation** doit fournir un contenu significatif pour les deux rôles.
+À l’instar d’une application Web standard, la navigation à onglet doit progresser dans un ordre qui permet de mieux appréhender les fonctionnalités principales de votre application.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+### <a name="tab-hierarchy"></a>Hiérarchie d’onglets
+
+#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a>Do : les onglets doivent être de même hiérarchie et représenter les pages d’application clés
+
+Vos onglets doivent catégoriser les principales fonctionnalités et le contenu de votre application. Avec un dimensionnement réactif, le contenu à droite peut être tronqué ou inactif.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+#### <a name="dont-include-different-levels-of-hierarchy"></a>Ne pas inclure différents niveaux de hiérarchie
+
+Votre contenu doit progresser dans un ordre logique qui permet aux utilisateurs de le détecter. Si vous avez deux onglets étroitement liés, envisagez de les combiner en un seul onglet.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+### <a name="first-run-experience"></a>Première expérience d’utilisation
+
+#### <a name="do-include-a-first-run-experience"></a>Do : inclure une expérience de première exécution
+
+Il doit y avoir au moins un écran d’accueil la première fois que vous utilisez une application personnelle. Pour les robots, décrivez ce que votre robot peut faire et fournissez des actions rapides, telles qu’un bouton de connexion.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+#### <a name="dont-start-with-a-blank-screen"></a>Ne pas : Démarrer avec un écran vide
+
+Les utilisateurs peuvent être confondus si rien ne s’affiche la première fois qu’ils exécutent votre application.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+### <a name="personalized-content"></a>Contenu personnalisé
+
+#### <a name="do-aggregate-app-content-relevant-to-a-user"></a>Do : agréger le contenu d’application pertinent pour un utilisateur
+
+Qu’il s’agisse d’un onglet personnel ou d’un bot, affiche le contenu associé uniquement à l’activité d’un utilisateur dans votre application.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+#### <a name="dont-show-unrelated-or-overly-broad-content"></a>Ne pas : afficher le contenu non lié ou trop large
+
+Dans les contextes personnels, n’affichez pas de contenu pour les équipes auxquelles l’utilisateur ne fait pas partie. Le contenu de la bot doit se concentrer sur le individu, pas sur un groupe.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+### <a name="complex-app-features"></a>Fonctionnalités d’application complexes
+
+#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a>Do : autoriser les utilisateurs à accéder aux fonctionnalités complexes dans un navigateur
+
+Votre application doit se concentrer sur les tâches principales dans Teams, mais vous pouvez toujours afficher l’application autonome complète dans un navigateur.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+#### <a name="dont-include-your-entire-app"></a>Ne pas inclure votre application entière
+
+Sauf si vous avez créé votre application spécifiquement pour Teams, vous disposez probablement de fonctionnalités qui n’ont pas de sens dans un outil de collaboration.
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Exemple illustre une meilleure pratique pour une application personnelle." border="false":::
+
+## <a name="manage-a-personal-tab"></a>Gérer un onglet personnel
+
+Sur le côté gauche de teams, les utilisateurs peuvent cliquer avec le bouton droit sur l’application personnelle pour épingler, supprimer et configurer d’autres options d’application.
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Exemple affiche des options de gestion d’une application personnelle." border="false":::
+
+## <a name="learn-more"></a>En savoir plus
+
+Ces autres instructions de conception peuvent vous aider en fonction de l’étendue de votre application personnelle :
+
+* [Création de votre onglet](../../tabs/design/tabs.md)
+* [Conception de votre robot](../../bots/design/bots.md)
+
+## <a name="validate-your-design"></a>Valider votre conception
+
+Si vous envisagez de publier votre application dans AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l’échec des applications lors de l’envoi.
+
+> [!div class="nextstepaction"]
+> [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

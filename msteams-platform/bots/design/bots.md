@@ -1,183 +1,323 @@
 ---
-title: Instructions de conception pour les robots
-description: Décrit les instructions pour la création de robots
-keywords: Guide de conception des équipes
-ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+title: Conception de votre robot
+description: Découvrez comment concevoir un bot de teams et obtenir le kit d’interface utilisateur Microsoft Teams.
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: d1a7470f4986de22ecca7071823b620cb0234abb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992637"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605426"
 ---
-# <a name="start-talking-with-bots"></a>Commencer à parler avec les robots
+# <a name="designing-your-microsoft-teams-bot"></a>Conception de votre robot Microsoft teams
 
-Les robots sont des applications de conversation qui effectuent un ensemble de tâches restreint ou spécifique. Elles vous permettent de communiquer avec les utilisateurs, de répondre à leurs questions et de les informer de manière proactive des modifications. Ils constituent un excellent moyen de communiquer.
+Les robots sont des applications de conversation qui effectuent un ensemble spécifique de tâches. En fonction de <a href="https://dev.botframework.com/" target="_blank">Microsoft bot Framework</a>, les robots communiquent avec les utilisateurs, répondent à leurs questions et les signalent de manière proactive sur les modifications et les autres événements. Ils constituent un excellent moyen de communiquer.
 
----
+Pour vous aider à concevoir votre application, les informations suivantes décrivent et illustrent la façon dont les utilisateurs peuvent ajouter, utiliser et gérer les robots dans Teams.
 
-## <a name="guidelines"></a>Conseils
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur Microsoft teams
 
-### <a name="bot-design-guidelines"></a>Instructions de conception de robot
+Vous trouverez des instructions de conception de robot plus complètes, notamment des éléments que vous pouvez saisir et modifier selon vos besoins, dans le kit d’interface utilisateur Microsoft Teams.
 
-* Les robots doivent fournir des notifications pertinentes lorsqu’il y a eu une activité.
-* Les robots ne doivent pas transmettre les données sensibles à une équipe, une conversation de groupe ou une conversation 1:1 à une audience qui ne doit pas afficher ces données.
-* Les notifications de bot doivent inclure des données significatives pour informer la pertinence de la notification aux utilisateurs.
-* La tonalité du robot doit refléter la voix de teams, comme défini dans les instructions.
-* Les robots doivent fournir un message de bienvenue de première exécution qui met en évidence la valeur du bot et ses fonctions principales, comme suit : « visite guidée », un didacticiel interactif avec des cartes de carrousel ou des boutons « essayer ».
-* Le texte du bot ne doit pas contenir de fautes d’orthographe ou de grammaire.
-* Les robots doivent fournir un ensemble de commandes de bot prédéfinies qui sont exploitables.
-* Les messages de bot doivent être faciles à comprendre et exploitables.
-* Les robots doivent fournir des commandes d’aide au secours lorsqu’un message n’est pas compris.
-* Les formulaires, intégrés aux cartes, envoyés par un bot doivent fournir des entrées déterministes ne nécessitant pas de mise à jour séquentielle.
-* Les notifications de robot doivent être étendues à une conversation d’équipe, de groupe ou de 1:1, avec le contenu pertinent pour l’audience.
+> [!div class="nextstepaction"]
+> [Obtenir le kit d’interface utilisateur Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="avatars"></a>Avatars
+## <a name="add-a-bot"></a>Ajouter un bot
 
-Les avatars de robots dans teams sont des hexagones, de sorte que les utilisateurs peuvent rapidement dire qu’ils parlent à un robot au lieu d’une personne. Vous allez soumettre votre avatar sous la forme d’un carré et nous le détourons. En ce qui concerne les avatars, nous vous recommandons de faire en sorte que les vôtres soient lisibles de 2 mètres et avec un contraste plus élevé.
+Les robots sont disponibles dans les conversations, les canaux et les applications personnelles. Vous pouvez ajouter un bot de l’une des manières suivantes :
 
-[!include[Avatar image](~/includes/design/bot-avatar-image.html)]
+* À partir du magasin de Teams (AppSource).
+* À l’aide du lanceur d’application en sélectionnant l’icône **plus** sur le côté gauche de teams.
+* Avec une @mention dans la boîte de dialogue nouvelle conversation ou composition (l’exemple suivant montre comment effectuer cette opération dans une conversation de groupe).
 
-### <a name="buttons"></a>Boutons
+:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Exemple montre comment ajouter un bot dans une conversation de groupe à l’aide d’une @mention." border="false":::
 
-Nous allons prendre en charge jusqu’à six boutons par carte. Soyez concis lorsque vous rédigez du texte de bouton et gardez à l’esprit que la plupart des boutons doivent uniquement traiter la tâche en cours.
+## <a name="introduce-a-bot"></a>Introduire un robot
 
-### <a name="graphics"></a>Graphiques
+Il est essentiel que votre bot s’introduit lui-même et décrit ce qu’il peut faire. Cet échange initial permet aux utilisateurs de comprendre ce qu’ils doivent faire avec le bot, de connaître les limites et, plus important encore, d’interagir avec eux.
 
-Les graphiques sont un moyen efficace d’indiquer un récit, mais les conversations de robots ne nécessitent pas toutes des graphiques, c’est pourquoi vous pouvez les utiliser pour un impact maximal.
+### <a name="welcome-message-in-a-one-on-one-chat"></a>Message de bienvenue dans une conversation en un seul
 
-### <a name="onboarding-users"></a>Utilisateurs d’intégration
+Dans les contextes personnels, les messages d’accueil définissent le ton de votre robot. Le message inclut un message d’accueil, ce que le robot peut faire et quelques suggestions concernant la façon d’interagir (par exemple, « essayez de me demander... »). Dans la mesure du possible, ces suggestions doivent renvoyer des réponses stockées sans avoir à se connecter.
 
-Il est essentiel que les robots s’introduisent et envoient ce qu’ils peuvent faire pour les utilisateurs. Cette *valeur* permet aux utilisateurs de comprendre ce qu’ils doivent faire avec le bot, où les limitations peuvent être, et, plus important encore, permet aux utilisateurs de tolérer l’interaction avec un ordinateur qui n’est pas aussi intuitif qu’une personne réelle. En outre, il accorde une autorisation pour les données utilisateur dans Exchange pour la valeur réelle fournie par le service.
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Exemple de présentation d’un bot dans une application personnelle." border="false":::
 
-#### <a name="welcome-messages"></a>Les messages de bienvenue
+### <a name="introductions-in-group-chats-and-channels"></a>Introductions dans les conversations et les canaux de groupe
 
-Les messages de bienvenue sont le meilleur moyen de définir le ton de votre robot et doivent être utilisés dans les scénarios personnels et d’équipe ou de groupe. Le message indique ce que fait le bot, ainsi que des méthodes courantes pour interagir avec lui. Utiliser des exemples de fonctionnalité spécifiques comme, « *essayez de demander....* » dans une liste à puces. Dans la mesure du possible, ces suggestions doivent renvoyer des réponses stockées. Il est essentiel que les exemples de fonctionnalités fonctionnent sans que les utilisateurs aient besoin de se connecter.
-Pour plus d’informations, *consultez la rubrique* [Welcome message Requirements](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) .
+L’introduction de votre robot doit être légèrement différente dans les conversations et les canaux de groupe par rapport à un contexte personnel (par exemple, une application personnelle). En réalité, si vous avez entré une salle pleine de personnes ; vous vous présenterez vous-même au lieu de accueillir les personnes qui s’y trouvent déjà. Conpensez-vous à la conception de votre robot.
 
-#### <a name="tours"></a>Voyages
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Exemple de présentation d’un bot dans un contexte collaboratif." border="false":::
 
-Inclure un attribut de *visite guidée* avec des messages de bienvenue et des réponses à l’entrée utilisateur équivalente à « *aide* ». Il s’agit de la méthode la plus efficace pour permettre aux utilisateurs de découvrir ce qu’un robot peut faire. Les carrousels dans les expériences un-à-un constituent un excellent moyen d’indiquer cette histoire et d' *essayer de créer* des boutons informatiques renvoyant à des exemples de réponses possibles. Les visites guidées sont également des emplacements très intéressants pour parler des autres fonctionnalités d’une application. Par exemple, vous pouvez inclure des captures d’écran des onglets extensions de messagerie et Teams.  Les utilisateurs ne doivent pas se connecter pour accéder à et utiliser une visite guidée.
+### <a name="bot-authentication-with-single-sign-on"></a>Authentification de robot avec authentification unique
 
-Lorsque des visites guidées sont utilisées dans des scénarios d’équipe ou de groupe, elles doivent s’ouvrir dans un module de tâches afin de ne pas ajouter plus de bruit de carte aux conversations en cours entre les utilisateurs.
+Lorsqu’une personne message un bot, vous pouvez être amené à utiliser toutes ses fonctionnalités. Vous pouvez simplifier le processus d’authentification à l’aide de l’authentification unique (SSO).
 
-### <a name="responding-to-users-and-failing-gracefully"></a>Réponse aux utilisateurs et échec normal
+N’oubliez pas : dans le menu de commandes du bot (**que puis-je faire ?**), vous devez également fournir une commande pour vous déconnecter.
 
-Votre robot doit également pouvoir répondre à des éléments tels que « *Bonjour* », « *aide* » et « *Merci* », tout en prenant en compte les fautes d’orthographe courantes et familières. Par exemple :
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Exemple montre un bot avec un bouton de connexion." border="false":::
 
-#### <a name="x2713-hello"></a>&#x2713; Hello
+### <a name="tours"></a>Voyages
 
-`"Hi"`  `"How are you"`  `"Howdy"`
+Vous pouvez inclure une visite guidée avec des messages de bienvenue et si le robot répond à une commande semblable à celle d’aide. Une visite guidée est la manière la plus efficace de décrire ce que votre robot peut faire. Le cas échéant, elles sont également idéales pour décrire les autres fonctionnalités de votre application (par exemple, inclure des captures d’écran de votre extension de messagerie).
 
-#### <a name="x2713-help"></a>Aide &#x2713;
+> [!IMPORTANT]
+> Les visites guidées doivent être accessibles sans avoir à se connecter.
 
-`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
+#### <a name="one-on-one-chats"></a>Conversations en un seul
 
-#### <a name="x2713-thanks"></a>&#x2713; Merci
+Dans une application personnelle, un carrousel peut fournir une vue d’ensemble efficace de votre bot et de toutes les autres fonctionnalités de votre application. Y compris les boutons les commandes autoriser les utilisateurs à essayer le robot sont encouragées (par exemple, **créer une tâche**).
 
-`"Thank you"`  `"Thankyou"`  `"Thx"`
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Exemple illustre une visite guidée dans une conversation en un seul." border="false":::
 
-Votre robot doit pouvoir gérer les types de requêtes et d’entrées suivants :
+#### <a name="channels-and-group-chats"></a>Canaux et conversations de groupe
 
-> [!div class="checklist"]
->
-> * **Questions reconnues**. Il s’agit des questions de scénario les plus optimistes pour les utilisateurs.
-> * **Non-questions reconnues**. Les requêtes relatives aux fonctionnalités non prises en charge et/ou aux entrées à inconvenances, non liées ou aléatoires.
-> * **Questions non reconnues** : entrées ou entrées inintelligibles, sans signification ou sans sens.
+Dans les canaux et les conversations de groupe, une visite guidée doit s’ouvrir dans un module modal (également appelé « [module de tâche](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) » pour ne pas interrompre les conversations en cours. Cela vous donne également la possibilité d’implémenter des vues basées sur les rôles pour votre visite guidée.
 
-Exemples de personnalité et de types de réponse de robot :
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Exemple illustre une visite guidée dans un canal." border="false":::
 
-[!include[Bot responses](~/includes/design/bot-responses-table.html)]
+## <a name="chat-with-a-bot"></a>Conversation avec un bot
 
-> [!TIP]
-> Lors de l’écriture de votre script bot, posez-vous les questions suivantes : « mon entreprise sera-t-elle gênée si une réponse est capturée et partagée ? »
+Les robots s’intègrent directement à l’infrastructure de messagerie de l’équipe. Les utilisateurs peuvent discuter avec un bot pour obtenir des réponses à leurs questions ou taper des commandes pour que le robot effectue un ensemble de tâches restreint ou spécifique. Les robots peuvent avertir de manière proactive les utilisateurs concernant les modifications ou les mises à jour de votre application via une conversation.
 
-### <a name="understanding-what-users-are-trying-to-say"></a>Comprendre ce que les utilisateurs essaient de dire
+### <a name="chat-with-a-bot-in-different-contexts"></a>Conversation avec un bot dans différents contextes
 
-#### <a name="use-a-thesaurus-for-synonyms"></a>Utilisation d’un dictionnaire des synonymes pour les synonymes
+Vous pouvez utiliser les robots dans les contextes suivants :
 
-Lorsque vous utilisez des variantes de brainstorming, utilisez un dictionnaire des synonymes et obtenez des personnes sur autant d’arrière-plans que possible pour générer différentes interprétations de chaque requête.
+* **Applications personnelles**: dans une application personnelle, un bot a un onglet de conversation dédié.
+* **Conversation en un seul**: un utilisateur peut lancer une conversation privée avec un bot. Il s’agit de la même expérience que l’utilisation d’un bot dans une application personnelle.
+* **Group chat**: les personnes peuvent interagir avec un bot dans une conversation de groupe en @mentioning le bot.
+* **Canal**: les personnes peuvent interagir avec un bot dans un canal. en @mentioning le nom du bot dans la zone de composition. N’oubliez pas que dans ce contexte, le bot est disponible pour l’ensemble de l’équipe, pas seulement pour le canal.
 
-#### <a name="make-use-of-telemetry-and-interviews"></a>Utilisation de la télémétrie et des entretiens
+### <a name="anatomy"></a>Anatomie
 
-Découvrez ce que sont les utilisateurs et quels sont leurs intentions lors de l’interrogation de votre robot. Il s’agit d’un processus continu lorsque vous recevez des utilisateurs dans différents emplacements et types de sociétés. Vous pouvez affiner la reconnaissance de la langue et le mappage des intentions avec la prise en main du service intelligent ([Luis](/azure/cognitive-services/luis/what-is-luis)).
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Exemple illustre l’anatomie structurelle d’un bot." border="false":::
 
-### <a name="how-often-should-you-use-your-bot-to-reach-out-to-a-user"></a>À quelle fréquence devez-vous utiliser votre robot pour accéder à un utilisateur ?
+|Compteur|Description|
+|----------|-----------|
+|1|**Nom et icône de l’application**|
+|2 |**Onglet conversation**: ouvre l’espace pour parler avec votre bot (applicable uniquement aux applications personnelles).|
+|3 |**Onglets personnalisés**: ouvre un autre contenu lié à votre application.|
+|4 |**À propos** de l’onglet : affiche des informations de base sur votre application.|
+|5 |**Bulle de conversation**: les conversations de robots utilisent l’infrastructure de messagerie Teams.|
+|6 |**Carte adaptative**: si les réponses de votre robot incluent des cartes adaptatives, la carte occupe toute la largeur de la bulle de conversation.|
+|7 |**Menu de commandes**: affiche les commandes standard de votre robot (que vous avez définie).
 
-#### <a name="x2713-when-a-state-has-changed"></a>&#x2713; quand un État a changé
+### <a name="command-menu"></a>Menu de commandes
 
-Par exemple, si une affectation est marquée comme étant complète, lorsqu’un bogue change, lorsque le nouveau réseau social est disponible ou lorsqu’une interrogation a été effectuée.
+Le menu de commandes fournit une liste de mots ou d’expressions auxquelles votre bot doit toujours répondre. Le menu de commandes s’affiche au-dessus de la zone de composition lorsqu’une personne est contourne d’un bot. Lorsqu’une commande est sélectionnée, elle est insérée dans un message.
 
-#### <a name="x2713-when-the-timing-is-right"></a>&#x2713; lorsque le minutage est correct
+La liste des commandes doit être brève. Le menu est destiné uniquement à mettre en évidence les principales fonctionnalités de votre robot. Conservez les commandes de manière concise. Par exemple, créez une commande appelée **aide** au lieu de **pouvez-vous m’aider**?
+Le menu de commandes doit toujours être disponible indépendamment de l’état de la conversation.
 
-Votre robot peut agir comme un condensé quotidien, envoyant une notification à l’utilisateur ou au canal à une fréquence spécifique.
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="Exemple de menu de commandes d’un bot." border="false":::
 
-Laissez l’utilisateur dans le contrôle. Fournissez des paramètres de notification qui incluent la fréquence et la priorité.
+## <a name="understand-what-people-are-saying"></a>Comprendre ce que les utilisateurs disent
 
-[!include[Bot notification](~/includes/design/bot-notification-image.html)]
+Utilisez un dictionnaire des synonymes et obtenez des personnes d’autres arrière-plans, autant que possible, pour vous aider à générer différentes interprétations des requêtes standard.
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="Illustration illustrant la façon dont un bot peut interpréter’Hello'." border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="Illustration illustrant la façon dont un bot peut interpréter’help'." border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="Illustration illustrant la façon dont un bot peut interpréter’thanks'." border="false":::
+   :::column-end:::
+:::row-end:::
 
-## <a name="using-tabs"></a>Utilisation des onglets
+### <a name="extract-intent-and-data-from-messages"></a>Extraire les intentions et les données des messages
 
-Les onglets rendent votre bot plus fonctionnel. Avec les onglets, vous pouvez créer les éléments suivants :
+Concevez votre robot pour qu’il reconnaisse l’intention, ce qui capture la réponse d’un bot à un message ou à une requête. L’intention classe un message ou une requête en tant qu’action unique avec un ou plusieurs objets de données qui sont affectés par l’action. 
 
-### <a name="x2713-a-place-to-host-standing-queries"></a>&#x2713; un emplacement pour héberger les requêtes permanentes
+Les exemples suivants décrivent l’intention de l’utilisateur et les données contenues dans les messages envoyés aux robots.
 
-Dans les conversations personnelles entre un bot et une seule personne, les onglets peuvent contenir des informations et des listes propres à l’utilisateur. Ils sont également un excellent emplacement pour gérer les réponses des robots aux questions fréquemment posées (FAQ), de sorte que les utilisateurs n’ont pas besoin de se demander.
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="Exemple illustrant dans la phrase « réserver un vol à Seattle », l’intention de l’utilisateur est « réserver un vol » et les données sont « Paris »." border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="Exemple d’affichage dans la phrase « quand le magasin est ouvert », l’intention de l’utilisateur est « quand » et les données sont « ouvertes »." border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="Exemple illustrant la phrase « planifier une réunion à 13h00 avec Bob en distribution », l’intention de l’utilisateur est « planifier une réunion » et les données « 13h00 » et « Bob en distribution »." border="false":::
+   :::column-end:::
+:::row-end:::
 
-### <a name="x2713-a-place-to-finish-a-conversation"></a>&#x2713; un emplacement pour terminer une conversation
+### <a name="analyze-and-improve"></a>Analyser et améliorer
 
-Vous pouvez créer un lien vers un onglet à partir d’une carte. Si votre bot fournit une réponse qui nécessite quelques étapes supplémentaires, il peut créer un lien vers un onglet pour effectuer la tâche ou le flux. Par exemple, en réponse à la question suivante : « How do I Formating My iPhone ? », une réponse appropriée peut être une carte qui décrit les premières étapes et dispose d’un bouton permettant d' *afficher plus* , qui amène ensuite l’utilisateur à l’onglet d' *aide* du robot et des liens détaillés vers les instructions spécifiques.
+Découvrez ce que les utilisateurs disent lorsque vous discutez avec votre robot. Il s’agit d’un processus continu et itératif à mesure que votre base d’utilisateurs se développe à différents emplacements et développées. Vous pouvez régler le mappage de reconnaissance et d’intention de langue de votre robot avec Microsoft Language mémorandum (LUIS).
 
-### <a name="x2713-a-place-to-host-a-settings-page"></a>&#x2713; un emplacement d’hébergement d’une page de paramètres
+* [Comprendre Luis](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Découvrez comment Luis utilise ai pour fournir une compréhension de langage naturel (NLU) à vos données d’application.
+* [Intégration avec Luis](https://www.luis.ai/): ajoutez des fonctionnalités de langage naturel à votre bot sans le processus complexe de création de modèles d’apprentissage automatique.
 
-Les robots doivent disposer d’un contrôle utilisateur. Pour de nombreux robots, il est autorisé par le biais d’une interface de conversation ; Toutefois, il est difficile de se souvenir de ces paramètres. Un onglet Paramètres permet d’afficher les paramètres des utilisateurs, d’autoriser les utilisateurs à les modifier tous en même temps, et peut également être un bon point de départ pour les comportements de robot personnalisés plus complexes.
+## <a name="use-cases"></a>Cas d'utilisation
 
-### <a name="x2713-a-place-to-provide-some-help"></a>&#x2713; un emplacement pour fournir de l’aide
+### <a name="simple-queries"></a>Requêtes simples
 
-Ajoutez un onglet qui informe les utilisateurs sur la façon de communiquer avec votre robot. Vous pouvez fournir un contexte pour ce qu’il fait ou des questions fréquemment posées.
+Les robots peuvent fournir une correspondance exacte à une requête ou à un groupe de correspondances associées pour faciliter la désambiguïsation. Pour les correspondances associées, groupez le contenu à l’aide d’une carte de liste.
 
-![Fourniture d’aide](~/assets/images/framework/framework_bots_tbot-help.png)
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Exemple illustre une interaction de requête simple avec un bot." border="false":::
 
-> [!TIP]
-> L’incorporation de parties de votre site dans un onglet permettra aux utilisateurs de maintenir le contexte d’une conversation quand ils utilisent votre service. Il supprime la nécessité de lancer votre service dans un navigateur et de basculer entre les applications.
+### <a name="multi-turn-interactions"></a>Interactions multi-tournage
 
----
+Bien que votre robot puisse prendre en charge des demandes et des questions complètes, il doit également être en mesure de gérer les interactions à tour de rôle. En anticipant les étapes suivantes possibles, il est plus facile pour les utilisateurs d’effectuer un flux de tâches complet (au lieu de s’attendre à créer une requête complète).
 
-## <a name="bots-in-channels"></a>Bots dans les canaux
+Dans l’exemple suivant, le bot répond à chaque message avec des options pour ce qui peut être le plus utile.
 
-L’appel d’un bot dans un canal peut être effectué par `@mention` . La boîte de dialogue bot doit être unique dans les canaux et les groupes, ainsi que dans les scénarios un-à-un et il est généralement judicieux de prendre en compte les différentes approches. Cela est particulièrement vrai dans les cas suivants :
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Exemple illustre une interaction à tournage multiple avec un bot." border="false":::
 
-### <a name="sensitive-data-sent-by-a-bot"></a>Données sensibles envoyées par un bot
+### <a name="reach-out-to-users"></a>Contacter des utilisateurs
 
-Tandis que les utilisateurs d’une équipe peuvent être connus du service, les rôles d’utilisateur réels ne le peuvent pas. Cela signifie que, par exemple, dans un scénario d’éducation impliquant intimidation, les informations de contact parent et étudiant ne sont pas partagées dans un paramètre d’équipe. Au lieu de cela, le message du robot peut être « deux incidents de intimidation s’est produit aujourd’hui », ainsi qu’un bouton pour afficher les détails.
+Avec la messagerie proactive, votre robot peut agir comme un Digest qui envoie des notifications pertinentes à un individu, une conversation de groupe ou un canal à une fréquence spécifique. Un bot peut envoyer un message lorsqu’un élément a été modifié dans un document ou qu’un élément de travail est fermé.
 
-Lancement des détails dans une page Web, ou un module de tâches peut demander des informations d’identification de l’utilisateur ou effectuer une requête sur un index pour les rôles d’utilisateur associés aux comptes AAD. Dans ces deux options, les données se trouvent dans une étendue d’affichage privée et aucune fuite de données ne se produira. Si les mêmes données sont envoyées dans une conversation un-à-un entre un utilisateur et le bot, les données ne sont visibles que par l’utilisateur dans ce contexte et, par conséquent, sûres dans le message de robot. Le fait de prendre les utilisateurs d’un canal à une conversation un-à-un doit être évité Toutefois, car la navigation forcée est très perturbante.
+Dans l’exemple suivant, un utilisateur obtient une notification de Toast qu’un bot a messageé dans un autre canal.
 
-### <a name="sending-cards-as-a-response-to-interactions"></a>Envoi de cartes en guise de réponse aux interactions
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="L’exemple montre un toast d’un bot à la messagerie proactive d’un utilisateur à partir d’un autre canal." border="false":::
 
-Lors de l’envoi d’une carte de carrousel en réponse à une *visite guidée* dans une conversation un-à-un est parfaitement acceptable, le même modèle peut produire des dizaines ou des centaines de *carrousels de tour* dans un canal actif avec un grand nombre d’utilisateurs. Pour éviter ce, les cartes secondaires doivent être hébergées dans un module de tâches. Ce modèle permet aux utilisateurs de consigner le canal, de nettoyer le canal en trop de réponses de robot et peut éventuellement prendre en compte différents rôles d’utilisateur lors de l’affichage de la *visite guidée* .
+Dans ce canal, l’utilisateur peut lire son message à partir du bot.
 
-## <a name="useful-tips"></a>Conseils utiles
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Exemple montre comment l’utilisateur examine le message proactif du bot." border="false":::
 
-### <a name="x2713-remember-bots-arent-assistants"></a>&#x2713; n’oubliez pas que les robots ne sont pas des assistants
+### <a name="use-tabs-with-bots"></a>Utiliser des onglets avec des robots
 
-Contrairement aux agents, par exemple, Cortana, les robots agissent en tant que spécialistes.
+Un onglet peut faciliter l’utilisation de votre robot. Par exemple, si votre bot peut créer des éléments de travail, il serait intéressant d’afficher tous ces éléments dans un emplacement central à l’intérieur d’un onglet. En savoir plus sur la [conception des onglets](../../tabs/design/tabs.md).
 
-### <a name="x2713-discourage-chitchat"></a>&#x2713; dissuader ChitChat
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Cet exemple montre comment un onglet peut vous aider à organiser le contenu de la robots." border="false":::
 
-À moins que votre robot ne soit conçu pour la conversation, Découvrez comment rediriger ChitChat vers l’achèvement de la tâche.
+## <a name="manage-a-bot"></a>Gérer un bot
 
-### <a name="x2713-introduce-some-personality"></a>&#x2713; introduire une personnalité
+Les utilisateurs doivent être en mesure de modifier les paramètres d’un bot. Vous pouvez fournir cette fonctionnalité avec les commandes bot, mais il est généralement plus efficace d’inclure tous les paramètres dans un [module de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (comme illustré dans l’exemple suivant).
 
-Conservez votre personnalité de robot en fonction de la voix de votre produit. Imaginez votre robot comme parlant pour votre entreprise.
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="Exemple de module de tâche permettant de configurer les paramètres d’un bot." border="false":::
 
-### <a name="x2713-maintain-tone"></a>&#x2713; conserver la tonalité
+## <a name="best-practices"></a>Meilleures pratiques
 
-Déterminez si vous voulez que votre ton soit convivial et clair, « uniquement les faits » ou Super excentrique.
+### <a name="content"></a>Contenu
 
-### <a name="x2713-encourage-easy-task-flow"></a>&#x2713; encourager le flux de tâches facile
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
 
-Prendre en charge les interactions à rotation multiple tout en continuant à répondre aux questions entièrement formulées. L’anticipation de l’étape suivante permettra aux utilisateurs d’utiliser beaucoup plus facilement les flux de tâches.
+#### <a name="do-establish-a-clear-persona"></a>Do : établir un personnage clair
 
-Si un utilisateur effectue plusieurs étapes pour effectuer une tâche, autorisez-le à le faire tout au long de chaque étape, mais terminez-le en lui permettant de suggérer un chemin plus rapide. Par exemple, si un utilisateur a pris plusieurs tentatives de conversation pour définir une réunion (en spécifiant d’abord une réunion, puis en spécifiant l’heure, puis en indiquant le jour), terminez la conversation avec la suggestion suivante : la prochaine fois, essayez de confirmer si vous pouvez planifier une réunion avec Bob à 1:00 demain.
+Est-ce que le ton est convivial et clair, « juste les faits » ou Super-excentrique ? Comment doit-il répondre dans différents scénarios ? La planification et la documentation du personnage de votre robot facilitent l’écriture de réponses apparemment naturelles et cohésives.
+
+Pour en savoir plus sur la rédaction de robots, consultez le <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Kit d’interface utilisateur Microsoft Teams (Figma).</a>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="do-clearly-convey-what-your-bot-can-do"></a>Do : transmettez clairement ce que votre robot peut faire
+
+Les messages de bienvenue et les visites aident les utilisateurs à comprendre ce qu’ils peuvent faire avec votre robot.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="dont-obscure-your-bots-features"></a>Ne pas : obscurcir les fonctionnalités de votre robot
+
+Premières impressions. Il se peut que des personnes soient confondues ou suspectes lors de la présentation d’un message de connexion nondescript.
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="do-recognize-non-questions"></a>Do : reconnaître les non-questions
+
+Votre robot doit pouvoir répondre aux messages tels que « HI », « aide » et « Merci », tout en tenant compte également des fautes d’orthographe courantes et familières.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="dont-miss-out-on-opportunities-to-delight"></a>Ne manquez pas les occasions de vous faire plaisir
+
+Certaines personnes attendent que les conversations se déplacent naturellement comme elles le ferait avec une personne réelle. Essayez d’éviter des réponses encombrantes aux messages simples.
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="troubleshooting"></a>Résolution des problèmes
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="do-provide-help"></a>Do : fournir de l’aide
+
+Si votre bot ne peut pas répondre à une demande, demandez à un utilisateur de se former de l’interaction avec votre robot.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="dont-leave-users-stranded"></a>Ne pas : laisser les utilisateurs bloqués
+
+Les utilisateurs abandonneront rapidement votre robot s’ils ne peuvent pas résoudre les problèmes.
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="complex-interactions"></a>Interactions complexes
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="do-use-task-modules-or-tabs"></a>Do : utiliser des onglets ou des modules de tâches
+
+Si votre bot fournit une réponse qui nécessite quelques étapes supplémentaires, vous pouvez créer un lien vers un onglet ou un module de tâches pour effectuer la tâche ou le flux.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="dont-make-multi-turn-interactions-tedious"></a>N’effectuez pas les interactions fastidieux
+
+Une conversation complète pour effectuer une tâche unique est lente et excessivement complexe. Le développeur doit également tenir compte des modifications d’État (par exemple, le délai d’expiration de conversation ou l’envoi d’un message d’annulation).
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="privacy"></a>Confidentialité
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do : afficher uniquement les informations sensibles dans un contexte personnel
+
+Si votre bot se trouve dans un canal ou une conversation de groupe, nous vous recommandons de diriger les utilisateurs vers un emplacement privé (par exemple, un module de tâches, un onglet ou un navigateur) pour afficher les informations sensibles.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Exemple illustrant une meilleure pratique de robot." border="false":::
+
+#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>Ne pas : certains contenus ne sont pas destinés à être vus par tout le monde
+
+Votre bot ne doit pas révéler d’informations sensibles à un groupe de personnes.
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="learn-more"></a>En savoir plus
+
+Ces autres instructions peuvent vous aider dans votre conception de robot :
+
+* [Conception de votre application personnelle](../../concepts/design/personal-apps.md)
+* [Conception de cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md)
+* [Création de modules de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+
+## <a name="validate-your-design"></a>Valider votre conception
+
+Si vous envisagez de publier votre application dans AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l’échec des applications lors de l’envoi.
+
+> [!div class="nextstepaction"]
+> [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

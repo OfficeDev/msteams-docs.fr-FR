@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576833"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604465"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -23,7 +23,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 |11/30/2020|Nouveauté : Identity Platform Integration with Team Toolkit et Visual Studio Code for Tabs|[Authentification unique avec Team Toolkit et Visual Studio code pour les onglets](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Manifeste de l’application teams mis à jour vers la version 1,8|Référence : schéma de manifeste pour Microsoft teams|[Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
 |11/11/2020| Schéma de manifeste mis à jour vers la version 1,8| [Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
-|11/10/2020|Instructions de conception de Microsoft teams bot|[Instructions de conception de robot](bots/design/bots.md#bot-design-guidelines)|
+|11/10/2020|Instructions de conception de Microsoft teams bot|[Instructions de conception de robot](bots/design/bots.md)|
 |9/30/2020|L’envoi et la réception de fichiers vers des robots sur des appareils mobiles sont désormais pris en charge.|[Envoyer et recevoir des fichiers via votre robot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nouvelles instructions de prise en main de teams|[Vue d’ensemble de la création de votre première application teams](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|Prise en charge des applications teams de réunion (version préliminaire)|[Créer des applications pour les réunions](apps-in-teams-meetings/create-apps-for-teams-meetings.md) et les applications teams [dans les réunions teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -75,7 +75,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 | 08/06/2018 | Votre robot peut désormais envoyer et recevoir des fichiers.| [Envoyer et recevoir des fichiers via votre robot](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | L’Aperçu pour les développeurs prend désormais en charge plusieurs commandes dans les extensions de messagerie. | [Extensions de messagerie étendues](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | Des informations sur la nouvelle certification d’application ont été ajoutées à la section publication. |[Autorisations de manifeste](resources/schema/manifest-schema.md#permissions)|
-| 07/16/2018 | En mode Aperçu pour les développeurs, davantage d’espace a été alloué à la page de configuration de l’onglet. | [La page Configuration de l’onglet est beaucoup plus haute](tabs/design/tabs.md#configuration-page-height)|
+| 07/16/2018 | En mode Aperçu pour les développeurs, davantage d’espace a été alloué à la page de configuration de l’onglet. | [La page Configuration de l’onglet est beaucoup plus haute](tabs/design/tabs.md)|
 | 07/12/2018 | Informations sur l’accès invité. | [Accès invité dans Microsoft Teams](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Les informations de version préliminaire du catalogue d’applications client Microsoft teams ont été ajoutées. | [Publier votre application Microsoft teams](~/publishing/apps-publish.md)|
 | 05/31/2018 | Team Developer Preview (Ring 3,6) a été mis à jour pour inclure la possibilité d’ajouter des robots et des onglets à Group chat. | [Fonctionnalités dans l’aperçu du développeur, le schéma d'](~/resources/dev-preview/developer-preview-features.md) [Aperçu développeur](~/resources/schema/manifest-schema-dev-preview.md)|

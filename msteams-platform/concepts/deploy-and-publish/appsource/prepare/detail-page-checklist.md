@@ -2,12 +2,12 @@
 title: Créer une page de détails d’application intéressante
 description: Décrit les conditions requises pour la page des détails de l’application
 keywords: teams publier Store Office Publishing Policy AppSource Content Metadata capture d’écran Description du logo Description de l’application icônes description courte
-ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: aa12cab0bb89349b4d9d613a9c533773fa593283
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465942"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605317"
 ---
 # <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application intéressante
 
@@ -65,7 +65,7 @@ Il s’agit de l’un des premiers éléments que voient les utilisateurs. Elle 
 
 ## <a name="outline-icon"></a>Icône de plan
 
-Cette option est utilisée dans les extensions de messagerie, les applications marquées comme favorites par l’utilisateur et le menu de navigation de gauche. Assurez-vous qu’il est simple et reconnaissable. Votre icône de contour ne doit contenir que des couleurs blanches et être transparentes. Pour connaître les spécifications requises, *voir* [Create an App package for Your Microsoft teams App-Icons](../../../build-and-test/apps-package.md#icons).
+Cette icône est utilisée pour les extensions de messagerie épinglées et lorsque votre application s’affiche à gauche de teams. Reportez-vous [à la rubrique Design Guidance for the Outline Icon](../../../../concepts/build-and-test/apps-package.md#outline-icon).
 
 ![Icône d’application icône magasin vue de l' ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
  ![ application icône plan App Studio View](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
@@ -215,7 +215,7 @@ Si une image vaut un millier de mots, une vidéo vaut mille images. Les vidéos 
 
 N’oubliez pas de conserver votre présentation courte et douce, entre 30-90 secondes.
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 [Liste de vérification pour l’envoi d’application](~/concepts/deploy-and-publish/appsource/publish.md).  
 [Créez un package d’application pour votre application Microsoft teams](~/concepts/build-and-test/apps-package.md).  

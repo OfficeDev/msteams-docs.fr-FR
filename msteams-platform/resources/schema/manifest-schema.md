@@ -4,12 +4,12 @@ description: Décrit le schéma de manifeste de Microsoft teams
 keywords: schéma de manifeste teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 26c6ca0ed6edceb9b34c84c28a43a63f65a348de
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: e25f50fc8da357553c1f0a8b01dc51af079ed2bb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552555"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604612"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft teams
 
@@ -376,7 +376,7 @@ Tableau d’objets spécifiant des traductions de langue supplémentaires.
 
 **Obligatoire** — objet
 
-Icônes utilisées dans l’application Teams. Les fichiers d’icône doivent être inclus dans le package de téléchargement. Pour plus d’informations, consultez la rubrique [Icons](~/concepts/build-and-test/apps-package.md#icons) .
+Icônes utilisées dans l’application Teams. Les fichiers d’icône doivent être inclus dans le package de téléchargement. Pour plus d’informations, consultez la rubrique [Icons](../../concepts/build-and-test/apps-package.md#app-icons) .
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|

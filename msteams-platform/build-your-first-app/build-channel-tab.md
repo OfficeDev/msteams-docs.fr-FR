@@ -5,16 +5,16 @@ description: Créez rapidement un onglet de chaîne et de groupe Microsoft teams
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 46b5410a1ae7c866f8998362765dfe5462df94cb
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: bb87d34974469057287cf63725e7722125c57c34
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931763"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605244"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Créer un onglet de canal et de groupe pour Microsoft teams
 
-Dans ce didacticiel, vous allez créer un *onglet de canal* de base (également appelé *onglet de groupe* ), qui est une page plein écran pour un canal d’équipe ou une conversation. Contrairement à un onglet personnel, les utilisateurs peuvent configurer certains aspects de ce type d’onglet (par exemple, renommer l’onglet de sorte qu’il soit significatif pour son canal).
+Dans ce didacticiel, vous allez créer un *onglet de canal* de base (également appelé *onglet de groupe*), qui est une page plein écran pour un canal d’équipe ou une conversation. Contrairement à un onglet personnel, les utilisateurs peuvent configurer certains aspects de ce type d’onglet (par exemple, renommer l’onglet de sorte qu’il soit significatif pour son canal).
 
 ## <a name="your-assignment"></a>Votre affectation
 
@@ -62,8 +62,8 @@ Vous pouvez afficher et mettre à jour les configurations de vos applications à
 
 Lors de l’installation, le kit de fonctions a initialement configuré deux composants essentiels des onglets canal et groupe :
 
-* **Page de configuration** : boîte de dialogue d’ajout d’un onglet à un canal ou à une conversation. (Dans App Studio, vous pouvez trouver cette page en accédant à onglets **> onglet équipe**.)
-* **Page de contenu** : où vous affichez votre contenu principal. (Dans App Studio, vous pouvez trouver cette page en accédant aux **onglets > ajouter un onglet personnel**.)
+* **Page de configuration**: modal pour l’ajout d’un onglet à un canal ou une conversation. (Dans App Studio, vous pouvez trouver cette page en accédant à onglets **> onglet équipe**.)
+* **Page de contenu**: où vous affichez votre contenu principal. (Dans App Studio, vous pouvez trouver cette page en accédant aux **onglets > ajouter un onglet personnel**.)
 
 ### <a name="app-scaffolding"></a>Génération de modèles automatique d’application
 
@@ -119,7 +119,7 @@ a {
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. personnaliser votre page de configuration d’onglet
 
-Tous les onglets d’un canal ou d’une conversation disposent d’une page de configuration, d’une boîte de dialogue avec au moins une option d’installation qui s’affiche lorsque les utilisateurs ajoutent votre application. La page Configuration par défaut demande à l’utilisateur s’il souhaite avertir le canal ou la conversation lorsque l’onglet est installé.
+Chaque onglet d’un canal ou d’une conversation comporte une page de configuration, modale avec au moins une option d’installation qui s’affiche lorsque les utilisateurs ajoutent votre application. La page Configuration par défaut demande à l’utilisateur s’il souhaite avertir le canal ou la conversation lorsque l’onglet est installé.
 
 Ajoutez du contenu personnalisé à votre page de configuration. Accédez au répertoire de votre projet `src/components` , ouvrez `TabConfig.js` et mettez à jour le contenu de l’espace réservé dans `return()` (comme illustré dans l’exemple suivant).
 
@@ -139,9 +139,9 @@ return (
 
 ## <a name="5-provide-a-suggested-tab-name"></a>5. fournir un nom d’onglet suggéré
 
-Lorsque vous ajoutez un onglet de canal ou de groupe, le nom de l’application s’affiche par défaut (par exemple, **First-App** ).
+Lorsque vous ajoutez un onglet de canal ou de groupe, le nom de l’application s’affiche par défaut (par exemple, **First-App**).
 
-Cela peut être approprié en fonction de ce que vous appelez votre application, mais vous souhaiterez peut-être attribuer un nom plus évocateur dans le contexte de la collaboration de groupe (par exemple, **contacts d’équipe** ).
+Cela peut être approprié en fonction de ce que vous appelez votre application, mais vous souhaiterez peut-être attribuer un nom plus évocateur dans le contexte de la collaboration de groupe (par exemple, **contacts d’équipe**).
 
 Dans `TabConfig.js` , accédez à `microsoftTeams.settings.setSettings` . Ajoutez la `suggestedDisplayName` propriété avec le nom de l’onglet que vous souhaitez afficher par défaut (comme illustré). Utilisez le nom fourni ou créez-en un. (Par défaut, les utilisateurs peuvent modifier le nom si ils le souhaitent.)
 
@@ -171,8 +171,8 @@ Votre application est prête à être testée dans Teams. Pour ce faire, vous de
 1. Pour afficher le contenu de votre application dans Teams, spécifiez le lieu de fiabilité de votre application ( `localhost` ).
    1. Ouvrez un nouvel onglet dans la même fenêtre de navigateur (Google Chrome par défaut) qui s’est ouvert après avoir appuyé sur **F5**.
    1. Accédez à `https://localhost:3000/tab` la page et passez à la page.
-1. Revenir à Teams. Dans la boîte de dialogue, sélectionnez **Ajouter à une équipe** ou **Ajouter à une conversation** , puis recherchez un canal ou une conversation que vous pouvez utiliser à des fins de test.
-1. Sélectionnez **configurer un onglet**. La page de configuration s’affiche dans une boîte de dialogue.<br/>
+1. Revenir à Teams. Dans le modal, sélectionnez **Ajouter à une équipe** ou **Ajouter à une conversation** et recherchez un canal ou une conversation que vous pouvez utiliser à des fins de test.
+1. Sélectionnez **configurer un onglet**. La page de configuration s’affiche dans un modal.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Capture d’écran de la page de configuration de l’onglet canal.":::
 1. Sélectionnez **Enregistrer** pour configurer l’onglet. La page de contenu s’affiche.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Capture d’écran d’un onglet de canal avec affichage de contenu statique.":::

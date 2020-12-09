@@ -4,16 +4,16 @@ description: Commencer à créer des applications personnalisées directement da
 keywords: Kit de développement Visual Studio teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: a1221945659b2dd0f45bdd3a966d9b029ddcde09
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476985"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604486"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Créer des applications avec Team Toolkit et Visual Studio
 
-Le Kit de ressources Microsoft teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement de développement intégré (IDE) Visual Studio. Le kit de ressources Microsoft Teams vous guide dans le processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application d’équipe.
+Le Kit de ressources Microsoft Teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement de développement intégré (IDE) Visual Studio. Le kit de ressources Microsoft Teams vous guide au cours du processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application Teams.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -82,7 +82,7 @@ Lorsqu’une application est installée, le client teams analyse le fichier mani
 
 ## <a name="package-your-app"></a>Empaquetage de votre application
 
-La modification de la page de détails de l' **application** ou la mise à jour du **manifeste**, ou des fichiers **. env** dans le dossier  **. Publish** de votre application, génère automatiquement votre fichier **Development.zip** . Le fichier Development.zip inclut trois fichiers requis : les **manifest.jssur** et [deux fichiers d’icônes](../concepts/build-and-test/apps-package.md#icons).
+La modification de la page de détails de l' **application** ou la mise à jour du **manifeste**, ou des fichiers **. env** dans le dossier  **. Publish** de votre application, génère automatiquement votre fichier **Development.zip** . Le fichier Development.zip inclut trois fichiers obligatoires : le **manifest.jssur** et [deux icônes](../concepts/build-and-test/apps-package.md#app-icons).
 
 ## <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
 

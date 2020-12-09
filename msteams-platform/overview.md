@@ -5,18 +5,21 @@ description: Vue d’ensemble de la façon dont les développeurs peuvent étend
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 6f5f3454885320669ef42383529d39fcfcfdfee8
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209792"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604786"
 ---
-# <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft teams
+# <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
 Les applications Microsoft teams apportent des informations clés, des outils courants et des processus approuvés à des endroits où les utilisateurs recueillent, apprennent et travaillent de plus en plus.
 
 Les applications vous permettent d’étendre les équipes pour répondre à vos besoins. Créez un article nouveau pour teams ou intégrez une application existante.
+
+> [!div class="nextstepaction"]
+> [Démarrer](build-your-first-app/build-first-app-overview.md)
 
 ## <a name="what-are-teams-apps"></a>Qu’est-ce que les applications teams ?
 
@@ -139,7 +142,7 @@ Accédez directement à l’aide de nos didacticiels d’application ou Découvr
 ## <a name="resources"></a>Ressources
 
 * [Ajouter un bouton partager à teams à votre site Web](concepts/build-and-test/share-to-teams.md)
-* [Système de conception Fluent](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Interface utilisateur Fluent</a>
 * [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Kit de développement logiciel (SDK) robot for JavaScript](https://github.com/Microsoft/botbuilder-js) and [bot Framework SDK pour .net](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Publier votre application dans une organisation ou AppSource](concepts/deploy-and-publish/overview.md)
