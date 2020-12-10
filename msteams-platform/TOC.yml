@@ -60,26 +60,10 @@
       href: concepts/capabilities-overview.md
     - name: Points d'entrée de l’application
       href: concepts/extensibility-points.md
-    - name: Concevoir votre application
-      items:
-        - name: Comprendre vos cas d’utilisation
-          href: concepts/design/understand-use-cases.md
-        - name: Mapper les cas d’utilisation pour les fonctionnalités
-          href: concepts/design/map-use-cases.md
-        - name: Applications personnelles
-          href: concepts/design/personal-apps.md
-        - name: Composants interface utilisateur
-          items:
-            - name: Couleurs
-              href: concepts/design/components/color.md
-            - name: 'Boutons, liens et contrôles'
-              href: concepts/design/components/buttons.md
-            - name: Typographie
-              href: concepts/design/components/typography.md
-            - name: Champs et menus volants
-              href: concepts/design/components/fields.md
-            - name: Boîtes de dialogue
-              href: concepts/design/components/dialogs.md
+    - name: Comprendre vos cas d’utilisation
+      href: concepts/design/understand-use-cases.md
+    - name: Mapper les cas d’utilisation pour les fonctionnalités
+      href: concepts/design/map-use-cases.md
     - name: Concevoir et tester votre application
       items:
         - name: "Préparer votre client Office\_365"
@@ -140,6 +124,34 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: 'Caméra et galerie '
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+- name: Concevoir votre application
+  items:
+    - name: Vue d’ensemble
+      href: concepts/design/design-teams-app-overview.md
+    - name: Principes fondamentaux de la navigation
+      href: concepts/design/design-teams-app-fundamentals.md
+    - name: Composants d’interface utilisateur de base
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Modèles d’interface utilisateur
+      href: concepts/design/design-teams-app-ui-templates.md
+    - name: Applications personnelles
+      href: concepts/design/personal-apps.md
+    - name: Onglets
+      items:
+        - name: Bureau et web
+          href: tabs/design/tabs.md
+        - name: Mobile
+          href: tabs/design/tabs-mobile.md
+    - name: Extensions de messagerie
+      href: messaging-extensions/design/messaging-extension-design.md
+    - name: Bots
+      href: bots/design/bots.md
+    - name: Extensions de réunion
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+    - name: Modules de tâche
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: Cartes adaptatives
+      href: task-modules-and-cards/cards/design-effective-cards.md
 - name: "Onglets\_: expériences web incorporées"
   items:
     - name: "Que sont les onglets personnalisés\_?"
@@ -164,12 +176,6 @@
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             - name: Créer un onglet personnel
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Concevoir vos onglets
-      items:
-        - name: Vue d’ensemble de la conception
-          href: tabs/design/tabs.md
-        - name: Onglets sur les appareils mobiles
-          href: tabs/design/tabs-mobile.md
     - name: Guides pratiques
       expanded: true
       items:
@@ -215,10 +221,6 @@
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Bot de conversation Teams dans Python
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: Concevoir votre bot
-      items:
-        - name: Vue d’ensemble de la conception
-          href: bots/design/bots.md
     - name: Guides pratiques
       expanded: true
       items:
@@ -278,11 +280,7 @@
   items:
     - name: "Qu’est-ce qu’une extension de messagerie\_?"
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Conception
-      items:
-        - name: Instructions de conception des extensions de messagerie
-          href: messaging-extensions/design/messaging-extension-design.md
-    - name: Démarrages rapides
+    - name: Démarrage rapide
       items:
         - name: Avec commande d’action
           items:
@@ -329,8 +327,6 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: Cartes
       items:
-        - name: Concevoir des cartes efficaces
-          href: task-modules-and-cards/cards/design-effective-cards.md
         - name: Mettre en forme un texte de carte
           href: task-modules-and-cards/cards/cards-format.md
         - name: Envoyer et répondre aux actions de carte
@@ -364,13 +360,7 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Créer des applications pour les réunions Teams
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: Concevoir votre application en réunion
-      items:
-        - name: Boîtes de dialogue en réunion
-          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
-        - name: Onglet en réunion
-          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: Intégration de l’API REST Microsoft Graph bêta
+- name: Intégration de l’API REST Microsoft Graph
   items:
     - name: Consentement spécifique aux ressources
       items:
