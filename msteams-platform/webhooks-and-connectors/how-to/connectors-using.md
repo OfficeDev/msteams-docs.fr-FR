@@ -3,12 +3,12 @@ title: Envoi de messages à des connecteurs et Webhooks
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998006"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604479"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -135,8 +135,8 @@ Pour accéder à d’autres informations sur les actions de la carte de connecte
 
 Pour découvrir comment envoyer une carte simple à un connecteur, procédez comme suit.
 
-1. Dans Microsoft Teams, choisissez **Autres options** ( **&#8943;** ) à côté du nom de la chaîne, puis choisissez **Connecteurs**.
-2. Faites défiler la liste des Connecteurs à **Webhook entrant** , puis choisissez **Ajouter**.
+1. Dans Microsoft Teams, choisissez **Autres options** (**&#8943;**) à côté du nom de la chaîne, puis choisissez **Connecteurs**.
+2. Faites défiler la liste des Connecteurs à **Webhook entrant**, puis choisissez **Ajouter**.
 3. Entrez un nom pour le webhook, téléchargez une image à associer aux données du webhook, puis choisissez **Créer**.
 4. Copiez le webhook dans le presse-papiers et enregistrez-le. Vous aurez besoin de l’URL de webhook pour envoyer des informations à Microsoft Teams.
 5. Choisissez **OK**.
@@ -173,7 +173,7 @@ Les étapes suivantes utilisent PowerShell. Nous partons du principe que vous av
 2. Si la publication réussit, un simple résultat **1** est affichée par `Invoke-RestMethod`.
 3. Vérifiez le canal Microsoft Teams associé à l’URL de webhook. Vous devriez voir la nouvelle carte publiée sur le canal.
 
-- Vous avez le choix entre deux icônes, en suivant les instructions figurant dans [Icônes](~/concepts/build-and-test/apps-package.md#icons).
+- [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifiez la partie `icons` du manifeste pour faire référence aux noms de fichier des icônes au lieu des URL.
 
 Le fichier manifest.json suivant contient les éléments de base nécessaires pour tester et envoyer votre application.
