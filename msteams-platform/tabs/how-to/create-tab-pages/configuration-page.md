@@ -5,12 +5,12 @@ description: procédure de création d’une page de configuration
 keywords: onglet teams groupe de canaux configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: c041c311245bb5bfc5e2655ef8d596b2839fdb70
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605324"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731964"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -85,7 +85,7 @@ Ici, l’utilisateur voit apparaître deux cases d’option, **Sélectionner le 
 1. Le `microsoftTeams.settings.registerOnSaveHandler()` Gestionnaire d’événements est déclenché.
 1. Le bouton **Enregistrer** de la page de configuration de l’application, chargé dans Teams, est activé.
 
-Ce code permet aux équipes de reconnaître que les exigences de configuration ont été satisfaites et que l’installation peut être effectuée. Lors de l' **enregistrement**, les paramètres de `settings.setSettings()` sont définis, comme défini par l' `Settings` interface, pour l’instance actuelle (voir [interface des paramètres](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ). Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue avec succès.
+Ce code permet aux équipes de reconnaître que les exigences de configuration ont été satisfaites et que l’installation peut être effectuée. Lors de l' **enregistrement**, les paramètres de `settings.setSettings()` sont définis, comme défini par l' `Settings` interface, pour l’instance actuelle. Pour plus d’informations, consultez la rubrique [interface des paramètres](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). Enfin, `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue avec succès.
 
 >[!NOTE]
 >

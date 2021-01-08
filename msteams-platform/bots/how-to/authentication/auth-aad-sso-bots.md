@@ -2,16 +2,16 @@
 title: Support de l'identification unique pour les robots
 description: Indique comment obtenir un jeton utilisateur. Actuellement, un développeur de robots peut utiliser une carte de connexion ou le service de robot Azure avec la prise en charge de la carte OAuth.
 keywords: jeton, jeton d’utilisateur, prise en charge de l’authentification unique pour les robots
-ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: ee9dbee063acf90f5596fc95d002caf53f88a08a
+ms.sourcegitcommit: 0a9e91c65d88512eda895c21371b3cd4051dca0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409098"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "49729071"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l’authentification unique (SSO) pour les robots
 
-L’authentification unique dans Azure Active Directory (Azure AD) minimise le nombre de fois que les utilisateurs doivent entrer leurs informations d’identification de connexion en actualisant silencieusement le jeton d’authentification. Si les utilisateurs s’engagent à utiliser votre application, ils n’ont pas besoin de consentir à nouveau sur un autre appareil et seront connectés automatiquement. Le flux est très similaire à la [prise en charge de l’authentification unique de l’onglet teams]( ../../../tabs/how-to/authentication/auth-aad-sso.md). La différence est le protocole qui permet à un bot de demander des jetons et de recevoir des réponses.
+L’authentification unique dans Azure Active Directory (Azure AD) minimise le nombre de fois que les utilisateurs doivent entrer leurs informations d’identification de connexion en actualisant silencieusement le jeton d’authentification. Si les utilisateurs s’engagent à utiliser votre application, ils ne doivent plus avoir à consentir sur un autre appareil et se connecteront automatiquement. Le flux est très similaire à la [prise en charge de l’authentification unique de l’onglet teams]( ../../../tabs/how-to/authentication/auth-aad-sso.md). La différence est le protocole qui permet à un bot de demander des jetons et de recevoir des réponses.
 
 OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisée par Azure Active Directory (Azure AD) et de nombreux autres fournisseurs d’identité. Une compréhension de base de OAuth 2,0 est une condition préalable à l’utilisation de l’authentification dans Teams.
 
@@ -21,10 +21,10 @@ OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation ut
 
 1. Le bot envoie un message avec une OAuthCard qui contient la `tokenExchangeResource` propriété. Il indique à teams d’obtenir un jeton d’authentification pour l’application bot. L’utilisateur reçoit les messages à tous les points de terminaison actifs de l’utilisateur.
 
-> [!NOTE]
->* Un utilisateur peut avoir plus d’un point de terminaison actif à la fois.  
->* Le jeton bot est reçu à partir de chaque point de terminaison actif de l’utilisateur.
->* La prise en charge de l’authentification unique requiert actuellement que l’application soit installée dans l’étendue personnelle.
+    > [!NOTE]
+    >* Un utilisateur peut avoir plus d’un point de terminaison actif à la fois.  
+    >* Le jeton bot est reçu à partir de chaque point de terminaison actif de l’utilisateur.
+    >* La prise en charge de l’authentification unique requiert actuellement que l’application soit installée dans l’étendue personnelle.
 
 2. Si c’est la première fois que l’utilisateur actuel a utilisé votre application bot, une invite de demande s’affichera (si un consentement est requis) ou pour gérer l’authentification par étape (par exemple, authentification à deux facteurs).
 
@@ -38,7 +38,7 @@ OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation ut
   
 ## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a>Développer une authentification unique Microsoft teams bot
   
-Les étapes suivantes : sont nécessaires pour développer un robot Microsoft teams de Microsoft teams :
+Les étapes suivantes sont nécessaires pour développer un robot Microsoft teams de Microsoft teams :
 
 1. [Créer un compte Azure gratuit](#create-an-azure-account)
 2. [Mettre à jour le manifeste d’application de teams](#update-your-app-manifest)
@@ -48,17 +48,18 @@ Les étapes suivantes : sont nécessaires pour développer un robot Microsoft t
 
 Cette étape est similaire au [flux d’authentification unique](../../../tabs/how-to/authentication/auth-aad-sso.md)de l’onglet :
 
-1. Obtenir l' [ID de votre application Azure ad](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) pour Team Desktop, Web ou mobile client.
+1. Obtenir l' [ID de votre application Azure ad](/graph/concepts/auth-register-app-v2) pour Team Desktop, Web ou mobile client.
 2. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison Azure AD et, éventuellement, Microsoft Graph.
-3. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour les applications de bureau, Web et mobiles Teams.
-4. Ajoutez une application cliente en sélectionnant le bouton **Ajouter une étendue** et dans le volet qui s’ouvre, entrez `access_as_user` comme **nom d’étendue**.
+3. [Accorder des autorisations](/azure/active-directory/develop/v2-permissions-and-consent) pour les applications de bureau, Web et mobiles Teams.
+4. Sélectionnez **Ajouter une étendue**.
+5. Dans le panneau qui s’ouvre, ajoutez une application cliente en saisissant `access_as_user` comme **nom d’étendue**.
 
->[!NOTE]
-> L’étendue « access_as_user » utilisée pour ajouter une application cliente est pour « administrateurs et utilisateurs ».
+    >[!NOTE]
+    > L’étendue « access_as_user » utilisée pour ajouter une application cliente est pour « administrateurs et utilisateurs ».
 
-> [!IMPORTANT]
-> * Si vous créez un bot autonome, définissez l’URI de l’ID d’application sur `api://botid-{YourBotId}` ici, **YourBotId** fait référence à votre ID d’application Azure ad.
-> * Si vous créez une application avec un bot et un onglet, définissez l’URI de l’ID d’application sur `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+    > [!IMPORTANT]
+    > * Si vous créez un bot autonome, définissez l’URI de l’ID d’application sur `api://botid-{YourBotId}` ici, **YourBotId** fait référence à votre ID d’application Azure ad.
+    > * Si vous créez une application avec un bot et un onglet, définissez l’URI de l’ID d’application sur `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
 
@@ -80,7 +81,7 @@ Ajoutez de nouvelles propriétés à votre manifeste Microsoft teams :
 
 ### <a name="request-a-bot-token"></a>Demander un jeton de robot
 
-La demande d’obtention du jeton est une demande POST message normale (à l’aide du schéma de message existant). Il est inclus dans les pièces jointes d’un OAuthCard. Le schéma de la classe OAuthCard est défini dans le [schéma Microsoft Bot 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) et est très similaire à une carte de connexion. Teams traitera cette demande comme une acquisition en mode silencieux si la `TokenExchangeResource` propriété est renseignée sur la carte. Pour le canal Teams, nous honorons uniquement la `Id` propriété, qui identifie de manière unique une demande de jeton.
+La demande d’obtention du jeton est une demande POST message normale (à l’aide du schéma de message existant). Il est inclus dans les pièces jointes d’un OAuthCard. Le schéma de la classe OAuthCard est défini dans le [schéma Microsoft Bot 4,0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) et est très similaire à une carte de connexion. Teams traitera cette demande comme une acquisition en mode silencieux si la `TokenExchangeResource` propriété est renseignée sur la carte. Pour le canal Teams, nous n’honorons que la `Id` propriété, qui identifie de manière unique une demande de jeton.
 
 >[!NOTE]
 > L’infrastructure bot `OAuthPrompt` ou le `MultiProviderAuthDialog` est pris en charge pour l’authentification unique (SSO).
@@ -152,25 +153,25 @@ Le `turnContext.activity.value` est de type [TokenExchangeInvokeRequest](/dotnet
 
 2. Basculez vers le panneau **paramètres** , puis choisissez **Ajouter un paramètre** sous la section paramètres de connexion OAuth.
 
-![Vue SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
+    ![Vue SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
 3. Complétez le formulaire de **paramètre de connexion** :
 
-> [!div class="checklist"]
->
-> * Entrez un nom pour votre nouveau paramètre de connexion. Il s’agit du nom qui est référencé à l’intérieur des paramètres de votre code de service bot à l' **étape 5**.
-> * Dans la liste déroulante fournisseur de services, sélectionnez **Azure Active Directory v2**.
->* Entrez les informations d’identification du client pour l’application AAD.
+    > [!div class="checklist"]
+    >
+    > * Entrez un nom pour votre nouveau paramètre de connexion. Il s’agit du nom qui est référencé à l’intérieur des paramètres de votre code de service bot à l' **étape 5**.
+    > * Dans la liste déroulante fournisseur de services, sélectionnez **Azure Active Directory v2**.
+    >* Entrez les informations d’identification du client pour l’application AAD.
 
->[!NOTE]
-> Une **subvention implicite** peut être requise dans l’application AAD.
+    >[!NOTE]
+    > Une **subvention implicite** peut être requise dans l’application AAD.
 
->* Pour l’URL d’échange de jetons, utilisez la valeur de portée définie à l’étape précédente de votre application AAD. La présence de l’URL d’échange de jetons indique au SDK que cette application AAD est configurée pour l’authentification unique.
->* Spécifiez « Common » comme **ID de client**.
->* Ajoutez toutes les étendues configurées lors de la spécification des autorisations pour les API en aval de votre application AAD. Avec l’ID client et la clé secrète client fournis, le magasin de jetons échangera le jeton pour un jeton de graphique avec des autorisations définies pour vous.
->* Sélectionnez **Enregistrer**.
+    >* Pour l’URL d’échange de jetons, utilisez la valeur de portée définie à l’étape précédente de votre application AAD. La présence de l’URL d’échange de jetons indique au SDK que cette application AAD est configurée pour l’authentification unique.
+    >* Spécifiez « Common » comme **ID de client**.
+    >* Ajoutez toutes les étendues configurées lors de la spécification des autorisations pour les API en aval de votre application AAD. Avec l’ID client et la clé secrète client fournis, le magasin de jetons échangera le jeton pour un jeton de graphique avec des autorisations définies pour vous.
+    >* Cliquez sur **Enregistrer**.
 
-![Vue de paramètre VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+    ![Vue de paramètre VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 
 ### <a name="update-the-auth-sample"></a>Mettre à jour l’exemple d’authentification
 
@@ -179,7 +180,7 @@ Commencez par l' [exemple d’authentification teams](https://github.com/microso
 1. Mettez à jour l’TeamsBot pour inclure les éléments suivants. Pour gérer le deduping de la demande entrante, voir ci-dessous :
 
 ```csharp
- protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+     protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
         }
@@ -195,8 +196,8 @@ Commencez par l' [exemple d’authentification teams](https://github.com/microso
 
 #### <a name="additional-code-samples"></a>Exemples de code supplémentaires
 
-* [Exemple C# utilisant le kit de développement logiciel (SDK) de robot Framework](https://microsoft-my.sharepoint-df.com/:u:/p/vul/ETZQfeTViDlCv-frjgTIincB7dvk2HOnma1TLvcoeGGIxg?e=uPq62c).
+* [Exemple C# utilisant le kit de développement logiciel (SDK) de robot Framework](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).
 
 * [Exemple C# utilisant le kit de développement logiciel (SDK) de l’infrastructure bot pour dédupliquer la demande de jeton](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).
 
-* [Exemple C# sans utiliser le magasin de jetons du kit de développement logiciel de robot Framework](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)
+* [Exemple C# sans utiliser le magasin de jetons du kit de développement logiciel de robot Framework](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw).

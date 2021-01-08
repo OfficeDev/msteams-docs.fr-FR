@@ -2,29 +2,31 @@
 title: Demander des autorisations de périphérique pour votre onglet Microsoft teams
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui requièrent généralement le consentement de l’utilisateur
 keywords: développement d’onglets teams
-ms.openlocfilehash: d6c66525ab0e81f0632df5e2c323926279e38a8e
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 6be183d2610616f3bd3bdf32554976322193c132
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576872"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731978"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Demander des autorisations de périphérique pour votre onglet Microsoft teams
 
-Vous souhaiterez peut-être enrichir votre onglet avec des fonctionnalités qui nécessitent l’accès à des fonctionnalités d’appareil natives comme :
+Vous voudrez peut-être enrichir votre onglet avec des fonctionnalités qui nécessitent un accès à des fonctionnalités d’appareil natives, telles que :
 
 > [!div class="checklist"]
 >
 > * Appareil photo
 > * Micro
-> * Lieu
+> * Emplacement
 > * Notifications
+
+[!Note] Pour intégrer les capacités de l’appareil photo et de l’image dans votre application mobile Microsoft Teams, reportez-vous à la rubrique [fonctionnalités de l’appareil photo](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >
-> * Actuellement, le client mobile teams prend en charge `camera` et `location`  via les fonctionnalités de périphérique natives, et est disponible sur toutes les constructions d’application, y compris les onglets. </br>
-> * La prise en charge de `camera` la capture d’image est activée par l' [**API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
-> * L' [**API de géolocalisation**](../../resources/schema/manifest-schema.md#devicepermissions) n’est actuellement pas entièrement prise en charge sur tous les clients de bureau.
+> * Pour le moment, le client mobile teams prend uniquement en charge l’accès aux fonctionnalités de l’appareil,, `camera` `gallery` `mic` et `location` via les fonctionnalités natives, et est disponible sur toutes les constructions d’applications, y compris les onglets. </br>
+> * La prise en charge de `camera` , de `gallery` et de `mic` est activée via l' [**API selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Pour la capture d’image unique, vous pouvez utiliser l' [**API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).
+> * La prise en charge de `location` est activée via l' [**API GetLocation**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). Il est recommandé d’utiliser cette API car l' [**API de géolocalisation**](../../resources/schema/manifest-schema.md#devicepermissions) n’est pas entièrement prise en charge sur tous les clients de bureau.
 
 ## <a name="device-permissions"></a>Autorisations de l’appareil
 
@@ -42,7 +44,7 @@ Bien que l’accès à ces fonctionnalités soit standard dans la plupart des na
 
 1. Ouvrez Teams.
 1. Dans le coin supérieur droit de la fenêtre, sélectionnez l’icône de votre profil.
-1. Sélectionnez **Settings**  ->  **autorisations** des paramètres dans le menu déroulant.
+1. Sélectionnez   ->  **autorisations** des paramètres dans le menu déroulant.
 1. Choisissez les paramètres de votre choix.
 
 ![Écran des paramètres de bureau des autorisations de périphérique](../../assets/images/tabs/device-permissions.png)
@@ -50,11 +52,11 @@ Bien que l’accès à ces fonctionnalités soit standard dans la plupart des na
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
 1. Ouvrez Teams.
-1. Dans le coin supérieur gauche de l’écran, sélectionnez l’icône de menu &#9776;.
-1. Sélectionnez **paramètres**  ->  **Devices**.
+1. Accédez à **paramètres**  ->  **app permissions**.
+1. Sélectionnez l’application pour laquelle vous devez choisir des paramètres.
 1. Choisissez les paramètres de votre choix.
 
-![Écran des paramètres mobiles des autorisations de l’appareil](../../assets/images/tabs/mobile-device-permissions-screen.png)
+![Écran des paramètres mobiles des autorisations de l’appareil](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
@@ -73,13 +75,13 @@ Mettez à jour votre application `manifest.json` en ajoutant `devicePermissions`
 ```
 > [!Note]
 >
-> Le support est également utilisé pour les autorisations d’appareil photo dans mobile.
+> Le support est également utilisé pour les autorisations d’appareil photo sur mobile.
 
-Chaque propriété vous permet d’inviter l’utilisateur à demander son consentement.
+Chaque propriété vous permet d’inviter l’utilisateur à demander son consentement :
 
 | Propriété      | Description   |
 | --- | --- |
-| panne         | autorisation d’utilisation de l’appareil photo, du microphone et des haut-parleurs |
+| panne         | autorisation d’utilisation de l’appareil photo, du microphone, des haut-parleurs et de la Galerie multimédia Access |
 | géolocalisation   | autorisation de retourner l’emplacement de l’utilisateur      |
 | notifications | autorisation d’envoyer les notifications de l’utilisateur      |
 | midi          | autorisation d’envoyer et de recevoir des informations midi à partir d’un instrument musical numérique   |
@@ -109,32 +111,67 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="prompting-the-user"></a>Demander à l’utilisateur
 
-Pour afficher une invite permettant d’obtenir le consentement pour accéder aux autorisations des appareils, vous devez tirer parti de l’API HTML5 ou teams appropriée. Par exemple, pour inviter l’utilisateur à accéder à sa caméra, vous devez appeler `getCurrentPosition`
+Pour afficher une invite permettant d’obtenir le consentement pour accéder aux autorisations des appareils, vous devez tirer parti de l’API HTML5 ou teams appropriée. 
+
+Par exemple, pour inviter l’utilisateur à accéder à son emplacement, vous devez appeler `getCurrentPosition` :
 
 ```Javascript
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
 ```
 
-Pour utiliser l’appareil photo sur le bureau ou sur le Web, teams affiche une invite d’autorisation lorsque vous appelez getUserMedia
+Pour utiliser l’appareil photo sur un ordinateur de bureau ou sur le Web, teams affiche une invite d’autorisation lorsque vous appelez `getUserMedia` :
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-Pour capturer une image sur mobile, teams mobile demande des autorisations lorsqu’il est appelé captureImage ()
+Pour capturer l’image sur mobile, teams mobile vous demande des autorisations lors de l’appel `captureImage()` :
 
-```Typescript
-function captureImage(callback: (error: SdkError, files: File[]) => void)
+```Javascript
+microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
+  /* ... */
+});
 ```
 
-Les notifications invitent l’utilisateur lorsque vous appelez `requestPermission`
+Les notifications invitent l’utilisateur à appeler les `requestPermission` éléments suivants :
 
 ```Javascript
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-![Invite des autorisations des appareils de tabulation](~/assets/images/tabs/device-permissions-prompt.png)
+Pour utiliser l’appareil photo ou la Galerie de photos Access, teams mobile demande des autorisations lorsque vous appelez `selectMedia()` :
+
+```JavaScript
+microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+  /* ... */
+});
+```
+
+Pour utiliser le micro, teams mobile demande des autorisations lorsque vous appelez `selectMedia()` :
+
+```JavaScript 
+microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+  /* ... */
+});
+```
+
+Pour inviter l’utilisateur à partager son emplacement sur l’interface de carte, teams mobile demande l’autorisation lorsque vous appelez `getLocation()` :
+
+```JavaScript 
+microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+  /* ... *
+/});
+```
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+![Invite des autorisations des appareils de bureau des onglets](~/assets/images/tabs/device-permissions-prompt.png)
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+![Invite des autorisations de l’appareil mobile onglets](../../assets/images/tabs/MobileLocationPermission.png)
+
 
 ## <a name="permission-behavior-across-login-sessions"></a>Comportement des autorisations entre les sessions de connexion
 
-Les autorisations natives des appareils sont stockées par session de connexion. Cela signifie que si vous vous connectez à une autre instance de Teams (par exemple, sur un autre ordinateur), les autorisations de votre appareil pour vos sessions précédentes ne seront pas disponibles. Au lieu de cela, vous devrez redéfinir les autorisations des appareils pour la nouvelle session de connexion. Cela signifie également que si vous vous déconnectez de Teams (ou que vous changez de locataire dans Teams), vos autorisations sur les appareils seront supprimées pour cette session précédente. Gardez cela à l’esprit lorsque vous développez des autorisations d’appareil natives : les fonctionnalités natives que vous acceptez pour votre session de connexion _actuelle_ .
+Les autorisations d’appareil Native sont stockées pour chaque session de connexion. Cela signifie que si vous vous connectez à une autre instance de Teams (par exemple, sur un autre ordinateur), les autorisations de votre appareil pour vos sessions précédentes ne seront pas disponibles. Au lieu de cela, vous devrez redéfinir les autorisations des appareils pour la nouvelle session de connexion. Cela signifie également que si vous vous déconnectez de Teams (ou que vous changez de locataire dans Teams), vos autorisations sur les appareils seront supprimées pour cette session précédente. Gardez cela à l’esprit lorsque vous développez des autorisations d’appareil natives : les fonctionnalités natives que vous acceptez pour votre session de connexion _actuelle_ .

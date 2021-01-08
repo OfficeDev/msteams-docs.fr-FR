@@ -2,12 +2,12 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement de Microsoft teams
 keywords: Nouveautés de teams
-ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: da2378446f39ab8398cdc569987d14f5c6095330
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604465"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739041"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft teams
 
@@ -18,11 +18,10 @@ ms.locfileid: "49604465"
 
 Le journal des modifications répertorie les modifications apportées à la plateforme Microsoft teams et à cet ensemble de documents. Les entrées peuvent être utilisées pour attirer l’attention sur une nouvelle fonctionnalité qui est simplement intéressante pour les développeurs de teams.
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Nouveauté : Identity Platform Integration with Team Toolkit et Visual Studio Code for Tabs|[Authentification unique avec Team Toolkit et Visual Studio code pour les onglets](toolkit/visual-studio-code-tab-sso.md)|
-|11/16/2020|Manifeste de l’application teams mis à jour vers la version 1,8|Référence : schéma de manifeste pour Microsoft teams|[Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
-|11/11/2020| Schéma de manifeste mis à jour vers la version 1,8| [Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
+|11/16/2020|Manifeste de l’application teams mis à jour vers la version 1,8|[Référence : schéma de manifeste pour Microsoft teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Instructions de conception de Microsoft teams bot|[Instructions de conception de robot](bots/design/bots.md)|
 |9/30/2020|L’envoi et la réception de fichiers vers des robots sur des appareils mobiles sont désormais pris en charge.|[Envoyer et recevoir des fichiers via votre robot](resources/bot-v3/bots-files.md)|
 |09/22/2020|Nouvelles instructions de prise en main de teams|[Vue d’ensemble de la création de votre première application teams](build-your-first-app/build-first-app-overview.md)|

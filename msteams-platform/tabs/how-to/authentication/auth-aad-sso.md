@@ -2,12 +2,12 @@
 title: Prise en charge de l’authentification unique pour les onglets
 description: Décrit l’authentification unique (SSO)
 keywords: API SSO d’authentification unique AAD pour l’authentification de teams
-ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 3eff1cd1d73573c8eaade63580516f432fe082a1
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552450"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731985"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l’authentification unique (SSO) pour les onglets
 
@@ -168,7 +168,7 @@ Une fois que vous avez reçu le jeton d’accès dans le rappel de réussite, vo
 
 ## <a name="sample-code"></a>Exemple de code
 
-Consultez notre exemple d’application : [MSTeams Tabs SSO Sample-NodeJS](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+Visitez notre exemple d’application : [exemple de SSO PNP MSTeams](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
 Le fichier Lisez-moi décrit la configuration de votre environnement de développement et la configuration de votre application dans Azure AD. Vous pouvez également trouver des informations supplémentaires sur la façon dont l’exemple est structuré dans la [section structure](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) de l’application pour vous aider à vous familiariser avec le code base.
 

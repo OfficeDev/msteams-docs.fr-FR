@@ -2,18 +2,18 @@
 title: Ajouter des actions de carte dans un bot
 description: Décrit les actions de carte dans Microsoft teams et explique comment les utiliser dans vos robots
 keywords: actions des cartes des robots teams
-ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 2bee1072405d91cd29d1aa227884516a87d10bde
+ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346776"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49768073"
 ---
 # <a name="card-actions"></a>Actions de carte
 
-Les cartes utilisées par les robots et les extensions de messagerie dans teams prennent en charge les types d’activités ( [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) suivants. Notez que ces actions diffèrent des `potentialActions` cartes de connecteur Office 365 lorsqu’elles sont utilisées à partir de connecteurs.
+Les cartes utilisées par les robots et les extensions de messagerie dans teams prennent en charge les types d’activités ( [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ) suivants. Notez que ces actions diffèrent des `potentialActions` cartes de connecteur Office 365 lorsqu’elles sont utilisées à partir de connecteurs.
 
-| Tapez | Action |
+| Type | Action |
 | --- | --- |
 | `openUrl` | Ouvre une URL dans le navigateur par défaut. |
 | `messageBack` | Envoie un message et une charge utile au bot (à partir de l’utilisateur qui a cliqué sur le bouton ou a cliqué sur la carte) et envoie un message distinct au flux de conversation. |
@@ -24,7 +24,7 @@ Les cartes utilisées par les robots et les extensions de messagerie dans teams 
 > [!NOTE]
 >* Teams ne prend pas en charge `CardAction` les types qui ne sont pas repris dans le tableau précédent.
 >* Teams ne prend pas en charge la `potentialActions` propriété.
->* Les actions de carte diffèrent des [actions suggérées](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans l’infrastructure bot/service de robot Azure. Les actions suggérées ne sont pas prises en charge dans Microsoft teams : Si vous souhaitez que les boutons apparaissent dans un message Team bot, utilisez une carte.
+>* Les actions de carte diffèrent des [actions suggérées](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans l’infrastructure bot/service de robot Azure. Les actions suggérées ne sont pas prises en charge dans Microsoft teams : Si vous souhaitez que les boutons apparaissent dans un message Team bot, utilisez une carte.
 >* Si vous utilisez une action de carte dans le cadre d’une extension de messagerie, les actions ne fonctionnent pas tant que la carte n’est pas envoyée au canal (elles ne fonctionneront pas tant que la carte ne se trouve pas dans la boîte de message de composition).
 
 Teams prend également en charge les [actions de cartes adaptatives](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), qui ne sont utilisées que par des cartes adaptatives. Ces actions sont répertoriées dans leur propre section à la fin de cette référence.
@@ -304,6 +304,44 @@ Pour inclure une `signin` action avec une carte adaptative, incluez les détails
         "type": "signin",
         "value": "https://signin.com"
     }
+  }
+}
+```
+
+### <a name="adaptive-cards-with-invoke-action"></a>Cartes adaptatives avec action d’appel
+ 
+Pour inclure une `invoke` action avec une carte adaptative, incluez les détails suivants dans l' `msteams` objet. Notez que vous pouvez inclure des propriétés masquées supplémentaires dans l' `data` objet si nécessaire.
+
+| Propriété | Description |
+| --- | --- |
+| `type` | Défini sur `task/fetch` |
+| `data` | Définir la valeur  |
+
+#### <a name="example"></a>Exemple
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    }
+  }
+}
+```
+
+#### <a name="example-2-with-additional-payload-data"></a>Exemple 2 (avec des données de charge utile supplémentaires)
+
+```json
+{
+  "type": "Action.Submit",
+  "title": "submit"
+  "data": {
+    "msteams": {
+        "type": "task/fetch"
+    },
+    "Value1": "some value"
   }
 }
 ```
