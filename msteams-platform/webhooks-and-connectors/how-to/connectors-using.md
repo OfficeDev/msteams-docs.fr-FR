@@ -3,12 +3,12 @@ title: Envoi de messages à des connecteurs et Webhooks
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 0cc53fa6110247e02582474ef4781a05af2a8fac
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604479"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795474"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -67,6 +67,11 @@ Vous pouvez également utiliser ce JSON pour créer des cartes contenant des ent
             "name": "Save",
             "target": "http://..."
         }]
+        {
+            "@type": "OpenUri",
+            "name": "Learn More",
+            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
+        }
     }, {
         "@type": "ActionCard",
         "name": "Change status",
@@ -108,8 +113,6 @@ Les cartes de connecteur prennent en charge trois types d’actions :
 - `ActionCard` Affiche un ou plusieurs types d’entrées et actions associées
 - `HttpPOST` Envoie une demande de publication à une URL.
 - `OpenUri` Ouvre un URI dans un navigateur ou une application distincte, cible de façon facultative différents URI basés sur des systèmes d’exploitation
-
-(Une quatrième action, `ViewAction`, n’est pas encore prise en charge, mais n’est plus nécessaire. Utilisez `OpenUri` à la place.)
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 
