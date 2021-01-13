@@ -5,12 +5,12 @@ description: Créez rapidement un onglet de groupe et de canal Microsoft Teams �
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ad0474859118f302a39e823f7669dc54061d525
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: ae06217cf9ffd99ce94aff981fbbec19136d4aeb
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795453"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797875"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Créer un onglet de canal et de groupe pour Microsoft Teams
 
@@ -183,8 +183,8 @@ Félicitations ! Vous avez une application Teams avec un onglet pour afficher d
 * [Incorporer du contenu](../tabs/how-to/add-tab.md#tab-requirements)à partir d’une application web ou d’une page web existante : nous vous avons montré comment créer du contenu pour un onglet, mais vous pouvez également charger du contenu à partir d’une URL externe.
 * [Créez une expérience d’onglet](../tabs/design/tabs.md)transparente : consultez les recommandations pour la conception des onglets Teams.
 * [Créer des onglets pour les appareils mobiles](../tabs/design/tabs-mobile.md): comprendre comment développer des onglets pour téléphones et tablettes.
-* [Utiliser les données Teams avec l’API Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Créer un onglet sans le kit de ressources](../tabs/how-to/add-tab.md)
+* [Créer un onglet sans le kit de ressources](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* [Utiliser les données Teams avec Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## <a name="next-lesson"></a>Leçon suivante
 

@@ -5,16 +5,16 @@ description: Découvrez comment commencer à développer des applications Micros
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 06e26c57e6f6d3fd0bbeb981ef7ab46c8217bb4a
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 4288efdbfada5f1a51fa1d4aeccdd6cdf9c64382
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795460"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797896"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Créer votre première vue d’ensemble de l’application Microsoft Teams
 
-Dans la création **de vos premières leçons d’application,** vous créez des applications Teams de base. Chaque didacticiel vous montre comment créer une application Teams simple et réelle tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
+Dans les **leçons de début,** vous allez apprendre à créer des applications Teams de base. Chaque didacticiel vous montre comment créer une application Teams simple et réelle tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
 
 ## <a name="what-youll-learn"></a>Ce que vous allez apprendre
 
@@ -34,7 +34,7 @@ Avant de commencer les didacticiels, vous devez connaître les informations suiv
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>Les applications peuvent avoir plusieurs fonctionnalités et points d’entrée
 
-Une application Teams est composé d’une ou de plusieurs fonctionnalités de plateforme [(comment](../concepts/capabilities-overview.md) les personnes utilisent l’application) et [de points](../concepts/extensibility-points.md) d’entrée (où les personnes découvrent l’application).
+Une application Teams est composé d’une ou de plusieurs fonctionnalités de plateforme [(comment](../concepts/capabilities-overview.md) les personnes utilisent l’application) et [de points](../concepts/extensibility-points.md) d’entrée (où les personnes utilisent l’application).
 
 ### <a name="teams-doesnt-host-your-app"></a>Teams n’héberge pas votre application
 
@@ -93,9 +93,9 @@ Teams affiche le contenu de l’application uniquement par le biais de connexion
 
 ## <a name="about-the-tutorials"></a>À propos des didacticiels
 
-Vous pouvez commencer avec n’importe quelle équipe qui **crée vos premières leçons** d’application. Si vous ne savez pas où aller en premier, suivez notre chemin d’accès convivial débutant et créez un « Hello, World! » application.
+Vous pouvez commencer par les leçons de **démarrage de** Teams. Si vous ne savez pas où aller en premier, suivez notre chemin d’accès convivial débutant et créez un « Hello, World! » application.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Arborescence de compétences montrant les parcours d’apprentissage pour les didacticiels « Créer votre première application » teams." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Arborescence de compétences montrant les parcours d’apprentissage pour les leçons de « mise en route » de Teams." border="false":::
 
 ## <a name="next-step"></a>Étape suivante
 

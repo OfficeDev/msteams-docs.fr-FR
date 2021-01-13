@@ -1,65 +1,65 @@
 ---
 title: Créer une page de suppression d’onglets
 author: laujan
-description: Procédure de création d’une page de suppression d’onglets
-keywords: onglets teams groupe canal configurable supprimer supprimer
+description: Comment créer une page de suppression d’onglets
+keywords: suppression des onglets teams du canal de groupe configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: 49e2df47095999e9f9eea76ea341a44215bfacb3
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964591"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797882"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modifier ou supprimer un onglet de groupe de canaux
 
-Vous pouvez étendre et améliorer l’expérience utilisateur en prenant en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un onglet de canal/groupe et de permettre aux utilisateurs de reconfigurer votre onglet après l’installation. En outre, l’expérience de suppression de votre onglet peut inclure la désignation de ce qui se passe sur le contenu lorsque votre onglet est supprimé ou en fournissant aux utilisateurs des options de post-suppression telles que la suppression ou l’archivage du contenu.
+Vous pouvez étendre et améliorer l’expérience utilisateur en prendre en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un onglet canal/groupe et vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation. En outre, votre expérience de suppression d’onglets peut inclure la désignation de ce qu’il advient du contenu lorsque votre onglet est supprimé ou l’offre d’options post-suppression aux utilisateurs, telles que la suppression ou l’archivage du contenu.
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Activer la reconfiguration de votre onglet après l’installation
 
-Votre **manifest.jssur** définit les fonctionnalités et les fonctionnalités de votre onglet. La propriété d’instance `canUpdateConfiguration` d’onglet prend une valeur de type Boolean qui indique si un utilisateur peut modifier ou reconfigurer l’onglet après sa création :
+Votre **manifest.jsdéfinit** les fonctionnalités et fonctionnalités de votre onglet. La propriété d’instance d’onglet prend une valeur boolé générale qui indique si un utilisateur peut modifier ou reconfigurer l’onglet `canUpdateConfiguration` après sa création :
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Default `true`|
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 
-Lorsque votre onglet est chargé dans un canal ou une conversation de groupe, teams ajoute un menu déroulant de clic droit pour votre onglet. Les options disponibles sont déterminées par le `canUpdateConfiguration` paramètre :
+Lorsque votre onglet est téléchargé vers un canal ou une conversation de groupe, Teams ajoute un menu déroulant de clic droit pour votre onglet. Les options disponibles sont déterminées par le `canUpdateConfiguration` paramètre :
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Paramètres            |   √    |       |La `configurationUrl` page est rechargée dans un IFRAME, ce qui permet à l’utilisateur de reconfigurer l’onglet.  |
+|     Paramètres            |   √    |       |La page est rechargée dans un IFrame, ce qui permet à l’utilisateur de `configurationUrl` reconfigurer l’onglet.  |
 |     Renommer              |   √    |   √   | L’utilisateur peut modifier le nom de l’onglet tel qu’il apparaît dans la barre d’onglets.          |
-|     Supprimer              |   √    |   √   |  Si la  `removeURL` propriété et la valeur sont incluses dans la **page de configuration**, la page de **suppression** est chargée dans un IFRAME et présentée à l’utilisateur. Si une page de suppression n’est pas incluse, l’utilisateur voit s’afficher une boîte de dialogue de confirmation.          |
+|     Supprimer              |   √    |   √   |  Si la propriété et la valeur sont incluses dans la page de configuration, la page de suppression est chargée dans un IFrame et présentée `removeURL` à l’utilisateur.   Si une page de suppression n’est pas incluse, une boîte de dialogue de confirmation s’est présentée à l’utilisateur.          |
 |||||
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Créer une page de suppression d’onglets pour votre application
 
-La page de suppression facultative est une page HTML que vous hébergez et qui s’affiche lorsque l’onglet est supprimé. L’URL de la page de suppression est désignée par la `setSettings()` méthode dans votre page de configuration. Comme avec toutes les pages de votre application, la page de suppression doit respecter les [exigences des onglets teams](~/tabs/how-to/add-tab.md).
+La page de suppression facultative est une page HTML que vous hébergez et qui s’affiche lorsque l’onglet est supprimé. L’URL de la page de suppression est désignée par la `setSettings()` méthode dans votre page de configuration. Comme pour toutes les pages de votre application, la page de suppression doit respecter les exigences de [l’onglet Teams.](../../../tabs/how-to/tab-requirements.md)
 
-### <a name="register-a-remove-handler"></a>Inscrire un gestionnaire de suppression
+### <a name="register-a-remove-handler"></a>Inscrire un remove handler
 
-Éventuellement, dans la logique de votre page de suppression, vous pouvez appeler le `registerOnRemoveHandler((RemoveEvent) => {}` Gestionnaire d’événements lorsque l’utilisateur supprime une configuration d’onglet existante. La méthode prend l' [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface et exécute le code dans le gestionnaire lorsqu’un utilisateur tente de supprimer du contenu. Il est utilisé pour effectuer des opérations de nettoyage, telles que la suppression de la ressource sous-jacente qui alimente le contenu de l’onglet. Un seul gestionnaire de suppression peut être inscrit à la fois.
+Si vous le souhaitez, dans votre logique de page de suppression, vous pouvez appeler le handler d’événements lorsque l’utilisateur supprime une `registerOnRemoveHandler((RemoveEvent) => {}` configuration d’onglet existante. La méthode prend l’interface et exécute le code dans le handler lorsqu’un utilisateur tente [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) de supprimer du contenu. Il est utilisé pour effectuer des opérations de nettoyage telles que la suppression de la ressource sous-jacente qui alimentera le contenu de l’onglet. Un seul de ces derniers peut être inscrit à la fois.
 
-L' `RemoveEvent` interface décrit un objet avec deux méthodes :
+`RemoveEvent`L’interface décrit un objet avec deux méthodes :
 
-* La `notifySuccess()` fonction est requise. Il indique que la suppression de la ressource sous-jacente a réussi et que son contenu peut être supprimé.
+* La `notifySuccess()` fonction est obligatoire. Il indique que la suppression de la ressource sous-jacente a réussi et que son contenu peut être supprimé.
 
-* La `notifyFailure(string)` fonction est facultative. Cela indique que la suppression de la ressource sous-jacente a échoué et que son contenu ne peut pas être supprimé. Le paramètre facultatif String spécifie la raison de l’échec. S’il est fourni, cette chaîne est affichée à l’utilisateur ; Sinon, une erreur générique s’affiche.
+* La `notifyFailure(string)` fonction est facultative. Il indique que la suppression de la ressource sous-jacente a échoué et que son contenu ne peut pas être supprimé. Le paramètre de chaîne facultatif spécifie la raison de l’échec. Si elle est fournie, cette chaîne s’affiche pour l’utilisateur ; Sinon, une erreur générique s’affiche.
 
 #### <a name="use-the-getsettings-function"></a>Utiliser la `getSettings()` fonction
 
-Vous pouvez utiliser `getSettings()` pour désigner le contenu des onglets à supprimer. La `getSettings((Settings) =>{})` fonction prend le [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) et fournit les valeurs de propriété de paramètres valides qui peuvent être récupérées.
+Vous pouvez `getSettings()` l’utiliser pour désigner le contenu de l’onglet à supprimer. La fonction prend dans et fournit les valeurs de propriété `getSettings((Settings) =>{})` de [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) paramètres valides qui peuvent être récupérées.
 
 #### <a name="use-the-getcontext-function"></a>Utiliser la `getContext()` fonction
 
-Vous pouvez utiliser `getContext()` pour extraire le contexte actuel dans lequel le cadre est en cours d’exécution. La `getContext((Context) =>{})` fonction prend en [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) et fournit des valeurs de propriété valides `Context` que vous pouvez utiliser dans la logique de votre page de suppression pour déterminer le contenu à afficher dans la page de suppression.
+Vous pouvez `getContext()` l’utiliser pour récupérer le contexte actuel dans lequel l’image est en cours d’exécution. La fonction prend en compte les valeurs de propriété valides que vous pouvez utiliser dans votre logique de page de suppression pour déterminer le contenu à afficher `getContext((Context) =>{})` dans la page de [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) `Context` suppression.
 
 #### <a name="include-authentication"></a>Inclure l’authentification
 
-Vous pouvez exiger l’authentification avant d’autoriser un utilisateur à supprimer le contenu de l’onglet. Les informations de contexte peuvent être utilisées pour vous aider à créer des demandes d’authentification et des URL de page d’autorisation. Consultez la rubrique [flux d’authentification Microsoft teams pour les onglets](~/tabs/how-to/authentication/auth-flow-tab.md). Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` `validDomains` tableau.
+Vous pouvez exiger une authentification avant d’autoriser un utilisateur à supprimer le contenu de l’onglet. Les informations de contexte peuvent être utilisées pour créer des demandes d’authentification et des URL de page d’autorisation. Voir [flux d’authentification Microsoft Teams pour les onglets.](~/tabs/how-to/authentication/auth-flow-tab.md) Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` `validDomains` tableau.
 
-Vous trouverez ci-dessous un exemple de bloc de code de suppression d’onglet :
+Voici un exemple de bloc de code de suppression d’onglet :
 
 ```html
 <body>
@@ -82,11 +82,11 @@ Vous trouverez ci-dessous un exemple de bloc de code de suppression d’onglet 
 
 ```
 
-Lorsqu’un utilisateur sélectionne **supprimer** dans le menu déroulant de l’onglet, teams charge la `removeUrl` page facultative (désignée dans votre **page de configuration**) dans un IFRAME. Ici, l’utilisateur voit s’afficher un bouton chargé avec la `onClick()` fonction qui appelle `microsoftTeams.settings.setValidityState(true)` et active le bouton **supprimer** situé dans la partie inférieure du cadre de la page de suppression.
+Lorsqu’un utilisateur  sélectionne Supprimer du menu déroulant de l’onglet, Teams charge la page facultative (désignée dans votre page de `removeUrl` **configuration)** dans un IFrame. Ici, un bouton chargé avec la fonction qui appelle et active le bouton Supprimer se trouve en bas de l’IFrame de `onClick()` la page de `microsoftTeams.settings.setValidityState(true)` suppression. 
 
-Après l’exécution du gestionnaire de suppression, `removeEvent.notifySuccess()` ou `removeEvent.notifyFailure()` avertir les équipes du résultat de la suppression de contenu.
+Après l’exécution du handler de suppression, ou `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` avertit Teams du résultat de la suppression de contenu.
 
 >[!NOTE]
->Pour vous assurer que le contrôle d’un utilisateur autorisé sur un onglet n’est pas inhibé, teams supprime l’onglet dans les cas de réussite et d’échec. \
->Teams active le bouton **supprimer** au bout de 5 secondes, même si votre onglet n’a pas été appelé `setValidityState()` . \
->Lorsque l’utilisateur sélectionne **supprimer** teams supprime l’onglet après 30 secondes, que vos actions soient terminées ou non.
+>Pour vous assurer que le contrôle d’un utilisateur autorisé sur un onglet n’est pas inhibé, Teams supprime l’onglet dans les cas de réussite et d’échec.\
+>Teams active le bouton **Supprimer** après 5 secondes, même si votre onglet n’a pas appelé `setValidityState()` .\
+>Lorsque l’utilisateur sélectionne **Supprimer** Teams, l’onglet est supprimé après 30 secondes, que vos actions soient terminées ou non.

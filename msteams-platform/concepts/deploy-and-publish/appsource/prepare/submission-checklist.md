@@ -1,92 +1,95 @@
 ---
 title: Liste de vérification pour l’envoi
-description: Liste de vérification à utiliser avant la publication de votre application Microsoft teams vers AppSource
-keywords: teams publier le magasin Office Publishing liste de vérification de la soumission applications teams AppSource validation
-ms.openlocfilehash: 1b25a449901c303269334e5cea6de46fa3b6f6e5
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+description: Liste de vérification à utiliser avant la publication de votre application Microsoft Teams dans AppSource
+keywords: teams publish store office publishing checklist submission Teams apps appsource validation
+ms.openlocfilehash: 8d20d0106c1b2d8da38c5802b977634925afffcc
+ms.sourcegitcommit: db19fee033b41152267bb524d67aee5b7f64b04a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796301"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797474"
 ---
-# <a name="prepare-for-appsource-submission"></a>Préparer l’envoi de AppSource  
+# <a name="prepare-for-appsource-submission"></a>Préparer la soumission d’AppSource  
 
-Pour figurer sur AppSource, votre application doit passer par un processus d’approbation. Il s’agit d’un service gratuit fourni par le groupe Microsoft teams qui vérifie que votre application fonctionne comme décrit, contient toutes les métadonnées appropriées et fournit un contenu qui pourrait être utile à un utilisateur final. Pour vous aider à obtenir une approbation rapide, vérifiez que votre application remplit les conditions et exigences suivantes :
+Pour être répertoriée sur AppSource, votre application doit passer par un processus d’approbation. Il s’agit d’un service gratuit fourni par le groupe Microsoft Teams qui vérifie que votre application fonctionne comme décrit, contient toutes les métadonnées appropriées et fournit du contenu qui serait utile pour un utilisateur final. Pour vous aider à obtenir une approbation rapide, assurez-vous que votre application répond aux exigences et instructions suivantes :
 
-* **Méthode de distribution :** Assurez-vous que votre application est destinée à être compubliée sur une plateforme de magasin. Il existe d' [autres options](../../overview.md) permettant de distribuer votre application sans la publier sur AppSource.
-* **Stratégies de validation :** Votre application doit transmettre toutes les [stratégies de validation AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) actuelles avant l’envoi. Veuillez noter que ces stratégies peuvent faire l’objet de modifications. 
-* * * Testez votre application avec l' [outil de validation de manifeste](#teams-app-validation-tool) .
-* **Page de détails de l’application :** Votre application doit s’aligner sur la liste de vérification de la  [page détaillée](detail-page-checklist.md)de l’application.
-* **Conseils et cas d’échec fréquents :** Prêtez une attention particulière aux [conseils cités et aux cas souvent infructueuses](frequently-failed-cases.md)  pour améliorer le temps d’envoi et d’approbation de votre application.
-* **Manifeste de l’application :** Vérifiez le manifeste de votre application par rapport à la [liste de vérification du manifeste](app-manifest-checklist.md)de l’application.
-* **Test et débogage :** Assurez-vous que vous avez entièrement [testé et débogué votre application](../../../build-and-test/debug.md).
-* **Test des notes :** Inclure vos [notes de test pour validation](#test-notes-for-validation)
-* **Stratégies de confidentialité :** Assurez-vous que votre [politique de confidentialité, les conditions d’utilisation et les URL de support](#privacy-policy-terms-of-use-and-support-urls) suivent nos instructions.
+* **Méthode de distribution :** Assurez-vous que votre application est destinée à être publiée sur une plateforme du Store. Il existe [d’autres options](../../overview.md) de distribution de votre application sans publication dans AppSource.
+* **Stratégies de validation :** Votre application doit transmettre toutes les stratégies de [validation AppSource actuelles](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) avant sa soumission. 
+  > [!NOTE] 
+  > Les stratégies de validation Appsource sont sujettes à modification.
+* **Préparation mobile :** Votre application doit être mobile réactive. Si votre application contient des onglets, ils doivent respecter les [instructions](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) de conception [pour](~/tabs/design/tabs-mobile.md) appareils mobiles et votre application ne doit respecter aucune exigence de vente à la vente sur le système d’exploitation mobile (iOS et Android).
+* **Testez vous-même votre application :** Testez votre application à l’aide [de l’outil de validation de manifeste.](#teams-app-validation-tool)
+* **Page de détails de l’application :** Votre application doit s’aligner sur la liste [de contrôle de la page de détails de l’application.](detail-page-checklist.md)
+* **Conseils et cas d’échec fréquents :** Accordez une attention [](frequently-failed-cases.md) particulière aux conseils répertoriés et aux cas d’échec fréquents pour améliorer le temps de soumission et d’approbation de votre application.
+* **Manifeste de l’application :** Vérifiez le manifeste de votre application par rapport à la liste [de contrôle du manifeste de l’application.](app-manifest-checklist.md)
+* **Test et débogage :** Assurez-vous que vous avez entièrement testé et [débouggé votre application.](../../../build-and-test/debug.md)
+* **Notes de test :** Inclure vos [notes de test pour la validation](#test-notes-for-validation)
+* **Stratégies de confidentialité :** Assurez-vous [que votre politique de confidentialité, vos conditions d’utilisation et vos URL de support](#privacy-policy-terms-of-use-and-support-urls) respectent nos recommandations.
 
-Une fois que vous avez effectué toutes les exigences ci-dessus, envoyez votre package à AppSource via le [Centre de partenaires](/office/dev/store/use-partner-center-to-submit-to-appsource).
+Une fois que vous avez rempli toutes les conditions ci-dessus, envoyez votre package à AppSource via [l’Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
 
-## <a name="teams-app-validation-tool"></a>Outil de validation des applications teams
+## <a name="teams-app-validation-tool"></a>Outil de validation d’application Teams
 
-L’outil de validation d’application se compose d’un [validateur d’application](#teams-app-validator) et d’une [liste de vérification préliminaire](#preliminary-checklist). L’outil réplique les mêmes cas de test utilisés par [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) pour évaluer la soumission de votre application. Par conséquent, il est essentiel de transmettre tous les cas de test avant de soumettre votre solution à AppSource pour approbation. L’outil peut être trouvé dans plusieurs zones de la plateforme teams :
+L’outil de validation d’application se compose d’un [validateur](#teams-app-validator) d’application et [d’une liste de contrôle préliminaire.](#preliminary-checklist) L’outil réplique les mêmes cas de test utilisés par [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) pour évaluer la soumission de votre application. Par conséquent, il est essentiel de réussir tous les cas de test avant de soumettre votre solution à AppSource pour approbation. L’outil se trouve dans plusieurs zones de la plateforme Teams :
 
 > [!div class="checklist"]
 >
 > * [**Page d’accueil du validateur d’application**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Kit de développement Visual Studio Visual Studio teams**](/toolkit/visual-studio-code-overview.md)
+> * [**Boîte à outils Visual Studio Code teams**](/toolkit/visual-studio-code-overview.md)
 > * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
 
-### <a name="teams-app-validator"></a>Validateur d’application teams
+### <a name="teams-app-validator"></a>Validateur d’application Teams
 
-La page **valider** vous permet de vérifier votre package d’application avant de l’envoyer à AppSource. Il suffit de charger votre package d’application et l’outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque test ayant échoué, la description fournit un lien vers la documentation pour vous aider à résoudre l’erreur.
+La page **Valider** vous permet de vérifier votre package d’application avant de le soumettre à AppSource. Chargez simplement votre package d’application et l’outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque test qui a échoué, la description fournit un lien de documentation pour vous aider à résoudre l’erreur.
 
 ![Outil de validation](../../../../assets/images/validation-tool/validator.png)
 
-### <a name="preliminary-checklist"></a>Liste de vérification préliminaire
+### <a name="preliminary-checklist"></a>Liste de contrôle préliminaire
 
-Pour les scénarios de test difficiles à automatiser, la liste de vérification préliminaire couvre sept des cas de test les plus fréquents.
+Pour les scénarios de test qui sont difficiles à automatiser, la liste de contrôle préliminaire surfaces sept des cas de test les plus couramment échoués.
 
-![Liste de vérification préliminaire](../../../../assets/images/validation-tool/preliminary-checklist.png)
+![Liste de contrôle préliminaire](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a>Stratégie de confidentialité, conditions d’utilisation et URL de support
+## <a name="privacy-policy-terms-of-use-and-support-urls"></a>Politique de confidentialité, conditions d’utilisation et URL de support
 
 ### <a name="privacy-policy"></a>Politique de confidentialité
 
-Recommandations en matière de politique de confidentialité :
+Recommandations en matière de politique de confidentialité :
 
 > [!div class="checklist"]
 >
-> * La stratégie de confidentialité peut être spécifique à votre application et/ou une stratégie globale pour tous vos services.
-> * Si vous utilisez une stratégie de confidentialité générique, il doit faire référence aux « services », « applications » et « plateformes » pour inclure votre application teams ainsi que votre site Web.
-> * Elle doit inclure le mode de gestion du stockage des données utilisateur, de la rétention, de la suppression et des contrôles de sécurité des utilisateurs.
-> * Il doit inclure vos coordonnées.
+> * La politique de confidentialité peut être spécifique à votre application et/ou à une stratégie globale pour tous vos services.
+> * Si vous utilisez une stratégie de confidentialité générique, elle doit faire référence aux « services », aux « applications » et aux « plateformes » pour inclure votre application Teams ainsi que votre site web.
+> * Elle doit inclure la façon dont vous traitez le stockage des données utilisateur, la rétention, la suppression et les contrôles de sécurité des données utilisateur.
+> * Il doit inclure vos informations de contact.
 > * Il ne doit pas contenir de liens rompus, d’URL bêta ou d’URL de transit.
 
 ### <a name="terms-of-use"></a>Conditions d’utilisation
 
-Votre déclaration de conditions d’utilisation doit être spécifique et applicable à votre application et/ou à votre offre de complément.
+Votre déclaration de conditions d’utilisation doit être spécifique et applicable à votre application et/ou votre offre de add-in.
 
 ### <a name="support-urls"></a>URL de prise en charge
 
-Vos URL de prise en charge ne doivent pas obligatoirement nécessiter une authentification ou des informations d’identification pour vous contacter pour les problèmes liés à votre application.
+Vos URL de support ne doivent pas nécessiter d’authentification ou d’informations d’identification pour vous contacter pour tout problème avec votre application.
 
 ## <a name="test-notes-for-validation"></a>Notes de test pour la validation
 
-Veuillez inclure les éléments suivants :
+Veuillez inclure les informations suivantes :
 
-* Vous devez fournir au moins deux informations d’identification d’ouverture de session, un administrateur et un autre non-administrateur.
+* Vous devez fournir au moins deux informations d’identification de connexion, un administrateur et un non administrateur.
 
-* À des fins de vérification, les comptes que vous fournissez doivent disposer de données pré-renseignées suffisantes.
+* À des fins de vérification, les comptes que vous fournissez doivent avoir suffisamment de données pré-remplies.
 
-* Pour les applications d’entreprise, les applications où un abonnement est requis, ou les applications où une dépendance client/domaine Office 365 est requise, vous devez fournir un troisième compte dans le même domaine qui n’est pas préconfiguré pour votre application afin de valider l’expérience utilisateur de première exécution.
+* Pour les applications d’entreprise, les applications où un abonnement est requis ou les applications où il existe une dépendance client/domaine Office 365, vous devez fournir un troisième compte dans le même domaine qui n’est pas pré-configuré pour votre application afin que nous pouvons valider l’expérience utilisateur de première utilisation.
 
-* Si votre application dispose de fonctionnalités Premium/mises à niveau, un compte disposant de l’accès nécessaire doit être fourni pour tester cette expérience.
+* Si votre application dispose de fonctionnalités premium/mises à niveau, un compte avec l’accès nécessaire doit être fourni pour tester cette expérience.
 
-* Vous pouvez choisir de télécharger vos notes de test sur SharePoint. Si c’est le cas, indiquez un lien public vers le fichier.
+* Vous pouvez choisir de télécharger vos notes de test sur SharePoint. Si c’est le cas, veuillez fournir un lien public vers le fichier.
 
-* **Comptes de test** . Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou safelisting à partir du serveur principal. En outre, si une étendue de conversation d’équipe/de groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d’équipe.
+* **Comptes de test**. Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou la liste sécurisée à partir du back-end. En outre, si une étendue de conversation d’équipe/groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d’équipe.
 
-* **Étapes d’intégration** . Si une préconfiguration par un administrateur client est requise pour utiliser l’application, incluez les étapes et/ou fournissez les comptes administrateur et non administrateur configurés pour la validation. Remarque : vous pouvez vous inscrire pour obtenir un abonnement [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) . Elle est *gratuite* pendant 90 jours et se renouvelle en permanence tant que vous l’utiliserez pour l’activité de développement.
+* **Étapes d’intégration.** Si la pré-configuration par un administrateur client est requise pour utiliser l’application, incluez les étapes et/ou fournissez des comptes d’administrateur et non administrateur configurés pour la validation. Remarque : vous pouvez vous inscrire à un abonnement au programme pour les développeurs [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Il est *gratuit pendant* 90 jours et est continuellement renouvelé tant que vous l’utilisez pour l’activité de développement.
 
-* **Remarques concernant les fonctionnalités de l’application dans teams** : détaillez toutes les fonctionnalités proposées par l’application dans teams et les étapes de test de chaque fonctionnalité.
+* **Remarques concernant les fonctionnalités de** l’application dans Teams : détaillez toutes les fonctionnalités de l’application dans Teams et les étapes de test de chaque fonctionnalité.
 
-* **Vidéo illustrant la fonctionnalité de l’application (facultatif)** : vous pouvez fournir un enregistrement vidéo du produit pour que nous comprenions entièrement les fonctionnalités de l’application.
+* **Vidéo montrant la fonctionnalité de** l’application (facultatif) : vous pouvez fournir un enregistrement vidéo du produit pour nous aider à bien comprendre les fonctionnalités de l’application.

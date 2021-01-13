@@ -5,12 +5,12 @@ description: Créez rapidement un onglet personnel Microsoft Teams à l’aide d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: ae64e2a8216d2b91ec08bd9f4418f7d640d5b189
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795446"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797805"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft Teams
 
@@ -177,11 +177,11 @@ Félicitations ! Vous avez une application Teams avec un onglet personnel qui f
 ## <a name="learn-more"></a>En savoir plus
 
 * [](../tabs/how-to/authentication/auth-aad-sso.md)Authentifier les utilisateurs d’onglets avec l’authentification unique : si vous souhaitez uniquement que les utilisateurs autorisés l’affichent, configurer l’authentification unique (SSO) via Azure Active Directory (AD).
-* [Incorporer du contenu](../tabs/how-to/add-tab.md#tab-requirements)à partir d’une application web ou d’une page web existante : nous vous avons montré comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.
+* [Incorporer du contenu](../tabs/how-to/tab-requirements.md)à partir d’une application web ou d’une page web existante : nous vous avons montré comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.
 * [Créez une expérience transparente pour votre onglet](../tabs/design/tabs.md): consultez les recommandations pour concevoir des onglets Teams.
 * [Créer des onglets pour les appareils mobiles](../tabs/design/tabs-mobile.md): comprendre comment développer des onglets pour téléphones et tablettes.
-* [Utiliser les données Teams avec l’API Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Créer un onglet sans le kit de ressources](../tabs/how-to/add-tab.md)
+* [Utiliser les données Teams avec Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Créer un onglet sans le kit de ressources](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Leçon suivante
 
