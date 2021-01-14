@@ -4,12 +4,12 @@ description: Décrit le schéma de manifeste pour Microsoft Teams
 keywords: schéma de manifeste teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797051"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845629"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -489,11 +489,11 @@ L’élément est un tableau (maximum de 1 élément) avec tous les éléments d
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à l’ID d’application global.|
-|`commands`|tableau d’objets|10 |✔|tableau de commandes pris en charge par l’extension de messagerie|
+|`commands`|tableau d’objets|10 |✔|Tableau de commandes pris en charge par l’extension de messagerie|
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
-|`messageHandlers`|tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être répertoriés dans `validDomains`|
+|`messageHandlers`|tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
 |`messageHandlers.type`|string|||Type de handler de messages. Doit être `"link"`.|
-|`messageHandlers.value.domains`|tableau de chaînes|||tableau de domaines pour l’inscription du handler de message de lien.|
+|`messageHandlers.value.domains`|tableau de chaînes|||Tableau de domaines pour l’inscription du handler de message de lien.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
