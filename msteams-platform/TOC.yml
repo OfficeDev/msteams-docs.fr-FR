@@ -34,19 +34,19 @@
       items:
         - name: Chatbot avec C# (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot avec JavaScript (GitHub)
+        - name: Chatbot avec Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Chatbot avec Python (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: Exemples d'extensions de messagerie
       items:
-        - name: Commandes d'action avec C#/.NET (GitHub)
+        - name: Commandes d'action avec C#/ (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Commandes d'action avec TypeScript/Node.js (GitHub)
+        - name: Commandes d'action avec Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Commandes de recherche avec C#/.NET (GitHub)
+        - name: Commandes de recherche avec C#/ (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Commandes de recherche avec TypeScript/Node.js (GitHub)
+        - name: Commandes de recherche avec Node.js (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
 - name: Principes fondamentaux de l'application
   items:
@@ -74,7 +74,7 @@
       href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
       href: samples/shifts-wfm-connectors.md
-    - name: Installer Moodle LMS
+    - name: Installer le Moodle LMS
       href: resources/moodleInstructions.md
     - name: Créer un bouton de partage Teams
       href: concepts/build-and-test/share-to-teams.md
@@ -126,12 +126,14 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: Kit de développement logiciel client JavaScript Teams
+      href: tabs/how-to/using-teams-client-sdk.md
     - name: Node.js Bot Framework pour les bots et les extensions de messagerie (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: .NET Bot Framework pour les bots et les extensions de messagerie (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Kits de développement logiciel (SDK) Microsoft Graph
-      href: 'https://docs.microsoft.com/en-us/graph/sdks/sdks-overview'
+      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - name: Kits de développement logiciel (SDK) hérités
       items:
         - name: Bots SDK (v3)
@@ -182,17 +184,17 @@
       href: tabs/what-are-tabs.md
     - name: Démarrages rapides
       items:
-        - name: Onglet Personnel avec Nœud.js/Ne pas réagir
+        - name: Onglet Personnel avec Nœud.js
           href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: Onglet Personnel avec C# /ASP.NET Core
           href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Onglet Personnel avec C# /ASP.NET MVC
+        - name: Onglet Personnel avec C# /ASP.NET Core MVC
           href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Onglet Canal Personnel avec Nœud.js/Ne pas réagir
+        - name: Onglet Canal Personnel avec Nœud.js
           href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
         - name: Onglet Canal Personnel avec C# /ASP.NET Core
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Onglet Canal Personnel avec C# /ASP.NET MVC
+        - name: Onglet Canal Personnel avec C# /ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
     - name: Créer une page de contenu
       href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Créer une page de suppression
       href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Utilisation du kit de développement logiciel client JavaScript Teams
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: Obtenir un contexte supplémentaire
+    - name: Obtenir un contexte Teams pour votre onglet
       href: tabs/how-to/access-teams-context.md
 - name: Construire des bots
   items:
