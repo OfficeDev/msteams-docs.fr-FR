@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Comment s’abonner à des événements de conversation à partir de votre bot Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f0da861834bbf221fe715d35c0beea6c3bd08f26
-ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
+ms.openlocfilehash: 17d13d51ab26aba60defb962dd425c1aed5b4133
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "49739034"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911960"
 ---
 # <a name="subscribe-to-conversation-events"></a>S’abonner à des événements de conversation
 
@@ -529,7 +529,7 @@ _ * *
 
 L’événement est envoyé à votre bot s’il est supprimé d’une équipe et chaque fois qu’un utilisateur est supprimé d’une équipe dont il `teamMemberRemoved` est membre. Vous pouvez déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur en regardant `Activity` l’objet du `turnContext` .  Si le champ de l’objet est identique au champ de l’objet, le membre supprimé est le bot, sinon, il s’agit `Id` `MembersRemoved` `Id` `Recipient` d’un utilisateur.  Le bot est `Id` généralement : `28:<MicrosoftAppId>`
 
-[!Note] Lorsqu’un utilisateur est supprimé définitivement d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
+[!Note] Lorsqu’un utilisateur est définitivement supprimé d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -1092,3 +1092,11 @@ async def on_reactions_removed(
 ```
 
 * * *
+
+## <a name="samples"></a>Exemples
+Pour obtenir un exemple de code montrant les événements de conversation de bots, voir :
+
+[Exemple d’événements de conversation de bots Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+
+
+

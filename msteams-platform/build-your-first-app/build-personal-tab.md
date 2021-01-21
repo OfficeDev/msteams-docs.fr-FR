@@ -5,12 +5,12 @@ description: Créez rapidement un onglet personnel Microsoft Teams à l’aide d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797805"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911911"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft Teams
 
@@ -51,7 +51,7 @@ La échafaudage de l’application fournit les composants pour le rendu de votre
 
 ## <a name="2-customize-your-tab-content-page"></a>2. Personnaliser la page de contenu de votre onglet
 
-Compilez une liste de contacts importants dans votre organisation. Copiez et mettez à jour l’extrait de code suivant avec les informations qui vous sont pertinentes ou, par souci de temps, utilisez le code tel qu’il est.
+Compilez une liste de contacts importants dans votre organisation. Copiez et mettez à jour l’extrait de code suivant avec les informations qui vous sont pertinentes ou, dans un souci de temps, utilisez le code tel qu’il est.
 
 ```JSX
 <div>
@@ -102,7 +102,7 @@ Les bonnes applications sont natives de Teams. Il est donc important que votre o
 
 Le [SDK client JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) teams peut rendre votre application sensible aux modifications de thème dans le client et y réagir. Examinons comment faire.
 
-### <a name="get-context-about-the-teams-client"></a>Obtenir du contexte sur le client Teams
+### <a name="get-context-about-the-teams-client"></a>Obtenir le contexte sur le client Teams
 
 Dans votre fichier, il existe un appel qui fournit des informations sur, entre autres, le `Tab.js` `microsoftTeams.getContext()` thème client [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) configuré. Grâce à la échafaudage de l’application, utilisez ce code tel qu’il est pour accéder à `context` l’interface et à ses propriétés.
 
@@ -120,7 +120,7 @@ componentDidMount(){
 
 ### <a name="create-a-theme-change-handler"></a>Créer un handler de modification de thème
 
-Avec les propriétés en main, votre application a une bonne compréhension de ce qui se passe `context` autour de lui dans Teams. Toutefois, l’application ne sait toujours pas que son apparence doit refléter le thème choisi par l’utilisateur.
+Avec les propriétés en main, votre application a une bonne compréhension de ce qui se passe `context` autour de elle dans Teams. Toutefois, l’application ne sait toujours pas que son apparence doit refléter le thème choisi par l’utilisateur.
 
 Vous avez besoin d’un handler pour que l’état de votre application change avec le thème. Insérez le handler de modification de thème suivant immédiatement après `microsoftTeams.getContext()` l’appel.
 
@@ -137,7 +137,7 @@ Vous avez besoin d’un handler pour que l’état de votre application change a
 Votre responsable des modifications de thème est en place, mais vous avez besoin d’un code qui répond à ces modifications et aligne les couleurs de votre onglet sur le thème actuel.
 
 > [!NOTE]
-> L’exemple suivant est simplement une façon d’appliquer des styles à votre onglet. Utilisez le code tel qu’il est, développez-le ou écrivez le vôtre.
+> L’exemple suivant n’est qu’une façon d’appliquer des styles à votre onglet. Utilisez le code tel qu’il est, développez-le ou écrivez le vôtre.
 
 Dans la `render()` fonction, stockez l’état fourni par le handler de modification de thème dans `isTheme` .
 
@@ -176,12 +176,11 @@ Félicitations ! Vous avez une application Teams avec un onglet personnel qui f
 
 ## <a name="learn-more"></a>En savoir plus
 
-* [](../tabs/how-to/authentication/auth-aad-sso.md)Authentifier les utilisateurs d’onglets avec l’authentification unique : si vous souhaitez uniquement que les utilisateurs autorisés l’affichent, configurer l’authentification unique (SSO) via Azure Active Directory (AD).
-* [Incorporer du contenu](../tabs/how-to/tab-requirements.md)à partir d’une application web ou d’une page web existante : nous vous avons montré comment créer du contenu pour un onglet personnel, mais vous pouvez également charger du contenu à partir d’une URL externe.
-* [Créez une expérience transparente pour votre onglet](../tabs/design/tabs.md): consultez les recommandations pour concevoir des onglets Teams.
-* [Créer des onglets pour les appareils mobiles](../tabs/design/tabs-mobile.md): comprendre comment développer des onglets pour téléphones et tablettes.
-* [Utiliser les données Teams avec Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Créer un onglet sans le kit de ressources](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* Suivez nos [instructions de conception](../tabs/design/tabs.md) et créez avec des [modèles d’interface utilisateur](../concepts/design/design-teams-app-ui-templates.md) prêts pour la production pour créer une expérience transparente.
+* Comprendre [les considérations mobiles pour](../tabs/design/tabs-mobile.md) les onglets.
+* [Ajoutez l’authentification sso à votre onglet.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Utiliser les données Teams avec [Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Créez un onglet sans le kit de ressources.](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-lesson"></a>Leçon suivante
 

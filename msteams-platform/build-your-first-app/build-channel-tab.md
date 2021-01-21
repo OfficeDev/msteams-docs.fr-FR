@@ -5,12 +5,12 @@ description: Créez rapidement un onglet de groupe et de canal Microsoft Teams �
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: ae06217cf9ffd99ce94aff981fbbec19136d4aeb
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 0692d28653063c2f886db9a03e7136379edde9c3
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797875"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911876"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Créer un onglet de canal et de groupe pour Microsoft Teams
 
@@ -36,7 +36,7 @@ Vous pouvez faciliter la recherche de ces informations en construisant un onglet
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Si vous ne l’avez pas encore fait, assurez-vous que vous comprenez et installez les [conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
+Si vous ne l’avez pas encore fait, assurez-vous de bien comprendre et [d’installer les conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
 
 ## <a name="1-create-your-app-project"></a>1. Créer votre projet d’application
 
@@ -47,7 +47,7 @@ Le Shared Computer Toolkit Microsoft Teams vous aide à configurer votre applica
 
 1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Create a new Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
 1. Lorsque vous y invitez, connectez-vous avec votre compte de développement Microsoft 365.
-1. Dans **l’écran Ajouter des fonctionnalités,** sélectionnez **Onglet,** puis **Suivant**.
+1. Dans **l’écran Ajouter des fonctionnalités,** **sélectionnez Onglet,** puis **Suivant**.
 1. Entrez un nom pour votre application Teams. (Il s’agit du nom par défaut de votre application, ainsi que du nom du répertoire de projet d’application sur votre ordinateur local.) Sélectionnez **l’onglet de canal Groupe ou Teams.**
 1. Sélectionnez **Terminer** en bas de l’écran pour configurer votre projet.  
 
@@ -103,7 +103,7 @@ render() {
 }
 ```
 
-Ajoutez la règle suivante à (également située dans ) afin que les liens de messagerie soient plus faciles à lire, quel que `App.css` soit le thème `src/components` utilisé.
+Ajoutez la règle suivante (également située dans ) afin que les liens de messagerie soient plus faciles à lire, quel que `App.css` soit le thème `src/components` utilisé.
 
 ```CSS
 a {
@@ -159,7 +159,7 @@ Dans l’intérêt du temps, vous allez créer et exécuter votre application lo
 
 Une fois terminé, une compilation a **réussi !** dans le terminal. Votre application est en cours d’exécution sur `https://localhost:3000` .
 
-## <a name="7-sideload-your-app-in-teams"></a>7. Chargement de version secondaire de votre application dans Teams
+## <a name="7-sideload-your-app-in-teams"></a>7. Chargement de version de version de votre application dans Teams
 
 Votre application est prête à être testée dans Teams. Pour ce faire, vous devez avoir un compte qui autorise le chargement de version de version d’application. (Si vous n’êtes pas sûr de l’avoir, découvrez comment obtenir un compte [de développement Teams.)](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
 
@@ -179,12 +179,11 @@ Félicitations ! Vous avez une application Teams avec un onglet pour afficher d
 
 ## <a name="learn-more"></a>En savoir plus
 
-* [](../tabs/how-to/authentication/auth-aad-sso.md)Authentifier les utilisateurs d’onglets avec l’authentification unique : si vous souhaitez uniquement que les utilisateurs autorisés l’affichent, configurer l’authentification unique (SSO) via Azure Active Directory (AD).
-* [Incorporer du contenu](../tabs/how-to/add-tab.md#tab-requirements)à partir d’une application web ou d’une page web existante : nous vous avons montré comment créer du contenu pour un onglet, mais vous pouvez également charger du contenu à partir d’une URL externe.
-* [Créez une expérience d’onglet](../tabs/design/tabs.md)transparente : consultez les recommandations pour la conception des onglets Teams.
-* [Créer des onglets pour les appareils mobiles](../tabs/design/tabs-mobile.md): comprendre comment développer des onglets pour téléphones et tablettes.
+* Suivez nos [instructions de conception](../tabs/design/tabs.md) et créez avec des [modèles d’interface utilisateur](../concepts/design/design-teams-app-ui-templates.md) prêts pour la production pour créer une expérience transparente.
+* Comprendre [les considérations mobiles pour](../tabs/design/tabs-mobile.md) les onglets.
+* [Ajoutez l’authentification sso à votre onglet.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Utiliser les données Teams avec [Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
 * [Créer un onglet sans le kit de ressources](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
-* [Utiliser les données Teams avec Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## <a name="next-lesson"></a>Leçon suivante
 

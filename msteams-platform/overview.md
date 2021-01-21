@@ -5,12 +5,12 @@ description: Obtenez une vue d’ensemble de la façon dont les développeurs pe
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 45be2dd7d0e421ac331cfc02703f0b81eab3dfe5
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 9f043fd5bab441ce88b0e04b4254b925aff25aad
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797770"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911883"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -66,7 +66,7 @@ Certaines applications sont simples (envoyer des notifications), tandis que d’
 
 ### <a name="webhooks"></a>Webhooks
 
-**Communiquer avec des applications externes**: [les webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers un canal Teams. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
+**Communiquer avec des applications externes**: [les webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers un canal Teams. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Représentation conceptuelle de l’apparence des connecteurs dans le client Teams." border="false":::
 
@@ -107,7 +107,7 @@ Certaines applications sont simples (envoyer des notifications), tandis que d’
 :::row:::
    :::column span="2":::
 
-## <a name="integrate-with-teams"></a>Intégration à Teams
+## <a name="integrate-with-teams"></a>S'intégrer aux équipes
 
    Associez les fonctionnalités que les utilisateurs aiment d’une application web, d’un service ou d’un système existant aux fonctionnalités collaboratives de Teams.
 
@@ -139,7 +139,7 @@ Certaines applications sont simples (envoyer des notifications), tandis que d’
 ## <a name="resources"></a>Ressources
 
 * [Ajouter un bouton Partager avec Teams à votre site web](concepts/build-and-test/share-to-teams.md)
-* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Interface utilisateur Fluent</a>
+* [Concevoir votre application Teams](concepts/design/design-teams-app-overview.md)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [SDK Bot Framework pour JavaScript et](https://github.com/Microsoft/botbuilder-js) [SDK Bot Framework pour .NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publier votre application dans une organisation ou AppSource](concepts/deploy-and-publish/overview.md)
+* SDK Bot Framework pour [JavaScript et](https://github.com/Microsoft/botbuilder-js) [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Publier votre application Teams](concepts/deploy-and-publish/overview.md)
