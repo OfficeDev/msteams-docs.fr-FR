@@ -1,15 +1,16 @@
 ---
 title: Référence du schéma de manifeste
 description: Décrit le schéma de manifeste pour Microsoft Teams
+ms.topic: reference
 keywords: schéma de manifeste teams
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 8fff56d229cc137df8356b06214893dc984396a0
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845629"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014606"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -285,7 +286,7 @@ Le schéma définit les propriétés suivantes :
 
 *Chaîne facultative, mais recommandée*
 
-L https:// URL référente au schéma JSON pour le manifeste.
+L https:// URL qui fait référence au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -327,7 +328,7 @@ Spécifie des informations sur votre entreprise. Pour les applications soumises 
 
 **Obligatoire** — objet
 
-Nom de l’expérience de votre application, affiché aux utilisateurs dans l’expérience Teams. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
+Nom de l’expérience de votre application, affiché aux utilisateurs dans l’expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -351,13 +352,13 @@ Assurez-vous que votre description décrit précisément votre expérience et fo
 
 **Facultatif —** chaîne
 
-Un identificateur unique pour cette application dans la notation de domaine inverse ; par exemple, com.example.myapp. Longueur maximale : 64 caractères.
+Identificateur unique de cette application dans la notation de domaine inverse ; par exemple, com.example.myapp. Longueur maximale : 64 caractères.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
 **Facultatif** — objet
 
-Autorise la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation.](~/concepts/build-and-test/apps-localization.md)
+Permet la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation.](~/concepts/build-and-test/apps-localization.md)
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -421,7 +422,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`contentUrl`|string||✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans le canevas Teams.|
 |`websiteUrl`|string|||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`searchUrl`|string|||L https:// URL pointant vers les requêtes de recherche d’un utilisateur.|
-|`scopes`|tableau d’enums|1 |✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`scopes`|tableau d’enums|1 |✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 |`context` | tableau d’enums| 2 || Ensemble `contextItem` d’étendues où un onglet est pris en charge.|
 
 > [!NOTE]
@@ -438,11 +439,11 @@ L’élément est un tableau (maximum de 1 élément actuellement un seul bot es
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|string|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
-|`scopes`|tableau d’enums|3 |✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
+|`scopes`|tableau d’enums|3|✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
 |`needsChannelSelector`|valeur booléenne|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Valeur par défaut : **`false`**|
 |`isNotificationOnly`|valeur booléenne|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Valeur par défaut : **`false`**|
 |`supportsFiles`|valeur booléenne|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Valeur par défaut : **`false`**|
-|`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni uniquement à des fins de test et d’exploration et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
+|`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
 |`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni uniquement à des fins de test et d’exploration et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
@@ -451,7 +452,7 @@ Liste facultative de commandes que votre bot peut recommander aux utilisateurs. 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`items.scopes`|tableau d’enums|3 |✔|Spécifie l’étendue pour laquelle la liste de commandes est valide. Les options sont `team`, `personal` et `groupchat`.|
+|`items.scopes`|tableau d’enums|3|✔|Spécifie l’étendue pour laquelle la liste de commandes est valide. Les options sont `team`, `personal` et `groupchat`.|
 |`items.commands`|tableau d’objets|10 |✔|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -508,8 +509,8 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`type`|string|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Par défaut : **requête**.|
 |`description`|string|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
 |`initialRun`|valeur booléenne|||Valeur booléle qui indique si la commande doit être exécuté initialement sans paramètre. Par défaut : **false**.|
-|`context`|tableau de chaînes|3 ||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
-|`fetchTask`|valeur booléenne|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche. Par défaut : **false**.|
+|`context`|tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
+|`fetchTask`|valeur booléenne|||Valeur booléle qui indique si le module de tâche doit être récupéré dynamiquement. Par défaut : **false**.|
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
@@ -520,7 +521,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameters.title`|string|32 caractères|✔|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre.|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’une `text, textarea, number, date, time, toggle, choiceset` des .|
+|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’un `text, textarea, number, date, time, toggle, choiceset` des .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
 |`parameters.choices.title`|string|128 caractères|✔|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔|Valeur du choix.|
@@ -572,7 +573,7 @@ Spécifiez votre ID d’application Azure Active Directory (Azure AD) et les inf
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l’oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator

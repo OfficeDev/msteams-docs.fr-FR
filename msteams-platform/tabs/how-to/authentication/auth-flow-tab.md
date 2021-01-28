@@ -1,52 +1,53 @@
 ---
 title: Flux d’authentification pour les onglets
 description: Décrit le flux d’authentification dans les onglets
-keywords: onglets de flux d’authentification des équipes
-ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.topic: conceptual
+keywords: Onglets de flux d’authentification Teams
+ms.openlocfilehash: 9505419a6594529bcf8d19a90d029705e573c67b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552541"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014585"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flux d’authentification Microsoft teams pour les onglets
+# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flux d’authentification Microsoft Teams pour les onglets
 
 > [!Note]
-> Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, vous devez vous assurer que vous utilisez au moins la version 1.4.1 du kit de développement logiciel (SDK) JavaScript Teams.
-> Le kit de développement logiciel teams lance une fenêtre distincte pour le flux d’authentification et, par conséquent, l’attribut samesite peut être défini sur « Lax ». Actuellement, SameSite = None n’est pas pris en charge par le client de bureau teams ni par les versions antérieures de chrome ou Safari.
+> Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, vous devez vous assurer que vous utilisez au moins la version 1.4.1 du SDK JavaScript teams.
+> Le SDK Teams lance une fenêtre distincte pour le flux d’authentification et par conséquent, l’attribut samesite peut être définie sur « Lax ». Actuellement, SameSite=None n’est pas pris en charge par le client de bureau Teams ou les versions antérieures de Chrome ou Safari.
 
-OAuth 2,0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base de OAuth 2,0 est une condition préalable à l’utilisation de l’authentification dans teams ; [Voici une bonne présentation](https://aaronparecki.com/oauth-2-simplified/) qui est plus facile à suivre que les [spécifications formelles](https://oauth.net/2/). Le flux d’authentification pour les onglets et les robots est un peu différent, car les onglets sont très similaires aux sites Web afin qu’ils puissent utiliser OAuth 2,0 directement ; les robots ne sont pas et doivent effectuer quelques opérations différemment, mais les concepts de base sont identiques.
+OAuth 2.0 est une norme ouverte d’authentification et d’autorisation utilisée par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans Teams . [Voici une bonne vue d’ensemble](https://aaronparecki.com/oauth-2-simplified/) plus facile à suivre que la [spécification formelle.](https://oauth.net/2/) Le flux d’authentification pour les onglets et les bots est légèrement différent, car les onglets sont très similaires aux sites web afin qu’ils peuvent utiliser OAuth 2.0 directement ; Les bots ne sont pas et doivent faire certaines choses différemment, mais les concepts de base sont identiques.
 
-*Reportez-vous* à la rubrique [initiate Authentication Flow for Tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) pour obtenir un exemple de flux d’authentification pour les onglets et les robots utilisant le nœud et le [type d’autorisation implicite OAuth 2,0](https://oauth.net/2/grant-types/implicit/).
+*Voir*, Lancer le flux d’authentification pour les [onglets](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) pour un exemple de flux d’authentification pour les onglets et les bots à l’aide de Node et du type d’octroi implicite [OAuth 2.0.](https://oauth.net/2/grant-types/implicit/)
 
-![Diagramme de séquence d’authentification d’onglet](~/assets/images/authentication/tab_auth_sequence_diagram.png)
+![Diagramme de séquence d’authentification par onglet](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
-1. L’utilisateur interagit avec le contenu de la page de configuration ou de contenu de l’onglet, généralement un bouton intitulé « se connecter » ou « se connecter ».
-2. L’onglet construit l’URL pour sa page de démarrage d’authentification, en utilisant éventuellement les informations des espaces réservés d’URL ou en appelant `microsoftTeams.getContext()` teams Client SDK Method afin de rationaliser l’expérience d’authentification pour l’utilisateur. Par exemple, lors de l’authentification auprès d’Azure AD, si le `login_hint` paramètre est défini sur l’adresse e-mail de l’utilisateur, il est possible que l’utilisateur ne doive pas se connecter si cela a été fait récemment, car Azure ad utilise les informations d’identification mises en cache de l’utilisateur si cela est possible : le menu contextuel clignote brièvement, puis disparaît.
+1. L’utilisateur interagit avec le contenu de la page de configuration ou de contenu de l’onglet, généralement un bouton étiqueté « Se connecter » ou « Se connecter ».
+2. L’onglet construit l’URL de sa page de démarrage d’authentification, en utilisant éventuellement les informations des espaces réservé d’URL ou en appelant la méthode du SDK client Teams pour simplifier l’expérience d’authentification de `microsoftTeams.getContext()` l’utilisateur. Par exemple, lors de l’authentification avec Azure AD, si le paramètre est définie sur l’adresse e-mail de l’utilisateur, il se peut que l’utilisateur n’a même pas besoin de se connecter s’il l’a fait récemment, car Azure AD utilisera les informations d’identification mises en cache de l’utilisateur si possible : la fenêtre popup clignote brièvement, puis `login_hint` disparaît.
 3. L’onglet appelle ensuite la méthode `microsoftTeams.authentication.authenticate()` et inscrit les fonctions `successCallback` et `failureCallback`.
-4. Teams ouvre la page de démarrage dans un IFRAME dans une fenêtre contextuelle. La page de démarrage génère `state` des données aléatoires, les enregistre pour une validation ultérieure et les redirige vers le point de terminaison du fournisseur d’identité, par `/authorize` exemple `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` pour Azure ad. Remplacez `<tenant id>` par votre propre ID de client (Context. TID).
-    * Comme les autres flux d’authentification d’application dans Teams, la page de démarrage doit se trouver sur un domaine de sa `validDomains` liste et sur le même domaine que la page de redirection post-connexion.
-    * **Important**: les appels de flux d’octroi implicite OAuth 2,0 pour un `state` paramètre dans la demande d’authentification qui contient des données de session uniques pour empêcher une [attaque de contrefaçon de demande intersite](https://en.wikipedia.org/wiki/Cross-site_request_forgery). Les exemples ci-dessous utilisent un GUID généré de manière aléatoire pour les `state` données.
-5. Sur le site du fournisseur, l’utilisateur se connecte et autorise l’accès à l’onglet.
-6. Le fournisseur dirige l’utilisateur vers la page de redirection OAuth 2,0 de l’onglet avec un jeton d’accès.
-7. L’onglet vérifie que la valeur renvoyée `state` correspond à ce qui a été enregistré précédemment, et appelle `microsoftTeams.authentication.notifySuccess()` , qui appelle à son tour la `successCallback` fonction inscrite à l’étape 3.
-8. Teams ferme la fenêtre contextuelle.
-9. L’onglet affiche l’interface utilisateur de configuration ou actualise ou recharge le contenu des onglets, selon l’emplacement à partir duquel l’utilisateur a démarré.
+4. Teams ouvre la page de démarrage dans un iframe dans une fenêtre. La page de démarrage génère des données aléatoires, les enregistre pour une validation future et les redirige vers le point de terminaison du fournisseur d’identité, par exemple `state` `/authorize` pour Azure `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` AD. Remplacez `<tenant id>` par votre propre ID de client (context.tid).
+    * Comme les autres flux d’authentification d’application dans Teams, la page de démarrage doit se trouver sur un domaine qui figure dans sa liste et sur le même domaine que la page de `validDomains` redirection post-connexion.
+    * **IMPORTANT**: le flux d’octroi implicite OAuth 2.0 appelle un paramètre dans la demande d’authentification qui contient des données de session uniques pour empêcher une attaque par falsification de demande entre `state` [sites.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) Les exemples ci-dessous utilisent un GUID généré de manière aléatoire pour les `state` données.
+5. Sur le site du fournisseur, l’utilisateur se signe et accorde l’accès à l’onglet.
+6. Le fournisseur redirige l’utilisateur vers la page de redirection OAuth 2.0 de l’onglet avec un jeton d’accès.
+7. L’onglet vérifie que la valeur renvoyée correspond à ce qui a été enregistré précédemment et appelle, ce qui appelle à son tour la fonction inscrite à `state` `microsoftTeams.authentication.notifySuccess()` l’étape `successCallback` 3.
+8. Teams ferme la fenêtre pop-up.
+9. L’onglet affiche l’interface utilisateur de configuration ou actualise ou recharge le contenu des onglets, en fonction de l’origine de l’utilisateur.
 
-## <a name="treat-tab-context-as-hints"></a>Considérer le contexte de l’onglet comme des conseils
+## <a name="treat-tab-context-as-hints"></a>Traiter le contexte de l’onglet comme des conseils
 
-Bien que le contexte d’onglet fournisse des informations utiles sur l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez en tant que paramètres d’URL de votre URL de contenu de tabulation ou en appelant la `microsoftTeams.getContext()` fonction dans le kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant peut appeler votre URL de contenu de tabulation avec ses propres paramètres, et une page Web qui emprunte l’identité de Microsoft teams pourrait charger votre URL de contenu d’onglet dans un IFRAME et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser. Reportez-vous aux remarques dans [naviguer jusqu’à la page Authorization (autorisation) à partir de votre page contextuelle](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
+Bien que le contexte de l’onglet fournit des informations utiles concernant l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obtenez en tant que paramètres d’URL de l’URL de contenu de votre onglet ou en appelant la fonction dans le `microsoftTeams.getContext()` SDK client Microsoft Teams. Un acteur malveillant peut appeler l’URL de contenu de votre onglet avec ses propres paramètres, et une page web usurpant l’identité de Microsoft Teams peut charger l’URL du contenu de votre onglet dans un iframe et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser. Reportez-vous aux notes de [la page d’autorisation à partir de votre page popup.](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)
 
 ## <a name="samples"></a>Exemples
 
-Pour obtenir un exemple de code illustrant le processus d’authentification par onglet, voir :
+Pour obtenir un exemple de code montrant le processus d’authentification par onglet, voir :
 
-* [Exemple d’authentification de l’onglet Microsoft Teams (nœud)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Exemple d’authentification de l’onglet Microsoft Teams (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Exemple d’authentification d’onglet Microsoft Teams (nœud)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Exemple d’authentification d’onglet Microsoft Teams (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 ## <a name="more-details"></a>Plus de détails
 
-Pour obtenir une description détaillée de l’implémentation de l’authentification d’onglet pour Azure Active Directory, voir :
+Pour obtenir une procédure pas à pas d’implémentation détaillée de l’authentification par onglet ciblant Azure Active Directory, voir :
 
-* [Authentifier un utilisateur sous un onglet Microsoft teams](~/tabs/how-to/authentication/auth-tab-AAD.md)
+* [Authentifier un utilisateur dans un onglet Microsoft Teams](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Authentification en mode silencieux](~/tabs/how-to/authentication/auth-silent-AAD.md)

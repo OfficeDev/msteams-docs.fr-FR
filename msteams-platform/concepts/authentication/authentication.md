@@ -1,44 +1,45 @@
 ---
-title: Authentifier un utilisateur dans teams
-description: Décrit l’authentification dans teams et son utilisation dans vos applications
-keywords: authentification des équipes AAD SSO OAuth
-ms.openlocfilehash: d3ae57d9937c6794fb743b44ca8210a5afd181bf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Authentification des utilisateurs de l’application
+description: Décrit l’authentification dans Teams et son utilisation dans vos applications
+ms.topic: conceptual
+keywords: Authentification teams OAuth SSO AAD
+ms.openlocfilehash: 6ddcd8a9e847d9216b7e2dcc12733a6cd413b48e
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673657"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014291"
 ---
-# <a name="authentication-in-teams"></a>Authentification dans teams
+# <a name="authenticating-users-in-microsoft-teams"></a>Authentification des utilisateurs dans Microsoft Teams
 
 > [!Note]
-> L’authentification Web sur les clients mobiles nécessite la version 1.4.1 ou une version ultérieure du kit de développement logiciel (SDK) JavaScript Teams.
+> L’authentification web sur les clients mobiles nécessite la version 1.4.1 ou ultérieure du SDK JavaScript teams.
 
-Pour que votre application puisse accéder aux informations utilisateur protégées par Azure Active Directory, ainsi que pour accéder aux données d’autres services comme Facebook et Twitter, votre application doit établir une connexion approuvée avec ces fournisseurs. Si votre application doit utiliser les API Microsoft Graph dans la portée de l’utilisateur, vous devrez également authentifier l’utilisateur pour récupérer les jetons d’authentification appropriés.
+Pour que votre application accède aux informations utilisateur protégées par Azure Active Directory, ainsi qu’aux données d’autres services tels que Facebook et Twitter, votre application devra établir une connexion fiable avec ces fournisseurs. Si votre application doit utiliser les API Microsoft Graph dans l’étendue utilisateur, vous devez également authentifier l’utilisateur pour récupérer les jetons d’authentification appropriés.
 
-Dans Microsoft Teams, il existe deux flux d’authentification différents pour que votre application tire parti. Vous pouvez effectuer un flux d’authentification Web classique dans une [page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) incorporée dans un onglet, une page de configuration ou un module de tâches. Si votre application contient un bot conversationnel, vous pouvez utiliser le flux OAuthPrompt (et éventuellement le service de jeton de l’infrastructure Azure bot) pour authentifier un utilisateur dans le cadre d’une conversation.
+Dans Microsoft Teams, il existe deux flux d’authentification différents dont votre application peut tirer parti. Vous pouvez effectuer un flux d’authentification basé sur le web traditionnel dans une [page](~/tabs/how-to/create-tab-pages/content-page.md) de contenu incorporée dans un onglet, une page de configuration ou un module de tâche. Si votre application contient un bot de conversation, vous pouvez utiliser le flux OAuthPrompt (et éventuellement le service d’authentification d’Azure Bot Framework) pour authentifier un utilisateur dans le cadre d’une conversation.
 
-## <a name="web-based-authentication-flow"></a>Flux d’authentification Web
+## <a name="web-based-authentication-flow"></a>Flux d’authentification web
 
-Vous devrez utiliser le flux d’authentification Web pour les [onglets](~/tabs/what-are-tabs.md)et pouvez choisir de l’utiliser avec des [robots de conversation](~/bots/what-are-bots.md) ou des [extensions de messagerie](~/messaging-extensions/what-are-messaging-extensions.md). Vous utiliserez le [Kit de développement logiciel (SDK) du client JavaScript Microsoft teams](/javascript/api/overview/msteams-client) dans une page de contenu Web pour activer l’authentification, puis incorporez cette page de contenu dans un onglet, une page de configuration ou un module de tâches. Si vous souhaitez utiliser le flux d’authentification Web avec un bot de conversation, vous devez [utiliser un module de tâches avec un bot](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+Vous devez utiliser le flux d’authentification web pour les [onglets](~/tabs/what-are-tabs.md)et choisir de l’utiliser avec des [bots](~/bots/what-are-bots.md) de conversation ou des [extensions de messagerie.](~/messaging-extensions/what-are-messaging-extensions.md) Vous allez utiliser le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) dans une page de contenu web pour activer l’authentification, puis incorporer cette page de contenu dans un onglet, une page de configuration ou un module de tâche. Si vous souhaitez utiliser le flux d’authentification web avec un bot de conversation, vous devez utiliser un module de tâche [avec un bot.](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 
-* Le [flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md) décrit le fonctionnement de l’authentification par onglet dans Teams. Cela montre un flux d’authentification Web standard utilisé pour les onglets.
-* [Authentification Azure ad dans les onglets](~/tabs/how-to/authentication/auth-tab-AAD.md) décrit comment se connecter à Azure Active Directory à partir d’un onglet de votre application dans Teams.
-* [Authentification sans assistance (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) décrit comment réduire les invites de connexion/de consentement dans votre application à l’aide d’Azure Active Directory.
-* Authentification Web dans [dotnet/C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) ou [JavaScript/node. js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Le flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md) décrit le fonctionnement de l’authentification par onglets dans Teams. Il s’agit d’un flux d’authentification web classique utilisé pour les onglets.
+* [L’authentification Azure AD](~/tabs/how-to/authentication/auth-tab-AAD.md) dans les onglets décrit comment se connecter à Azure Active Directory à partir d’un onglet dans votre application dans Teams.
+* [L’authentification en mode silencieux (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) décrit comment réduire les invites de signature/consentement dans votre application à l’aide d’Azure Active Directory.
+* Authentification web en [dotnet/C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) ou [JavaScript/Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 
-## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Le flux OAuthPrompt pour les bots de conversation
+## <a name="the-oauthprompt-flow-for-conversational-bots"></a>Flux OAuthPrompt pour les bots de conversation
 
-La OAuthPrompt de l’infrastructure Azure bot facilite l’authentification pour les applications utilisant des bots conversation. Vous pouvez également tirer parti du service de jeton de l’infrastructure de robots Azure pour faciliter la mise en cache des jetons.
+OAuthPrompt d’Azure Bot Framework facilite l’authentification pour les applications utilisant des bots de conversation. Vous pouvez également tirer parti du service de jeton d’Azure Bot Framework pour faciliter la mise en cache des jetons.
 
-Pour plus d’informations sur l’utilisation de l’OAuthPrompt, consultez la rubrique suivante :
+Pour plus d’informations sur l’utilisation d’OAuthPrompt, voir :
 
-* [Présentation du flux d’authentification des robots](~/bots/how-to/authentication/auth-flow-bot.md) décrit le fonctionnement de l’authentification dans un bot de votre application dans Teams. Cela montre un flux d’authentification non Web utilisé pour les robots sur toutes les versions de Teams (Web, application de bureau et applications mobiles)
-* [Authentification de robot](~/bots/how-to/authentication/add-authentication.md)
-* Exemple d’authentification bot (kit de développement logiciel V3) dans [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) ou [JavaScript/node. js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)
+* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans votre application dans Teams. Cela illustre un flux d’authentification non web utilisé pour les bots sur toutes les versions de Teams (web, application de bureau et applications mobiles)
+* [Authentification bot](~/bots/how-to/authentication/add-authentication.md)
+* Exemple d’authentification de bot (V3 SDK) dans [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) ou [JavaScript/Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)
 
 ## <a name="configure-your-identity-provider"></a>Configurer votre fournisseur d’identité
 
-Quel que soit le flux d’authentification utilisé par votre application (vous pouvez même utiliser les deux), vous devrez configurer votre fournisseur d’identité pour qu’il communique avec votre application Teams. La majorité des exemples et des procédures pas à pas que vous trouverez ici traite principalement de l’utilisation d’Azure Active Directory en tant que fournisseur d’identité. Les concepts s’appliquent néanmoins, quel que soit le fournisseur d’identité que vous utiliserez.
+Quel que soit le flux d’authentification utilisé par votre application (vous utilisez peut-être les deux), vous devez configurer votre fournisseur d’identité pour communiquer avec votre application Teams. La plupart des exemples et des pas à pas que vous trouverez ici porteront principalement sur l’utilisation d’Azure Active Directory comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité que vous utiliserez.
 
-Pour plus d’informations, consultez la rubrique [configuration d’un fournisseur d’identité](~/concepts/authentication/configure-identity-provider.md)
+Pour plus d’informations, [voir configuration d’un fournisseur d’identité](~/concepts/authentication/configure-identity-provider.md)

@@ -1,19 +1,19 @@
 ---
-title: Tester le consentement propre à une ressource dans teams
-description: Comment tester le consentement propre à une ressource dans teams à l’aide de l’affranchissement
+title: Tester le consentement spécifique aux ressources dans Teams
+description: Comment tester le consentement spécifique aux ressources dans Teams à l’aide de Postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
-keywords: autorisation teams graphique des messages RSC
-ms.openlocfilehash: 63b2b708cf775816c5e6c0bb39a36537c2f20722
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.topic: how-to
+keywords: Teams Authorization OAuth SSO AAD rsc Postman Graph
+ms.openlocfilehash: 7360a81108ac900fdf6d03217b667e257ff227fe
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796147"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014515"
 ---
-# <a name="test-rsc-postman-collection-json"></a>Test du JSON de collection du billet RSC
+# <a name="test-rsc-postman-collection-json"></a>Tester la collection postman RSC JSON
 
 ```json
 {

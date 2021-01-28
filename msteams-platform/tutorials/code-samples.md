@@ -1,13 +1,14 @@
 ---
-title: Exemples de code Microsoft Teams
+title: Exemples de code d’application
 description: Liens et descriptions d’exemples d’applications pour la plateforme de développement Microsoft Teams
+ms.topic: reference
 keywords: Exemples de développement Microsoft Teams
-ms.openlocfilehash: 665d3565f4f453d263fef6a17cb27f5060111468
-ms.sourcegitcommit: 6d9c60cce1f2e5204e680c074ce77a8376233b59
+ms.openlocfilehash: f51ffb22a5e6b3b757d1971422adf955d95fb223
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49912315"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014109"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Didacticiels et exemples de code pour la plateforme de développement Microsoft Teams
 
@@ -42,7 +43,7 @@ Nous fournissons une packages.jsfichier qui répertorie tous les packages requis
 
 ### <a name="for-other-samples"></a>Pour d’autres exemples
 
-Comme toujours, le fichier README du projet doit avoir plus d’informations sur les besoins spécifiques pour des exemples spécifiques.
+Comme toujours, le fichier README du projet doit avoir plus d’informations sur les besoins spécifiques d’exemples spécifiques.
 
 ## <a name="bots-using-the-v4-sdk"></a>Bots (à l’aide du SDK v4)
 
@@ -57,7 +58,7 @@ Comme toujours, le fichier README du projet doit avoir plus d’informations sur
 |--------|------------- |---|---|----|
 | Extensions de messagerie : recherche | Extension de messagerie qui accepte les demandes de recherche et renvoie des résultats. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 | Extensions de messagerie : action | Extension de messagerie qui accepte les paramètres et renvoie une carte. En outre, comment recevoir un message transmis en tant que paramètre dans une extension de messagerie. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie des résultats une fois que l’utilisateur s’est inscrit. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
 | Extensions de messagerie : aperçu de l’action | Montre comment créer un flux d’aperçu et de modification pour une extension de messagerie. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
 | Déploiement de lien | Extension de messagerie qui effectue le déploiement de lien. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
 

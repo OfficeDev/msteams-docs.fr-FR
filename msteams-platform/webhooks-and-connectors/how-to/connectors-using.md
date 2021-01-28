@@ -1,14 +1,15 @@
 ---
 title: Envoi de messages à des connecteurs et Webhooks
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
+ms.topic: how-to
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: 55cfbc870ed8b04a8fbac58fdfa9b40110410ad7
-ms.sourcegitcommit: 5e1300d6f4f2ea23beb3cdbbf4bd46999eef4e87
+ms.openlocfilehash: 36d30c0be3d562c7a71989355249f0cfa76e797d
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "49875013"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014081"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 

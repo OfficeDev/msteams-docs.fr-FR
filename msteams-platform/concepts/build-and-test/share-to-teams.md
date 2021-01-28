@@ -1,33 +1,34 @@
 ---
-title: Bouton partager avec teams incorporés
-description: Comment ajouter le bouton partager à teams incorporé sur votre site Web
-keywords: Partager des équipes partager partage-équipe
-ms.openlocfilehash: 219724e6ef3448db8a5b1fc70a519803255ffee6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: Créer un bouton de partage Teams
+description: Comment ajouter le bouton Share to Teams incorporé sur votre site web
+ms.topic: reference
+keywords: Partager Teams entre équipes
+ms.openlocfilehash: 46091c957137cc871095ca6a57c0d61fa79d9458
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673886"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014333"
 ---
-# <a name="creating-a-share-to-teams-embedded-button"></a>Création d’un bouton partager avec teams incorporés
+# <a name="create-a-share-to-teams-button-for-your-website"></a>Créer un bouton Partager vers Teams sur votre site web
 
 >[!NOTE]
-> * Seules les versions de bureau Edge et chrome sont prises en charge.
-> * L’utilisation de comptes freemium ou invités n’est pas prise en charge.
+> * Seules les versions de bureau de Edge et Chrome sont pris en charge.
+> * L’utilisation de freemium ou de comptes invités n’est pas prise en charge.
 
-Les sites Web tiers peuvent utiliser le script de lancement pour incorporer les boutons partager à teams sur leurs pages Web, ce qui lancera l’expérience de partage vers teams dans une fenêtre contextuelle lorsque vous cliquerez dessus. Cela vous permettra de partager un lien directement avec une personne ou un canal Microsoft teams sans basculer le contexte.
+Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons Partager à Teams sur leurs pages web, ce qui lance l’expérience Partager avec Teams dans une fenêtre popup lorsque vous cliquez dessus. Cela vous permettra de partager un lien directement avec une personne ou un canal Microsoft Teams sans changer de contexte.
 
-![Partager le menu contextuel teams](~/assets/images/share-to-teams-popup.png)
+![Fenêtre pop-up Partager avec Teams](~/assets/images/share-to-teams-popup.png)
 
-## <a name="how-to-embed-a-share-to-teams-button"></a>Comment incorporer un bouton partager à teams
+## <a name="how-to-embed-a-share-to-teams-button"></a>Comment incorporer un bouton Partager avec Teams
 
-Tout d’abord, vous devez ajouter le `launcher.js` script sur votre page Web.
+Tout d’abord, vous devez ajouter le `launcher.js` script sur votre page web.
 
 ```html
 <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
 ```
 
-Ensuite, ajoutez un élément HTML sur votre page Web avec `teams-share-button` l’attribut Class et le lien à partager dans `data-href` l’attribut.
+Ensuite, ajoutez un élément HTML sur votre page web avec l’attribut de classe et le lien `teams-share-button` à partager dans `data-href` l’attribut.
 
 ```html
 <div
@@ -36,11 +37,11 @@ Ensuite, ajoutez un élément HTML sur votre page Web avec `teams-share-button` 
 </div>
 ```
 
-Cette opération ajoute l’icône Microsoft teams à votre site Web.
+Cela ajoute l’icône Microsoft Teams à votre site web.
 
-![Icône partager avec teams](~/assets/icons/share-to-teams-icon.png)
+![Icône Partager avec Teams](~/assets/icons/share-to-teams-icon.png)
 
-Éventuellement, si vous voulez une taille d’icône différente pour le bouton partager avec Teams, utilisez `data-icon-px-size` l’attribut.
+Si vous le souhaitez, si vous souhaitez une taille d’icône différente pour le bouton Partager avec Teams, utilisez `data-icon-px-size` l’attribut.
 
 ```html
 <div
@@ -50,7 +51,7 @@ Cette opération ajoute l’icône Microsoft teams à votre site Web.
 </div>
 ```
 
-Si vous êtes certain que l’aperçu de l’URL de votre lien à partager ne s’affiche pas correctement dans Teams (par exemple, le lien nécessite l’authentification de l’utilisateur), `data-preview` vous pouvez désactiver `false`l’aperçu de l’URL en ajoutant l’attribut défini à.
+Si vous savez que l’aperçu de l’URL à partir de votre lien à partager ne s’affichera pas bien dans Teams (par exemple, le lien nécessiterait l’authentification de l’utilisateur), vous pouvez désactiver l’aperçu de l’URL en ajoutant le jeu d’attributs à `data-preview` `false` .
 
 ```html
 <div
@@ -60,57 +61,57 @@ Si vous êtes certain que l’aperçu de l’URL de votre lien à partager ne s�
 </div>
 ```
 
-Si votre page affiche le contenu de manière dynamique, vous pouvez utiliser la `shareToMicrosoftTeams.renderButtons()` méthode pour forcer le rendu du bouton **partager** à l’emplacement approprié dans le pipeline.
+Si votre page restituera dynamiquement le contenu, vous pouvez utiliser la méthode pour forcer le bouton Partager à s’restituer à `shareToMicrosoftTeams.renderButtons()` l’endroit approprié dans le pipeline. 
 
-## <a name="crafting-your-website-preview"></a>Conception de l’aperçu de votre site Web
+## <a name="crafting-your-website-preview"></a>Création de l’aperçu de votre site web
 
-Lorsque votre site Web est partagé avec Teams, la carte insérée dans la chaîne sélectionnée contiendra un aperçu de votre site Web. Vous pouvez contrôler le comportement de cet aperçu en veillant à ce que les méta-données appropriées soient ajoutées au site Web partagé `data-href` (URL). Le tableau suivant présente les balises nécessaires. Vous pouvez utiliser les versions par défaut de HTML ou la version d’Open Graph.
+Lorsque votre site web est partagé avec Teams, la carte insérée dans le canal sélectionné contient un aperçu de votre site web. Vous pouvez contrôler le comportement de cet aperçu en vous assurant que les métadon données appropriées sont ajoutées au site web en cours de partage `data-href` (l’URL). Le tableau ci-dessous présente les balises nécessaires. Vous pouvez utiliser les versions html par défaut ou la version Open Graph.
 
-Pour afficher l’aperçu, vous devez :
+Pour que l’aperçu s’affiche, vous devez :
 
-* Inclure une image miniature, ou les deux, un titre et une description (pour de meilleurs résultats, incluez les trois).
-* L’URL partagée ne peut pas exiger l’authentification. Si c’est le cas, vous pouvez toujours le partager, mais l’aperçu n’est pas créé.
+* Incluez soit une image miniature, soit un titre et une description (pour obtenir de meilleurs résultats, incluez les trois).
+* L’URL partagée ne peut pas nécessiter d’authentification. Si c’est le cas, vous pouvez toujours le partager, mais l’aperçu ne sera pas créé.
 
-|Valeur|Balise META| Ouvrir un graphique|
+|Valeur|Balise META| Open Graph|
 |----|----|----|
 |Titre|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
-|Image miniature| none |`<meta property="og:image" content="http://example.com/image.jpg">`|
+|Image miniature| aucune |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-## <a name="share-to-teams-for-education"></a>Partager avec teams pour l’éducation
+## <a name="share-to-teams-for-education"></a>Partager avec Teams pour l’Éducation
 
-Pour les enseignants qui utilisent le bouton partager avec teams `Create an Assignment`, une option supplémentaire est proposée. Cela vous permet de créer rapidement une affectation dans l’équipe choisie en fonction du lien partagé.
+Pour les enseignants qui utilisent le bouton Partager avec Teams, vous avez une option supplémentaire pour `Create an Assignment` . Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée en fonction du lien partagé.
 
-![Partager le menu contextuel teams](~/assets/images/share-to-teams-popup-edu.png)
+![Fenêtre pop-up Partager avec Teams](~/assets/images/share-to-teams-popup-edu.png)
 
-## <a name="full-launcherjs-definition"></a>Définition complète du lanceur. js
+## <a name="full-launcherjs-definition"></a>Définition launcher.js complète
 
 | Propriété | Attribut HTML | Type | Par défaut | Description |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | s/o | Href du contenu à partager. |
-| preview | `data-preview` | Boolean (sous forme de chaîne) | `true` | Indique si un aperçu du contenu à partager doit être affiché ou non. |
-| iconPxSize | `data-icon-px-size` | nombre (sous forme de chaîne) | `32` | Taille en pixels du bouton partager-à-teams à afficher. |
-| msgText | `data-msg-text` | string | s/o | Texte par défaut à insérer avant le lien dans la zone de composition du message (200 caractères maximum) |
-| assignInstr | `data-assign-instr` | string | s/o | Texte par défaut à insérer dans le champ « instructions » des affectations (200 caractères maximum) |
-| assignTitle | `data-assign-title` | string | s/o | Texte par défaut à insérer dans le champ affectations « title » (50 caractères maximum) |
+| preview | `data-preview` | booléen (sous la mesure d’une chaîne) | `true` | Indique si un aperçu du contenu à partager est à afficher ou non. |
+| iconPxSize | `data-icon-px-size` | number (en tant que chaîne) | `32` | Taille en pixels du bouton Partager avec Teams à restituer. |
+| msgText | `data-msg-text` | string | s/o | Texte par défaut à insérer avant le lien dans la zone de composition du message (limite de 200 caractères) |
+| assignInstr | `data-assign-instr` | string | s/o | Texte par défaut à insérer dans le champ d’affectations « Instructions » (limite de 200 caractères) |
+| assignTitle | `data-assign-title` | string | s/o | Texte par défaut à insérer dans le champ « Titre » des affectations (limite de 50 caractères) |
 
 ### <a name="methods"></a>Méthodes
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 
-`options`(facultatif) :`{ elements?: HTMLElement[] }`
+`options` (facultatif) : `{ elements?: HTMLElement[] }`
 
-Affiche tous les boutons de partage actuellement sur la page. Si un objet `options` facultatif est fourni avec une liste d’éléments, ces éléments seront rendus dans les boutons de partage.
+Restituer tous les boutons de partage actuellement présents sur la page. Si un objet facultatif est fourni avec une liste d’éléments, ces éléments sont restituer dans `options` des boutons de partage.
 
 ### <a name="setting-default-form-values"></a>Définition des valeurs de formulaire par défaut
 
-Vous pouvez également définir des valeurs par défaut pour les champs suivants dans le formulaire partager avec teams :
+Si vous le souhaitez, vous pouvez choisir de définir des valeurs par défaut pour les champs suivants dans le formulaire Partager avec Teams :
 
-* Signification de ce (`msgText`)
-* Instructions d’affectation`assignInstr`()
-* Titre de l'`assignTitle`affectation ()
+* Dites quelque chose à ce sujet ( `msgText` )
+* Instructions d’affectation ( `assignInstr` )
+* Titre de l’affectation ( `assignTitle` )
 
-#### <a name="example-default-form-values"></a>Exemple : valeurs de formulaire par défaut
+#### <a name="example-default-form-values"></a>Exemple : valeurs de formulaire par défaut
 
 ```html
 <span

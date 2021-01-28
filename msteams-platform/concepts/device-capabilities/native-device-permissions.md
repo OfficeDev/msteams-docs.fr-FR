@@ -1,13 +1,14 @@
 ---
-title: Demander des autorisations d’appareil pour votre onglet Microsoft Teams
+title: Demander des autorisations d’appareil pour votre onglet
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui nécessitent généralement le consentement de l’utilisateur
+ms.topic: how-to
 keywords: développement d’onglets teams
-ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: a2893fb2905584eac4b398287d431f406c23b12b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886743"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014529"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Demander des autorisations d’appareil pour votre onglet Microsoft Teams
 
@@ -25,7 +26,7 @@ Vous souhaitez peut-être enrichir votre onglet avec des fonctionnalités qui n�
 
 > [!IMPORTANT]
 >
-> * Pour l’instant, le client mobile Teams prend uniquement en charge l’accès aux fonctionnalités d’appareil natif, et par le biais des fonctionnalités de l’appareil natif, et est disponible sur toutes les constructions d’application, y compris `camera` `gallery` les `mic` `location` onglets. </br>
+> * Pour l’instant, le client mobile Teams prend uniquement en charge l’accès aux fonctionnalités d’appareils natifs, ainsi qu’aux fonctionnalités de l’appareil natif, et il est disponible sur toutes les constructions d’application, y compris `camera` `gallery` les `mic` `location` onglets. </br>
 > * Prise en `camera` charge de , et est activée par le biais de `gallery` `mic` [**l’API selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true). Pour une capture d’image unique, vous pouvez utiliser [**l’API captureImage.**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true)
 > * La prise `location` en charge est activée via [**l’API getLocation.**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Il est recommandé d’utiliser cette API comme API de [**géolocalisation**](../../resources/schema/manifest-schema.md#devicepermissions) n’est actuellement pas entièrement prise en charge sur tous les clients de bureau.
 
@@ -37,7 +38,7 @@ L’accès aux autorisations d’appareil d’un utilisateur vous permet de cré
 * Enregistrez de courtes mémos audio et enregistrez-les pour plus tard
 * Utiliser les informations d’emplacement de l’utilisateur pour afficher les informations pertinentes
 
-Bien que l’accès à ces fonctionnalités soit standard dans la plupart des navigateurs web modernes, vous devez faire savoir à Teams les fonctionnalités que vous souhaitez utiliser en mettant à jour votre manifeste d’application. Cela vous permettra de demander des autorisations, comme vous le feriez dans un navigateur, pendant que votre application s’exécute sur le client de bureau Teams.
+Bien que l’accès à ces fonctionnalités soit standard dans la plupart des navigateurs web modernes, vous devez faire savoir à Teams les fonctionnalités que vous souhaitez utiliser en mettant à jour votre manifeste d’application. Cela vous permettra de demander des autorisations, comme vous le feriez dans un navigateur, pendant que votre application est en cours d’exécution sur le client de bureau Teams.
 
 ## <a name="manage-permissions"></a>Gérer les autorisations
 
@@ -45,7 +46,7 @@ Bien que l’accès à ces fonctionnalités soit standard dans la plupart des na
 
 1. Ouvrez Teams.
 1. Dans le coin supérieur droit de la fenêtre, sélectionnez l’icône de votre profil.
-1. Sélectionnez   ->  **Autorisations des paramètres** dans le menu déroulant.
+1. Sélectionnez **Les**  ->  **autorisations des paramètres** dans le menu déroulant.
 1. Choisissez les paramètres souhaités.
 
 ![Écran des paramètres de bureau des autorisations d’appareil](../../assets/images/tabs/device-permissions.png)
@@ -120,7 +121,7 @@ Par exemple, pour demander à l’utilisateur d’accéder à son emplacement, v
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
 ```
 
-Pour utiliser l’appareil photo sur un ordinateur de bureau ou sur le web, Teams affiche une invite d’autorisation lorsque vous appelez `getUserMedia` :
+Pour utiliser l’appareil photo sur ordinateur de bureau ou web, Teams affiche une invite d’autorisation lorsque vous appelez `getUserMedia` :
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });

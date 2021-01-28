@@ -4,16 +4,17 @@ description: Décrit les conseils pour une soumission réussie au Magasin Teams 
 author: laujan
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f4226bdae94db073711cb1e126a7991804b050ac
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+keywords: Validation des applications Teams - Publication rapide de la plupart des cas d’échec de test d’approbation appsource
+ms.openlocfilehash: ad1818bbe2f085f5f1dc1bbef5f6a7b7b9ba08af
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797833"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014445"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Conseils pour une soumission d’application Microsoft Teams réussie
 
-Cet article traite des raisons courantes pour lesquelles la validation des applications soumises échoue. Bien qu’il ne s’agit pas d’une liste exhaustive de tous les problèmes potentiels avec votre application, la suite de ce guide augmente la probabilité que la soumission de votre application se passe la première fois. *Pour obtenir* une liste complète des stratégies de validation, voir [stratégies](/legal/marketplace/certification-policies) de certification marketplace commerciales.
+Cet article traite des raisons courantes pour lesquelles la validation des applications soumises échoue. Bien qu’il ne s’agit pas d’une liste exhaustive de tous les problèmes potentiels avec votre application, le fait de suivre ce guide augmente la probabilité que la soumission de votre application se passe la première fois. *Pour obtenir* une liste complète des stratégies de validation, voir [stratégies](/legal/marketplace/certification-policies) de certification marketplace commerciales.
 
 >[!NOTE]
 >**[La section 1140](/legal/marketplace/certification-policies#1140-teams)** est spécifique à Microsoft Teams et la **[sous-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** traite des fonctionnalités requises pour les applications Teams.
@@ -22,7 +23,7 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
 
 ### <a name="9989-general-considerations"></a>&#9989; considérations générales
 
-*Voir aussi* [Section 100 — Général](/legal/marketplace/certification-policies#100-general)
+*Voir aussi* [section 100 — Général](/legal/marketplace/certification-policies#100-general)
 
 * Assurez-vous que vous utilisez la version 1.4.1 ou une version ultérieure du [SDK Microsoft Teams.](https://www.npmjs.com/package/@microsoft/teams-js)
 * Ne modifiez pas votre application lorsque le processus de validation est en cours. Cela nécessite une revalidation complète de votre application.
@@ -32,17 +33,17 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
 * Fournir des informations d’aide et de support. Il est vivement recommandé que votre application inclue un lien d’aide/FAQ pour l’expérience utilisateur de première utilisation. Pour toutes les applications personnelles, nous vous recommandons de fournir votre page d’aide en tant qu’onglet personnel pour une meilleure expérience utilisateur.
 * Les applications ne doivent pas sortir l’utilisateur de Teams pour les scénarios utilisateur principaux. Il est recommandé d’utiliser des modules/onglets de tâche pour afficher des informations aux utilisateurs dans Teams.
 * Incrémentez le numéro de version de votre application dans le manifeste si vous a modifiez votre soumission.
-* L’application ne doit pas sortir les utilisateurs de Teams pour les scénarios utilisateur principaux. Les cibles de liens dans les applications ne doivent pas être en lien avec un navigateur externe, mais doivent être des liens vers des éléments div contenus dans Teams, par exemple dans les modules de tâche et les onglets.
+* L’application ne doit pas sortir les utilisateurs de Teams pour les scénarios utilisateur principaux. Les cibles de lien dans les applications ne doivent pas être en lien avec un navigateur externe, mais doivent être des liens vers des éléments div contenus dans Teams, par exemple dans les modules de tâche et les onglets.
 * Les applications personnelles permettent aux utilisateurs de partager du contenu à partir d’une expérience d’application personnelle avec d’autres membres de l’équipe.
 
-### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fournir une expérience de signature/d’inscription claire et simple
+### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; fournir une expérience claire et simple de se connectez/vous-même et inscrivez-vous
 
 *Voir aussi* [la section 1100.5 — Contrôle client](/legal/marketplace/certification-policies#11005-customer-control)
 
 * Si votre application ou votre add-in dépend de comptes ou de services externes, l’expérience de se connectez/se connecte et d’inscription doit être visible et accessible dans toutes les fonctionnalités de votre application.
 * Si une option de sign-in explicite est fournie à l’utilisateur, une option de sortie doit être disponible (même si l’application utilise l’authentification [silencieuse).](../../../../tabs/how-to/authentication/auth-silent-aad.md)
 * L’option de sortie doit uniquement se sortir de la fonctionnalité de votre application et non du client Teams.
-* Au minimum, l’option de sortie doit signer l’utilisateur des mêmes fonctionnalités accessibles avec l’option de sign-in. Par exemple, si l’option de signature inclut à la fois une extension de messagerie et un onglet, l’option de sortie doit inclure à la fois l’extension de messagerie et l’onglet.
+* Au minimum, l’option de sortie doit signer l’utilisateur des mêmes fonctionnalités accessibles avec l’option de sign-in. Par exemple, si l’option de se connecte inclut à la fois une extension de messagerie et un onglet, l’option de sortie doit inclure à la fois l’extension de messagerie et l’onglet.
 
 * Assurez-vous qu’il existe toujours un moyen d’inverser les comportements suivants (ou similaires) :
   * Sign-in => sign-out.
@@ -79,7 +80,7 @@ Pour plus d’informations sur l’authentification, voir :
 > [!TIP]
 > Assurez-vous que votre application affiche un indicateur de chargement ou une forme d’avertissement lorsque la réponse de votre application est plus longue que prévu.
 
-### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989; tabulation ne doit pas avoir une navigation en couches ou chrome excessive
+### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989;'onglet ne doit pas avoir une navigation en couches ou chrome excessive
 
 * Les onglets doivent fournir du contenu centré et éviter les éléments d’interface utilisateur inutiles. En règle générale, cela fait généralement référence à une navigation en couches/imbrmbrées inutile, à une interface utilisateur superflue ou non pertinente à côté du contenu ou à tout lien qui permet à l’utilisateur d’ajouter du contenu non lié. Par exemple, vous trouverez ci-dessous un affichage onglet qui omet les menus de navigation et affiche uniquement le contenu principal :
 
@@ -87,9 +88,9 @@ Pour plus d’informations sur l’authentification, voir :
 ![Vue d’onglet SharePoint](../../../../assets/images/faq/tab-sp.png)
 
 * Les onglets doivent être de nature légère et ne pas inclure de navigation complexe.
-* Les onglets de canal qui ont des fonctionnalités d’édition complexes dans l’application doivent ouvrir l’affichage d’éditeur dans une fenêtre multiple plutôt que dans un onglet.
+* Les onglets de canal qui ont des fonctionnalités d’édition complexes au sein de l’application doivent ouvrir l’affichage de l’éditeur dans une fenêtre multiple plutôt que dans un onglet.
 * Les onglets de canal ne doivent pas fournir de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec la navigation principale de Teams.
-* Les onglets ne doivent pas présenter de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec la navigation principale de Teams.
+* Les onglets ne doivent pas présenter de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec la navigation Principale de Teams.
 * Les onglets qui ont des fonctionnalités d’édition complexes dans l’application doivent ouvrir l’affichage éditeur dans une fenêtre multiple plutôt que dans l’onglet.
 * S’il existe plusieurs options d’affichage, envisagez de disposer d’un menu de config d’onglets dans le choix de l’utilisateur. Par exemple, au lieu d’incorporer un menu à l’intérieur de l’onglet, placez le menu dans la page de configuration afin que la vue d’onglet réelle soit propre et centrée.
 * Incluez un onglet *d’aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
@@ -100,7 +101,7 @@ Pour plus d’informations sur l’authentification, voir :
 ### <a name="9989-tab-configuration-must-happen-in-the-configuration-screen"></a>&#9989; la configuration de l’onglet doit se produire dans l’écran de configuration
 
 * L’écran de configuration doit expliquer clairement la valeur de l’expérience et comment configurer l’onglet.
-* Le processus de configuration doit toujours permettre aux utilisateurs de continuer à ne pas mettre fin à l’expérience utilisateur. Par exemple, n’affichez pas de tableau vide une fois que l’utilisateur a configuré l’onglet.
+* Le processus de configuration doit toujours permettre aux utilisateurs de continuer à ne pas mettre fin à l’expérience utilisateur. Par exemple, ne pas afficher un tableau vide une fois que l’utilisateur a configuré l’onglet
 * Le processus de signature utilisateur doit faire partie du processus de configuration et doit se terminer dans l’interface utilisateur onglet. Une fois que l’utilisateur a terminé la configuration et chargé votre onglet, aucune action supplémentaire ne doit être requise.
 * N’affichez pas l’intégralité de votre page web dans la fenêtre de configuration de la signature.
 * Un utilisateur doit toujours être en mesure de terminer l’expérience de configuration, même s’il ne peut pas trouver immédiatement le contenu qu’il recherche.
@@ -179,14 +180,14 @@ Les bots de notification uniquement doivent envoyer un message de bienvenue qui 
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>Messages de bienvenue dans l’étendue équipe/canal
 
-Les choses sont légèrement différentes lorsque le bot est ajouté à un canal pour la première fois. Normalement, vous ne devez pas envoyer de message 1:1 à tous les membres de l’équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
+Les choses sont légèrement différentes lorsque le bot est ajouté pour la première fois à un canal. Normalement, vous ne devez pas envoyer de message 1:1 à tous les membres de l’équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
 
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; mobile, pas de vente à prix moyen ou de paiement direct
 
 * Vos onglets, cartes adaptatives, messages de bot et contenu dans les modules de tâche doivent être réactifs pour une variété de tailles d’écran d’appareil mobile.
-* Les applications qui supportent iOS doivent être entièrement fonctionnelles sur l’appareil iPad le plus récent à l’aide de la dernière version d’iOS.
+* Les applications qui prendre en charge iOS doivent être entièrement fonctionnelles sur le dernier appareil iPad utilisant la dernière version d’iOS.
 * Ne doit pas inclure de références directes à des achats in-app, des offres d’essai, des offres pour les versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules à partir de votre application Teams sur un système d’exploitation mobile (Android, iOS).
-* La version iOS ou Android du add-in ne doit pas afficher d’interface utilisateur ou de langue, ni de lien vers d’autres applications, des modules ou un site web demandant à l’utilisateur de payer.
+* La version iOS ou Android du add-in ne doit pas afficher d’interface utilisateur ou de langue, ni de lien vers d’autres applications, modules ou sites web demandant à l’utilisateur de payer.
 * Les pages de politique de confidentialité et de conditions d’utilisation associées ne doivent pas non plus être associées à des liens vers une interface utilisateur commerciale ou le Store.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; ne publiez pas de données sensibles à une audience qui n’est pas destinée à afficher les données
@@ -213,7 +214,7 @@ Avertissez les utilisateurs avant que votre application télécharge des fichier
 
 ### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; l’attestation Publisher dans l’Partner Center
 
-* Pour plus d’informations, [voir](/microsoft-365-app-certification/docs/attestation) la documentation complète du programme d’attestation de l’éditeur.
+* Pour plus d’informations, voir la documentation complète du programme [d’attestation](/microsoft-365-app-certification/docs/attestation) d’éditeur.
 * Suivez les étapes de la section Flux de travail [d’attestation d’éditeur](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) pour terminer le processus d’attestation d’éditeur. Écrivez dans appcert@microsoft.com pour toute question.
 * Pour plus d’informations, voir le [guide](/azure/active-directory/develop/troubleshoot-publisher-verification) de résolution des problèmes.
 * Terminez l’attestation d’auto-attestation par le biais de l’Centre partenaires. Remplissez le questionnaire Self-Assessment sous **Conformité des applications.**

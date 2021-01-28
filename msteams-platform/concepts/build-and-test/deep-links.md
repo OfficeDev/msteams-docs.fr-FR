@@ -1,19 +1,20 @@
 ---
-title: Créer des liens profonds vers le contenu
+title: Créer des liens profonds vers du contenu
 description: Décrit les liens profonds et leur utilisation dans vos applications
+ms.topic: how-to
 keywords: lien profond teams
-ms.openlocfilehash: 35aceba4b569baac9283a3355ee5719273145652
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 96e6fc0a47eb64b9e1c6c03721d386ce4dfbb51d
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797784"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014312"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Créer des liens profonds vers du contenu et des fonctionnalités dans Microsoft Teams
 
 Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Exemples d’exemples où cela peut être utile :
 
-* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour avertir l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue jusqu’à l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
+* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour informer l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue jusqu’à l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d’une conversation ou la planification d’une réunion, en pré-remplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
 > [!NOTE]
@@ -99,7 +100,7 @@ Exemples :
 
 Lorsque vous accédez à un lien profond, Microsoft Teams navigue simplement vers l’onglet et fournit un mécanisme via la bibliothèque JavaScript Microsoft Teams pour récupérer l’ID de sous-entité (s’il existe).
 
-L’appel renvoie un contexte qui inclut le champ si l’onglet a été accédé [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) via un lien `subEntityId` profond.
+[`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-)L’appel renvoie un contexte qui inclut le champ si `subEntityId` l’onglet a été accédé via un lien profond.
 
 ## <a name="deep-linking-from-your-tab"></a>Liaison profonde à partir de votre onglet
 
@@ -121,7 +122,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## <a name="deep-linking-to-a-chat"></a>Lien profond vers une conversation
 
-Vous pouvez créer des liens profonds vers des conversations privées entre les utilisateurs en spécifiant l’ensemble des participants. Si une conversation n’existe pas avec les participants spécifiés, le lien dirigera l’utilisateur vers une nouvelle conversation vide. Les nouvelles conversations seront créées en état brouillon jusqu’à ce que l’utilisateur envoie le premier message. Si vous le souhaitez, vous pouvez spécifier le nom de la conversation (si elle n’existe pas encore), ainsi que le texte à insérer dans la zone de composition de l’utilisateur. Vous pouvez voir cette fonctionnalité comme un raccourci pour l’utilisateur qui fait l’action manuelle de naviguer vers ou créer la conversation, puis de taper le message.
+Vous pouvez créer des liens profonds vers des conversations privées entre les utilisateurs en spécifiant l’ensemble des participants. Si une conversation n’existe pas avec les participants spécifiés, le lien dirigera l’utilisateur vers une nouvelle conversation vide. Les nouvelles conversations sont créées en état brouillon jusqu’à ce que l’utilisateur envoie le premier message. Si vous le souhaitez, vous pouvez spécifier le nom de la conversation (si elle n’existe pas encore), ainsi que le texte à insérer dans la zone de composition de l’utilisateur. Vous pouvez voir cette fonctionnalité comme un raccourci pour l’utilisateur qui fait l’action manuelle de naviguer vers ou créer la conversation, puis de taper le message.
 
 Par exemple, si vous renvoyez un profil utilisateur Office 365 à partir de votre bot en tant que carte, ce lien profond peut permettre à l’utilisateur de discuter facilement avec cette personne.
 
@@ -146,7 +147,7 @@ Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme ci
 > [!Note]
 > Cette fonctionnalité est actuellement en prévisualisation pour les développeurs.
 
-Vous pouvez créer des liens profonds vers la boîte de dialogue de planification intégrée teams. Cela est particulièrement utile si votre application aide l’utilisateur à effectuer des tâches liées au calendrier ou à la planification.
+Vous pouvez créer des liens profonds vers la boîte de dialogue de planification intégrée teams. Ceci est particulièrement utile si votre application aide l’utilisateur à effectuer des tâches liées au calendrier ou à la planification.
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Génération d’un lien profond vers la boîte de dialogue de planification
 

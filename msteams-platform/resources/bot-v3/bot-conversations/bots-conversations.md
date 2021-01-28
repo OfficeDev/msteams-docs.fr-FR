@@ -1,110 +1,111 @@
 ---
 title: Envoyer et recevoir des messages avec un bot
-description: Indique comment envoyer et recevoir des messages avec des robots dans Microsoft teams
-keywords: messages des robots teams
+description: Décrit comment envoyer et recevoir des messages avec des bots dans Microsoft Teams
+ms.topic: overview
+keywords: messages de bots teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 4a15bb9b4ae8c0ede3214d3a534649e2769baf6e
-ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
+ms.openlocfilehash: 20c285a0cd06ac929d628edbc059b2a00b937eec
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "44801134"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014116"
 ---
-# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation avec un robot Microsoft teams
+# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation avec un bot Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 Une conversation est une série de messages échangés entre votre bot et un ou plusieurs utilisateurs. Il existe trois types de conversations (ou portées) dans Teams :
 
-* `teams`Également appelés conversations de canal, visibles par tous les membres du canal.
-* `personal`Les conversations entre les robots et un seul utilisateur.
-* `groupChat`Conversation entre un bot et deux utilisateurs ou plus.
+* `teams` Également appelées conversations de canal, visibles par tous les membres du canal.
+* `personal` Conversations entre les bots et un seul utilisateur.
+* `groupChat` Discutez entre un bot et au moins deux utilisateurs.
 
-Un bot se comporte de manière légèrement différente en fonction du type de conversation impliquée :
+Un bot se comporte légèrement différemment selon le type de conversation dans qui il est impliqué :
 
-* Les [robots dans les conversations de conversation de groupe et de canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) exigent que l’utilisateur appelle le robot pour l’appeler dans un canal.
-* Les [robots dans les conversations avec un seul utilisateur](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) ne nécessitent pas de @ mentions-l’utilisateur peut simplement taper.
+* [Les bots dans les conversations](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) de canal et de groupe nécessitent que l’utilisateur mentionne @ le bot pour l’appeler dans un canal.
+* [Les bots dans les conversations d’un](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) seul utilisateur ne nécessitent pas de mention @ : l’utilisateur peut simplement taper.
 
-Pour que le bot fonctionne dans une étendue particulière, il doit être indiqué comme étant pris en charge par cette étendue dans le manifeste. Les étendues sont définies et décrites plus en détail dans la [référence de manifeste](~/resources/schema/manifest-schema.md).
+Pour que le bot fonctionne dans une étendue particulière, il doit être répertorié en tant que prise en charge de cette étendue dans le manifeste. Les étendues sont définies et abordées plus en détail dans la [Référence du manifeste.](~/resources/schema/manifest-schema.md)
 
 ## <a name="proactive-messages"></a>Messages proactifs
 
-Les robots peuvent participer à une conversation ou initier une conversation. La plupart des communications sont en réponse à un autre message. Si un bot lance une conversation, il s’appelle un *message proactif*. Exemples :
+Les bots peuvent participer à une conversation ou en initier une. La plupart des communications sont en réponse à un autre message. Si un bot initie une conversation, il s’agit *d’un message proactif.* Par exemple :
 
 * Les messages de bienvenue
-* Notifications d’événements
+* Notifications d’événement
 * Interrogation des messages
 
 ## <a name="conversation-basics"></a>Concepts de base d’une conversation
 
 Chaque message est un objet `Activity` de type `messageType: message`. Lorsqu’un utilisateur envoie un message, Teams le publie sur votre bot. Plus précisément, il envoie un objet JSON au point de terminaison de messagerie de votre bot. Votre bot examine le message pour déterminer son type et répond en conséquence.
 
-Les robots prennent également en charge les messages de style événement. Pour plus d’informations, voir [gérer les événements bot dans Microsoft teams](~/resources/bot-v3/bots-notifications.md) . La reconnaissance vocale n’est pas prise en charge actuellement.
+Les bots supportent également les messages de type événement. Pour [plus d’informations, voir](~/resources/bot-v3/bots-notifications.md) Gérer les événements de bot dans Microsoft Teams. La reconnaissance vocale n’est actuellement pas prise en charge.
 
-Les messages sont en grande partie identiques pour toutes les étendues, mais il existe des différences entre l’accès au bot dans l’interface utilisateur et les différences par rapport aux scènes que vous devrez connaître.
+Les messages sont pour la plupart identiques dans toutes les étendues, mais il existe des différences dans l’accès au bot dans l’interface utilisateur et des différences en arrière-plan que vous devez connaître.
 
-La conversation de base est gérée via le connecteur de l’infrastructure bot, une seule API REST pour permettre à votre bot de communiquer avec teams et d’autres canaux. Le kit de développement logiciel (SDK) du générateur de robots offre un accès facile à cette API, des fonctionnalités supplémentaires pour gérer le flux de conversation et l’État, et des méthodes simples pour incorporer des services cognitifs tels que le traitement du langage naturel (NLP).
+La conversation de base est gérée par le biais du connecteur Bot Framework, une API REST unique permettant à votre bot de communiquer avec Teams et d’autres canaux. Le SDK Bot Builder fournit un accès facile à cette API, des fonctionnalités supplémentaires pour gérer le flux et l’état des conversations, ainsi que des moyens simples d’incorporer des services cognitives tels que le traitement du langage naturel (NLP).
 
 ## <a name="message-content"></a>Contenu du message
 
-Votre robot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot. Vous pouvez spécifier le type de contenu que votre robot peut gérer dans la page Paramètres de Microsoft teams de votre robot.
+Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot. Vous pouvez spécifier le type de contenu que votre bot peut gérer dans la page de paramètres Microsoft Teams de votre bot.
 
 | Format | De l’utilisateur au bot  | Du bot à l’utilisateur |  Notes |
 | --- | :---: | :---: | --- |
 | Texte enrichi  | ✔ | ✔ |  |
-| Images | ✔ | ✔ | Taille maximale 1024 x 1024 et 1 Mo au format PNG, JPEG ou GIF ; les images GIF animées ne sont pas prises en charge |
-| Cartes | ✖ | ✔ | Voir la [référence de la carte teams](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes prises en charge |
-| Emojis | ✖ | ✔ | Teams prend actuellement en charge les Emoji via UTF-16 (par exemple, U + 1F600 pour Grinning face) |
+| Images | ✔ | ✔ | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge |
+| Cartes | ✖ | ✔ | Voir la référence [de carte Teams pour](~/task-modules-and-cards/cards/cards-reference.md) les cartes pris en charge |
+| Emojis | ✖ | ✔ | Teams prend actuellement en charge les emojis via UTF-16 (par exemple, U+1F600 pour le visage de l’en-tête) |
 |
 
-Pour plus d’informations sur les types d’interaction des robots pris en charge par l’infrastructure bot (quels sont les robots en équipe), voir la documentation de l’infrastructure de robot sur le [flux de conversation](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) et les concepts connexes dans la documentation du kit de développement logiciel (SDK) du [Générateur de robots pour .net](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) et [le kit de développement logiciel (SDK) du générateur de robots pour Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0).
+Pour plus d’informations sur les types d’interactions de bot pris en charge par Bot Framework (sur lesquels les bots dans les équipes sont basés), voir la documentation Bot Framework sur le flux de [conversation](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) et les concepts associés dans la documentation du [SDK Bot Builder](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) pour .NET et du [SDK Bot Builder ](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0)pour Node.js.
 
 ## <a name="message-formatting"></a>Mise en forme de messages
 
-Vous pouvez définir la [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) propriété facultative d’un `message` pour contrôler le mode d’affichage du contenu de texte de votre message. Consultez la rubrique [mise en forme](~/resources/bot-v3/bots-message-format.md) des messages pour une description détaillée de la mise en forme prise en charge dans les messages bot.
-Vous pouvez définir la propriété Optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) pour contrôler le rendu du contenu de texte de votre message.
+Vous pouvez définir la propriété facultative d’un contrôle de la façon dont le contenu de texte de votre [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) `message` message est rendu. Voir [la mise en forme des messages](~/resources/bot-v3/bots-message-format.md) pour obtenir une description détaillée de la mise en forme prise en charge dans les messages du bot.
+Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) texte de votre message.
 
-Pour plus d’informations sur la façon dont teams prend en charge la mise en forme de texte dans Teams, consultez la rubrique [formatage du texte dans les messages bot](~/resources/bot-v3/bots-text-formats.md)
+Pour plus d’informations sur la façon dont Teams prend en charge la mise en forme de texte dans les équipes, voir la mise en forme du texte [dans les messages du bot.](~/resources/bot-v3/bots-text-formats.md)
 
-Pour plus d’informations sur la mise en forme des cartes dans les messages, voir [Card Formatting](~/task-modules-and-cards/cards/cards-format.md).
+Pour plus d’informations sur la mise en forme des cartes dans les messages, voir [Mise en forme de carte.](~/task-modules-and-cards/cards/cards-format.md)
 
-## <a name="picture-messages"></a>Messages d’image
+## <a name="picture-messages"></a>Messages image
 
-Les images sont envoyées par l’ajout de pièces jointes à un message. Vous trouverez plus d’informations sur les pièces jointes dans la documentation de l' [infrastructure bot](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
+Les images sont envoyées en ajoutant des pièces jointes à un message. Vous trouverez plus d’informations sur les pièces jointes dans la [documentation bot Framework.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0)
 
-Les images peuvent être d’au moins 1024 × 1024 et 1 Mo au format PNG, JPEG ou GIF ; l’image GIF animée n’est pas prise en charge.
+Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge.
 
-Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à l’aide de XML. Si vous utilisez la démarque, la taille de l’image est par défaut de 256 × 256. Par exemple :
+Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à l’aide de XML. Si vous utilisez Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
-* Utilisant`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Ne pas utiliser`![Duck on a rock](http://aka.ms/Fo983c)`
+* Utiliser `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* Ne pas utiliser `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## <a name="receiving-messages"></a>Réception de messages
 
-Selon les étendues déclarées, votre robot peut recevoir des messages dans les contextes suivants :
+Selon les étendues déclarées, votre bot peut recevoir des messages dans les contextes suivants :
 
-* **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique de la conversation ou en tapant son nom ou son ID d’application dans la zone à : d’une nouvelle conversation.
-* **Canaux** Un bot peut être mentionné (« @_botname_») dans un canal s’il a été ajouté à l’équipe. Notez que les réponses supplémentaires à un bot dans un canal nécessitent de mentionner le bot. Il ne répond pas aux réponses qui ne sont pas mentionnées.
+* **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique des conversations ou en tapant son nom ou son ID d’application dans la zone À : d’une nouvelle conversation.
+* **Canaux** Un bot peut être mentionné (« @_botname_») dans un canal s’il a été ajouté à l’équipe. Notez que les réponses supplémentaires à un bot dans un canal nécessitent de mentionner le bot. Il ne répond pas aux réponses lorsqu’il n’est pas mentionné.
 
-Pour les messages entrants, votre bot reçoit un [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) objet de type `messageType: message` . Bien que l' `Activity` objet puisse contenir d’autres types d’informations, comme les [mises à jour de canal](~/resources/bot-v3/bots-notifications.md#channel-updates) envoyées à votre bot, le `message` type représente la communication entre le bot et l’utilisateur.
+Pour les messages entrants, votre bot reçoit un [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) objet de type `messageType: message` . Bien que l’objet puisse contenir d’autres types d’informations, tels que les mises à jour de canal envoyées à votre bot, le type représente la `Activity` communication entre le bot et [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` l’utilisateur.
 
-Votre bot reçoit une charge qui contient le message de l’utilisateur `Text` ainsi que d’autres informations sur l’utilisateur, la source du message et des informations sur les équipes. De note :
+Votre bot reçoit une charge utile qui contient le message de l’utilisateur, ainsi que d’autres informations sur l’utilisateur, la source du `Text` message et les informations Teams. Remarque :
 
-* `timestamp`Date et heure du message en temps universel coordonné (UTC)
-* `localTimestamp`Date et heure du message dans le fuseau horaire de l’expéditeur
-* `channelId`Toujours « msteams ». Cela fait référence à un canal d’infrastructure bot, pas à un canal Teams.
-* `from.id`Un ID unique et chiffré pour cet utilisateur pour votre bot ; Cette clé est appropriée si votre application a besoin de stocker des données utilisateur. Il est unique pour votre robot et ne peut pas être directement utilisé en dehors de votre instance de robot de manière significative pour identifier cet utilisateur
-* `channelData.tenant.id`ID de client de l’utilisateur.
-
-> [!NOTE]
-> `from.id`est unique pour votre bot et ne peut pas être directement utilisé en dehors de votre instance de robot de manière significative pour identifier cet utilisateur.
-
-## <a name="combining-channel-and-private-interactions-with-your-bot"></a>Combinaison d’interactions de canal et de privé avec votre robot
-
-Lors de l’interaction dans un canal, votre robot doit être intelligent quant à la prise en main de certaines conversations avec un utilisateur. Par exemple, supposons qu’un utilisateur tente de coordonner une tâche complexe, telle que la planification d’un ensemble de membres d’équipe. Au lieu d’avoir l’intégralité de la séquence d’interactions visible par le canal, envisagez d’envoyer un message de conversation personnelle à l’utilisateur. Votre robot doit être en mesure de transférer facilement l’utilisateur entre les conversations personnelles et les conversations de canal sans perte d’État.
+* `timestamp` Date et heure du message en temps universel coordonné (UTC)
+* `localTimestamp` Date et heure du message dans le fuseau horaire de l’expéditeur
+* `channelId` Toujours « msteams ». Il s’agit d’un canal d’infrastructure de bot, et non d’un canal d’équipes.
+* `from.id` Un ID unique et chiffré pour cet utilisateur pour votre bot ; convient comme clé si votre application doit stocker des données utilisateur. Il est unique pour votre bot et ne peut pas être directement utilisé en dehors de votre instance de bot d’une manière significative pour identifier cet utilisateur
+* `channelData.tenant.id` ID de client de l’utilisateur.
 
 > [!NOTE]
->N’oubliez pas de mettre à jour le canal une fois l’interaction terminée pour avertir les autres membres de l’équipe.
+> `from.id` est unique pour votre bot et ne peut pas être directement utilisé en dehors de votre instance de bot d’une manière significative pour identifier cet utilisateur.
+
+## <a name="combining-channel-and-private-interactions-with-your-bot"></a>Combinaison d’interactions canal et privée avec votre bot
+
+Lorsque vous interagissez dans un canal, votre bot doit être intelligent pour mettre certaines conversations hors connexion avec un utilisateur. Par exemple, supposons qu’un utilisateur tente de coordonner une tâche complexe, telle que la planification avec un ensemble de membres de l’équipe. Plutôt que d’avoir toute la séquence d’interactions visible pour le canal, envisagez d’envoyer un message de conversation personnelle à l’utilisateur. Votre bot doit pouvoir facilement faire passer l’utilisateur entre les conversations personnelles et les conversations de canal sans perte d’état.
+
+> [!NOTE]
+>N’oubliez pas de mettre à jour le canal une fois l’interaction terminée pour en informer les autres membres de l’équipe.
 
 ## <a name="full-inbound-schema-example"></a>Exemple de schéma entrant complet
 
@@ -150,26 +151,26 @@ Lors de l’interaction dans un canal, votre robot doit être intelligent quant 
 ```
 
 > [!NOTE]
-> Le champ de texte pour les messages entrants contient parfois des mentions. Assurez-vous de vérifier et de les supprimer correctement. Pour plus d’informations, consultez la rubrique [mentions](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions).
+> Le champ de texte pour les messages entrants contient parfois des mentions. Assurez-vous de les vérifier et de les bander correctement. Pour plus d’informations, voir [Mentions.](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions)
 
-## <a name="teams-channel-data"></a>Données de canal teams
+## <a name="teams-channel-data"></a>Données de canal Teams
 
-L' `channelData` objet contient des informations spécifiques aux équipes et constitue la source définitive des ID d’équipe et de canal. Vous devez mettre en cache et utiliser ces ID en tant que clés pour le stockage local.
+L’objet contient des informations spécifiques à Teams et constitue la source définitive des ID d’équipe et `channelData` de canal. Vous devez mettre en cache et utiliser ces ID comme clés pour le stockage local.
 
-L' `channelData` objet n’est pas inclus dans les messages dans les conversations personnelles, étant donné qu’ils ont lieu en dehors de n’importe quel canal.
+`channelData`L’objet n’est pas inclus dans les messages dans les conversations personnelles, car ils ont lieu en dehors d’un canal.
 
-Un objet channelData classique dans une activité envoyée à votre bot contient les informations suivantes :
+Un objet channelData classique dans une activité envoyée à votre bot contient les informations suivantes :
 
-* `eventType`Type d’événement teams ; transmis uniquement en cas d' [événements de modification de canal](~/resources/bot-v3/bots-notifications.md#channel-updates)
-* `tenant.id`ID de locataire Azure Active Directory ; transmis dans tous les contextes
-* `team`Transmis uniquement dans les contextes de canal, pas dans la conversation personnelle.
-  * `id`GUID du canal
-  * `name`Nom de l’équipe ; transmis uniquement en cas d' [événement de changement de nom d’équipe](~/resources/bot-v3/bots-notifications.md#team-name-updates)
-* `channel`Transmis uniquement dans les contextes de canal lorsque le bot est mentionné ou pour des événements dans des canaux dans teams où le bot a été ajouté
-  * `id`GUID du canal
-  * `name`Nom du canal ; transmis uniquement en cas d' [événements de modification de canal](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `channelData.teamsTeamId`Déconseillées. Cette propriété est incluse uniquement à des fins de compatibilité descendante.
-* `channelData.teamsChannelId`Déconseillées. Cette propriété est incluse uniquement à des fins de compatibilité descendante.
+* `eventType` Type d’événement Teams ; transmis uniquement en cas d’événements [de modification de canal](~/resources/bot-v3/bots-notifications.md#channel-updates)
+* `tenant.id` ID de client Azure Active Directory ; transmis dans tous les contextes
+* `team` Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.
+  * `id` GUID du canal
+  * `name` Nom de l’équipe ; transmis uniquement dans les cas d’événements [de changement de nom d’équipe](~/resources/bot-v3/bots-notifications.md#team-name-updates)
+* `channel` Transmis uniquement dans les contextes de canal lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes où le bot a été ajouté
+  * `id` GUID du canal
+  * `name`Nom du canal ; transmis uniquement en cas d’événements [de modification de canal.](~/resources/bot-v3/bots-notifications.md#channel-updates)
+* `channelData.teamsTeamId` Deprecated. Cette propriété est incluse uniquement pour des raisons de compatibilité ascendante.
+* `channelData.teamsChannelId` Deprecated. Cette propriété est incluse uniquement pour des raisons de compatibilité ascendante.
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>Exemple d’objet channelData (événement channelCreated)
 
@@ -191,35 +192,35 @@ Un objet channelData classique dans une activité envoyée à votre bot contient
 
 ### <a name="net-example"></a>Exemple .NET
 
-Le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) fournit un `TeamsChannelData` objet spécialisé, qui expose les propriétés permettant d’accéder aux informations spécifiques aux équipes.
+Le package [NuGet Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) fournit un objet spécialisé, qui expose les propriétés pour accéder aux `TeamsChannelData` informations propres à Teams.
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();
 string tenantId = channelData.Tenant.Id;
 ```
 
-## <a name="sending-replies-to-messages"></a>Envoi de réponses à des messages
+## <a name="sending-replies-to-messages"></a>Envoi de réponses aux messages
 
-Pour répondre à un message existant, appelez [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) en .net ou [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) dans Node.js. Le kit de développement logiciel (SDK) du générateur de robots gère tous les détails.
+Pour répondre à un message existant, [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) appelez .NET ou [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) dans Node.js. Le SDK Bot Builder gère tous les détails.
 
 Si vous choisissez d’utiliser l’API REST, vous pouvez également appeler le [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0) point de terminaison.
 
-Le contenu du message lui-même peut contenir du texte simple ou une partie des [cartes et des actions de carte](~/task-modules-and-cards/cards/cards-actions.md)fournis.
+Le contenu du message lui-même peut contenir du texte simple ou certaines des cartes et [actions](~/task-modules-and-cards/cards/cards-actions.md)de carte fournies par Bot Framework.
 
-Veuillez noter que dans votre schéma sortant, vous devez toujours utiliser le même `serviceUrl` que celui que vous avez reçu. N’oubliez pas que la valeur de `serviceUrl` tend à être stable mais peut varier. Lors de l’arrivée d’un nouveau message, votre robot doit vérifier sa valeur stockée `serviceUrl` .
+Notez que dans votre schéma sortant, vous devez toujours utiliser le même schéma que celui `serviceUrl` que vous avez reçu. N’ignorez pas que la valeur `serviceUrl` tend à être stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée de `serviceUrl` .
 
 ## <a name="updating-messages"></a>Mise à jour des messages
 
-Au lieu de faire en sorte que vos messages soient des instantanés statiques de données, votre bot peut mettre à jour dynamiquement les messages insérés après les avoir envoyés. Vous pouvez utiliser les mises à jour de messages dynamiques pour des scénarios tels que les mises à jour de sondage, la modification des actions disponibles après une pression sur un bouton ou tout autre changement d’état asynchrone.
+Au lieu que vos messages soient des instantanés statiques de données, votre bot peut mettre à jour dynamiquement les messages en ligne après les avoir envoyés. Vous pouvez utiliser les mises à jour dynamiques des messages pour des scénarios tels que les mises à jour des sondages, la modification des actions disponibles après une pression sur un bouton ou tout autre changement d’état asynchrone.
 
-Le nouveau message n’a pas besoin de correspondre au type d’origine. Par exemple, si le message d’origine contient une pièce jointe, le nouveau message peut être un simple message texte.
+Le nouveau message ne doit pas nécessairement correspondre au type d’origine. Par exemple, si le message d’origine contenait une pièce jointe, le nouveau message peut être un message texte simple.
 
 > [!NOTE]
-> Vous pouvez mettre à jour uniquement le contenu envoyé dans les mises en page et les messages à une seule pièce jointe. La publication de mises à jour de messages avec plusieurs pièces jointes dans la mise en forme de liste n’est pas prise en charge.
+> Vous pouvez mettre à jour uniquement le contenu envoyé dans les messages à pièce jointe unique et les dispositions carrousels. La publication de mises à jour dans des messages avec plusieurs pièces jointes dans la mise en page de liste n’est pas prise en charge.
 
 ### <a name="rest-api"></a>API REST
 
-Pour émettre une mise à jour de message, effectuez simplement une requête PUT sur le `/v3/conversations/<conversationId>/activities/<activityId>/` point de terminaison à l’aide d’un ID d’activité donné. Pour effectuer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel POST d’origine.
+Pour émettre une mise à jour de message, effectuez simplement une requête PUT sur le point de terminaison à `/v3/conversations/<conversationId>/activities/<activityId>/` l’aide d’un ID d’activité donné. Pour terminer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel POST d’origine.
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
@@ -231,7 +232,7 @@ PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
 
 ### <a name="net-example"></a>Exemple .NET
 
-Vous pouvez utiliser la `UpdateActivityAsync` méthode dans le kit de développement logiciel (SDK) du générateur de robots pour mettre à jour un message existant.
+Vous pouvez utiliser la `UpdateActivityAsync` méthode dans le SDK Bot Builder pour mettre à jour un message existant.
 
 ```csharp
 public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
@@ -247,9 +248,9 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 }
 ```
 
-### <a name="nodejs-example"></a>Exemple de Node.js
+### <a name="nodejs-example"></a>Node.js exemple
 
-Vous pouvez utiliser la `session.connector.update` méthode dans le kit de développement logiciel (SDK) du générateur de robots pour mettre à jour un message existant.
+Vous pouvez utiliser la `session.connector.update` méthode dans le SDK Bot Builder pour mettre à jour un message existant.
 
 ```javascript
 function sendCardUpdate(bot, session, originalMessage, address) {
@@ -273,13 +274,13 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## <a name="starting-a-conversation-proactive-messaging"></a>Démarrage d’une conversation (messagerie proactive)
 
-Vous pouvez créer une conversation personnelle avec un utilisateur ou démarrer une nouvelle chaîne de réponse dans un canal pour votre robot d’équipe. Cela vous permet d’envoyer un message à votre utilisateur ou à vos utilisateurs sans qu’ils commencent par contacter le robot. Pour plus d’informations, voir les rubriques suivantes :
+Vous pouvez créer une conversation personnelle avec un utilisateur ou démarrer une nouvelle chaîne de réponse dans un canal pour votre bot d’équipe. Cela vous permet d’envoyer un message à vos utilisateurs sans qu’ils contactent d’abord votre bot. Pour plus d’informations, voir les rubriques suivantes :
 
-Consultez la rubrique [messagerie proactive pour les robots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) pour obtenir des informations plus générales sur les conversations démarrées par les robots.
+Pour [plus d’informations générales](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) sur les conversations démarrées par des bots, voir messagerie proactive pour les bots.
 
 ## <a name="deleting-messages"></a>Suppression de messages
 
-Les messages peuvent être supprimés à l’aide de la [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) méthode Connectors dans le [Kit de développement logiciel (SDK) BotBuilder](/bot-framework/bot-builder-overview-getstarted).
+Les messages peuvent être supprimés à l’aide de la méthode connecteurs dans [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) le [SDK BotBuilder](/bot-framework/bot-builder-overview-getstarted).
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {

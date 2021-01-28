@@ -3,12 +3,12 @@ title: Support de l'identification unique pour les robots
 description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un développeur de bot peut utiliser une carte de signature ou le service de bot Azure avec la prise en charge de la carte OAuth.
 keywords: token, user token, SSO support for bots
 ms.topic: conceptual
-ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
-ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
+ms.openlocfilehash: 8669e00fcfcfb69844c4d63c9e7aa06b47567705
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49935253"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014494"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l' sign-on unique (SSO) pour les bots
 
@@ -48,14 +48,14 @@ Pour développer un bot SSO Teams, complétez les étapes suivantes :
 
 1. [Inscrivez votre application via le portail AAD.](#register-your-app-through-the-aad-portal)
 2. [Mettez à jour le manifeste de votre application Teams pour votre bot.](#update-your-teams-application-manifest-for-your-bot)
-3. [Ajoutez le code pour demander et recevoir un jeton de bot](#add-the-code-to-request-and-receive-a-bot-token).
+3. [Ajoutez le code pour demander et recevoir un jeton de bot.](#add-the-code-to-request-and-receive-a-bot-token)
 
 ### <a name="register-your-app-through-the-aad-portal"></a>Inscrire votre application via le portail AAD
 
 Les étapes d’inscription de votre application via le portail AAD sont similaires au flux d' utilisateur unique [de l’onglet.](../../../tabs/how-to/authentication/auth-aad-sso.md) Pour inscrire votre application, complétez les étapes suivantes :
 
-1. Inscrivez une nouvelle application dans [le portail Azure Active Directory – Inscriptions des](https://go.microsoft.com/fwlink/?linkid=2083908) applications.
-2. Sélectionnez **Nouvelle inscription.** La page **Inscrire une application** s’affiche.
+1. Inscrivez une nouvelle application dans [le portail Azure Active Directory – App Registrations.](https://go.microsoft.com/fwlink/?linkid=2083908)
+2. Sélectionnez **Nouvelle inscription**. La page **Inscrire une application** s’affiche.
 3. Dans la page **Inscrire une application,** entrez les valeurs suivantes :
     1. Entrez un **nom** pour votre application.
     2. Choisissez les **types de comptes pris en** charge, sélectionnez le type de compte client unique ou multi-locataire.
@@ -91,7 +91,7 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
 
 Pour mettre à jour le portail Azure avec la connexion OAuth, effectuer les étapes suivantes :
 
-1. Dans le portail Azure, accédez à **Inscription des canaux bots.**
+1. Dans le portail Azure, accédez aux inscriptions **d’applications.**
 
 2. Go to **API Permissions**. Sélectionnez **Ajouter une autorisation Autorisation**  >  déléguée Microsoft **Graph,** puis ajoutez les autorisations suivantes à partir de  >  l’API Microsoft Graph :
     * User.Read (activé par défaut)
@@ -100,19 +100,21 @@ Pour mettre à jour le portail Azure avec la connexion OAuth, effectuer les éta
     * OpenId
     * profil
 
-3. Sélectionnez **Paramètres** dans le volet gauche et **sélectionnez Ajouter** un paramètre dans la section Paramètres de connexion **OAuth.**
+3. Dans le portail Azure, accédez à **Inscription des canaux bots.**
+
+4. Sélectionnez **Paramètres** dans le volet gauche et **sélectionnez Ajouter** un paramètre dans la section Paramètres de connexion **OAuth.**
 
     ![Affichage SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-4. Pour remplir le formulaire Nouveau paramètre de connexion, effectuez les étapes **suivantes** :
+5. Pour remplir le formulaire Nouveau paramètre de connexion, effectuez les étapes **suivantes** :
 
     >[!NOTE]
     > **L’octroi** implicite peut être requis dans l’application AAD.
 
-    1. Entrez un **nom dans** la page Nouveau paramètre **de connexion.** Il s’agit du nom qui est référent dans les paramètres de votre code de service de bot à l’étape *5* de l' sso bot lors [de l’utilisation.](#bot-sso-at-runtime)
-    2. Dans la **drop-down Fournisseur** de services, **sélectionnez Azure Active Directory v2**.
+    1. Entrez un **nom dans** la page Nouveau paramètre **de connexion.** Il s’agit du nom qui est référent dans les paramètres de votre code de service de bot à l’étape *5* de l' sso du bot lors [de l’utilisation.](#bot-sso-at-runtime)
+    2. Dans la **drop-down Fournisseur** de services, sélectionnez Azure **Active Directory v2**.
     3. Entrez les informations d’identification du client, telles que **l’ID client** et la **secret client** pour l’application AAD.
-    4. Pour **l’URL d’Exchange** de jeton, utilisez la valeur d’étendue définie dans Mettre à jour le manifeste de votre [application Teams pour votre bot.](#update-your-teams-application-manifest-for-your-bot) L’URL d’Exchange de jeton indique au SDK que cette application AAD est configurée pour l' sso.
+    4. Pour **l’URL d’Exchange** de jeton, utilisez la valeur d’étendue définie dans mettre à jour le manifeste de votre [application Teams pour votre bot.](#update-your-teams-application-manifest-for-your-bot) L’URL d’Exchange de jeton indique au SDK que cette application AAD est configurée pour l' sso.
     5. Dans la **zone ID client,** entrez *commun*.
     6. Ajoutez toutes les **étendues configurées** lors de la spécification d’autorisations pour les API en aval pour votre application AAD. Avec l’ID client et la secret client fournis, le magasin de jetons échange le jeton contre un jeton graphique avec des autorisations définies.
     7. Sélectionnez **Enregistrer**.
@@ -164,7 +166,7 @@ Lorsque l’utilisateur sélectionne **Continuer,** les événements suivants se
 
 * Si le bot ne fournit pas de bouton de sign-in sur la carte OAuth, le consentement de l’utilisateur est requis pour un ensemble minimal d’autorisations. Ce jeton est utile pour l’authentification de base et pour obtenir l’adresse e-mail de l’utilisateur.
 
-##### <a name="c-token-request-without-a-sign-in-button"></a>Demande de jeton C# sans bouton de signature
+##### <a name="c-token-request-without-a-sign-in-button"></a>Demande de jeton C# sans bouton de sign-in
 
 ```csharp
     var attachment = new Attachment

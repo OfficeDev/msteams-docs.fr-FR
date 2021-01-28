@@ -1,13 +1,14 @@
 ---
-title: Liste de vérification pour l’envoi
+title: Liste de vérification de soumission au Store
 description: Liste de vérification à utiliser avant la publication de votre application Microsoft Teams dans AppSource
+ms.topic: reference
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 8d20d0106c1b2d8da38c5802b977634925afffcc
-ms.sourcegitcommit: db19fee033b41152267bb524d67aee5b7f64b04a
+ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797474"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014214"
 ---
 # <a name="prepare-for-appsource-submission"></a>Préparer la soumission d’AppSource  
 
@@ -30,7 +31,7 @@ Une fois que vous avez rempli toutes les conditions ci-dessus, envoyez votre pac
 
 ## <a name="teams-app-validation-tool"></a>Outil de validation d’application Teams
 
-L’outil de validation d’application se compose d’un [validateur](#teams-app-validator) d’application et [d’une liste de contrôle préliminaire.](#preliminary-checklist) L’outil réplique les mêmes cas de test utilisés par [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) pour évaluer la soumission de votre application. Par conséquent, il est essentiel de réussir tous les cas de test avant de soumettre votre solution à AppSource pour approbation. L’outil se trouve dans plusieurs zones de la plateforme Teams :
+L’outil de validation d’application se compose d’un [validateur](#teams-app-validator) d’application et d’une liste [de contrôle préliminaire.](#preliminary-checklist) L’outil réplique les mêmes cas de test utilisés par [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) pour évaluer la soumission de votre application. Par conséquent, il est essentiel de réussir tous les cas de test avant de soumettre votre solution à AppSource pour approbation. L’outil se trouve dans plusieurs zones de la plateforme Teams :
 
 > [!div class="checklist"]
 >
@@ -40,7 +41,7 @@ L’outil de validation d’application se compose d’un [validateur](#teams-ap
 
 ### <a name="teams-app-validator"></a>Validateur d’application Teams
 
-La page **Valider** vous permet de vérifier votre package d’application avant de le soumettre à AppSource. Chargez simplement votre package d’application et l’outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque test qui a échoué, la description fournit un lien de documentation pour vous aider à résoudre l’erreur.
+La page **Valider** vous permet de vérifier votre package d’application avant de le soumettre à AppSource. Il vous suffit de charger votre package d’application et l’outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque test qui a échoué, la description fournit un lien de documentation pour vous aider à corriger l’erreur.
 
 ![Outil de validation](../../../../assets/images/validation-tool/validator.png)
 
@@ -60,9 +61,9 @@ Recommandations en matière de politique de confidentialité :
 >
 > * La politique de confidentialité peut être spécifique à votre application et/ou à une stratégie globale pour tous vos services.
 > * Si vous utilisez une stratégie de confidentialité générique, elle doit faire référence aux « services », aux « applications » et aux « plateformes » pour inclure votre application Teams ainsi que votre site web.
-> * Elle doit inclure la façon dont vous traitez le stockage des données utilisateur, la rétention, la suppression et les contrôles de sécurité des données utilisateur.
+> * Il doit inclure la façon dont vous traitez le stockage des données utilisateur, la rétention, la suppression et les contrôles de sécurité des données utilisateur.
 > * Il doit inclure vos informations de contact.
-> * Il ne doit pas contenir de liens rompus, d’URL bêta ou d’URL de transit.
+> * Elle ne doit pas contenir de liens rompus, d’URL bêta ou d’URL intermédiaire.
 
 ### <a name="terms-of-use"></a>Conditions d’utilisation
 
@@ -74,7 +75,7 @@ Vos URL de support ne doivent pas nécessiter d’authentification ou d’inform
 
 ## <a name="test-notes-for-validation"></a>Notes de test pour la validation
 
-Veuillez inclure les informations suivantes :
+Incluez les informations suivantes :
 
 * Vous devez fournir au moins deux informations d’identification de connexion, un administrateur et un non administrateur.
 
