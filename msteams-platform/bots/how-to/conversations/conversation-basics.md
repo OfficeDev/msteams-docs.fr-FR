@@ -1,46 +1,48 @@
 ---
 title: Concepts de base d’une conversation
-author: clearab
-description: Comment avoir une conversation avec un bot Microsoft Teams
+description: décrit les manières d’avoir une conversation avec un bot Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f7e7a4d1be08126c96dff07ddbc3e1156700a90
-ms.sourcegitcommit: 94ad961ecd002805b4e0424601d1c0ec191ff376
+keyword: conversations basics receive message send message picture message channel data adaptive cards
+ms.openlocfilehash: a045f02a146782ebdbbbb14fe5f4187cb517a109
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50075692"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093956"
 ---
-# <a name="conversation-basics"></a><span data-ttu-id="ba2f7-103">Concepts de base d’une conversation</span><span class="sxs-lookup"><span data-stu-id="ba2f7-103">Conversation basics</span></span>
+# <a name="conversation-basics"></a><span data-ttu-id="094bf-103">Concepts de base d’une conversation</span><span class="sxs-lookup"><span data-stu-id="094bf-103">Conversation basics</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="ba2f7-104">Une conversation est une série de messages échangés entre votre bot et un ou plusieurs utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-104">A conversation is a series of messages sent between your bot and one or more users.</span></span> <span data-ttu-id="ba2f7-105">Il existe trois types de conversations (ou portées) dans Teams :</span><span class="sxs-lookup"><span data-stu-id="ba2f7-105">There are three kinds of conversations (also called scopes) in Teams:</span></span>
+<span data-ttu-id="094bf-104">Une conversation est une série de messages échangés entre votre bot et un ou plusieurs utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="094bf-104">A conversation is a series of messages sent between your bot and one or more users.</span></span> <span data-ttu-id="094bf-105">Il existe trois types de conversations, également appelées étendues dans Teams :</span><span class="sxs-lookup"><span data-stu-id="094bf-105">There are three types of conversations, also called scopes in Teams:</span></span>
 
-* <span data-ttu-id="ba2f7-106">`teams` Également appelées conversations de canal, visibles par tous les membres du canal.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-106">`teams` Also called channel conversations, visible to all members of the channel.</span></span>
-* <span data-ttu-id="ba2f7-107">`personal` Conversations entre les bots et un seul utilisateur.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-107">`personal` Conversations between bots and a single user.</span></span>
-* <span data-ttu-id="ba2f7-108">`groupChat` Discutez entre un bot et au moins deux utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-108">`groupChat` Chat between a bot and two or more users.</span></span> <span data-ttu-id="ba2f7-109">Active également votre bot dans les conversations de réunion.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-109">Also enables your bot in meeting chats.</span></span>
+| <span data-ttu-id="094bf-106">Type de conversation</span><span class="sxs-lookup"><span data-stu-id="094bf-106">Conversation type</span></span> | <span data-ttu-id="094bf-107">Description</span><span class="sxs-lookup"><span data-stu-id="094bf-107">Description</span></span> |
+| ------- | ----------- |
+|  `teams` | <span data-ttu-id="094bf-108">Également appelées conversations de canal, visibles par tous les membres du canal.</span><span class="sxs-lookup"><span data-stu-id="094bf-108">Also called channel conversations, visible to all members of the channel.</span></span> |
+| `personal` | <span data-ttu-id="094bf-109">Conversations entre les bots et un seul utilisateur.</span><span class="sxs-lookup"><span data-stu-id="094bf-109">Conversations between bots and a single user.</span></span> |
+| `groupChat` | <span data-ttu-id="094bf-110">Discutez entre un bot et au moins deux utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="094bf-110">Chat between a bot and two or more users.</span></span> <span data-ttu-id="094bf-111">Active également votre bot dans les conversations de réunion.</span><span class="sxs-lookup"><span data-stu-id="094bf-111">Also enables your bot in meeting chats.</span></span> |
 
-<span data-ttu-id="ba2f7-110">Un bot se comporte légèrement différemment selon le type de conversation dans qui il est impliqué :</span><span class="sxs-lookup"><span data-stu-id="ba2f7-110">A bot behaves slightly differently depending on what kind of conversation it is involved in:</span></span>
+<span data-ttu-id="094bf-112">Un bot se comporte légèrement différemment selon le type de conversation dans qui il est impliqué :</span><span class="sxs-lookup"><span data-stu-id="094bf-112">A bot behaves slightly differently depending on what kind of conversation it is involved in:</span></span>
 
-* <span data-ttu-id="ba2f7-111">Les bots dans les conversations de canal et de groupe nécessitent que l’utilisateur mentionne @ le bot pour l’appeler dans un canal.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-111">Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.</span></span>
-* <span data-ttu-id="ba2f7-112">Les bots d’une conversation un-à-un ne nécessitent pas de mention @ .</span><span class="sxs-lookup"><span data-stu-id="ba2f7-112">Bots in a one-to-one conversation do not require an @ mention.</span></span> <span data-ttu-id="ba2f7-113">Tous les messages envoyés par l’utilisateur sont acheminés à votre bot.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-113">All messages sent by the user will be routed to your bot.</span></span>
+* <span data-ttu-id="094bf-113">Les bots dans les conversations de canal et de groupe nécessitent que l’utilisateur mentionne @ le bot pour l’appeler dans un canal.</span><span class="sxs-lookup"><span data-stu-id="094bf-113">Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.</span></span>
+* <span data-ttu-id="094bf-114">Les bots d’une conversation un-à-un ne nécessitent pas de mention @ .</span><span class="sxs-lookup"><span data-stu-id="094bf-114">Bots in a one-to-one conversation do not require an @ mention.</span></span> <span data-ttu-id="094bf-115">Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.</span><span class="sxs-lookup"><span data-stu-id="094bf-115">All messages sent by the user routes to your bot.</span></span>
 
-<span data-ttu-id="ba2f7-114">Pour activer votre bot dans une étendue particulière, ajoutez cette étendue au manifeste [de votre application.](~/resources/schema/manifest-schema.md)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-114">To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).</span></span>
+<span data-ttu-id="094bf-116">Pour activer votre bot dans une étendue particulière, ajoutez cette étendue au manifeste [de votre application.](~/resources/schema/manifest-schema.md)</span><span class="sxs-lookup"><span data-stu-id="094bf-116">To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).</span></span>
 
-## <a name="activities"></a><span data-ttu-id="ba2f7-115">Activités</span><span class="sxs-lookup"><span data-stu-id="ba2f7-115">Activities</span></span>
+## <a name="activities"></a><span data-ttu-id="094bf-117">Activités</span><span class="sxs-lookup"><span data-stu-id="094bf-117">Activities</span></span>
 
-<span data-ttu-id="ba2f7-116">Chaque message est un objet `Activity` de type `messageType: message`.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-116">Each message is an `Activity` object of type `messageType: message`.</span></span> <span data-ttu-id="ba2f7-117">Lorsqu’un utilisateur envoie un message, Teams le publie sur votre bot. Plus précisément, il envoie un objet JSON au point de terminaison de messagerie de votre bot.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-117">When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint.</span></span> <span data-ttu-id="ba2f7-118">Votre bot examine le message pour déterminer son type et répond en conséquence.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-118">Your bot examines the message to determine its type and responds accordingly.</span></span>
+<span data-ttu-id="094bf-118">Chaque message est un objet `Activity` de type `messageType: message`.</span><span class="sxs-lookup"><span data-stu-id="094bf-118">Each message is an `Activity` object of type `messageType: message`.</span></span> <span data-ttu-id="094bf-119">Lorsqu’un utilisateur envoie un message, Teams le publie sur votre bot. Plus précisément, il envoie un objet JSON au point de terminaison de messagerie de votre bot.</span><span class="sxs-lookup"><span data-stu-id="094bf-119">When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint.</span></span> <span data-ttu-id="094bf-120">Votre bot examine le message pour déterminer son type et répond en conséquence.</span><span class="sxs-lookup"><span data-stu-id="094bf-120">Your bot examines the message to determine its type and responds accordingly.</span></span>
 
-<span data-ttu-id="ba2f7-119">La conversation de base est gérée par le biais du connecteur Bot Framework, une API REST unique permettant à votre bot de communiquer avec Teams et d’autres canaux.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-119">Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels.</span></span> <span data-ttu-id="ba2f7-120">Le SDK Bot Builder fournit un accès facile à cette API, des fonctionnalités supplémentaires pour gérer le flux et l’état des conversations, ainsi que des moyens simples d’incorporer des services cognitives tels que le traitement du langage naturel (NLP).</span><span class="sxs-lookup"><span data-stu-id="ba2f7-120">The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).</span></span>
+<span data-ttu-id="094bf-121">Les conversations de base sont gérées par le biais du connecteur Bot Framework, une API REST unique.</span><span class="sxs-lookup"><span data-stu-id="094bf-121">Basic conversations are handled through the Bot Framework Connector, a single REST API.</span></span> <span data-ttu-id="094bf-122">Cette API permet à votre bot de communiquer avec Teams et d’autres canaux.</span><span class="sxs-lookup"><span data-stu-id="094bf-122">This API enables your bot to communicate with Teams and other channels.</span></span> <span data-ttu-id="094bf-123">Le SDK Bot Builder fournit un accès facile à cette API, des fonctionnalités supplémentaires pour gérer le flux et l’état des conversations, ainsi que des moyens simples d’incorporer des services cognitives tels que le traitement du langage naturel (NLP).</span><span class="sxs-lookup"><span data-stu-id="094bf-123">The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as Natural Language Processing (NLP).</span></span>
 
-## <a name="receive-a-message"></a><span data-ttu-id="ba2f7-121">Recevoir un message</span><span class="sxs-lookup"><span data-stu-id="ba2f7-121">Receive a message</span></span>
+## <a name="receive-a-message"></a><span data-ttu-id="094bf-124">Recevoir un message</span><span class="sxs-lookup"><span data-stu-id="094bf-124">Receive a message</span></span>
 
-<span data-ttu-id="ba2f7-122">Pour recevoir un message texte, utilisez la propriété `Text` de l’objet `Activity`.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-122">To receive a text message, use the `Text` property of the `Activity` object.</span></span> <span data-ttu-id="ba2f7-123">Dans le gestionnaire d’activités du bot, utilisez l’`Activity` de l’objet de contexte de tour pour lire un seul message de demande.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-123">In the bot's activity handler, use the turn context object's `Activity` to read a single message request.</span></span>
+<span data-ttu-id="094bf-125">Pour recevoir un message texte, utilisez la propriété `Text` de l’objet `Activity`.</span><span class="sxs-lookup"><span data-stu-id="094bf-125">To receive a text message, use the `Text` property of the `Activity` object.</span></span> <span data-ttu-id="094bf-126">Dans le gestionnaire d’activités du bot, utilisez l’`Activity` de l’objet de contexte de tour pour lire un seul message de demande.</span><span class="sxs-lookup"><span data-stu-id="094bf-126">In the bot's activity handler, use the turn context object's `Activity` to read a single message request.</span></span>
 
-<span data-ttu-id="ba2f7-124">Le code ci-dessous présente un exemple.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-124">The code below shows an example.</span></span>
+<span data-ttu-id="094bf-127">Le code ci-dessous vous montre un exemple.</span><span class="sxs-lookup"><span data-stu-id="094bf-127">The following code shows an example.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ba2f7-125">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba2f7-125">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="094bf-128">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="094bf-128">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -50,7 +52,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="ba2f7-126">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba2f7-126">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="094bf-129">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="094bf-129">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -66,7 +68,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="python"></a>[<span data-ttu-id="ba2f7-127">Python</span><span class="sxs-lookup"><span data-stu-id="ba2f7-127">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="094bf-130">Python</span><span class="sxs-lookup"><span data-stu-id="094bf-130">Python</span></span>](#tab/python)
 
 <!-- Verify -->
 ```python
@@ -76,7 +78,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ba2f7-128">JSON</span><span class="sxs-lookup"><span data-stu-id="ba2f7-128">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="094bf-131">JSON</span><span class="sxs-lookup"><span data-stu-id="094bf-131">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -121,11 +123,11 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## <a name="send-a-message"></a><span data-ttu-id="ba2f7-129">Envoyer un message</span><span class="sxs-lookup"><span data-stu-id="ba2f7-129">Send a message</span></span>
+## <a name="send-a-message"></a><span data-ttu-id="094bf-132">Envoyer un message</span><span class="sxs-lookup"><span data-stu-id="094bf-132">Send a message</span></span>
 
-<span data-ttu-id="ba2f7-130">Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-130">To send a text message, specify the string you want to send as the activity.</span></span> <span data-ttu-id="ba2f7-131">Dans le gestionnaire d’activités du bot, utilisez la méthode `SendActivityAsync` de l’objet de contexte de tour pour envoyer un seul message de réponse.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-131">In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response.</span></span> <span data-ttu-id="ba2f7-132">Vous pouvez également utiliser la méthode de l’objet `SendActivitiesAsync` pour envoyer plusieurs réponses à la fois.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-132">You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.</span></span> <span data-ttu-id="ba2f7-133">Le code ci-dessous montre un exemple d’envoi d’un message lorsqu’une personne est ajoutée à une conversation.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-133">The code below shows an example of sending a message when someone is added to a conversation</span></span>  
+<span data-ttu-id="094bf-133">Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité.</span><span class="sxs-lookup"><span data-stu-id="094bf-133">To send a text message, specify the string you want to send as the activity.</span></span> <span data-ttu-id="094bf-134">Dans le handler d’activité du bot, utilisez la méthode de l’objet de contexte turn pour `SendActivityAsync` envoyer une seule réponse de message.</span><span class="sxs-lookup"><span data-stu-id="094bf-134">In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response.</span></span> <span data-ttu-id="094bf-135">Utilisez la méthode de `SendActivitiesAsync` l’objet pour envoyer plusieurs réponses à la fois.</span><span class="sxs-lookup"><span data-stu-id="094bf-135">Use the object's `SendActivitiesAsync` method to send multiple responses at once.</span></span> <span data-ttu-id="094bf-136">Le code suivant montre un exemple d’envoi d’un message lorsqu’une personne est ajoutée à une conversation.</span><span class="sxs-lookup"><span data-stu-id="094bf-136">The following code shows an example of sending a message when someone is added to a conversation.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ba2f7-134">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba2f7-134">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="094bf-137">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="094bf-137">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -135,7 +137,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="ba2f7-135">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba2f7-135">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="094bf-138">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="094bf-138">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -150,7 +152,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="ba2f7-136">Python</span><span class="sxs-lookup"><span data-stu-id="ba2f7-136">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="094bf-139">Python</span><span class="sxs-lookup"><span data-stu-id="094bf-139">Python</span></span>](#tab/python)
 
 <!-- Verify -->
 
@@ -165,7 +167,7 @@ async def on_members_added_activity(
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ba2f7-137">JSON</span><span class="sxs-lookup"><span data-stu-id="ba2f7-137">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="094bf-140">JSON</span><span class="sxs-lookup"><span data-stu-id="094bf-140">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -210,26 +212,26 @@ async def on_members_added_activity(
 
 ---
 
-## <a name="teams-channel-data"></a><span data-ttu-id="ba2f7-138">Données de canal Teams</span><span class="sxs-lookup"><span data-stu-id="ba2f7-138">Teams channel data</span></span>
+## <a name="teams-channel-data"></a><span data-ttu-id="094bf-141">Données de canal Teams</span><span class="sxs-lookup"><span data-stu-id="094bf-141">Teams channel data</span></span>
 
-<span data-ttu-id="ba2f7-139">L’objet contient des informations spécifiques à Teams et constitue la source définitive des ID d’équipe et `channelData` de canal.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-139">The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs.</span></span> <span data-ttu-id="ba2f7-140">Vous devrez peut-être mettre en cache et utiliser ces ID comme clés pour le stockage local.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-140">You may need to cache and use these ids as keys for local storage.</span></span> <span data-ttu-id="ba2f7-141">Le SDK retire généralement des informations importantes de l’objet pour les rendre plus facilement accessibles, mais vous pouvez toujours accéder aux informations d’origine à partir de `TeamsActivityHandler` `channelData` `turnContext` l’objet.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-141">The `TeamsActivityHandler` in the SDK will typically pull out important information from the `channelData` object to make it more easily accessible, however you can always access the original information from the `turnContext` object.</span></span>
+<span data-ttu-id="094bf-142">L’objet contient des informations spécifiques à Teams et constitue une source définitive pour les ID d’équipe `channelData` et de canal.</span><span class="sxs-lookup"><span data-stu-id="094bf-142">The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs.</span></span> <span data-ttu-id="094bf-143">Vous devrez peut-être mettre en cache et utiliser ces ID comme clés pour le stockage local.</span><span class="sxs-lookup"><span data-stu-id="094bf-143">You may need to cache and use these IDs as keys for local storage.</span></span> <span data-ttu-id="094bf-144">Le SDK, en général, retire des informations importantes de `TeamsActivityHandler` l’objet pour les rendre facilement `channelData` accessibles.</span><span class="sxs-lookup"><span data-stu-id="094bf-144">The `TeamsActivityHandler` in the SDK, typically pulls out important information from the `channelData` object to make it easily accessible.</span></span> <span data-ttu-id="094bf-145">Toutefois, vous pouvez toujours accéder aux données d’origine à partir de `turnContext` l’objet.</span><span class="sxs-lookup"><span data-stu-id="094bf-145">However, you can always access the original data from the `turnContext` object.</span></span>
 
-<span data-ttu-id="ba2f7-142">`channelData`L’objet n’est pas inclus dans les messages dans les conversations personnelles, car ils ont lieu en dehors d’un canal.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-142">The `channelData` object is not included in messages in personal conversations since these take place outside of any channel.</span></span>
+<span data-ttu-id="094bf-146">L’objet n’est pas inclus dans les messages dans les conversations personnelles, car ils ont lieu en `channelData` dehors de n’importe quel canal.</span><span class="sxs-lookup"><span data-stu-id="094bf-146">The `channelData` object is not included in messages in personal conversations, as these take place outside of any channel.</span></span>
 
-<span data-ttu-id="ba2f7-143">Un objet channelData classique dans une activité envoyée à votre bot contient les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="ba2f7-143">A typical channelData object in an activity sent to your bot contains the following information:</span></span>
+<span data-ttu-id="094bf-147">Un objet channelData classique dans une activité envoyée à votre bot contient les informations suivantes :</span><span class="sxs-lookup"><span data-stu-id="094bf-147">A typical channelData object in an activity sent to your bot contains the following information:</span></span>
 
-* <span data-ttu-id="ba2f7-144">`eventType` Type d’événement Teams ; transmis uniquement en cas d’événements [de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-144">`eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span></span>
-* <span data-ttu-id="ba2f7-145">`tenant.id` ID de client Azure Active Directory ; transmis dans tous les contextes</span><span class="sxs-lookup"><span data-stu-id="ba2f7-145">`tenant.id` Azure Active Directory tenant ID; passed in all contexts</span></span>
-* <span data-ttu-id="ba2f7-146">`team` Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-146">`team` Passed only in channel contexts, not in personal chat.</span></span>
-  * <span data-ttu-id="ba2f7-147">`id` GUID du canal</span><span class="sxs-lookup"><span data-stu-id="ba2f7-147">`id` GUID for the channel</span></span>
-  * <span data-ttu-id="ba2f7-148">`name` Nom de l’équipe ; transmis uniquement en cas d’événements [de changement de nom d’équipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-148">`name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span></span>
-* <span data-ttu-id="ba2f7-149">`channel` Transmis uniquement dans les contextes de canal lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes où le bot a été ajouté</span><span class="sxs-lookup"><span data-stu-id="ba2f7-149">`channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added</span></span>
-  * <span data-ttu-id="ba2f7-150">`id` GUID du canal</span><span class="sxs-lookup"><span data-stu-id="ba2f7-150">`id` GUID for the channel</span></span>
-  * <span data-ttu-id="ba2f7-151">`name`Nom du canal ; transmis uniquement en cas d’événements [de modification de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-151">`name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
-* <span data-ttu-id="ba2f7-152">`channelData.teamsTeamId` Deprecated.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-152">`channelData.teamsTeamId` Deprecated.</span></span> <span data-ttu-id="ba2f7-153">Cette propriété est incluse uniquement pour des raisons de compatibilité ascendante.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-153">This property is included only for backwards compatibility.</span></span>
-* <span data-ttu-id="ba2f7-154">`channelData.teamsChannelId` Deprecated.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-154">`channelData.teamsChannelId` Deprecated.</span></span> <span data-ttu-id="ba2f7-155">Cette propriété est incluse uniquement pour des raisons de compatibilité ascendante.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-155">This property is included only for backwards compatibility.</span></span>
+* <span data-ttu-id="094bf-148">`eventType`Type d’événement Teams ; transmis uniquement en cas d’événements [de modification de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="094bf-148">`eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="094bf-149">`tenant.id` ID de client Azure Active Directory, transmis dans tous les contextes.</span><span class="sxs-lookup"><span data-stu-id="094bf-149">`tenant.id` Azure Active Directory tenant ID, passed in all contexts.</span></span>
+* <span data-ttu-id="094bf-150">`team` Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.</span><span class="sxs-lookup"><span data-stu-id="094bf-150">`team` Passed only in channel contexts, not in personal chat.</span></span>
+  * <span data-ttu-id="094bf-151">`id` GUID du canal.</span><span class="sxs-lookup"><span data-stu-id="094bf-151">`id` GUID for the channel.</span></span>
+  * <span data-ttu-id="094bf-152">`name`Nom de l’équipe ; transmis uniquement dans les cas d’événements [de changement de nom d’équipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="094bf-152">`name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="094bf-153">`channel` Transmis uniquement dans les contextes de canal lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes où le bot a été ajouté.</span><span class="sxs-lookup"><span data-stu-id="094bf-153">`channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.</span></span>
+  * <span data-ttu-id="094bf-154">`id` GUID du canal.</span><span class="sxs-lookup"><span data-stu-id="094bf-154">`id` GUID for the channel.</span></span>
+  * <span data-ttu-id="094bf-155">`name`Nom du canal ; transmis uniquement en cas d’événements [de modification de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="094bf-155">`name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="094bf-156">`channelData.teamsTeamId` Deprecated.</span><span class="sxs-lookup"><span data-stu-id="094bf-156">`channelData.teamsTeamId` Deprecated.</span></span> <span data-ttu-id="094bf-157">Cette propriété est incluse uniquement pour des raisons de compatibilité ascendante.</span><span class="sxs-lookup"><span data-stu-id="094bf-157">This property is included only for backwards compatibility.</span></span>
+* <span data-ttu-id="094bf-158">`channelData.teamsChannelId` Deprecated.</span><span class="sxs-lookup"><span data-stu-id="094bf-158">`channelData.teamsChannelId` Deprecated.</span></span> <span data-ttu-id="094bf-159">Cette propriété est incluse uniquement pour des raisons de compatibilité ascendante.</span><span class="sxs-lookup"><span data-stu-id="094bf-159">This property is included only for backwards compatibility.</span></span>
 
-### <a name="example-channeldata-object-channelcreated-event"></a><span data-ttu-id="ba2f7-156">Exemple d’objet channelData (événement channelCreated)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-156">Example channelData object (channelCreated event)</span></span>
+### <a name="example-channeldata-object-channelcreated-event"></a><span data-ttu-id="094bf-160">Exemple d’objet channelData (événement channelCreated)</span><span class="sxs-lookup"><span data-stu-id="094bf-160">Example channelData object (channelCreated event)</span></span>
 
 ```json
 "channelData": {
@@ -247,22 +249,22 @@ async def on_members_added_activity(
 }
 ```
 
-## <a name="message-content"></a><span data-ttu-id="ba2f7-157">Contenu du message</span><span class="sxs-lookup"><span data-stu-id="ba2f7-157">Message content</span></span>
+## <a name="message-content"></a><span data-ttu-id="094bf-161">Contenu du message</span><span class="sxs-lookup"><span data-stu-id="094bf-161">Message content</span></span>
 
-<span data-ttu-id="ba2f7-158">Votre bot peut envoyer du texte enrichi, des images et des cartes.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-158">Your bot can send rich text, pictures, and cards.</span></span> <span data-ttu-id="ba2f7-159">Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-159">Users can send rich text and pictures to your bot.</span></span>
+<span data-ttu-id="094bf-162">Votre bot peut envoyer du texte enrichi, des images et des cartes.</span><span class="sxs-lookup"><span data-stu-id="094bf-162">Your bot can send rich text, pictures, and cards.</span></span> <span data-ttu-id="094bf-163">Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.</span><span class="sxs-lookup"><span data-stu-id="094bf-163">Users can send rich text and pictures to your bot.</span></span>
 
-| <span data-ttu-id="ba2f7-160">Format</span><span class="sxs-lookup"><span data-stu-id="ba2f7-160">Format</span></span>    | <span data-ttu-id="ba2f7-161">De l’utilisateur au bot</span><span class="sxs-lookup"><span data-stu-id="ba2f7-161">From user to bot</span></span> | <span data-ttu-id="ba2f7-162">Du bot à l’utilisateur</span><span class="sxs-lookup"><span data-stu-id="ba2f7-162">From bot to user</span></span> | <span data-ttu-id="ba2f7-163">Notes</span><span class="sxs-lookup"><span data-stu-id="ba2f7-163">Notes</span></span>                                                                                   |
+| <span data-ttu-id="094bf-164">Format</span><span class="sxs-lookup"><span data-stu-id="094bf-164">Format</span></span>    | <span data-ttu-id="094bf-165">De l’utilisateur au bot</span><span class="sxs-lookup"><span data-stu-id="094bf-165">From user to bot</span></span> | <span data-ttu-id="094bf-166">Du bot à l’utilisateur</span><span class="sxs-lookup"><span data-stu-id="094bf-166">From bot to user</span></span> | <span data-ttu-id="094bf-167">Notes</span><span class="sxs-lookup"><span data-stu-id="094bf-167">Notes</span></span>                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="ba2f7-164">Texte enrichi </span><span class="sxs-lookup"><span data-stu-id="ba2f7-164">Rich text</span></span> | <span data-ttu-id="ba2f7-165">✔</span><span class="sxs-lookup"><span data-stu-id="ba2f7-165">✔</span></span>                | <span data-ttu-id="ba2f7-166">✔</span><span class="sxs-lookup"><span data-stu-id="ba2f7-166">✔</span></span>                |                                                                                         |
-| <span data-ttu-id="ba2f7-167">Images</span><span class="sxs-lookup"><span data-stu-id="ba2f7-167">Pictures</span></span>  | <span data-ttu-id="ba2f7-168">✔</span><span class="sxs-lookup"><span data-stu-id="ba2f7-168">✔</span></span>                | <span data-ttu-id="ba2f7-169">✔</span><span class="sxs-lookup"><span data-stu-id="ba2f7-169">✔</span></span>                | <span data-ttu-id="ba2f7-170">Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge</span><span class="sxs-lookup"><span data-stu-id="ba2f7-170">Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported</span></span>  |
-| <span data-ttu-id="ba2f7-171">Cartes</span><span class="sxs-lookup"><span data-stu-id="ba2f7-171">Cards</span></span>     | <span data-ttu-id="ba2f7-172">✖</span><span class="sxs-lookup"><span data-stu-id="ba2f7-172">✖</span></span>                | <span data-ttu-id="ba2f7-173">✔</span><span class="sxs-lookup"><span data-stu-id="ba2f7-173">✔</span></span>                | <span data-ttu-id="ba2f7-174">Voir la référence [de carte Teams pour](~/task-modules-and-cards/cards/cards-reference.md) les cartes pris en charge</span><span class="sxs-lookup"><span data-stu-id="ba2f7-174">See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards</span></span> |
-| <span data-ttu-id="ba2f7-175">Emojis</span><span class="sxs-lookup"><span data-stu-id="ba2f7-175">Emojis</span></span>    | <span data-ttu-id="ba2f7-176">✖</span><span class="sxs-lookup"><span data-stu-id="ba2f7-176">✖</span></span>                | <span data-ttu-id="ba2f7-177">✔</span><span class="sxs-lookup"><span data-stu-id="ba2f7-177">✔</span></span>                | <span data-ttu-id="ba2f7-178">Teams prend actuellement en charge les emojis via UTF-16 (par exemple, U+1F600 pour le visage de panoramique)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-178">Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)</span></span>          |
+| <span data-ttu-id="094bf-168">Texte enrichi </span><span class="sxs-lookup"><span data-stu-id="094bf-168">Rich text</span></span> | <span data-ttu-id="094bf-169">✔</span><span class="sxs-lookup"><span data-stu-id="094bf-169">✔</span></span>                | <span data-ttu-id="094bf-170">✔</span><span class="sxs-lookup"><span data-stu-id="094bf-170">✔</span></span>                |                                                                                         |
+| <span data-ttu-id="094bf-171">Images</span><span class="sxs-lookup"><span data-stu-id="094bf-171">Pictures</span></span>  | <span data-ttu-id="094bf-172">✔</span><span class="sxs-lookup"><span data-stu-id="094bf-172">✔</span></span>                | <span data-ttu-id="094bf-173">✔</span><span class="sxs-lookup"><span data-stu-id="094bf-173">✔</span></span>                | <span data-ttu-id="094bf-174">Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge</span><span class="sxs-lookup"><span data-stu-id="094bf-174">Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported</span></span>  |
+| <span data-ttu-id="094bf-175">Cartes</span><span class="sxs-lookup"><span data-stu-id="094bf-175">Cards</span></span>     | <span data-ttu-id="094bf-176">✖</span><span class="sxs-lookup"><span data-stu-id="094bf-176">✖</span></span>                | <span data-ttu-id="094bf-177">✔</span><span class="sxs-lookup"><span data-stu-id="094bf-177">✔</span></span>                | <span data-ttu-id="094bf-178">Voir la référence [de carte Teams pour](~/task-modules-and-cards/cards/cards-reference.md) les cartes pris en charge</span><span class="sxs-lookup"><span data-stu-id="094bf-178">See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards</span></span> |
+| <span data-ttu-id="094bf-179">Emojis</span><span class="sxs-lookup"><span data-stu-id="094bf-179">Emojis</span></span>    | <span data-ttu-id="094bf-180">✖</span><span class="sxs-lookup"><span data-stu-id="094bf-180">✖</span></span>                | <span data-ttu-id="094bf-181">✔</span><span class="sxs-lookup"><span data-stu-id="094bf-181">✔</span></span>                | <span data-ttu-id="094bf-182">Teams prend actuellement en charge les emojis via UTF-16 (par exemple, U+1F600 pour le visage de l’en-tête)</span><span class="sxs-lookup"><span data-stu-id="094bf-182">Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)</span></span>          |
 
-## <a name="adding-notifications-to-your-message"></a><span data-ttu-id="ba2f7-179">Ajout de notifications à votre message</span><span class="sxs-lookup"><span data-stu-id="ba2f7-179">Adding notifications to your message</span></span>
+## <a name="adding-notifications-to-your-message"></a><span data-ttu-id="094bf-183">Ajout de notifications à votre message</span><span class="sxs-lookup"><span data-stu-id="094bf-183">Adding notifications to your message</span></span>
 
-<span data-ttu-id="ba2f7-180">Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-180">Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed.</span></span> <span data-ttu-id="ba2f7-181">Vous pouvez définir des notifications pour qu’ils se déclenchent à partir de votre message bot en réglant la propriété des objets `TeamsChannelData` `Notification.Alert` sur true.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-181">You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true.</span></span> <span data-ttu-id="ba2f7-182">Le fait qu’une notification soit ou non élevée dépend en fin de compte des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres par programme.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-182">Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings.</span></span> <span data-ttu-id="ba2f7-183">Le type de notification sera soit une bannière, soit une bannière et un e-mail.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-183">The type of notification will be either a banner or both a banner and an email.</span></span>
+<span data-ttu-id="094bf-184">Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires relatifs à ce qu’ils travaillent ou doivent examiner en insérant une notification dans leur flux d’activités.</span><span class="sxs-lookup"><span data-stu-id="094bf-184">Notifications alert users about new tasks, mentions, and comments related to what they are working on or need to look at by inserting a notice into their activity feed.</span></span> <span data-ttu-id="094bf-185">Vous pouvez définir des notifications pour qu’ils se déclenchent à partir de votre bot-message en réglant la propriété des objets `TeamsChannelData` `Notification.Alert` sur true.</span><span class="sxs-lookup"><span data-stu-id="094bf-185">You can set notifications to trigger from your bot-message by setting the `TeamsChannelData` objects `Notification.Alert` property to true.</span></span> <span data-ttu-id="094bf-186">Le fait qu’une notification soit ou non élevée dépend en fin de compte des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres par programme.</span><span class="sxs-lookup"><span data-stu-id="094bf-186">Whether or not a notification is raised ultimately depends on the individual user's Teams settings and you cannot programmatically override these settings.</span></span> <span data-ttu-id="094bf-187">Le type de notification est soit une bannière, soit une bannière et un e-mail.</span><span class="sxs-lookup"><span data-stu-id="094bf-187">The type of notification is either a banner or both a banner and an email.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="ba2f7-184">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba2f7-184">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="094bf-188">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="094bf-188">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -274,7 +276,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="ba2f7-185">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba2f7-185">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="094bf-189">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="094bf-189">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -288,7 +290,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="python"></a>[<span data-ttu-id="ba2f7-186">Python</span><span class="sxs-lookup"><span data-stu-id="ba2f7-186">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="094bf-190">Python</span><span class="sxs-lookup"><span data-stu-id="094bf-190">Python</span></span>](#tab/python)
 
 ```python
 
@@ -300,7 +302,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="ba2f7-187">JSON</span><span class="sxs-lookup"><span data-stu-id="ba2f7-187">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="094bf-191">JSON</span><span class="sxs-lookup"><span data-stu-id="094bf-191">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -333,23 +335,54 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## <a name="picture-messages"></a><span data-ttu-id="ba2f7-188">Messages image</span><span class="sxs-lookup"><span data-stu-id="ba2f7-188">Picture messages</span></span>
+## <a name="picture-messages"></a><span data-ttu-id="094bf-192">Messages image</span><span class="sxs-lookup"><span data-stu-id="094bf-192">Picture messages</span></span>
 
-<span data-ttu-id="ba2f7-189">Les images sont envoyées en ajoutant des pièces jointes à un message.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-189">Pictures are sent by adding attachments to a message.</span></span> <span data-ttu-id="ba2f7-190">Vous trouverez plus d’informations sur les pièces jointes dans la [documentation bot Framework.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="ba2f7-190">You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).</span></span>
+<span data-ttu-id="094bf-193">Les images sont envoyées en ajoutant des pièces jointes à un message.</span><span class="sxs-lookup"><span data-stu-id="094bf-193">Pictures are sent by adding attachments to a message.</span></span> <span data-ttu-id="094bf-194">Vous trouverez plus d’informations sur les pièces jointes dans la [documentation bot Framework.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)</span><span class="sxs-lookup"><span data-stu-id="094bf-194">You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).</span></span>
 
-<span data-ttu-id="ba2f7-191">Les images peuvent être au maximum 1 024 × 1 024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-191">Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.</span></span>
+<span data-ttu-id="094bf-195">Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF.</span><span class="sxs-lookup"><span data-stu-id="094bf-195">Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format.</span></span> <span data-ttu-id="094bf-196">Gif animé non pris en charge.</span><span class="sxs-lookup"><span data-stu-id="094bf-196">Animated GIF is not supported.</span></span>
 
-<span data-ttu-id="ba2f7-192">Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à l’aide de XML.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-192">We recommend that you specify the height and width of each image by using XML.</span></span> <span data-ttu-id="ba2f7-193">Si vous utilisez Markdown, la taille par défaut de l’image est 256×256.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-193">If you use Markdown, the image size defaults to 256×256.</span></span> <span data-ttu-id="ba2f7-194">Par exemple :</span><span class="sxs-lookup"><span data-stu-id="ba2f7-194">For example:</span></span>
+<span data-ttu-id="094bf-197">Spécifiez toujours la hauteur et la largeur de chaque image à l’aide du XML.</span><span class="sxs-lookup"><span data-stu-id="094bf-197">Always specify the height and width of each image by using XML.</span></span> <span data-ttu-id="094bf-198">Dans Markdown, la taille par défaut de l’image est 256×256.</span><span class="sxs-lookup"><span data-stu-id="094bf-198">In Markdown, the image size defaults to 256×256.</span></span> <span data-ttu-id="094bf-199">Par exemple :</span><span class="sxs-lookup"><span data-stu-id="094bf-199">For example:</span></span>
 
-* <span data-ttu-id="ba2f7-195">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span><span class="sxs-lookup"><span data-stu-id="ba2f7-195">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span></span>
-* <span data-ttu-id="ba2f7-196">Ne pas utiliser - `![Duck on a rock](http://aka.ms/Fo983c)`</span><span class="sxs-lookup"><span data-stu-id="ba2f7-196">Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`</span></span>
+* <span data-ttu-id="094bf-200">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span><span class="sxs-lookup"><span data-stu-id="094bf-200">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span></span>
+* <span data-ttu-id="094bf-201">Ne pas utiliser - `![Duck on a rock](http://aka.ms/Fo983c)`</span><span class="sxs-lookup"><span data-stu-id="094bf-201">Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="ba2f7-197">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="ba2f7-197">Code sample</span></span>
-|<span data-ttu-id="ba2f7-198">**Exemple de nom**</span><span class="sxs-lookup"><span data-stu-id="ba2f7-198">**Sample name**</span></span> | <span data-ttu-id="ba2f7-199">**Description**</span><span class="sxs-lookup"><span data-stu-id="ba2f7-199">**Description**</span></span> | <span data-ttu-id="ba2f7-200">**. NETCore**</span><span class="sxs-lookup"><span data-stu-id="ba2f7-200">**.NETCore**</span></span> | <span data-ttu-id="ba2f7-201">**Javascript**</span><span class="sxs-lookup"><span data-stu-id="ba2f7-201">**Javascript**</span></span> | <span data-ttu-id="ba2f7-202">**Python**</span><span class="sxs-lookup"><span data-stu-id="ba2f7-202">**Python**</span></span>|
+## <a name="adaptive-cards"></a><span data-ttu-id="094bf-202">Cartes adaptatives</span><span class="sxs-lookup"><span data-stu-id="094bf-202">Adaptive cards</span></span>
+
+<span data-ttu-id="094bf-203">Utilisez le code suivant pour envoyer une carte adaptative simple :</span><span class="sxs-lookup"><span data-stu-id="094bf-203">Use the following code to send a simple adaptive card:</span></span>
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+<span data-ttu-id="094bf-204">Pour en savoir plus sur les cartes et les cartes dans les bots, consultez [la documentation des cartes.](~/task-modules-and-cards/what-are-cards.md)</span><span class="sxs-lookup"><span data-stu-id="094bf-204">To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).</span></span>
+<span data-ttu-id="094bf-205">Lorsqu’une réponse contient des messages texte et des pièces jointes, les deux réponses sont envoyées séparément.</span><span class="sxs-lookup"><span data-stu-id="094bf-205">When a response contains text messages and attachments, both responses are sent separately.</span></span> <span data-ttu-id="094bf-206">La pièce jointe est envoyée après le message texte.</span><span class="sxs-lookup"><span data-stu-id="094bf-206">The attachment is sent after the text message.</span></span>
+
+## <a name="code-sample"></a><span data-ttu-id="094bf-207">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="094bf-207">Code sample</span></span>
+|<span data-ttu-id="094bf-208">**Exemple de nom**</span><span class="sxs-lookup"><span data-stu-id="094bf-208">**Sample name**</span></span> | <span data-ttu-id="094bf-209">**Description**</span><span class="sxs-lookup"><span data-stu-id="094bf-209">**Description**</span></span> | <span data-ttu-id="094bf-210">**. NETCore**</span><span class="sxs-lookup"><span data-stu-id="094bf-210">**.NETCore**</span></span> | <span data-ttu-id="094bf-211">**JavaScript**</span><span class="sxs-lookup"><span data-stu-id="094bf-211">**JavaScript**</span></span> | <span data-ttu-id="094bf-212">**Python**</span><span class="sxs-lookup"><span data-stu-id="094bf-212">**Python**</span></span>|
 |----------------|-----------------|--------------|----------------|-----------|
-| <span data-ttu-id="ba2f7-203">Teams Conversation Bot</span><span class="sxs-lookup"><span data-stu-id="ba2f7-203">Teams Conversation Bot</span></span> | <span data-ttu-id="ba2f7-204">Gestion des événements de messagerie et de conversation.</span><span class="sxs-lookup"><span data-stu-id="ba2f7-204">Messaging and conversation event handling.</span></span> |[<span data-ttu-id="ba2f7-205">View</span><span class="sxs-lookup"><span data-stu-id="ba2f7-205">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="ba2f7-206">View</span><span class="sxs-lookup"><span data-stu-id="ba2f7-206">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [<span data-ttu-id="ba2f7-207">View</span><span class="sxs-lookup"><span data-stu-id="ba2f7-207">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| <span data-ttu-id="094bf-213">Teams Conversation Bot</span><span class="sxs-lookup"><span data-stu-id="094bf-213">Teams Conversation Bot</span></span> | <span data-ttu-id="094bf-214">Gestion des événements de messagerie et de conversation.</span><span class="sxs-lookup"><span data-stu-id="094bf-214">Messaging and conversation event handling.</span></span> |[<span data-ttu-id="094bf-215">View</span><span class="sxs-lookup"><span data-stu-id="094bf-215">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="094bf-216">View</span><span class="sxs-lookup"><span data-stu-id="094bf-216">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [<span data-ttu-id="094bf-217">View</span><span class="sxs-lookup"><span data-stu-id="094bf-217">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-steps"></a><span data-ttu-id="ba2f7-208">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="ba2f7-208">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="094bf-218">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="094bf-218">Next steps</span></span>
 
-* [<span data-ttu-id="ba2f7-209">Envoi de messages proactifs</span><span class="sxs-lookup"><span data-stu-id="ba2f7-209">Sending proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
-* [<span data-ttu-id="ba2f7-210">S’abonner à des événements de conversation</span><span class="sxs-lookup"><span data-stu-id="ba2f7-210">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [<span data-ttu-id="094bf-219">Envoi de messages proactifs</span><span class="sxs-lookup"><span data-stu-id="094bf-219">Sending proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
+* [<span data-ttu-id="094bf-220">S’abonner à des événements de conversation</span><span class="sxs-lookup"><span data-stu-id="094bf-220">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
