@@ -3,12 +3,12 @@ title: Préparer votre client Microsoft Office 365
 description: Comment commencer à travailler avec Teams dans Microsoft 365
 ms.topic: how-to
 keywords: Configurer le téléchargement de Microsoft 365 tenant Teams
-ms.openlocfilehash: bfeb1a5d39b8a6ad8d1dd4d631f984ecec4e26f1
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 50765271b93edd380d1c23672289b618baf1d346
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014452"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093942"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
@@ -30,9 +30,9 @@ Si vous n’avez pas encore de compte Microsoft 365, vous pouvez vous inscrire �
 
 Si Microsoft Teams n’a pas été activé pour votre organisation, vous devez d’abord le faire. Jetez un œil à nos conseils détaillés pour [l’activation de Teams pour votre organisation.](/microsoftteams/enable-features-office-365)
 
-## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Activer les applications Teams personnalisées et activer le téléchargement d’applications personnalisées
+## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>Activer les applications Teams personnalisées et activer le chargement d’applications personnalisées
 
-Activer le chargement de version de version d’application personnalisée pour votre client développeur comme suit :
+Activer le chargement indépendant d’une application personnalisée pour votre client développeur comme suit :
 
 1. Connectez-vous au Centre d’administration [Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur. 
 
@@ -47,7 +47,9 @@ Activer le chargement de version de version d’application personnalisée pour 
 
 ![activer l’affichage sideload](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
-4. Basculez le **chargement d’applications personnalisées** à **l’position** sur.
+4. Basculez le **chargement d’applications personnalisées** à **la** position sur.
+
+5. Sélectionnez **Enregistrer** pour enregistrer les modifications.
 
 Voilà ! Votre client test autorise désormais le chargement de version test de l’application personnalisée.
 

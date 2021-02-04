@@ -1,26 +1,26 @@
 ---
 title: Liste de vérification de soumission au Store
-description: Liste de vérification à utiliser avant la publication de votre application Microsoft Teams dans AppSource
+description: Liste de vérification à utiliser avant de publier votre application Microsoft Teams sur AppSource
 ms.topic: reference
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 02490d7a020b8887589c65840a0abe597887527f
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014214"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093935"
 ---
 # <a name="prepare-for-appsource-submission"></a>Préparer la soumission d’AppSource  
 
 Pour être répertoriée sur AppSource, votre application doit passer par un processus d’approbation. Il s’agit d’un service gratuit fourni par le groupe Microsoft Teams qui vérifie que votre application fonctionne comme décrit, contient toutes les métadonnées appropriées et fournit du contenu qui serait utile pour un utilisateur final. Pour vous aider à obtenir une approbation rapide, assurez-vous que votre application répond aux exigences et instructions suivantes :
 
 * **Méthode de distribution :** Assurez-vous que votre application est destinée à être publiée sur une plateforme du Store. Il existe [d’autres options](../../overview.md) de distribution de votre application sans publication dans AppSource.
-* **Stratégies de validation :** Votre application doit transmettre toutes les stratégies de [validation AppSource actuelles](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) avant sa soumission. 
+* **Stratégies de validation :** Votre application doit transmettre toutes les stratégies de [validation AppSource actuelles](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) avant d’être soumission. 
   > [!NOTE] 
   > Les stratégies de validation Appsource sont sujettes à modification.
-* **Préparation mobile :** Votre application doit être mobile réactive. Si votre application contient des onglets, ils doivent respecter les [instructions](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) de conception [pour](~/tabs/design/tabs-mobile.md) appareils mobiles et votre application ne doit respecter aucune exigence de vente à la vente sur le système d’exploitation mobile (iOS et Android).
+* **Préparation mobile :** Votre application doit être mobile réactive. Si votre application contient des onglets, ils doivent respecter les [instructions](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) de conception [pour appareils](~/tabs/design/tabs-mobile.md) mobiles et votre application doit se conformer à aucune exigence de vente à la vente sur le système d’exploitation mobile (iOS et Android).
 * **Testez vous-même votre application :** Testez votre application à l’aide [de l’outil de validation de manifeste.](#teams-app-validation-tool)
-* **Page de détails de l’application :** Votre application doit s’aligner sur la liste [de contrôle de la page de détails de l’application.](detail-page-checklist.md)
+* **Page de détails de l’application :** Votre application doit s’aligner sur la liste de contrôle [de la page de détails de l’application.](detail-page-checklist.md)
 * **Conseils et cas d’échec fréquents :** Accordez une attention [](frequently-failed-cases.md) particulière aux conseils répertoriés et aux cas d’échec fréquents pour améliorer le temps de soumission et d’approbation de votre application.
 * **Manifeste de l’application :** Vérifiez le manifeste de votre application par rapport à la liste [de contrôle du manifeste de l’application.](app-manifest-checklist.md)
 * **Test et débogage :** Assurez-vous que vous avez entièrement testé et [débouggé votre application.](../../../build-and-test/debug.md)
@@ -36,8 +36,8 @@ L’outil de validation d’application se compose d’un [validateur](#teams-ap
 > [!div class="checklist"]
 >
 > * [**Page d’accueil du validateur d’application**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Boîte à outils Visual Studio Code teams**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**Boîte à outils Visual Studio Code Teams**](/toolkit/visual-studio-code-overview.md)
+> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
 
 ### <a name="teams-app-validator"></a>Validateur d’application Teams
 
@@ -67,7 +67,7 @@ Recommandations en matière de politique de confidentialité :
 
 ### <a name="terms-of-use"></a>Conditions d’utilisation
 
-Votre déclaration de conditions d’utilisation doit être spécifique et applicable à votre application et/ou votre offre de add-in.
+Votre déclaration de conditions d’utilisation doit être spécifique et applicable à votre application et/ou à votre offre de add-in.
 
 ### <a name="support-urls"></a>URL de prise en charge
 
