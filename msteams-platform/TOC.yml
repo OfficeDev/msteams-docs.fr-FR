@@ -20,9 +20,9 @@
       href: build-your-first-app/build-bot.md
     - name: Créer une extension de messagerie
       href: build-your-first-app/build-messaging-extension.md
-- name: Tutoriels et exemples
+- name: Didacticiels et exemples de code
   items:
-    - name: Vue d'ensemble
+    - name: Didacticiels
       href: tutorials/code-samples.md
     - name: Créer une application en utilisant C#
       href: tutorials/get-started-dotnet-app-studio.md
@@ -30,24 +30,8 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Créer une application à l'aide du générateur Yeoman
       href: tutorials/get-started-yeoman.md
-    - name: Échantillons de bottes
-      items:
-        - name: Chatbot avec C# (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot avec Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
-        - name: Chatbot avec Python (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: Exemples d'extensions de messagerie
-      items:
-        - name: Commandes d'action avec C#/ (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Commandes d'action avec Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: Commandes de recherche avec C#/ (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Commandes de recherche avec Node.js (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: Exemples de code
+      href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Principes fondamentaux de l'application
   items:
     - name: Capacités d'application des équipes
