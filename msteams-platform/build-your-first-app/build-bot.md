@@ -5,12 +5,12 @@ description: Créez rapidement un bot Microsoft Teams à l’aide de la Shared C
 ms.author: lajanuar
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: fbabd5130f0b7eb648a980f5f143792cc4c17933
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 3e07c148e1b03431dc419a4e3679abac0229ff72
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911946"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140467"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>Créer un bot pour Microsoft Teams
 
@@ -32,7 +32,7 @@ Votre espace de travail a créé une application Teams qui utilise [des onglets]
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Si vous ne l’avez pas encore fait, assurez-vous de bien comprendre et [d’installer les conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
+Si vous ne l’avez pas encore fait, assurez-vous que vous comprenez et installez les [conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
 
 ## <a name="1-create-your-app-project"></a>1. Créer votre projet d’application
 
@@ -75,7 +75,7 @@ Avec cette URL, Teams (qui nécessite des connexions HTTPS) pourra tunneler vers
 
 ## <a name="4-configure-your-bot"></a>4. Configurer votre bot
 
-Pour utiliser un bot dans Teams, vous devez l’inscrire auprès d’Azure Bot Service. Pour vous, cela s’effectue automatiquement lorsque vous définissez votre application à l’aide du Shared Computer Toolkit Teams.
+Pour utiliser un bot dans Teams, vous devez l’inscrire auprès d’Azure Bot Service. Pour vous, cela s’effectue automatiquement lorsque vous définissez votre application à l’aide de la Shared Computer Toolkit Teams.
 
 Vous devez toujours spécifier une adresse de point de terminaison pour recevoir et traiter les messages utilisateur (c’est-à-dire, les demandes) envoyés au bot. En règle générale, l’URL ressemble `https://HOST_URL/api/messages` à . Vous pouvez configurer cette configuration rapidement dans le kit de ressources.
 
@@ -93,13 +93,13 @@ Vous avez configuré une URL pour héberger votre bot et configurée pour gérer
 1. Dans un terminal, allez dans le répertoire racine de votre projet d’application et exécutez `npm install` .
 1. Exécutez `npm start` .
 
-Si l’opération réussit, vous voyez le message suivant indiquant que votre bot est à l’écoute de l’activité au niveau de votre `localhost` :
+Si l’opération réussit, vous voyez le message suivant indiquant que votre bot est à l’écoute de l’activité sur votre `localhost` :
 
 `Bot/ME service listening at http://localhost:3978`
 
 ## <a name="6-sideload-your-bot-in-teams"></a>6. Chargement d’une version de version de votre bot dans Teams
 
-Avec votre bot en cours d’exécution, vous pouvez l’installer dans Teams.
+Une fois votre bot en cours d’exécution, vous pouvez l’installer dans Teams.
 
 > [!TIP]
 > Si vous n’avez pas encore chargé une application Teams et que vous avez des problèmes, suivez ces [instructions.](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams)
@@ -113,7 +113,7 @@ Maintenant, nous allons dire « Hello » à votre bot.
 
 1. Dans la zone de composition, envoyez un `Hello` message.
 
-Votre bot répond par le message suivant.
+Votre bot répond par un message du même genre que celui-ci.
 
 :::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Capture d’écran montrant un utilisateur dire « Hello » à un bot Teams et obtenir une réponse.":::
 
@@ -138,4 +138,4 @@ Il est important de comprendre que ce n’est pas le même qu’un canal dans Te
 * Suivez nos [instructions de conception](../bots/design/bots.md) et créez avec des [modèles d’interface utilisateur](../concepts/design/design-teams-app-ui-templates.md) prêts pour la production pour créer une expérience transparente.
 * [Authentification de bot dans Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [Créer un bot sans le kit de ressources](../bots/how-to/create-a-bot-for-teams.md)
+* [Créer un bot sans le kit de ressources](../resources/bot-v3/bots-create.md)
