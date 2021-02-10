@@ -5,12 +5,12 @@ description: Créez rapidement un onglet personnel Microsoft Teams à l’aide d
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 083d1425fe43a9b150732aa35bef34e2349c6ea6
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911911"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162900"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Créer un onglet personnel pour Microsoft Teams
 
@@ -98,13 +98,13 @@ Enregistrez vos modifications. Go to your app’s tab in Teams to view the new c
 
 ## <a name="3-update-the-tab-theme"></a>3. Mettre à jour le thème de l’onglet
 
-Les bonnes applications sont natives de Teams. Il est donc important que votre onglet se fonde avec le thème Teams préféré de vos utilisateurs : par défaut (clair), foncé ou à contraste élevé. Comme vous l’avez peut-être remarqué dans la dernière capture d’écran, votre onglet a toujours un arrière-plan clair lorsque le client utilise le thème foncé. Il ne s’agit pas d’une expérience utilisateur recommandée.
+Les bonnes applications sont natives de Teams. Il est donc important que votre onglet se fonde avec le thème Teams préféré de vos utilisateurs : par défaut (clair), foncé ou contraste élevé. Comme vous l’avez peut-être remarqué dans la dernière capture d’écran, votre onglet a toujours un arrière-plan clair lorsque le client utilise le thème foncé. Il ne s’agit pas d’une expérience utilisateur recommandée.
 
 Le [SDK client JavaScript](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) teams peut rendre votre application sensible aux modifications de thème dans le client et y réagir. Examinons comment faire.
 
-### <a name="get-context-about-the-teams-client"></a>Obtenir le contexte sur le client Teams
+### <a name="get-context-about-the-teams-client"></a>Obtenir du contexte sur le client Teams
 
-Dans votre fichier, il existe un appel qui fournit des informations sur, entre autres, le `Tab.js` `microsoftTeams.getContext()` thème client [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) configuré. Grâce à la échafaudage de l’application, utilisez ce code tel qu’il est pour accéder à `context` l’interface et à ses propriétés.
+Dans votre fichier, il existe un appel qui fournit des informations sur, entre autres, le `Tab.js` `microsoftTeams.getContext()` thème du client [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) configuré. Grâce à la échafaudage de l’application, utilisez ce code tel qu’il est pour accéder à `context` l’interface et à ses propriétés.
 
 ```JavaScript
 componentDidMount(){
@@ -148,7 +148,7 @@ Dans la `render()` fonction, stockez l’état fourni par le handler de modifica
 Après avoir stocké l’état fourni par le handler de modification de thème, fournissez une logique conditionnelle pour restituer les styles de votre onglet en fonction du thème actuel. L’exemple suivant montre une façon de faire de base :
 1. Vérifiez le thème actuel dans `isTheme` .
 2. Créez `newTheme` un objet avec des propriétés CSS pertinentes pour le thème actuel.
-3. Appliquez la CSS à l’élément HTML racine de votre onglet ( `<div>` ).
+3. Appliquez la CSS à l’élément HTML racine de votre onglet ( `<div style={newTheme}>` ).
 
 ```JavaScript
 let newTheme

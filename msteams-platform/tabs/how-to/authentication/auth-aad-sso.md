@@ -3,12 +3,12 @@ title: Prise en charge de l' sign-on unique pour les onglets
 description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 keywords: Api d’authentification unique SSO AAD d’authentification teams
-ms.openlocfilehash: ed8b52416dd1499f50d561ceb2c1edf03e5457d3
-ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
+ms.openlocfilehash: 72fbafe49e021b0cc23dcdaeee7eb5fe82ee23de
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093266"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162886"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -63,14 +63,14 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 > [!NOTE]
 > Vous devez connaître certaines restrictions importantes :
 >
-> * Nous prise en charge uniquement les autorisations de l’API Microsoft Graph au niveau de l’utilisateur, c’est-à-dire, e-mail, profil, offline_access, OpenId. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph (par exemple, ou ), consultez notre solution de contournement recommandée à la `User.Read` `Mail.Read` fin de cette documentation. [](#apps-that-require-additional-microsoft-graph-scopes)
+> * Nous 5 000 000 000 d’autorisations d’API Microsoft Graph au niveau de l’utilisateur, c’est-à-dire, e-mail, profil, offline_access, OpenId. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph (par exemple, ou ), consultez notre solution de contournement recommandée à la `User.Read` `Mail.Read` fin de cette documentation. [](#apps-that-require-additional-microsoft-graph-scopes)
 > * Il est important que le nom de domaine de votre application soit identique au nom de domaine que vous avez inscrit pour votre application Azure AD.
 > * Pour l’instant, nous ne prisent pas en charge plusieurs domaines par application.
 > * Nous ne ons pas prendre en charge les applications qui utilisent le domaine, car il est trop courant et `azurewebsites.net` peut être un risque pour la sécurité. Toutefois, nous cherchons activement à supprimer cette restriction.
 
 #### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>Inscription détaillée de votre application via le portail Azure Active Directory :
 
-1. Inscrivez une nouvelle application dans [le portail Azure Active Directory – Inscriptions des](https://go.microsoft.com/fwlink/?linkid=2083908) applications.
+1. Inscrivez une nouvelle application dans [le portail Azure Active Directory – App Registrations.](https://go.microsoft.com/fwlink/?linkid=2083908)
 2. Sélectionnez **Nouvelle inscription** et dans la page Inscrire *une application,* définissez les valeurs suivantes :
     * Définissez **le** nom sur le nom de votre application.
     * Choisir les **types de comptes pris en** charge (n’importe quel type de compte fonctionne) ¹
@@ -114,15 +114,15 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 
     Ensuite, activez l’octroi implicite en cochant les cases suivantes :  
     jeton ✔ ID de l'✔  
-    jeton ✔'accès  
+    jeton ✔ d’accès  
     
 Félicitations ! Vous avez rempli les conditions préalables à l’inscription de l’application pour poursuivre l’application d' ces onglets.     
 
 > [!NOTE]
 >
-> * ¹ Si votre application Azure AD  est inscrite dans le même client que celui où vous faites une demande d’authentification dans Teams, l’utilisateur n’est pas invité à donner son consentement et un jeton d’accès lui est accordé immédiatement. Les utilisateurs doivent uniquement consentir à ces autorisations si l’application Azure AD est inscrite dans un autre client.
+> * ¹ Si votre application Azure AD  est inscrite dans le même client que celui où vous faites une demande d’authentification dans Teams, l’utilisateur ne sera pas invité à donner son consentement et un jeton d’accès lui sera immédiatement accordé. Les utilisateurs doivent uniquement consentir à ces autorisations si l’application Azure AD est inscrite dans un autre client.
 > * ² If you get an error stating that the domain is already owned and you are the owner, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) to register the domain, and then repeat step 5, above. (Cette erreur peut également se produire si vous n’êtes pas signé avec des informations d’identification d’administrateur dans la location Office 365).
-> * Si vous ne recevez pas l’UPN (Nom d’utilisateur principal) dans le jeton d’accès renvoyé, vous pouvez l’ajouter en tant que revendication facultative [dans](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) Azure AD.
+> * Si vous ne recevez pas l’UPN (nom d’utilisateur principal) dans le jeton d’accès renvoyé, vous pouvez l’ajouter en tant que revendication facultative [dans](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) Azure AD.
 
 ### <a name="2-update-your-microsoft-teams-application-manifest"></a>2. Mettre à jour votre manifeste d’application Microsoft Teams
 
@@ -160,17 +160,17 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 Lorsque vous appelez et que le consentement de l’utilisateur supplémentaire est requis (pour les autorisations au niveau de l’utilisateur), nous montrons une boîte de dialogue à l’utilisateur pour l’inciter à accorder un `getAuthToken` consentement supplémentaire. 
 
-Une fois que vous avez reçu le jeton d’accès dans le rappel de réussite, vous pouvez décoder le jeton d’accès pour afficher les revendications associées à ce jeton. (Si vous le souhaitez, vous pouvez copier/coller manuellement le jeton d’accès dans un outil tel que [JWT.io](https://jwt.io/) pour inspecter son contenu). Si vous ne recevez pas l’UPN (Nom d’utilisateur principal) dans le jeton d’accès renvoyé, vous pouvez l’ajouter en tant que revendication facultative [dans](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) Azure AD.
+Une fois que vous avez reçu le jeton d’accès dans le rappel de réussite, vous pouvez décoder le jeton d’accès pour afficher les revendications associées à ce jeton. (Si vous le souhaitez, vous pouvez copier/coller manuellement le jeton d’accès dans un outil tel que [JWT.io](https://jwt.io/) pour inspecter son contenu). Si vous ne recevez pas l’UPN (nom d’utilisateur principal) dans le jeton d’accès renvoyé, vous pouvez l’ajouter en tant que revendication facultative [dans](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) Azure AD.
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
-## <a name="sample-code"></a>Exemple de code
+## <a name="code-sample"></a>Exemple de code
 
-Visitez notre exemple d’application : exemple d’o [SSO PnP MSTeams](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
-
-L’environnement README explique comment configurer votre environnement de développement et comment configurer votre application dans Azure AD. Vous trouverez également des informations supplémentaires sur la structure de l’exemple dans la [section structure](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) de l’application pour vous familiariser avec la base de code.
+|**Exemple de nom**|**Description**|**C#**|**TypeScript**|
+|---------------|---------------|------|--------------|
+| SSO d’onglet |Exemple d’application Microsoft Teams pour les onglets Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Affichage,](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs) </br>[Équipes Shared Computer Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Limitations connues
 
@@ -182,7 +182,7 @@ Notre implémentation actuelle pour l' utilisateur unique accorde uniquement le 
 
 L’approche la plus simple consiste à obtenir le consentement préalable d’un administrateur client au nom de l’organisation. Cela signifie que les utilisateurs n’auront pas à consentir à ces étendues et [](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)que vous pouvez ensuite être libre d’échanger le côté serveur de jetons à l’aide du flux De la part d’Azure AD. Cette solution de contournement est acceptable pour les applications métier internes, mais peut ne pas être suffisante pour les développeurs tiers qui ne peuvent pas s’appuyer sur l’approbation de l’administrateur client.
 
-Une méthode simple de consentement pour le compte d’une organisation (en tant qu’administrateur client) consiste à visiter :
+Une méthode simple de consentement au nom d’une organisation (en tant qu’administrateur client) consiste à visiter :
 
 * `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`
 
@@ -193,11 +193,11 @@ Une autre approche pour obtenir des étendues Microsoft Graph supplémentaires c
 1. Le jeton récupéré à l’aide doit être échangé côté serveur à l’aide du flux Azure AD de la part de pour accéder à ces API `getAuthToken()` Microsoft Graph supplémentaires. [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
     * N’oubliez pas d’utiliser le point de terminaison Microsoft Graph v2 pour cet échange
 2. Si l’échange échoue, Azure AD retourne une exception d’octroi non valide. Il existe généralement l’un des deux messages `invalid_grant` d’erreur : ou `interaction_required`
-3. En cas d’échec de l’échange, vous devez demander un consentement supplémentaire. Nous vous recommandons d’afficher une interface utilisateur demandant à l’utilisateur d’accorder un consentement supplémentaire. Cette interface utilisateur doit inclure un bouton qui déclenche une boîte de dialogue de consentement Azure AD à l’aide de notre [API d’authentification Azure AD.](~/concepts/authentication/auth-silent-aad.md)
+3. En cas d’échec de l’échange, vous devez demander un consentement supplémentaire. Nous vous recommandons d’afficher une interface utilisateur demandant à l’utilisateur d’accorder un consentement supplémentaire. Cette interface utilisateur doit inclure un bouton qui déclenche une boîte de dialogue de consentement Azure AD à l’aide de notre API d’authentification [Azure AD.](~/concepts/authentication/auth-silent-aad.md)
 4. Lorsque vous demandez un consentement supplémentaire d’Azure AD, vous devez inclure dans votre paramètre de chaîne de requête à Azure AD, sinon Azure AD ne demandera pas les `prompt=consent` étendues supplémentaires. [](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)
     * Au lieu de: `?scope={scopes}`
     * Utilisez ceci : `?prompt=consent&scope={scopes}`
-    * Assurez-vous qu’il inclut toutes les étendues que vous invitez à l’utilisateur (par exemple `{scopes}` : Mail.Read ou User.Read).
+    * Assurez-vous qu’elle inclut toutes les étendues que vous invitez à l’utilisateur (par exemple `{scopes}` : Mail.Read ou User.Read).
 5. Une fois que l’utilisateur a accordé des autorisations supplémentaires, réessayez le flux « de la part de » pour accéder à ces API supplémentaires.
 
 ### <a name="non-azure-ad-authentication"></a>Authentification non Azure AD
