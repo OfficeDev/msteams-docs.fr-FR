@@ -1,20 +1,20 @@
 ---
 title: 'Didacticiel - Créer votre première application à l’aide de C #'
-description: Découvrez comment commencer à créer des applications Microsoft Teams avec C#/.NET.
+description: Découvrez comment commencer à créer des applications Microsoft Teams avec C# ou .NET.
 keywords: mise en place de .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: c28c4d00c375b8e37f82c343eec2c5405ae0c1c8
-ms.sourcegitcommit: fa64b83c0b534bf7a89f256880d5b5ca193e4b04
+ms.openlocfilehash: b37a8d555117e38383504dc99d82d564439a3ebf
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "50037038"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231522"
 ---
-# <a name="create-your-first-microsoft-teams-app-using-c"></a>Créer votre première application Microsoft Teams à l’aide de C #
+# <a name="create-your-first-teams-app-using-c-or-net"></a>Créer votre première application Teams en C# ou .NET
 
-Ce didacticiel vous aide à commencer à créer une application Microsoft Teams en C# sur .NET.
+Ce didacticiel vous aide à créer une application Microsoft Teams en C# ou .NET.
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -27,11 +27,9 @@ Pour effectuer ce didacticiel, vous devez obtenir les outils suivants :
 - [Installer Git](https://git-scm.com/downloads)
 - [Installez Visual Studio](https://www.visualstudio.com/downloads/). Vous pouvez installer l’édition communautaire gratuite.
 
-Si vous voyez une option à ajouter au chemin d’accès lors `git` de l’installation, choisissez de le faire. Ce sera pratique.
+Lors de l’installation, s’il existe une option d’ajout au chemin d’accès, `git` sélectionnez-la.
 
-Vérifiez votre `git` installation en exécutant ce qui suit dans une fenêtre terminal :
-> [!NOTE]
-> Utilisez la fenêtre terminal la plus à l’aise sur votre plateforme. Ces exemples utilisent Bash, mais s’exécutent sur la plupart des plateformes.
+Dans une fenêtre terminal, exécutez la commande suivante pour vérifier votre `git` installation :
 
 ```bash
 $ git --version
@@ -39,67 +37,73 @@ git version 2.17.1.windows.2
 
 ```
 
-Assurez-vous de lancer la dernière version de Visual Studio et d’installer les mises à jour si elles sont affichées.
+> [!NOTE]
+> Utilisez une fenêtre terminal appropriée sur votre plateforme. Ces exemples utilisent Bash, mais s’exécutent sur la plupart des plateformes.
 
-Vous pouvez continuer à utiliser cette fenêtre terminal pour exécuter les commandes qui suivent dans ce didacticiel.
+Veillez à lancer la dernière version de Visual Studio et à installer les mises à jour.
+
+Vous pouvez utiliser la même fenêtre terminal pour exécuter les commandes de ce didacticiel.
 
 <a name="DownloadSample"></a>
 
 ## <a name="download-the-sample"></a>Télécharger l’exemple
 
-Nous avons fourni un simple [Hello World !](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) exemple en C# pour vous aider à démarrer. Dans une fenêtre terminal, exécutez la commande suivante pour cloner l’exemple de référentiel sur votre ordinateur local :
+Vous pouvez commencer avec un simple [Hello World !](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) exemple en C#. Dans une fenêtre terminal, exécutez la commande suivante pour cloner l’exemple de référentiel sur votre ordinateur local :
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 ```
 
 > [!TIP]
-> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) si vous souhaitez modifier et vérifier vos modifications dans GitHub pour référence ultérieure.
+> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel pour](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) modifier et enregistrer vos modifications dans GitHub pour référence.
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>Création et exécution de l’exemple
 
-Une fois le dépôt cloné, utilisez Visual Studio pour ouvrir le fichier de solution à partir du répertoire racine de l’exemple, puis cliquez dans `Microsoft.Teams.Samples.HelloWorld.sln` `Build Solution` le `Build` menu. Vous pouvez exécuter l’exemple en appuyant `F5` ou en choisissant `Start Debugging` dans le `Debug` menu.
+Une fois le dépôt cloné, utilisez Visual Studio pour ouvrir le fichier de solution à partir du répertoire racine de l’exemple et sélectionnez-le `Microsoft.Teams.Samples.HelloWorld.sln` `Build Solution` dans le `Build` menu. Pour exécuter l’exemple, `F5` appuyez ou choisissez `Start Debugging` dans le `Debug` menu.
 
 Lorsque l’application démarre, une fenêtre de navigateur s’ouvre avec la racine de l’application lancée. Vous pouvez accéder aux URL suivantes pour vérifier que toutes les URL d’application sont en cours de chargement :
 
-- [http://localhost:3333](http://localhost:3333)
-- [http://localhost:3333/hello](http://localhost:3333/hello)
-- [http://localhost:3333/first](http://localhost:3333/first)
-- [http://localhost:3333/second](http://localhost:3333/second)
+- [https://localhost:44327/](https://localhost:44327/)
+- [https://localhost:44327/hello](https://localhost:44327/hello)
+- [https://localhost:44327/first](https://localhost:44327/first)
+- [https://localhost:44327/second]https://localhost:44327/second)
 
 <a name="HostSample"></a>
 
 > [!Note]
-> Si vous recevez une erreur telle `Could not find a part of the path … bin\roslyn\csc.exe` que , essayez de mettre à jour le package avec la `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` commande. Consultez [cette question sur StackOverflow pour](https://stackoverflow.com/questions/32780315) plus d’informations.
+> Si vous recevez une `Could not find a part of the path … bin\roslyn\csc.exe` erreur, mettez à jour le package avec la `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` commande. Pour plus d’informations, [consultez cette question sur StackOverflow.](https://stackoverflow.com/questions/32780315)
 
 ## <a name="host-the-sample-app"></a>Héberger l’exemple d’application
 
-N’oubliez pas que les applications dans Microsoft Teams sont des applications web qui exposent une ou plusieurs fonctionnalités. Pour que la plateforme Teams charge votre application, votre application doit être accessible à partir d’Internet. Pour rendre votre application accessible à partir d’Internet, vous devez l’héberger. Vous pouvez l’héberger gratuitement dans Microsoft Azure ou créer un tunnel vers le processus local sur votre ordinateur de développement à l’aide `ngrok` de . Lorsque vous avez terminé l’hébergement de votre application, notez son URL racine. Il ressemblera à : `https://yourteamsapp.ngrok.io` ou `https://yourteamsapp.azurewebsites.net` .
+Les applications dans Microsoft Teams sont des applications web qui fournissent une ou plusieurs fonctionnalités. Pour que la plateforme Teams charge votre application, votre application doit être accessible à partir d’Internet. Pour rendre votre application accessible à partir d’Internet, vous devez l’héberger. Vous pouvez l’héberger gratuitement dans Microsoft Azure ou créer un tunnel vers le processus local sur votre ordinateur de développement à l’aide `ngrok` de . Lorsque vous avez terminé l’hébergement de votre application, notez son URL racine. Par exemple, `https://yourteamsapp.ngrok.io` ou `https://yourteamsapp.azurewebsites.net` .
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel utilisant ngrok
 
-Pour des tests rapides, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel via un point de terminaison web. [ngrok est](https://ngrok.com) un outil gratuit qui vous permet de le faire. Avec ngrok, vous pouvez obtenir une adresse web telle que `https://d0ac14a5.ngrok.io` (cette URL n’est qu’un exemple). Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok pour votre environnement. Veillez à l’ajouter à un emplacement dans votre `PATH` .
+Pour des tests rapides, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel via un point de terminaison web. [ngrok est](https://ngrok.com) un outil gratuit avec lequel vous pouvez obtenir une adresse web telle que `https://d0ac14a5.ngrok.io` . Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok. Veillez à l’ajouter à un emplacement dans votre `PATH` .
 
-Une fois l’installation installée, vous pouvez ouvrir une nouvelle fenêtre terminal et exécuter la commande suivante pour créer un tunnel. L’exemple utilise le port 3333, donc n’oubliez pas de le spécifier ici.
+Après avoir installé ngrok, ouvrez une nouvelle fenêtre terminal et exécutez la commande suivante pour créer un tunnel :
 
 ```bash
-ngrok http 3333 -host-header=localhost:3333
+ngrok http 44327 -host-header=localhost:44327
 ```
 
-Ngrok écoutera les demandes provenant d’Internet et les routera vers votre application en cours d’exécution sur le port 3333. Vous pouvez vérifier en ouvrant votre navigateur et en allant `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Assurez-vous d’utiliser l’adresse de forwarding affichée par ngrok dans votre session console au lieu de cette URL.
+L’exemple utilise le port 44327 et assurez-vous de le spécifier.
+
+Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application en cours d’exécution sur le port 44327. Pour vérifier, ouvrez votre navigateur et allez `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Au lieu de cette URL, utilisez l’adresse de forwarding affichée par ngrok dans votre session console.
 
 > [!NOTE]
-> Si vous avez utilisé un [](#build-and-run-the-sample) autre port dans la build et l’étape d’utilisation ci-dessus, veillez à utiliser le même numéro de port pour configurer le `ngrok` tunnel.
-> [!TIP]
-> Il est bon de l’exécuter dans une autre fenêtre terminal pour la maintenir en cours d’exécution sans interférer avec l’application que vous de devez peut-être arrêter, reconstruire et `ngrok` réexécuter par la suite. La `ngrok` session retourne des informations de débogage utiles dans cette fenêtre.
+> Si vous avez utilisé un [](#build-and-run-the-sample) autre port lors de l’étape de build et d’utilisation, veillez à utiliser le même numéro de port pour configurer le `ngrok` tunnel.
 
-L’application sera disponible uniquement pendant la session en cours sur votre ordinateur de développement. Si l’ordinateur est arrêté ou en veille, le service n’est plus disponible. N’oubliez pas cela lors du partage de l’application pour les tests effectués par d’autres utilisateurs. Si vous devez redémarrer le service, il retourne une nouvelle adresse et vous devez mettre à jour chaque endroit qui utilise cette adresse. La version payante de Ngrok n’a pas cette limitation.
+> [!TIP]
+> Il est bon de l’exécuter `ngrok` dans une autre fenêtre terminal. Cette étape est effectuée pour empêcher ngrok de s’exécute sans interférer avec l’application, que vous devez arrêter, reconstruire et réexécuter. La `ngrok` session fournit des informations de débogage utiles dans cette fenêtre.
+
+L’application est disponible uniquement pendant la session en cours sur votre ordinateur de développement. Si l’ordinateur est arrêté ou en veille, le service n’est plus disponible. N’oubliez pas que vous partagez l’application pour le test à d’autres utilisateurs. Si vous devez redémarrer le service, l’application renvoie une nouvelle adresse et vous devez mettre à jour chaque emplacement qui utilise cette adresse. La version payante de ngrok n’a pas cette limitation.
 
 ### <a name="host-in-azure"></a>Hôte dans Azure
 
-Microsoft Azure vous permet d’héberger votre application .NET sur un niveau gratuit à l’aide d’une infrastructure partagée. Cela sera suffisant pour exécuter cet `Hello World` exemple. Pour plus [d’informations, voir](https://azure.microsoft.com/free/) la création d’un compte gratuit.
+Microsoft Azure héberge votre application .NET sur un niveau gratuit à l’aide d’une infrastructure partagée. Cela suffit pour exécuter `Hello World` l’exemple. Pour plus d’informations, [voir la création d’un compte gratuit.](https://azure.microsoft.com/free/)
 
 Visual Studio la prise en charge intégrée du déploiement d’applications pour différents fournisseurs, y compris Azure.
 
@@ -125,13 +129,13 @@ Une fois que vous avez installé l’application dans une équipe, vous devez la
 
 ### <a name="test-your-bot-in-teams"></a>Tester votre bot dans Teams
 
-Vous pouvez désormais interagir avec le bot dans Teams. Choisissez un canal dans l’équipe où vous avez inscrit votre application, puis tapez `@your-bot-name` . C’est ce qu’on appelle **\@ une mention.** Le message que vous envoyez au bot vous sera renvoyé en tant que réponse.
+Vous pouvez désormais interagir avec le bot dans Teams. Choisissez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C’est ce qu’on appelle **\@ une mention.** Le message que vous envoyez au bot vous sera renvoyé en tant que réponse.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
 
-Pour tester votre extension de messagerie, vous pouvez cliquer sur les trois points sous la zone d’entrée dans l’affichage conversation. Un menu apparaît avec **l’application « Hello World** » dans celui-ci. Lorsque vous cliquez dessus, un grand nombre de textes aléatoires s’affichent. Vous pouvez choisir l’un d’eux et celui-ci sera inséré dans votre conversation.
+Pour tester votre extension de messagerie, vous pouvez cliquer sur les trois points sous la zone d’entrée dans l’affichage conversation. Un menu apparaît avec **l’application « Hello World** » dans celui-ci. Lorsque vous cliquez dessus, un grand nombre de textes aléatoires s’affichent. Vous pouvez choisir l’un d’eux et celui-ci est inséré dans votre conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 

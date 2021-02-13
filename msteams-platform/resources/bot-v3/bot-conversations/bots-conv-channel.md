@@ -1,77 +1,77 @@
 ---
-title: Conversations de conversation de groupe et de canal avec les robots
-description: Décrit le scénario de bout en bout d’une conversation avec un bot dans un canal dans Microsoft teams
-keywords: scénarios teams-robots de conversation des canaux
+title: Conversations de conversation de canal et de groupe avec des bots
+description: Décrit le scénario de bout en bout d’une conversation avec un bot dans un canal dans Microsoft Teams
+keywords: teams scenarios channels conversation bot
 ms.date: 06/25/2019
-ms.openlocfilehash: f44db4a88ab5e6541c52395a58fc643cb07df606
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+ms.openlocfilehash: e556eb006257a83ddf93adb62f79857201d6a9ad
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303723"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231630"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversations par chat de canal et de groupe avec un robot Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft teams permet aux utilisateurs d’amener des robots à leurs conversations de conversation de groupe ou de canal. En ajoutant un bot à une équipe ou une conversation, tous les utilisateurs de la conversation peuvent tirer parti de la fonctionnalité de robot directement dans la conversation. Vous pouvez également accéder aux fonctionnalités propres à teams dans votre bot, telles que l’interrogation des informations d’équipe et des utilisateurs de @mentioning.
+Microsoft Teams permet aux utilisateurs d’amener des bots dans leurs conversations de canal ou de groupe. En ajoutant un bot à une équipe ou à une conversation, tous les utilisateurs de la conversation peuvent tirer parti des fonctionnalités du bot directement dans la conversation. Vous pouvez également accéder aux fonctionnalités propres à Teams au sein de votre bot, telles que l’interrogation d’informations d’équipe et @mentioning utilisateurs.
 
-La conversation dans les canaux et les conversations de groupe diffèrent de la conversation personnelle en ce que l’utilisateur doit @mention le bot. Si un bot est utilisé dans plusieurs étendues (personnel, groupchat ou canal), vous devez détecter l’étendue d’origine des messages du bot et les traiter en conséquence.
+La conversation dans les canaux et les conversations de groupe diffère de la conversation personnelle, dans la fait que l’utilisateur doit @mention le bot. Si un bot est utilisé dans plusieurs étendues (personnelles, groupchat ou canal), vous devez détecter l’étendue d’où les messages du bot sont issus et les traiter en conséquence.
 
-## <a name="designing-a-great-bot-for-channels-or-groups"></a>Conception d’un robot idéal pour les canaux ou les groupes
+## <a name="designing-a-great-bot-for-channels-or-groups"></a>Conception d’un bot idéal pour les canaux ou les groupes
 
-Les robots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent être @mentioned dans le cadre de la conversation. En fait, les robots reçoivent uniquement les messages lorsqu’ils sont @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
+Les bots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu’ils @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
 
-Un bot d’un groupe ou d’un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Si votre robot peut certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations sont visibles par tous les utilisateurs. Par conséquent, un bon robot d’un groupe ou d’un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance les informations de façon plus appropriée à une conversation un-à-un.
+Un bot dans un groupe ou un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Bien que votre bot puisse certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations avec elle sont visibles par tout le monde. Par conséquent, un bot efficace dans un groupe ou un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance des informations plus appropriées à une conversation un-à-un.
 
-Votre robot, tout comme il est, peut être entièrement pertinent dans toutes les étendues sans nécessiter de travail supplémentaire. Dans Microsoft Teams, il n’y a aucune attente que votre robot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre robot fournit la valeur de l’utilisateur dans n’importe quelle étendue que vous choisissez de prendre en charge. Pour plus d’informations sur les étendues, consultez la rubrique [applications dans Microsoft teams](~/concepts/build-and-test/app-studio-overview.md).
+Votre bot, comme il est, peut être entièrement pertinent dans toutes les étendues sans nécessiter de travail supplémentaire. Dans Microsoft Teams, il n’est pas attendu que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre bot fournit une valeur utilisateur dans n’importe quelle étendue que vous choisissez de prendre en charge. Pour plus d’informations sur les étendues, voir [Applications dans Microsoft Teams.](~/concepts/build-and-test/app-studio-overview.md)
 
-Le développement d’un bot qui fonctionne dans des groupes ou des canaux utilise une grande partie des mêmes fonctionnalités que les conversations personnelles. Les autres événements et données de la charge utile fournissent des informations sur le groupe teams et le canal. Ces différences, ainsi que les principales différences entre les fonctionnalités communes, sont décrites dans les sections suivantes.
+Le développement d’un bot qui fonctionne dans des groupes ou des canaux utilise la plupart des mêmes fonctionnalités que les conversations personnelles. Des événements et des données supplémentaires dans la charge utile fournissent des informations de groupe et de canal Teams. Ces différences, ainsi que les principales différences de fonctionnalités courantes, sont décrites dans les sections suivantes.
 
 ### <a name="creating-messages"></a>Création de messages
 
-Pour plus d’informations sur les robots de création de messages dans les canaux, consultez la rubrique [messagerie proactive pour les robots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)et [création d’une conversation de canal](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
+Pour plus d’informations sur les bots qui créent des messages dans les canaux, voir Messagerie proactive pour les [bots,](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)et plus spécifiquement Création [d’une conversation de canal.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)
 
 ### <a name="receiving-messages"></a>Réception de messages
 
-Pour un bot d’un groupe ou d’un canal, outre le [schéma de message normal](https://docs.botframework.com/core-concepts/reference/#activity), votre bot reçoit également les propriétés suivantes :
+Pour un bot dans un groupe ou un canal, en plus du schéma de [message](https://docs.botframework.com/core-concepts/reference/#activity)normal, votre bot reçoit également les propriétés suivantes :
 
-* `channelData` Voir [teams Channel Data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
-* `conversation.id` ID de la chaîne de réponse, composé de l’ID du canal plus l’ID du premier message de la chaîne de réponse.
-* `conversation.isGroup` Est `true` destiné aux messages bot dans les canaux ou les conversations de groupe
-* `conversation.conversationType` Soit `groupChat` ou `channel`
-* `entities` Peut contenir une ou plusieurs mentions (voir [mentions](#-mentions))
+* `channelData`Voir [les données du canal Teams.](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data) Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
+* `conversation.id` ID de chaîne de réponse, constitué de l’ID de canal et de l’ID du premier message de la chaîne de réponse
+* `conversation.isGroup` Est pour `true` les messages de bot dans les canaux ou les conversations de groupe
+* `conversation.conversationType``groupChat`L’une ou l’autre ou`channel`
+* `entities`Peut contenir une ou plusieurs mentions (voir [Mentions)](#-mentions)
 
 ### <a name="replying-to-messages"></a>Réponse aux messages
 
-Pour répondre à un message existant, appelez [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) en .net ou [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) dans Node.js. Le kit de développement logiciel (SDK) du générateur de robots gère tous les détails.
+Pour répondre à un message existant, [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) appelez .NET ou [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) dans Node.js. Le SDK Bot Builder gère tous les détails.
 
 Si vous choisissez d’utiliser l’API REST, vous pouvez également appeler le [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) point de terminaison.
 
-Dans un canal, la réponse à un message apparaît sous la forme d’une réponse à la chaîne de réponse initiale. Le `conversation.id` contient le canal et l’ID de message de niveau supérieur. Bien que l’infrastructure de bot prenne en charge les détails, vous pouvez le mettre en cache `conversation.id` pour les futures réponses à ce thread de conversation si nécessaire.
+Dans un canal, la réponse à un message s’affiche comme une réponse à la chaîne de réponse à l’origine. Contient `conversation.id` le canal et l’ID de message de niveau supérieur. Bien que Bot Framework s’occupe des détails, vous pouvez le mettre en cache pour les réponses ultérieures à ce `conversation.id` thread de conversation si nécessaire.
 
-### <a name="best-practice-welcome-messages-in-teams"></a>Meilleure pratique : messages de bienvenue dans teams
+### <a name="best-practice-welcome-messages-in-teams"></a>Meilleure pratique : messages de bienvenue dans Teams
 
-Lorsque votre bot est d’abord ajouté au groupe ou à l’équipe, il est généralement utile d’envoyer un message de bienvenue qui présente le bot à tous les utilisateurs. Le message de bienvenue doit fournir une description de la fonctionnalité du robot et des avantages de l’utilisateur. Idéalement, le message doit également inclure des commandes permettant à l’utilisateur d’interagir avec l’application. Pour ce faire, vérifiez que votre robot répond au `conversationUpdate` message, avec le `teamsAddMembers` eventType dans l' `channelData` objet. Assurez-vous que l' `memberAdded` ID est l’ID d’application du robot lui-même, car le même événement est envoyé lorsqu’un utilisateur est ajouté à une équipe. Pour plus d’informations, consultez la rubrique Ajout d’un [membre d’équipe ou](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) d’un robot.
+Lorsque votre bot est ajouté pour la première fois au groupe ou à l’équipe, il est généralement utile d’envoyer un message de bienvenue présentant le bot à tous les utilisateurs. Le message de bienvenue doit fournir une description des fonctionnalités et des avantages du bot pour les utilisateurs. Dans l’idéal, le message doit également inclure des commandes pour permettre à l’utilisateur d’interagir avec l’application. Pour ce faire, assurez-vous que votre bot répond au message, avec `conversationUpdate` `teamsAddMembers` l’eventType dans `channelData` l’objet. Assurez-vous que l’ID est lui-même l’ID d’application du bot, car le même événement est envoyé lorsqu’un utilisateur est ajouté `memberAdded` à une équipe. Pour plus [d’informations, voir l’ajout](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) d’un membre d’équipe ou d’un bot.
 
-Vous pouvez également envoyer un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, vous pouvez [extraire la liste de l’équipe](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) et envoyer un [message direct](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)à chaque utilisateur.
+Vous pouvez également envoyer un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, vous pouvez récupérer [la liste de](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) l’équipe et envoyer un message direct à chaque [utilisateur.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
 
-Il est recommandé que votre bot *n’envoie pas* de message d’accueil dans les situations suivantes :
+Il est recommandé que votre bot *n’envoie* pas de message de bienvenue dans les situations suivantes :
 
-* L’équipe est grande (évidemment subjective, mais par exemple, plus de 100 membres). Votre robot peut être considéré comme « spammer » et la personne qui l’a ajouté peut recevoir des plaintes, sauf si vous communiquez clairement la proposition de valeur de votre robot à tous ceux qui voient le message de bienvenue.
-* Votre robot est d’abord mentionné dans un groupe ou un canal (et n’est pas d’abord ajouté à une équipe)
-* Un groupe ou un canal est renommé.
-* Un membre de l’équipe est ajouté à un groupe ou à un canal
+* L’équipe est volumineuse (évidemment subjectif, mais par exemple plus de 100 membres). Votre bot peut être considéré comme « spammy » et la personne qui l’a ajouté peut obtenir des réclamations, sauf si vous communiquez clairement la proposition de valeur de votre bot à toutes les personnes qui voient le message de bienvenue.
+* Votre bot est d’abord mentionné dans un groupe ou un canal (plutôt que d’être ajouté pour la première fois à une équipe)
+* Un groupe ou un canal est renommé
+* Un membre d’équipe est ajouté à un groupe ou un canal
 
 ## <a name="-mentions"></a>@ Mentions
 
-Étant donné que les robots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés (« @_botname_») dans un message, chaque message reçu par un bot dans un canal de groupe contient son propre nom et vous devez vous assurer que le traitement de l’analyse des messages lui est propre. De plus, les robots peuvent analyser les autres utilisateurs mentionnés et mentionner les utilisateurs dans leurs messages.
+Étant donné que les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés (« @_botname_») dans un message, chaque message reçu par un bot dans un canal de groupe contient son propre nom, et vous devez vous assurer que votre message est traité par l’ensemble des messages. En outre, les bots peuvent passer en détail d’autres utilisateurs mentionnés et mentionner des utilisateurs dans le cadre de leurs messages.
 
 ### <a name="retrieving-mentions"></a>Récupération des mentions
 
-Les mentions sont renvoyées dans l' `entities` objet dans la charge utile et contiennent l’ID unique de l’utilisateur et, dans la plupart des cas, le nom de l’utilisateur mentionné. Vous pouvez récupérer toutes les mentions dans le message en appelant la `GetMentions` fonction dans le kit de développement logiciel (SDK) du générateur de robots pour .net, qui renvoie un tableau d' `Mentioned` objets.
+Les mentions sont renvoyées dans l’objet dans la charge utile et contiennent l’ID unique de l’utilisateur et, dans la plupart des cas, le nom de `entities` l’utilisateur mentionné. Vous pouvez récupérer toutes les mentions dans le message en appelant la fonction dans le SDK Bot Builder pour .NET, qui renvoie un tableau `GetMentions` `Mentioned` d’objets.
 
-#### <a name="net-example-code-check-for-and-strip-bot-mention"></a>Exemple de code .NET : Check for and Strip @bot mention
+#### <a name="net-example-code-check-for-and-strip-bot-mention"></a>Exemple de code .NET : vérifier et @bot mention
 
 ```csharp
 Mention[] m = sourceMessage.GetMentions();
@@ -90,9 +90,9 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Vous pouvez également utiliser la fonction d’extension de teams `GetTextWithoutMentions` , qui supprime toutes les mentions, y compris le bot.
+> Vous pouvez également utiliser la fonction d’extension Teams, qui permet d’rallonger toutes `GetTextWithoutMentions` les mentions, y compris le bot.
 
-#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Exemple de code Node.js : Check for and Strip @bot mention
+#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js exemple de code : Vérifier et @bot mention
 
 ```javascript
 var text = message.text;
@@ -106,18 +106,18 @@ if (message.entities) {
 }
 ```
 
-Vous pouvez également utiliser la fonction d’extension de teams `getTextWithoutMentions` , qui supprime toutes les mentions, y compris le bot.
+Vous pouvez également utiliser la fonction d’extension Teams, qui permet d’rallonger toutes `getTextWithoutMentions` les mentions, y compris le bot.
 
-### <a name="constructing-mentions"></a>Création de mentions
+### <a name="constructing-mentions"></a>Construction de mentions
 
-Votre robot peut mentionner d’autres utilisateurs dans les messages publiés dans des canaux. Pour ce faire, votre message doit effectuer les opérations suivantes :
+Votre bot peut mentionner d’autres utilisateurs dans les messages publiés dans les canaux. Pour ce faire, votre message doit :
 
 * Inclure `<at>@username</at>` dans le texte du message
-* Inclure l' `mention` objet à l’intérieur de la collection Entities
+* Inclure `mention` l’objet à l’intérieur de la collection entities
 
 #### <a name="net-example"></a>Exemple .NET
 
-Cet exemple utilise le package NuGet [Microsoft. Bot. Connector. teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) .
+Cet exemple utilise le package [NuGet Microsoft.Bot.Connector.Teams.](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 // Create reply activity
@@ -131,7 +131,7 @@ replyActivity.AddMentionToText(activity.From, MentionTextLocation.AppendText);
 await client.Conversations.ReplyToActivityAsync(replyActivity);
 ```
 
-#### <a name="nodejs-example"></a>Exemple de Node.js
+#### <a name="nodejs-example"></a>Node.js exemple
 
 ```javascript
 // User to mention
@@ -149,7 +149,7 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : message sortant avec l’utilisateur mentionné
+#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : message sortant avec l’utilisateur mentionné
 
 ```json
 {
@@ -191,8 +191,8 @@ session.send(generalMessage);
 }
 ```
 
-## <a name="accessing-groupchat-or-channel-scope"></a>Accès à l’étendue groupChat ou Channel
+## <a name="accessing-groupchat-or-channel-scope"></a>Accès à l’étendue groupChat ou canal
 
-Votre robot peut faire plus que d’envoyer et de recevoir des messages dans les groupes et les équipes. Par exemple, il peut également extraire la liste des membres, y compris leurs informations de profil, ainsi que la liste des canaux. Pour en savoir plus, consultez [la rubrique obtenir le contexte de votre robot Microsoft teams](~/resources/bot-v3/bots-context.md) .
+Votre bot peut faire plus que d’envoyer et de recevoir des messages dans des groupes et des équipes. Par exemple, il peut également récupérer la liste des membres, y compris leurs informations de profil, ainsi que la liste des canaux. Pour [en savoir plus, consultez](~/resources/bot-v3/bots-context.md) Obtenir le contexte de votre bot Microsoft Teams.
 
-*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*Voir aussi des* [exemples Bot Framework.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

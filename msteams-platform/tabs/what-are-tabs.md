@@ -4,16 +4,16 @@ author: laujan
 description: Vue d’ensemble des onglets personnalisés sur la plateforme Teams
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 7e256423ad713b81f9d4bc3760c33903ef91b179
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911953"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231665"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Qu’est-ce que les onglets Microsoft Teams ?
 
-Les onglets sont des pages web sensibles à Teams incorporées dans Microsoft Teams. Il s’agit de balises html <iframe simples qui pointent vers des domaines déclarés dans le manifeste de l’application et qui peuvent être ajoutées dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur \> individuel. Vous pouvez inclure des onglets personnalisés avec votre application pour incorporer votre propre contenu web dans Teams ou ajouter des fonctionnalités spécifiques de Teams à votre contenu web. *Voir le* [SDK client JavaScript teams.](/javascript/api/overview/msteams-client)
+Les onglets sont des pages web sensibles à Teams incorporées dans Microsoft Teams. Il s’agit de balises html <iframe simples qui pointent vers des domaines déclarés dans le manifeste de l’application et qui peuvent être ajoutées dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur \> individuel. Vous pouvez inclure des onglets personnalisés avec votre application pour incorporer votre propre contenu web dans Teams ou ajouter des fonctionnalités spécifiques à Teams à votre contenu web. *Voir le* [SDK client JavaScript teams.](/javascript/api/overview/msteams-client)
 
 > [!NOTE]
 > Chrome 80, dont la publication est prévue début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. *Voir* [l’attribut de cookie SameSite (mise à jour 2020).](../resources/samesite-cookie-update.md)
@@ -28,7 +28,7 @@ Il existe deux types d’onglets disponibles dans Teams : canal/groupe et person
 > * Sensibilisation de l’ID Azure Active Directory (Azure AD) de l’utilisateur actuel.
 > * Sensibilisation des paramètres régionaux pour que l’utilisateur indique la langue, c’est-à-dire, `en-us` . 
 > * Fonctionnalité d' sign-on unique (SSO), si elle est prise en charge.
-> * Possibilité d’utiliser des bots ou des notifications d’application pour créer un lien profond vers l’onglet ou une sous-entité au sein du service, par exemple, un élément de travail individuel.
+> * Possibilité d’utiliser des bots ou des notifications d’application pour créer un lien profond vers l’onglet ou une sous-entité dans le service, par exemple, un élément de travail individuel.
 > * Possibilité d’ouvrir un module de tâche à partir de liens dans un onglet.
 > * Réutilisation des composants Web Parts SharePoint dans l’onglet.
 
@@ -40,7 +40,7 @@ Il existe deux types d’onglets disponibles dans Teams : canal/groupe et person
 **Scénario :** Ajouter des pages de support à un bot Teams ou une extension de messagerie. \
 **Exemple :** Vous créez des onglets personnels qui fournissent des *informations sur les* pages web et aident les utilisateurs. 
 
-**Scénario :** Fournir l’accès aux éléments avec qui vos utilisateurs interagissent régulièrement pour un dialogue et une collaboration collaboratifs collaboratifs. \
+**Scénario :** Fournir l’accès aux éléments avec qui vos utilisateurs interagissent régulièrement pour le dialogue et la collaboration collaboratifs. \
 **Exemple :** Vous créez un onglet canal/groupe avec un lien profond vers des éléments individuels.
 
 ## <a name="how-do-tabs-work"></a>Comment fonctionnent les onglets ?
@@ -59,7 +59,7 @@ Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les cli
 
 | **Fonctionnalité d’application** | **Comportement si l’application est approuvée** | **Comportement si l’application n’est pas approuvée** |
 | --- | --- | --- |
-| **Onglets statiques** | L’application apparaît dans la barre inférieure des clients mobiles. Les onglets s’ouvrent dans le client Teams. | L’application n’apparaît pas dans la barre inférieure des clients mobiles. |
+| **Onglets statiques** | L’application apparaît dans la barre inférieure des clients mobiles. Onglets ouverts dans le client Teams. | L’application n’apparaît pas dans la barre inférieure des clients mobiles. |
 | **Onglets configurables** | L’onglet s’ouvre dans le client Teams à l’aide `contentUrl` de . | L’onglet s’ouvre dans un navigateur en dehors du client Teams à l’aide `websiteUrl` de . |
 
 
@@ -72,4 +72,4 @@ Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les cli
 > [En savoir plus : Demander des autorisations d’appareil](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[En savoir plus : Autorisations de la galerie d’images et d’appareils photo](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [En savoir plus : intégrer des fonctionnalités multimédias](../concepts/device-capabilities/mobile-camera-image-permissions.md)

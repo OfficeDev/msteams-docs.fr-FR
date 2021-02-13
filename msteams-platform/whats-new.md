@@ -3,12 +3,12 @@ title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement dans Microsoft Teams
 ms.topic: reference
 keywords: nouveautés des équipes
-ms.openlocfilehash: 37192878bf6c3e3697faf535dcd757c2ceb1f5f3
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 49603a9e48cd0a9951c6d9f0132a705770322de4
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014557"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231651"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -21,6 +21,7 @@ Le journal des modifications répertorie les modifications apportées à la plat
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|02/09/2021|Nouveauté : vue d’ensemble des fonctionnalités d’appareil ajoutées. <br/> Mise à jour : les informations sur les fonctionnalités du microphone sont ajoutées dans les autorisations natives de l’appareil et intègrent les fichiers de fonctionnalités multimédias.|[Vue d’ensemble,](concepts/device-capabilities/device-capabilities-overview.md) [demander des autorisations d’appareil,](concepts/device-capabilities/native-device-permissions.md) [intégrer des fonctionnalités multimédias](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 |11/30/2020|Nouveauté : intégration de la plateforme d’identité à Teams Shared Computer Toolkit et Visual Studio code pour les onglets|[Authentification unique avec teams Shared Computer Toolkit et Visual Studio code d’authentification unique pour les onglets](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Manifeste de l’application Teams mis à jour vers la version 1.8|[Référence : schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Recommandations en matière de conception de bot Teams|[Recommandations en matière de conception de bot](bots/design/bots.md)|
@@ -39,14 +40,14 @@ Le journal des modifications répertorie les modifications apportées à la plat
 |07/01/2020|Commencer à créer des applications Teams à l’Visual Studio Code Shared Computer Toolkit.|[Créer des applications avec le code de Shared Computer Toolkit et Visual Studio Microsoft Teams](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Sign-on unique for tabs GA for Teams web and desktop clients|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Schéma de manifeste mis à jour vers la version 1.7| [Référence : schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md)|
-| 05/20/2020 | Les autorisations de consentement spécifiques aux ressources à l’aide des API Microsoft Graph sont en prévisualisation du développeur. |[Consentement spécifique aux ressources (RSC) — Aperçu du développeur](graph-api/rsc/resource-specific-consent.md) |
+| 05/20/2020 | Les autorisations de consentement spécifiques aux ressources à l’aide des API Microsoft Graph sont en prévisualisation du développeur. |[Consentement spécifique aux ressources (RSC) — Version préliminaire du développeur](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|Intégrer des agents Power Virtual à Teams|[Intégrer un chatbot d’agents virtuels Power à Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Intégration de systèmes WFM à Shifts Connector pour Teams|[Microsoft Teams déplace les connecteurs WFM](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Prise en charge supplémentaire pour la récupération d’un seul membre d’une conversation et prise en charge supplémentaire pour la récupération des membres pagagés. | [Obtenir un contexte Teams pour votre bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour créer des liens profonds vers ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre. `legacy.replyToId`.  |
 | 11/5/2019 | L' sign-on unique à l’aide du SDK JavaScript Teams dans une page de contenu web est en aperçu développeur. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Mise à jour de la documentation sur les bots de conversation et les extensions de messagerie pour refléter le SDK Bot Framework 4.6. La documentation relative au SDK v3 est disponible dans la section Ressources. | Documentation complète sur les bots et les extensions de messagerie. |
-| 10/31/2019 | Nouvelle structure de la documentation et refactoriser les articles principaux. Veuillez signaler les liens morts ou les 404 en créant un problème GitHub. | Tous! |
+| 10/31/2019 | Nouvelle structure de la documentation et refactoriser les articles principaux. Signalez les liens morts ou les 404 en créant un problème GitHub. | Tous! |
 | 9/13/2019 | Le bot de demande est installé à partir de l’extension de messagerie basée sur l’action. | [Lancer des actions avec des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 8/28/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs. | [Obtenir un contexte Teams pour votre onglet](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
 | 06/20/2019 | Partagez un site web externe, à partir d’un site web externe, dans un canal Teams. | [Partager avec Teams](~/share-to-teams.md) |
@@ -55,18 +56,18 @@ Le journal des modifications répertorie les modifications apportées à la plat
 | 05/20/2019 | Localisation du manifeste de l’application. | [Localisation d’application](~/publishing/apps-localization.md) |
 | 05/20/2019 | Actions de message. | [Message Actions](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Déploiement de lien (aperçus d’URL personnalisées). | [Déploiement de lien](messaging-extensions/how-to/link-unfurling.md)|
-| 05/06/2019 | Programme de certification des applications du Store. | [Certification des applications](~/publishing/application-certification.md) |
+| 05/06/2019 | Programme de certification des applications du Windows Store. | [Certification des applications](~/publishing/application-certification.md) |
 | 05/06/2019 | Les modèles d’application sont désormais disponibles. | [Modèles d’application](~/samples/app-templates.md) |
 | 04/23/2019 | Les extensions de messagerie basées sur l’action sont désormais disponibles. | [Extensions de message basées sur l’action](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | La création de liens profonds vers une conversation privée n’est plus disponible et n’est plus disponible pour les développeurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Contexte de l’onglet](~/concepts/tabs/tabs-context.md) |
 | 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version finale de Teams et ont été déplacés hors de la version préliminaire du développeur. Dans le cadre de ce travail, la section Onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La mise en place de Node JS et de .NET/C# a été mise à jour pour utiliser App Studio dans Teams, et une nouvelle section a été ajoutée sur l’hébergement d’applications Teams basées sur node dans Azure. | Commencer à travailler sur la plateforme Microsoft Teams avec [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)et App Studio, commencer sur la plateforme Microsoft Teams avec [Node JS](~/get-started/get-started-nodejs-app-studio.md)et App Studio , héberger votre application [Node Teams](~/get-started/get-started-nodejs-in-azure.md) dans Azure|
-| 11/09/2018 | Vous pouvez désormais créer des liens profonds vers des conversations privées entre les utilisateurs. | [Lien profond vers une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 11/09/2018 | Vous pouvez désormais créer des liens profonds vers des conversations privées entre les utilisateurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 a été livré avec une nouvelle fonctionnalité permettant d’utiliser l’onglet Microsoft Teams en tant que partie Web De l’infrastructure SharePoint. | [Onglets dans SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | La fonctionnalité « module de tâche » a été publiée. Un module de tâche vous permet de créer des expériences popup modales dans votre application Teams, à partir de bots et d’onglets. À l’intérieur de la fenêtre popup, vous pouvez exécuter votre propre code HTML/JavaScript personnalisé, afficher un widget basé sur un widget tel qu’une vidéo YouTube ou Microsoft Stream, ou afficher une carte `<iframe>` [adaptative.](https://docs.microsoft.com/adaptive-cards/) | [Vue d’ensemble du module de](~/concepts/task-modules/task-modules-overview.md) [tâche, module de tâche dans les onglets,](~/concepts/task-modules/task-modules-tabs.md)  [module de tâche dans les bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | Les informations de mise en forme des cartes ont été mises à jour et testées dans les clients de bureau, iOS et Android pour Teams. | [Cartes,](~/concepts/cards/cards.md) [mise en forme de carte](~/concepts/cards/cards-format.md) |
-| 09/24/2018 | Les APPELS et les API de réunions en ligne pour Microsoft Graph ont été publiés dans la version bêta, et les applications Teams peuvent désormais interagir avec les utilisateurs de manière enrichie à l’aide de la voix et de la vidéo. | [Appels et bots de](~/concepts/calls-and-meetings/registering-calling-bot.md)réunions en ligne , [concepts](~/concepts/calls-and-meetings/real-time-media-concepts.md)multimédias en temps réel , inscription d’un [bot](~/concepts/calls-and-meetings/registering-calling-bot.md)d’appel, débogage et test [local](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), support hébergé par [l’application](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), gestion des notifications d’appels [entrants](~/concepts/calls-and-meetings/call-notifications.md) |
+| 09/24/2018 | Les APPELS et les API de réunion en ligne pour Microsoft Graph ont été publiés dans la version bêta, et les applications Teams peuvent désormais interagir avec les utilisateurs de manière enrichie à l’aide de la voix et de la vidéo. | [Appels et bots de](~/concepts/calls-and-meetings/registering-calling-bot.md)réunions en ligne , [concepts](~/concepts/calls-and-meetings/real-time-media-concepts.md)multimédias en temps réel , inscription d’un [bot](~/concepts/calls-and-meetings/registering-calling-bot.md)d’appel, débogage et test [local](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md), support hébergé par [l’application](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md), gestion des notifications d’appels [entrants](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | Les pages de configuration d’onglets sont désormais beaucoup plus grandes. | [Création d’onglets](tabs/design/tabs.md) |
 | 08/15/2018 | Les cartes adaptatives sont désormais pris en charge dans Teams.|[Actions de carte adaptative dans Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | La prise en charge du client pour DevTools a été documentée pour la prévisualisation du développeur.| [DevTools pour le client de bureau Microsoft Teams](~/resources/dev-preview/developer-preview-tools.md)|
@@ -81,14 +82,14 @@ Le journal des modifications répertorie les modifications apportées à la plat
 | 05/31/2018 | La prévisualisation pour les développeurs Teams (anneau 3.6) a été mise à jour pour inclure la possibilité d’ajouter des bots et des onglets à la conversation de groupe. | [Fonctionnalités de la prévisualisation du](~/resources/dev-preview/developer-preview-features.md)développeur, [schéma d’aperçu développeur](~/resources/schema/manifest-schema-dev-preview.md)|
 | 05/29/2018 | Les cartes adaptatives sont désormais prises en charge dans Teams dans les [actions de carte adaptative dans Teams.](task-modules-and-cards/cards/cards-reference.md) |
 | 05/29/2018 | Si vous utilisez la [prévisualisation du](~/resources/dev-preview/developer-preview-intro.md)développeur, votre bot peut désormais envoyer et recevoir des fichiers.| [Envoyer et recevoir des fichiers par le biais de votre bot,](~/concepts/bots/bots-files.md) [fonctionnalités de](~/resources/dev-preview/developer-preview-features.md) la prévisualisation pour les développeurs publics pour Microsoft Teams|
-| 04/17/2018 | ReplyToID a été ajouté à la charge utile pour les `Invoke` actions de carte et les actions de `MessageBack` carte. Ceci est particulièrement utile si vous devez mettre à jour le message d’où l’action de carte est partie. | [Actions de carte](~/concepts/cards/cards-actions.md)|
+| 04/17/2018 | ReplyToID a été ajouté à la charge utile pour les `Invoke` actions de carte et de `MessageBack` carte. Ceci est particulièrement utile si vous devez mettre à jour le message dont l’action de carte est d’provenance. | [Actions de carte](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Ajout de cette rubrique pour suivre les modifications apportées à l’interface de programmation Teams et à cet ensemble de documentation. | [Nouveautés](~/whats-new.md)|
 | 04/10/2018 | URL d’authentification modifiées pour utiliser de manière cohérente l’ID de client dans le chemin d’accès. | [Flux d’authentification pour les onglets,](~/concepts/authentication/auth-flow-tab.md) [authentification par onglets AAD](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Ajout d’instructions de conception pour l’utilisation de la zone de commande. |[Zone de commande](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | Utilisation de bots pour envoyer des notifications pour votre application. |[Bots avec notification seulement](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | Documentation étendue pour la messagerie proactive. |[Démarrer une conversation](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | Documentation refactorisante pour les cartes. |[Cartes,](~/concepts/cards/cards.md) [actions de carte,](~/concepts/cards/cards-actions.md) [mise en forme de carte,](~/concepts/cards/cards-format.md) [référence de carte](~/concepts/cards/cards-reference.md)|
-| 03/03/2018 | Ajout de la documentation pour Teams App Studio. |[Développer rapidement des applications avec Teams App Studio](~/get-started/get-started-app-studio.md), à l’aide de la bibliothèque de [contrôles dans App Studio](~/get-started/app-studio-component-library.md)|
+| 03/03/2018 | Ajout de la documentation pour Teams App Studio. |[Développer rapidement des applications avec Teams App Studio,](~/get-started/get-started-app-studio.md)à [l’aide](~/get-started/app-studio-component-library.md) de la bibliothèque de contrôles dans App Studio|
 | 02/27/2018 | Ajout d’un exemple de code pour démontrer la méthode AsTeamsChannelAccounts(). |[Obtenir un contexte pour votre bot](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | Ajout de rubriques pour commencer à utiliser C#. |[Prise en main de la plateforme Microsoft Teams avec C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 
