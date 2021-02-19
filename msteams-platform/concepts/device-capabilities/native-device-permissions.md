@@ -3,25 +3,27 @@ title: Demander des autorisations d’appareil pour votre application Microsoft 
 keywords: autorisations des fonctionnalités des applications Teams
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui nécessitent généralement le consentement de l’utilisateur
 ms.topic: how-to
-ms.openlocfilehash: 0343754eacbb6088a3e44fa5df8ec90e3b10b076
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231609"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294746"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Demander des autorisations d’appareil pour votre application Microsoft Teams
 
-Vous pouvez enrichir votre application Teams avec des fonctionnalités natives d’appareil, telles que la caméra, le microphone et l’emplacement. Ce document vous guide sur la façon de demander le consentement de l’utilisateur et d’accéder aux autorisations d’appareil natives.
+Vous pouvez enrichir votre application Teams avec des fonctionnalités natives d’appareil, telles que la caméra, le microphone et l’emplacement. Ce document vous guide sur la façon de demander le consentement de l’utilisateur et d’accéder aux autorisations natives de l’appareil.
 
 > [!NOTE]
-> Pour intégrer des fonctionnalités multimédias dans votre application mobile Microsoft Teams, voir [Intégrer les fonctionnalités multimédias.](mobile-camera-image-permissions.md)
+> * Pour intégrer des fonctionnalités multimédias dans votre application mobile Microsoft Teams, voir [Intégrer les fonctionnalités multimédias.](mobile-camera-image-permissions.md)
+> * Pour intégrer la fonctionnalité de QR ou de scanneur de code-barres dans votre application mobile Microsoft Teams, voir Intégrer la [QR](qr-barcode-scanner-capability.md) ou la fonctionnalité scanneur de code-barres dans Teams
 
 ## <a name="native-device-permissions"></a>Autorisations d’appareil natives
 
 Vous devez demander les autorisations d’appareil pour accéder aux fonctionnalités natives de l’appareil. Les autorisations d’appareil fonctionnent de la même manière pour toutes les constructions d’application, telles que les onglets, les modules de tâche ou les extensions de messagerie. L’utilisateur doit se rendre sur la page d’autorisations dans les paramètres teams pour gérer les autorisations d’appareil.
 En accédant aux fonctionnalités de l’appareil, vous pouvez créer des expériences enrichies sur la plateforme Teams, telles que :
 * Capturer et afficher des images.
+* Analysez la QR ou le code-barres.
 * Enregistrez et partagez de courtes vidéos.
 * Enregistrez les mémos audio et enregistrez-les pour une utilisation ultérieure.
 * Utilisez les informations d’emplacement de l’utilisateur pour afficher les informations pertinentes.
@@ -33,7 +35,7 @@ Le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-clie
 Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs web modernes, vous devez informer Teams sur les fonctionnalités que vous utilisez en mettant à jour votre manifeste d’application. Cette mise à jour vous permet de demander des autorisations pendant que votre application s’exécute sur le client de bureau Teams.
 
 > [!NOTE] 
-> Actuellement, la prise en charge des fonctionnalités multimédias par Microsoft Teams est disponible uniquement pour les clients mobiles.
+> Actuellement, la prise en charge de Microsoft Teams pour les fonctionnalités multimédias et la fonctionnalité de scanneur de code-barres QR est disponible uniquement pour les clients mobiles.
 
 ## <a name="manage-permissions"></a>Gérer les autorisations
 
@@ -42,7 +44,7 @@ Un utilisateur peut gérer les autorisations d’appareil  dans les paramètres 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
 1. Ouvrez votre application Teams.
-1. Sélectionnez votre icône de profil dans le coin supérieur droit de la fenêtre.
+1. Sélectionnez l’icône de votre profil dans le coin supérieur droit de la fenêtre.
 1. Sélectionnez **Les**  >  **autorisations des paramètres** dans le menu déroulant.
 1. Sélectionnez les paramètres souhaités.
 
@@ -183,7 +185,10 @@ Les autorisations d’appareil sont stockées pour chaque session de connexion. 
 > [!NOTE]
 > Lorsque vous consentez aux autorisations natives de l’appareil, elle n’est valide que pour votre session _de_ connexion actuelle.
 
-## <a name="next-step"></a>Étape suivante
+## <a name="next-steps"></a>Prochaines étapes
 
 > [!div class="nextstepaction"]
 > [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)

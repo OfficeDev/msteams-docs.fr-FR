@@ -5,12 +5,12 @@ keywords: mise en place de .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: b37a8d555117e38383504dc99d82d564439a3ebf
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 29cc4e0f434bf9ece9c6073af84627acc048b628
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231522"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294753"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>Créer votre première application Teams en C# ou .NET
 
@@ -48,20 +48,20 @@ Vous pouvez utiliser la même fenêtre terminal pour exécuter les commandes de 
 
 ## <a name="download-the-sample"></a>Télécharger l’exemple
 
-Vous pouvez commencer avec un simple [Hello World !](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) exemple en C#. Dans une fenêtre terminal, exécutez la commande suivante pour cloner l’exemple de référentiel sur votre ordinateur local :
+Vous pouvez commencer avec un simple [Hello World !](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) exemple en C#. Dans une fenêtre terminal, exécutez la commande suivante pour cloner l’exemple de référentiel sur votre ordinateur local :
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
+git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel pour](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) modifier et enregistrer vos modifications dans GitHub pour référence.
+> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel pour](https://github.com/OfficeDev/Microsoft-Teams-Samples) modifier et enregistrer vos modifications dans GitHub pour référence.
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>Création et exécution de l’exemple
 
-Une fois le dépôt cloné, utilisez Visual Studio pour ouvrir le fichier de solution à partir du répertoire racine de l’exemple et sélectionnez-le `Microsoft.Teams.Samples.HelloWorld.sln` `Build Solution` dans le `Build` menu. Pour exécuter l’exemple, `F5` appuyez ou choisissez `Start Debugging` dans le `Debug` menu.
+Une fois le dépôt cloné, utilisez Visual Studio pour ouvrir le fichier de solution à partir du répertoire `Microsoft.Teams.Samples.HelloWorld.sln` **Microsoft-Teams-Samples/samples/app-hello-world/csharp** de l’exemple et sélectionnez-le dans le `Build Solution` `Build` menu. Pour exécuter l’exemple, `F5` appuyez ou choisissez `Start Debugging` dans le `Debug` menu.
 
 Lorsque l’application démarre, une fenêtre de navigateur s’ouvre avec la racine de l’application lancée. Vous pouvez accéder aux URL suivantes pour vérifier que toutes les URL d’application sont en cours de chargement :
 
@@ -81,7 +81,7 @@ Les applications dans Microsoft Teams sont des applications web qui fournissent 
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel utilisant ngrok
 
-Pour des tests rapides, vous pouvez exécuter l’application sur votre ordinateur local et y créer un tunnel via un point de terminaison web. [ngrok est](https://ngrok.com) un outil gratuit avec lequel vous pouvez obtenir une adresse web telle que `https://d0ac14a5.ngrok.io` . Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok. Veillez à l’ajouter à un emplacement dans votre `PATH` .
+Pour des tests rapides, vous pouvez exécuter l’application sur votre ordinateur local et créer un tunnel vers celui-ci via un point de terminaison web. [ngrok est](https://ngrok.com) un outil gratuit avec lequel vous pouvez obtenir une adresse web telle que `https://d0ac14a5.ngrok.io` . Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok. Veillez à l’ajouter à un emplacement dans votre `PATH` .
 
 Après avoir installé ngrok, ouvrez une nouvelle fenêtre terminal et exécutez la commande suivante pour créer un tunnel :
 
@@ -94,7 +94,7 @@ L’exemple utilise le port 44327 et assurez-vous de le spécifier.
 Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application en cours d’exécution sur le port 44327. Pour vérifier, ouvrez votre navigateur et allez `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Au lieu de cette URL, utilisez l’adresse de forwarding affichée par ngrok dans votre session console.
 
 > [!NOTE]
-> Si vous avez utilisé un [](#build-and-run-the-sample) autre port lors de l’étape de build et d’utilisation, veillez à utiliser le même numéro de port pour configurer le `ngrok` tunnel.
+> Si vous avez utilisé un [](#build-and-run-the-sample) autre port à l’étape de build et d’utilisation, veillez à utiliser le même numéro de port pour configurer le `ngrok` tunnel.
 
 > [!TIP]
 > Il est bon de l’exécuter `ngrok` dans une autre fenêtre terminal. Cette étape est effectuée pour empêcher ngrok de s’exécute sans interférer avec l’application, que vous devez arrêter, reconstruire et réexécuter. La `ngrok` session fournit des informations de débogage utiles dans cette fenêtre.

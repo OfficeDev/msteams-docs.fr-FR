@@ -4,12 +4,12 @@ description: Découvrez comment commencer à créer des applications Microsoft T
 keywords: mise en node.js nodejs App Studio
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 03dcf79a46266321e54c7e99bf01cdd2a87075fa
-ms.sourcegitcommit: fa64b83c0b534bf7a89f256880d5b5ca193e4b04
+ms.openlocfilehash: 61be1056a07952c6cf166dbe183fa257ceaf7227
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "50037045"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294760"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>Créer votre première application Microsoft Teams à l’aide Node.js
 
@@ -73,14 +73,14 @@ Vous pouvez continuer à utiliser cette fenêtre terminal pour exécuter les com
 
 ### <a name="download-the-sample"></a>Télécharger l’exemple
 
-Nous avons fourni un simple [Hello World !](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) pour commencer. Dans une fenêtre terminal, exécutez la commande suivante pour cloner l’exemple de référentiel sur votre ordinateur local :
+Nous avons fourni un simple [Hello World !](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) pour commencer. Dans une fenêtre terminal, exécutez la commande suivante pour cloner l’exemple de référentiel sur votre ordinateur local :
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
+git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) si vous souhaitez modifier et vérifier vos modifications apportées à votre référentiel GitHub pour référence ultérieure.
+> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel](https://github.com/OfficeDev/Microsoft-Teams-Samples) si vous souhaitez modifier et vérifier vos modifications apportées à votre référentiel GitHub pour référence ultérieure.
 
 <a name="BuildRun"></a>
 
@@ -89,7 +89,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
 Une fois le repo cloné, modifiez le répertoire qui contient l’exemple :
 
 ```bash
-cd msteams-samples-hello-world-nodejs
+cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
 ```
 
 Pour créer l’exemple, vous devez installer toutes ses dépendances. Pour ce faire, exécutez la commande suivante :
@@ -130,7 +130,7 @@ Une fois l’installation installée, vous pouvez ouvrir une nouvelle fenêtre t
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok écoutera* les demandes provenant d’Internet et les routera vers votre application en cours d’exécution sur le port 3333. Vous pouvez vérifier en ouvrant votre navigateur et en allant `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Assurez-vous d’utiliser l’adresse de forwarding affichée par *ngrok dans* votre session console au lieu de cette URL.
+*Ngrok écoutera* les demandes provenant d’Internet et les dirigera vers votre application en cours d’exécution sur le port 3333. Vous pouvez vérifier en ouvrant votre navigateur et en allant `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Assurez-vous d’utiliser l’adresse de forwarding affichée par *ngrok dans* votre session console au lieu de cette URL.
 
 > [!NOTE]
 > Si vous avez utilisé un [](#build-and-run-the-sample) autre port dans la build et l’étape d’utilisation ci-dessus, veillez à utiliser le même numéro de port pour configurer le tunnel *ngrok.*
@@ -164,7 +164,7 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-La façon dont vous faites cela diffère en fonction de la façon dont vous avez hébergé votre application. L’élément important de l’utilisation des variables d’environnement est que ces valeurs font partie de votre environnement : elles sont accessibles par le code de votre application, mais elles ne sont pas exposées à des tiers qui peuvent examiner les fichiers qui constitueront votre site.
+La façon dont vous le faites diffère en fonction de la façon dont vous avez hébergé votre application. L’élément important de l’utilisation des variables d’environnement est que ces valeurs font partie de votre environnement : elles sont accessibles par le code de votre application, mais elles ne sont pas exposées à des tiers qui peuvent examiner les fichiers qui constitueront votre site.
 
 Si vous exécutez l’application à l’aide de ngrok, vous devez configurer certaines variables d’environnement local. Il existe plusieurs façons de le faire, mais le plus simple, si vous utilisez Visual Studio Code, consiste à ajouter une [configuration de lancement](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
@@ -201,13 +201,13 @@ NODE_CONFIG_DIR pointe vers le répertoire à la racine du référentiel (par d�
 
 Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Go to a channel in the team and click on the **'+'** button to add a new tab. Vous pouvez ensuite choisir `Hello World` dans la liste Ajouter un **onglet.** Une boîte de dialogue de configuration s’est ensuite présentée. Cette boîte de dialogue vous permet de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet et cliqué dessus, vous pouvez voir `Save` l’onglet chargé `Hello World` avec l’onglet que vous avez choisi.
 
-<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Screenshot of configure" />
+<img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
 ### <a name="test-your-bot-in-teams"></a>Tester votre bot dans Teams
 
 Vous pouvez désormais interagir avec le bot dans Teams. Choisissez un canal dans l’équipe où vous avez inscrit votre application, puis tapez `@your-bot-name` , suivi de votre message. C’est ce qu’on appelle **\@ une mention.** Le message que vous envoyez au bot vous sera renvoyé en tant que réponse.
 
-<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 
 <a name="ComposeRichMessages"></a>
 
@@ -215,10 +215,10 @@ Vous pouvez désormais interagir avec le bot dans Teams. Choisissez un canal dan
 
 Pour tester votre extension de messagerie, vous pouvez cliquer sur les trois points sous la zone d’entrée dans l’affichage conversation. Un menu apparaît avec **l’application « Hello World** » dans celui-ci. Lorsque vous cliquez dessus, vous voyez un certain nombre de textes aléatoires. Vous pouvez choisir l’un d’eux et celui-ci sera inséré dans votre conversation.
 
-<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 Choisissez l’un des textes aléatoires et vous verrez une carte mise en forme et prête à être envoyé avec votre propre message en bas.
 
-<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

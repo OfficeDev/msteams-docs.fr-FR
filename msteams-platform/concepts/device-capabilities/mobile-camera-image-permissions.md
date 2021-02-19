@@ -1,21 +1,21 @@
 ---
-title: Intégrer des fonctionnalités multimédias
+title: Intégrer les fonctionnalités médias
 description: Comment utiliser le SDK client JavaScript teams pour activer les fonctionnalités multimédias
 keywords: Média d’autorisations d’appareil natif des fonctionnalités du microphone d’image de l’appareil photo
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4126551858116343689e08c4b4f385eb0bbc7ed1
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 4876b4de9340cc2bd27a14e363954573ea42f05d
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231592"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294739"
 ---
-# <a name="integrate-media-capabilities"></a>Intégrer des fonctionnalités multimédias 
+# <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias 
 
-Ce document vous guide sur l’intégration des fonctionnalités multimédias. Cette intégration combine les fonctionnalités natives de l’appareil, telles que la **caméra** et **le microphone,** avec la plateforme Teams.  
+Ce document vous guide sur l’intégration des fonctionnalités multimédias. Cette intégration combine les fonctionnalités natives  de l’appareil, telles que la caméra et **le microphone,** avec la plateforme Teams.  
 
-Vous pouvez utiliser le [SDK client JavaScript Microsoft Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires pour que votre application accède aux autorisations d’appareil d’un [utilisateur.](native-device-permissions.md) Utilisez les **API** de fonctionnalité multimédia appropriées pour intégrer  les fonctionnalités natives de l’appareil, telles que l’appareil photo et le **microphone,** à la plateforme Teams dans votre application mobile Microsoft Teams, et créez une expérience plus riche. 
+Vous pouvez utiliser le [SDK client JavaScript Microsoft Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires pour que votre application accède aux autorisations d’appareil d’un [utilisateur.](native-device-permissions.md) Utilisez les **API** de fonctionnalité multimédia appropriées pour intégrer  les fonctionnalités natives de l’appareil, telles que la caméra et le **microphone,** à la plateforme Teams dans votre application mobile Microsoft Teams, et créez une expérience plus riche. 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Avantage de l’intégration des fonctionnalités multimédias
 
@@ -31,7 +31,7 @@ Il est important de vous familiariser avec les erreurs de [réponse d’API](#er
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 
-Mettez à jour votre application Teams [manifest.jsfichier en](../../resources/schema/manifest-schema.md#devicepermissions) ajoutant la propriété et en `devicePermissions` spécifiant `media` . Il permet à votre application de demander les autorisations  requises aux utilisateurs avant de commencer à utiliser l’appareil photo pour capturer l’image, d’ouvrir la galerie pour sélectionner une image à envoyer en tant que pièce jointe ou d’utiliser le **microphone** pour enregistrer la conversation.
+Mettez à jour votre application Teams [manifest.jsfichier en](../../resources/schema/manifest-schema.md#devicepermissions) ajoutant la propriété et en `devicePermissions` spécifiant `media` . Il permet à votre application de demander les autorisations  requises aux utilisateurs avant de commencer à utiliser l’appareil photo pour capturer l’image, d’ouvrir la galerie pour sélectionner une image à soumettre en pièce jointe ou d’utiliser le **microphone** pour enregistrer la conversation.
 
 ``` json
 "devicePermissions": [
@@ -252,3 +252,8 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
     }
 });
 ```
+
+## <a name="see-also"></a>Voir aussi
+
+> [!div class="nextstepaction"]
+> [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
