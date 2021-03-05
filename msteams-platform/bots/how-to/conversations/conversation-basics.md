@@ -4,12 +4,12 @@ description: décrit les manières d’avoir une conversation avec un bot Micros
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: a045f02a146782ebdbbbb14fe5f4187cb517a109
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+ms.openlocfilehash: 4eba22e9b29f5378dc03480ba5f6ba421f816eb3
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093956"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449506"
 ---
 # <a name="conversation-basics"></a>Concepts de base d’une conversation
 
@@ -212,6 +212,9 @@ async def on_members_added_activity(
 
 ---
 
+> [!NOTE]
+> Le fractionnement de message se produit lorsqu’un message texte et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, une activité avec un message texte et l’autre avec une pièce jointe. Lorsque l’activité est fractionée, vous ne recevez pas l’ID de message en réponse, qui est utilisé pour mettre à jour ou supprimer [le](~/bots/how-to/update-and-delete-bot-messages.md) message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+
 ## <a name="teams-channel-data"></a>Données de canal Teams
 
 L’objet contient des informations spécifiques à Teams et constitue une source définitive pour les ID d’équipe `channelData` et de canal. Vous devrez peut-être mettre en cache et utiliser ces ID comme clés pour le stockage local. Le SDK, en général, retire des informations importantes de `TeamsActivityHandler` l’objet pour les rendre facilement `channelData` accessibles. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de `turnContext` l’objet.
@@ -262,7 +265,7 @@ Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisate
 
 ## <a name="adding-notifications-to-your-message"></a>Ajout de notifications à votre message
 
-Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires relatifs à ce qu’ils travaillent ou doivent examiner en insérant une notification dans leur flux d’activités. Vous pouvez définir des notifications pour qu’ils se déclenchent à partir de votre bot-message en réglant la propriété des objets `TeamsChannelData` `Notification.Alert` sur true. Le fait qu’une notification soit ou non élevée dépend en fin de compte des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres par programme. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+Notifications alert users about new tasks, mentions, and comments related to what they are working on or need to look at by inserting a notice into their activity feed. Vous pouvez définir des notifications pour qu’ils se déclenchent à partir de votre bot-message en réglant la propriété des objets `TeamsChannelData` `Notification.Alert` sur true. Le fait qu’une notification soit ou non élevée dépend en fin de compte des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres par programme. Le type de notification est soit une bannière, soit une bannière et un e-mail.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -341,7 +344,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Vous tr
 
 Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.
 
-Spécifiez toujours la hauteur et la largeur de chaque image à l’aide du XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez toujours la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Ne pas utiliser - `![Duck on a rock](http://aka.ms/Fo983c)`
@@ -375,9 +378,9 @@ Utilisez le code suivant pour envoyer une carte adaptative simple :
 ```
 
 Pour en savoir plus sur les cartes et les cartes dans les bots, consultez [la documentation des cartes.](~/task-modules-and-cards/what-are-cards.md)
-Lorsqu’une réponse contient des messages texte et des pièces jointes, les deux réponses sont envoyées séparément. La pièce jointe est envoyée après le message texte.
 
 ## <a name="code-sample"></a>Exemple de code
+
 |**Exemple de nom** | **Description** | **. NETCore** | **JavaScript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams Conversation Bot | Gestion des événements de messagerie et de conversation. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |

@@ -1,24 +1,28 @@
 ---
-title: Intégrer la fonctionnalité de QR ou de scanneur de code-barres
+title: Intégrer la fonctionnalité de scanneur QR ou code-barres
 description: Comment utiliser le SDK client JavaScript teams pour tirer parti des fonctionnalités de QR ou de scanneur de code-barres
 keywords: Fonctionnalités natives d’appareil photo qr code qrcode code-barres scanneur de scanneur de codes-barres
 ms.author: lajanuar
-ms.openlocfilehash: 048c6b58fc126d1dd08867605784b6a150737195
-ms.sourcegitcommit: 0bb6efb3003a1949288e4601e3301b69e67d4c26
+ms.openlocfilehash: 1a13de1a4d9e03f0f36f03af0fdd948cf74a0392
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50295088"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449415"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>Intégrer la fonctionnalité de QR ou de scanneur de code-barres 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>Intégrer la fonctionnalité de scanneur QR ou code-barres 
 
-Le code-barres est une méthode de représentation des données sous forme visuelle et lisible par l’ordinateur. Le code-barres contient des informations sur un produit, telles qu’un type, une taille, un fabricant et un pays d’origine sous la forme de barres et d’espaces. Le code est lu à l’aide du scanneur optique sur votre appareil photo natif. Pour une expérience de collaboration enrichie, vous pouvez intégrer la fonctionnalité de QR ou de scanneur de code-barres fournie dans la plateforme Teams à votre application Teams. Ce document vous guide sur l’intégration de la fonctionnalité.  
+Ce document vous guide sur l’intégration de la fonctionnalité de QR ou de scanneur de code-barres. 
+
+Le code-barres est une méthode de représentation des données sous forme visuelle et lisible par l’ordinateur. Le code-barres contient des informations sur un produit, telles qu’un type, une taille, un fabricant et un pays d’origine sous la forme de barres et d’espaces. Le code est lu à l’aide du scanneur optique sur votre appareil photo natif. Pour une expérience de collaboration enrichie, vous pouvez intégrer la fonctionnalité de QR ou de scanneur de code-barres fournie dans la plateforme Teams à votre application Teams.   
 
 Vous pouvez utiliser le [SDK client JavaScript Microsoft Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires à votre application pour accéder aux fonctionnalités natives de l’appareil de l’utilisateur. [](native-device-permissions.md) Utilisez `scanBarCode` l’API pour intégrer la fonctionnalité de scanneur dans votre application. 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Avantage de l’intégration des fonctionnalités de QR ou de scanneur de code-barres
 
-* L’intégration permet aux développeurs d’applications web sur la plateforme Teams de tirer parti des fonctionnalités d’analyse de QR ou de code-barres avec le SDK client JavaScript teams.
+Voici les avantages de l’intégration des fonctionnalités de QR ou de scanneur de code-barres : 
+
+* L’intégration permet aux développeurs d’applications web sur la plateforme Teams d’exploiter les fonctionnalités d’analyse de QR ou de code-barres avec le SDK client JavaScript teams.
 * Avec cette fonctionnalité, l’utilisateur doit aligner uniquement une QR ou un code-barres dans un cadre au centre de l’interface utilisateur du scanneur et le code est analysé automatiquement. Les données stockées sont partagées avec l’application web d’appel. Cela évite les désagréments et les erreurs humaines liés à la saisie manuelle de codes de produit longs ou d’autres informations pertinentes.
 
 Pour intégrer la fonctionnalité de QR ou de scanneur de code-barres, vous devez mettre à jour le fichier manifeste de l’application et appeler `scanBarCode` l’API. Pour une intégration efficace, vous devez bien comprendre l’extrait de [code](#code-snippet) pour appeler l’API, ce qui vous permet d’utiliser la QR native ou la fonctionnalité de scanneur de `scanBarCode` code-barres. L’API fournit une erreur pour une norme de code-barres non pris en place.
@@ -105,3 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 > [!div class="nextstepaction"]
 > [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Intégrer des fonctionnalités d’emplacement dans Teams](location-capability.md)

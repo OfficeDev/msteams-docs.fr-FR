@@ -4,12 +4,12 @@ author: clearab
 description: Comment ajouter l’authentification à une extension de messagerie
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4ebe65af06240d13ceb99fe3b7640ab402d716c5
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: d673f52e63ba845675f6631470af68d65c7297ad
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911869"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449569"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter l’authentification à votre extension de messagerie
 
@@ -27,7 +27,7 @@ Chaque demande à vos services inclut l’ID obscurci de l’utilisateur qui a e
 },
 ```
 
-Les `id` `aadObjectId` valeurs et les valeurs sont garanties pour être celle de l’utilisateur Teams authentifié. Elles peuvent être utilisées comme clés pour rechercher des informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID de client Azure Active Directory de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
+Les `id` `aadObjectId` valeurs et les valeurs sont garanties pour être celle de l’utilisateur Teams authentifié. Ils peuvent être utilisés comme clés pour rechercher des informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID de client Azure Active Directory de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
 
 ## <a name="authentication"></a>Authentification
 
@@ -46,7 +46,7 @@ Votre service doit vérifier que le code d’authentification reçu à l’étap
 
 ### <a name="respond-with-a-sign-in-action"></a>Répondre avec une action de se connectez
 
-Pour inviter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
+Pour inciter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de sign-in
 
@@ -74,7 +74,7 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 
 Votre expérience de sign-in doit être réactive et tenir dans une fenêtre popup. Il doit s’intégrer au [SDK client JavaScript Microsoft Teams,](/javascript/api/overview/msteams-client)qui utilise la transmission de message.
 
-Comme avec d’autres expériences incorporées en cours d’exécution dans Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez passer l’ID utilisateur Teams dans votre fenêtre, qui peut ensuite le transmettre à l’URL de la signature OAuth.
+Comme avec d’autres expériences incorporées en cours d’exécution dans Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID utilisateur Teams dans votre fenêtre, qui peut ensuite le transmettre à l’URL de la signature OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de la signature
 
@@ -134,9 +134,9 @@ Lorsque la demande de se connecte est terminée et redirige vers votre page, ell
 }
 ```
 
-## <a name="samples"></a>Exemples
-Pour obtenir un exemple de code montrant le processus d’authentification des extensions de messagerie, voir :
-
-[Exemple d’authentification des extensions de messagerie Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)
+## <a name="code-sample"></a>Exemple de code
+|**Exemple de nom** | **Description** |**.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

@@ -4,18 +4,18 @@ description: explique comment ajouter un webhook sortant
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 'onglets teams : message actionnable de webhook sortant vérifiant le webhook'
-ms.openlocfilehash: 20d30be7a35b33b94dc4a856439c51d5d0cc441c
-ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
+ms.openlocfilehash: b7c587816a32e650009cdbfcd4dcf9028fb87392
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093252"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449541"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>Ajouter des bots personnalisés à Teams avec des webhooks sortants
 
 ## <a name="what-are-outgoing-webhooks-in-teams"></a>Que sont les webhooks sortants dans Teams ?
 
-Les webhooks sont un moyen très simple pour Teams de s’intégrer à des applications externes. Un webhook est essentiellement une requête POST envoyée à une URL de rappel. Les webhooks sortants permettent aux utilisateurs d’envoyer des messages à votre service web sans passer par le processus complet de création de bots via [Microsoft Bot Framework](https://dev.botframework.com/).
+Les webhooks permettent à Teams de s’intégrer avec des applications externes. Un webhook est essentiellement une requête POST envoyée à une URL de rappel. Les webhooks sortants permettent aux utilisateurs d’envoyer des messages à votre service web sans passer par le processus complet de création de bots via [Microsoft Bot Framework](https://dev.botframework.com/).
 
 Le webhook sortant envoie des données de Teams à tout service choisi capable d’accepter une charge utile JSON. Après avoir ajouté les webhooks sortants à une équipe, il agit comme un bot et recherche des messages dans les canaux à l’aide de **\@ la mention**. Il envoie des notifications aux services web externes et répond par des messages enrichis, qui incluent des cartes et des images.
 
@@ -30,7 +30,7 @@ Le webhook sortant envoie des données de Teams à tout service choisi capable d
 
 ## <a name="creating-actionable-messages"></a>Créations des messages intégrant des actions
 
-Les cartes de connecteur incluent trois boutons visibles sur la carte. Chaque bouton est défini dans la propriété du message à `potentialAction` l’aide `ActionCard` d’actions. Chacune `ActionCard` contient un type d’entrée, un champ de texte, un s sélectionneur de dates ou une liste à choix multiples. Chaque `ActionCard` action est associée à une action, par exemple. `HttpPOST`
+Les cartes de connecteur incluent trois boutons visibles sur la carte. Chaque bouton est défini dans la propriété du message à `potentialAction` l’aide `ActionCard` d’actions. Chacune `ActionCard` contient un type d’entrée, un champ de texte, un s picker de date ou une liste à choix multiples. Chaque `ActionCard` action est associée à une action, par exemple. `HttpPOST`
 
 Les cartes de connecteur prennent en charge trois types d’actions :
 
@@ -38,7 +38,7 @@ Les cartes de connecteur prennent en charge trois types d’actions :
 | ------- | ----------- |
 | `ActionCard` |Présente un ou plusieurs types d’entrée et actions associées.|
 | `HttpPOST` | Envoie une demande POST à une URL. |
-| `OpenUri` |  Ouvre un URI dans un navigateur ou une application distinct, cible éventuellement différentes URI en fonction des systèmes d’exploitation.|
+| `OpenUri` |  Ouvre un URI dans un navigateur ou une application distinct, cible éventuellement différents URI basés sur les systèmes d’exploitation.|
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 
@@ -69,7 +69,7 @@ Pour plus d’informations sur les actions de carte de connecteur, voir **[Actio
 
 ### <a name="1-create-a-url-on-your-apps-server-to-accept-and-process-a-post-request-with-a-json-payload"></a>1. Créez une URL sur le serveur de votre application pour accepter et traiter une demande POST avec une charge utile JSON
 
-Votre service reçoit des messages dans un schéma de messagerie de service de bot Azure standard. Le connecteur d’infrastructure du bot est un service RESTful qui permet à votre service de traiter l’échange de messages au format JSON via des protocoles HTTPS, comme documenté dans [l’API Azure Bot Service.](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) Vous pouvez également suivre le [Microsoft Bot Framework SDK] pour traiter et parse les messages. Voir aussi [à propos d’Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
+Votre service reçoit des messages dans un schéma de messagerie de service de bot Azure standard. Le connecteur d’infrastructure du bot est un service RESTful qui permet à votre service de traiter l’échange de messages au format JSON via des protocoles HTTPS, comme documenté dans [l’API Azure Bot Service.](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) Vous pouvez également suivre le [Microsoft Bot Framework SDK] pour traiter et passer des messages. Voir aussi [à propos d’Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 
 Les webhooks sortants sont limitées au niveau et `team` sont visibles par tous les membres de l’équipe. Tout comme un bot, les utilisateurs doivent **\@ mentionner** le nom du webhook sortant pour l’appeler dans le canal.
@@ -86,7 +86,7 @@ Pour vous assurer que votre service ne reçoit des appels que de clients Teams r
 
 Votre code doit toujours valider la signature HMAC incluse dans la demande :
 
-* Générer le jeton HMAC à partir du corps de la demande du message. Il existe des bibliothèques standard pour le faire sur la plupart des plateformes (voir [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft Teams utilise le chiffrement HMAC SHA256 standard. Vous devez convertir le corps en tableau d’byte en UTF8.
+* Générer le jeton HMAC à partir du corps de la demande du message. Il existe des bibliothèques standard pour ce faire sur la plupart des plateformes (voir [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft Teams utilise le chiffrement HMAC SHA256 standard. Vous devez convertir le corps en tableau d’byte en UTF8.
 * Calculez le hachage à partir du tableau d’byte du jeton de sécurité fourni par **Teams** lorsque vous avez inscrit le webhook sortant dans le client Teams]. Voir [Créer un webhook sortant.](#create-an-outgoing-webhook)
 * Convertissez le hachage en chaîne à l’aide du codage UTF-8.
 * Comparez la valeur de chaîne du hachage généré à la valeur fournie dans la requête HTTP.
@@ -119,14 +119,8 @@ Les réponses de vos webhooks sortants apparaissent dans la même chaîne de ré
 >* La fenêtre de boîte de dialogue suivante affiche un jeton de sécurité [HMAC (Message Authentication Code)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) basé sur le hachage utilisé pour authentifier les appels entre Teams et le service externe désigné.
 >* Le webhook sortant est disponible pour les utilisateurs de l’équipe, uniquement si l’URL est valide et que les jetons d’authentification du serveur et du client sont égaux, par exemple, une négociation HMAC.
 
-## <a name="code-samples"></a>Exemples de code
+## <a name="code-sample"></a>Exemple de code
+|**Exemple de nom** | **Description** | **.NET** | **Node.js** |
+|----------------|------------------|--------|----------------|
+| Webhooks sortants | Exemples de création **de bots personnalisés** à utiliser dans Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
-Vous pouvez afficher des exemples de code de webhook sortant sur GitHub :
-
-### <a name="nodejs"></a>Node.js
-
-[OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
-
-### <a name="c"></a>C\#
-
-[OfficeDev/microsoft-teams-sample-outgoing-webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook)
