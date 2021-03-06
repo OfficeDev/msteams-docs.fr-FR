@@ -1,34 +1,34 @@
 ---
 title: Créer une page de contenu
 author: laujan
-description: procédure de création d’une page de contenu
-keywords: onglets teams groupe de canaux configurable statique
+description: Comment créer une page de contenu
+keywords: 'onglets teams : canal de groupe configurable statique'
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
+ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552534"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50479871"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
-Une page de contenu est une page Web qui s’affiche dans le client Teams. En règle générale, il s’agit des éléments suivants :
+Une page de contenu est une page web qui est rendue dans le client Teams. En règle générale, ces éléments font partie des éléments ci-après :
 
-* Onglet personnalisé d’étendue personnelle : cette instance de contenu est la première page rencontrée par l’utilisateur.
-* Un onglet personnalisé canal/groupe-une fois que l’utilisateur épingle et configure l’onglet dans le contexte approprié, la page de contenu s’affiche.
-* Un [module de tâches](~/task-modules-and-cards/what-are-task-modules.md) : vous pouvez créer une page de contenu et l’incorporer en tant que WebView à l’intérieur d’un module de tâches. La page s’affiche dans le menu contextuel modal.
+* Onglet personnalisé d’étendue personnelle : dans ce cas, la page de contenu est la première page que l’utilisateur rencontre.
+* Onglet personnalisé canal/groupe : une fois que l’utilisateur épingle et configure l’onglet dans le contexte approprié, la page de contenu s’affiche.
+* Module [de tâche](~/task-modules-and-cards/what-are-task-modules.md) : vous pouvez créer une page de contenu et l’incorporer en tant que vue web à l’intérieur d’un module de tâche. La page s’restituera à l’intérieur de la fenêtre popup modale.
 
-Cet article est spécifique à l’utilisation des pages de contenu en tant qu’onglets ; Toutefois, la majorité des conseils s’appliquent indépendamment de la présentation de la page de contenu à l’utilisateur final.
+Cet article est spécifique à l’utilisation de pages de contenu en tant qu’onglets ; Toutefois, la majorité des conseils présentés ici s’appliquent, quelle que soit la façon dont la page de contenu est présentée à l’utilisateur final.
 
-## <a name="tab-content-and-style-guidelines"></a>Contenu des onglets et règles de style
+## <a name="tab-content-and-style-guidelines"></a>Recommandations en matière de contenu d’onglet et de style
 
-L’objectif général de votre onglet doit être de fournir un accès à du contenu pertinent et attrayant qui a une valeur pratique et un objectif évident. Cela ne signifie pas que vous devez vous conformer à un style agréable, mais vous devez vous concentrer sur la réduction du courrier non trié en rendant le design de votre onglet propre, intuitif et le contenu immersif. Voir le [contenu et les conversations, en même temps à l’aide des onglets et de l’aide sur](~/tabs/design/tabs.md) le [processus d’approbation des applications Microsoft teams](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+L’objectif global de votre onglet doit être de fournir un accès à un contenu significatif et attrayant qui a une valeur pratique et un objectif évident. Cela ne signifie pas que vous devez éviter un style agréable, mais vous devez vous concentrer sur la réduction de l’encombrement en rendant votre conception d’onglet propre, intuitive de navigation et immersif de contenu. Voir [contenu et conversations, à l’aide d’onglets](~/tabs/design/tabs.md) et de conseils sur le processus d’approbation des applications [Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
 
-## <a name="integrate-your-code-with-teams"></a>Intégration de votre code à teams
+## <a name="integrate-your-code-with-teams"></a>Intégrer votre code à Teams
 
-Pour que votre page s’affiche dans Teams, vous devez inclure le [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) et inclure un appel à `microsoftTeams.initialize()` après le chargement de votre page. Voici comment votre page et le client teams communiquent :
+Pour que votre page s’affiche dans Teams, vous devez inclure le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) et inclure un appel après le chargement `microsoftTeams.initialize()` de votre page. C’est ainsi que votre page et le client Teams communiquent :
 
 ```html
 <!DOCTYPE html>
@@ -50,36 +50,58 @@ Pour que votre page s’affiche dans Teams, vous devez inclure le [Kit de dével
 
 ## <a name="accessing-additional-content"></a>Accès à du contenu supplémentaire
 
-### <a name="using-the-sdk-to-interact-with-teams"></a>Utilisation du kit de développement logiciel (SDK) pour interagir avec teams
+### <a name="using-the-sdk-to-interact-with-teams"></a>Utilisation du SDK pour interagir avec Teams
 
-Le [Kit de développement logiciel (SDK) du client teams](~/tabs/how-to/using-teams-client-sdk.md) fournit de nombreuses fonctions supplémentaires que vous pouvez trouver utiles lors du développement de votre page de contenu.
+Le [SDK JavaScript client Teams](~/tabs/how-to/using-teams-client-sdk.md) fournit de nombreuses fonctions supplémentaires qui peuvent vous être utiles lors du développement de votre page de contenu.
 
 ### <a name="deep-links"></a>Liens profonds
 
-Vous pouvez créer des liens approfondis vers des entités dans Teams. En règle générale, ces éléments sont utilisés pour créer des liens qui naviguent vers le contenu et les informations au sein de votre onglet. Voir [créer des liens détaillés vers du contenu et des fonctionnalités dans Microsoft teams](~/concepts/build-and-test/deep-links.md).
+Vous pouvez créer des liens profonds vers des entités dans Teams. En règle générale, ils sont utilisés pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Voir [Créer des liens profonds vers du contenu et des fonctionnalités dans Microsoft Teams.](~/concepts/build-and-test/deep-links.md)
 
-### <a name="task-modules"></a>Modules de tâches
+### <a name="task-modules"></a>Modules de tâche
 
-Un module de tâches est une expérience de type popup modale que vous pouvez déclencher à partir de votre onglet. En règle générale, dans une page de contenu, vous ne souhaitez pas parcourir votre utilisateur sur plusieurs pages. Au lieu de cela, vous utiliserez des modules de tâches pour présenter des formulaires permettant de collecter des informations supplémentaires, en affichant les détails d’un élément dans une liste ou à tout autre moment pour présenter à l’utilisateur des informations supplémentaires. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou être entièrement créés à l’aide de cartes adaptatives. Pour obtenir des informations complètes, voir [utilisation des modules de tâches dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md) .
+Un module de tâche est une expérience popup modale que vous pouvez déclencher à partir de votre onglet. En règle générale, dans une page de contenu, vous ne souhaitez pas parcourir plusieurs pages pour votre utilisateur. Au lieu de cela, vous allez utiliser des modules de tâche pour présenter des formulaires pour recueillir des informations supplémentaires, afficher les détails d’un élément dans une liste ou toute autre fois que vous devez présenter à l’utilisateur des informations supplémentaires. Les modules de tâche eux-mêmes peuvent être des pages de contenu supplémentaires ou être entièrement créés à l’aide de cartes adaptatives. Pour plus [d’informations, voir Utilisation des modules](~/task-modules-and-cards/task-modules/task-modules-tabs.md) de tâche dans les onglets.
 
 ### <a name="valid-domains"></a>Domaines valides
 
-Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclus dans le `validDomains` tableau dans votre [manifeste](~/concepts/build-and-test/apps-package.md). Pour plus d’informations, consultez la rubrique [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans la référence de schéma de manifeste. Toutefois, gardez à l’esprit que la fonctionnalité principale de votre onglet existe dans teams et non en dehors de teams.
+Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclus dans le `validDomains` tableau dans votre [manifeste.](~/concepts/build-and-test/apps-package.md) Pour plus d’informations, [voir validDomains](~/resources/schema/manifest-schema.md#validdomains) dans la référence du schéma de manifeste. Toutefois, n’oubliez pas que les fonctionnalités de base de votre onglet existent dans Teams et non en dehors de Teams.
+
+## <a name="reorder-static-personal-tabs"></a>Réordesser les onglets personnels statiques
+
+À partir de la version de manifeste 1.7, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. En particulier, un développeur peut déplacer l’onglet de conversation du *bot,* qui est toujours en première position par défaut, n’importe où dans l’en-tête de l’onglet de l’application personnelle. Nous avons déclaré deux mots clés entityId d’onglet réservé, *conversations* et *à propos de*.
+
+Si vous créez un bot avec une *étendue* personnelle, il s’affiche par défaut au premier onglet d’une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, *conversations*. *L’onglet conversation* s’affiche sur le web ou sur le Bureau en fonction de l’endroit où vous ajoutez l’onglet *de conversation* dans le `staticTabs` tableau. 
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
 
 ## <a name="show-a-native-loading-indicator"></a>Afficher un indicateur de chargement natif
 
-À partir [du schéma de manifeste version 1.7](../../../resources/schema/manifest-schema.md), vous pouvez fournir un indicateur de [chargement natif](../../../resources/schema/manifest-schema.md#showloadingindicator) où le contenu de votre site Web est chargé dans Teams, par exemple, page de contenu de l' [onglet](#integrate-your-code-with-teams), page de [configuration](configuration-page.md), [page de suppression](removal-page.md) et [modules de tâches dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+À partir du schéma de manifeste [v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement [natif](../../../resources/schema/manifest-schema.md#showloadingindicator) partout où votre contenu web est chargé dans Teams, par [exemple,](#integrate-your-code-with-teams)page de contenu d’onglet, [page de configuration,](configuration-page.md) [page](removal-page.md) de suppression et modules de tâche dans les [onglets.](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)
 
 > [!NOTE]
 > 1. L’indicateur de chargement natif n’est pas encore pris en charge sur les appareils mobiles.
-> 2. Si vous indiquez  `"showLoadingIndicator : true`  dans votre manifeste d’application, toutes les pages de configuration d’onglet, de contenu et de suppression, ainsi que tous les modules de tâches basés sur iframe doivent suivre le protocole obligatoire, ci-dessous :
+> 2. Si vous indiquez dans le manifeste de votre application, toutes les pages de configuration, de contenu et de suppression d’onglets et tous les modules de tâche iframe doivent respecter le protocole obligatoire  `"showLoadingIndicator : true`  ci-dessous :
 
 
-1. Pour afficher l’indicateur de chargement, ajoutez `"showLoadingIndicator": true` à votre manifeste. 
+1. Pour afficher l’indicateur de chargement, `"showLoadingIndicator": true` ajoutez-le à votre manifeste. 
 2. N’oubliez pas d’appeler `microsoftTeams.initialize();` .
-3. **Facultatif**. Si vous êtes prêt à imprimer à l’écran et si vous souhaitez charger en différé le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Obligatoire**. Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` pour avertir les équipes que votre application a été chargée avec succès. Le cas échéant, teams masque l’indicateur de chargement. Si  `notifySuccess`  n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et un écran d’erreur contenant une option Retry apparaît.
-5. Si votre application ne se charge pas, vous pouvez appeler `microsoftTeams.appInitialization.notifyFailure(reason);` pour informer les équipes qu’une erreur s’est produite. Un écran d’erreur s’affiche ensuite à l’utilisateur :
+3. **Facultatif**. Si vous êtes prêt à imprimer à l’écran et que vous souhaitez charger différée le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Obligatoire**. Enfin, appelez `microsoftTeams.appInitialization.notifySuccess()` Teams pour informer Teams que votre application a été correctement chargée. Teams masquera ensuite l’indicateur de chargement, le cas échéant. Si elle n’est pas appelée dans les 30 secondes, elle est supposée que votre application a été hors délai et qu’un écran d’erreur avec une option de nouvelle tentative  `notifySuccess`  s’affiche.
+5. Si le chargement de votre application échoue, vous pouvez appeler Teams pour lui faire savoir `microsoftTeams.appInitialization.notifyFailure(reason);` qu’une erreur s’est produite. Un écran d’erreur s’affiche ensuite pour l’utilisateur :
 
 ```typescript
 ``
