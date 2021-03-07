@@ -24,12 +24,14 @@
   items:
     - name: Didacticiels
       href: tutorials/code-samples.md
-    - name: Créer une application en utilisant C#
+    - name: Créer une application en utilisant C# ou .NET
       href: tutorials/get-started-dotnet-app-studio.md
     - name: Créer une application en utilisant Node.js
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Créer une application à l'aide du générateur Yeoman
       href: tutorials/get-started-yeoman.md
+    - name: Mettre à niveau Microsoft Teams à l’aide du générateur Yeoman
+      href: tutorials/UpgradeTeamsUsingYeoman.md
     - name: Exemples de code
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Principes fondamentaux de l'application
@@ -76,6 +78,8 @@
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: Intégrer la fonctionnalité de scanneur QR ou code-barres
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+        - name: Intégrer les fonctionnalités d’emplacement
+          href: concepts/device-capabilities/location-capability.md
 - name: Concevoir votre application
   items:
     - name: Vue d’ensemble
@@ -334,7 +338,7 @@
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Activer le consentement spécifique aux ressources
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Activer l’installation proactive du bot et la messagerie proactive
+    - name: Installation proactive d’applications à l’aide de l’API Graph et envoi de messages
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importation de messages de tiers
       href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -408,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Fonctionnalités
           href: resources/dev-preview/developer-preview-features.md
+    - name: Modifications des marges de l’onglet
+      href: resources/removing-tab-margins.md
     - name: "Attribut de cookie SameSite (mise à jour\_2020)"
       href: resources/samesite-cookie-update.md
     - name: Participation à des documents Teams
