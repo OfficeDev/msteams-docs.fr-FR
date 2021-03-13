@@ -1,20 +1,20 @@
 ---
-title: Créer des liens profonds vers du contenu
+title: Créer des liens profonds vers le contenu
 description: Décrit les liens profonds et leur utilisation dans vos applications
 ms.topic: how-to
 keywords: lien profond teams
-ms.openlocfilehash: d6efe7332035320d2114e0e834d1c971ccc7108c
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: ec6357998c5d5aa60d0f512bf35514f8aa76a0ed
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231560"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753510"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Créer des liens profonds vers du contenu et des fonctionnalités dans Microsoft Teams
 
 Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Voici quelques exemples où la création de liens profonds est utile :
 
-* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour informer l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
+* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour avertir l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d’une conversation ou la planification d’une réunion, en pré-remplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Pour afficher une boîte de dialogue qui contient un lien profond vers un élém
 
 Fournissez les champs ci-après :
 
-* `subEntityId`&emsp;Identificateur unique de l’élément dans votre onglet auquel vous êtes en liaison approfondie
+* `subEntityId`&emsp;Identificateur unique de l’élément dans votre onglet avec lequel vous êtes en lien profond
 * `subEntityLabel`&emsp;Étiquette de l’élément à utiliser pour afficher le lien profond
 * `subEntityWebUrl`&emsp;Champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet
 
@@ -122,7 +122,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## <a name="deep-linking-to-a-chat"></a>Liaison profonde à une conversation
 
-Vous pouvez créer des liens profonds vers des conversations privées entre les utilisateurs en spécifiant l’ensemble des participants. Si une conversation n’existe pas avec les participants spécifiés, le lien permet à l’utilisateur d’accéder à une nouvelle conversation vide. Les nouvelles conversations sont créées en état brouillon jusqu’à ce que l’utilisateur envoie le premier message. Dans le cas contraire, vous pouvez spécifier le nom de la conversation si elle n’existe pas déjà, ainsi que le texte à insérer dans la zone de composition de l’utilisateur. Vous pouvez voir cette fonctionnalité comme un raccourci pour l’utilisateur qui fait l’action manuelle de naviguer vers ou créer la conversation, puis de taper le message.
+Vous pouvez créer des liens profonds vers des conversations privées entre les utilisateurs en spécifiant l’ensemble des participants. Si une conversation n’existe pas avec les participants spécifiés, le lien permet à l’utilisateur d’accéder à une nouvelle conversation vide. Les nouvelles conversations sont créées en état brouillon jusqu’à ce que l’utilisateur envoie le premier message. Sinon, vous pouvez spécifier le nom de la conversation si elle n’existe pas déjà, ainsi que le texte à insérer dans la zone de composition de l’utilisateur. Vous pouvez voir cette fonctionnalité comme un raccourci pour l’utilisateur qui fait l’action manuelle de naviguer vers ou créer la conversation, puis de taper le message.
 
 Par exemple, si vous renvoyez un profil utilisateur Office 365 à partir de votre bot en tant que carte, ce lien profond peut permettre à l’utilisateur de discuter facilement avec cette personne.
 
@@ -138,21 +138,9 @@ Les paramètres de requête sont les suivants :
 
 * `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, généralement une adresse de messagerie uniquement.
 * `topicName`: champ facultatif pour le nom complet de la conversation, dans le cas d’une conversation avec 3 utilisateurs ou plus. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
-* `message`: champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est dans un état brouillon.
+* `message`: champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est en état brouillon.
 
 Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme cible d’URL dans le bouton de votre carte ou appuyer sur l’action par le biais du `openUrl` type d’action.
-
-### <a name="generating-a-deep-link-to-a-call"></a>Génération d’un lien profond vers un appel
-
-Utilisez ce format pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de messagerie :
-
-`https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>`
-
-Exemple : `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
-
-Les paramètres de requête sont les suivants :
-
-* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants de l’appel. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, généralement une adresse de messagerie uniquement.
 
 ## <a name="linking-to-the-scheduling-dialog"></a>Liaison à la boîte de dialogue de planification
 
@@ -170,11 +158,12 @@ Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&att
 Les paramètres de requête sont les suivants :
 
 * `attendees`: Liste facultative d’ID d’utilisateurs séparés par des virgules représentant les participants à la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Pour l’instant, le champ ID utilisateur prend uniquement en charge Azure AD UserPrincipalName, généralement une adresse de messagerie.
-* `startTime`: heure de début facultative de l’événement. Il doit être au [format ISO 8601 long,](https://en.wikipedia.org/wiki/ISO_8601)par exemple « 2018-03-12T23:55:25+02:00 ».
-* `endTime`: heure de fin facultative de l’événement, également au format ISO 8601.
+* `startTime`: Heure de début facultative de l’événement. Il doit être au [format ISO 8601 long,](https://en.wikipedia.org/wiki/ISO_8601)par exemple « 2018-03-12T23:55:25+02:00 ».
+* `endTime`: Heure de fin facultative de l’événement, également au format ISO 8601.
 * `subject`: Champ facultatif pour l’objet de la réunion.
 * `content`: champ facultatif pour le champ Détails de la réunion.
 
-Actuellement, la spécification de l’emplacement n’est pas prise en charge. Vous devez spécifier le décalage UTC, c’est-à-dire les fuseaux horaires lors de la génération de vos heures de début et de fin.
+> [!NOTE]
+> Actuellement, la spécification de l’emplacement n’est pas prise en charge. Vous devez spécifier le décalage UTC, c’est-à-dire les fuseaux horaires lors de la génération de vos heures de début et de fin.
 
 Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme cible d’URL dans le bouton de votre carte ou appuyer sur l’action par le biais du `openUrl` type d’action.

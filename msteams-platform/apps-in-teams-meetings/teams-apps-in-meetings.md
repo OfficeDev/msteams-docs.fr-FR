@@ -5,12 +5,12 @@ description: vue d’ensemble des applications dans les réunions Teams en fonct
 ms.topic: overview
 ms.author: lajanuar
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 63c383f1bc7eaa92e2bd4ff378756064ee85ed70
-ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
+ms.openlocfilehash: 51fe2e0ebdaa56197bbebd1e5dbcf90698fb1f92
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "49917596"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753552"
 ---
 # <a name="apps-in-teams-meetings"></a>Applications dans les réunions Teams
 
@@ -18,7 +18,7 @@ Les réunions sont essentielles à la productivité dans Teams. Ils permettent l
 
 L’extensibilité de l’application de réunion Teams se concentre sur trois concepts :
 
-✔ vie **de réunion** — avant, pendant et après la période de réunion.  
+✔ cycle **de vie de la** réunion — avant, pendant et après la période de réunion.  
 ✔ rôle **de participant :** organisateur de réunion, présentateur ou participant.  
 ✔ type **d’utilisateur** : utilisateur Teams dans le client, invité, fédéré ou anonyme.
 
@@ -31,7 +31,8 @@ L’extensibilité de l’application de réunion Teams se concentre sur trois c
 > Comme avec toutes les applications d’onglet, votre application doit suivre le flux d’authentification [sso teams](../tabs/how-to/authentication/auth-aad-sso.md) pour les onglets.
 
 > [!NOTE]
-> Les clients mobiles ne supportent les onglets que dans les surfaces de pré et de post-réunion. Les expériences en réunion (boîte de dialogue et panneau en réunion) sur mobile seront bientôt disponibles
+> * Les clients mobiles ne supportent les onglets que dans les surfaces de pré-réunion et de post-réunion. Les expériences en réunion, telles que la boîte de dialogue de réunion et le panneau sur mobile, seront bientôt disponibles.
+> * Les applications sont uniquement pris en charge dans les réunions privées programmées.
 
 ### <a name="pre-meeting-app-experience"></a>Expérience d’application avant la réunion
 
@@ -51,11 +52,11 @@ L’extensibilité de l’application de réunion Teams se concentre sur trois c
 
 ✔ applications Onglet sont accessibles dans les pages **Détails** des réunions et **Conversations** à l’aide d’un bouton d’icône plus (➕).|
 
-✔ disposition des onglets doit être organisée s’il y a plus de dix sondages ou enquêtes.
+✔ disposition de l’onglet doit être organisée s’il y a plus de dix sondages ou enquêtes.
 
 ### <a name="in-meeting-app-experience"></a>Expérience d’application en réunion
 
-✔ applications de réunion seront hébergées dans la barre supérieure de la fenêtre de conversation et sous la mesure de l’expérience d’onglet de réunion via l’onglet De réunion. Lorsque les utilisateurs ajoutent un onglet à une  réunion via la galerie d’onglets, les applications qui sont pendant les expériences de réunion sont surface.
+✔ applications de réunion seront hébergées dans la barre supérieure de la fenêtre de conversation et sous la mesure de l’expérience d’onglet de réunion via l’onglet De réunion. Lorsque les utilisateurs ajoutent un onglet à une  réunion par le biais de la galerie d’onglets, les applications qui sont pendant les expériences de réunion sont surface.
 
 ✔ utilisateurs autorisés peuvent ajouter des applications pendant la réunion.
 
@@ -92,15 +93,15 @@ L’extensibilité de l’application de réunion Teams se concentre sur trois c
 
 ✔ utilisateurs autorisés peuvent ajouter des applications de la galerie d’onglets à une réunion  via l’onglet **Détails** du formulaire de planification Teams et l’onglet Conversation de réunion dans une réunion existante.
 
-✔ disposition des onglets doit être organisée s’il y a plus de dix sondages ou enquêtes.
+✔ disposition de l’onglet doit être organisée s’il y a plus de dix sondages ou enquêtes.
 
 ### <a name="bots"></a>Bots
 
-Pour l’implémentation du bot, consultez la documentation relative aux [bots dans les réunions Teams.](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings)
+Pour l’implémentation du bot, commencez [par créer un bot,](../build-your-first-app/build-bot.md) puis continuez à créer [des applications pour les réunions Teams.](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference)
 
 ### <a name="messaging-extensions"></a>Extensions de messagerie
 
-Pour l’implémentation de l’extension de messagerie, consultez la documentation relative aux [extensions de messagerie dans la](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings) documentation des réunions Teams.
+Pour l’implémentation de l’extension de messagerie, commencez par créer une [extension](../messaging-extensions/how-to/create-messaging-extension.md) de messagerie, puis continuez avec la création d’applications [pour les réunions Teams.](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference)
 
 ## <a name="participant-roles-and-user-types-in-a-meeting"></a>Rôles des participants et types d’utilisateurs dans une réunion
 
@@ -131,7 +132,7 @@ Vous pouvez accéder à la page  **Options de** réunion comme suit :
 
 1. **Dans le client**. Ces utilisateurs appartiennent à l’organisation et ont des informations d’identification dans Azure Active Directory pour le client. Il s’agit généralement d’employés à plein temps, sur site ou distants.
 1. **Invité**. Un invité est un participant d’une autre organisation qui a été invité à accéder à Teams ou à d’autres ressources dans le client de votre organisation. Les invités sont ajoutés à Active Directory de votre organisation et peuvent avoir presque toutes les mêmes fonctionnalités Teams qu’un membre natif de l’équipe avec un accès total aux conversations, réunions et fichiers de l’équipe. _Voir_ [l’accès invité dans Microsoft Teams](/microsoftteams/guest-access)
-1. **Fédéré/externe**. Un utilisateur fédéré est un utilisateur Teams externe d’une autre organisation qui a été invité à participer à une réunion. Étant donné que ces utilisateurs disposent d’informations d’identification valides avec des partenaires fédérés, ils sont traités comme authentifiés par Teams, mais n’ont pas accès à vos équipes ou à d’autres ressources partagées de votre organisation. Si vous souhaitez que les utilisateurs externes ont accès aux équipes et aux canaux, l’accès invité peut être une meilleure option. _Voir Gérer_ [l’accès externe dans Microsoft Teams](/microsoftteams/manage-external-access)
+1. **Fédéré/externe**. Un utilisateur fédéré est un utilisateur Teams externe d’une autre organisation qui a été invité à participer à une réunion. Étant donné que ces utilisateurs disposent d’informations d’identification valides avec des partenaires fédérés, ils sont traités comme authentifiés par Teams, mais n’ont pas accès à vos équipes ou à d’autres ressources partagées de votre organisation. Si vous souhaitez que les utilisateurs externes accèdent aux équipes et aux canaux, l’accès invité peut être une meilleure option. _Voir Gérer_ [l’accès externe dans Microsoft Teams](/microsoftteams/manage-external-access)
 1. **Anonyme**. Les utilisateurs anonymes n’ont pas d’identité Active Directory et ne sont pas fédérés avec un client. Le participant anonyme est comme un utilisateur externe, mais son identité n’est pas projetée dans la réunion. Les utilisateurs anonymes ne pourront pas accéder aux applications dans une fenêtre de réunion.
 
 ## <a name="next-steps"></a>Étapes suivantes
