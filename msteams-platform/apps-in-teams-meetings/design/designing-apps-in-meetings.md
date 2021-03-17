@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Découvrez comment concevoir des applications dans les réunions Teams et obtenir le Kit d’interface utilisateur Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: c6e76356b698da4e32e279b0842ab2cc35254e99
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886757"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827948"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -40,36 +40,36 @@ Lors d’une réunion, **sélectionnez Ajouter** une :::image type="icon" source
 
 ## <a name="before-a-meeting"></a>Avant une réunion
 
-Avant votre réunion, vous pouvez ajouter du contenu dans l’onglet. L’exemple suivant montre un brouillon de question d’enquête à qui les personnes répondront pendant l’appel.
+Avant votre réunion, vous pouvez ajouter du contenu dans l’onglet. L’exemple suivant montre un brouillon de question d’enquête à répondre pendant l’appel.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="L’exemple montre comment apper le contenu des détails de la réunion avant un appel." border="false":::
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>Anatomie : onglet Réunion (avant et après les réunions)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’un onglet de réunion avant et après une réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un onglet de réunion avant et après une réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |1|**Nom de l’onglet**: étiquette de navigation pour votre onglet.|
-|2 |**Dépassement de tabulation**: ouvre les actions d’onglet, telles que renommer et supprimer.|
+|2|**Dépassement de tabulation**: ouvre les actions d’onglet, telles que renommer et supprimer.|
 |3|**iframe**: affiche le contenu de votre application.|
 
 ### <a name="designing-with-ui-templates"></a>Conception avec des modèles d’interface utilisateur
 
 Utilisez l’un des modèles d’interface utilisateur Teams suivants pour vous aider à concevoir votre onglet de réunion :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 * [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
 * [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
 * [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc.
 * [Navigation gauche :](../../concepts/design/design-teams-app-ui-templates.md#left-nav)le modèle de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation par onglets au minimum.
 
-## <a name="use-an-in-meeting-tab"></a>Utiliser un onglet en réunion
+## <a name="use-an-in-meeting-tab"></a>Utiliser un onglet de réunion
 
 L’onglet de réunion est un canevas qui permet d’accroître la collaboration pendant les réunions. Les participants peuvent voir et interagir avec le contenu de l’application dans un espace dédié en dehors de la phase de réunion par le biais d’affichages partagés ou basés sur des rôles.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
 Les personnes peuvent utiliser l’onglet réunion pour :
 
@@ -86,11 +86,11 @@ Les personnes peuvent utiliser l’onglet réunion pour :
 |Compteur|Description|
 |----------|-----------|
 |1|**Icône de l’application (sélectionnée)**: logo d’application transparent de 16 pixels.|
-|2 |**Nom de l'application**|
+|2|**Nom de l'application**|
 |3|**En-tête**: inclut le nom de votre application.|
 |4 |**Bouton Fermer :** ferme l’onglet. Utilisez toujours l’icône de fermeture supérieure droite au lieu d’une action dans le pied de plan.|
-|5 |**Barre de notification**: les alertes d’erreur s’affichent directement sous l’en-tête et poussent le contenu de l’iFrame vers le bas de 20 pixels.|
-|6 |**iframe**: affiche le contenu de votre application.|
+|5 |**Barre de notification**: les alertes d’erreur s’affichent directement sous l’en-tête et poussent le contenu de l’iFrame vers le bas de 20 pixels.|
+|6 |**iframe**: affiche le contenu de votre application.|
 
 ### <a name="spacing"></a>Espacement
 
@@ -100,13 +100,13 @@ Optimisez votre onglet de réunion pour qu’il s’adapte de bord à bord dans 
 
 ### <a name="scrolling"></a>Défilement
 
-Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voir le contenu vers qui vous avez fait défiler (rien au-dessus ou au-dessous). La barre de défilement fait partie du contenu de l’iframe.
+Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voir le contenu que vous avez fait défiler vers (rien au-dessus ou au-dessous). La barre de défilement fait partie du contenu de l’iframe.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="L’exemple montre comment défile l’onglet dans la réunion." border="false":::
 
 ### <a name="navigation"></a>Navigation
 
-Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vous recommandons d’autoriser les utilisateurs à accéder à une couche secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
+Pour les scénarios avec des couches de navigation ou un contenu épais, nous vous recommandons de permettre aux utilisateurs d’accéder à une couche secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Exemple de navigation en réunion." border="false":::
 
@@ -114,7 +114,7 @@ Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vou
 
 Les boîtes de dialogue de réunion s’affichent lors de la phase de réunion Teams. Ils nécessitent l’attention, la confirmation ou l’interaction d’un utilisateur, mais sont discrets et n’interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés vers les tâches.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
 Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel que l’organisateur de la réunion) qui souhaite peut-être que les participants :
 
@@ -127,35 +127,38 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie : boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |1|**En-tête :** inclut l’icône de l’application, le nom, la chaîne d’action et l’icône fermer.|
-|2 |**iframe**: affiche le contenu de votre application.|
+|2|**iframe**: affiche le contenu de votre application.|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie : en-tête de boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
 
 Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la variante avec l’avatar pour renforcer le fait que la boîte de dialogue vient d’une personne.
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Avatar**: personne qui initie la boîte de dialogue en réunion.|
-|2 |**Icône de l’application**|
+|1|**Avatar**: personne qui lance la boîte de dialogue en réunion.|
+|2|**Icône de l’application**|
 |3|**Nom de l'application**|
 |4 |**Bouton Fermer :** ferme la boîte de dialogue.|
-|5 |**Chaîne d’action**: décrit généralement l’auteur de la boîte de dialogue.|
+|5 |**Chaîne d’action**: décrit généralement qui a initié la boîte de dialogue.|
 
 ### <a name="responsive-behavior"></a>Comportement réactif
 
 Les boîtes de dialogue de réunion peuvent varier en taille pour tenir compte de différents scénarios. Veillez à maintenir la taille des remplissages et des composants.
 
-* **Width**: la largeur de l’iframe est une valeur absolue dans la plage que vous spécifiez.
-* **Height**: la hauteur de la boîte de dialogue est déterminée par le contenu de l’iframe. Le défilement vertical prend le relais pour le contenu qui dépasse la hauteur maximale.
+* **Width**: la largeur de l’iframe de la boîte de dialogue est une valeur absolue dans la plage que vous spécifiez.
+* **Height**: la hauteur de l’iframe de la boîte de dialogue est une valeur absolue dans la plage que vous spécifiez.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue de réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
+> [!NOTE]
+> Les valeurs que vous définissez pour la largeur et la hauteur sont utilisées dans la boîte de dialogue `externalResourceURL` en réunion.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue en réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
 
 ## <a name="after-a-meeting"></a>Après une réunion
 
@@ -163,7 +166,7 @@ Vous pouvez revenir à une réunion une fois qu’elle s’est terminée et affi
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="L’exemple montre un onglet après la réunion." border="false":::
 
-## <a name="best-practices"></a>Meilleures pratiques
+## <a name="best-practices"></a>Les bonnes pratiques
 
 ### <a name="interactions"></a>Interactions
 
@@ -194,7 +197,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 #### <a name="do-use-a-single-column-dialog-layout"></a>À faire : utiliser une disposition de boîte de dialogue à une seule colonne
 
-Étant donné que les boîtes de dialogue sont au centre de la phase de réunion, l’achèvement de la tâche doit être rapide et simple pour éviter toute frustration de l’utilisateur.
+Étant donné que les boîtes de dialogue sont au centre de la phase de réunion, l’achèvement des tâches doit être rapide et simple pour éviter toute frustration de l’utilisateur.
 
    :::column-end:::
    :::column span="":::
@@ -202,7 +205,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 #### <a name="dont-clutter-the-space"></a>À ne pas faire : encombrer l’espace
 
-Le contenu épais ou trop structuré peut être gênant et gênant, en particulier au cours d’une réunion.
+Le contenu épais ou trop structuré peut être gênant et gênant, en particulier lors d’une réunion.
 
    :::column-end:::
 :::row-end:::
@@ -280,7 +283,7 @@ Si votre application comprend plusieurs tâches, nous vous recommandons vivement
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Exemple de scénarios complexes dans une boîte de dialogue de réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Exemple de scénarios complexes dans une boîte de dialogue en réunion." border="false":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>À ne pas faire : rendre les boîtes de dialogue de réunion complexes
 
@@ -326,7 +329,7 @@ Si vous avez plusieurs couches de navigation dans un onglet de réunion, les uti
 
 #### <a name="dont-include-another-dismiss-button"></a>À ne pas faire : inclure un autre bouton d’arrêt
 
-La fourniture d’une option permettant de fermer le contenu de l’onglet de réunion peut entraîner des problèmes, car l’en-tête est déjà sur un bouton pour faire disparaître l’onglet de la réunion lui-même.
+La fourniture d’une option pour fermer le contenu de l’onglet en réunion peut entraîner des problèmes, car l’en-tête ne doit pas être fermé par un bouton.
 
    :::column-end:::
 :::row-end:::
@@ -339,7 +342,7 @@ La fourniture d’une option permettant de fermer le contenu de l’onglet de r�
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Attention : évitez les modales dans l’onglet de la réunion
 
-Les modales (également appelées modules de tâche) dans l’onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
+Les modaux (également appelés modules de tâche) dans l’onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
 
    :::column-end:::
 :::row-end:::
@@ -349,4 +352,4 @@ Les modales (également appelées modules de tâche) dans l’onglet déjà étr
 Si vous envisagez de publier votre application dans AppSource, vous devez comprendre les problèmes de conception qui provoquent généralement l’échec des applications lors de la soumission.
 
 > [!div class="nextstepaction"]
-> [Vérifier les recommandations de validation de conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Vérifier les instructions de validation de conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

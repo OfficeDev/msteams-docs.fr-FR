@@ -4,18 +4,18 @@ author: clearab
 description: Décrit comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de messagerie
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1fb2f2dc51d7de1208a5a913abf2d38cb80c401a
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: fecc0ace5f767da3764529a9e8a590b37e547bb0
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231644"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827941"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’soumission du module de tâche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois qu’un utilisateur a soumis le module de tâche, votre service web reçoit un message d’appel avec l’ID de commande et les valeurs `composeExtension/submitAction` de paramètre. Votre application dispose de cinq secondes pour répondre à l’appel, sinon l’utilisateur reçoit un *message* d’erreur « Impossible d’atteindre l’application » et toute réponse à l’appel est ignorée par le client Teams.
+Une fois qu’un utilisateur a soumis le module de tâche, votre service web reçoit un message d’appel avec l’ID de commande et les valeurs `composeExtension/submitAction` de paramètre. Votre application dispose de cinq secondes pour répondre à l’appel, sinon l’utilisateur reçoit un **message** d’erreur impossible d’atteindre l’application et toute réponse à l’appel est ignorée par le client Teams.
 
 Vous avez les options suivantes pour répondre :
 
@@ -34,6 +34,10 @@ Pour l’authentification ou la configuration, une fois que l’utilisateur a te
 |Un autre module de tâche | x | x | x |
 |Bot avec carte adaptative | x |  | x |
 | Aucune réponse | x | x | x |
+
+> [!NOTE]
+> * Lorsque vous sélectionnez **Action.Submit** par le biais de cartes ME, il envoie l’activité d’appel avec le nom **composeExtension**, où la valeur est égale à la charge utile habituelle.
+> * Lorsque vous sélectionnez **Action.Submit** par le biais d’une conversation, vous recevez une activité de message avec le nom **onCardButtonClicked**, où la valeur est égale à la charge utile habituelle.
 
 ## <a name="the-submitaction-invoke-event"></a>Événement d’appel submitAction
 

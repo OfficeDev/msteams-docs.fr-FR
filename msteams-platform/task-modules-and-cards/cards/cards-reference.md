@@ -3,27 +3,28 @@ title: Référence des cartes
 description: Décrit toutes les cartes et actions de carte disponibles pour les bots dans Teams
 keywords: Référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 839430baa5ce5e8950a21a1472036c6fd96f4edf
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 5cb289738f379dedf53f3a96a7dcff61b908e901
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911896"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827934"
 ---
 # <a name="cards-reference"></a>Référence de cartes
 
 Les cartes répertoriées dans cette section sont pris en charge dans les bots pour Microsoft Teams. Elles sont basées sur des cartes définies par Bot Framework, mais Teams ne prend pas en charge toutes les cartes Bot Framework et en a ajouté certaines. Les différences sont appelées dans les références de ce document.
 
-## <a name="card-examples"></a>Exemples de cartes
+## <a name="card-examples"></a>Exemples de carte
 
 Vous trouverez des informations supplémentaires sur l’utilisation des cartes dans la documentation du SDK Bot Builder (v3). Des exemples de code sont également disponibles dans le référentiel Microsoft/BotBuilder-Samples sur GitHub.
 
 * .NET
-  * [Ajouter des cartes en tant que pièces jointes à des messages](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [Exemple de code de cartes (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/CSharp/cards-RichCards)
+  * [Ajouter des cartes en tant que pièces jointes à des messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+  * [Exemple de code de cartes (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+
 * Node.js
-  * [Ajouter des cartes en tant que pièces jointes à des messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [Exemple de code de cartes (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
+  * [Ajouter des cartes en tant que pièces jointes à des messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+  * [Exemple de code de cartes (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## <a name="types-of-cards"></a>Types de cartes
 
@@ -53,7 +54,7 @@ Les images doivent être au maximum 1024×1024, au format PNG, JPEG ou GIF, et l
 | Propriété | Type  | Description |
 | --- | --- | --- |
 | url | URL | URL HTTPS vers l’image |
-| alt | Chaîne | Description accessible de l’image |
+| alt | String | Description accessible de l’image |
 
 ### <a name="buttons"></a>Boutons
 
@@ -218,8 +219,10 @@ Une carte adaptative est une carte personnalisable qui peut contenir n’importe
 
 #### <a name="additional-information-on-adaptive-cards"></a>Informations supplémentaires sur les cartes adaptatives
 
-* [Vue d’ensemble des cartes adaptatives](/adaptive-cards/)
-* [Actions de carte adaptative dans Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+Référence Bot Framework :
+
+* [Nœud cartes adaptatives](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Carte adaptative C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## <a name="hero-card"></a>Carte Hero
 
@@ -237,7 +240,7 @@ Carte qui contient généralement une seule grande image, un ou plusieurs bouton
 | --- | --- | --- |
 | title | Texte enrichi  | Titre de la carte. Maximum 2 lignes. |
 | subtitle | Texte enrichi  | Sous-titre de la carte. Maximum 2 lignes.|
-| text | Texte enrichi  | Le texte apparaît juste en dessous du sous-titre . voir [Mise en forme de carte pour](~/task-modules-and-cards/cards/cards-format.md) les options de mise en forme. |
+| text | Texte enrichi  | Le texte apparaît sous le sous-titre . voir [Mise en forme de carte pour](~/task-modules-and-cards/cards/cards-format.md) les options de mise en forme. |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 16:9. |
 | buttons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. Maximum 6. |
 | tap | Objet Action | Cette action est activée lorsque l’utilisateur tape sur la carte elle-même. |
@@ -279,8 +282,8 @@ Carte qui contient généralement une seule grande image, un ou plusieurs bouton
 
 Référence Bot Framework :
 
-* [Nœud de carte Hero](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Carte Hero C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Nœud de carte Hero](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Carte Hero C #](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>Carte de liste
 
@@ -370,7 +373,7 @@ La carte connecteur Office 365 est prise en charge dans Teams, et non dans Bot F
 | --- | --- | --- |
 | title | Texte enrichi  | Titre de la carte. Maximum 2 lignes. |
 | résumé | Texte enrichi  | Résumé de la carte. Maximum 2 lignes. |
-| text | Texte enrichi  | Le texte apparaît juste en dessous du sous-titre . voir [Mise en forme de carte pour](~/task-modules-and-cards/cards/cards-format.md) les options de mise en forme. |
+| text | Texte enrichi  | Le texte apparaît sous le sous-titre . voir [Mise en forme de carte pour](~/task-modules-and-cards/cards/cards-format.md) les options de mise en forme. |
 | themeColor | Chaîne HEX | Couleur qui remplace l’accentColor fourni à partir du manifeste de l’application. |
 
 ### <a name="notes-on-the-office-365-connector-card"></a>Remarques sur la carte de connecteur Office 365
@@ -534,14 +537,14 @@ Teams prend en charge la carte de réception. Il s’agit d’une carte qui perm
 
 Référence Bot Framework :
 
-* [Nœud de carte de réception](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Carte de réception C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Nœud de carte de réception](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Carte de réception C #](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="signin-card"></a>Carte de signature
 
 La carte de signature permet à un bot de demander à un utilisateur de se connecter. Pris en charge dans Teams sous une forme légèrement différente de celle de Bot Framework. La carte de signin dans Teams est similaire à la carte de signin dans Bot Framework, sauf que la carte de signin dans Teams ne prend en charge que deux actions : `signin` et `openUrl` .
 
-*L’action de signin* peut être utilisée à partir de n’importe quelle carte dans Teams, et pas seulement de la carte de signature. Pour plus d’informations sur l’authentification, voir [flux d’authentification Microsoft Teams pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
+**L’action de signin** peut être utilisée à partir de n’importe quelle carte dans Teams, et pas seulement de la carte de signature. Pour plus d’informations sur l’authentification, voir [flux d’authentification Microsoft Teams pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
 
 ### <a name="support-for-signin-cards"></a>Prise en charge des cartes de signature
 
@@ -554,7 +557,7 @@ La carte de signature permet à un bot de demander à un utilisateur de se conne
 Référence Bot Framework :
 
 * [Nœud de carte de signature](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [Carte de signature C #](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Carte de signature C #](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>Carte miniature
 
@@ -574,7 +577,7 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 | --- | --- | --- |
 | title | Texte enrichi  | Titre de la carte. Maximum 2 lignes.|
 | subtitle | Texte enrichi  | Sous-titre de la carte. Maximum 2 lignes.|
-| text | Texte enrichi  | Le texte apparaît juste en dessous du sous-titre . voir [Mise en forme de carte pour](~/task-modules-and-cards/cards/cards-format.md) les options de mise en forme. |
+| text | Texte enrichi  | Le texte apparaît sous le sous-titre . voir [Mise en forme de carte pour](~/task-modules-and-cards/cards/cards-format.md) les options de mise en forme. |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 1:1 (carré). |
 | buttons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. Maximum 6. |
 | tap | Objet Action | Cette action est activée lorsque l’utilisateur tape sur la carte elle-même. |
@@ -626,8 +629,8 @@ Carte qui contient généralement une seule image miniature, un ou plusieurs bou
 
 Référence Bot Framework :
 
-* [Nœud de carte miniature](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Carte miniature C #](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Nœud de carte miniature](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Carte miniature C #](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="card-collections"></a>Collections de cartes
 
@@ -637,7 +640,7 @@ Collections de cartes `builder.AttachmentLayout.carousel` : et `builder.Attachme
 
 ## <a name="carousel-collection"></a>Collection de carrousels
 
-La [disposition de carrousel](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) présente un carrousel de cartes, éventuellement avec des boutons d’action associés.
+La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) affiche un carrousel de cartes, éventuellement avec des boutons d’action associés.
 
 ### <a name="support-for-carousel-collections"></a>Prise en charge des collections de carrousels
 
@@ -829,7 +832,7 @@ Les propriétés d’une carte Carrousel sont identiques à celles des cartes He
 
 ### <a name="support-for-list-collections"></a>Prise en charge des collections de listes
 
-La disposition de liste affiche une liste empilée verticalement de cartes, éventuellement avec des boutons d’action associés.
+La disposition de liste affiche une liste de cartes empilées verticalement, éventuellement avec des boutons d’action associés.
 
 | Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |

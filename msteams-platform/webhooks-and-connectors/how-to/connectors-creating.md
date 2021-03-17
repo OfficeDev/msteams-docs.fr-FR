@@ -4,12 +4,12 @@ description: Décrit la mise en place des connecteurs Office 365 dans Microsoft 
 keywords: 'équipes connecteur O365 '
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 8f9fcc40ca0634ead0a6c5d7d0653ad4ab993860
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: d0fe380cd168b8dcbddc5af0de96160e0bc259a9
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449254"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827920"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création de connecteurs Office 365 pour Microsoft Teams
 
@@ -19,10 +19,10 @@ ms.locfileid: "50449254"
 
 Vous pouvez distribuer votre connecteur inscrit dans le cadre de votre package d’application Teams. Qu’il s’agit d’une solution autonome ou de l’une [](~/concepts/build-and-test/apps-package.md) des [](~/concepts/deploy-and-publish/apps-publish.md) nombreuses fonctionnalités que votre expérience active dans Teams, vous pouvez packager et publier votre connecteur dans le cadre de votre soumission AppSource, ou vous pouvez le fournir aux utilisateurs directement pour le chargement dans Teams. [](~/concepts/extensibility-points.md)
 
-Pour distribuer votre connecteur, vous devez vous inscrire à l’aide du tableau de bord du [développeur de connecteurs.](https://outlook.office.com/connectors/home/login/#/publish) Par défaut, une fois qu’un connecteur est inscrit, il est supposé que votre connecteur fonctionne dans tous les produits Office 365 qui les prend en charge, y compris Outlook et Teams. Si ce _n’est_ pas le cas et que vous devez créer un connecteur qui fonctionne uniquement dans Microsoft Teams, contactez-nous directement auprès des [soumissions d’applications Microsoft Teams.](mailto:teamsubm@microsoft.com)
+Pour distribuer votre connecteur, vous devez vous inscrire à l’aide du tableau de bord du [développeur de connecteurs.](https://outlook.office.com/connectors/home/login/#/publish) Par défaut, une fois qu’un connecteur est inscrit, il est supposé que votre connecteur fonctionne dans tous les produits Office 365 qui les prend en charge, y compris Outlook et Teams. Si ce _n’est_ pas le cas et que vous devez créer un connecteur qui fonctionne uniquement dans Microsoft Teams, contactez-nous directement à l’aide des [soumissions d’applications Microsoft Teams.](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
-> Une fois que **vous avez choisi Enregistrer** dans le tableau de bord du développeur de connecteurs, votre connecteur est enregistré. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de la publication de votre application [Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource et simplement la distribuer directement à votre organisation uniquement, vous pouvez le faire en publiant dans [votre organisation.](#publish-connectors-for-your-organization) Si vous souhaitez uniquement publier dans votre organisation, aucune action supplémentaire n’est nécessaire sur le tableau de bord du connecteur.
+> Une fois que **vous avez choisi Enregistrer** dans le tableau de bord du développeur de connecteurs, votre connecteur est enregistré. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions dans Publier votre application [Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource et simplement la distribuer directement à votre organisation uniquement, vous pouvez le faire en publiant dans [votre organisation.](#publish-connectors-for-your-organization) Si vous souhaitez uniquement publier dans votre organisation, aucune action supplémentaire n’est nécessaire sur le tableau de bord du connecteur.
 
 ### <a name="integrating-the-configuration-experience"></a>Intégration de l’expérience de configuration
 
@@ -40,7 +40,7 @@ Vous pouvez réutiliser votre expérience de configuration web existante ou cré
 2. Appelez `microsoftTeams.settings.setValidityState(true)` lorsque vous souhaitez activer le bouton Enregistrer. Vous devez le faire en réponse à une entrée utilisateur valide, telle qu’une sélection ou une mise à jour de champ.
 3. Inscrivez un `microsoftTeams.settings.registerOnSaveHandler()` handler d’événements, qui est appelé lorsque l’utilisateur clique sur Enregistrer.
 4. Appelez `microsoftTeams.settings.setSettings()` pour enregistrer les paramètres du connecteur. Les informations enregistrées ici sont également affichées dans la boîte de dialogue de configuration si l’utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
-5. Appelez `microsoftTeams.settings.getSettings()` pour récupérer les propriétés de webhook, y compris l’URL proprement dite. Vous devez l’appeler en plus de l’événement d’enregistrer, vous devez également l’appeler lorsque votre page est chargée pour la première fois dans le cas d’une nouvelle configuration.
+5. Appelez `microsoftTeams.settings.getSettings()` pour récupérer les propriétés du webhook, y compris l’URL proprement dite. Vous devez l’appeler en plus de l’événement d’enregistrer, vous devez également l’appeler lorsque votre page est chargée pour la première fois dans le cas d’une nouvelle configuration.
 6. (Facultatif) Inscrivez un `microsoftTeams.settings.registerOnRemoveHandler()` handler d’événements, qui est appelé lorsque l’utilisateur supprime votre connecteur. Cet événement permet à votre service d’effectuer des actions de nettoyage.
 
 Voici un exemple de code HTML pour créer une page de configuration de connecteur sans CSS :
@@ -94,7 +94,6 @@ Voici un exemple de code HTML pour créer une page de configuration de connecteu
         });
 
         microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
-            var removeCalled = true;
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
@@ -108,7 +107,7 @@ Voici un exemple de code HTML pour créer une page de configuration de connecteu
 
 | Paramètre   | Détails |
 |-------------|---------|
-| `entityId`       | ID d’entité, tel que définie par votre code lors de `setSettings()` l’appel. |
+| `entityId`       | L’ID d’entité, tel que définie par votre code lors de `setSettings()` l’appel. |
 | `configName`  | Nom de la configuration, tel que définie par votre code lors de `setSettings()` l’appel. |
 | `contentUrl` | URL de la page de configuration, définie par votre code lors de l’appel `setSettings()` |
 | `webhookUrl` | URL de webhook créée pour ce connecteur. Persistez l’URL de webhook et utilisez-la pour post JSON structuré pour envoyer des cartes au canal. L’élément `webhookUrl` est renvoyé uniquement lorsque l’application effectue un renvoi. |
@@ -128,7 +127,7 @@ Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier u
 - `configName` est un nom convivial que votre code de configuration peut récupérer
 - `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour faciliter la tâche de modification de votre code.
 
-En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code ci-dessus est chargé, votre code doit appeler pour prére remplir les paramètres ou formulaires de votre `contentUrl` interface utilisateur de `getSettings()` configuration.
+En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque les paramètres ci-dessus sont chargés, votre code doit appeler pour prére remplir les paramètres ou `contentUrl` `getSettings()` formulaires de votre interface utilisateur de configuration.
 
 #### <a name="handling-removals"></a>Gestion des suppressions
 
@@ -206,7 +205,7 @@ Une fois que vous avez chargé votre package d’application, pour configurer et
 
 1. Sélectionnez l’icône des applications dans la barre de navigation verticale à l’extrême gauche.
 1. Dans la **fenêtre Applications,** **sélectionnez Connecteurs.**
-1. Sélectionnez le connecteur que vous souhaitez ajouter et une fenêtre de boîte de dialogue s’affiche.
+1. Sélectionnez le connecteur à ajouter et une fenêtre de boîte de dialogue s’affiche.
 1. Sélectionnez **Ajouter à une barre d’équipe.**
 1. Dans la fenêtre de boîte de dialogue suivante, tapez un nom d’équipe ou de canal.
 1. Sélectionnez **la barre Configurer un connecteur** dans le coin inférieur droit de la fenêtre de boîte de dialogue.
