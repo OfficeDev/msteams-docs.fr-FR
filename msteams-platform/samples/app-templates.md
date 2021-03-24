@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Démonstration des exemples de modèles Microsoft Teams
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 21721848ba7893380ac217b5f47ce6a6e669e869
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: fffacb567f4b74f282020d61aea07e142256c84a
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231637"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034734"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft Teams
 
@@ -30,7 +30,7 @@ Tous les modèles d’application sont fournis sous les termes du contrat [de li
 
 ## <a name="adoption-bot-9734"></a>Bot d’adoption &#9734;
 
-Le bot d’adoption est un bot de conversation de prise en charge utilisateur créé avec Power Virtual Agent for Teams (PVA). Il peut être considéré comme la version PVA de FAQPlus. Le bot d’adoption répond à plus de 100 questions courantes sur Microsoft 365 et Teams. Vous pouvez modifier les rubriques incluses, ajouter vos propres rubriques et les faq existantes. Si les utilisateurs ont besoin d’aide supplémentaire, le bot d’adoption peut les connecter à des experts ou même être étendus pour ouvrir des tickets de service avec des connecteurs de flux premium.
+Le bot d’adoption est un bot de conversation de prise en charge utilisateur créé avec Power Virtual Agent for Teams (PVA). Il peut être considéré comme la version PVA de FAQPlus. Le bot d’adoption répond à plus de 100 questions courantes sur Microsoft 365 et Teams. Vous pouvez modifier les rubriques existantes, ajouter vos propres rubriques et les faq existantes. Si les utilisateurs ont besoin d’aide supplémentaire, le bot d’adoption peut les connecter à des experts ou même être étendus pour ouvrir des tickets de service avec des connecteurs de flux premium. Ce bot peut être installé sur son propre site ou intégré à une application personnalisée telle que le [Hub d’adoption.](https://github.com/akporzondek/adoption_hub)
 
 [L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
@@ -188,7 +188,7 @@ Cette application permet également de partager facilement des images/GIF/autoco
 
 ![Application Autocollants](../assets/images/stickers.png)
 
-## <a name="employee-ideas-9734"></a>Idées d'&#9734;
+## <a name="employee-ideas"></a>Idées d’employés
 
 L’application Idées d’employés est la version PowerApps du modèle d’application Idées intéressantes basé sur Azure. L’application permet aux utilisateurs de Teams de configurer et de configurer une campagne d’idées. Une campagne d’idées est une catégorie de regroupement d’idées autour de thèmes courants.
 
@@ -402,7 +402,7 @@ L’application permet aux employés de première ligne d’inspecter un bien ou
  ![Vue d’ensemble de l’inspection](../assets/images/inspection-app.png)  
 
 
-## <a name="issue-reporting-9734"></a>Issue Reporting &#9734;
+## <a name="issue-reporting"></a>Rapports de problèmes
 
 L’application Rapports de problèmes permet aux employés et aux responsables de lever et de gérer les problèmes. Il se compose de deux applications, Issue reporting app for reporting issues et Manage Issues app for managing issues.
 
@@ -468,7 +468,7 @@ Réponses rapides est une application Microsoft Teams qui fournit une solution r
 
 ![Exemple d’affichage des réponses](../assets/images/quick-responses.png)
 
-## <a name="rapid-assist-9734"></a>Aide rapide &#9734;
+## <a name="rapid-assist"></a>Assistance rapide
 
 Quick Assist est une application basée sur microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui permet aux associés orientés client de se connecter rapidement aux experts pour obtenir des réponses rapides, rechercher des informations, suivre des demandes ouvertes et permettre aux experts de recevoir des notifications pour prendre rapidement un appel pour répondre aux questions. L’application conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview) et [Power Automate](/power-automate/getting-started), s’intègre en profondeur à Microsoft Teams pour permettre aux organisations de connecter facilement les travailleurs de l’entreprise aux liaisons d’entreprise pour résoudre les requêtes des clients et offrir une expérience client excellente. 
 
@@ -600,9 +600,18 @@ L’enquête est une application [d’extension](../messaging-extensions/what-ar
 :::column-end:::
 :::row-end:::
 
-## <a name="virtual-rounding-9734"></a>Rounding virtuel &#9734;
+## <a name="time-tally-9734"></a>Time Tally &#9734;
 
-Les fournisseurs d’urgence et d’hôpital font des dizaines et souvent des centaines de « séries » par jour. Ces vérifications rapides sur les patients sont destinées à fournir une vérification de l’état du patient et à s’assurer que ses préoccupations sont traitées. Bien que l’arrondi soit une pratique essentielle pour s’assurer que les patients sont surveillés par plusieurs types de fournisseurs, ils représentent un drainage considérable de l’PPE, car pour chaque visite, à partir de chaque fournisseur, un nouveau masque et un nouvel ensemble de gants doivent être utilisés. Grâce à ces modèles d’application, les travailleurs médicaux peuvent facilement mener des séries de cycles virtuellement, par le biais d’une réunion Microsoft Teams entre le fournisseur et le patient.
+Un projet peut inclure plusieurs tâches et divers projets peuvent être affectés à des employés. Les responsables doivent comprendre l’avancement du projet tout au long du temps passé par les employés sur ces tâches. Cette activité peut être fastidieuse, car les employés doivent remplir les feuilles de temps. L’application Time Tally permet aux employés de remplir rapidement leurs feuilles de temps, à l’aide de l’appareil mobile, et les responsables n’ont pas à suivre les employés sur l’entrée de feuille de temps. Les responsables peuvent afficher l’utilisation du projet en fonction des ressources, et ils peuvent approuver ou rejeter les entrées. Les notifications de rappel sont envoyées pour garantir la conformité de la feuille de temps. En outre, les données historiques et les utilisations sont disponibles pour l’analyse.
+
+[L’obtenir sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-timetally)
+
+![Time Tally](../assets/images/11zon_gif.gif)
+
+
+## <a name="virtual-rounding"></a>Arrondi virtuel
+
+Les fournisseurs d’urgence et d’hôpital font des dizaines et souvent des centaines **d’appels** par jour. Ces vérifications rapides sur les patients sont destinées à fournir une vérification de l’état du patient et à s’assurer que ses préoccupations sont traitées. Bien que l’arrondi soit une pratique essentielle pour s’assurer que les patients sont surveillés par plusieurs types de fournisseurs, ils représentent un drainage considérable de l’PPE, car pour chaque visite, à partir de chaque fournisseur, un nouveau masque et un nouvel ensemble de gants doivent être utilisés. Grâce à ces modèles d’application, les travailleurs médicaux peuvent facilement mener des séries de cycles virtuellement, par le biais d’une réunion Microsoft Teams entre le fournisseur et le patient.
 
 La solution d’arrondi virtuel est également référencé dans le billet de [blog](https://aka.ms/teamsvirtualrounding)Microsoft Health and Life Sciences .
 

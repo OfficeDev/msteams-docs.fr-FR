@@ -3,18 +3,18 @@ title: Configurer les fournisseurs d’identité OAuth 2.0
 description: Décrit comment configurer des fournisseurs d’identité axés sur Azure AD
 ms.topic: how-to
 keywords: Fournisseur d’identité oauth AAD d’authentification teams
-ms.openlocfilehash: b5ffd6c4c1edd2c4315ea1e31474a626de53aba1
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 84510202289333910cdb23d179c1279d8051d257
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014466"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034669"
 ---
 # <a name="configure-identity-providers"></a>Configurer les fournisseurs d’identité
 
 ## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Configuration d’une application pour utiliser Azure Active Directory comme fournisseur d’identité
 
-Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; les applications doivent être inscrites à l’avance. Pour ce faire avec Azure AD, suivez les étapes suivantes :
+Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; doivent être inscrites à l’avance. Pour ce faire avec Azure AD, suivez les étapes suivantes :
 
 1. Ouvrez le [portail d’inscription des applications.](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
@@ -28,6 +28,6 @@ Remplacez `<hostname>` par votre hôte réel. Il peut s’agit d’un site d’h
 
 ## <a name="other-authentication-providers"></a>Autres fournisseurs d’authentification
 
-* **LinkedIn** Suivez les instructions de [configuration de votre application LinkedIn](https://developer.linkedin.com/docs/oauth2)
+* **LinkedIn** Suivez les instructions de [configuration de votre application LinkedIn](/linkedin/talent/apply-with-linkedin)
 
 * **Google** Obtenir les informations d’identification du client OAuth 2.0 à partir de la [console d’API Google](https://console.developers.google.com/)

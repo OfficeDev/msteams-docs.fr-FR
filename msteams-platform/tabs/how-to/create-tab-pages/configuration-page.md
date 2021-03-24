@@ -5,20 +5,20 @@ description: Comment créer une page de configuration
 keywords: Canal de groupe onglets teams configurable
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2544454fd06348fa41269f3a8fd57cc71a07d140
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: b6da8437b6988f863288d77aedc1acb786c12d4b
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886736"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034677"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
-Une page de configuration est un type spécial de [page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
+Une page de configuration est un type spécial [de page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
 
 * Onglet de conversation de canal ou de groupe : recueillez des informations auprès des utilisateurs et définissez `contentUrl` la page de contenu à afficher.
 * Une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md)
-* Connecteur [Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* Un [connecteur Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuration d’un onglet de conversation de canal ou de groupe
 
@@ -79,13 +79,13 @@ L’application doit référencer le [SDK client JavaScript Microsoft Teams](/ja
 ...
 ```
 
-Choisissez le **bouton Sélectionner gris** ou **Rouge** dans la page de configuration pour afficher le contenu de l’onglet avec une icône grise ou rouge. Le choix du bouton relatif se déclenche ou `saveGray()` , et appelle ce qui suit `saveRed()` :
+Choisissez le **bouton Sélectionner gris** ou **Rouge** dans la page de configuration pour afficher le contenu de l’onglet avec une icône grise ou rouge. Le choix du bouton relatif se déclenche `saveGray()` `saveRed()` soit, soit, et appelle les valeurs suivantes :
 
-1. La `settings.setValidityState(true)` valeur est true.
+1. La `settings.setValidityState(true)` valeur true est définie.
 1. Le `microsoftTeams.settings.registerOnSaveHandler()` handler d’événements est déclenché.
 1. Le **bouton** Enregistrer sur la page de configuration de l’application, téléchargé dans Teams, est activé.
 
-Le code de la page de configuration informe Teams que les exigences de configuration sont satisfaites et que l’installation peut continuer. Lorsque l’utilisateur sélectionne **Enregistrer,** les paramètres `settings.setSettings()` sont définis, comme défini par l’interface. `Settings` Pour plus d’informations, voir [l’interface paramètres.](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true) Dans la dernière étape, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+Le code de la page de configuration informe Teams que les exigences de configuration sont satisfaites et que l’installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer,** les paramètres `settings.setSettings()` sont définis, comme défini par l’interface. `Settings` Pour plus d’informations, voir [l’interface paramètres.](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true) Dans la dernière étape, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
 >[!NOTE]
 >
@@ -162,20 +162,20 @@ Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont ré
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
 
-Les options de suppression prise en charge améliorent davantage l’expérience utilisateur. Définissez la propriété de votre manifeste sur , qui permet aux utilisateurs de modifier, reconfigurer ou renommer un onglet de groupe `canUpdateConfiguration` `true` ou de canal. Indiquez également ce qu’il advient du contenu lorsqu’un onglet est supprimé, en incluant une page d’options de suppression dans l’application et en fixant une valeur pour la propriété `removeUrl` dans la  `setSettings()` configuration. Pour plus d’informations, voir [Clients mobiles.](#mobile-clients) L’utilisateur peut désinstaller les onglets Personnels, mais ne peut pas les modifier. Pour plus d’informations, [voir Créer une page de suppression pour votre onglet.](~/tabs/how-to/create-tab-pages/removal-page.md)
+Les options de suppression prise en charge améliorent davantage l’expérience utilisateur. Définissez la propriété de votre manifeste sur , qui permet aux utilisateurs de modifier, reconfigurer ou renommer un onglet de groupe `canUpdateConfiguration` `true` ou de canal. Indiquez également ce qu’il advient du contenu lorsqu’un onglet est supprimé, en incluant une page d’options de suppression dans l’application et en fixant une valeur pour la propriété `removeUrl` dans la  `setSettings()` configuration. L’utilisateur peut désinstaller les onglets Personnels, mais ne peut pas les modifier. Pour plus d’informations, [voir Créer une page de suppression pour votre onglet.](~/tabs/how-to/create-tab-pages/removal-page.md)
 
-## <a name="mobile-clients"></a>Clients mobiles
-
-Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les clients mobiles Teams, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
-
-Configuration de Microsoft Teams setSettings() pour la page de suppression ou les clients mobiles :
+Configuration de Microsoft Teams setSettings() pour la page de suppression :
 
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
     entityId: "add unique name here",
     suggestedDisplayName: "add name to display on tab here",
-    websiteUrl: "URL REQUIRED FOR MOBILE CLIENTS",
-    removeUrl: "ADD REMOVAL PAGE URL HERE"
+    websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
+    removeUrl: "add removal page URL here"
 });
 ```
+
+## <a name="mobile-clients"></a>Clients mobiles
+
+Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les clients mobiles Teams, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
