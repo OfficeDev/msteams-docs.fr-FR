@@ -334,6 +334,8 @@
   items:
     - name: Vue d’ensemble
       href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+    - name: Kit de ressources Microsoft Graph
+      href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: Prise en main
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: Activer le consentement spécifique aux ressources
