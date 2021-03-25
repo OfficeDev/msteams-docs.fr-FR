@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 97f24c34ebb825aad0fd104c9a814e46f9b5fa0d
-ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
+ms.openlocfilehash: 8cf4f964aba7ce9375b1b259ae88a7fbcb620631
+ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093259"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51176955"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
@@ -19,6 +19,9 @@ ms.locfileid: "50093259"
 > Les prévisualisations publiques de Microsoft Graph et Microsoft Teams sont disponibles pour un accès et des commentaires en avant-première. Bien que cette version ait fait l’objet de tests approfondis, elle n’est pas destinée à être mise en production.
 
 Avec Microsoft Graph, vous pouvez migrer l’historique des messages et les données des utilisateurs d’un système externe vers un canal Teams. En permettant la recréation d’une hiérarchie de messagerie de plateforme tierce au sein de Teams, les utilisateurs peuvent poursuivre leurs communications de manière transparente et sans interruption.
+
+> [!NOTE] 
+> À l’avenir, Microsoft pourra exiger que vous ou vos clients payiez des frais supplémentaires en fonction du volume de données importées.
 
 ## <a name="import-overview"></a>Vue d’ensemble de l’importation
 
@@ -32,7 +35,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique des messages et les donn
 
 ## <a name="necessary-requirements"></a>Conditions requises
 
-### <a name="analyze-and-prepare-message-data"></a>Analyser et préparer les données de message
+### <a name="analyze-and-prepare-message-data"></a>Analyser et préparer les données des messages
 
 ✔ examiner les données tierces pour déterminer ce qui sera migré.  
 ✔ extraire les données sélectionnées du système de conversation tiers.  
@@ -96,7 +99,7 @@ Content-Location: /teams/{teamId}
 
 La création d’un canal pour les messages importés est similaire au scénario de création d’équipe :
 
-> [Créez un canal avec](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource `createdDateTime` de canal. Placez le nouveau canal dans , un état spécial qui interdit aux utilisateurs de la plupart des activités de conversation au sein du canal jusqu’à ce que le processus `migration mode` de migration soit terminé.  Incluez `channelCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme étant `migration` créée pour la migration.  
+> [Créez un canal avec](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource `createdDateTime` de canal. Placez le nouveau canal dans , un état spécial qui interdit aux utilisateurs de la plupart des activités de conversation au sein du canal jusqu’à ce que le processus `migration mode` de migration soit terminé.  Incluez `channelCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme `migration` étant créée pour la migration.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>Autorisations
 
@@ -325,7 +328,7 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>Étape 5 : Ajouter des membres d’équipe
 
-Vous pouvez ajouter un membre à une équipe à [l’aide](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) de l’interface utilisateur teams ou de l’API Ajouter [un membre](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) Microsoft Graph :
+Vous pouvez ajouter un membre à une équipe à [l’aide](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) de l’interface utilisateur Teams ou de l’API Ajouter [un membre](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) Microsoft Graph :
 
 #### <a name="request-add-member"></a>Demande (ajouter un membre)
 
@@ -381,5 +384,7 @@ HTTP/1.1 204 No Content
 ||Guillemets|
 ||Billets croisés entre les canaux|
 
+
+## <a name="see-also"></a>Voir aussi
 > [!div class="nextstepaction"]
 >[En savoir plus sur l’intégration de Microsoft Graph et Teams](/graph/teams-concept-overview)
