@@ -4,12 +4,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 localization_priority: Priority
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
-ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
+ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50073088"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382330"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -132,10 +132,12 @@ L'action `ActionCard` prend en charge trois types d'entrée :
 
 Si vous souhaitez afficher une liste de sélections à l’origine dans le style compact, vous devez spécifier `"isMultiSelect": true` et `"style": true`.
 
+Pour plus d’informations sur les actions de la carte Connecteur, consultez **[Actions]**(/outlook/messages-actionnables/référence#actions) dans la référence de la carte de messages actionnables.
+
 > [!NOTE]
 > Spécifier `compact` pour la propriété `style` dans Microsoft Teams revient à spécifier `normal` pour la propriété `style` dans Microsoft Outlook.
-
-Pour accéder à d’autres informations sur les actions de la carte de connecteur, consultez **[Actions](/outlook/actionable-messages/card-reference#actions)** dans la référence de carte de message intégrant des actions.
+> 
+> Pour l’action HttpPOST, le jeton du porteur est inclus dans les demandes. Ce jeton inclut l’identité Azure AD de l’utilisateur Office 365 sujet de l’action.
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configuration d’un webhook entrant personnalisé
 
