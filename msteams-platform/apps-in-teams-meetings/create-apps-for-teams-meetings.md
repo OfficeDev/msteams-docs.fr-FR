@@ -5,49 +5,51 @@ description: créer des applications pour les réunions d’équipes
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: bd0f53ae34a23bdbbdc2e6f3992c7dd0836e9f28
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449492"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382351"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Créer des applications pour les réunions Teams
 
 ## <a name="prerequisites-and-considerations"></a>Conditions préalables et considérations
 
-* Les applications dans les réunions nécessitent une connaissance de base du [développement d’applications Teams.](../overview.md) Une application dans une réunion peut comprendre des [onglets,](../tabs/what-are-tabs.md)des [bots](../bots/what-are-bots.md)et des [fonctionnalités d’extensions](../messaging-extensions/what-are-messaging-extensions.md) de messagerie et nécessitera des mises à jour du manifeste de l’application [Teams](#update-your-app-manifest) pour indiquer que l’application est disponible pour les réunions
+Avant de créer des applications pour les réunions Teams, vous devez comprendre les choses suivantes :
 
-* Pour que votre application fonctionne dans le cycle de vie de la réunion sous la mesure d’un onglet, elle doit prendre en charge les onglets configurables dans l’étendue [groupchat](../resources/schema/manifest-schema.md#configurabletabs) (voir comment créer un [onglet de groupe).](../build-your-first-app/build-channel-tab.md) La prise en `groupchat` charge de l’étendue active votre application dans les conversations [préalables à la réunion](teams-apps-in-meetings.md#pre-meeting-app-experience) et [post-réunion.](teams-apps-in-meetings.md#post-meeting-app-experience)
+* Vous devez savoir comment développer des applications Teams. Pour plus d’informations, voir [Développement d’applications Teams.](../overview.md)
 
-* Les paramètres d’URL de l’API de réunion peuvent nécessiter , et le tenantId, ceux-ci sont disponibles dans le cadre de l’activité du bot et du `meetingId` `userId` SDK [](/onedrive/find-your-office-365-tenant-id) client Teams. En outre, des informations fiables pour l’ID d’utilisateur et l’ID de locataire peuvent être récupérées à l’aide de l’authentification [sso tabulation.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Vous devez mettre à jour le manifeste de l’application Teams pour indiquer que l’application est disponible pour les réunions. Pour plus d’informations, voir [le manifeste de l’application.](#update-your-app-manifest)
 
-* Certaines API de réunion, telles que , nécessitent une inscription et un ID de bot pour générer des jetons `GetParticipant` d’th. [](../build-your-first-app/build-bot.md)
+* Pour que votre application fonctionne dans le cycle de vie de la réunion sous la mesure d’un onglet, elle doit prendre en charge les onglets configurables dans l’étendue groupchat. Pour plus d’informations, voir [étendue groupchat](../resources/schema/manifest-schema.md#configurabletabs) et [créer un onglet de groupe.](../build-your-first-app/build-channel-tab.md)
 
-* Vous devez respecter les instructions générales de conception [de l’onglet Teams](../tabs/design/tabs.md) pour les scénarios préalables et post-réunion. Pour les expériences pendant les réunions, [reportez-vous](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) aux instructions de conception de l’onglet réunion et de la boîte [de](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) dialogue en réunion.
+* Vous devez respecter les instructions générales de conception de l’onglet Teams pour les scénarios préalables et post-réunion. Pour les expériences pendant les réunions, reportez-vous aux instructions de conception de l’onglet réunion et de la boîte de dialogue en réunion. Pour plus d’informations, voir [](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) recommandations en matière de conception [d’onglets Teams,](../tabs/design/tabs.md)recommandations en matière de conception d’onglets en réunion et recommandations en matière de conception de boîte [de dialogue en réunion.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 
-* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion (reportez-vous au paramètre d’achèvement dans ) et d’autres surfaces tout au long du cycle `bot Id` de vie de la `Notification Signal API` réunion
+* Vous devez prendre en charge l’étendue pour activer votre application dans les conversations `groupchat` préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer des tâches préalables à la réunion. Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires.
+
+* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Ils sont disponibles dans le cadre de l’activité du bot et du SDK client Teams. En outre, des informations fiables pour l’ID d’utilisateur et l’ID de locataire peuvent être récupérées à l’aide de l’authentification [sso tabulation.](../tabs/how-to/authentication/auth-aad-sso.md)
+
+* `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
+
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `Notification Signal API` .
 
 ## <a name="meeting-apps-api-reference"></a>Référence de l’API des applications de réunion
 
 |API|Description|Demande|Source|
 |---|---|----|---|
-|**GetUserContext**| Obtenez des informations contextuelles pour afficher le contenu pertinent dans un onglet Teams. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams client SDK|
-|**GetParticipant**|Cette API permet à un bot de récupérer les informations d’un participant par ID de réunion et ID de participant.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** |Les signaux de réunion seront remis à l’aide de l’API de notification de conversation existante suivante (pour la conversation utilisateur-bot). Cette API permet aux développeurs de signaler en fonction de l’action de l’utilisateur final d’afficher une bulle de boîte de dialogue en réunion.|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**GetUserContext**| Cette API vous permet d’obtenir des informations contextuelles pour afficher du contenu pertinent dans un onglet Teams. |_**microsoftTeams.getContext( ( ) => { /*...* / } )**_|Microsoft Teams client SDK|
+|**GetParticipant**| Cette API permet à un bot de récupérer les informations des participants par ID de réunion et ID de participant. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** | Cette API vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot. Il vous permet de signaler en fonction de l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 
 ### <a name="getusercontext"></a>GetUserContext
 
-Pour obtenir des instructions sur l’identification et la récupération d’informations contextuelles pour le contenu de votre onglet, reportez-vous à notre documentation de l’onglet Obtenir du contexte pour votre onglet [Teams.](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) Dans le cadre de l’extensibilité des réunions, une nouvelle valeur a été ajoutée pour la charge utile de réponse :
-
-✔ **meetingId**: utilisé par un onglet lors de l’exécution dans le contexte de la réunion.
+Pour identifier et récupérer des informations contextuelles pour le contenu de votre onglet, voir [obtenir le contexte de votre onglet Teams.](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) est utilisé par un onglet lors de l’exécution dans le contexte de réunion et est `meetingId` ajouté pour la charge utile de réponse.
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
->
-> * Ne met pas en cache les rôles des participants, car l’organisateur de la réunion peut modifier un rôle à tout moment.
->
+> * Ne pas mettre en cache les rôles des participants, car l’organisateur de la réunion peut modifier un rôle à tout moment.
 > * Teams ne prend actuellement pas en charge les grandes listes de distribution ou les tailles de liste de plus de 350 participants pour `GetParticipant` l’API.
 
 #### <a name="query-parameters"></a>Paramètres de requête
@@ -55,12 +57,12 @@ Pour obtenir des instructions sur l’identification et la récupération d’in
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
 |**meetingId**| string | Oui | L’identificateur de réunion est disponible via Bot Invoke et le SDK client Teams.|
-|**participantId**| string | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est vivement recommandé d’obtenir un participantId à partir de l' ssO Onglet. |
-|**tenantId**| string | Oui | Le tenantId est requis pour les utilisateurs du client. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est vivement recommandé d’obtenir un tenantId à partir de l' ssO Onglet. |
+|**participantId**| string | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
+|**tenantId**| string | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. |
 
 #### <a name="example"></a>Exemple
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -83,7 +85,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onMessage(async (context, next) => {
-            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
             let member = participant.user;
             let meetingInfo = participant.meeting;
             let conversation = participant.conversation;
@@ -102,7 +104,9 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-Le corps de la réponse est :
+* * *
+
+Le corps de la réponse JSON pour `GetParticipant` l’API est :
 
 ```json
 {
@@ -128,29 +132,23 @@ Le corps de la réponse est :
 }
 ```
 
-* * *
-
 #### <a name="response-codes"></a>Codes de réponse
 
-* **403**: l’application n’est pas autorisée à obtenir des informations sur les participants. Il s’agit de la réponse d’erreur la plus courante et est déclenchée si l’application n’est pas installée dans la réunion. Par exemple, si l’application est désactivée par l’administrateur client ou bloquée pendant l’atténuation des sites.
-* **200**: Informations de participant correctement récupérées.
-* **401 :** jeton non valide.
-* **404 :** Le participant est in found.
-* **500**: la réunion a expiré (plus de 60 jours depuis la fin de la réunion) ou le participant ne dispose pas d’autorisations en fonction de son rôle.
-
-
-**Bientôt disponible**
-
-* **404 :** la réunion a expiré ou le participant est in peut-être trouvé.
-
+|Code de réponse|Description|
+|---|---|
+| **403** | L’application n’est pas autorisée à obtenir des informations sur les participants. Il s’agit de la réponse d’erreur la plus courante et est déclenchée si l’application n’est pas installée dans la réunion. Par exemple, si l’application est désactivée par l’administrateur client ou bloquée lors de la migration de site en direct.|
+| **200** | Les informations sur les participants sont récupérées avec succès.|
+| **401** | L’application répond avec un jeton non valide.|
+| **404** | La réunion a expiré ou le participant est in peut-être trouvé.|
+| **500** | La réunion a expiré plus de 60 jours depuis la fin de la réunion ou le participant ne dispose pas d’autorisations en fonction de son rôle.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
-Tous les utilisateurs d’une réunion reçoivent les notifications envoyées via l’API NotificationSignal.
+Tous les utilisateurs d’une réunion reçoivent les notifications envoyées via `NotificationSignal` l’API.
 
 > [!NOTE]
-> Actuellement, l’envoi de notifications ciblées n’est pas pris en charge.
-> Lorsqu’une boîte de dialogue de réunion est invoquée, le même contenu est également présenté en tant que message de conversation.
+> * Lorsqu’une boîte de dialogue de réunion est invoquée, le contenu est présenté comme un message de conversation.
+> * Actuellement, l’envoi de notifications ciblées n’est pas pris en charge.
 
 #### <a name="query-parameters"></a>Paramètres de requête
 
@@ -160,13 +158,14 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 
 #### <a name="example"></a>Exemple
 
-`Bot ID`L’objet est déclaré dans le manifeste et le bot reçoit un objet de résultat. Dans l’exemple suivant, le `completionBotId` paramètre est facultatif dans la charge utile demandée `externalResourceUrl` :
+`Bot ID`L’objet est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
 > [!NOTE]
+> * Le `completionBotId` paramètre est facultatif dans `externalResourceUrl` l’exemple de charge utile demandé. `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 > * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour vous assurer que les dimensions sont dans les limites autorisées, consultez les [instructions de conception.](design/designing-apps-in-meetings.md)
-> * L’URL est la page chargée en tant que `<iframe>` dans la boîte de dialogue de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
+> * L’URL est la page chargée en tant que dans la boîte de `<iframe>` dialogue de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
@@ -219,20 +218,21 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>Codes de réponse
 
-* **201 : l’activité** avec le signal est correctement envoyée. 
-* **401 :** jeton non valide.
-* **403**: l’application ne peut pas envoyer le signal. Cela peut se produire pour diverses raisons, telles que la désactivation de l’application par l’administrateur client, le blocage de l’application pendant la migration du site en direct, etc. Dans ce cas, la charge utile contient un message d’erreur détaillé. 
-* **404 :** La conversation de réunion n’existe pas.
- 
+|Code de réponse|Description|
+|---|---|
+| **201** | L’activité avec signal est correctement envoyée |
+| **401** | L’application répond avec un jeton non valide. |
+| **403** | L’application ne peut pas envoyer le signal. Cela peut se produire pour diverses raisons, telles que la désactivation de l’application par l’administrateur client, le blocage de l’application pendant la migration du site en direct, etc. Dans ce cas, la charge utile contient un message d’erreur détaillé. |
+| **404** | La conversation de réunion n’existe pas. |
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour les réunions Teams
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
 
-Les fonctionnalités de l’application réunions sont déclarées dans le manifeste de votre application par le biais des **étendues configurableTabs** et des  ->   tableaux **de** contexte. *L’étendue* définit à qui et *le contexte* définit l’endroit où votre application sera disponible.
+Les fonctionnalités de l’application réunions sont déclarées dans le manifeste de votre application à l’aide `configurableTabs` des `scopes` tableaux et des `context` tableaux. L’étendue définit à qui et le contexte définit l’endroit où votre application est disponible.
 
 > [!NOTE]
-> Utilisez le [schéma de manifeste d’aperçu du](../resources/schema/manifest-schema-dev-preview.md) développeur pour l’essayer dans le manifeste de votre application.
+> Essayez de mettre à jour le manifeste de votre application avec [le schéma de manifeste.](../resources/schema/manifest-schema-dev-preview.md)
 
 ```json
 
@@ -257,74 +257,88 @@ Les fonctionnalités de l’application réunions sont déclarées dans le manif
 
 ### <a name="context-property"></a>Propriété Context
 
-L’onglet et les propriétés fonctionnent en harmonie pour vous permettre de déterminer où `context` `scopes` vous souhaitez que votre application apparaisse. Les onglets de la `team` ou `groupchat` de l’étendue peuvent avoir plusieurs contextes. Les valeurs possibles pour la propriété de contexte sont les suivantes :
+`context`L’onglet et `scopes` les propriétés vous permettent de déterminer où votre application doit apparaître. Les onglets de la `team` ou `groupchat` de l’étendue peuvent avoir plusieurs contextes. Voici les valeurs de la propriété à partir de laquelle vous pouvez utiliser l’ensemble ou `context` certaines des valeurs :
 
-* **channelTab**: onglet dans l’en-tête d’un canal d’équipe.
-* **privateChatTab**: un onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs non dans le contexte d’une équipe ou d’une réunion.
-* **meetingChatTab**: onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs dans le cadre d’une réunion programmée.
-* **meetingDetailsTab**: onglet dans l’en-tête de l’affichage Détails de la réunion du calendrier.
-* **meetingSidePanel**: un panneau en réunion ouvert via la barre unifiée (u-bar).
+|Valeur|Description|
+|---|---|
+| **channelTab** | Onglet dans l’en-tête d’un canal d’équipe. |
+| **privateChatTab** | Onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs non dans le contexte d’une équipe ou d’une réunion. |
+| **meetingChatTab** | Onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs dans le cadre d’une réunion programmée. |
+| **meetingDetailsTab** | Onglet dans l’en-tête de l’affichage Détails de la réunion du calendrier. |
+| **meetingSidePanel** | Panneau en réunion ouvert via la barre unifiée (barre U). |
 
 > [!NOTE]
-> La propriété « Context » n’est actuellement pas prise en charge et sera donc ignorée sur les clients mobiles
+> `Context` n’est actuellement pas prise en charge sur les clients mobiles.
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurer votre application pour les scénarios de réunion
 
 > [!NOTE]
-> * Pour que votre application soit visible dans la galerie d’onglets, elle doit prendre en charge les **onglets configurables** et **l’étendue de conversation de groupe.**
->
-> * Les clients mobiles ne supportent les onglets que dans les surfaces de pré et de post-réunion. Les expériences en réunion (boîte de dialogue de réunion et onglet) sur mobile seront bientôt disponibles. Suivez les [instructions pour les onglets sur mobile](../tabs/design/tabs-mobile.md) lors de la création de vos onglets pour appareils mobiles.
+> * Pour que votre application soit visible dans la galerie d’onglets, elle doit prendre en charge les onglets configurables et l’étendue de conversation de groupe.
+> * Les clients mobiles ne supportent les onglets qu’aux étapes préalables et post-réunion.
+> * Les expériences en réunion qui sont des boîtes de dialogue et des onglets en réunion ne sont actuellement pas pris en charge sur les clients mobiles. Pour plus d’informations, [consultez des conseils pour les onglets mobiles](../tabs/design/tabs-mobile.md) lors de la création de vos onglets pour appareils mobiles.
 
 ### <a name="before-a-meeting"></a>Avant une réunion
 
-Les utilisateurs ayant des rôles d’organisateur et/ou de présentateur ajoutent des onglets à une réunion à l’aide du bouton ➕ plus dans les pages de **détails** et de conversation de réunion.  Les extensions de messagerie sont ajoutées via le menu ellipses/overflow &#x25CF;&#x25CF;&#x25CF; situé sous la zone de composition de message dans la conversation. Les bots sont ajoutés à une conversation de réunion à l’aide de la clé « « et **@** en sélectionnant **Obtenir des bots**».
+Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et des extensions de messagerie à une réunion. Les utilisateurs ayant des rôles d’organisateur et de présentateur peuvent ajouter des onglets à une réunion.
 
-✔ l’identité *de l’utilisateur* doit être confirmée via l' [ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après cette authentification, l’application peut récupérer le rôle d’utilisateur via l’API GetParticipant.
+**Pour ajouter un onglet à une réunion**
 
- ✔ en fonction du rôle d’utilisateur, l’application aura désormais la possibilité de présenter des expériences spécifiques au rôle. Par exemple, une application de sondage peut autoriser uniquement les organisateurs et les présentateurs à créer un sondage.
+1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
+1. Sélectionnez **l’onglet Détails** et sélectionnez plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
 
-> **REMARQUE**: les attributions de rôle peuvent être modifiées lors d’une réunion en cours.  *Voir rôles* [dans une réunion Teams.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019) 
+    ![Expérience préalable à la réunion](../assets/images/apps-in-meetings/PreMeeting.png)
+
+1. Dans la galerie d’onglets, sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’onglet.
+
+**Pour ajouter une extension de messagerie à une réunion**
+
+1. Sélectionnez les ellipses ou le menu de dépassement &#x25CF;&#x25CF;&#x25CF; dans la zone composer un message de la conversation.
+1. Sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’extension de messagerie.
+
+**Pour ajouter un bot à une réunion**
+
+Dans une conversation de réunion, entrez **@** la clé et **sélectionnez Obtenir des bots.**
+
+> [!NOTE]
+> * L’identité de l’utilisateur doit être confirmée à [l’aide de l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
+> * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
+> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, voir [les rôles dans une réunion Teams.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 ### <a name="during-a-meeting"></a>Pendant une réunion
 
-#### <a name="sidepanel"></a>**sidePanel**
+#### <a name="sidepanel"></a>sidePanel
 
-✔ dans le manifeste de votre application, ajoutez **sidePanel** **au** tableau de contexte comme décrit ci-dessus.
-
-✔ dans la réunion, ainsi que dans tous les scénarios, l’application s’restituera dans un onglet de réunion de 320 px de largeur. Votre onglet doit être optimisé pour cela. *Voir*, [Interface FrameContext](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+Avec sidePanel, vous pouvez personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles d’affichages et d’actions. Dans le manifeste de votre application, vous devez ajouter sidePanel au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est rendue dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext.](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 )
 
-✔ Reportez-vous au [SDK Teams](../tabs/how-to/access-teams-context.md#user-context) pour utiliser l’API **userContext** pour router les demandes en conséquence.
+Pour utiliser `userContext` l’API pour router les demandes en conséquence, consultez [le SDK Teams.](../tabs/how-to/access-teams-context.md#user-context) Voir [flux d’authentification Teams pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md) Le flux d’authentification pour les onglets est très similaire au flux d’authentification pour les sites web. Par conséquent, les onglets peuvent utiliser OAuth 2.0 directement. Voir la plateforme d’identité Microsoft et le flux de [code d’autorisation OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
-✔ faire référence au flux [d’authentification Teams pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md) Le flux d’authentification pour les onglets est très similaire au flux d’authentification pour les sites web. Ainsi, les onglets peuvent utiliser OAuth 2.0 directement. *Voir aussi*, plateforme d’identité Microsoft et flux de code d’autorisation [OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est dans un affichage en réunion et qu’il peut publier des cartes d’extension de message de composition. AppName en réunion est une boîte à outils qui indique le nom de l’application dans la barre U de la réunion.
 
-✔ l’extension de message doit fonctionner comme prévu lorsqu’un utilisateur est en affichage en réunion et doit être en mesure de publier des cartes d’extension de message de composition.
+#### <a name="in-meeting-dialog"></a>Boîtes de dialogue en réunion
 
-✔ AppName en réunion : l’outil doit faire état du nom de l’application dans la barre U de la réunion.
+La boîte de dialogue de réunion peut être utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
 
-#### <a name="in-meeting-dialog"></a>**Boîtes de dialogue en réunion**
-
-✔ vous devez respecter les instructions de conception de boîte de [dialogue en réunion.](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-
-✔ faire référence au flux [d’authentification Teams pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md)
-
-✔ l’API [NotificationSignal](create-apps-for-teams-meetings.md#notificationsignal-api) pour signaler qu’une notification de bulle doit être déclenchée.
-
-✔ dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à présenter est hébergé.
-
-✔ dialogue En réunion ne doit pas utiliser le module de tâche.
+La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher une bulle de contenu dans une réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 
 > [!NOTE]
->
-> * Ces notifications sont de nature persistante. Vous devez appeler la [**fonction submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) pour le faire disparaître automatiquement après qu’un utilisateur a pris une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. *Voir aussi*, [SDK Teams : module de tâche](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
->
-> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, votre charge utile de demande d’appel initiale doit reposer sur les métadonnées de demande (ID de l’utilisateur) dans l’objet, et non sur les métadonnées de demande `from.id` `from` `from.aadObjectId` (ID Azure Active Directory de l’utilisateur). *Voir* [Utilisation des modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) et Créer et envoyer le module de [tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur a pris une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, voir le module de [tâche du SDK Teams.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
+> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, votre charge utile de demande d’appel initiale doit reposer sur les métadonnées de la demande dans l’objet, et non sur `from.id` `from` les `from.aadObjectId` métadonnées de la demande. `from.id` est l’ID utilisateur et `from.aadObjectId` l’ID Azure Active Directory (AAD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 ### <a name="after-a-meeting"></a>Après une réunion
 
 Les configurations post-réunion et préalable à la réunion sont équivalentes.
 
-## <a name="meeting-app-sample"></a>Exemple d’application de réunion
+## <a name="code-sample"></a>Exemple de code
 
- > [!div class="nextstepaction"]
-> [Application générateur de jetons de réunion](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)
+|Exemple de nom | Description | C# |
+|----------------|-----------------|--------------|
+| Extensibilité des réunions | Exemple d’extensibilité de réunion Microsoft Teams pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
+| Bot de bulle de contenu de réunion | Exemple d’extensibilité de réunion Microsoft Teams pour l’interaction avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+
+## <a name="see-also"></a>Voir aussi
+
+> [!div class="nextstepaction"]
+> [Recommandations en matière de conception de boîte de dialogue en réunion](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+> [!div class="nextstepaction"]
+> [Flux d’authentification Teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
