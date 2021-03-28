@@ -329,7 +329,11 @@
         - name: Utiliser l'authentification SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: Extensions de messagerie
-      href: messaging-extensions/how-to/add-authentication.md
+      items:
+        - name: Ajouter une authentification à votre extension de messagerie
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: Activer l’authentification unique des extensions de messagerie
+          href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: Utiliser les données de Teams avec Microsoft Graph
   items:
     - name: Vue d’ensemble
