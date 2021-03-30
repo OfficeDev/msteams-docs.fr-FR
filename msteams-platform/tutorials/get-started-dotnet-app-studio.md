@@ -5,12 +5,12 @@ keywords: mise en place de .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ededd0800c7f789469e79e2a475c125b7fc37795
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: ee90d07b9616d130f4c418427762f9531c203672
+ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449318"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "51403975"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>Créer votre première application Teams à l’aide C# ou .NET
 
@@ -74,7 +74,7 @@ Lorsque l’application démarre, une fenêtre de navigateur s’ouvre avec la r
 - [https://localhost:44327/](https://localhost:44327/)
 - [https://localhost:44327/hello](https://localhost:44327/hello)
 - [https://localhost:44327/first](https://localhost:44327/first)
-- [https://localhost:44327/second]https://localhost:44327/second)
+- [https://localhost:44327/second](https://localhost:44327/second)
 
 <a name="HostSample"></a>
 
@@ -117,7 +117,7 @@ Visual Studio la prise en charge intégrée du déploiement d’applications pou
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>Mettre à jour les informations d’identification de votre application hébergée
 
-L’exemple d’application nécessite que les variables d’environnement soient définies sur les valeurs que vous avez enregistrées dans le [fichier texte.](~/includes/get-started/get-started-use-app-studio.md#bots)
+L’exemple d’application nécessite que les variables d’environnement soient définies sur les valeurs que vous avez enregistrées dans [le fichier texte.](~/includes/get-started/get-started-use-app-studio.md#bots)
 
 Ouvrez le appsettings.jsfichier on. Mettez à **jour la valeur MicrosoftAppId** avec votre ID de bot que vous avez enregistré dans le fichier texte. Mettez à jour **MicrosoftAppPassword avec** le mot de passe du bot que vous avez enregistré.
 
@@ -133,13 +133,13 @@ Une fois que vous avez installé l’application dans une équipe, vous devez la
 
 ### <a name="test-your-bot-in-teams"></a>Tester votre bot dans Teams
 
-Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C’est ce qu’on appelle **\@ une mention.** Le bot répond à tout message que vous envoyez.
+Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C’est ce qu’on appelle **\@ une mention.** Le bot répond à n’importe quel message que vous envoyez.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
 
-Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d’entrée de votre affichage conversation. Un menu avec **l’application « Hello World** » s’affiche. Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
+Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d’entrée dans l’affichage conversation. Un menu avec **l’application « Hello World » s’affiche.** Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
