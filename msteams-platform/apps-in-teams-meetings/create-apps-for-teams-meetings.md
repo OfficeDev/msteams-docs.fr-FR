@@ -5,12 +5,12 @@ description: créer des applications pour les réunions d’équipes
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
+ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382351"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51435035"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Créer des applications pour les réunions Teams
 
@@ -289,6 +289,8 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
     ![Expérience préalable à la réunion](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. Dans la galerie d’onglets, sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’onglet.
+    > [!NOTE] 
+    > Actuellement, dans l’onglet Réunions, l’obtention des détails de la réunion et des informations sur les participants n’est pas prise en charge.
 
 **Pour ajouter une extension de messagerie à une réunion**
 

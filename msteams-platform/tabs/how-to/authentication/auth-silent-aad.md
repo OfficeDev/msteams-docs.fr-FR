@@ -3,12 +3,12 @@ title: Authentification en mode silencieux
 description: Décrit l’authentification silencieuse
 ms.topic: conceptual
 keywords: Authentification SSO Teams AAD silencieuse
-ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 7a68c532cadf181b15c16d6bc4d4ab861d5c9922
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382344"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421607"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
@@ -32,7 +32,9 @@ La ADAL.js crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. 
 
 Le code de cet article provient de l’exemple d’application Teams qui est un nœud [d’exemple d’authentification Teams.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-### <a name="include-and-configure-adal"></a>inclure et configurer ADAL
+[Lancez l’onglet configurable d’authentification](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) simple et silencieuse à l’aide d’AAD et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
+
+### <a name="include-and-configure-adal"></a>Inclure et configurer ADAL
 
 Incluez la ADAL.js dans vos pages d’onglets et configurez ADAL avec votre ID client et l’URL de redirection :
 

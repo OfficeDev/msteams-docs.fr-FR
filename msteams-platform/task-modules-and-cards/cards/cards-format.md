@@ -3,12 +3,12 @@ title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte dans Microsoft Teams
 keywords: Format de cartes de bots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455394"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421623"
 ---
 # <a name="format-cards-in-teams"></a>Mise en forme des cartes dans Teams
 
@@ -43,7 +43,7 @@ Il existe deux types de cartes qui prisent en charge Markdown dans Teams :
 Les balises Markdown suivantes ne sont pas pris en charge :
 
 * En-têtes
-* Tables
+* Tableaux
 * Des images
 * Texte préformaté
 * Blockquotes
@@ -111,7 +111,7 @@ Sur Android, la mise en forme Markdown de carte adaptative s’affiche comme cec
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>Prise en charge des mentions dans les cartes adaptatives v1.2
 
-Les mentions basées sur une carte sont pris en charge dans les clients web, de bureau et mobiles. Vous pouvez ajouter des mentions @ dans un corps de carte adaptative pour les bots et les réponses d’extension de messagerie.  Pour ajouter des mentions @ dans les cartes, suivez la même logique de notification et le même rendu que celui des [mentions basées](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )sur les messages dans les conversations de canal et de groupe.
+Les mentions basées sur une carte sont pris en charge dans les clients web, de bureau et mobiles. Vous pouvez ajouter des mentions @ dans un corps de carte adaptative pour les bots et les réponses d’extension de messagerie.  Pour ajouter des mentions @ dans les cartes, suivez la même logique de notification et le même rendu que celle des [mentions basées](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )sur les messages dans les conversations de canal et de groupe.
 
 Les bots et les extensions de messagerie peuvent inclure des mentions dans le contenu de la carte dans les éléments [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) et [FactSet.](https://adaptivecards.io/explorer/FactSet.html)
 
@@ -159,12 +159,14 @@ Pour inclure une mention dans une carte adaptative, votre application doit inclu
 
 
 ### <a name="information-masking-in-adaptive-cards"></a>Masquage d’informations dans les cartes adaptatives
-Utilisez la propriété de masquage d’informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs.
+Utilisez la propriété de masquage d’informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs au sein de l’élément d’entrée [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) de carte adaptative. 
+
+> [!NOTE]
+> La fonctionnalité prend uniquement en charge le masquage d’informations côté client, le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
 
 > [!NOTE]
 > La propriété de masquage d’informations est actuellement disponible dans l’aperçu développeur uniquement.
 
-#### <a name="mask-information"></a>Informations sur le masque
 Pour masquer les informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` *true*.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Exemple de carte adaptative avec propriété de masquage
@@ -203,7 +205,7 @@ En outre, votre application doit inclure les éléments suivants :
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -216,7 +218,60 @@ Une carte adaptative pleine largeur apparaît comme suit : affichage Carte ![ ad
 
 Si vous n’avez pas donné la valeur Full à la propriété, l’affichage par défaut de la carte adaptative est le suivant : affichage Carte adaptative à petite `width`  ![ largeur](../../assets/images/cards/small-width-adaptive-card.png)
 
+### <a name="typeahead-support"></a>Prise en charge de Typeahead
 
+Dans l’élément de schéma, le fait de demander aux utilisateurs de filtrer et de sélectionner un nombre important de choix peut ralentir considérablement l’exécution [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) de la tâche. La prise en charge de la tête de type dans les cartes adaptatives peut simplifier la sélection des entrées en axant ou en filtrant l’ensemble des choix d’entrée quand un utilisateur tape l’entrée. 
+
+#### <a name="enable-typeahead-in-adaptive-cards"></a>Activer typeahead dans les cartes adaptatives
+
+Pour activer typeahead dans `Input.Choiceset` l’ensemble `style` et vérifier `filtered` `isMultiSelect` qu’il est définie sur `false` . 
+
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>Exemple de carte adaptative avec prise en charge de typeahead
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### <a name="stage-view-for-images-in-adaptive-cards"></a>Vue d’étape des images dans les cartes adaptatives
+Dans une carte adaptative, vous pouvez utiliser la propriété pour ajouter la possibilité d’afficher des images en vue de la `msteams` scène de manière sélective. Lorsque les utilisateurs pointent sur les images, ils voient une icône développer, pour laquelle l’attribut `allowExpand` est définie sur `true` . Pour plus d’informations sur l’utilisation de la propriété, voir l’exemple suivant :
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+Lorsque les utilisateurs pointent sur l’image, une icône développer s’affiche dans le coin supérieur droit de l’image : carte adaptative ![ avec image expandable](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+L’image s’affiche en vue de la phase lorsque l’utilisateur sélectionne le bouton développer : ![ Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
+
+Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
+
+> [!NOTE]
+> Les fonctionnalités de zoom avant et arrière s’appliquent uniquement aux éléments image (type d’image) dans une carte adaptative.
+
+> [!NOTE]
+> Pour les applications mobiles Teams, les fonctionnalités d’affichage de phase pour les images dans les cartes adaptatives sont disponibles par défaut et les utilisateurs pourront afficher des images de carte adaptative en mode étape en appuyant simplement sur l’image, que l’attribut soit présent ou `allowExpand` non.
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Mise en forme Markdown : cartes de connecteur O365**](#tab/connector-md)
 
@@ -426,7 +481,7 @@ Sur iOS, la mise en forme HTML s’affiche comme ceci :
 
 Problèmes :
 
-* La mise en forme des caractères en gras et en italique n’est pas restituer sur iOS.
+* La mise en forme de caractères en gras et en italique n’est pas restituer sur iOS.
 
 Sur Android, la mise en forme HTML s’affiche comme ceci :
 
