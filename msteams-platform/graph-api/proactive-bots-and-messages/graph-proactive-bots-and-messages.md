@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Graphe d’installation de conversation de messagerie proactive teams
-ms.openlocfilehash: ac59f3408096993379cae490cd555d3b913cc827
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 4f9c1c2e73fc89d37792e59153affc398bb87044
+ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449401"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475934"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph et envoi de messages
 
@@ -20,7 +20,7 @@ ms.locfileid: "50449401"
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans Teams
 
-Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’sondages et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs dans Teams peuvent être remis en tant que conversations **ad hoc** ou **basées sur des** boîtes de dialogue :
+Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’enquêtes et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs dans Teams peuvent être remis en tant que conversations **ad hoc** ou **basées sur des** boîtes de dialogue :
 
 |Type de message | Description |
 |----------------|-------------- |
@@ -47,7 +47,7 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 > [!div class="checklist"]
 >
 > * **id** : votre ID d’application Azure AD.
-> * **ressource** , l’URL de la ressource pour l’application.
+> * **ressource** : URL de ressource pour l’application.
 >
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ La demande doit renvoyer un `teamsApp` objet. L’objet renvoyé est l’ID d’
 GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les données `teamsAppId` suivantes :
+**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les informations `teamsAppId` suivantes :
 
 **Référence de page Microsoft Graph : lister** [les applications en équipe](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -140,6 +140,8 @@ Cette demande renvoie un tableau vide si l’application n’est pas installée 
 
 ```http
 POST https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps
+Content-Type: application/json
+
 {
    "teamsApp@odata.bind" : "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/{teamsAppId}"
 }
@@ -170,7 +172,7 @@ La **propriété id** de la réponse est le `teamsAppInstallationId` .
 **Requête HTTP GET** (autorisation — `TeamsAppInstallation.ReadWriteSelfForUser.All` ) :  
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
 La **propriété id** de la réponse est le `chatId` .

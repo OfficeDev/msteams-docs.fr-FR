@@ -3,12 +3,12 @@ title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte dans Microsoft Teams
 keywords: Format de cartes de bots teams
 ms.date: 03/29/2018
-ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
-ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
+ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
+ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51421623"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51474998"
 ---
 # <a name="format-cards-in-teams"></a>Mise en forme des cartes dans Teams
 
@@ -242,6 +242,10 @@ Pour activer typeahead dans `Input.Choiceset` l’ensemble `style` et vérifier 
 ``` 
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>Vue d’étape des images dans les cartes adaptatives
+
+> [!NOTE]
+> Cette fonctionnalité est actuellement disponible en prévisualisation pour les développeurs uniquement.
+ 
 Dans une carte adaptative, vous pouvez utiliser la propriété pour ajouter la possibilité d’afficher des images en vue de la `msteams` scène de manière sélective. Lorsque les utilisateurs pointent sur les images, ils voient une icône développer, pour laquelle l’attribut `allowExpand` est définie sur `true` . Pour plus d’informations sur l’utilisation de la propriété, voir l’exemple suivant :
 
 ``` json
