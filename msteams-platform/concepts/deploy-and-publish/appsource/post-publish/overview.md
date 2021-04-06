@@ -3,12 +3,12 @@ title: Maintenance et prise en charge de votre application publiée
 description: Que faire une fois que vous avez publié votre application
 ms.topic: how-to
 keywords: teams publient le manifeste de mise à jour de l’application de certification des mises à jour
-ms.openlocfilehash: ce63b840307f7e12a5cd05a1c67aed017cf6199b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 8644db5e329e15d77062553eda4a41a36b2740ee
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014326"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585833"
 ---
 # <a name="maintain-and-support-your-published-app"></a>Maintenir et prendre en charge votre application publiée 
 
@@ -21,7 +21,7 @@ Le programme de conformité des applications [Microsoft 365](./application-certi
 ## <a name="add-a-download-button-to-your-product-site"></a>Ajouter un bouton de téléchargement à votre site de produit
 
 Si votre application se trouve dans le magasin global Microsoft Teams, vous pouvez générer un lien pour votre site web qui lance Teams et affiche une boîte de dialogue de consentement et d’installation pour que les utilisateurs ajoutent l’application.
-Le format est :  `https://teams.microsoft.com/l/app/<appId>` où appID est le GUID qu’il déclare dans le manifeste envoyé.
+Le format est :  `https://teams.microsoft.com/l/app/<appId>` où appID est le GUID qu’ils déclarent dans le manifeste envoyé.
 Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` est le lien vers l’installation de Trello.
 
 ## <a name="updating-your-existing-teams-app"></a>Mise à jour de votre application Teams existante
@@ -33,20 +33,19 @@ Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672f
 
 ## <a name="app-updates-and-the-user-consent-flow"></a>Mises à jour de l’application et flux de consentement de l’utilisateur
 
-Lorsqu’un utilisateur installe votre application, l’une des premières choses qu’il fait est de donner à l’application l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour faire son travail. Dans la plupart des cas, une fois que vous avez terminé la mise à jour d’une application, la nouvelle version s’affiche automatiquement pour les utilisateurs finaux. Toutefois, certaines mises à jour du manifeste de l’application [Teams](../../../../resources/schema/manifest-schema.md) nécessitent l’acceptation de l’utilisateur et peuvent déclencher ce comportement de consentement :
+Lorsqu’un utilisateur installe votre application, l’une des premières choses qu’il fait est de donner à l’application l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour faire son travail. Dans la plupart des cas, une fois que vous avez terminé la mise à jour d’une application, la nouvelle version s’affiche automatiquement pour les utilisateurs finaux. Toutefois, certaines mises à jour du manifeste de l’application [Teams](../../../../resources/schema/manifest-schema.md) nécessitent l’acceptation de l’utilisateur et peuvent déclencher de nouvelles fois ce comportement de consentement :
 
  >[!div class="checklist"]
 >
-> * Un bot a été ajouté ou supprimé.
-> * La valeur unique d’un bot existant a `botId` changé.
-> * La valeur booléle d’un bot `isNotificationOnly` existant a changé.
-> * La valeur booléle d’un bot `supportsFiles` existant a changé.
-> * Une extension de messagerie ( `composeExtensions` ) a été ajoutée ou supprimée.
-> * Un nouveau connecteur a été ajouté.
-> * Un nouvel onglet statique/personnel a été ajouté.
-> * Un nouvel onglet groupe/canal configurable a été ajouté.
-> * Les `webApplicationInfo` valeurs ont changé.
->
+> * Un bot est ajouté ou supprimé.
+> * La valeur unique d’un bot `botId` existant est modifiée.
+> * La valeur booléle d’un bot `isNotificationOnly` existant est modifiée.
+> * La valeur d’un bot `supportsFiles` ou d’un `supportsCalling` booléen existant est modifiée.
+> * Une extension de `composeExtensions` messagerie est ajoutée ou supprimée.
+> * Un nouveau connecteur est ajouté.
+> * Un nouvel onglet statique ou personnel est ajouté.
+> * Un nouvel onglet de groupe ou de canal configurable est ajouté.
+> * Les propriétés à `webApplicationInfo` l’intérieur sont modifiées. Pour les modifications `webApplicationInfo` apportées à , le consentement est uniquement requis dans l’étendue Teams.
 
 ### <a name="images-of-user-consent-flow"></a>Images du flux de consentement de l’utilisateur :
 

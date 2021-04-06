@@ -5,19 +5,22 @@ description: Décrit comment la suppression des marges d’onglet améliorera l�
 keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827927"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585819"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
 Ce document décrit comment la suppression des marges autour de tous les onglets dans Microsoft Teams améliorera l’expérience du développeur lors de la création d’applications. Il s’agit d’une amélioration introduite dans Microsoft Teams en 2021.
-La suppression des marges autour de tous les onglets permettra aux développeurs de créer des applications qui semblent plus natives à Teams. Cela s’alignera également sur nos [conceptions de kit d’interface utilisateur.](~/tabs/design/tabs.md) La plupart des applications ont déjà une meilleure apparence sans les marges qui entourent leur expérience. Toutefois, certains onglets sont visuellement affectés par cette modification et les développeurs doivent apporter les modifications nécessaires.
+La suppression des marges autour de tous les onglets permettra aux développeurs de créer des applications qui semblent plus natives dans Teams. Cela s’alignera également sur nos [conceptions de kit d’interface utilisateur.](~/tabs/design/tabs.md) La plupart des applications ont déjà une meilleure apparence sans les marges qui entourent leur expérience. Toutefois, certains onglets sont visuellement affectés par cette modification et les développeurs doivent apporter les modifications nécessaires.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabulation et sans marges" border="false":::
+
+> [!NOTE]
+> Cette fonctionnalité n’est pas applicable aux clients mobiles, car les onglets des clients mobiles n’ont pas de marges. 
 
 ## <a name="timelines"></a>Chronologies
 
@@ -36,7 +39,7 @@ Les développeurs d’onglets ne doivent pas compter sur Teams pour fournir des 
 
 Oui, c’est correct et encouragé. Cela permet à l’application de se sentir native.
 
-**Le contenu de l’application, tel que le texte, les logos et les images, est-il autorisé à toucher les bords gauche et droit de nos conceptions ?**
+**Est-il possible pour le contenu de l’application, comme le texte, les logos et les images, d’toucher les bords gauche et droit de nos conceptions ?**
 
 Non, vous devez fournir votre propre remplissage ou marges à gauche et à droite de tout le contenu de l’application pour vous assurer qu’il ne touche pas les bords de votre interface utilisateur. Vous pouvez également ajouter des marges en haut de votre onglet, si nécessaire.
 
