@@ -4,12 +4,12 @@ description: décrit les manières d’avoir une conversation avec un bot Micros
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 3cf11b5b96a1504ddb3fb8c9fc5814c5131d072f
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 193a93dbf775389383e0385207fa4112440bffe5
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585854"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596673"
 ---
 # <a name="conversation-basics"></a>Concepts de base d’une conversation
 
@@ -26,7 +26,7 @@ Une conversation est une série de messages envoyés entre votre bot Microsoft T
 Un bot se comporte différemment en fonction de la conversation dans qui il est impliqué :
 
 * Les bots dans les conversations de canal et de groupe nécessitent que l’utilisateur mentionne @ le bot pour l’appeler dans un canal.
-* Les bots d’une conversation un-à-un ne nécessitent pas de mention @ . Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
+* Les bots d’une conversation un-à-un n’ont pas besoin d’une mention @ . Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
 
 Pour que le bot fonctionne dans une conversation ou une étendue particulière, ajoutez la prise en charge à cette étendue dans le manifeste [de l’application.](~/resources/schema/manifest-schema.md)
 
@@ -227,7 +227,7 @@ Les messages envoyés entre les utilisateurs et les bots incluent des données d
 
 ## <a name="teams-channel-data"></a>Données de canal Teams
 
-L’objet contient des informations spécifiques à Teams et est une source définitive pour les ID d’équipe et `channelData` de canal. Si vous le souhaitez, vous pouvez mettre en cache et utiliser ces ID comme clés pour le stockage local. Le SDK retire généralement des informations importantes de l’objet pour `TeamsActivityHandler` `channelData` les rendre facilement accessibles. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de `turnContext` l’objet.
+L’objet contient des informations spécifiques à Teams et constitue une source définitive pour les ID d’équipe `channelData` et de canal. Si vous le souhaitez, vous pouvez mettre en cache et utiliser ces ID comme clés pour le stockage local. Le SDK retire généralement des informations importantes de l’objet pour `TeamsActivityHandler` `channelData` les rendre facilement accessibles. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de `turnContext` l’objet.
 
 L’objet n’est pas inclus dans les messages dans les conversations personnelles, car ils ont lieu en `channelData` dehors d’un canal.
 
@@ -237,7 +237,7 @@ Un objet `channelData` type dans une activité envoyée à votre bot contient le
 * `tenant.id`: ID de client Azure Active Directory transmis dans tous les contextes.
 * `team`: Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.
   * `id`: GUID du canal.
-  * `name`: nom de l’équipe transmis uniquement en cas d’événements [de changement de nom d’équipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+  * `name`: Nom de l’équipe transmis uniquement en cas d’événements [de changement de nom d’équipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channel`: Transmis uniquement dans les contextes de canal lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes où le bot a été ajouté.
   * `id`: GUID du canal.
   * `name`: Nom du canal transmis uniquement en cas d’événements [de modification de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
@@ -281,7 +281,10 @@ Vous pouvez également ajouter des notifications à votre message à l’aide de
 
 ## <a name="notifications-to-your-message"></a>Notifications à votre message
 
-Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété `TeamsChannelData` des `Notification.Alert` objets sur true. Le fait qu’une notification soit ou non élevée dépend des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété des objets `TeamsChannelData` `Notification.Alert` sur true. Le fait qu’une notification soit ou non élevée dépend des paramètres Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+
+> [!NOTE]
+> Le **champ Résumé** affiche tout texte de l’utilisateur en tant que message de notification dans le flux.
 
 Le code suivant montre un exemple d’ajout de notifications à votre message :
 
@@ -411,12 +414,12 @@ Voici les codes d’état, leur code d’erreur et leurs valeurs de message :
 
 | Code d'état | Code d’erreur et valeurs de message | Description |
 |----------------|-----------------|-----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: « L’utilisateur a bloqué la conversation avec le bot. » | L’utilisateur a bloqué le bot dans une conversation 1:1 ou un canal via les paramètres de modération. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: « Le bot ne fait pas partie de la liste des conversations. » | Le bot ne fait pas partie de la conversation. |
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: « L’utilisateur a bloqué la conversation avec le bot. » | L’utilisateur a bloqué le bot dans une conversation en une:1 ou dans un canal via les paramètres de modération. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: « Le bot ne fait pas partie de la liste de conversation. » | Le bot ne fait pas partie de la conversation. |
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: « L’administrateur client a désactivé ce bot. » | Le client a bloqué le bot. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: « Aucune inscription trouvée pour ce bot. » | L’inscription pour ce bot est in trouvée. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: « Aucune inscription trouvée pour ce bot. » | L’inscription de ce bot est in trouvée. |
 | 412 | **Code**: `PreconditionFailed` <br/> **Message :**« Échec de la condition préalable, veuillez essayer à nouveau. » | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
-| 404 | **Code**: `ConversationNotFound` <br/> **Message**: « Conversation in trouvée . » | La conversation est in trouvée. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: « Conversation in trouvée ». | La conversation est in trouvée. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: « Taille du message trop grande. » | La taille de la demande entrante était trop importante. |
 | 429 | **Code**: `Throttled` <br/> **Message**: « Trop de demandes . » Renvoie également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, voir [limite de taux.](~/bots/how-to/rate-limit.md) |
 

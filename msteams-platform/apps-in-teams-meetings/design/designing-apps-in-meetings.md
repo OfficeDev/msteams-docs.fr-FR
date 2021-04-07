@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Découvrez comment concevoir des applications dans les réunions Teams et obtenir le Kit d’interface utilisateur Microsoft Teams.
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827948"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596251"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
 
@@ -106,7 +106,7 @@ Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voi
 
 ### <a name="navigation"></a>Navigation
 
-Pour les scénarios avec des couches de navigation ou un contenu épais, nous vous recommandons de permettre aux utilisateurs d’accéder à une couche secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
+Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vous recommandons de permettre aux utilisateurs d’accéder à une couche secondaire. Les utilisateurs doivent pouvoir revenir à la couche précédente.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Exemple de navigation en réunion." border="false":::
 
@@ -136,27 +136,26 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie : en-tête de boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
 
 Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la variante avec l’avatar pour renforcer le fait que la boîte de dialogue vient d’une personne.
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Avatar**: personne qui lance la boîte de dialogue en réunion.|
+|1|**Avatar**: personne qui initie la boîte de dialogue en réunion.|
 |2|**Icône de l’application**|
 |3|**Nom de l'application**|
 |4 |**Bouton Fermer :** ferme la boîte de dialogue.|
-|5 |**Chaîne d’action**: décrit généralement qui a initié la boîte de dialogue.|
+|5 |**Chaîne d’action**: décrit généralement l’auteur de la boîte de dialogue.|
 
 ### <a name="responsive-behavior"></a>Comportement réactif
 
 Les boîtes de dialogue de réunion peuvent varier en taille pour tenir compte de différents scénarios. Veillez à maintenir la taille des remplissages et des composants.
 
-* **Width**: la largeur de l’iframe de la boîte de dialogue est une valeur absolue dans la plage que vous spécifiez.
-* **Height**: la hauteur de l’iframe de la boîte de dialogue est une valeur absolue dans la plage que vous spécifiez.
+* **Largeur**: vous pouvez spécifier la largeur de l’iframe de la boîte de dialogue n’importe où dans la plage de tailles prise en charge.
+* **Hauteur**: vous pouvez spécifier la hauteur de l’iframe de la boîte de dialogue n’importe où dans la plage de tailles prise en charge. Vous pouvez également autoriser les utilisateurs à faire défiler verticalement si le contenu de votre application dépasse la hauteur maximale.
 
-> [!NOTE]
-> Les valeurs que vous définissez pour la largeur et la hauteur sont utilisées dans la boîte de dialogue `externalResourceURL` en réunion.
+Pour implémenter, spécifiez la largeur et la hauteur à l’aide de la [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) clé.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue en réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
 
@@ -164,9 +163,9 @@ Les boîtes de dialogue de réunion peuvent varier en taille pour tenir compte d
 
 Vous pouvez revenir à une réunion une fois qu’elle s’est terminée et afficher le contenu de l’application. Dans cet exemple, l’organisateur de la réunion peut examiner les résultats des sondages dans l’onglet **Contoso.** (Remarque : du point de vue de la conception, il n’y a aucune différence entre l’expérience d’onglet avant et après la réunion.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="L’exemple montre un onglet après la réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="L’exemple d’illustration montre un onglet après la réunion." border="false":::
 
-## <a name="best-practices"></a>Les bonnes pratiques
+## <a name="best-practices"></a>Meilleures pratiques
 
 ### <a name="interactions"></a>Interactions
 
@@ -205,7 +204,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 #### <a name="dont-clutter-the-space"></a>À ne pas faire : encombrer l’espace
 
-Le contenu épais ou trop structuré peut être gênant et gênant, en particulier lors d’une réunion.
+Le contenu épais ou trop structuré peut être gênant et gênant, en particulier au cours d’une réunion.
 
    :::column-end:::
 :::row-end:::
@@ -352,4 +351,4 @@ Les modaux (également appelés modules de tâche) dans l’onglet déjà étroi
 Si vous envisagez de publier votre application dans AppSource, vous devez comprendre les problèmes de conception qui provoquent généralement l’échec des applications lors de la soumission.
 
 > [!div class="nextstepaction"]
-> [Vérifier les instructions de validation de conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [Vérifier les recommandations de validation de conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

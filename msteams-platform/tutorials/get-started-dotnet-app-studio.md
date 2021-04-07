@@ -5,12 +5,12 @@ keywords: mise en place de .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ee90d07b9616d130f4c418427762f9531c203672
-ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
+ms.openlocfilehash: 99a0982a0fa453c6eb7ffeea25ba8a2607cf2d5e
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "51403975"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596258"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>Créer votre première application Teams à l’aide C# ou .NET
 
@@ -89,7 +89,7 @@ Les applications dans Microsoft Teams sont des applications web qui fournissent 
 
 Pour des tests rapides, vous pouvez exécuter l’application sur votre ordinateur et y créer un tunnel via un point de terminaison web. [`ngrok`](https://ngrok.com) est un outil gratuit avec lequel vous pouvez obtenir une adresse web, telle que `https://d0ac14a5.ngrok.io` . Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok et l’ajouter à un emplacement dans votre `PATH` .
 
-Après avoir `ngrok` installé, ouvrez une nouvelle fenêtre terminal et exécutez la commande suivante pour créer un tunnel :
+Après l’installation, `ngrok` ouvrez une nouvelle fenêtre terminal et exécutez la commande suivante pour créer un tunnel :
 
 ```bash
 ngrok http 44327 -host-header=localhost:44327
@@ -117,9 +117,9 @@ Visual Studio la prise en charge intégrée du déploiement d’applications pou
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>Mettre à jour les informations d’identification de votre application hébergée
 
-L’exemple d’application nécessite que les variables d’environnement soient définies sur les valeurs que vous avez enregistrées dans [le fichier texte.](~/includes/get-started/get-started-use-app-studio.md#bots)
+L’exemple d’application nécessite que les variables d’environnement soient définies sur les valeurs que vous avez enregistrées dans le fichier texte.
 
-Ouvrez le appsettings.jsfichier on. Mettez à **jour la valeur MicrosoftAppId** avec votre ID de bot que vous avez enregistré dans le fichier texte. Mettez à jour **MicrosoftAppPassword avec** le mot de passe du bot que vous avez enregistré.
+Ouvrez le fichier `appsettings.json`. Mettez à **jour la valeur MicrosoftAppId** avec votre ID de bot que vous avez enregistré dans le fichier texte. Mettez à jour **MicrosoftAppPassword avec** le mot de passe du bot que vous avez enregistré.
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
@@ -127,19 +127,19 @@ Une fois ces modifications apportées, resserez l’application. Si vous utilise
 
 ## <a name="configure-the-app-tab"></a>Configurer l’onglet de l’application
 
-Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab. Choisissez **Hello World dans** la liste Ajouter **un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet et que vous avez sélectionné **Enregistrer,** l’onglet `Hello World` est chargé avec l’onglet.
+Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab. Choisissez **Hello World dans** la liste Ajouter **un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet et que vous avez sélectionné **Enregistrer,** `Hello World` l’onglet est chargé avec l’onglet.
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### <a name="test-your-bot-in-teams"></a>Tester votre bot dans Teams
 
-Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C’est ce qu’on appelle **\@ une mention.** Le bot répond à n’importe quel message que vous envoyez.
+Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C’est ce qu’on appelle **\@ une mention.** Le bot répond à tout message que vous envoyez.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
 
-Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d’entrée dans l’affichage conversation. Un menu avec **l’application « Hello World » s’affiche.** Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
+Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d’entrée de votre affichage conversation. Un menu avec **l’application « Hello World » s’affiche.** Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 

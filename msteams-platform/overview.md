@@ -5,16 +5,16 @@ description: Obtenez une vue d’ensemble de la façon dont les développeurs pe
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e40d2b0d8b0d12e6275b97f79d103310d22f9720
-ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
+ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475927"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596209"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
-Les applications Microsoft Teams apportent des informations clés, des outils courants et des processus de confiance où les personnes se rassemblent, apprennent et travaillent de plus en plus.
+Les applications Microsoft Teams apportent des informations clés, des outils courants et des processus fiables là où les personnes se rassemblent, apprennent et travaillent de plus en plus.
 
 Les applications sont la façon dont vous étendez Teams pour répondre à vos besoins. Créez quelque chose de nouveau pour Teams ou intégrez une application existante.
 
@@ -66,7 +66,7 @@ Certaines applications sont simples (envoyer des notifications), tandis que d’
 
 ### <a name="webhooks"></a>Webhooks
 
-**Communiquer avec des applications externes**: [les webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers un canal Teams. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
+**Communiquer avec des applications externes**: [les webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers un canal Teams. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Représentation conceptuelle de l’apparence des connecteurs dans le client Teams." border="false":::
 
@@ -74,9 +74,8 @@ Certaines applications sont simples (envoyer des notifications), tandis que d’
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
-   :::column-end:::
-:::row-end:::
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph pour Teams
 
@@ -85,25 +84,20 @@ Certaines applications sont simples (envoyer des notifications), tandis que d’
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Représentation conceptuelle de l’API Microsoft Graph pour Teams." border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-:::row:::
-   :::column span="2":::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
-## <a name="build-solutions-for-microsoft-teams-apps"></a>Créer des solutions pour les applications Microsoft Teams
- 
-Microsoft propose un look book d’extensibilité, une bibliothèque de scénarios pour les applications Teams organisées par secteur d’activité. Ce livre vous aide à créer des applications sur la plateforme Teams et à comprendre différents scénarios possibles à l’aide de différentes fonctionnalités de la plateforme Teams. Les scénarios de look book commencent par un problème d’entreprise, les personnes impliquées avec leurs défis et se terminent par une solution d’application Teams qui permet de répondre aux besoins de l’entreprise.
-
-Chaque scénario de cette bibliothèque est accompagné d’un ensemble de maquettes de concept de conception haute fidélité, qui peuvent servir d’inspiration pour concevoir vos applications et améliorer l’expérience utilisateur. En outre, le look book met en évidence les meilleures pratiques en matière de conception et d’architecture suivies lors de la création de chaque application. Pour plus d’informations, voir le manuel d’extensibilité. Pour plus d’informations, voir [le manuel d’extensibilité.](https://adoption.microsoft.com/extensibility-look-book/scenarios/) 
+:::row:::
+   :::column span="2":::
 
 ## <a name="start-building"></a>Démarrer la création
 
-Familiarisez-vous rapidement avec la création de Teams en créant une application simple et en ajoutant des fonctionnalités couramment utilisées.
+Familiarisez-vous rapidement avec la création de Teams en mettant en place votre environnement et en créant une application simple.
 
 > [!div class="nextstepaction"]
-> [Créer votre première application maintenant](build-your-first-app/build-first-app-overview.md)
+> [Créer votre première application](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -143,7 +137,23 @@ Vous n’avez pas besoin d’être un programmeur expert pour créer une applica
    :::column-end:::
 :::row-end:::
 
-## <a name="resources"></a>Ressources
+:::row:::
+   :::column span="2":::
+
+## <a name="get-ideas-for-your-app"></a>Obtenir des idées pour votre application
+
+Vous recherchez une source d’inspiration pour le développement d’applications ? Parcourez notre liste de scénarios réels et de solutions industrielles avec des maquettes de concept haute fidélité pour comprendre les différentes façons dont les applications Teams peuvent aider vos utilisateurs.
+
+> [!div class="nextstepaction"]
+> [Voir les scénarios d’application](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>Voir aussi
 
 * [Ajouter un bouton Partager avec Teams à votre site web](concepts/build-and-test/share-to-teams.md)
 * [Concevoir votre application Teams](concepts/design/design-teams-app-overview.md)

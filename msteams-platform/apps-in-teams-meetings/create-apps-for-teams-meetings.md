@@ -5,18 +5,18 @@ description: créer des applications pour les réunions d’équipes
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585847"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596230"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Créer des applications pour les réunions Teams
 
 ## <a name="prerequisites-and-considerations"></a>Conditions préalables et considérations
 
-Avant de créer des applications pour les réunions Teams, vous devez comprendre les choses suivantes :
+Avant de créer des applications pour les réunions Teams, vous devez avoir les connaissances suivantes :
 
 * Vous devez savoir comment développer des applications Teams. Pour plus d’informations, voir [Développement d’applications Teams.](../overview.md)
 
@@ -28,11 +28,11 @@ Avant de créer des applications pour les réunions Teams, vous devez comprendre
 
 * Vous devez prendre en charge l’étendue pour activer votre application dans les conversations `groupchat` préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer des tâches préalables à la réunion. Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires.
 
-* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Ceux-ci sont disponibles dans le cadre de l’activité du bot et du SDK client Teams. En outre, des informations fiables pour l’ID d’utilisateur et l’ID de locataire peuvent être récupérées à l’aide de l’authentification [sso tabulation.](../tabs/how-to/authentication/auth-aad-sso.md)
+* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Ils sont disponibles dans le cadre de l’activité du bot et du SDK client Teams. En outre, des informations fiables pour l’ID d’utilisateur et l’ID de locataire peuvent être récupérées à l’aide de l’authentification [sso tabulation.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 * `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
-* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `Notification Signal API` .
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `Notification Signal API` .
 
 ## <a name="meeting-apps-api-reference"></a>Référence de l’API des applications de réunion
 
@@ -58,7 +58,7 @@ Pour identifier et récupérer des informations contextuelles pour le contenu de
 |---|---|----|---|
 |**meetingId**| string | Oui | L’identificateur de réunion est disponible via Bot Invoke et le SDK client Teams.|
 |**participantId**| string | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
-|**tenantId**| string | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. |
+|**tenantId**| string | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans le SSO Onglet, l’appel de bot et le SDK client Teams. Il est recommandé d’obtenir un ID de client à partir de l' sso onglet. |
 
 #### <a name="example"></a>Exemple
 
@@ -163,7 +163,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 > [!NOTE]
 > * Le `completionBotId` paramètre est facultatif dans `externalResourceUrl` l’exemple de charge utile demandé. `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 > * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour vous assurer que les dimensions sont dans les limites autorisées, consultez les [instructions de conception.](design/designing-apps-in-meetings.md)
-> * L’URL est la page chargée en tant que dans la boîte de dialogue `<iframe>` de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
+> * L’URL est la page chargée en tant que dans la boîte de `<iframe>` dialogue de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -324,7 +324,7 @@ L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est 
 
 #### <a name="in-meeting-dialog"></a>Boîtes de dialogue en réunion
 
-La boîte de dialogue de réunion peut être utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
+La boîte de dialogue de réunion peut être utilisée pour impliquer les participants au cours de la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
 
 La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher une bulle de contenu dans une réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 
@@ -350,10 +350,10 @@ Les configurations post-réunion et préalable à la réunion sont équivalentes
 
 ## <a name="code-sample"></a>Exemple de code
 
-|Exemple de nom | Description | C# |
-|----------------|-----------------|--------------|
-| Extensibilité des réunions | Exemple d’extensibilité de réunion Microsoft Teams pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
-| Bot de bulles de contenu de réunion | Exemple d’extensibilité de réunion Microsoft Teams pour l’interaction avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+|Exemple de nom | Description | .NET | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Extensibilité des réunions | Exemple d’extensibilité de réunion Microsoft Teams pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| Bot de bulles de contenu de réunion | Exemple d’extensibilité de réunion Microsoft Teams pour l’interaction avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
 ## <a name="see-also"></a>Voir aussi
 
