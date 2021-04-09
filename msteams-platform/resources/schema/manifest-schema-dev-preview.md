@@ -4,12 +4,12 @@ description: Décrit le schéma pris en charge par le manifeste pour Microsoft T
 ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 ms.date: 05/20/2019
-ms.openlocfilehash: 0776ced1704f46c95054308c8a1898ed938e47cb
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: f8c1842d6b9f9d07d8743f5bf7f868cacbd282af
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014102"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634487"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Schéma de manifeste de prévisualisation pour les développeurs pour Microsoft Teams
 
@@ -184,7 +184,18 @@ Pour plus d’informations sur les fonctionnalités disponibles, voir : Fonction
      "contoso.com",
      "mysite.someplace.com",
      "othersite.someplace.com"
-  ]
+  ],
+   "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -257,7 +268,7 @@ Tableau d’objets spécifiant des traductions linguistiques supplémentaires.
 |`languageTag`|4 caractères|✔|Balise de langue des chaînes dans le fichier fourni.|
 |`file`|4 caractères|✔|Chemin d’accès relatif au fichier .json contenant les chaînes traduites.|
 
-## <a name="name"></a>name
+## <a name="name"></a>nom
 
 **Obligatoire**
 
@@ -310,11 +321,11 @@ L’objet est un tableau avec tous les éléments du type `object` . Ce bloc est
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
+|`configurationUrl`|Chaîne|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
-|`scopes`|Tableau de l’énum|1 |✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
-|`sharePointPreviewImage`|String|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|Tableau de l’énum|1 ||Définit la façon dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
+|`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
+|`sharePointPreviewImage`|Chaîne|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
+|`supportedSharePointHosts`|Tableau de l’énum|1||Définit la façon dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -327,10 +338,10 @@ L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité affichée par l’onglet.|
-|`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
-|`contentUrl`|String|2 048 caractères|✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans le canevas Teams.|
-|`websiteUrl`|String|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
-|`scopes`|Tableau de l’énum|1 |✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
+|`contentUrl`|Chaîne|2 048 caractères|✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans le canevas Teams.|
+|`websiteUrl`|Chaîne|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
+|`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 
 ## <a name="bots"></a>bots
 
@@ -350,12 +361,12 @@ L’objet est un tableau (jusqu’à un seul élément actuellement un seul bot 
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Liste facultative de commandes que votre bot peut recommander aux utilisateurs. L’objet est un tableau (maximum de 2 éléments) avec tous les éléments de type ; vous devez définir une liste de commandes distincte pour chaque étendue que votre `object` bot prend en charge. Pour plus [d’informations,](~/bots/how-to/create-a-bot-commands-menu.md) voir les menus du bot.
+Liste facultative de commandes que votre bot peut recommander aux utilisateurs. L’objet est un tableau (maximum de 2 éléments) avec tous les éléments de type ; vous devez définir une liste de commandes distincte pour chaque étendue que `object` votre bot prend en charge. Pour plus [d’informations,](~/bots/how-to/create-a-bot-commands-menu.md) voir les menus du bot.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`items.scopes`|tableau de l’énum|3|✔|Spécifie l’étendue pour laquelle la liste de commandes est valide. Les options sont `team`, `personal` et `groupchat`.|
-|`items.commands`|tableau d’objets|10 |✔|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
+|`items.commands`|tableau d’objets|10 |✔|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
 
 ## <a name="connectors"></a>connecteurs
 
@@ -367,9 +378,9 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2 048 caractères|✔|Url https:// à utiliser lors de la configuration du connecteur.|
-|`connectorId`|String|64 caractères|✔|Identificateur unique du connecteur qui correspond à son ID dans le tableau de bord du [développeur de connecteurs.](https://aka.ms/connectorsdashboard)|
-|`scopes`|Tableau de l’énum|1 |✔|Spécifie si le connecteur offre une expérience dans le contexte d’un canal dans un , ou une expérience limitée à un `team` utilisateur individuel seul ( `personal` ). Actuellement, seule `team` l’étendue est prise en charge.|
+|`configurationUrl`|Chaîne|2 048 caractères|✔|Url https:// à utiliser lors de la configuration du connecteur.|
+|`connectorId`|String|64 caractères|✔|Identificateur unique du connecteur qui correspond à son ID dans le [tableau de bord du développeur de connecteurs.](https://aka.ms/connectorsdashboard)|
+|`scopes`|Tableau de l’énum|1|✔|Spécifie si le connecteur offre une expérience dans le contexte d’un canal dans un , ou une expérience limitée à un `team` utilisateur individuel seul ( `personal` ). Actuellement, seule `team` l’étendue est prise en charge.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -384,9 +395,9 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
+|`botId`|Chaîne|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut `false` est .|
-|`commands`|Tableau d’objets|10 |✔|Tableau de commandes pris en charge par l’extension de messagerie|
+|`commands`|Tableau d’objets|10 |✔|Tableau de commandes pris en charge par l’extension de messagerie|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -398,27 +409,27 @@ Chaque élément de commande est un objet avec la structure suivante :
 |---|---|---|---|---|
 |`id`|String|64 caractères|✔|ID de la commande|
 |`type`|String|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Valeur par défaut : `query`|
-|`title`|String|32 caractères|✔|Nom de la commande conviviale|
-|`description`|String|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande|
+|`title`|Chaîne|32 caractères|✔|Nom de la commande conviviale|
+|`description`|Chaîne|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande|
 |`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
 |`context`|Tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Valeur booléle qui indique si le module de tâche doit être récupéré dynamiquement|
 |`taskInfo`|Objet|||Spécifier le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie|
-|`taskInfo.title`|String|64||Titre de la boîte de dialogue initiale|
-|`taskInfo.width`|String|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite »|
-|`taskInfo.height`|String|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite »|
-|`taskInfo.url`|String|||URL webview initiale|
-|`messageHandlers`|Tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être répertoriés dans `validDomains`|
-|`messageHandlers.type`|String|||Type de handler de messages. Doit être `"link"`.|
+|`taskInfo.title`|Chaîne|64||Titre de la boîte de dialogue initiale|
+|`taskInfo.width`|Chaîne|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite »|
+|`taskInfo.height`|Chaîne|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite »|
+|`taskInfo.url`|Chaîne|||URL webview initiale|
+|`messageHandlers`|Tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être répertoriés dans `validDomains`|
+|`messageHandlers.type`|Chaîne|||Type de handler de messages. Doit être `"link"`.|
 |`messageHandlers.value.domains`|Tableau de chaînes|||Tableau de domaines pour l’inscription du handler de message de lien.|
-|`parameters`|Tableau d’objets|5 |✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5|
+|`parameters`|Tableau d’objets|5 |✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5|
 |`parameter.name`|String|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Ceci est inclus dans la demande de l’utilisateur.|
-|`parameter.title`|String|32 caractères|✔|Titre convivial du paramètre.|
-|`parameter.description`|String|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
-|`parameter.inputType`|String|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . `text`L’un des , , `textarea` `number` `date` , `time` `toggle``choiceset`|
-|`parameter.choices`|Tableau d’objets|10 ||Options de choix pour `choiceset` le . Utiliser uniquement lorsque `parameter.inputType` c’est le cas `choiceset`|
-|`parameter.choices.title`|String|128||Titre du choix|
-|`parameter.choices.value`|String|512||Valeur du choix|
+|`parameter.title`|Chaîne|32 caractères|✔|Titre convivial du paramètre.|
+|`parameter.description`|Chaîne|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
+|`parameter.inputType`|Chaîne|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . `text`L’un des , , , , `textarea` `number` `date` `time` `toggle` ,`choiceset`|
+|`parameter.choices`|Tableau d’objets|10 ||Options de choix pour `choiceset` le . Utiliser uniquement lorsque `parameter.inputType` c’est le cas `choiceset`|
+|`parameter.choices.title`|Chaîne|128||Titre du choix|
+|`parameter.choices.value`|Chaîne|512||Valeur du choix|
 
 ## <a name="permissions"></a>autorisations
 
@@ -452,7 +463,7 @@ Liste des domaines valides à partir des lesquels l’application s’attend à 
 **Toutefois, il** n’est pas nécessaire d’inclure les domaines des fournisseurs d’identité que vous souhaitez prendre en charge dans votre application. Par exemple, pour vous authentifier à l’aide d’un ID Google, il est nécessaire de rediriger vers accounts.google.com, mais vous ne devez pas inclure accounts.google.com dans `validDomains[]` .
 
 > [!IMPORTANT]
-> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` non valide.
+> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide.
 
 L’objet est un tableau avec tous les éléments du type `string` .
 
@@ -464,5 +475,28 @@ Spécifiez votre ID d’application AAD et les informations Graph pour aider les
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|String|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|String|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso.|
+|`id`|Chaîne|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
+|`resource`|Chaîne|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso.|
+
+## <a name="configurableproperties"></a>configurableProperties
+
+**Facultatif** - tableau
+
+Le `configurableProperties` bloc définit les propriétés d’application que l’administrateur Teams peut personnaliser. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
+
+> [!NOTE]
+> Au moins une propriété doit être définie. Vous pouvez définir un maximum de neuf propriétés dans ce bloc.
+> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. 
+
+Vous pouvez définir l’une des propriétés suivantes :
+* `name`: permet à l’administrateur de modifier le nom complet de l’application.
+* `shortDescription`: permet à l’administrateur de modifier la description courte de l’application.
+* `longDescription`: permet à l’administrateur de modifier la description détaillée de l’application.
+* `smallImageUrl`: il `outline` s’agit de la propriété dans le bloc du `icons` manifeste.
+* `largeImageUrl`: il s’agit `color` de la propriété dans le bloc du `icons` manifeste.
+* `accentColor`: il s’agit de la couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
+* `developerUrl`: il s’agit https:// URL du site web du développeur.
+* `privacyUrl`: il s’agit https:// URL de la politique de confidentialité du développeur.
+* `termsOfUseUrl`: il s’agit https:// URL des conditions d’utilisation du développeur.
+
+

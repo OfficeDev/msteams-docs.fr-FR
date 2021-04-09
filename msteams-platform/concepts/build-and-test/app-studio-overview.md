@@ -3,12 +3,12 @@ title: Prise en main de App Studio dans Microsoft Teams
 description: Prise en main de la création de superbes applications dans Microsoft Teams à l’aide d’App Studio
 keywords: mise en place d’app studio teams
 ms.topic: overview
-ms.openlocfilehash: ca7d777458c8c8f9646d7e862f7a5b83059c21f3
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
+ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713395"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634508"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Développez rapidement des applications avec App Studio pour Microsoft Teams
 
@@ -34,6 +34,8 @@ Une fois dans App Studio, cliquez sur l’onglet *Éditeur de manifeste* dans le
 
 ## <a name="app-studio-features"></a>Fonctionnalités d’App Studio
 
+Cette section traite des fonctionnalités, telles que la conversation, l’éditeur de manifeste, les détails et les fonctionnalités. Vous pouvez personnaliser vos fonctionnalités à l’aide de la personnalisation de l’application.
+
 ### <a name="conversation"></a>Conversation
 
 C’est l’endroit où vous pouvez voir à quoi ressemblent les [cartes de visite que vous créez dans App Studio](#card-editor) dans Teams lorsque vous les testez en les envoyant vous-même.
@@ -52,6 +54,12 @@ La section détails de l’Éditeur de manifeste définit la description génér
 
 La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fonctionnalités de l'application sont définies et où les détails de chacune de ces fonctionnalités sont énumérés.
 
+> [!NOTE]
+> La fonctionnalité de personnalisation de l’application est actuellement disponible en prévisualisation pour les développeurs uniquement.
+> 
+> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
+
+
 ##### <a name="tabs"></a>Onglets
 
 * **Onglets d’équipe.** Un onglet d’équipe devient un canal et permet d’accéder rapidement aux informations et ressources de l’équipe. Par exemple, l’onglet Planificateur d’un canal contient un seul plan. L’onglet Power BI correspond à un rapport spécifique. Les utilisateurs peuvent explorer le contexte approprié, mais ils ne peuvent pas naviguer en dehors de l’onglet. Par exemple, l’onglet Power BI n’active pas la navigation vers les autres rapports Power BI, mais il active le bouton *Accéder au site web* qui lance le rapport dans le site web principal de Power BI.
@@ -68,13 +76,17 @@ Cette section vous permet d’ajouter un [bot conversation](~/bots/what-are-bots
 
 Si vous n’avez pas encore inscrit un bot auprès de Bot Framework, cliquez sur *s'inscrire* pour en créer un autre. Une fois que vous avez inscrit votre bot, revenez à cette section de l’Éditeur manifeste pour entrer son nom et l’ID Bot Framework.
 
-Une fois que vous avez fourni les informations de votre bot, vous pouvez désormais définir de manière facultative une liste de commandes que votre robot peut suggérer aux utilisateurs. Ajoutez le nom de la commande, une description de celle-ci qui indique sa syntaxe et ses arguments, ainsi que l’étendue à laquelle cette commande doit s’appliquer.
+Une fois que vous avez fourni les informations de votre bot, vous pouvez éventuellement définir une liste de commandes que votre bot peut suggérer aux utilisateurs. Ajoutez le nom de la commande, une description de celle-ci qui indique sa syntaxe et ses arguments, ainsi que l’étendue à laquelle cette commande doit s’appliquer.
 
 Notez que si vous avez défini votre bot pour prendre en charge une seule étendue, les commandes spécifiées pour l’étendue non prise en charge seront ignorées. Vous pouvez modifier les étendues que votre bot prend en charge à tout moment.
 
 ##### <a name="connectors"></a>Connecteurs
 
 Cette section vous permet d’ajouter un connecteur à votre application. Si vous avez déjà inscrit un connecteur Office 365, sélectionnez *Configurer* puis entrez le nom et l’ID du connecteur. Si vous voulez un nouveau connecteur, cliquez sur *S'inscrire* pour accéder au tableau de bord du développeur de connecteurs dans votre navigateur.
+
+> [!NOTE]
+> La personnalisation d’application permet aux administrateurs de modifier l’apparence des applications chargées par le biais de bots, d’extensions de messagerie, d’onglets et de connecteurs. Par exemple, si l’administrateur Teams personnalise le nom d’une application de *Contoso* à *Agent Contoso,* l’application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l’ajout d’un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l’application en tant *que Contoso*.
+
 
 ##### <a name="messaging-extensions"></a>Extensions de messagerie
 

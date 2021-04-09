@@ -4,12 +4,12 @@ description: Décrit le schéma de manifeste pour Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: schéma de manifeste teams
-ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585840"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634522"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -277,7 +277,11 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité.
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -409,7 +413,7 @@ Utilisé lorsque l’expérience de votre application possède une expérience d
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut **: true**.|
 |`context` |tableau d’enums|6 ||Ensemble `contextItem` d’étendues où un onglet est pris en charge. Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
+|`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -438,7 +442,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 
 Définit une solution bot, ainsi que des informations facultatives telles que les propriétés de commande par défaut.
 
-L’élément est un tableau (jusqu’à un seul élément actuellement un seul bot est autorisé par application) avec tous les &mdash; éléments du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
+L’élément est un tableau (maximum de 1 élément actuellement un seul bot est autorisé par application) avec tous les éléments &mdash; du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -493,7 +497,7 @@ L’élément est un tableau (maximum de 1 élément) avec tous les éléments d
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à l’ID d’application global.|
+|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à l’ID d’application global.|
 |`commands`|tableau d’objets|10 |✔|Tableau de commandes pris en charge par l’extension de messagerie|
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
@@ -525,7 +529,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameters.title`|string|32 caractères|✔|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre.|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’un `text, textarea, number, date, time, toggle, choiceset` des .|
+|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’une `text, textarea, number, date, time, toggle, choiceset` des .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
 |`parameters.choices.title`|string|128 caractères|✔|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔|Valeur du choix.|
@@ -577,7 +581,7 @@ Fournissez votre ID d’application Azure Active Directory (AAD) et des informat
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l’oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -658,5 +662,5 @@ Définissez les propriétés que votre application utilise pour publier un flux 
 ```
 
 ***
->
->
+
+

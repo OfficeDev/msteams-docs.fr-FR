@@ -3,19 +3,19 @@ title: Créer une page de détails d’application de qualité
 description: Décrit les conditions requises pour la page de détails de l’application
 ms.topic: reference
 keywords: teams publish store office publishing policy AppSource content Metadata screenshot logo description app name icons short description
-ms.openlocfilehash: fa3086c92f69b74f7b0669ea26a6162ac3acc5c2
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: e7513fbb4ed2e56844931d1a587b6ee062e014a4
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014221"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634543"
 ---
-# <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application excellente
+# <a name="build-a-great-app-details-page"></a>Créer une page de détails d’application de qualité
 
 La page de détails présente la première impression de votre application aux utilisateurs. Chaque élément de votre page de détails peut être utilisé pour transmettre votre vision et vos téléchargements de disques, envisagez la façon dont vous souhaitez présenter votre application dans un espace limité. Voici quelques conseils et astuces pour vous aider à impliquer vos utilisateurs avant même qu’ils n’installent votre application.
 
 > [!NOTE]
-> Assurez-vous que les informations de votre application suivent nos [instructions AppSource pour créer une liste efficace dans le Store.](/office/dev/store/create-effective-office-store-listings)
+> Assurez-vous que les informations de votre application suivent [nos instructions AppSource pour créer une liste efficace dans le Store.](/office/dev/store/create-effective-office-store-listings)
 
 ## <a name="app-name"></a>Nom de l'application
 
@@ -85,7 +85,7 @@ Il s’agit d’un résumé concis de votre application. Il est donc essentiel d
 * Mettez les informations les plus importantes en premier.
 * Incluez des mots clés que les clients sont susceptibles de rechercher.
 * Si vous devez mentionner Microsoft Teams, la première mention de Microsoft Teams doit être écrite en intégralité en tant *que Microsoft Teams.* Si Teams est mentionné à nouveau dans la même description, le nom peut être raccourci à *Teams.*
-* Toute référence à Microsoft ou Microsoft Teams peut faire partie de la description et doit respecter les normes et directives de marque de Microsoft.
+* Toute référence à Microsoft ou Microsoft Teams peut faire partie de la description et doit respecter les normes et instructions de marque de Microsoft.
 * Toutes les descriptions doivent être grammaticalement correctes sans erreur de langue.
 * Évitez d’utiliser inutilement des majuscules, par exemple, en indiquant « Utilisateurs » au lieu de « utilisateurs ».
 
@@ -97,7 +97,7 @@ Il s’agit d’un résumé concis de votre application. Il est donc essentiel d
 * Évitez toute référence inutile aux noms de produits Microsoft sauf si cela est absolument nécessaire.
 * N’indiquez pas ou n’impliquez pas que l’application est une offre de Microsoft.
 * N’utilisez pas les noms de marque protégés par des droits d’auteur que vous ne possédez pas.
-* N’utilisez pas « pour Teams » sous un nom court.
+* N’utilisez pas « for Teams » dans un nom court.
 
 ![Affichage Magasin de description courte](~/assets/images/store-detail-page/ShortDescription-02.png)
 
@@ -124,10 +124,10 @@ Voici une vue dans [App Studio](https://aka.ms/InstallTeamsAppStudio):
 * "... développé pour...
 * "... conçu pour...
 
-> **Remarque**: les termes ci-dessus s’appliquent également à l’utilisation de Microsoft 365. Office 365 est désormais appelé Microsoft 365. Mettez à jour les descriptions de votre application pour refléter cela.
+> **Remarque**: les termes ci-dessus s’appliquent également à l’utilisation de Microsoft 365. Office 365 s’appelle désormais Microsoft 365. Mettez à jour les descriptions de votre application pour refléter cela.
 
 >[!IMPORTANT]
-> Veillez à copier précisément les descriptions que vous avez écrites dans votre entrée AppSource dans le manifeste de votre application . Les valeurs doivent correspondre. Microsoft Teams utilise uniquement les descriptions que vous fournissez dans le manifeste de l’application.
+> Veillez à copier précisément les descriptions que vous avez écrites dans votre entrée AppSource dans le manifeste de votre application ; les valeurs doivent correspondre. Microsoft Teams utilise uniquement les descriptions que vous fournissez dans le manifeste de l’application.
 
 **À faire :**
 
@@ -146,7 +146,7 @@ Voici une vue dans [App Studio](https://aka.ms/InstallTeamsAppStudio):
 >[!NOTE]
 > Microsoft Teams prend en charge la syntaxe Markdown suivante :  
 > **Liens**. `[title](url/address/here)`.  
->**Images** `![alt text](url/address/here)` . .  
+>**Images**. `![alt text](url/address/here)` .  
 > **Gras**. `**bold text**`   `__bold text__`.  
 > **Italique**. `*italicized text*`  `_italicized text`.  
 >**[Listes ordonnées](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
@@ -155,7 +155,7 @@ Voici une vue dans [App Studio](https://aka.ms/InstallTeamsAppStudio):
 <br>`1.third`<br>
 >**[Liste non réordée](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
 ` - short` <br>`- bulleted` <br>`- list`<br>
->**Nouvelle ligne**. `Place <br> at the end of a line.` <br> 
+>**Nouvelle ligne**. Utilisez un `\n` caractère pour désigner une nouvelle ligne.
  >**Échappez.** Utilisez une barre oblique inverse inline pour éviter les caractères spéciaux. `\*asterisk`.
 
 **Exemple au format Markdown**
@@ -194,15 +194,15 @@ Voici une vue dans [App Studio](https://aka.ms/InstallTeamsAppStudio):
 
 ## <a name="screenshots"></a>Captures d’écran
 
-Les captures d’écran téléchargées sur [l’Partner Center](https://partner.microsoft.com) sont affichées dans [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) et dans la liste de votre application dans le client Teams. Ils fournissent un aperçu visuel de votre application, ainsi que la description de votre application.
-Vous pouvez fournir une à cinq captures d’écran au format .png, .jpg ou .gif. Les captures d’écran doivent être de 1 366 x 768 pixels avec une taille maximale de 1 024 Ko.
+Les captures d’écran téléchargées sur [l’Partner Center](https://partner.microsoft.com) sont affichées à la fois dans [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) et dans la liste de votre application dans le client Teams. Ils fournissent un aperçu visuel de votre application, ainsi que la description de votre application.
+Vous pouvez fournir une à cinq captures d’écran formatées en tant que fichiers .png, .jpg ou .gif. Les captures d’écran doivent être de 1 366 x 768 pixels avec une taille maximale de 1 024 Ko.
 
 **À faire :**
 
 * Concentrez-vous sur la mise en surbrillance de toutes les fonctionnalités de votre application.
 * Le contenu doit représenter précisément votre application.
 * Le texte doit être bien rempli sans être excessif.
-* Vous pouvez entourer vos captures d’écran d’une couleur d’arrière-plan et ajouter du contenu marketing semblable à l’exemple [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) ; Toutefois, les dimensions ne seront pas de la capture d’écran seule, mais incluront l’image globale.
+* Vous pouvez entourer vos captures d’écran d’une couleur d’arrière-plan et ajouter du contenu marketing semblable à [l’exemple Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) ; Toutefois, les dimensions ne seront pas de la capture d’écran seule, mais incluront l’image globale.
 
 <img width="800px" alt="Freshdesk screenshot" src="../../../../assets/images/freshdesk.png" />
 
@@ -211,7 +211,7 @@ Vous pouvez fournir une à cinq captures d’écran au format .png, .jpg ou .gif
 * N’affichez pas d’appareils spécifiques, tels que des téléphones ou des ordinateurs portables.
 * N’affichez aucun chrome/interface utilisateur en dehors de votre application.
 * Ne capturez aucune interface utilisateur teams ou de navigateur dans vos captures d’écran.
-* N’incluez pas de maquettes qui reflètent incorrectement l’interface utilisateur réelle de vos applications, par exemple l’affichage de votre site web au lieu de votre onglet Teams.
+* N’incluez pas de maquettes qui reflètent de manière incorrecte l’interface utilisateur réelle de vos applications, comme l’affichage de votre site web au lieu de l’onglet Teams.
 
 Pour plus d’informations sur les meilleures pratiques, *voir*: [Création d’images efficaces du Magasin AppSource.](/office/dev/store/craft-effective-appsource-store-images)
 

@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Comment s’abonner à des événements de conversation à partir de votre bot Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: b4dc70e4619043bd0b675206770093b086fc5ec6
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: bc4ae36d8cffe5b19ee778a71e1c7b1c00c5e88c
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014319"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634501"
 ---
 # <a name="subscribe-to-conversation-events"></a>S’abonner à des événements de conversation
 
@@ -27,7 +27,7 @@ Microsoft Teams envoie des notifications à votre robot pour les événements qu
 > [!Important]
 > De nouveaux événements peuvent être ajoutés à tout moment et votre bot commence à les recevoir.
 > Vous devez concevoir la possibilité de recevoir des événements inattendus.
-> Si vous utilisez le SDK Bot Framework, votre bot répond automatiquement à tous les événements que vous ne `200 - OK` choisissez pas de gérer.
+> Si vous utilisez le SDK Bot Framework, votre bot répondra automatiquement aux événements que vous ne choisissez `200 - OK` pas de gérer.
 
 Un robot reçoit un événement `conversationUpdate` une fois qu’il a été ajouté à une conversation, les autres membres ont été ajoutés à une conversation ou supprimés de celle-ci, ou les métadonnées de conversation ont changé.
 
@@ -494,11 +494,11 @@ Il s’agit du message que votre bot reçoit lorsque le bot est ajouté * à une
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -525,13 +525,13 @@ async def on_teams_members_added(
     return
 ```
 
-_ * *
+* * *
 
 ### <a name="team-members-removed"></a>Membres d’équipe supprimés
 
 L’événement est envoyé à votre bot s’il est supprimé d’une équipe et chaque fois qu’un utilisateur est supprimé d’une équipe dont il `teamMemberRemoved` est membre. Vous pouvez déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur en regardant `Activity` l’objet du `turnContext` .  Si le champ de l’objet est identique au champ de l’objet, le membre supprimé est le bot, sinon, il s’agit `Id` `MembersRemoved` `Id` `Recipient` d’un utilisateur.  Le bot est `Id` généralement : `28:<MicrosoftAppId>`
 
-[!Note] Lorsqu’un utilisateur est supprimé définitivement d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
+[!Note] Lorsqu’un utilisateur est définitivement supprimé d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -790,7 +790,7 @@ async def on_teams_team_deleted(
 
 ### <a name="team-restored"></a>Équipe restaurée
 
-Le bot reçoit une notification lorsqu’il est restauré à partir de la suppression. Il reçoit un `conversationUpdate` événement avec `eventType.teamrestored` dans `channelData` l’objet.
+Le bot reçoit une notification lorsque l’équipe est restaurée à partir de la suppression. Le bot reçoit un `conversationUpdate` événement avec `eventType.teamrestored` dans `channelData` l’objet.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -947,7 +947,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>Équipe nonarchived
 
-Le bot reçoit une notification lorsque l’équipe dans qui il est installé n’est pasarchive. Il reçoit un `conversationUpdate` événement avec `eventType.teamUnarchived` dans `channelData` l’objet.
+Le bot reçoit une notification lorsque l’équipe dans qui il est installé n’est pasarchived. Il reçoit un `conversationUpdate` événement avec `eventType.teamUnarchived` dans `channelData` l’objet.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -1249,6 +1249,7 @@ async def on_reactions_removed(
 * * *
 
 ## <a name="samples"></a>Exemples
+
 Pour obtenir un exemple de code montrant les événements de conversation de bots, voir :
 
 [Exemple d’événements de conversation de bots Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)

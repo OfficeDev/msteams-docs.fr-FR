@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Découvrez comment concevoir des applications Microsoft Teams. Les ressources incluent le Kit d’interface utilisateur Microsoft Teams, les meilleures pratiques, des exemples et bien plus encore.
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 0c791b1e4733cd2a015e443ca5c4d0c433dd4d31
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 7a6786cdf9091b04f89ebd6c8bb03799eb7d127a
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911904"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634494"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams
 
@@ -19,14 +19,14 @@ Que vous êtes concepteur, chef de produit, développeur ou fabricant à l’aid
 
 ## <a name="teams-app-design-principles"></a>Principes de conception d’application Teams
 
-Les applications Teams aident les personnes à s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
+Les applications Teams aident les personnes à réussir plus ensemble. Utilisez ces principes pour guider votre conception.
 
 :::row:::
    :::column span="":::
 
 ### <a name="collaborative"></a>Collaboration
 
-Les applications Teams aident les personnes à s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
+Les applications Teams aident les personnes à réussir plus ensemble. Utilisez ces principes pour guider votre conception.
 
    :::column-end:::
    :::column span="":::
@@ -108,7 +108,7 @@ Le texte, les icônes et les images montrent clairement à quoi l’application 
 
 ## <a name="creating-a-cohesive-experience"></a>Création d’une expérience cohérente
 
-La conception d’une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement avec les fonctionnalités et contextes Teams.
+La conception d’une application Teams s’approche de la conception d’une application web classique, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement avec les fonctionnalités et contextes Teams.
 
 Ces instructions et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
 
@@ -137,12 +137,23 @@ Comprendre comment les personnes ajoutent, utilisent et gèrent des applications
 * [Extensions de messagerie](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Extensions de réunion](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Modules de tâche](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Modules de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md)
+
+## <a name="app-customization"></a>Personnalisation de l’application
+
+Comprendre comment l’administrateur Teams peut personnaliser ou renommer l’application en fonction des besoins de l’organisation. Cette personnalisation est activée si vous définissez le `configurableProperties` schéma de manifeste. Pour plus d’informations, voir [Personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
+
+> [!NOTE]
+> Cette fonctionnalité est actuellement disponible en prévisualisation pour les développeurs uniquement.
+> 
+> La personnalisation d’application permet aux administrateurs de modifier l’apparence des applications chargées par le biais de bots, d’extensions de messagerie, d’onglets et de connecteurs. Par exemple, si l’administrateur Teams personnalise le nom d’une application de *Contoso* à *Agent Contoso,* l’application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l’ajout d’un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l’application en tant *que Contoso*.
+> 
+> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
 
 ## <a name="tools-and-samples"></a>Outils et exemples
 
-Les outils suivants peuvent aider les concepteurs et les développeurs à démarrer.
+Les outils suivants peuvent aider les concepteurs et les développeurs à démarrer :
 
 ### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur Microsoft Teams
 
