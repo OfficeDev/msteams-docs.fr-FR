@@ -1,76 +1,76 @@
 ---
-title: Obtenir le contexte de votre onglet
-description: Indique comment obtenir le contexte utilisateur dans vos onglets
-keywords: contexte utilisateur des onglets teams
-ms.openlocfilehash: 5c52e6eea21f0c059f3cd650770e1076f903fb8e
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
-ms.translationtype: MT
+title: Obtenir un contexte Teams pour votre onglet
+description: Décrit comment obtenir du contexte utilisateur dans vos onglets
+keywords: Contexte utilisateur sous l’onglet Équipes
+ms.openlocfilehash: 18c8541e948f206fcdddc3a942325e2f5d6e3e5c
+ms.sourcegitcommit: 309823e6911b4e8e307493cbd59880fe69a4dca3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552436"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "49727162"
 ---
-# <a name="get-context-for-your-microsoft-teams-tab"></a>Obtenir le contexte de votre onglet Microsoft teams
+# <a name="get-context-for-your-microsoft-teams-tab"></a>Obtenir un contexte pour votre onglet Microsoft Teams
 
-Votre onglet peut nécessiter des informations contextuelles pour afficher le contenu pertinent.
+Votre onglet peut nécessiter des informations contextuelles pour afficher du contenu pertinent.
 
-* L’onglet peut nécessiter des informations de base sur l’utilisateur, l’équipe ou la société.
-* L’onglet peut nécessiter des paramètres régionaux et des informations sur les thèmes.
-* Il se peut que votre onglet doive lire le `entityId` ou `subEntityId` identifie le contenu de cet onglet.
+* Votre onglet peut nécessiter des informations de base sur l’utilisateur, l’équipe ou la société.
+* Votre onglet peut nécessiter des informations sur les paramètres régionaux et le thème.
+* Il se peut que votre onglet devra lire le `entityId` ou `subEntityId` qui identifie ce qui se trouve dans cet onglet.
 
 ## <a name="user-context"></a>Contexte utilisateur
 
-Le contexte de l’utilisateur, de l’équipe ou de la société peut être particulièrement utile lorsque
+Le contexte sur l’utilisateur, l’équipe ou l’entreprise peut être particulièrement utile lorsque
 
-* Vous devez créer ou associer des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
-* Vous souhaitez lancer un flux d’authentification auprès d’Azure Active Directory ou d’un autre fournisseur d’identité, et vous ne voulez pas demander à l’utilisateur de saisir de nouveau son nom d’utilisateur. (Pour plus d’informations sur l’authentification au sein de votre onglet Microsoft Teams, consultez la rubrique [authentifier un utilisateur sous votre onglet Microsoft teams](~/concepts/authentication/authentication.md).)
+* Vous devez créer ou associer des ressources dans votre application à l’utilisateur ou l’équipe spécifié.
+* Vous voulez démarrer un flux d’authentification sur Azure Active Directory ou un autre fournisseur d’identité et vous ne voulez pas demander à l’utilisateur d’entrer de nouveau son nom d’utilisateur. (Pour plus d’informations sur l’authentification dans votre onglet Microsoft Teams, consultez [Authentifier un utilisateur dans l’onglet Microsoft Teams](~/concepts/authentication/authentication.md).)
 
 > [!IMPORTANT]
-> Bien que ces informations utilisateur permettent d’assurer une expérience utilisateur sans complication, vous ne devez *pas* l’utiliser comme preuve d’identité. Par exemple, un agresseur pourrait charger votre page dans un « navigateur incorrect » et afficher des informations ou des demandes nuisibles.
+> Bien que ces informations utilisateur contribuent à faciliter l’expérience utilisateur, vous ne devez *pas* l’utiliser comme preuve d’identité. Par exemple, un utilisateur malveillant peut charger votre page dans un « navigateur malveillant » et rendre des informations ou demandes potentiellement dangereuses.
 
-## <a name="accessing-context"></a>Contexte d’accès
+## <a name="accessing-context"></a>Accès au contexte
 
-Vous pouvez accéder aux informations de contexte de deux manières :
+Vous pouvez accéder aux informations de contexte de deux façons :
 
-* Insérer des valeurs d’espace réservé d’URL
-* Utiliser le [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client)
+* Insérer les valeurs des espaces réservés des URL
+* Utiliser le [kit de développement logiciel (SDK) du client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client)
 
-### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obtenir le contexte en insérant des valeurs d’espace réservé URL
+### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obtenir du contexte en insérant des valeurs d’espace réservé d’URL
 
-Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft teams remplace les espaces réservés par les valeurs appropriées lors de la détermination de l’URL de contenu ou de configuration réelle. Les espaces réservés disponibles incluent tous les champs de l’objet de [contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) . Les espaces réservés courants sont les suivants :
+Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft Teams remplace les espaces réservés par les valeurs appropriées lorsqu’il détermine l’URL de configuration ou de contenu. Les espaces réservé disponibles incluent tous les champs de l’objet [Contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Voici les scénarios les plus courants :
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
-* {subEntityId} : ID que vous avez fourni lors de la génération d’un [lien profond](~/concepts/build-and-test/deep-links.md) pour un élément spécifique _dans_ cet onglet. Il doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, faire défiler ou activer une partie de contenu spécifique.
-* {loginHint} : valeur appropriée en tant qu’indication de connexion pour Azure AD. Il s’agit généralement du nom de connexion de l’utilisateur actuel, dans son client d’origine.
+* {subEntityId} : ID que vous avez fourni lors de la génération d’un [lien ciblé](~/concepts/build-and-test/deep-links.md) pour un élément spécifique _dans_ cet onglet. Elle doit être utilisée pour restaurer un état spécifique au sein d’une entité. par exemple, le défilement vers un contenu spécifique ou l’activation d’un contenu spécifique.
+* {loginHint} : valeur appropriée comme indication de connexion pour Azure AD. Il s’agit généralement du nom de connexion de l’utilisateur actuel, dans son client.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel, dans le client actuel.
-* {userObjectId} : ID d’objet Azure AD de l’utilisateur actuel, dans le client actuel.
-* {Theme} : le thème de l’interface utilisateur actuel, `default` `dark` , ou `contrast` .
-* {groupId} : ID du groupe Office 365 dans lequel réside l’onglet.
-* {TID} : ID de client Azure AD de l’utilisateur actuel.
-* {locale} : paramètres régionaux actuels de l’utilisateur mis en forme en tant que languageId-countryId (par exemple, en-US).
+* {userObjectId} : ID d’objet Azure AD de l’utilisateur actuel dans le locataire actuel.
+* {theme} : le thème d’interface utilisateur actuel, tel `default`, `dark`ou `contrast`.
+* {groupId} : ID du groupe Office 365 dans lequel se trouve l’onglet.
+* {tid}: ID de client Azure AD de l’utilisateur actuel.
+* {locale} : paramètres régionaux actuels de l’utilisateur au format LanguageId-countryId (par exemple, fr-fr).
 
 >[!NOTE]
->L' `{upn}` espace réservé précédent est maintenant obsolète. Pour des raisons de compatibilité descendante, il s’agit actuellement d’un synonyme de `{loginHint}` .
+>L’espace réservé `{upn}`précédent est désormais supprimé. Pour des raisons de compatibilité ascendante, il s'agit actuellement d'un synonyme de `{loginHint}`.
 
-Par exemple, supposons dans votre manifeste d’onglets que vous avez défini l' `configURL` attribut sur
+Par exemple, supposons que dans votre manifeste d'onglet, vous définissez l'attribut `configURL` sur
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
-Et l’utilisateur connecté possède les attributs suivants :
+L’utilisateur connecté possède les attributs suivants :
 
-* Le nom d’utilisateur est « user@example.com ».
-* L’ID de client de son entreprise est « e2653c-etc »
-* Il s’agit d’un membre du groupe Office 365 avec l’ID « 00209384-etc. »
-* L’utilisateur a défini son thème teams sur « Dark »
+* Leur nom d’utilisateur est « user@example.com »
+* L’ID de locataire de l’entreprise est « e2653c-etc. »
+* Ils sont membres du groupe Office 365 avec l’ID « 00209384- etc. »
+* L'utilisateur a défini son thème Teams sur « foncé »
 
-Lorsqu’ils configurent votre onglet, teams appelle cette URL :
+Lorsqu’ils configurent votre onglet, Teams appelle cette URL :
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Obtention de contexte à l’aide de la bibliothèque JavaScript Microsoft teams
+### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Obtenir du contexte à l’aide de la bibliothèque JavaScript de Microsoft Teams
 
-Vous pouvez également récupérer les informations ci-dessus à l’aide du [Kit de développement logiciel (SDK) JavaScript client Microsoft teams](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })` .
+Vous pouvez également extraire les informations mentionnées ci-dessus à l’aide du client [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-La variable de contexte se présente comme dans l’exemple suivant.
+La variable de contexte ressemblera à l’exemple suivant.
 
 ```json
 {
@@ -78,42 +78,59 @@ La variable de contexte se présente comme dans l’exemple suivant.
     "teamName": "The name of the current team",
     "channelId": "The channel ID in the format 19:[id]@thread.skype",
     "channelName": "The name of the current channel",
-    "chatId": "The chat ID in the in the format 19:[id]@thread.skype",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
     "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
-    "userPrincipalName": "The User Principal Name of the current user, in the current tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current O365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
-    "isFullScreen": "Indicates whether the tab is in full-screen mode",
-    "userLicenseType": "Indicates the user licence type in the given SKU (for example, student or teacher)",
-    "tenantSKU": "Indicates the SKU category of the tenant (for example, EDU)",
-    "channelType": "microsoftTeams.ChannelType.Private | microsoftTeams.ChannelType.Regular"
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
 }
 ```
 
-## <a name="retrieving-context-in-private-channels"></a>Récupération du contexte dans les canaux privés
+## <a name="retrieving-context-in-private-channels"></a>Récupération de contexte dans les canaux privés
 
 > [!Note]
-> Les canaux privés sont actuellement en version préliminaire pour les développeurs privés.
+> Les canaux privés sont actuellement en prévisualisation du développeur privé.
 
-Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l' `getContext` appel seront obscurcies pour protéger la confidentialité du canal. Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé. Si votre page utilise l’une des valeurs ci-dessous, vous devez vérifier le `channelType` champ afin de déterminer si votre page est chargée dans un canal privé et de répondre de manière appropriée.
+Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l’appel `getContext` sont masquées pour protéger la confidentialité du canal. Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé. Si votre page utilise l’une des valeurs ci-dessous, vous devez vérifier le champ `channelType` pour déterminer si votre page est chargée dans un canal privé et y répondre de façon appropriée.
 
-* `groupId` -Non défini pour les canaux privés
-* `teamId` -Défini sur le threadId du canal privé
-* `teamName` -Défini sur le nom du canal privé
-* `teamSiteUrl` -Défini sur l’URL d’un site SharePoint distinct unique pour le canal privé
-* `teamSitePath` -Défini sur le chemin d’accès à un site SharePoint distinct unique pour le canal privé
-* `teamSiteDomain` -Défini sur le domaine d’un domaine de site SharePoint distinct unique pour le canal privé
+* `groupId` : non définie pour les canaux privés
+* `teamId` : définir le threadId du canal privé
+* `teamName` : définir le nom du canal privé
+* `teamSiteUrl` : définir l’URL d’un site SharePoint distinct et unique pour le canal privé
+* `teamSitePath` : définir le chemin d'accès d’un site SharePoint distinct et unique pour le canal privé
+* `teamSiteDomain` : définir le domaine d’un domaine de site SharePoint distinct et unique pour le canal privé
 
 > [!Note]
->  teamSiteUrl fonctionne également pour les canaux standard.
+>  teamSiteUrl fonctionne également bien pour les canaux standard.
 
-## <a name="theme-change-handling"></a>Gestion des modifications de thème
+## <a name="theme-change-handling"></a>Gestion des changements de thème
 
-Vous pouvez inscrire votre application pour être informée si le thème change en appelant `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` .
+Vous pouvez enregistrer votre application pour vous faire savoir si le thème change en appelant `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-L' `theme` argument de la fonction sera une chaîne avec la valeur `default` , `dark` ou `contrast` .
+L’`theme`argument de la fonction est une chaîne qui a une valeur `default`, `dark`ou `contrast`.

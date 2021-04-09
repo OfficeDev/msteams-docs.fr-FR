@@ -350,6 +350,8 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Tester votre application
   items:
+    - name: Présentation
+      href: concepts/build-and-test/test-app-overview.md
     - name: "Préparer votre client Microsoft Office\_365"
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: Choix d’une configuration de test
