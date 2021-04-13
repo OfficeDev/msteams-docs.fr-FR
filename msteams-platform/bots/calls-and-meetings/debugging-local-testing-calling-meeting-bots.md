@@ -4,12 +4,12 @@ description: Découvrez comment vous pouvez également utiliser ngrok pour déve
 ms.topic: how-to
 keywords: tunnel ngrok de développement local
 ms.date: 11/18/2018
-ms.openlocfilehash: d61c380fda941618a769ad3fffa053b2a4800de9
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634726"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654285"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Développer des bots d’appels et de réunion en ligne sur votre PC local
 
@@ -19,7 +19,7 @@ Les bots de messagerie utilisent le protocole HTTP, mais les appels et les bots 
 
 ## <a name="configure-ngrokyml"></a>Configurer ngrok.yml
 
-Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. Une fois que vous êtes inscrit, allez dans le tableau [de bord](https://dashboard.ngrok.com) et obtenez votre authtoken.
+Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. Une fois que vous vous êtes inscrit, allez dans le tableau [de bord](https://dashboard.ngrok.com) et obtenez votre jeton d’th.
 
 Créez un fichier de configuration ngrok `ngrok.yml` et ajoutez la ligne suivante. Pour plus d’informations sur l’emplacement du fichier, voir [ngrok](https://ngrok.com/docs#config):
 
@@ -47,7 +47,7 @@ Le média hébergé par l’application utilise des certificats et des tunnel TC
 
 1. Les points de terminaison TCP publics de Ngrok ont des URL fixes. Ils `0.tcp.ngrok.io` `1.tcp.ngrok.io` sont, et ainsi de suite. Vous devez avoir une entrée CNAME DNS pour votre service qui pointe vers ces URL. Par exemple, supposons que `0.bot.contoso.com` fait référence à , fait référence `0.tcp.ngrok.io` `1.bot.contoso.com` `1.tcp.ngrok.io` à, et ainsi de suite.
 2. Un certificat SSL est requis pour vos URL. Pour faciliter la tâche, utilisez un certificat SSL délivré à un domaine de caractères wild card. Dans ce cas, ce serait `*.bot.contoso.com` . Ce certificat SSL est validé par le SDK multimédia, il doit donc correspondre à l’URL publique de votre bot. Notez l’empreinte numérique et installez-la dans les certificats de votre ordinateur.
-3. À présent, configuration d’un tunnel TCP pour le transport du trafic vers localhost. Écrivez les lignes suivantes dans votre ngrok.yml :
+3. À présent, définissez un tunnel TCP pour que le trafic soit transmis à l’host local. Écrivez les lignes suivantes dans votre ngrok.yml :
 
     ```yaml
     media:

@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams Authorization OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634706"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654425"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement spécifiques aux ressources dans Teams
 
@@ -21,7 +21,7 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 > Pour tester les autorisations RSC, votre fichier manifeste d’application Teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
 >
 > - **id**: votre ID d’application Azure AD, voir Inscrire votre [application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
-> - **ressource**: n’importe quelle chaîne, voir la note dans  [mettre à jour le manifeste de votre application Teams](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **ressource**: Toute chaîne, voir la remarque dans Mettre à jour [le manifeste de votre application Teams.](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **autorisations d’application**: autorisations RSC pour votre application, voir [Autorisations propres aux ressources.](resource-specific-consent.md#resource-specific-permissions)
 
 ```json
@@ -54,18 +54,16 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 
 Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le code de [test JSON RSC](test-rsc-json-file.md) dans votre environnement local et mettre à jour les valeurs suivantes :
 
-* `azureADAppId`: ID d’application Azure AD de votre application
-* `azureADAppSecret`: Votre secret d’application Azure AD (mot de passe)
-* `token_scope`: l’étendue est requise pour obtenir un jeton : définissez la valeur sur https://graph.microsoft.com/.default
+* `azureADAppId`: ID d’application Azure AD de votre application.
+* `azureADAppSecret`: mot de passe de votre application Azure AD.
+* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
 * `teamGroupId`: vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
-  > [!div class="checklist"]
-  >
-  > * Dans le client Teams, sélectionnez **Teams** dans la barre de navigation à l’extrême gauche.
-  > * Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
-  > * Sélectionnez **l’icône Options** supplémentaires (&#8943;)
-  > * Sélectionnez **Obtenir un lien vers l’équipe** 
-  > * Copiez et enregistrez la **valeur groupId** à partir de la chaîne.
+    1. Dans le client Teams, sélectionnez **Teams** dans la barre de navigation à l’extrême gauche.
+    2. Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
+    3. Sélectionnez **l’icône Options** supplémentaires (&#8943;).
+    4. Sélectionnez **Obtenir un lien vers l’équipe.** 
+    5. Copiez et enregistrez la **valeur groupId** à partir de la chaîne.
 
 ### <a name="use-postman"></a>Utiliser Postman
 

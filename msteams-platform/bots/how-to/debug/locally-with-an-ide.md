@@ -4,12 +4,12 @@ author: clearab
 description: Test et débogage de votre bot localement avec un IDE
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 449d6dd5e10a72538e6443c9d17f998ebc662379
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 5a35419564f87617ee5d590e2a604e970caa16b3
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634768"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654471"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -20,7 +20,7 @@ Lorsque vous testez votre bot, vous devez prendre en compte les contextes dans l
 La façon la plus complète de tester votre bot consiste à créer un package d’application et à le télécharger dans Teams. Il s’agit de la seule méthode pour tester les fonctionnalités complètes disponibles pour votre bot, dans toutes les étendues.
 
 Il existe deux méthodes pour charger votre application :
-* Utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md)
+* Utilisez [App Studio.](~/concepts/build-and-test/app-studio-overview.md)
 * [Créez un package d’application](~/concepts/build-and-test/apps-package.md) manuellement, puis [téléchargez votre application.](~/concepts/deploy-and-publish/apps-upload.md)
 
 > [!NOTE]
@@ -41,7 +41,7 @@ Utilisez le point de terminaison https fourni par ngrok dans le manifeste de vot
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>Tester votre bot sans téléchargement vers Teams
 
-Il peut parfois être nécessaire de tester votre bot sans l’installer en tant qu’application dans Teams. Nous fournissons deux méthodes pour tester le bot. Il peut être utile de tester votre bot sans l’installer en tant qu’application pour vous assurer qu’il est disponible et de répondre. Toutefois, il ne vous permettra pas de tester l’ensemble des fonctionnalités de Microsoft Teams que vous avez peut-être ajoutées à votre bot. Si vous avez besoin de tester entièrement votre bot, consultez [les tests en chargeant](#test-by-uploading-to-teams).
+Parfois, il peut être nécessaire de tester votre bot sans l’installer en tant qu’application dans Teams. Nous fournissons deux méthodes pour tester le bot. Il peut être utile de tester votre bot sans l’installer en tant qu’application pour vous assurer qu’il est disponible et de répondre. Toutefois, il ne vous permettra pas de tester l’ensemble des fonctionnalités de Microsoft Teams que vous avez peut-être ajoutées à votre bot. Si vous avez besoin de tester entièrement votre bot, consultez [les tests en chargeant](#test-by-uploading-to-teams).
 
 ### <a name="use-the-bot-emulator"></a>Utiliser l’émulateur de bot
 

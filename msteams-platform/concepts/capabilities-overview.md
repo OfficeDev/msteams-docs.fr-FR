@@ -1,22 +1,24 @@
 ---
-title: Comprendre les fonctionnalités de l’application Teams
+title: Comprendre les fonctionnalités de l’application
 author: heath-hamilton
 description: Fonctionnalités de l’application Teams expliquées
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5336b36b52cf81be414f18ccaaf9e235c079e626
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034704"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654432"
 ---
-# <a name="understanding-teams-app-capabilities"></a>Comprendre les fonctionnalités de l’application Teams
+# <a name="understand-microsoft-teams-app-capabilities"></a>Comprendre les fonctionnalités de l’application Microsoft Teams
 
-*Les fonctionnalités sont* les points d’extension pour la création d’applications sur la plateforme Microsoft Teams.
+L’extensibilité ou les points d’entrée sont différentes façons dont une application peut se manifester pour un utilisateur. Par exemple, un utilisateur peut interagir avec une application sur un onglet de zone de dessin pour faire une activité ou peut choisir d’en faire de même à l’aide d’un bot de conversation. Les différentes fonctionnalités utilisées pour créer votre application Teams vous permettent d’augmenter son étendue d’utilisation.
 
-Il existe plusieurs façons d’étendre Teams, de sorte que chaque application est unique : certaines n’ont qu’une seule fonctionnalité (par exemple, un webhook), tandis que d’autres ont quelques-unes pour donner des options aux utilisateurs. Par exemple, votre application peut afficher des données dans un emplacement central (onglet) et présenter ces mêmes informations via une interface de conversation (bot).
+Il existe plusieurs façons d’étendre Teams, de sorte que chaque application est unique. Certaines n’ont qu’une seule fonctionnalité, telle qu’un webhook, tandis que d’autres disposent de plusieurs fonctionnalités pour offrir aux utilisateurs différentes options. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l’onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
+
+## <a name="app-capabilities"></a>Fonctionnalités de l’application
 
 Votre application Teams a une ou toutes les fonctionnalités principales suivantes :
 
@@ -27,12 +29,20 @@ Votre application Teams a une ou toutes les fonctionnalités principales suivant
 
 Votre application peut également tirer parti des fonctionnalités avancées, telles que [l’API Microsoft Graph pour Teams.](https://docs.microsoft.com/graph/teams-concept-overview)
 
-Consultez l’illustration suivante pour vous faire une idée des fonctionnalités qui offriraient les fonctionnalités de votre application.
+L’illustration suivante vous donne une idée des fonctionnalités qui fourniront les fonctionnalités que vous souhaitez dans votre application.
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Carte d’esprit illustrant les fonctionnalités de l’application Teams.":::
 
-## <a name="doing-whats-best-for-your-users"></a>Faire ce qui est le mieux pour vos utilisateurs
+## <a name="always-consider-your-user"></a>Toujours prendre en compte votre utilisateur
 
-À mesure que vous vous familiariserez avec le développement d’applications Teams, vous commencerez à comprendre ses subtiles. Il existe plusieurs façons de créer certaines fonctionnalités (telles que la collecte d’entrées utilisateur). Par exemple, vous pouvez incorporer un formulaire web dans un onglet à l’aide d’un `<iframe>` . Vous pouvez également le faire dans un onglet à l’aide d’un module de tâche, une convention d’interface utilisateur Teams, pour une expérience plus native que vos utilisateurs préfèrent.
+Lorsque vous vous familiarisez avec le développement d’applications Teams, vous comprenez ses principes de base. Vous comprenez qu’il existe plusieurs façons de créer certaines fonctionnalités. Dans de tels scénarios, réfléchissez à la façon dont vous pouvez offrir une expérience plus native à votre utilisateur.
+Par exemple, vous pouvez collecter les entrées utilisateur dans un formulaire créé sous la forme d’un onglet dans l’application. Vous pouvez également le faire à l’aide d’un module de tâche sans changer d’affichage et perturber le flux de travail de l’utilisateur. Il est important de choisir des points d’extension qui fournissent le moins d’écart par rapport au flux de travail normal d’un utilisateur.
 
-Le choix des fonctionnalités et de la conception qui vous sont nécessaires revient à comprendre d’abord les cas [d’utilisation de votre public.](../concepts/design/understand-use-cases.md)
+## <a name="see-also"></a>Voir aussi
+
+> [!div class="nextstepaction"]
+> [Créer des applications pour Teams](../overview.md)
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Points d'entrée de l'application Teams](../concepts/extensibility-points.md)

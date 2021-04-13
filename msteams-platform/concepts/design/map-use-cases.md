@@ -1,78 +1,110 @@
 ---
-title: Mapper vos cas d’utilisation aux fonctionnalités de l’application
+title: Map vos cas d’utilisation aux fonctionnalités de l’application Teams
 author: clearab
-description: Décider de la façon de distribuer votre application
+description: Choisir l’étendue d’application correcte
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5ebfa73df9b4f2c83533a33fbc6366c2c0ccffb4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3ade254d4042e80ea13201bd5936fd6bd326a0b2
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673865"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654299"
 ---
-# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Mapper vos cas d’utilisation sur les fonctionnalités des applications teams
+# <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation aux fonctionnalités de l’application Teams
 
-Si vous ne l’avez pas encore fait, vérifiez que vous avez [pris en compte vos cas d’utilisation](~/concepts/design/map-use-cases.md) avec soin. Vous avez également besoin d’une bonne compréhension des [points d’extensibilité et des éléments d’interface utilisateur](~/concepts/extensibility-points.md) disponibles pour votre application. Une fois que vous avez décidé *de votre tentative* de *résolution et de votre responsable,* il est temps de commencer à réfléchir sur *la façon dont*.
+Une fois que vous avez  identifié *qui* est l’utilisateur  et quel problème vous allez résoudre, il est temps de décider comment résoudre le problème. *Qui,* *quoi* et *comment* termine le processus de compréhension et de mappage de vos cas d’utilisation aux fonctionnalités de l’application Teams. Vous devez définir l’étendue de l’application en fonction des réponses que vous avez reçues de l’utilisateur à vos requêtes, puis déterminer la fonctionnalité la plus adaptée pour créer votre application.
 
-Vous trouverez ci-dessous des scénarios courants, ainsi qu’une sélection de points d’extensibilité et d’éléments d’interface utilisateur qui fonctionnent bien avec eux. Il n’est pas destiné à être une liste exhaustive, simplement pour vous aider à réfléchir sur certaines des possibilités dont vous disposez et sur la plateforme Teams.
+> [!NOTE]
+> Vous devez bien comprendre les [points d’entrée](../../concepts/extensibility-points.md) et les éléments d’interface utilisateur disponibles pour votre application. Vous devez également vous assurer que vous avez [pris en compte vos cas d’utilisation](../../concepts/design/understand-use-cases.md) avec soin.
+
+## <a name="choose-the-correct-scope-for-your-app"></a>Choisir l’étendue correcte pour votre application
+
+Lors du choix de l’étendue de l’application, prenons en compte les considérations suivantes :
+
+* Une application peut exister dans plusieurs étendues.
+* Les fonctionnalités d’application, telles que les extensions de messagerie, suivent les utilisateurs dans toutes les étendues.
+* Les utilisateurs ont souvent besoin d’ajouter des applications à Teams ou à des canaux.
+* Les utilisateurs invités peuvent accéder au contenu exposé dans Teams ou les canaux.
+
+Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe ou de canal pour votre application en fonction des possibilités suivantes :
+
+* Pour sélectionner une étendue personnelle, répondez à des questions telles que :
+  * Existe-t-il des interactions un-à-un avec l’application requises pour des raisons de confidentialité ou pour d’autres raisons ? Par exemple, vérification du solde des congés ou d’autres informations privées.
+  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de teams communs ? Par exemple, la recherche d’événements à l’échelle de l’organisation à venir dans une entreprise.
+  * Existe-t-il des notifications ou des messages personnalisés qui devront être envoyés à un utilisateur tout au long de l’expérience d’application Teams ? Par exemple, les rappels pour les approbations ou les inscriptions.
+
+* Pour sélectionner l’étendue de l’équipe ou du canal, répondez aux questions suivantes : 
+  * Les informations présentées par l’application, sous l’onglet ou par le biais d’un bot, sont-ils pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, application Scrum.
+  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes dans différentes équipes. 
+  * Est-il possible que tous les membres d’une personne qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket.
+
+Les scénarios suivants vous guident dans la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien avec les fonctionnalités de l’application Teams :
+
+> [!NOTE]
+> Il ne s’agit pas d’une liste exhaustive, mais vous aidera à réfléchir à certaines des possibilités qui s’offrent à vous.
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Créer, partager et collaborer sur des éléments dans un système externe
 
-L’application pour Microsoft teams est un excellent moyen d’interagir avec vos données, et il existe plusieurs points d’intégration parmi lesquels choisir.
+L’application pour Microsoft Teams est un excellent moyen d’interagir avec vos données et de nombreux points d’intégration sont disponibles.
 
-* Extensions de messagerie avec commandes de recherche : recherchez les systèmes externes et partagez les résultats en tant que carte interactive.
+* **Extensions de messagerie avec commandes de recherche**: rechercher des systèmes externes et partager les résultats sous forme de carte interactive.
 
-* Extensions de messagerie avec commandes d’action : collecter des informations à insérer dans un magasin de données ou effectuer des recherches avancées.
+* **Extensions de messagerie avec commandes d’action**: collecter des informations à insérer dans un magasin de données ou effectuer des recherches avancées.
 
-* Onglets : créer des expériences Web intégrées pour afficher, utiliser et partager des données.
+* **Onglets :** créez des expériences web incorporées pour afficher, travailler avec et partager des données.
 
-* Connecteurs et webhooks : moyen simple de transmettre des données dans le client teams et d’envoyer des données.
+* **Connecteurs et webhooks**: un moyen simple de transmettre des données et d’envoyer des données hors du client Teams.
 
-* Modules de tâches : formulaires modaux interactifs à partir de l’endroit où vous en avez besoin pour recueillir ou afficher des informations.
+* **Modules de tâche**: formulaires modaux interactifs où vous en avez besoin pour collecter ou afficher des informations.
 
-## <a name="initiate-workflows-and-processes"></a>Initier des flux de travail et des processus
+## <a name="initiate-workflows-and-processes"></a>Démarrer des flux de travail et des processus
 
 Parfois, vous avez simplement besoin d’un moyen rapide pour démarrer un processus ou un flux de travail dans un système externe.
 
-* Commandes d’action d’extensions de messagerie : déclenchent des messages, ce qui permet à vos utilisateurs d’envoyer rapidement le contenu d’un message à vos services Web.
+* **Commandes d’action** des extensions de messagerie : déclencher à partir de messages, ce qui permet à vos utilisateurs d’envoyer rapidement le contenu d’un message à vos services web.
 
-* Modules de tâches : Ouvrez-les à partir d’un onglet, d’un bot ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail.
+* **Modules de tâche**: ouvrez-les à partir d’un onglet, d’un bot ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail.
 
-* Robots de conversation : interagissez avec vos utilisateurs par le biais de cartes de texte et enrichies.
+* **Bots de conversation**: interagir avec vos utilisateurs via du texte et des cartes enrichies.
 
-* Webhooks sortants : un bon choix pour une interaction simple et arrière lorsque vous n’avez pas besoin de créer un robot de conversation entier.
+* **Webhooks sortants**: un bon choix pour une interaction simple de va-et-vient lorsque vous n’avez pas besoin de créer un bot conversationnel entier.
 
 ## <a name="send-notifications-and-alerts"></a>Envoyer des notifications et des alertes
 
-Envoyez des notifications et des alertes asynchrones à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions fréquemment utilisées et des liens vers des informations supplémentaires.
+Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
 
-* Robots de conversation : envoyez des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
+* **Bots de conversation**: envoyez des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
 
-* Connecteurs & webhooks entrants : permet à un canal de s’abonner pour recevoir des messages. Avec un connecteur, les utilisateurs peuvent personnaliser l’abonnement à l’aide d’une page de configuration.
+* **Connecteurs et webhooks entrants**: autoriser un canal à s’abonner pour recevoir des messages. Un connecteur permet aux utilisateurs d’adapter l’abonnement avec une page de configuration.
 
 ## <a name="ask-questions-and-get-answers"></a>Poser des questions et obtenir des réponses
 
-Les personnes ont des questions. Vous avez probablement beaucoup de réponses stockées quelque part. Malheureusement, il est souvent difficile de connecter les deux ensemble.
+Les personnes ont des questions et vous avez probablement une grande partie des réponses stockées quelque part. Malheureusement, il est souvent assez difficile de connecter les deux.
 
-* Robots de conversation-traitement de langage naturel, AI, apprentissage d’ordinateur, tous les Buzzwords. Utilisez un bot alimenté par le Cloud intelligent pour connecter vos utilisateurs aux réponses dont ils ont besoin.
+* **Bots de conversation**: traitement du langage naturel, IA, apprentissage automatique et tous les mots à la une. Utilisez un bot optimisé par le cloud intelligent pour connecter vos utilisateurs aux réponses dont ils ont besoin.
 
-* Onglets : incorporez votre portail Web existant dans teams ou créez une version spécifique à teams pour une fonctionnalité ajoutée.
+* **Onglets**: incorporez votre portail web existant dans Teams ou créez une version spécifique de Teams pour ajouter des fonctionnalités.
 
-## <a name="get-social"></a>Obtenir des amis
+## <a name="get-social"></a>Obtenir des réseaux sociaux
 
-Une plateforme de collaboration est fondamentalement une plateforme sociale. Faites en sorte que votre partie créative soit gratuite et ajoutez un peu de plaisir à votre espace de travail.
+Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des images, d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
 
-* Toutes les blagues-envoyer des blagues, donner des félicitations, obtenir quelques mèmes pour, jeter certains Emoji ou tout autre remède.
+## <a name="think-in-terms-of-a-single-page-app"></a>Penser en termes d’application à page unique
 
-## <a name="anything-you-can-do-in-a-single-page-app-spa"></a>Tout ce que vous pouvez faire dans une application de page unique (SPA)
-
-Les onglets sont des pages Web incorporées. À peu près tout ce que vous pouvez faire dans un SPA, vous pouvez le faire dans un onglet de teams. N’oubliez pas de prêter attention aux onglets de groupe d’étendue et de canal pour les expériences partagées, les onglets personnels sont pour... expériences personnelles. La liste des éléments de l’équipe s’affiche sous l’onglet canal, la liste de vos sélections apparaît dans l’onglet personnel.
+Les onglets sont des pages web incorporées. À peu près tout ce que vous pouvez faire dans une SPA, vous pouvez le faire dans un onglet dans Teams. Il vous suffit d’être attentif à l’étendue. Les onglets de groupe et de canal sont pour les expériences partagées et les onglets personnels pour les expériences personnelles. La liste des choses de l’équipe passe sous l’onglet de canal et la liste de vos objets est dans l’onglet personnel.
 
 ## <a name="start-small"></a>Démarrer petit
 
-Vous ne savez pas où commencer ? Vous sentez un peu submergé de la diversité des options disponibles ? Ne vous inquiétez pas, choisissez une fonctionnalité principale de votre application et démarrez-la. Une fois que vous avez une bonne idée du flux d’informations par le biais des différents contextes de teams, il sera beaucoup plus facile d’afficher une interaction plus complexe.
+Vous ne savez pas par où commencer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et commencer par là. Une fois que vous avez une idée du flux d’informations dans les différents contextes dans Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
 
-## <a name="putting-it-all-together"></a>Exemple complet
+## <a name="put-it-all-together"></a>Mettre tout en place
 
-Cela étant dit, les meilleures applications combinent généralement plusieurs fonctionnalités, créant une application qui engage les utilisateurs dans le contexte approprié avec les bonnes fonctionnalités au bon moment. N’essayez pas d’imposer une fonctionnalité à un endroit où elle n’appartient pas, car vous disposez d’un robot de conversation un-à-un approprié, mais vous devez simplement l’ajouter à une équipe. Différents points d’extensibilité sont adaptés à différentes opérations ; Jouez à leurs points forts et votre application se tiendra.
+Cela étant dit, les meilleures applications combinent généralement plusieurs fonctionnalités, créant ainsi une application qui engage les utilisateurs dans le bon contexte avec les fonctionnalités qui leur sont utiles au bon moment. Vous ne devez pas forcer les fonctionnalités à un endroit où elle n’appartient pas. Ce n’est pas parce que vous avez un bon bot de conversation un-à-un que vous l’ajoutez à une équipe. Différents points d’extensibilité sont bons pour différents éléments et jouent sur leurs points forts pour créer une application réussie.
+
+## <a name="see-also"></a>Voir aussi
+
+> [!div class="nextstepaction"]
+> [Créer des applications pour Microsoft Teams](../../overview.md)
+ 
+
