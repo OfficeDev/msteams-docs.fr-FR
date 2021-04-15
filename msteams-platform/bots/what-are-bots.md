@@ -1,112 +1,56 @@
 ---
-title: Qu’est-ce que les bots de conversation ?
+title: Bots dans Microsoft Teams
 author: clearab
-description: Vue d’ensemble des bots de conversation dans Microsoft Teams.
+description: Vue d'ensemble des bots dans Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 0304ae436b54db0d111eaed507beb350f1ca4632
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 08777e6d678bd75b56072412af46e3eb974c3678
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797868"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696890"
 ---
-# <a name="what-are-conversational-bots-in-microsoft-teams"></a>Qu’est-ce que les bots de conversation dans Microsoft Teams ?
+# <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
-Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web via du texte, des cartes interactives et des modules de tâches. Ils sont extrêmement flexibles : les bots de conversation peuvent être limitées à la gestion de quelques commandes simples ou d’assistants virtuels complexes, optimisés pour l’intelligence artificielle et de traitement du langage naturel. Il peut s’agit d’un aspect d’une application plus grande ou entièrement autonome.
+Un bot également appelé bot de conversation est une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs, telles que le service clientèle ou le personnel de support technique. Parmi les exemples de bots utilisés quotidiennement, citons les bots qui fournissent des informations sur la météo, qui réservent des réservations de réservation de réservation ou qui fournissent des informations de voyage. Une interaction de bot peut être une question et une réponse rapides, ou il peut s'agit d'une conversation complexe qui permet d'accéder aux services.
 
-Le gif ci-dessous montre un utilisateur qui discute avec un bot dans une conversation un-à-un à l’aide de cartes texte et interactives. La recherche de la combinaison de cartes, de texte et de modules de tâche est essentielle pour créer un bot utile. N’oubliez pas que les bots sont bien plus que du texte !
+> [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
-![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
+Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web via du texte, des cartes interactives et des modules de tâches.
 
-## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Créer un bot pour Teams avec Microsoft Bot Framework
+![Appeler un bot à l'aide de texte](~/assets/images/invokebotwithtext.png)
 
-[Microsoft Bot Framework est](https://dev.botframework.com/) un SDK riche pour la création de bots en C#, Java, Python et JavaScript. Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement l’adapter pour qu’il fonctionne dans Microsoft Teams. Nous vous recommandons d’utiliser C# ou Node.js pour tirer parti de nos [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Ces packages étendent les classes et méthodes de base du SDK Bot Builder comme suit :
+![Appeler un bot à l'aide d'une carte](~/assets/images/invokebotwithcard.png)
 
-* Utilisez des types de carte spécialisés tels que la carte connecteur Office 365.
-* Consommez et définissez des données de canal spécifiques à Teams sur les activités.
-* Traiter les demandes d’extension de messagerie.
+<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
 
-Votre bot Teams se compose de trois éléments :
+Les bots de conversation sont extrêmement flexibles et peuvent être étendues pour gérer quelques commandes simples ou des tâches complexes, optimisées pour l'intelligence artificielle et de traitement du langage naturel. Ils peuvent être un aspect d'une application plus grande ou être entièrement autonomes.
 
-* un service web accessible au public que vous hébergez ;
-* Inscription de votre bot avec Bot Framework.
-* Votre package d’application Teams avec votre manifeste d’application. C’est ce que vos utilisateurs installent et connecte le client Teams à votre service web, acheminé via bot Service.
+La recherche de la combinaison de cartes, de texte et de modules de tâche est essentielle pour créer un bot utile. L'image suivante montre un utilisateur qui discute avec un bot dans une conversation un-à-un à l'aide de cartes texte et interactives :
 
-> [!IMPORTANT]
-> Vous pouvez développer des applications Teams dans n’importe quelle technologie de programmation web et appeler directement les API [REST Bot Framework,](/bot-framework/rest-api/bot-framework-rest-overview) mais vous devez effectuer vous-même la gestion de tous les jetons.
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Exemple de bot FAQ" border="true":::
 
-> [!TIP]
-> Teams App Studio* vous aide à créer et configurer votre manifeste d’application, et peut inscrire votre service web en tant que bot sur Bot Framework. Il contient également une bibliothèque de contrôles React et un générateur de carte interactif. *Voir* [La mise en place de Teams App Studio.](~/concepts/build-and-test/app-studio-overview.md)
+Chaque interaction entre l'utilisateur et le bot est représentée comme une activité. Lorsqu'un bot reçoit une activité, il la transmet à ses sous-traites d'activité. Pour plus d'informations, voir [les handlers d'activité des bots.](~/bots/bot-basics.md) 
 
-## <a name="create-a-chatbot-for-teams-with-microsoft-power-virtual-agents"></a>Créer un chatbot pour Teams avec des agents virtuels Microsoft Power
+En outre, les bots sont des applications qui ont une interface de conversation. Vous pouvez interagir avec un bot à l'aide de texte, de cartes interactives et de reconnaissance vocale. Un bot se comporte différemment selon qu'il s'agit d'une conversation de canal ou de groupe, ou d'une conversation un-à-un. Les conversations sont gérées via le connecteur Bot Framework. Pour plus d'informations, voir [les informations de base de la conversation.](~/bots/how-to/conversations/conversation-basics.md)
 
-[Power Virtual Agents est](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) un service chatbot, qui repose sur la plateforme Microsoft Power et Bot Framework.  Le processus de développement de Power Virtual Agent utilise une approche d’interface graphique guidée sans code pour permettre à chaque membre de votre équipe de créer et de gérer facilement un agent virtuel intelligent.  Une fois que vous avez terminé la création de votre chatbot dans le portail [Power Virtual Agents,](https://powervirtualagents.microsoft.com)vous pouvez facilement intégrer votre [chatbot d’agents virtuels Power avec Teams.](how-to/add-power-virtual-agents-bot-to-teams.md) Pour commencer à créer votre chatbot d’agents power virtual, *consultez* la [documentation des agents virtuels Power.](https://docs.microsoft.com/power-virtual-agents/)
+Votre bot nécessite des informations contextuelles, telles que des détails de profil utilisateur pour accéder au contenu pertinent et améliorer l'expérience du bot. Pour plus d'informations, voir [obtenir le contexte Teams.](~/bots/how-to/get-teams-context.md) 
 
-## <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
+Vous pouvez également envoyer et recevoir des fichiers via le bot à l'aide des API Graph ou des API de bot Teams. Pour plus d'informations, voir [envoyer et recevoir des fichiers via le bot.](~/bots/how-to/bots-filesv4.md)
 
-Les webhooks et les connecteurs vous permettent de créer un bot simple pour une interaction de base, par exemple en délant un flux de travail ou d’autres commandes simples. Ils sont uniquement membres de l’équipe dans laquelle vous les créez et sont destinés à des processus simples spécifiques au flux de travail de votre entreprise. *Voir* [que sont les webhooks et les connecteurs ?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) pour plus d’informations.
+En outre, la limitation des taux est utilisée pour optimiser les bots utilisés pour votre application Teams. Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Pour plus d'informations, voir [optimiser votre bot avec une limite de taux dans Teams.](~/bots/how-to/rate-limit.md)
 
-## <a name="where-bots-work-best"></a>Où les bots fonctionnent le mieux
+Avec les API Microsoft Graph pour les appels et les réunions en ligne, les applications Microsoft Teams peuvent désormais interagir avec les utilisateurs à l'aide de la voix et de la vidéo. Pour plus d'informations, voir [les bots d'appels et de réunions.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
 
-Les bots dans Microsoft Teams peuvent faire partie d’une conversation un-à-un, d’une conversation de groupe ou d’un canal dans une équipe. Chaque étendue offre des opportunités et des défis uniques à votre bot de conversation.
+Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour un ou plusieurs membres d'une conversation ou d'une équipe. Pour plus d'informations, voir [les modifications apportées aux API de bot Teams](~/resources/team-chat-member-api-changes.md)pour récupérer des membres d'équipe ou de conversation.
 
-### <a name="in-a-channel"></a>Dans un canal
-
-Les canaux contiennent des conversations entre plusieurs personnes, potentiellement un grand nombre de personnes (actuellement, jusqu’à deux milliers). Cela donne potentiellement une très grande portée à votre bot, mais les interactions individuelles doivent être concises. Les interactions classiques à plusieurs tours ne fonctionneront probablement pas très bien. Cherchez plutôt à utiliser des cartes interactives ou des modules de tâche, ou à transformer la conversation en conversation à deux si vous avez besoin de recueillir de nombreuses informations. Votre bot n’aura également accès qu’aux messages où il se trouve directement, bien que vous pouvez récupérer des messages supplémentaires de la conversation à l’aide de Microsoft Graph et d’autorisations élevées au niveau de `@mentioned` l’organisation.
-
-Voici quelques scénarios dans lesquels les bots fonctionnent très bien dans un canal :
-
-* **notifications**, notamment si vous proposez une carte interactive pour permettre aux utilisateurs de récupérer des informations supplémentaires ;
-* **Scénarios de commentaires tels** que les sondages et les enquêtes.
-* interactions qui peuvent être résolues dans un **seul cycle de demande/réponse**, où les résultats sont utiles à plusieurs membres de la conversation.
-* **Bots sociaux/amusants** : obtenez une image de chat incroyable, sélectionnez un gagneur de manière aléatoire, etc.
-
-### <a name="in-a-group-chat"></a>Dans une conversation de groupe
-
-Les conversations de groupe sont des conversations non thématiques entre trois personnes au minimum. Elles ont tendance à avoir moins de membres qu’un canal et sont plus temporaires. Comme pour un canal, votre bot n’aura accès qu’aux messages où il se `@mentioned` trouve directement.
-
-Les scénarios qui fonctionnent bien dans un canal fonctionnent généralement aussi bien dans une conversation de groupe.
-
-### <a name="in-a-one-to-one-chat"></a>Dans une conversation un-à-un
-
-Les bots de conversation interagissent traditionnellement de cette façon avec les utilisateurs. Ils peuvent activer des charges de travail extrêmement diverses. Le bots de questions et réponses, les bots qui initient des flux de travail dans d’autres systèmes, les bots qui font des blagues et les bots qui prennent des notes en sont quelques exemples. N’oubliez pas de déterminer si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
-
-## <a name="bot-fails"></a>Le bot échoue
-
-### <a name="having-multi-turn-experiences-in-chat"></a>Expériences à plusieurs tour dans la conversation
-
-Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et trop complexe d’accomplir une tâche et nécessite également au développeur de maintenir l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou taper «*Annuler*». Par-dessus tout, le processus est inutilement fastidieux :
-
-UTILISATEUR : planifier une réunion avec Megan.
-
-BOT : j’ai trouvé 200 résultats, veuillez inclure un prénom et un nom.
-
-UTILISATEUR : planifier une réunion avec Megan Bowen.
-
-BOT : À quelle heure voulez-vous rencontrer Megan Bowen ?
-
-UTILISATEUR : 13:00
-
-BOT : quel jour ?
-
-### <a name="supporting-too-many-commands"></a>Prise en charge d’un trop grand nombre de commandes
-
-Un bot qui prend en charge un nombre excessif de commandes, en particulier un large éventail de commandes, ne sera pas réussi ou n’est pas considéré comme positif par les utilisateurs. Étant donné qu’il n’y a que 6 commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus ne soit utilisé avec aucune fréquence. Les bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un grand assistant fonctionnent mieux et s’améliorent.
-
-### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>Maintenance d’une base de connaissances de récupération importante avec des réponses nonrankées
-
-Les bots conviennent mieux aux interactions courtes et rapides, sans passer au travers de longues listes à la recherche d’une réponse.
-
-## <a name="get-started"></a>Prise en main
-
-* [Bot de conversation Teams en C#/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
-* [Bot de conversation Teams dans JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
-
-## <a name="learn-more"></a>En savoir plus
-
-> [!div class="nextstepaction"]
-> [Principes de base des bots dans Teams](~/bots/bot-basics.md)
+## <a name="see-also"></a>Voir aussi
 
 > [!div class="nextstepaction"]
 > [Créer un robot pour Teams](~/bots/how-to/create-a-bot-for-teams.md)
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Bots et SDK](~/bots/bot-features.md)

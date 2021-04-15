@@ -2,13 +2,14 @@
 title: Mise en forme de texte prise en charge dans les conversations
 description: Décrit la prise en charge de la mise en forme du texte dans les conversations de bot
 keywords: messagerie de conversations de bots
+ms.topic: how-to
 ms.date: 03/29/2018
-ms.openlocfilehash: 3ef51a7f6e4e923d83ab746a2dfa1f22464efb93
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596265"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696058"
 ---
 # <a name="formatting-bot-messages"></a>Mettre en forme les messages du bot
 
@@ -28,11 +29,11 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 
 Microsoft Teams prend en charge un sous-ensemble de balises de mise en forme Markdown et XML (HTML).
 
-Actuellement, les limitations suivantes s’appliquent :
+Actuellement, les limitations suivantes s'appliquent :
 
 * Les messages texte uniquement ne sont pas en charge la mise en forme de tableau
 
-Pour plus d’informations sur la mise en forme dans les cartes, voir la référence [de carte Teams.](~/task-modules-and-cards/cards/cards-reference.md)
+Pour plus d'informations sur la mise en forme dans les cartes, voir la référence [de carte Teams.](~/task-modules-and-cards/cards/cards-reference.md)
 
 ### <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes
 
@@ -50,7 +51,7 @@ Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes 
 | texte préformaté         | ✔                  | ✔                |
 | blockquote                | ✔                  | ✔                |
 | lien hypertexte                 | ✔                  | ✔                |
-| lien vers l’image                | ✔                  | ✖                |
+| lien vers l'image                | ✔                  | ✖                |
 
 ### <a name="support-by-individual-platform"></a>Prise en charge par plateforme individuelle
 
@@ -70,7 +71,7 @@ La prise en charge de la mise en forme du texte varie en fonction du type de mes
 | texte préformaté         | ✔       | ✔   | ✔       |
 | blockquote                | ✔       | ✔   | ✔       |
 | lien hypertexte                 | ✔       | ✔   | ✔       |
-| lien vers l’image                | ✔       | ✔   | ✔       |
+| lien vers l'image                | ✔       | ✔   | ✔       |
 
 ### <a name="examples-of-text-formatting"></a>Exemples de mise en forme du texte
 

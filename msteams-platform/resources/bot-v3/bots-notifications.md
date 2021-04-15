@@ -1,57 +1,58 @@
 ---
-title: Gérer les événements bot
-description: Décrit comment gérer les événements dans les robots pour Microsoft teams
-keywords: événements bots de teams
+title: Gérer les événements de bot
+description: Décrit comment gérer les événements dans les bots pour Microsoft Teams
+keywords: événements de bots teams
 ms.date: 05/20/2019
+ms.topic: how-to
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 1161d21ee755cebe6ddb2a2d5a219f9538de77cf
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: 0fdd30a8eed63ea83e15825b0bf097125b4b665d
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409049"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696611"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements bot dans Microsoft teams
+# <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements de bot dans Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft teams envoie des notifications à votre bot pour des modifications ou des événements qui se produisent dans les étendues où votre bot est actif. Vous pouvez utiliser ces événements pour déclencher la logique de service, par exemple :
+Microsoft Teams envoie des notifications à votre bot pour les modifications ou les événements qui se produisent dans les étendues où votre bot est actif. Vous pouvez utiliser ces événements pour déclencher une logique de service, telle que les suivantes :
 
 * Déclencher un message de bienvenue lorsque votre bot est ajouté à une équipe
-* Informations sur les groupes de requêtes et de cache lorsque le bot est ajouté à une conversation de groupe
-* Mettre à jour les informations mises en cache sur l’appartenance ou les informations de canal de l’équipe
+* Interroger et mettre en cache les informations du groupe lorsque le bot est ajouté à une conversation de groupe
+* Mettre à jour les informations mises en cache sur l'appartenance à une équipe ou les informations de canal
 * Supprimer les informations mises en cache pour une équipe si le bot est supprimé
-* Quand un message bot est aimé par un utilisateur
+* Lorsqu'un message bot est aimé par un utilisateur
 
-Chaque événement bot est envoyé sous la forme d’un `Activity` objet qui définit les informations contenues `messageType` dans l’objet. Pour les messages de type `message` , consultez la rubrique [envoi et réception de messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).
+Chaque événement de bot est envoyé en tant `Activity` qu'objet dans `messageType` lequel définit les informations qui se trouve dans l'objet. Pour les messages de type `message` , voir Envoi et réception de [messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
-Les événements teams et Group, généralement déclenchés `conversationUpdate` par le type, ont des informations d’événements teams supplémentaires transmises dans le cadre de l' `channelData` objet et, par conséquent, votre gestionnaire d’événements doit interroger la `channelData` charge utile pour les équipes `eventType` et les métadonnées propres aux événements supplémentaires.
+Les équipes et les événements de groupe, généralement déclenchés par le type, ont des informations d'événement Teams supplémentaires transmises dans le cadre de l'objet. Par conséquent, votre responsable d'événement doit interroger la charge utile pour Teams et des métadonnées spécifiques à l'événement `conversationUpdate` `channelData` `channelData` `eventType` supplémentaires.
 
-Le tableau suivant répertorie les événements que votre bot peut recevoir et comment agir.
+Le tableau suivant répertorie les événements que votre bot peut recevoir et sur qui il peut agir.
 
-|Type|Objet Payload|EventType teams |Description|Portée|
+|Type|Objet Payload|Teams eventType |Description|Portée|
 |---|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Membre ajouté à Team](#team-member-or-bot-addition)| tous les |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Le membre a été supprimé de Team](#team-member-or-bot-removed)| `groupChat` & `team` |
-| `conversationUpdate` | |`teamRenamed`| [L’équipe a été renommée](#team-name-updates)| `team` |
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[Membre ajouté à l'équipe](#team-member-or-bot-addition)| all |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[Le membre a été supprimé de l'équipe](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` | |`teamRenamed`| [L'équipe a été renommée](#team-name-updates)| `team` |
 | `conversationUpdate` | |`channelCreated`| [Un canal a été créé](#channel-updates)|`team` |
-| `conversationUpdate` | |`channelRenamed`| [Un canal a été renommé.](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelRenamed`| [Un canal a été renommé](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelDeleted`| [Un canal a été supprimé](#channel-updates)|`team` |
-| `messageReaction` |`reactionsAdded`|| [Message de réaction au bot](#reactions)| tous les |
-| `messageReaction` |`reactionsRemoved`|| [Réaction supprimée du message bot](#reactions)| tous les |
+| `messageReaction` |`reactionsAdded`|| [Réaction au message du bot](#reactions)| all |
+| `messageReaction` |`reactionsRemoved`|| [Réaction supprimée du message du bot](#reactions)| all |
 
-## <a name="team-member-or-bot-addition"></a>Ajout d’un membre d’équipe ou d’un bot
+## <a name="team-member-or-bot-addition"></a>Ajout d'un membre d'équipe ou d'un bot
 
-L' [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) événement est envoyé à votre bot lorsqu’il reçoit des informations sur les mises à jour d’appartenance de teams dans lesquelles il a été ajouté. Il reçoit également une mise à jour lorsqu’il a été ajouté pour la première fois, spécifiquement pour les conversations personnelles. Notez que les informations utilisateur ( `Id` ) sont uniques pour votre robot et peuvent être mises en cache pour une utilisation future par votre service (par exemple, l’envoi d’un message à un utilisateur spécifique).
+L'événement est envoyé à votre bot lorsqu'il reçoit des informations sur les mises à jour d'appartenance pour les équipes où [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) il a été ajouté. Il reçoit également une mise à jour lorsqu’il a été ajouté pour la première fois, spécifiquement pour les conversations personnelles. Notez que les informations utilisateur ( ) sont uniques pour votre bot et peuvent être mises en cache pour une utilisation future par votre service (par exemple, l'envoi d'un message à `Id` un utilisateur spécifique).
 
 ### <a name="bot-or-user-added-to-a-team"></a>Bot ou utilisateur ajouté à une équipe
 
-L' `conversationUpdate` événement dont l' `membersAdded` objet est dans la charge utile est envoyé lorsqu’un bot est ajouté à une équipe ou lorsqu’un nouvel utilisateur est ajouté à une équipe dans laquelle un bot a été ajouté. Microsoft teams ajoute également `eventType.teamMemberAdded` dans l' `channelData` objet.
+L'événement avec l'objet dans la charge utile est envoyé lorsqu'un bot est ajouté à une équipe ou qu'un nouvel utilisateur est ajouté à une équipe dans laquelle un `conversationUpdate` `membersAdded` bot a été ajouté. Microsoft Teams ajoute également `eventType.teamMemberAdded` `channelData` l'objet.
 
-Étant donné que cet événement est envoyé dans les deux cas, vous devez analyser l' `membersAdded` objet pour déterminer si l’ajout était un utilisateur ou le robot lui-même. Pour ce dernier, il est recommandé d’envoyer un [message de bienvenue](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) à la chaîne afin que les utilisateurs puissent comprendre les fonctionnalités fournies par votre robot.
+Étant donné que cet événement est envoyé dans les deux cas, vous devez évaluer l'objet pour déterminer si l'ajout était un utilisateur ou `membersAdded` le bot lui-même. Pour ce dernier, il est préférable d'envoyer un [message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) de bienvenue au canal afin que les utilisateurs comprennent les fonctionnalités de votre bot.
 
-#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>Exemple de code : vérification du fait que bot était le membre ajouté
+#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>Exemple de code : vérification si le bot était le membre ajouté
 
 ##### <a name="net"></a>.NET
 
@@ -91,7 +92,7 @@ bot.on('conversationUpdate', (msg) => {
 });
 ```
 
-#### <a name="schema-example-bot-added-to-team"></a>Exemple de schéma : Bot ajouté à Team
+#### <a name="schema-example-bot-added-to-team"></a>Exemple de schéma : bot ajouté à l'équipe
 
 ```json
 {
@@ -132,14 +133,14 @@ bot.on('conversationUpdate', (msg) => {
 
 ### <a name="user-added-to-a-meeting"></a>Utilisateur ajouté à une réunion
 
-L' `conversationUpdate` événement dont l' `membersAdded` objet est dans la charge utile est envoyé lorsqu’un utilisateur est ajouté à une réunion planifiée privée. Les détails de l’événement seront envoyés même si les utilisateurs anonymes rejoignent la réunion. 
+`conversationUpdate`L'événement avec l'objet dans la charge utile est envoyé lorsqu'un utilisateur est ajouté `membersAdded` à une réunion privée programmée. Les détails de l'événement sont envoyés même lorsque des utilisateurs anonymes rejoignent la réunion. 
 
 > [!NOTE]
 >
->* Lorsqu’un utilisateur anonyme est ajouté à une réunion, l’objet de charge utile membersAdded n’a pas de `aadObjectId` champ.
->* Lorsqu’un utilisateur anonyme est ajouté à une réunion, l' `from` objet de la charge utile a toujours l’ID de l’organisateur de la réunion, même si l’utilisateur anonyme a été ajouté par un autre présentateur.
+>* Lorsqu'un utilisateur anonyme est ajouté à une réunion, l'objet charge utile Ajouté aux membres n'a pas de `aadObjectId` champ.
+>* Lorsqu'un utilisateur anonyme est ajouté à une réunion, l'objet dans la charge utile a toujours l'ID de l'organisateur de la réunion, même si l'utilisateur anonyme a été ajouté par un autre `from` présentateur.
 
-#### <a name="schema-example-user-added-to-meeting"></a>Exemple de schéma : utilisateur ajouté à la réunion
+#### <a name="schema-example-user-added-to-meeting"></a>Exemple de schéma : utilisateur ajouté à la réunion
 
 ```json
 {
@@ -180,14 +181,14 @@ L' `conversationUpdate` événement dont l' `membersAdded` objet est dans la cha
 
 ```
 
-### <a name="bot-added-for-personal-context-only"></a>Bot ajouté uniquement pour le contexte personnel
+### <a name="bot-added-for-personal-context-only"></a>Bot ajouté pour le contexte personnel uniquement
 
-Votre bot reçoit un `conversationUpdate` avec `membersAdded` lorsqu’un utilisateur l’ajoute directement pour la conversation personnelle. Dans ce cas, la charge utile que reçoit votre bot ne contient pas l' `channelData.team` objet. Vous devez l’utiliser comme filtre si vous souhaitez que votre bot propose un autre message d' [Accueil](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) en fonction de l’étendue.
+Votre bot reçoit un `conversationUpdate` avec `membersAdded` lorsqu'un utilisateur l'ajoute directement pour la conversation personnelle. Dans ce cas, la charge utile que reçoit votre bot ne contient pas `channelData.team` l'objet. Vous devez l'utiliser comme filtre au cas où vous souhaitez que votre bot propose un [message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) de bienvenue différent en fonction de l'étendue.
 
 > [!NOTE]
-> Pour les robots personnels, votre robot reçoit l' `conversationUpdate` événement plusieurs fois, même si le bot est supprimé et rajouté. Pour le développement et les tests, il peut s’avérer utile d’ajouter une fonction d’assistance qui vous permettra de réinitialiser entièrement votre robot. Pour plus d’informations sur l’implémentation de cet exemple, voir un exemple de [Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ou [C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) .
+> Pour les bots d'étendue personnelle, votre bot recevra l'événement plusieurs fois, même si le bot est supprimé et `conversationUpdate` ré-ajouté. Pour le développement et les tests, il peut être utile d'ajouter une fonction d'aide qui vous permettra de réinitialiser complètement votre bot. Voir un [Node.js ou](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) [un C# exemple pour](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) plus d'informations sur l'implémentation de ce modèle.
 
-#### <a name="schema-example-bot-added-to-personal-context"></a>Exemple de schéma : Bot ajouté au contexte personnel
+#### <a name="schema-example-bot-added-to-personal-context"></a>Exemple de schéma : bot ajouté au contexte personnel
 
 ```json
 {
@@ -206,11 +207,11 @@ Votre bot reçoit un `conversationUpdate` avec `membersAdded` lorsqu’un utilis
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -224,11 +225,11 @@ Votre bot reçoit un `conversationUpdate` avec `membersAdded` lorsqu’un utilis
 }
 ```
 
-## <a name="team-member-or-bot-removed"></a>Membre d’équipe supprimé
+## <a name="team-member-or-bot-removed"></a>Membre d'équipe ou bot supprimé
 
-L' `conversationUpdate` événement dont l' `membersRemoved` objet est dans la charge utile est envoyé lorsque le robot est supprimé d’une équipe ou lorsqu’un utilisateur est supprimé d’une équipe dans laquelle un bot a été ajouté. Microsoft teams ajoute également `eventType.teamMemberRemoved` dans l' `channelData` objet. Comme avec l' `membersAdded` objet, vous devez analyser l' `membersRemoved` objet pour identifier l’ID de l’application de votre bot afin de déterminer qui a été supprimé.
+L'événement avec l'objet dans la charge utile est envoyé lorsque votre bot est supprimé d'une équipe ou qu'un utilisateur est supprimé d'une équipe dans laquelle un `conversationUpdate` `membersRemoved` bot a été ajouté. Microsoft Teams ajoute également `eventType.teamMemberRemoved` `channelData` l'objet. Comme pour `membersAdded` l'objet, vous devez l'identifier pour l'ID d'application de votre bot afin de déterminer qui `membersRemoved` a été supprimé.
 
-### <a name="schema-example-team-member-removed"></a>Exemple de schéma : membre d’équipe supprimé
+### <a name="schema-example-team-member-removed"></a>Exemple de schéma : membre d'équipe supprimé
 
 ```json
 {
@@ -268,16 +269,16 @@ L' `conversationUpdate` événement dont l' `membersRemoved` objet est dans la c
 }
 ```
 
-### <a name="user-removed-from-a-meeting"></a>Utilisateur supprimé d’une réunion
+### <a name="user-removed-from-a-meeting"></a>Utilisateur supprimé d'une réunion
 
-L' `conversationUpdate` événement dont l' `membersRemoved` objet est dans la charge utile est envoyé lorsqu’un utilisateur est supprimé d’une réunion planifiée privée. Les détails de l’événement seront envoyés même si les utilisateurs anonymes rejoignent la réunion. 
+L'événement avec l'objet dans la charge utile est envoyé lorsqu'un utilisateur est `conversationUpdate` `membersRemoved` supprimé d'une réunion privée programmée. Les détails de l'événement sont envoyés même lorsque des utilisateurs anonymes rejoignent la réunion. 
 
 > [!NOTE]
 >
->_ Lorsqu’un utilisateur anonyme est supprimé d’une réunion, l’objet de charge utile membersRemoved n’a pas de `aadObjectId` champ.
->* Lorsqu’un utilisateur anonyme est supprimé d’une réunion, l' `from` objet de la charge utile a toujours l’ID de l’organisateur de la réunion, même si l’utilisateur anonyme a été supprimé par un autre présentateur.
+>* Lorsqu'un utilisateur anonyme est supprimé d'une réunion, l'objet charge utile membersRemoved n'a pas de `aadObjectId` champ.
+>* Lorsqu'un utilisateur anonyme est supprimé d'une réunion, l'objet dans la charge utile a toujours l'ID de l'organisateur de la réunion, même si l'utilisateur anonyme a été supprimé par un autre `from` présentateur.
 
-#### <a name="schema-example-user-removed-from-meeting"></a>Exemple de schéma : utilisateur supprimé de la réunion
+#### <a name="schema-example-user-removed-from-meeting"></a>Exemple de schéma : utilisateur supprimé de la réunion
 
 ```
 {   
@@ -316,14 +317,14 @@ L' `conversationUpdate` événement dont l' `membersRemoved` objet est dans la c
 }
 ```
 
-## <a name="team-name-updates"></a>Mises à jour de nom d’équipe
+## <a name="team-name-updates"></a>Mises à jour des noms d'équipe
 
 > [!NOTE]
-> Il n’existe aucune fonctionnalité permettant d’interroger tous les noms d’équipe et le nom de l’équipe n’est pas renvoyé dans les charges par d’autres événements.
+> Il n'existe aucune fonctionnalité pour interroger tous les noms d'équipe et le nom de l'équipe n'est pas renvoyé dans les charges utiles à partir d'autres événements.
 
-Votre robot est informé de la modification du nom de l’équipe dans laquelle il se trouve. Elle reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans l' `channelData` objet. Veuillez noter qu’il n’existe aucune notification pour la création ou la suppression d’une équipe, car les robots n’existent que dans le cadre de teams et n’ont aucune visibilité en dehors de l’étendue dans laquelle ils ont été ajoutés.
+Votre bot est averti lorsque l'équipe dans qui il se trouve a été renommé. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l'objet. Notez qu'il n'existe aucune notification pour la création ou la suppression d'une équipe, car les bots existent uniquement dans le cadre des équipes et n'ont aucune visibilité en dehors de l'étendue dans laquelle ils ont été ajoutés.
 
-### <a name="schema-example-team-renamed"></a>Exemple de schéma : équipe renommée
+### <a name="schema-example-team-renamed"></a>Exemple de schéma : équipe renommée
 
 ```json
 { 
@@ -360,15 +361,15 @@ Votre robot est informé de la modification du nom de l’équipe dans laquelle 
 
 ## <a name="channel-updates"></a>Mises à jour de canal
 
-Votre robot est averti lorsqu’un canal est créé, renommé ou supprimé dans une équipe où il a été ajouté. Une fois encore, l' `conversationUpdate` événement est reçu et un identificateur d’événement spécifique à teams est envoyé dans le cadre de l' `channelData.eventType` objet, où les données du canal  `channel.id` sont le GUID du canal et `channel.name` contient le nom du canal lui-même.
+Votre bot est averti lorsqu'un canal est créé, renommé ou supprimé dans une équipe où il a été ajouté. Là encore, l'événement est reçu et un identificateur d'événement spécifique à Teams est envoyé dans le cadre de l'objet, où les données du canal sont le GUID du canal et contiennent le nom du canal `conversationUpdate` `channelData.eventType`  `channel.id` `channel.name` lui-même.
 
-Les événements de canal sont les suivants :
+Les événements de canal sont les suivants :
 
-* **channelCreated** &emsp; Un utilisateur ajoute un nouveau canal à l’équipe
+* **channelCreated** &emsp; Un utilisateur ajoute un nouveau canal à l'équipe
 * **channelRenamed** &emsp; Un utilisateur renomme un canal existant
 * **channelDeleted** &emsp; Un utilisateur supprime un canal
 
-### <a name="full-schema-example-channelcreated"></a>Exemple de schéma complet : channelCreated
+### <a name="full-schema-example-channelcreated"></a>Exemple de schéma complet : channelCreated
 
 ```json
 {
@@ -406,7 +407,7 @@ Les événements de canal sont les suivants :
 }
 ```
 
-### <a name="schema-excerpt-channeldata-for-channelrenamed"></a>Extrait de schéma : channelData pour channelRenamed
+### <a name="schema-excerpt-channeldata-for-channelrenamed"></a>Extrait de schéma : channelData pour channelRenamed
 
 ```json
 ⋮
@@ -426,7 +427,7 @@ Les événements de canal sont les suivants :
 ⋮
 ```
 
-### <a name="schema-excerpt-channeldata-for-channeldeleted"></a>Extrait de schéma : channelData pour channelDeleted
+### <a name="schema-excerpt-channeldata-for-channeldeleted"></a>Extrait de schéma : channelData pour channelDeleted
 
 ```json
 ⋮
@@ -448,9 +449,9 @@ Les événements de canal sont les suivants :
 
 ## <a name="reactions"></a>Réactions
 
-L' `messageReaction` événement est envoyé lorsqu’un utilisateur ajoute ou supprime sa réaction à un message qui a été envoyé par votre bot. `replyToId` contient l’ID du message spécifique.
+L'événement est envoyé lorsqu'un utilisateur ajoute ou supprime sa réaction à un message qui a été initialement `messageReaction` envoyé par votre bot. `replyToId` contient l'ID du message spécifique.
 
-### <a name="schema-example-a-user-likes-a-message"></a>Exemple de schéma : un utilisateur aime un message
+### <a name="schema-example-a-user-likes-a-message"></a>Exemple de schéma : un utilisateur aime un message
 
 ```json
 {
@@ -492,7 +493,7 @@ L' `messageReaction` événement est envoyé lorsqu’un utilisateur ajoute ou s
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a>Exemple de schéma : un utilisateur n’aime pas un message
+### <a name="schema-example-a-user-un-likes-a-message"></a>Exemple de schéma : un utilisateur n'aime pas un message
 
 ```json
 {

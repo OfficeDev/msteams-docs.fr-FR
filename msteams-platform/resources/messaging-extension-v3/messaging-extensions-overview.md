@@ -1,35 +1,36 @@
 ---
 title: Développer des extensions de messagerie
-description: Décrit comment se familiariser avec les extensions de messagerie dans Microsoft teams
-keywords: extensions de messagerie des extensions de messagerie teams
-ms.openlocfilehash: 6ba8f73d40f795a83f28707ef89c207c5d51d67c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+description: Décrit la mise en place des extensions de messagerie dans Microsoft Teams
+ms.topic: overview
+keywords: extensions de messagerie teams
+ms.openlocfilehash: 1eb75371b1a8adbeadbcbdbc0d06c7d88f2f1ccc
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673565"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696548"
 ---
-# <a name="develop-messaging-extensions-for-microsoft-teams"></a>Développer des extensions de messagerie pour Microsoft teams
+# <a name="develop-messaging-extensions-for-microsoft-teams"></a>Développer des extensions de messagerie pour Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Les extensions de messagerie sont un moyen efficace pour les utilisateurs de s’engager avec votre application à partir de Microsoft Teams. Grâce à cette fonctionnalité, les utilisateurs peuvent interroger ou publier des informations à partir de votre service et publier ces informations, sous la forme de cartes, directement dans un message.
+Les extensions de messagerie sont un moyen puissant pour les utilisateurs d'interagir avec votre application à partir de Microsoft Teams. Avec cette fonctionnalité, les utilisateurs peuvent interroger ou publier des informations à partir de votre service et publier ces informations, sous forme de cartes, directement dans un message.
 
-![Exemple de carte d’extension de messagerie](~/assets/images/compose-extensions/ceexample.png)
+![Exemple de carte d'extension de messagerie](~/assets/images/compose-extensions/ceexample.png)
 
-Les extensions de messagerie apparaissent au bas de la zone de composition. Quelques-unes sont intégrées, telles que les emoji, les Giphy et les autocollants. Cliquez sur le bouton **autres options** (**&#8943;**) pour afficher les autres extensions de messagerie, y compris celles que vous ajoutez à partir de la Galerie d’applications ou téléchargez vous-même.
+Les extensions de messagerie apparaissent en bas de la zone de composition. Quelques-uns sont intégrés, tels que Emoji, Giphy et Autocollant. Choisissez le **bouton Plus d'options** **(&#8943;)** pour voir d'autres extensions de messagerie, y compris celles que vous ajoutez à partir de la galerie d'applications ou que vous téléchargez vous-même.
 
-Comment utiliseriez-vous les extensions de messagerie ? Voici quelques possibilités :
+Comment utiliser les extensions de messagerie ? Voici quelques possibilités :
 
 * Éléments de travail et bogues
 * Tickets de support client
-* Graphiques et rapports d’utilisation
+* Graphiques et rapports d'utilisation
 * Images et contenu multimédia
 * Opportunités de vente et prospects
 
-## <a name="types-of-messaging-extensions"></a>Types d’extensions de messagerie
+## <a name="types-of-messaging-extensions"></a>Types d'extensions de messagerie
 
-Il existe principalement deux types d’extensions de messagerie que vous pouvez créer pour teams dès aujourd’hui. Les rubriques suivantes vous guideront tout au long du processus de création :
+Il existe principalement deux types d'extensions de messagerie que vous pouvez créer pour Teams aujourd'hui. Les rubriques suivantes vous guident tout au long du processus de création :
 
-* [Extensions de messagerie basées sur la recherche](~/resources/messaging-extension-v3/search-extensions.md): interrogez votre service pour obtenir des informations et insérez-les dans un message. Exemple : Rechercher un élément de travail
-* [Extensions de messagerie basées sur les actions](~/resources/messaging-extension-v3/create-extensions.md): collectez des informations auprès de l’utilisateur et publiez-les sur un service tiers. Exemple : créer un élément de travail
+* [Extensions de messagerie basées sur la recherche](~/resources/messaging-extension-v3/search-extensions.md): interrogez votre service pour obtenir des informations et insérez-les dans un message. Exemple : Rechercher un élément de travail
+* [Extensions de messagerie basées sur l'action](~/resources/messaging-extension-v3/create-extensions.md): collecter des informations auprès de l'utilisateur et publier dans un service tiers. Exemple : Créer un élément de travail

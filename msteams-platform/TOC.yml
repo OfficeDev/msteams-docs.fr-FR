@@ -202,21 +202,25 @@
   items:
     - name: Vue d'ensemble
       href: bots/what-are-bots.md
-    - name: "Comment fonctionnent les bots\_?"
+    - name: Bots et kits de développement
+      href: bots/bot-features.md
+    - name: Gestionnaire d'activité du robot
       href: bots/bot-basics.md
-    - name: Conversations de bots
+    - name: Conversations de robots
       items:
-        - name: Concepts de base d’une conversation
+        - name: Vue d'ensemble
           href: bots/how-to/conversations/conversation-basics.md
+        - name: Messages dans les conversations des robots
+          href: bots/how-to/conversations/conversation-messages.md
         - name: Créer un menu de commandes pour votre bot
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: Conversations de groupe et de canal
           href: bots/how-to/conversations/channel-and-group-conversations.md
-        - name: S’abonner à des événements de conversation
+        - name: Événements de conversation dans votre robot Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Envoi de messages proactifs
+        - name: Envoyer des messages proactifs
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: Mettre en forme les messages du bot
+        - name: Formatez vos messages robots.
           href: bots/how-to/format-your-bot-messages.md
         - name: Mettre à jour et supprimer des messages de bot
           href: bots/how-to/update-and-delete-bot-messages.md
@@ -224,13 +228,13 @@
       href: bots/how-to/get-teams-context.md
     - name: Envoyer et recevoir des fichiers
       href: bots/how-to/bots-filesv4.md
-    - name: Gérer la limitation du taux de bot
+    - name: Optimisez votre robot grâce à la limitation du débit dans Teams
       href: bots/how-to/rate-limit.md
-    - name: Bots d’appels et de réunions
+    - name: Appels et réunions robots
       items:
         - name: Vue d'ensemble
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: Concepts de réseaux sociaux en temps réel
+        - name: Appels et réunions avec les médias en temps réel
           href: bots/calls-and-meetings/real-time-media-concepts.md
         - name: Enregistrer un bot appelant
           href: bots/calls-and-meetings/registering-calling-bot.md
@@ -246,7 +250,7 @@
   items:
     - name: Vue d'ensemble
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: Créer des commandes d'action
+    - name: Commandes d'action
       items:
         - name: Définir les commandes d’action
           href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +258,13 @@
           href: messaging-extensions/how-to/action-commands/create-task-module.md
         - name: Répondre les commandes d’action
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-    - name: Créer les commandes de recherche
+    - name: Commandes de recherche
       items:
         - name: Ajouter une page de configuration
           href: messaging-extensions/how-to/add-configuration-page.md
         - name: Définir les commandes de recherche
           href: messaging-extensions/how-to/search-commands/define-search-command.md
-        - name: Recevoir et répondre aux requêtes de recherche
+        - name: Répondre aux commandes de recherche
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: Ajouter un déploiement de lien
       href: messaging-extensions/how-to/link-unfurling.md

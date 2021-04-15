@@ -1,31 +1,32 @@
 ---
-title: Initier des actions à l’aide des extensions de messagerie
-description: Créer des extensions de messagerie basées sur des actions pour permettre aux utilisateurs de déclencher des services externes
-keywords: extensions de messagerie teams
-ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+title: Lancer des actions avec des extensions de messagerie
+description: Créer des extensions de messagerie basées sur l'action pour permettre aux utilisateurs de déclencher des services externes
+ms.topic: how-to
+keywords: teams messaging extensions messaging extensions search
+ms.openlocfilehash: c95139cea22569901e04effb0b1283c6979454b9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997992"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696093"
 ---
-# <a name="initiate-actions-with-messaging-extensions"></a>Initier des actions à l’aide des extensions de messagerie
+# <a name="initiate-actions-with-messaging-extensions"></a>Lancer des actions avec des extensions de messagerie
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Les extensions de messagerie basées sur les actions permettent à vos utilisateurs de déclencher des actions dans des services externes dans Teams.
+Les extensions de messagerie basées sur l'action permettent à vos utilisateurs de déclencher des actions dans des services externes à l'intérieur de Teams.
 
-![Exemple de carte d’extension de messagerie](~/assets/images/compose-extensions/ceexample.png)
+![Exemple de carte d'extension de messagerie](~/assets/images/compose-extensions/ceexample.png)
 
-Les sections suivantes décrivent la procédure à suivre.
+Les sections suivantes décrivent comment faire.
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="action-type-message-extensions"></a>Extensions de message de type d’action
+### <a name="action-type-message-extensions"></a>Extensions de message de type d'action
 
-Pour initier des actions à partir d’une extension de messagerie, définissez le `type` paramètre sur `action` . Voici un exemple de manifeste avec une recherche et une commande Create. Une extension de messagerie unique peut comporter jusqu’à 10 commandes différentes. Il peut s’agir de plusieurs commandes de recherche et de commandes basées sur une action.
+Pour lancer des actions à partir d'une extension de messagerie, définissez `type` le paramètre sur `action` . Voici un exemple de manifeste avec une recherche et une commande de création. Une seule extension de messagerie peut avoir jusqu'à 10 commandes différentes. Cela peut inclure à la fois plusieurs commandes de recherche et plusieurs commandes basées sur l'action.
 
-#### <a name="complete-app-manifest-example"></a>Exemple de manifeste d’application complet
+#### <a name="complete-app-manifest-example"></a>Exemple de manifeste d'application complet
 
 ```json
 {
@@ -126,13 +127,13 @@ Pour initier des actions à partir d’une extension de messagerie, définissez 
 }
 ```
 
-### <a name="initiate-actions-from-messages"></a>Initier des actions à partir de messages
+### <a name="initiate-actions-from-messages"></a>Lancer des actions à partir de messages
 
-En plus d’initier des actions à partir de la zone de message de composition, vous pouvez également utiliser votre extension de messagerie pour initier une action à partir d’un message. Cela vous permettra d’envoyer le contenu du message à votre bot à des fins de traitement et, si vous le souhaitez, de répondre à ce message avec une réponse en utilisant la méthode décrite dans [réponse à envoyer](#responding-to-submit). La réponse est insérée en tant que réponse au message que vos utilisateurs peuvent modifier avant de les envoyer. Vos utilisateurs peuvent accéder à votre extension de messagerie à partir du menu de dépassement de capacité `...` , puis en sélectionnant `Take action` comme dans l’image ci-dessous.
+En plus de lancer des actions à partir de la zone composer un message, vous pouvez également utiliser votre extension de messagerie pour lancer une action à partir d'un message. Cela vous permettra d'envoyer le contenu du message à votre bot pour traitement et éventuellement de répondre à ce message avec une réponse à l'aide de la méthode décrite dans Répondre à [l'envoi.](#responding-to-submit) La réponse est insérée en tant que réponse au message que vos utilisateurs peuvent modifier avant d'envoyer. Vos utilisateurs peuvent accéder à votre extension de messagerie à partir du menu de dépassement, puis en sélectionnant comme `...` `Take action` dans l'image ci-dessous.
 
-![Exemple d’initiation d’une action à partir d’un message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
+![Exemple de début d'une action à partir d'un message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-Pour permettre à votre extension de messagerie de fonctionner à partir d’un message, vous devez ajouter le `context` paramètre à l’objet de votre extension de messagerie `commands` dans votre manifeste de l’application, comme dans l’exemple ci-dessous. Les chaînes valides pour le `context` tableau sont `"message"` , `"commandBox"` et `"compose"` . La valeur par défaut est `["compose", "commandBox"]`. Pour plus d’informations sur le paramètre, reportez-vous à la section [define Commands](#define-commands) `context` .
+Pour que votre extension de messagerie fonctionne à partir d'un message, vous devez ajouter le paramètre à l'objet de votre extension de messagerie dans le manifeste de votre application, comme dans `context` `commands` l'exemple ci-dessous. Les chaînes `context` valides pour le tableau `"message"` sont , et `"commandBox"` `"compose"` . La valeur par défaut est `["compose", "commandBox"]`. Consultez la section [Définir les commandes](#define-commands) pour obtenir des détails complets sur le `context` paramètre.
 
 ```json
 "composeExtensions": [
@@ -152,7 +153,7 @@ Pour permettre à votre extension de messagerie de fonctionner à partir d’un 
 
 ```
 
-Vous trouverez ci-dessous un exemple de l' `value` objet contenant les détails du message qui seront envoyés dans le cadre de l’envoi de la `composeExtension` demande à votre bot.
+Voici un exemple de l'objet contenant les détails du message qui sera envoyé dans le cadre de la demande `value` `composeExtension` à votre bot.
 
 ```json
 {
@@ -222,27 +223,27 @@ Vous trouverez ci-dessous un exemple de l' `value` objet contenant les détails 
   ...
 ```
 
-### <a name="test-via-uploading"></a>Test via téléchargement
+### <a name="test-via-uploading"></a>Test via le téléchargement
 
-Vous pouvez tester votre extension de messagerie en téléchargeant votre application. Pour plus d’informations, consultez [la rubrique téléchargement de votre application dans une équipe](~/concepts/deploy-and-publish/apps-upload.md) .
+Vous pouvez tester votre extension de messagerie en chargeant votre application. Pour [plus d'informations, voir](~/concepts/deploy-and-publish/apps-upload.md) Chargement de votre application dans une équipe.
 
-Pour ouvrir votre extension de messagerie, accédez à l’une de vos conversations ou de vos canaux. Sélectionnez le bouton **autres options** ( **&#8943;** ) dans la zone de composition, puis choisissez votre extension de messagerie.
+Pour ouvrir votre extension de messagerie, accédez à vos conversations ou canaux. Choisissez le **bouton Plus d'options** (**&#8943;**) dans la zone de composition, puis choisissez votre extension de messagerie.
 
-## <a name="collecting-input-from-users"></a>Collecte d’entrées auprès des utilisateurs
+## <a name="collecting-input-from-users"></a>Collecte des entrées des utilisateurs
 
-Il existe trois façons de collecter des informations auprès d’un utilisateur final dans Teams.
+Il existe trois façons de collecter des informations d'un utilisateur final dans Teams.
 
-### <a name="static-parameter-list"></a>Liste de paramètres statiques
+### <a name="static-parameter-list"></a>Liste des paramètres statiques
 
-Dans cette méthode, tout ce que vous avez à faire est de définir une liste statique de paramètres dans le manifeste, comme indiqué ci-dessus dans la commande « créer une tâche ». Pour utiliser cette méthode, vérifiez que `fetchTask` la valeur est définie sur `false` et que vous définissez vos paramètres dans le manifeste.
+Dans cette méthode, il vous suffit de définir une liste statique de paramètres dans le manifeste, comme illustré ci-dessus dans la commande « Créer pour faire ». Pour utiliser cette méthode, `fetchTask` assurez-vous que vous définissez vos `false` paramètres dans le manifeste.
 
-Lorsqu’un utilisateur choisit une commande avec des paramètres statiques, teams génère un formulaire dans un module de tâches avec les paramètres définis dans le manifeste. Lors de l’envoi d’un `composeExtension/submitAction` est envoyé au bot. Pour plus d’informations sur le jeu de réponses attendu, reportez-vous à la rubrique [réponse à envoyer](#responding-to-submit) .
+Lorsqu'un utilisateur choisit une commande avec des paramètres statiques, Teams génère un formulaire dans un module de tâche avec les paramètres définis dans le manifeste. Sur la touche Envoyer, a `composeExtension/submitAction` est envoyé au bot. Pour plus [d'informations](#responding-to-submit) sur l'ensemble de réponses attendu, consultez la rubrique Répondant à l'objet d'une soumission.
 
-### <a name="dynamic-input-using-an-adaptive-card"></a>Entrée dynamique à l’aide d’une carte adaptative
+### <a name="dynamic-input-using-an-adaptive-card"></a>Entrée dynamique à l'aide d'une carte adaptative
 
-Dans cette méthode, votre service peut définir une carte adaptative personnalisée pour collecter l’entrée de l’utilisateur final. Pour cette approche, définissez le `fetchTask` paramètre sur `true` dans le manifeste. Notez que si vous avez défini `fetchTask` sur `true` un paramètre statique défini pour la commande sera ignoré.
+Dans cette méthode, votre service peut définir une carte adaptative personnalisée pour collecter les entrées de l'utilisateur final. Pour cette approche, définissez `fetchTask` le paramètre sur dans le `true` manifeste. Notez que si vous `fetchTask` définissez des `true` paramètres statiques définis pour la commande, ils seront ignorés.
 
-Dans cette méthode, votre service reçoit un `composeExtension/fetchTask` événement et doit répondre avec une [réponse de module de tâche](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)basée sur une carte adaptative. Vous trouverez ci-dessous un exemple de réponse avec une carte adaptative :
+Dans cette méthode, votre service recevra un événement et devra répondre avec une réponse de module de tâche basée sur une carte `composeExtension/fetchTask` [adaptative.](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) Voici un exemple de réponse avec une carte adaptative :
 
 ```json
 {
@@ -287,13 +288,13 @@ Dans cette méthode, votre service reçoit un `composeExtension/fetchTask` évé
 }
 ```
 
-Le bot peut également répondre avec une réponse auth/config si l’utilisateur doit authentifier ou configurer l’extension avant d’obtenir l’entrée de l’utilisateur.
+Le bot peut également répondre avec une réponse d'authentification/configuration si l'utilisateur doit authentifier ou configurer l'extension avant d'obtenir l'entrée de l'utilisateur.
 
-### <a name="dynamic-input-using-a-web-view"></a>Entrée dynamique à l’aide d’une vue Web
+### <a name="dynamic-input-using-a-web-view"></a>Entrée dynamique à l'aide d'un affichage web
 
-Dans cette méthode, votre service peut afficher un `<iframe>` widget basé pour afficher une interface utilisateur personnalisée et collecter les données entrées par l’utilisateur. Pour cette approche, définissez le `fetchTask` paramètre sur `true` dans le manifeste.
+Dans cette méthode, votre service peut afficher un widget basé pour afficher n'importe quelle interface utilisateur personnalisée `<iframe>` et collecter les entrées utilisateur. Pour cette approche, définissez `fetchTask` le paramètre sur dans le `true` manifeste.
 
-Tout comme dans le flux de carte adaptative votre service enverra un `fetchTask` événement et doit répondre par une [réponse de module de tâche](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)basée sur une URL. Vous trouverez ci-dessous un exemple de réponse avec une carte adaptative :
+Tout comme dans le flux de carte adaptative, votre service enverra un événement et doit répondre avec une réponse de module de tâche basée sur `fetchTask` [une](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)URL. Voici un exemple de réponse avec une carte adaptative :
 
 ```json
 {
@@ -306,13 +307,13 @@ Tout comme dans le flux de carte adaptative votre service enverra un `fetchTask`
 }
 ```
 
-### <a name="request-to-install-your-conversational-bot"></a>Demande d’installation de votre bot de conversation
+### <a name="request-to-install-your-conversational-bot"></a>Demande d'installation de votre bot de conversation
 
-Si votre application contient également un bot de conversation, il peut s’avérer nécessaire de vous assurer que votre bot est installé dans la conversation avant de charger votre module de tâches. Cela peut être utile dans les situations où vous devez obtenir un contexte supplémentaire pour le module de tâches. Par exemple, il se peut que vous deviez extraire la liste pour remplir un contrôle sélecteur de personnes ou la liste des canaux d’une équipe.
+Si votre application contient également un bot de conversation, il peut être nécessaire de s'assurer que votre bot est installé dans la conversation avant de charger votre module de tâche. Cela peut être utile dans les situations où vous devez obtenir un contexte supplémentaire pour votre module de tâche. Par exemple, vous devrez peut-être extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d'une équipe.
 
-Pour faciliter ce flux, lorsque votre extension de messagerie reçoit d’abord le `composeExtension/fetchTask` contrôle d’appel pour déterminer si votre bot est installé dans le contexte actuel (vous pouvez effectuer cette étape en tentant l’appel Get de la liste, par exemple). Si votre bot n’est pas installé, vous devez renvoyer une carte adaptative avec une action qui demande à l’utilisateur d’installer votre robot, comme dans l’exemple ci-dessous. Notez que l’utilisateur doit avoir l’autorisation d’installer des applications à cet emplacement ; s’ils ne peuvent pas se présenter, un message leur demande de contacter leur administrateur.
+Pour faciliter ce flux, lorsque votre extension de messagerie reçoit d'abord la vérification d'appel pour voir si votre bot est installé dans le contexte actuel (vous pouvez le faire en essayant d'obtenir un appel de liste, par `composeExtension/fetchTask` exemple). Si votre bot n'est pas installé, vous renvoyez une carte adaptative avec une action qui demande à l'utilisateur d'installer votre bot. Consultez l'exemple ci-dessous. Notez que l'utilisateur doit avoir l'autorisation d'installer des applications à cet emplacement . S'ils ne le peuvent pas, un message leur demandant de contacter leur administrateur s'est présenté.
 
-Voici un exemple de réponse :
+Voici un exemple de réponse :
 
 ```json
 {
@@ -338,9 +339,9 @@ Voici un exemple de réponse :
 }
 ```
 
-Une fois l’installation terminée, votre bot reçoit un autre message d’appel avec `name = composeExtension/submitAction` , et `value.data.msteams.justInTimeInstall = true` .
+Une fois que l'utilisateur a terminé l'installation, votre bot reçoit un autre message d'appel `name = composeExtension/submitAction` avec , et `value.data.msteams.justInTimeInstall = true` .
 
-Voici un exemple de l’appel :
+Voici un exemple d'appel :
 
 ```json
 {
@@ -364,25 +365,25 @@ Voici un exemple de l’appel :
 }
 ```
 
-Vous devez répondre à cet appel à l’aide de la même réponse de tâche que si le robot était déjà installé.
+Vous devez répondre à cet appel avec la même réponse à la tâche avec qui vous ariez répondu si le bot était déjà installé.
 
-## <a name="responding-to-submit"></a>Réponse à l’envoi
+## <a name="responding-to-submit"></a>Réponse à l'soumission
 
-Une fois qu’un utilisateur a terminé de saisir son entrée, le robot reçoit un `composeExtension/submitAction` événement avec l’ID de commande et les valeurs de paramètre définies.
+Une fois qu'un utilisateur a entré son entrée, votre bot reçoit un événement avec l'ID de commande et les valeurs `composeExtension/submitAction` de paramètre définies.
 
-Voici les différentes réponses attendues vers un `submitAction` .
+Voici les différentes réponses attendues à un `submitAction` .
 
 ### <a name="task-module-response"></a>Réponse du module de tâche
 
-Elle est utilisée lorsque votre extension doit regrouper les boîtes de dialogue pour obtenir plus d’informations. La réponse est exactement la même que celle `fetchTask` mentionnée précédemment.
+Cette valeur est utilisée lorsque votre extension doit chaîner des boîtes de dialogue pour obtenir plus d'informations. La réponse est identique à ce qui a `fetchTask` été mentionné précédemment.
 
-### <a name="compose-extension-authconfig-response"></a>Réponse d’authentification/configuration de l’extension de composition
+### <a name="compose-extension-authconfig-response"></a>Réponse d'th/config d'extension de composition
 
-Cette valeur est utilisée lorsque votre extension doit être authentifiée ou configurée pour continuer. Pour plus d’informations, consultez la [section authentification](~/resources/messaging-extension-v3/search-extensions.md#authentication) dans la section recherche.
+Il est utilisé lorsque votre extension doit s'authentifier ou configurer pour continuer. Pour plus [d'informations,](~/resources/messaging-extension-v3/search-extensions.md#authentication) voir la section sur l'authentification dans la section de recherche.
 
-### <a name="compose-extension-result-response"></a>Réponse aux résultats de l’extension de composition
+### <a name="compose-extension-result-response"></a>Réponse aux résultats de l'extension de composition
 
-Cette commande permet d’insérer une carte dans la zone de composition à la suite de la commande. Il s’agit de la même réponse que celle utilisée dans la commande de recherche, mais il est limité à une carte ou à un résultat dans la matrice.
+Cette commande sert à insérer une carte dans la zone de composition à la suite d'une commande. Il s'agit de la même réponse que celle utilisée dans la commande de recherche, mais elle est limitée à une carte ou à un résultat dans le tableau.
 
 ```json
 {
@@ -407,14 +408,14 @@ Cette commande permet d’insérer une carte dans la zone de composition à la s
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -430,21 +431,21 @@ Cette commande permet d’insérer une carte dans la zone de composition à la s
 }
 ```
 
-### <a name="respond-with-an-adaptive-card-message-sent-from-a-bot"></a>Répondre avec un message de carte adaptative envoyé à partir d’un bot
+### <a name="respond-with-an-adaptive-card-message-sent-from-a-bot"></a>Répondre avec un message de carte adaptative envoyé à partir d'un bot
 
-Vous pouvez également répondre à l’action d’envoi en insérant un message avec une carte adaptative dans le canal avec un bot. Votre utilisateur pourra prévisualiser le message avant de l’envoyer et éventuellement modifier/interagir avec. Cela peut être très utile dans les scénarios où vous devez recueillir des informations auprès de vos utilisateurs avant de créer une réponse de carte adaptative. Le scénario suivant montre comment vous pouvez utiliser ce flux pour configurer un sondage sans inclure les étapes de configuration dans le message du canal.
+Vous pouvez également répondre à l'action d'envoyer en insérant un message avec une carte adaptative dans le canal avec un bot. Votre utilisateur pourra afficher un aperçu du message avant de l'envoyer, et éventuellement le modifier/interagir avec celui-ci. Cela peut être très utile dans les scénarios où vous devez collecter des informations auprès de vos utilisateurs avant de créer une réponse de carte adaptative. Le scénario suivant montre comment utiliser ce flux pour configurer un sondage sans inclure les étapes de configuration dans le message de canal.
 
-1. L’utilisateur clique sur l’extension de messagerie pour déclencher le module de tâches.
-1. L’utilisateur utilise le module tâches pour configurer le sondage.
-1. Après avoir soumis le module de tâches de configuration, l’application utilise les informations fournies dans le module de tâches pour concevoir une carte adaptative et l’envoie en `botMessagePreview` réponse au client.
-1. L’utilisateur peut alors prévisualiser le message de la carte adaptative avant de l’insérer dans le canal. Si le bot n’est pas déjà membre du canal, le fait de cliquer sur `Send` ajoutera le bot.
-1. L’interaction avec la carte adaptative modifiera le message avant de l’envoyer.
-1. Une fois que l’utilisateur clique sur `Send` le bot, le message est publié vers le canal.
+1. L'utilisateur clique sur l'extension de messagerie pour déclencher le module de tâche.
+1. L'utilisateur utilise le module de tâche pour configurer le sondage.
+1. Après avoir soumis le module de tâche de configuration, l'application utilise les informations fournies dans le module de tâche pour créer une carte adaptative et l'envoie en réponse `botMessagePreview` au client.
+1. L'utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot ne l'insère dans le canal. Si le bot n'est pas déjà membre du canal, un clic `Send` ajoute le bot.
+1. L'interaction avec la carte adaptative modifie le message avant de l'envoyer.
+1. Une fois que l'utilisateur `Send` clique sur le bot, il publie le message sur le canal.
 
-Pour activer ce flux, votre module de tâches doit répondre comme dans l’exemple ci-dessous, qui présente l’aperçu du message à l’utilisateur.
+Pour activer ce flux, votre module de tâche doit répondre comme dans l'exemple ci-dessous, qui présente le message d'aperçu à l'utilisateur.
 
 >[!Note]
->Le `activityPreview` doit contenir une `message` activité avec exactement 1 pièce jointe de carte adaptative.
+>Le `activityPreview` doit contenir une activité avec exactement 1 pièce jointe `message` de carte adaptative.
 
 ```json
 {
@@ -463,7 +464,7 @@ Pour activer ce flux, votre module de tâches doit répondre comme dans l’exem
 }
 ```
 
-Votre extension de message doit maintenant répondre à deux nouveaux types d’interactions `value.botMessagePreviewAction = "send"` et `value.botMessagePreviewAction = "edit"` . Vous trouverez ci-dessous un exemple de l' `value` objet que vous devrez traiter :
+Votre extension de message devra désormais répondre à deux nouveaux types d'interactions, `value.botMessagePreviewAction = "send"` et `value.botMessagePreviewAction = "edit"` . Voici un exemple de `value` l'objet que vous devrez traiter :
 
 ```json
 {
@@ -494,7 +495,7 @@ Votre extension de message doit maintenant répondre à deux nouveaux types d’
 }
 ```
 
-Lors de la réponse à la `edit` demande, vous devez répondre avec une `task` réponse dont les valeurs sont remplies avec les informations que l’utilisateur a déjà envoyées. Lors de la réponse à la `send` demande, vous devez envoyer un message au canal contenant la carte adaptative finalisée.
+Lorsque vous répondez à la demande, vous devez répondre par une réponse avec les valeurs remplies avec les informations que `edit` `task` l'utilisateur a déjà envoyées. Lorsque vous répondez à la demande, vous devez envoyer un message au canal `send` contenant la carte adaptative finalisée.
 
 # <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
@@ -556,11 +557,11 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-*Voir aussi* [exemples de robots d’infrastructure](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+*Voir aussi des* [exemples Bot Framework.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Cet exemple illustre ce flux à l’aide du [Kit de développement logiciel (SDK) Microsoft. Bot. Connector. Teams (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+Cet exemple illustre ce flux à l'aide du [SDK Microsoft.Bot.Connector.Teams (v3).](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
 
 ```csharp
 public class MessagesController : ApiController

@@ -1,29 +1,30 @@
 ---
-title: conversations 1-sur-1 avec des robots
-description: Décrit le scénario de bout en bout de la conversation 1-on-1 avec un bot dans Microsoft teams
-keywords: scénarios teams 1on1 1to1 de conversation
+title: Conversations 1-sur-1 avec des bots
+description: Décrit le scénario de bout en bout d'une conversation 1-à-1 avec un bot dans Microsoft Teams
+keywords: teams scenarios 1on1 1to1 conversation bot
+ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: e23bb98160125d7fdbb4521467e2f522d6b6ce40
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 43b44d15b675db2fa6c38d6661858c4e0a595039
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801081"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696667"
 ---
-# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Disposer d’une conversation personnelle (individuelle) avec un robot Microsoft teams
+# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation personnelle (un-à-un) avec un bot Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft teams permet aux utilisateurs de participer à des conversations directes avec des robots créés sur [Microsoft bot Framework](/azure/bot-service/?view=azure-bot-service-3.0). Les utilisateurs peuvent trouver des robots dans la Galerie découvrir les applications et les ajouter à leur expérience de teams pour les conversations personnelles. Les propriétaires d’équipe et les utilisateurs disposant des autorisations appropriées peuvent également ajouter des bots en tant que membres de l’équipe (voir [interagir dans un canal d’équipe](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)), ce qui les rend non seulement disponibles dans les canaux de l’équipe, mais également pour la conversation personnelle de tous ces utilisateurs.
+Microsoft Teams permet aux utilisateurs de s'engager dans des conversations directes avec des bots intégrés [à Microsoft Bot Framework.](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) Les utilisateurs peuvent trouver des bots dans la galerie Découvrir les applications et les ajouter à leur expérience Teams pour les conversations personnelles. Les propriétaires d'équipe et les utilisateurs ayant [](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)les autorisations appropriées peuvent également ajouter des bots en tant que membres de l'équipe (voir Interagir dans un canal d'équipe), ce qui les rend non seulement disponibles dans les canaux de cette équipe, mais également pour la conversation personnelle pour tous ces utilisateurs.
 
-La conversation personnelle diffère de celle des canaux en ce que l’utilisateur n’a pas besoin de @mention le bot. Si un bot est utilisé dans plusieurs contextes (personnel, groupChat ou canal), vous devrez détecter si le robot se trouve dans une conversation ou un canal de groupe et traiter les messages un peu différemment. Pour plus d’informations, consultez [la rubrique interagir dans un canal d’équipe ou une conversation de groupe](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) .
+La conversation personnelle diffère de la conversation dans les canaux en ce que l'utilisateur n'a pas besoin @mention le bot. Si un bot est utilisé dans plusieurs contextes (personnel, groupChat ou canal), vous devez détecter si le bot se trouve dans une conversation ou un canal de groupe, et traiter les messages un peu différemment. Pour [plus d'informations, voir Interagir](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) dans un canal d'équipe ou une conversation de groupe.
 
-## <a name="designing-a-great-personal-bot"></a>Conception d’un robot personnel
+## <a name="designing-a-great-personal-bot"></a>Conception d'un bot personnel idéal
 
-Un robot puissant dans Microsoft teams permet aux utilisateurs d’obtenir les informations dont ils ont besoin, tout cela dans le cadre de l’expérience de teams. Les conversations personnelles avec un bot sont des échanges privés entre un bot et son utilisateur ; ils constituent un excellent moyen de fournir des informations spécifiques et pertinentes pour cet utilisateur dans le contexte personnel. Un bot dans la conversation personnelle est une boîte de dialogue entre votre service et l’individu, où un bot d’une conversation ou d’un canal de groupe diffuse tout vers un groupe de personnes.
+Un bot de qualité dans Microsoft Teams permet aux utilisateurs d'obtenir les informations dont ils ont besoin, dans le contexte de l'expérience Teams. Les conversations personnelles avec un bot sont des échanges privés entre un bot et son utilisateur . Ils sont un excellent moyen de fournir des informations spécifiques et pertinentes pour cet utilisateur dans le contexte personnel. Un bot dans une conversation personnelle est vraiment une boîte de dialogue entre votre service et l'individu, où un bot dans une conversation de groupe ou un canal diffuse tout à un groupe de personnes.
 
-En fonction de l’expérience que vous souhaitez créer, il se peut que le robot doive travailler sur plusieurs étendues-personnel, groupChat et/ou équipe. Le travail de prise en charge de plusieurs étendues est minime. Il n’y a pas d’attentes dans teams que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre robot est pertinent et qu’il fournit la valeur de l’utilisateur dans n’importe quelle étendue que vous choisissez de prendre en charge.
+Selon l'expérience que vous souhaitez créer, le bot peut avoir besoin de travailler dans plusieurs étendues : personnel, groupChat et/ou équipe. Le travail pour prendre en charge plusieurs étendues est minimal. Teams ne s'attend pas à ce que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre bot est logique et fournit une valeur utilisateur dans les étendues que vous choisissez de prendre en charge.
 
-## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Meilleure pratique : messages de bienvenue dans les conversations personnelles
+## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Meilleure pratique : messages de bienvenue dans les conversations personnelles
 
-Votre robot doit [Envoyer de manière proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et uniquement la première fois) un utilisateur lance une conversation personnelle avec votre robot. (Cette recommandation ne s’applique pas aux contacts pour la première fois dans un canal.)
+Votre bot doit envoyer de manière [proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et uniquement la première fois) qu'un utilisateur lance une conversation personnelle avec votre bot. (Cette recommandation ne s'applique pas aux contacts de première heure dans un canal.)

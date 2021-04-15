@@ -3,16 +3,16 @@ title: Formats multimédias pris en charge pour les bots
 description: Les bots de Microsoft Teams ne prend en charge que les formats multimédias suivants pour le contenu audio et vidéo.
 ms.topic: reference
 keywords: formats multimédias des bots teams
-ms.openlocfilehash: 1f6fe7abf33ae9b831a2c7a5315be3161ac6952d
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: ed0dfc8d96aa1a1af62686efded8564b7100e7c7
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014347"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696562"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formats multimédias pris en charge pour les bots
 
-Les bots de Microsoft Teams ne prend en charge que les formats multimédias suivants pour le contenu audio et vidéo.
+Les bots de Microsoft Teams ne prend en charge que les formats multimédias suivants pour le contenu audio et vidéo :
 
 | Format | Plus d’informations |
 | --- | --- |
@@ -26,3 +26,8 @@ Les bots de Microsoft Teams ne prend en charge que les formats multimédias suiv
 | MP3 | https://en.wikipedia.org/wiki/MP3 |
 | Nouvel | http://opus-codec.org/ |
 | MP4 | https://en.wikipedia.org/wiki/MPEG-4 |
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Modifications apportées aux API de bot Teams pour récupérer des membres d'équipe ou de conversation](~/resources/team-chat-member-api-changes.md)

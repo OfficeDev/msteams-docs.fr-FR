@@ -1,46 +1,48 @@
 ---
 title: Déploiement de lien
 author: clearab
-description: Comment effectuer un déploiement de lien avec l’extension de messagerie dans une application Microsoft Teams.
+description: Comment effectuer un déploiement de lien avec l'extension de messagerie dans une application Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845636"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696228"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
+Ce document vous guide sur la façon d'ajouter le déploiement de lien au manifeste de votre application à l'aide d'App studio et manuellement. Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité `invoke` lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Il contient l'URL complète qui a été passée dans la zone de rédaction du message et vous pouvez répondre avec une carte que l'utilisateur peut déployer, fournissant des informations ou `invoke` des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l'URL servant de terme de recherche.
+
 > [!NOTE]
-> Actuellement, le déploiement de liens n’est pas pris en charge sur les clients mobiles.
+> Actuellement, le déploiement de liaison n'est pas pris en charge sur les clients mobiles.
 
-Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité `invoke` lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Celui-ci contient l’URL complète qui a été passée dans la zone de rédaction du message, et vous pouvez répondre avec une carte que l’utilisateur peut déployer, fournissant des informations ou `invoke` des actions supplémentaires.  Cela fonctionne de manière très similaire à une [commande de](~/messaging-extensions/how-to/search-commands/define-search-command.md)recherche, avec l’URL servant de terme de recherche.
-
-L’extension de messagerie Azure DevOps utilise le déploiement de lien pour rechercher les URL qui sont passées dans la zone de composition du message pointant vers un élément de travail. Dans la capture d’écran ci-dessous, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps que l’extension de messagerie a résolue en une carte.
+L'extension de messagerie Azure DevOps utilise le déploiement de lien pour rechercher les URL qui sont passées dans la zone de composition du message pointant vers un élément de travail. Dans l'image suivante, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps, que l'extension de messagerie a résolue en une carte :
 
 ![Exemple de déploiement de lien](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Ajouter le déploiement de lien au manifeste de votre application
 
- Pour ajouter le déploiement de lien au manifeste de votre application, ajoutez un nouveau tableau à la `messageHandlers` `composeExtensions` section du manifeste JSON de votre application. Vous pouvez ajouter le tableau à l’aide d’App Studio ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par `*.example.com` exemple. Cela correspond exactement à un segment du domaine ; si vous avez besoin d’une `a.b.example.com` correspondance, utilisez `*.*.example.com` .
+Pour ajouter le déploiement de lien au manifeste de votre application, ajoutez un nouveau tableau à la `messageHandlers` `composeExtensions` section du manifeste JSON de votre application. Vous pouvez ajouter le tableau à l'aide d'App Studio ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par `*.example.com` exemple. Cela correspond exactement à un segment du domaine ; si vous avez besoin d'une `a.b.example.com` correspondance, utilisez `*.*.example.com` .
 
 > [!NOTE]
-> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, yourapp.onmicrosoft.com est valide, mais *.onmicrosoft.com n’est pas valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, *.com, *.org.
+> Donot add domains that are not in your control, either directly or through wildcards. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n'est pas valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, `*.com` . `*.org`
 
-### <a name="using-app-studio"></a>Utilisation de App Studio
+### <a name="add-link-unfurling-using-app-studio"></a>Ajouter un déploiement de lien à l'aide d'App Studio
 
-1. Dans App Studio, sous l’onglet Éditeur de manifeste, chargez le manifeste de votre application.
-1. Dans la page **Extension de** messagerie, ajoutez le domaine que vous souhaitez rechercher dans la section Des **handlers** de messages, comme dans la capture d’écran ci-dessous.
+1. Ouvrez **App Studio** à partir du client Microsoft Teams, puis sélectionnez l'onglet **Éditeur de** manifeste.
+1. Chargez le manifeste de votre application.
+1. Dans la page **Extension de** messagerie, ajoutez le domaine que vous souhaitez rechercher dans la section Des **handlers de** messages. L'image suivante explique le processus :
 
-![section des handlers de messages dans App Studio](~/assets/images/link-unfurling.png)
+    ![section des handlers de messages dans App Studio](~/assets/images/link-unfurling.png)
+    
+### <a name="add-link-unfurling-manually"></a>Ajouter manuellement le déploiement de lien
 
-### <a name="manually"></a>Manuellement
+Pour permettre à votre extension de messagerie d'interagir avec des liens, vous devez d'abord ajouter le `messageHandlers` tableau au manifeste de votre application. L'exemple suivant explique comment ajouter manuellement le déploiement de lien : 
 
-Pour permettre à votre extension de messagerie d’interagir avec les liens de cette façon, vous devez d’abord ajouter le tableau au manifeste de votre application, comme dans `messageHandlers` l’exemple ci-dessous. Cet exemple n’est pas le manifeste complet, voir [la référence de](~/resources/schema/manifest-schema.md) manifeste pour obtenir un exemple de manifeste complet.
 
 ```json
 ...
@@ -62,18 +64,20 @@ Pour permettre à votre extension de messagerie d’interagir avec les liens de 
 ...
 ```
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>Gérer `composeExtension/queryLink` l’appel
+Pour obtenir un exemple de manifeste complet, voir [la référence de manifeste.](~/resources/schema/manifest-schema.md)
 
-Une fois que vous avez ajouté le domaine pour écouter le manifeste de l’application, vous devez mettre à jour votre code de service web pour gérer la demande d’appel. Utilisez l’URL que vous recevez pour effectuer une recherche dans votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première sera utilisée.
+## <a name="handle-the-composeextensionquerylink-invoke"></a>Gérer `composeExtension/queryLink` l'appel
 
-Nous prise en charge les types de carte suivants :
+Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour le code de votre service web pour gérer la demande d'appel. Utilisez l'URL reçue pour rechercher votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
+
+Les types de carte suivants sont pris en charge :
 
 * [Carte miniature](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Carte Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Carte connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Voir [Quelles sont les cartes pour](~/task-modules-and-cards/what-are-cards.md) obtenir une vue d’ensemble .
+### <a name="example"></a>Exemple
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -120,7 +124,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Voici un exemple de `invoke` l’envoi à votre bot.
+Voici un exemple de `invoke` l'envoi à votre bot :
 
 ```json
 {
@@ -132,7 +136,7 @@ Voici un exemple de `invoke` l’envoi à votre bot.
 }
 ```
 
-Un exemple de réponse est illustré ci-dessous.
+Voici un exemple de réponse :
 
 ```json
 {
@@ -146,14 +150,14 @@ Un exemple de réponse est illustré ci-dessous.
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -170,3 +174,8 @@ Un exemple de réponse est illustré ci-dessous.
 ```
 
 * * *
+
+## <a name="see-also"></a>Voir aussi 
+
+> [!div class="nextstepaction"]
+> [Qu'est-ce que les cartes ?](~/task-modules-and-cards/what-are-cards.md)

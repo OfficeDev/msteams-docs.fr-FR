@@ -3,12 +3,12 @@ title: Prise en main de App Studio dans Microsoft Teams
 description: Prise en main de la création de superbes applications dans Microsoft Teams à l’aide d’App Studio
 keywords: mise en place d’app studio teams
 ms.topic: overview
-ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d275e78909fe35a6032bf67cb7454396f3dbd7af
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634508"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696303"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Développez rapidement des applications avec App Studio pour Microsoft Teams
 
@@ -34,7 +34,7 @@ Une fois dans App Studio, cliquez sur l’onglet *Éditeur de manifeste* dans le
 
 ## <a name="app-studio-features"></a>Fonctionnalités d’App Studio
 
-Cette section traite des fonctionnalités, telles que la conversation, l’éditeur de manifeste, les détails et les fonctionnalités. Vous pouvez personnaliser vos fonctionnalités à l’aide de la personnalisation de l’application.
+Cette section traite des fonctionnalités, telles que la conversation, l'éditeur de manifeste, les détails et les fonctionnalités. Vous pouvez personnaliser vos fonctionnalités à l'aide de la personnalisation de l'application.
 
 ### <a name="conversation"></a>Conversation
 
@@ -55,9 +55,9 @@ La section détails de l’Éditeur de manifeste définit la description génér
 La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fonctionnalités de l'application sont définies et où les détails de chacune de ces fonctionnalités sont énumérés.
 
 > [!NOTE]
-> La fonctionnalité de personnalisation de l’application est actuellement disponible en prévisualisation pour les développeurs uniquement.
+> La fonctionnalité de personnalisation de l'application est actuellement disponible en prévisualisation pour les développeurs uniquement.
 > 
-> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
+> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l'application doivent suivre lors de la personnalisation de votre application. Pour plus d'informations, voir [personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
 
 
 ##### <a name="tabs"></a>Onglets
@@ -85,7 +85,7 @@ Notez que si vous avez défini votre bot pour prendre en charge une seule étend
 Cette section vous permet d’ajouter un connecteur à votre application. Si vous avez déjà inscrit un connecteur Office 365, sélectionnez *Configurer* puis entrez le nom et l’ID du connecteur. Si vous voulez un nouveau connecteur, cliquez sur *S'inscrire* pour accéder au tableau de bord du développeur de connecteurs dans votre navigateur.
 
 > [!NOTE]
-> La personnalisation d’application permet aux administrateurs de modifier l’apparence des applications chargées par le biais de bots, d’extensions de messagerie, d’onglets et de connecteurs. Par exemple, si l’administrateur Teams personnalise le nom d’une application de *Contoso* à *Agent Contoso,* l’application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l’ajout d’un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l’application en tant *que Contoso*.
+> La personnalisation d'application permet aux administrateurs de modifier l'apparence des applications chargées par le biais de bots, d'extensions de messagerie, d'onglets et de connecteurs. Par exemple, si l'administrateur Teams personnalise le nom d'une application de *Contoso* à *Agent Contoso,* l'application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l'ajout d'un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l'application en tant *que Contoso*.
 
 
 ##### <a name="messaging-extensions"></a>Extensions de messagerie
@@ -101,6 +101,9 @@ Chaque commande nécessite un titre et un ID. La commande peut éventuellement c
 * Nom du paramètre tel qu’il apparaît dans le client Teams et est inclus dans la demande de l’utilisateur
 * Titre convivial
 * Description facultative
+
+> [!NOTE]
+> Pour créer une extension de messagerie à l'aide d'App Studio, voir créer une [extension de messagerie à l'aide d'app studio.](~/resources/create-messaging-extension-using-appstudio.md)
 
 #### <a name="test-and-distribute"></a>Tester et distribuer
 

@@ -1,80 +1,82 @@
 ---
-title: Que sont les extensions de messagerie ?
+title: Extensions de messagerie
 author: clearab
-description: Vue d’ensemble des extensions de messagerie sur la plateforme Microsoft teams
+description: Vue d'ensemble des extensions de messagerie sur la plateforme Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3ea9649a22ecc134e983037d1ef109be918a26b3
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 2d82202c72584927fc705813151d91510a7f12c9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587796"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696741"
 ---
-# <a name="what-are-messaging-extensions"></a>Que sont les extensions de messagerie ?
+# <a name="messaging-extensions"></a>Extensions de messagerie
 
-Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez ensuite renvoyer les résultats de cette interaction au client Microsoft Teams, généralement sous la forme d’une carte avec mise en forme enrichie.
+Les extensions de messagerie permettent aux utilisateurs d'interagir avec votre service web via des boutons et des formulaires dans le client Microsoft Teams. Ils peuvent rechercher ou initier des actions dans un système externe à partir de la zone de composition du message, de la zone de commande ou directement à partir d'un message. Vous pouvez renvoyer les résultats de cette interaction au client Microsoft Teams sous la forme d'une carte richement mise en forme. Ce document donne une vue d'ensemble de l'extension de messagerie, des tâches effectuées dans différents scénarios, de l'utilisation de l'extension de messagerie, des commandes d'action et de recherche, et du déploiement de liens.
 
-La capture d’écran ci-dessous montre les emplacements à partir desquels les extensions de messagerie peuvent être appelées.
+L'image suivante affiche les emplacements d'appel des extensions de messagerie :
 
-![emplacements d’appel d’extension de messagerie](~/assets/images/messaging-extension-invoke-locations.png)
+![emplacements d'appel d'extension de messagerie](~/assets/images/messaging-extension-invoke-locations.png)
 
-## <a name="what-kinds-of-tasks-are-they-good-for"></a>Quels types de tâches sont-elles utiles ?
+## <a name="scenarios-where-messaging-extensions-are-used"></a>Scénarios dans lequel les extensions de messagerie sont utilisées
 
-**Scénario :** J’ai besoin d’un système externe pour effectuer une opération et je souhaite que le résultat de l’action soit renvoyé à ma conversation. \
-**Exemple :** Réservez une ressource et indiquez au canal la date/l’heure à laquelle vous l’avez réservée.
+| Scénario | Exemple |
+|:-----------------|:-----------------|
+|Vous souhaitez qu'un système externe soit en mesure d'action et que le résultat de l'action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître l'créneau horaire réservé.|
+|Vous souhaitez trouver quelque chose dans un système externe et partager les résultats avec la conversation.|Recherchez un élément de travail dans Azure DevOps et partagez-le avec le groupe en tant que carte adaptative.|
+|Vous souhaitez effectuer une tâche complexe impliquant plusieurs étapes ou une grande quantité d'informations dans un système externe et partager les résultats avec une conversation.|Créez un bogue dans votre système de suivi en fonction d'un message Teams, affectez ce bogue à Bob et envoyez une carte au thread de conversation avec les détails du bogue.|
 
-**Scénario :** J’ai besoin de trouver des éléments dans un système externe et je souhaite partager les résultats avec ma conversation. \
-**Exemple :**  Recherchez un élément de travail dans Azure DevOps et partagez-le avec le groupe sous forme de carte adaptative.
+## <a name="understand-how-messaging-extensions-work"></a>Comprendre le fonctionnement des extensions de messagerie
 
-**Scénario :** J’ai besoin d’effectuer une tâche complexe impliquant plusieurs étapes (ou un grand nombre d’informations) dans un système externe, et les résultats doivent être partagés avec une conversation. \
-**Exemple :** Créez un bogue dans votre système de suivi en fonction d’un message Teams, affectez ce bogue à Bob, puis envoyez une carte au thread de conversation avec les détails du bogue.
+Une extension de messagerie se compose d'un service web que vous hébergez et d'un manifeste d'application, qui définit l'endroit à partir duquel votre service web est appelé dans le client Microsoft Teams. Le service web tire parti du schéma de messagerie et du protocole de communication sécurisée de Bot Framework. Vous devez donc inscrire votre service web en tant que bot dans Bot Framework. 
 
-## <a name="how-do-messaging-extensions-work"></a>Comment fonctionnent les extensions de messagerie ?
+> [!NOTE]
+> Bien que vous pouvez créer le service web manuellement, utilisez le [SDK Bot Framework](https://github.com/microsoft/botframework) pour utiliser le protocole.
 
-Une extension de messagerie se compose d’un service Web que vous hébergez et de votre manifeste d’application qui définit l’emplacement à partir duquel votre service Web peut être appelé dans le client Microsoft Teams. Ceux-ci tirent parti du schéma de messagerie et du protocole de communication sécurisé de Bot Framework. Vous devez donc également inscrire votre service web en tant que bot dans Bot Framework. Bien que vous puissiez créer entièrement votre service Web manuellement, nous vous recommandons de tirer parti du [Kit de développement logiciel (SDK)](https://github.com/microsoft/botframework) de l’infrastructure de robots pour utiliser plus facilement le protocole.
+Dans le manifeste de l'application Microsoft Teams, une seule extension de messagerie est définie avec jusqu'à dix commandes différentes. Chaque commande définit un type, tel qu'une action ou une recherche, ainsi que les emplacements dans le client à partir de l'endroit où elle est invoquée. Les emplacements d'appel sont la zone de message de composition, la barre de commandes et le message. Lors de l'appel, le service web reçoit un message HTTPS avec une charge utile JSON incluant toutes les informations pertinentes. Répondez avec une charge utile JSON, ce qui permet au client Teams de connaître l'interaction suivante à activer. 
 
-Dans le manifeste de l’application pour votre application Microsoft Teams, vous allez définir une extension de messagerie unique avec jusqu’à dix commandes différentes. Chaque commande définit un type (action ou recherche), ainsi que les emplacements dans le client à partir duquel elle peut être appelée (zone de message, barre de commandes et/ou message de composition). Une fois l’appel effectué, votre service Web reçoit un message HTTPs avec une charge utile JSON, y compris toutes les informations pertinentes. Vous allez répondre avec une charge utile JSON, ce qui permet au client teams de savoir quelle interaction activer ensuite.
+## <a name="types-of-messaging-extension-commands"></a>Types de commandes d'extension de messagerie
 
-## <a name="types-of-messaging-extension-commands"></a>Types de commandes d’extension de messagerie
-
-Le type de commande d’extension de messagerie définit les éléments d’interface utilisateur et les flux d’interaction disponibles pour votre service Web. Certaines interactions, telles que l’authentification et la configuration, sont disponibles pour les deux types de commandes.
+Il existe deux types de commandes d'extension de messagerie : commande d'action et commande de recherche. Le type de commande d'extension de messagerie définit les éléments d'interface utilisateur et les flux d'interaction disponibles pour votre service web. Certaines interactions, telles que l'authentification et la configuration, sont disponibles pour les deux types de commandes.
 
 ### <a name="action-commands"></a>Commandes d’action
 
-Les commandes d’action vous permettent de présenter à vos utilisateurs une fenêtre contextuelle modale pour collecter ou afficher des informations. Lors de l’envoi du formulaire, votre service Web peut répondre en insérant un message directement dans la conversation ou en insérant un message dans la zone de message de composition et en permettant à l’utilisateur d’envoyer le message. Vous pouvez même regrouper plusieurs formulaires pour des flux de travail plus complexes.
+Les commandes d'action sont utilisées pour présenter aux utilisateurs une fenêtre popup modale pour collecter ou afficher des informations. Lorsque l'utilisateur soumet le formulaire, votre service web répond en insérant un message directement dans la conversation ou en insérant un message dans la zone de composition du message. Après cela, l'utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires pour des flux de travail plus complexes.
 
-Elles peuvent être déclenchées à partir de la zone de message de composition, de la zone de commande ou d’un message. Lorsqu’elle est appelée à partir d’un message, la charge utile JSON initiale envoyée à votre bot inclut l’intégralité du message à partir duquel elle a été appelée.
-
-![module de tâche de commande d’action d’extension de messagerie](~/assets/images/task-module.png)
+Les commandes d'action sont déclenchées à partir de la zone de composition du message, de la zone de commande ou d'un message. Lorsque la commande est invoquée à partir d'un message, la charge utile JSON initiale envoyée à votre bot inclut l'intégralité du message à partir de qui elle a été invoquée. L'image suivante affiche le module de tâche de commande d'action d'extension de messagerie : module de tâche de commande ![ d'action d'extension de messagerie](~/assets/images/task-module.png)
 
 ### <a name="search-commands"></a>Commandes de recherche
 
-Les commandes de recherche permettent à vos utilisateurs de rechercher des informations dans un système externe (manuellement via une zone de recherche ou en collant un lien dans un domaine surveillé dans la zone de message composer un message), puis insérer les résultats de la recherche dans un message. Dans le flux de commandes de recherche le plus simple, le message d’appel initial inclut la chaîne de recherche soumise par l’utilisateur. Vous répondrez avec une liste de cartes et d’aperçus de cartes. Le client teams affiche les aperçus de carte dans une liste à partir de laquelle l’utilisateur final peut effectuer une sélection. Lorsque l’utilisateur sélectionne une carte, la carte en taille réelle est insérée dans la zone composer un message.
+Les commandes de recherche permettent aux utilisateurs de rechercher des informations manuellement dans un système externe par le biais d'une zone de recherche ou en csérant un lien vers un domaine surveillé dans la zone de composition du message et en insérant les résultats de la recherche dans un message. Dans le flux de commande de recherche le plus élémentaire, le message d'appel initial inclut la chaîne de recherche envoyée par l'utilisateur. Vous répondez avec une liste de cartes et d'aperçus de carte. Le client Teams affiche une liste d'aperçus de carte pour l'utilisateur. Lorsque l'utilisateur sélectionne une carte dans la liste, la carte pleine taille est insérée dans la zone de composition du message.
 
-Ils peuvent être déclenchés à partir de la zone de message composer ou de la zone de commande. Contrairement aux commandes d’action, elles ne peuvent pas être déclenchées à partir d’un message.
+Les cartes sont déclenchées à partir de la zone de composition du message ou de la zone de commande et ne sont pas déclenchées à partir d'un message. Ils ne peuvent pas être déclenchés à partir d'un message.
+L'image suivante affiche le module de tâche de recherche d'extension de messagerie :
 
-![commande de recherche de l’extension de messagerie](~/assets/images/search-extension.png)
+![Commande de recherche d'extension de messagerie](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>Déploiement de lien
+> [!NOTE]
+> Pour plus d'informations sur les cartes, voir [les cartes.](../task-modules-and-cards/what-are-cards.md)
 
-Vous avez également la possibilité d’appeler votre service lorsqu’une URL est collée dans la zone de message de composition. Cette fonctionnalité, appelée **liaison unfurling**, vous permet de vous abonner pour recevoir un appel lorsque des URL contenant un domaine particulier sont collées dans la zone de message de composition. Votre service Web peut « Unfurl » l’URL en une carte détaillée, ce qui fournit davantage d’informations que la carte d’aperçu de site Web standard. Vous pouvez même ajouter des boutons pour permettre à vos utilisateurs de prendre immédiatement des mesures sans quitter le client Microsoft Teams.
+## <a name="link-unfurling"></a>Déploiement de lien
 
-## <a name="get-started"></a>Prise en main
+Un service web est appelé lorsqu'une URL est pastée dans la zone composer un message. Cette fonctionnalité est appelée déploiement de liens. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d'un message. Votre service web peut « déployer » l'URL dans une carte détaillée, fournissant plus d'informations que la carte d'aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d'agir immédiatement sans quitter le client Microsoft Teams.
+Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu'un lien est passé dans l'extension de messagerie :
+ 
+![lien de déploiement](../assets/images/messaging-extension/unfurl-link.png)
 
-Vous êtes prêt à commencer à créer ? Essayez l’un de nos Démarrages rapides :
+![déploiement de lien](../assets/images/messaging-extension/link-unfurl.gif)
 
-* **C#**
-  * [Extension de messagerie avec des commandes basées sur l’action](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
-  * [Extension de messagerie avec des commandes basées sur la recherche](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* **JavaScript**
-  * [Extension de messagerie avec des commandes basées sur l’action](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
-  * [Extension de messagerie avec des commandes basées sur la recherche](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="see-also"></a>Voir aussi
 
-Créer une extension de messagerie :
+> [!div class="nextstepaction"]
+> [Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)
 
-* [Créer une extension de messagerie](~/messaging-extensions/how-to/create-messaging-extension.md)
-* [Commande définir une extension de messagerie d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-* [Commande define Search Messaging extension](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Définir la commande d'extension de messagerie d'action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+> [!div class="nextstepaction"]
+> [Définir la commande d'extension de messagerie de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)

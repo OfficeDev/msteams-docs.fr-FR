@@ -1,38 +1,46 @@
 ---
-title: Ajouter des données de test à votre client test Microsoft 365
+title: Ajouter des données de test à votre client de test Microsoft 365
 description: Configurer votre abonnement au programme pour les développeurs Office 365 pour tester les applications Microsoft Teams
 ms.topic: how-to
-keywords: test des équipes de programme pour les développeurs d’applications
+keywords: test des équipes de programme pour les développeurs d'applications
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634719"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696863"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client test Microsoft 365
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client de test Microsoft 365
 
 Avec un abonnement Microsoft 365 Développeur, vous pouvez utiliser votre application Microsoft Teams avec des équipes de test, des canaux et des utilisateurs.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
-1. Rejoignez le programme pour les développeurs [Microsoft 365,](/office/developer-program/office-365-developer-program)si vous n’avez pas de client de test.
+1. Rejoignez le programme pour les développeurs [Microsoft 365,](/office/developer-program/office-365-developer-program)si vous n'avez pas de client test.
 2. [Configurer un abonnement Microsoft 365 Développeur.](/office/developer-program/office-365-developer-program-get-started)
-3. [Utilisez des packs d’exemples](/office/developer-program/install-sample-packs)de données avec votre abonnement Microsoft 365 Développeur pour installer le pack de contenu Utilisateurs.
+3. [Utilisez des packs d'exemples](/office/developer-program/install-sample-packs)de données avec votre abonnement Microsoft 365 Développeur pour installer le pack de contenu Utilisateurs.
 4. [Installez le module PowerShell Teams.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
 5. [Installez le module Azure AD PowerShell.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
 > [!NOTE]
-> Pour tout client que vous utilisez, vous devez obtenir les autorisations d’administrateur général pour exécuter les scripts.
+> Pour tout client que vous utilisez, vous devez obtenir les autorisations d'administrateur général pour exécuter les scripts.
 
-## <a name="enable-custom-app-sideloading"></a>Activer le chargement de version de version d’application personnalisée
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a>Étape facultative pour autoriser le téléchargement d'applications personnalisées
 
-L’activation du chargement de version de version d’application personnalisée est facultative. Par défaut, seuls les administrateurs globaux ou les administrateurs du service Teams peuvent télécharger des applications personnalisées dans le catalogue d’applications client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées dans Teams. Pour plus d’informations, voir [gérer les stratégies de configuration d’application dans Teams.](/microsoftteams/teams-app-setup-policies)
+Par défaut, seuls les administrateurs globaux ou les administrateurs du service Teams peuvent télécharger des applications personnalisées dans le catalogue d'applications client. Vous pouvez également permettre à tous les utilisateurs de télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester.
+
+Pour activer ce paramètre, vous devez mettre à jour la stratégie globale de configuration des applications dans votre portail d'administration Teams.
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>Étape facultative pour activer le chargement de version d'application personnalisée
+
+L'activation du chargement de version de version d'application personnalisée est facultative. Par défaut, seuls les administrateurs globaux ou les administrateurs du service Teams peuvent télécharger des applications personnalisées dans le catalogue d'applications client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées dans Teams. Pour plus d'informations, voir [gérer les stratégies de configuration d'application dans Teams.](/microsoftteams/teams-app-setup-policies)
 
 ## <a name="create-teams-and-channels"></a>Créer des équipes et des canaux
 
-1. Enregistrez l’extrait de code suivant en tant **que fichier .xml** et notez le chemin d’accès du fichier. Ce XML définit la structure de l’équipe et du canal créés avec ses membres :
+1. Enregistrez l'extrait de code suivant en tant **que fichier .xml** et notez le chemin d'accès du fichier. Ce XML définit la structure de l'équipe et du canal créés avec ses membres :
 
     ```xml
     <?xml version="1.0"?>
@@ -146,7 +154,7 @@ L’activation du chargement de version de version d’application personnalisé
     </Teams>
     ```
 
-2. Enregistrez l’extrait de code suivant en tant que script PowerShell (.ps1) et notez l’endroit où vous l’avez enregistré. Ce script exécute les étapes pour créer l’équipe et le canal, et y ajouter des membres :
+2. Enregistrez l'extrait de code suivant en tant que script PowerShell (.ps1) et notez l'endroit où vous l'avez enregistré. Ce script exécute les étapes pour créer l'équipe et le canal, et y ajouter des membres :
 
     ```powershell
     Param(
@@ -237,13 +245,13 @@ L’activation du chargement de version de version d’application personnalisé
     }
     ```
 
-3. Ouvrez une session Windows PowerShell en mode Administrateur et exécutez le script que vous viennent d’écrire.
-4. Lorsque vous êtes invité à fournir les informations d’identification, entrez les informations d’identification d’administrateur général que vous avez reçues lors de votre première inscription à votre abonnement développeur.
+3. Ouvrez une session Windows PowerShell en mode Administrateur et exécutez le script que vous viennent d'écrire.
+4. Lorsque vous êtes invité à fournir les informations d'identification, entrez les informations d'identification d'administrateur général que vous avez reçues lors de votre première inscription à votre abonnement développeur.
 
     > [!Note]
-    > Ne fermez pas votre session PowerShell, car l’exécution du script prend plusieurs minutes. Si vous avez modifié les utilisateurs de votre abonnement à partir de ce qui est créé dans le pack de contenu par défaut, certains utilisateurs peuvent ne pas être ajoutés à Teams. Lorsque le script s’exécute, il affiche les actions réussies ou échouées.
+    > Ne fermez pas votre session PowerShell, car l'exécution du script prend plusieurs minutes. Si vous avez modifié les utilisateurs de votre abonnement à partir de ce qui est créé dans le pack de contenu par défaut, certains utilisateurs peuvent ne pas être ajoutés à Teams. Lorsque le script s'exécute, il affiche les actions réussies ou échouées.
 
-5. Une fois l’exécution du script terminée, vous pouvez vous inscrire au client Teams avec l’un des comptes d’utilisateur et afficher les équipes nouvellement créées.
+5. Une fois l'exécution du script terminée, vous pouvez vous inscrire au client Teams avec l'un des comptes d'utilisateur et afficher les équipes nouvellement créées.
 
 ## <a name="see-also"></a>Voir aussi
 

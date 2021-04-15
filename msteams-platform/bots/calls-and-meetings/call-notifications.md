@@ -1,47 +1,54 @@
 ---
-title: Détails techniques sur le traitement des notifications d’appel entrant
-description: Informations techniques détaillées sur la gestion des notifications à partir des appels entrants
-keywords: affinité des appels de la région de rappel des appels d’appel
+title: Notifications d’appel entrant
+description: Informations techniques détaillées sur la gestion des notifications des appels entrants
+ms.topic: conceptual
+keywords: appel de l'affinité de région de rappel des notifications d'appel
 ms.date: 04/02/2019
-ms.openlocfilehash: be8860ff70cd7dff4fd9599079ea7aab4f454174
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1ab28f898d2b51b4c1c643006ecac06ca79b2d14
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673958"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696401"
 ---
-# <a name="incoming-call-notifications-technical-details"></a>Notifications d’appel entrant : détails techniques
+# <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 
-Lors de l' [inscription d’un robot d’appel et de réunion pour Microsoft teams](./registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot), nous avons mentionné l’URL **de webhook (pour l’appel)** , le point de terminaison webhook pour tous les appels entrants vers votre bot. Cette rubrique décrit les détails techniques dont vous aurez besoin pour répondre à ces notifications.
+Lors [de l'inscription d'un bot d'appels](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)et de réunions pour Microsoft Teams, le webhook pour l'URL d'appel est mentionné. Cette URL est le point de terminaison de webhook pour tous les appels entrants à votre bot.
 
 ## <a name="protocol-determination"></a>Détermination du protocole
 
-La notification entrante est fournie au format hérité pour la compatibilité avec le [protocole Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0)précédent. Pour convertir l’appel au protocole Microsoft Graph, votre robot doit déterminer si la notification est au format hérité et répondre avec :
+La notification entrante est fournie dans un format hérité pour assurer la compatibilité avec le protocole [Skype précédent.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Pour convertir l'appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournir la réponse suivante :
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Votre bot recevra de nouveau la notification, mais cette fois dans le protocole Microsoft Graph.
+Votre bot reçoit de nouveau la notification, mais cette fois dans le protocole Microsoft Graph.
 
-Dans une prochaine version de la plateforme multimédia en temps réel, nous allons vous permettre de configurer le protocole pris en charge par votre application pour éviter de recevoir le rappel initial dans le format hérité.
+Dans une prochaine version de la plateforme Real-time Media, vous pouvez configurer le protocole que votre application prend en charge pour éviter de recevoir le rappel initial dans le format hérité.
 
-## <a name="redirects-for-region-affinity"></a>Redirections pour l’affinité de région
+La section suivante fournit des détails sur les notifications d'appels entrants redirigées pour l'affinité de région vers votre déploiement.
 
-Vous appellerez votre webhook à partir du centre de données hébergeant l’appel. L’appel peut commencer dans n’importe quel centre de données et ne prend pas en compte les affinités de région. La notification sera envoyée à votre déploiement en fonction de la résolution GeoDNS. Si votre application détermine, en inspectant la charge utile de la notification initiale ou sinon, qu’elle doit s’exécuter dans un autre déploiement, l’application peut répondre avec :
+## <a name="redirects-for-region-affinity"></a>Redirections pour l'affinité de région
+
+Vous appelez votre webhook à partir du centre de données hébergeant l'appel. L'appel démarre dans un centre de données et ne prend pas en compte les affinités de région. La notification est envoyée à votre déploiement en fonction de la résolution GeoDNS. Si votre application détermine, en inspectant la charge utile de notification initiale ou autrement, qu'elle doit s'exécuter dans un autre déploiement, l'application fournit la réponse suivante :
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Permettre à votre robot de répondre à un appel entrant à l’aide de l’API de [réponse](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) . Vous pouvez spécifier le `callbackUri` pour gérer cet appel particulier. Cela est utile pour les instances d' _État_ où votre appel est géré par une partition particulière et que vous souhaitez incorporer ces informations `callbackUri` dans le pour le routage vers l’instance de droite.
+Activez votre bot pour répondre à un appel entrant à l'aide de [l'API de](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) réponse. Vous pouvez spécifier `callbackUri` la situation à utiliser pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le routage vers `callbackUri` l'instance de droite.
 
-## <a name="authenticating-the-callback"></a>Authentification du rappel
+La section suivante fournit des détails sur l'authentification du rappel en inspectant le jeton publié sur votre webhook.
 
-Votre bot doit inspecter le jeton publié vers votre webhook pour valider la demande. Chaque fois que l’API publie sur le webhook, le message HTTP POST contient un jeton OAuth dans l’en-tête Authorization en tant que jeton porteur, avec l’audience comme ID d’application de votre application.
+## <a name="authenticate-the-callback"></a>Authentifier le rappel
 
-Votre application doit valider ce jeton avant d’accepter la demande de rappel.
+Votre bot doit inspecter le jeton publié sur votre webhook pour valider la demande. Chaque fois que l'API publie sur le webhook, le message HTTP POST contient un jeton OAuth dans l'en-tête Authorization en tant que jeton de support, avec l'audience comme ID d'application de votre application.
+
+Votre application doit valider ce jeton avant d'accepter la demande de rappel.
+
+L'exemple de code suivant est utilisé pour authentifier le rappel :
 
 ```http
 POST https://bot.contoso.com/api/calls
@@ -60,7 +67,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-Le jeton OAuth aura des valeurs comme suit et sera signé par Skype. La configuration OpenID publiée à <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> l’adresse peut être utilisée pour vérifier le jeton.
+Le jeton OAuth a les valeurs suivantes et est signé par Skype :
 
 ```json
 {
@@ -73,10 +80,17 @@ Le jeton OAuth aura des valeurs comme suit et sera signé par Skype. La configur
 }
 ```
 
-* **audience obligatoire** est l’URI d’ID d’application spécifié pour l’application.
-* **TID** est l’ID de client pour contoso.com.
-* **ISS** est l’émetteur du jeton, `https://api.botframework.com`.
+La configuration OpenID publiée sur <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> peut être utilisée pour vérifier le jeton. Chaque valeur de jeton OAuth est utilisée comme suit :
 
-Votre code gérant le webhook doit valider le jeton, vérifier qu’il n’a pas expiré et vérifier s’il a été signé par notre configuration OpenID publiée. Vous devez également vérifier si la valeur de **AUD** correspond à l’ID de votre application avant d’accepter la demande de rappel.
+* `aud` où audience est l'URI d'ID d'application spécifié pour l'application.
+* `tid` est l'ID de client pour Contoso.com.
+* `iss` est l'émetteur du jeton, `https://api.botframework.com` .
 
-[Exemple](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs) montre comment valider des demandes entrantes.
+Pour votre gestion du code, le webhook doit valider le jeton, vérifier qu'il n'a pas expiré et vérifier s'il a été signé par la configuration OpenID publiée. Vous devez également vérifier si aud correspond à votre ID d'application avant d'accepter la demande de rappel.
+
+Pour plus d'informations, voir [valider les demandes entrantes.](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Conditions requises et considérations pour les robots multimédias hébergés par l'application](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

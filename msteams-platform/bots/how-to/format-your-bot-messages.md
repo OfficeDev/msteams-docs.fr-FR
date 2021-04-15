@@ -1,76 +1,89 @@
 ---
-title: Mettre en forme les messages de votre robot
+title: Mettre en forme vos messages de bot
 author: clearab
-description: Ajout d’une mise en forme enrichie à vos messages bot
-ms.topic: overview
+description: Ajouter une mise en forme enrichie à vos messages de bot
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a11d01233481371c66562e0fa27ab805b06e9391
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673683"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697003"
 ---
-# <a name="format-your-bot-messages"></a>Mettre en forme les messages de votre robot
+# <a name="format-your-bot-messages"></a>Mettre en forme vos messages de bot
 
-Vous pouvez définir la propriété [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) Optional pour contrôler le rendu du contenu de texte de votre message.
+La mise en forme des messages vous permet de mettre en avant les meilleurs messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui sont des pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l'audio, de la vidéo, etc.
 
-Microsoft teams prend en charge les options de mise en forme suivantes :
+## <a name="format-text-content"></a>Mise en forme du contenu de texte
 
-| Valeur FormatTexte | Description |
+Pour mettre en forme vos messages de bot, vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte de votre [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) bot.
+
+Microsoft Teams prend en charge les options de mise en forme suivantes :
+
+| `TextFormat` value | Description |
 | --- | --- |
-| puce | Le texte doit être traité comme du texte brut sans mise en forme.|
-| Markdown | Le texte doit être traité comme un format de démarque et affiché sur le canal, selon le cas. *Consultez la rubrique* [mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
-| langage | Le texte est un balisage XML simple. *Consultez la rubrique* [mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
+| plain | Le texte doit être traité comme du texte brut sans mise en forme appliquée.|
+| Markdown | Le texte doit être traité comme une mise en forme markdown et restituer sur le canal selon le cas. |
+| xml | Le texte est un simple markup XML. |
 
-## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
+Teams prend en charge un sous-ensemble de balises de markdown et de balises de mise en forme XML ou HTML.
 
-Microsoft teams prend en charge un sous-ensemble de balises de mise en forme de démarque et XML (HTML).
+Actuellement, les limitations suivantes s'appliquent à la mise en forme :
 
-Actuellement, les limitations suivantes s’appliquent :
+* Les messages texte uniquement ne sont pas en charge de la mise en forme de tableau.
+* Les cartes enrichies ne peuvent être formatées que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre.
+* Les cartes enrichies ne prisent pas en charge le markdown ou la mise en forme de tableau.
 
-* Les messages en texte seul ne prennent pas en charge la mise en forme de tableau.
-* Les cartes enrichies prennent en charge la mise en forme uniquement dans la propriété Text, pas dans les propriétés Title ou title.
-* Les cartes enrichies ne prennent pas en charge la démarque ou la mise en forme de tableau.
+Après avoir formaté le contenu du texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes pris en charge par Microsoft Teams.
 
-## <a name="cross-platform-support"></a>Prise en charge multiplateforme
+## <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes
 
-Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes prises en charge par Microsoft Teams, sachez que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
+Certains styles ne sont actuellement pas pris en charge sur toutes les plateformes. Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge dans les messages texte uniquement et les cartes enrichies :
 
-| Style                     | Messages en texte seul | Cartes riches (XML uniquement) |
+| Style                     | Messages texte uniquement | Cartes enrichies - XML uniquement |
 | ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| en-tête (&ndash;niveaux 1 à 3) | ✖ | ✔ |
-| doubles             | ✖ | ✔ |
-| règle horizontale           | ✖ | ✖ |
-| liste non triée            | ✖ | ✔ |
-| liste triée              | ✖ | ✔ |
-| texte déjà mis en forme         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
-| lien hypertexte                 | ✔ | ✔ |
-| lien de l’image                | ✔ | ✖ |
+| Gras                      | ✔ | ✖ |
+| Italic                    | ✔ | ✔ |
+| En-tête (niveaux 1 &ndash; 3) | ✖ | ✔ |
+| Barré             | ✖ | ✔ |
+| Règle horizontale           | ✖ | ✖ |
+| Liste non triée            | ✖ | ✔ |
+| Liste triée              | ✖ | ✔ |
+| Texte préformaté         | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ |
+| Lien hypertexte                 | ✔ | ✔ |
+| Lien vers l'image                | ✔ | ✖ |
+
+Après avoir vérifié la prise en charge sur plusieurs plateformes, assurez-vous que la prise en charge par des plateformes individuelles est également disponible.
 
 ## <a name="support-by-individual-platform"></a>Prise en charge par plateforme individuelle
 
-La prise en charge de la mise en forme du texte varie en fonction du type de message et de la plateforme.
+La prise en charge de la mise en forme du texte varie selon le type de message et la plateforme.
 
-### <a name="text-only-messages"></a>Messages en texte seul
+### <a name="text-only-messages"></a>Messages texte uniquement
+
+Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge sur les ordinateurs de bureau, iOS et Android :
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| en-tête (&ndash;niveaux 1 à 3) | ✖ | ✖ | ✖ |
-| doubles             | ✔ | ✔ | ✖ |
-| règle horizontale           | ✖ | ✖ | ✖ |
-| liste non triée            | ✔ | ✖ | ✖ |
-| liste triée              | ✔ | ✖ | ✖ |
-| texte déjà mis en forme         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
-| lien hypertexte                 | ✔ | ✔ | ✔ |
-| lien de l’image                | ✔ | ✔ | ✔ |
+| Gras                      | ✔ | ✔ | ✔ |
+| Italic                    | ✔ | ✔ | ✔ |
+| En-tête (niveaux 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| Barré             | ✔ | ✔ | ✖ |
+| Règle horizontale           | ✖ | ✖ | ✖ |
+| Liste non triée            | ✔ | ✖ | ✖ |
+| Liste triée              | ✔ | ✖ | ✖ |
+| Texte préformaté         | ✔ | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ | ✔ |
+| Lien hypertexte                 | ✔ | ✔ | ✔ |
+| Lien vers l'image                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>Fiche
+### <a name="cards"></a>Cartes
 
-Pour plus d’aide, voir [format](~/task-modules-and-cards/cards/cards-format.md) des cartes.
+Pour la prise en charge de la carte, voir [mise en forme de carte.](~/task-modules-and-cards/cards/cards-format.md)
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Mettre à jour et supprimer des messages de bot](~/bots/how-to/update-and-delete-bot-messages.md)

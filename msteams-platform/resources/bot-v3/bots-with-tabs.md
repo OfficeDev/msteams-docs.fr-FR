@@ -1,46 +1,47 @@
 ---
-title: Combiner des robots à des onglets
-description: Décrit l’utilisation conjointe des onglets et des bots
-keywords: développement des onglets robots teams
+title: Combiner des bots avec des onglets
+description: Décrit comment utiliser les onglets et les bots ensemble
+keywords: Développement d’onglets de bots teams
+ms.topic: conceptual
 ms.date: 03/15/2018
-ms.openlocfilehash: 59ae8bc01f82c70dd7ea6869cb870e26acae1293
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d8ef669f55d5edbb9795fa2d34277bd2e2dccc7c
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673833"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696597"
 ---
-# <a name="combine-bots-with-tabs"></a>Combiner des robots à des onglets
+# <a name="combine-bots-with-tabs"></a>Combiner des bots avec des onglets
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Les robots et les onglets fonctionnent bien ensemble et sont souvent combinés en un seul service principal. Cette section décrit les meilleures pratiques et les modèles courants pour l’utilisation conjointe des onglets et des bots.
+Les bots et les onglets fonctionnent bien ensemble et sont souvent combinés en un seul service back-end. Cette section décrit les meilleures pratiques et les modèles courants d’utilisation des onglets et des bots ensemble.
 
-## <a name="associating-user-identities-across-bot-and-tab"></a>Association d’identités d’utilisateur entre un bot et un onglet
+## <a name="associating-user-identities-across-bot-and-tab"></a>Association d’identités d’utilisateurs entre le bot et l’onglet
 
-Par exemple : Supposons que votre application d’onglet utilise un système d’ID propriétaire pour sécuriser son contenu. Supposons que vous avez également un bot qui peut interagir avec l’utilisateur. En règle générale, vous voudrez afficher le contenu sous l’onglet qui est propre à l’utilisateur de l’affichage. Le défi réside dans le fait que l’IDENTIFIant de l’utilisateur dans votre système est probablement différent de l’ID utilisateur Microsoft Teams. Comment associer ces deux identités ?
-En règle générale, l’approche recommandée consiste à connecter l’utilisateur à l’aide du robot en utilisant le même système d’identité que celui utilisé pour fournir l’authentification pour le contenu de l’onglet. Vous pouvez implémenter cette opération via l’action de connexion, qui se connecte généralement à l’utilisateur via un flux OAuth.
+Par exemple : supposons que votre application d’onglet utilise un système d’ID propriétaire pour sécuriser son contenu. Supposons que vous avez également un bot qui peut interagir avec l’utilisateur. En règle générale, vous souhaiterez afficher dans l’onglet du contenu spécifique à l’utilisateur d’affichage. La difficulté est que l’ID d’utilisateur dans votre système est probablement différent de l’ID d’utilisateur Microsoft Teams. Comment associer ces deux identités ?
+En règle générale, l’approche recommandée consiste à signer l’utilisateur avec le bot à l’aide du système d’identité utilisé pour fournir l’authentification pour le contenu de l’onglet. Vous pouvez l’implémenter via l’action de connexion, qui connecte généralement l’utilisateur via un flux OAuth.
 
-Ce flux fonctionne mieux si votre fournisseur d’identité implémente le protocole OAuth 2,0. Vous pouvez ensuite associer l’ID d’utilisateur teams aux informations d’identification de l’utilisateur à partir de votre propre service d’identité.
+Ce flux fonctionne mieux si votre fournisseur d’identité implémente le protocole OAuth 2.0. Vous pouvez ensuite associer l’ID d’utilisateur Teams aux informations d’identification de l’utilisateur à partir de votre propre service d’identité.
 
    ![Association d’identités](~/assets/images/bots/associating_contexts.png)
 
-## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Création de liens détaillés vers des onglets dans les messages à partir de votre robot
+## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Construction de liens profonds vers des onglets dans les messages à partir de votre bot
 
-Vous pouvez utiliser des onglets pour afficher un plus grand nombre de contenu pouvant être contenu dans une carte ou un moyen d’effectuer des tâches complexes de remplissage de formulaires à l’aide de la toile de tabulation. Par exemple, vous pouvez envisager de parcourir l’utilisateur vers l’onglet lorsqu’il clique sur la carte à partir de votre bot. Pour que cela se produise, vous devez coder le message de votre bot afin d’inclure une URL de [lien détaillé](~/concepts/build-and-test/deep-links.md) , soit par balisage, soit comme cible de l’action openUrl.
+Vous pouvez utiliser des onglets pour afficher plus de contenu qu’il ne peut y en avoir dans une carte ou fournir un moyen d’effectuer des tâches complexes de remplissage de formulaire à l’aide de la zone de dessin de l’onglet. Par exemple, pensez à naviguer l’utilisateur vers l’onglet lorsqu’il clique sur la carte à partir de votre bot. Pour ce faire, vous devez encoder le message de votre bot pour inclure une [URL](~/concepts/build-and-test/deep-links.md) de lien profond, soit par le biais du code, soit en tant que cible de l'action openUrl.
 
-Les liens détaillés s’appuient sur un entityId, qui est une valeur opaque qui correspond à une entité unique de votre système. Lorsque l’onglet est créé, vous pouvez stocker un état simple (par exemple, un indicateur) sur votre serveur principal, indiquant que l’onglet a été créé dans le canal. Lorsque votre bot construit un message, il peut cibler le entityId associé à cet onglet.
+Les liens profonds reposent sur un entityId, qui est une valeur opaque qui matric une entité unique dans votre système. Lorsque l'onglet est créé, vous stockez dans l'idéal un état simple (par exemple, un indicateur) sur votre système arrière indiquant que l'onglet a été créé dans le canal. Lorsque votre bot construit un message, il peut cibler l'entityId associé à cet onglet.
 
-**Remarque :** dans les conversations personnelles, étant donné que les onglets sont « statiques » et installés avec l’application, vous pouvez toujours supposer leur existence et donc créer des liens détaillés en conséquence.
+**Remarque : dans** les conversations personnelles, étant donné que les onglets sont « statiques » et installés avec l'application, vous pouvez toujours supposer leur existence et construire des liens profonds en conséquence.
 
-## <a name="sending-notifications-for-tab-updates"></a>Envoi de notifications pour les mises à jour d’onglet
+## <a name="sending-notifications-for-tab-updates"></a>Envoi de notifications pour les mises à jour d'onglets
 
-Il est souvent préférable d’avertir l’utilisateur final chaque fois qu’une action de mise à jour ou d’utilisateur se produit dans un onglet. Un exemple de scénario consiste à attribuer une tâche ou un ticket à un membre de l’équipe, puis à avertir ce membre d’équipe.
+Il est souvent possible d'avertir l'utilisateur final chaque fois qu'une mise à jour ou une action de l'utilisateur se produit dans un onglet. Un exemple de scénario consiste à affecter une tâche ou un ticket à un membre de l'équipe, puis à avertir ce membre de l'équipe.
 
-Il existe deux façons d’atteindre ce scénario :
+Il existe deux façons d'atteindre ce scénario :
 
-1. Si vous souhaitez avertir un canal entier, votre bot peut publier de manière asynchrone un message sur le canal. Il n’existe aucun moyen pour un bot de créer de façon proactive la conversation par onglet si elle n’a pas été créée avec l’onglet.
+1. Si vous souhaitez avertir un canal entier, votre bot peut publier de manière asynchrone un message sur le canal. Il n'existe aucun moyen pour un bot de créer de manière proactive la conversation d'onglet si elle n'a pas été créée avec l'onglet.
 
-2. Si vous souhaitez uniquement informer le destinataire ou les parties intéressées de l’action, votre robot peut envoyer un message de conversation personnelle à l’utilisateur. Vous devez d’abord vérifier s’il existe une conversation personnelle entre votre robot et l’utilisateur. Si ce n’est pas le `CreateConversation` cas, vous pouvez appeler pour lancer la conversation personnelle.
+2. Si vous souhaitez uniquement avertir le destinataire ou les parties concernées impliquées dans l'action, votre bot peut envoyer un message de conversation personnelle à l'utilisateur. Vous devez d'abord vérifier si une conversation personnelle existe entre votre bot et l'utilisateur. Si ce n'est pas le cas, vous `CreateConversation` pouvez appeler pour lancer la conversation personnelle.
 
-Dans les deux cas, utilisez les notifications d’événement avec prudence et jamais le courrier indésirable par l’utilisateur avec des mises à jour inutiles.
+Dans les deux cas, utilisez judicieusement les notifications d'événement et ne mettez jamais l'utilisateur en courrier indésirable avec des mises à jour inutiles.
