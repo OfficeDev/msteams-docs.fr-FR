@@ -1,64 +1,70 @@
 ---
-title: Créer un menu de commandes pour votre robot
+title: Créer un menu de commandes pour votre bot
 author: clearab
-description: Procédure de création d’un menu de commandes pour votre robot Microsoft teams
-ms.topic: overview, command menu
+description: Comment créer un menu de commandes pour votre bot Microsoft Teams
+ms.topic: how-to
 ms.author: anclear
-ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 839c01f870f026744dfe5fa1331835f5f6b6890f
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552485"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697025"
 ---
-# <a name="bot-command-menus"></a><span data-ttu-id="97c1f-103">Menus de la commande bot</span><span class="sxs-lookup"><span data-stu-id="97c1f-103">Bot command menus</span></span>
+# <a name="bot-command-menus"></a><span data-ttu-id="50df3-103">Menus de commande du bot</span><span class="sxs-lookup"><span data-stu-id="50df3-103">Bot command menus</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 > [!Note]
-> <span data-ttu-id="97c1f-104">Les menus de bot n’apparaissent pas sur les clients mobiles.</span><span class="sxs-lookup"><span data-stu-id="97c1f-104">Bot menus won't appear on mobile clients.</span></span>
+> <span data-ttu-id="50df3-104">Les menus bot n'apparaissent pas sur les clients mobiles.</span><span class="sxs-lookup"><span data-stu-id="50df3-104">Bot menus do not appear on mobile clients.</span></span>
 
-<span data-ttu-id="97c1f-105">Add Command menu for your bot vous permet de définir un ensemble de commandes clés auxquelles votre bot peut toujours répondre.</span><span class="sxs-lookup"><span data-stu-id="97c1f-105">Add command menu for your bot allows you to define a set of core commands your bot can always respond to.</span></span> <span data-ttu-id="97c1f-106">La liste des commandes est présentée à l’utilisateur au-dessus de la zone de message de composition lorsqu’ils contournent votre robot.</span><span class="sxs-lookup"><span data-stu-id="97c1f-106">The list of commands is presented to the user above the compose message area when they are conversing with your bot.</span></span> <span data-ttu-id="97c1f-107">La sélection d’une commande dans la liste entraîne l’insertion de la chaîne de commande dans la boîte de message de composition, puis tous les utilisateurs ont besoin de l’option **Envoyer**.</span><span class="sxs-lookup"><span data-stu-id="97c1f-107">Selecting a command from the list will insert the command string into the compose message box, then all users need to do is select **Send**.</span></span>
+<span data-ttu-id="50df3-105">Pour définir un ensemble de commandes principales à qui votre bot peut répondre, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot.</span><span class="sxs-lookup"><span data-stu-id="50df3-105">To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot.</span></span> <span data-ttu-id="50df3-106">La liste des commandes est présentée aux utilisateurs dans la zone composer un message lorsqu'ils sont en conversation avec votre bot.</span><span class="sxs-lookup"><span data-stu-id="50df3-106">The list of commands is presented to the users in the compose message area when they are in conversation with your bot.</span></span> <span data-ttu-id="50df3-107">Sélectionnez une commande dans la liste pour insérer la chaîne de commande dans la zone composer un message et sélectionnez **Envoyer**.</span><span class="sxs-lookup"><span data-stu-id="50df3-107">Select a command from the list to insert the command string into the compose message box and select **Send**.</span></span>
 
-![Menu de commandes bot](./conversations/media/bot-menu-sample.png)
+![Menu de commande bot](./conversations/media/bot-menu-sample.png)
 
-## <a name="create-a-command-menu-for-your-bot"></a><span data-ttu-id="97c1f-109">Créer un menu de commandes pour votre robot</span><span class="sxs-lookup"><span data-stu-id="97c1f-109">Create a command menu for your bot</span></span>
+## <a name="create-a-command-menu-for-your-bot"></a><span data-ttu-id="50df3-109">Créer un menu de commandes pour votre bot</span><span class="sxs-lookup"><span data-stu-id="50df3-109">Create a command menu for your bot</span></span>
 
-<span data-ttu-id="97c1f-110">Les menus de commandes sont définis dans le manifeste de votre application.</span><span class="sxs-lookup"><span data-stu-id="97c1f-110">Command menus are defined in your app manifest.</span></span> <span data-ttu-id="97c1f-111">Vous pouvez utiliser app Studio pour vous aider à les créer ou les ajouter manuellement.</span><span class="sxs-lookup"><span data-stu-id="97c1f-111">You can either use App Studio to help you create them, or add them manually.</span></span>
+<span data-ttu-id="50df3-110">Les menus de commande sont définis dans le manifeste de votre application.</span><span class="sxs-lookup"><span data-stu-id="50df3-110">Command menus are defined in your app manifest.</span></span> <span data-ttu-id="50df3-111">Vous pouvez utiliser **App Studio** pour les créer ou les ajouter manuellement dans le manifeste de l'application.</span><span class="sxs-lookup"><span data-stu-id="50df3-111">You can either use **App Studio** to create them or add them manually in the app manifest.</span></span>
 
-### <a name="creating-a-command-menu-for-your-bot-using-app-studio"></a><span data-ttu-id="97c1f-112">Création d’un menu de commandes pour votre bot à l’aide d’App Studio</span><span class="sxs-lookup"><span data-stu-id="97c1f-112">Creating a command menu for your bot using App Studio</span></span>
+### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a><span data-ttu-id="50df3-112">Créer un menu de commandes pour votre bot à l'aide d'App Studio</span><span class="sxs-lookup"><span data-stu-id="50df3-112">Create a command menu for your bot using App Studio</span></span>
 
-<span data-ttu-id="97c1f-113">Les instructions fournies ici supposent que vous modifiez un manifeste d’application existant.</span><span class="sxs-lookup"><span data-stu-id="97c1f-113">The instructions here assume that you'll be editing an existing app manifest.</span></span> <span data-ttu-id="97c1f-114">Les étapes d’ajout d’un menu de commandes sont les mêmes, que vous soyez en train de créer un nouveau manifeste ou d’en modifier un existant.</span><span class="sxs-lookup"><span data-stu-id="97c1f-114">The steps for adding a command menu are the same, whether you're creating a new manifest or editing an existing one.</span></span>
+<span data-ttu-id="50df3-113">Pour créer un menu de commandes pour votre bot, vous devez modifier un manifeste d'application existant.</span><span class="sxs-lookup"><span data-stu-id="50df3-113">A prerequisite to create a command menu for your bot is that you must edit an existing app manifest.</span></span> <span data-ttu-id="50df3-114">Les étapes d'ajout d'un menu de commandes sont les mêmes, que vous créez un nouveau manifeste ou que vous en modifiiez un existant.</span><span class="sxs-lookup"><span data-stu-id="50df3-114">The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.</span></span>
 
-1. <span data-ttu-id="97c1f-115">Ouvrez l’application Studio à partir du... menu débordement sur le rail de navigation gauche.</span><span class="sxs-lookup"><span data-stu-id="97c1f-115">Open App Studio from the ... overflow menu on the left navigation rail.</span></span> <span data-ttu-id="97c1f-116">Si vous n’avez pas disponible App Studio, vous pouvez le télécharger.</span><span class="sxs-lookup"><span data-stu-id="97c1f-116">If you don't have App Studio available you can download it.</span></span> <span data-ttu-id="97c1f-117">Pour plus d’informations sur l’utilisation d’App Studio, voir [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio) .</span><span class="sxs-lookup"><span data-stu-id="97c1f-117">See [Installing App Studio](https://aka.ms/teams-app-studio#installing-app-studio) for more information on using App Studio.</span></span>
+<span data-ttu-id="50df3-115">**Pour créer un menu de commandes pour votre bot à l'aide d'App Studio**</span><span class="sxs-lookup"><span data-stu-id="50df3-115">**To create a command menu for your bot using App Studio**</span></span>
+
+1. <span data-ttu-id="50df3-116">Ouvrez Teams et **sélectionnez Applications** dans le volet gauche.</span><span class="sxs-lookup"><span data-stu-id="50df3-116">Open Teams and select **Apps** from the left pane.</span></span> <span data-ttu-id="50df3-117">Dans la page **Applications,** recherchez **App Studio** et sélectionnez **Ouvrir.**</span><span class="sxs-lookup"><span data-stu-id="50df3-117">In the **Apps** page, search of **App Studio**, and select **Open**.</span></span> 
+   > [!NOTE]
+   > <span data-ttu-id="50df3-118">Si vous n'avez **pas App Studio,** vous pouvez le télécharger.</span><span class="sxs-lookup"><span data-stu-id="50df3-118">If you do not have **App Studio**, you can download it.</span></span> <span data-ttu-id="50df3-119">Pour plus d'informations, [voir l'installation d'App Studio.](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)</span><span class="sxs-lookup"><span data-stu-id="50df3-119">For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).</span></span>
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. <span data-ttu-id="97c1f-119">Une fois dans App Studio, sélectionnez l’onglet **éditeur de manifeste** .</span><span class="sxs-lookup"><span data-stu-id="97c1f-119">Once in App Studio, select the **Manifest editor** tab.</span></span>
+2. <span data-ttu-id="50df3-121">Dans **App Studio,** sélectionnez **l'onglet Éditeur de** manifeste. Si vous n'avez pas de package d'application existant, vous pouvez créer ou importer une application existante.</span><span class="sxs-lookup"><span data-stu-id="50df3-121">In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app.</span></span> <span data-ttu-id="50df3-122">Pour plus d'informations, voir [mettre à jour un package d'application.](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)</span><span class="sxs-lookup"><span data-stu-id="50df3-122">For more information, see [update an app package](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).</span></span>
 
-3. <span data-ttu-id="97c1f-120">Dans la colonne de gauche de la vue de l’éditeur de manifeste dans la section **fonctionnalités** , sélectionnez **bots**.</span><span class="sxs-lookup"><span data-stu-id="97c1f-120">In the left column of the manifest editor view in the **Capabilities** section, select **Bots**.</span></span>
+3. <span data-ttu-id="50df3-123">Dans le volet gauche de l'éditeur **de manifeste** et dans la **section** **Fonctionnalités,** sélectionnez Bots .</span><span class="sxs-lookup"><span data-stu-id="50df3-123">In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.</span></span>
 
-4. <span data-ttu-id="97c1f-121">Dans la colonne de droite de la vue de l’éditeur de manifeste dans la section **commandes** , cliquez sur le bouton **Ajouter** .</span><span class="sxs-lookup"><span data-stu-id="97c1f-121">In the right column of the manifest editor view in the **Commands** section, select the **Add** button.</span></span>
+4. <span data-ttu-id="50df3-124">Dans le volet droit de l'éditeur **de manifeste** et dans la section **Commandes,** sélectionnez **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="50df3-124">In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**.</span></span> <span data-ttu-id="50df3-125">**L'écran Nouvelle commande** s'affiche.</span><span class="sxs-lookup"><span data-stu-id="50df3-125">The **New Command** screen appears.</span></span>
 
-    ![Bouton Ajouter du menu de commandes d’App Studio](./conversations/media/AppStudio-CommandMenu-Add.png)
+    ![Bouton Ajouter du menu commandes App Studio](./conversations/media/AppStudio-CommandMenu-Add.png)
 
-5. <span data-ttu-id="97c1f-123">L’écran **nouvelle commande** s’affiche.</span><span class="sxs-lookup"><span data-stu-id="97c1f-123">The **New Command** screen appears.</span></span> <span data-ttu-id="97c1f-124">Entrez le **texte de commande** qui doit apparaître en tant que commande de menu, ainsi que le **texte d’aide** qui doit apparaître directement sous le texte de commande dans le menu.</span><span class="sxs-lookup"><span data-stu-id="97c1f-124">Enter the **Command text** that you want to have appear as the menu command, and the **Help text** that you want to have appear directly under the command text in the menu.</span></span> <span data-ttu-id="97c1f-125">Cela doit être une brève explication de l’objectif de la commande.</span><span class="sxs-lookup"><span data-stu-id="97c1f-125">This should be a brief explanation of the purpose of the command.</span></span>
+5. <span data-ttu-id="50df3-127">Entrez le **texte de commande** qui doit apparaître comme menu de commande pour votre bot.</span><span class="sxs-lookup"><span data-stu-id="50df3-127">Enter the **Command text** that must appear as the command menu for your bot.</span></span>
 
-6. <span data-ttu-id="97c1f-126">Ensuite, sélectionnez la ou les étendues dans lesquelles vous souhaitez que ce menu de commandes s’affiche, puis cliquez sur le bouton **Enregistrer** .</span><span class="sxs-lookup"><span data-stu-id="97c1f-126">Next, select the scope(s) where you want this command menu to appear, then select the **Save** button.</span></span>
+6. <span data-ttu-id="50df3-128">Entrez le **texte d'aide** qui doit apparaître sous le texte de commande dans le menu.</span><span class="sxs-lookup"><span data-stu-id="50df3-128">Enter the **Help text** that must appear under the command text in the menu.</span></span> <span data-ttu-id="50df3-129">**Le texte d'aide** doit être une brève explication de l'objectif de la commande.</span><span class="sxs-lookup"><span data-stu-id="50df3-129">**Help text** must be a brief explanation of the purpose of the command.</span></span>
 
-    ![Bouton Ajouter du menu de commandes d’App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
+7. <span data-ttu-id="50df3-130">Cochez **les cases** d'étendue pour sélectionner l'endroit où ce menu de commande doit apparaître, puis sélectionnez **Enregistrer.**</span><span class="sxs-lookup"><span data-stu-id="50df3-130">Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.</span></span>
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a><span data-ttu-id="97c1f-128">Création d’un menu de commandes pour votre bot en modifiant **Manifest.js**</span><span class="sxs-lookup"><span data-stu-id="97c1f-128">Creating a command menu for your bot by editing **Manifest.json**</span></span>
+    ![Bouton de menu Nouvelles commandes App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-<span data-ttu-id="97c1f-129">Une autre approche valide pour la création d’un menu de commandes consiste à le créer directement dans le fichier manifeste lors du développement du code source de votre robot.</span><span class="sxs-lookup"><span data-stu-id="97c1f-129">Another valid approach for creating a command menu is to create it directly in the manifest file while developing your bot source code.</span></span> <span data-ttu-id="97c1f-130">Voici quelques éléments à garder à l’esprit lors de l’utilisation de cette approche :</span><span class="sxs-lookup"><span data-stu-id="97c1f-130">Here are a few things to keep in mind when using this approach:</span></span>
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a><span data-ttu-id="50df3-132">Créer un menu de commandes pour votre bot en le Manifest.jssur</span><span class="sxs-lookup"><span data-stu-id="50df3-132">Create a command menu for your bot by editing Manifest.json</span></span>
 
-1. <span data-ttu-id="97c1f-131">Chaque menu prend en charge jusqu’à 10 commandes.</span><span class="sxs-lookup"><span data-stu-id="97c1f-131">Each menu supports up to 10 commands.</span></span>
+<span data-ttu-id="50df3-133">Une autre façon de créer un menu de commandes consiste à le créer directement dans le fichier manifeste lors du développement de votre code source de bot.</span><span class="sxs-lookup"><span data-stu-id="50df3-133">Another way to create a command menu is to create it directly in the manifest file while developing your bot source code.</span></span> <span data-ttu-id="50df3-134">Pour utiliser cette méthode, suivez les points ci-après :</span><span class="sxs-lookup"><span data-stu-id="50df3-134">To use this method, follow these points:</span></span>
 
-2. <span data-ttu-id="97c1f-132">Vous pouvez créer un seul menu de commandes qui fonctionne dans toutes les étendues.</span><span class="sxs-lookup"><span data-stu-id="97c1f-132">You can create a single command menu that will work in all scopes.</span></span>
+* <span data-ttu-id="50df3-135">Chaque menu prend en charge jusqu'à dix commandes.</span><span class="sxs-lookup"><span data-stu-id="50df3-135">Each menu supports up to ten commands.</span></span>
+* <span data-ttu-id="50df3-136">Créez un menu de commande unique qui fonctionne dans toutes les étendues.</span><span class="sxs-lookup"><span data-stu-id="50df3-136">Create a single command menu that works in all scopes.</span></span>
+* <span data-ttu-id="50df3-137">Créez un menu de commandes différent pour chaque étendue.</span><span class="sxs-lookup"><span data-stu-id="50df3-137">Create a different command menu for each scope.</span></span>
 
-3. <span data-ttu-id="97c1f-133">Vous pouvez créer un autre menu de commandes pour chaque étendue</span><span class="sxs-lookup"><span data-stu-id="97c1f-133">You can create a different command menu for each scope</span></span>
+#### <a name="manifest-example-for-single-menu-for-both-scopes"></a><span data-ttu-id="50df3-138">Exemple de manifeste pour un menu unique pour les deux étendues</span><span class="sxs-lookup"><span data-stu-id="50df3-138">Manifest example for single menu for both scopes</span></span>
 
-#### <a name="manifest-example---single-menu-for-both-scopes"></a><span data-ttu-id="97c1f-134">Exemple de manifeste-menu unique pour les deux étendues</span><span class="sxs-lookup"><span data-stu-id="97c1f-134">Manifest example - single menu for both scopes</span></span>
+<span data-ttu-id="50df3-139">L'exemple de code de manifeste pour un menu unique pour les deux étendues est le suivant :</span><span class="sxs-lookup"><span data-stu-id="50df3-139">The manifest example code for single menu for both scopes is as follows:</span></span>
 
 ```json
 {
@@ -102,7 +108,9 @@ ms.locfileid: "49552485"
 }
 ```
 
-#### <a name="manifest-example---menu-for-each-scope"></a><span data-ttu-id="97c1f-135">Exemple de manifeste-menu pour chaque étendue</span><span class="sxs-lookup"><span data-stu-id="97c1f-135">Manifest example - menu for each scope</span></span>
+#### <a name="manifest-example-for-the-menu-for-each-scope"></a><span data-ttu-id="50df3-140">Exemple de manifeste pour le menu pour chaque étendue</span><span class="sxs-lookup"><span data-stu-id="50df3-140">Manifest example for the menu for each scope</span></span>
+
+<span data-ttu-id="50df3-141">L'exemple de code de manifeste pour le menu pour chaque étendue est le suivant :</span><span class="sxs-lookup"><span data-stu-id="50df3-141">The manifest example code for the menu for each scope is as follows:</span></span>
 
 ```json
 {
@@ -144,32 +152,40 @@ ms.locfileid: "49552485"
 }
 ```
 
-## <a name="handling-menu-commands-in-your-bot-code"></a><span data-ttu-id="97c1f-136">Gestion des commandes de menu dans votre code de robot</span><span class="sxs-lookup"><span data-stu-id="97c1f-136">Handling menu commands in your bot code</span></span>
+<span data-ttu-id="50df3-142">Vous devez gérer les commandes de menu dans le code de votre bot lorsque vous traitez les messages des utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="50df3-142">You must handle menu commands in your bot code as you handle any message from users.</span></span> <span data-ttu-id="50df3-143">Vous pouvez gérer les commandes de menu dans le code de votre bot en parant la **\@ partie Mention** du texte du message.</span><span class="sxs-lookup"><span data-stu-id="50df3-143">You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.</span></span>
 
-<span data-ttu-id="97c1f-137">Les robots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés (« @botname ») dans un message.</span><span class="sxs-lookup"><span data-stu-id="97c1f-137">Bots in a group or channel respond only when they are mentioned ("@botname") in a message.</span></span> <span data-ttu-id="97c1f-138">Par conséquent, chaque message reçu par un bot dans une étendue de groupe ou de canal contiendra son propre nom dans le texte du message renvoyé.</span><span class="sxs-lookup"><span data-stu-id="97c1f-138">As a result, every message received by a bot when in a group or channel scope will contain its own name in the message text returned.</span></span> <span data-ttu-id="97c1f-139">Vous devez veiller à ce que les handles d’analyse de messages qui précèdent la commande renvoyée soient pris en charge.</span><span class="sxs-lookup"><span data-stu-id="97c1f-139">You need to ensure your message parsing handles that before handling the command being returned.</span></span>
+## <a name="handle-menu-commands-in-your-bot-code"></a><span data-ttu-id="50df3-144">Gérer les commandes de menu dans le code de votre bot</span><span class="sxs-lookup"><span data-stu-id="50df3-144">Handle menu commands in your bot code</span></span>
 
-> <span data-ttu-id="97c1f-140">**Note** Pour gérer les commandes dans le code, celles-ci sont envoyées à votre bot sous la forme d’un message ordinaire.</span><span class="sxs-lookup"><span data-stu-id="97c1f-140">**Note** For handling the commands in code, they are sent to your bot as a regular message.</span></span> <span data-ttu-id="97c1f-141">Par conséquent, vous devez les gérer comme vous le feriez pour n’importe quel autre message de la part de vos utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="97c1f-141">So you need to handle them as you would do for any other message from your users.</span></span> <span data-ttu-id="97c1f-142">Il s’agit uniquement d’un traitement de l’interface utilisateur qui insère du texte préconfiguré dans la zone de texte.</span><span class="sxs-lookup"><span data-stu-id="97c1f-142">They are purely a UI treatment that inserts pre-configured text into the text box.</span></span> <span data-ttu-id="97c1f-143">L’utilisateur doit alors envoyer ce texte comme s’il s’agissait de n’importe quel autre message.</span><span class="sxs-lookup"><span data-stu-id="97c1f-143">The user must then send that text as they would do for any other message.</span></span>
+<span data-ttu-id="50df3-145">Les bots d'un groupe ou d'un canal répondent uniquement lorsqu'ils sont mentionnés `@botname` dans un message.</span><span class="sxs-lookup"><span data-stu-id="50df3-145">Bots in a group or channel respond only when they are mentioned `@botname` in a message.</span></span> <span data-ttu-id="50df3-146">Chaque message reçu par un bot lorsqu'il se trouve dans une étendue de groupe ou de canal contient son nom dans le texte du message renvoyé.</span><span class="sxs-lookup"><span data-stu-id="50df3-146">Every message received by a bot when in a group or channel scope contains its name in the message text returned.</span></span> <span data-ttu-id="50df3-147">Avant de gérer la commande renvoyée, l'utilisation de votre message doit gérer le message reçu par un bot avec son nom.</span><span class="sxs-lookup"><span data-stu-id="50df3-147">Before handling the command being returned, your message parsing must handle the message received by a bot with its name.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="97c1f-144">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="97c1f-144">C#/.NET</span></span>](#tab/dotnet)
+> [!NOTE]
+> <span data-ttu-id="50df3-148">Pour gérer les commandes dans le code, elles sont envoyées à votre bot en tant que message normal.</span><span class="sxs-lookup"><span data-stu-id="50df3-148">To handle the commands in code, they are sent to your bot as a regular message.</span></span> <span data-ttu-id="50df3-149">Vous devez les gérer comme vous le feriez pour tout autre message de vos utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="50df3-149">You must handle them as you would handle any other message from your users.</span></span> <span data-ttu-id="50df3-150">Les commandes du code insèrent du texte pré-configuré dans la zone de texte.</span><span class="sxs-lookup"><span data-stu-id="50df3-150">The commands in code insert pre-configured text into the text box.</span></span> <span data-ttu-id="50df3-151">L'utilisateur doit ensuite envoyer ce texte comme il le fait pour tout autre message.</span><span class="sxs-lookup"><span data-stu-id="50df3-151">The user must then send that text as they do for any other message.</span></span>
 
-<span data-ttu-id="97c1f-145">Vous pouvez analyser la partie **\@ mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la `Activity` classe nommée `RemoveRecipientMention` .</span><span class="sxs-lookup"><span data-stu-id="97c1f-145">You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `Activity` class named `RemoveRecipientMention`.</span></span>
+# <a name="c"></a>[<span data-ttu-id="50df3-152">C#</span><span class="sxs-lookup"><span data-stu-id="50df3-152">C#</span></span>](#tab/dotnet)
+
+<span data-ttu-id="50df3-153">Vous pouvez analyser la **\@ partie Mention** du texte du message à l'aide d'une méthode statique fournie avec Microsoft Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="50df3-153">You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework.</span></span> <span data-ttu-id="50df3-154">Il s'agit d'une méthode de `Activity` la classe nommée `RemoveRecipientMention` .</span><span class="sxs-lookup"><span data-stu-id="50df3-154">It is a method of the `Activity` class named `RemoveRecipientMention`.</span></span>
+
+<span data-ttu-id="50df3-155">Le C# code pour l'utilisation de la partie **\@ Mention** du texte du message est le suivant :</span><span class="sxs-lookup"><span data-stu-id="50df3-155">The C# code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="97c1f-146">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="97c1f-146">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascript"></a>[<span data-ttu-id="50df3-156">JavaScript</span><span class="sxs-lookup"><span data-stu-id="50df3-156">JavaScript</span></span>](#tab/javascript)
 
-<span data-ttu-id="97c1f-147">Vous pouvez analyser la partie **\@ mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la `TurnContext` classe nommée `removeMentionText` .</span><span class="sxs-lookup"><span data-stu-id="97c1f-147">You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `removeMentionText`.</span></span>
+<span data-ttu-id="50df3-157">Vous pouvez analyser la **\@ partie Mention** du texte du message à l'aide d'une méthode statique fournie avec Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="50df3-157">You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework.</span></span> <span data-ttu-id="50df3-158">Il s'agit d'une méthode de `TurnContext` la classe nommée `removeMentionText` .</span><span class="sxs-lookup"><span data-stu-id="50df3-158">It is a method of the `TurnContext` class named `removeMentionText`.</span></span>
+
+<span data-ttu-id="50df3-159">Le code JavaScript pour l'utilisation de la **\@ partie Mention** du texte du message est le suivant :</span><span class="sxs-lookup"><span data-stu-id="50df3-159">The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
-# <a name="python"></a>[<span data-ttu-id="97c1f-148">Python</span><span class="sxs-lookup"><span data-stu-id="97c1f-148">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="50df3-160">Python</span><span class="sxs-lookup"><span data-stu-id="50df3-160">Python</span></span>](#tab/python)
 
+<span data-ttu-id="50df3-161">Vous pouvez l'@Mention **partie** du texte du message à l'aide d'une méthode statique fournie avec Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="50df3-161">You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework.</span></span> <span data-ttu-id="50df3-162">Il s'agit d'une méthode de `TurnContext` la classe nommée `remove_recipient_mention` .</span><span class="sxs-lookup"><span data-stu-id="50df3-162">It is a method of the `TurnContext` class named `remove_recipient_mention`.</span></span>
 
-<span data-ttu-id="97c1f-149">Vous pouvez analyser la partie **@Mention** du texte du message à l’aide d’une méthode statique fournie avec Microsoft bot Framework, une méthode de la `TurnContext` classe nommée `remove_recipient_mention` .</span><span class="sxs-lookup"><span data-stu-id="97c1f-149">You can parse out the **@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework — a method of the `TurnContext` class named `remove_recipient_mention`.</span></span>
+<span data-ttu-id="50df3-163">Le code Python pour l'extrait de la **\@ partie Mention** du texte du message est le suivant :</span><span class="sxs-lookup"><span data-stu-id="50df3-163">The Python code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -177,10 +193,20 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
-## <a name="command-menu-best-practices"></a><span data-ttu-id="97c1f-150">Meilleures pratiques du menu de commandes</span><span class="sxs-lookup"><span data-stu-id="97c1f-150">Command menu best practices</span></span>
+<span data-ttu-id="50df3-164">Pour activer le bon fonctionnement de votre code bot, vous devez suivre quelques meilleures pratiques.</span><span class="sxs-lookup"><span data-stu-id="50df3-164">To enable smooth functioning of your bot code, there are few best practices that you must follow.</span></span>
 
-* <span data-ttu-id="97c1f-151">**Restez simple**: le menu robot est conçu pour présenter les fonctionnalités clés de votre bot.</span><span class="sxs-lookup"><span data-stu-id="97c1f-151">**Keep it simple**: The bot menu is meant to present the key capabilities of your bot.</span></span>
-* <span data-ttu-id="97c1f-152">**Maintenez-le court**: les options de menu ne doivent pas être extrêmement longues et les instructions complexes en langage naturel : elles doivent être des commandes simples.</span><span class="sxs-lookup"><span data-stu-id="97c1f-152">**Keep it short**: Menu options shouldn’t be extremely long and complex natural language statements — they should be simple commands.</span></span>
-* <span data-ttu-id="97c1f-153">**Conservez-le invokable**: les actions/commandes du menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans laquelle se trouve le robot.</span><span class="sxs-lookup"><span data-stu-id="97c1f-153">**Keep it invokable**: Bot menu actions/commands should always be available, regardless of the state of the conversation or the dialog the bot is in.</span></span>
+## <a name="command-menu-best-practices"></a><span data-ttu-id="50df3-165">Meilleures pratiques en matière de menu de commandes</span><span class="sxs-lookup"><span data-stu-id="50df3-165">Command menu best practices</span></span>
 
-> <span data-ttu-id="97c1f-154">**Note** Si vous supprimez des commandes de votre manifeste, vous devrez redéployer votre application pour que les modifications prennent effet.</span><span class="sxs-lookup"><span data-stu-id="97c1f-154">**Note** If you remove any commands from your manifest, you will need to redeploy your app for the changes to take effect.</span></span> <span data-ttu-id="97c1f-155">En règle générale, toutes les modifications apportées au manifeste le requièrent.</span><span class="sxs-lookup"><span data-stu-id="97c1f-155">In general, any changes to the manifest require this.</span></span>
+<span data-ttu-id="50df3-166">Voici les meilleures pratiques en matière de menu de commandes :</span><span class="sxs-lookup"><span data-stu-id="50df3-166">Following are the command menu best practices:</span></span>
+
+* <span data-ttu-id="50df3-167">Restez simple : le menu bot est destiné à présenter les fonctionnalités clés de votre bot.</span><span class="sxs-lookup"><span data-stu-id="50df3-167">Keep it simple: The bot menu is meant to present the key capabilities of your bot.</span></span>
+* <span data-ttu-id="50df3-168">Restez bref : les options de menu ne doivent pas être longues et ne doivent pas être des instructions de langage naturel complexes.</span><span class="sxs-lookup"><span data-stu-id="50df3-168">Keep it short: Menu options must not be long and must not be complex natural language statements.</span></span> <span data-ttu-id="50df3-169">Ce doivent être des commandes simples.</span><span class="sxs-lookup"><span data-stu-id="50df3-169">They must be simple commands.</span></span>
+* <span data-ttu-id="50df3-170">Gardez-le invocable : les commandes ou les actions de menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans le bot.</span><span class="sxs-lookup"><span data-stu-id="50df3-170">Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="50df3-171">Si vous supprimez des commandes de votre manifeste, vous devez redéployer votre application pour implémenter les modifications.</span><span class="sxs-lookup"><span data-stu-id="50df3-171">If you remove any commands from your manifest, you must redeploy your app to implement the changes.</span></span> <span data-ttu-id="50df3-172">En règle générale, les modifications apportées au manifeste vous obligent à redéployer votre application.</span><span class="sxs-lookup"><span data-stu-id="50df3-172">In general, any changes to the manifest require you to redeploy your app.</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="50df3-173">Étape suivante</span><span class="sxs-lookup"><span data-stu-id="50df3-173">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="50df3-174">Conversations de groupe et de canal</span><span class="sxs-lookup"><span data-stu-id="50df3-174">Channel and group conversations</span></span>](~/bots/how-to/conversations/channel-and-group-conversations.md)

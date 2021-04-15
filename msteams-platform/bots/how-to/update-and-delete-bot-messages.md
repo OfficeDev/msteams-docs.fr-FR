@@ -4,26 +4,28 @@ author: WashingtonKayaker
 description: Comment mettre à jour et supprimer des messages envoyés à partir de votre bot Microsoft Teams
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 04a17914efd40173d761537773613b93563999aa
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 3b94c3f0851c62adb905121afb47389144bccffd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596202"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696313"
 ---
-# <a name="update-and-delete-messages-sent-from-your-bot"></a><span data-ttu-id="f99c8-103">Mettre à jour et supprimer les messages envoyés à partir de votre bot</span><span class="sxs-lookup"><span data-stu-id="f99c8-103">Update and delete messages sent from your bot</span></span>
+# <a name="update-and-delete-messages-sent-from-your-bot"></a><span data-ttu-id="e34a2-103">Mettre à jour et supprimer les messages envoyés à partir de votre bot</span><span class="sxs-lookup"><span data-stu-id="e34a2-103">Update and delete messages sent from your bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-## <a name="update-messages"></a><span data-ttu-id="f99c8-104">Mettre à jour les messages</span><span class="sxs-lookup"><span data-stu-id="f99c8-104">Update messages</span></span>
+<span data-ttu-id="e34a2-104">Votre bot peut mettre à jour dynamiquement les messages après les avoir envoyés au lieu de les avoir en tant que captures instantanées statiques des données.</span><span class="sxs-lookup"><span data-stu-id="e34a2-104">Your bot can dynamically update messages after sending them instead of having them as static snapshots of data.</span></span> <span data-ttu-id="e34a2-105">Les messages peuvent également être supprimés à l'aide de la méthode `DeleteActivity` Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="e34a2-105">Messages can also be deleted using the Bot Framework's `DeleteActivity` method.</span></span>
 
-<span data-ttu-id="f99c8-105">Votre bot peut mettre à jour dynamiquement les messages après les avoir envoyés.</span><span class="sxs-lookup"><span data-stu-id="f99c8-105">Your bot can dynamically update messages after sending them.</span></span> <span data-ttu-id="f99c8-106">Vous pouvez utiliser des mises à jour de messages dynamiques pour des scénarios tels que les mises à jour des sondages, la modification des actions disponibles après l’utilisation d’un bouton ou tout autre changement d’état asynchrone.</span><span class="sxs-lookup"><span data-stu-id="f99c8-106">You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.</span></span>
+## <a name="update-messages"></a><span data-ttu-id="e34a2-106">Mettre à jour les messages</span><span class="sxs-lookup"><span data-stu-id="e34a2-106">Update messages</span></span>
 
-<span data-ttu-id="f99c8-107">Le nouveau message ne doit pas nécessairement correspondre au type d’origine.</span><span class="sxs-lookup"><span data-stu-id="f99c8-107">The new message need not match the original in type.</span></span> <span data-ttu-id="f99c8-108">Par exemple, si le message d’origine contenait une pièce jointe, le nouveau message peut être un message texte simple.</span><span class="sxs-lookup"><span data-stu-id="f99c8-108">For example, if the original message contained an attachment, the new message can be a simple text message.</span></span>
+<span data-ttu-id="e34a2-107">Vous pouvez utiliser les mises à jour dynamiques des messages pour des scénarios, tels que les mises à jour des sondages, la modification des actions disponibles après l'utilisation d'un bouton ou tout autre changement d'état asynchrone.</span><span class="sxs-lookup"><span data-stu-id="e34a2-107">You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="f99c8-109">C#</span><span class="sxs-lookup"><span data-stu-id="f99c8-109">C#</span></span>](#tab/dotnet)
+<span data-ttu-id="e34a2-108">Il n'est pas nécessaire que le nouveau message corresponde au type d'origine.</span><span class="sxs-lookup"><span data-stu-id="e34a2-108">It is not necessary for the new message to match the original in type.</span></span> <span data-ttu-id="e34a2-109">Par exemple, si le message d'origine contient une pièce jointe, le nouveau message peut être un message texte simple.</span><span class="sxs-lookup"><span data-stu-id="e34a2-109">For example, if the original message contains an attachment, the new message can be a simple text message.</span></span>
 
-<span data-ttu-id="f99c8-110">Pour mettre à jour un message existant, passez un nouvel objet avec l’ID d’activité existant à la `Activity` `UpdateActivityAsync` méthode de la `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="f99c8-110">To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.</span></span> <span data-ttu-id="f99c8-111">Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-111">See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span></span>
+# <a name="c"></a>[<span data-ttu-id="e34a2-110">C#</span><span class="sxs-lookup"><span data-stu-id="e34a2-110">C#</span></span>](#tab/dotnet)
+
+<span data-ttu-id="e34a2-111">Pour mettre à jour un message existant, passez un nouvel objet avec l'ID d'activité existant à la `Activity` `UpdateActivityAsync` méthode de la `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="e34a2-111">To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.</span></span> <span data-ttu-id="e34a2-112">Pour plus d'informations, [voir TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-112">For more information, see [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span></span>
 
 ```csharp
 var newActivity = MessageFactory.Text("The new text for the activity");
@@ -31,9 +33,9 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="f99c8-112">TypeScript</span><span class="sxs-lookup"><span data-stu-id="f99c8-112">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="e34a2-113">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e34a2-113">TypeScript</span></span>](#tab/typescript)
 
-<span data-ttu-id="f99c8-113">Pour mettre à jour un message existant, passez un nouvel objet avec l’ID d’activité existant à la `Activity` `updateActivity` méthode de `TurnContext` l’objet.</span><span class="sxs-lookup"><span data-stu-id="f99c8-113">To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.</span></span> <span data-ttu-id="f99c8-114">Voir [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-114">See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span></span>
+<span data-ttu-id="e34a2-114">Pour mettre à jour un message existant, passez un nouvel objet avec l'ID d'activité existant à la `Activity` `updateActivity` méthode de `TurnContext` l'objet.</span><span class="sxs-lookup"><span data-stu-id="e34a2-114">To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.</span></span> <span data-ttu-id="e34a2-115">Pour plus d'informations, [voir updateActivity.](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-115">For more information, see [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span></span>
 
 ```typescript
 const newActivity = MessageFactory.text('The new text for the activity');
@@ -41,9 +43,9 @@ newActivity.id = activityId;
 await turnContext.updateActivity(newActivity);
 ```
 
-# <a name="python"></a>[<span data-ttu-id="f99c8-115">Python</span><span class="sxs-lookup"><span data-stu-id="f99c8-115">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="e34a2-116">Python</span><span class="sxs-lookup"><span data-stu-id="e34a2-116">Python</span></span>](#tab/python)
 
-<span data-ttu-id="f99c8-116">Pour mettre à jour un message existant, passez un nouvel objet avec l’ID d’activité existant à la `Activity` `update_activity` méthode de la `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="f99c8-116">To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.</span></span> <span data-ttu-id="f99c8-117">Voir [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-117">See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span></span>
+<span data-ttu-id="e34a2-117">Pour mettre à jour un message existant, passez un nouvel objet avec l'ID d'activité existant à la `Activity` `update_activity` méthode de la `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="e34a2-117">To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.</span></span> <span data-ttu-id="e34a2-118">Pour plus d'informations, [voir TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-118">For more information, see [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span></span>
 
 ```python
 
@@ -53,49 +55,53 @@ update_result = await context.update_activity(new_activity)
 
 ```
 
-# <a name="rest-api"></a>[<span data-ttu-id="f99c8-118">API REST</span><span class="sxs-lookup"><span data-stu-id="f99c8-118">REST API</span></span>](#tab/rest)
+# <a name="rest-api"></a>[<span data-ttu-id="e34a2-119">API REST</span><span class="sxs-lookup"><span data-stu-id="e34a2-119">REST API</span></span>](#tab/rest)
 
->[!NOTE]
-><span data-ttu-id="f99c8-119">Vous pouvez développer des applications Teams dans n’importe quelle technologie de programmation web et appeler directement les [API REST du service Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="f99c8-119">You can develop Teams apps in any web programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).</span></span> <span data-ttu-id="f99c8-120">Pour ce faire, vous [](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) devez implémenter des procédures de sécurité d’authentification avec vos demandes d’API.</span><span class="sxs-lookup"><span data-stu-id="f99c8-120">To do so, you need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.</span></span>
+> [!NOTE]
+> <span data-ttu-id="e34a2-120">Vous pouvez développer des applications Teams dans n'importe quelle technologie de programmation web et appeler directement les API REST du service connecteur [de bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-120">You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).</span></span> <span data-ttu-id="e34a2-121">Pour ce faire, vous devez implémenter [des](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) procédures de sécurité d'authentification avec vos demandes d'API.</span><span class="sxs-lookup"><span data-stu-id="e34a2-121">To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.</span></span>
 
-<span data-ttu-id="f99c8-121">Pour mettre à jour une activité existante dans une conversation, incluez le point de terminaison de `conversationId` `activityId` la demande et celui-ci.</span><span class="sxs-lookup"><span data-stu-id="f99c8-121">To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.</span></span> <span data-ttu-id="f99c8-122">Pour effectuer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel POST d’origine.</span><span class="sxs-lookup"><span data-stu-id="f99c8-122">To complete this scenario, you must cache the activity ID returned by the original POST call.</span></span>
+<span data-ttu-id="e34a2-122">Pour mettre à jour une activité existante au sein d'une conversation, incluez le point de terminaison de `conversationId` `activityId` la demande et celui-ci.</span><span class="sxs-lookup"><span data-stu-id="e34a2-122">To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.</span></span> <span data-ttu-id="e34a2-123">Pour effectuer ce scénario, vous devez mettre en cache l'ID d'activité renvoyé par l'appel post-courrier d'origine.</span><span class="sxs-lookup"><span data-stu-id="e34a2-123">To complete this scenario, you must cache the activity ID returned by the original post call.</span></span>
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|<span data-ttu-id="f99c8-123">Demande</span><span class="sxs-lookup"><span data-stu-id="f99c8-123">Request</span></span> |<span data-ttu-id="f99c8-124">Réponse</span><span class="sxs-lookup"><span data-stu-id="f99c8-124">Response</span></span> |
+|<span data-ttu-id="e34a2-124">Corps de la demande</span><span class="sxs-lookup"><span data-stu-id="e34a2-124">Request body</span></span> | <span data-ttu-id="e34a2-125">Retourne</span><span class="sxs-lookup"><span data-stu-id="e34a2-125">Returns</span></span> |
 |----|----|
-|<span data-ttu-id="f99c8-125">Objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="f99c8-125">An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object</span></span> |<span data-ttu-id="f99c8-126">Objet [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="f99c8-126">A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object</span></span>  |
+| <span data-ttu-id="e34a2-126">Objet [d'activité](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-126">An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object</span></span> | <span data-ttu-id="e34a2-127">Objet [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-127">A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object</span></span> |
 
 ---
+* * *
 
-## <a name="update-cards"></a><span data-ttu-id="f99c8-127">Mettre à jour des cartes</span><span class="sxs-lookup"><span data-stu-id="f99c8-127">Update cards</span></span>
+<span data-ttu-id="e34a2-128">Maintenant que vous avez mis à jour les messages, mettez à jour la carte existante sur la sélection de bouton pour les activités entrantes.</span><span class="sxs-lookup"><span data-stu-id="e34a2-128">Now that you have updated messages, update the existing card on button selection for incoming activities.</span></span>
 
-<span data-ttu-id="f99c8-128">Pour mettre à jour la carte existante sur la sélection de bouton, vous pouvez utiliser `ReplyToId` l’activité entrante.</span><span class="sxs-lookup"><span data-stu-id="f99c8-128">To update the existing card on button selection, you can use `ReplyToId` of incoming activity.</span></span>
+## <a name="update-cards"></a><span data-ttu-id="e34a2-129">Mettre à jour des cartes</span><span class="sxs-lookup"><span data-stu-id="e34a2-129">Update cards</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="f99c8-129">C#</span><span class="sxs-lookup"><span data-stu-id="f99c8-129">C#</span></span>](#tab/dotnet)
+<span data-ttu-id="e34a2-130">Pour mettre à jour la carte existante sur la sélection de bouton, vous pouvez utiliser `ReplyToId` l'activité entrante.</span><span class="sxs-lookup"><span data-stu-id="e34a2-130">To update the existing card on button selection, you can use `ReplyToId` of incoming activity.</span></span>
 
-<span data-ttu-id="f99c8-130">Pour mettre à jour la carte existante sur un clic de bouton, passez un nouvel objet avec la carte mise à jour et en tant qu’ID d’activité à la méthode `Activity` `ReplyToId` de la `UpdateActivityAsync` `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="f99c8-130">To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.</span></span> <span data-ttu-id="f99c8-131">Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-131">See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span></span>
+# <a name="c"></a>[<span data-ttu-id="e34a2-131">C#</span><span class="sxs-lookup"><span data-stu-id="e34a2-131">C#</span></span>](#tab/dotnet)
+
+<span data-ttu-id="e34a2-132">Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec une carte mise à jour et en tant qu'ID d'activité à la méthode `Activity` `ReplyToId` de la `UpdateActivityAsync` `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="e34a2-132">To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.</span></span> <span data-ttu-id="e34a2-133">Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-133">See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).</span></span>
+
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());
 activity.Id = turnContext.Activity.ReplyToId;
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="f99c8-132">TypeScript</span><span class="sxs-lookup"><span data-stu-id="f99c8-132">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="e34a2-134">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e34a2-134">TypeScript</span></span>](#tab/typescript)
 
+<span data-ttu-id="e34a2-135">Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec carte mise à jour et en tant qu'ID d'activité à la `Activity` `replyToId` méthode de `updateActivity` `TurnContext` l'objet.</span><span class="sxs-lookup"><span data-stu-id="e34a2-135">To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object.</span></span> <span data-ttu-id="e34a2-136">Voir [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-136">See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span></span>
 
-<span data-ttu-id="f99c8-133">Pour mettre à jour la carte existante sur un clic de bouton, passez un nouvel objet avec une carte mise à jour et en tant qu’ID d’activité à la méthode `Activity` `replyToId` de `updateActivity` `TurnContext` l’objet.</span><span class="sxs-lookup"><span data-stu-id="f99c8-133">To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object.</span></span> <span data-ttu-id="f99c8-134">Voir [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-134">See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).</span></span>
 ```typescript
 const message = MessageFactory.attachment(card);
 message.id = context.activity.replyToId;
 await context.updateActivity(message);
 ```
 
-# <a name="python"></a>[<span data-ttu-id="f99c8-135">Python</span><span class="sxs-lookup"><span data-stu-id="f99c8-135">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="e34a2-137">Python</span><span class="sxs-lookup"><span data-stu-id="e34a2-137">Python</span></span>](#tab/python)
 
-<span data-ttu-id="f99c8-136">Pour mettre à jour la carte existante sur un clic de bouton, passez un nouvel objet avec la carte mise à jour et en tant qu’ID d’activité à la méthode `Activity` `reply_to_id` de la `update_activity` `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="f99c8-136">To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class.</span></span> <span data-ttu-id="f99c8-137">Voir [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-137">See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span></span>
+<span data-ttu-id="e34a2-138">Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec une carte mise à jour et en tant qu'ID d'activité à la méthode `Activity` `reply_to_id` de la `update_activity` `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="e34a2-138">To update existing card on a button selection, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class.</span></span> <span data-ttu-id="e34a2-139">Voir [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-139">See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).</span></span>
 
 ```python
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
@@ -104,28 +110,32 @@ await turn_context.update_activity(updated_activity)
 
 ```
 
-# <a name="rest-api"></a>[<span data-ttu-id="f99c8-138">API REST</span><span class="sxs-lookup"><span data-stu-id="f99c8-138">REST API</span></span>](#tab/rest)
+# <a name="rest-api"></a>[<span data-ttu-id="e34a2-140">API REST</span><span class="sxs-lookup"><span data-stu-id="e34a2-140">REST API</span></span>](#tab/rest)
 
-<span data-ttu-id="f99c8-139">Pour mettre à jour une activité existante dans une conversation, incluez le point de terminaison de `conversationId` `activityId` la demande et celui-ci.</span><span class="sxs-lookup"><span data-stu-id="f99c8-139">To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.</span></span> <span data-ttu-id="f99c8-140">Pour effectuer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel post-courrier d’origine.</span><span class="sxs-lookup"><span data-stu-id="f99c8-140">To complete this scenario, you must cache the activity ID returned by the original post call.</span></span>
+> [!NOTE]
+> <span data-ttu-id="e34a2-141">Vous pouvez développer des applications Teams dans n'importe quelle technologie de programmation web et appeler directement les API REST du service connecteur [de bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-141">You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true).</span></span> <span data-ttu-id="e34a2-142">Pour ce faire, vous devez implémenter [des](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) procédures de sécurité d'authentification avec vos demandes d'API.</span><span class="sxs-lookup"><span data-stu-id="e34a2-142">To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.</span></span>
+
+<span data-ttu-id="e34a2-143">Pour mettre à jour une activité existante au sein d'une conversation, incluez le point de terminaison de `conversationId` `activityId` la demande et celui-ci.</span><span class="sxs-lookup"><span data-stu-id="e34a2-143">To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.</span></span> <span data-ttu-id="e34a2-144">Pour effectuer ce scénario, vous devez mettre en cache l'ID d'activité renvoyé par l'appel post-courrier d'origine.</span><span class="sxs-lookup"><span data-stu-id="e34a2-144">To complete this scenario, you must cache the activity ID returned by the original post call.</span></span>
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|<span data-ttu-id="f99c8-141">Demande</span><span class="sxs-lookup"><span data-stu-id="f99c8-141">Request</span></span> |<span data-ttu-id="f99c8-142">Réponse</span><span class="sxs-lookup"><span data-stu-id="f99c8-142">Response</span></span> |
+|<span data-ttu-id="e34a2-145">Demande</span><span class="sxs-lookup"><span data-stu-id="e34a2-145">Request</span></span> |<span data-ttu-id="e34a2-146">Réponse</span><span class="sxs-lookup"><span data-stu-id="e34a2-146">Response</span></span> |
 |----|----|
-| <span data-ttu-id="f99c8-143">Objet [Activity.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="f99c8-143">An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object.</span></span> | <span data-ttu-id="f99c8-144">Objet [ResourceResponse.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="f99c8-144">A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object.</span></span> |
+| <span data-ttu-id="e34a2-147">Objet [d'activité.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-147">An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object.</span></span> | <span data-ttu-id="e34a2-148">Objet [ResourceResponse.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e34a2-148">A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object.</span></span> |
 
----
+* * *
 
-## <a name="delete-messages"></a><span data-ttu-id="f99c8-145">Suppression de messages</span><span class="sxs-lookup"><span data-stu-id="f99c8-145">Delete messages</span></span>
+<span data-ttu-id="e34a2-149">Maintenant que vous avez mis à jour les cartes, vous pouvez supprimer des messages à l'aide de Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="e34a2-149">Now that you have updated cards, you can delete messages using the Bot Framework.</span></span>
 
-<span data-ttu-id="f99c8-146">Dans Bot Framework, chaque message possède son propre identificateur d’activité unique.</span><span class="sxs-lookup"><span data-stu-id="f99c8-146">In the Bot Framework, every message has its own unique activity identifier.</span></span>
-<span data-ttu-id="f99c8-147">Les messages peuvent être supprimés à l’aide de la méthode Bot `DeleteActivity` Framework, comme illustré ici.</span><span class="sxs-lookup"><span data-stu-id="f99c8-147">Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.</span></span>
+## <a name="delete-messages"></a><span data-ttu-id="e34a2-150">Suppression de messages</span><span class="sxs-lookup"><span data-stu-id="e34a2-150">Delete messages</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="f99c8-148">C#</span><span class="sxs-lookup"><span data-stu-id="f99c8-148">C#</span></span>](#tab/dotnet)
+<span data-ttu-id="e34a2-151">Dans Bot Framework, chaque message possède son identificateur d'activité unique.</span><span class="sxs-lookup"><span data-stu-id="e34a2-151">In the Bot Framework, every message has its unique activity identifier.</span></span> <span data-ttu-id="e34a2-152">Les messages peuvent être supprimés à l'aide de la méthode `DeleteActivity` Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="e34a2-152">Messages can be deleted using the Bot Framework's `DeleteActivity` method.</span></span>
 
-<span data-ttu-id="f99c8-149">Pour supprimer ce message, passez l’ID de cette activité à `DeleteActivityAsync` la méthode de la `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="f99c8-149">To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.</span></span> <span data-ttu-id="f99c8-150">Voir [TurnContext.DeleteActivityAsync, méthode](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-150">See [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).</span></span>
+# <a name="c"></a>[<span data-ttu-id="e34a2-153">C#</span><span class="sxs-lookup"><span data-stu-id="e34a2-153">C#</span></span>](#tab/dotnet)
+
+<span data-ttu-id="e34a2-154">Pour supprimer un message, passez l'ID de cette activité à `DeleteActivityAsync` la méthode de la `TurnContext` classe.</span><span class="sxs-lookup"><span data-stu-id="e34a2-154">To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.</span></span> <span data-ttu-id="e34a2-155">Pour plus d'informations, [voir TurnContext.DeleteActivityAsync, méthode](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-155">For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).</span></span>
 
 ```csharp
 foreach (var activityId in _list)
@@ -134,9 +144,9 @@ foreach (var activityId in _list)
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="f99c8-151">TypeScript</span><span class="sxs-lookup"><span data-stu-id="f99c8-151">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="e34a2-156">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e34a2-156">TypeScript</span></span>](#tab/typescript)
 
-<span data-ttu-id="f99c8-152">Pour supprimer ce message, passez l’ID de cette activité à `deleteActivity` la méthode de `TurnContext` l’objet.</span><span class="sxs-lookup"><span data-stu-id="f99c8-152">To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.</span></span> <span data-ttu-id="f99c8-153">Voir [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="f99c8-153">See [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).</span></span>
+<span data-ttu-id="e34a2-157">Pour supprimer un message, passez l'ID de cette activité à `deleteActivity` la méthode de `TurnContext` l'objet.</span><span class="sxs-lookup"><span data-stu-id="e34a2-157">To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.</span></span> <span data-ttu-id="e34a2-158">Pour plus d'informations, [voir deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).</span><span class="sxs-lookup"><span data-stu-id="e34a2-158">For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).</span></span>
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
@@ -144,33 +154,39 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="f99c8-154">Python</span><span class="sxs-lookup"><span data-stu-id="f99c8-154">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="e34a2-159">Python</span><span class="sxs-lookup"><span data-stu-id="e34a2-159">Python</span></span>](#tab/python)
 
-<span data-ttu-id="f99c8-155">Pour supprimer ce message, passez l’ID de cette activité à `delete_activity` la méthode de `TurnContext` l’objet.</span><span class="sxs-lookup"><span data-stu-id="f99c8-155">To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object.</span></span> <span data-ttu-id="f99c8-156">Voir [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).</span><span class="sxs-lookup"><span data-stu-id="f99c8-156">See [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).</span></span>
+<span data-ttu-id="e34a2-160">Pour supprimer ce message, passez l'ID de cette activité à `delete_activity` la méthode de `TurnContext` l'objet.</span><span class="sxs-lookup"><span data-stu-id="e34a2-160">To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object.</span></span> <span data-ttu-id="e34a2-161">Pour plus d'informations, [voir activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).</span><span class="sxs-lookup"><span data-stu-id="e34a2-161">For more information, see [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).</span></span>
 
 ```python
 for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
-# <a name="rest-api"></a>[<span data-ttu-id="f99c8-157">API REST</span><span class="sxs-lookup"><span data-stu-id="f99c8-157">REST API</span></span>](#tab/rest)
+# <a name="rest-api"></a>[<span data-ttu-id="e34a2-162">API REST</span><span class="sxs-lookup"><span data-stu-id="e34a2-162">REST API</span></span>](#tab/rest)
 
-<span data-ttu-id="f99c8-158">Pour supprimer une activité existante dans une conversation, incluez le point de terminaison de la `conversationId` `activityId` demande et celui-ci.</span><span class="sxs-lookup"><span data-stu-id="f99c8-158">To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.</span></span>
+<span data-ttu-id="e34a2-163">Pour supprimer une activité existante dans une conversation, incluez le point de terminaison de la `conversationId` `activityId` demande et celui-ci.</span><span class="sxs-lookup"><span data-stu-id="e34a2-163">To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.</span></span>
 
 ```http
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|<span data-ttu-id="f99c8-159">Demande</span><span class="sxs-lookup"><span data-stu-id="f99c8-159">Request</span></span> |<span data-ttu-id="f99c8-160">Réponse</span><span class="sxs-lookup"><span data-stu-id="f99c8-160">Response</span></span> |
+|<span data-ttu-id="e34a2-164">Demande</span><span class="sxs-lookup"><span data-stu-id="e34a2-164">Request</span></span> |<span data-ttu-id="e34a2-165">Réponse</span><span class="sxs-lookup"><span data-stu-id="e34a2-165">Response</span></span> |
 |----|----|
-| <span data-ttu-id="f99c8-161">S/O</span><span class="sxs-lookup"><span data-stu-id="f99c8-161">N/A</span></span> | <span data-ttu-id="f99c8-162">Code d’état HTTP qui indique le résultat de l’opération.</span><span class="sxs-lookup"><span data-stu-id="f99c8-162">An HTTP status code that indicates the outcome of the operation.</span></span> <span data-ttu-id="f99c8-163">Rien n’est spécifié dans le corps de la réponse.</span><span class="sxs-lookup"><span data-stu-id="f99c8-163">Nothing is specified in the body of the response.</span></span> |
+| <span data-ttu-id="e34a2-166">S/O</span><span class="sxs-lookup"><span data-stu-id="e34a2-166">N/A</span></span> | <span data-ttu-id="e34a2-167">Code d'état HTTP qui indique le résultat de l'opération.</span><span class="sxs-lookup"><span data-stu-id="e34a2-167">An HTTP status code that indicates the outcome of the operation.</span></span> <span data-ttu-id="e34a2-168">Rien n'est spécifié dans le corps de la réponse.</span><span class="sxs-lookup"><span data-stu-id="e34a2-168">Nothing is specified in the body of the response.</span></span> |
 
 ---
 
-## <a name="code-samples"></a><span data-ttu-id="f99c8-164">Exemples de code</span><span class="sxs-lookup"><span data-stu-id="f99c8-164">Code samples</span></span>
+## <a name="code-sample"></a><span data-ttu-id="e34a2-169">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="e34a2-169">Code sample</span></span>
 
-<span data-ttu-id="f99c8-165">Les principes de base de la conversation officielle sont les suivants :</span><span class="sxs-lookup"><span data-stu-id="f99c8-165">The official conversation basics are as follows:</span></span>
+<span data-ttu-id="e34a2-170">L'exemple de code suivant illustre les principes de base des conversations :</span><span class="sxs-lookup"><span data-stu-id="e34a2-170">The following code sample demonstrates basics of conversations:</span></span>
 
-| <span data-ttu-id="f99c8-166">Exemple de nom</span><span class="sxs-lookup"><span data-stu-id="f99c8-166">Sample name</span></span>           | <span data-ttu-id="f99c8-167">Description</span><span class="sxs-lookup"><span data-stu-id="f99c8-167">Description</span></span>                                                                      | <span data-ttu-id="f99c8-168">.NET</span><span class="sxs-lookup"><span data-stu-id="f99c8-168">.NET</span></span>    | <span data-ttu-id="f99c8-169">Node.js</span><span class="sxs-lookup"><span data-stu-id="f99c8-169">Node.js</span></span>   | <span data-ttu-id="f99c8-170">Python</span><span class="sxs-lookup"><span data-stu-id="f99c8-170">Python</span></span>  |
+| <span data-ttu-id="e34a2-171">Exemple de nom</span><span class="sxs-lookup"><span data-stu-id="e34a2-171">Sample name</span></span>           | <span data-ttu-id="e34a2-172">Description</span><span class="sxs-lookup"><span data-stu-id="e34a2-172">Description</span></span>                                                                      | <span data-ttu-id="e34a2-173">.NET</span><span class="sxs-lookup"><span data-stu-id="e34a2-173">.NET</span></span>    | <span data-ttu-id="e34a2-174">Node.js</span><span class="sxs-lookup"><span data-stu-id="e34a2-174">Node.js</span></span>   | <span data-ttu-id="e34a2-175">Python</span><span class="sxs-lookup"><span data-stu-id="e34a2-175">Python</span></span>  |
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|<span data-ttu-id="f99c8-171">Informations de base sur les conversations Teams</span><span class="sxs-lookup"><span data-stu-id="f99c8-171">Teams Conversation Basics</span></span>  | <span data-ttu-id="f99c8-172">Présente les principes de base des conversations dans Teams, notamment la mise à jour et la suppression des messages.</span><span class="sxs-lookup"><span data-stu-id="f99c8-172">Demonstrates basics of conversations in Teams, including message update and delete.</span></span>|[<span data-ttu-id="f99c8-173">View</span><span class="sxs-lookup"><span data-stu-id="f99c8-173">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="f99c8-174">View</span><span class="sxs-lookup"><span data-stu-id="f99c8-174">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [<span data-ttu-id="f99c8-175">View</span><span class="sxs-lookup"><span data-stu-id="f99c8-175">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+|<span data-ttu-id="e34a2-176">Informations de base sur les conversations Teams</span><span class="sxs-lookup"><span data-stu-id="e34a2-176">Teams conversation basics</span></span>  | <span data-ttu-id="e34a2-177">Présente les principes de base des conversations dans Teams, notamment la mise à jour et la suppression des messages.</span><span class="sxs-lookup"><span data-stu-id="e34a2-177">Demonstrates basics of conversations in Teams, including message update and delete.</span></span>|[<span data-ttu-id="e34a2-178">View</span><span class="sxs-lookup"><span data-stu-id="e34a2-178">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="e34a2-179">View</span><span class="sxs-lookup"><span data-stu-id="e34a2-179">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [<span data-ttu-id="e34a2-180">View</span><span class="sxs-lookup"><span data-stu-id="e34a2-180">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+
+## <a name="next-step"></a><span data-ttu-id="e34a2-181">Étape suivante</span><span class="sxs-lookup"><span data-stu-id="e34a2-181">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="e34a2-182">Obtenir le contexte Teams</span><span class="sxs-lookup"><span data-stu-id="e34a2-182">Get Teams context</span></span>](~/bots/how-to/get-teams-context.md)
+
