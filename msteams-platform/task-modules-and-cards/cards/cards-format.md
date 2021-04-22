@@ -2,20 +2,21 @@
 title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte dans Microsoft Teams
 keywords: Format de cartes de bots teams
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696534"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922516"
 ---
 # <a name="format-cards-in-teams"></a>Mise en forme des cartes dans Teams
 
 Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l'aide de Markdown ou html, en fonction du type de carte.
 
-Les cartes ne supportent la mise en forme que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre. La mise en forme peut être spécifiée à l'aide d'un sous-ensemble de mise en forme XML (HTML) ou markdown en fonction du type de carte. Pour les cartes adaptatives de développement actuel et futur utilisant la mise en forme Markdown, il est recommandé.
+Les cartes ne supportent la mise en forme que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre. La mise en forme peut être spécifiée à l'aide d'un sous-ensemble de mise en forme XML (HTML) ou markdown en fonction du type de carte. Pour le développement actuel et le développement de cartes adaptatives utilisant la mise en forme Markdown est recommandé.
 
 La prise en charge de la mise en forme diffère d'un type de carte à l'autre, et le rendu de la carte peut légèrement varier entre le bureau et les clients Teams mobiles, ainsi que Teams dans le navigateur de bureau.
 
@@ -124,8 +125,9 @@ Les bots et les extensions de messagerie peuvent inclure des mentions dans le co
 
 Pour inclure une mention dans une carte adaptative, votre application doit inclure les éléments suivants :
 
-* `<at>username</at>` dans les éléments de carte adaptative pris en charge
-* `mention`L'objet à l'intérieur d'une propriété dans le contenu de la carte, qui inclut l'ID d'utilisateur `msteams` Teams de l'utilisateur mentionné
+* `<at>username</at>` dans les éléments de carte adaptative pris en charge.
+* Objet à l'intérieur d'une propriété dans le contenu de la carte, qui inclut l'ID d'utilisateur `mention` `msteams` Teams de l'utilisateur mentionné.
+* Il `userId` est propre à votre ID de bot et à un utilisateur particulier. Il peut être utilisé pour @mention un utilisateur particulier. Il `userId` peut être récupéré à l'aide de l'une des options mentionnées dans obtenir [l'ID utilisateur.](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Exemple de carte adaptative avec une mention
 
@@ -158,12 +160,11 @@ Pour inclure une mention dans une carte adaptative, votre application doit inclu
 }
 ```
 
-
 ### <a name="information-masking-in-adaptive-cards"></a>Masquage d'informations dans les cartes adaptatives
 Utilisez la propriété de masquage d'informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs au sein de l'élément d'entrée [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) de carte adaptative. 
 
 > [!NOTE]
-> La fonctionnalité prend uniquement en charge le masquage d'informations côté client, le texte d'entrée masqué est envoyé sous forme de texte clair à l'adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
+> La fonctionnalité prend uniquement en charge le masquage d'informations côté client, le texte d'entrée masqué est envoyé en tant que texte clair à l'adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
 
 > [!NOTE]
 > La propriété de masquage d'informations est actuellement disponible dans l'aperçu développeur uniquement.
@@ -266,7 +267,7 @@ Dans une carte adaptative, vous pouvez utiliser la propriété pour ajouter la p
 }
 ```
 
-Lorsque les utilisateurs pointent sur l'image, une icône développer s'affiche dans le coin supérieur droit de l'image : carte ![ adaptative avec image expandable](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+Lorsque les utilisateurs pointent sur l'image, une icône développer s'affiche dans le coin supérieur droit de l'image : carte adaptative ![ avec image expandable](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
 L'image s'affiche en vue de la phase lorsque l'utilisateur sélectionne le bouton développer : ![ Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
 
@@ -280,7 +281,7 @@ Dans la vue d'étape, les utilisateurs peuvent effectuer un zoom avant et un zoo
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Mise en forme Markdown : cartes de connecteur O365**](#tab/connector-md)
 
-Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML. La prise en charge HTML est décrite dans la dernière section.
+Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML. La prise en charge HTML est décrite dans la dernière section.
 
 | Style | Exemple | Markdown |
 | --- | --- | --- |
@@ -470,7 +471,7 @@ Les balises HTML sont pris en charge pour les cartes simples telles que la carte
 | texte préformaté | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | lien hypertexte | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| lien vers l'image |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| lien vers l’image |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>Différences entre les appareils mobiles et les ordinateurs de bureau pour les cartes simples
 
@@ -486,7 +487,7 @@ Sur iOS, la mise en forme HTML s’affiche comme ceci :
 
 Problèmes :
 
-* La mise en forme des caractères en gras et en italique n’est pas restituer sur iOS.
+* La mise en forme de caractères en gras et en italique n’est pas restituer sur iOS.
 
 Sur Android, la mise en forme HTML s’affiche comme ceci :
 
