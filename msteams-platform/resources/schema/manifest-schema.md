@@ -4,12 +4,12 @@ description: Décrit le schéma de manifeste pour Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 keywords: schéma de manifeste teams
-ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: d4dd299a9e848820e81f87361460b5b8b14f15b7
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696044"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946444"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -305,7 +305,7 @@ Version du schéma de manifeste que ce manifeste utilise. Elle doit être 1,9.
 
 Version d'une application spécifique. Si vous mettez à jour quelque chose dans votre manifeste, la version doit également être incrémentée. De cette façon, lorsque le nouveau manifeste est installé, il se place sur le manifeste existant et l'utilisateur reçoit la nouvelle fonctionnalité. Si cette application a été soumise au Store, le nouveau manifeste doit être soumis à nouveau et validé à nouveau. Les utilisateurs de l'application reçoivent automatiquement le nouveau manifeste mis à jour quelques heures après l'approbation du manifeste.
 
-Si l'application demande des autorisations, les utilisateurs sont invités à mettre à niveau et à consentir à l'application.
+Si l'application demande des autorisations change, les utilisateurs sont invités à mettre à niveau et à consentir à l'application.
 
 Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (MAJOR. MINOR. PATCH).
 
@@ -313,7 +313,7 @@ Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (M
 
 **Obligatoire** — ID d'application Microsoft
 
-L'ID est un identificateur unique généré par Microsoft pour l'application. Vous avez un ID si votre bot est inscrit via Microsoft Bot Framework ou si l'application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l'ID ici. Sinon, vous devez générer un nouvel ID sur le portail [d'inscription des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
+L'ID est un identificateur unique généré par Microsoft pour l'application. Vous avez un ID si votre bot est inscrit via Microsoft Bot Framework ou si l'application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l'ID ici. Sinon, vous devez générer un nouvel ID sur le portail d'inscription [des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
 
 > [!NOTE]
 > Si vous envoyez une mise à jour à votre application existante dans AppSource, l'ID de votre manifeste ne doit pas être modifié.
@@ -332,7 +332,7 @@ Fournit des informations sur votre entreprise. Pour les applications soumises à
 |`termsOfUseUrl`|2 048 caractères|✔|L https:// URL vers les conditions d'utilisation du développeur.|
 |`mpnId`|10 caractères| |**Facultatif** ID Microsoft Partner Network qui identifie l'organisation partenaire qui construit l'application.|
 
-## <a name="name"></a>nom
+## <a name="name"></a>name
 
 **Obligatoire** — objet
 
@@ -452,7 +452,7 @@ L'élément est un tableau (maximum de 1 élément actuellement un seul bot est 
 |`isNotificationOnly`|valeur booléenne|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Valeur par défaut : **`false`**|
 |`supportsFiles`|valeur booléenne|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Valeur par défaut : **`false`**|
 |`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni uniquement à des fins de test et d'exploration et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
-|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d'exploration uniquement et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
+|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni uniquement à des fins de test et d'exploration et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -497,7 +497,7 @@ L'élément est un tableau (maximum de 1 élément) avec tous les éléments de 
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ID d'application Microsoft unique pour le bot qui backs the messaging extension, tel qu'inscrit auprès de Bot Framework. Cela peut être identique à l'ID d'application global.|
+|`botId`|string|64|✔|ID d'application Microsoft unique pour le bot qui permet de récupérer l'extension de messagerie, tel qu'inscrit auprès de Bot Framework. Cela peut être identique à l'ID d'application global.|
 |`commands`|tableau d’objets|10 |✔|Tableau de commandes pris en charge par l'extension de messagerie|
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d'une extension de messagerie peut être mise à jour par l'utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d'objets|5 ||Liste des handlers qui permettent d'appeler des applications lorsque certaines conditions sont remplies.|
@@ -522,7 +522,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l'utilisation d'une commande d'extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
+|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
 |`taskInfo.url`|string|||URL webview initiale.|
 |`parameters`|tableau d'objets|5 éléments|✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔|Nom du paramètre tel qu'il apparaît dans le client. Ceci est inclus dans la demande de l'utilisateur.|
@@ -538,7 +538,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif** : tableau de chaînes
 
-Tableau qui spécifie les autorisations que l'application demande, ce qui permet aux utilisateurs finaux de savoir `string` comment fonctionne l'extension. Les options suivantes ne sont pas exclusives :
+Tableau qui spécifie les autorisations que l'application demande, ce qui permet aux utilisateurs finaux de savoir comment `string` fonctionne l'extension. Les options suivantes ne sont pas exclusives :
 
 * `identity`&emsp;Nécessite des informations d'identité d'utilisateur
 * `messageTeamMembers`&emsp;Nécessite l'autorisation d'envoyer des messages directs aux membres de l'équipe
@@ -581,7 +581,7 @@ Fournissez votre ID d'application Azure Active Directory (AAD) et des informatio
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|ID d'application AAD de l'application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l'application pour l'acquisition d'un jeton d'th pour l' sso. </br> **REMARQUE :** Si vous n'utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d'erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l'application pour l'acquisition d'un jeton d'th pour l' sso. </br> **REMARQUE :** Si vous n'utilisez pas l'oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d'erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -662,5 +662,30 @@ Définissez les propriétés que votre application utilise pour publier un flux 
 ```
 
 ***
+
+## <a name="defaultinstallscope"></a>defaultInstallScope
+
+**Facultatif** - chaîne
+
+Spécifie l'étendue d'installation définie par défaut pour cette application. L'étendue définie est l'option affichée sur le bouton lorsqu'un utilisateur tente d'ajouter l'application. Les options sont :
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## <a name="defaultgroupcapability"></a>defaultGroupCapability
+
+**Facultatif** - objet
+
+Lorsqu'une étendue d'installation de groupe est sélectionnée, elle définit la fonctionnalité par défaut lorsque l'utilisateur installe l'application. Les options sont :
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|Nom| Type| Taille maximale | Requis | Description|
+|---|---|---|---|---|
+|`team`|string|||Lorsque l'étendue d'installation sélectionnée `team` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
+|`groupchat`|string|||Lorsque l'étendue d'installation sélectionnée `groupchat` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
+|`meetings`|string|||Lorsque l'étendue d'installation sélectionnée `meetings` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
 
 
