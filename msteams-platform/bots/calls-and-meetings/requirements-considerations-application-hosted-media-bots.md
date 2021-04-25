@@ -4,12 +4,12 @@ description: Comprendre les exigences et considérations importantes liées à l
 ms.topic: conceptual
 keywords: ordinateur windows windows server azure hébergé par l'application
 ms.date: 11/16/2018
-ms.openlocfilehash: dfd0b3a2ba9020622a2926c4fc395c060599afb6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697080"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995952"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Conditions requises et considérations pour les robots multimédias hébergés par l'application
 
@@ -38,7 +38,7 @@ La section suivante fournit des détails sur l'emplacement des appels multimédi
 
 ## <a name="real-time-media-calls-stay-where-they-are-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
 
-Les appels multimédias en temps réel restent sur l'ordinateur où ils ont été créés. Un appel multimédia en temps réel est épinglé à l'instance de machine virtuelle (VM) qui a accepté ou démarré l'appel. Le média d'un appel ou d'une réunion Microsoft Teams est envoyé à cette instance de la VM, et le support que le bot renvoie à Microsoft Teams doit également provenir de cette VM. Si des appels multimédias en temps réel sont en cours lorsque la VM est arrêtée, ces appels sont brusquement arrêtés. Si le bot a déjà connaissance de l'arrêt de la VM en attente, il peut mettre fin aux appels.
+Les appels multimédias en temps réel restent sur l'ordinateur où ils ont été créés. Un appel multimédia en temps réel est épinglé à l'instance de machine virtuelle (VM) qui a accepté ou démarré l'appel. Le média d'un appel ou d'une réunion Microsoft Teams est envoyé vers cette instance de la VM, et le support que le bot renvoie à Microsoft Teams doit également provenir de cette VM. Si des appels multimédias en temps réel sont en cours lorsque la VM est arrêtée, ces appels sont brusquement arrêtés. Si le bot a déjà connaissance de l'arrêt de la VM en attente, il peut mettre fin aux appels.
 
 La section suivante fournit des détails sur l'accessibilité des robots multimédias hébergés par l'application.
 
@@ -52,17 +52,29 @@ Les robots multimédias hébergés par l'application doivent être directement a
 - Le service hébergeant un bot multimédia hébergé par l'application doit également configurer chaque instance d'une vm avec un port public qui est mapmé sur l'instance spécifique.
     - Pour un service Cloud Azure, cela nécessite un point de terminaison d'entrée d'instance. Pour plus d'informations, voir [activer la communication pour les instances de rôle dans Azure.](/azure/cloud-services/cloud-services-enable-communication-role-instances)
     - Pour un jeu d'échelles de vm, une règle NAT sur l'équilibrage de charge doit être configurée. Pour plus d'informations, [voir les réseaux virtuels et les machines virtuelles dans Azure.](/azure/virtual-machines/windows/network-overview)
-- Les bots multimédias hébergés par l'application ne sont pas pris en charge par l'émulateur Bot Framework.
+- Les robots multimédias hébergés par l'application ne sont pas pris en charge par l'émulateur Bot Framework.
 
-La section suivante fournit des détails sur l'évolutivité et les performances des robots multimédias hébergés par l'application.
+La section suivante fournit des détails sur les considérations d'évolutivité et de performances des robots multimédias hébergés par l'application.
 
 ## <a name="scalability-and-performance-considerations"></a>Considérations relatives à l’évolutivité et aux performances
 
 Les bots multimédias hébergés par l'application nécessitent les considérations suivantes en ce qui a lieu en ce qui a été question de l'évolutivité et des performances :
 
+## <a name="code-sample"></a>Exemple de code
+
+Les exemples de bots multimédias hébergés par l'application sont les suivants :
+
+| **Exemple de nom** | **Description** | **Graph** |
+|------------|-------------|-----------|
+| Exemple de média local | Exemples illustrant différents scénarios de médias locaux. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Exemple de média distant | Exemples illustrant différents scénarios de médias distants. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## <a name="see-also"></a>Voir aussi
+
+- [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Les bots nécessitent plus de capacité de calcul et de bande passante réseau que les bots de messagerie et encourent des coûts d'exploitation beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l'évolutivité du bot et s'assurer qu'il n'accepte pas plus d'appels simultanés qu'il ne peut gérer. Un bot vidéo ne peut supporter qu'une ou deux sessions multimédias simultanées par cœur d'UC si vous utilisez les formats vidéo RGB24 ou NV12 bruts.
 - La plateforme Real-time Media ne tire actuellement parti d'aucune unité de traitement graphique (GPU) disponible sur la VM pour décharger le codage ou le décodage vidéo H.264. Au lieu de cela, le code vidéo et le décodage sont effectués dans le logiciel sur l'UC. Si un processeur graphique est disponible, le bot en tire parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
-- L'instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d'UC. Pour Azure, une machine virtuelle de la série Dv2 est recommandée. Pour les autres types d'ordinateur virtuel Azure, un système avec 4 processeurs virtuels (vCPU) est la taille minimale requise. Pour plus d'informations sur les types de vm Azure, voir [la documentation Azure.](/azure/virtual-machines/windows/sizes-general)
+- L'instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d'UC. Pour Azure, une machine virtuelle de série Dv2 est recommandée. Pour les autres types d'ordinateur virtuel Azure, un système avec 4 processeurs virtuels (vCPU) est la taille minimale requise. Pour plus d'informations sur les types de vm Azure, voir [la documentation Azure.](/azure/virtual-machines/windows/sizes-general)
 
 La section suivante fournit des exemples illustrant différents scénarios de médias locaux.
 

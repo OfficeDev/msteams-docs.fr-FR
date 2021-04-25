@@ -4,12 +4,12 @@ description: Présentation des conversations
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics messages
-ms.openlocfilehash: cf42cd0c8096c27768660bc2502060ed92712bdc
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: eff1c6fe18f7b2ba082b5075b6c1806f41b68a6b
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697059"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996036"
 ---
 # <a name="conversation-basics"></a>Concepts de base d’une conversation
 
@@ -26,7 +26,7 @@ Une conversation est une série de messages envoyés entre votre bot Microsoft T
 Un bot se comporte différemment en fonction de la conversation dans qui il est impliqué :
 
 * Les bots dans les conversations de canal et de groupe nécessitent que l'utilisateur mentionne @ le bot pour l'appeler dans un canal.
-* Les bots d'une conversation un-à-un n'ont pas besoin d'une mention @ . Tous les messages envoyés par l'utilisateur sont acheminés vers votre bot.
+* Les bots d'une conversation un-à-un ne nécessitent pas de mention @ . Tous les messages envoyés par l'utilisateur sont acheminés vers votre bot.
 
 Pour que le bot fonctionne dans une conversation ou une étendue particulière, ajoutez la prise en charge à cette étendue dans le manifeste [de l'application.](~/resources/schema/manifest-schema.md)
 
@@ -37,4 +37,4 @@ Un bot peut également envoyer des messages proactifs aux utilisateurs. Un messa
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Messages dans les conversations de bot](~/bots/how-to/conversations/conversation-messages.md)
+> [Messages dans les conversations des robots](~/bots/how-to/conversations/conversation-messages.md)

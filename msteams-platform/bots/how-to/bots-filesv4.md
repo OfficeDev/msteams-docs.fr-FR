@@ -4,12 +4,12 @@ description: Décrit comment envoyer et recevoir des fichiers via le bot
 keywords: les fichiers de bots teams envoient la réception
 ms.date: 05/20/2019
 ms.topic: how-to
-ms.openlocfilehash: 81799e3079026a678d78a9e20b8dd3a026d2a4a6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: bc2cbaeedcc770f82e3fc1f6cfbbf1beda3948fd
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697068"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996043"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 
@@ -172,7 +172,7 @@ De même, si l'utilisateur refuse le fichier, le bot reçoit l'événement suiva
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Informer l'utilisateur d'un fichier téléchargé
 
-Après avoir chargé un fichier sur le OneDrive de l'utilisateur, envoyez un message de confirmation à l'utilisateur. Le message doit contenir la pièce jointe suivante que l'utilisateur peut sélectionner, soit pour afficher un aperçu, soit l'ouvrir dans `FileCard` OneDrive, ou télécharger localement :
+Après avoir téléchargé un fichier sur le OneDrive de l'utilisateur, envoyez un message de confirmation à l'utilisateur. Le message doit contenir la pièce jointe suivante que l'utilisateur peut sélectionner, soit pour afficher un aperçu, soit l'ouvrir dans `FileCard` OneDrive, ou télécharger localement :
 
 ```json
 {
@@ -318,11 +318,13 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 ## <a name="code-sample"></a>Exemple de code
 
-|Exemple de nom | Description | . NETCore | Javascript | Python |
+L'exemple de code suivant montre comment obtenir le consentement du fichier et télécharger des fichiers dans Teams à partir d'un bot :
+
+|**Exemple de nom** | **Description** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| File upload | Montre comment obtenir le consentement des fichiers et télécharger des fichiers dans Teams à partir d'un bot. En outre, comment recevoir un fichier envoyé à un bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+| File upload | Montre comment obtenir le consentement des fichiers et télécharger des fichiers dans Teams à partir d’un bot. En outre, comment recevoir un fichier envoyé à un bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Optimiser votre bot avec une limite de taux dans Teams](~/bots/how-to/rate-limit.md)
+> [Optimisez votre robot grâce à la limitation du débit dans Teams](~/bots/how-to/rate-limit.md)

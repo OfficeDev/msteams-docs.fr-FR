@@ -3,18 +3,18 @@ title: Optimisez votre robot grâce à la limitation du débit dans Teams
 description: Limitation des taux et meilleures pratiques dans Microsoft Teams
 ms.topic: conceptual
 keywords: Limitation des taux de bots teams
-ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922502"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995854"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
 La limitation des taux est une méthode pour limiter les messages à une certaine fréquence maximale. En règle générale, votre application doit limiter le nombre de messages qu'elle publie à une conversation individuelle ou à une conversation de canal. Cela garantit une expérience optimale et les messages n'apparaissent pas comme courrier indésirable pour vos utilisateurs.
 
-Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Les applications qui vont au-dessus de cette limite reçoivent un `HTTP 429 Too Many Requests` état d'erreur. Toutes les demandes sont soumises à la même stratégie de limitation des taux, y compris l'envoi de messages, les listes de canaux et les extractions de listes.
+Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Les applications qui vont au-dessus de cette limite reçoivent un `HTTP 429 Too Many Requests` état d'erreur. Toutes les demandes sont soumises à la même stratégie de limitation des taux, y compris l'envoi de messages, les listes d'envoi et les extractions de listes.
 
 Comme les valeurs exactes des limites de taux sont sujettes à modification, votre application doit implémenter le comportement d'insé backoff approprié lorsque l'API renvoie `HTTP 429 Too Many Requests` .
 
@@ -48,6 +48,9 @@ En règle générale, vous devez prendre des précautions simples pour éviter d
 Il est recommandé d'utiliser un retour exponentiel avec une gigue aléatoire pour gérer les 429. Cela garantit que plusieurs demandes n'introduisent pas de collisions lors des nouvelles tentatives.
 
 Une fois que vous `HTTP 429` avez géré les réponses, vous pouvez passer par l'exemple pour détecter les exceptions temporaires.
+
+> [!NOTE]
+> En plus de resserrer le code **d'erreur 429**, les codes d'erreur **412,** **502** et **504** doivent également être retentés.
 
 ## <a name="detect-transient-exceptions-example"></a>Exemple de détection d'exceptions temporaires
 
@@ -142,13 +145,13 @@ Le tableau suivant fournit les limites par bot par thread :
 | Obtenir des conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Les versions précédentes et les API sont `TeamsInfo.getMembers` en cours `TeamsInfo.GetMembersAsync` d'utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l'API paginée, voir Modifications apportées à l'API bot pour les membres d'équipe et [de conversation.](../../resources/team-chat-member-api-changes.md)
+> Les versions précédentes et les API sont `TeamsInfo.getMembers` en cours `TeamsInfo.GetMembersAsync` d'utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l'API paginée, voir Modifications apportées à l'API bot pour les membres de l'équipe [et de la conversation.](../../resources/team-chat-member-api-changes.md)
 
 Vous pouvez également gérer la limite de taux à l'aide de la limite par thread pour tous les bots.
 
 ## <a name="per-thread-limit-for-all-bots"></a>Limite par thread pour tous les bots
 
-La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer au sein d'une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
+La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer dans une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
 
 Le tableau suivant fournit la limite par thread pour tous les bots :
 

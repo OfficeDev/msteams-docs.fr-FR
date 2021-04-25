@@ -4,12 +4,12 @@ author: clearab
 description: Comment créer un menu de commandes pour votre bot Microsoft Teams
 ms.topic: how-to
 ms.author: anclear
-ms.openlocfilehash: 839c01f870f026744dfe5fa1331835f5f6b6890f
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a4d53d8287d425120d24f559b8ffffabebdbcfb4
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697025"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995896"
 ---
 # <a name="bot-command-menus"></a>Menus de commande du bot
 
@@ -156,14 +156,14 @@ Vous devez gérer les commandes de menu dans le code de votre bot lorsque vous t
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>Gérer les commandes de menu dans le code de votre bot
 
-Les bots d'un groupe ou d'un canal répondent uniquement lorsqu'ils sont mentionnés `@botname` dans un message. Chaque message reçu par un bot lorsqu'il se trouve dans une étendue de groupe ou de canal contient son nom dans le texte du message renvoyé. Avant de gérer la commande renvoyée, l'utilisation de votre message doit gérer le message reçu par un bot avec son nom.
+Les bots d'un groupe ou d'un canal répondent uniquement lorsqu'ils sont mentionnés `@botname` dans un message. Chaque message reçu par un bot dans une étendue de groupe ou de canal contient son nom dans le texte du message renvoyé. Avant de gérer la commande renvoyée, l'utilisation de votre message doit gérer le message reçu par un bot avec son nom.
 
 > [!NOTE]
 > Pour gérer les commandes dans le code, elles sont envoyées à votre bot en tant que message normal. Vous devez les gérer comme vous le feriez pour tout autre message de vos utilisateurs. Les commandes du code insèrent du texte pré-configuré dans la zone de texte. L'utilisateur doit ensuite envoyer ce texte comme il le fait pour tout autre message.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-Vous pouvez analyser la **\@ partie Mention** du texte du message à l'aide d'une méthode statique fournie avec Microsoft Bot Framework. Il s'agit d'une méthode de `Activity` la classe nommée `RemoveRecipientMention` .
+Vous pouvez analyser la partie **\@ Mention** du texte du message à l'aide d'une méthode statique fournie avec Microsoft Bot Framework. Il s'agit d'une méthode de `Activity` la classe nommée `RemoveRecipientMention` .
 
 Le C# code pour l'utilisation de la partie **\@ Mention** du texte du message est le suivant :
 
@@ -201,7 +201,7 @@ Voici les meilleures pratiques en matière de menu de commandes :
 
 * Restez simple : le menu bot est destiné à présenter les fonctionnalités clés de votre bot.
 * Restez bref : les options de menu ne doivent pas être longues et ne doivent pas être des instructions de langage naturel complexes. Ce doivent être des commandes simples.
-* Gardez-le invocable : les commandes ou les actions de menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans le bot.
+* Restez invocable : les commandes ou les actions de menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans le bot.
 
 > [!NOTE]
 > Si vous supprimez des commandes de votre manifeste, vous devez redéployer votre application pour implémenter les modifications. En règle générale, les modifications apportées au manifeste vous obligent à redéployer votre application.
