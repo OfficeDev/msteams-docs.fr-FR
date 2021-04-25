@@ -224,6 +224,8 @@
           href: bots/how-to/format-your-bot-messages.md
         - name: Mettre à jour et supprimer des messages de bot
           href: bots/how-to/update-and-delete-bot-messages.md
+        - name: Demander les en-têtes du bot
+          href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Obtenir un contexte pour votre bot
       href: bots/how-to/get-teams-context.md
     - name: Envoyer et recevoir des fichiers
