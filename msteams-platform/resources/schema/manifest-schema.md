@@ -3,13 +3,14 @@ title: Référence du schéma de manifeste
 description: Décrit le schéma de manifeste pour Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
+localization_priority: Normal
 keywords: schéma de manifeste teams
-ms.openlocfilehash: d4dd299a9e848820e81f87361460b5b8b14f15b7
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 03740bb12e849126dcd43b8628521928d060a80f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946444"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019691"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -291,7 +292,7 @@ Le schéma définit les propriétés suivantes :
 
 Chaîne facultative, mais recommandée
 
-L https:// URL référente au schéma JSON pour le manifeste.
+L https:// URL qui fait référence au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -336,7 +337,7 @@ Fournit des informations sur votre entreprise. Pour les applications soumises à
 
 **Obligatoire** — objet
 
-Nom de l'expérience de votre application, affiché aux utilisateurs dans l'expérience Teams. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
+Nom de l'expérience de votre application, affiché aux utilisateurs dans l'expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -413,7 +414,7 @@ Utilisé lorsque l'expérience de votre application possède une expérience d'o
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l'onglet peut être mise à jour par l'utilisateur après sa création. Valeur par défaut **: true**.|
 |`context` |tableau d'enums|6 ||Ensemble `contextItem` d'étendues où un onglet est pris en charge. Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d'accès relatif à une image d'aperçu d'onglet à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|tableau d'enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
+|`supportedSharePointHosts`|tableau d'enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -442,7 +443,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 
 Définit une solution bot, ainsi que des informations facultatives telles que les propriétés de commande par défaut.
 
-L'élément est un tableau (maximum de 1 élément actuellement un seul bot est autorisé par application) avec tous les éléments &mdash; du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
+L'élément est un tableau (jusqu'à un seul élément actuellement un seul bot est autorisé par application) avec tous les &mdash; éléments du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -522,7 +523,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l'utilisation d'une commande d'extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
+|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
 |`taskInfo.url`|string|||URL webview initiale.|
 |`parameters`|tableau d'objets|5 éléments|✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔|Nom du paramètre tel qu'il apparaît dans le client. Ceci est inclus dans la demande de l'utilisateur.|
@@ -538,7 +539,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif** : tableau de chaînes
 
-Tableau qui spécifie les autorisations que l'application demande, ce qui permet aux utilisateurs finaux de savoir comment `string` fonctionne l'extension. Les options suivantes ne sont pas exclusives :
+Tableau qui spécifie les autorisations que l'application demande, ce qui permet aux utilisateurs finaux de savoir `string` comment fonctionne l'extension. Les options suivantes ne sont pas exclusives :
 
 * `identity`&emsp;Nécessite des informations d'identité d'utilisateur
 * `messageTeamMembers`&emsp;Nécessite l'autorisation d'envoyer des messages directs aux membres de l'équipe

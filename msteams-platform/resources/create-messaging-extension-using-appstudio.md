@@ -3,13 +3,14 @@ title: Créer une extension de messagerie à l’aide de App Studio
 author: clearab
 description: Découvrez comment créer une extension de messagerie Microsoft Teams à l'aide d'App Studio.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 25086d959004046e8227de46b31d840c0b3fd228
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 10de4c6f9e7b81e1edc47622cb5c0c814d2eb3a7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697225"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019740"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -19,12 +20,12 @@ ms.locfileid: "51697225"
 À un niveau élevé, vous devez effectuer les étapes suivantes pour créer une extension de messagerie.
 
 1. Préparer votre environnement de développement
-2. Créer et déployer votre service web (tout en développant un service de tunneling comme ngrok pour l'exécuter localement)
+2. Créer et déployer votre service web (lors du développement, utilisez un service de tunneling tel que ngrok pour l'exécuter localement)
 3. Inscrivez votre service web à l’aide de Bot Framework
 4. Créer votre package d’application
 5. Télécharger votre package dans Microsoft Teams
 
-La création de votre service web, la création de votre package d'application et l'inscription de votre service web avec Bot Framework peuvent être réalisées dans n'importe quel ordre. Étant donné que ces trois éléments sont si dispersés, quel que soit l'ordre dans lequel vous les faites, vous devrez revenir pour mettre à jour les autres. Votre inscription nécessite le point de terminaison de messagerie de votre service web déployé, et votre service web a besoin de l'ID et du mot de passe créés à partir de votre inscription. Votre manifeste d'application a également besoin de cet ID pour connecter Teams à votre service web.
+La création de votre service web, la création de votre package d'application et l'inscription de votre service web avec Bot Framework peuvent être réalisées dans n'importe quel ordre. Étant donné que ces trois éléments sont si dispersés, quel que soit l'ordre dans lequel vous les faites, vous devrez revenir pour mettre à jour les autres. Votre inscription a besoin du point de terminaison de messagerie de votre service web déployé, et votre service web a besoin de l'ID et du mot de passe créés à partir de votre inscription. Votre manifeste d'application a également besoin de cet ID pour connecter Teams à votre service web.
 
 Lorsque vous construisez votre extension de messagerie, vous allez régulièrement passer de la modification du manifeste de votre application au déploiement de code dans votre service web. Lorsque vous travaillez avec le manifeste de l'application, n'oubliez pas que vous pouvez manipuler manuellement le fichier JSON ou apporter des modifications via App Studio. Dans les deux cas, vous devez re-déployer (télécharger) votre application dans Teams lorsque vous modifiez le manifeste, mais vous n'avez pas besoin de le faire lorsque vous déployez les modifications apportées à votre service web.
 
@@ -93,7 +94,7 @@ Votre extension de messagerie doit déclarer une ou plusieurs commandes, qui dé
 
 #### <a name="simple-manifest-example"></a>Exemple de manifeste simple
 
-L'exemple suivant est un objet d'extension de messagerie simple dans le manifeste de l'application avec une commande de recherche. Il ne s’agit pas de la totalité du fichier manifeste de l’application, uniquement de la partie spécifique aux extensions de messagerie. Pour obtenir un exemple [complet, voir](~/resources/schema/manifest-schema.md) schéma de manifeste d'application.
+L'exemple suivant est un objet d'extension de messagerie simple dans le manifeste de l'application avec une commande de recherche. Il ne s’agit pas de la totalité du fichier manifeste de l’application, uniquement de la partie spécifique aux extensions de messagerie. Voir [le schéma de manifeste d'application](~/resources/schema/manifest-schema.md) pour obtenir un exemple complet.
 
 ```json
 ...
@@ -224,7 +225,7 @@ L'exemple suivant est un objet d'extension de messagerie simple dans le manifest
 
 ## <a name="add-your-invoke-message-handlers"></a>Ajouter vos handlers de messages d'appel
 
-Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez gérer le message d'appel initial, collecter des informations auprès de l'utilisateur, puis traiter ces informations et répondre de manière appropriée. Pour ce faire, vous devez d'abord décider du type de commande que vous souhaitez ajouter à votre extension de messagerie et ajouter une [commande d'action](~/messaging-extensions/how-to/action-commands/define-action-command.md) ou ajouter une commande [de recherche.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez gérer le message d'appel initial, collecter des informations de l'utilisateur, puis traiter ces informations et répondre de manière appropriée. Pour ce faire, vous devez d'abord décider du type de commande que vous souhaitez ajouter à votre extension de messagerie, puis ajouter une [commande d'action](~/messaging-extensions/how-to/action-commands/define-action-command.md) ou ajouter une commande [de recherche.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Extensions de messagerie dans les réunions Teams
 
@@ -235,7 +236,7 @@ Une fois la réunion commencée, les participants à Teams peuvent interagir dir
 
 1. **Emplacement :** Votre extension de messagerie peut être invoquée à partir de la zone de composition d'un message, de la zone de commande ou @mentioned la conversation de réunion.
 
-1. **Métadonnées**. Lorsque votre extension de messagerie est invoquée, elle peut identifier l'utilisateur et le client à partir `userId` de et `tenantId` . `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser la demande d'API et pour récupérer `userId` `meetingId`  les `GetParticipant` rôles d'utilisateur.
+1. **Métadonnées**. Lorsque votre extension de messagerie est invoquée, elle peut identifier l'utilisateur et le client à partir `userId` de et `tenantId` . `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser la demande `userId` d'API et pour récupérer les `meetingId` `GetParticipant` rôles d'utilisateur.
 
 1. **Type de commande**. Si votre extension de message utilise des commandes basées sur [l'action,](../messaging-extensions/what-are-messaging-extensions.md#action-commands)elle doit suivre l'authentification par [authentification](../tabs/how-to/authentication/auth-aad-sso.md) unique des onglets.
 

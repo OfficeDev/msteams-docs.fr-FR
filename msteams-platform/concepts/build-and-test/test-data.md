@@ -1,23 +1,24 @@
 ---
-title: Ajouter des données de test à votre client de test Microsoft 365
+title: Ajouter des données de test à votre client test Microsoft 365
 description: Configurer votre abonnement au programme pour les développeurs Office 365 pour tester les applications Microsoft Teams
 ms.topic: how-to
+localization_priority: Normal
 keywords: test des équipes de programme pour les développeurs d'applications
 ms.date: 11/01/2019
-ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696863"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020813"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client de test Microsoft 365
 
 Avec un abonnement Microsoft 365 Développeur, vous pouvez utiliser votre application Microsoft Teams avec des équipes de test, des canaux et des utilisateurs.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
-1. Rejoignez le programme pour les développeurs [Microsoft 365,](/office/developer-program/office-365-developer-program)si vous n'avez pas de client test.
+1. Rejoignez le programme pour les développeurs [Microsoft 365,](/office/developer-program/office-365-developer-program)si vous n'avez pas de client de test.
 2. [Configurer un abonnement Microsoft 365 Développeur.](/office/developer-program/office-365-developer-program-get-started)
 3. [Utilisez des packs d'exemples](/office/developer-program/install-sample-packs)de données avec votre abonnement Microsoft 365 Développeur pour installer le pack de contenu Utilisateurs.
 4. [Installez le module PowerShell Teams.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
@@ -34,7 +35,7 @@ Pour activer ce paramètre, vous devez mettre à jour la stratégie globale de c
 
 <img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
 
-## <a name="optional-step-to-enable-custom-app-sideloading"></a>Étape facultative pour activer le chargement de version d'application personnalisée
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>Étape facultative pour activer le chargement de version de version d'application personnalisée
 
 L'activation du chargement de version de version d'application personnalisée est facultative. Par défaut, seuls les administrateurs globaux ou les administrateurs du service Teams peuvent télécharger des applications personnalisées dans le catalogue d'applications client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées dans Teams. Pour plus d'informations, voir [gérer les stratégies de configuration d'application dans Teams.](/microsoftteams/teams-app-setup-policies)
 

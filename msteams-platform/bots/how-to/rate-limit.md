@@ -2,19 +2,20 @@
 title: Optimisez votre robot grâce à la limitation du débit dans Teams
 description: Limitation des taux et meilleures pratiques dans Microsoft Teams
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Limitation des taux de bots teams
-ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995854"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020897"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
 La limitation des taux est une méthode pour limiter les messages à une certaine fréquence maximale. En règle générale, votre application doit limiter le nombre de messages qu'elle publie à une conversation individuelle ou à une conversation de canal. Cela garantit une expérience optimale et les messages n'apparaissent pas comme courrier indésirable pour vos utilisateurs.
 
-Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Les applications qui vont au-dessus de cette limite reçoivent un `HTTP 429 Too Many Requests` état d'erreur. Toutes les demandes sont soumises à la même stratégie de limitation des taux, y compris l'envoi de messages, les listes d'envoi et les extractions de listes.
+Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Les applications qui vont au-dessus de cette limite reçoivent un `HTTP 429 Too Many Requests` état d'erreur. Toutes les demandes sont soumises à la même stratégie de limitation des taux, y compris l'envoi de messages, les listes de canaux et les extractions de listes.
 
 Comme les valeurs exactes des limites de taux sont sujettes à modification, votre application doit implémenter le comportement d'insé backoff approprié lorsque l'API renvoie `HTTP 429 Too Many Requests` .
 
@@ -54,7 +55,7 @@ Une fois que vous `HTTP 429` avez géré les réponses, vous pouvez passer par l
 
 ## <a name="detect-transient-exceptions-example"></a>Exemple de détection d'exceptions temporaires
 
-Le code suivant illustre un exemple d'utilisation du blocage exponentiel à l'aide du bloc d'application de gestion des pannes temporaires :
+Le code suivant illustre un exemple d'utilisation du blocage exponentiel à l'aide du bloc d'application de gestion des erreurs temporaires :
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy

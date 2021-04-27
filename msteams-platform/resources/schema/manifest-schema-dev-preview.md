@@ -3,13 +3,14 @@ title: Référence du schéma de manifeste d'aperçu du développeur
 description: Décrit le schéma pris en charge par le manifeste pour Microsoft Teams
 ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: adb178000d909c9031e4b4df187bbf6f74f6e783
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946472"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019698"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Schéma de manifeste de prévisualisation pour les développeurs pour Microsoft Teams
 
@@ -217,7 +218,7 @@ L https:// URL référente au schéma JSON pour le manifeste.
 
 **Obligatoire** &ndash; Chaîne
 
-Version du schéma de manifeste utilisé par ce manifeste. Il doit s'appelle « devPreview ».
+Version du schéma de manifeste utilisé par ce manifeste. Il doit s'qu'il s'appelle « devPreview ».
 
 ## <a name="version"></a>version
 
@@ -239,7 +240,7 @@ Identificateur unique généré par Microsoft pour cette application. Si vous av
 
 **Obligatoire** &ndash; Chaîne
 
-Un identificateur unique pour cette application dans la notation de domaine inverse ; par exemple, com.example.myapp.
+Identificateur unique de cette application dans la notation de domaine inverse ; par exemple, com.example.myapp.
 
 ## <a name="developer"></a>developer
 
@@ -401,7 +402,7 @@ L'objet est un tableau (maximum de 1 élément) avec tous les éléments de type
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ID d'application Microsoft unique pour le bot qui permet de récupérer l'extension de messagerie, tel qu'inscrit auprès de Bot Framework. Cela peut être identique à [l'ID d'application global.](#id)|
+|`botId`|String|64|✔|ID d'application Microsoft unique pour le bot qui backs the messaging extension, tel qu'inscrit auprès de Bot Framework. Cela peut être identique à [l'ID d'application global.](#id)|
 |`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d'une extension de messagerie peut être mise à jour par l'utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d'objets|10 |✔|Tableau de commandes pris en charge par l'extension de messagerie|
 
@@ -502,8 +503,8 @@ Vous pouvez définir l'une des propriétés suivantes :
 * `largeImageUrl`: il s'agit `color` de la propriété dans le bloc du `icons` manifeste.
 * `accentColor`: il s'agit de la couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
 * `developerUrl`: il s'agit https:// URL du site web du développeur.
-* `privacyUrl`: il s'agit https:// URL de la politique de confidentialité du développeur.
-* `termsOfUseUrl`: il s'agit https:// URL des conditions d'utilisation du développeur.
+* `privacyUrl`: il s'agit https:// URL vers la politique de confidentialité du développeur.
+* `termsOfUseUrl`: il s'agit de https:// URL des conditions d'utilisation du développeur.
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 

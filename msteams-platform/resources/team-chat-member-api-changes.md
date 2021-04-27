@@ -2,28 +2,29 @@
 title: Modifications de l’API du bot pour les membres de l’équipe et de la conversation
 author: ojasvichoudhary
 description: Décrit les modifications à venir et en cours apportées aux API bot utilisées pour récupérer les membres des équipes et des conversations
-keywords: liste des membres de l'équipe de l'infrastructure de bot
+keywords: liste des membres de l'équipe d'api bot Framework
+localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 38ccdd1d3052e906ceacaa47fa0cd14a1be7a41d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: ad03d14ca1c38eb810d43027e901e01199858992
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696519"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019677"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Modifications apportées à l'API du bot Teams pour récupérer des membres d'équipe ou de conversation
 
 >[!NOTE]
 > Le processus d'annulation et `TeamsInfo.getMembers` les `TeamsInfo.GetMembersAsync` API ont démarré. Initialement, ils sont fortement limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Ainsi, la liste complète n'est pas renvoyée à mesure que la taille de l'équipe augmente.
-> Vous devez mettre à jour vers la version 4.10 ou une version supérieure du SDK Bot Framework et basculer vers les points de terminaison de l'API paginée ou l'API utilisateur `TeamsInfo.GetMemberAsync` unique. Cela s'applique également à votre bot même si vous n'utilisez pas directement ces API, car les anciens SDK appellent ces API pendant les événements [MembersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Pour afficher la liste des modifications à venir, consultez [les modifications apportées aux API.](team-chat-member-api-changes.md#api-changes) 
+> Vous devez mettre à jour la version 4.10 ou une version supérieure du SDK Bot Framework et basculer vers les points de terminaison de l'API paginée ou l'API utilisateur `TeamsInfo.GetMemberAsync` unique. Cela s'applique également à votre bot même si vous n'utilisez pas directement ces API, car les anciens SDK appellent ces API pendant les événements [MembersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Pour afficher la liste des modifications à venir, consultez [les modifications apportées aux API.](team-chat-member-api-changes.md#api-changes) 
 
 Actuellement, les développeurs de bots qui souhaitent récupérer des informations pour un ou plusieurs membres d'une conversation ou d'une équipe utilisent les API de bot Microsoft Teams pour C# ou pour les API TypeScript ou `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` Node.js. Pour plus d'informations, voir [récupérer la liste ou le profil utilisateur.](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile) Ces API ont plusieurs défauts.
 
 Actuellement, si vous souhaitez récupérer des informations pour un ou plusieurs membres d'une conversation ou d'une équipe, vous pouvez utiliser les API de [bot Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) pour C# ou pour les API TypeScript ou `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` Node.js. Ces API ont les défauts suivants :
 
 * Pour les grandes équipes, les performances sont médiocres et les délai d'avance sont plus probables : la taille maximale de l'équipe a considérablement augmenté depuis la publication de Teams début 2017. À mesure que vous renvoyez l'intégralité de la liste des membres, le retour de l'appel d'API pour les grandes équipes prend beaucoup de temps, et il est courant pour l'appel d'avoir un délai d'attente et vous devez essayer à `GetMembersAsync` `getMembers` nouveau.
-* Il est difficile d'obtenir les détails du profil d'un seul utilisateur : pour obtenir les informations de profil d'un seul utilisateur, vous devez récupérer l'intégralité de la liste des membres, puis rechercher celle que vous souhaitez. Il existe une fonction d'aide dans le SDK Bot Framework pour la simplifier, mais elle n'est pas efficace.
+* Il est difficile d'obtenir les détails du profil d'un seul utilisateur : pour obtenir les informations de profil d'un seul utilisateur, vous devez récupérer l'intégralité de la liste des membres, puis rechercher celle que vous souhaitez. Il existe une fonction d'aide dans le SDK Bot Framework pour simplifier, mais elle n'est pas efficace.
 
 Avec l'introduction des équipes à l'échelle de l'organisation, il est nécessaire de mieux aligner ces API avec les contrôles de confidentialité Office 365. Les bots utilisés dans les grandes équipes peuvent récupérer des informations de profil de base semblables à `User.ReadBasic.All` l'autorisation Microsoft Graph. Les administrateurs client contrôlent de manière très grande les applications et les robots qui peuvent être utilisés dans leur client, mais ces paramètres sont différents de Ceux de Microsoft Graph.
 
@@ -65,7 +66,7 @@ Voici les modifications à venir apportées aux API :
     > [!NOTE]
     > Dans la version v3 ou v4, la meilleure action consiste à mettre à niveau vers la dernière version de point 3.30.2 ou 4.8, respectivement.
 
-* Une nouvelle API est créée pour récupérer les informations de [`TeamsInfo.GetMemberAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) profil d'un seul utilisateur. Elle prend l'ID de l'équipe ou de la conversation, ainsi qu'un [UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) , l'ID d'objet Azure Active Directory ou l'ID utilisateur Teams comme paramètres et renvoie les informations de profil de cet `userPrincipalName` `objectId` `id` utilisateur.
+* Une nouvelle API est créée pour récupérer les informations de [`TeamsInfo.GetMemberAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) profil d'un seul utilisateur. Elle prend l'ID de l'équipe ou de la conversation, ainsi qu'un [UPN,](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) l'ID d'objet Azure Active Directory ou l'ID utilisateur Teams comme paramètres et renvoie les informations de profil de cet `userPrincipalName` `objectId` `id` utilisateur.
 
     > [!NOTE]
     > `objectId` est modifié pour `aadObjectId` correspondre à ce qui est appelé dans `Activity` l'objet d'un message Bot Framework. La nouvelle API est disponible avec la version 4.8 du SDK Bot Framework. Il est également disponible dans l'extension du SDK Teams Bot Framework 3.x. En attendant, vous pouvez utiliser le point de terminaison [REST.](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details)

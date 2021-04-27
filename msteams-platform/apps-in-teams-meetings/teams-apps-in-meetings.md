@@ -4,13 +4,14 @@ author: laujan
 description: vue d’ensemble des applications dans les réunions Teams en fonction du rôle du participant et de l’utilisateur
 ms.topic: overview
 ms.author: lajanuar
+localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 29a24b70921e51d63d804e7a3edd901f607d3148
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885079"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018382"
 ---
 # <a name="apps-in-teams-meetings"></a>Applications dans les réunions Teams
 
@@ -35,11 +36,11 @@ Cet article traite des informations sur le cycle de vie des réunions et sur la 
 
 ### <a name="meeting-lifecycle"></a>Cycle de vie des réunions
 
-Le cycle de vie des réunions consiste en une expérience d’application avant, en réunion et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
+Le cycle de vie des réunions se compose de l’expérience de l’application avant, en réunion et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
 
 ## <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Intégrer des onglets dans le cycle de vie de la réunion
 
-Les onglets permettent aux membres de l'équipe d'accéder aux services et au contenu dans un espace spécifique au sein d'un canal ou d'une conversation. Cela permet à l'équipe de travailler directement avec des onglets et d'avoir des conversations sur les outils et les données disponibles dans les onglets. Dans une réunion Teams, les utilisateurs peuvent ajouter un onglet en sélectionnant plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>et en choisissant l'application qu'ils souhaitent installer en tant qu'onglet.
+Les onglets permettent aux membres de l'équipe d'accéder aux services et au contenu dans un espace spécifique au sein d'un canal ou d'une conversation. Cela permet à l'équipe de travailler directement avec des onglets et d'avoir des conversations sur les outils et les données disponibles dans les onglets. Dans une réunion Teams, les utilisateurs peuvent ajouter un onglet en sélectionnant plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, et en choisissant l'application qu'ils souhaitent installer en tant qu'onglet.
 
 > [!IMPORTANT]
 > Si vous avez intégré un onglet à votre réunion, votre application doit suivre le flux d'authentification unique [Teams pour](../tabs/how-to/authentication/auth-aad-sso.md) les onglets.
@@ -64,7 +65,7 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 
    * Utilisation de l'onglet **Conversation** de réunion dans une réunion existante.
 
-✔'onglets sont accessibles dans les pages **Détails** des réunions et **Conversations** à l'aide d'un bouton ➕ plus.
+✔ onglets sont accessibles dans les pages **Détails** des réunions et **Conversations** à l'aide d'un bouton ➕ plus.
 
 ✔ disposition des onglets doit être organisée s'il y a plus de dix sondages ou enquêtes.
 
@@ -144,11 +145,11 @@ Les types d'utilisateurs suivants identifient ce que chaque utilisateur peut fai
 
 * **Dans le client :** les utilisateurs dans le client appartiennent à l'organisation et ont des informations d'identification dans Azure Active Directory (AAD) pour le client. Il s'agit généralement d'employés à plein temps, sur site ou distants. Un utilisateur dans le client peut être organisateur, présentateur ou participant.
 * **Invité**: un invité est un participant d'une autre organisation invité à accéder à Teams ou à d'autres ressources dans le client de l'organisation. Les invités sont ajoutés au AAD de votre organisation et ont les mêmes fonctionnalités Teams qu'un membre natif de l'équipe ayant accès aux conversations, réunions et fichiers de l'équipe. Un utilisateur invité peut être organisateur, présentateur ou participant. Pour plus d'informations, voir [l'accès invité dans Teams.](/microsoftteams/guest-access)
-* **Fédéré ou externe**: un utilisateur fédéré est un utilisateur Teams externe dans une autre organisation qui a été invité à participer à une réunion. Ces utilisateurs ont des informations d'identification valides avec des partenaires fédérés et sont autorisés par Teams. Ils n'ont pas accès à vos équipes ou à d'autres ressources partagées de votre organisation. L'accès invité est une meilleure option pour les utilisateurs externes qui ont accès aux équipes et aux canaux. Pour plus d'informations, voir [gérer l'accès externe dans Teams.](/microsoftteams/manage-external-access)
+* **Fédéré ou externe**: un utilisateur fédéré est un utilisateur Teams externe dans une autre organisation qui a été invité à participer à une réunion. Ces utilisateurs ont des informations d'identification valides auprès de partenaires fédérés et sont autorisés par Teams. Ils n'ont pas accès à vos équipes ou à d'autres ressources partagées de votre organisation. L'accès invité est une meilleure option pour les utilisateurs externes qui ont accès aux équipes et aux canaux. Pour plus d'informations, voir [gérer l'accès externe dans Teams.](/microsoftteams/manage-external-access)
 * **Anonyme**: les utilisateurs anonymes n'ont pas d'identité AAD et ne sont pas fédérés avec un client. Le participant anonyme est comme un utilisateur externe, mais son identité n'est pas projetée dans la réunion. Un utilisateur anonyme ne peut pas être un organisateur, mais peut être présentateur ou participant.
 
 > [!NOTE]
-> Les utilisateurs anonymes héritent de la stratégie d'autorisation d'application globale au niveau de l'utilisateur par défaut. Pour plus d'informations, voir [Gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
+> Les utilisateurs anonymes héritent de la stratégie d'autorisation d'application globale par défaut au niveau de l'utilisateur. Pour plus d'informations, voir [Gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
 
 Le tableau suivant fournit les types d'utilisateurs et les fonctionnalités accessibles à chaque utilisateur :
 

@@ -1,127 +1,128 @@
 ---
-title: Création de modules de tâches
+title: Conception de modules de tâches
 author: heath-hamilton
-description: Découvrez comment concevoir des modules de tâches pour les applications teams et obtenir le kit d’interface utilisateur Microsoft Teams.
+description: Découvrez comment concevoir des modules de tâche pour les applications Teams et obtenir le Kit d'interface utilisateur Microsoft Teams.
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 41584ecf58ca7718290e58e5845549e4579dac64
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49606198"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019544"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâches pour votre application Microsoft teams
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâche pour votre application Microsoft Teams
 
-Vous pouvez créer des expériences de menu contextuel modal dans votre application de teams avec des modules de tâches. Utilisez cette fonctionnalité pour afficher des informations et des médias enrichis ou effectuer une tâche complexe.
+Vous pouvez créer des expériences popup modales dans votre application Teams avec des modules de tâche. Utilisez cette fonctionnalité pour afficher des informations et des médias enrichis ou effectuer une tâche complexe.
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Exemple de module de tâche." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="L'exemple montre un module de tâche." border="false":::
 
-## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur Microsoft teams
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions de conception de module de tâches plus complètes, notamment des éléments que vous pouvez saisir et modifier selon vos besoins, dans le kit d’interface utilisateur Microsoft Teams.
+Vous trouverez des instructions de conception de module de tâche plus complètes, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d'interface utilisateur Microsoft Teams.
 
 > [!div class="nextstepaction"]
-> [Obtenir le kit d’interface utilisateur Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="open-a-task-module"></a>Ouvrir un module de tâches
+## <a name="open-a-task-module"></a>Ouvrir un module de tâche
 
-Les modules de tâches peuvent être lancés à partir de quasiment n’importe où dans votre application.
+Les modules de tâche peuvent être lancés à partir de pratiquement n'importe où dans votre application.
 
-* **Onglet**: un module de tâches peut être lancé à partir de n’importe quel lien dans un onglet ou un IFRAME. À utiliser dans les scénarios dans lesquels vous souhaitez que l’utilisateur se focalise sur une interaction.
-* **Bot**: un module de tâche peut être lancé à partir d’un lien à l’intérieur d’un message de robot.
-* **Carte adaptative**: un module de tâches peut être lancé à partir d’une carte adaptative (envoyée avec une extension de messagerie ou un bot) lorsqu’un utilisateur sélectionne un bouton.
-* **Extension de messagerie (commandes action)**: les extensions de messagerie vous permettent d’effectuer une action particulière sur le contenu des messages. La sélection d’une action ouvre un module de tâches.
-* **Extension de messagerie (contexte de la zone de composition)**: dans la zone de composition, vous pouvez concevoir une extension de messagerie pour ouvrir un module de tâches au lieu du menu volant standard. Réservez les modules de tâche pour les interactions complexes, comme la réalisation d’un formulaire.
+* **Onglet**: un module de tâche peut être lancé à partir de n'importe quel lien d'un onglet. À utiliser dans les scénarios où vous souhaitez que l'utilisateur se concentre sur une interaction.
+* **Bot**: un module de tâche peut être lancé à partir d'un lien à l'intérieur d'un message de bot.
+* **Carte adaptative**: un module de tâche peut être lancé à partir d'une carte adaptative (envoyée avec une extension de messagerie ou par un bot) lorsqu'un utilisateur sélectionne un bouton.
+* **Extension de messagerie (commandes d'action)**: les extensions de messagerie vous permettent d'agir en particulier sur le contenu des messages. La sélection d'une action ouvre un module de tâche.
+* **Extension de messagerie (contexte de la** zone de composition) : dans la zone de composition, vous pouvez concevoir une extension de messagerie pour ouvrir un module de tâche au lieu du volant classique. Réservez les modules de tâche pour les interactions complexes, telles que la réalisation d'un formulaire.
 
 ## <a name="anatomy"></a>Anatomie
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'un module de tâche." border="false":::
 
-Les modules de tâches sont des surfaces très flexibles. Ils peuvent être créés avec des IFRAMES, en extrayant d’autres modèles de l’interface utilisateur, pour héberger des expériences créées par des partenaires. Cette approche est recommandée pour l’expérience la plus soignée.
+Les modules de tâche sont des surfaces très flexibles. Ils peuvent être créés avec des iframes, en tirant dans d'autres modèles d'interface utilisateur, pour héberger des expériences conçues par des partenaires. Il est préférable pour l'expérience la plus agréable.
 
-Elles peuvent également être créées à l’aide de l’infrastructure de [carte adaptative](../../task-modules-and-cards/cards/design-effective-cards.md) , qui peut être plus simple et plus rapide pour exécuter des scénarios courants (tels que des formulaires).
+Ils peuvent également être créés avec l'infrastructure [de](../../task-modules-and-cards/cards/design-effective-cards.md) carte adaptative, qui peut être un moyen plus simple et plus rapide d'exécuter des scénarios courants (tels que des formulaires).
 
 |Compteur|Description|
 |----------|-----------|
 |1|**Icône de l’application**|
-|2 |**Nom** de l’application : nom complet de votre application.|
-|3 |**En-tête**: rendez les en-têtes claires et concise. Décrivez la tâche que les utilisateurs doivent effectuer.
-|4 |**Bouton Fermer**: permet aux utilisateurs de rechercher le contenu d’application qu’ils souhaitent insérer.|
-|5 |**IFRAME**: espace réactif qui héberge le contenu de votre application.|
-|6 |**Actions (facultatif)**: boutons liés au contenu de votre application.|
+|2|**Nom de l'application**: nom complet de votre application.|
+|3|**En-tête :** rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs terminent.
+|4 |**Bouton Fermer :** permet aux utilisateurs de trouver le contenu d'application qu'ils souhaitent insérer.|
+|5 |**iframe**: espace réactif qui héberge le contenu de votre application.|
+|6 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
 
-## <a name="designing-with-ui-templates"></a>Conception avec des modèles d’interface utilisateur
+## <a name="designing-with-ui-templates"></a>Conception avec des modèles d'interface utilisateur
 
-Envisagez d’utiliser des modèles pour des dispositions courantes à l’intérieur de vos modules de tâches. Chacune d’entre elles est composée de plus petits composants pour créer une conception élégante et réactive pouvant être utilisée ou personnalisée pour votre scénario ou avec l’apparence de votre marque.
+Envisagez d'utiliser des modèles pour les dispositions courantes à l'intérieur de vos modules de tâche. Chacun d'eux est composé de composants plus petits pour créer une conception réactive et eloyable qui peut être utilisée de manière personnalisée ou adaptée à votre scénario ou à votre apparence de marque.
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format d’analyse et permettre aux utilisateurs d’effectuer des actions sur une liste entière ou des éléments individuels.
-* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires permettent de collecter, de valider et de soumettre des entrées utilisateur de manière structurée.
-* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, notamment lors de la connexion, des expériences de première exécution, des messages d’erreur et bien plus encore.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d'agir sur une liste entière ou sur des éléments individuels.
+* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
+* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d'état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d'erreur, etc.
 
-## <a name="examples"></a>Exemples
+## <a name="examples"></a>範例
 
 ### <a name="list"></a>Répertorier
 
-Les listes fonctionnent parfaitement dans un module de tâches, car elles sont faciles à analyser.
+Les listes fonctionnent parfaitement dans un module de tâche, car elles sont faciles à analyser.
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâche." border="false":::
 
 ### <a name="form"></a>Formulaire
 
-Les modules de tâches constituent un excellent point de vue des formulaires avec des entrées utilisateur et une validation en ligne séquentielles. Vous pouvez utiliser des cartes adaptatives pour incorporer des éléments de formulaire.
+Les modules de tâche sont un excellent endroit pour faire surface à des formulaires avec des entrées utilisateur séquentielles et une validation en ligne. Vous pouvez utiliser des cartes adaptatives pour incorporer des éléments de formulaire.
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Exemple de formulaire dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Exemple de formulaire dans un module de tâche." border="false":::
 
 ### <a name="sign-in"></a>Se connecter
 
-Créez une connexion ciblée ou un flux d’inscription avec une série de modules de tâches, ce qui permet aux utilisateurs de se déplacer facilement via des étapes séquentielles.
+Créez un flux de signature ou d'inscription centré avec une série de modules de tâche, ce qui permet aux utilisateurs de se déplacer facilement à travers les étapes séquentielles.
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d’expérience de connexion dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d'expérience de signature dans un module de tâche." border="false":::
 
-### <a name="media"></a>Multimédia
+### <a name="media"></a>Support
 
-Incorporer du contenu multimédia dans un module de tâches pour une expérience de visualisation ciblée.
+Incorporer du contenu multimédia dans un module de tâche pour une expérience d'affichage axée sur l'affichage.
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâche." border="false":::
 
 ### <a name="empty-state"></a>État vide
 
-À utiliser pour les messages d’accueil, d’erreur et de réussite.
+À utiliser pour les messages d'accueil, d'erreur et de réussite.
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d’état vide dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d'état vide dans un module de tâche." border="false":::
 
 ### <a name="image-gallery"></a>Galerie d’images
 
-Incorporer un carrousel de galerie dans un IFRAME.
+Incorporer un carrousel de galerie dans un iFrame.
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de Galerie d’images dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de galerie d'images dans un module de tâche." border="false":::
 
-### <a name="poll"></a>Temporisateur
+### <a name="poll"></a>Sondage
 
-Cet exemple montre les résultats de la requête lancés à partir d’une carte adaptative.
+Cet exemple montre les résultats des sondages lancés à partir d'une carte adaptative. Le sondage peut également être placé à l'intérieur d'un module de tâche.
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple d’interrogation dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple d'enquête dans un module de tâche." border="false":::
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
-### <a name="usability"></a>Facilement
+### <a name="usability"></a>Utilisation
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Exemple montrant la meilleure pratique d'un module de tâche." border="false":::
 
-#### <a name="do-use-one-task-module-at-a-time"></a>Do : utiliser un module de tâche à la fois
+#### <a name="do-use-one-task-module-at-a-time"></a>À faire : utiliser un module de tâche à la fois
 
-L’objectif est de concentrer l’utilisateur sur la réalisation d’une tâche après tout !
+L'objectif est de concentrer l'utilisateur sur l'exécution d'une tâche après tout !
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="L'exemple illustre la meilleure pratique pour un module de tâche." border="false":::
 
-#### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>Ne pas : dépiler une boîte de dialogue par-dessus un module de tâches
+#### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>À ne pas faire : faire apparaître une boîte de dialogue au-dessus d'un module de tâche
 
-Cela crée une expérience utilisateur non ciblée et confuse.
+Cela crée une expérience utilisateur non recentrée et confuse.
 
    :::column-end:::
 :::row-end:::
@@ -130,40 +131,40 @@ Cela crée une expérience utilisateur non ciblée et confuse.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="L'exemple illustre les meilleures pratiques du module de tâche." border="false":::
 
-#### <a name="do-make-sure-the-content-is-responsive"></a>Do : Assurez-vous que le contenu est réactif
+#### <a name="do-make-sure-the-content-is-responsive"></a>À faire : assurez-vous que le contenu est réactif
 
-Alors que les cartes adaptatives hébergées dans un module de tâches s’affichent correctement sur les appareils mobiles, si vous choisissez d’utiliser un IFRAME pour héberger le contenu de l’application, assurez-vous que l’interface utilisateur est réactive et fonctionne bien sur les appareils.
+Bien que les cartes adaptatives hébergées dans un module de tâche s'restituent bien sur les appareils mobiles, si vous choisissez d'utiliser un iframe pour héberger du contenu d'application, assurez-vous que l'interface utilisateur est réactive et fonctionne bien sur tous les appareils.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Cet exemple montre la meilleure pratique pour un module de tâche." border="false":::
 
-#### <a name="dont-use-horizontal-scrollbars"></a>Ne pas : utiliser des barres de défilement horizontales
+#### <a name="dont-use-horizontal-scroll-bars"></a>À ne pas faire : utiliser des barres de défilement horizontales
 
-Il est recommandé de conserver le contenu axé sur le contenu et pas trop long. Si un défilement est nécessaire, faites défiler verticalement et pas horizontalement.
+Il est préférable de garder le contenu concentré et pas trop long. Si un défilement est nécessaire, faites défiler verticalement et non horizontalement.
 
    :::column-end:::
 :::row-end:::
 
-### <a name="simplicity"></a>Simplification
+### <a name="simplicity"></a>Simplicité
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="L'exemple affiche les meilleures pratiques du module de tâche." border="false":::
 
-#### <a name="do-keep-it-short"></a>Do : conservez-le short
+#### <a name="do-keep-it-short"></a>Do: Keep it short
 
-Vous pouvez facilement créer un assistant à plusieurs étapes, mais cela ne signifie pas nécessairement que vous devez le faire ! Un module de tâches à écrans multiples peut être problématique, car les messages entrants sont gênants et les utilisateurs tentant de quitter. Si votre tâche est réellement impliquée, affichez-la sur une page Web complète au lieu d’un module de tâches.
+Vous pouvez facilement créer un Assistant en plusieurs étapes, mais cela ne signifie pas nécessairement que vous le devriez ! Un module de tâche multi-écran peut être problématique, car les messages entrants sont distrayants et tentant les utilisateurs de quitter. Si votre tâche est vraiment impliquée, pop out vers une page web complète au lieu d'un module de tâche.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Illustration montrant une meilleure pratique de module de tâche." border="false":::
 
-#### <a name="dont-do-long-interactions"></a>Ne pas : effectuer des interactions longues
+#### <a name="dont-do-long-interactions"></a>À ne pas faire : faire de longues interactions
 
-Essayez de conserver vos interactions courtes et jusqu’au point.
+Essayez de maintenir vos interactions courtes et au point.
 
    :::column-end:::
 :::row-end:::
@@ -172,19 +173,19 @@ Essayez de conserver vos interactions courtes et jusqu’au point.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Illustration shows a task module best practice." border="false":::
 
-#### <a name="do-use-inline-error-messages"></a>Do : utiliser des messages d’erreur incorporés
+#### <a name="do-use-inline-error-messages"></a>À faire : utiliser les messages d'erreur inline
 
-Consultez le modèle d’interface utilisateur formulaires pour obtenir des instructions sur la gestion des erreurs Inline.
+Consultez le modèle d'interface utilisateur de formulaires pour obtenir des instructions sur la gestion des erreurs en ligne.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Exemple illustrant une meilleure pratique pour le module de tâches." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="L'illustration affiche une meilleure pratique de module de tâche." border="false":::
 
-#### <a name="dont-put-error-messages-in-dialogs"></a>Ne pas : placer les messages d’erreur dans les boîtes de dialogue
+#### <a name="dont-put-error-messages-in-dialogs"></a>À ne pas faire : placer des messages d'erreur dans des boîtes de dialogue
 
-Ne pas afficher un message d’erreur dans une boîte de dialogue en haut d’un module de tâches. Il crée une expérience utilisateur confuse.
+Ne pas faire apparaître de message d’erreur dans une boîte de dialogue au-dessus d’un module de tâche. Cela crée une expérience utilisateur confuse.
 
    :::column-end:::
 :::row-end:::

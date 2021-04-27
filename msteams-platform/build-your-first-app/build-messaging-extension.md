@@ -3,14 +3,15 @@ title: Get started - Build a messaging extension
 author: heath-hamilton
 description: Créez rapidement une extension de messagerie Microsoft Teams à l'aide de microsoft Teams Shared Computer Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: 09e851820314efd3dc114b926a0111603cac18a4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f3b5bc9c749d5e5276c0c7af7ff92f4ff5a00d0b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696877"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020869"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Créer une extension de messagerie pour Microsoft Teams
 
@@ -26,7 +27,7 @@ Le service d'aide de votre organisation communique avec les utilisateurs via Tea
 
 > [!div class="checklist"]
 >
-> * Créer un projet d'application et un bot d'extension de messagerie à l'aide de la Shared Computer Toolkit Microsoft Teams Visual Studio Code
+> * Créer un projet d'application et un bot d'extension de messagerie à l'aide du Shared Computer Toolkit Microsoft Teams pour Visual Studio Code
 > * Identifier les configurations d'application et une partie de la échafaudage pertinente pour les extensions de messagerie
 > * Héberger une application localement
 > * Configurer le bot pour votre extension de messagerie
@@ -34,7 +35,7 @@ Le service d'aide de votre organisation communique avec les utilisateurs via Tea
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Si vous ne l'avez pas encore fait, assurez-vous de bien comprendre et [d'installer les conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
+Si vous ne l'avez pas encore fait, assurez-vous que vous comprenez et installez les [conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
 
 ## <a name="1-create-your-app-project"></a>1. Créer votre projet d'application
 

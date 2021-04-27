@@ -3,13 +3,14 @@ title: Envoyer et recevoir des fichiers via le bot
 description: Décrit comment envoyer et recevoir des fichiers via le bot
 keywords: les fichiers de bots teams envoient la réception
 ms.date: 05/20/2019
+localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: bc2cbaeedcc770f82e3fc1f6cfbbf1beda3948fd
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 7d5ea3434b10d60e20574ca6d1935943c687f4d7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996043"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020939"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 
@@ -172,7 +173,7 @@ De même, si l'utilisateur refuse le fichier, le bot reçoit l'événement suiva
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Informer l'utilisateur d'un fichier téléchargé
 
-Après avoir téléchargé un fichier sur le OneDrive de l'utilisateur, envoyez un message de confirmation à l'utilisateur. Le message doit contenir la pièce jointe suivante que l'utilisateur peut sélectionner, soit pour afficher un aperçu, soit l'ouvrir dans `FileCard` OneDrive, ou télécharger localement :
+Après avoir chargé un fichier sur le OneDrive de l'utilisateur, envoyez un message de confirmation à l'utilisateur. Le message doit contenir la pièce jointe suivante que l'utilisateur peut sélectionner, soit pour afficher un aperçu, soit l'ouvrir dans `FileCard` OneDrive, ou télécharger localement :
 
 ```json
 {

@@ -2,14 +2,15 @@
 title: Authentification pour les bots à l'aide d'Azure Active Directory
 description: Décrit l'authentification Azure AD dans Teams et comment l'utiliser dans vos bots
 keywords: Bots d'authentification Teams AAD
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: f772ef84282c3b8e1ee3e6aa96b47bf12caaa4dd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696681"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020687"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Authentifier un utilisateur dans un bot Microsoft Teams
 
@@ -17,7 +18,7 @@ ms.locfileid: "51696681"
 
 Il existe de nombreux services que vous souhaitez peut-être consommer dans votre application Teams, et la plupart de ces services nécessitent une authentification et une autorisation pour accéder au service. Les services incluent Facebook, Twitter et bien entendu Teams. Les utilisateurs de Teams ont des informations de profil utilisateur stockées dans Azure Active Directory (Azure AD) à l'aide de Microsoft Graph. Cet article se concentre sur l'authentification à l'aide d'Azure AD pour accéder à ces informations.
 
-OAuth 2.0 est une norme ouverte pour l'authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d'OAuth 2.0 est une condition préalable à l'authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d'octroi implicite OAuth 2.0 pour finir par lire les informations de profil de l'utilisateur à partir d'Azure AD et de Microsoft Graph.
+OAuth 2.0 est une norme ouverte pour l'authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d'OAuth 2.0 est une condition préalable pour travailler avec l'authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d'octroi implicite OAuth 2.0 dans le but de lire les informations de profil de l'utilisateur à partir d'Azure AD et de Microsoft Graph.
 
 Le flux d'authentification décrit dans cet article est très similaire à celui des onglets, sauf que les onglets peuvent utiliser un flux d'authentification web et que les bots nécessitent l'authentification basée sur le code. Les concepts de cet article seront également utiles lors de l'implémentation de l'authentification à partir de la plateforme mobile.
 
@@ -68,7 +69,7 @@ N'oubliez pas d'ajouter le domaine de votre URL de redirection d'authentificatio
 
 ## <a name="showing-user-profile-information"></a>Affichage des informations de profil utilisateur
 
-Bien que l'obtention d'un jeton d'accès soit difficile en raison de toutes les transitions entre différents sites web et des problèmes de sécurité qui doivent être résolus, une fois que vous avez un jeton, l'obtention d'informations auprès d'Azure Active Directory est simple. Le bot effectue un appel au point de terminaison `me` Graph avec le jeton d'accès. Graph répond avec les informations utilisateur de la personne qui s'est connectée. Les informations de la réponse sont utilisées pour construire une carte bot et envoyées.
+Bien que l'obtention d'un jeton d'accès soit difficile en raison de toutes les transitions entre différents sites web et des problèmes de sécurité qui doivent être résolus, une fois que vous avez un jeton, l'obtention d'informations auprès d'Azure Active Directory est simple. Le bot effectue un appel au point de terminaison `me` Graph avec le jeton d'accès. Graph répond avec les informations utilisateur de la personne qui s'est connectée. Les informations de la réponse sont utilisées pour construire une carte de bot et envoyées.
 
 ```typescript
 // Show user profile

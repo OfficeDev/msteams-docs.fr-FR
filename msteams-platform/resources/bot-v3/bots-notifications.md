@@ -4,14 +4,15 @@ description: Décrit comment gérer les événements dans les bots pour Microsof
 keywords: événements de bots teams
 ms.date: 05/20/2019
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 0fdd30a8eed63ea83e15825b0bf097125b4b665d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5a7f7971d7f58af315222933f1c1f192868a4171
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696611"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020638"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements de bot dans Microsoft Teams
 
@@ -25,7 +26,7 @@ Microsoft Teams envoie des notifications à votre bot pour les modifications ou 
 * Supprimer les informations mises en cache pour une équipe si le bot est supprimé
 * Lorsqu'un message bot est aimé par un utilisateur
 
-Chaque événement de bot est envoyé en tant `Activity` qu'objet dans `messageType` lequel définit les informations qui se trouve dans l'objet. Pour les messages de type `message` , voir Envoi et réception de [messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
+Chaque événement de bot est envoyé en tant `Activity` qu'objet dans `messageType` lequel définit les informations qui se trouve dans l'objet. Pour les messages de type `message` , voir Envoyer et recevoir des [messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
 Les équipes et les événements de groupe, généralement déclenchés par le type, ont des informations d'événement Teams supplémentaires transmises dans le cadre de l'objet. Par conséquent, votre responsable d'événement doit interroger la charge utile pour Teams et des métadonnées spécifiques à l'événement `conversationUpdate` `channelData` `channelData` `eventType` supplémentaires.
 

@@ -1,17 +1,18 @@
 ---
-title: Mettre en forme vos messages de bot
+title: Formatez vos messages robots.
 author: clearab
 description: Ajouter une mise en forme enrichie à vos messages de bot
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697003"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020904"
 ---
-# <a name="format-your-bot-messages"></a>Mettre en forme vos messages de bot
+# <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
 La mise en forme des messages vous permet de mettre en avant les meilleurs messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui sont des pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l'audio, de la vidéo, etc.
 

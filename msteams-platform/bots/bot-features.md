@@ -3,13 +3,14 @@ title: Bots et kits de développement
 author: clearab
 description: Bots et SDK dans Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995973"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020182"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -36,11 +37,11 @@ Votre bot Teams se compose des trois éléments suivants :
 > Vous pouvez développer des applications Teams dans n'importe quelle technologie de programmation web et appeler directement les [API REST Bot Framework.](/bot-framework/rest-api/bot-framework-rest-overview) Toutefois, vous devez effectuer la gestion des jetons dans tous les cas.
 
 > [!TIP]
-> Teams App Studio vous aide à créer et configurer le manifeste de votre application, et à inscrire votre service web en tant que bot sur Bot Framework. Il contient également une bibliothèque de contrôles React et un générateur de carte interactif. Pour plus d'informations, voir [la mise en place de Teams App Studio.](~/concepts/build-and-test/app-studio-overview.md)
+> Teams App Studio vous aide à créer et configurer votre manifeste d'application, et à inscrire votre service web en tant que bot sur Bot Framework. Il contient également une bibliothèque de contrôles React et un générateur de carte interactif. Pour plus d'informations, voir [la mise en place de Teams App Studio.](~/concepts/build-and-test/app-studio-overview.md)
 
 ## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots et agents virtuels Microsoft Power
 
-[Power Virtual Agents est](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) un service chatbot qui repose sur la plateforme Microsoft Power et Bot Framework. Le processus de développement de Power Virtual Agent utilise une approche guidée, sans code et interface graphique qui permet aux membres de votre équipe de créer et de gérer facilement un agent virtuel intelligent. Après avoir créé votre chatbot dans le portail [Power Virtual Agents,](https://powervirtualagents.microsoft.com)vous pouvez facilement l'intégrer [à Teams.](how-to/add-power-virtual-agents-bot-to-teams.md) Pour plus d'informations sur la mise en place, voir la [documentation power virtual agents](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents est](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) un service chatbot qui repose sur la plateforme Microsoft Power et Bot Framework. Le processus de développement de Power Virtual Agent utilise une approche guidée, sans code et interface graphique qui permet aux membres de votre équipe de créer et de gérer facilement un agent virtuel intelligent. Après avoir créé votre chatbot dans le portail [Power Virtual Agents,](https://powervirtualagents.microsoft.com)vous pouvez facilement l'intégrer [à Teams.](how-to/add-power-virtual-agents-bot-to-teams.md) Pour plus d'informations sur la mise en place, voir la [documentation des agents power virtual.](https://docs.microsoft.com/power-virtual-agents/)
 
 ## <a name="bots-and-webhooks-and-connectors"></a>Bots, webhooks et connecteurs
 
@@ -54,7 +55,7 @@ Les bots dans Microsoft Teams peuvent être intégrés dans une conversation à 
 | :-- | :-- | :-- |
 | Portée massive | Moins de membres | Méthode traditionnelle |
 | Interactions individuelles concises | @mention bot  | Q&A bots |
-| @mention bot | Similaire au canal | Bots qui indiquent aux personnes à qui ils s'en prennent et qui prennent des notes |
+| @mention bot | Similaire au canal | Bots qui indiquent à leurs personnes et prennent des notes |
 
 ### <a name="in-a-channel"></a>Dans un canal
 
@@ -101,7 +102,7 @@ BOT : quel jour ?
 
 Comme il n’y a que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
 
-### <a name="maintain-a-large-knowledge-base"></a>Gérer une base de connaissances importante
+### <a name="maintain-a-large-knowledge-base"></a>Maintenir une base de connaissances importante
 
 L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
 

@@ -2,13 +2,14 @@
 title: Flux d'authentification pour les onglets
 description: Décrit le flux d'authentification dans les onglets
 ms.topic: conceptual
+localization_priority: Normal
 keywords: Onglets de flux d'authentification Teams
-ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 012e38b0fa689527999237ccc07b7352fc00ae71
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995847"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020393"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flux d'authentification Microsoft Teams pour les onglets
 
@@ -42,7 +43,7 @@ Comme les autres flux d'th d'application dans Teams, la page de démarrage doit 
 
 ## <a name="treat-tab-context-as-hints"></a>Traiter le contexte de l'onglet comme des conseils
 
-Bien que le contexte de l'onglet fournit des informations utiles concernant l'utilisateur, n'utilisez pas ces informations pour authentifier l'utilisateur. Authentifier l'utilisateur même si vous obtenez les informations en tant que paramètres d'URL pour l'URL de contenu de votre onglet ou en appelant la fonction dans le `microsoftTeams.getContext()` SDK client Microsoft Teams. Un acteur malveillant peut appeler l'URL de contenu de votre onglet avec ses propres paramètres. L'acteur peut également appeler une page web usurpant l'identité de Microsoft Teams pour charger l'URL du contenu de votre onglet dans un iframe et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l'identité dans le contexte de l'onglet simplement comme des conseils et les valider avant de les utiliser. Reportez-vous aux notes [pour accéder à la page d'autorisation à partir de votre page de fenêtre pop-up.](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)
+Bien que le contexte de l'onglet fournit des informations utiles concernant l'utilisateur, n'utilisez pas ces informations pour authentifier l'utilisateur. Authentifier l'utilisateur même si vous obtenez les informations en tant que paramètres d'URL de l'URL de contenu de l'onglet ou en appelant la fonction dans le `microsoftTeams.getContext()` SDK client Microsoft Teams. Un acteur malveillant peut appeler l'URL de contenu de votre onglet avec ses propres paramètres. L'acteur peut également appeler une page web usurpant l'identité de Microsoft Teams pour charger l'URL du contenu de votre onglet dans un iframe et renvoyer ses propres données à la `getContext()` fonction. Vous devez traiter les informations relatives à l'identité dans le contexte de l'onglet simplement comme des conseils et les valider avant de les utiliser. Reportez-vous aux notes [pour accéder à la page d'autorisation à partir de votre page de fenêtre pop-up.](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)
 
 ## <a name="code-sample"></a>Exemple de code
 

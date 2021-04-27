@@ -1,14 +1,15 @@
 ---
 title: Ajouter des actions de carte dans un bot
 description: Décrit les actions de carte dans Microsoft Teams et leur utilisation dans vos bots
+localization_priority: Normal
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: f02e195f619fdfa2ebbc4b2ef00669a1cb5b38f6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696023"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019537"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -53,9 +54,9 @@ Avec `messageBack` , vous pouvez créer une action entièrement personnalisée a
 | `title` | Apparaît en tant qu'étiquette de bouton. |
 | `displayText` | Facultatif. Écho de l'utilisateur dans le flux de conversation lorsque l'action est effectuée. Ce texte *n'est* pas envoyé à votre bot. |
 | `value` | Envoyé à votre bot lorsque l'action est effectuée. Vous pouvez coder le contexte de l'action, par exemple des identificateurs uniques ou un objet JSON. |
-| `text` | Envoyé à votre bot lorsque l'action est effectuée. Utilisez cette propriété pour simplifier le développement de bots : votre code peut vérifier une propriété de niveau supérieur unique pour envoyer la logique du bot. |
+| `text` | Envoyé à votre bot lorsque l'action est effectuée. Utilisez cette propriété pour simplifier le développement de bots : votre code peut vérifier une seule propriété de niveau supérieur pour envoyer la logique du bot. |
 
-La flexibilité des moyens que votre code peut choisir de ne pas laisser un message utilisateur visible dans l'historique `messageBack` simplement en n'utilisant pas `displayText` .
+La flexibilité des moyens que votre code peut choisir de ne pas laisser de message utilisateur visible dans l'historique simplement `messageBack` en n'utilisant pas `displayText` .
 
 ```json
 {
@@ -240,9 +241,9 @@ Pour inclure une `messageBack` action avec une carte adaptative, incluez les dé
 | Propriété | Description |
 | --- | --- |
 | `type` | Définir sur `messageBack` |
-| `displayText` | Facultatif. Écho de l'utilisateur dans le flux de conversation lorsque l'action est effectuée. Ce texte *n'est pas* envoyé à votre bot. |
+| `displayText` | Facultatif. Écho de l'utilisateur dans le flux de conversation lorsque l'action est effectuée. Ce texte *n'est* pas envoyé à votre bot. |
 | `value` | Envoyé à votre bot lorsque l'action est effectuée. Vous pouvez coder le contexte de l'action, par exemple des identificateurs uniques ou un objet JSON. |
-| `text` | Envoyé à votre bot lorsque l'action est effectuée. Utilisez cette propriété pour simplifier le développement de bots : votre code peut vérifier une propriété de niveau supérieur unique pour envoyer la logique du bot. |
+| `text` | Envoyé à votre bot lorsque l'action est effectuée. Utilisez cette propriété pour simplifier le développement de bots : votre code peut vérifier une seule propriété de niveau supérieur pour envoyer la logique du bot. |
 
 #### <a name="example"></a>Exemple
 

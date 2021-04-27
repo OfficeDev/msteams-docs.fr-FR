@@ -2,20 +2,21 @@
 title: Déploiement de lien
 author: clearab
 description: Comment effectuer un déploiement de lien avec l'extension de messagerie dans une application Microsoft Teams.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2037e1e9a903cfe90d0dd8866722b0d10fa156b2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696228"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019817"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Ce document vous guide sur la façon d'ajouter le déploiement de lien au manifeste de votre application à l'aide d'App studio et manuellement. Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité `invoke` lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Il contient l'URL complète qui a été passée dans la zone de rédaction du message et vous pouvez répondre avec une carte que l'utilisateur peut déployer, fournissant des informations ou `invoke` des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l'URL servant de terme de recherche.
+Ce document vous guide sur la façon d'ajouter le déploiement de lien au manifeste de votre application à l'aide d'App studio et manuellement. Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité `invoke` lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Contient l'URL complète qui a été passée dans la zone de rédaction du message et vous pouvez répondre avec une carte que l'utilisateur peut déployer, fournissant des informations ou `invoke` des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l'URL servant de terme de recherche.
 
 > [!NOTE]
 > Actuellement, le déploiement de liaison n'est pas pris en charge sur les clients mobiles.
@@ -68,7 +69,7 @@ Pour obtenir un exemple de manifeste complet, voir [la référence de manifeste.
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>Gérer `composeExtension/queryLink` l'appel
 
-Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour le code de votre service web pour gérer la demande d'appel. Utilisez l'URL reçue pour rechercher votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
+Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour votre code de service web pour gérer la demande d'appel. Utilisez l'URL reçue pour effectuer une recherche dans votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
 
 Les types de carte suivants sont pris en charge :
 

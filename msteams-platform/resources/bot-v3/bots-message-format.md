@@ -3,13 +3,14 @@ title: Format de message du bot
 description: Décrit les détails de la mise en forme des messages du bot
 keywords: teams scenarios channels conversation bot message
 ms.topic: reference
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 06037bd3fb23ace11eea763747dc64d763ac3c42
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696618"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020645"
 ---
 # <a name="message-formatting-for-bots"></a>Mise en forme des messages pour les bots
 
@@ -22,7 +23,7 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 | Valeur TextFormat | Description |
 | --- | --- |
 | plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée |
-| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal selon le cas . voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
 | xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
@@ -32,7 +33,7 @@ Microsoft Teams prend en charge un sous-ensemble de balises de mise en forme Mar
 Actuellement, les limitations suivantes s'appliquent :
 
 * Les messages texte uniquement ne sont pas en charge la mise en forme de tableau
-* Les cartes enrichies ne peuvent pas uniquement être formatées dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre.
+* Les cartes enrichies ne peuvent que la mise en forme dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre
 * Les cartes enrichies ne prisent pas en charge la mise en forme Markdown ou table
 
 ## <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes

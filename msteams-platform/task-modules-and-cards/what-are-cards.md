@@ -1,22 +1,23 @@
 ---
 title: Présentation des cartes
 description: Décrit les cartes et leur utilisation dans les bots, les connecteurs et les extensions de messagerie
+localization_priority: Normal
 ms.topic: conceptual
 keywords: connecteurs bots cartes messagerie
-ms.openlocfilehash: c2fe0aea142a96643e33e16acc08bcfd8c33e92e
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: acf5dc95b742a433c092be9e293d589b5919bb4d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696457"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020267"
 ---
 # <a name="cards"></a>Cartes
 
-Une *carte* est un conteneur d'interface utilisateur (IU) pour des informations courtes ou connexes. Les cartes peuvent avoir plusieurs propriétés et pièces jointes. Les cartes peuvent inclure des boutons qui peuvent déclencher des [actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
+Une *carte est* un conteneur d'interface utilisateur (IU) pour des informations courtes ou connexes. Les cartes peuvent avoir plusieurs propriétés et pièces jointes. Les cartes peuvent inclure des boutons qui peuvent déclencher des [actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
 ## <a name="adaptive-cards"></a>Cartes adaptatives
 
-[Les cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sont une nouvelle spécification entre produits pour les cartes des produits Microsoft, notamment Bots, Cortana, Outlook et Windows. Ils sont le type de carte recommandé pour le nouveau développement Teams. Pour obtenir des informations générales de l'équipe de cartes adaptatives, voir [Vue d'ensemble des cartes adaptatives.](/adaptive-cards) Vous pouvez utiliser des cartes adaptatives partout où vous pouvez utiliser des cartes Hero, des cartes Office365 et des cartes miniatures existantes.
+[Les cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sont une nouvelle spécification entre produits pour les cartes des produits Microsoft, notamment Bots, Cortana, Outlook et Windows. Ils sont le type de carte recommandé pour le nouveau développement Teams. Pour obtenir des informations générales sur l'équipe de cartes adaptatives, voir [Vue d'ensemble des cartes adaptatives.](/adaptive-cards) Vous pouvez utiliser des cartes adaptatives partout où vous pouvez utiliser des cartes Hero, des cartes Office365 et des cartes miniatures existantes.
 
 En plus des cartes adaptatives, Teams prend en charge deux autres types de cartes :
 

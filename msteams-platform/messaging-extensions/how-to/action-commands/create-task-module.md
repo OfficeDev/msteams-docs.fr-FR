@@ -2,14 +2,15 @@
 title: Créer et envoyer le module de tâches
 author: clearab
 description: Comment gérer l'action d'appel initiale et répondre avec un module de tâche à partir d'une commande d'extension de messagerie d'action
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 12af2d788c0579414b544e7e2fd7f07a77d45919
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696275"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019845"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 
@@ -366,7 +367,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`channelData.source.name`| Nom source de l'endroit où le module de tâche est appelé. |
 |`value.commandId` | Contient l'ID de la commande qui a été invoquée. |
 |`value.commandContext` | Contexte qui a déclenché l'événement. Il doit `compose` l'être. |
-|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
+|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Il doit `default` s'y `contrast` trouver, ou `dark` . |
 
 ### <a name="example"></a>Exemple
 
@@ -597,7 +598,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Répondre à fetchTask
+## <a name="respond-to-the-fetchtask"></a>Répondre à la tâche fetchTask
 
 Répondez à la demande d'appel avec un objet qui contient un objet avec la carte adaptative ou l'URL web, ou `task` un message de chaîne `taskInfo` simple.
 
@@ -855,7 +856,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Si l'application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche. Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche. Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d'une équipe.
 
-Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d'obtenir une liste de membres. Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot. L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification. Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.
+Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d'obtenir une liste. Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot. L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification. Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.
 
 #### <a name="example"></a>Exemple 
 

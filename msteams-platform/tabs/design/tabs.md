@@ -1,146 +1,147 @@
 ---
-title: Création d’un onglet pour le bureau et le Web
-description: Découvrez comment concevoir un onglet Teams (de bureau et Web) et obtenir le kit d’interface utilisateur de Microsoft Teams.
+title: Conception de votre onglet pour le bureau et le web
+description: Découvrez comment concevoir un onglet Teams (bureau et web) et obtenir le Kit d'interface utilisateur Microsoft Teams.
 author: heath-hamilton
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 692a21c78dc86cbca5bf248e55d0332bd71c6b92
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604670"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019684"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Conception de votre onglet pour le bureau et le Web Microsoft teams
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Conception de votre onglet pour le bureau et le web Microsoft Teams
 
-Un onglet est un grand canevas pour le contenu qui facilite la collaboration. Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les utilisateurs peuvent ajouter, utiliser et gérer des onglets dans Teams.
+Un onglet est un canevas de grande taille pour votre contenu. Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des onglets dans Teams.
 
-## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur Microsoft teams
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions détaillées sur la conception des onglets, notamment des éléments que vous pouvez saisir et modifier selon vos besoins, dans le kit d’interface utilisateur Microsoft Teams. Le kit d’interface utilisateur comporte également des rubriques essentielles, telles que l’accessibilité et le dimensionnement réactif, qui ne sont pas abordées ici.
+Vous trouverez des recommandations complètes en matière de conception d'onglets, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d'interface utilisateur Microsoft Teams. Le kit d'interface utilisateur contient également des rubriques essentielles telles que l'accessibilité et le resserrement réactif qui ne sont pas abordés ici.
 
 > [!div class="nextstepaction"]
-> [Obtenir le kit d’interface utilisateur Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Ajouter un onglet
 
-Vous pouvez ajouter un onglet à partir du magasin Teams (AppSource) ou dans l’un des contextes suivants :
+Vous pouvez ajouter un onglet à partir du magasin Teams (AppSource) ou dans l'un des contextes suivants :
 
 * Conversation
 * Canal
 * Réunion (avant, pendant ou après la réunion)
 
-L’exemple suivant montre comment un onglet est ajouté dans un canal.
+L'exemple suivant montre comment un onglet est ajouté dans un canal.
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Exemple illustre l’ajout d’un onglet à un canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="L'exemple montre comment ajouter un onglet dans un canal." border="false":::
 
 ## <a name="set-up-a-tab"></a>Configurer un onglet
 
-Il existe un petit processus de configuration pour ajouter une application sous la forme d’un onglet canal, conversation ou réunion. L’expérience est largement à votre place. Par exemple, vous pouvez avoir une description de l’utilisation de l’application et de certains paramètres facultatifs. Incluez ici une étape de connexion si vous devez authentifier les utilisateurs.
+Il existe un processus de configuration court pour ajouter une application en tant que canal, conversation ou onglet de réunion. C'est en grande partie à vous de faire l'expérience. Par exemple, vous pouvez avoir une description de l'utilisation de l'application et certains paramètres facultatifs. Incluez une étape de connectez-vous ici si vous devez authentifier les utilisateurs.
 
-### <a name="tab-configuration-modal"></a>Configuration de l’onglet modal
+### <a name="tab-configuration-modal"></a>Tab configuration modal
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemple montre une configuration d’onglet modale." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemple de configuration modale d'onglet." border="false":::
 
-### <a name="anatomy-tab-configuration-modal"></a>Anatomie : modal de configuration d’onglet
+### <a name="anatomy-tab-configuration-modal"></a>Anatomie : modal de configuration de l'onglet
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’une configuration d’onglet modale." border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'un modèle de configuration d'onglet." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Logo** de l’application : logo de l’application couleur complète de votre application.|
-|2 |**Nom** de l’application : nom complet de votre application.|
-|3 |**IFRAME**: espace réactif pour le contenu de votre application (par exemple, paramètres de tabulation ou authentification).|
-|4 |**À propos de Link**: ouvre une boîte de dialogue affichant plus d’informations sur l’application, telle qu’une description complète, les autorisations requises par l’application, ainsi que des liens vers votre politique de confidentialité et les conditions de service.
-|5 |**Bouton Fermer**: ferme le modal.|
-|6 |**Option de notification des membres** de l’équipe : le modal vous demande si vous souhaitez créer un billet indiquant que vous avez ajouté un onglet.|
-|7 |**Bouton précédent**: passe à l’étape précédente en fonction de l’emplacement de la boîte de dialogue ouverte.|
-|8 |**Bouton enregistrer**: termine la configuration de l’onglet.|
+|1|**Logo de l'application**: logo d'application en couleur complète de votre application.|
+|2|**Nom de l'application**: nom complet de votre application.|
+|3|**iframe**: espace réactif pour le contenu de votre application (par exemple, paramètres d'onglet ou authentification).|
+|4 |**À** propos du lien : ouvre une boîte de dialogue affichant plus d'informations sur l'application, telles qu'une description complète, les autorisations requises par l'application et des liens vers votre politique de confidentialité et les conditions d'utilisation.
+|5 |**Bouton Fermer**: ferme la modale.|
+|6 |**Option Avertir les membres de l'équipe**: la modale vous demande si vous souhaitez créer un billet pour informer d'autres utilisateurs que vous avez ajouté un onglet.|
+|7 |**Bouton Précédent**: passe à l'étape précédente en fonction de l'endroit où la boîte de dialogue s'est ouverte.|
+|8 |**Bouton Enregistrer :** termine la configuration de l'onglet.|
 
-### <a name="tab-authentication-with-single-sign-on"></a>Authentification de l’onglet avec authentification unique
+### <a name="tab-authentication-with-single-sign-on"></a>Authentification par onglet avec authentification unique
 
-Vous pouvez ajouter une étape dans laquelle les utilisateurs doivent d’abord se connecter avec leurs informations d’identification Microsoft. Cette méthode d’authentification est appelée authentification unique (SSO).
+Vous pouvez ajouter une étape dans laquelle les utilisateurs doivent d'abord se connecter avec leurs informations d'identification Microsoft. Cette méthode d'authentification est appelée authentification unique (SSO).
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemple affiche un écran d’authentification de tabulation." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemple d'écran d'authentification par onglet." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>Conception d’une configuration d’onglet avec des modèles d’interface utilisateur
+### <a name="designing-a-tab-setup-with-ui-templates"></a>Conception d'une configuration d'onglet avec des modèles d'interface utilisateur
 
-Utilisez l’un des modèles d’interface utilisateur teams suivants pour vous aider à concevoir votre configuration d’onglet :
+Utilisez l'un des modèles d'interface utilisateur Teams suivants pour vous aider à concevoir votre expérience de configuration d'onglet :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format d’analyse et permettre aux utilisateurs d’effectuer des actions sur une liste entière ou des éléments individuels.
-* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires permettent de collecter, de valider et de soumettre des entrées utilisateur de manière structurée.
-* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, notamment lors de la connexion, des expériences de première exécution, des messages d’erreur et bien plus encore.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d'agir sur une liste entière ou sur des éléments individuels.
+* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
+* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d'état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d'erreur, etc.
 
 ## <a name="view-a-tab"></a>Afficher un onglet
 
-Les onglets fournissent une expérience Web en plein écran dans Teams, qui vous permet d’afficher du contenu collaboratif, ainsi que des tableaux de tâches et des tableaux de bord, ainsi que des informations importantes.
+Les onglets offrent une expérience web en plein écran dans Teams dans laquelle vous pouvez afficher du contenu collaboratif (tableaux de tâches et tableaux de bord, par exemple) et des informations importantes.
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Exemple affiche un onglet avec un tableau des tâches." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L'exemple montre un onglet avec un tableau des tâches." border="false":::
 
-### <a name="anatomy-tab"></a>Anatomie : Tab
+### <a name="anatomy-tab"></a>Anatomie : tabulation
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'un onglet." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Nom** de l’onglet : étiquette de navigation pour votre onglet.|
-|2 |**Débordement d’onglets**: ouvre les actions d’onglet, telles que renommer et supprimer.|
-|3 |**Conversation par onglets**: ouvre un fil de conversation sur la droite, ce qui permet aux utilisateurs de disposer d’une conversation en regard du contenu.|
-|4 |**IFRAME**: affiche le contenu de votre onglet.
+|1|**Nom de l'onglet**: étiquette de navigation pour votre onglet.|
+|2|**Dépassement de tabulation**: ouvre les actions d'onglet, telles que renommer et supprimer.|
+|3|**Conversation par onglet**: ouvre un thread de conversation à droite, ce qui permet aux utilisateurs d'avoir une conversation à côté du contenu.|
+|4 |**iframe**: affiche le contenu de votre onglet.
 
-### <a name="designing-a-tab-with-ui-templates"></a>Création d’un onglet avec des modèles d’interface utilisateur
+### <a name="designing-a-tab-with-ui-templates"></a>Conception d'un onglet avec des modèles d'interface utilisateur
 
-Utilisez l’un des modèles d’interface utilisateur teams suivants pour vous aider à concevoir votre onglet :
+Utilisez l'un des modèles d'interface utilisateur Teams suivants pour vous aider à concevoir votre expérience d'onglet :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format d’analyse et permettre aux utilisateurs d’effectuer des actions sur une liste entière ou des éléments individuels.
-* [Tableau des tâches](../../concepts/design/design-teams-app-ui-templates.md#task-board): un tableau des tâches, parfois appelé tableau kanban ou couloirs de natation, est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
-* [Tableau](../../concepts/design/design-teams-app-ui-templates.md#dashboard)de bord : un tableau de bord est une zone de dessin contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
-* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires permettent de collecter, de valider et de soumettre des entrées utilisateur de manière structurée.
-* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, notamment lors de la connexion, des expériences de première exécution, des messages d’erreur et bien plus encore.
-* Navigation de [gauche](../../concepts/design/design-teams-app-ui-templates.md#left-nav): le modèle de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation par onglets au minimum.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d'agir sur une liste entière ou sur des éléments individuels.
+* [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l'état des éléments de travail ou des tickets.
+* [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d'ensemble des données ou du contenu.
+* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
+* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d'état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d'erreur, etc.
+* [Navigation gauche :](../../concepts/design/design-teams-app-ui-templates.md#left-nav)le modèle de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation par onglets au minimum.
 
 ## <a name="use-a-tab-to-collaborate"></a>Utiliser un onglet pour collaborer
 
-Les onglets aident à faciliter les conversations sur le contenu à un emplacement central.
+Les onglets facilitent les conversations sur le contenu dans un emplacement central.
 
-### <a name="thread-discussion"></a>Discussion de thread
+### <a name="thread-discussion"></a>Discussion sur les threads
 
-Les utilisateurs peuvent automatiquement effectuer des publications sur un canal ou une conversation une fois qu’ils ont ajouté un nouvel onglet. Cette opération indique non seulement les membres de l’équipe du nouveau contenu et fournit un lien vers l’onglet, mais permet aux utilisateurs de commencer à parler de l’onglet.
+Les utilisateurs peuvent publier automatiquement sur un canal ou une conversation une fois qu'ils ont ajouté un nouvel onglet. Non seulement cela informe les membres de l'équipe du nouveau contenu et fournit un lien vers l'onglet, mais permet aux utilisateurs de commencer à parler de l'onglet.
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Exemple montre un onglet discuté dans un thread de canal." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="L'exemple montre un onglet abordé dans un thread de canal." border="false":::
 
 ### <a name="side-by-side-discussion"></a>Discussion côte à côte
 
-Les utilisateurs peuvent avoir une conversation lors de l’affichage du contenu de l’onglet.
+Les utilisateurs peuvent ensuite avoir une conversation lors de l'affichage du contenu de l'onglet.
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Exemple affiche un onglet avec une conversation ouverte sur le côté droit." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="L'exemple montre un onglet avec une conversation ouverte sur le côté droit." border="false":::
 
-### <a name="permissions-and-role-based-views"></a>Autorisations et vues basées sur les rôles
+### <a name="permissions-and-role-based-views"></a>Autorisations et affichages basés sur les rôles
 
-L’expérience utilisateur peut être différente pour les utilisateurs en fonction de leurs autorisations. Par exemple, un utilisateur peut accéder à l’onglet sans avoir à se connecter. Toutefois, un autre utilisateur doit se connecter et afficher un contenu légèrement différent.
+L'expérience d'onglet peut être différente pour les utilisateurs en fonction de leurs autorisations. Par exemple, un utilisateur peut accéder à l'onglet sans avoir à se connecter. Toutefois, un autre utilisateur doit signer et affiche un contenu légèrement différent.
 
 ## <a name="manage-a-tab"></a>Gérer un onglet
 
-Vous pouvez inclure des options permettant de renommer, de supprimer ou de modifier un onglet.
+Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 
-### <a name="anatomy-tab-menu"></a>Anatomie : menu de l’onglet
+### <a name="anatomy-tab-menu"></a>Anatomie : menu Onglet
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’un menu d’onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'un menu Onglet." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Paramètres**: (facultatif) permet aux utilisateurs de modifier les paramètres d’un onglet après qu’il a été ajouté.|
-|2 |**Rename**: permet aux utilisateurs d’attribuer un nom plus significatif à l’équipe.|
-|3 |**Supprimer**: supprime l’onglet du canal, de la conversation ou de la réunion.|
+|1|**Paramètres**: (Facultatif) Permet aux utilisateurs de modifier les paramètres d'un onglet après son ajout.|
+|2|**Renommer**: permet aux utilisateurs de donner à l'onglet un nom plus significatif pour l'équipe.|
+|3|**Supprimer**: supprime l'onglet du canal, de la conversation ou de la réunion.|
 
-## <a name="tab-notifications-and-deep-linking"></a>Notifications de tabulation et liens détaillés
+## <a name="tab-notifications-and-deep-linking"></a>Notifications d'onglet et liaison approfondie
 
-Vous pouvez envoyer un message avec un lien détaillé vers votre onglet. Par exemple, une carte affiche un résumé des données de bogue qu’un utilisateur peut sélectionner pour afficher l’intégralité du bogue dans un onglet. L’envoi de messages sur l’activité des onglets augmente la sensibilisation sans notification explicite à tous les utilisateurs (c.-à-d., activité sans bruit). Vous pouvez également @mention des utilisateurs spécifiques, le cas échéant.
+Vous pouvez envoyer un message avec un lien profond vers votre onglet. Par exemple, une carte affiche un résumé des données de bogue qu'un utilisateur peut sélectionner pour voir l'intégralité du bogue dans un onglet. L'envoi de messages sur l'activité de l'onglet augmente la sensibilisation sans avertir explicitement tout le monde (c'est-à-dire, activité sans bruit). Vous pouvez également @mention utilisateurs spécifiques si nécessaire.
 
-Avertissez les utilisateurs de l’activité des onglets de l’une des manières suivantes :
+Informez les utilisateurs de l'activité de l'onglet de l'une des manières suivantes :
 
-* **Bot**: cette méthode est préférée en particulier si le thread d’onglet est ciblé. La conversation de thème de l’onglet est déplacée vers le mode récemment actif. Cette méthode permet également une sophistication du mode d’envoi de la notification.
-* **Message**: un message s’affiche dans le flux d’activités de l’utilisateur avec un [lien détaillé vers l’onglet](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
+* **Bot**: cette méthode est préférée, en particulier si le thread d'onglet est ciblé. La conversation threadée de l'onglet est déplacée en tant que conversation récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
+* **Message**: un message s'affiche dans le flux d'activités de l'utilisateur avec un [lien profond vers l'onglet](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -148,19 +149,19 @@ Avertissez les utilisateurs de l’activité des onglets de l’une des manière
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration illustrant la marche à suivre pour la conception de la navigation par onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration shows what to do with tab navigation design." border="false":::
 
-#### <a name="do-facilitate-conversation"></a>Do : faciliter la conversation
+#### <a name="do-facilitate-conversation"></a>À faire : faciliter la conversation
 
-Inclure le contenu et les composants que les utilisateurs peuvent parler. S’il ne rentre pas dans le contexte d’une conversation, d’un canal ou d’une réunion, il n’appartient pas à votre onglet.
+Inclure du contenu et des composants dont les utilisateurs peuvent parler. S'il ne s'intègre pas dans le contexte d'une conversation, d'un canal ou d'une réunion, il n'appartient pas à votre onglet.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de la navigation par onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="L'exemple montre ce qu'il ne faut pas faire avec la conception de navigation par onglets." border="false":::
 
-#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>Ne pas : traiter votre onglet comme n’importe quelle autre page Web
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>À ne pas faire : traiter votre onglet comme n'importe quelle autre page web
 
-Un onglet n’est pas une page Web qui peut s’afficher une seule fois. Un onglet doit afficher votre contenu le plus important et pertinent dont les utilisateurs ont besoin pour effectuer une tâche conjointe.
+Un onglet n'est pas une page web que quelqu'un peut afficher une seule fois. Un onglet doit afficher le contenu le plus important et pertinent dont les utilisateurs ont besoin pour accomplir quelque chose ensemble.
 
    :::column-end:::
 :::row-end:::
@@ -169,19 +170,19 @@ Un onglet n’est pas une page Web qui peut s’afficher une seule fois. Un ongl
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Illustration illustrant la marche à suivre pour la conception de la navigation par onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Exemple montrant comment faire avec la conception de navigation par onglets." border="false":::
 
-#### <a name="do-limit-tasks-and-data"></a>Do : limiter les tâches et les données
+#### <a name="do-limit-tasks-and-data"></a>À faire : limiter les tâches et les données
 
-Les onglets fonctionnent mieux lorsqu’ils répondent à des besoins spécifiques. Incluez un ensemble limité de tâches et de données pertinentes pour l’équipe ou le groupe.
+Les onglets fonctionnent mieux lorsqu'ils s'adressent à des besoins spécifiques. Inclure un ensemble limité de tâches et de données pertinentes pour l'équipe ou le groupe.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de la navigation par onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration montrant ce qu'il ne faut pas faire avec la conception de navigation par onglets." border="false":::
 
-#### <a name="dont-embed-your-entire-app"></a>Ne pas : incorporer votre application entière
+#### <a name="dont-embed-your-entire-app"></a>À ne pas faire : incorporer l'intégralité de votre application
 
-L’utilisation d’un onglet pour afficher une application entière avec une navigation à plusieurs niveaux et des interactions complexes entraîne une surcharge d’informations.
+L'utilisation d'un onglet pour afficher l'ensemble d'une application avec une navigation à plusieurs niveaux et des interactions complexes entraîne une surcharge d'informations.
 
    :::column-end:::
 :::row-end:::
@@ -190,19 +191,19 @@ L’utilisation d’un onglet pour afficher une application entière avec une na
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration illustrant les actions à effectuer avec la conception de la configuration de l’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration montrant ce qu'il faut faire avec la conception de la configuration de l'onglet." border="false":::
 
-#### <a name="do-keep-it-simple"></a>Do : restez simple
+#### <a name="do-keep-it-simple"></a>À faire : restez simple
 
-Si votre application requiert une authentification, essayez d’intégrer Microsoft Single Sign-On (SSO) pour une expérience de connexion plus transparente. En outre, n’incluez que les informations essentielles et les étapes à suivre pour ajouter l’onglet.
+Si votre application nécessite une authentification, essayez d'intégrer l'authentification unique (SSO) Microsoft pour une expérience de authentification plus transparente. En outre, incluez uniquement les informations essentielles et les étapes à suivre pour ajouter l'onglet.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec la conception de la configuration de l’onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration montrant ce qu'il ne faut pas faire avec la conception de la configuration de l'onglet." border="false":::
 
-#### <a name="dont-have-too-many-steps"></a>Ne pas faire : trop d’étapes
+#### <a name="dont-have-too-many-steps"></a>À ne pas faire : trop d'étapes
 
-Supprimez toutes les étapes inutiles pour l’ajout d’un onglet.
+Supprimez les étapes inutiles pour ajouter un onglet.
 
    :::column-end:::
 :::row-end:::
@@ -211,26 +212,26 @@ Supprimez toutes les étapes inutiles pour l’ajout d’un onglet.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration illustrant la procédure d’affichage des onglets." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration montrant ce qu'il faut faire avec les tabulations." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do : tirer parti des jetons de couleur teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
 
-Chaque thème teams possède son propre jeu de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">jetons de couleur (IU Fluent)</a> dans votre conception.
+Chaque thème Teams possède son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des jetons <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">de couleur (interface</a> utilisateur Fluent) dans votre conception.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration illustrant ce qu’il ne faut pas faire avec des tabulations." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration montrant ce qu'il ne faut pas faire avec les tabulations." border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>Ne pas : valeurs de couleur de code dur
+#### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur de code dur
 
-Si vous n’utilisez pas de jetons de couleur Teams, vos conceptions seront moins évolutives et prendre plus de temps à gérer.
+Si vous n'utilisez pas de jetons de couleur Teams, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
 
 ## <a name="validate-your-design"></a>Valider votre conception
 
-Si vous envisagez de publier votre application dans AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l’échec des applications lors de l’envoi.
+Si vous envisagez de publier votre application sur AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l'échec des applications lors de l'envoi.
 
 > [!div class="nextstepaction"]
 > [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

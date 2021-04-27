@@ -2,13 +2,14 @@
 title: Onglets sur les appareils mobiles
 description: Décrit les instructions pour la conception d'onglets qui fonctionnent sur mobile.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: onglets mobiles des applications personnelles de l'infrastructure de référence des recommandations en matière de conception d'équipes
-ms.openlocfilehash: 72d1cf4623a9f4c1b5c993f1477f755b51d9fe64
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762024"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020407"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
@@ -25,7 +26,7 @@ Les onglets de canal sont également disponibles sur les appareils mobiles. Le c
 
 L'illustration suivante montre comment accéder à un onglet personnel sur un appareil mobile.
 
-:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration montrant le caisse de l'application mobile Teams." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration montrant le caisse d'application mobile Teams." border="false":::
 
 ## <a name="accessing-channel-tabs"></a>Accès aux onglets de canal
 
@@ -59,7 +60,7 @@ Les listes sont excellentes pour le tri et le filtrage de grandes quantités de 
 
 #### <a name="grid"></a>Grid
 
-Les grilles sont utiles pour l'affichage d'éléments hautement visuels. Il est utile d'inclure un contrôle de filtre ou de recherche en haut.
+Les grilles sont utiles pour afficher des éléments hautement visuels. Il est utile d'inclure un contrôle de filtre ou de recherche en haut.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Illustration montrant un onglet mobile Teams avec une disposition de grille." border="false":::
 
@@ -99,9 +100,9 @@ Boutons d'radio, case à cocher et boutons bascule.
 
 ![contrôles de sélection](../../assets/images/selection-controls.png)
 
-#### <a name="chiclets-and-pills"></a>Yézélettes et insérables
+#### <a name="chiclets-and-pills"></a>Îles et err.
 
-![tlets et l'errég](../../assets/images/chiclets-and-pills.png)
+![cachets et err.](../../assets/images/chiclets-and-pills.png)
 
 ### <a name="typography"></a>Typographie
 
@@ -121,7 +122,7 @@ Les champs sont des zones où les utilisateurs peuvent entrer du texte. Les vola
 
 ![contrôles de champ mobile](../../assets/images/mobile-field-controls.png)
 
-## <a name="developer-considerations"></a>Considérations sur les développeurs
+## <a name="developer-considerations"></a>Considérations pour les développeurs
 
 Lorsque vous construisez une application qui inclut un onglet, vous devez prendre en compte (et tester) le fonctionnement de votre onglet sur les clients Microsoft Teams Android et iOS. Les sections ci-dessous décrivent certains des scénarios clés que vous devez prendre en considération.
 
@@ -138,4 +139,4 @@ Pour que l'authentification fonctionne sur les clients mobiles, vous devez mettr
 Les clients mobiles doivent régulièrement fonctionner avec une bande passante faible et des connexions intermittentes. Votre application doit gérer les délai d'accès de manière appropriée en fournissant un message contextuel à l'utilisateur. Vous devez également fournir des indicateurs de progression des utilisateurs pour fournir des commentaires à vos utilisateurs pour tout processus de longue durée.
 
 > [!NOTE]
-> Les onglets sont activés sur les appareils mobiles uniquement après l’ajout de l’application à une liste d’autorisation, en fonction de l’entrée de l’équipe d’approbation. Pour vérifier la réactivité mobile, consultez teamsubm@microsoft.com. 
+> Les onglets sont activés sur les appareils mobiles uniquement après l’ajout de l’application à une liste d’autorisation, en fonction de l’entrée de l’équipe d’approbation. Pour vérifier la réactivité de l’appareil mobile, teamsubm@microsoft.com. 

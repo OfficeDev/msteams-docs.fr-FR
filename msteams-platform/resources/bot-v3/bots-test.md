@@ -3,13 +3,14 @@ title: Tester et déboguer votre bot
 description: Décrit comment tester des bots dans Microsoft Teams
 keywords: Tests de bots teams
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/20/2019
-ms.openlocfilehash: 6403d9ba16510860492735944899285058d9c0f3
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 0f44a88bcf054f4e0f4112ddc8bd3fbfdc18117d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696604"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020631"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Tester et déboguer votre bot Microsoft Teams
 
@@ -63,7 +64,7 @@ Vous pouvez également initier une conversation avec votre bot à l'aide de son 
      L'ID d'application doit être résolu en nom de bot.
 
    * Sélectionnez votre bot et envoyez un message pour lancer une conversation.
-   * Vous pouvez également coller l'ID d'application de votre bot dans la zone de recherche en haut à gauche dans Microsoft Teams. Dans la page des résultats de la recherche, accédez à l'onglet Personnes pour voir votre bot et commencer à discuter avec lui.
+   * Vous pouvez également coller l'ID d'application de votre bot dans la zone de recherche en haut à gauche dans Microsoft Teams. Dans la page des résultats de la recherche, accédez à l'onglet Personnes pour voir votre bot et commencer à discuter avec celui-ci.
 
 Votre bot recevra l'événement de la même façon que les bots ajoutés à une équipe, mais sans les informations de `conversationUpdate` l'équipe dans `channelData` l'objet.
 

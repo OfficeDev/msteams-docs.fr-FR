@@ -2,14 +2,15 @@
 title: Conversations de conversation de canal et de groupe avec des bots
 description: Décrit le scénario de bout en bout d'une conversation avec un bot dans un canal dans Microsoft Teams
 keywords: teams scenarios channels conversation bot
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: be4610f45ab5891edcc6a9683ec994d2ba5c505c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2eac067a75fc75c9991e8b30ec5d693d89ed8228
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696177"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019796"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversations par chat de canal et de groupe avec un robot Microsoft Teams
 
@@ -21,7 +22,7 @@ La conversation dans les canaux et les conversations de groupe diffère de la co
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Conception d'un bot idéal pour les canaux ou les groupes
 
-Les bots ajoutés à une équipe deviennent un autre membre de l'équipe et peuvent @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu'ils @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
+Les bots ajoutés à une équipe deviennent un autre membre de l'équipe et peuvent être @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu'ils @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
 
 Un bot dans un groupe ou un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Bien que votre bot puisse certainement fournir des informations pertinentes pour l'expérience, gardez à l'esprit que les conversations avec elle sont visibles par tout le monde. Par conséquent, un bot efficace dans un groupe ou un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance des informations plus appropriées à une conversation un-à-un.
 
@@ -55,7 +56,7 @@ Dans un canal, la réponse à un message s'affiche comme une réponse à la cha�
 
 Lorsque votre bot est ajouté pour la première fois au groupe ou à l'équipe, il est généralement utile d'envoyer un message de bienvenue présentant le bot à tous les utilisateurs. Le message de bienvenue doit fournir une description des fonctionnalités et des avantages du bot pour les utilisateurs. Dans l'idéal, le message doit également inclure des commandes pour permettre à l'utilisateur d'interagir avec l'application. Pour ce faire, assurez-vous que votre bot répond au message, avec `conversationUpdate` `teamsAddMembers` l'eventType dans `channelData` l'objet. Assurez-vous que l'ID est lui-même l'ID d'application du bot, car le même événement est envoyé lorsqu'un utilisateur est ajouté `memberAdded` à une équipe. Pour plus [d'informations, voir l'ajout](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) d'un membre d'équipe ou d'un bot.
 
-Vous pouvez également envoyer un message personnel à chaque membre de l'équipe lorsque le bot est ajouté. Pour ce faire, vous pouvez récupérer [la liste de](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) l'équipe et envoyer un message direct à chaque [utilisateur.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
+Vous pouvez également envoyer un message personnel à chaque membre de l'équipe lorsque le bot est ajouté. Pour ce faire, vous pouvez récupérer [la liste](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) de l'équipe et envoyer un message direct à [chaque utilisateur.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
 
 Il est recommandé que votre bot *n'envoie* pas de message de bienvenue dans les situations suivantes :
 
@@ -91,7 +92,7 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Vous pouvez également utiliser la fonction d'extension Teams, qui permet d'rallonger toutes `GetTextWithoutMentions` les mentions, y compris le bot.
+> Vous pouvez également utiliser la fonction d'extension Teams, qui permet d'enlever toutes les `GetTextWithoutMentions` mentions, y compris le bot.
 
 #### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js exemple de code : Vérifier et @bot mention
 
@@ -150,7 +151,7 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : message sortant avec l'utilisateur mentionné
+#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : Message sortant avec l'utilisateur mentionné
 
 ```json
 {

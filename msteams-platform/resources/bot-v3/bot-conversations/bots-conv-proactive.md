@@ -2,13 +2,14 @@
 title: Messages proactifs
 description: Décrit les bots qui peuvent démarrer une conversation dans Microsoft Teams
 ms.topic: conceptual
+localization_priority: Normal
 keywords: scénarios teams de bot de conversation de messagerie proactive
-ms.openlocfilehash: ee0d2900818a587e447e17ae3111bee621fa8de9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a13c565c8abe8c78fe6402d76796381b6a837393
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696163"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019789"
 ---
 # <a name="proactive-messaging-for-bots"></a>Messagerie proactive pour les bots
 
@@ -26,11 +27,11 @@ L'envoi d'un message pour démarrer un nouveau thread de conversation est diffé
 1. [Obtenir l'ID unique et l'ID client de l'utilisateur](#obtain-necessary-user-information)
 1. [Envoyer le message](#examples)
 
-Lorsque vous créez des messages proactifs, vous devez appeler et transmettre l'URL du service avant de créer le message que vous utiliserez pour envoyer le  `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` message. Si ce n'est pas le cas, votre application reçoit une `401: Unauthorized` réponse. Consultez [les exemples ci-dessous.](#net-example-from-this-sample)
+Lorsque vous créez des messages proactifs, vous devez appeler et transmettre l'URL du service avant de créer le message que vous  `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` utiliserez pour envoyer le message. Si ce n'est pas le cas, votre application reçoit une `401: Unauthorized` réponse. Consultez [les exemples ci-dessous.](#net-example-from-this-sample)
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 
-L'envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs. Toutefois, de leur point de vue, ce message peut leur sembler totalement non improvisé et, dans le cas des messages de bienvenue, il s'agit de la première fois qu'ils interagissent avec votre application. En tant que tel, il est très important d'utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable à vos utilisateurs) et de leur fournir suffisamment d'informations pour leur faire comprendre pourquoi ils sont envoyés.
+L'envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs. Toutefois, de leur point de vue, ce message peut leur sembler totalement non improvisé et, dans le cas des messages de bienvenue, il s'agit de la première fois qu'ils interagissent avec votre application. En tant que tel, il est très important d'utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable à vos utilisateurs) et de leur fournir suffisamment d'informations pour leur faire comprendre pourquoi ils sont envoyés par message.
 
 Les messages proactifs sont généralement classés en deux catégories : les messages de bienvenue ou les messages de notification.
 
@@ -46,7 +47,7 @@ Lorsque vous utilisez une messagerie proactive pour envoyer un message de bienve
 
 Lorsque vous utilisez une messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs ont un chemin d'accès clair pour effectuer des actions courantes en fonction de votre notification et comprendre clairement pourquoi la notification s'est produite. Les messages de notification de bonne qualité incluent généralement :
 
-* **Que s'est-il passé.** Indication claire de la cause de la notification.
+* **Que s'est-il passé.** Indication claire de ce qui est arrivé à l'origine de la notification.
 * **Qu'est-ce qu'il s'est passé ?** Il doit être clair quel élément/élément a été mis à jour pour provoquer la notification.
 * **Qui a fait ça.** Qui a pris l'action à l'origine de l'envoi de la notification.
 * **Ce qu'ils peuvent faire à ce sujet.** Faites en sorte que vos utilisateurs prennent facilement des mesures en fonction de vos notifications.
@@ -72,7 +73,7 @@ Vous pouvez uniquement installer des applications qui se trouver dans votre cata
 
 Pour plus [d'informations,](/graph/teams-proactive-messaging) voir Installer des applications pour les utilisateurs dans la documentation Graph. Il existe également un [exemple dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
-## <a name="examples"></a>Exemples
+## <a name="examples"></a>範例
 
 Veillez à vous authentifier et à avoir un jeton de support avant de créer une conversation à l'aide de l'API REST.
 

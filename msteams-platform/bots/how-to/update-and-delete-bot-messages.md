@@ -3,13 +3,14 @@ title: Mettre à jour et supprimer les messages envoyés à partir de votre bot
 author: WashingtonKayaker
 description: Comment mettre à jour et supprimer des messages envoyés à partir de votre bot Microsoft Teams
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a2836d59c22b9784f1f1a0c84306072bb6a97d3e
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996001"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019985"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Mettre à jour et supprimer les messages envoyés à partir de votre bot
 
@@ -181,7 +182,7 @@ L'exemple de code suivant illustre les principes de base des conversations :
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Informations de base sur les conversations Teams  | Présente les principes de base des conversations dans Teams, notamment la mise à jour et la suppression des messages. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Informations de base sur les conversations Teams  | Illustre les principes de base des conversations dans Teams, notamment la mise à jour et la suppression des messages. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Étape suivante
 

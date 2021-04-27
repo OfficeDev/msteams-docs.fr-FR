@@ -2,17 +2,18 @@
 title: Inscrire le bot d'appels et de réunions pour Microsoft Teams
 description: Découvrez comment inscrire un nouveau bot d'appel audio/vidéo pour Microsoft Teams
 ms.topic: conceptual
+localization_priority: Normal
 keywords: appel d'un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: 4f4f1fdf0c33685e146081085aa7ff8e07f1a87d
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: a11350a3c5bae0b2eb3a36b9e1233ed92e1705c8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995861"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020147"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire le bot d'appels et de réunions pour Microsoft Teams
 
-Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams normal avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
+Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams ordinaire avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
 
 * Il existe une nouvelle version du manifeste de l'application Teams avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo` . Ces paramètres sont inclus dans la [version](../../resources/dev-preview/developer-preview-intro.md) préliminaire du développeur du manifeste de l'application Teams.
 * [Les autorisations Microsoft Graph](./registering-calling-bot.md#add-graph-permissions) doivent être configurées pour l'ID d'application Microsoft de votre bot.
@@ -49,7 +50,7 @@ La section suivante fournit une liste des autorisations d'application pris en ch
 
 ## <a name="add-graph-permissions"></a>Ajouter des autorisations Graph
 
-Graph fournit des autorisations granulaires pour contrôler l'accès des applications aux ressources. Vous déterminez les autorisations pour Graph que votre application demande. Les API d'appel Graph prendre en charge les autorisations d'application, qui sont utilisées par les applications qui s'exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d'application.
+Graph fournit des autorisations granulaires pour contrôler l'accès des applications aux ressources. Vous déterminez les autorisations pour Graph que votre application demande. Les API d'appel graphe prendre en charge les autorisations d'application, qui sont utilisées par les applications qui s'exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d'application.
 
 ### <a name="application-permissions-for-calls"></a>Autorisations d'application pour les appels
 
@@ -86,7 +87,7 @@ Pour les applications utilisant le point de terminaison AAD V1, un administrateu
 Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d'inscription aux administrateurs à l'aide du point de terminaison AAD `/adminconsent` V2. Pour plus d'informations, voir [les instructions sur la construction d'une URL de consentement d'administrateur.](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)
 
 > [!NOTE]
-> Pour construire l'URL de consentement de l'administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d'inscription](https://apps.dev.microsoft.com/) de l'application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à votre inscription de bot, choisissez **Options avancées** Modifier le manifeste de  >  **l'application.** Ajoutez votre URL de redirection à la `replyUrls` collection.
+> Pour construire l'URL de consentement de l'administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d'inscription](https://apps.dev.microsoft.com/) de l'application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à l'inscription de votre bot, choisissez **Options avancées** Modifier le manifeste de  >  **l'application.** Ajoutez votre URL de redirection à la `replyUrls` collection.
 
 > [!IMPORTANT]
 > Chaque fois que vous modifiez les autorisations de votre application, vous devez également répéter le processus de consentement de l'administrateur. Les modifications apportées dans le portail d'inscription des applications ne sont pas reflétées tant que l'administrateur du client n'a pas réapplité le consentement.

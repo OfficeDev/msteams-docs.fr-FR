@@ -1,13 +1,14 @@
 ---
 title: Package de votre application
-description: Découvrez comment mettre en package votre application Microsoft Teams pour les tests, le téléchargement et la publication dans le Store.
+description: Découvrez comment mettre en package votre application Microsoft Teams pour le test, le téléchargement et la publication dans le Store.
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 222ea5459b3496c00b1186f15a68c3288ce419f7
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: c8341f3d83b5e6610e44276d6732affa1d1c1e91
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922509"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020139"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Créer un package d'application pour votre application Microsoft Teams
 
@@ -42,7 +43,7 @@ La version de couleur de votre icône s'affiche dans la plupart des scénarios T
 
 Teams taille automatiquement votre icône pour afficher un carré avec des coins arrondis dans plusieurs scénarios et une forme hexagonale dans les scénarios de bot. Incluez 48 pixels de remplissage autour de votre symbole pour que ces champs soient réalisés sans perte de détails.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Conseils sur la conception des icônes de couleur Teams." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Icône de couleur Teams et conseils de conception." border="false":::
 
 ### <a name="outline-icon"></a>Icône Plan
 
@@ -76,7 +77,7 @@ L'icône de couleur envoyée dans votre package d'application doit être carrée
    :::column-end:::
 :::row-end:::
 
-### <a name="examples"></a>Exemples
+### <a name="examples"></a>範例
 
 Voici comment les icônes d'application apparaissent dans différents contextes et fonctionnalités Teams.
 

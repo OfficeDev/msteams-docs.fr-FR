@@ -2,13 +2,14 @@
 title: Préparer votre client Microsoft Office 365
 description: Comment commencer à travailler avec Teams dans Microsoft 365
 ms.topic: how-to
+localization_priority: Normal
 keywords: Configurer le téléchargement de Microsoft 365 tenant Teams
-ms.openlocfilehash: 4fbe1dcc7ba202aff0b46c7fc50d9aebc0278c38
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946465"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019943"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
@@ -45,7 +46,7 @@ Activez Teams pour votre organisation et pour plus d'informations, voir [activer
     > [!Note]
     > L'apparition de l'option **Teams** peut prendre jusqu'à 24 heures. Vous pouvez [charger votre application personnalisée dans un environnement Teams](/microsoftteams/upload-custom-apps#validate) à des fins de test et de validation à ce moment-là.
 
-3. Accédez aux **stratégies d'installation**  >  **globales des applications**  >  **Teams.**
+3. Accédez aux **stratégies d'installation globales** des applications  >    >  **Teams.**
 
    ![Activer l'affichage sideload](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
@@ -58,7 +59,7 @@ Activez Teams pour votre organisation et pour plus d'informations, voir [activer
 
     ![Télécharger l'affichage de l'application](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-Pour plus d'informations sur l'interaction de ces paramètres, voir gérer les stratégies et paramètres d'application [personnalisés](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) dans Teams et gérer les stratégies de configuration d'application [dans Teams.](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
+Pour plus d'informations sur l'interaction de ces paramètres, voir gérer les [stratégies](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) et paramètres d'application personnalisés dans Teams et gérer les stratégies de configuration [d'application dans Teams.](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -2,14 +2,15 @@
 title: Conditions requises et considérations pour les robots multimédias hébergés par l'application
 description: Comprendre les exigences et considérations importantes liées à la création de bots multimédias hébergés par l'application pour Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: ordinateur windows windows server azure hébergé par l'application
 ms.date: 11/16/2018
-ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995952"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020055"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Conditions requises et considérations pour les robots multimédias hébergés par l'application
 
@@ -28,7 +29,7 @@ Un bot multimédia hébergé par l'application requiert les procédures suivante
 - Le bot peut être hébergé dans l'un des environnements de service Azure suivants :
     - Service cloud.
     - Service Fabric avec jeux d'échelle de machine virtuelle (VMSS).
-    - Ordinateur virtuel IaaS (Infrastructure as a Service).  
+    - Machine virtuelle (VM) IaaS (Infrastructure as a Service).  
   
 - Le bot ne peut pas être déployé en tant qu'application web Azure.
 
@@ -38,7 +39,7 @@ La section suivante fournit des détails sur l'emplacement des appels multimédi
 
 ## <a name="real-time-media-calls-stay-where-they-are-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
 
-Les appels multimédias en temps réel restent sur l'ordinateur où ils ont été créés. Un appel multimédia en temps réel est épinglé à l'instance de machine virtuelle (VM) qui a accepté ou démarré l'appel. Le média d'un appel ou d'une réunion Microsoft Teams est envoyé vers cette instance de la VM, et le support que le bot renvoie à Microsoft Teams doit également provenir de cette VM. Si des appels multimédias en temps réel sont en cours lorsque la VM est arrêtée, ces appels sont brusquement arrêtés. Si le bot a déjà connaissance de l'arrêt de la VM en attente, il peut mettre fin aux appels.
+Les appels multimédias en temps réel restent sur l'ordinateur où ils ont été créés. Un appel multimédia en temps réel est épinglé à l'instance de machine virtuelle (VM) qui a accepté ou démarré l'appel. Le média d'un appel ou d'une réunion Microsoft Teams est envoyé à cette instance de la VM, et le support que le bot renvoie à Microsoft Teams doit également provenir de cette VM. Si des appels multimédias en temps réel sont en cours lorsque la VM est arrêtée, ces appels sont brusquement arrêtés. Si le bot a déjà connaissance de l'arrêt de la VM en attente, il peut mettre fin aux appels.
 
 La section suivante fournit des détails sur l'accessibilité des robots multimédias hébergés par l'application.
 
@@ -48,13 +49,13 @@ Les robots multimédias hébergés par l'application doivent être directement a
 
 - Chaque instance de la VM hébergeant un bot multimédia hébergé par l'application dans Azure doit être directement accessible à partir d'Internet à l'aide d'une adresse IP publique au niveau de l'instance (ILPIP).
     - Pour obtenir et configurer un ILPIP pour un service cloud Azure, consultez la vue d'ensemble de l'adresse IP publique classique au niveau de [l'instance.](/azure/virtual-network/virtual-networks-instance-level-public-ip)
-    - Pour configurer un ILPIP pour un jeu d'échelles de machines virtuelles, voir [public IPv4 par machine virtuelle.](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine)
+    - Pour configurer un ILPIP pour un jeu d'échelles d'ordinateur virtuel, voir [public IPv4 par machine virtuelle](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
 - Le service hébergeant un bot multimédia hébergé par l'application doit également configurer chaque instance d'une vm avec un port public qui est mapmé sur l'instance spécifique.
     - Pour un service Cloud Azure, cela nécessite un point de terminaison d'entrée d'instance. Pour plus d'informations, voir [activer la communication pour les instances de rôle dans Azure.](/azure/cloud-services/cloud-services-enable-communication-role-instances)
     - Pour un jeu d'échelles de vm, une règle NAT sur l'équilibrage de charge doit être configurée. Pour plus d'informations, [voir les réseaux virtuels et les machines virtuelles dans Azure.](/azure/virtual-machines/windows/network-overview)
-- Les robots multimédias hébergés par l'application ne sont pas pris en charge par l'émulateur Bot Framework.
+- Les bots multimédias hébergés par l'application ne sont pas pris en charge par l'émulateur Bot Framework.
 
-La section suivante fournit des détails sur les considérations d'évolutivité et de performances des robots multimédias hébergés par l'application.
+La section suivante fournit des détails sur l'évolutivité et les performances des robots multimédias hébergés par l'application.
 
 ## <a name="scalability-and-performance-considerations"></a>Considérations relatives à l’évolutivité et aux performances
 

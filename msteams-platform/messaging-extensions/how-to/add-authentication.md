@@ -2,14 +2,15 @@
 title: Ajouter une authentification à votre extension de messagerie
 author: clearab
 description: Comment ajouter l'authentification à une extension de messagerie
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 04ece6fe6f5e824873ed6e69385bce017df6927d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 1670bcd68def5470f2a590b11f7c25a00ccd06b7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696772"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020708"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -42,9 +43,9 @@ Si votre service nécessite une authentification utilisateur, les utilisateurs d
 
 Votre service doit vérifier que le code d'authentification reçu à l'étape 6 correspond à celui de l'étape 5. Cela garantit qu'un utilisateur malveillant ne tente pas d'usurper ou de compromettre le flux de la signature. Cela permet effectivement de « fermer la boucle » pour terminer la séquence d'authentification sécurisée.
 
-### <a name="respond-with-a-sign-in-action"></a>Répondre avec une action de connect
+### <a name="respond-with-a-sign-in-action"></a>Répondre avec une action de se connectez
 
-Pour inviter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l'URL d'authentification.
+Pour inciter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l'URL d'authentification.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de sign-in
 
@@ -135,6 +136,6 @@ Lorsque la demande de se connecte est terminée et redirige vers votre page, ell
 ## <a name="code-sample"></a>Exemple de code
 |**Exemple de nom** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie des résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

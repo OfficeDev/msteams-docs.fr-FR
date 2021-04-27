@@ -3,26 +3,27 @@ title: Mise en forme de texte prise en charge dans les conversations
 description: Décrit la prise en charge de la mise en forme du texte dans les conversations de bot
 keywords: messagerie de conversations de bots
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696058"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019747"
 ---
 # <a name="formatting-bot-messages"></a>Mettre en forme les messages du bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) de votre message.
+Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) texte de votre message.
 
 Microsoft Teams prend en charge les options de mise en forme suivantes :
 
 | Valeur TextFormat | Description |
 | --- | --- |
 | plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée |
-| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal selon le cas . voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
 | xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu de texte

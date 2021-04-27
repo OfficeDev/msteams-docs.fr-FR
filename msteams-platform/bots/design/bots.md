@@ -3,13 +3,14 @@ title: Conception de votre bot
 description: Découvrez comment concevoir un bot Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 1323d1070d29a501a6a87812a666c3a08b76ae74
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713570"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020132"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
@@ -99,10 +100,10 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 |1|**Nom et icône de l’application**|
 |2|**Onglet Conversation** : ouvre l’espace pour discuter avec votre bot (applicable uniquement aux applications personnelles).|
 |3|**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
-|4|**Onglet À propos** : affiche des informations de base sur votre application.|
-|5|**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
-|6|**Carte adaptative** : si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
-|7|**Menu de commandes** : affiche les commandes standard de votre bot (définies par vous).
+|4 |**Onglet À propos** : affiche des informations de base sur votre application.|
+|5 |**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
+|6 |**Carte adaptative** : si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
+|7 |**Menu de commandes** : affiche les commandes standard de votre bot (définies par vous).
 
 ### <a name="command-menu"></a>Menu de commandes
 
@@ -208,7 +209,7 @@ En savoir plus sur l’écriture pour les bots dans <a href="https://www.figma.c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemple montrant les meilleures pratiques pour les robots." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>À faire : communiquer clairement ce que votre bot peut faire
 
@@ -216,7 +217,7 @@ Les messages de bienvenue et les visites guidées aident les personnes à compre
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemple de meilleures pratiques pour un bot." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>À ne pas faire : masquer les fonctionnalités de votre bot
 
@@ -227,7 +228,7 @@ Les premières impressions sont importantes. Les personnes seront probablement c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemple d'affichage d'une meilleure pratique de bot." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>À faire : reconnaître les questions non posées
 
@@ -235,7 +236,7 @@ Votre bot doit pouvoir répondre à des messages tels que « Bonjour », « A
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple de meilleures pratiques pour un bot." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>À ne pas faire : manquer les opportunités de satisfaction
 
@@ -248,7 +249,7 @@ Certaines personnes s'attendent à ce que les conversations se déroulent nature
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemple de meilleure pratique pour un bot." border="false":::
 
 #### <a name="do-provide-help"></a>À faire : fournir de l’aide
 
@@ -256,7 +257,7 @@ Si votre bot ne peut pas répondre à une demande, fournissez à l’utilisateur
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="L'exemple affiche une meilleure pratique pour un bot." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>À ne pas faire : laisser les utilisateurs bloqués
 
@@ -269,7 +270,7 @@ Les personnes vont rapidement abandonner votre robot s’ils ne peuvent pas rés
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemple d'affichage d'une meilleure pratique de bot." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>A faire : utiliser des modules ou des onglets de tâches
 
@@ -277,7 +278,7 @@ Si votre bot fournit une réponse qui nécessite quelques étapes supplémentair
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Voir l'exemple d'une meilleure pratique de bot." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>À ne pas faire : rendre les interactions à plusieurs tour fastidieuses
 
@@ -290,7 +291,7 @@ Une conversation approfondie pour accomplir une seule tâche est lente et trop c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemple présentant une meilleure pratique de bot." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>À faire : afficher uniquement les informations sensibles dans un contexte personnel
 
@@ -298,7 +299,7 @@ Si votre bot se trouve dans une conversation ou un canal de groupe, nous vous re
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Illustration montrant une meilleure pratique de bot." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>À ne pas faire : certains contenus ne sont pas destinés à être vus par tout le monde
 

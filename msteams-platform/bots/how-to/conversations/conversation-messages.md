@@ -1,17 +1,18 @@
 ---
-title: Messages dans les conversations de bot
+title: Messages dans les conversations des robots
 description: Décrit les méthodes de conversation avec un bot Microsoft Teams
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: e3239d8ae7a9950e7b66d552fee2c739ca61d76b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697237"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020925"
 ---
-# <a name="messages-in-bot-conversations"></a>Messages dans les conversations de bot
+# <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
 Chaque message d'une conversation est `Activity` un objet de type `messageType: message` . Lorsqu'un utilisateur envoie un message, Teams publie le message à votre bot. Teams envoie un objet JSON au point de terminaison de messagerie de votre bot. Votre bot examine le message pour déterminer son type et répond en conséquence.
 
@@ -202,7 +203,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Le fractionnement de message se produit lorsqu'un message texte et une pièce jointe sont envoyés dans la même charge utile d'activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l'une avec un message texte et l'autre avec une pièce jointe. Lorsque l'activité est fractionée, vous ne recevez pas l'ID de message en réponse, qui est utilisé pour mettre à jour ou supprimer [le](~/bots/how-to/update-and-delete-bot-messages.md) message de manière proactive. Il est recommandé d'envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+> Le fractionnement de message se produit lorsqu'un message texte et une pièce jointe sont envoyés dans la même charge utile d'activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l'une avec un message texte et l'autre avec une pièce jointe. Lorsque l'activité est fractionée, vous ne recevez pas [](~/bots/how-to/update-and-delete-bot-messages.md) l'ID du message en réponse, qui est utilisé pour mettre à jour ou supprimer le message de manière proactive. Il est recommandé d'envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
 
 Les messages envoyés entre les utilisateurs et les bots incluent des données de canal interne dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le SDK Bot Builder vous permet de modifier la structure des messages.
 
@@ -391,11 +392,11 @@ Voici les codes d'état, leur code d'erreur et leurs valeurs de message :
 
 | Code d'état | Code d'erreur et valeurs de message | Description |
 |----------------|-----------------|-----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message :** l'utilisateur a bloqué la conversation avec le bot. | L'utilisateur a bloqué le bot dans une conversation 1:1 ou un canal via les paramètres de modération. |
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message :** l'utilisateur a bloqué la conversation avec le bot. | L'utilisateur a bloqué le bot dans une conversation en une:1 ou dans un canal via les paramètres de modération. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message :** le bot ne fait pas partie de la liste des conversations. | Le bot ne fait pas partie de la conversation. |
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message :** l'administrateur client a désactivé ce bot. | Le client a bloqué le bot. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: aucune inscription trouvée pour ce bot. | L'inscription de ce bot est in trouvée. |
-| 412 | **Code**: `PreconditionFailed` <br/> **Message :** Échec de la condition préalable, veuillez essayer à nouveau. | Une condition préalable a échoué sur l'une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: l'administrateur client a désactivé ce bot. | Le client a bloqué le bot. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: aucune inscription trouvée pour ce bot. | L'inscription pour ce bot est in trouvée. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message :** la condition préalable a échoué, veuillez essayer à nouveau. | Une condition préalable a échoué sur l'une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message :** Conversation in trouvée. | La conversation est in trouvée. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message :** taille du message trop grande. | La taille de la demande entrante était trop importante. |
 | 429 | **Code**: `Throttled` <br/> **Message**: trop de demandes. Renvoie également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d'informations, voir [limite de taux.](~/bots/how-to/rate-limit.md) |
@@ -409,7 +410,7 @@ Voici les codes d'état, leur code d'erreur et leurs valeurs de message :
 ## <a name="see-also"></a>Voir aussi
 
 > [!div class="nextstepaction"]
-> [Envoi de messages proactifs](~/bots/how-to/conversations/send-proactive-messages.md)
+> [Envoyer des messages proactifs](~/bots/how-to/conversations/send-proactive-messages.md)
 > [!div class="nextstepaction"]
 > [S’abonner à des événements de conversation](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 

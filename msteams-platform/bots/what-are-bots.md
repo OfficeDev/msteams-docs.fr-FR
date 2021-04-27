@@ -3,17 +3,18 @@ title: Bots dans Microsoft Teams
 author: clearab
 description: Vue d'ensemble des bots dans Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 08777e6d678bd75b56072412af46e3eb974c3678
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 70240b7396fc5e7a77749dc4e7326bfb30ea4415
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696890"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020890"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
-Un bot également appelé bot de conversation est une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs, telles que le service clientèle ou le personnel de support technique. Parmi les exemples de bots utilisés quotidiennement, citons les bots qui fournissent des informations sur la météo, qui réservent des réservations de réservation de réservation ou qui fournissent des informations de voyage. Une interaction de bot peut être une question et une réponse rapides, ou il peut s'agit d'une conversation complexe qui permet d'accéder aux services.
+Un bot également appelé bot de conversation est une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs, telles que le service clientèle ou le personnel de support technique. Parmi les exemples de bots utilisés quotidiennement, citons les bots qui fournissent des informations sur la météo, qui réservent des réservations de réservations ou qui fournissent des informations de voyage. Une interaction de bot peut être une question et une réponse rapides, ou il peut s'agit d'une conversation complexe qui permet d'accéder aux services.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
@@ -31,7 +32,7 @@ La recherche de la combinaison de cartes, de texte et de modules de tâche est e
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Exemple de bot FAQ" border="true":::
 
-Chaque interaction entre l'utilisateur et le bot est représentée comme une activité. Lorsqu'un bot reçoit une activité, il la transmet à ses sous-traites d'activité. Pour plus d'informations, voir [les handlers d'activité des bots.](~/bots/bot-basics.md) 
+Chaque interaction entre l'utilisateur et le bot est représentée comme une activité. Lorsqu'un bot reçoit une activité, il la transmet à ses handlers d'activité. Pour plus d'informations, voir [les handlers d'activité des bots.](~/bots/bot-basics.md) 
 
 En outre, les bots sont des applications qui ont une interface de conversation. Vous pouvez interagir avec un bot à l'aide de texte, de cartes interactives et de reconnaissance vocale. Un bot se comporte différemment selon qu'il s'agit d'une conversation de canal ou de groupe, ou d'une conversation un-à-un. Les conversations sont gérées via le connecteur Bot Framework. Pour plus d'informations, voir [les informations de base de la conversation.](~/bots/how-to/conversations/conversation-basics.md)
 
@@ -53,4 +54,4 @@ Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour un 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Bots et SDK](~/bots/bot-features.md)
+> [Bots et kits de développement](~/bots/bot-features.md)

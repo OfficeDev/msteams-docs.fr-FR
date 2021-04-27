@@ -2,20 +2,21 @@
 title: Flux d'authentification pour les bots
 description: Décrit le flux d'authentification dans les bots
 keywords: bots de flux d'authentification Teams
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 317e0d8310c0e040eccc7bd1cc343e7a1fa9a16d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: fe7e528be98a0b58334535952327b6026b30a87d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696198"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019803"
 ---
 # <a name="microsoft-teams-authentication-flow-for-bots"></a>Flux d'authentification Microsoft Teams pour les bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-OAuth 2.0 est une norme ouverte d'authentification et d'autorisation utilisée par Azure AD et de nombreux autres fournisseurs d'identité. Une compréhension de base d'OAuth 2.0 est une condition préalable à l'utilisation de l'authentification dans Teams . [Voici une bonne vue d'ensemble](https://aaronparecki.com/oauth-2-simplified/) plus facile à suivre que la [spécification formelle.](https://oauth.net/2/) Le flux d'authentification pour les onglets et les bots est légèrement différent, car les onglets sont très similaires aux sites web afin qu'ils peuvent utiliser OAuth 2.0 directement, et les bots ne le sont pas et ne doivent pas faire certaines choses différemment, mais les concepts de base sont identiques.
+OAuth 2.0 est une norme ouverte d'authentification et d'autorisation utilisée par Azure AD et de nombreux autres fournisseurs d'identité. Une compréhension de base d'OAuth 2.0 est une condition préalable à l'utilisation de l'authentification dans Teams ; [Voici une bonne vue d'ensemble](https://aaronparecki.com/oauth-2-simplified/) plus facile à suivre que la [spécification formelle.](https://oauth.net/2/) Le flux d'authentification pour les onglets et les bots est légèrement différent, car les onglets sont très similaires aux sites web afin qu'ils peuvent utiliser OAuth 2.0 directement, et les bots ne le sont pas et ne doivent pas faire certaines choses différemment, mais les concepts de base sont identiques.
 
 Consultez l'exemple d'authentification Microsoft Teams de référentiel [GitHub](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) pour obtenir un exemple de flux d'authentification pour les bots utilisant Node à l'aide du type d'octroi de code d'autorisation [OAuth 2.0.](https://oauth.net/2/grant-types/authorization-code/)
 
@@ -35,7 +36,7 @@ Consultez l'exemple d'authentification Microsoft Teams de référentiel [GitHub]
     * Dans l'exemple, le bot associe la valeur du paramètre à l'ID de l'utilisateur qui a initié le processus de signature afin qu'il puisse ultérieurement la faire correspondre à la valeur renvoyée par le fournisseur `state` `state` d'identité. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
     * **IMPORTANT**: le bot stocke le jeton qu'il reçoit du fournisseur d'identité et l'associe à un utilisateur spécifique, mais il est marqué comme « validation en attente ». Le jeton provisoire ne peut pas encore être utilisé : il doit être validé : 
       1. **Valider les informations reçues du fournisseur d'identité.** La valeur du paramètre doit être confirmée par rapport à ce `state` qui a été enregistré précédemment. 
-      1. **Validez ce qui est reçu de Teams.** Une [](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) validation d'authentification en deux étapes est effectuée pour s'assurer que l'utilisateur qui a autorisé le bot auprès du fournisseur d'identité est le même utilisateur qui discute avec le bot. Cela protège contre [les attaques de l'intermédiaire et](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) les [attaques par hameçonnage.](https://en.wikipedia.org/wiki/Phishing) Le bot génère un code de vérification et le stocke, associé à l'utilisateur. Le code de vérification est envoyé automatiquement par Teams, comme décrit ci-dessous aux étapes 9 et 10. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
+      1. **Validez ce qui est reçu de Teams.** Une [validation](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) d'authentification en deux étapes est effectuée pour s'assurer que l'utilisateur qui a autorisé le bot auprès du fournisseur d'identité est le même utilisateur qui discute avec le bot. Cela protège contre [les attaques de l'intermédiaire et](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) les [attaques par hameçonnage.](https://en.wikipedia.org/wiki/Phishing) Le bot génère un code de vérification et le stocke, associé à l'utilisateur. Le code de vérification est envoyé automatiquement par Teams, comme décrit ci-dessous aux étapes 9 et 10. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
 9. Le rappel OAuth rend une page qui appelle `notifySuccess("<verification code>")` . ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
 10. Teams ferme la fenêtre popup et renvoie le message `<verification code>` envoyé `notifySuccess()` au bot. Le bot reçoit un message [d'appel](/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) avec `name = signin/verifyState` .
 11. Le bot vérifie le code de vérification entrant par rapport au code de vérification stocké avec le jeton provisoire de l'utilisateur. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))

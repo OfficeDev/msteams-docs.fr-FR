@@ -2,14 +2,15 @@
 title: Définir des commandes d'action d'extension de messagerie
 author: clearab
 description: Vue d'ensemble des commandes d'action d'extension de messagerie
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 51c2ce5ac3b8ab265d9bec0b1101ba18138a9365
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f49e821ecb98659b4cfd68f93b37f1a8f611a9fb
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696934"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020715"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d'action d'extension de messagerie
 
@@ -30,11 +31,11 @@ Tout d'abord, vous devez déterminer l'emplacement à partir de lequel votre com
 * Zone de composition de message : boutons situés en bas de la zone composer un message.
 * Zone de commande : en @mentioning votre application dans la zone de commande. 
    > [!NOTE]
-   > Si l'extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre avec un message bot inséré directement dans la conversation.
+   > Si l'extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre par un message bot inséré directement dans la conversation.
 
 * Message : directement à partir d'un message existant via le `...` menu de dépassement d'un message. 
     > [!NOTE] 
-    > L'appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de le présenter avec un module de tâche.
+    > L'appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de lui présenter un module de tâche.
 
 L'image suivante affiche les emplacements d'où la commande d'action est invoquée :
 
@@ -52,7 +53,7 @@ Si vous choisissez de créer le module de tâche avec une liste statique de para
 
 ## <a name="select-how-the-final-message-is-sent"></a>Sélectionner la façon dont le message final est envoyé
 
-Dans la plupart des cas, la commande d'action entraîne l'insertion d'une carte dans la zone composer un message. L'utilisateur peut l'envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l'utilisateur et le bot ne peut ni modifier ni mettre à jour la carte.
+Dans la plupart des cas, la commande d'action entraîne l'insertion d'une carte dans la zone de composition du message. L'utilisateur peut l'envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l'utilisateur et le bot ne peut ni modifier ni mettre à jour la carte.
 
 Si l'extension de messagerie est invoquée à partir de la zone de composition ou directement à partir d'un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l'objet au manifeste de l'application en utilisant le même ID et en `bot` définissant les étendues appropriées.
 
@@ -71,7 +72,7 @@ Pour ajouter la commande d'action au manifeste de l'application, vous devez ajou
 **Pour créer une commande d'action**
 
 1. Ouvrez **App Studio à** partir du client Microsoft Teams et sélectionnez **l'onglet Éditeur de** manifeste.
-1. Si vous avez déjà créé votre package d'application dans **App Studio,** sélectionnez-le dans la liste. Si vous n'avez pas créé de package d'application, importez-en un existant.
+1. Si vous avez déjà créé votre package d'application **dans App Studio,** sélectionnez-le dans la liste. Si vous n'avez pas créé de package d'application, importez-en un existant.
 1. Après avoir importé un package d'application, sélectionnez **les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l'extension de messagerie.
 1. Sélectionnez **Configurer dans** la fenêtre pour inclure l'extension de messagerie dans l'expérience de votre application. L'image suivante affiche la fenêtre de mise en place de l'extension de messagerie :
 
@@ -104,7 +105,7 @@ L'image suivante affiche l'ajout de commande pour l'extension de messagerie :
 
    <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
 
-1. Pour utiliser des paramètres dynamiques, sélectionnez **Récupérer un ensemble dynamique de paramètres à partir de votre bot.** L'image suivante affiche la sélection du paramètre de commande d'action :
+1. Pour utiliser des paramètres dynamiques, sélectionnez récupérer un ensemble dynamique de **paramètres à partir de votre bot.** L'image suivante affiche la sélection du paramètre de commande d'action :
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
     
@@ -114,7 +115,7 @@ L'image suivante affiche l'ajout de commande pour l'extension de messagerie :
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
 1. Sélectionnez **Enregistrer**.
-1. Pour ajouter d'autres paramètres, sélectionnez **le bouton** Ajouter dans la section **Paramètres.**
+1. Pour ajouter d'autres paramètres, sélectionnez **le bouton Ajouter** dans la section **Paramètres.**
 
 ### <a name="create-an-action-command-manually"></a>Créer une commande d'action manuellement
 
@@ -125,7 +126,7 @@ Pour ajouter manuellement votre commande d'extension de messagerie basée sur l'
 | `id` | Cette propriété est un ID unique que vous affectez à cette commande. La demande de l'utilisateur inclut cet ID. | Oui | 1.0 |
 | `title` | Cette propriété est un nom de commande. Cette valeur apparaît dans l'interface utilisateur. | Oui | 1.0 |
 | `type` | Cette propriété doit être une `action` . | Non | 1.4 |
-| `fetchTask` | Cette propriété est définie pour une carte adaptative ou un affichage web incorporé pour votre module de tâche, et pour une liste statique de paramètres ou lors du chargement de l'affichage `true` `false` web par un `taskInfo` . | Non | 1.4 |
+| `fetchTask` | Cette propriété est définie sur pour une carte adaptative ou un affichage web incorporé pour votre module de tâche, et pour une liste statique de paramètres ou lors du chargement de l'affichage `true` `false` web par un `taskInfo` . | Non | 1.4 |
 | `context` | Cette propriété est un tableau facultatif de valeurs qui définit l'endroit d'où l'extension de messagerie est invoquée. Les valeurs possibles sont `message`, `compose` ou `commandBox`. La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
 
 Si vous utilisez une liste statique de paramètres, vous devez également ajouter les paramètres suivants :
@@ -204,7 +205,7 @@ La section suivante est un exemple `composeExtensions` d'objet définissant deux
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à l'action d'soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Recherche d'extension de messagerie Teams   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

@@ -1,29 +1,30 @@
 ---
 title: Conception de cartes adaptatives pour votre application
-description: Découvrez comment concevoir des cartes adaptatives pour teams et obtenir le kit d’interface utilisateur Microsoft Teams.
+description: Découvrez comment concevoir des cartes adaptatives pour Teams et obtenir le Kit d'interface utilisateur Microsoft Teams.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 67a2882a0a687d5ccb48759419ecefcdf9396fc3
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604521"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020281"
 ---
-# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de cartes adaptatives pour votre application Microsoft teams
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de cartes adaptatives pour votre application Microsoft Teams
 
-Une carte adaptative contient un corps de forme libre des éléments de carte et un ensemble facultatif d’actions. Les cartes adaptatives sont des extraits de code actionnables, que vous pouvez ajouter à une conversation via un bot ou une extension de messagerie. À l’aide de texte, de graphiques et de boutons, ces cartes fournissent une meilleure communication à votre public.
+Une carte adaptative contient un corps libre d'éléments de carte et un ensemble facultatif d'actions. Les cartes adaptatives sont des extraits de contenu actionnables que vous pouvez ajouter à une conversation via un bot ou une extension de messagerie. À l'aide de texte, de graphiques et de boutons, ces cartes offrent une communication enrichie à votre public.
 
-La structure de carte adaptative est utilisée dans de nombreux produits Microsoft, y compris Teams. Vous pouvez envoyer des cartes à l’intérieur des messages à des utilisateurs via des robots ou des extensions de messagerie. Les utilisateurs peuvent effectuer des actions sur les cartes lorsqu’elles sont présentes.
+L'infrastructure de carte adaptative est utilisée dans de nombreux produits Microsoft, notamment Teams. Vous pouvez envoyer des cartes dans des messages aux utilisateurs via des bots ou des extensions de messagerie. Les utilisateurs peuvent agir sur des cartes lorsqu'ils sont présents.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemple de carte adaptative." border="false":::
 
-## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur Microsoft teams
+## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions de conception plus complètes pour les cartes adaptatives dans Teams, y compris les éléments que vous pouvez saisir et modifier selon vos besoins, dans le kit d’interface utilisateur Microsoft Teams. Le kit d’interface utilisateur aborde également les sujets essentiels tels que les thèmes, l’accessibilité et le dimensionnement réactif.
+Vous trouverez des instructions de conception plus complètes pour les cartes adaptatives dans Teams, y compris les éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d'interface utilisateur Microsoft Teams. Le kit d'interface utilisateur couvre également des sujets essentiels tels que les thèmes, l'accessibilité et le resserrement dynamique.
 
 > [!div class="nextstepaction"]
-> [Obtenir le kit d’interface utilisateur Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="adaptive-cards-designer"></a>Concepteur de cartes adaptatives
 
@@ -36,75 +37,75 @@ Vous pouvez également commencer à concevoir vos cartes adaptatives directement
 
 ### <a name="hero"></a>Hero
 
-Notre plus grande carte. À utiliser pour partager des articles ou des scénarios dans lesquels une image indique la plus grande partie de l’histoire.
+Notre carte la plus grande. Permet de partager des articles ou des scénarios où une image indique la majeure partie de l'article.
 
 :::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Exemple de carte adaptative." border="false":::
 
-### <a name="thumbnail"></a>Thumbnail
+### <a name="thumbnail"></a>Miniature
 
-Permet d’envoyer un message actionnable simple.
+À utiliser pour envoyer un message actionnable simple.
 
 :::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Exemple de carte adaptative." border="false":::
 
 ### <a name="list"></a>Répertorier
 
-À utiliser dans les scénarios dans lesquels vous souhaitez que l’utilisateur sélectionne un élément dans une liste, mais les éléments n’ont pas besoin de beaucoup d’explications.
+À utiliser dans les scénarios où vous souhaitez que l'utilisateur sélectionne un élément dans une liste, mais où les éléments n'ont pas besoin d'une grande explication.
 
 :::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Exemple de carte adaptative." border="false":::
 
 ### <a name="digest"></a>Digest
 
-À utiliser pour les résumés d’actualité et les billets d’arrondi. Remarque : nous vous recommandons d’utiliser la carte miniature pour une seule mise à jour ou un seul élément d’actualité.
+À utiliser pour les résumés d'actualités et les publications d'arrondi. Remarque : nous vous recommandons la carte miniature pour une seule mise à jour ou un élément d'actualités.
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Exemple de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Illustration shows an Adaptive Card." border="false":::
 
-### <a name="media"></a>Multimédia
+### <a name="media"></a>Support
 
-À utiliser lorsque vous souhaitez combiner du texte et des médias, comme audio ou vidéo.
+À utiliser lorsque vous souhaitez combiner du texte et du contenu multimédia, comme l'audio ou la vidéo.
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Exemple de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Illustration shows Adaptive Card." border="false":::
 
-### <a name="people"></a>Contacts
+### <a name="people"></a>Personnes
 
-Idéal pour transmettre efficacement les personnes impliquées dans une tâche.
+Il est préférable de les utiliser pour communiquer efficacement les personnes impliquées dans une tâche.
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Exemple de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Illustration d'une carte adaptative." border="false":::
 
-### <a name="request-ticket"></a>Demander un ticket
+### <a name="request-ticket"></a>Ticket de demande
 
-Utilisez pour obtenir des entrées rapides d’un utilisateur afin de créer automatiquement une tâche ou un ticket.
+Permet d'obtenir des entrées rapides d'un utilisateur pour créer automatiquement une tâche ou un ticket.
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Exemple de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Illustration de la carte adaptative." border="false":::
 
 ### <a name="imageset"></a>ImageSet
 
-Permet d’envoyer plusieurs miniatures d’image.
+Permet d'envoyer plusieurs miniatures d'image.
 
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Exemple de carte adaptative." border="false":::
 
 ### <a name="actionset"></a>ActionSet
 
-Utilisez cette option lorsque vous souhaitez que l’utilisateur sélectionne un bouton, puis recueille une entrée utilisateur supplémentaire à partir de la même carte.
+À utiliser lorsque vous souhaitez que l'utilisateur sélectionne un bouton, puis rassemblez des entrées utilisateur à partir de la même carte.
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Exemple de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="L'exemple montre une carte adaptative." border="false":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
-Permet de collecter plusieurs entrées de l’utilisateur.
+Permet de collecter plusieurs entrées de l'utilisateur.
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Exemple de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Exemple : affiche une carte adaptative." border="false":::
 
 ## <a name="anatomy"></a>Anatomie
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Illustration illustrant l’anatomie de l’interface utilisateur d’une carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'une carte adaptative." border="false":::
 
-Les cartes adaptatives offrent une grande flexibilité. Au minimum, nous vous suggérons vivement d’inclure les composants suivants dans chaque carte :
+Les cartes adaptatives offrent beaucoup de flexibilité. Toutefois, nous vous suggérons vivement d'inclure les composants suivants dans chaque carte :
 
 |Compteur|Description|
 |----------|-----------|
-|A|**En-tête**: rendez les en-têtes claires et concises, mais descriptives.|
-|B|**Copie du corps**: permet de transmettre des détails trop longs ou pas suffisamment importants pour être inclus dans l’en-tête.|
-|C|**Actions principales**: il est recommandé d’inclure les actions principales 1-3. Un maximum de six est autorisé.|
+|A|**En-tête :** rendre les en-têtes clairs et concis, mais descriptifs.|
+|B|**Copie du** corps : utilisez cette copie pour transmettre des détails trop longs ou pas assez importants à inclure dans l'en-tête.|
+|C|**Actions principales**: en tant que meilleure pratique, incluez 1 à 3 actions principales. Un maximum de six est autorisé.|
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -112,27 +113,27 @@ Les cartes adaptatives offrent une grande flexibilité. Au minimum, nous vous su
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Exemple illustrant une meilleure pratique adaptative de cartes." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Exemple montrant une meilleure pratique pour les cartes adaptatives." border="false":::
 
-#### <a name="do-use-up-to-six-primary-actions"></a>Do : utiliser jusqu’à six actions principales
+#### <a name="do-use-up-to-six-primary-actions"></a>À faire : utiliser jusqu'à six actions principales
 
-Bien que les cartes adaptatives puissent prendre en charge six actions principales, la plupart des cartes n’en ont pas besoin. Les actions doivent être claires, concises et directes. Moins est plus.
+Bien que les cartes adaptatives peuvent prendre en charge six actions principales, la plupart des cartes n'en ont pas besoin. Les actions doivent être claires, concises et simples. Moins, c'est plus.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Exemple illustrant une meilleure pratique adaptative de cartes." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Exemple de meilleures pratiques pour les cartes adaptatives." border="false":::
 
-#### <a name="dont-use-more-than-six-primary-actions"></a>Ne pas utiliser plus de six actions principales
+#### <a name="dont-use-more-than-six-primary-actions"></a>À ne pas faire : utiliser plus de six actions principales
 
-Les cartes adaptatives doivent présenter un contenu rapide et actionnable. Trop d’actions peuvent inonder un utilisateur.
+Les cartes adaptatives doivent présenter un contenu rapide et actionnable. Un trop grand nombre d'actions peut submerger un utilisateur.
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="frequency"></a>Fréquence
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Exemple illustrant une meilleure pratique adaptative de cartes." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Illustration affichant une meilleure pratique de cartes adaptatives." border="false":::
 
-#### <a name="do-be-concise"></a>Do : être concis
+#### <a name="do-be-concise"></a>À faire : soyez concis
 
-Il est facile d’envoyer plusieurs cartes dans une conversation, mais une fois que les cartes sortent de l’affichage, elles deviennent moins utiles. Essayez de vous limiter aux notions fondamentales. Cela est particulièrement vrai dans un canal où les utilisateurs ont moins de tolérance pour ce qu’ils perçoivent comme « bruit ».
+Il est facile d'envoyer plusieurs cartes dans une conversation, mais une fois que les cartes défilent en dehors de la vue, elles deviennent moins utiles. Essayez de vous limiter aux éléments essentiels. Cela est particulièrement vrai dans un canal où les utilisateurs ont moins de tolérance pour ce qu'ils considèrent comme du « bruit ».

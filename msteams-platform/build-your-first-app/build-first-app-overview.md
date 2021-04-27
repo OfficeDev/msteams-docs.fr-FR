@@ -3,18 +3,19 @@ title: Get started - Build your first app overview and prerequisites
 author: heath-hamilton
 description: Découvrez comment commencer à développer des applications Microsoft Teams et configurer votre environnement.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762038"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019992"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>Créer votre première vue d'ensemble de l'application Microsoft Teams
 
-Dans les **leçons de début,** vous allez apprendre à créer des applications Teams de base. Chaque didacticiel vous montre comment créer une application Teams simple et réelle tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
+Dans les **leçons de mise** en place, vous allez apprendre à créer des applications Teams de base. Chaque didacticiel vous montre comment créer une application Teams simple et réelle tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
 
 ## <a name="what-youll-learn"></a>Ce que vous allez apprendre
 
@@ -78,11 +79,11 @@ Vous pouvez obtenir un compte de test Teams gratuit qui permet le chargement de 
 </details>
 
 > [!Note]
-> Si vous ne pouvez toujours pas charger une version de version de chargement d'applications, voir activer les applications Teams personnalisées et activer le chargement [d'applications personnalisées.](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
+> Si vous ne pouvez toujours pas charger une version de version de chargement d'applications, voir activer les applications Teams personnalisées et activer le chargement d'applications [personnalisées.](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
 
 ### <a name="install-your-development-tools"></a>Installer vos outils de développement
 
-Vous pouvez créer des applications Teams avec vos outils préférés, mais ces leçons montrent comment vous pouvez commencer rapidement avec microsoft Teams Shared Computer Toolkit for Visual Studio Code.
+Vous pouvez créer des applications Teams à l'aide de vos outils préférés, mais ces leçons montrent comment vous pouvez commencer rapidement avec microsoft Teams Shared Computer Toolkit for Visual Studio Code.
 
 Teams affiche le contenu de l'application uniquement par le biais de connexions HTTPS. Pour déboguer certains types d'applications localement, comme un bot, vous allez apprendre à utiliser [ngrok](../concepts/build-and-test/debug.md#locally-hosted) pour configurer un tunnel sécurisé entre Teams et votre application. (Les applications De Production Teams sont hébergées dans le cloud.)
 
@@ -95,7 +96,7 @@ Teams affiche le contenu de l'application uniquement par le biais de connexions 
 
 ## <a name="about-the-tutorials"></a>À propos des didacticiels
 
-Vous pouvez commencer par les leçons de **démarrage de** Teams. Si vous ne savez pas où aller en premier, suivez notre chemin d'accès convivial débutant et créez un « Hello, World! » application.
+Vous pouvez commencer par les leçons de **démarrage de** Teams. Si vous ne savez pas où aller en premier, suivez notre chemin convivial débutant et créez un « Hello, World! » application.
 
 :::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Arborescence de compétences montrant les parcours d'apprentissage pour les leçons de « mise en route » de Teams." border="false":::
 
@@ -106,7 +107,7 @@ Une fois que vous avez installé votre compte et votre environnement, vous pouve
 ### <a name="beginner-friendly-tutorial"></a>Didacticiel convivial pour débutant
 
 > [!div class="nextstepaction"]
-> [Créer une application « Hello, World! »](../build-your-first-app/build-and-run.md)
+> [Créer une application « Hello World! »](../build-your-first-app/build-and-run.md)
 
 ### <a name="other-tutorials"></a>Autres didacticiels
 

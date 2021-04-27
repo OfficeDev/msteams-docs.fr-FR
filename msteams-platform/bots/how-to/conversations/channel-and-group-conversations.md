@@ -3,13 +3,14 @@ title: Conversations de canal et de groupe avec un bot
 author: clearab
 description: Comment envoyer, recevoir et gérer des messages pour un bot dans une conversation de canal ou de groupe.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: e1379a62e3ef7d58efe52c3f91fd9e02b3c46ac9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: cbc82471ce31edaf733bde6951648af86842ab62
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696366"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020932"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -20,11 +21,11 @@ Pour installer le bot Microsoft Teams dans une conversation d'équipe ou de grou
 Les bots d'un groupe ou d'un canal reçoivent uniquement des messages lorsqu'ils sont `@botname` mentionnés. Ils ne reçoivent aucun autre message envoyé à la conversation.
 
 > [!NOTE]
-> Le bot doit être `@mentioned` directement. Votre bot ne reçoit pas de message lorsque l'équipe ou le canal est mentionné, ou lorsqu'une personne répond à un message de votre bot sans @mentioning'
+> Le bot doit être `@mentioned` directement. Votre bot ne reçoit pas de message lorsque l'équipe ou le canal est mentionné, ou lorsqu'une personne répond à un message de votre bot sans @mentioning lui.
 
 ## <a name="design-guidelines"></a>Instructions de conception
 
-Contrairement aux conversations personnelles, dans les conversations de groupe et les canaux, votre bot doit fournir une présentation rapide. Vous devez suivre ces instructions et d'autres recommandations en matière de conception de bot. Pour plus d'informations sur la conception de bots dans Teams, voir comment concevoir des conversations de bot dans des canaux [et des conversations.](~/bots/design/bots.md)
+Contrairement aux conversations personnelles, dans les conversations de groupe et les canaux, votre bot doit fournir une présentation rapide. Vous devez suivre ces recommandations et d'autres recommandations en matière de conception de bot. Pour plus d'informations sur la conception de bots dans Teams, voir comment concevoir des conversations de bot dans des canaux [et des conversations.](~/bots/design/bots.md)
 
 À présent, vous pouvez créer de nouveaux threads de conversation et gérer facilement différentes conversations dans les canaux.
 
@@ -36,7 +37,7 @@ Ensuite, vous pouvez récupérer des mentions à l'aide de l'objet et ajouter de
 
 ## <a name="work-with-mentions"></a>Travailler avec des mentions
 
-Chaque message envoyé à votre bot à partir d'un groupe ou d'un canal contient un @mention dont le nom est dans le texte du message. Assurez-vous que l'@mention. Votre bot peut également récupérer d'autres utilisateurs mentionnés dans un message et ajouter des mentions à tous les messages qu'il envoie.
+Chaque message envoyé à votre bot à partir d'un groupe ou d'un canal contient un @mention avec son nom dans le texte du message. Assurez-vous que l'@mention. Votre bot peut également récupérer d'autres utilisateurs mentionnés dans un message et ajouter des mentions à tous les messages qu'il envoie.
 
 Vous devez également les @mentions du contenu du message reçu par votre bot.
 

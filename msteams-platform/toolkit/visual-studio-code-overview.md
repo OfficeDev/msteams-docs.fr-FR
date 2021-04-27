@@ -1,76 +1,77 @@
 ---
-title: Créer des applications avec Microsoft teams Toolkit et Visual Studio code
-description: Commencer à créer des applications personnalisées directement dans Visual Studio code avec Microsoft teams Toolkit
-keywords: Kit de développement Visual Studio Visual Studio teams
+title: Créer des applications avec le code de Shared Computer Toolkit et Visual Studio Microsoft Teams
+description: Commencer à créer d'excellentes applications personnalisées directement dans Visual Studio Code avec microsoft Teams Shared Computer Toolkit
+keywords: kit de ressources teams Visual Studio Code
+localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 350da030d15e72e2cad51c5967afab9b6f29fe9e
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 59f2943f37856c42346b2ffad4e01d88910679ae
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604472"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020260"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Créer des applications avec Team Toolkit et Visual Studio code
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Créer des applications avec le code Shared Computer Toolkit et Visual Studio Teams
 
 Le Kit de ressources Microsoft teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement deVisual Studio Code. Le kit de ressources vous guide dans le processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application Teams.
 
-## <a name="installing-the-teams-toolkit"></a>Installation du kit de développement teams
+## <a name="installing-the-teams-toolkit"></a>Installation de l'Shared Computer Toolkit
 
-Microsoft teams Toolkit for Visual Studio code peut être téléchargé à partir de [Visual Studio Marketplace](https://aka.ms/teams-toolkit) ou directement en tant qu’extension dans Visual Studio code.
+Microsoft Teams Shared Computer Toolkit for Visual Studio Code est disponible en téléchargement à partir de [Visual Studio Marketplace](https://aka.ms/teams-toolkit) ou directement en tant qu'extension dans Visual Studio Code.
 
 > [!TIP]
-> Après l’installation, vous devriez voir la boîte à outils teams dans la barre d’activité code Visual Studio. Si ce n’est pas le cas, cliquez avec le bouton droit de la barre d’activité et sélectionnez **Microsoft teams** pour épingler la boîte à outils pour un accès facile.
+> Après l'installation, les équipes doivent s'Shared Computer Toolkit dans la barre Visual Studio'activité code. Si ce n'est pas le cas, cliquez avec le bouton droit dans la barre d'activité et sélectionnez **Microsoft Teams** pour épingler le kit de ressources pour un accès facile.
 
-## <a name="using-the-toolkit"></a>Utilisation de la boîte à outils
+## <a name="using-the-toolkit"></a>Utilisation du kit de ressources
 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Importer un projet existant](#import-an-existing-teams-app-project)
 - [Configurer votre application](#configure-your-app)
-- [Empaquetage de votre application](#package-your-app)
-- [Exécuter votre application localement ou dans teams](#run-your-app)
+- [Package de votre application](#package-your-app)
+- [Exécuter votre application localement ou dans Teams](#run-your-app)
 
-## <a name="set-up-a-new-teams-project"></a>Configurer un nouveau projet teams
+## <a name="set-up-a-new-teams-project"></a>Configurer un nouveau projet Teams
 
-1. Créez un dossier/espace de travail pour votre projet dans votre environnement local.
-1. Dans Visual Studio code, sélectionnez l’icône teams ![Icône Teams](../assets/icons/favicon-16x16.png) à partir de la barre d’activité sur le côté gauche de la fenêtre.
-1. Sélectionnez **ouvrir la boîte à outils Microsoft teams** dans le menu de commandes.
-1. Sélectionnez **créer une nouvelle application teams** dans le menu de commandes.
-1. Lorsque vous y êtes invité, entrez le nom de l’espace de travail. Il sera utilisé à la fois comme nom du dossier dans lequel votre projet réside et comme nom par défaut de votre application.
-1. Appuyez sur **entrée** pour accéder à l’écran **Add Capabilities** et configurer les propriétés de votre nouvelle application.
-1. Cliquez sur le bouton **Terminer** pour terminer le processus de configuration.
+1. Créez un espace de travail/dossier pour votre projet dans votre environnement local.
+1. Dans Visual Studio code, sélectionnez l'icône Teams ![Icône Teams](../assets/icons/favicon-16x16.png) à partir de la barre d'activité sur le côté gauche de la fenêtre.
+1. Sélectionnez **Ouvrir l'Shared Computer Toolkit Microsoft Teams** dans le menu de commande.
+1. Sélectionnez **Créer une application Teams dans** le menu de commande.
+1. Lorsque vous y invitez, entrez le nom de l'espace de travail. Il sera utilisé à la fois comme nom du dossier où résidera votre projet et comme nom par défaut de votre application.
+1. Appuyez **sur Entrée** pour accéder à l'écran Ajouter des **fonctionnalités** et configurer les propriétés de votre nouvelle application.
+1. Sélectionnez le **bouton** Terminer pour terminer le processus de configuration.
 
-## <a name="import-an-existing-teams-app-project"></a>Importer un projet d’application teams existant
+## <a name="import-an-existing-teams-app-project"></a>Importer un projet d'application Teams existant
 
-1. Dans Visual Studio code, sélectionnez l’icône teams ![Icône Teams](../assets/icons/favicon-16x16.png) à partir de la barre d’activité sur le côté gauche de la fenêtre.
-1. Sélectionnez **Importer un package d’application** dans le menu de commandes.
-1. Choisissez votre fichier zip de [package d’application teams](../concepts/build-and-test/apps-package.md) existant.
-1. Cliquez sur le bouton **Sélectionner un package de publication** . L’onglet Configuration de la boîte à outils doit maintenant être renseigné avec les détails de votre application.
-1. Dans Visual Studio code, sélectionnez **fichier**  ->  **Ajouter un dossier à l’espace de travail** pour ajouter le répertoire de votre code source à l’espace de travail de code Visual Studio.
+1. Dans Visual Studio code, sélectionnez l'icône Teams ![Icône Teams](../assets/icons/favicon-16x16.png) à partir de la barre d'activité sur le côté gauche de la fenêtre.
+1. Sélectionnez **Importer un package d'application** dans le menu de commande.
+1. Choisissez votre fichier zip de [package d'application Teams](../concepts/build-and-test/apps-package.md) existant.
+1. Sélectionnez **le bouton Sélectionner un package de** publication. L'onglet configuration du kit de ressources doit maintenant être rempli avec les détails de votre application.
+1. Dans Visual Studio code, sélectionnez Fichier Ajouter un dossier à l'espace de travail pour ajouter votre répertoire de code source à l'espace   ->   Visual Studio code.
 
 ## <a name="configure-your-app"></a>Configurer votre application
 
-À son niveau principal, l’application teams adopte trois composants :
+Au cœur de l'application Teams, trois composants sont intégrés :
 
-  1. Le client Microsoft Teams (Web, de bureau ou mobile) où les utilisateurs interagissent avec votre application.
-  1. Serveur qui répond aux demandes de contenu qui s’affichent dans Teams, par exemple, le contenu de l’onglet HTML ou une carte de robot.
-  1. Package d' [application](/concepts/build-and-test/apps-package.md) teams comprenant trois fichiers :
+  1. Client Microsoft Teams (web, de bureau ou mobile) où les utilisateurs interagissent avec votre application.
+  1. Un serveur qui répond aux demandes de contenu qui sera affiché dans Teams, par exemple, du contenu d'onglet HTML ou une carte adaptative de bot .
+  1. Un [package d'application](/concepts/build-and-test/apps-package.md) Teams composé de trois fichiers :
 
   > [!div class="checklist"]
   >
-  > - La manifest.jssur 
-  > - Une [icône de couleur](../resources/schema/manifest-schema.md#icons) pour l’affichage de votre application dans le catalogue d’applications public ou d’organisation
- > - [Icône de plan](../resources/schema/manifest-schema.md#icons) pour l’affichage dans la barre d’activité de teams.
+  > - Le manifest.jssur 
+  > - Une [icône de couleur](../resources/schema/manifest-schema.md#icons) pour votre application à afficher dans le catalogue d'applications public ou de l'organisation
+ > - Icône [de plan à](../resources/schema/manifest-schema.md#icons) afficher dans la barre d'activité Teams.
 
-Lorsqu’une application est installée, le client teams analyse le fichier manifeste pour déterminer les informations nécessaires telles que le nom de votre application et l’URL où se trouvent les services.
+Lorsqu'une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l'URL où se trouvent les services.
 
-1. Pour configurer votre application, accédez à l’onglet **Microsoft teams Toolkit** dans Visual Studio code.
-1. Sélectionnez **modifier le package d’application** pour afficher la page des détails de l' **application** .
-1. La modification des champs de la page des détails de l’application met à jour le contenu de la manifest.jssur un fichier qui sera finalement envoyé dans le cadre du package d’application. *Voir* [éditeur de manifeste de l’application Studio](https://aka.ms/teams-toolkit-manifest)
+1. Pour configurer votre application, accédez à l'onglet **Shared Computer Toolkit Microsoft Teams** dans Visual Studio Code.
+1. Sélectionnez **Modifier le package d'application** pour afficher la page **Détails de l'application.**
+1. La modification des champs dans la page détails de l'application met à jour le contenu du manifest.jssur le fichier qui sera finalement intégré au package de l'application. *Voir* [l'éditeur de manifeste App Studio](https://aka.ms/teams-toolkit-manifest)
 
-## <a name="package-your-app"></a>Empaquetage de votre application
+## <a name="package-your-app"></a>Package de votre application
 
-La modification de la page de détails de l' **application** , du **manifeste** ou des fichiers **. env** dans le dossier  **. Publish** de votre application générera automatiquement votre fichier **Development.zip** . Vous devez inclure [deux icônes](../concepts/build-and-test/apps-package.md#app-icons) dans ce même dossier.
+La modification de la page de **détails** **de** l'application, du manifeste ou des fichiers **.env** dans le dossier  **.publish** de votre application génère automatiquement **Development.zip** fichier. Vous devez inclure deux [icônes](../concepts/build-and-test/apps-package.md#app-icons) dans ce même dossier.
 
 ## <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
 
@@ -78,19 +79,19 @@ La modification de la page de détails de l' **application** , du **manifeste** 
 
 ### <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
 
-Pour obtenir des instructions détaillées sur la façon d’empaqueter et de tester votre application, reportez-vous à la page **générer et exécuter* du contenu dans votre page d’accueil Project. En général, vous devez installer le serveur de votre application, le faire fonctionner, puis configurer une solution de tunneling afin que les équipes puissent accéder au contenu exécuté à partir de localhost.
+Reportez-vous à * Créer et exécuter *du* contenu dans la page d'accueil de votre projet pour obtenir des instructions détaillées sur la façon de créer un package et de tester votre application. En règle générale, vous devez installer le serveur de votre application, le faire fonctionner, puis configurer une solution de tunnel afin que Teams puisse accéder au contenu s'exécutant à partir de l'host local.
 
-### <a name="enable-development-from-localhost"></a>Activer le développement à partir de localhost
+### <a name="enable-development-from-localhost"></a>Activer le développement à partir de l'host local
 
-Si vous souhaitez déboguer votre application basée sur les onglets sur localhost à l’aide du protocole HTTPs, vous devez indiquer à votre navigateur d’approuver l’application en provenance de <https://localhost> . Accédez à la page <https://localhost:3000/tab>. Si vous voyez un avertissement indiquant que le site n’est pas approuvé, sélectionnez l’option continuer quand même. Votre application doit maintenant être accessible depuis le client Teams.
+Si vous souhaitez déboguer votre application basée sur l'onglet sur localhost à l'aide du protocole HTTPS, vous devrez indiquer à votre navigateur d'faire confiance à l'application à partir de . <https://localhost> Accédez à la page <https://localhost:3000/tab>. Si vous voyez un avertissement indiquant que le site n'est pas approuvé, choisissez l'option pour continuer malgré tout. Votre application doit maintenant être accessible à partir du client Teams.
 
-### <a name="run-your-app-in-teams"></a>Exécuter votre application dans teams
+### <a name="run-your-app-in-teams"></a>Exécuter votre application dans Teams
 
-Conditions préalables : [activer le mode aperçu développeur teams](https://aka.ms/teams-toolkit-enable-devpreview)
+Conditions préalables : activer [le mode d'aperçu pour les développeurs Teams](https://aka.ms/teams-toolkit-enable-devpreview)
 
-1. Accédez à la barre d’activité sur le côté gauche de la fenêtre de code Visual Studio.
-1. Sélectionnez l’icône **exécuter** pour afficher l’affichage **exécuter et déboguer** .
-1. Vous pouvez également utiliser le raccourci clavier `Ctrl+Shift+D` .
+1. Accédez à la barre d'activité sur le côté gauche de la Visual Studio Code.
+1. Sélectionnez **l'icône** Exécuter pour afficher **l'affichage Exécuter et déboguer.**
+1. Vous pouvez également utiliser le raccourci `Ctrl+Shift+D` clavier.
 
 > [!div class="nextstepaction"]
-> [Étape suivante : maintenance et prise en charge de votre application publiée](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [Étape suivante : maintenance et prise en charge de votre application publiée](../concepts/deploy-and-publish/appsource/post-publish/overview.md)

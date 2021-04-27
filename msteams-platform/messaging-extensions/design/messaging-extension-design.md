@@ -3,14 +3,15 @@ title: Conception de votre extension de messagerie
 description: Découvrez comment concevoir une extension de messagerie Teams et obtenir le Kit d'interface utilisateur Microsoft Teams.
 keywords: "Recommandations en matière de conception d'équipes : conseils sur les extensions de messagerie"
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697010"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020722"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Conception de votre extension de messagerie Microsoft Teams
 
@@ -59,7 +60,7 @@ Certaines options s'offrent à vous pour afficher les résultats de recherche d'
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations montrant les options de disposition pour les résultats de recherche d'extension de messagerie." border="false":::
 
-### <a name="action-commands"></a>Commandes d’action
+### <a name="action-commands"></a>Commandes d'action
 
 Les commandes d'action permettent aux utilisateurs de déclencher des actions et de traiter des demandes dans des services externes au sein de Teams. Par exemple, si votre application suit les commandes, un utilisateur peut créer une commande à l'aide du contenu du message d'un collègue directement dans sa conversation.
 
@@ -67,7 +68,7 @@ Les extensions de messagerie basées sur une action nécessitent fréquemment qu
 
 ## <a name="open-a-messaging-extension"></a>Ouvrir une extension de messagerie
 
-La zone de composition et les messages/publications sont les principaux contextes dans lequel les personnes utilisent les extensions de messagerie.
+La zone de composition et les messages/publications sont les principaux contextes dans lequel les personnes utilisent des extensions de messagerie.
 
 ### <a name="from-the-compose-box"></a>À partir de la zone de composition
 
@@ -120,7 +121,7 @@ Les extensions de messagerie vous permettent également d'insérer des liens enr
 
 **1. Collez un lien reconnu dans** la zone de composition.
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="L'exemple montre un utilisateur qui a passé un lien dans le cadre de l'exemple." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="L'exemple montre un utilisateur qui a passé un lien dans la zone de titre." border="false":::
 
 **2. Insérer du contenu**. Si votre application reconnaît l'URL dans la zone de composition, elle affiche le lien sous la mesure d'une carte qui fournit un aperçu enrichi de contenu du contenu web. (Pour plus [d'informations, voir](../../task-modules-and-cards/cards/design-effective-cards.md) les recommandations en matière de conception des cartes adaptatives.)
 
@@ -181,7 +182,7 @@ Les extensions de messagerie sont des raccourcis supposés réduire le changemen
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillez votre extension de messagerie
+#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillation votre extension de messagerie
 
 Les extensions de messagerie ne sont pas toujours faciles à trouver. Incluez des captures d'écran de son utilisation dans la page de détails de votre application. Si votre application inclut également un bot, vous pouvez inclure la documentation d'aide sur l'extension de messagerie dans une visite guidée du bot.
 

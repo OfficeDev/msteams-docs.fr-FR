@@ -2,14 +2,15 @@
 title: Télécharger votre application personnalisée
 description: Décrit comment télécharger votre application dans Microsoft Teams
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 keywords: téléchargement d'applications Teams
-ms.openlocfilehash: c9102fa5b7056dda0db8d3e260bfb3e94b7f4e56
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946479"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020806"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Téléchargement d’un package d’application dans Microsoft Teams
 
@@ -96,7 +97,7 @@ Pour un bot Teams, vous pouvez commencer par l'appel de votre bot en @mentioning
 
 Pour tester les conversations directes avec votre bot, vous pouvez y accéder via la page d'accueil de l'application, l'@mention dans un canal ou la rechercher dans la **fenêtre Nouvelle** conversation.
 
-Vous pouvez @mention bot dans une conversation ou la  rechercher dans la fenêtre Nouvelle conversation pour tester les conversations directes avec votre bot.
+Vous pouvez @mention bot dans une conversation ou le  rechercher dans la fenêtre Nouvelle conversation pour tester les conversations directes avec votre bot.
 
 ## <a name="access-your-uploaded-connector"></a>Accéder à votre connecteur téléchargé
 
@@ -112,7 +113,7 @@ Une fois l'application chargée dans l'équipe ou la conversation, les utilisate
 
 ## <a name="access-your-uploaded-messaging-extension"></a>Accéder à votre extension de messagerie téléchargée
 
-Une application téléchargée avec une extension de messagerie apparaît automatiquement dans le menu Plus **d'options** (*&#8943;*) de la zone de composition.
+Une application téléchargée avec une extension de messagerie apparaît automatiquement dans le menu Plus **d'options** (*&#8943;*) dans la zone de composition.
 
 ![Extensions de messagerie](../../assets/images/compose-extensions/cesampleapp.png)
 

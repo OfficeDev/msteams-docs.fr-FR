@@ -3,13 +3,14 @@ title: Événements de conversation
 author: WashingtonKayaker
 description: Comment travailler avec des événements de conversation à partir de votre bot Microsoft Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996029"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020027"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -41,14 +42,14 @@ L’événement `conversationUpdate` est envoyé à votre robot lorsqu’il reç
 
 Le tableau suivant présente la liste des événements de mise à jour de conversation Teams avec plus de détails :
 
-| Action        | EventType         | Méthode appelée              | Description                | Portée |
+| Action prise        | EventType         | Méthode appelée              | Description                | Portée |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Canal créé     | channelCreated    | OnTeamsChannelCreatedAsync | [Un canal est créé.](#channel-created) | Équipe |
 | Canal renommé     | channelRenamed    | OnTeamsChannelRenamedAsync | [Un canal est renommé](#channel-renamed). | Équipe |
 | Canal supprimé     | channelDeleted    | OnTeamsChannelDeletedAsync | [Un canal est supprimé.](#channel-deleted) | Équipe |
 | Canal restauré    | channelRestored    | OnTeamsChannelRestoredAsync | [Un canal est restauré.](#channel-deleted) | Équipe |
 | Membres ajoutés   | membersAdded   | OnTeamsMembersAddedAsync   | [Un membre est ajouté.](#team-members-added) | Tous |
-| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et l'équipe |
+| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et équipe |
 | Équipe renommée        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Une équipe est renommée.](#team-renamed)       | Équipe |
 | Équipe supprimée        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Une équipe est supprimée.](#team-deleted)       | Équipe |
 | Équipe archivée        | teamArchived       | OnTeamsTeamArchivedAsync    | [Une équipe est archivée.](#team-archived)       | Équipe |
@@ -148,7 +149,7 @@ async def on_teams_channel_created(
 
 L'événement renommé de canal est envoyé à votre bot chaque fois qu'un canal est renommé dans une équipe où votre bot est installé.
 
-Le code suivant montre un exemple d'événement renommé de canal :
+Le code suivant montre un exemple d'événement de changement de nom de canal :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -548,7 +549,7 @@ async def on_teams_members_added(
 `teamMemberRemoved`L'événement est envoyé à votre bot s'il est supprimé d'une équipe. L'événement est envoyé à votre bot chaque fois qu'un utilisateur est supprimé d'une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez `Activity` l'objet du `turnContext` .  Si le champ de l'objet est identique au champ de l'objet, le membre supprimé est le bot, sinon il `Id` `MembersRemoved` `Id` s'agit `Recipient` d'un utilisateur. Le bot est `Id` généralement `28:<MicrosoftAppId>` .
 
 > [!NOTE]
-> Lorsqu'un utilisateur est supprimé définitivement d'un client, `membersRemoved conversationUpdate` l'événement est déclenché.
+> Lorsqu'un utilisateur est définitivement supprimé d'un client, `membersRemoved conversationUpdate` l'événement est déclenché.
 
 Le code suivant montre un exemple d'événement supprimé des membres de l'équipe :
 
@@ -657,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Équipe renommée
 
-Votre bot est averti lorsque l'équipe dans elle a été renommée. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l'objet.
+Votre bot est averti lorsque l'équipe dans qui il se trouve a été renommé. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l'objet.
 
 Le code suivant montre un exemple d'événement renommé d'équipe :
 
@@ -974,9 +975,9 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>Équipe nonarchived
 
-Le bot reçoit une notification lorsque l'équipe dans qui il est installé n'est pasarchive. Il reçoit un `conversationUpdate` événement avec `eventType.teamUnarchived` dans `channelData` l'objet.
+Le bot reçoit une notification lorsque l'équipe dans qui il est installé n'est pasarchived. Il reçoit un `conversationUpdate` événement avec `eventType.teamUnarchived` dans `channelData` l'objet.
 
-Le code suivant montre un exemple d'événement nonarchif d'équipe :
+Le code suivant montre un exemple d'événement d'équipe nonarchif :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1056,7 +1057,7 @@ Maintenant que vous avez travaillé avec les événements de mise à jour de con
 
 ## <a name="message-reaction-events"></a>Événements de réaction aux messages
 
-L'événement est envoyé lorsqu'un utilisateur ajoute ou supprime des réactions à un message envoyé `messageReaction` par votre bot. Contient l'ID du message et le type de réaction au `replyToId` `Type` format texte. Les types de réactions sont notamment les enfants, les cœurs, les enfants, les enfants, les enfants et les surprises. Cet événement ne contient pas le contenu du message d'origine. Si le traitement des réactions à vos messages est important pour votre bot, vous devez stocker les messages lorsque vous les envoyez. Le tableau suivant fournit plus d'informations sur le type d'événement et les objets de charge utile :
+L'événement est envoyé lorsqu'un utilisateur ajoute ou supprime des réactions à un message envoyé `messageReaction` par votre bot. Contient l'ID du message et le type de réaction au `replyToId` `Type` format texte. Les types de réactions incluent notamment la femme, le cœur, l'homme, le genre, la peine et la surprise. Cet événement ne contient pas le contenu du message d'origine. Si le traitement des réactions à vos messages est important pour votre bot, vous devez stocker les messages lorsque vous les envoyez. Le tableau suivant fournit plus d'informations sur le type d'événement et les objets de charge utile :
 
 | EventType       | Objet Payload   | Description                                                             | Portée |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1288,7 +1289,7 @@ async def on_reactions_removed(
 Le bot reçoit un `installationUpdate` événement lorsque vous installez un bot sur un thread de conversation. La désinstallation du bot du thread déclenche également l'événement. Lors de l'installation d'un bot, le champ **d'action** dans l'événement est définie pour ajouter *,* et lorsque le bot est désinstallé, le champ **d'action** est définie pour *supprimer*.
  
 > [!NOTE]
-> Lorsque vous mettre à niveau une application, puis ajoutez ou supprimez un bot, l'action déclenche également `installationUpdate` l'événement. Le **champ d'action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot. 
+> Lorsque vous mettre à niveau une application, puis ajouter ou supprimer un bot, l'action déclenche également `installationUpdate` l'événement. Le **champ d'action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot. 
 
 > [!IMPORTANT]
 > Les événements de mise à jour d'installation sont en version préliminaire pour les développeurs aujourd'hui et seront généralement disponibles en mars 2021. Pour afficher les événements de mise à jour d'installation, vous pouvez déplacer votre client Teams vers la prévisualisation publique pour les développeurs et ajouter votre application à titre personnel, à une équipe ou à une conversation.

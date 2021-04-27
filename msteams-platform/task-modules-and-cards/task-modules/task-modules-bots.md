@@ -1,14 +1,15 @@
 ---
 title: Utilisation des modules de tâche dans les bots Microsoft Teams
-description: Utilisation des modules de tâche avec des bots Microsoft Teams, notamment des cartes Bot Framework, des cartes adaptatives et des liens profonds.
+description: Utilisation des modules de tâche avec des bots Microsoft Teams, notamment des cartes Bot Framework, des cartes adaptatives et des liens profonds
+localization_priority: Normal
 ms.topic: how-to
 keywords: bots d'équipes de modules de tâche
-ms.openlocfilehash: d87b55bf202184f315abf69dfc34fc4db9125c4f
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 948af0c71acb20f4d84fa25ba79618045dad9da7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696471"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020274"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>Utilisation de modules de tâche à partir de bots Microsoft Teams
 
@@ -54,9 +55,9 @@ Examinons chaque étape d'un peu plus en détail :
 
 ## <a name="submitting-the-result-of-a-task-module"></a>Envoi du résultat d'un module de tâche
 
-Lorsque l'utilisateur a terminé avec le module de tâche, la soumission du résultat au bot est similaire à la façon dont il fonctionne avec les [onglets,](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)mais il existe quelques différences, donc il est également décrit ici.
+Lorsque l'utilisateur a terminé le module de tâche, l'envoi du résultat au bot est similaire à la façon dont il fonctionne avec les [onglets,](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)mais il existe quelques différences, il est donc également décrit ici.
 
-* **HTML/JavaScript ( `TaskInfo.url` )**. Une fois que vous avez validé ce que l'utilisateur a entré, vous appelez la fonction SDK (appelée ci-après à des fins de `microsoftTeams.tasks.submitTask()` `submitTask()` lisibilité). Vous pouvez appeler sans paramètre si vous souhaitez simplement que Teams ferme le module de tâche, mais la plupart du temps vous souhaiterez passer un objet ou une chaîne `submitTask()` à votre `submitHandler` . Passez-le simplement en tant que premier paramètre, `result` . Teams appelle `submitHandler` : sera et sera `err` `null` `result` l'objet/chaîne que vous avez transmis à `submitTask()` . Si vous appelez avec un paramètre, vous devez transmettre un ou plusieurs tableaux de chaînes : cela permet à Teams de valider que l'application qui envoie le résultat est la même que celle qui a appelé le module de `submitTask()` `result`  `appId` `appId` tâche. Votre bot recevra un `task/submit` message, y compris `result` comme décrit [ci-dessous.](#payload-of-taskfetch-and-tasksubmit-messages)
+* **HTML/JavaScript ( `TaskInfo.url` )**. Une fois que vous avez validé ce que l'utilisateur a entré, vous appelez la fonction SDK (appelée ci-après à des fins de `microsoftTeams.tasks.submitTask()` `submitTask()` lisibilité). Vous pouvez appeler sans paramètre si vous souhaitez simplement que Teams ferme le module de tâche, mais la plupart du temps vous souhaiterez passer un objet ou une chaîne `submitTask()` à votre `submitHandler` . Passez-le simplement en tant que premier paramètre, `result` . Teams appelle `submitHandler` : sera et sera `err` `null` `result` l'objet/chaîne que vous avez transmis à `submitTask()` . Si vous appelez avec un paramètre, vous devez transmettre un ou plusieurs tableaux de chaînes : cela permet à Teams de valider que l'application envoyant le résultat est la même que celle qui a appelé le module de `submitTask()` `result`  `appId` `appId` tâche. Votre bot recevra un `task/submit` message, y compris `result` comme décrit [ci-dessous.](#payload-of-taskfetch-and-tasksubmit-messages)
 * **Carte adaptative ( `TaskInfo.card` )**. Le corps de la carte adaptative (tel que rempli par l'utilisateur) est envoyé au bot via un message lorsque l'utilisateur appuie sur `task/submit` un `Action.Submit` bouton.
 
 ## <a name="the-flexibility-of-tasksubmit"></a>Flexibilité de la tâche/de l'soumission
@@ -75,9 +76,9 @@ Cette section définit le schéma de ce que votre bot reçoit lorsqu'il reçoit 
 
 | Propriété | Description                          |
 | -------- | ------------------------------------ |
-| `type`   | Toujours `invoke`              |
+| `type`   | Sera toujours `invoke`              |
 | `name`   | `task/fetch`L'une ou l'autre ou`task/submit` |
-| `value`  | Charge utile définie par le développeur. Normalement, la structure de `value` l'objet reflète ce qui a été envoyé à partir de Teams. Dans ce cas, toutefois, il est différent, car nous voulons prendre en charge la récupération dynamique ( ) à partir de Bot Framework ( ) et les actions de carte adaptative ( ), et nous avons besoin d'un moyen de communiquer Teams au bot en plus de ce qui a été inclus dans `task/fetch` `value` `Action.Submit` `data` `context` `value` / `data` .<br/><br/>Pour ce faire, nous combinons les deux en un objet parent :<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `value`  | Charge utile définie par le développeur. Normalement, la structure de `value` l'objet reflète ce qui a été envoyé à partir de Teams. Dans ce cas, toutefois, il est différent, car nous voulons prendre en charge la récupération dynamique ( ) à partir de Bot Framework ( ) et les actions de carte adaptative ( ), et nous avons besoin d'un moyen de communiquer Teams au bot en plus de ce qui était inclus dans `task/fetch` `value` `Action.Submit` `data` `context` `value` / `data` .<br/><br/>Pour ce faire, nous combinons les deux en un objet parent :<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>Exemple : réception et réponse à des messages d'appel de tâche/extraction et de tâche/soumission - Node.js
 
