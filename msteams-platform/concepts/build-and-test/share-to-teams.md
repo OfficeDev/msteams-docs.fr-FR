@@ -1,117 +1,125 @@
 ---
-title: Créer un bouton de partage Teams
+title: Bouton Créer un partage avec Teams
 description: Comment ajouter le bouton Share to Teams incorporé sur votre site web
 ms.topic: reference
+localization_priority: Normal
 keywords: Partager Teams entre équipes
-ms.openlocfilehash: 46091c957137cc871095ca6a57c0d61fa79d9458
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014333"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020822"
 ---
-# <a name="create-a-share-to-teams-button-for-your-website"></a><span data-ttu-id="0035f-104">Créer un bouton Partager vers Teams sur votre site web</span><span class="sxs-lookup"><span data-stu-id="0035f-104">Create a Share-to-Teams button for your website</span></span>
+# <a name="create-share-to-teams-button"></a><span data-ttu-id="84c2b-104">Bouton Créer un partage avec Teams</span><span class="sxs-lookup"><span data-stu-id="84c2b-104">Create Share-to-Teams button</span></span>
 
->[!NOTE]
-> * <span data-ttu-id="0035f-105">Seules les versions de bureau de Edge et Chrome sont pris en charge.</span><span class="sxs-lookup"><span data-stu-id="0035f-105">Only the desktop versions of Edge and Chrome are supported.</span></span>
-> * <span data-ttu-id="0035f-106">L’utilisation de freemium ou de comptes invités n’est pas prise en charge.</span><span class="sxs-lookup"><span data-stu-id="0035f-106">Use of Freemium or guest accounts is not supported.</span></span>
+<span data-ttu-id="84c2b-105">Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons Share-to-Teams sur leurs pages web.</span><span class="sxs-lookup"><span data-stu-id="84c2b-105">Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages.</span></span> <span data-ttu-id="84c2b-106">Lorsque vous la sélectionnez, elle lance l'expérience Partager avec Teams dans une fenêtre fenêtre.</span><span class="sxs-lookup"><span data-stu-id="84c2b-106">When you select, it launches the Share-to-Teams experience in a pop-up window.</span></span> <span data-ttu-id="84c2b-107">Cela vous permet de partager un lien directement avec une personne ou un canal Microsoft Teams sans changer de contexte.</span><span class="sxs-lookup"><span data-stu-id="84c2b-107">This allows you to share a link directly to any person or Microsoft Teams channel without switching the context.</span></span> <span data-ttu-id="84c2b-108">Ce document vous guide sur la création et l'incorporation d'un bouton Partager avec Teams pour votre site web, la création de l'aperçu de votre site web et l'extension de Share-to-Teams pour l'Éducation.</span><span class="sxs-lookup"><span data-stu-id="84c2b-108">This document guides you on how to create, and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.</span></span>
 
-<span data-ttu-id="0035f-107">Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons Partager à Teams sur leurs pages web, ce qui lance l’expérience Partager avec Teams dans une fenêtre popup lorsque vous cliquez dessus.</span><span class="sxs-lookup"><span data-stu-id="0035f-107">Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages which will launch the Share to Teams experience in a popup window when clicked.</span></span> <span data-ttu-id="0035f-108">Cela vous permettra de partager un lien directement avec une personne ou un canal Microsoft Teams sans changer de contexte.</span><span class="sxs-lookup"><span data-stu-id="0035f-108">This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.</span></span>
+> [!NOTE]
+> * <span data-ttu-id="84c2b-109">Seules les versions de bureau de Edge et Chrome sont pris en charge.</span><span class="sxs-lookup"><span data-stu-id="84c2b-109">Only the desktop versions of Edge and Chrome are supported.</span></span>
+> * <span data-ttu-id="84c2b-110">L'utilisation de freemium ou de comptes invités n'est pas prise en charge.</span><span class="sxs-lookup"><span data-stu-id="84c2b-110">Use of Freemium or guest accounts is not supported.</span></span>  
 
-![Fenêtre pop-up Partager avec Teams](~/assets/images/share-to-teams-popup.png)
+<span data-ttu-id="84c2b-111">L'image suivante affiche l'expérience de partage à teams :</span><span class="sxs-lookup"><span data-stu-id="84c2b-111">The following image displays the Share-to-Teams pop-up experience:</span></span>
 
-## <a name="how-to-embed-a-share-to-teams-button"></a><span data-ttu-id="0035f-110">Comment incorporer un bouton Partager avec Teams</span><span class="sxs-lookup"><span data-stu-id="0035f-110">How to embed a Share to Teams button</span></span>
+![Fenêtre popup Share-to-Teams](~/assets/images/share-to-teams-popup.png)
 
-<span data-ttu-id="0035f-111">Tout d’abord, vous devez ajouter le `launcher.js` script sur votre page web.</span><span class="sxs-lookup"><span data-stu-id="0035f-111">First, you'll need to add the `launcher.js` script on your webpage.</span></span>
+## <a name="embed-a-share-to-teams-button"></a><span data-ttu-id="84c2b-113">Incorporer un bouton Partager dans Teams</span><span class="sxs-lookup"><span data-stu-id="84c2b-113">Embed a Share to Teams button</span></span>
 
-```html
-<script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
-```
+1. <span data-ttu-id="84c2b-114">Ajoutez `launcher.js` le script sur votre page web.</span><span class="sxs-lookup"><span data-stu-id="84c2b-114">Add the `launcher.js` script on your webpage.</span></span>
 
-<span data-ttu-id="0035f-112">Ensuite, ajoutez un élément HTML sur votre page web avec l’attribut de classe et le lien `teams-share-button` à partager dans `data-href` l’attribut.</span><span class="sxs-lookup"><span data-stu-id="0035f-112">Next, add an HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.</span></span>
+    ```html
+    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+    ```
 
-```html
-<div
-  class="teams-share-button"
-  data-href="https://<link-to-be-shared>">
-</div>
-```
+1. <span data-ttu-id="84c2b-115">Ajoutez un élément HTML sur votre page web avec l'attribut de classe et `teams-share-button` le lien à partager dans l'attribut. `data-href`</span><span class="sxs-lookup"><span data-stu-id="84c2b-115">Add a HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.</span></span>
 
-<span data-ttu-id="0035f-113">Cela ajoute l’icône Microsoft Teams à votre site web.</span><span class="sxs-lookup"><span data-stu-id="0035f-113">This will add the Microsoft Teams icon to your website.</span></span>
+    ```html
+    <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>">
+    </div>
+    ```
 
-![Icône Partager avec Teams](~/assets/icons/share-to-teams-icon.png)
+    <span data-ttu-id="84c2b-116">Une fois que vous avez terminé, l'icône Microsoft Teams est ajoutée à votre site web.</span><span class="sxs-lookup"><span data-stu-id="84c2b-116">After completing this, the Microsoft Teams icon gets added to your website.</span></span> <span data-ttu-id="84c2b-117">L'image suivante montre l'icône Partager avec Teams :</span><span class="sxs-lookup"><span data-stu-id="84c2b-117">The following image shows Share-to-Teams icon:</span></span>
 
-<span data-ttu-id="0035f-115">Si vous le souhaitez, si vous souhaitez une taille d’icône différente pour le bouton Partager avec Teams, utilisez `data-icon-px-size` l’attribut.</span><span class="sxs-lookup"><span data-stu-id="0035f-115">Optionally, if you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.</span></span>
+    ![Icône Partager avec Teams](~/assets/icons/share-to-teams-icon.png)
 
-```html
-<div
-  class="teams-share-button"
-  data-href="https://<link-to-be-shared>"
-  data-icon-px-size="64">
-</div>
-```
+1. <span data-ttu-id="84c2b-119">Sinon, si vous souhaitez une taille d'icône différente pour le bouton Partager avec Teams, utilisez `data-icon-px-size` l'attribut.</span><span class="sxs-lookup"><span data-stu-id="84c2b-119">Alternatively, if you want a different icon size for the Share-to Teams button, use the `data-icon-px-size` attribute.</span></span>
 
-<span data-ttu-id="0035f-116">Si vous savez que l’aperçu de l’URL à partir de votre lien à partager ne s’affichera pas bien dans Teams (par exemple, le lien nécessiterait l’authentification de l’utilisateur), vous pouvez désactiver l’aperçu de l’URL en ajoutant le jeu d’attributs à `data-preview` `false` .</span><span class="sxs-lookup"><span data-stu-id="0035f-116">If you know that the URL preview from your link to be shared won't render well in Teams (for example the link would require user authentication) you can disable the URL preview by adding the `data-preview` attribute set to `false`.</span></span>
+    ```html
+    <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-icon-px-size="64">
+    </div>
+    ```
+1. <span data-ttu-id="84c2b-120">Si le lien partagé nécessite l'authentification de l'utilisateur et que l'aperçu de l'URL de votre lien à partager ne s'affiche pas bien dans Teams, vous pouvez désactiver l'aperçu de l'URL en ajoutant le jeu d'attributs à `data-preview` `false` .</span><span class="sxs-lookup"><span data-stu-id="84c2b-120">If the shared link requires user authentication, and the URL preview from your link to be shared does not render well in Teams then, you can disable the URL preview by adding the `data-preview` attribute set to `false`.</span></span>
 
-```html
-<div
-  class="teams-share-button"
-  data-href="https://<link-to-be-shared>"
-  data-preview="false">
-</div>
-```
+    ```html
+    <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-preview="false">
+    </div>
+    ```
 
-<span data-ttu-id="0035f-117">Si votre page restituera dynamiquement le contenu, vous pouvez utiliser la méthode pour forcer le bouton Partager à s’restituer à `shareToMicrosoftTeams.renderButtons()` l’endroit approprié dans le pipeline. </span><span class="sxs-lookup"><span data-stu-id="0035f-117">If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.</span></span>
+1. <span data-ttu-id="84c2b-121">Si votre page restituera dynamiquement le contenu, vous pouvez utiliser la méthode pour forcer le bouton Partager à s'restituer à `shareToMicrosoftTeams.renderButtons()` l'endroit approprié dans le pipeline. </span><span class="sxs-lookup"><span data-stu-id="84c2b-121">If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.</span></span>
 
-## <a name="crafting-your-website-preview"></a><span data-ttu-id="0035f-118">Création de l’aperçu de votre site web</span><span class="sxs-lookup"><span data-stu-id="0035f-118">Crafting your website preview</span></span>
+## <a name="craft-your-website-preview"></a><span data-ttu-id="84c2b-122">Création de la prévisualisation de votre site web</span><span class="sxs-lookup"><span data-stu-id="84c2b-122">Craft your website preview</span></span>
 
-<span data-ttu-id="0035f-119">Lorsque votre site web est partagé avec Teams, la carte insérée dans le canal sélectionné contient un aperçu de votre site web.</span><span class="sxs-lookup"><span data-stu-id="0035f-119">When your website is shared to Teams, the card that is inserted into the selected channel will contain a preview of your website.</span></span> <span data-ttu-id="0035f-120">Vous pouvez contrôler le comportement de cet aperçu en vous assurant que les métadon données appropriées sont ajoutées au site web en cours de partage `data-href` (l’URL).</span><span class="sxs-lookup"><span data-stu-id="0035f-120">You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared (the `data-href` URL).</span></span> <span data-ttu-id="0035f-121">Le tableau ci-dessous présente les balises nécessaires.</span><span class="sxs-lookup"><span data-stu-id="0035f-121">The table below outlines the necessary tags.</span></span> <span data-ttu-id="0035f-122">Vous pouvez utiliser les versions html par défaut ou la version Open Graph.</span><span class="sxs-lookup"><span data-stu-id="0035f-122">You can use either the html default versions, or the Open Graph version.</span></span>
+<span data-ttu-id="84c2b-123">Lorsque votre site web est partagé avec Teams, la carte insérée dans le canal sélectionné contient un aperçu de votre site web.</span><span class="sxs-lookup"><span data-stu-id="84c2b-123">When your website is shared to Teams, the card that is inserted into the selected channel contains a preview of your website.</span></span> <span data-ttu-id="84c2b-124">Vous pouvez contrôler le comportement de cet aperçu en vous assurant que les métadon données appropriées sont ajoutées au site web en cours de partage, telles que `data-href` l'URL.</span><span class="sxs-lookup"><span data-stu-id="84c2b-124">You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared, such as the `data-href` URL.</span></span>  
 
-<span data-ttu-id="0035f-123">Pour que l’aperçu s’affiche, vous devez :</span><span class="sxs-lookup"><span data-stu-id="0035f-123">In order for the preview to be displayed you must:</span></span>
+<span data-ttu-id="84c2b-125">**Pour afficher l'aperçu**</span><span class="sxs-lookup"><span data-stu-id="84c2b-125">**To display the preview**</span></span>
 
-* <span data-ttu-id="0035f-124">Incluez soit une image miniature, soit un titre et une description (pour obtenir de meilleurs résultats, incluez les trois).</span><span class="sxs-lookup"><span data-stu-id="0035f-124">Include either a Thumbnail image, or both a Title and Description (for best results, include all three).</span></span>
-* <span data-ttu-id="0035f-125">L’URL partagée ne peut pas nécessiter d’authentification.</span><span class="sxs-lookup"><span data-stu-id="0035f-125">The URL being shared cannot require authentication.</span></span> <span data-ttu-id="0035f-126">Si c’est le cas, vous pouvez toujours le partager, mais l’aperçu ne sera pas créé.</span><span class="sxs-lookup"><span data-stu-id="0035f-126">If it does you can still share it, but the preview will not be created.</span></span>
+* <span data-ttu-id="84c2b-126">Vous devez inclure soit une **image miniature,** soit un **titre** et une **description.**</span><span class="sxs-lookup"><span data-stu-id="84c2b-126">You must include either a **Thumbnail image**, or both a **Title** and **Description**.</span></span> <span data-ttu-id="84c2b-127">Pour obtenir de meilleurs résultats, incluez les trois.</span><span class="sxs-lookup"><span data-stu-id="84c2b-127">For best results, include all three.</span></span>
+* <span data-ttu-id="84c2b-128">L'URL partagée ne nécessite pas d'authentification.</span><span class="sxs-lookup"><span data-stu-id="84c2b-128">The shared URL does not require authentication.</span></span> <span data-ttu-id="84c2b-129">Si elle nécessite une authentification, vous pouvez la partager, mais l'aperçu n'est pas créé.</span><span class="sxs-lookup"><span data-stu-id="84c2b-129">If it requires authentication, you can share it, but the preview is not created.</span></span>
 
-|<span data-ttu-id="0035f-127">Valeur</span><span class="sxs-lookup"><span data-stu-id="0035f-127">Value</span></span>|<span data-ttu-id="0035f-128">Balise META</span><span class="sxs-lookup"><span data-stu-id="0035f-128">Meta tag</span></span>| <span data-ttu-id="0035f-129">Open Graph</span><span class="sxs-lookup"><span data-stu-id="0035f-129">Open Graph</span></span>|
+<span data-ttu-id="84c2b-130">Le tableau suivant présente les balises nécessaires :</span><span class="sxs-lookup"><span data-stu-id="84c2b-130">The following table outlines the necessary tags:</span></span>
+
+|<span data-ttu-id="84c2b-131">Valeur</span><span class="sxs-lookup"><span data-stu-id="84c2b-131">Value</span></span>|<span data-ttu-id="84c2b-132">Balise META</span><span class="sxs-lookup"><span data-stu-id="84c2b-132">Meta tag</span></span>| <span data-ttu-id="84c2b-133">Open Graph</span><span class="sxs-lookup"><span data-stu-id="84c2b-133">Open Graph</span></span>|
 |----|----|----|
-|<span data-ttu-id="0035f-130">Titre</span><span class="sxs-lookup"><span data-stu-id="0035f-130">Title</span></span>|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|<span data-ttu-id="0035f-131">Description</span><span class="sxs-lookup"><span data-stu-id="0035f-131">Description</span></span>|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
-|<span data-ttu-id="0035f-132">Image miniature</span><span class="sxs-lookup"><span data-stu-id="0035f-132">Thumbnail Image</span></span>| <span data-ttu-id="0035f-133">aucune</span><span class="sxs-lookup"><span data-stu-id="0035f-133">none</span></span> |`<meta property="og:image" content="http://example.com/image.jpg">`|
+|<span data-ttu-id="84c2b-134">Titre</span><span class="sxs-lookup"><span data-stu-id="84c2b-134">Title</span></span>|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|<span data-ttu-id="84c2b-135">Description</span><span class="sxs-lookup"><span data-stu-id="84c2b-135">Description</span></span>|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|<span data-ttu-id="84c2b-136">Image miniature</span><span class="sxs-lookup"><span data-stu-id="84c2b-136">Thumbnail Image</span></span>| <span data-ttu-id="84c2b-137">aucun.</span><span class="sxs-lookup"><span data-stu-id="84c2b-137">none.</span></span> |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-## <a name="share-to-teams-for-education"></a><span data-ttu-id="0035f-134">Partager avec Teams pour l’Éducation</span><span class="sxs-lookup"><span data-stu-id="0035f-134">Share to Teams for Education</span></span>
+<span data-ttu-id="84c2b-138">Vous pouvez utiliser les versions html par défaut ou la version Open Graph.</span><span class="sxs-lookup"><span data-stu-id="84c2b-138">You can use either the html default versions, or the Open Graph version.</span></span>
 
-<span data-ttu-id="0035f-135">Pour les enseignants qui utilisent le bouton Partager avec Teams, vous avez une option supplémentaire pour `Create an Assignment` .</span><span class="sxs-lookup"><span data-stu-id="0035f-135">For teachers using the Share to Teams button you'll be given an additional option to `Create an Assignment`.</span></span> <span data-ttu-id="0035f-136">Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée en fonction du lien partagé.</span><span class="sxs-lookup"><span data-stu-id="0035f-136">This enables you to quickly create an assignment in the chosen Team based on the shared link.</span></span>
+## <a name="share-to-teams-for-education"></a><span data-ttu-id="84c2b-139">Partager avec Teams pour l'Éducation</span><span class="sxs-lookup"><span data-stu-id="84c2b-139">Share to Teams for Education</span></span>
 
-![Fenêtre pop-up Partager avec Teams](~/assets/images/share-to-teams-popup-edu.png)
+<span data-ttu-id="84c2b-140">Pour les enseignants qui utilisent le bouton Partager avec Teams, il existe une option supplémentaire pour `Create an Assignment` .</span><span class="sxs-lookup"><span data-stu-id="84c2b-140">For teachers using the Share to Teams button, there is an additional option to `Create an Assignment`.</span></span> <span data-ttu-id="84c2b-141">Cela vous permet de créer rapidement une affectation dans l'équipe sélectionnée, en fonction du lien partagé.</span><span class="sxs-lookup"><span data-stu-id="84c2b-141">This enables you to quickly create an assignment in the chosen Team, based on the shared link.</span></span> <span data-ttu-id="84c2b-142">L'image suivante affiche Share-to-Teams pour l'éducation :</span><span class="sxs-lookup"><span data-stu-id="84c2b-142">The following image displays Share-to-Teams for education:</span></span> 
 
-## <a name="full-launcherjs-definition"></a><span data-ttu-id="0035f-138">Définition launcher.js complète</span><span class="sxs-lookup"><span data-stu-id="0035f-138">Full launcher.js definition</span></span>
+![Partager avec l'éducation popup Teams](~/assets/images/share-to-teams-popup-edu.png)
 
-| <span data-ttu-id="0035f-139">Propriété</span><span class="sxs-lookup"><span data-stu-id="0035f-139">Property</span></span> | <span data-ttu-id="0035f-140">Attribut HTML</span><span class="sxs-lookup"><span data-stu-id="0035f-140">HTML attribute</span></span> | <span data-ttu-id="0035f-141">Type</span><span class="sxs-lookup"><span data-stu-id="0035f-141">Type</span></span> | <span data-ttu-id="0035f-142">Par défaut</span><span class="sxs-lookup"><span data-stu-id="0035f-142">Default</span></span> | <span data-ttu-id="0035f-143">Description</span><span class="sxs-lookup"><span data-stu-id="0035f-143">Description</span></span> |
+## <a name="full-launcherjs-definition"></a><span data-ttu-id="84c2b-144">Définition launcher.js complète</span><span class="sxs-lookup"><span data-stu-id="84c2b-144">Full launcher.js definition</span></span>
+
+| <span data-ttu-id="84c2b-145">Propriété</span><span class="sxs-lookup"><span data-stu-id="84c2b-145">Property</span></span> | <span data-ttu-id="84c2b-146">Attribut HTML</span><span class="sxs-lookup"><span data-stu-id="84c2b-146">HTML attribute</span></span> | <span data-ttu-id="84c2b-147">Type</span><span class="sxs-lookup"><span data-stu-id="84c2b-147">Type</span></span> | <span data-ttu-id="84c2b-148">Par défaut</span><span class="sxs-lookup"><span data-stu-id="84c2b-148">Default</span></span> | <span data-ttu-id="84c2b-149">Description</span><span class="sxs-lookup"><span data-stu-id="84c2b-149">Description</span></span> |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| <span data-ttu-id="0035f-144">href</span><span class="sxs-lookup"><span data-stu-id="0035f-144">href</span></span> | `data-href` | <span data-ttu-id="0035f-145">string</span><span class="sxs-lookup"><span data-stu-id="0035f-145">string</span></span> | <span data-ttu-id="0035f-146">s/o</span><span class="sxs-lookup"><span data-stu-id="0035f-146">n/a</span></span> | <span data-ttu-id="0035f-147">Href du contenu à partager.</span><span class="sxs-lookup"><span data-stu-id="0035f-147">The href of the content to share.</span></span> |
-| <span data-ttu-id="0035f-148">preview</span><span class="sxs-lookup"><span data-stu-id="0035f-148">preview</span></span> | `data-preview` | <span data-ttu-id="0035f-149">booléen (sous la mesure d’une chaîne)</span><span class="sxs-lookup"><span data-stu-id="0035f-149">boolean (as a string)</span></span> | `true` | <span data-ttu-id="0035f-150">Indique si un aperçu du contenu à partager est à afficher ou non.</span><span class="sxs-lookup"><span data-stu-id="0035f-150">Whether or not to show a preview of the content to share.</span></span> |
-| <span data-ttu-id="0035f-151">iconPxSize</span><span class="sxs-lookup"><span data-stu-id="0035f-151">iconPxSize</span></span> | `data-icon-px-size` | <span data-ttu-id="0035f-152">number (en tant que chaîne)</span><span class="sxs-lookup"><span data-stu-id="0035f-152">number (as a string)</span></span> | `32` | <span data-ttu-id="0035f-153">Taille en pixels du bouton Partager avec Teams à restituer.</span><span class="sxs-lookup"><span data-stu-id="0035f-153">The size in pixels of the Share-to-Teams button to render.</span></span> |
-| <span data-ttu-id="0035f-154">msgText</span><span class="sxs-lookup"><span data-stu-id="0035f-154">msgText</span></span> | `data-msg-text` | <span data-ttu-id="0035f-155">string</span><span class="sxs-lookup"><span data-stu-id="0035f-155">string</span></span> | <span data-ttu-id="0035f-156">s/o</span><span class="sxs-lookup"><span data-stu-id="0035f-156">n/a</span></span> | <span data-ttu-id="0035f-157">Texte par défaut à insérer avant le lien dans la zone de composition du message (limite de 200 caractères)</span><span class="sxs-lookup"><span data-stu-id="0035f-157">Default Text to be inserted before the link in the message compose box (200 character limit)</span></span> |
-| <span data-ttu-id="0035f-158">assignInstr</span><span class="sxs-lookup"><span data-stu-id="0035f-158">assignInstr</span></span> | `data-assign-instr` | <span data-ttu-id="0035f-159">string</span><span class="sxs-lookup"><span data-stu-id="0035f-159">string</span></span> | <span data-ttu-id="0035f-160">s/o</span><span class="sxs-lookup"><span data-stu-id="0035f-160">n/a</span></span> | <span data-ttu-id="0035f-161">Texte par défaut à insérer dans le champ d’affectations « Instructions » (limite de 200 caractères)</span><span class="sxs-lookup"><span data-stu-id="0035f-161">Default Text to be inserted in the assignments "Instructions" field (200 character limit)</span></span> |
-| <span data-ttu-id="0035f-162">assignTitle</span><span class="sxs-lookup"><span data-stu-id="0035f-162">assignTitle</span></span> | `data-assign-title` | <span data-ttu-id="0035f-163">string</span><span class="sxs-lookup"><span data-stu-id="0035f-163">string</span></span> | <span data-ttu-id="0035f-164">s/o</span><span class="sxs-lookup"><span data-stu-id="0035f-164">n/a</span></span> | <span data-ttu-id="0035f-165">Texte par défaut à insérer dans le champ « Titre » des affectations (limite de 50 caractères)</span><span class="sxs-lookup"><span data-stu-id="0035f-165">Default Text to be inserted in the assignments "Title" field (50 character limit)</span></span> |
+| <span data-ttu-id="84c2b-150">href</span><span class="sxs-lookup"><span data-stu-id="84c2b-150">href</span></span> | `data-href` | <span data-ttu-id="84c2b-151">string</span><span class="sxs-lookup"><span data-stu-id="84c2b-151">string</span></span> | <span data-ttu-id="84c2b-152">s/o</span><span class="sxs-lookup"><span data-stu-id="84c2b-152">n/a</span></span> | <span data-ttu-id="84c2b-153">Href du contenu à partager.</span><span class="sxs-lookup"><span data-stu-id="84c2b-153">The href of the content to share.</span></span> |
+| <span data-ttu-id="84c2b-154">preview</span><span class="sxs-lookup"><span data-stu-id="84c2b-154">preview</span></span> | `data-preview` | <span data-ttu-id="84c2b-155">booléen (sous la mesure d'une chaîne)</span><span class="sxs-lookup"><span data-stu-id="84c2b-155">boolean (as a string)</span></span> | `true` | <span data-ttu-id="84c2b-156">Indique si un aperçu du contenu à partager est à afficher ou non.</span><span class="sxs-lookup"><span data-stu-id="84c2b-156">Whether or not to show a preview of the content to share.</span></span> |
+| <span data-ttu-id="84c2b-157">iconPxSize</span><span class="sxs-lookup"><span data-stu-id="84c2b-157">iconPxSize</span></span> | `data-icon-px-size` | <span data-ttu-id="84c2b-158">number (en tant que chaîne)</span><span class="sxs-lookup"><span data-stu-id="84c2b-158">number (as a string)</span></span> | `32` | <span data-ttu-id="84c2b-159">Taille en pixels du bouton Partager avec Teams à restituer.</span><span class="sxs-lookup"><span data-stu-id="84c2b-159">The size in pixels of the Share-to-Teams button to render.</span></span> |
+| <span data-ttu-id="84c2b-160">msgText</span><span class="sxs-lookup"><span data-stu-id="84c2b-160">msgText</span></span> | `data-msg-text` | <span data-ttu-id="84c2b-161">string</span><span class="sxs-lookup"><span data-stu-id="84c2b-161">string</span></span> | <span data-ttu-id="84c2b-162">s/o</span><span class="sxs-lookup"><span data-stu-id="84c2b-162">n/a</span></span> | <span data-ttu-id="84c2b-163">Texte par défaut à insérer avant le lien dans la zone de composition du message.</span><span class="sxs-lookup"><span data-stu-id="84c2b-163">Default Text to be inserted before the link in the message compose box.</span></span> <span data-ttu-id="84c2b-164">Le nombre maximal de caractères est de 200.</span><span class="sxs-lookup"><span data-stu-id="84c2b-164">Maximum number of characters is 200.</span></span> |
+| <span data-ttu-id="84c2b-165">assignInstr</span><span class="sxs-lookup"><span data-stu-id="84c2b-165">assignInstr</span></span> | `data-assign-instr` | <span data-ttu-id="84c2b-166">string</span><span class="sxs-lookup"><span data-stu-id="84c2b-166">string</span></span> | <span data-ttu-id="84c2b-167">s/o</span><span class="sxs-lookup"><span data-stu-id="84c2b-167">n/a</span></span> | <span data-ttu-id="84c2b-168">Texte par défaut à insérer dans le champ « Instructions » des affectations.</span><span class="sxs-lookup"><span data-stu-id="84c2b-168">Default Text to be inserted in the assignments "Instructions" field.</span></span> <span data-ttu-id="84c2b-169">Le nombre maximal de caractères est de 200.</span><span class="sxs-lookup"><span data-stu-id="84c2b-169">Maximum number of characters is 200.</span></span> |
+| <span data-ttu-id="84c2b-170">assignTitle</span><span class="sxs-lookup"><span data-stu-id="84c2b-170">assignTitle</span></span> | `data-assign-title` | <span data-ttu-id="84c2b-171">string</span><span class="sxs-lookup"><span data-stu-id="84c2b-171">string</span></span> | <span data-ttu-id="84c2b-172">s/o</span><span class="sxs-lookup"><span data-stu-id="84c2b-172">n/a</span></span> | <span data-ttu-id="84c2b-173">Texte par défaut à insérer dans le champ « Titre » des affectations.</span><span class="sxs-lookup"><span data-stu-id="84c2b-173">Default Text to be inserted in the assignments "Title" field.</span></span> <span data-ttu-id="84c2b-174">Le nombre maximal de caractères est de 50.</span><span class="sxs-lookup"><span data-stu-id="84c2b-174">Maximum number of characters is 50.</span></span> |
 
-### <a name="methods"></a><span data-ttu-id="0035f-166">Méthodes</span><span class="sxs-lookup"><span data-stu-id="0035f-166">Methods</span></span>
+### <a name="methods"></a><span data-ttu-id="84c2b-175">Méthodes</span><span class="sxs-lookup"><span data-stu-id="84c2b-175">Methods</span></span>
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 
-<span data-ttu-id="0035f-167">`options` (facultatif) : `{ elements?: HTMLElement[] }`</span><span class="sxs-lookup"><span data-stu-id="0035f-167">`options` (optional): `{ elements?: HTMLElement[] }`</span></span>
+<span data-ttu-id="84c2b-176">`options` (facultatif) : `{ elements?: HTMLElement[] }`</span><span class="sxs-lookup"><span data-stu-id="84c2b-176">`options` (optional): `{ elements?: HTMLElement[] }`</span></span>
 
-<span data-ttu-id="0035f-168">Restituer tous les boutons de partage actuellement présents sur la page.</span><span class="sxs-lookup"><span data-stu-id="0035f-168">Renders all share buttons currently on the page.</span></span> <span data-ttu-id="0035f-169">Si un objet facultatif est fourni avec une liste d’éléments, ces éléments sont restituer dans `options` des boutons de partage.</span><span class="sxs-lookup"><span data-stu-id="0035f-169">If an optional `options` object is supplied with a list of elements, those elements will be rendered into share buttons.</span></span>
+<span data-ttu-id="84c2b-177">Actuellement, tous les boutons de partage sont restituer sur la page.</span><span class="sxs-lookup"><span data-stu-id="84c2b-177">Currently, all share buttons are rendered on the page.</span></span> <span data-ttu-id="84c2b-178">Si un objet facultatif est fourni avec une liste d'éléments, ces éléments sont restituer dans `options` des boutons de partage.</span><span class="sxs-lookup"><span data-stu-id="84c2b-178">If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.</span></span>
 
-### <a name="setting-default-form-values"></a><span data-ttu-id="0035f-170">Définition des valeurs de formulaire par défaut</span><span class="sxs-lookup"><span data-stu-id="0035f-170">Setting default form values</span></span>
+### <a name="set-default-form-values"></a><span data-ttu-id="84c2b-179">Définir les valeurs de formulaire par défaut</span><span class="sxs-lookup"><span data-stu-id="84c2b-179">Set default form values</span></span>
 
-<span data-ttu-id="0035f-171">Si vous le souhaitez, vous pouvez choisir de définir des valeurs par défaut pour les champs suivants dans le formulaire Partager avec Teams :</span><span class="sxs-lookup"><span data-stu-id="0035f-171">Optionally, you can choose to set default values for the following fields on the Share to Teams form:</span></span>
+<span data-ttu-id="84c2b-180">Vous pouvez choisir de définir des valeurs par défaut pour les champs suivants dans le formulaire Partager avec Teams :</span><span class="sxs-lookup"><span data-stu-id="84c2b-180">You can select to set default values for the following fields on the Share to Teams form:</span></span>
 
-* <span data-ttu-id="0035f-172">Dites quelque chose à ce sujet ( `msgText` )</span><span class="sxs-lookup"><span data-stu-id="0035f-172">Say something about this (`msgText`)</span></span>
-* <span data-ttu-id="0035f-173">Instructions d’affectation ( `assignInstr` )</span><span class="sxs-lookup"><span data-stu-id="0035f-173">Assignment Instructions (`assignInstr`)</span></span>
-* <span data-ttu-id="0035f-174">Titre de l’affectation ( `assignTitle` )</span><span class="sxs-lookup"><span data-stu-id="0035f-174">Assignment Title (`assignTitle`)</span></span>
+* <span data-ttu-id="84c2b-181">Dites quelque chose à ce sujet : `msgText`</span><span class="sxs-lookup"><span data-stu-id="84c2b-181">Say something about this: `msgText`</span></span>
+* <span data-ttu-id="84c2b-182">Instructions d'affectation : `assignInstr`</span><span class="sxs-lookup"><span data-stu-id="84c2b-182">Assignment Instructions: `assignInstr`</span></span>
+* <span data-ttu-id="84c2b-183">Titre de l'affectation : `assignTitle`</span><span class="sxs-lookup"><span data-stu-id="84c2b-183">Assignment Title: `assignTitle`</span></span>
 
-#### <a name="example-default-form-values"></a><span data-ttu-id="0035f-175">Exemple : valeurs de formulaire par défaut</span><span class="sxs-lookup"><span data-stu-id="0035f-175">Example: Default form values</span></span>
+#### <a name="example"></a><span data-ttu-id="84c2b-184">Exemple</span><span class="sxs-lookup"><span data-stu-id="84c2b-184">Example</span></span>
+
+ <span data-ttu-id="84c2b-185">Les valeurs de formulaire par défaut sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="84c2b-185">Default form values are given in the following example:</span></span>
 
 ```html
 <span
@@ -122,3 +130,8 @@ ms.locfileid: "50014333"
     data-assign-instr="Default Assignment Instructions"
 ></span>
 ```
+
+## <a name="see-also"></a><span data-ttu-id="84c2b-186">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="84c2b-186">See also</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="84c2b-187">Intégrer les applications Web</span><span class="sxs-lookup"><span data-stu-id="84c2b-187">Integrate web apps</span></span>](~/samples/integrate-web-apps-overview.md)

@@ -1,27 +1,28 @@
 ---
-title: Exemples de code d’application
-description: Liens et descriptions d’exemples d’applications pour la plateforme de développement Microsoft Teams
+title: Exemples de code d'application
+description: Liens et descriptions d'exemples d'applications pour la plateforme de développement Microsoft Teams
+localization_priority: Normal
 ms.topic: reference
 keywords: Exemples de développement Microsoft Teams
-ms.openlocfilehash: 44e5f5dda096bdfa0a214c1b7439d13c28c146c6
-ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
+ms.openlocfilehash: 99a30d78a1e8dad6f2147e66ed67f7b08eeaef04
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "50270776"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018368"
 ---
-# <a name="tutorials-for-the-microsoft-teams-developer-platform"></a><span data-ttu-id="8edaf-104">Didacticiels pour la plateforme de développement Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="8edaf-104">Tutorials for the Microsoft Teams developer platform</span></span>
+# <a name="tutorials-for-the-microsoft-teams-developer-platform"></a><span data-ttu-id="fddf2-104">Didacticiels pour la plateforme de développement Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="fddf2-104">Tutorials for the Microsoft Teams developer platform</span></span>
 
-<span data-ttu-id="8edaf-105">Vous y trouverez une liste de didacticiels qui montrent comment étendre les fonctionnalités de la plateforme de développement Teams en créant des applications personnalisées.</span><span class="sxs-lookup"><span data-stu-id="8edaf-105">Here you will find a list of tutorials that demonstrate how you can extend the Teams developer platform capabilities by creating custom apps.</span></span>
+<span data-ttu-id="fddf2-105">Vous y trouverez une liste de didacticiels qui montrent comment étendre les fonctionnalités de la plateforme de développement Teams en créant des applications personnalisées.</span><span class="sxs-lookup"><span data-stu-id="fddf2-105">Here you will find a list of tutorials that demonstrate how you can extend the Teams developer platform capabilities by creating custom apps.</span></span>
 
-## <a name="getting-started-with-microsoft-learn"></a><span data-ttu-id="8edaf-106">Mise en place de Microsoft Learn</span><span class="sxs-lookup"><span data-stu-id="8edaf-106">Getting started with Microsoft Learn</span></span>
+## <a name="getting-started-with-microsoft-learn"></a><span data-ttu-id="fddf2-106">Mise en place de Microsoft Learn</span><span class="sxs-lookup"><span data-stu-id="fddf2-106">Getting started with Microsoft Learn</span></span>
 
-| <span data-ttu-id="8edaf-107">**Fonctionnalité**</span><span class="sxs-lookup"><span data-stu-id="8edaf-107">**Capability**</span></span>| <span data-ttu-id="8edaf-108">**Module Learn**</span><span class="sxs-lookup"><span data-stu-id="8edaf-108">**Learn module**</span></span>|
+| <span data-ttu-id="fddf2-107">**Fonctionnalité**</span><span class="sxs-lookup"><span data-stu-id="fddf2-107">**Capability**</span></span>| <span data-ttu-id="fddf2-108">**Module Learn**</span><span class="sxs-lookup"><span data-stu-id="fddf2-108">**Learn module**</span></span>|
 |--------|-------------|
-| <span data-ttu-id="8edaf-109">Onglets : expériences web incorporées</span><span class="sxs-lookup"><span data-stu-id="8edaf-109">Tabs  — embedded web experiences</span></span>  |  [<span data-ttu-id="8edaf-110">Créez des expériences web incorporées avec les onglets pour Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="8edaf-110">Create embedded web experiences with tabs for Microsoft Teams</span></span>](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
-| <span data-ttu-id="8edaf-111">Webhooks et connecteurs</span><span class="sxs-lookup"><span data-stu-id="8edaf-111">Webhooks and connectors</span></span>  |  [<span data-ttu-id="8edaf-112">Connecter des services web à Microsoft Teams à l’aide de webhooks et de connecteurs Office 365</span><span class="sxs-lookup"><span data-stu-id="8edaf-112">Connect web services to Microsoft Teams with webhooks and Office 365 Connectors</span></span>](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
-|<span data-ttu-id="8edaf-113">Extensions de messagerie</span><span class="sxs-lookup"><span data-stu-id="8edaf-113">Messaging extensions</span></span>  | [<span data-ttu-id="8edaf-114">Interactions orientées sur des tâches dans Microsoft Teams avec les extensions de messagerie</span><span class="sxs-lookup"><span data-stu-id="8edaf-114">Task-oriented interactions in Microsoft Teams with messaging extensions</span></span>](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
-| <span data-ttu-id="8edaf-115">Modules de tâche</span><span class="sxs-lookup"><span data-stu-id="8edaf-115">Task modules</span></span> |  [<span data-ttu-id="8edaf-116">Collecter des entrées dans Microsoft Teams à l’aide de modules de tâche</span><span class="sxs-lookup"><span data-stu-id="8edaf-116">Collect input in Microsoft Teams with Task Modules</span></span>](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
-| <span data-ttu-id="8edaf-117">Bots conversationnels</span><span class="sxs-lookup"><span data-stu-id="8edaf-117">Conversational bots</span></span>  | [<span data-ttu-id="8edaf-118">Créer des bots conversationnels interactifs pour Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="8edaf-118">Create interactive conversational bots for Microsoft Teams</span></span>](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
+| <span data-ttu-id="fddf2-109">Onglets : expériences web incorporées</span><span class="sxs-lookup"><span data-stu-id="fddf2-109">Tabs  — embedded web experiences</span></span>  |  [<span data-ttu-id="fddf2-110">Créez des expériences web incorporées avec les onglets pour Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="fddf2-110">Create embedded web experiences with tabs for Microsoft Teams</span></span>](https://docs.microsoft.com/learn/modules/embedded-web-experiences/) |
+| <span data-ttu-id="fddf2-111">Webhooks et connecteurs</span><span class="sxs-lookup"><span data-stu-id="fddf2-111">Webhooks and connectors</span></span>  |  [<span data-ttu-id="fddf2-112">Connecter des services web à Microsoft Teams à l’aide de webhooks et de connecteurs Office 365</span><span class="sxs-lookup"><span data-stu-id="fddf2-112">Connect web services to Microsoft Teams with webhooks and Office 365 Connectors</span></span>](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
+|<span data-ttu-id="fddf2-113">Extensions de messagerie</span><span class="sxs-lookup"><span data-stu-id="fddf2-113">Messaging extensions</span></span>  | [<span data-ttu-id="fddf2-114">Interactions orientées sur des tâches dans Microsoft Teams avec les extensions de messagerie</span><span class="sxs-lookup"><span data-stu-id="fddf2-114">Task-oriented interactions in Microsoft Teams with messaging extensions</span></span>](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
+| <span data-ttu-id="fddf2-115">Modules de tâche</span><span class="sxs-lookup"><span data-stu-id="fddf2-115">Task modules</span></span> |  [<span data-ttu-id="fddf2-116">Collecter des entrées dans Microsoft Teams à l'aide de modules de tâche</span><span class="sxs-lookup"><span data-stu-id="fddf2-116">Collect input in Microsoft Teams with Task Modules</span></span>](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
+| <span data-ttu-id="fddf2-117">Bots conversationnels</span><span class="sxs-lookup"><span data-stu-id="fddf2-117">Conversational bots</span></span>  | [<span data-ttu-id="fddf2-118">Créer des bots conversationnels interactifs pour Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="fddf2-118">Create interactive conversational bots for Microsoft Teams</span></span>](https://docs.microsoft.com/learn/modules/msteams-conversation-bots/)  |
 
 

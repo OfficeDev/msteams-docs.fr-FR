@@ -3,14 +3,15 @@ title: Options de création pour le développement d’applications Microsoft Te
 author: heath-hamilton
 description: Décrivez les SDK, outils et API que vous pouvez utiliser pour créer tous les types d’applications Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 16c47c06bbb298d727c24f5e4ab068f1bf7b35d7
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 8c9beb3fc5a1550da4ef4203b0488e7ee0a57a13
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797922"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020841"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="1ee02-103">Options de création pour le développement d’applications Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="1ee02-103">Build options for Microsoft Teams app development</span></span>
+# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="79e23-103">Options de création pour le développement d’applications Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="79e23-103">Build options for Microsoft Teams app development</span></span>
 
-<span data-ttu-id="1ee02-104">À venir...</span><span class="sxs-lookup"><span data-stu-id="1ee02-104">Coming soon ...</span></span>
+<span data-ttu-id="79e23-104">À venir...</span><span class="sxs-lookup"><span data-stu-id="79e23-104">Coming soon ...</span></span>
