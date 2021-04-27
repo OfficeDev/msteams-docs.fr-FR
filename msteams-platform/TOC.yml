@@ -238,7 +238,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: Appels et réunions avec les médias en temps réel
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: Enregistrer un bot appelant
+        - name: Enregistrer les appels et les réunions du robot.
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: Notifications d’appel entrant
           href: bots/calls-and-meetings/call-notifications.md
