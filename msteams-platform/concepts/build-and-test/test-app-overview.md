@@ -4,12 +4,12 @@ description: Décrit le processus de test de votre application personnalisée Te
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurer microsoft 365 client Teams téléchargeant l'application de test
-ms.openlocfilehash: 8815e73c054cb75782660ef4afb3ae583b4f40fa
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d95d65961b060ff1938d51c0f3fafc2b1e56fa7e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019936"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058606"
 ---
 # <a name="test-your-app"></a>Tester votre application
 
@@ -37,14 +37,11 @@ Ajoutez les données de test au client de test Microsoft 365. Pour plus d'inform
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
+- [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Étape suivante
 

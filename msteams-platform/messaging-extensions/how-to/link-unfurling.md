@@ -5,12 +5,12 @@ description: Comment effectuer un déploiement de lien avec l'extension de messa
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2037e1e9a903cfe90d0dd8866722b0d10fa156b2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ec4ac7329b2c0df64237692d450977148789eff8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019817"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058515"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
@@ -30,7 +30,7 @@ L'extension de messagerie Azure DevOps utilise le déploiement de lien pour rech
 Pour ajouter le déploiement de lien au manifeste de votre application, ajoutez un nouveau tableau à la `messageHandlers` `composeExtensions` section du manifeste JSON de votre application. Vous pouvez ajouter le tableau à l'aide d'App Studio ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par `*.example.com` exemple. Cela correspond exactement à un segment du domaine ; si vous avez besoin d'une `a.b.example.com` correspondance, utilisez `*.*.example.com` .
 
 > [!NOTE]
-> Donot add domains that are not in your control, either directly or through wildcards. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n'est pas valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, `*.com` . `*.org`
+> Donot add domains that are not in your control, either directly or through wildcards. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` non valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, `*.com` . `*.org`
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Ajouter un déploiement de lien à l'aide d'App Studio
 
@@ -69,7 +69,7 @@ Pour obtenir un exemple de manifeste complet, voir [la référence de manifeste.
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>Gérer `composeExtension/queryLink` l'appel
 
-Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour votre code de service web pour gérer la demande d'appel. Utilisez l'URL reçue pour effectuer une recherche dans votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
+Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour le code de votre service web pour gérer la demande d'appel. Utilisez l'URL reçue pour rechercher votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
 
 Les types de carte suivants sont pris en charge :
 
@@ -178,5 +178,4 @@ Voici un exemple de réponse :
 
 ## <a name="see-also"></a>Voir aussi 
 
-> [!div class="nextstepaction"]
-> [Qu'est-ce que les cartes ?](~/task-modules-and-cards/what-are-cards.md)
+- [Qu'est-ce que les cartes ?](~/task-modules-and-cards/what-are-cards.md)

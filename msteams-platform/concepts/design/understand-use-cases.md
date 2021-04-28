@@ -5,12 +5,12 @@ description: Comprendre vos cas d’utilisation
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 748e40c712af7fb0095edd4f6ffe67ed253decec
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019866"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058662"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
@@ -22,7 +22,7 @@ Chaque méthode d'interaction avec vos utilisateurs a ses forces et ses faibless
 
 ## <a name="understand-the-problem"></a>Comprendre le problème
 
-Chaque bonne application présente un problème principal ou un besoin qu'elle tente de résoudre. Avant de commencer à créer une application, vous devez expliquer ce qu'est ce problème. Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l'obtention d'une collaboration efficace sont parfaitement adaptées. Il s'agit également d'une plateforme sociale, d'une plateforme trans-plateforme native, située au cœur d'Office 365 et qui offre un canevas personnel pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une application Teams. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
+Chaque bonne application présente un problème principal ou un besoin qu'elle tente de résoudre. Avant de commencer à créer une application, vous devez expliquer ce qu'est ce problème. Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l'obtention d'une collaboration efficace sont parfaitement adaptées. Il s'agit également d'une plateforme sociale, d'une plateforme trans-plateforme native, qui se trouve au cœur d'Office 365 et qui offre un canevas personnel pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une application Teams. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
 
 * Quels sont les avantages et les inconvénients du système d'état actuel utilisé par vos utilisateurs ?
 * Quels sont les problèmes que vos utilisateurs rencontrent aujourd'hui et que vous souhaitez résoudre ?
@@ -53,7 +53,7 @@ Connaître les limitations des applications en termes d'accessibilité des donn�
 
 Vous devez déterminer dès le début si vous devez protéger les services que vous exposez et à quel niveau. N'oubliez pas que les services web exposés dans votre application Teams sont disponibles publiquement sur Internet. Par contre, si vous devez les sécuriser, commencez à y penser maintenant. Si vous avez besoin d'une solution qui nécessite que vous fournissiez l'accès invité pour les utilisateurs en dehors du client, des restrictions et des autorisations d'accès doivent être placées pour protéger les informations confidentielles. Vous devrez concevoir des applications en raison des limitations qui s'appliquent à l'accès des utilisateurs invités. Par conséquent, posez-vous des questions, telles que : 
 
-* Les utilisateurs accèderont-ils à différents affichages des données en fonction de leurs rôles ?
+* Les utilisateurs accèderont-ils à différentes vues des données en fonction de leurs rôles ?
 * Y a-t-il des pii impliquées ?
 * Les interactions seront-ils également basées sur les rôles d'utilisateur ?
 * Les utilisateurs externes accèderont-ils à l'application ?
@@ -79,14 +79,11 @@ Identifiez les nouvelles fonctionnalités que l'utilisateur préférera dans la 
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Choisir comment distribuer votre application](../deploy-and-publish/overview.md)
+- [Choisir comment distribuer votre application](../deploy-and-publish/overview.md)
 
-> [!div class="nextstepaction"]
-> [Concevoir des onglets efficaces](../../tabs/design/tabs.md)
+- [Concevoir des onglets efficaces](../../tabs/design/tabs.md)
 
-> [!div class="nextstepaction"]
-> [Concevoir des bots incroyables](../../bots/design/bots.md)
+- [Concevoir des bots incroyables](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Étape suivante
 

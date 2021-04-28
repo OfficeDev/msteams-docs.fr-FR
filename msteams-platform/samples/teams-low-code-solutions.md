@@ -5,16 +5,16 @@ description: Détailler les solutions Microsoft faibles et sans solutions de cod
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: c3fa4fb1792579a344596cbb080d96015292f7c4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020414"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058683"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft Teams
 
-Microsoft Teams est extensible et adaptatif. Cela signifie que vous pouvez créer des applications personnalisées pour Teams qui répondent aux besoins distincts de vos utilisateurs. Les applications personnalisées à code faible gagnent du temps, fournissent des solutions rapides et répondent à la demande que les applications créées à partir de zéro. Ce document donne une vue d'ensemble de Microsoft Power Platform, des agents power virtual chatbot et de l'Assistant virtuel.
+Microsoft Teams est extensible et adaptatif. Cela signifie que vous pouvez créer des applications personnalisées pour Teams qui répondent aux besoins distincts de vos utilisateurs. Les applications personnalisées à code faible gagnent du temps, fournissent des solutions rapides et répondent à la demande que les applications créées à partir de zéro. Ce document donne une vue d'ensemble de la plateforme Microsoft Power, des agents virtuels Power Chatbot et de l'Assistant virtuel.
 
 Les plateformes à code faible offrent une approche intuitive du développement de logiciels et nécessitent peu ou pas de codage pour créer des applications et des processus. Ils permettent aux développeurs sans expérience de créer facilement des applications personnalisées avec peu ou pas de codage, et aux développeurs professionnels de développer et déployer rapidement l'application. Ces plateformes se composent d'une interface visuelle, de connecteurs vers des services back-end et d'un système de gestion du cycle de vie des applications intégré pour créer, déboguer, déployer et gérer des applications. Microsoft Power Platform est la passerelle innovantes pour créer rapidement des applications compatibles avec Teams à l'aide d'attributs de code faible.
 
@@ -25,7 +25,7 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Services de plateforme d'alimentation":::
 
 > [!NOTE]
-> Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications qui doivent être publiées dans le magasin d'applications Teams. Les applications Microsoft Power Platform peuvent être publiées dans le magasin d'applications d'une organisation uniquement.
+> Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications qui doivent être publiées dans le magasin d'applications Teams. Les applications microsoft Power Platform peuvent être publiées dans le magasin d'applications d'une organisation uniquement.
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams et Power BI
 
@@ -39,7 +39,7 @@ La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linki
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams et Power Automate
 
-Vous pouvez [créer des flux pour automatiser des](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) tâches de travail répétitives directement dans l'environnement Teams avec l'application Power [Automate dans Teams.](/power-automate/flows-teams) Vous pouvez [déclencher un flux à partir de n'importe quel message dans Microsoft Teams](/power-automate/trigger-flow-teams-message) et utiliser des cartes [adaptatives dans Power Automate.](/power-automate/create-adaptive-cards) En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur ajoutée à Microsoft Teams à partir de la nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) dans Teams.
+Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l'environnement Teams avec l'application Power [Automate dans Teams.](/power-automate/flows-teams) Vous pouvez [déclencher un flux à partir de n'importe quel message dans Microsoft Teams](/power-automate/trigger-flow-teams-message) et utiliser des cartes [adaptatives dans Power Automate.](/power-automate/create-adaptive-cards) En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur ajoutée à Microsoft Teams à partir de la nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) dans Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams et les agents power virtual
 
@@ -58,7 +58,7 @@ Assistant virtuel est un modèle open source Microsoft qui vous permet de créer
 |Power BI|[Power BI pour les créateurs d'applications](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI pour les développeurs](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |Power Apps|[Power Apps pour les créateurs d'applications](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps pour les développeurs](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automate pour les créateurs d'applications](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate pour les développeurs](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Agents Power Virtual pour les développeurs et les créateurs d'applications](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power Virtual Agents|[Agents power virtual pour les développeurs et les créateurs d'applications](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### <a name="-project-oakdale-preview"></a>✔ ProjectDale (prévisualisation)
 
@@ -83,5 +83,4 @@ Assistant virtuel est un modèle open source Microsoft qui vous permet de créer
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)

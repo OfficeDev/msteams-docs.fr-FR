@@ -5,18 +5,18 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: test des équipes de programme pour les développeurs d'applications
 ms.date: 11/01/2019
-ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f224ad8b97cd5dd1a4349039824abaf551ef362e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020813"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058466"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client de test Microsoft 365
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client test Microsoft 365
 
 Avec un abonnement Microsoft 365 Développeur, vous pouvez utiliser votre application Microsoft Teams avec des équipes de test, des canaux et des utilisateurs.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 1. Rejoignez le programme pour les développeurs [Microsoft 365,](/office/developer-program/office-365-developer-program)si vous n'avez pas de client de test.
 2. [Configurer un abonnement Microsoft 365 Développeur.](/office/developer-program/office-365-developer-program-get-started)
@@ -256,12 +256,9 @@ L'activation du chargement de version de version d'application personnalisée es
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
+- [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 

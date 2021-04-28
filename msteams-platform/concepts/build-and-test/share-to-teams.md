@@ -4,16 +4,16 @@ description: Comment ajouter le bouton Share to Teams incorporé sur votre site 
 ms.topic: reference
 localization_priority: Normal
 keywords: Partager Teams entre équipes
-ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020822"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058473"
 ---
 # <a name="create-share-to-teams-button"></a>Bouton Créer un partage avec Teams
 
-Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons Share-to-Teams sur leurs pages web. Lorsque vous la sélectionnez, elle lance l'expérience Partager avec Teams dans une fenêtre fenêtre. Cela vous permet de partager un lien directement avec une personne ou un canal Microsoft Teams sans changer de contexte. Ce document vous guide sur la création et l'incorporation d'un bouton Partager avec Teams pour votre site web, la création de l'aperçu de votre site web et l'extension de Share-to-Teams pour l'Éducation.
+Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons Share-to-Teams sur leurs pages web. Lorsque vous sélectionnez, l'expérience Partager avec Teams s'ouvre dans une fenêtre fenêtre. Cela vous permet de partager un lien directement avec une personne ou un canal Microsoft Teams sans changer de contexte. Ce document vous guide sur la création et l'incorporation d'un bouton Share-to-Teams pour votre site web, la création de l'aperçu de votre site web et l'extension de Share-to-Teams pour l'Éducation.
 
 > [!NOTE]
 > * Seules les versions de bureau de Edge et Chrome sont pris en charge.
@@ -53,7 +53,7 @@ L'image suivante affiche l'expérience de partage à teams :
       data-icon-px-size="64">
     </div>
     ```
-1. Si le lien partagé nécessite l'authentification de l'utilisateur et que l'aperçu de l'URL de votre lien à partager ne s'affiche pas bien dans Teams, vous pouvez désactiver l'aperçu de l'URL en ajoutant le jeu d'attributs à `data-preview` `false` .
+1. Si le lien partagé nécessite une authentification utilisateur et que l'aperçu de l'URL de votre lien à partager n'est pas bien restituer dans Teams, vous pouvez désactiver l'aperçu de l'URL en ajoutant le jeu d'attributs `data-preview` à `false` .
 
     ```html
     <div
@@ -95,7 +95,7 @@ Pour les enseignants qui utilisent le bouton Partager avec Teams, il existe une 
 | Propriété | Attribut HTML | Type | Par défaut | Description |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | s/o | Href du contenu à partager. |
-| preview | `data-preview` | booléen (sous la mesure d'une chaîne) | `true` | Indique si un aperçu du contenu à partager est à afficher ou non. |
+| preview | `data-preview` | booléen (sous la mesure d'une chaîne) | `true` | Indique si un aperçu du contenu à partager doit être présenté ou non. |
 | iconPxSize | `data-icon-px-size` | number (en tant que chaîne) | `32` | Taille en pixels du bouton Partager avec Teams à restituer. |
 | msgText | `data-msg-text` | string | s/o | Texte par défaut à insérer avant le lien dans la zone de composition du message. Le nombre maximal de caractères est de 200. |
 | assignInstr | `data-assign-instr` | string | s/o | Texte par défaut à insérer dans le champ « Instructions » des affectations. Le nombre maximal de caractères est de 200. |
@@ -133,5 +133,4 @@ Vous pouvez choisir de définir des valeurs par défaut pour les champs suivants
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)

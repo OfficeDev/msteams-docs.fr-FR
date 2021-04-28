@@ -4,12 +4,12 @@ description: Comment créer un bot assistant virtuel et des compétences à util
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots d'assistant virtuel Teams
-ms.openlocfilehash: 65d9b90dacd6ca653ce22b7170651423a2ac9425
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 80a308050317e8a211b8f7a9e2dd459c1572af18
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019636"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058676"
 ---
 # <a name="create-virtual-assistant"></a>Créer un Assistant virtuel 
 
@@ -565,7 +565,7 @@ Vous pouvez également tirer parti des compétences existantes à partir du réf
   * La configuration des extensions de messagerie n'est pas limitée aux commandes individuelles, mais à l'ensemble de l'extension elle-même. Cela limite la configuration de chaque compétence individuelle par le biais de l'Assistant virtuel.
   * Les ID de commande des extensions de messagerie ont une longueur maximale de [64](../resources/schema/manifest-schema.md#composeextensions) caractères et 37 caractères sont utilisés pour incorporer des informations de compétences. Par conséquent, les contraintes mises à jour pour l'ID de commande sont limitées à 27 caractères.
 
-Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) ou créer une compétence entièrement à partir de zéro. Vous pouvez trouver des didacticiels pour la suite [ici.](https://microsoft.github.io/botframework-solutions/overview/skills/) Reportez-vous à [la documentation relative](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) à l'Assistant virtuel et à l'architecture des compétences.
+Vous pouvez également tirer parti des compétences existantes à partir du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) ou créer une compétence entièrement à partir de zéro. Vous pouvez trouver des didacticiels pour la suite [ici.](https://microsoft.github.io/botframework-solutions/overview/skills/) Reportez-vous à [la documentation relative](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) à l'Assistant virtuel et à l'architecture des compétences.
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -577,11 +577,8 @@ Vous pouvez également tirer parti des compétences existantes du référentiel 
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Réserver une salle](app-templates.md#book-a-room)
+- [Réserver une salle](app-templates.md#book-a-room)
 
-> [!div class="nextstepaction"]
-> [Bot Microsoft Teams](../bots/what-are-bots.md)
+- [Bot Microsoft Teams](../bots/what-are-bots.md)

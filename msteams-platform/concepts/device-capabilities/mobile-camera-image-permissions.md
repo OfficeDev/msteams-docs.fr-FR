@@ -6,18 +6,18 @@ keywords: Média d'autorisations d'appareil natif des fonctionnalités du microp
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 9e4ccf2dfd2c8743621ea44f340ca7a41e302adc
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 98b4cd80de20671d45f198e89e1c273e88b36a87
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020743"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058361"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias 
 
 Ce document vous guide sur l'intégration des fonctionnalités multimédias. Cette intégration combine les fonctionnalités natives de l'appareil, telles que la **caméra** et **le microphone,** avec la plateforme Teams.  
 
-Vous pouvez utiliser le [SDK client JavaScript Microsoft Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires pour que votre application accède aux autorisations d'appareil d'un [utilisateur.](native-device-permissions.md) Utilisez les API de fonctionnalité multimédia appropriées pour intégrer  les fonctionnalités natives de l'appareil, telles que la caméra et le **microphone,** à la plateforme Teams dans votre application mobile Microsoft Teams, et créez une expérience plus riche. 
+Vous pouvez utiliser le [SDK client JavaScript Microsoft Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires pour que votre application accède aux autorisations d'appareil d'un [utilisateur.](native-device-permissions.md) Utilisez les API de fonctionnalité multimédia appropriées pour intégrer  les fonctionnalités natives de l'appareil, telles que l'appareil photo et le **microphone,** à la plateforme Teams dans votre application mobile Microsoft Teams, et créez une expérience plus riche. 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>Avantage de l'intégration des fonctionnalités multimédias
 
@@ -49,7 +49,7 @@ Mettez à jour votre application Teams [manifest.jsfichier en](../../resources/s
 Les [API selectMedia,](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) [getMedia](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)et [viewImages](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true) vous permettent d'utiliser les fonctionnalités multimédias natives comme suit :
 
 * Utilisez le **microphone natif pour** permettre aux utilisateurs d'enregistrer du contenu **audio** (enregistrer 10 minutes de conversation) à partir de l'appareil.
-* Utilisez le contrôle **d'appareil photo natif** pour permettre aux utilisateurs de **capturer et d'attacher** des images en mouvement.
+* Utilisez le contrôle **d'appareil photo natif** pour permettre aux utilisateurs de **capturer et d'attacher des images** en mouvement.
 * Utilisez la prise **en charge de la galerie native** pour permettre aux utilisateurs de sélectionner des images **d'appareil** en tant que pièces jointes.
 * Utilisez le contrôle **visionneuse d'images natives** **pour afficher un aperçu de plusieurs images** à la fois.
 * Prise **en charge du transfert d'images** de grande taille (de 1 Mo à 50 Mo) via le pont du SDK.
@@ -64,7 +64,7 @@ Vous devez utiliser l'ensemble d'API suivant pour activer les fonctionnalités m
 
 | API      | Description   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) (**Appareil photo)**| Cette API permet aux utilisateurs de capturer ou de sélectionner **du contenu multimédia** à partir de l'appareil photo de l'appareil et de le renvoyer à l'application web. Les utilisateurs peuvent modifier, rogner, faire pivoter, annoter ou dessiner sur des images avant l'envoi. En réponse à , l'application web reçoit les ID multimédias des images sélectionnées et une miniature du `selectMedia` média sélectionné. Cette API peut être configurée davantage via la configuration [ImageProps.](/javascript/api/@microsoft/teams-js/imageprops?view=msteams-client-js-latest&preserve-view=true) |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) **(Appareil photo)**| Cette API permet aux utilisateurs de capturer ou de sélectionner **du contenu multimédia** à partir de l'appareil photo de l'appareil et de le renvoyer à l'application web. Les utilisateurs peuvent modifier, rogner, faire pivoter, annoter ou dessiner sur des images avant l'envoi. En réponse à , l'application web reçoit les ID multimédias des images sélectionnées et une miniature du `selectMedia` média sélectionné. Cette API peut être configurée davantage via la configuration [ImageProps.](/javascript/api/@microsoft/teams-js/imageprops?view=msteams-client-js-latest&preserve-view=true) |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) (**Microphone**)| Définissez [mediaType sur](/javascript/api/@microsoft/teams-js/mediatype?view=msteams-client-js-latest&preserve-view=true) `4` dans `selectMedia` l'API pour accéder à la fonctionnalité microphone. Cette API permet également aux utilisateurs d'enregistrer du contenu audio à partir du microphone de l'appareil et de renvoyer des clips enregistrés à l'application web. Les utilisateurs peuvent suspendre, ré-enregistrer et lire l'aperçu de l'enregistrement avant la soumission. En réponse à **selectMedia,** l'application web reçoit les ID multimédias de l'enregistrement audio sélectionné. <br/> Utilisez `maxDuration` , si vous avez besoin de configurer une durée en minutes pour l'enregistrement de la conversation. La durée actuelle de l'enregistrement est de 10 minutes, après quoi l'enregistrement se termine.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| Cette API récupère le média capturé par l'API en blocs, quelle que `selectMedia` soit la taille du média. Ces blocs sont assemblés et renvoyés à l'application web en tant que fichier ou blob. La rupture du média en blocs plus petits facilite le transfert de fichiers de grande taille. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| Cette API permet à l'utilisateur d'afficher des images en mode plein écran en tant que liste de défilement.|
@@ -257,8 +257,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
+- [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
 
-> [!div class="nextstepaction"]
-> [Intégrer des fonctionnalités d'emplacement dans Teams](location-capability.md)
+- [Intégrer des fonctionnalités d'emplacement dans Teams](location-capability.md)

@@ -5,16 +5,16 @@ description: Choisir l'étendue d'application correcte
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 693adaae96cdf65a04c591d51c57d4bf7fe972b1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a3d9ec8f1a5c18025cffc0f97285e1ec764becb8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019873"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058452"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d'utilisation aux fonctionnalités de l'application Teams
 
-Une fois que vous avez  identifié *qui* est l'utilisateur  et quel problème vous allez résoudre, il est temps de décider comment résoudre le problème. *Qui,* *quoi* et *comment* termine le processus de compréhension et de mappage de vos cas d'utilisation aux fonctionnalités de l'application Teams. Vous devez définir l'étendue de l'application en fonction des réponses que vous avez reçues de l'utilisateur à vos requêtes, puis déterminer la fonctionnalité la plus adaptée pour créer votre application.
+Une fois que vous avez  identifié *qui* est l'utilisateur  et quel problème vous allez résoudre, il est temps de décider comment résoudre le problème. *Qui,* *quoi* et *comment* termine le processus de compréhension et de mappage de vos cas d'utilisation aux fonctionnalités de l'application Teams. Vous devez définir l'étendue de l'application en fonction des réponses que vous avez reçues de l'utilisateur à vos requêtes, puis déterminer la fonctionnalité la mieux adaptée pour créer votre application.
 
 > [!NOTE]
 > Vous devez bien comprendre les [points d'entrée](../../concepts/extensibility-points.md) et les éléments d'interface utilisateur disponibles pour votre application. Vous devez également vous assurer que vous avez [pris en compte vos cas d'utilisation](../../concepts/design/understand-use-cases.md) avec soin.
@@ -32,15 +32,15 @@ Vous pouvez choisir entre l'étendue personnelle et l'étendue d'équipe ou de c
 
 * Pour sélectionner une étendue personnelle, répondez à des questions telles que :
   * Existe-t-il des interactions un-à-un avec l'application requises pour des raisons de confidentialité ou pour d'autres raisons ? Par exemple, vérification du solde des congés ou d'autres informations privées.
-  * Existe-t-il une collaboration entre les utilisateurs qui n'ont peut-être pas de teams communs ? Par exemple, la recherche d'événements à l'échelle de l'organisation à venir dans une entreprise.
+  * Existe-t-il une collaboration entre les utilisateurs qui n'ont peut-être pas de teams communs ? Par exemple, recherche des événements à venir à l'échelle de l'organisation dans une entreprise.
   * Existe-t-il des notifications ou des messages personnalisés qui devront être envoyés à un utilisateur tout au long de l'expérience d'application Teams ? Par exemple, les rappels pour les approbations ou les inscriptions.
 
 * Pour sélectionner l'étendue de l'équipe ou du canal, répondez aux questions suivantes : 
   * Les informations présentées par l'application, sous l'onglet ou par le biais d'un bot, sont-ils pertinentes et utiles pour la plupart des membres d'une équipe ? Par exemple, application Scrum.
-  * Le contexte de l'application peut-il changer en fonction de l'équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du Planificateur sont différentes dans différentes équipes. 
+  * Le contexte de l'application peut-il changer en fonction de l'équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes dans différentes équipes. 
   * Est-il possible que tous les membres d'une personne qui ont besoin de collaborer font partie d'une seule équipe ? Par exemple, les agents travaillant sur un ticket.
 
-Les scénarios suivants vous guident dans la sélection de points d'entrée et d'éléments d'interface utilisateur qui fonctionnent bien avec les fonctionnalités de l'application Teams :
+Les scénarios suivants vous guident dans la compréhension de la sélection de points d'entrée et d'éléments d'interface utilisateur qui fonctionnent bien avec les fonctionnalités de l'application Teams :
 
 > [!NOTE]
 > Il ne s'agit pas d'une liste exhaustive, mais vous aidera à réfléchir à certaines des possibilités qui s'offrent à vous.
@@ -67,7 +67,7 @@ Parfois, vous avez simplement besoin d'un moyen rapide pour démarrer un process
 
 * **Modules de tâche**: ouvrez-les à partir d'un onglet, d'un bot ou d'une extension de messagerie pour collecter des informations avant de lancer un flux de travail.
 
-* **Bots de conversation**: interagir avec vos utilisateurs via du texte et des cartes enrichies.
+* **Bots de conversation**: interagissez avec vos utilisateurs par le biais de texte et de cartes enrichies.
 
 * **Webhooks sortants**: un bon choix pour une interaction simple de va-et-vient lorsque vous n'avez pas besoin de créer un bot conversationnel entier.
 
@@ -83,7 +83,7 @@ Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Te
 
 Les personnes ont des questions et vous avez probablement une grande partie des réponses stockées quelque part. Malheureusement, il est souvent assez difficile de connecter les deux.
 
-* **Bots de conversation**: traitement du langage naturel, IA, apprentissage automatique et tous les mots à la une. Utilisez un bot optimisé par le cloud intelligent pour connecter vos utilisateurs aux réponses dont ils ont besoin.
+* **Bots conversationnels**: traitement du langage naturel, IA, apprentissage automatique et tous les mots-clés. Utilisez un bot optimisé par le cloud intelligent pour connecter vos utilisateurs aux réponses dont ils ont besoin.
 
 * **Onglets**: incorporez votre portail web existant dans Teams ou créez une version spécifique de Teams pour ajouter des fonctionnalités.
 
@@ -105,7 +105,6 @@ Cela étant dit, les meilleures applications combinent généralement plusieurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Créer des applications pour Microsoft Teams](../../overview.md)
+- [Créer des applications pour Microsoft Teams](../../overview.md)
  
 

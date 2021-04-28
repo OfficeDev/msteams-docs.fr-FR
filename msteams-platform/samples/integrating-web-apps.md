@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Applications web
-ms.openlocfilehash: 1f46c4a8b9457a00b5000e81c280759f584a50d2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0cc4c8bbecb51056e579478de64a5f4e73199674
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020421"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058690"
 ---
 # <a name="web-apps"></a>Applications web 
 
@@ -31,7 +31,7 @@ Ce document donne une vue d'ensemble des fonctionnalités de Teams, des exigence
 
 Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour travailler avec l'intégration des applications, il est important de se familiariser avec la terminologie de développement Teams.
 
-|Fonctionnalités d'application courantes   |Fonctionnalités de la plateforme Teams   |
+|Fonctionnalités d'application courantes   |Fonctionnalités de plateforme Teams   |
 |----------|-----------|
 |Page web incorporée, page d'accueil ou vue web  |[Onglets](../tabs/what-are-tabs.md)  |
 |Partager des raccourcis et des extensions  |[Extensions de messagerie](../messaging-extensions/what-are-messaging-extensions.md)  |
@@ -110,7 +110,7 @@ Utilisez un [bot dans](../bots/what-are-bots.md) votre application Teams pour le
 
 Les bots vous permettent également d'envoyer des **messages proactifs** à des utilisateurs individuels ou à des canaux. Les messages proactifs sont des messages non improvisés déclenchés par un événement externe et non un message envoyé à un bot. Par exemple, votre bot envoie un message de bienvenue lorsqu'il est installé ou qu'un nouvel utilisateur rejoint un canal. 
 
-L'envoi de messages proactifs nécessite des identificateurs propres à Teams. Vous pouvez capturer les informations en extraire des données de liste ou de profil [utilisateur,](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)en vous abonnant à des [événements de conversation](../bots/how-to/conversations/subscribe-to-conversation-events.md)ou à l'aide de Microsoft [Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
+L'envoi de messages proactifs nécessite des identificateurs propres à Teams. Vous pouvez capturer les informations en extraire des données de liste ou de profil [utilisateur,](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)vous abonner à des [événements de conversation](../bots/how-to/conversations/subscribe-to-conversation-events.md)ou à l'aide de Microsoft [Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
 
 Ne pas envoyer de courrier indésirable aux utilisateurs avec des messages excessifs. Si la fonctionnalité Teams la prend en charge, les utilisateurs peuvent configurer les paramètres de notification pour votre application.   
 Voici un exemple de message de notification : **Ne m'envoyez pas de messages non sollicités.**
@@ -123,5 +123,4 @@ Lorsqu'une équipe est créée, une collection de sites [SharePoint](https://doc
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)

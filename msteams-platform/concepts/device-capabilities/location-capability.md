@@ -6,12 +6,12 @@ keywords: autorisations natives d'appareil pour les fonctionnalités de carte d'
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d10f2df48ee5b75252508fbc51e5a31df9ea083f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019859"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058368"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement 
 
@@ -21,7 +21,7 @@ Vous pouvez utiliser le [SDK client JavaScript Microsoft Teams,](/javascript/api
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Avantages de l'intégration des fonctionnalités d'emplacement
 
-Le principal avantage de l'intégration des fonctionnalités d'emplacement dans vos applications Teams est qu'elle permet aux développeurs d'applications web sur la plateforme Teams d'utiliser la fonctionnalité d'emplacement avec le SDK client JavaScript Microsoft Teams. 
+Le principal avantage de l'intégration des fonctionnalités d'emplacement dans vos applications Teams est qu'elle permet aux développeurs d'applications web sur la plateforme Teams d'utiliser la fonctionnalité de localisation avec le SDK client JavaScript Microsoft Teams. 
 
 Les exemples suivants montrent comment l'intégration des fonctionnalités d'emplacement est utilisée dans différents scénarios :
 * Dans une usine, le responsable peut suivre la présence des employés en leur demandant de prendre un selfie à proximité de l'usine et de le partager via l'application spécifiée. Les données d'emplacement sont également capturées et envoyées avec l'image.
@@ -105,8 +105,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
+- [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
+- [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)

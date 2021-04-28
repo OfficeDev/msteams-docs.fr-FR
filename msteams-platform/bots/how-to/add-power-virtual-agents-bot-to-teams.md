@@ -5,12 +5,12 @@ description: intégration d'un chatbot d'agents virtuels Power dans la plateform
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d6d9f4292e22df7ca0f5841a2fc579b9e3b1d2f3
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bd1528d06f9e9f4ca3a03f167ecb3c537977fb61
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020087"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058620"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Ajouter un chatbot d'agents virtuels Power 
 
@@ -32,9 +32,9 @@ Pour rendre votre chatbot disponible dans Teams via le portail Power Virtual Age
 **Pour rendre le chatbot disponible dans Teams**
 
 1. **Publier le contenu du bot le plus récent**  
-Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que les utilisateurs de Teams peuvent interagir avec celui-ci. Pour plus d'informations, voir [Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
+Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que les utilisateurs de Teams peuvent interagir avec celui-ci. Pour plus d'informations, [voir Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
 
-   ![publier dans le portail des agents virtuels avec alimentation](../../assets/images/pva-publish.png)
+   ![publier dans le portail des agents virtuels d'alimentation](../../assets/images/pva-publish.png)
 
 1. **Configurer le canal Teams**  
 Après avoir publié votre bot, ajoutez le canal Teams pour le rendre accessible aux utilisateurs de Teams.
@@ -104,20 +104,16 @@ Ouvrez **Test et distribuez** l'onglet, puis **sélectionnez Installer** pour aj
 Le processus de mise en place de l'ajout de votre bot de conversation Power Virtual Agents à Teams est terminé. Vous pouvez maintenant démarrer une conversation avec votre bot dans une conversation personnelle.
 
 ## <a name="see-also"></a>Voir aussi
-> [!div class="nextstepaction"]
-> [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
-> [Créez un chatbot pour Teams avec les agents virtuels Microsoft Power.](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)  
+- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
->  [Portail Power Virtual Agents](https://powervirtualagents.microsoft.com)
+- [Créez un chatbot pour Teams avec les agents virtuels Microsoft Power.](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
-> [Publier votre bot d'agents virtuels Power](/power-virtual-agents/publication-fundamentals-publish-channels)
+- [Portail Power Virtual Agents](https://powervirtualagents.microsoft.com)
 
-> [!div class="nextstepaction"]
-> [Sécurité et conformité dans Microsoft Teams.](/MicrosoftTeams/security-compliance-overview)
+- [Publier votre bot d'agents virtuels Power](/power-virtual-agents/publication-fundamentals-publish-channels)
+
+- [Sécurité et conformité dans Microsoft Teams.](/MicrosoftTeams/security-compliance-overview)
 
 ## <a name="next-step"></a>Étape suivante
 

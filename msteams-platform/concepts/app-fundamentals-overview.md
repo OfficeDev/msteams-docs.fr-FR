@@ -5,12 +5,12 @@ description: Décrire les concepts fondamentaux du développement de plateforme 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b52eebf2b8e0884cd225298ae557bb7ac65d4a68
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6d0c22049e828426cfe963da6631b4c289566bf0
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020862"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058459"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Principes de base du développement d'applications Microsoft Teams
 
@@ -27,19 +27,17 @@ Vous pouvez reconnaître les problèmes des utilisateurs et identifier les répo
 * Avez-vous besoin d'une authentification ?
 * Quel problème votre application va-t-elle résoudre ?
 * Qui sont les utilisateurs finaux de l'application ?
-* Comment l'expérience d'intégration doit-elle être et quelles autres sont les autres activités de l'application ?
+* Comment l'expérience d'intégration doit-elle être et que peut faire l'application ?
 
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d'utilisation aux fonctionnalités de l'application Teams
 
-[Maposez vos cas d'utilisation](../concepts/design/map-use-cases.md) sur certains scénarios courants et sur la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l'endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
+[La cartographie de vos cas d'utilisation](../concepts/design/map-use-cases.md) couvre certains scénarios courants et la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l'endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer des applications web à Teams](../samples/integrating-web-apps.md)
+- [Intégrer des applications web à Teams](../samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Créer votre première application Microsoft Teams](../build-your-first-app/build-first-app-overview.md)
+- [Créer votre première application Microsoft Teams](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante
 

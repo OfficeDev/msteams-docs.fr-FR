@@ -6,12 +6,12 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 091192054c5add7cfbdc1e7baabc86e34cef7631
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 2a99acbe9bc618ea940af3bbe898b30d342ad0cf
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020591"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058354"
 ---
 # <a name="install-moodle-lms"></a>Installer Moodle LMS
 
@@ -26,7 +26,7 @@ Pour aider les administrateurs informatiques à configurer facilement cette int�
 
 Pour en savoir plus sur les fonctionnalités de cette intégration, consultez [Microsoft Teams et Le tout.](https://education.microsoft.com/resource/3dffb3a8)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Voici les conditions préalables à l'installation et à la configuration de l'application Moodle : 
 
@@ -251,11 +251,8 @@ Pour partager des demandes de fonctionnalités ou des commentaires avec nous, vi
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Moodle](https://moodle.org/)
+- [Moodle](https://moodle.org/)
 
-> [!div class="nextstepaction"]
-> [Documentation en toute fin](https://docs.moodle.org/34/en/Installing_plugins)de vie.
+- [Documentation en toute fin](https://docs.moodle.org/34/en/Installing_plugins)de vie.

@@ -5,12 +5,12 @@ description: Comment gérer l'action d'appel initiale et répondre avec un modul
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019845"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058627"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 
@@ -195,7 +195,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`ChannelData.legacy. replyToId`| Obtient ou définit l'ID du message auquel ce message est une réponse. |
 |`value.commandId` | Contient l'ID de la commande qui a été invoquée. |
 |`value.commandContext` | Contexte qui a déclenché l'événement. Il doit `compose` l'être. |
-|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
+|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Il doit `default` s'y `contrast` trouver, ou `dark` . |
 
 ### <a name="example"></a>Exemple
 
@@ -598,7 +598,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Répondre à la tâche fetchTask
+## <a name="respond-to-the-fetchtask"></a>Répondre à fetchTask
 
 Répondez à la demande d'appel avec un objet qui contient un objet avec la carte adaptative ou l'URL web, ou `task` un message de chaîne `taskInfo` simple.
 
@@ -856,7 +856,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Si l'application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche. Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche. Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d'une équipe.
 
-Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d'obtenir une liste. Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot. L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification. Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.
+Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d'obtenir une liste de membres. Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot. L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification. Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.
 
 #### <a name="example"></a>Exemple 
 
@@ -946,8 +946,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"] 
-> [Définir les commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+- [Définir les commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## <a name="next-step"></a>Étape suivante

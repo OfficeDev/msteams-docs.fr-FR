@@ -5,16 +5,16 @@ description: Décrit l’endroit où les personnes peuvent découvrir et utilise
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: f3f4af191400b6c04c41827ce689b4250c105ce0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f2bdb35c76bdb7487e66a0e6b9ad01c6da9e04f8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019838"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058319"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
-La plateforme Teams fournit un ensemble flexible de points d'entrée, tels qu'une équipe, un canal et une conversation où les personnes peuvent découvrir et utiliser votre application. Votre application peut être aussi simple que l'intégration d'un contenu web existant dans un onglet ou une application à plusieurs facettes avec laquelle les utilisateurs interagissent dans plusieurs contextes.
+La plateforme Teams fournit un ensemble flexible de points d'entrée, tels que l'équipe, le canal et la conversation, où les personnes peuvent découvrir et utiliser votre application. Votre application peut être aussi simple que l'intégration d'un contenu web existant dans un onglet ou une application à plusieurs facettes avec laquelle les utilisateurs interagissent dans plusieurs contextes.
 Les applications les plus réussies sont natives de Teams. Choisissez donc soigneusement les points d'entrée de votre application.
 
 ## <a name="shared-app-experiences"></a>Expériences d'application partagées
@@ -47,8 +47,7 @@ La liste suivante montre comment les fonctionnalités teams sont couramment util
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Recommandations en matière de conception d'applications Teams](../concepts/design/design-teams-app-overview.md)
+- [Recommandations en matière de conception d'applications Teams](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante
 

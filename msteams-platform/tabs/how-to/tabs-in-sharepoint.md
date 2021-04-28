@@ -6,12 +6,12 @@ keywords: teams tabs sharepoint framework development
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020329"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058480"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Ajouter l'onglet Teams à SharePoint 
 
@@ -81,7 +81,7 @@ L'exemple d'application utilisé est une application de gestion des talents. Il 
 * Atteindre les utilisateurs SharePoint avec votre onglet Teams existant.
 * Téléchargez votre manifeste d'application directement dans votre catalogue d'applications SharePoint. [Les packages d'application Teams](~/concepts/build-and-test/apps-package.md) sont désormais pris en charge par SharePoint.
 * Les utilisateurs configurent l'onglet d'une page comme n'importe quel autre élément Web Part SharePoint.
-* Votre onglet peut accéder à [son contexte](~/tabs/how-to/access-teams-context.md) de la même manière que lorsqu'il est en cours d'exécution dans Teams.
+* Votre onglet peut accéder à [son contexte](~/tabs/how-to/access-teams-context.md) de la même manière que lors de son exécution dans Teams.
 
 **Pour ajouter l'onglet Teams à SharePoint**
 
@@ -143,11 +143,8 @@ L'image suivante affiche l'expérience complète de l'application Teams dans Sha
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Création d’un onglet Microsoft Teams à l’aide de SharePoint Framework - Didacticiel](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Création d’un onglet Microsoft Teams à l’aide de SharePoint Framework - Didacticiel](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-> [!div class="nextstepaction"]
-> [Utilisation des pages d’application à composant unique dans SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Utilisation des pages d’application à composant unique dans SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
-> [!div class="nextstepaction"]
-> [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)

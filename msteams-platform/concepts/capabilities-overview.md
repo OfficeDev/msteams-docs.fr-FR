@@ -6,18 +6,18 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: d1c6916c9433b15ddcd13e9128b25170dd990dd4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f670f1f7b3db01f89fab4335c33f92e02cad1d9a
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019929"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058487"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprendre les fonctionnalités de l'application Microsoft Teams
 
 L'extensibilité ou les points d'entrée sont différentes façons dont une application peut se manifester pour un utilisateur. Par exemple, un utilisateur peut interagir avec une application sur un onglet de zone de dessin pour faire une activité ou peut choisir d'en faire de même à l'aide d'un bot de conversation. Les différentes fonctionnalités utilisées pour créer votre application Teams vous permettent d'augmenter son étendue d'utilisation.
 
-Il existe plusieurs façons d'étendre Teams, de sorte que chaque application est unique. Certaines n'ont qu'une seule fonctionnalité, telle qu'un webhook, tandis que d'autres disposent de plusieurs fonctionnalités pour offrir différentes options aux utilisateurs. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l'onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
+Il existe plusieurs façons d'étendre Teams, de sorte que chaque application est unique. Certaines n'ont qu'une seule fonctionnalité, telle qu'un webhook, tandis que d'autres disposent de plusieurs fonctionnalités pour offrir aux utilisateurs différentes options. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l'onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
 
 ## <a name="app-capabilities"></a>Fonctionnalités de l’application
 
@@ -41,8 +41,8 @@ Par exemple, vous pouvez collecter les entrées utilisateur dans un formulaire c
 
 ## <a name="see-also"></a>Voir aussi
 
-> [!div class="nextstepaction"]
-> [Créer des applications pour Teams](../overview.md)
+- [Créer des applications pour Teams](../overview.md)
+
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
