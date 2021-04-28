@@ -46,13 +46,15 @@
       href: concepts/design/map-use-cases.md
 - name: S'intégrer aux équipes
   items:
+    - name: Aperçu
+      href: samples/integrate-web-apps-overview.md
     - name: Applications web
       href: samples/integrating-web-apps.md
     - name: Applications de la plate-forme d'énergie
       items:
         - name: Vue d'ensemble
           href: samples/teams-low-code-solutions.md
-        - name: Ajouter un chatbot Power Virtual Agents
+        - name: Ajouter le chatbot Power Virtual Agents
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
         - name: Créer un assistant virtuel
           href: samples/virtual-assistant.md
@@ -60,11 +62,11 @@
       href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
       href: samples/shifts-wfm-connectors.md
-    - name: Installer le Moodle LMS
+    - name: Installer Moodle LMS
       href: resources/moodleInstructions.md
-    - name: Créer un bouton de partage Teams
+    - name: Créer un bouton de partage pour Teams
       href: concepts/build-and-test/share-to-teams.md
-    - name: Ajouter un onglet Teams à SharePoint
+    - name: Ajouter l'onglet Teams à SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: Créer des liens plus étroits
       href: concepts/build-and-test/deep-links.md
