@@ -4,18 +4,18 @@ author: clearab
 description: Comment répondre à la commande de recherche à partir d'une extension de messagerie dans une application Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 044c6eebe9489ed404c9fa89b29c306cde8c7363
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058585"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075632"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois que l'utilisateur a soumis la commande de recherche, votre service web reçoit un message d'appel qui contient un objet `composeExtension/query` `value` avec les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
+Une fois que l'utilisateur a soumis la commande de recherche, votre service web reçoit un message d'appel qui contient un objet avec `composeExtension/query` `value` les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
 
 * À mesure que des caractères sont entrés dans la zone de recherche.
 * `initialRun` est définie sur true dans le manifeste de votre application, vous recevez le message d'appel dès que la commande de recherche est invoquée. Pour plus d'informations, [voir la requête par défaut.](#default-query)
@@ -27,7 +27,7 @@ Les paramètres de requête se trouvent dans `value` l'objet de la demande, qui 
 | Nom de la propriété | Objectif |
 |---|---|
 | `commandId` | Nom de la commande invoquée par l'utilisateur, correspondant à l'une des commandes déclarées dans le manifeste de l'application. |
-| `parameters` | Tableau de paramètres. Chaque objet paramètre contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l'utilisateur. |
+| `parameters` | Tableau de paramètres. Chaque objet parameter contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l'utilisateur. |
 | `queryOptions` | Paramètres de pagination : <br>`skip`: Ignorer le nombre pour cette requête <br>`count`: Nombre d'éléments à renvoyer. |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -102,7 +102,7 @@ Teams prend en charge les types de carte suivants :
 
 Pour avoir une meilleure compréhension et une meilleure vue d'ensemble des cartes, voyez [ce que sont les cartes.](~/task-modules-and-cards/what-are-cards.md)
 
-Pour découvrir comment utiliser les types de carte miniature et hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
+Pour découvrir comment utiliser les types de carte miniature et Hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
 Pour plus d'informations sur la carte de connecteur Office 365, voir Utilisation de cartes de connecteur [Office 365.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
@@ -112,7 +112,7 @@ La liste des résultats s'affiche dans l'interface utilisateur de Microsoft Team
 * Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n'est pas définie et que ces propriétés sont disponibles.
 * Les actions d'appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d'aperçu.
 
-Vous pouvez afficher un aperçu d'une carte adaptative ou d'une carte connecteur Office 365 dans la liste des résultats à l'aide de sa propriété d'aperçu. La propriété d'aperçu n'est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d'aperçu, il doit s'agit d'une carte Hero ou miniature. Si aucune propriété d'aperçu n'est spécifiée, l'aperçu de la carte échoue et rien n'est affiché.
+Vous pouvez afficher un aperçu d'une carte adaptative ou d'une carte connecteur Office 365 dans la liste des résultats à l'aide de sa propriété d'aperçu. La propriété d'aperçu n'est pas nécessaire si les résultats sont déjà des cartes Hero ou Miniatures. Si vous utilisez la pièce jointe d'aperçu, il doit s'agit d'une carte Hero ou miniature. Si aucune propriété d'aperçu n'est spécifiée, l'aperçu de la carte échoue et rien n'est affiché.
 
 ### <a name="response-example"></a>Exemple de réponse
 
@@ -313,7 +313,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>Requête par défaut
 
-Si vous l'avez définie dans le manifeste, Microsoft Teams publie une requête par défaut lorsque l'utilisateur ouvre pour la première fois `initialRun` `true` l'extension de messagerie.  Votre service peut répondre à cette requête avec un ensemble de résultats pré-rempli. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant les éléments récemment affichés, les favoris ou toute autre information qui ne dépend pas de l'entrée utilisateur.
+Si vous la définissez dans le manifeste, Microsoft Teams publie une requête par défaut lorsque l'utilisateur ouvre pour la première fois `initialRun` `true` l'extension de messagerie.  Votre service peut répondre à cette requête avec un ensemble de résultats pré-rempli. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant les éléments récemment affichés, les favoris ou toute autre information qui ne dépend pas de l'entrée utilisateur.
 
 La requête par défaut a la même structure que n'importe quelle requête utilisateur normale, avec le champ définie sur et définie sur comme indiqué `name` `initialRun` dans `value` `true` l'objet suivant :
 
@@ -347,7 +347,7 @@ La requête par défaut a la même structure que n'importe quelle requête utili
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Ajouter une configuration à une extension de messagerie](~/messaging-extensions/how-to/add-configuration-page.md)
+[Ajouter une configuration à une extension de messagerie](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## <a name="next-step"></a>Étape suivante
 

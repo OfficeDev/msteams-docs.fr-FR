@@ -6,16 +6,16 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams Authorization OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 7f67df35954cd29810c387d05215eeec476a4ed4
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 328be5b4f1e3597457afb9ce1413eb35aa2df71e
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058326"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075618"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement spécifiques aux ressources dans Teams
 
-Le consentement spécifique aux ressources (RSC) est une intégration d'API Microsoft Teams et Graph qui permet à votre application d'utiliser des points de terminaison d'API pour gérer des équipes spécifiques au sein d'une organisation. Pour plus d'informations, voir consentement spécifique aux [ressources (RSC) — API Microsoft Teams Graph](resource-specific-consent.md).
+Le consentement spécifique aux ressources (RSC) est une intégration d'API Microsoft Teams et Graph qui permet à votre application d'utiliser des points de terminaison d'API pour gérer des équipes spécifiques au sein d'une organisation. Pour plus d'informations, voir consentement spécifique à la [ressource (RSC) — API Microsoft Teams Graph](resource-specific-consent.md).
 
 > [!NOTE]
 > Pour tester les autorisations RSC, votre fichier manifeste d'application Teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
@@ -85,5 +85,5 @@ Exécutez l'ensemble de la collection d'autorisations pour chaque appel d'API. L
 
 ## <a name="see-also"></a>Voir aussi
 
-- [API Microsoft Graph et Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+[API Microsoft Graph et Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

@@ -1,22 +1,22 @@
 ---
 title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte dans Microsoft Teams
-keywords: Format de cartes de bots teams
+keywords: Format de cartes de bots Teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922516"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068821"
 ---
 # <a name="format-cards-in-teams"></a>Mise en forme des cartes dans Teams
 
 Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l'aide de Markdown ou html, en fonction du type de carte.
 
-Les cartes ne supportent la mise en forme que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre. La mise en forme peut être spécifiée à l'aide d'un sous-ensemble de mise en forme XML (HTML) ou markdown en fonction du type de carte. Pour le développement actuel et le développement de cartes adaptatives utilisant la mise en forme Markdown est recommandé.
+Les cartes ne supportent la mise en forme que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre. La mise en forme peut être spécifiée à l'aide d'un sous-ensemble de mise en forme XML (HTML) ou markdown en fonction du type de carte. Pour les cartes adaptatives de développement actuel et futur utilisant la mise en forme Markdown, il est recommandé.
 
 La prise en charge de la mise en forme diffère d'un type de carte à l'autre, et le rendu de la carte peut légèrement varier entre le bureau et les clients Teams mobiles, ainsi que Teams dans le navigateur de bureau.
 
@@ -113,7 +113,7 @@ Sur Android, la mise en forme Markdown de carte adaptative s'affiche comme ceci 
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>Prise en charge des mentions dans les cartes adaptatives v1.2
 
-Les mentions basées sur la carte sont pris en charge dans les clients web, de bureau et mobiles. Vous pouvez ajouter des mentions @ dans un corps de carte adaptative pour les bots et les réponses d'extension de messagerie. Pour ajouter des mentions @ dans les cartes, suivez la même logique de notification et le même rendu que celle des [mentions basées](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)sur les messages dans les conversations de canal et de groupe.
+Les mentions basées sur la carte sont pris en charge dans les clients web, de bureau et mobiles. Vous pouvez ajouter des mentions @ dans un corps de carte adaptative pour les bots et les réponses d'extension de messagerie. Pour ajouter des mentions @ dans les cartes, suivez la même logique de notification et le même rendu que celui des [mentions basées](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)sur les messages dans les conversations de canal et de groupe.
 
 Les bots et les extensions de messagerie peuvent inclure des mentions dans le contenu de la carte dans les éléments [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) et [FactSet.](https://adaptivecards.io/explorer/FactSet.html)
 
@@ -164,7 +164,7 @@ Pour inclure une mention dans une carte adaptative, votre application doit inclu
 Utilisez la propriété de masquage d'informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs au sein de l'élément d'entrée [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) de carte adaptative. 
 
 > [!NOTE]
-> La fonctionnalité prend uniquement en charge le masquage d'informations côté client, le texte d'entrée masqué est envoyé en tant que texte clair à l'adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-configure-your-bot) 
+> La fonctionnalité prend uniquement en charge le masquage d'informations côté client, le texte d'entrée masqué est envoyé sous forme de texte clair à l'adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md) 
 
 > [!NOTE]
 > La propriété de masquage d'informations est actuellement disponible dans l'aperçu développeur uniquement.
@@ -226,7 +226,7 @@ Dans l'élément de schéma, le fait de demander aux utilisateurs de filtrer et 
 
 #### <a name="enable-typeahead-in-adaptive-cards"></a>Activer typeahead dans les cartes adaptatives
 
-Pour activer typeahead dans `Input.Choiceset` l'ensemble `style` et vérifier `filtered` `isMultiSelect` qu'il est définie sur `false` . 
+Pour activer la tête de type dans `Input.Choiceset` l'ensemble `style` et `filtered` vérifier `isMultiSelect` qu'elle est définie sur `false` . 
 
 #### <a name="sample-adaptive-card-with-typeahead-support"></a>Exemple de carte adaptative avec prise en charge de typeahead
 
@@ -269,7 +269,7 @@ Dans une carte adaptative, vous pouvez utiliser la propriété pour ajouter la p
 
 Lorsque les utilisateurs pointent sur l'image, une icône développer s'affiche dans le coin supérieur droit de l'image : carte adaptative ![ avec image expandable](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
-L'image s'affiche en vue de la phase lorsque l'utilisateur sélectionne le bouton développer : ![ Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
+L'image s'affiche en vue de la phase lorsque l'utilisateur sélectionne le bouton Développer : ![ Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
 
 Dans la vue d'étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l'image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
 
@@ -487,13 +487,13 @@ Sur iOS, la mise en forme HTML s’affiche comme ceci :
 
 Problèmes :
 
-* La mise en forme de caractères en gras et en italique n’est pas restituer sur iOS.
+* La mise en forme des caractères en gras et en italique n’est pas restituer sur iOS.
 
 Sur Android, la mise en forme HTML s’affiche comme ceci :
 
 ![Mise en forme HTML dans le client Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-La mise en forme des caractères comme gras et italique s’affiche correctement sur Android.
+La mise en forme des caractères comme le gras et l’italique s’affiche correctement sur Android.
 
 ### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Exemple de mise en forme pour la mise en forme HTML dans des cartes simples
 

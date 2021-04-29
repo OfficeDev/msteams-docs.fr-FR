@@ -5,12 +5,12 @@ description: Comment effectuer un déploiement de lien avec l'extension de messa
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ec4ac7329b2c0df64237692d450977148789eff8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058515"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075716"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
@@ -178,4 +178,4 @@ Voici un exemple de réponse :
 
 ## <a name="see-also"></a>Voir aussi 
 
-- [Qu'est-ce que les cartes ?](~/task-modules-and-cards/what-are-cards.md)
+[Cartes](~/task-modules-and-cards/what-are-cards.md)

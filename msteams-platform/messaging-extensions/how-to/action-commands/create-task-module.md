@@ -5,12 +5,12 @@ description: Comment gérer l'action d'appel initiale et répondre avec un modul
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: fbe90b3a3af8dbb053fdbaf6b4cd9b96344eaf00
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058627"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075590"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 
@@ -22,7 +22,7 @@ Vous pouvez créer le module de tâche à l'aide d'une carte adaptative ou d'un 
 
 ## <a name="the-initial-invoke-request"></a>Demande d'appel initiale
 
-Dans le processus de la demande d'appel initiale, votre service reçoit un objet de type et vous devez répondre avec un objet contenant une carte adaptative ou une URL vers l'affichage `Activity` `composeExtension/fetchTask` web `task` incorporé. Avec les propriétés d'activité standard du bot, la charge utile d'appel initiale contient les métadonnées de requête suivantes :
+Dans le processus de la demande d'appel initiale, votre service reçoit un objet de type et vous devez répondre avec un objet contenant une carte adaptative ou une URL vers l'affichage `Activity` `composeExtension/fetchTask` web `task` incorporé. En plus des propriétés d'activité standard du bot, la charge utile d'appel initiale contient les métadonnées de requête suivantes :
 
 |Nom de la propriété|Objectif|
 |---|---|
@@ -598,7 +598,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Répondre à fetchTask
+## <a name="respond-to-the-fetchtask"></a>Répondre à la tâche fetchTask
 
 Répondez à la demande d'appel avec un objet qui contient un objet avec la carte adaptative ou l'URL web, ou `task` un message de chaîne `taskInfo` simple.
 
@@ -856,7 +856,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Si l'application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche. Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche. Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d'une équipe.
 
-Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d'obtenir une liste de membres. Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot. L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification. Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.
+Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d'obtenir une liste. Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot. L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification. Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.
 
 #### <a name="example"></a>Exemple 
 
@@ -941,12 +941,12 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à l'action d'soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Recherche d'extension de messagerie Teams   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Définir les commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+[Définir les commandes d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## <a name="next-step"></a>Étape suivante

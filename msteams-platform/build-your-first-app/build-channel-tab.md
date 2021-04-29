@@ -1,97 +1,64 @@
 ---
 title: Get started - Build a channel and group tab
-author: heath-hamilton
+author: girliemac
 description: Créez rapidement un onglet de groupe et de canal Microsoft Teams à l'aide de la Shared Computer Toolkit Microsoft Teams.
-ms.author: lajanuar
-localization_priority: Normal
-ms.date: 10/09/2020
+ms.author: timura
+ms.date: 03/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: aadab4b6826b026eadd5ed564b6e5de5c29b4b1d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 868a471499bf2015196b7b741e340d070d0ed458
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020876"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068743"
 ---
-# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Créer un onglet de canal et de groupe pour Microsoft Teams
+# <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a>Créer votre premier onglet de canal et de groupe pour Microsoft Teams
 
-Dans ce didacticiel, vous allez créer un onglet de canal de base *(également* appelé onglet *groupe),* qui est une page en plein écran pour un canal d'équipe ou une conversation. Contrairement à un onglet personnel, les utilisateurs peuvent configurer certains aspects de ce type d'onglet (par exemple, renommer l'onglet afin qu'il soit significatif pour leur canal).
-
-## <a name="your-assignment"></a>Votre affectation
-
-Il n'y a pas longtemps, votre organisation a créé une application Teams qui utilise un onglet pour afficher des informations de contact importantes (service d'aide, RESSOURCES HUMAINES, etc.). Toutefois, étant donné qu'il s'agit d'un onglet personnel, chaque utilisateur doit installer l'onglet pour le voir et son adoption est inférieure aux attentes. En d'autres termes, trop d'employés ne savent toujours pas comment joindre le service d'aide.
-
-Vous pouvez faciliter la recherche de ces informations en construisant un onglet de canal, ce qui permet de supprimer la charge de l'installation d'une application par tout le monde. Au lieu de cela, un utilisateur peut ajouter l'onglet dans un canal ou une conversation au profit d'un groupe entier.
+Ce didacticiel vous  apprend à créer un onglet de canal de base également appelé onglet de *groupe,* qui est une page en plein écran pour un canal d'équipe ou une conversation. Vous pouvez également configurer certains aspects de ce type d'onglet, par exemple renommer l'onglet afin qu'il soit significatif pour son canal, ce que vous ne pouvez pas faire dans un onglet personnel.
 
 ## <a name="what-youll-learn"></a>Ce que vous allez apprendre
 
-> [!div class="checklist"]
->
-> * Créer un projet d'application à l'aide du Shared Computer Toolkit Microsoft Teams pour Visual Studio Code
-> * Identifier certaines configurations d'application et la échafaudage pertinentes pour les onglets de canal
-> * Créer du contenu d'onglet
-> * Créer du contenu pour la page de configuration d'un onglet
-> * Fournir un nom d'onglet suggéré
-> * Créer et exécuter votre application localement
-> * Chargement de version test de votre application dans Teams
+* Créez un projet d'application à l'aide du Shared Computer Toolkit Microsoft Teams Visual Studio Code.
+* Comprendre les configurations d'application et la échafaudage pertinentes pour les onglets de canal.
+* Créez le contenu de l'onglet et la configuration de l'onglet.
+* Créez et exécutez votre application dans teams pour les tests.
 
-## <a name="before-you-begin"></a>Avant de commencer
+## <a name="prerequisites"></a>Prerequisites
 
-Si vous ne l'avez pas encore fait, assurez-vous que vous comprenez et installez les [conditions préalables de développement teams.](build-first-app-overview.md#get-prerequisites)
+Assurez-vous que vous comprenez comment configurer et créer une application Teams simple. Pour plus d'informations, voir [créer votre première application Microsoft Teams « Hello, World!](../build-your-first-app/build-and-run.md)».
 
 ## <a name="1-create-your-app-project"></a>1. Créer votre projet d'application
 
-Le Shared Computer Toolkit Microsoft Teams vous aide à configurer votre application et à configurer la modèle pour les onglets de canal et de groupe, y compris une page de configuration de base et une page de contenu qui affiche « Hello, World! ». Message.
+L'Shared Computer Toolkit Microsoft Teams vous aide à configurer votre application et à configurer la échafaudage pertinente pour les onglets de canal et de groupe. Il contient également une page de configuration de base et une page de contenu qui affiche un « Hello, World! » Message.
 
-> [!TIP]
-> Si vous n'avez pas encore créé de projet d'application Teams, il peut vous être utile de suivre ces [instructions](../build-your-first-app/build-and-run.md) qui expliquent les projets plus en détail.
+**Pour créer votre projet d'application**
 
-1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Create a new Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **app**.
-1. Lorsque vous y invitez, connectez-vous avec votre compte de développement Microsoft 365.
-1. Dans **l'écran Ajouter des fonctionnalités,** sélectionnez **Onglet,** puis **Suivant**.
-1. Entrez un nom pour votre application Teams. (Il s'agit du nom par défaut de votre application, ainsi que du nom du répertoire de projet d'application sur votre ordinateur local.) Sélectionnez **l'onglet canal Groupe ou Teams.**
-1. Sélectionnez **Terminer** en bas de l'écran pour configurer votre projet.  
+1. Go to Visual Studio Code and select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar.
+1. Connectez-vous à l'aide de votre compte de développement Microsoft 365 lorsque vous y invitez.
+1. Dans **l'écran Sélectionner un** projet, **sélectionnez JS** (JavaScript) sous **Canal et application de groupe.**
+1. Entrez un nom pour votre application Teams. 
 
-## <a name="2-identify-relevant-app-project-components"></a>2. Identifier les composants de projet d'application pertinents
+    > [!NOTE]
+    > Il s'agit du nom par défaut de votre application, ainsi que du nom du répertoire de projet d'application sur votre ordinateur local.
+
+1. Sélectionnez **l'onglet de canal Groupe ou Teams.**
+1. Sélectionnez **Terminer** en bas de l'écran pour configurer votre projet et enregistrez-le sur votre ordinateur local.  
+
+## <a name="2-understand-your-app-project-components"></a>2. Comprendre les composants de votre projet d'application
 
 La plupart des configurations d'application et de la création de la échafaudage sont automatiquement définies lorsque vous créez votre projet avec le kit de ressources. Examinons les principaux composants de la création d'un onglet de canal.
 
-### <a name="app-configurations"></a>Configurations d'application
-
-Dans le kit de ressources, allez dans **App Studio** pour afficher et mettre à jour les configurations de votre application.
-
-### <a name="app-scaffolding"></a>Échafaudage d'application
-
-La échafaudage de l'application fournit les composants pour le rendu de l'onglet de votre canal dans Teams. Il y a beaucoup de choses que vous pouvez utiliser, mais pour l'instant, vous ne devez vous concentrer que sur les questions suivantes :
-
-* Deux fichiers se trouvent dans `src/components` le répertoire de votre projet :
-  * `Tab.js` pour le rendu de la page de contenu de votre onglet.
-  * `TabConfig.js` pour le rendu de la page de configuration de votre onglet.
-* SDK client JavaScript Microsoft Teams, qui est pré-chargé dans les composants frontaux de votre projet.
+* **Configurations d'application**: **ouvrez App Studio** dans le kit de ressources pour afficher et mettre à jour les configurations de votre application.
+* **Échafaudage d'application**: la échafaudage de l'application fournit les composants nécessaires au rendu de l'onglet de votre canal dans Teams. Toutefois, pour l'instant, nous allons nous concentrer sur les questions suivantes :
+  * Fichiers situés dans le `src/components` répertoire de votre projet :
+    * `Tab.js` pour le rendu de la page de contenu de votre onglet.
+    * `TabConfig.js` pour le rendu de la page de configuration de votre onglet.
+  * SDK client JavaScript Microsoft Teams, qui est pré-chargé dans les composants frontaux de votre projet.
 
 ## <a name="3-customize-your-tab-content-page"></a>3. Personnaliser la page de contenu de votre onglet
 
-Copiez et mettez à jour l'extrait de code suivant avec des informations pertinentes pour votre organisation ou, dans un souci de temps, utilisez le code tel qu'il est.
-
-```JSX
-<div>
-  <h1>Important Contacts</h1>
-    <ul>
-      <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-      <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-      <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-    </ul>
-</div>
-```
-
-Go to the `src/components` directory and open `Tab.js` . Recherchez `render()` la fonction et collez votre contenu à l'intérieur `return()` (comme illustré).
-
-```JavaScript
-render() {
-
-    let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
-
-    return (
+1. Copiez et modifiez l'exemple de code suivant avec des informations pertinentes pour votre organisation. Vous pouvez également utiliser l'extrait de code tel qu'il est :
+    ```JSX
     <div>
       <h1>Important Contacts</h1>
         <ul>
@@ -100,95 +67,111 @@ render() {
           <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
         </ul>
     </div>
-    );
-}
-```
+    ```
+1. Go to the `src/components` directory and open the `Tab.js` file. Recherchez `render()` la fonction et collez votre code à l'intérieur, comme illustré dans `return()` l'exemple suivant :
+    ```JavaScript
+    render() {
 
-Ajoutez la règle suivante à (également située dans ) afin que les liens de messagerie soient plus faciles à lire, quel que `App.css` soit le thème `src/components` utilisé.
+        let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
 
-```CSS
-a {
-  color: inherit;
-}
-```
+        return (
+        <div>
+          <h1>Important Contacts</h1>
+            <ul>
+              <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+              <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+              <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+            </ul>
+        </div>
+        );
+    }
+    ```
+1. Go to the `src/components` directory and update the `App.css` file with the following code to make the email links easier to read in any theme that is used:
+    ```CSS
+    a {
+      color: inherit;
+    }
+    ```
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. Personnaliser la page de configuration de votre onglet
 
-Chaque onglet d'un canal ou d'une conversation possède une page de configuration, une page modale avec au moins une option de configuration qui s'affiche lorsque les utilisateurs ajoutent votre application. La page de configuration demande par défaut aux utilisateurs s'ils souhaitent avertir le canal ou la conversation lors de l'installation de l'onglet.
+Chaque onglet d'un canal ou d'une conversation possède une page de configuration, une page modale avec au moins une option de configuration qui s'affiche lorsque les utilisateurs ajoutent votre application. La page de configuration demande par défaut aux utilisateurs s'ils souhaitent avertir le canal ou la conversation lors de l'installation de l'onglet. Vous pouvez personnaliser la page de configuration en ajoutant du contenu personnalisé.
 
-Ajoutez du contenu personnalisé à votre page de configuration. Go to your project's `src/components` directory, open `TabConfig.js` , and update the placeholder content inside `return()` (as shown in the following example).
+Pour ajouter du contenu personnalisé, ouvrez le fichier à partir du répertoire et mettez à jour le contenu de l'espace réservé à l'intérieur, comme `TabConfig.js` `src/components` illustré dans `return()` l'exemple suivant :
 
-```JavaScript
-return (
-    <div>
-      <h1>Add My Contoso Contacts</h1>
+  ```JavaScript
+  return (
       <div>
-        Select <b>Save</b> to add our organization's important contacts to this workspace.
+        <h1>Add My Contoso Contacts</h1>
+        <div>
+          Select <b>Save</b> to add our organization's important contacts to this workspace.
+        </div>
       </div>
-    </div>
-);
-```
+  );
+  ```
  
 > [!TIP]
-> Fournissez au moins quelques informations brèves sur votre application sur cette page, car il peut s'agit de la première fois que les utilisateurs en font l'apprentissage. Vous pouvez également inclure des options de configuration personnalisées ou [un](../tabs/how-to/authentication/auth-aad-sso.md)flux de travail d'authentification, ce qui est courant dans les pages de configuration d'onglets.
+> Donnez de brèves informations sur votre application sur cette page, car c'est la première fois que les utilisateurs lisent des informations à ce sujet. Vous pouvez également inclure des options de configuration personnalisées ou [un](../tabs/how-to/authentication/auth-aad-sso.md)flux de travail d'authentification, ce qui est courant dans les pages de configuration d'onglets.
 
-## <a name="5-provide-a-suggested-tab-name"></a>5. Fournir un nom d'onglet suggéré
+## <a name="5-customize-your-tab-name"></a>5. Personnaliser le nom de votre onglet
 
-Lorsque vous ajoutez un onglet de canal, le nom de l'application s'affiche par défaut (par exemple, **première application).**
+Lorsque vous ajoutez un onglet de canal, le nom de l'application s'affiche par défaut, par exemple, **première application.** Vous pouvez également fournir un nom plus logique dans le contexte de la collaboration de groupe, par exemple, **Contacts d'équipe**:
 
-Cela peut être correct en fonction de ce que vous appelez votre application, mais vous souhaitez peut-être fournir un nom plus logique dans le contexte de la collaboration de groupe (par exemple, Contacts **d'équipe).**
+1. Go to the `src/components` directory and open the `TabConfig.js` file.
+1. Ajoutez la propriété avec le nom d'onglet que vous souhaitez afficher par défaut, comme `suggestedDisplayName` `microsoftTeams.settings.setSettings` illustré dans l'exemple suivant :
 
-1. Dans `TabConfig.js` , allez à `microsoftTeams.settings.setSettings` .
-2. Ajoutez `suggestedDisplayName` la propriété avec le nom d'onglet que vous souhaitez afficher par défaut. 
-3. Utilisez le nom fourni dans l'exemple suivant ou tapez votre nom. (Par défaut, les utilisateurs peuvent modifier le nom.)
-
-```JavaScript
-microsoftTeams.settings.setSettings({
-  "contentUrl": "https://localhost:3000/tab",
-  "suggestedDisplayName": "Team Contacts"
-});
-```
+  ```JavaScript
+    microsoftTeams.settings.setSettings({
+    "contentUrl": "https://localhost:3000/tab",
+    "suggestedDisplayName": "Team Contacts"
+  });
+  ```
 
 ## <a name="6-build-and-run-your-app"></a>6. Créer et exécuter votre application
 
-Dans l'intérêt du temps, vous allez créer et exécuter votre application localement.
+Ce didacticiel vous apprend à créer et exécuter votre application localement. 
 
-(Ces informations sont également disponibles dans le kit de `README` ressources.)
-
-1. Dans un terminal, allez dans le répertoire racine de votre projet d'application et exécutez `npm install` .
+1. Go to the root directory of your app project in Terminal.
+1. Exécutez `npm install` .
 1. Exécutez `npm start` .
 
-Une fois terminé, une compilation a **réussi !** dans le terminal. Votre application est en cours d'exécution sur `https://localhost:3000` .
+Ces informations sont également présentes dans la `README` section du kit de ressources.
+Votre application est en cours `https://localhost:3000` d'exécution après la compilation **!** s'affiche dans le terminal. 
 
 ## <a name="7-sideload-your-app-in-teams"></a>7. Chargement de version secondaire de votre application dans Teams
 
-Votre application est prête à être testée dans Teams. Pour ce faire, vous devez avoir un compte qui autorise le chargement de version de version d'application. (Si vous n'êtes pas sûr de l'avoir, découvrez comment obtenir un compte [de développement Teams.)](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)
+Votre application est prête à être testée dans Teams. Pour ce faire, vous devez avoir un compte qui autorise le chargement de version d'application. 
 
-1. Dans Visual Studio Code, appuyez sur la **touche F5** pour lancer un client web Teams.
-1. Pour afficher le contenu de votre application dans Teams, spécifiez que l'endroit où votre application est en cours d'exécution ( `localhost` ) est digne de confiance :
-   1. Ouvrez un nouvel onglet dans la même fenêtre de navigateur (Google Chrome par défaut) qui s'est ouvert après avoir appuyez sur **F5**.
-   1. Go to `https://localhost:3000/tab` and proceed to the page.
-1. Revenir à Teams. Dans la modale, sélectionnez Ajouter à une équipe ou Ajouter à une **conversation** et recherchez un canal ou une conversation que vous pouvez utiliser pour le test. 
-1. Sélectionnez **Configurer un onglet.** La page de configuration s'affiche dans une forme modale.<br/>
+1. Ouvrez un client web Teams dans Visual Studio Code avec la **touche F5.**
+1. Ajoutez ( ) comme digne de confiance en suivant les étapes suivantes pour permettre l'affichage du contenu de votre application `localhost` dans Teams :
+
+   1. Ouvrez un nouvel onglet dans la même fenêtre de navigateur (Google Chrome par défaut) qui s'est ouverte avec la **touche F5.**
+   1. Ouvrez `https://localhost:3000/tab` et continuez jusqu'à la page.
+
+1. Sélectionnez **Ajouter à une équipe ou** Ajouter à une **conversation** et recherchez un canal ou une conversation que vous pouvez utiliser pour le test à partir de la modale dans Teams.
+1. Sélectionnez **Configurer un onglet.** La page de configuration s'affiche dans une forme modale.
+
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Capture d'écran d'une page de configuration d'onglet de canal.":::
-1. Sélectionnez **Enregistrer** pour configurer l'onglet. La page de contenu s'affiche.<br/>
+
+1. Sélectionnez **Enregistrer** pour configurer l'onglet. La page de contenu suivante s'affiche :
+
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Capture d'écran d'un onglet de canal avec affichage de contenu statique.":::
 
-## <a name="well-done"></a>Bien jouer
+## <a name="see-also"></a>Voir aussi
 
-Félicitations ! Vous avez une application Teams avec un onglet pour afficher du contenu utile dans les canaux et les conversations.
+* [Créer et exécuter votre première application Microsoft Teams](../build-your-first-app/build-and-run.md) 
+* [Kit de développement logiciel client JavaScript Teams](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Conception de votre onglet pour le bureau et le web Microsoft Teams](../tabs/design/tabs.md) 
+* [Conception de votre application Microsoft Teams avec des modèles d'interface utilisateur](../concepts/design/design-teams-app-ui-templates.md) 
+* [Onglets sur les appareils mobiles](../tabs/design/tabs-mobile.md)
+* [Prise en charge de l' sign-on unique (SSO) pour les onglets](../tabs/how-to/authentication/auth-aad-sso.md)
+* [Présentation de l’API Microsoft Teams](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Créer un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
-## <a name="learn-more"></a>En savoir plus
-
-* Suivez nos [instructions de conception](../tabs/design/tabs.md) et créez avec des [modèles d'interface utilisateur](../concepts/design/design-teams-app-ui-templates.md) prêts pour la production pour créer une expérience transparente.
-* Comprendre [les considérations mobiles pour](../tabs/design/tabs-mobile.md) les onglets.
-* [Ajoutez l'authentification sso à votre onglet.](../tabs/how-to/authentication/auth-aad-sso.md)
-* Utiliser les données Teams avec [Microsoft Graph.](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Créer un onglet sans le kit de ressources](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
-
-## <a name="next-lesson"></a>Leçon suivante
-
-Vous savez comment créer un onglet pour la collaboration. Vous souhaitez essayer de créer un autre type d'application Teams ?
+## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Créer un bot](../build-your-first-app/build-bot.md)
+
+> [!div class="nextstepaction"]
+> [Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)

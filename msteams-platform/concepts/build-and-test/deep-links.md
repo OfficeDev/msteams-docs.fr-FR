@@ -4,18 +4,18 @@ description: Décrit les liens profonds et leur utilisation dans vos application
 ms.topic: how-to
 localization_priority: Normal
 keywords: lien profond teams
-ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058333"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075597"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
 Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Les scénarios dans lequel la création de liens profonds sont utiles sont les suivants :
 
-* Navigation de l'utilisateur vers le contenu dans l'un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour informer l'utilisateur d'une activité importante. Lorsque l'utilisateur tape sur la notification, le lien profond navigue vers l'onglet afin que l'utilisateur puisse afficher plus de détails sur l'activité.
+* Navigation de l'utilisateur vers le contenu dans l'un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour avertir l'utilisateur d'une activité importante. Lorsque l'utilisateur tape sur la notification, le lien profond navigue vers l'onglet afin que l'utilisateur puisse afficher plus de détails sur l'activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d'une conversation ou la planification d'une réunion, en pré-remplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d'entrer manuellement des informations.
 
 > [!NOTE]
@@ -36,7 +36,7 @@ Vous pouvez créer des liens vers des informations et des fonctionnalités dans 
 
 ## <a name="deep-linking-to-your-tab"></a>Liaison profonde à votre onglet
 
-Vous pouvez créer des liens profonds vers des entités dans Teams. Il est utilisé pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Par exemple, si votre onglet contient une liste de tâches, les membres de l'équipe peuvent créer et partager des liens vers des tâches individuelles. Lorsque vous sélectionnez le lien, il navigue vers votre onglet qui se concentre sur l'élément spécifique. Pour implémenter cela, vous ajoutez une action **de** lien de copie à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l'utilisateur prend cette action, vous appelez pour afficher une boîte de dialogue contenant un lien que l'utilisateur `shareDeepLink()` peut copier dans le Presse-papiers. Lorsque vous passez cet appel, vous passez également un ID pour [](~/tabs/how-to/access-teams-context.md) votre élément, que vous obtenez dans le contexte lorsque le lien est suivi et que votre onglet est rechargé.
+Vous pouvez créer des liens profonds vers des entités dans Teams. Il est utilisé pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Par exemple, si votre onglet contient une liste de tâches, les membres de l'équipe peuvent créer et partager des liens vers des tâches individuelles. Lorsque vous sélectionnez le lien, il navigue vers votre onglet qui se concentre sur l'élément spécifique. Pour implémenter cela, vous ajoutez une action **de** lien de copie à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l'utilisateur fait cette action, vous appelez pour afficher une boîte de dialogue contenant un lien que l'utilisateur `shareDeepLink()` peut copier dans le Presse-papiers. Lorsque vous passez cet appel, vous passez également un ID pour [](~/tabs/how-to/access-teams-context.md) votre élément, que vous obtenez dans le contexte lorsque le lien est suivi et que votre onglet est rechargé.
 
 Vous pouvez également générer des liens profonds par programme, en utilisant le format spécifié plus loin dans cette rubrique. Vous pouvez utiliser des liens profonds dans les [messages](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) [de bot](~/bots/what-are-bots.md) et de connecteur qui informent les utilisateurs des modifications apportées à votre onglet ou aux éléments qu'il insérez.
 
@@ -104,7 +104,7 @@ Exemples :
 
 Lorsque vous accédez à un lien profond, Microsoft Teams navigue simplement vers l'onglet et fournit un mécanisme via la bibliothèque JavaScript Microsoft Teams pour récupérer l'ID de sous-entité s'il existe.
 
-L'appel renvoie un contexte qui inclut le champ si l'onglet est [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) `subEntityId` accédé à un lien profond.
+[`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-)L'appel renvoie un contexte qui inclut le champ si l'onglet est inclus dans un lien `subEntityId` profond.
 
 ## <a name="deep-linking-from-your-tab"></a>Liaison profonde à partir de votre onglet
 
@@ -150,7 +150,7 @@ Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d'URL da
 
 Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d'extension de messagerie :
 
-`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
 
 Les paramètres de requête sont les suivants :
 
@@ -191,7 +191,7 @@ Les paramètres de requête sont les suivants :
 * `appID`: Votre ID manifeste **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: ID d'élément que vous avez fourni lors de [la configuration de l'onglet.](~/tabs/how-to/create-tab-pages/configuration-page.md) Par exemple, **tasklist123**.
-* `entityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l'onglet - https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 .
+* `entityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l'onglet ou https://tasklist.example.com/123 https://tasklist.example.com/list123/task456 .
 * `entityName`: une étiquette pour l'élément dans votre onglet, à utiliser lors de l'affichage du lien profond, Liste des tâches 123 ou Tâche 456.
 
 Exemple : https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
@@ -212,8 +212,8 @@ Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&att
 Les paramètres de requête sont les suivants :
 
 * `attendees`: Liste facultative d'ID d'utilisateurs séparés par des virgules représentant les participants à la réunion. L'utilisateur qui effectue l'action est l'organisateur de la réunion. Pour l'instant, le champ ID utilisateur prend uniquement en charge Azure AD UserPrincipalName, généralement une adresse de messagerie.
-* `startTime`: Heure de début facultative de l'événement. Il doit être au [format ISO 8601 long](https://en.wikipedia.org/wiki/ISO_8601), par exemple *2018-03-12T23:55:25+02:00*.
-* `endTime`: Heure de fin facultative de l'événement, également au format ISO 8601.
+* `startTime`: heure de début facultative de l'événement. Il doit être au [format ISO 8601 long,](https://en.wikipedia.org/wiki/ISO_8601)par exemple *2018-03-12T23:55:25+02:00*.
+* `endTime`: heure de fin facultative de l'événement, également au format ISO 8601.
 * `subject`: Champ facultatif pour l'objet de la réunion.
 * `content`: champ facultatif pour le champ Détails de la réunion.
 
@@ -222,6 +222,12 @@ Les paramètres de requête sont les suivants :
 
 Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme cible d'URL dans le bouton de votre carte ou appuyer sur l'action par le biais du `openUrl` type d'action.
 
+## <a name="code-sample"></a>Exemple de code
+
+| Exemple de nom | Description | .NET |
+|-------------|-------------|------|
+| ID de sous-entité de consommation de liens profonds | Exemple d’application Microsoft Teams pour montrer le lien profond entre la conversation du bot et l’ID de sous-entité de consommation d’onglets. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+[Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)

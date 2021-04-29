@@ -5,12 +5,12 @@ description: Détailler les solutions Microsoft faibles et sans solutions de cod
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d294bf335a7688584e52c22d2585f3db2ef1c788
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058683"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075723"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft Teams
 
@@ -29,7 +29,7 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams et Power BI
 
-[L'onglet Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) pour Microsoft Teams ajoute la prise en charge des rapports dans l'espace de travail Teams et permet aux utilisateurs de partager du contenu Power BI [interactif](/power-bi/collaborate-share/service-embed-report-microsoft-teams) et de collaborer avec d'autres personnes dans les canaux et conversations [Teams.](/power-bi/collaborate-share/service-collaborate-microsoft-teams) Vous pouvez créer du contenu [d'application Power BI](/power-bi/collaborate-share/service-create-distribute-apps) empaqueté à partir de zéro et le distribuer en tant qu'application ou créer une application de modèle dans Power [BI](/connect-data/service-template-apps-create). En outre, utilisez la nouvelle [application Power BI dans Teams](https://go.microsoft.com/fwlink/?linkid=2143643) pour apporter toute votre expérience de service Power BI de base dans Teams.
+[L'onglet Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) pour Microsoft Teams ajoute la prise en charge des rapports dans l'espace de travail Teams et permet aux utilisateurs de partager du contenu Interactif Power [BI](/power-bi/collaborate-share/service-embed-report-microsoft-teams) et de collaborer avec d'autres personnes dans les canaux et conversations [Teams.](/power-bi/collaborate-share/service-collaborate-microsoft-teams) Vous pouvez créer du contenu [d'application Power BI](/power-bi/collaborate-share/service-create-distribute-apps) empaqueté à partir de zéro et le distribuer en tant qu'application ou créer une application de modèle dans Power [BI](/connect-data/service-template-apps-create). En outre, utilisez la nouvelle [application Power BI dans Teams](https://go.microsoft.com/fwlink/?linkid=2143643) pour apporter toute votre expérience de service Power BI de base dans Teams.
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams et Power Apps
 
@@ -39,7 +39,7 @@ La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linki
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams et Power Automate
 
-Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l'environnement Teams avec l'application Power [Automate dans Teams.](/power-automate/flows-teams) Vous pouvez [déclencher un flux à partir de n'importe quel message dans Microsoft Teams](/power-automate/trigger-flow-teams-message) et utiliser des cartes [adaptatives dans Power Automate.](/power-automate/create-adaptive-cards) En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur ajoutée à Microsoft Teams à partir de la nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) dans Teams.
+Vous pouvez [créer des flux pour automatiser des](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) tâches de travail répétitives directement dans l'environnement Teams avec l'application Power [Automate dans Teams.](/power-automate/flows-teams) Vous pouvez [déclencher un flux à partir de n'importe quel message dans Microsoft Teams](/power-automate/trigger-flow-teams-message) et utiliser des cartes [adaptatives dans Power Automate.](/power-automate/create-adaptive-cards) En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur ajoutée à Microsoft Teams à partir de la nouvelle [application Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) dans Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams et les agents power virtual
 
@@ -58,7 +58,7 @@ Assistant virtuel est un modèle open source Microsoft qui vous permet de créer
 |Power BI|[Power BI pour les créateurs d'applications](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI pour les développeurs](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |Power Apps|[Power Apps pour les créateurs d'applications](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps pour les développeurs](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automate pour les créateurs d'applications](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate pour les développeurs](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Agents power virtual pour les développeurs et les créateurs d'applications](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power Virtual Agents|[Agents Power Virtual pour les développeurs et les créateurs d'applications](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### <a name="-project-oakdale-preview"></a>✔ ProjectDale (prévisualisation)
 
@@ -66,7 +66,7 @@ Assistant virtuel est un modèle open source Microsoft qui vous permet de créer
 > **ProjectDaldale est** renommé projet **Dataverse pour Teams.**
 
 [ProjectDaldale est](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) une nouvelle plateforme de données à code faible bientôt disponible dans Microsoft Teams. Il permet aux développeurs de créer des solutions Power Platform Teams directement dans Teams. Pour plus d'informations sur ProjectDale, consultez le [blog Teams de Microsoft ProjectDale.](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)
+) une nouvelle plateforme de données à code faible bientôt disponible dans Microsoft Teams. Il permet aux développeurs de créer des solutions Power Platform Teams directement dans Teams. Pour plus d'informations sur ProjectDale, voir [le blog Teams de Microsoft ProjectDale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### <a name="-microsoft-blog-insights"></a>✔ de blog Microsoft
 
@@ -76,11 +76,11 @@ Assistant virtuel est un modèle open source Microsoft qui vous permet de créer
 
 [Teams met en forme l'avenir du travail avec des fonctionnalités de code faible pour améliorer votre espace de travail numérique](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
 
-### <a name="-managing-power-platform-apps"></a>✔ gestion des applications de plateforme Power Platform
+### <a name="-managing-power-platform-apps"></a>✔ gestion des applications power platform
 
 > [!div class="nextstepaction"]
 > [Gérer les applications Microsoft Power Platform dans le Centre d'administration Microsoft Teams](/microsoftteams/manage-power-platform-apps)
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+[Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)

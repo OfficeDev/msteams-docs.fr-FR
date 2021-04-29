@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 03740bb12e849126dcd43b8628521928d060a80f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: db7cb777dfc0f6d56f0e4876afb3ae49ba7d9926
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019691"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075709"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -314,7 +314,7 @@ Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (M
 
 **Obligatoire** — ID d'application Microsoft
 
-L'ID est un identificateur unique généré par Microsoft pour l'application. Vous avez un ID si votre bot est inscrit via Microsoft Bot Framework ou si l'application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l'ID ici. Sinon, vous devez générer un nouvel ID sur le portail d'inscription [des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
+L'ID est un identificateur unique généré par Microsoft pour l'application. Vous avez un ID si votre bot est inscrit via Microsoft Bot Framework ou si l'application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l'ID ici. Sinon, vous devez générer un nouvel ID sur le portail [d'inscription des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
 
 > [!NOTE]
 > Si vous envoyez une mise à jour à votre application existante dans AppSource, l'ID de votre manifeste ne doit pas être modifié.
@@ -337,7 +337,7 @@ Fournit des informations sur votre entreprise. Pour les applications soumises à
 
 **Obligatoire** — objet
 
-Nom de l'expérience de votre application, affiché aux utilisateurs dans l'expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
+Nom de l'expérience de votre application, affiché aux utilisateurs dans l'expérience Teams. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -348,7 +348,7 @@ Nom de l'expérience de votre application, affiché aux utilisateurs dans l'exp�
 
 **Obligatoire** — objet
 
-Décrit votre application aux utilisateurs. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
+Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
 Assurez-vous que votre description décrit précisément votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et doivent être `full` différentes. Votre description courte ne doit pas être répétée dans la description longue et ne doit pas inclure d'autre nom d'application.
 
@@ -367,7 +367,7 @@ Identificateur unique de l'application dans la notation de domaine inverse ; par
 
 **Facultatif** — objet
 
-Autorise la spécification d'une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation.](~/concepts/build-and-test/apps-localization.md)
+Permet la spécification d'une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation.](~/concepts/build-and-test/apps-localization.md)
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -405,16 +405,16 @@ La valeur doit être un code de couleur HTML valide commençant par « # » par 
 
 **Facultatif** — tableau
 
-Utilisé lorsque l'expérience de votre application possède une expérience d'onglet de canal d'équipe qui nécessite une configuration supplémentaire avant d'être ajoutée. Les onglets configurables sont pris en charge uniquement dans l'étendue Teams (et non personnelle), et actuellement, un seul **onglet** par application est pris en charge.
+Utilisé lorsque l'expérience de votre application possède une expérience d'onglet de canal d'équipe qui nécessite une configuration supplémentaire avant d'être ajoutée. Les onglets configurables sont pris en charge uniquement dans l'étendue Teams et vous pouvez configurer les mêmes onglets plusieurs fois. Toutefois, vous ne pouvez la définir dans le manifeste qu'une seule fois.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l'onglet.|
 |`scopes`|tableau d'enums|1|✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l'onglet peut être mise à jour par l'utilisateur après sa création. Valeur par défaut **: true**.|
-|`context` |tableau d'enums|6 ||Ensemble `contextItem` d'étendues où un onglet est pris en charge. Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |tableau d'enums|6 ||Ensemble `contextItem` d'étendues où un [onglet est pris en charge.](../../tabs/how-to/access-teams-context.md) Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d'accès relatif à une image d'aperçu d'onglet à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|tableau d'enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
+|`supportedSharePointHosts`|tableau d'enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -435,6 +435,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`context` | tableau d'enums| 2|| Ensemble `contextItem` d'étendues où un onglet est pris en charge.|
 
 > [!NOTE]
+>  La fonctionnalité searchUrl n'est pas disponible pour les développeurs tiers.
 > Si vos onglets nécessitent des informations contextielles pour afficher  du contenu pertinent ou pour lancer un flux d'authentification, voir Obtenir le contexte de votre [onglet Microsoft Teams.](../../tabs/how-to/access-teams-context.md)
 
 ## <a name="bots"></a>bots
@@ -539,7 +540,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif** : tableau de chaînes
 
-Tableau qui spécifie les autorisations que l'application demande, ce qui permet aux utilisateurs finaux de savoir `string` comment fonctionne l'extension. Les options suivantes ne sont pas exclusives :
+Tableau qui spécifie les autorisations que l'application demande, ce qui permet aux utilisateurs finaux de savoir comment `string` fonctionne l'extension. Les options suivantes ne sont pas exclusives :
 
 * `identity`&emsp;Nécessite des informations d'identité d'utilisateur
 * `messageTeamMembers`&emsp;Nécessite l'autorisation d'envoyer des messages directs aux membres de l'équipe

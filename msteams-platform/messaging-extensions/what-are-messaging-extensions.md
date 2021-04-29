@@ -5,12 +5,12 @@ description: Vue d'ensemble des extensions de messagerie sur la plateforme Micro
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a5d30912d5cc580b6e85e19178c49d91811bc11f
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058536"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075667"
 ---
 # <a name="messaging-extensions"></a>Extensions de messagerie
 
@@ -24,7 +24,7 @@ L'image suivante affiche les emplacements d'où les extensions de messagerie son
 
 | Scénario | Exemple |
 |:-----------------|:-----------------|
-|Vous souhaitez qu'un système externe soit en mesure d'action et que le résultat de l'action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître le créneau horaire réservé.|
+|Vous souhaitez qu'un système externe soit en mesure d'action et que le résultat de l'action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître l'créneau horaire réservé.|
 |Vous souhaitez trouver quelque chose dans un système externe et partager les résultats avec la conversation.|Recherchez un élément de travail dans Azure DevOps et partagez-le avec le groupe en tant que carte adaptative.|
 |Vous souhaitez effectuer une tâche complexe impliquant plusieurs étapes ou une grande quantité d'informations dans un système externe et partager les résultats avec une conversation.|Créez un bogue dans votre système de suivi en fonction d'un message Teams, affectez ce bogue à Bob et envoyez une carte au thread de conversation avec les détails du bogue.|
 
@@ -52,7 +52,7 @@ Les commandes d'action sont déclenchées à partir de la zone de composition du
 Les commandes de recherche permettent aux utilisateurs de rechercher des informations manuellement dans un système externe par le biais d'une zone de recherche ou en csérant un lien vers un domaine surveillé dans la zone de composition du message et en insérant les résultats de la recherche dans un message. Dans le flux de commande de recherche le plus élémentaire, le message d'appel initial inclut la chaîne de recherche envoyée par l'utilisateur. Vous répondez avec une liste de cartes et d'aperçus de carte. Le client Teams affiche une liste d'aperçus de carte pour l'utilisateur. Lorsque l'utilisateur sélectionne une carte dans la liste, la carte pleine taille est insérée dans la zone de composition du message.
 
 Les cartes sont déclenchées à partir de la zone de composition du message ou de la zone de commande et ne sont pas déclenchées à partir d'un message. Ils ne peuvent pas être déclenchés à partir d'un message.
-L'image suivante affiche le module de tâche de la tâche de recherche d'extension de messagerie :
+L'image suivante affiche le module de tâche de recherche d'extension de messagerie :
 
 ![Commande de recherche d'extension de messagerie](~/assets/images/search-extension.png)
 
@@ -61,7 +61,7 @@ L'image suivante affiche le module de tâche de la tâche de recherche d'extensi
 
 ## <a name="link-unfurling"></a>Déploiement de lien
 
-Un service web est appelé lorsqu'une URL est pastée dans la zone composer un message. Cette fonctionnalité est appelée déploiement de liens. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d'un message. Votre service web peut « déployer » l'URL dans une carte détaillée, fournissant plus d'informations que la carte d'aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d'agir immédiatement sans quitter le client Microsoft Teams.
+Un service web est appelé lorsqu'une URL est passée dans la zone de composition du message. Cette fonctionnalité est connue sous le nom de déploiement de lien. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction du message. Votre service web peut « déployer » l'URL dans une carte détaillée, fournissant plus d'informations que la carte d'aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d'agir immédiatement sans quitter le client Microsoft Teams.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu'un lien est passé dans l'extension de messagerie :
  
 ![lien de déploiement](../assets/images/messaging-extension/unfurl-link.png)
@@ -77,7 +77,7 @@ Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)
+[Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)
 
 
 ## <a name="next-step"></a>Étape suivante

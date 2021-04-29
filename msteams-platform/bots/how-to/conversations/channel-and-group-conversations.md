@@ -5,12 +5,12 @@ description: Comment envoyer, recevoir et gérer des messages pour un bot dans u
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7055042dfff4b633fdd570ce5d7318a17ac15cf6
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058592"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075751"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -25,7 +25,7 @@ Les bots d'un groupe ou d'un canal reçoivent uniquement des messages lorsqu'ils
 
 ## <a name="design-guidelines"></a>Instructions de conception
 
-Contrairement aux conversations personnelles, dans les conversations de groupe et les canaux, votre bot doit fournir une présentation rapide. Vous devez suivre ces instructions et d'autres recommandations en matière de conception de bot. Pour plus d'informations sur la conception de bots dans Teams, voir comment concevoir des conversations de bot dans des canaux [et des conversations.](~/bots/design/bots.md)
+Contrairement aux conversations personnelles, dans les conversations de groupe et les canaux, votre bot doit fournir une présentation rapide. Vous devez suivre ces recommandations et d'autres recommandations en matière de conception de bot. Pour plus d'informations sur la conception de bots dans Teams, voir comment concevoir des conversations de bot dans des canaux [et des conversations.](~/bots/design/bots.md)
 
 À présent, vous pouvez créer de nouveaux threads de conversation et gérer facilement différentes conversations dans les canaux.
 
@@ -270,7 +270,7 @@ N'envoyez pas de message dans les cas suivants :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Obtenir le contexte des équipes.](~/bots/how-to/get-teams-context.md)
+[Obtenir le contexte Teams](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>Étape suivante
 

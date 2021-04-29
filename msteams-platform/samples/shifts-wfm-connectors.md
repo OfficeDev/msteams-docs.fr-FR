@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Connecteurs Microsoft Teams kronos
 ms.author: lajanuar
-ms.openlocfilehash: d17e3e18cfd39fec8117ce46aa99cb99da6927bc
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 459797dd3f8425223c0dcbedc335955bf106ae37
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058697"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075737"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
@@ -42,9 +42,9 @@ L'affichage shifts dans Teams est illustré dans l'image suivante :
 
 ![Équipes ouvertes dans Teams](../assets/images/teams-open-shifts-view.png)
 
-## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-teams Shifts
+## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-Teams Shifts
 
-Avec du code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes teams telles que, application teams de bureau ou mobile pour les scénarios de travail et de responsable de première ligne suivants :
+Avec du code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes teams telles que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
 
 * Afficher la planification.
 
@@ -56,7 +56,7 @@ Avec du code open source, vous pouvez intégrer Kronos Workforce Central Version
 
 * Changements d'offre.
 
-Pour plus d'informations sur le déploiement du connecteur Kronos-to-Teams Shifts, voir [Get it on GitHub](https://aka.ms/KronosShiftsConnector).
+Pour plus d'informations sur le déploiement du connecteur Kronos-to-Teams Shifts, voir Obtenir sur [GitHub.](https://aka.ms/KronosShiftsConnector)
 
 ## <a name="jda-to-teams-shifts-connector"></a>Connecteur Shifts JDA-Teams
 
@@ -64,7 +64,7 @@ Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 
 
 * Publiez des équipes et des groupes de planification dans JDA et affichez-les dans Teams.
 
-* Activer des scénarios de planification enrichis, y compris demander des permutations de décalage et des congés.
+* Activez des scénarios de planification enrichis, y compris la demande de permutations d'équipe et de congés.
 
 * Définir la disponibilité des utilisateurs à [l'aide de l'API Microsoft Graph pour Shifts.](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true)
 
@@ -72,4 +72,4 @@ Pour plus d'informations sur la contribution et la suggestion, voir [Obtenir sur
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+[Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
