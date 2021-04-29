@@ -5,42 +5,42 @@ description: Comment gérer l'action d'appel initiale et répondre avec un modul
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: fbe90b3a3af8dbb053fdbaf6b4cd9b96344eaf00
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058627"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075590"
 ---
-# <a name="create-and-send-the-task-module"></a><span data-ttu-id="29b0f-103">Créer et envoyer le module de tâches</span><span class="sxs-lookup"><span data-stu-id="29b0f-103">Create and send the task module</span></span>
+# <a name="create-and-send-the-task-module"></a><span data-ttu-id="a49db-103">Créer et envoyer le module de tâches</span><span class="sxs-lookup"><span data-stu-id="a49db-103">Create and send the task module</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="29b0f-104">Vous pouvez créer le module de tâche à l'aide d'une carte adaptative ou d'un affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-104">You can create the task module using an Adaptive Card or an embedded web view.</span></span> <span data-ttu-id="29b0f-105">Pour créer un module de tâche, vous devez effectuer le processus appelé demande d'appel initiale.</span><span class="sxs-lookup"><span data-stu-id="29b0f-105">To create a task module, you must perform the process called the initial invoke request.</span></span> <span data-ttu-id="29b0f-106">Ce document traite de la demande d'appel initiale, des propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1, d'une conversation de groupe, d'un canal (nouveau billet), d'un canal (réponse au thread) et d'une zone de commande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-106">This document covers the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.</span></span> 
+<span data-ttu-id="a49db-104">Vous pouvez créer le module de tâche à l'aide d'une carte adaptative ou d'un affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-104">You can create the task module using an Adaptive Card or an embedded web view.</span></span> <span data-ttu-id="a49db-105">Pour créer un module de tâche, vous devez effectuer le processus appelé demande d'appel initiale.</span><span class="sxs-lookup"><span data-stu-id="a49db-105">To create a task module, you must perform the process called the initial invoke request.</span></span> <span data-ttu-id="a49db-106">Ce document traite de la demande d'appel initiale, des propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1, d'une conversation de groupe, d'un canal (nouveau billet), d'un canal (réponse au thread) et d'une zone de commande.</span><span class="sxs-lookup"><span data-stu-id="a49db-106">This document covers the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.</span></span> 
 > [!NOTE]
-> <span data-ttu-id="29b0f-107">Si vous ne remplissez pas le module de tâche avec des paramètres définis dans le manifeste de l'application, vous devez créer le module de tâche pour les utilisateurs avec une carte adaptative ou un affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-107">If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.</span></span>
+> <span data-ttu-id="a49db-107">Si vous ne remplissez pas le module de tâche avec des paramètres définis dans le manifeste de l'application, vous devez créer le module de tâche pour les utilisateurs avec une carte adaptative ou un affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-107">If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.</span></span>
 
-## <a name="the-initial-invoke-request"></a><span data-ttu-id="29b0f-108">Demande d'appel initiale</span><span class="sxs-lookup"><span data-stu-id="29b0f-108">The initial invoke request</span></span>
+## <a name="the-initial-invoke-request"></a><span data-ttu-id="a49db-108">Demande d'appel initiale</span><span class="sxs-lookup"><span data-stu-id="a49db-108">The initial invoke request</span></span>
 
-<span data-ttu-id="29b0f-109">Dans le processus de la demande d'appel initiale, votre service reçoit un objet de type et vous devez répondre avec un objet contenant une carte adaptative ou une URL vers l'affichage `Activity` `composeExtension/fetchTask` web `task` incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-109">In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view.</span></span> <span data-ttu-id="29b0f-110">Avec les propriétés d'activité standard du bot, la charge utile d'appel initiale contient les métadonnées de requête suivantes :</span><span class="sxs-lookup"><span data-stu-id="29b0f-110">Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:</span></span>
+<span data-ttu-id="a49db-109">Dans le processus de la demande d'appel initiale, votre service reçoit un objet de type et vous devez répondre avec un objet contenant une carte adaptative ou une URL vers l'affichage `Activity` `composeExtension/fetchTask` web `task` incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-109">In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view.</span></span> <span data-ttu-id="a49db-110">En plus des propriétés d'activité standard du bot, la charge utile d'appel initiale contient les métadonnées de requête suivantes :</span><span class="sxs-lookup"><span data-stu-id="a49db-110">Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:</span></span>
 
-|<span data-ttu-id="29b0f-111">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-111">Property name</span></span>|<span data-ttu-id="29b0f-112">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-112">Purpose</span></span>|
+|<span data-ttu-id="a49db-111">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-111">Property name</span></span>|<span data-ttu-id="a49db-112">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-112">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-113">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-113">Type of request.</span></span> <span data-ttu-id="29b0f-114">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-114">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="29b0f-115">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="29b0f-115">Type of command that is issued to your service.</span></span> <span data-ttu-id="29b0f-116">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-116">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="29b0f-117">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-117">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="29b0f-118">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-118">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="29b0f-119">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-119">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="29b0f-120">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="29b0f-120">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="29b0f-121">ID de canal (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="29b0f-121">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="29b0f-122">ID d'équipe (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="29b0f-122">Team ID (if the request was made in a channel).</span></span> |
-|`value.commandId` | <span data-ttu-id="29b0f-123">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-123">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="29b0f-124">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="29b0f-124">The context that triggered the event.</span></span> <span data-ttu-id="29b0f-125">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-125">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="29b0f-126">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-126">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="29b0f-127">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-127">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="a49db-113">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-113">Type of request.</span></span> <span data-ttu-id="a49db-114">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-114">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="a49db-115">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="a49db-115">Type of command that is issued to your service.</span></span> <span data-ttu-id="a49db-116">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-116">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="a49db-117">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-117">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="a49db-118">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-118">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="a49db-119">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-119">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="a49db-120">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a49db-120">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="a49db-121">ID de canal (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="a49db-121">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="a49db-122">ID d'équipe (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="a49db-122">Team ID (if the request was made in a channel).</span></span> |
+|`value.commandId` | <span data-ttu-id="a49db-123">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-123">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="a49db-124">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="a49db-124">The context that triggered the event.</span></span> <span data-ttu-id="a49db-125">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-125">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="a49db-126">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-126">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="a49db-127">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="a49db-127">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="29b0f-128">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-128">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a49db-128">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-128">Example</span></span>
 
-<span data-ttu-id="29b0f-129">Le code de la demande d'appel initiale est donné dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="29b0f-129">The code for the initial invoke request is given in the following example:</span></span>
+<span data-ttu-id="a49db-129">Le code de la demande d'appel initiale est donné dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="a49db-129">The code for the initial invoke request is given in the following example:</span></span>
 
 ```json
 {
@@ -70,27 +70,27 @@ ms.locfileid: "52058627"
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a><span data-ttu-id="29b0f-130">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1</span><span class="sxs-lookup"><span data-stu-id="29b0f-130">Payload activity properties when a task module is invoked from 1:1 chat</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a><span data-ttu-id="a49db-130">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1</span><span class="sxs-lookup"><span data-stu-id="a49db-130">Payload activity properties when a task module is invoked from 1:1 chat</span></span> 
 
-<span data-ttu-id="29b0f-131">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1 sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="29b0f-131">The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:</span></span>
+<span data-ttu-id="a49db-131">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1 sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="a49db-131">The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:</span></span>
 
-|<span data-ttu-id="29b0f-132">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-132">Property name</span></span>|<span data-ttu-id="29b0f-133">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-133">Purpose</span></span>|
+|<span data-ttu-id="a49db-132">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-132">Property name</span></span>|<span data-ttu-id="a49db-133">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-133">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-134">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-134">Type of request.</span></span> <span data-ttu-id="29b0f-135">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-135">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="29b0f-136">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="29b0f-136">Type of command that is issued to your service.</span></span> <span data-ttu-id="29b0f-137">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-137">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="29b0f-138">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-138">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="29b0f-139">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-139">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="29b0f-140">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-140">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="29b0f-141">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="29b0f-141">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="29b0f-142">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-142">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="29b0f-143">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="29b0f-143">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="29b0f-144">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-144">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="29b0f-145">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="29b0f-145">The context that triggered the event.</span></span> <span data-ttu-id="29b0f-146">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-146">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="29b0f-147">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-147">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="29b0f-148">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-148">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="a49db-134">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-134">Type of request.</span></span> <span data-ttu-id="a49db-135">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-135">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="a49db-136">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="a49db-136">Type of command that is issued to your service.</span></span> <span data-ttu-id="a49db-137">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-137">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="a49db-138">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-138">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="a49db-139">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-139">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="a49db-140">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-140">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="a49db-141">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a49db-141">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="a49db-142">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="a49db-142">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="a49db-143">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="a49db-143">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="a49db-144">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-144">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="a49db-145">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="a49db-145">The context that triggered the event.</span></span> <span data-ttu-id="a49db-146">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-146">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="a49db-147">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-147">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="a49db-148">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="a49db-148">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="29b0f-149">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-149">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a49db-149">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-149">Example</span></span>
 
-<span data-ttu-id="29b0f-150">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1 sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="29b0f-150">The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:</span></span>
+<span data-ttu-id="a49db-150">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation 1:1 sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="a49db-150">The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:</span></span>
 
 ```json
 {
@@ -120,27 +120,27 @@ ms.locfileid: "52058627"
   "name": "composeExtension/fetchTask"
 }
 ```
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a><span data-ttu-id="29b0f-151">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation de groupe</span><span class="sxs-lookup"><span data-stu-id="29b0f-151">Payload activity properties when a task module is invoked from a group chat</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a><span data-ttu-id="a49db-151">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation de groupe</span><span class="sxs-lookup"><span data-stu-id="a49db-151">Payload activity properties when a task module is invoked from a group chat</span></span> 
 
-<span data-ttu-id="29b0f-152">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation de groupe sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="29b0f-152">The payload activity properties when a task module is invoked from a group chat are listed as follows:</span></span>
+<span data-ttu-id="a49db-152">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation de groupe sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="a49db-152">The payload activity properties when a task module is invoked from a group chat are listed as follows:</span></span>
 
-|<span data-ttu-id="29b0f-153">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-153">Property name</span></span>|<span data-ttu-id="29b0f-154">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-154">Purpose</span></span>|
+|<span data-ttu-id="a49db-153">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-153">Property name</span></span>|<span data-ttu-id="a49db-154">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-154">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-155">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-155">Type of request.</span></span> <span data-ttu-id="29b0f-156">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-156">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="29b0f-157">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="29b0f-157">Type of command that is issued to your service.</span></span> <span data-ttu-id="29b0f-158">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-158">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="29b0f-159">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-159">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="29b0f-160">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-160">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="29b0f-161">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-161">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="29b0f-162">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="29b0f-162">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="29b0f-163">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-163">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="29b0f-164">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="29b0f-164">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="29b0f-165">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-165">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="29b0f-166">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="29b0f-166">The context that triggered the event.</span></span> <span data-ttu-id="29b0f-167">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-167">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="29b0f-168">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-168">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="29b0f-169">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-169">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="a49db-155">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-155">Type of request.</span></span> <span data-ttu-id="a49db-156">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-156">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="a49db-157">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="a49db-157">Type of command that is issued to your service.</span></span> <span data-ttu-id="a49db-158">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-158">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="a49db-159">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-159">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="a49db-160">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-160">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="a49db-161">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-161">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="a49db-162">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a49db-162">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="a49db-163">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="a49db-163">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="a49db-164">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="a49db-164">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="a49db-165">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-165">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="a49db-166">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="a49db-166">The context that triggered the event.</span></span> <span data-ttu-id="a49db-167">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-167">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="a49db-168">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-168">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="a49db-169">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="a49db-169">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="29b0f-170">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-170">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a49db-170">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-170">Example</span></span>
 
-<span data-ttu-id="29b0f-171">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation de groupe sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="29b0f-171">The payload activity properties when a task module is invoked from a group chat are given in the following example:</span></span>
+<span data-ttu-id="a49db-171">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une conversation de groupe sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="a49db-171">The payload activity properties when a task module is invoked from a group chat are given in the following example:</span></span>
 
 ```json
 {
@@ -177,29 +177,29 @@ ms.locfileid: "52058627"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a><span data-ttu-id="29b0f-172">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (nouveau billet)</span><span class="sxs-lookup"><span data-stu-id="29b0f-172">Payload activity properties when a task module is invoked from a channel (new post)</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a><span data-ttu-id="a49db-172">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (nouveau billet)</span><span class="sxs-lookup"><span data-stu-id="a49db-172">Payload activity properties when a task module is invoked from a channel (new post)</span></span> 
 
-<span data-ttu-id="29b0f-173">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (nouveau billet) sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="29b0f-173">The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:</span></span>
+<span data-ttu-id="a49db-173">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (nouveau billet) sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="a49db-173">The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:</span></span>
 
-|<span data-ttu-id="29b0f-174">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-174">Property name</span></span>|<span data-ttu-id="29b0f-175">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-175">Purpose</span></span>|
+|<span data-ttu-id="a49db-174">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-174">Property name</span></span>|<span data-ttu-id="a49db-175">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-175">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-176">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-176">Type of request.</span></span> <span data-ttu-id="29b0f-177">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-177">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="29b0f-178">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="29b0f-178">Type of command that is issued to your service.</span></span> <span data-ttu-id="29b0f-179">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-179">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="29b0f-180">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-180">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="29b0f-181">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-181">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="29b0f-182">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-182">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="29b0f-183">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="29b0f-183">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="29b0f-184">ID de canal (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="29b0f-184">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="29b0f-185">ID d'équipe (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="29b0f-185">Team ID (if the request was made in a channel).</span></span> |
-|`channelData.source.name`| <span data-ttu-id="29b0f-186">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-186">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="29b0f-187">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="29b0f-187">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="29b0f-188">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-188">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="29b0f-189">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="29b0f-189">The context that triggered the event.</span></span> <span data-ttu-id="29b0f-190">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-190">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="29b0f-191">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-191">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="29b0f-192">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-192">It must be `default`, `contrast`, or `dark`.</span></span> |
+|`type`| <span data-ttu-id="a49db-176">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-176">Type of request.</span></span> <span data-ttu-id="a49db-177">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-177">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="a49db-178">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="a49db-178">Type of command that is issued to your service.</span></span> <span data-ttu-id="a49db-179">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-179">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="a49db-180">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-180">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="a49db-181">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-181">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="a49db-182">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-182">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="a49db-183">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a49db-183">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="a49db-184">ID de canal (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="a49db-184">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="a49db-185">ID d'équipe (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="a49db-185">Team ID (if the request was made in a channel).</span></span> |
+|`channelData.source.name`| <span data-ttu-id="a49db-186">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="a49db-186">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="a49db-187">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="a49db-187">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="a49db-188">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-188">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="a49db-189">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="a49db-189">The context that triggered the event.</span></span> <span data-ttu-id="a49db-190">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-190">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="a49db-191">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-191">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="a49db-192">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="a49db-192">It must be `default`, `contrast`, or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="29b0f-193">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-193">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a49db-193">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-193">Example</span></span>
 
-<span data-ttu-id="29b0f-194">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (nouveau billet) sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="29b0f-194">The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:</span></span>
+<span data-ttu-id="a49db-194">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (nouveau billet) sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="a49db-194">The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:</span></span>
 
 ```json
 {
@@ -243,29 +243,29 @@ ms.locfileid: "52058627"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a><span data-ttu-id="29b0f-195">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (réponse au thread)</span><span class="sxs-lookup"><span data-stu-id="29b0f-195">Payload activity properties when a task module is invoked from a channel (reply to thread)</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a><span data-ttu-id="a49db-195">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (réponse au thread)</span><span class="sxs-lookup"><span data-stu-id="a49db-195">Payload activity properties when a task module is invoked from a channel (reply to thread)</span></span> 
 
-<span data-ttu-id="29b0f-196">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (réponse au thread) sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="29b0f-196">The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:</span></span>
+<span data-ttu-id="a49db-196">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (réponse au thread) sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="a49db-196">The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:</span></span>
 
-|<span data-ttu-id="29b0f-197">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-197">Property name</span></span>|<span data-ttu-id="29b0f-198">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-198">Purpose</span></span>|
+|<span data-ttu-id="a49db-197">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-197">Property name</span></span>|<span data-ttu-id="a49db-198">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-198">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-199">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-199">Type of request.</span></span> <span data-ttu-id="29b0f-200">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-200">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="29b0f-201">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="29b0f-201">Type of command that is issued to your service.</span></span> <span data-ttu-id="29b0f-202">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-202">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="29b0f-203">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-203">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="29b0f-204">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-204">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="29b0f-205">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-205">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="29b0f-206">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="29b0f-206">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="29b0f-207">ID de canal (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="29b0f-207">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="29b0f-208">ID d'équipe (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="29b0f-208">Team ID (if the request was made in a channel).</span></span> |
-|`channelData.source.name`| <span data-ttu-id="29b0f-209">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-209">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="29b0f-210">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="29b0f-210">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="29b0f-211">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-211">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="29b0f-212">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="29b0f-212">The context that triggered the event.</span></span> <span data-ttu-id="29b0f-213">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-213">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="29b0f-214">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-214">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="29b0f-215">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-215">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="a49db-199">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-199">Type of request.</span></span> <span data-ttu-id="a49db-200">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-200">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="a49db-201">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="a49db-201">Type of command that is issued to your service.</span></span> <span data-ttu-id="a49db-202">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-202">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="a49db-203">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-203">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="a49db-204">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-204">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="a49db-205">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-205">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="a49db-206">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a49db-206">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="a49db-207">ID de canal (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="a49db-207">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="a49db-208">ID d'équipe (si la demande a été faite dans un canal).</span><span class="sxs-lookup"><span data-stu-id="a49db-208">Team ID (if the request was made in a channel).</span></span> |
+|`channelData.source.name`| <span data-ttu-id="a49db-209">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="a49db-209">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="a49db-210">Obtient ou définit l'ID du message auquel ce message est une réponse.</span><span class="sxs-lookup"><span data-stu-id="a49db-210">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="a49db-211">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-211">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="a49db-212">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="a49db-212">The context that triggered the event.</span></span> <span data-ttu-id="a49db-213">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-213">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="a49db-214">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-214">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="a49db-215">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="a49db-215">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="29b0f-216">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-216">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a49db-216">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-216">Example</span></span>
 
-<span data-ttu-id="29b0f-217">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (réponse au thread) sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="29b0f-217">The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:</span></span>
+<span data-ttu-id="a49db-217">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'un canal (réponse au thread) sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="a49db-217">The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:</span></span>
 
 ```json
 {
@@ -352,26 +352,26 @@ ms.locfileid: "52058627"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a><span data-ttu-id="29b0f-218">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une zone de commande</span><span class="sxs-lookup"><span data-stu-id="29b0f-218">Payload activity properties when a task module is invoked from a command box</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a><span data-ttu-id="a49db-218">Propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une zone de commande</span><span class="sxs-lookup"><span data-stu-id="a49db-218">Payload activity properties when a task module is invoked from a command box</span></span> 
 
-<span data-ttu-id="29b0f-219">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une zone de commande sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="29b0f-219">The payload activity properties when a task module is invoked from a command box are listed as follows:</span></span>
+<span data-ttu-id="a49db-219">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une zone de commande sont répertoriées comme suit :</span><span class="sxs-lookup"><span data-stu-id="a49db-219">The payload activity properties when a task module is invoked from a command box are listed as follows:</span></span>
 
-|<span data-ttu-id="29b0f-220">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-220">Property name</span></span>|<span data-ttu-id="29b0f-221">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-221">Purpose</span></span>|
+|<span data-ttu-id="a49db-220">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-220">Property name</span></span>|<span data-ttu-id="a49db-221">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-221">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-222">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-222">Type of request.</span></span> <span data-ttu-id="29b0f-223">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-223">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="29b0f-224">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="29b0f-224">Type of command that is issued to your service.</span></span> <span data-ttu-id="29b0f-225">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-225">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="29b0f-226">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-226">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="29b0f-227">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-227">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="29b0f-228">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="29b0f-228">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="29b0f-229">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="29b0f-229">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="29b0f-230">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-230">The source name from where task module is invoked.</span></span> |
-|`value.commandId` | <span data-ttu-id="29b0f-231">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-231">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="29b0f-232">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="29b0f-232">The context that triggered the event.</span></span> <span data-ttu-id="29b0f-233">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="29b0f-233">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="29b0f-234">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-234">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="29b0f-235">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-235">It must be `default`, `contrast`, or `dark`.</span></span> |
+|`type`| <span data-ttu-id="a49db-222">Type de demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-222">Type of request.</span></span> <span data-ttu-id="a49db-223">Il doit `invoke` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-223">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="a49db-224">Type de commande qui est émis pour votre service.</span><span class="sxs-lookup"><span data-stu-id="a49db-224">Type of command that is issued to your service.</span></span> <span data-ttu-id="a49db-225">Il doit `composeExtension/fetchTask` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-225">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="a49db-226">ID de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-226">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="a49db-227">Nom de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-227">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="a49db-228">ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande.</span><span class="sxs-lookup"><span data-stu-id="a49db-228">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="a49db-229">ID du client Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="a49db-229">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="a49db-230">Nom source de l'endroit où le module de tâche est appelé.</span><span class="sxs-lookup"><span data-stu-id="a49db-230">The source name from where task module is invoked.</span></span> |
+|`value.commandId` | <span data-ttu-id="a49db-231">Contient l'ID de la commande qui a été invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-231">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="a49db-232">Contexte qui a déclenché l'événement.</span><span class="sxs-lookup"><span data-stu-id="a49db-232">The context that triggered the event.</span></span> <span data-ttu-id="a49db-233">Il doit `compose` l'être.</span><span class="sxs-lookup"><span data-stu-id="a49db-233">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="a49db-234">Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-234">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="a49db-235">Il doit `default` s'y `contrast` trouver, ou `dark` .</span><span class="sxs-lookup"><span data-stu-id="a49db-235">It must be `default`, `contrast`, or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="29b0f-236">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-236">Example</span></span>
+### <a name="example"></a><span data-ttu-id="a49db-236">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-236">Example</span></span>
 
-<span data-ttu-id="29b0f-237">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une zone de commande sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="29b0f-237">The payload activity properties when a task module is invoked from a command box are given in the following example:</span></span>
+<span data-ttu-id="a49db-237">Les propriétés de l'activité de charge utile lorsqu'un module de tâche est appelé à partir d'une zone de commande sont données dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="a49db-237">The payload activity properties when a task module is invoked from a command box are given in the following example:</span></span>
 
 ```json
 {
@@ -414,11 +414,11 @@ ms.locfileid: "52058627"
 }
 ```
 
-### <a name="example"></a><span data-ttu-id="29b0f-238">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-238">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="a49db-238">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-238">Example</span></span> 
 
-<span data-ttu-id="29b0f-239">La section de code suivante est un exemple de `fetchTask` requête :</span><span class="sxs-lookup"><span data-stu-id="29b0f-239">The following code section is an example of `fetchTask` request:</span></span>
+<span data-ttu-id="a49db-239">La section de code suivante est un exemple de `fetchTask` requête :</span><span class="sxs-lookup"><span data-stu-id="a49db-239">The following code section is an example of `fetchTask` request:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="29b0f-240">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="29b0f-240">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a49db-240">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a49db-240">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -427,7 +427,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="29b0f-241">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="29b0f-241">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="a49db-241">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a49db-241">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
@@ -437,7 +437,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="29b0f-242">JSON</span><span class="sxs-lookup"><span data-stu-id="29b0f-242">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a49db-242">JSON</span><span class="sxs-lookup"><span data-stu-id="a49db-242">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -498,11 +498,11 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="initial-invoke-request-from-a-message"></a><span data-ttu-id="29b0f-243">Demande d'appel initiale à partir d'un message</span><span class="sxs-lookup"><span data-stu-id="29b0f-243">Initial invoke request from a message</span></span>
+## <a name="initial-invoke-request-from-a-message"></a><span data-ttu-id="a49db-243">Demande d'appel initiale à partir d'un message</span><span class="sxs-lookup"><span data-stu-id="a49db-243">Initial invoke request from a message</span></span>
 
-<span data-ttu-id="29b0f-244">Lorsque votre bot est appelé à partir d'un message, l'objet de la demande d'appel initiale doit contenir les détails du message à partir de quel message votre extension de messagerie `value` est invoquée.</span><span class="sxs-lookup"><span data-stu-id="29b0f-244">When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from.</span></span> <span data-ttu-id="29b0f-245">Les tableaux et les tableaux sont facultatifs et ne sont pas présents s'il n'y a aucune réaction ou `reactions` mention dans le message `mentions` d'origine.</span><span class="sxs-lookup"><span data-stu-id="29b0f-245">The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.</span></span> <span data-ttu-id="29b0f-246">La section suivante est un exemple de `value` l'objet :</span><span class="sxs-lookup"><span data-stu-id="29b0f-246">The following section is an example of the `value` object:</span></span>
+<span data-ttu-id="a49db-244">Lorsque votre bot est appelé à partir d'un message, l'objet de la demande d'appel initiale doit contenir les détails du message à partir de quel message votre extension de messagerie `value` est invoquée.</span><span class="sxs-lookup"><span data-stu-id="a49db-244">When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from.</span></span> <span data-ttu-id="a49db-245">Les tableaux et les tableaux sont facultatifs et ne sont pas présents s'il n'y a aucune réaction ou `reactions` mention dans le message `mentions` d'origine.</span><span class="sxs-lookup"><span data-stu-id="a49db-245">The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.</span></span> <span data-ttu-id="a49db-246">La section suivante est un exemple de `value` l'objet :</span><span class="sxs-lookup"><span data-stu-id="a49db-246">The following section is an example of the `value` object:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="29b0f-247">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="29b0f-247">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a49db-247">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a49db-247">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -514,7 +514,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="29b0f-248">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="29b0f-248">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="a49db-248">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a49db-248">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -526,7 +526,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="29b0f-249">JSON</span><span class="sxs-lookup"><span data-stu-id="29b0f-249">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a49db-249">JSON</span><span class="sxs-lookup"><span data-stu-id="a49db-249">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -598,37 +598,37 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a><span data-ttu-id="29b0f-250">Répondre à fetchTask</span><span class="sxs-lookup"><span data-stu-id="29b0f-250">Respond to the fetchTask</span></span>
+## <a name="respond-to-the-fetchtask"></a><span data-ttu-id="a49db-250">Répondre à la tâche fetchTask</span><span class="sxs-lookup"><span data-stu-id="a49db-250">Respond to the fetchTask</span></span>
 
-<span data-ttu-id="29b0f-251">Répondez à la demande d'appel avec un objet qui contient un objet avec la carte adaptative ou l'URL web, ou `task` un message de chaîne `taskInfo` simple.</span><span class="sxs-lookup"><span data-stu-id="29b0f-251">Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.</span></span>
+<span data-ttu-id="a49db-251">Répondez à la demande d'appel avec un objet qui contient un objet avec la carte adaptative ou l'URL web, ou `task` un message de chaîne `taskInfo` simple.</span><span class="sxs-lookup"><span data-stu-id="a49db-251">Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.</span></span>
 
-|<span data-ttu-id="29b0f-252">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-252">Property name</span></span>|<span data-ttu-id="29b0f-253">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-253">Purpose</span></span>|
+|<span data-ttu-id="a49db-252">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-252">Property name</span></span>|<span data-ttu-id="a49db-253">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-253">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="29b0f-254">Il peut `continue` s'agit de présenter un formulaire ou `message` d'utiliser une fenêtre popup simple.</span><span class="sxs-lookup"><span data-stu-id="29b0f-254">Can be either `continue` to present a form, or `message` for a simple popup.</span></span> |
-|`value`| <span data-ttu-id="29b0f-255">Objet `taskInfo` d'un formulaire ou `string` d'un message.</span><span class="sxs-lookup"><span data-stu-id="29b0f-255">Either a `taskInfo` object for a form, or a `string` for a message.</span></span> |
+|`type`| <span data-ttu-id="a49db-254">Il peut `continue` s'agit de présenter un formulaire ou `message` d'utiliser une fenêtre popup simple.</span><span class="sxs-lookup"><span data-stu-id="a49db-254">Can be either `continue` to present a form, or `message` for a simple popup.</span></span> |
+|`value`| <span data-ttu-id="a49db-255">Objet `taskInfo` d'un formulaire ou `string` d'un message.</span><span class="sxs-lookup"><span data-stu-id="a49db-255">Either a `taskInfo` object for a form, or a `string` for a message.</span></span> |
 
-<span data-ttu-id="29b0f-256">Le schéma de l'objet taskInfo est :</span><span class="sxs-lookup"><span data-stu-id="29b0f-256">The schema for the taskInfo object is:</span></span>
+<span data-ttu-id="a49db-256">Le schéma de l'objet taskInfo est :</span><span class="sxs-lookup"><span data-stu-id="a49db-256">The schema for the taskInfo object is:</span></span>
 
-|<span data-ttu-id="29b0f-257">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="29b0f-257">Property name</span></span>|<span data-ttu-id="29b0f-258">Objectif</span><span class="sxs-lookup"><span data-stu-id="29b0f-258">Purpose</span></span>|
+|<span data-ttu-id="a49db-257">Nom de la propriété</span><span class="sxs-lookup"><span data-stu-id="a49db-257">Property name</span></span>|<span data-ttu-id="a49db-258">Objectif</span><span class="sxs-lookup"><span data-stu-id="a49db-258">Purpose</span></span>|
 |---|---|
-|`title`| <span data-ttu-id="29b0f-259">Titre du module de tâche.</span><span class="sxs-lookup"><span data-stu-id="29b0f-259">The title of the task module.</span></span>|
-|`height`| <span data-ttu-id="29b0f-260">Il doit s'agit d'un nombre integer (en pixels) `small` ou , ou , `medium` `large` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-260">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
-|`width`| <span data-ttu-id="29b0f-261">Il doit s'agit d'un nombre integer (en pixels) `small` ou , ou , `medium` `large` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-261">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
-|`card`| <span data-ttu-id="29b0f-262">Carte adaptative définissant le formulaire (si vous en utilisez un).</span><span class="sxs-lookup"><span data-stu-id="29b0f-262">The adaptive card defining the form (if using one).</span></span>
-|`url`| <span data-ttu-id="29b0f-263">URL à ouvrir dans le module de tâche en tant qu'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-263">The URL to be opened inside of the task module as an embedded web view.</span></span>|
-|`fallbackUrl`| <span data-ttu-id="29b0f-264">Si un client ne prend pas en charge la fonctionnalité de module de tâche, cette URL est ouverte dans un onglet de navigateur.</span><span class="sxs-lookup"><span data-stu-id="29b0f-264">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
+|`title`| <span data-ttu-id="a49db-259">Titre du module de tâche.</span><span class="sxs-lookup"><span data-stu-id="a49db-259">The title of the task module.</span></span>|
+|`height`| <span data-ttu-id="a49db-260">Il doit s'agit d'un nombre integer (en pixels) `small` ou , ou , `medium` `large` .</span><span class="sxs-lookup"><span data-stu-id="a49db-260">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
+|`width`| <span data-ttu-id="a49db-261">Il doit s'agit d'un nombre integer (en pixels) `small` ou , ou , `medium` `large` .</span><span class="sxs-lookup"><span data-stu-id="a49db-261">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
+|`card`| <span data-ttu-id="a49db-262">Carte adaptative définissant le formulaire (si vous en utilisez un).</span><span class="sxs-lookup"><span data-stu-id="a49db-262">The adaptive card defining the form (if using one).</span></span>
+|`url`| <span data-ttu-id="a49db-263">URL à ouvrir dans le module de tâche en tant qu'affichage web incorporé.</span><span class="sxs-lookup"><span data-stu-id="a49db-263">The URL to be opened inside of the task module as an embedded web view.</span></span>|
+|`fallbackUrl`| <span data-ttu-id="a49db-264">Si un client ne prend pas en charge la fonctionnalité de module de tâche, cette URL est ouverte dans un onglet de navigateur.</span><span class="sxs-lookup"><span data-stu-id="a49db-264">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
 
-### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a><span data-ttu-id="29b0f-265">Répondre à fetchTask avec une carte adaptative</span><span class="sxs-lookup"><span data-stu-id="29b0f-265">Respond to the fetchTask with an Adaptive Card</span></span>
+### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a><span data-ttu-id="a49db-265">Répondre à fetchTask avec une carte adaptative</span><span class="sxs-lookup"><span data-stu-id="a49db-265">Respond to the fetchTask with an Adaptive Card</span></span>
 
-<span data-ttu-id="29b0f-266">Lorsque vous utilisez une carte adaptative, vous devez répondre avec un objet contenant `task` `value` une carte adaptative.</span><span class="sxs-lookup"><span data-stu-id="29b0f-266">When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.</span></span>
+<span data-ttu-id="a49db-266">Lorsque vous utilisez une carte adaptative, vous devez répondre avec un objet contenant `task` `value` une carte adaptative.</span><span class="sxs-lookup"><span data-stu-id="a49db-266">When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="29b0f-267">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-267">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="a49db-267">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-267">Example</span></span>
 
-<span data-ttu-id="29b0f-268">La section de code suivante est un exemple de `fetchTask` réponse avec une carte adaptative :</span><span class="sxs-lookup"><span data-stu-id="29b0f-268">The following code section is an example to `fetchTask` response with an adaptive card:</span></span>
+<span data-ttu-id="a49db-268">La section de code suivante est un exemple de `fetchTask` réponse avec une carte adaptative :</span><span class="sxs-lookup"><span data-stu-id="a49db-268">The following code section is an example to `fetchTask` response with an adaptive card:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="29b0f-269">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="29b0f-269">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a49db-269">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a49db-269">C#/.NET</span></span>](#tab/dotnet)
 
-<span data-ttu-id="29b0f-270">Cet exemple utilise le [package NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) en plus du SDK Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="29b0f-270">This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.</span></span>
+<span data-ttu-id="a49db-270">Cet exemple utilise le [package NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) en plus du SDK Bot Framework.</span><span class="sxs-lookup"><span data-stu-id="a49db-270">This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.</span></span>
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -679,7 +679,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="29b0f-271">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="29b0f-271">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="a49db-271">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a49db-271">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -727,7 +727,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="29b0f-272">JSON</span><span class="sxs-lookup"><span data-stu-id="29b0f-272">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a49db-272">JSON</span><span class="sxs-lookup"><span data-stu-id="a49db-272">JSON</span></span>](#tab/json)
 
 ```json
  {
@@ -776,11 +776,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="create-a-task-module-with-an-embedded-web-view"></a><span data-ttu-id="29b0f-273">Créer un module de tâche avec un affichage web incorporé</span><span class="sxs-lookup"><span data-stu-id="29b0f-273">Create a task module with an embedded web view</span></span>
+### <a name="create-a-task-module-with-an-embedded-web-view"></a><span data-ttu-id="a49db-273">Créer un module de tâche avec un affichage web incorporé</span><span class="sxs-lookup"><span data-stu-id="a49db-273">Create a task module with an embedded web view</span></span>
 
-<span data-ttu-id="29b0f-274">Lorsque vous utilisez un affichage web incorporé, vous devez répondre avec un objet avec l'objet contenant l'URL du formulaire web que `task` `value` vous souhaitez charger.</span><span class="sxs-lookup"><span data-stu-id="29b0f-274">When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load.</span></span> <span data-ttu-id="29b0f-275">Les domaines d'une URL que vous souhaitez charger doivent être inclus dans le tableau dans le manifeste `validDomains` de votre application.</span><span class="sxs-lookup"><span data-stu-id="29b0f-275">The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest.</span></span> <span data-ttu-id="29b0f-276">Pour plus d'informations sur la création de votre affichage web incorporé, voir la [documentation du module de tâche.](~/task-modules-and-cards/what-are-task-modules.md)</span><span class="sxs-lookup"><span data-stu-id="29b0f-276">For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).</span></span> 
+<span data-ttu-id="a49db-274">Lorsque vous utilisez un affichage web incorporé, vous devez répondre avec un objet avec l'objet contenant l'URL du formulaire web que `task` `value` vous souhaitez charger.</span><span class="sxs-lookup"><span data-stu-id="a49db-274">When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load.</span></span> <span data-ttu-id="a49db-275">Les domaines d'une URL que vous souhaitez charger doivent être inclus dans le tableau dans le manifeste `validDomains` de votre application.</span><span class="sxs-lookup"><span data-stu-id="a49db-275">The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest.</span></span> <span data-ttu-id="a49db-276">Pour plus d'informations sur la création de votre affichage web incorporé, voir la [documentation du module de tâche.](~/task-modules-and-cards/what-are-task-modules.md)</span><span class="sxs-lookup"><span data-stu-id="a49db-276">For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).</span></span> 
 
-# <a name="cnet"></a>[<span data-ttu-id="29b0f-277">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="29b0f-277">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="a49db-277">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="a49db-277">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -812,7 +812,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="29b0f-278">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="29b0f-278">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="a49db-278">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="a49db-278">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -833,7 +833,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="29b0f-279">JSON</span><span class="sxs-lookup"><span data-stu-id="29b0f-279">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="a49db-279">JSON</span><span class="sxs-lookup"><span data-stu-id="a49db-279">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -852,15 +852,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="request-to-install-your-conversational-bot"></a><span data-ttu-id="29b0f-280">Demande d'installation de votre bot de conversation</span><span class="sxs-lookup"><span data-stu-id="29b0f-280">Request to install your conversational bot</span></span>
+### <a name="request-to-install-your-conversational-bot"></a><span data-ttu-id="a49db-280">Demande d'installation de votre bot de conversation</span><span class="sxs-lookup"><span data-stu-id="a49db-280">Request to install your conversational bot</span></span>
 
-<span data-ttu-id="29b0f-281">Si l'application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche.</span><span class="sxs-lookup"><span data-stu-id="29b0f-281">If the app contains a conversational bot, install the bot in the conversation and then load the task module.</span></span> <span data-ttu-id="29b0f-282">Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche.</span><span class="sxs-lookup"><span data-stu-id="29b0f-282">The bot is useful to get additional context for the task module.</span></span> <span data-ttu-id="29b0f-283">Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d'une équipe.</span><span class="sxs-lookup"><span data-stu-id="29b0f-283">An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.</span></span>
+<span data-ttu-id="a49db-281">Si l'application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche.</span><span class="sxs-lookup"><span data-stu-id="a49db-281">If the app contains a conversational bot, install the bot in the conversation and then load the task module.</span></span> <span data-ttu-id="a49db-282">Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche.</span><span class="sxs-lookup"><span data-stu-id="a49db-282">The bot is useful to get additional context for the task module.</span></span> <span data-ttu-id="a49db-283">Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d'une équipe.</span><span class="sxs-lookup"><span data-stu-id="a49db-283">An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.</span></span>
 
-<span data-ttu-id="29b0f-284">Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux.</span><span class="sxs-lookup"><span data-stu-id="29b0f-284">When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow.</span></span> <span data-ttu-id="29b0f-285">Par exemple, vérifiez le flux avec un appel d'obtenir une liste de membres.</span><span class="sxs-lookup"><span data-stu-id="29b0f-285">For example, check the flow with a get roster call.</span></span> <span data-ttu-id="29b0f-286">Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot.</span><span class="sxs-lookup"><span data-stu-id="29b0f-286">If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot.</span></span> <span data-ttu-id="29b0f-287">L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification.</span><span class="sxs-lookup"><span data-stu-id="29b0f-287">The user must have the permission to install the apps in that location for checking.</span></span> <span data-ttu-id="29b0f-288">Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="29b0f-288">If the app installation is unsuccessful, the user receives a message to contact the administrator.</span></span>
+<span data-ttu-id="a49db-284">Lorsque l'extension de messagerie reçoit l'appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux.</span><span class="sxs-lookup"><span data-stu-id="a49db-284">When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow.</span></span> <span data-ttu-id="a49db-285">Par exemple, vérifiez le flux avec un appel d'obtenir une liste.</span><span class="sxs-lookup"><span data-stu-id="a49db-285">For example, check the flow with a get roster call.</span></span> <span data-ttu-id="a49db-286">Si le bot n'est pas installé, renvoyer une carte adaptative avec une action qui demande à l'utilisateur d'installer le bot.</span><span class="sxs-lookup"><span data-stu-id="a49db-286">If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot.</span></span> <span data-ttu-id="a49db-287">L'utilisateur doit avoir l'autorisation d'installer les applications à cet emplacement pour vérification.</span><span class="sxs-lookup"><span data-stu-id="a49db-287">The user must have the permission to install the apps in that location for checking.</span></span> <span data-ttu-id="a49db-288">Si l'installation de l'application échoue, l'utilisateur reçoit un message pour contacter l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="a49db-288">If the app installation is unsuccessful, the user receives a message to contact the administrator.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="29b0f-289">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-289">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="a49db-289">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-289">Example</span></span> 
 
-<span data-ttu-id="29b0f-290">La section de code suivante est un exemple de réponse :</span><span class="sxs-lookup"><span data-stu-id="29b0f-290">The following code section is an example of the response:</span></span>
+<span data-ttu-id="a49db-290">La section de code suivante est un exemple de réponse :</span><span class="sxs-lookup"><span data-stu-id="a49db-290">The following code section is an example of the response:</span></span>
 
 ```json
 {
@@ -886,11 +886,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="29b0f-291">Après l'installation du bot conversationnel, il reçoit un autre message d'appel `name = composeExtension/submitAction` avec , et `value.data.msteams.justInTimeInstall = true` .</span><span class="sxs-lookup"><span data-stu-id="29b0f-291">After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.</span></span>
+<span data-ttu-id="a49db-291">Après l'installation du bot conversationnel, il reçoit un autre message d'appel `name = composeExtension/submitAction` avec , et `value.data.msteams.justInTimeInstall = true` .</span><span class="sxs-lookup"><span data-stu-id="a49db-291">After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="29b0f-292">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-292">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="a49db-292">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-292">Example</span></span> 
 
-<span data-ttu-id="29b0f-293">La section de code suivante est un exemple de réponse de tâche à l'appel :</span><span class="sxs-lookup"><span data-stu-id="29b0f-293">The following code section is an example of the task response to the invoke:</span></span>
+<span data-ttu-id="a49db-293">La section de code suivante est un exemple de réponse de tâche à l'appel :</span><span class="sxs-lookup"><span data-stu-id="a49db-293">The following code section is an example of the task response to the invoke:</span></span>
 
 ```json
 {
@@ -914,11 +914,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="29b0f-294">La réponse à la tâche à l'appel doit être similaire à celle du bot installé.</span><span class="sxs-lookup"><span data-stu-id="29b0f-294">The task response to the invoke must be similar to that of the installed bot.</span></span>
+<span data-ttu-id="a49db-294">La réponse à la tâche à l'appel doit être similaire à celle du bot installé.</span><span class="sxs-lookup"><span data-stu-id="a49db-294">The task response to the invoke must be similar to that of the installed bot.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="29b0f-295">Exemple</span><span class="sxs-lookup"><span data-stu-id="29b0f-295">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="a49db-295">Exemple</span><span class="sxs-lookup"><span data-stu-id="a49db-295">Example</span></span> 
 
-<span data-ttu-id="29b0f-296">La section de code suivante est un exemple d'installation juste-à-temps de l'application avec carte adaptative :</span><span class="sxs-lookup"><span data-stu-id="29b0f-296">The following code section is an example of just-in time installation of app with Adaptive card:</span></span> 
+<span data-ttu-id="a49db-296">La section de code suivante est un exemple d'installation juste-à-temps de l'application avec carte adaptative :</span><span class="sxs-lookup"><span data-stu-id="a49db-296">The following code section is an example of just-in time installation of app with Adaptive card:</span></span> 
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -937,20 +937,20 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 * * *
 
-## <a name="code-sample"></a><span data-ttu-id="29b0f-297">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="29b0f-297">Code sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="a49db-297">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="a49db-297">Code sample</span></span>
 
-| <span data-ttu-id="29b0f-298">Exemple de nom</span><span class="sxs-lookup"><span data-stu-id="29b0f-298">Sample Name</span></span>           | <span data-ttu-id="29b0f-299">Description</span><span class="sxs-lookup"><span data-stu-id="29b0f-299">Description</span></span> | <span data-ttu-id="29b0f-300">.NET</span><span class="sxs-lookup"><span data-stu-id="29b0f-300">.NET</span></span>    | <span data-ttu-id="29b0f-301">Node.js</span><span class="sxs-lookup"><span data-stu-id="29b0f-301">Node.js</span></span>   |   
+| <span data-ttu-id="a49db-298">Exemple de nom</span><span class="sxs-lookup"><span data-stu-id="a49db-298">Sample Name</span></span>           | <span data-ttu-id="a49db-299">Description</span><span class="sxs-lookup"><span data-stu-id="a49db-299">Description</span></span> | <span data-ttu-id="a49db-300">.NET</span><span class="sxs-lookup"><span data-stu-id="a49db-300">.NET</span></span>    | <span data-ttu-id="a49db-301">Node.js</span><span class="sxs-lookup"><span data-stu-id="a49db-301">Node.js</span></span>   |   
 |:---------------------|:--------------|:---------|:--------|
-|<span data-ttu-id="29b0f-302">Action d'extension de messagerie Teams</span><span class="sxs-lookup"><span data-stu-id="29b0f-302">Teams messaging extension action</span></span>| <span data-ttu-id="29b0f-303">Décrit comment définir des commandes d'action, créer un module de tâche et répondre à l'action d'soumission du module de tâche.</span><span class="sxs-lookup"><span data-stu-id="29b0f-303">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="29b0f-304">View</span><span class="sxs-lookup"><span data-stu-id="29b0f-304">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="29b0f-305">View</span><span class="sxs-lookup"><span data-stu-id="29b0f-305">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|<span data-ttu-id="29b0f-306">Recherche d'extension de messagerie Teams</span><span class="sxs-lookup"><span data-stu-id="29b0f-306">Teams messaging extension search</span></span>   |  <span data-ttu-id="29b0f-307">Décrit comment définir des commandes de recherche et répondre aux recherches.</span><span class="sxs-lookup"><span data-stu-id="29b0f-307">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="29b0f-308">View</span><span class="sxs-lookup"><span data-stu-id="29b0f-308">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="29b0f-309">View</span><span class="sxs-lookup"><span data-stu-id="29b0f-309">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|<span data-ttu-id="a49db-302">Action d'extension de messagerie Teams</span><span class="sxs-lookup"><span data-stu-id="a49db-302">Teams messaging extension action</span></span>| <span data-ttu-id="a49db-303">Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche.</span><span class="sxs-lookup"><span data-stu-id="a49db-303">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="a49db-304">View</span><span class="sxs-lookup"><span data-stu-id="a49db-304">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="a49db-305">View</span><span class="sxs-lookup"><span data-stu-id="a49db-305">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|<span data-ttu-id="a49db-306">Recherche d'extension de messagerie Teams</span><span class="sxs-lookup"><span data-stu-id="a49db-306">Teams messaging extension search</span></span>   |  <span data-ttu-id="a49db-307">Décrit comment définir des commandes de recherche et répondre aux recherches.</span><span class="sxs-lookup"><span data-stu-id="a49db-307">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="a49db-308">View</span><span class="sxs-lookup"><span data-stu-id="a49db-308">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="a49db-309">View</span><span class="sxs-lookup"><span data-stu-id="a49db-309">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a><span data-ttu-id="29b0f-310">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="29b0f-310">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a49db-310">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a49db-310">See also</span></span>
 
-- [<span data-ttu-id="29b0f-311">Définir les commandes d’action</span><span class="sxs-lookup"><span data-stu-id="29b0f-311">Define action commands</span></span>](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+[<span data-ttu-id="a49db-311">Définir les commandes d’action</span><span class="sxs-lookup"><span data-stu-id="a49db-311">Define action commands</span></span>](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
-## <a name="next-step"></a><span data-ttu-id="29b0f-312">Étape suivante</span><span class="sxs-lookup"><span data-stu-id="29b0f-312">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="a49db-312">Étape suivante</span><span class="sxs-lookup"><span data-stu-id="a49db-312">Next step</span></span>
 
 > [!div class="nextstepaction"] 
-> [<span data-ttu-id="29b0f-313">Répondre à la commande d'action</span><span class="sxs-lookup"><span data-stu-id="29b0f-313">Respond to action command</span></span>](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [<span data-ttu-id="a49db-313">Répondre à la commande d'action</span><span class="sxs-lookup"><span data-stu-id="a49db-313">Respond to action command</span></span>](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 

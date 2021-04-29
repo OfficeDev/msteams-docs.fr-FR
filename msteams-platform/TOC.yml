@@ -5,20 +5,20 @@
       href: overview.md
     - name: "Quelles sont les nouveautés\_?"
       href: whats-new.md
-- name: Démarrer
+- name: Prise en main
   expanded: true
   items:
-    - name: Vue d’ensemble et conditions préalables
+    - name: Vue d’ensemble
       href: build-your-first-app/build-first-app-overview.md
     - name: "Créer un «\_Hello, World!\_» application"
       href: build-your-first-app/build-and-run.md
-    - name: Créer un onglet personnel
+    - name: Créer un onglet personnel de base
       href: build-your-first-app/build-personal-tab.md
-    - name: Créer un onglet de canal et de groupe
+    - name: Créer votre premier canal et onglet de groupe
       href: build-your-first-app/build-channel-tab.md
-    - name: Créer un bot
+    - name: Créer votre premier bot
       href: build-your-first-app/build-bot.md
-    - name: Créer une extension de messagerie
+    - name: Créer votre première extension de messagerie
       href: build-your-first-app/build-messaging-extension.md
 - name: Didacticiels et exemples de code
   items:
