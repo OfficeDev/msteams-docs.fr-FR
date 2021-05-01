@@ -1,16 +1,16 @@
 ---
 title: Mettre à jour et supprimer les messages envoyés à partir de votre bot
 author: WashingtonKayaker
-description: Comment mettre à jour et supprimer des messages envoyés à partir de votre bot Microsoft Teams
+description: Comment mettre à jour et supprimer des messages envoyés à partir de Microsoft Teams bot
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 90dc50fd2ec153813457f199ac029e17a0157502
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019985"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101533"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Mettre à jour et supprimer les messages envoyés à partir de votre bot
 
@@ -58,7 +58,7 @@ update_result = await context.update_activity(new_activity)
 
 > [!NOTE]
 
-> Vous pouvez développer des applications Teams dans n'importe quelle technologie de programmation web et appeler directement les API REST du [service Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Pour ce faire, vous [](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) devez implémenter des procédures de sécurité d'authentification avec vos demandes d'API.
+> Vous pouvez développer des Teams dans n'importe quelle technologie de programmation web et appeler directement les API REST du [service Bot Connector.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Pour ce faire, vous [](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) devez implémenter des procédures de sécurité d'authentification avec vos demandes d'API.
 
 Pour mettre à jour une activité existante dans une conversation, incluez le point de terminaison de `conversationId` `activityId` la demande et celui-ci. Pour effectuer ce scénario, vous devez mettre en cache l'ID d'activité renvoyé par l'appel post-courrier d'origine.
 
@@ -66,9 +66,9 @@ Pour mettre à jour une activité existante dans une conversation, incluez le po
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Demande et réponse** | **Description** |
+|Demande |Réponse |
 |----|----|
-| Objet [d'activité](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | Objet [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
+| Objet [Activity.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | Objet [ResourceResponse.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) |
 
 ---
 * * *
@@ -81,7 +81,7 @@ Pour mettre à jour la carte existante sur la sélection de bouton, vous pouvez 
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec carte mise à jour et en tant qu'ID d'activité à la méthode `Activity` `ReplyToId` de la `UpdateActivityAsync` `TurnContext` classe. Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec une carte mise à jour et en tant qu'ID d'activité à la méthode `Activity` `ReplyToId` de la `UpdateActivityAsync` `TurnContext` classe. Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[API REST](#tab/rest)
 
 > [!NOTE]
-> Vous pouvez développer des applications Teams dans n'importe quelle technologie de programmation web et appeler directement les API REST du service connecteur [de bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Pour ce faire, vous devez implémenter [des](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) procédures de sécurité d'authentification avec vos demandes d'API.
+> Vous pouvez développer des Teams dans n'importe quelle technologie de programmation web et appeler directement les API REST du service de [connecteur de bot.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) Pour ce faire, vous devez implémenter [des](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) procédures de sécurité d'authentification avec vos demandes d'API.
 
 Pour mettre à jour une activité existante dans une conversation, incluez le point de terminaison de `conversationId` `activityId` la demande et celui-ci. Pour effectuer ce scénario, vous devez mettre en cache l'ID d'activité renvoyé par l'appel post-courrier d'origine.
 
@@ -172,7 +172,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 | **Demande et réponse** | **Description** |
 |----|----|
-| S/O | Code d'état HTTP qui indique le résultat de l'opération. Rien n'est spécifié dans le corps de la réponse. |
+| S/O | Code d'état HTTP indiquant le résultat de l'opération. Rien n'est spécifié dans le corps de la réponse. |
 
 ---
 
@@ -182,9 +182,9 @@ L'exemple de code suivant illustre les principes de base des conversations :
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Informations de base sur les conversations Teams  | Illustre les principes de base des conversations dans Teams, notamment la mise à jour et la suppression des messages. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams Informations de base sur les conversations  | Présente les principes de base des conversations dans Teams notamment la mise à jour et la suppression des messages. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Obtenir le contexte Teams](~/bots/how-to/get-teams-context.md)
+> [Obtenir Teams contexte](~/bots/how-to/get-teams-context.md)

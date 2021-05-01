@@ -1,97 +1,197 @@
 ---
-title: Liste de vérification de soumission au Store
-description: Liste de vérification à utiliser avant de publier votre application Microsoft Teams sur AppSource
-ms.topic: reference
+title: Préparer votre soumission au Store
+description: Décrit les dernières étapes avant de soumettre votre Microsoft Teams pour qu'elle soit répertoriée dans le Store.
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 1e7698e143d313ce46b834eada608571e3280b8a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020785"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101680"
 ---
-# <a name="prepare-for-appsource-submission"></a>Préparer la soumission d'AppSource  
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
 
-Pour être répertoriée sur AppSource, votre application doit passer par un processus d'approbation. Il s'agit d'un service gratuit fourni par le groupe Microsoft Teams qui vérifie que votre application fonctionne comme décrit, contient toutes les métadonnées appropriées et fournit du contenu qui serait utile pour un utilisateur final. Pour vous aider à obtenir une approbation rapide, assurez-vous que votre application répond aux exigences et instructions suivantes :
+Vous avez conçu, créé et testé votre application Microsoft Teams web. Vous êtes maintenant prêt à la réen lister pour que les personnes peuvent découvrir et commencer à utiliser votre application.
 
-* **Méthode de distribution :** Assurez-vous que votre application est destinée à être publiée sur une plateforme du Store. Il existe [d'autres options](../../overview.md) de distribution de votre application sans publication dans AppSource.
-* **Stratégies de validation :** Votre application doit transmettre toutes les stratégies de [validation AppSource actuelles](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) avant sa soumission. 
-  > [!NOTE] 
-  > Les stratégies de validation Appsource sont sujettes à modification.
-* **Préparation mobile :** Votre application doit être mobile réactive. Si votre application contient des onglets, ils doivent respecter les [instructions](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) de conception [pour](~/tabs/design/tabs-mobile.md) appareils mobiles et votre application ne doit respecter aucune exigence de vente à la vente sur le système d'exploitation mobile (iOS et Android).
-* **Testez vous-même votre application :** Testez votre application à l'aide [de l'outil de validation de manifeste.](#teams-app-validation-tool)
-* **Page de détails de l'application :** Votre application doit s'aligner sur la liste de contrôle [de la page de détails de l'application.](detail-page-checklist.md)
-* **Conseils et cas d'échec fréquents :** Accordez une attention [](frequently-failed-cases.md) particulière aux conseils répertoriés et aux cas d'échec fréquents pour améliorer le temps de soumission et d'approbation de votre application.
-* **Manifeste de l'application :** Vérifiez le manifeste de votre application par rapport à la liste [de contrôle du manifeste de l'application.](app-manifest-checklist.md)
-* **Test et débogage :** Assurez-vous que vous avez entièrement testé et [débouggé votre application.](../../../build-and-test/debug.md)
-* **Notes de test :** Inclure vos [notes de test pour la validation](#test-notes-for-validation)
-* **Stratégies de confidentialité :** Assurez-vous [que votre politique de confidentialité, vos conditions d'utilisation et vos URL de support](#privacy-policy-terms-of-use-and-support-urls) respectent nos recommandations.
+Avant de soumettre votre application à [l'Partner Center,](/office/dev/store/use-partner-center-to-submit-to-appsource)assurez-vous que vous avez effectué les choses suivantes.
 
-Une fois que vous avez rempli toutes les conditions ci-dessus, envoyez votre package à AppSource via [l'Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).
+## <a name="validate-your-app-package"></a>Valider votre package d'application
 
-## <a name="teams-app-validation-tool"></a>Outil de validation d'application Teams
+Bien que votre application fonctionne peut-être dans un environnement de test, vous devez vérifier votre package d'application pour éviter les problèmes pendant le processus de soumission.
 
-L'outil de validation d'application se compose d'un [validateur](#teams-app-validator) d'application et [d'une liste de contrôle préliminaire.](#preliminary-checklist) L'outil réplique les mêmes cas de test utilisés par [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) pour évaluer la soumission de votre application. Par conséquent, il est essentiel de réussir tous les cas de test avant de soumettre votre solution à AppSource pour approbation. L'outil se trouve dans plusieurs zones de la plateforme Teams :
+L Microsoft Teams de validation d'application vous permet d'identifier et de résoudre les problèmes avant de les soumettre à l'Partner Center. L'outil vérifie automatiquement les configurations de votre application par rapport aux mêmes cas de test utilisés lors de la validation du Store.
 
-> [!div class="checklist"]
->
-> * [**Page d'accueil du validateur d'application**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Boîte à outils Visual Studio Code Teams**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
+1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Remarque : l'outil est également disponible [dans App Studio.)](../../../build-and-test/app-studio-overview.md)
+1. Télécharger votre package d'application pour exécuter les tests automatisés.
+1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
+1. [Corrigez les problèmes de configuration ou](~/resources/schema/manifest-schema.md) d'application en général si les tests automatisés vous donnent des erreurs ou si vous n'avez pas satisfait à tous les critères de la liste de contrôle.
 
-### <a name="teams-app-validator"></a>Validateur d'application Teams
+## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
-La page **Valider** vous permet de vérifier votre package d'application avant de le soumettre à AppSource. Il vous suffit de charger votre package d'application et l'outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque test qui a échoué, la description fournit un lien de documentation pour vous aider à résoudre l'erreur.
+Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d'identification et les clés de licence. Vous pouvez ajouter des instructions dans l'Partner Center ou les télécharger vers un emplacement disponible publiquement sur SharePoint.
 
-![Outil de validation](../../../../assets/images/validation-tool/validator.png)
+### <a name="feature-list"></a>Liste des fonctionnalités
 
-### <a name="preliminary-checklist"></a>Liste de contrôle préliminaire
+Fournissez des détails sur les fonctionnalités de votre application dans Teams et les étapes de test de chacune d'elles.
 
-Pour les scénarios de test qui sont difficiles à automatiser, la liste de contrôle préliminaire surfaces sept des cas de test les plus couramment échoués.
+### <a name="accounts"></a>Comptes
 
-![Liste de contrôle préliminaire](../../../../assets/images/validation-tool/preliminary-checklist.png)
+Vous devez fournir des comptes de test si votre application nécessite une licence ou une liste sécurisée back-end. Tous les comptes que vous fournissez doivent inclure des données pré-remplies pour faciliter le test.
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a>Politique de confidentialité, conditions d'utilisation et URL de support
+En fonction des fonctionnalités de votre application, vous devrez peut-être fournir les éléments suivants :
 
-### <a name="privacy-policy"></a>Politique de confidentialité
+* Compte d'administrateur (obligatoire)
+* Compte non administrateur (obligatoire)
+* Un compte qui n'est pas pré-configuré afin de tester correctement l'expérience de première utilisation de la première utilisation de la signature (obligatoire)
+* Un compte ayant accès aux fonctionnalités premium ou mises à niveau (le cas échéant)
+* Deux comptes dans le même client pour tester l'expérience de collaboration pour les applications qui fonctionnent dans des contextes partagés (le cas échéant)
 
-Recommandations en matière de politique de confidentialité :
+### <a name="tenant-configurations"></a>Configurations client
 
-> [!div class="checklist"]
->
-> * La politique de confidentialité peut être spécifique à votre application et/ou à une stratégie globale pour tous vos services.
-> * Si vous utilisez une stratégie de confidentialité générique, elle doit faire référence aux « services », aux « applications » et aux « plateformes » pour inclure votre application Teams ainsi que votre site web.
-> * Elle doit inclure la façon dont vous traitez le stockage des données utilisateur, la rétention, la suppression et les contrôles de sécurité des données utilisateur.
-> * Il doit inclure vos informations de contact.
-> * Il ne doit pas contenir de liens rompus, d'URL bêta ou d'URL intermédiaire.
+Si vous devez configurer un client Teams pour utiliser votre application, incluez ces instructions et les comptes administrateur et non administrateur pour la validation.
 
-### <a name="terms-of-use"></a>Conditions d’utilisation
+### <a name="video-optional"></a>Vidéo (facultatif)
 
-Votre déclaration de conditions d'utilisation doit être spécifique et applicable à votre application et/ou à votre offre de add-in.
+Fournissez un enregistrement de votre application afin que Microsoft puisse bien comprendre ses fonctionnalités.
 
-### <a name="support-urls"></a>URL de prise en charge
+## <a name="create-your-store-listing-details"></a>Créer les détails de la description dans le Store
 
-Vos URL de support ne doivent pas nécessiter d'authentification ou d'informations d'identification pour vous contacter pour tout problème avec votre application.
+Les informations que [](https://partner.microsoft.com) vous envoyez à l'&#8212;de l'&#8212;, y compris votre nom, descriptions, icônes et images&#8212;, deviennent le Teams Store et la description Microsoft AppSource de votre application.
 
-## <a name="test-notes-for-validation"></a>Notes de test pour la validation
+Une liste dans le Store peut être la première impression de votre application. Augmentez les installations avec une liste qui transmet efficacement les avantages, les fonctionnalités et la marque de votre application.
 
-Veuillez inclure les informations suivantes :
+### <a name="specify-a-short-name"></a>Spécifier un nom court
 
-* Vous devez fournir au moins deux informations d'identification de connexion, un administrateur et un non administrateur.
+Le nom de votre application (en particulier, son nom [*court)*](~/resources/schema/manifest-schema.md#name)joue un rôle crucial dans la façon dont les utilisateurs la découvrent dans le Store.
 
-* À des fins de vérification, les comptes que vous fournissez doivent avoir suffisamment de données pré-remplies.
+:::row:::
 
-* Pour les applications d'entreprise, les applications où un abonnement est requis ou les applications où il existe une dépendance client/domaine Office 365, vous devez fournir un troisième compte dans le même domaine qui n'est pas pré-configuré pour votre application afin que nous pouvons valider l'expérience utilisateur de première utilisation.
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Exemple de capture d'écran sur laquelle le nom court d'une application s'affiche dans une liste du Store.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
 
-* Si votre application dispose de fonctionnalités premium/mises à niveau, un compte avec l'accès nécessaire doit être fourni pour tester cette expérience.
+:::row-end:::
 
-* Vous pouvez choisir de télécharger vos notes de test sur SharePoint. Si c'est le cas, veuillez fournir un lien public vers le fichier.
+Assurez-vous que votre nom court respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)
 
-* **Comptes de test**. Un compte de test est requis si votre application autorise uniquement les comptes sous licence ou la liste sécurisée à partir du back-end. En outre, si une étendue de conversation d'équipe/groupe est autorisée dans votre application, deux comptes de test dans le même client sont requis pour valider le scénario de collaboration d'équipe.
+### <a name="write-descriptions"></a>Écrire des descriptions
 
-* **Étapes d'intégration.** Si la pré-configuration par un administrateur client est requise pour utiliser l'application, incluez les étapes et/ou fournissez des comptes d'administrateur et non administrateur configurés pour la validation. Remarque : vous pouvez vous inscrire à un abonnement au programme pour les développeurs [Office 365.](https://developer.microsoft.com/microsoft-365/dev-program) Il est *gratuit pendant* 90 jours et est continuellement renouvelé tant que vous l'utilisez pour l'activité de développement.
+Vous devez avoir une description courte et longue de votre application.
 
-* **Remarques concernant les fonctionnalités de** l'application dans Teams : détaillez toutes les fonctionnalités de l'application dans Teams et les étapes de test de chaque fonctionnalité.
+#### <a name="short-description"></a>Description brève
 
-* **Vidéo montrant la fonctionnalité de** l'application (facultatif) : vous pouvez fournir un enregistrement vidéo du produit pour nous aider à bien comprendre les fonctionnalités de l'application.
+Résumé concis de votre application qui doit être original, attrayant et adressé à votre public cible. Conservez la description courte jusqu'à une phrase.
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemple de capture d'écran sur laquelle la description courte d'une application s'affiche dans une description dans le Store.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+Assurez-vous que votre brève description respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)
+
+#### <a name="long-description"></a>Description longue
+
+La description longue peut fournir un narratif qui met en évidence les principales fonctionnalités de votre application, les problèmes qu'elle résout et son public cible. Bien que cette description puisse prendre jusqu'à 4 000 caractères, la plupart des utilisateurs ne lisent qu'entre 300 et 500 mots.
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Exemple de capture d'écran sur laquelle la description longue d'une application s'affiche dans une description dans le Store.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+Assurez-vous que votre description longue respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)
+
+### <a name="adhere-to-icon-design-guidelines"></a>Respecter les instructions de conception des icônes
+
+Les icônes sont l'un des principaux éléments que les utilisateurs voient lors de la navigation dans le Store. Vos icônes doivent communiquer la marque et l'objectif de votre application tout en respectant les Teams requises.
+
+Pour plus d'informations, voir [les conseils sur la création Teams icônes d'application.](~/concepts/build-and-test/apps-package.md#app-icons)
+
+### <a name="capture-screenshots"></a>Capture d'écran
+
+Les captures d'écran fournissent un aperçu visuel de votre application pour compléter le nom, l'icône et les descriptions de votre application.
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Exemple de capture d'écran sur laquelle les captures d'écran d'application s'affichent dans une liste du Store.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+Souvenez-vous des captures d'écran suivantes :
+
+* Vous pouvez avoir jusqu'à cinq captures d'écran par liste.
+* Les types de fichiers pris en charge sont PNG, JPEG et GIF.
+* Les dimensions doivent être de 1 366 x 768 pixels.
+* Taille maximale de 1 024 Ko.
+
+Pour obtenir les meilleures pratiques, consultez les ressources suivantes :
+
+* [Teams de validation du magasin d'informations](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Création d'images efficaces pour les magasins d'applications Microsoft](/office/dev/store/craft-effective-appsource-store-images)
+
+### <a name="create-a-video"></a>Créer une vidéo
+
+Une vidéo dans votre liste peut être le moyen le plus efficace de communiquer pourquoi les personnes doivent utiliser votre application. Vous devez répondre aux questions suivantes dans une vidéo :
+
+* Qui votre application est-elle pour ?
+* Quels problèmes votre application peut-elle résoudre ?
+* Comment fonctionne votre application ?
+* Quels autres avantages bénéficiez-vous de l'utilisation de votre application ?
+
+#### <a name="best-practices-for-videos"></a>Meilleures pratiques pour les vidéos
+
+* Conservez votre vidéo entre 30 et 90 secondes.
+* Visez la qualité. Dans une liste, les utilisateurs voient votre vidéo avant les captures d'écran.
+
+### <a name="select-a-category-for-your-app"></a>Sélectionner une catégorie pour votre application
+
+Lors de la soumission, vous êtes invité à catégoriser votre application. Le tableau suivant ma Teams catégories de magasin aux catégories répertoriées dans [l'Partner Center](https://aka.ms/PartnerCenterHomePage).
+
+| Teams catégories       | Catégories de l'Centre partenaires  |
+|:---------------------|:---------------|
+| Analyse et bi | Analyse, visualisation des données et bi |
+| Développeur et informatique | Outils de développement, administrateur informatique |
+| Éducation | Éducation |
+| Ressources humaines | Ressources humaines et recrutement |
+| Productivité | Gestion de contenu, fichiers et documents, productivité, formation et didacticiels, et utilitaires |
+| Gestion de projet | Communication, gestion Project, flux de travail et gestion de l'entreprise |
+| Ventes et support | Gestion des clients et des contacts, support client, gestion financière, ventes et marketing |
+| Social et fun | Galeries d'images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
+
+### <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
+
+L'Partner Center prend [en charge les listes de magasins localisées.](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions) Pour plus d'informations, voir comment localiser votre [liste Teams'application.](../../../../concepts/build-and-test/apps-localization.md)
+
+## <a name="complete-publisher-verification"></a>Vérification Publisher complète
+
+[Publisher vérification est](/azure/active-directory/develop/publisher-verification-overview) requise pour Teams applications répertoriées dans le Windows Store. Pour plus d'informations, voir [les questions fréquemment posées,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)comment marquer votre application comme éditeur vérifié et résoudre les problèmes de vérification de [l'éditeur](/azure/active-directory/develop/troubleshoot-publisher-verification). [](/azure/active-directory/develop/mark-app-as-publisher-verified)
+
+## <a name="complete-publisher-attestation"></a>Attestation d'Publisher complète
+
+[Publisher attestation est](/microsoft-365-app-certification/docs/attestation) également requise pour Teams applications répertoriées dans le Windows Store. Le processus inclut la réalisation d'une auto-évaluation de la sécurité, de la gestion des données et des pratiques de conformité de votre application qui peuvent aider les clients potentiels à prendre des décisions éclairées sur l'utilisation de votre application.
+
+> [!NOTE]
+> Si vous soumettez une nouvelle application, vous ne pouvez pas terminer officiellement l'attestation d'Publisher tant que votre application n'est pas répertoriée dans le Teams store. Si vous êtes en train de mettre à jour une application répertoriée, Publisher attestation avant de soumettre la dernière version de l'application pour validation.
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Soumettre votre application](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)

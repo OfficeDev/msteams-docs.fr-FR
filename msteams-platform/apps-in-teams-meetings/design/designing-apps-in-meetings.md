@@ -1,31 +1,31 @@
 ---
 title: Conception de votre extension de réunion
 author: heath-hamilton
-description: Découvrez comment concevoir des applications dans les réunions Teams et obtenir le Kit d'interface utilisateur Microsoft Teams.
+description: Découvrez comment concevoir des applications dans Teams réunions et obtenir le kit Microsoft Teams'interface utilisateur.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3f12ed711b14d2ea6d9fee541b98f20012d6cf21
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018473"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101449"
 ---
-# <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension de réunion Microsoft Teams
+# <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension Microsoft Teams réunion
 
 Vous pouvez créer des applications pour rendre les réunions plus productives. Par exemple, demandez aux personnes de répondre à une enquête pendant un appel ou d'envoyer un rappel rapide qui n'interrompt pas le flux de la réunion.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions de conception plus complètes, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d'interface utilisateur Microsoft Teams.
+Vous trouverez des instructions de conception plus complètes, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit Microsoft Teams'interface utilisateur.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>Ajouter une extension de réunion
 
-Vous pouvez ajouter une extension de réunion avant et pendant les réunions. Vous pouvez également ajouter une application pour une réunion spécifique directement à partir du magasin Teams (AppSource).
+Vous pouvez ajouter une extension de réunion avant et pendant les réunions. Vous pouvez également ajouter une application pour une réunion spécifique directement à partir du Teams store (AppSource).
 
 ### <a name="add-before-a-meeting"></a>Ajouter avant une réunion
 
@@ -41,7 +41,7 @@ Lors d'une réunion, **sélectionnez Ajouter** une :::image type="icon" source="
 
 ## <a name="before-a-meeting"></a>Avant une réunion
 
-Avant votre réunion, vous pouvez ajouter du contenu dans l'onglet. L'exemple suivant montre un brouillon de question d'enquête à répondre pendant l'appel.
+Avant votre réunion, vous pouvez ajouter du contenu dans l'onglet. L'exemple suivant montre un brouillon de question d'enquête à qui les personnes répondront pendant l'appel.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="L'exemple montre comment apper le contenu des détails de la réunion avant un appel." border="false":::
 
@@ -57,7 +57,7 @@ Avant votre réunion, vous pouvez ajouter du contenu dans l'onglet. L'exemple su
 
 ### <a name="designing-with-ui-templates"></a>Conception avec des modèles d'interface utilisateur
 
-Utilisez l'un des modèles d'interface utilisateur Teams suivants pour vous aider à concevoir votre onglet de réunion :
+Utilisez l'un des modèles d Teams'interface utilisateur suivants pour vous aider à concevoir votre onglet de réunion :
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d'agir sur une liste entière ou sur des éléments individuels.
 * [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l'état des éléments de travail ou des tickets.
@@ -113,7 +113,7 @@ Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vou
 
 ## <a name="use-an-in-meeting-dialog"></a>Utiliser une boîte de dialogue de réunion
 
-Les boîtes de dialogue de réunion s'affichent lors de la phase de réunion Teams. Ils nécessitent l'attention, la confirmation ou l'interaction d'un utilisateur, mais sont discrets et n'interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés vers les tâches.
+Les boîtes de dialogue de réunion s'affichent sur la Teams de réunion. Ils nécessitent l'attention, la confirmation ou l'interaction d'un utilisateur, mais sont discrets et n'interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés vers les tâches.
 
 ### <a name="use-cases"></a>Cas d’utilisation
 
@@ -137,7 +137,7 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie : en-tête de boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L'exemple montre l'anatomie structurelle d'un en-tête de boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L'exemple illustre l'anatomie structurelle d'un en-tête de boîte de dialogue en réunion." border="false":::
 
 Il existe deux variantes d'en-tête. Dans la mesure du possible, utilisez la variante avec l'avatar pour renforcer le fait que la boîte de dialogue vient d'une personne.
 
@@ -168,6 +168,8 @@ Vous pouvez revenir à une réunion une fois qu'elle s'est terminée et afficher
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
+Utilisez ces recommandations pour créer une expérience d'application de qualité.
+
 ### <a name="interactions"></a>Interactions
 
 :::row:::
@@ -197,7 +199,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 #### <a name="do-use-a-single-column-dialog-layout"></a>À faire : utiliser une disposition de boîte de dialogue à une seule colonne
 
-Étant donné que les boîtes de dialogue sont au centre de la phase de réunion, l'achèvement des tâches doit être rapide et simple pour éviter toute frustration de l'utilisateur.
+Étant donné que les boîtes de dialogue sont au centre de la phase de réunion, l'achèvement de la tâche doit être rapide et simple pour éviter toute frustration de l'utilisateur.
 
    :::column-end:::
    :::column span="":::
@@ -258,7 +260,7 @@ Cela s'écarte du modèle Teams standard pour l'emplacement des contrôles dans 
 
 #### <a name="do-scroll-vertically"></a>À faire : faire défiler verticalement
 
-Les utilisateurs s'attendent à un défilement vertical dans Teams (et ailleurs).
+Les utilisateurs s'attendent à ce que le défilement vertical Teams (et ailleurs).
 
    :::column-end:::
    :::column span="":::
@@ -283,7 +285,7 @@ Si votre application comprend plusieurs tâches, nous vous recommandons vivement
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Exemple de scénarios complexes dans une boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Exemple de scénarios complexes dans une boîte de dialogue de réunion." border="false":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>À ne pas faire : rendre les boîtes de dialogue de réunion complexes
 
@@ -298,9 +300,9 @@ Les boîtes de dialogue en réunion sont conçues pour de brèves interactions.
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Exemple montrant une extension de réunion avec le thème foncé." border="false":::
 
-#### <a name="do-use-teams-color-tokens"></a>À faire : utiliser des jetons de couleur Teams
+#### <a name="do-use-teams-color-tokens"></a>À faire : utiliser Teams de couleur
 
-Les réunions Teams sont optimisées pour le mode sombre afin de réduire les bruits visuels et cognitifs afin que les utilisateurs peuvent se concentrer sur la discussion et le contenu partagé. En savoir plus sur <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">l'utilisation des jetons de couleur (interface utilisateur Fluent).</a>
+Teams réunions sont optimisées pour le mode sombre afin de réduire les bruits visuels et cognitifs afin que les utilisateurs se concentrent sur la discussion et le contenu partagé. En savoir plus sur <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">l'utilisation des jetons de couleur (interface utilisateur Fluent).</a>
 
    :::column-end:::
    :::column span="":::
@@ -308,7 +310,7 @@ Les réunions Teams sont optimisées pour le mode sombre afin de réduire les br
 
 #### <a name="dont-hard-code-hex-values"></a>À ne pas faire : valeurs hexades de code dur
 
-Si vous n'utilisez pas de jetons de couleur Teams, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
+Si vous n'utilisez pas Teams de couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
@@ -342,14 +344,7 @@ La fourniture d'une option permettant de fermer le contenu de l'onglet de réuni
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Attention : évitez les modales dans l'onglet de la réunion
 
-Les modaux (également appelés modules de tâche) dans l'onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
+Les modales (également appelées modules de tâche) dans l'onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Valider votre conception
-
-Si vous envisagez de publier votre application sur AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l'échec des applications lors de l'envoi.
-
-> [!div class="nextstepaction"]
-> [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

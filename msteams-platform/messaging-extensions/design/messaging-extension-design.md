@@ -1,26 +1,26 @@
 ---
 title: Conception de votre extension de messagerie
-description: Découvrez comment concevoir une extension de messagerie Teams et obtenir le Kit d'interface utilisateur Microsoft Teams.
+description: Découvrez comment concevoir une extension Teams messagerie et obtenir le kit Microsoft Teams'interface utilisateur.
 keywords: "Recommandations en matière de conception d'équipes : conseils sur les extensions de messagerie"
 author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020722"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101575"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Conception de votre extension de messagerie Microsoft Teams
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>Conception de votre extension Microsoft Teams messagerie électronique
 
 Les extensions de messagerie sont des raccourcis pour insérer du contenu d'application ou agir sur un message sans sortir de la conversation.
 Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des extensions de messagerie dans Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions complètes sur la conception des extensions de messagerie, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d'interface utilisateur Microsoft Teams.
+Vous trouverez des instructions complètes sur la conception des extensions de messagerie, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit d'interface Microsoft Teams'interface utilisateur.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -40,17 +40,17 @@ L'exemple suivant montre comment ajouter une extension de messagerie dans un can
 
 L'authentification n'est pas obligatoire, mais si votre application ressemble à un outil de suivi des tickets, vous devrez peut-être que des personnes se connectent pour utiliser l'extension de messagerie.
 
-Pour des raisons de cohérence entre les applications Teams, vous ne pouvez pas personnaliser l'écran de la signature. Si vous utilisez l'authentification unique(SSO), les utilisateurs sont automatiquement connectés.
+Par souci de cohérence entre Teams applications, vous ne pouvez pas personnaliser l'écran de la signature. Si vous utilisez l'authentification unique(SSO), les utilisateurs sont automatiquement connectés.
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="L'exemple illustre l'écran de configuration de l'extension de messagerie avec un bouton de signature." border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>Types d'extensions de messagerie
 
-Les extensions de messagerie peuvent avoir des commandes de recherche, des commandes d'action ou les deux. Vos commandes dépendent des fonctionnalités de votre application et de leur ajustement dans les cas d'utilisation de Teams.
+Les extensions de messagerie peuvent avoir des commandes de recherche, des commandes d'action ou les deux. Vos commandes dépendent des fonctionnalités de votre application et de la façon dont elles s'intègrent Teams cas d'utilisation.
 
 ### <a name="search-commands"></a>Commandes de recherche
 
-Grâce aux commandes de recherche, les utilisateurs peuvent utiliser votre extension de messagerie pour trouver rapidement du contenu externe et l'insérer dans un message. Les commandes de recherche sont généralement disponibles dans la zone de composition. Par exemple, vous pouvez commencer ou ajouter une discussion en partageant un élément de contenu, sans quitter Teams.
+Grâce aux commandes de recherche, les utilisateurs peuvent utiliser votre extension de messagerie pour trouver rapidement du contenu externe et l'insérer dans un message. Les commandes de recherche sont généralement disponibles dans la zone de composition. Par exemple, vous pouvez commencer ou ajouter une discussion en partageant un élément de contenu, sans jamais quitter Teams.
 
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Exemple d'une extension de messagerie basée sur la recherche lancée à partir de la zone de composition." border="false":::
 
@@ -62,7 +62,7 @@ Certaines options s'offrent à vous pour afficher les résultats de recherche d'
 
 ### <a name="action-commands"></a>Commandes d'action
 
-Les commandes d'action permettent aux utilisateurs de déclencher des actions et de traiter des demandes dans des services externes au sein de Teams. Par exemple, si votre application suit les commandes, un utilisateur peut créer une commande à l'aide du contenu du message d'un collègue directement dans sa conversation.
+Les commandes d'action permettent aux utilisateurs de déclencher des actions et de traiter des demandes dans des services externes Teams. Par exemple, si votre application suit les commandes, un utilisateur peut créer une commande à l'aide du contenu du message d'un collègue directement dans sa conversation.
 
 Les extensions de messagerie basées sur une action nécessitent fréquemment que les utilisateurs remplissent un formulaire ou tout autre type de configuration dans une configuration modale. Vous pouvez créer ces expériences avec [des modules de tâche.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
@@ -81,7 +81,7 @@ Une fois ajouté, les utilisateurs peuvent ouvrir votre extension de messagerie 
 Une fois ajoutés, les utilisateurs peuvent sélectionner l'icône **Plus** dans le message de conversation ou le billet de canal pour trouver les commandes :::image type="icon" source="../../assets/icons/teams-client-more.png"::: d'action de votre extension. Votre extension peut être répertoriée sous **Plus d'actions** basées sur l'utilisation.
 
 > [!NOTE]
-> La prise en charge d'autres actions à partir d'un message de conversation ou d'un billet de canal n'est pas disponible sur la plateforme mobile Microsoft Teams. 
+> La prise en charge d'autres actions à partir d'un message de conversation ou d'un billet de canal n'est pas disponible Microsoft Teams plateforme mobile. 
 
 #### <a name="chat-message"></a>Message de conversation
 
@@ -161,6 +161,8 @@ L'exemple suivant est une extension de messagerie ouverte à partir de la zone d
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
+Utilisez ces recommandations pour créer une expérience d'application de qualité.
+
 ### <a name="setup-and-general-usage"></a>Configuration et utilisation générale
 
 :::row:::
@@ -169,7 +171,7 @@ L'exemple suivant est une extension de messagerie ouverte à partir de la zone d
 
 #### <a name="do-integrate-with-single-sign-on"></a>À faire : intégrer avec l' sign-on unique
 
-SSO facilite, accélère et sécurisation le processus de se connecte. En outre, si un utilisateur s'est déjà connecté à votre application personnelle, il n'a pas besoin de se connecter à nouveau pour accéder à l'extension de messagerie.
+SSO facilite, accélère et sécurisation le processus de se connecte. En outre, si un utilisateur s'est déjà inscrit à votre application personnelle, il n'a pas besoin de se connecter à nouveau pour accéder à l'extension de messagerie.
 
    :::column-end:::
    :::column span="":::
@@ -177,7 +179,7 @@ SSO facilite, accélère et sécurisation le processus de se connecte. En outre,
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>À ne pas faire : éloignez les utilisateurs de la conversation
 
-Les extensions de messagerie sont des raccourcis supposés réduire le changement de contexte. Votre extension ne doit pas, par exemple, diriger les utilisateurs vers une page web en dehors de Teams.
+Les extensions de messagerie sont des raccourcis supposés réduire le changement de contexte. Votre extension ne doit pas, par exemple, diriger les utilisateurs vers une page web en dehors Teams.
 
    :::column-end:::
 :::row-end:::
@@ -192,9 +194,9 @@ Les extensions de messagerie ne sont pas toujours faciles à trouver. Incluez de
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Exemple de modèle." border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>À faire : laisser Teams gérer une partie du travail de conception si possible
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>À faire : laissez Teams gérer une partie du travail de conception si possible
 
-Si cela est utile pour vos cas d'utilisation, envisagez de créer une extension de messagerie basée sur la recherche. Teams restituera ces types d'extensions avec des modèles intégrés et une accessibilité.
+Si cela est utile pour vos cas d'utilisation, envisagez de créer une extension de messagerie basée sur la recherche. Teams restituer ces types d'extensions avec des modèles intégrés et une accessibilité.
 
    :::column-end:::
    :::column span="":::
@@ -213,9 +215,9 @@ Si votre extension de messagerie nécessite des commandes d'action, maintenez le
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Exemple sur les themings." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons Teams couleur
 
-Chaque thème Teams possède son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des jetons <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">de couleur (interface</a> utilisateur Fluent) dans votre conception.
+Chaque Teams thème possède son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des jetons <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">de couleur (interface</a> utilisateur Fluent) dans votre conception.
 
    :::column-end:::
    :::column span="":::
@@ -223,7 +225,7 @@ Chaque thème Teams possède son propre modèle de couleurs. Pour gérer automat
 
 #### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur de code dur
 
-Si vous n'utilisez pas de jetons de couleur Teams, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
+Si vous n'utilisez pas Teams de couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
@@ -262,10 +264,3 @@ Vous pouvez faire en sorte que les utilisateurs appuient sur une touche ou séle
 #### <a name="do-consider-zero-term-queries"></a>À faire : envisagez les requêtes à terme zéro
 
 Par exemple, avant qu'un utilisateur n'écrive quoi que ce soit dans la zone de recherche, affichez ce qu'il a affiché pour la dernière fois sur votre application. Il est possible qu'ils souhaitent insérer ce contenu dans leur conversation.
-
-## <a name="validate-your-design"></a>Valider votre conception
-
-Si vous envisagez de publier votre application sur AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l'échec des applications lors de l'envoi.
-
-> [!div class="nextstepaction"]
-> [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

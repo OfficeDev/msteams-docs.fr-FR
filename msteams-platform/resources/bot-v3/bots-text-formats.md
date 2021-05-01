@@ -5,12 +5,12 @@ keywords: messagerie de conversations de bots
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019747"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101820"
 ---
 # <a name="formatting-bot-messages"></a>Mettre en forme les messages du bot
 
@@ -23,7 +23,7 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 | Valeur TextFormat | Description |
 | --- | --- |
 | plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée |
-| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal selon le cas . voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
 | xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte pour](#formatting-text-content) les styles pris en charge |
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
@@ -34,11 +34,11 @@ Actuellement, les limitations suivantes s'appliquent :
 
 * Les messages texte uniquement ne sont pas en charge la mise en forme de tableau
 
-Pour plus d'informations sur la mise en forme dans les cartes, voir la référence [de carte Teams.](~/task-modules-and-cards/cards/cards-reference.md)
+Pour plus d'informations sur la mise en forme dans les cartes, [voir la Teams de la carte.](~/task-modules-and-cards/cards/cards-reference.md)
 
 ### <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes
 
-Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes pris en charge par Microsoft Teams, sachez que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
+Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes Microsoft Teams, sachez que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
 
 | Style                     | Messages texte uniquement | Cartes (XML uniquement) |
 |---------------------------|--------------------|------------------|
@@ -87,4 +87,4 @@ La prise en charge de la mise en forme du texte varie en fonction du type de mes
 | texte préformaté | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | lien hypertexte | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| lien vers l’image | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| lien vers l'image | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

@@ -1,28 +1,28 @@
 ---
-title: Comprendre vos cas d’utilisation
-author: clearab
-description: Comprendre vos cas d’utilisation
+title: Comprendre les cas d'utilisation de votre application
+author: heath-hamilton
+description: Lorsque vous planifiez votre Microsoft Teams, vous devez d'abord comprendre les problèmes que votre application tente de résoudre.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: b1d51dd126f237584b5c53ca053cdd13bc470d0b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058662"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101785"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
-La plateforme Microsoft Teams offre une grande variété de [points d'entrée](../../concepts/extensibility-points.md) et d'éléments d'interface utilisateur dont votre application peut tirer parti.
+La plateforme Microsoft Teams offre une grande variété de points d'entrée et d'éléments d'interface [utilisateur](../../concepts/extensibility-points.md) dont votre application peut tirer parti.
 > [!NOTE]
-> Avant de commencer à créer vos cas d'utilisation, vous devez bien comprendre les fonctionnalités de Teams et ce qui est possible sur la plateforme Teams qui les utilise.
+> Avant de commencer à créer vos cas d'utilisation, vous devez bien comprendre les fonctionnalités de Teams et ce qui est possible sur la plateforme Teams les utiliser.
 
-Chaque méthode d'interaction avec vos utilisateurs a ses forces et ses faiblesses. La création d'une application Teams formidable consiste à trouver la combinaison qui répond aux besoins de vos utilisateurs. Si vous souhaitez répondre à ces besoins, vous devez d'abord les comprendre.
+Chaque méthode d'interaction avec vos utilisateurs a ses forces et ses faiblesses. Créer une application Teams consiste à trouver la combinaison idéale pour répondre aux besoins de vos utilisateurs. Si vous souhaitez répondre à ces besoins, vous devez d'abord les comprendre.
 
 ## <a name="understand-the-problem"></a>Comprendre le problème
 
-Chaque bonne application présente un problème principal ou un besoin qu'elle tente de résoudre. Avant de commencer à créer une application, vous devez expliquer ce qu'est ce problème. Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l'obtention d'une collaboration efficace sont parfaitement adaptées. Il s'agit également d'une plateforme sociale, d'une plateforme trans-plateforme native, qui se trouve au cœur d'Office 365 et qui offre un canevas personnel pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une application Teams. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
+Chaque bonne application présente un problème principal ou un besoin qu'elle tente de résoudre. Avant de commencer à créer une application, vous devez expliquer ce qu'est ce problème. Dans son cœur, Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l'obtention d'une collaboration efficace sont parfaitement adaptées. Il s'agit également d'une plateforme sociale, d'une plateforme trans-plateforme native, qui se trouve au cœur de Office 365 et qui offre une zone de dessin personnelle pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une application Teams client. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
 
 * Quels sont les avantages et les inconvénients du système d'état actuel utilisé par vos utilisateurs ?
 * Quels sont les problèmes que vos utilisateurs rencontrent aujourd'hui et que vous souhaitez résoudre ?
@@ -38,14 +38,14 @@ Comprendre qui est votre utilisateur et vous pouvez identifier le bon modèle de
 * Quelle est la technique de vos utilisateurs principaux ?
 * Avez-vous besoin d'une expérience d'intégration complète ou de quelques pointeurs ?
 
-Parfois, la réponse est que *nous voulons résoudre ce problème pour tous les utilisateurs de Teams partout.* Si c'est le cas pour vous, passez du temps à comprendre ce qu'il [faut pour être publié sur AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
+Parfois, la réponse est que nous voulons résoudre ce problème pour tous *Teams utilisateurs partout.* Si c'est le cas pour vous, passez du temps à comprendre ce qu'il [faut pour être publié sur AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 ## <a name="understand-the-limitations-of-the-app"></a>Comprendre les limitations de l'application
 
-Connaître les limitations des applications en termes d'accessibilité des données et de résidence des données vous aidera à concevoir de meilleures applications. Ceci est important, car le fait d'avoir des informations sur les personnes qui possèdent les données et la disponibilité des API a une incidence sur l'architecture de la solution. Là encore, posez-vous des questions pertinentes, telles que :
+La connaissance des limitations des applications en termes d'accessibilité des données et de résidence des données vous aidera à concevoir de meilleures applications. Ceci est important, car le fait d'avoir des informations sur les personnes qui possèdent les données et la disponibilité des API a une incidence sur l'architecture de la solution. Là encore, posez-vous des questions pertinentes, telles que :
 
 * Quels sont les défis liés à l'intégration back end de l'application actuelle ?
-* À qui appartient les données du back end ? Interne ou tiers.
+* Qui possède les données du back end ? Interne ou tiers.
 * Existe-t-il des pare-feu qui ont un impact sur le fonctionnement de l'application ?
 * Existe-t-il des API pour accéder aux données dont vous avez besoin pour le fonctionnement de votre application ? 
 
@@ -58,9 +58,9 @@ Vous devez déterminer dès le début si vous devez protéger les services que v
 * Les interactions seront-ils également basées sur les rôles d'utilisateur ?
 * Les utilisateurs externes accèderont-ils à l'application ?
 
-## <a name="decide-what-goes-in-teams"></a>Décider de ce qui se passe dans Teams
+## <a name="decide-what-goes-in-teams"></a>Décider de ce qui se passe Teams
 
-Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l'ensemble de l'application sera à l'intérieur du client Teams. Vérifiez s'il est logique de n'apporter qu'une partie de l'expérience. Avec une combinaison d'onglets, d'extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement dans Teams.
+Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l'ensemble de l'application sera à l'intérieur du client Teams client. Vérifiez s'il est logique de n'apporter qu'une partie de l'expérience. Avec une combinaison d'onglets, d'extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
 N'oubliez pas qui sont vos utilisateurs et le problème que vous essayez de résoudre. Ont-ils déjà un système pour résoudre la plupart du problème ou vous devez simplement étendre un sous-ensemble de fonctionnalités dans Teams ? En règle générale, si vous comptez apporter une partie de votre solution, vous devez vous concentrer sur le partage, la collaboration, l'initiative et la surveillance des flux de travail.
 
 ## <a name="plan-the-onboarding-experience"></a>Planifier l'expérience d'intégration
@@ -79,11 +79,9 @@ Identifiez les nouvelles fonctionnalités que l'utilisateur préférera dans la 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Choisir comment distribuer votre application](../deploy-and-publish/overview.md)
-
-- [Concevoir des onglets efficaces](../../tabs/design/tabs.md)
-
-- [Concevoir des bots incroyables](../../bots/design/bots.md)
+* [Choisir comment distribuer votre application](../deploy-and-publish/overview.md)
+* [Onglets De conception](../../tabs/design/tabs.md)
+* [Bots de conception](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>Étape suivante
 

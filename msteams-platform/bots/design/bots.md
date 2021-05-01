@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020132"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101694"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
@@ -197,9 +197,11 @@ Les utilisateurs doivent pouvoir modifier les paramètres d’un bot. Vous pouve
 
 ## <a name="best-practices"></a>Les bonnes pratiques
 
+Utilisez ces recommandations pour créer une expérience d'application de qualité.
+
 ### <a name="content"></a>Contenu
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple présentant les meilleures pratiques d’un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour l'établissement d'un personnage clair." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>À faire : établir un personnage clair
 
@@ -209,7 +211,7 @@ En savoir plus sur l’écriture pour les bots dans <a href="https://www.figma.c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemple montrant les meilleures pratiques pour les robots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Exemple montrant comment transmettre clairement ce que votre bot peut faire." border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>À faire : communiquer clairement ce que votre bot peut faire
 
@@ -217,7 +219,7 @@ Les messages de bienvenue et les visites guidées aident les personnes à compre
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemple de meilleures pratiques pour un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Exemple montrant qu'il ne faut pas masquer les fonctionnalités de votre bot." border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>À ne pas faire : masquer les fonctionnalités de votre bot
 
@@ -228,7 +230,7 @@ Les premières impressions sont importantes. Les personnes seront probablement c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Exemple d'affichage d'une meilleure pratique de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="L'exemple montrant votre bot doit reconnaître les questions non posées." border="false":::
 
 #### <a name="do-recognize-non-questions"></a>À faire : reconnaître les questions non posées
 
@@ -236,7 +238,7 @@ Votre bot doit pouvoir répondre à des messages tels que « Bonjour », « A
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple de meilleures pratiques pour un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple montrant que vous devez éviter les réponses à des messages de bot simples." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>À ne pas faire : manquer les opportunités de satisfaction
 
@@ -249,7 +251,7 @@ Certaines personnes s'attendent à ce que les conversations se déroulent nature
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Exemple de meilleure pratique pour un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="L'exemple de bots doit aider les utilisateurs à comprendre comment les utiliser." border="false":::
 
 #### <a name="do-provide-help"></a>À faire : fournir de l’aide
 
@@ -257,7 +259,7 @@ Si votre bot ne peut pas répondre à une demande, fournissez à l’utilisateur
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="L'exemple affiche une meilleure pratique pour un bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Exemple montrant que votre bot ne doit pas être un groupe d'utilisateurs." border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>À ne pas faire : laisser les utilisateurs bloqués
 
@@ -270,7 +272,7 @@ Les personnes vont rapidement abandonner votre robot s’ils ne peuvent pas rés
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemple d'affichage d'une meilleure pratique de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Exemple montrant que vous pouvez utiliser des modules de tâche ou des onglets avec votre bot pour des interactions complexes." border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>A faire : utiliser des modules ou des onglets de tâches
 
@@ -278,7 +280,7 @@ Si votre bot fournit une réponse qui nécessite quelques étapes supplémentair
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Voir l'exemple d'une meilleure pratique de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Exemple montrant comment votre bot doit éviter les interactions à plusieurs tour." border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>À ne pas faire : rendre les interactions à plusieurs tour fastidieuses
 
@@ -291,7 +293,7 @@ Une conversation approfondie pour accomplir une seule tâche est lente et trop c
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemple présentant une meilleure pratique de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Exemple montrant comment les bots doivent uniquement afficher des informations privées dans un contexte personnel." border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>À faire : afficher uniquement les informations sensibles dans un contexte personnel
 
@@ -299,7 +301,7 @@ Si votre bot se trouve dans une conversation ou un canal de groupe, nous vous re
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Illustration montrant une meilleure pratique de bot." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Exemple montrant comment les bots ne doivent pas révéler d'informations sensibles à un groupe ou à des personnes." border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>À ne pas faire : certains contenus ne sont pas destinés à être vus par tout le monde
 
@@ -308,17 +310,10 @@ Votre bot ne doit pas révéler d’informations sensibles à un groupe de perso
    :::column-end:::
 :::row-end:::
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="see-also"></a>Voir aussi
 
 Ces autres instructions peuvent vous aider dans la conception de votre bot :
 
 * [Conception de votre application personnelle](../../concepts/design/personal-apps.md)
 * [Conception de cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [Conception de modules de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="validate-your-design"></a>Valider votre conception
-
-Si vous envisagez de publier votre application sur AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l'échec des applications lors de l'envoi.
-
-> [!div class="nextstepaction"]
-> [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

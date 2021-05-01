@@ -1,31 +1,31 @@
 ---
 title: Conception de votre onglet pour le bureau et le web
-description: Découvrez comment concevoir un onglet Teams (bureau et web) et obtenir le Kit d'interface utilisateur Microsoft Teams.
+description: Découvrez comment concevoir un onglet Teams (bureau et web) et obtenir le kit Microsoft Teams'interface utilisateur.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019684"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101848"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Conception de votre onglet pour le bureau et le web Microsoft Teams
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Conception de votre onglet pour Microsoft Teams bureau et web
 
 Un onglet est un canevas de grande taille pour votre contenu. Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des onglets dans Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des recommandations complètes en matière de conception d'onglets, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d'interface utilisateur Microsoft Teams. Le kit d'interface utilisateur contient également des rubriques essentielles telles que l'accessibilité et le resserrement réactif qui ne sont pas abordés ici.
+Vous trouverez des recommandations complètes en matière de conception d'onglets, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans Microsoft Teams kit d'interface utilisateur. Le kit d'interface utilisateur contient également des rubriques essentielles telles que l'accessibilité et le resserrement réactif qui ne sont pas abordés ici.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>Ajouter un onglet
 
-Vous pouvez ajouter un onglet à partir du magasin Teams (AppSource) ou dans l'un des contextes suivants :
+Vous pouvez ajouter un onglet à partir Teams store (AppSource) ou dans l'un des contextes suivants :
 
 * Conversation
 * Canal
@@ -66,7 +66,7 @@ Vous pouvez ajouter une étape dans laquelle les utilisateurs doivent d'abord se
 
 ### <a name="designing-a-tab-setup-with-ui-templates"></a>Conception d'une configuration d'onglet avec des modèles d'interface utilisateur
 
-Utilisez l'un des modèles d'interface utilisateur Teams suivants pour vous aider à concevoir votre expérience de configuration d'onglet :
+Utilisez l'un des modèles d Teams'interface utilisateur suivants pour vous aider à concevoir votre expérience de configuration d'onglet :
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d'agir sur une liste entière ou sur des éléments individuels.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
@@ -74,7 +74,7 @@ Utilisez l'un des modèles d'interface utilisateur Teams suivants pour vous aide
 
 ## <a name="view-a-tab"></a>Afficher un onglet
 
-Les onglets offrent une expérience web en plein écran dans Teams dans laquelle vous pouvez afficher du contenu collaboratif (tableaux de tâches et tableaux de bord, par exemple) et des informations importantes.
+Les onglets offrent une expérience web en plein écran dans Teams où vous pouvez afficher du contenu collaboratif (tableaux de tâches et tableaux de bord, par exemple) et des informations importantes.
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L'exemple montre un onglet avec un tableau des tâches." border="false":::
 
@@ -91,7 +91,7 @@ Les onglets offrent une expérience web en plein écran dans Teams dans laquelle
 
 ### <a name="designing-a-tab-with-ui-templates"></a>Conception d'un onglet avec des modèles d'interface utilisateur
 
-Utilisez l'un des modèles d'interface utilisateur Teams suivants pour vous aider à concevoir votre expérience d'onglet :
+Utilisez l'un des modèles d Teams'interface utilisateur suivants pour vous aider à concevoir votre expérience d'onglet :
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d'agir sur une liste entière ou sur des éléments individuels.
 * [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l'état des éléments de travail ou des tickets.
@@ -141,9 +141,11 @@ Vous pouvez envoyer un message avec un lien profond vers votre onglet. Par exemp
 Informez les utilisateurs de l'activité de l'onglet de l'une des manières suivantes :
 
 * **Bot**: cette méthode est préférée, en particulier si le thread d'onglet est ciblé. La conversation threadée de l'onglet est déplacée en tant que conversation récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
-* **Message**: un message s'affiche dans le flux d'activités de l'utilisateur avec un [lien profond vers l'onglet](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
+* **Message**: un message s'affiche dans le flux d'activités de l'utilisateur avec un [lien profond vers l'onglet.](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="best-practices"></a>Meilleures pratiques
+
+Utilisez ces recommandations pour créer une expérience d'application de qualité.
 
 ### <a name="collaboration"></a>Collaboration
 
@@ -214,9 +216,9 @@ Supprimez les étapes inutiles pour ajouter un onglet.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration montrant ce qu'il faut faire avec les tabulations." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons Teams couleur
 
-Chaque thème Teams possède son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des jetons <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">de couleur (interface</a> utilisateur Fluent) dans votre conception.
+Chaque Teams thème possède son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des jetons <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">de couleur (interface</a> utilisateur Fluent) dans votre conception.
 
    :::column-end:::
    :::column span="":::
@@ -224,14 +226,7 @@ Chaque thème Teams possède son propre modèle de couleurs. Pour gérer automat
 
 #### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur de code dur
 
-Si vous n'utilisez pas de jetons de couleur Teams, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
+Si vous n'utilisez pas Teams de couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>Valider votre conception
-
-Si vous envisagez de publier votre application sur AppSource, vous devez comprendre les problèmes de conception qui entraînent généralement l'échec des applications lors de l'envoi.
-
-> [!div class="nextstepaction"]
-> [Vérifier les instructions de validation de la conception](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

@@ -1,59 +1,61 @@
 ---
-title: Maintenance et prise en charge de votre application publiée
-description: Que faire une fois que vous avez publié votre application
-ms.topic: how-to
+title: Maintenir et prendre en charge votre application publiée
+description: Ce qu'il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
+ms.topic: conceptual
 localization_priority: Normal
-keywords: teams publient le manifeste de mise à jour de l'application de certification des mises à jour
-ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020799"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101750"
 ---
-# <a name="maintain-and-support-your-published-app"></a>Maintenir et prendre en charge votre application publiée 
+# <a name="maintain-your-published-microsoft-teams-app"></a>Gérer votre application Microsoft Teams publiée
 
-Une fois votre application approuvée et répertoriée dans le catalogue d'applications publiques, vous pouvez augmenter votre portée en complétant le programme de conformité des applications Microsoft 365 ou en ajoutant un bouton de téléchargement sur votre site web.
+Une fois votre application répertoriée dans le Microsoft Teams, commencez à réfléchir à la façon dont vous allez gérer l'application à l'avenir et augmenter les téléchargements et l'utilisation.
 
-## <a name="microsoft-365-certified"></a>Certification Microsoft 365
+## <a name="publish-updates-to-your-app"></a>Publier des mises à jour sur votre application
 
-Le programme de conformité des applications [Microsoft 365](./application-certification.md), est une approche à trois niveaux pour la sécurité et la conformité des applications. Chaque niveau s'appuie sur le suivant , offrant un programme en couches pour répondre aux besoins de votre client. Vous pouvez en savoir plus sur la posture de sécurité et de conformité des applications Teams en visitant la [page de conformité.](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+Vous pouvez soumettre des modifications à votre application (par exemple, de nouvelles fonctionnalités ou même des métadonnées) dans l'Partner Center. Ces modifications nécessitent un nouveau processus de révision.
 
-## <a name="add-a-download-button-to-your-product-site"></a>Ajouter un bouton de téléchargement à votre site de produit
+Veillez à ce qui suit lors de la publication des mises à jour :
 
-Si votre application se trouve dans le magasin global Microsoft Teams, vous pouvez générer un lien pour votre site web qui lance Teams et affiche une boîte de dialogue de consentement et d'installation pour que les utilisateurs ajoutent l'application.
-Le format est :  `https://teams.microsoft.com/l/app/<appId>` où appID est le GUID qu'il déclare dans le manifeste envoyé.
-Exemple : `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` est le lien vers l'installation de Trello.
+* Ne modifiez pas votre ID d'application.
+* Incrémentez le numéro de version de votre application.
+* Dans l'Partner Center, ne sélectionnez **pas Ajouter une nouvelle application** pour la mise à jour. À la place, allez sur la page de votre application.
 
-## <a name="updating-your-existing-teams-app"></a>Mise à jour de votre application Teams existante
+### <a name="app-updates-requiring-user-consent"></a>Mises à jour d'application nécessitant le consentement de l'utilisateur
 
-* N'utilisez pas *le bouton Ajouter une nouvelle application* pour resoumettre votre application. Utilisez plutôt la vignette de votre application sous l'onglet Vue d'ensemble.
-* L'appId dans le manifeste mis à jour doit être le même que dans le manifeste actuel, avec un numéro de version incrémenté.
-* Incrémentez votre numéro de version dans le manifeste si vous a apporté des modifications à votre soumission, y compris le nom de l'application ou des métadonnées dans le manifeste.
-* Les soumissions mises à jour sont requises pour faire l'objet d'un nouveau processus de révision et de validation.
+Lorsqu'un utilisateur installe votre application, il doit lui accorder l'autorisation d'accéder aux services et aux informations dont l'application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs n'ont à le faire qu'une seule fois et les nouvelles versions de votre application s'installent automatiquement.
 
-## <a name="app-updates-and-the-user-consent-flow"></a>Mises à jour de l'application et flux de consentement de l'utilisateur
+Toutefois, si vous a apporté l'une des modifications suivantes à votre application, vos utilisateurs existants doivent accepter une autre demande d'autorisation pour installer la mise à jour :
 
-Lorsqu'un utilisateur installe votre application, l'une des premières choses qu'il fait est de donner à l'application l'autorisation d'accéder aux services et aux informations dont l'application a besoin pour faire son travail. Dans la plupart des cas, une fois que vous avez terminé la mise à jour d'une application, la nouvelle version s'affiche automatiquement pour les utilisateurs finaux. Toutefois, certaines mises à jour du manifeste de l'application [Teams](../../../../resources/schema/manifest-schema.md) nécessitent l'acceptation de l'utilisateur et peuvent déclencher de nouvelles fois ce comportement de consentement :
+* Ajoutez ou supprimez un bot.
+* Modifiez l'ID du bot.
+* Modifier la configuration de notification à sens seul d'un bot.
+* Modifier la prise en charge d'un bot pour le chargement et le téléchargement de fichiers.
+* Ajouter ou supprimer une extension de messagerie.
+* Ajoutez un onglet personnel.
+* Ajoutez un canal et un onglet de groupe.
+* Ajoutez un connecteur.
+* Modifiez les configurations liées à l'inscription Azure Active Directory de votre application (Azure AD). Pour plus d'informations, voir [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) .
 
- >[!div class="checklist"]
->
-> * Un bot est ajouté ou supprimé.
-> * La valeur unique d'un bot `botId` existant est modifiée.
-> * La valeur booléle d'un bot `isNotificationOnly` existant est modifiée.
-> * La valeur d'un bot `supportsFiles` ou d'un `supportsCalling` booléen existant est modifiée.
-> * Une extension de `composeExtensions` messagerie est ajoutée ou supprimée.
-> * Un nouveau connecteur est ajouté.
-> * Un nouvel onglet statique ou personnel est ajouté.
-> * Un nouvel onglet de groupe ou de canal configurable est ajouté.
-> * Les propriétés à `webApplicationInfo` l'intérieur sont modifiées. Pour les modifications `webApplicationInfo` apportées à , le consentement est uniquement requis dans l'étendue Teams.
+## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 
-### <a name="images-of-user-consent-flow"></a>Images du flux de consentement de l'utilisateur :
+Microsoft exécute des tests d'automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans le cadre d'une chronologie, la liste de votre application peut être supprimée du Store.
 
-**Configurer un connecteur : cet** écran s'affiche uniquement pour les utilisateurs de Teams.
+## <a name="promote-your-app-on-another-site"></a>Promouvoir votre application sur un autre site
 
-![Configuration du flux de consentement d'un diagramme de connecteur](../../../../assets/images/connector-teams-consentflow.png)
+Lorsque votre application est répertoriée dans le magasin Teams, vous pouvez créer un lien qui lance Teams et affiche une boîte de dialogue pour installer votre application. Vous pouvez inclure ce lien, par exemple, avec un bouton de téléchargement sur la page marketing de votre produit.
 
-**Flux de consentement utilisateur** : cet écran est courant pour les étendues personnelle et de groupe. Ici, sélectionnez la case **à cocher Consentement** au nom de votre organisation et choisissez **Accepter**.
+Créez le lien à l'aide de l'URL suivante, à l'aide de votre ID d'application : `https://teams.microsoft.com/l/app/<your-app-id>`
 
-![Diagramme des autorisations](../../../../assets/images/user-consent-flow.png)
+## <a name="complete-microsoft-365-certification"></a>Certification Microsoft 365 complète
+
+[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu'un application Office ou un add-in tiers est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
+
+## <a name="see-also"></a>Voir aussi
+
+* [Monétisez votre application via Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

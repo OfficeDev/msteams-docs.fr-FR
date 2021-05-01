@@ -6,16 +6,16 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 52af53d61215e41a885e21081a9f6148e81a0fdf
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: be6c5865da04125b159792364bbd80ac219d9fd9
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020226"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101855"
 ---
-# <a name="create-your-first-teams-app-using-c-or-net"></a>Créer votre première application Teams à l'aide C# ou .NET
+# <a name="create-your-first-teams-app-using-c"></a>Créer votre première application Teams en C #
 
-Ce didacticiel vous aide à créer une application Microsoft Teams à l'aide C# ou .NET. Pour ce faire, vous devez :
+Ce didacticiel vous aide à créer une application Microsoft Teams à l'aide C#. Pour ce faire, vous devez :
 
 * Préparer votre environnement
 * Obtenir les conditions préalables
@@ -62,13 +62,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> Vous pouvez [bifurquer](https://help.github.com/articles/fork-a-repo/) [ce référentiel pour](https://github.com/OfficeDev/Microsoft-Teams-Samples) modifier et enregistrer vos modifications dans GitHub.
+> Vous pouvez [bifurcation](https://help.github.com/articles/fork-a-repo/) [de ce repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) pour modifier et enregistrer vos modifications dans GitHub.
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>Création et exécution de l’exemple
 
-Une fois le dépôt cloné, utilisez Visual Studio pour ouvrir le fichier de solution **Microsoft.Teams.Samples.HelloWorld.sln** à partir du répertoire **Microsoft-Teams-Samples/samples/app-hello-world/csharp** de l'exemple. Ensuite, **sélectionnez Solution de build** dans **le** menu Build. Pour exécuter l'exemple, appuyez **sur F5** ou sélectionnez **Démarrer le débogage** dans le menu **Débogage.**
+Une fois le dépôt cloné, utilisez Visual Studio pour ouvrir le fichier de solution **Microsoft.Teams. Samples.HelloWorld.sln** à partir du répertoire **Microsoft-Teams-Samples/samples/app-hello-world/csharp** de l'exemple. Ensuite, **sélectionnez Solution de build** dans **le** menu Build. Pour exécuter l'exemple, appuyez **sur F5** ou sélectionnez **Démarrer le débogage** dans le menu **Débogage.**
 
 Lorsque l'application démarre, une fenêtre de navigateur s'ouvre avec la racine de l'application lancée. Vous pouvez utiliser les URL suivantes pour vérifier que toutes les URL d'application sont en cours de chargement :
 
@@ -84,9 +84,9 @@ Lorsque l'application démarre, une fenêtre de navigateur s'ouvre avec la racin
 
 ## <a name="host-the-sample-app"></a>Héberger l'exemple d'application
 
-Les applications dans Microsoft Teams sont des applications web qui fournissent une ou plusieurs fonctionnalités. Pour que la plateforme Teams charge votre application, votre application doit être disponible sur Internet. Pour ce faire, vous devez héberger votre application. Vous pouvez l'héberger gratuitement dans Microsoft Azure ou créer un tunnel vers le processus local sur votre ordinateur à l'aide `ngrok` de . Après avoir héberger votre application, notez son URL racine, par exemple `https://yourteamsapp.ngrok.io` ou `https://yourteamsapp.azurewebsites.net` .
+Les applications Microsoft Teams sont des applications web qui fournissent une ou plusieurs fonctionnalités. Pour que la Teams charge votre application, votre application doit être disponible sur Internet. Pour ce faire, vous devez héberger votre application. Vous pouvez l'héberger dans Microsoft Azure gratuitement ou créer un tunnel vers le processus local sur votre ordinateur à l'aide `ngrok` de . Après avoir héberger votre application, notez son URL racine, par exemple `https://yourteamsapp.ngrok.io` ou `https://yourteamsapp.azurewebsites.net` .
 
-### <a name="tunnel-using-ngrok"></a>Tunnel utilisant ngrok
+### <a name="tunnel-using-ngrok"></a>Tunnel à l'aide de ngrok
 
 Pour des tests rapides, vous pouvez exécuter l'application sur votre ordinateur et y créer un tunnel via un point de terminaison web. [`ngrok`](https://ngrok.com) est un outil gratuit avec lequel vous pouvez obtenir une adresse web, telle que `https://d0ac14a5.ngrok.io` . Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok et l'ajouter à un emplacement dans votre `PATH` .
 
@@ -110,7 +110,7 @@ L'application est disponible uniquement pendant la session en cours sur votre or
 
 Microsoft Azure héberge votre application .NET sur un niveau gratuit à l'aide d'une infrastructure partagée. Cela suffit pour exécuter `Hello World` l'exemple. Pour plus d'informations, [voir la création d'un compte Azure gratuit.](https://azure.microsoft.com/free/)
 
-Visual Studio la prise en charge intégrée du déploiement d'applications pour différents fournisseurs, y compris Azure.
+Visual Studio la prise en charge intégrée du déploiement d'applications vers différents fournisseurs, y compris Azure.
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
@@ -132,20 +132,20 @@ Une fois que vous avez installé l'application dans une équipe, vous devez la c
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
-### <a name="test-your-bot-in-teams"></a>Tester votre bot dans Teams
+### <a name="test-your-bot-in-teams"></a>Testez votre bot dans Teams
 
-Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l'équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C'est ce qu'on appelle **\@ une mention.** Le bot répond à tout message que vous envoyez.
+Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l'équipe où vous avez inscrit votre application et tapez `@your-bot-name` . C'est ce qu'on appelle **\@ une mention.** Le bot répond à n'importe quel message que vous envoyez.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
 
-Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d'entrée dans l'affichage conversation. Un menu avec **l'application « Hello World** » s'affiche. Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
+Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d'entrée dans l'affichage conversation. Un menu avec **l'application « Hello World** » s'affiche. Lorsque vous le sélectionnez, un ensemble de textes aléatoires s'affiche. Vous pouvez sélectionner l'un des textes aléatoires insérés dans votre conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-Sélectionnez l’un des textes aléatoires. Une carte mise en forme et prête à envoyer votre propre message s’affiche.
+Sélectionnez l'un des textes aléatoires. Une carte mise en forme et prête à envoyer votre propre message s'affiche.
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

@@ -1,130 +1,64 @@
 ---
 title: Télécharger votre application personnalisée
-description: Décrit comment télécharger votre application dans Microsoft Teams
+description: Découvrez comment recharger une version de version de votre application dans Microsoft Teams. Le chargement de version test est courant lors du test et du débogage d'une application pendant le développement.
 ms.topic: how-to
-localization_priority: Normal
-ms.author: lajanuar
-keywords: téléchargement d'applications Teams
-ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: KirtiPereira
+ms.author: surbhigupta
+ms.openlocfilehash: a82f7d6498db4cceb69f1b7f5ff53b1646371ce8
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020806"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101568"
 ---
-# <a name="upload-an-app-package-to-microsoft-teams"></a>Téléchargement d’un package d’application dans Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Télécharger votre application dans Microsoft Teams
 
-Pour tester votre expérience d'application dans Microsoft Teams, vous devez télécharger votre application dans Teams. Le téléchargement ajoute l'application à l'équipe sélectionnée et tous les membres de l'équipe peuvent interagir avec elle comme les utilisateurs finaux.
+Vous pouvez télécharger une version Microsoft Teams applications sans avoir à publier dans votre organisation ou le Teams store. Cela est logique dans les scénarios suivants :
 
-> [!NOTE]
-> Le téléchargement d'un package mis à jour pour une application existante avec un bot peut ne pas afficher les modifications apportées aux onglets lorsqu'il est vu dans la fenêtre de conversations. Vous pouvez accéder à l'application via le volant des applications ou tester dans un environnement propre.
+* Vous souhaitez tester et déboguer une application localement vous-même ou avec d'autres développeurs.
+* Vous avez créé une application uniquement pour vous-même (par exemple, pour automatiser un flux de travail).
+* Vous avez créé une application pour un petit groupe d'utilisateurs (par exemple, votre groupe de travail).
 
-## <a name="create-your-upload-package"></a>Créer votre package de chargement
+## <a name="prerequisites"></a>Prerequisites
 
-Pour le développement et la soumission à AppSource, vous devez créer un package que vous pouvez télécharger. Le package doit contenir les informations pour décrire votre expérience. Le package est un fichier .zip qui contient le manifeste de l'application et les icônes qui définissent votre expérience de manière unique.
+* Créez votre [package d'application](~/concepts/build-and-test/apps-package.md) [et validez-le pour les](https://dev.teams.microsoft.com/appvalidation.html) erreurs.
+* [Activez le chargement d'applications personnalisées](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) dans Teams.
+* Assurez-vous que votre application est en cours d'exécution et accessible via HTTPs.
 
-Pour créer un package de chargement, voir [Créer le package pour votre application Microsoft Teams.](../build-and-test/apps-package.md)
+## <a name="upload-your-app"></a>Télécharger votre application
 
-Après avoir créé le package, téléchargez-le dans une équipe. Le package téléchargé est uniquement disponible pour les utilisateurs de l'équipe sélectionnée.
+Vous pouvez recharger une version de votre application vers une équipe, une conversation, une réunion ou pour une utilisation personnelle en fonction de la façon dont vous avez configuré l'étendue de votre application.
 
-## <a name="load-your-package-into-teams"></a>Charger votre package dans Teams
+1. Connectez-vous au client Teams avec [votre compte Microsoft 365 de développement.](~/build-your-first-app/build-and-run.md#prerequisites)
+1. Sélectionnez **applications** et choisissez **Télécharger une application personnalisée.**
+1. Sélectionnez votre package d'.zip fichier. Une boîte de dialogue d'installation s'affiche.
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
+1. Ajoutez votre application à Teams.
 
-Vous pouvez tester votre package en le téléchargeant dans Teams.
+## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement
 
-> [!NOTE]
-> Pour que le chargement fonctionne, votre administrateur client doit d'abord [activer le téléchargement d'applications.](/microsoftteams/admin-settings)
+Si le chargement de version de votre application échoue, faites les choses suivantes jusqu'à ce que le problème soit résolu :
 
-Il existe deux façons de télécharger votre application dans Teams :
+1. Revenir en arrière dans les instructions de création [de votre package d'application.](../../concepts/build-and-test/apps-package.md)
+1. [Validez à nouveau votre package d'application.](https://dev.teams.microsoft.com/appvalidation.html)
+1. Assurez-vous que le manifeste de votre application correspond au [schéma le plus récent.](../../resources/schema/manifest-schema.md)
 
-* Utilisation du Store
-* Utilisation de l'onglet Applications
+## <a name="access-your-app"></a>Accéder à votre application
 
-## <a name="upload-your-package-into-a-team-or-conversation-using-the-store"></a>Charger votre package dans une équipe ou une conversation à l'aide du Store
+Teams propose plusieurs façons d'ouvrir des applications. Pour plus d'informations, [voir accéder à vos applications dans Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
-1. Dans le coin inférieur gauche de Teams, sélectionnez **l'icône du** Store. On the Store page, choose **Upload a custom app**.
+## <a name="update-your-app"></a>Mettre à jour votre application
 
-  ![Afficher l'équipe](../../assets/images/store-upload-a-custom-app2.png)
+Vous n'avez pas à recharger votre application de nouveau si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d'application.
 
-2. Dans la **boîte de dialogue** Ouvrir, accédez au package que vous souhaitez télécharger et choisissez Ouvrir.
+## <a name="remove-your-app"></a>Supprimer votre application
 
-   ![Menu Ajouter](../../assets/images/NewappAddmenudropdown.png)
-
-Le package téléchargé doit être disponible pour être utilisé dans l'équipe ou la conversation spécifiée dans la boîte de dialogue de consentement. Si votre application n'apparaît pas, la raison la plus courante est une erreur dans le manifeste, en particulier les ID de l'application, du bot et des extensions de messagerie. Si l'application n'est pas limitée aux conversations, cette option n'apparaît pas.
-
->[!NOTE]
-> Les applications dans les conversations sont actuellement [en](../../resources/dev-preview/developer-preview-intro.md)prévisualisation du développeur et l'option n'apparaît pas si Teams n'est pas en cours d'exécution dans ce mode.
-
-![Exemple de bot dans la liste des bots téléchargés](../../assets/images/botinlist.jpg)
-
-## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>Télécharger votre package dans une équipe à l'aide de l'onglet Applications
-
-1. Dans l'équipe cible, sélectionnez **Plus d'options** (**&#8943;**) et **sélectionnez Gérer l'équipe.**
-
-   > [!NOTE]
-   > Vous devez être le propriétaire de l'équipe ou le propriétaire doit donner accès aux utilisateurs pour ajouter les types d'application appropriés pour que cette fonctionnalité apparaisse.
-
-2. Sélectionnez **l'onglet** Applications et choisissez **Télécharger une application personnalisée** en bas à droite.
-
-   ![Point d'entrée de chargement](../../assets/images/UploadACustomApp.png)
-
-3. Sélectionnez votre package .zip sur l'ordinateur.
-
-4. Vous pouvez voir votre application téléchargée dans la liste.
-
-   ![Exemple de bot dans la liste des bots téléchargés](../../assets/images/botinlist.jpg)
-
-Si votre application ne se charge pas, la raison la plus courante est une erreur dans le manifeste, en particulier les ID de l'application, du bot et des extensions de messagerie.
-
-## <a name="access-your-uploaded-configurable-tab"></a>Accéder à votre onglet configurable téléchargé
-
-Si l'application contient des onglets, les utilisateurs peuvent les épingler à n'importe quel canal de conversation ou d'équipe à l'aide du flux de galerie d'onglets standard :
-
-1. Go to a channel in the team. Choisissez **+** d'ajouter un onglet à droite des onglets existants.
-
-2. Sélectionnez votre onglet dans la galerie qui s'affiche.
-
-3. Acceptez l'invite de consentement.
-
-4. Configurez votre onglet via sa [page de configuration](../../tabs/how-to/create-tab-pages/configuration-page.md) et sélectionnez **Enregistrer.**
-
-  ![Boîte de dialogue Ajouter un onglet, avec une galerie d'onglets disponibles](../../assets/images/tab_gallery.png)
-
-## <a name="access-your-uploaded-bot"></a>Accéder à votre bot téléchargé
-
-Après avoir ajouté le bot à une équipe, il doit être utilisable par toute personne de cette équipe, à l'intérieur et à l'extérieur des canaux de l'équipe, en fonction de la définition de l'étendue du bot. Tous les membres de l'équipe peuvent voir un billet dans le canal général indiquant que le bot a été ajouté à l'équipe. 
-
-Pour un bot Teams, vous pouvez commencer par l'appel de votre bot en @mentioning nom du bot.
-
-Pour tester les conversations directes avec votre bot, vous pouvez y accéder via la page d'accueil de l'application, l'@mention dans un canal ou la rechercher dans la **fenêtre Nouvelle** conversation.
-
-Vous pouvez @mention bot dans une conversation ou le  rechercher dans la fenêtre Nouvelle conversation pour tester les conversations directes avec votre bot.
-
-## <a name="access-your-uploaded-connector"></a>Accéder à votre connecteur téléchargé
-
-Une fois l'application chargée dans l'équipe ou la conversation, les utilisateurs peuvent configurer un connecteur à l'aide du flux de galerie connecteurs standard :
-
-1. Go to a channel in the team. Choose **More options** (*&#8943;*) and choose **Connectors**.
-
-2. Sélectionnez votre connecteur dans la section **Sideloaded** en bas.
-
-3. Configurez votre connecteur via sa [page de configuration](../../webhooks-and-connectors/how-to/connectors-creating.md) et sélectionnez **Enregistrer.**
-
-  ![Boîte de dialogue Ajouter un onglet, avec une galerie d'onglets disponibles.](../../assets/images/connector_gallery.png)
-
-## <a name="access-your-uploaded-messaging-extension"></a>Accéder à votre extension de messagerie téléchargée
-
-Une application téléchargée avec une extension de messagerie apparaît automatiquement dans le menu Plus **d'options** (*&#8943;*) dans la zone de composition.
-
-![Extensions de messagerie](../../assets/images/compose-extensions/cesampleapp.png)
-
-
-## <a name="remove-or-update-your-app"></a>Supprimer ou mettre à jour votre application
-
-Pour supprimer votre application, sélectionnez l'icône de suppression en regard du nom de l'application dans la liste Afficher les bots **Teams.** Si vous modifiez les informations de manifeste, supprimez d'abord l'application, puis ajoutez le package mis à jour, voir Charger votre [package dans une équipe.](#load-your-package-into-teams) Les modifications de code apportées à votre service ne vous obligent pas à charger à nouveau votre manifeste. Toutefois, si les modifications de code nécessitent des mises à jour de manifeste, telles que des modifications apportées à l'URL ou à l'ID de l'application Microsoft pour son bot, vous devez télécharger à nouveau le manifeste.
+Pour supprimer votre application, cliquez avec le bouton droit sur l'icône de l'Teams puis **sélectionnez Désinstaller.**
 
 > [!NOTE]
-> Vous ne pouvez pas supprimer complètement un bot d'un contexte personnel. Si le bot est supprimé et ajouté à nouveau, une communication supplémentaire avec le bot est ajoutée à la conversation précédente.
+> Vous ne pouvez pas supprimer entièrement l'activité du bot personnel. Si vous supprimez l'application et l'ajoutez à nouveau, une nouvelle communication avec le bot s'ajoute à la conversation précédente avec elle.
 
-## <a name="troubleshooting-notes"></a>Notes de dépannage
+## <a name="next-step"></a>Étape suivante
 
-Si le manifeste ne parvient pas à se charger, vérifiez si vous avez suivi toutes les instructions dans Créer le [package](../../concepts/build-and-test/apps-package.md) et validé votre manifeste par rapport [au schéma](../../resources/schema/manifest-schema.md).
+> [!div class="nextstepaction"]
+> [Utiliser votre application Teams de messagerie](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
