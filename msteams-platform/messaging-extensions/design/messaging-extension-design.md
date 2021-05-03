@@ -50,9 +50,9 @@ Les extensions de messagerie peuvent avoir des commandes de recherche, des comma
 
 ### <a name="search-commands"></a>Commandes de recherche
 
-Grâce aux commandes de recherche, les utilisateurs peuvent utiliser votre extension de messagerie pour trouver rapidement du contenu externe et l'insérer dans un message. Les commandes de recherche sont généralement disponibles dans la zone de composition. Par exemple, vous pouvez commencer ou ajouter une discussion en partageant un élément de contenu, sans jamais quitter Teams.
+Avec les commandes de recherche, les utilisateurs peuvent utiliser votre extension de messagerie pour trouver rapidement du contenu externe et les insérer dans un message. Les commandes de recherche sont généralement disponibles dans la zone de composition. Par exemple, vous pouvez commencer ou ajouter une discussion en partageant un élément de contenu, sans jamais quitter Teams.
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Exemple d'une extension de messagerie basée sur la recherche lancée à partir de la zone de composition." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="L'exemple montre une extension de messagerie basée sur la recherche lancée à partir de la zone de composition." border="false":::
 
 #### <a name="compose-box-layout-options"></a>Options de disposition de zone de composition
 
@@ -64,11 +64,11 @@ Certaines options s'offrent à vous pour afficher les résultats de recherche d'
 
 Les commandes d'action permettent aux utilisateurs de déclencher des actions et de traiter des demandes dans des services externes Teams. Par exemple, si votre application suit les commandes, un utilisateur peut créer une commande à l'aide du contenu du message d'un collègue directement dans sa conversation.
 
-Les extensions de messagerie basées sur une action nécessitent fréquemment que les utilisateurs remplissent un formulaire ou tout autre type de configuration dans une configuration modale. Vous pouvez créer ces expériences avec [des modules de tâche.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+Les extensions de messagerie basées sur l'action nécessitent fréquemment que les utilisateurs remplissent un formulaire ou tout autre type de configuration au sein d'une configuration modale. Vous pouvez créer ces expériences avec [des modules de tâche.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
 ## <a name="open-a-messaging-extension"></a>Ouvrir une extension de messagerie
 
-La zone de composition et les messages/publications sont les principaux contextes dans lequel les personnes utilisent des extensions de messagerie.
+La zone de composition et les messages/publications sont les principaux contextes dans lequel les personnes utilisent les extensions de messagerie.
 
 ### <a name="from-the-compose-box"></a>À partir de la zone de composition
 
@@ -121,7 +121,7 @@ Les extensions de messagerie vous permettent également d'insérer des liens enr
 
 **1. Collez un lien reconnu dans** la zone de composition.
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="L'exemple montre un utilisateur qui a passé un lien dans la zone de titre." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="L'exemple montre un utilisateur qui a passé un lien dans le cadre de l'exemple." border="false":::
 
 **2. Insérer du contenu**. Si votre application reconnaît l'URL dans la zone de composition, elle affiche le lien sous la mesure d'une carte qui fournit un aperçu enrichi de contenu du contenu web. (Pour plus [d'informations, voir](../../task-modules-and-cards/cards/design-effective-cards.md) les recommandations en matière de conception des cartes adaptatives.)
 
@@ -143,7 +143,7 @@ L'exemple suivant est une extension de messagerie ouverte à partir de la zone d
 |----------|-----------|
 |1|**Logo de l'application**: icône couleur du logo de votre application.|
 |2|**Nom de l'application**: nom complet de votre application.|
-|3|**Icône de menu Commandes d'action (facultatif)**: ouvre une liste de commandes d'action pour votre extension de messagerie (si vous en spécifiez une).
+|3|**Icône du menu Commandes d'action (facultatif)**: ouvre une liste de commandes d'action pour votre extension de messagerie (si vous en spécifiez une).
 |4 |**Zone de recherche**: permet aux utilisateurs de trouver le contenu d'application qu'ils souhaitent insérer.|
 |5 |**Menu Onglet (facultatif)**: fournit plusieurs catégories de contenu.|
 |6 |**Menu commandes d'action (facultatif)**: affiche la liste des commandes d'action (si vous en spécifiez une).|
@@ -171,7 +171,7 @@ Utilisez ces recommandations pour créer une expérience d'application de qualit
 
 #### <a name="do-integrate-with-single-sign-on"></a>À faire : intégrer avec l' sign-on unique
 
-SSO facilite, accélère et sécurisation le processus de se connecte. En outre, si un utilisateur s'est déjà inscrit à votre application personnelle, il n'a pas besoin de se connecter à nouveau pour accéder à l'extension de messagerie.
+SSO facilite, accélère et sécurisation le processus de se connecte. En outre, si un utilisateur s'est déjà connecté à votre application personnelle, il n'a pas besoin de se connecter à nouveau pour accéder à l'extension de messagerie.
 
    :::column-end:::
    :::column span="":::
@@ -184,7 +184,7 @@ Les extensions de messagerie sont des raccourcis supposés réduire le changemen
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillation votre extension de messagerie
+#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillez votre extension de messagerie
 
 Les extensions de messagerie ne sont pas toujours faciles à trouver. Incluez des captures d'écran de son utilisation dans la page de détails de votre application. Si votre application inclut également un bot, vous pouvez inclure la documentation d'aide sur l'extension de messagerie dans une visite guidée du bot.
 
@@ -225,7 +225,7 @@ Chaque Teams thème possède son propre modèle de couleurs. Pour gérer automat
 
 #### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur de code dur
 
-Si vous n'utilisez pas Teams de couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
+Si vous n'utilisez pas Teams couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
@@ -259,7 +259,7 @@ Fournissez des résultats de recherche suggérés pendant que les utilisateurs t
 
 #### <a name="dont-require-users-to-submit-a-query"></a>À ne pas faire : exiger que les utilisateurs soumettent une requête
 
-Vous pouvez faire en sorte que les utilisateurs appuient sur une touche ou sélectionnent un bouton pour envoyer des requêtes à votre application. Bien que cela puisse être plus facile sur votre service de services d'application, les personnes peuvent être confondues avec le fait qu'elles ne voient pas les résultats de recherche en temps réel lorsqu'elles tapent.
+Vous pouvez faire en sorte que les utilisateurs appuient sur une touche ou sélectionnent un bouton pour envoyer des requêtes à votre application. Bien que cela puisse être plus facile sur votre service de services d'application, il se peut que les personnes ne voient pas les résultats de recherche en temps réel lorsqu'elles tapent.
 
 #### <a name="do-consider-zero-term-queries"></a>À faire : envisagez les requêtes à terme zéro
 

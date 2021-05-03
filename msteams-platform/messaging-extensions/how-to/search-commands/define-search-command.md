@@ -1,7 +1,7 @@
 ---
 title: Définir les commandes de recherche d'extension de messagerie
 author: clearab
-description: Définissez les commandes de recherche d'extension de messagerie pour les applications Microsoft Teams.
+description: Définissez les commandes de recherche d'extension de messagerie pour Microsoft Teams applications.
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
@@ -43,14 +43,14 @@ La condition préalable à la création d'une commande de recherche est que vous
 
 **Pour créer une commande de recherche**
 
-1. Ouvrez **App Studio** à partir du client Microsoft Teams, puis sélectionnez l'onglet **Éditeur de** manifeste.
+1. Ouvrez **App Studio** à partir Microsoft Teams client, puis sélectionnez l'onglet **Éditeur de** manifeste.
 1.  Si vous avez déjà créé votre package d'application **dans App Studio,** sélectionnez-le dans la liste. Si vous n'avez pas créé de package d'application, importez-en un existant.
-1. Après avoir importé le package d'application, sélectionnez **les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l'extension de messagerie.
+1. Après avoir importé le package d'application, **sélectionnez les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l'extension de messagerie.
 1. Sélectionnez **Configurer dans** la fenêtre pour inclure l'extension de messagerie dans l'expérience de votre application. L'image suivante affiche la page de mise en place de l'extension de messagerie : 
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
-1. Pour créer l'extension de messagerie, vous avez besoin d'un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L'image suivante affiche la création d'un bot pour l'extension de messagerie :
+1. Pour créer l'extension de messagerie, vous avez besoin d'un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L'image suivante affiche la création d'un bot pour l'extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
@@ -63,7 +63,7 @@ L'image suivante affiche l'ajout de commande pour l'extension de messagerie :
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Ajoutez **un ID de commande** et un **titre.**
-1. Sélectionnez l'emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d'un message** ne modifie pas actuellement le comportement de votre commande de recherche. L'image suivante affiche l'emplacement d'appel de la commande de recherche :
+1. Sélectionnez l'emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d'un message** ne modifie pas actuellement le comportement de votre commande de recherche. L'image suivante affiche l'emplacement d'appel de commande de recherche :
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
@@ -80,9 +80,9 @@ Pour ajouter manuellement votre commande de recherche d'extension de messagerie 
 | `description` | Cette propriété est un texte d'aide indiquant ce que fait cette commande. Cette valeur apparaît dans l'interface utilisateur. | Oui | 1.0 |
 | `type` | Cette propriété doit être une `query` . | Non | 1.4 |
 |`initialRun` | Si cette propriété est définie sur **true,** elle indique que cette commande doit être exécutée dès que l'utilisateur sélectionne cette commande dans l'interface utilisateur. | Non | 1.0 |
-| `context` | Cette propriété est un tableau facultatif de valeurs qui définit le contexte dans lequel l'action de recherche est disponible. Les valeurs possibles sont `message`, `compose` ou `commandBox`. La valeur par défaut `["compose", "commandBox"]` est . | Non | 1,5 |
+| `context` | Cette propriété est un tableau facultatif de valeurs qui définit le contexte dans lequel l'action de recherche est disponible. Les valeurs possibles sont `message`, `compose` ou `commandBox`. La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
 
-Vous devez ajouter les détails du paramètre de recherche, qui définit le texte visible pour votre utilisateur dans le client Teams.
+Vous devez ajouter les détails du paramètre de recherche, qui définit le texte visible pour votre utilisateur dans le client Teams recherche.
 
 | Nom de la propriété | Objectif | Est-ce obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
@@ -126,8 +126,8 @@ Pour obtenir le manifeste complet de l'application, voir [schéma de manifeste d
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Recherche d'extension de messagerie Teams   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams d'extension de messagerie| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d'extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante
 

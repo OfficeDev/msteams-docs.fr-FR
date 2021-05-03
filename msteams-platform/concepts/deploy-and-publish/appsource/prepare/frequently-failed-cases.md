@@ -71,7 +71,7 @@ Voir aussi [la section 1100.5 — Contrôle client](/legal/marketplace/certifica
   * Connecter compte/service => déconnecter un compte/service.
   * Autoriser un compte/service => autoriser/refuser un compte/service.
   * Inscrivez un compte/service => inscrire/désabonner un compte/service.
-* Si votre application nécessite un compte ou un service, vous devez fournir un moyen à l'utilisateur de s'inscrire ou de créer une demande d'inscription. Une exception peut être accordée si votre application nécessite une licence à utiliser. Dans de tels scénarios, fournissez des instructions claires pour l'inscription d'un nouvel utilisateur.
+* Si votre application nécessite un compte ou un service, vous devez fournir un moyen à l'utilisateur de s'inscrire ou de créer une demande d'inscription. Une exception peut être accordée si votre application nécessite une licence à utiliser. Dans de tels scénarios, fournissez des instructions claires pour qu'un nouvel utilisateur s'inscrivez.
 * Fournissez des instructions claires sur la façon de faire suivre à un nouvel utilisateur la façon de s'inscrire pour utiliser vos services d'application. Si aucun lien d'inscription prêt n'est disponible, fournissez des instructions précises dans les domaines suivants :
 
 > [!div class="checklist"]
@@ -89,7 +89,7 @@ Pour plus d'informations sur l'authentification, voir :
 * [Documentation sur l'authentification](../../../authentication/authentication.md)
 * [Exemple d'authentification de bot dans Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Exemple d'authentification d'onglet dans node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Authentification onglet/bot dans C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Authentification tab/bot dans C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 ### <a name="9989-response-times-must-be-reasonable"></a>&#9989; temps de réponse doit être raisonnable
 
@@ -100,9 +100,9 @@ Pour plus d'informations sur l'authentification, voir :
 > [!TIP]
 > Assurez-vous que votre application affiche un indicateur de chargement ou une forme d'avertissement lorsque la réponse de votre application est plus longue que prévu.
 
-### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989; tabulation ne doit pas avoir une navigation en couches ou chrome excessive
+### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989;'onglet ne doit pas avoir une navigation en couches ou chrome excessive
 
-* Les onglets doivent fournir du contenu centré et éviter les éléments d'interface utilisateur inutiles. Il s'agit généralement d'une navigation en couches ou imbrique inutile, d'une interface utilisateur superflue ou non pertinente à côté du contenu, ou de liens qui prennent l'utilisateur vers du contenu non lié. Par exemple, l'affichage Onglet suivant omet les menus de navigation et affiche uniquement le contenu principal :
+* Les onglets doivent fournir du contenu centré et éviter les éléments d'interface utilisateur inutiles. Il s'agit généralement d'une navigation en couches ou imbrique inutile, d'une interface utilisateur superflue ou non pertinente à côté du contenu ou de tout lien qui permet à l'utilisateur d'ajouter du contenu non lié. Par exemple, l'affichage Onglet suivant omet les menus de navigation et affiche uniquement le contenu principal :
 
 ![SharePoint web](../../../../assets/images/faq/web-sp.png)  
 ![SharePoint'onglet](../../../../assets/images/faq/tab-sp.png)
@@ -110,10 +110,10 @@ Pour plus d'informations sur l'authentification, voir :
 * Les onglets doivent être de nature légère et ne pas inclure de navigation complexe.
 * Les onglets de canal qui ont des fonctionnalités d'édition complexes au sein de l'application doivent ouvrir l'affichage de l'éditeur dans une fenêtre multiple plutôt que dans un onglet.
 * Les onglets de canal ne doivent pas fournir de barre d'application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation principale.
-* Les onglets ne doivent pas présenter de barre d'application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation.
-* Les onglets qui ont des fonctionnalités d'édition complexes dans l'application doivent ouvrir l'affichage éditeur dans une fenêtre multiple plutôt que dans l'onglet.
+* Les onglets ne doivent pas présenter de barre d'application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation principale.
+* Les onglets qui ont des fonctionnalités d'édition complexes au sein de l'application doivent ouvrir l'affichage de l'éditeur dans une fenêtre multiple plutôt que dans l'onglet.
 * S'il existe plusieurs options d'affichage, envisagez de disposer d'un menu de config d'onglets dans le choix de l'utilisateur. Par exemple, au lieu d'incorporer un menu à l'intérieur de l'onglet, placez le menu dans la page de configuration afin que l'affichage de l'onglet réel soit propre et concentré.
-* Incluez un onglet *Aide* en tant qu'onglet statique pour conseiller les utilisateurs sur la configuration, l'inscription et l'utilisation de votre application.
+* Incluez un *onglet d'aide* en tant qu'onglet statique pour conseiller les utilisateurs sur la configuration, l'inscription et l'utilisation de votre application.
 * Veuillez inclure un *onglet Paramètres* qui est disponible à partir de l'en-tête de l'application.
 
 ![Page de configuration de l'idée large](../../../../assets/images/faq/wideidea.png)
@@ -122,14 +122,14 @@ Pour plus d'informations sur l'authentification, voir :
 
 * L'écran de configuration doit expliquer clairement la valeur de l'expérience et comment configurer l'onglet.
 * Le processus de configuration doit toujours offrir aux utilisateurs un moyen de continuer et de ne pas mettre fin à l'expérience utilisateur. Par exemple, n'affichez pas de tableau vide une fois que l'utilisateur a configuré l'onglet.
-* Le processus de signature utilisateur doit faire partie du processus de configuration. Veillez à l'effectuer dans l'interface utilisateur de l'onglet. Une fois que l'utilisateur a terminé la configuration et chargé l'onglet, aucune action supplémentaire n'est requise.
+* Le processus de signature utilisateur doit faire partie du processus de configuration. Assurez-vous de l'effectuer dans l'interface utilisateur de l'onglet. Une fois que l'utilisateur a terminé la configuration et chargé l'onglet, aucune action supplémentaire n'est requise.
 * N'affichez pas l'intégralité de votre page web dans la fenêtre de configuration de la signature.
 * Un utilisateur doit toujours être en mesure de terminer l'expérience de configuration, même s'il ne peut pas trouver immédiatement le contenu qu'il recherche.
 * L'expérience de configuration doit fournir des options pour que l'utilisateur trouve son contenu, épingle une URL ou crée du contenu s'il n'existe pas.
 * L'expérience de configuration doit rester dans Teams contexte. L'utilisateur ne doit pas avoir à quitter l'expérience de configuration pour créer du contenu, puis revenir à Teams pour l'épingler.
 * Utilisez efficacement la zone de laport d'affichage disponible. Ne le perdez pas en utilisant des logos énormes à l'intérieur de la fenêtre de configuration.
 
-![OneNote permet aux utilisateurs de coller un lien OneNote si des notes sont in trouvées](../../../../assets/images/faq/tab-onenote-config.png)
+![OneNote permet aux utilisateurs de coller un lien OneNote au cas où les notes ne seraient pas trouvées](../../../../assets/images/faq/tab-onenote-config.png)
 
 ![Les utilisateurs peuvent toujours créer un plan sur le planificateur au cas où il n'y en a pas.](../../../../assets/images/faq/tab-planner-config.png)
 
@@ -154,7 +154,7 @@ Votre bot doit répondre à n'importe quelle commande et non à l'utilisateur. V
 
 * **Incluez du contenu d'aide ou des conseils lorsque votre bot est perdu.** Lorsque votre bot ne comprend pas l'entrée utilisateur, il doit suggérer une autre action. Par exemple, *« Désolé, je ne comprends pas. Tapez « aide » pour plus d'informations. »* Ne répondez pas par un message d'erreur ou simplement par « *Je ne comprends pas*».
 
-### <a name="9989-help-command-response"></a>&#9989; de commande d'aide
+### <a name="9989-help-command-response"></a>&#9989; commande d'aide
 
 * La commande d'aide doit être précise et les réponses de l'application doivent être dans un format de carte adaptative avec un contenu actionnable pour au moins six commandes.
 * Si une application possède moins de six commandes, vérifiez si toutes les commandes sont présentes dans la carte adaptative.
@@ -162,9 +162,9 @@ Votre bot doit répondre à n'importe quelle commande et non à l'utilisateur. V
   ![Exemple de commande d'aide](../../../../assets/images/faq/helpcommand.png)
 
 * **Utiliser des cartes adaptatives et des modules de tâche pour** rendre la réponse du bot claire et actionnable 
- [Les cartes adaptatives avec des boutons qui appelaient des modules de tâche améliorent](/task-modules-and-cards/task-modules/task-modules-bots) l'expérience utilisateur du bot. Ces cartes et boutons sont plus faciles à utiliser sur un appareil mobile que lorsque votre utilisateur tape les commandes. En outre, les réponses du bot ne doivent pas être textuelles avec du texte long. Les bots doivent utiliser des cartes adaptatives et des modules de tâche au lieu de l'interface utilisateur basée sur la conversation conversationnelle et de longues réponses de texte.
+ [Les cartes adaptatives avec des boutons qui appelaient des modules de tâche améliorent](/task-modules-and-cards/task-modules/task-modules-bots) l'expérience utilisateur du bot. Ces cartes et boutons sont plus faciles à utiliser sur un appareil mobile que lorsque votre utilisateur tape les commandes. En outre, les réponses du bot ne doivent pas être textuelles avec du texte long. Les bots doivent utiliser des cartes adaptatives et des modules de tâche à la place de l'interface utilisateur de conversation et des réponses texte longues.
 
-* **Réfléchissez à toutes les étendues.** Assurez-vous que votre bot fournit les réponses appropriées lorsqu'il est mentionné () dans `@*botname*` un canal et dans des conversations personnelles. Si votre bot ne fournit pas de contexte significatif dans l'étendue personnelle ou d'équipe, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la référence Microsoft Teams schéma [de](../../../../resources/schema/manifest-schema.md#bots)manifeste.)
+* **Réfléchissez à toutes les étendues.** Assurez-vous que votre bot fournit des réponses appropriées lorsqu'il est mentionné () dans `@*botname*` un canal et dans des conversations personnelles. Si votre bot ne fournit pas de contexte significatif dans l'étendue personnelle ou d'équipe, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la référence Microsoft Teams schéma de [manifeste.)](../../../../resources/schema/manifest-schema.md#bots)
 
 * **Inclure une équipe, une conversation de groupe ou une conversation 1:1.** Les notifications de bot doivent inclure une équipe, une conversation de groupe ou une conversation un-à-un avec du contenu pertinent pour votre public.
 
@@ -175,7 +175,7 @@ Votre bot doit répondre à n'importe quelle commande et non à l'utilisateur. V
 ### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; bots personnels doivent toujours envoyer un message de bienvenue lors du premier lancement
 
 Un message de bienvenue est la meilleure façon de définir le ton de votre bot de conversation personnel. Il s'agit de la première interaction entre un utilisateur et le bot. Un message de bienvenue peut encourager l'utilisateur à continuer à explorer l'application. Si le message d'accueil ou d'introduction est déroutant ou peu clair, les utilisateurs ne voient pas immédiatement la valeur de l'application et perdent leur intérêt.
-Consultez la section suivante pour les conditions requises pour les messages de bienvenue :
+Consultez la section suivante pour obtenir les conditions requises pour les messages de bienvenue :
 
 > [!Note]
 > Un message de bienvenue est facultatif pour un bot de canal.
@@ -208,11 +208,11 @@ Les bots de notification uniquement doivent envoyer un message de bienvenue qui 
    * **Rendez votre message concis et informatif.** L'expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou ne connaît rien de votre application. Vous souhaitez adapter votre message à tous les publics et, en quelques phrases, expliquer ce que fait votre bot et les façons d'interagir avec celui-ci. Vous devez également expliquer la valeur de l'application et la façon dont les utilisateurs pourront tirer parti de son utilisation.
 ![Bot cafe et dinning](../../../../assets/images/faq/cafe-bot.png)
 
-* **Rendre votre message actionnable.** Pensez à la première chose que vous souhaitez que les utilisateurs font après l'installation de votre application. Existe-t-il une commande qu'ils doivent essayer ? Existe-t-il une autre expérience d'intégration à connaître ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C'est ce que *je peux faire...*».
+* **Rendre votre message actionnable.** Réfléchissez à la première chose que vous souhaitez que les utilisateurs font après l'installation de votre application. Existe-t-il une commande qu'ils doivent essayer ? Existe-t-il une autre expérience d'intégration à connaître ? Ont-ils besoin de se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C'est ce que *je peux faire...*».
 
 #### <a name="welcome-messages-in-the-team-or-channel--scope"></a>Messages de bienvenue dans l'étendue de l'équipe ou du canal
 
-Les choses sont légèrement différentes lorsque le bot est ajouté à un canal pour la première fois. Normalement, vous ne devez pas envoyer de message 1:1 à tous les membres de l'équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
+Les choses sont légèrement différentes lorsque le bot est ajouté pour la première fois à un canal. Normalement, vous ne devez pas envoyer de message 1:1 à tous les membres de l'équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
 
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; mobile, pas de vente à prix moyen ou de paiement direct
 

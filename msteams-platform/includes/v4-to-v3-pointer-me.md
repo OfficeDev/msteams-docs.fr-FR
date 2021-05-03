@@ -1,2 +1,2 @@
 > [!Important]
-> Les exemples de code de cette section sont basés sur 4,6 et les versions ultérieures du kit de développement logiciel (SDK) de l’infrastructure bot. Si vous recherchez de la documentation pour les versions antérieures, reportez-vous à la section [extensions de messagerie-v3 SDK](~/resources/messaging-extension-v3/messaging-extensions-overview.md) dans le dossier Resources de la documentation.
+> Les exemples de code de cette section sont basés sur la version 4.6 et les versions ultérieures du SDK Bot Framework. Si vous recherchez de la documentation pour les versions antérieures, consultez la section Extensions de messagerie [- V3 SDK](~/resources/messaging-extension-v3/messaging-extensions-overview.md) dans le dossier Ressources de la documentation.

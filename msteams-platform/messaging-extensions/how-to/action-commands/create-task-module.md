@@ -30,7 +30,7 @@ Dans le processus de la demande d'appel initiale, votre service reçoit un objet
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l'être. |
 |`from.id`| ID de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory'ID d'objet de l'utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.channel.id`| ID de canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| ID d'équipe (si la demande a été faite dans un canal). |
@@ -80,7 +80,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l'être. |
 |`from.id`| ID de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory'ID d'objet de l'utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.source.name`| Nom source de l'endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l'ID du message auquel ce message est une réponse. |
@@ -130,7 +130,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l'être. |
 |`from.id`| ID de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory'ID d'objet de l'utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.source.name`| Nom source de l'endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l'ID du message auquel ce message est une réponse. |
@@ -187,7 +187,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l'être. |
 |`from.id`| ID de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory'ID d'objet de l'utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.channel.id`| ID de canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| ID d'équipe (si la demande a été faite dans un canal). |
@@ -195,7 +195,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`ChannelData.legacy. replyToId`| Obtient ou définit l'ID du message auquel ce message est une réponse. |
 |`value.commandId` | Contient l'ID de la commande qui a été invoquée. |
 |`value.commandContext` | Contexte qui a déclenché l'événement. Il doit `compose` l'être. |
-|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Il doit `default` s'y `contrast` trouver, ou `dark` . |
+|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
 
 ### <a name="example"></a>Exemple
 
@@ -253,7 +253,7 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l'être. |
 |`from.id`| ID de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory'ID d'objet de l'utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.channel.id`| ID de canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| ID d'équipe (si la demande a été faite dans un canal). |
@@ -362,12 +362,12 @@ Les propriétés de l'activité de charge utile lorsqu'un module de tâche est a
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l'être. |
 |`from.id`| ID de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| ID d'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory'ID d'objet de l'utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.source.name`| Nom source de l'endroit où le module de tâche est appelé. |
 |`value.commandId` | Contient l'ID de la commande qui a été invoquée. |
 |`value.commandContext` | Contexte qui a déclenché l'événement. Il doit `compose` l'être. |
-|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Il doit `default` s'y `contrast` trouver, ou `dark` . |
+|`value.context.theme` | Thème client de l'utilisateur, utile pour la mise en forme de l'affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
 
 ### <a name="example"></a>Exemple
 
@@ -598,7 +598,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Répondre à la tâche fetchTask
+## <a name="respond-to-the-fetchtask"></a>Répondre à fetchTask
 
 Répondez à la demande d'appel avec un objet qui contient un objet avec la carte adaptative ou l'URL web, ou `task` un message de chaîne `taskInfo` simple.
 
@@ -628,7 +628,7 @@ La section de code suivante est un exemple de `fetchTask` réponse avec une cart
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Cet exemple utilise le [package NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) en plus du SDK Bot Framework.
+Cet exemple utilise le [package AdaptiveCards NuGet en](https://www.nuget.org/packages/AdaptiveCards) plus du SDK Bot Framework.
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -941,8 +941,8 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Recherche d'extension de messagerie Teams   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams d'extension de messagerie| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d'extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Voir aussi
 

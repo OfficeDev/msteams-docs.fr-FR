@@ -15,17 +15,17 @@ ms.locfileid: "52101881"
 
 Après avoir préparé votre soumission au Store, vous pouvez officiellement soumettre votre application pour révision.
 
-## <a name="create-a-partner-center-account"></a>Créer un compte Espace partenaires
+## <a name="create-a-partner-center-account"></a>Créer un compte d’Espace partenaires
 
 Pour publier votre application sur le Teams store et AppSource, vous devez d'abord [configurer un compte de développeur.](https://docs.microsoft.com/office/dev/store/open-a-developer-account)
 
-## <a name="submit-your-app"></a>Soumettre votre application
+## <a name="submit-your-app"></a>Envoyer votre application
 
-Pour soumettre votre application, suivez ces [instructions pas à](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)pas de soumission dans le Store. Lors de la création d'une soumission, spécifiez que vous soumettez une Teams application.
+Pour soumettre votre application, suivez ces [instructions pas à pas](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)de soumission dans le Store. Lors de la création d'une soumission, spécifiez que vous soumettez une Teams application.
 
 ### <a name="app-category-mapping"></a>Mappage des catégories d'application
 
-Lors de la soumission, vous êtes invité à catégoriser votre application. Le tableau suivant ma Teams catégories du Magasin aux catégories répertoriées dans l'Partner Center.
+Lors de la soumission, vous êtes invité à catégoriser votre application. Le tableau suivant ma Teams catégories de magasin aux catégories répertoriées dans l'Partner Center.
 
 | Teams catégories       | Catégories de l'Centre partenaires  |
 |:---------------------|:---------------|
@@ -38,7 +38,7 @@ Lors de la soumission, vous êtes invité à catégoriser votre application. Le 
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière, ventes et marketing |
 | Social et fun | Galeries d'images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
 
-### <a name="3-fix-issues-with-your-submission"></a>3. Résoudre les problèmes avec votre soumission
+### <a name="3-fix-issues-with-your-submission"></a>3. Résoudre les problèmes de votre soumission
 
 Si la soumission de votre application échoue, vous recevez un rapport d'échec pour savoir ce qu'il faut corriger et soumettre à nouveau. Microsoft fournit également un service de gant blanc pour vous aider à obtenir votre application répertoriée.
 
@@ -61,7 +61,7 @@ Ouvrez un [ticket de support de l'Espace](https://partner.microsoft.com/support/
 | Rubrique | Questions générales sur l'aide et les comments sur Marketplace |
 | Subtopic| Complément Office |
 
-### <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>Où puis-je obtenir de l'aide pour les problèmes de compte de l'Partner Center ?
+### <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>Où puis-je obtenir de l'aide pour les problèmes de mon compte De l'Partner Center ?
 
 Visitez la [page de support des éditeurs](https://aka.ms/marketplacepublishersupport) pour rechercher votre sujet de problème et obtenir des conseils. Si les conseils fournis ne sont pas utiles, augmentez un [ticket de support de l'Centre partenaires.](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)
 
@@ -75,23 +75,23 @@ Le numéro de téléphone est en trois parties : code pays, code de zone et num�
 
 ### <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>Comment gérer les paramètres de mon compte et mon profil de partenaire dans l'Partner Center ?
 
-Consultez la page [Gérer les paramètres du compte et](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) les informations de profil pour obtenir des conseils sur la gestion de vos paramètres de compte De l'Partner Center.
+Consultez la page [Gérer les paramètres du compte et les](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) informations de profil pour obtenir des conseils sur la gestion de vos paramètres de compte De l'Partner Center.
 
 ### <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-app"></a>Pourquoi reçois-je le message « Ce compte n'est pas éligible pour la publication » lorsque j'essaie de soumettre mon application ?
 
-Vous recevez le message d'erreur ci-dessus lorsque l'état [de vérification de](/partner-center/verification-responses) votre compte est en attente. Vérifiez l'état de vérification de votre compte dans le tableau de bord de l'Centre [partenaires.](https://partner.microsoft.com/dashboard) Sélectionnez **Paramètres**, l'icône d'engrenage dans le coin supérieur droit de l'en-tête de page. Choisissez **les paramètres du compte**  =>  **de**   =>  **paramètres du développeur.**
+Vous recevez le message d'erreur ci-dessus lorsque l'état [de vérification de](/partner-center/verification-responses) votre compte est en attente. Vérifiez l'état de vérification de votre compte dans le tableau de bord de l'Centre [partenaires.](https://partner.microsoft.com/dashboard) Sélectionnez **Paramètres**, l'icône d'engrenage dans le coin supérieur droit de l'en-tête de page. Choisissez **les paramètres de compte**  =>  **de**   =>  **paramètres de développeur.**
 
 ![Page paramètres du compte de l'Partner Center](../../../assets/images/partner-center-accts-page.png)
 
 ![État de vérification de l'Partner Center](../../../assets/images/partner-center-verification-status.png)
 
-L'état de chaque étape requise, telle que la propriété de l'e-mail, la vérification de l'emploi et la vérification de l'entreprise, s'affiche dans le processus de vérification du compte. Une fois le processus de vérification terminé, l'état de vérification de votre inscription sur la page de profil passe *d'en* attente *à autorisé.* Les étapes du processus ne sont plus affichées.
+L'état de chaque étape requise, telle que la propriété de l'e-mail, la vérification de l'emploi et la vérification de l'entreprise, est affiché dans le processus de vérification du compte. Une fois le processus de vérification terminé, l'état de vérification de votre inscription sur la page de profil passe *d'en* attente *à autorisé.* Les étapes du processus ne sont plus affichées.
 
-![Erreur de vérification de l'Partner Center](../../../assets/images/partner-center-acct-verification-error.png)
+![Erreur de vérification de l'Centre partenaires](../../../assets/images/partner-center-acct-verification-error.png)
 
-### <a name="what-is-verified-in-the-partner-center-account-verification-process-and-how-to-respond"></a>Qu'est-ce qui est vérifié dans le processus de vérification de compte de l'Partner Center et comment y répondre ?
+### <a name="what-is-verified-in-the-partner-center-account-verification-process-and-how-to-respond"></a>Qu'est-ce qui est vérifié dans le processus de vérification du compte de l'Partner Center et comment y répondre ?
 
-Il existe trois zones de vérification, la propriété **de messagerie,** **l'emploi** et **l'entreprise.** Pour plus d'informations sur le processus de vérification, voir [Ce qui est vérifié et comment y répondre.](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
+Il existe trois zones de vérification, **la propriété de messagerie,** **l'emploi** et **l'entreprise.** Pour plus d'informations sur le processus de vérification, voir [Ce qui est vérifié et comment y répondre.](/partner-center/verification-responses#what-is-verified-and-how-to-respond)
 Si vous êtes le contact principal, l'administrateur global ou l'administrateur de compte, go to your Partner Profile to monitor verification status and track the progress.
 
 Une fois le processus de vérification terminé, l'état de vérification de votre inscription sur la page de profil passe *d'en* attente *à autorisé.* Après l'autorisation, les étapes du processus et leur état ne sont plus disponibles sur la page. Le contact principal reçoit un courrier électronique de Microsoft dans les jours ou suivants après la fin de la vérification.

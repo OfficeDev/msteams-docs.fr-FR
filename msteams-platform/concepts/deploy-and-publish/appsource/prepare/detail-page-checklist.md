@@ -156,7 +156,7 @@ Les captures d'écran fournissent un aperçu visuel de votre application pour co
 **À ne pas faire :**
 
 * Afficher des appareils spécifiques, tels que des téléphones ou des ordinateurs portables.
-* Afficher le chrome ou l'interface utilisateur qui n'est pas dans votre application.
+* Afficher le chrome ou l'interface utilisateur qui ne se présente pas dans votre application.
 * Capturez les Teams ou l'interface utilisateur du navigateur dans vos captures d'écran.
 * Incluez des maquettes qui reflètent de manière incorrecte l'interface utilisateur réelle de votre application, comme l'affichage de votre application dans un navigateur au lieu d'un Teams onglet.
 
@@ -178,7 +178,7 @@ Si vous incluez une vidéo, elle apparaît avant vos captures d'écran dans la l
 * Conservez votre vidéo entre 30 et 90 secondes.
 * Visez la qualité. Dans une liste, les utilisateurs voient votre vidéo avant les captures d'écran.
 
-## <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
+## <a name="localize-your-store-listing"></a>Localiser la liste de votre magasin
 
 L'Partner Center prend [en charge les listes de magasins localisées.](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions) Pour plus d'informations, voir comment localiser votre [liste Teams'application.](../../../../concepts/build-and-test/apps-localization.md)
 
@@ -191,4 +191,4 @@ L'Partner Center prend [en charge les listes de magasins localisées.](https://d
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Préparer votre soumission au Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [Préparer l'envoi de votre magasin](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

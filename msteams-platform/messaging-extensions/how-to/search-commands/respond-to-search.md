@@ -1,7 +1,7 @@
 ---
 title: Répondre à la commande de recherche
 author: clearab
-description: Comment répondre à la commande de recherche à partir d'une extension de messagerie dans une application Microsoft Teams.
+description: Comment répondre à la commande de recherche à partir d'une extension de messagerie dans une Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
@@ -20,7 +20,7 @@ Une fois que l'utilisateur a soumis la commande de recherche, votre service web 
 * À mesure que des caractères sont entrés dans la zone de recherche.
 * `initialRun` est définie sur true dans le manifeste de votre application, vous recevez le message d'appel dès que la commande de recherche est invoquée. Pour plus d'informations, [voir la requête par défaut.](#default-query)
 
-Ce document vous guide sur la façon de répondre aux demandes des utilisateurs sous forme de cartes et d'aperçus, ainsi que sur les conditions dans lesquelles Microsoft Teams publie une requête par défaut.
+Ce document vous guide sur la façon de répondre aux demandes des utilisateurs sous forme de cartes et d'aperçus, ainsi que sur les conditions dans lesquelles Microsoft Teams une requête par défaut.
 
 Les paramètres de requête se trouvent dans `value` l'objet de la demande, qui inclut les propriétés suivantes :
 
@@ -78,7 +78,7 @@ Le JSON ci-dessous est raccourci pour mettre en évidence les sections les plus 
 
 ## <a name="respond-to-user-requests"></a>Répondre aux demandes des utilisateurs
 
-Lorsque l'utilisateur effectue une requête, Microsoft Teams adresse une requête HTTP synchrone à votre service. À ce stade, votre code dispose de `5` secondes pour fournir une réponse HTTP à la demande. Pendant ce temps, votre service peut effectuer une recherche supplémentaire ou toute autre logique métier nécessaire pour répondre à la demande.
+Lorsque l'utilisateur effectue une requête, Microsoft Teams une requête HTTP synchrone à votre service. À ce stade, votre code dispose de `5` secondes pour fournir une réponse HTTP à la demande. Pendant ce temps, votre service peut effectuer une recherche supplémentaire ou toute autre logique métier nécessaire pour répondre à la demande.
 
 Votre service doit répondre avec les résultats correspondant à la requête de l'utilisateur. La réponse doit indiquer un code d'état HTTP et un objet JSON ou application valide avec `200 OK` les propriétés suivantes :
 
@@ -97,22 +97,22 @@ Teams prend en charge les types de carte suivants :
 
 * [Carte miniature](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Carte Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Carte connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Carte de connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 Pour avoir une meilleure compréhension et une meilleure vue d'ensemble des cartes, voyez [ce que sont les cartes.](~/task-modules-and-cards/what-are-cards.md)
 
-Pour découvrir comment utiliser les types de carte miniature et Hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
+Pour découvrir comment utiliser les types de carte miniature et hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Pour plus d'informations sur la carte de connecteur Office 365, voir Utilisation de cartes de connecteur [Office 365.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+Pour plus d'informations sur la carte connecteur Office 365, voir Utilisation de [cartes Office 365 connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
-La liste des résultats s'affiche dans l'interface utilisateur de Microsoft Teams avec un aperçu de chaque élément. L'aperçu est généré de l'une des deux manières :
+La liste des résultats s'affiche dans l Microsoft Teams'interface utilisateur avec un aperçu de chaque élément. L'aperçu est généré de l'une des deux manières :
 
-* Utilisation de la `preview` propriété dans `attachment` l'objet. La pièce jointe peut uniquement être une carte hero ou `preview` miniature.
+* Utilisation de la `preview` propriété dans `attachment` l'objet. La `preview` pièce jointe ne peut être qu'une carte hero ou miniature.
 * Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n'est pas définie et que ces propriétés sont disponibles.
 * Les actions d'appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d'aperçu.
 
-Vous pouvez afficher un aperçu d'une carte adaptative ou d'une carte connecteur Office 365 dans la liste des résultats à l'aide de sa propriété d'aperçu. La propriété d'aperçu n'est pas nécessaire si les résultats sont déjà des cartes Hero ou Miniatures. Si vous utilisez la pièce jointe d'aperçu, il doit s'agit d'une carte Hero ou miniature. Si aucune propriété d'aperçu n'est spécifiée, l'aperçu de la carte échoue et rien n'est affiché.
+Vous pouvez afficher un aperçu d'une carte adaptative ou d'une carte connecteur Office 365 dans la liste des résultats à l'aide de sa propriété d'aperçu. La propriété d'aperçu n'est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d'aperçu, il doit s'agit d'une carte Hero ou miniature. Si aucune propriété d'aperçu n'est spécifiée, l'aperçu de la carte échoue et rien n'est affiché.
 
 ### <a name="response-example"></a>Exemple de réponse
 
@@ -313,7 +313,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>Requête par défaut
 
-Si vous la définissez dans le manifeste, Microsoft Teams publie une requête par défaut lorsque l'utilisateur ouvre pour la première fois `initialRun` `true` l'extension de messagerie.  Votre service peut répondre à cette requête avec un ensemble de résultats pré-rempli. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant les éléments récemment affichés, les favoris ou toute autre information qui ne dépend pas de l'entrée utilisateur.
+Si vous l'avez définie dans le manifeste, Microsoft Teams une requête par défaut lorsque l'utilisateur ouvre l'extension de messagerie pour la `initialRun` `true` première fois.  Votre service peut répondre à cette requête avec un ensemble de résultats pré-rempli. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant les éléments récemment affichés, les favoris ou toute autre information qui ne dépend pas de l'entrée utilisateur.
 
 La requête par défaut a la même structure que n'importe quelle requête utilisateur normale, avec le champ définie sur et définie sur comme indiqué `name` `initialRun` dans `value` `true` l'objet suivant :
 
@@ -342,8 +342,8 @@ La requête par défaut a la même structure que n'importe quelle requête utili
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Action d'extension de messagerie Teams| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Recherche d'extension de messagerie Teams   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams d'extension de messagerie| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d'extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Voir aussi
 

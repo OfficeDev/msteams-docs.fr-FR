@@ -331,7 +331,7 @@ Si vous avez plusieurs couches de navigation dans un onglet de réunion, les uti
 
 #### <a name="dont-include-another-dismiss-button"></a>À ne pas faire : inclure un autre bouton d'arrêt
 
-La fourniture d'une option permettant de fermer le contenu de l'onglet de réunion peut entraîner des problèmes, car l'en-tête est déjà sur un bouton pour faire disparaître l'onglet de la réunion lui-même.
+La fourniture d'une option pour fermer le contenu de l'onglet en réunion peut entraîner des problèmes, car l'en-tête ne doit pas être fermé par un bouton.
 
    :::column-end:::
 :::row-end:::
@@ -344,7 +344,7 @@ La fourniture d'une option permettant de fermer le contenu de l'onglet de réuni
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Attention : évitez les modales dans l'onglet de la réunion
 
-Les modales (également appelées modules de tâche) dans l'onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
+Les modaux (également appelés modules de tâche) dans l'onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
 
    :::column-end:::
 :::row-end:::

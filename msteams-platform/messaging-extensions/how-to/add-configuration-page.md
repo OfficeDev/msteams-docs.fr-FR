@@ -18,7 +18,7 @@ ms.locfileid: "52019824"
 
 ## <a name="code-sample"></a>Exemple de code
 
-La configuration d'authentification de recherche Teams pour les exemples de projets sur GitHub, explique comment créer des extensions de messagerie qui incluent une page de configuration et l'authentification Bot Service. Les exemples montrent également comment créer des extensions de message qui acceptent les demandes de recherche et retournent les résultats une fois que l'utilisateur s'est inscrit.
+La Teams d'authentification de recherche pour les exemples de projets sur GitHub, montrent comment créer des extensions de messagerie qui incluent une page de configuration et l'authentification bot service. Les exemples montrent également comment créer des extensions de message qui acceptent les demandes de recherche et retournent les résultats une fois que l'utilisateur s'est inscrit.
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|

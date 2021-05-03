@@ -1,7 +1,7 @@
 ---
 title: Déploiement de lien
 author: clearab
-description: Comment effectuer un déploiement de lien avec l'extension de messagerie dans une application Microsoft Teams.
+description: Comment effectuer un déploiement de lien avec l'extension de messagerie dans une Microsoft Teams application.
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -21,7 +21,7 @@ Ce document vous guide sur la façon d'ajouter le déploiement de lien au manife
 > [!NOTE]
 > Actuellement, le déploiement de liaison n'est pas pris en charge sur les clients mobiles.
 
-L'extension de messagerie Azure DevOps utilise le déploiement de lien pour rechercher les URL qui sont passées dans la zone de composition du message pointant vers un élément de travail. Dans l'image suivante, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps, que l'extension de messagerie a résolue en une carte :
+L Azure DevOps de messagerie utilise le déploiement de liaison pour rechercher les URL qui sont passées dans la zone de composition du message pointant vers un élément de travail. Dans l'image suivante, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps, que l'extension de messagerie a résolue en une carte :
 
 ![Exemple de déploiement de lien](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -34,7 +34,7 @@ Pour ajouter le déploiement de lien au manifeste de votre application, ajoutez 
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Ajouter un déploiement de lien à l'aide d'App Studio
 
-1. Ouvrez **App Studio** à partir du client Microsoft Teams, puis sélectionnez l'onglet **Éditeur de** manifeste.
+1. Ouvrez **App Studio** à partir Microsoft Teams client, puis sélectionnez l'onglet **Éditeur de** manifeste.
 1. Chargez le manifeste de votre application.
 1. Dans la page **Extension de** messagerie, ajoutez le domaine que vous souhaitez rechercher dans la section Des **handlers de** messages. L'image suivante explique le processus :
 
@@ -69,13 +69,13 @@ Pour obtenir un exemple de manifeste complet, voir [la référence de manifeste.
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>Gérer `composeExtension/queryLink` l'appel
 
-Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour le code de votre service web pour gérer la demande d'appel. Utilisez l'URL reçue pour rechercher votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
+Après avoir ajouté le domaine au manifeste de l'application, vous devez mettre à jour votre code de service web pour gérer la demande d'appel. Utilisez l'URL reçue pour effectuer une recherche dans votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
 
 Les types de carte suivants sont pris en charge :
 
 * [Carte miniature](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Carte Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Carte connecteur Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 Carte de connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 ### <a name="example"></a>Exemple

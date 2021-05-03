@@ -67,7 +67,7 @@ Certaines applications sont simples (envoyer des notifications), tandis que d'au
 
 ### <a name="webhooks"></a>Webhooks
 
-**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d'envoyer automatiquement des notifications à partir d'une autre application vers Teams canal. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
+**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d'envoyer automatiquement des notifications à partir d'une autre application vers Teams canal. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="Représentation conceptuelle de l'apparence des connecteurs dans le client Teams client." border="false":::
 
@@ -80,9 +80,9 @@ Certaines applications sont simples (envoyer des notifications), tandis que d'au
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
 
-Utiliser **Teams** données : [l'API Microsoft Graph pour Teams](https://docs.microsoft.com/graph/teams-concept-overview) fournit l'accès à des informations sur les équipes, les canaux, les utilisateurs et les messages qui peuvent vous aider à créer ou améliorer les fonctionnalités de votre application.
+Utiliser **Teams** données : [l'API Microsoft Graph pour Teams](https://docs.microsoft.com/graph/teams-concept-overview) fournit l'accès à des informations sur les équipes, les canaux, les utilisateurs et les messages qui peuvent vous aider à créer ou améliorer des fonctionnalités pour votre application.
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Représentation conceptuelle de l'API microsoft Graph pour Teams." border="false":::
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Représentation conceptuelle de l'API Microsoft Graph pour Teams." border="false":::
 
    :::column-end:::
 

@@ -94,7 +94,7 @@ Pour plus d'informations, [voir Créer un bot pour Teams](../create-a-bot-for-te
 ## <a name="create-the-identity-provider"></a>Créer le fournisseur d'identité
 
 Vous avez besoin d'un fournisseur d'identité qui peut être utilisé pour l'authentification.
-Dans cette procédure, vous allez utiliser un fournisseur Azure AD . d'autres fournisseurs d'identité pris en charge par Azure AD peuvent également être utilisés.
+Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d'autres fournisseurs d'identité pris en charge par Azure AD peuvent également être utilisés.
 
 1. Dans le [**portail Azure,**][azure-portal]dans le panneau de navigation de gauche, **sélectionnez Azure Active Directory**.
     > [!TIP]
@@ -307,7 +307,7 @@ Une fois que vous avez configuré le mécanisme d'authentification, vous pouvez 
 1. Sélectionnez **le bouton Ouvrir le bot.**
 1. Dans **l'URL du bot,** entrez l'URL locale du bot. Généralement, `http://localhost:3978/api/messages` .
 1. Dans **l'ID d'application Microsoft,** entrez l'ID d'application du bot à partir de `appsettings.json` .
-1. Dans le mot **de passe de l'application Microsoft,** entrez le mot de passe de l'application du bot à partir du `appsettings.json` .
+1. Dans le **mot de passe de l'application Microsoft,** entrez le mot de passe de l'application du bot à partir du `appsettings.json` .
 1. Sélectionnez **Connecter**.
 1. Une fois que le bot est en cours d'exécution, entrez du texte pour afficher la carte de signature.
 1. Sélectionnez le bouton **Se connecter**.
@@ -520,10 +520,10 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 **dialogs/mainDialog.js**
 
-Dans une étape de boîte de dialogue, utilisez `beginDialog` pour démarrer l'invite OAuth, qui demande à l'utilisateur de se connecter.
+Dans une étape de boîte de dialogue, utilisez pour démarrer l'invite OAuth, qui demande à `beginDialog` l'utilisateur de se connecter.
 
-- Si l'utilisateur est déjà inscrit, cela génère un événement de réponse de jeton, sans invite de l'utilisateur.
-- Sinon, cela invite l'utilisateur à se connecter. Le service Azure Bot envoie l'événement de réponse du jeton après que l'utilisateur a tenté de se connecter.
+- Si l'utilisateur est déjà signé, cela génère un événement de réponse de jeton, sans que l'utilisateur soit invité à le faire.
+- Sinon, cela invite l'utilisateur à se connecter. Le service de bot Azure envoie l'événement de réponse au jeton une fois que l'utilisateur tente de se connecter.
 
 [!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
 
@@ -549,10 +549,10 @@ Dans l'étape de boîte de dialogue suivante, vérifiez la présence d'un jeton 
 
 **dialogs/main_dialog.py**
 
-Dans une étape de boîte de dialogue, utilisez `begin_dialog` pour démarrer l'invite OAuth, qui demande à l'utilisateur de se connecter.
+Dans une étape de boîte de dialogue, utilisez pour démarrer l'invite OAuth, qui demande à `begin_dialog` l'utilisateur de se connecter.
 
-- Si l'utilisateur est déjà inscrit, cela génère un événement de réponse de jeton, sans invite de l'utilisateur.
-- Sinon, cela invite l'utilisateur à se connecter. Le service Azure Bot envoie l'événement de réponse du jeton après que l'utilisateur a tenté de se connecter.
+- Si l'utilisateur est déjà signé, cela génère un événement de réponse de jeton, sans que l'utilisateur soit invité à le faire.
+- Sinon, cela invite l'utilisateur à se connecter. Le service de bot Azure envoie l'événement de réponse au jeton une fois que l'utilisateur tente de se connecter.
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 

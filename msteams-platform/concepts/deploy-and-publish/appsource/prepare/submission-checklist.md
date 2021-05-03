@@ -1,6 +1,6 @@
 ---
-title: Préparer votre soumission au Store
-description: Décrit les dernières étapes avant de soumettre votre Microsoft Teams pour qu'elle soit répertoriée dans le Store.
+title: Préparer l'envoi de votre magasin
+description: Décrit les dernières étapes avant d'envoyer votre Microsoft Teams pour qu'elle soit répertoriée dans le Store.
 ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
@@ -12,7 +12,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/30/2021
 ms.locfileid: "52101680"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams au Store
 
 Vous avez conçu, créé et testé votre application Microsoft Teams web. Vous êtes maintenant prêt à la réen lister pour que les personnes peuvent découvrir et commencer à utiliser votre application.
 
@@ -31,7 +31,7 @@ L Microsoft Teams de validation d'application vous permet d'identifier et de ré
 
 ## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
-Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d'identification et les clés de licence. Vous pouvez ajouter des instructions dans l'Partner Center ou les télécharger vers un emplacement disponible publiquement sur SharePoint.
+Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d'identification et les clés de licence. Vous pouvez ajouter des instructions dans l'Partner Center ou les télécharger dans un emplacement disponible publiquement sur SharePoint.
 
 ### <a name="feature-list"></a>Liste des fonctionnalités
 
@@ -45,11 +45,11 @@ En fonction des fonctionnalités de votre application, vous devrez peut-être fo
 
 * Compte d'administrateur (obligatoire)
 * Compte non administrateur (obligatoire)
-* Un compte qui n'est pas pré-configuré afin de tester correctement l'expérience de première utilisation de la première utilisation de la signature (obligatoire)
+* Un compte qui n'est pas pré-configuré pour tester correctement l'expérience de première utilisation de la signature (obligatoire)
 * Un compte ayant accès aux fonctionnalités premium ou mises à niveau (le cas échéant)
 * Deux comptes dans le même client pour tester l'expérience de collaboration pour les applications qui fonctionnent dans des contextes partagés (le cas échéant)
 
-### <a name="tenant-configurations"></a>Configurations client
+### <a name="tenant-configurations"></a>Configurations de client
 
 Si vous devez configurer un client Teams pour utiliser votre application, incluez ces instructions et les comptes administrateur et non administrateur pour la validation.
 
@@ -59,7 +59,7 @@ Fournissez un enregistrement de votre application afin que Microsoft puisse bien
 
 ## <a name="create-your-store-listing-details"></a>Créer les détails de la description dans le Store
 
-Les informations que [](https://partner.microsoft.com) vous envoyez à l'&#8212;de l'&#8212;, y compris votre nom, descriptions, icônes et images&#8212;, deviennent le Teams Store et la description Microsoft AppSource de votre application.
+Les informations que [](https://partner.microsoft.com) vous soumettez à l'&#8212;, notamment votre nom, descriptions, icônes et images&#8212;, deviennent le Teams Store et la description Microsoft AppSource de votre application.
 
 Une liste dans le Store peut être la première impression de votre application. Augmentez les installations avec une liste qui transmet efficacement les avantages, les fonctionnalités et la marque de votre application.
 
@@ -194,4 +194,4 @@ L'Partner Center prend [en charge les listes de magasins localisées.](https://d
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Soumettre votre application](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [Envoyer votre application](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
