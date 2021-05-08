@@ -4,18 +4,18 @@ description: Décrit les liens profonds et leur utilisation dans vos application
 ms.topic: how-to
 localization_priority: Normal
 keywords: lien profond teams
-ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
+ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230952"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "52278151"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
 Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Les scénarios dans lequel la création de liens profonds sont utiles sont les suivants :
 
-* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour avertir l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
+* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour informer l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d’une conversation ou la planification d’une réunion, en pré-remplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
 > [!NOTE]
@@ -36,7 +36,7 @@ Vous pouvez créer des liens vers des informations et des fonctionnalités dans 
 
 ## <a name="deep-linking-to-your-tab"></a>Liaison profonde à votre onglet
 
-Vous pouvez créer des liens profonds vers des entités dans Teams. Il est utilisé pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Par exemple, si votre onglet contient une liste de tâches, les membres de l’équipe peuvent créer et partager des liens vers des tâches individuelles. Lorsque vous sélectionnez le lien, il navigue vers votre onglet qui se concentre sur l’élément spécifique. Pour implémenter cela, vous ajoutez une action **de** lien de copie à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l’utilisateur prend cette action, vous appelez pour afficher une boîte de dialogue contenant un lien que l’utilisateur `shareDeepLink()` peut copier dans le Presse-papiers. Lorsque vous passez cet appel, vous passez également un ID pour [](~/tabs/how-to/access-teams-context.md) votre élément, que vous obtenez dans le contexte lorsque le lien est suivi et que votre onglet est rechargé.
+Vous pouvez créer des liens profonds vers des entités dans Teams. Il est utilisé pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Par exemple, si votre onglet contient une liste de tâches, les membres de l’équipe peuvent créer et partager des liens vers des tâches individuelles. Lorsque vous sélectionnez le lien, il navigue vers votre onglet qui se concentre sur l’élément spécifique. Pour implémenter cela, vous ajoutez une action **de** lien de copie à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l’utilisateur fait cette action, vous appelez pour afficher une boîte de dialogue contenant un lien que l’utilisateur `shareDeepLink()` peut copier dans le Presse-papiers. Lorsque vous passez cet appel, vous passez également un ID pour [](~/tabs/how-to/access-teams-context.md) votre élément, que vous obtenez dans le contexte lorsque le lien est suivi et que votre onglet est rechargé.
 
 Vous pouvez également générer des liens profonds par programme, en utilisant le format spécifié plus loin dans cette rubrique. Vous pouvez utiliser des liens profonds dans les [messages](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) [de bot](~/bots/what-are-bots.md) et de connecteur qui informent les utilisateurs des modifications apportées à votre onglet ou aux éléments qu’il insérez.
 
@@ -46,7 +46,7 @@ Vous pouvez également générer des liens profonds par programme, en utilisant 
 >[!NOTE]
 > Actuellement, shareDeepLink ne fonctionne pas sur les plateformes mobiles.
 
-### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>Affichage d’un lien profond vers un élément dans votre onglet
+### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>Afficher un lien profond vers un élément dans votre onglet
 
 Pour afficher une boîte de dialogue qui contient un lien profond vers un élément dans votre onglet, appelez `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
@@ -56,10 +56,10 @@ Fournissez les champs suivants :
 * `subEntityLabel`: étiquette de l’élément à utiliser pour afficher le lien profond.
 * `subEntityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet.
 
-### <a name="generating-a-deep-link-to-your-tab"></a>Génération d’un lien profond vers votre onglet
+### <a name="generate-a-deep-link-to-your-tab"></a>Générer un lien profond vers votre onglet
 
 > [!NOTE]
-> Les onglets personnels ont une étendue, tandis que les onglets de canal et `personal` de groupe utilisent `team` ou `group` utilisent des étendues. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable possède une `channel` propriété associée à son objet de contexte. Pour plus [d’informations](~/resources/schema/manifest-schema.md) sur les étendues d’onglet, voir la référence de manifeste.
+> Les onglets personnels ont une étendue, tandis que les onglets de canal et `personal` de groupe utilisent `team` ou utilisent des `group` étendues. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable possède une `channel` propriété associée à son objet de contexte. Pour plus [d’informations](~/resources/schema/manifest-schema.md) sur les étendues d’onglet, voir la référence de manifeste.
 
 > [!NOTE]
 > Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et en raison de cet ID d’entité. Les liens profonds vers les onglets sans ID d’entité naviguent toujours vers l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
@@ -69,7 +69,7 @@ Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Si le bot envoie un message contenant un lien profond, un nouvel onglet de navigateur s’ouvre lorsque l’utilisateur `TextBlock` sélectionne le lien. Cela se produit dans Chrome et dans l Microsoft Teams de bureau, les deux s’exécutant sur Linux.
+> Si le bot envoie un message contenant un lien profond, un nouvel onglet de navigateur s’ouvre lorsque l’utilisateur `TextBlock` sélectionne le lien. Cela se produit dans Chrome et dans l’Microsoft Teams de bureau, les deux s’exécutant sur Linux.
 > Si le bot envoie la même URL de lien profond dans un , l’onglet Teams est ouvert dans l’onglet du navigateur actuel lorsque l’utilisateur sélectionne `Action.OpenUrl` le lien. Un nouvel onglet de navigateur n’est pas ouvert.
 
 Les paramètres de requête sont les suivants :
@@ -100,7 +100,7 @@ Exemples :
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### <a name="consuming-a-deep-link-from-a-tab"></a>Consommation d’un lien profond à partir d’un onglet
+### <a name="consume-a-deep-link-from-a-tab"></a>Utiliser un lien profond à partir d’un onglet
 
 Lorsque vous naviguez vers un lien profond, Microsoft Teams navigue simplement vers l’onglet et fournit un mécanisme via la bibliothèque JavaScript Microsoft Teams pour récupérer l’ID de sous-entité s’il existe.
 
@@ -196,14 +196,14 @@ Les paramètres de requête sont les suivants :
 
 Exemple : https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="linking-to-the-scheduling-dialog"></a>Liaison à la boîte de dialogue de planification
+## <a name="deep-link-to-the-scheduling-dialog"></a>Lien profond vers la boîte de dialogue de planification
 
 > [!NOTE]
 > Cette fonctionnalité est actuellement en prévisualisation pour les développeurs.
 
 Vous pouvez créer des liens profonds vers la boîte Teams de planification intégrée. Cela est particulièrement utile si votre application aide l’utilisateur à effectuer le calendrier ou à planifier les tâches associées.
 
-### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>Génération d’un lien profond vers la boîte de dialogue de planification
+### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Générer un lien profond vers la boîte de dialogue de planification
 
 Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de messagerie : `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
@@ -222,9 +222,32 @@ Les paramètres de requête sont les suivants :
 
 Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme cible d’URL dans le bouton de votre carte ou appuyer sur l’action par le biais du `openUrl` type d’action.
 
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>Liaison profonde à un appel audio ou audio-vidéo
+
+Vous pouvez créer des liens profonds pour appeler des appels audio uniquement ou audio-vidéo à un seul utilisateur ou à un groupe d’utilisateurs, en spécifiant le type d’appel, en tant *qu’audio* ou *av,* et les participants. Une fois que le lien profond est appelé et avant de passer l’appel, Teams client de bureau demande une confirmation pour passer l’appel. En cas d’appel de groupe, vous pouvez appeler un ensemble d’utilisateurs VoIP et un ensemble d’utilisateurs PSTN dans le même appel de lien profond. 
+
+En cas d’appel vidéo, le client demande confirmation et allume la vidéo de l’appelant pour l’appel. Le destinataire de l’appel a le choix de répondre uniquement par le biais de l’audio ou de l’audio et de la vidéo, via la fenêtre Teams notification d’appel.
+
+> [!NOTE]
+> Ce lien profond ne peut pas être utilisé pour l’facturation d’une réunion.
+
+### <a name="generate-a-deep-link-to-a-chat"></a>Générer un lien profond vers une conversation
+
+| Lien profond | Format | Exemple |
+|-----------|--------|---------|
+| Effectuer un appel audio | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
+| Effectuer un appel audio et vidéo | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|Effectuer un appel audio et vidéo avec une source de paramètres facultative | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Effectuer un appel audio et vidéo à une combinaison d’utilisateurs VoIP et PSTN | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+  
+Les paramètres de requête suivants sont les suivants :
+* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants de l’appel. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel PSTN, il prend en charge un pstn 4: numéro de téléphone &lt; &gt; .
+* `Withvideo`: il s’agit d’un paramètre facultatif que vous pouvez utiliser pour effectuer un appel vidéo. La définition de ce paramètre n’activera que la caméra de l’appelant. Le destinataire de l’appel peut répondre par le biais d’un appel audio ou audio et vidéo via la Teams de notification d’appel. 
+* `Source`: il s’agit d’un paramètre facultatif qui informe sur la source du lien profond.
+
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C # |Node.js|
+| Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
 |ID de sous-entité consommant un lien profond  |Microsoft Teams exemple d’application pour montrer le lien profond entre la conversation de bot et l’ID de sous-entité de consommation d’onglets.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
