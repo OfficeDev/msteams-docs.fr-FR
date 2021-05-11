@@ -4,12 +4,12 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: aa55abb6a4acd4220c2988d1a42c2a2bddc89042
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019964"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304032"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Développez rapidement des applications avec App Studio pour Microsoft Teams
 
@@ -35,7 +35,7 @@ Une fois dans App Studio, cliquez sur l’onglet *Éditeur de manifeste* dans le
 
 ## <a name="app-studio-features"></a>Fonctionnalités d’App Studio
 
-Cette section traite des fonctionnalités, telles que la conversation, l'éditeur de manifeste, les détails et les fonctionnalités. Vous pouvez personnaliser vos fonctionnalités à l'aide de la personnalisation de l'application.
+Cette section traite des fonctionnalités, telles que la conversation, l’éditeur de manifeste, les détails et les fonctionnalités. Vous pouvez personnaliser vos fonctionnalités à l’aide de la personnalisation de l’application.
 
 ### <a name="conversation"></a>Conversation
 
@@ -56,9 +56,7 @@ La section détails de l’Éditeur de manifeste définit la description génér
 La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fonctionnalités de l'application sont définies et où les détails de chacune de ces fonctionnalités sont énumérés.
 
 > [!NOTE]
-> La fonctionnalité de personnalisation de l'application est actuellement disponible en prévisualisation pour les développeurs uniquement.
-> 
-> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l'application doivent suivre lors de la personnalisation de votre application. Pour plus d'informations, voir [personnaliser les applications dans Microsoft Teams.](/MicrosoftTeams/customize-apps)
+> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 
 ##### <a name="tabs"></a>Onglets
@@ -86,7 +84,7 @@ Notez que si vous avez défini votre bot pour prendre en charge une seule étend
 Cette section vous permet d’ajouter un connecteur à votre application. Si vous avez déjà inscrit un connecteur Office 365, sélectionnez *Configurer* puis entrez le nom et l’ID du connecteur. Si vous voulez un nouveau connecteur, cliquez sur *S'inscrire* pour accéder au tableau de bord du développeur de connecteurs dans votre navigateur.
 
 > [!NOTE]
-> La personnalisation d'application permet aux administrateurs de modifier l'apparence des applications chargées par le biais de bots, d'extensions de messagerie, d'onglets et de connecteurs. Par exemple, si l'administrateur Teams personnalise le nom d'une application de *Contoso* à *Agent Contoso,* l'application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l'ajout d'un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l'application en tant *que Contoso*.
+> La personnalisation d’application permet aux administrateurs de modifier l’apparence des applications chargées par le biais de bots, d’extensions de messagerie, d’onglets et de connecteurs. Par exemple, si l’administrateur Teams personnalise le nom d’une application de *Contoso* à *Agent Contoso,* l’application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l’ajout d’un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l’application en tant *que Contoso*.
 
 
 ##### <a name="messaging-extensions"></a>Extensions de messagerie
@@ -104,7 +102,7 @@ Chaque commande nécessite un titre et un ID. La commande peut éventuellement c
 * Description facultative
 
 > [!NOTE]
-> Pour créer une extension de messagerie à l'aide d'App Studio, voir créer une [extension de messagerie à l'aide d'app studio.](~/resources/create-messaging-extension-using-appstudio.md)
+> Pour créer une extension de messagerie à l’aide d’App Studio, voir créer une [extension de messagerie à l’aide d’app studio.](~/resources/create-messaging-extension-using-appstudio.md)
 
 #### <a name="test-and-distribute"></a>Tester et distribuer
 
