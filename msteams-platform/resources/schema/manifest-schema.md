@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: schéma de manifeste teams
-ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: c0b8b6f5baa163d2292227f7d361b6d12849edec
+ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304011"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52336516"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
-Le Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . Les versions précédentes 1.0-1.4 sont également pris en charge (à l’aide de « v1.x » dans l’URL).
+Le Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,..., 1.6, etc., sont également pris en charge (à l’aide de « v1.x » dans l’URL).
 
 L’exemple de schéma suivant montre toutes les options d’extensibilité.
 
@@ -455,7 +455,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 
 Définit une solution bot, ainsi que des informations facultatives telles que les propriétés de commande par défaut.
 
-L’élément est un tableau (maximum de 1 élément actuellement un seul bot est autorisé par application) avec tous les éléments &mdash; du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
+L’élément est un tableau (jusqu’à un seul élément actuellement un seul bot est autorisé par application) avec tous les &mdash; éléments du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -474,7 +474,7 @@ Liste facultative de commandes que votre bot peut recommander aux utilisateurs. 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`items.scopes`|tableau d’enums|3|✔|Spécifie l’étendue pour laquelle la liste de commandes est valide. Les options sont `team`, `personal` et `groupchat`.|
-|`items.commands`|tableau d’objets|10 |✔|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
+|`items.commands`|tableau d’objets|10|✔|Ensemble de commandes prises en charge par le bot :<br>`title`: nom de la commande bot (chaîne, 32)<br>`description` : description simple ou exemple de la syntaxe de commande et de son argument (chaîne, 128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -508,10 +508,10 @@ Définit une extension de messagerie pour l’application.
 
 L’élément est un tableau (maximum de 1 élément) avec tous les éléments de type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une extension de messagerie.
 
-|Nom| Type | Taille maximale | Obligatoire | Description|
+|Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à l’ID d’application global.|
-|`commands`|tableau d’objets|10 |✔|Tableau de commandes pris en charge par l’extension de messagerie|
+|`commands`|tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie|
 |`canUpdateConfiguration`|booléen|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
 |`messageHandlers.type`|string|||Type de handler de messages. Doit être `"link"`.|
@@ -542,7 +542,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameters.title`|string|32 caractères|✔|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre.|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’une `text, textarea, number, date, time, toggle, choiceset` des .|
+|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’un `text, textarea, number, date, time, toggle, choiceset` des .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
 |`parameters.choices.title`|string|128 caractères|✔|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔|Valeur du choix.|
@@ -551,7 +551,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif** : tableau de chaînes
 
-Tableau qui spécifie les autorisations que l’application demande, ce qui permet aux utilisateurs finaux de savoir comment `string` fonctionne l’extension. Les options suivantes ne sont pas exclusives :
+Tableau qui spécifie les autorisations que l’application demande, ce qui permet aux utilisateurs finaux de savoir `string` comment fonctionne l’extension. Les options suivantes ne sont pas exclusives :
 
 * `identity`&emsp;Nécessite des informations d’identité d’utilisateur
 * `messageTeamMembers`&emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe
@@ -589,12 +589,12 @@ L’objet est un tableau avec tous les éléments du type `string` .
 
 **Facultatif** — objet
 
-Fournissez votre ID d’Azure Active Directory (AAD) et des informations microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application, afin que les administrateurs peuvent facilement passer en revue les autorisations et accorder leur consentement dans Teams centre d’administration.
+Fournissez votre ID Azure Active Directory application (AAD) et des informations microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application, afin que les administrateurs peuvent facilement passer en revue les autorisations et accorder leur consentement dans Teams centre d’administration.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l’oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
