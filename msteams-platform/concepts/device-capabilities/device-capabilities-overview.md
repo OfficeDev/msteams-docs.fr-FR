@@ -1,43 +1,43 @@
 ---
-title: 'Fonctionnalités de l’appareil : vue d’ensemble'
+title: Capacités de l’appareil - Vue d’ensemble
 author: Rajeshwari-v
-description: Vue d’ensemble des fonctionnalités natives de l’appareil.
+description: Vue d’ensemble des capacités des appareils natifs.
 ms.author: surbhigupta
-keywords: Image de l’image de l’appareil photo microphone microphone qr code code code-barres code-barres analyse scanneur emplacement des fonctionnalités natives d’autorisations de périphérique
+keywords: caméra image media microphone micro qr code qrcode code à barres scanner capacités de localisation des autorisations de périphérique natif
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: d67b343e3e07d7aea79282ce02ef8247fcf77159
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 8df8341e8996e4bf380575ac59e05325da16bd0d
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230896"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566193"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
-Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’intégrer des fonctionnalités d’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à leurs applications web. Cette intégration réduit les obstacles au développement d’applications, accélère le cycle de développement et crée de nouveaux scénarios ou cas d’utilisation pour la communauté des développeurs.
+Microsoft Teams plate-forme améliore continuellement les capacités des développeurs en s’alignant sur les expériences intégrées de première partie. La plate-forme Teams permet aux partenaires d’intégrer des fonctionnalités d’appareil, telles que l’appareil photo, QR ou scanner de codes à barres, galerie de photos, microphone, et l’emplacement avec leurs applications Web. Cette intégration réduit l’obstacle au développement d’applications, accélère le cycle de développement et crée de nouveaux scénarios ou cas d’utilisation pour la communauté des développeurs.
 
-## <a name="native-device-capabilities"></a>Fonctionnalités natives de l’appareil
+## <a name="native-device-capabilities"></a>Capacités des appareils indigènes
 
-Un appareil mobile ou de bureau dispose d’appareils intégrés, tels qu’un appareil photo et un microphone, appelés fonctionnalités. Vous pouvez accéder aux fonctionnalités d’appareil suivantes sur mobile ou bureau via des API dédiées disponibles [dans Microsoft Teams SDK client JavaScript :](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
-* Fonctionnalités multimédias, telles que
-    * Appareil photo
-    * Microphone
+Un appareil mobile ou de bureau est constitué d’appareils intégrés, tels qu’une caméra et un microphone, appelés capacités. Vous pouvez accéder aux fonctionnalités de l’appareil suivant sur mobile ou bureau via des API dédiées [disponibles dans Microsoft Teams client JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
+* Les capacités des médias, telles que
+    * caméra
+    * microphone
     * Galerie
-    * QR ou scanneur de code-barres
+    * QR ou scanner de codes à barres
 * Emplacement
 
-Après avoir accédé aux fonctionnalités de l’appareil, vous pouvez les intégrer à Teams plateforme pour améliorer l’expérience de collaboration. 
+Après avoir eu accès aux fonctionnalités de l’appareil, vous pouvez les intégrer à Teams plate-forme pour améliorer l’expérience collaborative. 
 
 ## <a name="request-device-permissions"></a>Demande des autorisations d’appareil
 
-Utilisez les outils présents [dans Microsoft Teams SDK client JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) pour demander les autorisations requises pour accéder aux [fonctionnalités natives](native-device-permissions.md) de l’appareil. Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs web modernes, vous devez informer Teams sur les fonctionnalités que vous utilisez en mettant à jour votre manifeste d’application. Cette mise à jour vous permet de demander des autorisations pendant que votre application s’exécute sur Teams clients mobiles ou de bureau.
+Utilisez les outils présents dans [Microsoft Teams client JavaScript SDK pour](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) demander les autorisations requises pour accéder aux [fonctionnalités](native-device-permissions.md) de l’appareil natif. Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs Web modernes, vous devez informer Teams sur les fonctionnalités que vous utilisez en mettant à jour le manifeste de votre application. Cette mise à jour vous permet de demander des autorisations pendant que votre application s’exécute Teams clients mobiles ou de bureau.
  
- ## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
+ ## <a name="integrate-device-capabilities"></a>Intégrer les capacités de l’appareil
 
-Après avoir accédé aux fonctionnalités de l’appareil, [](mobile-camera-image-permissions.md) utilisez Teams API de fonctionnalité multimédia pour intégrer des fonctionnalités multimédias à Teams plateforme afin d’améliorer l’expérience utilisateur. Ces fonctionnalités intégrées permettent à votre application de :
+Après avoir eu accès aux fonctionnalités de l’appareil, utilisez Teams apis de capacité multimédia pour intégrer [les capacités](mobile-camera-image-permissions.md) multimédias à une plate Teams pour améliorer l’expérience utilisateur. Ces fonctionnalités intégrées permettent à votre application de :
 
-* Capturer et partager des images
-* Analyser la QR ou le code-barres à l’aide du [contrôle scanneur](qr-barcode-scanner-capability.md)
-* Enregistrer l’audio via le microphone
-* Partager l’emplacement à [l’aide du s picker d’emplacement.](location-capability.md)
+* Capturez et partagez des images.
+* Scannez QR ou code à barres à l’aide du [contrôle du scanner](qr-barcode-scanner-capability.md).
+* Enregistrez l’audio à travers le microphone.
+* Partagez l’emplacement à [l’aide du cueilleur de localisation](location-capability.md).

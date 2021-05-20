@@ -1,50 +1,50 @@
 ---
 title: Connecteurs Office 365
-description: Décrit la mise en place des connecteurs Office 365 dans Microsoft Teams
+description: Décrit comment commencer avec les connecteurs Office 365 en Microsoft Teams
 keywords: 'équipes connecteur O365 '
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 8091f71e22fcbdc297e2f7b54665b47e597e670e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9eaaedf88d907dd7a7422068ab5d20450345f0e7
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018396"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566809"
 ---
-# <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création de connecteurs Office 365 pour Microsoft Teams
+# <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création Office 365 connecteurs pour Microsoft Teams
 
->Avec les applications Microsoft Teams, vous pouvez ajouter votre connecteur Office 365 existant ou en créer un nouveau à inclure dans Microsoft Teams. Pour [plus d'informations, voir](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) Créer votre propre connecteur.
+>Avec Microsoft Teams applications, vous pouvez ajouter votre connecteur Office 365 existant ou en créer un nouveau pour l’inclure dans Microsoft Teams. Voir [Construire votre propre connecteur pour plus](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) d’informations.
 
-## <a name="adding-a-connector-to-your-teams-app"></a>Ajout d'un connecteur à votre application Teams
+## <a name="adding-a-connector-to-your-teams-app"></a>Ajout d’un connecteur à votre application Teams’argent
 
-Vous pouvez distribuer votre connecteur inscrit dans le cadre de votre package d’application Teams. Qu'il s'agit d'une solution autonome ou de l'une [](~/concepts/build-and-test/apps-package.md) des [](~/concepts/deploy-and-publish/apps-publish.md) nombreuses fonctionnalités que votre expérience active dans Teams, vous pouvez packager et publier votre connecteur dans le cadre de votre soumission AppSource, ou vous pouvez le fournir aux utilisateurs directement pour le chargement dans Teams. [](~/concepts/extensibility-points.md)
+Vous pouvez distribuer votre connecteur inscrit dans le cadre de votre package d’application Teams. Que ce soit en tant que solution autonome ou l’une des [plusieurs fonctionnalités](~/concepts/extensibility-points.md) que votre expérience permet en Teams, vous [pouvez emballer et](~/concepts/build-and-test/apps-package.md) [publier](~/concepts/deploy-and-publish/apps-publish.md) votre connecteur dans le cadre de votre soumission AppSource, ou vous pouvez le fournir directement aux utilisateurs pour téléchargement dans les Teams.
 
-Pour distribuer votre connecteur, vous devez vous inscrire à l'aide du tableau de bord du [développeur de connecteurs.](https://outlook.office.com/connectors/home/login/#/publish) Par défaut, une fois qu'un connecteur est inscrit, il est supposé que votre connecteur fonctionne dans tous les produits Office 365 qui les prend en charge, y compris Outlook et Teams. Si ce _n'est_ pas le cas et que vous devez créer un connecteur qui fonctionne uniquement dans Microsoft Teams, contactez-nous directement à l'aide des [soumissions d'applications Microsoft Teams.](mailto:teamsubm@microsoft.com)
+Pour distribuer votre connecteur, vous devez vous inscrire en utilisant le tableau de bord [des développeurs de connecteurs.](https://outlook.office.com/connectors/home/login/#/publish) Par défaut, une fois qu’un connecteur est enregistré, il est supposé que votre connecteur fonctionnera dans tous les produits Office 365 qui les soutiennent, y compris les Outlook et Teams. Si ce _n’est_ pas le cas et que vous devez créer un connecteur qui ne fonctionne qu’en Microsoft Teams, contactez-nous [directement à Microsoft Teams d’applications](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
-> Une fois que **vous avez choisi Enregistrer** dans le tableau de bord du développeur de connecteurs, votre connecteur est enregistré. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions dans Publier votre application [Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource et simplement la distribuer directement à votre organisation uniquement, vous pouvez le faire en publiant dans [votre organisation.](#publish-connectors-for-your-organization) Si vous souhaitez uniquement publier dans votre organisation, aucune action supplémentaire n'est nécessaire sur le tableau de bord du connecteur.
+> Une fois que vous **avez choisi Enregistrer** dans le tableau de bord des développeurs de connecteurs, votre connecteur est enregistré. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de [Publier votre application Microsoft Teams à AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si vous ne souhaitez pas publier votre application dans AppSource, et plutôt simplement la distribuer directement à votre organisation uniquement, vous pouvez le faire en [publiant à votre organisation](#publish-connectors-for-your-organization). Si vous souhaitez uniquement publier sur votre organisation, aucune autre action n’est nécessaire sur le tableau de bord Connector.
 
-### <a name="integrating-the-configuration-experience"></a>Intégration de l'expérience de configuration
+### <a name="integrating-the-configuration-experience"></a>Intégration de l’expérience de configuration
 
-Vos utilisateurs termineront toute l'expérience de configuration du connecteur sans avoir à quitter le client Teams. Pour obtenir cette expérience, Teams incorpore votre page de configuration directement dans un iframe. La séquence d'opérations est la suivante :
+Vos utilisateurs compléteront toute l’expérience de configuration connecteur sans avoir à quitter le Teams client. Pour réaliser cette expérience, Teams intégrera votre page de configuration directement dans un iframe. La séquence des opérations est la suivante :
 
-1. L'utilisateur clique sur votre connecteur pour commencer le processus de configuration.
-2. Teams charge votre expérience de configuration en ligne.
-3. L'utilisateur interagit avec votre expérience web pour terminer la configuration.
-4. L'utilisateur appuie sur « Enregistrer », ce qui déclenche un rappel dans votre code.
-5. Votre code traitera l'événement d'enregistrer en récupérant les paramètres de webhook (documentés ci-dessous). Votre code doit ensuite stocker le webhook pour publier des événements ultérieurement.
+1. L’utilisateur clique sur votre connecteur pour commencer le processus de configuration.
+2. Teams chargera votre expérience de configuration en ligne.
+3. L’utilisateur interagit avec votre expérience Web pour compléter la configuration.
+4. L’utilisateur appuie sur « Enregistrer », ce qui déclenche un rappel dans votre code.
+5. Votre code traitera l’événement d’sauvegarde en récupérant les paramètres webhook (documentés ci-dessous). Votre code doit ensuite stocker le webhook pour afficher des événements plus tard.
 
-Vous pouvez réutiliser votre expérience de configuration web existante ou créer une version distincte à héberger spécifiquement dans Teams. Votre code doit :
+Vous pouvez réutiliser votre expérience de configuration Web existante ou créer une version distincte qui sera hébergée spécifiquement dans Teams. Votre code doit :
 
-1. Incluez le SDK JavaScript Microsoft Teams. Cela permet à votre code d'accéder aux API pour effectuer des opérations courantes telles que l'obtention du contexte utilisateur/canal/équipe actuel et l'initiateur des flux d'authentification. Initialisez le kit de développement logiciel (SDK) en appelant `microsoftTeams.initialize()`.
-2. Appelez `microsoftTeams.settings.setValidityState(true)` lorsque vous souhaitez activer le bouton Enregistrer. Vous devez le faire en réponse à une entrée utilisateur valide, telle qu'une sélection ou une mise à jour de champ.
-3. Inscrivez un `microsoftTeams.settings.registerOnSaveHandler()` handler d'événements, qui est appelé lorsque l'utilisateur clique sur Enregistrer.
-4. Appelez `microsoftTeams.settings.setSettings()` pour enregistrer les paramètres du connecteur. Les informations enregistrées ici sont également affichées dans la boîte de dialogue de configuration si l'utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
-5. Appelez `microsoftTeams.settings.getSettings()` pour récupérer les propriétés de webhook, y compris l'URL proprement dite. Vous devez l'appeler en plus de l'événement d'enregistrer, vous devez également l'appeler lorsque votre page est chargée pour la première fois dans le cas d'une nouvelle configuration.
-6. (Facultatif) Inscrivez un `microsoftTeams.settings.registerOnRemoveHandler()` handler d'événements, qui est appelé lorsque l'utilisateur supprime votre connecteur. Cet événement permet à votre service d'effectuer des actions de nettoyage.
+1. Incluez le Microsoft Teams JavaScript SDK. Cela donne à votre code l’accès aux API pour effectuer des opérations courantes comme obtenir le contexte utilisateur/canal/équipe actuel et initier des flux d’authentification. Initialisez le kit de développement logiciel (SDK) en appelant `microsoftTeams.initialize()`.
+2. Appelez `microsoftTeams.settings.setValidityState(true)` lorsque vous souhaitez activer le bouton Enregistrer. Vous devez le faire en réponse à l’entrée utilisateur valide, comme une sélection ou une mise à jour sur le terrain.
+3. Enregistrez `microsoftTeams.settings.registerOnSaveHandler()` un gestionnaire d’événements, qui est appelé lorsque l’utilisateur clique enregistrer.
+4. Appelez `microsoftTeams.settings.setSettings()` pour enregistrer les paramètres du connecteur. Ce qui est enregistré ici est également ce qui sera affiché dans le dialogue de configuration si l’utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
+5. Appelez `microsoftTeams.settings.getSettings()` pour récupérer les propriétés webhook, y compris l’URL elle-même. Vous devez appeler cela En plus de l’événement enregistrer, vous devez également appeler cela lorsque votre page est chargée pour la première fois dans le cas d’une re-configuration.
+6. (Facultatif) Enregistrez `microsoftTeams.settings.registerOnRemoveHandler()` un gestionnaire d’événements, qui est appelé lorsque l’utilisateur supprime votre connecteur. Cet événement donne à votre service l’occasion d’effectuer toutes les actions de nettoyage.
 
-Voici un exemple de code HTML pour créer une page de configuration de connecteur sans CSS :
+Voici un exemple HTML pour créer une page de configuration Connector sans le CSS :
 
 ```html
 <h2>Send notifications when tasks are:</h2>
@@ -104,39 +104,39 @@ Voici un exemple de code HTML pour créer une page de configuration de connecteu
 #### <a name="getsettings-response-properties"></a>`GetSettings()` propriétés de réponse
 
 >[!Note]
->Les paramètres renvoyés par l'appel ici sont différents de ceux que vous avez appelés à partir d'un onglet et diffèrent de ceux documentés `getSettings` [ici.](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)
+>Les paramètres retournés par `getSettings` l’appel ici sont différents que si vous deuriez invoquer cette méthode à partir d’un onglet, et diffèrent de ceux documentés [ici](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Paramètre   | Détails |
 |-------------|---------|
-| `entityId`       | ID d'entité, tel que définie par votre code lors de `setSettings()` l'appel. |
-| `configName`  | Nom de la configuration, tel que définie par votre code lors de `setSettings()` l'appel. |
-| `contentUrl` | URL de la page de configuration, définie par votre code lors de l'appel `setSettings()` |
-| `webhookUrl` | URL de webhook créée pour ce connecteur. Persistez l'URL de webhook et utilisez-la pour post JSON structuré pour envoyer des cartes au canal. L’élément `webhookUrl` est renvoyé uniquement lorsque l’application effectue un renvoi. |
+| `entityId`       | L’ID de l’entité, tel qu’il est défini par votre code lors de l’appel `setSettings()` . |
+| `configName`  | Le nom de configuration, tel que défini par votre code lors de l’appel `setSettings()` . |
+| `contentUrl` | L’URL de la page de configuration, tel que défini par votre code lors de l’appel `setSettings()` . |
+| `webhookUrl` | L’URL webhook créée pour ce connecteur. Persistez l’URL webhook et utilisez-la pour POSTER JSON structuré pour envoyer des cartes au canal. L’élément `webhookUrl` est renvoyé uniquement lorsque l’application effectue un renvoi. |
 | `appType` | Les valeurs renvoyées peuvent être `mail`, `groups` ou `teams` correspondant à la messagerie Office 365, aux groupes Office 365 ou à Microsoft Teams. |
-| `userObjectId` | Il s'agit de l'ID unique correspondant à l'utilisateur Office 365 qui a initié la configuration du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365 qui a défini la configuration à l’utilisateur dans votre service. |
+| `userObjectId` | Il s’agit de l’id unique correspondant Office 365 utilisateur qui a initié la configuration du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365 qui a défini la configuration à l’utilisateur dans votre service. |
 
-Si vous devez authentifier l'utilisateur dans le cadre du [](~/tabs/how-to/authentication/auth-flow-tab.md) chargement de votre page à l'étape 2 ci-dessus, reportez-vous à ce lien pour plus d'informations sur la façon d'intégrer la connexion lorsque votre page est incorporée.
+Si vous devez authentifier l’utilisateur dans le cadre du chargement de votre page à l’étape 2 ci-dessus, consultez ce [lien pour](~/tabs/how-to/authentication/auth-flow-tab.md) plus de détails sur la façon dont vous pouvez intégrer la connexion lorsque votre page est intégrée.
 
 > [!NOTE]
-> Pour des raisons de compatibilité entre clients, votre code devra appeler avec l'URL et les méthodes de rappel de `microsoftTeams.authentication.registerAuthenticationHandlers()` réussite/échec avant d'appeler. `authenticate()`
+> Pour des raisons de compatibilité inter-clients, votre code devra appeler avec `microsoftTeams.authentication.registerAuthenticationHandlers()` l’URL et les méthodes de rappel de succès/échec avant d’appeler `authenticate()` .
 
-#### <a name="handling-edits"></a>Gestion des modifications
+#### <a name="handling-edits"></a>Manipulation des modifications
 
-Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier une configuration de connecteur existante. Pour ce faire, appelez `microsoftTeams.settings.setSettings()` pendant la configuration initiale avec les paramètres suivants :
+Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier une configuration de connecteur existante. Pour ce faire, appelez `microsoftTeams.settings.setSettings()` lors de la configuration initiale avec les paramètres suivants :
 
-- `entityId` est l'ID personnalisé compris par votre service et qui représente ce que l'utilisateur a configuré.
-- `configName` est un nom convivial que votre code de configuration peut récupérer
-- `contentUrl` est une URL personnalisée qui est chargée lorsqu'un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour faciliter la tâche de modification de votre code.
+- `entityId` est l’iD personnalisé qui est compris par votre service et représente ce que l’utilisateur a configuré.
+- `configName` est un nom amical que votre code de configuration peut récupérer
+- `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour faciliter le gestion de l’étui de modification par votre code.
 
-En règle générale, cet appel est effectué dans le cadre de votre économiseur d'événements. Ensuite, lorsque le code ci-dessus est chargé, votre code doit appeler pour prére remplir les paramètres ou formulaires de votre `contentUrl` interface utilisateur de `getSettings()` configuration.
+En règle générale, cet appel est effectué dans le cadre de votre gestionnaire d’événements d’enregistrer. Ensuite, lorsque ce qui `contentUrl` précède est chargé, votre code doit appeler `getSettings()` pour prépeupler tous les paramètres ou formulaires de votre interface utilisateur de configuration.
 
-#### <a name="handling-removals"></a>Gestion des suppressions
+#### <a name="handling-removals"></a>Traitement des déménagements
 
-Vous pouvez éventuellement exécuter un programme de gestion d'événements lorsque l'utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce handler en appelant `microsoftTeams.settings.registerOnRemoveHandler()` . Ce handler peut être utilisé pour effectuer des opérations de nettoyage telles que la suppression d'entrées d'une base de données.
+Vous pouvez exécuter un gestionnaire d’événements en option lorsque l’utilisateur supprime une configuration de connecteur existante. Vous enregistrez ce gestionnaire en appelant `microsoftTeams.settings.registerOnRemoveHandler()` . Ce gestionnaire peut être utilisé pour effectuer des opérations de nettoyage telles que la suppression des entrées d’une base de données.
 
 ### <a name="including-the-connector-in-your-manifest"></a>Inclure le connecteur dans votre manifeste
 
-Vous pouvez télécharger le manifeste d'application Teams généré automatiquement à partir du portail. Toutefois, avant de pouvoir l'utiliser pour tester ou publier votre application, vous devez :
+Vous pouvez télécharger le manifeste d’application Teams généré automatiquement à partir du portail. Avant de pouvoir l’utiliser pour tester ou publier votre application, cependant, vous devez faire ce qui suit:
 
 - [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifiez la partie `icons` du manifeste pour faire référence aux noms de fichier des icônes au lieu des URL.
@@ -194,27 +194,27 @@ Une fois que vous avez téléchargé l’application, ouvrez la liste des connec
 
 ![Capture d’écran de la section téléchargée dans la boîte de dialogue connecteur](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-Vous pouvez à présent lancer l’expérience de configuration. N'ignorez pas que ce flux se produit entièrement dans Microsoft Teams en tant qu'expérience hébergée.
+Vous pouvez à présent lancer l’expérience de configuration. Sachez que ce flux se produit entièrement dans Microsoft Teams comme une expérience hébergée.
 
-Pour vérifier `HttpPOST` qu'une action fonctionne correctement, [envoyez des messages à votre connecteur.](~/webhooks-and-connectors/how-to/connectors-using.md)
+Pour vérifier `HttpPOST` qu’une action fonctionne correctement, envoyez [des messages à votre connecteur](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-## <a name="publish-connectors-for-your-organization"></a>Publier des connecteurs pour votre organisation
+## <a name="publish-connectors-for-your-organization"></a>Publiez connecteurs pour votre organisation
 
-Parfois, vous ne souhaitez peut-être pas publier votre application de connecteur sur le public AppSource/Store, mais vous souhaitez qu'elle soit disponible uniquement pour les utilisateurs de votre organisation. Dans ce cas, vous pouvez charger votre application de connecteur personnalisé vers le catalogue [d'applications de votre organisation.](~/concepts/deploy-and-publish/apps-publish.md) Ainsi, votre application de connecteur sera disponible uniquement pour cette organisation et vous n'aurez pas besoin de publier votre connecteur dans le magasin public.
+Parfois, vous ne souhaitez peut-être pas publier votre application connecteur sur l’AppSource/Store public, mais vous souhaitez qu’elle ne soit disponible que pour les utilisateurs de votre organisation. Dans de tels cas, vous pouvez télécharger votre application de connecteur personnalisée sur le [catalogue d’applications de votre organisation.](~/concepts/deploy-and-publish/apps-publish.md) De cette façon, votre application de connecteur ne sera disponible que pour cette organisation, et vous n’aurez pas besoin de publier votre connecteur au magasin public.
 
-Une fois que vous avez chargé votre package d'application, pour configurer et utiliser le connecteur dans une équipe, il peut être installé à partir du catalogue d'applications de l'organisation en suivant les étapes suivantes :
+Une fois que vous avez téléchargé votre paquet d’applications, pour configurer et utiliser le connecteur dans une équipe, il peut être installé à partir du catalogue d’applications de l’organisation en suivant ces étapes :
 
-1. Sélectionnez l'icône des applications dans la barre de navigation verticale à l'extrême gauche.
-1. Dans la **fenêtre Applications,** **sélectionnez Connecteurs.**
-1. Sélectionnez le connecteur que vous souhaitez ajouter et une fenêtre de boîte de dialogue s'affiche.
-1. Sélectionnez **Ajouter à une barre d'équipe.**
-1. Dans la fenêtre de boîte de dialogue suivante, tapez un nom d'équipe ou de canal.
-1. Sélectionnez **la barre Configurer un connecteur** dans le coin inférieur droit de la fenêtre de boîte de dialogue.
-1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *Options* supplémentaires Connecteurs Tous les connecteurs pour votre équipe  =>    =>    =>   pour cette équipe. Vous pouvez naviguer en accédant à cette section ou rechercher l'application connecteur.
-1. Pour configurer ou modifier le connecteur, sélectionnez **la barre Configurer.**
+1. Sélectionnez l’icône apps à partir de la barre de navigation verticale d’extrême gauche.
+1. Dans la **fenêtre Apps** sélectionnez **Connecteurs**.
+1. Sélectionnez le connecteur que vous souhaitez ajouter et une fenêtre de dialogue contexturée s’affichera.
+1. Sélectionnez **l’ajout à une barre** d’équipe.
+1. Dans la fenêtre de dialogue suivante, tapez une équipe ou un nom de canal.
+1. Sélectionnez la **barre de connecteur de** l’angle inférieur droit de la fenêtre de dialogue.
+1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *options*  =>  *Connecteurs*  =>  *Tous*  =>  *connecteurs pour votre équipe* pour cette équipe. Vous pouvez naviguer en faisant défiler vers cette section ou rechercher l’application connecteur.
+1. Pour configurer ou modifier le connecteur, sélectionnez **la barre Configure.**
 
 ## <a name="code-sample"></a>Exemple de code
-|**Exemple de nom** | **Description** | **.NET** | **Node.js** |
+|**Nom de l’échantillon** | **Description** | **.NET (en)** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connecteurs    | Exemple de connecteur Office 365 générant des notifications au canal Teams.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Exemple de connecteurs génériques |Exemple de code pour un connecteur générique facile à personnaliser pour n'importe quel système qui prend en charge les webhooks.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connecteurs    | Exemple Office 365 connecteur générant des notifications au canal des équipes.|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Échantillon générique de connecteurs |Exemple de code pour un connecteur générique facile à personnaliser pour n’importe quel système qui prend en charge les webhooks.|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

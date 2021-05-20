@@ -1,79 +1,79 @@
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Télécharger votre onglet vers teams avec App Studio
+## <a name="upload-your-tab-to-teams-with-app-studio"></a>Télécharger votre onglet pour Teams avec App Studio
 
 >[!NOTE]
-> Nous utilisons App Studio pour modifier votre fichier **Manifest. JSON** et télécharger le package terminé vers Teams. Vous pouvez également modifier manuellement le **fichier manifest. JSON** si vous le souhaitez. Si vous le faites, veillez à créer à nouveau la solution pour créer le fichier **. zip de tabulation** à télécharger.
+> Nous utilisons App Studio pour modifier vos **manifest.jsdans le** fichier et télécharger le paquet terminé à Teams. Vous pouvez également modifier manuellement **manifest.jssur si** vous préférez. Si vous le faites, assurez-vous de construire la solution à nouveau pour **créerTab.zip** fichier à télécharger.
 
-- Ouvrez le client Microsoft Teams. Si vous utilisez la [version basée sur le Web](https://teams.microsoft.com) , vous pouvez inspecter votre code frontal à l’aide des [outils de développement](~/tabs/how-to/developer-tools.md)de votre navigateur.
+- Ouvrez le Microsoft Teams client. Si vous utilisez la [version Web, vous pouvez](https://teams.microsoft.com) inspecter votre code front-end à l’aide des outils de développement de votre [navigateur](~/tabs/how-to/developer-tools.md).
 
-- Ouvrez l’application Studio et sélectionnez l’onglet **éditeur de manifeste** .
+- Ouvrez le studio App et sélectionnez **l’onglet Éditeur** Manifeste.
 
-- Sélectionnez la vignette **Importer une application existante** dans l’éditeur de manifeste pour commencer à mettre à jour le package d’application pour votre onglet. Le code source est fourni avec son propre manifeste partiellement complet. Le nom de votre package d’application est **Tab. zip**. Il doit se trouver ici :
+- Sélectionnez **l’importation d’une vignette d’application** existante dans l’éditeur Manifeste pour commencer à mettre à jour le paquet d’application pour votre onglet. Le code source est livré avec son propre manifeste partiellement complet. Le nom de votre package d’application **esttab.zip**. Il devrait être trouvé ici:
 
-```bash
-/bin/Debug/netcoreapp2.2/Tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/Tab.zip
+    ```
 
-- Téléchargez **Tab. zip** dans App Studio.
+- Télécharger **Tab.zipà** App Studio.
 
-### <a name="update-your-app-package-with-manifest-editor"></a>Mettre à jour votre package d’application avec l’éditeur de manifeste
+### <a name="update-your-app-package-with-manifest-editor"></a>Mettez à jour votre package d’application avec l’éditeur Manifest
 
-Une fois que vous avez téléchargé votre package d’application dans App Studio, vous devez terminer de le configurer.
+Une fois que vous avez téléchargé votre paquet d’applications dans App Studio, vous devrez finir de le configurer.
 
-- Sélectionnez la mosaïque de votre onglet nouvellement importé dans le volet droit de la page d’accueil de l’éditeur de manifeste.
+- Sélectionnez la vignette pour votre onglet nouvellement importé dans le panneau droit de la page de bienvenue de l’éditeur Manifeste.
 
-Il y a une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre *fichier manifest. JSON* , mais il existe quelques champs que vous devrez mettre à jour :
+Il ya une liste d’étapes dans le côté gauche de l’éditeur Manifeste, et sur la droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. Une grande partie de l’information a été *fournie parmanifest.jssur,* mais il ya quelques domaines que vous aurez besoin de mettre à jour:
 
-#### <a name="details-app-details"></a>Détails : détails de l’application
+#### <a name="details-app-details"></a>Détails: Détails de l’application
 
-Dans la section Détails de l' *application* :
+Dans la section **Détails de l’application** :
 
-- Sous *identification* , sélectionnez **générer** pour générer un nouvel ID d’application pour votre application.
+- Sous **Identification** **sélectionnez Générer** pour générer un nouvel id d’application pour votre application.
 
-- Sous *informations sur le développeur* , mettez à jour l' **URL du site Web** avec votre URL HTTPS *ngrok* .
+- Sous les **informations du développeur** mettre à jour **l’URL** du site Web avec votre URL **HTTPS ngrok.**
 
-- Sous *URL* de l’application **** `https://<yourngrokurl>/privacy` , mettez à jour la déclaration de confidentialité et les **conditions d’utilisation** pour `https://<yourngrokurl>/tou`>.
+- Sous **les URL d’application mettre à** jour **l’instruction de confidentialité** et les conditions `https://<yourngrokurl>/privacy` **d’utilisation** `https://<yourngrokurl>/tou`>.
 
-#### <a name="capabilities-tabs"></a>Fonctionnalités : onglets
+#### <a name="capabilities-tabs"></a>Capacités: Onglets
 
-Dans la section *onglets* :
+Dans la section *Onglets* :
 
-- Sous *Ajouter un onglet personnel* , sélectionnez ***Ajouter***. Une fenêtre de boîte de dialogue contextuelle s’affiche.
+- Sous **Ajouter un onglet personnel sélectionnez** **Ajouter**. Vous serez présenté avec une fenêtre de dialogue pop-up.
 
-- Renseignez le champ *nom* .
+- Complétez le **champ** Nom.
 
-- Renseignez le champ ID de l' *entité* .
+- Complétez le champ **Id entité.**
 
-- Mettez à jour le champ *URL* du `https://<yourngrokurl>/personalTab`contenu avec la valeur à.
+- Mettez à jour **le champ URL** de contenu avec à `https://<yourngrokurl>/personalTab` .
 
-- Laissez le champ *URL du site Web* vide.
+- Laissez le champ **URL du** site Web vide.
 
-- Cliquez sur ***Enregistrer***.
+- Sélectionnez **Enregistrer**.
 
-#### <a name="finish-domains-and-permissions"></a>Terminer : domaines et autorisations
+#### <a name="finish-domains-and-permissions"></a>Finition : Domaines et autorisations
 
-Dans la section *domaines et autorisations* , les *domaines de votre champ d’onglets* doivent contenir votre URL ngrok sans le préfixe `<yourngrokurl>.ngrok.io/`HTTPS-.
+Dans la section **Domaines et autorisations,** les **domaines de votre champ onglets** doivent contenir votre URL ngrok sans préfixe HTTPS - `<yourngrokurl>.ngrok.io/` .
 
-##### <a name="finish-test-and-distribute"></a>Terminer : tester et distribuer
+##### <a name="finish-test-and-distribute"></a>Finition: Test et distribuer
 
 >[!IMPORTANT]
->Dans le champ **Description** à droite, vous verrez l’avertissement suivant :
+>Dans le **champ Description** à droite, vous verrez l’avertissement suivant :
 >
->&#9888;**le tableau « validDomains » ne peut pas contenir de site de tunneling...**
+>&#9888; "**Le tableau « validDomains » ne peut pas contenir un site de tunnelage...**»
 >
->Cet avertissement peut être ignoré lors du test de votre onglet.
+>Cet avertissement peut être ignoré lors de l’essai de votre onglet.
 
-Dans la section *test et distribution* :
+Dans la section **Test et distribution** :
 
 - Sélectionnez **Installer**.
 
-- Dans la fenêtre contextuelle, assurez-vous que l’option *Ajouter pour vous* est définie sur *Oui* et *Ajouter à une équipe ou une conversation* est définie sur *non*.
+- Dans la fenêtre pop-up assurez-vous que **Ajouter pour vous** est défini sur **Oui** et Ajouter à une équipe **ou chat** est défini à **No**.
 
 - Sélectionnez **Installer**.
 
-- Dans la fenêtre contextuelle suivante, sélectionnez **ouvrir** et votre onglet est affiché.
+- Dans la prochaine fenêtre **contexturée, sélectionnez Ouvrir** et votre onglet s’affiche.
 
-## <a name="view-your-personal-tab"></a>Affichage de votre onglet personnel
+## <a name="view-your-personal-tab"></a>Consultez votre onglet personnel
 
-- Dans la barre de navigation située à l’extrême gauche de l’application Teams, sélectionnez `...` le menu. Une liste d’applications personnelles s’affiche.
+- Dans la barre de navigation située à l’extrême gauche de l’application Teams, sélectionnez le `...` menu. Vous serez présenté avec une liste d’applications personnelles.
 
 - Sélectionnez votre onglet dans la liste à afficher.

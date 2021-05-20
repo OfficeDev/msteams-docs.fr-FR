@@ -1,85 +1,85 @@
 ## <a name="prerequisites"></a>Conditions préalables
 
-- Pour effectuer ce démarrage rapide, vous aurez besoin d'un client Office 365 et d'une équipe configurée avec l'application Autoriser le téléchargement *d'applications* personnalisées activée. Pour plus d'informations, voir Préparer votre client [Office 365.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+- Pour compléter ce démarrage rapide, vous aurez besoin d’un Office 365 locataire et d’une équipe configurée avec *autoriser le téléchargement d’applications personnalisées activées.* Pour en savoir plus, [consultez Préparer votre Office 365 locataire.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
-  - Si vous n'avez pas encore de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme pour les développeurs Office 365. L'abonnement reste actif tant que vous l'utilisez pour le développement en cours. Voir Bienvenue dans le programme pour les développeurs [Office 365.](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program)
+  - Si vous n’avez pas actuellement de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur. L’abonnement restera actif tant que vous l’utilisez pour le développement continu. Voir [Bienvenue dans le programme Office 365 développeur de la ville](/office/developer-program/microsoft-365-developer-program).
 
-En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
+En outre, ce projet exige que vous avez ce qui suit installé dans votre environnement de développement:
 
-- N'importe quel éditeur de texte ou IDE. Vous pouvez installer et utiliser [Visual Studio Code](https://code.visualstudio.com/download) gratuit.
+- Tout éditeur de texte ou IDE. Vous pouvez installer et [utiliser Visual Studio Code](https://code.visualstudio.com/download) gratuitement.
 
-- [Node.js/npm](https://nodejs.org/en/). Vous devez utiliser la dernière version de LTS. Le nœud Gestionnaire de package (npm) s'installera dans votre système avec l'installation de Node.js.
+- [Node.js/npm](https://nodejs.org/en/). Vous devez utiliser la dernière version LTS. Le nœud Gestionnaire de package (npm) s’installera dans votre système avec l’installation de Node.js.
 
-- Une fois que vous avez installé Node.js, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en tapant ce qui suit dans votre invite de commandes :
+- Une fois que vous avez installé avec succès Node.js, installez [les paquets Yeoman](https://yeoman.io/) [et gulp-cli](https://www.npmjs.com/package/gulp-cli) en tapant ce qui suit dans votre invite de commande :
 
-```bash
-npm install yo gulp-cli --global
-```
+    ```bash
+    npm install yo gulp-cli --global
+    ```
 
-- Installez le générateur d'applications Microsoft Teams en tapant ce qui suit dans votre invite de commandes :
+- Installez le Microsoft Teams apps en tapant ce qui suit dans votre invite de commande :
 
-```bash
-npm install generator-teams --global
-```
+    ```bash
+    npm install generator-teams --global
+    ```
 
 ## <a name="generate-your-project"></a>Générer votre projet
 
-- Ouvrez une invite de commandes et créez un répertoire pour votre projet d'onglet.
+- Ouvrez une invite de commande et créez un nouvel annuaire pour votre projet d’onglet.
 
-- Pour démarrer le générateur, accédez à votre nouveau répertoire et tapez la commande suivante :
+- Pour démarrer le générateur, accédez à votre nouvel annuaire et tapez la commande suivante :
 
-```bash
-yo teams
-```
+    ```bash
+    yo teams
+    ```
 
-- Ensuite, vous allez fournir une série de valeurs qui seront utilisées dans le fichiermanifest.js **votre** application :
+- Ensuite, vous fournirez une série de valeurs qui seront utilisées dans les données de votre application **manifest.jsdans le** fichier :
 
-![capture d'écran d'ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![capture d’écran d’ouverture de générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-**Quel est le nom de votre solution ?**
+    **Quel est le nom de votre solution ?**
 
-Il s'agit du nom de votre projet. Vous pouvez accepter le nom suggéré en appuyant sur Entrée.
+    C’est le nom de votre projet. Vous pouvez accepter le nom suggéré en appuyant sur entrer.
 
-**Où souhaitez-vous placer les fichiers ?**
+    **Où souhaitez-vous placer les fichiers ?**
 
-Vous êtes actuellement dans votre répertoire de projet. Appuyez sur Entrée.
+    Vous êtes actuellement dans votre répertoire de projet. Appuyez sur entrez.
 
-**Titre de votre projet d'application Microsoft Teams ?**
+    **Titre de votre projet Microsoft Teams apprappe ?**
 
-Il s'agit du nom de votre package d'application et sera utilisé dans le manifeste et la description de l'application.
+    Il s’agit du nom de votre paquet d’application et sera utilisé dans le manifeste et la description de l’application.
 
-**Votre nom (d'entreprise) ? (32 caractères maximum)**
+    **Votre nom (d’entreprise)? (max 32 caractères)**
 
-Le nom de votre société sera utilisé dans le manifeste de l'application.
+    Le nom de votre entreprise sera utilisé dans le manifeste de l’application.
 
-<br>**Quelle version de manifeste souhaitez-vous utiliser ?**
+    **Quelle version manifeste souhaitez-vous utiliser ?**
 
-Sélectionnez le schéma par défaut.
+    Sélectionnez le schéma par défaut.
 
-**La échafaudage rapide ? (Y/n)**
+    **Un échafaudage rapide ? (Y/n)**
 
-La valeur par défaut est Oui ; entrez **n** pour entrer votre ID partenaire Microsoft.
+    La valeur par défaut est oui; entrez **n** pour entrer votre identifiant de partenaire Microsoft.
 
-**Entrez votre ID partenaire Microsoft, si vous en avez un ? (Laissez vide pour ignorer)**
+    **Entrez votre identifiant microsoft partner, si vous en avez un ? (Laisser vide pour sauter)**
 
-Ce champ n'est pas obligatoire et ne doit être utilisé que si vous faites déjà partie de [Microsoft Partner Network](https://partner.microsoft.com).
+    Ce champ n’est pas nécessaire et ne doit être utilisé que si vous faites déjà partie du [Réseau partenaire Microsoft](https://partner.microsoft.com).
 
-**Que voulez-vous ajouter à votre projet ?**
+    **Qu’est-ce que vous voulez ajouter à votre projet?**
 
-Sélectionnez ( &ast; ) Un onglet.
+    Sélectionnez ( &ast; ) Un onglet.
 
-**L'URL dans laquelle vous hébergez cette solution ?**
+    **L’URL où vous hébergez cette solution ?**
 
-Par défaut, le générateur suggère une URL de sites web Azure. Vous testerez uniquement votre application localement, par conséquent, une URL valide n'est pas nécessaire pour effectuer ce démarrage rapide.
+    Par défaut, le générateur suggère une URL de sites Web Azure. Vous ne testerez votre application que localement, par conséquent, une URL valide n’est pas nécessaire pour compléter ce démarrage rapide.
 
-**Souhaitez-vous inclure l'infrastructure test et les tests initiaux ? (y/N)**
+    **Souhaitez-vous inclure le cadre de test et les tests initiaux? (y/N)**
 
-Choisissez **de ne** pas inclure d'infrastructure de test pour ce projet. La valeur par défaut est Oui ; entrez **n**.
+    Choisissez **de ne** pas inclure de cadre de test pour ce projet. La valeur par défaut est oui; entrer **n**.
 
-**Voulez-vous utiliser Azure Applications Insights pour la télémétrie ? (y/N)**
+    **Souhaitez-vous utiliser Azure Applications Insights pour la télémétrie ? (y/N)**
 
-Choisissez **de ne** pas inclure Azure Application [Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). La valeur par défaut est non ; entrez **n**.
+    Choisissez **de ne** pas inclure [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). La valeur par défaut est non; entrer **n**.
 
-**Nom de l'onglet par défaut (16 caractères maximum) ?**
+    **Nom de l’onglet par défaut (max 16 caractères)?**
 
-Nommez votre onglet. Ce nom d'onglet sera utilisé dans l'ensemble de votre projet en tant que composant de chemin d'accès fichier/URL.
+    Nommez votre onglet. Ce nom d’onglet sera utilisé tout au long de votre projet comme composant de chemin de fichier/URL.

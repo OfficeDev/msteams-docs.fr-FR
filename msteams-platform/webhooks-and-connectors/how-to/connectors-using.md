@@ -4,12 +4,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 localization_priority: Normal
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: 1a625524f4c0bd278bd19b3adecdf6a59bd818a6
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020203"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566522"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -103,7 +103,7 @@ Vous pouvez également utiliser ce JSON pour créer des cartes contenant des ent
 }
 ```
 
-Ce message génère la carte suivante dans le canal.
+Ce message produit la carte suivante dans le canal :
 
 ![Capture d’écran d’une carte de connecteur](~/assets/images/connectors/connector_message.png)
 
@@ -141,13 +141,13 @@ Pour plus d’informations sur les actions de la carte Connecteur, consultez **[
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configuration d’un webhook entrant personnalisé
 
-Pour découvrir comment envoyer une carte simple à un connecteur, procédez comme suit.
+Suivez ces étapes pour voir comment envoyer une carte simple à un connecteur :
 
 1. Dans Microsoft Teams, choisissez **Autres options** (**&#8943;**) à côté du nom de la chaîne, puis choisissez **Connecteurs**.
-2. Faites défiler la liste des Connecteurs à **Webhook entrant**, puis choisissez **Ajouter**.
-3. Entrez un nom pour le webhook, téléchargez une image à associer aux données du webhook, puis choisissez **Créer**.
-4. Copiez le webhook dans le presse-papiers et enregistrez-le. Vous aurez besoin de l’URL de webhook pour envoyer des informations à Microsoft Teams.
-5. Choisissez **OK**.
+1. Faites défiler la liste des Connecteurs à **Webhook entrant**, puis choisissez **Ajouter**.
+1. Entrez un nom pour le webhook, téléchargez une image à associer aux données du webhook, puis choisissez **Créer**.
+1. Copiez le webhook dans le presse-papiers et enregistrez-le. Vous aurez besoin de l’URL de webhook pour envoyer des informations à Microsoft Teams.
+1. Choisissez **OK**.
 
 ### <a name="post-a-message-to-the-webhook-using-curl"></a>Publier un message sur le webhook à l’aide de cURL
 
@@ -165,8 +165,8 @@ Les étapes suivantes utilisent [cURL](https://curl.haxx.se/). Nous partons du p
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-2. Si la publication réussit, un simple résultat **1** est affiché par `curl`.
-3. Consultez le client Microsoft Team. Vous devriez voir la nouvelle carte publiée dans l’équipe.
+1. Si la publication réussit, un simple résultat **1** est affiché par `curl`.
+1. Consultez le client Microsoft Team. Vous devriez voir la nouvelle carte publiée dans l’équipe.
 
 ### <a name="post-a-message-to-the-webhook-using-powershell"></a>Publier un message sur le webhook à l’aide de PowerShell
 
@@ -178,13 +178,13 @@ Les étapes suivantes utilisent PowerShell. Nous partons du principe que vous av
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-2. Si la publication réussit, un simple résultat **1** est affichée par `Invoke-RestMethod`.
-3. Vérifiez le canal Microsoft Teams associé à l’URL de webhook. Vous devriez voir la nouvelle carte publiée sur le canal.
+1. Si la publication réussit, un simple résultat **1** est affichée par `Invoke-RestMethod`.
+1. Vérifiez le canal Microsoft Teams associé à l’URL de webhook. Vous devriez voir la nouvelle carte publiée sur le canal.
 
 - [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifiez la partie `icons` du manifeste pour faire référence aux noms de fichier des icônes au lieu des URL.
 
-Le fichier manifest.json suivant contient les éléments de base nécessaires pour tester et envoyer votre application.
+Les éléments manifest.jsdans le fichier contiennent les éléments de base nécessaires pour tester et soumettre votre application :
 
 > [!NOTE]
 > Remplacez `id` et `connectorId` de l’exemple suivant par le GUID de votre connecteur.
@@ -239,40 +239,40 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>Le flux pour l'envoi[de cartes adaptatives](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via un webhook entrant est le suivant :
 
-**1.** [Configurer un webhook personnalisé](#setting-up-a-custom-incoming-webhook) dans Teams.</br></br>
-**2.** Créez votre fichier JSON de carte adaptative :
+1. [Configurez un webhook personnalisé](#setting-up-a-custom-incoming-webhook) dans Teams.</br></br>
+1. Créez votre fichier JSON de carte adaptative :
 
-```json
-{
-   "type":"message",
-   "attachments":[
-      {
-         "contentType":"application/vnd.microsoft.card.adaptive",
-         "contentUrl":null,
-         "content":{
-            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
-            "type":"AdaptiveCard",
-            "version":"1.2",
-            "body":[
-                {
-                "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
-                }
-            ]
-         }
-      }
-   ]
-}
-```
+    ```json
+    {
+       "type":"message",
+       "attachments":[
+          {
+             "contentType":"application/vnd.microsoft.card.adaptive",
+             "contentUrl":null,
+             "content":{
+                "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+                "type":"AdaptiveCard",
+                "version":"1.2",
+                "body":[
+                    {
+                    "type": "TextBlock",
+                    "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
+                    }
+                ]
+             }
+          }
+       ]
+    }
+    ```
 
-> [!div class="checklist"]
->
-> - Le `"type"` champ doit être`"message"`.
-> - Le`"attachments"` tableau contient un ensemble d'objets carte.
-> - Le`"contentType"` champ doit être réglé sur le type de carte adaptative.
-> - L’`"content"` objet est la carte formatée en JSON.
+    > [!div class="checklist"]
+    >
+    > - Le `"type"` champ doit être`"message"`.
+    > - Le`"attachments"` tableau contient un ensemble d'objets carte.
+    > - Le`"contentType"` champ doit être réglé sur le type de carte adaptative.
+    > - L’`"content"` objet est la carte formatée en JSON.
 
-**3.** Testez votre carte adaptative avec le facteur
+1. Testez votre carte adaptative avec Postman.
 
 Vous pouvez tester votre carte adaptative en utilisant [le facteur](https://www.postman.com) pour envoyer une demande POST à l'URL que vous avez créée lors de la configuration de votre webhook entrant. Collez votre fichier JSON dans le corps de la demande et visualisez le message de votre carte adaptative dans Teams.
 
@@ -281,9 +281,9 @@ Vous pouvez tester votre carte adaptative en utilisant [le facteur](https://www.
 
 ## <a name="testing-your-connector"></a>Test du connecteur
 
-Pour tester le connecteur, téléchargez-le dans une équipe comme vous le feriez avec une autre application. Vous pouvez créer un package .zip à l’aide du fichier manifeste à partir du tableau de bord du développeur de connecteurs (modifié comme indiqué dans la section précédente) et des deux fichiers d’icône.
+Pour tester le connecteur, téléchargez-le dans une équipe comme vous le feriez avec une autre application. Vous pouvez créer un paquet .zip à l’aide du fichier manifeste du tableau de bord des développeurs de connecteurs qui a été modifié tel que dirigé dans la section précédente et les deux fichiers d’icônes.
 
-Une fois que vous avez téléchargé l’application, ouvrez la liste des connecteurs à partir de n’importe quel canal. Faites défiler la page vers le bas pour afficher votre application dans la section **Téléchargé**.
+Une fois que vous avez téléchargé l’application, ouvrez la liste des connecteurs à partir de n’importe quel canal. Faites défiler vers le bas pour voir votre application dans **la section Téléchargée** :
 
 ![Capture d’écran de la section téléchargée dans la boîte de dialogue connecteur](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -305,8 +305,6 @@ Les limites de débit d'application contrôlent le trafic qu'un connecteur ou un
 | 7200 | 150  |
 | 86400  | 1800  |
 
-*Voir aussi* [Connecteurs Office 365 — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
-
 Une [logique des nouvelles tentatives avec une sauvegarde exponentielle](/azure/architecture/patterns/retry) comme ci-dessous permet de limiter les débits pour les cas où les demandes dépassent les limites en une seconde. Référez-vous aux [réponses du protocole HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) pour éviter de vous heurter aux limites de taux.
 
 ```csharp
@@ -326,3 +324,7 @@ try
 ```
  
 Ces limites sont en place pour réduire le courrier indésirable d’un canal par un connecteur et de garantir une expérience optimale pour vos utilisateurs finaux.
+
+## <a name="see-also"></a>Voir aussi
+
+[Office 365 Connecteurs — Microsoft Teams](/connectors/teams/)

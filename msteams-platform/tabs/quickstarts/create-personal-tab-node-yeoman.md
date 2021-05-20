@@ -1,74 +1,74 @@
 ---
-title: 'Démarrage rapide : créer un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft Teams'
+title: 'Quickstart: Créez un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft Teams'
 author: laujan
-description: Guide de démarrage rapide pour créer un onglet personnel avec le générateur Yeoman pour Microsoft Teams.
+description: Un guide rapide pour créer un onglet personnel avec le générateur Yeoman pour Microsoft Teams.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 30143fa3c84a68ae6c34176b252badaa4cef9613
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 88ad05aacaed69d695bc918e3e8a44ec18e560ae
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019551"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566603"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Démarrage rapide : créer un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft Teams
+# <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Créez un onglet personnel personnalisé à l’aide Node.js et du générateur Yeoman pour Microsoft Teams
 
 >[!NOTE]
->Ce démarrage rapide suit les étapes décrites dans la page Créer votre premier Wiki d'application [Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) dans le référentiel GitHub Microsoft OfficeDev.
+>Ce quickstart suit les étapes décrites dans [le Wiki Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) trouvé dans le référentiel microsoft OfficeDev GitHub’ordinateur.
 
-Dans ce démarrage rapide, nous allons créer un onglet personnel personnalisé à l'aide du générateur [Yeoman teams.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Nous allons également télécharger l'application dans Team.
+Dans ce quickstart nous allons walk-through créer un onglet personnel personnalisé en utilisant [le Teams générateur Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). Nous téléchargerons également l’application sur Team.
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Voulez-vous créer un onglet configurable ou statique ?**
+**Créer un onglet configurable ou statique**
 
-Utilisez les touches de direction pour sélectionner l'onglet statique.
+Utilisez les touches fléchées pour sélectionner l’onglet statique.
 
 >[!IMPORTANT]
->The path component *yourDefaultTabNameTab*, referenced in this quickstart, is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
+>Le composant de *chemin yourDefaultTabNameTab*, référencé dans ce quickstart, est la valeur que vous avez entré dans le générateur pour *nom d’onglet par* défaut plus le mot *Onglet*.
 >
->Par exemple : DefaultTabName: *MyTab*  =>  */MyTabTab/*
+>Par exemple: DefaultTabName: *MyTab*  =>  */MyTabTab/*
 
-## <a name="create-your-personal-tab"></a>Créer votre onglet personnel
+## <a name="create-your-personal-tab"></a>Créez votre onglet personnel
 
-Pour ajouter un onglet personnel à cette application, vous allez créer une page de contenu et mettre à jour les fichiers existants :
+Pour ajouter un onglet personnel à cette application, vous créerez une page de contenu et mettrez à jour les fichiers existants :
 
-- Dans votre éditeur de code, créez un fichier HTML, **personal.html** et ajoutez le code suivant :
+- Dans votre éditeur de code, créez un nouveau fichier HTML, **personal.html** et ajoutez la majoration suivante :
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            <!-- Todo: add your a title here -->
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- inject:css -->
-        <!-- endinject -->
-    </head>
-        <body>
-            <h1>Personal Tab</h1>
-            <p><img src="/assets/icon.png"></p>
-            <p>This is your personal tab!</p>
-        </body>
-</html>
-```
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>
+                <!-- Todo: add your a title here -->
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- inject:css -->
+            <!-- endinject -->
+        </head>
+            <body>
+                <h1>Personal Tab</h1>
+                <p><img src="/assets/icon.png"></p>
+                <p>This is your personal tab!</p>
+            </body>
+    </html>
+    ```
 
-- Enregistrez **personal.html** dans le dossier **web de votre** application :
+- Enregistrez **personal.html** dans le dossier Web de **votre** application :
 
-```bash
-./src/app/web/<yourDefaultTabNameTab>/personal.html
-```
+    ```bash
+    ./src/app/web/<yourDefaultTabNameTab>/personal.html
+    ```
 
 - Ouvrez **manifest.jsdans** votre éditeur de code :
 
-```bash
-./src/manifest/manifest.json/
-```
+    ```bash
+    ./src/manifest/manifest.json/
+    ```
 
-Ajoutez ce qui suit au tableau vide ( ) et `staticTabs` `staticTabs":[]` ajoutez l'objet JSON suivant :
+Ajouter ce qui suit au tableau `staticTabs` vide ( ) et ajouter `staticTabs":[]` l’objet JSON suivant:
 
 ```json
 {
@@ -81,56 +81,61 @@ Ajoutez ce qui suit au tableau vide ( ) et `staticTabs` `staticTabs":[]` ajoutez
 
 ```
 
-N'oubliez pas de mettre à jour le composant de chemin d'accès **« contentURL** **» yourDefaultTabNameTab** avec votre nom d'onglet réel.
+N’oubliez pas de mettre à jour le composant de chemin **« contentURL »** **yourDefaultTabNameTab** avec votre nom d’onglet réel.
 
-- Enregistrez lemanifest.js **mis à jour sur**.
+- Enregistrez la mise **à jourmanifest.jssur**.
 
 - Votre page de contenu doit être servie dans un IFrame. Ouvrez **Tab.ts dans** votre éditeur de code :
 
- ```bash
-./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
-```
+    ```bash
+    ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
+    ```
 
-- Ajoutez ce qui suit à la liste descorateurs IFrame :
+- Ajoutez ce qui suit à la liste des décorateurs IFrame :
 
-```typescript
- @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
-```
+    ```typescript
+     @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
+    ```
 
-- Veillez à enregistrer le fichier **Tab.ts** mis à jour. Le code de l'onglet est terminé.
+- Assurez-vous d’enregistrer le fichier **Tab.ts mis à** jour. Votre code d’onglet est complet.
 
-## <a name="build-and-run-your-application"></a>Créer et exécuter votre application
+## <a name="build-and-run-your-application"></a>Créez et exécutez votre application
 
-Ouvrez une invite de commandes dans le répertoire de votre projet pour effectuer les tâches suivantes.
+Ouvrez une invite de commande dans votre répertoire de projet pour accomplir les tâches suivantes.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-Pour afficher votre onglet personnel, consultez la page `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+Pour voir votre onglet personnel, rendez-vous sur `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
->![capture d'écran de l'onglet personnel](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+>![capture d’écran onglet personnel](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>Établissez un tunnel sécurisé à votre onglet
 
-Microsoft Teams est un produit entièrement basé sur le cloud et nécessite que le contenu de votre onglet soit disponible à partir du cloud à l'aide de points de terminaison HTTPS. Teams n'autorise pas l'hébergement local, par conséquent, vous devez publier votre onglet sur une URL publique ou utiliser un proxy qui exposera votre port local à une URL internet.
+Microsoft Teams est un produit entièrement basé sur le cloud et exige que le contenu de votre onglet soit disponible à partir du cloud à l’aide des paramètres HTTPS. Teams n’autorise pas l’hébergement local, par conséquent, vous devez soit publier votre onglet sur une URL publique ou utiliser un proxy qui exposera votre port local à une URL orientée vers Internet.
 
-Pour tester votre extension d'onglet, vous allez utiliser [ngrok,](https://ngrok.com/docs)qui est intégré à cette application. Ngrok est un outil logiciel de proxy inverse qui crée un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Les points de terminaison web de votre serveur seront disponibles pendant la session en cours sur votre ordinateur local. Lorsque l'ordinateur est arrêté ou mis en veille, le service n'est plus disponible.
+Pour tester votre extension d’onglet, vous [utiliserez ngrok](https://ngrok.com/docs), qui est intégré dans cette application. Ngrok est un outil logiciel proxy inversé qui créera un tunnel vers les points de terminaison HTTPS accessibles au public de votre serveur Web en cours d’exécution locale. Les paramètres Web de votre serveur seront disponibles pendant la session en cours sur votre machine locale. Lorsque la machine est arrêtée ou s’enort, le service ne sera plus disponible.
 
-Dans votre invite de commandes, quittez localhost et entrez les commandes suivantes :
+Dans votre invite de commande, sortez localhost et entrez ce qui suit :
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Une fois que votre onglet a été téléchargé vers Microsoft Teams, via *ngrok* et enregistré, vous pouvez l'afficher dans Teams jusqu'à la fin de votre session tunnel.
+> Une fois que votre onglet a été téléchargé sur les équipes Microsoft, via **ngrok**, et enregistré avec succès, vous pouvez le voir en Teams jusqu’à la fin de votre session tunnel.
 
-## <a name="upload-your-application-to-teams"></a>Télécharger votre application dans Teams
+## <a name="upload-your-application-to-teams"></a>Télécharger votre demande à Teams
 
-- Ouvrez le client Microsoft Teams. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l'aide des outils de développement [de votre navigateur.](~/tabs/how-to/developer-tools.md)
-- Dans le *panneau YourTeams* sur la gauche, sélectionnez le menu en face de l'équipe que vous utilisez pour tester votre onglet et choisissez `...` Gérer **l'équipe.**
-- Dans le panneau principal, sélectionnez  **Applications** dans la barre d'onglets, puis téléchargez une application personnalisée située dans le coin inférieur droit de la page.
-- Ouvrez le répertoire de votre projet, accédez au dossier **./package,** sélectionnez le dossier zip, cliquez avec le bouton droit, puis choisissez **Ouvrir**. Votre onglet est chargé dans Teams.
+- Ouvrez le Microsoft Teams client. Si vous utilisez la [version Web, vous pouvez](https://teams.microsoft.com) inspecter votre code front-end à l’aide des outils de développement de votre [navigateur](~/tabs/how-to/developer-tools.md).
+- Dans le **panneau YourTeams** à gauche, sélectionnez le `...` menu à côté de l’équipe que vous utilisez pour tester votre onglet et choisir **l’équipe Manage**.
+- Dans le panneau principal, **sélectionnez Apps** à partir de la barre d’onglet **et choisissez Télécharger une application** personnalisée située dans le coin inférieur droit de la page.
+- Ouvrez votre répertoire de projet, parcourez **le dossier ./package,** sélectionnez le dossier zip, cliquez à droite et choisissez **Open**. Votre onglet sera téléchargé dans Teams.
 
-## <a name="view-your-personal-tabs"></a>Afficher vos onglets personnels
+## <a name="view-your-personal-tabs"></a>Consultez vos onglets personnels
 
-Dans la barre de navigation située à l'extrême gauche du client Teams, sélectionnez le menu et choisissez votre application `...` dans la liste.
+Dans le navbar situé à l’extrême gauche du client Teams, sélectionnez le `...` menu et choisissez votre application dans la liste.
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créez un onglet personnel à l’aide d’ASP.NETCore](~/tabs/quickstarts/create-personal-tab-dotnet-core.md)

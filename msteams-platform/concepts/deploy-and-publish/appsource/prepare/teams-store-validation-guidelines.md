@@ -1,361 +1,359 @@
 ---
-title: Microsoft Teams de validation du magasin d’informations
-description: Décrit les instructions que chaque application envoyée au Teams store (AppSource) doit suivre.
+title: Microsoft Teams de validation des magasins
+description: Décrit les lignes directrices que chaque application soumise Teams store (AppSource) doit suivre.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 4daa8b027d7525f0fb3223c2000eee301043398a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230924"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565136"
 ---
-# <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validation du magasin d’informations
+# <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validation des magasins
 
-Le fait de suivre ces instructions augmente la probabilité que votre application passe le Microsoft Teams soumission au Store. Ces Teams spécifiques complètent les stratégies de certification de Microsoft [Commercial Marketplace](https://docs.microsoft.com/legal/marketplace/certification-policies) et sont fréquemment mises à jour pour refléter les nouvelles fonctionnalités, les commentaires des utilisateurs et les modifications apportées aux règles métiers.
+Suivre ces lignes directrices augmente la probabilité que votre application passe le processus Microsoft Teams soumission en magasin. Ces Teams spécifiques complètent les politiques de [certification du marché commercial](/legal/marketplace/certification-policies) Microsoft et sont mises à jour fréquemment pour refléter les nouvelles fonctionnalités, les commentaires des utilisateurs et les modifications apportées aux règles métier.
 
 > [!NOTE]
-> Certaines recommandations peuvent ne pas être applicables à votre application. Par exemple, si votre application n’inclut pas de bot, vous pouvez ignorer les instructions liées au bot.
+> Certaines lignes directrices peuvent ne pas s’appliquer à votre application. Par exemple, si votre application n’inclut pas de bot, vous pouvez ignorer les directives relatives aux bots.
 
 ## <a name="10-value-proposition"></a>1.0 Proposition de valeur
 
 ### <a name="11-app-name"></a>1.1 Nom de l’application
 
-Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le Store. Souvenez-vous des informations suivantes sur les noms d’application :
+Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le magasin. Rappelez-vous ce qui suit sur les noms d’applications:
 
 * Le nom doit inclure des termes pertinents pour vos utilisateurs.
-* Les noms des fonctionnalités Teams principales&#8212;telles que **chat,** **contacts,** **calendrier,** **appels,** **fichiers,** **activité, Teams,** applications et **&#8212;** d’aide ne doivent pas être inclus dans le nom de votre application.  
-* Les noms communs doivent être précédés ou suffixes avec le nom du développeur (par exemple, **Tâches Contoso** plutôt que Tâches **).**
-* Ne doit pas utiliser **Teams** ou d’autres noms de produits Microsoft qui pourraient indiquer à tort la co- branding ou la co-vente. (Pour plus d’informations sur le référencement des logiciels, des produits et des services Microsoft, voir les recommandations en matière de marque et de marque [Microsoft).](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
-* Si votre application fait partie d’un partenariat officiel avec Microsoft, le nom de votre application doit être donné en premier (par exemple, **Contoso Connector pour Microsoft Teams**).
-* Ne doit pas copier le nom d’une application répertoriée dans le Store ou une autre offre sur le marché commercial.
-* Ne doit pas contenir de termes désobligeants ou désobligeants. Le nom ne doit pas non plus inclure de langues ethniques ou culturelles non sensibles.
-* Doit être unique. Par exemple, vous ne pouvez pas lister plusieurs applications pour différentes régions avec le même nom et les mêmes fonctionnalités.
+* Les noms des fonctionnalités de Teams de base&#8212;telles que **Chat,** **Contacts,** **Calendrier,** **Appels,** **Fichiers,** **Activité,** **Teams,** **Apps** et **Help**&#8212;ne doivent pas être inclus dans le nom de votre application.
+* Les noms communs doivent être préfixés ou suffisés avec le nom du développeur (par exemple, **tâches contoso plutôt** que **tâches).**
+* Ne doit pas **utiliser Teams ou** d’autres noms de produits Microsoft qui pourraient faussement indiquer la co-marque ou la co-vente. (Pour plus d’informations sur le référencement des logiciels, produits et services Microsoft, consultez les lignes directrices [microsoft sur les marques et les marques).](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+* Si votre application fait partie d’un partenariat officiel avec Microsoft, le nom de votre application doit passer en premier (par **exemple, Connecteur Contoso pour Microsoft Teams).**
+* Ne doit pas copier le nom d’une application répertoriée dans le magasin ou d’une autre offre sur le marché commercial.
+* Ne doit pas contenir de termes profanes ou péjoratifs. Le nom ne doit pas non plus inclure un langage raciste ou culturellement insensible.
+* Ça doit être unique. Par exemple, vous ne pouvez pas énumérer plusieurs applications pour différentes régions avec le même nom et les mêmes fonctionnalités.
 
-Voir aussi : [Package d’application 4.0 et liste du Store](#40-app-package-and-store-listing)
+### <a name="12-suitable-for-workplace-consumption"></a>1.2 Convient à la consommation en milieu de travail
 
-### <a name="12-suitable-for-workplace-consumption"></a>1.2 Convient à la consommation de l’espace de travail
+Le contenu des applications doit être adapté à la consommation générale en milieu de travail et respecter toutes les restrictions énumérées dans les politiques de certification du marché commercial. Le contenu lié à la religion, à la politique, au jeu et au divertissement prolongé est interdit. Pour plus d’informations, consultez les politiques [de certification du marché commercial](/legal/marketplace/certification-policies#10010-inappropriate-content).
 
-Le contenu de l’application doit convenir à une utilisation générale de l’espace de travail et respecter toutes les restrictions répertoriées dans les stratégies de certification du marketplace commercial. Le contenu lié à l’animation, à la politique, aux jeux et aux divertissements prolongés est interdit. Pour plus d’informations, voir les [stratégies de certification du marketplace commercial.](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content)
+Votre application doit faciliter la collaboration de groupe, améliorer la productivité d’une personne, ou les deux. Les applications destinées à la liaison d’équipe et à la socialisation doivent être collaboratives et conçues pour plusieurs participants. Ces types d’applications ne devraient pas non plus nécessiter un investissement de temps substantiel ou avoir un impact perspicace sur la productivité.
 
-Votre application doit faciliter la collaboration de groupe, améliorer la productivité d’un individu ou les deux. Les applications destinées à la liaison et à la socialisation d’équipe doivent être collaboratives et conçues pour plusieurs participants. Ces types d’applications ne doivent pas non plus nécessiter un investissement en temps considérable ou avoir un impact négatif sur la productivité.
+### <a name="13-similar-platforms-and-services"></a>1.3 Plates-formes et services similaires
 
-### <a name="13-similar-platforms-and-services"></a>1.3 Plateformes et services similaires
+Les applications doivent se concentrer sur l’expérience Teams et ne pas inclure les noms, icônes ou images d’autres plateformes ou services de collaboration similaires basés sur le chat, à moins que votre application ne fournisse une interopérabilité spécifique.
 
-Les applications doivent se concentrer sur l’expérience Teams et ne pas inclure les noms, les icônes ou les images d’autres plateformes ou services de collaboration basés sur la conversation similaires, sauf si votre application fournit une interopérabilité spécifique.
+### <a name="14-feature-names"></a>1.4 Noms de fonctionnalités
 
-### <a name="14-feature-names"></a>1.4 Noms des fonctionnalités
+Les noms de fonctionnalités d’application dans les boutons et autres textes d’interface utilisateur ne doivent pas entrer en conflit avec la terminologie réservée Teams et autres produits Microsoft. Par exemple, **Commencez la réunion,** **appelez,** ou commencez **à discuter**. Incluez le nom de votre application si vous ne pouvez pas l’éviter complètement, comme **la réunion Start Contoso au** lieu de la réunion **Démarrer**.
 
-Les noms des fonctionnalités d’application dans les boutons et tout autre texte d’interface utilisateur ne doivent pas être en conflit avec la terminologie réservée à Teams et aux autres produits Microsoft (par **exemple,** Démarrer une **réunion,** Appeler ou Démarrer la **conversation).** Incluez le nom de votre application si vous ne pouvez pas l’éviter complètement, par exemple, démarrer une réunion **Contoso** au lieu de **commencer la réunion.**
+## <a name="20-security"></a>2.0 Sécurité
 
-## <a name="20-security"></a>Sécurité 2.0
+### <a name="21-microsoft-365-app-compliance-program"></a>2.1 Programme de conformité Microsoft 365 appr$
 
-### <a name="21-microsoft-365-app-compliance-program"></a>2.1 Programme Microsoft 365 conformité des applications
+Le programme [Microsoft 365 conformité des applications est destiné à](/microsoft-365-app-certification/overview) aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité sur votre application. Si vous publiez une application sur le Teams magasin, vous devez remplir les niveaux suivants du programme :
 
-Le [Microsoft 365 conformité](https://docs.microsoft.com/microsoft-365-app-certification/overview) des applications est conçu pour aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité concernant votre application. Si vous publiez une application dans le Teams, vous devez effectuer les niveaux suivants du programme :
-
-* [Publisher vérification :](/azure/active-directory/develop/publisher-verification-overview)permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité de l’intégration des développeurs d’applications au Plateforme d’identités Microsoft. Une fois terminé, un badge bleu « vérifié » s’affiche sur la boîte de dialogue de consentement Azure Active Directory (Azure AD) et d’autres écrans. Pour plus d’informations, voir [les questions fréquemment posées,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)comment marquer votre application comme éditeur vérifié et résoudre les problèmes de vérification de [l’éditeur](/azure/active-directory/develop/troubleshoot-publisher-verification). [](/azure/active-directory/develop/mark-app-as-publisher-verified)
-* [Publisher attestation](/microsoft-365-app-certification/docs/attestation): processus dans lequel vous partagez des informations générales, de gestion des données et de sécurité et de conformité pour aider les clients potentiels à prendre des décisions éclairées sur l’utilisation de votre application.
+* [Publisher : Aide](/azure/active-directory/develop/publisher-verification-overview)les administrateurs et les utilisateurs finaux à comprendre l’authenticité des développeurs d’applications qui s’intègrent Plateforme d’identités Microsoft. Une fois terminé, un badge bleu « vérifié » s’affiche sur le dialogue de consentement Azure Active Directory (Azure AD) et d’autres écrans. Pour plus d’informations, [consultez les questions fréquemment posées,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)comment marquer votre application comme éditeur [vérifié, et](/azure/active-directory/develop/mark-app-as-publisher-verified)la vérification de [l’éditeur de dépannage](/azure/active-directory/develop/troubleshoot-publisher-verification).
+* [Publisher attestation : Processus](/microsoft-365-app-certification/docs/attestation)dans lequel vous partagez des informations générales, de traitement des données et de sécurité et de conformité pour aider les clients potentiels à prendre des décisions éclairées sur l’utilisation de votre application.
 
 > [!NOTE]
-> Si vous soumettez une application qui n’a pas été répertoriée précédemment, vous ne pouvez pas terminer officiellement l’attestation d’Publisher tant que votre application n’est pas dans le Teams store. Si vous êtes en train de mettre à jour une application répertoriée, Publisher attestation avant de soumettre la dernière version de l’application.
+> Si vous soumettez une application qui n’a pas été répertoriée précédemment, vous ne pouvez pas remplir officiellement l’attestation Publisher tant que votre application n’est pas dans le magasin Teams’argent. Si vous mettez à jour une application répertoriée, remplissez Publisher attestation avant de soumettre la dernière version de l’application.
 
 ### <a name="22-bots"></a>2.2 Bots
 
-Pour les applications qui utilisent le service Microsoft Azure Bot (par exemple, les bots et les extensions de messagerie), vous devez respecter toutes les conditions définies dans les conditions d’utilisation de Microsoft [Online Services.](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)
+Pour les applications qui utilisent le Microsoft Azure Bot Service (tels que les bots et les extensions de messagerie), vous devez suivre toutes les exigences définies dans les conditions [des services en ligne Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
-Les bots doivent toujours demander l’autorisation de télécharger un fichier et afficher un message de confirmation après le téléchargement du fichier.
+Les bots doivent toujours demander la permission de télécharger un fichier et d’afficher un message de confirmation après les téléchargements de fichiers.
 
 ### <a name="23-external-domains"></a>2.3 Domaines externes
 
-Dans la plupart des cas, vous ne devez pas inclure de domaines en dehors du contrôle de votre organisation (y compris les caractères génériques) et des services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes sont les suivantes :
+Dans la plupart des cas, vous ne devez pas inclure de domaines hors du contrôle de votre organisation (y compris les wildcards) et des services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes comprennent :
 
-* Si votre application utilise le OAuthCard d’Azure Bot Service, vous devez inclure comme domaine valide, sinon le bouton Se connecter ne `token.botframework.com` fonctionne pas. 
-* Si votre application s’appuie sur SharePoint, vous pouvez inclure le site SharePoint racine associé en tant que domaine valide à l’aide de la `{teamSiteDomain}` propriété de contexte.
+* Si votre application utilise la Carte OAuthcard d’Azure Bot Service, vous devez inclure `token.botframework.com` comme domaine valide ou le bouton Connect **in** ne fonctionnera pas.
+* Si votre application s’appuie sur SharePoint, vous pouvez inclure le site root SharePoint comme un domaine valide en utilisant la propriété `{teamSiteDomain}` context.
 
 ### <a name="24-authentication"></a>2.4 Authentification
 
-Pour plus d’informations sur l’implémenter l’authentification d’application, voir [l’authentification dans Teams](~/concepts/authentication/authentication.md).
+Pour plus d’informations sur la façon d’implémenter l’authentification des applications, [voir l’authentification Teams](~/concepts/authentication/authentication.md).
 
 #### <a name="241-authenticating-with-external-services"></a>2.4.1 Authentification avec des services externes
 
-N’oubliez pas ce qui suit si votre application authentifier les utilisateurs avec un service externe.
+N’oubliez pas ce qui suit si votre application authentifie les utilisateurs avec un service externe.
 
-* **Connectez-vous, connectez-vous et inscrivez-vous** aux expériences :
-  * Les applications qui dépendent de comptes ou de services externes doivent fournir des expériences claires et simples de se connecter, de se signer et de s’inscrire.
-  * Lorsqu’un utilisateur se connecte, il ne doit se sortir que de l’application et rester Teams.
-* Expériences de partage de contenu : les applications qui nécessitent une authentification auprès d’un service externe pour partager du contenu dans des canaux Teams doivent clairement faire état dans la documentation d’aide (ou ressources similaires) de la manière de déconnecter ou de partager du contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité de partager du contenu doit être présente dans votre application Teams partage.
+* **Connectez-vous, dédez-vous et inscrivez-vous à des expériences**:
+  * Les applications qui dépendent de comptes ou de services externes doivent fournir des expériences claires et simples de se connecter, de se dé connecter et de s’inscrire.
+  * Lorsqu’un utilisateur se connecte, il ne doit se dédant qu’à partir de l’application et rester connecté Teams.
+* **Expériences de partage de contenu**: Les applications qui nécessitent une authentification avec un service externe pour partager du contenu dans les canaux Teams doivent indiquer clairement dans la documentation d’aide (ou des ressources similaires) comment déconnecter ou déconnecter le contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité de dé partager du contenu doit être présente dans votre Teams appe.
 
-#### <a name="242-government-community-cloud-listings"></a>2.4.2 listes Cloud de la communauté du secteur public listes
+#### <a name="242-government-community-cloud-listings"></a>2.4.2 Annonces Cloud de la communauté du secteur public annonces
 
-Pour distribuer votre application aux utilisateurs Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) tout en évitant les doublons dans le magasin Teams, le processus d’authentification doit identifier et router les utilisateurs vers une URL spécifique ou attendue Cloud de la communauté du secteur public.
+Pour distribuer votre application aux utilisateurs de Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) tout en évitant les annonces en double dans le magasin Teams, le processus d’authentification doit identifier et acheminer les utilisateurs vers une URL spécifique ou attendue à Cloud de la communauté du secteur public.
 
 ### <a name="25-sensitive-content"></a>2.5 Contenu sensible
 
-Votre application ne doit pas publier de données sensibles, telles que des données de carte bancaire ou d’instrument de paiement financier. L’application ne doit pas non plus afficher l’état d’état, le suivi des contacts ou d’autres informations d’identification personnelle (PII) à une audience qui n’est pas destinée à afficher ce contenu.
+Votre application ne doit pas publier de données sensibles, telles que les données de carte de crédit ou d’instruments de paiement financier. L’application ne doit pas non plus afficher la santé, le traçage des contacts ou d’autres informations personnellement identifiables (IIP) à un public qui n’a pas l’intention de voir ce contenu.
 
-Avertissez les utilisateurs avant que votre application télécharge des fichiers ou des fichiers exécutables (.exe) sur l’ordinateur ou l’environnement de l’utilisateur.
+Avertissez les utilisateurs avant que votre application ne télécharge des fichiers ou des exécutables (.exe) dans la machine ou l’environnement de l’utilisateur.
 
 ### <a name="26-financial-information"></a>2.6 Informations financières
 
-Les applications ne doivent pas demander aux utilisateurs d’effectuer des paiements dans Teams interface utilisateur. Les détails de l’instrument financier ne doivent pas être transmis aux utilisateurs via une interface de bot.
+Les applications ne doivent pas demander aux utilisateurs d’effectuer des paiements dans Teams interface. Les détails des instruments financiers ne doivent pas être transmis aux utilisateurs via une interface bot.
 
-Vous pouvez établir un lien vers des services de paiement externes sécurisés uniquement si vous avez effectué la divulgation appropriée dans vos conditions d’utilisation, politique de confidentialité ou toute page de profil ou site web avant que l’utilisateur n’accepte d’utiliser l’application.
+Vous ne pouvez établir un lien vers des services de paiement externes sécurisés que si vous avez fait la divulgation appropriée dans vos conditions d’utilisation, votre politique de confidentialité ou toute page de profil ou site Web avant que l’utilisateur accepte d’utiliser l’application.
 
-Les applications qui s’exécutent sur la version iOS ou Android de Teams doivent respecter les instructions suivantes :
+Les applications fonctionnant sur la version iOS ou Android de Teams doivent respecter les lignes directrices suivantes :
 
-* Les applications ne doivent pas inclure d’achats dans l’application, d’offres d’essai ou d’interface utilisateur qui visent à promouvoir des versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules.
-* Si votre application nécessite un compte, les utilisateurs doivent pouvoir s’inscrire à un compte gratuitement. L’utilisation du terme **compte libre** ou **gratuit** est interdite.
-* Vous pouvez déterminer si un compte est actif indéfiniment ou pendant une durée limitée, mais si le compte expire, aucune interface utilisateur, texte ou liens indiquant la nécessité de payer ne s’affiche.
-* Les pages de politique de confidentialité et de conditions d’utilisation de votre application ne doivent pas être liées à une interface utilisateur ou à des liens commerciaux.
+* Les applications ne doivent pas inclure les achats intégrés, les offres d’essai ou l’interface utilisateur qui vise à vendre des versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules supplémentaires.
+* Si votre application nécessite un compte, les utilisateurs doivent pouvoir s’inscrire gratuitement à un compte. L’utilisation du terme **compte** gratuit **ou gratuit** est interdite.
+* Vous pouvez déterminer si un compte est actif indéfiniment ou pour une durée limitée, mais si le compte expire, aucune interface utilisateur, texte ou lien indiquant la nécessité de payer ne peut être affiché.
+* La politique de confidentialité et les pages de conditions d’utilisation de votre application doivent être exemptes de toute interface utilisateur ou lien lié au commerce.
 
-## <a name="30-general-functionality-and-performance"></a>3.0 Fonctionnalités et performances générales
+## <a name="30-general-functionality-and-performance"></a>3.0 Fonctionnalité générale et performance
 
-### <a name="31-launching-external-functionality"></a>3.1 Lancement des fonctionnalités externes
+### <a name="31-launching-external-functionality"></a>3.1 Lancement de fonctionnalités externes
 
-Les applications ne doivent pas sortir les utilisateurs de Teams pour les scénarios utilisateur principaux. Le contenu et les interactions de l’application peuvent se produire Teams fonctionnalités, telles que les bots, les cartes et les modules de tâche.
+Les applications ne doivent pas sortir les utilisateurs de Teams pour les scénarios utilisateur de base. Le contenu et les interactions des applications peuvent se Teams capacités spécifiques, telles que les bots, les cartes et les modules de tâches.
 
-Vous devez lier les utilisateurs Teams et non à un site ou une application externe. Pour les scénarios qui nécessitent des fonctionnalités externes, votre application doit avoir une autorisation utilisateur explicite pour lancer cette fonctionnalité.
+Vous devez lier les utilisateurs quelque part Teams et non à un site ou une application externe. Pour les scénarios qui nécessitent des fonctionnalités externes, votre application doit avoir l’autorisation explicite de l’utilisateur de lancer cette fonctionnalité.
 
 ### <a name="32-compatibility"></a>3.2 Compatibilité
 
 Les applications doivent être entièrement fonctionnelles sur les systèmes d’exploitation et navigateurs suivants :
 
-* Microsoft Windows 7 et ultérieures
-* macOS 10.10 et ultérieur
+* Microsoft Windows 7 et plus tard
+* macOS 10.10 et plus tard
 * Microsoft Edge 12 et versions ultérieures
-* Mozilla Firefox 47.0 et version ultérieure
-* Google Chrome 51.0 et ultérieur
-* iOS 9.0 et ultérieur
-* Android 4.4 et version ultérieure
+* Mozilla Firefox 47.0 et plus tard
+* Google Chrome 51.0 et plus tard
+* iOS 9.0 et plus tard
+* Android 4.4 et plus tard
 
 ### <a name="33-response-time"></a>3.3 Temps de réponse
 
-Teams applications doivent répondre dans un délai raisonnable, qui varie en fonction de la fonctionnalité.
+Teams applications doivent répondre dans un délai raisonnable, ce qui varie en fonction de la capacité.
 
-* Les onglets doivent répondre dans un délai de trois secondes ou afficher un message de chargement ou un avertissement.
-* Les bots doivent répondre aux commandes de l’utilisateur dans un délai de deux secondes ou afficher un indicateur de saisie.
-* Les extensions de messagerie doivent répondre aux commandes de l’utilisateur dans un délai de cinq secondes.
-* Les notifications doivent s’afficher dans les cinq secondes après l’action de l’utilisateur.
+* Les onglets doivent répondre dans les trois secondes ou afficher un message de chargement ou un avertissement.
+* Les bots doivent répondre aux commandes de l’utilisateur dans les deux secondes ou afficher un indicateur de frappe.
+* Les extensions de messagerie doivent répondre aux commandes de l’utilisateur dans les cinq secondes.
+* Les notifications doivent s’afficher dans les cinq secondes qui ont après l’action de l’utilisateur.
 
-## <a name="40-app-package-and-store-listing"></a>Package d’application 4.0 et liste du Store
+## <a name="40-app-package-and-store-listing"></a>4.0 Paquet d’application et liste de magasin
 
-Les packages d’application doivent être correctement formatés et inclure toutes les informations et composants requis.
+Les paquets d’applications doivent être correctement formatés et inclure toutes les informations et composants requis.
 
-### <a name="41-app-manifest"></a>4.1 Manifeste de l’application
+### <a name="41-app-manifest"></a>4.1 Manifeste d’application
 
-Le Teams de l’application définit les configurations de votre application.
+Le Teams’application définit les configurations de votre application.
 
-* Votre manifeste doit être conforme au schéma de manifeste le plus récent. Pour plus d’informations, voir la [référence de manifeste.](~/resources/schema/manifest-schema.md)
-* Si votre application inclut une extension de bot ou de messagerie, votre manifeste doit être cohérent avec les métadonnées Bot Framework, y compris le nom du bot, le logo, le lien de la politique de confidentialité et le lien des conditions d’utilisation.
-* Si votre application utilise Azure Active Directory (Azure AD) pour l’authentification, incluez l’ID de l’application Azure AD (client) dans le manifeste. Pour plus d’informations, voir la [référence de manifeste.](~/resources/schema/manifest-schema.md#webapplicationinfo)
+* Votre manifeste doit se conformer au dernier schéma manifeste. Pour plus d’informations, voir [la référence manifeste](~/resources/schema/manifest-schema.md).
+* Si votre application inclut une extension de bot ou de messagerie, votre manifeste doit être compatible avec les métadonnées bot framework, y compris le nom du bot, le logo, le lien de politique de confidentialité et le lien sur les conditions de service.
+* Si votre application utilise Azure Active Directory (Azure AD) pour l’authentification, incluez l’iD azure ad (client) dans le manifeste. Pour plus d’informations, voir [la référence manifeste](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="42-app-icons"></a>4.2 Icônes d’application
 
-Les icônes sont l’un des principaux éléments que les utilisateurs voient lors de la navigation dans Teams store. Vos icônes doivent communiquer la marque et l’objectif de votre application tout en respectant les exigences suivantes :
+Les icônes sont l’un des principaux éléments que les gens voient lors de la navigation Teams magasin. Vos icônes doivent communiquer la marque et le but de votre application tout en respectant les exigences suivantes :
 
-* Votre package d’application doit inclure deux versions PNG de l’icône de votre application : une icône de couleur et une icône de plan.
-* La version de couleur de votre icône s’affiche dans la plupart Teams scénarios et doit être de 192 x 192 pixels. Votre symbole d’icône (96 x 96 pixels) peut être n’importe quelle couleur ou couleur, mais il doit être sur un arrière-plan carré plein ou entièrement transparent.
-* La version plan de votre icône s’affiche lorsque votre application est en cours d’utilisation et « hissée » dans la barre de l’application sur le côté gauche de Teams et lorsqu’un utilisateur épingle l’extension de messagerie de votre application. Elle doit être de 32 x 32 pixels et peut être blanche avec un arrière-plan transparent ou transparente avec un arrière-plan blanc (aucune autre couleur n’est autorisée). L’icône ne doit pas avoir d’espacement supplémentaire autour du symbole.
-* Les icônes correctement formatées et de taille doivent être incluses dans votre package d’application. Les icônes doivent également correspondre à ce qui est envoyé avec les métadonnées de la liste du Store.
+* Votre package d’application doit inclure deux versions PNG de votre icône d’application : une icône couleur et une icône de contour.
+* La version couleur de votre icône s’affiche dans la plupart Teams scénarios et doit être de 192x192 pixels. Votre symbole d’icône (pixels 96x96) peut être n’importe quelle couleur ou couleur, mais il doit s’asseoir sur un fond carré solide ou entièrement transparent.
+* La version d’aperçu de votre icône s’affiche lorsque votre application est en cours d’utilisation et « hissée » sur la barre d’application sur le côté gauche de Teams et lorsqu’un utilisateur épingle l’extension de messagerie de votre application. Il doit être de 32x32 pixels et peut être blanc avec un fond transparent ou transparent avec un fond blanc (aucune autre couleur n’est autorisée). L’icône ne doit pas avoir de rembourrage supplémentaire autour du symbole.
+* Les icônes correctement dimensionnées et formatées doivent être incluses dans votre package d’application. Les icônes doivent également correspondre à ce qui est soumis avec les métadonnées de liste de magasin.
 
-Pour plus d’informations, de meilleures pratiques et d’exemples, voir les recommandations [Teams’icône d’application.](~/concepts/build-and-test/apps-package.md#app-icons)
+Pour plus d’informations, les meilleures pratiques et les exemples, consultez les lignes directrices sur [Teams’icône de l’application](~/concepts/build-and-test/apps-package.md#app-icons).
 
-### <a name="43-app-descriptions"></a>4.3 Descriptions des applications
+### <a name="43-app-descriptions"></a>4.3 Descriptions d’applications
 
-Vous devez avoir une description courte et longue de votre application. Les descriptions dans les configurations de votre application et dans l’Partner Center doivent être identiques.
+Vous devez avoir une description courte et longue de votre application. Les descriptions dans les configurations de votre application et partner center doivent être les mêmes.
 
-Les descriptions ne doivent pas désapprouver directement ou par insinuation une autre marque (propriété de Microsoft ou autre). Assurez-vous que votre description n’inclut pas les revendications qui ne peuvent pas être garanties (par exemple, « Augmentation garantie de 200 % de l’efficacité »).
+Les descriptions ne devraient pas dénigrer directement ou par insinuation une autre marque (propriété de Microsoft ou autre). Assurez-vous que votre description n’inclut pas les allégations qui ne peuvent pas être corroborées (par exemple, « Augmentation garantie de 200 % de l’efficacité »).
 
 #### <a name="431-short-description"></a>4.3.1 Description courte
 
-Une brève description est un résumé concis de votre application qui met en évidence sa proposition de valeur et s’adresse à votre public cible.
+Une courte description est un résumé concis de votre application qui met en évidence sa proposition de valeur et s’adresse à votre public cible.
 
 **À faire :**
 
-* Conservez la description courte jusqu’à une phrase.
+* Gardez la courte description à une phrase.
 * Mettez les informations les plus importantes en premier.
-* Incluez des mots clés que les clients sont susceptibles de rechercher.
+* Incluez les mots clés que les clients sont susceptibles de rechercher.
 
 **À ne pas faire :**
 
 * Répétez le nom de votre application.
-* Utilisez **l’application Word** dans la description courte.
+* Utilisez le mot **application** dans la courte description.
 
-#### <a name="432-long-description"></a>4.3.2 Description longue
+#### <a name="432-long-description"></a>4.3.2 Longue description
 
-La description longue peut fournir un narratif attrayant qui met en évidence la proposition de valeur de votre application, le public principal et le secteur cible. Bien que cette description puisse prendre jusqu’à 4 000 caractères, la plupart des utilisateurs ne lisent qu’entre 300 et 500 mots.
+La longue description peut fournir un récit engageant qui met en évidence la proposition de valeur de votre application, l’audience primaire et l’industrie cible. Bien que cette description puisse aller jusqu’à 4 000 caractères, la plupart des utilisateurs ne liront qu’entre 300 et 500 mots.
 
 **À faire :**
 
-* Utilisez [Markdown pour](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) mettre en forme votre description.
-* Utilisez la voix active et parlez directement aux utilisateurs (par exemple, *vous pouvez...*).
-* List features with bullet points so it’s easier to scan the description.
-* Décrivez clairement les limitations, conditions ou exceptions aux fonctionnalités, fonctionnalités et livrables décrites dans la description et les documents associés avant que l’utilisateur installe votre application. Les Teams que votre application prend en charge doivent être liées aux fonctions principales que votre description décrit.
-* Inclure un lien d’aide ou de support.
-* **Reportez-vous Microsoft 365** au lieu de **Office 365**.
-* Si vous avez besoin de **référencer Teams,** écrivez la première référence en **tant que Microsoft Teams**. Les références suivantes peuvent être raccourcies **Teams**.
-* Utilisez le langage suivant pour décrire le fonctionnement de l’application avec Teams (ou Microsoft 365) :
-  * "... fonctionne avec Microsoft Teams. »
-  * "... travailler avec Microsoft Teams. »
-  * "... dans Microsoft Teams. »
-  * "... pour Microsoft Teams. »
+* Utilisez [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) pour formater votre description.
+* Utilisez la voix active et parlez directement aux utilisateurs. Par exemple, *Vous pouvez ...*.
+* Liste des fonctionnalités avec des points de balle de sorte qu’il est plus facile de scanner la description.
+* Décrivez clairement les limitations, les conditions ou les exceptions aux fonctionnalités, fonctionnalités et livrables décrites dans la liste et les documents connexes avant que l’utilisateur n’installe votre application. Les Teams de votre application doivent se rapporter aux fonctions de base que votre annonce décrit.
+* Incluez un lien d’aide ou de soutien.
+* Se référer **à Microsoft 365** au lieu **de Office 365**.
+* Si vous avez besoin de **référencer Teams**, écrivez la première référence **comme Microsoft Teams**. Les références ultérieures peuvent être raccourcies **Teams**.
+* Utilisez la langue suivante pour décrire le fonctionnement de l’application avec Teams (ou Microsoft 365) :
+  * "... travaille avec Microsoft Teams.
+  * "... travailler avec Microsoft Teams.
+  * "... dans Microsoft Teams.
+  * "... pour Microsoft Teams.
 
 **À ne pas faire :**
 
-* Dépassez 500 mots.
-* Abréviation **de Microsoft** en tant que **MS** ou **MSFT**.
-* Indiquez que l’application est une offre de Microsoft, y compris à l’aide de balises ou de balises microsoft.
-* Utilisez des noms de marque protégés par des droits d’auteur que vous ne possédez pas.
-* Incluez des fautes de frappe, des erreurs grammaticales et des majuscules inutiles (par **exemple,** Utilisateurs au lieu des **utilisateurs).**
-* Inclure des liens vers AppSource.
-* Utilisez la langue suivante, sauf si vous êtes un partenaire Microsoft certifié :
-  * "... intégré à Microsoft Teams »
-  * "... s’intègre avec ...
-  * "... conçu pour ...
-  * "... intégré à ...
-  * "... s’exécute sur ...
-  * "... activé par ...
-  * "... certifié pour ...
-  * "... développé pour ...
-  * "... conçu pour ...
+* Dépassez les 500 mots.
+* Abréviation **Microsoft** comme **MS** ou **MSFT**.
+* Indiquez que l’application est une offre de Microsoft, y compris en utilisant des slogans ou des slogans Microsoft.
+* Utilisez des marques protégées par le droit d’auteur que vous ne possédez pas.
+* Inclure des fautes de frappe, des erreurs grammaticales et des capitalisations inutiles (par exemple, les **utilisateurs au** lieu des **utilisateurs).**
+* Incluez des liens vers AppSource.
+* Utilisez la langue suivante à moins d’être un partenaire Microsoft certifié :
+  * "... intégré à Microsoft Teams »
+  * "... s’intègre à ... »
+  * "... construit pour ... »
+  * "... construit sur ... »
+  * "... fonctionne sur ... »
+  * "... activé par ... »
+  * "... certifié pour ... »
+  * "... développé pour ... »
+  * "... conçu pour ... »
 
 ### <a name="44-screenshots"></a>4.4 Captures d’écran
 
-Les captures d’écran fournissent un aperçu visuel de votre application pour compléter le nom, l’icône et les descriptions de votre application. Souvenez-vous des captures d’écran suivantes :
+Les captures d’écran fournissent un aperçu visuel important de votre application pour compléter le nom, l’icône et les descriptions de votre application. Rappelez-vous ce qui suit sur les captures d’écran:
 
-* Vous pouvez avoir jusqu’à cinq captures d’écran par liste.
-* Les types de fichiers pris en charge sont PNG, JPEG et GIF.
-* Les dimensions doivent être de 1 366 x 768 pixels.
-* Taille maximale de 1 024 Ko.
+* Vous pouvez avoir jusqu’à cinq captures d’écran par annonce.
+* Les types de fichiers pris en charge incluent PNG, JPEG et GIF.
+* Les dimensions doivent être de 1366x768 pixels.
+* Taille maximale de 1 024 KB.
 
 **À faire :**
 
-* Concentrez-vous sur les fonctionnalités de votre application (par exemple, comment les personnes peuvent communiquer avec votre bot).
-* Incluez du contenu qui représente précisément votre application.
-* Utilisez du texte judicieusement.
-* Captures d’écran avec une couleur qui reflète votre marque et inclut du contenu marketing, similaire à l’exemple de listing [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) (les exigences de dimension s’appliquent à l’image entière et pas seulement à la capture d’écran).
+* Concentrez-vous sur les capacités de votre application (par exemple, comment les gens peuvent communiquer avec votre bot).
+* Incluez du contenu qui représente avec précision votre application.
+* Utilisez le texte judicieusement.
+* Cadrez des captures d’écran avec une couleur qui reflète votre marque et incluez du contenu marketing, similaire à [l’exemple de liste Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) (les exigences de dimension s’appliquent à l’ensemble de l’image et pas seulement à la capture d’écran).
 
 **À ne pas faire :**
 
-* Afficher des appareils spécifiques, tels que des téléphones ou des ordinateurs portables.
-* Afficher le chrome ou l’interface utilisateur qui n’est pas dans votre application.
-* Capturez les Teams ou l’interface utilisateur du navigateur dans vos captures d’écran.
-* Incluez des maquettes qui reflètent de manière incorrecte l’interface utilisateur réelle de votre application, comme l’affichage de votre application utilisée en dehors de Teams.
+* Affichez des appareils spécifiques, tels que des téléphones ou des ordinateurs portables.
+* Affichez chrome ou interface utilisateur qui n’est pas dans votre application.
+* Capturez n’importe Teams ou interface utilisateur du navigateur dans vos captures d’écran.
+* Incluez des maquettes qui reflètent inexactement l’interface utilisateur réelle de votre application, par exemple en montrant que votre application est utilisée en dehors de Teams.
 
 > [!TIP]
-> Une vidéo peut être le moyen le plus efficace de communiquer pourquoi les personnes doivent utiliser votre application. Une vidéo est également la première chose que les utilisateurs voient dans votre liste (par défaut, une vidéo s’affiche avant les captures d’écran). Pour plus d’informations, [voir créer une vidéo pour votre listing dans le Store.](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)
+> Une vidéo peut être le moyen le plus efficace de communiquer pourquoi les gens devraient utiliser votre application. Une vidéo est également la première chose que les utilisateurs voient dans votre annonce (par défaut, une vidéo s’affiche avant les captures d’écran). Pour plus d’informations, [voir créer une vidéo pour votre annonce de magasin](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
 ### <a name="45-privacy-policy"></a>4.5 Politique de confidentialité
 
-La politique de confidentialité peut être spécifique à votre application Teams ou une stratégie globale pour tous vos services.
+La politique de confidentialité peut être spécifique à votre Teams ou à une politique globale pour tous vos services.
 
-* Si vous utilisez un modèle de stratégie de confidentialité générique, vous devez référencer des **services,** **des applications** et des **plateformes** pour inclure votre application Teams et votre service ou site web.
-* Doit inclure la façon dont vous traitez le stockage, la rétention et la suppression des données utilisateur. Vous devez également décrire les contrôles de sécurité que vous utilisez pour la protection des données.
-* Doit inclure vos informations de contact.
-* Ne doit pas contenir d’URL rompues ou à des fins bêta ou intermédiaire.
+* Si vous utilisez un modèle générique de politique de confidentialité, vous devez faire référence **à des services,** **des applications** et des **plateformes** pour inclure votre application Teams et votre service ou site Web.
+* Doit inclure la façon dont vous gérez le stockage, la conservation et la suppression des données des utilisateurs. Vous devez également décrire les contrôles de sécurité que vous utilisez pour la protection des données.
+* Doit inclure vos coordonnées.
+* Ne doit pas contenir d’URL cassées ou à des fins bêta ou de mise en scène.
 * Ne doit pas inclure de liens vers AppSource.
 
 ### <a name="46-terms-of-use"></a>4.6 Conditions d’utilisation
 
 Vos conditions d’utilisation doivent être spécifiques et applicables à votre offre.
 
-### <a name="47-support-links"></a>4.7 Liens de support
+### <a name="47-support-links"></a>4.7 Liens de soutien
 
-Les URL de support de votre application ne doivent pas nécessiter d’authentification. Par exemple, les utilisateurs ne doivent pas avoir à se connecter pour vous contacter.
+Les URL de support de votre application ne doivent pas nécessiter d’authentification. Par exemple, les utilisateurs ne devraient pas avoir à se connecter pour vous contacter.
 
 ### <a name="48-localization"></a>4.8 Localisation
 
-Si votre application prend en charge la localisation, votre package d’application doit inclure un fichier avec des traductions linguistiques qui s’affichent en fonction du paramètre Teams langue. Le fichier doit être conforme au schéma Teams de localisation. Pour plus d’informations, voir [le schéma Teams de localisation](~/concepts/build-and-test/apps-localization.md)
+Si votre application prend en charge la localisation, votre package d’application doit inclure un fichier avec des traductions linguistiques qui s’affichent en fonction de l’Teams paramètre linguistique. Le fichier doit se conformer au schéma Teams localisation de la communauté. Pour plus d’informations, [consultez le schéma Teams localisation de la ville.](~/concepts/build-and-test/apps-localization.md)
 
-## <a name="50-tabs"></a>Onglets 5.0
+## <a name="50-tabs"></a>5.0 Onglets
 
-Si votre application inclut un onglet, assurez-vous qu’elle respecte ces recommandations.
+Si votre application inclut un onglet, assurez-vous qu’elle respecte ces lignes directrices.
 
 > [!TIP]
-> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les recommandations [Teams de conception d’onglets.](~/tabs/design/tabs.md)
+> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, [consultez les lignes directrices Teams conception d’onglets.](~/tabs/design/tabs.md)
 
-### <a name="51-setup"></a>5.1 Installation
+### <a name="51-setup"></a>5.1 Configuration
 
-* La configuration de l’onglet ne doit pas arrêter un nouvel utilisateur. Fournissez un message sur la façon d’effectuer l’action ou le flux de travail.
-* L’authentification doit avoir lieu pendant la configuration de l’onglet et non après.
+* La configuration de l’onglet ne doit pas mettre fin à un nouvel utilisateur. Fournissez un message sur la façon de compléter l’action ou le flux de travail.
+* L’authentification doit se produire pendant la configuration de l’onglet et non après.
 
-### <a name="52-views"></a>5.2 Affichages
+### <a name="52-views"></a>5.2 Vues
 
-* La zone d’écran de la signature ne doit pas utiliser de grands logos ni afficher une page web entière.
-* Le contenu peut être simplifié en le parsent sur plusieurs onglets.
-* Les onglets ne doivent pas avoir d’en-tête en double. Supprimez le logo de l’iframe, car l’infrastructure d’onglet affiche déjà l’icône et le nom de l’application.
+* La zone de l’écran de dédage ne doit pas utiliser de grands logos ou afficher une page Web entière.
+* Le contenu peut être simplifié en le dé-dédant sur plusieurs onglets.
+* Les onglets ne doivent pas avoir d’en-tête en double. Supprimez le logo de l’iframe puisque le cadre de l’onglet affiche déjà l’icône et le nom de l’application.
 
 ### <a name="53-navigation"></a>5.3 Navigation
 
 * Les onglets ne doivent pas avoir plus de trois niveaux de navigation.
-* Les onglets ne doivent pas fournir de navigation en conflit avec le Teams navigation principale.
-* Les pages secondaires et troisièmes d’un onglet doivent être ouvertes dans une vue de niveau 2 et 3 dans la zone d’onglet principale, qui est accessible par le biais d’une navigation à l’aide de la navigation vers la gauche ou par le biais d’une navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation par onglets :
-    * Boutons Arrière
+* Les onglets ne doivent pas fournir une navigation qui entre en conflit avec la Teams navigation.
+* Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans une vue de niveau deux et de niveau 3 dans la zone de l’onglet principal, qui est naviguée par la chapelure ou la navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation par onglets :
+    * Boutons arrière
     * En-têtes de page
     * Menus hamburger
-* La tabulation ne doit pas avoir de défilement horizontal.
-* Les liens profonds dans les onglets ne doivent pas être lié à une page web externe, mais quelque part dans Teams (par exemple, les modules de tâche ou d’autres onglets).
-* Les onglets ne doivent pas permettre aux utilisateurs de naviguer en dehors Teams pour l’expérience d’application principale.
+* L’onglet ne doit pas avoir de parchemin horizontal.
+* Les liens profonds dans les onglets ne doivent pas être lier à une page Web externe, mais quelque part dans Teams. Par exemple, modules de tâches ou autres onglets.
+* Les onglets ne doivent pas permettre aux utilisateurs de naviguer en dehors Teams l’expérience de base de l’application.
 
-### <a name="54-usability"></a>5.4 Utilisation
+### <a name="54-usability"></a>5.4 Facilité d’utilisation
 
-* Les onglets doivent fournir une valeur au-delà du simple hébergement d’un site web existant.
-* Les utilisateurs doivent pouvoir annuler leur dernière action dans l’onglet.
-* Les onglets dans un contexte personnel peuvent agréger le contenu des instances partagées de l’application.
-* Les onglets doivent répondre Teams thèmes. Lorsqu’un utilisateur modifie le thème, le thème de l’application doit refléter la sélection.
-* Les onglets doivent utiliser des composants de style Teams (adoption des polices Teams, des gammes de types, des palettes de couleurs, du système de grille, du mouvement, du ton de la voix, etc.) dans la mesure du possible.
-* Vous devez inclure un **onglet Paramètres’onglet.**
-* Les onglets doivent respecter Teams d’interaction (navigation dans la page, position et utilisation des boîtes de dialogue, hiérarchies d’informations, etc.) dans la mesure du possible.
-* Le contenu de l’onglet dans l’iframe ne doit pas inclure de fonctionnalités qui imitent les fonctionnalités principales de Teams (par exemple, les bots, les extensions de messagerie, les appels, les réunions, etc.).
+* Les onglets doivent fournir une valeur au-delà de l’hébergement d’un site Web existant.
+* Les utilisateurs doivent être en mesure de défaire leur dernière action dans l’onglet.
+* Les onglets dans un contexte personnel peuvent regrouper le contenu des instances partagées de l’application.
+* Les onglets doivent être sensibles aux Teams thèmes. Lorsqu’un utilisateur modifie le thème, le thème de l’application doit refléter la sélection.
+* Les onglets doivent utiliser des composants de style Teams, tels que les polices Teams, les rampes de type, les palettes de couleurs, le système de grille, le mouvement, le ton de la voix, et ainsi de suite dans la mesure du possible.
+* Vous devez inclure un **onglet Paramètres..**
+* Les onglets doivent suivre Teams conception de l’interaction, comme la navigation en page, la position et l’utilisation des dialogues, des hiérarchies d’informations, et ainsi de suite dans la mesure du possible.
+* Le contenu de l’onglet dans l’iframe ne doit pas inclure de fonctionnalités qui imitent Teams capacités de base. Par exemple, les bots, les extensions de messagerie, les appels, les réunions, et ainsi de suite.
 
 > [!TIP]
 >
-> * Incluez un bot personnel avec un onglet personnel.
-> * Autoriser les utilisateurs à partager du contenu à partir de leur onglet personnel.
+> * Incluez un bot personnel à côté d’un onglet personnel.
+> * Permettre aux utilisateurs de partager du contenu à partir de leur onglet personnel.
 
 ## <a name="60-bots"></a>6.0 Bots
 
-Si votre application inclut un bot, assurez-vous qu’elle respecte ces recommandations.
+Si votre application inclut un bot, assurez-vous qu’elle respecte ces directives.
 
 > [!TIP]
-> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les recommandations [Teams conception de bot.](~/bots/design/bots.md)
+> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, [consultez les Teams de conception de bots.](~/bots/design/bots.md)
 
-### <a name="61-bot-commands"></a>6.1 Commandes de bot
+### <a name="61-bot-commands"></a>6.1 Commandes bot
 
-L’analyse de l’entrée utilisateur et la prévision de l’intention de l’utilisateur sont difficiles. Les commandes de bot fournissent aux utilisateurs un ensemble de mots ou d’expressions que votre bot comprend afin qu’ils (et votre bot) n’ont pas à deviner.
+Il est difficile d’analyser l’entrée de l’utilisateur et de prédire l’intention de l’utilisateur. Les commandes Bot fournissent aux utilisateurs un ensemble de mots ou de phrases que votre bot comprend afin qu’ils (et votre bot) n’aient pas à deviner.
 
-* Il est vivement recommandé de répertorier les commandes de bot prise en charge dans les configurations de votre application. Ces commandes s’affichent dans la zone de composition lorsqu’un utilisateur tente d’envoyer un message à votre bot.
-* Toutes les commandes que votre bot prend en charge doivent fonctionner correctement, y compris les commandes **Bonjour,** **Hello** et **Aide.**
-
-> [!TIP]
-> Pour les bots personnels, incluez un onglet **Aide** qui décrit plus en détail ce que votre bot peut faire.
-
-### <a name="62-bot-welcome-messages"></a>6.2 Messages de bienvenue du bot
-
-* Les bots doivent presque toujours envoyer un message de bienvenue lors de la première run. Pour une expérience de qualité, le message doit inclure la proposition de valeur de votre bot, la configuration du bot et décrire brièvement toutes les commandes de bot prise en charge. Vous pouvez afficher le message à l’aide d’une carte adaptative avec des boutons pour une meilleure utilisation. Pour plus d’informations, [voir comment déclencher un message de bienvenue du bot.](~/bots/how-to/conversations/send-proactive-messages.md)
-* Les messages d’accueil du bot dans les canaux et les conversations sont facultatifs lors de la première utilisation, en particulier si le bot est disponible pour un usage personnel et effectue des actions similaires. Si votre bot envoie des messages de bienvenue, il ne doit pas les envoyer aux utilisateurs individuellement (ceci est considéré comme du courrier [indésirable).](#63-bot-message-spamming) Le message doit également mentionner la personne qui a ajouté le bot.
-* Les bots de notification uniquement doivent envoyer un message de bienvenue qui leur communique qu’ils ne répondront pas aux messages des utilisateurs.
+* L’inscription des commandes de bot prises en charge dans les configurations de votre application est fortement recommandée. Ces commandes s’affichent dans la boîte de composition lorsqu’un utilisateur tente de messager votre bot.
+* Toutes les commandes que votre bot prend en charge doivent fonctionner correctement, y compris la **commande Salut,** **Bonjour** **et** Aide.
 
 > [!TIP]
-> Dans les messages de bienvenue à des utilisateurs individuels, une visite guidée en carrousel peut fournir une vue d’ensemble efficace de votre bot et de toutes les autres fonctionnalités de l’application. L’inclure dans les boutons permet aux utilisateurs d’essayer les commandes du bot (par exemple, **Créer une tâche**).
+> Pour les bots personnels, incluez **un onglet** Aide qui décrit davantage ce que votre bot peut faire.
 
-### <a name="63-bot-message-spamming"></a>6.3 Courrier indésirable de bot
+### <a name="62-bot-welcome-messages"></a>6.2 Bot messages de bienvenue
 
-Les bots ne doivent pas envoyer de courrier indésirable aux utilisateurs en envoyant plusieurs messages successivement.
+* Les bots doivent presque toujours envoyer un message de bienvenue lors de la première manche. Pour la meilleure expérience, le message doit inclure la proposition de valeur de votre bot, comment configurer le bot, et décrire brièvement toutes les commandes de bot prises en charge. Vous pouvez afficher le message à l’aide d’une carte adaptative avec des boutons pour une meilleure facilité d’utilisation. Pour plus d’informations, [voir comment déclencher un message de bienvenue bot](~/bots/how-to/conversations/send-proactive-messages.md).
+* Bot messages de bienvenue dans les canaux et les chats sont facultatifs au cours de la première course, surtout si le bot est disponible pour un usage personnel et effectue des actions similaires. Si votre bot envoie des messages de bienvenue, il ne doit pas les envoyer aux utilisateurs individuellement (ceci est considéré [comme spamming).](#63-bot-message-spamming) Le message doit également mentionner la personne qui a ajouté le bot.
+* Les bots de notification uniquement doivent envoyer un message de bienvenue qui le transmet ne répondra pas aux messages des utilisateurs.
 
-* **Messages de bot dans les canaux et conversations**: ne pas envoyer de courrier indésirable aux utilisateurs en créant des publications distinctes. Créez un billet unique avec des réponses dans le même fil de discussion.
-* **Messages de bot dans les applications personnelles**: n’envoyez pas plusieurs messages successivement. Envoyez un message avec des informations complètes. Évitez les conversations à plusieurs tour pour terminer un flux de travail unique. Envisagez plutôt d’utiliser un formulaire (ou un module de tâche) pour collecter toutes les entrées d’un utilisateur en même temps.
-* **Messages de** bienvenue : la répétition du même message de bienvenue à intervalles réguliers n’est pas autorisée et est considérée comme un courrier indésirable. Par exemple, lorsqu’un nouveau membre est ajouté à une équipe, ne spammez pas les autres membres avec un message de bienvenue. Message personnel du nouveau membre.
+> [!TIP]
+> Dans les messages de bienvenue aux utilisateurs individuels, une visite carrousel peut fournir une vue d’ensemble efficace de votre bot et toutes les autres fonctionnalités de l’application. Y compris les boutons la permettent aux utilisateurs d’essayer les commandes bot est encouragé. Par exemple, **Créez une tâche**.
 
-### <a name="64-bot-notifications"></a>6.4 Notifications de bot
+### <a name="63-bot-message-spamming"></a>6.3 Bot message spamming
 
-Les notifications de bot doivent inclure du contenu pertinent pour l’étendue que vous définissez pour le bot (équipe, conversation ou personnel).
+Les bots ne doivent pas spammer les utilisateurs en envoyant plusieurs messages en succession courte.
+
+* **Messages bot dans les canaux et les chats**: Ne spammez pas les utilisateurs en créant des publications distinctes. Créez un seul message avec des réponses dans le même thread.
+* **Messages bot dans les applications personnelles**: N’envoyez pas plusieurs messages en succession rapide. Envoyez un message avec des informations complètes. Évitez les conversations multi-virages pour compléter un seul flux de travail. Au lieu de cela, envisagez d’utiliser un formulaire (ou un module de tâche) pour recueillir toutes les entrées d’un utilisateur en même temps.
+* **Messages de bienvenue**: Répéter le même message de bienvenue à intervalles réguliers n’est pas autorisé et considéré comme un spamming. Par exemple, lorsqu’un nouveau membre est ajouté à une équipe, ne spammez pas les autres membres avec un message de bienvenue. Message le nouveau membre personnellement à la place.
+
+### <a name="64-bot-notifications"></a>6.4 Notifications bot
+
+Les notifications bot doivent inclure du contenu pertinent pour la portée que vous définissez pour le bot (équipe, chat ou personnel).
 
 ### <a name="65-bots-and-adaptive-cards"></a>6.5 Bots et cartes adaptatives
 
-Les cartes adaptatives sont un moyen fortement recommandé d’afficher des messages de bot. Vos cartes doivent être légères et inclure uniquement 1 à 3 actions. Si vous avez besoin d’afficher davantage de contenu, envisagez d’utiliser un module de tâche ou un onglet.
+Cartes adaptatives sont un moyen fortement recommandé d’afficher des messages bot. Vos cartes doivent être légères et ne comprennent que 1-3 actions. Si vous avez besoin d’afficher plus de contenu, envisagez d’utiliser un module de tâches ou un onglet.
 
 Pour plus d'informations, consultez les ressources suivantes :
 
@@ -364,98 +362,102 @@ Pour plus d'informations, consultez les ressources suivantes :
 
 ## <a name="70-messaging-extensions"></a>7.0 Extensions de messagerie
 
-Si votre application inclut une extension de messagerie, assurez-vous qu’elle respecte ces recommandations.
+Si votre application inclut une extension de messagerie, assurez-vous qu’elle respecte ces directives.
 
 > [!TIP]
-> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les instructions Teams [conception d’extension de messagerie.](~/messaging-extensions/design/messaging-extension-design.md)
+> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, [consultez les lignes directrices Teams de conception d’extension de messagerie.](~/messaging-extensions/design/messaging-extension-design.md)
 
 ### <a name="71-action-commands"></a>7.1 Commandes d’action
 
-Les extensions de messagerie basées sur l’action doivent :
+Les extensions de messagerie basées sur l’action devraient faire ce qui suit :
 
-* Autoriser les utilisateurs à déclencher des actions sur un message sans effectuer d’étapes intermédiaires, telles que la signature.
-* Passez le contexte du message à l’état de travail suivant.
+* Permettre aux utilisateurs de déclencher des actions sur un message sans effectuer d’étapes intermédiaires, telles que la dédicace.
+* Transmets le contexte du message à l’état de travail suivant.
 
-### <a name="72-preview-links-link-unfurling"></a>7.2 Aperçu des liens (déploiement de lien)
+### <a name="72-preview-links-link-unfurling"></a>7.2 Liens d’aperçu (lien se déployant)
 
-Les extensions de messagerie doivent prévisualiser les liens reconnus dans la Teams de composition. N’ajoutez pas de domaines qui sont en dehors de votre contrôle (URL absolues ou caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont également interdits (par exemple, `*.com` ou `*.org` ).
+Les extensions de messagerie doivent prévisualiser les liens reconnus dans Teams la boîte de composition. N’ajoutez pas de domaines qui sont hors de votre contrôle (urls absolues ou wildcards). Par exemple, est `yourapp.onmicrosoft.com` valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de haut niveau sont également interdits (par exemple, `*.com` ou `*.org` ).
 
 ### <a name="73-search-commands"></a>7.3 Commandes de recherche
 
-* Les extensions de messagerie basées sur la recherche doivent fournir du texte qui aide les utilisateurs à effectuer des recherches efficacement.
+* Les extensions de messagerie basées sur la recherche doivent fournir du texte qui aide les utilisateurs à rechercher efficacement.
 * @mention exécutables doivent être clairs, faciles à comprendre et lisibles.
 
-## <a name="80-task-modules"></a>Modules de tâche 8.0
+## <a name="80-task-modules"></a>8.0 Modules de tâches
 
-Un module de tâche doit inclure une icône et le nom court de l’application à qui il est associé.
-
-> [!TIP]
-> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les instructions Teams de conception du [module de tâche.](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="90-meeting-extensions"></a>9.0 Extensions de réunion
-
-Si votre application inclut une extension de réunion, assurez-vous qu’elle respecte ces recommandations.
+Un module de tâches doit inclure une icône et le nom court de l’application à qui il est associé.
 
 > [!TIP]
-> Pour plus d'informations sur la création d'une expérience d'application de haute qualité, voir les instructions Teams [conception d'extension de réunion.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, [consultez les lignes directrices Teams de conception de modules de tâches.](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
+
+## <a name="90-meeting-extensions"></a>9.0 Prolongations de réunion
+
+Si votre application inclut une extension de réunion, assurez-vous qu’elle respecte ces directives.
+
+> [!TIP]
+> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, [consultez les lignes directrices Teams de conception d’extensions de réunion.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
 ### <a name="91-pre--and-post-meeting-experience"></a>9.1 Expérience avant et après la réunion
 
-* Les écrans avant et après la réunion doivent respecter les recommandations générales en matière de conception des onglets. Pour plus d'informations, voir les [recommandations Teams conception.](~/tabs/design/tabs.md)
+* Les écrans avant et après la réunion doivent respecter les lignes directrices générales sur la conception des onglets. Pour plus d’informations, consultez les [lignes directrices Teams conception des données.](~/tabs/design/tabs.md)
 * Les onglets ne doivent pas avoir de défilement horizontal.
-* Les onglets doivent avoir une disposition organisée lors de l'affichage de plusieurs éléments (par exemple, plus de 10 sondages ou enquêtes). Voir un [exemple de disposition.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)
-* Votre application doit informer les utilisateurs lorsque les résultats d'une enquête ou d'un sondage sont exportés en indiquant « Résultats téléchargés avec succès ».
+* Les onglets doivent avoir une mise en page organisée lors de l’affichage de plusieurs éléments. Par exemple, plus de 10 sondages ou sondages. Voir une mise [en page d’exemple](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
+* Votre application doit informer les utilisateurs lorsque les résultats d’un sondage ou d’un sondage sont exportés en indiquant : « Résultats téléchargés avec succès ».
 
 ### <a name="92-in-meeting-experience"></a>9.2 Expérience en réunion
 
-* Les applications doivent uniquement utiliser un thème foncé pendant les réunions. Pour plus d'informations, voir les [recommandations Teams conception.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming)
-* Une boîte à outils doit afficher le nom de l'application lorsque vous placez le pointage sur l'icône de l'application pendant les réunions.
-* Les extensions de messagerie doivent fonctionner de la même manière pendant les réunions qu'en dehors des réunions.
+* Les applications ne doivent utiliser un thème sombre que pendant les réunions. Pour plus d’informations, consultez les [lignes directrices Teams conception des données.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming)
+* Un tooltip doit afficher le nom de l’application lorsque vous passez au-dessus de l’icône de l’application pendant les réunions.
+* Les extensions de messagerie doivent fonctionner de la même manière pendant les réunions qu’en dehors des réunions.
 
-### <a name="93-in-meeting-tabs"></a>9.3 Onglets de réunion
+### <a name="93-in-meeting-tabs"></a>9.3 Onglets en réunion
 
-* Doit être réactif. Veillez à maintenir la taille des remplissages et des composants.
-* Doit avoir un bouton Retour s'il existe plusieurs couches de navigation.
-* Ne doit pas inclure plusieurs boutons d'arrêt ou de fermeture. Cela peut dérouter les utilisateurs, car il existe déjà un bouton d'en-tête intégré pour faire disparaître l'onglet.
+* Doit être réactif. Assurez-vous de maintenir le rembourrage et la taille des composants.
+* Doit avoir un bouton arrière s’il y a plus d’une couche de navigation.
+* Ne doit pas inclure plus d’un bouton de rejet ou de fermeture. Cela peut confondre les utilisateurs car il ya déjà un bouton en-tête intégré pour rejeter l’onglet.
 * Ne doit pas avoir de défilement horizontal.
 
-### <a name="94-in-meeting-dialogs"></a>9.4 Boîtes de dialogue en réunion
+### <a name="94-in-meeting-dialogs"></a>9.4 Dialogues en réunion
 
-* Doit être utilisé avec parcimonie et pour les scénarios légers et orientés vers les tâches.
+* Doit être utilisé avec parcimonie et pour des scénarios qui sont légers et axés sur les tâches.
 * Doit afficher le contenu dans une seule colonne et ne pas avoir plusieurs niveaux de navigation.
-* Ne doit pas utiliser de modules de tâche.
-* Doit s'aligner sur le centre de la phase de réunion.
-* Doit être rejeté lorsqu'un utilisateur sélectionne un bouton ou effectue une action.
+* Ne doit pas utiliser de modules de tâches.
+* Doit s’aligner avec le centre de l’étape de réunion.
+* Doit être rejeté une fois qu’un utilisateur sélectionne un bouton ou effectue une action.
 
 ## <a name="100-notifications"></a>10.0 Notifications
 
-Si votre application utilise les API de flux d'activités fournies par [Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications), assurez-vous qu'elle respecte les instructions suivantes.
+Si votre application utilise les [API de flux d’activité fournies par Microsoft Graph](/graph/teams-send-activityfeednotifications), assurez-vous qu’elle respecte les lignes directrices suivantes.
 
 ### <a name="101-general"></a>10.1 Général
 
-* Tous les déclencheurs de notification spécifiés dans les configurations de votre application doivent recevoir une notification dans l'application.
-* Les notifications doivent être localisées selon les langues de prise en charge configurées pour votre application.
-* Les notifications doivent s'afficher dans les cinq secondes après l'action de l'utilisateur.
+* Tous les déclencheurs de notification spécifiés dans les configurations de votre application doivent recevoir une notification dans l’application.
+* Les notifications doivent être localisées par les langues prises en charge configurées pour votre application.
+* Les notifications doivent s’afficher dans les cinq secondes qui ont après l’action de l’utilisateur.
 
 ### <a name="102-avatars"></a>10.2 Avatars
 
-* L'avatar de notification doit correspondre à l'icône de couleur de votre application.
-* Les notifications déclenchées par un utilisateur doivent inclure l'avatar de l'utilisateur.
+* L’avatar de notification doit correspondre à l’icône couleur de votre application.
+* Les notifications déclenchées par un utilisateur doivent inclure l’avatar de l’utilisateur.
 
 ### <a name="103-spamming"></a>10.3 Spamming
 
 * Les applications ne doivent pas envoyer plus de 10 notifications par minute à un utilisateur.
-* Les bots et le flux d'activités ne doivent pas déclencher de notifications en double.
-* Les notifications doivent fournir une valeur ajoutée aux utilisateurs et ne pas être utilisées pour des événements trivials ou non pertinents.
+* Les bots et le flux d’activité ne doivent pas déclencher de notifications en double.
+* Les notifications doivent fournir une certaine valeur aux utilisateurs et ne pas être utilisées pour des événements insignifiants ou non pertinents.
 
-### <a name="104-navigation-and-layout"></a>10.4 Navigation et disposition
+### <a name="104-navigation-and-layout"></a>10.4 Navigation et mise en page
 
-* Les notifications doivent respecter la disposition et l'expérience Teams flux d'activités.
-* Lors de la sélection d'une notification, l'utilisateur doit être dirigé vers du contenu pertinent au sein Teams et ne pas être retiré de l'expérience Teams'utilisateur.
+* Les notifications doivent respecter la disposition et l’expérience Teams’alimentation d’activité.
+* Lors de la sélection d’une notification, l’utilisateur doit être dirigé vers le contenu pertinent dans Teams et non retiré de l’expérience Teams’utilisateur.
 
 ## <a name="110-advertising"></a>11.0 Publicité
 
-Les applications ne doivent pas afficher de publicités, y compris les publicités dynamiques, les bannières publicitaires et les publicités dans les messages.
+Les applications ne doivent pas afficher de publicité, y compris des annonces dynamiques, des bannières publicitaires et des annonces dans les messages.
+
+## <a name="see-also"></a>Voir aussi
+
+[4.0 Paquet d’application et liste de magasin](#40-app-package-and-store-listing)
 
 ## <a name="next-step"></a>Étape suivante
 
