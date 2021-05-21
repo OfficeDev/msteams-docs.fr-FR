@@ -1,6 +1,6 @@
 ---
 title: Affichages spécifiques à l’utilisateur
-description: Exemple pour les vues spécifiques des utilisateurs à l’aide d’actions universelles
+description: Exemple d’affichages spécifiques à l’utilisateur à l’aide d’actions universelles
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
@@ -13,13 +13,13 @@ ms.locfileid: "52555443"
 ---
 # <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
-Plus tôt, si adaptive cards a été envoyé dans Teams conversation, tous les utilisateurs voient exactement le même contenu de carte. Avec l’introduction du modèle Actions Universelles et des cartes `refresh` adaptatives, les développeurs de bots peuvent désormais fournir aux utilisateurs des vues spécifiques des cartes adaptatives. La même carte adaptative peut maintenant se rafraîchir à une carte adaptative spécifique à l’utilisateur.
+Auparavant, si des cartes adaptatives ont été envoyées dans Teams conversation, tous les utilisateurs voient exactement le même contenu de carte. Avec l’introduction du modèle Actions universelles et des cartes adaptatives, les développeurs de bots peuvent désormais fournir des affichages spécifiques aux utilisateurs de cartes `refresh` adaptatives aux utilisateurs. La même carte adaptative peut désormais être actualisée sur une carte adaptative spécifique à l’utilisateur.
 
-Par exemple, Megan, inspectrice de sécurité chez Contoso, veut créer un incident et l’assigner à Alex. Elle veut aussi que tous les membres de l’équipe soient au courant de l’incident. Megan utilise l’extension de message de rapport d’incident Contoso alimentée par Universal Actions for Adaptive Cards.
+Par exemple, Megan, inspecteur de sécurité chez Contoso, souhaite créer un incident et l’affecter à Alex. Elle souhaite également que tous les membres de l’équipe soient informés de l’incident. Megan utilise l’extension de message de rapport d’incident Contoso optimisée par les actions universelles pour les cartes adaptatives.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Affichages spécifiques à l’utilisateur":::
 
-## <a name="user-specific-views-for-adaptive-cards"></a>Vues spécifiques de l’utilisateur pour les cartes adaptatives
+## <a name="user-specific-views-for-adaptive-cards"></a>Affichages spécifiques à l’utilisateur pour les cartes adaptatives
 
 Le code suivant fournit un exemple de cartes adaptatives :
 
@@ -52,16 +52,16 @@ Le code suivant fournit un exemple de cartes adaptatives :
 }
 ```
 
-**Pour envoyer des cartes adaptatives, actualisez les vues spécifiques de l’utilisateur et invoquez les demandes au bot**
+**Pour envoyer des cartes adaptatives, actualisez les affichages spécifiques de l’utilisateur et invoquez des demandes au bot**
 
-1. Lorsque Megan crée un nouvel incident, le bot envoie la carte adaptative ou la carte commune avec les détails de l’incident dans Teams conversation.
-2. Maintenant, cette carte se rafraîchit automatiquement à l’utilisateur vue spécifique pour Megan et Alex. Les IRM utilisateur d’Alex et Megan sont ajoutées dans la `userIds` propriété de la carte `refresh` adaptative JSON. La carte reste la même pour les autres utilisateurs de la conversation.
-3. Pour Megan, la mise à jour automatique déclenche une demande `adaptiveCard/action` d’invocisation au bot. Le bot peut retourner une carte de créateur d’incident avec `Edit` bouton en réponse à cette demande d’invocateur.
-4. De même pour Alex, la mise à jour automatique déclenche une autre `adaptiveCard/action` demande d’invocisation au bot. Le bot peut retourner un bouton de carte propriétaire incident `Resolve` comme une réponse à cette demande d’invocateur.
+1. Lorsque Megan crée un incident, le bot envoie la carte adaptative ou la carte commune avec les détails de l’incident dans Teams conversation.
+2. À présent, cette carte est automatiquement actualisée en vue spécifique de l’utilisateur pour Megan et Alex. Les MRI utilisateur d’Alex et megan sont ajoutés dans la propriété de propriété du JSON de `userIds` `refresh` carte adaptative. La carte reste la même pour les autres utilisateurs de la conversation.
+3. Pour Megan, l’actualisation automatique déclenche une `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer une carte de créateur d’incident avec un bouton en réponse `Edit` à cette demande d’appel.
+4. De même pour Alex, l’actualisation automatique déclenche une autre `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer un bouton de carte de propriétaire d’incident en réponse `Resolve` à cette demande d’appel.
 
-## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Invoquer la demande envoyée Teams client au bot
+## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Appeler la demande envoyée depuis Teams client au bot
 
-Le code suivant fournit un exemple d’une demande d’invocer envoyée par alex et megan Teams client au bot:
+Le code suivant fournit un exemple d’une demande d’appel envoyée par le client d’Alex Teams Megan au bot :
 
 ```JSON
 { 
@@ -84,9 +84,9 @@ Le code suivant fournit un exemple d’une demande d’invocer envoyée par alex
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card"></a>adaptiveCard/action invoquent la carte de réponse
+## <a name="adaptivecardaction-invoke-response-card"></a>Carte de réponse d’appel adaptiveCard/action
 
-Le code suivant fournit un exemple d’une carte adaptative / action invoquer carte de réponse pour Megan:
+Le code suivant fournit un exemple de carte de réponse d’appel adaptiveCard/action pour Megan :
 
 ```JSON
 {
@@ -126,9 +126,9 @@ Le code suivant fournit un exemple d’une carte adaptative / action invoquer ca
 }
 ```
 
-## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>adaptiveCard/action invoquent la carte de réponse pour Alex
+## <a name="adaptivecardaction-invoke-response-card-for-alex"></a>Carte de réponse d’appel adaptiveCard/action pour Alex
 
-Le code suivant fournit un exemple de carte adaptative/action invoquer la carte de réponse pour Alex:
+Le code suivant fournit un exemple de carte de réponse d’appel adaptiveCard/action pour Alex :
 
 ```JSON
 {
@@ -168,9 +168,9 @@ Le code suivant fournit un exemple de carte adaptative/action invoquer la carte 
 }
 ```
 
-## <a name="invoke-response-to-return-adaptive-cards"></a>Invoquer la réponse pour retourner les cartes adaptatives
+## <a name="invoke-response-to-return-adaptive-cards"></a>Appeler la réponse pour renvoyer des cartes adaptatives
 
-Le code suivant fournit un exemple de réponse invocative pour renvoyer les cartes adaptatives :
+Le code suivant fournit un exemple de réponse d’appel pour renvoyer des cartes adaptatives :
 
 ```C#
 string cardJson = "<adaptive card json>";
@@ -184,13 +184,13 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-Lignes directrices de conception de cartes à garder à l’esprit lors de la conception de vues spécifiques à l’utilisateur :
+Recommandations en matière de conception de carte à garder à l’esprit lors de la conception d’affichages spécifiques à l’utilisateur :
 
-* Vous pouvez créer un maximum de **60 vues spécifiques à l’utilisateur** pour une carte particulière envoyée à un chat ou un canal en spécifier `userIds` leur dans la `refresh` section.
-* **Carte de base:** La version de base de la carte que le développeur de bot envoie au chat. Il s’agit de la version de la carte adaptative pour tous les utilisateurs qui ne sont pas spécifiés dans `userIds` la section.
-* Une mise à jour ou une modification de message peut être utilisée pour mettre à jour la carte de base et actualiser simultanément la carte spécifique à l’utilisateur.
+* Vous pouvez créer un maximum de **60 affichages** spécifiques à l’utilisateur pour une carte particulière envoyée à une conversation ou un canal en spécifiant leur dans `userIds` la `refresh` section.
+* **Carte de base :** Version de base de la carte que le développeur du bot envoie à la conversation. Il s’agit de la version de la carte adaptative pour tous les utilisateurs qui ne sont pas spécifiés dans la `userIds` section.
+* Une mise à jour ou une modification de message peut être utilisée pour mettre à jour la carte de base et actualiser simultanément la carte spécifique de l’utilisateur.
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
-* [Vues à jour](Up-To-Date-Views.md)
+* [Affichages à jour](Up-To-Date-Views.md)

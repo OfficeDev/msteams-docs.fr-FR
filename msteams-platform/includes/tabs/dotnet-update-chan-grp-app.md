@@ -1,26 +1,26 @@
-### <a name="_layoutcshtml"></a>_Layout. cshtml
+### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Pour que votre onglet s’affiche dans Teams, vous devez inclure le **Kit de développement logiciel (SDK) JavaScript client Microsoft teams** et inclure un appel à `microsoftTeams.initialize()` après le chargement de votre page. Voici comment votre onglet et le client teams communiquent :
+Pour que votre onglet s’affiche dans Teams, vous devez inclure le **SDK client JavaScript Microsoft Teams** et inclure un appel après le chargement de `microsoftTeams.initialize()` votre page. Voici comment votre onglet et le client Teams communiquent :
 
-- Naviguez jusqu’au dossier **partagé** , ouvrez **_Layout. cshtml** et ajoutez ce qui suit à la `<head>` balise :
+- Accédez au **dossier** partagé, **ouvrez _Layout.cshtml** et ajoutez ce qui suit à la `<head>` balise :
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
 
 >[!IMPORTANT]
->Ne copiez pas/collez les `<script src="...">` URL à partir de cette page, car elles ne représentent pas nécessairement la dernière version. Pour obtenir la dernière version du kit de développement logiciel (SDK), accédez toujours à : [Microsoft teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
+>Ne copiez/collez pas les URL de cette page, car elles peuvent ne pas représenter `<script src="...">` la dernière version. Pour obtenir la dernière version du SDK, toujours aller à : [Microsoft Teams API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
 
-### <a name="tabcshtml"></a>Tab. cshtml
+### <a name="tabcshtml"></a>Tab.cshtml
 
-Ouvrez **Tab. cshtml** et mettez à jour l’incorporé `<script>` comme suit :
+Ouvrez **Tab.cshtml** et mettez à jour l’incorporé `<script>` comme suit :
 
 - En haut du script, appelez `microsoftTeams.initialize()` .
 
-- Mettez à jour les `websiteUrl` `contentUrl` valeurs et dans chaque fonction avec l’URL HTTPS ngrok sur votre onglet.
+- Mettez à `websiteUrl` jour les `contentUrl` valeurs de chaque fonction avec l’URL HTTPS ngrok sur votre onglet.
 
-Votre code doit maintenant ressembler à ce qui suit avec **y8rCgT2b** remplacé par votre URL ngrok :
+Votre code doit maintenant ressembler à ce qui suit avec **y8rCgT2b** remplacé par votre URL ngrok :
 
 ```javascript
     microsoftTeams.initialize();
@@ -50,79 +50,83 @@ Votre code doit maintenant ressembler à ce qui suit avec **y8rCgT2b** remplacé
     }
 ```
 
-Veillez à enregistrer la **tabulation. cshtml** mise à jour.
+Veillez à enregistrer le **tab.cshtml mis à jour.**
 
-## <a name="build-and-run-your-application"></a>Création et exécution de votre application
+## <a name="build-and-run-your-application"></a>Créer et exécuter votre application
 
-- Dans Visual Studio, appuyez sur **F5** ou sélectionnez **Démarrer le débogage** dans le menu **Déboguer** . Vérifiez que **ngrok** est en cours d’exécution et qu’il fonctionne correctement en ouvrant votre navigateur et en accédant à votre page de contenu via l’URL HTTPS ngrok qui a été fournie dans votre fenêtre d’invite de commandes.
+- Dans Visual Studio **appuyez sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage.** Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
 >[!TIP]
->Vous devez avoir à la fois votre application dans Visual Studio et ngrok en cours d’exécution pour effectuer ce démarrage rapide. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour qu’elle fonctionne, **laissez ngrok en cours d’exécution**. Il continuera à écouter et reprendra le routage de la demande de votre application lorsqu’elle redémarrera dans Visual Studio. Si vous devez redémarrer le service ngrok, il renverra une nouvelle URL et vous devrez mettre à jour votre application avec la nouvelle URL.
+>Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer ce démarrage rapide. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **ngrok est toujours en cours d’exécution.** Il continuera à écouter et reprendra le routage de la demande de votre application lors de son redémarrage dans Visual Studio. Si vous devez redémarrer le service ngrok, il retourne une nouvelle URL et vous devez mettre à jour votre application avec la nouvelle URL.
 
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Télécharger votre onglet vers teams avec App Studio
+## <a name="upload-your-tab-to-teams"></a>Télécharger votre onglet pour Teams
 
 >[!Note]
-> Nous utilisons App Studio pour modifier votre **manifest.jssur** fichier et télécharger le package terminé vers Teams. Si vous le souhaitez, vous pouvez également modifier manuellement le **manifest.jssur** le fichier. Si vous le faites, veillez à créer à nouveau la solution pour créer le fichier **tab.zip** à télécharger.
+> Nous utilisons App Studio pour modifier votre **manifest.jsfichier** et charger le package terminé dans Teams. Vous pouvez également modifier manuellement le **fichiermanifest.jssi** vous préférez. Si vous le faites, assurez-vous de générer à nouveau la solution pour créertab.zip **fichier** à télécharger.
 
-- Ouvrez le client Microsoft Teams. Si vous utilisez la [version basée sur le Web](https://teams.microsoft.com) , vous pouvez inspecter votre code frontal à l’aide des [outils de développement](~/tabs/how-to/developer-tools.md)de votre navigateur.
+- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils [de développement de votre navigateur.](~/tabs/how-to/developer-tools.md)
 
-- Ouvrez l’application Studio et sélectionnez l’onglet **éditeur de manifeste** .
+- Ouvrez App studio et sélectionnez **l’onglet Éditeur de** manifeste.
 
-- Sélectionnez la vignette **Importer une application existante** dans l’éditeur de manifeste pour commencer à mettre à jour le package d’application pour votre onglet. Le code source est fourni avec son propre manifeste partiellement complet. Le nom de votre package d’application est **tab.zip**. Il doit se trouver ici :
+- Sélectionnez **la vignette Importer une application existante** dans l’éditeur de manifeste pour commencer à mettre à jour le package d’application pour votre onglet. Le code source est livré avec son propre manifeste partiellement complet. Le nom de votre package d’application **esttab.zip**. Il doit être trouvé ici :
 
-```bash
-/bin/Debug/netcoreapp2.2/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
 
-- Téléchargez **tab.zip** vers l’application Studio.
+- Télécharger **tab.zip** app Studio.
 
 ### <a name="update-your-app-package-with-manifest-editor"></a>Mettre à jour votre package d’application avec l’éditeur de manifeste
 
-Une fois que vous avez téléchargé votre package d’application dans App Studio, vous devez terminer de le configurer.
+Une fois que vous avez chargé votre package d’application dans App Studio, vous devez terminer sa configuration.
 
-- Sélectionnez la mosaïque de votre onglet nouvellement importé dans le volet droit de la page d’accueil de l’éditeur de manifeste.
+- Sélectionnez la vignette de votre onglet nouvellement importé dans le panneau droit de la page d’accueil de l’éditeur de manifeste.
 
-Il y a une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre *manifest.js* , mais il existe quelques champs que vous devrez mettre à jour :
+Il existe une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre *manifest.js,* mais il existe quelques champs que vous devrez mettre à jour :
 
-#### <a name="details-app-details"></a>Détails : détails de l’application
+#### <a name="details-app-details"></a>Détails : détails de l’application
 
-- Sous *identification* sélectionnez ***générer** _ pour remplacer l’ID d’espace réservé par le GUID requis pour votre onglet.
+Dans la section *Détails de l’application* :
 
-- Sous _Developer informations *, mettez à jour le champ **URL du site Web** avec votre URL HTTPS *ngrok* .
+- *Identification*: **sélectionnez Générer** pour remplacer l’ID d’espace réservé par le GUID requis pour votre onglet.
 
-- Sous *URL* de l’application, mettez à jour les champs **déclaration de confidentialité** et **conditions d’utilisation** avec votre URL HTTPS *ngrok* . N’oubliez pas d’inclure les chemins d’accès */Privacy* et */tou* à la fin des URL.
+- *Informations sur le* développeur : mettez à jour **le champ URL** du site web avec votre URL HTTPS *ngrok.*
 
-#### <a name="capabilities-tabs"></a>Fonctionnalités : onglets
+- *URL d’application*: mettez à jour la déclaration **de confidentialité** et les `https://<yourngrokurl>/privacy` conditions **d’utilisation** `https://<yourngrokurl>/tou`>.
 
-Dans la section *onglets* :
+#### <a name="capabilities-tabs"></a>Fonctionnalités : onglets
 
-- Sous l' *onglet équipe* , sélectionnez **Ajouter**.
+Dans la section *Onglets* :
 
-- Dans la fenêtre contextuelle de l’onglet équipe, mettez à jour l' *URL de configuration* vers `https://<yourngrokurl>/tab` .
+- *Onglet Équipe*: sélectionnez **Ajouter.**
 
-- Enfin, assurez-vous que la *mise à jour de la configuration est possible ?* Les cases Team et *Group chat* sont cochées, puis sélectionnez **Enregistrer**.
+- Dans la fenêtre pop-up de l’onglet Équipe, mettez à jour *l’URL de configuration* sur `https://<yourngrokurl>/tab` .
 
-#### <a name="finish-domains-and-permissions"></a>Terminer : domaines et autorisations
+- Enfin, assurez-vous que la *configuration peut être mise à jour ? Les cases* de *conversation* d’équipe et de groupe sont cochées, puis **sélectionnez Enregistrer.**
 
-Dans la section *domaines et autorisations* , les *domaines de votre champ d’onglets* doivent contenir votre URL ngrok sans le préfixe https- `<yourngrokurl>.ngrok.io/` .
+#### <a name="finish-domains-and-permissions"></a>Finish: Domains and permissions
 
-#### <a name="test-and-distribute-test-and-distribute"></a>Test et distribution : test et distribution
+Dans la section *Domaines et autorisations* :
+
+- Les *domaines du champ onglets* doivent contenir votre URL ngrok sans le préfixe HTTPS - `<yourngrokurl>.ngrok.io/` .
+
+#### <a name="finish-test-and-distribute"></a>Fin : Tester et distribuer
 
 >[!IMPORTANT]
->Dans le champ **Description** à droite, vous verrez l’avertissement suivant :
+>Dans le **champ Description** à droite, vous verrez l’avertissement suivant :
 >
->&#9888;**le tableau « validDomains » ne peut pas contenir de site de tunneling...**
+>&#9888; «**Le tableau « validDomains » ne peut** pas contenir un site de tunneling... »
 >
 >Cet avertissement peut être ignoré lors du test de votre onglet.
 
-Dans la section *test et distribution* :
+Dans la section *Tester et distribuer* :
 
 - Sélectionnez **Installer**.
 
-- Dans la fenêtre contextuelle *Ajouter à un champ d’équipe ou de conversation* , entrez votre équipe et sélectionnez **installer**.
+- Dans le champ Ajouter à une équipe ou une *conversation* de la fenêtre pop-up, entrez votre équipe et sélectionnez **Installer.**
 
-- Dans la fenêtre contextuelle suivante, sélectionnez le canal d’équipe dans lequel vous souhaitez afficher l’onglet, puis sélectionnez **configurer**.
+- Dans la fenêtre pop-up suivante, choisissez le canal d’équipe où vous souhaitez que l’onglet s’affiche, puis **sélectionnez Configurer.**
 
-- Dans la fenêtre contextuelle finale, sélectionnez une valeur pour la page d’onglet (icône rouge ou gris) et sélectionnez **Enregistrer**.
+- Dans la fenêtre pop-up finale, sélectionnez une valeur pour la page d’onglet (icône rouge ou grise), puis sélectionnez **Enregistrer**.
 
-Pour afficher votre onglet, accédez à l’équipe sur laquelle vous l’avez installé, puis sélectionnez-le dans la barre d’onglets. La page que vous avez choisie lors de la configuration doit s’afficher.
+Pour afficher votre onglet, accédez à l’équipe sur qui vous l’avez installé et sélectionnez-le dans la barre d’onglets. La page que vous avez choisie lors de la configuration doit être affichée.

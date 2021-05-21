@@ -1,7 +1,7 @@
 ---
-title: Format de message bot
-description: Décrit les détails de la mise en forme des messages bot
-keywords: scénarios équipes canalise le message bot de conversation
+title: Format de message du bot
+description: Décrit les détails de la mise en forme des messages du bot
+keywords: teams scenarios channels conversation bot message
 ms.topic: reference
 localization_priority: Normal
 ms.date: 05/20/2019
@@ -12,51 +12,51 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566473"
 ---
-# <a name="message-formatting-for-bots"></a>Formatage de messages pour les bots
+# <a name="message-formatting-for-bots"></a>Mise en forme des messages pour les bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Vous pouvez définir la propriété [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) optionnelle pour contrôler la façon dont le contenu texte de votre message est rendu.
+Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) de votre message.
 
 Microsoft Teams prend en charge les options de mise en forme suivantes :
 
 | Valeur TextFormat | Description |
 | --- | --- |
-| plaine | Le texte doit être traité comme du texte brut sans que le formatage ne soit appliqué du tout. |
-| Markdown | Le texte doit être traité comme le formatage Markdown et rendu sur le canal le cas échéant; voir [Formater le contenu du texte pour](#formatting-text-content) les styles pris en charge. |
-| xml xml xml | Le texte est simple balisage XML; voir [Formater le contenu du texte pour](#formatting-text-content) les styles pris en charge. |
+| plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée. |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
+| xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 
-## <a name="formatting-text-content"></a>Formatage du contenu du texte
+## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
 
-Microsoft Teams prend en charge un sous-ensemble de balises de formatage Markdown et XML (HTML).
+Microsoft Teams prend en charge un sous-ensemble de balises de mise en forme Markdown et XML (HTML).
 
-À l’heure actuelle, les limitations suivantes s’appliquent :
+Actuellement, les limitations suivantes s’appliquent :
 
-* Les messages texte uniquement ne supportent pas le formatage de table.
-* Les cartes riches soutiennent le formatage dans la propriété de texte seulement, pas dans les propriétés de titre ou de sous-titre.
-* Les cartes riches ne supportent pas Markdown ou le formatage de table.
+* Les messages texte uniquement ne sont pas en charge de la mise en forme des tableaux.
+* Les cartes enrichies ne peuvent être formatées que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre.
+* Les cartes enrichies ne prisent pas en charge la mise en forme Markdown ou table.
 
-## <a name="cross-platform-support"></a>Support interplateforme
+## <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes
 
-Pour vous assurer que votre formatage fonctionne sur toutes les plateformes prises en charge par Microsoft Teams, sachez que certains styles ne sont pas actuellement pris en charge sur toutes les plateformes.
+Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes Microsoft Teams, sachez que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
 
-| Style                     | Messages texte uniquement | Cartes riches (XML seulement) |
+| Style                     | Messages texte uniquement | Cartes enrichies (XML uniquement) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
 | en-tête (niveaux 1 &ndash; 3) | ✖ | ✔ |
 | strikethrough             | ✖ | ✔ |
 | règle horizontale           | ✖ | ✖ |
-| liste non ordonnée            | ✖ | ✔ |
-| liste commandée              | ✖ | ✔ |
+| liste non réordée            | ✖ | ✔ |
+| liste ordered              | ✖ | ✔ |
 | texte préformaté         | ✔ | ✔ |
 | blockquote                | ✔ | ✔ |
 | lien hypertexte                 | ✔ | ✔ |
-| lien d’image                | ✔ | ✖ |
+| lien vers l’image                | ✔ | ✖ |
 
-## <a name="support-by-individual-platform"></a>Support par plateforme individuelle
+## <a name="support-by-individual-platform"></a>Prise en charge par plateforme individuelle
 
-La prise en charge du formatage texte varie selon le type de message et par plate-forme.
+La prise en charge de la mise en forme du texte varie en fonction du type de message et de la plateforme.
 
 ### <a name="text-only-messages"></a>Messages texte uniquement
 
@@ -67,13 +67,13 @@ La prise en charge du formatage texte varie selon le type de message et par plat
 | en-tête (niveaux 1 &ndash; 3) | ✖ | ✖ | ✖ |
 | strikethrough             | ✔ | ✔ | ✖ |
 | règle horizontale           | ✖ | ✖ | ✖ |
-| liste non ordonnée            | ✔ | ✖ | ✖ |
-| liste commandée              | ✔ | ✖ | ✖ |
+| liste non réordée            | ✔ | ✖ | ✖ |
+| liste ordered              | ✔ | ✖ | ✖ |
 | texte préformaté         | ✔ | ✔ | ✔ |
 | blockquote                | ✔ | ✔ | ✔ |
 | lien hypertexte                 | ✔ | ✔ | ✔ |
-| lien d’image                | ✔ | ✔ | ✔ |
+| lien vers l’image                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Cartes
 
-Pour plus d’informations, consultez [le formatage des cartes pour](~/task-modules-and-cards/cards/cards-format.md) le support dans les cartes.
+Pour plus d’informations, [voir Formatage de carte](~/task-modules-and-cards/cards/cards-format.md) pour la prise en charge dans les cartes.

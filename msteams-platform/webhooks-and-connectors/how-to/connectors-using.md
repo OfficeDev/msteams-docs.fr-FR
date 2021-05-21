@@ -4,12 +4,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 localization_priority: Normal
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566522"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583735"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>Envoi de messages à des connecteurs et Webhooks
 
@@ -141,7 +141,7 @@ Pour plus d’informations sur les actions de la carte Connecteur, consultez **[
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>Configuration d’un webhook entrant personnalisé
 
-Suivez ces étapes pour voir comment envoyer une carte simple à un connecteur :
+Suivez ces étapes pour savoir comment envoyer une carte simple à un connecteur :
 
 1. Dans Microsoft Teams, choisissez **Autres options** (**&#8943;**) à côté du nom de la chaîne, puis choisissez **Connecteurs**.
 1. Faites défiler la liste des Connecteurs à **Webhook entrant**, puis choisissez **Ajouter**.
@@ -184,7 +184,7 @@ Les étapes suivantes utilisent PowerShell. Nous partons du principe que vous av
 - [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modifiez la partie `icons` du manifeste pour faire référence aux noms de fichier des icônes au lieu des URL.
 
-Les éléments manifest.jsdans le fichier contiennent les éléments de base nécessaires pour tester et soumettre votre application :
+Le fichier manifest.jssuivant contient les éléments de base nécessaires pour tester et soumettre votre application :
 
 > [!NOTE]
 > Remplacez `id` et `connectorId` de l’exemple suivant par le GUID de votre connecteur.
@@ -239,7 +239,7 @@ Les éléments manifest.jsdans le fichier contiennent les éléments de base né
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>Le flux pour l'envoi[de cartes adaptatives](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via un webhook entrant est le suivant :
 
-1. [Configurez un webhook personnalisé](#setting-up-a-custom-incoming-webhook) dans Teams.</br></br>
+1. [Configurer un webhook personnalisé dans](#setting-up-a-custom-incoming-webhook) Teams.
 1. Créez votre fichier JSON de carte adaptative :
 
     ```json
@@ -281,9 +281,9 @@ Vous pouvez tester votre carte adaptative en utilisant [le facteur](https://www.
 
 ## <a name="testing-your-connector"></a>Test du connecteur
 
-Pour tester le connecteur, téléchargez-le dans une équipe comme vous le feriez avec une autre application. Vous pouvez créer un paquet .zip à l’aide du fichier manifeste du tableau de bord des développeurs de connecteurs qui a été modifié tel que dirigé dans la section précédente et les deux fichiers d’icônes.
+Pour tester le connecteur, téléchargez-le dans une équipe comme vous le feriez avec une autre application. Vous pouvez créer un package .zip à l’aide du fichier manifeste du tableau de bord du développeur de connecteurs qui a été modifié comme indiqué dans la section précédente et les deux fichiers d’icône.
 
-Une fois que vous avez téléchargé l’application, ouvrez la liste des connecteurs à partir de n’importe quel canal. Faites défiler vers le bas pour voir votre application dans **la section Téléchargée** :
+Une fois que vous avez téléchargé l’application, ouvrez la liste des connecteurs à partir de n’importe quel canal. Faites défiler vers le bas pour voir votre application dans la section **Téléchargée** :
 
 ![Capture d’écran de la section téléchargée dans la boîte de dialogue connecteur](~/assets/images/connectors/connector_dialog_uploaded.png)
 

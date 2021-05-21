@@ -1,7 +1,7 @@
 ---
-title: Créez un onglet personnel avec ASP. MVC net de base
+title: Créez un onglet personnel avec ASP. NET Core MVC
 author: laujan
-description: Un guide quickstart pour créer un onglet personnel personnalisé avec ASP. NET Core MVC.
+description: Guide de démarrage rapide pour créer un onglet personnel personnalisé avec ASP. NET Core MVC.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
@@ -12,33 +12,33 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566625"
 ---
-# <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>Créez un onglet personnel personnalisé avec ASP.NET Core MVC
+# <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>Créer un onglet personnel personnalisé avec ASP.NET Core MVC
 
-Dans ce quickstart, nous allons walk-through créer un onglet personnel personnalisé avec C # et ASP.Net Core MVC. Nous utiliserons également [App Studio pour vous aider Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) finaliser le manifeste de votre application et déployer votre onglet sur Teams.
+Dans ce démarrage rapide, nous allons créer un onglet personnel personnalisé avec C# et ASP.Net Core MVC. Nous utiliserons également [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour Microsoft Teams finaliser le manifeste de votre application et déployer votre onglet sur Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## <a name="get-the-source-code"></a>Obtenez le code source
+## <a name="get-the-source-code"></a>Obtenir le code source
 
-Ouvrez une invite de commande et créez un nouvel annuaire pour votre projet d’onglet. Nous avons fourni un projet simple pour vous aider à démarrer. Pour récupérer le code source, vous pouvez télécharger le dossier zip et extraire les fichiers ou cloner le référentiel d’échantillons dans votre nouveau répertoire :
+Ouvrez une invite de commandes et créez un répertoire pour votre projet d’onglet. Nous avons fourni un projet simple pour vous aider à démarrer. Pour récupérer le code source, vous pouvez télécharger le dossier zip et extraire les fichiers ou cloner l’exemple de référentiel dans votre nouveau répertoire :
 
 ``` bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Une fois que vous avez le code source, Visual Studio et **sélectionnez Ouvrir un projet ou une solution**. Accédez à l’annuaire d’application **d’onglets et ouvrez PersonalTabMVC.sln**.
+Une fois que vous avez le code source, ouvrez Visual Studio puis **sélectionnez Ouvrir un projet ou une solution.** Accédez au répertoire de l’application onglet et **ouvrez PersonalTabMVC.sln**.
 
-Pour créer et exécuter votre application appuyez **sur F5** ou **choisissez Démarrer le débogage** dans le menu **Debug.** Dans un navigateur naviguer vers les URL ci-dessous pour vérifier que l’application chargée correctement:
+Pour créer et exécuter votre application, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage.** Dans un navigateur, accédez aux URL ci-dessous pour vérifier que l’application s’est chargée correctement :
 
 * `http://localhost:44335`
 * `http://localhost:44335/privacy`
 * `http://localhost:44335/tou`
 
-## <a name="review-the-source-code"></a>Revoir le code source
+## <a name="review-the-source-code"></a>Passer en revue le code source
 
-### <a name="startupcs"></a>Démarrage.cs
+### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir d’un ASP. NET Core 2.2 Web Application modèle vide avec *l’Advanced - Configurer pour https* case à cochée sélectionnée à la configuration. Les services MVC sont enregistrés par la méthode du cadre d’injection de `ConfigureServices()` dépendance. En outre, le modèle vide ne permet pas de servir le contenu statique par défaut, de sorte que le middleware fichiers statiques est ajouté à la `Configure()` méthode:
+Ce projet a été créé à partir d’un asp. Modèle vide application Web NET Core 2.2 avec la case à cocher Avancé - Configurer *pour HTTPS* sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la `Configure()` méthode :
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -58,17 +58,17 @@ Dans ASP. NET Core, le dossier racine web est l’endroit où l’application re
 
 ### <a name="appmanifest-folder"></a>Dossier AppManifest
 
-Ce dossier contient les fichiers de paquet d’application requis suivants :
+Ce dossier contient les fichiers de package d’application requis suivants :
 
-* Une **icône couleur mesurant** 192 x 192 pixels.
-* Une **icône transparente de** contour mesurant 32 x 32 pixels.
-* Une **manifest.jsdans le** fichier qui spécifie les attributs de votre application.
+* Icône **en couleurs complètes** de 192 x 192 pixels.
+* Icône **de plan transparente de** 32 x 32 pixels.
+* Un **manifest.jssur** le fichier qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être zippés dans un paquet d’applications pour être utilisés dans le téléchargement de votre onglet Teams. Microsoft Teams chargera le `contentUrl` spécifié dans votre manifeste, l’intégrera dans un IFrame et le rendra dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams chargez la spécifiée dans votre manifeste, incorporez-la dans un IFrame et restituerez-la `contentUrl` dans votre onglet.
 
 ### <a name="csproj"></a>.csproj
 
-Dans la Visual Studio fenêtre Explorer de solution, cliquez à droite sur le projet et **sélectionnez Modifier Project Fichier**. Au bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application se construit :
+Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ``` xml
 <PropertyGroup>
@@ -90,48 +90,48 @@ Dans la Visual Studio fenêtre Explorer de solution, cliquez à droite sur le pr
 
 ### <a name="models"></a>Modèles
 
-**PersonalTab.cs présente** un objet message et des méthodes qui seront appelées *à partir de PersonalTabController* lorsqu’un utilisateur sélectionne un bouton dans **la vue PersonalTab.**
+**PersonalTab.cs** présente un objet Message et des méthodes qui seront appelées à partir de *PersonalTabController* lorsqu’un utilisateur sélectionne un bouton dans **l’affichage PersonalTab.**
 
 ### <a name="views"></a>Affichages
 
 #### <a name="home"></a>Accueil
 
-aspic. NET Core traite les fichiers appelés **Index comme la** page par défaut ou la page d’accueil du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml sera** affiché comme page d’accueil de votre application.
+ASP. NET Core traite les fichiers appelés **Index** comme la page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** s’affiche en tant que page d’accueil de votre application.
 
 #### <a name="shared"></a>Shared
 
-Le balisage partiel de *la vue _Layout.cshtml contient la* structure globale de la page de l’application et des éléments visuels partagés. Il fera également référence à la Teams bibliothèque.
+Le markup *d’affichage partiel _Layout.cshtml* contient la structure de page globale de l’application et les éléments visuels partagés. Il référencera également la bibliothèque Teams bibliothèque.
 
 ### <a name="controllers"></a>Contrôleurs
 
-Les contrôleurs utilisent la propriété ViewBag pour transférer dynamiquement les valeurs vers les vues.
+Les contrôleurs utilisent la propriété ViewBag pour transférer dynamiquement des valeurs vers les affichages.
 
 [!INCLUDE [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
 [!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
-* Ouvrez une invite de commande dans la racine de votre répertoire de projet et exécutez la commande suivante :
+* Ouvrez une invite de commandes à la racine du répertoire de votre projet et exécutez la commande suivante :
 
     ``` bash
     ngrok http https://localhost:44345 -host-header="localhost:44345"
     ```
 
-* Ngrok écoutera les demandes d’Internet et les acheminera vers votre application lorsqu’elle sera en cours d’exécution sur le port 44325.  Il devrait ressembler `https://y8rPrT2b.ngrok.io/` à *l’endroit où y8rPrT2b* est remplacé par votre URL HTTPS alpha-numérique ngrok.
+* Ngrok écoute les demandes provenant d’Internet et les route vers votre application lorsqu’elle est en cours d’exécution sur le port 44325.  Il doit ressembler `https://y8rPrT2b.ngrok.io/` à *l’endroit où y8rPrT2b* est remplacé par votre URL HTTPS alpha-numérique ngrok.
 
-* Assurez-vous de garder l’invite de commande avec ngrok en cours d’exécution, et de prendre une note de l’URL - vous en aurez besoin plus tard.
+* Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution et à noter l’URL. Vous en aurez besoin ultérieurement.
 
-* Vérifiez que **ngrok fonctionne** et fonctionne correctement en ouvrant votre navigateur et en allant à votre page de contenu via l’URL HTTPS ngrok qui a été fourni dans votre fenêtre de commande rapide.
+* Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
 > [!TIP]
-> Vous devez avoir à la fois votre application dans Visual Studio et ngrok en cours d’exécution pour compléter ce démarrage rapide. Si vous avez besoin d’arrêter d’exécuter votre application Visual Studio pour y travailler, **gardez ngrok en cours d’exécution**. Il continuera d’écouter et reprendra le routage de la demande de votre application lorsqu’elle redémarre en Visual Studio. Si vous devez redémarrer le service ngrok, il va renvoyer une nouvelle URL et vous devrez mettre à jour chaque endroit qui utilise cette URL.
+> Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer ce démarrage rapide. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution.** Il continuera à écouter et reprendra le routage de la demande de votre application lors de son redémarrage dans Visual Studio. Si vous devez redémarrer le service ngrok, il retourne une nouvelle URL et vous devez mettre à jour chaque endroit qui utilise cette URL.
 
-### <a name="run-your-application"></a>Exécutez votre application
+### <a name="run-your-application"></a>Exécuter votre application
 
-* Dans Visual Studio appuyez **sur F5** ou **choisissez Start Debugging** dans le menu **Debug de votre** application.
+* Dans Visual Studio **appuyez sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage de votre** application.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Créez un canal personnalisé et un onglet de groupe à l’aide Node.js et du générateur Yeoman pour Microsoft Teams](~/tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+> [Créer un canal et un onglet de groupe personnalisés à l’aide Node.js et du générateur Yeoman pour Microsoft Teams](~/tabs/quickstarts/create-channel-group-tab-node-yeoman.md)

@@ -1,7 +1,7 @@
 ---
-title: Formatage de texte pris en charge dans les conversations
-description: Décrit le support de mise en forme de texte dans les conversations bot
-keywords: bots conversations messagerie
+title: Mise en forme de texte prise en charge dans les conversations
+description: Décrit la prise en charge de la mise en forme du texte dans les conversations de bot
+keywords: messagerie de conversations de bots
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
@@ -16,47 +16,47 @@ ms.locfileid: "52566746"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Vous pouvez définir la propriété [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) optionnelle pour contrôler la façon dont le contenu texte de votre message est rendu.
+Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) de votre message.
 
 Microsoft Teams prend en charge les options de mise en forme suivantes :
 
 | Valeur TextFormat | Description |
 | --- | --- |
-| plaine | Le texte doit être traité comme du texte brut sans que le formatage ne soit appliqué du tout. |
-| Markdown | Le texte doit être traité comme le formatage Markdown et rendu sur le canal le cas échéant; voir [Formater le contenu du texte pour](#formatting-text-content) les styles pris en charge. |
-| xml xml xml | Le texte est simple balisage XML; voir [Formater le contenu du texte pour](#formatting-text-content) les styles pris en charge. |
+| plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée. |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
+| xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 
-## <a name="formatting-text-content"></a>Formatage du contenu du texte
+## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
 
-Microsoft Teams prend en charge un sous-ensemble de balises de formatage Markdown et XML (HTML).
+Microsoft Teams prend en charge un sous-ensemble de balises de mise en forme Markdown et XML (HTML).
 
-À l’heure actuelle, les limitations suivantes s’appliquent :
+Actuellement, les limitations suivantes s’appliquent :
 
-* Les messages texte uniquement ne supportent pas le formatage de table
+* Les messages texte uniquement ne sont pas en charge la mise en forme de tableau
 
-Pour plus d’informations sur le formatage dans les cartes, [Teams référence de la carte](~/task-modules-and-cards/cards/cards-reference.md).
+Pour plus d’informations sur la mise en forme dans les cartes, [voir Teams référence de carte.](~/task-modules-and-cards/cards/cards-reference.md)
 
-### <a name="cross-platform-support"></a>Support interplateforme
+### <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes
 
-Pour vous assurer que votre formatage fonctionne sur toutes les plateformes prises en charge par Microsoft Teams, sachez que certains styles ne sont pas actuellement pris en charge sur toutes les plateformes.
+Pour vous assurer que votre mise en forme fonctionne sur toutes les plateformes Microsoft Teams, sachez que certains styles ne sont actuellement pas pris en charge sur toutes les plateformes.
 
-| Style                     | Messages texte uniquement | Cartes (XML seulement) |
+| Style                     | Messages texte uniquement | Cartes (XML uniquement) |
 |---------------------------|--------------------|------------------|
 | bold                      | ✔                  | ✖                |
 | italic                    | ✔                  | ✔                |
 | en-tête (niveaux 1 &ndash; 3) | ✖                  | ✔                |
 | strikethrough             | ✖                  | ✔                |
 | règle horizontale           | ✖                  | ✖                |
-| liste non ordonnée            | ✖                  | ✔                |
-| liste commandée              | ✖                  | ✔                |
+| liste non réordée            | ✖                  | ✔                |
+| liste ordered              | ✖                  | ✔                |
 | texte préformaté         | ✔                  | ✔                |
 | blockquote                | ✔                  | ✔                |
 | lien hypertexte                 | ✔                  | ✔                |
-| lien d’image                | ✔                  | ✖                |
+| lien vers l’image                | ✔                  | ✖                |
 
-### <a name="support-by-individual-platform"></a>Support par plateforme individuelle
+### <a name="support-by-individual-platform"></a>Prise en charge par plateforme individuelle
 
-La prise en charge du formatage texte varie selon le type de message et par plate-forme.
+La prise en charge de la mise en forme du texte varie en fonction du type de message et de la plateforme.
 
 #### <a name="text-only-messages"></a>Messages texte uniquement
 
@@ -67,14 +67,14 @@ La prise en charge du formatage texte varie selon le type de message et par plat
 | en-tête (niveaux 1 &ndash; 3) | ✖       | ✖   | ✖       |
 | strikethrough             | ✔       | ✔   | ✖       |
 | règle horizontale           | ✖       | ✖   | ✖       |
-| liste non ordonnée            | ✔       | ✖   | ✖       |
-| liste commandée              | ✔       | ✖   | ✖       |
+| liste non réordée            | ✔       | ✖   | ✖       |
+| liste ordered              | ✔       | ✖   | ✖       |
 | texte préformaté         | ✔       | ✔   | ✔       |
 | blockquote                | ✔       | ✔   | ✔       |
 | lien hypertexte                 | ✔       | ✔   | ✔       |
-| lien d’image                | ✔       | ✔   | ✔       |
+| lien vers l’image                | ✔       | ✔   | ✔       |
 
-### <a name="examples-of-text-formatting"></a>Exemples de formatage de texte
+### <a name="examples-of-text-formatting"></a>Exemples de mise en forme du texte
 
 | Style | Exemple | Markdown | XML (HTML) |
 | --- | --- | --- | --- |
@@ -82,9 +82,9 @@ La prise en charge du formatage texte varie selon le type de message et par plat
 | italic | *text* | `*text*` | `<em>text</em>` |
 | en-tête (niveaux 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
 | strikethrough | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
-| liste non ordonnée | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
-| liste commandée | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
+| liste non réordée | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
+| liste ordered | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | texte préformaté | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | lien hypertexte | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| lien d’image | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| lien vers l’image | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

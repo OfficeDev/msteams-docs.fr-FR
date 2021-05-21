@@ -1,6 +1,6 @@
 ---
 title: Flux de travail séquentiels
-description: Exemple pour les workflows séquentiels utilisant des actions universelles
+description: Exemple de flux de travail séquentiels utilisant des actions universelles
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
@@ -13,22 +13,22 @@ ms.locfileid: "52555401"
 ---
 # <a name="sequential-workflows"></a>Flux de travail séquentiels
 
-Les cartes adaptatives supportent désormais les workflows séquentiels, c’est-à-dire lorsque les cartes adaptatives sont mises à jour sur l’action de l’utilisateur et que l’utilisateur peut progresser à travers une série de cartes qui nécessitent l’entrée de l’utilisateur. Ceci est pris en charge par `Action.Execute` le biais , qui permet aux développeurs de bots de retourner les cartes adaptatives en réponse à une action de l’utilisateur.
+Les cartes adaptatives peuvent désormais prendre en charge les flux de travail séquentiels, c’est-à-dire lorsque les cartes adaptatives sont mises à jour lors de l’action de l’utilisateur et que l’utilisateur peut avancer dans une série de cartes qui nécessitent une entrée utilisateur. Ceci est pris en charge par le biais de , qui permet aux développeurs de bot de retourner des `Action.Execute` cartes adaptatives en réponse à une action de l’utilisateur.
 
-Par exemple, prenez un scénario où la cafétéria veut prendre une commande pour une équipe ou un canal. Avec `Action.Execute` le choix de l’utilisateur pour divers articles, tels que la nourriture, les boissons, et ainsi de suite peut être enregistré séquentiellement. L’utilisateur peut également aller et venir à travers les cartes selon la logique définie par le développeur de bot. <br/>
+Par exemple, prenez un scénario dans lequel la salle d’information souhaite prendre une commande pour une équipe ou un canal. Avec le choix de l’utilisateur pour divers éléments, tels que la cuisine, les `Action.Execute` cuisines, etc. peuvent être enregistrés séquentiellement. L’utilisateur peut également faire des allers-retours entre les cartes selon la logique définie par le développeur du bot. <br/>
 
-L’image suivante affiche le flux de travail séquentiel :
+L’image suivante illustre le flux de travail séquentiel :
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-Un utilisateur peut progresser dans son flux de travail sans modifier la carte pour les autres utilisateurs. Ceci est également utile pour effectuer des quiz à l’aide de cartes adaptatives séquentielles. Comme indiqué dans l’image suivante, différents utilisateurs peuvent être à différents stades du flux de travail et ils voient différents états de la carte:
+Un utilisateur peut avancer dans son flux de travail sans modifier la carte d’autres utilisateurs. Cela est également utile pour la conduite de questionnaires à l’aide de cartes adaptatives séquentielles. Comme illustré dans l’image suivante, différents utilisateurs peuvent se trouver à différentes étapes du flux de travail et ils voient différents états de la carte :
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="États bot traiteur":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="États du bot de restauration":::
 
 > [!NOTE]
-> Afin de synchroniser les progrès de l’utilisateur entre les appareils, utilisez la `refresh` propriété dans Adaptive Card JSON.
+> Pour synchroniser la progression de l’utilisateur sur plusieurs appareils, utilisez la `refresh` propriété dans le JSON de carte adaptative.
 
-## <a name="sequential-workflow-for-adaptive-cards"></a>Flux de travail séquentiel pour cartes adaptatives
+## <a name="sequential-workflow-for-adaptive-cards"></a>Flux de travail séquentiel pour les cartes adaptatives
 
 Le code suivant fournit un exemple de cartes adaptatives :
 
@@ -75,16 +75,16 @@ Le code suivant fournit un exemple de cartes adaptatives :
 }
 ```
 
-`Action.Execute`invoquant le bot peut retourner les cartes adaptatives comme une réponse, qui remplace la carte existante dans Teams.
-L’exemple suivant fournit ce que le bot retourne sur la sélection des aliments ou des boissons ou la confirmation de commande:
+`Action.Execute`l’vot du bot peut renvoyer des cartes adaptatives en tant que réponse, ce qui remplace la carte existante dans Teams.
+L’exemple suivant fournit ce que le bot renvoie lors de la sélection de la cuisine, de l’éros ou de la confirmation de commande :
 
-* Sur la sélection des aliments de la carte 1, bot peut retourner une carte pour la sélection des boissons qui est la carte 2.
-* Lors de la sélection des boissons de la carte 2, bot peut retourner une carte de confirmation de commande qui est la carte 3.
-* Sur commande confirmation de la carte 3, bot peut retourner une carte confirmée de commande qui est la carte 4.
+* Sur la sélection de la carte 1, le bot peut renvoyer une carte pour la sélection d’une carte de carte 2.
+* Lors de la sélection à partir de la carte 2, le bot peut renvoyer une carte de confirmation de commande qui est la carte 3.
+* Lors de la confirmation de commande à partir de la carte 3, le bot peut renvoyer une carte de commande confirmée qui est la carte 4.
 
-## <a name="invoke-request-received-on-bot-side"></a>Invoquer la demande reçue du côté bot
+## <a name="invoke-request-received-on-bot-side"></a>Appeler la demande reçue côté bot
 
-Le code suivant fournit un exemple d’une demande d’invocer reçue du côté bot :
+Le code suivant fournit un exemple de demande d’appel reçue côté bot :
 
 ```JSON
 { 
@@ -107,9 +107,9 @@ Le code suivant fournit un exemple d’une demande d’invocer reçue du côté 
 }
 ```
 
-## <a name="invoke-response-to-return-adaptive-cards"></a>Invoquer la réponse pour retourner les cartes adaptatives
+## <a name="invoke-response-to-return-adaptive-cards"></a>Appeler la réponse pour renvoyer des cartes adaptatives
 
-Le code suivant fournit un exemple de réponse invocative pour renvoyer les cartes adaptatives :
+Le code suivant fournit un exemple de réponse d’appel pour renvoyer des cartes adaptatives :
 
 ```C#
 string cardJson = "<adaptive card json>";
@@ -125,6 +125,6 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Actions de carte adaptative en Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [Actions de carte adaptative dans Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Comment fonctionnent les bots ?](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)

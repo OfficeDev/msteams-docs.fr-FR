@@ -13,18 +13,18 @@ ms.locfileid: "52566865"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Obtenir un contexte pour votre onglet Microsoft Teams
 
-Votre onglet doit exiger des informations contextuelles pour afficher le contenu pertinent :
+Votre onglet doit nécessiter des informations contextuelles pour afficher le contenu pertinent :
 
 * Informations de base sur l’utilisateur, l’équipe ou l’entreprise.
-* Informations locales et thématiques.
-* Lisez le `entityId` ou qui identifie ce qui est dans cet `subEntityId` onglet.
+* Informations sur les paramètres régionaux et le thème.
+* Lisez `entityId` ou identifie ce qui se trouve dans cet `subEntityId` onglet.
 
 ## <a name="user-context"></a>Contexte utilisateur
 
 Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être particulièrement utile lorsque :
 
-* Vous créez ou associez des ressources de votre application à l’utilisateur ou à l’équipe spécifié.
-* Vous lancez un flux d’authentification contre Azure Active Directory ou un autre fournisseur d’identité, et vous ne souhaitez pas exiger de l’utilisateur qu’il entre à nouveau son nom d’utilisateur. Pour plus d’informations sur l’authentification Microsoft Teams onglet, voir [Authentifier un utilisateur dans votre onglet Microsoft Teams’utilisateur](~/concepts/authentication/authentication.md).
+* Vous créez ou associez des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
+* Vous lancez un flux d’authentification par rapport à Azure Active Directory ou à un autre fournisseur d’identité, et vous ne souhaitez pas obliger l’utilisateur à entrer à nouveau son nom d’utilisateur. Pour plus d’informations sur l’authentification dans votre onglet Microsoft Teams, voir Authentifier un utilisateur dans [Microsoft Teams onglet .](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > Bien que ces informations utilisateur contribuent à faciliter l’expérience utilisateur, vous ne devez *pas* l’utiliser comme preuve d’identité. Par exemple, un utilisateur malveillant peut charger votre page dans un « navigateur malveillant » et rendre des informations ou demandes potentiellement dangereuses.
@@ -33,8 +33,8 @@ Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être p
 
 Vous pouvez accéder aux informations de contexte de deux façons :
 
-* Insérez les valeurs de placeholder URL.
-* Utilisez le [Microsoft Teams client JavaScript SDK](/javascript/api/overview/msteams-client).
+* Insérez des valeurs d’espace réservé d’URL.
+* Utilisez le [Microsoft Teams SDK client JavaScript.](/javascript/api/overview/msteams-client)
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>Obtenir du contexte en insérant des valeurs d’espace réservé d’URL
 
@@ -48,19 +48,19 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 * {theme} : le thème d’interface utilisateur actuel, tel `default`, `dark`ou `contrast`.
 * {groupId} : ID du groupe Office 365 dans lequel se trouve l’onglet.
 * {tid}: ID de client Azure AD de l’utilisateur actuel.
-* {local}: Le lieu actuel de l’utilisateur formaté comme languageId-countryId. Par exemple, en-us.
+* {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId. Par exemple, en-us.
 
 >[!NOTE]
 >L’espace réservé `{upn}`précédent est désormais supprimé. Pour des raisons de compatibilité ascendante, il s'agit actuellement d'un synonyme de `{loginHint}`.
 
-Par exemple, supposons que dans votre manifeste d’onglets vous `configURL` définissez `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` l’attribut à , l’utilisateur connecté a les attributs suivants:
+Par exemple, supposons que, dans le manifeste de votre onglet, vous définissez l’attribut sur , l’utilisateur inscrit possède `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` les attributs suivants :
 
-* Leur nom d’utilisateur est « user@example.com ».
-* Leur identifiant de locataire d’entreprise est 'e2653c-etc'.
-* Ils sont membres du groupe Office 365 avec id '00209384-etc'.
-* L’utilisateur a défini Teams thème de la zone de travail à « sombre ».
+* Leur nom d’utilisateur est « user@example.com ».
+* Leur ID de locataire d’entreprise est « e2653c-etc ».
+* Ils sont membres du groupe Office 365 avec l’ID « 00209384-etc ».
+* L’utilisateur a Teams thème « dark ».
 
-Lorsqu’ils configurent votre onglet, Teams appelle l’URL suivante :
+Lorsqu’ils configurent votre onglet, Teams l’URL suivante :
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -68,7 +68,7 @@ Lorsqu’ils configurent votre onglet, Teams appelle l’URL suivante :
 
 Vous pouvez également extraire les informations mentionnées ci-dessus à l’aide du client [Microsoft Teams JavaScript Client SDK](/javascript/api/overview/msteams-client) en appelant `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-La variable contextative ressemble à l’exemple suivant :
+La variable de contexte ressemble à l’exemple suivant :
 
 ```json
 {
@@ -117,12 +117,12 @@ La variable contextative ressemble à l’exemple suivant :
 
 Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l’appel `getContext` sont masquées pour protéger la confidentialité du canal. Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé. Si votre page utilise l’une des valeurs ci-dessous, vous devez vérifier le champ `channelType` pour déterminer si votre page est chargée dans un canal privé et y répondre de façon appropriée.
 
-* `groupId`: Non défini pour les chaînes privées
-* `teamId`: Mis au filId de la chaîne privée
-* `teamName`: Défini au nom de la chaîne privée
-* `teamSiteUrl`: Défini sur l’URL d’un site SharePoint distinct et unique pour la chaîne privée
-* `teamSitePath`: Mis sur le chemin d’un site de SharePoint distinct et unique pour la chaîne privée
-* `teamSiteDomain`: Défini au domaine d’un domaine de site distinct SharePoint unique pour le canal privé
+* `groupId`: Non définie pour les canaux privés
+* `teamId`: définir sur le threadId du canal privé
+* `teamName`: Définir sur le nom du canal privé
+* `teamSiteUrl`: Définir sur l’URL d’un site SharePoint distinct et unique pour le canal privé
+* `teamSitePath`: Définir sur le chemin d’accès d’un site SharePoint distinct et unique pour le canal privé
+* `teamSiteDomain`: Définir sur le domaine d’un domaine de site SharePoint unique et distinct pour le canal privé
 
 > [!Note]
 >  teamSiteUrl fonctionne également bien pour les canaux standard.

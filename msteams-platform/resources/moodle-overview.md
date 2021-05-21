@@ -1,6 +1,6 @@
 ---
-title: Système de gestion de l’apprentissage Moodle
-description: Vue d’ensemble de l’intégration de Moodle LMS Teams
+title: Système de gestion de l’apprentissage par le chat
+description: Vue d’ensemble de l’intégration de LMS à Teams
 ms.topic: overview
 localization_priority: Normal
 ms.author: surbhigupta
@@ -12,19 +12,19 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52555481"
 ---
-# <a name="moodle-learning-management-system"></a>Système de gestion de l’apprentissage Moodle
+# <a name="moodle-learning-management-system"></a>Système de gestion de l’apprentissage par le chat
 
-Moodle est le plus grand système de gestion de l’apprentissage open source au monde. Cette application aide les éducateurs à créer et à organiser leurs cours grâce à des fonctionnalités précieuses qui comprennent un outil de quiz robuste, des discussions classées et une variété de types d’affectation s’ils veulent que les élèves s’engagent avec le contenu.  
+Il s’agit du plus grand système de gestion de l’apprentissage open source au monde. Cette application permet aux enseignants de créer et d’organiser leurs cours à l’aide de fonctionnalités précieuses qui incluent un outil de questionnaire robuste, des discussions notés et divers types d’affectations permettant aux étudiants d’interagir avec du contenu.  
  
-Moodle s’intègre à Microsoft Teams. Teams est la plaque tournante de la collaboration en temps réel, du travail d’équipe et de la productivité. Grâce à une intégration transparente avec Office 365, des centaines d’applications, de chat et de capacités de réunion en direct de jusqu’à 300 participants, Teams donne au corps professoral et aux étudiants la possibilité de travailler ensemble plus efficacement, où qu’ils se trouvent. 
+Il s’intègre à Microsoft Teams. Teams est le hub pour la collaboration en temps réel, le travail d’équipe et la productivité. Grâce à une intégration transparente avec Office 365, des centaines d’applications, de conversation et de fonctionnalités de réunion en direct de 300 participants au plus, Teams offre aux enseignants et aux étudiants la possibilité de collaborer plus efficacement, où qu’ils soient. 
  
-De plus, les plugins Microsoft 365 Moodle complètent Moodle en offrant une expérience complète aux professeurs et aux étudiants. Avec les plugins moodle Microsoft 365, les administrateurs de site peuvent synchroniser les utilisateurs entre Office 365 et Moodle, automatiser l’appariement des utilisateurs, synchroniser les cours vers les Microsoft Teams et les référentiels de fichiers, connecter les missions OneNote et intégrer des documents Office.  
+En outre, les plug-ins Microsoft 365 Sont complémentaires de Songle en offrant une expérience complète pour les enseignants et les étudiants. Avec les plug-ins Microsoft 365 Automation, les administrateurs de site peuvent synchroniser les utilisateurs entre Office 365 et Songe, automatiser la mise en correspondance des utilisateurs, synchroniser des cours avec des Microsoft Teams et des référentiels de fichiers, connecter des affectations OneNote et incorporer des documents Office.  
  
-En outre, les applications Microsoft Teams telles que mConnect by Skooler et les plugins moodle Microsoft 365, qui intègre Moodle dans Teams, le corps professoral et les étudiants peuvent avoir le meilleur des deux mondes en profitant des caractéristiques uniques de Moodle tout en s’engageant dans la communication et la collaboration en temps réel.
+En outre, les applications Microsoft Teams telles que mConnect by Skooler et les plug-ins Microsoft 365 Moodle, qui intègre Le jeu à l’Teams, les enseignants et les étudiants peuvent tirer parti des deux mondes en profitant des fonctionnalités uniques de Songèle tout en s’impliquant dans la communication et la collaboration en temps réel.
 
-## <a name="mconnect-app-by-skooler"></a>application mConnect par Skooler
+## <a name="mconnect-app-by-skooler"></a>Application mConnect par Skooler
 
-L’application mConnect de Skooler vous permet d’offrir des apprentissages virtuels Teams avec facilité.
+L’application mConnect de Skooler vous permet d’offrir des apprentissages virtuels Teams en toute simplicité.
 
 ### <a name="why-mconnect-and-teams"></a>Pourquoi mConnect et Teams
 
@@ -32,17 +32,17 @@ Regardez la vidéo suivante pour comprendre comment mConnect et Teams fonctionne
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
-De l’intérieur de mConnect, les participants au cours ont accès à l’expérience complète du cours Moodle dans le cadre de la collaboration et de la communication en temps réel fournies par Microsoft Teams.
+À partir de l’intérieur de mConnect, les participants au cours accèdent à l’expérience complète du cours Le jeu à l’intérieur de la collaboration et de la communication en temps réel fournies par Microsoft Teams.
 
-### <a name="get-started-with-mconnect-and-teams"></a>Démarrer avec mConnect et Teams
+### <a name="get-started-with-mconnect-and-teams"></a>Mise en place de mConnect et de Teams
 
 Regardez la vidéo suivante pour comprendre comment commencer avec mConnect et Teams :
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
 
-Pour plus d’informations, [voir mConnect par Skooler](https://skooler.com/mconnect/how-to/).
+Pour plus d’informations, [voir mConnect by Skooler](https://skooler.com/mconnect/how-to/).
 
-## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Moodle Plugins
+## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Plug-ins Enfichables
 
-Moodle plugins pour Teams facilite la programmation, la livraison et la collaboration sur le contenu du cours. Installez les plugins qui apportent de façon transparente le système de gestion de l’apprentissage Moodle Teams. Pour plus d’informations, [voir Installer Moodle LMS](moodleInstructions.md).
+Les plug-ins de Teams facilitent la planification, la livraison et la collaboration sur le contenu des cours. Installez les plug-ins qui intègrent en toute transparence le système de gestion de l’apprentissage De l Teams. Pour plus d’informations, [voir Installer Le LMS de LMS.](moodleInstructions.md)
 

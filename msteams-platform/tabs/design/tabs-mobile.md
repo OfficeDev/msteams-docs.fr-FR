@@ -1,9 +1,9 @@
 ---
 title: Onglets sur les appareils mobiles
-description: Décrit les lignes directrices pour la conception d’onglets qui fonctionnent sur mobile.
+description: Décrit les instructions pour la conception d’onglets qui fonctionnent sur les appareils mobiles.
 ms.topic: conceptual
 localization_priority: Normal
-keywords: les équipes conçoivent des lignes directrices de référence cadre d’applications personnelles onglets mobiles
+keywords: onglets mobiles des applications personnelles de l’infrastructure de référence des recommandations en matière de conception d’équipes
 ms.openlocfilehash: 853ab2c52edd1f4faedcc92e6f0e8d0821b580c7
 ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
@@ -13,61 +13,61 @@ ms.locfileid: "52566697"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
-Vous pouvez inclure des onglets dans Teams canaux mobiles, des chats et des applications personnelles.
+Vous pouvez inclure des onglets dans des Teams mobiles, des conversations et des applications personnelles.
 
-## <a name="accessing-personal-tabs"></a>Accéder aux onglets personnels
+## <a name="accessing-personal-tabs"></a>Accès aux onglets personnels
 
-Vous pouvez accéder aux onglets personnels dans le tiroir de l’application.
+Vous pouvez accéder aux onglets personnels dans le caisse de l’application.
 
-:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration affichant le tiroir Teams d’application mobile." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration montrant le Teams’application mobile." border="false":::
 
-## <a name="accessing-channel-tabs"></a>Accéder aux onglets du canal
+## <a name="accessing-channel-tabs"></a>Accès aux onglets de canal
 
-Vous pouvez accéder aux onglets de canal et de groupe en **sélectionnant le** bouton Plus dans le canal ou le chat dans lequel ils ont été ajoutés.
+Vous pouvez accéder aux onglets de canal et de groupe en sélectionnant le bouton **Plus** dans le canal ou la conversation dans laquelle ils ont été ajoutés.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Illustration affichant un onglet mobile Teams de la maison." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Illustration montrant un Teams onglet mobile." border="false":::
 
 ## <a name="design-considerations"></a>Considérations relatives à la conception
 
-Notre plate-forme mobile permet aux applications d’être une expérience immersive avec le contenu de l’application prenant tout l’écran en dehors de la navigation Teams principale. Pour créer une expérience immersive qui s’adapte à Teams, suivez ces lignes directrices.
+Notre plateforme mobile permet aux applications d’être une expérience immersive avec le contenu de l’application prenant tout l’écran en dehors de la Teams navigation. Pour créer une expérience immersive adaptée aux Teams, suivez ces instructions.
 
 ### <a name="responsive-design"></a>Conception réactive
 
-Parce que votre onglet peut être ouvert sur les appareils avec un large éventail de tailles d’écran, il doit suivre les principes [de conception](https://www.w3schools.com/html/html_responsive.asp) réactive. Toutes les constructions clés doivent être accessibles sur les appareils mobiles, et les vues ne doivent pas être déformées. Assurez-vous que lorsque votre onglet est chargé sur un appareil mobile, tous les boutons et liens sont facilement accessibles à l’aide de la navigation basée sur les doigts.
+Étant donné que votre onglet peut être ouvert sur des appareils avec un large éventail de tailles d’écran, il doit respecter les principes de [conception](https://www.w3schools.com/html/html_responsive.asp) réactifs. Toutes les constructions clés doivent être accessibles sur les appareils mobiles et les vues ne doivent pas être déformées. Assurez-vous que lorsque votre onglet est chargé sur un appareil mobile, tous les boutons et liens sont facilement accessibles à l’aide de la navigation avec les doigts.
 
 ### <a name="layouts"></a>Dispositions
 
-Il est important de choisir la bonne disposition pour votre onglet. Vous devez tenir compte du type d’information que vous présentez, et choisir une mise en page qui l’organise pour une consommation facile. Certaines options potentielles sont décrites ci-dessous.
+Il est important de choisir la disposition correcte pour votre onglet. Vous devez prendre en compte le type d’informations que vous présentez et choisir une disposition qui les organise pour faciliter la consommation. Certaines options potentielles sont décrites ci-dessous.
 
-#### <a name="single-canvas"></a>Toile unique
+#### <a name="single-canvas"></a>Canevas unique
 
-C’est un grand domaine où le travail est fait. L Teams appr$ Wiki suit ce modèle. Si vous avez une application qui ne sépare pas le contenu en composants plus petits, ce serait un bon ajustement.
+Il s’agit d’un domaine important dans lequel le travail est effectué. L’Teams Wiki suit ce modèle. Si vous avez une application qui ne sépare pas le contenu en composants plus petits, cela serait adapté.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Illustration affichant un onglet Teams simple mobile de toile." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Illustration montrant un Teams onglet mobile de zone de dessin unique." border="false":::
 
 #### <a name="list"></a>Répertorier
 
-Les listes sont excellentes pour le tri et le filtrage de grandes quantités de données et sont excellentes pour garder les choses les plus importantes au sommet. Il est utile d’utiliser des colonnes triables. Des actions peuvent être ajoutées à chaque élément de liste dans le menu ellipsis.
+Les listes sont excellentes pour le tri et le filtrage de grandes quantités de données et sont très bonnes pour conserver les éléments les plus importants en haut. Il est utile d’utiliser des colonnes triables. Les actions peuvent être ajoutées à chaque élément de liste sous le menu des ellipses.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Illustration affichant un onglet Teams liste mobile." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Illustration montrant un onglet Teams liste mobile." border="false":::
 
-#### <a name="grid"></a>grille
+#### <a name="grid"></a>Grid
 
-Les grilles sont utiles pour montrer des éléments très visuels. Il aide à inclure un filtre ou un contrôle de recherche en haut.
+Les grilles sont utiles pour l’affichage d’éléments hautement visuels. Il est utile d’inclure un contrôle de filtre ou de recherche en haut.
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Illustration affichant un onglet mobile Teams avec une disposition de grille." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="Illustration montrant un Teams onglet mobile avec une disposition de grille." border="false":::
 
 ### <a name="tabs-with-bots-on-mobile"></a>Onglets avec bots sur mobile
 
-L’exemple suivant est une application personnelle qui a des onglets et un bot:
+L’exemple suivant est une application personnelle qui possède des onglets et un bot :
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration montrant comment l’application Teams mobile qui a des onglets et un bot." border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration montrant comment l’Teams’application mobile qui possède des onglets et un bot." border="false":::
 
-## <a name="ui-components"></a>Composants d’interface utilisateur
+## <a name="ui-components"></a>Composants de l’interface utilisateur
 
 ### <a name="color-palettes"></a>Palettes de couleurs
 
-L’utilisation de notre palette neutre approuvée pour les arrière-plans, les notifications, le texte et les boutons aidera votre application à se sentir plus à l’aise Teams. Depuis Teams mobile a deux thèmes de couleur (clair et foncé), c’est une bonne idée de s’assurer que votre application ressemble beaucoup dans les deux.
+L’utilisation de notre palette neutre approuvée pour les arrière-plans, les notifications, le texte et les boutons permet à votre application de se sentir plus à l’Teams. Étant donné Teams mobile possède deux thèmes à thèmes (clair et foncé), il est bon de s’assurer que votre application s’annonce bien dans les deux cas.
 
 #### <a name="light-color"></a>Couleur claire
 
@@ -77,85 +77,85 @@ L’utilisation de notre palette neutre approuvée pour les arrière-plans, les 
 
 ![palette de couleurs foncées](../../assets/images/dark-color.png)
 
-### <a name="buttons-and-controls"></a>Boutons et commandes
+### <a name="buttons-and-controls"></a>Boutons et contrôles
 
-La façon dont les boutons sont sifflés aide à communiquer quel type d’action ils déclenchent. Nous maintenons un large éventail de boutons qui sont formatés pour montrer différents niveaux d’emphase. Les boutons peuvent avoir du texte, une icône ou une combinaison de texte et d’icône. Pour communiquer différents niveaux dans une hiérarchie, nous avons conçu des boutons primaires et secondaires dans chaque catégorie.
+Le style des boutons permet de communiquer le type d’action qu’ils déclenchent. Nous tenez à jour un large éventail de boutons mis en forme pour afficher différents niveaux d’accentuation. Les boutons peuvent avoir du texte, une icône ou une combinaison de texte et d’icône. Pour communiquer différents niveaux dans une hiérarchie, nous avons conçu des boutons principaux et secondaires dans chaque catégorie.
 
 #### <a name="buttons"></a>Boutons
 
-Boutons primaires et secondaires.
+Boutons principal et secondaire.
 
-![image boutons](../../assets/images/buttons.png)
+![image de boutons](../../assets/images/buttons.png)
 
 #### <a name="selection-controls"></a>Contrôles de sélection
 
-Boutons radio, caisses à cocher et basculements.
+Boutons d’radio, case à cocher et boutons bascule.
 
 ![contrôles de sélection](../../assets/images/selection-controls.png)
 
-#### <a name="chiclets-and-pills"></a>Chiclets et pilules
+#### <a name="chiclets-and-pills"></a>Yézélettes et insérables
 
-![chiclets et pilules](../../assets/images/chiclets-and-pills.png)
+![tlets et l’errég](../../assets/images/chiclets-and-pills.png)
 
 ### <a name="typography"></a>Typographie
 
-La typographie doit être claire et délibérée. Mettez l’accent sur des informations importantes et évitez d’utiliser plusieurs polices et tailles pour réduire la confusion. Nous vous recommandons d’utiliser le cas de phrase et d’éviter l’utilisation de tous les plafonds pour la localisation et la lisibilité.
+La typographie doit être claire et précise. Mettre en avant des informations importantes et éviter d’utiliser plusieurs polices et tailles pour réduire la confusion. Nous vous recommandons d’utiliser un cas de phrase et d’éviter l’utilisation de toutes les limites pour la localisation et la lisibilité.
 
-![typographe mobile](../../assets/images/mobile-typography.png)
+![typograph mobile](../../assets/images/mobile-typography.png)
 
-### <a name="fields-and-flyouts"></a>Champs et flyouts
+### <a name="fields-and-flyouts"></a>Champs et volants
 
-Les champs sont des domaines où les utilisateurs peuvent entrer du texte. Les flyouts sont plus légers que les dialogues et apparaissent à partir du volet supérieur.
+Les champs sont des zones où les utilisateurs peuvent entrer du texte. Les volants sont plus légers que les boîtes de dialogue et apparaissent dans le volet supérieur.
 
 #### <a name="list-controls"></a>Répertorier les contrôles
 
-![contrôles de liste mobiles](../../assets/images/mobile-list-controls.png)
+![contrôles de liste mobile](../../assets/images/mobile-list-controls.png)
 
 #### <a name="field-controls"></a>contrôles de champs
 
-![commandes mobiles sur le terrain](../../assets/images/mobile-field-controls.png)
+![contrôles de champ mobile](../../assets/images/mobile-field-controls.png)
 
-## <a name="developer-considerations"></a>Considérations des développeurs
+## <a name="developer-considerations"></a>Considérations pour les développeurs
 
-Lorsque vous construisez une application qui inclut un onglet, vous devez considérer (et tester) comment votre onglet fonctionnera à la fois sur les clients Android et iOS Microsoft Teams clients. Les sections ci-dessous décrivent certains des scénarios clés que vous devez envisager.
+Lorsque vous construisez une application qui inclut un onglet, vous devez prendre en compte (et tester) le fonctionnement de votre onglet sur les clients Microsoft Teams Android et iOS. Les sections ci-dessous décrivent certains des scénarios clés que vous devez prendre en considération.
 
 ### <a name="authentication"></a>Authentification
 
-Pour que l’authentification fonctionne sur les clients mobiles, vous devez Teams javascript SDK à au moins la version 1.4.1.
+Pour que l’authentification fonctionne sur les clients mobiles, vous devez mettre à niveau Teams SDK JavaScript vers au moins la version 1.4.1.
 
-### <a name="low-bandwidth-and-intermittent-connections"></a>Faible bande passante et connexions intermittentes
+### <a name="low-bandwidth-and-intermittent-connections"></a>Bande passante faible et connexions intermittentes
 
-Les clients mobiles doivent régulièrement fonctionner avec une faible bande passante et des connexions intermittentes. Votre application doit gérer les délais d’attente de manière appropriée en fournissant un message contextuel à l’utilisateur. Vous devez également utiliser des indicateurs de progression pour fournir des commentaires à vos utilisateurs pour tous les processus de longue durée.
+Les clients mobiles doivent régulièrement fonctionner avec une bande passante faible et des connexions intermittentes. Votre application doit gérer les délai d’accès de manière appropriée en fournissant un message contextuel à l’utilisateur. Vous devez également fournir des indicateurs de progression des utilisateurs pour fournir des commentaires à vos utilisateurs pour tout processus de longue durée.
 
 > [!NOTE]
-> Les onglets ne sont activés sur mobile qu’après l’ajout de l’application à une liste d’autorisation, en fonction de l’entrée de l’équipe d’approbation. Pour vérifier la réactivité mobile, teindez la main à teamsubm@microsoft.com.
+> Les onglets sont activés sur les appareils mobiles uniquement après l’ajout de l’application à une liste d’autorisation, en fonction de l’entrée de l’équipe d’approbation. Pour vérifier la réactivité de l’appareil mobile, teamsubm@microsoft.com.
 
-### <a name="testing-on-mobile-clients"></a>Tests sur les clients mobiles
+### <a name="testing-on-mobile-clients"></a>Test sur les clients mobiles
 
-Vous devez valider que votre onglet fonctionne correctement sur les appareils mobiles de différentes tailles et qualités. Pour les appareils Android, vous pouvez utiliser les [DevTools pour](~/tabs/how-to/developer-tools.md) débog vos onglets pendant qu’il est en cours d’exécution. Nous vous recommandons de tester sur les appareils haute et basse performance, y compris une tablette.
+Vous devez vérifier que votre onglet fonctionne correctement sur des appareils mobiles de différentes tailles et qualités. Pour les appareils Android, vous pouvez utiliser [DevTools](~/tabs/how-to/developer-tools.md) pour déboguer votre onglet pendant son exécution. Nous vous recommandons de tester sur les appareils hautes et faibles performances, y compris une tablette.
 
 ### <a name="distribution"></a>Distribution
 
-Les applications répertoriées dans Teams magasin doivent être approuvées pour une utilisation mobile qui fonctionne correctement dans Teams client mobile. La disponibilité et le comportement de l’onglet dépendent de l’approbation ou non de votre application.
+Les applications répertoriées dans Teams store doivent être approuvées pour que l’utilisation mobile fonctionne correctement dans Teams client mobile. La disponibilité et le comportement des onglets dépendent de l’approbation ou non de votre application.
 
-#### <a name="apps-on-teams-store-approved-for-mobile"></a>Applications sur Teams web approuvées pour mobile
+#### <a name="apps-on-teams-store-approved-for-mobile"></a>Applications sur Teams store approuvées pour les appareils mobiles
 
-Le tableau suivant décrit la disponibilité et le comportement de l’onglet lorsque l’application est répertoriée sur le Teams et approuvée pour un usage mobile :
+Le tableau suivant décrit la disponibilité et le comportement des onglets lorsque l’application est répertoriée dans le Teams store et approuvée pour une utilisation mobile :
 
 |Fonctionnalité   |Disponibilité mobile ?   |Comportement mobile|
 |----------|-----------|------------|
-|Canal <br /> et onglet groupe|Oui|L’onglet s’ouvre Teams client mobile en utilisant la configuration de votre `contentUrl` application.|
-|Application personnelle|Oui|Chaque onglet de l’onglet application personnelle s’ouvre dans le Teams client mobile en utilisant sa `contentUrl` configuration respective.|
+|Canal <br /> et onglet de groupe|Oui|L’onglet s’ouvre Teams client mobile à l’aide de la configuration de votre `contentUrl` application.|
+|Application personnelle|Oui|Chaque onglet de l’onglet de l’application personnelle s’ouvre Teams client mobile en utilisant sa `contentUrl` configuration respective.|
 
-#### <a name="apps-on-teams-store-not-approved-for-mobile"></a>Les applications sur Teams magasin non approuvé pour mobile
+#### <a name="apps-on-teams-store-not-approved-for-mobile"></a>Applications sur Teams store non approuvées pour appareils mobiles
 
-Le tableau suivant décrit la disponibilité et le comportement de l’onglet lorsque l’application est répertoriée sur le Teams store mais n’est pas approuvée pour une utilisation mobile :
+Le tableau suivant décrit la disponibilité et le comportement des onglets lorsque l’application est répertoriée dans le magasin Teams mais qu’elle n’est pas approuvée pour une utilisation mobile :
 
 | Fonctionnalité | Disponibilité mobile ? | Comportement mobile |
 |----------|-----------|------------|
-|Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams utilisant la configuration de `websiteUrl` votre application, qui doit également être incluse dans la fonction de votre code `setSettings()` [](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true)source. Toutefois, les utilisateurs peuvent toujours afficher l’onglet dans le client mobile Teams en **sélectionnant Plus à côté** de l’application et **en choisissant Open**, qui déclenche la configuration de votre `contentUrl` application.|
+|Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams à l’aide de la configuration de votre application, qui doit également être incluse dans la fonction de votre `websiteUrl` code `setSettings()` [source.](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true) Toutefois, les utilisateurs peuvent toujours afficher l’onglet  dans le client mobile Teams en sélectionnant Plus en regard de l’application et en choisissant **Ouvrir,** ce qui déclenche la configuration de votre `contentUrl` application.|
 |Application personnelle|Non|Non applicable|
 
-#### <a name="apps-not-on-teams-store"></a>Applications non sur Teams store
+#### <a name="apps-not-on-teams-store"></a>Applications non stockées dans Teams store
 
-Si vous chargez votre application ou publiez sur le catalogue d’applications d’une organisation, le comportement de l’onglet sera le même que les applications Teams store approuvées par Microsoft pour mobile.
+Si vous chargez une version de votre application ou que vous publiez sur le catalogue d’applications d’une organisation, le comportement de l’onglet sera le même que celui des applications Teams Store approuvées par Microsoft pour appareils mobiles.

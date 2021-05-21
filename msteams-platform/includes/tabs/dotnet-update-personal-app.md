@@ -2,9 +2,9 @@
 
 ### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Pour que votre onglet s’affiche Teams, vous devez **inclure le client javascript Microsoft Teams SDK** et inclure un appel `microsoftTeams.initialize()` après que votre page se charge. Voici comment votre onglet et l’application Teams communiquer :
+Pour que votre onglet s’affiche dans Teams, vous devez inclure le **SDK client JavaScript Microsoft Teams** et inclure un appel après le chargement de `microsoftTeams.initialize()` votre page. Voici comment votre onglet et l’application Teams communiquent :
 
-- Accédez **au** dossier partagé, **ouvrez _Layout.cshtml** et ajoutez ce qui suit à la `<head>` section balises :
+- Accédez au **dossier** partagé, ouvrez **_Layout.cshtml** et ajoutez ce qui suit à la `<head>` section des balises :
 
     ```html
     `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
@@ -13,6 +13,6 @@ Pour que votre onglet s’affiche Teams, vous devez **inclure le client javascri
 
 ### <a name="personaltabcshtml"></a>PersonalTab.cshtml
 
-Ouvrez **PersonalTab.cshtml et mettez** à jour les `<script>` balises intégrées en appelant `microsoftTeams.initialize()` .
+Ouvrez **PersonalTab.cshtml** et mettez à jour les `<script>` balises incorporées en appelant `microsoftTeams.initialize()` .
 
-Assurez-vous d’enregistrer votre **mise à jour PersonalTab.cshtml**.
+Veillez à enregistrer votre **PersonalTab.cshtml** mis à jour.
