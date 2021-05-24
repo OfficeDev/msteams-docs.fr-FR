@@ -1,15 +1,15 @@
 - name: Vue d’ensemble
   expanded: true
   items:
-    - name: "Créer des applications pour Microsoft\_Teams"
+    - name: Créer des applications pour Microsoft Teams
       href: overview.md
-    - name: "Quelles sont les nouveautés\_?"
+    - name: Quelles sont les nouveautés ?
       href: whats-new.md
 - name: Prise en main
   items:
     - name: Vue d’ensemble
       href: build-your-first-app/build-first-app-overview.md
-    - name: "Créer une application «\_Hello, World!\_»"
+    - name: 'Créer une application « Hello, World! »'
       href: build-your-first-app/build-and-run.md
     - name: Créer un onglet personnel de base
       href: build-your-first-app/build-personal-tab.md
@@ -61,8 +61,12 @@
       href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
       href: samples/shifts-wfm-connectors.md
-    - name: Installer Moodle LMS
-      href: resources/moodleInstructions.md
+    - name: Moodle LMS
+      items:
+        - name: Présentation
+          href: resources/moodle-overview.md
+        - name: Installer Moodle LMS
+          href: resources/moodleInstructions.md
     - name: Créer un bouton de partage pour Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Ajouter l'onglet Teams à SharePoint
@@ -115,7 +119,7 @@
       href: toolkit/visual-studio-code-overview.md
     - name: Extension de kit de ressources Teams pour Visual Studio
       href: toolkit/visual-studio-overview.md
-    - name: "Générateur Yeoman pour Microsoft\_Teams (GitHub)"
+    - name: Générateur Yeoman pour Microsoft Teams (GitHub)
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
@@ -331,7 +335,7 @@
       items:
         - name: Flux d'authentification dans les onglets
           href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: "Utiliser l’authentification Azure\_AD"
+        - name: Utiliser l’authentification Azure AD
           href: tabs/how-to/authentication/auth-tab-aad.md
         - name: Utiliser l’authentification en mode silencieux
           href: tabs/how-to/authentication/auth-silent-aad.md
@@ -371,7 +375,7 @@
   items:
     - name: Présentation
       href: concepts/build-and-test/test-app-overview.md
-    - name: "Préparer votre client Microsoft Office\_365"
+    - name: Préparer votre client Microsoft Office 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: Choix d’une configuration de test
       href: concepts/build-and-test/debug.md
@@ -379,7 +383,7 @@
       href: concepts/build-and-test/test-data.md
     - name: Onglets
       items:
-        - name: "DevTools pour les onglets Microsoft\_Teams"
+        - name: DevTools pour les onglets Microsoft Teams
           href: tabs/how-to/developer-tools.md
     - name: Bots
       items:
@@ -389,7 +393,7 @@
           href: /azure/bot-service/bot-service-debug-inspection-middleware
         - name: Déboguer votre robot d’appel et de réunion localement
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-    - name: "Microsoft\_Graph"
+    - name: Microsoft Graph
       items:
         - name: Tester les autorisations de consentement spécifiques aux ressources
           href: graph-api/rsc/test-resource-specific-consent.md
@@ -445,7 +449,7 @@
           href: resources/schema/localization-schema.md
     - name: Modifications des marges de l’onglet
       href: resources/removing-tab-margins.md
-    - name: "Attribut de cookie SameSite (mise à jour\_2020)"
+    - name: Attribut de cookie SameSite (mise à jour 2020)
       href: resources/samesite-cookie-update.md
     - name: Cas dans les cas où les envois du magasin ont échoué fréquemment
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
