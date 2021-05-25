@@ -1,85 +1,85 @@
-## <a name="prerequisites"></a><span data-ttu-id="89f3a-101">Conditions préalables</span><span class="sxs-lookup"><span data-stu-id="89f3a-101">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="93191-101">Conditions préalables</span><span class="sxs-lookup"><span data-stu-id="93191-101">Prerequisites</span></span>
 
-- <span data-ttu-id="89f3a-102">Pour effectuer ce démarrage rapide, vous aurez besoin d’un client Office 365 et d’une équipe configurée avec autoriser le téléchargement *d’applications* personnalisées activée.</span><span class="sxs-lookup"><span data-stu-id="89f3a-102">To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled.</span></span> <span data-ttu-id="89f3a-103">Pour plus d’informations, voir [Préparer Office 365 client.](~/concepts/build-and-test/prepare-your-o365-tenant.md)</span><span class="sxs-lookup"><span data-stu-id="89f3a-103">To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).</span></span>
+- <span data-ttu-id="93191-102">Pour effectuer ce démarrage rapide, vous aurez besoin d’un client Office 365 et d’une équipe configurée avec autoriser le téléchargement *d’applications* personnalisées activée.</span><span class="sxs-lookup"><span data-stu-id="93191-102">To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled.</span></span> <span data-ttu-id="93191-103">Pour plus d’informations, voir [Préparer Office 365 client.](~/concepts/build-and-test/prepare-your-o365-tenant.md)</span><span class="sxs-lookup"><span data-stu-id="93191-103">To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).</span></span>
 
-  - <span data-ttu-id="89f3a-104">Si vous n’avez pas de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur.</span><span class="sxs-lookup"><span data-stu-id="89f3a-104">If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program.</span></span> <span data-ttu-id="89f3a-105">L’abonnement reste actif tant que vous l’utilisez pour le développement en cours.</span><span class="sxs-lookup"><span data-stu-id="89f3a-105">The subscription will remain active as long as you're using it for ongoing development.</span></span> <span data-ttu-id="89f3a-106">Voir [Bienvenue dans le programme Office 365 développeur.](/office/developer-program/microsoft-365-developer-program)</span><span class="sxs-lookup"><span data-stu-id="89f3a-106">See [Welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).</span></span>
+  - <span data-ttu-id="93191-104">Si vous n’avez pas de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur.</span><span class="sxs-lookup"><span data-stu-id="93191-104">If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program.</span></span> <span data-ttu-id="93191-105">L’abonnement reste actif tant que vous l’utilisez pour le développement en cours.</span><span class="sxs-lookup"><span data-stu-id="93191-105">The subscription will remain active as long as you're using it for ongoing development.</span></span> <span data-ttu-id="93191-106">Voir [Bienvenue dans le programme Office 365 développeur.](/office/developer-program/microsoft-365-developer-program)</span><span class="sxs-lookup"><span data-stu-id="93191-106">See [Welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).</span></span>
 
-<span data-ttu-id="89f3a-107">En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :</span><span class="sxs-lookup"><span data-stu-id="89f3a-107">In addition, this project requires that you have the following installed in your development environment:</span></span>
+<span data-ttu-id="93191-107">En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :</span><span class="sxs-lookup"><span data-stu-id="93191-107">In addition, this project requires that you have the following installed in your development environment:</span></span>
 
-- <span data-ttu-id="89f3a-108">N’importe quel éditeur de texte ou IDE.</span><span class="sxs-lookup"><span data-stu-id="89f3a-108">Any text editor or IDE.</span></span> <span data-ttu-id="89f3a-109">Vous pouvez installer et utiliser [Visual Studio Code](https://code.visualstudio.com/download) gratuitement.</span><span class="sxs-lookup"><span data-stu-id="89f3a-109">You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.</span></span>
+- <span data-ttu-id="93191-108">N’importe quel éditeur de texte ou IDE.</span><span class="sxs-lookup"><span data-stu-id="93191-108">Any text editor or IDE.</span></span> <span data-ttu-id="93191-109">Vous pouvez installer et utiliser [Visual Studio Code](https://code.visualstudio.com/download) gratuitement.</span><span class="sxs-lookup"><span data-stu-id="93191-109">You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.</span></span>
 
-- <span data-ttu-id="89f3a-110">[Node.js/npm](https://nodejs.org/en/).</span><span class="sxs-lookup"><span data-stu-id="89f3a-110">[Node.js/npm](https://nodejs.org/en/).</span></span> <span data-ttu-id="89f3a-111">Vous devez utiliser la dernière version de LTS.</span><span class="sxs-lookup"><span data-stu-id="89f3a-111">You should use the latest LTS version.</span></span> <span data-ttu-id="89f3a-112">Le nœud Gestionnaire de package (npm) s’installera dans votre système avec l’installation de Node.js.</span><span class="sxs-lookup"><span data-stu-id="89f3a-112">The Node Package Manager (npm) will install into your system with the installation of Node.js.</span></span>
+- <span data-ttu-id="93191-110">[Node.js/npm](https://nodejs.org/en/).</span><span class="sxs-lookup"><span data-stu-id="93191-110">[Node.js/npm](https://nodejs.org/en/).</span></span> <span data-ttu-id="93191-111">Vous devez utiliser la dernière version de LTS.</span><span class="sxs-lookup"><span data-stu-id="93191-111">You should use the latest LTS version.</span></span> <span data-ttu-id="93191-112">Le nœud Gestionnaire de package (npm) s’installera dans votre système avec l’installation de Node.js.</span><span class="sxs-lookup"><span data-stu-id="93191-112">The Node Package Manager (npm) will install into your system with the installation of Node.js.</span></span>
 
-- <span data-ttu-id="89f3a-113">Une fois que vous avez installé Node.js, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en tapant ce qui suit dans votre invite de commandes :</span><span class="sxs-lookup"><span data-stu-id="89f3a-113">After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:</span></span>
+- <span data-ttu-id="93191-113">Une fois que vous avez installé Node.js, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en tapant ce qui suit dans votre invite de commandes :</span><span class="sxs-lookup"><span data-stu-id="93191-113">After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:</span></span>
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- <span data-ttu-id="89f3a-114">Installez le générateur Microsoft Teams Apps en tapant ce qui suit dans votre invite de commandes :</span><span class="sxs-lookup"><span data-stu-id="89f3a-114">Install the Microsoft Teams Apps generator by typing the following in your command prompt:</span></span>
+- <span data-ttu-id="93191-114">Installez le générateur Microsoft Teams Apps en tapant ce qui suit dans votre invite de commandes :</span><span class="sxs-lookup"><span data-stu-id="93191-114">Install the Microsoft Teams Apps generator by typing the following in your command prompt:</span></span>
 
     ```bash
     npm install generator-teams --global
     ```
 
-## <a name="generate-your-project"></a><span data-ttu-id="89f3a-115">Générer votre projet</span><span class="sxs-lookup"><span data-stu-id="89f3a-115">Generate your project</span></span>
+## <a name="generate-your-project"></a><span data-ttu-id="93191-115">Générer votre projet</span><span class="sxs-lookup"><span data-stu-id="93191-115">Generate your project</span></span>
 
-- <span data-ttu-id="89f3a-116">Ouvrez une invite de commandes et créez un répertoire pour votre projet d’onglet.</span><span class="sxs-lookup"><span data-stu-id="89f3a-116">Open a command prompt and create a new directory for your tab project.</span></span>
+- <span data-ttu-id="93191-116">Ouvrez une invite de commandes et créez un répertoire pour votre projet d’onglet.</span><span class="sxs-lookup"><span data-stu-id="93191-116">Open a command prompt and create a new directory for your tab project.</span></span>
 
-- <span data-ttu-id="89f3a-117">Pour démarrer le générateur, accédez à votre nouveau répertoire et tapez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="89f3a-117">To start the generator, navigate to your new directory and type the following command:</span></span>
+- <span data-ttu-id="93191-117">Pour démarrer le générateur, accédez à votre nouveau répertoire et tapez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="93191-117">To start the generator, navigate to your new directory and type the following command:</span></span>
 
     ```bash
     yo teams
     ```
 
-- <span data-ttu-id="89f3a-118">Ensuite, vous allez fournir une série de valeurs qui seront utilisées dans le fichiermanifest.js **votre** application :</span><span class="sxs-lookup"><span data-stu-id="89f3a-118">Next, you'll provide a series of values that will be used in your application's **manifest.json** file:</span></span>
+- <span data-ttu-id="93191-118">Ensuite, vous allez fournir une série de valeurs qui seront utilisées dans le fichier **manifest.jsvotre** application :</span><span class="sxs-lookup"><span data-stu-id="93191-118">Next, you'll provide a series of values that will be used in your application's **manifest.json** file:</span></span>
 
-    ![Capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    <span data-ttu-id="89f3a-120">**Quel est le nom de votre solution ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-120">**What is your solution name?**</span></span>
+    <span data-ttu-id="93191-120">**Quel est le nom de votre solution ?**</span><span class="sxs-lookup"><span data-stu-id="93191-120">**What is your solution name?**</span></span>
 
-    <span data-ttu-id="89f3a-121">Il s’agit du nom de votre projet.</span><span class="sxs-lookup"><span data-stu-id="89f3a-121">This is your project name.</span></span> <span data-ttu-id="89f3a-122">Vous pouvez accepter le nom suggéré en appuyant sur Entrée.</span><span class="sxs-lookup"><span data-stu-id="89f3a-122">You can accept the suggested name by pressing enter.</span></span>
+    <span data-ttu-id="93191-121">Il s’agit du nom de votre projet.</span><span class="sxs-lookup"><span data-stu-id="93191-121">This is your project name.</span></span> <span data-ttu-id="93191-122">Vous pouvez accepter le nom suggéré en appuyant sur Entrée.</span><span class="sxs-lookup"><span data-stu-id="93191-122">You can accept the suggested name by pressing enter.</span></span>
 
-    <span data-ttu-id="89f3a-123">**Où souhaitez-vous placer les fichiers ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-123">**Where do you want to place the files?**</span></span>
+    <span data-ttu-id="93191-123">**Où souhaitez-vous placer les fichiers ?**</span><span class="sxs-lookup"><span data-stu-id="93191-123">**Where do you want to place the files?**</span></span>
 
-    <span data-ttu-id="89f3a-124">Vous êtes actuellement dans votre répertoire de projet.</span><span class="sxs-lookup"><span data-stu-id="89f3a-124">You're currently in your project directory.</span></span> <span data-ttu-id="89f3a-125">Appuyez sur Entrée.</span><span class="sxs-lookup"><span data-stu-id="89f3a-125">Press enter.</span></span>
+    <span data-ttu-id="93191-124">Vous êtes actuellement dans votre répertoire de projet.</span><span class="sxs-lookup"><span data-stu-id="93191-124">You're currently in your project directory.</span></span> <span data-ttu-id="93191-125">Appuyez sur Entrée.</span><span class="sxs-lookup"><span data-stu-id="93191-125">Press enter.</span></span>
 
-    <span data-ttu-id="89f3a-126">**Titre de votre Microsoft Teams d’application ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-126">**Title of your Microsoft Teams app project?**</span></span>
+    <span data-ttu-id="93191-126">**Titre de votre Microsoft Teams d’application ?**</span><span class="sxs-lookup"><span data-stu-id="93191-126">**Title of your Microsoft Teams app project?**</span></span>
 
-    <span data-ttu-id="89f3a-127">Il s’agit du nom de votre package d’application et sera utilisé dans le manifeste et la description de l’application.</span><span class="sxs-lookup"><span data-stu-id="89f3a-127">This is your app package name and will be used in the app manifest and description.</span></span>
+    <span data-ttu-id="93191-127">Il s’agit du nom de votre package d’application qui sera utilisé dans le manifeste et la description de l’application.</span><span class="sxs-lookup"><span data-stu-id="93191-127">This is your app package name and will be used in the app manifest and description.</span></span>
 
-    <span data-ttu-id="89f3a-128">**Votre nom (d’entreprise) ? (32 caractères maximum)**</span><span class="sxs-lookup"><span data-stu-id="89f3a-128">**Your (company) name? (max 32 characters)**</span></span>
+    <span data-ttu-id="93191-128">**Votre nom (d’entreprise) ? (32 caractères maximum)**</span><span class="sxs-lookup"><span data-stu-id="93191-128">**Your (company) name? (max 32 characters)**</span></span>
 
-    <span data-ttu-id="89f3a-129">Le nom de votre société sera utilisé dans le manifeste de l’application.</span><span class="sxs-lookup"><span data-stu-id="89f3a-129">Your company name will be used in the app manifest.</span></span>
+    <span data-ttu-id="93191-129">Le nom de votre société sera utilisé dans le manifeste de l’application.</span><span class="sxs-lookup"><span data-stu-id="93191-129">Your company name will be used in the app manifest.</span></span>
 
-    <span data-ttu-id="89f3a-130">**Quelle version de manifeste souhaitez-vous utiliser ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-130">**Which manifest version would you like to use?**</span></span>
+    <span data-ttu-id="93191-130">**Quelle version de manifeste souhaitez-vous utiliser ?**</span><span class="sxs-lookup"><span data-stu-id="93191-130">**Which manifest version would you like to use?**</span></span>
 
-    <span data-ttu-id="89f3a-131">Sélectionnez le schéma par défaut.</span><span class="sxs-lookup"><span data-stu-id="89f3a-131">Select the default schema.</span></span>
+    <span data-ttu-id="93191-131">Sélectionnez le schéma par défaut.</span><span class="sxs-lookup"><span data-stu-id="93191-131">Select the default schema.</span></span>
 
-    <span data-ttu-id="89f3a-132">**La échafaudage rapide ? (Y/n)**</span><span class="sxs-lookup"><span data-stu-id="89f3a-132">**Quick scaffolding? (Y/n)**</span></span>
+    <span data-ttu-id="93191-132">**La échafaudage rapide ? (Y/n)**</span><span class="sxs-lookup"><span data-stu-id="93191-132">**Quick scaffolding? (Y/n)**</span></span>
 
-    <span data-ttu-id="89f3a-133">La valeur par défaut est Oui ; entrez **n** pour entrer votre ID partenaire Microsoft.</span><span class="sxs-lookup"><span data-stu-id="89f3a-133">The default is yes; enter **n** to enter your Microsoft Partner Id.</span></span>
+    <span data-ttu-id="93191-133">La valeur par défaut est Oui ; entrez **n** pour entrer votre ID partenaire Microsoft.</span><span class="sxs-lookup"><span data-stu-id="93191-133">The default is yes; enter **n** to enter your Microsoft Partner Id.</span></span>
 
-    <span data-ttu-id="89f3a-134">**Entrez votre ID partenaire Microsoft, si vous en avez un ? (Laissez vide pour ignorer)**</span><span class="sxs-lookup"><span data-stu-id="89f3a-134">**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**</span></span>
+    <span data-ttu-id="93191-134">**Entrez votre ID partenaire Microsoft, si vous en avez un ? (Laissez vide pour ignorer)**</span><span class="sxs-lookup"><span data-stu-id="93191-134">**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**</span></span>
 
-    <span data-ttu-id="89f3a-135">Ce champ n’est pas obligatoire et ne doit être utilisé que si vous faites déjà partie de [Microsoft Partner Network](https://partner.microsoft.com).</span><span class="sxs-lookup"><span data-stu-id="89f3a-135">This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).</span></span>
+    <span data-ttu-id="93191-135">Ce champ n’est pas obligatoire et ne doit être utilisé que si vous faites déjà partie de [Microsoft Partner Network](https://partner.microsoft.com).</span><span class="sxs-lookup"><span data-stu-id="93191-135">This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).</span></span>
 
-    <span data-ttu-id="89f3a-136">**Que voulez-vous ajouter à votre projet ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-136">**What do you want to add to your project?**</span></span>
+    <span data-ttu-id="93191-136">**Que voulez-vous ajouter à votre projet ?**</span><span class="sxs-lookup"><span data-stu-id="93191-136">**What do you want to add to your project?**</span></span>
 
-    <span data-ttu-id="89f3a-137">Sélectionnez ( &ast; ) Un onglet.</span><span class="sxs-lookup"><span data-stu-id="89f3a-137">Select ( &ast; ) A Tab.</span></span>
+    <span data-ttu-id="93191-137">Sélectionnez ( &ast; ) Un onglet.</span><span class="sxs-lookup"><span data-stu-id="93191-137">Select ( &ast; ) A Tab.</span></span>
 
-    <span data-ttu-id="89f3a-138">**L’URL dans laquelle vous hébergez cette solution ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-138">**The URL where you will host this solution?**</span></span>
+    <span data-ttu-id="93191-138">**L’URL dans laquelle vous hébergez cette solution ?**</span><span class="sxs-lookup"><span data-stu-id="93191-138">**The URL where you will host this solution?**</span></span>
 
-    <span data-ttu-id="89f3a-139">Par défaut, le générateur suggère une URL de sites web Azure.</span><span class="sxs-lookup"><span data-stu-id="89f3a-139">By default the generator suggests an Azure Web Sites URL.</span></span> <span data-ttu-id="89f3a-140">Vous testerez uniquement votre application localement, par conséquent, une URL valide n’est pas nécessaire pour effectuer ce démarrage rapide.</span><span class="sxs-lookup"><span data-stu-id="89f3a-140">You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.</span></span>
+    <span data-ttu-id="93191-139">Par défaut, le générateur suggère une URL de sites web Azure.</span><span class="sxs-lookup"><span data-stu-id="93191-139">By default the generator suggests an Azure Web Sites URL.</span></span> <span data-ttu-id="93191-140">Vous testerez uniquement votre application localement, par conséquent, une URL valide n’est pas nécessaire pour effectuer ce démarrage rapide.</span><span class="sxs-lookup"><span data-stu-id="93191-140">You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.</span></span>
 
-    <span data-ttu-id="89f3a-141">**Souhaitez-vous inclure l’infrastructure test et les tests initiaux ? (y/N)**</span><span class="sxs-lookup"><span data-stu-id="89f3a-141">**Would you like to include Test framework and initial tests? (y/N)**</span></span>
+    <span data-ttu-id="93191-141">**Souhaitez-vous inclure l’infrastructure test et les tests initiaux ? (y/N)**</span><span class="sxs-lookup"><span data-stu-id="93191-141">**Would you like to include Test framework and initial tests? (y/N)**</span></span>
 
-    <span data-ttu-id="89f3a-142">Choisissez **de ne** pas inclure d’infrastructure de test pour ce projet.</span><span class="sxs-lookup"><span data-stu-id="89f3a-142">Choose **not** to include a test framework for this project.</span></span> <span data-ttu-id="89f3a-143">La valeur par défaut est Oui ; entrez **n**.</span><span class="sxs-lookup"><span data-stu-id="89f3a-143">The default is yes; enter **n**.</span></span>
+    <span data-ttu-id="93191-142">Choisissez **de ne** pas inclure d’infrastructure de test pour ce projet.</span><span class="sxs-lookup"><span data-stu-id="93191-142">Choose **not** to include a test framework for this project.</span></span> <span data-ttu-id="93191-143">La valeur par défaut est Oui ; entrez **n**.</span><span class="sxs-lookup"><span data-stu-id="93191-143">The default is yes; enter **n**.</span></span>
 
-    <span data-ttu-id="89f3a-144">**Voulez-vous utiliser Azure Applications Insights pour la télémétrie ? (y/N)**</span><span class="sxs-lookup"><span data-stu-id="89f3a-144">**Would you like to use Azure Applications Insights for telemetry? (y/N)**</span></span>
+    <span data-ttu-id="93191-144">**Voulez-vous utiliser Azure Applications Insights pour la télémétrie ? (y/N)**</span><span class="sxs-lookup"><span data-stu-id="93191-144">**Would you like to use Azure Applications Insights for telemetry? (y/N)**</span></span>
 
-    <span data-ttu-id="89f3a-145">Choisissez **de ne** pas inclure Azure Application [Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md).</span><span class="sxs-lookup"><span data-stu-id="89f3a-145">Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md).</span></span> <span data-ttu-id="89f3a-146">La valeur par défaut est non ; entrez **n**.</span><span class="sxs-lookup"><span data-stu-id="89f3a-146">The default is no; enter **n**.</span></span>
+    <span data-ttu-id="93191-145">Choisissez **de ne** pas inclure Azure Application [Insights](/azure/azure-monitor/app/app-insights-overview).</span><span class="sxs-lookup"><span data-stu-id="93191-145">Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview).</span></span> <span data-ttu-id="93191-146">La valeur par défaut est non ; entrez **n**.</span><span class="sxs-lookup"><span data-stu-id="93191-146">The default is no; enter **n**.</span></span>
 
-    <span data-ttu-id="89f3a-147">**Nom de l’onglet par défaut (16 caractères maximum) ?**</span><span class="sxs-lookup"><span data-stu-id="89f3a-147">**Default Tab Name (max 16 characters)?**</span></span>
+    <span data-ttu-id="93191-147">**Nom de l’onglet par défaut (16 caractères maximum) ?**</span><span class="sxs-lookup"><span data-stu-id="93191-147">**Default Tab Name (max 16 characters)?**</span></span>
 
-    <span data-ttu-id="89f3a-148">Nommez votre onglet. Ce nom d’onglet sera utilisé dans l’ensemble de votre projet en tant que composant de chemin d’accès fichier/URL.</span><span class="sxs-lookup"><span data-stu-id="89f3a-148">Name your tab. This tab name will be used throughout your project as a file/URL path component.</span></span>
+    <span data-ttu-id="93191-148">Nommez votre onglet. Ce nom d’onglet sera utilisé dans l’ensemble de votre projet en tant que composant de chemin d’accès fichier/URL.</span><span class="sxs-lookup"><span data-stu-id="93191-148">Name your tab. This tab name will be used throughout your project as a file/URL path component.</span></span>
