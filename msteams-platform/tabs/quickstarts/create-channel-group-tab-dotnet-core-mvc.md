@@ -5,12 +5,12 @@ description: Guide de démarrage rapide pour créer un canal personnalisé et un
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: bac406f22e9273b6cca5d1d5f576b03d295b875f
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580461"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630354"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Créer un canal et un onglet de groupe personnalisés avec ASP.NET Core MVC
 
@@ -20,7 +20,7 @@ Dans ce démarrage rapide, nous allons créer un onglet canal/groupe personnalis
 
 ## <a name="get-the-source-code"></a>Obtenir le code source
 
-Ouvrez une invite de commandes et créez un répertoire pour votre projet d’onglet. Nous avons fourni un projet d’onglet de [groupe](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) de canaux simple pour vous aider à démarrer. Pour récupérer le code source, vous pouvez télécharger le dossier zip et extraire les fichiers ou cloner l’exemple de référentiel dans votre nouveau répertoire :
+Ouvrez une invite de commandes et créez un répertoire pour votre projet d’onglet. Nous avons fourni un projet d’onglet de [groupe](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) de canaux simple pour vous aider à démarrer. Pour récupérer le code source, vous pouvez télécharger le dossier zip et extraire les fichiers ou cloner l’exemple de référentiel dans votre nouveau répertoire :
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -68,7 +68,7 @@ Ces fichiers doivent être compressés dans un package d’application pour êtr
 
 ### <a name="csproj"></a>.csproj
 
-Dans la fenêtre Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
+Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ```xml
 <PropertyGroup>
@@ -120,6 +120,6 @@ Les contrôleurs utilisent la propriété ViewBag pour transférer dynamiquement
 
 ## <a name="update-your-application"></a>Mettre à jour votre application
 
-Dans **Tab.cshtml,** l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du  **bouton Sélectionner** gris ou Sélectionner rouge se déclenche `saveGray()` ou, respectivement, définit et active le bouton Enregistrer `saveRed()` sur la page de `settings.setValidityState(true)` configuration.  Ce code vous permet Teams que vous avez satisfait aux exigences de configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres `settings.setSettings` sont définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+Dans **Tab.cshtml,** l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du  **bouton Sélectionner** gris ou Sélectionner rouge se déclenche `saveGray()` ou, respectivement, définit et active le bouton Enregistrer `saveRed()` sur la page de `settings.setValidityState(true)` configuration.  Ce code vous Teams que vous avez satisfait aux exigences de configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres `settings.setSettings` sont définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]

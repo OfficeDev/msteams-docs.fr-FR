@@ -5,18 +5,18 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: b52d52f96312dc2978844b07a0f7ebb1d817166d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566704"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629864"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Schéma de manifeste de prévisualisation pour les développeurs Microsoft Teams
 
 > [!NOTE]
 > Pour plus [d’informations](~/resources/dev-preview/developer-preview-intro.md) sur le programme et la façon dont vous pouvez participer, voir Aperçu du développeur.
-> Si vous n’utilisez pas la prévisualisation du développeur, vous ne devez pas utiliser cette version du manifeste. Voir [la référence : schéma de manifeste Microsoft Teams](~/resources/schema/manifest-schema.md) pour la version publique du manifeste.
+> Si vous n’utilisez pas la prévisualisation du développeur, vous ne devez pas utiliser cette version du manifeste. Voir [la référence : schéma de manifeste pour Microsoft Teams](~/resources/schema/manifest-schema.md) pour la version publique du manifeste.
 
 Le Microsoft Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
@@ -186,6 +186,27 @@ Pour plus d’informations sur les fonctionnalités disponibles, voir : [Fonctio
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -212,7 +233,7 @@ Le schéma définit les propriétés suivantes :
 
 *Facultatif, mais recommandé* &ndash; Chaîne
 
-L https:// URL référente au schéma JSON pour le manifeste.
+L https:// URL qui fait référence au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -240,7 +261,7 @@ Identificateur unique généré par Microsoft pour cette application. Si vous av
 
 **Obligatoire** &ndash; Chaîne
 
-Un identificateur unique pour cette application dans la notation de domaine inverse ; par exemple, com.example.myapp.
+Identificateur unique de cette application dans la notation de domaine inverse ; par exemple, com.example.myapp.
 
 ## <a name="developer"></a>developer
 
@@ -279,7 +300,7 @@ Tableau d’objets spécifiant des traductions linguistiques supplémentaires.
 
 **Obligatoire**
 
-Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
+Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -290,7 +311,7 @@ Nom de l’expérience de votre application, affiché aux utilisateurs dans l’
 
 **Obligatoire**
 
-Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
+Décrit votre application aux utilisateurs. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
 Assurez-vous que votre description décrit précisément votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Notez également, dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et ne doivent pas être `full` identiques.  Votre description courte ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
@@ -328,10 +349,10 @@ L’objet est un tableau avec tous les éléments du type `object` . Ce bloc est
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|Chaîne|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
+|`configurationUrl`|String|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
-|`sharePointPreviewImage`|Chaîne|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
+|`sharePointPreviewImage`|String|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
 |`supportedSharePointHosts`|Tableau de l’énum|1||Définit la façon dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -345,9 +366,9 @@ L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité affichée par l’onglet.|
-|`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
-|`contentUrl`|Chaîne|2 048 caractères|✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
-|`websiteUrl`|Chaîne|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
+|`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
+|`contentUrl`|String|2 048 caractères|✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
+|`websiteUrl`|String|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 
 ## <a name="bots"></a>bots
@@ -385,7 +406,7 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|Chaîne|2 048 caractères|✔|Url https:// à utiliser lors de la configuration du connecteur.|
+|`configurationUrl`|String|2 048 caractères|✔|Url https:// à utiliser lors de la configuration du connecteur.|
 |`connectorId`|String|64 caractères|✔|Identificateur unique du connecteur qui correspond à son ID dans le [tableau de bord du développeur de connecteurs.](https://aka.ms/connectorsdashboard)|
 |`scopes`|Tableau de l’énum|1|✔|Spécifie si le connecteur offre une expérience dans le contexte d’un canal dans un , ou une expérience limitée à un `team` utilisateur individuel seul ( `personal` ). Actuellement, seule `team` l’étendue est prise en charge.|
 
@@ -402,7 +423,7 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`botId`|Chaîne|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
+|`botId`|String|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie|
 
@@ -416,27 +437,27 @@ Chaque élément de commande est un objet avec la structure suivante :
 |---|---|---|---|---|
 |`id`|String|64 caractères|✔|ID de la commande.|
 |`type`|String|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Valeur par défaut : `query`|
-|`title`|Chaîne|32 caractères|✔|Nom de la commande conviviale.|
-|`description`|Chaîne|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
+|`title`|String|32 caractères|✔|Nom de la commande conviviale.|
+|`description`|String|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
 |`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
 |`context`|Tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche.|
 |`taskInfo`|Objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
-|`taskInfo.title`|Chaîne|64||Titre de la boîte de dialogue initiale.|
-|`taskInfo.width`|Chaîne|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|Chaîne|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
-|`taskInfo.url`|Chaîne|||URL webview initiale.|
+|`taskInfo.title`|String|64||Titre de la boîte de dialogue initiale.|
+|`taskInfo.width`|String|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
+|`taskInfo.height`|String|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
+|`taskInfo.url`|String|||URL webview initiale.|
 |`messageHandlers`|Tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être répertoriés dans `validDomains` .|
-|`messageHandlers.type`|Chaîne|||Type de handler de messages. Doit être `"link"`.|
+|`messageHandlers.type`|String|||Type de handler de messages. Doit être `"link"`.|
 |`messageHandlers.value.domains`|Tableau de chaînes|||Tableau de domaines pour l’inscription du handler de message de lien.|
 |`parameters`|Tableau d’objets|5 |✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5|
 |`parameter.name`|String|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Ceci est inclus dans la demande de l’utilisateur.|
-|`parameter.title`|Chaîne|32 caractères|✔|Titre convivial du paramètre.|
-|`parameter.description`|Chaîne|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
-|`parameter.inputType`|Chaîne|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . `text`L’un des , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
+|`parameter.title`|String|32 caractères|✔|Titre convivial du paramètre.|
+|`parameter.description`|String|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
+|`parameter.inputType`|String|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . `text`L’un des , , , , , `textarea` `number` `date` `time` `toggle` `choiceset` .|
 |`parameter.choices`|Tableau d’objets|10||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
-|`parameter.choices.title`|Chaîne|128||Titre du choix.|
-|`parameter.choices.value`|Chaîne|512||Valeur du choix.|
+|`parameter.choices.title`|String|128||Titre du choix.|
+|`parameter.choices.value`|String|512||Valeur du choix.|
 
 ## <a name="permissions"></a>autorisations
 
@@ -482,8 +503,9 @@ Spécifiez votre ID d’application AAD et Graph pour aider les utilisateurs à 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|Chaîne|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|Chaîne|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso.|
+|`id`|String|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
+|`resource`|String|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso.|
+|`applicationPermissions`|Tableau|Maximum 100 éléments|✔|Autorisations de ressources pour l’application.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -528,6 +550,6 @@ Lorsqu’une étendue d’installation de groupe est sélectionnée, elle défin
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l’étendue d’installation sélectionnée `team` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
-|`groupchat`|chaîne|||Lorsque l’étendue d’installation sélectionnée `groupchat` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
-|`meetings`|chaîne|||Lorsque l’étendue d’installation sélectionnée `meetings` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
+|`groupchat`|string|||Lorsque l’étendue d’installation sélectionnée `groupchat` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
+|`meetings`|string|||Lorsque l’étendue d’installation sélectionnée `meetings` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
 

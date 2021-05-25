@@ -4,16 +4,16 @@ description: Comment créer un bot assistant virtuel et des compétences à util
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots d’assistant virtuel Teams
-ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566872"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630732"
 ---
 # <a name="create-virtual-assistant"></a>Créer un assistant virtuel 
 
-Assistant virtuel est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. Le [](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) modèle de base assistant virtuel est le bloc de construction de base qui regroupe les technologies Microsoft requises pour créer un Assistant virtuel, y compris le [SDK Bot Framework,](https://github.com/microsoft/botframework-sdk)language [understanding (LUIS)](https://www.luis.ai/)et [QnA Maker](https://www.qnamaker.ai/). Il regroupe également les fonctionnalités essentielles, notamment l’inscription des compétences, les comptes liés, l’intention de conversation de base de proposer aux utilisateurs une gamme d’interactions et d’expériences transparentes. En outre, les fonctionnalités de modèle incluent de riches exemples de compétences de conversation [réutilisables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Les compétences individuelles sont intégrées dans une solution d’Assistant virtuel pour permettre plusieurs scénarios. À l’aide du SDK Bot Framework, les compétences sont présentées sous forme de code source, ce qui vous permet de personnaliser et d’étendre selon vos besoins. Pour plus d’informations sur les compétences de Bot Framework, voir [Qu’est-ce qu’une compétence Bot Framework](https://microsoft.github.io/botframework-solutions/overview/skills/). Ce document vous guide sur les considérations relatives à l’implémentation de l’Assistant virtuel pour les organisations, la création d’un Assistant virtuel Teams, un exemple connexe, un exemple de code et les limitations de l’Assistant virtuel.
+Assistant virtuel est un modèle Microsoft open source qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. Le [](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) modèle de base assistant virtuel est le bloc de construction de base qui regroupe les technologies Microsoft requises pour créer un Assistant virtuel, y compris le [SDK Bot Framework,](https://github.com/microsoft/botframework-sdk)language [understanding (LUIS)](https://www.luis.ai/)et [QnA Maker](https://www.qnamaker.ai/). Il regroupe également les fonctionnalités essentielles, notamment l’inscription des compétences, les comptes liés, l’intention de conversation de base de proposer aux utilisateurs une gamme d’interactions et d’expériences transparentes. En outre, les fonctionnalités de modèle incluent de riches exemples de compétences de conversation [réutilisables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Les compétences individuelles sont intégrées dans une solution d’Assistant virtuel pour permettre plusieurs scénarios. À l’aide du SDK Bot Framework, les compétences sont présentées sous forme de code source, ce qui vous permet de personnaliser et d’étendre selon vos besoins. Pour plus d’informations sur les compétences de Bot Framework, voir [Qu’est-ce qu’une compétence Bot Framework](https://microsoft.github.io/botframework-solutions/overview/skills/). Ce document vous guide sur les considérations relatives à l’implémentation de l’Assistant virtuel pour les organisations, la création d’un Assistant virtuel Teams, un exemple connexe, un exemple de code et les limitations de l’Assistant virtuel.
 L’image suivante affiche la vue d’ensemble de l’Assistant virtuel :
 
 ![Diagramme de vue d’ensemble de l’Assistant virtuel](../assets/images/bots/virtual-assistant/overview.png)
@@ -25,9 +25,9 @@ Les activités de message texte sont acheminées vers les compétences associée
 La décision d’ajouter un Assistant virtuel inclut de nombreux déterminants et diffère pour chaque organisation. Les facteurs de prise en charge d’une implémentation d’Assistant virtuel pour votre organisation sont les suivants :
 
 * Une équipe centrale gère toutes les expériences des employés. Il a la possibilité de créer une expérience d’Assistant virtuel et de gérer les mises à jour de l’expérience de base, y compris l’ajout de nouvelles compétences.
-* Plusieurs applications existent dans les fonctions métiers et le nombre devrait augmenter à l’avenir.
+* Plusieurs applications existent dans les fonctions métiers et le nombre est censé augmenter à l’avenir.
 * Les applications existantes sont personnalisables, elles sont la propriété de l’organisation et sont converties en compétences pour un Assistant virtuel.
-* L’équipe centrale des expériences des employés est en mesure d’influencer les personnalisations des applications existantes. Il fournit également des instructions nécessaires pour intégrer des applications existantes en tant que compétences dans l’expérience de l’Assistant virtuel.
+* L’équipe centrale d’expériences des employés est en mesure d’influencer les personnalisations des applications existantes. Il fournit également des instructions nécessaires pour intégrer des applications existantes en tant que compétences dans l’expérience de l’Assistant virtuel.
 
 L’image suivante affiche les fonctions métier de l’Assistant virtuel : 
 
@@ -220,7 +220,7 @@ L’extrait de code et les méthodes sont `OnTeamsTaskModuleFetchAsync` `OnTeams
     }
 ```
 
-En outre, vous devez inclure tous les domaines de compétence dans la section du fichier manifeste de l’Assistant virtuel afin que les modules de tâche soient appelés par le biais d’un rendu `validDomains` de compétence correctement.
+En outre, vous devez inclure tous les domaines de compétence dans la section du fichier manifeste de l’Assistant virtuel afin que les modules de tâche soient appelés par le biais d’un `validDomains` rendu de compétence correctement.
 
 ### <a name="handle-collaborative-app-scopes"></a>Gérer les étendues d’application collaborative
 
@@ -266,7 +266,7 @@ L’extrait de code du fichier manifeste d’une compétence est illustré dans 
     ....
 ```
 
-L’extrait de code de fichier manifeste de l’Assistant virtuel correspondant est illustré dans la section suivante :
+L’extrait de code du fichier manifeste de l’Assistant virtuel correspondant est illustré dans la section suivante :
 
 ```json
  "composeExtensions": [
@@ -334,11 +334,11 @@ Certaines activités d’extension de messagerie n’incluent pas l’ID de comm
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment convertir le modèle d’application Livrer une salle en une compétence Assistant virtuel : « Réserver une salle » est un Microsoft Teams qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pendant 30, 60 ou 90 minutes à partir de l’heure actuelle. La durée par défaut est 30 minutes. Le bot Book-a-room s’étendue à des conversations personnelles ou 1:1. L’image suivante affiche un Assistant virtuel avec un livre de **compétences de** salle :
+L’exemple suivant montre comment convertir le modèle d’application Livrer une salle en une compétence Assistant virtuel : « Réserver une salle » est un Microsoft Teams qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pendant 30, 60 ou 90 minutes à partir de l’heure actuelle. La durée par défaut est 30 minutes. Le bot Book-a-room s’étendue à des conversations personnelles ou 1:1. L’image suivante affiche un Assistant virtuel avec un livre avec **une compétence de** salle :
 
-![Assistant virtuel avec compétence « Réserver une salle »](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
+![Assistant virtuel avec compétence « réserver une salle »](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
-Voici les modifications delta introduites pour la convertir en une compétence attachée à un Assistant virtuel. Des instructions similaires sont suivies pour convertir tout bot v4 existant en une compétence.
+Voici les modifications delta introduites pour la convertir en une compétence qui est liée à un Assistant virtuel. Des instructions similaires sont suivies pour convertir tout bot v4 existant en une compétence.
 
 ### <a name="skill-manifest"></a>Manifeste de compétences
 
@@ -411,7 +411,7 @@ Le bot book-a-room dispose de deux commandes principales pour les utilisateurs :
 - `Book room`
 - `Manage Favorites`
 
-Nous avons créé un modèle LUIS en comprenant ces deux commandes. Les secrets correspondants doivent être remplies dans `cognitivemodels.json` . Le fichier LUIS JSON correspondant se trouve [ici.](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json)
+Nous avons créé un modèle LUIS en comprenant ces deux commandes. Les secrets correspondants doivent être remplies dans `cognitivemodels.json` . Le fichier LUIS JSON correspondant se trouve [ici.](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json)
 Le fichier `.lu` correspondant est indiqué dans la section suivante :
 
 ```
@@ -463,7 +463,7 @@ Le fichier `.lu` correspondant est indiqué dans la section suivante :
 ```
 
 Avec cette approche, toute commande émise par un utilisateur vers l’Assistant virtuel liée à un bot ou identifiée comme une commande associée au bot est alors transmis `book room` `manage favorites` à cette `Book-a-room` compétence.
-En revanche, le bot doit utiliser le modèle LUIS pour comprendre ces commandes si elles ne sont `Book-a-room room` pas tapés complètes. Par exemple : `I want to manage my favorite rooms`.
+En revanche, le bot doit utiliser le modèle LUIS pour comprendre ces commandes si elles ne sont `Book-a-room room` pas tapés complètes. Par exemple : `I want to manage my favorite rooms`.
 
 ### <a name="multi-language-support"></a>Prise en charge multi-langue
 
@@ -534,7 +534,7 @@ La mise à jour de l’activité, telle que l’actualisation de carte n’est p
 Pour qu’une action de carte ou des activités de module de tâche soit transmis à une compétence associée, cette compétence doit `skillId` y être incorporer.
 `Book-a-room` Les charges utiles d’action de la carte de robot, d’extraction et d’soumission du module de tâche sont modifiées pour contenir `skillId` en tant que paramètre. 
 
-Pour plus d’informations, [reportez-vous](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) à cette section de cette documentation.
+Pour plus d’informations, [reportez-vous](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) à cette section de cette documentation.
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>Gérer les activités à partir d’une conversation de groupe ou d’une étendue de canal
 
@@ -555,18 +555,18 @@ Pour plus d’informations, [reportez-vous](https://msteams-captain.visualstudio
     }
 ```
 
-Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) ou créer une compétence entièrement à partir de zéro. Pour créer une compétence, consultez des [didacticiels pour créer une compétence.](https://microsoft.github.io/botframework-solutions/overview/skills/) Pour obtenir la documentation relative à l’architecture de l’Assistant virtuel et aux compétences, voir[Assistant virtuel et architecture des compétences.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
+Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou créer une compétence entièrement à partir de zéro. Pour créer une compétence, consultez des [didacticiels pour créer une compétence.](https://microsoft.github.io/botframework-solutions/overview/skills/) Pour obtenir la documentation relative à l’architecture des compétences et à l’Assistant virtuel, consultez[l’Assistant virtuel et l’architecture des compétences.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitations de l’Assistant virtuel 
 
-* **EndOfConversation**: une compétence doit envoyer une activité à la `endOfConversation` fin d’une conversation. En fonction de l’activité, un Assistant virtuel met fin au contexte avec cette compétence particulière et revient dans le contexte racine de l’Assistant virtuel. Pour le bot Book-a-room, il n’existe aucun état clair où la conversation est terminée. Par conséquent, nous n’avons pas envoyé à partir du bot et lorsque l’utilisateur souhaite revenir au contexte racine, il peut simplement le faire `endOfConversation` `Book-a-room` par `start over` commande.  
+* **EndOfConversation**: une compétence doit envoyer une activité à la fin `endOfConversation` d’une conversation. En fonction de l’activité, un Assistant virtuel met fin au contexte avec cette compétence particulière et revient dans le contexte racine de l’Assistant virtuel. Pour le bot Book-a-room, il n’existe aucun état clair où la conversation est terminée. Par conséquent, nous n’avons pas envoyé à partir du bot et lorsque l’utilisateur souhaite revenir au contexte racine, il peut simplement le faire `endOfConversation` `Book-a-room` par `start over` commande.  
 * **Actualisation de la carte**: l’actualisation de la carte n’est pas encore prise en charge via l’Assistant virtuel.  
 * **Extensions de messagerie**:
   * Actuellement, un Assistant virtuel peut prendre en charge un maximum de dix commandes pour les extensions de messagerie.
   * La configuration des extensions de messagerie n’est pas limitée aux commandes individuelles, mais à l’ensemble de l’extension elle-même. Cela limite la configuration de chaque compétence individuelle par le biais de l’Assistant virtuel.
   * Les ID de commande des extensions de messagerie ont une longueur maximale de [64](../resources/schema/manifest-schema.md#composeextensions) caractères et 37 caractères sont utilisés pour incorporer des informations de compétences. Par conséquent, les contraintes mises à jour pour l’ID de commande sont limitées à 27 caractères.
 
-Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) ou créer une compétence entièrement à partir de zéro. Vous pouvez trouver des didacticiels pour la suite [ici.](https://microsoft.github.io/botframework-solutions/overview/skills/) Reportez-vous à [la documentation relative](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) à l’Assistant virtuel et à l’architecture des compétences.
+Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou créer une compétence entièrement à partir de zéro. Vous pouvez trouver des didacticiels pour la suite [ici.](https://microsoft.github.io/botframework-solutions/overview/skills/) Reportez-vous à [la documentation relative](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) à l’Assistant virtuel et à l’architecture des compétences.
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -578,8 +578,6 @@ Vous pouvez également tirer parti des compétences existantes du référentiel 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
-
-- [Réserver une salle](app-templates.md#book-a-room)
-
-- [Microsoft Teams bot](../bots/what-are-bots.md)
+* [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+* [Réserver une salle](app-templates.md#book-a-room)
+* [Microsoft Teams bot](../bots/what-are-bots.md)

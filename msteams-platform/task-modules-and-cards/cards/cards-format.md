@@ -5,12 +5,12 @@ keywords: Format de cartes de bots teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566580"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630211"
 ---
 # <a name="format-cards-in-teams"></a>Formater des cartes dans Teams
 
@@ -169,8 +169,6 @@ Utilisez la propriété de masquage d’informations pour masquer des informatio
 > [!NOTE]
 > La propriété de masquage d’informations est actuellement disponible dans l’aperçu développeur uniquement.
 
-Pour masquer les informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` *true*.
-
 #### <a name="sample-adaptive-card-with-masking-property"></a>Exemple de carte adaptative avec propriété de masquage
 
 ```json
@@ -178,8 +176,7 @@ Pour masquer les informations dans les cartes adaptatives, ajoutez la propriét�
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 L’image suivante est un exemple de masquage d’informations dans les cartes adaptatives :
@@ -218,7 +215,7 @@ En outre, votre application doit inclure les éléments suivants :
 
 Une carte adaptative pleine largeur apparaît comme suit : affichage Carte ![ adaptative pleine largeur](../../assets/images/cards/full-width-adaptive-card.png)
 
-Si vous n’avez pas donné la valeur Full à la propriété, l’affichage par défaut de la carte adaptative est le suivant : affichage Carte adaptative à petite `width`  ![ largeur](../../assets/images/cards/small-width-adaptive-card.png)
+Si vous n’avez pas donné la valeur Full à la propriété, l’affichage par défaut de la carte adaptative apparaît comme suit : affichage Carte adaptative à petite `width`  ![ largeur](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Prise en charge de Typeahead
 
@@ -281,7 +278,7 @@ Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un z
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Mise en forme Markdown : cartes de connecteur O365**](#tab/connector-md)
 
-Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML. La prise en charge HTML est décrite dans la dernière section.
+Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML. La prise en charge HTML est décrite dans la dernière section.
 
 | Style | Exemple | Markdown |
 | --- | --- | --- |
@@ -370,7 +367,7 @@ Sur Android, la mise en forme Markdown pour les cartes de connecteur ressemble �
 
 # <a name="html-formatting-o365-connector-cards"></a>[**Mise en forme HTML : cartes de connecteur O365**](#tab/connector-html)
 
-Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML. Markdown est décrit dans la section suivante.
+Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML. Markdown est décrit dans la section suivante.
 
 | Style | Exemple | HTML |
 | --- | --- | --- |
@@ -487,13 +484,13 @@ Sur iOS, la mise en forme HTML s’affiche comme ceci :
 
 Problèmes :
 
-* La mise en forme de caractères en gras et en italique n’est pas restituer sur iOS.
+* La mise en forme des caractères en gras et en italique n’est pas restituer sur iOS.
 
 Sur Android, la mise en forme HTML s’affiche comme ceci :
 
 ![Mise en forme HTML dans le client Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-La mise en forme des caractères comme gras et italique s’affiche correctement sur Android.
+La mise en forme des caractères comme le gras et l’italique s’affiche correctement sur Android.
 
 ### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Exemple de mise en forme pour la mise en forme HTML dans des cartes simples
 

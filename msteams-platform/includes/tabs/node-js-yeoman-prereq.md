@@ -32,9 +32,9 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
     yo teams
     ```
 
-- Ensuite, vous allez fournir une série de valeurs qui seront utilisées dans le fichiermanifest.js **votre** application :
+- Ensuite, vous allez fournir une série de valeurs qui seront utilisées dans le fichier **manifest.jsvotre** application :
 
-    ![Capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
     **Quel est le nom de votre solution ?**
 
@@ -46,7 +46,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     **Titre de votre Microsoft Teams d’application ?**
 
-    Il s’agit du nom de votre package d’application et sera utilisé dans le manifeste et la description de l’application.
+    Il s’agit du nom de votre package d’application qui sera utilisé dans le manifeste et la description de l’application.
 
     **Votre nom (d’entreprise) ? (32 caractères maximum)**
 
@@ -78,7 +78,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     **Voulez-vous utiliser Azure Applications Insights pour la télémétrie ? (y/N)**
 
-    Choisissez **de ne** pas inclure Azure Application [Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). La valeur par défaut est non ; entrez **n**.
+    Choisissez **de ne** pas inclure Azure Application [Insights](/azure/azure-monitor/app/app-insights-overview). La valeur par défaut est non ; entrez **n**.
 
     **Nom de l’onglet par défaut (16 caractères maximum) ?**
 

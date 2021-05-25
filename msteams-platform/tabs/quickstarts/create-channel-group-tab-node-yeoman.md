@@ -5,14 +5,14 @@ description: Guide de démarrage rapide sur la création d’un onglet de canal 
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 559393884e3b8a4aad1787ea4ca8f9f4de54d151
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 70b1dbe5a5abafa44ddbdf9045c55a33cf8fcb20
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566643"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630238"
 ---
-# <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Créer un canal personnalisé et un onglet de groupe à l’aide Node.js et du générateur Yeoman pour Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Créer un canal et un onglet de groupe personnalisés à l’aide Node.js et du générateur Yeoman pour Microsoft Teams
 
 >[!NOTE]
 >Ce démarrage rapide suit les étapes décrites dans le [Wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) de votre première application Microsoft Teams dans le référentiel d’GitHub Microsoft OfficeDev.
@@ -83,9 +83,9 @@ gulp ngrok-serve
 
 ## <a name="upload-your-application-to-teams"></a>Télécharger votre application à Teams
 
-- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils [de développement de votre navigateur.](~/tabs/how-to/developer-tools.md)
+- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur.](~/tabs/how-to/developer-tools.md)
 - Dans le *panneau YourTeams sur* la gauche, sélectionnez le menu en face de l’équipe que vous utilisez pour tester votre onglet et choisissez `...` Gérer **l’équipe.**
-- Dans le panneau principal, sélectionnez **Applications** dans la barre d’onglets et **choisissez Télécharger** une application personnalisée située dans le coin inférieur droit de la page.
+- Dans le panneau  principal, sélectionnez Applications dans la barre d’onglets et **choisissez Télécharger** une application personnalisée située dans le coin inférieur droit de la page.
 - Ouvrez le répertoire de votre projet, accédez au dossier **./package,** sélectionnez le dossier zip du package d’application et choisissez **Ouvrir**. Votre onglet est chargé dans Teams.
 - Revenir à votre équipe, choisissez le canal dans lequel vous souhaitez afficher l’onglet, sélectionnez ➕ dans la barre d’onglets et choisissez votre onglet dans la galerie.
 - Suivez les instructions pour ajouter un onglet. Notez qu’il existe une boîte de dialogue de configuration personnalisée pour votre onglet canal/groupe.

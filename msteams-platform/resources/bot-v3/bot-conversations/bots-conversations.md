@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: messages de bots teams
 ms.date: 05/20/2019
-ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566494"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630459"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation avec un bot Microsoft Teams’équipe
 
@@ -51,7 +51,7 @@ La conversation de base est gérée par le biais du connecteur Bot Framework, un
 
 Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot. Vous pouvez spécifier le type de contenu que votre bot peut gérer dans la page Microsoft Teams paramètres de votre bot.
 
-| Format | De l’utilisateur au bot  | Du bot à l’utilisateur |  Remarques |
+| Format | De l’utilisateur au bot  | Du bot à l’utilisateur |  Notes |
 | --- | :---: | :---: | --- |
 | Texte enrichi  | ✔ | ✔ |  |
 | Images | ✔ | ✔ | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge. |
@@ -85,10 +85,10 @@ Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à
 
 Selon les étendues déclarées, votre bot peut recevoir des messages dans les contextes suivants :
 
-* **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique de conversation ou en tapant son nom ou son ID d’application dans la zone À : d’une nouvelle conversation.
+* **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique des conversations ou en tapant son nom ou son ID d’application dans la zone À : d’une nouvelle conversation.
 * **Canaux** Un bot peut être mentionné (« @_botname_») dans un canal s’il a été ajouté à l’équipe. Notez que les réponses supplémentaires à un bot dans un canal nécessitent de mentionner le bot. Il ne répondra pas aux réponses lorsqu’il n’est pas mentionné.
 
-Pour les messages entrants, votre bot reçoit un [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) objet de type `messageType: message` . Bien que l’objet puisse contenir d’autres types d’informations, tels que les mises à jour de canal envoyées à votre bot, le type représente la `Activity` communication entre le bot et [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` l’utilisateur.
+Pour les messages entrants, votre bot reçoit un objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) de type `messageType: message` . Bien que l’objet puisse contenir d’autres types d’informations, tels que les mises à jour de canal envoyées à votre bot, le type représente la `Activity` communication entre le bot et [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` l’utilisateur.
 
 Votre bot reçoit une charge utile qui contient le message de l’utilisateur, ainsi que d’autres informations sur l’utilisateur, la source du message et `Text` les Teams données. Remarque :
 
@@ -212,16 +212,16 @@ Notez que dans votre schéma sortant, vous devez toujours utiliser le même sch�
 
 ## <a name="updating-messages"></a>Mise à jour des messages
 
-Au lieu que vos messages soient des instantanés statiques de données, votre bot peut mettre à jour dynamiquement les messages en ligne après les avoir envoyés. Vous pouvez utiliser les mises à jour dynamiques des messages pour des scénarios tels que les mises à jour des sondages, la modification des actions disponibles après une pression sur un bouton ou tout autre changement d’état asynchrone.
+Au lieu que vos messages soient des instantanés statiques de données, votre bot peut mettre à jour dynamiquement les messages en ligne après les avoir envoyés. Vous pouvez utiliser des mises à jour de messages dynamiques pour des scénarios tels que les mises à jour des sondages, la modification des actions disponibles après l’utilisation d’un bouton ou tout autre changement d’état asynchrone.
 
 Le nouveau message ne doit pas nécessairement correspondre au type d’origine. Par exemple, si le message d’origine contenait une pièce jointe, le nouveau message peut être un message texte simple.
 
 > [!NOTE]
-> Vous pouvez mettre à jour uniquement le contenu envoyé dans les messages à pièce jointe unique et les dispositions de carrousels. La publication de mises à jour dans des messages avec plusieurs pièces jointes dans la mise en page de liste n’est pas prise en charge.
+> Vous pouvez mettre à jour uniquement le contenu envoyé dans les messages à pièce jointe unique et les dispositions carrousels. La publication de mises à jour dans des messages avec plusieurs pièces jointes dans la mise en page de liste n’est pas prise en charge.
 
 ### <a name="rest-api"></a>API REST
 
-Pour émettre une mise à jour de message, effectuez simplement une requête PUT sur le point de terminaison à `/v3/conversations/<conversationId>/activities/<activityId>/` l’aide d’un ID d’activité donné. Pour terminer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel POST d’origine.
+Pour émettre une mise à jour de message, effectuez simplement une requête PUT sur le point de terminaison à l’aide `/v3/conversations/<conversationId>/activities/<activityId>/` d’un ID d’activité donné. Pour terminer ce scénario, vous devez mettre en cache l’ID d’activité renvoyé par l’appel POST d’origine.
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128

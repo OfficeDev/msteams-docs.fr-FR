@@ -6,12 +6,12 @@ keywords: Canal de groupe onglets teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a46a80401b29b5436807c9a5b94580beca3786f0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: f45bfc8831eb6dca660df3307bf875b7ad9fbf1e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566662"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630403"
 ---
 # <a name="tab-requirements"></a>Conditions requises pour l’onglet
 

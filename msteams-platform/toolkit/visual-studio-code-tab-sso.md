@@ -5,12 +5,12 @@ keywords: teams visual studio code toolkit tabs sso graph authentication Azure i
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 11e642ce335dae4344f1c730b73763e9172fd76c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566830"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630991"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Authentification unique avec authentification unique Teams Shared Computer Toolkit et Visual Studio Code pour les onglets
 
@@ -31,7 +31,7 @@ Le Microsoft Teams Shared Computer Toolkit vous permet de créer l’authentific
 1. Entrez l’URL où votre application sera hébergée et sélectionnez **ensuite.** L’inscription de votre application sera configurée à l’aide de l’URL fournie.
 1. Les détails de configuration de l’inscription de l’application sont stockés dans les fichiers du `.env` code source de votre projet.
 
-Si vous souhaitez en savoir plus sur la façon  dont l’inscription de votre application Azure sera mise en service, consultez notre prise en charge de l' [sign-on unique (SSO)](../tabs/how-to/authentication/auth-aad-sso.md) pour la documentation sur les onglets.
+Si vous souhaitez en savoir plus sur la façon  dont votre inscription d’application Azure sera mise en service, consultez notre prise en charge de l' [sign-on unique (SSO)](../tabs/how-to/authentication/auth-aad-sso.md) pour la documentation sur les onglets.
 
 > [!TIP]
 > Vous devez accéder à **Azure App Registrations** et  mettre à jour votre *URI d’API* et rediriger les URL chaque fois que vous modifiez cette URL.
@@ -40,7 +40,7 @@ Si vous souhaitez en savoir plus sur la façon  dont l’inscription de votre ap
 
 1. Sélectionnez **npm installer** dans le `api-server` dossier. Puis **npm start**.
 1. Sélectionnez **npm installer** dans le `.src` dossier. Puis **npm start**.
-1. Si vous utilisez un service de tunneling comme [ngrok,](https://ngrok.com/)exécutez-le et assurez-vous que l’URL correspond à ce que vous avez entré dans l’Assistant de création de projet. Si ce n’est pas le cas, vous devrez mettre à jour votre _URI d’API_ et _rediriger l’URL_ dans l’inscription de l’application qui a été créée dans Azure.
+1. Si vous utilisez un service de tunneling comme [ngrok,](https://ngrok.com/)exécutez-le et assurez-vous que l’URL correspond à ce que vous avez entré dans l’Assistant création de projet. Si ce n’est pas le cas, vous devrez mettre à jour votre _URI d’API_ et rediriger l’URL dans l’inscription de l’application qui a été créée dans Azure. 
 1. Accédez à la barre d’activité sur le côté gauche de Visual Studio Code fenêtre.
 1. Sélectionnez **l’icône** Exécuter pour afficher **l’affichage Exécuter et déboguer.**
 1. Vous pouvez également utiliser le raccourci clavier **Ctrl+Shift+D**.
@@ -50,4 +50,4 @@ Si vous souhaitez en savoir plus sur la façon  dont l’inscription de votre ap
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Créer des applications avec les Microsoft Teams Shared Computer Toolkit et Visual Studio Code](visual-studio-code-overview.md)
+[Créer des applications avec les Microsoft Teams Shared Computer Toolkit et Visual Studio Code](visual-studio-code-overview.md)

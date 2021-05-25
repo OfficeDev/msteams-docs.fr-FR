@@ -5,16 +5,16 @@ keywords: 'équipes connecteur O365 '
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 9eaaedf88d907dd7a7422068ab5d20450345f0e7
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566809"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629822"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création de connecteurs Office 365 pour Microsoft Teams
 
->Avec Microsoft Teams applications, vous pouvez ajouter votre connecteur Office 365 existant ou en créer un nouveau à inclure dans Microsoft Teams. Pour [plus d’informations, voir](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) Créer votre propre connecteur.
+Avec Microsoft Teams applications, vous pouvez ajouter votre connecteur Office 365 existant ou en créer un nouveau à inclure dans Microsoft Teams. Pour [plus d’informations, voir](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) Créer votre propre connecteur.
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>Ajout d’un connecteur à votre application Teams web
 
@@ -104,7 +104,7 @@ Voici un exemple de code HTML pour créer une page de configuration de connecteu
 #### <a name="getsettings-response-properties"></a>`GetSettings()` propriétés de réponse
 
 >[!Note]
->Les paramètres renvoyés par l’appel ici sont différents de ceux que vous avez appelés à partir d’un onglet et diffèrent de ceux documentés `getSettings` [ici.](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)
+>Les paramètres renvoyés par l’appel ici sont différents de ceux que vous avez appelés à partir d’un onglet et diffèrent de ceux documentés `getSettings` [ici.](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)
 
 | Paramètre   | Détails |
 |-------------|---------|
@@ -128,11 +128,11 @@ Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier u
 - `configName` est un nom convivial que votre code de configuration peut récupérer
 - `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour faciliter la tâche de modification de votre code.
 
-En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code ci-dessus est chargé, votre code doit appeler pour prére remplir les paramètres ou formulaires de votre `contentUrl` interface utilisateur de `getSettings()` configuration.
+En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque les paramètres ci-dessus sont chargés, votre code doit appeler pour prére remplir les paramètres ou `contentUrl` `getSettings()` formulaires de votre interface utilisateur de configuration.
 
 #### <a name="handling-removals"></a>Gestion des suppressions
 
-Vous pouvez éventuellement exécuter un handler d’événements lorsque l’utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce handler en appelant `microsoftTeams.settings.registerOnRemoveHandler()` . Ce handler peut être utilisé pour effectuer des opérations de nettoyage telles que la suppression d’entrées d’une base de données.
+Vous pouvez éventuellement exécuter un programme de gestion d’événements lorsque l’utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce handler en appelant `microsoftTeams.settings.registerOnRemoveHandler()` . Ce handler peut être utilisé pour effectuer des opérations de nettoyage telles que la suppression d’entrées d’une base de données.
 
 ### <a name="including-the-connector-in-your-manifest"></a>Inclure le connecteur dans votre manifeste
 
@@ -185,6 +185,25 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
   "accentColor": "#FFFFFF"
 }
 ```
+
+## <a name="disable-or-enable-connectors-in-teams"></a>Désactiver ou activer des connecteurs dans Teams
+
+Le module Exchange Online PowerShell V2 utilise l’authentification moderne et fonctionne avec l’authentification multifacteur (MFA) pour la connexion à tous les environnements PowerShell Exchange dans Microsoft 365. Les administrateurs peuvent utiliser Exchange Online PowerShell pour désactiver les connecteurs pour un client entier ou une boîte aux lettres de groupe spécifique, affectant tous les utilisateurs de ce client ou de cette boîte aux lettres. Il n’est pas possible de désactiver pour certains et non pour d’autres. En outre, les connecteurs sont désactivés par défaut pour Cloud de la communauté du secteur public client.
+
+Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe sont désactivés. Pour activer un connecteur dans Teams, connectez-vous à [Exchange Online PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
+
+### <a name="commands-to-disable-or-enable-connectors"></a>Commandes permettant de désactiver ou d’activer des connecteurs
+
+**Exécuter la commande dans Exchange Online PowerShell**
+
+* Pour désactiver les connecteurs pour le client : `Set-OrganizationConfig -ConnectorsEnabled:$false` .
+* Pour désactiver les messages actionnables pour le client : `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false` .
+* Pour activer les connecteurs pour Teams, exécutez les commandes suivantes :
+    * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+    * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
+    * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
+
+Pour plus d’informations sur l’échange de module PowerShell, voir [Set-OrganizationConfig](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true). Pour activer ou désactiver les connecteurs Outlook, [connectez](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)des applications à vos groupes dans Outlook .
 
 ## <a name="testing-your-connector"></a>Test du connecteur
 

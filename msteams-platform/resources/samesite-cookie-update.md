@@ -6,12 +6,12 @@ keywords: samesite des attributs de cookie
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: cf28a28050d50b2b6b2601a3231cdad30211ab2c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566711"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629850"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams et l’attribut de cookie SameSite (mise à jour 2020)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52566711"
 
 ### <a name="cookies-and-http-requests"></a>Cookies et requêtes HTTP
 
-Avant l’introduction des restrictions SameSite, lorsque les cookies étaient stockés sur le navigateur, ils étaient joints à chaque demande web *HTTP* et envoyés au serveur par l’en-tête de réponse HTTP Set-Cookie. De manière prévisible, ces performances avaient le potentiel d’introduire des vulnérabilités de sécurité telles que les attaques de contrefaçon de demande entre sites (CSRF). *Voir* [cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies). Le composant SameSite a atténué cette exposition par le biais de son implémentation et de sa gestion dans l’en-tête SetCookie.
+Avant l’introduction des restrictions SameSite, lorsque les cookies étaient stockés sur le navigateur, ils étaient joints à chaque demande web *HTTP* et envoyés au serveur par l’en-tête de réponse HTTP Set-Cookie. De manière prévisible, ces performances avaient le potentiel d’introduire des vulnérabilités de sécurité telles que les attaques de contrefaçon de demande entre sites (CSRF). *Voir* [cookies HTTP.](https://developer.mozilla.org/docs/Web/HTTP/Cookies) Le composant SameSite a atténué cette exposition par le biais de son implémentation et de sa gestion dans l’en-tête SetCookie.
 
 ### <a name="samesite-attribute-initial-release"></a>Attribut SameSite : version initiale
 
@@ -52,7 +52,7 @@ Chrome 80, dont la publication est prévue en février 2020, introduit de nouvel
 1. Les partenaires internes de Microsoft peuvent rejoindre l’équipe suivante s’ils ont besoin d’informations supplémentaires ou d’aide sur ce problème <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> :
 
 > [!NOTE]
-> Il est recommandé de toujours définir les attributs SameSite pour refléter l’utilisation prévue pour vos cookies. Ne comptez pas sur le comportement par défaut du navigateur. Pour plus d’informations, [voir Développeurs : Se préparer pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
+> Il est recommandé de toujours définir des attributs SameSite pour refléter l’utilisation prévue pour vos cookies. Ne comptez pas sur le comportement par défaut du navigateur. Pour plus d’informations, [voir Développeurs : Se préparer pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
 ### <a name="tabs-task-modules-and-message-extensions"></a>Onglets, modules de tâche et extensions de message
 
@@ -68,11 +68,11 @@ Tous les cookies utilisés par le contenu incorporé sont considérés comme tie
 * Un flux d’authentification web peut également être utilisé pour une page de configuration, un module de tâche ou une extension de messagerie.
 * Vous pouvez utiliser un flux d’authentification web pour un bot de conversation dont vous aurez besoin pour utiliser un module de tâche.
 
-En vertu des restrictions SameSite mises à jour, un navigateur n’ajoute pas de cookie à un site web déjà authentifié si le lien dérive d’un site externe. Vous devez vous assurer que vos cookies d’authentification sont marqués pour une utilisation sur plusieurs sites, ou vous assurer qu’un système de base `SameSite=None; Secure` est en place.
+En vertu des restrictions SameSite mises à jour, un navigateur n’ajoute pas de cookie à un site web déjà authentifié si le lien dérive d’un site externe. Vous devez vous assurer que vos cookies d’authentification sont marqués pour une utilisation entre sites, ou vous assurer qu’un système de base `SameSite=None; Secure` est en place.
 
 ### <a name="android-system-webview"></a>Android System WebView
 
-Android WebView est un composant système Chrome qui permet aux applications Android d’afficher du contenu web. Bien que les nouvelles restrictions deviennent la valeur par défaut, à partir de Chrome 80, elles ne seront pas immédiatement appliquées sur les WebViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookeManager](https://developer.android.com/reference/android/webkit/CookieManager):
+Android WebView est un composant système Chrome qui permet aux applications Android d’afficher du contenu web. Bien que les nouvelles restrictions deviennent la valeur par défaut, à partir de Chrome 80, elles ne sont pas immédiatement appliquées sur les WebViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookeManager](https://developer.android.com/reference/android/webkit/CookieManager):
 
 * Pour les cookies qui ne sont nécessaires que dans un contexte de première partie, vous devez les déclarer en tant `SameSite=Lax` que `SameSite=Strict` ou, selon le cas.
 * Pour les cookies nécessaires dans un contexte tiers, vous devez vous assurer qu’ils sont déclarés comme `SameSite=None; Secure` .
@@ -80,11 +80,8 @@ Android WebView est un composant système Chrome qui permet aux applications And
 ## <a name="see-also"></a>Voir aussi
 
 * [Exemples sameSite](https://github.com/GoogleChromeLabs/samesite-examples)
-
 * [Recettes de cookie SameSite](https://web.dev/samesite-cookie-recipes/)
-
 * [Clients incompatibles connus]( https://www.chromium.org/updates/same-site/incompatible-clients)
-
 * [Développeurs : Préparez-vous pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **Impact Connecter OpenId**<br>

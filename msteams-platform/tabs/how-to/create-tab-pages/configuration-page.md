@@ -6,24 +6,24 @@ keywords: Canal de groupe onglets teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566683"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629962"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
-Une page de configuration est un type spécial de [page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
+Une page de configuration est un type spécial [de page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
 
 * Onglet de conversation de canal ou de groupe : recueillez des informations auprès des utilisateurs et définissez `contentUrl` la page de contenu à afficher.
 * Une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md).
-* Un [connecteur Office 365 .](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* Un [connecteur Office 365.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuration d’un onglet de conversation de canal ou de groupe
 
-L’application doit référencer [le Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . En outre, les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud. 
+L’application doit référencer [Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . En outre, les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud. 
 
 ### <a name="example"></a>Exemple
 
@@ -100,11 +100,11 @@ L’image suivante affiche le contenu de l’onglet avec l’icône rouge :
 
 Le choix du bouton relatif déclenche l’une `saveGray()` ou `saveRed()` l’autre des déclencheurs et appelle les éléments suivants :
 
-1. La `settings.setValidityState(true)` valeur est true.
+1. La `settings.setValidityState(true)` valeur true est définie.
 1. Le `microsoftTeams.settings.registerOnSaveHandler()` handler d’événements est déclenché.
 1. Le **bouton** Enregistrer sur la page de configuration de l’application, téléchargé dans Teams, est activé.
 
-Le code de la page de configuration informe Teams que les exigences de configuration sont satisfaites et que l’installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer,** les paramètres `settings.setSettings()` sont définis, comme défini par l’interface. `Settings` Pour plus d’informations, [voir Paramètres interface utilisateur.](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true) Dans la dernière étape, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+Le code de la page de configuration informe Teams que les exigences de configuration sont satisfaites et que l’installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer,** les paramètres `settings.setSettings()` sont définis, comme défini par l’interface. `Settings` Pour plus d’informations, [voir Paramètres interface utilisateur.](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) Dans la dernière étape, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Le code de la page de configuration informe Teams que les exigences de configura
 
 Votre onglet peut nécessiter des informations contextuelles pour afficher du contenu pertinent. Les informations contextuelles améliorent davantage l’appel de votre onglet en offrant une expérience utilisateur plus personnalisée.
 
-Pour plus d’informations sur les propriétés utilisées pour la configuration de l’onglet, voir [l’interface de contexte.](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) Collectez les valeurs des variables de données de contexte des deux manières suivantes :
+Pour plus d’informations sur les propriétés utilisées pour la configuration de l’onglet, voir [l’interface de contexte.](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) Collectez les valeurs des variables de données de contexte des deux manières suivantes :
 
 1. Insérez des espaces de caractères de chaîne de requête d’URL dans le `configurationURL` manifeste.
 
@@ -158,7 +158,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Utiliser la `getContext()` fonction pour récupérer le contexte
 
-La `microsoftTeams.getContext((context) => {})` fonction récupère [l’interface Context](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) lorsqu’elle est invoquée. Ajoutez cette fonction à la page de configuration pour récupérer les valeurs de contexte :
+La `microsoftTeams.getContext((context) => {})` fonction récupère [l’interface Context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) lorsqu’elle est invoquée. Ajoutez cette fonction à la page de configuration pour récupérer les valeurs de contexte :
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -176,7 +176,7 @@ La `microsoftTeams.getContext((context) => {})` fonction récupère [l’interfa
 
 ## <a name="context-and-authentication"></a>Contexte et authentification
 
- Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir Authentifier un](~/tabs/how-to/authentication/auth-flow-tab.md)utilisateur dans Microsoft Teams onglet . Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation.
+ Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir Authentifier un](~/tabs/how-to/authentication/auth-flow-tab.md)utilisateur dans un Microsoft Teams onglet . Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation.
 Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` tableau et dans `validDomains` celui-ci.
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les clients Teams mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
+Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur les clients Teams mobiles, la configuration doit `setSettings()` avoir une valeur pour `websiteUrl` . Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)

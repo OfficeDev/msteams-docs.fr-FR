@@ -3,14 +3,14 @@ title: Conception de votre application personnalisée
 author: heath-hamilton
 description: Découvrez comment concevoir des Microsoft Teams applications. Les ressources incluent le kit Microsoft Teams’interface utilisateur, les meilleures pratiques, les exemples et bien plus encore.
 localization_priority: Normal
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 2f21872bd8c37026528ff6fde282e8c433d5e052
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565115"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644874"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams web
 
@@ -18,16 +18,22 @@ ms.locfileid: "52565115"
 
 Que vous êtes concepteur, chef de produit, développeur ou fabricant à l’aide d’outils à code faible, ces instructions peuvent vous aider à prendre rapidement les bonnes décisions en matière de conception pour Microsoft Teams application.
 
+## <a name="creating-a-cohesive-experience"></a>Création d’une expérience cohérente
+
+Concevoir une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement Teams fonctionnalités et contextes.
+
+Ces recommandations et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
+
 ## <a name="teams-app-design-principles"></a>Teams de conception d’application
 
-Teams applications permettent aux gens d’atteindre des objectifs plus réussis. Utilisez ces principes pour guider votre conception.
+Teams applications permettent aux gens de s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
 
 :::row:::
    :::column span="":::
 
 ### <a name="collaborative"></a>Collaboration
 
-Teams applications permettent aux gens d’atteindre des objectifs plus réussis. Utilisez ces principes pour guider votre conception.
+Teams applications permettent aux gens de s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
 
    :::column-end:::
    :::column span="":::
@@ -51,7 +57,7 @@ Les personnes de tous horizons, de tous les compétences et de toutes les discip
 
 ### <a name="light"></a>Light
 
-L’application se concentre sur les scénarios de base qui se fondent avec Teams flux de travail.
+L’application se concentre sur les scénarios principaux qui se fondent avec Teams flux de travail.
 
    :::column-end:::
 :::row-end:::
@@ -78,7 +84,7 @@ L’application est basée sur un scénario que les personnes doivent faire dans
 
 ### <a name="easy-to-use"></a>Facile à utiliser
 
-L’interface utilisateur est facile à comprendre, agréable en apparence et en ton, et rend les utilisateurs plus productifs.
+L’interface utilisateur est facile à comprendre, agréable dans l’apparence et le ton et rend les utilisateurs plus productifs.
 
    :::column-end:::
    :::column span="":::
@@ -107,27 +113,9 @@ Le texte, les icônes et les images montrent clairement à quoi l’application 
    :::column-end:::
 :::row-end:::
 
-## <a name="creating-a-cohesive-experience"></a>Création d’une expérience cohérente
-
-Concevoir une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement Teams fonctionnalités et contextes.
-
-Ces recommandations et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
-
-## <a name="planning-your-app"></a>Planification de votre application
-
-Pour concevoir une application Teams de qualité supérieure, vous devez d’abord comprendre ce que vous voulez que votre application fait et comment vous pensez que les personnes l’utiliseront. Si ce n’est pas déjà fait, prenez le temps de [planifier correctement votre application.](../../concepts/extensibility-points.md)
-
-## <a name="design-fundamentals"></a>Fondements de la conception
+## <a name="teams-design-system"></a>Teams de conception
 
 Découvrez les [principes de base de Teams conception d’application,](design-teams-app-fundamentals.md)notamment la disposition, les modèles de couleurs, etc.
-
-## <a name="basic-fluent-ui-components-for-teams"></a>Composants d’interface utilisateur Fluent de base pour Teams
-
-Basés sur l’interface utilisateur Fluent, ce sont les principaux éléments pour créer des [interfaces Teams familières.](design-teams-app-basic-ui-components.md)
-
-## <a name="ui-templates"></a>Modèles d’interface utilisateur
-
-Créez rapidement des conceptions complexes et haute fidélité avec des modèles pour les Teams et les flux [de travail.](design-teams-app-ui-templates.md)
 
 ## <a name="app-capabilities"></a>Fonctionnalités de l’application
 
@@ -138,17 +126,14 @@ Comprendre comment les personnes ajoutent, utilisent et gèrent Teams applicatio
 * [Extensions de messagerie](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Extensions de réunion](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Modules de tâche](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="app-customization"></a>Personnalisation de l’application
+## <a name="ui-templates"></a>Modèles d’interface utilisateur
 
-Comprendre comment l’administrateur Teams peut personnaliser ou renommer l’application en fonction des besoins de l’organisation. Cette personnalisation est activée si vous définissez le `configurableProperties` schéma de manifeste. Pour plus d’informations, voir [Personnaliser les applications dans Microsoft Teams](/MicrosoftTeams/customize-apps).
+Créez rapidement des conceptions complexes et haute fidélité avec des modèles pour les Teams et les flux [de travail.](design-teams-app-ui-templates.md)
 
-> [!NOTE]
-> La personnalisation d’application permet aux administrateurs de modifier l’apparence des applications chargées par le biais de bots, d’extensions de messagerie, d’onglets et de connecteurs. Par exemple, si l’administrateur Teams personnalise le nom d’une application de *Contoso* à *Agent Contoso,* l’application apparaît sous le nouveau nom *Agent Contoso* pour les utilisateurs. Toutefois, lors de l’ajout d’un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l’application en tant *que Contoso*.
-> 
-> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams](/MicrosoftTeams/customize-apps).
+## <a name="basic-ui-components"></a>Composants d’interface utilisateur de base
+
+Basés sur l’interface utilisateur [](design-teams-app-basic-ui-components.md) Fluent, voici les principaux éléments que vous pouvez utiliser pour créer Teams expériences à partir de zéro.
 
 ## <a name="tools-and-samples"></a>Outils et exemples
 
@@ -156,7 +141,7 @@ Les outils suivants peuvent aider les concepteurs et les développeurs à démar
 
 ### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Concevez une Teams avec des composants d’interface utilisateur, des modèles et des exemples que vous pouvez faire glisser, déposer et modifier selon vos besoins. Le kit d’interface utilisateur inclut également des informations complètes sur l’apparence et le comportement des applications dans Teams différents scénarios.
+Concevez une Teams avec des composants d’interface utilisateur, des modèles et des exemples que vous pouvez faire glisser, déposer et modifier selon vos besoins. Le kit d’interface utilisateur inclut également des informations complètes sur l’apparence et le comportement des applications dans différents Teams scénarios.
 
 > [!div class="nextstepaction"]
 > [Obtenir le kit d’interface utilisateur (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -175,7 +160,7 @@ Importez ces modèles et composants associés directement dans Teams projet d’
 
 ### <a name="sample-app"></a>Exemple d’application
 
-Installez un exemple d’application pour voir l’apparence et le comportement des modèles d’interface utilisateur Teams contextes.
+Vous pouvez télécharger un exemple d’application pour voir l’apparence et le comportement des applications dans Teams client.
 
 > [!div class="nextstepaction"]
 > [Obtenir l’exemple d’application (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
@@ -186,7 +171,7 @@ Pour en savoir plus, essayez l’une des ressources suivantes :
 
 ### <a name="fluent-ui-documentation"></a>Documentation de l’interface utilisateur Fluent
 
-Obtenez des exemples de code et des détails d’implémentation pour les composants Fluent UI utilisés pour créer des expériences Teams utilisateur.
+Obtenez des exemples de code et des détails d’implémentation pour les composants d’interface utilisateur Fluent de base utilisés pour créer Teams expériences utilisateur.
 
 > [!div class="nextstepaction"]
 > [Essayer Teams composants d’interface utilisateur (interface utilisateur Fluent)](https://fluentsite.z22.web.core.windows.net/)

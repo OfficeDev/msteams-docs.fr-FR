@@ -4,12 +4,12 @@ description: Décrit le processus de test de votre application Teams personnalis
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurer Microsoft 365 client Teams l’application de test
-ms.openlocfilehash: 2c9f23a5c6ae286ff4b7d911f370bd45b854a647
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565185"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631005"
 ---
 # <a name="test-your-app"></a>Tester votre application
 
@@ -19,9 +19,9 @@ Après avoir intégré votre application à Microsoft Teams, vous devez la teste
 * Choisissez un espace de travail pour tester et déboguer votre application.
 * Ajoutez des données de test à Microsoft 365 client.
 
-## <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
+## <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
-Avant de commencer à tester votre application, préparez votre client de test Microsoft 365 et activez l’Teams personnalisée vous permettant de télécharger votre application. Vous devez vous inscrire au programme Microsoft 365 développeur et gérer les paramètres Teams de votre organisation. Configurez votre abonnement développeur et configurez-le par le biais de [la préparation Microsoft 365 client.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Avant de commencer à tester votre application, préparez votre client de test Microsoft 365 et activez l’application Teams personnalisée vous permet de télécharger votre application. Vous devez vous inscrire au programme Microsoft 365 développeur et gérer les paramètres Teams de votre organisation. Configurez votre abonnement développeur et configurez-le par le biais de [la préparation Microsoft 365 client.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ## <a name="test-and-debug"></a>Test et débogage
 
@@ -37,13 +37,11 @@ Ajoutez les données de test Microsoft 365 client test. Pour plus d’informatio
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
- 
-- [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
-
-- [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
+* [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
+* [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Préparer votre client Microsoft Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+> [Préparer votre client Microsoft Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)

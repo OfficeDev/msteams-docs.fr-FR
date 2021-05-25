@@ -4,12 +4,12 @@ description: Décrit les liens profonds et leur utilisation dans vos application
 ms.topic: how-to
 localization_priority: Normal
 keywords: lien profond teams
-ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566053"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630144"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
@@ -78,7 +78,7 @@ Les paramètres de requête sont les suivants :
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | ID de votre manifeste. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | ID de l’élément dans l’onglet, que vous avez fourni lors de [la configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
-| `entityWebUrl` ou `subEntityWebUrl`&emsp; | Champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet. | https://tasklist.example.com/123 ou https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` ou `subEntityWebUrl`&emsp; | Champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet. | `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` |
 | `entityLabel` ou `subEntityLabel`&emsp; | Étiquette de l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond. | Liste des tâches 123 ou « Tâche 456 » |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Objet JSON contenant les champs suivants :</br></br> * ID de l’élément dans l’onglet. </br></br> * ID Microsoft Teams canal disponible à partir du contexte de [l’onglet.](~/tabs/how-to/access-teams-context.md) | 
 | `subEntityId`&emsp; | ID de l’élément dans l’onglet. |Task456 |
@@ -114,7 +114,7 @@ Vous pouvez resserrez un lien profond vers le contenu Teams partir de votre ongl
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-Cet appel vous permet d’accéder à l’URL correcte ou de déclencher une action du client, telle que l’ouverture d’une boîte de dialogue de planification ou d’installation d’application. Prenons l’exemple suivant :
+Cet appel vous permet d’accéder à l’URL correcte ou de déclencher une action du client, telle que l’ouverture d’une boîte de dialogue de planification ou d’installation d’application. Prenons l’exemple suivant :
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -140,7 +140,7 @@ Exemple : `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@con
 
 Les paramètres de requête sont les suivants :
 
-* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, par exemple une adresse de messagerie uniquement.
+* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, par exemple une adresse e-mail uniquement.
 * `topicName`: champ facultatif pour le nom complet de la conversation, dans le cas d’une conversation avec 3 utilisateurs ou plus. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
 * `message`: champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est dans un état brouillon.
 
@@ -156,10 +156,10 @@ Les paramètres de requête sont les suivants :
 
 * `tenantId`: Exemple d’ID de client, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Type de fichier pris en charge, tel que docx, pptx, xlsx et pdf
-* `objectUrl`: URL d’objet du fichier, https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: URL de base du fichier, https://microsoft.sharepoint.com/teams
+* `objectUrl`: URL d’objet du fichier, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: URL de base du fichier, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Nom du service, ID d’application
-* `threadId`: ThreadId est l’ID d’équipe de l’équipe dans laquelle le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier d’OneDrive’un utilisateur. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `threadId`: threadId est l’ID d’équipe de l’équipe dans laquelle le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier d’OneDrive’un utilisateur. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ID de groupe du fichier, ae063b79-5315-4ddb-ba70-27328ba6c31e
 
 Voici l’exemple de format de lien profond vers des fichiers :
@@ -191,7 +191,7 @@ Les paramètres de requête sont les suivants :
 * `appID`: Votre ID manifeste **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: ID d’élément que vous avez fourni lors de [la configuration de l’onglet.](~/tabs/how-to/create-tab-pages/configuration-page.md) Par exemple, **tasklist123**.
-* `entityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet ou https://tasklist.example.com/123 https://tasklist.example.com/list123/task456 .
+* `entityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet ou `https://tasklist.example.com/123` `https://tasklist.example.com/list123/task456` .
 * `entityName`: une étiquette pour l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond, Liste des tâches 123 ou Tâche 456.
 
 Exemple : https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
@@ -201,7 +201,7 @@ Exemple : https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fe
 > [!NOTE]
 > Cette fonctionnalité est actuellement en prévisualisation pour les développeurs.
 
-Vous pouvez créer des liens profonds vers la boîte Teams de planification intégrée. Cela est particulièrement utile si votre application aide l’utilisateur à effectuer le calendrier ou à planifier les tâches associées.
+Vous pouvez créer des liens profonds vers la boîte Teams de planification intégrée. Ceci est particulièrement utile si votre application aide l’utilisateur à effectuer le calendrier ou à planifier des tâches connexes.
 
 ### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Générer un lien profond vers la boîte de dialogue de planification
 
@@ -213,7 +213,7 @@ Les paramètres de requête sont les suivants :
 
 * `attendees`: Liste facultative d’ID d’utilisateurs séparés par des virgules représentant les participants à la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Pour l’instant, le champ ID utilisateur prend uniquement en charge Azure AD UserPrincipalName, généralement une adresse de messagerie.
 * `startTime`: heure de début facultative de l’événement. Il doit être au [format ISO 8601 long,](https://en.wikipedia.org/wiki/ISO_8601)par exemple *2018-03-12T23:55:25+02:00*.
-* `endTime`: Heure de fin facultative de l’événement, également au format ISO 8601.
+* `endTime`: heure de fin facultative de l’événement, également au format ISO 8601.
 * `subject`: Champ facultatif pour l’objet de la réunion.
 * `content`: champ facultatif pour le champ Détails de la réunion.
 

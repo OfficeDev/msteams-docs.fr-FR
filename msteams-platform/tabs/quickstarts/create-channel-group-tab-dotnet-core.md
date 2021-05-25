@@ -1,16 +1,16 @@
 ---
 title: Créer un onglet canal et de groupe avec ASP.NET Core
 author: laujan
-description: Guide de démarrage rapide sur la création d’un canal personnalisé et d’un onglet de groupe avec ASP.NET Core.
+description: Guide de démarrage rapide pour créer un canal personnalisé et un onglet de groupe avec ASP.NET Core.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: f748335b621e9bc93272aaeb8d7e12ecc3ebbee0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 1004e40e28875524ea1f38a3f6b3c2c53330fec1
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580449"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630369"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>Créer un onglet canal et de groupe personnalisé avec ASP.NETCore
 
@@ -117,4 +117,4 @@ Dans *Tab.cshtml,* l’application présente à l’utilisateur deux boutons d�
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Créer un onglet de groupe et de canal personnalisé avec ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)
+> [Créer un onglet canal et de groupe personnalisé avec ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)

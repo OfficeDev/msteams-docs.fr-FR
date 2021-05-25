@@ -5,12 +5,12 @@ description: Créez rapidement un bot Microsoft Teams à l’aide du Microsoft T
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2cbd90b293e8ac8343febc7b3d23278d5bb5bf82
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d54766d739ceaf585ab4a1e026f4a6e1150e3a2e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565885"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630977"
 ---
 # <a name="create-your-first-bot-for-teams"></a>Créez votre premier bot pour Teams
 
@@ -23,13 +23,13 @@ Ce didacticiel vous apprend à créer une application de bot de base. Un bot fai
 * Hébergez et exécutez une application localement à l’aide d’une solution de tunnel localhost.
 * Chargez une version test d’un bot dans Teams.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Assurez-vous que vous comprenez comment configurer et créer une application Teams simple. Pour plus d’informations, [voir créer votre première Microsoft Teams application « Hello World!](../build-your-first-app/build-and-run.md)». 
 
 ## <a name="1-create-your-app-project"></a>1. Créer votre projet d’application
 
-Le Microsoft Teams Shared Computer Toolkit vous permet de configurer les composants suivants pour votre application : 
+Le Microsoft Teams Shared Computer Toolkit vous aide à configurer les composants suivants pour votre application : 
 
 * **Configurations d’application et échafaudage pertinents** pour les bots.
 * **Bot** inscrit automatiquement auprès du service Microsoft Azure Bot.
@@ -62,9 +62,9 @@ La plupart des configurations d’application et de la création de la Teams Sha
 
 :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-05.png" alt-text="Capture d’écran montrant la échafaudage d’un projet dans la Teams Shared Computer Toolkit.":::
 
-Si vous avez créé un onglet dans un autre didacticiel, la création de la modèle d’application pour le bot est différente. Contrairement aux onglets, le développement de bots ne nécessite pas la création de composants web frontaux ou l’utilisation Teams SDK client JavaScript.  Au lieu de cela, la création de la forme utilise la [Microsoft Bot Framework,](https://dev.botframework.com/)qui est un SDK open source pour créer des bots intelligents et de niveau entreprise qui peuvent fonctionner sur le web, mobile et bien sûr Teams! 
+Si vous avez créé un onglet dans un autre didacticiel, la création de la modèle d’application pour le bot est différente. Contrairement aux onglets, le développement de bots ne nécessite pas la création de composants web frontaux ou l’utilisation Teams SDK client JavaScript.  Au lieu de cela, la création de la forme utilise la [Microsoft Bot Framework](https://dev.botframework.com/), qui est un SDK open source pour créer des bots intelligents et de niveau entreprise qui peuvent fonctionner sur le web, mobile et bien sûr Teams! 
 
-Le fichier, situé dans le répertoire racine de votre projet, est le Teams spécifique au Teams qui gère les activités du bot, par exemple la façon dont le bot répond à des `botActivityHandler.js` messages spécifiques. La création de la échafaudage de l’application fournit un fichier situé dans le répertoire racine de votre projet. Il s’agit du Teams de gestion spécifique qui gère les activités du bot, telles que la façon dont le bot répond à des `botActivityHandler.js` messages spécifiques.
+La création de la échafaudage d’application fournit un fichier, situé dans le répertoire racine de votre projet, qui est le handler spécifique à Teams qui gère les activités du bot, telles que la façon dont le bot répond à des `botActivityHandler.js` messages spécifiques.
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. Exposer en toute sécurité votre localhost sur Internet
 
@@ -80,7 +80,7 @@ server.post('/api/messages', (req, res) => {
 
 Pour que les demandes soient transmis à la logique de votre bot, vous devez configurer une URL accessible publiquement, par exemple, au `https://example.com/api/messages` lieu de `https://localhost` . Étant donné que votre application s’exécute à partir de votre localhost actuellement, vous devez *tunneler* le réseau.
 
-Le tunneling est un protocole qui vous permet de transporter des données sur un réseau. De plus, la tunneling localhost vous permet d’établir une connexion entre votre ordinateur local et une connexion distante. Pour exposer en toute sécurité votre localhost sur Internet, nous vous recommandons d’utiliser l’outil tiers appelé **ngrok**. Cela vous donne une URL sécurisée. 
+Le tunneling est un protocole qui vous permet de transporter des données sur un réseau. La tunneling localhost vous permet d’établir une connexion entre votre ordinateur local et une connexion distante. Pour exposer en toute sécurité votre localhost sur Internet, nous vous recommandons d’utiliser l’outil tiers appelé **ngrok**. Cela vous donne une URL sécurisée. 
 
 1. Go to the [ngrok.com](https://ngrok.com/download) site and follow the instruction to install and set up ngrok in your environment. 
     
@@ -154,7 +154,7 @@ Les informations suivantes peuvent vous aider si vous avez des problèmes lors d
 
 Si vous avez installé votre application, mais que le bot ne fonctionne pas, assurez-vous que le bot est connecté au canal Teams [ *Azure* Bot Service.](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)
 
-Il est important de comprendre que ce n’est pas le même qu’un canal dans Teams. Dans ce cas, un canal est la façon dont azure Bot Service connecte votre bot à Teams ou à une autre application de communication microsoft ou [tierce prise en charge.](/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
+Il est important de comprendre que ce n’est pas le même qu’un canal dans Teams. Dans ce cas, un canal est la façon dont azure Bot Service connecte votre bot à Teams ou à une autre application de communication Microsoft ou tierce [prise en charge.](/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: conversations basics messages
-ms.openlocfilehash: c06f8765ae17f28f3abb1dff67d77aad4e76958c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a0c00d093827221968714aad88c35efa00660d82
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020034"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630984"
 ---
 # <a name="conversation-basics"></a>Concepts de base d’une conversation
 
@@ -26,14 +26,18 @@ Une conversation est une série de messages envoyés entre votre bot Microsoft T
 
 Un bot se comporte différemment en fonction de la conversation dans qui il est impliqué :
 
-* Les bots dans les conversations de canal et de groupe nécessitent que l'utilisateur mentionne @ le bot pour l'appeler dans un canal.
-* Les bots d'une conversation un-à-un ne nécessitent pas de mention @ . Tous les messages envoyés par l'utilisateur sont acheminés vers votre bot.
+* Les bots dans les conversations de canal et de groupe doivent être @mentionnés par l’utilisateur pour être appelés dans un canal.
 
-Pour que le bot fonctionne dans une conversation ou une étendue particulière, ajoutez la prise en charge à cette étendue dans le manifeste [de l'application.](~/resources/schema/manifest-schema.md)
+* Les bots d’une conversation un-à-un ne nécessitent pas de @mention. Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
 
-Chaque message d'une conversation de bot est `Activity` un objet de type `messageType: message` . Lorsqu'un utilisateur envoie un message, Teams publie le message à votre bot et le bot gère le message. En outre, pour définir les commandes principales à qui votre bot répond, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot. Les bots d'un groupe ou d'un canal reçoivent uniquement des messages lorsqu'ils sont mentionnés @botname. Teams envoie des notifications à votre bot pour les événements de conversation qui se produisent dans les étendues où votre bot est actif. Vous pouvez capturer ces événements dans votre code et agir dessus. 
+> [!NOTE]
+> Les bots peuvent être activés pour recevoir tous les messages de canal dans une équipe sans être @mentioned à l’aide d’autorisations de consentement spécifiques aux ressources (RSC). Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../../../resources/dev-preview/developer-preview-intro.md) uniquement. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
 
-Un bot peut également envoyer des messages proactifs aux utilisateurs. Un message proactif est un message envoyé par un bot qui ne répond pas à une demande d'un utilisateur. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui incluent des éléments interactifs, tels que des boutons, du texte, des images, de l'audio, de la vidéo, etc. Le bot peut mettre à jour dynamiquement les messages après les avoir envoyés, au lieu d'avoir vos messages en tant que captures instantanées statiques des données. Les messages peuvent également être supprimés à l'aide de la méthode `DeleteActivity` Bot Framework.
+Pour que le bot fonctionne dans une conversation ou une étendue particulière, ajoutez la prise en charge à cette étendue dans le manifeste [de l’application.](~/resources/schema/manifest-schema.md)
+
+Chaque message d’une conversation de bot est `Activity` un objet de type `messageType: message` . Lorsqu’un utilisateur envoie un message, Teams publie le message à votre bot et le bot gère le message. En outre, pour définir les commandes principales à qui votre bot répond, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot. Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Teams envoie des notifications à votre bot pour les événements de conversation qui se produisent dans les étendues où votre bot est actif. Vous pouvez capturer ces événements dans votre code et agir dessus.
+
+Un bot peut également envoyer des messages proactifs aux utilisateurs. Un message proactif est un message envoyé par un bot qui ne répond pas à une demande d’un utilisateur. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui incluent des éléments interactifs, tels que des boutons, du texte, des images, de l’audio, de la vidéo, etc. Le bot peut mettre à jour dynamiquement les messages après les avoir envoyés, au lieu d’avoir vos messages en tant que captures instantanées statiques des données. Les messages peuvent également être supprimés à l’aide de la méthode `DeleteActivity` Bot Framework.
 
 ## <a name="next-step"></a>Étape suivante
 

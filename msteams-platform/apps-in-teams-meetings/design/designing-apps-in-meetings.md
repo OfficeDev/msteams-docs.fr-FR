@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des applications dans Teams réunions 
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 0a888c333305e9caafcd0bac0e5549bf08ead424
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33b11a6dfc759fabd54ca2fe2c68978a5d5d1475
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566025"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644616"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension Microsoft Teams réunion
 
@@ -25,29 +25,39 @@ Vous trouverez des instructions de conception plus complètes, y compris des él
 
 ## <a name="add-a-meeting-extension"></a>Ajouter une extension de réunion
 
-Vous pouvez ajouter une extension de réunion avant et pendant les réunions. Vous pouvez également ajouter une application pour une réunion spécifique directement à partir du Teams store (AppSource).
+Les utilisateurs peuvent ajouter une extension de réunion avant et pendant les réunions. Ils peuvent également ajouter une application pour une réunion spécifique directement à partir du Teams store.
 
 ### <a name="add-before-a-meeting"></a>Ajouter avant une réunion
 
-Dans les détails de la réunion, sélectionnez Ajouter un **onglet +** pour ouvrir le programme volant de l’application et rechercher les applications optimisées pour les réunions.
+Dans les détails de la réunion, les utilisateurs peuvent sélectionner Ajouter un **onglet +** pour ouvrir le programme volant de l’application et rechercher des applications optimisées pour les réunions.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion avant une réunion." border="false":::
 
 ### <a name="add-during-a-meeting"></a>Ajouter au cours d’une réunion
 
-Lors d’une réunion, **sélectionnez Ajouter** une :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **application** et choisissez l’application de votre choix.
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
+Lors d’une réunion, les utilisateurs peuvent sélectionner **Plus** ajouter :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **une application** et choisir l’application de leur choix.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion au cours d’une réunion." border="false":::
 
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+Lors d’une réunion, les utilisateurs peuvent sélectionner **Plus** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: et choisir l’application de leur choix.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion lors d’une réunion sur mobile." border="false":::
+
+---
+
 ## <a name="before-a-meeting"></a>Avant une réunion
 
-Avant votre réunion, vous pouvez ajouter du contenu dans l’onglet. L’exemple suivant montre un brouillon de question d’enquête à répondre pendant l’appel.
+Avant une réunion, les utilisateurs peuvent ajouter du contenu dans l’onglet. L’exemple suivant montre un brouillon de question d’enquête à qui les personnes répondront pendant l’appel.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="L’exemple montre comment apper le contenu des détails de la réunion avant un appel." border="false":::
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>Anatomie : onglet Réunion (avant et après les réunions)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un onglet de réunion avant et après une réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’un onglet de réunion avant et après une réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -59,12 +69,12 @@ Avant votre réunion, vous pouvez ajouter du contenu dans l’onglet. L’exempl
 
 Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous aider à concevoir votre onglet de réunion :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 * [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
 * [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
 * [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc.
-* [Navigation gauche :](../../concepts/design/design-teams-app-ui-templates.md#left-nav)le modèle de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation par onglets au minimum.
+* [Navigation gauche :](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)le composant de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation au minimum.
 
 ## <a name="use-an-in-meeting-tab"></a>Utiliser un onglet en réunion
 
@@ -76,9 +86,17 @@ Les personnes peuvent utiliser l’onglet réunion pour :
 
 * Fournissez des commentaires détaillés. Par exemple, évaluez un candidat au poste.
 * Créez un sondage, une enquête ou un élément de tâche pour les participants à la réunion.
-* Afficher les notes pertinentes pour la réunion. Par exemple, des informations sur un responsable des ventes.
+* Afficher les notes pertinentes pour la réunion. Par exemple, des informations sur un responsable commercial.
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="L’exemple montre comment présenter le contenu d’un sondage dans un onglet de réunion." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="L’exemple montre comment présenter le contenu d’un sondage dans un onglet de réunion sur un appareil mobile." border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomie : onglet En réunion
 
@@ -101,7 +119,7 @@ Optimisez votre onglet de réunion pour qu’il s’adapte de bord à bord dans 
 
 ### <a name="scrolling"></a>Défilement
 
-Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voir le contenu vers qui vous avez fait défiler (rien au-dessus ou au-dessous). La barre de défilement fait partie du contenu de l’iframe.
+Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voir le contenu que vous avez fait défiler vers (rien au-dessus ou au-dessous). La barre de défilement fait partie du contenu de l’iframe.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="L’exemple montre comment défile l’onglet dans la réunion." border="false":::
 
@@ -124,11 +142,19 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 * Envoyer des approbations
 * Obtenir des rappels
 
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="L’exemple montre comment utiliser une boîte de dialogue en réunion." border="false":::
+
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="L’exemple montre comment utiliser une boîte de dialogue en réunion sur un appareil mobile." border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie : boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -137,17 +163,17 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie : en-tête de boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
 
 Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la variante avec l’avatar pour renforcer le fait que la boîte de dialogue vient d’une personne.
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Avatar**: personne qui lance la boîte de dialogue en réunion.|
+|1|**Avatar**: personne qui initie la boîte de dialogue en réunion.|
 |2|**Icône de l’application**|
 |3|**Nom de l'application**|
 |4 |**Bouton Fermer :** ferme la boîte de dialogue.|
-|5 |**Chaîne d’action**: décrit généralement qui a initié la boîte de dialogue.|
+|5 |**Chaîne d’action**: décrit généralement l’auteur de la boîte de dialogue.|
 
 ### <a name="responsive-behavior"></a>Comportement réactif
 
@@ -158,7 +184,7 @@ Les boîtes de dialogue de réunion peuvent varier en taille pour tenir compte d
 
 Pour implémenter, spécifiez la largeur et la hauteur à l’aide de la [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) clé.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue de réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue en réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
 
 ## <a name="after-a-meeting"></a>Après une réunion
 
@@ -207,7 +233,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 #### <a name="dont-clutter-the-space"></a>À ne pas faire : encombrer l’espace
 
-Le contenu épais ou trop structuré peut être gênant et gênant, en particulier au cours d’une réunion.
+Le contenu épais ou trop structuré peut être gênant et gênant, en particulier lors d’une réunion.
 
    :::column-end:::
 :::row-end:::
