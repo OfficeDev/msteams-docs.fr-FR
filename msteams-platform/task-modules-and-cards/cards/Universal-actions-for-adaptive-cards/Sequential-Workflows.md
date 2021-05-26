@@ -4,18 +4,18 @@ description: Exemple de flux de travail séquentiels utilisant des actions unive
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 7f285bf76aac4f0ca276321aee2ce4b4e5c3e7e4
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555401"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649644"
 ---
 # <a name="sequential-workflows"></a>Flux de travail séquentiels
 
 Les cartes adaptatives peuvent désormais prendre en charge les flux de travail séquentiels, c’est-à-dire lorsque les cartes adaptatives sont mises à jour lors de l’action de l’utilisateur et que l’utilisateur peut avancer dans une série de cartes qui nécessitent une entrée utilisateur. Ceci est pris en charge par le biais de , qui permet aux développeurs de bot de retourner des `Action.Execute` cartes adaptatives en réponse à une action de l’utilisateur.
 
-Par exemple, prenez un scénario dans lequel la salle d’information souhaite prendre une commande pour une équipe ou un canal. Avec le choix de l’utilisateur pour divers éléments, tels que la cuisine, les `Action.Execute` cuisines, etc. peuvent être enregistrés séquentiellement. L’utilisateur peut également faire des allers-retours entre les cartes selon la logique définie par le développeur du bot. <br/>
+Par exemple, prenez un scénario dans lequel la salle d’information souhaite prendre une commande pour une équipe ou un canal. Avec le choix de l’utilisateur pour divers éléments, tels que la cuisine, les `Action.Execute` cuisines, etc. peuvent être enregistrés séquentiellement. L’utilisateur peut également passer d’une carte à l’autre selon la logique définie par le développeur du bot. <br/>
 
 L’image suivante illustre le flux de travail séquentiel :
 
@@ -122,6 +122,12 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+## <a name="code-sample"></a>Exemple de code
+
+|Exemple de nom | Description | . NETCore |
+|----------------|-----------------|--------------|
+| Teams bot de restauration | Créez un bot simple qui accepte la commande de la restauration à l’aide de cartes adaptatives. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>Voir aussi
 

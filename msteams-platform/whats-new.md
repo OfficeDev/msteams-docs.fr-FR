@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 localization_priority: Normal
 keywords: nouveautés des équipes
-ms.openlocfilehash: 073776e7058ef2224b891158319fd816953d2c05
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52634694"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651718"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -27,14 +27,14 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
-|5/24/2021|Mise à jour Teams recommandations en matière de conception d’application avec des modèles mobiles et bien plus encore.|[Conception de votre application Teams web](~/concepts/design/design-teams-app-overview.md)
-|03/18/2021|Remarque : Veuillez mettre à jour vers la **version 4.10** ou supérieure du SDK Bot Framework, car nous avons commencé le processus de dérision pour `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` . | [Modifications de l’API du bot pour les membres de l’équipe/de la conversation](resources/team-chat-member-api-changes.md) |
+|05/24/2021|Mise à jour Teams recommandations en matière de conception d’application avec des modèles mobiles et bien plus encore.|[Conception de votre application Teams web](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021|Ajout d’informations sur mConnect et Skooler.|[Système de gestion de l’apprentissage par le chat](resources/moodle-overview.md)
 |05/10/2021| La version 1.10 du manifeste est publiée.|[Schéma du manifeste](resources/schema/manifest-schema.md) |
 |05/10/2021| Nouvelle fonctionnalité de personnalisation d’application.| [Activer les orgs pour personnaliser votre application](concepts/design/enable-app-customization.md) |
 |05/07/2021| Liens profonds pour les appels audio et vidéo dans la conversation. |[Liens profonds](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|Nouvelles instructions sur la publication d’applications dans Teams store.|[Publier votre application dans le Teams, Teams](concepts/deploy-and-publish/appsource/publish.md) [de validation du Store](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-| 04/29/2021 | Nouveauté : actions universelles pour les cartes adaptatives. | [Actions universelles pour les cartes adaptatives](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | Nouveauté : actions universelles pour les cartes adaptatives. | [Actions universelles pour les cartes adaptatives](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| La fonctionnalité de personnalisation d’application est désormais disponible en prévisualisation pour les développeurs.|[Présentation de l’application Design Teams,](concepts/design/enable-app-customization.md) [vue d’ensemble d’App Studio](concepts/build-and-test/app-studio-overview.md#connectors)et [schéma de manifeste](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Remarque : mettez à jour la version 4.10 ou supérieure du SDK Bot Framework, car nous avons commencé avec le processus de dérision pour `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` . | [Modifications de l’API du bot pour les membres de l’équipe/de la conversation](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Remarque : les onglets n’auront plus de marges autour de leur expérience. Les développeurs d’onglets doivent examiner et mettre à jour leurs applications. | [Suppression des marges de tabulation](resources/removing-tab-margins.md) |
 |03/05/2021|L’étendue d’installation par défaut et la fonctionnalité de groupe sont en prévisualisation développeur.| [Étendue d’installation et fonctionnalité de groupe par défaut](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -66,7 +66,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 | 08/12/2020 |Prise en charge des cartes adaptatives dans le webhook entrant déplacé vers ga.|[Envoyer des cartes adaptatives à l'aide d'un webhook entrant](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Commencer à créer Teams applications avec le Visual Studio Shared Computer Toolkit.|[Créer des applications avec les Microsoft Teams Shared Computer Toolkit et Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|Prise en charge de l’authentification sso tabs.|[Développer un onglet DSO Microsoft Teams SSO](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
-|07/27/2020 | Graph des bots et des messages proactifs (prévisualisation publique).|[Activer l’installation proactive du bot et la messagerie proactive dans Teams avec Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
+|07/27/2020 | Graph des bots et des messages proactifs (prévisualisation publique).|[Activer l’installation proactive d’un bot et la messagerie proactive dans Teams avec Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Mises à jour des fonctionnalités des appareils mobiles.|[Demander des autorisations d’appareil pour Microsoft Teams onglet](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|Teams Outil de validation d’application pour les soumissions AppSource.|[Teams Outil de validation d’application](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|Créez un assistant virtuel pour Teams.|[Assistant virtuel pour Microsoft Teams](samples/virtual-assistant.md)|
@@ -105,7 +105,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 | 05/06/2019 | Programme de certification des applications du Windows Store. | [Certification des applications](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | Les modèles d’application sont désormais disponibles. | [Modèles d’application](~/samples/app-templates.md) |
 | 04/23/2019 | Les extensions de messagerie basées sur l’action sont désormais disponibles. | [Extensions de message basées sur l’action](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | La création de liens profonds vers une conversation privée n’est plus disponible et n’est plus disponible pour les développeurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 02/18/2019 | La création de liens profonds vers une conversation privée n’est plus disponible et n’est plus disponible pour les développeurs. | [Lien profond vers une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Contexte de l’onglet](~/concepts/tabs/tabs-context.md) |
 
 <br>
@@ -120,7 +120,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
-| 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version finale de Teams et ont été déplacés hors de la version préliminaire du développeur. Dans le cadre de ce travail, la section Onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
+| 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version publiée de Teams et ont été déplacés hors de la version préliminaire du développeur. Dans le cadre de ce travail, la section Onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La mise en place de Node JS et de .NET/C# a été mise à jour pour utiliser App Studio dans Teams et une nouvelle section a été ajoutée sur l’hébergement d’applications Teams node dans Azure. | Commencer à travailler sur la plateforme Microsoft Teams avec [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)et App Studio, commencer sur la plateforme Microsoft Teams avec [Node JS](~/get-started/get-started-nodejs-app-studio.md)et App Studio, héberger votre application [node Teams dans Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | Vous pouvez désormais créer des liens profonds vers des conversations privées entre les utilisateurs. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 a été livré et une nouvelle fonctionnalité permet d’utiliser Microsoft Teams’onglet en tant que SharePoint Framework web. | [Onglets dans SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
@@ -159,8 +159,11 @@ La prévisualisation pour développeurs est un programme public qui fournit un a
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|05/25/2021| Mise à jour Teams Shared Computer Toolkit pour [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) et [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Prendre en Teams développement d’applications](~/get-started/prerequisites.md) |
+|05/25/2021| API Détails de la réunion et événements de Teams en temps réel | [Créer des applications pour les réunions Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Portail des développeurs pour Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/24/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC).|[Recevoir tous les messages avec RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)vue d’ensemble [de la conversation de bot,](~/bots/how-to/conversations/conversation-basics.md) [conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)de canal et de groupe et schéma de manifeste d’aperçu [développeur](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/25/2021| La fonctionnalité Mode Ensemble combine les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés. | [Mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/24/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique à une ressource (RSC).|[Recevoir tous les messages avec RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)vue d’ensemble [de la conversation de bot,](~/bots/how-to/conversations/conversation-basics.md) [conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)de canal et de groupe et schéma de manifeste d’aperçu [développeur](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Déploiement de liens d’onglets et vue d’étape|[Déploiement de liens d’onglets et vue d’étape](tabs/tabs-link-unfurling.md) |
 |03/05/2021| Les onglets n’auront plus de marges autour de leur expérience. Les développeurs d’onglets doivent examiner et mettre à jour leurs applications. | [Suppression des marges de tabulation](resources/removing-tab-margins.md) |
 

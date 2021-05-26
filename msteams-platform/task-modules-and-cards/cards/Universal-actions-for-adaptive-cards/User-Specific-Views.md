@@ -4,12 +4,12 @@ description: Exemple d’affichages spécifiques à l’utilisateur à l’aide 
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555443"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649625"
 ---
 # <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
@@ -17,7 +17,15 @@ Auparavant, si des cartes adaptatives ont été envoyées dans Teams conversatio
 
 Par exemple, Megan, inspecteur de sécurité chez Contoso, souhaite créer un incident et l’affecter à Alex. Elle souhaite également que tous les membres de l’équipe soient informés de l’incident. Megan utilise l’extension de message de rapport d’incident Contoso optimisée par les actions universelles pour les cartes adaptatives.
 
+# <a name="mobile"></a>[Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Affichages spécifiques aux utilisateurs mobiles":::
+
+# <a name="desktop"></a>[Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Affichages spécifiques à l’utilisateur":::
+
+* * *
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>Affichages spécifiques à l’utilisateur pour les cartes adaptatives
 
@@ -55,7 +63,7 @@ Le code suivant fournit un exemple de cartes adaptatives :
 **Pour envoyer des cartes adaptatives, actualisez les affichages spécifiques de l’utilisateur et invoquez des demandes au bot**
 
 1. Lorsque Megan crée un incident, le bot envoie la carte adaptative ou la carte commune avec les détails de l’incident dans Teams conversation.
-2. À présent, cette carte est automatiquement actualisée en vue spécifique de l’utilisateur pour Megan et Alex. Les MRI utilisateur d’Alex et megan sont ajoutés dans la propriété de propriété du JSON de `userIds` `refresh` carte adaptative. La carte reste la même pour les autres utilisateurs de la conversation.
+2. Désormais, cette carte est automatiquement actualisée en vue spécifique de l’utilisateur pour Megan et Alex. Les MRI utilisateur d’Alex et megan sont ajoutés dans la propriété de propriété du JSON de `userIds` `refresh` carte adaptative. La carte reste la même pour les autres utilisateurs de la conversation.
 3. Pour Megan, l’actualisation automatique déclenche une `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer une carte de créateur d’incident avec un bouton en réponse `Edit` à cette demande d’appel.
 4. De même pour Alex, l’actualisation automatique déclenche une autre `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer un bouton de carte de propriétaire d’incident en réponse `Resolve` à cette demande d’appel.
 
