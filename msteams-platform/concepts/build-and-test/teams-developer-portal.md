@@ -5,19 +5,19 @@ keywords: mise en place des équipes du portail de développement
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 857d2069c4f67bf15e1d3435af55a684a918df87
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635094"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646332"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
 > [!NOTE]
 > Le Portail des développeurs pour Teams est actuellement en prévisualisation [pour les développeurs publics.](~/resources/dev-preview/developer-preview-intro.md)
 
-Le Portail des développeurs pour Teams est le principal outil de configuration, de distribution et de gestion de vos applications Microsoft Teams client. Avec le portail du développeur, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’runtime, et bien plus encore.
+Le Portail des développeurs pour Teams est le principal outil de configuration, de distribution et de gestion de vos applications Microsoft Teams client. Avec le Portail des développeurs, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’runtime, et bien plus encore.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Capture d’écran montrant la page d’accueil du portail de développement pour Teams.":::
 
@@ -29,7 +29,7 @@ Le Portail des développeurs propose deux façons d’inscrire une Teams applica
 * Importer un package d’application existant
 
 > [!NOTE]
-> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code,](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)vous pouvez gérer cette application dans le Portail du développeur.
+> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), vous pouvez gérer cette application dans le Portail des développeurs.
 
 ## <a name="set-up-an-environment"></a>Configurer un environnement
 
@@ -60,7 +60,7 @@ Pour installer et restituer votre application dans Teams, vous devez inclure un 
 
 ## <a name="test-your-app-directly-in-teams"></a>Testez votre application directement dans Teams
 
-Le Portail des développeurs fournit des options de test et de débogage de votre application :
+Le Portail des développeurs fournit des options pour tester et déboguer votre application :
 
 * Dans la page **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
 * **L’aperçu Teams** bouton vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
@@ -69,18 +69,18 @@ Le Portail des développeurs fournit des options de test et de débogage de votr
 
 À partir du portail  du développeur, utilisez le bouton Distribuer pour télécharger un package d’application, publier dans votre organisation ou publier sur le Teams store.
 
-Pour plus d’informations, [voir distribuer votre Teams app.](~/concepts/deploy-and-publish/apps-publish-overview.md)
+Pour plus d’informations, [voir distribuer votre Teams application.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
 
-Dans  la page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
+Dans **la** page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
 
 | Métrique | Définition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *R30 mensuel* | Mesure d’utilisation par défaut. Il indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans cette fenêtre de 30 jours en temps UTC. |
 | *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application au cours d’un jour donné au cours de l’UTC. |
-| *Historique* | L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 derniers jours. |
-| *Latence* | L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.|
+
+L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 derniers jours. L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.
 
 ## <a name="use-tools-to-create-app-features"></a>Utiliser des outils pour créer des fonctionnalités d’application
 

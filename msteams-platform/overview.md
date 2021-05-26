@@ -5,13 +5,13 @@ description: Obtenez une vue d’ensemble de la façon dont les développeurs pe
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.date: 05/24/2021
+ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630493"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646508"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams applications apportent des informations clés, des outils couran
 Les applications vous permettent d’étendre Teams pour répondre à vos besoins. Créez un tout nouveau Teams ou intégrez une application existante.
 
 > [!div class="nextstepaction"]
-> [Démarrer](build-your-first-app/build-first-app-overview.md)
+> [Démarrer](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>Qu’est-ce Teams applications ?
 
@@ -48,7 +48,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 :::row:::
    :::column span="1":::
 
-**Collaborez plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
+**Collaborer plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
 
    :::column-end:::
 
@@ -117,7 +117,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 
    :::column span="":::
 
-**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
+**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
 
    :::column-end:::
 
@@ -153,7 +153,7 @@ Utiliser des données **Teams**: l’API [Microsoft Graph pour Teams](/graph/tea
 Familiarisez-vous rapidement avec la création de Teams en mettant en place votre environnement et en créant une application simple.
 
 > [!div class="nextstepaction"]
-> [Créer votre première application](build-your-first-app/build-first-app-overview.md)
+> [Créer votre première application](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::

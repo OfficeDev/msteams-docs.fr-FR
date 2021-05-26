@@ -5,12 +5,12 @@ keywords: 'équipes connecteur O365 '
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1598b84fc1c36547aa4c814cdf03404a3833779e
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629822"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646321"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Création de connecteurs Office 365 pour Microsoft Teams
 
@@ -128,11 +128,11 @@ Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier u
 - `configName` est un nom convivial que votre code de configuration peut récupérer
 - `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour faciliter la tâche de modification de votre code.
 
-En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque les paramètres ci-dessus sont chargés, votre code doit appeler pour prére remplir les paramètres ou `contentUrl` `getSettings()` formulaires de votre interface utilisateur de configuration.
+En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code ci-dessus est chargé, votre code doit appeler pour prére remplir les paramètres ou formulaires de votre `contentUrl` interface utilisateur de `getSettings()` configuration.
 
 #### <a name="handling-removals"></a>Gestion des suppressions
 
-Vous pouvez éventuellement exécuter un programme de gestion d’événements lorsque l’utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce handler en appelant `microsoftTeams.settings.registerOnRemoveHandler()` . Ce handler peut être utilisé pour effectuer des opérations de nettoyage telles que la suppression d’entrées d’une base de données.
+Vous pouvez éventuellement exécuter un handler d’événements lorsque l’utilisateur supprime une configuration de connecteur existante. Vous inscrivez ce handler en appelant `microsoftTeams.settings.registerOnRemoveHandler()` . Ce handler peut être utilisé pour effectuer des opérations de nettoyage telles que la suppression d’entrées d’une base de données.
 
 ### <a name="including-the-connector-in-your-manifest"></a>Inclure le connecteur dans votre manifeste
 
@@ -190,7 +190,7 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 
 Le module Exchange Online PowerShell V2 utilise l’authentification moderne et fonctionne avec l’authentification multifacteur (MFA) pour la connexion à tous les environnements PowerShell Exchange dans Microsoft 365. Les administrateurs peuvent utiliser Exchange Online PowerShell pour désactiver les connecteurs pour un client entier ou une boîte aux lettres de groupe spécifique, affectant tous les utilisateurs de ce client ou de cette boîte aux lettres. Il n’est pas possible de désactiver pour certains et non pour d’autres. En outre, les connecteurs sont désactivés par défaut pour Cloud de la communauté du secteur public client.
 
-Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe sont désactivés. Pour activer un connecteur dans Teams, connectez-vous à [Exchange Online PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
+Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe seront désactivés. Pour activer un connecteur dans Teams, connectez-vous [à Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
 
 ### <a name="commands-to-disable-or-enable-connectors"></a>Commandes permettant de désactiver ou d’activer des connecteurs
 
@@ -203,7 +203,7 @@ Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Pa
     * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
     * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-Pour plus d’informations sur l’échange de module PowerShell, voir [Set-OrganizationConfig](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true). Pour activer ou désactiver les connecteurs Outlook, [connectez](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)des applications à vos groupes dans Outlook .
+Pour plus d’informations sur l’échange de module PowerShell, voir [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true). Pour activer ou désactiver les connecteurs Outlook, [connectez](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)des applications à vos groupes dans Outlook .
 
 ## <a name="testing-your-connector"></a>Test du connecteur
 
@@ -219,7 +219,7 @@ Pour vérifier `HttpPOST` qu’une action fonctionne correctement, [envoyez des 
 
 ## <a name="publish-connectors-for-your-organization"></a>Publier des connecteurs pour votre organisation
 
-Parfois, vous ne souhaitez peut-être pas publier votre application de connecteur sur le public AppSource/Store, mais vous souhaitez qu’elle soit disponible uniquement pour les utilisateurs de votre organisation. Dans ce cas, vous pouvez charger votre application de connecteur personnalisé vers le catalogue [d’applications de votre organisation.](~/concepts/deploy-and-publish/apps-publish.md) Ainsi, votre application de connecteur sera disponible uniquement pour cette organisation et vous n’aurez pas besoin de publier votre connecteur dans le magasin public.
+Parfois, vous ne souhaitez peut-être pas publier votre application de connecteur dans l’AppSource/Store public, mais vous souhaitez qu’elle soit disponible uniquement pour les utilisateurs de votre organisation. Dans ce cas, vous pouvez charger votre application de connecteur personnalisé vers le catalogue [d’applications de votre organisation.](~/concepts/deploy-and-publish/apps-publish.md) Ainsi, votre application de connecteur sera disponible uniquement pour cette organisation et vous n’aurez pas besoin de publier votre connecteur dans le magasin public.
 
 Une fois que vous avez chargé votre package d’application, pour configurer et utiliser le connecteur dans une équipe, il peut être installé à partir du catalogue d’applications de l’organisation en suivant les étapes suivantes :
 
@@ -229,7 +229,7 @@ Une fois que vous avez chargé votre package d’application, pour configurer et
 1. Sélectionnez **Ajouter à une barre d’équipe.**
 1. Dans la fenêtre de boîte de dialogue suivante, tapez un nom d’équipe ou de canal.
 1. Sélectionnez **la barre Configurer un connecteur** dans le coin inférieur droit de la fenêtre de boîte de dialogue.
-1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *Plus d’options* Connecteurs Tous les connecteurs pour votre équipe pour cette  =>    =>    =>   équipe. Vous pouvez naviguer en accédant à cette section ou rechercher l’application connecteur.
+1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *Options* supplémentaires Connecteurs Tous les connecteurs pour votre équipe  =>    =>    =>   pour cette équipe. Vous pouvez naviguer en accédant à cette section ou rechercher l’application connecteur.
 1. Pour configurer ou modifier le connecteur, sélectionnez **la barre Configurer.**
 
 ## <a name="code-sample"></a>Exemple de code
