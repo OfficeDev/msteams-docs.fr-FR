@@ -4,16 +4,16 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 localization_priority: Normal
 keywords: Référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566858"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668861"
 ---
 # <a name="cards-reference"></a>Référence de cartes
 
-Les cartes répertoriées dans ce document sont pris en charge dans les bots pour Microsoft Teams. Elles sont basées sur des cartes définies par Bot Framework, mais Teams ne prend pas en charge toutes les cartes Bot Framework et à la place, certaines cartes Teams ont été ajoutées. Les différences sont appelées dans les références de ce document.
+Les cartes répertoriées dans ce document sont pris en charge dans les bots pour Microsoft Teams. Elles sont basées sur des cartes définies par Bot Framework (BF), mais Teams ne prend pas en charge toutes les cartes Bot Framework et certaines cartes Teams ont été ajoutées. Les différences sont appelées dans les références de ce document.
 
 ## <a name="card-examples"></a>Exemples de carte
 
@@ -46,16 +46,16 @@ Ce tableau indique les types de cartes disponibles :
 
 ### <a name="inline-card-images"></a>Images de carte en ligne
 
-La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. Pour des raisons de performances, il est vivement recommandé d’héberger l’image sur un réseau public de distribution de contenu (CDN).
+La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. À des fins de performances, il est vivement recommandé d’héberger l’image sur un réseau public de distribution de contenu (CDN).
 
-La taille des images est réduite ou réduite tout en conservant les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
+Les images sont réduites ou réduites en taille tout en conservant les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
 
 Les images doivent être au maximum 1024×1024, au format PNG, JPEG ou GIF, et ne pas prendre en charge les images GIF animées.
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
 | url | URL | URL HTTPS vers l’image. |
-| alt | Chaîne | Description accessible de l’image. |
+| alt | String | Description accessible de l’image. |
 
 > [!NOTE]
 > Si une carte inclut une URL d’image qui passe par une redirection avant l’image finale, la redirection dans l’URL de l’image n’est pas prise en charge. Cela se produit pour les images partagées sur le cloud public.
@@ -394,7 +394,7 @@ Chaque carte de connecteur peut afficher un maximum de dix sections, et chaque s
 > [!NOTE]
 > Les sections, images ou actions supplémentaires dans un message n’apparaissent pas.
 
-Tous les champs de texte prise en charge markdown et HTML. Vous pouvez contrôler les sections qui utilisent markdown ou HTML en définition de `markdown` la propriété dans un message. Par défaut, `markdown` est définie sur `true` . Si vous souhaitez utiliser du code HTML à la place, définissez `markdown` sur `false` .
+Tous les champs de texte prise en charge markdown et HTML. Vous pouvez contrôler les sections qui utilisent markdown ou HTML en fixant la `markdown` propriété dans un message. Par défaut, `markdown` est définie sur `true` . Si vous souhaitez utiliser du code HTML à la place, définissez `markdown` sur `false` .
 
 Si vous spécifiez la propriété, elle remplace la `themeColor` propriété dans le manifeste de `accentColor` l’application.
 
@@ -413,7 +413,7 @@ Pour plus d’informations sur les propriétés de carte de connecteur, voir la 
 * `originator`
 * `correlationId`
 
-### <a name="example-of-an-office-365-connector-card"></a>Exemple de carte de connecteur Office 365 de connexion
+### <a name="example-of-an-office-365-connector-card"></a>Exemple de carte Office 365 connecteur
 
 ```json
 {
@@ -478,7 +478,7 @@ Pour plus d’informations sur les propriétés de carte de connecteur, voir la 
 
 ## <a name="receipt-card"></a>Carte d’accusé de réception
 
-Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Il contient généralement la liste des éléments à inclure sur le reçu, par exemple les informations fiscales et totales.
+Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Elle contient généralement la liste des éléments à inclure sur le reçu, telles que les taxes et le total des informations.
 
 ### <a name="support-for-receipt-cards"></a>Prise en charge des cartes de réception
 
@@ -548,7 +548,7 @@ Référence Bot Framework :
 
 La carte de signature permet à un bot de demander à un utilisateur de se connecter. Elle est prise en charge Teams sous une forme légèrement différente de celle de Bot Framework. La carte de Teams est similaire à la carte de signin dans Bot Framework, sauf que la carte de Teams ne prend en charge que deux actions : `signin` et `openUrl` .
 
-L’action de signin peut être utilisée à partir de n’importe quelle carte de Teams, et pas seulement de la carte de signature. Pour plus d’informations sur [l’authentification, Microsoft Teams flux d’authentification pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
+L’action de signin peut être utilisée à partir de n’importe quelle carte Teams, et pas seulement de la carte de signature. Pour plus d’informations sur l’authentification, [Microsoft Teams flux d’authentification pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
 
 ### <a name="support-for-signin-cards"></a>Prise en charge des cartes de signature
 
@@ -644,7 +644,7 @@ Les collections de cartes incluent `builder.AttachmentLayout.carousel` et `build
 
 ## <a name="carousel-collection"></a>Collection de carrousels
 
-La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) présente un carrousel de cartes, éventuellement avec des boutons d’action associés.
+La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) affiche un carrousel de cartes, éventuellement avec des boutons d’action associés.
 
 ### <a name="support-for-carousel-collections"></a>Prise en charge des collections de carrousels
 

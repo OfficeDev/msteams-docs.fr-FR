@@ -5,12 +5,12 @@ description: Créez rapidement une Microsoft Teams qui affiche un « Hello, Worl
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 861b6921d7a2092a746ea7dc1399f8aaa523e207
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646678"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667453"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Créer et exécuter votre première application Microsoft Teams avec Blazor
 
@@ -35,7 +35,7 @@ Utilisez la Teams Shared Computer Toolkit pour créer votre premier projet :
 
 1. Sélectionnez **Créer un projet.**
 
-1. Sélectionnez **Microsoft Teams application,** puis appuyez sur **Suivant.**  Pour vous aider à trouver le modèle, utilisez le type de **projet Microsoft Teams**.
+1. Sélectionnez **Microsoft Teams Application,** puis appuyez sur **Suivant.**  Pour vous aider à trouver le modèle, utilisez le type de **projet Microsoft Teams**.
 
 1. Donnez un nom au projet et à la solution, puis appuyez sur **Suivant**.
 
@@ -53,10 +53,10 @@ Utilisez la Teams Shared Computer Toolkit pour créer votre premier projet :
 1. Exécutez `dotnet new -i` cette page pour installer le modèle à partir NuGet :
 
    ``` bash
-   dotnet new -i Microsoft.TeamsApp.Blazor
+   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   Vous ne devez le faire que la première fois ou lors de la mise à jour du modèle.
+   Vous ne devez le faire que la première fois ou lors de la mise à jour du modèle. Vérifiez [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) la dernière version de ce package.
 
 1. Créez un répertoire :
 
@@ -95,7 +95,7 @@ Une fois Teams Shared Computer Toolkit votre projet, vous avez les composants po
 Étant donné que vous avez créé une application d’onglet lors de l’installation, l’Teams Shared Computer Toolkit crée la modèle de tout le code nécessaire pour un onglet de base en tant que [serveur Blazor](/aspnet/core/blazor).
 
 - `Pages/Tab.razor` est le point d’entrée de l’application frontale.
-- `TeamsFx.cs`et `JS/src/index.js` sert à initialiser les communications avec l’Teams hôte.
+- `TeamsFx.cs`et `JS/src/index.js` est utilisé pour initialiser les communications avec l’Teams hôte.
 
 Vous pouvez ajouter des fonctionnalités de back-end en ajoutant des contrôleurs ASP.NET Core supplémentaires à votre application.
 
@@ -118,7 +118,7 @@ Pour créer et exécuter votre application localement :
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
 1. Teams seront chargés dans un navigateur web et vous serez invité à vous y inscrire. Si vous êtes invité à ouvrir Microsoft Teams, sélectionnez Annuler pour rester dans le navigateur. Connectez-vous avec votre compte M365.
-1. Lorsque vous avez été invité à installer l’application sur Teams, appuyez sur **Ajouter**.
+1. Lorsque vous avez été invité à installer l’application sur Teams, appuyez sur **Ajouter.**
 
 Votre application s’affiche désormais :
 
@@ -136,7 +136,7 @@ Lorsque vous appuyez sur F5, le Teams Shared Computer Toolkit :
 1. Votre application a été inscrite pour le « chargement de version latéral » dans Microsoft Teams.
 1. Le back-end de votre application a démarré en cours d’exécution localement.
 1. A démarré votre application frontale hébergée localement.
-1. Démarré Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application (l’URL est enregistrée dans le manifeste de l’application).
+1. Démarré Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est enregistrée dans le manifeste de l’application).
 
 </details>
 
@@ -144,7 +144,7 @@ Lorsque vous appuyez sur F5, le Teams Shared Computer Toolkit :
 <details>
 <summary>Découvrez comment résoudre les problèmes courants lors de l’exécution locale de votre application.</summary>
 
-Pour exécuter correctement votre application dans Teams, vous devez avoir un compte Microsoft 365 de développement qui autorise le chargement côté application. Pour plus d’informations sur l’ouverture du compte, voir [Conditions préalables.](prerequisites.md#enable-sideloading)
+Pour exécuter correctement votre application dans Teams, vous devez avoir un compte de développement Microsoft 365 qui permet le chargement côté application. Pour plus d’informations sur l’ouverture du compte, voir [Conditions préalables.](prerequisites.md#enable-sideloading)
 
 </details>
 
@@ -158,7 +158,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>Mettre en service et déployer votre application dans Azure App Service
 
-1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet et choisissez **Publier** (ou utilisez l’élément  >   de menu Publier la build).
+1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet et choisissez **Publier** (ou utilisez l’élément  >  **de** menu Publier la build).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Sélectionner l’opération Publier sur le projet":::
 
@@ -228,7 +228,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Sélectionner des informations de base":::
 
-1. Il existe plusieurs endroits dans le manifeste qui résentent un `locahost:XXXXX` élément dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par (y compris les accolades).
+1. Il existe plusieurs endroits dans le manifeste qui résentent un élément `locahost:XXXXX` dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par (y compris les accolades).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajuster les informations de base pour l’environnement":::
 
@@ -243,7 +243,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Modifier les paramètres d’onglet personnel":::
 
-1. Remplacez l’URL par la variable d’environnement dans les champs **URL de contenu** et URL du **site** web.
+1. Remplacez l’URL par la variable d’environnement dans les champs **Url de contenu** et Url du **site** web.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Modifier les URL d’onglet personnel":::
 

@@ -5,17 +5,17 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629864"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667417"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Schéma de manifeste de prévisualisation pour les développeurs Microsoft Teams
 
 > [!NOTE]
-> Pour plus [d’informations](~/resources/dev-preview/developer-preview-intro.md) sur le programme et la façon dont vous pouvez participer, voir Aperçu du développeur.
+> Pour plus d’informations sur le programme et sur la façon dont vous pouvez participer, consultez [l’aperçu du développeur.](~/resources/dev-preview/developer-preview-intro.md)
 > Si vous n’utilisez pas la prévisualisation du développeur, vous ne devez pas utiliser cette version du manifeste. Voir [la référence : schéma de manifeste pour Microsoft Teams](~/resources/schema/manifest-schema.md) pour la version publique du manifeste.
 
 Le Microsoft Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
@@ -73,6 +73,7 @@ Pour plus d’informations sur les fonctionnalités disponibles, voir : [Fonctio
       "entityId": "idForPage",
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content?host=msteams",
+      "contentBotId": "Specifies to the app that tab is an Adaptive Card Tab. You can either provide the contentBotId or contentUrl.",
       "websiteUrl": "https://contoso.com/content",
       "scopes": [ "personal" ]
     }
@@ -239,7 +240,7 @@ L https:// URL qui fait référence au schéma JSON pour le manifeste.
 
 **Obligatoire** &ndash; Chaîne
 
-Version du schéma de manifeste utilisé par ce manifeste. Il doit s’qu’il s’appelle « devPreview ».
+Version du schéma de manifeste utilisé par ce manifeste. Il doit s’appelle « devPreview ».
 
 ## <a name="version"></a>version
 
@@ -261,7 +262,7 @@ Identificateur unique généré par Microsoft pour cette application. Si vous av
 
 **Obligatoire** &ndash; Chaîne
 
-Identificateur unique de cette application dans la notation de domaine inverse ; par exemple, com.example.myapp.
+Un identificateur unique pour cette application dans la notation de domaine inverse ; par exemple, com.example.myapp.
 
 ## <a name="developer"></a>developer
 
@@ -300,7 +301,7 @@ Tableau d’objets spécifiant des traductions linguistiques supplémentaires.
 
 **Obligatoire**
 
-Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
+Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -311,7 +312,7 @@ Nom de l’expérience de votre application, affiché aux utilisateurs dans l’
 
 **Obligatoire**
 
-Décrit votre application aux utilisateurs. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
+Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
 Assurez-vous que votre description décrit précisément votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Notez également, dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et ne doivent pas être `full` identiques.  Votre description courte ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
@@ -361,13 +362,17 @@ L’objet est un tableau avec tous les éléments du type `object` . Ce bloc est
 
 Définit un ensemble d’onglets qui peuvent être « épinglés » par défaut, sans que l’utilisateur les ajoute manuellement. Les onglets statiques déclarés dans `personal` l’étendue sont toujours épinglés à l’expérience personnelle de l’application. Les onglets statiques déclarés dans `team` l’étendue ne sont actuellement pas pris en charge.
 
+Restituer les onglets avec des cartes adaptatives en spécifiant plutôt que `contentBotId` `contentUrl` dans le bloc **staticTabs.**
+
 L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une solution d’onglet statique.
+
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité affichée par l’onglet.|
 |`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
 |`contentUrl`|String|2 048 caractères|✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
+|`contentBotId`|   | | | ID Microsoft Teams’application spécifié pour le bot dans le portail Bot Framework. |
 |`websiteUrl`|String|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 
@@ -525,7 +530,7 @@ Vous pouvez définir l’une des propriétés suivantes :
 * `largeImageUrl`: il s’agit `color` de la propriété dans le bloc du `icons` manifeste.
 * `accentColor`: il s’agit de la couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
 * `websiteUrl`: il s’agit https:// URL du site web du développeur.
-* `privacyUrl`: il s’agit https:// URL vers la politique de confidentialité du développeur.
+* `privacyUrl`: il s’agit https:// URL de la politique de confidentialité du développeur.
 * `termsOfUseUrl`: il s’agit de https:// URL des conditions d’utilisation du développeur.
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
