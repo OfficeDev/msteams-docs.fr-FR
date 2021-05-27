@@ -6,19 +6,20 @@
     - name: Quelles sont les nouveautés ?
       href: whats-new.md
 - name: Prise en main
+  expanded: true
   items:
-    - name: Vue d’ensemble
-      href: build-your-first-app/build-first-app-overview.md
-    - name: 'Créer une application « Hello, World! »'
-      href: build-your-first-app/build-and-run.md
-    - name: Créer un onglet personnel de base
-      href: build-your-first-app/build-personal-tab.md
-    - name: Créer votre premier canal et onglet de groupe
-      href: build-your-first-app/build-channel-tab.md
-    - name: Créer votre premier bot
-      href: build-your-first-app/build-bot.md
-    - name: Créer votre première extension de messagerie
-      href: build-your-first-app/build-messaging-extension.md
+    - name: Conditions préalables
+      href: get-started/prerequisites.md
+    - name: Créer une application personnelle (React)
+      href: get-started/first-app-react.md
+    - name: Créer une application personnelle (Blazor)
+      href: get-started/first-app-blazor.md
+    - name: Créer une application personnelle (SPFx)
+      href: get-started/first-app-spfx.md
+    - name: Créer un bot de conversation
+      href: get-started/first-app-bot.md
+    - name: Créer une extension de messagerie
+      href: get-started/first-message-extension.md
 - name: Didacticiels et exemples de code
   items:
     - name: Didacticiels
@@ -191,10 +192,22 @@
   items:
     - name: Vue d'ensemble
       href: tabs/what-are-tabs.md
-    - name: Liaison des onglets et vue des étapes
-      href: tabs/tabs-link-unfurling.md
-    - name: Conditions requises pour l’onglet
-      href: tabs/how-to/tab-requirements.md
+    - name: Créer un onglet
+      items:
+        - name: Conditions requises pour l’onglet
+          href: tabs/how-to/tab-requirements.md
+        - name: Créer une page de contenu
+          href: tabs/how-to/create-tab-pages/content-page.md
+        - name: Créer une page de configuration
+          href: tabs/how-to/create-tab-pages/configuration-page.md
+        - name: Créer une page de suppression
+          href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Obtenir un contexte Teams pour votre onglet
+          href: tabs/how-to/access-teams-context.md
+        - name: Créer des onglets avec les Cartes adaptatives
+          href: tabs/how-to/build-adaptive-card-tabs.md
+        - name: Déploiement du lien des onglets et vue des étapes
+          href: tabs/tabs-link-unfurling.md
     - name: Démarrages rapides
       items:
         - name: Onglet Personnel avec Nœud.js
@@ -209,16 +222,6 @@
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
         - name: Onglet Canal Personnel avec C# /ASP.NET Core MVC
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-    - name: Créer une page de contenu
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Créer une page de configuration
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Créer une page de suppression
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Onglets sur les appareils mobiles
-      href: tabs/design/tabs-mobile.md
-    - name: Obtenir un contexte Teams pour votre onglet
-      href: tabs/how-to/access-teams-context.md
 - name: Construire des bots
   items:
     - name: Vue d'ensemble
@@ -298,8 +301,14 @@
   items:
     - name: Vue d'ensemble
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Créer une application pour les réunions
+    - name: Extensibilité de l’application de réunion
+      href: apps-in-teams-meetings/meeting-app-extensibility.md
+    - name: Conditions préalables et références d’API pour les applications dans les réunions Teams
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: Activer et configurer les applications pour les meetings
+      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: Mode Ensemble dans Teams
+      href: apps-in-teams-meetings/teams-together-mode.md
 - name: Construire webhooks et connecteurs
   items:
     - name: Vue d'ensemble
