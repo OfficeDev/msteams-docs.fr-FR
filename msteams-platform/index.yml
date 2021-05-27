@@ -3,7 +3,7 @@ title: Microsoft Teams documentation pour les développeurs
 summary: 'Obtenez de la documentation, des exemples de code, des didacticiels et bien plus encore pour vous aider à créer des applications Microsoft Teams personnalisées.'
 brand: teams
 metadata:
-  title: Microsoft Teams Documentation du développeur de plateforme
+  title: Microsoft Teams Documentation pour les développeurs de plateforme
   description: 'La plateforme Microsoft Teams développeur permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, fournir le focus (en réduisant le changement de contexte) et créer une collaboration autour du contenu et des flux de travail existants. .'
   ms.service: msteams
   ms.topic: hub-page
@@ -56,24 +56,21 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
           text: Capacités d'application des équipes
-        - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: overview
-          text: Ma map les cas d’utilisation Microsoft Teams fonctionnalités
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: how-to-guide
-          text: Créer une application Teams l’aide Node.js
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: how-to-guide
-          text: 'Créer une application Teams l’aide de C #'
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: 'Créer des applications, des bots et des flux Teams code faible avec Microsoft Power Platform'
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Documentation pour les développeurs
         - url: /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Schéma de manifeste pour Teams applications
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Scénarios de build pour Microsoft Teams applications
+          text: Scénarios de build pour Teams applications
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: Meilleures pratiques en matière Teams scénarios d’application
     - title: Apprendre
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
