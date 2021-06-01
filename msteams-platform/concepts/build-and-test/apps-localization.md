@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: a55b8af97e5306843858e5844a017dd402ab3516
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 6dbdeb6d16c99aada23f8d74a92d958f9c29b69d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566046"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709627"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Localisation pour les applications Microsoft Teams de recherche
 
@@ -22,7 +22,7 @@ Lorsque vous localisez votre Microsoft Teams, vous devez prendre en compte les c
 
 ## <a name="localizing-your-appsource-listing"></a>Localisation de votre liste AppSource
 
-Si vous publiez dans le Store, vous devez savoir que la recherche dans AppSource n’est pas encore prise en charge. Toutefois, en vue de la prise en charge des listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Actuellement, seules les informations de langue par défaut (anglais) que vous fournissez dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste s’affichent dans la liste du site web [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) pour votre application.
+Si vous publiez dans le Store, vous devez savoir que la recherche dans AppSource n’est pas encore prise en charge. Toutefois, en vue de la prise en charge des listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Actuellement, seules les informations de langue par défaut (en anglais) que vous fournissez dans l’Partner [Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste s’affichent dans la liste du site web [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) de votre application.
 
 ### <a name="example-of-configuring-localization"></a>Exemple de configuration de la localisation
 
@@ -56,7 +56,7 @@ Vous devez utiliser le Microsoft Teams d’application v1.5+ pour localiser corr
 }
 ```
 
-Vous souhaitez ensuite ajouter la propriété « localizationInfo » avec la langue par défaut que votre application prend en charge. La langue par défaut est utilisée comme langue de base finale si les paramètres client de l’utilisateur ne correspondent à aucune de vos autres langues.
+Vous souhaitez ensuite ajouter la propriété « localizationInfo » avec la langue par défaut que votre application prend en charge. La langue par défaut est utilisée comme langue de base finale si les paramètres client de l’utilisateur ne correspondent à aucune de vos langues supplémentaires.
 
 ### <a name="example-manifestjson-change"></a>Exemple manifest.jsmodification
 
@@ -137,8 +137,8 @@ Si vous fournissez des versions localisées de votre application, il est très p
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | .NET |
-|-------------|-------------|------|
-| Localisation d’application | Microsoft Teams’application à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Exemple de nom | Description | .NET | Node.js |
+|-------------|-------------|------|------|
+| Localisation d’application | Microsoft Teams’application à l’aide du bot et de l’onglet. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 
