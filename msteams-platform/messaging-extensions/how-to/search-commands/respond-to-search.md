@@ -1,34 +1,34 @@
 ---
 title: Répondre à la commande de recherche
 author: clearab
-description: Comment répondre à la commande de recherche à partir d'une extension de messagerie dans une Microsoft Teams app.
+description: Comment répondre à la commande de recherche à partir d’une extension de messagerie dans une Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 15b48b135f656feeb3cfb28ffbe12852ddb66359
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075632"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710633"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois que l'utilisateur a soumis la commande de recherche, votre service web reçoit un message d'appel qui contient un objet avec `composeExtension/query` `value` les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
+Une fois que l’utilisateur a soumis la commande de recherche, votre service web reçoit un message d’appel qui contient un objet avec `composeExtension/query` `value` les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
 
 * À mesure que des caractères sont entrés dans la zone de recherche.
-* `initialRun` est définie sur true dans le manifeste de votre application, vous recevez le message d'appel dès que la commande de recherche est invoquée. Pour plus d'informations, [voir la requête par défaut.](#default-query)
+* `initialRun` est définie sur true dans le manifeste de votre application, vous recevez le message d’appel dès que la commande de recherche est invoquée. Pour plus d’informations, [voir la requête par défaut.](#default-query)
 
-Ce document vous guide sur la façon de répondre aux demandes des utilisateurs sous forme de cartes et d'aperçus, ainsi que sur les conditions dans lesquelles Microsoft Teams une requête par défaut.
+Ce document vous guide sur la façon de répondre aux demandes des utilisateurs sous forme de cartes et d’aperçus, ainsi que sur les conditions dans lesquelles Microsoft Teams une requête par défaut.
 
-Les paramètres de requête se trouvent dans `value` l'objet de la demande, qui inclut les propriétés suivantes :
+Les paramètres de requête se trouvent dans `value` l’objet de la demande, qui inclut les propriétés suivantes :
 
 | Nom de la propriété | Objectif |
 |---|---|
-| `commandId` | Nom de la commande invoquée par l'utilisateur, correspondant à l'une des commandes déclarées dans le manifeste de l'application. |
-| `parameters` | Tableau de paramètres. Chaque objet parameter contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l'utilisateur. |
-| `queryOptions` | Paramètres de pagination : <br>`skip`: Ignorer le nombre pour cette requête <br>`count`: Nombre d'éléments à renvoyer. |
+| `commandId` | Nom de la commande invoquée par l’utilisateur, correspondant à l’une des commandes déclarées dans le manifeste de l’application. |
+| `parameters` | Tableau de paramètres. Chaque objet parameter contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l’utilisateur. |
+| `queryOptions` | Paramètres de pagination : <br>`skip`: Ignorer le nombre pour cette requête <br>`count`: Nombre d’éléments à renvoyer. |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -78,16 +78,16 @@ Le JSON ci-dessous est raccourci pour mettre en évidence les sections les plus 
 
 ## <a name="respond-to-user-requests"></a>Répondre aux demandes des utilisateurs
 
-Lorsque l'utilisateur effectue une requête, Microsoft Teams une requête HTTP synchrone à votre service. À ce stade, votre code dispose de `5` secondes pour fournir une réponse HTTP à la demande. Pendant ce temps, votre service peut effectuer une recherche supplémentaire ou toute autre logique métier nécessaire pour répondre à la demande.
+Lorsque l’utilisateur effectue une requête, Microsoft Teams une requête HTTP synchrone à votre service. À ce stade, votre code dispose de `5` secondes pour fournir une réponse HTTP à la demande. Pendant ce temps, votre service peut effectuer une recherche supplémentaire ou toute autre logique métier nécessaire pour répondre à la demande.
 
-Votre service doit répondre avec les résultats correspondant à la requête de l'utilisateur. La réponse doit indiquer un code d'état HTTP et un objet JSON ou application valide avec `200 OK` les propriétés suivantes :
+Votre service doit répondre avec les résultats correspondant à la requête de l’utilisateur. La réponse doit indiquer un code d’état HTTP et un objet JSON ou application valide avec `200 OK` les propriétés suivantes :
 
 |Nom de la propriété|Objectif|
 |---|---|
 |`composeExtension`|Enveloppe de réponse de niveau supérieur.|
-|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche une liste de résultats de recherche <br>`auth`: Demande à l'utilisateur de s'authentifier <br>`config`: Demande à l'utilisateur de configurer l'extension de messagerie <br>`message`: affiche un message en texte simple |
-|`composeExtension.attachmentLayout`|Spécifie la disposition des pièces jointes. Utilisé pour les réponses de type `result` . <br>Actuellement, les types suivants sont pris en charge : <br>`list`: Liste d'objets de carte contenant des champs de miniature, de titre et de texte <br>`grid`: grille d'images miniatures |
-|`composeExtension.attachments`|Tableau d'objets pièce jointe valides. Utilisé pour les réponses de type `result` . <br>Actuellement, les types suivants sont pris en charge : <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche une liste de résultats de recherche <br>`auth`: Demande à l’utilisateur de s’authentifier <br>`config`: Demande à l’utilisateur de configurer l’extension de messagerie <br>`message`: affiche un message en texte simple |
+|`composeExtension.attachmentLayout`|Spécifie la disposition des pièces jointes. Utilisé pour les réponses de type `result` . <br>Actuellement, les types suivants sont pris en charge : <br>`list`: Liste d’objets de carte contenant des champs de miniature, de titre et de texte <br>`grid`: grille d’images miniatures |
+|`composeExtension.attachments`|Tableau d’objets pièce jointe valides. Utilisé pour les réponses de type `result` . <br>Actuellement, les types suivants sont pris en charge : <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Actions suggérées. Utilisé pour les réponses de type `auth` `config` ou . |
 |`composeExtension.text`|Message à afficher. Utilisé pour les réponses de type `message` . |
 
@@ -100,19 +100,19 @@ Teams prend en charge les types de carte suivants :
 * [Office 365 Carte de connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Pour avoir une meilleure compréhension et une meilleure vue d'ensemble des cartes, voyez [ce que sont les cartes.](~/task-modules-and-cards/what-are-cards.md)
+Pour avoir une meilleure compréhension et une meilleure vue d’ensemble des cartes, voyez [ce que sont les cartes.](~/task-modules-and-cards/what-are-cards.md)
 
 Pour découvrir comment utiliser les types de carte miniature et hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Pour plus d'informations sur la carte connecteur Office 365, voir Utilisation de [cartes Office 365 connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+Pour plus d’informations sur la carte connecteur Office 365, voir Utilisation de [cartes Office 365 connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
-La liste des résultats s'affiche dans l Microsoft Teams'interface utilisateur avec un aperçu de chaque élément. L'aperçu est généré de l'une des deux manières :
+La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de l’une des deux manières :
 
-* Utilisation de la `preview` propriété dans `attachment` l'objet. La `preview` pièce jointe ne peut être qu'une carte hero ou miniature.
-* Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n'est pas définie et que ces propriétés sont disponibles.
-* Les actions d'appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d'aperçu.
+* Utilisation de la `preview` propriété dans `attachment` l’objet. La `preview` pièce jointe ne peut être qu’une carte hero ou miniature.
+* Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
+* Les actions d’appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d’aperçu.
 
-Vous pouvez afficher un aperçu d'une carte adaptative ou d'une carte connecteur Office 365 dans la liste des résultats à l'aide de sa propriété d'aperçu. La propriété d'aperçu n'est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d'aperçu, il doit s'agit d'une carte Hero ou miniature. Si aucune propriété d'aperçu n'est spécifiée, l'aperçu de la carte échoue et rien n'est affiché.
+Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
 
 ### <a name="response-example"></a>Exemple de réponse
 
@@ -313,9 +313,9 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>Requête par défaut
 
-Si vous l'avez définie dans le manifeste, Microsoft Teams une requête par défaut lorsque l'utilisateur ouvre l'extension de messagerie pour la `initialRun` `true` première fois.  Votre service peut répondre à cette requête avec un ensemble de résultats pré-rempli. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant les éléments récemment affichés, les favoris ou toute autre information qui ne dépend pas de l'entrée utilisateur.
+Si vous l’avez définie dans le manifeste, Microsoft Teams une requête par défaut lorsque l’utilisateur ouvre l’extension de messagerie pour la `initialRun` `true` première fois.  Votre service peut répondre à cette requête avec un ensemble de résultats pré-rempli. Cela est utile lorsque votre commande de recherche nécessite une authentification ou une configuration, en affichant les éléments récemment affichés, les favoris ou toute autre information qui ne dépend pas de l’entrée utilisateur.
 
-La requête par défaut a la même structure que n'importe quelle requête utilisateur normale, avec le champ définie sur et définie sur comme indiqué `name` `initialRun` dans `value` `true` l'objet suivant :
+La requête par défaut a la même structure que n’importe quelle requête utilisateur normale, avec le champ définie sur et définie sur comme indiqué `name` `initialRun` dans `value` `true` l’objet suivant :
 
 ```json
 {
@@ -342,17 +342,17 @@ La requête par défaut a la même structure que n'importe quelle requête utili
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d'extension de messagerie| Décrit comment définir des commandes d'action, créer un module de tâche et répondre à une action d'soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams d'extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajouter une configuration à une extension de messagerie](~/messaging-extensions/how-to/add-configuration-page.md)
- 
+[Ajouter une configuration à une extension de messagerie](~/get-started/first-message-extension.md)
+
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Ajouter l'authentification à une extension de messagerie](~/messaging-extensions/how-to/add-authentication.md)
+> [Ajouter l’authentification à une extension de messagerie](~/messaging-extensions/how-to/add-authentication.md)
 
 
 

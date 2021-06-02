@@ -5,12 +5,12 @@ description: Créez une extension de messagerie pour Microsoft Teams à l’aide
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: ad341c386cc9e1bf03cf6e25c0d8be8add0880c6
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698114"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710647"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Créez et exécutez votre première extension de messagerie basée sur la recherche dans Microsoft Teams
 
@@ -26,11 +26,11 @@ Dans ce didacticiel, vous créerez une *commande de recherche* pour effectuer un
 Vérifiez que votre environnement de développement est configuré en installant les [Conditions préalables](prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Conditions préalables à l’installation](prerequisites.md)
+> [Conditions préalables](prerequisites.md)
 
 ## <a name="create-your-project"></a>Créer votre projet
 
-Utilisez le Kit de ressources Teams pour créer votre premier projet :
+Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -64,7 +64,7 @@ Utilisez le Kit de ressources Teams pour créer votre premier projet :
 
 1. Sélectionnez un dossier d’espace de travail.  Un dossier est créé dans votre dossier d’espace de travail pour le projet que vous créez.
 
-1. Entrez un nom approprié pour votre application, tel que `helloworld`.  Le nom de l’application doit contenir des caractères alphanumériques uniquement.  Appuyez sur **Entrée** pour continuer.
+1. Entrez un nom approprié pour votre application, tel que `helloworld`.  Le nom de l’application doit contenir des caractères alphanumériques uniquement.  Appuyez sur **Entrer** pour continuer.
 
 Votre application Teams est créée en quelques secondes.
 
@@ -133,7 +133,7 @@ Tapez un texte dans la zone de recherche, puis sélectionnez l’une des options
 
 Lorsque vous appuyez sur F5, le Kit de ressources Teams :
 
-1. Inscrire votre application dans Azure Active Directory.
+1. A inscrit votre application dans Azure Active Directory.
 1. A inscrit votre application pour le « chargement latéral » dans Microsoft Teams.
 1. A démarré votre serveur principal d’application s’exécutant localement en utilisant [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. A démarré un tunnel ngrok pour que Teams puis communiquer avec votre application.
@@ -166,6 +166,23 @@ Avant le déploiement, l’application s’est exécutée localement :
 Le déploiement implique la mise en service de ressources sur un abonnement Azure actif et le déploiement (chargement) du code du serveur principal et du serveur frontal pour l’application vers Azure. Le serveur principal utilise une variété de services Azure, notamment Azure App Service et Azure Bot Service.
 
 </details>
+
+## <a name="add-a-configuration-page-to-your-messaging-extension"></a>Ajouter une page de configuration à votre extension de messagerie
+
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+## <a name="code-sample"></a>Exemple de code
+
+La Teams d’authentification de recherche pour les exemples de projets sur GitHub, montrent comment créer des extensions de messagerie qui incluent une page de configuration et l’authentification [bot service](https://github.com/microsoft/BotBuilder-Samples#teams-samples). Les exemples montrent également comment créer des extensions de message qui acceptent les demandes de recherche et retournent les résultats une fois que l’utilisateur s’est inscrit.
+
+| **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
+|-----------------|-----------------|-------------|--------------|--------|
+| Générateur de bot | Pour créer des extensions de messagerie. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+
+## <a name="additional-code-sample"></a>Exemple de code supplémentaire
+
+> [!div class="nextstepaction"]
+> [Afficher d’autres exemples Bot Framework sur GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
