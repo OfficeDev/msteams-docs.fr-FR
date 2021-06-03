@@ -3,14 +3,14 @@ title: 'Prise en main : créer votre premier bot de conversation'
 author: adrianhall
 description: Créez un bot de conversation pour Microsoft Teams à l’aide du Kit de ressources Teams.
 ms.author: adhal
-ms.date: 05/20/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3084020000cf53fbb33ffc25d141b41ffff83160
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697948"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721849"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Créer votre premier bot de conversation pour Microsoft Teams
 
@@ -56,7 +56,7 @@ Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
 1. Sélectionnez un dossier d’espace de travail.  Un dossier est créé dans votre dossier d’espace de travail pour le projet que vous créez.
 
-1. Entrez un nom approprié pour votre application, tel que `helloworld`.  Le nom de l’application doit contenir des caractères alphanumériques uniquement.  Appuyez sur **Entrée** pour continuer.
+1. Entrez un nom approprié pour votre application, tel que `helloworld`.  Le nom de l’application doit contenir des caractères alphanumériques uniquement.  Appuyez sur **Entrer** pour continuer.
 
 Votre application Teams est créée en quelques secondes.
 
@@ -109,7 +109,7 @@ Pour créer et exécuter votre application localement :
 
    > Lorsque vous exécutez l’application pour la première fois, toutes les dépendances sont téléchargées et l’application est créée.  Une fenêtre de navigateur s’ouvre automatiquement lors la build est terminée.  Cette finalisation peut prendre entre 3 et 5 minutes.
 
-1. Votre navigateur web est lancé votre exécuter l’application. Si vous êtes invité à ouvrir Microsoft Teams, sélectionnez Annuler pour rester dans le navigateur. Lorsque vous y êtes invité, sélectionnez **Utiliser l’application web à la place**.
+1. Votre navigateur web commence à exécuter l’application. Si vous êtes invité à ouvrir Teams bureau, sélectionnez **Annuler** pour rester dans le navigateur. Vous pouvez également être invité à basculer vers Teams bureau à d’autres moments ; sélectionnez l Teams’application web lorsque cela se produit.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Capture d’écran présentant la façon de choisir la version web de Teams lors du lancement":::
 

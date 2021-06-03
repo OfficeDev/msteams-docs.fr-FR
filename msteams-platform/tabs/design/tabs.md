@@ -1,18 +1,18 @@
 ---
-title: Conception de votre onglet pour le bureau et le web
-description: Découvrez comment concevoir un onglet Teams (bureau et web) et obtenir le kit Microsoft Teams’interface utilisateur.
+title: Onglets de conception pour ordinateur de bureau, web et mobile
+description: Découvrez comment concevoir un onglet Teams pour ordinateur de bureau, web et mobile, et obtenir le kit Microsoft Teams’interface utilisateur.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644712"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721842"
 ---
-# <a name="designing-your-tab-for-microsoft-teams"></a>Conception de votre onglet pour Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>Concevez votre onglet pour Microsoft Teams
 
 Un onglet est un canevas de grande taille pour le contenu de votre application. Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des onglets dans Teams.
 
@@ -74,9 +74,9 @@ Vous pouvez ajouter une étape dans laquelle les utilisateurs doivent d’abord 
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Exemple d’écran d’authentification par onglet." border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>Conception d’une configuration d’onglet avec des modèles d’interface utilisateur
+### <a name="design-a-tab-setup-with-ui-templates"></a>Concevoir une configuration d’onglet avec des modèles d’interface utilisateur
 
-Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous aider à concevoir votre expérience de configuration d’onglet :
+Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous aider à concevoir votre expérience de configuration d’onglets :
 
 * [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
@@ -166,7 +166,7 @@ Les utilisateurs peuvent avoir une conversation en regard du contenu de l’ongl
 
 ### <a name="permissions-and-role-based-views"></a>Autorisations et affichages basés sur les rôles
 
-L’expérience d’onglet peut être différente pour les utilisateurs en fonction de leurs autorisations. Par exemple, un utilisateur peut accéder à l’onglet sans avoir à se connecter. Toutefois, un autre utilisateur doit signer et affiche un contenu légèrement différent.
+L’expérience d’onglet peut être différente pour les utilisateurs en fonction de leurs autorisations. Par exemple, un utilisateur peut accéder à l’onglet sans avoir à se connecter. Toutefois, un autre utilisateur doit se connecter et voir du contenu légèrement différent.
 
 ## <a name="manage-a-tab"></a>Gérer un onglet
 
@@ -204,8 +204,8 @@ Vous pouvez envoyer un message avec un lien profond vers votre onglet. Par exemp
 
 Informez les utilisateurs de l’activité de l’onglet de l’une des manières suivantes :
 
-* **Bot**: cette méthode est préférée, en particulier si le thread d’onglet est ciblé. La conversation threadée de l’onglet est déplacée en tant que conversation récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
-* **Message**: un message s’affiche dans le flux d’activités de l’utilisateur avec un [lien profond vers l’onglet.](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)
+* **Bot**: cette méthode est préférée, en particulier si le thread d’onglet est ciblé. La conversation threadée de l’onglet est déplacée dans l’affichage comme étant récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
+* **Message**: un message s’affiche dans le flux d’activités de l’utilisateur avec un [lien profond vers l’onglet](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
 ## <a name="best-practices"></a>Meilleures pratiques
 

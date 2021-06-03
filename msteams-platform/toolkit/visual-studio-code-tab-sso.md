@@ -5,14 +5,19 @@ keywords: teams visual studio code toolkit tabs sso graph authentication Azure i
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630991"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721814"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Authentification unique avec authentification unique Teams Shared Computer Toolkit et Visual Studio Code pour les onglets
+
+> [!IMPORTANT]
+> **Ce document fait référence à une ancienne version de Teams Shared Computer Toolkit**
+>
+> Pour plus d’informations, lisez les [conditions préalables](../get-started/prerequisites.md) et suivez l’un des didacticiels les plus nouveaux.
 
 Le Microsoft Teams Shared Computer Toolkit vous permet de créer l’authentification unique (SSO) pour les applications onglet directement dans Visual Studio Code. Le kit de ressources vous guide tout au long du processus et fournit tout ce dont vous avez besoin, y compris la mise en service de votre Plateforme d’identités Microsoft inscription dans le portail Azure.
 

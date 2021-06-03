@@ -202,6 +202,8 @@
           href: tabs/how-to/create-tab-pages/configuration-page.md
         - name: Créer une page de suppression
           href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: Onglets sur les appareils mobiles
+          href: tabs/design/tabs-mobile.md
         - name: Obtenir un contexte Teams pour votre onglet
           href: tabs/how-to/access-teams-context.md
         - name: Créer des onglets avec les Cartes adaptatives
