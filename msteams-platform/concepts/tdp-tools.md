@@ -5,11 +5,11 @@ keywords: outils du bot studio de scène de carte adaptative
 localization_priority: Normal
 ms.topic: conceptual
 ms.openlocfilehash: d374f83db5f14e52a4e88860197eeca881d7ab9b
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635074"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763129"
 ---
 # <a name="tools-in-developer-portal"></a>Outils dans le portail du développeur
 

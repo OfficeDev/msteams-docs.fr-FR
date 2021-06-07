@@ -1,18 +1,18 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Décrit les dernières étapes avant d’envoyer votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
+description: Décrit les dernières étapes avant de soumettre votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
 ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 975d3ef8fc8bdc8d6d7c336cf3a61a3a42ef5315
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c0f9c3328018884290c86a49b8026ce81022cd83
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566032"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763107"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams au Store
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
 
 Vous avez conçu, créé et testé votre application Microsoft Teams web. Vous êtes maintenant prêt à la réen lister pour que les personnes peuvent découvrir et commencer à utiliser votre application.
 
@@ -45,7 +45,7 @@ En fonction des fonctionnalités de votre application, vous devrez peut-être fo
 
 * Compte d’administrateur (obligatoire)
 * Compte non administrateur (obligatoire)
-* Un compte qui n’est pas pré-configuré pour tester correctement l’expérience de première utilisation de la signature (obligatoire)
+* Un compte qui n’est pas pré-configuré afin de tester correctement l’expérience de première utilisation de la première utilisation de la signature (obligatoire)
 * Un compte ayant accès aux fonctionnalités premium ou mises à niveau (le cas échéant)
 * Deux comptes dans le même client pour tester l’expérience de collaboration pour les applications qui fonctionnent dans des contextes partagés (le cas échéant)
 
@@ -77,7 +77,7 @@ Le nom de votre application (en particulier, son nom [*court)*](~/resources/sche
 
 :::row-end:::
 
-Assurez-vous que votre nom court respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)
+Assurez-vous que votre nom court respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name)
 
 ### <a name="write-descriptions"></a>Écrire des descriptions
 
@@ -97,7 +97,7 @@ Résumé concis de votre application qui doit être original, attrayant et adres
 
 :::row-end:::
 
-Assurez-vous que votre brève description respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)
+Assurez-vous que votre brève description respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)
 
 #### <a name="long-description"></a>Description longue
 
@@ -113,7 +113,7 @@ La description longue peut fournir un narratif qui met en évidence les principa
 
 :::row-end:::
 
-Assurez-vous que votre description longue respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)
+Assurez-vous que votre description longue respecte les instructions [de validation du Store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)
 
 ### <a name="adhere-to-icon-design-guidelines"></a>Respecter les instructions de conception des icônes
 
@@ -144,7 +144,7 @@ Souvenez-vous des captures d’écran suivantes :
 
 Pour obtenir les meilleures pratiques, consultez les ressources suivantes :
 
-* [Teams de validation du magasin d’informations](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Teams de validation du magasin d’informations](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Création d’images efficaces pour les magasins d’applications Microsoft](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>Créer une vidéo
@@ -176,7 +176,7 @@ Lors de la soumission, vous êtes invité à catégoriser votre application. Le 
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière, ventes et marketing |
 | Social et fun | Galeries d’images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
 
-### <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
+### <a name="localize-your-store-listing"></a>Localiser la liste de votre magasin
 
 L’Partner Center prend [en charge les listes de magasins localisées.](/office/dev/store/prepare-localized-solutions) Pour plus d’informations, voir comment localiser votre [liste Teams’application.](../../../../concepts/build-and-test/apps-localization.md)
 
@@ -186,7 +186,7 @@ L’Partner Center prend [en charge les listes de magasins localisées.](/office
 
 ## <a name="complete-publisher-attestation"></a>Attestation d’Publisher complète
 
-[Publisher attestation d’attestation](/microsoft-365-app-certification/docs/attestation) est également requise pour Teams applications répertoriées dans le Windows Store. Le processus inclut la réalisation d’une auto-évaluation de la sécurité, de la gestion des données et des pratiques de conformité de votre application qui peuvent aider les clients potentiels à prendre des décisions éclairées sur l’utilisation de votre application.
+[Publisher attestation est](/microsoft-365-app-certification/docs/attestation) également requise pour Teams applications répertoriées dans le Windows Store. Le processus inclut la réalisation d’une auto-évaluation de la sécurité, de la gestion des données et des pratiques de conformité de votre application qui peuvent aider les clients potentiels à prendre des décisions éclairées sur l’utilisation de votre application.
 
 > [!NOTE]
 > Si vous soumettez une nouvelle application, vous ne pouvez pas terminer officiellement l’attestation d’Publisher tant que votre application n’est pas répertoriée dans le Teams store. Si vous êtes en train de mettre à jour une application répertoriée, Publisher attestation avant de soumettre la dernière version de l’application pour validation.

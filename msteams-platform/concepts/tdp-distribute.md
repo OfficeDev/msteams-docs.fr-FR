@@ -5,17 +5,17 @@ keywords: mise en place des équipes du portail de développement
 localization_priority: Normal
 ms.topic: Conceptual
 ms.openlocfilehash: d1d098b295492a7dc3b691db4625307b6c3170ce
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635075"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763140"
 ---
 # <a name="distribute-your-apps"></a>Distribuer vos applications
 
 ## <a name="distribute"></a>Distribuer
 
-Une fois que vous avez terminé la définition de votre application, la **section** Distribuer vous permet d’exporter la définition de votre application en tant que fichier zip qui peut ensuite être partagé et chargé dans le client Teams pour les tester. Cliquer sur Exporter télécharge le fichier zip sous **appname.zip** dans votre répertoire de téléchargement par défaut.
+Une fois que vous avez terminé la définition de votre application, la **section** Distribuer vous permet d’exporter la définition de votre application en tant que fichier zip qui peut ensuite être partagé et chargé dans le client Teams pour le test. Cliquer sur Exporter télécharge le fichier zip sous **appname.zip** dans votre répertoire de téléchargement par défaut.
 
 :::image type="content" source="~/assets/images/tdp/tdp_distribute_1.png" alt-text="Screenshot showing the Distribute page of Teams Developer Portal.":::
 

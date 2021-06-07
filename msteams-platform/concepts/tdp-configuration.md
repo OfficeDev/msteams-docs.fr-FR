@@ -5,11 +5,11 @@ keywords: mise en place des équipes du portail de développement
 localization_priority: Normal
 ms.topic: conceptual
 ms.openlocfilehash: ce290bd7daa46467be279aae7c608321e75e2d57
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635114"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763128"
 ---
 # <a name="app-configuration"></a>Configuration de l’application
 
@@ -23,7 +23,7 @@ Vous pouvez effectuer les actions suivantes dans la section **Configurer** du po
 * Produire un .zip pour faciliter la distribution.
 
 > [!NOTE]
-> Le portail du développeur ne produit pas de code fonctionnel pour votre application ou n’héberge pas votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement de l’application aboutisse à une application fonctionnelle.
+> Le Portail du développeur ne produit pas de code fonctionnel pour votre application ou n’héberge pas votre application. Votre application doit déjà être hébergée et en cours d’exécution à l’URL répertoriée dans le manifeste pour que le processus de chargement de l’application aboutisse à une application fonctionnelle.
 
 :::image type="content" source="~/assets/images/tdp/tdp_configure_1.png" alt-text="Screenshot showing the Configure page of Teams Developer Portal.":::
 
@@ -46,13 +46,13 @@ Voici les fonctionnalités :
 
 * **Application personnelle** 
 
-  Cette section vous permet de définir un ensemble d’onglets présentés par défaut dans l’expérience d’application personnelle, c’est-à-dire l’expérience qu’un utilisateur a avec votre application en dehors du contexte d’une équipe ou d’un canal. Dans cette section, fournissez les détails suivants :
+  Cette section vous permet de définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle, c’est-à-dire l’expérience qu’un utilisateur a avec votre application en dehors du contexte d’une équipe ou d’un canal. Dans cette section, fournissez les détails suivants :
 
   * Nom de l’onglet.
   * Identificateur unique.
   * URL qui pointe vers l’interface utilisateur à afficher dans Teams.
   * URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Il s’agit d’une information facultative.
-  * Tous les domaines supplémentaires à partir des lesquels l’onglet s’attend à charger ou à laquelle établir un lien.
+  * Tous les domaines supplémentaires à partir des lesquels l’onglet s’attend à charger ou à lier.
 
 * **Application de groupe et de canal**
 
@@ -66,7 +66,7 @@ Voici les fonctionnalités :
 
   Cette section vous permet d’ajouter un [bot conversation](~/bots/what-are-bots.md) à votre application. Si vous avez déjà inscrit un bot auprès de Bot Framework, vous pouvez ajouter ce bot en cliquant sur **Configurer** et en fournissant le nom du bot, l’ID Bot Framework, et en définissant les étendues dans lesquelles le bot fonctionne.
 
-  Si vous n’avez pas encore inscrit le bot auprès de Bot Framework, cliquez sur **Enregistrer** pour en créer un nouveau. Une fois que vous avez inscrit votre bot, revenir à cette section de l’Éditeur de manifeste pour entrer son nom et son ID Bot Framework.
+  Si vous n’avez pas encore inscrit le bot auprès de Bot Framework, cliquez sur **Enregistrer** pour en créer un. Une fois que vous avez inscrit votre bot, revenir à cette section de l’Éditeur de manifeste pour entrer son nom et son ID Bot Framework.
 
   Une fois que vous avez fourni les informations de votre bot, vous pouvez éventuellement définir une liste de commandes que votre bot peut suggérer aux utilisateurs. Ajoutez le nom de la commande, une description de celle-ci qui indique sa syntaxe et ses arguments, ainsi que l’étendue à laquelle cette commande doit s’appliquer.
 
@@ -102,7 +102,7 @@ Voici les fonctionnalités :
 
 * **Scene**
 
-  Scènes en mode Ensemble est un artefact créé par le développeur de scène à l’aide du studio de scène Microsoft qui réunit les personnes avec leur flux vidéo dans un paramètre créatif tel que le créateur de scène. Dans un paramètre de scène en cours, les participants ont des sièges désignés avec des flux vidéo restituer dans ces sièges. Pour plus d’informations, [voir Teams mode Ensemble.](~/apps-in-teams-meetings/teams-together-mode.md)
+  Scènes en mode Ensemble est un artefact créé par le développeur de scène à l’aide du studio de scène Microsoft qui réunit les personnes avec leur flux vidéo dans un paramètre créatif comme l’a fait le créateur de scène. Dans un paramètre de scène en cours, les participants ont des sièges désignés avec des flux vidéo restituer dans ces sièges. Pour plus d’informations, [voir Teams mode Ensemble.](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## <a name="permissions"></a>Autorisations
 
@@ -140,6 +140,6 @@ Todo par Karthig
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Vue d’ensemble Teams portail du développeur](~/concepts/build-and-test/teams-developer-portal.md)
+* [Vue d’ensemble Teams portail des développeurs](~/concepts/build-and-test/teams-developer-portal.md)
 * [Distribuer Teams portail pour les développeurs](~/concepts/tdp-distribute.md)
 * [Outils du portail Teams développeur](~/concepts/tdp-tools.md)
