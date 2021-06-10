@@ -12,7 +12,7 @@ ms.locfileid: "52651739"
 # <a name="together-mode-in-teams"></a>Mode Ensemble dans Teams
 
 > [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
+> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md) uniquement.
 
 Microsoft Teams Le mode Ensemble fournit un environnement de réunion immersif et attrayant qui rassemble les personnes et les encourage à activer leur vidéo. Il combine numériquement les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés conçus et corrigés par le créateur de scène.
 
@@ -28,10 +28,10 @@ Le processus suivant donne une vue d’ensemble pour créer une application de s
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créer une application de scène uniquement" border="false":::
 
 > [!NOTE]
-> * Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création de package d’application en arrière-plan.
-> * Plusieurs scènes d’un même package d’application s’affichent sous la forme d’une liste plate de scènes pour les utilisateurs.
+> * Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création du package d’application en arrière-plan.
+> * Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate de scènes pour les utilisateurs.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Vous devez avoir une connaissance de base des éléments suivants pour utiliser le mode Ensemble :
 
@@ -64,7 +64,7 @@ Avant de créer une scène, considérez ce qui suit pour une expérience de cré
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Créer une scène à l’aide de Scene studio
 
-Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Il est disponible sur [l’éditeur de scènes - Teams portail du développeur.](https://dev.teams.microsoft.com/scenes)
+Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Il est disponible dans [l’Éditeur de](https://dev.teams.microsoft.com/scenes)scènes - Teams portail du développeur.
 
 > [!NOTE]
 > Ce document fait référence à Scene studio dans le portail Microsoft Teams développeur. L’interface et les fonctionnalités sont identiques dans Le Concepteur de scène App Studio.
@@ -172,7 +172,7 @@ Une scène plus complexe qui tire parti de l’axe Z est illustré dans l’exem
 
 ## <a name="sample-scenejson"></a>Exemple scene.jssur
 
-Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participants sont définis dans un système de coordonnées du monde avec l’axe X pointant vers la droite et l’axe Y pointant vers le bas. Le mode Ensemble prend en charge le zoom avant sur les participants actuels. Cela est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
+Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participant sont définis dans un système de coordonnées du monde avec l’axe X pointant vers la droite et l’axe Y pointant vers le bas. Le mode Ensemble prend en charge le zoom avant sur les participants actuels. Cela est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
 
 Voici les scene.jssur l’exemple :
 
@@ -250,7 +250,7 @@ Maintenant que vous avez passé par l’exemple scene.jsactivé, vous pouvez act
 
 ## <a name="activate-the-together-mode"></a>Activer le mode Ensemble
 
-Obtenez des informations de bout en bout sur la façon dont un utilisateur final s’engage avec des scènes en mode Ensemble.
+Obtenez des informations de bout en bout sur la façon dont un utilisateur final s’engage dans des scènes en mode Ensemble.
 
 **Pour choisir des scènes et activer le mode Ensemble**
 

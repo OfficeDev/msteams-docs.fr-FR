@@ -19,7 +19,7 @@ Vous pouvez télécharger une version Microsoft Teams applications sans avoir à
 * Vous avez créé une application uniquement pour vous-même. Par exemple, pour automatiser un flux de travail.
 * Vous avez créé une application pour un petit groupe d’utilisateurs, par exemple, votre groupe de travail.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 * Créez votre [package d’application](~/concepts/build-and-test/apps-package.md) [et validez-le pour les](https://dev.teams.microsoft.com/appvalidation.html) erreurs.
 * [Activez le chargement d’applications personnalisées](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) dans Teams.
@@ -31,8 +31,8 @@ Vous pouvez recharger une version de votre application vers une équipe, une con
 
 1. Connectez-vous au client Teams avec [votre compte Microsoft 365 de développement.](~/build-your-first-app/build-and-run.md#prerequisites)
 1. Sélectionnez **applications** et choisissez **Télécharger une application personnalisée.**
-1. Sélectionnez votre package d’application .zip fichier. Une boîte de dialogue d’installation s’affiche.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d’écran montrant un exemple de boîte Teams’installation d’une application.":::
+1. Sélectionnez votre package d'.zip fichier. Une boîte de dialogue d’installation s’affiche.
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. Ajoutez votre application à Teams.
 
 ## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement

@@ -1,6 +1,6 @@
 ---
 title: Maintenir et prendre en charge votre application publiée
-description: Ce qu’il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
+description: Ce à quoi il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
 ms.topic: conceptual
 localization_priority: Normal
 author: heath-hamilton
@@ -44,7 +44,7 @@ Toutefois, si vous a apporté l’une des modifications suivantes à votre appli
 
 ## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 
-Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans le cadre d’une chronologie, la liste de votre application peut être supprimée du Store.
+Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans une chronologie, la liste de votre application peut être supprimée du Store.
 
 ## <a name="promote-your-app-on-another-site"></a>Promouvoir votre application sur un autre site
 

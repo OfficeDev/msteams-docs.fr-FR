@@ -19,9 +19,9 @@ Les actions universelles pour les cartes adaptatives offrent un moyen d’implé
 * [`adaptiveCard/action` activité d’appel](#adaptivecardaction-invoke-activity)
 * [Compatibilité descendante](#backward-compatibility)
 
-## <a name="quick-start-guide-to-leverage-universal-actions-for-adaptive-cards-in-teams"></a>Guide de démarrage rapide pour tirer parti des actions universelles pour les cartes adaptatives dans Teams
+## <a name="quick-start-guide-to-leverage-universal-actions-for-adaptive-cards-in-teams"></a>Guide de démarrage rapide pour tirer parti des actions universelles pour les cartes adaptatives Teams
 
-1. Remplacez toutes les instances `Action.Submit` de par pour mettre à jour un scénario existant `Action.Execute` Teams.
+1. Remplacez toutes les instances `Action.Submit` de par pour mettre à jour un scénario existant sur `Action.Execute` Teams.
 2. Ajoutez une clause à votre carte adaptative si vous souhaitez tirer parti du modèle d’actualisation automatique ou si votre scénario nécessite des affichages `refresh` spécifiques de l’utilisateur.
 
     >[!NOTE]
@@ -44,7 +44,7 @@ Si vous définissez la version de carte sur moins de 1.4 et utilisez l’une ou 
 
 | Client | Comportement |
 | :-- | :-- |
-| Équipes | Votre carte cesse de fonctionner. La carte n’est pas actualisée et ne s’restituera pas en fonction de la `Action.Execute` version du client Teams client. Pour garantir la compatibilité maximale dans Teams, définissez avec un dans `Action.Execute` `Action.Submit` la propriété de fallback. |
+| Teams | Votre carte cesse de fonctionner. La carte n’est pas actualisée et ne s’restituera pas en fonction de la `Action.Execute` version du client Teams client. Pour garantir la compatibilité maximale dans Teams, définissez avec un dans `Action.Execute` `Action.Submit` la propriété de fallback. |
 
 Pour plus d’informations sur la prise en charge des clients plus anciens, voir [compatibilité ascendante.](#backward-compatibility)
 
@@ -66,9 +66,9 @@ Pour plus d’informations, voir [le schéma d’actualisation et les propriét�
 
 Les fonctionnalités des UserIds en cours d’actualisation sont les suivantes :
 
-* UserIds est un tableau d’utilisateurSIPL qui fait partie de la `refresh` propriété dans les cartes adaptatives.
+* UserIds est un tableau d’utilisateurSIPL qui fait partie de la propriété dans `refresh` les cartes adaptatives.
 
-* Si la propriété de liste est spécifiée comme dans la section Actualiser de la carte, la carte n’est `userIds` `userIds: []` pas actualisée automatiquement. Au lieu de cela, une **option** Actualiser la carte s’affiche pour l’utilisateur dans le menu à trois points du site web ou du bureau, et dans le menu contextif long sur mobile, c’est-à-dire, Android ou iOS pour actualiser manuellement la carte.
+* Si la propriété de liste est spécifiée comme dans la section Actualiser de la carte, la carte n’est `userIds` `userIds: []` pas actualisée automatiquement. Au lieu de cela, une **option** Actualiser la carte s’affiche pour l’utilisateur dans le menu à trois points du site web ou de bureau, et dans le menu contextif long sur mobile, c’est-à-dire, Android ou iOS pour actualiser manuellement la carte.
 
 * La propriété UserIds est ajoutée, car les canaux Teams peuvent inclure un grand nombre de membres. Si tous les membres voient le canal en même temps, une actualisation automatique inconditionnelle entraîne de nombreux appels simultanés au bot. Pour éviter cela, la propriété doit toujours être incluse pour identifier les utilisateurs qui doivent obtenir une actualisation automatique avec un maximum de `userIds` *60 MRI d’utilisateurs (en particulier).*
 
@@ -95,7 +95,7 @@ Ensuite, vous pouvez appliquer la compatibilité ascendante à des clients plus 
 
 Les actions universelles pour les cartes adaptatives vous permettent de définir des propriétés qui permettent la compatibilité ascendante avec les anciennes versions de Outlook et Teams.
 
-### <a name="teams"></a>Équipes
+### <a name="teams"></a>Teams
 
 Pour garantir la compatibilité ascendante de vos cartes adaptatives avec les versions antérieures de Teams, vous devez inclure la propriété et définir `fallback` sa valeur sur `Action.Submit` . En outre, votre code de bot doit traiter les deux `Action.Execute` et `Action.Submit` .
 

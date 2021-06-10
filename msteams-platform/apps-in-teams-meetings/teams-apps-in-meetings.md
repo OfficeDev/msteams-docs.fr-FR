@@ -29,7 +29,7 @@ Cet article fournit une vue d’ensemble de l’extensibilité des applications 
 
 Vous pouvez améliorer votre expérience de réunion à l’aide de la fonctionnalité d’extensibilité de réunion, qui vous permet d’intégrer vos applications dans les réunions. Il inclut également différentes étapes d’un cycle de vie de réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messagerie. Avec les API d’extensibilité des réunions, vous pouvez identifier différents rôles de participants et types d’utilisateurs, obtenir des événements de réunion, générer des boîtes de dialogue en réunion, etc.
 
-Pour personnaliser les Teams avec des applications pour les réunions, vous pouvez activer vos applications pour les réunions Teams en mettant à jour votre manifeste d’application et vous pouvez également configurer vos applications pour les scénarios de réunion.
+Pour personnaliser des Teams avec des applications pour les réunions, vous pouvez activer vos applications pour les réunions Teams en mettant à jour votre manifeste d’application et vous pouvez également configurer vos applications pour les scénarios de réunion.
 
 La nouvelle fonctionnalité mode Ensemble permet aux utilisateurs de collaborer à une réunion avec leur équipe au même endroit sans être séparés par des cases.
 
@@ -39,10 +39,10 @@ La nouvelle fonctionnalité mode Ensemble permet aux utilisateurs de collaborer 
 * [Bot](../bots/what-are-bots.md)
 * [Extension de la messagerie](../messaging-extensions/what-are-messaging-extensions.md)
 * [Concevoir votre application](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Conditions préalables et références d’API pour les applications Teams réunions](create-apps-for-teams-meetings.md)
+* [Conditions préalables et références d’API pour les applications dans les réunions Teams](create-apps-for-teams-meetings.md)
 * [Mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Extensibilité des applications de réunion](meeting-app-extensibility.md)
+> [Extensibilité de l’application de réunion](meeting-app-extensibility.md)

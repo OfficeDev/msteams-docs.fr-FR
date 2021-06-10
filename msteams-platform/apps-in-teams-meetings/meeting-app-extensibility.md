@@ -22,7 +22,7 @@ Cet article traite des informations sur le cycle de vie des réunions et sur la 
 
 ## <a name="meeting-lifecycle"></a>Cycle de vie des réunions
 
-Le cycle de vie des réunions consiste en une expérience d’application avant, en réunion et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
+Le cycle de vie des réunions se compose de l’expérience de l’application avant, en réunion et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Intégrer des onglets dans le cycle de vie de la réunion
 
@@ -60,7 +60,7 @@ Grâce à l’expérience d’application en réunion, vous pouvez impliquer des
 
 **Pour utiliser des onglets pendant une réunion**
 
-1. Après avoir entré la réunion, dans la barre supérieure supérieure de la fenêtre de conversation, sélectionnez l’application que vous souhaitez utiliser. Une application est visible dans une Teams dans le panneau latéral ou dans la boîte de dialogue de la réunion.
+1. Après avoir entré la réunion, dans la barre supérieure de la fenêtre de conversation, sélectionnez l’application que vous souhaitez utiliser. Une application est visible dans une Teams dans le panneau latéral ou dans la boîte de dialogue de la réunion.
 1. Dans la boîte de dialogue de réunion, entrez votre réponse en tant que commentaire.
 
     ![Affichage boîte de dialogue](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
@@ -68,15 +68,15 @@ Grâce à l’expérience d’application en réunion, vous pouvez impliquer des
     > [!NOTE]
     > * Les applications peuvent tirer parti Teams SDK client pour accéder au , et pour `meetingId` `userMri` restituer `frameContext` l’expérience de manière appropriée.
     > * Si la boîte de dialogue de réunion s’est correctement rendue, vous êtes informé du téléchargement réussi des résultats.
-    > * Le manifeste de votre application spécifie les endroits où vous souhaitez qu’ils apparaissent. Le champ de contexte est utilisé à cet effet. Il peut également faire partie d’une expérience de partage de bacs, sous réserve des instructions de conception spécifiées.
+    > * Le manifeste de votre application spécifie les endroits où vous souhaitez qu’ils apparaissent. Le champ de contexte est utilisé à cet effet. Il peut également faire partie d’une expérience de partage de bac, sous réserve des instructions de conception spécifiées.
 
-    L’image suivante illustre le panneau latéral de la réunion :
+    L’image suivante illustre le panneau latéral en réunion :
 
     ![Panneau latéral en réunion](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
 #### <a name="post-meeting-app-experience"></a>Expérience d’application post-réunion
 
-Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires. Sélectionner <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> pour ajouter un onglet et obtenir des notes et des résultats de réunion sur lesquels les organisateurs et les participants doivent agir.
+Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires. Sélectionner <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> pour ajouter un onglet et obtenir des notes de réunion et des résultats sur lesquels les organisateurs et les participants doivent agir.
 
 L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage et les commentaires reçus des participants à la réunion :
 
@@ -121,7 +121,7 @@ Les types d’utilisateurs, tels que l’organisateur, le présentateur ou le pa
 
 La liste suivante détaille les différents types d’utilisateurs, ainsi que leur accessibilité et leurs performances :
 
-* **Dans le client**: les utilisateurs dans le client appartiennent à l’organisation et ont des informations d’identification Azure Active Directory (AAD) pour le client. Il s’agit généralement d’employés à plein temps, sur site ou distants. Un utilisateur dans le client peut être organisateur, présentateur ou participant.
+* **Dans le client :** les utilisateurs dans le client appartiennent à l’organisation et ont des informations d’identification Azure Active Directory (AAD) pour le client. Il s’agit généralement d’employés à plein temps, sur site ou distants. Un utilisateur dans le client peut être organisateur, présentateur ou participant.
 * **Invité**: un invité est un participant d’une autre organisation invité à accéder Teams ou d’autres ressources dans le client de l’organisation. Les invités sont ajoutés au AAD de l’organisation et ont les mêmes fonctionnalités de Teams qu’un membre d’équipe natif ayant accès aux conversations, réunions et fichiers de l’équipe. Un utilisateur invité peut être organisateur, présentateur ou participant. Pour plus d’informations, [voir l’accès](/microsoftteams/guest-access)invité dans Teams .
 * **Fédéré ou externe**: un utilisateur fédéré est un utilisateur Teams d’une autre organisation qui a été invité à participer à une réunion. Les utilisateurs fédérés ont des informations d’identification valides avec des partenaires fédérés et sont autorisés par Teams. Ils n’ont pas accès à vos équipes ou à d’autres ressources partagées de votre organisation. L’accès invité est une meilleure option pour les utilisateurs externes qui ont accès aux équipes et aux canaux. Pour plus d’informations, [voir gérer l’accès externe dans Teams](/microsoftteams/manage-external-access).
 

@@ -16,7 +16,7 @@ Chaque équipe dispose d’une façon différente de communiquer et de collabore
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour Teams réunions
 
-Pour activer votre application pour Teams réunions, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
+Pour activer votre application pour les Teams, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
 
@@ -109,7 +109,7 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots.**
 
 > [!NOTE]
-> * L’identité de l’utilisateur doit être confirmée à l’aide de [l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
+> * L’identité de l’utilisateur doit être confirmée à [l’aide de l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
 > * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
 > * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
@@ -119,7 +119,7 @@ Au cours d’une réunion, vous pouvez utiliser meetingSidePanel ou la boîte de
 
 #### <a name="meetingsidepanel"></a>meetingSidePanel
 
-Avec meetingSidePanel, vous pouvez personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles d’affichages et d’actions. Dans le manifeste de votre application, vous devez ajouter meetingSidePanel au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est restituer dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+Avec meetingSidePanel, vous pouvez personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles d’affichages et d’actions. Dans le manifeste de votre application, vous devez ajouter meetingSidePanel au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est rendue dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
 Pour utiliser l’API pour router les demandes en `userContext` conséquence, voir Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Pour plus d’informations, [Teams flux d’authentification pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md) Le flux d’authentification pour les onglets est très similaire au flux d’authentification pour les sites web. Par conséquent, les onglets peuvent utiliser OAuth 2.0 directement. Pour plus d’informations, voir Plateforme d’identités Microsoft flux de code d’autorisation [OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
@@ -176,7 +176,7 @@ Les configurations de post-réunion et de [pré-réunion](#pre-meeting) sont les
 
 |Exemple de nom | Description | Échantillon |
 |----------------|-----------------|--------------|----------------|-----------|
-| Application de réunion | Montre comment utiliser l’application Générateur de jetons de réunion pour demander un jeton, qui est généré séquentiellement afin que chaque participant ait une bonne opportunité d’interagir. Cela peut être utile dans des situations telles que les réunions scrum, les&sessions A, etc. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Application de réunion | Montre comment utiliser l’application Générateur de jetons de réunion pour demander un jeton, qui est généré séquentiellement afin que chaque participant ait une bonne opportunité d’interagir. Cela peut être utile dans des situations telles que des réunions scrum, des&des sessions A, etc. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>Voir aussi
 
