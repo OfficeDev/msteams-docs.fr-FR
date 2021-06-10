@@ -107,7 +107,7 @@ conceptualContent:
           text: Intégrer un onglet Teams’un SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
-          text: Intégration avec le système de gestion de l’apprentissage de l’informatique
+          text: Intégration avec le système de gestion de l’apprentissage par le chat
         - url: /microsoftteams/platform/samples/app-templates
           itemType: reference
           text: Intégrer des modèles d’application prêts pour la production
