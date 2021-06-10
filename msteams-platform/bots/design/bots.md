@@ -53,7 +53,7 @@ Il est essentiel que votre bot se présente et décrive ce qu'il peut faire. Cet
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>Message de bienvenue dans une conversation à deux
 
-En contexte personnel, les messages d’accueil définissent le ton de votre bot. Le message inclut un message d’accueil, ce que le bot peut faire et quelques suggestions pour l’interaction. Par exemple, « Essayez de me demander ... ». Si possible, ces suggestions doivent renvoyer les réponses stockées sans avoir à se connecter.
+En contexte personnel, les messages d’accueil définissent le ton de votre bot. Le message inclut un message d’accueil, ce que le bot peut faire et quelques suggestions sur la façon d’interagir. Par exemple, « Essayez de me poser des questions sur ... ». Si possible, ces suggestions doivent renvoyer les réponses stockées sans avoir à se connecter.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -309,7 +309,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 ### <a name="content"></a>Contenu
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour établir un personnage clair." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour l’établissement d’un personnage clair." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>À faire : établir un personnage clair
 

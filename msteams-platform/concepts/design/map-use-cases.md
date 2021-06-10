@@ -14,7 +14,7 @@ ms.locfileid: "52566109"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
-Une fois que vous avez  identifié *qui* est l’utilisateur  et quel problème vous allez résoudre, il est temps de décider comment résoudre le problème. *Qui,* *quoi* et *comment* termine le processus de compréhension et de mappage de vos cas d’utilisation Teams fonctionnalités de l’application. Vous devez définir l’étendue de l’application en fonction des réponses que vous avez reçues de l’utilisateur à vos requêtes, puis déterminer la fonctionnalité la mieux adaptée pour créer votre application.
+Une fois que vous avez  identifié *qui* est l’utilisateur  et quel problème vous allez résoudre, il est temps de décider comment résoudre le problème. *Qui,* *quoi* et *comment* termine le processus de compréhension et de mappage de vos cas d’utilisation Teams fonctionnalités de l’application. Vous devez définir l’étendue de l’application en fonction des réponses que vous avez reçues de l’utilisateur à vos requêtes, puis déterminer la fonctionnalité la plus adaptée pour créer votre application.
 
 > [!NOTE]
 > Vous devez bien comprendre les [points d’entrée](../../concepts/extensibility-points.md) et les éléments d’interface utilisateur disponibles pour votre application. Vous devez également vous assurer que vous avez [pris en compte vos cas d’utilisation](../../concepts/design/understand-use-cases.md) avec soin.
@@ -32,21 +32,21 @@ Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe o
 
 * Pour l’étendue personnelle, posez-vous les questions suivantes :
   * Existe-t-il des interactions un-à-un avec l’application requises pour des raisons de confidentialité ou pour d’autres raisons ? Par exemple, vérification du solde des congés ou d’autres informations privées.
-  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, recherche des événements à venir à l’échelle de l’organisation dans une entreprise.
-  * Existe-t-il des notifications personnalisées ou des messages qui devront être envoyés à un utilisateur tout au long de l Teams’application ? Par exemple, les rappels pour les approbations ou les inscriptions.
+  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, la recherche d’événements à l’échelle de l’organisation à venir dans une entreprise.
+  * Existe-t-il des notifications personnalisées ou des messages qui devront être envoyés à un utilisateur dans l’Teams’application ? Par exemple, les rappels pour les approbations ou les inscriptions.
 * Pour une étendue partagée (équipe, canal ou conversation), posez-vous les questions suivantes :
   * Les informations présentées par l’application, sous l’onglet ou par le biais d’un bot, sont-ils pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, application Scrum.
-  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du Planificateur sont différentes dans différentes équipes. 
+  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes dans différentes équipes. 
   * Est-il possible que tous les membres d’une personne qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket.
 
-Les scénarios suivants vous guident dans la compréhension de la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien avec Teams fonctionnalités de l’application :
+Les scénarios suivants vous guident dans la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien Teams fonctionnalités de l’application :
 
 > [!NOTE]
 > Il ne s’agit pas d’une liste exhaustive, mais vous aidera à réfléchir à certaines des possibilités qui s’offrent à vous.
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Créer, partager et collaborer sur des éléments dans un système externe
 
-App for Microsoft Teams est un excellent moyen d’interagir avec vos données et il existe un grand nombre de points d’intégration à choisir.
+L’application Microsoft Teams est un excellent moyen d’interagir avec vos données et vous pouvez choisir parmi divers points d’intégration.
 
 * **Extensions de messagerie avec commandes de recherche**: rechercher des systèmes externes et partager les résultats sous forme de carte interactive.
 
@@ -66,13 +66,13 @@ Parfois, vous avez simplement besoin d’un moyen rapide pour démarrer un proce
 
 * **Modules de tâche**: ouvrez-les à partir d’un onglet, d’un bot ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail.
 
-* **Bots de conversation**: interagissez avec vos utilisateurs par le biais de texte et de cartes enrichies.
+* **Bots de conversation**: interagir avec vos utilisateurs via du texte et des cartes enrichies.
 
 * **Webhooks sortants**: un bon choix pour une interaction simple de va-et-vient lorsque vous n’avez pas besoin de créer un bot conversationnel entier.
 
 ## <a name="send-notifications-and-alerts"></a>Envoyer des notifications et des alertes
 
-Envoyez des notifications et des alertes asynchrones à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions couramment utilisées et des liens vers des informations supplémentaires.
+Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
 
 * **Bots de conversation**: envoient des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
 
@@ -88,7 +88,7 @@ Les personnes ont des questions et vous avez probablement une grande partie des 
 
 ## <a name="get-social"></a>Obtenir des réseaux sociaux
 
-Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
+Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des images, d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Penser en termes d’application à page unique
 
@@ -96,7 +96,7 @@ Les onglets sont des pages web incorporées. À peu près tout ce que vous pouve
 
 ## <a name="start-small"></a>Démarrer petit
 
-Vous ne savez pas par où commencer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et commencer par là. Une fois que vous avez une idée du flux d’informations dans les différents contextes de Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
+Vous ne savez pas par où commencer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et commencer par là. Une fois que vous vous êtes fait une idée du flux d’informations dans les différents contextes de Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
 
 ## <a name="put-it-all-together"></a>Mettre tout en place
 
@@ -104,4 +104,4 @@ Cela étant dit, les meilleures applications combinent généralement plusieurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer des applications pour Microsoft Teams](../../overview.md)
+[Créer des applications pour Microsoft Teams](../../overview.md)

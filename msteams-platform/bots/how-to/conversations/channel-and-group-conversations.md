@@ -18,10 +18,10 @@ ms.locfileid: "52630998"
 
 Pour installer le bot Microsoft Teams dans une conversation d’équipe ou de groupe, ajoutez l’étendue `teams` `groupchat` ou l’étendue à votre bot. Cela permet à tous les membres de la conversation d’interagir avec votre robot. Une fois le bot installé, il a accès aux métadonnées sur la conversation, telles que la liste des membres de la conversation. En outre, lorsqu’il est installé dans une équipe, le bot a accès aux détails de cette équipe et à la liste complète des canaux.
 
-Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans @mentioning lui.
+Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans @mentioning'
 
 > [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../../../resources/dev-preview/developer-preview-intro.md) uniquement.
+> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
 >
 > À l’aide du consentement spécifique aux ressources ( RSC), les bots peuvent recevoir tous les messages de canal dans les équipes dans qui il est installé sans être @mentioned. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
 
@@ -39,7 +39,7 @@ Ensuite, vous pouvez récupérer des mentions à l’aide de l’objet et ajoute
 
 ## <a name="work-with-mentions"></a>Travailler avec des mentions
 
-Chaque message envoyé à votre bot à partir d’un groupe ou d’un canal contient un @mention dont le nom est dans le texte du message. Votre bot peut également récupérer d’autres utilisateurs mentionnés dans un message et ajouter des mentions à tous les messages qu’il envoie.
+Chaque message envoyé à votre bot à partir d’un groupe ou d’un canal contient un @mention avec son nom dans le texte du message. Votre bot peut également récupérer d’autres utilisateurs mentionnés dans un message et ajouter des mentions à tous les messages qu’il envoie.
 
 Vous devez également les @mentions du contenu du message reçu par votre bot.
 

@@ -32,7 +32,7 @@ Pour obtenir l’authentification et les jetons d’application bot, complétez 
     >* L’application doit être installée dans l’étendue personnelle pour la prise en charge de l’authentification unique.
 
 1. Si l’utilisateur actuel utilise votre application bot pour la première fois, une invite de demande s’affiche demandant à l’utilisateur d’appliquer l’une des procédures suivantes :
-    * Fournir le consentement, si nécessaire.
+    * Fournir le consentement, le cas échéant.
     * Gérer l’authentification étape par étape, telle que l’authentification à deux facteurs.
 
 1. Teams demande le jeton d’application bot au point de terminaison AAD pour l’utilisateur actuel.
@@ -56,7 +56,7 @@ Pour développer un robot DSO, Teams les étapes suivantes :
 Les étapes d’inscription de votre application via le portail AAD sont similaires au flux d' utilisateur unique [de l’onglet.](../../../tabs/how-to/authentication/auth-aad-sso.md) Pour inscrire votre application, complétez les étapes suivantes :
 
 1. Inscrivez une nouvelle application dans le [portail Azure Active Directory – Inscriptions des](https://go.microsoft.com/fwlink/?linkid=2083908) applications.
-2. Sélectionnez **Nouvelle inscription.** La page **Inscrire une application** s’affiche.
+2. Sélectionnez **Nouvelle inscription**. La page **Inscrire une application** s’affiche.
 3. Dans la page **Inscrire une application,** entrez les valeurs suivantes :
     1. Entrez un **nom** pour votre application.
     2. Choisissez les **types de comptes pris en** charge, sélectionnez le type de compte client unique ou multi-locataire.
@@ -101,9 +101,9 @@ Pour mettre à jour le portail Azure avec la connexion OAuth, effectuer les éta
     * OpenId
     * profil
 
-3. Dans le portail Azure, accédez à **Enregistrement des canaux bots.**
+3. Dans le portail Azure, accédez à **Inscription des canaux bots.**
 
-4. Sélectionnez **Paramètres** dans le volet gauche  et choisissez Ajouter un paramètre sous la section Connexion **OAuth Paramètres** section.
+4. Sélectionnez **Paramètres** dans le volet gauche, puis sélectionnez Ajouter un paramètre dans la section Connexion  **OAuth Paramètres** section.
 
     ![Affichage SSOBotHandle2](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
@@ -246,7 +246,7 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne parvient pa
 
 1. Le client démarre une conversation avec le bot déclenchant un scénario OAuth.
 2. Le bot renvoie une carte OAuth au client.
-3. Le client intercepte la carte OAuth avant de l’afficher à l’utilisateur et vérifie si elle contient une `TokenExchangeResource` propriété.
+3. Le client intercepte la carte OAuth avant de l’afficher à l’utilisateur et vérifie s’il contient une `TokenExchangeResource` propriété.
 4. Si la propriété existe, le client envoie un `TokenExchangeInvokeRequest` message au bot. Le client doit avoir un jeton échangeable pour l’utilisateur, qui doit être un jeton Azure AD v2 et dont l’audience doit être identique à la `TokenExchangeResource.Uri` propriété. Le client envoie une activité d’appel au bot avec le code suivant :
 
     ```json
@@ -262,7 +262,7 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne parvient pa
     }
     ```
 
-5. Le bot traite le `TokenExchangeInvokeRequest` client et renvoie un retour au `TokenExchangeInvokeResponse` client. Le client doit attendre qu’il reçoit le `TokenExchangeInvokeResponse` .
+5. Le bot traite `TokenExchangeInvokeRequest` le client et renvoie un retour au `TokenExchangeInvokeResponse` client. Le client doit attendre qu’il reçoit le `TokenExchangeInvokeResponse` .
 
     ```json
     {

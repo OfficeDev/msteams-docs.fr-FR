@@ -2,7 +2,7 @@
 title: Créer une page de suppression d’onglets
 author: laujan
 description: Comment créer une page de suppression d’onglets
-keywords: Suppression de suppression configurable du canal de groupe d’onglets teams
+keywords: suppression des onglets teams du canal de groupe configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
@@ -23,7 +23,7 @@ Votre **manifest.jsdéfinit** les fonctionnalités et fonctionnalités de votre 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 
 Lorsque votre onglet est téléchargé vers un canal ou une conversation de groupe, Teams ajoute un menu déroulant de clic droit pour votre onglet. Les options disponibles sont déterminées par le `canUpdateConfiguration` paramètre :
 

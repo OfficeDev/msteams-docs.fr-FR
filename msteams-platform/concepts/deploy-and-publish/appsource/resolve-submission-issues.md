@@ -46,7 +46,7 @@ Le processus de résolution des problèmes et de resoumettre une application se 
    * Si des problèmes ne sont pas résolus ou si Microsoft trouve de nouveaux problèmes, vous recevez un autre rapport sur les mesures à corriger. Résolvez ces problèmes et envoyez une version mise à jour de l’application <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 > [!CAUTION]
-> Pour éviter plusieurs échecs de soumission, ne resoumettez pas votre application sur l’Partner Center tant que l’équipe de validation microsoft n’a pas approuvé votre application.
+> Pour éviter plusieurs échecs de soumission, ne resoumettez pas votre application sur l’Partner Center tant que l’équipe de validation de Microsoft n’a pas approuvé votre application.
 
 ## <a name="faq"></a>FAQ
 
@@ -58,7 +58,7 @@ Obtenez des réponses à certaines questions courantes lors de la résolution de
 
 <summary><b>Combien de temps faut-il pour publier mon application ?</b></summary>
 
-Si votre soumission au Store ne présente aucun problème, votre application publiera dans un délai de 1 à 2 jours ou moins. Si votre application échoue, une équipe microsoft vous fournit des recommandations pour résoudre les problèmes. Une fois ces correctifs corrigés et que vous renvoyez une application mise à jour à cette équipe, vous serez averti dans les 24 heures si votre application est prête à être publiée ou si elle a encore besoin de travail.
+Si votre soumission au Store ne présente aucun problème, votre application publiera dans un délai de 1 à 2 jours ou moins. Si votre application échoue, une équipe microsoft vous fournit des recommandations pour résoudre les problèmes. Une fois ces correctifs corrigés et que vous renvoyez une application mise à jour à cette équipe, vous serez averti dans les 24 heures si votre application est prête à être publiée ou a encore besoin de travail.
 
 <br>
 
@@ -103,7 +103,7 @@ Non. Microsoft ne commence pas à valider votre application tant que vous n’av
 
 <summary><b>J’ai reçu un courrier électronique de l’Partner Center pour me dire que mon application a été approuvée pour la publication. Pourquoi mon application n’est-elle pas dans Teams store ?</b></summary>
 
-Une fois votre application approuvée, la publication prend généralement entre 1 et 2 jours ou jours, en fonction des fonctionnalités de l’application.Si votre application n’a pas été publiée au bout de deux jours ouv, contactez <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
+Une fois votre application approuvée, la publication prend généralement entre 1 et 2 jours ou jours, en fonction des fonctionnalités de l’application.Si votre application n’a pas été publiée après deux jours ouvr, contactez <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 <br>
 

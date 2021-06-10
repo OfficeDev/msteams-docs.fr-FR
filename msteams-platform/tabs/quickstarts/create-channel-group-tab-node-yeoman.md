@@ -83,10 +83,10 @@ gulp ngrok-serve
 
 ## <a name="upload-your-application-to-teams"></a>Télécharger votre application à Teams
 
-- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur.](~/tabs/how-to/developer-tools.md)
-- Dans le *panneau YourTeams sur* la gauche, sélectionnez le menu en face de l’équipe que vous utilisez pour tester votre onglet et choisissez `...` Gérer **l’équipe.**
-- Dans le panneau  principal, sélectionnez Applications dans la barre d’onglets et **choisissez Télécharger** une application personnalisée située dans le coin inférieur droit de la page.
-- Ouvrez le répertoire de votre projet, accédez au dossier **./package,** sélectionnez le dossier zip du package d’application et choisissez **Ouvrir**. Votre onglet est chargé dans Teams.
+- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils [de développement de votre navigateur.](~/tabs/how-to/developer-tools.md)
+- Dans le *panneau YourTeams* sur la gauche, sélectionnez le menu en face de l’équipe que vous utilisez pour tester votre onglet et choisissez `...` Gérer **l’équipe.**
+- Dans le panneau principal, sélectionnez **Applications** dans la barre d’onglets et **choisissez Télécharger** une application personnalisée située dans le coin inférieur droit de la page.
+- Ouvrez le répertoire de votre projet, accédez au dossier **./package,** sélectionnez le dossier zip du package d’application et choisissez **Ouvrir.** Votre onglet est chargé dans Teams.
 - Revenir à votre équipe, choisissez le canal dans lequel vous souhaitez afficher l’onglet, sélectionnez ➕ dans la barre d’onglets et choisissez votre onglet dans la galerie.
 - Suivez les instructions pour ajouter un onglet. Notez qu’il existe une boîte de dialogue de configuration personnalisée pour votre onglet canal/groupe.
 - Sélectionnez **Enregistrer** et votre onglet sera ajouté à la barre d’onglets du canal.

@@ -16,13 +16,13 @@ ms.locfileid: "52566753"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Créez et connectez des bots intelligents pour interagir avec Microsoft Teams utilisateurs par le biais d’une conversation. Ou fournissez un bot simple basé sur des commandes, qui sera utilisé comme interface de « ligne de commande » pour votre expérience d’application Teams étendue. Vous pouvez effectuer un bot de notification uniquement, qui peut transmettre des informations pertinentes à vos utilisateurs directement dans un canal ou un message direct. Vous pouvez même apporter votre bot Bot Framework existant et ajouter Teams prise en charge spécifique pour mettre en valeur votre expérience.
+Créez et connectez des bots intelligents pour interagir avec Microsoft Teams utilisateurs par le biais d’une conversation. Ou fournissez un bot simple basé sur des commandes, qui sera utilisé comme interface de « ligne de commande » pour votre expérience d’application Teams étendue. Vous pouvez effectuer un bot de notification uniquement, qui peut transmettre des informations pertinentes à vos utilisateurs directement dans un canal ou un message direct. Vous pouvez même apporter votre bot bot existant basé sur Bot Framework et ajouter Teams prise en charge spécifique pour mettre en valeur votre expérience.
 
 ![Exemple de bot d’assistance à un utilisateur](~/assets/images/bot_example.png)
 
 ## <a name="what-you-need-to-know-bots"></a>Ce que vous devez savoir : Bots
 
-Un bot apparaît comme n’importe quel autre membre de l’équipe avec qui vous interagissez dans une conversation, sauf qu’il possède une icône d’avatar hexagonal et qu’il est toujours en ligne.
+Un bot apparaît comme n’importe quel autre membre de l’équipe avec qui vous interagissez dans une conversation, sauf qu’il a une icône d’avatar hexagonal et qu’il est toujours en ligne.
 
 Un bot se comporte différemment selon le type de conversation dans qui il est impliqué. Les bots dans Teams prise en charge de plusieurs types de conversations appelées étendues dans le manifeste [de l’application.](~/resources/schema/manifest-schema.md)
 
@@ -32,11 +32,11 @@ Un bot se comporte différemment selon le type de conversation dans qui il est i
 
 Pour plus d’informations, [voir Avoir une conversation avec Microsoft Teams bot.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
-Avec Microsoft Teams applications, vous pouvez faire du bot l’étoile de votre expérience, ou simplement un simple utilisateur d’aide. Les bots sont distribués dans le cadre de votre package d’application plus large, qui peut inclure d’autres [fonctionnalités telles](~/tabs/what-are-tabs.md) que des onglets ou [des extensions de messagerie.](~/messaging-extensions/what-are-messaging-extensions.md)
+Avec Microsoft Teams applications, vous pouvez faire du bot l’étoile de votre expérience, ou simplement un simple utilisateur d’aide. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## <a name="bot-apis"></a>API de bot
 
-Microsoft Teams prend en charge la plupart des [Microsoft Bot Framework](https://dev.botframework.com/). (Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement l’adapter pour qu’il fonctionne Microsoft Teams.) Nous vous recommandons d’utiliser C# ou Node.js pour tirer parti de nos [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) Bot Builder :
+Microsoft Teams prend en charge la plupart des [Microsoft Bot Framework](https://dev.botframework.com/). (Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement l’adapter pour qu’il fonctionne Microsoft Teams.) Nous vous recommandons d’utiliser C# ou Node.js pour tirer parti de nos [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Ces packages étendent les classes et méthodes de base du kit de développement logiciel (SDK) Bot Builder :
 
 * Utilisation de types de carte spécialisés tels que la Office 365 Connector.
 * Consommation et définition de Teams données de canal spécifiques sur les activités.

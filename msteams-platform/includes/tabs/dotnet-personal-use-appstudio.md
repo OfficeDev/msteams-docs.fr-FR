@@ -7,7 +7,7 @@
 
 - Ouvrez App studio et sélectionnez **l’onglet Éditeur de** manifeste.
 
-- Sélectionnez **la vignette Importer une application** existante dans l’éditeur de manifeste pour commencer à mettre à jour le package d’application pour votre onglet. Le code source est livré avec son propre manifeste partiellement complet. Le nom de votre package d’application **esttab.zip**. Il doit être trouvé ici :
+- Sélectionnez **la vignette Importer une application existante** dans l’éditeur de manifeste pour commencer à mettre à jour le package d’application pour votre onglet. Le code source est livré avec son propre manifeste partiellement complet. Le nom de votre package d’application **esttab.zip**. Il doit être trouvé ici :
 
     ```bash
     /bin/Debug/netcoreapp2.2/Tab.zip
@@ -21,7 +21,7 @@ Une fois que vous avez chargé votre package d’application dans App Studio, vo
 
 - Sélectionnez la vignette de votre onglet nouvellement importé dans le panneau droit de la page d’accueil de l’éditeur de manifeste.
 
-Il existe une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste des propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre *manifest.js,* mais il existe quelques champs que vous devrez mettre à jour :
+Il existe une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre *manifest.js,* mais il existe quelques champs que vous devrez mettre à jour :
 
 #### <a name="details-app-details"></a>Détails : détails de l’application
 

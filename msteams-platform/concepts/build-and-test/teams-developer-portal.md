@@ -29,7 +29,7 @@ Le Portail des développeurs propose deux façons d’inscrire une Teams applica
 * Importer un package d’application existant
 
 > [!NOTE]
-> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code,](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)vous pouvez gérer cette application dans le Portail du développeur.
+> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), vous pouvez gérer cette application dans le Portail des développeurs.
 
 ## <a name="set-up-an-environment"></a>Configurer un environnement
 

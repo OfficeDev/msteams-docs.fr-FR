@@ -31,7 +31,7 @@ Un bot se comporte différemment en fonction de la conversation dans qui il est 
 * Les bots d’une conversation un-à-un ne nécessitent pas de @mention. Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
 
 > [!NOTE]
-> Les bots peuvent être activés pour recevoir tous les messages de canal dans une équipe sans être @mentioned à l’aide d’autorisations de consentement spécifiques aux ressources (RSC). Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../../../resources/dev-preview/developer-preview-intro.md) uniquement. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
+> Les bots peuvent être activés pour recevoir tous les messages de canal dans une équipe sans être @mentioned à l’aide des autorisations de consentement spécifiques aux ressources (RSC). Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
 
 Pour que le bot fonctionne dans une conversation ou une étendue particulière, ajoutez la prise en charge à cette étendue dans le manifeste [de l’application.](~/resources/schema/manifest-schema.md)
 

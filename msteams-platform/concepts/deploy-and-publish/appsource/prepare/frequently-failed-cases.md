@@ -4,7 +4,7 @@ description: décrit les conseils pour une soumission Teams au Store et les rais
 ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
-keywords: conseils de soumission d’application fréquemment échoués - Recommandations de validation des cas
+keywords: conseils de soumission d’applications fréquemment échoués - Recommandations de validation des cas
 ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
 ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
@@ -33,7 +33,7 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
 * Les documents que vous associez à votre expérience, tels que les descriptions et la documentation de support, doivent être exacts. Utilisez correctement l'orthographe, les majuscules, la ponctuation et la grammaire.
 * Fournir des informations d’aide et de support. Il est vivement recommandé que votre application inclue un lien d’aide ou de FAQ pour la première utilisation de l’expérience utilisateur. Pour toutes les applications personnelles, nous vous recommandons de fournir votre page d’aide en tant qu’onglet personnel pour une meilleure expérience utilisateur.
 * Toutes les applications doivent avoir une visite visuelle, telle que **Prendre** une visite guidée ou un **Guide** d’application dans son écran de configuration, qui parle des fonctionnalités de l’application et de l’intégration nécessaire aux endroits suivants :
-    * Page de description dans le Store (description longue).
+    * Page de description du Store (description longue).
     * Écran de configuration de l’onglet.
     * Message de bienvenue pour un bot.
     * Métadonnées source de l’application.
@@ -45,7 +45,7 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
 
 * Incrémentez le numéro de version de votre application dans le manifeste si vous a modifiez votre soumission.
 * L’application ne doit pas sortir les utilisateurs de Teams pour les scénarios utilisateur principaux. Les cibles de liens dans les applications ne doivent pas être en lien avec un navigateur externe. Les cibles de liaison doivent être en lien avec les éléments div contenus dans Teams, par exemple, les modules de tâche et les onglets. 
-* L’utilisation de modules de tâche ou d’onglets est suggérée pour afficher des informations aux utilisateurs dans Teams.
+* L’utilisation de modules de tâches ou d’onglets est suggérée pour afficher des informations aux utilisateurs dans Teams.
 * Tous les scénarios principaux et non principaux doivent être effectués dans l’environnement Teams à l’exception des éléments suivants :
   * Politique de confidentialité
   * Conditions d’utilisation (TOU)
@@ -57,7 +57,7 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
 ### <a name="9989-provide-a-clear-and-simple-sign-in-sign-out-and-sign-up-experience"></a>&#9989; fournir une expérience de signature, de signature et d’inscription claire et simple
 
 * Si votre application ou votre add-in dépend de comptes ou de services externes, l’expérience de vous inscrire, de vous inscrire et de vous y inscrire doit être visible et accessible dans toutes les fonctionnalités de votre application.
-* Si une option de signature explicite est fournie à l’utilisateur, une option de sortie doit être disponible (même si l’application utilise l’authentification [silencieuse).](../../../../tabs/how-to/authentication/auth-silent-aad.md)
+* Si une option de sign-in explicite est fournie à l’utilisateur, une option de sortie doit être disponible (même si l’application utilise l’authentification [silencieuse).](../../../../tabs/how-to/authentication/auth-silent-aad.md)
 * L’option de sortie de l’application doit uniquement se sortir de la fonctionnalité de votre application et non de l’Teams client.
 * Au minimum, l’option de sortie doit se sortir des mêmes fonctionnalités que l’option de signature. Par exemple, si l’option de signature inclut l’extension de messagerie et l’onglet, l’option de sortie doit inclure à la fois l’extension de messagerie et l’onglet.
 
@@ -85,7 +85,7 @@ Pour plus d’informations sur l’authentification, voir :
 * [Documentation sur l’authentification](../../../authentication/authentication.md)
 * [Exemple d’authentification de bot dans Node](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Exemple d’authentification d’onglet dans node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Authentification tab/bot dans C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Authentification onglet/bot dans C#/.NET](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 ### <a name="9989-response-times-must-be-reasonable"></a>&#9989; temps de réponse doit être raisonnable
 
@@ -98,7 +98,7 @@ Pour plus d’informations sur l’authentification, voir :
 
 ### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989;'onglet ne doit pas avoir une navigation en couches ou chrome excessive
 
-* Les onglets doivent fournir du contenu centré et éviter les éléments d’interface utilisateur inutiles. Il s’agit généralement d’une navigation en couches ou imbrique inutile, d’une interface utilisateur superflue ou non pertinente à côté du contenu ou de tout lien qui permet à l’utilisateur d’ajouter du contenu non lié. Par exemple, l’affichage Onglet suivant omet les menus de navigation et affiche uniquement le contenu principal :
+* Les onglets doivent fournir du contenu centré et éviter les éléments d’interface utilisateur inutiles. Il s’agit généralement d’une navigation en couches ou imbrique inutile, d’une interface utilisateur superflue ou non pertinente à côté du contenu, ou de liens qui prennent l’utilisateur vers du contenu non lié. Par exemple, l’affichage Onglet suivant omet les menus de navigation et affiche uniquement le contenu principal :
 
 ![SharePoint web](../../../../assets/images/faq/web-sp.png)  
 ![SharePoint’onglet](../../../../assets/images/faq/tab-sp.png)
@@ -106,10 +106,10 @@ Pour plus d’informations sur l’authentification, voir :
 * Les onglets doivent être de nature légère et ne pas inclure de navigation complexe.
 * Les onglets de canal qui ont des fonctionnalités d’édition complexes au sein de l’application doivent ouvrir l’affichage de l’éditeur dans une fenêtre multiple plutôt que dans un onglet.
 * Les onglets de canal ne doivent pas fournir de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation principale.
-* Les onglets ne doivent pas présenter de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation principale.
-* Les onglets qui ont des fonctionnalités d’édition complexes au sein de l’application doivent ouvrir l’affichage de l’éditeur dans une fenêtre multiple plutôt que dans l’onglet.
+* Les onglets ne doivent pas présenter de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation.
+* Les onglets qui ont des fonctionnalités d’édition complexes dans l’application doivent ouvrir l’affichage éditeur dans une fenêtre multiple plutôt que dans l’onglet.
 * S’il existe plusieurs options d’affichage, envisagez de disposer d’un menu de config d’onglets dans le choix de l’utilisateur. Par exemple, au lieu d’incorporer un menu à l’intérieur de l’onglet, placez le menu dans la page de configuration afin que l’affichage de l’onglet réel soit propre et concentré.
-* Incluez un *onglet d’aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
+* Incluez un onglet *Aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
 * Veuillez inclure un *onglet Paramètres* qui est disponible à partir de l’en-tête de l’application.
 
 ![Page de configuration de l’idée large](../../../../assets/images/faq/wideidea.png)
@@ -125,7 +125,7 @@ Pour plus d’informations sur l’authentification, voir :
 * L’expérience de configuration doit rester dans Teams contexte. L’utilisateur ne doit pas avoir à quitter l’expérience de configuration pour créer du contenu, puis revenir à Teams pour l’épingler.
 * Utilisez efficacement la zone de laport d’affichage disponible. Ne le perdez pas en utilisant des logos énormes à l’intérieur de la fenêtre de configuration.
 
-![OneNote permet aux utilisateurs de coller un lien OneNote au cas où les notes ne seraient pas trouvées](../../../../assets/images/faq/tab-onenote-config.png)
+![OneNote permet aux utilisateurs de coller un lien OneNote si des notes sont in trouvées](../../../../assets/images/faq/tab-onenote-config.png)
 
 ![Les utilisateurs peuvent toujours créer un plan sur le planificateur au cas où il n’y en a pas.](../../../../assets/images/faq/tab-planner-config.png)
 
@@ -150,16 +150,16 @@ Votre bot doit répondre à n’importe quelle commande et non à l’utilisateu
 
 * **Incluez du contenu d’aide ou des conseils lorsque votre bot est perdu.** Lorsque votre bot ne comprend pas l’entrée utilisateur, il doit suggérer une autre action. Par exemple, *« Désolé, je ne comprends pas. Tapez « aide » pour plus d’informations. »* Ne répondez pas par un message d’erreur ou simplement par « *Je ne comprends pas*».
 
-### <a name="9989-help-command-response"></a>&#9989; commande d’aide
+### <a name="9989-help-command-response"></a>&#9989; de commande d’aide
 
 * La commande d’aide doit être précise et les réponses de l’application doivent être dans un format de carte adaptative avec un contenu actionnable pour au moins six commandes.
 * Si une application possède moins de six commandes, vérifiez si toutes les commandes sont présentes dans la carte adaptative.
 
   ![Exemple de commande d’aide](../../../../assets/images/faq/helpcommand.png)
 
-* **Utiliser des cartes adaptatives et des modules de tâche pour** rendre la réponse du bot claire et actionnable Les cartes adaptatives avec des boutons qui appelaient des modules de tâche améliorent l’expérience utilisateur du bot. Ces cartes et boutons sont plus faciles à utiliser sur un appareil mobile que lorsque votre utilisateur tape les commandes. En outre, les réponses du bot ne doivent pas être textuelles avec du texte long. Les bots doivent utiliser des cartes adaptatives et des modules de tâche à la place de l’interface utilisateur de conversation et des réponses texte longues.
+* **Utiliser des cartes adaptatives et des modules de tâche pour** rendre la réponse du bot claire et actionnable Les cartes adaptatives avec des boutons qui appelaient des modules de tâche améliorent l’expérience utilisateur du bot. Ces cartes et boutons sont plus faciles à utiliser sur un appareil mobile que lorsque votre utilisateur tape les commandes. En outre, les réponses du bot ne doivent pas être textuelles avec du texte long. Les bots doivent utiliser des cartes adaptatives et des modules de tâche au lieu de l’interface utilisateur basée sur la conversation conversationnelle et de longues réponses de texte.
 
-* **Réfléchissez à toutes les étendues.** Assurez-vous que votre bot fournit des réponses appropriées lorsqu’il est mentionné () dans `@*botname*` un canal et dans des conversations personnelles. Si votre bot ne fournit pas de contexte significatif dans l’étendue personnelle ou d’équipe, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la référence Microsoft Teams schéma de [manifeste.)](../../../../resources/schema/manifest-schema.md#bots)
+* **Réfléchissez à toutes les étendues.** Assurez-vous que votre bot fournit les réponses appropriées lorsqu’il est mentionné () dans `@*botname*` un canal et dans des conversations personnelles. Si votre bot ne fournit pas de contexte significatif dans l’étendue personnelle ou d’équipe, désactivez cette étendue via le manifeste. (Consultez le `bots` bloc dans la référence Microsoft Teams schéma [de](../../../../resources/schema/manifest-schema.md#bots)manifeste.)
 
 * **Inclure une équipe, une conversation de groupe ou une conversation 1:1.** Les notifications de bot doivent inclure une équipe, une conversation de groupe ou une conversation un-à-un avec du contenu pertinent pour votre public.
 
@@ -203,18 +203,18 @@ Les bots de notification uniquement doivent envoyer un message de bienvenue qui 
    * **Rendez votre message concis et informatif.** L’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou ne connaît rien de votre application. Vous souhaitez adapter votre message à tous les publics et, en quelques phrases, expliquer ce que fait votre bot et les façons d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs pourront tirer parti de son utilisation.
 ![Bot cafe et dinning](../../../../assets/images/faq/cafe-bot.png)
 
-* **Rendre votre message actionnable.** Réfléchissez à la première chose que vous souhaitez que les utilisateurs font après l’installation de votre application. Existe-t-il une commande qu’ils doivent essayer ? Existe-t-il une autre expérience d’intégration à connaître ? Ont-ils besoin de se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C’est ce que *je peux faire...*».
+* **Rendre votre message actionnable.** Pensez à la première chose que vous souhaitez que les utilisateurs font après l’installation de votre application. Existe-t-il une commande qu’ils doivent essayer ? Existe-t-il une autre expérience d’intégration à connaître ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C’est ce que *je peux faire...*».
 
 #### <a name="welcome-messages-in-the-team-or-channel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe ou du canal
 
-Les choses sont légèrement différentes lorsque le bot est ajouté pour la première fois à un canal. Normalement, vous ne devez pas envoyer de message 1:1 à tous les membres de l’équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
+Les choses sont légèrement différentes lorsque le bot est ajouté à un canal pour la première fois. Normalement, vous ne devez pas envoyer de message 1:1 à tous les membres de l’équipe, mais le bot peut envoyer un message de bienvenue dans le canal.
 
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; mobile, pas de vente à prix moyen ou de paiement direct
 
 * Vos onglets, cartes adaptatives, messages de bot et contenu dans les modules de tâche doivent être réactifs pour une variété de tailles d’écran d’appareil mobile.
 * Les applications qui la prise en charge d’iOS doivent être entièrement fonctionnelles sur la dernière iPad l’aide de la dernière version d’iOS.
 * Ne doit pas inclure de références directes à des achats in-app, des offres d’essai, des offres pour les versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules à partir de votre application Teams sur un système d’exploitation mobile (Android, iOS).
-* La version iOS ou Android du add-in ne doit pas afficher d’interface utilisateur ou de langue, ni de lien vers d’autres applications, modules ou sites web demandant à l’utilisateur de payer.
+* La version iOS ou Android du add-in ne doit pas afficher d’interface utilisateur ou de langue, ni de lien vers d’autres applications, des modules ou un site web demandant à l’utilisateur de payer.
 * Les pages de politique de confidentialité et de conditions d’utilisation associées ne doivent pas non plus être liées à une interface utilisateur commerciale ou au Store.
 
 ### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; ne publiez pas de données sensibles à une audience qui n’est pas destinée à afficher les données
@@ -241,7 +241,7 @@ Avertissez les utilisateurs avant que votre application télécharge des fichier
 
 ### <a name="9989-complete-the-publisher-attestation-in-partner-center"></a>&#9989; l’attestation Publisher dans l’Partner Center
 
-* Pour plus [d’informations, reportez-vous à la](/microsoft-365-app-certification/docs/attestation) documentation complète Publisher attestation d’attestation d’identité.
+* Pour plus d’informations, [reportez-vous à la](/microsoft-365-app-certification/docs/attestation) documentation complète Publisher attestation d’attestation d’attestation d’identité.
 * Suivez les étapes de la section Publisher flux de travail [d’attestation](/microsoft-365-app-certification/docs/userguide#3publisher-attestation-workflow) d’attestation pour terminer le processus d’attestation d’éditeur. Écrivez dans appcert@microsoft.com pour toute question.
 * Pour plus d’informations, voir le [guide](/azure/active-directory/develop/troubleshoot-publisher-verification) de résolution des problèmes.
 * Terminez l’attestation d’auto-attestation par le biais de l’Centre partenaires. Remplissez le questionnaire Self-Assessment sous **Conformité des applications.**

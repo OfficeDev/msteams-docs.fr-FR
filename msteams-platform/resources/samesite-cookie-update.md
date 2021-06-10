@@ -27,7 +27,7 @@ ms.locfileid: "52629850"
 
 ### <a name="cookies-and-http-requests"></a>Cookies et requêtes HTTP
 
-Avant l’introduction des restrictions SameSite, lorsque les cookies étaient stockés sur le navigateur, ils étaient joints à chaque demande web *HTTP* et envoyés au serveur par l’en-tête de réponse HTTP Set-Cookie. De manière prévisible, ces performances avaient le potentiel d’introduire des vulnérabilités de sécurité telles que les attaques de contrefaçon de demande entre sites (CSRF). *Voir* [cookies HTTP.](https://developer.mozilla.org/docs/Web/HTTP/Cookies) Le composant SameSite a atténué cette exposition par le biais de son implémentation et de sa gestion dans l’en-tête SetCookie.
+Avant l’introduction des restrictions SameSite, lorsque les cookies étaient stockés sur le navigateur, ils étaient joints à chaque demande web *HTTP* et envoyés au serveur par l’en-tête de réponse HTTP Set-Cookie. De manière prévisible, ces performances avaient le potentiel d’introduire des vulnérabilités de sécurité telles que les attaques de contrefaçon de demande entre sites (CSRF). *Voir* [cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies). Le composant SameSite a atténué cette exposition par le biais de son implémentation et de sa gestion dans l’en-tête SetCookie.
 
 ### <a name="samesite-attribute-initial-release"></a>Attribut SameSite : version initiale
 
@@ -39,10 +39,10 @@ Les développeurs pouvaient refuser d’ajouter l’attribut de cookie SameSite 
 
 Chrome 80, dont la publication est prévue en février 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Trois valeurs peuvent être passées dans l’attribut SameSite mis à jour : *Strict,* *Lax* ou *None*. Les cookies qui ne spécifient pas l’attribut SameSite seront par `SameSite=Lax` défaut .
 
-|Paramètres | Application | Valeur |Spécification d’attribut |
+|Paramètre | Application | Valeur |Spécification d’attribut |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Les cookies sont envoyés  automatiquement uniquement dans un contexte de première partie et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les sous-demandes entre sites, telles que les appels de chargement d’images ou d’iframes, mais sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple, en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |Le navigateur envoie uniquement les cookies pour les demandes de contexte de première partie (demandes provenant du site qui a définie le cookie). Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec l’attribut `Strict` n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
+| **Lax**  | Les cookies sont envoyés  automatiquement uniquement dans un contexte de première partie et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les sous-demandes entre sites, telles que les appels de chargement d’images ou d’iframes, mais sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Strict** |Le navigateur envoie uniquement des cookies pour les demandes de contexte de première partie (demandes provenant du site qui a définie le cookie). Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec l’attribut `Strict` n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
 | **Aucune** | Les cookies sont envoyés à la fois dans le contexte de la première partie et dans les demandes d’origine croisée . toutefois, la valeur doit être explicitement définie et toutes les demandes de navigateur doivent suivre le protocole HTTPS et inclure l’attribut qui nécessite une **`None`** connexion  **`Secure`** chiffrée. Les cookies qui ne respectent pas cette exigence seront **rejetés.** <br/>**Les deux attributs sont requis ensemble.** Si le protocole HTTPS n’est pas utilisé ou s’il est simplement spécifié, le cookie tiers **`None`** **`Secure`**  est rejeté.| Facultatif, mais, s’il est définie, le protocole HTTPS est requis. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams et ajustements
@@ -52,7 +52,7 @@ Chrome 80, dont la publication est prévue en février 2020, introduit de nouvel
 1. Les partenaires internes de Microsoft peuvent rejoindre l’équipe suivante s’ils ont besoin d’informations supplémentaires ou d’aide sur ce problème <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> :
 
 > [!NOTE]
-> Il est recommandé de toujours définir des attributs SameSite pour refléter l’utilisation prévue pour vos cookies. Ne comptez pas sur le comportement par défaut du navigateur. Pour plus d’informations, [voir Développeurs : Se préparer pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
+> Il est recommandé de toujours définir les attributs SameSite pour refléter l’utilisation prévue pour vos cookies. Ne comptez pas sur le comportement par défaut du navigateur. Pour plus d’informations, [voir Développeurs : Se préparer pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
 ### <a name="tabs-task-modules-and-message-extensions"></a>Onglets, modules de tâche et extensions de message
 
@@ -82,7 +82,7 @@ Android WebView est un composant système Chrome qui permet aux applications And
 * [Exemples sameSite](https://github.com/GoogleChromeLabs/samesite-examples)
 * [Recettes de cookie SameSite](https://web.dev/samesite-cookie-recipes/)
 * [Clients incompatibles connus]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [Développeurs : Préparez-vous pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Développeurs : préparez-vous pour le nouveau samesite=aucun ; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **Impact Connecter OpenId**<br>
 [Modifications à venir des cookies SameSite ASP.NET et ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)

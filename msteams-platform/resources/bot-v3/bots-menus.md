@@ -24,7 +24,7 @@ Lorsqu’un utilisateur sélectionne un élément de menu, la chaîne de command
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>Prise en charge du menu bot sur Teams application mobile
 > [!NOTE] 
-> Les menus bot ne sont pas affichés sur les appareils mobiles.
+> Les menus du bot ne sont pas affichés sur les appareils mobiles.
 
 ## <a name="app-manifest"></a>Manifeste d'application
 

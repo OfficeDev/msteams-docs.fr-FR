@@ -25,11 +25,11 @@ Le fait de suivre ces instructions augmente la probabilité que votre applicatio
 Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le Store. Souvenez-vous des informations suivantes sur les noms d’application :
 
 * Le nom doit inclure des termes pertinents pour vos utilisateurs.
-* Les noms des fonctionnalités Teams principales&#8212;telles que chat,  **contacts,** **calendrier,** **appels,** **fichiers,** **activité, Teams,** applications et&#8212;d’aide ne doivent pas être inclus dans le nom de votre application.  
+* Les noms des fonctionnalités Teams principales&#8212;telles que **chat,** **contacts,** **calendrier,** **appels,** **fichiers,** **activité, Teams,** applications et **&#8212;** d’aide ne doivent pas être inclus dans le nom de votre application.  
 * Les noms communs doivent être précédés ou suffixes avec le nom du développeur (par exemple, **Tâches Contoso** plutôt que Tâches **).**
 * Ne doit pas utiliser **Teams** ou d’autres noms de produits Microsoft qui pourraient indiquer à tort la co- branding ou la co-vente. (Pour plus d’informations sur le référencement des logiciels, des produits et des services Microsoft, voir les recommandations en matière de marque et de marque [Microsoft).](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 * Si votre application fait partie d’un partenariat officiel avec Microsoft, le nom de votre application doit être donné en premier (par exemple, **Contoso Connector pour Microsoft Teams**).
-* Ne doit pas copier le nom d’une application répertoriée dans le Store ou une autre offre sur le marketplace commercial.
+* Ne doit pas copier le nom d’une application répertoriée dans le Store ou une autre offre sur le marché commercial.
 * Ne doit pas contenir de termes désobligeants ou désobligeants. Le nom ne doit pas non plus inclure de langues ethniques ou culturelles non sensibles.
 * Doit être unique. Par exemple, vous ne pouvez pas lister plusieurs applications pour différentes régions avec le même nom et les mêmes fonctionnalités.
 
@@ -37,7 +37,7 @@ Le nom d’une application joue un rôle essentiel dans la façon dont les utili
 
 Le contenu de l’application doit convenir à une utilisation générale de l’espace de travail et respecter toutes les restrictions répertoriées dans les stratégies de certification du marketplace commercial. Le contenu lié à l’animation, à la politique, aux jeux et aux divertissements prolongés est interdit. Pour plus d’informations, voir les [stratégies de certification du marketplace commercial.](/legal/marketplace/certification-policies#10010-inappropriate-content)
 
-Votre application doit faciliter la collaboration de groupe, améliorer la productivité d’un individu ou les deux. Les applications destinées à la liaison et à la socialisation d’équipe doivent être collaboratives et conçues pour plusieurs participants. Ces types d’applications ne doivent pas non plus nécessiter un investissement en temps considérable ou avoir un impact négatif sur la productivité.
+Votre application doit faciliter la collaboration de groupe, améliorer la productivité d’un individu, ou les deux. Les applications conçues pour la liaison et la socialisation d’équipe doivent être collaboratives et conçues pour plusieurs participants. Ces types d’applications ne doivent pas non plus nécessiter un investissement en temps considérable ou avoir un impact négatif sur la productivité.
 
 ### <a name="similar-platforms-and-services"></a>Plateformes et services similaires
 
@@ -69,7 +69,7 @@ Les bots doivent toujours demander l’autorisation de télécharger un fichier 
 
 Dans la plupart des cas, vous ne devez pas inclure de domaines en dehors du contrôle de votre organisation (y compris les caractères génériques) et des services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes sont les suivantes :
 
-* Si votre application utilise le OAuthCard d’Azure Bot Service, vous devez inclure en tant que domaine valide, sinon le bouton Se connecter ne `token.botframework.com` fonctionne pas. 
+* Si votre application utilise le OAuthCard d’Azure Bot Service, vous devez inclure comme domaine valide, sinon le bouton Se connecter ne `token.botframework.com` fonctionne pas. 
 * Si votre application s’appuie sur SharePoint, vous pouvez inclure le site SharePoint racine associé en tant que domaine valide à l’aide de la `{teamSiteDomain}` propriété de contexte.
 
 ### <a name="authentication"></a>Authentification
@@ -91,7 +91,7 @@ Pour distribuer votre application aux utilisateurs Cloud de la communauté du se
 
 ### <a name="sensitive-content"></a>Contenu sensible
 
-Votre application ne doit pas publier de données sensibles, telles que des données de carte bancaire ou d’instrument de paiement financier. L’application ne doit pas non plus afficher l’état d’état, le suivi des contacts ou d’autres informations d’identification personnelle (PII) à une audience qui n’a pas l’intention d’afficher ce contenu.
+Votre application ne doit pas publier de données sensibles, telles que des données de carte bancaire ou d’instrument de paiement financier. L’application ne doit pas non plus afficher l’état d’état, le suivi des contacts ou d’autres informations d’identification personnelle (PII) à une audience qui n’est pas destinée à afficher ce contenu.
 
 Avertissez les utilisateurs avant que votre application télécharge des fichiers ou des fichiers exécutables (.exe) sur l’ordinateur ou l’environnement de l’utilisateur.
 
@@ -103,7 +103,7 @@ Vous pouvez établir un lien vers des services de paiement externes sécurisés 
 
 Les applications qui s’exécutent sur la version iOS ou Android Teams doivent respecter les instructions suivantes :
 
-* Les applications ne doivent pas inclure d’achats dans l’application, d’offres d’essai ou d’interface utilisateur qui visent à promouvoir des versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules.
+* Les applications ne doivent pas inclure d’achats in-app, d’offres d’essai ou d’interface utilisateur qui visent à promouvoir des versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules.
 * Si votre application nécessite un compte, les utilisateurs doivent pouvoir s’inscrire à un compte gratuitement. L’utilisation du terme **compte libre** ou **gratuit** est interdite.
 * Vous pouvez déterminer si un compte est actif indéfiniment ou pendant une durée limitée, mais si le compte expire, aucune interface utilisateur, texte ou liens indiquant la nécessité de payer ne s’affiche.
 * Les pages de politique de confidentialité et de conditions d’utilisation de votre application ne doivent pas être liées à une interface utilisateur ou à des liens commerciaux.
@@ -130,7 +130,7 @@ Les applications doivent être entièrement fonctionnelles sur les systèmes d�
 
 ### <a name="response-time"></a>Temps de réponse
 
-Teams applications doivent répondre dans un délai raisonnable, ce qui varie en fonction de la fonctionnalité.
+Teams applications doivent répondre dans un délai raisonnable, qui varie en fonction de la fonctionnalité.
 
 * Les onglets doivent répondre dans un délai de trois secondes ou afficher un message de chargement ou un avertissement.
 * Les bots doivent répondre aux commandes de l’utilisateur dans un délai de deux secondes ou afficher un indicateur de saisie.
@@ -146,7 +146,7 @@ Les packages d’application doivent être correctement formatés et inclure tou
 Le Teams de l’application définit les configurations de votre application.
 
 * Votre manifeste doit être conforme au schéma de manifeste le plus récent. Pour plus d’informations, voir la [référence de manifeste.](~/resources/schema/manifest-schema.md)
-* Si votre application inclut une extension de bot ou de messagerie, votre manifeste doit être cohérent avec les métadonnées Bot Framework, y compris le nom du bot, le logo, le lien de stratégie de confidentialité et le lien des conditions d’utilisation.
+* Si votre application inclut une extension de bot ou de messagerie, votre manifeste doit être cohérent avec les métadonnées Bot Framework, y compris le nom du bot, le logo, le lien de la politique de confidentialité et le lien des conditions d’utilisation.
 * Si votre application utilise Azure Active Directory (Azure AD) pour l’authentification, incluez l’ID de l’application Azure AD (client) dans le manifeste. Pour plus d’informations, voir la [référence de manifeste.](~/resources/schema/manifest-schema.md#webapplicationinfo)
 
 ### <a name="app-icons"></a>Icônes d’application
@@ -206,7 +206,7 @@ La description longue peut fournir un narratif attrayant qui met en évidence la
 * Abréviation **de Microsoft** en tant que **MS** ou **MSFT**.
 * Indiquez que l’application est une offre de Microsoft, y compris à l’aide de balises ou de balises microsoft.
 * Utilisez des noms de marque protégés par des droits d’auteur que vous ne possédez pas.
-* Inclure des fautes de frappe, des erreurs grammaticales et des majuscules inutiles (par **exemple,** Utilisateurs au lieu des **utilisateurs).**
+* Incluez des fautes de frappe, des erreurs grammaticales et des majuscules inutiles (par **exemple,** Utilisateurs au lieu des **utilisateurs).**
 * Inclure des liens vers AppSource.
 * Utilisez la langue suivante, sauf si vous êtes un partenaire Microsoft certifié :
   * "... intégré à Microsoft Teams »
@@ -333,7 +333,7 @@ L’analyse de l’entrée utilisateur et la prévision de l’intention de l’
 ### <a name="bot-welcome-messages"></a>Messages de bienvenue du bot
 
 * Les bots doivent presque toujours envoyer un message de bienvenue lors de la première run. Pour une expérience de qualité, le message doit inclure la proposition de valeur de votre bot, la configuration du bot et décrire brièvement toutes les commandes de bot prise en charge. Vous pouvez afficher le message à l’aide d’une carte adaptative avec des boutons pour une meilleure utilisation. Pour plus d’informations, [voir comment déclencher un message de bienvenue du bot.](~/bots/how-to/conversations/send-proactive-messages.md)
-* Les messages d’accueil du bot dans les canaux et les conversations sont facultatifs lors de la première utilisation, en particulier si le bot est disponible pour un usage personnel et effectue des actions similaires. Si votre bot envoie des messages de bienvenue, il ne doit pas les envoyer aux utilisateurs individuellement (ceci est considéré comme [du courrier indésirable).](#bot-message-spamming) Le message doit également mentionner la personne qui a ajouté le bot.
+* Les messages d’accueil du bot dans les canaux et les conversations sont facultatifs lors de la première utilisation, en particulier si le bot est disponible pour un usage personnel et effectue des actions similaires. Si votre bot envoie des messages de bienvenue, il ne doit pas les envoyer aux utilisateurs individuellement (ceci est considéré comme du courrier [indésirable).](#bot-message-spamming) Le message doit également mentionner la personne qui a ajouté le bot.
 * Les bots de notification uniquement doivent envoyer un message de bienvenue qui leur communique qu’ils ne répondront pas aux messages des utilisateurs.
 
 > [!TIP]
@@ -345,7 +345,7 @@ Les bots ne doivent pas envoyer de courrier indésirable aux utilisateurs en env
 
 * **Messages de bot dans les canaux et conversations**: ne pas envoyer de courrier indésirable aux utilisateurs en créant des publications distinctes. Créez un billet unique avec des réponses dans le même fil de discussion.
 * **Messages de bot dans les applications personnelles**: n’envoyez pas plusieurs messages successivement. Envoyez un message avec des informations complètes. Évitez les conversations à plusieurs tour pour terminer un flux de travail unique. Envisagez plutôt d’utiliser un formulaire (ou un module de tâche) pour collecter toutes les entrées d’un utilisateur en même temps.
-* **Messages de bienvenue**: répéter le même message de bienvenue à intervalles réguliers n’est pas autorisé et considéré comme du courrier indésirable. Par exemple, lorsqu’un nouveau membre est ajouté à une équipe, ne spammez pas les autres membres avec un message de bienvenue. Message personnel du nouveau membre.
+* **Messages de** bienvenue : la répétition du même message de bienvenue à intervalles réguliers n’est pas autorisée et est considérée comme un courrier indésirable. Par exemple, lorsqu’un nouveau membre est ajouté à une équipe, ne spammez pas les autres membres avec un message de bienvenue. Message personnel du nouveau membre.
 
 ### <a name="bot-notifications"></a>Notifications de bot
 
@@ -376,7 +376,7 @@ Les extensions de messagerie basées sur l’action doivent :
 
 ### <a name="preview-links-link-unfurling"></a>Liens d’aperçu (déploiement de liens)
 
-Les extensions de messagerie doivent afficher un aperçu des liens reconnus dans la Teams de composition. N’ajoutez pas de domaines qui sont en dehors de votre contrôle (URL absolues ou caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont également interdits (par exemple, `*.com` ou `*.org` ).
+Les extensions de messagerie doivent prévisualiser les liens reconnus dans la Teams de composition. N’ajoutez pas de domaines qui sont en dehors de votre contrôle (URL absolues ou caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont également interdits (par exemple, `*.com` ou `*.org` ).
 
 ### <a name="search-commands"></a>Commandes de recherche
 
@@ -399,8 +399,8 @@ Si votre application inclut une extension de réunion, assurez-vous qu’elle re
 
 ### <a name="pre--and-post-meeting-experience"></a>Expérience avant et après la réunion
 
-* Les écrans avant et après la réunion doivent respecter les recommandations générales en matière de conception d’onglets. Pour plus d’informations, voir les [recommandations Teams conception.](~/tabs/design/tabs.md)
-* Les onglets ne doivent pas avoir un défilement horizontal.
+* Les écrans avant et après la réunion doivent respecter les recommandations générales en matière de conception des onglets. Pour plus d’informations, voir les [recommandations Teams conception.](~/tabs/design/tabs.md)
+* Les onglets ne doivent pas avoir de défilement horizontal.
 * Les onglets doivent avoir une disposition organisée lors de l’affichage de plusieurs éléments. Par exemple, plus de 10 sondages ou enquêtes. Voir un [exemple de disposition.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)
 * Votre application doit informer les utilisateurs lorsque les résultats d’une enquête ou d’un sondage sont exportés en indiquant « Résultats téléchargés avec succès ».
 

@@ -32,7 +32,7 @@ Regardez la vidéo suivante pour comprendre comment mConnect et Teams fonctionne
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
-À partir de l’intérieur de mConnect, les participants au cours accèdent à l’expérience complète du cours Le jeu à l’intérieur de la collaboration et de la communication en temps réel fournies par Microsoft Teams.
+À partir de l’intérieur de mConnect, les participants au cours accèdent à l’expérience complète du cours De l’utilisateur à l’intérieur de la collaboration et de la communication en temps réel Microsoft Teams.
 
 ### <a name="get-started-with-mconnect-and-teams"></a>Mise en place de mConnect et de Teams
 

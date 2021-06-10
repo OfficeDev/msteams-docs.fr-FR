@@ -15,15 +15,15 @@ ms.locfileid: "52629962"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
-Une page de configuration est un type spécial [de page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
+Une page de configuration est un type spécial de [page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
 
 * Onglet de conversation de canal ou de groupe : recueillez des informations auprès des utilisateurs et définissez `contentUrl` la page de contenu à afficher.
 * Une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md).
-* Un [connecteur Office 365.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* Un [connecteur Office 365 .](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>Configuration d’un onglet de conversation de canal ou de groupe
 
-L’application doit référencer [Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . En outre, les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud. 
+L’application doit référencer [le Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . En outre, les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud. 
 
 ### <a name="example"></a>Exemple
 
@@ -100,7 +100,7 @@ L’image suivante affiche le contenu de l’onglet avec l’icône rouge :
 
 Le choix du bouton relatif déclenche l’une `saveGray()` ou `saveRed()` l’autre des déclencheurs et appelle les éléments suivants :
 
-1. La `settings.setValidityState(true)` valeur true est définie.
+1. La `settings.setValidityState(true)` valeur est true.
 1. Le `microsoftTeams.settings.registerOnSaveHandler()` handler d’événements est déclenché.
 1. Le **bouton** Enregistrer sur la page de configuration de l’application, téléchargé dans Teams, est activé.
 
@@ -176,7 +176,7 @@ La `microsoftTeams.getContext((context) => {})` fonction récupère [l’interfa
 
 ## <a name="context-and-authentication"></a>Contexte et authentification
 
- Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir Authentifier un](~/tabs/how-to/authentication/auth-flow-tab.md)utilisateur dans un Microsoft Teams onglet . Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation.
+ Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir Authentifier un](~/tabs/how-to/authentication/auth-flow-tab.md)utilisateur dans Microsoft Teams onglet . Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation.
 Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` tableau et dans `validDomains` celui-ci.
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet

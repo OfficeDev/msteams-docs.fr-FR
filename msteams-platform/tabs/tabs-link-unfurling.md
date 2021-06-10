@@ -1,7 +1,7 @@
 ---
-title: Déploiement de liens d’onglets et vue d’étape
+title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez comment déployer un lien, ouvrir l’affichage Étape et épingler un onglet avec Microsoft Teams’application.
+description: Découvrez comment déployer un lien, ouvrir l’affichage de la scène et épingler un onglet avec Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.openlocfilehash: 7dfabfa58c49237e776af37a1ee40d707783d0dc
@@ -11,12 +11,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2021
 ms.locfileid: "52631280"
 ---
-# <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement de liens d’onglets et vue d’étape
+# <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
 > [!NOTE]
 > Cette fonctionnalité est disponible uniquement en [prévisualisation pour les développeurs](../resources/dev-preview/developer-preview-intro.md) publics.
 
-Stage View est un nouveau composant d’interface utilisateur, qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous forme d’onglet.
+Stage View est un nouveau composant d’interface utilisateur, qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous la forme d’un onglet.
  
 > [!NOTE]
 > Actuellement, Teams clients mobiles n’ont pas d’onglets de prise en charge du déploiement et de l’affichage de la phase. Les clients mobiles utilisent l’attribut fourni par le développeur pour ouvrir la page dans le `websiteUrl` navigateur web de l’appareil.
@@ -27,15 +27,15 @@ L’affichage d’étape est un composant d’interface utilisateur en plein éc
 
 ## <a name="advantage-of-stage-view"></a>Avantage de l’affichage de l’étape
 
-L’affichage de l’étape permet d’offrir une expérience plus transparente de l’affichage du contenu Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide futur. Cela entraîne un plus grand engagement de l’utilisateur avec votre application.
+L’affichage par étapes permet d’offrir une expérience plus transparente de l’affichage du contenu Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide futur. Cela entraîne un plus grand engagement de l’utilisateur avec votre application.
 
 ##  <a name="stage-view-vs-task-module"></a>Affichage de l’étape et module de tâche
 
 |Vue d’étape|Module de tâche|
 |:-----------|:-----------|
-|L’affichage étape est utile lorsque vous avez un contenu riche à afficher pour les utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il offre un maximum d’argent qui permet d’restituer votre contenu dans le canevas plein écran.|[Le module de](../task-modules-and-cards/task-modules/task-modules-tabs.md) tâche est particulièrement utile pour afficher les messages qui nécessitent l’attention de l’utilisateur ou collecter les informations requises pour passer à l’étape suivante.|
+|L’affichage étape est utile lorsque vous avez un contenu riche à afficher pour les utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il offre un maximum d’argent pour rendre votre contenu dans le canevas plein écran.|[Le module de](../task-modules-and-cards/task-modules/task-modules-tabs.md) tâche est particulièrement utile pour afficher des messages qui nécessitent l’attention de l’utilisateur ou collecter les informations requises pour passer à l’étape suivante.|
   
-## <a name="invoke-the-stage-view"></a>Appeler l’affichage d’étape
+## <a name="invoke-the-stage-view"></a>Appeler l’affichage de l’étape
 
 Vous pouvez appeler l’affichage de l’étape des manières suivantes : 
 
@@ -91,7 +91,7 @@ Le `invoke` type de requête doit être `composeExtension/queryLink` .
 1. Le bot répond par un `200` code.
 
 > [!NOTE]
-> Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité Vue d’étape. Lorsqu’un utilisateur sélectionne **Afficher** sur un client mobile, l’utilisateur est conduit vers le navigateur de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
+> Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsqu’un utilisateur sélectionne **Afficher** sur un client mobile, l’utilisateur est conduit au navigateur de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Appeler l’affichage de l’étape par le biais d’un lien profond
 
@@ -123,7 +123,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > * Le `name` lien profond est facultatif. S’il n’est pas inclus, le nom de l’application le remplace. 
 > * Le lien profond peut également être transmis via une `OpenURL` action.
-> * Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité Vue d’étape. Lorsque les utilisateurs sélectionnent un lien profond vers une vue d’étape, ils sont conduits vers le navigateur web de leur appareil. Le navigateur web ouvre l’URL spécifiée dans le `websiteUrl` paramètre du lien profond.
+> * Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsque les utilisateurs sélectionnent un lien profond vers une vue d’étape, ils sont conduits vers le navigateur web de leur appareil. Le navigateur web ouvre l’URL spécifiée dans le `websiteUrl` paramètre du lien profond.
 > * Lorsque vous lancez une étape à partir d’un certain contexte, assurez-vous que votre application fonctionne dans ce contexte. Par exemple, si votre vue d’étape est lancée à partir d’une application personnelle, vous devez vous assurer que votre application a une étendue personnelle.
 
 ## <a name="tab-information-property"></a>Propriété d’informations sur l’onglet

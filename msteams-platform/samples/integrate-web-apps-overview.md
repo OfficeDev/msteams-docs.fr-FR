@@ -13,12 +13,12 @@ ms.locfileid: "52630445"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
-Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
-Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, Power Virtual Agents, assistant virtuel, modèles d’application, connecteurs Shift, LMS À l’écran, création d’un bouton De partage à Teams pour votre site web, ajout d’un onglet Microsoft Teams dans SharePoint, création de liens profonds et intégration des fonctionnalités d’appareil.
+Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour que votre application soit native à Teams.
+Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, Power Virtual Agents, assistant virtuel, modèles d’application, connecteurs Shift, LMS En forme d’enfant, création d’un bouton De partage à Teams pour votre site web, ajout d’un onglet Microsoft Teams dans SharePoint, création de liens profonds et intégration de fonctionnalités d’appareil.
 
 ## <a name="prerequisites"></a>Configuration requise   
 
-Pour une intégration efficace, assurez-vous de mieux comprendre les conditions préalables suivantes :
+Pour une intégration efficace, veillez à mieux comprendre les conditions préalables suivantes :
 * Teams fonctionnalités. 
 * SharePoint requises pour le stockage de fichiers et de données.
 * Conditions requises pour les API.
@@ -37,17 +37,17 @@ Les plateformes à code faible offrent une approche intuitive du développement 
 
 La plateforme Microsoft Power combine quatre technologies Microsoft robustes, telles que Power BI, Power Apps, Power Automate et Power Virtual Agents dans une plateforme d’applications puissante. Ces technologies vous permettent de créer des solutions, d’automatiser des processus, d’analyser des données et de créer des agents virtuels dans un environnement unifié et intégré.
 
-### <a name="power-apps"></a>Power Apps
+### <a name="power-apps"></a>Power Apps
 
-Avec Power Apps, vous pouvez créer des applications métiers qui se connectent à vos données métiers et qui sont adaptées aux besoins de votre organisation. Power Apps un large éventail de scénarios d’application pour relever les défis de l’entreprise par le biais d’applications de canevas. Après avoir construit l’application, vous pouvez l’exporter à partir du portail Power Apps maker et l’incorporer dans Microsoft Teams.
+Avec Power Apps, vous pouvez créer des applications métiers qui se connectent à vos données métiers et sont adaptées aux besoins de votre organisation. Power Apps un large éventail de scénarios d’application pour relever les défis de l’entreprise par le biais d’applications de canevas. Après avoir construit l’application, vous pouvez l’exporter à partir du portail Power Apps maker et l’incorporer dans Microsoft Teams.
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent est une solution d’interface graphique guidée sans code. Il repose sur microsoft Power Platform et Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots de conversation enrichis qui s’intègrent facilement à la plateforme Teams de conversation. Vous pouvez concevoir, développer et publier des agents virtuels intelligents pour Teams sans avoir à configurer un environnement de développement, à créer un service web ou à vous inscrire directement à Bot Framework.
+Power Virtual Agent est une solution d’interface graphique guidée sans code. Il repose sur microsoft Power Platform et Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots de conversation enrichis qui s’intègrent facilement à la plateforme Teams de conversation. Vous pouvez concevoir, développer et publier des agents virtuels intelligents pour Teams sans avoir à configurer un environnement de développement, créer un service web ou vous inscrire directement à Bot Framework.
 
 ### <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
-Assistant virtuel est un modèle Microsoft open source qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. 
+Assistant virtuel est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. 
 
 ## <a name="app-templates"></a>Modèles d’application
 
@@ -59,23 +59,23 @@ Teams Les connecteurs de gestion des équipes de travail sont des intégrations 
 
 ## <a name="install-moodle-lms"></a>Installer Moodle LMS
 
-Il s’agit d’un système LMS (Learning Management System) open source populaire. Il est désormais intégré à Microsoft Teams. Cette intégration permet aux enseignants et aux enseignants de collaborer autour des cours DeNtact, de poser des questions sur les notes et les devoirs, et de rester à jour avec des notifications directement dans Teams.
+Il s’agit d’un système LMS (Learning Management System) open source populaire. Il est désormais intégré à Microsoft Teams. Cette intégration permet aux enseignants et aux enseignants de collaborer autour des cours DeNtacter, de poser des questions sur les notes et les devoirs, et de rester à jour avec des notifications directement dans Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Créer un bouton Partager vers Teams sur votre site web
 
 Les sites web tiers peuvent utiliser le script de lancement pour incorporer le partage Teams boutons sur leurs pages web. Lorsque vous sélectionnez le bouton, il lance le partage pour Teams expérience utilisateur dans une fenêtre pop-up. Cela vous permet de partager un lien directement avec n’importe quelle personne Microsoft Teams canal sans changer de contexte.
 
-## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Ajouter un Microsoft Teams dans SharePoint
+## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Ajouter un onglet Microsoft Teams dans SharePoint
 
 Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams et SharePoint en ajoutant un onglet Microsoft Teams dans SharePoint en tant que SPFx web. 
 
 ## <a name="create-deep-link"></a>Créer un lien profond
 
-Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Ces liens profonds naviguent vers le contenu et les informations de votre onglet. Vous pouvez utiliser des liens profonds pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
+Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Ces liens profonds naviguent vers le contenu et les informations de votre onglet. Vous pouvez utiliser des liens profonds pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
 
-## <a name="integrate-device-capabilities"></a>Intégrer des fonctionnalités d’appareil
+## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
-Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
+Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
 
 ## <a name="see-also"></a>Voir aussi
 

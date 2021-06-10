@@ -1,11 +1,11 @@
 ---
 title: Tester le consentement spécifique aux ressources dans Teams
-description: Comment tester le consentement spécifique aux ressources dans Teams à l’aide de Postman
+description: Comment tester le consentement spécifique aux ressources dans Teams postman
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: how-to
-keywords: Teams Authorization OAuth SSO AAD rsc Postman Graph
+keywords: autorisation OAuth SSO AAD rsc Postman Graph
 ms.openlocfilehash: 7360a81108ac900fdf6d03217b667e257ff227fe
 ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT

@@ -28,15 +28,15 @@ Vous devez vérifier que votre onglet fonctionne correctement sur des appareils 
 
 ## <a name="distribution"></a>Distribution
 
-Les applications répertoriées dans Teams store doivent être approuvées pour une utilisation mobile afin de fonctionner correctement dans Teams client mobile. La disponibilité et le comportement des onglets dépendent de l’approbation ou non de votre application.
+Les applications répertoriées dans Teams store doivent être approuvées pour que l’utilisation mobile fonctionne correctement dans Teams client mobile. La disponibilité et le comportement des onglets dépendent de l’approbation ou non de votre application.
 
-### <a name="apps-on-teams-store-approved-for-mobile"></a>Applications sur Teams store approuvées pour appareils mobiles
+### <a name="apps-on-teams-store-approved-for-mobile"></a>Applications sur Teams store approuvées pour les appareils mobiles
 
 Le tableau suivant décrit la disponibilité et le comportement des onglets lorsque l’application est répertoriée dans le Teams store et approuvée pour une utilisation mobile :
 
 |Fonctionnalité   |Disponibilité mobile ?   |Comportement mobile|
 |----------|-----------|------------|
-|Canal <br /> et onglet de groupe|Oui|L’onglet s’ouvre Teams client mobile à l’aide de la configuration de votre `contentUrl` application.|
+|Canal <br /> et onglet groupe|Oui|L’onglet s’ouvre Teams client mobile à l’aide de la configuration de votre `contentUrl` application.|
 |Application personnelle|Oui|Chaque onglet de l’onglet de l’application personnelle s’ouvre Teams client mobile en utilisant sa `contentUrl` configuration respective.|
 
 ### <a name="apps-on-teams-store-not-approved-for-mobile"></a>Applications sur Teams store non approuvées pour appareils mobiles
@@ -45,7 +45,7 @@ Le tableau suivant décrit la disponibilité et le comportement des onglets lors
 
 | Fonctionnalité | Disponibilité mobile ? | Comportement mobile |
 |----------|-----------|------------|
-|Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams à l’aide de la configuration de votre application, qui doit également être incluse dans la fonction de votre `websiteUrl` code `setSettings()` [source.](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true) Toutefois, les utilisateurs peuvent toujours afficher l’onglet  dans le client mobile Teams en sélectionnant Plus en regard de l’application et en choisissant **Ouvrir,** ce qui déclenche la configuration de votre `contentUrl` application.|
+|Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams à l’aide de la configuration de votre application, qui doit également être incluse dans la fonction de `websiteUrl` votre code `setSettings()` [source.](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true) Toutefois, les utilisateurs peuvent toujours afficher l’onglet  dans le client mobile Teams en sélectionnant Plus en regard de l’application et en choisissant **Ouvrir,** ce qui déclenche la configuration de votre `contentUrl` application.|
 |Application personnelle|Non|Non applicable|
 
 ### <a name="apps-not-on-teams-store"></a>Applications non stockées dans Teams store

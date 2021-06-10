@@ -1,7 +1,7 @@
 ---
 title: Conversations 1-sur-1 avec des bots
 description: Décrit le scénario de bout en bout d’une conversation 1-on-1 avec un bot dans Microsoft Teams
-keywords: teams scenarios 1on1 1to1 conversation bot
+keywords: scénarios teams 1on1 1to1 bot de conversation
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 05/20/2019
@@ -28,4 +28,4 @@ Selon l’expérience que vous souhaitez créer, le bot peut avoir besoin de tra
 
 ## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Meilleure pratique : messages de bienvenue dans les conversations personnelles
 
-Votre bot doit envoyer de manière [proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et uniquement la première fois) qu’un utilisateur lance une conversation personnelle avec votre bot. Cette recommandation ne s’applique pas aux premiers contacts d’un canal.
+Votre bot doit envoyer de manière [proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et uniquement la première fois) qu’un utilisateur lance une conversation personnelle avec votre bot. Cette recommandation ne s’applique pas aux contacts pour la première fois dans un canal.

@@ -16,7 +16,7 @@ ms.locfileid: "52566781"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Une *carte* est un conteneur d’interface utilisateur (IU) pour des informations courtes ou connexes. Les cartes peuvent avoir plusieurs propriétés et pièces jointes. Teams cartes de support dans les bots, les connecteurs et les extensions de messagerie. Voir [Cartes](~/task-modules-and-cards/what-are-cards.md) pour une vue d’ensemble des cartes et de la façon Teams les utilise.
+Une *carte est* un conteneur d’interface utilisateur (IU) pour des informations courtes ou connexes. Les cartes peuvent avoir plusieurs propriétés et pièces jointes. Teams cartes de support dans les bots, les connecteurs et les extensions de messagerie. Voir [Cartes](~/task-modules-and-cards/what-are-cards.md) pour obtenir une vue d’ensemble des cartes et de la façon Teams les utilise.
 
 Les bots utilisent des cartes dans le cadre de conversations. Pour plus d’informations, voir [Conversations de bot.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 

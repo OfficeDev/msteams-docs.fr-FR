@@ -16,7 +16,7 @@ ms.locfileid: "52566459"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Lorsque vous testez votre bot, vous devez prendre en compte le ou les contextes dans lequel vous souhaitez que votre bot s’exécute, ainsi que les fonctionnalités que vous avez peut-être ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous avez choisie pour tester votre bot s’aligne sur ses fonctionnalités.
+Lorsque vous testez votre bot, vous devez prendre en considération le ou les contextes dans lequel vous souhaitez que votre bot s’exécute, ainsi que les fonctionnalités que vous avez peut-être ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous avez choisie pour tester votre bot s’aligne sur ses fonctionnalités.
 
 ## <a name="test-by-uploading-to-teams"></a>Testez en chargeant vers Teams
 
@@ -32,7 +32,7 @@ Si vous hébergez votre bot localement pendant le développement, vous devez uti
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Utilisez le point de terminaison https fourni par ngrok dans le manifeste de votre application. Si vous fermez votre fenêtre de commande et redémarrez, vous obtenez une nouvelle URL et vous devez mettre à jour l’adresse de votre point de terminaison du bot pour l’utiliser également.
+Utilisez le point de terminaison https fourni par ngrok dans le manifeste de votre application. Si vous fermez votre fenêtre de commande et redémarrez, vous obtenez une nouvelle URL, et vous devez mettre à jour l’adresse de votre point de terminaison du bot pour l’utiliser également.
 
 ## <a name="testing-your-bot-without-uploading-to-teams"></a>Test de votre bot sans téléchargement vers Teams
 
@@ -90,4 +90,4 @@ Pour supprimer complètement votre bot de Teams, go to your Bot Dashboard and ed
 
 ## <a name="removing-your-bot-from-appsource"></a>Suppression de votre bot d’AppSource
 
-Si vous souhaitez supprimer votre bot de votre application Teams dans AppSource (précédemment Office Store), vous devez supprimer le bot du manifeste de votre application et le resoumettre pour validation. Pour plus d’informations, voir [Publier votre application Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md)
+Si vous souhaitez supprimer votre bot de votre application Teams dans AppSource (précédemment Office Store), vous devez supprimer le bot du manifeste de votre application et le resoumettre pour validation. Pour plus d’informations, voir [Publier votre Microsoft Teams sur AppSource.](~/concepts/deploy-and-publish/apps-publish.md)

@@ -11,7 +11,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/26/2021
 ms.locfileid: "52668847"
 ---
-# <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec des cartes adaptatives
+# <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
 > [!IMPORTANT]
 > * Cette fonctionnalité est en prévisualisation [publique pour](~/resources/dev-preview/developer-preview-intro.md) les développeurs et est prise en charge sur ordinateur de bureau et mobile. La prise en charge dans le navigateur web sera bientôt disponible.
@@ -19,9 +19,9 @@ ms.locfileid: "52668847"
 
 Utilisez des cartes adaptatives pour créer des onglets en toute simplicité. Vous pouvez créer vos onglets avec des blocs d’interface utilisateur prêts à l’emploi qui semblent natifs sur ordinateur de bureau, web et mobile. La création d’onglets avec des cartes adaptatives centralise toutes les fonctionnalités d’application Teams autour d’un système principal de bot et d’un frontal de carte adaptative, ce qui élimine la nécessité d’un autre système principal pour votre bot et vos onglets. Cela réduit considérablement les coûts de maintenance et de serveur de votre Teams app. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application, la façon dont l’activité d’appel demande et envoie des informations sous l’onglet avec des cartes adaptatives et l’impact sur le flux de travail du module de tâche. 
 
-L’image suivante illustre les onglets de build avec des cartes adaptatives dans les ordinateurs de bureau et mobiles : exemple de carte adaptative :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="restituer dans les onglets." border="false":::
+L’image suivante illustre les onglets de build avec cartes adaptatives dans les ordinateurs de bureau et mobiles : exemple de carte adaptative :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="restituer dans les onglets." border="false":::
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, vous devez :
 
@@ -98,7 +98,7 @@ La communication entre votre onglet de carte adaptative et votre bot s’fait pa
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Récupérer la carte adaptative à restituer dans un onglet
 
 `tab/fetch` est la première demande d’appel que votre bot reçoit lorsqu’un utilisateur ouvre un onglet de carte adaptative. Lorsque votre bot reçoit la demande, il envoie une réponse de tabulation **continue** ou une réponse **d’th de tabulation.**
-La **réponse** continue inclut un tableau pour **les cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
+La **réponse** continue inclut un tableau pour les **cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
 
 > [!NOTE]
 > La **réponse d’authentification** est expliquée en détail dans la section [authentification.](#authentication)
@@ -158,7 +158,7 @@ Une fois qu’une carte adaptative est restituer dans l’onglet, elle doit êtr
 Lorsqu’un utilisateur sélectionne un bouton dans l’onglet Carte adaptative, la demande est déclenchée à votre bot avec les données correspondantes via la fonction `tab/submit` *Action.Submit* de carte adaptative. Les données de carte adaptative sont disponibles via la propriété de données de la `tab/submit` demande. Vous recevrez l’une des réponses suivantes à votre demande :
 
 * Réponse de code d’état http `200` sans corps. Une réponse 200 vide n’entraîne aucune action du client.
-* L’onglet standard `200` **continue la** réponse, comme expliqué dans la section Récupérer la carte [adaptative.](#fetch-adaptive-card-to-render-to-a-tab) Une réponse **de tabulation** continue déclenche le client pour mettre à jour l’onglet carte adaptative rendu avec les cartes adaptatives fournies dans le tableau de cartes de la **réponse continue.**
+* L’onglet standard `200` **continue la** réponse, comme expliqué dans la section Récupérer la carte [adaptative.](#fetch-adaptive-card-to-render-to-a-tab) Une réponse **de suite** d’onglet déclenche le client pour mettre à jour l’onglet carte adaptative rendu avec les cartes adaptatives fournies dans le tableau de cartes de la **réponse continue.**
 
 Les extraits de code suivants sont des exemples de `tab/submit` requête et de réponse :
 
@@ -318,7 +318,7 @@ Les extraits de code suivants sont des exemples de `task/submit` requête et de 
 
 ## <a name="authentication"></a>Authentification
 
-Dans les sections précédentes de cet article, vous avez vu que la plupart des paradigmes de développement pouvaient être extrapolés à partir des demandes de module de tâche et des réponses en demandes et réponses d’onglet. Toutefois, en matière de gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md) 
+Dans les sections précédentes de cet article, vous avez vu que la plupart des paradigmes de développement pouvaient être extrapolés à partir des demandes de module de tâche et des réponses dans les demandes d’onglet et les réponses. Toutefois, en matière de gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md) 
 
 Dans la section [Appeler les activités,](#invoke-activities) vous avez été informé que les demandes peuvent avoir une réponse continue ou `tab/fetch` **auth.**  Lorsqu’une demande est déclenchée et reçoit une réponse d' auto-th de tabulation, la page de signature `tab/fetch` s’affiche à  l’utilisateur. 
 
@@ -332,7 +332,7 @@ Dans la section [Appeler les activités,](#invoke-activities) vous avez été in
 1. Sélectionnez **Se connecter**. Vous êtes redirigé vers l’URL d’authentification fournie dans `value` la propriété du corps de la réponse d’authentification.  
 1. Une fenêtre contextuelle apparaît. Cette fenêtre pop-up héberge votre page web à l’aide de l’URL d’authentification.
 1. Après vous être connectez, fermez la fenêtre. Un *code d’authentification* est envoyé au client Teams client.
-1. Le Teams client ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée. 
+1. Le Teams ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée. 
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` flux de données d’authentification
 

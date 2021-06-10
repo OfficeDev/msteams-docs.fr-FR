@@ -48,7 +48,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique des messages et les donn
 
 Étant donné que les données existantes sont migrées, il est essentiel de maintenir les timestamps des messages d’origine et d’empêcher l’activité de messagerie pendant le processus de migration pour recréer le flux de messages existant de l’utilisateur dans Teams. Pour ce faire, les résultats sont les suivants :
 
-> [Créez une équipe avec](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource  `createdDateTime`  d’équipe. Placez la nouvelle équipe dans un état spécial qui interdit aux utilisateurs la plupart des activités au sein de l’équipe jusqu’à ce que le processus `migration mode` de migration soit terminé. Incluez `teamCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme étant `migration` créée pour la migration.  
+> [Créez une équipe avec](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource  `createdDateTime`  d’équipe. Placez la nouvelle équipe dans un état spécial qui interdit aux utilisateurs la plupart des activités au sein de l’équipe jusqu’à ce que le processus `migration mode` de migration soit terminé. Incluez `teamCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme `migration` étant créée pour la migration.  
 
 > [!Note]
 > Le champ sera rempli uniquement pour les instances d’une équipe ou d’un canal `createdDateTime` qui ont été migrées.
@@ -97,7 +97,7 @@ Content-Location: /teams/{team-id}
 
 La création d’un canal pour les messages importés est similaire au scénario de création d’équipe :
 
-> [Créez un canal avec](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource `createdDateTime` de canal. Placez le nouveau canal dans , un état spécial qui interdit aux utilisateurs de la plupart des activités de conversation au sein du canal jusqu’à ce que le processus `migration mode` de migration soit terminé.  Incluez `channelCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme étant `migration` créée pour la migration.  
+> [Créez un canal avec](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource `createdDateTime` de canal. Placez le nouveau canal dans , un état spécial qui interdit aux utilisateurs de la plupart des activités de conversation au sein du canal jusqu’à ce que le processus `migration mode` de migration soit terminé.  Incluez `channelCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme `migration` étant créée pour la migration.  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>Autorisations
 
@@ -225,7 +225,7 @@ HTTP/1.1 200 OK
 400 Bad Request
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>Demander (PUBLIER un message avec une image fixe)
+#### <a name="request-post-a-message-with-inline-image"></a>Demander (PUBLIER un message avec une image en ligne)
 
 > [!Note]
 > Il n’existe aucune étendue d’autorisation spéciale dans ce scénario, car la demande fait partie de chatMessage ; Les étendues de chatMessage s’appliquent également ici.
@@ -320,7 +320,7 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>Étape 5 : Ajouter des membres d’équipe
 
-Vous pouvez ajouter un membre à une équipe à l’aide de l Teams’interface utilisateur ou de Microsoft Graph [API Ajouter un membre](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) : [](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)
+Vous pouvez ajouter un membre à une équipe à l’aide de l Teams’interface utilisateur ou de Microsoft Graph API [Ajouter un](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) membre : [](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)
 
 #### <a name="request-add-member"></a>Demande (ajouter un membre)
 
@@ -370,7 +370,7 @@ HTTP/1.1 204 No Content
 |Traitement à haut débit|Extraits de code|
 ||Autocollants|
 ||Emojis|
-||Guillemets|
+||Devis|
 ||Billets croisés entre les canaux|
 
 

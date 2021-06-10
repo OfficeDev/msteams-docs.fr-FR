@@ -37,12 +37,12 @@ Microsoft fournit des outils pour faciliter la conception de votre Teams applica
 
 ### <a name="get-the-microsoft-teams-ui-kit"></a>Obtenir le kit Microsoft Teams’interface utilisateur
 
-Le kit Microsoft Teams’interface utilisateur peut vous aider à développer une application Teams efficace dans un délai le plus court. Le kit d’interface utilisateur contient tout ce que vous voyez dans ces documents relatifs Teams conception d’application et bien plus encore, notamment des exemples complets et des variantes.
+Le kit Microsoft Teams’interface utilisateur peut vous aider à développer une application Teams efficace dans un laps de temps plus court. Le kit d’interface utilisateur contient tout ce que vous voyez dans ces documents relatifs à Teams conception d’application et bien plus encore, notamment des exemples complets et des variantes.
 
 Le kit d’interface utilisateur dispose également de modèles et de composants pré-créés que vous pouvez copier et modifier selon vos besoins. Ainsi, vous pouvez passer plus de temps à concevoir la meilleure expérience utilisateur au lieu de vous soucier de l’apparence d’un bouton.
 
 > [!TIP]
-> **Le kit d’interface utilisateur est-il pour moi ?** Si vous avez une partie de la création d’une Teams, oui. Comprendre comment créer une application Teams n’est pas seulement utile aux concepteurs, mais également aux responsables de produits, aux développeurs qui utilisent des IDE et aux créateurs de création avec des outils à code faible (par exemple, Microsoft Power Platform).
+> **Le kit d’interface utilisateur est-il pour moi ?** Si vous avez une partie dans la création d’une Teams, oui. Comprendre comment créer une application Teams n’est pas seulement utile aux concepteurs, mais également aux responsables de produits, aux développeurs qui utilisent des IDE et aux créateurs de création avec des outils à code faible (par exemple, Microsoft Power Platform).
 
 1. Go to the [Microsoft Teams UI Kit Figma page](https://www.figma.com/community/file/916836509871353159).
 1. Sélectionnez **Dupliquer** pour ouvrir le kit d’interface utilisateur. (Vous de devez d’abord créer un compte Figma.)

@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : créer votre première application à l’aide du générateur Yeoman'
+title: Didacticiel - Créer votre première application à l’aide du générateur Yeoman
 description: Découvrez comment commencer à créer des applications Microsoft Teams avec le générateur Yeoman.
 keywords: mise en node.js nodejs yeoman
 localization_priority: Normal
@@ -17,7 +17,7 @@ ms.locfileid: "52566823"
 > [!Note]
 > Ce didacticiel provient du [générateur Yeoman pour Teams wiki.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
-Dans ce didacticiel, nous allons passer en premier lieu à la création Microsoft Teams’application à l’aide Microsoft Teams générateur Yeoman. Il vous permet également de passer par le processus de mise à niveau de votre Teams à l’aide du générateur Yeoman. La condition préalable pour commencer avec ce didacticiel est que vous avez un compte Teams qui permet le chargement de version de version [d’application.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Dans ce didacticiel, nous allons parcourir la création de votre toute première application Microsoft Teams l’aide Microsoft Teams générateur Yeoman. Il vous permet également de passer par le processus de mise à niveau de votre Teams à l’aide du générateur Yeoman. La condition préalable pour commencer avec ce didacticiel est que vous avez un compte Teams qui permet le chargement de version de version [d’application.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ![Git du générateur yeoman](~/assets/yeoman-demo.gif)
 
@@ -64,7 +64,7 @@ Cette section vous présente les étapes de génération de votre projet.
 **Pour générer votre projet**
 
 1. Ouvrez une invite de commandes et créez un répertoire dans lequel vous souhaitez créer votre projet, puis exécutez la commande dans ce `yo teams` répertoire. Le générateur démarre.
-1. Répondez aux questions posées par le générateur :
+1. Répondez à l’ensemble des questions posées par le générateur :
 
    ![équipes yo](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -115,7 +115,7 @@ Enregistrez le fichier et revenir à l’invite de commandes.
 
 Vous pouvez maintenant créer votre projet. Cette étape est effectuée en deux étapes (ou une étape, voir ci-dessous).
 
-Tout d’abord, vous devez créer le Teams manifeste de l’application, que vous chargez/chargez de Microsoft Teams. Cette tâche est effectuée par la tâche Gulp `gulp manifest` . Cela valide le manifeste et crée un fichier zip dans `./package` le répertoire.
+Tout d’abord, vous devez créer le Teams manifeste de l’application, que vous chargez/chargez de Microsoft Teams. Cette tâche est effectuée par la tâche `gulp manifest` Gulp. Cela valide le manifeste et crée un fichier zip dans `./package` le répertoire.
 
 Pour créer votre solution, utilisez la `gulp build` commande. Cela transpile votre solution dans le `./dist` dossier. 
 
@@ -131,9 +131,9 @@ Vous devez maintenant être en mesure de parcourir pour `http://localhost:3007/m
 
 Microsoft Teams ne vous permet pas d’héberger votre application sur localhost, vous devez donc la publier sur une URL publique ou utiliser un proxy tel que ngrok.
 
-La bonne nouvelle est que le projet échafaudé dispose de ce projet intégré. Lorsque vous exécutez le service ngrok, il est démarré en arrière-plan, avec une entrée DNS unique et publique, et il inséra également le manifeste avec cette URL unique, puis il fera exactement la même chose que `gulp ngrok-serve` `gulp serve` .
+La bonne nouvelle est que le projet échafaudé dispose de ce pré-projet intégré. Lorsque vous exécutez le service ngrok, il est démarré en arrière-plan, avec une entrée DNS unique et publique, et il inséra également le manifeste avec cette URL unique, puis il fera exactement la même chose que `gulp ngrok-serve` `gulp serve` .
 
-Après l’exécution, créez une équipe Microsoft Teams et, lorsqu’elle est créée, cliquez sur le nom de l’équipe, pour aller aux paramètres d’équipe, puis `gulp ngrok-serve` sélectionnez *Applications.* Dans le coin inférieur droit, vous devez voir un *lien Télécharger une* application personnalisée, sélectionnez-la, puis accédez à votre dossier de projet et au sous-dossier `package` appelé. Sélectionnez le fichier zip dans ce dossier, puis ouvrez. Votre application est désormais rechargée de Microsoft Teams :
+Après l’exécution, créez une équipe Microsoft Teams et, lorsqu’elle est créée, cliquez sur le nom de l’équipe, pour aller aux paramètres d’équipe, puis `gulp ngrok-serve` sélectionnez *Applications.* Dans le coin inférieur droit, vous devez voir un *lien Télécharger* une application personnalisée, sélectionnez-la, puis accédez au dossier de votre projet et au sous-dossier `package` appelé. Sélectionnez le fichier zip dans ce dossier, puis ouvrez. Votre application est désormais rechargée de Microsoft Teams :
 
 ![application sideloaded](~/assets/yeoman-images/teams-first-app-4.png)
 
@@ -141,7 +141,7 @@ Revenir au canal *Général* et choisir *+* d’ajouter un nouvel onglet. Vous d
 
 ![configurer l’onglet](~/assets/yeoman-images/teams-first-app-5.png)
 
-Choisissez votre onglet et suivez les instructions pour l’ajouter. Notez que vous avez une boîte de dialogue de configuration personnalisée, pour laquelle vous pouvez modifier la source. Sélectionnez *Enregistrer* pour ajouter votre onglet au canal. Une fois que vous avez terminé, votre onglet doit être chargé dans Microsoft Teams!
+Choisissez votre onglet et suivez les instructions pour l’ajouter. Notez que vous avez une boîte de dialogue de configuration personnalisée, pour laquelle vous pouvez modifier la source. Sélectionnez *Enregistrer* pour ajouter votre onglet au canal. Une fois que vous avez terminé, votre onglet doit être chargé dans Microsoft Teams !
 
 ![exécution de l’onglet dans teams](~/assets/yeoman-images/teams-first-app-6.png)
 
@@ -181,4 +181,4 @@ Vous pouvez également mettre à niveau votre version Microsoft Teams actuelle v
     yo teams --version
    ```
    
-**Félicitations ! Vous avez créé et déployé votre première Microsoft Teams application. Vous avez également mis à niveau Microsoft Teams.**
+**Félicitations ! Vous avez créé et déployé votre première application Microsoft Teams de messagerie. Vous avez également mis à niveau Microsoft Teams.**

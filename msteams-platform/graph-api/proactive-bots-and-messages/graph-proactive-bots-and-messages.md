@@ -5,7 +5,7 @@ localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: installation de conversation de messagerie proactive teams Graph
+keywords: équipes d’installation de conversation de messagerie proactive Graph
 ms.openlocfilehash: 06b50e5ab8594c257959430383bab5e355af4e06
 ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
@@ -63,7 +63,7 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with proactive [messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that’s in your [organization’s app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org) or the Teams [store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 >[!TIP]
-> Le modèle d’application [**Communicator**](../..//samples/app-templates.md#company-communicator) entreprise prêt pour la production autorise la diffusion de messagerie et constitue une bonne base pour la création de votre application de bot proactive.
+> Le modèle d’application Communicator entreprise prêt pour la production [**autorise**](../..//samples/app-templates.md#company-communicator) la diffusion de messages et constitue une bonne base pour la création de votre application de bot proactive.
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔ obtenir `teamsAppId` l’application
 
@@ -105,7 +105,7 @@ La demande doit renvoyer un `teamsApp` objet. L’objet renvoyé est l’ID d’
 GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les informations `teamsAppId` suivantes :
+**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les données `teamsAppId` suivantes :
 
 **Référence de page Graph Microsoft : lister** [les applications en équipe](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -189,7 +189,7 @@ Votre bot peut [envoyer des messages proactifs](/azure/bot-service/bot-builder-h
 
 ## <a name="see-also"></a>Voir aussi
 
-* [**Gérer les stratégies de mise en application dans Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [**Gérer les stratégies de configuration d’application dans Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Envoyer des notifications proactives aux utilisateurs SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="view-additional-code-samples"></a>Afficher des exemples de code supplémentaires

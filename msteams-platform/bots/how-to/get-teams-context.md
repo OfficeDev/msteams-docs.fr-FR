@@ -20,7 +20,7 @@ Un bot peut accéder à des données de contexte supplémentaires sur une équip
 
 ## <a name="fetch-the-roster-or-user-profile"></a>Récupérer la liste ou le profil utilisateur
 
-Votre bot peut interroger la liste des membres et leurs profils utilisateur de base, notamment les ID d’utilisateur Teams et les informations de Azure Active Directory (AAD), telles que le nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, pour vérifier si un utilisateur s’est connecté à un onglet via les informations d’identification AAD, est membre de l’équipe. Pour obtenir les membres de la conversation, la taille de page minimale ou maximale dépend de l’implémentation. La taille de page inférieure à 50, traitée comme 50 et supérieure à 500, est limitée à 500. Même si vous utilisez la version non pagyée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, voir [les modifications apportées aux API Teams bot pour](~/resources/team-chat-member-api-changes.md)récupérer des membres d’équipe ou de conversation.
+Votre bot peut interroger la liste des membres et leurs profils utilisateur de base, notamment les ID d’utilisateur Teams et les informations de Azure Active Directory (AAD), telles que le nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, pour vérifier si un utilisateur s’est connecté à un onglet via les informations d’identification AAD, est membre de l’équipe. Pour obtenir les membres de la conversation, la taille de page minimale ou maximale dépend de l’implémentation. La taille de page inférieure à 50, traitée comme 50 et supérieure à 500, est limitée à 500. Même si vous utilisez la version non pagaisée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, voir [les modifications apportées aux API Teams bot pour](~/resources/team-chat-member-api-changes.md)récupérer des membres d’équipe ou de conversation.
 
 L’exemple de code suivant utilise le point de terminaison pagé pour extraire la liste :
 
@@ -127,7 +127,7 @@ Après avoir récupéré la liste ou le profil utilisateur, vous pouvez obtenir 
 
 ## <a name="get-single-member-details"></a>Obtenir les détails d’un seul membre
 
-Vous pouvez également récupérer les détails d’un utilisateur particulier à l’aide Teams ID d’utilisateur, UPN ou ID d’objet AAD.
+Vous pouvez également récupérer les détails d’un utilisateur particulier à l’aide Teams ID utilisateur, UPN ou ID d’objet AAD.
 
 L’exemple de code suivant est utilisé pour obtenir les détails d’un seul membre :
 
@@ -191,7 +191,7 @@ Response body
 }
 ```
 
-Voici l’exemple de réponse pour l’utilisateur anonyme :
+Voici l’exemple de réponse pour les utilisateurs anonymes :
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"

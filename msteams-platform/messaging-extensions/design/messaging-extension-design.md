@@ -88,7 +88,7 @@ Certaines options s’offrent à vous pour afficher les résultats de recherche 
 
 Les commandes d’action permettent aux utilisateurs de déclencher des actions et de traiter des demandes dans des services externes Teams. Par exemple, si votre application suit les commandes, un utilisateur peut créer une commande à l’aide du contenu du message d’un collègue directement dans sa conversation.
 
-Les extensions de messagerie basées sur l’action nécessitent fréquemment que les utilisateurs remplissent un formulaire ou tout autre type de configuration au sein d’une configuration modale. Vous pouvez créer ces expériences avec [des modules de tâche.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+Les extensions de messagerie basées sur une action nécessitent fréquemment que les utilisateurs remplissent un formulaire ou tout autre type de configuration dans une configuration modale. Vous pouvez créer ces expériences avec [des modules de tâche.](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
 ## <a name="open-a-messaging-extension"></a>Ouvrir une extension de messagerie
 
@@ -126,17 +126,8 @@ Une fois ajoutés, les utilisateurs peuvent sélectionner l’icône **Plus** da
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="L’exemple montre comment ouvrir une extension de messagerie à partir d’un billet de conversation sur mobile." border="false":::
 
 ---
-
-#### Channel post
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
 ---
 
 ## <a name="use-a-messaging-extension"></a>Utiliser une extension de messagerie
@@ -241,7 +232,7 @@ L’exemple suivant est une extension de messagerie ouverte à partir de la zone
 |----------|-----------|
 |1|**Logo de l’application**: icône couleur du logo de votre application.|
 |2|**Nom de l’application**: nom complet de votre application.|
-|3|**Icône du menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de messagerie (si vous en spécifiez une).
+|3|**Icône de menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de messagerie (si vous en spécifiez une).
 |4 |**Zone de recherche**: permet aux utilisateurs de trouver le contenu d’application qu’ils souhaitent insérer.|
 |5 |**Menu Onglet (facultatif)**: fournit plusieurs catégories de contenu.|
 |6 |**Menu commandes d’action (facultatif)**: affiche la liste des commandes d’action (si vous en spécifiez une).|
@@ -255,7 +246,7 @@ L’exemple suivant est une extension de messagerie ouverte à partir de la zone
 |Compteur|Description|
 |----------|-----------|
 |1|**Nom de l’application**: nom complet de votre application.|
-|2|**Icône du menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de messagerie (si vous en spécifiez une).
+|2|**Icône de menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de messagerie (si vous en spécifiez une).
 |3|**Zone de recherche**: permet aux utilisateurs de trouver le contenu d’application qu’ils souhaitent insérer.|
 |4 |**Menu Onglet (facultatif)**: fournit plusieurs catégories de contenu.|
 |5 |**Menu commandes d’action (facultatif)**: affiche la liste des commandes d’action (si vous en spécifiez une).|
@@ -297,7 +288,7 @@ Les extensions de messagerie sont des raccourcis supposés réduire le changemen
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillez votre extension de messagerie
+#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillation votre extension de messagerie
 
 Les extensions de messagerie ne sont pas toujours faciles à trouver. Incluez des captures d’écran de son utilisation dans la page de détails de votre application. Si votre application inclut également un bot, vous pouvez inclure la documentation d’aide sur l’extension de messagerie dans une visite guidée du bot.
 

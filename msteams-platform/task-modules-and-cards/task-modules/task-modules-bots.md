@@ -21,7 +21,7 @@ Il existe deux façons d’invoquer des modules de tâche :
 * **URL de lien profond.** À l’aide de la syntaxe de lien profond pour les [modules](~/task-modules-and-cards/what-are-task-modules.md#task-module-deep-link-syntax)de tâche, vous pouvez utiliser l’action de carte pour les cartes Bot Framework ou l’action de carte pour les cartes `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) adaptatives, respectivement. Avec les URL de lien profond, l’URL du module de tâche ou le corps de la carte adaptative est évidemment connu à l’avance, ce qui évite un aller-retour serveur par rapport à `task/fetch` .
 
 >[!IMPORTANT]
->Pour garantir des communications sécurisées, `url` chacune `fallbackUrl` d’elles doit implémenter le protocole de chiffrement HTTPS.
+>Pour garantir des communications sécurisées, `url` chacune d’elles `fallbackUrl` doit implémenter le protocole de chiffrement HTTPS.
 
 ## <a name="invoking-a-task-module-through-taskfetch"></a>L’vot d’un module de tâche par le biais de la tâche/extraction
 
@@ -57,12 +57,12 @@ Examinons chaque étape plus en détail :
 
 Lorsque l’utilisateur a terminé le module de tâche, l’envoi du résultat au bot est similaire à la façon dont il fonctionne avec les [onglets,](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)mais il existe quelques différences, il est donc également décrit ici.
 
-* **HTML/JavaScript ( `TaskInfo.url` )**. Une fois que vous avez validé ce que l’utilisateur a entré, vous appelez la fonction SDK (appelée ci-après à des fins de `microsoftTeams.tasks.submitTask()` `submitTask()` lisibilité). Vous pouvez appeler sans paramètre si vous souhaitez simplement Teams fermer le module de tâche, mais la plupart du temps vous souhaiterez passer un objet ou une chaîne à `submitTask()` votre `submitHandler` . Passez-le simplement en tant que premier paramètre, `result` . Teams appelle : `submitHandler` sera et sera `err` l’objet/chaîne `null` que vous avez transmis à `result` `submitTask()` . Si vous appelez avec un paramètre, vous devez transmettre un ou plusieurs tableaux de chaînes : cela permet à Teams de valider que l’application qui envoie le résultat est la même que celle qui a appelé le module de `submitTask()` `result`  `appId` `appId` tâche. Votre bot recevra un `task/submit` message, y compris `result` comme décrit [ci-dessous.](#payload-of-taskfetch-and-tasksubmit-messages)
+* **HTML/JavaScript ( `TaskInfo.url` )**. Une fois que vous avez validé ce que l’utilisateur a entré, vous appelez la fonction SDK (appelée ci-après à des fins de `microsoftTeams.tasks.submitTask()` `submitTask()` lisibilité). Vous pouvez appeler sans paramètre si vous souhaitez simplement Teams fermer le module de tâche, mais la plupart du temps vous souhaiterez passer un objet ou une chaîne à `submitTask()` votre `submitHandler` . Passez-le simplement en tant que premier paramètre, `result` . Teams appelle : `submitHandler` sera et sera `err` l’objet/chaîne `null` que vous avez transmis à `result` `submitTask()` . Si vous appelez avec un paramètre, vous devez transmettre un ou plusieurs tableaux de chaînes : cela permet à Teams de vérifier que l’application qui envoie le résultat est la même que celle qui a appelé le module de `submitTask()` `result`  `appId` `appId` tâche. Votre bot recevra un `task/submit` message, y compris `result` comme décrit [ci-dessous.](#payload-of-taskfetch-and-tasksubmit-messages)
 * **Carte adaptative ( `TaskInfo.card` )**. Le corps de la carte adaptative (tel que rempli par l’utilisateur) est envoyé au bot via un message lorsque l’utilisateur appuie sur `task/submit` un `Action.Submit` bouton.
 
 ## <a name="the-flexibility-of-tasksubmit"></a>Flexibilité de la tâche/de l’soumission
 
-Dans la section précédente, vous avez appris que lorsque l’utilisateur termine avec un module de tâche appelé à partir d’un bot, le bot reçoit toujours un `task/submit invoke` message. En tant que développeur, vous avez plusieurs options pour *répondre* au `task/submit` message :
+Dans la section précédente, vous avez appris que lorsque l’utilisateur termine avec un module de tâche appelé à partir d’un bot, il reçoit toujours un `task/submit invoke` message. En tant que développeur, vous avez plusieurs options pour *répondre* au `task/submit` message :
 
 | Réponse du corps HTTP                      | Scénario                                |
 | --------------------------------------- | --------------------------------------- |

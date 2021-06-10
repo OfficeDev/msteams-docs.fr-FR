@@ -27,7 +27,7 @@ Il existe deux façons d’envoyer des fichiers vers et à partir d’un bot :
 
 ## <a name="using-the-microsoft-graph-apis"></a>Utilisation des API Microsoft Graph
 
-Vous pouvez publier des messages avec des pièces jointes de carte faisant référence à des fichiers SharePoint existants à l’aide des API Microsoft Graph pour OneDrive [et SharePoint](/onedrive/developer/rest-api/). L’utilisation des API Graph nécessite l’obtention de l’accès au dossier OneDrive d’un utilisateur (pour et fichiers) ou aux fichiers des canaux d’une équipe (pour les fichiers) via le flux d’autorisation `personal` `groupchat` `channel` OAuth 2.0 standard. Cette méthode fonctionne dans toutes les Teams étendues.
+Vous pouvez publier des messages avec des pièces jointes de carte faisant référence à des fichiers SharePoint existants à l’aide des API Microsoft Graph pour OneDrive [et SharePoint](/onedrive/developer/rest-api/). L’utilisation des API Graph nécessite l’accès au dossier OneDrive d’un utilisateur (pour et fichiers) ou aux fichiers des canaux d’une équipe (pour les fichiers) via le flux d’autorisation `personal` `groupchat` `channel` OAuth 2.0 standard. Cette méthode fonctionne dans toutes les Teams étendues.
 
 ## <a name="using-the-teams-bot-apis"></a>Utilisation des API Teams Bot
 
@@ -165,7 +165,7 @@ De même, si l’utilisateur refuse le fichier, votre bot recevra l’événemen
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Informer l’utilisateur d’un fichier téléchargé
 
-Après avoir chargé un fichier sur le OneDrive de l’utilisateur, que vous utilisiez le mécanisme décrit ci-dessus ou des API déléguées par l’utilisateur OneDrive, vous devez envoyer un message de confirmation à l’utilisateur. Ce message doit contenir une pièce jointe sur qui l’utilisateur peut cliquer, soit pour l’afficher un aperçu, l’ouvrir dans OneDrive, soit la `FileCard` télécharger localement.
+Après avoir téléchargé un fichier sur le OneDrive de l’utilisateur, que vous utilisiez le mécanisme décrit ci-dessus ou des API déléguées par l’utilisateur OneDrive, vous devez envoyer un message de confirmation à l’utilisateur. Ce message doit contenir une pièce jointe sur qui l’utilisateur peut cliquer, soit pour l’afficher un aperçu, l’ouvrir dans OneDrive, soit la `FileCard` télécharger localement.
 
 ```json
 {

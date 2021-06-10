@@ -47,7 +47,7 @@ La liste suivante montre comment les fonctionnalités Teams sont couramment util
 
 ## <a name="see-also"></a>Voir aussi
 
-[Teams de conception d’application](../concepts/design/design-teams-app-overview.md)
+[Teams recommandations en matière de conception d’application](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante
 

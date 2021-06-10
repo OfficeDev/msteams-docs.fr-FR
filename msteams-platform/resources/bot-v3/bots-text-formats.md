@@ -23,7 +23,7 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 | Valeur TextFormat | Description |
 | --- | --- |
 | plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée. |
-| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal selon le cas . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 | xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu de texte

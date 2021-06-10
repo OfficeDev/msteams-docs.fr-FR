@@ -85,7 +85,7 @@ Pour l’extension de messagerie basée sur la recherche, définissez `type` le 
 }
 ```
 
-### <a name="test-via-uploading"></a>Test via le chargement
+### <a name="test-via-uploading"></a>Test via le téléchargement
 
 Vous pouvez tester votre extension de messagerie en chargeant votre application.
 
@@ -95,11 +95,11 @@ Pour ouvrir votre extension de messagerie, accédez à vos conversations ou cana
 
 La majeure partie de votre travail implique l’événement, qui gère toutes les interactions dans la `onQuery` fenêtre d’extension de messagerie.
 
-Si vous le définissez dans le manifeste, vous activez l’élément de menu Paramètres pour votre extension de messagerie et vous `canUpdateConfiguration` devez également gérer et `true`  `onQuerySettingsUrl` `onSettingsUpdate` .
+Si vous le définissez dans le manifeste, vous activez l’élément de menu Paramètres pour votre extension de messagerie et vous devez `canUpdateConfiguration` `true` également gérer et  `onQuerySettingsUrl` `onSettingsUpdate` .
 
 ### <a name="handle-onquery-events"></a>Gérer les événements onQuery
 
-Une extension de messagerie reçoit un événement lorsqu’un événement se produit dans la fenêtre d’extension de messagerie ou `onQuery` est envoyé à la fenêtre.
+Une extension de messagerie reçoit un événement lorsque quelque chose se produit dans la fenêtre d’extension de messagerie `onQuery` ou est envoyé à la fenêtre.
 
 Si votre extension de messagerie utilise une page de configuration, votre responsable doit d’abord vérifier les informations de configuration stockées ; si l’extension de messagerie n’est pas configurée, renvoyez une réponse avec un lien vers votre page de `onQuery` `config` configuration. N’ignorez pas que la réponse de la page de configuration est également gérée par `onQuery` . La seule exception est lorsque la page de configuration est appelée par le responsable `onQuerySettingsUrl` ; consultez la section suivante :
 
@@ -115,7 +115,7 @@ Les `onQuerySettingsUrl` `onSettingsUpdate` événements et les  événements fo
 
 ![Captures d’écran des emplacements de l Paramètres de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-Votre responsable renvoie l’URL de la page de configuration ; une fois que la page de configuration se ferme, votre responsable accepte et enregistre `onQuerySettingsUrl` `onSettingsUpdate` l’état renvoyé. Il s’agit du cas où la réponse de la page de configuration `onQuery` *n’est* pas recevait.
+Votre responsable renvoie l’URL de la page de configuration ; une fois que la page de configuration se ferme, votre responsable accepte et enregistre `onQuerySettingsUrl` `onSettingsUpdate` l’état renvoyé. Il s’agit du cas où la réponse de la page de configuration `onQuery` *n’est* pas receve.
 
 ## <a name="receive-and-respond-to-queries"></a>Recevoir des requêtes et y répondre
 
@@ -144,7 +144,7 @@ Les paramètres de requête se trouvent dans l’objet value, qui inclut les pro
 | Nom de la propriété | Objectif |
 |---|---|
 | `commandId` | Nom de la commande invoquée par l’utilisateur, correspondant à l’une des commandes déclarées dans le manifeste de l’application. |
-| `parameters` | Tableau de paramètres : chaque objet paramètre contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l’utilisateur. |
+| `parameters` | Tableau de paramètres : chaque objet parameter contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l’utilisateur. |
 | `queryOptions` | Paramètres de pagination : <br>`skip`: nombre d’ignorer pour cette requête <br>`count`: nombre d’éléments à renvoyer |
 
 #### <a name="request-example"></a>Exemple de requête
@@ -242,7 +242,7 @@ Votre service doit répondre avec les résultats correspondant à la requête de
 |Nom de la propriété|Objectif|
 |---|---|
 |`composeExtension`|Enveloppe de réponse de niveau supérieur.|
-|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche une liste de résultats de recherche <br>`auth`: demande à l’utilisateur de s’authentifier <br>`config`: demande à l’utilisateur de configurer l’extension de messagerie <br>`message` : affiche un message en texte brut. |
+|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche une liste de résultats de recherche <br>`auth`: demande à l’utilisateur de s’authentifier <br>`config`: demande à l’utilisateur de configurer l’extension de messagerie <br>`message` : affiche un message en texte brut. |
 |`composeExtension.attachmentLayout`|Spécifie la disposition des pièces jointes. Utilisé pour les réponses de type `result` . <br>Actuellement, les types suivants sont pris en charge : <br>`list`: liste d’objets de carte contenant des champs de miniature, de titre et de texte <br>`grid`: une grille d’images miniatures |
 |`composeExtension.attachments`|Tableau d’objets pièce jointe valides. Utilisé pour les réponses de type `result` . <br>Actuellement, les types suivants sont pris en charge : <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Actions suggérées. Utilisé pour les réponses de type `auth` `config` ou . |
@@ -435,7 +435,7 @@ La requête par défaut a la même structure que n’importe quelle requête uti
 
 ## <a name="identify-the-user"></a>Identifier l’utilisateur
 
-Chaque demande à vos services inclut l’ID obscurci de l’utilisateur qui a effectué la demande, ainsi que le nom d’affichage et l’ID d’objet Azure Active Directory utilisateur.
+Chaque demande à vos services inclut l’ID obscurci de l’utilisateur qui a effectué la demande, ainsi que le nom d’affichage et l’ID Azure Active Directory’objet.
 
 ```json
 "from": {
@@ -445,7 +445,7 @@ Chaque demande à vos services inclut l’ID obscurci de l’utilisateur qui a e
 },
 ```
 
-Les valeurs et les valeurs sont garanties pour être celle `id` `aadObjectId` de l’utilisateur Teams authentifié. Elles peuvent être utilisées comme clés pour rechercher des informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID Azure Active Directory client de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
+Les valeurs et les valeurs sont garanties pour être celle `id` `aadObjectId` de l’utilisateur Teams authentifié. Ils peuvent être utilisés comme clés pour rechercher des informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID Azure Active Directory client de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
 
 ## <a name="authentication"></a>Authentification
 
@@ -457,14 +457,14 @@ La séquence est la suivante :
 2. Votre service vérifie si l’utilisateur s’est d’abord authentifié en inspectant l’Teams’utilisateur.
 3. Si l’utilisateur ne s’est pas authentifié, renvoyez une réponse avec une action suggérée, y compris `auth` `openUrl` l’URL d’authentification.
 4. Le client Microsoft Teams ouvre une fenêtre pop-up hébergeant votre page web à l’aide de l’URL d’authentification donnée.
-5. Une fois que l’utilisateur se signe, vous devez fermer votre fenêtre et envoyer un « code d’authentification » au client Teams client.
+5. Une fois que l’utilisateur s’est signé, vous devez fermer votre fenêtre et envoyer un « code d’authentification » au client Teams client.
 6. Le Teams client ressue ensuite la requête à votre service, qui inclut le code d’authentification passé à l’étape 5.
 
 Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5. Cela garantit qu’un utilisateur malveillant ne tente pas d’usurper ou de compromettre le flux de la signature. Cela permet effectivement de « fermer la boucle » pour terminer la séquence d’authentification sécurisée.
 
 ### <a name="respond-with-a-sign-in-action"></a>Répondre avec une action de se connectez
 
-Pour inciter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
+Pour inviter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de sign-in
 

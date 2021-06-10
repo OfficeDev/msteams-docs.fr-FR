@@ -23,10 +23,10 @@ Consultez l’exemple GitHub [](https://github.com/OfficeDev/Microsoft-Teams-Sam
 2. Le bot détermine si l’utilisateur doit se connecter.
    Dans cet exemple, le bot stocke le jeton d’accès dans son magasin de données utilisateur. Il demande à l’utilisateur de se connecter s’il n’a pas de jeton validé pour le fournisseur d’identité sélectionné. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76))
 3. Le bot construit l’URL vers la page de démarrage du flux d’authentification et envoie une carte à l’utilisateur avec une `signin` action. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
-    Comme les autres flux d’authentification d’application dans Teams, la page de démarrage doit se trouver dans un domaine de votre liste et dans le même domaine que la page de `validDomains` redirection post-connexion.
+    Comme les autres flux d’authentification d’application dans Teams, la page de démarrage doit se trouver dans un domaine qui figure dans votre liste et dans le même domaine que la page de `validDomains` redirection post-connexion.
     > [!IMPORTANT] 
-    > Le flux d’octroi de code d’autorisation OAuth 2.0 appelle un paramètre dans la demande d’authentification qui contient un jeton de session unique pour empêcher une attaque de contrefaçon de demande entre `state` [sites.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) L’exemple utilise un GUID généré de manière aléatoire.
-4. Lorsque l’utilisateur  sélectionne le bouton de Teams, il ouvre une fenêtre popup et navigue vers la page de démarrage.
+    > Le flux d’octroi de code d’autorisation OAuth 2.0 appelle un paramètre dans la demande d’authentification qui contient un jeton de session unique pour empêcher une attaque par falsification de demande entre `state` [sites.](https://en.wikipedia.org/wiki/Cross-site_request_forgery) L’exemple utilise un GUID généré de manière aléatoire.
+4. Lorsque l’utilisateur sélectionne *le* bouton de Teams, il ouvre une fenêtre popup et navigue vers la page de démarrage.
    > [!NOTE]
    > La taille de la fenêtre pop-up peut être contrôlée par les paramètres de chaîne de requête largeur et hauteur dans l’URL. Par exemple, si vous ajoutez width=500 et height=500, la taille de la fenêtre pop-up est de 500 x 500 pixels. Teams affiche la fenêtre pop-up avec la taille de pixel donnée, jusqu’à un pourcentage maximal de la taille de la fenêtre principale.
 

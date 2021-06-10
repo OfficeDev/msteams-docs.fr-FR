@@ -14,15 +14,15 @@ ms.locfileid: "52566550"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio
 
-Le Kit de ressources Microsoft Teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement de développement intégré (IDE) Visual Studio. Le kit de ressources Microsoft Teams vous guide au cours du processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application Teams.
+Le Kit de ressources Microsoft Teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement de développement intégré (IDE) Visual Studio. Le kit de ressources Microsoft Teams vous guide au cours du processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application Teams.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 1. [Activer la prévisualisation pour les développeurs.](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
 
-1. Assurez-vous que **<span>le</span>module ASP.NE T** et le module de développement web ont été ajoutés à Visual Studio instance. Vous pouvez vérifier en suivant les étapes de la Visual Studio en ajoutant ou en supprimant des charges de travail et de la documentation [sur les composants.](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true)
+1. Assurez-vous que **<span>ASP.NE</span>module** de développement web et T a été ajouté à votre instance Visual Studio web. Vous pouvez vérifier en suivant les étapes de la Visual Studio en ajoutant ou en supprimant des charges de travail et de la documentation [sur les composants.](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true)
 
-![module de asp.net Visual Studio](../assets/images/visual-studio-web-dev-module.png)
+![module asp.net visual studio](../assets/images/visual-studio-web-dev-module.png)
 
 3. Si vous souhaitez tester votre application en la déployant à partir de Visual Studio, iiS (Internet Information Services) doit être installé dans votre environnement de développement. Visual Studio n’inclut pas IIS et n’est pas inclus dans la configuration Windows 10, Windows 8 ou Windows 7 par défaut ; Toutefois, vous pouvez télécharger la dernière version à partir du Centre [de téléchargement Microsoft.](https://www.microsoft.com/download/details.aspx?id=48264)
 
@@ -37,7 +37,7 @@ Le Microsoft Teams Shared Computer Toolkit pour Visual Studio est disponible en 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Configurer votre application](#configure-your-app)
 - [Package de votre application](#package-your-app)
-- [Exécuter votre application dans Teams](#install-and-run-your-app-locally)
+- [Exécutez votre application dans Teams](#install-and-run-your-app-locally)
 - [Valider votre application](#validate-your-app)
 - [Publier votre application](#publish-your-app-to-teams)
 
@@ -47,9 +47,9 @@ Le Microsoft Teams Shared Computer Toolkit pour Visual Studio est disponible en 
 1. Choose **Microsoft Teams App** and select **Next**.
 1. Vous arrivez à **l’écran** Configurer votre nouveau projet où vous pouvez choisir le nom **Project,** l’emplacement **et** le nom de **la solution.**
 1. Cochez la case **« Placer la solution et le projet dans le même répertoire**».
-1. Une fenêtre pop-up étiquetée **Ajouter** des fonctionnalités vous permet de choisir une ou plusieurs fonctionnalités pour la configuration de votre projet.
+1. Une fenêtre pop-up étiquetée **Ajouter des** fonctionnalités vous permettra de choisir une ou plusieurs fonctionnalités pour la configuration de votre projet.
 1. Sélectionnez **le bouton** Suivant pour terminer le processus de configuration.
-1. Une fenêtre pop-up étiquetée **Ajouter des** fonctionnalités vous permet de choisir les propriétés de chaque fonctionnalité sélectionnée.
+1. Une fenêtre pop-up libellée **Ajouter des** fonctionnalités vous permet de choisir les propriétés de chaque fonctionnalité sélectionnée.
 1. Sélectionnez **Terminer** et vous allez vous poser sur **Microsoft Teams Shared Computer Toolkit** page d’accueil.
 
 ## <a name="configure-your-app"></a>Configurer votre application
@@ -69,7 +69,7 @@ L’application Teams principale englobe trois composants :
 Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
 
 > [!NOTE]
->Si ce n’est pas déjà fait, vous devrez vous Microsoft 365 votre compte ou compte pour poursuivre le processus de développement.
+>Si vous ne l’avez pas déjà fait, vous devrez vous Microsoft 365 votre compte pour poursuivre le processus de développement.
 >
 > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement au Microsoft 365 [développeur.](https://developer.microsoft.com/microsoft-365/dev-program) Il est *gratuit pendant* 90 jours et est continuellement renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio *Enterprise* ou *Professional,* les deux programmes incluent un abonnement Microsoft 365 développeur [gratuit,](https://aka.ms/MyVisualStudioBenefits)actif pendant toute la durée de vie de Visual Studio abonnement. Pour plus d’informations, voir [Configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
 >
@@ -83,7 +83,7 @@ Lorsqu’une application est installée, le client Teams pare le fichier manifes
 
 ## <a name="package-your-app"></a>Package de votre application
 
-La modification de la page de **détails** de l’application ou la mise à jour du manifeste **ou** des fichiers **.env** dans le dossier **.publish** de votre application génère automatiquement **votre fichierDevelopment.zip..** Le Development.zip inclut trois fichiers obligatoires : **l'manifest.jset** [deux icônes.](../concepts/build-and-test/apps-package.md#app-icons)
+La modification de la page de **détails** de l’application ou la mise à jour du **manifeste,** ou des fichiers **.env** dans le dossier  **.publish** de votre application, génèreront **automatiquementDevelopment.zip** fichier. Le Development.zip inclut trois fichiers obligatoires : **l'manifest.jset** [deux icônes.](../concepts/build-and-test/apps-package.md#app-icons)
 
 ## <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
 
@@ -97,7 +97,7 @@ La modification de la page de **détails** de l’application ou la mise à jour
 
 ## <a name="validate-your-app"></a>Valider votre application
 
-La  page Valider vous permet de vérifier votre package d’application avant de la soumettre à AppSource. Il vous suffit de charger le package de manifeste et l’outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque échec de test, la description fournit un lien de documentation pour vous aider à corriger l’erreur. Pour les tests qui sont difficiles  à automatiser, la liste de contrôle préliminaire détaille 7 des cas de test les plus courants qui ont échoué, ainsi qu’un lien vers une liste de vérification de soumission complète.
+La  page Valider vous permet de vérifier votre package d’application avant de la soumettre à AppSource. Il vous suffit de charger le package de manifeste et l’outil de validation vérifie votre application par rapport à tous les cas de test liés au manifeste. Pour chaque échec de test, la description fournit un lien de documentation pour vous aider à corriger l’erreur. Pour les tests difficiles à automatiser, la liste de contrôle préliminaire détaille 7 des cas de test les plus courants qui ont échoué, ainsi qu’un lien vers une liste de vérification de soumission complète. 
 
 ## <a name="publish-your-app-to-teams"></a>Publier votre application sur Teams
 

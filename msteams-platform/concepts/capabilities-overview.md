@@ -17,7 +17,7 @@ ms.locfileid: "52565150"
 
 L’extensibilité ou les points d’entrée sont différentes façons dont une application peut se manifester pour un utilisateur. Par exemple, un utilisateur peut interagir avec une application sur un onglet de zone de dessin pour faire une activité ou peut choisir d’en faire de même à l’aide d’un bot de conversation. Les différentes fonctionnalités utilisées pour créer votre application Teams vous permettent d’augmenter son étendue d’utilisation.
 
-Il existe plusieurs façons d’étendre Teams, de sorte que chaque application est unique. Certaines n’ont qu’une seule fonctionnalité, telle qu’un webhook, tandis que d’autres disposent de plusieurs fonctionnalités pour offrir différentes options aux utilisateurs. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l’onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
+Il existe plusieurs façons d’étendre Teams, de sorte que chaque application est unique. Certaines n’ont qu’une seule fonctionnalité, telle qu’un webhook, tandis que d’autres disposent de plusieurs fonctionnalités pour offrir aux utilisateurs différentes options. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l’onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
 
 ## <a name="app-capabilities"></a>Fonctionnalités de l’application
 

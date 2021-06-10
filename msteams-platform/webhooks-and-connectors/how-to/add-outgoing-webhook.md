@@ -39,7 +39,7 @@ Les cartes de connecteur prennent en charge trois types d’actions :
 | ------- | ----------- |
 | `ActionCard` |Présente un ou plusieurs types d’entrée et actions associées.|
 | `HttpPOST` | Envoie une demande POST à une URL. |
-| `OpenUri` |  Ouvre un URI dans un navigateur ou une application distinct, cible éventuellement différentes URI en fonction des systèmes d’exploitation.|
+| `OpenUri` |  Ouvre un URI dans un navigateur ou une application distinct, cible éventuellement différents URI basés sur les systèmes d’exploitation.|
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 
@@ -88,7 +88,7 @@ Pour vous assurer que votre service ne reçoit des appels que de clients Teams r
 Votre code doit toujours valider la signature HMAC incluse dans la demande :
 
 * Générer le jeton HMAC à partir du corps de la demande du message. Il existe des bibliothèques standard pour le faire sur la plupart des plateformes (voir [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C \# ). Microsoft Teams utilise le chiffrement HMAC SHA256 standard. Vous devez convertir le corps en tableau d’byte en UTF8.
-* Calculez le hachage à partir du  tableau d’Teams du jeton de sécurité lorsque vous avez inscrit le webhook sortant dans le client Teams]. Voir [Créer un webhook sortant.](#create-an-outgoing-webhook)
+* Calculez le hachage à partir du tableau d’byte du jeton de sécurité fourni par **Teams** lorsque vous avez inscrit le webhook sortant dans le client Teams]. Voir [Créer un webhook sortant.](#create-an-outgoing-webhook)
 * Convertissez le hachage en chaîne à l’aide du codage UTF-8.
 * Comparez la valeur de chaîne du hachage généré à la valeur fournie dans la requête HTTP.
 

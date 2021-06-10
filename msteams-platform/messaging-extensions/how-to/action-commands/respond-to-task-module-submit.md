@@ -69,7 +69,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramètre indique d’où votre extension de messagerie a été déclenchée. `data`L’objet contient les champs du formulaire en tant que paramètres et les valeurs envoyées par l’utilisateur. L’objet JSON est raccourci ici pour mettre en évidence les champs les plus pertinents.
+Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramètre indique d’où votre extension de messagerie a été déclenchée. L’objet contient les champs du formulaire en tant que paramètres et les `data` valeurs envoyées par l’utilisateur. L’objet JSON est raccourci ici pour mettre en évidence les champs les plus pertinents.
 
 ```json
 {
@@ -99,7 +99,7 @@ Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramè
 
 ## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>Répondre avec une carte insérée dans la zone composer un message
 
-Le moyen le plus courant de répondre à la demande consiste à insérer une carte `composeExtension/submitAction` dans la zone de composition d’un message. L’utilisateur soumet la carte à la conversation. Pour plus d’informations sur l’utilisation des cartes, voir [les cartes et les actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
+Le moyen le plus courant de répondre à la demande consiste à insérer une carte `composeExtension/submitAction` dans la zone de composition du message. L’utilisateur soumet la carte à la conversation. Pour plus d’informations sur l’utilisation des cartes, voir [cartes et actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -212,7 +212,7 @@ Le scénario suivant montre comment l’application Polly configure un sondage s
 1. L’utilisateur sélectionne l’extension de messagerie pour appeler le module de tâche.
 1. L’utilisateur configure le sondage avec le module de tâche.
 1. Après avoir soumis le module de tâche, l’application utilise les informations fournies pour créer le sondage en tant que carte adaptative et l’envoie en réponse `botMessagePreview` au client.
-1. L’utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot l’insère dans le canal. Si l’application n’est pas déjà membre du canal, `Send` sélectionnez-la pour l’ajouter.
+1. L’utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot l’insère dans le canal. Si l’application n’est pas déjà membre du canal, `Send` sélectionnez-la.
 
     > [!NOTE] 
     > * Les utilisateurs peuvent également sélectionner `Edit` le message, qui les renvoie au module de tâche d’origine. 
@@ -589,13 +589,13 @@ La section suivante décrit les entités du `OnBehalfOf` tableau :
 |`itemId`|Entier|Décrit l’identification de l’élément. Sa valeur doit être `0` .|
 |`mentionType`|String|Décrit la mention d’une « personne ».|
 |`mri`|String|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
-|`displayName`|String|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution des noms.|
+|`displayName`|String|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution de nom.|
   
 ## <a name="code-sample"></a>Exemple de code
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

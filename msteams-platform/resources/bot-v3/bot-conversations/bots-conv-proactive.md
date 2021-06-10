@@ -3,7 +3,7 @@ title: Messages proactifs
 description: Décrit les bots qui peuvent démarrer une conversation dans Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
-keywords: scénarios d’équipes bot de conversation de messagerie proactive
+keywords: scénarios teams de bot de conversation de messagerie proactive
 ms.openlocfilehash: 82282c4e2a2d48acad8f4bb384976906296be8f9
 ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
@@ -27,7 +27,7 @@ L’envoi d’un message pour démarrer un nouveau thread de conversation est di
 1. [Obtenir l’ID unique et l’ID client de l’utilisateur](#obtain-necessary-user-information)
 1. [Envoyer le message](#examples)
 
-Lorsque vous créez des messages proactifs, vous devez appeler et transmettre l’URL du service avant de créer le message que vous  `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` utiliserez pour envoyer le message. Si ce n’est pas le cas, votre application reçoit une `401: Unauthorized` réponse. Pour plus d’informations, [voir les exemples ci-dessous.](#net-example-from-this-sample)
+Lorsque vous créez des messages proactifs, vous devez appeler et transmettre l’URL du service avant de créer le message que vous utiliserez pour envoyer le  `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` message. Si ce n’est pas le cas, votre application reçoit une `401: Unauthorized` réponse. Pour plus d’informations, [voir les exemples ci-dessous.](#net-example-from-this-sample)
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 
@@ -67,11 +67,11 @@ Les bots peuvent créer des conversations avec un utilisateur Microsoft Teams en
 > [!Note]
 > L’installation proactive d’applications à l’aide d’un graphique est actuellement en version bêta.
 
-Parfois, il peut s’agir d’un message de manière proactive pour les utilisateurs qui n’ont pas installé votre application ou qui n’ont jamais interagi avec celle-ci. Par exemple, vous souhaitez utiliser le communicateur [d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs nécessaires à partir de l’événement que votre application recevra lors de `conversationUpdate` l’installation.
+Parfois, il peut être nécessaire de transmettre un message de manière proactive aux utilisateurs qui n’ont pas installé votre application ou n’ont pas interagi avec celle-ci précédemment. Par exemple, vous souhaitez utiliser le communicateur [d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs nécessaires à partir de l’événement que votre application recevra lors de `conversationUpdate` l’installation.
 
 Vous pouvez uniquement installer des applications qui se trouver dans votre catalogue d’applications d’organisation ou dans Teams’application store.
 
-Pour [plus d’informations,](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) voir Installer des applications pour les utilisateurs Graph documentation. Il existe également un [exemple dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Pour plus [d’informations,](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) voir Installer des applications pour les utilisateurs Graph documentation. Il existe également un [exemple dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Exemples
 

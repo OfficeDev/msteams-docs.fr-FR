@@ -106,7 +106,7 @@ Téléchargez [l’exemple de manifeste d’application.](https://github.com/Mic
 
 ## <a name="2-use-teams-tab-in-sharepoint"></a>2. Utilisez l’Teams dans SharePoint
 
-1. Télécharger et déployez votre package Teams d’application dans SharePoint catalogue d’applications en visitant `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` . Par exemple, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
+1. Télécharger et déployez votre package Teams’application dans votre catalogue SharePoint’applications en visitant `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` . Par exemple, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
 
 1. Lorsque vous y sont invités, **activez Rendre cette solution disponible pour tous les sites de l’organisation.**
 L’image suivante affiche l’écran correspondant :
@@ -120,7 +120,7 @@ L’image suivante affiche l’écran correspondant :
 
 1. Vous pouvez voir l’expérience de SharePoint pages de texte. Nommez votre page sous **le nom Teams Onglet .**
 
-1. Ouvrez la boîte à outils du service Web En appuyant sur le bouton, puis sélectionnez `+` votre Teams, **nommé Contoso HR**. Les composants Web Parts sont triés par ordre alphabétique. S’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour la trouver. Cela crée un élément Web Part dans la zone de dessin qui contient votre Teams onglet. L’image suivante affiche l’affichage Onglet :
+1. Ouvrez la boîte à outils du service Web En appuyant sur le bouton, puis sélectionnez `+` votre onglet Teams nommé **Contoso HR**. Les composants Web Parts sont triés par ordre alphabétique. S’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour la trouver. Cela crée un élément Web Part dans la zone de dessin qui contient votre Teams de dessin. L’image suivante affiche l’affichage Onglet :
 
    ![Affichage Onglet](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

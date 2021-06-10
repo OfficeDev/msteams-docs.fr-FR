@@ -85,4 +85,4 @@ Pour tester le chargement d’une version test dans une équipe, si tous les mes
 * [Conversations de robots](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Consentement spécifique à la ressource](/microsoftteams/resource-specific-consent)
 * [Tester le consentement spécifique aux ressources](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
-* [Télécharger application personnalisée dans Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Télécharger’application personnalisée dans Teams](~/concepts/deploy-and-publish/apps-upload.md)

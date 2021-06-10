@@ -21,7 +21,7 @@ Vous pouvez également utiliser le kit de ressources avec Visual Studio ou en ta
 ## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>Installer le Teams Shared Computer Toolkit pour Visual Studio Code
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Afficher > extensions**).
+1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou Afficher **> extensions**).
 1. Dans la zone de recherche, entrez _Teams Shared Computer Toolkit_.
 1. Sélectionnez le bouton d’installation vert en Teams Shared Computer Toolkit.
 
@@ -41,7 +41,7 @@ Les outils suivants sont installés par l’extension Visual Studio Code si néc
 
     Certaines Teams d’application (bots de conversation, extensions de messagerie et webhooks entrants) nécessitent des connexions entrantes.  Vous devez exposer votre système de développement à la Teams via un tunnel.  Un tunnel n’est pas requis pour les applications qui incluent uniquement des onglets.  Ce package est installé dans le répertoire du projet (à l’aide de npm `devDependencies` ).
 
-## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Utilisez le Teams Shared Computer Toolkit pour Visual Studio Code
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Utilisez la Teams Shared Computer Toolkit pour Visual Studio Code
 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Configurer votre application](#configure-your-app)
@@ -100,13 +100,13 @@ L’application Teams principale englobe trois composants :
       > [!div class="checklist"]
       >
       > - Le manifest.jsest alors en cours.
-      > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou d’organisation.
+      > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou de l’organisation.
       > - Icône [de plan à](../resources/schema/manifest-schema.md#icons) afficher dans la barre Teams’activité.
 
-Le manifeste et les icônes sont stockés dans le dossier de votre projet avant d’être téléchargés `.fx` vers Teams. Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
+Le manifeste et les icônes sont stockés dans le dossier de votre projet avant d’être chargés `.fx` vers Teams. Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
 
 1. Pour configurer votre application, accédez à **l’onglet Teams Shared Computer Toolkit** dans Visual Studio Code.
-1. Sélectionnez **l’Éditeur** de manifeste dans **Project** section.
+1. Sélectionnez **l’Éditeur** de **manifeste dans Project** section.
 
 La modification des champs dans la page détails de l’application met à jour le contenu du manifest.jssur le fichier qui sera finalement intégré au package de l’application.
 

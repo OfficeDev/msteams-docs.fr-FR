@@ -31,7 +31,7 @@ L Microsoft Teams de validation d’application vous permet d’identifier et de
 
 ## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
-Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d’identification et les clés de licence. Vous pouvez ajouter des instructions dans l’Partner Center ou les télécharger dans un emplacement disponible publiquement sur SharePoint.
+Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d’identification et les clés de licence. Vous pouvez ajouter des instructions dans l’Partner Center ou les télécharger vers un emplacement disponible publiquement sur SharePoint.
 
 ### <a name="feature-list"></a>Liste des fonctionnalités
 
@@ -176,7 +176,7 @@ Lors de la soumission, vous êtes invité à catégoriser votre application. Le 
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière, ventes et marketing |
 | Social et fun | Galeries d’images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
 
-### <a name="localize-your-store-listing"></a>Localiser la liste de votre magasin
+### <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
 
 L’Partner Center prend [en charge les listes de magasins localisées.](/office/dev/store/prepare-localized-solutions) Pour plus d’informations, voir comment localiser votre [liste Teams’application.](../../../../concepts/build-and-test/apps-localization.md)
 

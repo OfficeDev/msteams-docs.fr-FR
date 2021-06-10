@@ -22,7 +22,7 @@ La conversation dans les canaux et les conversations de groupe diffère de la co
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Conception d’un bot idéal pour les canaux ou les groupes
 
-Les bots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu’ils @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
+Les bots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent être @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu’ils @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
 
 Un bot dans un groupe ou un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Bien que votre bot puisse certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations avec elle sont visibles par tout le monde. Par conséquent, un bot efficace dans un groupe ou un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance des informations plus appropriées à une conversation un-à-un.
 
@@ -38,9 +38,9 @@ Pour plus d’informations sur les bots qui créent des messages dans les canaux
 
 Pour un bot dans un groupe ou un canal, en plus du schéma de [message](https://docs.botframework.com/core-concepts/reference/#activity)normal, votre bot reçoit également les propriétés suivantes :
 
-* `channelData`Voir [Teams données de canal de distribution.](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data) Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
+* `channelData`Voir [Teams données du canal de distribution.](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data) Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
 * `conversation.id` ID de chaîne de réponse, constitué de l’ID de canal et de l’ID du premier message de la chaîne de réponse.
-* `conversation.isGroup` Est `true` pour les messages de bot dans les canaux ou les conversations de groupe.
+* `conversation.isGroup``true`S’agit des messages de bot dans les canaux ou les conversations de groupe.
 * `conversation.conversationType` Soit `groupChat` ou `channel` .
 * `entities` Peut contenir une ou plusieurs mentions. Pour plus d’informations, voir [Mentions.](#-mentions)
 
@@ -151,7 +151,7 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : Message sortant avec l’utilisateur mentionné
+#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : message sortant avec l’utilisateur mentionné
 
 ```json
 {

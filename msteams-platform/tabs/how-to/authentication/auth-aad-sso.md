@@ -27,7 +27,7 @@ Les utilisateurs se connectent Microsoft Teams via leurs comptes professionnels,
 > [!NOTE]
 > **Démarrage rapide**  
 >
-> Le chemin d’accès le plus simple à la mise en route de l' sso tabulation est d’utiliser le kit Teams outils pour Visual Studio Code. Pour plus d’informations, [voir SSO avec Teams toolkit et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
+> Le chemin d’accès le plus simple à la mise en route de l' sso tabulation est d’utiliser Teams outils pour Visual Studio Code. Pour plus d’informations, [voir SSO avec Teams toolkit et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 
@@ -58,13 +58,13 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 
 1. Obtenez votre [ID d’application AAD.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
 1. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison AAD et, éventuellement, Graph.
-1. [Accordez des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) Teams applications mobiles, web et de bureau.
+1. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour Teams applications de bureau, web et mobiles.
 1. Pré-autoriser les Teams en sélectionnant  le bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
 
 > [!NOTE]
 > Vous devez connaître certaines restrictions importantes :
 >
-> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge, à l’image, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir `User.Read` `Mail.Read` la solution de [contournement recommandée.](#apps-that-require-additional-graph-scopes)
+> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge , c’est-à-dire, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir `User.Read` `Mail.Read` la solution de [contournement recommandée.](#apps-that-require-additional-graph-scopes)
 > * Il est important que le nom de domaine de votre application soit identique au nom de domaine que vous avez enregistré pour votre application AAD.
 > * Actuellement, plusieurs domaines par application ne sont pas pris en charge.
 
@@ -81,12 +81,12 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 1. Sélectionnez **Exposer une API** sous **Gérer**.
 
     > [!NOTE]
-    > Si vous construisez une application avec un bot et un onglet, entrez l’URI d’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+    > Si vous construisez une application avec un bot et un onglet, entrez l’URI de l’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
-1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les doubles barres obliques et le GUID. L’ID entier doit avoir la forme de `api://fully-qualified-domain-name.com/{AppID}` . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
+1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les barres obliques doubles et le GUID. L’ID entier doit avoir la forme de `api://fully-qualified-domain-name.com/{AppID}` . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
 1. Sélectionnez **Ajouter une étendue**. Dans le panneau qui s’ouvre, **entrez access_as_user** comme **nom d’étendue.**
 1. In the **Qui can consent?** box, enter **Admins and users**.
-1. Entrez les détails dans les zones pour configurer les invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue :
+1. Entrez les détails dans les zones de configuration des invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue :
     * **Titre du consentement de l’administrateur :** Teams peut accéder au profil de l’utilisateur.
     * **Description du consentement de** l’administrateur : Teams peut appeler les API web de l’application en tant qu’utilisateur actuel.
     * **Titre de consentement utilisateur**: Teams pouvez accéder à votre profil et effectuer des demandes en votre nom.
@@ -199,7 +199,7 @@ Une autre approche pour obtenir des étendues Graph supplémentaires consiste à
 
 ### <a name="non-aad-authentication"></a>Authentification non-AAD
 
-La solution d’authentification décrite ci-dessus fonctionne uniquement pour les applications et services qui utilisent AAD en tant que fournisseur d’identité. Les applications qui souhaitent s’authentifier à l’aide de services non basés sur AAD doivent continuer à utiliser le flux d’authentification web basé sur les fenêtres [pop-up.](~/concepts/authentication.md)
+La solution d’authentification décrite ci-dessus fonctionne uniquement pour les applications et les services qui utilisent AAD en tant que fournisseur d’identité. Les applications qui souhaitent s’authentifier à l’aide de services non basés sur AAD doivent continuer à utiliser le flux d’authentification web basé sur les fenêtres [pop-up.](~/concepts/authentication.md)
 
 > [!NOTE]
-> L' sso est prise en charge pour les applications du client au sein des clients AAD B2C.
+> L’ation SSO est prise en charge pour les applications du client au sein des clients AAD B2C.

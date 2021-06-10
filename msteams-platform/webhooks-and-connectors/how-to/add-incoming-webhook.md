@@ -29,9 +29,9 @@ Les webhooks entrants sont un type spécial de connecteur dans Teams qui offrent
 | ------- | ----------- |
 |Configuration limitée|Les webhooks entrants sont limitées et configurées au niveau du canal. Par exemple, les webhooks sortants sont limitées et configurées au niveau de l’équipe.|
 |Définitions de ressources sécurisées|Les messages sont formatés en tant que charges utiles JSON. Cette structure de messagerie déclarative empêche l’injection de code malveillant, car il n’y a pas d’exécution de code sur le client.|
-|Prise en charge de la messagerie actionnable|Si vous choisissez d’envoyer des messages par le biais de cartes, vous devez utiliser le format **de carte de message actionnable.** Les cartes de message actionnables sont prises en charge dans tous Office 365 groupes, y compris Teams. Voici des liens vers la référence de carte de [message actionnable](/outlook/actionable-messages/message-card-reference) héritée et l’aire [de jeu de carte de message.](https://messagecardplayground.azurewebsites.net)|
+|Prise en charge de la messagerie actionnable|Si vous choisissez d’envoyer des messages par le biais de cartes, vous devez utiliser le format **de carte de message actionnable.** Les cartes de message actionnables sont prises en charge dans tous Office 365 groupes, y compris Teams. Voici des liens vers la référence de carte de [message actionnable héritée](/outlook/actionable-messages/message-card-reference) et l’aire de [jeu de carte de message.](https://messagecardplayground.azurewebsites.net)|
 |Prise en charge indépendante de la messagerie HTTPS| Les cartes sont un excellent moyen de présenter des informations de manière claire et cohérente. Tout outil ou infrastructure qui peut envoyer des demandes HTTPS POST peut envoyer des messages Teams via un webhook entrant.|
-|Prise en charge de Markdown|Tous les champs de texte dans les cartes de messagerie actionnables prendre en charge markdown de base. **N’utilisez pas de balise HTML dans vos cartes.** Le code HTML est ignoré et traité comme texte brut.|
+|Prise en charge de Markdown|Tous les champs de texte dans les cartes de messagerie actionnables prendre en charge markdown de base. **N’utilisez pas de balises HTML dans vos cartes.** Le code HTML est ignoré et traité comme texte brut.|
 
 > [!Note]
 > Teams bots, extensions de messagerie, webhooks entrants et Bot Framework prise en charge les cartes adaptatives, une infrastructure ouverte de plateforme de cartes croisées. [Teams ne sont pas](../../webhooks-and-connectors/how-to/connectors-creating.md) actuellement en charge les cartes adaptatives. Toutefois, il est possible de créer un [flux](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) qui publie des cartes adaptatives sur Teams canal.
@@ -46,7 +46,7 @@ Les webhooks entrants sont un type spécial de connecteur dans Teams qui offrent
 1. Accédez au canal où vous souhaitez ajouter le webhook et sélectionnez (&#8226;&#8226;&#8226;) *Plus d’options* dans la barre de navigation supérieure.
 1. Choisissez **des connecteurs** dans le menu déroulant et recherchez **Webhook entrant.**
 1. Sélectionnez **le bouton Configurer,** fournissez un nom et, éventuellement, téléchargez un avatar d’image pour votre webhook.
-1. La fenêtre de boîte de dialogue présente une URL unique qui sera m mapée au canal. Veillez à copier et **à enregistrer l’URL;** vous devrez la fournir au service externe.
+1. La fenêtre de boîte de dialogue présente une URL unique qui sera m mapée au canal. Veillez à copier **et à enregistrer l’URL**; vous devrez la fournir au service externe.
 1. Sélectionnez **le bouton** Terminé. Le webhook sera disponible dans le canal d’équipe.
 
 ## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Supprimer un webhook entrant d’un canal Teams web
@@ -55,7 +55,7 @@ Les webhooks entrants sont un type spécial de connecteur dans Teams qui offrent
 
 1. Accédez au canal où le webhook a été ajouté et sélectionnez (&#8226;&#8226;&#8226;) *Plus d’options* dans la barre de navigation supérieure.
 1. Choisissez **connecteurs** dans le menu déroulant.
-1. Sur la gauche, sous **Gérer,** choisissez **Configuré**.
+1. On the left, under **Manage**, choose **Configured**.
 1. Sélectionnez *le numéro configuré pour* voir la liste de vos connecteurs actuels.
 1. Sélectionnez **Gérer** en côté du connecteur que vous souhaitez supprimer.
 1. Sélectionnez **le bouton** Supprimer et une boîte de dialogue Supprimer la *configuration* s’est présentée.

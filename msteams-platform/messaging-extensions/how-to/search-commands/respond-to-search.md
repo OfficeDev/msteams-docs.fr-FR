@@ -27,7 +27,7 @@ Les paramètres de requête se trouvent dans `value` l’objet de la demande, qu
 | Nom de la propriété | Objectif |
 |---|---|
 | `commandId` | Nom de la commande invoquée par l’utilisateur, correspondant à l’une des commandes déclarées dans le manifeste de l’application. |
-| `parameters` | Tableau de paramètres. Chaque objet parameter contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l’utilisateur. |
+| `parameters` | Tableau de paramètres. Chaque objet paramètre contient le nom du paramètre, ainsi que la valeur de paramètre fournie par l’utilisateur. |
 | `queryOptions` | Paramètres de pagination : <br>`skip`: Ignorer le nombre pour cette requête <br>`count`: Nombre d’éléments à renvoyer. |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -102,13 +102,13 @@ Teams prend en charge les types de carte suivants :
 
 Pour avoir une meilleure compréhension et une meilleure vue d’ensemble des cartes, voyez [ce que sont les cartes.](~/task-modules-and-cards/what-are-cards.md)
 
-Pour découvrir comment utiliser les types de carte miniature et hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
+Pour découvrir comment utiliser les types de carte miniature et Hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Pour plus d’informations sur la carte connecteur Office 365, voir Utilisation de [cartes Office 365 connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+Pour plus d’informations sur la carte connecteur Office 365, voir Utilisation Office 365 [cartes de connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
 La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de l’une des deux manières :
 
-* Utilisation de la `preview` propriété dans `attachment` l’objet. La `preview` pièce jointe ne peut être qu’une carte hero ou miniature.
+* Utilisation de la `preview` propriété dans `attachment` l’objet. La pièce jointe peut uniquement être une carte hero ou `preview` miniature.
 * Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
 * Les actions d’appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d’aperçu.
 

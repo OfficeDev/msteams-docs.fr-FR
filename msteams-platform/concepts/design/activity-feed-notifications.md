@@ -33,7 +33,7 @@ Le flux d’activités permet aux utilisateurs d’accéder à leurs notificatio
 |Compteur|Description|
 |----------|-----------|
 |1|**Avatar**: indique qui a initié l’activité.|
-|2|**Icône type d’activité/application**: décrit le type d’activité. Pour les notifications d’application, l’icône de ligne est remplacée par une icône d’application.|
+|2|**Icône type d’activité/application**: représente le type d’activité. Pour les notifications d’application, l’icône de ligne est remplacée par une icône d’application.|
 |3|**Titre (première ligne) : Actor + reason**: *Actor*: Nom de l’utilisateur ou de l’application qui a initié l’activité. *Raison*: décrit l’activité.|
 |4 |**Timestamp :** indique quand l’activité s’est produite.|
 |5 |**Emplacement (deuxième ligne)**: indique où l’activité s’est produite Teams.|
@@ -55,7 +55,7 @@ Chaque activité génère une notification système. Ce qui s’affiche dépend 
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de Teams d’activité sur différents systèmes d’exploitation." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de cartes Teams d’activité sur différents systèmes d’exploitation." border="false":::
 
 |Compteur|Description|
 |----------|-----------|

@@ -23,7 +23,7 @@ Les différents types d’applications que vous pouvez intégrer à Teams sont l
 * **SharePoint**: page SharePoint que vous souhaitez faire surface dans Teams.
 
 Vous pouvez maîtr et suivre les recommandations appropriées applicables à votre scénario d’intégration.
-Ce document donne une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
+Ce document offre une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
  
 ## <a name="get-to-know-teams-platform-capabilities"></a>Faire connaître les fonctionnalités Teams plateforme
 
@@ -50,7 +50,7 @@ L’intégration de toutes les fonctionnalités d’une application existante da
 
 **Conditions préalables à l’intégration de votre application à Teams** Voici les conditions préalables à l’intégration de votre application avec Teams. 
 
-1. [Maposez les cas d’utilisation de votre application Teams fonctionnalités de la plateforme.](../concepts/design/map-use-cases.md)
+1. [Maptez les cas d’utilisation de votre application Teams fonctionnalités de plateforme.](../concepts/design/map-use-cases.md)
 1. [Déterminez les points d’entrée de votre application.](../concepts/extensibility-points.md) S’agit-il d’un usage personnel, d’une collaboration ou des deux ?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>Comprendre les SharePoint et les options
@@ -74,7 +74,7 @@ Si votre application est utilisée par plusieurs organisations, envisagez l’h�
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur les Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge des liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
+Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge de liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
 
 En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-to/access-teams-context.md) [bot.](../bots/how-to/get-teams-context.md)
 

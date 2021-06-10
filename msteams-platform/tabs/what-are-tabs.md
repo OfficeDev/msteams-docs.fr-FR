@@ -1,5 +1,5 @@
 ---
-title: Que sont les onglets personnalisés Teams ?
+title: Qu’est-ce que les onglets personnalisés Teams ?
 author: laujan
 description: Vue d’ensemble des onglets personnalisés sur la plateforme Teams web
 localization_priority: Normal
@@ -49,11 +49,11 @@ Vous pouvez utiliser l’une des méthodes suivantes pour créer des onglets :
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>Déclarer un onglet personnalisé dans le manifeste de l’application
 
-Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page web que vous souhaitez inclure en tant qu’onglet dans votre application, vous définissez une URL et une étendue. En outre, vous devez ajouter le [SDK Teams client JavaScript](/javascript/api/overview/msteams-client) à votre page et appeler après le chargement `microsoftTeams.initialize()` de votre page. Cela indique à Teams d’afficher votre page, vous donne accès à des informations spécifiques à Teams (par exemple, si le client Teams exécute le thème *foncé)* et vous permet d’agir en fonction des résultats.
+Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page web que vous souhaitez inclure en tant qu’onglet dans votre application, vous définissez une URL et une étendue. En outre, vous devez ajouter le [SDK Teams client JavaScript](/javascript/api/overview/msteams-client) à votre page et appeler après le chargement `microsoftTeams.initialize()` de votre page. Cela indique à Teams d’afficher votre page, de vous donner accès à des informations spécifiques à Teams (par exemple, si le client Teams exécute le thème *foncé)* et vous permet d’agir en fonction des résultats.
 
 Que vous choisissiez d’exposer votre onglet dans l’étendue canal/groupe ou personnelle, vous devez présenter une page de contenu HTML <iFrame dans \> votre onglet. [](~/tabs/how-to/create-tab-pages/content-page.md) Pour les onglets personnels, l’URL de contenu est définie directement dans Teams manifeste de l’application par la propriété `contentUrl` dans le `staticTabs` tableau. Le contenu de votre onglet sera le même pour tous les utilisateurs.
 
-Pour les onglets de canal/groupe, vous devez également créer une page de configuration supplémentaire qui permet aux utilisateurs de configurer l’URL de votre page de contenu, généralement à l’aide des paramètres de chaîne de requête URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet canal/groupe peut être ajouté à plusieurs équipes ou conversations de groupe différentes. Lors de chaque installation ultérieure, vos utilisateurs pourront configurer l’onglet, ce qui vous permettra d’adapter l’expérience selon vos besoins. Lorsque les utilisateurs ajoutent ou configurent un onglet, une URL est associée à l’onglet présenté dans l Teams’interface utilisateur. La configuration d’un onglet consiste simplement à ajouter des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet Azure Boards, la page de configuration vous permet de choisir la carte que l’onglet charge. L’URL de la page de configuration est spécifiée par la  `configurationUrl` propriété dans le tableau dans le manifeste de votre `configurableTabs` application.
+Pour les onglets de canal/groupe, vous devez également créer une page de configuration supplémentaire qui permet aux utilisateurs de configurer l’URL de votre page de contenu, généralement à l’aide des paramètres de chaîne de requête URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet canal/groupe peut être ajouté à plusieurs conversations d’équipe ou de groupe différentes. Lors de chaque installation ultérieure, vos utilisateurs pourront configurer l’onglet, ce qui vous permettra d’adapter l’expérience selon vos besoins. Lorsque les utilisateurs ajoutent ou configurent un onglet, une URL est associée à l’onglet présenté dans l Teams’interface utilisateur. La configuration d’un onglet consiste simplement à ajouter des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet Azure Boards, la page de configuration vous permet de choisir la carte que l’onglet charge. L’URL de la page de configuration est spécifiée par la  `configurationUrl` propriété dans le tableau dans le manifeste de votre `configurableTabs` application.
 
 Vous pouvez avoir plusieurs canaux ou onglets de groupe, et jusqu’à 16 onglets personnels par application.
 
@@ -64,7 +64,7 @@ Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vo
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour garantir une expérience utilisateur optimale, vous devez suivre les instructions pour les [onglets](~/tabs/design/tabs-mobile.md) mobiles lors de la création de vos onglets. Les [applications distribuées via Teams store ont](~/concepts/deploy-and-publish/appsource/publish.md) un processus d’approbation distinct pour les clients mobiles. Le comportement par défaut de ces applications est le suivant :
+Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour garantir une expérience utilisateur optimale, vous devez suivre les instructions pour les [onglets](~/tabs/design/tabs-mobile.md) sur mobile lors de la création de vos onglets. Les [applications distribuées via Teams store ont](~/concepts/deploy-and-publish/appsource/publish.md) un processus d’approbation distinct pour les clients mobiles. Le comportement par défaut de ces applications est le suivant :
 
 | **Fonctionnalité d’application** | **Comportement si l’application est approuvée** | **Comportement si l’application n’est pas approuvée** |
 | --- | --- | --- |
@@ -73,16 +73,16 @@ Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams 
 
 > [!NOTE]
 > [Les applications soumises à AppSource](../concepts/deploy-and-publish/overview.md#publish-to-appsource) pour publication sur Teams sont évaluées automatiquement pour la réactivité mobile. Pour toutes les requêtes, teamsubm@microsoft.com.
-> Pour toutes les applications qui ne sont pas distribuées via [AppSource,](../concepts/deploy-and-publish/overview.md)les onglets s’ouvrent dans une vue web dans l’application au sein des clients Teams par défaut et aucun processus d’approbation distinct n’est requis.
+> Pour toutes les applications qui ne sont pas distribuées via [AppSource,](../concepts/deploy-and-publish/overview.md)les onglets s’ouvrent dans une vue web dans l’application dans les clients Teams par défaut et aucun processus d’approbation distinct n’est requis.
 > 
-> Le comportement par défaut des applications s’applique uniquement s’il est distribué via Teams store. Par défaut, tous les onglets s’ouvrent dans le client Teams client.
+> Le comportement par défaut des applications est applicable uniquement s’il est distribué via Teams store. Par défaut, tous les onglets s’ouvrent dans Teams client.
 > Pour lancer une évaluation de votre application pour la convivialité mobile, teamsubm@microsoft.com les détails de votre application.
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Demande des autorisations d’appareil](../concepts/device-capabilities/native-device-permissions.md)
 * [Intégrer les fonctionnalités médias](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-* [Intégrer un scanneur de QR ou de code-barres](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [Intégrer une QR ou un scanneur de code-barres](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Intégrer les fonctionnalités d’emplacement](../concepts/device-capabilities/location-capability.md)
 
 ## <a name="next-step"></a>Étape suivante

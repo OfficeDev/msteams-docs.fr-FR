@@ -29,7 +29,7 @@ Les cartes utilisées par les bots et les extensions de messagerie Teams les typ
 >* Les actions de carte sont différentes [des actions suggérées](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans Bot Framework/Azure Bot Service. Les actions suggérées ne sont pas prises en charge dans Microsoft Teams : si vous souhaitez que les boutons apparaissent sur un message Teams bot, utilisez une carte.
 >* Si vous utilisez une action de carte dans le cadre d’une extension de messagerie, les actions ne fonctionnent pas tant que la carte n’est pas envoyée au canal. Elles ne fonctionnent pas lorsque la carte se trouve dans la zone composer un message.
 
-Teams prend également en charge [les actions de cartes](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)adaptatives, qui sont utilisées uniquement par les cartes adaptatives. Ces actions sont répertoriées dans leur propre section à la fin de cette référence.
+Teams prend également en charge [les actions de cartes adaptatives,](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)qui sont utilisées uniquement par les cartes adaptatives. Ces actions sont répertoriées dans leur propre section à la fin de cette référence.
 
 ## <a name="openurl"></a>openUrl
 
@@ -156,7 +156,7 @@ Le champ doit contenir la chaîne de texte résoyée dans la conversation et `va
 
 Lorsqu’un utilisateur clique sur le bouton, votre bot reçoit `value` l’objet avec des informations supplémentaires. Veuillez noter que le type d’activité sera `invoke` au lieu de ( `message` `activity.Type == "invoke"` ).
 
-### <a name="example-invoke-button-definition-net"></a>Exemple : définition du bouton d’appel (.NET)
+### <a name="example-invoke-button-definition-net"></a>Exemple : Définition du bouton d’appel (.NET)
 
 ```csharp
 var button = new CardAction()
@@ -270,7 +270,7 @@ Pour inclure une `imBack` action avec une carte adaptative, incluez les détails
 | Propriété | Description |
 | --- | --- |
 | `type` | Définir sur `imBack` |
-| `value` | Chaîne qui doit être ré-reprise dans la conversation |
+| `value` | Chaîne devant faire l’écho dans la conversation |
 
 #### <a name="example"></a>Exemple
 

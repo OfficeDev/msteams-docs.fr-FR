@@ -62,9 +62,9 @@ Veillez à enregistrer le **tab.cshtml mis à jour.**
 ## <a name="upload-your-tab-to-teams"></a>Télécharger votre onglet pour Teams
 
 >[!Note]
-> Nous utilisons App Studio pour modifier votre **manifest.jsfichier** et charger le package terminé dans Teams. Vous pouvez également modifier manuellement le **fichiermanifest.jssi** vous préférez. Si vous le faites, assurez-vous de générer à nouveau la solution pour créertab.zip **fichier** à télécharger.
+> Nous utilisons App Studio pour modifier votre **manifest.jsfichier** et charger le package terminé dans Teams. Vous pouvez également modifier manuellement le **fichiermanifest.jssi** vous préférez. Si vous le faites, n’oubliez pas de générer à nouveau la solution pour créertab.zip **fichier** à télécharger.
 
-- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils [de développement de votre navigateur.](~/tabs/how-to/developer-tools.md)
+- Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur.](~/tabs/how-to/developer-tools.md)
 
 - Ouvrez App studio et sélectionnez **l’onglet Éditeur de** manifeste.
 
@@ -92,7 +92,7 @@ Dans la section *Détails de l’application* :
 
 - *Informations sur le* développeur : mettez à jour **le champ URL** du site web avec votre URL HTTPS *ngrok.*
 
-- *URL d’application*: mettez à jour la déclaration **de confidentialité** et les `https://<yourngrokurl>/privacy` conditions **d’utilisation** `https://<yourngrokurl>/tou`>.
+- *URL d’application*: mettez à jour **la déclaration de confidentialité** et les conditions `https://<yourngrokurl>/privacy` **d’utilisation** `https://<yourngrokurl>/tou`>.
 
 #### <a name="capabilities-tabs"></a>Fonctionnalités : onglets
 
@@ -108,7 +108,7 @@ Dans la section *Onglets* :
 
 Dans la section *Domaines et autorisations* :
 
-- Les *domaines du champ onglets* doivent contenir votre URL ngrok sans le préfixe HTTPS - `<yourngrokurl>.ngrok.io/` .
+- Les *domaines à partir de vos onglets* doivent contenir votre URL ngrok sans le préfixe HTTPS - `<yourngrokurl>.ngrok.io/` .
 
 #### <a name="finish-test-and-distribute"></a>Fin : Tester et distribuer
 
@@ -123,7 +123,7 @@ Dans la section *Tester et distribuer* :
 
 - Sélectionnez **Installer**.
 
-- Dans le champ Ajouter à une équipe ou une *conversation* de la fenêtre pop-up, entrez votre équipe et sélectionnez **Installer.**
+- Dans la fenêtre pop-up Ajouter à une équipe ou un champ *de conversation,* entrez votre équipe et sélectionnez **Installer.**
 
 - Dans la fenêtre pop-up suivante, choisissez le canal d’équipe où vous souhaitez que l’onglet s’affiche, puis **sélectionnez Configurer.**
 

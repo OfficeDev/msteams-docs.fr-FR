@@ -39,7 +39,7 @@ Pour plus d’informations, voir [la documentation bot Framework pour](/azure/bo
 
 > [!NOTE]
 > ## <a name="bots-and-microsoft-azure"></a>Bots et Microsoft Azure
-> Depuis décembre 2017, le portail Bot Framework est optimisé pour l’inscription des bots dans Microsoft Azure. Voici quelques opérations que vous pouvez prendre en compte :
+> Depuis décembre 2017, le portail Bot Framework est optimisé pour l’inscription de bots dans Microsoft Azure. Voici quelques opérations que vous pouvez prendre en compte :
 >
 > * Le canal Microsoft Teams pour les bots inscrits sur Azure est gratuit. Les messages envoyés par le Teams ne sont pas comptabilisés dans les messages consommés pour le bot.
 > * Bien qu’il soit possible de créer un [bot Bot Framework](https://dev.botframework.com/bots/new) sans utiliser Azure, vous devez utiliser cette URL ( qui n’est plus exposée dans le portail Bot https://dev.botframework.com/bots/new) Framework.

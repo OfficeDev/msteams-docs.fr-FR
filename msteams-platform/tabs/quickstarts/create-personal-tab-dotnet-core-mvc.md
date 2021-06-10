@@ -54,7 +54,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>dossier wwwroot
 
-Dans ASP. NET Core, le dossier racine web est l’endroit où l’application recherche des fichiers statiques.
+Dans ASP. NET Core, le dossier racine web, est l’endroit où l’application recherche des fichiers statiques.
 
 ### <a name="appmanifest-folder"></a>Dossier AppManifest
 
@@ -64,11 +64,11 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * Icône **de plan transparente de** 32 x 32 pixels.
 * Un **manifest.jssur** le fichier qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams chargez la spécifiée dans votre manifeste, incorporez-la dans un IFrame et restituerez-la `contentUrl` dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams chargez la spécifiée dans votre manifeste, incorporez-la dans un `contentUrl` IFrame et restituerez-la dans votre onglet.
 
 ### <a name="csproj"></a>.csproj
 
-Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
+Dans la fenêtre Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ``` xml
 <PropertyGroup>

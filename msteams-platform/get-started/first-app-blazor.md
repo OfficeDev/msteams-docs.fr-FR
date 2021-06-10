@@ -1,7 +1,7 @@
 ---
 title: Get started - Build your first Teams app with Blazor
 author: adrianhall
-description: Créez rapidement une Microsoft Teams qui affiche un « Hello, World! » à l’aide Microsoft Teams Shared Computer Toolkit et .NET Blazor.
+description: Créez rapidement une application Microsoft Teams qui affiche un message « Hello, World ! » à l’aide Microsoft Teams Shared Computer Toolkit et .NET Blazor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
@@ -16,18 +16,18 @@ ms.locfileid: "52667453"
 
 Dans ce didacticiel, vous allez créer une application Microsoft Teams dans .NET/Blazor qui implémente une application personnelle simple pour tirer des informations du microsoft Graph. (Une *application personnelle inclut* un ensemble d’onglets inclus pour une utilisation individuelle.)  Au cours du didacticiel, vous allez découvrir la structure d’une application Teams, comment exécuter une application localement et comment déployer l’application sur Azure.
 
-L’application qui est conçue affiche les informations utilisateur de base pour l’utilisateur actuel.  Lorsque l’autorisation est accordée, l’application se connecte à l’Graph Microsoft en tant qu’utilisateur actuel pour obtenir le profil complet.
+L'application créée affiche des informations de base sur l'utilisateur actuel.  Lorsque l'autorisation est accordée, l'application se connecte au Microsoft Graph en tant qu'utilisateur actuel pour obtenir le profil complet.
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Assurez-vous que votre environnement de développement est installé en installant les conditions [préalables](prerequisites.md)
+Vérifiez que votre environnement de développement est configuré en installant les [Conditions préalables](prerequisites.md)
 
 > [!div class="nextstepaction"]
 > [Installer les composants prérequis](prerequisites.md)
 
 ## <a name="create-your-project"></a>Créer votre projet
 
-Utilisez la Teams Shared Computer Toolkit pour créer votre premier projet :
+Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -37,11 +37,11 @@ Utilisez la Teams Shared Computer Toolkit pour créer votre premier projet :
 
 1. Sélectionnez **Microsoft Teams Application,** puis appuyez sur **Suivant.**  Pour vous aider à trouver le modèle, utilisez le type de **projet Microsoft Teams**.
 
-1. Donnez un nom au projet et à la solution, puis appuyez sur **Suivant**.
+1. Donnez un nom au projet et à la solution, puis appuyez sur **Suivant.**
 
 1. Fournissez le nom de l’application et le nom de la société, puis appuyez sur **Créer.**  Le nom de l’application et le nom de la société sont affichés pour vos utilisateurs finaux.
 
-1. Votre Teams sera créée en quelques secondes.  Une fois le projet créé, configurer l' sign-on unique avec M365 :
+1. Votre application Teams est créée en quelques secondes.  Une fois le projet créé, configurer l' sign-on unique avec M365 :
 
    - Sélectionnez **Project**  >  **TeamsFx**  >  **Configurer pour l' sso...**.
    - Lorsque vous y invitez, connectez-vous à votre compte d’administrateur M365.
@@ -80,71 +80,71 @@ Vous pouvez maintenant ouvrir la solution dans Visual Studio débogage.
 
 ---
 
-## <a name="take-a-tour-of-the-source-code"></a>Faire une visite guidée du code source
+## <a name="take-a-tour-of-the-source-code"></a>Suivre une visite guidée du code source
 
-Si vous souhaitez ignorer cette section pour le moment, vous pouvez [exécuter votre application localement.](#run-your-app-locally)
+Si vous souhaitez ignorer cette section pour le moment, vous pouvez [exécuter votre application localement](#run-your-app-locally).
 
-Une fois Teams Shared Computer Toolkit votre projet, vous avez les composants pour créer une application personnelle de base pour Teams. Les répertoires et fichiers du projet s’affichent dans la zone Explorateur de solutions Visual Studio 2019.
+Une fois que le Kit de ressources Teams a configuré votre projet, vous disposez des composants pour créer une application personnelle de base pour Teams. Les répertoires et fichiers du projet s’affichent dans la zone Explorateur de solutions Visual Studio 2019.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Capture d’écran montrant les fichiers de projet d’application pour une application personnelle Visual Studio 2019.":::
 
-- Les icônes d’application sont stockées sous forme de fichiers PNG dans `color.png` et `outline.png` .
+- Les icônes d’application sont stockées sous forme de fichiers PNG dans `color.png` et `outline.png`.
 - Le manifeste de l’application pour la publication via le portail de développement pour Teams est stocké dans `Properties/manifest.json` .
 - Un contrôleur de serveur back-end est fourni pour `Controllers/BackendController.cs` faciliter l’authentification.
 
 Étant donné que vous avez créé une application d’onglet lors de l’installation, l’Teams Shared Computer Toolkit crée la modèle de tout le code nécessaire pour un onglet de base en tant que [serveur Blazor](/aspnet/core/blazor).
 
 - `Pages/Tab.razor` est le point d’entrée de l’application frontale.
-- `TeamsFx.cs`et `JS/src/index.js` est utilisé pour initialiser les communications avec l’Teams hôte.
+- `TeamsFx.cs`et `JS/src/index.js` sert à initialiser les communications avec l’Teams hôte.
 
 Vous pouvez ajouter des fonctionnalités de back-end en ajoutant des contrôleurs ASP.NET Core supplémentaires à votre application.
 
 ## <a name="run-your-app-locally"></a>Exécuter votre application localement
 
-Teams Shared Computer Toolkit vous permet d’exécuter votre application localement.  Il s’agit de plusieurs parties qui sont nécessaires pour fournir l’infrastructure Teams s’attend à :
+Le Kit de ressources Teams vous permet d’exécuter votre application localement.  Il s’agit de plusieurs parties nécessaires pour fournir l’infrastructure correcte attendue par Teams :
 
-- Une application est inscrite auprès de Azure Active Directory.  Cette application dispose d’autorisations associées à l’emplacement à partir de quel emplacement l’application est chargée et aux ressources back-end à partir des ressources à partir des quelles elle accède.
+- Une application est inscrite auprès de Azure Active Directory.  Cette application dispose d’autorisations associées à l’emplacement à partir duquel l’application est chargée et aux ressources principales auxquelles elle accède.
 - Une API web est hébergée (via IIS Express) pour faciliter les tâches d’authentification, agissant en tant que proxy entre l’application et Azure Active Directory.  
-- Un manifeste d’application est généré et existe dans le portail de développement pour Teams.  Teams utilise le manifeste de l’application pour indiquer aux clients connectés à partir de quel endroit charger l’application.
+- Un manifeste d'application est généré et existe dans le portail des développeurs pour Teams.  Teams utilise le manifeste de l’application pour indiquer aux clients connectés où charger l’application.
 
-Une fois cette demande effectuée, l’application peut être chargée dans le client Teams client.  Nous utilisons le client web Teams pour voir le code HTML, CSS et JavaScript dans un environnement de développement web standard.
+Une fois cette opération effectuée, l’application peut être chargée dans le client Teams.  Nous utilisons le client web Teams pour voir le code HTML, CSS et JavaScript dans un environnement de développement web standard.
 
 Pour créer et exécuter votre application localement :
 
-1. À partir Visual Studio Code, **appuyez sur F5** pour exécuter votre application en mode débogage.
+1. À partir de Visual Studio Code, appuyez sur **F5** pour exécuter votre application dans le mode de débogage.
 
 1. Si nécessaire, installez le certificat SSL auto-signé pour le débogage local.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Capture d’écran présentant comment l’invite à installer un certificat SSL pour permettre à Teams de charger votre application à partir de localhost.":::
 
-1. Teams seront chargés dans un navigateur web et vous serez invité à vous y inscrire. Si vous êtes invité à ouvrir Microsoft Teams, sélectionnez Annuler pour rester dans le navigateur. Connectez-vous avec votre compte M365.
-1. Lorsque vous avez été invité à installer l’application sur Teams, appuyez sur **Ajouter.**
+1. Teams sera chargée dans un navigateur web et vous serez invité à vous connecter. Si vous êtes invité à ouvrir Microsoft Teams, sélectionnez Annuler pour rester dans le navigateur. Connectez-vous à votre compte M365.
+1. Lorsque vous êtes invité à installer l’application sur Teams, appuyez sur **Ajouter**.
 
 Votre application s’affiche désormais :
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="Capture d’écran de l’application terminée":::
 
-Vous pouvez faire des activités de débogage normales comme s’il s’avait été une autre application web (par exemple, la définition de points d’arrêt). L’application prend en charge le rechargement à chaud.  Si vous modifiez un fichier dans le projet, la page est rechargée.
+Vous pouvez effectuer des activités de débogage normales comme s’il s’agissait d’une autre application web (par exemple, définir des points d’arrêt). L’application prend en charge le rechargement à chaud.  Si vous modifiez un fichier dans le projet, la page est rechargée.
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Découvrez ce qui se produit lorsque vous exécutez votre application localement dans le débogger.</summary>
+<summary>Découvrez ce qui se produit lorsque vous exécutez votre application localement dans le débogueur.</summary>
 
-Lorsque vous appuyez sur F5, le Teams Shared Computer Toolkit :
+Lorsque vous appuyez sur F5, le Kit de ressources Teams :
 
-1. Vous avez inscrit votre application auprès Azure Active Directory.
-1. Votre application a été inscrite pour le « chargement de version latéral » dans Microsoft Teams.
+1. A inscrit votre application dans Azure Active Directory.
+1. A inscrit votre application pour le « chargement latéral » dans Microsoft Teams.
 1. Le back-end de votre application a démarré en cours d’exécution localement.
-1. A démarré votre application frontale hébergée localement.
+1. Démarrage de votre application frontale hébergée localement.
 1. Démarré Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est enregistrée dans le manifeste de l’application).
 
 </details>
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Découvrez comment résoudre les problèmes courants lors de l’exécution locale de votre application.</summary>
+<summary>Découvrez comment résoudre les problèmes courants lorsque vous exécutez votre application localement.</summary>
 
-Pour exécuter correctement votre application dans Teams, vous devez avoir un compte de développement Microsoft 365 qui permet le chargement côté application. Pour plus d’informations sur l’ouverture du compte, voir [Conditions préalables.](prerequisites.md#enable-sideloading)
+Pour exécuter correctement votre application dans Teams, vous devez avoir un compte Microsoft 365 de développement qui autorise le chargement côté application. Pour plus d’informations sur l’ouverture d’un compte, voir [Conditions préalables](prerequisites.md#enable-sideloading).
 
 </details>
 
@@ -170,7 +170,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="Sélectionner Azure App Service comme cible de publication":::
 
-1. Sélectionnez **+** pour créer une nouvelle instance du service d’application.
+1. Sélectionnez **+** pour créer une nouvelle instance de Service d’application.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Créez une instance.":::
 
@@ -214,7 +214,7 @@ Le Portail des développeurs pour Teams l’endroit où les onglets de votre app
 
 1. Une fois l’environnement nouvellement créé sélectionné, **appuyez sur Créer votre première variable d’environnement.**
 
-1. Entrez `azure_app_url` le **nom**.  Entrez l’URL de votre site Azure (sans `https://` la ) comme **valeur**.
+1. Entrez `azure_app_url` le **nom.**  Entrez l’URL de votre site Azure (sans `https://` la ) comme **valeur**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Créer une variable d’environnement":::
 
@@ -267,13 +267,13 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Ajouter un domaine":::
 
-Vous pouvez désormais utiliser l’aperçu **dans Teams** en haut de la page pour lancer votre application dans Teams.
+Vous pouvez désormais utiliser le bouton Aperçu **Teams** en haut de la page pour lancer votre application dans Teams.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Découvrez les autres méthodes de création d’Teams applications :
+Découvrez d’autres méthodes pour la création d’applications Teams :
 
-- [Créer une application Teams avec React](first-app-react.md)
-- [Créer une application Teams en tant que SharePoint Web Part](first-app-spfx.md) (Azure non requis)
+- [Créer une application Teams à l’aide de React](first-app-react.md)
+- [Créer une application Teams en tant que composant WebPart SharePoint](first-app-spfx.md) (Azure non requis)
 - [Créer une application de bot de conversation](first-app-bot.md)
 - [Créer une extension de messagerie](first-message-extension.md)

@@ -24,7 +24,7 @@ Exécutez l’expérience à partir de votre propre ordinateur à des fins de te
 > [!NOTE]
 > Pour le débogage et les tests à l’échelle de la production, nous vous recommandons de suivre les instructions de votre entreprise pour vous assurer que vous êtes en mesure de prendre en charge les tests, les étapes et le déploiement par le biais de vos propres processus.
 
-Utilisez plusieurs manifestes et packages pour conserver la séparation entre les services de production et de développement. Par exemple, vous pouvez choisir d’inscrire des bots de développement et de production distincts et de créer des packages appropriés pour les télécharger dans votre environnement de test. Nous vous recommandons également de charger et de tester votre package de production avant de soumettre votre application pour publication dans notre App Store ou la distribution aux clients.
+Utilisez plusieurs manifestes et packages pour conserver la séparation entre les services de production et de développement. Par exemple, vous pouvez choisir d’inscrire des robots de développement et de production distincts et de créer des packages appropriés pour les télécharger dans votre environnement de test. Nous vous recommandons également de charger et de tester votre package de production avant de soumettre votre application pour publication dans notre App Store ou la distribution aux clients.
 
 ## <a name="purely-local"></a>Purement local
 
@@ -70,7 +70,7 @@ Vous pouvez utiliser n’importe quel service adressan externe pour héberger vo
 
 ## <a name="load-and-run-your-experience"></a>Charger et exécuter votre expérience
 
-Pour charger et exécuter votre expérience dans Microsoft Teams, vous devez créer un package et le télécharger dans Teams. Pour plus d'informations, voir :
+Pour charger et exécuter votre expérience au sein Microsoft Teams, vous devez créer un package et le télécharger dans Teams. Pour plus d’informations, voir :
 
 * [Créez le package pour votre application Microsoft Teams.](~/concepts/build-and-test/apps-package.md)
 * [Télécharger votre application dans Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).

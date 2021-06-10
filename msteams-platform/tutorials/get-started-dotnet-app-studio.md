@@ -128,7 +128,7 @@ Une fois ces modifications apportées, resserez l’application. Si vous utilise
 
 ## <a name="configure-the-app-tab"></a>Configurer l’onglet de l’application
 
-Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab. Choisissez **Hello World dans** la liste Ajouter **un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet et que vous avez sélectionné **Enregistrer,** `Hello World` l’onglet est chargé avec l’onglet.
+Une fois que vous avez installé l’application dans une équipe, vous devez la configurer pour afficher le contenu. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab. Choisissez **Hello World dans** la liste Ajouter **un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de choisir l’onglet à afficher dans ce canal. Une fois que vous avez sélectionné l’onglet et que vous avez sélectionné **Enregistrer,** l’onglet `Hello World` est chargé avec l’onglet.
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
@@ -140,7 +140,7 @@ Vous pouvez maintenant tester le bot dans Teams. Sélectionnez un canal dans l�
 
 ### <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
 
-Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d’entrée dans l’affichage conversation. Un menu avec **l’application « Hello World** » s’affiche. Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
+Pour tester votre extension de messagerie, vous pouvez **sélectionner...** sous la zone d’entrée de votre affichage conversation. Un menu avec **l’application « Hello World » s’affiche.** Lorsque vous le sélectionnez, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 

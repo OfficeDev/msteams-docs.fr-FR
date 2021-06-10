@@ -38,7 +38,7 @@ Pour créer un menu de commandes pour votre bot, vous devez modifier un manifest
 
 **Pour créer un menu de commandes pour votre bot à l’aide d’App Studio**
 
-1. Ouvrez Teams sélectionnez **Applications** dans le volet gauche. Dans la page **Applications,** recherchez **App Studio,** puis sélectionnez **Ouvrir.** 
+1. Ouvrez Teams sélectionnez **Applications** dans le volet gauche. Dans la page **Applications,** recherchez **App Studio** et sélectionnez **Ouvrir.** 
    > [!NOTE]
    > Si vous n’avez **pas App Studio,** vous pouvez le télécharger. Pour plus d’informations, [voir l’installation d’App Studio.](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)
 
@@ -48,7 +48,7 @@ Pour créer un menu de commandes pour votre bot, vous devez modifier un manifest
 
 3. Dans le volet gauche de l’éditeur **de manifeste** et dans la **section** **Fonctionnalités,** sélectionnez Bots .
 
-4. Dans le volet droit de l’éditeur **de manifeste** et dans la section **Commandes,** sélectionnez **Ajouter.** **L’écran Nouvelle commande** s’affiche.
+4. Dans le volet droit de l’éditeur **de manifeste** et dans la section **Commandes,** sélectionnez **Ajouter**. **L’écran Nouvelle commande** s’affiche.
 
     ![Bouton Ajouter du menu commandes App Studio](./conversations/media/AppStudio-CommandMenu-Add.png)
 

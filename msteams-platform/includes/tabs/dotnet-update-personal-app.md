@@ -4,7 +4,7 @@
 
 Pour que votre onglet s’affiche dans Teams, vous devez inclure le **SDK client JavaScript Microsoft Teams** et inclure un appel après le chargement de `microsoftTeams.initialize()` votre page. Voici comment votre onglet et l’application Teams communiquent :
 
-- Accédez au **dossier** partagé, ouvrez **_Layout.cshtml** et ajoutez ce qui suit à la `<head>` section des balises :
+- Accédez au **dossier** partagé, **ouvrez _Layout.cshtml** et ajoutez ce qui suit à la `<head>` section des balises :
 
     ```html
     `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`

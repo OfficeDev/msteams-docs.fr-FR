@@ -12,9 +12,9 @@ ms.locfileid: "52565892"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot
 
-Les demandes sortantes en cours au bot ne contiennent pas dans l’en-tête ou l’URL d’informations qui permettent aux bots d’router le trafic sans décompresser toute la charge utile. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID de client dans les en-têtes.
+Les demandes sortantes en cours au bot ne contiennent pas dans l’en-tête ou l’URL des informations qui permettent aux bots d’router le trafic sans décompresser toute la charge utile. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID de client dans les en-têtes.
 
-## <a name="request-header-fields"></a>Champs d’en-tête de demande
+## <a name="request-header-fields"></a>Champs d’en-tête de requête
 
 Deux champs d’en-tête de requête non standard sont ajoutés à toutes les demandes envoyées aux bots, à la fois pour le flux asynchrone et le flux synchrone. Le tableau suivant fournit les champs d’en-tête de requête et leurs valeurs :
 
@@ -25,4 +25,4 @@ Deux champs d’en-tête de requête non standard sont ajoutés à toutes les de
 
 Si le client ou l’ID de conversation n’est pas présent dans l’activité ou n’a pas été validé côté service, la valeur est vide.
 
-![Champs d’en-tête de demande](~/assets/images/bots/requestheaderfields.png)
+![Champs d’en-tête de requête](~/assets/images/bots/requestheaderfields.png)

@@ -1,5 +1,5 @@
 ---
-title: 'Concevoir votre application : comprendre le système de conception'
+title: Concevoir votre application - Comprendre le système de conception
 description: Découvrez les principes de base de la conception de votre application Microsoft Teams, notamment la disposition, le modèle de couleurs et bien plus encore.
 author: heath-hamilton
 localization_priority: Normal
@@ -22,7 +22,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
    :::column span="3":::
 
-      Teams s’appuie sur une disposition de grille pour garantir des relations cohérentes et élégantes entre les composants de conception. L’unité de base de 4 pixels de la grille permet aux composants de s’écheller de façon cohérente sur toutes les tailles d’affichage Teams.
+      Teams s’appuie sur une disposition de grille pour garantir des relations cohérentes et élégantes entre les composants de conception. L’unité de base de 4 pixels de la grille permet aux composants de s’écheller de manière cohérente sur toutes les tailles d’affichage Teams.
 
       * [Voir les instructions de disposition complète (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implémenter la disposition (interface utilisateur Fluent)](https://developer.microsoft.com/fluentui#/styles/web/layout)
@@ -47,7 +47,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Image conceptuelle de Teams avatars." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Image conceptuelle d’Teams avatars." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -135,7 +135,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
    :::column span="3":::
 
-      Pour faire partie de Teams, votre copie d’application doit en général respecter les principes de voix [Microsoft suivants](/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to hand.
+      Pour faire partie de Teams, votre copie d’application en général doit respecter les principes de voix [Microsoft suivants](/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to hand.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Voir les instructions de copie complète et de contenu, y compris l’écriture pour les bots (Figma)</a>
 

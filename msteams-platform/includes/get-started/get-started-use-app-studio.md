@@ -76,7 +76,7 @@ Les onglets personnels sont différents de l’onglet Équipe. **L’onglet Hell
 
 Mettez à jour les zones suivantes avec l’URL de votre application :
 
-- Modifier la zone **URL** de contenu en `https://yourteamsapp.ngrok.io/hello`
+- Modifier la **zone URL** de contenu en `https://yourteamsapp.ngrok.io/hello`
 - Modifier la zone **URL du site** web en `https://yourteamsapp.ngrok.io/hello`
 
 Remplacez `yourteamsapp.ngrok.io` par l’URL que vous avez utilisée lors de l’hébergement de votre application.
@@ -103,7 +103,7 @@ Pour configurer votre bot, complétez les étapes suivantes :
 1. Sélectionnez **Enregistrer** pour quitter la boîte de dialogue. App Studio enregistre votre bot auprès de Microsoft et affiche votre nouveau bot dans la liste des bots. 
 1. À présent, ouvrez un fichier texte dans le bloc-notes et copiez-y votre nouvel ID de bot.
 1. Cliquez **sur Générer un nouveau** mot de passe et notez le mot de passe dans le même fichier texte que celui où vous avez noté votre ID d’application de bot.
-1. Mettez à **jour l’adresse du point** de terminaison du bot et remplacez-la par l’URL que vous avez utilisée lors de `https://yourteamsapp.ngrok.io/api/messages` `yourteamsapp.ngrok.io` l’hébergement de votre application.
+1. Mettez à jour **l’adresse du point** de terminaison du bot et remplacez-la par l’URL que vous avez `https://yourteamsapp.ngrok.io/api/messages` utilisée lors de `yourteamsapp.ngrok.io` l’hébergement de votre application.
 1. Enregistrez maintenant votre fichier texte, car vous devez ajouter les informations du fichier à votre application hébergée pour permettre une communication sécurisée avec votre bot.
 
 #### <a name="messaging-extensions"></a>Extensions de messagerie

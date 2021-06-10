@@ -38,7 +38,7 @@ Pour créer et exécuter votre application, appuyez **sur F5** ou choisissez **D
 
 ### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour *HTTPS* sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la `Configure()` méthode :
+Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour *HTTPS* sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la `Configure()` méthode :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -76,7 +76,7 @@ Ces fichiers doivent être compressés dans un package d’application pour êtr
 
 ### <a name="csproj"></a>.csproj
 
-Dans la fenêtre Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
+Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ```xml
 <PropertyGroup>
@@ -110,11 +110,11 @@ Dans la fenêtre Visual Studio’Explorateur de solutions, cliquez avec le bouto
 
 ## <a name="update-your-application"></a>Mettre à jour votre application
 
-Dans *Tab.cshtml,* l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du  **bouton Sélectionner** gris ou Sélectionner rouge se déclenche `saveGray()` ou, respectivement, définit et active le bouton Enregistrer `saveRed()` sur la page de `settings.setValidityState(true)` configuration.  Ce code vous permet Teams que vous avez satisfait aux exigences de configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres `settings.setSettings` sont définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+Dans *Tab.cshtml,* l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du  **bouton Sélectionner** gris ou Sélectionner rouge se déclenche `saveGray()` ou, respectivement, définit et active le bouton Enregistrer `saveRed()` sur la page de `settings.setValidityState(true)` configuration.  Ce code vous Teams que vous avez satisfait aux exigences de configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres `settings.setSettings` sont définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Créer un onglet canal et de groupe personnalisé avec ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)
+> [Créer un onglet de groupe et de canal personnalisé avec ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)

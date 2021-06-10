@@ -81,7 +81,7 @@ Ajoutez ce qui suit au tableau `staticTabs` vide ( ) et `staticTabs":[]` ajoutez
 
 ```
 
-N’oubliez pas de mettre à jour le composant de chemin d’accès **« contentURL** **» yourDefaultTabNameTab** avec votre nom d’onglet réel.
+N’oubliez pas de mettre à jour le composant de chemin d’accès **« contentURL** » **yourDefaultTabNameTab** avec votre nom d’onglet réel.
 
 - Enregistrez lemanifest.js **mis à jour sur**.
 

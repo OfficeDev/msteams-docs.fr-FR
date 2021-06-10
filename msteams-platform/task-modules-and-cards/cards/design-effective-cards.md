@@ -21,7 +21,7 @@ L’infrastructure de carte adaptative est utilisée dans de nombreux produits M
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions de conception plus complètes pour les cartes adaptatives dans Teams, y compris les éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit d’interface utilisateur Microsoft Teams. Le kit d’interface utilisateur couvre également des sujets essentiels tels que les thèmes, l’accessibilité et le resserrement dynamique.
+Vous trouverez des instructions de conception plus complètes pour les cartes adaptatives dans Teams, y compris les éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d’interface utilisateur Microsoft Teams. Le kit d’interface utilisateur couvre également des sujets essentiels tels que les thèmes, l’accessibilité et le resserrement réactif.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -37,7 +37,7 @@ Vous pouvez également commencer à concevoir vos cartes adaptatives directement
 
 ### <a name="hero"></a>Hero
 
-Notre carte la plus grande. Permet de partager des articles ou des scénarios où une image est l’essentiel de l’article.
+Notre carte la plus grande. Permet de partager des articles ou des scénarios où une image indique la majeure partie de l’article.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
@@ -59,7 +59,7 @@ Notre carte la plus grande. Permet de partager des articles ou des scénarios o�
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="L’exemple montre une carte miniature carte adaptative sur mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="L’exemple montre une carte miniature de carte adaptative sur un appareil mobile." border="false":::
 
 ---
 
@@ -76,22 +76,12 @@ Notre carte la plus grande. Permet de partager des articles ou des scénarios o�
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Exemple de carte de liste carte adaptative sur mobile." border="false":::
 
 ---
-
-### Digest
-
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
 ---
 
-### <a name="media"></a>Support
+### <a name="media"></a>Médias
 
 À utiliser lorsque vous souhaitez combiner du texte et du contenu multimédia, comme l’audio ou la vidéo.
 
@@ -101,7 +91,7 @@ Use for news digests and round-up posts. Note: We recommend the thumbnail card f
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Exemple de carte multimédia carte adaptative sur mobile." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="L’exemple montre une carte multimédia carte adaptative sur mobile." border="false":::
 
 ---
 
@@ -167,7 +157,7 @@ Permet de collecter plusieurs entrées de l’utilisateur.
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="L’exemple montre une carte de choix de carte adaptative." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Un exemple illustre une carte de choix de carte adaptative." border="false":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 

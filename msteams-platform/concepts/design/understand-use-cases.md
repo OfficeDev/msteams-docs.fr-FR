@@ -26,7 +26,7 @@ Chaque bonne application présente un problème principal ou un besoin qu’elle
 
 * Quels sont les avantages et les inconvénients du système d’état actuel utilisé par vos utilisateurs ?
 * Quels sont les problèmes que vos utilisateurs rencontrent aujourd’hui et que vous souhaitez résoudre ?
-* Quelles fonctionnalités vos utilisateurs aiment et aiment-ils dans leur façon actuelle de faire le processus ?
+* Quelles fonctionnalités ou fonctionnalités vos utilisateurs aiment et aiment dans leur façon actuelle de faire le processus ?
 
 ## <a name="understand-your-user"></a>Comprendre votre utilisateur
 
@@ -42,7 +42,7 @@ Parfois, la réponse est que nous voulons résoudre ce problème pour tous *Team
 
 ## <a name="understand-the-limitations-of-the-app"></a>Comprendre les limitations de l’application
 
-Connaître les limitations des applications en termes d’accessibilité des données et de résidence des données vous aidera à concevoir de meilleures applications. Ceci est important, car le fait d’avoir des informations sur les personnes qui possèdent les données et la disponibilité des API a une incidence sur l’architecture de la solution. Là encore, posez-vous des questions pertinentes, telles que :
+La connaissance des limitations des applications en termes d’accessibilité des données et de résidence des données vous aidera à concevoir de meilleures applications. Ceci est important, car le fait d’avoir des informations sur les personnes qui possèdent les données et la disponibilité des API a une incidence sur l’architecture de la solution. Là encore, posez-vous des questions pertinentes, telles que :
 
 * Quels sont les défis liés à l’intégration back end de l’application actuelle ?
 * Qui possède les données du back end ? Interne ou tiers.
@@ -60,7 +60,7 @@ Vous devez déterminer dès le début si vous devez protéger les services que v
 
 ## <a name="decide-what-goes-in-teams"></a>Décider de ce qui se passe Teams
 
-Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l’ensemble de l’application va se trouver à l’intérieur du client Teams client. Vérifiez s’il est logique de n’apporter qu’une partie de l’expérience. Avec une combinaison d’onglets, d’extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
+Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l’ensemble de l’application sera à l’intérieur du client Teams client. Vérifiez s’il est logique de n’apporter qu’une partie de l’expérience. Avec une combinaison d’onglets, d’extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
 N’oubliez pas qui sont vos utilisateurs et le problème que vous essayez de résoudre. Ont-ils déjà un système pour résoudre la plupart du problème ou vous devez simplement étendre un sous-ensemble de fonctionnalités dans Teams ? En règle générale, si vous comptez apporter une partie de votre solution, vous devez vous concentrer sur le partage, la collaboration, l’initiative et la surveillance des flux de travail.
 
 ## <a name="plan-the-onboarding-experience"></a>Planifier l’expérience d’intégration

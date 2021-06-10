@@ -22,7 +22,7 @@ Lorsque vous localisez votre Microsoft Teams, vous devez prendre en compte les c
 
 ## <a name="localizing-your-appsource-listing"></a>Localisation de votre liste AppSource
 
-Si vous publiez dans le Store, vous devez savoir que la recherche dans AppSource n’est pas encore prise en charge. Toutefois, en vue de la prise en charge des listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Actuellement, seules les informations de langue par défaut (en anglais) que vous fournissez dans l’Partner [Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste s’affichent dans la liste du site web [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) de votre application.
+Si vous publiez dans le Store, sachez que la recherche dans AppSource n’est pas encore prise en charge. Toutefois, en vue de la prise en charge des listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Actuellement, seules les informations de langue par défaut (anglais) que vous fournissez dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste s’affichent dans la liste du site web [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) pour votre application.
 
 ### <a name="example-of-configuring-localization"></a>Exemple de configuration de la localisation
 
@@ -70,7 +70,7 @@ Vous souhaitez ensuite ajouter la propriété « localizationInfo » avec la lan
 }
 ```
 
-Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent adhérer au schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété « localizationInfo » de votre manifeste. Chaque fichier correspond à une balise de langue que le client Teams utilise pour choisir les chaînes appropriées. La balise de langue prend la forme, mais il est recommandé d’omettre la partie pour cibler toutes les régions qui prennent en charge <language> - <region> la <region> langue souhaitée.
+Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent adhérer au schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété « localizationInfo » de votre manifeste. Chaque fichier correspond à une balise de langue que le client Teams utilise pour choisir les chaînes appropriées. La balise de langue prend la forme de, mais il est recommandé d’omettre la partie pour cibler toutes les régions qui prennent en charge <language> - <region> la <region> langue souhaitée.
 
 Le client Teams appliquera les chaînes dans cet ordre : chaînes de langue par défaut -> chaînes de langue de l’utilisateur uniquement -> langue de l’utilisateur + chaînes de région de l’utilisateur.
 

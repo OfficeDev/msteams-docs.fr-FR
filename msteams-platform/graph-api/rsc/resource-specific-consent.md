@@ -36,7 +36,7 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 |TeamMember.Read.Group|Obtenez les membres de cette équipe.|
 
 >[!NOTE]
->Les autorisations propres aux ressources sont uniquement disponibles pour Teams applications installées sur le client Teams et ne font actuellement pas partie du portail Azure Active Directory web.
+>Les autorisations propres aux ressources sont disponibles uniquement pour Teams applications installées sur le client Teams et ne font actuellement pas partie du portail Azure Active Directory.
 
 ## <a name="enable-resource-specific-consent-in-your-application"></a>Activer le consentement spécifique aux ressources dans votre application
 
@@ -66,14 +66,14 @@ Pour activer ou désactiver le consentement du propriétaire du groupe à l’ai
 
 ## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>Inscrire votre application auprès de Plateforme d’identités Microsoft via le portail Azure AD
 
-Le portail Azure Active Directory fournit une plateforme centrale pour vous aider à inscrire et configurer vos applications. Votre application doit être inscrite dans le portail Azure AD pour s’intégrer au Plateforme d’identités Microsoft et appeler les API Microsoft Graph. Pour plus d’informations, voir [Inscrire une application avec le Plateforme d’identités Microsoft](/graph/auth-register-app-v2).
+Le Azure Active Directory web fournit une plateforme centrale pour l’inscription et la configuration de vos applications. Votre application doit être inscrite dans le portail Azure AD pour s’intégrer au Plateforme d’identités Microsoft et appeler les API Microsoft Graph. Pour plus d’informations, voir [Inscrire une application avec le Plateforme d’identités Microsoft](/graph/auth-register-app-v2).
 
 >[!WARNING]
 >N’inscrivez pas plusieurs Teams sur le même ID d’application Azure AD. L’ID d’application doit être unique pour chaque application. Les tentatives d’installation de plusieurs applications sur le même ID d’application échouent.
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Passer en revue vos autorisations d’application dans le portail Azure AD
 
-Accédez à la page  =>  **d’inscription de l’application d’accueil** et sélectionnez votre application RSC. Choisissez **les autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application. Si votre application effectuera uniquement des appels RSC Graph API, supprimez toutes les autorisations sur cette page. Si votre application doit également effectuer des appels non RSC, conservez ces autorisations selon vos besoins.
+Accédez à la page **d’inscription**  =>  **de l’application d’accueil** et sélectionnez votre application RSC. Choisissez **les autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application. Si votre application effectuera uniquement des appels RSC Graph API, supprimez toutes les autorisations sur cette page. Si votre application doit également effectuer des appels non RSC, conservez ces autorisations selon vos besoins.
 
 >[!IMPORTANT]
 >Le portail Azure AD ne peut pas être utilisé pour demander des autorisations RSC. Les autorisations RSC sont actuellement exclusives aux applications Teams installées dans le client Teams et sont déclarées dans le fichier de manifeste d’application (JSON).
@@ -84,7 +84,7 @@ Pour effectuer des Graph API, vous devez obtenir un jeton d’accès pour votre 
 
 Vous devez avoir les valeurs suivantes du processus d’inscription Azure AD pour récupérer un jeton d’accès à partir de la plateforme d’identité :
 
-- ID **d’application attribué** par le portail d’inscription de l’application. Si votre application prend en charge l' sign-on unique (SSO), vous devez utiliser le même ID d’application pour votre application et l' cesso.
+- ID **d’application attribué** par le portail d’inscription de l’application. Si votre application prend en charge l' sign-on unique (SSO), vous devez utiliser le même ID d’application pour votre application et l' sso.
 - Clé **secrète client/mot de passe** ou paire clé publique/clé privée **(certificat).** N’est pas nécessaire pour les applications natives.
 - URI **de redirection** (ou URL de réponse) pour que votre application reçoie des réponses d’Azure AD.
 
@@ -97,7 +97,7 @@ Les autorisations RSC sont déclarées dans votre fichier de manifeste d’appli
 > [!div class="checklist"]
 >
 > - **id** : id de votre application Azure AD. Pour plus d’informations, voir [Inscrire votre application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)
-> - **ressource**  : toute chaîne. Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.
+> - **ressource**  — toute chaîne. Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.
 > - **autorisations d’application** : autorisations RSC pour votre application. Pour plus d’informations, [voir Autorisations spécifiques aux ressources.](resource-specific-consent.md#resource-specific-permissions)
 
 >
@@ -145,7 +145,7 @@ Une fois l’application installée sur une équipe, vous pouvez utiliser [Graph
 > - Sélectionnez l’équipe sur laquelle l’application est installée dans le menu déroulant.
 > - Sélectionnez **l’icône Options** supplémentaires (&#8943;).
 > - Sélectionnez **Obtenir un lien vers l’équipe.**
-> - Copiez et enregistrez la **valeur groupId** à partir de la chaîne.
+> - Copiez et enregistrez **la valeur groupId** à partir de la chaîne.
 > - Connectez-vous **Graph Explorer.**
 > - Faites un **appel GET** au point de terminaison suivant : `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` . Le champ clientAppId de la réponse sera map mapé à l’appId spécifié dans le manifeste Teams’application.
   ![Graph’explorateur à l’appel GET.](../../assets/images/graph-permissions.png)

@@ -81,7 +81,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> Vous pouvez [bifurcation](https://help.github.com/articles/fork-a-repo/) [de ce repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) si vous souhaitez modifier et vérifier vos modifications apportées à votre GitHub de données pour référence ultérieure.
+> Vous pouvez [contredesser](https://help.github.com/articles/fork-a-repo/) [ce repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) si vous souhaitez modifier et vérifier vos modifications apportées à votre GitHub de données pour référence ultérieure.
 
 <a name="BuildRun"></a>
 
@@ -121,7 +121,7 @@ Lorsque l’application Hello World démarre, elle s’affiche `App started list
 
 ### <a name="host-the-sample-app"></a>Héberger l’exemple d’application
 
-N’oubliez pas que Microsoft Teams sont des applications web qui exposent une ou plusieurs fonctionnalités. Pour que la Teams charge votre application, votre application doit être accessible à partir d’Internet. Pour rendre votre application accessible à partir d’Internet, vous devez *l’héberger.*
+N’oubliez pas que les applications Microsoft Teams sont des applications web qui exposent une ou plusieurs fonctionnalités. Pour que la Teams charge votre application, votre application doit être accessible à partir d’Internet. Pour rendre votre application accessible à partir d’Internet, vous devez *l’héberger.*
 
 Pour les tests locaux, vous pouvez exécuter l’application sur votre ordinateur local et créer un tunnel vers celui-ci avec un point de terminaison web. [ngrok est](https://ngrok.com) un outil gratuit qui vous permet de le faire. Avec *ngrok,* vous pouvez obtenir une adresse web telle que `https://d0ac14a5.ngrok.io` (cette URL n’est qu’un exemple). Vous pouvez [télécharger et installer](https://ngrok.com/download) *ngrok* pour votre environnement. Veillez à l’ajouter à un emplacement dans votre `PATH` .
 
@@ -131,7 +131,7 @@ Une fois l’installation installée, vous pouvez ouvrir une nouvelle fenêtre t
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok écoutera* les demandes provenant d’Internet et les dirigera vers votre application en cours d’exécution sur le port 3333. Vous pouvez vérifier en ouvrant votre navigateur et en allant `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Assurez-vous d’utiliser l’adresse de forwarding affichée par *ngrok dans* votre session console au lieu de cette URL.
+*Ngrok écoutera* les demandes provenant d’Internet et les routera vers votre application en cours d’exécution sur le port 3333. Vous pouvez vérifier en ouvrant votre navigateur et en allant `https://d0ac14a5.ngrok.io/hello` charger la page Hello de votre application. Assurez-vous d’utiliser l’adresse de forwarding affichée par *ngrok dans* votre session console au lieu de cette URL.
 
 > [!NOTE]
 > Si vous avez utilisé un [](#build-and-run-the-sample) autre port dans la build et l’étape d’utilisation ci-dessus, veillez à utiliser le même numéro de port pour configurer le tunnel *ngrok.*
@@ -165,7 +165,7 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-La façon dont vous faites cela diffère en fonction de la façon dont vous avez hébergé votre application. L’élément important de l’utilisation des variables d’environnement est que ces valeurs font partie de votre environnement : elles sont accessibles par le code de votre application, mais elles ne sont pas exposées à des tiers qui peuvent examiner les fichiers qui constitueront votre site.
+La façon dont vous le faites diffère en fonction de la façon dont vous avez hébergé votre application. L’élément important de l’utilisation des variables d’environnement est que ces valeurs font partie de votre environnement : elles sont accessibles par le code de votre application, mais elles ne sont pas exposées à des tiers qui peuvent examiner les fichiers qui constitueront votre site.
 
 Si vous exécutez l’application à l’aide de ngrok, vous devez configurer certaines variables d’environnement local. Il existe plusieurs façons de le faire, mais le plus simple, si vous utilisez Visual Studio Code, consiste à ajouter une [configuration de lancement](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 
@@ -190,7 +190,7 @@ Si vous exécutez l’application à l’aide de ngrok, vous devez configurer ce
 Où :
 
 MICROSOFT_APP_ID et MICROSOFT_APP_PASSWORD est l’ID et le mot de passe, respectivement, pour votre bot.
-NODE_DEBUG vous montre ce qui se passe dans votre bot dans la console Visual Studio Code débogage.
+NODE_DEBUG affiche ce qui se passe dans votre bot dans la console Visual Studio Code débogage.
 NODE_CONFIG_DIR pointe vers le répertoire à la racine du référentiel (par défaut, lorsque l’application est exécuté localement, elle le recherche dans le dossier src).
 
 > [!Note]

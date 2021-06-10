@@ -14,7 +14,7 @@ ms.locfileid: "52631012"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
-Lorsque vous testez votre bot, vous devez prendre en compte les contextes dans lequel vous souhaitez que votre bot s’exécute et les fonctionnalités que vous avez peut-être ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous choisissez pour tester votre bot s’aligne sur ses fonctionnalités.
+Lorsque vous testez votre bot, vous devez prendre en compte les contextes dans lequel vous souhaitez que votre bot s’exécute, ainsi que les fonctionnalités que vous avez peut-être ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous choisissez pour tester votre bot s’aligne sur ses fonctionnalités.
 
 ## <a name="test-by-uploading-to-teams"></a>Testez en chargeant vers Teams
 
@@ -42,11 +42,11 @@ Utilisez le point de terminaison https fourni par ngrok dans le manifeste de vot
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>Testez votre bot sans télécharger vers Teams
 
-Parfois, il peut être nécessaire de tester votre bot sans l’installer en tant qu’application dans Teams. Nous fournissons deux méthodes pour tester le bot. Il peut être utile de tester votre bot sans l’installer en tant qu’application pour vous assurer qu’il est disponible et de répondre. Toutefois, il ne vous permettra pas de tester l’ensemble des fonctionnalités Microsoft Teams que vous avez peut-être ajoutées à votre bot. Si vous devez tester entièrement votre bot, consultez [les tests en chargeant](#test-by-uploading-to-teams).
+Parfois, il peut être nécessaire de tester votre bot sans l’installer en tant qu’application dans Teams. Nous fournissons deux méthodes pour tester le bot. Il peut être utile de tester votre bot sans l’installer en tant qu’application pour vous assurer qu’il est disponible et de répondre. Toutefois, il ne vous permettra pas de tester l’ensemble des fonctionnalités Microsoft Teams que vous avez peut-être ajoutées à votre bot. Si vous avez besoin de tester entièrement votre bot, consultez [les tests en chargeant](#test-by-uploading-to-teams).
 
 ### <a name="use-the-bot-emulator"></a>Utiliser l’émulateur de bot
 
-Le Bot Framework Emulator est une application de bureau qui permet aux développeurs de bots de tester et déboguer leurs bots localement ou à distance. L’émulateur vous permet de discuter avec votre bot et d’inspecter les messages qu’il envoie et reçoit. Cela peut être utile pour vérifier que votre bot est disponible et y répondre. Toutefois, l’émulateur ne vous permet pas de tester les fonctionnalités spécifiques Teams que vous avez ajoutées au bot, ni les réponses de votre bot ne sont une représentation visuelle précise de leur rendu dans Teams. Si vous devez tester l’un de ces éléments, il est préférable de [télécharger votre bot.](#test-by-uploading-to-teams)
+Le Bot Framework Emulator est une application de bureau qui permet aux développeurs de bots de tester et déboguer leurs bots localement ou à distance. L’émulateur vous permet de discuter avec votre bot et d’inspecter les messages qu’il envoie et reçoit. Cela peut être utile pour vérifier que votre bot est disponible et y répondre. Toutefois, l’émulateur ne vous permet pas de tester les fonctionnalités spécifiques à Teams que vous avez ajoutées au bot, ni les réponses de votre bot ne sont une représentation visuelle précise de leur rendu dans Teams. Si vous devez tester l’un de ces éléments, il est préférable de [télécharger votre bot.](#test-by-uploading-to-teams)
 
 Pour plus d’informations, [voir les instructions complètes sur le Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
@@ -55,23 +55,23 @@ Pour plus d’informations, [voir les instructions complètes sur le Bot Framewo
 > [!Important]
 > Le fait de parler à votre bot par ID est destiné uniquement à des fins de test de base. Les Teams fonctionnalités spécifiques que vous avez ajoutées à votre bot ne fonctionnent pas.
 
-Vous pouvez également initier une conversation avec votre bot à l’aide de son ID. Lorsqu’un bot a été ajouté via l’une de ces méthodes, il n’est pas adressaçable dans les conversations de canal et vous ne pouvez pas tirer parti des autres fonctionnalités d’application Microsoft Teams telles que les onglets ou les extensions de messagerie. Vous pouvez initier une conversation de l’une des manières suivantes :
+Vous pouvez également initier une conversation avec votre bot à l’aide de son ID. Lorsqu’un bot a été ajouté via l’une de ces méthodes, il n’est pas adressaçable dans les conversations de canal et vous ne pouvez pas tirer parti d’autres fonctionnalités d’application Microsoft Teams telles que les onglets ou les extensions de messagerie. Vous pouvez initier une conversation de l’une des manières suivantes :
 
 * Dans la page [Tableau de bord](https://dev.botframework.com/bots) du bot pour votre bot, sous **Canaux,** **sélectionnez** Ajouter à Microsoft Teams . Microsoft Teams lance une conversation personnelle avec votre bot.
 
-* Référencez directement l’ID d’application de votre bot à partir Microsoft Teams :
+* Référencez directement l’ID d’application de votre bot à partir de Microsoft Teams :
    1. Dans la page [Tableau de bord](https://dev.botframework.com/bots) du bot de votre bot, sous **Détails,** copiez l’ID d’application **Microsoft** de votre bot.
   
       ![Obtention de l’AppID pour le bot](~/assets/images/bots_appid_botframework.png)
   
-   2. Ouvrez Microsoft Teams, dans **le** volet de conversation, sélectionnez l’icône Ajouter **une conversation.** Dans **:**, collez l’ID d’application Microsoft de votre bot.
+   2. Ouvrez Microsoft Teams, dans **le** volet De conversation, sélectionnez l’icône Ajouter **une conversation.** Dans **:**, collez l’ID d’application Microsoft de votre bot.
   
       ![Téléchargement de bots](~/assets/images/bots_uploading.png)
 
       L’ID d’application doit être résolu en nom de bot.
 
    3. Sélectionnez votre bot et envoyez un message pour lancer une conversation.
-      Vous pouvez également coller l’ID d’application de votre bot dans la zone de recherche en haut à gauche dans Microsoft Teams. Dans la page des résultats de la recherche, accédez à l’onglet **Personnes** pour voir votre bot et commencer à discuter avec lui.
+      Vous pouvez également coller l’ID d’application de votre bot dans la zone de recherche en haut à gauche Microsoft Teams. Dans la page des résultats de la recherche, accédez à l’onglet **Personnes** pour voir votre bot et commencer à discuter avec lui.
 
 Votre bot reçoit l’événement lorsque vous ajoutez les bots à une équipe, sans les informations de `conversationUpdate` l’équipe dans `channelData` l’objet.
 

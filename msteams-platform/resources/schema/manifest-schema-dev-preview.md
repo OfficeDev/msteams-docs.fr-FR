@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667417"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853535"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Schéma de manifeste de prévisualisation pour les développeurs Microsoft Teams
 
@@ -215,7 +215,7 @@ Pour plus d’informations sur les fonctionnalités disponibles, voir : [Fonctio
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ],
@@ -234,7 +234,7 @@ Le schéma définit les propriétés suivantes :
 
 *Facultatif, mais recommandé* &ndash; Chaîne
 
-L https:// URL qui fait référence au schéma JSON pour le manifeste.
+L https:// URL référente au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -246,7 +246,7 @@ Version du schéma de manifeste utilisé par ce manifeste. Il doit s’appelle �
 
 **Obligatoire** &ndash; Chaîne
 
-Version de l’application spécifique. Si vous mettez à jour quelque chose dans votre manifeste, la version doit également être incrémentée. Ainsi, lorsque le nouveau manifeste est installé, il remplace celui existant et l’utilisateur a accès aux nouvelles fonctionnalités. Si cette application a été soumise au Store, le nouveau manifeste devra être soumis à nouveau et validé à nouveau. Ensuite, les utilisateurs de cette application obtiennent automatiquement le nouveau manifeste mis à jour dans quelques heures, une fois qu’il est approuvé.
+Version de l’application spécifique. Si vous mettez à jour quelque chose dans votre manifeste, la version doit également être incrémentée. Ainsi, lorsque le nouveau manifeste est installé, il remplace celui existant et l’utilisateur a accès aux nouvelles fonctionnalités. Si cette application a été soumise au Store, le nouveau manifeste devra être soumis à nouveau et validé à nouveau. Ensuite, les utilisateurs de cette application obtiennent automatiquement le nouveau manifeste mis à jour dans quelques heures, après son approbation.
 
 Si l’application demande des autorisations, les utilisateurs sont invités à mettre à niveau et à consentir à l’application.
 
@@ -282,7 +282,7 @@ Spécifie des informations sur votre entreprise. Pour les applications soumises 
 
 **Optional**
 
-Permet la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation.](~/concepts/build-and-test/apps-localization.md)
+Autorise la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation.](~/concepts/build-and-test/apps-localization.md)
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -301,7 +301,7 @@ Tableau d’objets spécifiant des traductions linguistiques supplémentaires.
 
 **Obligatoire**
 
-Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
+Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -351,7 +351,7 @@ L’objet est un tableau avec tous les éléments du type `object` . Ce bloc est
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
 |`sharePointPreviewImage`|String|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
 |`supportedSharePointHosts`|Tableau de l’énum|1||Définit la façon dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
@@ -372,9 +372,9 @@ L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du 
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité affichée par l’onglet.|
 |`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
 |`contentUrl`|String|2 048 caractères|✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
-|`contentBotId`|   | | | ID Microsoft Teams’application spécifié pour le bot dans le portail Bot Framework. |
+|`contentBotId`|   | | | L Microsoft Teams’ID d’application spécifié pour le bot dans le portail Bot Framework. |
 |`websiteUrl`|String|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
-|`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 
 ## <a name="bots"></a>bots
 
@@ -426,10 +426,10 @@ Définit une extension de messagerie pour l’application.
 
 L’objet est un tableau (maximum de 1 élément) avec tous les éléments de type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une extension de messagerie.
 
-|Nom| Type | Taille maximale | Requis | Description|
+|Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
+|`botId`|String|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,13 +444,13 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`type`|String|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Valeur par défaut : `query`|
 |`title`|String|32 caractères|✔|Nom de la commande conviviale.|
 |`description`|String|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
+|`initialRun`|Booléen|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
 |`context`|Tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche.|
+|`fetchTask`|Booléen|||Valeur booléle qui indique si le module de tâche doit être récupéré dynamiquement.|
 |`taskInfo`|Objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|String|64||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|String|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|String|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
+|`taskInfo.height`|String|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
 |`taskInfo.url`|String|||URL webview initiale.|
 |`messageHandlers`|Tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être répertoriés dans `validDomains` .|
 |`messageHandlers.type`|String|||Type de handler de messages. Doit être `"link"`.|
@@ -496,7 +496,7 @@ Liste des domaines valides à partir des lesquels l’application s’attend à 
 **Toutefois, il** n’est pas nécessaire d’inclure les domaines des fournisseurs d’identité que vous souhaitez prendre en charge dans votre application. Par exemple, pour vous authentifier à l’aide d’un ID Google, il est nécessaire de rediriger vers accounts.google.com, mais vous ne devez pas inclure accounts.google.com dans `validDomains[]` .
 
 > [!IMPORTANT]
-> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` non valide.
+> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide.
 
 L’objet est un tableau avec tous les éléments du type `string` .
 
@@ -504,7 +504,7 @@ L’objet est un tableau avec tous les éléments du type `string` .
 
 **Optional**
 
-Spécifiez votre ID d’application AAD et Graph pour aider les utilisateurs à se connecter en toute transparence à votre application AAD.
+Spécifiez votre ID d’application AAD et Graph informations pour aider les utilisateurs à se connecter en toute transparence à votre application AAD.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -516,22 +516,22 @@ Spécifiez votre ID d’application AAD et Graph pour aider les utilisateurs à 
 
 **Facultatif** - tableau
 
-Le `configurableProperties` bloc définit les propriétés d’application que Teams administrateur peut personnaliser. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams](/MicrosoftTeams/customize-apps).
+Le `configurableProperties` bloc définit les propriétés d’application que les administrateurs Teams personnaliser. Pour plus d’informations, voir [activer la personnalisation de l’application.](~/concepts/design/enable-app-customization.md)
 
 > [!NOTE]
 > Au moins une propriété doit être définie. Vous pouvez définir un maximum de neuf propriétés dans ce bloc.
-> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. 
 
 Vous pouvez définir l’une des propriétés suivantes :
-* `name`: permet à l’administrateur de modifier le nom complet de l’application.
-* `shortDescription`: permet à l’administrateur de modifier la description courte de l’application.
-* `longDescription`: permet à l’administrateur de modifier la description détaillée de l’application.
-* `smallImageUrl`: il s’agit `outline` de la propriété dans le bloc du `icons` manifeste.
-* `largeImageUrl`: il s’agit `color` de la propriété dans le bloc du `icons` manifeste.
-* `accentColor`: il s’agit de la couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
-* `websiteUrl`: il s’agit https:// URL du site web du développeur.
-* `privacyUrl`: il s’agit https:// URL de la politique de confidentialité du développeur.
-* `termsOfUseUrl`: il s’agit de https:// URL des conditions d’utilisation du développeur.
+
+* `name`: nom d’affichage de l’application.
+* `shortDescription`: Description courte de l’application.
+* `longDescription`: Description détaillée de l’application.
+* `smallImageUrl`: Icône de plan de l’application.
+* `largeImageUrl`: Icône de couleur de l’application.
+* `accentColor`: couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
+* `developerUrl`: URL HTTPS du site web du développeur.
+* `privacyUrl`: URL HTTPS de la politique de confidentialité du développeur.
+* `termsOfUseUrl`: URL HTTPS des conditions d’utilisation du développeur.
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -557,4 +557,3 @@ Lorsqu’une étendue d’installation de groupe est sélectionnée, elle défin
 |`team`|string|||Lorsque l’étendue d’installation sélectionnée `team` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
 |`groupchat`|string|||Lorsque l’étendue d’installation sélectionnée `groupchat` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
 |`meetings`|string|||Lorsque l’étendue d’installation sélectionnée `meetings` est , ce champ spécifie la fonctionnalité par défaut disponible. Options : `tab` , `bot` ou `connector` .|
-

@@ -46,9 +46,9 @@ Ce tableau indique les types de cartes disponibles :
 
 ### <a name="inline-card-images"></a>Images de carte en ligne
 
-La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. À des fins de performances, il est vivement recommandé d’héberger l’image sur un réseau public de distribution de contenu (CDN).
+La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. Pour des raisons de performances, il est vivement recommandé d’héberger l’image sur un réseau public de distribution de contenu (CDN).
 
-Les images sont réduites ou réduites en taille tout en conservant les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
+La taille des images est réduite ou réduite tout en conservant les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
 
 Les images doivent être au maximum 1024×1024, au format PNG, JPEG ou GIF, et ne pas prendre en charge les images GIF animées.
 
@@ -394,7 +394,7 @@ Chaque carte de connecteur peut afficher un maximum de dix sections, et chaque s
 > [!NOTE]
 > Les sections, images ou actions supplémentaires dans un message n’apparaissent pas.
 
-Tous les champs de texte prise en charge markdown et HTML. Vous pouvez contrôler les sections qui utilisent markdown ou HTML en fixant la `markdown` propriété dans un message. Par défaut, `markdown` est définie sur `true` . Si vous souhaitez utiliser du code HTML à la place, définissez `markdown` sur `false` .
+Tous les champs de texte prise en charge markdown et HTML. Vous pouvez contrôler les sections qui utilisent markdown ou HTML en définition de `markdown` la propriété dans un message. Par défaut, `markdown` est définie sur `true` . Si vous souhaitez utiliser du code HTML à la place, définissez `markdown` sur `false` .
 
 Si vous spécifiez la propriété, elle remplace la `themeColor` propriété dans le manifeste de `accentColor` l’application.
 
@@ -478,7 +478,7 @@ Pour plus d’informations sur les propriétés de carte de connecteur, voir la 
 
 ## <a name="receipt-card"></a>Carte d’accusé de réception
 
-Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Elle contient généralement la liste des éléments à inclure sur le reçu, telles que les taxes et le total des informations.
+Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Il contient généralement la liste des éléments à inclure sur le reçu, par exemple les informations fiscales et totales.
 
 ### <a name="support-for-receipt-cards"></a>Prise en charge des cartes de réception
 
@@ -548,7 +548,7 @@ Référence Bot Framework :
 
 La carte de signature permet à un bot de demander à un utilisateur de se connecter. Elle est prise en charge Teams sous une forme légèrement différente de celle de Bot Framework. La carte de Teams est similaire à la carte de signin dans Bot Framework, sauf que la carte de Teams ne prend en charge que deux actions : `signin` et `openUrl` .
 
-L’action de signin peut être utilisée à partir de n’importe quelle carte Teams, et pas seulement de la carte de signature. Pour plus d’informations sur l’authentification, [Microsoft Teams flux d’authentification pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
+L’action de signin peut être utilisée à partir de n’importe quelle carte de Teams, et pas seulement de la carte de signature. Pour plus d’informations sur l’authentification, [Microsoft Teams flux d’authentification pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
 
 ### <a name="support-for-signin-cards"></a>Prise en charge des cartes de signature
 
@@ -644,7 +644,7 @@ Les collections de cartes incluent `builder.AttachmentLayout.carousel` et `build
 
 ## <a name="carousel-collection"></a>Collection de carrousels
 
-La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) affiche un carrousel de cartes, éventuellement avec des boutons d’action associés.
+La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) présente un carrousel de cartes, éventuellement avec des boutons d’action associés.
 
 ### <a name="support-for-carousel-collections"></a>Prise en charge des collections de carrousels
 
@@ -836,7 +836,7 @@ Les propriétés d’une carte carrousel sont identiques à celles des cartes he
 
 ### <a name="support-for-list-collections"></a>Prise en charge des collections de listes
 
-La disposition de liste affiche une liste empilée verticalement de cartes, éventuellement avec des boutons d’action associés.
+La disposition de liste affiche une liste de cartes empilées verticalement, éventuellement avec des boutons d’action associés.
 
 | Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |

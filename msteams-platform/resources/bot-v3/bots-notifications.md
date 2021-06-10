@@ -318,7 +318,7 @@ L’événement avec l’objet dans la charge utile est envoyé lorsqu’un util
 }
 ```
 
-## <a name="team-name-updates"></a>Mises à jour des noms d’équipe
+## <a name="team-name-updates"></a>Mises à jour de nom d’équipe
 
 > [!NOTE]
 > Il n’existe aucune fonctionnalité pour interroger tous les noms d’équipe et le nom de l’équipe n’est pas renvoyé dans les charges utiles à partir d’autres événements.

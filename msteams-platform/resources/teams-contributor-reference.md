@@ -21,7 +21,7 @@ ms.locfileid: "52566228"
 > [!div class="checklist"]
 >
 > * Installez [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Installez [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Installer [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 > * Installez [docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directement à partir de VS Code Marketplace.
 <br>&emsp;&emsp; ou
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur les liens hypertexte et les chemins d’accès au
 > &emsp;&#x2714; utiliser un chemin d’accès relatif sans barre oblique principale.<br>
 > &emsp;&#x2714; inclure l’extension de fichier Markdown.<br>
 >Ex :  **répertoire parent/répertoire/chemin d’accès à article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> Pour référencer un article de la bibliothèque Microsoft Docs qui ne fait *pas* partie du document Teams plateforme microsoft :<br>
+> Pour référencer un article de la bibliothèque Microsoft Docs qui ne fait *pas* partie du jeu de documents Teams plateforme microsoft :<br>
 > &emsp;&#x2714; utilisez un chemin d’accès relatif qui commence par une barre oblique.<br>
 > &emsp;&#x2714; n’incluez pas l’extension de fichier. <br> Ex :  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
 > Pour référencer une page en dehors de la bibliothèque Microsoft Docs, telle que GitHub, utilisez le chemin `https` d’accès complet du fichier.<br>

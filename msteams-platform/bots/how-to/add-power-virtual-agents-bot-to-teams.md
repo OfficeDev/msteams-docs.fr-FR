@@ -32,11 +32,11 @@ Pour rendre votre chatbot disponible dans Teams via le portail Power Virtual Age
 **Pour rendre le chatbot disponible dans Teams**
 
 1. **Publier le contenu du bot le plus récent**  
-Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que Teams utilisateurs puisse interagir avec celui-ci. Pour plus d’informations, voir [Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
+Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que Teams utilisateurs puisse interagir avec celui-ci. Pour plus d’informations, [voir Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
 
-   ![publier dans le portail des agents virtuels avec alimentation](../../assets/images/pva-publish.png)
+   ![publier dans le portail des agents virtuels d’alimentation](../../assets/images/pva-publish.png)
 
-1. **Configurer le canal Teams canal**  
+1. **Configurer le canal Teams de distribution**  
 Après avoir publié votre bot, ajoutez le canal Teams pour le mettre à la disposition Teams utilisateurs.
 
    ![canaux dans le portail des agents virtuels d’alimentation](../../assets/images/pva-channels.png)
@@ -60,7 +60,7 @@ App Studio est une application Teams application. Installez App Studio à partir
       &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 1. **Créer le manifeste Teams’application dans App Studio**  
-Les bots dans Teams sont définis par un fichier JSON manifeste d’application qui fournit les informations de base sur votre bot et ses fonctionnalités. Dans **App Studio,** sélectionnez **l’éditeur de** manifeste, puis **sélectionnez Créer une application.**
+Les bots Teams sont définis par un fichier JSON de manifeste d’application qui fournit les informations de base sur votre bot et ses fonctionnalités. Dans **App Studio,** sélectionnez **l’éditeur de** manifeste, puis **sélectionnez Créer une application.**
 
     ![créer une application](../../assets/images/get-started/create-new-app.png)
 
@@ -71,7 +71,7 @@ Remplissez tous les champs requis. Pour obtenir une description complète de cha
 
 1. **Configurer votre bot** Pour configurer le bot, effectuez les étapes suivantes : 
      1. Ouvrez **l’onglet Bots.** 
-     1. Sélectionnez   >  **Le bot d’installation** existant et entrez le nom de votre bot.
+     1. Sélectionnez   >  **Installer le bot existant** et entrez le nom de votre bot.
 
    ![Mise en place d’un bot](../../assets/images/get-started/bot-set-up.png) 
 
@@ -87,7 +87,7 @@ Pour ajouter votre ID d’application, effectuez les étapes suivantes :
     ![ajouter un ID d’application](../../assets/images/get-started/add-app-id.png)
 
 1. **Ajouter des domaines valides pour votre bot**  
-Cette étape est requise uniquement si votre bot nécessite que l’utilisateur se connecte. Sélectionnez **Domaines et autorisations** et, dans le **champ Domaines valides,** fournissez l’entrée suivante :
+Cette étape est requise uniquement si votre bot nécessite que l’utilisateur se connecte. Sélectionnez **Domaines et autorisations et,** dans le **champ Domaines valides,** fournissez l’entrée suivante :
 
     ```bash
        token.botframework.com

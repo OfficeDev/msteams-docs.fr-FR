@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: schéma de manifeste teams
-ms.openlocfilehash: d8427d23ba2caa73cecd173f6d1ef0d041252b3b
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 75c29a1cf9c2897d7b419b45bfc1a4f0447c7aa3
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710626"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853528"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -291,7 +291,7 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ]              
@@ -304,7 +304,7 @@ Le schéma définit les propriétés suivantes :
 
 Chaîne facultative, mais recommandée
 
-L https:// URL qui fait référence au schéma JSON pour le manifeste.
+L https:// URL référente au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -326,7 +326,7 @@ Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (M
 
 **Obligatoire** — ID d’application Microsoft
 
-L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework ou si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail [d’inscription des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
+L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework ou si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription [des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
 
 > [!NOTE]
 > Si vous envoyez une mise à jour à votre application existante dans AppSource, l’ID de votre manifeste ne doit pas être modifié.
@@ -379,7 +379,7 @@ Identificateur unique de l’application dans la notation de domaine inverse ; p
 
 **Facultatif** — objet
 
-Permet la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Pour plus d’informations, [voir localisation.](~/concepts/build-and-test/apps-localization.md)
+Autorise la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Pour plus d’informations, [voir localisation.](~/concepts/build-and-test/apps-localization.md)
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -426,7 +426,7 @@ Utilisé lorsque l’expérience de votre application possède une expérience d
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut **: true**.|
 |`context` |tableau d’enums|6 ||Ensemble `contextItem` d’étendues où un [onglet est pris en charge.](../../tabs/how-to/access-teams-context.md) Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
+|`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -465,8 +465,8 @@ L’élément est un tableau (jusqu’à un seul élément actuellement un seul 
 |`needsChannelSelector`|valeur booléenne|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Valeur par défaut : **`false`**|
 |`isNotificationOnly`|valeur booléenne|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Valeur par défaut : **`false`**|
 |`supportsFiles`|valeur booléenne|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Valeur par défaut : **`false`**|
-|`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
-|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni à des fins de test et d’exploration uniquement et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
+|`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni uniquement à des fins de test et d’exploration et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
+|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  Il est fourni uniquement à des fins de test et d’exploration et ne doit pas être utilisé dans les applications de production. Valeur par défaut : **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -552,7 +552,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif** : tableau de chaînes
 
-Tableau qui spécifie les autorisations que l’application demande, ce qui permet aux utilisateurs finaux de savoir `string` comment fonctionne l’extension. Les options suivantes ne sont pas exclusives :
+Tableau qui spécifie les autorisations que l’application demande, ce qui permet aux utilisateurs finaux de savoir comment `string` fonctionne l’extension. Les options suivantes ne sont pas exclusives :
 
 * `identity`&emsp;Nécessite des informations d’identité d’utilisateur.
 * `messageTeamMembers`&emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe.
@@ -590,12 +590,12 @@ L’objet est un tableau avec tous les éléments du type `string` .
 
 **Facultatif** — objet
 
-Fournissez votre ID Azure Active Directory application (AAD) et des informations microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application, afin que les administrateurs peuvent facilement passer en revue les autorisations et accorder leur consentement dans Teams centre d’administration.
+Fournissez votre ID d’Azure Active Directory (AAD) et des informations microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application, afin que les administrateurs peuvent facilement passer en revue les autorisations et accorder leur consentement dans Teams centre d’administration.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l’oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -706,21 +706,19 @@ Lorsqu’une étendue d’installation de groupe est sélectionnée, elle défin
 
 **Facultatif** - tableau
 
-Le `configurableProperties` bloc définit les propriétés d’application que Teams administrateur peut personnaliser. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams](/MicrosoftTeams/customize-apps).
+Le `configurableProperties` bloc définit les propriétés d’application que les administrateurs Teams personnaliser. Pour plus d’informations, voir [activer la personnalisation de l’application.](~/concepts/design/enable-app-customization.md)
 
 > [!NOTE]
 > Au moins une propriété doit être définie. Vous pouvez définir un maximum de neuf propriétés dans ce bloc.
-> En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application.
 
 Vous pouvez définir l’une des propriétés suivantes :
-* `name`: permet à l’administrateur de modifier le nom complet de l’application.
-* `shortDescription`: permet à l’administrateur de modifier la description courte de l’application.
-* `longDescription`: permet à l’administrateur de modifier la description détaillée de l’application.
-* `smallImageUrl`: il s’agit `outline` de la propriété dans le bloc du `icons` manifeste.
-* `largeImageUrl`: il s’agit `color` de la propriété dans le bloc du `icons` manifeste.
-* `accentColor`: il s’agit de la couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
-* `websiteUrl`: il s’agit https:// URL du site web du développeur.
-* `privacyUrl`: il s’agit https:// URL vers la politique de confidentialité du développeur.
-* `termsOfUseUrl`: il s’agit de https:// URL des conditions d’utilisation du développeur.
 
-
+* `name`: nom d’affichage de l’application.
+* `shortDescription`: Description courte de l’application.
+* `longDescription`: Description détaillée de l’application.
+* `smallImageUrl`: Icône de plan de l’application.
+* `largeImageUrl`: Icône de couleur de l’application.
+* `accentColor`: couleur à utiliser conjointement avec et en arrière-plan pour vos icônes de plan.
+* `developerUrl`: URL HTTPS du site web du développeur.
+* `privacyUrl`: URL HTTPS de la politique de confidentialité du développeur.
+* `termsOfUseUrl`: URL HTTPS des conditions d’utilisation du développeur.
