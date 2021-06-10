@@ -1,7 +1,7 @@
 ---
-title: Options de création pour le développement d’applications Microsoft Teams
+title: Options de création pour le Microsoft Teams d’applications
 author: heath-hamilton
-description: Décrivez les SDK, outils et API que vous pouvez utiliser pour créer tous les types d’applications Teams.
+description: Décrivez les SDK, outils et API que vous pouvez utiliser pour créer tous les types Teams applications.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,6 +12,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020841"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="79e23-103">Options de création pour le développement d’applications Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="79e23-103">Build options for Microsoft Teams app development</span></span>
+# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="cedbe-103">Options de création pour le Microsoft Teams d’applications</span><span class="sxs-lookup"><span data-stu-id="cedbe-103">Build options for Microsoft Teams app development</span></span>
 
-<span data-ttu-id="79e23-104">À venir...</span><span class="sxs-lookup"><span data-stu-id="79e23-104">Coming soon ...</span></span>
+<span data-ttu-id="cedbe-104">À venir...</span><span class="sxs-lookup"><span data-stu-id="cedbe-104">Coming soon ...</span></span>

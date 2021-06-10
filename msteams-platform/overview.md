@@ -13,25 +13,25 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/25/2021
 ms.locfileid: "52646508"
 ---
-# <a name="build-apps-for-microsoft-teams"></a><span data-ttu-id="0df37-103">Créer des applications pour Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="0df37-103">Build apps for Microsoft Teams</span></span>
+# <a name="build-apps-for-microsoft-teams"></a><span data-ttu-id="a72db-103">Créer des applications pour Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="a72db-103">Build apps for Microsoft Teams</span></span>
 
-<span data-ttu-id="0df37-104">Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les personnes se rassemblent, apprennent et travaillent de plus en plus.</span><span class="sxs-lookup"><span data-stu-id="0df37-104">Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.</span></span>
+<span data-ttu-id="a72db-104">Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les personnes se rassemblent, apprennent et travaillent de plus en plus.</span><span class="sxs-lookup"><span data-stu-id="a72db-104">Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.</span></span>
 
-<span data-ttu-id="0df37-105">Les applications vous permettent d’étendre Teams pour répondre à vos besoins.</span><span class="sxs-lookup"><span data-stu-id="0df37-105">Apps are how you extend Teams to fit your needs.</span></span> <span data-ttu-id="0df37-106">Créez un tout nouveau Teams ou intégrez une application existante.</span><span class="sxs-lookup"><span data-stu-id="0df37-106">Create something brand new for Teams or integrate an existing app.</span></span>
+<span data-ttu-id="a72db-105">Les applications vous permettent d’étendre Teams pour répondre à vos besoins.</span><span class="sxs-lookup"><span data-stu-id="a72db-105">Apps are how you extend Teams to fit your needs.</span></span> <span data-ttu-id="a72db-106">Créez un tout nouveau Teams ou intégrez une application existante.</span><span class="sxs-lookup"><span data-stu-id="a72db-106">Create something brand new for Teams or integrate an existing app.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0df37-107">Démarrer</span><span class="sxs-lookup"><span data-stu-id="0df37-107">Start here</span></span>](get-started/prerequisites.md)
+> [<span data-ttu-id="a72db-107">Démarrer</span><span class="sxs-lookup"><span data-stu-id="a72db-107">Start here</span></span>](get-started/prerequisites.md)
 
-## <a name="what-are-teams-apps"></a><span data-ttu-id="0df37-108">Qu’est-ce Teams applications ?</span><span class="sxs-lookup"><span data-stu-id="0df37-108">What are Teams apps?</span></span>
+## <a name="what-are-teams-apps"></a><span data-ttu-id="a72db-108">Qu’est-ce Teams applications ?</span><span class="sxs-lookup"><span data-stu-id="a72db-108">What are Teams apps?</span></span>
 
-<span data-ttu-id="0df37-109">Teams applications sont une combinaison de [fonctionnalités.](concepts/capabilities-overview.md)</span><span class="sxs-lookup"><span data-stu-id="0df37-109">Teams apps are a combination of [capabilities](concepts/capabilities-overview.md).</span></span> <span data-ttu-id="0df37-110">Certaines applications sont simples (envoyer des notifications), tandis que d’autres sont complexes (gérer les enregistrements des patients).</span><span class="sxs-lookup"><span data-stu-id="0df37-110">Some apps are simple (send notifications), while others are complex (manage patient records).</span></span> <span data-ttu-id="0df37-111">Lors de la planification de votre application, n’oubliez Teams est un hub de collaboration.</span><span class="sxs-lookup"><span data-stu-id="0df37-111">When planning your app, remember that Teams is a collaboration hub.</span></span> <span data-ttu-id="0df37-112">Les meilleures Teams permettent aux personnes de s’exprimer et de travailler mieux ensemble.</span><span class="sxs-lookup"><span data-stu-id="0df37-112">The best Teams apps help people express themselves and work better together.</span></span>
+<span data-ttu-id="a72db-109">Teams applications sont une combinaison de [fonctionnalités.](concepts/capabilities-overview.md)</span><span class="sxs-lookup"><span data-stu-id="a72db-109">Teams apps are a combination of [capabilities](concepts/capabilities-overview.md).</span></span> <span data-ttu-id="a72db-110">Certaines applications sont simples (envoyer des notifications), tandis que d’autres sont complexes (gérer les enregistrements des patients).</span><span class="sxs-lookup"><span data-stu-id="a72db-110">Some apps are simple (send notifications), while others are complex (manage patient records).</span></span> <span data-ttu-id="a72db-111">Lors de la planification de votre application, n’oubliez Teams est un hub de collaboration.</span><span class="sxs-lookup"><span data-stu-id="a72db-111">When planning your app, remember that Teams is a collaboration hub.</span></span> <span data-ttu-id="a72db-112">Les meilleures Teams permettent aux personnes de s’exprimer et de travailler mieux ensemble.</span><span class="sxs-lookup"><span data-stu-id="a72db-112">The best Teams apps help people express themselves and work better together.</span></span>
 
-### <a name="personal-apps"></a><span data-ttu-id="0df37-113">Applications personnelles</span><span class="sxs-lookup"><span data-stu-id="0df37-113">Personal apps</span></span>
+### <a name="personal-apps"></a><span data-ttu-id="a72db-113">Applications personnelles</span><span class="sxs-lookup"><span data-stu-id="a72db-113">Personal apps</span></span>
 
 :::row:::
    :::column span="1":::
 
-<span data-ttu-id="0df37-114">**Aider les utilisateurs** à se concentrer : une [application](concepts/design/personal-apps.md) personnelle est un espace dédié ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités qui leur sont importantes.</span><span class="sxs-lookup"><span data-stu-id="0df37-114">**Help people focus**: A [personal app](concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.</span></span>
+<span data-ttu-id="a72db-114">**Aider les utilisateurs** à se concentrer : une [application](concepts/design/personal-apps.md) personnelle est un espace dédié ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités qui leur sont importantes.</span><span class="sxs-lookup"><span data-stu-id="a72db-114">**Help people focus**: A [personal app](concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.</span></span>
 
    :::column-end:::
 
@@ -43,12 +43,12 @@ ms.locfileid: "52646508"
 
 :::row-end:::
 
-### <a name="tabs"></a><span data-ttu-id="0df37-116">Onglets</span><span class="sxs-lookup"><span data-stu-id="0df37-116">Tabs</span></span>
+### <a name="tabs"></a><span data-ttu-id="a72db-116">Onglets</span><span class="sxs-lookup"><span data-stu-id="a72db-116">Tabs</span></span>
 
 :::row:::
    :::column span="1":::
 
-<span data-ttu-id="0df37-117">**Collaborer plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.</span><span class="sxs-lookup"><span data-stu-id="0df37-117">**Collaborate more conveniently**: Display your web-based content in a [tab](tabs/what-are-tabs.md) where people can discuss and work on it together.</span></span>
+<span data-ttu-id="a72db-117">**Collaborez plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.</span><span class="sxs-lookup"><span data-stu-id="a72db-117">**Collaborate more conveniently**: Display your web-based content in a [tab](tabs/what-are-tabs.md) where people can discuss and work on it together.</span></span>
 
    :::column-end:::
 
@@ -60,12 +60,12 @@ ms.locfileid: "52646508"
 
 :::row-end:::
 
-### <a name="bots"></a><span data-ttu-id="0df37-119">Bots</span><span class="sxs-lookup"><span data-stu-id="0df37-119">Bots</span></span>
+### <a name="bots"></a><span data-ttu-id="a72db-119">Bots</span><span class="sxs-lookup"><span data-stu-id="a72db-119">Bots</span></span>
 
 :::row:::
    :::column span="1":::
 
-<span data-ttu-id="0df37-120">**Transformer des mots en actions**: les conversations entraînent souvent la nécessité d’une action (générer une commande, passer en revue mon code, vérifier l’état du ticket, et ainsi de suite).</span><span class="sxs-lookup"><span data-stu-id="0df37-120">**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on).</span></span> <span data-ttu-id="0df37-121">Un [bot](bots/what-are-bots.md) peut lancer ces types de flux de travail directement dans Teams.</span><span class="sxs-lookup"><span data-stu-id="0df37-121">A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.</span></span>
+<span data-ttu-id="a72db-120">**Transformer des mots en actions**: les conversations entraînent souvent la nécessité d’une action (générer une commande, passer en revue mon code, vérifier l’état du ticket, et ainsi de suite).</span><span class="sxs-lookup"><span data-stu-id="a72db-120">**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on).</span></span> <span data-ttu-id="a72db-121">Un [bot](bots/what-are-bots.md) peut lancer ces types de flux de travail directement dans Teams.</span><span class="sxs-lookup"><span data-stu-id="a72db-121">A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.</span></span>
 
    :::column-end:::
 
@@ -77,13 +77,13 @@ ms.locfileid: "52646508"
 
 :::row-end:::
 
-### <a name="messaging-extensions"></a><span data-ttu-id="0df37-123">Extensions de messagerie</span><span class="sxs-lookup"><span data-stu-id="0df37-123">Messaging extensions</span></span>
+### <a name="messaging-extensions"></a><span data-ttu-id="a72db-123">Extensions de messagerie</span><span class="sxs-lookup"><span data-stu-id="a72db-123">Messaging extensions</span></span>
 
 :::row:::
 
    :::column span="1":::
 
-<span data-ttu-id="0df37-124">**Faciliter la tâche multitâche**: avec les [extensions](messaging-extensions/what-are-messaging-extensions.md)de messagerie, vous pouvez rapidement partager des informations externes dans une conversation.</span><span class="sxs-lookup"><span data-stu-id="0df37-124">**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation.</span></span> <span data-ttu-id="0df37-125">Vous pouvez également agir sur un message, par exemple créer un ticket d’aide basé sur le contenu d’un billet de canal.</span><span class="sxs-lookup"><span data-stu-id="0df37-125">You also can act on a message, such as creating a help ticket based on the content of a channel post.</span></span>
+<span data-ttu-id="a72db-124">**Faciliter la tâche multitâche**: avec les [extensions](messaging-extensions/what-are-messaging-extensions.md)de messagerie, vous pouvez rapidement partager des informations externes dans une conversation.</span><span class="sxs-lookup"><span data-stu-id="a72db-124">**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation.</span></span> <span data-ttu-id="a72db-125">Vous pouvez également agir sur un message, par exemple créer un ticket d’aide basé sur le contenu d’un billet de canal.</span><span class="sxs-lookup"><span data-stu-id="a72db-125">You also can act on a message, such as creating a help ticket based on the content of a channel post.</span></span>
 
    :::column-end:::
 
@@ -94,13 +94,13 @@ ms.locfileid: "52646508"
    :::column-end:::
 :::row-end:::
 
-### <a name="meeting-extensions"></a><span data-ttu-id="0df37-127">Extensions de réunion</span><span class="sxs-lookup"><span data-stu-id="0df37-127">Meeting extensions</span></span>
+### <a name="meeting-extensions"></a><span data-ttu-id="a72db-127">Extensions de réunion</span><span class="sxs-lookup"><span data-stu-id="a72db-127">Meeting extensions</span></span>
 
 :::row:::
 
    :::column span="1":::
 
-<span data-ttu-id="0df37-128">**Créer des applications pour les réunions**: il existe plusieurs options pour incorporer votre application dans l’expérience Teams [d’appel.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)</span><span class="sxs-lookup"><span data-stu-id="0df37-128">**Create apps for meetings**: There are a few options for [incorporating your app into the Teams calling experience](apps-in-teams-meetings/design/designing-apps-in-meetings.md).</span></span>
+<span data-ttu-id="a72db-128">**Créer des applications pour les réunions**: il existe plusieurs options pour incorporer votre application dans l’expérience Teams [d’appel.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)</span><span class="sxs-lookup"><span data-stu-id="a72db-128">**Create apps for meetings**: There are a few options for [incorporating your app into the Teams calling experience](apps-in-teams-meetings/design/designing-apps-in-meetings.md).</span></span>
 
    :::column-end:::
 
@@ -111,13 +111,13 @@ ms.locfileid: "52646508"
    :::column-end:::
 :::row-end:::
 
-### <a name="webhooks-and-connectors"></a><span data-ttu-id="0df37-130">Webhooks et connecteurs</span><span class="sxs-lookup"><span data-stu-id="0df37-130">Webhooks and connectors</span></span>
+### <a name="webhooks-and-connectors"></a><span data-ttu-id="a72db-130">Webhooks et connecteurs</span><span class="sxs-lookup"><span data-stu-id="a72db-130">Webhooks and connectors</span></span>
 
 :::row:::
 
    :::column span="":::
 
-<span data-ttu-id="0df37-131">**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal.</span><span class="sxs-lookup"><span data-stu-id="0df37-131">**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel.</span></span> <span data-ttu-id="0df37-132">Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.</span><span class="sxs-lookup"><span data-stu-id="0df37-132">With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.</span></span>
+<span data-ttu-id="a72db-131">**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal.</span><span class="sxs-lookup"><span data-stu-id="a72db-131">**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel.</span></span> <span data-ttu-id="a72db-132">Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.</span><span class="sxs-lookup"><span data-stu-id="a72db-132">With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.</span></span>
 
    :::column-end:::
 
@@ -128,13 +128,13 @@ ms.locfileid: "52646508"
    :::column-end:::
 :::row-end:::
 
-### <a name="microsoft-graph-for-teams"></a><span data-ttu-id="0df37-134">Microsoft Graph for Teams</span><span class="sxs-lookup"><span data-stu-id="0df37-134">Microsoft Graph for Teams</span></span>
+### <a name="microsoft-graph-for-teams"></a><span data-ttu-id="a72db-134">Microsoft Graph for Teams</span><span class="sxs-lookup"><span data-stu-id="a72db-134">Microsoft Graph for Teams</span></span>
 
 :::row:::
 
    :::column span="":::
 
-<span data-ttu-id="0df37-135">Utiliser des données **Teams**: l’API [Microsoft Graph pour Teams](/graph/teams-concept-overview) fournit l’accès à des informations sur les équipes, les canaux, les utilisateurs et les messages qui peuvent vous aider à créer ou améliorer des fonctionnalités pour votre application (telles que des notifications enrichies).</span><span class="sxs-lookup"><span data-stu-id="0df37-135">**Utilize Teams data**: The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).</span></span>
+<span data-ttu-id="a72db-135">Utiliser des données **Teams**: l’API [Microsoft Graph pour Teams](/graph/teams-concept-overview) fournit l’accès à des informations sur les équipes, les canaux, les utilisateurs et les messages qui peuvent vous aider à créer ou améliorer des fonctionnalités pour votre application (telles que des notifications enrichies).</span><span class="sxs-lookup"><span data-stu-id="a72db-135">**Utilize Teams data**: The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).</span></span>
 
    :::column-end:::
 
@@ -148,12 +148,12 @@ ms.locfileid: "52646508"
 :::row:::
    :::column span="2":::
 
-## <a name="start-building"></a><span data-ttu-id="0df37-137">Démarrer la création</span><span class="sxs-lookup"><span data-stu-id="0df37-137">Start building</span></span>
+## <a name="start-building"></a><span data-ttu-id="a72db-137">Démarrer la création</span><span class="sxs-lookup"><span data-stu-id="a72db-137">Start building</span></span>
 
-<span data-ttu-id="0df37-138">Familiarisez-vous rapidement avec la création de Teams en mettant en place votre environnement et en créant une application simple.</span><span class="sxs-lookup"><span data-stu-id="0df37-138">Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.</span></span>
+<span data-ttu-id="a72db-138">Familiarisez-vous rapidement avec la création de Teams en mettant en place votre environnement et en créant une application simple.</span><span class="sxs-lookup"><span data-stu-id="a72db-138">Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0df37-139">Créer votre première application</span><span class="sxs-lookup"><span data-stu-id="0df37-139">Build your first app</span></span>](get-started/prerequisites.md)
+> [<span data-ttu-id="a72db-139">Créer votre première application</span><span class="sxs-lookup"><span data-stu-id="a72db-139">Build your first app</span></span>](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::
@@ -164,12 +164,12 @@ ms.locfileid: "52646508"
 :::row:::
    :::column span="2":::
 
-## <a name="integrate-with-teams"></a><span data-ttu-id="0df37-140">S'intégrer aux équipes</span><span class="sxs-lookup"><span data-stu-id="0df37-140">Integrate with Teams</span></span>
+## <a name="integrate-with-teams"></a><span data-ttu-id="a72db-140">S'intégrer aux équipes</span><span class="sxs-lookup"><span data-stu-id="a72db-140">Integrate with Teams</span></span>
 
-<span data-ttu-id="0df37-141">Associez les fonctionnalités que les utilisateurs aiment d’une application web, d’un service ou d’un système existant aux fonctionnalités collaboratives de Teams.</span><span class="sxs-lookup"><span data-stu-id="0df37-141">Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.</span></span>
+<span data-ttu-id="a72db-141">Associez les fonctionnalités que les utilisateurs aiment d’une application web, d’un service ou d’un système existant aux fonctionnalités collaboratives de Teams.</span><span class="sxs-lookup"><span data-stu-id="a72db-141">Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0df37-142">Intégrer une application existante</span><span class="sxs-lookup"><span data-stu-id="0df37-142">Integrate an existing app</span></span>](samples/integrating-web-apps.md)
+> [<span data-ttu-id="a72db-142">Intégrer une application existante</span><span class="sxs-lookup"><span data-stu-id="a72db-142">Integrate an existing app</span></span>](samples/integrating-web-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -180,12 +180,12 @@ ms.locfileid: "52646508"
 :::row:::
    :::column span="2":::
 
-## <a name="a-little-code-goes-a-long-way"></a><span data-ttu-id="0df37-143">Un peu de code est très long</span><span class="sxs-lookup"><span data-stu-id="0df37-143">A little code goes a long way</span></span>
+## <a name="a-little-code-goes-a-long-way"></a><span data-ttu-id="a72db-143">Un peu de code est très long</span><span class="sxs-lookup"><span data-stu-id="a72db-143">A little code goes a long way</span></span>
 
-<span data-ttu-id="0df37-144">Vous n’avez pas besoin d’être un programmeur expert pour créer une application Teams excellente.</span><span class="sxs-lookup"><span data-stu-id="0df37-144">You don't need to be an expert programmer to build a great Teams app.</span></span> <span data-ttu-id="0df37-145">Essayez l’une des solutions à code faible.</span><span class="sxs-lookup"><span data-stu-id="0df37-145">Try one of several low-code solutions.</span></span>
+<span data-ttu-id="a72db-144">Vous n’avez pas besoin d’être un programmeur expert pour créer une application Teams excellente.</span><span class="sxs-lookup"><span data-stu-id="a72db-144">You don't need to be an expert programmer to build a great Teams app.</span></span> <span data-ttu-id="a72db-145">Essayez l’une des solutions à code faible.</span><span class="sxs-lookup"><span data-stu-id="a72db-145">Try one of several low-code solutions.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0df37-146">Créer une application à code faible</span><span class="sxs-lookup"><span data-stu-id="0df37-146">Create a low-code app</span></span>](samples/teams-low-code-solutions.md)
+> [<span data-ttu-id="a72db-146">Créer une application à code faible</span><span class="sxs-lookup"><span data-stu-id="a72db-146">Create a low-code app</span></span>](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::
@@ -196,12 +196,12 @@ ms.locfileid: "52646508"
 :::row:::
    :::column span="2":::
 
-## <a name="get-ideas-for-your-app"></a><span data-ttu-id="0df37-147">Obtenir des idées pour votre application</span><span class="sxs-lookup"><span data-stu-id="0df37-147">Get ideas for your app</span></span>
+## <a name="get-ideas-for-your-app"></a><span data-ttu-id="a72db-147">Obtenir des idées pour votre application</span><span class="sxs-lookup"><span data-stu-id="a72db-147">Get ideas for your app</span></span>
 
-<span data-ttu-id="0df37-148">Vous recherchez une source d’inspiration pour le développement d’applications ?</span><span class="sxs-lookup"><span data-stu-id="0df37-148">Looking for app development inspiration?</span></span> <span data-ttu-id="0df37-149">Parcourez notre liste de scénarios réels et de solutions industrielles avec des maquettes de concept haute fidélité pour comprendre les différentes façons Teams applications peuvent aider vos utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="0df37-149">Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways Teams apps can help your users.</span></span>
+<span data-ttu-id="a72db-148">Vous recherchez une source d’inspiration pour le développement d’applications ?</span><span class="sxs-lookup"><span data-stu-id="a72db-148">Looking for app development inspiration?</span></span> <span data-ttu-id="a72db-149">Parcourez notre liste de scénarios réels et de solutions industrielles avec des maquettes de concept haute fidélité pour comprendre les différentes façons Teams applications peuvent aider vos utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="a72db-149">Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways Teams apps can help your users.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0df37-150">Voir les scénarios d’application</span><span class="sxs-lookup"><span data-stu-id="0df37-150">See app scenarios</span></span>](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+> [<span data-ttu-id="a72db-150">Voir les scénarios d’application</span><span class="sxs-lookup"><span data-stu-id="a72db-150">See app scenarios</span></span>](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
 
    :::column-end:::
    :::column span="":::
@@ -209,10 +209,10 @@ ms.locfileid: "52646508"
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a><span data-ttu-id="0df37-151">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0df37-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a72db-151">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a72db-151">See also</span></span>
 
-* [<span data-ttu-id="0df37-152">Ajouter un bouton Partager à Teams votre site web</span><span class="sxs-lookup"><span data-stu-id="0df37-152">Add a Share-to-Teams button to your website</span></span>](concepts/build-and-test/share-to-teams.md)
-* [<span data-ttu-id="0df37-153">Concevoir votre application Teams web</span><span class="sxs-lookup"><span data-stu-id="0df37-153">Design your Teams app</span></span>](concepts/design/design-teams-app-overview.md)
-* [<span data-ttu-id="0df37-154">Microsoft Teams JavaScript client SDK</span><span class="sxs-lookup"><span data-stu-id="0df37-154">Microsoft Teams JavaScript client SDK</span></span>](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* <span data-ttu-id="0df37-155">SDK Bot Framework pour [JavaScript et](https://github.com/Microsoft/botbuilder-js) [.NET](https://github.com/Microsoft/botbuilder-dotnet/)</span><span class="sxs-lookup"><span data-stu-id="0df37-155">Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)</span></span>
-* [<span data-ttu-id="0df37-156">Distribuer votre application Teams de messagerie</span><span class="sxs-lookup"><span data-stu-id="0df37-156">Distribute your Teams app</span></span>](concepts/deploy-and-publish/apps-publish-overview.md)
+* [<span data-ttu-id="a72db-152">Ajouter un bouton Partager à Teams votre site web</span><span class="sxs-lookup"><span data-stu-id="a72db-152">Add a Share-to-Teams button to your website</span></span>](concepts/build-and-test/share-to-teams.md)
+* [<span data-ttu-id="a72db-153">Concevoir votre application Teams web</span><span class="sxs-lookup"><span data-stu-id="a72db-153">Design your Teams app</span></span>](concepts/design/design-teams-app-overview.md)
+* [<span data-ttu-id="a72db-154">Microsoft Teams JavaScript client SDK</span><span class="sxs-lookup"><span data-stu-id="a72db-154">Microsoft Teams JavaScript client SDK</span></span>](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* <span data-ttu-id="a72db-155">SDK Bot Framework pour [JavaScript et](https://github.com/Microsoft/botbuilder-js) [.NET](https://github.com/Microsoft/botbuilder-dotnet/)</span><span class="sxs-lookup"><span data-stu-id="a72db-155">Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)</span></span>
+* [<span data-ttu-id="a72db-156">Distribuer votre application Teams de messagerie</span><span class="sxs-lookup"><span data-stu-id="a72db-156">Distribute your Teams app</span></span>](concepts/deploy-and-publish/apps-publish-overview.md)

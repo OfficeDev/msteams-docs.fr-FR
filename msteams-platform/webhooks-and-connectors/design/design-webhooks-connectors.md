@@ -1,5 +1,5 @@
 ---
-title: Concevoir des webhooks et des connecteurs Microsoft Teams
+title: Concevoir Microsoft Teams webhooks et connecteurs
 author: heath-hamilton
 description: Recommandations et meilleures pratiques pour la conception de webhooks et de connecteurs pour Microsoft Teams.
 localization_priority: Normal
@@ -12,6 +12,6 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020217"
 ---
-# <a name="design-webhooks-and-connectors"></a><span data-ttu-id="878b1-103">Concevoir des webhooks et des connecteurs</span><span class="sxs-lookup"><span data-stu-id="878b1-103">Design webhooks and connectors</span></span>
+# <a name="design-webhooks-and-connectors"></a><span data-ttu-id="5e3f1-103">Concevoir des webhooks et des connecteurs</span><span class="sxs-lookup"><span data-stu-id="5e3f1-103">Design webhooks and connectors</span></span>
 
-<span data-ttu-id="878b1-104">À venir...</span><span class="sxs-lookup"><span data-stu-id="878b1-104">Coming soon ...</span></span>
+<span data-ttu-id="5e3f1-104">À venir...</span><span class="sxs-lookup"><span data-stu-id="5e3f1-104">Coming soon ...</span></span>
