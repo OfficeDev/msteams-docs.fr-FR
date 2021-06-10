@@ -48,7 +48,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 :::row:::
    :::column span="1":::
 
-**Collaborer plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
+**Collaborez plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
 
    :::column-end:::
 
@@ -117,7 +117,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 
    :::column span="":::
 
-**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
+**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
 
    :::column-end:::
 

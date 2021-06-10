@@ -14,7 +14,7 @@ ms.locfileid: "52644909"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur Fluent de base
 
-Vous pouvez créer votre application Teams à partir de zéro à l’aide des composants d’interface utilisateur Fluent suivants. Conçus aussi platement que possible, ces composants peuvent fonctionner dans différents cas d’utilisation, thèmes et tailles d’écran.
+Vous pouvez créer votre application Teams à partir de zéro à l’aide des composants d’interface utilisateur Fluent de base suivants. Conçus aussi platement que possible, ces composants peuvent fonctionner dans différents cas d’utilisation, thèmes et tailles d’écran.
 
 Les illustrations de cette page montrent l’apparence des composants Teams thèmes par défaut (clair) et foncés.
 
@@ -63,7 +63,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 ## <a name="dropdown"></a>Liste déroulante
 
-:::image type="content" source="../../assets/images/components/dropdown.png" alt-text="L’exemple montre un composant d’interface utilisateur de ladown." border="false":::
+:::image type="content" source="../../assets/images/components/dropdown.png" alt-text="Exemple de composant d’interface utilisateur de ladown." border="false":::
 
 ## <a name="group-list"></a>Liste de groupes
 
@@ -87,7 +87,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 ## <a name="picker"></a>S picker
 
-:::image type="content" source="../../assets/images/components/picker.png" alt-text="L’exemple montre un composant d’interface utilisateur du s’il s’agit." border="false":::
+:::image type="content" source="../../assets/images/components/picker.png" alt-text="L’exemple montre un composant d’interface utilisateur du suceur." border="false":::
 
 ## <a name="pivot"></a>Pivot
 

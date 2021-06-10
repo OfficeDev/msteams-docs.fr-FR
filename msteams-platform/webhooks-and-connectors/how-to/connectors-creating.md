@@ -23,7 +23,7 @@ Vous pouvez distribuer votre connecteur inscrit dans le cadre de votre package d
 Pour distribuer votre connecteur, vous devez vous inscrire à l’aide du tableau de bord du [développeur de connecteurs.](https://outlook.office.com/connectors/home/login/#/publish) Par défaut, une fois qu’un connecteur est inscrit, il est supposé que votre connecteur fonctionne dans tous les produits Office 365 qui les prend en charge, y compris Outlook et Teams. Si ce _n’est_ pas le cas et que vous devez créer un connecteur qui fonctionne uniquement dans Microsoft Teams, contactez-nous directement à l’Microsoft Teams [soumissions d’applications.](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
-> Une fois que **vous avez choisi Enregistrer** dans le tableau de bord du développeur de connecteurs, votre connecteur est enregistré. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions dans Publier votre [application Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource et simplement la distribuer directement à votre organisation uniquement, vous pouvez le faire en publiant dans [votre organisation.](#publish-connectors-for-your-organization) Si vous souhaitez uniquement publier dans votre organisation, aucune action supplémentaire n’est nécessaire sur le tableau de bord du connecteur.
+> Une fois que **vous avez choisi Enregistrer** dans le tableau de bord du développeur de connecteurs, votre connecteur est enregistré. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de la Microsoft Teams [sur AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource et simplement la distribuer directement à votre organisation uniquement, vous pouvez le faire en publiant dans [votre organisation.](#publish-connectors-for-your-organization) Si vous souhaitez uniquement publier dans votre organisation, aucune action supplémentaire n’est nécessaire sur le tableau de bord du connecteur.
 
 ### <a name="integrating-the-configuration-experience"></a>Intégration de l’expérience de configuration
 
@@ -40,8 +40,8 @@ Vous pouvez réutiliser votre expérience de configuration web existante ou cré
 1. Incluez le Microsoft Teams SDK JavaScript. Cela permet à votre code d’accéder aux API pour effectuer des opérations courantes telles que l’obtention du contexte utilisateur/canal/équipe actuel et l’initiateur des flux d’authentification. Initialisez le kit de développement logiciel (SDK) en appelant `microsoftTeams.initialize()`.
 2. Appelez `microsoftTeams.settings.setValidityState(true)` lorsque vous souhaitez activer le bouton Enregistrer. Vous devez le faire en réponse à une entrée utilisateur valide, telle qu’une sélection ou une mise à jour de champ.
 3. Inscrivez un `microsoftTeams.settings.registerOnSaveHandler()` handler d’événements, qui est appelé lorsque l’utilisateur clique sur Enregistrer.
-4. Appelez `microsoftTeams.settings.setSettings()` pour enregistrer les paramètres du connecteur. Les informations enregistrées ici sont également affichées dans la boîte de dialogue de configuration si l’utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
-5. Appelez `microsoftTeams.settings.getSettings()` pour récupérer les propriétés du webhook, y compris l’URL proprement dite. Vous devez l’appeler en plus de l’événement d’enregistrer, vous devez également l’appeler lorsque votre page est chargée pour la première fois dans le cas d’une nouvelle configuration.
+4. Appelez `microsoftTeams.settings.setSettings()` pour enregistrer les paramètres du connecteur. Ce qui est enregistré ici est également celui qui s’affiche dans la boîte de dialogue de configuration si l’utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
+5. Appelez `microsoftTeams.settings.getSettings()` pour récupérer les propriétés de webhook, y compris l’URL proprement dite. Vous devez l’appeler en plus de l’événement d’enregistrer, vous devez également l’appeler lorsque votre page est chargée pour la première fois dans le cas d’une nouvelle configuration.
 6. (Facultatif) Inscrivez un `microsoftTeams.settings.registerOnRemoveHandler()` handler d’événements, qui est appelé lorsque l’utilisateur supprime votre connecteur. Cet événement permet à votre service d’effectuer des actions de nettoyage.
 
 Voici un exemple de code HTML pour créer une page de configuration de connecteur sans CSS :
@@ -128,7 +128,7 @@ Votre code doit gérer les utilisateurs qui reviennent dans le but de modifier u
 - `configName` est un nom convivial que votre code de configuration peut récupérer
 - `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante. Vous pouvez utiliser cette URL pour faciliter la tâche de modification de votre code.
 
-En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code ci-dessus est chargé, votre code doit appeler pour prére remplir les paramètres ou formulaires de votre `contentUrl` interface utilisateur de `getSettings()` configuration.
+En règle générale, cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque les paramètres ci-dessus sont chargés, votre code doit appeler pour prére remplir les paramètres ou `contentUrl` `getSettings()` formulaires de votre interface utilisateur de configuration.
 
 #### <a name="handling-removals"></a>Gestion des suppressions
 
@@ -190,7 +190,7 @@ Le fichier manifest.json suivant contient les éléments de base nécessaires po
 
 Le module Exchange Online PowerShell V2 utilise l’authentification moderne et fonctionne avec l’authentification multifacteur (MFA) pour la connexion à tous les environnements PowerShell Exchange dans Microsoft 365. Les administrateurs peuvent utiliser Exchange Online PowerShell pour désactiver les connecteurs pour un client entier ou une boîte aux lettres de groupe spécifique, affectant tous les utilisateurs de ce client ou de cette boîte aux lettres. Il n’est pas possible de désactiver pour certains et non pour d’autres. En outre, les connecteurs sont désactivés par défaut pour Cloud de la communauté du secteur public client.
 
-Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe seront désactivés. Pour activer un connecteur dans Teams, connectez-vous [à Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
+Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe sont désactivés. Pour activer un connecteur dans Teams, connectez-vous à [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
 
 ### <a name="commands-to-disable-or-enable-connectors"></a>Commandes permettant de désactiver ou d’activer des connecteurs
 
@@ -225,11 +225,11 @@ Une fois que vous avez chargé votre package d’application, pour configurer et
 
 1. Sélectionnez l’icône des applications dans la barre de navigation verticale à l’extrême gauche.
 1. Dans la **fenêtre Applications,** **sélectionnez Connecteurs.**
-1. Sélectionnez le connecteur que vous souhaitez ajouter et une fenêtre de boîte de dialogue s’affiche.
+1. Sélectionnez le connecteur à ajouter et une fenêtre de boîte de dialogue s’affiche.
 1. Sélectionnez **Ajouter à une barre d’équipe.**
 1. Dans la fenêtre de boîte de dialogue suivante, tapez un nom d’équipe ou de canal.
 1. Sélectionnez **la barre Configurer un connecteur** dans le coin inférieur droit de la fenêtre de boîte de dialogue.
-1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *Options* supplémentaires Connecteurs Tous les connecteurs pour votre équipe  =>    =>    =>   pour cette équipe. Vous pouvez naviguer en accédant à cette section ou rechercher l’application connecteur.
+1. Le connecteur sera disponible dans la section &#9679;&#9679;&#9679; => *Plus d’options* Connecteurs Tous les connecteurs pour votre équipe pour cette  =>    =>    =>   équipe. Vous pouvez naviguer en accédant à cette section ou rechercher l’application connecteur.
 1. Pour configurer ou modifier le connecteur, sélectionnez **la barre Configurer.**
 
 ## <a name="code-sample"></a>Exemple de code

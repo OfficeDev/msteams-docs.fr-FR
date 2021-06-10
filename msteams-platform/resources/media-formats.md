@@ -1,6 +1,6 @@
 ---
 title: Formats multimédias pris en charge pour les bots
-description: Les bots de Microsoft Teams ne prend en charge que les formats multimédias suivants pour le contenu audio et vidéo.
+description: Les bots sur Microsoft Teams uniquement les formats multimédias suivants pour le contenu audio et vidéo.
 ms.topic: reference
 localization_priority: Normal
 keywords: bots teams formats multimédias
@@ -13,9 +13,9 @@ ms.locfileid: "52020610"
 ---
 # <a name="supported-media-formats-for-bots"></a>Formats multimédias pris en charge pour les bots
 
-Les bots de Microsoft Teams ne prend en charge que les formats multimédias suivants pour le contenu audio et vidéo :
+Les bots sur Microsoft Teams uniquement les formats multimédias suivants pour le contenu audio et vidéo :
 
-| Format | Informations supplémentaires |
+| Format | Plus d’informations |
 | --- | --- |
 | Vorbis | http://www.vorbis.com/ |
 | PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW | https://wiki.multimedia.cx/?title=PCM |
@@ -31,4 +31,4 @@ Les bots de Microsoft Teams ne prend en charge que les formats multimédias suiv
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Modifications apportées aux API de bot Teams pour récupérer des membres d'équipe ou de conversation](~/resources/team-chat-member-api-changes.md)
+> [Modifications apportées aux API Teams bot pour récupérer des membres d’équipe ou de conversation](~/resources/team-chat-member-api-changes.md)

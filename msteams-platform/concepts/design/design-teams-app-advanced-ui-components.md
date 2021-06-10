@@ -57,13 +57,13 @@ Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre ongle
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur un appareil mobile." border="false":::
 
 ---
 
 ## <a name="notification-bar"></a>Barre de notification
 
-Une barre de notification est une zone dédiée à l’affichage de messages brefs et importants qui ne nécessitent pas que l’utilisateur prenne des mesures immédiates. Des icônes et des couleurs d’arrière-plan spécifiques sont associées à des types de messages spécifiques (voir ci-dessous).
+Une barre de notification est une zone dédiée à l’affichage de messages brefs et importants qui ne nécessitent pas que l’utilisateur prenne des mesures immédiates. Des icônes et couleurs d’arrière-plan spécifiques sont associées à des types de messages spécifiques (voir ci-dessous).
 
 ### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
@@ -94,7 +94,7 @@ L’étape permet aux utilisateurs d’ouvrir une entité (par exemple, une imag
 
 # <a name="desktop"></a>[Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur le bureau." border="false":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 

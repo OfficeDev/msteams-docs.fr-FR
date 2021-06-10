@@ -3,7 +3,7 @@ title: Ajouter des données de test à votre client Microsoft 365 test
 description: Configurer votre abonnement Office 365 programme pour les développeurs pour tester Microsoft Teams applications
 ms.topic: how-to
 localization_priority: Normal
-keywords: test des équipes de programme pour les développeurs d'applications
+keywords: test des équipes de programme pour les développeurs d’applications
 ms.date: 11/01/2019
 ms.openlocfilehash: 9dcbd8f31c6ff68f0401e9fbb77297e8eebcf520
 ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
@@ -16,24 +16,24 @@ ms.locfileid: "52101743"
 
 Vous pouvez tester votre application Microsoft Teams avec des exemples de données avec un abonnement Microsoft 365 développeur.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
-1. [Rejoignez le Microsoft 365 développeur,](/office/developer-program/office-365-developer-program)si vous n'avez pas de client test.
+1. [Rejoignez le Microsoft 365 développeur,](/office/developer-program/office-365-developer-program)si vous n’avez pas de client test.
 2. [Configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
-3. [Utilisez des packs d'exemples de données avec votre abonnement Microsoft 365 développeur pour installer le pack de contenu Utilisateurs.](/office/developer-program/install-sample-packs)
+3. [Utilisez des packs d’exemples de données avec votre abonnement Microsoft 365 développeur pour installer le pack de contenu Utilisateurs.](/office/developer-program/install-sample-packs)
 4. [Installez le Teams module PowerShell.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
 5. [Installez le module Azure AD PowerShell.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
 > [!NOTE]
-> Vous devez avoir des autorisations d'administrateur global dans le client pour exécuter les scripts.
+> Vous devez avoir des autorisations d’administrateur global dans le client pour exécuter les scripts.
 
 ## <a name="allow-users-to-upload-apps"></a>Autoriser les utilisateurs à télécharger des applications
 
-Par défaut, seuls les administrateurs globaux ou les administrateurs Teams service peuvent télécharger (charger une version de version de chargement) d'applications dans un client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester. Pour plus d'informations, [voir gérer les stratégies et paramètres](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)d'application personnalisés dans Teams .
+Par défaut, seuls les administrateurs globaux ou les administrateurs Teams service peuvent télécharger (charger une version de version de chargement) d’applications dans un client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester. Pour plus d’informations, [voir gérer les stratégies et paramètres](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)d’application personnalisés dans Teams .
 
 ## <a name="create-teams-and-channels-for-testing"></a>Créer des équipes et des canaux pour les tests
 
-1. Enregistrez l'extrait de code suivant sous **la.xml** fichier et notez le chemin d'accès du fichier. Ce XML définit la structure de l'équipe et du canal créés avec ses membres :
+1. Enregistrez l’extrait de code suivant sous **la.xml** fichier et notez le chemin d’accès du fichier. Ce XML définit la structure de l’équipe et du canal créés avec ses membres :
 
     ```xml
     <?xml version="1.0"?>
@@ -147,7 +147,7 @@ Par défaut, seuls les administrateurs globaux ou les administrateurs Teams serv
     </Teams>
     ```
 
-2. Enregistrez l'extrait de code suivant en tant que script PowerShell (.ps1) et notez l'endroit où vous l'avez enregistré. Ce script exécute les étapes pour créer l'équipe et le canal, et y ajouter des membres :
+2. Enregistrez l’extrait de code suivant en tant que script PowerShell (.ps1) et notez l’endroit où vous l’avez enregistré. Ce script exécute les étapes pour créer l’équipe et le canal, et y ajouter des membres :
 
     ```powershell
     Param(
@@ -238,13 +238,13 @@ Par défaut, seuls les administrateurs globaux ou les administrateurs Teams serv
     }
     ```
 
-3. Ouvrez une session Windows PowerShell en mode Administrateur et exécutez le script que vous viennent d'écrire.
-4. Lorsque vous êtes invité à fournir les informations d'identification, entrez les informations d'identification d'administrateur général que vous avez reçues lors de votre première inscription à votre abonnement développeur.
+3. Ouvrez une session Windows PowerShell en mode Administrateur et exécutez le script que vous viennent d’écrire.
+4. Lorsque vous êtes invité à fournir les informations d’identification, entrez les informations d’identification d’administrateur général que vous avez reçues lors de votre première inscription à votre abonnement développeur.
 
     > [!Note]
-    > Ne fermez pas votre session PowerShell, car l'exécution du script prend plusieurs minutes. Si vous avez modifié les utilisateurs de votre abonnement à partir de ce qui est créé dans le pack de contenu par défaut, certains utilisateurs peuvent ne pas être ajoutés à Teams. Lorsque le script s'exécute, il affiche les actions réussies ou échouées.
+    > Ne fermez pas votre session PowerShell, car l’exécution du script prend plusieurs minutes. Si vous avez modifié les utilisateurs de votre abonnement à partir de ce qui est créé dans le pack de contenu par défaut, certains utilisateurs peuvent ne pas être ajoutés à Teams. Lorsque le script s’exécute, il affiche les actions réussies ou échouées.
 
-5. Une fois l'exécution du script terminée, vous pouvez vous connectez au client Teams avec l'un des comptes d'utilisateur et afficher les équipes nouvellement créées.
+5. Une fois l’exécution du script terminée, vous pouvez vous connectez au client Teams avec l’un des comptes d’utilisateur et afficher les équipes nouvellement créées.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -14,26 +14,26 @@ ms.locfileid: "52644888"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Conception de votre application personnelle pour Microsoft Teams
 
-Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu, d’autres fois, il offre à l’utilisateur une vue d’ensemble de tout ce qui lui est propre lorsque l’application a été configurée sous la forme d’un onglet dans plusieurs canaux.
+Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu, d’autres fois il offre à l’utilisateur une vue d’ensemble de tout ce qui lui est propre lorsque l’application a été configurée sous la forme d’un onglet dans plusieurs canaux.
 
 Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des applications personnelles dans Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions complètes sur la conception d’applications personnelles, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit d’interface Microsoft Teams’interface utilisateur. Le kit d’interface utilisateur contient également des rubriques essentielles telles que l’accessibilité et le resserrement réactif qui ne sont pas abordés ici.
+Vous trouverez des instructions complètes sur la conception d’applications personnelles, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit Microsoft Teams’interface utilisateur. Le kit d’interface utilisateur contient également des rubriques essentielles telles que l’accessibilité et le resserrement réactif qui ne sont pas abordés ici.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Ajouter une application personnelle
 
-Vous pouvez ajouter une application personnelle à partir du magasin Teams (AppSource)  ou du flyout de l’application en sélectionnant l’icône Plus sur le côté gauche de Teams (illustré dans l’exemple suivant).
+Vous pouvez ajouter une application personnelle à partir du Teams store (AppSource)  ou du flyout de l’application en sélectionnant l’icône Plus sur le côté gauche de Teams (illustré dans l’exemple suivant).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du volant de l’application." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du flyout de l’application." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Utiliser une application personnelle (espace de travail privé)
 
-Avec un espace de travail privé, vous pouvez afficher le contenu de l’application qui vous semble significatif dans un emplacement central sans quitter Teams.
+Avec un espace de travail privé, vous pouvez afficher du contenu d’application qui vous semble significatif dans un emplacement central sans quitter Teams.
 
 (Remarque d’implémentation : l’espace de travail privé est basé sur la [*fonctionnalité d’onglet*](../../build-your-first-app/build-personal-tab.md) personnel.)
 
@@ -48,9 +48,9 @@ Avec un espace de travail privé, vous pouvez afficher le contenu de l’applica
 |A|**Attribution de l’application**: nom et logo de votre application.|
 |B|**Onglets :** fournit la navigation pour votre application personnelle.|
 |C|**Affichage popout :** pousse le contenu de votre application d’une fenêtre parent vers une fenêtre enfant autonome.|
-|D|**Menu plus :** inclut des options et des informations supplémentaires sur l’application. (Vous pouvez également Paramètres **un** onglet.)|
+|D|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires. (Vous pouvez également Paramètres **un** onglet.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -65,10 +65,10 @@ Avec un espace de travail privé, vous pouvez afficher le contenu de l’applica
 |----------|-----------|
 |A|**Attribution de l’application**: nom de votre application.|
 |B|**Onglets :** fournit la navigation pour votre application personnelle.|
-|C|**Menu plus :** inclut des options et des informations supplémentaires sur l’application.|
+|C|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires.|
 |D|**Navigation principale**: fournit la navigation vers les autres fonctionnalités principales Teams votre application.|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -81,7 +81,7 @@ Avec un espace de travail privé, vous pouvez afficher le contenu de l’applica
 
 Utilisez l’un des Teams et composants suivants pour vous aider à concevoir votre onglet personnel :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 * [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
 * [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.

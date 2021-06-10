@@ -22,18 +22,18 @@ Que vous êtes concepteur, chef de produit, développeur ou fabricant à l’aid
 
 Concevoir une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement Teams fonctionnalités et contextes.
 
-Ces recommandations et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
+Ces instructions et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
 
 ## <a name="teams-app-design-principles"></a>Teams de conception d’application
 
-Teams applications permettent aux gens de s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
+Teams applications permettent aux gens d’atteindre des objectifs plus réussis. Utilisez ces principes pour guider votre conception.
 
 :::row:::
    :::column span="":::
 
 ### <a name="collaborative"></a>Collaboration
 
-Teams applications permettent aux gens de s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
+Teams applications permettent aux gens d’atteindre des objectifs plus réussis. Utilisez ces principes pour guider votre conception.
 
    :::column-end:::
    :::column span="":::
@@ -57,7 +57,7 @@ Les personnes de tous horizons, de tous les compétences et de toutes les discip
 
 ### <a name="light"></a>Light
 
-L’application se concentre sur les scénarios principaux qui se fondent avec Teams flux de travail.
+L’application se concentre sur les scénarios de base qui se fondent avec Teams flux de travail.
 
    :::column-end:::
 :::row-end:::
@@ -141,7 +141,7 @@ Les outils suivants peuvent aider les concepteurs et les développeurs à démar
 
 ### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Concevez une Teams avec des composants d’interface utilisateur, des modèles et des exemples que vous pouvez faire glisser, déposer et modifier selon vos besoins. Le kit d’interface utilisateur inclut également des informations complètes sur l’apparence et le comportement des applications dans différents Teams scénarios.
+Concevez une Teams avec des composants d’interface utilisateur, des modèles et des exemples que vous pouvez faire glisser, déposer et modifier selon vos besoins. Le kit d’interface utilisateur inclut également des informations complètes sur l’apparence et le comportement des applications dans Teams différents scénarios.
 
 > [!div class="nextstepaction"]
 > [Obtenir le kit d’interface utilisateur (Figma)](https://www.figma.com/community/file/916836509871353159)

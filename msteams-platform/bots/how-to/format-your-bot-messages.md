@@ -14,11 +14,11 @@ ms.locfileid: "52020904"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
-La mise en forme des messages vous permet de mettre en avant les meilleurs messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui sont des pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l'audio, de la vidéo, etc.
+La mise en forme des messages vous permet de mettre en avant les meilleurs messages du bot. Vous pouvez mettre en forme vos messages de bot pour inclure des cartes enrichies qui sont des pièces jointes qui contiennent des éléments interactifs, tels que des boutons, du texte, des images, de l’audio, de la vidéo, etc.
 
 ## <a name="format-text-content"></a>Mise en forme du contenu de texte
 
-Pour mettre en forme vos messages de bot, vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte de votre [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) bot.
+Pour mettre en forme vos messages de bot, vous pouvez définir la propriété facultative pour contrôler le rendu du contenu texte de votre [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) message bot.
 
 Microsoft Teams prend en charge les options de mise en forme suivantes :
 
@@ -28,15 +28,15 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 | Markdown | Le texte doit être traité comme une mise en forme markdown et restituer sur le canal selon le cas. |
 | xml | Le texte est un simple markup XML. |
 
-Teams prend en charge un sous-ensemble de balises de markdown et de balises de mise en forme XML ou HTML.
+Teams prend en charge un sous-ensemble de balises de mise en forme XML ou HTML et markdown.
 
-Actuellement, les limitations suivantes s'appliquent à la mise en forme :
+Actuellement, les limitations suivantes s’appliquent à la mise en forme :
 
 * Les messages texte uniquement ne sont pas en charge de la mise en forme de tableau.
 * Les cartes enrichies ne peuvent être formatées que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre.
 * Les cartes enrichies ne prisent pas en charge le markdown ou la mise en forme de tableau.
 
-Après avoir formaté le contenu du texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes pris en charge par Microsoft Teams.
+Après avoir formaté le contenu du texte, assurez-vous que votre mise en forme fonctionne sur toutes les plateformes Microsoft Teams.
 
 ## <a name="cross-platform-support"></a>Prise en charge sur plusieurs plateformes
 
@@ -53,8 +53,8 @@ Certains styles ne sont actuellement pas pris en charge sur toutes les plateform
 | Liste triée              | ✖ | ✔ |
 | Texte préformaté         | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ |
-| Lien hypertexte                 | ✔ | ✔ |
-| Lien vers l'image                | ✔ | ✖ |
+| Hyperlink                 | ✔ | ✔ |
+| Lien vers l’image                | ✔ | ✖ |
 
 Après avoir vérifié la prise en charge sur plusieurs plateformes, assurez-vous que la prise en charge par des plateformes individuelles est également disponible.
 
@@ -77,8 +77,8 @@ Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge 
 | Liste triée              | ✔ | ✖ | ✖ |
 | Texte préformaté         | ✔ | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ | ✔ |
-| Lien hypertexte                 | ✔ | ✔ | ✔ |
-| Lien vers l'image                | ✔ | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ | ✔ |
+| Lien vers l’image                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Cartes
 

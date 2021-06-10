@@ -18,7 +18,7 @@ Vous pouvez créer des applications pour rendre les réunions plus productives. 
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions de conception plus complètes, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans Microsoft Teams kit d’interface utilisateur.
+Vous trouverez des instructions de conception plus complètes, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit Microsoft Teams’interface utilisateur.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -69,18 +69,18 @@ Avant une réunion, les utilisateurs peuvent ajouter du contenu dans l’onglet.
 
 Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous aider à concevoir votre onglet de réunion :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 * [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
 * [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
 * [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc.
 * [Navigation gauche :](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)le composant de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation au minimum.
 
-## <a name="use-an-in-meeting-tab"></a>Utiliser un onglet en réunion
+## <a name="use-an-in-meeting-tab"></a>Utiliser un onglet de réunion
 
 L’onglet de réunion est un canevas qui permet d’accroître la collaboration pendant les réunions. Les participants peuvent voir et interagir avec le contenu de l’application dans un espace dédié en dehors de la phase de réunion par le biais d’affichages partagés ou basés sur des rôles.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
 Les personnes peuvent utiliser l’onglet réunion pour :
 
@@ -119,7 +119,7 @@ Optimisez votre onglet de réunion pour qu’il s’adapte de bord à bord dans 
 
 ### <a name="scrolling"></a>Défilement
 
-Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voir le contenu que vous avez fait défiler vers (rien au-dessus ou au-dessous). La barre de défilement fait partie du contenu de l’iframe.
+Le contenu de l’Iframe doit défiler verticalement. Vous pouvez uniquement voir le contenu vers qui vous avez fait défiler (rien au-dessus ou au-dessous). La barre de défilement fait partie du contenu de l’iframe.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="L’exemple montre comment défile l’onglet dans la réunion." border="false":::
 
@@ -133,7 +133,7 @@ Pour les scénarios avec des couches de navigation ou un contenu lourd, nous vou
 
 Les boîtes de dialogue de réunion s’affichent sur la Teams de réunion. Ils nécessitent l’attention, la confirmation ou l’interaction d’un utilisateur, mais sont discrets et n’interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés vers les tâches.
 
-### <a name="use-cases"></a>Cas d’utilisation
+### <a name="use-cases"></a>Cas d'utilisation
 
 Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel que l’organisateur de la réunion) qui souhaite peut-être que les participants :
 
@@ -154,7 +154,7 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie : boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -169,7 +169,7 @@ Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la v
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Avatar**: personne qui initie la boîte de dialogue en réunion.|
+|1|**Avatar**: personne qui lance la boîte de dialogue en réunion.|
 |2|**Icône de l’application**|
 |3|**Nom de l'application**|
 |4 |**Bouton Fermer :** ferme la boîte de dialogue.|
@@ -233,7 +233,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 #### <a name="dont-clutter-the-space"></a>À ne pas faire : encombrer l’espace
 
-Le contenu épais ou trop structuré peut être gênant et gênant, en particulier lors d’une réunion.
+Le contenu épais ou trop structuré peut être gênant et gênant, en particulier au cours d’une réunion.
 
    :::column-end:::
 :::row-end:::
@@ -311,7 +311,7 @@ Si votre application comprend plusieurs tâches, nous vous recommandons vivement
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Exemple de scénarios complexes dans une boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="Exemple de scénarios complexes dans une boîte de dialogue de réunion." border="false":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>À ne pas faire : rendre les boîtes de dialogue de réunion complexes
 
@@ -336,7 +336,7 @@ Teams réunions sont optimisées pour le mode sombre afin de réduire les bruits
 
 #### <a name="dont-hard-code-hex-values"></a>À ne pas faire : valeurs hexades de code dur
 
-Si vous n’utilisez pas Teams de couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
+Si vous n’utilisez pas Teams couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
@@ -357,7 +357,7 @@ Si vous avez plusieurs couches de navigation dans un onglet de réunion, les uti
 
 #### <a name="dont-include-another-dismiss-button"></a>À ne pas faire : inclure un autre bouton d’arrêt
 
-La fourniture d’une option pour fermer le contenu de l’onglet en réunion peut entraîner des problèmes, car l’en-tête ne doit pas être fermé par un bouton.
+La fourniture d’une option permettant de fermer le contenu de l’onglet de réunion peut entraîner des problèmes, car l’en-tête est déjà sur un bouton pour faire disparaître l’onglet de la réunion lui-même.
 
    :::column-end:::
 :::row-end:::
@@ -370,7 +370,7 @@ La fourniture d’une option pour fermer le contenu de l’onglet en réunion pe
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Attention : évitez les modales dans l’onglet de la réunion
 
-Les modaux (également appelés modules de tâche) dans l’onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
+Les modales (également appelées modules de tâche) dans l’onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
 
    :::column-end:::
 :::row-end:::

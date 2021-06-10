@@ -21,7 +21,7 @@ Avant de créer votre première application Teams, vous devez installer quelques
 Certains des outils dont vous avez besoin dépendent de la façon dont vous préférez créer votre Teams application :
 
 - [Node.js](https://nodejs.org/en/download/) (utilisez la dernière version de LTS v14) 
-- Un navigateur avec des outils de développement, tels [que Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
+- Navigateur avec outils de développement, tels que [Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
 - Si vous développez avec JavaScript, TypeScript ou le SharePoint Framework (SPFx), installez [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 ou ultérieure.  
 - Si vous développez avec .NET, installez [Visual Studio 2019.](https://visualstudio.com/download)  Veillez à installer la **charge ASP.NET développement web et** web ou la charge de travail de développement **.NET Core sur plusieurs plateformes.**
 
@@ -35,7 +35,7 @@ Le Teams Shared Computer Toolkit simplifie le processus de développement avec d
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou Afficher **> extensions**).
+1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Afficher > extensions**).
 1. Dans la zone de recherche, entrez _Teams Shared Computer Toolkit_.
 1. Sélectionnez le bouton d’installation vert en Teams Shared Computer Toolkit.
 
@@ -59,7 +59,7 @@ Les outils suivants sont installés par l’extension Visual Studio Code si néc
 
 Vous pouvez utiliser Visual Studio 2019 pour développer des applications Teams avec Blazor Server dans .NET.  Si vous n’avez pas l’intention de développer des applications Teams dans .NET, installez la version Visual Studio Code de Teams Shared Computer Toolkit.
 
-Pour installer l’extension Teams Shared Computer Toolkit:
+Pour installer l’extension Teams Shared Computer Toolkit :
 
 1. Ouvrez Visual Studio 2019.
 1. Select **Extensions**  >  **Manage Extensions**.
@@ -89,7 +89,7 @@ Veillez à ajouter le cache global npm à votre chemin d’accès.  Cette procé
 Vous pouvez utiliser l’CLI avec la `teamsfx` commande.  Vérifiez que la commande fonctionne en cours `teamsfx -h` d’exécution.
 
 > [!CAUTION]
-> Avant de pouvoir exécuter TeamsFx dans les terminaux PowerShell, vous devez activer la stratégie d’exécution « signé à distance » pour PowerShell.  Pour plus d’informations, reportez-vous à [la documentation PowerShell.](/powershell/module/microsoft.powershell.core/about/about_signing)
+> Avant de pouvoir exécuter TeamsFx dans les terminals PowerShell, vous devez activer la stratégie d’exécution « signé à distance » pour PowerShell.  Pour plus d’informations, reportez-vous à [la documentation PowerShell.](/powershell/module/microsoft.powershell.core/about/about_signing)
 
 ---
 
@@ -110,9 +110,9 @@ Si vous travaillez avec des données Graph Microsoft, vous devez en savoir plus 
 
 Avec le Portail des développeurs pour Teams, vous pouvez configurer, gérer et distribuer votre application Teams (y compris à votre organisation ou au Teams store).
 
-- [Portail des développeurs pour Teams](https://dev.teams.microsoft.com/)
+- [Documentation pour les développeurs](https://dev.teams.microsoft.com/)
 
-## <a name="enable-sideloading"></a>Activer le chargement de version
+## <a name="enable-sideloading"></a>Activer le chargement de version de version
 
 Pendant le développement, vous devrez charger votre application dans Teams sans la distribuer.  C’est ce que l’on appelle le « chargement de version latérale ».
 
@@ -128,7 +128,7 @@ Pendant le développement, vous devrez charger votre application dans Teams sans
 
 ## <a name="get-a-free-teams-developer-tenant-optional"></a>Obtenir un client Teams développeur gratuit (facultatif)
 
-Si vous ne pouvez pas voir l’option de chargement indépendant ou si vous n’avez pas de compte Teams, vous pouvez obtenir un compte de développeur Teams gratuit en rejoignant le programme pour les développeurs M365.  Le processus d’inscription prend environ deux minutes.
+Si vous ne pouvez pas voir l’option chargement indépendant ou si vous n’avez pas de compte Teams, vous pouvez obtenir un compte de développeur Teams gratuit en rejoignant le programme pour les développeurs M365.  Le processus d’inscription prend environ deux minutes.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Sélectionnez **Rejoindre maintenant** et suivez les instructions à l’écran.
@@ -153,10 +153,10 @@ Vous aurez besoin d’accéder à deux comptes :
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Ouvrir Visual Studio Code
+1. Ouvrez Visual Studio Code
 1. Sélectionnez l Teams icône dans la barre latérale :
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icône Teams de l’Visual Studio Code côté gauche.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icône Teams dans la barre latérale Visual Studio Code.":::
 
 1. Sélectionnez **Se connectez à M365.**
 
@@ -199,7 +199,7 @@ Les connexions de compte sont partagées entre Visual Studio Code et l’CLI Tea
 
 ---
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 Maintenant que votre environnement de développement est configuré, vous pouvez créer, générer et déployer votre première application Teams de développement.
 
