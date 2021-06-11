@@ -4,12 +4,12 @@ description: Comment créer un bot assistant virtuel et des compétences à util
 localization_priority: Normal
 ms.topic: how-to
 keywords: bots d’assistant virtuel Teams
-ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a736dfc7a9a2f23389b2232b36beb800bc059ad5
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630732"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871845"
 ---
 # <a name="create-virtual-assistant"></a>Créer un assistant virtuel 
 
@@ -170,7 +170,7 @@ Le forwarding de demande est effectué par le biais de [la méthode SkillHttpCli
         }
 ```
 
-Une approche similaire est suivie pour la distribution des actions de carte et les réponses de module de tâche. Les données d’action d’extraction et d’soumission du module de tâche sont mises à jour pour inclure `skillId` . La méthode d’extension d’activité extrait de la charge utile qui fournit des détails sur la compétence qui `GetSkillId` `skillId` doit être invoquée.
+Une approche similaire est suivie pour la distribution des actions de carte et les réponses de module de tâche. Les données d’action d’extraction et d’soumission du module de tâche sont mises à jour pour inclure `skillId` . La méthode d’extension d’activité extrait de la charge utile qui fournit des détails sur les compétences qui `GetSkillId` `skillId` doivent être invoquées.
 
 L’extrait de code et les méthodes sont `OnTeamsTaskModuleFetchAsync` `OnTeamsTaskModuleSubmitAsync` donnés dans la section suivante :
 
@@ -334,11 +334,11 @@ Certaines activités d’extension de messagerie n’incluent pas l’ID de comm
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment convertir le modèle d’application Livrer une salle en une compétence Assistant virtuel : « Réserver une salle » est un Microsoft Teams qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pendant 30, 60 ou 90 minutes à partir de l’heure actuelle. La durée par défaut est 30 minutes. Le bot Book-a-room s’étendue à des conversations personnelles ou 1:1. L’image suivante affiche un Assistant virtuel avec un livre avec **une compétence de** salle :
+L’exemple suivant montre comment convertir le modèle d’application Livrer une salle en une compétence Assistant virtuel : « Réserver une salle » est un Microsoft Teams qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pendant 30, 60 ou 90 minutes à partir de l’heure actuelle. La durée par défaut est 30 minutes. Le bot Book-a-room s’étendue à des conversations personnelles ou 1:1. L’image suivante affiche un Assistant virtuel avec un livre de **compétences de** salle :
 
-![Assistant virtuel avec compétence « réserver une salle »](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
+![Assistant virtuel avec compétence « Réserver une salle »](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
-Voici les modifications delta introduites pour la convertir en une compétence qui est liée à un Assistant virtuel. Des instructions similaires sont suivies pour convertir tout bot v4 existant en une compétence.
+Voici les modifications delta introduites pour la convertir en une compétence attachée à un Assistant virtuel. Des instructions similaires sont suivies pour convertir tout bot v4 existant en une compétence.
 
 ### <a name="skill-manifest"></a>Manifeste de compétences
 
@@ -570,10 +570,10 @@ Vous pouvez également tirer parti des compétences existantes à partir du réf
 
 ## <a name="code-sample"></a>Exemple de code
 
-| **Exemple de nom** | **Description** | **C#** | **.NET** |
-|----------|-----------------|----------|------------------|
-| Modèle Visual Studio mis à jour | Modèle personnalisé pour prendre en charge les fonctionnalités des équipes. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
-| Code de compétences pour un bot dans une salle | Vous permet de rechercher et de réserver rapidement une salle de réunion en cours de réunion. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+| **Exemple de nom** | **Description** | **C#**  **.NET** |
+|----------|-----------------|---------------------------|
+| Modèle Visual Studio mis à jour | Modèle personnalisé pour prendre en charge les fonctionnalités teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Code de compétences pour un bot dans une salle | Vous permet de rechercher et de réserver rapidement une salle de réunion en cours de réunion. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 
 ## <a name="see-also"></a>Voir aussi
