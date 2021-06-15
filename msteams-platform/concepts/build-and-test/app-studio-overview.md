@@ -4,12 +4,12 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651711"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915096"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Développez rapidement des applications avec App Studio pour Microsoft Teams
 
@@ -65,7 +65,6 @@ La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fon
 > [!NOTE]
 > En tant que meilleure pratique, vous devez fournir des instructions de personnalisation que les utilisateurs et les clients de l’application doivent suivre lors de la personnalisation de votre application. Pour plus d’informations, voir [personnaliser les applications dans Microsoft Teams](/MicrosoftTeams/customize-apps).
 
-
 ##### <a name="tabs"></a>Onglets
 
 * **Onglets d’équipe.** Un onglet d’équipe devient un canal et permet d’accéder rapidement aux informations et ressources de l’équipe. Par exemple, l’onglet Planificateur d’un canal contient un seul plan. L’onglet Power BI correspond à un rapport spécifique. Les utilisateurs peuvent explorer le contexte approprié, mais ils ne peuvent pas naviguer en dehors de l’onglet. Par exemple, l’onglet Power BI n’active pas la navigation vers les autres rapports Power BI, mais il active le bouton *Accéder au site web* qui lance le rapport dans le site web principal de Power BI.
@@ -74,7 +73,7 @@ La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fon
 
   Vous devez également fournir d'autres domaines à partir desquels l'onglet doit être chargé ou lié.
 
-* **Onglets personnels.** Cette section vous permet de définir un ensemble d’onglets présentés par défaut dans l’expérience d’application personnelle (expérience dont dispose un utilisateur avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir des lesquels l’onglet s’attend à se charger ou à laquelle il doit établir un lien.
+* **Onglets personnels.** Cette section vous permet de définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle (expérience dont dispose un utilisateur avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir des lesquels l’onglet s’attend à se charger ou à laquelle il doit établir un lien.
 
 ##### <a name="bots"></a>Bots
 
@@ -90,10 +89,6 @@ Une fois que vous avez fourni les informations de votre bot, vous pouvez éventu
 ##### <a name="connectors"></a>Connecteurs
 
 Cette section vous permet d’ajouter un connecteur à votre application. Si vous avez déjà inscrit un connecteur Office 365, sélectionnez **Configurer** puis entrez le nom et l’ID du connecteur. Si vous voulez un nouveau connecteur, cliquez sur **S'inscrire** pour accéder au tableau de bord du développeur de connecteurs dans votre navigateur.
-
-> [!NOTE]
-> La personnalisation d’application permet aux administrateurs de modifier l’apparence des applications chargées par le biais de bots, d’extensions de messagerie, d’onglets et de connecteurs. Par exemple, si l’administrateur Teams personnalise le nom d’une application de **Contoso** à **Agent Contoso,** l’application apparaît sous le nouveau nom **Agent Contoso** pour les utilisateurs. Toutefois, lors de l’ajout d’un connecteur à une conversation, dans la liste, les connecteurs afficheront toujours le nom de l’application en tant **que Contoso**.
-
 
 ##### <a name="messaging-extensions"></a>Extensions de messagerie
 

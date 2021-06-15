@@ -5,18 +5,19 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: c2009038341a22664b0f055fa9756a9d1eba87b9
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853535"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915089"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Schéma de manifeste de prévisualisation pour les développeurs Microsoft Teams
 
+Pour plus d’informations sur la façon d’activer la prévisualisation pour les développeurs, voir la prévisualisation pour [les développeurs Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+
 > [!NOTE]
-> Pour plus d’informations sur le programme et sur la façon dont vous pouvez participer, consultez [l’aperçu du développeur.](~/resources/dev-preview/developer-preview-intro.md)
-> Si vous n’utilisez pas la prévisualisation du développeur, vous ne devez pas utiliser cette version du manifeste. Voir [la référence : schéma de manifeste pour Microsoft Teams](~/resources/schema/manifest-schema.md) pour la version publique du manifeste.
+> * Si vous n’utilisez pas les fonctionnalités de prévisualisation pour les développeurs, utilisez plutôt le manifeste de l’application pour les [fonctionnalités ga.](~/resources/schema/manifest-schema.md)
 
 Le Microsoft Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
@@ -301,7 +302,7 @@ Tableau d’objets spécifiant des traductions linguistiques supplémentaires.
 
 **Obligatoire**
 
-Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
+Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et ne doivent pas être `full` identiques.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -312,7 +313,7 @@ Nom de l’expérience de votre application, affiché aux utilisateurs dans l’
 
 **Obligatoire**
 
-Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
+Décrit votre application aux utilisateurs. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
 Assurez-vous que votre description décrit précisément votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Notez également, dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et ne doivent pas être `full` identiques.  Votre description courte ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
@@ -351,7 +352,7 @@ L’objet est un tableau avec tous les éléments du type `object` . Ce bloc est
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
 |`sharePointPreviewImage`|String|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
 |`supportedSharePointHosts`|Tableau de l’énum|1||Définit la façon dont votre onglet sera disponible dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
@@ -428,8 +429,8 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
+|`botId`|String|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global.](#id)|
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,9 +445,9 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`type`|String|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Valeur par défaut : `query`|
 |`title`|String|32 caractères|✔|Nom de la commande conviviale.|
 |`description`|String|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|Booléen|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
+|`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
 |`context`|Tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose", "commandBox"]`|
-|`fetchTask`|Booléen|||Valeur booléle qui indique si le module de tâche doit être récupéré dynamiquement.|
+|`fetchTask`|Boolean|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche.|
 |`taskInfo`|Objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|String|64||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|String|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
