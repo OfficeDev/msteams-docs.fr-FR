@@ -4,14 +4,17 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: c68a7a36212086c9c0929796cab66bc53f8cbb2b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915096"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949769"
 ---
-# <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Développez rapidement des applications avec App Studio pour Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
+
+> [!TIP]
+> **Essayez le portail du développeur**: App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
 
 App Studio vous permet de créer et d’intégrer facilement vos propres applications Microsoft Teams, que vous développiez des applications personnalisées pour votre entreprise ou des applications SaaS pour des équipes du monde entier, en rationalisant la création du manifeste et du package pour votre application et en fournissant des outils utiles comme l'éditeur de cartes et une bibliothèque de contrôle React.
 
@@ -125,7 +128,7 @@ Si vous avez déjà une carte que vous voulez vérifier dans Teams, vous pouvez 
 ### <a name="react-control-library"></a>Bibliothèque de contrôles React
 
 >[!Note]
-> Cet React bibliothèque de contrôles est bientôt supprimé. Envisagez d’utiliser [les contrôles React Fluent-UI](https://microsoft.github.io/fluent-ui-react/) comme alternative précédemment à l’interface utilisateur Stardust.
+> Cet React bibliothèque de contrôles est bientôt supprimé. Envisagez [d’utiliser Fluent des](https://microsoft.github.io/fluent-ui-react/) contrôles react de l’interface utilisateur utilisateur comme alternative précédemment à l’interface utilisateur Stardust.
 
 La création d’une application qui suit les meilleures pratiques de Teams est un excellent moyen de donner à votre application une apparence qui s’adapte parfaitement à l’expérience cliente de Teams. Les contrôles d’interface utilisateur sont essentiels pour atteindre cet objectif. Pour simplifier la création d’une interface utilisateur cohérente, App Studio fournit plusieurs catégories de contrôles d’interface utilisateur qui suivent les principes de conception de Teams.
 

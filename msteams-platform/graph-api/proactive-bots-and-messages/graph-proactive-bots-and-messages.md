@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: équipes d’installation de conversation de messagerie proactive Graph
-ms.openlocfilehash: 06b50e5ab8594c257959430383bab5e355af4e06
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: db36c64e557b90699bb09e77dc67ca4c9a8e5853
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566151"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949664"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph et envoi de messages
+# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications utilisant Graph API pour envoyer des messages
 
 >[!IMPORTANT]
 > Microsoft Graph et Microsoft Teams prévisualisations publiques sont disponibles pour un accès et des commentaires en avant-première. Bien que cette version ait fait l’objet de tests approfondis, elle n’est pas destinée à être mise en production.
@@ -33,11 +33,11 @@ Pour que votre bot puisse envoyer un message de manière proactive à un utilisa
 
 ## <a name="permissions"></a>Autorisations
 
-Les autorisations de type de ressource Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) vous aident à gérer le cycle de vie d’installation de votre application pour toutes les étendues utilisateur (personnel) ou d’équipe (canal) au sein de la plateforme Microsoft Teams :
+Les autorisations de type de ressource Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) vous aident à gérer le cycle de vie d’installation de votre application pour toutes les étendues utilisateur (personnelle) ou d’équipe (canal) au sein de la plateforme Microsoft Teams :
 
 |Autorisation de l’application | Description|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Permet à une Teams de lire, d’installer, de mettre à niveau et de se désinstaller elle-même pour n’importe quel **utilisateur,** sans se connecter ou utiliser préalablement.|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Permet à une application Teams de lire, d’installer, de mettre à niveau et de se désinstaller elle-même pour n’importe quel **utilisateur,** sans se connecter ou utiliser préalablement.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Permet à une Teams de lire, d’installer, de mettre à niveau et de se désinstaller elle-même dans n’importe quelle **équipe,** sans se connecter ou utiliser préalablement.|
 
 Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) à votre manifeste d’application avec les valeurs suivantes :
@@ -56,14 +56,14 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Activer l’installation proactive de l’application et la messagerie
 
 > [!IMPORTANT]
->Microsoft Graph installer uniquement les applications publiées dans le magasin d’applications de votre organisation ou dans Teams store.
+>Microsoft Graph installer uniquement les applications publiées dans le magasin d’applications de votre organisation ou le Teams store.
 
 ### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a>✔ créer et publier votre bot de messagerie proactive pour Teams
 
 To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with proactive [messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that’s in your [organization’s app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org) or the Teams [store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 >[!TIP]
-> Le modèle d’application Communicator entreprise prêt pour la production [**autorise**](../..//samples/app-templates.md#company-communicator) la diffusion de messages et constitue une bonne base pour la création de votre application de bot proactive.
+> Le modèle d’application [**Office Communicator**](../..//samples/app-templates.md#company-communicator) entreprise prêt pour la production autorise la diffusion de messages et constitue une bonne base pour la création de votre application de bot proactive.
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔ obtenir `teamsAppId` l’application
 
@@ -105,7 +105,7 @@ La demande doit renvoyer un `teamsApp` objet. L’objet renvoyé est l’ID d’
 GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les données `teamsAppId` suivantes :
+**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les informations `teamsAppId` suivantes :
 
 **Référence de page Graph Microsoft : lister** [les applications en équipe](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -132,7 +132,7 @@ Cette demande renvoie un tableau vide si l’application n’est pas installée 
 
 ### <a name="-install-your-app"></a>✔ installer votre application
 
-**Référence de page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Référence de la page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **Requête HTTP POST** :
 

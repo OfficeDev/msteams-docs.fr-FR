@@ -1,24 +1,24 @@
 ---
-title: Mode Ensemble dans Teams
-description: Travailler avec le mode Ensemble
+title: Scènes personnalisées en mode ensemble
+description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
-ms.openlocfilehash: 1620e01ef1825ec43e94614ff8ea355e764e10e0
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651739"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949748"
 ---
-# <a name="together-mode-in-teams"></a>Mode Ensemble dans Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode ensemble dans Teams
 
 > [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md) uniquement.
+> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
 
-Microsoft Teams Le mode Ensemble fournit un environnement de réunion immersif et attrayant qui rassemble les personnes et les encourage à activer leur vidéo. Il combine numériquement les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés conçus et corrigés par le créateur de scène.
+Les scènes personnalisées en mode ensemble Microsoft Teams un environnement de réunion immersif et attrayant qui rassemble les personnes et les encourage à activer leur vidéo. Il combine numériquement les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés conçus et corrigés par le créateur de scène.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Une scène en mode Ensemble est un artefact créé par le développeur de scène à l’aide de Microsoft Scene studio. Dans un paramètre de scène en cours, les participants ont des sièges désignés avec des flux vidéo restituer dans ces sièges.
+Une scène dans des scènes personnalisées en mode ensemble est un artefact créé par le développeur de scène à l’aide de Microsoft Scene studio. Dans un paramètre de scène en cours, les participants ont des sièges désignés avec des flux vidéo restituer dans ces sièges.
 
 > [!NOTE]
 > Les applications de scène uniquement sont recommandées, car l’expérience d’acquisition pour ces applications est plus transparente.
@@ -29,11 +29,11 @@ Le processus suivant donne une vue d’ensemble pour créer une application de s
 
 > [!NOTE]
 > * Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création du package d’application en arrière-plan.
-> * Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate de scènes pour les utilisateurs.
+> * Plusieurs scènes d’un même package d’application s’affichent sous la forme d’une liste plate de scènes pour les utilisateurs.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions requises
 
-Vous devez avoir une connaissance de base des éléments suivants pour utiliser le mode Ensemble :
+Vous devez avoir une connaissance de base des éléments suivants pour utiliser des scènes personnalisées du mode Ensemble :
 
 * Définition de la scène et des sièges dans une scène.
 * Vous avez un compte de développeur Microsoft et familiarisez-vous avec le portail Microsoft Teams [développeur et](../concepts/build-and-test/teams-developer-portal.md) App Studio.
@@ -108,7 +108,7 @@ Les dimensions des sièges deviennent le canevas pour le rendu du flux vidéo du
 
     >[!NOTE]
     > * Vous pouvez télécharger les [ fichiersSampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) et [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) avec les images.
-    > * Vous pouvez également ajouter des images d’arrière-plan à la scène à l’aide **d’Ajouter des images.**
+    > * Vous pouvez également ajouter des images d’arrière-plan à la scène à l’aide **d’ajouter des images.**
 
     ![Glisser-glisser dans la scène](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
@@ -145,14 +145,14 @@ Les dimensions des sièges deviennent le canevas pour le rendu du flux vidéo du
 1. Dans la **boîte de dialogue Affichage Teams,** sélectionnez Aperçu dans **Teams**.
 1. Dans la boîte de dialogue qui s’affiche, sélectionnez **Ajouter.**
 
-    La scène peut être testée ou accessible en créant une réunion de test et en lançant le mode Ensemble. Pour plus d’informations, [voir activer le mode Ensemble.](#activate-the-together-mode)
+    La scène peut être testée ou accessible en créant une réunion de test et en lançant des scènes personnalisées du mode Ensemble. Pour plus d’informations, voir [activer des scènes personnalisées du mode Ensemble.](#activate-custom-together-mode-scenes)
 
-    ![Lancer le mode Ensemble](../assets/images/apps-in-meetings/launchtogethermode.png)
+    ![Lancer des scènes personnalisées du mode Ensemble](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
     > * La sélection **de l’aperçu** crée automatiquement une Microsoft Teams qui peut être vue dans la **page** Applications du portail Teams développeur.
-    > * La sélection **de l’aperçu** crée automatiquement un package d’application appmanifest.jssur la scène. Comme indiqué précédemment, cela est abstrait, mais vous pouvez accéder au  package d’application créé automatiquement en accédant aux applications à partir du menu.
-    > * La scène peut ensuite être vue dans la galerie de scène du mode Ensemble.
+    > * La sélection **de l’aperçu** crée automatiquement un package d’application appmanifest.jssur la scène. Comme indiqué précédemment, cela est abstrait, mais vous pouvez accéder au package d’application créé automatiquement en accédant à **Applications** à partir du menu.
+    > * La scène peut ensuite être vue dans la galerie personnalisée des scènes du mode Ensemble.
 
 1. Si vous le souhaitez,  vous pouvez sélectionner **Partager** dans le menu déroulant Enregistrer pour créer un lien partageable afin de distribuer facilement vos scènes à d’autres personnes. L’ouverture de ce lien installe la scène pour l’utilisateur et il peut commencer à l’utiliser.
 
@@ -172,7 +172,7 @@ Une scène plus complexe qui tire parti de l’axe Z est illustré dans l’exem
 
 ## <a name="sample-scenejson"></a>Exemple scene.jssur
 
-Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participant sont définis dans un système de coordonnées du monde avec l’axe X pointant vers la droite et l’axe Y pointant vers le bas. Le mode Ensemble prend en charge le zoom avant sur les participants actuels. Cela est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
+Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participant sont définis dans un système de coordonnées du monde avec l’axe X pointant vers la droite et l’axe Y pointant vers le bas. Les scènes personnalisées en mode ensemble prend en charge le zoom avant sur les participants actuels. Cela est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
 
 Voici les scene.jssur l’exemple :
 
@@ -246,13 +246,13 @@ Chaque scène possède un ID et un nom uniques. Le JSON de scène contient égal
 
 L’axe zOrder représente l’ordre de placement des images et des sièges le long de l’axe Z. Dans de nombreux cas, elle donne une idée de la profondeur ou de la partition si nécessaire. Pour plus d’informations, voir l’exemple de mise en marche pas à pas. L’exemple tire parti de zOrder.
 
-Maintenant que vous avez passé par l’exemple scene.jsactivé, vous pouvez activer le mode Ensemble pour vous engager dans des scènes.
+Maintenant que vous avez passé en scene.jsl’exemple, vous pouvez activer les scènes personnalisées du mode Ensemble pour vous engager dans des scènes.
 
-## <a name="activate-the-together-mode"></a>Activer le mode Ensemble
+## <a name="activate-custom-together-mode-scenes"></a>Activer des scènes personnalisées en mode ensemble
 
-Obtenez des informations de bout en bout sur la façon dont un utilisateur final s’engage dans des scènes en mode Ensemble.
+Obtenez des informations de bout en bout sur la façon dont un utilisateur final s’engage avec des scènes dans des scènes personnalisées en mode ensemble.
 
-**Pour choisir des scènes et activer le mode Ensemble**
+**Pour choisir des scènes et activer des scènes personnalisées en mode Ensemble**
 
 1. Créez une réunion de test.
 
@@ -265,14 +265,14 @@ Obtenez des informations de bout en bout sur la façon dont un utilisateur final
 
 1. Dans la **galerie de scène,** sélectionnez la scène que vous souhaitez utiliser pour votre réunion.
 
-1. Si vous le souhaitez, l’organisateur et le présentateur de la réunion peuvent choisir de basculer tous les participants en **mode ensemble** dans la réunion.
+1. L’organisateur et le présentateur de la réunion peuvent éventuellement modifier **la scène pour tous** les participants à la réunion.
 
     >[!NOTE]
-    > À tout moment, une seule scène peut être utilisée de manière homogène pour la réunion. Si un présentateur ou un organisateur modifie une scène, elle change pour tout. Le basculement dans ou hors du mode Ensemble est la responsabilité des participants individuels, mais en mode Ensemble, tous les participants ont la même scène.
+    > À tout moment, une seule scène peut être utilisée de manière homogène pour la réunion. Si un présentateur ou un organisateur modifie une scène, elle change pour tout. Le basculement dans ou hors des scènes personnalisées du mode Ensemble est la responsabilité des participants individuels, mais dans les scènes personnalisées du mode Ensemble, tous les participants ont la même scène.
 
 1. Sélectionnez **Appliquer**. Teams installe l’application pour l’utilisateur et applique la scène.
 
-## <a name="open-a-together-mode-scene-package"></a>Ouvrir un package de scène en mode Ensemble
+## <a name="open-a-custom-together-mode-scenes-scene-package"></a>Ouvrir un package de scène de scène en mode ensemble personnalisé
 
 Vous pouvez partager le package de scène qui est un fichier .zip extrait du studio scene studio à d’autres créateurs pour améliorer davantage la scène. La **fonctionnalité Importer une** scène peut être mise à profit. Cet outil permet de déballer un package de scène pour laisser le créateur continuer à créer la scène.
 

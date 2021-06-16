@@ -1,18 +1,18 @@
 ---
 title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte Microsoft Teams
-keywords: Format de cartes de bots Teams
+keywords: Format de cartes de bots teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630211"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949762"
 ---
-# <a name="format-cards-in-teams"></a>Formater les cartes dans Teams
+# <a name="format-cards-in-teams"></a>Formater des cartes dans Teams
 
 Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l’aide de Markdown ou html, en fonction du type de carte.
 
@@ -164,7 +164,7 @@ Pour inclure une mention dans une carte adaptative, votre application doit inclu
 Utilisez la propriété de masquage d’informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs au sein de l’élément d’entrée [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) de carte adaptative. 
 
 > [!NOTE]
-> La fonctionnalité prend uniquement en charge le masquage d’informations côté client, le texte d’entrée masqué est envoyé sous forme de texte clair à l’adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md) 
+> La fonctionnalité prend uniquement en charge le masquage d’informations côté client, le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md) 
 
 > [!NOTE]
 > La propriété de masquage d’informations est actuellement disponible dans l’aperçu développeur uniquement.
@@ -215,7 +215,7 @@ En outre, votre application doit inclure les éléments suivants :
 
 Une carte adaptative pleine largeur apparaît comme suit : affichage Carte ![ adaptative pleine largeur](../../assets/images/cards/full-width-adaptive-card.png)
 
-Si vous n’avez pas donné la valeur Full à la propriété, l’affichage par défaut de la carte adaptative apparaît comme suit : affichage Carte adaptative à petite `width`  ![ largeur](../../assets/images/cards/small-width-adaptive-card.png)
+Si vous n’avez pas donné la valeur Full à la propriété, l’affichage par défaut de la carte adaptative s’affiche comme suit : affichage Carte adaptative `width` à petite  ![ largeur](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Prise en charge de Typeahead
 
@@ -242,9 +242,6 @@ Pour activer typeahead dans `Input.Choiceset` l’ensemble `style` et vérifier 
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>Vue d’étape des images dans les cartes adaptatives
 
-> [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation pour les développeurs uniquement.
- 
 Dans une carte adaptative, vous pouvez utiliser la propriété pour ajouter la possibilité d’afficher des images en vue de la `msteams` scène de manière sélective. Lorsque les utilisateurs pointent sur les images, ils voient une icône développer, pour laquelle l’attribut `allowExpand` est définie sur `true` . Pour plus d’informations sur l’utilisation de la propriété, voir l’exemple suivant :
 
 ``` json
@@ -490,7 +487,7 @@ Sur Android, la mise en forme HTML s’affiche comme ceci :
 
 ![Mise en forme HTML dans le client Android](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-La mise en forme des caractères comme le gras et l’italique s’affiche correctement sur Android.
+La mise en forme des caractères comme gras et italique s’affiche correctement sur Android.
 
 ### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>Exemple de mise en forme pour la mise en forme HTML dans des cartes simples
 

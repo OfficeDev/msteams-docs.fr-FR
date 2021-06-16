@@ -1,16 +1,16 @@
 ---
 title: Envoyer des messages proactifs
-description: Décrit comment envoyer des messages proactifs avec Microsoft Teams bot.
+description: Décrit comment envoyer des messages proactifs avec votre bot Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
-Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID de l’utilisateur
-ms.openlocfilehash: ae651ac94b1b092374f6fae284b67070036b561f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID utilisateur
+ms.openlocfilehash: d2e9900e6c7d1f5ea5edfabe6dacb2f18b429b3f
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020918"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949776"
 ---
 # <a name="send-proactive-messages"></a>Envoyer des messages proactifs
 
@@ -22,20 +22,20 @@ Un message proactif est un message envoyé par un bot qui ne répond pas à une 
 * Notifications
 * Messages programmés
 
-Pour que votre bot envoie un message proactif à un utilisateur, une conversation de groupe ou une équipe, il doit avoir accès pour envoyer le message. Pour une conversation de groupe ou une équipe, l’application qui contient votre bot doit d’abord être installée à cet emplacement. Vous pouvez installer votre application de manière proactive à l’aide de [](/microsoftteams/teams-custom-app-policies-and-settings) [Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une stratégie d’application pour faire sortir les applications vers les équipes et les utilisateurs de votre client. Pour les utilisateurs, votre application doit être installée pour l’utilisateur ou votre utilisateur doit faire partie d’une équipe sur laquelle votre application est installée.
+Pour que votre bot envoie un message proactif à un utilisateur, une conversation de groupe ou une équipe, il doit avoir accès pour envoyer le message. Pour une conversation de groupe ou une équipe, l’application qui contient votre bot doit d’abord être installée à cet emplacement. Vous pouvez installer votre application de manière proactive à l’aide de [Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une stratégie d’application pour faire sortir les applications vers les équipes et les utilisateurs de votre client. [](/microsoftteams/teams-custom-app-policies-and-settings) Pour les utilisateurs, votre application doit être installée pour l’utilisateur ou votre utilisateur doit faire partie d’une équipe sur laquelle votre application est installée.
 
 L’envoi d’un message proactif est différent de l’envoi d’un message normal. Il n’est pas actif `turnContext` à utiliser pour une réponse. Vous devez créer la conversation avant d’envoyer le message. Par exemple, une nouvelle conversation un-à-un ou un nouveau thread de conversation dans un canal. Vous ne pouvez pas créer une conversation de groupe ou un nouveau canal dans une équipe avec une messagerie proactive.
 
 **Pour envoyer un message proactif**
 
-1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID](#get-the-user-id-team-id-or-channel-id)de canal, si nécessaire.
+1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID de](#get-the-user-id-team-id-or-channel-id)canal, si nécessaire.
 1. [Créez la conversation,](#create-the-conversation)si nécessaire.
 1. [Obtenir l’ID de conversation](#get-the-conversation-id).
-1. [Envoyer le message](#send-the-message).
+1. [Envoyez le message](#send-the-message).
 
 Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des liens vers des exemples de travail complets pour les conversations un-à-un et les groupes ou canaux, voir [l’exemple de code.](#code-sample)
 
-Pour utiliser efficacement les messages proactifs, consultez les meilleures pratiques en matière [de messagerie proactive.](#best-practices-for-proactive-messaging) Dans certains scénarios, vous devez installer votre application de manière proactive à [l’aide de Graph](#proactively-install-your-app-using-graph). Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des exemples de travail complets pour les conversations et les groupes ou canaux un-à-un, voir [l’exemple de code.](#code-sample)
+Pour utiliser efficacement les messages proactifs, consultez les meilleures pratiques en matière [de messagerie proactive.](#best-practices-for-proactive-messaging) Dans certains scénarios, vous devez installer votre application de manière [proactive à l’aide de Graph.](#proactively-install-your-app-using-graph) Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des exemples de travail complets pour les conversations et les groupes ou canaux un-à-un, voir [l’exemple de code.](#code-sample)
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Obtenir l’ID d’utilisateur, l’ID d’équipe ou l’ID de canal
 
@@ -47,7 +47,7 @@ Pour créer une conversation ou un thread de conversation dans un canal, vous de
 * Vous pouvez récupérer la [liste des membres d’une](~/bots/how-to/get-teams-context.md) équipe sur laquelle votre application est installée.
 * Chaque activité que reçoit votre bot doit contenir les informations requises.
 
-Quelle que soit la façon dont vous obtenez les informations, vous devez stocker le ou pour `tenantId` `userId` créer une `channelId` conversation. Vous pouvez également l’utiliser pour créer un thread de conversation dans le canal général ou `teamId` par défaut d’une équipe.
+Quelle que soit la façon dont vous obtenez les informations, vous devez stocker ou créer `tenantId` `userId` une `channelId` conversation. Vous pouvez également l’utiliser pour créer un thread de conversation dans le canal général ou `teamId` par défaut d’une équipe.
 
 Il `userId` est propre à votre ID de bot et à un utilisateur particulier. Vous ne pouvez pas réutiliser les `userId` bots. Il `channelId` s’agit d’une stratégie globale. Toutefois, votre bot doit être installé dans l’équipe avant de pouvoir envoyer un message proactif à un canal.
 
@@ -67,7 +67,7 @@ Une fois que vous avez reçu les informations d’adresse appropriées, vous pou
 
 ## <a name="send-the-message"></a>Envoyer le message
 
-Maintenant que vous avez les bonnes informations d’adresse, vous pouvez envoyer votre message. Si vous utilisez le SDK, vous devez utiliser la méthode et effectuer un appel `continueConversation` `conversationId` `tenantId` d’API direct. Vous devez définir correctement `conversationParameters` l’envoi de votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code.](#code-sample)
+Maintenant que vous avez les bonnes informations d’adresse, vous pouvez envoyer votre message. Si vous utilisez le SDK, vous le faites à l’aide de la méthode et pour effectuer un appel `continueConversation` `conversationId` `tenantId` d’API direct. Vous devez définir correctement `conversationParameters` l’envoi de votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code.](#code-sample)
 
 Si vous utilisez le SDK, vous devez utiliser la méthode et effectuer un appel `continueConversation` `conversationId` `tenantId` d’API direct pour envoyer le message. Vous devez définir correctement `conversationParameters` l’envoi de votre message.
 
@@ -85,7 +85,7 @@ Lorsque la messagerie proactive est utilisée pour envoyer un message de bienven
 * Que proposez-vous : les utilisateurs doivent être en mesure d’identifier ce qu’ils peuvent faire avec votre application et la valeur que vous pouvez leur apporter.
 * Que doivent-ils faire ensuite : inviter les utilisateurs à essayer une commande ou à interagir avec votre application.
 
-Les messages d’accueil médiocres peuvent entraîner le blocage de votre bot par des utilisateurs. Écrivez au point et effacer les messages de bienvenue. Itérer sur les messages de bienvenue s’ils n’ont pas l’effet souhaité.
+Les messages d’accueil médiocres peuvent entraîner le blocage de votre bot par les utilisateurs. Écrivez au point et effacer les messages de bienvenue. Itérer sur les messages de bienvenue s’ils n’ont pas l’effet souhaité.
 
 ### <a name="notification-messages"></a>Les messages de notification
 
@@ -93,11 +93,11 @@ Pour envoyer des notifications à l’aide d’une messagerie proactive, assurez
 
 * Ce qui s’est passé : une indication claire de ce qui est arrivé à l’origine de la notification.
 * Résultat : il doit être clair sur quel élément a été mis à jour pour provoquer la notification.
-* Qui ou ce qui l’a déclenché : Qui ou l’action qui a déclenché l’envoi de la notification.
+* Qui ou qu’est-ce qui l’a déclenché : qui ou qui a pris l’action qui a provoqué l’envoi de la notification.
 * Que peuvent faire les utilisateurs en réponse : faciliter l’action de vos utilisateurs en fonction de vos notifications.
 * Comment les utilisateurs peuvent-ils refuser : vous devez fournir un chemin d’accès aux utilisateurs pour qu’ils ne choisissent pas d’autres notifications.
 
-Pour envoyer des messages à un grand groupe d’utilisateurs, par exemple à votre organisation, installez votre application de manière proactive à l’aide Graph.
+Pour envoyer des messages à un grand groupe d’utilisateurs, par exemple à votre organisation, installez votre application de manière proactive à l’aide de Graph.
 
 ### <a name="scheduled-messages"></a>Messages programmés
 
@@ -106,14 +106,14 @@ Lorsque vous utilisez une messagerie proactive pour envoyer des messages program
 * Pourquoi l’utilisateur reçoit-il le message : faciliter la compréhension de la raison pour laquelle il reçoit le message ?
 * Que peut faire l’utilisateur ensuite : les utilisateurs peuvent prendre l’action requise en fonction du contenu du message.
 
-## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive à l’aide Graph
+## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive à l’aide de Graph
 
 > [!Note]
-> L’installation proactive des applications à l Graph est actuellement en version bêta.
+> L’installation proactive d’applications à l’aide de Graph est actuellement en version bêta.
 
 Envoyer un message de manière proactive aux utilisateurs qui n’ont pas précédemment installé ou interagi avec votre application. Par exemple, vous souhaitez utiliser le communicateur [d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Dans ce cas, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs. Mettre en cache les valeurs nécessaires à partir `conversationUpdate` de l’événement que votre application reçoit lors de l’installation.
 
-Vous pouvez uniquement installer des applications qui se trouver dans votre catalogue d’applications d’organisation ou dans Teams App Store.
+Vous pouvez uniquement installer des applications qui se trouver dans votre catalogue d’applications d’organisation ou dans l’App Store Teams.
 
 Voir [installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps) dans la documentation Graph et l’installation proactive du bot et la messagerie dans Teams avec [Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Il existe également un [exemple Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) sur la plateforme GitHub web.
 
@@ -262,6 +262,9 @@ Vous devez fournir l’ID d’utilisateur et l’ID de client. Si l’appel réu
 ```
 
 ---
+
+> [!NOTE]
+> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
 
 ## <a name="code-sample"></a>Exemple de code
 

@@ -5,19 +5,19 @@ keywords: mise en place des équipes du portail de développement
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 950ca7e09f5b87647cb62b66a545a0b1cec33a7d
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: 6dca8723248441c3cf672931295b4b68e02cc24c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667441"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949685"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
 > [!NOTE]
 > Le Portail des développeurs pour Teams est actuellement en prévisualisation [pour les développeurs publics.](~/resources/dev-preview/developer-preview-intro.md)
 
-Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des développeurs pour Teams</a> est le principal outil de configuration, de distribution et de gestion de Microsoft Teams applications. Avec le portail du développeur, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’runtime, et bien plus encore.
+Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des développeurs pour Teams</a> est le principal outil de configuration, de distribution et de gestion de Microsoft Teams applications. Avec le Portail des développeurs, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’runtime, et bien plus encore.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Capture d’écran montrant la page d’accueil du portail de développement pour Teams.":::
 
@@ -60,7 +60,7 @@ Pour installer et restituer votre application dans Teams, vous devez inclure un 
 
 ## <a name="test-your-app-directly-in-teams"></a>Testez votre application directement dans Teams
 
-Le Portail des développeurs fournit des options de test et de débogage de votre application :
+Le Portail des développeurs fournit des options pour tester et déboguer votre application :
 
 * Dans la page **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
 * **L’aperçu Teams** bouton vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
@@ -69,11 +69,11 @@ Le Portail des développeurs fournit des options de test et de débogage de votr
 
 À partir du portail  du développeur, utilisez le bouton Distribuer pour télécharger un package d’application, publier dans votre organisation ou publier sur le Teams store.
 
-Pour plus d’informations, [voir distribuer votre Teams app.](~/concepts/deploy-and-publish/apps-publish-overview.md)
+Pour plus d’informations, [voir distribuer votre Teams application.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
 
-Dans  la page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
+Dans **la** page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
 
 | Métrique | Définition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -86,6 +86,6 @@ L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 d
 
 Le Portail des développeurs inclut également des outils pour vous aider à créer certaines fonctionnalités clés de Teams applications. Voici quelques-uns de ces outils :
 
-* **Scene studio :** concevoir des scènes personnalisées en mode Together pour Teams réunions.
+* **Scene studio :** concevoir [des scènes personnalisées](~/apps-in-teams-meetings/teams-together-mode.md) en mode ensemble pour Teams réunions.
 * **Éditeur de cartes adaptatives**: créez et prévisualiser des cartes adaptatives à inclure avec vos applications.
 * **Plateforme d’identités Microsoft gestion des** applications : inscrivez vos applications avec Azure Active Directory (Azure AD) pour aider les utilisateurs à se connecter et à fournir l’accès aux API.
