@@ -212,6 +212,8 @@
           href: tabs/tabs-link-unfurling.md
         - name: Créer des onglets de conversation
           href: tabs/how-to/conversational-tabs.md
+        - name: Modifications des marges de l’onglet
+          href: resources/removing-tab-margins.md
     - name: Démarrages rapides
       items:
         - name: Onglet Personnel avec Nœud.js
@@ -309,7 +311,7 @@
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Activer et configurer les applications pour les meetings
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    - name: Mode Ensemble dans Teams
+    - name: Scènes personnalisées en mode Ensemble dans Teams
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Construire webhooks et connecteurs
   items:
@@ -371,8 +373,6 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: Utiliser l'authentification SSO
           href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Ajouter le SSO avec l’extension de kit de ressources Teams pour Visual Studio Code
-          href: toolkit/visual-studio-code-tab-sso.md
     - name: Bots
       items:
         - name: Flux d’authentification dans des bots
@@ -477,8 +477,6 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localisation du schéma du fichier JSON
           href: resources/schema/localization-schema.md
-    - name: Modifications des marges de l’onglet
-      href: resources/removing-tab-margins.md
     - name: Attribut de cookie SameSite (mise à jour 2020)
       href: resources/samesite-cookie-update.md
     - name: Cas dans les cas où les envois du magasin ont échoué fréquemment
