@@ -76,9 +76,19 @@ Notre carte la plus grande. Permet de partager des articles ou des scénarios o�
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Exemple de carte de liste carte adaptative sur mobile." border="false":::
 
 ---
+
+### Digest
+
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
-':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
+
 ---
 
 ### <a name="media"></a>Médias
