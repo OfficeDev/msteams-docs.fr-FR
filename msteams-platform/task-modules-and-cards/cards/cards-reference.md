@@ -4,18 +4,18 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 localization_priority: Normal
 keywords: Référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 741980ea79dd23659dd2b8a240d767b8292ca251
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668861"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994384"
 ---
 # <a name="cards-reference"></a>Référence de cartes
 
 Les cartes répertoriées dans ce document sont pris en charge dans les bots pour Microsoft Teams. Elles sont basées sur des cartes définies par Bot Framework (BF), mais Teams ne prend pas en charge toutes les cartes Bot Framework et certaines cartes Teams ont été ajoutées. Les différences sont appelées dans les références de ce document.
 
-## <a name="card-examples"></a>Exemples de carte
+## <a name="card-examples"></a>Exemples de cartes
 
 Vous trouverez des informations supplémentaires sur l’utilisation des cartes dans la documentation du SDK Bot Builder v3. Des exemples de code sont également disponibles dans le référentiel Microsoft/BotBuilder-Samples GitHub.
 
@@ -46,9 +46,9 @@ Ce tableau indique les types de cartes disponibles :
 
 ### <a name="inline-card-images"></a>Images de carte en ligne
 
-La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. Pour des raisons de performances, il est vivement recommandé d’héberger l’image sur un réseau public de distribution de contenu (CDN).
+La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. À des fins de performances, il est vivement recommandé d’héberger l’image sur un réseau public de distribution de contenu (CDN).
 
-La taille des images est réduite ou réduite tout en conservant les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
+Les images sont réduites ou réduites en taille tout en conservant les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
 
 Les images doivent être au maximum 1024×1024, au format PNG, JPEG ou GIF, et ne pas prendre en charge les images GIF animées.
 
@@ -82,7 +82,8 @@ Une carte adaptative est une carte personnalisable qui peut contenir n’importe
 
 > [!NOTE]
 > * Teams prend en charge la v1.2 ou une antérieure des fonctionnalités de carte adaptative.
-> * Les éléments multimédias ne sont actuellement pas pris en charge dans la carte adaptative v1.2 sur Teams plateforme.
+> * Le style d’action positive ou destructive n’est pas pris en charge dans les cartes adaptatives sur Teams plateforme.
+> * Les éléments multimédias ne sont actuellement pas pris en charge dans les cartes adaptatives sur Teams plateforme.
 
 ### <a name="example-of-an-adaptive-card"></a>Exemple de carte adaptative
 
@@ -398,12 +399,12 @@ Tous les champs de texte prise en charge markdown et HTML. Vous pouvez contrôle
 
 Si vous spécifiez la propriété, elle remplace la `themeColor` propriété dans le manifeste de `accentColor` l’application.
 
-Pour spécifier le style de `activityImage` rendu pour , vous pouvez définir comme suit `activityImageType` :
+Pour spécifier le style de rendu `activityImage` pour , vous pouvez définir comme suit `activityImageType` :
 
 | Valeur | Description |
 | --- | --- |
 | `avatar` | Valeur par défaut ; `activityImage` est rogché en tant que cercle. |
-| `article` | `activityImage` s’affiche sous la forme d’un rectangle et conserve ses proportions. |
+| `article` | `activityImage` est affiché sous forme de rectangle et conserve ses proportions. |
 
 Pour plus d’informations sur les propriétés de carte de connecteur, voir la [référence de carte de message actionnable.](/outlook/actionable-messages/card-reference) Les seules propriétés de carte de connecteur non Microsoft Teams actuellement prise en charge sont les suivantes :
 
@@ -413,7 +414,7 @@ Pour plus d’informations sur les propriétés de carte de connecteur, voir la 
 * `originator`
 * `correlationId`
 
-### <a name="example-of-an-office-365-connector-card"></a>Exemple de carte Office 365 connecteur
+### <a name="example-of-an-office-365-connector-card"></a>Exemple de carte de connecteur Office 365 de connexion
 
 ```json
 {
@@ -478,7 +479,7 @@ Pour plus d’informations sur les propriétés de carte de connecteur, voir la 
 
 ## <a name="receipt-card"></a>Carte d’accusé de réception
 
-Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Il contient généralement la liste des éléments à inclure sur le reçu, par exemple les informations fiscales et totales.
+Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Elle contient généralement la liste des éléments à inclure sur le reçu, telles que les taxes et le total des informations.
 
 ### <a name="support-for-receipt-cards"></a>Prise en charge des cartes de réception
 
@@ -644,7 +645,7 @@ Les collections de cartes incluent `builder.AttachmentLayout.carousel` et `build
 
 ## <a name="carousel-collection"></a>Collection de carrousels
 
-La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) présente un carrousel de cartes, éventuellement avec des boutons d’action associés.
+La [disposition de carrousel](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) affiche un carrousel de cartes, éventuellement avec des boutons d’action associés.
 
 ### <a name="support-for-carousel-collections"></a>Prise en charge des collections de carrousels
 

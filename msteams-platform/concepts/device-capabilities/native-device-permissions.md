@@ -4,16 +4,16 @@ keywords: autorisations des fonctionnalités des applications Teams
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui nécessitent généralement le consentement de l’utilisateur
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: dd317da0b2c8e214f7a44d13ef69bf9fea2aad93
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630536"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994349"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Demander des autorisations d’appareil pour votre application Microsoft Teams client
 
-Vous pouvez enrichir votre application Teams avec des fonctionnalités natives d’appareil, telles que la caméra, le microphone et l’emplacement. Ce document vous guide sur la façon de demander le consentement de l’utilisateur et d’accéder aux autorisations d’appareil natives.
+Vous pouvez enrichir votre application Teams avec des fonctionnalités natives d’appareil, telles que la caméra, le microphone et l’emplacement. Ce document vous guide sur la façon de demander le consentement de l’utilisateur et d’accéder aux autorisations natives de l’appareil.
 
 > [!NOTE]
 > * Pour intégrer des fonctionnalités multimédias dans Microsoft Teams application mobile, voir [Intégrer les fonctionnalités multimédias.](mobile-camera-image-permissions.md)
@@ -30,6 +30,9 @@ En accédant aux fonctionnalités de l’appareil, vous pouvez créer des expér
 * Enregistrez les mémos audio et enregistrez-les pour une utilisation ultérieure.
 * Utilisez les informations d’emplacement de l’utilisateur pour afficher les informations pertinentes.
 
+> [!NOTE]
+> Actuellement, Teams ne prend pas en charge les autorisations d’appareil pour les applications à fenêtres multiples, les onglets et le bureau secondaire de la réunion. 
+
 ## <a name="access-device-permissions"></a>Autorisations d’accès aux appareils
 
 Le [Microsoft Teams SDK client JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) fournit les outils nécessaires à votre application mobile Teams pour accéder aux [autorisations](#manage-permissions) d’appareil de l’utilisateur et créer une expérience plus riche.
@@ -41,9 +44,9 @@ Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs w
 
 ## <a name="manage-permissions"></a>Gérer les autorisations
 
-Un utilisateur peut gérer les autorisations d’appareil  dans  Teams paramètres en sélectionnant Autoriser ou refuser des autorisations pour des applications spécifiques.
+Un utilisateur peut gérer les autorisations d’appareil  Teams  paramètres en sélectionnant Autoriser ou refuser des autorisations pour des applications spécifiques.
  
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Bureau](#tab/desktop)
 
 1. Ouvrez votre Teams application.
 1. Sélectionnez votre icône de profil dans le coin supérieur droit de la fenêtre.
@@ -170,7 +173,7 @@ Par exemple :
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Bureau](#tab/desktop)
 
    ![Invite d’autorisations d’appareil de bureau Onglets](~/assets/images/tabs/device-permissions-prompt.png)
 
@@ -187,7 +190,7 @@ Les autorisations d’appareil sont stockées pour chaque session de connexion. 
 > [!NOTE]
 > Lorsque vous consentez aux autorisations natives de l’appareil, elle n’est valide que pour votre session _de_ connexion actuelle.
 
-## <a name="next-steps"></a>Prochaines étapes
+## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
 > [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)

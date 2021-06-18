@@ -5,12 +5,12 @@ description: Créez rapidement une application Microsoft Teams qui affiche un me
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667453"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994391"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Créer et exécuter votre première application Microsoft Teams avec Blazor
 
@@ -95,7 +95,7 @@ Une fois que le Kit de ressources Teams a configuré votre projet, vous disposez
 Étant donné que vous avez créé une application d’onglet lors de l’installation, l’Teams Shared Computer Toolkit crée la modèle de tout le code nécessaire pour un onglet de base en tant que [serveur Blazor](/aspnet/core/blazor).
 
 - `Pages/Tab.razor` est le point d’entrée de l’application frontale.
-- `TeamsFx.cs`et `JS/src/index.js` sert à initialiser les communications avec l’Teams hôte.
+- `TeamsFx.cs`et `JS/src/index.js` est utilisé pour initialiser les communications avec l’Teams hôte.
 
 Vous pouvez ajouter des fonctionnalités de back-end en ajoutant des contrôleurs ASP.NET Core supplémentaires à votre application.
 
@@ -136,7 +136,7 @@ Lorsque vous appuyez sur F5, le Kit de ressources Teams :
 1. A inscrit votre application pour le « chargement latéral » dans Microsoft Teams.
 1. Le back-end de votre application a démarré en cours d’exécution localement.
 1. Démarrage de votre application frontale hébergée localement.
-1. Démarré Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est enregistrée dans le manifeste de l’application).
+1. Démarré Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application (l’URL est enregistrée dans le manifeste de l’application).
 
 </details>
 
@@ -144,7 +144,7 @@ Lorsque vous appuyez sur F5, le Kit de ressources Teams :
 <details>
 <summary>Découvrez comment résoudre les problèmes courants lorsque vous exécutez votre application localement.</summary>
 
-Pour exécuter correctement votre application dans Teams, vous devez avoir un compte Microsoft 365 de développement qui autorise le chargement côté application. Pour plus d’informations sur l’ouverture d’un compte, voir [Conditions préalables](prerequisites.md#enable-sideloading).
+Pour exécuter correctement votre application dans Teams, vous devez avoir un compte de développement Microsoft 365 qui permet le chargement côté application. Pour plus d’informations sur l’ouverture d’un compte, voir [Conditions préalables](prerequisites.md#enable-sideloading).
 
 </details>
 
@@ -158,7 +158,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>Mettre en service et déployer votre application dans Azure App Service
 
-1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet et choisissez **Publier** (ou utilisez l’élément  >  **de** menu Publier la build).
+1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet et choisissez **Publier** (ou utilisez l’élément  >   de menu Publier la build).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Sélectionner l’opération Publier sur le projet":::
 
@@ -228,7 +228,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Sélectionner des informations de base":::
 
-1. Il existe plusieurs endroits dans le manifeste qui résentent un élément `locahost:XXXXX` dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par (y compris les accolades).
+1. Il existe plusieurs endroits dans le manifeste qui résentent un `locahost:XXXXX` élément dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par (y compris les accolades).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajuster les informations de base pour l’environnement":::
 
@@ -243,7 +243,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Modifier les paramètres d’onglet personnel":::
 
-1. Remplacez l’URL par la variable d’environnement dans les champs **Url de contenu** et Url du **site** web.
+1. Remplacez l’URL par la variable d’environnement dans les champs **URL de contenu** et URL du **site** web.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Modifier les URL d’onglet personnel":::
 
@@ -263,17 +263,20 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
 1. Appuyez **sur Ajouter un domaine.**
 
-1. Si ce domaine n’est pas répertorié comme un domaine valide, ajoutez-le en tant que `{{azure_app_url}}` domaine valide, puis appuyez sur **Ajouter.**
+1. Si `{{azure_app_url}}` ce domaine n’est pas répertorié comme un domaine valide, ajoutez-le en tant que domaine valide, puis appuyez sur **Ajouter**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Ajouter un domaine":::
 
 Vous pouvez désormais utiliser le bouton Aperçu **Teams** en haut de la page pour lancer votre application dans Teams.
 
-## <a name="next-steps"></a>Étapes suivantes
-
-Découvrez d’autres méthodes pour la création d’applications Teams :
+## <a name="see-also"></a>Voir aussi
 
 - [Créer une application Teams à l’aide de React](first-app-react.md)
-- [Créer une application Teams en tant que composant WebPart SharePoint](first-app-spfx.md) (Azure non requis)
+- [Créer une application Teams en tant que SharePoint Web Part](first-app-spfx.md)
 - [Créer une application de bot de conversation](first-app-bot.md)
 - [Créer une extension de messagerie](first-message-extension.md)
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer une application Teams en tant que SharePoint Web Part](first-app-spfx.md)

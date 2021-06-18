@@ -1,22 +1,22 @@
 ---
 title: Créer des applications personnalisées à code faible pour Microsoft Teams
 author: laujan
-description: Détaille les solutions Microsoft à faible et sans code disponibles pour Teams
+description: Détaille les solutions de code Microsoft disponibles pour les Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 770657e34672a4314f6cbbc1e73951816f2efa1c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630662"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994083"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft Teams
 
-Microsoft Teams est extensible et adaptatif. Cela signifie que vous pouvez créer des applications personnalisées pour Teams qui répondent aux besoins distincts de vos utilisateurs. Les applications personnalisées à code faible gagnent du temps, fournissent des solutions rapides et répondent à la demande que les applications créées à partir de zéro. Ce document donne une vue d’ensemble de Microsoft Power Platform, Power Virtual Agents chatbot et l’Assistant virtuel.
+Microsoft Teams est extensible et adaptatif. Cela signifie que vous pouvez créer des applications personnalisées pour Teams qui répondent aux besoins distincts de vos utilisateurs. Les applications personnalisées à code faible gagnent du temps, fournissent des solutions rapides et répondent à la demande que les applications créées à partir de zéro. Ce document donne une vue d’ensemble de Microsoft Power Platform, Power Virtual Agents chatbot et Virtual Assistant.
 
-Les plateformes à code faible offrent une approche intuitive du développement de logiciels et nécessitent peu ou pas de codage pour créer des applications et des processus. Ils permettent aux développeurs sans expérience de créer facilement des applications personnalisées avec peu ou pas de codage, et aux développeurs professionnels de développer et déployer rapidement l’application. Ces plateformes se composent d’une interface visuelle, de connecteurs vers des services back-end et d’un système de gestion du cycle de vie des applications intégré pour créer, déboguer, déployer et gérer des applications. Microsoft Power Platform est la passerelle innovantes pour créer rapidement Teams applications compatibles à l’aide d’attributs de code faible.
+Les plateformes à code faible offrent une approche intuitive du développement de logiciels avec un codage minimal ou aucun codage pour créer des applications et des processus. Ils permettent aux développeurs sans expérience de créer facilement des applications personnalisées avec peu ou pas de codage, et aux développeurs professionnels de développer et déployer rapidement l’application. Ces plateformes se composent d’une interface visuelle, de connecteurs vers des services back-end et d’un système de gestion du cycle de vie des applications intégré pour créer, déboguer, déployer et gérer des applications. Microsoft Power Platform est la passerelle innovantes pour créer rapidement Teams applications compatibles à l’aide d’attributs de code faible.
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams et Microsoft Power Platform
 
@@ -29,7 +29,7 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams et Power BI
 
-[L’onglet Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) pour Microsoft Teams ajoute la prise en charge des rapports dans l’espace de travail Teams et permet aux utilisateurs de partager du contenu [Power BI interactif](/power-bi/collaborate-share/service-embed-report-microsoft-teams) et de collaborer avec d’autres personnes dans des canaux Teams et [des](/power-bi/collaborate-share/service-collaborate-microsoft-teams) conversations. Vous pouvez créer du contenu [Power BI d’application](/power-bi/collaborate-share/service-create-distribute-apps) empaqueté à partir de zéro et le distribuer en tant qu’application ou créer un modèle d’application [dans Power BI](/power-bi/connect-data/service-template-apps-create). En outre, utilisez la nouvelle application [Power BI dans Teams](https://go.microsoft.com/fwlink/?linkid=2143643) pour mettre en Power BI l’ensemble de votre expérience de service Power BI de base dans Teams.
+[L’onglet Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) pour Microsoft Teams ajoute la prise en charge des rapports dans l’espace de travail Teams et permet aux utilisateurs de partager du contenu [Power BI interactif](/power-bi/collaborate-share/service-embed-report-microsoft-teams) et de collaborer avec d’autres personnes dans des canaux Teams et [des](/power-bi/collaborate-share/service-collaborate-microsoft-teams) conversations. Vous pouvez créer du contenu [Power BI d’application](/power-bi/collaborate-share/service-create-distribute-apps) empaqueté à partir de zéro et le distribuer en tant qu’application ou créer un modèle d’application [dans Power BI](/power-bi/connect-data/service-template-apps-create). En outre, utilisez la nouvelle application [Power BI dans Teams](https://go.microsoft.com/fwlink/?linkid=2143643) pour apporter toute votre expérience de service Power BI de base Teams.
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams et Power Apps
 
@@ -39,7 +39,7 @@ La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linki
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams et Power Automate
 
-Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l’environnement Teams avec l’application Power Automate dans [Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe](/power-automate/trigger-flow-teams-message) quel message Microsoft Teams et utiliser des cartes [adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur supplémentaire à Microsoft Teams à partir de la nouvelle application Power Apps [dans](https://go.microsoft.com/fwlink/?linkid=2143539) Teams.
+Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l’environnement Teams avec l’application Power Automate dans [Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe](/power-automate/trigger-flow-teams-message) quel message Microsoft Teams et utiliser des cartes [adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter de la valeur à Microsoft Teams à partir de la nouvelle application Power Apps [dans](https://go.microsoft.com/fwlink/?linkid=2143539) Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams et Power Virtual Agents
 
@@ -49,7 +49,7 @@ Utilisez la nouvelle [application Power Virtual Agents dans](https://aka.ms/pva-
 
 ### <a name="-virtual-assistant-for-teams"></a>✔ Virtual Assistant pour Teams
 
-Assistant virtuel est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. Vous pouvez configurer votre assistant virtuel pour [l’intégration dans l’environnement Teams.](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro) 
+Virtual Assistant est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. Vous pouvez configurer votre assistant virtuel pour [l’intégration dans l’environnement Teams.](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro) 
 
 ### <a name="-power-platform-learn-modules"></a>✔ modules Power Platform Learn
 

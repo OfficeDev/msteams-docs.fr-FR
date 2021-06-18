@@ -19,11 +19,11 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Capture d’écran de la boîte de dialogue d’approvisionnement.":::
 
-   Le processus d’approvisionnement crée des ressources dans le cloud Azure.  Cela prendra un certain temps.  Vous pouvez surveiller la progression en regardant les boîtes de dialogue dans le coin inférieur droit.  Après quelques minutes, vous verrez l’avis suivant :
+   Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela prend un certain temps. Vous pouvez surveiller la progression en regardant les boîtes de dialogue dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Capture d’écran montrant la boîte de dialogue de mise en service terminée.":::
 
-1. Une fois l’approvisionnement terminé, **sélectionnez Déployer dans le cloud.**  Comme pour l’approvisionnement, ce processus prend un certain temps.  Vous pouvez surveiller le processus en regardant les boîtes de dialogue dans le coin inférieur droit. Après quelques minutes, vous verrez un avis d’achèvement.
+1. Une fois l’approvisionnement terminé, **sélectionnez Déployer dans le cloud.**  Comme pour l’approvisionnement, ce processus prend un certain temps.  Vous pouvez surveiller le processus en regardant les boîtes de dialogue dans le coin inférieur droit. Après quelques minutes, vous voyez un avis d’achèvement.
 
 # <a name="command-line"></a>[Ligne de commande](#tab/cli)
 
@@ -35,7 +35,7 @@ Dans la fenêtre de votre terminal :
    teamsfx provision
    ```
 
-   Vous pouvez être invité à vous connecter à votre abonnement Azure.  Si nécessaire, vous serez invité à sélectionner un abonnement Azure à utiliser pour les ressources Azure.
+   Vous pouvez être invité à vous connecter à votre abonnement Azure. Si nécessaire, vous êtes invité à sélectionner un abonnement Azure à utiliser pour les ressources Azure.
 
    > [!NOTE]
    > Certaines ressources Azure sont toujours utilisées pour héberger votre application.
@@ -51,7 +51,7 @@ Dans la fenêtre de votre terminal :
 > [!NOTE]
 > **Quelle est la différence entre approvisionnement et déploiement ?**
 >
-> **L’étape** de mise en service crée des ressources dans Azure et M365 pour votre application, mais aucun code (HTML, CSS, JavaScript, etc.) n’est copié dans les ressources.  **L’étape** de déploiement copie le code de votre application vers les ressources que vous avez créées au cours de l’étape de mise en service.  Il est courant de déployer plusieurs fois sans mettre en service de nouvelles ressources. Étant donné que l’étape de mise en service peut prendre un certain temps, elle est distincte de l’étape de déploiement.
+> **L’étape** de mise en service crée des ressources dans Azure et M365 pour votre application, mais aucun code (HTML, CSS, JavaScript, etc.) n’est copié dans les ressources. **L’étape** Déployer copie le code de votre application vers les ressources que vous avez créées au cours de l’étape de mise en service. Il est courant de déployer plusieurs fois sans mettre en service de nouvelles ressources. Étant donné que l’étape de mise en service peut prendre un certain temps, elle est distincte de l’étape de déploiement.
 
 Une fois les étapes d’approvisionnement et de déploiement terminées :
 

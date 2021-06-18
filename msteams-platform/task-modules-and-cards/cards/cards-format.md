@@ -1,16 +1,16 @@
 ---
 title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte Microsoft Teams
-keywords: Format de cartes de bots teams
+keywords: Format de cartes de bots Teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: eead38b7f28ca740473a1df029e35b9ac624391d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949762"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994167"
 ---
 # <a name="format-cards-in-teams"></a>Formater des cartes dans Teams
 
@@ -126,7 +126,7 @@ Les bots et les extensions de messagerie peuvent inclure des mentions dans le co
 Pour inclure une mention dans une carte adaptative, votre application doit inclure les éléments suivants :
 
 * `<at>username</at>` dans les éléments de carte adaptative pris en charge.
-* Objet à l’intérieur d’une propriété dans le contenu de la carte, qui inclut `mention` l’ID Teams’utilisateur de l’utilisateur `msteams` mentionné.
+* Objet à l’intérieur d’une propriété dans le contenu de la carte, qui inclut l’ID Teams’utilisateur de `mention` `msteams` l’utilisateur mentionné.
 * Il `userId` est propre à votre ID de bot et à un utilisateur particulier. Il peut être utilisé pour @mention un utilisateur particulier. Il `userId` peut être récupéré à l’aide de l’une des options mentionnées dans obtenir [l’ID utilisateur.](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>Exemple de carte adaptative avec une mention
@@ -165,9 +165,6 @@ Utilisez la propriété de masquage d’informations pour masquer des informatio
 
 > [!NOTE]
 > La fonctionnalité prend uniquement en charge le masquage d’informations côté client, le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse de point de terminaison https spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md) 
-
-> [!NOTE]
-> La propriété de masquage d’informations est actuellement disponible dans l’aperçu développeur uniquement.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Exemple de carte adaptative avec propriété de masquage
 
@@ -223,7 +220,7 @@ Dans l’élément de schéma, le fait de demander aux utilisateurs de filtrer e
 
 #### <a name="enable-typeahead-in-adaptive-cards"></a>Activer typeahead dans les cartes adaptatives
 
-Pour activer typeahead dans `Input.Choiceset` l’ensemble `style` et vérifier `filtered` `isMultiSelect` qu’il est définie sur `false` . 
+Pour activer la tête de type dans `Input.Choiceset` l’ensemble `style` et `filtered` vérifier `isMultiSelect` qu’elle est définie sur `false` . 
 
 #### <a name="sample-adaptive-card-with-typeahead-support"></a>Exemple de carte adaptative avec prise en charge de typeahead
 
@@ -271,7 +268,7 @@ Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un z
 > Les fonctionnalités de zoom avant et arrière s’appliquent uniquement aux éléments image (type d’image) dans une carte adaptative.
 
 > [!NOTE]
-> Pour les applications mobiles Teams, la fonctionnalité d’affichage de scène pour les images dans les cartes adaptatives est disponible par défaut et les utilisateurs peuvent afficher des images de carte adaptative en mode étape en appuyant simplement sur l’image, que l’attribut soit présent ou `allowExpand` non.
+> Pour les applications mobiles Teams, les fonctionnalités d’affichage de scène pour les images dans les cartes adaptatives sont disponibles par défaut et les utilisateurs peuvent afficher des images de carte adaptative en mode étape en appuyant simplement sur l’image, que l’attribut soit présent ou `allowExpand` non.
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Mise en forme Markdown : cartes de connecteur O365**](#tab/connector-md)
 

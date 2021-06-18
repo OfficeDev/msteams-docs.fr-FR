@@ -6,12 +6,12 @@ description: Vue d’ensemble Microsoft Teams du SDK client JavaScript, qui peut
 localization_priority: Normal
 keywords: onglets teams canal de groupe configurable statique SDK JavaScript personnel
 ms.topic: conceptual
-ms.openlocfilehash: 04c6bb9d7687a068375bce548588e6713fd57747
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630340"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994363"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec Microsoft Teams SDK client JavaScript
 
@@ -58,6 +58,7 @@ Consultez les tableaux suivants pour comprendre les fonctions courantes du SDK. 
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|Lance une demande d’authentification qui ouvre une nouvelle fenêtre avec les paramètres fournis par l’appelant. Les valeurs d’entrée facultatives sont définies par **l’objet AuthenticateParameters.**|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|Avertit la trame à l’origine de la demande d’authentification que la demande a réussi et ferme la fenêtre d’authentification.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|Avertit la trame à l’origine de la demande d’authentification que la demande a échoué et ferme la fenêtre d’authentification.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|Envoyez une demande d’émission de jeton Azure AD au nom de l’application. Le jeton peut être acquis à partir du cache, s’il n’a pas expiré. Sinon, une demande est envoyée à Azure AD pour obtenir un nouveau jeton.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>Paramètres de noms
 
@@ -67,7 +68,7 @@ Consultez les tableaux suivants pour comprendre les fonctions courantes du SDK. 
 |`microsoftTeams.settings.getSettings(callback: (instanceSettings: Settings)`|Obtient les paramètres de l’instance actuelle. Le rappel récupère **l’Paramètres** objet.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)<br/>[settings obj](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.setSettings(instanceSettings: Settings, onComplete?: (status: boolean, reason?: string)`|Configure les paramètres de l’instance actuelle. Les paramètres valides sont définis par **l’objet Paramètres.**|[function](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)<br/>[settings obj](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnSaveHandler(handler: (evt: SaveEvent)`|Le handler inscrit lorsque l’utilisateur sélectionne le **bouton Enregistrer.** Ce handler doit être utilisé pour créer ou mettre à jour la ressource sous-jacente qui alimentera le contenu.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.settings.registerOnRemoveHandler(handler: (evt: RemoveEvent)`|Le handler inscrit lorsque l’utilisateur sélectionne le **bouton** Supprimer. Ce handler doit être utilisé pour supprimer la ressource sous-jacente qui alimentera le contenu.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.settings.registerOnRemoveHandler(handler: (evt: RemoveEvent)`|Le handler qui est enregistré lorsque l’utilisateur sélectionne le **bouton** Supprimer. Ce handler doit être utilisé pour supprimer la ressource sous-jacente qui alimentera le contenu.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
 
 ### <a name="task-modules-namespace"></a>Espace de noms des modules de tâche
 

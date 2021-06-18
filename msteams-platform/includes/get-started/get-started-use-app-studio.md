@@ -16,7 +16,11 @@ Pour mettre à jour le package d’application, vous suivrez les étapes suivant
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Sur .NET, cela s’Visual Studio et sur Node.js en tapant sur la ligne de commande dans le répertoire racine `gulp` du projet.
+    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Vous pouvez créer le package d’application sur .NET avec Visual Studio. Dans Visual Studio, la manifest.jssur le fichier se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web` . Cette étape est décrite par l’image suivante :  
+    
+    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+    
+    Vous pouvez créer le package d’application Node.js en tapant sur la ligne de commande dans le répertoire `gulp` racine du projet.
 
     ```bash
     $ gulp
@@ -95,7 +99,7 @@ Le bot qui a été importé à partir de l’exemple n’a pas d’ID d’applic
 Pour configurer votre bot, complétez les étapes suivantes :
 
 1. Sélectionnez **Supprimer** en face du bot importé dans la liste des bots. Il ne reste plus aucun bot à afficher. 
-1. Sélectionnez **Le programme** d’installation pour afficher la boîte de dialogue Configurer **un bot.**
+1. Sélectionnez **Programme d’installation** pour afficher la boîte de dialogue Configurer **un bot.**
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
@@ -152,7 +156,7 @@ Une fois que vous avez entré les détails de votre application, complétez les 
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
-1. Sélectionnez **la zone de** recherche dans la section Ajouter à **une** équipe et sélectionnez une équipe pour ajouter l’exemple d’application. Vous pouvez configurer une équipe spéciale pour les tests.
+1. Sélectionnez **la zone de** recherche dans la section Ajouter à une équipe et sélectionnez une équipe pour ajouter l’exemple d’application.  Vous pouvez configurer une équipe spéciale pour les tests.
 1. Sélectionnez **le bouton** Installer en bas de la boîte de dialogue.
 
 Votre application est désormais disponible dans Teams. Toutefois, le bot et l’extension de messagerie ne fonctionneront pas tant que vous n’aurez pas mis à jour l’environnement d’applications hébergée avec les ID d’application et les mots de passe.

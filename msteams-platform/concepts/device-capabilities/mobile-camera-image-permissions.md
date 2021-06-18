@@ -1,17 +1,17 @@
 ---
 title: Intégrer les fonctionnalités médias
 author: Rajeshwari-v
-description: Comment utiliser Teams SDK client JavaScript pour activer les fonctionnalités multimédias
+description: Utilisation du SDK Teams client JavaScript pour activer les fonctionnalités multimédias
 keywords: Média d’autorisations d’appareil natif des fonctionnalités du microphone d’image de l’appareil photo
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 48566c6301141d8c7755482a1f5f5daec33449f3
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630564"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994377"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias 
 
@@ -29,7 +29,8 @@ Pour une intégration efficace, vous devez bien comprendre les extraits de [code
 Il est important de vous familiariser avec les erreurs de réponse [d’API](#error-handling) pour gérer les erreurs dans votre Teams application.
 
 > [!NOTE] 
-> Actuellement, Microsoft Teams prise en charge des fonctionnalités multimédias est disponible uniquement pour les clients mobiles.
+> * Actuellement, Microsoft Teams prise en charge des fonctionnalités multimédias est disponible uniquement pour les clients mobiles.    
+> * Actuellement, Teams ne prend pas en charge les autorisations d’appareil pour les applications à fenêtres multiples, les onglets et le bureau secondaire de la réunion. 
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 

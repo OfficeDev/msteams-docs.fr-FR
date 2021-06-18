@@ -5,12 +5,12 @@ description: Créez un bot de conversation pour Microsoft Teams à l’aide du K
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721849"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994258"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Créer votre premier bot de conversation pour Microsoft Teams
 
@@ -160,11 +160,13 @@ Le déploiement implique la mise en service de ressources sur un abonnement Azur
 
 </details>
 
-## <a name="next-steps"></a>Étapes suivantes
-
-Découvrez d’autres méthodes pour la création d’applications Teams :
+## <a name="see-also"></a>Voir aussi
 
 - [Créer une application Teams à l’aide de React](first-app-react.md)
 - [Créer une application Teams à l’aide de Blazor](first-app-blazor.md)
 - [Créer une application Teams en tant que composant WebPart SharePoint](first-app-spfx.md) (Azure non requis)
-- [Créer une extension de messagerie](first-message-extension.md)
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer une extension de messagerie](first-message-extension.md)

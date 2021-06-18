@@ -5,12 +5,12 @@ description: Créez une extension de messagerie pour Microsoft Teams à l’aide
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710647"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994202"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Créez et exécutez votre première extension de messagerie basée sur la recherche dans Microsoft Teams
 
@@ -184,9 +184,7 @@ La Teams d’authentification de recherche pour les exemples de projets sur GitH
 > [!div class="nextstepaction"]
 > [Afficher d’autres exemples Bot Framework sur GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="next-steps"></a>Étapes suivantes
-
-Découvrez d’autres méthodes pour la création d’applications Teams :
+## <a name="see-also"></a>Voir aussi
 
 - [Créer une application Teams à l’aide de React](first-app-react.md)
 - [Créer une application Teams à l’aide de Blazor](first-app-blazor.md)

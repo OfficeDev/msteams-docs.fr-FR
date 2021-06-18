@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 localization_priority: Normal
 keywords: nouveautés des équipes
-ms.openlocfilehash: 86a39bc771873afb25d401534569498241b2daf1
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: b2237119c046c85593cf1979b7076b88279187cf
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949657"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994342"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -21,6 +21,7 @@ Découvrez Microsoft Teams fonctionnalités de plateforme introduites dans Micro
 
 | **Date** | **Composants** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|06/16/2021| Consentement spécifique aux ressources pour les conversations. |[Consentement spécifique à la ressource,](graph-api/rsc/resource-specific-consent.md) [tester les autorisations](graph-api/rsc/test-resource-specific-consent.md) de consentement spécifiques à la ressource dans Teams|
 |05/26/2021| Créez des onglets avec des cartes adaptatives. |[Créer des onglets](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Mise à jour Teams Shared Computer Toolkit pour [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) et [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Prendre en Teams développement d’applications](~/get-started/prerequisites.md) |
 |05/25/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Documentation pour les développeurs](concepts/build-and-test/teams-developer-portal.md) |
@@ -194,6 +195,7 @@ La prévisualisation pour développeurs est un programme public qui fournit un a
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|06/16/2021| Consentement spécifique aux ressources pour les conversations. |[Consentement spécifique à la ressource,](graph-api/rsc/resource-specific-consent.md) [tester les autorisations](graph-api/rsc/test-resource-specific-consent.md) de consentement spécifiques à la ressource dans Teams|  
 |05/26/2021|Créer des onglets avec les Cartes adaptatives|[Créer des onglets](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Mise à jour Teams Shared Computer Toolkit pour [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) et [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Prendre en Teams développement d’applications](~/get-started/prerequisites.md) |
 |05/25/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Documentation pour les développeurs](concepts/build-and-test/teams-developer-portal.md) |

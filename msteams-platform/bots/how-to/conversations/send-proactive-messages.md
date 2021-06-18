@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID utilisateur
-ms.openlocfilehash: d2e9900e6c7d1f5ea5edfabe6dacb2f18b429b3f
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949776"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994216"
 ---
 # <a name="send-proactive-messages"></a>Envoyer des messages proactifs
 
@@ -67,9 +67,7 @@ Une fois que vous avez reçu les informations d’adresse appropriées, vous pou
 
 ## <a name="send-the-message"></a>Envoyer le message
 
-Maintenant que vous avez les bonnes informations d’adresse, vous pouvez envoyer votre message. Si vous utilisez le SDK, vous le faites à l’aide de la méthode et pour effectuer un appel `continueConversation` `conversationId` `tenantId` d’API direct. Vous devez définir correctement `conversationParameters` l’envoi de votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code.](#code-sample)
-
-Si vous utilisez le SDK, vous devez utiliser la méthode et effectuer un appel `continueConversation` `conversationId` `tenantId` d’API direct pour envoyer le message. Vous devez définir correctement `conversationParameters` l’envoi de votre message.
+Maintenant que vous avez les bonnes informations d’adresse, vous pouvez envoyer votre message. Si vous utilisez le SDK, vous devez utiliser la méthode et la méthode et effectuer un `continueConversation` `conversationId` appel `tenantId` d’API direct. Vous devez définir correctement `conversationParameters` l’envoi de votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code.](#code-sample)
 
 Maintenant que vous avez envoyé le message proactif, vous devez suivre ces meilleures pratiques tout en envoyant des messages proactifs pour un meilleur échange d’informations entre les utilisateurs et le bot.
 
@@ -115,7 +113,7 @@ Envoyer un message de manière proactive aux utilisateurs qui n’ont pas préc�
 
 Vous pouvez uniquement installer des applications qui se trouver dans votre catalogue d’applications d’organisation ou dans l’App Store Teams.
 
-Voir [installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps) dans la documentation Graph et l’installation proactive du bot et la messagerie dans Teams avec [Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Il existe également un [exemple Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) sur la plateforme GitHub web.
+Voir [installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps) dans la documentation Graph, ainsi que l’installation proactive du bot et la messagerie dans Teams avec [Graph.](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) Il existe également un [exemple Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) sur la plateforme GitHub.
 
 ## <a name="samples"></a>Exemples
 
@@ -280,8 +278,11 @@ Le tableau suivant fournit un exemple de code simple qui incorpore le flux de co
 > [!div class="nextstepaction"]
 > [Teams exemples de code de messagerie proactifs](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
+## <a name="see-also"></a>Voir aussi
+
+[**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
->  [Mettre en forme vos messages de bot](~/bots/how-to/format-your-bot-messages.md)
+> [Formatez vos messages robots.](~/bots/how-to/format-your-bot-messages.md)
