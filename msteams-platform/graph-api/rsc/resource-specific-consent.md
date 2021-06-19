@@ -6,19 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation OAuth OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 215b528310137da331b0aef6ab004e0448dbfadf
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
+ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994311"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "53022977"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentement spécifique aux ressources (RSC)
 
 > [!NOTE]
 > Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation publique pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
 
-Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Microsoft Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques (équipes ou conversations) au sein d’une organisation. Le modèle d’autorisations de consentement spécifique  aux ressources (RSC) permet aux propriétaires d’équipe et de *conversation* d’accorder le consentement d’une application pour accéder aux données d’une équipe et aux données d’une conversation, et/ou de les modifier, respectivement. Les autorisations Teams RSC précises et spécifiques définissent ce qu’une application peut faire au sein d’une ressource spécifique :
+Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Microsoft Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques (équipes ou conversations) au sein d’une organisation. Le modèle d’autorisations de consentement spécifique  aux ressources (RSC) permet aux propriétaires d’équipe et de *conversation* d’accorder le consentement d’une application pour accéder aux données d’une équipe et aux données d’une conversation, et/ou de les modifier, respectivement. Les autorisations RSC précises définissent ce qu’une application peut faire au sein d’une ressource spécifique :
 
 ## <a name="resource-specific-permissions"></a>Autorisations spécifiques aux ressources
 
@@ -29,17 +29,17 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 |TeamSettings.ReadWrite.Group|Mettez à jour les paramètres de cette équipe.|
 |ChannelSettings.Read.Group|Obtenez les noms de canaux, les descriptions des canaux et les paramètres de canal de cette équipe.|
 |ChannelSettings.ReadWrite.Group|Mettez à jour les noms de canaux, les descriptions des canaux et les paramètres de canal de cette équipe.|
-|Channel.Create.Group|Créer des canaux au sein de cette équipe.|
-|Channel.Delete.Group|Supprimez les canaux de cette équipe.|
-|ChannelMessage.Read.Group |Obtenez les messages de canal de cette équipe.|
+|Channel.Create.Group|Créer des canaux au sein de cette équipe. |
+|Channel.Delete.Group|Supprimez les canaux de cette équipe. |
+|ChannelMessage.Read.Group |Obtenez les messages de canal de cette équipe. |
 |TeamsAppInstallation.Read.Group|Obtenez la liste des applications installées de cette équipe.|
 |TeamsTab.Read.Group|Obtenez la liste des onglets de cette équipe.|
-|TeamsTab.Create.Group|Créer des onglets au sein cette équipe.|
-|TeamsTab.ReadWrite.Group|Mettez à jour les onglets de cette équipe.|
-|TeamsTab.Delete.Group|Supprimer les onglets de cette équipe.|
-|TeamMember.Read.Group|Obtenez les membres de cette équipe.|
+|TeamsTab.Create.Group|Créer des onglets au sein cette équipe. |
+|TeamsTab.ReadWrite.Group|Mettez à jour les onglets de cette équipe. |
+|TeamsTab.Delete.Group|Supprimer les onglets de cette équipe. |
+|TeamMember.Read.Group|Obtenez les membres de cette équipe. |
 
-Pour plus d’informations, [voir Teams autorisations de consentement spécifiques aux ressources.](/graph/permissions-reference#teams-resource-specific-consent-permissions)
+Pour plus d’informations, voir autorisations de consentement propres aux ressources [d’équipe.](/graph/permissions-reference#team-resource-specific-consent-permissions)
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>Autorisations spécifiques aux ressources pour une conversation
 |Autorisation de l’application| Action |
