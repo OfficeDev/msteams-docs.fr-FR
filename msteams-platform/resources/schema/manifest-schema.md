@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 75c29a1cf9c2897d7b419b45bfc1a4f0447c7aa3
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 44bae986d5ea78a044cb66d48e6e093d489f4473
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853528"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037627"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -260,7 +260,7 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
       "Owner.Read.Group",
       "Member.ReadWrite.Group",
       "Owner.ReadWrite.Group"
-    ],
+    ]
   },
   "showLoadingIndicator": false,
   "isFullScreen": false,
@@ -318,7 +318,7 @@ Version du schéma de manifeste que ce manifeste utilise. Elle doit être 1,10.
 
 Version d’une application spécifique. Si vous mettez à jour quelque chose dans votre manifeste, la version doit également être incrémentée. De cette façon, lorsque le nouveau manifeste est installé, il se place sur le manifeste existant et l’utilisateur reçoit la nouvelle fonctionnalité. Si cette application a été soumise au Store, le nouveau manifeste doit être soumis à nouveau et validé à nouveau. Les utilisateurs de l’application reçoivent automatiquement le nouveau manifeste mis à jour quelques heures après l’approbation du manifeste.
 
-Si l’application demande des autorisations, les utilisateurs sont invités à mettre à niveau et à consentir à l’application.
+Si l’application demande des autorisations change, les utilisateurs sont invités à mettre à niveau et à consentir à l’application.
 
 Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (MAJOR. MINOR. PATCH).
 
@@ -335,7 +335,7 @@ L’ID est un identificateur unique généré par Microsoft pour l’application
 
 **Obligatoire** — objet
 
-Spécifie des informations sur votre entreprise. Pour les applications envoyées au Teams store, ces valeurs doivent correspondre aux informations de votre listing dans le Windows Store. Pour plus d’informations, voir les [Teams de publication du Store.](~/concepts/deploy-and-publish/appsource/publish.md)
+Spécifie des informations sur votre entreprise. Pour les applications envoyées au Teams store, ces valeurs doivent correspondre aux informations de votre listing dans le Windows Store. Pour plus d’informations, voir les Teams [de publication du Store.](~/concepts/deploy-and-publish/appsource/publish.md)
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -349,7 +349,7 @@ Spécifie des informations sur votre entreprise. Pour les applications envoyées
 
 **Obligatoire** — objet
 
-Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
+Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -360,7 +360,7 @@ Nom de l’expérience de votre application, affiché aux utilisateurs dans l’
 
 **Obligatoire** — objet
 
-Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
+Décrit votre application aux utilisateurs. Pour les applications envoyées à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
 Assurez-vous que votre description décrit précisément votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et doivent être `full` différentes. Votre description courte ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
@@ -443,7 +443,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`contentUrl`|string||✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
 |`websiteUrl`|string|||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`searchUrl`|string|||L https:// URL pointant vers les requêtes de recherche d’un utilisateur.|
-|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 |`context` | tableau d’enums| 2|| Ensemble `contextItem` d’étendues où un onglet est pris en charge.|
 
 > [!NOTE]
@@ -456,7 +456,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 
 Définit une solution bot, ainsi que des informations facultatives telles que les propriétés de commande par défaut.
 
-L’élément est un tableau (jusqu’à un seul élément actuellement un seul bot est autorisé par application) avec tous les &mdash; éléments du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
+L’élément est un tableau (maximum de 1 élément actuellement un seul bot est autorisé par application) avec tous les éléments &mdash; du type `object` . Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -511,7 +511,7 @@ L’élément est un tableau (maximum de 1 élément) avec tous les éléments d
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à l’ID d’application global.|
+|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à l’ID d’application global.|
 |`commands`|tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie.|
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
@@ -536,14 +536,14 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
+|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
 |`taskInfo.url`|string|||URL webview initiale.|
 |`parameters`|tableau d’objets|5 éléments|✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Ceci est inclus dans la demande de l’utilisateur.|
 |`parameters.title`|string|32 caractères|✔|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre.|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’un `text, textarea, number, date, time, toggle, choiceset` des .|
+|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’une `text, textarea, number, date, time, toggle, choiceset` des .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
 |`parameters.choices.title`|string|128 caractères|✔|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔|Valeur du choix.|
@@ -573,7 +573,7 @@ Fournit les fonctionnalités natives sur l’appareil d’un utilisateur à qui 
 
 ## <a name="validdomains"></a>validDomains
 
-**Facultatif,** sauf **obligatoire** lorsqu’il est indiqué.
+**Facultatif,** sauf **obligatoire lorsqu’il** est indiqué.
 
 Liste des domaines valides pour les sites web que l’application s’attend à charger dans Teams client. Les listes de domaines peuvent inclure des caractères génériques, par exemple, `*.example.com` . Cela correspond exactement à un segment du domaine ; si vous avez besoin d’une `a.b.example.com` correspondance, utilisez `*.*.example.com` . Si votre interface utilisateur de contenu ou de configuration d’onglet doit accéder à un autre domaine en plus de celui utilisé pour la configuration de l’onglet, ce domaine doit être spécifié ici.
 

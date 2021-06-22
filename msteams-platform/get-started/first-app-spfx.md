@@ -5,12 +5,12 @@ description: Découvrez comment créer un onglet personnalisé à l’SharePoint
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 23df721a28225a8c453274e6e77efa8f756e84f3
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 7bbbf7ae1d74a9094af5bc6ca4b3ac797ba05d5d
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994370"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037662"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Créer et exécuter votre première application Microsoft Teams avec SharePoint Framework (SPFx)
 
@@ -147,7 +147,7 @@ Pour créer et exécuter votre application localement :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart selection.":::
 
-Votre application doit maintenant être en cours d’exécution.  Vous pouvez faire des activités de débogage normales comme s’il s’SPFx webpart (par exemple, la définition de points d’arrêt).
+Votre application doit maintenant être en cours d’exécution.  Vous pouvez faire des activités de débogage normales comme s’il s’SPFx un autre SPFx webpart (par exemple, la définition de points d’arrêt).
 
 > [!TIP]
 > Essayez de placer des points d’arrêt dans la méthode de rendu et de `SPFx/src/webparts/{webpart}/{webpart}.ts` recharger la fenêtre du navigateur. VS Code s’arrête sur les points d’arrêt dans votre code.

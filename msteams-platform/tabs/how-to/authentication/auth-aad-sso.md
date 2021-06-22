@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: Api d’authentification unique SSO AAD d’authentification teams
-ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
-ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
+ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52760880"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049035"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -27,7 +27,7 @@ Les utilisateurs se connectent Microsoft Teams via leurs comptes professionnels,
 > [!NOTE]
 > **Démarrage rapide**  
 >
-> Le chemin d’accès le plus simple à la mise en route de l' sso tabulation est d’utiliser Teams outils pour Visual Studio Code. Pour plus d’informations, [voir SSO avec Teams toolkit et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
+> Le chemin d’accès le plus simple à la mise en route de l' sso tabulation est d’utiliser le kit Teams outils pour Visual Studio Code. Pour plus d’informations, [voir SSO avec Teams toolkit et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 
@@ -58,13 +58,13 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 
 1. Obtenez votre [ID d’application AAD.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
 1. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison AAD et, éventuellement, Graph.
-1. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour Teams applications de bureau, web et mobiles.
+1. [Accordez des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) Teams applications mobiles, web et de bureau.
 1. Pré-autoriser les Teams en sélectionnant  le bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
 
 > [!NOTE]
 > Vous devez connaître certaines restrictions importantes :
 >
-> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge , c’est-à-dire, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir `User.Read` `Mail.Read` la solution de [contournement recommandée.](#apps-that-require-additional-graph-scopes)
+> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge, à l’image, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir `User.Read` `Mail.Read` la solution de [contournement recommandée.](#apps-that-require-additional-graph-scopes)
 > * Il est important que le nom de domaine de votre application soit identique au nom de domaine que vous avez enregistré pour votre application AAD.
 > * Actuellement, plusieurs domaines par application ne sont pas pris en charge.
 
@@ -199,7 +199,7 @@ Une autre approche pour obtenir des étendues Graph supplémentaires consiste à
 
 ### <a name="non-aad-authentication"></a>Authentification non-AAD
 
-La solution d’authentification décrite ci-dessus fonctionne uniquement pour les applications et les services qui utilisent AAD en tant que fournisseur d’identité. Les applications qui souhaitent s’authentifier à l’aide de services non basés sur AAD doivent continuer à utiliser le flux d’authentification web basé sur les fenêtres [pop-up.](~/concepts/authentication.md)
+La solution d’authentification décrite ci-dessus fonctionne uniquement pour les applications et services qui utilisent AAD en tant que fournisseur d’identité. Les applications qui souhaitent s’authentifier à l’aide de services non basés sur AAD doivent continuer à utiliser le flux d’authentification web basé sur les fenêtres [pop-up.](~/concepts/authentication.md)
 
 > [!NOTE]
-> L’ation SSO est prise en charge pour les applications du client au sein des clients AAD B2C.
+> L' sso est prise en charge pour les applications du client au sein des clients AAD B2C.

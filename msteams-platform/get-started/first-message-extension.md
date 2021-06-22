@@ -5,12 +5,12 @@ description: Créez une extension de messagerie pour Microsoft Teams à l’aide
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994202"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037634"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Créez et exécutez votre première extension de messagerie basée sur la recherche dans Microsoft Teams
 
@@ -97,7 +97,7 @@ Une extension de messagerie utilise [Bot Framework](https://docs.botframework.co
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="Disposition de fichier d’un projet bot.":::
 
-Le code bot est stocké dans le répertoire `bot`.  Le `bots/messageExtensionBot.js` est le principal point d’entrée pour l’extension de messagerie.
+Le code bot est stocké dans le répertoire `bot`.  Le `bot/messageExtensionBot.js` est le principal point d’entrée pour l’extension de messagerie.
 
 > [!Tip]
 > Familiarisez-vous avec les bots en dehors de Teams avant d’intégrer votre premier bot dans Teams.  Vous trouverez d’autres informations sur les bots en examinant les didacticiels [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).

@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 localization_priority: Normal
 keywords: nouveautés des équipes
-ms.openlocfilehash: b2237119c046c85593cf1979b7076b88279187cf
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: b5253c1769ebaac5548c779b3f66a87abb195ed8
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994342"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049056"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -195,6 +195,7 @@ La prévisualisation pour développeurs est un programme public qui fournit un a
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|06/21/2021|Comportement de désinstallation pour une application personnelle avec un bot | [Désinstaller les mises à jour de comportement dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentement spécifique aux ressources pour les conversations. |[Consentement spécifique à la ressource,](graph-api/rsc/resource-specific-consent.md) [tester les autorisations](graph-api/rsc/test-resource-specific-consent.md) de consentement spécifiques à la ressource dans Teams|  
 |05/26/2021|Créer des onglets avec les Cartes adaptatives|[Créer des onglets](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Mise à jour Teams Shared Computer Toolkit pour [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) et [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Prendre en Teams développement d’applications](~/get-started/prerequisites.md) |
