@@ -1,16 +1,16 @@
 ---
 title: 'Démarrage rapide : créer un onglet personnel personnalisé avec Node.js et le générateur Yeoman pour Microsoft Teams'
-author: laujan
+author: surbhigupta
 description: Guide de démarrage rapide sur la création d’un onglet personnel avec le générateur Yeoman pour Microsoft Teams.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 88ad05aacaed69d695bc918e3e8a44ec18e560ae
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 220d1018f174fc935a10311723a730ebc74ccc33
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566603"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069204"
 ---
 # <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Créer un onglet personnel personnalisé à l'Node.js et le générateur Yeoman pour Microsoft Teams
 
@@ -81,7 +81,7 @@ Ajoutez ce qui suit au tableau `staticTabs` vide ( ) et `staticTabs":[]` ajoutez
 
 ```
 
-N’oubliez pas de mettre à jour le composant de chemin d’accès **« contentURL** » **yourDefaultTabNameTab** avec votre nom d’onglet réel.
+N’oubliez pas de mettre à jour le composant de chemin d’accès **« contentURL** **» yourDefaultTabNameTab** avec votre nom d’onglet réel.
 
 - Enregistrez lemanifest.js **mis à jour sur**.
 
@@ -127,7 +127,7 @@ gulp ngrok-serve
 ## <a name="upload-your-application-to-teams"></a>Télécharger votre application à Teams
 
 - Ouvrez le client Microsoft Teams client. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur.](~/tabs/how-to/developer-tools.md)
-- Dans le **panneau YourTeams sur** la gauche, sélectionnez le menu en face de l’équipe que vous utilisez pour tester votre onglet et choisissez `...` Gérer **l’équipe.**
+- Dans le **panneau YourTeams** sur la gauche, sélectionnez le menu en face de l’équipe que vous utilisez pour tester votre onglet et choisissez `...` Gérer **l’équipe.**
 - Dans le panneau  principal, sélectionnez Applications dans la barre d’onglets et **choisissez Télécharger** une application personnalisée située dans le coin inférieur droit de la page.
 - Ouvrez le répertoire de votre projet, accédez au dossier **./package,** sélectionnez le dossier zip, cliquez avec le bouton droit, puis choisissez **Ouvrir**. Votre onglet est chargé dans Teams.
 

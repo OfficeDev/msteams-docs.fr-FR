@@ -1,21 +1,21 @@
 ---
 title: Créer une page de suppression d’onglets
-author: laujan
+author: surbhigupta
 description: Comment créer une page de suppression d’onglets
-keywords: suppression des onglets teams du canal de groupe configurable
+keywords: Suppression de suppression configurable du canal de groupe d’onglets teams
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1a1f38a2bcb3b5bc4bc54f469c8727e44d8695e
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 9f4e10bd8fd5b5c4caf8f5349e0952732821dd85
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566669"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069057"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>Modifier ou supprimer un onglet de groupe de canaux
 
-Vous pouvez étendre et améliorer l’expérience utilisateur en prendre en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un onglet canal/groupe et vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation. En outre, votre expérience de suppression d’onglets peut inclure la désignation de ce qu’il advient du contenu lorsque votre onglet est supprimé ou donner aux utilisateurs des options post-suppression telles que la suppression ou l’archivage du contenu.
+Vous pouvez étendre et améliorer l’expérience utilisateur en prendre en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un onglet canal/groupe et vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation. En outre, votre expérience de suppression d’onglets peut inclure la désignation de ce qu’il advient du contenu lorsque votre onglet est supprimé ou l’offre d’options post-suppression aux utilisateurs, telles que la suppression ou l’archivage du contenu.
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Activer la reconfiguration de votre onglet après l’installation
 
@@ -23,7 +23,7 @@ Votre **manifest.jsdéfinit** les fonctionnalités et fonctionnalités de votre 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 
 Lorsque votre onglet est téléchargé vers un canal ou une conversation de groupe, Teams ajoute un menu déroulant de clic droit pour votre onglet. Les options disponibles sont déterminées par le `canUpdateConfiguration` paramètre :
 

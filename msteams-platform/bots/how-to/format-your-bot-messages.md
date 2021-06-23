@@ -1,16 +1,16 @@
 ---
 title: Formatez vos messages robots.
-author: clearab
+author: surbhigupta
 description: Ajouter une mise en forme enrichie à vos messages de bot
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020904"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068982"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
@@ -53,7 +53,7 @@ Certains styles ne sont actuellement pas pris en charge sur toutes les plateform
 | Liste triée              | ✖ | ✔ |
 | Texte préformaté         | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
+| Lien hypertexte                 | ✔ | ✔ |
 | Lien vers l’image                | ✔ | ✖ |
 
 Après avoir vérifié la prise en charge sur plusieurs plateformes, assurez-vous que la prise en charge par des plateformes individuelles est également disponible.
@@ -64,9 +64,9 @@ La prise en charge de la mise en forme du texte varie selon le type de message e
 
 ### <a name="text-only-messages"></a>Messages texte uniquement
 
-Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge sur les ordinateurs de bureau, iOS et Android :
+Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge sur ordinateur de bureau, iOS et Android :
 
-| Style                     | Desktop | iOS | Android |
+| Style                     | Bureau | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | Gras                      | ✔ | ✔ | ✔ |
 | Italic                    | ✔ | ✔ | ✔ |
@@ -77,7 +77,7 @@ Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge 
 | Liste triée              | ✔ | ✖ | ✖ |
 | Texte préformaté         | ✔ | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
+| Lien hypertexte                 | ✔ | ✔ | ✔ |
 | Lien vers l’image                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>Cartes

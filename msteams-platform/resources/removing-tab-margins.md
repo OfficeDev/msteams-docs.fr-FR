@@ -1,17 +1,17 @@
 ---
 title: Suppression des marges de tabulation dans Microsoft Teams
-author: laujan
+author: surbhigupta
 description: Décrit comment la suppression des marges d’onglet améliorera l’expérience du développeur.
 keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019712"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069165"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
@@ -40,7 +40,7 @@ Les développeurs d’onglets ne doivent pas compter sur Teams pour fournir des 
 
 Oui, c’est correct et encouragé. Cela permet à l’application de se sentir native.
 
-**Le contenu de l’application, tel que le texte, les logos et les images, est-il autorisé à toucher les bords gauche et droit de nos conceptions ?**
+**Est-il possible pour le contenu de l’application, comme le texte, les logos et les images, d’toucher les bords gauche et droit de nos conceptions ?**
 
 Non, vous devez fournir votre propre remplissage ou marges à gauche et à droite de tout le contenu de l’application pour vous assurer qu’il ne touche pas les bords de votre interface utilisateur. Vous pouvez également ajouter des marges en haut de votre onglet, si nécessaire.
 

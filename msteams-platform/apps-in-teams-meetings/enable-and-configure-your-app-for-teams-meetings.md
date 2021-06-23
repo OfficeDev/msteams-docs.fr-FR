@@ -1,20 +1,20 @@
 ---
 title: Activer et configurer vos applications pour Teams réunions
-author: laujan
+author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions
 ms.topic: conceptual
-ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
-ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
+ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "52871838"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068641"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
 Chaque équipe dispose d’une façon différente de communiquer et de collaborer sur des tâches. Vous pouvez effectuer ces différentes tâches en personnalisant Teams avec des applications pour les réunions. Pour personnaliser et effectuer différentes tâches, vous devez activer vos applications pour les réunions Teams et configurer vos applications pour qu’elles soient disponibles dans l’étendue de la réunion dans leur manifeste d’application.
 
-## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour Teams réunions
+## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour les Teams réunion
 
 Pour activer votre application pour les Teams, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
 
@@ -90,7 +90,7 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 **Pour ajouter un onglet à une réunion**
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
-1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
+1. Sélectionnez **l’onglet Détails,** puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
     ![Expérience préalable à la réunion](../assets/images/apps-in-meetings/PreMeeting.png)
 
@@ -109,9 +109,9 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots.**
 
 > [!NOTE]
-> * L’identité de l’utilisateur doit être confirmée à [l’aide de l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
+> * L’identité de l’utilisateur doit être confirmée à l’aide de [l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
 > * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
-> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
+> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, voir [les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 ### <a name="in-meeting"></a>En réunion
 
@@ -130,7 +130,7 @@ L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est 
 
 #### <a name="in-meeting-dialog-box"></a>Boîte de dialogue En réunion
 
-La boîte de dialogue de réunion peut être utilisée pour impliquer les participants au cours de la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
+La boîte de dialogue de réunion peut être utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
 
 La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher une bulle de contenu dans une réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 

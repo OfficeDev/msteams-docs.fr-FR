@@ -1,15 +1,15 @@
 ---
 title: Définir les commandes de recherche d’extension de messagerie
-author: clearab
+author: surbhigupta
 description: Définissez les commandes de recherche d’extension de messagerie pour Microsoft Teams applications.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696794"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068915"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -50,7 +50,7 @@ La condition préalable à la création d’une commande de recherche est que vo
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
-1. Pour créer l’extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
+1. Pour créer l’extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
@@ -126,7 +126,7 @@ Pour obtenir le manifeste complet de l’application, voir [schéma de manifeste
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

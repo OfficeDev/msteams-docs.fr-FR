@@ -1,16 +1,16 @@
 ---
 title: Créer des applications personnalisées à code faible pour Microsoft Teams
-author: laujan
-description: Détaille les solutions de code Microsoft disponibles pour les Teams
+author: surbhigupta
+description: Détaille les solutions Microsoft à faible et sans code disponibles pour Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 3c7f2dc76f01a47226598e5480e9b39ce9dd173a
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994083"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069128"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft Teams
 
@@ -25,7 +25,7 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Services de plateforme d’alimentation":::
 
 > [!NOTE]
-> Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications qui doivent être publiées dans Teams app store. Les applications microsoft Power Platform peuvent être publiées dans le magasin d’applications d’une organisation uniquement.
+> Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications qui doivent être publiées dans Teams app store. Les applications Microsoft Power Platform peuvent être publiées dans le magasin d’applications d’une organisation uniquement.
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams et Power BI
 
@@ -33,13 +33,13 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams et Power Apps
 
-Avec [Power Apps,](/powerapps/powerapps-overview)vous pouvez créer des applications métiers qui se connectent à vos données métiers et sont adaptées aux besoins de votre organisation.  Power Apps un large éventail de scénarios d’application pour relever les défis de l’entreprise par le biais [d’applications de canevas.](/powerapps/maker/#canvas-apps) Après la création, vous pouvez exporter l’application à partir du portail Power Apps maker et [l’incorporer dans Microsoft Teams](/power-platform/admin/embed-app-teams).
+Avec [Power Apps,](/powerapps/powerapps-overview)vous pouvez créer des applications métiers qui se connectent à vos données métiers et qui sont adaptées aux besoins de votre organisation.  Power Apps un large éventail de scénarios d’application pour relever les défis de l’entreprise par le biais [d’applications de canevas.](/powerapps/maker/#canvas-apps) Après la création, vous pouvez exporter l’application à partir du portail Power Apps maker et [l’incorporer dans Microsoft Teams](/power-platform/admin/embed-app-teams).
 
-La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linkid=2143374) Teams offre une expérience intégrée aux créateurs d’applications pour créer et modifier des applications et des flux de travail dans Teams. Ils peuvent rapidement publier et partager les applications avec les membres de l’équipe. Les membres peuvent utiliser les applications sans avoir à basculer entre plusieurs applications et services.
+La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linkid=2143374) Teams offre une expérience intégrée aux créateurs d’applications pour créer et modifier des applications et des flux de travail au sein Teams. Ils peuvent rapidement publier et partager les applications avec les membres de l’équipe. Les membres peuvent utiliser les applications sans avoir à basculer entre plusieurs applications et services.
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams et Power Automate
 
-Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l’environnement Teams avec l’application Power Automate dans [Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe](/power-automate/trigger-flow-teams-message) quel message Microsoft Teams et utiliser des cartes [adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter de la valeur à Microsoft Teams à partir de la nouvelle application Power Apps [dans](https://go.microsoft.com/fwlink/?linkid=2143539) Teams.
+Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l’environnement Teams avec l’application Power Automate dans [Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe](/power-automate/trigger-flow-teams-message) quel message Microsoft Teams et utiliser des cartes [adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur supplémentaire à Microsoft Teams à partir de la nouvelle application Power Apps [dans](https://go.microsoft.com/fwlink/?linkid=2143539) Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams et Power Virtual Agents
 
@@ -72,11 +72,11 @@ Virtual Assistant est un modèle open source Microsoft qui vous permet de créer
 
 [Un examen plus étroit des fonctionnalités de plateforme de données Project Androiddale](https://powerapps.microsoft.com/blog/a-closer-look-at-data-platform-capabilities-in-project-oakdale/)
 
-[Annonce des mises à jour de plateforme Teams pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
+[Annonce des mises à jour Teams et power platform pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams forme l’avenir du travail avec des fonctionnalités de code faible pour améliorer votre espace de travail numérique](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
 
-### <a name="-managing-power-platform-apps"></a>✔ gestion des applications de plateforme Power Platform
+### <a name="-managing-power-platform-apps"></a>✔ gestion des applications power platform
 
 > [!div class="nextstepaction"]
 > [Gérer les applications Microsoft Power Platform dans le Centre d Microsoft Teams’administration Microsoft Power Platform](/microsoftteams/manage-power-platform-apps)

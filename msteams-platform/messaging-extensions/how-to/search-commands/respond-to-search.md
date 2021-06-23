@@ -1,15 +1,15 @@
 ---
 title: Répondre à la commande de recherche
-author: clearab
+author: surbhigupta
 description: Comment répondre à la commande de recherche à partir d’une extension de messagerie dans une Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 15b48b135f656feeb3cfb28ffbe12852ddb66359
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710633"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068943"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
@@ -108,11 +108,11 @@ Pour plus d’informations sur la carte connecteur Office 365, voir Utilisation 
 
 La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de l’une des deux manières :
 
-* Utilisation de la `preview` propriété dans `attachment` l’objet. La pièce jointe peut uniquement être une carte hero ou `preview` miniature.
+* Utilisation de la `preview` propriété dans `attachment` l’objet. La `preview` pièce jointe ne peut être qu’une carte hero ou miniature.
 * Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
 * Les actions d’appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d’aperçu.
 
-Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
+Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Miniatures. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
 
 ### <a name="response-example"></a>Exemple de réponse
 
@@ -342,7 +342,7 @@ La requête par défaut a la même structure que n’importe quelle requête uti
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>Voir aussi

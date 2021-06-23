@@ -1,16 +1,16 @@
 ---
 title: Définir des commandes d’action d’extension de messagerie
-author: clearab
+author: surbhigupta
 description: Vue d’ensemble des commandes d’action d’extension de messagerie
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f49e821ecb98659b4cfd68f93b37f1a8f611a9fb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020715"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068925"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
@@ -31,11 +31,11 @@ Tout d’abord, vous devez déterminer l’emplacement à partir de lequel votre
 * Zone de composition de message : boutons situés en bas de la zone composer un message.
 * Zone de commande : en @mentioning votre application dans la zone de commande. 
    > [!NOTE]
-   > Si l’extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre avec un message bot inséré directement dans la conversation.
+   > Si l’extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre par un message bot inséré directement dans la conversation.
 
 * Message : directement à partir d’un message existant via le `...` menu de dépassement d’un message. 
     > [!NOTE] 
-    > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de le présenter avec un module de tâche.
+    > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de lui présenter un module de tâche.
 
 L’image suivante affiche les emplacements d’où la commande d’action est invoquée :
 
@@ -46,7 +46,7 @@ L’image suivante affiche les emplacements d’où la commande d’action est i
 En plus de sélectionner l’endroit à partir de lequel votre commande peut être invoquée, vous devez également sélectionner comment remplir le formulaire dans le module de tâche pour vos utilisateurs. Vous avez les trois options suivantes pour créer le formulaire qui est rendu à l’intérieur du module de tâche :   
 
 * **Liste statique de paramètres**: il s’agit de la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application que le client Teams rendu, mais ne peut pas contrôler la mise en forme dans ce cas.
-* **Carte adaptative**: vous pouvez choisir d’utiliser une carte adaptative, ce qui offre un meilleur contrôle sur l’interface utilisateur, mais vous limite aux contrôles disponibles et aux options de mise en forme.
+* **Carte adaptative**: vous pouvez choisir d’utiliser une carte adaptative, qui offre un meilleur contrôle sur l’interface utilisateur, tout en vous limitant sur les contrôles disponibles et les options de mise en forme.
 * **Affichage web incorporé**: vous pouvez choisir d’incorporer un affichage web personnalisé dans le module de tâche pour avoir un contrôle complet sur l’interface utilisateur et les contrôles. 
 
 Si vous choisissez de créer le module de tâche avec une liste statique de paramètres et lorsque l’utilisateur soumet le module de tâche, l’extension de messagerie est appelée. Lorsque vous utilisez une vue web incorporée ou une carte adaptative, votre extension de messagerie doit gérer un événement d’appel initial de l’utilisateur, créer le module de tâche et le renvoyer au client.
@@ -78,7 +78,7 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
     
-1. Pour créer une extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
+1. Pour créer une extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 

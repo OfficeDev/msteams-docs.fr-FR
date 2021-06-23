@@ -1,14 +1,14 @@
 ---
 title: Extensibilité de l’application de réunion
-author: laujan
+author: surbhigupta
 description: Comprendre l’extensibilité de l’application de réunion
 ms.topic: conceptual
-ms.openlocfilehash: 575952555bda288d791862140f7b40ce1792c868
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736753"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068634"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilité de l’application de réunion
 
@@ -22,7 +22,7 @@ Cet article traite des informations sur le cycle de vie des réunions et sur la 
 
 ## <a name="meeting-lifecycle"></a>Cycle de vie des réunions
 
-Le cycle de vie des réunions se compose de l’expérience de l’application avant, en réunion et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
+Le cycle de vie des réunions consiste en une expérience d’application avant, en réunion et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Intégrer des onglets dans le cycle de vie de la réunion
 
@@ -60,7 +60,7 @@ Grâce à l’expérience d’application en réunion, vous pouvez impliquer des
 
 **Pour utiliser des onglets pendant une réunion**
 
-1. Après avoir entré la réunion, dans la barre supérieure de la fenêtre de conversation, sélectionnez l’application que vous souhaitez utiliser. Une application est visible dans une Teams dans le panneau latéral ou dans la boîte de dialogue de la réunion.
+1. Après avoir entré la réunion, dans la barre supérieure supérieure de la fenêtre de conversation, sélectionnez l’application que vous souhaitez utiliser. Une application est visible dans une Teams dans le panneau latéral ou dans la boîte de dialogue de la réunion.
 1. Dans la boîte de dialogue de réunion, entrez votre réponse en tant que commentaire.
 
     ![Affichage boîte de dialogue](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
@@ -76,7 +76,7 @@ Grâce à l’expérience d’application en réunion, vous pouvez impliquer des
 
 #### <a name="post-meeting-app-experience"></a>Expérience d’application post-réunion
 
-Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires. Sélectionner <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> pour ajouter un onglet et obtenir des notes de réunion et des résultats sur lesquels les organisateurs et les participants doivent agir.
+Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires. Sélectionner <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> pour ajouter un onglet et obtenir des notes et des résultats de réunion sur lesquels les organisateurs et les participants doivent agir.
 
 L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage et les commentaires reçus des participants à la réunion :
 

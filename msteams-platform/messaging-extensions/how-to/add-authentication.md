@@ -1,16 +1,16 @@
 ---
 title: Ajouter une authentification à votre extension de messagerie
-author: clearab
+author: surbhigupta
 description: Comment ajouter l’authentification à une extension de messagerie
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1670bcd68def5470f2a590b11f7c25a00ccd06b7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d1ebde822e1a0216edaa1b85ac6142234ae34b78
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020708"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068921"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -18,7 +18,7 @@ ms.locfileid: "52020708"
 
 ## <a name="identify-the-user"></a>Identifier l’utilisateur
 
-Chaque demande à vos services inclut l’ID utilisateur, le nom d’affichage de l’utilisateur et Azure Active Directory’objet.
+Chaque demande à vos services inclut l’ID d’utilisateur, le nom d’affichage de l’utilisateur et Azure Active Directory’objet.
 
 ```json
 "from": {
@@ -38,7 +38,7 @@ Si votre service nécessite une authentification utilisateur, les utilisateurs d
 1. Votre service vérifie si l’utilisateur est authentifié en inspectant l’Teams’utilisateur.
 1. Si l’utilisateur n’est pas authentifié, renvoyez une réponse avec une action suggérée, y compris `auth` `openUrl` l’URL d’authentification.
 1. Le client Microsoft Teams lance une boîte de dialogue hébergeant votre page web à l’aide de l’URL d’authentification donnée.
-1. Une fois que l’utilisateur se signe, vous devez fermer votre fenêtre et envoyer un **code d’authentification** au client Teams client.
+1. Une fois que l’utilisateur s’est signé, vous devez fermer votre fenêtre et envoyer un **code d’authentification** au client Teams client.
 1. Le Teams client ressue ensuite la requête à votre service, qui inclut le code d’authentification passé à l’étape 5.
 
 Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5. Cela garantit qu’un utilisateur malveillant ne tente pas d’usurper ou de compromettre le flux de la signature. Cela permet effectivement de « fermer la boucle » pour terminer la séquence d’authentification sécurisée.
@@ -73,7 +73,7 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 
 Votre expérience de se connecte doit être réactive et tenir dans une fenêtre pop-up. Il doit s’intégrer au [SDK Microsoft Teams client JavaScript,](/javascript/api/overview/msteams-client)qui utilise la transmission de message.
 
-Comme avec d’autres expériences incorporées en cours d Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID d’utilisateur Teams dans votre fenêtre, qui le transmet ensuite à l’URL de la signature OAuth.
+Comme avec d’autres expériences incorporées en cours d Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID d’utilisateur Teams à votre fenêtre, qui le transmet ensuite à l’URL de la signature OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de la signature
 

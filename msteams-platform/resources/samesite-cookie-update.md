@@ -1,17 +1,17 @@
 ---
 title: Microsoft Teams et l’attribut de cookie SameSite (mise à jour 2020)
-author: laujan
+author: surbhigupta
 description: décrit les attributs du cookie SameSite
 keywords: samesite des attributs de cookie
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9e899cd7f4e8adcf55a39fc5cef434a7faa4b0ba
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629850"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068626"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams et l’attribut de cookie SameSite (mise à jour 2020)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52629850"
 
 ### <a name="cookies-and-http-requests"></a>Cookies et requêtes HTTP
 
-Avant l’introduction des restrictions SameSite, lorsque les cookies étaient stockés sur le navigateur, ils étaient joints à chaque demande web *HTTP* et envoyés au serveur par l’en-tête de réponse HTTP Set-Cookie. De manière prévisible, ces performances avaient le potentiel d’introduire des vulnérabilités de sécurité telles que les attaques de contrefaçon de demande entre sites (CSRF). *Voir* [cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies). Le composant SameSite a atténué cette exposition par le biais de son implémentation et de sa gestion dans l’en-tête SetCookie.
+Avant l’introduction des restrictions SameSite, lorsque les cookies étaient stockés sur le navigateur, ils étaient joints à chaque demande web *HTTP* et envoyés au serveur par l’en-tête de réponse HTTP Set-Cookie. De manière prévisible, ces performances avaient le potentiel d’introduire des vulnérabilités de sécurité telles que les attaques de contrefaçon de demande entre sites (CSRF). *Voir* [cookies HTTP.](https://developer.mozilla.org/docs/Web/HTTP/Cookies) Le composant SameSite a atténué cette exposition par le biais de son implémentation et de sa gestion dans l’en-tête SetCookie.
 
 ### <a name="samesite-attribute-initial-release"></a>Attribut SameSite : version initiale
 
@@ -41,7 +41,7 @@ Chrome 80, dont la publication est prévue en février 2020, introduit de nouvel
 
 |Paramètre | Application | Valeur |Spécification d’attribut |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Les cookies sont envoyés  automatiquement uniquement dans un contexte de première partie et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les sous-demandes entre sites, telles que les appels de chargement d’images ou d’iframes, mais sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Les cookies sont envoyés  automatiquement uniquement dans un contexte de première partie et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les sous-demandes entre sites, telles que les appels de chargement d’images ou d’iframes, mais sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple, en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |Le navigateur envoie uniquement des cookies pour les demandes de contexte de première partie (demandes provenant du site qui a définie le cookie). Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec l’attribut `Strict` n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
 | **Aucune** | Les cookies sont envoyés à la fois dans le contexte de la première partie et dans les demandes d’origine croisée . toutefois, la valeur doit être explicitement définie et toutes les demandes de navigateur doivent suivre le protocole HTTPS et inclure l’attribut qui nécessite une **`None`** connexion  **`Secure`** chiffrée. Les cookies qui ne respectent pas cette exigence seront **rejetés.** <br/>**Les deux attributs sont requis ensemble.** Si le protocole HTTPS n’est pas utilisé ou s’il est simplement spécifié, le cookie tiers **`None`** **`Secure`**  est rejeté.| Facultatif, mais, s’il est définie, le protocole HTTPS est requis. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
@@ -57,10 +57,10 @@ Chrome 80, dont la publication est prévue en février 2020, introduit de nouvel
 ### <a name="tabs-task-modules-and-message-extensions"></a>Onglets, modules de tâche et extensions de message
 
 * Teams permet d’incorporer du contenu qui est vu dans un contexte de niveau supérieur ou `<iframes>` de première partie.
-* Les modules de tâches vous permettent de créer des expériences de menu contextuel modal dans votre application Teams. Comme un onglet, une fenêtre modale s’ouvre à l’intérieur de la page actuelle.
+* Les modules de tâche vous permettent de créer des expériences de menu contextuel modal dans votre application Teams. Comme un onglet, une fenêtre modale s’ouvre à l’intérieur de la page actuelle.
 * Les extensions de message vous permettent d’insérer du contenu enrichi dans un message de conversation à partir de ressources externes.
 
-Tous les cookies utilisés par le contenu incorporé sont considérés comme tiers lorsque le site est affiché dans un `<iframe>` . En outre, si des ressources distantes sur une page s’appuient sur les cookies envoyés avec une demande et des `<img>` balises, des polices externes et du contenu personnalisé, vous devez vous assurer qu’elles sont marquées pour une utilisation sur plusieurs sites, par exemple, ou vous assurer qu’un système de base est en `<script>` `SameSite=None; Secure` place.
+Tous les cookies utilisés par le contenu incorporé sont considérés comme tiers lorsque le site est affiché dans un `<iframe>` . En outre, si des ressources distantes d’une page s’appuient sur les cookies envoyés avec une demande et des `<img>` balises, des polices externes et du contenu personnalisé, vous devez vous assurer qu’elles sont marquées pour une utilisation sur plusieurs sites, par exemple, ou vous assurer qu’un système de base est en `<script>` `SameSite=None; Secure` place.
 
 ### <a name="authentication"></a>Authentification
 
@@ -68,11 +68,11 @@ Tous les cookies utilisés par le contenu incorporé sont considérés comme tie
 * Un flux d’authentification web peut également être utilisé pour une page de configuration, un module de tâche ou une extension de messagerie.
 * Vous pouvez utiliser un flux d’authentification web pour un bot de conversation dont vous aurez besoin pour utiliser un module de tâche.
 
-En vertu des restrictions SameSite mises à jour, un navigateur n’ajoute pas de cookie à un site web déjà authentifié si le lien dérive d’un site externe. Vous devez vous assurer que vos cookies d’authentification sont marqués pour une utilisation entre sites, ou vous assurer qu’un système de base `SameSite=None; Secure` est en place.
+En vertu des restrictions SameSite mises à jour, un navigateur n’ajoute pas de cookie à un site web déjà authentifié si le lien dérive d’un site externe. Vous devez vous assurer que vos cookies d’authentification sont marqués pour une utilisation sur plusieurs sites, ou vous assurer qu’un système de base `SameSite=None; Secure` est en place.
 
 ### <a name="android-system-webview"></a>Android System WebView
 
-Android WebView est un composant système Chrome qui permet aux applications Android d’afficher du contenu web. Bien que les nouvelles restrictions deviennent la valeur par défaut, à partir de Chrome 80, elles ne sont pas immédiatement appliquées sur les WebViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookeManager](https://developer.android.com/reference/android/webkit/CookieManager):
+Android WebView est un composant système Chrome qui permet aux applications Android d’afficher du contenu web. Bien que les nouvelles restrictions deviennent la valeur par défaut, à partir de Chrome 80, elles ne seront pas immédiatement appliquées sur les WebViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookeManager](https://developer.android.com/reference/android/webkit/CookieManager):
 
 * Pour les cookies qui ne sont nécessaires que dans un contexte de première partie, vous devez les déclarer en tant `SameSite=Lax` que `SameSite=Strict` ou, selon le cas.
 * Pour les cookies nécessaires dans un contexte tiers, vous devez vous assurer qu’ils sont déclarés comme `SameSite=None; Secure` .
@@ -82,7 +82,7 @@ Android WebView est un composant système Chrome qui permet aux applications And
 * [Exemples sameSite](https://github.com/GoogleChromeLabs/samesite-examples)
 * [Recettes de cookie SameSite](https://web.dev/samesite-cookie-recipes/)
 * [Clients incompatibles connus]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [Développeurs : préparez-vous pour le nouveau samesite=aucun ; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Développeurs : Préparez-vous pour new SameSite=None; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **Impact Connecter OpenId**<br>
 [Modifications à venir des cookies SameSite ASP.NET et ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)

@@ -1,16 +1,16 @@
 ---
 title: Bots et kits de développement
-author: clearab
+author: surbhigupta
 description: Bots et SDK dans Microsoft Teams.
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020182"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069029"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -41,7 +41,7 @@ Votre bot Teams se compose des trois éléments suivants :
 
 ## <a name="bots-and-the-microsoft-power-virtual-agents"></a>Bots et microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) est un service chatbot construit sur la plateforme Microsoft Power et Bot Framework. Le processus de développement de Power Virtual Agent utilise une approche guidée, sans code et interface graphique qui permet aux membres de votre équipe de créer et de gérer facilement un agent virtuel intelligent. Après avoir créé votre chatbot dans le [portail Power Virtual Agents,](https://powervirtualagents.microsoft.com)vous pouvez facilement l’intégrer [à Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Pour plus d’informations sur la mise en place, [voir Power Virtual Agents documentation.](https://docs.microsoft.com/power-virtual-agents/)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) est un service chatbot construit sur la plateforme Microsoft Power et Bot Framework. Le processus de développement de Power Virtual Agent utilise une approche guidée, sans code et interface graphique qui permet aux membres de votre équipe de créer et de gérer facilement un agent virtuel intelligent. Après avoir créé votre chatbot dans le [portail Power Virtual Agents,](https://powervirtualagents.microsoft.com)vous pouvez facilement l’intégrer [à Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Pour plus d’informations sur la mise en place, [voir Power Virtual Agents documentation.](/power-virtual-agents)
 
 ## <a name="bots-and-webhooks-and-connectors"></a>Bots, webhooks et connecteurs
 
@@ -55,11 +55,11 @@ Les bots dans Microsoft Teams peuvent être intégrés dans une conversation à 
 | :-- | :-- | :-- |
 | Portée massive | Moins de membres | Méthode traditionnelle |
 | Interactions individuelles concises | @mention bot  | Q&A bots |
-| @mention bot | Similaire au canal | Bots qui indiquent à leurs personnes et prennent des notes |
+| @mention bot | Similaire au canal | Bots qui indiquent aux personnes à qui ils s’en prennent et qui prennent des notes |
 
 ### <a name="in-a-channel"></a>Dans un canal
 
-Les canaux contiennent des conversations entre plusieurs personnes, même jusqu’à deux milliers. Cela peut donner à votre bot une portée massive, mais les interactions individuelles doivent être concises. Les interactions multi turn traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez utiliser des cartes interactives ou des modules de tâche, ou déplacer la conversation vers une conversation un-à-un pour collecter de nombreuses informations. Votre bot n’a accès qu’aux messages où il se `@mentioned` trouve. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide Graph Microsoft et des autorisations au niveau de l’organisation.
+Les canaux contiennent des conversations entre plusieurs personnes, même jusqu’à deux milliers. Cela peut donner à votre bot une portée massive, mais les interactions individuelles doivent être concises. Les interactions multi turn traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez utiliser des cartes interactives ou des modules de tâche, ou déplacer la conversation vers une conversation un-à-un pour collecter de nombreuses informations. Votre bot n’a accès qu’aux messages où il se `@mentioned` trouve. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide Graph microsoft et des autorisations au niveau de l’organisation.
 
 Les bots fonctionnent mieux dans un canal dans les cas suivants :
 
@@ -80,13 +80,13 @@ La conversation un-à-un est un moyen traditionnel pour un bot de conversation d
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
-Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge un nombre excessif de commandes, en particulier un large éventail de commandes, ne réussit pas ou n’est pas considéré comme positif par les utilisateurs.
+Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge un nombre excessif de commandes, notamment un large éventail de commandes, ne réussit pas ou n’est pas considéré comme positif par les utilisateurs.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences à plusieurs tour dans la conversation
 
-Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
+Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler.** En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
-UTILISATEUR : planifier une réunion avec Megan.
+USER : planifier une réunion avec Megan.
 
 BOT : j’ai trouvé 200 résultats, veuillez inclure un prénom et un nom.
 
@@ -104,7 +104,7 @@ Comme il n’existe que six commandes visibles dans le menu bot actuel, il est p
 
 ### <a name="maintain-a-large-knowledge-base"></a>Gérer une base de connaissances importante
 
-L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux aux interactions courtes et rapides, et ne sont pas en train de passer au travers de longues listes à la recherche d’une réponse.
+L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
 
 ## <a name="code-sample"></a>Exemple de code
 

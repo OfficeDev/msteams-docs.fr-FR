@@ -1,16 +1,16 @@
 ---
 title: Obtenir Teams contexte spécifique pour votre bot
-author: laujan
+author: surbhigupta
 description: Comment obtenir le contexte spécifique de Microsoft Team pour votre bot, y compris la liste des conversations, les détails et la liste des canaux.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 6a8f903fb2f3ed8120e31b7536b65f22fdf6d620
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: ccbc04cbc1b2eb3162e886cd77273a4a0c37a6ec
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630165"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068976"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir Teams contexte spécifique pour votre bot
 
@@ -22,7 +22,7 @@ Un bot peut accéder à des données de contexte supplémentaires sur une équip
 
 Votre bot peut interroger la liste des membres et leurs profils utilisateur de base, notamment les ID d’utilisateur Teams et les informations de Azure Active Directory (AAD), telles que le nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, pour vérifier si un utilisateur s’est connecté à un onglet via les informations d’identification AAD, est membre de l’équipe. Pour obtenir les membres de la conversation, la taille de page minimale ou maximale dépend de l’implémentation. La taille de page inférieure à 50, traitée comme 50 et supérieure à 500, est limitée à 500. Même si vous utilisez la version non pagaisée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, voir [les modifications apportées aux API Teams bot pour](~/resources/team-chat-member-api-changes.md)récupérer des membres d’équipe ou de conversation.
 
-L’exemple de code suivant utilise le point de terminaison pagé pour extraire la liste :
+L’exemple de code suivant utilise le point de terminaison pagyé pour récupérer la liste :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -282,7 +282,7 @@ Response body
 
 * * *
 
-Une fois que vous avez obtenir les détails de l’équipe, vous pouvez obtenir la liste des canaux d’une équipe. Actuellement, pour récupérer des informations pour une liste de canaux dans une équipe, utilisez les API de bot Microsoft Teams pour C# ou pour les `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` API TypeScript.
+Une fois que vous avez des détails sur l’équipe, vous pouvez obtenir la liste des canaux d’une équipe. Actuellement, pour récupérer des informations pour une liste de canaux dans une équipe, utilisez les API de bot Microsoft Teams pour C# ou pour les `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` API TypeScript.
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>Obtenir la liste des canaux d’une équipe
 

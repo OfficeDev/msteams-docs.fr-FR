@@ -1,21 +1,21 @@
 ---
 title: Créer une page de configuration
-author: laujan
+author: surbhigupta
 description: Comment créer une page de configuration
 keywords: Canal de groupe onglets teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 041ef78fcc6e3f5203842e808949e86e8dd3aae4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629962"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069212"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
-Une page de configuration est un type spécial de [page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
+Une page de configuration est un type spécial [de page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
 
 * Onglet de conversation de canal ou de groupe : recueillez des informations auprès des utilisateurs et définissez `contentUrl` la page de contenu à afficher.
 * Une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md).
@@ -176,7 +176,7 @@ La `microsoftTeams.getContext((context) => {})` fonction récupère [l’interfa
 
 ## <a name="context-and-authentication"></a>Contexte et authentification
 
- Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir Authentifier un](~/tabs/how-to/authentication/auth-flow-tab.md)utilisateur dans Microsoft Teams onglet . Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation.
+ Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir Authentifier un](~/tabs/how-to/authentication/auth-flow-tab.md)utilisateur dans un Microsoft Teams onglet . Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation.
 Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` tableau et dans `validDomains` celui-ci.
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur les clients Teams mobiles, la configuration doit `setSettings()` avoir une valeur pour `websiteUrl` . Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
+Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les clients mobiles Teams, la configuration doit avoir `setSettings()` une valeur pour `websiteUrl` . Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)

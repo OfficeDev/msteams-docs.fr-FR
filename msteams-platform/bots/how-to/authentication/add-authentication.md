@@ -1,16 +1,16 @@
 ---
 title: Ajouter l’authentification à Teams bot
-author: clearab
+author: surbhigupta
 description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams.
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 36cb6f3de6f97af1d01512175923b79f69f630ad
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565969"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069012"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à Teams bot
 
@@ -30,7 +30,7 @@ Voici les titres des sections de cet article :
 - **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité.** Le fournisseur émettra un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder à des ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, [Microsoft Teams flux d’authentification pour les bots.](auth-flow-bot.md)
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous y inscrire et échanger des messages avec lui dans une conversation.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 - Connaissance des principes [de base du bot,][concept-basics] [de la gestion de l’état,][concept-state]de la bibliothèque [de][concept-dialogs]boîtes de dialogue et de la façon d’implémenter un flux de [conversation séquentiel.][simple-dialog]
 - Connaissance du développement Azure et OAuth 2.0.
@@ -94,7 +94,7 @@ Pour plus d’informations, [voir Créer un bot pour Teams](../create-a-bot-for-
 ## <a name="create-the-identity-provider"></a>Créer le fournisseur d’identité
 
 Vous avez besoin d’un fournisseur d’identité qui peut être utilisé pour l’authentification.
-Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres fournisseurs d’identité pris en charge par Azure AD peuvent également être utilisés.
+Dans cette procédure, vous allez utiliser un fournisseur Azure AD . d’autres fournisseurs d’identité pris en charge par Azure AD peuvent également être utilisés.
 
 1. Dans le [**portail Azure,**][azure-portal]dans le panneau de navigation de gauche, **sélectionnez Azure Active Directory**.
     > [!TIP]
@@ -108,7 +108,7 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres 
    1. Pour **l’URI de redirection**:<br/>
        &#x2713;Sélectionnez **Web**. <br/>
        &#x2713; définir l’URL sur `https://token.botframework.com/.auth/web/redirect` .
-   1. Sélectionnez **Inscrire**.
+   1. Sélectionnez **Inscription**.
 
 1. Une fois créé, Azure affiche la page **Vue d’ensemble** de l’application. Copiez et enregistrez les informations suivantes dans un fichier :
 
@@ -121,7 +121,7 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres 
    1. Ajoutez une description pour identifier ce secret auprès d’autres personnes que vous devrez peut-être créer pour cette application, telles que l’application d’identité bot *dans Teams*.
    1. La **sélection expire.**
    1. Sélectionnez **Ajouter**.
-   1. Avant de quitter cette page, **enregistrez le secret.** Vous utiliserez cette valeur comme secret _client_ ultérieurement lorsque vous enregistrerez votre application Azure AD auprès de votre bot.
+   1. Avant de quitter cette page, **enregistrez la question secrète.** Vous utiliserez cette valeur comme secret _client_ ultérieurement lorsque vous enregistrerez votre application Azure AD auprès de votre bot.
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurer la connexion du fournisseur d’identité et l’inscrire auprès du bot
 
@@ -235,14 +235,14 @@ Une fois les paramètres préliminaires terminés, nous allons nous concentrer s
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
 
-1. Dans le dossier, ouvrez et définissez votre ID d’application Microsoft et `teamsAppManifest` `manifest.json` `id` l’ID d’application du  `botId` **bot** que vous avez enregistré au moment de l’inscription du canal du bot.
+1. Dans le dossier, ouvrez et définissez votre ID d’application Microsoft et `teamsAppManifest` l’ID d’application du bot que vous avez enregistré au moment de l’inscription du `manifest.json` `id` canal du  `botId` bot. 
 
 # <a name="python"></a>[Python](#tab/python)
 
 1. Clonez [py-auth-sample][teams-auth-bot-py] à partir du référentiel github.
 1. Mettre **à jour config.py**:
 
-    - Définissez `ConnectionName` ce paramètre sur le nom du paramètre de connexion OAuth que vous avez ajouté à votre bot.
+    - Définissez ce paramètre sur le nom du paramètre de connexion OAuth que vous `ConnectionName` avez ajouté à votre bot.
     - Définissez `MicrosoftAppId` et `MicrosoftAppPassword` définissez l’ID d’application et la secret de l’application de votre bot.
 
       En fonction des caractères dans votre secret de bot, vous devrez peut-être éviter le mot de passe au code XML. Par exemple, toutes les andersands (&) doivent être codées comme `&amp;` .
@@ -253,9 +253,9 @@ Une fois les paramètres préliminaires terminés, nous allons nous concentrer s
 
 ### <a name="deploy-the-bot-to-azure"></a>Déployer le bot sur Azure
 
-Pour déployer le bot, suivez les étapes de la procédure de déploiement de [votre bot sur Azure.](https://aka.ms/azure-bot-deployment-cli)
+Pour déployer le bot, suivez les étapes de la procédure de déploiement [de votre bot sur Azure.](https://aka.ms/azure-bot-deployment-cli)
 
-Sinon, dans Visual Studio, vous pouvez suivre les étapes suivantes :
+Vous pouvez également utiliser Visual Studio, vous pouvez suivre les étapes suivantes :
 
 1. Dans *Visual Studio’Explorateur de* solutions, sélectionnez et maintenez (ou cliquez avec le bouton droit) le nom du projet.
 1. Dans le menu déroulant, sélectionnez **Publier.**
@@ -278,24 +278,24 @@ Sinon, dans Visual Studio, vous pouvez suivre les étapes suivantes :
 1. Dans la **zone Point de terminaison de messagerie,** entrez l’URL obtenue ci-dessus, suivie de `api/messages` . Voici un exemple : `https://botteamsauth.azurewebsites.net/api/messages` .
 1. Sélectionnez **le bouton** Enregistrer dans le coin supérieur gauche.
 
-## <a name="test-the-bot-using-the-emulator"></a>Tester le bot à l’aide de l’émulateur
+## <a name="test-the-bot-using-the-emulator"></a>Testez le bot à l’aide du Emulator
 
-Si vous ne l’avez pas déjà fait, installez [le Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Voir aussi [Déboguer avec l’émulateur.](https://aka.ms/bot-framework-emulator-debug-with-emulator)
+Si vous ne l’avez pas déjà fait, installez [le Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). Voir aussi [Déboguer avec le Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-Pour que l’exemple de connexion du bot fonctionne, vous devez configurer l’émulateur.
+Pour que l’exemple de connexion du bot fonctionne, vous devez configurer le Emulator.
 
-### <a name="configure-the-emulator-for-authentication"></a>Configurer l’émulateur pour l’authentification
+### <a name="configure-the-emulator-for-authentication"></a>Configurer le Emulator pour l’authentification
 
-Si un bot nécessite une authentification, vous devez configurer l’émulateur. Pour configurer :
+Si un bot nécessite une authentification, vous devez configurer le Emulator. Pour configurer :
 
-1. Démarrez l’émulateur.
-1. Dans l’émulateur, sélectionnez l’icône d’engrenage &#9881;  en bas à gauche ou l’onglet Paramètres’émulateur dans le coin supérieur droit.
+1. Démarrez la Emulator.
+1. Dans la Emulator, sélectionnez l’icône d’engrenage &#9881; en bas à gauche ou **l’onglet Emulator Paramètres** dans le coin supérieur droit.
 1. Cochez la case **en authentification version 1.0.**
 1. Entrez le chemin d’accès local à **l’outil ngrok.** *Consultez* le Wiki Bot Framework Emulator/ngrok [d’intégration](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok))de tunneling. Pour plus d’informations sur l’outil, [voir ngrok](https://ngrok.com/).
-1. Cochez la case par Exécuter ngrok au démarrage de **l’émulateur.**
+1. Cochez la case **par Exécuter ngrok au démarrage du Emulator.**
 1. Sélectionnez le **bouton** Enregistrer.
 
-Lorsque le bot affiche une carte de visite et que l’utilisateur sélectionne le bouton de la signature, l’émulateur ouvre une page que l’utilisateur peut utiliser pour se connecter avec le fournisseur d’authentification.
+Lorsque le bot affiche une carte de visite et que l’utilisateur sélectionne le bouton de authentification, le Emulator ouvre une page que l’utilisateur peut utiliser pour se connecter avec le fournisseur d’authentification.
 Une fois que l’utilisateur a fait cela, le fournisseur génère un jeton utilisateur et l’envoie au bot. Après cela, le bot peut agir pour le compte de l’utilisateur.
 
 ### <a name="test-the-bot-locally"></a>Tester le bot localement
@@ -303,7 +303,7 @@ Une fois que l’utilisateur a fait cela, le fournisseur génère un jeton utili
 Une fois que vous avez configuré le mécanisme d’authentification, vous pouvez effectuer le test réel du bot.  
 
 1. Exécutez l’exemple de bot localement sur votre ordinateur, Visual Studio par exemple.
-1. Démarrez l’émulateur.
+1. Démarrez la Emulator.
 1. Sélectionnez **le bouton Ouvrir le bot.**
 1. Dans **l’URL du bot,** entrez l’URL locale du bot. Généralement, `http://localhost:3978/api/messages` .
 1. Dans **l’ID d’application Microsoft,** entrez l’ID d’application du bot à partir de `appsettings.json` .
@@ -314,7 +314,7 @@ Une fois que vous avez configuré le mécanisme d’authentification, vous pouve
 1. Une boîte de dialogue s’affiche pour confirmer **l’ouverture de l’URL.** Cela permet à l’utilisateur du bot (vous) d’être authentifié.  
 1. Sélectionner **Confirmer**.
 1. Si vous y êtes invité, sélectionnez le compte de l’utilisateur applicable.
-1. Selon la configuration que vous avez utilisée pour l’émulateur, vous obtenez l’une des configurations suivantes :
+1. Selon la configuration que vous avez utilisée pour Emulator, vous obtenez l’une des configurations suivantes :
     1. **Utilisation du code de vérification de la signature**  
       &#x2713; Fenêtre ouverte affichant le code de validation.  
       &#x2713; copiez et entrez le code de validation dans la zone de conversation pour terminer la signature.
@@ -323,7 +323,7 @@ Une fois que vous avez configuré le mécanisme d’authentification, vous pouve
 
     L’image suivante est un exemple de l’interface utilisateur du bot après vous être connecté :
 
-    ![émulateur de connexion au bot d’authentification](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
+    ![Émulateur de connexion au bot d’authentification](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
 1. Si vous sélectionnez **Oui** lorsque le bot vous demande *Voulez-vous* afficher votre jeton ? , vous recevrez une réponse semblable à la suivante :
 
@@ -388,7 +388,7 @@ L’Assistant suivant s’affiche :
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Test du bot localement dans Teams
 
-Microsoft Teams est un produit entièrement basé sur le cloud, tous les services accessibles doivent être disponibles à partir du cloud à l’aide de points de terminaison HTTPS. Par conséquent, pour permettre au bot (notre exemple) de fonctionner dans Teams, vous devez publier le code dans le cloud de votre choix ou rendre une instance en cours d’exécution localement accessible en externe via un outil **de tunneling.** Nous vous  [recommandons ngrok](https://ngrok.com/download), qui crée une URL adressan externe pour un port que vous ouvrez localement sur votre ordinateur.
+Microsoft Teams est un produit entièrement basé sur le cloud, tous les services accessibles doivent être disponibles à partir du cloud à l’aide de points de terminaison HTTPS. Par conséquent, pour permettre au bot (notre exemple) de fonctionner dans Teams, vous devez publier le code dans le cloud de votre choix ou rendre une instance en cours d’exécution localement accessible en externe via un outil de **tunneling.** Nous vous  [recommandons ngrok](https://ngrok.com/download), qui crée une URL adressan externe pour un port que vous ouvrez localement sur votre ordinateur.
 Pour configurer ngrok en vue de l’exécution locale de Microsoft Teams’application, suivez les étapes suivantes :
 
 1. Dans une fenêtre terminal, allez dans le répertoire où vous `ngrok.exe` avez installé. Nous vous suggérons de définir *le chemin d’accès de la variable* d’environnement pour qu’il pointe vers celui-ci.
@@ -405,7 +405,7 @@ Cela lance ngrok pour écouter sur le port que vous spécifiez. En retour, il vo
     1. Dans le panneau gauche, **sélectionnez Paramètres**.
     1. Dans le panneau droit, dans la **zone** Point de terminaison de messagerie, entrez l’URL ngrok, dans notre `https://dea822bf.ngrok.io/api/messages` exemple.
 1. Démarrez votre bot localement, par exemple en mode Visual Studio débogage.
-1. Testez le bot lors de l’exécution locale à l’aide de la **conversation Web test** du portail Bot Framework. Comme l’émulateur, ce test ne vous permet pas d’accéder Teams fonctionnalités spécifiques.
+1. Testez le bot lors de l’exécution locale à l’aide de la **conversation Web test** du portail Bot Framework. Comme le Emulator, ce test ne vous permet pas d’accéder Teams fonctionnalités spécifiques.
 1. Dans la fenêtre terminal où s’exécute le trafic HTTP entre le bot et `ngrok` le client de conversation web. Si vous souhaitez une vue plus détaillée, dans une fenêtre de navigateur, entrez ce que vous avez obtenu à partir de `http://127.0.0.1:4040` la fenêtre terminal précédente. L’image suivante est un exemple :
 
     ![Test ngrok des équipes de bot d’th](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
@@ -522,8 +522,8 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 Dans une étape de boîte de dialogue, utilisez pour démarrer l’invite OAuth, qui demande à `beginDialog` l’utilisateur de se connecter.
 
-- Si l’utilisateur est déjà signé, cela génère un événement de réponse de jeton, sans que l’utilisateur soit invité à le faire.
-- Sinon, cela invite l’utilisateur à se connecter. Le service Azure Bot envoie l’événement de réponse du jeton après que l’utilisateur a tenté de se connecter.
+- Si l’utilisateur est déjà inscrit, cela génère un événement de réponse de jeton, sans invite de l’utilisateur.
+- Sinon, cela invite l’utilisateur à se connecter. Le service de bot Azure envoie l’événement de réponse au jeton une fois que l’utilisateur tente de se connecter.
 
 [!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
 
@@ -551,8 +551,8 @@ Dans l’étape de boîte de dialogue suivante, vérifiez la présence d’un je
 
 Dans une étape de boîte de dialogue, utilisez pour démarrer l’invite OAuth, qui demande à `begin_dialog` l’utilisateur de se connecter.
 
-- Si l’utilisateur est déjà signé, cela génère un événement de réponse de jeton, sans que l’utilisateur soit invité à le faire.
-- Sinon, cela invite l’utilisateur à se connecter. Le service Azure Bot envoie l’événement de réponse du jeton après que l’utilisateur a tenté de se connecter.
+- Si l’utilisateur est déjà inscrit, cela génère un événement de réponse de jeton, sans invite de l’utilisateur.
+- Sinon, cela invite l’utilisateur à se connecter. Le service de bot Azure envoie l’événement de réponse au jeton une fois que l’utilisateur tente de se connecter.
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 

@@ -2,16 +2,16 @@
 title: Tester les autorisations de consentement propres aux ressources dans Teams
 description: Détails du test du consentement spécifique aux ressources Teams postman
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 29dc0241bfd5b42cb1853de3e89e43344c223c24
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 92c6d5d96c103fb5e0da6afd91357b5887b2ba10
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994274"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069080"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
@@ -87,7 +87,7 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de de
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
 * `teamGroupId`: vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
-    1. Dans le Teams client, **sélectionnez Teams** la barre de navigation à l’extrême gauche.
+    1. Dans le Teams client, **sélectionnez Teams** dans la barre de navigation à l’extrême gauche.
     2. Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
     3. Sélectionnez **l’icône Options** supplémentaires (&#8943;).
     4. Sélectionnez **Obtenir un lien vers l’équipe.** 
@@ -101,9 +101,9 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de de
 * `azureADAppSecret`: mot de passe de votre application Azure AD.
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
 * `tenantId`: nom ou ID d’objet AAD de votre client.
-* `chatId`: vous pouvez obtenir l’ID de thread de conversation à partir du client *web* Teams comme suit :
+* `chatId`: vous pouvez obtenir l’ID de thread de conversation à partir Teams *client web* comme suit :
 
-    1. Dans le Teams web, sélectionnez **Conversation** dans la barre de navigation de l’extrême gauche.
+    1. Dans le Teams web, sélectionnez **Conversation** dans la barre de navigation à l’extrême gauche.
     2. Sélectionnez la conversation dans laquelle l’application est installée dans le menu déroulant.
     3. Copiez l’URL web et enregistrez l’ID de thread de conversation à partir de la chaîne.
 ![ID de thread de conversation à partir de l’URL web.](../../assets/images/chat-thread-id.png)
@@ -126,7 +126,7 @@ Exécutez l’ensemble de la collection d’autorisations pour chaque appel d’
 2. Suivez les étapes pour la conversation ou l’équipe : 
     1. [Test a ajouté des autorisations RSC à une équipe à l’aide de Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test ajout d’autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
-3. Vérifiez tous les codes d’état de réponse pour confirmer que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
+3. Vérifiez tous les codes d’état de réponse pour vérifier que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
 
 ## <a name="see-also"></a>Voir aussi
 

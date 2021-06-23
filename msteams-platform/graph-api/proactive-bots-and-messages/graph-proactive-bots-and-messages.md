@@ -2,16 +2,16 @@
 title: Utiliser Microsoft Graph pour autoriser l’installation proactive d’un bot et la messagerie dans Teams
 description: Décrit la messagerie proactive dans Teams et comment implémenter.
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: équipes d’installation de conversation de messagerie proactive Graph
-ms.openlocfilehash: db36c64e557b90699bb09e77dc67ca4c9a8e5853
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 0ece7d3ec3a9e00774ff2f529f7c38bc1932469d
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949664"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069086"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications utilisant Graph API pour envoyer des messages
 
@@ -63,7 +63,7 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with proactive [messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that’s in your [organization’s app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org) or the Teams [store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 >[!TIP]
-> Le modèle d’application [**Office Communicator**](../..//samples/app-templates.md#company-communicator) entreprise prêt pour la production autorise la diffusion de messages et constitue une bonne base pour la création de votre application de bot proactive.
+> Le modèle d’application [**Communicator**](../..//samples/app-templates.md#company-communicator) entreprise prêt pour la production autorise la diffusion de messagerie et constitue une bonne base pour la création de votre application de bot proactive.
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔ obtenir `teamsAppId` l’application
 
@@ -105,7 +105,7 @@ La demande doit renvoyer un `teamsApp` objet. L’objet renvoyé est l’ID d’
 GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les informations `teamsAppId` suivantes :
+**3.** Si votre application a été téléchargée ou téléchargée de manière secondaire pour un canal dans l’étendue de l’équipe, vous pouvez récupérer les données `teamsAppId` suivantes :
 
 **Référence de page Graph Microsoft : lister** [les applications en équipe](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -132,7 +132,7 @@ Cette demande renvoie un tableau vide si l’application n’est pas installée 
 
 ### <a name="-install-your-app"></a>✔ installer votre application
 
-**Référence de la page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Référence de page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **Requête HTTP POST** :
 

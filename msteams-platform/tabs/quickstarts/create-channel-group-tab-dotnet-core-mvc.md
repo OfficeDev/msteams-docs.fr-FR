@@ -1,16 +1,16 @@
 ---
 title: Créer un onglet canal et de groupe avec ASP.NET Core MVC
-author: laujan
+author: surbhigupta
 description: Guide de démarrage rapide pour créer un canal personnalisé et un onglet de groupe avec ASP.NET Core MVC
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: bac406f22e9273b6cca5d1d5f576b03d295b875f
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: b265e413d1f1d1239eda8285ea7066ad01750bba
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630354"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069125"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>Créer un canal et un onglet de groupe personnalisés avec ASP.NET Core MVC
 
@@ -90,7 +90,7 @@ Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit s
 
 ### <a name="models"></a>Modèles
 
-*ChannelGroup.cs* présente un objet Message et des méthodes qui seront appelés à partir des contrôleurs lors de la configuration.
+*ChannelGroup.cs* présente un objet message et des méthodes qui seront appelés à partir des contrôleurs lors de la configuration.
 
 ### <a name="views"></a>Affichages
 
@@ -120,6 +120,6 @@ Les contrôleurs utilisent la propriété ViewBag pour transférer dynamiquement
 
 ## <a name="update-your-application"></a>Mettre à jour votre application
 
-Dans **Tab.cshtml,** l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du  **bouton Sélectionner** gris ou Sélectionner rouge se déclenche `saveGray()` ou, respectivement, définit et active le bouton Enregistrer `saveRed()` sur la page de `settings.setValidityState(true)` configuration.  Ce code vous Teams que vous avez satisfait aux exigences de configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres `settings.setSettings` sont définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+Dans **Tab.cshtml,** l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du  **bouton Sélectionner** gris ou Sélectionner rouge se déclenche `saveGray()` ou, respectivement, définit et active le bouton Enregistrer `saveRed()` sur la page de `settings.setValidityState(true)` configuration.  Ce code vous permet Teams que vous avez satisfait aux exigences de configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres `settings.setSettings` sont définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]

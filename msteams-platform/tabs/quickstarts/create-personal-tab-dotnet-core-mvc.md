@@ -1,16 +1,16 @@
 ---
 title: Créez un onglet personnel avec ASP. NET Core MVC
-author: laujan
+author: surbhigupta
 description: Guide de démarrage rapide pour créer un onglet personnel personnalisé avec ASP. NET Core MVC.
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 01418adb32335660bb20f74ecfaa0e7e27230c93
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ac01ae64f44ccf3e06476d4412b16ac9a4730f6c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566625"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069153"
 ---
 # <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>Créer un onglet personnel personnalisé avec ASP.NET Core MVC
 
@@ -38,7 +38,7 @@ Pour créer et exécuter votre application, appuyez **sur F5** ou choisissez **D
 
 ### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir d’un asp. Modèle vide application Web NET Core 2.2 avec la case à cocher Avancé - Configurer *pour HTTPS* sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la `Configure()` méthode :
+Ce projet a été créé à partir d’un asp. Modèle vide application web NET Core 2.2 avec la case à cocher Avancé - Configurer *pour HTTPS* sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la `Configure()` méthode :
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -54,7 +54,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>dossier wwwroot
 
-Dans ASP. NET Core, le dossier racine web, est l’endroit où l’application recherche des fichiers statiques.
+Dans ASP. NET Core, le dossier racine web est l’endroit où l’application recherche des fichiers statiques.
 
 ### <a name="appmanifest-folder"></a>Dossier AppManifest
 
@@ -64,11 +64,11 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 * Icône **de plan transparente de** 32 x 32 pixels.
 * Un **manifest.jssur** le fichier qui spécifie les attributs de votre application.
 
-Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams chargez la spécifiée dans votre manifeste, incorporez-la dans un `contentUrl` IFrame et restituerez-la dans votre onglet.
+Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams chargez la spécifiée dans votre manifeste, incorporez-la dans un IFrame et restituerez-la `contentUrl` dans votre onglet.
 
 ### <a name="csproj"></a>.csproj
 
-Dans la fenêtre Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
+Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier .** En bas du fichier, vous verrez le code qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ``` xml
 <PropertyGroup>

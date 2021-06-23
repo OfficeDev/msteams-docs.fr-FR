@@ -1,17 +1,17 @@
 ---
 title: Créer une page de contenu
-author: laujan
+author: surbhigupta
 description: Comment créer une page de contenu
 keywords: 'onglets teams : canal de groupe configurable statique'
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 136160cb9154d62be40d8e29075ac1fc86135a6b
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: abb073cee4a9417ee4a9f095acdbe18c5e6d7713
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566676"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068519"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -73,7 +73,7 @@ Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclu
 
 À partir de la version de manifeste 1.7, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. En particulier, un développeur peut déplacer l’onglet de conversation du *bot,* qui est toujours en première position par défaut, n’importe où dans l’en-tête de l’onglet de l’application personnelle. Nous avons déclaré deux mots clés entityId d’onglet réservé, *conversations* et *à propos de*.
 
-Si vous créez un bot avec une *étendue* personnelle, il s’affiche par défaut dans la première position de tabulation dans une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, *conversations*. *L’onglet conversation* s’affiche sur le web ou sur le Bureau en fonction de l’endroit où vous ajoutez l’onglet *de conversation* dans le `staticTabs` tableau. 
+Si vous créez un bot avec une *étendue* personnelle, il s’affiche par défaut au premier onglet d’une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, *conversations*. *L’onglet conversation* s’affiche sur le web ou sur le Bureau en fonction de l’endroit où vous ajoutez l’onglet *de conversation* dans le `staticTabs` tableau. 
 
 ```json
 {
@@ -93,7 +93,7 @@ Si vous créez un bot avec une *étendue* personnelle, il s’affiche par défau
 
 ## <a name="show-a-native-loading-indicator"></a>Afficher un indicateur de chargement natif
 
-À partir du schéma de manifeste [v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement natif partout où votre contenu web est chargé Teams. [](../../../resources/schema/manifest-schema.md#showloadingindicator) Par exemple, page de [contenu d’onglet,](#integrate-your-code-with-teams) [page de configuration,](configuration-page.md) [page de suppression](removal-page.md)et [modules de tâche dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+À partir du schéma de manifeste [v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement natif partout où votre contenu web est chargé Teams. [](../../../resources/schema/manifest-schema.md#showloadingindicator) Par exemple, page [de contenu d’onglet,](#integrate-your-code-with-teams) [page de configuration,](configuration-page.md) [page de suppression](removal-page.md)et [modules de tâche dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 > * Le comportement sur les clients mobiles n’est pas configurable via cette propriété de manifeste. Les clients mobiles montrent un indicateur de chargement natif par défaut sur les pages de contenu et les modules de tâche iframe. Cet indicateur sur mobile s’affiche lorsqu’une demande d’extraction de contenu est effectuée et est rejetée dès que la demande est terminée.

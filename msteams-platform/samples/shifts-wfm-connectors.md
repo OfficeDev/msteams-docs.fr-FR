@@ -2,17 +2,17 @@
 title: Connecteurs Shifts prêts pour la production
 description: Connecteurs shifts de gestion du personnel pour Teams
 ms.topic: reference
-author: laujan
+author: surbhigupta
 ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams connecteurs kronos
 ms.author: lajanuar
-ms.openlocfilehash: 459797dd3f8425223c0dcbedc335955bf106ae37
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 088c049342c36b4f126b4a9d2f788601378b7db4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075737"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069147"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
@@ -44,7 +44,7 @@ L’affichage shifts dans Teams est illustré dans l’image suivante :
 
 ## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-to-Teams Shifts
 
-Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou de Teams mobile pour les scénarios de responsable et de travail de première ligne suivants :
+Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
 
 * Afficher la planification.
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur le déploiement du connecteur Kronos-to-Teams Shi
 
 ## <a name="jda-to-teams-shifts-connector"></a>Connecteur JDA vers Teams Shifts
 
-Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, à Teams Shifts telle que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
+Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, avec Teams Shifts tel que, application de bureau ou de Teams mobile pour les scénarios de travail et de responsable de première ligne suivants :
 
 * Publiez des équipes et des groupes de planification dans JDA et affichez-les dans Teams.
 

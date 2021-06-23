@@ -1,24 +1,24 @@
 ---
 title: Créer un menu de commandes pour votre bot
-author: clearab
+author: surbhigupta
 description: Comment créer un menu de commandes pour votre bot Microsoft Teams de commande
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668834"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069000"
 ---
 # <a name="bot-command-menus"></a>Menus de commande du bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Pour définir un ensemble de commandes principales à qui votre bot peut répondre, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot. La liste des commandes est présentée aux utilisateurs dans la zone composer un message lorsqu’ils sont en conversation avec votre bot. Sélectionnez une commande dans la liste pour insérer la chaîne de commande dans la zone composer un message et sélectionnez **Envoyer**.
+Pour définir un ensemble de commandes principales à qui votre bot peut répondre, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot. La liste des commandes est présentée aux utilisateurs dans la zone composer un message lorsqu’ils sont en conversation avec votre bot. Sélectionnez une commande dans la liste pour insérer la chaîne de commande dans la zone composer un message et sélectionnez **Envoyer.**
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Bureau](#tab/desktop)
 
 ![Menu de commande bot](./conversations/media/bot-menu-sample.png)
 
@@ -38,7 +38,7 @@ Pour créer un menu de commandes pour votre bot, vous devez modifier un manifest
 
 **Pour créer un menu de commandes pour votre bot à l’aide d’App Studio**
 
-1. Ouvrez Teams sélectionnez **Applications** dans le volet gauche. Dans la page **Applications,** recherchez **App Studio** et sélectionnez **Ouvrir.** 
+1. Ouvrez Teams sélectionnez **Applications** dans le volet gauche. Dans la page **Applications,** recherchez **App Studio,** puis sélectionnez **Ouvrir.** 
    > [!NOTE]
    > Si vous n’avez **pas App Studio,** vous pouvez le télécharger. Pour plus d’informations, [voir l’installation d’App Studio.](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)
 
@@ -162,7 +162,7 @@ Vous devez gérer les commandes de menu dans le code de votre bot lorsque vous t
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>Gérer les commandes de menu dans le code de votre bot
 
-Les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés `@botname` dans un message. Chaque message reçu par un bot lorsqu’il se trouve dans une étendue de groupe ou de canal contient son nom dans le texte du message renvoyé. Avant de gérer la commande renvoyée, l’utilisation de votre message doit gérer le message reçu par un bot avec son nom.
+Les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés `@botname` dans un message. Chaque message reçu par un bot dans une étendue de groupe ou de canal contient son nom dans le texte du message renvoyé. Avant de gérer la commande renvoyée, l’utilisation de votre message doit gérer le message reçu par un bot avec son nom.
 
 > [!NOTE]
 > Pour gérer les commandes dans le code, elles sont envoyées à votre bot en tant que message normal. Vous devez les gérer comme vous le feriez pour tout autre message de vos utilisateurs. Les commandes du code insèrent du texte pré-configuré dans la zone de texte. L’utilisateur doit ensuite envoyer ce texte comme il le fait pour tout autre message.
@@ -181,7 +181,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 Vous pouvez analyser la **\@ partie Mention** du texte du message à l’aide d’une méthode statique fournie avec Bot Framework. Il s’agit d’une méthode de `TurnContext` la classe nommée `removeMentionText` .
 
-Le code JavaScript pour l’utilisation de la partie **\@ Mention** du texte du message est le suivant :
+Le code JavaScript pour l’utilisation de la **\@ partie Mention** du texte du message est le suivant :
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);

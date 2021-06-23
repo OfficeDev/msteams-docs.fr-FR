@@ -1,16 +1,16 @@
 ---
 title: Créer des onglets de conversation
-author: laujan
+author: surbhigupta
 description: Créer une conversation de sous-entité conversationnelle pour vos onglets de canal
 keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: 4171265a3ef4ad917661e258dd7305f82411c5ef
-ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
+ms.openlocfilehash: 343cbe26ded2792489640ae3d86ec94c7c6db72b
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2021
-ms.locfileid: "52709645"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069229"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -18,13 +18,13 @@ Les sous-entités de conversation permettent aux utilisateurs d’avoir des conv
 
 Les sous-entités de conversation sont uniquement pris en charge dans les canaux. Toutefois, ils peuvent être utilisés à partir d’un onglet  personnel ou statique pour créer ou poursuivre des conversations dans des onglets déjà épinglés à un canal. L’onglet statique est utile si vous souhaitez fournir un emplacement à un utilisateur pour afficher et accéder aux conversations qui se produisent sur plusieurs canaux.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-entités ↔ conversations dans une base de données principale. Nous vous fournirons les informations, mais il vous incombera de les stocker et de les renvoyer à Teams afin que les utilisateurs poursuivent `conversationId` `conversationId` la conversation.
 
 ## <a name="start-a-new-conversation"></a>Démarrer une nouvelle conversation
 
-Pour démarrer une nouvelle conversation, utilisez la `openConversation()` fonction. Le démarrage et la poursuite d’une conversation sont tous gérés par cette méthode, toutefois, les entrées de la fonction changent en fonction de l’action que vous souhaitez prendre. Du point de vue des utilisateurs, le panneau de conversation s’ouvre à droite de l’écran, soit pour lancer une conversation, soit pour poursuivre une conversation.
+Pour démarrer une nouvelle conversation, utilisez la `openConversation()` fonction. Le démarrage et la poursuite d’une conversation sont tous gérés par cette méthode, toutefois, les entrées de la fonction changent en fonction de l’action que vous souhaitez prendre. Du point de vue des utilisateurs, le panneau de conversation s’ouvre à droite de l’écran, soit pour initier une conversation, soit poursuivre une conversation.
 
 ``` javascript
 microsoftTeams.conversations.openConversation(openConversationRequest);
@@ -36,7 +36,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 * **entityId**: il s’agit de l’ID de l’instance d’onglet lors de sa création. L’ID est important pour renvoyer à la même instance d’onglet.
 * **channelId**: il s’agit du canal dans lequel réside l’instance d’onglet.
    > [!NOTE]
-   > ChannelId **est** facultatif pour les onglets de canal. Toutefois, il est recommandé si vous souhaitez conserver votre implémentation entre les onglets de canal et statiques.
+   > Le **channelId est** facultatif pour les onglets de canal. Toutefois, il est recommandé si vous souhaitez conserver votre implémentation entre les onglets de canal et statiques.
 * **title**: il s’agit du titre affiché à l’utilisateur dans le panneau de conversation.
 
 La plupart de ces valeurs peuvent également être récupérées à partir de `getContext` l’API.

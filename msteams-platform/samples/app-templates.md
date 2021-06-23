@@ -5,13 +5,13 @@ ms.topic: reference
 keywords: démonstration Microsoft Teams modèles de modèles
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: 8cfb066ee3c202fb8611a61bbde3058207a62a35
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566283"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069190"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft Teams
 
@@ -42,7 +42,7 @@ Le modèle d’application de plateforme de gestion Des champions (CMP) vous per
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Outil d’adoption : Microsoft 365 parcours d’apprentissage (Prise en main) &#9734;
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>Outil d’adoption : Microsoft 365 Learning de parcours (Prise en main) &#9734;
 
 Le Prise en main d’application vous permet d’apporter la puissance de Microsoft 365 parcours d’apprentissage à l’intérieur Microsoft Teams. Ce modèle d’application vous permet d’accorder un accès facile à des pages de formation spécifiques ou à d’autres ressources intranet et de charger le contenu directement dans Teams. Vous pouvez également modifier le nom ou le logo de l’application pour qu’il corresponde à la marque de votre entreprise.
 
@@ -50,7 +50,7 @@ Le Prise en main d’application vous permet d’apporter la puissance de Micros
 
 ## <a name="appointment-manager"></a>Gestionnaire de rendez-vous 
 
-Le Gestionnaire de rendez-vous est Teams modèle d’application pour aider les entreprises à créer, gérer et mener des rendez-vous virtuels avec des clients via Teams. Les nouvelles demandes de rendez-vous des consommateurs sont visibles dans les canaux Teams, où elles sont rapidement affectées et réassignées au personnel d’une équipe. Les demandes de rendez-vous sont vues au niveau de l’équipe ou à des niveaux personnels via des onglets personnalisés. Chaque rendez-vous est associé à une Teams en ligne, de ce fait, le personnel et les consommateurs peuvent facilement participer à la réunion à l’heure prévue.
+Le Gestionnaire de rendez-vous est Teams modèle d’application pour aider les entreprises à créer, gérer et mener des rendez-vous virtuels avec des clients via Teams. Les nouvelles demandes de rendez-vous des consommateurs sont visibles dans les canaux Teams, où elles sont rapidement affectées et réassignées au personnel d’une équipe. Les demandes de rendez-vous sont vues à des niveaux d’équipe ou personnels via des onglets personnalisés. Chaque rendez-vous est associé à une Teams en ligne, de ce fait, le personnel et les consommateurs peuvent facilement participer à la réunion à l’heure prévue.
 
 Le modèle d’application s’intègre à Microsoft Bookings pour faciliter la gestion des rendez-vous. Les rendez-vous programmés apparaissent automatiquement dans les calendriers des membres du personnel affectés, et les consommateurs reçoivent des notifications et rappels par courrier électronique personnalisables avec des liens de réunion incorporés.
 
@@ -73,7 +73,7 @@ Ask Away est un [bot Microsoft Teams qui](../bots/what-are-bots.md) permet aux u
 
 ## <a name="associate-insights"></a>Informations du collaborateur
 
-Associate Insights est un [modèle Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui permet aux employés de première ligne de capturer et d’envoyer directement l’opinion, l’opinion et la perception des clients. Les employés de première ligne sont souvent le premier représentant de l’entreprise à contacter des clients dans un point de contact un-à-un. Les données collectées sont partagées et utilisées en collaboration par les équipes professionnelles, par exemple via un onglet Power BI Teams, pour améliorer le produit et améliorer l’expérience client.
+Associer Informations est un [modèle Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui permet aux employés de première ligne de capturer et d’envoyer directement l’opinion, l’opinion et la perception des clients. Les employés de première ligne sont souvent le premier représentant de l’entreprise à contacter des clients dans un point de contact un-à-un. Les données collectées sont partagées et utilisées en collaboration par les équipes professionnelles, par exemple via un onglet Power BI Teams, pour améliorer le produit et améliorer l’expérience client.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -90,7 +90,7 @@ Associate Insights est un [modèle Power Apps](/powerapps/maker/canvas-apps/embe
 
 ## <a name="attendance"></a>Présence
 
-L’application Présence est un [onglet Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui est épinglé dans une équipe. Il est conçu pour enregistrer la présence dans les paramètres, tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier l’assistance jusqu’à 30 jours dans le passé et afficher des rapports de présence récapitulés pour un groupe entier ou des participants individuels. Pour plus d’informations sur la présence des équipes, [consultez l’GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance).
+L’application Présence est un [onglet Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui sont épinglés dans une équipe. Il est conçu pour enregistrer la présence dans les paramètres, tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier l’assistance jusqu’à 30 jours dans le passé et afficher des rapports de présence récapitulés pour un groupe entier ou des participants individuels. Pour plus d’informations sur la présence des équipes, [consultez l’GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance).
 
 L’image suivante affiche la démonstration de l’application de présence :  
 
@@ -105,7 +105,7 @@ L’image suivante affiche la démonstration « Livrer dans une salle » :
 
 ## <a name="building-access"></a>Création d’un accès
 
-Building Access est une application basée sur Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui prend en charge l’administration de seuils d’occupation et de normes de d’éloignement social en permettant aux directeurs des installations de gérer, de suivre et de signaler la présence des employés sur site. L’application, conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview)et [Power Automate,](/power-automate/getting-started)s’intègre de façon profonde à Microsoft Teams et permet aux organisations de déterminer la préparation à la création, d’établir des critères d’éligibilité pour l’accès sur site et de recueillir des informations pour la planification future.
+Building Access est une application basée sur Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui prend en charge l’administration de seuils d’occupation et de normes de d’éloignement social en permettant aux directeurs d’installations de gérer, de suivre et de signaler la présence des employés sur site. L’application, conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview)et [Power Automate,](/power-automate/getting-started)s’intègre de façon profonde à Microsoft Teams et permet aux organisations de déterminer la préparation à la création, d’établir des critères d’éligibilité pour l’accès sur site et de recueillir des informations pour la planification future.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
@@ -120,7 +120,7 @@ Building Access est une application basée sur Microsoft [Power Platform](https:
 
 ## <a name="celebrations"></a>Célébrations
 
-La fête est une application Teams qui permet aux membres de l’équipe de se mettre à la fête des anniversaires, anniversaires et autres événements périodiques. Il se souvenir des événements spéciaux de tous les membres de l’équipe et envoie un message convivial dans toutes les équipes sélectionnées au moment de la création de l’événement, pour que les membres de l’équipe se sentent spéciaux lors de leur journée.
+La fête est une Teams qui permet aux membres de l’équipe de se mettre à l’anniversaire, aux anniversaires et à d’autres événements périodiques. Il se souvenir des événements spéciaux de tous les membres de l’équipe et envoie un message convivial dans toutes les équipes sélectionnées au moment de la création de l’événement, pour que les membres de l’équipe se sentent spéciaux lors de leur journée.
 
 L’application fournit une interface simple permettant à tous les membres de l’équipe d’ajouter et d’afficher leurs événements, et permet également à l’utilisateur de sélectionner les équipes dans lesquelles les événements sont partagés.
 
@@ -134,13 +134,13 @@ La liste de contrôle est une application Microsoft Teams [extension](../messagi
 
 :::row:::
 :::column span="2":::
-    ![Créer une liste de contrôle en Teams affichage](../assets/images/checklist-app-template-compose-view.gif)  
+    ![Créer une liste de contrôle en Teams vue](../assets/images/checklist-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
 ## <a name="classroom-drop-in"></a>Salle de classe 
 
-Classroom Drop-in est une application basée sur la plateforme Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)qui permet aux responsables système de rechercher des équipes de classe, c’est-à-dire des salles de classe virtuelles et de s’ajouter eux-mêmes ou d’autres à ces équipes de classe pour une période de présentation spécifiée, selon vos besoins. L’application conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview) et [Power Automate](/power-automate/getting-started), s’intègre en profondeur à Microsoft Teams pour s’assurer que les établissements d’enseignement peuvent optimiser leurs opérations dans un environnement d’apprentissage hybride en fournissant l’accès aux parties prenantes pertinentes pour les équipes de classe par besoins de l’entreprise.
+Classroom Drop-in est une application basée sur la plateforme Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)qui permet aux responsables système de rechercher des équipes de classe, c’est-à-dire des salles de classe virtuelles et de s’ajouter eux-mêmes ou d’autres à ces équipes de classe pour une période de présentation spécifiée, selon vos besoins. L’application conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview) et [Power Automate](/power-automate/getting-started), s’intègre en profondeur à Microsoft Teams pour s’assurer que les établissements d’enseignement peuvent optimiser leurs opérations dans un environnement d’apprentissage hybride en fournissant l’accès aux parties prenantes pertinentes pour les équipes de classe selon les besoins de l’entreprise.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
 
@@ -152,7 +152,7 @@ L’application Communicator entreprise permet aux équipes d’entreprise de cr
 
 L’application fournit une interface simple pour que les utilisateurs désignés créent, prévisualiser, collaborent et envoient des messages.
 
-Il fournit une base pour créer des fonctionnalités de communication ciblées personnalisées telles que la télémétrie personnalisée sur le nombre d’utilisateurs reconnus ou ayant interagi avec un message.
+Il fournit une base pour créer des fonctionnalités de communication ciblées personnalisées telles que la télémétrie personnalisée sur le nombre d’utilisateurs ayant reconnu ou interagi avec un message.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
@@ -203,7 +203,7 @@ Cette application permet également de partager facilement des images, des GIF e
 
 ## <a name="employee-ideas"></a>Idées d’employés
 
-L’application Idées d’employés est la version PowerApps du modèle d’application Bonnes idées basé sur Azure. L’application permet aux utilisateurs Teams configurer une campagne d’idées. Une campagne d’idées est une catégorie de regroupement d’idées autour de thèmes courants.
+L’application Idées d’employés est la version PowerApps du modèle d’application Idées intéressantes basé sur Azure. L’application permet aux utilisateurs Teams configurer une campagne d’idées. Une campagne d’idées est une catégorie de regroupement d’idées autour de thèmes courants.
 
 Teams utilisateurs peuvent également effectuer les activités suivantes :
 
@@ -223,7 +223,7 @@ Teams utilisateurs peuvent également effectuer les activités suivantes :
 
 ## <a name="e-prescriptions"></a>E-Ent 
 
-E-Titre est une [application Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui améliore la télémédeicine et les soins virtuels en automatisant le processus d’émission de courrier électronique aux patients. Les professionnels de la santé peuvent rapidement passer en revue les rendez-vous, générer des courriers électroniques et envoyer des courriers électroniques avec des pièces jointes électroniques aux patients directement dans Teams plateforme.
+E-Importe est une [application Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui améliore la télémédeicine et les soins virtuels en automatisant le processus d’émission de courrier électronique aux patients. Les professionnels de la santé peuvent rapidement passer en revue les rendez-vous, générer des courriers électroniques et envoyer des courriers électroniques avec des pièces jointes électroniques aux patients directement dans Teams plateforme.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
 
@@ -240,7 +240,7 @@ E-Titre est une [application Power Apps](/powerapps/maker/canvas-apps/embed-team
 
 ## <a name="employee-training"></a>Formation des employés 
 
-La formation des employés est une application Microsoft Teams qui permet aux organisateurs de publier, de suivre et de promouvoir facilement des événements d’apprentissage et de formation pour votre organisation.  Avec l’application, les planificateurs d’événements peuvent envoyer des rappels et des notifications aux personnes inscrites aux événements et les employés peuvent indiquer leur intérêt pour les événements à venir, rester informés des événements en cours et partager les détails des événements avec leurs collègues via l’extension de messagerie Teams.
+La formation des employés est une application Microsoft Teams qui permet aux organisateurs de publier, de suivre et de promouvoir facilement des événements d’apprentissage et de formation pour votre organisation.  Avec l’application, les planificateurs d’événements peuvent envoyer des rappels et des notifications aux personnes inscrites aux événements et les employés peuvent indiquer leur intérêt pour les événements à venir, rester informés des événements en cours et partager des détails des événements avec leurs collègues via l’extension de messagerie Teams.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
 
@@ -265,14 +265,14 @@ Expert Finder est un bot [Microsoft Teams qui](../bots/what-are-bots.md) identif
 
 ## <a name="faq-plus"></a>Forum aux questions
 
-Les réponses aux questions fréquemment posées par les utilisateurs&bots sont un moyen simple de fournir des réponses aux questions fréquemment posées par les utilisateurs. Toutefois, la plupart des bots ne parviennent pas à interagir avec les utilisateurs de manière significative, car il n’y a aucun humain dans la boucle lorsque le bot échoue. Le bot FAQ est une question-&un bot qui met un humain dans la boucle lorsqu’il n’est pas en mesure de vous aider. Vous pouvez poser une question au bot et le bot répond par une réponse s’il est contenu dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur d’envoyer une requête qui est ensuite publiée à une équipe pré-configurée d’experts qui aident à fournir un support en agissant sur les notifications à partir de l’équipe elle-même.
+Les réponses aux questions fréquemment posées par les utilisateurs&bots sont un moyen simple de fournir des réponses aux questions fréquemment posées par les utilisateurs. Toutefois, la plupart des bots ne parviennent pas à interagir avec les utilisateurs de manière significative, car il n’y a aucun humain dans la boucle lorsque le bot échoue. Le bot FAQ est une question-&un bot qui met un humain dans la boucle lorsqu’il n’est pas en mesure de vous aider. Vous pouvez poser une question au bot et le bot répond par une réponse s’il est contenu dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée à une équipe pré-configurée d’experts qui aident à fournir un support en agissant sur les notifications à partir de l’équipe elle-même.
 
 > [!NOTE]
 > La dernière version de **FAQ Plus** prend en charge les résolutions&A améliorées en permettant à une équipe d’experts d’effectuer les choses suivantes :
 >
 > &#x2714; ajoutez de nouvelles Q&directement à la base de connaissances à l’aide des extensions de message.
 >
-> &#x2714; modifier et supprimer des&des paires A ajoutées par un bot.
+> &#x2714; modifier et supprimer des&paires A ajoutées par un bot.
 >
 > &#x2714; l’historique des révisions de Q&As.
 >
@@ -296,7 +296,7 @@ L’application Obtenir un support est utilisée par les organisations qui utili
 
 ## <a name="goal-tracker"></a>Suivi des objectifs
 
-L’application De suivi des objectifs est une solution complète pour votre organisation qui permet de prendre en charge l’établissement d’objectifs, l’observation de la progression et l’accusé de succès au sein Microsoft Teams. L’application permet aux utilisateurs de définir, de suivre et de mettre à jour des objectifs au niveau professionnel, personnel et d’équipe. Les membres de l’équipe reçoivent également des rappels et des mises à jour d’état à temps pour rester concentrés et suivre.
+L’application De suivi des objectifs est une solution complète pour votre organisation qui permet de prendre en charge l’établissement d’objectifs, l’observation de la progression et l’accusé de succès au sein Microsoft Teams. L’application permet aux utilisateurs de définir, suivre et mettre à jour des objectifs au niveau professionnel, personnel et d’équipe. Les membres de l’équipe reçoivent également des rappels et des mises à jour d’état à temps pour rester concentrés et suivre.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
 
@@ -313,7 +313,7 @@ L’application De suivi des objectifs est une solution complète pour votre org
 
 ## <a name="great-ideas"></a>Bonnes idées
 
-L’application Bonnes idées prend en charge et favorise l’innovation et la créativité au sein de votre organisation. L’application permet à vos employés de partager des idées avec leurs collègues et leur direction, de découvrir de nouvelles soumissions, de faire la une pour la considération des pairs et de voter pour les meilleures propositions au sein Microsoft Teams.
+L’application Bonnes idées prend en charge et favorise l’innovation et la créativité au sein de votre organisation. L’application permet à vos employés de partager des idées avec des collègues et des membres de la direction, de découvrir de nouvelles soumissions, de faire la une pour la considération des pairs et de voter pour les meilleures propositions au sein de Microsoft Teams.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
 
@@ -380,13 +380,13 @@ Le bot de support RH est une question-&un bot qui apporte une assistance profess
 
 ## <a name="icebreaker"></a>Brise-glace
 
-Icebreaker est un robot [Microsoft Teams qui](../bots/what-are-bots.md) permet à votre équipe de se rapprocher en couplant deux membres d’équipe aléatoires chaque semaine pour se réunir. Le bot facilite la planification en suggérant automatiquement des heures libres qui fonctionnent pour les deux membres. Renforcez les connexions personnelles et créez une communauté étroite avec cette application.
+Icebreaker est un [bot Microsoft Teams qui](../bots/what-are-bots.md) permet à votre équipe de se rapprocher en couplant deux membres d’équipe aléatoires par semaine pour se réunir. Le bot facilite la planification en suggérant automatiquement des heures libres qui fonctionnent pour les deux membres. Renforcer les connexions personnelles et créer une communauté étroite avec cette application.
 
 En plus d’encourager les connexions personnelles au sein de l’ensemble de votre équipe, l’application Icebreaker peut contribuer à promouvoir les communautés basées sur l’intérêt au sein de votre organisation. Par exemple, vous pouvez utiliser cette application pour un groupe d’DevOps pour aider les idées et les meilleures pratiques à se propager de façon organique au sein de votre organisation.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Application icebreaker](../assets/images/icebreaker.png)
+![Icebreaker application](../assets/images/icebreaker.png)
 
 ## <a name="incentives"></a>Primes incitatives
 
@@ -484,7 +484,7 @@ Poll est une application [d’extension](../messaging-extensions/what-are-messag
 
 ## <a name="quick-responses"></a>Réponses rapides
 
-Les réponses rapides sont Microsoft Teams application qui fournit une solution robuste pour répondre efficacement aux questions fréquemment posées par les utilisateurs. Au lieu de répondre à chaque requête manuellement et en continu, l’application crée une bibliothèque de réponses pour une expérience utilisateur interactive via les [extensions](../messaging-extensions/what-are-messaging-extensions.md)de messagerie Teams.
+Les réponses rapides sont Microsoft Teams application qui fournit une solution robuste pour répondre efficacement aux questions fréquemment posées par les utilisateurs. Au lieu de répondre à chaque requête manuellement et en continu, l’application crée une bibliothèque de réponses pour une expérience utilisateur interactive via des [extensions](../messaging-extensions/what-are-messaging-extensions.md)de messagerie Teams.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
@@ -504,7 +504,7 @@ Questionnaire est une application d’extension de [messagerie Teams](../messagi
 
 ## <a name="rapid-assist"></a>Assistance rapide
 
-Quick Assist est une application basée sur microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui permet aux associés de se connecter rapidement aux experts pour obtenir des réponses rapides, rechercher des informations, suivre des demandes ouvertes et permettre aux experts de recevoir des notifications pour passer rapidement à un appel pour répondre aux questions. L’application conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview) et [Power Automate](/power-automate/getting-started), s’intègre en profondeur à Microsoft Teams pour permettre aux organisations de connecter facilement des travailleurs de la police aux liaisons d’entreprise pour résoudre les requêtes des clients et offrir une expérience client excellente. 
+Quick Assist est une application basée sur microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui permet aux associés orientés client de se connecter rapidement aux experts pour obtenir des réponses rapides, rechercher des informations, suivre des demandes ouvertes et permettre aux experts de recevoir des notifications pour prendre rapidement un appel pour répondre aux questions. L’application conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview) et [Power Automate](/power-automate/getting-started), s’intègre en profondeur à Microsoft Teams pour permettre aux organisations de connecter facilement des travailleurs de la police aux liaisons d’entreprise pour résoudre les requêtes des clients et offrir une expérience client excellente. 
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
 
@@ -513,13 +513,13 @@ Quick Assist est une application basée sur microsoft [Power Platform](https://p
      ![Interface de demande de l’utilisateur final](../assets/images/EndUserHome.png)
    :::column-end:::
    :::column span="":::
-      ![Affichage des demandes d’expert](../assets/images/ExpertViewRequests.png)
+      ![Vue de requête d’expert](../assets/images/ExpertViewRequests.png)
    :::column-end:::
 :::row-end:::
 
 ## <a name="reflect"></a>Reflect 
 
-Reflect est une application [d’extension](../messaging-extensions/what-are-messaging-extensions.md) de messagerie Microsoft Teams personnalisée qui fournit une ressource sécurisée et inclusive pour que les membres de votre équipe partagent l’état de leur bien-être émotionnel avec leurs collègues ou responsables de groupe directement au sein de Teams. L’application est disponible dans les conversations de canal, de groupe, de réunion et 1:1 et la réponse d’enregistrement est définie sur public, privé à expéditeur ou entièrement anonyme.
+Reflect est une application [d’extension](../messaging-extensions/what-are-messaging-extensions.md) de messagerie Microsoft Teams personnalisée qui fournit une ressource sûre et inclusive pour que les membres de votre équipe partagent l’état de leur bien-être émotionnel avec leurs collègues ou responsables de groupe directement au sein de Teams. L’application est disponible dans les conversations de canal, de groupe, de réunion et 1:1 et la réponse d’enregistrement est définie sur public, privé à expéditeur ou entièrement anonyme.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
 
@@ -550,7 +550,7 @@ La prise en charge à [distance est un bot Microsoft Teams qui](../bots/what-are
 
 ## <a name="request-a-team"></a>Demander une équipe
 
-Request-a-team est une application Microsoft Teams qui optimise la création d’équipes pour votre organisation d’entreprise. L’application prend en charge la normalisation et les meilleures pratiques lors de la création d’instances d’équipe par le biais de l’intégration d’un formulaire de demande guidé par l’Assistant, d’un processus d’approbation incorporé, d’un tableau de bord d’état des demandes et de builds d’équipe automatisées.
+Request-a-team est une application Microsoft Teams qui optimise la création d’équipes pour votre organisation d’entreprise. L’application prend en charge la normalisation et les meilleures pratiques lors de la création de nouvelles instances d’équipe par le biais de l’intégration d’un formulaire de demande guidé par l’Assistant, d’un processus d’approbation incorporé, d’un tableau de bord d’état des demandes et de builds d’équipe automatisées.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-requestateam)
 
@@ -590,7 +590,7 @@ Scrums for Channels est une application d’assistant scrum qui permet aux utili
 > [!NOTE]
 > Le modèle d’application État de Scrums est mis à jour et est désormais Scrums pour la conversation de groupe.
 
-Scrums pour la conversation de groupe est un assistant scrum positif qui permet aux membres de conversation de groupe d’exécuter des réunions asynchrones et de partager facilement leurs mises à jour quotidiennes. Elle permet à tous les membres de la conversation de groupe de contribuer à la scrum et d’afficher les mises à jour réalisées par d’autres personnes dans la scrum en cours d’exécution.
+Scrums for Group Chat est un assistant scrum positif qui permet aux membres de conversation de groupe d’exécuter des réunions de stand-up asynchrones et de partager facilement leurs mises à jour quotidiennes. Elle permet à tous les membres de la conversation de groupe de contribuer à la scrum et d’afficher les mises à jour réalisées par d’autres personnes dans la scrum en cours d’exécution.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforgroupchat)
 
@@ -665,7 +665,7 @@ La solution d’arrondi virtuel est également référencé dans le billet Micro
 
 ## <a name="visitor-management"></a>Gestion des visiteurs
 
-L’application Gestion des visiteurs permet à votre organisation et aux employés de gérer facilement et efficacement le processus des visiteurs sur site, directement à partir Microsoft Teams. L’application permet aux employés de créer des demandes de visiteurs, de suivre de manière centralisée l’état d’une demande via le tableau de bord du visiteur et de recevoir des notifications en temps réel lorsqu’un visiteur arrive.
+L’application Gestion des visiteurs permet à votre organisation et à vos employés de gérer facilement et efficacement le processus des visiteurs sur site, directement à partir Microsoft Teams. L’application permet aux employés de créer des demandes de visiteurs, de suivre de manière centralisée l’état d’une demande via le tableau de bord du visiteur et de recevoir des notifications en temps réel lorsqu’un visiteur arrive.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
 

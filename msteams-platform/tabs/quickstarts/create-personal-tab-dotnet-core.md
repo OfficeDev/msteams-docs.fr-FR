@@ -1,16 +1,16 @@
 ---
 title: Créer un onglet personnel avec ASP.NET Core
-author: laujan
+author: surbhigupta
 description: Guide de démarrage rapide pour créer un onglet personnel personnalisé avec ASP.NET Core.
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 41aa916f4c69d50e48254d0f4934109429dab83c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a839ae126a2cfdb137b22108038dd15a4b47b95a
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566893"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069045"
 ---
 # <a name="create-a-personal-tab-using-aspnetcore"></a>Créer un onglet personnel à l’aide d’ASP.NETCore
 
@@ -26,7 +26,7 @@ Ouvrez une invite de commandes et créez un répertoire pour votre projet d’on
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Une fois que vous avez le code source, ouvrez Visual Studio puis **sélectionnez Ouvrir un projet ou une solution.** Accédez au répertoire de l’application onglet et ouvrez **PersonalTab.sln**.
+Une fois que vous avez le code source, ouvrez Visual Studio puis **sélectionnez Ouvrir un projet ou une solution.** Accédez au répertoire d’application de l’onglet et **ouvrez PersonalTab.sln**.
 
 Pour créer et exécuter votre application, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage.** Dans un navigateur, accédez aux URL ci-dessous pour vérifier que l’application a correctement chargé :
 

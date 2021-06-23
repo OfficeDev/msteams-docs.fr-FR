@@ -1,23 +1,23 @@
 ---
 title: Conditions préalables et références d’API pour les applications dans les réunions Teams
-author: laujan
+author: surbhigupta
 description: Travailler avec des applications pour Teams réunions
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: f42e827801e21bbd039f52dbb685d4559ae5cf81
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: e6d1c442f77f4d271c43d866c819d65697262b6b
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853507"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068561"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
 Pour développer les fonctionnalités de vos applications tout au long du cycle de vie des réunions, Teams vous permet de travailler avec des applications pour Teams réunions. Vous devez respecter les conditions préalables et utiliser les références de l’API des applications de réunion pour améliorer l’expérience de réunion.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Avant de travailler avec des applications pour Teams réunions, vous devez comprendre les choses suivantes :
 
@@ -31,11 +31,11 @@ Avant de travailler avec des applications pour Teams réunions, vous devez compr
 
 * Vous devez prendre en charge l’étendue pour activer votre application dans les conversations `groupchat` préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer des tâches préalables à la réunion. Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires.
 
-* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Ceux-ci sont disponibles dans le cadre de l Teams du SDK client et du bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [SSO onglet](../tabs/how-to/authentication/auth-aad-sso.md).
+* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Ceux-ci sont disponibles dans le cadre de l Teams du SDK client et du bot. En outre, vous pouvez récupérer des informations fiables pour l’ID utilisateur et l’ID client à l’aide de l’authentification [sso tab.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 * `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
-* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
 
 Une fois que vous avez satisfait aux conditions préalables, vous pouvez utiliser les références de l’API des applications de réunion, qui vous permettent d’accéder aux informations à l’aide d’attributs et d’afficher `GetUserContext` `GetParticipant` du contenu `NotificationSignal` pertinent.
 
@@ -184,7 +184,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 > [!NOTE]
 > * Le `completionBotId` paramètre est facultatif dans `externalResourceUrl` l’exemple de charge utile demandé. `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 > * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour vous assurer que les dimensions sont dans les limites autorisées, consultez les [instructions de conception.](design/designing-apps-in-meetings.md)
-> * L’URL est la page chargée en tant que dans la boîte de `<iframe>` dialogue de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
+> * L’URL est la page chargée en tant que dans la boîte de dialogue `<iframe>` de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
 
 `NotificationSignal`L’API inclut les exemples suivants :
 
@@ -255,8 +255,8 @@ POST /v3/conversations/{conversationId}/activities
 |Exemple de nom | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Extensibilité des réunions | Microsoft Teams’extensibilité de réunion pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de bulle de contenu de réunion | Microsoft Teams exemple d’extensibilité de réunion pour l’interaction avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| MeetingSidePanel | Microsoft Teams exemple d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Bot de bulle de contenu de réunion | Microsoft Teams d’extensibilité de réunion pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| MeetingSidePanel | Microsoft Teams d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 
 ## <a name="see-also"></a>Voir aussi
 

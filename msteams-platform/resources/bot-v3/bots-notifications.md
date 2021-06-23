@@ -6,13 +6,13 @@ ms.date: 05/20/2019
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: da624ea0e92e193f4ad7f334d958349d542dd6e0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 6a9eaab388927fcff51d7883e1a61ca1cec81fac
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566466"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069075"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements de bot dans Microsoft Teams
 
@@ -21,14 +21,14 @@ ms.locfileid: "52566466"
 Microsoft Teams envoie des notifications à votre bot pour les modifications ou les événements qui se produisent dans les étendues où votre bot est actif. Vous pouvez utiliser ces événements pour déclencher une logique de service, telle que les suivantes :
 
 * Déclencher un message de bienvenue lorsque votre bot est ajouté à une équipe.
-* Interroger et mettre en cache les informations du groupe lorsque le bot est ajouté à une conversation de groupe.
+* Interroger et mettre en cache les informations de groupe lorsque le bot est ajouté à une conversation de groupe.
 * Mettre à jour les informations mises en cache sur l’appartenance à une équipe ou les informations de canal.
 * Supprimez les informations mises en cache pour une équipe si le bot est supprimé.
 * Lorsqu’un message bot est aimé par un utilisateur.
 
 Chaque événement de bot est envoyé en tant `Activity` qu’objet dans `messageType` lequel définit les informations qui se trouve dans l’objet. Pour les messages de type `message` , voir Envoi et réception de [messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
-les Teams et les événements de groupe, généralement déclenchés par le type, ont des informations d’événement Teams supplémentaires transmises dans le cadre de l’objet. Par conséquent, votre responsable d’événement doit interroger la charge utile pour le Teams et d’autres métadonnées spécifiques à `conversationUpdate` `channelData` l’événement. `channelData` `eventType`
+les Teams et les événements de groupe, généralement déclenchés par le type, ont des informations d’événement Teams supplémentaires transmises dans le cadre de l’objet. Par conséquent, votre responsable d’événement doit interroger la charge utile pour le Teams et des métadonnées spécifiques aux événements `conversationUpdate` `channelData` `channelData` `eventType` supplémentaires.
 
 Le tableau suivant répertorie les événements que votre bot peut recevoir et sur qui il peut agir.
 
@@ -318,7 +318,7 @@ L’événement avec l’objet dans la charge utile est envoyé lorsqu’un util
 }
 ```
 
-## <a name="team-name-updates"></a>Mises à jour de nom d’équipe
+## <a name="team-name-updates"></a>Mises à jour des noms d’équipe
 
 > [!NOTE]
 > Il n’existe aucune fonctionnalité pour interroger tous les noms d’équipe et le nom de l’équipe n’est pas renvoyé dans les charges utiles à partir d’autres événements.

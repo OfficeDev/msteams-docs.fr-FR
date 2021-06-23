@@ -2,16 +2,16 @@
 title: Consentement spécifique aux ressources dans Teams
 description: Décrit le consentement spécifique aux ressources Teams et comment en tirer parti.
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation OAuth OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
-ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
+ms.openlocfilehash: f364371f7763235e64da71b91db9b16b41ddf389
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "53022977"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068549"
 ---
 # <a name="resource-specific-consent-rsc"></a>Consentement spécifique aux ressources (RSC)
 
@@ -117,7 +117,7 @@ Le Azure Active Directory web fournit une plateforme centrale pour l’inscripti
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Passer en revue vos autorisations d’application dans le portail Azure AD
 
-Accédez à la page **d’inscription**  =>  **de l’application d’accueil** et sélectionnez votre application RSC. Choisissez **les autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application. Si votre application effectuera uniquement des appels RSC Graph API, supprimez toutes les autorisations sur cette page. Si votre application doit également effectuer des appels non RSC, conservez ces autorisations selon vos besoins.
+Accédez à la page  =>  **d’inscription de l’application d’accueil** et sélectionnez votre application RSC. Choisissez **les autorisations d’API** dans la barre de navigation de gauche et examinez la liste des autorisations configurées pour votre application. Si votre application effectuera uniquement des appels RSC Graph API, supprimez toutes les autorisations sur cette page. Si votre application doit également effectuer des appels non RSC, conservez ces autorisations selon vos besoins.
 
 >[!IMPORTANT]
 >Le portail Azure AD ne peut pas être utilisé pour demander des autorisations RSC. Les autorisations RSC sont actuellement exclusives aux applications Teams installées dans le client Teams et sont déclarées dans le fichier de manifeste d’application Teams (JSON).
@@ -234,7 +234,7 @@ Pour plus d’informations sur la façon d’obtenir des détails sur les applic
 ![ID de thread de conversation à partir de l’URL web.](../../assets/images/chat-thread-id.png)
 > - Connectez-vous **Graph Explorer.**
 > - Faites un **appel GET** au point de terminaison suivant : `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` . Le `clientAppId` champ de la réponse sera map mapé à l’Teams manifeste de `webApplicationInfo.id` l’application.
-  ![Graph de l’explorateur pour obtenir des autorisations RSC d’appel get.](../../assets/images/chat-graph-permissions.png)
+  ![Graph’explorateur à l’appel GET pour les autorisations RSC de conversation.](../../assets/images/chat-graph-permissions.png)
 
 Pour plus d’informations sur la façon d’obtenir des détails sur les applications installées dans une conversation spécifique, voir Obtenir les noms et autres détails des applications installées dans la conversation [spécifiée.](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat)
 

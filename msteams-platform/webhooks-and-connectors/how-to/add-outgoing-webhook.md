@@ -5,18 +5,18 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: 'onglets teams : message actionnable de webhook sortant vérifiant le webhook'
-ms.openlocfilehash: a5a0cdfc9080ac4567f438b6fb6fd0671df8c19f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 2fac6f42e27a4c8cb3d079ea281d458a4dfe41ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566529"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069181"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>Ajouter des bots personnalisés à Teams avec des webhooks sortants
 
 ## <a name="outgoing-webhooks-in-teams"></a>Webhooks sortants dans Teams
 
-Les webhooks sont un moyen Teams pour s’intégrer à des applications externes. Un webhook est essentiellement une requête POST envoyée à une URL de rappel. Les webhooks sortants permettent aux utilisateurs d’envoyer des messages à votre service web sans passer par le processus complet de création de bots via le [Microsoft Bot Framework](https://dev.botframework.com/).
+Les webhooks sont un moyen Teams pour s’intégrer à des applications externes. Un webhook est essentiellement une demande POST envoyée à une URL de rappel. Les webhooks sortants permettent aux utilisateurs d’envoyer des messages à votre service web sans passer par le processus complet de création de bots via le [Microsoft Bot Framework](https://dev.botframework.com/).
 
 Le webhook sortant envoie des données de Teams service choisi capable d’accepter une charge utile JSON. Après avoir ajouté les webhooks sortants à une équipe, il agit comme un bot et recherche des messages dans les canaux à l’aide de **\@ la mention**. Il envoie des notifications aux services web externes et répond par des messages enrichis, qui incluent des cartes et des images.
 
@@ -31,7 +31,7 @@ Le webhook sortant envoie des données de Teams service choisi capable d’accep
 
 ## <a name="creating-actionable-messages"></a>Créations des messages intégrant des actions
 
-Les cartes de connecteur incluent trois boutons visibles sur la carte. Chaque bouton est défini dans la propriété du message à `potentialAction` l’aide `ActionCard` d’actions. Chacune `ActionCard` contient un type d’entrée, un champ de texte, un s picker de date ou une liste à choix multiples. Chaque `ActionCard` action est associée à une action, par exemple. `HttpPOST`
+Les cartes de connecteur incluent trois boutons visibles sur la carte. Chaque bouton est défini dans la propriété du message à `potentialAction` l’aide `ActionCard` d’actions. Chacune `ActionCard` contient un type d’entrée, un champ de texte, un s sélectionneur de dates ou une liste à choix multiples. Chaque `ActionCard` action est associée à une action, par exemple. `HttpPOST`
 
 Les cartes de connecteur prennent en charge trois types d’actions :
 
@@ -39,7 +39,7 @@ Les cartes de connecteur prennent en charge trois types d’actions :
 | ------- | ----------- |
 | `ActionCard` |Présente un ou plusieurs types d’entrée et actions associées.|
 | `HttpPOST` | Envoie une demande POST à une URL. |
-| `OpenUri` |  Ouvre un URI dans un navigateur ou une application distinct, cible éventuellement différents URI basés sur les systèmes d’exploitation.|
+| `OpenUri` |  Ouvre un URI dans un navigateur ou une application distinct, cible éventuellement différentes URI en fonction des systèmes d’exploitation.|
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 
@@ -79,11 +79,11 @@ Les webhooks sortants sont limitées au niveau et `team` sont visibles par tous 
 
 #### <a name="hmac-signature-for-testing-with-code-example"></a>Exemple de signature HMAC à tester avec du code
 
-Utilisation d’un exemple de message entrant et d’ID : « contoso » de SigningKeyDictionary de {"contoso », « vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA= » }.
+Utilisation de l’exemple de message entrant et d’ID : « contoso » de SigningKeyDictionary de {"contoso », « vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA= » }.
 
 Utilisez la valeur « HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U= » dans l’autorisation de l’en-tête de demande.
 
-Pour vous assurer que votre service ne reçoit des appels que de clients Teams réels, Teams fournit un code HMAC dans l’en-tête `hmac` HTTP. Toujours inclus le code dans votre protocole d’authentification.
+Pour vous assurer que votre service reçoit uniquement des appels provenant de clients Teams réels, Teams fournit un code HMAC dans l’en-tête `hmac` HTTP. Toujours inclus le code dans votre protocole d’authentification.
 
 Votre code doit toujours valider la signature HMAC incluse dans la demande :
 
@@ -104,6 +104,110 @@ Les réponses de vos webhooks sortants apparaissent dans la même chaîne de ré
     "text": "This is a reply!"
 }
 ```
+
+> [!NOTE]
+> * Vous pouvez envoyer des messages de carte adaptative, de carte Hero et de texte en pièce jointe avec un webhook sortant.
+> * Les cartes sont en charge de la mise en forme. Pour plus d’informations, voir [les cartes de mise en forme avec markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
+
+Les codes suivants sont des exemples de réponse de carte adaptative :
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+string content = await this.Request.Content.ReadAsStringAsync();
+Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
+{
+    Body = new List<AdaptiveElement>()
+    {
+        new AdaptiveTextBlock(){Text= $"Request sent by: {incomingActivity.From.Name}"},
+        new AdaptiveImage(){Url=new Uri("https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6")},
+        new AdaptiveTextBlock(){Text="Sample image for Adaptive Card.."}
+    }
+};
+
+var attachment = new Attachment()
+{
+    ContentType = AdaptiveCard.ContentType,
+    Content = Card
+};
+
+var sampleResponseActivity = new Activity
+{
+    Attachments = new [] { attachment }
+};
+
+return sampleResponseActivity;
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+```javascript
+var receivedMsg = JSON.parse(payload);
+var responseMsg = JSON.stringify({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": null,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: " + receivedMsg.from.name
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": null,
+            "thumbnailUrl": null
+        }
+    ]
+});
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: Megan"
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card.."
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
+* * *
 
 ## <a name="create-an-outgoing-webhook"></a>Créer un webhook sortant
 
