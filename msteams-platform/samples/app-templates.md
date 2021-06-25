@@ -6,12 +6,12 @@ keywords: démonstration Microsoft Teams modèles de modèles
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069190"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111180"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft Teams
 
@@ -90,7 +90,7 @@ Associer Informations est un [modèle Power Apps](/powerapps/maker/canvas-apps/e
 
 ## <a name="attendance"></a>Présence
 
-L’application Présence est un [onglet Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui sont épinglés dans une équipe. Il est conçu pour enregistrer la présence dans les paramètres, tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier l’assistance jusqu’à 30 jours dans le passé et afficher des rapports de présence récapitulés pour un groupe entier ou des participants individuels. Pour plus d’informations sur la présence des équipes, [consultez l’GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance).
+L’application Présence est un [onglet Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) qui est épinglé dans une équipe. Il est conçu pour enregistrer la présence dans les paramètres, tels que les environnements d’apprentissage et de formation. Les utilisateurs peuvent marquer ou modifier l’assistance jusqu’à 30 jours dans le passé et afficher des rapports de présence récapitulés pour un groupe entier ou des participants individuels. Pour plus d’informations sur la présence des équipes, [consultez l’GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance).
 
 L’image suivante affiche la démonstration de l’application de présence :  
 
@@ -99,13 +99,13 @@ L’image suivante affiche la démonstration de l’application de présence :
 ## <a name="book-a-room"></a>Réserver une salle
 
 Book-a-room est un [bot Microsoft Teams](../bots/what-are-bots.md) qui permet aux utilisateurs de trouver et de réserver rapidement une salle de réunion pendant 30, 60 ou 90 minutes à partir de l’heure actuelle. La durée par défaut est 30 minutes. Le bot Book-a-room s’étendue à des conversations personnelles ou 1:1. Pour plus d’informations sur l’application De réservation de salle, consultez l’GitHub [.](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)  
-L’image suivante affiche la démonstration « Livrer dans une salle » :
+L’image suivante affiche la démonstration du Livre dans une salle :
 
 ![Démonstration du livre dans une salle](../assets/images/book-a-room.png)
 
 ## <a name="building-access"></a>Création d’un accès
 
-Building Access est une application basée sur Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui prend en charge l’administration de seuils d’occupation et de normes de d’éloignement social en permettant aux directeurs d’installations de gérer, de suivre et de signaler la présence des employés sur site. L’application, conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview)et [Power Automate,](/power-automate/getting-started)s’intègre de façon profonde à Microsoft Teams et permet aux organisations de déterminer la préparation à la création, d’établir des critères d’éligibilité pour l’accès sur site et de recueillir des informations pour la planification future.
+Building Access est une application basée sur Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) qui prend en charge l’administration de seuils d’occupation et de normes de d’éloignement social en permettant aux directeurs des installations de gérer, de suivre et de signaler la présence des employés sur site. L’application, conçue à l’aide de Microsoft [Power Apps](/powerapps/powerapps-overview)et [Power Automate,](/power-automate/getting-started)s’intègre de façon profonde à Microsoft Teams et permet aux organisations de déterminer la préparation à la création, d’établir des critères d’éligibilité pour l’accès sur site et de recueillir des informations pour la planification future.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
@@ -120,7 +120,7 @@ Building Access est une application basée sur Microsoft [Power Platform](https:
 
 ## <a name="celebrations"></a>Célébrations
 
-La fête est une Teams qui permet aux membres de l’équipe de se mettre à l’anniversaire, aux anniversaires et à d’autres événements périodiques. Il se souvenir des événements spéciaux de tous les membres de l’équipe et envoie un message convivial dans toutes les équipes sélectionnées au moment de la création de l’événement, pour que les membres de l’équipe se sentent spéciaux lors de leur journée.
+La fête est une application Teams qui permet aux membres de l’équipe de se mettre à la fête des anniversaires, anniversaires et autres événements périodiques. Il se souvenir des événements spéciaux de tous les membres de l’équipe et envoie un message convivial dans toutes les équipes sélectionnées au moment de la création de l’événement, pour que les membres de l’équipe se sentent spéciaux lors de leur journée.
 
 L’application fournit une interface simple permettant à tous les membres de l’équipe d’ajouter et d’afficher leurs événements, et permet également à l’utilisateur de sélectionner les équipes dans lesquelles les événements sont partagés.
 
@@ -128,7 +128,7 @@ L’application fournit une interface simple permettant à tous les membres de l
 
 ## <a name="checklist"></a>Liste de vérification
 
-La liste de contrôle est une application Microsoft Teams [extension](../messaging-extensions/what-are-messaging-extensions.md) de messagerie personnalisée qui vous permet de collaborer avec votre équipe en créant une liste de contrôle partagée dans une conversation ou un canal. L’application est prise en charge sur tous Teams clients de plateforme, tels que le navigateur de bureau, iOS et Android. L’application est prête pour le déploiement dans le cadre de Microsoft 365 abonnement.  
+La liste de contrôle est une application Microsoft Teams [extension](../messaging-extensions/what-are-messaging-extensions.md) de messagerie personnalisée qui vous permet de collaborer avec votre équipe en créant une liste de contrôle partagée dans une conversation ou un canal. L’application est prise en charge sur tous Teams clients de plateforme, tels que le navigateur de bureau, iOS et Android. L’application est prête pour le déploiement dans le cadre de votre abonnement Microsoft 365 abonnement.  
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-checklist-app)
 
@@ -372,7 +372,7 @@ L’application Développer vos compétences prend en charge la croissance et le
 
 ## <a name="hr-support"></a>Prise en charge RH
 
-Le bot de support RH est une question-&un bot qui apporte une assistance professionnelle ou experte de l’équipe RH lorsqu’il n’est pas en mesure de vous aider. Vous pouvez poser une question au bot et le bot répond par une réponse s’il est contenu dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe pré-configurée d’experts qui aident à fournir un support en agissant sur les notifications à partir de leur équipe elle-même. En outre, le bot suggère des liens vers des stratégies ou des questions RH recommandées en recherchant des balises pré-configurées dans la question. Ces vignettes sont trouvées dans l’onglet associé en tant que référence rapide. Le support RH fonctionne bien pour les questions de poids faible&A et pour fournir un support rapide lors du lancement de nouveaux projets ou initiatives dans l’organisation.
+Le bot de support rh est une question-&un bot qui apporte un professionnel du support technique ou un expert de l’équipe RH en boucle lorsqu’il n’est pas en mesure de vous aider. Vous pouvez poser une question au bot et le bot répond par une réponse s’il est contenu dans la base de connaissances. Si ce n’est pas le cas, le bot permet à l’utilisateur de soumettre une requête qui est ensuite publiée dans une équipe pré-configurée d’experts qui aident à fournir un support en agissant sur les notifications à partir de leur équipe elle-même. En outre, le bot suggère des liens vers des stratégies ou des questions RH recommandées en recherchant des balises pré-configurées dans la question. Ces vignettes sont trouvées dans l’onglet associé en tant que référence rapide. Le support RH fonctionne bien pour les questions de poids faible&A et pour fournir un support rapide lors du lancement de nouveaux projets ou initiatives dans l’organisation.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
@@ -426,7 +426,7 @@ L’application permet aux employés de première ligne d’inspecter un bien ou
 
 ## <a name="issue-reporting"></a>Rapports de problèmes
 
-L’application Rapports de problèmes permet aux employés et aux responsables de lever et de gérer les problèmes. Il se compose de deux applications, Issue reporting app for reporting issues and Manage Issues app for managing issues.
+L’application Rapports de problèmes permet aux employés et aux responsables de lever et de gérer les problèmes. Il se compose de deux applications, Issue reporting app for reporting issues et Manage Issues app for managing issues.
 
 Les responsables d’équipe utilisent l’application Gérer les problèmes pour configurer l’expérience d’application, y compris le canal dans lequel les messages Microsoft Teams et les tâches du Planificateur sont créés par l’application. Les responsables utilisent également l’application pour créer des formulaires de modèle afin de collecter des détails lorsqu’un utilisateur signale un problème. Par exemple, examinez, modifiez ou supprimez des formulaires de modèle d’émission. L’application est également utilisée pour examiner les problèmes de l’équipe, signaler l’historique des problèmes et gérer efficacement la résolution des problèmes.
 
@@ -484,7 +484,7 @@ Poll est une application [d’extension](../messaging-extensions/what-are-messag
 
 ## <a name="quick-responses"></a>Réponses rapides
 
-Les réponses rapides sont Microsoft Teams application qui fournit une solution robuste pour répondre efficacement aux questions fréquemment posées par les utilisateurs. Au lieu de répondre à chaque requête manuellement et en continu, l’application crée une bibliothèque de réponses pour une expérience utilisateur interactive via des [extensions](../messaging-extensions/what-are-messaging-extensions.md)de messagerie Teams.
+Les réponses rapides sont Microsoft Teams application qui fournit une solution robuste pour répondre efficacement aux questions fréquemment posées par les utilisateurs. Au lieu de répondre à chaque requête manuellement et en continu, l’application crée une bibliothèque de réponses pour une expérience utilisateur interactive via les [extensions](../messaging-extensions/what-are-messaging-extensions.md)de messagerie Teams.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
@@ -519,7 +519,7 @@ Quick Assist est une application basée sur microsoft [Power Platform](https://p
 
 ## <a name="reflect"></a>Reflect 
 
-Reflect est une application [d’extension](../messaging-extensions/what-are-messaging-extensions.md) de messagerie Microsoft Teams personnalisée qui fournit une ressource sûre et inclusive pour que les membres de votre équipe partagent l’état de leur bien-être émotionnel avec leurs collègues ou responsables de groupe directement au sein de Teams. L’application est disponible dans les conversations de canal, de groupe, de réunion et 1:1 et la réponse d’enregistrement est définie sur public, privé à expéditeur ou entièrement anonyme.
+Reflect est une application [d’extension](../messaging-extensions/what-are-messaging-extensions.md) de messagerie Microsoft Teams personnalisée qui fournit une ressource sécurisée et inclusive pour que les membres de votre équipe partagent l’état de leur bien-être émotionnel avec leurs collègues ou responsables de groupe directement au sein de Teams. L’application est disponible dans les conversations de canal, de groupe, de réunion et 1:1 et la réponse d’enregistrement est définie sur public, privé à expéditeur ou entièrement anonyme.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
 
@@ -533,7 +533,7 @@ Reflect est une application [d’extension](../messaging-extensions/what-are-mes
 
 ## <a name="remote-support"></a>Prise en charge à distance
 
-La prise en charge à [distance est un bot Microsoft Teams qui](../bots/what-are-bots.md) fournit une interface axée entre les demandeurs de support dans toute votre organisation et l’équipe de support interne.  Les utilisateurs finaux peuvent soumettre, modifier ou retirer des demandes de support, et l’équipe de support peut répondre, gérer et mettre à jour les demandes dans la plateforme Teams.
+Le support à distance est [un bot Microsoft Teams qui](../bots/what-are-bots.md) fournit une interface axée entre les demandeurs de support dans toute votre organisation et l’équipe de support interne.  Les utilisateurs finaux peuvent soumettre, modifier ou retirer des demandes de support, et l’équipe de support peut répondre, gérer et mettre à jour les demandes dans la plateforme Teams.
 
 [Obtenez-le sur GitHub](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
 
@@ -679,6 +679,40 @@ L’application Gestion des visiteurs permet à votre organisation et à vos emp
     ![Notification d’arrivée du visiteur](../assets/images/visitor-management-notify-host.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="water-cooler-9734"></a>S’il s'&#9734;
+
+Water Water Est une application de Teams personnalisée qui permet aux équipes d’entreprise de créer, d’inviter et de participer à des conversations informelles entre collègues, telles que celles qui ont lieu par le water-water-water ou la salle d’coupure. Utilisez ce modèle pour plusieurs scénarios, tels que les nouvelles annonces non liées au projet, les sujets intéressants, les événements actuels ou les conversations sur les loisirs. L’application fournit une interface simple pour que tout le monde trouve une conversation existante ou en démarre une nouvelle. Il s’agit d’une base pour la création de fonctionnalités de communication ciblées personnalisées, qui favorisent l’interaction entre collègues qui, autrement, n’ont pas la possibilité de se mettre en réseau pendant les coupures.    
+
+[Obtenez-le sur GitHub](https://github.com/microsoft/csapps-msteams-watercooler)     
+
+![Écran d’application water-water](../assets/images/appScreens.gif)    
+
+### <a name="key-features"></a>Principales fonctionnalités
+
+**Page d’accueil** De l’eau - Vous pouvez parcourir les salles existantes où les membres de l’équipe interagissent dans des conversations existantes avec certaines personnes ou des sujets d’intérêt. Les conversations actives sur la **page d’accueil** montrent un nom de salle, une description courte, la durée de l’appel et une image de salle. 
+
+![Page d’accueil de l’eau en eau](../assets/images/home-page.png)
+
+**Rejoindre une salle**: utilisez la fonctionnalité **Rejoindre une** salle pour participer immédiatement à une conversation en cours. Sélectionnez **Participer** à partir des conversations actives pour rejoindre la salle.
+
+![Salle de réunion](../assets/images/joinRoom.gif)
+
+**Création de salle**: utilisez la fonctionnalité **de création de** salle pour créer un appel Teams ou une conversation pour que tous les participants interagissent. Créez facilement des salles en spécifiant le nom de la salle, une description courte, jusqu’à cinq collègues en tant que groupe initial et en sélectionnant à partir de l’ensemble fourni d’images de salle. 
+
+![Création de salle](../assets/images/createRoom.gif)
+
+**Rechercher une salle**: utilisez la **fonctionnalité Rechercher** une salle pour rechercher un mot clé qui correspond à la rubrique ou à des descriptions courtes des conversations en cours.
+
+![Rechercher une conversation](../assets/images/findConversation.gif)
+
+**Invitation du participant**: utilisez la fonctionnalité **d’invitation attendee** pour inviter d’autres utilisateurs après la création de la salle. Cela est similaire à Teams’appel.
+
+![Invitation du participant](../assets/images/attendeeInvitation.gif)
+
+**Badge d’application**: l’icône **Eau en eau dans** le menu de gauche affiche un badge avec le nombre de conversations actives visibles à partir de Teams lors de l’utilisation d’une application. 
+
+![Badge d’application](../assets/images/badge.gif)
 
 ## <a name="workplace-awards"></a>Workplace Lieu de travail
 

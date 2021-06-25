@@ -1,5 +1,8 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>Utiliser App Studio pour mettre à jour le package d’application
 
+> [!TIP]
+> **Essayez le portail du développeur**: App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+
 App Studio est une application Teams que vous pouvez installer à partir du Teams store. Cela simplifie la création et l’inscription d’une application.
 
 Pour mettre à jour le package d’application, vous suivrez les étapes suivantes :
@@ -16,11 +19,15 @@ Pour mettre à jour le package d’application, vous suivrez les étapes suivant
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Vous pouvez créer le package d’application sur .NET avec Visual Studio. Dans Visual Studio, la manifest.jssur le fichier se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web` . Cette étape est décrite par l’image suivante :  
+
+    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Sur .NET, le fichier manifest.jssur peut se trouver dans Visual Studio manifeste sous ```Microsoft.Teams.Samples.HelloWorld.Web``` . Sur Node.js, cela s’fait en tapant sur la ligne de commande dans le répertoire `gulp` racine du projet.
+
+     Dans Visual Studio, le manifest.jssur le fichier se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web` . Cette étape est décrite par l’image suivante :  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
     Vous pouvez créer le package d’application Node.js en tapant sur la ligne de commande dans le répertoire `gulp` racine du projet.
+
 
     ```bash
     $ gulp
@@ -44,11 +51,11 @@ Pour mettre à jour le package d’application, vous suivrez les étapes suivant
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-L’image suivante montre le package d’application importé dans App Studio :
+    L’image suivante montre le package d’application importé dans App Studio :
 
-<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
+    <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-Sur le côté gauche de l’éditeur de manifeste se trouve une liste d’étapes. Sur le côté droit se trouve une liste des propriétés qui doivent être remplies pour chaque étape. Lorsque vous avez commencé avec un exemple d’application, la plupart des informations sont déjà terminées. Les étapes suivantes vous permettent de mettre à jour les propriétés de l’application Hello World.
+    Sur le côté gauche de l’éditeur de manifeste se trouve une liste d’étapes. Sur le côté droit se trouve une liste des propriétés qui doivent être remplies pour chaque étape. Lorsque vous avez commencé avec un exemple d’application, la plupart des informations sont déjà terminées. Les étapes suivantes vous permettent de mettre à jour les propriétés de l’application Hello World.
 
 #### <a name="app-details"></a>Détails de l’application
 
@@ -68,7 +75,7 @@ Votre application ne peut avoir qu’un seul onglet d’équipe :
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-Dans cet exemple, l’onglet Équipe est l’endroit où votre page de configuration s’affiche. Sélectionnez **le symbole ...** de l’URL de configuration de l’onglet et choisissez **Modifier** dans le menu déroulant.  Remplacez l’URL par l’URL que vous avez utilisée lors de `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` [l’hébergement de votre application.](#host-the-sample-app)
+Dans cet exemple, l’onglet Équipe est l’endroit où votre page de configuration s’affiche. Sélectionnez **le symbole ...** de l’URL de configuration de l’onglet et choisissez **Modifier** dans le menu déroulant.  Remplacez l’URL par l’URL que vous avez utilisée lors de `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` l’hébergement de votre application.
 
 ##### <a name="personal-tabs"></a>Onglets personnels
 
@@ -80,7 +87,7 @@ Les onglets personnels sont différents de l’onglet Équipe. **L’onglet Hell
 
 Mettez à jour les zones suivantes avec l’URL de votre application :
 
-- Modifier la **zone URL** de contenu en `https://yourteamsapp.ngrok.io/hello`
+- Modifier la zone **URL** de contenu en `https://yourteamsapp.ngrok.io/hello`
 - Modifier la zone **URL du site** web en `https://yourteamsapp.ngrok.io/hello`
 
 Remplacez `yourteamsapp.ngrok.io` par l’URL que vous avez utilisée lors de l’hébergement de votre application.
@@ -99,15 +106,15 @@ Le bot qui a été importé à partir de l’exemple n’a pas d’ID d’applic
 Pour configurer votre bot, complétez les étapes suivantes :
 
 1. Sélectionnez **Supprimer** en face du bot importé dans la liste des bots. Il ne reste plus aucun bot à afficher. 
-1. Sélectionnez **Programme d’installation** pour afficher la boîte de dialogue Configurer **un bot.**
+1. Sélectionnez **Le programme** d’installation pour afficher la boîte de dialogue Configurer **un bot.**
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
 1. Ajoutez un nom de bot **Contoso bot** et cochez les trois cases sous **Étendue**.
-1. Sélectionnez **Enregistrer** pour quitter la boîte de dialogue. App Studio enregistre votre bot auprès de Microsoft et affiche votre nouveau bot dans la liste des bots. 
+1. Sélectionnez **Enregistrer** pour quitter la boîte de dialogue. App Studio inscrit votre bot auprès de Microsoft et affiche votre nouveau bot dans la liste des bots. 
 1. À présent, ouvrez un fichier texte dans le bloc-notes et copiez-y votre nouvel ID de bot.
 1. Cliquez **sur Générer un nouveau** mot de passe et notez le mot de passe dans le même fichier texte que celui où vous avez noté votre ID d’application de bot.
-1. Mettez à jour **l’adresse du point** de terminaison du bot et remplacez-la par l’URL que vous avez `https://yourteamsapp.ngrok.io/api/messages` utilisée lors de `yourteamsapp.ngrok.io` l’hébergement de votre application.
+1. Mettez à **jour l’adresse du point** de terminaison du bot et remplacez-la par l’URL que vous avez utilisée lors de `https://yourteamsapp.ngrok.io/api/messages` `yourteamsapp.ngrok.io` l’hébergement de votre application.
 1. Enregistrez maintenant votre fichier texte, car vous devez ajouter les informations du fichier à votre application hébergée pour permettre une communication sécurisée avec votre bot.
 
 #### <a name="messaging-extensions"></a>Extensions de messagerie
@@ -156,9 +163,9 @@ Une fois que vous avez entré les détails de votre application, complétez les 
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
-1. Sélectionnez **la zone de** recherche dans la section Ajouter à une équipe et sélectionnez une équipe pour ajouter l’exemple d’application.  Vous pouvez configurer une équipe spéciale pour les tests.
+1. Sélectionnez **la zone de** recherche dans la section Ajouter à **une** équipe et sélectionnez une équipe pour ajouter l’exemple d’application. Vous pouvez configurer une équipe spéciale pour les tests.
 1. Sélectionnez **le bouton** Installer en bas de la boîte de dialogue.
 
-Votre application est désormais disponible dans Teams. Toutefois, le bot et l’extension de messagerie ne fonctionneront pas tant que vous n’aurez pas mis à jour l’environnement d’applications hébergée avec les ID d’application et les mots de passe.
+    Votre application est désormais disponible dans Teams. Toutefois, le bot et l’extension de messagerie ne fonctionneront pas tant que vous n’aurez pas mis à jour l’environnement d’applications hébergée avec les ID d’application et les mots de passe.
 
-<img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
+    <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
