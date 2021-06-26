@@ -22,13 +22,13 @@
       href: get-started/first-message-extension.md
 - name: Didacticiels et exemples de code
   items:
-    - name: Didacticiels
+    - name: Présentation
       href: tutorials/code-samples.md
-    - name: Créer une application en utilisant C# ou .NET
+    - name: Créer votre première application à l’aide C# de .NET
       href: tutorials/get-started-dotnet-app-studio.md
-    - name: Créer une application en utilisant Node.js
+    - name: Créer votre première application à l’aide de Node.js
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: Créer une application à l'aide du générateur Yeoman
+    - name: Créer votre première application à l’aide du générateur Yeoman
       href: tutorials/get-started-yeoman.md
     - name: Exemples de code
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
@@ -395,9 +395,9 @@
       href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: Prise en main
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
-    - name: Activer le consentement spécifique aux ressources
+    - name: Consentement spécifique à la ressource
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Installation proactive d’applications à l’aide de l’API Graph et envoi de messages
+    - name: Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Importation de messages de tiers
       href: graph-api/import-messages/import-external-messages-to-teams.md
