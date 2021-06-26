@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 localization_priority: Normal
 keywords: nouveautés des équipes
-ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095520"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140298"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|06/25/2021| Introduction du guide pas à pas pour envoyer des messages proactifs. | [Guide pas à pas pour envoyer des messages proactifs](sbs-send-proactive.yml) |
 |06/09/2021| Vue d’étape pour les images dans les cartes adaptatives avec `allowExpand` attribut. | [Vue d’étape des images dans les cartes adaptatives](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Onglets de conversation. | [Démarrer et poursuivre des conversations sur le contenu de vos onglets](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Mise à jour Teams recommandations en matière de conception d’applications avec des modèles mobiles et bien plus encore.|[Conception de votre application Teams web](~/concepts/design/design-teams-app-overview.md)
@@ -74,7 +75,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 |03/18/2021|Remarque : mettez à jour la version 4.10 ou supérieure du SDK Bot Framework, car nous avons commencé avec le processus de dérision pour `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` . | [Modifications de l’API du bot pour les membres de l’équipe/de la conversation](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Remarque : les onglets n’auront plus de marges autour de leur expérience. Les développeurs d’onglets doivent examiner et mettre à jour leurs applications. | [Suppression des marges de tabulation](resources/removing-tab-margins.md) |
 |03/05/2021|Étendue d’installation et fonctionnalité de groupe par défaut.| [Étendue d’installation et fonctionnalité de groupe par défaut](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|Réordez les onglets des applications personnelles.|[Réordesser l’onglet de conversation dans les applications personnelles](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
+|03/05/2021|Réordez les onglets des applications personnelles.|[Réordesser l’onglet de conversation dans les applications personnelles](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
 |03/04/2021|Masquage d’informations dans les cartes adaptatives.| [Masquage d’informations dans les cartes adaptatives](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Ajout de fonctionnalités d’emplacement. <br/> Les informations sur les fonctionnalités d’emplacement sont ajoutées dans la vue d’ensemble des fonctionnalités de l’appareil, les autorisations natives des appareils, l’intégration des fonctionnalités multimédias et les fichiers de fonctionnalités de scanneur de QR ou de code-barres.|[Vue](concepts/device-capabilities/device-capabilities-overview.md)d’ensemble, demander des autorisations d’appareil, intégrer des [fonctionnalités multimédias,](concepts/device-capabilities/mobile-camera-image-permissions.md)intégrer des fonctionnalités de QR ou de scanneur de [code-barres,](concepts/device-capabilities/qr-barcode-scanner-capability.md)intégrer des [fonctionnalités](concepts/device-capabilities/native-device-permissions.md) [d’emplacement](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Ajout de la fonctionnalité de QR ou de scanneur de code-barres. <br/> Les informations sur les fonctionnalités de QR ou de scanneur de code-barres sont ajoutées dans la vue d’ensemble des fonctionnalités de l’appareil, les autorisations natives de l’appareil et l’intégration des fichiers de fonctionnalités multimédias.|[Vue d’ensemble,](concepts/device-capabilities/device-capabilities-overview.md) [demander des autorisations d’appareil,](concepts/device-capabilities/native-device-permissions.md) [intégrer des fonctionnalités multimédias,](concepts/device-capabilities/mobile-camera-image-permissions.md)intégrer la QR ou la fonctionnalité de scanneur de [code-barres](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
@@ -131,7 +132,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 | 10/31/2019 | Mise à jour de la documentation sur les bots de conversation et les extensions de messagerie pour refléter le SDK Bot Framework 4.6. La documentation relative au SDK v3 est disponible dans la section Ressources. | Documentation complète sur les bots et les extensions de messagerie. |
 | 10/31/2019 | Nouvelle structure de la documentation et refactoriser les articles principaux. Signalez les liens morts ou les 404 en créant un GitHub. | Tous! |
 | 09/13/2019 | Le bot de demande est installé à partir de l’extension de messagerie basée sur l’action. | [Lancer des actions avec des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 08/28/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs. | [Obtenir un contexte Teams pour votre onglet](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 08/28/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs. | [Obtenir un contexte Teams pour votre onglet](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 06/20/2019 | Partagez un site web externe, à partir d’un site web externe, dans un canal Teams externe. | [Partager avec Teams](~/share-to-teams.md) |
 | 05/25/2019 | Répondez avec un message de bot à partir du module de tâche. | [Répondre avec un message bot à partir du module de tâche](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots dans les conversations de groupe. | [Interagir avec un bot dans une conversation de groupe ou un canal](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
