@@ -192,42 +192,30 @@
   items:
     - name: Vue d'ensemble
       href: tabs/what-are-tabs.md
-    - name: Créer un onglet
-      items:
-        - name: Conditions requises pour l’onglet
-          href: tabs/how-to/tab-requirements.md
-        - name: Créer une page de contenu
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: Créer une page de configuration
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: Créer une page de suppression
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: Onglets sur les appareils mobiles
-          href: tabs/design/tabs-mobile.md
-        - name: Obtenir un contexte Teams pour votre onglet
-          href: tabs/how-to/access-teams-context.md
-        - name: Créer des onglets avec les Cartes adaptatives
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: Déploiement du lien des onglets et vue des étapes
-          href: tabs/tabs-link-unfurling.md
-        - name: Créer des onglets de conversation
-          href: tabs/how-to/conversational-tabs.md
-        - name: Modifications des marges de l’onglet
-          href: resources/removing-tab-margins.md
-    - name: Démarrages rapides
-      items:
-        - name: Onglet Personnel avec Nœud.js
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: Onglet Personnel avec C# /ASP.NET Core
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: Onglet Personnel avec C# /ASP.NET Core MVC
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Onglet Canal Personnel avec Nœud.js
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: Onglet Canal Personnel avec C# /ASP.NET Core
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: Onglet Canal Personnel avec C# /ASP.NET Core MVC
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: Conditions préalables
+      href: tabs/how-to/tab-requirements.md
+    - name: Créer un onglet personnel
+      href: tabs/how-to/create-personal-tab.md
+    - name: Créer un onglet de canal
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: Créer une page de contenu
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Créer une page de configuration
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Créer une page de suppression
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Onglets sur les appareils mobiles
+      href: tabs/design/tabs-mobile.md
+    - name: Obtenir un contexte Teams pour votre onglet
+      href: tabs/how-to/access-teams-context.md
+    - name: Créer des onglets avec les Cartes adaptatives
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: Déploiement du lien des onglets et vue des étapes
+      href: tabs/tabs-link-unfurling.md
+    - name: Créer des onglets de conversation
+      href: tabs/how-to/conversational-tabs.md
+    - name: Modifications des marges de l’onglet
+      href: resources/removing-tab-margins.md
 - name: Construire des bots
   items:
     - name: Vue d'ensemble
@@ -251,8 +239,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Événements de conversation dans votre robot Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: Envoyer des messages proactifs
+        - name: Messages proactifs
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: Guide pas à pas
+              href: sbs-send-proactive.yml
         - name: Formatez vos messages robots.
           href: bots/how-to/format-your-bot-messages.md
         - name: Mettre à jour et supprimer des messages de bot
@@ -317,26 +308,28 @@
   items:
     - name: Vue d'ensemble
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: Créer un webhook entrant
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    - name: Créer un webhook sortant
+    - name: Créer des webhooks sortants
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Créer un connecteur Office 365
+    - name: Créer des webhooks entrants
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    - name: Créer des connecteurs Office 365
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: Envoyer des messages à des connecteurs et des webhooks
+    - name: Créer et envoyer des messages
       href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Créer des cartes et des modules de tâche
   items:
+    - name: Présentation
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: Créer des cartes
       items:
         - name: Vue d'ensemble
           href: task-modules-and-cards/what-are-cards.md
-        - name: Mettre en forme un texte de carte
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: Envoyer et répondre aux actions de carte
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: Référence de cartes
+        - name: Types de cartes
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Mettre en forme des cartes dans Microsoft Teams
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: Actions de carte
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: Actions universelles pour les cartes adaptatives
           items:
             - name: Présentation
@@ -353,9 +346,11 @@
       items:
         - name: Vue d'ensemble
           href: task-modules-and-cards/what-are-task-modules.md
-        - name: Utilisation des modules de tâche dans les onglets
+        - name: Appeler et ignorer des modules de tâche
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
+        - name: Utiliser des modules de tâche dans les onglets
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-        - name: Utilisation des modules de tâche avec des robots
+        - name: Utiliser des modules de tâches à partir de bots
           href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Ajouter une authentification
   items:
@@ -477,13 +472,13 @@
       items:
         - name: Localiser votre application
           href: concepts/build-and-test/apps-localization.md
-        - name: Localisation du schéma du fichier JSON
+        - name: Localiser la référence de schéma JSON
           href: resources/schema/localization-schema.md
-    - name: Attribut de cookie SameSite (mise à jour 2020)
+    - name: Attribut de cookie SameSite
       href: resources/samesite-cookie-update.md
     - name: Cas dans les cas où les envois du magasin ont échoué fréquemment
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Participation à des documents Teams
+    - name: Contribuer à la documentation Teams
       href: resources/teams-contributor-reference.md
 - name: Assistance et commentaires
   href: feedback.md
