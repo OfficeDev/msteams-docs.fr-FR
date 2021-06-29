@@ -6,14 +6,14 @@ keywords: Canal de groupe onglets teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b54fc7235132a9253f6eecc62417f786bf4aa45c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140186"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179936"
 ---
-# <a name="prerequisites"></a>Conditions préalables
+# <a name="prerequisites"></a>Configuration requise
 
 Teams onglets doivent respecter les conditions préalables suivantes :
 
@@ -22,7 +22,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
   * Pour la compatibilité d’Internet Explorer 11, définissez `X-Content-Security-Policy` .
   * Sinon, définissez l’en-tête `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Cet en-tête est supprimé, mais toujours accepté par la plupart des navigateurs.
 
-* En règle générale, comme protection contre le détournement de clic, les pages de connexion ne s’restituer dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou sur les cookies.
+* En règle générale, comme protection contre le détournement de clic, les pages de connexion ne s’restituer dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou les cookies.
 
     > [!NOTE]
     > Chrome 80, dont la publication est prévue début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. Pour plus d’informations, voir [l’attribut de cookie SameSite.](../../resources/samesite-cookie-update.md)
@@ -35,7 +35,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 
 * Pour que l’authentification fonctionne sur les clients mobiles, vous devez mettre à niveau Teams SDK JavaScript vers au moins la version 1.4.1.
 
-* Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété.
+* Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété.
 
 * L’onglet Teams MS ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
 
@@ -43,15 +43,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Obtenir un contexte Teams pour votre onglet](~/tabs/how-to/access-teams-context.md)
-* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
-* [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
-* [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Étape suivante
 

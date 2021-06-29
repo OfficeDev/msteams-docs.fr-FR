@@ -6,12 +6,12 @@ keywords: suppression des onglets teams du canal de groupe configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1b4ef5435ad1be82726edbf02d7205c0b1feba06
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 97f5dfdd8cd9e5e19ec26c345ac960a04a108ab3
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140193"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179712"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
@@ -94,16 +94,9 @@ Une fois le handler de suppression exécuté, ou avertit Teams `removeEvent.noti
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Conditions préalables](~/tabs/how-to/tab-requirements.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Obtenir un contexte Teams pour votre onglet](~/tabs/how-to/access-teams-context.md)
-* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
-* [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
-* [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -3,12 +3,12 @@ title: Onglets sur les appareils mobiles
 description: Décrit les considérations pour les développeurs pour l’implémentation d’onglets sur Microsoft Teams mobile.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 612084a1ff4258da16dc00f9b5a6844eead57f54
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5053160f2456a5d1c5f68cb74ea3ccc5c5eabca5
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140291"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179719"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
@@ -71,16 +71,8 @@ Si vous chargez une version de votre application ou publiez-la dans le catalogue
 
 * [Recommandations en matière de conception d’onglets](~/tabs/design/tabs.md)
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Conditions préalables](~/tabs/how-to/tab-requirements.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
-* [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
-* [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Étape suivante
 

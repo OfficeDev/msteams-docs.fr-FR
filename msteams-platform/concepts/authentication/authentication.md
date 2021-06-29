@@ -4,12 +4,12 @@ description: Décrit l’authentification Teams et comment l’utiliser dans les
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Authentification teams OAuth SSO AAD
-ms.openlocfilehash: 3a6967fcd026f5c87684df81c713af4abb27ac04
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 6511b1223e70d09ed2d158f6649a391999553ed1
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140046"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179887"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 
@@ -22,7 +22,7 @@ Dans Teams, il existe deux flux d’authentification différents pour l’applic
 
 ## <a name="web-based-authentication-flow"></a>Flux d’authentification web
 
-Utilisez le flux d’authentification web pour les [onglets](~/tabs/what-are-tabs.md) et choisissez de l’utiliser avec des [bots](~/bots/what-are-bots.md) de conversation ou des [extensions de messagerie.](~/messaging-extensions/what-are-messaging-extensions.md) Utilisez le [SDK Microsoft Teams client JavaScript dans](/javascript/api/overview/msteams-client) une page de contenu web pour activer l’authentification. Après avoir activé l’authentification, incorporez la page de contenu dans un onglet, une page de configuration, ou un module de tâche. Pour plus d’informations sur le flux d’authentification web, voir :
+Utilisez le flux d’authentification web pour les [onglets](~/tabs/what-are-tabs.md) et choisissez de l’utiliser avec des [bots](~/bots/what-are-bots.md) de conversation ou [des extensions de messagerie.](~/messaging-extensions/what-are-messaging-extensions.md) Utilisez le [SDK Microsoft Teams client JavaScript dans](/javascript/api/overview/msteams-client) une page de contenu web pour activer l’authentification. Après avoir activé l’authentification, incorporez la page de contenu dans un onglet, une page de configuration, ou un module de tâche. Pour plus d’informations sur le flux d’authentification web, voir :
 
 * [Ajouter l’authentification au bot Teams décrit](~/bots/how-to/authentication/add-authentication.md) comment utiliser le flux d’authentification web avec un bot de conversation.
 * [Le flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md) décrit le fonctionnement de l’authentification par onglets Teams. Il s’agit d’un flux d’authentification web classique utilisé pour les onglets.
@@ -36,8 +36,8 @@ L’OAuthPrompt d’Azure Bot Framework facilite l’authentification pour les a
 
 Pour plus d’informations sur l’utilisation d’OAuthPrompt, voir :
 
-* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans l’application Teams. Cela illustre un flux d’authentification non basé sur le web utilisé pour les bots sur Teams web, application de bureau et applications mobiles.
-* [L’authentification](~/bots/how-to/authentication/add-authentication.md) bot décrit comment ajouter l’authentification OAuth au bot Teams bot.
+* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans l’application Teams. Cela illustre un flux d’authentification non basé sur le web utilisé pour les bots sur Teams web, d’application de bureau et d’applications mobiles.
+* [L’authentification](~/bots/how-to/authentication/add-authentication.md) de bot décrit comment ajouter l’authentification OAuth au bot Teams bot.
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -46,6 +46,8 @@ fournit un exemple de SDK d’authentification du bot v3.
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Authentification bot | Cet exemple montre comment démarrer avec l’authentification dans un bot pour Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Tab, Bot and Messaging Extension (ME) SSO | Cet exemple montre l' sso pour l’onglet, le bot et l’me - recherche, action, linkunfurl. | Non disponible | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Non disponible |
+
 
 ## <a name="configure-the-identity-provider"></a>Configuration du fournisseur d’identité
 

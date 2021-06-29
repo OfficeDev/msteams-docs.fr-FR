@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 localization_priority: Normal
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8c91cf5a65f13d9f58f6ae8aa2678266c37338c8
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140277"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179726"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -139,16 +139,8 @@ Vous pouvez inscrire votre application pour être informée si le thème change 
 
 * [Recommandations en matière de conception d’onglets](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Conditions préalables](~/tabs/how-to/tab-requirements.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
-* [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
-* [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Étape suivante
 

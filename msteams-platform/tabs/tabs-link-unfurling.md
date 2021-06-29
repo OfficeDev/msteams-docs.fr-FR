@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Découvrez comment déployer un lien, ouvrir l’affichage de la scène et épingler un onglet avec Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1495bba765d149d23156b136be85f39d07c2d94b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140172"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179943"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -141,16 +141,8 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 * [Déploiement des liens des extensions de messagerie](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Conditions préalables](~/tabs/how-to/tab-requirements.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Obtenir un contexte Teams pour votre onglet](~/tabs/how-to/access-teams-context.md)
-* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Étape suivante
 

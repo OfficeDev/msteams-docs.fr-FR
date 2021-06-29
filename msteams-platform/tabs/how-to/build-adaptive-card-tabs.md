@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Créer des onglets à l’aide de cartes adaptatives
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: c551ae748805ddc380fb3213b67f704c73060a2f
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140284"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179901"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -25,7 +25,7 @@ L’image suivante illustre les onglets de build avec des cartes adaptatives sur
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Exemple de carte adaptative rendue dans les onglets." border="false":::
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, vous devez :
 
@@ -324,7 +324,7 @@ Le code suivant fournit des exemples de `task/submit` requête et de réponse :
 
 Dans les sections précédentes de cet article, vous avez vu que la plupart des paradigmes de développement peuvent être étendus des demandes de module de tâche et des réponses en demandes et réponses d’onglet. En ce qui concerne la gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md)
 
-`tab/fetch`les demandes peuvent avoir une **réponse continue** ou **auth.** Lorsqu’une demande est déclenchée et reçoit une réponse d’th d’onglet, la page de signature `tab/fetch` s’affiche à  l’utilisateur.
+`tab/fetch`les demandes peuvent avoir une **réponse continue** ou **auth.** Lorsqu’une demande est déclenchée et reçoit une réponse d' auto-th de tabulation, la page de signature `tab/fetch` s’affiche à  l’utilisateur.
 
 **Pour obtenir un code d’authentification par le biais de `tab/fetch` l’appel**
 
@@ -368,7 +368,7 @@ Le code suivant fournit un exemple de réponse `tab/fetch` d’th :
 
 ### <a name="example"></a>Exemple
 
-Le code suivant montre un exemple de requête rééditée :
+Le code suivant illustre un exemple de requête rééditée :
 
 ```json
 {
@@ -416,16 +416,9 @@ Le code suivant montre un exemple de requête rééditée :
 
 * [Carte adaptative](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Conditions préalables](~/tabs/how-to/tab-requirements.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Obtenir un contexte Teams pour votre onglet](~/tabs/how-to/access-teams-context.md)
-* [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
-* [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>Étape suivante
 

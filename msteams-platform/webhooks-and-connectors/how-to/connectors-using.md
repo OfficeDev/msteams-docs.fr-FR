@@ -5,12 +5,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 localization_priority: Normal
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140528"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179894"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -200,7 +200,7 @@ Ce message fournit la carte suivante dans le canal :
 
 **Pour envoyer des cartes adaptatives via un webhook entrant**
 
-1. [Configurer un webhook personnalisé dans](/add-incoming-webhook.md) Teams.
+1. [Configurer un webhook personnalisé dans](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) Teams.
 1. Créez un fichier JSON de carte adaptative à l’aide du code suivant :
 
     ```json

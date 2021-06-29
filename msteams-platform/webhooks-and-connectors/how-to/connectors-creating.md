@@ -1,19 +1,19 @@
 ---
-title: Créer Office 365 connecteurs
+title: Créer des connecteurs Office 365
 author: laujan
 description: Décrit comment commencer avec les connecteurs Office 365 dans Microsoft Teams
 keywords: 'équipes connecteur O365 '
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 95e3c9f2f7e188c158ae8c9161b2306c5e7f27e5
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140418"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179754"
 ---
-# <a name="create-office-365-connectors"></a>Créer Office 365 connecteurs
+# <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
 Avec Microsoft Teams applications, vous pouvez ajouter votre connecteur Office 365 existant ou en créer un nouveau dans Teams. Pour plus d’informations, [voir créer votre propre connecteur.](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)
 
@@ -24,7 +24,7 @@ Vous pouvez [packager](~/concepts/build-and-test/apps-package.md) [et publier](~
 Pour distribuer votre connecteur, vous devez vous inscrire via [le Tableau de bord du développeur de connecteurs.](https://outlook.office.com/connectors/home/login/#/publish) Lorsqu’un connecteur est inscrit, il est supposé qu’il fonctionne dans tous les produits Office 365 qui prend en charge les applications, y compris Outlook et Teams. Si ce n’est pas le cas et que vous devez créer un connecteur qui fonctionne uniquement dans Microsoft Teams, contactez : Microsoft Teams [e-mail soumissions d’applications](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
-> Votre connecteur est enregistré après avoir sélectionné **Enregistrer** dans le tableau de bord du développeur de connecteurs. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de publication de votre [application Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource, distribuez-la directement à l’organisation. Après [la publication des connecteurs pour votre organisation,](/connectors-creating.md)aucune action supplémentaire n’est requise sur le tableau de bord du connecteur.
+> Votre connecteur est enregistré après avoir sélectionné **Enregistrer** dans le tableau de bord du développeur de connecteurs. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de publication de votre [application Microsoft Teams dans AppSource.](~/concepts/deploy-and-publish/apps-publish.md) Si vous ne souhaitez pas publier votre application dans AppSource, distribuez-la directement à l’organisation. Après [la publication des connecteurs pour votre organisation,](#publish-connectors-for-the-organization)aucune action supplémentaire n’est requise sur le tableau de bord du connecteur.
 
 ### <a name="integrate-the-configuration-experience"></a>Intégrer l’expérience de configuration
 

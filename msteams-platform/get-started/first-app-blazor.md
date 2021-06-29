@@ -5,12 +5,12 @@ description: Créez rapidement une application Microsoft Teams qui affiche un me
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994391"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179950"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Créer et exécuter votre première application Microsoft Teams avec Blazor
 
@@ -29,7 +29,7 @@ Vérifiez que votre environnement de développement est configuré en installant
 
 Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
+# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
 1. Ouvrez Visual Studio 2019.
 
@@ -95,7 +95,7 @@ Une fois que le Kit de ressources Teams a configuré votre projet, vous disposez
 Étant donné que vous avez créé une application d’onglet lors de l’installation, l’Teams Shared Computer Toolkit crée la modèle de tout le code nécessaire pour un onglet de base en tant que [serveur Blazor](/aspnet/core/blazor).
 
 - `Pages/Tab.razor` est le point d’entrée de l’application frontale.
-- `TeamsFx.cs`et `JS/src/index.js` est utilisé pour initialiser les communications avec l’Teams hôte.
+- `TeamsFx.cs`et `JS/src/index.js` sert à initialiser les communications avec l’Teams hôte.
 
 Vous pouvez ajouter des fonctionnalités de back-end en ajoutant des contrôleurs ASP.NET Core supplémentaires à votre application.
 
@@ -111,7 +111,7 @@ Une fois cette opération effectuée, l’application peut être chargée dans l
 
 Pour créer et exécuter votre application localement :
 
-1. À partir de Visual Studio Code, appuyez sur **F5** pour exécuter votre application dans le mode de débogage.
+1. À Visual Studio, appuyez **sur F5** pour exécuter votre application en mode débogage.
 
 1. Si nécessaire, installez le certificat SSL auto-signé pour le débogage local.
 
@@ -158,7 +158,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>Mettre en service et déployer votre application dans Azure App Service
 
-1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet et choisissez **Publier** (ou utilisez l’élément  >   de menu Publier la build).
+1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet et choisissez **Publier** (ou utilisez l’élément  >  **de** menu Publier la build).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Sélectionner l’opération Publier sur le projet":::
 
@@ -170,7 +170,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="Sélectionner Azure App Service comme cible de publication":::
 
-1. Sélectionnez **+** pour créer une nouvelle instance de Service d’application.
+1. Sélectionnez **+** pour créer une nouvelle instance du service d’application.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Créez une instance.":::
 
@@ -214,7 +214,7 @@ Le Portail des développeurs pour Teams l’endroit où les onglets de votre app
 
 1. Une fois l’environnement nouvellement créé sélectionné, **appuyez sur Créer votre première variable d’environnement.**
 
-1. Entrez `azure_app_url` le **nom.**  Entrez l’URL de votre site Azure (sans `https://` la ) comme **valeur**.
+1. Entrez `azure_app_url` le **nom**.  Entrez l’URL de votre site Azure (sans `https://` la ) comme **valeur**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Créer une variable d’environnement":::
 
@@ -228,7 +228,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Sélectionner des informations de base":::
 
-1. Il existe plusieurs endroits dans le manifeste qui résentent un `locahost:XXXXX` élément dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par (y compris les accolades).
+1. Il existe plusieurs endroits dans le manifeste qui résentent un élément `localhost:XXXXX` dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par (y compris les accolades).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajuster les informations de base pour l’environnement":::
 

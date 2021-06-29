@@ -5,12 +5,12 @@ description: Créer une conversation de sous-entité conversationnelle pour vos 
 keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: fbc5e90842c892cfb7e14f845563d7d2ffb397bb
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: b563510b9ce232a98572430c76f1b8e59ddb4886
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140263"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179691"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -18,7 +18,7 @@ Les sous-entités de conversation permettent aux utilisateurs d’avoir des conv
 
 Les sous-entités de conversation sont uniquement pris en charge dans les canaux. Ils peuvent être utilisés à partir d’un onglet personnel ou statique pour créer ou poursuivre des conversations dans des onglets déjà épinglés à un canal. L’onglet statique est utile si vous souhaitez fournir un emplacement à un utilisateur pour afficher et accéder aux conversations qui se produisent sur plusieurs canaux.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-entités ↔ conversations dans une base de données principale. L’offre est fournie, mais vous devez la stocker et la renvoyer à Teams pour que les utilisateurs `conversationId` `conversationId` poursuivent la conversation.
 
@@ -92,16 +92,10 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Conditions préalables](~/tabs/how-to/tab-requirements.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-* [Obtenir un contexte Teams pour votre onglet](~/tabs/how-to/access-teams-context.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: da67b447644242caccf5f3a7cfe8d9435286787c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139990"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179698"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
 Pour développer les fonctionnalités de vos applications tout au long du cycle de vie des réunions, Teams vous permet de travailler avec des applications pour Teams réunions. Vous devez respecter les conditions préalables et utiliser les références de l’API des applications de réunion pour améliorer l’expérience de réunion.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de travailler avec des applications pour Teams réunions, vous devez comprendre les choses suivantes :
 
@@ -27,7 +27,7 @@ Avant de travailler avec des applications pour Teams réunions, vous devez compr
 
 * Votre application doit prendre en charge les onglets configurables dans l’étendue groupchat, pour que votre application fonctionne dans le cycle de vie de la réunion sous la mesure d’un onglet. Pour plus d’informations, voir [étendue groupchat](../resources/schema/manifest-schema.md#configurabletabs) et [créer un onglet de groupe.](../build-your-first-app/build-channel-tab.md)
 
-* Vous devez respecter les recommandations générales Teams la conception d’onglets pour les scénarios préalables et post-réunion. Pour les expériences pendant les réunions, reportez-vous aux recommandations en matière de conception de l’onglet réunion et de la boîte de dialogue en réunion. Pour plus d’informations, [voir Teams recommandations](../tabs/design/tabs.md)en matière de conception d’onglets, [](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)de recommandations en matière de conception d’onglets en réunion et de conception de boîte de dialogue en [réunion.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* Vous devez respecter les recommandations générales Teams la conception d’onglets pour les scénarios préalables et post-réunion. Pour les expériences pendant les réunions, reportez-vous aux instructions de conception de l’onglet réunion et de la boîte de dialogue en réunion. Pour plus d’informations, [voir Teams recommandations](../tabs/design/tabs.md)en matière de conception d’onglets, [](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)de recommandations en matière de conception d’onglets en réunion et de conception de boîte de dialogue en [réunion.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 
 * Vous devez prendre en charge l’étendue pour activer votre application dans les conversations `groupchat` préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer des tâches préalables à la réunion. Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires.
 
@@ -35,7 +35,7 @@ Avant de travailler avec des applications pour Teams réunions, vous devez compr
 
 * `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
-* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
 
 * L’API Détails de la réunion doit avoir un ID de bot et d’inscription de bot. Il nécessite le SDK bot pour obtenir `TurnContext` .
 
@@ -76,7 +76,7 @@ L’API permet à un bot de récupérer les informations des participants par ID
 |---|---|----|---|
 |**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
 |**participantId**| String | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
-|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso onglet. |
+|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. |
 
 #### <a name="example"></a>Exemple
 
@@ -189,7 +189,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 > [!NOTE]
 > * Le `completionBotId` paramètre est facultatif dans `externalResourceUrl` l’exemple de charge utile demandé. `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 > * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour vous assurer que les dimensions sont dans les limites autorisées, consultez les [instructions de conception.](design/designing-apps-in-meetings.md)
-> * L’URL est la page chargée en tant que dans la boîte de dialogue `<iframe>` de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
+> * L’URL est la page chargée en tant que dans la boîte de `<iframe>` dialogue de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
 
 `NotificationSignal`L’API inclut les exemples suivants :
 
@@ -262,6 +262,19 @@ POST /v3/conversations/{conversationId}/activities
 
 L’API Détails de la réunion permet à votre application d’obtenir des métadonnées de réunion statiques. Il s’agit de points de données qui ne changent pas dynamiquement.
 L’API est disponible via Bot Services.
+#### <a name="pre-requisite"></a>Conditions préalables
+Avant d’utiliser l’API Détails de la réunion, les autorisations RSC nécessaires doivent être obtenues. Le manifeste de l’application doit avoir les données webApplicationInfo suivantes :
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 #### <a name="query-parameter"></a>Paramètre de requête
 
@@ -337,6 +350,20 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 L’utilisateur peut recevoir des événements de réunion en temps réel. Dès qu’une application est associée à une réunion, les heures de début et de fin de réunion réelles sont partagées avec le bot.
 
 Les heures de début et de fin réelles d’une réunion sont différentes des heures de début et de fin prévues. L’API des détails de la réunion fournit l’heure de début et de fin prévues, tandis que l’événement fournit l’heure de début et de fin réelle.
+
+#### <a name="pre-requisite"></a>Conditions préalables
+Le manifeste de l’application doit avoir l’application webApplicationInfo suivante pour recevoir correctement les événements de début et de fin de réunion.
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>Exemple de charge utile d’événement de début de réunion
 
@@ -488,6 +515,7 @@ public class MeetingStartEndEventValue
 | Extensibilité des réunions | Microsoft Teams’extensibilité de réunion pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bulle de contenu de réunion | Microsoft Teams d’extensibilité de réunion pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | MeetingSidePanel | Microsoft Teams d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Onglet Détails de la réunion | Microsoft Teams’extensibilité de réunion pour l’itère avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>Voir aussi
 
