@@ -5,12 +5,12 @@ description: intégration d’un Power Virtual Agents chatbot dans la plateforme
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 85f2d91d2c5cfdb0ae746a00c7a9f3d6a0c15972
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069022"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196249"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Ajouter le chatbot Power Virtual Agents 
 
@@ -32,11 +32,11 @@ Pour rendre votre chatbot disponible dans Teams via le portail Power Virtual Age
 **Pour rendre le chatbot disponible dans Teams**
 
 1. **Publier le contenu du bot le plus récent**  
-Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que Teams utilisateurs puisse interagir avec celui-ci. Pour plus d’informations, voir [Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
+Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que Teams utilisateurs puisse interagir avec celui-ci. Pour plus d’informations, [voir Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
 
-   ![publier dans le portail des agents virtuels avec alimentation](../../assets/images/pva-publish.png)
+   ![publier dans le portail des agents virtuels d’alimentation](../../assets/images/pva-publish.png)
 
-1. **Configurer le canal Teams canal**  
+1. **Configurer le canal Teams de distribution**  
 Après avoir publié votre bot, ajoutez le canal Teams pour le mettre à la disposition Teams utilisateurs.
 
    ![canaux dans le portail des agents virtuels d’alimentation](../../assets/images/pva-channels.png)
@@ -60,7 +60,7 @@ App Studio est une application Teams application. Installez App Studio à partir
       &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 1. **Créer le manifeste Teams’application dans App Studio**  
-Les bots dans Teams sont définis par un fichier JSON manifeste d’application qui fournit les informations de base sur votre bot et ses fonctionnalités. Dans **App Studio,** sélectionnez **l’éditeur de** manifeste, puis **sélectionnez Créer une application.**
+Les bots Teams sont définis par un fichier JSON de manifeste d’application qui fournit les informations de base sur votre bot et ses fonctionnalités. Dans **App Studio,** sélectionnez **l’éditeur de** manifeste, puis **sélectionnez Créer une application.**
 
     ![créer une application](../../assets/images/get-started/create-new-app.png)
 
@@ -102,7 +102,7 @@ Le processus de mise en place de l’ajout Power Virtual Agents bot de conversat
 ## <a name="see-also"></a>Voir aussi
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Créez un chatbot pour Teams avec Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Créez un chatbot pour Teams avec Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents).  
 * [Power Virtual Agents portail](https://powervirtualagents.microsoft.com)
 * [Publier votre bot Power Virtual Agents de publication](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Sécurité et conformité dans Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
@@ -111,4 +111,3 @@ Le processus de mise en place de l’ajout Power Virtual Agents bot de conversat
 
 > [!div class="nextstepaction"]
 > [Créer un assistant virtuel](~/samples/virtual-assistant.md)
-

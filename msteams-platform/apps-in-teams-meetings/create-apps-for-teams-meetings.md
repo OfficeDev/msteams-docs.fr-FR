@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179698"
+ms.locfileid: "53196235"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
@@ -262,18 +262,19 @@ POST /v3/conversations/{conversationId}/activities
 
 L’API Détails de la réunion permet à votre application d’obtenir des métadonnées de réunion statiques. Il s’agit de points de données qui ne changent pas dynamiquement.
 L’API est disponible via Bot Services.
-#### <a name="pre-requisite"></a>Conditions préalables
-Avant d’utiliser l’API Détails de la réunion, les autorisations RSC nécessaires doivent être obtenues. Le manifeste de l’application doit avoir les données webApplicationInfo suivantes :
 
-# <a name="json"></a>[JSON](#tab/json)
+#### <a name="prerequisite"></a>Conditions préalables
 
-```"webApplicationInfo": {
+Pour utiliser l’API Détails de la réunion, vous devez obtenir les autorisations RSC. Utilisez l’exemple suivant pour configurer la propriété du manifeste de votre `webApplicationInfo` application :
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### <a name="query-parameter"></a>Paramètre de requête
@@ -351,18 +352,18 @@ L’utilisateur peut recevoir des événements de réunion en temps réel. Dès 
 
 Les heures de début et de fin réelles d’une réunion sont différentes des heures de début et de fin prévues. L’API des détails de la réunion fournit l’heure de début et de fin prévues, tandis que l’événement fournit l’heure de début et de fin réelle.
 
-#### <a name="pre-requisite"></a>Conditions préalables
-Le manifeste de l’application doit avoir l’application webApplicationInfo suivante pour recevoir correctement les événements de début et de fin de réunion.
+### <a name="prerequisite"></a>Conditions préalables
 
-# <a name="json"></a>[JSON](#tab/json)
+Le manifeste de votre application doit avoir la propriété pour recevoir les événements de `webApplicationInfo` début et de fin de réunion. Utilisez l’exemple suivant pour configurer votre manifeste :
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>Exemple de charge utile d’événement de début de réunion
