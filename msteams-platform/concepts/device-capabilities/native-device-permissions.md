@@ -4,12 +4,12 @@ keywords: autorisations des fonctionnalités des applications Teams
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui nécessitent généralement le consentement de l’utilisateur
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994349"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211617"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Demander des autorisations d’appareil pour votre application Microsoft Teams client
 
@@ -19,6 +19,7 @@ Vous pouvez enrichir votre application Teams avec des fonctionnalités natives d
 > * Pour intégrer des fonctionnalités multimédias dans Microsoft Teams application mobile, voir [Intégrer les fonctionnalités multimédias.](mobile-camera-image-permissions.md)
 > * Pour intégrer la fonctionnalité de QR ou de scanneur de code-barres dans votre application mobile Microsoft Teams, voir Intégrer la [QR](qr-barcode-scanner-capability.md)ou la fonctionnalité de scanneur de code-barres dans Teams .
 > * Pour intégrer des fonctionnalités d’emplacement dans Microsoft Teams application mobile, voir [Intégrer les fonctionnalités d’emplacement.](location-capability.md)
+> * Pour intégrer la fonctionnalité s’il s’Microsoft Teams dans votre application mobile, voir [Intégrer](people-picker-capability.md)la fonctionnalité S’il s’Teams .
 
 ## <a name="native-device-permissions"></a>Autorisations d’appareil natives
 
@@ -46,10 +47,10 @@ Bien que l’accès à ces fonctionnalités soit standard dans les navigateurs w
 
 Un utilisateur peut gérer les autorisations d’appareil  Teams  paramètres en sélectionnant Autoriser ou refuser des autorisations pour des applications spécifiques.
  
-# <a name="desktop"></a>[Bureau](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 1. Ouvrez votre Teams application.
-1. Sélectionnez votre icône de profil dans le coin supérieur droit de la fenêtre.
+1. Sélectionnez l’icône de votre profil dans le coin supérieur droit de la fenêtre.
 1. Sélectionnez **Paramètres**  >  **autorisations** dans le menu déroulant.
 1. Sélectionnez les paramètres souhaités.
 
@@ -68,7 +69,7 @@ Un utilisateur peut gérer les autorisations d’appareil  Teams  paramètres en
 
 ## <a name="specify-permissions"></a>Spécifier des autorisations
 
-Mettez à jour les propriétés de votre application en ajoutant et en spécifiant les cinq propriétés que vous `manifest.json` utilisez dans votre application `devicePermissions` :
+Mettez à jour les propriétés de votre application en ajoutant et en spécifiant les cinq propriétés suivantes que vous `manifest.json` utilisez dans votre application `devicePermissions` :
 
 ``` json
 "devicePermissions": [
@@ -120,7 +121,7 @@ Tirez parti de l’API HTML5 ou Teams appropriée pour afficher une invite pour 
 > * Prise en `camera` charge de , et est activée par le biais de `gallery` `microphone` [**l’API selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Utilisez [**l’API captureImage**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) pour une capture d’image unique.
 > * La prise `location` en charge est activée via [**l’API getLocation.**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) Vous devez l’utiliser pour l’emplacement, car l’API de géolocalisation HTML5 n’est actuellement pas entièrement prise `getLocation API` en charge Teams client de bureau.
 
-Par exemple :
+Par exemple :
  * Pour demander à l’utilisateur d’accéder à son emplacement, vous devez appeler `getCurrentPosition()` :
 
     ```Javascript
@@ -173,7 +174,7 @@ Par exemple :
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[Bureau](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
    ![Invite d’autorisations d’appareil de bureau Onglets](~/assets/images/tabs/device-permissions-prompt.png)
 
@@ -200,3 +201,6 @@ Les autorisations d’appareil sont stockées pour chaque session de connexion. 
 
 > [!div class="nextstepaction"]
 > [Intégrer des fonctionnalités d’emplacement dans Teams](location-capability.md)
+
+> [!div class="nextstepaction"]
+> [Intégrer la fonctionnalité s’il s’Teams](people-picker-capability.md)

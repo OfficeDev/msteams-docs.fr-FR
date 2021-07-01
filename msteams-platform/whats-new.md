@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 localization_priority: Normal
 keywords: nouveautés des équipes
-ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140298"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211596"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|06/28/2021|Intégrer la fonctionnalité s’il s’est s’il s’est s’il s'|[Intégration de la fonctionnalité S sélectionneur de personnes](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduction du guide pas à pas pour envoyer des messages proactifs. | [Guide pas à pas pour envoyer des messages proactifs](sbs-send-proactive.yml) |
 |06/09/2021| Vue d’étape pour les images dans les cartes adaptatives avec `allowExpand` attribut. | [Vue d’étape des images dans les cartes adaptatives](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Onglets de conversation. | [Démarrer et poursuivre des conversations sur le contenu de vos onglets](~/tabs/how-to/conversational-tabs.md) |

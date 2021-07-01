@@ -6,16 +6,14 @@ keywords: Fonctionnalités natives d’appareil photo qr code qrcode code-barres
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646560"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211575"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>Intégrer la fonctionnalité de scanneur QR ou code-barres 
-
-Ce document vous guide sur l’intégration de la fonctionnalité de QR ou de scanneur de code-barres. 
 
 Le code-barres est une méthode de représentation des données sous forme visuelle et lisible par l’ordinateur. Le code-barres contient des informations sur un produit, telles qu’un type, une taille, un fabricant et un pays d’origine sous la forme de barres et d’espaces. Le code est lu à l’aide du scanneur optique sur votre appareil photo natif. Pour une expérience de collaboration enrichie, vous pouvez intégrer la fonctionnalité de QR ou de scanneur de code-barres fournie dans la plateforme Teams avec votre application Teams.   
 
@@ -36,7 +34,7 @@ Il est important de vous familiariser avec les erreurs de réponse [d’API](#er
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 
-Mettez à jour [Teams’applicationmanifest.jsfichier en](../../resources/schema/manifest-schema.md#devicepermissions) ajoutant la `devicePermissions` propriété et en spécifiant `media` . Il permet à votre application de demander les autorisations requises aux utilisateurs avant qu’ils commencent à utiliser la QR ou la fonctionnalité de scanneur de code-barres.
+Mettez à jour [Teams’applicationmanifest.jsfichier en](../../resources/schema/manifest-schema.md#devicepermissions) ajoutant la `devicePermissions` propriété et en spécifiant `media` . Il permet à votre application de demander les autorisations requises aux utilisateurs avant qu’ils commencent à utiliser la QR ou la fonctionnalité de scanneur de code-barres. La mise à jour du manifeste de l’application est la suivante :
 
 ``` json
 "devicePermissions": [
@@ -70,8 +68,9 @@ Pour personnaliser l’expérience d’analyse du code-barres, la configuration 
 | UPC-A | Oui | Oui |
 | UPC-E | Oui | Oui |
 
-**Expérience d’application web pour `ScanBarCode` API pour l’expérience d’application** web QR ou de scanneur de code-barres pour la 
- ![ fonctionnalité de scanneur de codes-barres ou qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
+L’image suivante illustre l’expérience d’application web de QR ou de la fonctionnalité de scanneur de code-barres :
+
+![expérience d’application web pour la fonctionnalité de scanneur de codes-barres ou qr](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## <a name="error-handling"></a>Gestion des erreurs
 
@@ -112,3 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
 * [Intégrer des fonctionnalités d’emplacement dans Teams](location-capability.md)
+* [Intégrer la fonctionnalité s’il s’Teams](people-picker-capability.md)
+

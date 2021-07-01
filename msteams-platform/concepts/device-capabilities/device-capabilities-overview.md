@@ -3,19 +3,19 @@ title: 'Fonctionnalités de l’appareil : vue d’ensemble'
 author: Rajeshwari-v
 description: Vue d’ensemble des fonctionnalités natives de l’appareil.
 ms.author: surbhigupta
-keywords: Image de l’image de l’appareil photo microphone microphone qr code code-barres analyser les fonctionnalités natives d’autorisations de l’appareil
+keywords: Image de l’image de l’appareil photo microphone microphone qr code code code-barres code-barres analyse scanneur emplacement des fonctionnalités natives d’autorisations de périphérique
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 8df8341e8996e4bf380575ac59e05325da16bd0d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566193"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211582"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
-Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’intégrer des fonctionnalités d’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à leurs applications web. Cette intégration réduit les obstacles au développement d’applications, accélère le cycle de développement et crée de nouveaux scénarios ou cas d’utilisation pour la communauté des développeurs.
+Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’intégrer des fonctionnalités d’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à leurs applications web. Cette intégration réduit les obstacles au développement d’applications, accélère le cycle de développement et crée de nouveaux scénarios ou cas d’utilisation pour la communauté des développeurs.
 
 ## <a name="native-device-capabilities"></a>Fonctionnalités natives de l’appareil
 
@@ -35,9 +35,11 @@ Utilisez les outils présents [dans Microsoft Teams SDK client JavaScript](/java
  
  ## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
-Après avoir accédé aux fonctionnalités de l’appareil, [](mobile-camera-image-permissions.md) utilisez Teams API de fonctionnalité multimédia pour intégrer des fonctionnalités multimédias à la plateforme Teams pour améliorer l’expérience utilisateur. Ces fonctionnalités intégrées permettent à votre application de :
+Après avoir accédé aux fonctionnalités de l’appareil, [](mobile-camera-image-permissions.md) utilisez Teams API de fonctionnalité multimédia pour intégrer des fonctionnalités multimédias à Teams plateforme afin d’améliorer l’expérience utilisateur. Ces fonctionnalités intégrées permettent à votre application de :
 
 * Capturer et partager des images.
 * Analysez la QR ou le code-barres à l’aide [du contrôle scanneur.](qr-barcode-scanner-capability.md)
 * Enregistrez l’audio via le microphone.
 * Partager l’emplacement à [l’aide du s picker d’emplacement.](location-capability.md)
+
+En outre, vous pouvez intégrer [](people-picker-capability.md) le Teams sélecateur de personnes natives qui permet aux utilisateurs de rechercher et de sélectionner des personnes dans l’expérience d’application web.
