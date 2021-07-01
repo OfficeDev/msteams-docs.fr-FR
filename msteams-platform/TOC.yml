@@ -86,6 +86,8 @@
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
         - name: Intégrer les fonctionnalités d’emplacement
           href: concepts/device-capabilities/location-capability.md
+        - name: Intégrer Sélecteur de personnes fonctionnalité
+          href: concepts/device-capabilities/people-picker-capability.md
 - name: Concevoir votre application
   items:
     - name: Vue d’ensemble
