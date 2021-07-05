@@ -4,12 +4,12 @@ description: Décrit les actions de carte dans Microsoft Teams et comment les ut
 localization_priority: Normal
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140088"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254201"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -533,7 +533,7 @@ Le code suivant illustre un exemple de cartes adaptatives avec `invoke` action :
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
         "type": "task/fetch"

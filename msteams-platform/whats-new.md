@@ -4,47 +4,16 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 localization_priority: Normal
 keywords: nouveautés des équipes
-ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211596"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254194"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
-Découvrez Microsoft Teams fonctionnalités de plateforme introduites dans Microsoft Build 2021, généralement disponibles (GA) et dans la version préliminaire du développeur.
-
-## <a name="microsoft-build-2021"></a>Microsoft Build 2021
-
-# <a name="features-in-developer-preview"></a>[Fonctionnalités de la prévisualisation pour les développeurs](#tab/devpreview)
-
-| **Date** | **Composants** | **Rubriques modifiées** |
-| -------- | --------- | ------------------ |
-|06/16/2021| Consentement spécifique aux ressources pour les conversations. |[Consentement spécifique à la ressource,](graph-api/rsc/resource-specific-consent.md) [tester les autorisations](graph-api/rsc/test-resource-specific-consent.md) de consentement spécifiques à la ressource dans Teams|
-|05/26/2021| Créez des onglets avec des cartes adaptatives. |[Créer des onglets](tabs/how-to/build-adaptive-card-tabs.md)|
-|05/25/2021| Mise à jour Teams Shared Computer Toolkit pour [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) et [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Prendre en Teams développement d’applications](~/get-started/prerequisites.md) |
-|05/25/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Documentation pour les développeurs](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| La fonctionnalité de scènes en mode ensemble personnalisé combine les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés. | [Scènes personnalisées du mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md) |
-|05/24/2021| Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique à une ressource (RSC).|[Recevoir tous les messages avec RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)vue d’ensemble [de la conversation de bot,](~/bots/how-to/conversations/conversation-basics.md) [conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)de canal et de groupe et schéma de manifeste d’aperçu [développeur](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021| Tabs link unfurling and stage view. |[Déploiement de liens d’onglets et vue d’étape](tabs/tabs-link-unfurling.md) |
-
-> [!NOTE]
-> Pour plus d’informations sur les fonctionnalités disponibles dans la prévisualisation pour les développeurs, voir la prévisualisation pour [les développeurs Teams](~/resources/dev-preview/developer-preview-intro.md).
-
-# <a name="features-in-ga"></a>[Fonctionnalités dans GA](#tab/GA)
-
-| **Date** | **Composants** | **Rubriques modifiées** |
-| -------- | --------- | ------------------ |
-|04/29/2021 | Actions universelles pour les cartes adaptatives. | [Actions universelles pour les cartes adaptatives](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | Affichages spécifiques à l’utilisateur pour les cartes adaptatives. | [Affichages spécifiques à l’utilisateur](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | Flux de travail séquentiels pour les cartes adaptatives. | [Flux de travail séquentiels](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | Cartes à jour. | [Cartes actualisées](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| Personnalisation de l’application.|[Présentation de l’application Design Teams,](concepts/design/enable-app-customization.md) [vue d’ensemble d’App Studio](concepts/build-and-test/app-studio-overview.md#connectors)et [schéma de manifeste](resources/schema/manifest-schema-dev-preview.md) |
-|03/29/2021 | Formatez les cartes Teams. | [Formater des cartes dans Teams](task-modules-and-cards/cards/cards-format.md) |
-|02/19/2021|Ajout de fonctionnalités d’emplacement. <br/> Les informations sur les fonctionnalités d’emplacement sont ajoutées dans la vue d’ensemble des fonctionnalités de l’appareil, les autorisations natives des appareils, l’intégration des fonctionnalités multimédias et les fichiers de fonctionnalités de scanneur de QR ou de code-barres.|[Vue](concepts/device-capabilities/device-capabilities-overview.md)d’ensemble, demander des autorisations d’appareil, intégrer des [fonctionnalités multimédias,](concepts/device-capabilities/mobile-camera-image-permissions.md)intégrer des fonctionnalités de QR ou de scanneur de [code-barres,](concepts/device-capabilities/qr-barcode-scanner-capability.md)intégrer des [fonctionnalités](concepts/device-capabilities/native-device-permissions.md) [d’emplacement](concepts/device-capabilities/location-capability.md) |
-
----
+Découvrez Microsoft Teams fonctionnalités de plateforme généralement disponibles (GA) et dans la prévisualisation du développeur.
 
 ## <a name="ga-features"></a>Fonctionnalités ga
 
@@ -58,7 +27,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
-|06/28/2021|Intégrer la fonctionnalité s’il s’est s’il s’est s’il s'|[Intégration de la fonctionnalité S sélectionneur de personnes](concepts/device-capabilities/people-picker-capability.md)|  
+|06/28/2021|Intégrer la fonctionnalité s’il s’est s’il s’est s’il s'|[Intégrer Sélecteur de personnes fonctionnalité](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduction du guide pas à pas pour envoyer des messages proactifs. | [Guide pas à pas pour envoyer des messages proactifs](sbs-send-proactive.yml) |
 |06/09/2021| Vue d’étape pour les images dans les cartes adaptatives avec `allowExpand` attribut. | [Vue d’étape des images dans les cartes adaptatives](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Onglets de conversation. | [Démarrer et poursuivre des conversations sur le contenu de vos onglets](~/tabs/how-to/conversational-tabs.md) |
@@ -185,7 +154,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 | 03/15/2018 | Documentation refactorisante pour les cartes. |[Cartes,](~/concepts/cards/cards.md) [actions de carte,](~/concepts/cards/cards-actions.md) [mise en forme de carte,](~/concepts/cards/cards-format.md) [référence de carte](~/concepts/cards/cards-reference.md)|
 | 03/03/2018 | Ajout de la documentation Teams App Studio. |[Développer rapidement des applications avec Teams App Studio](~/get-started/get-started-app-studio.md), à l’aide de la bibliothèque de [contrôles dans App Studio](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | Ajout d’un exemple de code pour démontrer la méthode AsTeamsChannelAccounts(). |[Obtenir un contexte pour votre bot](~/concepts/bots/bots-context.md)|
-| 02/05/2018 | Ajout de rubriques pour commencer à utiliser C#. |[Prise en main de la plateforme Microsoft Teams avec C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
+| 02/05/2018 | Ajout de rubriques pour commencer à utiliser C#. |[Prise en main de la plateforme Microsoft Teams avec C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 
 <br>
 

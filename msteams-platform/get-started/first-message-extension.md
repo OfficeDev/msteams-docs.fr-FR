@@ -5,25 +5,25 @@ description: Créez une extension de messagerie pour Microsoft Teams à l’aide
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037634"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254287"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Créez et exécutez votre première extension de messagerie basée sur la recherche dans Microsoft Teams
+
+Dans ce didacticiel, vous  allez apprendre à créer une commande de recherche pour rechercher des données externes et insérer les résultats dans un message. 
 
 Il existe deux types **d’extension de messagerie** Teams :
 
 - Les [commandes de recherche](../messaging-extensions/how-to/search-commands/define-search-command.md) vous permettent d’effectuer une recherche dans des systèmes externes et d’insérer les résultats de la recherche dans un message sous la forme d’une carte.
 - Les [commandes d’action](../messaging-extensions/how-to/action-commands/define-action-command.md) vous permettent de présenter vos utilisateurs à l’aide d’un menu contextuel modal pour collecter ou afficher des informations, puis de traiter leur interaction et de renvoyer les informations à Teams.
 
-Dans ce didacticiel, vous créerez une *commande de recherche* pour effectuer une recherche de données externes et vous insérerez les résultats dans un message.  
-
 ## <a name="before-you-begin"></a>Avant de commencer
 
-Vérifiez que votre environnement de développement est configuré en installant les [Conditions préalables](prerequisites.md)
+Assurez-vous que votre environnement de développement est installé en installant les conditions préalables.
 
 > [!div class="nextstepaction"]
 > [Conditions préalables](prerequisites.md)
@@ -35,7 +35,7 @@ Utilisez le Kit de ressources Teams pou créer votre premier projet :
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Ouvrez Visual Studio Code.
-1. Ouvrez le Kit de ressources Teams en sélectionnant l’icône Teams dans la barre latérale :
+1. Sélectionnez l Teams dans la barre latérale pour ouvrir le Teams Shared Computer Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icône Teams dans la barre latérale Visual Studio Code.":::
 
@@ -47,18 +47,18 @@ Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Démarrage de l’Assistant pour la Création d’un projet":::
 
-1. À l’étape **Sélectionner les fonctionnalités**, sélectionnez **Extension de messagerie**, puis désélectionnez **Onglet**. Appuyez sur **OK**.
+1. Dans la section **Sélectionner des fonctionnalités,** **sélectionnez Extension de message,** **Désélectionner l’onglet** et **sélectionner OK.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="Capture d’écran présentant comment ajouter des fonctionnalités à votre nouvelle application.":::
 
-1. À l’étape **Inscription de bot**, sélectionnez **Créer l’inscription d’un nouveau bot**.
+1. Dans la section **Inscription du** bot, **sélectionnez Créer une nouvelle inscription de bot.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Sélectionner l’inscription d’un nouveau bot":::
 
    > [!NOTE]
    > Les extensions de messagerie ont recours à des bots pour fournir un dialogue entre l’utilisateur et votre code.
 
-1. À l’étape **Langage de programmation**, sélectionnez **JavaScript**.
+1. Dans la section **Langage de** programmation, **sélectionnez JavaScript.**
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Capture d’écran présentant comment sélectionner le langage de programmation.":::
 
@@ -66,7 +66,7 @@ Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
 1. Entrez un nom approprié pour votre application, tel que `helloworld`.  Le nom de l’application doit contenir des caractères alphanumériques uniquement.  Appuyez sur **Entrer** pour continuer.
 
-Votre application Teams est créée en quelques secondes.
+   Votre application Teams est créée en quelques secondes.
 
 # <a name="command-line"></a>[Ligne de commande](#tab/cli)
 
@@ -79,13 +79,13 @@ teamsfx new
 Le CLI parcourt quelques questions pour créer le projet.  Chaque question vous indiquera comment y répondre (par exemple, utiliser les touches de direction pour sélectionner une option).  Lorsque vous avez répondu à la question, confirmez votre choix en appuyant sur **Entrée**.
 
 1. Sélectionnez **Créer une application Teams**.
-1. Sélectionnez la fonctionnalité **Extension de messagerie**, puis désélectionnez la fonctionnalité **Onglet**.
+1. Sélectionnez **l’extension de message** et désélectionne **l’onglet**.
 1. Sélectionner **Créer l’inscription d’un nouveau bot**.
 1. Sélectionnez **JavaScript** comme langage de programmation.
 1. Appuyez sur **Entrée** pour sélectionner le dossier de l’espace de travail par défaut.
 1. Entrez un nom approprié pour votre application, tel que `helloworld`.  Le nom de l’application doit contenir des caractères alphanumériques uniquement.
 
-Une fois toutes les questions répondues, votre projet est créé.
+   Une fois toutes les questions auxquelles vous avez répondu, votre projet est créé.
 
 ---
 
@@ -113,31 +113,31 @@ Le Kit de ressources Teams vous permet d’héberger votre application localemen
 
 Pour créer et exécuter votre application localement :
 
-1. À partir de Visual Studio Code, appuyez sur **F5** pour exécuter votre application dans le mode de débogage.
+1. À Visual Studio Code, appuyez sur la **touche F5** pour exécuter votre application en mode débogage.
 
    > Lorsque vous exécutez l’application pour la première fois, toutes les dépendances sont téléchargées et l’application est créée.  Une fenêtre de navigateur s’ouvre automatiquement lors la build est terminée.  Cette finalisation peut prendre entre 3 et 5 minutes.
 
 1. Teams sera chargée dans un navigateur web et vous serez invité à vous connecter. Si vous êtes invité à ouvrir Microsoft Teams, sélectionnez Annuler pour rester dans le navigateur. Connectez-vous à votre compte M365.
 
-1. Appuyez sur **Ajouter** pour ajouter l’application à votre compte.
+1. Sélectionnez **Ajouter** pour ajouter l’application à votre compte.
 
-Une fois l’application chargée, vous serez directement dirigé vers la boîte de dialogue de recherche :
+   Une fois l’application chargée, vous êtes directement placé dans une boîte de dialogue de recherche :
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Votre extension de messagerie basée sur la recherche en action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Votre extension de messagerie basée sur la recherche en action":::
 
-Tapez un texte dans la zone de recherche, puis sélectionnez l’une des options.  Une carte adaptative s’ajoute à votre zone d’entrée.
+   Tapez un texte dans la zone de recherche, puis sélectionnez l’une des options.  Une carte adaptative s’ajoute à votre zone d’entrée.
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>Découvrez ce qui se produit lorsque vous exécutez votre application localement dans le débogueur.</summary>
 
-Lorsque vous appuyez sur F5, le Kit de ressources Teams :
+Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 
-1. A inscrit votre application dans Azure Active Directory.
-1. A inscrit votre application pour le « chargement latéral » dans Microsoft Teams.
-1. A démarré votre serveur principal d’application s’exécutant localement en utilisant [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-1. A démarré un tunnel ngrok pour que Teams puis communiquer avec votre application.
-1. A démarré Microsoft Teams avec une commande pour demander à Teams de charger la version test de l’application.
+1. Inscrit votre application avec Azure Active Directory.
+1. Inscrit votre application pour le « chargement de version latéral » dans Microsoft Teams.
+1. Démarre le système principal de votre application en cours d’exécution localement à [l’aide des outils Azure Function Core](/azure/azure-functions/functions-run-local?#start).
+1. Démarre un tunnel ngrok pour Teams communiquer avec votre application.
+1. Démarre Microsoft Teams avec une commande pour indiquer Teams charger une version de version de l’application.
 
 </details>
 
@@ -186,7 +186,12 @@ La Teams d’authentification de recherche pour les exemples de projets sur GitH
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Créer une application Teams à l’aide de React](first-app-react.md)
-- [Créer une application Teams à l’aide de Blazor](first-app-blazor.md)
-- [Créer une application Teams en tant que composant WebPart SharePoint](first-app-spfx.md) (Azure non requis)
-- [Créer une bot de conversation](first-app-bot.md)
+* [Présentation des didacticiels](code-samples.md) 
+* [Créer une application à l’aide React](first-app-react.md)
+* [Créer une application à l’aide de Blazor](first-app-blazor.md)
+* [Créer une application à l’aide SPFx](first-app-spfx.md)
+* [Créer une application en utilisant C# ou .NET](get-started-dotnet-app-studio.md)
+* [Créer une application en utilisant Node.js](get-started-nodejs-app-studio.md)
+* [Créer une application à l’aide du générateur Yeoman](get-started-yeoman.md)
+* [Créer une application de bot de conversation](first-app-bot.md)
+* [Exemples de code](https://github.com/OfficeDev/Microsoft-Teams-Samples)

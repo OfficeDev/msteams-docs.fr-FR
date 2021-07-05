@@ -5,16 +5,16 @@ description: Découvrez comment prendre en Microsoft Teams développement d’ap
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7310d54322b6cbfd24e30eef37ea63a7969c001c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037641"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254259"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Conditions préalables : prendre en Microsoft Teams développement d’applications
 
-Avant de créer votre première application Teams, vous devez installer quelques outils et configurer votre environnement de développement.
+Avant de commencer à créer votre première application Teams, vous devez installer quelques outils et configurer votre environnement de développement.
 
 ## <a name="install-required-tools"></a>Installer les outils requis
 
@@ -35,9 +35,9 @@ Le Teams Shared Computer Toolkit simplifie le processus de développement avec d
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou Afficher **> extensions**).
+1. Sélectionnez **l’affichage Extensions** (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Afficher > extensions**).
 1. Dans la zone de recherche, entrez **Teams Shared Computer Toolkit**.
-1. Sélectionnez le bouton d’installation vert en Teams Shared Computer Toolkit.
+1. Sélectionnez **Installer** en Teams Shared Computer Toolkit.
 
 Vous pouvez également trouver le Teams Shared Computer Toolkit sur le [Visual Studio Code Marketplace.](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
@@ -64,9 +64,8 @@ Pour installer l’extension Teams Shared Computer Toolkit :
 1. Ouvrez Visual Studio 2019.
 1. Select **Extensions**  >  **Manage Extensions**.
 1. Dans la zone de recherche, entrez **Teams Shared Computer Toolkit**.
-1. Sélectionnez l’extension Teams Shared Computer Toolkit et sélectionnez **Télécharger.**
-
-L’extension peut être téléchargée. Fermez Visual Studio 2019 pour installer l’extension.
+1. Sélectionnez l’extension Teams Shared Computer Toolkit et sélectionnez **Télécharger.** L’extension est téléchargée.
+1. Fermez Visual Studio 2019 pour installer l’extension.
 
 # <a name="command-line"></a>[Ligne de commande](#tab/cli)
 
@@ -89,7 +88,7 @@ Veillez à ajouter le cache global npm à votre chemin d’accès. Cette procéd
 Vous pouvez utiliser l’CLI avec la `teamsfx` commande. Vérifiez que la commande fonctionne en cours `teamsfx -h` d’exécution.
 
 > [!CAUTION]
-> Avant de pouvoir exécuter TeamsFx dans les terminals PowerShell, vous devez activer la stratégie d’exécution « signé à distance » pour PowerShell. Pour plus d’informations, reportez-vous à [la documentation PowerShell.](/powershell/module/microsoft.powershell.core/about/about_signing)
+> Avant de pouvoir exécuter TeamsFx dans les terminaux PowerShell, vous devez activer la stratégie d’exécution « signé à distance » pour PowerShell. Pour plus d’informations, reportez-vous à [la documentation PowerShell.](/powershell/module/microsoft.powershell.core/about/about_signing)
 
 ---
 
@@ -112,14 +111,14 @@ Avec le Portail des développeurs pour Teams, vous pouvez configurer, gérer et 
 
 - [Documentation pour les développeurs](https://dev.teams.microsoft.com/)
 
-## <a name="enable-sideloading"></a>Activer le chargement de version de version
+## <a name="enable-sideloading"></a>Activer le chargement de version
 
-Pendant le développement, vous devez charger votre application dans Teams sans la distribuer. C’est ce que l’on appelle le « chargement de version latérale ».
+Pendant le développement, vous devez charger votre application dans Teams sans la distribuer. C’est ce que l’on appelle le chargement de version de version de chargement.
 
-1. Si vous avez un compte Teams, vérifiez si vous pouvez télécharger une version de version de chargement de version de version Teams :
+Si vous avez un compte Teams, vérifiez si vous pouvez télécharger une version de version de chargement de version de version Teams :
 
-    1. Dans le Teams client, sélectionnez **Applications.**
-    1. Recherchez une option pour **Télécharger une application personnalisée.**
+1. Dans le Teams client, sélectionnez **Applications.**
+1. Sélectionnez **Télécharger une application personnalisée.**
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration montrant où dans Teams vous pouvez télécharger une application personnalisée.":::
 
@@ -132,13 +131,12 @@ Si vous ne pouvez pas voir l’option de chargement indépendant ou si vous n’
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Sélectionnez **Rejoindre maintenant** et suivez les instructions à l’écran.
-1. Lorsque vous arrivez à l’écran d’accueil, **sélectionnez Configurer l’abonnement E5.**
+1. Dans l’écran d’accueil, **sélectionnez Configurer l’abonnement E5.**
 1. Configurer votre compte d’administrateur. Une fois que vous avez terminé, vous devriez voir un écran comme celui-ci.
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Exemple de ce que vous voyez après vous être inscrire au programme Microsoft 365 développeur.":::
 
-1. Connectez-vous Teams à l’aide du compte d’administrateur que vous viennent de configurer.
-1. Vérifiez si vous avez maintenant la Télécharger une option **d’application** personnalisée.
+1. Connectez-vous Teams à l’aide du compte d’administrateur que vous viennent de configurer. Vérifiez que vous avez la Télécharger une option **d’application personnalisée.**
 
 ## <a name="get-a-free-azure-account"></a>Obtenir un compte Azure gratuit
 
@@ -149,7 +147,7 @@ Si vous souhaitez héberger votre application ou accéder aux ressources dans Az
 Vous devez avoir accès à deux comptes :
 
 - Vos informations d Microsoft 365 compte de client. Il s’agit du compte que vous utilisez pour vous Teams. Si vous utilisez un client de programme Microsoft 365 développeur, il s’agit du compte d’administrateur que vous avez créé lorsque vous vous êtes inscrit au programme.
-- - Vos informations d’identification Azure. Il s’agit du compte que vous utilisez pour accéder au portail Azure et pour mettre en service de nouvelles ressources cloud pour prendre en charge votre application.
+- Vos informations d’identification Azure. Il s’agit du compte que vous utilisez pour accéder au portail Azure et pour mettre en service de nouvelles ressources cloud pour prendre en charge votre application.
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -162,16 +160,16 @@ Vous devez avoir accès à deux comptes :
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Emplacement de la section Comptes utilisée pour se connecter.":::
 
-1. Le processus de connectez-vous commence à utiliser votre navigateur web normal. Terminez le processus de connectez-vous pour votre compte M365. Vous êtes invité à fermer le navigateur et à revenir à Visual Studio Code.
+    Le processus de connectez-vous commence à utiliser votre navigateur web normal. Terminez le processus de connectez-vous pour votre compte M365. Lorsque vous y êtes invité, vous pouvez fermer le navigateur et revenir à Visual Studio Code.
 1. Revenir au Teams Shared Computer Toolkit dans Visual Studio Code.
 1. Sélectionnez **Se connectez à Azure.**
 
     > [!TIP]
     > Si l’extension de compte Azure est installée et que vous utilisez le même compte, vous pouvez ignorer cette étape. Utilisez le même compte que celui que vous utilisez dans d’autres extensions.
 
-1. Le processus de connectez-vous commence à utiliser votre navigateur web normal.  Terminez le processus de connectez-vous pour votre compte Azure. Vous êtes invité à fermer le navigateur et à revenir à Visual Studio Code.
+1. Le processus de connectez-vous commence à utiliser votre navigateur web normal.  Terminez le processus de connectez-vous pour votre compte Azure. Lorsque vous y êtes invité, vous pouvez fermer le navigateur et revenir à Visual Studio Code.
 
-Lorsque vous avez terminé, la section **ACCOUNTS** de la barre latérale affiche les deux comptes séparément, ainsi que le nombre d’abonnements Azure utilisables disponibles. Assurez-vous que vous disposez d’au moins un abonnement Azure utilisable. Si ce n’est pas le cas, connectez-vous et utilisez un autre compte.
+    Lorsque vous avez terminé, la section **ACCOUNTS** de la barre latérale affiche les deux comptes séparément, ainsi que le nombre d’abonnements Azure utilisables disponibles. Assurez-vous que vous disposez d’au moins un abonnement Azure utilisable. Si ce n’est pas le cas, connectez-vous et utilisez un autre compte.
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -195,20 +193,21 @@ Visual Studio 2019 vous invite à vous connecter à chaque service si nécessair
 
     Le processus de connectez-vous commence à utiliser votre navigateur web normal. Terminez le processus de connectez-vous pour votre compte Azure. Vous êtes invité à fermer le navigateur.
 
-Les connexions de compte sont partagées entre Visual Studio Code et l’CLI TeamsFx.
+    Les connexions de compte sont partagées entre Visual Studio Code et l’CLI TeamsFx.
 
----
 
-Maintenant que votre environnement de développement est configuré, vous pouvez créer, générer et déployer votre première application Teams de développement.
+
+    Maintenant que votre environnement de développement est configuré, vous pouvez créer, générer et déployer votre première application Teams de développement.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Créer votre première application Teams avec Blazor](first-app-blazor.md)
-- [Créer votre première application Teams l’aide SharePoint Framework (SPFx)](first-app-spfx.md)
-- [Créer une application de bot de conversation](first-app-bot.md)
-- [Créer une extension de messagerie](first-message-extension.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer votre première application Teams l’aide React](first-app-react.md)
+* [Présentation des didacticiels](code-samples.md) 
+* [Créer une application à l’aide React](first-app-react.md)
+* [Créer une application à l’aide de Blazor](first-app-blazor.md)
+* [Créer une application à l’aide SPFx](first-app-spfx.md)
+* [Créer une application en utilisant C# ou .NET](get-started-dotnet-app-studio.md)
+* [Créer une application en utilisant Node.js](get-started-nodejs-app-studio.md)
+* [Créer une application à l’aide du générateur Yeoman](get-started-yeoman.md)
+* [Créer une application de bot de conversation](first-app-bot.md)
+* [Créer une extension de messagerie](first-message-extension.md)
+* [Exemples de code](https://github.com/OfficeDev/Microsoft-Teams-Samples)

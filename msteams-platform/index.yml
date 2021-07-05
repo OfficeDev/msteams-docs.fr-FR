@@ -33,8 +33,8 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: Didacticiels et exemples de code
       itemType: sample
-      url: /microsoftteams/platform/tutorials/code-samples
-    - title: Microsoft Build 2021 - Nouveautés
+      url: /microsoftteams/platform/get-started/code-samples
+    - title: Quelles sont les nouveautés ?
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 conceptualContent:
@@ -114,7 +114,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Intégrer des connecteurs Shifts prêts pour la production
-    - title: Connecter
+    - title: Se connecter
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
