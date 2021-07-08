@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211589"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333686"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
@@ -87,7 +87,7 @@ L’API permet à un bot de récupérer les informations des participants par ID
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -154,7 +154,7 @@ Le corps de la réponse JSON pour `GetParticipant` l’API est :
 
 #### <a name="response-codes"></a>Codes de réponse
 
-`GetParticipant`L’API inclut les codes de réponse suivants :
+`GetParticipant`L’API renvoie les codes de réponse suivants :
 
 |Code de réponse|Description|
 |---|---|
@@ -162,7 +162,6 @@ Le corps de la réponse JSON pour `GetParticipant` l’API est :
 | **200** | Les informations sur les participants sont récupérées avec succès.|
 | **401** | L’application répond avec un jeton non valide.|
 | **404** | La réunion a expiré ou le participant est in peut-être trouvé.|
-| **500** | La réunion a expiré (plus de 60 jours) depuis la fin de la réunion ou les participants ne disposent pas d’autorisations en fonction de leur rôle.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
@@ -182,7 +181,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 |---|---|----|---|
 |**conversationId**| String | Oui | L’identificateur de conversation est disponible dans le cadre de Bot Invoke. |
 
-#### <a name="examples"></a>Exemples
+#### <a name="examples"></a>範例
 
 `Bot ID`L’objet est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
@@ -197,15 +196,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -292,7 +283,7 @@ L’API Détails de la réunion inclut les exemples suivants :
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));

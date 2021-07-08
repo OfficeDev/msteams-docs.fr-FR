@@ -6,22 +6,22 @@ keywords: liste des membres de l’équipe d’api bot Framework
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 9c6444967d330d27a415ac596a3858c05c49236e
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114244"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328064"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams’API du bot pour récupérer des membres d’équipe ou de conversation
 
 >[!NOTE]
 > Le processus d’annulation et `TeamsInfo.getMembers` les `TeamsInfo.GetMembersAsync` API ont démarré. Initialement, ils sont fortement limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Ainsi, la liste complète n’est pas renvoyée à mesure que la taille de l’équipe augmente.
-> Vous devez mettre à jour la version 4.10 ou une version supérieure du SDK Bot Framework et basculer vers les points de terminaison de l’API paginée ou l’API utilisateur `TeamsInfo.GetMemberAsync` unique. Cela s’applique également à votre bot même si vous n’utilisez pas directement ces API, car les anciens SDK appellent ces API pendant les événements [MembersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Pour afficher la liste des modifications à venir, consultez [les modifications apportées aux API.](team-chat-member-api-changes.md#api-changes) 
+> Vous devez mettre à jour la version 4.10 ou une version supérieure du SDK Bot Framework et basculer vers les points de terminaison de l’API paginée ou l’API utilisateur `TeamsInfo.GetMemberAsync` unique. Cela s’applique également à votre bot même si vous n’utilisez pas directement ces API, car les anciens SDK appellent ces API pendant les événements [MembersAdded.](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) Pour afficher la liste des modifications à venir, consultez [les modifications apportées aux API.](team-chat-member-api-changes.md#api-changes)
 
-Actuellement, les développeurs de bots qui souhaitent récupérer des informations pour un ou plusieurs membres d’une conversation ou d’une équipe utilisent les API de bot Microsoft Teams pour C# ou pour les API TypeScript ou `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` Node.js. Pour plus d’informations, voir [récupérer la liste ou le profil utilisateur.](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile) Ces API ont plusieurs défauts.
+Actuellement, si vous souhaitez récupérer des informations pour un ou plusieurs membres d’une conversation ou d’une équipe, vous pouvez utiliser les API de [bot Microsoft Teams](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) pour C# ou pour les API TypeScript ou `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` Node.js. Pour plus d’informations, voir [récupérer la liste ou le profil utilisateur.](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
 
-Actuellement, si vous souhaitez récupérer des informations pour un ou plusieurs membres d’une conversation ou d’une équipe, vous pouvez utiliser les API de [bot Microsoft Teams](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) pour C# ou pour les API TypeScript ou `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` Node.js. Ces API ont les défauts suivants :
+Ces API ont les défauts suivants :
 
 * Pour les grandes équipes, les performances sont médiocres et les délai d’avance sont plus probables : la taille maximale de l’équipe a considérablement augmenté depuis la publication de Teams début 2017. À mesure que vous renvoyez l’intégralité de la liste des membres, le retour de l’appel d’API pour les grandes équipes prend beaucoup de temps, et il est courant pour l’appel d’avoir un délai d’attente et vous devez essayer à `GetMembersAsync` `getMembers` nouveau.
 * Il est difficile d’obtenir les détails du profil d’un seul utilisateur : pour obtenir les informations de profil d’un seul utilisateur, vous devez récupérer l’intégralité de la liste des membres, puis rechercher celle que vous souhaitez. Il existe une fonction d’aide dans le SDK Bot Framework pour la simplifier, mais elle n’est pas efficace.

@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 localization_priority: Normal
 keywords: Référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: be38454daac519530d0fdf10b5170e128219f6fc
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d3b84344eccee7c2595b0e978c72d7e331b198cb
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140486"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328071"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -30,7 +30,7 @@ Avant d’identifier les différents types de carte, comprenez comment créer un
 
 1. Sélectionnez **M’envoyer cette carte.** La carte vous est envoyée en tant que message de conversation.
 
-## <a name="card-examples"></a>Exemples de cartes
+## <a name="card-examples"></a>Exemples de carte
 
 Vous trouverez des informations supplémentaires sur l’utilisation des cartes dans la documentation du SDK Bot Builder v3. Des exemples de code sont également disponibles dans le référentiel **Microsoft/BotBuilder-Samples** GitHub. Voici quelques exemples de cartes :
 
@@ -57,15 +57,30 @@ Vous pouvez identifier et utiliser différents types de cartes en fonction des b
 | [Carte miniature](#thumbnail-card) | Cette carte contient généralement une seule image miniature, du texte court et un ou plusieurs boutons. |
 | [Collections de cartes](#card-collections) | Cette collection de cartes est utilisée pour renvoyer plusieurs éléments en une seule réponse. |
 
+## <a name="features-that-support-different-card-types"></a>Fonctionnalités qui prise en charge différents types de carte
+
+| Type de carte | Bots | Aperçus des extensions de message | Résultats de l’extension de message | Modules de tâche | Webhooks sortants | Webhooks entrants | Connecteurs O365 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Carte adaptative | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
+| Carte connecteur O365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Carte Hero | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Carte miniature | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Carte de liste | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
+| Carte d’accusé de réception | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
+| Carte de signature | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+
+> [!NOTE]
+> Pour les cartes adaptatives dans les webhooks entrants, tous les éléments de schéma de carte adaptative native, à l’exception `Action.Submit` de , sont entièrement pris en charge. Les actions prises en charge sont [**Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)et [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+
 ## <a name="common-properties-for-all-cards"></a>Propriétés communes pour toutes les cartes
 
-Vous pouvez passer par certaines propriétés communes applicables à toutes les cartes.
+Vous pouvez passer par certaines propriétés communes qui s’appliquent à toutes les cartes.
 
 ### <a name="inline-card-images"></a>Images de carte en ligne
 
-La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. Pour des raisons de performances, il est vivement recommandé d’héberger l’image sur une réseau de distribution de contenu (CDN).
+La carte peut contenir une image fixe en incluant un lien vers l’image disponible publiquement. À des fins de performances, il est vivement recommandé d’héberger l’image sur une réseau de distribution de contenu (CDN).
 
-La taille des images est réduite ou réduite afin de maintenir les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
+La taille des images est réduite ou monter en puissance afin de maintenir les proportions pour couvrir la zone d’image. Les images sont ensuite rogées à partir du centre pour obtenir les proportions appropriées pour la carte.
 
 Les images doivent être au maximum 1024×1024 et au format PNG, JPEG ou GIF. Gif animé non pris en charge.
 
@@ -95,7 +110,7 @@ Après avoir identifié les propriétés communes de toutes les cartes, vous pou
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-Une carte adaptative est une carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de reconnaissance vocale, d’images, de boutons et de champs d’entrée. Pour plus d’informations, voir [Cartes adaptatives v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+Une carte adaptative est une carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de reconnaissance vocale, d’images, de boutons et de champs d’entrée. Pour plus d’informations, [voir Cartes adaptatives v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### <a name="support-for-adaptive-cards"></a>Prise en charge des cartes adaptatives
 
@@ -276,8 +291,8 @@ Le tableau suivant fournit les propriétés d’une carte Hero :
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
-| title | Texte enrichi  | Titre de la carte. Maximum deux lignes. |
-| subtitle | Texte enrichi  | Sous-titre de la carte. Maximum deux lignes.|
+| title | Texte enrichi  | Titre de la carte. Deux lignes au maximum. |
+| subtitle | Texte enrichi  | Sous-titre de la carte. Deux lignes au maximum.|
 | text | Texte enrichi  | Le texte apparaît sous le sous-titre. Pour les options de mise en forme, voir [mise en forme de carte.](~/task-modules-and-cards/cards/cards-format.md) |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 16:9. |
 | buttons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. Six maximum. |
@@ -405,7 +420,7 @@ Le code suivant montre un exemple de carte de liste :
 
 ## <a name="office-365-connector-card"></a>carte Office 365 connecteur
 
-Vous pouvez utiliser une carte connecteur Office 365 qui fournit une disposition flexible et constitue un excellent moyen d’obtenir des informations utiles. La carte Office 365 connecteur est prise en charge dans Teams, et non dans Bot Framework. Cette carte fournit une disposition flexible avec plusieurs sections, champs, images et actions. Cette carte contient une carte de connecteur afin qu’elle puisse être utilisée par des bots. Pour plus d’informations sur les différences entre les cartes de connecteur et la carte connecteur Office 365, consultez des informations supplémentaires [sur la carte Office 365 connecteur.](#additional-information-on-the-office-365-connector-card)
+Vous pouvez utiliser une carte connecteur Office 365 qui fournit une disposition flexible et constitue un excellent moyen d’obtenir des informations utiles. La carte Office 365 connecteur est prise en charge dans Teams, et non dans Bot Framework. Cette carte fournit une disposition flexible avec plusieurs sections, champs, images et actions. Cette carte contient une carte de connecteur afin qu’elle puisse être utilisée par des bots. Pour plus d’informations sur les différences entre les cartes de connecteur et la carte connecteur Office 365, consultez des informations supplémentaires sur [la carte Office 365 connecteur.](#additional-information-on-the-office-365-connector-card)
 
 ### <a name="support-for-office-365-connector-cards"></a>Prise en charge des cartes Office 365 connecteur de connexion
 
@@ -421,8 +436,8 @@ Le tableau suivant fournit les propriétés de la carte Office 365 connecteur :
 
 | Propriété | Type  | Description |
 | --- | --- | --- |
-| title | Texte enrichi  | Titre de la carte. Maximum deux lignes. |
-| résumé | Texte enrichi  | Résumé de la carte. Maximum deux lignes. |
+| title | Texte enrichi  | Titre de la carte. Deux lignes au maximum. |
+| résumé | Texte enrichi  | Résumé de la carte. Deux lignes au maximum. |
 | text | Texte enrichi  | Le texte apparaît sous le sous-titre. Pour les options de mise en forme, voir [mise en forme de carte.](~/task-modules-and-cards/cards/cards-format.md) |
 | themeColor | Chaîne HEX | Couleur qui remplace la couleur `accentColor` fournie à partir du manifeste de l’application. |
 
@@ -432,16 +447,16 @@ Office 365 Les cartes de connecteur fonctionnent correctement Microsoft Teams, y
 
 La différence importante entre l’utilisation de cartes de connecteur à partir d’un connecteur et l’utilisation de cartes de connecteur dans votre bot est la gestion des actions de carte. Le tableau suivant répertorie la différence :
 
-| Connecteur | Bot |
+| Connector | Bot |
 | --- | --- |
-| Le point de terminaison reçoit la charge utile de la carte via HTTP POST. | `HttpPOST`L’action déclenche une activité qui envoie uniquement `invoke` l’ID d’action et le corps au bot.|
+| Le point de terminaison reçoit la charge utile de la carte via HTTP POST. | `HttpPOST`L’action déclenche une activité qui envoie uniquement l’ID d’action et le `invoke` corps au bot.|
 
 Chaque carte de connecteur peut afficher un maximum de dix sections, et chaque section peut contenir un maximum de cinq images et cinq actions.
 
 > [!NOTE]
 > Les sections, images ou actions supplémentaires dans un message n’apparaissent pas.
 
-Tous les champs de texte sont en charge markdown et HTML. Vous pouvez contrôler les sections qui utilisent Markdown ou HTML en fixant `markdown` la propriété dans un message. Par défaut, `markdown` est définie sur `true` . Si vous souhaitez utiliser du code HTML à la place, définissez `markdown` sur `false` .
+Tous les champs de texte sont en charge markdown et HTML. Vous pouvez contrôler les sections qui utilisent Markdown ou HTML en fixant la `markdown` propriété dans un message. Par défaut, `markdown` est définie sur `true` . Si vous souhaitez utiliser du code HTML à la place, définissez `markdown` sur `false` .
 
 Si vous spécifiez la propriété, elle remplace la `themeColor` propriété dans le manifeste de `accentColor` l’application.
 
@@ -449,10 +464,10 @@ Pour spécifier le style de rendu pour , vous pouvez définir `activityImage` co
 
 | Valeur | Description |
 | --- | --- |
-| `avatar` | Par défaut, `activityImage` elle est rogcée sous la mesure d’un cercle. |
-| `article` | `activityImage` est affiché sous forme de rectangle et conserve ses proportions. |
+| `avatar` | Par défaut, `activityImage` il est rogcé sous la mesure d’un cercle. |
+| `article` | `activityImage` s’affiche sous la forme d’un rectangle et conserve ses proportions. |
 
-Pour plus d’informations sur les propriétés de carte de connecteur, voir la [référence de carte de message actionnable.](/outlook/actionable-messages/card-reference) Les seules propriétés de carte de connecteur que Teams ne prend pas en charge actuellement sont les suivantes :
+Pour plus d’informations sur les propriétés de carte de connecteur, voir la [référence de carte de message actionnable.](/outlook/actionable-messages/card-reference) Les seules propriétés de carte de connecteur non Teams actuellement prise en charge sont les suivantes :
 
 * `heroImage`
 * `hideOriginalBody`
@@ -462,7 +477,7 @@ Pour plus d’informations sur les propriétés de carte de connecteur, voir la 
 
 ### <a name="example-of-an-office-365-connector-card"></a>Exemple de carte Office 365 Connector
 
-Le code suivant montre un exemple de carte Office 365 Connecteur :
+Le code suivant montre un exemple de carte Office 365 connecteur :
 
 ```json
 {
@@ -541,7 +556,7 @@ Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge 
 
 ![Exemple de carte de reçu](~/assets/images/cards/receipt.png)
 
-Le code suivant montre un exemple de carte de réception :
+Le code suivant montre un exemple de carte de reçu :
 
 ```json
 {
@@ -601,7 +616,7 @@ Référence Bot Framework :
 
 La carte de Teams est similaire à la carte de signin dans Bot Framework, sauf que la carte de Teams ne prend en charge que deux actions `signin` et `openUrl` .
 
-L’action de signin peut être utilisée à partir de n’importe quelle carte de Teams, et pas seulement de la carte de signature. Pour plus d’informations, [voir Teams’authentification pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
+L’action de signin peut être utilisée à partir de n’importe quelle carte Teams, et pas seulement de la carte de signature. Pour plus d’informations, [Teams flux d’authentification pour les bots.](~/bots/how-to/authentication/auth-flow-bot.md)
 
 ### <a name="support-for-signin-cards"></a>Prise en charge des cartes de signature
 
@@ -699,7 +714,7 @@ Référence Bot Framework :
 
 ## <a name="card-collections"></a>Collections de cartes
 
-Vous pouvez utiliser des collections de cartes qui incluent des collections de listes et de carrousels. Teams prend en charge les collections de cartes. Les collections de cartes incluent `builder.AttachmentLayout.carousel` et `builder.AttachmentLayout.list` . Ces collections contiennent des cartes adaptatives, hero ou miniatures.
+Vous pouvez utiliser des collections de cartes qui incluent des collections de carrousels et de listes. Teams prend en charge les collections de cartes. Les collections de cartes incluent `builder.AttachmentLayout.carousel` et `builder.AttachmentLayout.list` . Ces collections contiennent des cartes adaptatives, hero ou miniatures.
 
 ### <a name="carousel-collection"></a>Collection de carrousels
 
