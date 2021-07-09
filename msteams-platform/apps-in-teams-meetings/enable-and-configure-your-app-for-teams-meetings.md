@@ -3,12 +3,12 @@ title: Activer et configurer vos applications pour Teams réunions
 author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions
 ms.topic: conceptual
-ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139969"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335367"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -16,7 +16,7 @@ Chaque équipe dispose d’une façon différente de communiquer et de collabore
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour les Teams réunion
 
-Pour activer votre application pour Teams réunions, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
+Pour activer votre application pour les Teams, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
 
@@ -61,22 +61,17 @@ La propriété détermine ce qui doit être affiché lorsqu’un utilisateur app
 |---|---|
 | **channelTab** | Onglet dans l’en-tête d’un canal d’équipe. |
 | **privateChatTab** | Onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs, et non dans le contexte d’une équipe ou d’une réunion. |
-| **meetingChatTab** | Onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs dans le cadre d’une réunion programmée. |
-| **meetingDetailsTab** | Onglet dans l’en-tête de l’affichage Détails de la réunion du calendrier. |
+| **meetingChatTab** | Onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs dans le cadre d’une réunion programmée. Vous pouvez spécifier **meetingChatTab** ou **meetingDetailsTab** pour vous assurer que les applications fonctionnent sur mobile. |
+| **meetingDetailsTab** | Onglet dans l’en-tête de l’affichage Détails de la réunion du calendrier. Vous pouvez spécifier **meetingChatTab** ou **meetingDetailsTab** pour vous assurer que les applications fonctionnent sur mobile. |
 | **meetingSidePanel** | Panneau en réunion ouvert via la barre unifiée (barre U). |
-| **meetingStage** | Une application de meetingSidePanel peut être partagée à l’étape de la réunion. |
-
-> [!NOTE]
-> `Context` n’est actuellement pas prise en charge sur les clients mobiles.
+| **meetingStage** | Une application de meetingSidePanel peut être partagée à l’étape de la réunion. Cet onglet n’est pas pris en charge sur les appareils mobiles. |
 
 Après avoir activé votre application pour Teams réunions, vous devez configurer votre application avant une réunion, pendant une réunion et après une réunion.
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>Configurer votre application pour les scénarios de réunion
 
 > [!NOTE]
-> * Pour que votre application soit visible dans la galerie d’onglets, elle doit prendre en charge les onglets configurables et l’étendue de conversation de groupe.
-> * Les clients mobiles ne supportent les onglets qu’aux étapes préalables et post-réunion.
-> * Les expériences en réunion qui sont des boîtes de dialogue et des onglets en réunion ne sont actuellement pas pris en charge sur les clients mobiles. Pour plus d’informations, [consultez des conseils pour les onglets mobiles](../tabs/design/tabs-mobile.md) lors de la création de vos onglets pour appareils mobiles.
+> Pour que votre application soit visible dans la galerie d’onglets, elle doit prendre en charge les onglets configurables et l’étendue de conversation de groupe.
 
 Teams réunions fournit une expérience de collaboration unique pour votre organisation. Il permet de configurer votre application pour différents scénarios de réunion. Vous pouvez configurer vos applications pour améliorer l’expérience de réunion en fonction du rôle de participant ou du type d’utilisateur. Vous pouvez maintenant identifier les actions qui peuvent être prises dans les scénarios de réunion suivants :
 
@@ -91,7 +86,7 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 **Pour ajouter un onglet à une réunion**
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
-1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
+1. Sélectionnez **l’onglet Détails,** puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
     ![Expérience préalable à la réunion](../assets/images/apps-in-meetings/PreMeeting.png)
 
@@ -112,7 +107,7 @@ Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obten
 > [!NOTE]
 > * L’identité de l’utilisateur doit être confirmée à [l’aide de l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
 > * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
-> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
+> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, voir [les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 ### <a name="during-a-meeting"></a>Lors d'une réunion
 
@@ -144,7 +139,7 @@ La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le m
 > [!NOTE]
 > * Cette fonctionnalité est actuellement disponible en [prévisualisation pour les](../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
 
-La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel.
+La phase de réunion partagée permet aux participants de la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel.
 
 Le contexte requis se trouve `meetingStage` dans le manifeste de l’application. Une condition préalable consiste à avoir le `meetingSidePanel` contexte. Cela active le **partage** dans meetingSidePanel.
 

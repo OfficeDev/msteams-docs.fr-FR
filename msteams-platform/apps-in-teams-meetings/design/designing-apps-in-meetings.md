@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des applications dans Teams réunions 
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114280"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335409"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension Microsoft Teams réunion
 
@@ -37,13 +37,13 @@ Dans les détails de la réunion, les utilisateurs peuvent sélectionner Ajouter
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-Lors d’une réunion, les utilisateurs peuvent sélectionner **Plus** ajouter :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **une application** et choisir l’application de leur choix.
+Lors d’une réunion, les utilisateurs peuvent sélectionner **Ajouter** une :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **application** et l’application de leur choix.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion au cours d’une réunion." border="false":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-Lors d’une réunion, les utilisateurs peuvent sélectionner **Plus** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: et choisir l’application de leur choix.
+Après avoir ajouté l’application sur le bureau, vous pouvez sélectionner l’application et l’utiliser lors d’une réunion en sélectionnant **Plus.** :::image type="icon" source="../../assets/icons/teams-client-more.png":::
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion lors d’une réunion sur mobile." border="false":::
 
@@ -74,13 +74,13 @@ Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous 
 * [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
 * [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc.
-* [Navigation gauche :](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)le composant de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation au minimum.
+* [Navigation gauche](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): le composant de navigation gauche peut vous aider si votre onglet nécessite une navigation. En règle générale, vous devez conserver la navigation au minimum.
 
 ## <a name="use-an-in-meeting-tab"></a>Utiliser un onglet en réunion
 
 L’onglet de réunion est un canevas qui permet d’accroître la collaboration pendant les réunions. Les participants peuvent voir et interagir avec le contenu de l’application dans un espace dédié en dehors de la phase de réunion par le biais d’affichages partagés ou basés sur des rôles.
 
-### <a name="use-cases"></a>Cas d'utilisation
+### <a name="use-cases"></a>Cas d’utilisation
 
 Les personnes peuvent utiliser l’onglet réunion pour :
 
@@ -108,8 +108,8 @@ Les personnes peuvent utiliser l’onglet réunion pour :
 |2|**Nom de l'application**|
 |3|**En-tête**: inclut le nom de votre application.|
 |4 |**Bouton Fermer :** ferme l’onglet. Utilisez toujours l’icône de fermeture supérieure droite au lieu d’une action dans le pied de plan.|
-|5 |**Barre de notification**: les alertes d’erreur s’affichent directement sous l’en-tête et poussent le contenu de l’iFrame vers le bas de 20 pixels.|
-|6 |**iframe**: affiche le contenu de votre application.|
+|5 |**Barre de notification**: les alertes d’erreur s’affichent directement sous l’en-tête et poussent le contenu de l’iFrame vers le bas de 20 pixels.|
+|6 |**iframe**: affiche le contenu de votre application.|
 
 ### <a name="spacing"></a>Espacement
 
@@ -137,7 +137,7 @@ Pour les scénarios avec des couches de navigation ou un contenu épais, nous vo
 
 Les boîtes de dialogue de réunion s’affichent sur la Teams de réunion. Ils nécessitent l’attention, la confirmation ou l’interaction d’un utilisateur, mais sont discrets et n’interrompent pas la réunion. Vous devez les utiliser avec parcimonie et pour les scénarios légers et orientés vers les tâches.
 
-### <a name="use-cases"></a>Cas d'utilisation
+### <a name="use-cases"></a>Cas d’utilisation
 
 Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel que l’organisateur de la réunion) qui souhaite peut-être que les participants :
 
@@ -167,7 +167,7 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomie : en-tête de boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un en-tête de boîte de dialogue en réunion." border="false":::
 
 Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la variante avec l’avatar pour renforcer le fait que la boîte de dialogue vient d’une personne.
 
@@ -177,7 +177,7 @@ Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la v
 |2|**Icône de l’application**|
 |3|**Nom de l'application**|
 |4 |**Bouton Fermer :** ferme la boîte de dialogue.|
-|5 |**Chaîne d’action**: décrit généralement qui a initié la boîte de dialogue.|
+|5 |**Chaîne d’action**: décrit généralement qui a initié la boîte de dialogue.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportement réactif : boîtes de dialogue en réunion
 
@@ -188,7 +188,7 @@ Les boîtes de dialogue de réunion peuvent varier en taille pour tenir compte d
 
 Pour implémenter, spécifiez la largeur et la hauteur à l’aide de la [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) clé.
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue en réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue de réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Utiliser l’étape de réunion partagée
 
@@ -196,9 +196,9 @@ La phase de réunion partagée permet aux participants de la réunion d’intera
 
 Les applications partagées à l’étape de la réunion occupent le même espace qu’un écran partagé. L’étape se réoriente pour tous les participants à la réunion.
 
-### <a name="use-cases"></a>Cas d'utilisation
+### <a name="use-cases"></a>Cas d’utilisation
 
-L’étape de réunion partagée est une question de collaboration et de participation. Voici quelques exemples de scénarios pour vous aider à commencer.
+L’étape de la réunion partagée est une question de collaboration et de participation. Voici quelques exemples de scénarios pour vous aider à commencer.
 
 :::row:::
    :::column span="1":::
@@ -234,7 +234,7 @@ L’étape de réunion partagée est une question de collaboration et de partici
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Un exemple montre un questionnaire sur l’étape de réunion partagée." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Un exemple montre un questionnaire sur la phase de réunion partagée." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -249,7 +249,7 @@ L’étape de réunion partagée est une question de collaboration et de partici
 |2|**Bouton Partager à l’étape de la réunion**: point d’entrée pour partager l’application à la phase de réunion. S’affiche si vous configurez votre application pour utiliser la phase de réunion partagée.|
 |3|**iframe**: affiche le contenu de votre application.|
 |4 |**Bouton Arrêter le partage :** arrête le partage de l’application à la phase de réunion. S’affiche uniquement pour le participant qui a démarré le partage.|
-|5 |**Attribution du présentateur**: affiche le nom du participant qui a partagé l’application.|
+|5 |**Attribution du présentateur**: affiche le nom du participant qui a partagé l’application.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportement réactif : étape de réunion partagée
 
@@ -303,7 +303,7 @@ Une seule boîte de dialogue de réunion avec plusieurs interactions peut distra
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Exemple montrant comment créer un environnement axé." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Exemple montrant comment créer un environnement centré." border="false":::
 
 #### <a name="do-create-a-focused-environment"></a>À faire : créer un environnement axé sur le travail
 
@@ -328,7 +328,7 @@ Votre application doit uniquement demander aux utilisateurs de se concentrer sur
 
 #### <a name="do-use-a-one-column-dialog"></a>À faire : utiliser une boîte de dialogue d’une colonne
 
-Étant donné que les boîtes de dialogue sont au centre de la phase de réunion, l’achèvement de la tâche doit être rapide et simple pour éviter toute frustration de l’utilisateur.
+Étant donné que les boîtes de dialogue sont au centre de la phase de réunion, l’achèvement des tâches doit être rapide et simple pour éviter toute frustration de l’utilisateur.
 
    :::column-end:::
    :::column span="":::
@@ -440,7 +440,7 @@ Les boîtes de dialogue en réunion sont conçues pour de brèves interactions.
 
 #### <a name="do-focus-on-dark-theme"></a>À faire : concentrez-vous sur le thème foncé
 
-Teams réunions sont optimisées pour un thème foncé afin de réduire les bruits visuels et cognitifs afin que les utilisateurs se concentrent sur la discussion et le contenu partagé. Gardez à l’esprit que certains types d’applications (par exemple, tableau blanc et modification de documents) n’ont pas besoin d’une zone de dessin sombre.
+Teams réunions sont optimisées pour le thème foncé afin de réduire les bruits visuels et cognitifs afin que les utilisateurs peuvent se concentrer sur la discussion et le contenu partagé. Gardez à l’esprit que certains types d’applications (par exemple, tableau blanc et modification de documents) n’ont pas besoin d’une zone de dessin sombre.
 
    :::column-end:::
    :::column span="":::
@@ -485,7 +485,7 @@ La fourniture d’une option pour fermer le contenu de l’onglet en réunion pe
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>Attention : évitez les modales dans l’onglet de la réunion
 
-Les modales (également appelées modules de tâche) dans l’onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
+Les modaux (également appelés modules de tâche) dans l’onglet déjà étroit de la réunion peuvent encapsuler et masquer le contenu.
 
    :::column-end:::
 :::row-end:::

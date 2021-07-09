@@ -2,14 +2,14 @@
 title: Scènes personnalisées en mode ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
-ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949748"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335374"
 ---
-# <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode ensemble dans Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
 > [!NOTE]
 > Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
@@ -18,7 +18,7 @@ Les scènes personnalisées en mode ensemble Microsoft Teams un environnement de
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Une scène dans des scènes personnalisées en mode ensemble est un artefact créé par le développeur de scène à l’aide de Microsoft Scene studio. Dans un paramètre de scène en cours, les participants ont des sièges désignés avec des flux vidéo restituer dans ces sièges.
+Une scène dans des scènes personnalisées en mode Ensemble est un artefact créé par le développeur de scène à l’aide de Microsoft Scene studio. Dans un paramètre de scène en cours, les participants ont des sièges désignés avec des flux vidéo restituer dans ces sièges.
 
 > [!NOTE]
 > Les applications de scène uniquement sont recommandées, car l’expérience d’acquisition pour ces applications est plus transparente.
@@ -31,7 +31,7 @@ Le processus suivant donne une vue d’ensemble pour créer une application de s
 > * Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création du package d’application en arrière-plan.
 > * Plusieurs scènes d’un même package d’application s’affichent sous la forme d’une liste plate de scènes pour les utilisateurs.
 
-## <a name="prerequisites"></a>Conditions requises
+## <a name="prerequisites"></a>Configuration requise
 
 Vous devez avoir une connaissance de base des éléments suivants pour utiliser des scènes personnalisées du mode Ensemble :
 
@@ -45,7 +45,7 @@ Vous devez avoir une connaissance de base des éléments suivants pour utiliser 
 Avant de créer une scène, considérez ce qui suit pour une expérience de création de scène transparente :
 
 * Assurez-vous que toutes les images sont au format PNG.
-* Assurez-vous que le package final avec toutes les images rassemblées ne doit pas dépasser la résolution 1920x1080.
+* Assurez-vous que le package final avec toutes les images rassemblées ne doit pas dépasser la résolution 1920 x 1080.
 
     > [!NOTE]
     > La résolution est un nombre even. Il s’agit d’une condition requise pour que les scènes soient éclairées correctement.
@@ -64,7 +64,7 @@ Avant de créer une scène, considérez ce qui suit pour une expérience de cré
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Créer une scène à l’aide de Scene studio
 
-Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Il est disponible dans [l’Éditeur de](https://dev.teams.microsoft.com/scenes)scènes - Teams portail du développeur.
+Microsoft dispose d’un studio de scène qui vous permet de créer des scènes. Il est disponible sur [l’éditeur de scènes - Teams portail du développeur.](https://dev.teams.microsoft.com/scenes)
 
 > [!NOTE]
 > Ce document fait référence à Scene studio dans le portail Microsoft Teams développeur. L’interface et les fonctionnalités sont identiques dans Le Concepteur de scène App Studio.
@@ -93,7 +93,7 @@ Les dimensions des sièges deviennent le canevas pour le rendu du flux vidéo du
 1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
     >[!NOTE]
-    > * Pour ouvrir Scene studio, vous pouvez accéder à la page d’accueil du [portail Teams développeur](https://dev.teams.microsoft.com/home) et sélectionner Créer des scènes **personnalisées pour les réunions.**
+    > * Pour ouvrir Scene studio, vous pouvez accéder à la page d’accueil du portail [Teams développeur](https://dev.teams.microsoft.com/home) et sélectionner Créer des scènes **personnalisées pour les réunions.**
     > * Pour ouvrir Scene studio, vous pouvez accéder à la page  d’accueil du portail de développement [Teams,](https://dev.teams.microsoft.com/home)sélectionner Outils dans la section de gauche et sélectionner **Scene studio** dans la section **Outils.**
 
 1. Dans la page **Éditeur de** scènes, **sélectionnez Créer une nouvelle scène.**
@@ -108,7 +108,7 @@ Les dimensions des sièges deviennent le canevas pour le rendu du flux vidéo du
 
     >[!NOTE]
     > * Vous pouvez télécharger les [ fichiersSampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) et [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) avec les images.
-    > * Vous pouvez également ajouter des images d’arrière-plan à la scène à l’aide **d’ajouter des images.**
+    > * Vous pouvez également ajouter des images d’arrière-plan à la scène à l’aide **d’Ajouter des images.**
 
     ![Glisser-glisser dans la scène](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
@@ -151,8 +151,8 @@ Les dimensions des sièges deviennent le canevas pour le rendu du flux vidéo du
 
     >[!NOTE]
     > * La sélection **de l’aperçu** crée automatiquement une Microsoft Teams qui peut être vue dans la **page** Applications du portail Teams développeur.
-    > * La sélection **de l’aperçu** crée automatiquement un package d’application appmanifest.jssur la scène. Comme indiqué précédemment, cela est abstrait, mais vous pouvez accéder au package d’application créé automatiquement en accédant à **Applications** à partir du menu.
-    > * La scène peut ensuite être vue dans la galerie personnalisée des scènes du mode Ensemble.
+    > * La sélection **de l’aperçu** crée automatiquement un package d’application appmanifest.jssur la scène. Comme indiqué précédemment, cela est abstrait, mais vous pouvez accéder au  package d’application créé automatiquement en accédant aux applications à partir du menu.
+    > * La scène peut ensuite être vue dans la galerie de scènes personnalisée du mode Ensemble.
 
 1. Si vous le souhaitez,  vous pouvez sélectionner **Partager** dans le menu déroulant Enregistrer pour créer un lien partageable afin de distribuer facilement vos scènes à d’autres personnes. L’ouverture de ce lien installe la scène pour l’utilisateur et il peut commencer à l’utiliser.
 
@@ -172,7 +172,7 @@ Une scène plus complexe qui tire parti de l’axe Z est illustré dans l’exem
 
 ## <a name="sample-scenejson"></a>Exemple scene.jssur
 
-Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participant sont définis dans un système de coordonnées du monde avec l’axe X pointant vers la droite et l’axe Y pointant vers le bas. Les scènes personnalisées en mode ensemble prend en charge le zoom avant sur les participants actuels. Cela est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
+Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participants sont définis dans un système de coordonnées du monde avec l’axe X pointant vers la droite et l’axe Y pointant vers le bas. Les scènes personnalisées en mode Ensemble prend en charge le zoom avant sur les participants actuels. Cela est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
 
 Voici les scene.jssur l’exemple :
 
@@ -244,22 +244,22 @@ Chaque scène possède un ID et un nom uniques. Le JSON de scène contient égal
 > [!NOTE]
 > Le numéro d’ordre de l’ordre de l’ordre des personnes qui rejoignent l’appel.
 
-L’axe zOrder représente l’ordre de placement des images et des sièges le long de l’axe Z. Dans de nombreux cas, elle donne une idée de la profondeur ou de la partition si nécessaire. Pour plus d’informations, voir l’exemple de mise en marche pas à pas. L’exemple tire parti de zOrder.
+L’axe zOrder représente l’ordre de placement des images et des sièges le long de l’axe Z. Dans de nombreux cas, elle donne une idée de la profondeur ou de la partition si nécessaire. Pour plus d’informations, consultez l’exemple de mise en marche pas à pas. L’exemple tire parti de zOrder.
 
 Maintenant que vous avez passé en scene.jsl’exemple, vous pouvez activer les scènes personnalisées du mode Ensemble pour vous engager dans des scènes.
 
 ## <a name="activate-custom-together-mode-scenes"></a>Activer des scènes personnalisées en mode ensemble
 
-Obtenez des informations de bout en bout sur la façon dont un utilisateur final s’engage avec des scènes dans des scènes personnalisées en mode ensemble.
+Obtenez des informations de bout en bout sur la façon dont un utilisateur final s’engage avec des scènes dans des scènes personnalisées du mode Ensemble.
 
-**Pour choisir des scènes et activer des scènes personnalisées en mode Ensemble**
+**Pour sélectionner des scènes et activer des scènes personnalisées en mode Ensemble**
 
 1. Créez une réunion de test.
 
     >[!NOTE]
     > Lors de la sélection **de l’aperçu** dans Le studio de scène, la scène est installée en tant qu’application dans Microsoft Teams. Il s’agit du modèle pour qu’un développeur teste et teste des scènes à partir du studio Scene studio. Une fois qu’une scène est livrée en tant qu’application, les utilisateurs voient ces scènes dans la galerie de scène.
 
-1. Dans la **page de la** galerie dans le coin supérieur gauche, sélectionnez Mode **Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
+1. Dans la **galerie dans** le coin supérieur gauche, sélectionnez **Mode Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
 
 1. Sélectionnez **Modifier la scène** pour modifier la scène par défaut.
 
