@@ -4,12 +4,12 @@ author: KirtiPereira
 description: Créer des onglets à l’aide de cartes adaptatives
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328057"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428715"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -19,13 +19,13 @@ ms.locfileid: "53328057"
 
 Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vous pouvez être face à ces problèmes, tels que les considérations html et CSS, les temps de chargement lents, les contraintes iFrame, ainsi que la maintenance et les coûts du serveur. Les onglets de carte adaptative sont une nouvelle façon de créer des onglets dans Teams. Au lieu d’incorporer du contenu web dans un IFrame, vous pouvez restituer des cartes adaptatives dans un onglet. Lorsque le frontal est restituer avec des cartes adaptatives, le système frontal est alimenté par un bot. Le bot est responsable de l’acceptation des demandes et de la réponse appropriée avec la carte adaptative qui est rendue.
 
-Vous pouvez créer vos onglets avec des blocs d’interface utilisateur prêts à l’emploi qui semblent natifs sur ordinateur de bureau, web et mobile. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application, la façon dont l’activité d’appel demande et envoie des informations sous l’onglet avec des cartes adaptatives et l’impact sur le flux de travail du module de tâche.
+Vous pouvez créer vos onglets avec des blocs de construction d’interface utilisateur prêts à l’emploi qui semblent natifs sur ordinateur de bureau, web et mobile. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application, la façon dont l’activité d’appel demande et envoie des informations sous l’onglet avec des cartes adaptatives et l’impact sur le flux de travail du module de tâche.
 
 L’image suivante illustre les onglets de build avec des cartes adaptatives sur ordinateur de bureau et mobile :
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Exemple de carte adaptative rendue dans les onglets." border="false":::
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, vous devez :
 
@@ -97,12 +97,12 @@ Voici un exemple de manifeste d’onglet carte adaptative :
 
 ## <a name="invoke-activities"></a>Appeler des activités
 
-La communication entre votre onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
+La communication entre l’onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
 
 > [!NOTE]
 > Les bots doivent envoyer toutes les réponses à [l’URL du service.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) L’URL du service est reçue dans le cadre de la charge `activity` utile entrante.
 
-### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Récupérer la carte adaptative pour le rendu dans un onglet
+### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Récupérer la carte adaptative à restituer dans un onglet
 
 `tab/fetch`est la première demande d’appel que votre bot reçoit lorsqu’un utilisateur ouvre un onglet Carte adaptative. Lorsque votre bot reçoit la demande, il envoie une réponse de tabulation **continue** ou une réponse **d’th de tabulation.**
 La **réponse** continue inclut un tableau pour **les cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
@@ -218,7 +218,7 @@ Le code suivant fournit des exemples de `tab/submit` requête et de réponse :
 
 ## <a name="understand-task-module-workflow"></a>Comprendre le flux de travail du module de tâche
 
-Le module de tâche utilise également la carte adaptative pour appeler `task/fetch` et les demandes et les `task/submit` réponses. Pour plus d’informations, [voir l’utilisation des modules de tâche dans Microsoft Teams bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
+Le module de tâche utilise également la carte adaptative pour appeler `task/fetch` et les demandes et les `task/submit` réponses. Pour plus d’informations, [voir l’utilisation des modules de tâche Microsoft Teams bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
 
 Avec l’introduction de l’onglet Carte adaptative, il existe un changement dans la façon dont le bot répond à une `task/submit` demande. Si vous utilisez un onglet Carte adaptative, le bot répond à la demande d’appel avec la réponse continue de l’onglet standard et ferme `task/submit` le module de tâche.  L’onglet Carte adaptative est mis à jour en rendant la nouvelle liste de cartes fournie dans le corps de **la** réponse continue de l’onglet.
 
@@ -327,7 +327,7 @@ Le code suivant fournit des exemples de `task/submit` requête et de réponse :
 
 Dans les sections précédentes de cet article, vous avez vu que la plupart des paradigmes de développement peuvent être étendus des demandes de module de tâche et des réponses en demandes et réponses d’onglet. En ce qui concerne la gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md)
 
-`tab/fetch`les demandes peuvent avoir une **réponse continue** ou **auth.** Lorsqu’une demande est déclenchée et reçoit une réponse d’th d’onglet, la page de signature `tab/fetch` s’affiche à  l’utilisateur.
+`tab/fetch`les demandes peuvent avoir une **réponse continue** ou **auth.** Lorsqu’une demande est déclenchée et reçoit une réponse d' auto-th de tabulation, la page de signature `tab/fetch` s’affiche à  l’utilisateur.
 
 **Pour obtenir un code d’authentification par le biais de `tab/fetch` l’appel**
 
@@ -371,7 +371,7 @@ Le code suivant fournit un exemple de réponse `tab/fetch` d’th :
 
 ### <a name="example"></a>Exemple
 
-Le code suivant montre un exemple de requête rééditée :
+Le code suivant illustre un exemple de requête rééditée :
 
 ```json
 {

@@ -4,12 +4,12 @@ description: Limitation des taux et meilleures pratiques en Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: limitation des taux de bots teams
-ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230959"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428694"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
@@ -51,11 +51,11 @@ Il est recommandé d’utiliser un retour exponentiel avec une gigue aléatoire 
 Une fois que vous `HTTP 429` avez géré les réponses, vous pouvez passer par l’exemple pour détecter les exceptions temporaires.
 
 > [!NOTE]
-> En plus de resserrer le code **d’erreur 429**, les codes d’erreur **412,** **502** et **504** doivent également être retentés.
+> En plus de réessayer le code d’erreur **429**, les codes d’erreur **412,** **502** et **504** doivent également être retenter.
 
 ## <a name="detect-transient-exceptions-example"></a>Exemple de détection d’exceptions temporaires
 
-Le code suivant illustre un exemple d’utilisation du blocage exponentiel à l’aide du bloc d’application de gestion des pannes temporaires :
+Le code suivant illustre un exemple d’utilisation du blocage exponentiel à l’aide du bloc d’application de gestion des erreurs temporaires :
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -128,12 +128,12 @@ Le tableau suivant fournit les limites par bot par thread :
 
 | Scénario | Période en secondes | Nombre maximal d’opérations autorisées |
 | --- | --- | --- |
-| Envoyer à la conversation | 1 | 7  |
-| Envoyer à la conversation | 2 | 8  |
+| Envoyer à la conversation | 1 | 7  |
+| Envoyer à la conversation | 2 | 8  |
 | Envoyer à la conversation | 30 | 60 |
 | Envoyer à la conversation | 3600 | 1800 |
-| Créer une conversation | 1 | 7  |
-| Créer une conversation | 2 | 8  |
+| Créer une conversation | 1 | 7  |
+| Créer une conversation | 2 | 8  |
 | Créer une conversation | 30 | 60 |
 | Créer une conversation | 3600 | 1800 |
 | Obtenir les membres de la conversation| 1 | 14  |
@@ -146,7 +146,7 @@ Le tableau suivant fournit les limites par bot par thread :
 | Obtenir des conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Les versions précédentes et les API sont `TeamsInfo.getMembers` en cours `TeamsInfo.GetMembersAsync` d’utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l’API paginée, voir Modifications apportées à l’API bot pour les membres de l’équipe [et de la conversation.](../../resources/team-chat-member-api-changes.md)
+> Les versions `TeamsInfo.getMembers` précédentes et `TeamsInfo.GetMembersAsync` les API sont en cours d’utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l’API paginée, voir Modifications apportées à l’API bot pour les membres de l’équipe [et de la conversation.](../../resources/team-chat-member-api-changes.md)
 
 Vous pouvez également gérer la limite de taux à l’aide de la limite par thread pour tous les bots.
 

@@ -5,12 +5,12 @@ description: Créez rapidement une application Microsoft Teams qui affiche un me
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c14f55d014af120cab88044d31ee8600017e3c57
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: a749d70875948d606f42688fea74c1e0bf79817e
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254306"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428736"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Créer et exécuter votre première application Microsoft Teams avec Blazor
 
@@ -139,7 +139,7 @@ Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 1. Inscrit votre application pour le « chargement de version latéral » dans Microsoft Teams.
 1. Démarre le back-end de votre application en cours d’exécution localement.
 1. Démarre votre application frontale hébergée localement.
-1. Démarre Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est enregistrée dans le manifeste de l’application).
+1. Démarre Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est inscrite dans le manifeste de l’application).
 
 </details>
 
@@ -176,7 +176,7 @@ Le déploiement se compose de deux étapes :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="Sélectionner Azure App Service comme cible de publication":::
 
-1. Sélectionnez **+** pour créer une nouvelle instance du service d’application.
+1. Sélectionnez **+** pour créer une nouvelle instance de Service d’application.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Créez une instance.":::
 
@@ -222,7 +222,7 @@ Le Portail des développeurs pour Teams l’endroit où les onglets de votre app
 
 1. Sélectionnez **Créer votre première variable d’environnement.**
 
-1. Entrez `azure_app_url` le **nom**.  Entrez l’URL de votre site Azure sans `https://` la valeur . 
+1. Entrez `azure_app_url` le **nom.**  Entrez l’URL de votre site Azure sans `https://` la valeur . 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Créer une variable d’environnement":::
 
@@ -236,11 +236,11 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Sélectionner des informations de base":::
 
-1. Il existe plusieurs endroits dans le manifeste qui résentent un élément `locahost:XXXXX` dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par , y compris les accolades.
+1. Il existe plusieurs endroits dans le manifeste qui résentent un `localhost:XXXXX` élément dans une URL.  Remplacez toutes les occurrences `{{azure_app_url}}` par , y compris les accolades.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Ajuster les informations de base pour l’environnement":::
 
-1. Lorsque vous avez terminé, sélectionnez **Enregistrer.**
+1. Lorsque vous avez terminé, sélectionnez **Enregistrer**.
 
 1. Dans la barre latérale, sélectionnez **Fonctionnalités.**
 
@@ -271,7 +271,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
 1. Sélectionnez **Ajouter un domaine**.
 
-1. Si ce domaine n’est pas répertorié comme un domaine valide, ajoutez-le en tant que `{{azure_app_url}}` domaine valide, puis sélectionnez **Ajouter.**
+1. Si ce domaine n’est pas répertorié comme domaine valide, ajoutez-le en tant que `{{azure_app_url}}` domaine valide, puis sélectionnez **Ajouter.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Ajouter un domaine":::
 
