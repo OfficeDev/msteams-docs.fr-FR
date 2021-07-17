@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publient la langue de localisation d’AppSource de publication office dans le Store
 ms.date: 05/15/2018
-ms.openlocfilehash: c73188bb24960b9ef0706955d09d23b618c04e5c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5410d6f829c3fec9b5d631452e459bd276df472e
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140039"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455212"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
@@ -22,7 +22,7 @@ Vous devez prendre en compte les facteurs suivants pour trouver votre applicatio
 
 ## <a name="localize-your-appsource-listing"></a>Localisez votre liste AppSource
 
-Si vous publiez l’application dans le Store, vous devez savoir que la recherche dans AppSource n’est pas encore prise en charge. Pour prendre en charge les listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Les informations de langue par défaut que vous fournissez dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste apparaissent dans la liste du site [web AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) de votre application. Actuellement, la langue par défaut est l’anglais.
+Si vous publiez l’application dans le Store, vous devez savoir que la recherche dans AppSource n’est pas encore prise en charge. Pour prendre en charge les listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Les informations de langue par défaut que vous fournissez dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste apparaissent dans la liste du site [web AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource est un endroit pour tous les besoins de votre équipe. regroupez tous les outils, y compris les conversations, les réunions, les appels, les fichiers et les outils, pour permettre un travail d’équipe plus productif.") de votre application. Actuellement, la langue par défaut est l’anglais.
 
 ### <a name="configure-localization"></a>Configurer la localisation
 
@@ -151,7 +151,7 @@ Le manifest.jssur la modification est illustré dans l’exemple suivant :
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>Gérer les envois de texte localisées de vos utilisateurs
 
-Si vous fournissez des versions localisées de votre application, les utilisateurs répondent avec la même langue. Comme Teams ne traduit pas les envois de l’utilisateur dans la langue par défaut, votre application doit gérer les réponses linguistiques localisées. Par exemple, si vous fournissez une valeur localisée, les réponses à votre bot sont le texte localisée de la commande, et non `commandList` la langue par défaut. Votre application doit répondre correctement.
+Si vous fournissez des versions localisées de votre application, les utilisateurs répondent avec la même langue. Comme Teams ne traduit pas les envois de l’utilisateur dans la langue par défaut, votre application doit gérer les réponses linguistiques localisées. Par exemple, si vous fournissez une langue localisée, les réponses à votre bot sont le texte localisée de la commande, et non `commandList` la langue par défaut. Votre application doit répondre correctement.
 
 ## <a name="code-sample"></a>Exemple de code
 
