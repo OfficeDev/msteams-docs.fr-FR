@@ -6,17 +6,17 @@ keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 5fab0e0145288718adb7eb96f8f103f75527ec58
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 4bbf7bce62e24c61d23e7fa90f1ccd3e6c5a3371
+ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179740"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53534599"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
 Ce document décrit comment la suppression des marges autour de tous les onglets dans Microsoft Teams améliorera l’expérience du développeur lors de la création d’applications. Il s’agit d’une amélioration introduite dans Microsoft Teams 2021.
-La suppression des marges autour de tous les onglets permettra aux développeurs de créer des applications qui semblent plus natives Teams. Cela s’alignera également sur nos [conceptions de kit d’interface utilisateur.](~/tabs/design/tabs.md) La plupart des applications ont déjà une meilleure apparence sans les marges qui entourent leur expérience. Toutefois, certains onglets sont visuellement affectés par cette modification, et les développeurs doivent apporter les modifications nécessaires.
+La suppression des marges autour de tous les onglets permettra aux développeurs de créer des applications qui semblent plus natives Teams. Cela s’alignera également sur nos [conceptions de kit d’interface utilisateur.](~/tabs/design/tabs.md) La plupart des applications ont déjà une meilleure apparence sans les marges qui entourent leur expérience. Toutefois, certains onglets sont visuellement affectés par cette modification et les développeurs doivent apporter les modifications nécessaires.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabulation et sans marges" border="false":::
 
@@ -26,7 +26,7 @@ La suppression des marges autour de tous les onglets permettra aux développeurs
 ## <a name="timelines"></a>Chronologies
 
 * 5 mars 2021 - Marges supprimées dans la prévisualisation [publique pour les développeurs.](~/resources/dev-preview/developer-preview-intro.md)
-* 15 juin 2021 - Les marges seront supprimées en production.
+* 31 juillet 2021 - Les marges seront supprimées en production.
 
 ## <a name="guidelines"></a>Conseils
 
@@ -36,7 +36,7 @@ Les développeurs d’onglets ne doivent pas compter sur Teams pour fournir des 
 
 ## <a name="faq"></a>FAQ
 
-**Est-il possible pour le chrome de l’application, comme la barre d’en-tête ou la barre des tâches, d’toucher les bords de nos conceptions ?**
+**Est-ce que le chrome de l’application, tel que la barre d’en-tête ou la barre des tâches, est autorisé à toucher les bords de nos conceptions ?**
 
 Oui, c’est correct et encouragé. Cela permet à l’application de se sentir native.
 
