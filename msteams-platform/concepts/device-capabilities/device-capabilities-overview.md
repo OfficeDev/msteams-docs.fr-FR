@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: Image de l’image de l’appareil photo microphone microphone qr code code code-barres code-barres analyse scanneur emplacement des fonctionnalités natives d’autorisations de périphérique
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: e1ee7f81c5280baafb1325a5c6537f9fa00f53ad
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211582"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726935"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
@@ -43,3 +43,4 @@ Après avoir accédé aux fonctionnalités de l’appareil, [](mobile-camera-ima
 * Partager l’emplacement à [l’aide du s picker d’emplacement.](location-capability.md)
 
 En outre, vous pouvez intégrer [](people-picker-capability.md) le Teams sélecateur de personnes natives qui permet aux utilisateurs de rechercher et de sélectionner des personnes dans l’expérience d’application web.
+

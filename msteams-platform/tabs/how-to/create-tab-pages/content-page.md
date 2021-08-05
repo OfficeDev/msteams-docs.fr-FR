@@ -6,12 +6,12 @@ keywords: 'onglets teams : canal de groupe configurable statique'
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1276fdac2d3a30836b574b8e51b99fcbd7a415d2
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 6d1a0f6dd3593209f94966140ea94b33ac0c8d10
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179733"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726872"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -40,7 +40,7 @@ Le code suivant fournit un exemple de la façon dont votre page et le client Tea
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
 

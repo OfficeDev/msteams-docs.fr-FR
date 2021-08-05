@@ -5,12 +5,12 @@ description: Vue d’ensemble des onglets personnalisés sur la plateforme Teams
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179917"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726858"
 ---
 # <a name="microsoft-teams-tabs"></a>Onglets Microsoft Teams
 
@@ -76,6 +76,10 @@ Que vous choisissiez d’exposer votre onglet dans le canal ou le groupe, ou dan
 Pour les onglets de canal ou de groupe, vous pouvez également créer une page de configuration supplémentaire. Cette page vous permet de configurer l’URL de la page de contenu, généralement en utilisant des paramètres de chaîne de requête d’URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet de canal ou de groupe peut être ajouté à plusieurs conversations d’équipe ou de groupe. Lors de chaque installation ultérieure, vos utilisateurs peuvent configurer l’onglet, ce qui vous permet d’adapter l’expérience selon les besoins. Lorsque les utilisateurs ajoutent ou configurent un onglet, une URL est associée à l’onglet présenté dans l’interface Teams’utilisateur. La configuration d’un onglet ajoute simplement des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet Azure Boards, la page de configuration vous permet de choisir la carte à laquelle l’onglet se charge. L’URL de la page de configuration est spécifiée par la  `configurationUrl` propriété dans le tableau dans le manifeste de votre `configurableTabs` application.
 
 Vous pouvez avoir plusieurs canaux ou onglets de groupe et jusqu’à 16 onglets personnels par application.
+
+### <a name="tools-you-can-use-to-build-tabs"></a>Outils que vous pouvez utiliser pour créer des onglets
+* [Teams Shared Computer Toolkit code Visual Stuido](../toolkit/visual-studio-code-overview.md)
+* [Teams Shared Computer Toolkit pour Visual Stuido](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>Voir aussi
 

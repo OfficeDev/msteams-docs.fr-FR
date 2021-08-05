@@ -6,14 +6,14 @@ keywords: Canal de groupe onglets teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179936"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726830"
 ---
-# <a name="prerequisites"></a>Configuration requise
+# <a name="prerequisites"></a>Conditions préalables
 
 Teams onglets doivent respecter les conditions préalables suivantes :
 
@@ -39,10 +39,18 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 
 * L’onglet Teams MS ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
 
+## <a name="tools-you-can-use-to-build-tabs"></a>Outils que vous pouvez utiliser pour créer des onglets
+* [Extension de kit de ressources Teams pour Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+* [Extension de kit de ressources Teams pour Visual Studio](../../toolkit/visual-studio-overview.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
+* [Créer votre première application à l’aide de React](../../get-started/first-app-react.md)
+* [Créer votre première application à l’aide de Blazor](../../get-started/first-app-blazor.md)
+* [Créer votre première application à l’aide de SPFx](../../get-started/first-app-spfx.md)
+* [Créer votre premier bot conversationnel](../../get-started/first-app-bot.md)
+* [Créer votre première extension de message](../../get-started/first-message-extension.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 
 ## <a name="next-step"></a>Étape suivante
