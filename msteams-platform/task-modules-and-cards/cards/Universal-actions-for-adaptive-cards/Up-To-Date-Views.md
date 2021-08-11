@@ -4,25 +4,25 @@ description: Exemple d’affichages à jour à l’aide du bot universel
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 2027d07961929fb40e7afc3ee268e1267b235a02
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088843"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707419"
 ---
 # <a name="up-to-date-cards"></a>Cartes actualisées
 
-Vous pouvez désormais fournir les dernières informations à vos utilisateurs sur les cartes adaptatives avec une combinaison de modifications d’actualisation et de message Teams. Ainsi, vous pouvez mettre à jour dynamiquement les affichages spécifiques de l’utilisateur à leur état le plus récent en cas de modification de votre service. Par exemple, dans le cas de cartes de gestion de projet ou de tickets, vous pouvez mettre à jour les commentaires et l’état de la tâche. En cas d’approbation, le dernier état est reflété tout en fournissant des informations et des actions différenciées.
+Vous pouvez désormais fournir les dernières informations à vos utilisateurs sur les cartes adaptatives. Incluez une combinaison d’actualisation et de modification de message dans Teams. Mettez à jour dynamiquement les affichages spécifiques de l’utilisateur à leur état le plus récent en cas de modification de votre service. Par exemple, pour les cartes de gestion de projet ou de tickets, mettez à jour les commentaires et l’état de la tâche. Pour les approbations, l’état le plus récent est reflété tout en fournissant des informations et des actions différenciées.
 
 Par exemple, un utilisateur peut créer une demande d’approbation de biens dans Teams conversation. Alex crée une demande d’approbation et l’affecte à Megan et Nestor. Voici les deux parties pour créer la demande d’approbation :
 
-* Les vues spécifiques à l’utilisateur peuvent être exploitées à `refresh` l’aide de la propriété des cartes adaptatives.
+* Les affichages spécifiques à l’utilisateur peuvent être appliqués à `refresh` l’aide de la propriété des cartes adaptatives.
 À l’aide des affichages  spécifiques de l’utilisateur, vous pouvez afficher une carte avec des boutons Approuver ou Rejeter à un ensemble d’utilisateurs et afficher une carte sans ces boutons à d’autres utilisateurs. 
 
-* Pour maintenir l’état de la carte à jour en permanence, Teams mécanisme de modification des messages peut être mis à profit. Par exemple, chaque fois qu’une approbation est en place, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs d’actualisation automatique, à laquelle le bot peut répondre avec la carte utilisateur spécifique mise `adaptiveCard/action` à jour.
+* Pour que l’état de la carte reste toujours à jour, Teams mécanisme de modification de message peut être utilisé. Par exemple, pour chaque approbation, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs d’actualisation automatique, à laquelle le bot peut répondre avec la carte utilisateur spécifique mise `adaptiveCard/action` à jour.
 
-Pour plus d’informations, [voir comment modifier un message de bot.](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
+Pour plus d’informations, [voir comment modifier un message de bot.](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
 
 ## <a name="approval-base-card"></a>Carte de base d’approbation
 
@@ -110,9 +110,9 @@ Le code suivant fournit un exemple de carte d’approbation avec les boutons **A
 }
 ```
 
-Voici les deux rôles présentés aux utilisateurs en fonction de leur implication dans la demande d’approbation :
+Les deux rôles présentés aux utilisateurs en fonction de la demande d’approbation sont les suivants :
 
-* Carte de base d’approbation : présentée aux utilisateurs qui ne font pas partie de la liste des approuveurs et qui n’ont pas encore approuvé ou rejeté la demande et qui ne font pas partie de la liste dans la propriété du JSON de carte `userIds` `refresh` adaptative.
+* Carte de base d’approbation : présentée aux utilisateurs qui ne font pas partie de la liste des approuveurs et que la demande n’est pas encore approuvée ou rejetée, et ne fait pas partie de la liste dans la propriété du JSON de carte `userIds` `refresh` adaptative.
 * Carte d’approbation  avec **boutons** Approuver ou Rejeter : affichée aux utilisateurs qui font partie de la liste des approuveurs et à la liste dans la propriété du JSON de carte `userIds` adaptative. `refresh`
 
 **Pour envoyer la demande d’approbation de biens**
@@ -123,8 +123,8 @@ Voici les deux rôles présentés aux utilisateurs en fonction de leur implicati
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Affichages spécifiques à l’utilisateur":::
 
-4. Nestor sélectionne le **bouton Approuver** qui est alimenté avec `Action.Execute` . Le bot obtient `adaptiveCard/action` une demande d’appel à laquelle il peut renvoyer une carte adaptative en réponse.
-5. Le bot déclenche une modification de message avec une carte mise à jour qui indique que Nestor a approuvé la demande pendant que l’approbation de Megan est en attente.
+4. Nestor sélectionne le **bouton Approuver,** qui est alimenté avec `Action.Execute` . Le bot obtient `adaptiveCard/action` une demande d’appel à laquelle il peut renvoyer une carte adaptative en réponse.
+5. Le bot déclenche une modification de message avec une carte mise à jour, ce qui indique que Nestor a approuvé la demande pendant que l’approbation de Megan est en attente.
 6. La modification du message du bot déclenche une actualisation automatique pour Megan et voit la carte spécifique de  l’utilisateur mise à jour, qui indique que Nestor a approuvé la demande, mais voit également les boutons Approuver ou Rejeter.  L’utilisateur DE NEstor EST supprimé de la liste dans la propriété de cette carte adaptative JSON aux étapes `userIds` `refresh` 4 et 5. À présent, l’actualisation automatique est déclenchée uniquement pour Megan.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Affichages utilisateur spécifiques à jour":::
@@ -258,6 +258,12 @@ Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse a
   ]
 }
 ```
+
+## <a name="code-sample"></a>Exemple de code
+
+|Exemple de nom | Description | . NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques de l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

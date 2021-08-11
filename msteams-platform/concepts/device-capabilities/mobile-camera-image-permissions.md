@@ -6,12 +6,12 @@ keywords: Média d’autorisations d’appareil natif des fonctionnalités du mi
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 22d4a791e83cf36f18b75a3846865835b0ee024f
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211624"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704964"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias 
 

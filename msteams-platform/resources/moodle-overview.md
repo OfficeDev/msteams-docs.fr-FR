@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: a3b048948382de844a3b335c2425b5fa5fe6bb1e
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: 258ee963225d3ff9b699a8772fe689bcaa75addd66f5dc3d61ec4b73dcefc746
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555481"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703116"
 ---
 # <a name="moodle-learning-management-system"></a>Système de gestion de l’apprentissage par le chat
 
@@ -32,7 +32,7 @@ Regardez la vidéo suivante pour comprendre comment mConnect et Teams fonctionne
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
-À partir de l’intérieur de mConnect, les participants au cours accèdent à l’expérience complète du cours De l’utilisateur à l’intérieur de la collaboration et de la communication en temps réel Microsoft Teams.
+À partir de l’intérieur de mConnect, les participants au cours accèdent à l’expérience complète du cours Le jeu à l’intérieur de la collaboration et de la communication en temps réel fournies par Microsoft Teams.
 
 ### <a name="get-started-with-mconnect-and-teams"></a>Mise en place de mConnect et de Teams
 

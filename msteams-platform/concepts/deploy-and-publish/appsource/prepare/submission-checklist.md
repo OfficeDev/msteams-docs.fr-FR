@@ -1,16 +1,16 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Décrit les dernières étapes avant de soumettre votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
+description: Décrit les dernières étapes avant d’envoyer votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
 ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c0f9c3328018884290c86a49b8026ce81022cd83
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: d18cd98bf9b5b0921a45c4f4a4affb4b51153c90668da7cb990b2fd9b9f669f7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763107"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706477"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
 
@@ -49,7 +49,7 @@ En fonction des fonctionnalités de votre application, vous devrez peut-être fo
 * Un compte ayant accès aux fonctionnalités premium ou mises à niveau (le cas échéant)
 * Deux comptes dans le même client pour tester l’expérience de collaboration pour les applications qui fonctionnent dans des contextes partagés (le cas échéant)
 
-### <a name="tenant-configurations"></a>Configurations de client
+### <a name="tenant-configurations"></a>Configurations client
 
 Si vous devez configurer un client Teams pour utiliser votre application, incluez ces instructions et les comptes administrateur et non administrateur pour la validation.
 

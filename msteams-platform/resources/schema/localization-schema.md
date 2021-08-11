@@ -1,18 +1,18 @@
 ---
-title: Localize JSON schema reference
+title: Localiser la référence de schéma JSON
 description: Décrit le schéma de localisation pris en charge par le fichier de localisation pour Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: Localisation du schéma de manifeste teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 6e8f666cc6bfa693d7f2f469fc58fd6ee4860a80
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 7a7c5e61e8e9db2526a725d676a237d9c37f7d71ea74d42117e0b59b51cae969
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140511"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705544"
 ---
-# <a name="localize-json-schema-reference"></a>Localize JSON schema reference
+# <a name="localize-json-schema-reference"></a>Localiser la référence de schéma JSON
 
 Le Microsoft Teams de localisation décrit les traductions linguistiques qui sont servies en fonction des paramètres de langue du client. Votre fichier doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json) . 
 
@@ -43,20 +43,20 @@ Le schéma définit les propriétés suivantes :
 |Propriété|Type|Longueur maximale|Description|
 |---------------|--------|---------|------------------|
 |`$schema`|URI|N/A|L https:// URL référente au schéma JSON pour le manifeste.|
-|`name.short`|String|30|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
+|`name.short`|Chaîne|30|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
 |`name.full`|Chaîne|100|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
-|`description.short`|String|80|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
-|`description.full`|String|4000|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
-|`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|String|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|String|32|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`## bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|String|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title`|String|32|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description`|String|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title`|String|32|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|String|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|String|512|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|String|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`description.short`|Chaîne|80|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
+|`description.full`|Chaîne|4000|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
+|`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|Chaîne|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|Chaîne|32|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`## bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|Chaîne|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title`|Chaîne|32|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description`|Chaîne|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title`|Chaîne|32|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|Chaîne|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|Chaîne|512|Remplace la chaîne correspondante du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|Chaîne|128|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|Chaîne|64|Remplace les chaînes correspondantes du manifeste de l’application par la valeur fournie ici.|
 
 ## <a name="see-also"></a>Voir aussi
 

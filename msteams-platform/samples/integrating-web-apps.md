@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Applications web
-ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 4a25649a8a791efc3f33572da203e36c7f39cb11f64676218f3a3f240da956c1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630431"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708328"
 ---
 # <a name="web-apps"></a>Applications web 
 
@@ -50,7 +50,7 @@ L’intégration de toutes les fonctionnalités d’une application existante da
 
 **Conditions préalables à l’intégration de votre application à Teams** Voici les conditions préalables à l’intégration de votre application avec Teams. 
 
-1. [Maptez les cas d’utilisation de votre application Teams fonctionnalités de plateforme.](../concepts/design/map-use-cases.md)
+1. [Maposez les cas d’utilisation de votre application Teams fonctionnalités de la plateforme.](../concepts/design/map-use-cases.md)
 1. [Déterminez les points d’entrée de votre application.](../concepts/extensibility-points.md) S’agit-il d’un usage personnel, d’une collaboration ou des deux ?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>Comprendre les SharePoint et les options
@@ -74,7 +74,7 @@ Si votre application est utilisée par plusieurs organisations, envisagez l’h�
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge de liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
+Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur les Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge des liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
 
 En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-to/access-teams-context.md) [bot.](../bots/how-to/get-teams-context.md)
 
@@ -84,9 +84,12 @@ En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-
 
 Azure Active Directory (AD) est le fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Azure AD.
 
-Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
+Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des instructions pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
-Pour SharePoint pages, vous pouvez uniquement utiliser l’oD unique et vous ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’oD unique fonctionne pour une autre application, car l’ID est l’SharePoint application.
+> [!IMPORTANT]
+> Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)
+
+Pour SharePoint pages, vous pouvez uniquement utiliser l’oD unique et vous ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’oD unique fonctionne pour une autre application, car l’ID est l’application SharePoint.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 
@@ -94,7 +97,7 @@ En savoir plus sur [l’authentification dans Teams](../concepts/authentication/
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.md) pour que votre application soit native à Teams. Vous ne pouvez pas migrer le contenu d’une application existante vers Teams onglet. Pour plus d’informations sur la conception d’application, voir [Fluent Design System.](https://fluentsite.z22.web.core.windows.net/)
+Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.md) pour que votre application soit native à Teams. Vous ne pouvez pas migrer le contenu d’une application existante vers Teams onglet. Pour plus d’informations sur la conception d’une [application, voir Système Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Optimiser la liaison profonde
 

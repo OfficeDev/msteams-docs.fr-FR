@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des Microsoft Teams applications. Les 
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644874"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705032"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams web
 
@@ -84,7 +84,7 @@ L’application est basée sur un scénario que les personnes doivent faire dans
 
 ### <a name="easy-to-use"></a>Facile à utiliser
 
-L’interface utilisateur est facile à comprendre, agréable dans l’apparence et le ton et rend les utilisateurs plus productifs.
+L’interface utilisateur est facile à comprendre, agréable en apparence et en ton, et rend les utilisateurs plus productifs.
 
    :::column-end:::
    :::column span="":::
@@ -133,7 +133,7 @@ Créez rapidement des conceptions complexes et haute fidélité avec des modèle
 
 ## <a name="basic-ui-components"></a>Composants d’interface utilisateur de base
 
-Basés sur l’interface utilisateur [](design-teams-app-basic-ui-components.md) Fluent, voici les principaux éléments que vous pouvez utiliser pour créer Teams expériences à partir de zéro.
+En fonction de Fluent’interface utilisateur, [](design-teams-app-basic-ui-components.md) voici les principaux éléments que vous pouvez utiliser pour créer Teams expériences de base à partir de zéro.
 
 ## <a name="tools-and-samples"></a>Outils et exemples
 
@@ -169,16 +169,16 @@ Vous pouvez télécharger un exemple d’application pour voir l’apparence et 
 
 Pour en savoir plus, essayez l’une des ressources suivantes :
 
-### <a name="fluent-ui-documentation"></a>Documentation de l’interface utilisateur Fluent
+### <a name="fluent-ui-documentation"></a>Fluent Documentation de l’interface utilisateur
 
-Obtenez des exemples de code et des détails d’implémentation pour les composants d’interface utilisateur Fluent de base utilisés pour créer Teams expériences utilisateur.
+Obtenez des exemples de code et des détails d’implémentation pour les composants Fluent’interface utilisateur de base utilisés pour créer Teams expériences utilisateur.
 
 > [!div class="nextstepaction"]
-> [Essayer Teams composants d’interface utilisateur (interface utilisateur Fluent)](https://fluentsite.z22.web.core.windows.net/)
+> [Essayer Teams composants d’interface utilisateur (Fluent’interface utilisateur)](https://fluentsite.z22.web.core.windows.net/)
 
 ### <a name="adaptive-cards-designer"></a>Concepteur de cartes adaptatives
 
 Concevez des cartes adaptatives dans notre outil web.
 
 > [!div class="nextstepaction"]
-> [Essayer le concepteur de cartes adaptatives](https://adaptivecards.io/designer/)
+> [Essayer le concepteur Cartes adaptatives](https://adaptivecards.io/designer/)

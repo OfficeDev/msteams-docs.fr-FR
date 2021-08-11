@@ -5,12 +5,12 @@ keywords: mise en place des équipes du portail de développement
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 6dca8723248441c3cf672931295b4b68e02cc24c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 6934978c1b30cfa53b2307d772f7093047c1eb454cd4ff2010767b8d5e270bb9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949685"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707697"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
@@ -60,7 +60,7 @@ Pour installer et restituer votre application dans Teams, vous devez inclure un 
 
 ## <a name="test-your-app-directly-in-teams"></a>Testez votre application directement dans Teams
 
-Le Portail des développeurs fournit des options pour tester et déboguer votre application :
+Le Portail des développeurs fournit des options de test et de débogage de votre application :
 
 * Dans la page **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
 * **L’aperçu Teams** bouton vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
@@ -69,7 +69,7 @@ Le Portail des développeurs fournit des options pour tester et déboguer votre 
 
 À partir du portail  du développeur, utilisez le bouton Distribuer pour télécharger un package d’application, publier dans votre organisation ou publier sur le Teams store.
 
-Pour plus d’informations, [voir distribuer votre Teams application.](~/concepts/deploy-and-publish/apps-publish-overview.md)
+Pour plus d’informations, [voir distribuer votre Teams app.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
 

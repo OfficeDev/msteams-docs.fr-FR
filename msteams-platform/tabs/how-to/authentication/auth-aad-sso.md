@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 localization_priority: Normal
 keywords: Api d’authentification unique SSO AAD d’authentification teams
-ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049035"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701895"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -39,12 +39,13 @@ L’image suivante illustre le fonctionnement du processus DSO :
 1. Dans l’onglet, un appel JavaScript est effectué pour `getAuthToken()`. Cela indique Teams obtenir un jeton d’authentification pour l’application onglet.
 2. Si c’est la première fois que l’utilisateur actuel utilise votre application d’onglet, une invite de demande de consentement s’impose ou permet de gérer l’authentification par étapes, telle que l’authentification à deux facteurs.
 3. Teams demande le jeton d’application d’onglet Azure Active Directory point de terminaison (AAD) pour l’utilisateur actuel.
-4. AAD envoie le jeton d’application d’onglet à l Teams application.
+4. AAD envoie le jeton d’application d’onglet à Teams application.
 5. Teams envoie le jeton d’application d’onglet à l’onglet dans le cadre de l’objet de résultat renvoyé par `getAuthToken()` l’appel.
 6. Le jeton est analysé dans l’application de l’onglet à l’aide de JavaScript, afin d’extraire les informations requises, telles que l’adresse de l’utilisateur.
 
 > [!NOTE]
-> La licence n’est valide que pour donner son consentement à un ensemble limité d’API au niveau de l’utilisateur , à savoir la messagerie, le `getAuthToken()` profil, offline_access et OpenId. Il n’est pas utilisé pour d’autres Graph étendues telles que `User.Read` ou `Mail.Read` . Pour obtenir des solutions de contournement suggérées, voir [les Graph supplémentaires.](#apps-that-require-additional-graph-scopes)
+> La licence n’est valide que pour donner son consentement à un ensemble limité d’API au niveau de l’utilisateur , à savoir la messagerie, le `getAuthToken()` profil, offline_access et OpenId. Il n’est pas utilisé pour d’autres Graph étendues telles que `User.Read` ou `Mail.Read` . Pour obtenir des solutions de contournement suggérées, voir Obtenir un [jeton d’accès Graph autorisations.](#get-an-access-token-with-graph-permissions)
+
 
 L’API DSO fonctionne également dans les [modules de tâche](../../../task-modules-and-cards/what-are-task-modules.md) qui incorporent du contenu web.
 
@@ -59,12 +60,12 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 1. Obtenez votre [ID d’application AAD.](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
 1. Spécifiez les autorisations dont votre application a besoin pour le point de terminaison AAD et, éventuellement, Graph.
 1. [Accordez des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) Teams applications mobiles, web et de bureau.
-1. Pré-autoriser les Teams en sélectionnant  le bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
+1. Pré-autoriser Teams en sélectionnant le  bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
 
 > [!NOTE]
 > Vous devez connaître certaines restrictions importantes :
 >
-> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge, à l’image, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir `User.Read` `Mail.Read` la solution de [contournement recommandée.](#apps-that-require-additional-graph-scopes)
+> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge, à l’image, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` Graph [autorisations.](#get-an-access-token-with-graph-permissions)
 > * Il est important que le nom de domaine de votre application soit identique au nom de domaine que vous avez enregistré pour votre application AAD.
 > * Actuellement, plusieurs domaines par application ne sont pas pris en charge.
 
@@ -83,7 +84,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
     > [!NOTE]
     > Si vous construisez une application avec un bot et un onglet, entrez l’URI de l’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
-1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les barres obliques doubles et le GUID. L’ID entier doit avoir la forme de `api://fully-qualified-domain-name.com/{AppID}` . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
+1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les barres obliques doubles et le GUID. L’ID entier doit avoir la forme `api://fully-qualified-domain-name.com/{AppID}` de . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
 1. Sélectionnez **Ajouter une étendue**. Dans le panneau qui s’ouvre, **entrez access_as_user** comme **nom d’étendue.**
 1. In the **Qui can consent?** box, enter **Admins and users**.
 1. Entrez les détails dans les zones de configuration des invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue :
@@ -112,9 +113,9 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
     * Sélectionnez **web**.
     * Entrez **l’URI de redirection** de votre application. Il s’agit de la page dans laquelle un flux d’octroi implicite réussi redirige l’utilisateur. Il s’agit du même nom de domaine complet que celui que vous avez entré à l’étape 5, suivi de l’itinéraire d’API où une réponse d’authentification est envoyée. Si vous êtes en cours de suivi de l’un Teams exemples, il s’agit de `https://subdomain.example.com/auth-end` .
 
-    Activez l’octroi implicite en cochant les cases suivantes : ✔ ID de ✔'accès
+    Activez l’octroi implicite en cochant les cases suivantes : ✔'ID ✔'accès
 
-Félicitations ! Vous avez rempli les conditions préalables à l’inscription de l’application pour poursuivre l’application d' ces onglets.
+Félicitations ! Vous avez rempli les conditions préalables à l’inscription de l’application pour poursuivre l’application d' ces onglets.
 
 > [!NOTE]
 >
@@ -137,11 +138,11 @@ Utilisez le code suivant pour ajouter de nouvelles propriétés à Teams manifes
 
 > [!div class="checklist"]
 > * **id** : ID client de l’application. Il s’agit de l’ID d’application que vous avez obtenu dans le cadre de l’inscription de l’application auprès d’Azure AD.
->* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI (y compris le protocole) que vous avez enregistré lors de la création de votre étape `api://` `scope` 6. Vous ne devez pas inclure le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine, y compris les sous-domaines, utilisés dans les URL de votre manifeste d Teams’application.
+>* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI (y compris le protocole) que vous avez enregistré lors de la création de votre à `api://` `scope` l’étape 6. Vous ne devez pas inclure le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine, y compris les sous-domaines, utilisés dans les URL de votre manifeste d Teams’application.
 
 > [!NOTE]
 >
->* La ressource d’une application AAD est généralement la racine de son URL de site et de l’appID (par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ). Cette valeur est également utilisée pour vous assurer que votre demande est provenant du même domaine. Assurez-vous `contentURL` que l’onglet utilise les mêmes domaines que votre propriété de ressource.
+>* La ressource d’une application AAD est généralement la racine de son URL de site et de l’appID (par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ). Cette valeur est également utilisée pour vous assurer que votre demande est provenant du même domaine. Assurez-vous que `contentURL` l’onglet utilise les mêmes domaines que votre propriété de ressource.
 >* Vous devez utiliser la version de manifeste 1.5 ou une version supérieure pour implémenter le `webApplicationInfo` champ.
 
 ### <a name="3-get-an-authentication-token-from-your-client-side-code"></a>3. Obtenir un jeton d’authentification à partir de votre code côté client
@@ -172,19 +173,17 @@ Après avoir reçu le jeton d’accès dans le rappel de réussite, vous pouvez 
 
 ## <a name="known-limitations"></a>Limitations connues
 
-### <a name="apps-that-require-additional-graph-scopes"></a>Applications qui nécessitent des étendues Graph supplémentaires
+### <a name="get-an-access-token-with-graph-permissions"></a>Obtenir un jeton d’accès avec Graph autorisations
 
-Notre implémentation actuelle pour l' utilisateur unique accorde uniquement le consentement pour les autorisations au niveau de l’utilisateur ( e-mail, profil, offline_access, OpenId et non pour d’autres API telles que User.Read ou Mail.Read). Si votre application a besoin d’Graph étendues supplémentaires, la section suivante fournit des solutions de contournement.
+Notre implémentation actuelle pour l' utilisateur unique accorde uniquement le consentement pour les autorisations au niveau de l’utilisateur qui ne sont pas utilisables pour effectuer Graph appels. Pour obtenir les autorisations (étendues) nécessaires pour effectuer un appel Graph, les solutions d’personnalisation de l’personnalisation doivent implémenter un service web personnalisé pour échanger le jeton obtenu à partir du SDK JavaScript Teams contre un jeton qui inclut les étendues nécessaires. Cela s’accomplit à l’aide du flux « de la part [de » d’AAD.](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
 
 #### <a name="tenant-admin-consent"></a>Consentement de l’administrateur client
-
-L’approche la plus simple consiste à obtenir le consentement préalable d’un administrateur client au nom de l’organisation. Cela signifie que les utilisateurs n’ont pas à consentir à ces étendues et [](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)que vous pouvez ensuite être libre d’échanger le côté serveur de jetons à l’aide du flux de la part d’AAD. Cette solution de contournement est acceptable pour les applications métier internes, mais pas pour les développeurs tiers qui ne peuvent pas compter sur l’approbation de l’administrateur client.
 
 Une méthode simple de consentement pour le compte d’une organisation en tant qu’administrateur client consiste à faire référence à `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>` .
 
 #### <a name="ask-for-additional-consent-using-the-auth-api"></a>Demander un consentement supplémentaire à l’aide de l’API Auth
 
-Une autre approche pour obtenir des étendues Graph supplémentaires consiste à présenter une boîte de dialogue de consentement à l’aide de notre approche d’authentification [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) basée sur le web existante qui implique l’obtention d’une boîte de dialogue de consentement Azure AD. 
+Une autre approche pour obtenir des étendues de Graph supplémentaires consiste à présenter une boîte de dialogue de consentement à l’aide de notre approche d’authentification [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) basée sur le web existante qui implique l’obtention d’une boîte de dialogue de consentement Azure AD. 
 
 **Pour demander un consentement supplémentaire à l’aide de l’API Auth**
 
@@ -199,7 +198,7 @@ Une autre approche pour obtenir des étendues Graph supplémentaires consiste à
 
 ### <a name="non-aad-authentication"></a>Authentification non-AAD
 
-La solution d’authentification décrite ci-dessus fonctionne uniquement pour les applications et services qui utilisent AAD en tant que fournisseur d’identité. Les applications qui souhaitent s’authentifier à l’aide de services non basés sur AAD doivent continuer à utiliser le flux d’authentification web basé sur les fenêtres [pop-up.](~/concepts/authentication.md)
+La solution d’authentification décrite ci-dessus fonctionne uniquement pour les applications et les services qui utilisent AAD en tant que fournisseur d’identité. Les applications qui souhaitent s’authentifier à l’aide de services non basés sur AAD doivent continuer à utiliser le flux d’authentification web basé sur les fenêtres [pop-up.](~/concepts/authentication.md)
 
 > [!NOTE]
 > L' sso est prise en charge pour les applications du client au sein des clients AAD B2C.

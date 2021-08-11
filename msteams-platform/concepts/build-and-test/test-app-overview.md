@@ -3,13 +3,13 @@ title: Tester la vue d’ensemble de votre application
 description: Décrit le processus de test de votre application Teams personnalisée dans Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
-keywords: Configurer Microsoft 365 client Teams l’application de test
-ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+keywords: Configurer le Microsoft 365 client Teams l’application de test de téléchargement
+ms.openlocfilehash: e33a1adb9ebc11f8bd1ece8f5fe43fc78e60b11883551fbd0ee3dfae237737cf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631005"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707688"
 ---
 # <a name="test-your-app"></a>Tester votre application
 
@@ -21,7 +21,7 @@ Après avoir intégré votre application à Microsoft Teams, vous devez la teste
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
-Avant de commencer à tester votre application, préparez votre client de test Microsoft 365 et activez l’application Teams personnalisée vous permet de télécharger votre application. Vous devez vous inscrire au programme Microsoft 365 développeur et gérer les paramètres Teams de votre organisation. Configurez votre abonnement développeur et configurez-le par le biais de [la préparation Microsoft 365 client.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Avant de commencer à tester votre application, préparez votre client de test Microsoft 365 et activez l’Teams personnalisée vous permettant de télécharger votre application. Vous devez vous inscrire au programme Microsoft 365 développeur et gérer les paramètres Teams de votre organisation. Configurez votre abonnement développeur et configurez-le par le biais de [la préparation Microsoft 365 client.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ## <a name="test-and-debug"></a>Test et débogage
 
@@ -29,7 +29,7 @@ Pour tester et déboguer votre application, vous devez créer au moins un espace
 
 Testez votre bot localement. Pour plus d’informations, voir [déboguer votre bot localement avec un IDE.](~/bots/how-to/debug/locally-with-an-ide.md) Vous pouvez également déboguer votre bot avec des logiciels [intermédiaires d’inspection](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) et des [outils adaptatifs.](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true) 
 
-Pour afficher les journaux de la console, afficher ou modifier des requêtes html, css et réseau pendant l’runtime, ajoutez des points d’arrêt à votre code JavaScript et effectuez un débogage interactif pour accéder aux DevTools. Pour plus d’informations, [voir Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
+Pour afficher les journaux de la console, afficher ou modifier des requêtes html, css et réseau pendant l’utilisation, ajoutez des points d’arrêt à votre code JavaScript et effectuez un débogage interactif pour accéder aux DevTools. Pour plus d’informations, [voir Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
 
 ## <a name="add-test-data-to-your-microsoft-365-tenant"></a>Ajouter des données de test à votre client Microsoft 365 client
 

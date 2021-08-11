@@ -5,16 +5,16 @@ description: Lorsque vous planifiez votre Microsoft Teams, vous devez d’abord 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994097"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703172"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
-La plateforme Microsoft Teams offre une grande variété de points d’entrée et d’éléments [d’interface utilisateur](../../concepts/extensibility-points.md) dont votre application peut tirer parti.
+La plateforme Microsoft Teams offre une grande variété de points d’entrée et d’éléments d’interface [utilisateur](../../concepts/extensibility-points.md) dont votre application peut tirer parti.
 > [!NOTE]
 > Avant de commencer à créer vos cas d’utilisation, vous devez bien comprendre les fonctionnalités de Teams et ce qui est possible sur la plateforme Teams les utiliser.
 
@@ -22,7 +22,7 @@ Chaque méthode d’interaction avec vos utilisateurs a ses forces et ses faible
 
 ## <a name="understand-the-problem"></a>Comprendre le problème
 
-Chaque bonne application présente un problème principal ou un besoin qu’elle tente de résoudre. Avant de commencer à créer une application, vous devez expliquer ce qu’est ce problème. Dans son cœur, Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l’obtention d’une collaboration efficace sont parfaitement adaptées. Il s’agit également d’une plateforme sociale, d’une plateforme trans-plateforme native, qui se trouve au cœur de Office 365 et qui offre une zone de dessin personnelle pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une application Teams client. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
+Chaque bonne application présente un problème principal ou un besoin qu’elle tente de résoudre. Avant de commencer à créer une application, vous devez expliquer ce qu’est ce problème. Dans son cœur, Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l’obtention d’une collaboration efficace sont parfaitement adaptées. Il s’agit également d’une plateforme sociale, d’une plateforme trans-plateforme native, qui se trouve au cœur de Office 365 et qui offre une zone de dessin personnelle pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une Teams application. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
 
 * Quels sont les avantages et les inconvénients du système d’état actuel utilisé par vos utilisateurs ?
 * Quels sont les problèmes que vos utilisateurs rencontrent aujourd’hui et que vous souhaitez résoudre ?
@@ -82,6 +82,7 @@ Identifiez les nouvelles fonctionnalités que l’utilisateur préférera dans l
 * [Choisir comment distribuer votre application](../deploy-and-publish/apps-publish-overview.md)
 * [Onglets De conception](../../tabs/design/tabs.md)
 * [Bots de conception](../../bots/design/bots.md)
+* [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante
 

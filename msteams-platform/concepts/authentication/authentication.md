@@ -4,19 +4,19 @@ description: Décrit l’authentification Teams et comment l’utiliser dans les
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Authentification teams OAuth SSO AAD
-ms.openlocfilehash: ed169e3cc5f9190571890cb891665a493bd052d1
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 73d85fed57caff410e2f4986f208b868c228777deade8a5a2a0a1ce0e35d7cd3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726942"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705593"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 
 > [!Note]
 > L’authentification web sur les clients mobiles nécessite la version 1.4.1 ou ultérieure du SDK client JavaScript Teams version ultérieure.
 
-Pour accéder aux informations utilisateur protégées par Azure Active Directory (AAD) et accéder aux données à partir de services tels que Facebook et Twitter, l’application établit une connexion fiable avec ces fournisseurs. Si l’application utilise les API microsoft Graph dans l’étendue utilisateur, authentifier l’utilisateur pour récupérer les jetons d’authentification appropriés.
+Pour accéder aux informations utilisateur protégées par Azure Active Directory (AAD) et accéder aux données à partir de services tels que Facebook et Twitter, l’application établit une connexion fiable avec ces fournisseurs. Si l’application utilise les API Graph Microsoft dans l’étendue utilisateur, authentifier l’utilisateur pour récupérer les jetons d’authentification appropriés.
 
 Dans Teams, il existe deux flux d’authentification différents pour l’application. Effectuez un flux d’authentification basé sur le web traditionnel dans une [page](~/tabs/how-to/create-tab-pages/content-page.md) de contenu incorporée dans un onglet, une page de configuration ou un module de tâche. Si l’application contient un robot de conversation, utilisez le flux OAuthPrompt et éventuellement le service du jeton d’Azure Bot Framework pour authentifier un utilisateur dans le cadre d’une conversation.
 
@@ -36,7 +36,7 @@ L’OAuthPrompt d’Azure Bot Framework facilite l’authentification pour les a
 
 Pour plus d’informations sur l’utilisation d’OAuthPrompt, voir :
 
-* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans l’application Teams. Cela illustre un flux d’authentification non basé sur le web utilisé pour les bots sur Teams web, d’application de bureau et d’applications mobiles.
+* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans l’application Teams. Cela illustre un flux d’authentification non basé sur le web utilisé pour les bots sur Teams web, application de bureau et applications mobiles.
 * [L’authentification](~/bots/how-to/authentication/add-authentication.md) de bot décrit comment ajouter l’authentification OAuth au bot Teams bot.
 
 ## <a name="code-sample"></a>Exemple de code

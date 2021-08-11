@@ -5,12 +5,12 @@ description: Test et débogage de votre bot localement avec un IDE
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 5774833806940fcd4a2cc771687ecfcd9126c835582f71c21f26b92314a1df40
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068994"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706315"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -91,7 +91,7 @@ Pour empêcher votre bot de recevoir des messages, go to your **Bot Dashboard** 
 
 ## <a name="delete-a-bot-from-teams"></a>Supprimer un bot d’Teams
 
-Pour supprimer complètement votre bot de Teams, allez dans votre tableau de bord du bot et modifiez le canal Microsoft Teams bot.  Sélectionnez **le bouton** Supprimer en bas. Cela empêche les utilisateurs de découvrir, d’ajouter et d’interagir avec votre bot. Cela ne supprime pas le bot des instances de Teams d’autres utilisateurs, mais il cesse également de fonctionner pour eux.
+Pour supprimer complètement votre bot de Teams, go to your **Bot Dashboard** and edit the Microsoft Teams channel. Sélectionnez **le bouton** Supprimer en bas. Cela empêche les utilisateurs de découvrir, d’ajouter et d’interagir avec votre bot. Cela ne supprime pas le bot des instances de Teams d’autres utilisateurs, mais il cesse également de fonctionner pour eux.
 
 ## <a name="see-also"></a>Voir aussi
 

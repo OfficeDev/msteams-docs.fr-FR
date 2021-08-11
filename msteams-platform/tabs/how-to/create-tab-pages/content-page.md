@@ -6,12 +6,12 @@ keywords: 'onglets teams : canal de groupe configurable statique'
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d1a0f6dd3593209f94966140ea94b33ac0c8d10
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: f6f673420de73d786ddee95b4da7870750f3e6851a80f6ad71b1e606d650ba60
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726872"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708307"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -31,7 +31,7 @@ Pour plus d’informations, voir [recommandations en matière](~/tabs/design/tab
 
 ## <a name="integrate-your-code-with-teams"></a>Intégrer votre code avec Teams
 
-Pour que votre page s’affiche Teams, vous devez inclure le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et inclure un appel après le chargement de `microsoftTeams.initialize()` votre page. 
+Pour que votre page s’affiche Teams, vous devez inclure le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et inclure un appel après le chargement `microsoftTeams.initialize()` de votre page. 
 
 Le code suivant fournit un exemple de la façon dont votre page et le client Teams communiquent :
 
@@ -78,7 +78,7 @@ Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclu
 
 ## <a name="show-a-native-loading-indicator"></a>Afficher un indicateur de chargement natif
 
-À partir [du schéma de manifeste v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement [natif.](../../../resources/schema/manifest-schema.md#showloadingindicator) Par exemple, page de [contenu d’onglet,](#integrate-your-code-with-teams) [page de configuration,](configuration-page.md) [page de suppression](removal-page.md)et [modules de tâche dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+À partir [du schéma de manifeste v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement [natif.](../../../resources/schema/manifest-schema.md#showloadingindicator) Par exemple, page [de contenu d’onglet,](#integrate-your-code-with-teams) [page de configuration,](configuration-page.md) [page de suppression](removal-page.md)et [modules de tâche dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 > * Le comportement sur les clients mobiles n’est pas configurable via la propriété de l’indicateur de chargement natif. Les clients mobiles affichent cet indicateur par défaut sur les pages de contenu et les modules de tâche iframe. Cet indicateur sur mobile s’affiche lorsqu’une demande d’extraction de contenu est effectuée et est rejetée dès que la demande est terminée.

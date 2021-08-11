@@ -5,12 +5,12 @@ description: Décrit l’endroit où les personnes peuvent découvrir et utilise
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: c26b938f56af6f09c0e4ba274b9b3f4da19d08ee
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566172"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702759"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
@@ -47,7 +47,8 @@ La liste suivante montre comment les fonctionnalités Teams sont couramment util
 
 ## <a name="see-also"></a>Voir aussi
 
-[Teams recommandations en matière de conception d’application](../concepts/design/design-teams-app-overview.md)
+[Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
+[Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante
 

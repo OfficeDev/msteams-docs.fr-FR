@@ -6,12 +6,12 @@ author: jecha
 ms.author: jecha
 ms.topic: how-to
 keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 3ca4c00e59f2fe8f3ed03223b58c37927cf527ad
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 50fc8919e438bc849a76cb4d9a7f49449e7ff072dfae18edb66db23e7991d8d1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994402"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708038"
 ---
 # <a name="test-chat-rsc-postman-collection-for-json"></a>Test de la collection Postman RSC de conversation pour JSON
 

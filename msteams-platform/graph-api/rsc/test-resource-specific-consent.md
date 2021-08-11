@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 8f5b293557ef7de9e4d551c5ae2bd7216e6e3fc0
-ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
+ms.openlocfilehash: 8dd206abd4724bd5e23217504ff45edcc580d492e7af9f10ca46d70d64488cc9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53111127"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708083"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
@@ -87,11 +87,11 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de de
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
 * `teamGroupId`: vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
-    1. Dans le Teams client, **sélectionnez Teams** dans la barre de navigation à l’extrême gauche.
+    1. Dans le Teams client, **sélectionnez Teams** la barre de navigation à l’extrême gauche.
     2. Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
     3. Sélectionnez **l’icône Options** supplémentaires (&#8943;).
     4. Sélectionnez **Obtenir un lien vers l’équipe.** 
-    5. Copiez et enregistrez la **valeur groupId** à partir de la chaîne.
+    5. Copiez et enregistrez **la valeur groupId** à partir de la chaîne.
 
 ## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>Test ajout d’autorisations RSC à une conversation à l’aide de l’application Postman
 
@@ -125,8 +125,8 @@ Exécutez l’ensemble de la collection d’autorisations pour chaque appel d’
 1. Désinstallez l’application de la ressource spécifique.
 2. Suivez les étapes pour la conversation ou l’équipe : 
     1. [Test a ajouté des autorisations RSC à une équipe à l’aide de Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
-    2. [Test a ajouté des autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
-3. Vérifiez tous les codes d’état de réponse pour confirmer que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
+    2. [Test ajout d’autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
+3. Vérifiez tous les codes d’état de réponse pour vérifier que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -4,12 +4,12 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: c68a7a36212086c9c0929796cab66bc53f8cbb2b
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 507a044098e479c7b737d6d7711a4e912ec81cbfe56fda2345a088618c47b36b
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949769"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704048"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 

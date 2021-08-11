@@ -5,16 +5,19 @@ description: Créez un bot de conversation pour Microsoft Teams à l’aide du K
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 96bbddd99b6901a4b92e1e2f2dc98482c755dc66
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 3c70db137bc61e2beef09b130269ca34838d40dd344858215fc8d71f583b315a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254250"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707030"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Créer votre premier bot de conversation pour Microsoft Teams
 
-Dans ce didacticiel, vous découvrirez comment créer, exécuter et déployer une application bot Teams. Un bot agit en tant qu’intermédiaire entre un utilisateur Teams et un service web.  Les utilisateurs peuvent converser avec un bot pour obtenir rapidement des informations, initier des flux de travail ou tout autre action que votre service web peut effectuer. 
+Dans ce didacticiel, vous découvrirez comment créer, exécuter et déployer une application bot Teams. Un bot agit en tant qu’intermédiaire entre un utilisateur Teams et un service web. Les utilisateurs peuvent converser avec un bot pour obtenir rapidement des informations, initier des flux de travail ou tout autre action que votre service web peut effectuer. 
+
+> [!IMPORTANT]
+> Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais pas dans les GCC-High et le département de la Défense (DOD).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -139,6 +142,9 @@ Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 <summary>Découvrez comment résoudre les problèmes courants lorsque vous exécutez votre application localement.</summary>
 
 Pour exécuter correctement votre application dans Teams, vous devez avoir un compte de développement Microsoft 365 qui permet le chargement de version test d’une application. Pour plus d’informations sur l’ouverture d’un compte, voir [Conditions préalables](prerequisites.md#enable-sideloading).
+
+> [!IMPORTANT]
+> Pour l’instant, le chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-High et DOD.
 
 > [!TIP]
 > Vérifier l’absence de problèmes avant de charger la version test de votre application en utilisant [l’outil de validation d’application](https://dev.teams.microsoft.com/appvalidation.html) qui est inclus dans le kit de ressources. Corrigez les erreurs pour charger correctement la version test de l’application.

@@ -3,32 +3,32 @@ title: Travailler avec les actions universelles pour les cartes adaptatives
 description: Travaillez avec les actions universelles pour les cartes adaptatives.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649698"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701965"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Travailler avec les actions universelles pour les cartes adaptatives
 
-Les actions universelles pour les cartes adaptatives offrent un moyen d’implémenter des scénarios basés sur la carte adaptative pour les cartes Teams et Outlook. Ce document couvre les sujets suivants :
+Les actions universelles pour les cartes adaptatives permettent d’implémenter des scénarios basés sur la carte adaptative pour les deux Teams et Outlook. Ce document traite des sujets suivants :
 
 * [Schéma utilisé pour les actions universelles pour les cartes adaptatives](#schema-for-universal-actions-for-adaptive-cards)
 * [Modèle d’actualisation](#refresh-model)
 * [`adaptiveCard/action` activité d’appel](#adaptivecardaction-invoke-activity)
 * [Compatibilité descendante](#backward-compatibility)
 
-## <a name="quick-start-guide-to-leverage-universal-actions-for-adaptive-cards-in-teams"></a>Guide de démarrage rapide pour tirer parti des actions universelles pour les cartes adaptatives Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Guide de démarrage rapide pour utiliser les actions universelles pour les cartes adaptatives dans Teams
 
-1. Remplacez toutes les instances `Action.Submit` de par pour mettre à jour un scénario existant sur `Action.Execute` Teams.
-2. Ajoutez une clause à votre carte adaptative si vous souhaitez tirer parti du modèle d’actualisation automatique ou si votre scénario nécessite des affichages `refresh` spécifiques de l’utilisateur.
+1. Remplacez toutes les instances `Action.Submit` de par pour mettre à jour un scénario existant `Action.Execute` Teams.
+2. Ajoutez une clause à votre carte adaptative si vous souhaitez utiliser le modèle d’actualisation automatique ou si votre scénario nécessite des affichages `refresh` spécifiques de l’utilisateur.
 
     >[!NOTE]
     > Spécifiez la `userIds` propriété à identifier et les utilisateurs qui obtiennent les mises à jour automatiques.
 
 3. Gérer `adaptiveCard/action` les demandes d’appel dans votre bot.
-4. Utilisez le contexte de la demande d’appel pour répondre à l’aide de cartes spécifiquement créées pour un utilisateur.
+4. Utilisez le contexte de la demande d’appel pour répondre à l’aide de cartes créées pour un utilisateur.
 
     > [!NOTE]
     > Chaque fois que votre bot renvoie une nouvelle carte suite au traitement d’un , la réponse doit `Action.Execute` être conforme au format de réponse.
@@ -66,20 +66,20 @@ Pour plus d’informations, voir [le schéma d’actualisation et les propriét�
 
 Les fonctionnalités des UserIds en cours d’actualisation sont les suivantes :
 
-* UserIds est un tableau d’utilisateurSIPL qui fait partie de la propriété dans `refresh` les cartes adaptatives.
+* UserIds est un tableau de MRIS utilisateur, qui fait partie de la `refresh` propriété dans les cartes adaptatives.
 
 * Si la propriété de liste est spécifiée comme dans la section Actualiser de la carte, la carte n’est `userIds` `userIds: []` pas actualisée automatiquement. Au lieu de cela, une **option** Actualiser la carte s’affiche pour l’utilisateur dans le menu à trois points du site web ou de bureau, et dans le menu contextif long sur mobile, c’est-à-dire, Android ou iOS pour actualiser manuellement la carte.
 
-* La propriété UserIds est ajoutée, car les canaux Teams peuvent inclure un grand nombre de membres. Si tous les membres voient le canal en même temps, une actualisation automatique inconditionnelle entraîne de nombreux appels simultanés au bot. Pour éviter cela, la propriété doit toujours être incluse pour identifier les utilisateurs qui doivent obtenir une actualisation automatique avec un maximum de `userIds` *60 MRI d’utilisateurs (en particulier).*
+* La propriété UserIds est ajoutée, car les canaux Teams peuvent inclure un grand nombre de membres. Si tous les membres voient le canal en même temps, une actualisation automatique inconditionnelle entraîne de nombreux appels simultanés au bot. La propriété doit toujours être incluse pour identifier les utilisateurs qui doivent obtenir une actualisation automatique avec un maximum de `userIds` *60 mrIs d’utilisateurs ..*
 
-* Pour plus d’informations sur la façon d’extraire les MRI utilisateur d’un membre de la conversation Teams à ajouter à la liste userIds dans la section Actualiser de la carte adaptative, voir récupérer la liste ou le profil [utilisateur.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+* Vous pouvez récupérer les TEAMS utilisateur du membre de la conversation. Pour plus d’informations sur l’ajout de la liste userIds dans la section Actualiser de la carte adaptative, voir récupérer la liste ou [le profil utilisateur.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
 
 * Exemple de Teams’utilisateur`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
 > [!NOTE]
 > La propriété est ignorée dans Outlook, et la propriété est `userIds` `refresh` toujours activée automatiquement. Il n’existe aucun problème d’échelle Outlook car les utilisateurs visualisent la carte à différents moments.
 
-L’étape suivante consiste à utiliser l’activité d’appel pour comprendre quelle demande doit `adaptiveCard/action` être faite après `Action.Execute` l’exécution.
+L’étape suivante consiste à utiliser `adaptiveCard/action` l’activité d’appel pour comprendre quelle demande doit être faite après `Action.Execute` l’exécution.
 
 ## <a name="adaptivecardaction-invoke-activity"></a>`adaptiveCard/action` activité d’appel
 
@@ -101,11 +101,12 @@ Pour garantir la compatibilité ascendante de vos cartes adaptatives avec les ve
 
 Pour plus d’informations, [voir compatibilité ascendante sur Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
 
-## <a name="code-sample"></a>Exemple de code
+## <a name="code-samples"></a>Exemples de code
 
-|Exemple de nom | Description | . NETCore |
-|----------------|-----------------|--------------|
-| Teams bot de restauration | Créez un bot simple qui accepte la commande de la restauration à l’aide de cartes adaptatives. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|Exemple de nom | Description | . NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams bot de restauration | Créez un bot qui accepte l’ordre des produits à l’aide de cartes adaptatives. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| N’est pas encore disponible. |
+| Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques de l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,13 +3,13 @@ title: Utiliser des modules de tâche dans Microsoft Teams onglets
 description: Explique comment appeler des modules de tâche à partir Teams onglets à l’aide Microsoft Teams SDK client.
 localization_priority: Normal
 ms.topic: how-to
-keywords: sdk client des onglets des modules de tâche teams
-ms.openlocfilehash: 8afd2c93261f28aa7ced4c98d29be27dca35f8b1
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+keywords: modules de tâche teams tabs client sdk
+ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140551"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703580"
 ---
 # <a name="use-task-modules-in-tabs"></a>Utiliser des modules de tâche dans les onglets
 
@@ -74,7 +74,7 @@ La méthode est très simple et elle fait écho à la valeur de la console ou `s
 
 ## <a name="submit-the-result-of-a-task-module"></a>Envoyer le résultat d’un module de tâche
 
-La `submitHandler` fonction réside dans la page web et est utilisée avec `TaskInfo.url` `TaskInfo.url` . En cas d’erreur lors de l’appel du module de tâche, votre fonction est immédiatement invoquée avec une chaîne indiquant quelle `submitHandler` erreur s’est `err` [produite.](#task-module-invocation-errors) La fonction est également appelée avec une chaîne lorsque l’utilisateur sélectionne X en haut à droite du module de tâche `submitHandler` `err` pour le fermer.
+La `submitHandler` fonction réside dans la page web et est utilisée avec `TaskInfo.url` `TaskInfo.url` . En cas d’erreur lors de l’appel du module de tâche, votre fonction est immédiatement invoquée avec une chaîne indiquant quelle erreur s’est `submitHandler` `err` [produite.](#task-module-invocation-errors) La fonction est également appelée avec une chaîne lorsque l’utilisateur sélectionne X en haut à droite du module de tâche `submitHandler` `err` pour le fermer.
 
 S’il n’y a aucune erreur d’appel et que l’utilisateur ne sélectionne pas X pour le faire disparaître, l’utilisateur choisit un bouton lorsque vous avez terminé. Selon qu’il s’agit d’une URL ou d’une carte adaptative dans le module de tâche, les sections suivantes fournissent des détails sur ce qui se produit.
 

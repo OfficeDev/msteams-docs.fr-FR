@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 keywords: 'onglets teams : message actionnable de webhook sortant vérifiant le webhook'
-ms.openlocfilehash: c02ff5388e47ba40056afcc1fcf5e8d7ad4437e8
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140326"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704302"
 ---
 # <a name="create-outgoing-webhook"></a>Créer un webhook sortant
 

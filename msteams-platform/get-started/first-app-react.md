@@ -5,12 +5,12 @@ description: Créez rapidement une application Microsoft Teams qui affiche un me
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c257bcd805a6b7b38ab657cb31cad961df1c4704
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 7d043c904521f33946510de60f539dc27dd6b687bc74bbb89aa35f9d267fe8ef
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254320"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707076"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Créer et exécuter votre première application Microsoft Teams avec React
 

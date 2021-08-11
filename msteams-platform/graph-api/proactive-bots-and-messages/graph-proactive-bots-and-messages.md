@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: équipes d’installation de conversation de messagerie proactive Graph
-ms.openlocfilehash: a118d8aae91603dd4368ca644745b186a47a6176
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: bb25987b7b7547a6db459d587e7960bc9f2df231a5be1fe7899a26eee4cf2557
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726837"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708048"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
 
@@ -20,7 +20,7 @@ ms.locfileid: "53726837"
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans Teams
 
-Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’enquêtes et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou basées **sur des** boîtes de dialogue :
+Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’sondages et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou basées **sur des** boîtes de dialogue :
 
 |Type de message | Description |
 |----------------|-------------- |
@@ -77,7 +77,7 @@ Vous pouvez récupérer les `teamsAppId` informations suivantes :
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    La demande doit renvoyer un `teamsApp` `id` objet, qui est l’ID d’application généré par le catalogue de l’application. Ceci est différent de l’ID que vous avez fourni dans votre manifeste Teams application :
+    La demande doit renvoyer un objet, qui est `teamsApp` l’ID d’application généré par le catalogue de `id` l’application. Ceci est différent de l’ID que vous avez fourni dans votre manifeste Teams application :
 
     ```json
     {
@@ -137,7 +137,7 @@ La requête renvoie :
 
 Vous pouvez installer votre application comme suit :
 
-**Référence de la page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Référence de page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **Requête HTTP POST** :
 

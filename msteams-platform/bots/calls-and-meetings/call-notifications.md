@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: appel de l’affinité de région de rappel des notifications d’appel
 ms.date: 04/02/2019
-ms.openlocfilehash: 06068c13d27598b9a7b5e70181c69f9efb2c0afb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5c24aa83b26999070f65978fce9b19139f2445955acb8f5aa7b5c0a46255c927
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020175"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705044"
 ---
 # <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 
@@ -39,7 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) réponse. Vous pouvez spécifier `callbackUri` la situation à utiliser pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le routage vers `callbackUri` l’instance de droite.
+Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) réponse. Vous pouvez spécifier `callbackUri` la situation pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le routage vers `callbackUri` l’instance de droite.
 
 La section suivante fournit des détails sur l’authentification du rappel en inspectant le jeton publié sur votre webhook.
 

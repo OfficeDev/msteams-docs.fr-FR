@@ -5,12 +5,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 localization_priority: Normal
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179894"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703126"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -24,7 +24,7 @@ Les cartes de connecteurs prendre en charge les actions suivantes :
 
 - `ActionCard`: présente un ou plusieurs types d’entrée et actions associées.
 - `HttpPOST`: envoie une requête POST à une URL.
-- `OpenUri`: ouvre l’URI dans un navigateur ou une application distinct, cible éventuellement différents URI basés sur les systèmes d’exploitation.
+- `OpenUri`: ouvre l’URI dans un navigateur ou une application distinct, cible éventuellement différentes URI en fonction des systèmes d’exploitation.
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 
@@ -251,7 +251,7 @@ Le tableau suivant fournit les détails des transactions basées sur le temps :
 
 | Durée en secondes  | Nombre maximal de demandes autorisées  |
 |---|---|
-| 1    | 4   |  
+| 1   | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644888"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705748"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Conception de votre application personnelle pour Microsoft Teams
 
@@ -29,17 +29,17 @@ Vous trouverez des instructions complètes sur la conception d’applications pe
 
 Vous pouvez ajouter une application personnelle à partir du Teams store (AppSource)  ou du flyout de l’application en sélectionnant l’icône Plus sur le côté gauche de Teams (illustré dans l’exemple suivant).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du flyout de l’application." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du volant de l’application." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Utiliser une application personnelle (espace de travail privé)
 
-Avec un espace de travail privé, vous pouvez afficher du contenu d’application qui vous semble significatif dans un emplacement central sans quitter Teams.
+Avec un espace de travail privé, vous pouvez afficher le contenu de l’application qui vous semble significatif dans un emplacement central sans quitter Teams.
 
 (Remarque d’implémentation : l’espace de travail privé est basé sur la [*fonctionnalité d’onglet*](../../build-your-first-app/build-personal-tab.md) personnel.)
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomie : application personnelle (espace de travail privé)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="L’exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
 
@@ -94,13 +94,13 @@ Les applications personnelles peuvent inclure un bot pour les conversations un-�
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie : application personnelle (bot)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie des composants personnels du bot." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications du bot.|
+|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications des bots.|
 |B|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
 |C|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 

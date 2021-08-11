@@ -4,12 +4,12 @@ description: Découvrez comment vos applications Microsoft Teams peuvent interag
 ms.topic: conceptual
 localization_priority: Normal
 keywords: appel d’appels audio vidéo de réunions vocales vocales en ligne (IVR)
-ms.openlocfilehash: d23b069d1f728cc54941f90e531d01acae6ab989
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 578c10ab2566e8bbf51a2224b8d474fb74c92092ea815386865a4e28efe059c6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179908"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706796"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Appels et bots de réunions en ligne
 
@@ -86,7 +86,7 @@ Les médias en temps réel font référence à des scénarios où les médias do
 
     Par exemple, savoir quand un utilisateur a appuyer **sur 0** pour atteindre l’opérateur.
 
-* **Support hébergé par l’application**: pour qu’un bot obtienne un accès direct au média, il a besoin d’une autorisation Graph spécifique. Une fois que votre [](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)bot dispose de l’autorisation, la bibliothèque multimédia en temps réel et le [SDK d’appel Graph](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) vous permettent de créer des médias enrichis en temps réel et d’appeler des bots. Un bot hébergé par l’application doit être hébergé dans un environnement Windows. Pour plus d’informations, voir [bots multimédias hébergés par l’application.](./requirements-considerations-application-hosted-media-bots.md)
+* **Média hébergé par l’application**: pour qu’un bot obtienne un accès direct au média, il a besoin d’une autorisation Graph spécifique. Une fois que votre [](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)bot dispose de l’autorisation, la bibliothèque multimédia en temps réel et le [SDK d’appel Graph](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) vous aident à créer des médias enrichis en temps réel et à appeler des bots. Un bot hébergé par l’application doit être hébergé dans un environnement Windows. Pour plus d’informations, voir [bots multimédias hébergés par l’application.](./requirements-considerations-application-hosted-media-bots.md)
 
 ## <a name="code-sample"></a>Exemple de code
 

@@ -1,33 +1,33 @@
 ---
-title: Concevoir votre application avec des composants d’interface utilisateur Fluent de base
+title: Concevoir votre application avec des composants Fluent’interface utilisateur de base
 author: heath-hamilton
 description: Découvrez les composants d’interface utilisateur primitifs couramment utilisés pour créer Microsoft Teams applications et obtenir Microsoft Teams kit d’interface utilisateur.
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644909"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704135"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur Fluent de base
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants Fluent’interface utilisateur de base
 
-Vous pouvez créer votre application Teams à partir de zéro à l’aide des composants d’interface utilisateur Fluent de base suivants. Conçus aussi platement que possible, ces composants peuvent fonctionner dans différents cas d’utilisation, thèmes et tailles d’écran.
+Vous pouvez créer votre application Teams à partir de zéro à l’aide des composants Fluent’interface utilisateur de base suivants. Conçus aussi platement que possible, ces composants peuvent fonctionner dans différents cas d’utilisation, thèmes et tailles d’écran.
 
 Les illustrations de cette page montrent l’apparence des composants Teams thèmes par défaut (clair) et foncés.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">l’interface utilisateur Fluent,</a>le kit Microsoft Teams’interface utilisateur inclut des composants et des modèles spécifiquement conçus pour créer des applications Teams web. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
+Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent’interface</a>utilisateur, le kit Microsoft Teams’interface utilisateur inclut des composants et des modèles spécifiquement conçus pour créer des applications Teams. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerte
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="Exemple de composant d’interface utilisateur d’alerte." border="false":::
+:::image type="content" source="../../assets/images/components/alert.png" alt-text="L’exemple illustre un composant d’interface utilisateur d’alerte." border="false":::
 
 ## <a name="button"></a>Bouton
 
@@ -69,7 +69,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="Exemple de composant d’interface utilisateur de liste de groupes." border="false":::
 
-## <a name="hyperlink"></a>Hyperlink
+## <a name="hyperlink"></a>Lien hypertexte
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="Exemple de composant d’interface utilisateur de lien hypertexte." border="false":::
 
@@ -123,7 +123,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 ## <a name="toggle"></a>Bouton bascule
 
-Remarque : dans l’interface utilisateur Fluent, le basculement est un type de case à cocher.
+Remarque : dans Fluent’interface utilisateur, le basculement est un type de case à cocher.
 
 :::image type="content" source="../../assets/images/components/toggle.png" alt-text="Exemple de composant d’interface utilisateur bascule." border="false":::
 
@@ -136,4 +136,4 @@ Remarque : dans l’interface utilisateur Fluent, le basculement est un type de 
 Obtenez des exemples de code et des détails d’implémentation pour certains des composants répertoriés ici et dans Microsoft Teams kit d’interface utilisateur.
 
 > [!div class="nextstepaction"]
-> [Essayer les composants (interface utilisateur Fluent)](https://fluentsite.z22.web.core.windows.net/)
+> [Essayez les composants (Fluent’interface utilisateur)](https://fluentsite.z22.web.core.windows.net/)

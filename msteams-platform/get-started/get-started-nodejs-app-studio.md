@@ -5,12 +5,12 @@ keywords: mise en node.js nodejs App Studio
 ms.topic: tutorial
 localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 84c3452c739f67c2908d698b627b5651ff9d5d7a
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 5abde3b1866556ff20e9ee145e761915f88f7288c581556460f5e0e3f3386ecb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254351"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704593"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>Créer votre première application Microsoft Teams l’aide Node.js
 
@@ -204,7 +204,7 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-La façon dont vous le faites diffère en fonction de la façon dont vous avez hébergé votre application. L’élément important de l’utilisation des variables d’environnement est que ces valeurs font partie de votre environnement : elles sont accessibles par le code de votre application, mais elles ne sont pas exposées à des tiers qui peuvent examiner les fichiers qui constitueront votre site.
+La façon dont vous faites cela diffère en fonction de la façon dont vous avez hébergé votre application. L’élément important de l’utilisation des variables d’environnement est que ces valeurs font partie de votre environnement : elles sont accessibles par le code de votre application, mais elles ne sont pas exposées à des tiers qui peuvent examiner les fichiers qui constitueront votre site.
 
 Si vous exécutez l’application à l’aide de ngrok, vous devez configurer certaines variables d’environnement local. Il existe plusieurs façons de le faire, mais la plus simple, si vous utilisez Visual Studio Code, consiste à ajouter une [configuration de lancement](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations):
 

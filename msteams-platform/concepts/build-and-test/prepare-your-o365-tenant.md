@@ -4,21 +4,21 @@ description: Comment commencer à prendre en Teams dans Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: Configurer le Microsoft 365 de Teams client
-ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019943"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704430"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
 Microsoft 365 abonnés peuvent développer des applications pour Microsoft Teams avec l’un des plans suivants :
 
-* Basic
+* De base
 * Standard
 * Enterprise E1, E3 et E5
-* Développeur
+* Developer
 * Éducation, Éducation Plus et Éducation E5
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Activez Teams pour votre organisation et pour plus d’informations, consultez [
 
 **Pour activer le chargement ou le chargement indépendant de l’application personnalisée pour votre client développeur**
 
-1. Connectez-vous [Microsoft 365 centre d’administration](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.
+1. Connectez-vous [Centre d’administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.
 
 2. Sélectionnez **Afficher**  >  **tous les Teams**.
 
@@ -55,7 +55,7 @@ Activez Teams pour votre organisation et pour plus d’informations, consultez [
 5. Sélectionnez **Enregistrer**. Votre client test peut autoriser le chargement de version test d’une application personnalisée.
 
     > [!Note]
-    > Le chargement de version secondaire peut prendre jusqu’à 24 heures pour être actif. En attendant, vous pouvez utiliser le **chargement pour \<your tenant>** tester votre application. Pour télécharger le fichier .zip package de l’application, voir [télécharger des applications personnalisées.](/microsoftteams/upload-custom-apps#upload)
+    > Le chargement de version secondaire peut prendre jusqu’à 24 heures. En attendant, vous pouvez utiliser le **chargement pour \<your tenant>** tester votre application. Pour télécharger le fichier .zip package de l’application, voir [télécharger des applications personnalisées.](/microsoftteams/upload-custom-apps#upload)
 
     ![Télécharger’application](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 

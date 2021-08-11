@@ -5,12 +5,12 @@ keywords: les fichiers de bots teams envoient la réception
 ms.date: 05/20/2019
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 7d5ea3434b10d60e20574ca6d1935943c687f4d7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f6d738bfe3456ad9434512fd84d7e65d6062e57076656a57592cdf6a3f23790e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020939"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708111"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 
@@ -42,7 +42,7 @@ Vous pouvez également envoyer et recevoir des fichiers à partir d’un bot à 
 > [!NOTE]
 > Teams’API de bot fonctionnent uniquement dans le `personal` contexte. Elles ne fonctionnent pas dans le `channel` contexte ou dans le `groupchat` contexte.
 
-À l Teams API, le bot peut directement envoyer et recevoir des fichiers avec des utilisateurs dans le contexte, également appelé `personal` conversations personnelles. Implémenter des fonctionnalités telles que les notes de frais, la reconnaissance d’image, l’archivage de fichiers et les signatures électronique impliquant la modification du contenu du fichier. Les fichiers partagés dans Teams apparaissent généralement sous la main de cartes et permettent un affichage enrichi dans l’application.
+À l Teams API, le bot peut directement envoyer et recevoir des fichiers avec des utilisateurs dans le contexte, également appelé `personal` conversations personnelles. Implémenter des fonctionnalités telles que les notes de frais, la reconnaissance d’image, l’archivage de fichiers et les signatures électronique impliquant la modification du contenu du fichier. Les fichiers partagés dans Teams apparaissent généralement sous la mesure de cartes et permettent un affichage enrichi dans l’application.
 
 Les sections suivantes décrivent comment envoyer du contenu de fichier en tant qu’interaction directe de l’utilisateur, comme l’envoi d’un message. Cette API est fournie dans le cadre de la plateforme Teams bot.
 
@@ -97,7 +97,7 @@ En tant que meilleure pratique, reconnaissez le chargement du fichier en renvoya
 
 #### <a name="message-requesting-permission-to-upload"></a>Message demandant l’autorisation de téléchargement
 
-Le message de bureau suivant contient un objet pièce jointe simple demandant l’autorisation de l’utilisateur pour télécharger le fichier :
+Le message de bureau suivant contient un objet de pièce jointe simple demandant l’autorisation de l’utilisateur pour télécharger le fichier :
 
 ![Carte de consentement demandant à l’utilisateur l’autorisation de télécharger un fichier](../../assets/images/bots/bot-file-consent-card.png)
 

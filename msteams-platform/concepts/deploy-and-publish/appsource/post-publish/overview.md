@@ -1,16 +1,16 @@
 ---
 title: Maintenir et prendre en charge votre application publiée
-description: Ce à quoi il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
+description: Ce qu’il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
 ms.topic: conceptual
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8e4656ea7ca9f373123026a50ecb837d1a64e3fa
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 80821eaad18998d087aeeb4f20db03ea02d9cab6d78d367add179b763e501249
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230916"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704280"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Gérer votre application Microsoft Teams publiée
 
@@ -44,7 +44,7 @@ Toutefois, si vous a apporté l’une des modifications suivantes à votre appli
 
 ## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 
-Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans une chronologie, la liste de votre application peut être supprimée du Store.
+Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans le cadre d’une chronologie, la liste de votre application peut être supprimée du Store.
 
 ## <a name="promote-your-app-on-another-site"></a>Promouvoir votre application sur un autre site
 

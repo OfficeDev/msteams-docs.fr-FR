@@ -4,18 +4,18 @@ description: Décrit le processus de soumission de votre application à l’Part
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 7ae452e6fd013204b622e32fa8187cc69e0b26bf
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: a7c46f6dc537d7cfad7c176582df1305c3f0bc056a78996e013757a3eff7e013
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101757"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706066"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publier votre application dans le Microsoft Teams store
 
-Vous pouvez distribuer votre application directement dans le Store Microsoft Teams et atteindre des millions d’utilisateurs dans le monde entier. Si votre application est également présente dans le Store, vous pouvez immédiatement atteindre les clients potentiels.
+Vous pouvez distribuer votre application directement dans le Store Microsoft Teams et atteindre des millions d’utilisateurs dans le monde entier. Si votre application est également présente dans le Store, vous pouvez immédiatement atteindre des clients potentiels.
 
-Les applications publiées dans Teams store sont également automatiquement répertoriées sur [Microsoft AppSource,](https://appsource.microsoft.com)qui est la place de marché officielle pour Microsoft 365 applications et solutions.
+Les applications publiées dans Teams store sont également répertoriées automatiquement sur [Microsoft AppSource,](https://appsource.microsoft.com)qui est la place de marché officielle pour Microsoft 365 applications et solutions.
 
 ## <a name="understand-the-publishing-process"></a>Comprendre le processus de publication
 

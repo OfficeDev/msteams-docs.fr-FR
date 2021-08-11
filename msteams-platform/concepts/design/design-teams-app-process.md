@@ -5,16 +5,16 @@ description: Obtenez une idée générale de la façon dont vous pouvez utiliser
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 225859da18cb50741ab49c68d89bc318c6c9034c
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f4d406426cdadd946e3579cec85e8c5c8133c2b5206a00fc1e32a29a2442b7cd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994209"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704489"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processus de conception pour Microsoft Teams applications
 
-Il existe plusieurs outils et ressources pour concevoir votre Microsoft Teams app. Les étapes suivantes décrivent quand et comment vous pouvez les utiliser pendant le processus de conception. (Certaines étapes peuvent être techniquement en dehors du processus de conception, mais sont incluses pour un contexte supplémentaire.)
+Il existe plusieurs outils et ressources pour concevoir votre application Microsoft Teams web. Les étapes suivantes décrivent quand et comment vous pouvez les utiliser pendant le processus de conception. (Certaines étapes peuvent être techniquement en dehors du processus de conception, mais sont incluses pour un contexte supplémentaire.)
 
 :::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagramme montrant un exemple du processus Teams conception d’application." border="false":::
 
@@ -22,7 +22,7 @@ Il existe plusieurs outils et ressources pour concevoir votre Microsoft Teams ap
 
 La conception d’une application Teams qualité nécessite de comprendre ce que vous souhaitez que l’application fait et la façon dont vous pensez que les personnes l’utiliseront. Toutefois, avant de commencer la conception, répondez aux questions suivantes :
 
-* Qui sont vos utilisateurs ?
+* Qui sont vos utilisateurs ?
 * Quel est leur problème ?
 * Comment votre application peut-elle résoudre son problème ?
 * À quelle fréquence votre application sera-t-elle utilisée ?
@@ -37,7 +37,7 @@ Microsoft fournit des outils pour faciliter la conception de votre Teams applica
 
 ### <a name="get-the-microsoft-teams-ui-kit"></a>Obtenir le kit Microsoft Teams’interface utilisateur
 
-Le kit Microsoft Teams’interface utilisateur peut vous aider à développer une application Teams efficace dans un laps de temps plus court. Le kit d’interface utilisateur contient tout ce que vous voyez dans ces documents relatifs à Teams conception d’application et bien plus encore, notamment des exemples complets et des variantes.
+Le kit Microsoft Teams’interface utilisateur peut vous aider à développer une application Teams efficace dans un délai le plus court. Le kit d’interface utilisateur contient tout ce que vous voyez dans ces documents relatifs Teams conception d’application et bien plus encore, notamment des exemples complets et des variantes.
 
 Le kit d’interface utilisateur dispose également de modèles et de composants pré-créés que vous pouvez copier et modifier selon vos besoins. Ainsi, vous pouvez passer plus de temps à concevoir la meilleure expérience utilisateur au lieu de vous soucier de l’apparence d’un bouton.
 

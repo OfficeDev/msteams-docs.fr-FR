@@ -4,25 +4,25 @@ description: Décrit les fonctionnalités de la prévisualisation pour les déve
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams prévisualiser les fonctionnalités de développement
-ms.openlocfilehash: f19268afd81fe9fa7ae2116740e7b9d4ff8225cb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ddf935279d5298caa032df7f109369bdc4b798ef51206f5cc688846061fd6720
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019719"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703960"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Prévisualisation pour les développeurs publics Microsoft Teams
 
 >[!NOTE]
 >Les fonctionnalités incluses dans la prévisualisation peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
 
-La prévisualisation pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre Microsoft Teams application. Nous vous souhaitons également la [bienvenue sur](~/feedback.md) toutes les fonctionnalités de la prévisualisation du développeur. La prévisualisation développeur est activée par client Microsoft Teams, vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
+La prévisualisation pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre Microsoft Teams application. Nous vous souhaitons également la [bienvenue sur](~/feedback.md) toutes les fonctionnalités de la prévisualisation pour les développeurs. La prévisualisation développeur est activée par client Microsoft Teams, vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
 
 ## <a name="developer-preview-app-manifest"></a>Manifeste de l’application d’aperçu développeur
 
-De nombreuses fonctionnalités activées dans la prévisualisation du développeur nécessitent des modifications de votre fichier JSON de manifeste d’application. Pour ce faire, vous devrez utiliser le schéma de manifeste d’aperçu développeur Si vous utilisez ce schéma, vous ne pourrez pas utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour apporter ces modifications, ni l’utiliser pour télécharger votre application à des moments de test. [](~/resources/schema/manifest-schema-dev-preview.md) Pour télécharger votre application, vous devez cliquer sur l’icône dans la barre de l’application, `More apps` puis sélectionner le `Upload a custom app link` . À l’aide de cette méthode, vous pouvez uniquement charger une version compressée de votre package d’application.
+De nombreuses fonctionnalités activées dans la prévisualisation du développeur nécessitent des modifications de votre fichier JSON de manifeste d’application. Pour ce faire, vous devrez utiliser le schéma de manifeste d’aperçu développeur Si vous utilisez ce schéma, vous ne serez pas en mesure d’utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour apporter ces modifications, ni de l’utiliser pour télécharger votre application à des moments de test. [](~/resources/schema/manifest-schema-dev-preview.md) Pour télécharger votre application, vous devez cliquer sur l’icône dans la barre de l’application, `More apps` puis sélectionner le `Upload a custom app link` . À l’aide de cette méthode, vous pouvez uniquement charger une version compressée de votre package d’application.
 
-Il peut s’avérer utile d’utiliser App Studio pour créer les parties d’aperçu non développeur de votre package d’application, puis exporter ce package et modifier manuellement le fichier pour ajouter les fonctionnalités d’aperçu de développeur que vous souhaitez `manifest.json` utiliser. Une fois que vous avez ajouté les fonctionnalités d’aperçu du développeur au fichier, vous ne pourrez pas `manifest.json` ré-importer le package dans App Studio.
+Il peut s’avérer utile d’utiliser App Studio pour créer les parties d’aperçu non développeur de votre package d’application, puis exporter ce package et modifier manuellement le fichier pour ajouter les fonctionnalités d’aperçu de développeur que vous souhaitez `manifest.json` utiliser. Une fois que vous avez ajouté les fonctionnalités d’aperçu développeur au fichier, vous ne pourrez pas `manifest.json` ré-importer le package dans App Studio.
 
 ## <a name="enable-developer-preview"></a>Activer la prévisualisation pour les développeurs
 

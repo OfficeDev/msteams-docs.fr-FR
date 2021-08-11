@@ -1,19 +1,19 @@
 ---
-title: Intégration de la fonctionnalité S sélectionneur de personnes
+title: Intégrer Sélecteur de personnes fonctionnalité
 author: Rajeshwari-v
 description: Comment utiliser le SDK Teams client JavaScript pour intégrer la fonctionnalité S picker de personnes
 keywords: contrôle du s picker de personnes
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 8399eeb1a088e4b60c466d51c223b9405ebf1711
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211635"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702782"
 ---
-# <a name="integrate-people-picker-capability"></a>Intégration de la fonctionnalité S sélectionneur de personnes 
+# <a name="integrate-people-picker-capability"></a>Intégrer Sélecteur de personnes fonctionnalité 
 
 Le sélecateur de personnes est un contrôle pour rechercher et sélectionner des personnes. Il s’agit d’une fonctionnalité native disponible sur Teams plateforme. Vous pouvez intégrer Teams contrôle d’entrée natif du s picker de personnes à vos applications web. Vous pouvez choisir entre une sélection unique ou multiple et des configurations, telles que la limitation de la recherche au sein d’une conversation, de canaux ou de l’ensemble de l’organisation.
 
@@ -44,14 +44,14 @@ La description de l’API est la suivante :
 
 |Paramètre de configuration|Type|Description| Valeur par défaut|
 |-----|------|--------------|------|
-|`title`| String| Il s’agit d’un paramètre facultatif. Il définit le titre du contrôle S sélectionneur de personnes. | Sélectionner des personnes|
-|`setSelected`|String| Il s’agit d’un paramètre facultatif. Vous devez transmettre les ID AAD des personnes à pré-sélectionné. Ce paramètre présélectionne les personnes lors du lancement du contrôle Sélectionneur de personnes. En cas de sélection unique, seul le premier utilisateur valide est pré-préruplé en ignorant le reste. |Null| 
+|`title`| Chaîne| Il s’agit d’un paramètre facultatif. Il définit le titre du contrôle S sélectionneur de personnes. | Sélectionner des personnes|
+|`setSelected`|Chaîne| Il s’agit d’un paramètre facultatif. Vous devez transmettre les ID AAD des personnes à pré-sélectionné. Ce paramètre présélectionne les personnes lors du lancement du contrôle Sélectionneur de personnes. En cas de sélection unique, seul le premier utilisateur valide est pré-préruplé en ignorant le reste. |Null| 
 |`openOrgWideSearchInChatOrChannel`|Boolean | Il s’agit d’un paramètre facultatif. Lorsqu’elle est définie sur true, elle lance le sérial de personnes dans l’étendue de l’organisation, même si l’application est ajoutée à une conversation ou un canal. |Faux|
 |`singleSelect`|Boolean|Il s’agit d’un paramètre facultatif. Lorsqu’elle est définie sur True, elle lance le s sélectionneur de personnes en limitant la sélection à un seul utilisateur. |Faux|
 
 L’image suivante illustre l’expérience de la fonctionnalité S picker de personnes dans un exemple d’application web :
 
-![Expérience d’application web de la fonctionnalité S picker de personnes](../../assets/images/tabs/people-picker-control-capability.png)
+![Expérience d’application web de la fonctionnalité s’il s’est s’il s’est s’il s’est](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### <a name="code-snippet"></a>Extrait de code
 

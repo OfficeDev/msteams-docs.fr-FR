@@ -1,18 +1,18 @@
 ---
 title: Conception de modules de tâches
 author: heath-hamilton
-description: Découvrez comment concevoir des modules de tâche pour Teams applications et obtenir le kit Microsoft Teams’interface utilisateur.
+description: Découvrez comment concevoir des modules de tâche pour Teams applications et obtenir Microsoft Teams kit d’interface utilisateur.
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 48e47a6c0bde0f0a3fefb8fcbfb362687ce58947
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629906"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708168"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâche pour votre Microsoft Teams application
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâche pour votre application Microsoft Teams web
 
 Vous pouvez créer des expériences popup modales dans votre application Teams avec des modules de tâche. Utilisez cette fonctionnalité pour afficher des informations et des médias enrichis ou effectuer une tâche complexe.
 
@@ -41,18 +41,18 @@ Les modules de tâche offrent une surface flexible pour les expériences d’app
 
 Ils peuvent également être [](../../task-modules-and-cards/cards/design-effective-cards.md) créés avec l’infrastructure de cartes adaptatives, qui peut être un moyen plus simple et plus rapide de faciliter les scénarios courants (tels que les formulaires).
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâche." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |1|**Icône de l’application**|
-|2|**Nom de l’application**: nom complet de votre application.|
+|2|**Nom de l’application** : nom complet de votre application.|
 |3|**En-tête :** rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs terminent.
 |4 |**Bouton Fermer**: ferme le module de tâche. N’applique pas les modifications non notées dans le contenu de l’application.|
-|5 |**iframe**: espace réactif qui héberge le contenu de votre application.|
-|6 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
+|5 |**iframe**: espace réactif qui héberge le contenu de votre application.|
+|6 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -61,10 +61,10 @@ Ils peuvent également être [](../../task-modules-and-cards/cards/design-effect
 |Compteur|Description|
 |----------|-----------|
 |1|**En-tête :** rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs terminent.
-|2|**Nom de l’application**: nom complet de votre application.|
+|2|**Nom de l’application** : nom complet de votre application.|
 |3|**Bouton Fermer**: ferme le module de tâche. N’applique pas les modifications non notées dans le contenu de l’application.|
 |4 |**webview**: espace réactif qui héberge le contenu de votre application.|
-|5 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
+|5 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
 
 ---
 
@@ -82,7 +82,7 @@ Envisagez d’utiliser des modèles pour les dispositions courantes à l’inté
 
 Les listes fonctionnent parfaitement dans un module de tâche, car elles sont faciles à analyser.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâche." border="false":::
 
@@ -96,7 +96,7 @@ Les listes fonctionnent parfaitement dans un module de tâche, car elles sont fa
 
 Les modules de tâche sont un excellent endroit pour faire surface à des formulaires avec des entrées utilisateur séquentielles et une validation en ligne. Vous pouvez utiliser des cartes adaptatives pour incorporer des éléments de formulaire.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="Exemple de formulaire dans un module de tâche." border="false":::
 
@@ -110,7 +110,7 @@ Les modules de tâche sont un excellent endroit pour faire surface à des formul
 
 Créez un flux de signature ou d’inscription centré avec une série de modules de tâche, ce qui permet aux utilisateurs de se déplacer facilement à travers les étapes séquentielles.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d’expérience de signature dans un module de tâche." border="false":::
 
@@ -124,7 +124,7 @@ Créez un flux de signature ou d’inscription centré avec une série de module
 
 Incorporer du contenu multimédia dans un module de tâche pour une expérience d’affichage axée sur l’affichage.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâche." border="false":::
 
@@ -138,7 +138,7 @@ Incorporer du contenu multimédia dans un module de tâche pour une expérience 
 
 À utiliser pour les messages d’accueil, d’erreur et de réussite.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d’état vide dans un module de tâche." border="false":::
 
@@ -150,9 +150,9 @@ Incorporer du contenu multimédia dans un module de tâche pour une expérience 
 
 ### <a name="image-gallery"></a>Galerie d’images
 
-Incorporer un carrousel de galerie dans un iframe (bureau) ou une vue web (mobile).
+Incorporer un carrousel de galerie dans un iFrame (bureau) ou webview (mobile).
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de galerie d’images dans un module de tâche." border="false":::
 
@@ -166,7 +166,7 @@ Incorporer un carrousel de galerie dans un iframe (bureau) ou une vue web (mobil
 
 Cet exemple montre les résultats des sondages lancés à partir d’une carte adaptative. Le sondage peut également être placé à l’intérieur d’un module de tâche.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple d’enquête dans un module de tâche." border="false":::
 

@@ -1,22 +1,22 @@
 ---
 title: Intégrer les applications Web
 author: Rajeshwari-v
-description: Vue d’ensemble de l’intégration des applications web et des fonctionnalités d’appareil Microsoft Teams application.
+description: Vue d’ensemble de l’intégration d’applications web et de fonctionnalités d’appareil Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630445"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707301"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
-Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour que votre application soit native à Teams.
-Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, Power Virtual Agents, assistant virtuel, modèles d’application, connecteurs Shift, LMS En forme d’enfant, création d’un bouton De partage à Teams pour votre site web, ajout d’un onglet Microsoft Teams dans SharePoint, création de liens profonds et intégration de fonctionnalités d’appareil.
+Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
+Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton Partager vers Teams pour votre site web, l’ajout d’un onglet Microsoft Teams dans SharePoint, la création de liens profonds et l’intégration des fonctionnalités d’appareil.
 
-## <a name="prerequisites"></a>Configuration requise   
+## <a name="prerequisites"></a>Conditions préalables   
 
 Pour une intégration efficace, veillez à mieux comprendre les conditions préalables suivantes :
 * Teams fonctionnalités. 
@@ -47,7 +47,7 @@ Power Virtual Agent est une solution d’interface graphique guidée sans code. 
 
 ### <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
-Assistant virtuel est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. 
+Virtual Assistant est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. 
 
 ## <a name="app-templates"></a>Modèles d’application
 
@@ -59,7 +59,7 @@ Teams Les connecteurs de gestion des équipes de travail sont des intégrations 
 
 ## <a name="install-moodle-lms"></a>Installer Moodle LMS
 
-Il s’agit d’un système LMS (Learning Management System) open source populaire. Il est désormais intégré à Microsoft Teams. Cette intégration permet aux enseignants et aux enseignants de collaborer autour des cours DeNtacter, de poser des questions sur les notes et les devoirs, et de rester à jour avec des notifications directement dans Teams.
+Il s’agit d’un système open source Learning Management System (LMS) populaire. Il est désormais intégré à Microsoft Teams. Cette intégration permet aux enseignants et aux enseignants de collaborer autour des cours DeNtacter, de poser des questions sur les notes et les devoirs, et de rester à jour avec des notifications directement dans Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Créer un bouton Partager vers Teams sur votre site web
 
@@ -71,7 +71,7 @@ Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams
 
 ## <a name="create-deep-link"></a>Créer un lien profond
 
-Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Ces liens profonds naviguent vers le contenu et les informations de votre onglet. Vous pouvez utiliser des liens profonds pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
+Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Ces liens profonds naviguent vers le contenu et les informations de votre onglet. Vous pouvez utiliser des liens profonds pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
 
 ## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 

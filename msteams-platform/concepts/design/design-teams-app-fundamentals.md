@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 0af2a22200e62be9289f167b0306c9769366e46a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 3c625f66912b9b45d820a663dfc6846aa1de7356cb77f5a800112fbedc615de1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630839"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703985"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de conception d’application
 
@@ -25,7 +25,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
       Teams s’appuie sur une disposition de grille pour garantir des relations cohérentes et élégantes entre les composants de conception. L’unité de base de 4 pixels de la grille permet aux composants de s’écheller de manière cohérente sur toutes les tailles d’affichage Teams.
 
       * [Voir les instructions de disposition complète (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implémenter la disposition (interface utilisateur Fluent)](https://developer.microsoft.com/fluentui#/styles/web/layout)
+      * [Implémenter la disposition (Fluent’interface utilisateur)](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
@@ -60,10 +60,10 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
       L’icône principale de votre application peut vous aider à transmettre votre marque à Teams utilisateurs. Il est également important de bien concevoir votre icône pour publier votre [application](../../concepts/build-and-test/apps-package.md) dans Teams store.
 
-      Vous pouvez également utiliser les icônes de l’interface utilisateur Fluent dans toute votre application :
+      Vous pouvez également utiliser Fluent icônes d’interface utilisateur dans toute votre application :
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obtenir le dernier jeu d’icônes Fluent (Figma)</a>
-      * [Implémenter les icônes (interface utilisateur Fluent)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obtenir le dernier jeu d Fluent icônes (Figma)</a>
+      * [Implémenter les icônes (Fluent’interface utilisateur)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::
@@ -82,7 +82,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
       Teams segoe UI pour sa ramp de types et différentes tailles de polices et poids pour vous aider à créer une hiérarchie et à garantir la lisibilité.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Voir les instructions de type complet (Figma)</a>
-      * [Implémenter la typographie (interface utilisateur Fluent)](https://developer.microsoft.com/fluentui#/styles/web/typography)
+      * [Implémenter la typographie (Fluent’interface utilisateur)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
    :::column span="1":::
@@ -101,7 +101,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
       Teams web et de bureau prend en charge les thèmes par défaut (clair), foncé et à contraste élevé, tandis que Teams mobile prend en charge les thèmes clair et foncé. Chaque thème possède son propre modèle de couleurs.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Voir les instructions de couleur complètes et les jetons de couleur disponibles (Figma)</a>
-      * [Implémenter des couleurs (interface utilisateur Fluent)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+      * [Implémenter des couleurs (Fluent’interface utilisateur)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
    :::column span="1":::
@@ -119,7 +119,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
       Vous pouvez utiliser la forme et l’élévation pour créer une hiérarchie supplémentaire dans votre application. 
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Voir les instructions relatives à la forme complète et à l’élévation (Figma)</a>
-      * [Implémenter la forme et l’élévation (interface utilisateur Fluent)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
+      * [Implémenter la forme et l’élévation (Fluent’interface utilisateur)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::

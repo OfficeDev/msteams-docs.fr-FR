@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: conversations basics messages
-ms.openlocfilehash: a0c00d093827221968714aad88c35efa00660d82
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 886c2764c2d8dceecb0f6a0e960b3487d9360c3682e46c9a8098f6fb8a2876bf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630984"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705860"
 ---
 # <a name="conversation-basics"></a>Concepts de base d’une conversation
 
@@ -28,7 +28,7 @@ Un bot se comporte différemment en fonction de la conversation dans qui il est 
 
 * Les bots dans les conversations de canal et de groupe doivent être @mentionnés par l’utilisateur pour être appelés dans un canal.
 
-* Les bots d’une conversation un-à-un ne nécessitent pas de @mention. Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
+* Les bots dans une conversation un-à-un ne nécessitent pas de @mention. Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
 
 > [!NOTE]
 > Les bots peuvent être activés pour recevoir tous les messages de canal dans une équipe sans être @mentioned à l’aide des autorisations de consentement spécifiques aux ressources (RSC). Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)

@@ -5,16 +5,16 @@ description: Concevez votre application plus rapidement avec des composants d’
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644815"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702858"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Conception de votre application Microsoft Teams avec des modèles d’interface utilisateur
 
-Concevez votre application Microsoft Teams plus rapidement avec des modèles d’interface utilisateur. Les modèles sont une collection de composants fluent basés sur l’interface utilisateur qui fonctionnent dans les cas d’utilisation courants Teams, ce qui vous donne plus de temps pour déterminer la meilleure expérience pour vos utilisateurs.
+Concevez votre Microsoft Teams application plus rapidement avec des modèles d’interface utilisateur. Les modèles sont un ensemble de composants basés sur l’interface utilisateur Fluent qui fonctionnent dans les cas d’utilisation Teams courants, ce qui vous donne plus de temps pour déterminer la meilleure expérience pour vos utilisateurs.
 
 ## <a name="getting-started-with-tools-and-samples"></a>Mise en place des outils et des exemples
 
@@ -56,7 +56,7 @@ Un tableau de bord affiche différents types de contenu dans un emplacement cent
 * Mesures du rapport
 * Organiser différentes informations au même endroit
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="L’exemple montre un modèle d’interface utilisateur de tableau de bord sur un ordinateur de bureau." border="false":::
 
@@ -75,13 +75,13 @@ Vous pouvez utiliser différentes tailles de carte (unique, double et complète)
 * Afficher des informations complexes
 * Créer un tableau de bord
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple illustre un modèle d’interface utilisateur de visualisation de données sur un ordinateur de bureau." border="false":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="L’exemple montre un modèle d’interface utilisateur de visualisation de données sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="L’exemple illustre un modèle d’interface utilisateur de visualisation de données sur un appareil mobile." border="false":::
 
 ---
 
@@ -96,7 +96,7 @@ Le modèle d’état vide peut être utilisé pour de nombreux scénarios, y com
 * Messages de réussite
 * Messages d’erreur
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’état vide sur un ordinateur de bureau." border="false":::
 
@@ -132,7 +132,7 @@ Les formulaires sont utilisés pour collecter, valider et envoyer des entrées u
 * Paramètres
 * Collection d’entrées utilisateur
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur un ordinateur de bureau." border="false":::
 
@@ -151,7 +151,7 @@ Vous pouvez utiliser une liste pour afficher les éléments associés dans un fo
 * Afficher les données
 * Actions contextuelles sur le contenu de l’application
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="L’exemple montre un modèle d’interface utilisateur de liste sur un ordinateur de bureau." border="false":::
 
@@ -169,7 +169,7 @@ Vous pouvez concevoir des flux de Teams d’application pour différents context
 
 * Authentifier les utilisateurs
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="L’exemple montre un modèle d’interface utilisateur de la signature sur le bureau." border="false":::
 
@@ -181,7 +181,7 @@ Vous pouvez concevoir des flux de Teams d’application pour différents context
 
 ## <a name="settings"></a>Paramètres
 
-Paramètres sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base.)](~/concepts/design/design-teams-app-basic-ui-components.md)
+Paramètres’écran sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base.)](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 ### <a name="top-use-case"></a>Cas d’utilisation principaux
 
@@ -199,7 +199,7 @@ Un tableau des tâches, parfois appelé « kanban board » ou « pistes de cours
 * Brainstorming. Ajout d’idées dans différentes catégories
 * Exercices de tri. Organisation de n’importe quel type d’informations dans des compartiments
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="L’exemple montre un modèle d’interface utilisateur du tableau des tâches sur un ordinateur de bureau." border="false":::
 
@@ -219,7 +219,7 @@ Un Assistant guide un utilisateur à travers plusieurs écrans pour effectuer un
 * Intégration
 * Expériences de première expérience
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Un exemple illustre un modèle d’interface utilisateur d’Assistant sur un ordinateur de bureau." border="false":::
 

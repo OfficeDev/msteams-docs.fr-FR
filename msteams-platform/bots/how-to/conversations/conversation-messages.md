@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5b23e3b2548e3d0eab98fae73d37316063fe60c1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 49e6af7ef71d0794210e554d8d8b42fe714fbe592d3ca7de43c7996283f54a2c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058599"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707549"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -22,7 +22,7 @@ Les conversations de base sont gérées via le connecteur Bot Framework, une API
 * Fonctionnalités supplémentaires pour gérer le flux et l’état des conversations.
 * Méthodes simples pour incorporer des services cognitives, tels que le traitement du langage naturel (NLP).
 
-Votre bot reçoit des messages de Teams à l’aide de la propriété et envoie des réponses de message simples ou `Text` multiples aux utilisateurs.
+Votre bot reçoit des messages Teams à l’aide de la propriété et envoie des réponses de message unique ou `Text` multiples aux utilisateurs.
 
 ## <a name="receive-a-message"></a>Recevoir un message
 
@@ -113,7 +113,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Envoyer un message
 
-Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité. Dans le handler d’activité du bot, utilisez la méthode de l’objet de contexte turn pour `SendActivityAsync` envoyer une seule réponse de message. Utilisez la méthode de `SendActivitiesAsync` l’objet pour envoyer plusieurs réponses à la fois.
+Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité. Dans le handler d’activité du bot, utilisez la méthode de l’objet de contexte turn pour `SendActivityAsync` envoyer une seule réponse de message. Utilisez la méthode de l’objet `SendActivitiesAsync` pour envoyer plusieurs réponses à la fois.
 
 Le code suivant montre un exemple d’envoi d’un message lorsqu’un utilisateur est ajouté à une conversation :
 
@@ -250,7 +250,7 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 
 ## <a name="message-content"></a>Contenu du message
 
-| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Remarques                                                                                   |
+| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
 | Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.  |
@@ -261,7 +261,7 @@ Vous pouvez également ajouter des notifications à votre message à l’aide de
 
 ## <a name="notifications-to-your-message"></a>Notifications à votre message
 
-Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété des objets `TeamsChannelData` `Notification.Alert` sur *true*. Le fait qu’une notification soit ou non élevée dépend des paramètres de Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété `TeamsChannelData` des objets sur `Notification.Alert` *true*. Le fait qu’une notification soit ou non élevée dépend des paramètres de Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
 
 > [!NOTE]
 > Le **champ Résumé** affiche tout texte de l’utilisateur en tant que message de notification dans le flux.
@@ -396,7 +396,7 @@ Voici les codes d’état, leur code d’erreur et leurs valeurs de message :
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message :** le bot ne fait pas partie de la liste des conversations. | Le bot ne fait pas partie de la conversation. |
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: l’administrateur client a désactivé ce bot. | Le client a bloqué le bot. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: aucune inscription trouvée pour ce bot. | L’inscription pour ce bot est in trouvée. |
-| 412 | **Code**: `PreconditionFailed` <br/> **Message :** la condition préalable a échoué, veuillez essayer à nouveau. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message :** Échec de la condition préalable, veuillez essayer à nouveau. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message :** Conversation in trouvée. | La conversation est in trouvée. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message :** taille du message trop grande. | La taille de la demande entrante était trop importante. |
 | 429 | **Code**: `Throttled` <br/> **Message**: trop de demandes. Renvoie également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, voir [limite de taux.](~/bots/how-to/rate-limit.md) |

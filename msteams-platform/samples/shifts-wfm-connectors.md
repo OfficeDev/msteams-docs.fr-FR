@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams connecteurs kronos
 ms.author: lajanuar
-ms.openlocfilehash: 088c049342c36b4f126b4a9d2f788601378b7db4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: afdd71cedbc0fe2d09e6f6716f8e4fac87619f65c87e0f5831379e3a2b4ee2e3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069147"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705018"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
@@ -20,7 +20,7 @@ Teams Les connecteurs WFM (Shifts Workforce Management) sont des intégrations p
 
 Chaque connecteur fournit des instructions détaillées pour le déploiement et l’intégration à votre organisation. Le code source complet est disponible dans GitHub référentiel. Vous pouvez explorer en détail ou bifurcation et personnaliser pour répondre à vos besoins spécifiques.   
 
-Ce document donne une vue d’ensemble des principaux avantages de Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector et JDA-to-Teams Shifts connector.
+Ce document offre une vue d’ensemble des principaux avantages de Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector et JDA-to-Teams Shifts connector.
 
 ## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Principaux avantages de Teams connecteurs WFM Shifts
 
@@ -44,7 +44,7 @@ L’affichage shifts dans Teams est illustré dans l’image suivante :
 
 ## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-to-Teams Shifts
 
-Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
+Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou de Teams mobile pour les scénarios de responsable et de travail de première ligne suivants :
 
 * Afficher la planification.
 
@@ -60,13 +60,13 @@ Pour plus d’informations sur le déploiement du connecteur Kronos-to-Teams Shi
 
 ## <a name="jda-to-teams-shifts-connector"></a>Connecteur JDA vers Teams Shifts
 
-Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, avec Teams Shifts tel que, application de bureau ou de Teams mobile pour les scénarios de travail et de responsable de première ligne suivants :
+Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, à Teams Shifts telle que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
 
 * Publiez des équipes et des groupes de planification dans JDA et affichez-les dans Teams.
 
 * Activez des scénarios de planification enrichis, y compris la demande de permutations d’équipe et de congés.
 
-* Définir la disponibilité des utilisateurs à [l’aide de l’API microsoft Graph pour Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
+* Définir la disponibilité des utilisateurs à [l’aide de l’API microsoft Graph pour Shifts.](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true)
 
 Pour plus d’informations sur la contribution et la suggestion, voir [Obtenir sur GitHub](https://aka.ms/JDAShiftsConnector).</br></br>
 

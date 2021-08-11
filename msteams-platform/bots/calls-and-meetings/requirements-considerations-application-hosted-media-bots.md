@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: ordinateur windows windows server azure hébergé par l’application
 ms.date: 11/16/2018
-ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335360"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702829"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Conditions requises et considérations pour les robots multimédias hébergés par l’application
 
@@ -33,13 +33,13 @@ Un bot multimédia hébergé par l’application requiert les procédures suivan
   
 - Le bot ne peut pas être déployé en tant qu’application web Azure.
 
-- Le bot doit être en cours d’exécution sur une version récente de la bibliothèque `Microsoft.Graph.Communications.Calls.Media` .NET. Le bot doit utiliser soit la dernière version disponible du [package NuGet,](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)soit une version qui n’a pas plus de trois mois. Les versions antérieures de la bibliothèque sont dépréciées et ne fonctionnent pas après quelques mois. La mise à jour de la bibliothèque garantit la meilleure interopérabilité `Microsoft.Graph.Communications.Calls.Media` entre le bot et Microsoft Teams.
+- Le bot doit être en cours d’exécution sur une version récente de la bibliothèque `Microsoft.Graph.Communications.Calls.Media` .NET. Le bot doit utiliser la dernière version disponible du [package NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ou une version qui n’a pas plus de trois mois. Les versions antérieures de la bibliothèque sont dépréciées et ne fonctionnent pas après quelques mois. La mise à jour de la bibliothèque garantit la meilleure interopérabilité entre le `Microsoft.Graph.Communications.Calls.Media` bot et Microsoft Teams.
 
 La section suivante fournit des détails sur l’emplacement des appels multimédias en temps réel.
 
 ## <a name="real-time-media-calls-stay-where-they-are-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
 
-Les appels multimédias en temps réel restent sur l’ordinateur où ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle (VM) qui a accepté ou démarré l’appel. Le média d’un Microsoft Teams ou d’une réunion est envoyé vers cette instance de la VM, et le support que le bot renvoie à Microsoft Teams doit également provenir de cette VM. Si des appels multimédias en temps réel sont en cours lorsque la VM est arrêtée, ces appels sont brusquement arrêtés. Si le bot a déjà connaissance de l’arrêt de la VM en attente, il peut mettre fin aux appels.
+Les appels multimédias en temps réel restent sur l’ordinateur où ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle (VM) qui a accepté ou démarré l’appel. Le média d’un appel ou d’une réunion Microsoft Teams vers cette instance de la VM, et le support que le bot renvoie à Microsoft Teams doit également provenir de cette VM. Si des appels multimédias en temps réel sont en cours lorsque la VM est arrêtée, ces appels sont brusquement arrêtés. Si le bot a déjà connaissance de l’arrêt de la VM en attente, il peut mettre fin aux appels.
 
 La section suivante fournit des détails sur l’accessibilité des robots multimédias hébergés par l’application.
 
@@ -47,9 +47,9 @@ La section suivante fournit des détails sur l’accessibilité des robots multi
 
 Les robots multimédias hébergés par l’application doivent être directement accessibles sur Internet. Ces bots doivent inclure les fonctionnalités suivantes :
 
-- Chaque instance d’unem vm hébergeant un bot multimédia hébergé par l’application dans Azure doit être directement accessible à partir d’Internet à l’aide d’une adresse IP publique (ILPIP) au niveau de l’instance.
+- Chaque instance de la VM hébergeant un bot multimédia hébergé par l’application dans Azure doit être directement accessible à partir d’Internet à l’aide d’une adresse IP publique au niveau de l’instance (ILPIP).
     - Pour obtenir et configurer un ILPIP pour un service cloud Azure, consultez la vue d’ensemble de l’adresse IP publique classique au niveau de [l’instance.](/azure/virtual-network/virtual-networks-instance-level-public-ip)
-    - Pour configurer un ILPIP pour un jeu d’échelles de machines virtuelles, voir [public IPv4 par machine virtuelle.](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine)
+    - Pour configurer un ILPIP pour un jeu d’échelles d’ordinateur virtuel, voir [public IPv4 par machine virtuelle](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
 - Le service hébergeant un bot multimédia hébergé par l’application doit également configurer chaque instance d’une vm avec un port public qui est mapmé sur l’instance spécifique.
     - Pour un service Cloud Azure, cela nécessite un point de terminaison d’entrée d’instance. Pour plus d’informations, voir [activer la communication pour les instances de rôle dans Azure.](/azure/cloud-services/cloud-services-enable-communication-role-instances)
     - Pour un jeu d’échelles de vm, une règle NAT sur l’équilibrage de charge doit être configurée. Pour plus d’informations, [voir les réseaux virtuels et les machines virtuelles dans Azure.](/azure/virtual-machines/windows/network-overview)
@@ -60,9 +60,9 @@ La section suivante fournit des détails sur l’évolutivité et les performanc
 ## <a name="scalability-and-performance-considerations"></a>Considérations relatives à l’évolutivité et aux performances
 
 Les bots multimédias hébergés par l’application nécessitent les considérations suivantes en ce qui a lieu en ce qui a été question de l’évolutivité et des performances :
-- Les bots multimédias hébergés par l’application nécessitent plus de capacité de calcul et de bande passante réseau que les bots de messagerie et peuvent subir des coûts d’exploitation beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’évolutivité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut gérer. Un bot vidéo peut être en mesure de supporter une ou deux sessions multimédias simultanées par cœur d’UC (si vous utilisez les formats vidéo RGB24 ou NV12 « bruts »).
+- Les bots multimédias hébergés par l’application nécessitent plus de capacité de calcul et de réseau (bande passante) que les bots de messagerie et peuvent subir des coûts d’exploitation beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’évolutivité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut gérer. Un bot vidéo peut être en mesure de supporter une ou deux sessions multimédias simultanées par cœur d’UC (si vous utilisez les formats vidéo RGB24 ou NV12 « bruts »).
 - La plateforme Real-time Media ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la VM pour décharger le codage/décodage vidéo H.264. Au lieu de cela, le code vidéo et le décodage sont effectués dans le logiciel sur l’UC. Si un processeur graphique est disponible, le bot peut en tirer parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
-- L’instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de la série Dv2 est recommandée. Pour les autres types d’ordinateur virtuel Azure, un système avec quatre processeurs virtuels (vCPU) est la taille minimale requise. Des informations détaillées sur les types de vm Azure sont disponibles dans [la documentation Azure.](/azure/virtual-machines/windows/sizes-general) 
+- L’instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de série Dv2 est recommandée. Pour les autres types d’ordinateur virtuel Azure, un système avec quatre processeurs virtuels (vCPU) est la taille minimale requise. Des informations détaillées sur les types de vm Azure sont disponibles dans [la documentation Azure.](/azure/virtual-machines/windows/sizes-general) 
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -78,7 +78,7 @@ Les exemples de bots multimédias hébergés par l’application sont les suivan
 - [Graph Documentation du SDK d’appel](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - Les bots nécessitent plus de capacité de calcul et de bande passante réseau que les bots de messagerie et encourent des coûts d’exploitation beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’évolutivité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut gérer. Un bot vidéo ne peut supporter qu’une ou deux sessions multimédias simultanées par cœur d’UC si vous utilisez les formats vidéo RGB24 ou NV12 bruts.
 - La plateforme Real-time Media ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la VM pour décharger le codage ou le décodage vidéo H.264. Au lieu de cela, le code vidéo et le décodage sont effectués dans le logiciel sur l’UC. Si un processeur graphique est disponible, le bot en tire parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
-- L’instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de la série Dv2 est recommandée. Pour les autres types d’ordinateur virtuel Azure, un système avec 4 processeurs virtuels (vCPU) est la taille minimale requise. Pour plus d’informations sur les types de vm Azure, voir [la documentation Azure.](/azure/virtual-machines/windows/sizes-general)
+- L’instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de série Dv2 est recommandée. Pour les autres types d’ordinateur virtuel Azure, un système avec 4 processeurs virtuels (vCPU) est la taille minimale requise. Pour plus d’informations sur les types de vm Azure, voir [la documentation Azure.](/azure/virtual-machines/windows/sizes-general)
 
 La section suivante fournit des exemples qui illustrent différents scénarios de médias locaux.
 

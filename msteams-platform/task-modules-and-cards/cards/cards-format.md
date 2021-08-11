@@ -1,18 +1,18 @@
 ---
 title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte Microsoft Teams
-keywords: Format de cartes de bots Teams
+keywords: Format de cartes de bots teams
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
-ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.date: 06/25/2021
+ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140602"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706128"
 ---
-# <a name="format-cards-in-microsoft-teams"></a>Formater les cartes dans Microsoft Teams
+# <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
 Voici les deux façons d’ajouter une mise en forme de texte enrichi à vos cartes :
 * [Markdown](#format-cards-with-markdown)
@@ -67,7 +67,7 @@ Sur le bureau, la mise en forme de markdown de carte adaptative apparaît comme 
 
 ![Mise en forme Markdown de carte adaptative dans le client de bureau](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-Sur iOS, la mise en forme Markdown de carte adaptative apparaît comme illustré dans l’image suivante :
+Sur iOS, la mise en forme markdown de carte adaptative apparaît comme illustré dans l’image suivante :
 
 ![Mise en forme markdown de carte adaptative dans iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
@@ -172,7 +172,7 @@ Utilisez la propriété de masquage d’informations pour masquer des informatio
 > [!NOTE]
 > La fonctionnalité prend uniquement en charge le masquage d’informations côté client. Le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse de point de terminaison HTTPS spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)
 
-Pour masquer les informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` **true**.
+Pour masquer des informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` **true**.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Exemple de carte adaptative avec propriété de masquage
 
@@ -223,7 +223,7 @@ Pour effectuer une carte adaptative pleine largeur, votre application doit inclu
 }
 ```
 
-L’image suivante illustre une carte adaptative pleine largeur :
+L’image suivante montre une carte adaptative pleine largeur :
 
 ![Affichage carte adaptative pleine largeur](../../assets/images/cards/full-width-adaptive-card.png)
 
@@ -283,7 +283,7 @@ L’image apparaît en mode Étape lorsque l’utilisateur sélectionne l’icô
 
 ![Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
 
-Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner dans votre carte adaptative les images qui doivent avoir cette fonctionnalité.
+Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
 
 > [!NOTE]
 > * Les fonctionnalités de zoom avant et arrière s’appliquent uniquement aux éléments image de type image dans une carte adaptative.
@@ -291,13 +291,13 @@ Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un z
 
 # <a name="markdown-format-for-o365-connector-cards"></a>[Format Markdown pour les cartes de connecteur O365](#tab/connector-md)
 
-Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML.
+Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML.
 
 | Style | Exemple | Markdown |
 | --- | --- | --- |
 | Gras | **text** | `**text**` |
 | Italic | *text* | `*text*` |
-| En-tête (niveaux 1 &ndash; 3) | **Texte** | `### Text`|
+| En-tête (niveaux 1 &ndash; 3) | **Text** | `### Text`|
 | Barré | ~~text~~ | `~~text~~` |
 | Liste non triée | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Liste triée | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -389,13 +389,13 @@ La mise en forme est différente entre le bureau et les versions mobiles de Team
 
 # <a name="html-format-for-o365-connector-cards"></a>[Format HTML pour les cartes de connecteur O365](#tab/connector-html)
 
-Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML.
+Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML.
 
 | Style | Exemple | HTML |
 | --- | --- | --- |
 | Gras | **text** | `<strong>text</strong>` |
 | Italic | *text* | `<em>text</em>` |
-| En-tête (niveaux 1 &ndash; 3) | **Texte** | `<h3>Text</h3>` |
+| En-tête (niveaux 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Barré | ~~text~~ | `<strike>text</strike>` |
 | Liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -416,7 +416,7 @@ Sur iOS, la mise en forme HTML apparaît comme illustré dans l’image suivante
 
 ![Mise en forme HTML pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
-Les cartes de connecteur utilisant du code HTML pour iOS comportent les problèmes suivants :
+Les cartes de connecteur utilisant html pour iOS incluent les problèmes suivants :
 
 * Les images en ligne ne sont pas restituer sur iOS à l’aide de Markdown ou html dans les cartes de connecteur.
 * Le texte préformaté est restituer, mais n’a pas d’arrière-plan gris.
@@ -485,7 +485,7 @@ Les balises HTML sont pris en charge pour les cartes simples, telles que les car
 | --- | --- | --- |
 | Gras | **text** | `<strong>text</strong>` |
 | Italic | *text* | `<em>text</em>` |
-| En-tête (niveaux 1 &ndash; 3) | **Texte** | `<h3>Text</h3>` |
+| En-tête (niveaux 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | Barré | ~~text~~ | `<strike>text</strike>` |
 | Liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | Liste triée | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

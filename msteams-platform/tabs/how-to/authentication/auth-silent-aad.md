@@ -4,12 +4,12 @@ description: Décrit l’authentification silencieuse
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Authentification SSO Teams AAD silencieuse
-ms.openlocfilehash: 0c75c6d50fd1191b6ea8548d65c9df4ce8453898
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1bdb75941f612be68ef0c6c2efa798a4888a88753434f1f3264243a135decc14
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019600"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701883"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 

@@ -6,12 +6,12 @@ keywords: samesite des attributs de cookie
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140564"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708335"
 ---
 # <a name="samesite-cookie-attribute"></a>Attribut de cookie SameSite 
 
@@ -46,7 +46,7 @@ Les attributs de cookie SameSite sont les suivants :
 |Paramètre | Application | Valeur |Spécification d’attribut |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Les cookies sont envoyés automatiquement uniquement dans un contexte de première **partie** et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les demandes de sous-sites, telles que les appels de chargement d’images ou d’iframes. Ils sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple, en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |Le navigateur envoie uniquement des cookies pour les demandes de contexte de première partie. Il s’trouve des demandes provenant du site qui définissent le cookie. Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec `Strict` l’attribut n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
+| **Strict** |Le navigateur envoie uniquement des cookies pour les demandes de contexte de première partie. Ce sont des demandes provenant du site qui définissent le cookie. Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec `Strict` l’attribut n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
 | **Aucune** | Les cookies sont envoyés dans le contexte de première partie et les demandes d’origine croisée ; toutefois, la valeur doit être explicitement définie et toutes les demandes de navigateur doivent suivre le protocole HTTPS et inclure l’attribut qui nécessite une **`None`** connexion  **`Secure`** chiffrée. Les cookies qui ne respectent pas cette exigence sont **rejetés.** <br/>**Les deux attributs sont requis ensemble.** Si ce protocole est spécifié sans ou si le protocole HTTPS n’est pas utilisé, les cookies tiers  **`None`** **`Secure`**  sont rejetés.| Facultatif, mais, s’il est définie, le protocole HTTPS est requis. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams et ajustements
@@ -60,7 +60,7 @@ Les attributs de cookie SameSite sont les suivants :
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>Onglets, modules de tâche et extensions de messagerie
 
-* Teams permet d’incorporer du contenu qui est vu dans un contexte de `<iframes>` niveau supérieur ou de première partie.
+* Teams les onglets utilisés pour incorporer du contenu qui est vu dans un contexte `<iframes>` de niveau supérieur ou de première partie.
 * Les modules de tâche vous permettent de créer des expériences de menu contextuel modal dans votre application Teams. Comme un onglet, une fenêtre modale s’ouvre à l’intérieur de la page actuelle.
 * Les extensions de messagerie vous permettent d’insérer du contenu enrichi dans un message de conversation à partir de ressources externes.
 
@@ -89,6 +89,6 @@ Android WebView est un composant système Chrome qui permet aux applications And
 * [Exemples sameSite](https://github.com/GoogleChromeLabs/samesite-examples)
 * [Recettes de cookie SameSite](https://web.dev/samesite-cookie-recipes/)
 * [Clients incompatibles connus]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [Développeurs : préparez-vous pour le nouveau samesite=aucun ; Secure Cookie Paramètres](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-* [Modifications à venir des cookies SameSite ASP.NET et ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Développeurs : découvrez les nouveaux paramètres de cookies SameSite=None; Secure](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Modifications à venir des cookies SameSite dans ASP.NET et ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [Cookies HTTP](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

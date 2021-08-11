@@ -1,16 +1,16 @@
 ---
 title: Créer des applications personnalisées à code faible pour Microsoft Teams
 author: surbhigupta
-description: Détaille les solutions Microsoft à faible et sans code disponibles pour Teams
+description: Détaille les solutions de code Microsoft disponibles pour les Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 3c7f2dc76f01a47226598e5480e9b39ce9dd173a
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4c529a3f46ffb0a57bbd298c01570c4d05074b9bbd4207e20e2f9a8374bfed1d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069128"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707795"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft Teams
 
@@ -33,9 +33,9 @@ Microsoft Power Platform combine quatre technologies Microsoft robustes, telles 
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams et Power Apps
 
-Avec [Power Apps,](/powerapps/powerapps-overview)vous pouvez créer des applications métiers qui se connectent à vos données métiers et qui sont adaptées aux besoins de votre organisation.  Power Apps un large éventail de scénarios d’application pour relever les défis de l’entreprise par le biais [d’applications de canevas.](/powerapps/maker/#canvas-apps) Après la création, vous pouvez exporter l’application à partir du portail Power Apps maker et [l’incorporer dans Microsoft Teams](/power-platform/admin/embed-app-teams).
+Avec [Power Apps,](/powerapps/powerapps-overview)vous pouvez créer des applications métiers qui se connectent à vos données métiers et sont adaptées aux besoins de votre organisation.  Power Apps un large éventail de scénarios d’application pour relever les défis de l’entreprise par le biais [d’applications de canevas.](/powerapps/maker/#canvas-apps) Après la création, vous pouvez exporter l’application à partir du portail Power Apps maker et [l’incorporer dans Microsoft Teams](/power-platform/admin/embed-app-teams).
 
-La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linkid=2143374) Teams offre une expérience intégrée aux créateurs d’applications pour créer et modifier des applications et des flux de travail au sein Teams. Ils peuvent rapidement publier et partager les applications avec les membres de l’équipe. Les membres peuvent utiliser les applications sans avoir à basculer entre plusieurs applications et services.
+La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linkid=2143374) Teams offre une expérience intégrée aux créateurs d’applications pour créer et modifier des applications et des flux de travail dans Teams. Ils peuvent rapidement publier et partager les applications avec les membres de l’équipe. Les membres peuvent utiliser les applications sans avoir à basculer entre plusieurs applications et services.
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams et Power Automate
 
@@ -72,7 +72,7 @@ Virtual Assistant est un modèle open source Microsoft qui vous permet de créer
 
 [Un examen plus étroit des fonctionnalités de plateforme de données Project Androiddale](https://powerapps.microsoft.com/blog/a-closer-look-at-data-platform-capabilities-in-project-oakdale/)
 
-[Annonce des mises à jour Teams et power platform pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
+[Annonce des mises à jour de plateforme Teams pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams forme l’avenir du travail avec des fonctionnalités de code faible pour améliorer votre espace de travail numérique](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
 

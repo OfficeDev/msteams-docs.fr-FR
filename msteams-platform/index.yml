@@ -3,7 +3,7 @@ title: Microsoft Teams documentation pour les développeurs
 summary: 'Obtenez de la documentation, des exemples de code, des didacticiels et bien plus encore pour vous aider à créer des applications Microsoft Teams personnalisées.'
 brand: teams
 metadata:
-  title: Microsoft Teams Documentation pour les développeurs de plateforme
+  title: Microsoft Teams Documentation du développeur de plateforme
   description: 'La plateforme Microsoft Teams développeur permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer la productivité, prendre des décisions plus rapidement, fournir le focus (en réduisant le changement de contexte) et créer une collaboration autour du contenu et des flux de travail existants. .'
   ms.service: msteams
   ms.topic: hub-page

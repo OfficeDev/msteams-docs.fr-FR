@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: c114eba3e022f153ccaa9e9031086989eca5d019bd472fb0b9f5da583465deb9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646508"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707488"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -48,7 +48,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 :::row:::
    :::column span="1":::
 
-**Collaborez plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
+**Collaborer plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
 
    :::column-end:::
 
@@ -100,7 +100,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 
    :::column span="1":::
 
-**Créer des applications pour les réunions**: il existe plusieurs options pour incorporer votre application dans l’expérience Teams [d’appel.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+**Créer des applications pour les réunions**: il existe plusieurs options pour incorporer votre application dans l’expérience [Teams’appel.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
    :::column-end:::
 
@@ -117,7 +117,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 
    :::column span="":::
 
-**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
+**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
 
    :::column-end:::
 
@@ -208,6 +208,13 @@ Vous recherchez une source d’inspiration pour le développement d’applicatio
 
    :::column-end:::
 :::row-end:::
+
+## <a name="integrate-teams-in-your-external-app"></a>Intégrer des Teams dans votre application externe
+Cette page se concentre sur l’incorporation de vos propres expériences dans Microsoft Teams en Teams applications. Si vous souhaitez  inverser ce modèle et intégrer Teams ou d’autres fonctionnalités de communication dans votre propre expérience d’application externe, voir [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services est un service basé sur le cloud avec des API REST et des SDK de bibliothèque client pour vous aider à intégrer la communication dans vos propres applications personnalisées. Vous pouvez incorporer des composants Web Teams génériques ou de style React pour appeler et discuter à l’aide de la bibliothèque d’interface [utilisateur.](https://azure.github.io/communication-ui-library/)
+
+Les applications Azure Communication Services peuvent utiliser la fonctionnalité de prévisualisation publique pour interopérer avec [Teams](/azure/communication-services/concepts/teams-interop) et permettre à votre application personnalisée de participer Teams réunions de manière anonyme. Par exemple, vous pouvez intégrer des appels vidéo dans une application bancaire mobile et permettre aux utilisateurs finaux de rencontrer virtuellement des employés de la banque à l’aide Microsoft Teams. 
+
+Vous pouvez également intégrer Microsoft 365 pour créer des applications externes qui incorporent la vidéo et les appels PSTN au nom d’Teams utilisateur. Si vous avez utilisé [des SDK Skype Entreprise](/skype-sdk/appsdk/skypeappsdk) par le passé, ces fonctionnalités dans le cadre d’Azure Communication Services sont recommandées en remplacement.
 
 ## <a name="see-also"></a>Voir aussi
 

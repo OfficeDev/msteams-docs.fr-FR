@@ -4,12 +4,12 @@ description: Comprendre comment résoudre les problèmes liés à votre soumissi
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 23c751d7a9fec96de128521f660213a559534283
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a18aff23b8523bc91485835c991cc6608deb8eae93ce175ff3403e699dc6c5e5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565108"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705558"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec Microsoft Teams soumission au Store
 
@@ -31,7 +31,7 @@ Vous devez résoudre tous les problèmes signalés par l’équipe de validation
 * Instructions sur la façon de reproduire chaque problème.
 * Recommandations résoudre chaque problème en fonction de la documentation du développeur disponible publiquement.
 
-Le processus de résolution des problèmes et de resoumettre une application se passe généralement comme ceci :
+Le processus de résolution des problèmes et de resoumettage d’une application se passe généralement comme ceci :
 
 1. Vous corrigez tous les problèmes dans le rapport.
 1. Vous envoyez les informations suivantes à l’équipe de validation de Microsoft <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
@@ -46,7 +46,7 @@ Le processus de résolution des problèmes et de resoumettre une application se 
    * Si des problèmes ne sont pas résolus ou si Microsoft trouve de nouveaux problèmes, vous recevez un autre rapport sur les mesures à corriger. Résolvez ces problèmes et envoyez une version mise à jour de l’application <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 > [!CAUTION]
-> Pour éviter plusieurs échecs de soumission, ne resoumettez pas votre application sur l’Partner Center tant que l’équipe de validation de Microsoft n’a pas approuvé votre application.
+> Pour éviter plusieurs échecs de soumission, ne resoumettez pas votre application sur l’Partner Center tant que l’équipe de validation microsoft n’a pas approuvé votre application.
 
 ## <a name="faq"></a>FAQ
 
@@ -101,9 +101,9 @@ Non. Microsoft ne commence pas à valider votre application tant que vous n’av
 
 <details>
 
-<summary><b>J’ai reçu un courrier électronique de l’Partner Center pour me dire que mon application a été approuvée pour la publication. Pourquoi mon application n’est-elle pas dans Teams store ?</b></summary>
+<summary><b>J’ai reçu un courrier électronique de l’Partner Center pour me dire que mon application a été approuvée pour la publication. Pourquoi mon application n’est-elle pas dans le Teams store ?</b></summary>
 
-Une fois votre application approuvée, la publication prend généralement entre 1 et 2 jours ou jours, en fonction des fonctionnalités de l’application.Si votre application n’a pas été publiée après deux jours ouvr, contactez <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
+Une fois votre application approuvée, la publication prend généralement entre 1 et 2 jours ou jours, en fonction des fonctionnalités de l’application.Si votre application n’a pas été publiée au bout de deux jours ouv, contactez <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 <br>
 

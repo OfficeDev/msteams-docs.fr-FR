@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068574"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702137"
 ---
 # <a name="apps-for-teams-meetings"></a>Applications pour Teams réunions
 

@@ -4,12 +4,12 @@ description: Décrit les actions de carte dans Microsoft Teams et comment les ut
 localization_priority: Normal
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: b7c6641078d835ec92975924aaf64da1573757211413da99184bd86c9465b53e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254201"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705327"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -323,7 +323,7 @@ CardFactory.actions([
 
 La propriété de niveau `replyToId` supérieur contient l’ID du message d’où provenait l’action de carte. Utilisez-le si vous souhaitez mettre à jour le message.
 
-Le code suivant illustre un exemple de message d’appel entrant :
+Le code suivant montre un exemple de message d’appel entrant :
 
 ```json
 {

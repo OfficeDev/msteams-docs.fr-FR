@@ -5,12 +5,12 @@ description: Créer une conversation de sous-entité conversationnelle pour vos 
 keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: b563510b9ce232a98572430c76f1b8e59ddb4886
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179691"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705104"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -18,7 +18,7 @@ Les sous-entités de conversation permettent aux utilisateurs d’avoir des conv
 
 Les sous-entités de conversation sont uniquement pris en charge dans les canaux. Ils peuvent être utilisés à partir d’un onglet personnel ou statique pour créer ou poursuivre des conversations dans des onglets déjà épinglés à un canal. L’onglet statique est utile si vous souhaitez fournir un emplacement à un utilisateur pour afficher et accéder aux conversations qui se produisent sur plusieurs canaux.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-entités ↔ conversations dans une base de données principale. L’offre est fournie, mais vous devez la stocker et la renvoyer à Teams pour que les utilisateurs `conversationId` `conversationId` poursuivent la conversation.
 

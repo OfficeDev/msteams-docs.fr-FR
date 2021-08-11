@@ -5,12 +5,12 @@ description: Comment activer la prise en charge de l' sso pour vos extensions de
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 02d08506a07e955693531908f4f3cf16573a02c0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e965ed19e603bf888b107ca9ecda01aa81af192a020c41cfd26eb9bb905fd53
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566200"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705744"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique (SSO) pour les extensions de messagerie
  
@@ -18,7 +18,7 @@ La prise en charge de l' sign-on unique est désormais disponible pour les exten
 
 Ce document vous guide sur la façon d’activer l’authentification sso et de stocker votre jeton d’authentification, si nécessaire.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 La condition préalable à l’activer pour les extensions de messagerie et le déploiement des liens est la suivante :
 * Vous devez avoir un [compte Azure.](https://azure.microsoft.com/en-us/free/)

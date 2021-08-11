@@ -5,12 +5,12 @@ description: Découvrez comment prendre en Microsoft Teams développement d’ap
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254259"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703155"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Conditions préalables : prendre en Microsoft Teams développement d’applications
 
@@ -21,7 +21,7 @@ Avant de commencer à créer votre première application Teams, vous devez insta
 Certains des outils dont vous avez besoin dépendent de la façon dont vous préférez créer votre Teams application :
 
 - [Node.js](https://nodejs.org/en/download/) (utilisez la dernière version de LTS v14)
-- Un navigateur avec des outils de développement, tels [que Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
+- Un navigateur avec des outils de développement, tels [que, Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
 - Si vous développez avec JavaScript, TypeScript ou le SharePoint Framework (SPFx), installez [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 ou ultérieure.  
 - Si vous développez avec .NET, installez [Visual Studio 2019.](https://visualstudio.com/download) Veillez à installer la **charge ASP.NET développement web et** web ou la charge de travail de développement **.NET Core sur plusieurs plateformes.**
 
@@ -30,7 +30,7 @@ Certains des outils dont vous avez besoin dépendent de la façon dont vous pré
 
 ## <a name="install-the-teams-toolkit"></a>Installer le Teams Shared Computer Toolkit
 
-Le Teams Shared Computer Toolkit simplifie le processus de développement avec des outils pour mettre en service et déployer des ressources cloud pour votre application, publier dans le Teams store, etc. Vous pouvez utiliser le kit de ressources avec Visual Studio Code, Visual Studio ou en tant qu’CLI (appelé `teamsfx` ).
+Le Teams Shared Computer Toolkit simplifie le processus de développement avec des outils pour mettre en service et déployer des ressources cloud pour votre application, publier sur le Teams store, etc. Vous pouvez utiliser le kit de ressources avec Visual Studio Code, Visual Studio ou en tant qu’CLI (appelé `teamsfx` ). Pour plus d’informations, [voir Teams Shared Computer Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), Teams Shared Computer Toolkit for [Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -151,7 +151,7 @@ Vous devez avoir accès à deux comptes :
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Ouvrez Visual Studio Code
+1. Ouvrir Visual Studio Code
 1. Sélectionnez l Teams icône dans la barre latérale :
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icône Teams dans la barre latérale Visual Studio Code.":::

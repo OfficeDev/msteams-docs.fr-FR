@@ -1,16 +1,16 @@
 ---
 title: Modules de tâche
 author: surbhigupta
-description: Ajouter des expériences de fenêtres popup modales pour collecter ou afficher des informations à vos utilisateurs à partir de Microsoft Teams applications
+description: Ajouter des expériences popup modales pour collecter ou afficher des informations à vos utilisateurs à partir de Microsoft Teams applications
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 257ca54ab53d310116cc301dded01a7582c11532
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 3b0e639acc8901a3637189e435fcfc159e992ae3a674a437733474087103193c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140536"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707681"
 ---
 # <a name="task-modules"></a>Modules de tâche
 

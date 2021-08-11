@@ -1,50 +1,43 @@
 ---
-title: Suppression des marges de tabulation dans Microsoft Teams
+title: Modifications des marges de l’onglet
 author: surbhigupta
-description: Décrit comment la suppression des marges d’onglet améliorera l’expérience du développeur.
+description: Décrit comment la suppression des marges d’onglet améliore l’expérience de création d’applications.
 keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 4bbf7bce62e24c61d23e7fa90f1ccd3e6c5a3371
-ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
+ms.openlocfilehash: 4ca8356bddc0e578bc58b38112fb1268302a5ad0e84631bf81864c70cffbcb64
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53534599"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704383"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
-Ce document décrit comment la suppression des marges autour de tous les onglets dans Microsoft Teams améliorera l’expérience du développeur lors de la création d’applications. Il s’agit d’une amélioration introduite dans Microsoft Teams 2021.
-La suppression des marges autour de tous les onglets permettra aux développeurs de créer des applications qui semblent plus natives Teams. Cela s’alignera également sur nos [conceptions de kit d’interface utilisateur.](~/tabs/design/tabs.md) La plupart des applications ont déjà une meilleure apparence sans les marges qui entourent leur expérience. Toutefois, certains onglets sont visuellement affectés par cette modification et les développeurs doivent apporter les modifications nécessaires.
+Ce document décrit comment la suppression des marges autour de tous les onglets Microsoft Teams améliore l’expérience de création de votre application. Il s’agit d’une amélioration introduite dans Microsoft Teams 2021.
+Vous pouvez créer des applications qui semblent plus natives Teams en supprimant les marges autour de tous les onglets. Les onglets avec marges supprimées s’alignent Microsoft Teams conceptions du [kit d’interface utilisateur de Microsoft Teams'](~/tabs/design/tabs.md). La plupart des applications offrent une apparence améliorée sans marges.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabulation et sans marges" border="false":::
 
 > [!NOTE]
 > Cette fonctionnalité n’est pas applicable aux clients mobiles, car les onglets des clients mobiles n’ont pas de marges. 
 
-## <a name="timelines"></a>Chronologies
-
-* 5 mars 2021 - Marges supprimées dans la prévisualisation [publique pour les développeurs.](~/resources/dev-preview/developer-preview-intro.md)
-* 31 juillet 2021 - Les marges seront supprimées en production.
-
 ## <a name="guidelines"></a>Conseils
 
-Microsoft Teams applications qui utilisent des onglets seront affectées par cette modification. Les développeurs doivent basculer vers [la](~/resources/dev-preview/developer-preview-intro.md) prévisualisation publique pour les développeurs afin de déterminer la façon dont leurs onglets sont affectés et d’apporter les modifications nécessaires.
-
-Les développeurs d’onglets ne doivent pas compter sur Teams pour fournir des marges autour de leurs onglets. Les développeurs sont encouragés à ajouter des marges autour de leurs conceptions d’onglets lorsque cela est nécessaire. Les conceptions d’applications en production peuvent ressembler à un remplissage supplémentaire, c’est-à-dire des marges fournies par les Teams et les marges fournies par l’onglet. Toutefois, le remplissage supplémentaire n’est que temporaire et va disparaître dans quelques semaines, ne laissant que le remplissage fourni par l’application.
+La suppression des marges de tabulation affecte Teams applications qui utilisent des onglets. Dans ce cas, vous pouvez ajouter des marges autour de vos conceptions d’onglets lorsque cela est nécessaire. Les conceptions d’applications en production ont un effet de remplissage supplémentaire, c’est-à-dire les marges fournies par les Teams et les marges fournies par l’onglet. Toutefois, l’espacement supplémentaire n’est que temporaire et disparaît dans quelques semaines, ne laissant que le remplissage fourni par l’application.
 
 ## <a name="faq"></a>FAQ
 
-**Est-ce que le chrome de l’application, tel que la barre d’en-tête ou la barre des tâches, est autorisé à toucher les bords de nos conceptions ?**
+**Est-il possible pour le chrome de l’application, comme la barre d’en-tête ou la barre des tâches, d’toucher les bords de nos conceptions ?**
 
-Oui, c’est correct et encouragé. Cela permet à l’application de se sentir native.
+Oui, cela est correct et Teams encourage une telle conception. Cela permet à l’application de se sentir native.
 
 **Est-il possible pour le contenu de l’application, comme le texte, les logos et les images, d’toucher les bords gauche et droit de nos conceptions ?**
 
 Non, vous devez fournir votre propre remplissage ou marges à gauche et à droite de tout le contenu de l’application pour vous assurer qu’il ne touche pas les bords de votre interface utilisateur. Vous pouvez également ajouter des marges en haut de votre onglet, si nécessaire.
 
-**Quelle est la taille des marges Teams précédemment appliquées ?**
+**Quelle est la taille des marges de tabulation appliquées Teams précédemment ?**
 
 * Gauche et droite : 20 px
 * Haut : 16 px
@@ -52,8 +45,8 @@ Non, vous devez fournir votre propre remplissage ou marges à gauche et à droit
 
 > [!IMPORTANT]
 > * Les marges de tous les onglets sont supprimées : onglets personnels, onglets de conversation (groupe), onglets de réunion et onglets de canal.
-> * Il n’existe aucun moyen d’opter ou de refuser cette modification. Elle s’applique à tous les onglets.
-> * Cette modification peut affecter les onglets qui s’appuient sur Microsoft Teams pour fournir des marges autour de leur interface utilisateur.
+> * La modification de suppression de la marge de tabulation s’applique à tous les onglets. Il n’existe aucun moyen d’opter ou de refuser la modification. 
+> * La modification des marges de tabulation peut affecter les onglets qui s’appuient sur Microsoft Teams pour fournir des marges autour de leur interface utilisateur.
 
 ## <a name="see-also"></a>Voir aussi
 

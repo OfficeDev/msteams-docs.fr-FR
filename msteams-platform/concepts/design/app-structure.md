@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: a574ebeb5416e614152bb24d52cc798f0032943c
-ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+ms.openlocfilehash: 2e053186355b583e456e73c6443f5d8c043157a9ae0a09941a86a3aabd7978c5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53133392"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706687"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprendre la structure Microsoft Teams’application
 
@@ -54,7 +54,7 @@ Les onglets fournissent une grande zone de dessin pour héberger le contenu de v
 
 La zone de dessin est un iframe qui vous permet de personnaliser entièrement l’expérience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets de bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur ordinateur de bureau." border="false":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -112,6 +112,6 @@ La surface est un iframe qui vous permet de personnaliser l’expérience, mais 
 
 La surface est une vue web, qui vous permet de personnaliser l’expérience, mais gardez à l’esprit que pendant les réunions, ces applications utilisent un thème foncé.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur appareils mobiles." border="false":::
 
 ---

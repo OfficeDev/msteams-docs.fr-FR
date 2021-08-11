@@ -4,16 +4,16 @@ description: Comment ajouter le bouton Partager Teams incorporé sur votre site 
 ms.topic: reference
 localization_priority: Normal
 keywords: Partager Teams-à-Teams
-ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075646"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707715"
 ---
 # <a name="create-share-to-teams-button"></a>Créer un bouton de partage pour Teams
 
-Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons De partage à Teams sur leurs pages web. Lorsque vous la sélectionnez, elle lance l’expérience de partage à Teams dans une fenêtre pop-up. Cela vous permet de partager un lien directement avec n’importe quelle personne Microsoft Teams canal sans changer de contexte. Ce document vous guide sur la création et l’incorporation d’un bouton Share-to-Teams pour votre site web, la création de l’aperçu de votre site web et l’extension de Share-to-Teams for Education.
+Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons De partage à Teams sur leurs pages web. Lorsque vous la sélectionnez, elle lance l’expérience de partage à Teams dans une fenêtre pop-up. Cela vous permet de partager un lien directement avec n’importe quelle personne Microsoft Teams canal sans changer de contexte. Ce document vous guide sur la création et l’incorporation d’un bouton Share-to-Teams pour votre site web, la création de l’aperçu de votre site web et l’extension de Share-to-Teams pour l’éducation.
 
 > [!NOTE]
 > * Seules les versions de bureau de Edge et Chrome sont pris en charge.
@@ -21,7 +21,7 @@ Les sites web tiers peuvent utiliser le script de lancement pour incorporer des 
 
 L’image suivante affiche l’expérience Teams de partage :
 
-![Fenêtre de partage Teams de partage](~/assets/images/share-to-teams-popup.png)
+![Fenêtre fenêtre Teams partage à la fois](~/assets/images/share-to-teams-popup.png)
 
 ## <a name="embed-a-share-to-teams-button"></a>Incorporer un partage à Teams bouton
 
@@ -42,7 +42,7 @@ L’image suivante affiche l’expérience Teams de partage :
 
     Une fois l’exécution de cette Microsoft Teams, l’icône est ajoutée à votre site web. L’image suivante montre l’icône Partager Teams-à-vous :
 
-    ![Icône Partager vers Teams](~/assets/icons/share-to-teams-icon.png)
+    ![Icône Partager Teams partage](~/assets/icons/share-to-teams-icon.png)
 
 1. Sinon, si vous souhaitez une taille d’icône différente pour le bouton Teams partage, utilisez `data-icon-px-size` l’attribut.
 
@@ -84,9 +84,9 @@ Le tableau suivant présente les balises nécessaires :
 
 Vous pouvez utiliser les versions html par défaut ou la version Open Graph.
 
-## <a name="share-to-teams-for-education"></a>Partager avec Teams éducation
+## <a name="share-to-teams-for-education"></a>Partager avec les Teams pour l’éducation
 
-Pour les enseignants qui utilisent le bouton Partager Teams, il existe une option supplémentaire pour `Create an Assignment` . Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée, en fonction du lien partagé. L’image suivante affiche Share-to-Teams éducation : 
+Pour les enseignants qui utilisent le bouton Partager Teams, il existe une option supplémentaire pour `Create an Assignment` . Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée, en fonction du lien partagé. L’image suivante affiche Share-to-Teams pour l’éducation : 
 
 ![Partager pour Teams l’éducation popup](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -95,7 +95,7 @@ Pour les enseignants qui utilisent le bouton Partager Teams, il existe une optio
 | Propriété | Attribut HTML | Type | Par défaut | Description |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | s/o | Href du contenu à partager. |
-| preview | `data-preview` | booléen (sous la mesure d’une chaîne) | `true` | Indique si un aperçu du contenu à partager est à afficher ou non. |
+| preview | `data-preview` | booléen (sous la mesure d’une chaîne) | `true` | Indique si un aperçu du contenu à partager doit être présenté ou non. |
 | iconPxSize | `data-icon-px-size` | number (en tant que chaîne) | `32` | Taille en pixels du bouton De partage à Teams à restituer. |
 | msgText | `data-msg-text` | string | s/o | Texte par défaut à insérer avant le lien dans la zone de composition du message. Le nombre maximal de caractères est de 200. |
 | assignInstr | `data-assign-instr` | string | s/o | Texte par défaut à insérer dans le champ « Instructions » des affectations. Le nombre maximal de caractères est de 200. |

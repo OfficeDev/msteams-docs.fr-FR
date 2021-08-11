@@ -5,12 +5,12 @@ description: Comment obtenir le contexte spécifique de Microsoft Team pour votr
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: ccbc04cbc1b2eb3162e886cd77273a4a0c37a6ec
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4e3717b5931b673fa52c82b54d9c79380d9ae8d8907c8c2cf51f46499386cb28
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068976"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706268"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir Teams contexte spécifique pour votre bot
 
@@ -82,7 +82,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` valeur de comme point de `serviceUrl` terminaison. La valeur de `serviceUrl` est stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` . La charge utile de réponse indique également si l’utilisateur est un utilisateur normal ou anonyme.
+Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` valeur de comme point de `serviceUrl` terminaison. La valeur est `serviceUrl` stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` . La charge utile de réponse indique également si l’utilisateur est un utilisateur normal ou anonyme.
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -171,7 +171,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/conversations/{conversationId}/members/{userId}` valeur de comme point de `serviceUrl` terminaison. La valeur de `serviceUrl` est stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` . Cela peut être utilisé pour les utilisateurs ordinaires et les utilisateurs anonymes.
+Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/conversations/{conversationId}/members/{userId}` valeur de comme point de `serviceUrl` terminaison. La valeur est `serviceUrl` stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` . Cela peut être utilisé pour les utilisateurs ordinaires et les utilisateurs anonymes.
 
 Voici l’exemple de réponse pour un utilisateur normal :
 
@@ -267,7 +267,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/teams/{teamId}` valeur de comme point de `serviceUrl` terminaison. La valeur de `serviceUrl` est stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` .
+Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/teams/{teamId}` valeur de comme point de `serviceUrl` terminaison. La valeur est `serviceUrl` stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` .
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -341,7 +341,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/teams/{teamId}/conversations` valeur de comme point de `serviceUrl` terminaison. La valeur de `serviceUrl` est stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` .
+Vous pouvez émettre directement une requête GET sur , en utilisant la `/v3/teams/{teamId}/conversations` valeur de comme point de `serviceUrl` terminaison. La valeur est `serviceUrl` stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur stockée pour `serviceUrl` .
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations

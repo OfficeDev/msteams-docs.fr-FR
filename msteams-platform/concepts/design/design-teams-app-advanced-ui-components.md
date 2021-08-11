@@ -5,12 +5,12 @@ description: Découvrez les composants d’interface utilisateur utilisés dans 
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 6f2bd9cd237751adb15db45bbd6e3cdfea35ce09
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: a23cd05947ac2d9d4e8117420bf2e2c11613e430989613bf2d267e5c892bf39c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328078"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703487"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur avancés
 
@@ -27,7 +27,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 Les barre de navigation sont une aide à la navigation qui véhicule la hiérarchie de votre application. Ils aident les utilisateurs à comprendre comment la page qu’ils affichent s’intègre à l’expérience globale et offrent un accès en un clic aux niveaux supérieurs de cette hiérarchie.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Hiérarchie de communication
 * Navigation
@@ -44,9 +44,9 @@ Les barre de navigation sont une aide à la navigation qui véhicule la hiérarc
 
 ## <a name="left-nav"></a>Navigation gauche
 
-Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre onglet Teams de navigation. Dans l’exemple suivant, le navigation gauche se trouve entre la liste de canaux et le contenu de l’onglet.
+Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre onglet Teams gauche. Dans l’exemple suivant, le navigation gauche se trouve entre la liste de canaux et le contenu de l’onglet.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Parcourez plusieurs pages dans un Teams onglet.
 * Décomposez les applications complexes en plusieurs pages.
@@ -65,7 +65,7 @@ Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre ongle
 
 Une barre de notification est une zone dédiée à l’affichage de messages brefs et importants qui ne nécessitent pas que l’utilisateur prenne des mesures immédiates. Des icônes et des couleurs d’arrière-plan spécifiques sont associées à des types de messages spécifiques (voir ci-dessous).
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Messages critiques, erreurs et avertissements
 * Messages de réussite
@@ -87,14 +87,14 @@ L’étape permet aux utilisateurs d’afficher du contenu, tel qu’une image, 
 
 Découvrez comment implémenter [l’étape.](~/tabs/tabs-link-unfurling.md)
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Afficher le contenu sur une grande surface dans Teams au lieu d’une autre application ou navigateur
 * Média à la une ou autre contenu enrichi
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur le bureau." border="false":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -108,7 +108,7 @@ Votre application peut lancer une étape à partir d’une carte adaptative, d�
 
 Une barre d’outils est un conteneur permettant de grouper un ensemble de contrôles.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Actions contextuelles sur le contenu de l’application
 * Filtre contextuel et recherche

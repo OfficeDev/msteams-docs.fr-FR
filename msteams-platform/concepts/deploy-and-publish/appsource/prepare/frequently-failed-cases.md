@@ -5,19 +5,19 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: conseils de soumission d’applications fréquemment échoués - Recommandations de validation des cas
-ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 91ae68562d93e4ad8770d5251671c3fa756aa0b15482b4495fe016a01e068707
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629997"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706534"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Astuces pour une soumission d’Microsoft Teams d’application réussie
 
 >[!NOTE]
->Cette page sera dépréciée d’ici mai 2021. Pour plus d’informations sur la publication réussie de votre application, voir les instructions [de validation Teams store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+>Cette page sera dépréciée d’ici mai 2021. Pour plus d’informations sur la publication réussie de votre application, voir les [instructions de validation Teams store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
-Cet article traite des raisons courantes pour lesquelles la validation des applications envoyées échoue. Bien qu’il ne s’agit pas d’une liste exhaustive de tous les problèmes potentiels avec votre application, le fait de suivre ce guide augmente la probabilité que la soumission de votre application se passe la première fois. Pour plus d’informations, voir [Stratégies de certification](/legal/marketplace/certification-policies) de Marketplace commercial pour obtenir une liste complète des stratégies de validation.
+Cet article traite des raisons courantes pour lesquelles la validation des applications soumises échoue. Bien qu’il ne s’agit pas d’une liste exhaustive de tous les problèmes potentiels avec votre application, la suite de ce guide augmente la probabilité que la soumission de votre application se passe la première fois. Pour plus d’informations, voir [Stratégies de certification](/legal/marketplace/certification-policies) de Marketplace commercial pour obtenir une liste complète des stratégies de validation.
 
 >[!NOTE]
 >**[La section 1140](/legal/marketplace/certification-policies#1140-teams)** est spécifique aux Microsoft Teams et la **[sous-section 1140.4](/legal/marketplace/certification-policies#11404-functionality)** traite des fonctionnalités requises pour Teams applications.
@@ -44,8 +44,8 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
     ![Exemple d’application 1 ](../../../../assets/images/faq/Sampleapp1.png) ![ Exemple d’application 2](../../../../assets/images/faq/Sampleapp2.png)
 
 * Incrémentez le numéro de version de votre application dans le manifeste si vous a modifiez votre soumission.
-* L’application ne doit pas sortir les utilisateurs de Teams pour les scénarios utilisateur principaux. Les cibles de liens dans les applications ne doivent pas être en lien avec un navigateur externe. Les cibles de liaison doivent être en lien avec les éléments div contenus dans Teams, par exemple, les modules de tâche et les onglets. 
-* L’utilisation de modules de tâches ou d’onglets est suggérée pour afficher des informations aux utilisateurs dans Teams.
+* L’application ne doit pas sortir les utilisateurs de Teams pour les scénarios utilisateur principaux. Les cibles de lien dans les applications ne doivent pas être en lien avec un navigateur externe. Les cibles de liaison doivent être des liens vers des éléments div contenus dans Teams, par exemple, des modules de tâche et des onglets. 
+* L’utilisation de modules de tâche ou d’onglets est suggérée pour afficher des informations aux utilisateurs dans Teams.
 * Tous les scénarios principaux et non principaux doivent être effectués dans l’environnement Teams à l’exception des éléments suivants :
   * Politique de confidentialité
   * Conditions d’utilisation (TOU)
@@ -67,7 +67,7 @@ Cet article traite des raisons courantes pour lesquelles la validation des appli
   * Connecter compte/service => déconnecter un compte/service.
   * Autoriser un compte/service => autoriser/refuser un compte/service.
   * Inscrivez un compte/service => inscrire/désabonner un compte/service.
-* Si votre application nécessite un compte ou un service, vous devez fournir un moyen à l’utilisateur de s’inscrire ou de créer une demande d’inscription. Une exception peut être accordée si votre application nécessite une licence à utiliser. Dans de tels scénarios, fournissez des instructions claires pour qu’un nouvel utilisateur s’inscrivez.
+* Si votre application nécessite un compte ou un service, vous devez fournir un moyen à l’utilisateur de s’inscrire ou de créer une demande d’inscription. Une exception peut être accordée si votre application nécessite une licence à utiliser. Dans de tels scénarios, fournissez des instructions claires pour l’inscription d’un nouvel utilisateur.
 * Fournissez des instructions claires sur la façon de faire suivre à un nouvel utilisateur la façon de s’inscrire pour utiliser vos services d’application. Si aucun lien d’inscription prêt n’est disponible, fournissez des instructions précises dans les domaines suivants :
 
 > [!div class="checklist"]
@@ -109,7 +109,7 @@ Pour plus d’informations sur l’authentification, voir :
 * Les onglets ne doivent pas présenter de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation.
 * Les onglets qui ont des fonctionnalités d’édition complexes dans l’application doivent ouvrir l’affichage éditeur dans une fenêtre multiple plutôt que dans l’onglet.
 * S’il existe plusieurs options d’affichage, envisagez de disposer d’un menu de config d’onglets dans le choix de l’utilisateur. Par exemple, au lieu d’incorporer un menu à l’intérieur de l’onglet, placez le menu dans la page de configuration afin que l’affichage de l’onglet réel soit propre et concentré.
-* Incluez un onglet *Aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
+* Incluez un *onglet d’aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
 * Veuillez inclure un *onglet Paramètres* qui est disponible à partir de l’en-tête de l’application.
 
 ![Page de configuration de l’idée large](../../../../assets/images/faq/wideidea.png)
@@ -118,7 +118,7 @@ Pour plus d’informations sur l’authentification, voir :
 
 * L’écran de configuration doit expliquer clairement la valeur de l’expérience et comment configurer l’onglet.
 * Le processus de configuration doit toujours offrir aux utilisateurs un moyen de continuer et de ne pas mettre fin à l’expérience utilisateur. Par exemple, n’affichez pas de tableau vide une fois que l’utilisateur a configuré l’onglet.
-* Le processus de signature utilisateur doit faire partie du processus de configuration. Assurez-vous de l’effectuer dans l’interface utilisateur de l’onglet. Une fois que l’utilisateur a terminé la configuration et chargé l’onglet, aucune action supplémentaire n’est requise.
+* Le processus de signature utilisateur doit faire partie du processus de configuration. Veillez à l’effectuer dans l’interface utilisateur de l’onglet. Une fois que l’utilisateur a terminé la configuration et chargé l’onglet, aucune action supplémentaire n’est requise.
 * N’affichez pas l’intégralité de votre page web dans la fenêtre de configuration de la signature.
 * Un utilisateur doit toujours être en mesure de terminer l’expérience de configuration, même s’il ne peut pas trouver immédiatement le contenu qu’il recherche.
 * L’expérience de configuration doit fournir des options pour que l’utilisateur trouve son contenu, épingle une URL ou crée du contenu s’il n’existe pas.
@@ -203,7 +203,7 @@ Les bots de notification uniquement doivent envoyer un message de bienvenue qui 
    * **Rendez votre message concis et informatif.** L’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou ne connaît rien de votre application. Vous souhaitez adapter votre message à tous les publics et, en quelques phrases, expliquer ce que fait votre bot et les façons d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs pourront tirer parti de son utilisation.
 ![Bot cafe et dinning](../../../../assets/images/faq/cafe-bot.png)
 
-* **Rendre votre message actionnable.** Pensez à la première chose que vous souhaitez que les utilisateurs font après l’installation de votre application. Existe-t-il une commande qu’ils doivent essayer ? Existe-t-il une autre expérience d’intégration à connaître ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C’est ce que *je peux faire...*».
+* **Rendre votre message actionnable.** Réfléchissez à la première chose que vous souhaitez que les utilisateurs font après l’installation de votre application. Existe-t-il une commande qu’ils doivent essayer ? Existe-t-il une autre expérience d’intégration à connaître ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C’est ce que *je peux faire...*».
 
 #### <a name="welcome-messages-in-the-team-or-channel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe ou du canal
 
@@ -212,7 +212,7 @@ Les choses sont légèrement différentes lorsque le bot est ajouté à un canal
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; mobile, pas de vente à prix moyen ou de paiement direct
 
 * Vos onglets, cartes adaptatives, messages de bot et contenu dans les modules de tâche doivent être réactifs pour une variété de tailles d’écran d’appareil mobile.
-* Les applications qui la prise en charge d’iOS doivent être entièrement fonctionnelles sur la dernière iPad l’aide de la dernière version d’iOS.
+* Les applications qui permettent de prendre en charge iOS doivent être entièrement fonctionnelles sur la dernière iPad l’aide de la dernière version d’iOS.
 * Ne doit pas inclure de références directes à des achats in-app, des offres d’essai, des offres pour les versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules à partir de votre application Teams sur un système d’exploitation mobile (Android, iOS).
 * La version iOS ou Android du add-in ne doit pas afficher d’interface utilisateur ou de langue, ni de lien vers d’autres applications, des modules ou un site web demandant à l’utilisateur de payer.
 * Les pages de politique de confidentialité et de conditions d’utilisation associées ne doivent pas non plus être liées à une interface utilisateur commerciale ou au Store.

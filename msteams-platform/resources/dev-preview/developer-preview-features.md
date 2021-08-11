@@ -4,12 +4,12 @@ description: Détails des fonctionnalités de la prévisualisation Microsoft Tea
 ms.topic: reference
 localization_priority: Normal
 keywords: Teams prévisualiser les fonctionnalités de développement
-ms.openlocfilehash: 84683420a5c61bb1eb493f8191bfbcbe97f6fb46
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: f24f95245707097cb5fc79c041582efb5e1f11ef29877855003baf3707842c4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230903"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704395"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Fonctionnalités de la prévisualisation pour les développeurs publics Microsoft Teams
 
@@ -20,17 +20,17 @@ La prévisualisation pour développeurs inclut les nouvelles fonctionnalités su
 
 ## <a name="app-customization"></a>Personnalisation de l’application
 
-Vous pouvez maintenant définir un ensemble de propriétés sélectionné, qu’un administrateur Teams peut personnaliser ou renommer en fonction des besoins de son organisation. Pour plus d’informations, [voir la fonctionnalité de personnalisation de l’application.](~/concepts/design/design-teams-app-overview.md)
+Vous pouvez maintenant définir un ensemble de propriétés sélectionné, qu’un administrateur Teams peut personnaliser ou renommer en fonction des besoins de son organisation. Pour plus d’informations, [voir la fonctionnalité de personnalisation d’application.](~/concepts/design/design-teams-app-overview.md)
 
 ## <a name="tabs-single-sign-on-sso"></a>Onglets sign-on (SSO)
 
 Vous pouvez désormais utiliser l’authentification unique [(SSO)](~/tabs/how-to/authentication/auth-aad-sso.md) pour vous connecter et authentifier un utilisateur sur ordinateur de bureau et mobile à l’aide du SDK JavaScript Teams à partir d’une page de contenu web. L’un des avantages est qu’un utilisateur n’a jamais à se connecter ; et une fois qu’ils ont accepté l’application à l’aide de leur profil : ils sont automatiquement inscrits à leur onglet (y compris mobile).
 
-Notre version préliminaire pour développeurs est disponible dans les versions de manifeste 1.5 et ultérieures. Notre implémentation actuelle ne peut obtenir qu’une quantité limitée d’API Graph, mais nous fournissons une solution de contournement pour obtenir des API de Graph supplémentaires à l’aide de notre API d’authentification existante.
+Notre version préliminaire pour développeurs est disponible dans les versions de manifeste 1.5 et versions ultérieures. Notre implémentation actuelle ne peut obtenir qu’une quantité limitée d’API Graph, mais nous fournissons une solution de contournement pour obtenir des API de Graph supplémentaires à l’aide de notre API d’authentification existante.
 
 ## <a name="calls-and-online-meeting-bots"></a>Appels et bots de réunion en ligne
 
-Avec l’ajout des API [Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)pour les appels et les réunions en ligne, les applications Microsoft Teams peuvent désormais interagir avec les utilisateurs de manière enrichie à l’aide de la voix et de la vidéo. Ces API vous permettent d’ajouter de nouvelles fonctionnalités d’application telles que la réponse vocale interactive (IVR), le contrôle d’appel et l’accès aux flux audio et/ou vidéo en temps réel pour les appels et les réunions, y compris le partage de bureau et d’application.
+Avec l’ajout des API [Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)pour les appels et les réunions en ligne, les applications Microsoft Teams peuvent désormais interagir avec les utilisateurs de façon enrichie à l’aide de la voix et de la vidéo. Ces API vous permettent d’ajouter de nouvelles fonctionnalités d’application telles que la réponse vocale interactive (IVR), le contrôle d’appel et l’accès aux flux audio et/ou vidéo en temps réel pour les appels et les réunions, y compris le partage de bureau et d’application.
 
 Nous avons ajouté une nouvelle section sur la création et le développement d’appels et de bots de réunions en ligne, en commençant par la [vue d’ensemble.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 

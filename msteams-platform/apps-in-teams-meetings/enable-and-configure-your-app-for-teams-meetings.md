@@ -3,12 +3,12 @@ title: Activer et configurer vos applications pour Teams réunions
 author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions
 ms.topic: conceptual
-ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 1d5983599e658440f3e1ec22c90ea88d63e22550e70be579290b51e57316df36
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726865"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702213"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -16,7 +16,7 @@ Chaque équipe dispose d’une façon différente de communiquer et de collabore
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour les Teams réunion
 
-Pour activer votre application pour les Teams, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
+Pour activer votre application pour Teams réunions, vous devez mettre à jour le manifeste de votre application et utiliser les propriétés de contexte pour déterminer où votre application doit apparaître.
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
 
@@ -126,7 +126,7 @@ L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est 
 
 #### <a name="in-meeting-dialog-box"></a>Boîte de dialogue En réunion
 
-La boîte de dialogue de réunion peut être utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
+La boîte de dialogue de réunion peut être utilisée pour impliquer les participants au cours de la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) l’API pour signaler qu’une notification de bulle doit être déclenchée. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
 
 La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher une bulle de contenu dans une réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 
@@ -139,7 +139,7 @@ La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le m
 > [!NOTE]
 > * Cette fonctionnalité est actuellement disponible en [prévisualisation pour les](../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
 
-La phase de réunion partagée permet aux participants de la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel.
+La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel.
 
 Le contexte requis se trouve `meetingStage` dans le manifeste de l’application. Une condition préalable consiste à avoir le `meetingSidePanel` contexte. Cela active le **partage** dans meetingSidePanel.
 

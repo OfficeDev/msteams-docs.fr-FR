@@ -3,12 +3,12 @@ title: Vue d’ensemble des actions universelles pour les cartes adaptatives
 description: Vue d’ensemble rapide des actions universelles pour les cartes adaptatives.
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
-ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
+ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52781617"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706343"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Actions universelles pour les cartes adaptatives
 
@@ -55,7 +55,7 @@ L’image suivante illustre les actions universelles pour les cartes adaptatives
 
 :::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Même carte mobile pour Teams et Outlook":::
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Même carte pour Teams et Outlook":::
 
@@ -63,7 +63,7 @@ L’image suivante illustre les actions universelles pour les cartes adaptatives
 
 ### <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
-Aujourd’hui, tous les utilisateurs Teams chat ou canal voient exactement les mêmes actions d’affichage et de bouton sur la carte adaptative. Toutefois, dans certains scénarios, certains utilisateurs doivent agir différemment et avoir accès à différentes informations au sein de la même conversation ou canal.
+Aujourd’hui, chaque utilisateur de la Teams ou du canal voit exactement les mêmes actions d’affichage et de bouton sur la carte adaptative. Toutefois, dans certains scénarios, certains utilisateurs doivent agir différemment et avoir accès à différentes informations au sein de la même conversation ou canal.
 
 Par exemple, si vous envoyez une carte de rapport d’incident dans une conversation ou un canal, seul l’utilisateur affecté à l’incident doit voir un **bouton Résoudre.** En revanche, le créateur de  l’incident doit voir un bouton Modifier et tous les autres utilisateurs doivent uniquement être en mesure d’afficher les détails de l’incident. Cela est rendu possible par les affichages spécifiques de l’utilisateur qui sont activés par la `refresh` propriété.
 
@@ -73,7 +73,7 @@ L’image suivante montre un exemple d’extension de messagerie de ticket dans 
 
 :::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Affichages spécifiques aux utilisateurs mobiles":::
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="Affichages spécifiques à l’utilisateur":::
 
@@ -83,7 +83,7 @@ Pour plus d’informations, voir [l’exemple pour les affichages spécifiques d
 
 ### <a name="sequential-workflow-support"></a>Prise en charge séquentielle du flux de travail
 
-Avec la prise en charge séquentielle du flux de travail, les utilisateurs peuvent avancer dans une série de flux de travail sans envoyer différentes cartes séparément. Cela est rendu possible par la possibilité de renvoyer une carte adaptative `Action.Execute` en réponse à une action. En outre, tous les utilisateurs de la conversation ou du canal peuvent avancer dans leur flux de travail sans modifier la carte pour les autres utilisateurs de la conversation.
+Avec la prise en charge séquentielle du flux de travail, les utilisateurs peuvent avancer dans une série de flux de travail sans envoyer différentes cartes séparément. Cela est rendu possible par la possibilité de renvoyer une `Action.Execute` carte adaptative en réponse à une action. En outre, tout utilisateur de la conversation ou du canal peut avancer dans son flux de travail sans modifier la carte pour les autres utilisateurs de la conversation.
 
 L’image suivante illustre un exemple de robot de commande de produits : <br/>
 
@@ -97,7 +97,7 @@ Pour plus d’informations, voir [l’exemple de flux de travail séquentiel.](S
 
 ### <a name="up-to-date-views"></a>Affichages à jour
 
-Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Par exemple, il peut s’agit d’une demande d’approbation envoyée par un utilisateur. Après l’approbation, la carte doit afficher automatiquement les détails sur l’heure d’approbation de la demande et sur les personnes qui ont approuvé la demande. Le modèle d’actualisation vous permet de fournir ces affichages à jour. L’image suivante illustre un flux d’approbation en plusieurs étapes et la façon dont les vues de différents utilisateurs sont affichées.
+Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Par exemple, il peut s’agit d’une demande d’approbation envoyée par un utilisateur. Après approbation, la carte doit afficher automatiquement les détails sur l’heure d’approbation de la demande et sur les personnes qui ont approuvé la demande. Le modèle d’actualisation vous permet de fournir ces affichages à jour. L’image suivante illustre un flux d’approbation en plusieurs étapes et la façon dont les vues de différents utilisateurs sont affichées.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Affichages utilisateur spécifiques à jour":::
 

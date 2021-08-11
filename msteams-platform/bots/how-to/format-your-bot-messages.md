@@ -5,12 +5,12 @@ description: Ajouter une mise en forme enrichie à vos messages de bot
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: fba55b6b08785d375f80923133d3af70434cbaf57adf8feaf4e9f50f478f5e61
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068982"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705600"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
@@ -32,7 +32,7 @@ Teams prend en charge un sous-ensemble de balises de mise en forme XML ou HTML e
 
 Actuellement, les limitations suivantes s’appliquent à la mise en forme :
 
-* Les messages texte uniquement ne sont pas en charge de la mise en forme de tableau.
+* Les messages texte uniquement ne sont pas en charge de la mise en forme des tableaux.
 * Les cartes enrichies ne peuvent être formatées que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre.
 * Les cartes enrichies ne prisent pas en charge le markdown ou la mise en forme de tableau.
 

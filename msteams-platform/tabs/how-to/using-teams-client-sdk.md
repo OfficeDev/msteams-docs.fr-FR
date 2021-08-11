@@ -6,12 +6,12 @@ description: Vue d’ensemble Microsoft Teams du SDK client JavaScript, qui peut
 localization_priority: Normal
 keywords: onglets teams canal de groupe configurable statique SDK JavaScript personnel
 ms.topic: conceptual
-ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: d1bcf9fd853d1b0e93c99ae62ad32f462fc98ed4eee1796e7ae5510ad02a8909
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994363"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704934"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec Microsoft Teams SDK client JavaScript
 
@@ -28,7 +28,7 @@ Par exemple, le SDK peut faire réagir votre [onglet](../../build-your-first-app
 
 Faites l’une des choses suivantes en fonction de vos préférences de développement :
 
-* [Installer le SDK avec npm ou NPM](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
+* [Installer le SDK avec npm ou Yarn](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 * [Cloner le SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
 
 ## <a name="common-sdk-functions"></a>Fonctions SDK courantes
@@ -48,7 +48,7 @@ Consultez les tableaux suivants pour comprendre les fonctions courantes du SDK. 
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Obtient les onglets de l’application. Le rappel récupère l’objet **TabInformation.** **L’objet TabInstanceParameters est** un paramètre facultatif.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.getMruTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters)`|Obtient les derniers onglets utilisés pour l’utilisateur. Le rappel récupère l’objet **TabInformation.** **L’objet TabInstanceParameters est** un paramètre facultatif.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getmrutabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinstanceparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.shareDeepLink(deepLinkParameters: DeepLinkParameters)`|Prend **l’objet DeepLinkParameters** comme entrée et partage une boîte de dialogue de lien profond qu’un utilisateur peut utiliser pour accéder au contenu de *l’onglet.*|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#sharedeeplink-deeplinkparameters-&preserve-view=true)<br/>[deepLink obj](/javascript/api/@microsoft/teams-js/microsoftteams.deeplinkparameters?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|Prend un **deepLink** requis en tant qu’entrée et permet à l’utilisateur d’accéder à une URL ou de déclencher une action du client, telle que l’ouverture ou l’installation, d’une application dans *Teams*.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
+|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|Prend un **deepLink** requis en tant qu’entrée et permet à l’utilisateur d’accéder à une URL ou déclenche une action du client, telle que l’ouverture ou l’installation, d’une application dans *Teams*.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|Prend **l’objet TabInstance** comme entrée et navigue vers une instance d’onglet spécifiée.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
 ### <a name="authentication-namespace"></a>Espace de noms d’authentification
@@ -58,7 +58,7 @@ Consultez les tableaux suivants pour comprendre les fonctions courantes du SDK. 
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|Lance une demande d’authentification qui ouvre une nouvelle fenêtre avec les paramètres fournis par l’appelant. Les valeurs d’entrée facultatives sont définies par **l’objet AuthenticateParameters.**|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|Avertit la trame à l’origine de la demande d’authentification que la demande a réussi et ferme la fenêtre d’authentification.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|Avertit la trame à l’origine de la demande d’authentification que la demande a échoué et ferme la fenêtre d’authentification.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|Envoyez une demande d’émission de jeton Azure AD au nom de l’application. Le jeton peut être acquis à partir du cache, s’il n’a pas expiré. Sinon, une demande est envoyée à Azure AD pour obtenir un nouveau jeton.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|Envoyez une demande d’émission de jeton Azure AD pour le compte de l’application. Le jeton peut être acquis à partir du cache, s’il n’a pas expiré. Sinon, une demande est envoyée à Azure AD pour obtenir un nouveau jeton.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>Paramètres de noms
 

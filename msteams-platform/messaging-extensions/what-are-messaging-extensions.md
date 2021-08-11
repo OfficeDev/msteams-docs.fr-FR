@@ -5,12 +5,12 @@ description: Vue d’ensemble des extensions de messagerie sur la plateforme Mic
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6bf4b9a3147e9916f2eac05a890fc8fc134799be
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 9f222e8b4baa60433e2fb7298cc94f53b180c05a83107cbd1bfd374fec1481a5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069093"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706030"
 ---
 # <a name="messaging-extensions"></a>Extensions de messagerie
 
@@ -41,7 +41,7 @@ Dans le manifeste de l’Microsoft Teams’application, une seule extension de m
 
 Il existe deux types de commandes d’extension de messagerie : commande d’action et commande de recherche. Le type de commande d’extension de messagerie définit les éléments d’interface utilisateur et les flux d’interaction disponibles pour votre service web. Certaines interactions, telles que l’authentification et la configuration, sont disponibles pour les deux types de commandes.
 
-### <a name="action-commands"></a>Commandes d’action
+### <a name="action-commands"></a>Commandes d'action
 
 Les commandes d’action sont utilisées pour présenter aux utilisateurs une fenêtre popup modale pour collecter ou afficher des informations. Lorsque l’utilisateur soumet le formulaire, votre service web répond en insérant un message directement dans la conversation ou en insérant un message dans la zone de composition du message. Après cela, l’utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires pour des flux de travail plus complexes.
 
@@ -61,7 +61,7 @@ L’image suivante affiche le module de tâche de recherche d’extension de mes
 
 ## <a name="link-unfurling"></a>Déploiement de lien
 
-Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est connue sous le nom de déploiement de lien. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
+Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est connue sous le nom de déploiement de lien. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction du message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu’un lien est passé dans l’extension de messagerie :
  
 ![lien de déploiement](../assets/images/messaging-extension/unfurl-link.png)
