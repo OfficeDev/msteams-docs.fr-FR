@@ -4,12 +4,12 @@ description: Découvrez comment recharger une version de version de votre applic
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
+ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "52684648"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708707"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Télécharger votre application dans Microsoft Teams
 
@@ -19,7 +19,10 @@ Vous pouvez télécharger une version Microsoft Teams applications sans avoir à
 * Vous avez créé une application uniquement pour vous-même. Par exemple, pour automatiser un flux de travail.
 * Vous avez créé une application pour un petit groupe d’utilisateurs, par exemple, votre groupe de travail.
 
-## <a name="prerequisites"></a>Configuration requise
+> [!IMPORTANT]
+> Pour l’instant, les applications de chargement de version secondaire sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour les GCC-High et le Département de la Défense (DOD).
+
+## <a name="prerequisites"></a>Conditions préalables
 
 * Créez votre [package d’application](~/concepts/build-and-test/apps-package.md) [et validez-le pour les](https://dev.teams.microsoft.com/appvalidation.html) erreurs.
 * [Activez le chargement d’applications personnalisées](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) dans Teams.

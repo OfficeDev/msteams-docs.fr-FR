@@ -4,12 +4,12 @@ description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo p
 ms.topic: conceptual
 localization_priority: Normal
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: a11350a3c5bae0b2eb3a36b9e1233ed92e1705c8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5013ebcbce0bc94199e846f20fc6ee52238d302f1dd1b05872245ef2c6e32d91
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020147"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709567"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire les appels et le bot de réunions pour Microsoft Teams
 
@@ -17,7 +17,7 @@ Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne 
 
 * Il existe une nouvelle version du manifeste Teams’application avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo` . Ces paramètres sont inclus dans la [version](../../resources/dev-preview/developer-preview-intro.md) préliminaire du développeur du manifeste Teams’application.
 * [Les Graph microsoft](./registering-calling-bot.md#add-graph-permissions) doivent être configurées pour l’ID d’application Microsoft de votre bot.
-* Les Graph et les autorisations d’API de réunion en ligne nécessitent le consentement de l’administrateur client.
+* Les autorisations Graph appels et les API de réunions en ligne nécessitent le consentement de l’administrateur client.
 
 ## <a name="new-manifest-settings"></a>Nouveaux paramètres de manifeste
 
@@ -50,7 +50,7 @@ La section suivante fournit une liste des autorisations d’application pris en 
 
 ## <a name="add-graph-permissions"></a>Ajouter Graph autorisations d’autorisation
 
-Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph’API d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d’application.
+Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph api d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateurs inscrits. Un administrateur client doit donner son consentement aux autorisations d’application.
 
 ### <a name="application-permissions-for-calls"></a>Autorisations d’application pour les appels
 

@@ -6,12 +6,12 @@ keywords: Canal de groupe onglets teams configurable
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6f79480fb3ec6eb50de622e0b67b70e021d8cce7
-ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
+ms.openlocfilehash: f3781cdf8be3bf39480511258616c1e5dc5dedc107910480a3b02758fa28610c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "53300311"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708363"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -23,7 +23,7 @@ Une page de configuration est un type spécial de [page de contenu.](content-pag
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un onglet de conversation de canal ou de groupe
 
-L’application doit référencer [le Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . Les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud.
+L’application doit référencer [Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . Les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud.
 
 ### <a name="example"></a>Exemple
 

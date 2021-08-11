@@ -4,12 +4,12 @@ description: Comprendre les concepts clés dans la création d’un bot qui peut
 ms.topic: conceptual
 localization_priority: Normal
 keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media-hosted media
-ms.openlocfilehash: 0cfb8f345702f03ae356789d8dad1573902dcfb4
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 23a4573c39968f3b5c53badc32fd80ecc4dc889087dd8d98253be9d46555919c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585948"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709544"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Appels et réunions multimédias en temps réel avec Microsoft Teams
 
@@ -17,7 +17,7 @@ La plateforme Real-time Media permet aux bots d’interagir avec Microsoft Teams
 
 Par exemple, dans un appel 1:1 avec un bot, lorsque l’utilisateur parle, le bot reçoit 50 images audio par seconde. Le bot reçoit des trames audio avec chaque image de 20 millisecondes (ms) d’audio. Un bot multimédia hébergé par l’application peut faire la reconnaissance vocale en temps réel à mesure que les trames audio sont reçues. Il n’est pas nécessaire d’attendre un enregistrement une fois que l’utilisateur a cessé de parler. Le bot peut également envoyer et recevoir des vidéos haute résolution, y compris du contenu de partage d’écran vidéo.
 
-La plateforme fournit une API simple de socket permettant au bot d’envoyer et de recevoir des médias. Il gère le codage et le décodage en temps réel des paquets audio ou vidéo. Il utilise des codecs tels que LARE ET G.722 pour l’audio et H.264 pour la vidéo. La plateforme gère également le chiffrement ou le déchiffrement de tous les paquets multimédias et la transmission réseau de paquets. Le bot n’est concerné que par le contenu audio ou vidéo réel. Un bot multimédia en temps réel participe à des appels et des réunions en temps réel avec plusieurs participants.
+La plateforme fournit une API simple de socket permettant au bot d’envoyer et de recevoir du média. Il gère le codage et le décodage en temps réel des paquets audio ou vidéo. Il utilise des codecs tels que LARE ET G.722 pour l’audio et H.264 pour la vidéo. La plateforme gère également le chiffrement ou le déchiffrement de tous les paquets multimédias et la transmission réseau de paquets. Le bot n’est concerné que par le contenu audio ou vidéo réel. Un bot multimédia en temps réel participe à des appels et des réunions en temps réel avec plusieurs participants.
 
 ## <a name="media-session"></a>Session multimédia
 
@@ -31,7 +31,7 @@ La section suivante fournit des détails sur l’envoi et la réception de médi
 
 ## <a name="frames-and-frame-rate"></a>Trames et fréquence d’images
 
-Un bot multimédia en temps réel interagit directement avec les modalités audio et vidéo d’une session multimédia. Le bot envoie et reçoit du contenu multimédia sous la mesure d’une séquence d’images et chaque image est une unité de contenu. Une seconde de l’audio est transmise sous la mesure d’une séquence de 50 images. Chaque image contient 20 ms qui est 1/50e de seconde de contenu de reconnaissance vocale. Une seconde de vidéo est transmise en tant que séquence de 30 images fixes. Chaque image est conçue pour être vue pendant seulement 33,3 ms, soit 1/30e de seconde avant la trame vidéo suivante. Le nombre d’images transmises ou rendues par seconde est appelé fréquence d’images.
+Un bot multimédia en temps réel interagit directement avec les modalités audio et vidéo d’une session multimédia. Le bot envoie et reçoit du contenu multimédia sous la mesure d’une séquence d’images et chaque image est une unité de contenu. Une seconde de l’audio est transmise sous la mesure d’une séquence de 50 images. Chaque image contient 20 ms qui est 1/50e de seconde de contenu de reconnaissance vocale. Une seconde de vidéo est transmise en tant que séquence de 30 images fixes. Chaque image est destinée à être vue pendant 33,3 ms, soit 1/30e de seconde avant la trame vidéo suivante. Le nombre d’images transmises ou rendues par seconde est appelé fréquence d’images.
 
 La section suivante fournit des détails sur le format audio et vidéo utilisé dans les appels et réunions multimédias en temps réel.
 

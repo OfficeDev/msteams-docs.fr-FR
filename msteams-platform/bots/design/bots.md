@@ -5,16 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98e36bf55e61ef59261959021409d9e60d8542f5
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630083"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709689"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
 Les bots sont des applications de conversation qui effectuent un ensemble spécifique de tâches. Basés sur <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, les bots communiquent avec les utilisateurs, répondent à leurs questions et informent les utilisateurs de façon proactive en cas de modifications et d’autres événements. C’est un excellent moyen de les joindre.
+
+> [!IMPORTANT]
+> Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais pas dans les GCC-High et le département de la Défense (DOD).
 
 Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des bots dans Teams.
 
@@ -29,11 +32,11 @@ Vous trouverez des instructions plus détaillées sur la conception du bot, y co
 
 Les bots sont disponibles dans les conversations, les canaux et les applications personnelles.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 Les utilisateurs peuvent ajouter un bot de l’une des manières suivantes :
 
-* À partir du magasin Teams de données.
+* À partir de Teams Store.
 * Utilisez le menu volant de l’application en sélectionnant l’icône **Plus** sur le côté gauche de Teams.
 * Avec un @mention dans la nouvelle conversation ou zone de rédaction (l’exemple suivant montre comment faire dans une conversation de groupe).
 
@@ -55,7 +58,7 @@ Il est essentiel que votre bot se présente et décrive ce qu'il peut faire. Cet
 
 En contexte personnel, les messages d’accueil définissent le ton de votre bot. Le message inclut un message d’accueil, ce que le bot peut faire et quelques suggestions sur la façon d’interagir. Par exemple, « Essayez de me poser des questions sur ... ». Si possible, ces suggestions doivent renvoyer les réponses stockées sans avoir à se connecter.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="L'exemple montre l'introduction d'un bot dans une application personnelle." border="false":::
 
@@ -69,7 +72,7 @@ En contexte personnel, les messages d’accueil définissent le ton de votre bot
 
 L’introduction de votre bot doit être légèrement différente dans les canaux et les conversations de groupe par rapport à un espace personnel (comme une application personnelle). Dans la vie réelle, si vous entrez dans une salle pleine de gens, vous vous présenterez au lieu de souhaiter la bienvenue à tous ceux qui sont déjà là. Portez cette réflexion dans votre conception bot.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="L'exemple montre l'introduction d'un bot dans un contexte de collaboration." border="false":::
 
@@ -85,7 +88,7 @@ Lorsqu'une personne envoie un message à un bot, il peut être nécessaire de se
 
 N’oubliez pas : dans le menu de commandes du bot (**Que puis-je faire ?**), vous devez également fournir une commande pour vous sortir.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="L'exemple montre un bot avec un bouton de connexion." border="false":::
 
@@ -106,7 +109,7 @@ Vous pouvez inclure une visite guidée avec des messages d’accueil et si le bo
 
 Dans une application personnelle, un carrousel peut fournir une vue d’ensemble efficace de votre bot et de toutes les autres fonctionnalités de votre application. Il est vivement encouragé d’inclure des boutons pour que les utilisateurs essaient les commandes de bot. Par exemple, **créez une tâche.**
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="L'exemple montre une visite guidée d'un bot dans une conversation à deux." border="false":::
 
@@ -120,7 +123,7 @@ Dans une application personnelle, un carrousel peut fournir une vue d’ensemble
 
 Dans les canaux et conversations de groupe, une visite guidée doit s’ouvrir dans un modal (également appelé [module de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) de sorte qu’elle n’interrompe pas les conversations en cours. Cela vous permet également d’implémenter des affichages basés sur les rôles pour votre visite guidée.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="L'exemple montre une visite guidée d'un bot dans un canal." border="false":::
 
@@ -145,7 +148,7 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 
 ### <a name="anatomy"></a>Anatomie
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="L’exemple montre la forme structurelle d’un bot." border="false":::
 
@@ -155,9 +158,9 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 |2|**Onglet Conversation** : ouvre l’espace pour discuter avec votre bot (applicable uniquement aux applications personnelles).|
 |3|**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
 |4 |**Onglet À propos** : affiche des informations de base sur votre application.|
-|5 |**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
-|6 |**Carte adaptative**: si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
-|7 |**Menu de commandes** : affiche les commandes standard de votre bot (définies par vous).|
+|5 |**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
+|6 |**Carte adaptative**: si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
+|7 |**Menu de commandes** : affiche les commandes standard de votre bot (définies par vous).|
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -169,7 +172,7 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 |2|**Onglet Conversation** : ouvre l’espace pour discuter avec votre bot (applicable uniquement aux applications personnelles).|
 |3|**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
 |4 |**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
-|5 |**Carte adaptative**: si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
+|5 |**Carte adaptative**: si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
 
 ---
 
@@ -229,7 +232,7 @@ Découvrez les dires des utilisateurs en discutant avec votre bot. Il s’agit d
 
 Les bots peuvent fournir une correspondance exacte à une requête ou à un groupe de correspondances associées pour vous aider à mettre fin à l’ambiguïté. Pour les correspondances associées, groupez le contenu à l’aide d’une carte de liste.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="L'exemple montre une interaction de requête simple avec un bot." border="false":::
 
@@ -245,7 +248,7 @@ Si votre bot peut prendre en charge les demandes complètes et les questions, il
 
 Dans les exemples suivants, le bot répond à chaque message avec des options pour ce que vous souhaitez faire ensuite.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="L'exemple montre une interaction à plusieurs tours avec un bot." border="false":::
 
@@ -261,7 +264,7 @@ Dans les exemples suivants, le bot répond à chaque message avec des options po
 
 Grâce à une messagerie proactive, votre robot peut agir comme un résumé qui envoie des notifications pertinentes à une personne, une conversation de groupe ou un canal à une fréquence spécifique. Un bot peut envoyer un message lorsqu’un élément a changé dans un document ou qu’un élément de travail est fermé.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 Dans l’exemple suivant, l’utilisateur reçoit une notification toast qu’un bot les a envoyés dans un autre canal.
 
@@ -287,7 +290,7 @@ Dans ce canal, l’utilisateur peut lire son message à partir du bot.
 
 Dans les applications personnelles, un onglet peut compléter ce que votre bot peut faire. Par exemple, si votre bot peut créer des éléments de travail, il peut être agréable d’afficher tous ces éléments dans un emplacement central au sein d’un onglet. En savoir plus sur la [création d’onglets](../../tabs/design/tabs.md).
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="L'exemple montre comment un onglet peut aider à organiser le contenu d'un bot." border="false":::
 
@@ -303,7 +306,7 @@ Les utilisateurs doivent pouvoir modifier les paramètres d’un bot. Vous pouve
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="L'exemple montre un module de tâches permettant de configurer les paramètres d'un bot." border="false":::
 
-## <a name="best-practices"></a>Les bonnes pratiques
+## <a name="best-practices"></a>Meilleures pratiques
 
 Utilisez ces recommandations pour créer une expérience d’application de qualité.
 
@@ -346,7 +349,7 @@ Votre bot doit pouvoir répondre à des messages tels que « Bonjour », « A
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple montrant que vous devez éviter les réponses à des messages de bot simples." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple montrant que vous devez éviter les réponses inttér es aux messages de bot simples." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>À ne pas faire : manquer les opportunités de satisfaction
 

@@ -4,12 +4,12 @@ description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un 
 keywords: token, user token, SSO support for bots
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a43c2a46561149ff97d039a3ba8fe9f4472e2073
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 30a92de9f7d5ad9615ef2f86244b8607a47cea356030ebfb93ed3c1ffcb127a8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566084"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709606"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l' sign-on unique (SSO) pour les bots
 
@@ -22,7 +22,7 @@ L’authentification unique dans Azure Active Directory (AAD) réduit le nombre 
 
 ![Bot SSO lors de l’runtime diagram](../../../assets/images/bots/bots-sso-diagram.png)
 
-Pour obtenir l’authentification et les jetons d’application bot, complétez les étapes suivantes :
+Pour obtenir des jetons d’authentification et d’application bot, complétez les étapes suivantes :
 
 1. Le robot envoie un message avec une carte OAuth qui contient la propriété `tokenExchangeResource`. Il indique Teams obtenir un jeton d’authentification pour l’application bot. L’utilisateur reçoit des messages sur tous les points de terminaison d’utilisateur actifs.
 
@@ -49,7 +49,7 @@ Pour développer un robot DSO, Teams les étapes suivantes :
 
 1. [Inscrivez votre application via le portail AAD.](#register-your-app-through-the-aad-portal)
 1. [Mettez à jour Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot)
-1. [Ajoutez le code pour demander et recevoir un jeton de bot](#add-the-code-to-request-and-receive-a-bot-token).
+1. [Ajoutez le code pour demander et recevoir un jeton de bot.](#add-the-code-to-request-and-receive-a-bot-token)
 
 ### <a name="register-your-app-through-the-aad-portal"></a>Inscrire votre application via le portail AAD
 
@@ -71,10 +71,10 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
 
    > [!IMPORTANT]
     > * Si vous construisez un bot autonome, entrez l’URI d’ID d’application sous le nom `api://botid-{YourBotId}` . Ici, **YourBotId est** votre ID d’application AAD.
-    > * Si vous construisez une application avec un bot et un onglet, entrez l’URI d’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+    > * Si vous construisez une application avec un bot et un onglet, entrez l’URI de l’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
 5. Sélectionnez les autorisations dont votre application a besoin pour le point de terminaison AAD et, éventuellement, pour Microsoft Graph.
-6. [Accorder des autorisations](/azure/active-directory/develop/v2-permissions-and-consent) pour Teams applications de bureau, web et mobiles.
+6. [Accordez des autorisations](/azure/active-directory/develop/v2-permissions-and-consent) Teams applications mobiles, web et de bureau.
 7. Sélectionnez **Ajouter une étendue**.
 8. Dans le panneau qui s’ouvre, ajoutez une application cliente en entrant `access_as_user` le nom de **l’étendue.**
 
@@ -83,7 +83,7 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
     >
     > Vous devez connaître les restrictions importantes suivantes :
     >
-    > * Seules les autorisations de l’API microsoft Graph de niveau utilisateur, telles que la messagerie, le profil, offline_access et OpenId, sont pris en charge. Si vous avez besoin d’accéder à d Graph étendues microsoft, telles que ou , voir `User.Read` `Mail.Read` la solution de [contournement recommandée.](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes)
+    > * Seules les autorisations de l’API microsoft Graph de niveau utilisateur, telles que la messagerie, le profil, offline_access et OpenId, sont pris en charge. Si vous avez besoin d’accéder à d’autres Graph microsoft, telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` avec Graph [autorisations.](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)
     > * Le nom de domaine de votre application doit être identique au nom de domaine que vous avez enregistré pour votre application AAD.
     > * Plusieurs domaines par application ne sont actuellement pas pris en charge.
     > * Les applications qui utilisent le domaine ne sont pas pris en charge `azurewebsites.net` car elles sont courantes et peuvent être un risque pour la sécurité.
@@ -101,7 +101,7 @@ Pour mettre à jour le portail Azure avec la connexion OAuth, effectuer les éta
     * OpenId
     * profil
 
-3. Dans le portail Azure, accédez à **Inscription des canaux bots.**
+3. Dans le portail Azure, accédez à **Enregistrement des canaux bots.**
 
 4. Sélectionnez **Paramètres** dans le volet gauche, puis sélectionnez Ajouter un paramètre dans la section Connexion  **OAuth Paramètres** section.
 

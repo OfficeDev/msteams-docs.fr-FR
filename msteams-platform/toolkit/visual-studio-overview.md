@@ -5,12 +5,12 @@ keywords: boîte à outils visual studio teams
 localization_priority: Normal
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 6a0f466ba0d95312695be8b5460fc949e3f70811
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095513"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701808"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio
 
@@ -32,7 +32,7 @@ Le Microsoft Teams Shared Computer Toolkit pour Visual Studio est disponible en 
 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Configurer votre application](#configure-your-app)
-- [Exécuter votre application dans Teams](#install-and-run-your-app-locally)
+- [Exécutez votre application dans Teams](#install-and-run-your-app-locally)
 - [Valider votre application](#validate-your-app)
 - [Publier votre application](#publish-your-app-to-teams)
 
@@ -68,7 +68,7 @@ Lorsqu’une application est installée, le client Teams pare le fichier manifes
 
 ### <a name="configuration-steps"></a>Étapes de configuration
 
-1. Pour configurer votre application, sélectionnez le menu Project > TeamsFx > configurer pour l’électrable **SSO....**
+1. Pour configurer votre application, sélectionnez le menu **Project > TeamsFx > configurer pour l’électrable sso...**
 
 Lorsque vous y invitez, connectez-vous à votre compte Microsoft qui possède un client M365.
 

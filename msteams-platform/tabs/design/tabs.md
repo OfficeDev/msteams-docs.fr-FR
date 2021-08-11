@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721842"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709402"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevez votre onglet pour Microsoft Teams
 
@@ -31,7 +31,7 @@ Vous pouvez ajouter un onglet à partir Teams store (AppSource) ou dans l’un d
 * Canal
 * Réunion (avant, pendant ou après la réunion)
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 L’exemple suivant montre comment les utilisateurs peuvent ajouter un onglet dans un canal.
 
@@ -60,13 +60,13 @@ Il existe un processus de configuration court pour ajouter une application en ta
 |Compteur|Description|
 |----------|-----------|
 |1|**Logo de l’application**: logo d’application en couleur complète de votre application.|
-|2|**Nom de l’application**: nom complet de votre application.|
+|2|**Nom de l’application** : nom complet de votre application.|
 |3|**iframe**: espace réactif pour le contenu de votre application (par exemple, paramètres d’onglet ou authentification).|
 |4 |**À** propos du lien : ouvre une boîte de dialogue affichant plus d’informations sur l’application, telles qu’une description complète, les autorisations requises par l’application et des liens vers votre politique de confidentialité et les conditions d’utilisation.|
-|5 |**Bouton Fermer :** ferme la boîte de dialogue.|
-|6 |**Option Avertir les membres de l’équipe**: la boîte de dialogue demande aux utilisateurs s’ils souhaitent créer un billet pour informer d’autres utilisateurs qu’ils ont ajouté un onglet.|
-|7 |**Bouton Précédent**: passe à l’étape précédente en fonction de l’endroit où la boîte de dialogue s’est ouverte.|
-|8 |**Bouton Enregistrer :** termine la configuration de l’onglet.|
+|5 |**Bouton Fermer :** ferme la boîte de dialogue.|
+|6 |**Option Avertir les membres de l’équipe**: la boîte de dialogue demande aux utilisateurs s’ils souhaitent créer un billet pour informer d’autres utilisateurs qu’ils ont ajouté un onglet.|
+|7 |**Bouton Précédent**: passe à l’étape précédente en fonction de l’endroit où la boîte de dialogue s’est ouverte.|
+|8 |**Bouton Enregistrer :** termine la configuration de l’onglet.|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>Authentification par onglet avec authentification unique
 
@@ -86,7 +86,7 @@ Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous 
 
 Les onglets offrent une expérience web en plein écran dans Teams où vous pouvez afficher du contenu collaboratif (tableaux de tâches et tableaux de bord, par exemple) et des informations importantes.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L’exemple montre un onglet avec un tableau des tâches." border="false":::
 
@@ -98,7 +98,7 @@ Les onglets offrent une expérience web en plein écran dans Teams où vous pouv
 
 ### <a name="anatomy-tab"></a>Anatomie : tabulation
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
 
@@ -140,7 +140,7 @@ Les onglets facilitent les conversations sur le contenu dans un emplacement cent
 
 Les utilisateurs peuvent publier automatiquement sur un canal ou une conversation une fois qu’ils ont ajouté un nouvel onglet. Non seulement cela informe les membres de l’équipe du nouveau contenu et fournit un lien vers l’onglet, mais permet aux utilisateurs de commencer à parler de l’onglet.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="L’exemple montre un onglet abordé dans un thread de canal." border="false":::
 
@@ -154,7 +154,7 @@ Les utilisateurs peuvent publier automatiquement sur un canal ou une conversatio
 
 Les utilisateurs peuvent avoir une conversation en regard du contenu de l’onglet qu’ils visionnagent. Sur le bureau, la conversation s’ouvre sur le côté du contenu de l’application.
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet avec une conversation ouverte sur le côté droit." border="false":::
 
@@ -174,7 +174,7 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 
 ### <a name="anatomy-tab-menu"></a>Anatomie : menu Onglet
 
-# <a name="desktop"></a>[Desktop](#tab/desktop)
+# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu Onglet." border="false":::
 
@@ -194,7 +194,7 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 |2|**Lien copier**: les utilisateurs peuvent copier et partager un lien vers l’onglet.|
 |3|**Paramètres**: (Facultatif) Modifier les paramètres d’un onglet après son ajout.|
 |4 |**Renommer**: les utilisateurs peuvent donner à l’onglet un nom significatif pour le canal, la conversation ou la réunion.|
-|5 |**Supprimer**: supprime l’onglet du canal, de la conversation ou de la réunion.|
+|5 |**Supprimer**: supprime l’onglet du canal, de la conversation ou de la réunion.|
 
 ---
 
@@ -280,15 +280,15 @@ Supprimez les étapes inutiles pour ajouter un onglet.
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration montrant ce qu’il faut faire avec les tabulations." border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons Teams couleur
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>À faire : tirer parti des jetons de couleur Teams
 
-Chaque Teams thème possède son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez des jetons <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">de couleur (interface</a> utilisateur Fluent) dans votre conception.
+Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquement les modifications de thème, utilisez <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">jetons de couleur (Fluent UI)</a> dans votre conception.
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration montrant ce qu’il ne faut pas faire avec les tabulations." border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur de code dur
+#### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur du code dur
 
 Si vous n’utilisez pas Teams couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 

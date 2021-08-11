@@ -4,12 +4,12 @@ description: Pour publier votre application dans Microsoft Teams store, vous ave
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ac31ff3d46a87814edfe2b7ec789d183e9c02e2f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566039"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708651"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Créer un compte de développeur de l’Espace partenaires
 
@@ -27,7 +27,7 @@ Obtenez des réponses à certaines questions courantes sur la gestion de votre c
 
 Vous pouvez créer un compte Espace partenaires de l’une des manières suivantes :
 
-* Si vous débutez avec l’Espace partenaires et que vous n’avez pas de compte réseau Microsoft, créez un compte à l’aide de la page d’inscription à [l’Espace partenaires.](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)
+* Si vous débutez avec l’Espace partenaires et que vous n’avez pas de compte réseau Microsoft, créez un compte à l’aide de la page d’inscription de [l’Espace partenaires.](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)
 * Si vous êtes déjà inscrit à Microsoft Partner Network, créez un compte directement à partir de l’Espace partenaires à l’aide des inscriptions à l’Espace [partenaires Microsoft existantes.](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)
 
 <br>
@@ -120,13 +120,13 @@ Une fois le processus de vérification terminé, l’état de votre inscription 
 
 <summary><b>L’état de vérification de mon compte n’a pas dépassé la propriété de l’e-mail. Comment dois-je continuer ?</b></summary>
 
-Pendant le **processus de vérification de la** propriété du courrier électronique, un message électronique de vérification est envoyé au contact principal. Vérifiez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@microsoft.com** avec l’action de ligne d’objet requise : Vérifiez votre compte de messagerie auprès de **Microsoft** et terminez le processus de vérification du courrier électronique. L’e-mail de vérification est envoyé à l’adresse répertoriée dans les paramètres de votre compte De l’Partner Center.
+Pendant le processus **de vérification de la** propriété de l’e-mail, un message électronique de vérification est envoyé au contact principal. Vérifiez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@microsoft.com** avec l’action de ligne d’objet requise : Vérifiez votre compte de messagerie auprès de **Microsoft** et terminez le processus de vérification du courrier électronique. L’e-mail de vérification est envoyé à l’adresse répertoriée dans les paramètres de votre compte De l’Partner Center.
 
 N’oubliez pas les informations suivantes sur le processus de vérification du courrier électronique :
 
 * Le lien de vérification du courrier électronique n’est valide que pendant sept jours.
 * Vous pouvez demander à renvoyer l’e-mail en visitant la page de votre profil de partenaire et en sélectionnant le lien renvoyer l’e-mail de **vérification.**
-* Pour vous assurer que vous recevez le courrier électronique, la liste microsoft.com **en** tant que domaine sécurisé et vérifiez vos dossiers de courrier indésirable.
+* Pour vous assurer que vous recevez le courrier électronique, **la** liste microsoft.com en tant que domaine sécurisé et vérifiez vos dossiers de courrier indésirable.
 
 <br>
 
@@ -180,7 +180,7 @@ Si tous les documents requis sont envoyés, la vérification de l’entreprise p
 
 <details>
 
-<summary><b>Si je pars en direction de l’équipe de support technique, mon ticket sera-t-il accéléré ?</b></summary>
+<summary><b>Si j’arrive à l’équipe de support technique, mon ticket sera-t-il accéléré ?</b></summary>
 
 Les tickets de support sont résolus dans une semaine. Recherchez les mises à jour envoyées à l’e-mail que vous avez fourni lors de la création du ticket de support.
 

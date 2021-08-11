@@ -1,23 +1,23 @@
 ---
-title: Didacticiel - Créer votre première application à l’aide du générateur Yeoman
+title: 'Didacticiel : créer votre première application à l’aide du générateur Yeoman'
 description: Découvrez comment commencer à créer des applications Microsoft Teams avec le générateur Yeoman.
 keywords: mise en node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: a3519da1495dc51a811f4e95bc4ada9b11aa8292
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 2a75c5bfd24facb8be1897997fc94896e1f62990547da12d35c783d38be2e077
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254342"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823241"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Créer votre première application Microsoft Teams à l’aide du générateur Yeoman
 
 > [!Note]
 > Ce didacticiel provient du [générateur Yeoman pour Teams wiki.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
-Dans ce didacticiel, vous allez apprendre à créer votre toute première application Microsoft Teams à l’aide Microsoft Teams générateur Yeoman. Il vous permet également de passer par le processus de mise à niveau de votre Teams à l’aide du générateur Yeoman. Avant de commencer, vous devez avoir un compte Teams qui autorise le chargement de version de version [d’application.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Dans ce didacticiel, vous allez apprendre à créer votre toute première application Microsoft Teams à l’aide Microsoft Teams générateur Yeoman. Il vous permet également de passer par le processus de mise à niveau de votre Teams à l’aide du générateur Yeoman. Avant de commencer, vous devez avoir un compte Teams qui autorise le chargement de version de [l’application.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ![Git du générateur yeoman](~/assets/yeoman-demo.gif)
 
@@ -69,7 +69,7 @@ Cette section vous présente les étapes à suivre pour générer votre projet.
 
 1. Ouvrez une invite de commandes et créez un répertoire dans lequel vous souhaitez créer votre projet.
 1. Go to the directory, and run the command `yo teams` . Le générateur démarre.
-1. Répondez à l’ensemble des questions posées par le générateur :
+1. Répondez aux questions posées par le générateur :
 
    ![équipes yo](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -82,13 +82,13 @@ Cette section vous présente les étapes à suivre pour générer votre projet.
 
     ![sélection d’élément](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Répondez à l’ensemble suivant de questions de suivi qui s’affichent en fonction des éléments que vous avez sélectionnés à l’étape 2.
+1. Répondez à l’ensemble suivant de questions de suivi qui s’affichent en fonction des éléments que vous avez sélectionnés à l’étape 3.
 1. Entrez une URL pour l’emplacement où vous hébergez votre solution. 
 
    > [!NOTE]
    > L’URL peut être n’importe quelle URL, mais par défaut, le générateur suggère une URL de site web Azure.
 
-1. Confirmez si vous souhaitez inclure des tests unitaires pour votre solution. La réponse par défaut est **Oui**. Si vous choisissez d’inclure le test unitaire, le projet généré aura une infrastructure de test unitaire et certains tests unitaires par défaut pour les différents éléments en cours de structure. 
+1. Confirmez si vous souhaitez inclure des tests unitaires pour votre solution. La réponse par défaut est **Oui**. Si vous choisissez d’inclure le test unitaire, le projet généré aura une infrastructure de test unitaire et des tests unitaires par défaut pour les différents éléments en cours de structure. 
    > [!NOTE]
    > * Pour ce didacticiel, choisissez de ne pas inclure d’infrastructure de test.
    > * Le générateur comporte un grand nombre de fonctionnalités avancées intégrées que vous pouvez choisir d’utiliser ou de refuser.
@@ -121,7 +121,7 @@ Votre onglet se trouve dans le `./src/app/scripts/myFirstAppTab/MyFirstAppTab.ts
 
 Vous pouvez maintenant créer votre projet. Cette procédure s’est effectuée en deux étapes.
 
-1. Créez le Teams manifeste de l’application pour l’application que vous avez téléchargée dans Microsoft Teams. Cette tâche est effectuée par la tâche `gulp manifest` Gulp. Cela valide le manifeste et crée un fichier zip dans `./package` le répertoire.
+1. Créez le Teams manifeste de l’application pour l’application que vous avez téléchargée dans Microsoft Teams. Cette tâche est effectuée par la tâche Gulp `gulp manifest` . Cela valide le manifeste et crée un fichier zip dans `./package` le répertoire.
 1. Exécutez `gulp build` la commande pour créer la solution. Cela transpile votre solution dans le `./dist` dossier. 
 
 ## <a name="run-your-app"></a>Exécuter votre application
