@@ -4,12 +4,12 @@ description: Exemple d’affichages à jour à l’aide du bot universel
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 373fba9865b4f7f872056b2eb27b5b594d8bb98d
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707419"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586046"
 ---
 # <a name="up-to-date-cards"></a>Cartes actualisées
 

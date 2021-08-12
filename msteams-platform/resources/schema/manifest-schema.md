@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: schéma de manifeste teams
-ms.openlocfilehash: f1f40a3cc28410fe41f114ac749f06124fbbc1f850a02771bfe67ba40c77aae3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b072bf34bcb242571cfd45237cd92d118efefa8c
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708027"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586053"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -304,7 +304,7 @@ Le schéma définit les propriétés suivantes :
 
 Chaîne facultative, mais recommandée
 
-L https:// URL référente au schéma JSON pour le manifeste.
+L https:// URL qui fait référence au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -326,7 +326,7 @@ Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (M
 
 **Obligatoire**: ID d’application Microsoft
 
-L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework. Vous avez un ID si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription [des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
+L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework. Vous avez un ID si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail [d’inscription des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
 
 > [!NOTE]
 > Si vous envoyez une mise à jour à votre application existante dans AppSource, l’ID de votre manifeste ne doit pas être modifié.
@@ -407,7 +407,7 @@ Icônes utilisées dans l’Teams app. Les fichiers d’icône doivent être inc
 
 ## <a name="accentcolor"></a>accentColor
 
-**Facultatif**— Code de couleur HTML Hex
+**Facultatif**— Code de couleur Html Hex
 
 Couleur à utiliser et en arrière-plan pour vos icônes de plan.
 
@@ -426,7 +426,7 @@ Utilisé lorsque l’expérience de votre application possède une expérience d
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut **: true**.|
 |`context` |tableau d’enums|6 ||Ensemble `contextItem` d’étendues où un [onglet est pris en charge.](../../tabs/how-to/access-teams-context.md) Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
-|`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
+|`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -509,9 +509,9 @@ Définit une extension de messagerie pour l’application.
 
 L’élément est un tableau (maximum d’un élément) avec tous les éléments de type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une extension de messagerie.
 
-|Nom| Type | Taille maximale | Obligatoire | Description|
+|Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. L’ID peut être identique à l’ID d’application global.|
+|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. L’ID peut être identique à l’ID d’application global.|
 |`commands`|tableau d’objets|10 |✔|Tableau de commandes pris en charge par l’extension de messagerie.|
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d’objets|5 ||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
@@ -536,7 +536,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
+|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
 |`taskInfo.url`|string|||URL webview initiale.|
 |`parameters`|tableau d’objets|5 éléments|✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Le nom du paramètre est inclus dans la demande de l’utilisateur.|
@@ -552,7 +552,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 **Facultatif —** tableau de chaînes
 
-Tableau de , qui spécifie les autorisations que l’application demande, qui indiquent aux utilisateurs finaux le `string` fonctionnement de l’extension. Les options suivantes ne sont pas exclusives :
+Tableau de , qui spécifie les autorisations que l’application demande, qui indiquent aux utilisateurs finals le `string` fonctionnement de l’extension. Les options suivantes ne sont pas exclusives :
 
 * `identity`&emsp;Nécessite des informations d’identité d’utilisateur.
 * `messageTeamMembers`&emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe.
@@ -590,7 +590,7 @@ L’objet est un tableau avec tous les éléments du type `string` .
 
 **Facultatif**— objet
 
-Fournissez votre ID d’Azure Active Directory (AAD) et des informations microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application. Les administrateurs peuvent facilement passer en revue les autorisations et accorder leur consentement dans Teams centre d’administration.
+Fournissez votre ID Azure Active Directory application (AAD) et des informations microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application. Les administrateurs peuvent facilement passer en revue les autorisations et accorder leur consentement dans Teams centre d’administration.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|

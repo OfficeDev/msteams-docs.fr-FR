@@ -5,12 +5,12 @@ description: Découvrez comment prendre en Microsoft Teams développement d’ap
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2945490d70023a620bad43b618789164aa915d8a
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703155"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585997"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Conditions préalables : prendre en Microsoft Teams développement d’applications
 
@@ -21,7 +21,7 @@ Avant de commencer à créer votre première application Teams, vous devez insta
 Certains des outils dont vous avez besoin dépendent de la façon dont vous préférez créer votre Teams application :
 
 - [Node.js](https://nodejs.org/en/download/) (utilisez la dernière version de LTS v14)
-- Un navigateur avec des outils de développement, tels [que, Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
+- Un navigateur avec des outils de développement, tels [que Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
 - Si vous développez avec JavaScript, TypeScript ou le SharePoint Framework (SPFx), installez [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 ou ultérieure.  
 - Si vous développez avec .NET, installez [Visual Studio 2019.](https://visualstudio.com/download) Veillez à installer la **charge ASP.NET développement web et** web ou la charge de travail de développement **.NET Core sur plusieurs plateformes.**
 
@@ -111,7 +111,7 @@ Avec le Portail des développeurs pour Teams, vous pouvez configurer, gérer et 
 
 - [Documentation pour les développeurs](https://dev.teams.microsoft.com/)
 
-## <a name="enable-sideloading"></a>Activer le chargement de version
+## <a name="enable-sideloading"></a>Activer le chargement de version de version
 
 Pendant le développement, vous devez charger votre application dans Teams sans la distribuer. C’est ce que l’on appelle le chargement de version de version de chargement.
 
@@ -151,7 +151,7 @@ Vous devez avoir accès à deux comptes :
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Ouvrir Visual Studio Code
+1. Ouvrez Visual Studio Code
 1. Sélectionnez l Teams icône dans la barre latérale :
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icône Teams dans la barre latérale Visual Studio Code.":::

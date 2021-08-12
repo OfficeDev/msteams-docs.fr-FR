@@ -4,16 +4,17 @@ author: KirtiPereira
 description: Créer des onglets à l’aide de cartes adaptatives
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 8f1b8bbc27a2b10d8e4fbca8e87c75eeb29c8c36efacd6eb3cf921295e27b88b
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: 6b969461669f9edb7d7f3e216b3b91dd700881b34de17389f8a43348b09830f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823227"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705083"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
 > [!IMPORTANT]
+> * Cette fonctionnalité est en prévisualisation [publique pour](~/resources/dev-preview/developer-preview-intro.md) les développeurs et est prise en charge sur ordinateur de bureau et mobile. La prise en charge dans le navigateur web sera bientôt disponible.
 > * Les onglets avec cartes adaptatives sont actuellement uniquement pris en charge en tant qu’applications personnelles.
 
 Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vous pouvez être face à ces problèmes :
@@ -37,6 +38,7 @@ Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, v
 
 * Familiarisez-vous avec le développement [de bots,](../../bots/what-are-bots.md) [les cartes adaptatives](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)et les [modules de tâche](../../task-modules-and-cards/task-modules/task-modules-bots.md) Teams.
 * Exécutez un bot Teams pour votre développement.
+* Être en [prévisualisation pour les développeurs publics.](~/resources/dev-preview/developer-preview-intro.md)
 
 ## <a name="changes-to-app-manifest"></a>Modifications apportées au manifeste de l’application
 
@@ -330,7 +332,7 @@ Le code suivant fournit des exemples de `task/submit` requête et de réponse :
 
 ## <a name="authentication"></a>Authentification
 
-Dans les sections précédentes, vous avez vu que la plupart des paradigmes de développement peuvent être étendus des demandes et réponses du module de tâche en demandes et réponses d’onglets. En ce qui concerne la gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md)
+Dans les sections précédentes, vous avez vu que la plupart des paradigmes de développement peuvent être étendus des demandes et réponses du module de tâche en demandes d’onglet et en réponses. En ce qui concerne la gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md)
 
 `tab/fetch`les demandes peuvent avoir une **réponse continue** ou **auth.** Lorsqu’une demande est déclenchée et reçoit une réponse d’th d’onglet, la page de signature `tab/fetch` s’affiche à  l’utilisateur.
 
@@ -341,7 +343,7 @@ Dans les sections précédentes, vous avez vu que la plupart des paradigmes de d
     > [!NOTE]
     > Le logo de l’application est fourni par le biais `icon` de la propriété définie dans le manifeste de l’application. Titre qui s’affiche une fois que le logo est défini dans la propriété renvoyée dans le corps de la réponse `title` **d’th** de l’onglet.
 
-1. Sélectionnez **Se connecter**. Vous êtes redirigé vers l’URL d’authentification fournie dans la `value` propriété du corps de la réponse d’authentification. 
+1. Sélectionnez **Se connecter**. Vous êtes redirigé vers l’URL d’authentification fournie dans la propriété du corps de la `value` réponse d’authentification. 
 1. Une fenêtre contextuelle apparaît. Cette fenêtre pop-up héberge votre page web à l’aide de l’URL d’authentification.
 1. Après vous être connectez, fermez la fenêtre. Un **code d’authentification** est envoyé au client Teams client.
 1. Le Teams client ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée.

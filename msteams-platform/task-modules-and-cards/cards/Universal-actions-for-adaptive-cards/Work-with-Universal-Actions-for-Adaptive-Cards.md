@@ -3,12 +3,12 @@ title: Travailler avec les actions universelles pour les cartes adaptatives
 description: Travaillez avec les actions universelles pour les cartes adaptatives.
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 426e1324f0ccc113d7fd0f16ef38ca8558148541
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701965"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586039"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Travailler avec les actions universelles pour les cartes adaptatives
 
@@ -21,7 +21,7 @@ Les actions universelles pour les cartes adaptatives permettent d’implémenter
 
 ## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>Guide de démarrage rapide pour utiliser les actions universelles pour les cartes adaptatives dans Teams
 
-1. Remplacez toutes les instances `Action.Submit` de par pour mettre à jour un scénario existant `Action.Execute` Teams.
+1. Remplacez toutes les instances `Action.Submit` de par pour mettre à jour un scénario existant sur `Action.Execute` Teams.
 2. Ajoutez une clause à votre carte adaptative si vous souhaitez utiliser le modèle d’actualisation automatique ou si votre scénario nécessite des affichages `refresh` spécifiques de l’utilisateur.
 
     >[!NOTE]
@@ -74,7 +74,7 @@ Les fonctionnalités des UserIds en cours d’actualisation sont les suivantes :
 
 * Vous pouvez récupérer les TEAMS utilisateur du membre de la conversation. Pour plus d’informations sur l’ajout de la liste userIds dans la section Actualiser de la carte adaptative, voir récupérer la liste ou [le profil utilisateur.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
 
-* Exemple de Teams’utilisateur`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
+* Exemple de Teams’utilisateurSYRY est`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
 > [!NOTE]
 > La propriété est ignorée dans Outlook, et la propriété est `userIds` `refresh` toujours activée automatiquement. Il n’existe aucun problème d’échelle Outlook car les utilisateurs visualisent la carte à différents moments.
@@ -106,7 +106,7 @@ Pour plus d’informations, [voir compatibilité ascendante sur Teams](/adaptive
 |Exemple de nom | Description | . NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Teams bot de restauration | Créez un bot qui accepte l’ordre des produits à l’aide de cartes adaptatives. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| N’est pas encore disponible. |
-| Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques de l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques à l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

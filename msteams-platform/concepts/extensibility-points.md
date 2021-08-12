@@ -5,12 +5,12 @@ description: Décrit l’endroit où les personnes peuvent découvrir et utilise
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 144fccc1d8a8dabb75cefdbf261dfe1c53f4a068
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702759"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585941"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
@@ -25,7 +25,7 @@ La liste suivante montre comment les fonctionnalités Teams’application sont c
 
 * [**Les onglets**](~/tabs/what-are-tabs.md) offrent une expérience web intégrée en plein écran configurée pour l’équipe, le canal ou la conversation de groupe. Tous les membres interagissent avec le même contenu web, de sorte qu’une expérience d’application mono-page sans état est typique.
 
-* [**Les extensions de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md) sont des raccourcis permettant d'insérer du contenu externe dans une conversation ou de prendre des mesures concernant les messages sans quitter Teams. [Le déploiement de liens](~/messaging-extensions/how-to/link-unfurling.md) fournit un contenu enrichi lors du partage de contenu à partir d’une URL commune.
+* [**Les extensions de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md) sont des raccourcis permettant d'insérer du contenu externe dans une conversation ou de prendre des mesures concernant les messages sans quitter Teams. [Le déploiement de liens fournit](~/messaging-extensions/how-to/link-unfurling.md) un contenu enrichi lors du partage de contenu à partir d’une URL commune.
 
 * Les bots interagissent avec les membres de la conversation par le biais d’une conversation et de la réponse à des [**événements,**](~/bots/what-are-bots.md) tels que l’ajout d’un nouveau membre ou le changement de nom d’un canal. 
    > [!NOTE]

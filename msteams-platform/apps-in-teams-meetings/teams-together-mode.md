@@ -2,12 +2,12 @@
 title: Scènes personnalisées en mode ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
-ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823234"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702151"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -155,7 +155,7 @@ Les dimensions des sièges deviennent le canevas pour le rendu du flux vidéo du
 
 1. Si vous le souhaitez,  vous pouvez sélectionner **Partager** dans le menu déroulant Enregistrer pour créer un lien partageable afin de distribuer facilement vos scènes à d’autres personnes. L’ouverture de ce lien installe la scène pour l’utilisateur et il peut commencer à l’utiliser.
 
-1. Après la prévisualisation, la scène peut être livrée en tant qu’application Teams en allant à la section Applications du Centre Teams développeur. À partir de là, vous pouvez télécharger le package d’application ou publier directement dans votre organisation.
+1. Après la prévisualisation, la scène peut être livrée en tant qu’application Teams en allant à la section Applications du Centre Teams développeur. À partir de là, vous pouvez télécharger le package d’application ou publier directement dans votre organiation.
 
     >[!NOTE]
     > Cette étape nécessite le package d’application différent du package de scène, pour la scène qui a été conçue. Le package d’application créé automatiquement se trouve dans la section **Applications** du Teams développeur.

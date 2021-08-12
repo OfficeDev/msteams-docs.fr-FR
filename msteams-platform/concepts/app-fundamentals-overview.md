@@ -5,12 +5,12 @@ description: Décrire les concepts fondamentaux du développement Teams platefor
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 7ffdfbb735f2c7c6cf5cbcf0f1e7f2134f92f613989cd3f8eac84f22cd73543e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ab69cedd9bd6fd25a9d7566b0f3e93ff1c38ef29
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706077"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585934"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de développement d’applications
 
@@ -27,11 +27,11 @@ Vous pouvez reconnaître les problèmes des utilisateurs et identifier les répo
 * Avez-vous besoin d’une authentification ?
 * Quel problème votre application va-t-elle résoudre ?
 * Qui les utilisateurs finaux de l’application ?
-* Comment l’expérience d’intégration doit-elle être et que peut faire l’application ?
+* Comment l’expérience d’intégration doit-elle être et quelles autres sont les autres activités de l’application ?
 
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
-[La cartographie de vos cas d’utilisation](../concepts/design/map-use-cases.md) couvre certains scénarios courants et la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
+[Maposez vos cas d’utilisation](../concepts/design/map-use-cases.md) sur certains scénarios courants et sur la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
 
 ## <a name="see-also"></a>Voir aussi
 

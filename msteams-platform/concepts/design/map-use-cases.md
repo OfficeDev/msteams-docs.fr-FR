@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 82b7c4cf29eb6b5d31c55dbc420a3c2c6c3038dfa710ba6257fc5486a97713bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28f6b0af0854d19826d8f3542bb11ba0e025cbe1
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709551"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586032"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
@@ -26,7 +26,7 @@ Lors du choix de l’étendue de l’application, prenons en compte les considé
 * Une application peut exister dans plusieurs étendues.
 * Les fonctionnalités d’application, telles que les extensions de messagerie, suivent les utilisateurs dans toutes les étendues.
 * Les utilisateurs ont souvent besoin d’ajouter des applications Teams ou des canaux.
-* Les invités peuvent accéder au contenu exposé dans Teams ou canaux.
+* Les utilisateurs invités peuvent accéder au contenu exposé dans Teams ou canaux.
 
 Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe ou de canal pour votre application en fonction des possibilités suivantes :
 
@@ -39,7 +39,7 @@ Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe o
   * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes dans différentes équipes. 
   * Est-il possible que tous les membres d’une personne qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket.
 
-Les scénarios suivants vous guident dans la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien Teams fonctionnalités de l’application :
+Les scénarios suivants vous guident dans la compréhension de la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien avec Teams fonctionnalités de l’application :
 
 > [!NOTE]
 > Il ne s’agit pas d’une liste exhaustive, mais vous aidera à réfléchir à certaines des possibilités qui s’offrent à vous.
@@ -66,13 +66,13 @@ Parfois, vous avez simplement besoin d’un moyen rapide pour démarrer un proce
 
 * **Modules de tâche**: ouvrez-les à partir d’un onglet, d’un bot ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail.
 
-* **Bots de conversation**: interagir avec vos utilisateurs via du texte et des cartes enrichies.
+* **Bots de conversation**: interagissez avec vos utilisateurs par le biais de texte et de cartes enrichies.
 
 * **Webhooks sortants**: un bon choix pour une interaction simple de va-et-vient lorsque vous n’avez pas besoin de créer un bot conversationnel entier.
 
 ## <a name="send-notifications-and-alerts"></a>Envoyer des notifications et des alertes
 
-Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
+Envoyez des notifications et des alertes asynchrones à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
 
 * **Bots de conversation**: envoyez des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
 
@@ -96,7 +96,7 @@ Les onglets sont des pages web incorporées. À peu près tout ce que vous pouve
 
 ## <a name="start-small"></a>Démarrer petit
 
-Vous ne savez pas par où commencer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et commencer par là. Une fois que vous avez une idée du flux d’informations dans les différents contextes de Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
+Vous ne savez pas par où commencer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et commencer par là. Une fois que vous vous êtes fait une idée du flux d’informations dans les différents contextes de Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
 
 ## <a name="put-it-all-together"></a>Mettre tout en place
 
@@ -104,4 +104,4 @@ Cela étant dit, les meilleures applications combinent généralement plusieurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer votre première application Microsoft Teams de messagerie](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)

@@ -5,12 +5,12 @@ description: Comment gérer l’action d’appel initiale et répondre avec un m
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f3d34a4e574169aadf49180ee8b857c8ee2b60a8
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c93b660e3187328f022be5108456d9e1064cd557
+ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069062"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53534606"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 
@@ -120,6 +120,7 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
   "name": "composeExtension/fetchTask"
 }
 ```
+
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de groupe 
 
 Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de groupe sont répertoriées comme suit :
@@ -174,6 +175,48 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
     }
   },
   "name": "composeExtension/fetchTask"
+}
+```
+
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de réunion
+
+Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de réunion sont données dans l’exemple suivant :
+
+```json
+{
+   "type": "invoke",
+   "id": "f:4d271f11-4eed-622f-e820-6d82bf91692f",
+   "channelId": "msteams",
+   "from": {
+      "id": "29:1yLsdbTM1UjxqqD8cjduNUCI1jm8xZaH3lx9u5JQ04t2bknuTCkP45TXdfROTOWk1LzN1AqTgFZUEqHIVGn_qUA",
+      "name": "MOD Administrator",
+      "aadObjectId": "ef16aa89-5b26-4a2c-aebb-761b551577c0"
+   },
+   "conversation": {
+      "tenantId": "c9f9aafd-64ac-4f38-8e05-12feba3fb090",
+      "id": "19:meeting_NTk4ZDY4ZmYtOWEzZS00OTRkLThhY2EtZmUzZmUzMDQyM2M0@thread.v2",
+      "name": "Test meeting"
+   },   
+   "channelData": {
+      "tenant": {
+         "id": "c9f9aafd-64ac-4f38-8e05-12feba3fb090"
+      },
+      "source": {
+         "name": "compose"
+      },
+      "meeting": {
+         "id": "MCMxOTptZWV0aW5nX05UazRaRFk0Wm1ZdE9XRXpaUzAwT1RSa0xUaGhZMkV0Wm1VelptVXpNRFF5TTJNMEB0aHJlYWQudjIjMA=="
+      }
+   },
+   "value": {
+      "commandId": "Test",
+      "commandContext": "compose",
+      "requestId": "c46a6b53573f42b5bc801716e5ccc960",
+      "context": {
+         "theme": "default"
+      }
+   },
+   "name": "composeExtension/fetchTask",
 }
 ```
 
@@ -367,7 +410,7 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
 |`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit `default` s’y `contrast` trouver, ou `dark` . |
 
 ### <a name="example"></a>Exemple
 
@@ -856,7 +899,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Si l’application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche. Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche. Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d’une équipe.
 
-Lorsque l’extension de messagerie reçoit l’appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d’obtenir une liste. Si le bot n’est pas installé, renvoyer une carte adaptative avec une action qui demande à l’utilisateur d’installer le bot. L’utilisateur doit avoir l’autorisation d’installer les applications à cet emplacement pour vérification. Si l’installation de l’application échoue, l’utilisateur reçoit un message pour contacter l’administrateur.
+Lorsque l’extension de messagerie reçoit l’appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d’obtenir une liste de membres. Si le bot n’est pas installé, renvoyer une carte adaptative avec une action qui demande à l’utilisateur d’installer le bot. L’utilisateur doit avoir l’autorisation d’installer les applications à cet emplacement pour vérification. Si l’installation de l’application échoue, l’utilisateur reçoit un message pour contacter l’administrateur.
 
 #### <a name="example"></a>Exemple 
 
