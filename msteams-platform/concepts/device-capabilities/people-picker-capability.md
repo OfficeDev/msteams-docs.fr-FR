@@ -1,35 +1,35 @@
 ---
-title: Intégrer Sélecteur de personnes fonctionnalité
+title: Intégrer le s picker de personnes
 author: Rajeshwari-v
-description: Comment utiliser le SDK Teams client JavaScript pour intégrer la fonctionnalité S picker de personnes
+description: Utilisation du SDK Teams client JavaScript pour intégrer le contrôle S picker de personnes
 keywords: contrôle du s picker de personnes
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702782"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345289"
 ---
-# <a name="integrate-people-picker-capability"></a>Intégrer Sélecteur de personnes fonctionnalité 
+# <a name="integrate-people-picker"></a>Intégrer le s picker de personnes  
 
-Le sélecateur de personnes est un contrôle pour rechercher et sélectionner des personnes. Il s’agit d’une fonctionnalité native disponible sur Teams plateforme. Vous pouvez intégrer Teams contrôle d’entrée natif du s picker de personnes à vos applications web. Vous pouvez choisir entre une sélection unique ou multiple et des configurations, telles que la limitation de la recherche au sein d’une conversation, de canaux ou de l’ensemble de l’organisation.
+Le sélecateur de personnes est un contrôle pour rechercher et sélectionner des personnes. Il s’agit d’une fonctionnalité native disponible sur Teams plateforme. Vous pouvez intégrer Teams contrôle d’entrée natif du s picker de personnes à vos applications web. Vous pouvez choisir entre une sélection unique ou une sélection multiple, et des configurations, telles que la limitation de la recherche au sein d’une conversation, de canaux ou de l’ensemble de l’organisation.
 
-Vous pouvez utiliser [Microsoft Teams SDK client JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit l’API pour intégrer la fonctionnalité S picker de personnes `selectPeople` dans votre application web. 
+Vous pouvez utiliser [Microsoft Teams SDK client JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit une API pour intégrer le s picker de personnes `selectPeople` dans votre application web. 
 
-## <a name="advantages-of-integrating-people-picker-capability"></a>Avantages de l’intégration de la fonctionnalité de s picker de personnes
+## <a name="advantages-of-integrating-the-native-people-picker"></a>Avantages de l’intégration du s picker de personnes natif 
 
 * Le contrôle S picker de personnes fonctionne sur toutes les surfaces Teams, telles que le module de tâche, une conversation, un canal, un onglet de réunion et une application personnelle.
 * Ce contrôle vous permet de rechercher et de sélectionner des utilisateurs au sein d’une conversation, d’un canal ou de l’ensemble de l’organisation.
-*  La fonctionnalité Sélecteur de personnes facilite les scénarios impliquant l’affectation de tâches, le marquage et l’informer d’un utilisateur. 
+* Le sélecteur de personnes vous aide dans les scénarios impliquant l’affectation de tâches, le marquage et l’informer d’un utilisateur. 
 * Vous pouvez utiliser ce contrôle facilement disponible dans votre application web. Cela permet d’économiser considérablement l’effort et le temps nécessaires pour créer un tel contrôle vous-même.
 
-Vous devez appeler l’API pour intégrer le contrôle S picker de personnes `selectPeople` dans votre application Teams utilisateur. Pour une intégration efficace, vous devez comprendre l’extrait de [code](#code-snippet) pour appeler l’API. Il est important de vous familiariser avec les erreurs de [réponse d’API](#error-handling) pour gérer les erreurs dans votre application web.
+Vous devez appeler l’API pour intégrer le contrôle S picker de personnes `selectPeople` dans Teams application. Pour une intégration efficace, vous devez comprendre l’extrait de [code](#code-snippet) pour appeler l’API. Il est important de vous familiariser avec les erreurs de [réponse d’API](#error-handling) pour gérer les erreurs dans votre application web.
 
 > [!NOTE] 
-> Actuellement, Microsoft Teams prise en charge de la fonctionnalité S’il s’agit du s’il s’agit de personnes est disponible uniquement pour les clients mobiles.
+> Actuellement, Microsoft Teams prise en charge du s picker de personnes est disponible uniquement pour les clients mobiles.
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
@@ -44,14 +44,16 @@ La description de l’API est la suivante :
 
 |Paramètre de configuration|Type|Description| Valeur par défaut|
 |-----|------|--------------|------|
-|`title`| Chaîne| Il s’agit d’un paramètre facultatif. Il définit le titre du contrôle S sélectionneur de personnes. | Sélectionner des personnes|
-|`setSelected`|Chaîne| Il s’agit d’un paramètre facultatif. Vous devez transmettre les ID AAD des personnes à pré-sélectionné. Ce paramètre présélectionne les personnes lors du lancement du contrôle Sélectionneur de personnes. En cas de sélection unique, seul le premier utilisateur valide est pré-préruplé en ignorant le reste. |Null| 
-|`openOrgWideSearchInChatOrChannel`|Boolean | Il s’agit d’un paramètre facultatif. Lorsqu’elle est définie sur true, elle lance le sérial de personnes dans l’étendue de l’organisation, même si l’application est ajoutée à une conversation ou un canal. |Faux|
-|`singleSelect`|Boolean|Il s’agit d’un paramètre facultatif. Lorsqu’elle est définie sur True, elle lance le s sélectionneur de personnes en limitant la sélection à un seul utilisateur. |Faux|
+|`title`| String
+| Il s’agit d’un paramètre facultatif. Il définit le titre du contrôle S sélectionneur de personnes. | Sélectionner des personnes|
+|`setSelected`|String
+| Il s’agit d’un paramètre facultatif. Vous devez transmettre les ID AAD des personnes à pré-sélectionné. Ce paramètre présélectionne les personnes lors du lancement du contrôle Sélectionneur de personnes. En cas de sélection unique, seul le premier utilisateur valide est pré-préruplé en ignorant les autres. |Null| 
+|`openOrgWideSearchInChatOrChannel`|Booléen | Il s’agit d’un paramètre facultatif. Lorsqu’elle est définie sur True, elle lance le sérial de personnes dans l’étendue de l’organisation, même si l’application est ajoutée à une conversation ou un canal. |Faux|
+|`singleSelect`|Booléen|Il s’agit d’un paramètre facultatif. Lorsqu’elle est définie sur True, elle lance le s sélectionneur de personnes en limitant la sélection à un seul utilisateur. |Faux|
 
-L’image suivante illustre l’expérience de la fonctionnalité S picker de personnes dans un exemple d’application web :
+L’image suivante illustre l’expérience du s picker de personnes dans un exemple d’application web :
 
-![Expérience d’application web de la fonctionnalité s’il s’est s’il s’est s’il s’est](../../assets/images/tabs/people-picker-control-capability.png)
+![Expérience d’application web du s picker de personnes](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### <a name="code-snippet"></a>Extrait de code
 

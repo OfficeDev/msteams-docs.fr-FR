@@ -5,24 +5,24 @@ description: Comprendre comment Teams administrateurs peuvent personnaliser votr
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 8d7cad42bcb8e6892c25c3c24b50f938624e665a50274395bad00c07f0f1576c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 0af96eebb50aeb650cdd5a1b3bd6a93439fb57b8
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703599"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345564"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Activer la personnalisation Microsoft Teams votre application
 
 Vous pouvez permettre aux clients de personnaliser certains aspects de votre application Microsoft Teams dans le centre d’administration Teams client. Cette fonctionnalité est prise en charge uniquement pour les applications publiées dans Teams store. Les applications et les applications téléchargées de côté publiées pour une organisation ne peuvent pas être personnalisées.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version secondaire sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour les GCC-High et le Département de la Défense (DOD).
+> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
 
 Voici quelques exemples possibles de cette fonctionnalité :
 
 * Modification de la couleur d’accentuage de l’application pour qu’elle corresponde à la marque d’une organisation.
-* Mise à jour du nom de l’application de *Contoso* vers *l’agent Contoso*, qui est le nom que les utilisateurs de l’organisation voient. (Remarque : les utilisateurs qui ajoutent un connecteur à une conversation ou un canal voient toujours le nom de l’application d’origine, *Contoso.)*
+* Mise à jour du nom de l’application de *Contoso* vers *l’agent Contoso,* qui est le nom que les utilisateurs de l’organisation voient. (Remarque : les utilisateurs qui ajoutent un connecteur à une conversation ou un canal voient toujours le nom de l’application d’origine, *Contoso.)*
 
 Vous pouvez activer cette fonctionnalité dans le Portail des développeurs [pour Teams](https://dev.teams.microsoft.com/home). Cette configuration, qui ne sont pas disponibles dans les versions antérieures à `configurableProperties` la version 1.10 du manifeste Teams’application.
 

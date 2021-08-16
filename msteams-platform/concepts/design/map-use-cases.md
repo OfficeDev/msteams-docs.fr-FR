@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 28f6b0af0854d19826d8f3542bb11ba0e025cbe1
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 77e8db5e0d0e4738cf479ccfddb9766507f7170c
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53586032"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345550"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
@@ -26,17 +26,17 @@ Lors du choix de l’étendue de l’application, prenons en compte les considé
 * Une application peut exister dans plusieurs étendues.
 * Les fonctionnalités d’application, telles que les extensions de messagerie, suivent les utilisateurs dans toutes les étendues.
 * Les utilisateurs ont souvent besoin d’ajouter des applications Teams ou des canaux.
-* Les utilisateurs invités peuvent accéder au contenu exposé dans Teams ou canaux.
+* Les invités peuvent accéder au contenu exposé dans Teams ou canaux.
 
 Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe ou de canal pour votre application en fonction des possibilités suivantes :
 
 * Pour l’étendue personnelle, posez-vous les questions suivantes :
   * Existe-t-il des interactions un-à-un avec l’application requises pour des raisons de confidentialité ou pour d’autres raisons ? Par exemple, vérification du solde des congés ou d’autres informations privées.
-  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, la recherche d’événements à l’échelle de l’organisation à venir dans une entreprise.
+  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, recherche des événements à venir à l’échelle de l’organisation dans une entreprise.
   * Existe-t-il des notifications personnalisées ou des messages qui devront être envoyés à un utilisateur tout au long de l Teams’application ? Par exemple, les rappels pour les approbations ou les inscriptions.
 * Pour une étendue partagée (équipe, canal ou conversation), posez-vous les questions suivantes :
   * Les informations présentées par l’application, sous l’onglet ou par le biais d’un bot, sont-ils pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, application Scrum.
-  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes dans différentes équipes. 
+  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du Planificateur sont différentes dans différentes équipes. 
   * Est-il possible que tous les membres d’une personne qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket.
 
 Les scénarios suivants vous guident dans la compréhension de la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien avec Teams fonctionnalités de l’application :
@@ -72,9 +72,9 @@ Parfois, vous avez simplement besoin d’un moyen rapide pour démarrer un proce
 
 ## <a name="send-notifications-and-alerts"></a>Envoyer des notifications et des alertes
 
-Envoyez des notifications et des alertes asynchrones à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
+Envoyez des notifications et des alertes asynchrones à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions couramment utilisées et des liens vers des informations supplémentaires.
 
-* **Bots de conversation**: envoyez des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
+* **Bots de conversation**: envoient des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
 
 * **Connecteurs et webhooks entrants**: autoriser un canal à s’abonner pour recevoir des messages. Un connecteur permet aux utilisateurs d’adapter l’abonnement avec une page de configuration.
 
@@ -88,7 +88,7 @@ Les personnes ont des questions et vous avez probablement une grande partie des 
 
 ## <a name="get-social"></a>Obtenir des réseaux sociaux
 
-Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des images, d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
+Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Penser en termes d’application à page unique
 
@@ -104,4 +104,4 @@ Cela étant dit, les meilleures applications combinent généralement plusieurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
+[Créer votre première application Microsoft Teams de messagerie](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

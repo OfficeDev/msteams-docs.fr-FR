@@ -1,11 +1,11 @@
 ## <a name="upload-your-tab-with-app-studio"></a>Télécharger onglet avec App Studio
 
 >[!NOTE]
-> Nous utilisons **App Studio** pour modifier votre **manifest.jsfichier** et charger le package terminé dans Teams. Vous pouvez également modifier manuellement **manifest.jssur**. Si vous le faites, veillez à générer à nouveau la solution pour créerTab.zip **fichier** à télécharger.
+> Nous utilisons **App Studio pour** modifier votremanifest.js **fichier** et charger le package terminé dans Teams. Vous pouvez également modifier manuellement **manifest.jssur**. Si vous le faites, veillez à générer à nouveau la solution pour créerTab.zip **fichier** à télécharger.
 
 **Pour télécharger votre onglet avec App Studio**
 
-1. Go to Microsoft Teams. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur.](~/tabs/how-to/developer-tools.md)
+1. Go to Microsoft Teams. Si vous utilisez la [version web,](https://teams.microsoft.com) vous pouvez inspecter votre code frontal à l’aide des outils [de développement de votre navigateur.](~/tabs/how-to/developer-tools.md)
 
 1. Go to **App Studio** and select the **Manifest editor** tab.
 
@@ -19,11 +19,11 @@
 
 ### <a name="update-your-app-package-with-manifest-editor"></a>Mettre à jour votre package d’application avec l’éditeur de manifeste
 
-Après avoir chargé votre package d’application dans App Studio, vous devez le configurer.
+Une fois que vous avez chargé votre package d’application dans App Studio, vous devez le configurer.
 
 Sélectionnez la vignette de votre onglet nouvellement importé dans le panneau droit de la page d’accueil de l’éditeur de manifeste.
 
-Il existe une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre **manifest.js,** mais vous devez mettre à jour certains champs.
+Il existe une liste d’étapes dans le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre **manifest.js,** mais il existe des champs que vous devez mettre à jour.
 
 #### <a name="details-app-details"></a>Détails : détails de l’application
 
@@ -31,7 +31,7 @@ Dans la section **Détails de l’application** :
 
 1. Sous **Identification,** **sélectionnez Générer** pour générer un nouvel ID d’application pour votre application.
 
-1. Sous **Informations sur le développeur,** mettez à jour le site **web** avec votre URL HTTPS **ngrok.**
+1. Sous **Informations sur le** développeur, mettez à jour le site **web** avec votre URL HTTPS **ngrok.**
 
 1. Sous **URL d’application,** mettez à jour la déclaration **de confidentialité** et les conditions `https://<yourngrokurl>/privacy` **d’utilisation** `https://<yourngrokurl>/tou`>.
 
@@ -70,7 +70,7 @@ Dans la section **Domaines et autorisations,** le champ Domaines de vos **onglet
 
 1. Dans les options de l’onglet, **sélectionnez Gris** ou **Rouge.** L’onglet s’affiche en fonction de la couleur que vous avez sélectionnée.
  
-    ![Onglet personnel ASPNETMVC chargé](../../assets/images/tab-images/personaltabaspnetmvcuploaded.png)
+    ![Onglet personnel ASPNETMVC téléchargé](../../assets/images/tab-images/personaltabaspnetmvcuploaded.png)
 
 ## <a name="view-your-personal-tab"></a>Afficher votre onglet personnel
 

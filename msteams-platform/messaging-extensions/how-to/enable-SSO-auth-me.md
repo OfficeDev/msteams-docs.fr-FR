@@ -5,12 +5,12 @@ description: Comment activer la prise en charge de l' sso pour vos extensions de
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3e965ed19e603bf888b107ca9ecda01aa81af192a020c41cfd26eb9bb905fd53
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 656c17612c74ee55b870fd2e7e13dea60e6ed2f8
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705744"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345240"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique (SSO) pour les extensions de messagerie
  
@@ -21,7 +21,7 @@ Ce document vous guide sur la façon d’activer l’authentification sso et de 
 ## <a name="prerequisites"></a>Conditions préalables
 
 La condition préalable à l’activer pour les extensions de messagerie et le déploiement des liens est la suivante :
-* Vous devez avoir un [compte Azure.](https://azure.microsoft.com/en-us/free/)
+* Vous devez avoir un [compte Azure.](https://azure.microsoft.com/free/)
 * Vous devez configurer votre application via le portail AAD et mettre à jour votre manifeste d’application Teams pour votre bot, comme défini dans l’inscription de votre application via le portail [AAD.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
 
 > [!NOTE]
@@ -39,7 +39,7 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
 3. Dans le fichier [TeamsMessagingExtensionsSearchAuthConfigBot.cs,](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) mettez à jour la valeur de *l’th* à *silentAuth* dans et / ou `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` .  
 
     > [!NOTE]
-    > Nous ne prise en charge pas d’autres ssO de handlers, à l’exception du fichier `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` TeamsMessagingExtensionsSearchAuthConfigBot.cs.
+    > Nous ne tenons pas d’autres sso de handlers, à l’exception du fichier `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` TeamsMessagingExtensionsSearchAuthConfigBot.cs.
    
 4. Vous recevez le jeton dans le handler dans la charge utile ou dans le , en fonction du scénario pour lequel vous activez l' `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` cesso pour `OnTeamsAppBasedLinkQueryAsync` :
 

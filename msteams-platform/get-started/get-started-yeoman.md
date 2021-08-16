@@ -5,19 +5,19 @@ keywords: mise en node.js nodejs yeoman
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703186"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345177"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Créer votre première application Microsoft Teams à l’aide du générateur Yeoman
 
 > [!Note]
 > Ce didacticiel provient du [générateur Yeoman pour Teams wiki.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
-Dans ce didacticiel, vous allez apprendre à créer votre toute première application Microsoft Teams à l’aide Microsoft Teams générateur Yeoman. Il vous permet également de passer par le processus de mise à niveau de votre Teams à l’aide du générateur Yeoman. Avant de commencer, vous devez avoir un compte Teams qui autorise le chargement de version de version [d’application.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+Dans ce didacticiel, vous allez apprendre à créer votre toute première application Microsoft Teams à l’aide Microsoft Teams générateur Yeoman. Il vous permet également de passer par le processus de mise à niveau de votre Teams à l’aide du générateur Yeoman. Avant de commencer, vous devez avoir un compte Teams qui autorise le chargement de version de [l’application.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ![Git du générateur yeoman](~/assets/yeoman-demo.gif)
 
@@ -82,13 +82,13 @@ Cette section vous présente les étapes à suivre pour générer votre projet.
 
     ![sélection d’élément](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Répondez à l’ensemble suivant de questions de suivi qui s’affichent en fonction des éléments que vous avez sélectionnés à l’étape 2.
+1. Répondez à l’ensemble suivant de questions de suivi qui s’affichent en fonction des éléments que vous avez sélectionnés à l’étape 3.
 1. Entrez une URL pour l’emplacement où vous hébergez votre solution. 
 
    > [!NOTE]
    > L’URL peut être n’importe quelle URL, mais par défaut, le générateur suggère une URL de site web Azure.
 
-1. Confirmez si vous souhaitez inclure des tests unitaires pour votre solution. La réponse par défaut est **Oui**. Si vous choisissez d’inclure le test unitaire, le projet généré aura une infrastructure de test unitaire et certains tests unitaires par défaut pour les différents éléments en cours de structure. 
+1. Confirmez si vous souhaitez inclure des tests unitaires pour votre solution. La réponse par défaut est **Oui**. Si vous choisissez d’inclure le test unitaire, le projet généré aura une infrastructure de test unitaire et des tests unitaires par défaut pour les différents éléments en cours de structure. 
    > [!NOTE]
    > * Pour ce didacticiel, choisissez de ne pas inclure d’infrastructure de test.
    > * Le générateur comporte un grand nombre de fonctionnalités avancées intégrées que vous pouvez choisir d’utiliser ou de refuser.
@@ -121,7 +121,7 @@ Votre onglet se trouve dans le `./src/app/scripts/myFirstAppTab/MyFirstAppTab.ts
 
 Vous pouvez maintenant créer votre projet. Cette procédure s’est effectuée en deux étapes.
 
-1. Créez le Teams manifeste de l’application pour l’application que vous avez téléchargée dans Microsoft Teams. Cette tâche est effectuée par la tâche Gulp `gulp manifest` . Cela valide le manifeste et crée un fichier zip dans `./package` le répertoire.
+1. Créez le Teams manifeste de l’application pour l’application que vous avez téléchargée dans Microsoft Teams. Cette tâche est effectuée par la tâche `gulp manifest` Gulp. Cela valide le manifeste et crée un fichier zip dans `./package` le répertoire.
 1. Exécutez `gulp build` la commande pour créer la solution. Cela transpile votre solution dans le `./dist` dossier. 
 
 ## <a name="run-your-app"></a>Exécuter votre application
@@ -136,7 +136,7 @@ Vous devez maintenant vous assurer que votre `http://localhost:3007/myFirstAppTa
 
 ### <a name="run-your-app-in-microsoft-teams"></a>Exécuter votre application dans Microsoft Teams
 
-Microsoft Teams ne vous permet pas d’héberger votre application sur localhost, vous devez donc la publier sur une URL publique ou utiliser un proxy tel que ngrok. La bonne nouvelle est que le projet échafaudé dispose de ce pré-projet intégré. 
+Microsoft Teams ne vous permet pas d’héberger votre application sur localhost, vous devez donc la publier sur une URL publique ou utiliser un proxy tel que ngrok. La bonne nouvelle est que le projet échafaudé dispose de ce projet intégré. 
 
 **Pour exécuter votre application dans Teams**
 

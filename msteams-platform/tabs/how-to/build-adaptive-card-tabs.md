@@ -4,17 +4,16 @@ author: KirtiPereira
 description: Créer des onglets à l’aide de cartes adaptatives
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6b969461669f9edb7d7f3e216b3b91dd700881b34de17389f8a43348b09830f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705083"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345571"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
 > [!IMPORTANT]
-> * Cette fonctionnalité est en prévisualisation [publique pour](~/resources/dev-preview/developer-preview-intro.md) les développeurs et est prise en charge sur ordinateur de bureau et mobile. La prise en charge dans le navigateur web sera bientôt disponible.
 > * Les onglets avec cartes adaptatives sont actuellement uniquement pris en charge en tant qu’applications personnelles.
 
 Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vous pouvez être face à ces problèmes :
@@ -26,9 +25,9 @@ Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vo
 
 Les onglets de carte adaptative sont un nouveau moyen de créer des onglets dans Teams. Au lieu d’incorporer du contenu web dans un IFrame, vous pouvez restituer des cartes adaptatives dans un onglet. Lorsque le frontal est restituer avec des cartes adaptatives, le système frontal est alimenté par un bot. Le bot est responsable de l’acceptation des demandes et de la réponse appropriée avec la carte adaptative qui est rendue.
 
-Vous pouvez créer vos onglets avec des blocs de construction d’interface utilisateur (IU) prêts à l’emploi, natifs sur ordinateur de bureau, web et mobile. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application. L’article identifie également la façon dont l’activité d’appel demande et envoie des informations sous l’onglet avec des cartes adaptatives, et son effet sur le flux de travail du module de tâche.
+Vous pouvez créer vos onglets avec des blocs de construction d’interface utilisateur (IU) prêts à l’emploi, natifs sur ordinateur de bureau, web et mobile. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application. L’article identifie également la façon dont l’activité d’appel demande et envoie des informations sous l’onglet à l’aide de cartes adaptatives, et son effet sur le flux de travail du module de tâche.
 
-L’image suivante montre les onglets de build avec des cartes adaptatives sur ordinateur de bureau et mobile :
+L’image suivante montre les onglets de build avec cartes adaptatives dans les ordinateurs de bureau et mobiles :
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Exemple de carte adaptative rendue dans les onglets." border="false":::
 
@@ -36,9 +35,8 @@ L’image suivante montre les onglets de build avec des cartes adaptatives sur o
 
 Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, vous devez :
 
-* Familiarisez-vous avec le développement [de bots,](../../bots/what-are-bots.md) [les cartes adaptatives](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)et les [modules de tâche](../../task-modules-and-cards/task-modules/task-modules-bots.md) Teams.
+* Familiarisez-vous avec le développement [de bots,](../../bots/what-are-bots.md) [les cartes adaptatives](https://adaptivecards.io/)et les [modules de tâche](../../task-modules-and-cards/task-modules/task-modules-bots.md) Teams.
 * Exécutez un bot Teams pour votre développement.
-* Être en [prévisualisation pour les développeurs publics.](~/resources/dev-preview/developer-preview-intro.md)
 
 ## <a name="changes-to-app-manifest"></a>Modifications apportées au manifeste de l’application
 
@@ -104,15 +102,15 @@ Voici un exemple de manifeste d’onglet carte adaptative :
 
 ## <a name="invoke-activities"></a>Appeler des activités
 
-La communication entre l’onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
+La communication entre votre onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
 
 > [!NOTE]
 > Les bots doivent envoyer toutes les réponses à [l’URL du service.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) L’URL du service est reçue dans le cadre de la charge `activity` utile entrante.
 
-### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Récupérer la carte adaptative à restituer dans un onglet
+### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Récupérer la carte adaptative pour le rendu dans un onglet
 
 `tab/fetch`est la première demande d’appel que votre bot reçoit lorsqu’un utilisateur ouvre un onglet Carte adaptative. Lorsque votre bot reçoit la demande, il envoie une réponse de tabulation **continue** ou une réponse **d’th de tabulation.**
-La **réponse** continue inclut un tableau pour les **cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
+La **réponse** continue inclut un tableau pour **les cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
 
 > [!NOTE]
 > Pour plus d’informations sur la réponse **d’authentification,** voir [l’authentification.](#authentication)
@@ -172,7 +170,7 @@ Une fois qu’une carte adaptative est restituer dans l’onglet, elle peut rép
 Lorsqu’un utilisateur sélectionne un bouton sous l’onglet Carte adaptative, la demande est déclenchée à votre bot avec les données correspondantes par le biais de la `tab/submit` `Action.Submit` fonction de carte adaptative. Les données de carte adaptative sont disponibles via la propriété de données de la `tab/submit` demande. Vous recevez l’une des réponses suivantes à votre demande :
 
 * Réponse de code d’état HTTP `200` sans corps. Une réponse 200 vide n’entraîne aucune action du client.
-* L’onglet standard `200` **continue la** réponse, comme expliqué dans récupérer la [carte adaptative](#fetch-adaptive-card-to-render-to-a-tab). Une réponse **de tabulation continue** déclenche la mise à jour de l’onglet Carte adaptative rendue par le client avec les cartes adaptatives fournies dans le tableau de cartes de la **réponse continue.**
+* L’onglet standard `200` **continue la** réponse, comme expliqué dans fetch Adaptive [Card](#fetch-adaptive-card-to-render-to-a-tab). Une réponse **de tabulation continue** déclenche la mise à jour de l’onglet Carte adaptative rendue par le client avec les cartes adaptatives fournies dans le tableau de cartes de la **réponse continue.**
 
 Le code suivant fournit des exemples de `tab/submit` requête et de réponse :
 
@@ -225,7 +223,7 @@ Le code suivant fournit des exemples de `tab/submit` requête et de réponse :
 
 ## <a name="understand-task-module-workflow"></a>Comprendre le flux de travail du module de tâche
 
-Le module de tâche utilise également la carte adaptative pour appeler `task/fetch` et les demandes et les `task/submit` réponses. Pour plus d’informations, [voir l’utilisation des modules de tâche Microsoft Teams bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
+Le module de tâche utilise également la carte adaptative pour appeler `task/fetch` et les demandes et les `task/submit` réponses. Pour plus d’informations, [voir l’utilisation des modules de tâche dans Microsoft Teams bots.](../../task-modules-and-cards/task-modules/task-modules-bots.md)
 
 Avec l’introduction de l’onglet Carte adaptative, il existe un changement dans la façon dont le bot répond à une `task/submit` demande. Si vous utilisez un onglet Carte adaptative, le bot répond à la demande d’appel avec la réponse continue de l’onglet standard et ferme `task/submit` le module de tâche.  L’onglet Carte adaptative est mis à jour en rendant la nouvelle liste de cartes fournie dans le corps de **la** réponse continue de l’onglet.
 

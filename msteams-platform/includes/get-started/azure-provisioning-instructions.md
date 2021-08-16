@@ -19,7 +19,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Capture d’écran de la boîte de dialogue d’approvisionnement.":::
 
-   Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela prend un certain temps. Vous pouvez surveiller la progression en regardant les boîtes de dialogue dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
+   Le processus de mise en service crée des ressources dans le cloud Azure. Cela prend un certain temps. Vous pouvez surveiller la progression en regardant les boîtes de dialogue dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Capture d’écran montrant la boîte de dialogue de mise en service terminée.":::
 

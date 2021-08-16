@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Applications web
-ms.openlocfilehash: 4a25649a8a791efc3f33572da203e36c7f39cb11f64676218f3a3f240da956c1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ba34241186484bb838ba3f61e5ca55914115a1f1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345759"
 ---
 # <a name="web-apps"></a>Applications web 
 
@@ -39,7 +39,7 @@ Votre application Teams doit inclure les fonctionnalités de collaboration requi
 |Chatbots  |[Bots](../bots/what-are-bots.md) |
 |Notifications de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks entrants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connecteurs Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Services externes de message  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks sortants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Modals  |[Modules de tâche](../task-modules-and-cards/what-are-task-modules.md)  |
+|Modals  |[Modules de tâches](../task-modules-and-cards/what-are-task-modules.md)  |
 |Cartes riches en contenu  |[Cartes adaptatives](../task-modules-and-cards/what-are-cards.md)  |
 
 ## <a name="determine-a-subset-of-functionality"></a>Déterminer un sous-ensemble de fonctionnalités
@@ -74,7 +74,7 @@ Si votre application est utilisée par plusieurs organisations, envisagez l’h�
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur les Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge des liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
+Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge de liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
 
 En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-to/access-teams-context.md) [bot.](../bots/how-to/get-teams-context.md)
 
@@ -97,13 +97,13 @@ En savoir plus sur [l’authentification dans Teams](../concepts/authentication/
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.md) pour que votre application soit native à Teams. Vous ne pouvez pas migrer le contenu d’une application existante vers Teams onglet. Pour plus d’informations sur la conception d’une [application, voir Système Fluent Design](https://fluentsite.z22.web.core.windows.net/).
+Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.md) pour rendre votre application native à Teams. Vous ne pouvez pas migrer le contenu d’une application existante vers Teams onglet. Pour plus d’informations sur la conception d’une [application, voir Système Fluent Design](https://fluentsite.z22.web.core.windows.net/).
 
 ## <a name="maximize-deep-linking"></a>Optimiser la liaison profonde
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
+Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
 
 ## <a name="be-smart-when-messaging-users"></a>Soyez intelligent lors de la messagerie des utilisateurs
 

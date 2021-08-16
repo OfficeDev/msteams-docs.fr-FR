@@ -4,12 +4,12 @@ description: Découvrez comment recharger une version de version de votre applic
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708707"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345261"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Télécharger votre application dans Microsoft Teams
 
@@ -20,7 +20,7 @@ Vous pouvez télécharger une version Microsoft Teams applications sans avoir à
 * Vous avez créé une application pour un petit groupe d’utilisateurs, par exemple, votre groupe de travail.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version secondaire sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour les GCC-High et le Département de la Défense (DOD).
+> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -30,9 +30,9 @@ Vous pouvez télécharger une version Microsoft Teams applications sans avoir à
 
 ## <a name="upload-your-app"></a>Télécharger votre application
 
-Vous pouvez recharger une version de votre application vers une équipe, une conversation, une réunion ou pour une utilisation personnelle en fonction de la façon dont vous avez configuré l’étendue de votre application.
+Vous pouvez charger une version de votre application vers une équipe, une conversation, une réunion ou pour une utilisation personnelle en fonction de la façon dont vous avez configuré l’étendue de votre application.
 
-1. Connectez-vous au client Teams avec [votre compte Microsoft 365 de développement.](~/build-your-first-app/build-and-run.md#prerequisites)
+1. Connectez-vous au client Teams avec [votre compte Microsoft 365 développement.](~/build-your-first-app/build-and-run.md#prerequisites)
 1. Sélectionnez **applications** et choisissez **Télécharger une application personnalisée.**
 1. Sélectionnez votre package d'.zip fichier. Une boîte de dialogue d’installation s’affiche.
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
@@ -42,7 +42,7 @@ Vous pouvez recharger une version de votre application vers une équipe, une con
 
 Si le chargement de version de votre application échoue, faites les choses suivantes jusqu’à ce que le problème soit résolu :
 
-1. Revenir en arrière dans les instructions de création [de votre package d’application.](../../concepts/build-and-test/apps-package.md)
+1. Revenir en arrière dans les instructions de [création de votre package d’application.](../../concepts/build-and-test/apps-package.md)
 1. [Validez à nouveau votre package d’application.](https://dev.teams.microsoft.com/appvalidation.html)
 1. Assurez-vous que le manifeste de votre application correspond au [schéma le plus récent.](../../resources/schema/manifest-schema.md)
 
@@ -52,7 +52,7 @@ Teams propose plusieurs façons d’ouvrir des applications. Pour plus d’infor
 
 ## <a name="update-your-app"></a>Mettre à jour votre application
 
-Vous n’avez pas besoin de recharger une version de votre application si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
+Vous n’avez pas à recharger votre application de nouveau si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
 
 ## <a name="remove-your-app"></a>Supprimer votre application
 

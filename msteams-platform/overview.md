@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: c114eba3e022f153ccaa9e9031086989eca5d019bd472fb0b9f5da583465deb9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: df871894a1353301edaeb12af3cb940f0bb47472
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707488"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345613"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -117,7 +117,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 
    :::column span="":::
 
-**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Les [webhooks sortants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)envoient un message à votre service web avec une @mention.
+**Communiquer avec des applications externes**: les [webhooks entrants](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) sont un moyen simple d’envoyer automatiquement des notifications à partir d’une autre application vers Teams canal. Avec [les webhooks sortants,](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)vous messageez votre service web avec une @mention.
 
    :::column-end:::
 

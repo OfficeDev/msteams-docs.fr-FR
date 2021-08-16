@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea0392868b06653657beff60b157070eaef7f4ba
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709689"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345647"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
@@ -56,7 +56,7 @@ Il est essentiel que votre bot se présente et décrive ce qu'il peut faire. Cet
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>Message de bienvenue dans une conversation à deux
 
-En contexte personnel, les messages d’accueil définissent le ton de votre bot. Le message inclut un message d’accueil, ce que le bot peut faire et quelques suggestions sur la façon d’interagir. Par exemple, « Essayez de me poser des questions sur ... ». Si possible, ces suggestions doivent renvoyer les réponses stockées sans avoir à se connecter.
+En contexte personnel, les messages d’accueil définissent le ton de votre bot. Le message inclut un message d’accueil, ce que le bot peut faire et quelques suggestions pour l’interaction. Par exemple, « Essayez de me demander ... ». Si possible, ces suggestions doivent renvoyer les réponses stockées sans avoir à se connecter.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -156,7 +156,7 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 |----------|-----------|
 |1|**Nom et icône de l’application**|
 |2|**Onglet Conversation** : ouvre l’espace pour discuter avec votre bot (applicable uniquement aux applications personnelles).|
-|3|**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
+|3 |**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
 |4 |**Onglet À propos** : affiche des informations de base sur votre application.|
 |5 |**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
 |6 |**Carte adaptative**: si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
@@ -170,7 +170,7 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 |----------|-----------|
 |1|**Nom et icône de l’application**|
 |2|**Onglet Conversation** : ouvre l’espace pour discuter avec votre bot (applicable uniquement aux applications personnelles).|
-|3|**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
+|3 |**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
 |4 |**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
 |5 |**Carte adaptative**: si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
 
@@ -312,7 +312,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 ### <a name="content"></a>Contenu
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour l’établissement d’un personnage clair." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour établir un personnage clair." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>À faire : établir un personnage clair
 

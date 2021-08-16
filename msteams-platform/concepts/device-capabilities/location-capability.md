@@ -6,12 +6,12 @@ keywords: autorisations natives d’appareil pour les fonctionnalités de carte 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 94eb8735092f97f35a03b7b19eee9e20c75eaaac7463d1869c4c2718d55ef3bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705988"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345654"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement 
 
@@ -25,12 +25,12 @@ Le principal avantage de l’intégration des fonctionnalités d’emplacement d
 
 Les exemples suivants montrent comment l’intégration des fonctionnalités d’emplacement est utilisée dans différents scénarios :
 * Dans une usine, le responsable peut suivre la présence des employés en leur demandant de prendre un selfie à proximité de l’usine et de le partager via l’application spécifiée. Les données d’emplacement sont également capturées et envoyées avec l’image.
-* Les fonctionnalités d’emplacement permettent au personnel de maintenance d’un fournisseur de services de partager des données d’état d’état authentiques des pylônes cellulaires avec la direction. La direction peut comparer les différences entre les informations d’emplacement capturées et les données envoyées par le personnel de maintenance.
+* Les fonctionnalités d’emplacement permettent au personnel de maintenance d’un fournisseur de services de partager des données d’état d’état authentiques des pylônes cellulaires avec la direction. La direction peut comparer toute insérialisation entre les informations d’emplacement capturées et les données envoyées par le personnel de maintenance.
 
 Pour intégrer des fonctionnalités d’emplacement, vous devez mettre à jour le fichier manifeste de l’application et appeler les API. Pour une intégration efficace, vous devez bien comprendre les [extraits](#code-snippets) de code pour appeler les API d’emplacement. Il est important de vous familiariser avec les erreurs de réponse [d’API](#error-handling) pour gérer les erreurs dans votre Teams application.
 
 > [!NOTE] 
-> Actuellement, Microsoft Teams prise en charge des fonctionnalités d’emplacement est disponible uniquement pour les clients mobiles.
+> Actuellement, Microsoft Teams prise en charge des fonctionnalités de localisation est disponible uniquement pour les clients mobiles.
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 
@@ -106,4 +106,4 @@ Vous devez vous assurer de gérer ces erreurs de manière appropriée dans votre
 
 * [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
 * [Intégrer le code QR ou la fonctionnalité de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
-* [Intégrer la fonctionnalité s’il s’Teams](people-picker-capability.md)
+* [Intégrer le s picker de personnes dans Teams](people-picker-capability.md)

@@ -4,12 +4,12 @@ description: Décrit les options de publication de votre Microsoft Teams applica
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: c5dc026627ba912e0beebb9321c664f0a5af4ccf38905eb969226da8103b9a4a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eeaa0dc7804938a663156ad019123b32630eb14f
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701984"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345703"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams de messagerie
 
@@ -20,13 +20,13 @@ Vous pouvez fournir votre application Microsoft Teams à une personne, une équi
 Chargez une application pour une utilisation personnelle, collaborez avec votre équipe ou testez et déboguer. Ce type de distribution ne nécessite pas de processus de révision formel.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version secondaire sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour les GCC-High et le Département de la Défense (DOD).
+> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
 
 Pour plus d’informations, [voir charger votre application dans Teams](apps-upload.md).
 
 ## <a name="publish-your-app-to-your-org"></a>Publier votre application dans votre organisation
 
-Rendez votre application accessible aux personnes de votre organisation. Ce type de distribution nécessite l’Teams’administrateur.
+Rendez votre application disponible pour les personnes de votre organisation. Ce type de distribution nécessite l’Teams’administrateur.
 
 Pour plus d’informations, [voir gérer vos applications dans le centre d Teams’administration.](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
 

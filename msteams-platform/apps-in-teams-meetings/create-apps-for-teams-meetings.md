@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: a8b606242f4fe5498f1d370fdf79b3712d430a3c4bdd0006752d5fe463e8865d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1e0910a3f8fa76aae541b9f3bd1f79f673f64d92
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702326"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345359"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
-Pour développer les fonctionnalités des applications tout au long du cycle de vie des réunions, Teams vous permet de travailler avec des applications pour Teams réunions. Utilisez les conditions préalables et utilisez les références de l’API des applications de réunion pour améliorer l’expérience de réunion.
+Pour développer les fonctionnalités de l’application tout au long du cycle de vie des réunions, Teams vous permet de travailler avec des applications pour Teams réunions. Utilisez les conditions préalables et utilisez les références de l’API des applications de réunion pour améliorer l’expérience de réunion.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -31,7 +31,7 @@ Avant de travailler avec des applications pour Teams réunions, vous devez conna
 
 * Prendre en `groupchat` charge l’étendue pour activer votre application dans les conversations préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer les tâches préalables à la réunion. Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les commentaires.
 
-* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Les paramètres sont disponibles dans le cadre de l’activité Teams Client SDK et bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [sso tab .](../tabs/how-to/authentication/auth-aad-sso.md)
+* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Les paramètres sont disponibles dans le cadre de l’activité Teams Client SDK et bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [SSO onglet](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
@@ -86,8 +86,8 @@ L’API permet à un bot de récupérer les informations des participants par ID
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
-|**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
+|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**participantId**| String | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
 |**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. |
 
 #### <a name="example"></a>Exemple
@@ -261,7 +261,7 @@ POST /v3/conversations/{conversationId}/activities
 ### <a name="meeting-details-api"></a>API Détails de la réunion
 
 > [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
+> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md) uniquement.
 
 L’API Détails de la réunion permet à votre application d’obtenir des métadonnées de réunion statiques. Les métadonnées fournissent des points de données qui ne changent pas dynamiquement.
 L’API est disponible via Bot Services.
@@ -286,7 +286,7 @@ L’API Détails de la réunion inclut le paramètre de requête suivant :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
+|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
 
 #### <a name="example"></a>Exemple
 
@@ -349,7 +349,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 ## <a name="real-time-teams-meeting-events"></a>Événements de réunion Teams en temps réel
 
 > [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
+> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md) uniquement.
 
 L’utilisateur peut recevoir des événements de réunion en temps réel. Dès qu’une application est associée à une réunion, les heures de début et de fin de réunion réelles sont partagées avec le bot.
 
