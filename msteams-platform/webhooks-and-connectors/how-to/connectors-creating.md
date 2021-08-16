@@ -6,12 +6,12 @@ keywords: 'équipes connecteur O365 '
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: e52402e841b675de7d0c19302b8c8090bcb90cef27ac61e8ac3d6dd69a0bb076
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ee9a00473a7d871e0c69f27a44ca6c7c23eadcbf
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709318"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345738"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
@@ -46,7 +46,7 @@ Vous pouvez réutiliser votre expérience de configuration web existante ou cré
 1. Appel `microsoftTeams.settings.setValidityState(true)` pour activer **Enregistrer**.
 
     > [!NOTE]
-    > Vous devez appeler en réponse à la sélection de `microsoftTeams.settings.setValidityState(true)` l’utilisateur ou à la mise à jour du champ.
+    > Vous devez appeler `microsoftTeams.settings.setValidityState(true)` en réponse à la sélection de l’utilisateur ou à la mise à jour du champ.
 
 1. Enregistrez  `microsoftTeams.settings.registerOnSaveHandler()` le handler d’événements, qui est appelé lorsque l’utilisateur sélectionne **Enregistrer**.
 1. Appelez `microsoftTeams.settings.setSettings()` pour enregistrer les paramètres du connecteur. Les paramètres enregistrés sont également affichés dans la boîte de dialogue de configuration si l’utilisateur tente de mettre à jour une configuration existante pour votre connecteur.
@@ -124,18 +124,18 @@ Pour authentifier l’utilisateur dans le cadre du chargement de votre page, con
 #### <a name="getsettings-response-properties"></a>`GetSettings` propriétés de réponse
 
 >[!NOTE]
->Les paramètres renvoyés par l’appel sont différents lorsque vous appelez cette méthode à partir d’un onglet et diffèrent de ceux `getSettings` documentés dans [les paramètres js.](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)
+>Les paramètres renvoyés par l’appel sont différents lorsque vous appelez cette méthode à partir d’un onglet et diffèrent de ceux `getSettings` documentés dans [les paramètres js](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 Le tableau suivant fournit les paramètres et les détails des propriétés `GetSetting` de réponse :
 
 | Paramètres   | Détails |
 |-------------|---------|
-| `entityId`       | ID d’entité, tel que définie par votre code lors de `setSettings()` l’appel. |
+| `entityId`       | L’ID d’entité, tel que définie par votre code lors de `setSettings()` l’appel. |
 | `configName`  | Nom de la configuration, tel que définie par votre code lors de `setSettings()` l’appel. |
 | `contentUrl` | URL de la page de configuration, définie par votre code lors de `setSettings()` l’appel. |
 | `webhookUrl` | URL de webhook créée pour le connecteur. Utilisez l’URL de webhook pour post JSON structuré pour envoyer des cartes au canal. Elle `webhookUrl` est renvoyée uniquement lorsque l’application renvoie des données avec succès. |
 | `appType` | Les valeurs renvoyées peuvent être `mail` `groups` respectivement Office 365 `teams` mail, Office 365 ou Microsoft Teams. |
-| `userObjectId` | ID unique correspondant à l’Office 365 qui a initié la mise en place du connecteur. Elle doit être sécurisée. Cette valeur peut être utilisée pour associer l’utilisateur dans Office 365, qui a installé la configuration dans votre service. |
+| `userObjectId` | ID unique correspondant à l’Office 365 qui a initié la mise en place du connecteur. Elle doit être sécurisée. Cette valeur peut être utilisée pour associer l’utilisateur Office 365, qui a installé la configuration dans votre service. |
 
 #### <a name="handle-edits"></a>Gérer les modifications
 
@@ -145,7 +145,7 @@ Votre code doit gérer les utilisateurs qui reviennent pour modifier une configu
 - `configName` est un nom que le code de configuration peut récupérer.
 - `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante.
 
-Cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code est chargé, votre code doit appeler pour pré-remplir les paramètres ou `contentUrl` `getSettings()` formulaires de votre interface utilisateur de configuration.
+Cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code est chargé, votre code doit appeler pour pré-remplir les paramètres ou `contentUrl` `getSettings()` formulaires dans votre interface utilisateur de configuration.
 
 #### <a name="handle-removals"></a>Gérer les suppressions
 
@@ -209,7 +209,7 @@ Le module Exchange Online PowerShell V2 utilise l’authentification moderne et 
 
 Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe sont désactivés. Pour activer un connecteur dans Teams, connectez-vous à [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
 
-### <a name="commands-to-enable-or-disable-connectors"></a>Commandes permettant d’activer ou de désactiver des connecteurs
+### <a name="commands-to-enable-or-disable-connectors"></a>Commandes pour activer ou désactiver des connecteurs
 
 Dans Exchange Online PowerShell, exécutez les commandes suivantes :
 
@@ -246,7 +246,7 @@ Après avoir téléchargé le package d’application pour configurer et utilise
 1. Sélectionnez **Applications** dans la barre de navigation de gauche.
 1. Dans la section **Applications,** sélectionnez **Connecteurs.**
 1. Sélectionnez le connecteur que vous souhaitez ajouter. Une fenêtre de boîte de dialogue s’affiche.
-1. Dans le menu déroulant, **sélectionnez Ajouter à une équipe.**
+1. Dans le menu déroulant, sélectionnez **Ajouter à une équipe.**
 1. Dans la zone de recherche, tapez un nom d’équipe ou de canal.
 1. Sélectionnez **Configurer un connecteur dans** le menu déroulant dans le coin inférieur droit de la fenêtre de dialogue.
 

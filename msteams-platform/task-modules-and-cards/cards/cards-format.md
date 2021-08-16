@@ -5,12 +5,12 @@ keywords: Format de cartes de bots teams
 localization_priority: Normal
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706128"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345717"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -52,8 +52,8 @@ La mise en forme est différente entre le bureau et les versions mobiles de Team
 Les balises Markdown suivantes ne sont pas pris en charge :
 
 * En-têtes
-* Tables
-* Des images
+* Tableaux
+* Images
 * Texte préformaté
 * Blockquotes
 
@@ -63,11 +63,11 @@ Vous pouvez utiliser les `\r` `\n` séquences d’échappatoire ou les séquence
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Différences entre les appareils mobiles et les ordinateurs de bureau pour les cartes adaptatives
 
-Sur le bureau, la mise en forme de markdown de carte adaptative apparaît comme illustré dans l’image suivante dans les navigateurs web et dans l Teams application cliente :
+Sur le bureau, la mise en forme de markdown de carte adaptative apparaît comme illustré dans l’image suivante dans les navigateurs web et dans l’application Teams client :
 
 ![Mise en forme Markdown de carte adaptative dans le client de bureau](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-Sur iOS, la mise en forme markdown de carte adaptative apparaît comme illustré dans l’image suivante :
+Sur iOS, la mise en forme Markdown de carte adaptative apparaît comme illustré dans l’image suivante :
 
 ![Mise en forme markdown de carte adaptative dans iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
@@ -223,7 +223,7 @@ Pour effectuer une carte adaptative pleine largeur, votre application doit inclu
 }
 ```
 
-L’image suivante montre une carte adaptative pleine largeur :
+L’image suivante illustre une carte adaptative pleine largeur :
 
 ![Affichage carte adaptative pleine largeur](../../assets/images/cards/full-width-adaptive-card.png)
 
@@ -283,7 +283,7 @@ L’image apparaît en mode Étape lorsque l’utilisateur sélectionne l’icô
 
 ![Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
 
-Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
+Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner dans votre carte adaptative les images qui doivent avoir cette fonctionnalité.
 
 > [!NOTE]
 > * Les fonctionnalités de zoom avant et arrière s’appliquent uniquement aux éléments image de type image dans une carte adaptative.
@@ -291,7 +291,7 @@ Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un z
 
 # <a name="markdown-format-for-o365-connector-cards"></a>[Format Markdown pour les cartes de connecteur O365](#tab/connector-md)
 
-Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML.
+Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML.
 
 | Style | Exemple | Markdown |
 | --- | --- | --- |
@@ -389,7 +389,7 @@ La mise en forme est différente entre le bureau et les versions mobiles de Team
 
 # <a name="html-format-for-o365-connector-cards"></a>[Format HTML pour les cartes de connecteur O365](#tab/connector-html)
 
-Les cartes de connecteurs supportent une mise en forme Limitée markdown et HTML.
+Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML.
 
 | Style | Exemple | HTML |
 | --- | --- | --- |
@@ -416,7 +416,7 @@ Sur iOS, la mise en forme HTML apparaît comme illustré dans l’image suivante
 
 ![Mise en forme HTML pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
-Les cartes de connecteur utilisant html pour iOS incluent les problèmes suivants :
+Les cartes de connecteur utilisant du code HTML pour iOS comportent les problèmes suivants :
 
 * Les images en ligne ne sont pas restituer sur iOS à l’aide de Markdown ou html dans les cartes de connecteur.
 * Le texte préformaté est restituer, mais n’a pas d’arrière-plan gris.
@@ -527,4 +527,4 @@ Vous pouvez tester la mise en forme dans vos propres cartes en modifiant ce code
 ## <a name="see-also"></a>Voir aussi
 
 * [Actions de carte](./cards-actions.md)
-* [Modules de tâche](~/task-modules-and-cards/cards/cards-format.md)
+* [Modules de tâches](~/task-modules-and-cards/cards/cards-format.md)
