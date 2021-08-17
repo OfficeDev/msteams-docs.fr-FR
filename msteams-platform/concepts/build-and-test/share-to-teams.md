@@ -4,12 +4,12 @@ description: Comment ajouter le bouton Partager Teams incorporé sur votre site 
 ms.topic: reference
 localization_priority: Normal
 keywords: Partager Teams-à-Teams
-ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
+ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707715"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "58358621"
 ---
 # <a name="create-share-to-teams-button"></a>Créer un bouton de partage pour Teams
 
@@ -40,7 +40,7 @@ L’image suivante affiche l’expérience Teams de partage :
     </div>
     ```
 
-    Une fois l’exécution de cette Microsoft Teams, l’icône est ajoutée à votre site web. L’image suivante montre l’icône Partager Teams-à-vous :
+    Une fois l’exécution de cette Microsoft Teams, l’icône est ajoutée à votre site web. L’image suivante montre l’icône Partager Teams partage :
 
     ![Icône Partager Teams partage](~/assets/icons/share-to-teams-icon.png)
 
@@ -53,7 +53,7 @@ L’image suivante affiche l’expérience Teams de partage :
       data-icon-px-size="64">
     </div>
     ```
-1. Si le lien partagé nécessite l’authentification de l’utilisateur et que l’aperçu de l’URL de votre lien à partager ne s’affiche pas bien dans Teams vous pouvez désactiver l’aperçu de l’URL en ajoutant le jeu d’attributs à `data-preview` `false` .
+1. Si le lien partagé nécessite l’authentification de l’utilisateur et que l’aperçu de l’URL de votre lien à partager ne s’affiche pas bien dans Teams, vous pouvez désactiver l’aperçu de l’URL en ajoutant le jeu d’attributs à `data-preview` `false` .
 
     ```html
     <div
@@ -63,7 +63,7 @@ L’image suivante affiche l’expérience Teams de partage :
     </div>
     ```
 
-1. Si votre page restituera dynamiquement le contenu, vous pouvez utiliser la méthode pour forcer le bouton Partager à s’restituer à `shareToMicrosoftTeams.renderButtons()` l’endroit approprié dans le pipeline. 
+1. Si votre page restituera dynamiquement le contenu, vous pouvez utiliser la méthode pour forcer le rendu du partage à `shareToMicrosoftTeams.renderButtons()` l’endroit approprié dans le pipeline. 
 
 ## <a name="craft-your-website-preview"></a>Création de la prévisualisation de votre site web
 
@@ -82,7 +82,7 @@ Le tableau suivant présente les balises nécessaires :
 |Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Image miniature| aucun. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Vous pouvez utiliser les versions html par défaut ou la version Open Graph.
+Vous pouvez utiliser les versions HTML par défaut ou Open Graph version.
 
 ## <a name="share-to-teams-for-education"></a>Partager avec les Teams pour l’éducation
 
@@ -96,7 +96,7 @@ Pour les enseignants qui utilisent le bouton Partager Teams, il existe une optio
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | s/o | Href du contenu à partager. |
 | preview | `data-preview` | booléen (sous la mesure d’une chaîne) | `true` | Indique si un aperçu du contenu à partager doit être présenté ou non. |
-| iconPxSize | `data-icon-px-size` | number (en tant que chaîne) | `32` | Taille en pixels du bouton De partage à Teams à restituer. |
+| iconPxSize | `data-icon-px-size` | number (sous la mesure d’une chaîne) | `32` | Taille en pixels du bouton De partage à Teams à restituer. |
 | msgText | `data-msg-text` | string | s/o | Texte par défaut à insérer avant le lien dans la zone de composition du message. Le nombre maximal de caractères est de 200. |
 | assignInstr | `data-assign-instr` | string | s/o | Texte par défaut à insérer dans le champ « Instructions » des affectations. Le nombre maximal de caractères est de 200. |
 | assignTitle | `data-assign-title` | string | s/o | Texte par défaut à insérer dans le champ « Titre » des affectations. Le nombre maximal de caractères est de 50. |
@@ -107,7 +107,7 @@ Pour les enseignants qui utilisent le bouton Partager Teams, il existe une optio
 
 `options` (facultatif) : `{ elements?: HTMLElement[] }`
 
-Actuellement, tous les boutons de partage sont restituer sur la page. Si un objet facultatif est fourni avec une liste d’éléments, ces éléments sont restituer dans `options` des boutons de partage.
+Actuellement, tous les boutons de partage sont restituer sur la page. Si un objet facultatif est fourni avec une liste d’éléments, ces éléments sont restituer `options` dans des boutons de partage.
 
 ### <a name="set-default-form-values"></a>Définir les valeurs de formulaire par défaut
 
