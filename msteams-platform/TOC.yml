@@ -1,3 +1,5 @@
+- name: Documentation du développeur Microsoft Teams
+  href: /microsoftteams/platform
 - name: Vue d’ensemble
   expanded: true
   items:
@@ -54,8 +56,6 @@
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
         - name: Intégrer les fonctionnalités d’emplacement
           href: concepts/device-capabilities/location-capability.md
-        - name: Intégrer Sélecteur de personnes fonctionnalité
-          href: concepts/device-capabilities/people-picker-capability.md
 - name: Concevoir votre application
   items:
     - name: Vue d’ensemble
@@ -436,8 +436,6 @@
           href: resources/dev-preview/developer-preview-intro.md
         - name: Schéma du manifeste
           href: resources/schema/manifest-schema-dev-preview.md
-        - name: Fonctionnalités
-          href: resources/dev-preview/developer-preview-features.md
 - name: S'intégrer aux équipes
   items:
     - name: Aperçu
@@ -468,6 +466,8 @@
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: Créer des liens plus étroits
       href: concepts/build-and-test/deep-links.md
+    - name: Intégrer Sélecteur de personnes
+      href: concepts/device-capabilities/people-picker-capability.md
 - name: Ressources
   items:
     - name: Localisation
