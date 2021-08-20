@@ -3,22 +3,22 @@ title: Extensibilité de l’application de réunion
 author: surbhigupta
 description: Comprendre l’extensibilité de l’application de réunion
 ms.topic: conceptual
-ms.openlocfilehash: 0da7a68fec5ea3cf01adfbb4edabded23a9f3311
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345282"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398682"
 ---
 # <a name="meeting-app-extensibility"></a>Extensibilité de l’application de réunion
 
 Teams’extensibilité de l’application de réunion est basée sur les concepts suivants :
 
 * Un cycle de vie de réunion se produit à différentes étapes, telles que les phases préalables à la réunion, aux réunions et après la réunion.  
-* Il existe trois rôles de participant distincts dans une réunion : organisateur, présentateur et participant. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
+* Il existe trois rôles de participant distincts dans une réunion : organisateur, présentateur et participant. Pour plus d’informations, voir [les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
 * Il existe différents [types d’utilisateurs](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) dans une réunion : utilisateurs en [client,](/microsoftteams/guest-access)invités, [fédérés](/microsoftteams/manage-external-access)et anonymes.
 
-Cet article traite des informations sur le cycle de vie des réunions et sur la façon d’intégrer des onglets, des bots et des extensions de messagerie dans une réunion. Il fournit des informations permettant d’identifier différents rôles de participant et types d’utilisateurs pour effectuer des tâches.
+Cet article traite des informations sur le cycle de vie des réunions et sur la façon d’intégrer des onglets, des bots et des extensions de messagerie dans une réunion. Il fournit des informations permettant d’identifier différents rôles de participants et types d’utilisateurs pour effectuer des tâches.
 
 ## <a name="meeting-lifecycle"></a>Cycle de vie des réunions
 
@@ -32,7 +32,8 @@ Les onglets permettent aux membres de l’équipe d’accéder aux services et a
 > Si vous avez intégré un onglet à votre réunion, votre application doit suivre le flux d’authentification unique Teams [(SSO) pour les onglets.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 > [!NOTE]
-> Les applications sont uniquement pris en charge dans les réunions privées programmées.
+> * Les réunions privées programmées ne supportent que les applications.
+> * L’option Ajouter une application pour Teams’onglet d’extension de réunion n’est pas prise en charge Teams client web.
 
 #### <a name="pre-meeting-app-experience"></a>Expérience d’application avant la réunion
 
@@ -41,7 +42,7 @@ Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et
 **Pour ajouter des onglets à une réunion existante**
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
-1. Sélectionnez **l’onglet Détails,** puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
+1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
 
     ![Expérience préalable à la réunion](../assets/images/apps-in-meetings/PreMeeting.png)
 
@@ -49,7 +50,7 @@ Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et
 
     > [!NOTE]
     > * Vous pouvez également ajouter un onglet à une réunion existante à l’aide de l’onglet **Conversation de** réunion.
-    > * La disposition des onglets doit être organisée, s’il y a plus de 10 sondages ou enquêtes.
+    > * La disposition des onglets doit être dans un état organisé, s’il y a plus de 10 sondages ou enquêtes.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -67,7 +68,7 @@ Une fois que les onglets ont été ajoutés à une réunion existante sur un ord
 
 Grâce à l’expérience d’application en réunion, vous pouvez impliquer des participants pendant la réunion à l’aide d’applications et de la boîte de dialogue de réunion. Les applications de réunion sont hébergées dans la barre d’outils de la fenêtre de réunion en tant qu’onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter le contenu actionnable aux participants à la réunion. Pour plus d’informations, voir [créer des applications pour Teams réunions.](create-apps-for-teams-meetings.md)
 
-Pour les appareils mobiles, les applications de réunion sont disponibles à partir **>** les &#x25CF;&#x25CF;&#x25CF; de la réunion. Sélectionnez **Applications** pour afficher toutes les applications disponibles dans la réunion.
+Pour les appareils mobiles, les applications de réunion sont disponibles à partir **>** des &#x25CF;&#x25CF;&#x25CF; dans la réunion. Sélectionnez **Applications** pour afficher toutes les applications disponibles dans la réunion.
 
 **Pour utiliser des onglets pendant une réunion**
 
@@ -105,7 +106,7 @@ L’image suivante illustre le panneau latéral de la réunion :
 
 Le tableau suivant décrit le comportement de l’application lorsqu’elle est approuvée et non approuvée :
 
-|Fonctionnalité de l’application | L’application est approuvée | L’application n’est pas approuvée |
+|Fonctionnalité d’application | L’application est approuvée | L’application n’est pas approuvée |
 |---|---|---|
 | Extensibilité de réunion | L’application s’affiche dans les réunions. | L’application n’apparaîtra pas dans les réunions pour les clients mobiles. |
 
@@ -130,7 +131,7 @@ L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Intégrer des bots dans le cycle de vie de la réunion
 
-Les bots activés dans l’étendue groupchat commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot,](../build-your-first-app/build-bot.md) puis continuez à créer des applications [pour Teams réunions.](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)
+Les bots activés dans l’étendue groupchat commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot,](../build-your-first-app/build-bot.md) puis continuez à créer des [applications pour Teams réunions.](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Intégrer des extensions de messagerie dans le cycle de vie de la réunion
 
@@ -138,7 +139,7 @@ Pour implémenter des extensions de messagerie, commencez par créer une [extens
 
 L Teams extensibilité de l’application de réunion vous permet de concevoir votre application en fonction des rôles des participants à une réunion.
 
-## <a name="participant-roles-in-a-meeting"></a>Rôles des participants dans une réunion
+## <a name="participant-roles-in-a-meeting"></a>Rôles des participants à une réunion
 
 ![Participants à une réunion](../assets/images/apps-in-meetings/participant-roles.png)
 
@@ -151,7 +152,7 @@ Les paramètres de participant par défaut sont déterminés par l’administrat
 > [!NOTE]
 > Seul un organisateur ou un présentateur peut ajouter, supprimer ou désinstaller des applications.
 
-Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
+Pour plus d’informations, voir [les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 Après avoir conçu votre application en fonction des rôles des participants à une réunion, vous pouvez identifier chaque type d’utilisateur pour les réunions et sélectionner ce à quoi ils peuvent accéder.
 
@@ -177,7 +178,7 @@ La liste suivante détaille les différents types d’utilisateurs, ainsi que le
 * **Anonyme**: les utilisateurs anonymes n’ont pas d’identité AAD et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas projetée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être un organisateur, mais peut être présentateur ou participant.
 
     > [!NOTE]
-    > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale par défaut au niveau de l’utilisateur. Pour plus d’informations, voir [gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
+    > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale au niveau de l’utilisateur par défaut. Pour plus d’informations, voir [gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
 
 Un utilisateur invité ou anonyme ne peut pas ajouter, supprimer ou désinstaller des applications.
 
