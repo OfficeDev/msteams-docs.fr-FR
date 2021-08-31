@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des modules de tâche pour Teams appli
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708168"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408614"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâche pour votre application Microsoft Teams web
 
@@ -41,7 +41,19 @@ Les modules de tâche offrent une surface flexible pour les expériences d’app
 
 Ils peuvent également être [](../../task-modules-and-cards/cards/design-effective-cards.md) créés avec l’infrastructure de cartes adaptatives, qui peut être un moyen plus simple et plus rapide de faciliter les scénarios courants (tels que les formulaires).
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
+### <a name="mobile"></a>Mobile
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâche sur mobile." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|1|**En-tête :** rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs terminent.
+|2|**Nom de l’application** : nom complet de votre application.|
+|3|**Bouton Fermer**: ferme le module de tâche. N’applique pas les modifications non notées dans le contenu de l’application.|
+|4 |**webview**: espace réactif qui héberge le contenu de votre application.|
+|5 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
+
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâche." border="false":::
 
@@ -54,20 +66,6 @@ Ils peuvent également être [](../../task-modules-and-cards/cards/design-effect
 |5 |**iframe**: espace réactif qui héberge le contenu de votre application.|
 |6 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un module de tâche sur mobile." border="false":::
-
-|Compteur|Description|
-|----------|-----------|
-|1|**En-tête :** rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs terminent.
-|2|**Nom de l’application** : nom complet de votre application.|
-|3|**Bouton Fermer**: ferme le module de tâche. N’applique pas les modifications non notées dans le contenu de l’application.|
-|4 |**webview**: espace réactif qui héberge le contenu de votre application.|
-|5 |**Actions (facultatives)**: boutons liés au contenu de votre application.|
-
----
-
 ## <a name="designing-with-ui-templates"></a>Conception avec des modèles d’interface utilisateur
 
 Envisagez d’utiliser des modèles pour les dispositions courantes à l’intérieur de vos modules de tâche. Chacun d’eux est composé de composants plus petits pour créer une conception réactive et élégante qui peut être utilisée de manière personnalisée ou adaptée à votre scénario ou à votre apparence de marque.
@@ -78,103 +76,89 @@ Envisagez d’utiliser des modèles pour les dispositions courantes à l’inté
 
 ## <a name="examples"></a>Exemples
 
-### <a name="list"></a>Répertorier
+### <a name="list"></a>Liste
 
 Les listes fonctionnent parfaitement dans un module de tâche, car elles sont faciles à analyser.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Exemple de liste dans un module de tâche sur mobile." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Exemple de liste dans un module de tâche." border="false":::
 
 ### <a name="form"></a>Formulaire
 
 Les modules de tâche sont un excellent endroit pour faire surface à des formulaires avec des entrées utilisateur séquentielles et une validation en ligne. Vous pouvez utiliser des cartes adaptatives pour incorporer des éléments de formulaire.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Exemple de formulaire dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Exemple de formulaire dans un module de tâche sur mobile." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Exemple de formulaire dans un module de tâche." border="false":::
 
 ### <a name="sign-in"></a>Se connecter
 
 Créez un flux de signature ou d’inscription centré avec une série de modules de tâche, ce qui permet aux utilisateurs de se déplacer facilement à travers les étapes séquentielles.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d’expérience de signature dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Exemple d’expérience de la signature dans un module de tâche sur mobile." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
 
-### <a name="media"></a>Médias
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Exemple d’expérience de signature dans un module de tâche." border="false":::
+
+### <a name="media"></a>Support
 
 Incorporer du contenu multimédia dans un module de tâche pour une expérience d’affichage axée sur l’affichage.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Exemple de contenu multimédia dans un module de tâche sur mobile." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Exemple de contenu multimédia dans un module de tâche." border="false":::
 
 ### <a name="empty-state"></a>État vide
 
 À utiliser pour les messages d’accueil, d’erreur et de réussite.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d’état vide dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Exemple d’état vide dans un module de tâche sur mobile." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Exemple d’état vide dans un module de tâche." border="false":::
 
 ### <a name="image-gallery"></a>Galerie d’images
 
 Incorporer un carrousel de galerie dans un iFrame (bureau) ou webview (mobile).
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de galerie d’images dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+##### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Exemple de galerie d’images dans un module de tâche sur mobile." border="false":::
 
----
+##### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Exemple de galerie d’images dans un module de tâche." border="false":::
 
 ### <a name="poll"></a>Sondage
 
 Cet exemple montre les résultats des sondages lancés à partir d’une carte adaptative. Le sondage peut également être placé à l’intérieur d’un module de tâche.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple d’enquête dans un module de tâche." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Exemple d’enquête dans un module de tâche sur mobile." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Exemple d’enquête dans un module de tâche." border="false":::
 
 ## <a name="best-practices"></a>Meilleures pratiques
 

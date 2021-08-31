@@ -5,20 +5,22 @@ localization_priority: Normal
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: autorisation OAuth SSO AAD rsc teams Graph
-ms.openlocfilehash: c2fd0a335d992eb026ae1b61c186830d25217d52491c997a9a2baf1dc58152e0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+keywords: autorisation OAuth OAuth SSO AAD rsc Graph
+ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707608"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528949"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
 > [!NOTE]
 > Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation publique pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
 
-Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Microsoft Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques, équipes ou conversations, au sein d’une organisation. Le modèle d’autorisations  RSC permet aux propriétaires d’équipe et de *conversation* d’accorder le consentement d’une application pour accéder aux données d’une équipe et aux données d’une conversation, et de les modifier, respectivement.
+Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Microsoft Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques, équipes ou conversations, au sein d’une organisation. Le modèle d’autorisations  RSC  permet aux propriétaires d’équipe et de conversation d’accorder le consentement d’une application pour accéder aux données d’une équipe et aux données d’une conversation, et de les modifier, respectivement. 
+
+**Remarque :** Si une conversation est associée à une réunion ou à un appel, les autorisations RSC appropriées s’appliquent également à ces ressources.
 
 ## <a name="resource-specific-permissions"></a>Autorisations spécifiques aux ressources
 
@@ -60,7 +62,9 @@ Le tableau suivant fournit des autorisations spécifiques aux ressources pour un
 | TeamsTab.Delete.Chat           | Supprimer les onglets de cette conversation.                                      |
 | TeamsTab.ReadWrite.Chat        | Gérer les onglets de cette conversation.                                      |
 | TeamsAppInstallation.Read.Chat | Obtenir les applications installées dans cette conversation.                   |
-| OnlineMeeting.ReadBasic.Chat   | Obtenez des propriétés de base, telles que le nom, le planning, l’organisateur et le lien de la réunion associée à cette conversation. |
+| OnlineMeeting.ReadBasic.Chat   | Lisez les propriétés de base, telles que le nom, la planification, l’organisateur, le lien de connexion et les notifications de début/fin, d’une réunion associée à cette conversation. |
+| Calls.AccessMedia.Chat         | Accéder aux flux multimédias dans les appels associés à cette conversation ou réunion                                    |
+| Calls.JoinGroupCalls.Chat         | Participer aux appels associés à cette conversation ou réunion                                    |
 
 Pour plus d’informations, voir autorisations de [consentement spécifiques aux](/graph/permissions-reference#chat-resource-specific-consent-permissions)ressources de conversation.
 
@@ -117,7 +121,7 @@ Le portail AAD fournit une plateforme centrale pour l’inscription et la config
 ## <a name="review-your-application-permissions-in-the-aad-portal"></a>Passer en revue vos autorisations d’application dans le portail AAD
 
 1. Go to the **Home**  >  **App registrations** page and select your RSC app.
-1. Choisissez **les autorisations d’API** dans le volet gauche et recherchez la liste **des autorisations configurées** pour votre application. Si votre application effectue uniquement des appels Graph API RSC, supprimez toutes les autorisations sur cette page. Si votre application effectue également des appels non RSC, conservez ces autorisations selon les besoins.
+1. Choisissez **les autorisations d’API** dans le volet gauche et recherchez la liste **des autorisations configurées** pour votre application. Si votre application effectue uniquement des appels DSC Graph API, supprimez toutes les autorisations sur cette page. Si votre application effectue également des appels non RSC, conservez ces autorisations selon les besoins.
 
 > [!IMPORTANT]
 > Le portail AAD ne peut pas être utilisé pour demander des autorisations RSC. Les autorisations RSC sont actuellement exclusives aux applications Teams installées dans le client Teams et sont déclarées dans le fichier de manifeste d’application Teams (JSON).
@@ -132,7 +136,7 @@ Vous devez avoir les valeurs suivantes du processus d’inscription AAD pour ré
 - La **clé secrète client/mot de passe** ou une paire de clés publiques ou privées certificat .  N’est pas nécessaire pour les applications natives.
 - URI **de redirection ou** URL de réponse pour que votre application reçoie des réponses d’AAD.
 
-Pour plus d’informations, voir [obtenir l’accès au nom](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) d’un utilisateur et obtenir [l’accès sans utilisateur.](/graph/auth-v2-service)
+Pour plus d’informations, [voir obtenir l’accès au nom](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) d’un utilisateur et obtenir [l’accès sans utilisateur.](/graph/auth-v2-service)
 
 ## <a name="update-your-teams-app-manifest"></a>Mettre à jour votre manifeste Teams application
 
@@ -156,19 +160,19 @@ Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votr
     "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
     "resource": "https://RscBasedStoreApp",
     "applicationPermissions": [
-      "TeamSettings.Read.Group",
-      "ChannelMessage.Read.Group",
-      "TeamSettings.ReadWrite.Group",
-      "ChannelSettings.ReadWrite.Group",
-      "Channel.Create.Group",
-      "Channel.Delete.Group",
-      "TeamsApp.Read.Group",
-      "TeamsTab.Read.Group",
-      "TeamsTab.Create.Group",
-      "TeamsTab.ReadWrite.Group",
-      "TeamsTab.Delete.Group",
-      "Member.Read.Group",
-      "Owner.Read.Group"
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group"
     ]
   }
 ```
@@ -180,17 +184,19 @@ Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votr
     "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
     "resource": "https://RscBasedStoreApp",
     "applicationPermissions": [
-      "ChatSettings.Read.Chat",
-      "ChatSettings.ReadWrite.Chat",
-      "ChatMessage.Read.Chat",
-      "ChatMember.Read.Chat",
-      "Chat.Manage.Chat",
-      "TeamsTab.Read.Chat",
-      "TeamsTab.Create.Chat",
-      "TeamsTab.Delete.Chat",
-      "TeamsTab.ReadWrite.Chat",
-      "TeamsAppInstallation.Read.Chat",
-      "OnlineMeeting.ReadBasic.Chat"
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat"
     ]
   }
 ```
@@ -220,7 +226,7 @@ Une fois l’application installée sur une ressource, vous pouvez utiliser [Gra
 1. Connectez-vous **à Graph Explorer.**
 1. Faites un **appel GET** à ce point de terminaison : `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` . Le `clientAppId` champ de la réponse sera map mapé à l’Teams manifeste de `webApplicationInfo.id` l’application.
 
-    ![Graph’explorateur à l’appel GET pour les autorisations RSC de l’équipe](../../assets/images/team-graph-permissions.png)
+    ![Graph de l’explorateur à l’appel GET pour les autorisations RSC de l’équipe](../../assets/images/team-graph-permissions.png)
 
 Pour plus d’informations sur la façon d’obtenir des détails sur les applications installées dans une équipe spécifique, voir obtenir les noms et autres détails des applications installées dans [l’équipe spécifiée.](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps)
 

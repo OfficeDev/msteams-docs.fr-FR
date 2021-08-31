@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 8dd206abd4724bd5e23217504ff45edcc580d492e7af9f10ca46d70d64488cc9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708083"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528942"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
@@ -23,52 +23,53 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 > [!NOTE]
 > Pour tester les autorisations RSC, votre fichier manifeste d’application Teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
 >
-> - **id :** votre ID d’application Azure AD, voir [Inscrire votre application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
+> - **id**: votre ID d’application Azure AD, voir Inscrire votre [application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
 > - **ressource**: Toute chaîne, voir la remarque dans Mettre à jour [votre Teams manifeste d’application.](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **autorisations d’application**: autorisations RSC pour votre application, voir [Autorisations propres aux ressources.](resource-specific-consent.md#resource-specific-permissions)
 
 ## <a name="example-for-a-team"></a>Exemple pour une équipe
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-         "Channel.Create.Group",
-         "Channel.Delete.Group",
-         "ChannelMessage.Read.Group",
-         "ChannelSettings.Read.Group",
-         "ChannelSettings.Edit.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group",
-         "TeamsApp.Read.Group",
-         "TeamsTab.Read.Group",
-         "TeamsTab.Create.Group",
-         "TeamsTab.Edit.Group",
-         "TeamsTab.Delete.Group",
-         "TeamSettings.Read.Group",
-         "TeamSettings.Edit.Group"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group"
+    ]
    }
 ```
 
 ## <a name="example-for-a-chat"></a>Exemple pour une conversation
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-          "ChatSettings.Read.Chat",
-          "ChatSettings.ReadWrite.Chat",
-          "ChatMessage.Read.Chat",
-          "ChatMember.Read.Chat",
-          "Chat.Manage.Chat",
-          "TeamsTab.Read.Chat",
-          "TeamsTab.Create.Chat",
-          "TeamsTab.Delete.Chat",
-          "TeamsTab.ReadWrite.Chat",
-          "TeamsAppInstallation.Read.Chat",
-          "OnlineMeeting.ReadBasic.Chat"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat"
+    ]
    }
 ```
 
@@ -77,6 +78,8 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 
 >[!NOTE]
 >Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste sous `applicationPermissions` .
+
+>Si l’application est destinée à accéder aux API d’appel/multimédia, il doit s’agit de l’ID d’application `webApplicationInfo.Id` AAD [d’un service de bot Azure.](/graph/cloud-communications-get-started#register-a-bot)
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Test ajout d’autorisations RSC à une équipe à l’aide de l’application Postman
 
@@ -91,7 +94,7 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de de
     2. Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
     3. Sélectionnez **l’icône Options** supplémentaires (&#8943;).
     4. Sélectionnez **Obtenir un lien vers l’équipe.** 
-    5. Copiez et enregistrez **la valeur groupId** à partir de la chaîne.
+    5. Copiez et enregistrez la **valeur groupId** à partir de la chaîne.
 
 ## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>Test ajout d’autorisations RSC à une conversation à l’aide de l’application Postman
 
@@ -126,7 +129,7 @@ Exécutez l’ensemble de la collection d’autorisations pour chaque appel d’
 2. Suivez les étapes pour la conversation ou l’équipe : 
     1. [Test a ajouté des autorisations RSC à une équipe à l’aide de Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test ajout d’autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
-3. Vérifiez tous les codes d’état de réponse pour vérifier que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
+3. Vérifiez tous les codes d’état de réponse pour confirmer que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
 
 ## <a name="see-also"></a>Voir aussi
 

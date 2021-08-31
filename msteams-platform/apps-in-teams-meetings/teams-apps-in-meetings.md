@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702137"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528874"
 ---
 # <a name="apps-for-teams-meetings"></a>Applications pour Teams réunions
 
-Les réunions permettent la collaboration, le partenariat, la communication éclairée et les commentaires partagés dans un forum actif et inclusif. L’application de réunion peut offrir une expérience utilisateur pour chaque étape du cycle de vie de la réunion, notamment avant la réunion, en réunion et après la réunion, en fonction de l’état du participant.
+Les réunions permettent la collaboration, le partenariat, la communication informée et les commentaires partagés. L’application de réunion peut offrir une expérience utilisateur à chaque étape du cycle de vie de la réunion. Le cycle de vie de la réunion inclut l’expérience préalable à la réunion, à la réunion et à l’application post-réunion, en fonction de l’état du participant.
 
-Les utilisateurs peuvent accéder aux applications pendant les réunions à l’aide de la galerie d’onglets, par exemple :
+Les utilisateurs peuvent accéder aux applications pendant les réunions à l’aide de la galerie d’onglets à partir de leur calendrier, par exemple :
 
 * Pré-préparation d’un tableau kanban.
 * Lancez une boîte de dialogue actionnable en réunion.
@@ -25,13 +25,17 @@ Les utilisateurs peuvent accéder aux applications pendant les réunions à l’
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
+L’illustration suivante vous donne une idée des fonctionnalités d’extensibilité des applications de réunion :
+
+![Extensibilité de l’application de réunion](../assets/images/apps-in-meetings/meetingappextensibility.png)
+
 Cet article fournit une vue d’ensemble de l’extensibilité des applications de réunion, des références d’API, de l’activer et de la configurer pour les réunions, ainsi que des scènes personnalisées du mode ensemble dans Teams.
 
-Vous pouvez améliorer votre expérience de réunion à l’aide de la fonctionnalité d’extensibilité de réunion, qui vous permet d’intégrer vos applications dans les réunions. Il inclut également différentes étapes d’un cycle de vie de réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messagerie. Avec les API d’extensibilité des réunions, vous pouvez identifier différents rôles de participants et types d’utilisateurs, obtenir des événements de réunion, générer des boîtes de dialogue en réunion, etc.
+Améliorez votre expérience de réunion à l’aide de la fonctionnalité d’extensibilité de réunion. Cette fonctionnalité vous permet d’intégrer vos applications dans des réunions. Il inclut également différentes étapes d’un cycle de vie de réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messagerie. Vous pouvez identifier différents rôles de participants et types d’utilisateurs, obtenir des événements de réunion et générer des boîtes de dialogue en réunion.
 
-Pour personnaliser les Teams avec des applications pour les réunions, vous pouvez activer vos applications pour les réunions Teams en mettant à jour votre manifeste d’application et vous pouvez également configurer vos applications pour les scénarios de réunion.
+Pour personnaliser Teams des applications pour les réunions, activez vos applications pour les réunions Teams en mettant à jour le manifeste de l’application et configurez également les applications pour les scénarios de réunion.
 
-La nouvelle fonctionnalité de scènes en mode ensemble personnalisée permet aux utilisateurs de collaborer dans une réunion avec leur équipe au même endroit sans être séparés par des cases.
+La nouvelle fonctionnalité de scènes en mode ensemble personnalisée permet aux utilisateurs de collaborer à une réunion avec leur équipe au même endroit.
 
 ## <a name="see-also"></a>Voir aussi
 

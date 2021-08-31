@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705748"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408621"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Conception de votre application personnelle pour Microsoft Teams
 
@@ -27,37 +27,19 @@ Vous trouverez des instructions complètes sur la conception d’applications pe
 
 ## <a name="add-a-personal-app"></a>Ajouter une application personnelle
 
-Vous pouvez ajouter une application personnelle à partir du Teams store (AppSource)  ou du flyout de l’application en sélectionnant l’icône Plus sur le côté gauche de Teams (illustré dans l’exemple suivant).
+Les utilisateurs peuvent ajouter une application personnelle à partir du  Teams store ou du flyout d’application en sélectionnant l’icône Plus sur le côté gauche de Teams (illustré dans l’exemple suivant).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du volant de l’application." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du flyout de l’application." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Utiliser une application personnelle (espace de travail privé)
 
-Avec un espace de travail privé, vous pouvez afficher le contenu de l’application qui vous semble significatif dans un emplacement central sans quitter Teams.
+Avec un espace de travail privé, les utilisateurs peuvent afficher du contenu d’application qui leur est significatif dans un emplacement central sans quitter Teams.
 
 (Remarque d’implémentation : l’espace de travail privé est basé sur la [*fonctionnalité d’onglet*](../../build-your-first-app/build-personal-tab.md) personnel.)
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomie : application personnelle (espace de travail privé)
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="L’exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
-
-|Compteur|Description|
-|----------|-----------|
-|A|**Attribution de l’application**: nom et logo de votre application.|
-|B|**Onglets :** fournit la navigation pour votre application personnelle.|
-|C|**Affichage popout :** pousse le contenu de votre application d’une fenêtre parent vers une fenêtre enfant autonome.|
-|D|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires. (Vous pouvez également Paramètres **un** onglet.)|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
-
-|Compteur|Description|
-|----------|-----------|
-|A|**Onglets :** fournit la navigation pour votre application personnelle.|
-|1|**iframe**: affiche le contenu de votre application.|
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="L’exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
 
@@ -75,9 +57,25 @@ Avec un espace de travail privé, vous pouvez afficher le contenu de l’applica
 |A|**Onglets :** fournit la navigation pour votre application personnelle.|
 |1|**webview**: affiche le contenu de votre application.|
 
----
+#### <a name="desktop"></a>Bureau
 
-### <a name="designing-with-ui-templates-and-advanced-components"></a>Conception avec des modèles d’interface utilisateur et des composants avancés
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="L’exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|A|**Attribution de l’application**: nom et logo de votre application.|
+|B|**Onglets :** fournit la navigation pour votre application personnelle.|
+|C|**Affichage popout :** pousse le contenu de votre application d’une fenêtre parent vers une fenêtre enfant autonome.|
+|D|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires. (Vous pouvez également Paramètres **un** onglet.)|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|A|**Onglets :** fournit la navigation pour votre application personnelle.|
+|1|**iframe**: affiche le contenu de votre application.|
+
+### <a name="design-with-ui-templates-and-advanced-components"></a>Conception avec des modèles d’interface utilisateur et des composants avancés
 
 Utilisez l’un des Teams et composants suivants pour vous aider à concevoir votre onglet personnel :
 
@@ -90,21 +88,11 @@ Utilisez l’un des Teams et composants suivants pour vous aider à concevoir vo
 
 ## <a name="use-a-personal-app-bot"></a>Utiliser une application personnelle (bot)
 
-Les applications personnelles peuvent inclure un bot pour les conversations un-à-un et des notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur votre tableau de bord). Le bot est disponible dans un onglet que vous spécifiez.
+Les applications personnelles peuvent inclure un bot pour les conversations un-à-un et des notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur artboard). Les utilisateurs interagissent avec le bot dans un onglet que vous spécifiez.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie : application personnelle (bot)
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie des composants personnels du bot." border="false":::
-
-|Compteur|Description|
-|----------|-----------|
-|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications des bots.|
-|B|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
-|C|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie des composants personnels du bot." border="false":::
 
@@ -115,7 +103,15 @@ Les applications personnelles peuvent inclure un bot pour les conversations un-�
 |C|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
 |D|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie des composants personnels du bot." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications des bots.|
+|B|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
+|C|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 
 ## <a name="manage-a-personal-tab"></a>Gérer un onglet personnel
 

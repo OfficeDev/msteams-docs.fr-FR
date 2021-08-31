@@ -4,12 +4,12 @@ description: Décrit les instructions que chaque application envoyée au Teams s
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703606"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408538"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validation du magasin d’informations
 
@@ -35,7 +35,7 @@ Le nom d’une application joue un rôle essentiel dans la façon dont les utili
 
 ### <a name="suitable-for-workplace-consumption"></a>Convient à la consommation de l’espace de travail
 
-Le contenu de l’application doit être adapté à une utilisation générale de l’espace de travail et respecter toutes les restrictions répertoriées dans les stratégies de certification du marketplace commercial. Le contenu lié à l’animation, à la politique, aux jeux et aux divertissements prolongés est interdit. Pour plus d’informations, voir les [stratégies de certification du marketplace commercial.](/legal/marketplace/certification-policies#10010-inappropriate-content)
+Le contenu de l’application doit convenir à une utilisation générale de l’espace de travail et respecter toutes les restrictions répertoriées dans les stratégies de certification du marketplace commercial. Le contenu lié à l’animation, à la politique, aux jeux et aux divertissements prolongés est interdit. Pour plus d’informations, voir les [stratégies de certification du marketplace commercial.](/legal/marketplace/certification-policies#10010-inappropriate-content)
 
 Votre application doit faciliter la collaboration de groupe, améliorer la productivité d’un individu ou les deux. Les applications destinées à la liaison et à la socialisation d’équipe doivent être collaboratives et conçues pour plusieurs participants. Ces types d’applications ne doivent pas non plus nécessiter un investissement en temps considérable ou avoir un impact négatif sur la productivité.
 
@@ -105,7 +105,7 @@ Les applications qui s’exécutent sur la version iOS ou Android de Teams doive
 
 * Les applications ne doivent pas inclure d’achats dans l’application, d’offres d’essai ou d’interface utilisateur qui visent à promouvoir des versions payantes ou des liens vers des magasins en ligne où les utilisateurs peuvent acheter ou acquérir d’autres contenus, applications ou modules.
 * Si votre application nécessite un compte, les utilisateurs doivent pouvoir s’inscrire à un compte gratuitement. L’utilisation du terme **compte libre** ou **gratuit** est interdite.
-* Vous pouvez déterminer si un compte est actif indéfiniment ou pendant une durée limitée, mais si le compte expire, aucune interface utilisateur, texte ou liens indiquant la nécessité de payer ne peut s’affiche.
+* Vous pouvez déterminer si un compte est actif indéfiniment ou pendant une durée limitée, mais si le compte expire, aucune interface utilisateur, texte ou liens indiquant la nécessité de payer ne s’affiche.
 * Les pages de politique de confidentialité et de conditions d’utilisation de votre application ne doivent pas être liées à une interface utilisateur ou à des liens commerciaux.
 
 ## <a name="general-functionality-and-performance"></a>Fonctionnalités et performances générales
@@ -155,7 +155,7 @@ Les icônes sont l’un des principaux éléments que les utilisateurs voient lo
 
 * Votre package d’application doit inclure deux versions PNG de l’icône de votre application : une icône de couleur et une icône de plan.
 * La version de couleur de votre icône s’affiche dans la plupart Teams scénarios et doit être de 192 x 192 pixels. Votre symbole d’icône (96 x 96 pixels) peut être n’importe quelle couleur ou couleur, mais il doit être sur un arrière-plan carré plein ou entièrement transparent.
-* La version plan de votre icône s’affiche lorsque votre application est en cours d’utilisation et « hissée » dans la barre de l’application sur le côté gauche de Teams et lorsqu’un utilisateur épingle l’extension de messagerie de votre application. Elle doit être de 32 x 32 pixels et peut être blanche avec un arrière-plan transparent ou transparente avec un arrière-plan blanc (aucune autre couleur n’est autorisée). L’icône ne doit pas avoir de remplissage supplémentaire autour du symbole.
+* La version plan de votre icône s’affiche lorsque votre application est en cours d’utilisation et « hissée » dans la barre de l’application sur le côté gauche de Teams et lorsqu’un utilisateur épingle l’extension de messagerie de votre application. Elle doit être de 32 x 32 pixels et peut être blanche avec un arrière-plan transparent ou transparente avec un arrière-plan blanc (aucune autre couleur n’est autorisée). L’icône ne doit pas avoir d’espacement supplémentaire autour du symbole.
 * Les icônes correctement formatées et de taille doivent être incluses dans votre package d’application. Les icônes doivent également correspondre à ce qui est envoyé avec les métadonnées de la liste du Store.
 
 Pour plus d’informations, de meilleures pratiques et d’exemples, voir les recommandations [Teams’icône d’application.](~/concepts/build-and-test/apps-package.md#app-icons)
@@ -199,6 +199,11 @@ La description longue peut fournir un narratif attrayant qui met en évidence la
   * "... travailler avec Microsoft Teams. »
   * "... dans Microsoft Teams. »
   * "... pour Microsoft Teams. »
+  * "... intégré à Microsoft Teams. »
+  * "... conçu pour... "
+  * "... développé pour... "
+  * "... conçu pour...
+
 
 **À ne pas faire :**
 
@@ -209,15 +214,8 @@ La description longue peut fournir un narratif attrayant qui met en évidence la
 * Incluez des fautes de frappe, des erreurs grammaticales et des majuscules inutiles (par **exemple,** Utilisateurs au lieu des **utilisateurs).**
 * Inclure des liens vers AppSource.
 * Utilisez la langue suivante, sauf si vous êtes un partenaire Microsoft certifié :
-  * "... intégré à Microsoft Teams »
-  * "... s’intègre avec ...
-  * "... conçu pour ...
-  * "... intégré à ...
-  * "... s’exécute sur ...
-  * "... activé par ...
   * "... certifié pour ...
-  * "... développé pour ...
-  * "... conçu pour ...
+  * "... optimisé par ...
 
 ### <a name="screenshots"></a>Captures d’écran
 
@@ -274,7 +272,7 @@ Si votre application inclut un onglet, assurez-vous qu’elle respecte ces recom
 > [!TIP]
 > Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les recommandations [Teams de conception d’onglets.](~/tabs/design/tabs.md)
 
-### <a name="setup"></a>Configuration
+### <a name="setup"></a>Installation
 
 * La configuration de l’onglet ne doit pas arrêter un nouvel utilisateur. Fournissez un message sur la façon d’effectuer l’action ou le flux de travail.
 * L’authentification doit avoir lieu pendant la configuration de l’onglet et non après.
@@ -289,7 +287,7 @@ Si votre application inclut un onglet, assurez-vous qu’elle respecte ces recom
 
 * Les onglets ne doivent pas avoir plus de trois niveaux de navigation.
 * Les onglets ne doivent pas fournir de navigation en conflit avec le Teams navigation principale.
-* Les pages secondaires et troisièmes d’un onglet doivent être ouvertes dans un affichage de niveau 2 et 3 dans la zone d’onglet principale, qui est accessible via une navigation à gauche ou une navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation par onglets :
+* Les pages secondaires et troisièmes d’un onglet doivent être ouvertes dans une vue de niveau 2 et 3 dans la zone d’onglet principale, qui est accessible par le biais d’une navigation à l’aide de la navigation vers la gauche ou par le biais d’une navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation par onglets :
     * Boutons Arrière
     * En-têtes de page
     * Menus hamburger
@@ -328,7 +326,7 @@ L’analyse de l’entrée utilisateur et la prévision de l’intention de l’
 * Toutes les commandes que votre bot prend en charge doivent fonctionner correctement, y compris les commandes **Bonjour,** **Hello** et **Aide.**
 
 > [!TIP]
-> Pour les bots personnels, incluez un onglet **Aide** qui décrit davantage ce que votre bot peut faire.
+> Pour les bots personnels, incluez un onglet **Aide** qui décrit plus en détail ce que votre bot peut faire.
 
 ### <a name="bot-welcome-messages"></a>Messages de bienvenue du bot
 
@@ -345,7 +343,7 @@ Les bots ne doivent pas envoyer de courrier indésirable aux utilisateurs en env
 
 * **Messages de bot dans les canaux et conversations**: ne pas envoyer de courrier indésirable aux utilisateurs en créant des publications distinctes. Créez un billet unique avec des réponses dans le même fil de discussion.
 * **Messages de bot dans les applications personnelles**: n’envoyez pas plusieurs messages successivement. Envoyez un message avec des informations complètes. Évitez les conversations à plusieurs tour pour terminer un flux de travail unique. Envisagez plutôt d’utiliser un formulaire (ou un module de tâche) pour collecter toutes les entrées d’un utilisateur en même temps.
-* **Messages de bienvenue**: répéter le même message de bienvenue à intervalles réguliers n’est pas autorisé et considéré comme du courrier indésirable. Par exemple, lorsqu’un nouveau membre est ajouté à une équipe, ne spammez pas les autres membres avec un message de bienvenue. Message personnel du nouveau membre.
+* **Messages de** bienvenue : la répétition du même message de bienvenue à intervalles réguliers n’est pas autorisée et est considérée comme un courrier indésirable. Par exemple, lorsqu’un nouveau membre est ajouté à une équipe, ne spammez pas les autres membres avec un message de bienvenue. Message personnel du nouveau membre.
 
 ### <a name="bot-notifications"></a>Notifications de bot
 
@@ -365,7 +363,7 @@ Pour plus d’informations, consultez les ressources suivantes :
 Si votre application inclut une extension de messagerie, assurez-vous qu’elle respecte ces recommandations.
 
 > [!TIP]
-> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les instructions [Teams conception d’extension de messagerie.](~/messaging-extensions/design/messaging-extension-design.md)
+> Pour plus d’informations sur la création d’une expérience d’application de haute qualité, voir les instructions Teams [conception d’extension de messagerie.](~/messaging-extensions/design/messaging-extension-design.md)
 
 ### <a name="action-commands"></a>Commandes d'action
 
@@ -376,7 +374,7 @@ Les extensions de messagerie basées sur l’action doivent :
 
 ### <a name="preview-links-link-unfurling"></a>Liens d’aperçu (déploiement de liens)
 
-Les extensions de messagerie doivent afficher un aperçu des liens reconnus dans la Teams de composition. N’ajoutez pas de domaines qui sont en dehors de votre contrôle (URL absolues ou caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont également interdits (par exemple, `*.com` ou `*.org` ).
+Les extensions de messagerie doivent prévisualiser les liens reconnus dans la Teams de composition. N’ajoutez pas de domaines qui sont en dehors de votre contrôle (URL absolues ou caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont également interdits (par exemple, `*.com` ou `*.org` ).
 
 ### <a name="search-commands"></a>Commandes de recherche
 
@@ -399,7 +397,7 @@ Si votre application inclut une extension de réunion, assurez-vous qu’elle re
 
 ### <a name="pre--and-post-meeting-experience"></a>Expérience avant et après la réunion
 
-* Les écrans avant et après la réunion doivent respecter les recommandations générales en matière de conception d’onglets. Pour plus d’informations, voir les [recommandations Teams conception.](~/tabs/design/tabs.md)
+* Les écrans avant et après la réunion doivent respecter les recommandations générales en matière de conception des onglets. Pour plus d’informations, voir les [recommandations Teams conception.](~/tabs/design/tabs.md)
 * Les onglets ne doivent pas avoir de défilement horizontal.
 * Les onglets doivent avoir une disposition organisée lors de l’affichage de plusieurs éléments. Par exemple, plus de 10 sondages ou enquêtes. Voir un [exemple de disposition.](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)
 * Votre application doit informer les utilisateurs lorsque les résultats d’une enquête ou d’un sondage sont exportés en indiquant « Résultats téléchargés avec succès ».

@@ -5,12 +5,12 @@ description: Créer une conversation de sous-entité conversationnelle pour vos 
 keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705104"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58529006"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -18,7 +18,7 @@ Les sous-entités de conversation permettent aux utilisateurs d’avoir des conv
 
 Les sous-entités de conversation sont uniquement pris en charge dans les canaux. Ils peuvent être utilisés à partir d’un onglet personnel ou statique pour créer ou poursuivre des conversations dans des onglets déjà épinglés à un canal. L’onglet statique est utile si vous souhaitez fournir un emplacement à un utilisateur pour afficher et accéder aux conversations qui se produisent sur plusieurs canaux.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-entités ↔ conversations dans une base de données principale. L’offre est fournie, mais vous devez la stocker et la renvoyer à Teams pour que les utilisateurs `conversationId` `conversationId` poursuivent la conversation.
 
@@ -88,6 +88,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
     // console.log(conversationResponse)
 };
 ```
+
+## <a name="code-sample"></a>Exemple de code
+
+| Exemple de nom | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Créer un onglet Conversationnel| Microsoft Teams exemple d’application d’onglet pour démontrer la création d’un onglet de conversation. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

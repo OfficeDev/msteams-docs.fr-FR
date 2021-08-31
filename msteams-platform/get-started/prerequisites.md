@@ -5,12 +5,12 @@ description: Découvrez comment prendre en Microsoft Teams développement d’ap
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703155"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822226"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Conditions préalables : prendre en Microsoft Teams développement d’applications
 
@@ -21,7 +21,7 @@ Avant de commencer à créer votre première application Teams, vous devez insta
 Certains des outils dont vous avez besoin dépendent de la façon dont vous préférez créer votre Teams application :
 
 - [Node.js](https://nodejs.org/en/download/) (utilisez la dernière version de LTS v14)
-- Un navigateur avec des outils de développement, tels [que, Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
+- Un navigateur avec des outils de développement, tels [que Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/)
 - Si vous développez avec JavaScript, TypeScript ou le SharePoint Framework (SPFx), installez [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 ou ultérieure.  
 - Si vous développez avec .NET, installez [Visual Studio 2019.](https://visualstudio.com/download) Veillez à installer la **charge ASP.NET développement web et** web ou la charge de travail de développement **.NET Core sur plusieurs plateformes.**
 
@@ -30,7 +30,7 @@ Certains des outils dont vous avez besoin dépendent de la façon dont vous pré
 
 ## <a name="install-the-teams-toolkit"></a>Installer le Teams Shared Computer Toolkit
 
-Le Teams Shared Computer Toolkit simplifie le processus de développement avec des outils pour mettre en service et déployer des ressources cloud pour votre application, publier sur le Teams store, etc. Vous pouvez utiliser le kit de ressources avec Visual Studio Code, Visual Studio ou en tant qu’CLI (appelé `teamsfx` ). Pour plus d’informations, [voir Teams Shared Computer Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), Teams Shared Computer Toolkit for [Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
+Le Teams Shared Computer Toolkit simplifie le processus de développement avec des outils pour mettre en service et déployer des ressources cloud pour votre application, publier dans le Teams store, etc. Vous pouvez utiliser le kit de ressources avec Visual Studio Code, Visual Studio ou en tant qu’CLI (appelé `teamsfx` ). Pour plus d’informations, [voir Teams Shared Computer Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), Teams Shared Computer Toolkit for [Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -97,6 +97,7 @@ Vous pouvez utiliser l’CLI avec la `teamsfx` commande. Vérifiez que la comman
 Installez les outils de navigateur pour le développement d’applications. Par exemple, si votre application est écrite avec des React, vous pouvez utiliser React outils de développement :
 
 - [React Outils de développement pour Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Outils de développement pour Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 Si vous souhaitez accéder aux données stockées dans Azure ou déployer un système back-end basé sur le cloud pour votre application Teams azure, installez les outils ci-après :
 
@@ -151,7 +152,7 @@ Vous devez avoir accès à deux comptes :
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. Ouvrir Visual Studio Code
+1. Ouvrez Visual Studio Code
 1. Sélectionnez l Teams icône dans la barre latérale :
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Icône Teams dans la barre latérale Visual Studio Code.":::

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 2e053186355b583e456e73c6443f5d8c043157a9ae0a09941a86a3aabd7978c5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706687"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408579"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprendre la structure Microsoft Teams’application
 
@@ -30,19 +30,17 @@ Les applications personnelles fournissent une grande zone de dessin pour héberg
 
 ***Étendues pris en charge**: Personnel*
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-La zone de dessin est un iframe qui vous permet de personnaliser entièrement l’expérience.
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur ordinateur de bureau." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+### <a name="mobile"></a>Mobile
 
 La zone de dessin est une vue web pour vous aider à personnaliser entièrement l’expérience.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur mobile." border="false":::
 
----
+### <a name="desktop"></a>Bureau
+
+La zone de dessin est un iframe qui vous permet de personnaliser entièrement l’expérience.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les applications personnelles sur ordinateur de bureau." border="false":::
 
 ## <a name="tabs"></a>Onglets
 
@@ -50,19 +48,17 @@ Les onglets fournissent une grande zone de dessin pour héberger le contenu de v
 
 ***Étendues pris en charge**: Canaux, Conversations, Réunions*
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-La zone de dessin est un iframe qui vous permet de personnaliser entièrement l’expérience.
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur ordinateur de bureau." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+### <a name="mobile"></a>Mobile
 
 La zone de dessin est une vue web pour vous aider à personnaliser entièrement l’expérience.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur appareils mobiles." border="false":::
 
----
+### <a name="desktop"></a>Bureau
+
+La zone de dessin est un iframe qui vous permet de personnaliser entièrement l’expérience.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets de bureau." border="false":::
 
 ## <a name="bots"></a>Bots
 
@@ -70,15 +66,13 @@ Les bots sont des applications conversationnelles qui s’intègrent Teams fonct
 
 ***Étendues pris en charge**: Personnel, Canaux, Conversations, Réunions*
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur ordinateur de bureau." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur mobile." border="false":::
 
----
+### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur ordinateur de bureau." border="false":::
 
 ## <a name="messaging-extensions"></a>Extensions de messagerie
 
@@ -86,15 +80,13 @@ Les extensions de messagerie sont des raccourcis permettant d’insérer du cont
 
 ***Étendues pris en charge**: Personnel, Canaux, Conversations, Réunions*
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de messagerie sur ordinateur de bureau." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de messagerie sur mobile." border="false":::
 
----
+### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de messagerie sur ordinateur de bureau." border="false":::
 
 ## <a name="meeting-extensions"></a>Extensions de réunion
 
@@ -102,16 +94,14 @@ Les extensions de réunion sont des applications pour améliorer les réunions e
 
 ***Étendues prise en charge**: réunions, conversations*
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
+### <a name="mobile"></a>Mobile
+
+La surface est une vue web, qui vous permet de personnaliser l’expérience, mais gardez à l’esprit que pendant les réunions, ces applications utilisent un thème foncé.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur mobile." border="false":::
+
+### <a name="desktop"></a>Bureau
 
 La surface est un iframe qui vous permet de personnaliser l’expérience, mais n’oubliez pas que pendant les réunions, ces applications utilisent un thème foncé et sont étroites.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur ordinateur de bureau." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
-
-La surface est une vue web, qui vous permet de personnaliser l’expérience, mais gardez à l’esprit que pendant les réunions, ces applications utilisent un thème foncé.
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur appareils mobiles." border="false":::
-
----

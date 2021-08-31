@@ -5,12 +5,12 @@ description: Comment travailler avec des événements de conversation à partir 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 94bbb43110e45c9ab84c686f8fc8e2ade19d6998
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703631"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528999"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -49,7 +49,7 @@ Le tableau suivant présente la liste des événements de Teams de conversation 
 | Canal supprimé     | channelDeleted    | OnTeamsChannelDeletedAsync | [Un canal est supprimé.](#channel-deleted) | Équipe |
 | Canal restauré    | channelRestored    | OnTeamsChannelRestoredAsync | [Un canal est restauré.](#channel-deleted) | Équipe |
 | Membres ajoutés   | membersAdded   | OnTeamsMembersAddedAsync   | [Un membre est ajouté.](#team-members-added) | Tous |
-| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et l’équipe |
+| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et équipe |
 | Équipe renommée        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Une équipe est renommée.](#team-renamed)       | Équipe |
 | Équipe supprimée        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Une équipe est supprimée.](#team-deleted)       | Équipe |
 | Équipe archivée        | teamArchived       | OnTeamsTeamArchivedAsync    | [Une équipe est archivée.](#team-archived)       | Équipe |
@@ -60,7 +60,7 @@ Le tableau suivant présente la liste des événements de Teams de conversation 
 
 L’événement créé par le canal est envoyé à votre bot chaque fois qu’un nouveau canal est créé dans une équipe où votre bot est installé.
 
-Le code suivant montre un exemple d’événement créé par le canal :
+Le code suivant montre un exemple d’événement de canal créé :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -549,7 +549,7 @@ async def on_teams_members_added(
 `teamMemberRemoved`L’événement est envoyé à votre bot s’il est supprimé d’une équipe. L’événement est envoyé à votre bot chaque fois qu’un utilisateur est supprimé d’une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez `Activity` l’objet du `turnContext` .  Si le champ de l’objet est identique au champ de l’objet, le membre supprimé est le bot, sinon il `Id` `MembersRemoved` `Id` s’agit `Recipient` d’un utilisateur. Le bot est `Id` généralement `28:<MicrosoftAppId>` .
 
 > [!NOTE]
-> Lorsqu’un utilisateur est supprimé définitivement d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
+> Lorsqu’un utilisateur est définitivement supprimé d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
 
 Le code suivant montre un exemple d’événement supprimé des membres de l’équipe :
 
@@ -658,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>Équipe renommée
 
-Votre bot est averti lorsque l’équipe dans elle a été renommée. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l’objet.
+Votre bot est averti lorsque l’équipe dans qui il se trouve a été renommé. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l’objet.
 
 Le code suivant montre un exemple d’événement renommé d’équipe :
 
@@ -740,7 +740,7 @@ async def on_teams_team_renamed(
 
 Votre bot est averti lorsque l’équipe dans qui elle se trouve a été supprimée. Il reçoit un `conversationUpdate` événement avec `eventType.teamDeleted` dans `channelData` l’objet.
 
-Le code suivant montre un exemple d’événement supprimé par l’équipe :
+Le code suivant illustre un exemple d’événement supprimé par l’équipe :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1061,8 +1061,8 @@ L’événement est envoyé lorsqu’un utilisateur ajoute ou supprime des réac
 
 | EventType       | Objet Payload   | Description                                                             | Portée |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Réactions ajoutées au message du bot.](#reactions-added-to-bot-message)           | Tous   |
-| messageReaction | reactionsRemoved | [Réactions supprimées du message du bot.](#reactions-removed-from-bot-message) | Tous |
+| messageReaction | reactionsAdded   | [Réactions ajoutées au message du bot.](#reactions-added-to-bot-message)           | Tout   |
+| messageReaction | reactionsRemoved | [Réactions supprimées du message du bot.](#reactions-removed-from-bot-message) | Tout |
 
 ### <a name="reactions-added-to-bot-message"></a>Réactions ajoutées au message du bot
 
@@ -1289,12 +1289,10 @@ async def on_reactions_removed(
 Le bot reçoit un `installationUpdate` événement lorsque vous installez un bot sur un thread de conversation. La désinstallation du bot du thread déclenche également l’événement. Lors de l’installation d’un bot, le champ **d’action** dans l’événement est définie pour ajouter *,* et lorsque le bot est désinstallé, le champ **d’action** est définie pour *supprimer*.
  
 > [!NOTE]
-> Lorsque vous mettre à niveau une application, puis ajoutez ou supprimez un bot, l’action déclenche également `installationUpdate` l’événement. Le **champ d’action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot. 
-
-> [!IMPORTANT]
-> Les événements de mise à jour d’installation sont en version préliminaire pour les développeurs aujourd’hui et seront généralement disponibles en mars 2021. Pour afficher les événements de mise à jour d’installation, vous pouvez déplacer votre client Teams vers la prévisualisation publique du développeur et ajouter votre application à titre personnel, à une équipe ou à une conversation.
+> Lorsque vous mettre à niveau une application, puis ajoutez ou supprimez un bot, l’action déclenche également `installationUpdate` l’événement. Le **champ d’action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot.
 
 ### <a name="install-update-event"></a>Installer l’événement de mise à jour
+
 Utilisez `installationUpdate` l’événement pour envoyer un message d’introduction à partir de votre bot lors de l’installation. Cet événement vous aide à répondre à vos exigences de confidentialité et de rétention des données. Vous pouvez également nettoyer et supprimer des données utilisateur ou thread lorsque le bot est désinstallé.
 
 # <a name="c"></a>[C#](#tab/dotnet)

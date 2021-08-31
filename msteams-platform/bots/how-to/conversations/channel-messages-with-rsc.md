@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recevoir tous les messages de canal avec des autorisations RSC
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1499bf4c78edd67af531e3fe8fa47ddfe196a923
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705873"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528900"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recevoir tous les messages de canal avec RSC
 
@@ -28,7 +28,7 @@ Pour plus d’informations sur l’activation du RSC pour votre application, voi
 
 ## <a name="update-app-manifest"></a>Mettre à jour le manifeste de l’application
 
-Pour que votre bot reçoit tous les messages de canal, RSC doit être configuré dans le manifeste Teams’application avec l’autorisation spécifiée `ChannelMessage.Read.Group` dans la `webApplicationInfo` propriété.
+Pour que votre bot reçoit tous les messages de canal, RSC doit être configuré dans le manifeste de l’application Teams avec l’autorisation spécifiée `ChannelMessage.Read.Group` dans la `webApplicationInfo` propriété.
 
 ![Mettre à jour le manifeste de l’application](~/bots/how-to/conversations/Media/appmanifest.png)
 
@@ -79,6 +79,12 @@ Pour tester le chargement d’une version test dans une équipe, si tous les mes
     Le bot reçoit le message sans être @mentioned.
 
     ![Le bot reçoit un message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+
+## <a name="code-sample"></a>Exemple de code
+
+| Exemple de nom | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Messages de canal avec autorisations RSC| Microsoft Teams exemple d’application montrant comment un bot peut recevoir tous les messages de canal avec RSC sans être @mentioned.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

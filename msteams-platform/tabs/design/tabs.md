@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709402"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408628"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevez votre onglet pour Microsoft Teams
 
@@ -31,19 +31,17 @@ Vous pouvez ajouter un onglet à partir Teams store (AppSource) ou dans l’un d
 * Canal
 * Réunion (avant, pendant ou après la réunion)
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-L’exemple suivant montre comment les utilisateurs peuvent ajouter un onglet dans un canal.
-
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="L’exemple montre comment ajouter un onglet dans un canal." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+### <a name="mobile"></a>Mobile
 
 Les utilisateurs peuvent accéder aux onglets en sélectionnant le bouton **Plus** dans le canal (exemple ci-dessous) ou en chat dans lequel ils ont été ajoutés.
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="L’exemple illustre l’ajout d’un onglet mobile dans un canal." border="false":::
 
----
+### <a name="desktop"></a>Bureau
+
+L’exemple suivant montre comment les utilisateurs peuvent ajouter un onglet dans un canal.
+
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="L’exemple montre comment ajouter un onglet dans un canal." border="false":::
 
 ## <a name="set-up-a-tab"></a>Configurer un onglet
 
@@ -53,7 +51,7 @@ Il existe un processus de configuration court pour ajouter une application en ta
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Exemple de configuration modale d’onglet." border="false":::
 
-### <a name="anatomy-tab-configuration-dialog"></a>Anatomie : boîte de dialogue de configuration de l’onglet
+#### <a name="anatomy-tab-configuration-dialog"></a>Anatomie : boîte de dialogue de configuration de l’onglet
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un modèle de configuration d’onglet." border="false":::
 
@@ -86,19 +84,27 @@ Utilisez l’un des modèles d Teams’interface utilisateur suivants pour vous 
 
 Les onglets offrent une expérience web en plein écran dans Teams où vous pouvez afficher du contenu collaboratif (tableaux de tâches et tableaux de bord, par exemple) et des informations importantes.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L’exemple montre un onglet avec un tableau des tâches." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="L’exemple montre un onglet mobile avec un tableau des tâches." border="false":::
 
----
+### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="L’exemple montre un onglet avec un tableau des tâches." border="false":::
 
 ### <a name="anatomy-tab"></a>Anatomie : tabulation
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
+#### <a name="mobile"></a>Mobile
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|1|**Nom de l’onglet**: étiquette de navigation pour votre onglet.|
+|2|**Conversation par onglet**: ouvre une conversation qui permet aux utilisateurs d’avoir une conversation à côté du contenu.|
+|3|**webview**: affiche le contenu de votre application.|
+
+#### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
 
@@ -109,19 +115,7 @@ Les onglets offrent une expérience web en plein écran dans Teams où vous pouv
 |3|**Conversation par onglet**: ouvre une conversation à droite, ce qui permet aux utilisateurs d’avoir une conversation à côté du contenu.|
 |4 |**iframe**: affiche le contenu de votre application.|
 
-# <a name="mobile"></a>[Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
-
-|Compteur|Description|
-|----------|-----------|
-|1|**Nom de l’onglet**: étiquette de navigation pour votre onglet.|
-|2|**Conversation par onglet**: ouvre une conversation qui permet aux utilisateurs d’avoir une conversation à côté du contenu.|
-|3|**webview**: affiche le contenu de votre application.|
-
----
-
-### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a>Conception d’un onglet avec des modèles d’interface utilisateur et des composants avancés
+### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Concevoir un onglet avec des modèles d’interface utilisateur et des composants avancés
 
 Utilisez l’un des Teams et composants suivants pour vous aider à concevoir votre expérience d’onglet :
 
@@ -140,29 +134,25 @@ Les onglets facilitent les conversations sur le contenu dans un emplacement cent
 
 Les utilisateurs peuvent publier automatiquement sur un canal ou une conversation une fois qu’ils ont ajouté un nouvel onglet. Non seulement cela informe les membres de l’équipe du nouveau contenu et fournit un lien vers l’onglet, mais permet aux utilisateurs de commencer à parler de l’onglet.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="L’exemple montre un onglet abordé dans un thread de canal." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="L’exemple montre un onglet mobile abordé dans un thread de canal." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="L’exemple montre un onglet abordé dans un thread de canal." border="false":::
 
 ### <a name="tab-chat"></a>Conversation par onglets
 
 Les utilisateurs peuvent avoir une conversation en regard du contenu de l’onglet qu’ils visionnagent. Sur le bureau, la conversation s’ouvre sur le côté du contenu de l’application.
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet avec une conversation ouverte sur le côté droit." border="false":::
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet mobile avec une zone de conversation dans le contexte." border="false":::
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="L’exemple montre un onglet avec une conversation ouverte sur le côté droit." border="false":::
 
 ### <a name="permissions-and-role-based-views"></a>Autorisations et affichages basés sur les rôles
 
@@ -174,17 +164,7 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 
 ### <a name="anatomy-tab-menu"></a>Anatomie : menu Onglet
 
-# <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu Onglet." border="false":::
-
-|Compteur|Description|
-|----------|-----------|
-|1|**Paramètres**: (Facultatif) Permet aux utilisateurs de modifier les paramètres d’un onglet après son ajout.|
-|2|**Renommer**: les utilisateurs peuvent donner à l’onglet un nom significatif pour le canal, la conversation ou la réunion.|
-|3|**Supprimer**: supprime l’onglet du canal, de la conversation ou de la réunion.|
-
-# <a name="mobile"></a>[Mobile](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu onglet mobile." border="false":::
 
@@ -196,7 +176,15 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 |4 |**Renommer**: les utilisateurs peuvent donner à l’onglet un nom significatif pour le canal, la conversation ou la réunion.|
 |5 |**Supprimer**: supprime l’onglet du canal, de la conversation ou de la réunion.|
 
----
+#### <a name="desktop"></a>Bureau
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu Onglet." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|1|**Paramètres**: (Facultatif) Permet aux utilisateurs de modifier les paramètres d’un onglet après son ajout.|
+|2|**Renommer**: les utilisateurs peuvent donner à l’onglet un nom significatif pour le canal, la conversation ou la réunion.|
+|3|**Supprimer**: supprime l’onglet du canal, de la conversation ou de la réunion.|
 
 ## <a name="tab-notifications-and-deep-linking"></a>Notifications d’onglet et liaison approfondie
 
@@ -204,7 +192,7 @@ Vous pouvez envoyer un message avec un lien profond vers votre onglet. Par exemp
 
 Informez les utilisateurs de l’activité de l’onglet de l’une des manières suivantes :
 
-* **Bot**: cette méthode est préférée, en particulier si le thread d’onglet est ciblé. La conversation threadée de l’onglet est déplacée dans l’affichage comme étant récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
+* **Bot**: cette méthode est préférée, en particulier si le thread d’onglet est ciblé. La conversation threadée de l’onglet est déplacée en tant que conversation récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
 * **Message**: un message s’affiche dans le flux d’activités de l’utilisateur avec un [lien profond vers l’onglet.](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="best-practices"></a>Meilleures pratiques
@@ -253,7 +241,7 @@ L’utilisation d’un onglet pour afficher l’ensemble d’une application ave
    :::column-end:::
 :::row-end:::
 
-### <a name="setup"></a>Configuration
+### <a name="setup"></a>Installation
 
 :::row:::
    :::column span="":::
@@ -290,7 +278,7 @@ Chaque thème Teams a son propre modèle de couleurs. Pour gérer automatiquemen
 
 #### <a name="dont-hard-code-color-values"></a>À ne pas faire : valeurs de couleur du code dur
 
-Si vous n’utilisez pas Teams couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
+Si vous n’utilisez pas Teams de couleur, vos conceptions seront moins évolutives et prenons plus de temps à gérer.
 
    :::column-end:::
 :::row-end:::
