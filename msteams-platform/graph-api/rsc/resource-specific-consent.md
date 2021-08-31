@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation OAuth OAuth SSO AAD rsc Graph
-ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528949"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822212"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
@@ -43,6 +43,7 @@ Les autorisations Teams RSC précises et spécifiques définissent ce qu’une a
 |TeamsTab.ReadWrite.Group|Mettez à jour les onglets de cette équipe. |
 |TeamsTab.Delete.Group|Supprimer les onglets de cette équipe. |
 |TeamMember.Read.Group|Obtenez les membres de cette équipe. |
+|TeamsActivity.Send.Group|Créez des notifications dans les flux d’activités des utilisateurs de cette équipe. |
 
 Pour plus d’informations, voir autorisations de consentement propres aux ressources [d’équipe.](/graph/permissions-reference#teams-resource-specific-consent-permissions)
 
@@ -65,6 +66,7 @@ Le tableau suivant fournit des autorisations spécifiques aux ressources pour un
 | OnlineMeeting.ReadBasic.Chat   | Lisez les propriétés de base, telles que le nom, la planification, l’organisateur, le lien de connexion et les notifications de début/fin, d’une réunion associée à cette conversation. |
 | Calls.AccessMedia.Chat         | Accéder aux flux multimédias dans les appels associés à cette conversation ou réunion                                    |
 | Calls.JoinGroupCalls.Chat         | Participer aux appels associés à cette conversation ou réunion                                    |
+| TeamsActivity.Send.Chat         | Créez des notifications dans les flux d’activités des utilisateurs de cette conversation. |
 
 Pour plus d’informations, voir autorisations de [consentement spécifiques aux](/graph/permissions-reference#chat-resource-specific-consent-permissions)ressources de conversation.
 
@@ -172,7 +174,8 @@ Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votr
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -196,7 +199,8 @@ Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votr
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
   }
 ```
