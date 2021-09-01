@@ -2,17 +2,14 @@
 title: Scènes personnalisées en mode ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
-ms.openlocfilehash: 9a0ef7eb2d6a014aaf831a0e1765d4b4ca44b8c6
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 32b7cb32eb3f422641dbf28e635e39d978bad002
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528813"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849439"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
-
-> [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
 
 Les scènes personnalisées en mode ensemble Microsoft Teams un environnement de réunion immersif et attrayant avec les actions suivantes :
 
@@ -28,7 +25,7 @@ Le processus suivant donne une vue d’ensemble pour créer une application de s
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créer une application de scène uniquement" border="false":::
 
-Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création du package d’application en arrière-plan. Plusieurs scènes d’un même package d’application s’affichent sous la forme d’une liste plate pour les utilisateurs.
+Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création de package d’application en arrière-plan. Plusieurs scènes d’un même package d’application s’affichent sous la forme d’une liste plate pour les utilisateurs.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -37,7 +34,7 @@ Vous devez avoir une connaissance de base des éléments suivants pour utiliser 
 * Définir une scène et des sièges dans une scène.
 * Vous avez un compte de développeur Microsoft et familiarisez-vous avec le portail Microsoft Teams [développeur et](../concepts/build-and-test/teams-developer-portal.md) App Studio.
 * Comprendre le [concept de chargement de version de version d’application.](../concepts/deploy-and-publish/apps-upload.md)
-* Assurez-vous que l’administrateur a accordé l’autorisation [**Télécharger**](../concepts/deploy-and-publish/apps-upload.md) une application personnalisée et sélectionnez tous les filtres dans le cadre de la configuration de l’application et des stratégies de réunion, respectivement.
+* Assurez-vous que l’administrateur a accordé l’autorisation [**Télécharger**](../concepts/deploy-and-publish/apps-upload.md) une application personnalisée et de sélectionner tous les filtres dans le cadre de la configuration de l’application et des stratégies de réunion, respectivement.
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -73,7 +70,7 @@ L’image suivante montre chaque siège représenté en tant qu’avatar pour la
 
     Vous pouvez également ouvrir Scene studio sur la page d’accueil du [portail Teams développeur](https://dev.teams.microsoft.com/home):
     * Sélectionnez **Créer des scènes personnalisées pour les réunions.**
-    * Sélectionnez **Outils** dans la section de gauche, puis **Studio de scène dans** la section **Outils.**
+    * Sélectionnez **Outils** dans la section de gauche, puis **Scene studio dans** la section **Outils.**
 
 1. Dans **l’Éditeur de** scènes, **sélectionnez Créer une scène.**
 
@@ -109,14 +106,14 @@ L’image suivante montre chaque siège représenté en tant qu’avatar pour la
 
 1. Sélectionnez **Enregistrer** et **sélectionner Afficher dans Teams** pour tester rapidement votre scène dans Microsoft Teams.
 
-    * La sélection **de l’affichage dans Teams** crée automatiquement une application Microsoft Teams qui peut être vue dans la page Applications du portail Teams développeur. 
+    * La sélection **de l’affichage Teams** crée automatiquement une application Microsoft Teams qui peut être vue dans la page Applications du portail Teams développeur. 
     * La sélection **de l’affichage Teams** crée automatiquement un package d’application appmanifest.jssur la scène. Vous pouvez accéder aux  **applications à** partir du menu et accéder au package d’application créé automatiquement.
     * Pour supprimer une scène que vous avez créée, **sélectionnez Supprimer la scène** dans la barre supérieure.
 
 1. In **View in Teams**, select Preview in **Teams**.
 1. Dans la boîte de dialogue qui s’affiche, sélectionnez **Ajouter.**
 
-    La scène est testée ou accessible en créant une réunion de test et en lançant des scènes personnalisées du mode Ensemble. Pour plus d’informations, voir [activer des scènes personnalisées du mode Ensemble](#activate-custom-together-mode-scenes):
+    La scène est testée ou accessible en créant une réunion de test et en lançant des scènes personnalisées en mode Ensemble. Pour plus d’informations, voir [activer des scènes personnalisées du mode Ensemble](#activate-custom-together-mode-scenes):
 
     ![Lancer des scènes personnalisées du mode Ensemble](../assets/images/apps-in-meetings/launchtogethermode.png)
 
@@ -124,7 +121,7 @@ L’image suivante montre chaque siège représenté en tant qu’avatar pour la
 
 Si vous le souhaitez, vous pouvez sélectionner **Partager** **dans** le menu déroulant Enregistrer. Vous pouvez créer un lien partageable pour distribuer vos scènes à d’autres personnes. L’utilisateur peut ouvrir le lien pour installer la scène et commencer à l’utiliser.
 
-Après la prévisualisation, la scène est livrée en tant qu’application Teams en suivant les étapes de soumission de l’application. Cette étape nécessite le package d’application. Le package d’application est différent du package de scène, pour la scène qui a été conçue. Le package d’application créé automatiquement se trouve dans la section **Applications** du Centre Teams développeur.
+Après la prévisualisation, la scène est livrée en tant qu’application Teams en suivant les étapes de soumission de l’application. Cette étape nécessite le package d’application. Le package d’application est différent du package de scène, pour la scène qui a été conçue. Le package d’application créé automatiquement se trouve dans la section **Applications** du Teams développeur.
 
 Le package de scène est éventuellement récupéré  en sélectionnant **Exporter** dans le menu déroulant Enregistrer. Un **.zip** de scène, c’est-à-dire le package de scène, est téléchargé. Le package de scène inclut scene.jssur et les ressources PNG utilisées pour créer une scène. Le package de scène est examiné pour l’incorporation d’autres modifications :
 
@@ -203,7 +200,7 @@ Le code suivant est le scene.jssur l’exemple :
 }
 ```
 
-Chaque scène possède un ID et un nom uniques. Le JSON de scène contient également des informations sur toutes les ressources utilisées pour la scène. Chaque bien contient un nom de fichier, une largeur, une hauteur et une position sur les axes X et Y. De même, chaque siège contient un ID de siège, sa largeur, sa hauteur et sa position sur les axes X et Y. L’ordre d’altération est généré automatiquement et modifié selon les préférences. Le numéro de l’ordre d’accès correspond à l’ordre des personnes qui rejoignent l’appel.
+Chaque scène possède un ID et un nom uniques. Le JSON de scène contient également des informations sur toutes les ressources utilisées pour la scène. Chaque bien contient un nom de fichier, une largeur, une hauteur et une position sur les axes X et Y. De même, chaque siège contient un ID de siège, sa largeur, sa hauteur et sa position sur les axes X et Y. L’ordre d’altération est généré automatiquement et modifié selon les préférences. Le numéro de l’ordre d’appel correspond à l’ordre des personnes qui rejoignent l’appel.
 
 Représente `zOrder` l’ordre de placement des images et des sièges le long de l’axe Z. Elle donne une idée de profondeur ou de partition si nécessaire. Consultez l’exemple de mise en marche pas à pas. L’exemple utilise `zOrder` le .
 
@@ -220,7 +217,7 @@ Obtenez plus d’informations sur la façon dont un utilisateur s’engage avec 
     >[!NOTE]
     > Lors de la sélection **de l’aperçu** dans Le studio de scène, la scène est installée en tant qu’application dans Microsoft Teams. Il s’agit du modèle pour qu’un développeur teste et teste des scènes à partir du studio Scene studio. Une fois qu’une scène est livrée en tant qu’application, les utilisateurs voient ces scènes dans la galerie de scène.
 
-1. Dans la **page de la** galerie dans le coin supérieur gauche, sélectionnez Mode **Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
+1. Dans la **galerie dans** le coin supérieur gauche, sélectionnez **Mode Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
 
 1. Sélectionnez **Modifier la scène** pour modifier la scène par défaut.
 
