@@ -2,20 +2,20 @@
 title: Conseils de soumission d’application et cas d’échec fréquents
 description: décrit les conseils pour une soumission Teams au Store et les raisons courantes de l’échec des soumissions
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: conseils de soumission d’applications fréquemment échoués - Recommandations de validation des cas
-ms.openlocfilehash: 91ae68562d93e4ad8770d5251671c3fa756aa0b15482b4495fe016a01e068707
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706534"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156814"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>Astuces pour une soumission d’Microsoft Teams d’application réussie
 
 >[!NOTE]
->Cette page sera dépréciée d’ici mai 2021. Pour plus d’informations sur la publication réussie de votre application, voir les [instructions de validation Teams store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+>Cette page sera dépréciée d’ici mai 2021. Pour plus d’informations sur la publication réussie de votre application, voir les instructions [de validation Teams store.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
 Cet article traite des raisons courantes pour lesquelles la validation des applications soumises échoue. Bien qu’il ne s’agit pas d’une liste exhaustive de tous les problèmes potentiels avec votre application, la suite de ce guide augmente la probabilité que la soumission de votre application se passe la première fois. Pour plus d’informations, voir [Stratégies de certification](/legal/marketplace/certification-policies) de Marketplace commercial pour obtenir une liste complète des stratégies de validation.
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur l’authentification, voir :
 > [!TIP]
 > Assurez-vous que votre application affiche un indicateur de chargement ou une forme d’avertissement lorsque la réponse de votre application est plus longue que prévu.
 
-### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989;'onglet ne doit pas avoir une navigation en couches ou chrome excessive
+### <a name="9989-tab-content-must-not-have-excessive-chrome-or-layered-navigation"></a>&#9989; tabulation ne doit pas avoir une navigation en couches ou chrome excessive
 
 * Les onglets doivent fournir du contenu centré et éviter les éléments d’interface utilisateur inutiles. Il s’agit généralement d’une navigation en couches ou imbrique inutile, d’une interface utilisateur superflue ou non pertinente à côté du contenu, ou de liens qui prennent l’utilisateur vers du contenu non lié. Par exemple, l’affichage Onglet suivant omet les menus de navigation et affiche uniquement le contenu principal :
 
@@ -109,7 +109,7 @@ Pour plus d’informations sur l’authentification, voir :
 * Les onglets ne doivent pas présenter de barre d’application avec des icônes dans le rail gauche qui entrent en conflit avec le Teams navigation.
 * Les onglets qui ont des fonctionnalités d’édition complexes dans l’application doivent ouvrir l’affichage éditeur dans une fenêtre multiple plutôt que dans l’onglet.
 * S’il existe plusieurs options d’affichage, envisagez de disposer d’un menu de config d’onglets dans le choix de l’utilisateur. Par exemple, au lieu d’incorporer un menu à l’intérieur de l’onglet, placez le menu dans la page de configuration afin que l’affichage de l’onglet réel soit propre et concentré.
-* Incluez un *onglet d’aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
+* Incluez un onglet *Aide* en tant qu’onglet statique pour conseiller les utilisateurs sur la configuration, l’inscription et l’utilisation de votre application.
 * Veuillez inclure un *onglet Paramètres* qui est disponible à partir de l’en-tête de l’application.
 
 ![Page de configuration de l’idée large](../../../../assets/images/faq/wideidea.png)
@@ -170,7 +170,7 @@ Votre bot doit répondre à n’importe quelle commande et non à l’utilisateu
 ### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>&#9989; bots personnels doivent toujours envoyer un message de bienvenue lors du premier lancement
 
 Un message de bienvenue est la meilleure façon de définir le ton de votre bot de conversation personnel. Il s’agit de la première interaction entre un utilisateur et le bot. Un message de bienvenue peut encourager l’utilisateur à continuer à explorer l’application. Si le message d’accueil ou d’introduction est déroutant ou peu clair, les utilisateurs ne voient pas immédiatement la valeur de l’application et perdent leur intérêt.
-Consultez la section suivante pour obtenir les conditions requises pour les messages de bienvenue :
+Consultez la section suivante pour les conditions requises pour les messages de bienvenue :
 
 > [!Note]
 > Un message de bienvenue est facultatif pour un bot de canal.
@@ -203,7 +203,7 @@ Les bots de notification uniquement doivent envoyer un message de bienvenue qui 
    * **Rendez votre message concis et informatif.** L’expérience utilisateur et les connaissances de votre application varient. Un utilisateur a peut-être utilisé votre application sur une autre plateforme ou ne connaît rien de votre application. Vous souhaitez adapter votre message à tous les publics et, en quelques phrases, expliquer ce que fait votre bot et les façons d’interagir avec celui-ci. Vous devez également expliquer la valeur de l’application et la façon dont les utilisateurs pourront tirer parti de son utilisation.
 ![Bot cafe et dinning](../../../../assets/images/faq/cafe-bot.png)
 
-* **Rendre votre message actionnable.** Réfléchissez à la première chose que vous souhaitez que les utilisateurs font après l’installation de votre application. Existe-t-il une commande qu’ils doivent essayer ? Existe-t-il une autre expérience d’intégration à connaître ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C’est ce que *je peux faire...*».
+* **Rendre votre message actionnable.** Pensez à la première chose que vous souhaitez que les utilisateurs font après l’installation de votre application. Existe-t-il une commande qu’ils doivent essayer ? Existe-t-il une autre expérience d’intégration à connaître ? Doivent-ils se connecter ? Vous pouvez ajouter des actions sur une carte adaptative ou fournir des exemples spécifiques tels que « Essayez de *demander...*», « C’est ce que *je peux faire...*».
 
 #### <a name="welcome-messages-in-the-team-or-channel--scope"></a>Messages de bienvenue dans l’étendue de l’équipe ou du canal
 

@@ -1,17 +1,17 @@
 ---
 title: Utiliser Microsoft Graph pour importer des messages de plateforme externe Teams
 description: Décrit comment utiliser Microsoft Graph pour importer des messages à partir d’une plateforme externe vers Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704402"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156922"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
@@ -30,7 +30,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique des messages et les donn
 1. [Terminez le processus de migration des équipes et des canaux.](#step-4-complete-migration-mode)
 1. [Ajouter des membres d’équipe.](#step-five-add-team-members)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 ### <a name="analyze-and-prepare-message-data"></a>Analyser et préparer les données des messages
 
@@ -373,7 +373,7 @@ Le tableau suivant fournit l’étendue du contenu :
 |Images inline dans le cadre du message|À mentions|
 |Liens vers des fichiers existants dans SPO ou OneDrive|Réactions|
 |Messages avec texte enrichi|Vidéos|
-|Chaîne de réponse de message|Annonces|
+|Chaîne de réponse de message|Announcements|
 |Traitement à haut débit|Extraits de code|
 ||Autocollants|
 ||Emojis|

@@ -3,14 +3,14 @@ title: Envoyer des messages proactifs
 description: Décrit comment envoyer des messages proactifs avec Microsoft Teams bot.
 ms.topic: conceptual
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID utilisateur
-ms.openlocfilehash: 5a999769879c8661d16b79f885b463166be557903a6448c709eb06ed16e49345
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705699"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156862"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 

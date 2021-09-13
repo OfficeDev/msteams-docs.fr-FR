@@ -2,14 +2,14 @@
 title: Prise en main de App Studio dans Microsoft Teams
 description: Prise en main de la création de superbes applications dans Microsoft Teams à l’aide d’App Studio
 keywords: mise en place d’app studio teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 507a044098e479c7b737d6d7711a4e912ec81cbfe56fda2345a088618c47b36b
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704048"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155885"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 

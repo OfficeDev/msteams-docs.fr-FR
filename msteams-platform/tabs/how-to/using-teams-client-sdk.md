@@ -3,15 +3,15 @@ title: Création d’onglets et d’autres expériences hébergées avec le SDK 
 author: heath-hamilton
 ms.author: surbhigupta
 description: Vue d’ensemble Microsoft Teams du SDK client JavaScript, qui peut vous aider à créer Teams expériences d’application hébergées dans un <iframe>.
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: onglets teams canal de groupe configurable statique SDK JavaScript personnel
 ms.topic: conceptual
-ms.openlocfilehash: d1bcf9fd853d1b0e93c99ae62ad32f462fc98ed4eee1796e7ae5510ad02a8909
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ae1192a7221300fc702093d64c97b31bb990d2e9
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704934"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156754"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec Microsoft Teams SDK client JavaScript
 
@@ -48,7 +48,7 @@ Consultez les tableaux suivants pour comprendre les fonctions courantes du SDK. 
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Obtient les onglets de l’application. Le rappel récupère l’objet **TabInformation.** **L’objet TabInstanceParameters est** un paramètre facultatif.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.getMruTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters)`|Obtient les derniers onglets utilisés pour l’utilisateur. Le rappel récupère l’objet **TabInformation.** **L’objet TabInstanceParameters est** un paramètre facultatif.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getmrutabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinstanceparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.shareDeepLink(deepLinkParameters: DeepLinkParameters)`|Prend **l’objet DeepLinkParameters** comme entrée et partage une boîte de dialogue de lien profond qu’un utilisateur peut utiliser pour accéder au contenu de *l’onglet.*|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#sharedeeplink-deeplinkparameters-&preserve-view=true)<br/>[deepLink obj](/javascript/api/@microsoft/teams-js/microsoftteams.deeplinkparameters?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|Prend un **deepLink** requis en tant qu’entrée et permet à l’utilisateur d’accéder à une URL ou déclenche une action du client, telle que l’ouverture ou l’installation, d’une application dans *Teams*.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
+|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|Prend un **deepLink** requis en tant qu’entrée et permet à l’utilisateur d’accéder à une URL ou de déclencher une action du client, telle que l’ouverture ou l’installation, d’une application dans *Teams*.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|Prend **l’objet TabInstance** comme entrée et navigue vers une instance d’onglet spécifiée.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
 ### <a name="authentication-namespace"></a>Espace de noms d’authentification

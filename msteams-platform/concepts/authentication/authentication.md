@@ -2,14 +2,14 @@
 title: Authentification des utilisateurs de l’application
 description: Décrit l’authentification Teams et comment l’utiliser dans les applications
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Authentification teams OAuth SSO AAD
-ms.openlocfilehash: 73d85fed57caff410e2f4986f208b868c228777deade8a5a2a0a1ce0e35d7cd3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 40d5659251b1faff087c6ee6458800ede2a5c840
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705593"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156682"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 

@@ -4,15 +4,15 @@ description: Décrit comment gérer les événements dans les bots pour Microsof
 keywords: événements de bots teams
 ms.date: 05/20/2019
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 6a9eaab388927fcff51d7883e1a61ca1cec81fac
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 6189460e16459e737656f68945f1b0a2a3549834
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069075"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156761"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Gérer les événements de bot dans Microsoft Teams
 
@@ -26,7 +26,7 @@ Microsoft Teams envoie des notifications à votre bot pour les modifications ou 
 * Supprimez les informations mises en cache pour une équipe si le bot est supprimé.
 * Lorsqu’un message bot est aimé par un utilisateur.
 
-Chaque événement de bot est envoyé en tant `Activity` qu’objet dans `messageType` lequel définit les informations qui se trouve dans l’objet. Pour les messages de type `message` , voir Envoi et réception de [messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
+Chaque événement de bot est envoyé en tant `Activity` qu’objet dans lequel définit les informations qui se trouve dans `messageType` l’objet. Pour les messages de type `message` , voir Envoi et réception de [messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
 les Teams et les événements de groupe, généralement déclenchés par le type, ont des informations d’événement Teams supplémentaires transmises dans le cadre de l’objet. Par conséquent, votre responsable d’événement doit interroger la charge utile pour le Teams et des métadonnées spécifiques aux événements `conversationUpdate` `channelData` `channelData` `eventType` supplémentaires.
 
@@ -323,7 +323,7 @@ L’événement avec l’objet dans la charge utile est envoyé lorsqu’un util
 > [!NOTE]
 > Il n’existe aucune fonctionnalité pour interroger tous les noms d’équipe et le nom de l’équipe n’est pas renvoyé dans les charges utiles à partir d’autres événements.
 
-Votre bot est averti lorsque l’équipe dans elle a été renommée. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l’objet. Notez qu’il n’existe aucune notification pour la création ou la suppression d’équipes, car les bots existent uniquement dans le cadre des équipes et n’ont aucune visibilité en dehors de l’étendue dans laquelle ils ont été ajoutés.
+Votre bot est averti lorsque l’équipe dans qui il se trouve a été renommé. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l’objet. Notez qu’il n’existe aucune notification pour la création ou la suppression d’équipes, car les bots existent uniquement dans le cadre des équipes et n’ont aucune visibilité en dehors de l’étendue dans laquelle ils ont été ajoutés.
 
 ### <a name="schema-example-team-renamed"></a>Exemple de schéma : équipe renommée
 

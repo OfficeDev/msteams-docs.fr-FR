@@ -1,15 +1,15 @@
 ---
 title: Ajouter des actions de carte dans un bot
 description: Décrit les actions de carte dans Microsoft Teams et comment les utiliser dans vos bots
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: b7c6641078d835ec92975924aaf64da1573757211413da99184bd86c9465b53e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: fb1ff1df6e91c17efd5a01123935fb03f0a0ed98
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705327"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155714"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -323,7 +323,7 @@ CardFactory.actions([
 
 La propriété de niveau `replyToId` supérieur contient l’ID du message d’où provenait l’action de carte. Utilisez-le si vous souhaitez mettre à jour le message.
 
-Le code suivant montre un exemple de message d’appel entrant :
+Le code suivant illustre un exemple de message d’appel entrant :
 
 ```json
 {

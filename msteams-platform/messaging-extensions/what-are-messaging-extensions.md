@@ -2,15 +2,15 @@
 title: Extensions de messagerie
 author: surbhigupta
 description: Vue d’ensemble des extensions de messagerie sur la plateforme Microsoft Teams messagerie
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 9f222e8b4baa60433e2fb7298cc94f53b180c05a83107cbd1bfd374fec1481a5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706030"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155881"
 ---
 # <a name="messaging-extensions"></a>Extensions de messagerie
 
@@ -24,7 +24,7 @@ L’image suivante affiche les emplacements d’où les extensions de messagerie
 
 | Scénario | Exemple |
 |:-----------------|:-----------------|
-|Vous souhaitez qu’un système externe soit en mesure d’action et que le résultat de l’action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître l’créneau horaire réservé.|
+|Vous souhaitez qu’un système externe soit en mesure d’action et que le résultat de l’action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître le créneau horaire réservé.|
 |Vous souhaitez trouver quelque chose dans un système externe et partager les résultats avec la conversation.|Recherchez un élément de travail dans Azure DevOps et partagez-le avec le groupe en tant que carte adaptative.|
 |Vous souhaitez effectuer une tâche complexe impliquant plusieurs étapes ou une grande quantité d’informations dans un système externe et partager les résultats avec une conversation.|Créez un bogue dans votre système de suivi en fonction d’un message Teams, affectez ce bogue à Bob et envoyez une carte au thread de conversation avec les détails du bogue.|
 
@@ -61,7 +61,7 @@ L’image suivante affiche le module de tâche de recherche d’extension de mes
 
 ## <a name="link-unfurling"></a>Déploiement de lien
 
-Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est connue sous le nom de déploiement de lien. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction du message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
+Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est connue sous le nom de déploiement de lien. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu’un lien est passé dans l’extension de messagerie :
  
 ![lien de déploiement](../assets/images/messaging-extension/unfurl-link.png)

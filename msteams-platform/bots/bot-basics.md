@@ -3,14 +3,14 @@ title: Gestionnaire d'activité du robot
 author: surbhigupta
 description: Comprendre les handlers d’activité du bot dans Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 51199edcd28ea9f4521c4d0a19c7872b3e1a852e092dd949a9d6490e395c2ab1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d9d9dee13a59a0727bf3bc7889f6e0fc2acd06f1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705692"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155562"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
@@ -75,7 +75,7 @@ La liste des handlers définis dans `ActivityHandler` inclut les suivants :
 | Activité d’événement reçue | `OnEventActivityAsync` | Cette méthode appelle un handler spécifique au type d’événement, sur une `Event` activité. |
 | Activité d’événement de réponse de jeton reçue | `OnTokenResponseEventAsync` | Cette méthode peut être overridden pour gérer les événements de réponse de jeton. |
 | Activité d’événement de réponse sans jeton reçue | `OnEventAsync` | Cette méthode peut être utilisée pour gérer d’autres types d’événements. |
-| Autre type d’activité reçu | `OnUnrecognizedActivityTypeAsync` | Cette méthode peut être overridée pour gérer tout type d’activité autrement non géré. |
+| Autre type d’activité reçu | `OnUnrecognizedActivityTypeAsync` | Cette méthode peut être overridée pour gérer n’importe quel type d’activité autrement non géré. |
 
 #### <a name="teams-specific-activity-handlers"></a>Teams d’activité spécifiques
 

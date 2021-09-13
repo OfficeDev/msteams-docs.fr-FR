@@ -2,16 +2,16 @@
 title: Flux d’authentification pour les onglets
 description: Décrit le flux d’authentification dans les onglets
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Onglets de flux d’authentification Teams
-ms.openlocfilehash: ccafd5b14e95e2cf319dcf53263e747e0bd67dd062c724ba9c8b736ec6c547db
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f95a9c89fd8d40078de064da0ca7c33d929dc0a1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705224"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155539"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams’authentification pour les onglets
+# <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams d’authentification pour les onglets
 
 > [!NOTE]
 > Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, vous devez vous assurer que vous utilisez au moins la version 1.4.1 du SDK JavaScript Microsoft Teams.

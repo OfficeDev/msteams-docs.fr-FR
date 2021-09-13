@@ -3,14 +3,14 @@ title: Bots avec notification seulement
 description: Décrit les bots de notification uniquement qui sont dans Microsoft Teams
 keywords: notification des bots teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 3de462f73733f5f7cf223444ffe6deeb53faaaaa
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 71dbc07445a57194e90ba3985c3aff1e2d4f2cdf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566760"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155545"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Bots de notification uniquement dans Microsoft Teams
 

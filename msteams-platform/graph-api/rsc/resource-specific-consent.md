@@ -1,17 +1,17 @@
 ---
 title: Activer le consentement spécifique aux ressources dans Teams
 description: Décrit le consentement spécifique aux ressources Teams et comment en tirer parti.
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation OAuth OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 256bdf29079f9a8f3085c63f7e072414c4bd3ce3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822212"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155886"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
@@ -78,7 +78,7 @@ Pour plus d’informations, voir autorisations de [consentement spécifiques aux
 1. [Configurez les paramètres de consentement dans le portail AAD.](#configure-consent-settings-in-the-aad-portal)
     1. Configurez les paramètres de consentement du propriétaire [du groupe pour RSC dans une équipe.](#configure-group-owner-consent-settings-for-rsc-in-a-team)
     1. [Configurez les paramètres de consentement de l’utilisateur pour RSC dans une conversation.](#configure-user-consent-settings-for-rsc-in-a-chat)
-1. [Inscrivez votre application auprès de Plateforme d’identités Microsoft à l’aide du portail AAD.](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
+1. [Inscrivez votre application auprès de Plateforme d'identités Microsoft à l’aide du portail AAD.](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
 1. [Examinez vos autorisations d’application dans le portail AAD.](#review-your-application-permissions-in-the-aad-portal)
 1. [Obtenez un jeton d’accès à partir de la plateforme d’identité.](#obtain-an-access-token-from-the-microsoft-identity-platform)
 1. [Mettez à jour Teams manifeste de votre application.](#update-your-teams-app-manifest)
@@ -111,9 +111,9 @@ Vous pouvez activer ou désactiver le consentement de [l’utilisateur](/azure/a
 
     ![Configuration de conversation RSC Azure](../../assets/images/azure-rsc-chat-configuration.png)
 
-En outre, vous pouvez activer ou désactiver le consentement de l’utilisateur à l’aide de PowerShell, suivez les étapes décrites dans la configuration du consentement utilisateur à l’aide [de PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
+En outre, vous pouvez activer ou désactiver le consentement de l’utilisateur à l’aide de PowerShell, suivez les étapes décrites dans la configuration du consentement utilisateur à [l’aide de PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
 
-## <a name="register-your-app-with-microsoft-identity-platform-using-the-aad-portal"></a>Inscrire votre application auprès d’Plateforme d’identités Microsoft à l’aide du portail AAD
+## <a name="register-your-app-with-microsoft-identity-platform-using-the-aad-portal"></a>Inscrire votre application auprès d’Plateforme d'identités Microsoft à l’aide du portail AAD
 
 Le portail AAD fournit une plateforme centrale pour l’inscription et la configuration de vos applications. Votre application doit être inscrite dans le portail AAD pour s’intégrer à la plateforme d’identité et appeler les API Microsoft Graph. Pour plus d’informations, voir [inscrire une application avec la plateforme d’identité.](/graph/auth-register-app-v2)
 
@@ -128,7 +128,7 @@ Le portail AAD fournit une plateforme centrale pour l’inscription et la config
 > [!IMPORTANT]
 > Le portail AAD ne peut pas être utilisé pour demander des autorisations RSC. Les autorisations RSC sont actuellement exclusives aux applications Teams installées dans le client Teams et sont déclarées dans le fichier de manifeste d’application Teams (JSON).
 
-## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Obtenir un jeton d’accès auprès du Plateforme d’identités Microsoft
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Obtenir un jeton d’accès auprès du Plateforme d'identités Microsoft
 
 Pour effectuer des Graph API, vous devez obtenir un jeton d’accès pour votre application à partir de la plateforme d’identité. Pour que votre application puisse obtenir un jeton à partir de la plateforme d’identité, elle doit être inscrite dans le portail AAD. Le jeton d’accès contient des informations sur votre application et les autorisations dont elle dispose pour les ressources et les API disponibles via Microsoft Graph.
 
@@ -140,7 +140,7 @@ Vous devez avoir les valeurs suivantes du processus d’inscription AAD pour ré
 
 Pour plus d’informations, [voir obtenir l’accès au nom](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) d’un utilisateur et obtenir [l’accès sans utilisateur.](/graph/auth-v2-service)
 
-## <a name="update-your-teams-app-manifest"></a>Mettre à jour votre manifeste Teams application
+## <a name="update-your-teams-app-manifest"></a>Mettre à jour le manifeste Teams’application
 
 Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votre application. Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) au manifeste de votre application avec les valeurs suivantes :
 
@@ -226,7 +226,7 @@ Une fois l’application installée sur une ressource, vous pouvez utiliser [Gra
 1. Sélectionnez l’équipe dans laquelle l’application doit être installée.
 1. Sélectionnez les &#x25CF;&#x25CF;&#x25CF; pour cette équipe.
 1. Sélectionnez **Obtenir un lien vers l’équipe** dans le menu déroulant de l’équipe.
-1. Copiez et enregistrez **la valeur groupId** à partir de la boîte de dialogue Obtenir un lien **vers la** boîte de dialogue de l’équipe.
+1. Copiez et enregistrez la **valeur groupId** à partir de la boîte de dialogue Obtenir un lien **vers la** boîte de dialogue de l’équipe.
 1. Connectez-vous **à Graph Explorer.**
 1. Faites un **appel GET** à ce point de terminaison : `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` . Le `clientAppId` champ de la réponse sera map mapé à l’Teams manifeste de `webApplicationInfo.id` l’application.
 

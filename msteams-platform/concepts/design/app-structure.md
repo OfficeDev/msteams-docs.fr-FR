@@ -3,14 +3,14 @@ title: Concevoir votre application - Comprendre la structure de l’application
 description: Comprenez ce que vous pouvez et ne pouvez pas personnaliser Microsoft Teams lors de la conception de votre application.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408579"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156802"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprendre la structure Microsoft Teams’application
 
@@ -92,7 +92,7 @@ Les extensions de messagerie sont des raccourcis permettant d’insérer du cont
 
 Les extensions de réunion sont des applications pour améliorer les réunions en direct. Vous pouvez héberger le contenu de votre application dans plusieurs scénarios, notamment avant, pendant et après les réunions.
 
-***Étendues prise en charge**: réunions, conversations*
+***Étendues pris en charge**: réunions, conversations*
 
 ### <a name="mobile"></a>Mobile
 

@@ -3,14 +3,14 @@ title: Conception de votre bot
 description: Découvrez comment concevoir un bot Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a52aa742d51ab637b850d8c55b15ab1305566e35
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408670"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156683"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
@@ -289,7 +289,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 ### <a name="content"></a>Contenu
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour l’établissement d’un personnage clair." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Exemple montrant une meilleure pratique de bot pour établir un personnage clair." border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>À faire : établir un personnage clair
 
@@ -326,7 +326,7 @@ Votre bot doit pouvoir répondre à des messages tels que « Bonjour », « A
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple montrant que vous devez éviter les réponses à des messages de bot simples." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Exemple montrant que vous devez éviter les réponses inttér es aux messages de bot simples." border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>À ne pas faire : manquer les opportunités de satisfaction
 

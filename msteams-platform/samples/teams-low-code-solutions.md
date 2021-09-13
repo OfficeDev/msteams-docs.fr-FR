@@ -2,21 +2,21 @@
 title: Créer des applications personnalisées à code faible pour Microsoft Teams
 author: surbhigupta
 description: Détaille les solutions de code Microsoft disponibles pour les Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4c529a3f46ffb0a57bbd298c01570c4d05074b9bbd4207e20e2f9a8374bfed1d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ad2b98855f822e0329d32701035f045aea8b601
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707795"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155598"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Créer des applications personnalisées à code faible pour Microsoft Teams
 
 Microsoft Teams est extensible et adaptatif. Cela signifie que vous pouvez créer des applications personnalisées pour Teams qui répondent aux besoins distincts de vos utilisateurs. Les applications personnalisées à code faible gagnent du temps, fournissent des solutions rapides et répondent à la demande que les applications créées à partir de zéro. Ce document donne une vue d’ensemble de Microsoft Power Platform, Power Virtual Agents chatbot et Virtual Assistant.
 
-Les plateformes à code faible offrent une approche intuitive du développement de logiciels avec un codage minimal ou aucun codage pour créer des applications et des processus. Ils permettent aux développeurs sans expérience de créer facilement des applications personnalisées avec peu ou pas de codage, et aux développeurs professionnels de développer et déployer rapidement l’application. Ces plateformes se composent d’une interface visuelle, de connecteurs vers des services back-end et d’un système de gestion du cycle de vie des applications intégré pour créer, déboguer, déployer et gérer des applications. Microsoft Power Platform est la passerelle innovantes pour créer rapidement Teams applications compatibles à l’aide d’attributs de code faible.
+Les plateformes de code faible offrent une approche intuitive du développement de logiciels avec un codage minimal ou aucun codage pour créer des applications et des processus. Ils permettent aux développeurs sans expérience de créer facilement des applications personnalisées avec peu ou pas de codage, et aux développeurs professionnels de développer et déployer rapidement l’application. Ces plateformes se composent d’une interface visuelle, de connecteurs vers des services back-end et d’un système de gestion du cycle de vie des applications intégré pour créer, déboguer, déployer et gérer des applications. Microsoft Power Platform est la passerelle innovantes pour créer rapidement Teams applications compatibles à l’aide d’attributs de code faible.
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams et Microsoft Power Platform
 
@@ -39,11 +39,11 @@ La nouvelle [application Power Apps dans](https://go.microsoft.com/fwlink/?linki
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams et Power Automate
 
-Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l’environnement Teams avec l’application Power Automate dans [Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe](/power-automate/trigger-flow-teams-message) quel message Microsoft Teams et utiliser des cartes [adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter une valeur supplémentaire à Microsoft Teams à partir de la nouvelle application Power Apps [dans](https://go.microsoft.com/fwlink/?linkid=2143539) Teams.
+Vous pouvez [créer des flux pour automatiser](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) des tâches de travail répétitives directement dans l’environnement Teams avec l’application Power Automate dans [Teams](/power-automate/flows-teams). Vous pouvez [déclencher un flux à partir de n’importe](/power-automate/trigger-flow-teams-message) quel message Microsoft Teams et utiliser des cartes [adaptatives dans Power Automate](/power-automate/create-adaptive-cards). En outre, vous pouvez créer des flux pour personnaliser et ajouter de la valeur à Microsoft Teams à partir de la nouvelle application Power Apps [dans](https://go.microsoft.com/fwlink/?linkid=2143539) Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams et Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) est une solution d’interface graphique sans code, guidée, qui repose sur microsoft Power Platform et Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots riches et conversationnels qui s’intègrent facilement à la plateforme Teams web. Tout le contenu rédigé dans Power Virtual Agents est rendu naturellement dans Teams et les robots Power Virtual Agents dialoguent avec les utilisateurs dans Teams zone de conversation native. Vous pouvez [intégrer votre chatbot Power Virtual Agents pour](/power-virtual-agents/publication-add-bot-to-microsoft-teams) Teams via le portail [Power Virtual Agents.](https://powervirtualagents.microsoft.com)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) est une solution d’interface graphique sans code, guidée, qui repose sur microsoft Power Platform et Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots riches et conversationnels qui s’intègrent facilement à la plateforme Teams web. Tout le contenu rédigé dans Power Virtual Agents est rendu naturellement dans Teams et les bots Power Virtual Agents dialoguent avec les utilisateurs dans Teams zone de conversation native. Vous pouvez [intégrer votre chatbot Power Virtual Agents pour](/power-virtual-agents/publication-add-bot-to-microsoft-teams) Teams via le portail [Power Virtual Agents.](https://powervirtualagents.microsoft.com)
 
 Utilisez la nouvelle [application Power Virtual Agents dans](https://aka.ms/pva-teams-docs) Teams, pour créer, gérer et publier facilement des chatbots de conversation à partir de Teams. Vous pouvez partager vos bots avec d’autres personnes de votre organisation pour discuter et obtenir des réponses à leurs questions.
 
@@ -53,7 +53,7 @@ Virtual Assistant est un modèle open source Microsoft qui vous permet de créer
 
 ### <a name="-power-platform-learn-modules"></a>✔ modules Power Platform Learn
 
-|  Rubrique  |  Liens  |
+|  Rubrique  |  Links  |
 |:---------|:----------------------|
 |Power BI|[Power BI pour les créateurs d’applications](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI pour les développeurs](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |Power Apps|[Power Apps pour les créateurs d’applications](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps pour les développeurs](/learn/browse/?products=power-apps)|
@@ -66,17 +66,17 @@ Virtual Assistant est un modèle open source Microsoft qui vous permet de créer
 > Project **Sont** renommés projet **Dataverse pour Teams**.
 
 [Project Sont une](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) nouvelle plateforme de données à code faible bientôt disponible Microsoft Teams. Il permet aux développeurs de créer des solutions power platform Teams directement dans Teams. Pour plus d’informations sur Project, voir Teams [Blog Microsoft Project Raisons.](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)
+) nouvelle plateforme de données à code faible bientôt disponible Microsoft Teams. Il permet aux développeurs de créer des solutions power platform Teams directement dans Teams. Pour plus d’informations sur Project, voir Teams [Blog Microsoft Project Daledale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### <a name="-microsoft-blog-insights"></a>✔ de blog Microsoft
 
 [Un examen plus étroit des fonctionnalités de plateforme de données Project Androiddale](https://powerapps.microsoft.com/blog/a-closer-look-at-data-platform-capabilities-in-project-oakdale/)
 
-[Annonce des mises à jour de plateforme Teams pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
+[Annonce des mises à jour Teams et power platform pour aider les clients à s’adapter au travail à distance](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [Teams forme l’avenir du travail avec des fonctionnalités de code faible pour améliorer votre espace de travail numérique](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
 
-### <a name="-managing-power-platform-apps"></a>✔ gestion des applications power platform
+### <a name="-managing-power-platform-apps"></a>✔ gestion des applications de plateforme Power Platform
 
 > [!div class="nextstepaction"]
 > [Gérer les applications Microsoft Power Platform dans le Centre d Microsoft Teams’administration Microsoft Power Platform](/microsoftteams/manage-power-platform-apps)

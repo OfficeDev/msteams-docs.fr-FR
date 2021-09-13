@@ -4,12 +4,13 @@ author: surbhigupta
 description: Définissez les commandes de recherche d’extension de messagerie pour Microsoft Teams applications.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068915"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155878"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -63,7 +64,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Ajoutez **un ID de commande** et un **titre.**
-1. Sélectionnez l’emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d’un message** ne modifie pas actuellement le comportement de votre commande de recherche. L’image suivante affiche l’emplacement d’appel de commande de recherche :
+1. Sélectionnez l’emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d’un message** ne modifie pas actuellement le comportement de votre commande de recherche. L’image suivante affiche l’emplacement d’appel de la commande de recherche :
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
@@ -73,7 +74,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
 
 Pour ajouter manuellement votre commande de recherche d’extension de messagerie au manifeste de votre application, vous devez ajouter les paramètres suivants à votre `composeExtension.commands` tableau d’objets :
 
-| Nom de la propriété | Objectif | Obligatoire ? | Version minimale du manifeste |
+| Nom de la propriété | Objectif | Obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
 | `id` | Cette propriété est un ID unique que vous affectez à la commande de recherche. La demande de l’utilisateur inclut cet ID. | Oui | 1.0 |
 | `title` | Cette propriété est un nom de commande. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |

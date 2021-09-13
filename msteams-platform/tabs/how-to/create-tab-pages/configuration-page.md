@@ -3,15 +3,15 @@ title: Créer une page de configuration
 author: surbhigupta
 description: Comment créer une page de configuration
 keywords: Canal de groupe onglets teams configurable
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 67b4a0ae121acfe53b99dbc56d47dda27f2bf1a5
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528788"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155580"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 

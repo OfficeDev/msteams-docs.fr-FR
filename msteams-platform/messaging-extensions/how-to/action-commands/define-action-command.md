@@ -2,15 +2,15 @@
 title: Définir des commandes d’action d’extension de messagerie
 author: surbhigupta
 description: Vue d’ensemble des commandes d’action d’extension de messagerie
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068925"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155518"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
@@ -31,11 +31,11 @@ Tout d’abord, vous devez déterminer l’emplacement à partir de lequel votre
 * Zone de composition de message : boutons situés en bas de la zone composer un message.
 * Zone de commande : en @mentioning votre application dans la zone de commande. 
    > [!NOTE]
-   > Si l’extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre par un message bot inséré directement dans la conversation.
+   > Si l’extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre avec un message bot inséré directement dans la conversation.
 
 * Message : directement à partir d’un message existant via le `...` menu de dépassement d’un message. 
     > [!NOTE] 
-    > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de lui présenter un module de tâche.
+    > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de le présenter avec un module de tâche.
 
 L’image suivante affiche les emplacements d’où la commande d’action est invoquée :
 
@@ -55,7 +55,7 @@ Si vous choisissez de créer le module de tâche avec une liste statique de para
 
 Dans la plupart des cas, la commande d’action entraîne l’insertion d’une carte dans la zone de composition du message. L’utilisateur peut l’envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l’utilisateur et le bot ne peut ni modifier ni mettre à jour la carte.
 
-Si l’extension de messagerie est invoquée à partir de la zone de composition ou directement à partir d’un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l’objet au manifeste de l’application à l’aide du même ID et définir `bot` les étendues appropriées.
+Si l’extension de messagerie est invoquée à partir de la zone de composition ou directement à partir d’un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l’objet au manifeste de l’application en utilisant le même ID et en `bot` définissant les étendues appropriées.
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Ajouter la commande d’action au manifeste de votre application
 
@@ -105,7 +105,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
 
    <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
 
-1. Pour utiliser des paramètres dynamiques, sélectionnez récupérer un ensemble dynamique de **paramètres à partir de votre bot.** L’image suivante affiche la sélection du paramètre de commande d’action :
+1. Pour utiliser des paramètres dynamiques, sélectionnez **Récupérer un ensemble dynamique de paramètres à partir de votre bot.** L’image suivante affiche la sélection du paramètre de commande d’action :
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
     
@@ -115,18 +115,18 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
 1. Sélectionnez **Enregistrer**.
-1. Pour ajouter d’autres paramètres, sélectionnez **le bouton** Ajouter dans la section **Paramètres.**
+1. Pour ajouter d’autres paramètres, sélectionnez **le bouton Ajouter** dans la section **Paramètres.**
 
 ### <a name="create-an-action-command-manually"></a>Créer une commande d’action manuellement
 
 Pour ajouter manuellement votre commande d’extension de messagerie basée sur l’action au manifeste de votre application, vous devez ajouter les paramètres suivants au tableau `composeExtension.commands` d’objets :
 
-| Nom de la propriété | Objectif | Obligatoire ? | Version minimale du manifeste |
+| Nom de la propriété | Objectif | Obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
 | `id` | Cette propriété est un ID unique que vous affectez à cette commande. La demande de l’utilisateur inclut cet ID. | Oui | 1.0 |
 | `title` | Cette propriété est un nom de commande. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |
 | `type` | Cette propriété doit être une `action` . | Non | 1.4 |
-| `fetchTask` | Cette propriété est définie sur pour une carte adaptative ou un affichage web incorporé pour votre module de tâche, et pour une liste statique de paramètres ou lors du chargement de l’affichage `true` `false` web par un `taskInfo` . | Non | 1.4 |
+| `fetchTask` | Cette propriété est définie pour une carte adaptative ou un affichage web incorporé pour votre module de tâche, et pour une liste statique de paramètres ou lors du chargement de l’affichage `true` `false` web par un `taskInfo` . | Non | 1.4 |
 | `context` | Cette propriété est un tableau facultatif de valeurs qui définit l’endroit d’où l’extension de messagerie est invoquée. Les valeurs possibles sont `message`, `compose` ou `commandBox`. La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
 
 Si vous utilisez une liste statique de paramètres, vous devez également ajouter les paramètres suivants :

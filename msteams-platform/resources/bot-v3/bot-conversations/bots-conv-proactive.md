@@ -2,20 +2,20 @@
 title: Messages proactifs
 description: Décrit les bots qui peuvent démarrer une conversation dans Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: scénarios teams de bot de conversation de messagerie proactive
-ms.openlocfilehash: 82282c4e2a2d48acad8f4bb384976906296be8f9
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: efa77e0202c55973d6ede2454cab4c0ce738a44d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630466"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155677"
 ---
 # <a name="proactive-messaging-for-bots"></a>Messagerie proactive pour les bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Un message proactif est un message envoyé par un bot pour démarrer une conversation. Vous voudrez peut-être que votre bot démarre une conversation pour diverses raisons, notamment :
+Un message proactif est un message envoyé par un bot pour démarrer une conversation. Vous voudrez peut-être que votre bot démarre une conversation pour diverses raisons, notamment :
 
 * Messages de bienvenue pour les conversations de bot personnels.
 * Réponses aux sondages.
@@ -27,11 +27,11 @@ L’envoi d’un message pour démarrer un nouveau thread de conversation est di
 1. [Obtenir l’ID unique et l’ID client de l’utilisateur](#obtain-necessary-user-information)
 1. [Envoyer le message](#examples)
 
-Lorsque vous créez des messages proactifs, vous devez appeler et transmettre l’URL du service avant de créer le message que vous utiliserez pour envoyer le  `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` message. Si ce n’est pas le cas, votre application reçoit une `401: Unauthorized` réponse. Pour plus d’informations, [voir les exemples ci-dessous.](#net-example-from-this-sample)
+Lorsque vous créez des messages proactifs, vous devez appeler et transmettre l’URL du service avant de créer le message que vous  `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` utiliserez pour envoyer le message. Si ce n’est pas le cas, votre application reçoit une `401: Unauthorized` réponse. Pour plus d’informations, [voir les exemples ci-dessous.](#net-example-from-this-sample)
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 
-L’envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs. Toutefois, de leur point de vue, ce message peut leur sembler totalement non improvisé et, dans le cas des messages de bienvenue, il s’agit de la première fois qu’ils interagissent avec votre application. En tant que tel, il est très important d’utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable à vos utilisateurs) et de leur fournir suffisamment d’informations pour leur faire comprendre pourquoi ils sont envoyés.
+L’envoi de messages proactifs aux utilisateurs peut être un moyen très efficace de communiquer avec vos utilisateurs. Toutefois, de leur point de vue, ce message peut leur sembler totalement non improvisé et, dans le cas des messages de bienvenue, il s’agit de la première fois qu’ils interagissent avec votre application. En tant que tel, il est très important d’utiliser cette fonctionnalité avec parcimonie (ne pas envoyer de courrier indésirable à vos utilisateurs) et de leur fournir suffisamment d’informations pour leur faire comprendre pourquoi ils sont envoyés par message.
 
 Les messages proactifs sont généralement classés en deux catégories : les messages de bienvenue ou les messages de notification.
 
@@ -47,7 +47,7 @@ Lorsque vous utilisez une messagerie proactive pour envoyer un message de bienve
 
 Lorsque vous utilisez une messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs ont un chemin d’accès clair pour effectuer des actions courantes en fonction de votre notification et comprendre clairement pourquoi la notification s’est produite. Les messages de notification de bonne qualité incluent généralement :
 
-* **Que s'est-il passé.** Indication claire de la cause de la notification.
+* **Que s'est-il passé.** Indication claire de ce qui est arrivé à l’origine de la notification.
 * **Qu’est-ce qu’il s’est passé ?** Il doit être clair quel élément/élément a été mis à jour pour provoquer la notification.
 * **Qui l’a fait.** Qui l’action à l’origine de l’envoi de la notification.
 * **Ce qu’ils peuvent faire à ce sujet.** Faites en sorte que vos utilisateurs prennent facilement des mesures en fonction de vos notifications.

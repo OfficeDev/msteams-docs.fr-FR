@@ -3,14 +3,14 @@ title: Envoyer et recevoir des fichiers via le bot
 description: Décrit comment envoyer et recevoir des fichiers via le bot
 keywords: les fichiers de bots teams envoient la réception
 ms.date: 05/20/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: f6d738bfe3456ad9434512fd84d7e65d6062e57076656a57592cdf6a3f23790e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708111"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155623"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 

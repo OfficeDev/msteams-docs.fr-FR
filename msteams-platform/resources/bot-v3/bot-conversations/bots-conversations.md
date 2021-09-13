@@ -1,16 +1,16 @@
 ---
 title: Envoyer et recevoir des messages avec un bot
-description: Décrit comment envoyer et recevoir des messages avec des bots dans Microsoft Teams
+description: Décrit comment envoyer et recevoir des messages avec des bots Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: messages de bots teams
 ms.date: 05/20/2019
-ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630459"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155877"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation avec un bot Microsoft Teams’équipe
 
@@ -74,9 +74,9 @@ Pour plus d’informations sur la mise en forme des cartes dans les messages, vo
 
 Les images sont envoyées en ajoutant des pièces jointes à un message. Vous trouverez plus d’informations sur les pièces jointes dans la [documentation bot Framework.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)
 
-Les images peuvent être au maximum 1 024 × 1 024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge.
+Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF ; Gif animé non pris en charge.
 
-Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à l’aide de XML. Si vous utilisez Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à l’aide de XML. Si vous utilisez Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Ne pas utiliser `![Duck on a rock](http://aka.ms/Fo983c)`
@@ -85,7 +85,7 @@ Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à
 
 Selon les étendues déclarées, votre bot peut recevoir des messages dans les contextes suivants :
 
-* **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique des conversations ou en tapant son nom ou son ID d’application dans la zone À : d’une nouvelle conversation.
+* **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique de conversation ou en tapant son nom ou son ID d’application dans la zone À : d’une nouvelle conversation.
 * **Canaux** Un bot peut être mentionné (« @_botname_») dans un canal s’il a été ajouté à l’équipe. Notez que les réponses supplémentaires à un bot dans un canal nécessitent de mentionner le bot. Il ne répond pas aux réponses lorsqu’il n’est pas mentionné.
 
 Pour les messages entrants, votre bot reçoit un objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) de type `messageType: message` . Bien que l’objet puisse contenir d’autres types d’informations, tels que les mises à jour de canal envoyées à votre bot, le type représente la `Activity` communication entre le bot et [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` l’utilisateur.
@@ -96,7 +96,7 @@ Votre bot reçoit une charge utile qui contient le message de l’utilisateur, a
 * `localTimestamp` Date et heure du message dans le fuseau horaire de l’expéditeur.
 * `channelId` Toujours « msteams ». Il s’agit d’un canal d’infrastructure de bot, et non d’un canal d’équipes.
 * `from.id` Un ID unique et chiffré pour cet utilisateur pour votre bot ; convient comme clé si votre application doit stocker des données utilisateur. Il est unique pour votre bot et ne peut pas être directement utilisé en dehors de votre instance de bot d’une manière significative pour identifier cet utilisateur.
-* `channelData.tenant.id` ID de client de l’utilisateur.
+* `channelData.tenant.id` ID de locataire de l’utilisateur.
 
 > [!NOTE]
 > `from.id` est unique pour votre bot et ne peut pas être directement utilisé en dehors de votre instance de bot d’une manière significative pour identifier cet utilisateur.
@@ -106,7 +106,7 @@ Votre bot reçoit une charge utile qui contient le message de l’utilisateur, a
 Lorsque vous interagissez dans un canal, votre bot doit être intelligent pour mettre certaines conversations hors connexion avec un utilisateur. Par exemple, supposons qu’un utilisateur tente de coordonner une tâche complexe, telle que la planification avec un ensemble de membres de l’équipe. Plutôt que d’avoir toute la séquence d’interactions visible pour le canal, envisagez d’envoyer un message de conversation personnelle à l’utilisateur. Votre bot doit pouvoir facilement faire passer l’utilisateur entre les conversations personnelles et les conversations de canal sans perte d’état.
 
 > [!NOTE]
->N’oubliez pas de mettre à jour le canal une fois l’interaction terminée pour en informer les autres membres de l’équipe.
+>N’oubliez pas de mettre à jour le canal lorsque l’interaction est terminée pour en informer les autres membres de l’équipe.
 
 ## <a name="full-inbound-schema-example"></a>Exemple de schéma entrant complet
 
@@ -212,7 +212,7 @@ Notez que dans votre schéma sortant, vous devez toujours utiliser le même sch�
 
 ## <a name="updating-messages"></a>Mise à jour des messages
 
-Au lieu que vos messages soient des instantanés statiques de données, votre bot peut mettre à jour dynamiquement les messages en ligne après les avoir envoyés. Vous pouvez utiliser des mises à jour de messages dynamiques pour des scénarios tels que les mises à jour des sondages, la modification des actions disponibles après l’utilisation d’un bouton ou tout autre changement d’état asynchrone.
+Au lieu que vos messages soient des instantanés statiques de données, votre bot peut mettre à jour dynamiquement les messages en ligne après les avoir envoyés. Vous pouvez utiliser les mises à jour dynamiques des messages pour des scénarios tels que les mises à jour des sondages, la modification des actions disponibles après une pression sur un bouton ou tout autre changement d’état asynchrone.
 
 Le nouveau message ne doit pas nécessairement correspondre au type d’origine. Par exemple, si le message d’origine contenait une pièce jointe, le nouveau message peut être un message texte simple.
 

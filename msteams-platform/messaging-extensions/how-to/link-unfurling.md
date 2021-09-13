@@ -2,15 +2,15 @@
 title: Déploiement de lien
 author: surbhigupta
 description: Comment effectuer le déploiement de liens avec l’extension de messagerie dans une Microsoft Teams application.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 76e58602bde9dbb3cb58882163f1e86b6e9adef3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726928"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155765"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 

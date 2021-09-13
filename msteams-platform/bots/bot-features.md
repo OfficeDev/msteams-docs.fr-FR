@@ -3,14 +3,14 @@ title: Bots et kits de développement
 author: surbhigupta
 description: Vue d’ensemble des outils et des SDK pour la création Microsoft Teams bots.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707098"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155561"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -30,7 +30,7 @@ Votre bot Teams se compose des suivants :
 * Votre Teams d’application, qui connecte le client Teams à votre service web.
 
 > [!TIP]
-> Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
+> Utilisez le portail du développeur pour inscrire votre service web auprès de Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
 
 [Bot Framework est](https://dev.botframework.com/) un SDK enrichi utilisé pour créer des bots à l’aide de C#, Java, Python et JavaScript. Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement le modifier pour qu’il fonctionne Teams. Utilisez les C# ou Node.js pour tirer parti de nos [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Ces packages étendent les classes et méthodes de base du SDK Bot Builder comme suit :
 
@@ -82,7 +82,7 @@ La conversation un-à-un est un moyen traditionnel pour un bot de conversation d
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
-Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge un nombre excessif de commandes, en particulier un large éventail de commandes, ne réussit pas ou n’est pas considéré comme positif par les utilisateurs.
+Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge un nombre excessif de commandes, notamment un large éventail de commandes, ne réussit pas ou n’est pas considéré comme positif par les utilisateurs.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences à plusieurs tour dans la conversation
 
@@ -106,7 +106,7 @@ Comme il n’existe que six commandes visibles dans le menu bot actuel, il est p
 
 ### <a name="maintain-a-large-knowledge-base"></a>Maintenir une base de connaissances importante
 
-L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux aux interactions courtes et rapides, et ne sont pas en train de passer au travers de longues listes à la recherche d’une réponse.
+L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
 
 ## <a name="code-sample"></a>Exemple de code
 

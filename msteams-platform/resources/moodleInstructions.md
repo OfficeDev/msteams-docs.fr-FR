@@ -3,34 +3,34 @@ title: Installer Moodle LMS
 description: Comment installer et configurer l’application d’intégration Dentele pour Microsoft Teams
 keywords: Teams Plug-ins d’intégration d’application Dente
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5f33fa9146d0abb735e9f76aeaecea2dbdd230efe81251f9b7dcaf5700a907a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bdf5ea5b6f08c638bd00a69df59ae2e25b76b0ad
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706004"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155540"
 ---
 # <a name="install-moodle-lms"></a>Installer Moodle LMS
 
 Dans cet article, vous allez apprendre à installer le LMS DeNte.
 
 > [!NOTE]
-> Pour aider les administrateurs informatiques à configurer facilement l’intégration de Teams et De Latuale, open source Microsoft 365 Plug-ins De l’espace de jeu Est mis à jour pour les raisons suivantes :
+> Pour aider les administrateurs informatiques à configurer facilement l’intégration de Teams et De Latuale, open source Microsoft 365 Plug-ins Enfichables Est mis à jour pour les raisons suivantes :
 >
 > * Inscription automatique de votre serveur Dente avec [Azure Active Directory (Azure AD).](https://azure.microsoft.com/services/active-directory/)
 >
 > * Déploiement en un seul clic de votre bot Assistant d’accès à Azure.
 >
-> * Mise en service automatique des équipes et synchronisation automatique des inscriptions d’équipes pour toutes les équipes ou sélectionnez Des cours De commercialisation.
+> * Mise en service automatique des équipes et synchronisation automatique des inscriptions d’équipes pour toutes les équipes ou sélection de cours De commercialisation.
 >
 > * Installation automatique de l’onglet Dente et du bot assistant Dentier dans chaque équipe synchronisée.
 >
-> Pour en savoir plus sur les fonctionnalités que fournit cette intégration, [voir Microsoft Teams et Lassy.](https://education.microsoft.com/resource/3dffb3a8)
+> Pour en savoir plus sur les fonctionnalités que fournit cette intégration, [voir Microsoft Teams et Le chat.](https://education.microsoft.com/resource/3dffb3a8)
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Voici les conditions préalables à l’installation de Sondèle :
 
@@ -50,7 +50,7 @@ Assurez-vous d’installer et de télécharger les données suivantes avant de p
 
 1. Assurez-vous d’installer [une version stable actuelle de Sondèle](https://download.moodle.org/releases/latest/).
 
-1. Téléchargez et enregistrez les [plug-ins](https://moodle.org/plugins/auth_oidc) d’Connecter Et d’intégration [Microsoft 365](https://moodle.org/plugins/local_o365) à votre ordinateur local.
+1. Téléchargez et enregistrez les [plug-ins](https://moodle.org/plugins/auth_oidc) d’intégration d Connecter Unique et d’Microsoft 365 [sur](https://moodle.org/plugins/local_o365) votre ordinateur local.
 
     > [!NOTE]
     > L’installation des plug-ins OpenID Connecter et Microsoft 365'intégration est requise pour l’intégration Teams’installation.
@@ -81,7 +81,7 @@ Vous devez configurer la connexion entre les plug-ins Microsoft 365 et Azure AD.
 
 ### <a name="requisites"></a>Conditions requises
 
-Enregistrez Le jeu En tant qu’application dans Azure AD, à l’aide du script PowerShell. Le script Powershell a les dispositions suivantes :
+Inscrivez Le jeu à l’aide du script PowerShell en tant qu’application dans Azure AD. Le script Powershell a les dispositions suivantes :
 
 * Une nouvelle application Azure AD pour votre client Microsoft 365, qui est utilisée par les plug-ins Microsoft 365 Leindent.
 * L’application pour votre Microsoft 365 client, configurer les URL de réponse requises et les autorisations pour l’application mise en service, et renvoie le `AppID` et `Key` .
@@ -136,7 +136,7 @@ Utilisez la page d’installation des plug-ins Microsoft 365 Et dans votre ordin
 1. Dans la **méthode Choisir une connexion,** cochez la case par **défaut,** puis sélectionnez **Enregistrer les modifications** à nouveau.
 
 1. Une fois la page actualisée, vous pouvez voir une autre nouvelle section consentement de **l’administrateur & informations supplémentaires.**
-    1. Sélectionnez **Fournir le lien Consentement de** l’administrateur, entrez Microsoft 365 informations d’identification de l’administrateur général, puis acceptez d’accorder les autorisations. 
+    1. Sélectionnez **Fournir le lien Consentement** de l’administrateur, entrez Microsoft 365 informations d’identification d’administrateur général, puis acceptez d’accorder les autorisations. 
     1. En regard du **champ Client Azure AD,** sélectionnez **le bouton** Détecter.
     1. En plus de **l OneDrive Entreprise URL,** sélectionnez **le bouton** Détecter.
     1. Une fois les champs remplis, sélectionnez de nouveau le bouton Enregistrer **les modifications.**
@@ -157,7 +157,7 @@ Utilisez la page d’installation des plug-ins Microsoft 365 Et dans votre ordin
 
         ✔ tous les comptes dans Le Chatin pour les utilisateurs dans Azure AD.
 
-    1. Dans la section **Restriction de création d’utilisateur,** vous pouvez configurer un filtre pour limiter les utilisateurs d’Azure AD synchronisés avec Lele.
+    1. Dans la section Restriction de création d’utilisateurs, vous pouvez configurer un filtre pour limiter les utilisateurs Azure AD synchronisés avec Lele. 
     1. La section **Mappage des champs** utilisateur vous permet de personnaliser Azure AD en mappage de champ De profil utilisateur en toute convivialisation.
     1. Dans la section **Teams** synchroniser, vous pouvez choisir de créer automatiquement des groupes, tels que des équipes pour une partie ou l’ensemble de vos cours Vous pouvez créer des groupes.
 
@@ -168,7 +168,7 @@ Utilisez la page d’installation des plug-ins Microsoft 365 Et dans votre ordin
 
     > [!NOTE]
     >
-    > Le [Cron](https://docs.moodle.org/310/en/Cron) DeNte s’exécute en fonction de la planification des tâches. La planification par défaut est une fois par jour. Toutefois, le cron doit s’exécuter plus fréquemment pour que tout reste synchronisé.
+    > Le Cron De [Lativeau](https://docs.moodle.org/310/en/Cron) s’exécute en fonction de la planification des tâches. La planification par défaut est une fois par jour. Toutefois, le cron doit s’exécuter plus fréquemment pour que tout reste synchronisé.
 
 1. Revenir à la page d’administration des plug-ins, administration > **sites > Microsoft 365'intégration,** puis sélectionnez la page **Teams Paramètres** page.
 
@@ -246,7 +246,7 @@ Une fois que les ressources ont terminé le déploiement vers Azure, vous devez 
 
 ## <a name="4-deploy-your-microsoft-teams-app"></a>4. Déployer votre application Microsoft Teams de messagerie
 
-Une fois que votre bot a été déployé sur Azure et configuré pour parler à votre serveur Dente, vous devez déployer votre application Microsoft Teams web. Pour ce faire, vous devez charger le fichier manifeste de l’application que vous avez téléchargé à partir de la page Microsoft 365 La page d’équipe Plug-ins Enfichables Enfichables Paramètres l’étape précédente.
+Une fois que votre bot a été déployé sur Azure et configuré pour parler à votre serveur Dente, vous devez déployer votre application Microsoft Teams web. Pour ce faire, vous devez charger le fichier manifeste de l’application que vous avez téléchargé à partir de la page Microsoft 365 La page d’équipe Plug-ins De l’Paramètres à l’étape précédente.
 
 Avant d’installer l’application, vous devez veiller à activer les applications externes et à télécharger des applications. Pour plus d’informations, [voir Préparer Microsoft 365 client.](../concepts/build-and-test/prepare-your-o365-tenant.md) 
 
@@ -263,7 +263,7 @@ Avant d’installer l’application, vous devez veiller à activer les applicati
 
 4. Sélectionnez `manifest.zip` le package que vous avez téléchargé précédemment et sélectionnez **Enregistrer.** Si vous n’avez pas téléchargé le package de manifeste de l’application, vous pouvez le télécharger à partir de l’onglet **Paramètres** d’équipe de la page de configuration des plug-ins dans Lele.
 
-Maintenant que l’application est installée, vous pouvez ajouter l’onglet à n’importe quel canal à qui vous avez accès. Pour ce faire, accédez au canal, sélectionnez le **symbole plus** (➕) et sélectionnez votre application dans la liste. Suivez les invites pour terminer l’ajout de l’onglet de cours DeNte à un canal.
+Maintenant que l’application est installée, vous pouvez ajouter l’onglet à n’importe quel canal à qui vous avez accès. Pour ce faire, accédez au canal, sélectionnez le **symbole plus** (➕) et sélectionnez votre application dans la liste. Suivez les invites pour terminer l’ajout de l’onglet de cours De l’enfant à un canal.
 
 ## <a name="5-allow-automatic-creation-of-moodle-tabs-in-microsoft-teams"></a>5. Autoriser la création automatique d’onglets Dentelé dans Microsoft Teams
 
@@ -277,7 +277,7 @@ Bien que les onglets Dentelé soient créés manuellement dans Microsoft Teams, 
 
 1. Localisez l’application **Dentier** téléchargée > sélectionnez **l’icône d’options** > sélectionner le lien **copier**.
 
-1. Dans un éditeur de texte, collez le contenu copié. Il doit contenir une URL telle que ht&#8203;tps://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff. Copiez la dernière partie de l’URL, par exemple, qui est l’ID de `00112233-4455-6677-8899-aabbccddeeff` l’Microsoft Teams’application.
+1. Dans un éditeur de texte, collez le contenu copié. Elle doit contenir une URL telle que ht&#8203;tps://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff. Copiez la dernière partie de l’URL, par exemple, qui est l’ID de `00112233-4455-6677-8899-aabbccddeeff` l’Microsoft Teams’application.
 
 1. Dans L’espace de commentaires, ouvrez **l Teams a tabulation de l’application Enfichables à** partir de Microsoft 365 page de configuration des plug-ins Enfichables Enfichables.
 

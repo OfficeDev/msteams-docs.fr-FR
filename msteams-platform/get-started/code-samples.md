@@ -1,17 +1,17 @@
 ---
 title: Exemples de code d’application
 description: Liens et descriptions d’exemples d’applications pour la plateforme Microsoft Teams développeur
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams exemples de développeur
-ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
-ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
+ms.openlocfilehash: 34c914898f7ae83022f1278bc11cc33ac5084ba5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "58849425"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155802"
 ---
-# <a name="overview"></a>Aperçu
+# <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous allez apprendre à créer une application à l’aide de React, Blazor, SPFx, C# ou .NET, Node.js et le générateur Yeoman. Vous allez également apprendre à créer votre premier bot et votre première extension de messagerie. Ce didacticiel vous guidera dans plusieurs exemples de code pour les onglets, les bots, les extensions de messagerie, les webhooks et les connecteurs et les API Graph qui vous aideront à personnaliser et configurer vos applications. En outre, vous pouvez également consulter les sections Microsoft Learn dans laquelle vous pouvez étendre les fonctionnalités de la plateforme Teams développeur en créant des applications personnalisées.  
 
@@ -27,7 +27,7 @@ Dans ce didacticiel, vous allez apprendre à créer une application à l’aide 
 
 ## <a name="build-your-first-microsoft-teams-app-overview"></a>Créer votre première vue d’Microsoft Teams application
 
-Dans les **leçons de mise** en ligne, vous allez apprendre à créer des applications Teams de base. Chaque didacticiel montre comment créer une application Teams simple et réelle tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
+Dans les **leçons de mise en** ligne, vous allez apprendre à créer des applications Teams de base. Chaque didacticiel montre comment créer une application Teams simple et réelle tout en vous présentant des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
 
 ### <a name="teams-app-fundamentals"></a>Teams de base de l’application
 

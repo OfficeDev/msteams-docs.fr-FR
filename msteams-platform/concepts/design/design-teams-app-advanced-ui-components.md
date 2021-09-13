@@ -3,14 +3,14 @@ title: Concevoir votre application avec des composants d’interface utilisateur
 author: heath-hamilton
 description: Découvrez les composants d’interface utilisateur utilisés dans Teams .
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408691"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156947"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur avancés
 
@@ -42,7 +42,7 @@ Les barre de navigation sont une aide à la navigation qui véhicule la hiérarc
 
 ## <a name="left-nav"></a>Navigation gauche
 
-Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre onglet Teams gauche. Dans l’exemple suivant, le navigation gauche se trouve entre la liste de canaux et le contenu de l’onglet.
+Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre onglet Teams de navigation. Dans l’exemple suivant, le navigation gauche se trouve entre la liste de canaux et le contenu de l’onglet.
 
 ### <a name="top-use-cases"></a>Principaux cas d’utilisation
 

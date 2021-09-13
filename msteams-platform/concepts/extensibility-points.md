@@ -3,14 +3,14 @@ title: Points d’entrée pour les applications Teams
 author: heath-hamilton
 description: Décrit l’endroit où les personnes peuvent découvrir et utiliser votre application dans Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702759"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155806"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
@@ -47,7 +47,7 @@ La liste suivante montre comment les fonctionnalités Teams sont couramment util
 
 ## <a name="see-also"></a>Voir aussi
 
-[Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
+[Teams recommandations en matière de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
 [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante

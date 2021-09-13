@@ -3,20 +3,20 @@ title: Combiner des bots avec des onglets
 description: Décrit comment utiliser les onglets et les bots ensemble
 keywords: Développement d’onglets de bots teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 3273369ad1122355b792dc3d429c3a4eff7e1d47
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3053dbca3b1e91683564eb902d8b142fd4a30ddb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566452"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156706"
 ---
 # <a name="combine-bots-with-tabs"></a>Combiner des bots avec des onglets
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Les bots et les onglets fonctionnent bien ensemble et sont souvent combinés en un seul service back-end. Cette section décrit les meilleures pratiques et les modèles courants pour l’utilisation des onglets et des bots ensemble.
+Les bots et les onglets fonctionnent bien ensemble et sont souvent combinés en un seul service back-end. Cette section décrit les meilleures pratiques et les modèles courants d’utilisation des onglets et des bots ensemble.
 
 ## <a name="associating-user-identities-across-bot-and-tab"></a>Association d’identités d’utilisateurs entre le bot et l’onglet
 
@@ -29,7 +29,7 @@ Ce flux fonctionne mieux si votre fournisseur d’identité implémente le proto
 
 ## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Construction de liens profonds vers des onglets dans les messages à partir de votre bot
 
-Vous pouvez utiliser des onglets pour afficher plus de contenu qu’il n’est possible d’y intégrer dans une carte, ou fournir un moyen d’effectuer des tâches complexes de remplissage de formulaire à l’aide de la zone de dessin de l’onglet. Par exemple, pensez à naviguer l’utilisateur vers l’onglet lorsqu’il clique sur la carte à partir de votre bot. Pour ce faire, vous devez encoder le message de votre bot pour inclure une [URL](~/concepts/build-and-test/deep-links.md) de lien profond, soit par le biais du code, soit comme cible de l’action openUrl.
+Vous pouvez utiliser des onglets pour afficher plus de contenu qu’il ne peut y en avoir dans une carte ou fournir un moyen d’effectuer des tâches complexes de remplissage de formulaire à l’aide de la zone de dessin de l’onglet. Par exemple, pensez à naviguer vers l’onglet lorsque l’utilisateur clique sur la carte à partir de votre bot. Pour ce faire, vous devez encoder le message de votre bot pour inclure une [URL](~/concepts/build-and-test/deep-links.md) de lien profond, soit par le biais du code, soit comme cible de l’action openUrl.
 
 Les liens profonds reposent sur un entityId, qui est une valeur opaque qui matric une entité unique dans votre système. Lorsque l’onglet est créé, vous stockez dans l’idéal un état simple, par exemple, un indicateur sur votre système arrière indiquant que l’onglet a été créé dans le canal. Lorsque votre bot construit un message, il peut cibler l’entityId associé à cet onglet.
 

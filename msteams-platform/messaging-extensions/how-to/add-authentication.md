@@ -2,15 +2,15 @@
 title: Ajouter une authentification à votre extension de messagerie
 author: surbhigupta
 description: Comment ajouter l’authentification à une extension de messagerie
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d1ebde822e1a0216edaa1b85ac6142234ae34b78
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c486ddcdda8ea23dc562f17ef42b3fc26a2c73c5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068921"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155761"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -18,7 +18,7 @@ ms.locfileid: "53068921"
 
 ## <a name="identify-the-user"></a>Identifier l’utilisateur
 
-Chaque demande à vos services inclut l’ID d’utilisateur, le nom d’affichage de l’utilisateur et Azure Active Directory’objet.
+Chaque demande à vos services inclut l’ID utilisateur, le nom d’affichage de l’utilisateur et Azure Active Directory’objet.
 
 ```json
 "from": {
@@ -136,6 +136,6 @@ Lorsque la demande de se connecte est terminée et redirige vers votre page, ell
 ## <a name="code-sample"></a>Exemple de code
 |**Exemple de nom** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie des résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

@@ -2,21 +2,21 @@
 title: Ajouter des données de test à votre client Microsoft 365 test
 description: Configurer votre abonnement Office 365 programme pour les développeurs pour tester Microsoft Teams applications
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: test des équipes de programme pour les développeurs d’applications
 ms.date: 11/01/2019
-ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707112"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156826"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client Microsoft 365 test
 
 Vous pouvez tester votre application Microsoft Teams avec des exemples de données avec un abonnement Microsoft 365 développeur.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 1. [Rejoignez le Microsoft 365 développeur,](/office/developer-program/office-365-developer-program)si vous n’avez pas de client test.
 2. [Configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
@@ -29,7 +29,7 @@ Vous pouvez tester votre application Microsoft Teams avec des exemples de donné
 
 ## <a name="allow-users-to-upload-apps"></a>Autoriser les utilisateurs à télécharger des applications
 
-Par défaut, seuls les administrateurs globaux ou les administrateurs Teams service peuvent télécharger (charger une version de version de chargement) d’applications dans un client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester. Pour plus d’informations, [voir gérer les stratégies et paramètres](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)d’application personnalisés dans Teams .
+Par défaut, seuls les administrateurs globaux ou les administrateurs Teams service peuvent télécharger (charger une version de version de chargement) d’applications dans un client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester. Pour plus d’informations, [voir gérer les stratégies et paramètres](/microsoftteams/teams-custom-app-policies-and-settings)d’application personnalisés dans Teams .
 
 ## <a name="create-teams-and-channels-for-testing"></a>Créer des équipes et des canaux pour les tests
 

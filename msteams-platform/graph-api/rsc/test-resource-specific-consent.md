@@ -1,17 +1,17 @@
 ---
 title: Tester les autorisations de consentement propres aux ressources dans Teams
 description: Détails du test du consentement spécifique aux ressources Teams postman
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 89b9dceebfd0732fb29fe497edc000249d073aab
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 66fff68e69f90f49e07cdd87266830f93cb0be2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822219"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155564"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
@@ -24,7 +24,7 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 > Pour tester les autorisations RSC, votre fichier manifeste d’application Teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
 >
 > - **id**: votre ID d’application Azure AD, voir Inscrire votre [application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
-> - **ressource**: Toute chaîne, voir la remarque dans Mettre à jour [votre Teams manifeste d’application.](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **ressource**: n’importe quelle chaîne, voir la remarque dans Mettre à [jour votre Teams manifeste d’application.](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **autorisations d’application**: autorisations RSC pour votre application, voir [Autorisations propres aux ressources.](resource-specific-consent.md#resource-specific-permissions)
 
 ## <a name="example-for-a-team"></a>Exemple pour une équipe
@@ -131,7 +131,7 @@ Exécutez l’ensemble de la collection d’autorisations pour chaque appel d’
 2. Suivez les étapes pour la conversation ou l’équipe : 
     1. [Test a ajouté des autorisations RSC à une équipe à l’aide de Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test ajout d’autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
-3. Vérifiez tous les codes d’état de réponse pour confirmer que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
+3. Vérifiez tous les codes d’état de réponse pour vérifier que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
 
 ## <a name="see-also"></a>Voir aussi
 

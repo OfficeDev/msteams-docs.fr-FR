@@ -1,19 +1,19 @@
 ---
-title: Références de l’API des applications de réunion
+title: Références API des applications de réunion
 author: surbhigupta
 description: Identifier les références d’API d’applications de réunion
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 78fb6d5927241b8fd3697c3bfe40528bb9fd35d0
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: ebb8bb95f9011e45afba59ad7b624bb2494c0b74
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529086"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155642"
 ---
-# <a name="meeting-apps-api-references"></a>Références de l’API des applications de réunion
+# <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
 Les extensibilités de réunion fournissent des API pour transformer l’expérience de réunion :
 

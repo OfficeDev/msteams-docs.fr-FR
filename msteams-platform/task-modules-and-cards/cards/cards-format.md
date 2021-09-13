@@ -2,15 +2,15 @@
 title: Mise en forme du texte dans les cartes
 description: Décrit la mise en forme du texte de la carte Microsoft Teams
 keywords: Format de cartes de bots teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: abbdc0d1fa77744ae061e5430c4450d0e7cf83c7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345717"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155718"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -52,7 +52,7 @@ La mise en forme est différente entre le bureau et les versions mobiles de Team
 Les balises Markdown suivantes ne sont pas pris en charge :
 
 * En-têtes
-* Tableaux
+* Tables
 * Images
 * Texte préformaté
 * Blockquotes
@@ -63,7 +63,7 @@ Vous pouvez utiliser les `\r` `\n` séquences d’échappatoire ou les séquence
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>Différences entre les appareils mobiles et les ordinateurs de bureau pour les cartes adaptatives
 
-Sur le bureau, la mise en forme de markdown de carte adaptative apparaît comme illustré dans l’image suivante dans les navigateurs web et dans l’application Teams client :
+Sur le bureau, la mise en forme de markdown de carte adaptative apparaît comme illustré dans l’image suivante dans les navigateurs web et dans l Teams application cliente :
 
 ![Mise en forme Markdown de carte adaptative dans le client de bureau](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -172,7 +172,7 @@ Utilisez la propriété de masquage d’informations pour masquer des informatio
 > [!NOTE]
 > La fonctionnalité prend uniquement en charge le masquage d’informations côté client. Le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse de point de terminaison HTTPS spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)
 
-Pour masquer des informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` **true**.
+Pour masquer les informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` **true**.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Exemple de carte adaptative avec propriété de masquage
 
@@ -283,7 +283,7 @@ L’image apparaît en mode Étape lorsque l’utilisateur sélectionne l’icô
 
 ![Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
 
-Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner dans votre carte adaptative les images qui doivent avoir cette fonctionnalité.
+Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
 
 > [!NOTE]
 > * Les fonctionnalités de zoom avant et arrière s’appliquent uniquement aux éléments image de type image dans une carte adaptative.
@@ -527,4 +527,4 @@ Vous pouvez tester la mise en forme dans vos propres cartes en modifiant ce code
 ## <a name="see-also"></a>Voir aussi
 
 * [Actions de carte](./cards-actions.md)
-* [Modules de tâches](~/task-modules-and-cards/cards/cards-format.md)
+* [Modules de tâche](~/task-modules-and-cards/cards/cards-format.md)

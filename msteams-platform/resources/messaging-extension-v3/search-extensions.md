@@ -3,14 +3,14 @@ title: Rechercher avec des extensions de messagerie
 description: Décrit comment développer des extensions de messagerie basées sur la recherche
 keywords: teams messaging extensions messaging extensions search
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 515472838ff2ad35ef5dd295043ec27c53edb4f1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a8e4a80835dade53c129e9efe1b21cd6715104ce
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566728"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157007"
 ---
 # <a name="search-with-messaging-extensions"></a>Rechercher avec des extensions de messagerie
 
@@ -99,11 +99,11 @@ Si vous le définissez dans le manifeste, vous activez l’élément de menu Par
 
 ### <a name="handle-onquery-events"></a>Gérer les événements onQuery
 
-Une extension de messagerie reçoit un événement lorsque quelque chose se produit dans la fenêtre d’extension de messagerie `onQuery` ou est envoyé à la fenêtre.
+Une extension de messagerie reçoit un événement lorsqu’un événement se produit dans la fenêtre d’extension de messagerie ou `onQuery` est envoyé à la fenêtre.
 
 Si votre extension de messagerie utilise une page de configuration, votre responsable doit d’abord vérifier les informations de configuration stockées ; si l’extension de messagerie n’est pas configurée, renvoyez une réponse avec un lien vers votre page de `onQuery` `config` configuration. N’ignorez pas que la réponse de la page de configuration est également gérée par `onQuery` . La seule exception est lorsque la page de configuration est appelée par le responsable `onQuerySettingsUrl` ; consultez la section suivante :
 
-Si votre extension de messagerie nécessite une authentification, vérifiez les informations d’état de l’utilisateur . Si l’utilisateur n’est pas inscrit, suivez les instructions de la section [Authentification](#authentication) plus loin dans cette rubrique.
+Si votre extension de messagerie nécessite une authentification, vérifiez les informations d’état de l’utilisateur . Si l’utilisateur n’est pas signé, suivez les instructions de la section [Authentification](#authentication) plus loin dans cette rubrique.
 
 Ensuite, vérifiez si elle est définie ; si c’est le cas, prenez les mesures appropriées, par exemple fournir des `initialRun` instructions ou une liste de réponses.
 
@@ -115,7 +115,7 @@ Les `onQuerySettingsUrl` `onSettingsUpdate` événements et les  événements fo
 
 ![Captures d’écran des emplacements de l Paramètres de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-Votre responsable renvoie l’URL de la page de configuration ; une fois que la page de configuration se ferme, votre responsable accepte et enregistre `onQuerySettingsUrl` `onSettingsUpdate` l’état renvoyé. Il s’agit du cas où la réponse de la page de configuration `onQuery` *n’est* pas receve.
+Votre responsable renvoie l’URL de la page de configuration ; après la fermeture de la page de configuration, votre responsable accepte et enregistre `onQuerySettingsUrl` `onSettingsUpdate` l’état renvoyé. Il s’agit du cas où la réponse de la page de configuration `onQuery` *n’est* pas receve.
 
 ## <a name="receive-and-respond-to-queries"></a>Recevoir des requêtes et y répondre
 
@@ -139,7 +139,7 @@ Outre les propriétés d’activité standard du bot, la charge utile contient l
 |`channelData.team.id`| ID d’équipe (si la demande a été faite dans un canal). |
 |`clientInfo`|Métadonnées facultatives sur le logiciel client utilisé pour envoyer le message d’un utilisateur. L’entité peut contenir deux propriétés :<br>Le `country` champ contient l’emplacement détecté par l’utilisateur.<br>Le `platform` champ décrit la plateforme cliente de messagerie. <br>Pour plus d’informations, *consultez les* [types d’entités non IRI — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
-Les paramètres de requête se trouvent dans l’objet value, qui inclut les propriétés suivantes :
+Les paramètres de demande proprement dits se trouvent dans l’objet value, qui inclut les propriétés suivantes :
 
 | Nom de la propriété | Objectif |
 |---|---|
@@ -265,10 +265,10 @@ Pour obtenir une documentation supplémentaire concernant la carte Office 365 co
 
 La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de deux manières :
 
-* Utilisation de la `preview` propriété dans `attachment` l’objet. La `preview` pièce jointe ne peut être qu’une carte hero ou miniature.
+* Utilisation de la `preview` propriété dans `attachment` l’objet. La pièce jointe peut uniquement être une carte hero ou `preview` miniature.
 * Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
 
-Vous pouvez afficher un aperçu d’une carte de connecteur adaptatif ou Office 365 dans la liste des résultats simplement en fixant sa propriété d’aperçu . Cela n’est pas nécessaire si les résultats sont déjà des cartes miniatures ou hero. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien ne s’affiche.
+Vous pouvez afficher un aperçu d’une carte de connecteur adaptatif ou Office 365 dans la liste des résultats simplement en fixant sa propriété d’aperçu . Cela n’est pas nécessaire si les résultats sont déjà des cartes hero ou miniatures. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien ne s’affiche.
 
 #### <a name="response-example"></a>Exemple de réponse
 
@@ -445,7 +445,7 @@ Chaque demande à vos services inclut l’ID obscurci de l’utilisateur qui a e
 },
 ```
 
-Les valeurs et les valeurs sont garanties pour être celle `id` `aadObjectId` de l’utilisateur Teams authentifié. Ils peuvent être utilisés comme clés pour rechercher des informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID Azure Active Directory client de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
+Les valeurs et les valeurs sont garanties pour être celle `id` `aadObjectId` de l’utilisateur Teams authentifié. Elles peuvent être utilisées comme clés pour rechercher des informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID Azure Active Directory client de l’utilisateur, qui peut être utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également les ID d’équipe et de canal d’où provient la demande.
 
 ## <a name="authentication"></a>Authentification
 

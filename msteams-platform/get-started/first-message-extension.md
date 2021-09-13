@@ -5,12 +5,13 @@ description: Créez une extension de messagerie pour Microsoft Teams à l’aide
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.localizationpriority: none
+ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254287"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155793"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Créez et exécutez votre première extension de messagerie basée sur la recherche dans Microsoft Teams
 

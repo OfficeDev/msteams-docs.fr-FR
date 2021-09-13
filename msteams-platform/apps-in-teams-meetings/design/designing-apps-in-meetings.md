@@ -3,14 +3,14 @@ title: Conception de votre extension de réunion
 author: heath-hamilton
 description: Découvrez comment concevoir des applications dans Teams réunions et obtenir le kit Microsoft Teams’interface utilisateur.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528914"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155641"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension Microsoft Teams réunion
 

@@ -5,12 +5,13 @@ description: Découvrez comment prendre en Microsoft Teams développement d’ap
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.localizationpriority: none
+ms.openlocfilehash: de9b351761f45999ce8cb0438c5d83041727f7f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822226"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155762"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>Conditions préalables : prendre en Microsoft Teams développement d’applications
 

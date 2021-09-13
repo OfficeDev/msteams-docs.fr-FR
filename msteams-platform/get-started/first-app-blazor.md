@@ -5,12 +5,13 @@ description: Créez rapidement une application Microsoft Teams qui affiche un me
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: eb3f5c66a8e7c6f19c96d192fb8b84124b6203d47d54f161633dd12969adbb17
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707155"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155801"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Créer et exécuter votre première application Microsoft Teams avec Blazor
 
@@ -139,7 +140,7 @@ Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 1. Inscrit votre application pour le « chargement de version latéral » dans Microsoft Teams.
 1. Démarre le back-end de votre application en cours d’exécution localement.
 1. Démarre votre application frontale hébergée localement.
-1. Démarre Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est inscrite dans le manifeste de l’application).
+1. Démarre Microsoft Teams dans un navigateur web avec une commande pour demander Teams charger l’application de côté (l’URL est enregistrée dans le manifeste de l’application).
 
 </details>
 
@@ -158,13 +159,13 @@ Le déploiement se compose de deux étapes :
 1. Les ressources cloud nécessaires sont créées. C’est également ce qu’on appelle la mise en service.
 1. Commencez à coder et copiez votre application dans les ressources cloud créées.
 
-> **Aperçu**
+> **APERÇU**
 >
 > La prise en charge des applications Blazor est une nouveauté de Teams Shared Computer Toolkit.  L’approvisionnement et le déploiement sont effectués avec une combinaison de Visual Studio 2019 et du portail de développement pour Teams.
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>Mettre en service et déployer votre application dans Azure App Service
 
-1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud de projet et sélectionnez **Publier.** Vous pouvez également utiliser **l’élément de** menu  >  **Publier** la build.
+1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud de projet et sélectionnez **Publier.** Vous pouvez également utiliser **l’élément**  >  **de** menu Publier la build.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Sélectionner l’opération Publier sur le projet":::
 
@@ -255,7 +256,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Modifier les URL d’onglet personnel":::
 
-1. Sélectionnez **Mettre à jour**.
+1. Sélectionnez **Mettre à jour**.
 
 1. Sélectionnez **Enregistrer**.
 

@@ -5,12 +5,12 @@ description: Découvrez comment créer une extension Microsoft Teams messagerie 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 786d2fb12294ff3cd42a71094ac6c1943bec040ebfee2bf50a9c580721949b71
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706451"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155674"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -82,7 +82,7 @@ Pour ajouter une extension de messagerie, incluez une nouvelle structure JSON de
 
 La définition d’extension est un objet qui a la structure suivante :
 
-| Nom de la propriété | Objectif | Obligatoire ? |
+| Nom de la propriété | Objectif | Obligatoire ? |
 |---|---|---|
 | `botId` | ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Il doit généralement être identique à l’ID de votre application Teams globale. | Oui |
 | `canUpdateConfiguration` | Active **Paramètres’élément** de menu. | Non |
@@ -225,7 +225,7 @@ L’exemple suivant est un objet d’extension de messagerie simple dans le mani
 
 ## <a name="add-your-invoke-message-handlers"></a>Ajouter vos handlers de messages d’appel
 
-Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez gérer le message d’appel initial, collecter des informations de l’utilisateur, puis traiter ces informations et répondre de manière appropriée. Pour ce faire, vous devez d’abord décider du type de commande que vous souhaitez ajouter à votre extension de messagerie et ajouter une [commande d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md) ou ajouter une commande [de recherche.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez gérer le message d’appel initial, collecter des informations auprès de l’utilisateur, puis traiter ces informations et répondre de manière appropriée. Pour ce faire, vous devez d’abord décider du type de commande que vous souhaitez ajouter à votre extension de messagerie et ajouter une [commande d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md) ou ajouter une commande [de recherche.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Extensions de messagerie dans Teams réunions
 
@@ -234,7 +234,7 @@ Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez 
 
 Une fois la réunion commencée, Teams participants peuvent interagir directement avec votre extension de messagerie pendant un appel en direct. Prenons les considérations suivantes lors de la création de votre extension de messagerie en réunion :
 
-1. **Emplacement :** Votre extension de messagerie peut être invoquée à partir de la zone de composition d’un message, de la zone de commande ou @mentioned la conversation de réunion.
+1. **Emplacement :** Votre extension de messagerie peut être invoquée à partir de la zone de composition d’un message, de la zone de commande ou @mentioned dans la conversation de réunion.
 
 1. **Métadonnées**. Lorsque votre extension de messagerie est invoquée, elle peut identifier l’utilisateur et le client à partir `userId` de et `tenantId` . `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser la demande d’API et pour récupérer `userId` `meetingId`  les `GetParticipant` rôles d’utilisateur.
 
@@ -248,7 +248,7 @@ Une fois la réunion commencée, Teams participants peuvent interagir directemen
 * [Créer les commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Déploiement de lien](~/messaging-extensions/how-to/link-unfurling.md)
 
-## <a name="learn-more"></a>Si vous souhaitez en savoir plus
+## <a name="learn-more"></a>En savoir plus
 
 Essayez-le dans un démarrage rapide :
 

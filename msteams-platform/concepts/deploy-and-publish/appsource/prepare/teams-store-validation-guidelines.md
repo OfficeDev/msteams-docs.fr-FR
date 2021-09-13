@@ -4,12 +4,13 @@ description: Décrit les instructions que chaque application envoyée au Teams s
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.localizationpriority: none
+ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408538"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155525"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validation du magasin d’informations
 
@@ -53,7 +54,7 @@ Les noms des fonctionnalités d’application dans les boutons et tout autre tex
 
 Le [Microsoft 365 conformité](/microsoft-365-app-certification/overview) des applications est conçu pour aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité concernant votre application. Si vous publiez une application dans le Teams, vous devez effectuer les niveaux suivants du programme :
 
-* [Publisher vérification :](/azure/active-directory/develop/publisher-verification-overview)permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité de l’intégration des développeurs d’applications au Plateforme d’identités Microsoft. Une fois terminé, un badge bleu « vérifié » s’affiche sur la boîte de dialogue de consentement Azure Active Directory (Azure AD) et d’autres écrans. Pour plus d’informations, voir [les questions fréquemment posées,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)comment marquer votre application comme éditeur vérifié et résoudre les problèmes de vérification de [l’éditeur](/azure/active-directory/develop/troubleshoot-publisher-verification). [](/azure/active-directory/develop/mark-app-as-publisher-verified)
+* [Publisher vérification :](/azure/active-directory/develop/publisher-verification-overview)permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité de l’intégration des développeurs d’applications au Plateforme d'identités Microsoft. Une fois terminé, un badge bleu « vérifié » s’affiche sur la boîte de dialogue de consentement Azure Active Directory (Azure AD) et d’autres écrans. Pour plus d’informations, voir [les questions fréquemment posées,](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)comment marquer votre application comme éditeur vérifié et résoudre les problèmes de vérification de [l’éditeur](/azure/active-directory/develop/troubleshoot-publisher-verification). [](/azure/active-directory/develop/mark-app-as-publisher-verified)
 * [Publisher attestation](/microsoft-365-app-certification/docs/attestation): processus dans lequel vous partagez des informations générales, de gestion des données et de sécurité et de conformité pour aider les clients potentiels à prendre des décisions éclairées sur l’utilisation de votre application.
 
 > [!NOTE]

@@ -3,14 +3,14 @@ title: Format de message du bot
 description: Décrit les détails de la mise en forme des messages du bot
 keywords: teams scenarios channels conversation bot message
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e737cd42d2aa00e3e4f302b4917fef67adaa5645
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566473"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155842"
 ---
 # <a name="message-formatting-for-bots"></a>Mise en forme des messages pour les bots
 
@@ -23,7 +23,7 @@ Microsoft Teams prend en charge les options de mise en forme suivantes :
 | Valeur TextFormat | Description |
 | --- | --- |
 | plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée. |
-| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal selon le cas . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 | xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
@@ -60,7 +60,7 @@ La prise en charge de la mise en forme du texte varie en fonction du type de mes
 
 ### <a name="text-only-messages"></a>Messages texte uniquement
 
-| Style                     | Desktop | iOS | Android |
+| Style                     | Bureau | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |

@@ -2,21 +2,21 @@
 title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement dans Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: nouveautés des équipes
-ms.openlocfilehash: c1c5bb12f4d3599a47cac7727eeeaef1a64a090b
-ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
+ms.openlocfilehash: 8ef06dc5c2d6461b4867150ec8fec773f225b058
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862319"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155604"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
 Découvrez Microsoft Teams fonctionnalités de plateforme généralement disponibles (GA) et dans la prévisualisation du développeur.
 
 > [!IMPORTANT]
-> Vous pouvez désormais obtenir les dernières mises à jour Teams plateforme en vous abonnant au flux rss [ ![ de téléchargement.](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates) Pour plus d’informations, voir [configurer le flux RSS.](#get-latest-updates)
+> Vous pouvez désormais obtenir les dernières mises à jour Teams plateforme en vous abonnant au flux de téléchargement [ ![ de flux](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)RSS. Pour plus d’informations, voir [configurer le flux RSS.](#get-latest-updates)
 
 ## <a name="ga-features"></a>Fonctionnalités ga
 
@@ -28,7 +28,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
 |08/30/2021| La fonctionnalité de scènes en mode ensemble personnalisé combine les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés. | [Scènes personnalisées du mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduction d’un guide pas à pas pour créer un bot Teams avec l' sign-on unique (SSO). | [Guide pas à pas pour créer un bot Teams avec l' cesso](sbs-bots-with-sso.yml) |
@@ -56,7 +56,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 |03/05/2021|Réordez les onglets des applications personnelles.|[Réordesser l’onglet de conversation dans les applications personnelles](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
 |03/04/2021|Masquage d’informations dans les cartes adaptatives.| [Masquage d’informations dans les cartes adaptatives](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Ajout de fonctionnalités d’emplacement. <br/> Les informations sur les fonctionnalités d’emplacement sont ajoutées dans la vue d’ensemble des fonctionnalités de l’appareil, les autorisations natives des appareils, l’intégration des fonctionnalités multimédias et les fichiers de fonctionnalités de scanneur de QR ou de code-barres.|[Vue](concepts/device-capabilities/device-capabilities-overview.md)d’ensemble, demander des autorisations d’appareil, intégrer des [fonctionnalités multimédias,](concepts/device-capabilities/mobile-camera-image-permissions.md)intégrer des fonctionnalités de QR ou de scanneur de [code-barres,](concepts/device-capabilities/qr-barcode-scanner-capability.md)intégrer des [fonctionnalités](concepts/device-capabilities/native-device-permissions.md) [d’emplacement](concepts/device-capabilities/location-capability.md) |
-|02/18/2021|Ajout de la fonctionnalité de QR ou de scanneur de code-barres. <br/> Les informations sur les fonctionnalités de QR ou de scanneur de code-barres sont ajoutées dans la vue d’ensemble des fonctionnalités de l’appareil, les autorisations natives de l’appareil et l’intégration des fichiers de fonctionnalités multimédias.|[Vue d’ensemble,](concepts/device-capabilities/device-capabilities-overview.md) [demander des autorisations d’appareil,](concepts/device-capabilities/native-device-permissions.md) [intégrer des fonctionnalités multimédias,](concepts/device-capabilities/mobile-camera-image-permissions.md)intégrer la QR ou la fonctionnalité de [scanneur de code-barres](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|02/18/2021|Ajout de la fonctionnalité de QR ou de scanneur de code-barres. <br/> Les informations sur les fonctionnalités de QR ou de scanneur de code-barres sont ajoutées dans la vue d’ensemble des fonctionnalités de l’appareil, les autorisations natives de l’appareil et l’intégration des fichiers de fonctionnalités multimédias.|[Vue d’ensemble,](concepts/device-capabilities/device-capabilities-overview.md) [demander des autorisations d’appareil,](concepts/device-capabilities/native-device-permissions.md) [intégrer des fonctionnalités multimédias,](concepts/device-capabilities/mobile-camera-image-permissions.md)intégrer la QR ou la fonctionnalité de scanneur de [code-barres](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|Ajout de la vue d’ensemble des fonctionnalités de l’appareil. <br/> Les informations sur les fonctionnalités du microphone sont ajoutées dans les autorisations natives de l’appareil et intègrent des fichiers de fonctionnalités multimédias.|[Vue d’ensemble,](concepts/device-capabilities/device-capabilities-overview.md) [demander des autorisations d’appareil,](concepts/device-capabilities/native-device-permissions.md) [intégrer des fonctionnalités multimédias](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 
 <br>
@@ -69,7 +69,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Intégration de la plateforme d’identité Teams Shared Computer Toolkit et Visual Studio Code pour les onglets.|[Authentification unique avec authentification Teams Shared Computer Toolkit et Visual Studio Code pour les onglets](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams manifeste de l’application mis à jour vers la version 1.8.|[Référence : schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -103,7 +103,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour créer des liens profonds vers ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre `legacy.replyToId` .  |
 | 11/05/2019 | Sign-on unique using the Teams JavaScript SDK. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -133,7 +133,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version finale de Teams. Dans le cadre de ce travail, la section Onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La mise en place de Node JS et de .NET/C# a été mise à jour pour utiliser App Studio dans Teams et une nouvelle section a été ajoutée sur l’hébergement d’applications Teams node dans Azure. | Commencer à travailler sur la plateforme Microsoft Teams avec [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)et App Studio, commencer sur la plateforme Microsoft Teams avec [Node JS](~/get-started/get-started-nodejs-app-studio.md)et App Studio, héberger votre application [node Teams dans Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -172,7 +172,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 La prévisualisation pour développeurs est un programme public qui fournit un accès en avant-première aux fonctionnalités Teams plateforme.  
 
-| **Date** | **Notes** | **Rubriques modifiées** |
+| **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
 |06/23/2021| API Détails de la réunion et événements de Teams en temps réel. | [Créer des applications pour les réunions Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Comportement de désinstallation pour une application personnelle avec un bot | [Désinstaller les mises à jour de comportement dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

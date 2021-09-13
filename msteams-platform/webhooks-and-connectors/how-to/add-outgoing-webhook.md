@@ -3,15 +3,15 @@ title: Créer un webhook sortant
 author: laujan
 description: explique comment créer un webhook sortant
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: 'onglets teams : message actionnable de webhook sortant vérifiant le webhook'
-ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2039ffdbc307b266e7bc0f93c1638450a8be9037
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704302"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155689"
 ---
 # <a name="create-outgoing-webhook"></a>Créer un webhook sortant
 

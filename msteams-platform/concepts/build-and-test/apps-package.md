@@ -1,14 +1,14 @@
 ---
 title: Package de votre application
 description: Découvrez comment mettre en package votre application Microsoft Teams pour les tests, le téléchargement et la publication dans le Store.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: fc489f6f00a267cde3ca5fdc8852240ad2f07f4dcc7912cba9550728fdcd9402
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703885"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156742"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Créer un package Microsoft Teams’application
 

@@ -2,14 +2,14 @@
 title: Optimisez votre robot grâce à la limitation du débit dans Teams
 description: Limitation des taux et meilleures pratiques en Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
-keywords: limitation des taux de bots teams
-ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: medium
+keywords: Limitation des taux de bots teams
+ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345592"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155621"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
@@ -85,11 +85,11 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 
 Vous pouvez effectuer des tentatives de retour et des tentatives à l’aide de [la gestion des erreurs temporaires.](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29) Pour obtenir des instructions sur l’obtention et l’installation du package NuGet, voir l’ajout du bloc d’application de gestion des erreurs [temporaires à votre solution.](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN) Voir aussi [la gestion des erreurs temporaires.](/azure/architecture/best-practices/transient-faults)
 
-Après avoir découvert l’exemple de détection d’exceptions temporaires, prenons l’exemple de la fonction d’inserrable exponentielle. Vous pouvez utiliser l’arrêt exponentiel au lieu de réessayer en cas d’échec.
+Après avoir passé en détail l’exemple de détection des exceptions temporaires, prenons l’exemple de la fonction de retour exponentiel. Vous pouvez utiliser l’arrêt exponentiel au lieu de réessayer en cas d’échec.
 
 ## <a name="backoff-example"></a>Exemple de mise en arrière
 
-En plus de détecter les limites de taux, vous pouvez également effectuer une limitation exponentielle.
+En plus de détecter les limites de taux, vous pouvez également effectuer une coupure exponentielle.
 
 Le code suivant illustre un exemple de coupure exponentielle :
 
@@ -131,19 +131,19 @@ Le tableau suivant fournit les limites par bot par thread :
 
 | Scénario | Période en secondes | Nombre maximal d’opérations autorisées |
 | --- | --- | --- |
-| Envoyer à la conversation | 1  | 7  |
+| Envoyer à la conversation | 1 | 7  |
 | Envoyer à la conversation | 2 | 8  |
 | Envoyer à la conversation | 30 | 60 |
 | Envoyer à la conversation | 3600 | 1800 |
-| Créer une conversation | 1  | 7  |
+| Créer une conversation | 1 | 7  |
 | Créer une conversation | 2 | 8  |
 | Créer une conversation | 30 | 60 |
 | Créer une conversation | 3600 | 1800 |
-| Obtenir les membres de la conversation| 1  | 14  |
+| Obtenir les membres de la conversation| 1 | 14  |
 | Obtenir les membres de la conversation| 2 | 16  |
 | Obtenir les membres de la conversation| 30 | 120 |
 | Obtenir les membres de la conversation| 3600 | 3600 |
-| Obtenir des conversations | 1  | 14  |
+| Obtenir des conversations | 1 | 14  |
 | Obtenir des conversations | 2 | 16  |
 | Obtenir des conversations | 30 | 120 |
 | Obtenir des conversations | 3600 | 3600 |
@@ -155,21 +155,21 @@ Vous pouvez également gérer la limite de taux à l’aide de la limite par thr
 
 ## <a name="per-thread-limit-for-all-bots"></a>Limite par thread pour tous les bots
 
-La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer dans une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
+La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer au sein d’une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
 
 Le tableau suivant fournit la limite par thread pour tous les bots :
 
 | Scénario | Période en secondes | Nombre maximal d’opérations autorisées |
 | --- | --- | --- |
-| Envoyer à la conversation | 1  | 14  |
+| Envoyer à la conversation | 1 | 14  |
 | Envoyer à la conversation | 2 | 16  |
-| Créer une conversation | 1  | 14  |
+| Créer une conversation | 1 | 14  |
 | Créer une conversation | 2 | 16  |
-| Créer une conversation| 1  | 14  |
+| Créer une conversation| 1 | 14  |
 | Créer une conversation| 2 | 16  |
-| Obtenir les membres de la conversation| 1  | 28 |
+| Obtenir les membres de la conversation| 1 | 28 |
 | Obtenir les membres de la conversation| 2 | 32 |
-| Obtenir des conversations | 1  | 28 |
+| Obtenir des conversations | 1 | 28 |
 | Obtenir des conversations | 2 | 32 |
 
 ## <a name="next-step"></a>Étape suivante

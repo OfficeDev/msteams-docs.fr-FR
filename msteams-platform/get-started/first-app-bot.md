@@ -5,12 +5,13 @@ description: Créez un bot de conversation pour Microsoft Teams à l’aide du K
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 2b39dc51c1c175e738b88376a298df82f25a582a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345640"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155798"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Créer votre premier bot de conversation pour Microsoft Teams
 
@@ -133,7 +134,7 @@ Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 1. Inscrit votre application pour le « chargement de version latéral » dans Microsoft Teams.
 1. Démarre le système principal de votre application en cours d’exécution localement à [l’aide des outils Azure Function Core](/azure/azure-functions/functions-run-local?#start).
 1. Démarre un tunnel ngrok pour Teams communiquer avec votre application.
-1. Démarre Microsoft Teams avec une commande pour indiquer Teams charger une version de chargement de version de l’application.
+1. Démarre Microsoft Teams avec une commande pour indiquer Teams charger une version de version de l’application.
 
 </details>
 
@@ -144,7 +145,7 @@ Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 Pour exécuter correctement votre application dans Teams, vous devez avoir un compte de développement Microsoft 365 qui permet le chargement de version test d’une application. Pour plus d’informations sur l’ouverture d’un compte, voir [Conditions préalables](prerequisites.md#enable-sideloading).
 
 > [!IMPORTANT]
-> Actuellement, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-High et DOD.
+> Pour l’instant, le chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-High et DOD.
 
 > [!TIP]
 > Vérifier l’absence de problèmes avant de charger la version test de votre application en utilisant [l’outil de validation d’application](https://dev.teams.microsoft.com/appvalidation.html) qui est inclus dans le kit de ressources. Corrigez les erreurs pour charger correctement la version test de l’application.

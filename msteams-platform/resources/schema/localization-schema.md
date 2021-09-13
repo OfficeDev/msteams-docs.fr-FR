@@ -2,15 +2,15 @@
 title: Localiser la référence de schéma JSON
 description: Décrit le schéma de localisation pris en charge par le fichier de localisation pour Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Localisation du schéma de manifeste teams
 ms.date: 05/20/2019
-ms.openlocfilehash: 7a7c5e61e8e9db2526a725d676a237d9c37f7d71ea74d42117e0b59b51cae969
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 8c5f32fb8244f70fadc610ed7c193d97f11171f2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705544"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155673"
 ---
 # <a name="localize-json-schema-reference"></a>Localiser la référence de schéma JSON
 

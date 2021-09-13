@@ -2,15 +2,15 @@
 title: Créer et envoyer le module de tâches
 author: surbhigupta
 description: Comment gérer l’action d’appel initiale et répondre avec un module de tâche à partir d’une commande d’extension de messagerie d’action
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c93b660e3187328f022be5108456d9e1064cd557
-ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
+ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53534606"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155521"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 
@@ -30,7 +30,7 @@ Dans le processus de la demande d’appel initiale, votre service reçoit un obj
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory’objet de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.channel.id`| ID de canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| ID d’équipe (si la demande a été faite dans un canal). |
@@ -80,7 +80,7 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory’objet de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l’ID du message auquel ce message est une réponse. |
@@ -131,7 +131,7 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory’objet de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l’ID du message auquel ce message est une réponse. |
@@ -230,7 +230,7 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Azure Active Directory’objet de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.channel.id`| ID de canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| ID d’équipe (si la demande a été faite dans un canal). |
@@ -641,7 +641,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>Répondre à fetchTask
+## <a name="respond-to-the-fetchtask"></a>Répondre à la tâche fetchTask
 
 Répondez à la demande d’appel avec un objet qui contient un objet avec la carte adaptative ou l’URL web, ou `task` un message de chaîne `taskInfo` simple.
 

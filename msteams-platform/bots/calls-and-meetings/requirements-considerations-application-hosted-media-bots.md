@@ -2,15 +2,15 @@
 title: Conditions requises et considérations pour les robots multimédias hébergés par l’application
 description: Comprendre les exigences et considérations importantes liées à la création de bots multimédias hébergés par l’application pour Microsoft Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: ordinateur windows windows server azure hébergé par l’application
 ms.date: 11/16/2018
-ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e8f776b647beda2745a7bdbc03794e491a942b54
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702829"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156863"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Conditions requises et considérations pour les robots multimédias hébergés par l’application
 
@@ -60,7 +60,7 @@ La section suivante fournit des détails sur l’évolutivité et les performanc
 ## <a name="scalability-and-performance-considerations"></a>Considérations relatives à l’évolutivité et aux performances
 
 Les bots multimédias hébergés par l’application nécessitent les considérations suivantes en ce qui a lieu en ce qui a été question de l’évolutivité et des performances :
-- Les bots multimédias hébergés par l’application nécessitent plus de capacité de calcul et de réseau (bande passante) que les bots de messagerie et peuvent subir des coûts d’exploitation beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’évolutivité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut gérer. Un bot vidéo peut être en mesure de supporter une ou deux sessions multimédias simultanées par cœur d’UC (si vous utilisez les formats vidéo RGB24 ou NV12 « bruts »).
+- Les bots multimédias hébergés par l’application nécessitent plus de capacité de calcul et de bande passante réseau que les bots de messagerie et peuvent subir des coûts d’exploitation beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’évolutivité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut gérer. Un bot vidéo peut être en mesure de supporter une ou deux sessions multimédias simultanées par cœur d’UC (si vous utilisez les formats vidéo RGB24 ou NV12 « bruts »).
 - La plateforme Real-time Media ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la VM pour décharger le codage/décodage vidéo H.264. Au lieu de cela, le code vidéo et le décodage sont effectués dans le logiciel sur l’UC. Si un processeur graphique est disponible, le bot peut en tirer parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
 - L’instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de série Dv2 est recommandée. Pour les autres types d’ordinateur virtuel Azure, un système avec quatre processeurs virtuels (vCPU) est la taille minimale requise. Des informations détaillées sur les types de vm Azure sont disponibles dans [la documentation Azure.](/azure/virtual-machines/windows/sizes-general) 
 
@@ -80,7 +80,7 @@ Les exemples de bots multimédias hébergés par l’application sont les suivan
 - La plateforme Real-time Media ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la VM pour décharger le codage ou le décodage vidéo H.264. Au lieu de cela, le code vidéo et le décodage sont effectués dans le logiciel sur l’UC. Si un processeur graphique est disponible, le bot en tire parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
 - L’instance de la VM hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de série Dv2 est recommandée. Pour les autres types d’ordinateur virtuel Azure, un système avec 4 processeurs virtuels (vCPU) est la taille minimale requise. Pour plus d’informations sur les types de vm Azure, voir [la documentation Azure.](/azure/virtual-machines/windows/sizes-general)
 
-La section suivante fournit des exemples qui illustrent différents scénarios de médias locaux.
+La section suivante fournit des exemples illustrant différents scénarios de médias locaux.
 
 ## <a name="samples-and-additional-resources"></a>Exemples et ressources supplémentaires
 

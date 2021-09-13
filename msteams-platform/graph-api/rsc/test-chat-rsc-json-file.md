@@ -1,17 +1,17 @@
 ---
 title: Tester le consentement spécifique à une ressource pour une conversation dans Teams
 description: Comment tester le consentement spécifique à une ressource pour une conversation dans Teams à l’aide de Postman
-localization_priority: Normal
+ms.localizationpriority: medium
 author: jecha
 ms.author: jecha
 ms.topic: how-to
 keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 50fc8919e438bc849a76cb4d9a7f49449e7ff072dfae18edb66db23e7991d8d1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 78b5eb14aed2c9b2b26329defd0753222a79a5f2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708038"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155681"
 ---
 # <a name="test-chat-rsc-postman-collection-for-json"></a>Test de la collection Postman RSC de conversation pour JSON
 

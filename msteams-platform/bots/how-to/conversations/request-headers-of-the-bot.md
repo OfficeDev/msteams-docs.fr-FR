@@ -2,17 +2,17 @@
 title: Envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot
 description: décrit comment envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot.
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: a775c09589f59a6d487bf403544afccd5b59f797ac12cf60a9deb1fc2de16644
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: bdfe224824fb7fd42fdc8ea93dc7d492bc731218
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706668"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155620"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot
 
-Les demandes sortantes en cours au bot ne contiennent pas dans l’en-tête ou l’URL d’informations qui permettent aux bots d’router le trafic sans décompresser toute la charge utile. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID client dans les en-têtes.
+Les demandes sortantes en cours au bot ne contiennent pas dans l’en-tête ou l’URL d’informations qui permettent aux bots d’router le trafic sans décompresser toute la charge utile. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID de client dans les en-têtes.
 
 ## <a name="request-header-fields"></a>Champs d’en-tête de requête
 

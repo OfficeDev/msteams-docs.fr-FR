@@ -4,12 +4,13 @@ description: Pour publier votre application dans Microsoft Teams store, vous ave
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708651"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156815"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Créer un compte de développeur de l’Espace partenaires
 
@@ -27,7 +28,7 @@ Obtenez des réponses à certaines questions courantes sur la gestion de votre c
 
 Vous pouvez créer un compte Espace partenaires de l’une des manières suivantes :
 
-* Si vous débutez avec l’Espace partenaires et que vous n’avez pas de compte réseau Microsoft, créez un compte à l’aide de la page d’inscription de [l’Espace partenaires.](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)
+* Si vous débutez avec l’Espace partenaires et que vous n’avez pas de compte réseau Microsoft, créez un compte à l’aide de la page d’inscription à [l’Espace partenaires.](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)
 * Si vous êtes déjà inscrit à Microsoft Partner Network, créez un compte directement à partir de l’Espace partenaires à l’aide des inscriptions à l’Espace [partenaires Microsoft existantes.](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)
 
 <br>
@@ -72,7 +73,7 @@ Pour plus d’informations, voir Gérer votre compte [via l’Partner Center.](/
 
 <details>
 
-<summary><b>Mon numéro de téléphone n’a pas de code de zone, comment puis-je l’ajouter à mon profil ?</b></summary>
+<summary><b>Mon numéro de téléphone n’a pas de code de zone, alors comment puis-je l’ajouter à mon profil ?</b></summary>
 
 Le numéro de téléphone est en trois parties : code pays, code de zone et numéro de téléphone. Si votre numéro de téléphone n’inclut pas de code de zone, laissez la deuxième zone vide et complétez la troisième zone.
 
@@ -118,7 +119,7 @@ Une fois le processus de vérification terminé, l’état de votre inscription 
 
 <details>
 
-<summary><b>L’état de vérification de mon compte n’a pas dépassé la propriété de l’e-mail. Comment dois-je continuer ?</b></summary>
+<summary><b>L’état de vérification de mon compte n’a pas été avancé au-delà de la propriété de l’e-mail. Comment dois-je continuer ?</b></summary>
 
 Pendant le processus **de vérification de la** propriété de l’e-mail, un message électronique de vérification est envoyé au contact principal. Vérifiez la boîte de réception de votre contact principal pour obtenir un e-mail de **maccount@microsoft.com** avec l’action de ligne d’objet requise : Vérifiez votre compte de messagerie auprès de **Microsoft** et terminez le processus de vérification du courrier électronique. L’e-mail de vérification est envoyé à l’adresse répertoriée dans les paramètres de votre compte De l’Partner Center.
 
@@ -126,7 +127,7 @@ N’oubliez pas les informations suivantes sur le processus de vérification du 
 
 * Le lien de vérification du courrier électronique n’est valide que pendant sept jours.
 * Vous pouvez demander à renvoyer l’e-mail en visitant la page de votre profil de partenaire et en sélectionnant le lien renvoyer l’e-mail de **vérification.**
-* Pour vous assurer que vous recevez le courrier électronique, **la** liste microsoft.com en tant que domaine sécurisé et vérifiez vos dossiers de courrier indésirable.
+* Pour vous assurer que vous recevez le courrier électronique, la liste microsoft.com **en** tant que domaine sécurisé et vérifiez vos dossiers de courrier indésirable.
 
 <br>
 
@@ -194,7 +195,7 @@ Les tickets de support sont résolus dans une semaine. Recherchez les mises à j
 
 Envoyez un courrier électronique <a href="mailto:teamsubm@microsoft.com">à teamsubm@microsoft.com</a> avec les détails suivants :
 
-* **Ligne d’objet**: Problème de compte de l’Centre partenaires pour *<your app name>* .
+* **Ligne d’objet**: Problème de compte de l’Centre partenaires *pour le nom de votre application.*
 * **Corps de l’e-mail**:
     * Numéro de ticket de support.
     * Votre ID vendeur.
@@ -211,7 +212,7 @@ Envoyez un courrier électronique <a href="mailto:teamsubm@microsoft.com">à tea
 Les ressources suivantes peuvent également vous aider :
 
 * [Microsoft 365 faq sur la soumission d’applications.](/office/dev/store/appsource-submission-faq)
-* [Documentation marketplace commerciale.](/azure/marketplace/)
+* [Documentation marketplace commerciale](/azure/marketplace/).
 
 <br>
 

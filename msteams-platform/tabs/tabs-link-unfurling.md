@@ -1,15 +1,16 @@
 ---
 title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez comment déployer un lien, ouvrir l’affichage Étape et épingler un onglet avec Microsoft Teams’application.
+description: Découvrez comment déployer un lien, ouvrir l’affichage de la scène et épingler un onglet avec Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.localizationpriority: none
+ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398675"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156748"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -91,7 +92,7 @@ Voici le processus d’appel de l’affichage de l’étape :
 * Le bot répond par un `200` code.
 
 > [!NOTE]
-> Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsqu’un utilisateur sélectionne **Afficher** sur un client mobile, l’utilisateur est conduit vers le navigateur de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
+> Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsqu’un utilisateur sélectionne **Afficher** sur un client mobile, l’utilisateur est conduit au navigateur de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Appeler l’affichage de l’étape par le biais d’un lien profond
 
@@ -115,33 +116,33 @@ Voici les exemples de liens profonds pour appeler l’affichage de l’étape :
 
 **Exemple 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl »::"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
 
 **Exemple 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl »::"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
 
 > [!NOTE]
 > * Le `name` lien profond est facultatif. S’il n’est pas inclus, le nom de l’application le remplace.
 > * Le lien profond peut également être transmis via une `OpenURL` action.
-> * Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsque les utilisateurs sélectionnent un lien profond vers une vue d’étape, ils sont conduits vers le navigateur web de leur appareil. Le navigateur web ouvre l’URL spécifiée dans le `websiteUrl` paramètre du lien profond.
+> * Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsque les utilisateurs sélectionnent un lien profond vers une vue d’étape, ils sont conduits au navigateur web de leur appareil. Le navigateur web ouvre l’URL spécifiée dans le `websiteUrl` paramètre du lien profond.
 > * Lorsque vous lancez une étape à partir d’un certain contexte, assurez-vous que votre application fonctionne dans ce contexte. Par exemple, si votre vue d’étape est lancée à partir d’une application personnelle, vous devez vous assurer que votre application a une étendue personnelle.
 
 ## <a name="tab-information-property"></a>Propriété d’informations sur l’onglet
 
 | Nom de la propriété | Type | Nombre de caractères | Description |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
-| `name` | String | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
-| `contentUrl` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
-| `websiteUrl?` | String | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
-| `removeUrl?` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
+| `entityId` | Chaîne | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
+| `name` | Chaîne | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
+| `contentUrl` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
+| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
+| `removeUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C# |Node.js|
+| Exemple de nom | Description | C # |Node.js|
 |-------------|-------------|------|----|
-|Onglet en vue de l’étape |Microsoft Teams exemple d’application d’onglet pour montrer l’onglet en vue de la phase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Onglet en vue de la phase |Microsoft Teams exemple d’application d’onglet pour montrer l’onglet en vue de la phase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
 
 ## <a name="see-also"></a>Voir aussi

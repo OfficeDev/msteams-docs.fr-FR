@@ -1,15 +1,15 @@
 ---
 title: Obtenir un contexte Teams pour votre onglet
 description: Décrit comment obtenir du contexte utilisateur dans vos onglets
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 32c8606d172a785356107750eac8168b1987d7f6b41d44f02297f0c19d22aa61
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709329"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157001"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -38,7 +38,7 @@ Vous pouvez accéder aux informations de contexte de deux façons :
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obtenir le contexte en insérant des valeurs d’espace réservé d’URL
 
-Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft Teams remplace les espaces réservés par les valeurs appropriées lorsqu’il détermine l’URL de configuration ou de contenu. Les espaces disponibles incluent tous les champs de [l’objet de](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) contexte. Voici les scénarios les plus courants :
+Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft Teams remplace les espaces réservés par les valeurs appropriées lorsqu’il détermine l’URL de configuration ou de contenu. Les espaces réservé disponibles incluent tous les champs de [l’objet](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) de contexte. Voici les scénarios les plus courants :
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: ID que vous [avez](~/concepts/build-and-test/deep-links.md) fourni lors de la génération d’un lien profond pour un élément spécifique dans cet onglet. Cela doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, le défilement vers ou l’activation d’un élément de contenu spécifique.

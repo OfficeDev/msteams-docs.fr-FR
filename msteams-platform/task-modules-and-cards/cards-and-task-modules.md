@@ -3,13 +3,13 @@ title: Cartes et modules de tâche
 description: Cartes et modules de tâche.
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 5980759e1a6650dd801b92fae804994a776dd6fd8edbfb257a915f9092d7a1f9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: 245d2d27f62dba27c9468be84cf9aa514b319923
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709558"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155725"
 ---
 # <a name="cards-and-task-modules"></a>Cartes et modules de tâche
 
@@ -28,7 +28,7 @@ Les types de cartes suivants sont pris en charge dans les bots pour Teams :
 * Carte miniature
 * Collections de cartes
 
-Vous pouvez formater le texte de la carte à l’aide d’un sous-ensemble de formats XML ou HTML ou Markdown, en fonction du type de carte. Vous pouvez ajouter et répondre à des actions de carte qui ouvrent une URL, envoient des messages et de la charge utile au bot ou lancent le flux OAuth.
+Vous pouvez formater le texte d’une carte à l’aide d’un sous-ensemble de formats XML, HTML ou Markdown, en fonction du type de carte. Vous pouvez ajouter et répondre à des actions de carte qui ouvrent une URL, envoient des messages et de la charge utile au bot ou lancent le flux OAuth.
 
 Vous pouvez appeler les modules de tâche dans des onglets de canal ou personnels, des bots ou des liens profonds. L’expérience de votre utilisateur pour les flux de travail nécessitant une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir Teams bots à l’aide de boutons sur les cartes adaptatives et les cartes Bot Framework.
 

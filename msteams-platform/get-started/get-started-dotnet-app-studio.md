@@ -3,15 +3,15 @@ title: 'Didacticiel - Créer votre première application à l’aide de C #'
 description: Découvrez comment commencer à créer des applications Microsoft Teams avec C# ou .NET.
 keywords: mise en place de .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707340"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155790"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Créer votre première application Teams en C #
 
@@ -74,7 +74,7 @@ Vous pouvez créer et exécuter le smaple après son clonage.
 **Pour créer et exécuter l’exemple cloné**
 
 1. Ouvrez le fichier de solution **Microsoft.Teams. Samples.HelloWorld.sln** à partir du répertoire **Microsoft-Teams-Samples/samples/app-hello-world/csharp** de l’exemple.
-1. Sélectionnez **Build Solution** dans **le** menu Build.
+1. Sélectionnez **Solution de** build dans **le** menu Build.
 1. Sélectionnez **la touche F5** ou démarrez **le débogage** dans le menu **Débogage** pour exécuter l’exemple.
 
     Lorsque l’application démarre, une fenêtre de navigateur s’ouvre avec la racine de l’application lancée. Vous pouvez utiliser les URL suivantes pour vérifier que toutes les URL d’application sont en cours de chargement :
@@ -96,7 +96,7 @@ Vous pouvez créer et exécuter le smaple après son clonage.
 
 Pour des tests rapides, vous pouvez exécuter l’application sur votre ordinateur et y créer un tunnel via un point de terminaison web. [`ngrok`](https://ngrok.com) est un outil gratuit avec lequel vous pouvez obtenir une adresse web, telle que `https://d0ac14a5.ngrok.io` . Vous pouvez [télécharger et installer](https://ngrok.com/download) ngrok et l’ajouter à un emplacement dans votre `PATH` .
 
-Après avoir `ngrok` installé, ouvrez une nouvelle fenêtre terminal et exécutez la commande suivante pour créer un tunnel :
+Après l’installation, `ngrok` ouvrez une nouvelle fenêtre terminal et exécutez la commande suivante pour créer un tunnel :
 
 ```bash
 ngrok http 44327 -host-header=localhost:44327
@@ -146,9 +146,9 @@ Visual Studio la prise en charge intégrée du déploiement d’applications pou
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
-1. Sélectionnez **Hello World** et **importer.** **L’application Hello World** est importée dans le Portail des développeurs. 
+1. Sélectionnez **Hello World** et **sélectionnez Importer.** **L’application Hello World** est importée dans le Portail des développeurs. 
 
-    Vous pouvez configurer votre application à l’aide du portail Teams développeur. Le manifeste se trouve sous Distribuer. Vous pouvez utiliser le manifeste pour configurer les fonctionnalités, les ressources requises et d’autres attributs importants pour votre application. Pour plus d’informations sur la configuration de votre application à l’aide du Portail du développeur, voir [Teams Portail du développeur.](../concepts/build-and-test/teams-developer-portal.md)
+    Vous pouvez configurer votre application à l’aide du portail Teams développeur. Le manifeste se trouve sous Distribuer. Vous pouvez utiliser le manifeste pour configurer des fonctionnalités, des ressources requises et d’autres attributs importants pour votre application. Pour plus d’informations sur la configuration de votre application à l’aide du Portail du développeur, voir [Teams Portail du développeur.](../concepts/build-and-test/teams-developer-portal.md)
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---

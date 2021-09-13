@@ -3,14 +3,14 @@ title: Conversations de canal et de groupe avec un bot
 author: surbhigupta
 description: Comment envoyer, recevoir et gérer des messages pour un bot dans une conversation de canal ou de groupe.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8ff89cf88bf56a905bdf507e1bc6e4ebbbd691f70d94289c8e206024c5657fa9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708412"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155558"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -18,7 +18,7 @@ ms.locfileid: "57708412"
 
 Pour installer le bot Microsoft Teams dans une conversation d’équipe ou de groupe, ajoutez l’étendue `teams` `groupchat` ou l’étendue à votre bot. Cela permet à tous les membres de la conversation d’interagir avec votre robot. Une fois le bot installé, il a accès aux métadonnées sur la conversation, telles que la liste des membres de la conversation. En outre, lorsqu’il est installé dans une équipe, le bot a accès aux détails de cette équipe et à la liste complète des canaux.
 
-Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans @mentioning lui.
+Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans @mentioning'
 
 > [!NOTE]
 > Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
@@ -39,7 +39,7 @@ Ensuite, vous pouvez récupérer des mentions à l’aide de l’objet et ajoute
 
 ## <a name="work-with-mentions"></a>Travailler avec des mentions
 
-Chaque message envoyé à votre bot à partir d’un groupe ou d’un canal contient un @mention dont le nom est dans le texte du message. Votre bot peut également récupérer d’autres utilisateurs mentionnés dans un message et ajouter des mentions à tous les messages qu’il envoie.
+Chaque message envoyé à votre bot à partir d’un groupe ou d’un canal contient un @mention avec son nom dans le texte du message. Votre bot peut également récupérer d’autres utilisateurs mentionnés dans un message et ajouter des mentions à tous les messages qu’il envoie.
 
 Vous devez également les @mentions du contenu du message reçu par votre bot.
 
@@ -148,7 +148,7 @@ Votre bot peut mentionner d’autres utilisateurs dans les messages publiés dan
 
 `Mention`L’objet possède deux propriétés que vous devez définir à l’aide des propriétés suivantes :
 
-* Incluez <at>@username</at> dans le texte du message.
+* Incluez *@username* dans le texte du message.
 * Incluez l’objet mention à l’intérieur de la collection entities.
 
 Le SDK Bot Framework fournit des méthodes d’aide et des objets pour créer des mentions.

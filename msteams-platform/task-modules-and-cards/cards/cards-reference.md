@@ -1,15 +1,15 @@
 ---
 title: Types de cartes
 description: Décrit toutes les cartes et actions de carte disponibles pour les bots dans Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705480"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156887"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -420,7 +420,7 @@ Le code suivant montre un exemple de carte de liste :
 
 ## <a name="office-365-connector-card"></a>carte Office 365 connecteur
 
-Vous pouvez utiliser une carte connecteur Office 365 qui fournit une disposition flexible et constitue un excellent moyen d’obtenir des informations utiles. La carte Office 365 connecteur est prise en charge dans Teams, et non dans Bot Framework. Cette carte fournit une disposition flexible avec plusieurs sections, champs, images et actions. Cette carte contient une carte de connecteur afin qu’elle puisse être utilisée par des bots. Pour plus d’informations sur les différences entre les cartes de connecteur et la carte connecteur Office 365, consultez des informations supplémentaires sur [la carte Office 365 connecteur.](#additional-information-on-the-office-365-connector-card)
+Vous pouvez utiliser une carte connecteur Office 365 qui fournit une disposition flexible et constitue un excellent moyen d’obtenir des informations utiles. La carte Office 365 connecteur est prise en charge dans Teams, et non dans Bot Framework. Cette carte fournit une disposition flexible avec plusieurs sections, champs, images et actions. Cette carte contient une carte de connecteur afin qu’elle puisse être utilisée par des bots. Pour plus d’informations sur les différences entre les cartes de connecteur et la carte connecteur Office 365, consultez des informations supplémentaires [sur la carte Office 365 connecteur.](#additional-information-on-the-office-365-connector-card)
 
 ### <a name="support-for-office-365-connector-cards"></a>Prise en charge des cartes Office 365 connecteur de connexion
 
@@ -447,7 +447,7 @@ Office 365 Les cartes de connecteur fonctionnent correctement Microsoft Teams, y
 
 La différence importante entre l’utilisation de cartes de connecteur à partir d’un connecteur et l’utilisation de cartes de connecteur dans votre bot est la gestion des actions de carte. Le tableau suivant répertorie la différence :
 
-| Connecteur | Bot |
+| Connector | Bot |
 | --- | --- |
 | Le point de terminaison reçoit la charge utile de la carte via HTTP POST. | `HttpPOST`L’action déclenche une activité qui envoie uniquement `invoke` l’ID d’action et le corps au bot.|
 

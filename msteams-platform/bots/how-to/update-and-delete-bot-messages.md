@@ -3,14 +3,14 @@ title: Mettre à jour et supprimer les messages envoyés à partir de votre bot
 author: WashingtonKayaker
 description: Comment mettre à jour et supprimer des messages envoyés à partir de Microsoft Teams bot
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8f1738894aa5580f62b91fa44edf06d54fcc99f7786bae33ffc8cc7b95669fcc
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2db2ad28da41fd464f82ce5836acc8202f118923
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706091"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155619"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Mettre à jour et supprimer les messages envoyés à partir de votre bot
 
@@ -81,7 +81,7 @@ Pour mettre à jour la carte existante sur la sélection de bouton, vous pouvez 
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec carte mise à jour et en tant qu’ID d’activité à la méthode `Activity` `ReplyToId` de la `UpdateActivityAsync` `TurnContext` classe. Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+Pour mettre à jour une carte existante sur une sélection de bouton, passez un nouvel objet avec une carte mise à jour et en tant qu’ID d’activité à la méthode `Activity` `ReplyToId` de la `UpdateActivityAsync` `TurnContext` classe. Voir [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());

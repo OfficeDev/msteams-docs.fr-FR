@@ -2,15 +2,15 @@
 title: Webhooks et connecteurs
 author: clearab
 description: Comprendre comment les webhooks et les connecteurs peuvent connecter vos services web au client Teams web.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 199f1e8a82f067cbd8124553481ed54693d241f1c3a50c085b32203b89f4f63d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708635"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156988"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
 

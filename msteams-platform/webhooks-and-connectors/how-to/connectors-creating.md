@@ -3,15 +3,15 @@ title: Créer des connecteurs Office 365
 author: laujan
 description: Décrit comment commencer avec les connecteurs Office 365 dans Microsoft Teams
 keywords: 'équipes connecteur O365 '
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: ee9a00473a7d871e0c69f27a44ca6c7c23eadcbf
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 39c2533f112f5cb3c72446ad8a5638687dd3db2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345738"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155520"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
@@ -36,7 +36,7 @@ Les utilisateurs peuvent terminer toute l’expérience de configuration du conn
 
     > [!NOTE]
     > * Le code peut traiter l’événement d’enregistrer en récupérant les paramètres de webhook. Votre code stocke le webhook pour publier des événements ultérieurement.
-    > * L’expérience de configuration est chargée de Teams.
+    > * L’expérience de configuration est chargée en ligne dans Teams.
 
 Vous pouvez réutiliser votre expérience de configuration web existante ou créer une version distincte à héberger spécifiquement dans Teams. Votre code doit inclure le Microsoft Teams SDK JavaScript. Cela permet à votre code d’accéder aux API pour effectuer des opérations courantes, telles que l’obtention du contexte de l’utilisateur, du canal ou de l’équipe actuel et lancer des flux d’authentification.
 
@@ -145,7 +145,7 @@ Votre code doit gérer les utilisateurs qui reviennent pour modifier une configu
 - `configName` est un nom que le code de configuration peut récupérer.
 - `contentUrl` est une URL personnalisée qui est chargée lorsqu’un utilisateur modifie une configuration de connecteur existante.
 
-Cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code est chargé, votre code doit appeler pour pré-remplir les paramètres ou `contentUrl` `getSettings()` formulaires dans votre interface utilisateur de configuration.
+Cet appel est effectué dans le cadre de votre économiseur d’événements. Ensuite, lorsque le code est chargé, votre code doit appeler pour pré-remplir les paramètres ou `contentUrl` `getSettings()` formulaires de votre interface utilisateur de configuration.
 
 #### <a name="handle-removals"></a>Gérer les suppressions
 
@@ -209,7 +209,7 @@ Le module Exchange Online PowerShell V2 utilise l’authentification moderne et 
 
 Le paramètre au niveau du client remplace le paramètre au niveau du groupe. Par exemple, si un administrateur active les connecteurs pour le groupe et les désactive sur le client, les connecteurs pour le groupe sont désactivés. Pour activer un connecteur dans Teams, connectez-vous à [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) à l’aide de l’authentification moderne avec ou sans authentification multifacteur.
 
-### <a name="commands-to-enable-or-disable-connectors"></a>Commandes pour activer ou désactiver des connecteurs
+### <a name="commands-to-enable-or-disable-connectors"></a>Commandes permettant d’activer ou de désactiver des connecteurs
 
 Dans Exchange Online PowerShell, exécutez les commandes suivantes :
 
@@ -246,7 +246,7 @@ Après avoir téléchargé le package d’application pour configurer et utilise
 1. Sélectionnez **Applications** dans la barre de navigation de gauche.
 1. Dans la section **Applications,** sélectionnez **Connecteurs.**
 1. Sélectionnez le connecteur que vous souhaitez ajouter. Une fenêtre de boîte de dialogue s’affiche.
-1. Dans le menu déroulant, sélectionnez **Ajouter à une équipe.**
+1. Dans le menu déroulant, **sélectionnez Ajouter à une équipe.**
 1. Dans la zone de recherche, tapez un nom d’équipe ou de canal.
 1. Sélectionnez **Configurer un connecteur dans** le menu déroulant dans le coin inférieur droit de la fenêtre de dialogue.
 
@@ -255,7 +255,7 @@ Après avoir téléchargé le package d’application pour configurer et utilise
 
 Le connecteur est disponible dans la section &#9679;&#9679;&#9679; > **Plus d’options** Connecteurs Tous les connecteurs pour  >    >    >  **votre** équipe pour cette équipe. Vous pouvez naviguer en accédant à cette section ou rechercher l’application connecteur. Pour configurer ou modifier le connecteur, sélectionnez **Configurer**.
 
-## <a name="distribute-webhook-and-connector"></a>Distribuer un webhook et un connecteur
+## <a name="distribute-webhook-and-connector"></a>Distribuer le webhook et le connecteur
 
 1. [Configurer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) directement pour votre équipe.
 1. Ajoutez [une page de configuration](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) et [publiez votre webhook entrant](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) dans un connecteur O365.

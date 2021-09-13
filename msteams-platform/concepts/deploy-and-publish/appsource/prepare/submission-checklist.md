@@ -1,18 +1,18 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Décrit les dernières étapes avant d’envoyer votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
+description: Décrit les dernières étapes avant de soumettre votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d18cd98bf9b5b0921a45c4f4a4affb4b51153c90668da7cb990b2fd9b9f669f7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f02eb250925ce262ad78e5be1edbe42f4b9469e5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706477"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155578"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams au Store
 
 Vous avez conçu, créé et testé votre application Microsoft Teams web. Vous êtes maintenant prêt à la réen lister pour que les personnes peuvent découvrir et commencer à utiliser votre application.
 
@@ -31,13 +31,13 @@ L Microsoft Teams de validation d’application vous permet d’identifier et de
 
 ## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
-Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d’identification et les clés de licence. Vous pouvez ajouter des instructions dans l’Partner Center ou les télécharger vers un emplacement disponible publiquement sur SharePoint.
+Fournissez des instructions et des ressources pour aider les réviseurs à tester votre application, y compris les comptes de test, les informations d’identification et les clés de licence. Vous pouvez ajouter des instructions dans l’Partner Center ou les télécharger dans un emplacement disponible publiquement sur SharePoint.
 
 ### <a name="feature-list"></a>Liste des fonctionnalités
 
 Fournissez des détails sur les fonctionnalités de votre application dans Teams et les étapes de test de chacune d’elles.
 
-### <a name="accounts"></a>Comptes
+### <a name="accounts"></a>Accounts
 
 Vous devez fournir des comptes de test si votre application nécessite une licence ou une liste sécurisée back-end. Tous les comptes que vous fournissez doivent inclure des données pré-remplies pour faciliter le test.
 
@@ -176,7 +176,7 @@ Lors de la soumission, vous êtes invité à catégoriser votre application. Le 
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière, ventes et marketing |
 | Social et fun | Galeries d’images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
 
-### <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
+### <a name="localize-your-store-listing"></a>Localiser la liste de votre magasin
 
 L’Partner Center prend [en charge les listes de magasins localisées.](/office/dev/store/prepare-localized-solutions) Pour plus d’informations, voir comment localiser votre [liste Teams’application.](../../../../concepts/build-and-test/apps-localization.md)
 

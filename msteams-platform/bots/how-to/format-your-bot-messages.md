@@ -3,14 +3,14 @@ title: Formatez vos messages robots.
 author: surbhigupta
 description: Ajouter une mise en forme enrichie à vos messages de bot
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: fba55b6b08785d375f80923133d3af70434cbaf57adf8feaf4e9f50f478f5e61
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705600"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155682"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 

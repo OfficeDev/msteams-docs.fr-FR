@@ -2,15 +2,15 @@
 title: Créer un onglet de canal ou de groupe
 author: laujan
 description: Guide de démarrage rapide sur la création d’un onglet de canal et de groupe avec le générateur Yeoman pour Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: fedaf3ec639917110e16c666734fa3eedbcda18e
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179975"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155582"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe
 
@@ -199,7 +199,7 @@ gulp build
     gulp serve
     ```
 
-1. Entrez `http://localhost:3007/<yourDefaultAppNameTab>/` dans votre navigateur, remplacez-le par votre nom d’onglet et affichez la page d’accueil de votre application, comme illustré **<yourDefaultAppNameTab>** dans l’image suivante :
+1. Entrez dans votre navigateur, remplacez `http://localhost:3007/<yourDefaultAppNameTab>/` **yourDefaultAppNameTab** par votre nom d’onglet et affichez la page d’accueil de votre application comme illustré dans l’image suivante :
 
     ![capture d’écran de la page d’accueil](~/assets/images/tab-images/homePage.png)
 

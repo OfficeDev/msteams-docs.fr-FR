@@ -5,12 +5,13 @@ description: Créer une conversation de sous-entité conversationnelle pour vos 
 keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529006"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156994"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -91,7 +92,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C# |Node.js|
+| Exemple de nom | Description | C # |Node.js|
 |-------------|-------------|------|----|
 |Créer un onglet Conversationnel| Microsoft Teams exemple d’application d’onglet pour démontrer la création d’un onglet de conversation. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 

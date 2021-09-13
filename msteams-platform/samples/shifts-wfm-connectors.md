@@ -4,15 +4,15 @@ description: Connecteurs shifts de gestion du personnel pour Teams
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Microsoft Teams connecteurs kronos
 ms.author: lajanuar
-ms.openlocfilehash: afdd71cedbc0fe2d09e6f6716f8e4fac87619f65c87e0f5831379e3a2b4ee2e3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f734bc4491826f5afee4147b55fdbc10b69fd433
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705018"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155597"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
@@ -44,7 +44,7 @@ L’affichage shifts dans Teams est illustré dans l’image suivante :
 
 ## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-to-Teams Shifts
 
-Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou de Teams mobile pour les scénarios de responsable et de travail de première ligne suivants :
+Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
 
 * Afficher la planification.
 
@@ -60,7 +60,7 @@ Pour plus d’informations sur le déploiement du connecteur Kronos-to-Teams Shi
 
 ## <a name="jda-to-teams-shifts-connector"></a>Connecteur JDA vers Teams Shifts
 
-Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, à Teams Shifts telle que, application de bureau ou mobile Teams pour les scénarios de travail et de responsable de première ligne suivants :
+Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, avec Teams Shifts tel que, application de bureau ou de Teams mobile pour les scénarios de travail et de responsable de première ligne suivants :
 
 * Publiez des équipes et des groupes de planification dans JDA et affichez-les dans Teams.
 

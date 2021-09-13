@@ -2,15 +2,15 @@
 title: Onglets de conception pour ordinateur de bureau, web et mobile
 description: Découvrez comment concevoir un onglet Teams pour ordinateur de bureau, web et mobile, et obtenir le kit Microsoft Teams’interface utilisateur.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a33bc00f26d9a296d4b76e3885cd12d772e8f8e8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408628"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155541"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevez votre onglet pour Microsoft Teams
 
@@ -106,7 +106,7 @@ Les onglets offrent une expérience web en plein écran dans Teams où vous pouv
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un onglet." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Cette illustration montre l’anatomie de l’interface utilisateur d’un onglet." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -170,7 +170,7 @@ Vous pouvez inclure des options pour renommer, supprimer ou modifier un onglet.
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Ouvrez dans le navigateur**: ouvre l’application dans le navigateur par défaut de l’appareil.|
+|1|**Ouvrir dans le navigateur**: ouvre l’application dans le navigateur par défaut de l’appareil.|
 |2|**Lien copier**: les utilisateurs peuvent copier et partager un lien vers l’onglet.|
 |3|**Paramètres**: (Facultatif) Modifier les paramètres d’un onglet après son ajout.|
 |4 |**Renommer**: les utilisateurs peuvent donner à l’onglet un nom significatif pour le canal, la conversation ou la réunion.|
@@ -192,7 +192,7 @@ Vous pouvez envoyer un message avec un lien profond vers votre onglet. Par exemp
 
 Informez les utilisateurs de l’activité de l’onglet de l’une des manières suivantes :
 
-* **Bot**: cette méthode est préférée, en particulier si le thread d’onglet est ciblé. La conversation threadée de l’onglet est déplacée en tant que conversation récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
+* **Bot**: cette méthode est préférée, en particulier si le thread d’onglet est ciblé. La conversation threadée de l’onglet est déplacée dans l’affichage comme étant récemment active. Cette méthode permet également une certaine complexité dans la façon dont la notification est envoyée.
 * **Message**: un message s’affiche dans le flux d’activités de l’utilisateur avec un [lien profond vers l’onglet.](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="best-practices"></a>Meilleures pratiques

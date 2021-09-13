@@ -1,17 +1,17 @@
 ---
 title: Utiliser Microsoft Graph pour autoriser l’installation proactive d’un bot et la messagerie dans Teams
 description: Décrit la messagerie proactive dans Teams et comment implémenter.
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: équipes d’installation de conversation de messagerie proactive Graph
-ms.openlocfilehash: e6a14dbc94ceb86fc6c457a7c589260b36c8fdf4
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585962"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155882"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
 
@@ -20,7 +20,7 @@ ms.locfileid: "53585962"
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans Teams
 
-Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’enquêtes et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou basées **sur des** boîtes de dialogue :
+Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’enquêtes et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou **basées sur des** boîtes de dialogue :
 
 |Type de message | Description |
 |----------------|-------------- |
@@ -54,7 +54,7 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Activer l’installation proactive de l’application et la messagerie
 
 > [!IMPORTANT]
-> Microsoft Graph installer uniquement les applications publiées dans le magasin d’applications de votre organisation ou dans Teams store.
+> Microsoft Graph installer uniquement les applications publiées dans le magasin d’applications de votre organisation ou le Teams store.
 
 ### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>Créer et publier votre bot de messagerie proactive pour Teams
 
@@ -74,10 +74,10 @@ Vous pouvez récupérer les `teamsAppId` informations suivantes :
     **Requête HTTP GET** :
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    La demande doit renvoyer un objet, qui est `teamsApp` l’ID d’application généré par le catalogue de `id` l’application. Ceci est différent de l’ID que vous avez fourni dans votre manifeste Teams application :
+    La demande doit renvoyer un `teamsApp` `id` objet, qui est l’ID d’application généré par le catalogue de l’application. Ceci est différent de l’ID que vous avez fourni dans votre manifeste Teams application :
 
     ```json
     {

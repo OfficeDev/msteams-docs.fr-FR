@@ -1,15 +1,15 @@
 ---
 title: Conception de Cartes adaptatives pour votre application
 description: Découvrez comment concevoir des Cartes adaptatives pour Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
-localization_priority: Priority
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 28a6b794b9ebae88f8895013f945cbf3b4a91e87
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 0a8964de024b01237632db1214ce24fdd5b6bd29
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408656"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156886"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 

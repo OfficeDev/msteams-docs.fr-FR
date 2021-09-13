@@ -2,15 +2,15 @@
 title: Maintenir et prendre en charge votre application publiée
 description: Ce qu’il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 80821eaad18998d087aeeb4f20db03ea02d9cab6d78d367add179b763e501249
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704280"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155841"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Gérer votre application Microsoft Teams publiée
 

@@ -2,14 +2,14 @@
 title: Inscrire les appels et le bot de réunions pour Microsoft Teams
 description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: 5013ebcbce0bc94199e846f20fc6ee52238d302f1dd1b05872245ef2c6e32d91
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709567"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156874"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire les appels et le bot de réunions pour Microsoft Teams
 

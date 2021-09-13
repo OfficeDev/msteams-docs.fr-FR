@@ -3,14 +3,14 @@ title: Conception de votre application avec des modèles d’interface utilisate
 author: heath-hamilton
 description: Concevez votre application plus rapidement avec des composants d’interface utilisateur, des dispositions et des modèles standardisés fréquemment visibles dans Microsoft Teams.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408679"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156935"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Conception de votre application Microsoft Teams avec des modèles d’interface utilisateur
 

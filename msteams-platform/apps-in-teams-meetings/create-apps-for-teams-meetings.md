@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identifier les conditions préalables avec les applications pour Teams réunions
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: c237a3131eac0286a60fe5bbd398439b51245ee9
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822205"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155645"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
@@ -26,7 +26,7 @@ Les applications pour Teams réunions, vous pouvez développer les fonctionnalit
 * Respectez les recommandations Teams la conception d’onglets pour les scénarios préalables et post-réunion. Pour les expériences pendant les réunions, reportez-vous aux instructions de conception de l’onglet réunion et de la boîte de dialogue en réunion. Pour plus d’informations, [voir Teams recommandations](../tabs/design/tabs.md)en matière de conception d’onglets, [](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)de recommandations en matière de conception d’onglets en réunion et de conception de boîte de dialogue en [réunion.](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 
 * Prendre en `groupchat` charge l’étendue pour activer votre application dans les conversations préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer les tâches préalables à la réunion. Avec l’expérience d’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats ou les frais d’enquête.
-* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Les paramètres sont disponibles dans le cadre de l’activité Teams Client SDK et bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [sso tab .](../tabs/how-to/authentication/auth-aad-sso.md)
+* Les paramètres d’URL de l’API de réunion doivent avoir `meetingId` `userId` , et `tenantId` . Les paramètres sont disponibles dans le cadre de l’activité Teams Client SDK et bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [SSO onglet](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
@@ -83,7 +83,7 @@ L’API permet à un bot de récupérer les informations des participants par ID
 |---|---|----|---|
 |**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
 |**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
-|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. |
+|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso onglet. |
 
 #### <a name="example"></a>Exemple
 
@@ -178,7 +178,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 > * Lorsqu’une boîte de dialogue de réunion est invoquée, le contenu est présenté comme un message de conversation.
 > * Actuellement, l’envoi de notifications ciblées n’est pas pris en charge.
 
-L’API vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation `NotificationSignal` utilisateur-bot. Cette API vous permet de signaler en fonction de l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. L’API inclut le paramètre de requête, des exemples et des codes de réponse.
+L’API vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la `NotificationSignal` conversation utilisateur-bot. Cette API vous permet de signaler en fonction de l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. L’API inclut le paramètre de requête, des exemples et des codes de réponse.
 
 #### <a name="query-parameter"></a>Paramètre de requête
 
@@ -501,7 +501,7 @@ meetingEventInfoObject);
 
 * Avoir un ID et une inscription de bot dans `GetParticipant` l’API pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
-* Maintenez votre application à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, vérifiez le paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
+* Maintenez votre application à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, vérifiez le paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
 
 * Avoir un enregistrement de bot et un ID de bot dans `MeetingDetails` l’API. Il nécessite le SDK bot pour obtenir `TurnContext` .
 

@@ -2,15 +2,15 @@
 title: Localiser votre application
 description: Décrit les considérations à prendre en compte pour la Microsoft Teams application.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams publient la langue de localisation d’AppSource de publication office dans le Store
 ms.date: 05/15/2018
-ms.openlocfilehash: 403314eb732aef0a0813dc56c37cd3c34eecafd3754a74a4946a70f33d9fbde7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705572"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155838"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
@@ -84,7 +84,7 @@ Voici un exemple de localisation .json :
 ```
 
 
-Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent respecter le schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété `localizationInfo` de votre manifeste. Chaque fichier correspond à une balise de langue, que le client Teams utilise pour sélectionner les chaînes appropriées. La balise de langue prend la forme de, mais vous pouvez omettre la partie pour cibler toutes les régions qui prennent en charge `<language>-<region>` `<region>` la langue souhaitée.
+Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent respecter le schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété `localizationInfo` de votre manifeste. Chaque fichier est en corrélation avec une balise de langue, que le client Teams utilise pour sélectionner les chaînes appropriées. La balise de langue prend la forme de, mais vous pouvez omettre la partie pour cibler toutes les régions qui prennent en charge `<language>-<region>` `<region>` la langue souhaitée.
 
 Le client Teams applique les chaînes dans l’ordre suivant : chaînes de langue par défaut -> chaînes de langue de l’utilisateur uniquement -> langue de l’utilisateur + chaînes de région de l’utilisateur.
 

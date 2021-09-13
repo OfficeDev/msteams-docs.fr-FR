@@ -1,15 +1,15 @@
 ---
 title: Utiliser des modules de tâche dans Microsoft Teams onglets
 description: Explique comment appeler des modules de tâche à partir Teams onglets à l’aide Microsoft Teams SDK client.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: modules de tâche teams tabs client sdk
-ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703580"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156688"
 ---
 # <a name="use-task-modules-in-tabs"></a>Utiliser des modules de tâche dans les onglets
 

@@ -2,15 +2,15 @@
 title: Conversations 1-sur-1 avec des bots
 description: Décrit le scénario de bout en bout d’une conversation 1-on-1 avec un bot dans Microsoft Teams
 keywords: scénarios teams 1on1 1to1 bot de conversation
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: dff65e919485eff0443032995b934b7ae93c64eb
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 2fd76b8bc5fa4cd260b70e15b92bef2dec2de683
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566501"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155543"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation personnelle (un-à-un) avec un Microsoft Teams bot
 

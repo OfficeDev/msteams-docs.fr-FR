@@ -3,14 +3,14 @@ title: Conception de votre application personnelle
 description: Découvrez comment concevoir une application Teams et obtenir le kit Microsoft Teams’interface utilisateur.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408621"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156929"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Conception de votre application personnelle pour Microsoft Teams
 
@@ -47,10 +47,10 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher du contenu d
 |----------|-----------|
 |A|**Attribution de l’application**: nom de votre application.|
 |B|**Onglets :** fournit la navigation pour votre application personnelle.|
-|C|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires.|
+|C|**Menu plus :** inclut des options et des informations supplémentaires sur l’application.|
 |D|**Navigation principale**: fournit la navigation vers les autres fonctionnalités principales Teams votre application.|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -59,16 +59,16 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher du contenu d
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="L’exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Cet exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |A|**Attribution de l’application**: nom et logo de votre application.|
 |B|**Onglets :** fournit la navigation pour votre application personnelle.|
 |C|**Affichage popout :** pousse le contenu de votre application d’une fenêtre parent vers une fenêtre enfant autonome.|
-|D|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires. (Vous pouvez également Paramètres **un** onglet.)|
+|D|**Menu plus :** inclut des options et des informations supplémentaires sur l’application. (Vous pouvez également Paramètres **un** onglet.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Cet exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -94,7 +94,7 @@ Les applications personnelles peuvent inclure un bot pour les conversations un-�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie des composants personnels du bot." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="L’exemple illustre l’anatomie du composant bot personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -105,11 +105,11 @@ Les applications personnelles peuvent inclure un bot pour les conversations un-�
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie des composants personnels du bot." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie du composant de bot personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications des bots.|
+|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications du bot.|
 |B|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
 |C|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 
@@ -141,7 +141,7 @@ Avec le resserré réactif, les onglets de droite peuvent être tronqués ou en 
 
 #### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a>À faire : les onglets doivent être de hiérarchie égale et représenter des pages d’application clés
 
-Vos onglets doivent catégoriser les principales fonctionnalités et le contenu de votre application. Avec le resserré réactif, le contenu à droite peut être tronqué ou hors de vue.
+Vos onglets doivent catégoriser les principales fonctionnalités et le contenu de votre application. Avec le resserrage réactif, le contenu à droite peut être tronqué ou hors de vue.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="L’exemple montre une application personnelle avec des onglets de hiérarchie égale." border="false":::
 

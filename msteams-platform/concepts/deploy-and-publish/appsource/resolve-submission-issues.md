@@ -4,12 +4,13 @@ description: Comprendre comment résoudre les problèmes liés à votre soumissi
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a18aff23b8523bc91485835c991cc6608deb8eae93ce175ff3403e699dc6c5e5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 39ab797bf87638e107f55e8b83d002372a4261f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705558"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156808"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Résoudre les problèmes en cas d’échec Microsoft Teams soumission au Store
 
@@ -46,7 +47,7 @@ Le processus de résolution des problèmes et de resoumettage d’une applicatio
    * Si des problèmes ne sont pas résolus ou si Microsoft trouve de nouveaux problèmes, vous recevez un autre rapport sur les mesures à corriger. Résolvez ces problèmes et envoyez une version mise à jour de l’application <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 > [!CAUTION]
-> Pour éviter plusieurs échecs de soumission, ne resoumettez pas votre application sur l’Partner Center tant que l’équipe de validation microsoft n’a pas approuvé votre application.
+> Pour éviter plusieurs échecs de soumission, ne resoumettez pas votre application sur l’Partner Center tant que l’équipe de validation de Microsoft n’a pas approuvé votre application.
 
 ## <a name="faq"></a>FAQ
 

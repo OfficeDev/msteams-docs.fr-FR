@@ -3,17 +3,17 @@ title: Conditions préalables
 author: surbhigupta
 description: Chaque onglet de Microsoft Teams doit respecter ces exigences.
 keywords: Canal de groupe onglets teams configurable
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701799"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155649"
 ---
-# <a name="prerequisites"></a>Conditions préalables
+# <a name="prerequisites"></a>Configuration requise
 
 Teams onglets doivent respecter les conditions préalables suivantes :
 
@@ -22,7 +22,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
   * Pour la compatibilité d’Internet Explorer 11, définissez `X-Content-Security-Policy` .
   * Sinon, définissez l’en-tête `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Cet en-tête est supprimé, mais toujours accepté par la plupart des navigateurs.
 
-* En règle générale, comme protection contre le détournement de clic, les pages de connexion ne s’restituer dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou les cookies.
+* En règle générale, comme protection contre le détournement de clic, les pages de connexion ne s’restituer dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou sur les cookies.
 
     > [!NOTE]
     > Chrome 80, dont la publication est prévue début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. Pour plus d’informations, voir [l’attribut de cookie SameSite.](../../resources/samesite-cookie-update.md)

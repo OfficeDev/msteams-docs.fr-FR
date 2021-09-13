@@ -2,15 +2,15 @@
 title: Conception de notifications de flux d’activités
 author: heath-hamilton
 description: Découvrez comment concevoir des notifications de flux d’activités pour votre application Teams et obtenir le kit Microsoft Teams’interface utilisateur.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408551"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156803"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Conception de notifications de flux d’activités pour Microsoft Teams application
 

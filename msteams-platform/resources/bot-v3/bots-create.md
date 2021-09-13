@@ -3,14 +3,14 @@ title: Créer un bot
 description: Décrit comment créer des bots dans Microsoft Teams
 ms.topic: how-to
 keywords: création de bots teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 67aa3e2cfd1950dced84785a9f6f35cfd4d5ff85
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d258f9e6713e6bb3d68aa19ef8a3b36d44dd3a07
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566774"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155870"
 ---
 # <a name="create-a-bot"></a>Créer un bot
 
@@ -35,11 +35,11 @@ Pour plus d’informations, voir [la documentation bot Framework pour](/azure/bo
 
 3. Testez le bot à [l’aide Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
-4. Déployez le bot sur un service cloud, tel que [Microsoft Azure](https://azure.microsoft.com/). Vous pouvez également exécuter votre application localement et utiliser un service de tunneling tel [que ngrok](https://ngrok.com) pour exposer un point de terminaison https:// pour votre bot, tel que `https://45az0eb1.ngrok.io/api/messages` .
+4. Déployez le bot sur un service cloud, tel que [Microsoft Azure](https://azure.microsoft.com/). Vous pouvez également exécuter votre application localement et utiliser un service de tunneling tel [que ngrok](https://ngrok.com) pour exposer un point de terminaison https:// de votre bot, tel que `https://45az0eb1.ngrok.io/api/messages` .
 
 > [!NOTE]
 > ## <a name="bots-and-microsoft-azure"></a>Bots et Microsoft Azure
-> Depuis décembre 2017, le portail Bot Framework est optimisé pour l’inscription de bots dans Microsoft Azure. Voici quelques opérations que vous pouvez prendre en compte :
+> Depuis décembre 2017, le portail Bot Framework est optimisé pour l’inscription des bots dans Microsoft Azure. Voici quelques opérations que vous pouvez prendre en compte :
 >
 > * Le canal Microsoft Teams pour les bots inscrits sur Azure est gratuit. Les messages envoyés par le Teams ne sont pas comptabilisés dans les messages consommés pour le bot.
 > * Bien qu’il soit possible de créer un [bot Bot Framework](https://dev.botframework.com/bots/new) sans utiliser Azure, vous devez utiliser cette URL ( qui n’est plus exposée dans le portail Bot https://dev.botframework.com/bots/new) Framework.

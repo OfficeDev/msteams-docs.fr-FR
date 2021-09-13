@@ -2,15 +2,15 @@
 title: Déboguer votre robot d’appel et de réunion localement
 description: Découvrez comment vous pouvez également utiliser ngrok pour développer des appels et des bots de réunion en ligne sur votre PC local.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: tunnel ngrok de développement local
 ms.date: 11/18/2018
-ms.openlocfilehash: c38fe4aa04b359dca19c48add1b1a0a52e83ec46c4cb942788671820d29bb9a7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706399"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155636"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>Développer des bots d’appels et de réunion en ligne sur votre PC local
 
@@ -70,7 +70,7 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-Voici le port de signalisation, le port hébergé par l’application et le port multimédia distant exposé `12345` `8445` par `12332` ngrok. Notez que nous avons un va-et-vient `1.bot.contoso.com` de `1.tcp.ngrok.io` . Il sera utilisé comme URL multimédia pour le bot. Bien entendu, ces numéros de port ne sont que des exemples et vous pouvez utiliser n’importe quel port disponible.
+Voici le port de signalisation, le port hébergé par l’application et le port multimédia distant exposé `12345` `8445` par `12332` ngrok. Notez que nous avons un forwarding de `1.bot.contoso.com` `1.tcp.ngrok.io` . Il sera utilisé comme URL multimédia pour le bot. Bien entendu, ces numéros de port ne sont que des exemples et vous pouvez utiliser n’importe quel port disponible.
 
 ### <a name="update-code"></a>Mise à jour du code
 
@@ -117,6 +117,6 @@ var mediaPlatform = new MediaPlatformSettings
 
 ## <a name="caveats"></a>Avertissements
 
-- Les comptes gratuits Ngrok **ne fournissent** pas de chiffrement de bout en bout. Les données HTTPS se terminent à l’URL ngrok et les données sont non chiffrées de ngrok vers `localhost` . Si vous avez besoin d’un chiffrement de bout en bout, envisagez un compte ngrok payant. Consultez [les tunnel TLS pour](https://ngrok.com/docs#tls) obtenir la procédure de configuration des tunnel de bout en bout sécurisés.
+- Les comptes gratuits Ngrok **ne fournissent** pas de chiffrement de bout en bout. Les données HTTPS se terminent à l’URL ngrok et les données sont non chiffrées de ngrok à `localhost` . Si vous avez besoin d’un chiffrement de bout en bout, envisagez un compte ngrok payant. Consultez [les tunnel TLS pour](https://ngrok.com/docs#tls) obtenir la procédure de configuration des tunnel de bout en bout sécurisés.
 - Étant donné que l’URL de rappel du bot est dynamique, les scénarios d’appels entrants nécessitent que vous mettez fréquemment à jour vos points de terminaison ngrok. Une façon de résoudre ce problème consiste à utiliser un compte ngrok payant qui fournit des sous-domaine fixes vers lesquels vous pouvez pointer votre bot et la plateforme.
 - Les tunneles Ngrok peuvent également être utilisés avec [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). Pour obtenir un exemple de la façon de le faire, voir l’exemple [d’application HueBot.](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)

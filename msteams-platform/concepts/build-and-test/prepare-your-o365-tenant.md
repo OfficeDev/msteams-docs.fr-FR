@@ -2,14 +2,14 @@
 title: Préparer votre client Microsoft Office 365
 description: Comment commencer à prendre en Teams dans Microsoft 365
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Configurer le Microsoft 365 de Teams client
-ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704430"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155557"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
@@ -27,7 +27,7 @@ Microsoft 365 abonnés peuvent développer des applications pour Microsoft Teams
 
 ## <a name="create-your-development-environment"></a>Créer votre environnement de développement
 
-Si vous n’avez pas de compte Microsoft 365, vous devez vous inscrire à un abonnement [Microsoft 365 programme pour les développeurs.](https://developer.microsoft.com/microsoft-365/dev-program) L’abonnement est gratuit pendant 90 jours et continue à être renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio Enterprise ou Professional, les deux programmes incluent un abonnement Microsoft 365 [développeur gratuit.](https://aka.ms/MyVisualStudioBenefits) Il est actif tant que votre abonnement Visual Studio est actif. Pour plus d’informations, [voir configurer un abonnement Microsoft 365 développeur.](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)
+Si vous n’avez pas de compte Microsoft 365, vous devez vous inscrire à un abonnement [Microsoft 365 programme pour les développeurs.](https://developer.microsoft.com/microsoft-365/dev-program) L’abonnement est gratuit pendant 90 jours et continue à être renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio Enterprise ou Professional, les deux programmes incluent un abonnement Microsoft 365 [développeur gratuit.](https://aka.ms/MyVisualStudioBenefits) Il est actif tant que votre abonnement Visual Studio est actif. Pour plus d’informations, [voir configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
 
 ## <a name="enable-teams-for-your-organization"></a>Activer Teams pour votre organisation
 
@@ -37,7 +37,7 @@ Activez Teams pour votre organisation et pour plus d’informations, consultez [
 
 **Pour activer le chargement ou le chargement indépendant de l’application personnalisée pour votre client développeur**
 
-1. Connectez-vous [Centre d’administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.
+1. Connectez-vous [Centre d'administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.
 
 2. Sélectionnez **Afficher**  >  **tous les Teams**.
 
@@ -59,7 +59,7 @@ Activez Teams pour votre organisation et pour plus d’informations, consultez [
 
     ![Télécharger’application](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-Pour plus d’informations sur l’interaction de ces paramètres, voir gérer les stratégies et paramètres d’application [personnalisés](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) dans Teams et gérer les stratégies de configuration d’application [dans Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+Pour plus d’informations sur l’interaction de ces paramètres, voir gérer les stratégies et paramètres d’application [personnalisés](/microsoftteams/teams-custom-app-policies-and-settings) dans Teams et gérer les stratégies de configuration d’application [dans Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="next-step"></a>Étape suivante
 

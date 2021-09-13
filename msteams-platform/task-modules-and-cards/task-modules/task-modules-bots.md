@@ -1,15 +1,15 @@
 ---
 title: Utiliser des modules de tâche dans Microsoft Teams bots
 description: Utilisation des modules de tâche avec Microsoft Teams bots, y compris les cartes Bot Framework, les cartes adaptatives et les liens profonds.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots d’équipes de modules de tâche
-ms.openlocfilehash: 7a4c5b0a3986f5a6a59064a05bcbc68587955effca0ea7fab80a7097a9732b6f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701871"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156881"
 ---
 # <a name="use-task-modules-from-bots"></a>Utiliser des modules de tâches à partir de bots
 
@@ -17,7 +17,7 @@ Les modules de tâche peuvent être appelés à partir de bots Microsoft Teams �
 
 Il existe deux façons d’invoquer des modules de tâche :
 
-* Un nouveau type de message d’appel : l’utilisation de l’action de carte pour les cartes Bot Framework ou de l’action de carte pour les cartes adaptatives, avec un module de tâche, une URL ou une carte adaptative, est récupérée dynamiquement à partir de votre `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` bot.
+* Un nouveau type de message d’appel : l’utilisation de l’action de carte pour les cartes Bot Framework ou de l’action de carte pour les cartes adaptatives, avec , module de tâche, une URL ou une carte adaptative, est récupérée dynamiquement à partir de votre `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` bot.
 * URL de lien profond : à l’aide de la syntaxe de lien profond pour les [modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)de tâche, vous pouvez utiliser l’action de carte pour les cartes Bot Framework ou l’action de carte pour les cartes adaptatives, `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) respectivement. Avec les URL de lien profond, l’URL du module de tâche ou le corps de la carte adaptative est déjà connu pour éviter un aller-retour serveur par rapport à `task/fetch` .
 
 > [!IMPORTANT]
@@ -73,7 +73,7 @@ Lorsque l’utilisateur termine avec un module de tâche appelé à partir d’u
 
 | Réponse du corps HTTP                      | Scénario                                |
 | --------------------------------------- | --------------------------------------- |
-| Aucun ne ignore le `task/submit` message | La réponse la plus simple n’est pas du tout une réponse. Votre bot n’est pas tenu de répondre lorsque l’utilisateur a terminé avec le module de tâche. |
+| Aucun ne tient compte du `task/submit` message | La réponse la plus simple n’est pas du tout une réponse. Votre bot n’est pas tenu de répondre lorsque l’utilisateur a terminé avec le module de tâche. |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams affiche la valeur d’un message dans `value` une boîte de message. |
 | <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Vous permet de chaîner des séquences de cartes adaptatives ensemble dans un Assistant ou une expérience en plusieurs étapes. |
 

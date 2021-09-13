@@ -3,15 +3,15 @@ author: heath-hamilton
 description: Meilleures pratiques pour l’intégration d’applications web existantes à Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Applications web
-ms.openlocfilehash: ba34241186484bb838ba3f61e5ca55914115a1f1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345759"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155599"
 ---
 # <a name="web-apps"></a>Applications web 
 
@@ -23,7 +23,7 @@ Les différents types d’applications que vous pouvez intégrer à Teams sont l
 * **SharePoint**: page SharePoint que vous souhaitez faire surface dans Teams.
 
 Vous pouvez maîtr et suivre les recommandations appropriées applicables à votre scénario d’intégration.
-Ce document offre une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
+Ce document donne une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
  
 ## <a name="get-to-know-teams-platform-capabilities"></a>Faire connaître les fonctionnalités Teams plateforme
 
@@ -39,7 +39,7 @@ Votre application Teams doit inclure les fonctionnalités de collaboration requi
 |Chatbots  |[Bots](../bots/what-are-bots.md) |
 |Notifications de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks entrants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connecteurs Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Services externes de message  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks sortants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Modals  |[Modules de tâches](../task-modules-and-cards/what-are-task-modules.md)  |
+|Modals  |[Modules de tâche](../task-modules-and-cards/what-are-task-modules.md)  |
 |Cartes riches en contenu  |[Cartes adaptatives](../task-modules-and-cards/what-are-cards.md)  |
 
 ## <a name="determine-a-subset-of-functionality"></a>Déterminer un sous-ensemble de fonctionnalités
@@ -84,7 +84,7 @@ En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-
 
 Azure Active Directory (AD) est le fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Azure AD.
 
-Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des instructions pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
+Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)

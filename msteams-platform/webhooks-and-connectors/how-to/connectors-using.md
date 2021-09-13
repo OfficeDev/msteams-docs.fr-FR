@@ -3,14 +3,14 @@ title: Créer et envoyer des messages
 author: laujan
 description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft Teams
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703126"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156995"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -24,7 +24,7 @@ Les cartes de connecteurs prendre en charge les actions suivantes :
 
 - `ActionCard`: présente un ou plusieurs types d’entrée et actions associées.
 - `HttpPOST`: envoie une requête POST à une URL.
-- `OpenUri`: ouvre l’URI dans un navigateur ou une application distinct, cible éventuellement différentes URI en fonction des systèmes d’exploitation.
+- `OpenUri`: ouvre l’URI dans un navigateur ou une application distinct, cible éventuellement différents URI basés sur les systèmes d’exploitation.
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 

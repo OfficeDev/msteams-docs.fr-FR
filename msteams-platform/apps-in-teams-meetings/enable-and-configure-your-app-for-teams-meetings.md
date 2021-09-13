@@ -3,12 +3,13 @@ title: Activer et configurer vos applications pour Teams réunions
 author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions
 ms.topic: conceptual
-ms.openlocfilehash: 1827257e4577aee6f3ac26b646a6c36f2e8eb523
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528886"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155640"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -111,7 +112,7 @@ Au cours d’une réunion, vous pouvez utiliser la boîte de dialogue ou la boî
 
 Cela vous permet de personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles `meetingSidePanel` d’affichages et d’actions. Dans le manifeste de votre application, vous devez `meetingSidePanel` l’ajouter au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est rendue dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
-Pour utiliser l’API pour router les `userContext` demandes, voir Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Pour plus d’informations, [Teams flux d’authentification pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md) Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Par conséquent, les onglets peuvent utiliser OAuth 2.0 directement. Pour plus d’informations, voir Plateforme d’identités Microsoft flux de code d’autorisation [OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+Pour utiliser l’API pour router les `userContext` demandes, voir Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Pour plus d’informations, [Teams flux d’authentification pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md) Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Par conséquent, les onglets peuvent utiliser OAuth 2.0 directement. Pour plus d’informations, voir Plateforme d'identités Microsoft flux de code d’autorisation [OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
 L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est en affichage en réunion. L’utilisateur peut publier des cartes d’extension de message de composition. AppName en réunion est une boîte à outils qui indique le nom de l’application dans la barre U de la réunion.
 

@@ -3,14 +3,14 @@ title: Obtenir le contexte de votre bot Microsoft Teams de recherche
 description: Décrit comment obtenir du contexte pour les bots dans Microsoft Teams
 keywords: contexte des bots teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: cda2e24816330964342b097f52bb955c8846c54a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566487"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155873"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtenir le contexte de votre bot Microsoft Teams de recherche
 
@@ -22,11 +22,11 @@ Votre bot peut accéder à un contexte supplémentaire sur l’équipe ou la con
 >
 > * Microsoft Teams’API de bot spécifiques sont les plus accessibles via nos extensions pour le SDK Bot Builder.
 > * Pour C# ou .NET, téléchargez notre package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
-> * Pour Node.js développement, le Générateur de bot pour Teams est incorporé dans le [SDK Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
+> * Pour Node.js développement, le Générateur de bot pour Teams est intégré au [SDK Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
 
 ## <a name="fetch-the-team-roster"></a>Récupérer la liste d’équipe
 
-Votre bot peut interroger la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent Teams’ID d’utilisateur et des informations Azure Active Directory (AAD), telles que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, vérifiez si un utilisateur connecté à un onglet via les informations d’identification AAD est membre de l’équipe.
+Votre bot peut interroger la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent Teams’ID d’utilisateur et Azure Active Directory (AAD) tels que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, vérifiez si un utilisateur connecté à un onglet via les informations d’identification AAD est membre de l’équipe.
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 

@@ -2,15 +2,15 @@
 title: Créer un onglet personnel
 author: laujan
 description: Guide de démarrage rapide sur la création d’un onglet personnel avec le générateur Yeoman pour Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: e45474d41404e057f2d73f7d1fad24a19e56b4f5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345675"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155581"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -20,10 +20,10 @@ Vous pouvez créer un onglet personnel à l'Node.js Yeoman Generator, ASP.NET Co
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
-### <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator"></a>Créer un onglet personnel personnalisé à l'Node.js et le générateur Yeoman
+### <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator"></a>Créer un onglet personnel personnalisé à l’aide Node.js et du générateur Yeoman
 
 > [!NOTE]
-> Cet article suit les étapes décrites dans la build de votre Microsoft Teams [d’application](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki trouvée dans le référentiel GitHub Microsoft OfficeDev.
+> Cet article suit les étapes décrites dans la build de votre premier Wiki [Microsoft Teams’application,](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) qui se trouve dans le référentiel GitHub Microsoft OfficeDev.
 
 Vous pouvez créer un onglet personnel personnalisé à [l’aide Teams générateur Yeoman.](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) L’application est également téléchargée vers Teams.
 
@@ -68,7 +68,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
 1. Ensuite, fournissez une série de valeurs utilisées dans le fichiermanifest.js **application** :
 
-    ![capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![Capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
     **Quel est le nom de votre solution ?**
 
@@ -102,7 +102,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     Sélectionnez **( &ast; ) un onglet**.
 
-    **L’URL dans laquelle vous hébergez cette solution ?**
+    **L’URL où vous allez héberger cette solution ?**
 
     Par défaut, le générateur suggère une URL de sites web Azure. Vous testez uniquement votre application localement, de sorte qu’une URL valide n’est pas nécessaire.
 
@@ -249,7 +249,7 @@ gulp build
 
     ![capture d’écran de la page d’accueil](~/assets/images/tab-images/homePage.png)
 
-1. Pour afficher votre onglet personnel, consultez `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` .
+1. Pour afficher votre onglet personnel, allez sur `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` .
 
     >![Capture d’écran de l’onglet personnel](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -302,7 +302,7 @@ Vous devez connaître les conditions préalables suivantes :
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft.](https://developer.microsoft.com/en-us/microsoft-365/dev-program) L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
 
-- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** Store App dans le coin inférieur gauche de l’application Teams, puis ![ ](~/assets/images/tab-images/storeApp.png) **recherchez App Studio.** Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez Ajouter **dans** la boîte de dialogue pop-up pour l’installer.
+- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** Store App dans le coin inférieur gauche de ![ l’application ](~/assets/images/tab-images/storeApp.png) Teams, puis **recherchez App Studio.** Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez Ajouter **dans** la boîte de dialogue pop-up pour l’installer.
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
@@ -336,7 +336,7 @@ Vous pouvez également récupérer le code source en téléchargeant le dossier 
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du `Configure()` code suivant :
+Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire de fichiers statiques est ajouté à la méthode à l’aide du `Configure()` code suivant :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -425,16 +425,16 @@ Pour tester votre onglet, utilisez [ngrok](https://ngrok.com/docs). Les points d
 
     Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application lorsqu’elle est en cours d’exécution sur le port 44325. Il ressemble à `https://y8rPrT2b.ngrok.io/` **l’endroit où y8rPrT2b** est remplacé par votre URL HTTPS alpha-numérique ngrok.
 
-    Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
+    Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
 
-2. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
+2. Vérifiez que **ngrok** s’exécute et fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
 > [!TIP]
 > Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution.** Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour chaque endroit qui utilise cette URL.
 
 #### <a name="run-your-application"></a>Exécuter votre application
 
-Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage de votre** application.
+Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage de votre** application.
 
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>Télécharger onglet avec App Studio pour Teams
 
@@ -531,7 +531,7 @@ Vous pouvez créer un onglet personnel personnalisé à l’aide C# et ASP.NET C
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft.](https://developer.microsoft.com/en-us/microsoft-365/dev-program) L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
 
-- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** Store App dans le coin inférieur gauche de l’application Teams, puis ![ ](~/assets/images/tab-images/storeApp.png) **recherchez App Studio.** Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez Ajouter **dans** la boîte de dialogue pop-up pour l’installer.
+- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** Store App dans le coin inférieur gauche de ![ l’application ](~/assets/images/tab-images/storeApp.png) Teams, puis **recherchez App Studio.** Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez Ajouter **dans** la boîte de dialogue pop-up pour l’installer.
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
@@ -620,7 +620,7 @@ Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit s
 
 #### <a name="views"></a>Affichages
 
-Ces affichages sont les différents dans ASP.NET Core MVC :
+Ces affichages sont les différents affichages dans ASP.NET Core MVC :
 
 * Accueil : ASP.NET Core fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** s’affiche en tant que page d’accueil de votre application.
 
@@ -644,16 +644,16 @@ Les contrôleurs utilisent la propriété pour transférer dynamiquement des `Vi
 
     Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application lorsqu’elle est en cours d’exécution sur le port 44325. Il ressemble à `https://y8rPrT2b.ngrok.io/` **l’endroit où y8rPrT2b** est remplacé par votre URL HTTPS alpha-numérique ngrok.
 
-    Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
+    Veillez à ce que l’invite de commandes avec ngrok soit en cours d’exécution et notez l’URL.
 
-1. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
+1. Vérifiez que **ngrok** s’exécute et fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
 > [!TIP]
 > Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution.** Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour chaque endroit qui utilise cette URL.
 
 #### <a name="run-your-application"></a>Exécuter votre application
 
-Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage de votre** application.
+Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage de votre** application.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
@@ -663,7 +663,7 @@ Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** 
 
 À partir de la version de manifeste 1.7, les développeurs peuvent réorganiser tous les onglets de leur application personnelle. En particulier, un développeur peut déplacer l’onglet de conversation du **bot,** qui est toujours en première position par défaut, n’importe où dans l’en-tête de l’onglet de l’application personnelle. Deux mots clés `entityId` d’onglet réservés sont déclarés, **conversations** et **à propos de**.
 
-Si vous créez un bot avec une **étendue** personnelle, il apparaît par défaut dans le premier onglet d’une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, **conversations**. **L’onglet conversation** s’affiche sur le web ou sur le bureau en fonction de l’endroit où vous ajoutez l’onglet **de conversation** dans le `staticTabs` tableau.
+Si vous créez un bot avec une **étendue** personnelle, il apparaît par défaut dans le premier onglet d’une application personnelle. Si vous souhaitez le déplacer vers une autre position, vous devez ajouter un objet onglet statique à votre manifeste avec le mot clé réservé, **conversations**. **L’onglet de conversation** s’affiche sur le web ou le bureau en fonction de l’endroit où vous ajoutez l’onglet de **conversation** dans le `staticTabs` tableau.
 
 ```json
 {

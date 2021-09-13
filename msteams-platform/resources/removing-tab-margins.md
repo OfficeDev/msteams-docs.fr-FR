@@ -4,14 +4,14 @@ author: surbhigupta
 description: Décrit comment la suppression des marges d’onglet améliore l’expérience de création d’applications.
 keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 2dc024bea28dbd8f98c658ccfa4a7494e77e19d9
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 79c4d887a028d9da722325985f9bbd62740e3781
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345599"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59157006"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
@@ -29,9 +29,9 @@ La suppression des marges de tabulation affecte Teams applications qui utilisent
 
 ## <a name="faq"></a>FAQ
 
-**Est-ce que le chrome de l’application, tel que la barre d’en-tête ou la barre des tâches, est autorisé à toucher les bords de nos conceptions ?**
+**Est-il possible pour le chrome de l’application, comme la barre d’en-tête ou la barre des tâches, d’toucher les bords de nos conceptions ?**
 
-Oui, cela est correct et Teams encourage cette conception. Cela permet à l’application de se sentir native.
+Oui, cela est correct et Teams encourage une telle conception. Cela permet à l’application de se sentir native.
 
 **Est-il possible pour le contenu de l’application, comme le texte, les logos et les images, d’toucher les bords gauche et droit de nos conceptions ?**
 

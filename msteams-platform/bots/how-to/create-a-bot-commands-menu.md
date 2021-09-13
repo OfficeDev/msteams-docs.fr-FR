@@ -3,14 +3,14 @@ title: Créer un menu de commandes pour votre bot
 author: surbhigupta
 description: Comment créer un menu de commandes pour votre bot Microsoft Teams de commande
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 978c34a950669386464037850601878a98c191c50710cc62c556f4104ad325e6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704076"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155686"
 ---
 # <a name="bot-command-menus"></a>Menus de commande du bot
 

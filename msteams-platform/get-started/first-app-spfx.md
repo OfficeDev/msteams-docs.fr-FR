@@ -5,12 +5,13 @@ description: Découvrez comment créer un onglet personnalisé à l’SharePoint
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706925"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155794"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>Créer et exécuter votre première application Microsoft Teams avec SharePoint Framework (SPFx)
 

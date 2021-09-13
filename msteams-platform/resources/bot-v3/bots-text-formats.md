@@ -3,27 +3,27 @@ title: Mise en forme de texte prise en charge dans les conversations
 description: Décrit la prise en charge de la mise en forme du texte dans les conversations de bot
 keywords: messagerie de conversations de bots
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: dfb91e18a2ad895ae5b48c905046a22449304fc6
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 466b2383230ce0cf8086ba4a3dd45a5488ed24b2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566746"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155542"
 ---
 # <a name="formatting-bot-messages"></a>Mettre en forme les messages du bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) de votre message.
+Vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) texte de votre message.
 
 Microsoft Teams prend en charge les options de mise en forme suivantes :
 
 | Valeur TextFormat | Description |
 | --- | --- |
 | plain | Le texte doit être traité comme du texte brut sans aucune mise en forme appliquée. |
-| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal selon le cas . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
+| Markdown | Le texte doit être traité comme une mise en forme Markdown et restituer sur le canal comme il convient . voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 | xml | Le texte est un simple markup XML ; voir [Mise en forme du contenu de texte](#formatting-text-content) pour les styles pris en charge. |
 
 ## <a name="formatting-text-content"></a>Mise en forme du contenu de texte
@@ -60,7 +60,7 @@ La prise en charge de la mise en forme du texte varie en fonction du type de mes
 
 #### <a name="text-only-messages"></a>Messages texte uniquement
 
-| Style                     | Desktop | iOS | Android |
+| Style                     | Bureau | iOS | Android |
 |---------------------------|---------|-----|---------|
 | bold                      | ✔       | ✔   | ✔       |
 | italic                    | ✔       | ✔   | ✔       |

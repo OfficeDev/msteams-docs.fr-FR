@@ -2,13 +2,13 @@
 title: Vue d’ensemble des actions universelles pour les cartes adaptatives
 description: Vue d’ensemble rapide des actions universelles pour les cartes adaptatives.
 ms.topic: overview
-localization_priority: Normal
-ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706343"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155722"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Actions universelles pour les cartes adaptatives
 
@@ -97,7 +97,7 @@ Pour plus d’informations, voir [l’exemple de flux de travail séquentiel.](S
 
 ### <a name="up-to-date-views"></a>Affichages à jour
 
-Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Par exemple, il peut s’agit d’une demande d’approbation envoyée par un utilisateur. Après approbation, la carte doit afficher automatiquement les détails sur l’heure d’approbation de la demande et sur les personnes qui ont approuvé la demande. Le modèle d’actualisation vous permet de fournir ces affichages à jour. L’image suivante illustre un flux d’approbation en plusieurs étapes et la façon dont les vues de différents utilisateurs sont affichées.
+Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Par exemple, il peut s’agit d’une demande d’approbation envoyée par un utilisateur. Après l’approbation, la carte doit afficher automatiquement les détails sur l’heure d’approbation de la demande et sur les personnes qui ont approuvé la demande. Le modèle d’actualisation vous permet de fournir ces affichages à jour. L’image suivante illustre un flux d’approbation en plusieurs étapes et la façon dont les vues de différents utilisateurs sont affichées.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Affichages utilisateur spécifiques à jour":::
 

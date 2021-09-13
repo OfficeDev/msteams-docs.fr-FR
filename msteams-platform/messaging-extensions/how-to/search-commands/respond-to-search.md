@@ -4,18 +4,19 @@ author: surbhigupta
 description: Comment répondre à la commande de recherche à partir d’une extension de messagerie dans une Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068943"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155517"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois que l’utilisateur a soumis la commande de recherche, votre service web reçoit un message d’appel qui contient un objet avec `composeExtension/query` `value` les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
+Une fois que l’utilisateur a soumis la commande de recherche, votre service web reçoit un message d’appel qui contient un objet `composeExtension/query` `value` avec les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
 
 * À mesure que des caractères sont entrés dans la zone de recherche.
 * `initialRun` est définie sur true dans le manifeste de votre application, vous recevez le message d’appel dès que la commande de recherche est invoquée. Pour plus d’informations, [voir la requête par défaut.](#default-query)
@@ -108,7 +109,7 @@ Pour plus d’informations sur la carte connecteur Office 365, voir Utilisation 
 
 La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de l’une des deux manières :
 
-* Utilisation de la `preview` propriété dans `attachment` l’objet. La `preview` pièce jointe ne peut être qu’une carte hero ou miniature.
+* Utilisation de la `preview` propriété dans `attachment` l’objet. La pièce jointe peut uniquement être une carte hero ou `preview` miniature.
 * Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
 * Les actions d’appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d’aperçu.
 

@@ -3,14 +3,14 @@ title: Messages dans les conversations des robots
 description: Décrit comment avoir une conversation avec un bot Microsoft Teams de travail
 ms.topic: overview
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 49e6af7ef71d0794210e554d8d8b42fe714fbe592d3ca7de43c7996283f54a2c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f2cb661ac20d8313101144be275a54a90f4f2db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707549"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155622"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -250,7 +250,7 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 
 ## <a name="message-content"></a>Contenu du message
 
-| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
+| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Remarques                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
 | Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.  |
@@ -347,7 +347,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utilisez : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)` .

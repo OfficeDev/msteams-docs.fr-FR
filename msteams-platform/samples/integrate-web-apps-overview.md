@@ -4,19 +4,20 @@ author: Rajeshwari-v
 description: Vue d’ensemble de l’intégration d’applications web et de fonctionnalités d’appareil Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345766"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156689"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
-Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour que votre application soit native à Teams.
-Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton Partager vers Teams pour votre site web, l’ajout d’un onglet Microsoft Teams dans SharePoint, la création de liens profonds et l’intégration des fonctionnalités d’appareil.
+Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
+Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton Share-to-Teams pour votre site web, l’ajout d’un onglet Microsoft Teams dans SharePoint, la création de liens profonds et l’intégration des fonctionnalités d’appareil.
 
-## <a name="prerequisites"></a>Conditions préalables   
+## <a name="prerequisites"></a>Configuration requise   
 
 Pour une intégration efficace, assurez-vous de mieux comprendre les conditions préalables suivantes :
 * Teams fonctionnalités. 
@@ -43,7 +44,7 @@ Avec Power Apps, vous pouvez créer des applications métiers qui se connectent 
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent est une solution d’interface graphique guidée sans code. Il repose sur microsoft Power Platform et Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots de conversation enrichis qui s’intègrent facilement à la plateforme Teams de conversation. Vous pouvez concevoir, développer et publier des agents virtuels intelligents pour Teams sans avoir à configurer un environnement de développement, à créer un service web ou à vous inscrire directement à Bot Framework.
+Power Virtual Agent est une solution d’interface graphique guidée sans code. Il repose sur microsoft Power Platform et Bot Framework. Il permet à chaque membre de votre équipe de créer et de gérer des chatbots de conversation enrichis qui s’intègrent facilement à la plateforme Teams de conversation. Vous pouvez concevoir, développer et publier des agents virtuels intelligents pour Teams sans avoir à configurer un environnement de développement, créer un service web ou vous inscrire directement à Bot Framework.
 
 ### <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
@@ -59,7 +60,7 @@ Teams Les connecteurs de gestion des équipes de travail sont des intégrations 
 
 ## <a name="install-moodle-lms"></a>Installer Moodle LMS
 
-Il s’agit d’un système open source Learning Management System (LMS) populaire. Il est désormais intégré à Microsoft Teams. Cette intégration permet aux enseignants et aux enseignants de collaborer autour des cours DeNtact, de poser des questions sur les notes et les devoirs, et de rester à jour avec des notifications directement dans Teams.
+Il s’agit d’un système open source Learning Management System (LMS) populaire. Il est désormais intégré à Microsoft Teams. Cette intégration permet aux enseignants et aux enseignants de collaborer autour des cours DeNtacter, de poser des questions sur les notes et les devoirs, et de rester à jour avec des notifications directement dans Teams.
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Créer un bouton Partager vers Teams sur votre site web
 
@@ -73,11 +74,11 @@ Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams
 
 Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Ces liens profonds naviguent vers le contenu et les informations de votre onglet. Vous pouvez utiliser des liens profonds pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
 
-## <a name="integrate-device-capabilities"></a>Intégrer des fonctionnalités d’appareil
+## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
-Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
+Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
 
-## <a name="integrate-people-picker"></a>Intégrer le s picker de personnes
+## <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
 Vous pouvez intégrer le contrôle Teams sélecateur de personnes natives qui permet aux utilisateurs de rechercher et de sélectionner des personnes dans l’expérience d’application web.
 

@@ -3,14 +3,14 @@ title: Vue d’ensemble des principes de base du développement d’applications
 author: heath-hamilton
 description: Décrire les concepts fondamentaux du développement Teams plateformes.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345578"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156827"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de développement d’applications
 
@@ -27,15 +27,15 @@ Vous pouvez reconnaître les problèmes des utilisateurs et identifier les répo
 * Avez-vous besoin d’une authentification ?
 * Quel problème votre application va-t-elle résoudre ?
 * Qui les utilisateurs finaux de l’application ?
-* Comment l’expérience d’intégration doit-elle être et quelles autres sont les autres activités de l’application ?
+* Comment l’expérience d’intégration doit-elle être et que peut faire l’application ?
 
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
-[Maposez vos cas d’utilisation](../concepts/design/map-use-cases.md) sur certains scénarios courants et sur la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
+[La cartographie de vos cas d’utilisation](../concepts/design/map-use-cases.md) couvre certains scénarios courants et la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
 
-## <a name="integrate-device-capabilities"></a>Intégrer des fonctionnalités d’appareil
+## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
-Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
+Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
 
 ## <a name="see-also"></a>Voir aussi
 
