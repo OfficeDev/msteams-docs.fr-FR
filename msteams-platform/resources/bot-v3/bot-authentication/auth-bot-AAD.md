@@ -6,11 +6,11 @@ localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
 ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020687"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155757"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Authentifier un utilisateur dans un bot Microsoft Teams client
 
@@ -18,7 +18,7 @@ ms.locfileid: "52020687"
 
 Il existe de nombreux services que vous souhaitez peut-être consommer dans votre application Teams, et la plupart de ces services nécessitent une authentification et une autorisation pour accéder au service. Les services incluent Facebook, Twitter et bien Teams. Les utilisateurs Teams ont des informations de profil utilisateur stockées dans Azure Active Directory (Azure AD) à l’aide de Microsoft Graph. Cet article se concentre sur l’authentification à l’aide d’Azure AD pour accéder à ces informations.
 
-OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est une condition préalable pour travailler avec l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0 pour finir par lire les informations de profil de l’utilisateur à partir d’Azure AD et de Microsoft Graph.
+OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est une condition préalable à l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0 pour finir par lire les informations de profil de l’utilisateur à partir d’Azure AD et de Microsoft Graph.
 
 Le flux d’authentification décrit dans cet article est très similaire à celui des onglets, sauf que les onglets peuvent utiliser un flux d’authentification web et que les bots nécessitent l’authentification basée sur le code. Les concepts de cet article seront également utiles lors de l’implémentation de l’authentification à partir de la plateforme mobile.
 

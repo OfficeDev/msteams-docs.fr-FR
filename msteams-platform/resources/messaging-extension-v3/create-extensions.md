@@ -1,15 +1,15 @@
 ---
 title: Lancer des actions avec des extensions de messagerie
 description: Créer des extensions de messagerie basées sur l’action pour permettre aux utilisateurs de déclencher des services externes
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams messaging extensions messaging extensions search
-ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140368"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155754"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>Lancer des actions avec des extensions de messagerie
 

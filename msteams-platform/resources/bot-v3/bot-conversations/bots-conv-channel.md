@@ -2,15 +2,15 @@
 title: Conversations de conversation de canal et de groupe avec des bots
 description: Décrit le scénario de bout en bout d’une conversation avec un bot dans un canal Microsoft Teams
 keywords: teams scenarios channels conversation bot
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: e254302271cf101638c897e1a1952d302705d6a4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 8e4336e8b0db7c6c720b8fb7adcb281685b6a6ba
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566795"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155753"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Conversations par chat de canal et de groupe avec un robot Microsoft Teams
 
@@ -22,7 +22,7 @@ La conversation dans les canaux et les conversations de groupe diffère de la co
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>Conception d’un bot idéal pour les canaux ou les groupes
 
-Les bots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent être @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu’ils @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
+Les bots ajoutés à une équipe deviennent un autre membre de l’équipe et peuvent être @mentioned dans le cadre de la conversation. En fait, les bots reçoivent des messages uniquement lorsqu’ils sont @mentioned, de sorte que les autres conversations sur le canal ne sont pas envoyées au bot.
 
 Un bot dans un groupe ou un canal doit fournir des informations pertinentes et appropriées pour tous les membres. Bien que votre bot puisse certainement fournir des informations pertinentes pour l’expérience, gardez à l’esprit que les conversations avec elle sont visibles par tout le monde. Par conséquent, un bot efficace dans un groupe ou un canal doit ajouter de la valeur à tous les utilisateurs et ne pas partager par inadvertance des informations plus appropriées à une conversation un-à-un.
 
@@ -38,9 +38,9 @@ Pour plus d’informations sur les bots qui créent des messages dans les canaux
 
 Pour un bot dans un groupe ou un canal, en plus du schéma de [message](https://docs.botframework.com/core-concepts/reference/#activity)normal, votre bot reçoit également les propriétés suivantes :
 
-* `channelData`Voir [Teams données du canal de distribution.](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data) Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
+* `channelData`Voir [Teams données de canal de distribution.](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data) Dans une conversation de groupe, contient des informations spécifiques à cette conversation.
 * `conversation.id` ID de chaîne de réponse, constitué de l’ID de canal et de l’ID du premier message de la chaîne de réponse.
-* `conversation.isGroup``true`S’agit des messages de bot dans les canaux ou les conversations de groupe.
+* `conversation.isGroup` Est `true` pour les messages de bot dans les canaux ou les conversations de groupe.
 * `conversation.conversationType` Soit `groupChat` ou `channel` .
 * `entities` Peut contenir une ou plusieurs mentions. Pour plus d’informations, voir [Mentions.](#-mentions)
 
@@ -56,18 +56,18 @@ Dans un canal, la réponse à un message s’affiche comme une réponse à la ch
 
 Lorsque votre bot est ajouté pour la première fois au groupe ou à l’équipe, il est généralement utile d’envoyer un message de bienvenue présentant le bot à tous les utilisateurs. Le message de bienvenue doit fournir une description des fonctionnalités et des avantages du bot pour les utilisateurs. Dans l’idéal, le message doit également inclure des commandes pour permettre à l’utilisateur d’interagir avec l’application. Pour ce faire, assurez-vous que votre bot répond au message, avec `conversationUpdate` `teamsAddMembers` l’eventType dans `channelData` l’objet. Assurez-vous que l’ID est lui-même l’ID d’application du bot, car le même événement est envoyé lorsqu’un utilisateur est ajouté `memberAdded` à une équipe. Pour plus [d’informations, voir l’ajout](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) d’un membre d’équipe ou d’un bot.
 
-Vous pouvez également envoyer un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, vous pouvez récupérer [la liste de](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) l’équipe et envoyer un message direct à chaque [utilisateur.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
+Vous pouvez également envoyer un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, vous pouvez récupérer [la liste](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) de l’équipe et envoyer un message direct à [chaque utilisateur.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
 
 Il est recommandé que votre bot *n’envoie* pas de message de bienvenue dans les situations suivantes :
 
-* L’équipe est grande (bien évidemment subjectif, par exemple, plus de 100 membres). Votre bot peut être considéré comme « spammy » et la personne qui l’a ajouté peut obtenir des réclamations, sauf si vous communiquez clairement la proposition de valeur de votre bot à toutes les personnes qui voient le message de bienvenue.
+* L’équipe est grande (évidemment subjectif, par exemple, plus de 100 membres). Votre bot peut être considéré comme « spammy » et la personne qui l’a ajouté peut obtenir des réclamations, sauf si vous communiquez clairement la proposition de valeur de votre bot à toutes les personnes qui voient le message de bienvenue.
 * Votre bot est d’abord mentionné dans un groupe ou un canal, plutôt que d’être ajouté pour la première fois à une équipe.
 * Un groupe ou un canal est renommé.
 * Un membre d’équipe est ajouté à un groupe ou un canal.
 
 ## <a name="-mentions"></a>@ Mentions
 
-Étant donné que les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés (« @_botname_») dans un message, chaque message reçu par un bot dans un canal de groupe contient son propre nom, et vous devez vous assurer que votre message est traité par l’ensemble des messages. En outre, les bots peuvent passer en détail d’autres utilisateurs mentionnés et mentionner des utilisateurs dans le cadre de leurs messages.
+Étant donné que les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés (« @_botname_») dans un message, chaque message reçu par un bot dans un canal de groupe contient son propre nom, et vous devez vous assurer que votre message est traité par l’ensemble des messages. En outre, les bots peuvent passer en détail les autres utilisateurs mentionnés et mentionner des utilisateurs dans le cadre de leurs messages.
 
 ### <a name="retrieving-mentions"></a>Récupération des mentions
 
@@ -115,7 +115,7 @@ Vous pouvez également utiliser la fonction d Teams d’extension, qui permet d�
 Votre bot peut mentionner d’autres utilisateurs dans les messages publiés dans les canaux. Pour ce faire, votre message doit :
 
 * Inclure `<at>@username</at>` dans le texte du message.
-* Inclure `mention` l’objet à l’intérieur de la collection d’entités.
+* Inclure `mention` l’objet à l’intérieur de la collection entities.
 
 #### <a name="net-example"></a>Exemple .NET
 
@@ -151,7 +151,7 @@ var generalMessage = mentionedMsg.routeReplyToGeneralChannel();
 session.send(generalMessage);
 ```
 
-#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : message sortant avec l’utilisateur mentionné
+#### <a name="example-outgoing-message-with-user-mentioned"></a>Exemple : Message sortant avec l’utilisateur mentionné
 
 ```json
 {
