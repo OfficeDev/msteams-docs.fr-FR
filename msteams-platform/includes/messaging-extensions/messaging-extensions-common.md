@@ -23,7 +23,7 @@ Pour ajouter une extension de messagerie, incluez une nouvelle structure JSON de
 
 La définition d’extension est un objet qui a la structure suivante :
 
-| Nom de la propriété | Objectif | Obligatoire ? |
+| Nom de la propriété | Objectif | Obligatoire ? |
 |---|---|---|
 | `botId` | ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Il doit généralement être identique à l’ID de votre application Teams globale. | Oui |
 | `scopes` | Tableau déclarant si cette extension peut être ajoutée à ou `personal` à des `team` étendues (ou les deux). | Oui |
@@ -38,7 +38,7 @@ Votre extension de messagerie doit déclarer une commande, qui s’affiche lorsq
 
 Dans le manifeste de l’application, votre élément de commande est un objet avec la structure suivante :
 
-| Nom de la propriété | Objectif | Obligatoire ? | Version minimale du manifeste |
+| Nom de la propriété | Objectif | Obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
 | `id` | ID unique que vous affectez à cette commande. La demande de l’utilisateur inclut cet ID. | Oui | 1.0 |
 | `title` | Nom de la commande. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |
