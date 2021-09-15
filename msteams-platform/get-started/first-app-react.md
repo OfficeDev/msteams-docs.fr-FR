@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: cfe3dc5f303de9035b363f1e3b8224456ff6588e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 468f1bdaa5f27cf6a57ebab8e447d0003c3e3d81
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155797"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360517"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>Créer et exécuter votre première application Microsoft Teams avec React
 
@@ -45,7 +45,7 @@ Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Démarrage de l’Assistant pour la Création d’un projet":::
 
-1. Dans la section **Sélectionner des fonctionnalités,** sélectionnez **l’onglet** sélectionné, puis sélectionnez **OK.**
+1. Dans la section **Sélectionner des fonctionnalités,** vérifiez que **l’onglet** est sélectionné et sélectionnez **OK.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Capture d’écran présentant comment ajouter des fonctionnalités à votre nouvelle application.":::
 
@@ -96,11 +96,15 @@ Une fois Teams Shared Computer Toolkit votre projet, vous avez les composants po
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Capture d’écran présentant les fichiers projet d’application pour une application personnelle dans Visual Studio Code.":::
 
-Le Kit de ressources crée automatiquement une structure pour vous dans le répertoire du projet en fonction des fonctionnalités que vous avez ajoutées lors de l’installation. Le Kit de ressources Teams conserve son état pour votre application dans le répertoire `.fx`.  Parmi les autres éléments de ce répertoire :
+Le Kit de ressources crée automatiquement une structure pour vous dans le répertoire du projet en fonction des fonctionnalités que vous avez ajoutées lors de l’installation. Le Kit de ressources Teams conserve son état pour votre application dans le répertoire `.fx`. 
 
-- Les icônes d’application sont stockées sous forme de fichiers PNG dans `color.png` et `outline.png`.
-- Le manifeste de l'application pour la publication sur le portail des développeurs pour Teams est stocké dans `manifest.source.json`.
-- Les paramètres que vous avez choisis lors de la création du projet sont stockés dans `settings.json`.
+- Les paramètres que vous avez choisis lors de la création du projet sont stockés dans `.fx/settings.json`.
+- L’état de votre projet est stocké dans `.fx/env.*.json` .
+
+Et les Teams’application sont stockées dans `appPackage` l’annuaire.
+
+- Les icônes d’application sont stockées sous forme de fichiers PNG dans `appPackage/color.png` et `appPackage/outline.png`.
+- Le manifeste de l’application pour la publication sur le Portail Teams est stocké dans `appPackage/manifest.source.json` .
 
 Comme vous avez sélectionné la fonctionnalité d’onglet lors de l’installation, le Kit de ressources Teams génère automatiquement tout le code nécessaire pour un onglet de base dans le répertoire `tabs`. Ce répertoire contient plusieurs fichiers importants :
 
@@ -118,7 +122,7 @@ Lorsque vous ajoutez des fonctionnalités cloud, des répertoires supplémentair
 Le Kit de ressources Teams vous permet d’exécuter votre application localement.  Il s’agit de plusieurs parties nécessaires pour fournir l’infrastructure correcte attendue par Teams :
 
 - Une application est inscrite auprès de Azure Active Directory.  Cette application dispose d’autorisations associées à l’emplacement à partir duquel l’application est chargée et aux ressources principales auxquelles elle accède.
-- Une API web est hébergée pour faciliter les tâches d’authentification, en agissant comme un proxy entre l’application et Azure Active Directory.  Cette opération est exécutée par Azure Functions Core Tools.  Il est accessible à l’URL `https://localhost:5000`.
+- Une API web est hébergée pour faciliter les tâches d’authentification, en agissant comme un proxy entre l’application et Azure Active Directory. Il est accessible à l’URL `https://localhost:5000`.
 - Les ressources HTML, CSS et JavaScript qui composent le serveur frontal de l’application sont hébergées sur un service local. Il est accessible à `https://localhost:3000`.
 - Un manifeste d'application est généré et existe dans le portail des développeurs pour Teams.  Teams utilise le manifeste de l’application pour indiquer aux clients connectés où charger l’application.
 
@@ -131,6 +135,9 @@ Pour créer et exécuter votre application localement :
 1. À partir de Visual Studio Code, appuyez sur **F5** pour exécuter votre application dans le mode de débogage.
 
    > Lorsque vous exécutez l’application pour la première fois, toutes les dépendances sont téléchargées et l’application est créée.  Une fenêtre de navigateur s’ouvre automatiquement lors la build est terminée.  Cette finalisation peut prendre entre 3 et 5 minutes.
+
+   Pour la première fois, vous serez invité à installer un certificat pour le débogage local. cliquez sur Continuer.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/certificate-prompt.png" alt-text="Capture d’écran présentant comment l’invite à installer un certificat SSL pour permettre à Teams de charger votre application à partir de localhost.":::
 
    Le Shared Computer Toolkit vous invite à installer un certificat local si nécessaire. Ce certificat permet à Teams de charger votre application à partir de `https://localhost`. Sélectionnez Oui lorsque la boîte de dialogue suivante s’affiche :
 

@@ -1,7 +1,7 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>Utiliser App Studio pour mettre à jour le package d’application
 
 > [!TIP]
-> **Essayez le portail du développeur**: App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+> **Essayez le portail du développeur**: App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
 
 App Studio est une application Teams que vous pouvez installer à partir du Teams store. Cela simplifie la création et l’inscription d’une application.
 
@@ -20,9 +20,9 @@ Pour mettre à jour le package d’application, vous suivrez les étapes suivant
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 
-    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Sur .NET, le fichier manifest.jssur peut se trouver dans Visual Studio manifeste sous ```Microsoft.Teams.Samples.HelloWorld.Web``` . Sur Node.js, cette fonction est effectuée en tapant la ligne de commande dans le répertoire `gulp` racine du projet.
+    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Sur .NET, le fichier manifest.json peut se trouver dans Visual Studio manifeste sous ```Microsoft.Teams.Samples.HelloWorld.Web``` . Sur Node.js, cette fonction est effectuée en tapant la ligne de commande dans le répertoire `gulp` racine du projet.
 
-     Dans Visual Studio, la manifest.jssur le fichier se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web` . Cette étape est décrite par l’image suivante :  
+     Dans Visual Studio, le fichier manifest.json se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web` . Cette étape est décrite par l’image suivante :  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     

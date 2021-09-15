@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155640"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360481"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -50,9 +50,6 @@ Le manifeste de l’application doit inclure l’extrait de code suivant :
     }
   ]
 ```
-
-> [!NOTE]
-> `meetingStage` est actuellement disponible en [prévisualisation pour les](../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
 
 ### <a name="context-property"></a>Propriété Context
 
@@ -108,7 +105,7 @@ Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obten
 
 Au cours d’une réunion, vous pouvez utiliser la boîte de dialogue ou la boîte de dialogue en réunion pour créer des expériences `meetingSidePanel` uniques pour vos applications.
 
-#### <a name="meeting-sidepanel"></a>Sidepanel de réunion
+#### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
 Cela vous permet de personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles `meetingSidePanel` d’affichages et d’actions. Dans le manifeste de votre application, vous devez `meetingSidePanel` l’ajouter au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est rendue dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -130,9 +127,6 @@ La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le m
 > * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial doit reposer sur les métadonnées de demande dans l’objet, `from.id` et non sur les `from` `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` Azure Active Directory (AAD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 #### <a name="shared-meeting-stage"></a>Étape de réunion partagée
-
-> [!NOTE]
-> Cette fonctionnalité est actuellement disponible en [prévisualisation pour les](../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
 
 La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel.
 
@@ -166,9 +160,10 @@ Les configurations des réunions après et [avant](#before-a-meeting) sont les m
 
 ## <a name="code-sample"></a>Exemple de code
 
-|Exemple de nom | Description | Échantillon |
-|----------------|-----------------|--------------|----------------|-----------|
-| Application de réunion | Montre comment utiliser l’application Générateur de jetons de réunion pour demander un jeton. Le jeton est généré de manière séquentielle afin que chaque participant ait une opportunité de participer à une réunion. Le jeton est utile dans les situations telles que les réunions scrum et les sessions Q&A. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+|Exemple de nom | Description | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Application de réunion | Montre comment utiliser l’application Générateur de jetons de réunion pour demander un jeton. Le jeton est généré de manière séquentielle afin que chaque participant ait une opportunité de participer à une réunion. Le jeton est utile dans les situations telles que les réunions scrum et les sessions Q&A. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Exemple de phase de réunion | Exemple d’application pour afficher un onglet lors de la phase de réunion pour la collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

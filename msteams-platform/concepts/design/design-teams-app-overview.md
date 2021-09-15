@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des Microsoft Teams applications. Les 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156941"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360467"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams web
 
@@ -22,18 +22,18 @@ Que vous êtes concepteur, chef de produit, développeur ou fabricant à l’aid
 
 Concevoir une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement Teams fonctionnalités et contextes.
 
-Ces recommandations et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
+Ces instructions et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
 
 ## <a name="teams-app-design-principles"></a>Teams de conception d’application
 
-Teams applications permettent aux gens de s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
+Teams applications permettent aux gens d’atteindre des objectifs plus réussis. Utilisez ces principes pour guider votre conception.
 
 :::row:::
    :::column span="":::
 
 ### <a name="collaborative"></a>Collaboration
 
-Teams applications permettent aux gens de s’améliorer ensemble. Utilisez ces principes pour guider votre conception.
+Teams’application favorise la collaboration par le biais d’activités coordonnées et partagées entre les utilisateurs.
 
    :::column-end:::
    :::column span="":::
@@ -57,7 +57,7 @@ Les personnes de tous horizons, de tous les compétences et de toutes les discip
 
 ### <a name="light"></a>Light
 
-L’application se concentre sur les scénarios principaux qui se fondent avec Teams flux de travail.
+L’application se concentre sur les scénarios de base qui se fondent avec Teams flux de travail.
 
    :::column-end:::
 :::row-end:::
@@ -91,7 +91,7 @@ L’interface utilisateur est facile à comprendre, agréable en apparence et en
 
 ### <a name="responsive"></a>Réactive
 
-L’application est sans appareil et sans écran.
+L’application est sans périphérique et sans écran.
 
    :::column-end:::
 :::row-end:::

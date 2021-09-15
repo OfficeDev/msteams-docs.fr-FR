@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 39659b6c58b61f8b8880bd277effba1c8f9d115e
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155793"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360684"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Créez et exécutez votre première extension de messagerie basée sur la recherche dans Microsoft Teams
 
@@ -122,11 +122,15 @@ Pour créer et exécuter votre application localement :
 
 1. Sélectionnez **Ajouter** pour ajouter l’application à votre compte.
 
-   Une fois l’application chargée, vous êtes directement placé dans une boîte de dialogue de recherche :
+   Une fois l’application chargée, vous pouvez essayer d’utiliser l’exemple de fonctionnalité : vous pouvez lancer l’extension de message à partir de trois points dans la zone de composition et essayer de rechercher des packages npm à partir de la barre de recherche.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Votre extension de messagerie basée sur la recherche en action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Votre extension de messagerie basée sur la recherche en action":::
+   
+   Vous pouvez également essayer d'@votre instance d’extension de message à partir de la barre de recherche dans la ligne supérieure de Teams et rechercher le package npm.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Votre extension de messagerie basée sur la recherche en action":::
 
-   Tapez un texte dans la zone de recherche, puis sélectionnez l’une des options.  Une carte adaptative s’ajoute à votre zone d’entrée.
+   Tapez du texte dans la zone de recherche, puis sélectionnez l’une des options, vous pouvez créer et envoyer des cartes adaptatives des résultats de la recherche.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Votre extension de messagerie basée sur la recherche en action":::
 
 <!-- markdownlint-disable MD033 -->
 <details>

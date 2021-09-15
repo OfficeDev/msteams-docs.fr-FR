@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: none
-ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ed3dd7abd877a91fce1c321f0f6c68d91fd1b1e3
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155525"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360474"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams de validation du magasin d’informations
 
@@ -303,7 +303,6 @@ Si votre application inclut un onglet, assurez-vous qu’elle respecte ces recom
 * Les onglets dans un contexte personnel peuvent agréger le contenu des instances partagées de l’application.
 * Les onglets doivent répondre Teams thèmes. Lorsqu’un utilisateur modifie le thème, le thème de l’application doit refléter la sélection.
 * Les onglets doivent utiliser des composants de style Teams, tels que les polices Teams, les gammes de types, les palettes de couleurs, le système de grille, le mouvement, le ton de la voix, etc. dans la mesure du possible.
-* Vous devez inclure un **onglet Paramètres’onglet.**
 * Les onglets doivent suivre Teams conception de l’interaction, telle que la navigation dans la page, la position et l’utilisation des boîtes de dialogue, des hiérarchies d’informations, etc. dans la mesure du possible.
 * Le contenu de l’onglet dans l’iframe ne doit pas inclure de fonctionnalités qui imitent Teams fonctionnalités principales. Par exemple, les bots, les extensions de messagerie, les appels, les réunions, etc.
 

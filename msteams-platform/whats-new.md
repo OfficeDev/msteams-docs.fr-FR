@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: nouveautés des équipes
-ms.openlocfilehash: 8ef06dc5c2d6461b4867150ec8fec773f225b058
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba12e7f450cc45f005567a5148d8f7b88a5fe77d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155604"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360661"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Remarques** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|09/08/2021|L’étape de réunion est désormais disponible dans GA.|[Activer et configurer vos applications pour Teams réunions](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| La fonctionnalité de scènes en mode ensemble personnalisé combine les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés. | [Scènes personnalisées du mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduction d’un guide pas à pas pour créer un bot Teams avec l' sign-on unique (SSO). | [Guide pas à pas pour créer un bot Teams avec l' cesso](sbs-bots-with-sso.yml) |
 |08/19/2021| Événement de mise à jour d’installation reçu lorsque vous installez un bot sur un thread de conversation. | [Événement de mise à jour d’installation](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |

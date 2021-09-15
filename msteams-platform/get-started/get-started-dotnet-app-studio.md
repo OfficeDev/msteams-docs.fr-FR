@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155790"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360727"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Créer votre première application Teams en C #
 
@@ -69,7 +69,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>Création et exécution de l’exemple
 
-Vous pouvez créer et exécuter le smaple après son clonage. 
+Vous pouvez créer et exécuter l’exemple après son clonage. 
 
 **Pour créer et exécuter l’exemple cloné**
 
@@ -177,7 +177,7 @@ Après avoir installé l’application dans Teams, vous devez la configurer pour
 
 1. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab.
 1. Sélectionnez **Hello World** dans la **liste Ajouter un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de sélectionner l’onglet à afficher dans ce canal. 
-1. Sélectionnez **Enregistrer**. `Hello World`L’onglet est chargé avec l’onglet.
+1. Cliquez sur **Enregistrer**. `Hello World`L’onglet est chargé avec l’onglet.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 

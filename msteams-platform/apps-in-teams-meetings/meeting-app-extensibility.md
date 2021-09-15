@@ -4,12 +4,12 @@ author: surbhigupta
 description: Comprendre les applications de réunions unifiées
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a367af1b2941547143ff7e0ec4b897b1174e26e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d77187543dd5e4ab774341f30a8a05a41c6a49f2
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155638"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360495"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -195,11 +195,11 @@ Un invité ou un utilisateur anonyme ne peut pas ajouter, supprimer ou désinsta
 
 Le tableau suivant fournit les types d’utilisateur et répertorie les fonctionnalités accessibles à chaque utilisateur :
 
-| Type d’utilisateur | Onglets | Bots | Extensions de messagerie | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Non disponible |
-| Invité qui fait partie du client AAD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Available |
-| Utilisateur fédéré. Pour plus d’informations, voir [utilisateurs non standard.](/microsoftteams/non-standard-users) | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Non disponible |
+| Type d’utilisateur | Onglets | Bots | Extensions de messagerie | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Non disponible | Impossible d’afficher, mais peut interagir avec l’application lors de la phase de réunion |
+| Invité qui fait partie du client AAD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Available | Peut afficher et interagir avec l’application sur la phase de réunion |
+| Utilisateur fédéré. Pour plus d’informations, voir [utilisateurs non standard.](/microsoftteams/non-standard-users) | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Non disponible | Peut afficher et interagir avec l’application sur la phase de réunion |
 
 ## <a name="see-also"></a>Voir aussi
 

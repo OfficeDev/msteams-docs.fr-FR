@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: ebb8bb95f9011e45afba59ad7b624bb2494c0b74
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 31e8f96dd2e701cbb6a6c3b47174d1d70ee36576
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155642"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360453"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -56,8 +56,8 @@ L’API permet à un bot de récupérer les informations des participants par ID
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
-|**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
+|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**participantId**| String | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
 |**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. |
 
 ### <a name="example"></a>Exemple
@@ -256,7 +256,7 @@ L’API Détails de la réunion inclut le paramètre de requête suivant :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
+|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
 
 ### <a name="example"></a>Exemple
 
@@ -465,12 +465,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>Exemple de code
 
-|Exemple de nom | Description | .NET | Node.js |
+|Exemple de nom | Description | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | Extensibilité des réunions | Microsoft Teams’extensibilité de réunion pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bulle de contenu de réunion | Microsoft Teams d’extensibilité de réunion pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | MeetingSidePanel | Microsoft Teams d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Onglet Détails de la réunion | Microsoft Teams exemple d’extensibilité de réunion pour interagir avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|Exemple d’événements de réunion|Exemple d’application pour afficher les événements de réunion Teams en temps réel|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 
 ## <a name="see-also"></a>Voir aussi
 

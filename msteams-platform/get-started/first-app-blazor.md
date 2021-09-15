@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d014ba82f8e499b8b38f1dbc13a9ee68ef29f1c9
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155801"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360653"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Créer et exécuter votre première application Microsoft Teams avec Blazor
 
@@ -30,8 +30,6 @@ Assurez-vous que votre environnement de développement est installé en installa
 
 Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
-
 1. Ouvrez Visual Studio 2019.
 
 1. Sélectionnez **Créer un projet.**
@@ -46,38 +44,6 @@ Utilisez le Kit de ressources Teams pou créer votre premier projet :
 
    1. Sélectionnez **Project**  >  **TeamsFx**  >  **Configurer pour l' sso...**.
    1. Lorsque vous y invitez, connectez-vous à votre compte d’administrateur M365.
-
-# <a name="command-line"></a>[Ligne de commande](#tab/cli)
-
-1. Ouvrez un Terminal et sélectionnez le répertoire dans lequel vous souhaitez créer le projet.
-
-1. Exécutez `dotnet new -i` cette page pour installer le modèle à partir NuGet :
-
-   ``` bash
-   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
-   ```
-
-   Vous ne devez le faire que la première fois ou lors de la mise à jour du modèle. Vérifiez [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) la dernière version de ce package.
-
-1. Créez un répertoire :
-
-   ``` bash
-   mkdir helloworld
-   ```
-
-1. Exécutez `dotnet new` cette recherche pour créer un projet :
-
-   ``` bash
-   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
-   ```
-
-1. Après la mise en place de la échafaudage, configurez le projet pour Teams déploiement :
-
-   ``` bash
-   teamsfx init
-   ```
-
-   Vous pouvez maintenant ouvrir la solution dans Visual Studio débogage.
 
 ---
 
@@ -169,7 +135,7 @@ Le déploiement se compose de deux étapes :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Sélectionner l’opération Publier sur le projet":::
 
-1. Dans la **fenêtre** Publier, sélectionnez **Azure** et **selct Next**.
+1. Dans la **fenêtre** Publier, sélectionnez **Azure** et **sélectionnez Suivant.**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Sélectionner Azure comme cible de publication":::
 
@@ -219,7 +185,7 @@ Le Portail des développeurs pour Teams l’endroit où les onglets de votre app
 
 1. Sélectionnez **Créer votre premier environnement.**
 
-1. Entrez un nom pour votre environnement, puis sélectionnez **Ajouter.** Par exemple, `_Production_`.
+1. Entrez un nom pour votre environnement, puis sélectionnez **Ajouter.** Par exemple : `_Production_`.
 
 1. Sélectionnez **Créer votre première variable d’environnement.**
 
@@ -258,7 +224,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
 1. Sélectionnez **Mettre à jour**.
 
-1. Sélectionnez **Enregistrer**.
+1. Cliquez sur **Enregistrer**.
 
 1. Dans la barre latérale, sélectionnez **Sign-On unique**.
 
@@ -266,7 +232,7 @@ Le manifeste de l’application charge l’onglet à partir d’une `localhost` 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Modifier l’URI de l’ID d’application d' sign-on unique":::
 
-1. Sélectionnez **Enregistrer**.
+1. Cliquez sur **Enregistrer**.
 
 1. Dans la barre latérale, sélectionnez **Domaines.**
 

@@ -1,19 +1,19 @@
 ---
-title: 'Prise en main : créer votre premier bot de conversation'
+title: Get started - Build your first bot
 author: adrianhall
-description: Créez un bot de conversation pour Microsoft Teams à l’aide du Kit de ressources Teams.
+description: Créez un bot pour Microsoft Teams l’aide Teams Shared Computer Toolkit.
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7e41de915e63b509da1db5b1cbe8e018be4d586d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155798"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360601"
 ---
-# <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Créer votre premier bot de conversation pour Microsoft Teams
+# <a name="build-your-first-bot-for-microsoft-teams"></a>Créez votre premier bot pour Microsoft Teams
 
 Dans ce didacticiel, vous découvrirez comment créer, exécuter et déployer une application bot Teams. Un bot agit en tant qu’intermédiaire entre un utilisateur Teams et un service web. Les utilisateurs peuvent converser avec un bot pour obtenir rapidement des informations, initier des flux de travail ou tout autre action que votre service web peut effectuer. 
 
@@ -93,7 +93,7 @@ Une extension de messagerie utilise [Bot Framework](https://docs.botframework.co
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="Disposition de fichier d’un projet bot.":::
 
-Le code bot est stocké dans le répertoire `bot`.  Le `bot/teamsBot.js` est le point d’entrée principal pour le bot et les boîtes de dialogue sont stockées dans le répertoire `dialogs`.
+Le code bot est stocké dans le répertoire `bot`.  Il `bot/teamsBot.js` s’agit du point d’entrée principal du bot.
 
 > [!Tip]
 > Familiarisez-vous avec les bots en dehors de Teams avant d’intégrer votre premier bot dans Teams.  Vous trouverez d’autres informations sur les bots en examinant les didacticiels [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true).
@@ -104,7 +104,6 @@ Le Kit de ressources Teams vous permet d’héberger votre application localemen
 
 - Une application Azure Active Directory est inscrite dans le client M365.
 - Un manifeste d’application est soumis au Centre des développeurs pour Teams.
-- Une API est exécutée à l’aide d’Azure Functions Core Tools pour prendre en charge votre application.
 - [ngrok](https://ngrok.io) est installé et utilisé pour fournir un tunnel entre Teams et votre code bot.
 
 Pour créer et exécuter votre application localement :
@@ -120,9 +119,9 @@ Pour créer et exécuter votre application localement :
 1. Vous serez peut-être invité à vous connecter.  Dans ce cas, connectez-vous à l'aide de votre compte M365.
 1. Lorsque vous y invitez l’application sur Teams, sélectionnez **Ajouter.**
 
-   Une fois l’application chargée, vous êtes directement conduit à une session de conversation avec le bot.  Vous pouvez taper `intro` pour afficher une carte d’introduction et `show` pour présenter vos informations à partir de Microsoft Graph.  (Ceci nécessite une approbation d’autorisations supplémentaire).
+   Une fois l’application chargée, vous êtes directement conduit à une session de conversation avec le bot.  Vous pouvez taper pour afficher une carte d’introduction et pour obtenir la documentation relative aux cartes `welcome` adaptatives et aux commandes de `learn` bot. 
 
-   Le débogage fonctionne comme prévu. Essayez vous-même. Ouvrez le fichier `bot/dialogs/rootDialog.js`, puis localisez la méthode `triggerCommand(...)`.  Définissez un point d’arrêt sur le cas par défaut.  Puis tapez du texte.
+   Le débogage fonctionne comme prévu. Essayez vous-même. Ouvrez le fichier `bot/teamsBot.js`, puis localisez la méthode `onMessage()`.  Définissez un point d’arrêt dans n’importe quel cas.  Puis tapez du texte.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -132,7 +131,6 @@ Lorsque vous appuyez sur **la touche F5,** le Teams Shared Computer Toolkit :
 
 1. Inscrit votre application avec Azure Active Directory.
 1. Inscrit votre application pour le « chargement de version latéral » dans Microsoft Teams.
-1. Démarre le système principal de votre application en cours d’exécution localement à [l’aide des outils Azure Function Core](/azure/azure-functions/functions-run-local?#start).
 1. Démarre un tunnel ngrok pour Teams communiquer avec votre application.
 1. Démarre Microsoft Teams avec une commande pour indiquer Teams charger une version de version de l’application.
 
@@ -160,7 +158,6 @@ Pour exécuter correctement votre application dans Teams, vous devez avoir un co
 
 Avant le déploiement, l’application s’est exécutée localement :
 
-1. Le serveur principal s’exécute en utilisant _Azure Functions Core Tools_.
 1. Le point de terminaison HTTP de l’application, dans lequel Microsoft Teams charge l’application, s’exécute localement.
 
    Le déploiement implique la mise en service de ressources sur un abonnement Azure actif et le déploiement (chargement) du code du serveur principal et du serveur frontal pour l’application vers Azure. Le serveur principal utilise une variété de services Azure, notamment Azure App Service et Azure Bot Service.
