@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
+ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157001"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59439696"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -45,7 +45,7 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 * {loginHint}: valeur appropriée comme conseil de connexion pour AAD. Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel dans le client actuel.
 * {userObjectId}: ID d’objet AAD de l’utilisateur actuel dans le client actuel.
-* {theme}: Le thème de l’interface utilisateur actuelle (IU) tel `default` que , `dark` ou `contrast` .
+* {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default` que , `dark` ou `contrast` .
 * {groupId}: ID du groupe Office 365 dans lequel réside l’onglet.
 * {tid}: ID de client AAD de l’utilisateur actuel.
 * {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId. Par exemple, en-us.
@@ -122,7 +122,7 @@ Lorsque votre page de contenu est chargée dans un canal privé, les données qu
 * `teamName`: Définir sur le nom du canal privé
 * `teamSiteUrl`: Définir sur l’URL d’un site SharePoint distinct et unique pour le canal privé
 * `teamSitePath`: Définir sur le chemin d’accès d’un site SharePoint distinct et unique pour le canal privé
-* `teamSiteDomain`: Définir sur le domaine d’un domaine de site SharePoint unique et distinct pour le canal privé
+* `teamSiteDomain`: Définir sur le domaine d’un domaine de site SharePoint distinct et unique pour le canal privé
 
 Si votre page utilise l’une de ces valeurs, vous devez vérifier le champ pour déterminer si votre page est chargée dans un canal privé et y `channelType` répondre de manière appropriée.
 
@@ -137,7 +137,7 @@ Vous pouvez inscrire votre application pour être informée si le thème change 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Recommandations en matière de conception d’onglets](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Recommandations en matière de conception d’onglets](../../tabs/design/tabs.md)
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
