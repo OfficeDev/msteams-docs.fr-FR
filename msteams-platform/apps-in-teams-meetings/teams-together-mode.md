@@ -3,12 +3,12 @@ title: Scènes personnalisées en mode ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 5fb049668247a12231f91aec0e75537608f25b10
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0558b3914ba3cabf2af3937a4a4cadb9342c3844
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155637"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475600"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -26,9 +26,12 @@ Le processus suivant donne une vue d’ensemble pour créer une application de s
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créer une application de scène uniquement" border="false":::
 
-Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création du package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
+Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création de package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
 
-## <a name="prerequisites"></a>Configuration requise
+> [!NOTE]
+> Les utilisateurs ne peuvent pas lancer le mode Ensemble à partir d’un appareil mobile. Toutefois, une fois qu’un utilisateur rejoint une réunion via mobile et le mode Ensemble est allumé à partir du bureau, les utilisateurs mobiles qui ont allumé la vidéo apparaissent en mode Ensemble sur le bureau. 
+
+## <a name="prerequisites"></a>Conditions préalables
 
 Vous devez avoir une connaissance de base des éléments suivants pour utiliser des scènes personnalisées du mode Ensemble :
 
@@ -42,7 +45,7 @@ Vous devez avoir une connaissance de base des éléments suivants pour utiliser 
 Prenons les pratiques suivantes pour une expérience de création de scène :
 
 * Assurez-vous que toutes les images sont au format PNG.
-* Assurez-vous que le package final avec toutes les images rassemblées ne doit pas dépasser la résolution 1920 x 1080. La résolution est un nombre even. Cette résolution est une condition requise pour que les scènes soient affichées correctement.
+* Assurez-vous que le package final avec toutes les images rassemblées ne doit pas dépasser la résolution 1920x1080. La résolution est un nombre even. Cette résolution est une condition requise pour que les scènes soient affichées correctement.
 * Assurez-vous que la taille de scène maximale est de 10 Mo.
 * Assurez-vous que la taille maximale de chaque image est de 5 Mo. Une scène est une collection de plusieurs images. La limite est pour chaque image individuelle.
 * Veillez à sélectionner **Transparent** selon les besoins. Cette case à cocher est disponible dans le panneau droit lorsqu’une image est sélectionnée. Les images qui se chevauchent doivent être marquées comme **transparentes** pour indiquer qu’elles se chevauchent dans la scène.
@@ -108,35 +111,35 @@ L’image suivante montre chaque siège représenté en tant qu’avatar pour la
 1. Sélectionnez **Enregistrer** et **sélectionner Afficher dans Teams** pour tester rapidement votre scène dans Microsoft Teams.
 
     * La sélection **de l’affichage Teams** crée automatiquement une application Microsoft Teams qui peut être vue dans la page Applications du portail Teams développeur. 
-    * La sélection **de l’affichage Teams** crée automatiquement un package d’application appmanifest.jssur la scène. Vous pouvez accéder aux  **applications à** partir du menu et accéder au package d’application créé automatiquement.
+    * La sélection **de l’affichage Teams** crée automatiquement un package d’application qui est appmanifest.json derrière la scène. Vous pouvez accéder aux  **applications à** partir du menu et accéder au package d’application créé automatiquement.
     * Pour supprimer une scène que vous avez créée, **sélectionnez Supprimer la scène** dans la barre supérieure.
 
 1. In **View in Teams**, select Preview in **Teams**.
 1. Dans la boîte de dialogue qui s’affiche, sélectionnez **Ajouter.**
 
-    La scène est testée ou accessible en créant une réunion de test et en lançant des scènes personnalisées du mode Ensemble. Pour plus d’informations, voir [activer des scènes personnalisées du mode Ensemble](#activate-custom-together-mode-scenes):
+    La scène est testée ou accessible en créant une réunion de test et en lançant des scènes personnalisées en mode Ensemble. Pour plus d’informations, voir [activer des scènes personnalisées du mode Ensemble](#activate-custom-together-mode-scenes):
 
     ![Lancer des scènes personnalisées du mode Ensemble](../assets/images/apps-in-meetings/launchtogethermode.png)
 
-    La scène peut ensuite être vue dans la galerie de scènes personnalisée du mode Ensemble.
+    La scène peut ensuite être vue dans la galerie personnalisée des scènes du mode Ensemble.
 
 Si vous le souhaitez, vous pouvez sélectionner **Partager** **dans** le menu déroulant Enregistrer. Vous pouvez créer un lien partageable pour distribuer vos scènes à d’autres personnes. L’utilisateur peut ouvrir le lien pour installer la scène et commencer à l’utiliser.
 
 Après la prévisualisation, la scène est livrée en tant qu’application Teams en suivant les étapes de soumission de l’application. Cette étape nécessite le package d’application. Le package d’application est différent du package de scène, pour la scène qui a été conçue. Le package d’application créé automatiquement se trouve dans la section **Applications** du Teams développeur.
 
-Le package de scène est éventuellement récupéré  en sélectionnant **Exporter** dans le menu déroulant Enregistrer. Un **.zip** de scène, c’est-à-dire le package de scène, est téléchargé. Le package de scène inclut scene.jssur et les ressources PNG utilisées pour créer une scène. Le package de scène est examiné pour l’incorporation d’autres modifications :
+Le package de scène est éventuellement récupéré  en sélectionnant **Exporter** dans le menu déroulant Enregistrer. Un **.zip** de scène, c’est-à-dire le package de scène, est téléchargé. Le package de scène inclut un scene.json et les ressources PNG utilisées pour créer une scène. Le package de scène est examiné pour l’incorporation d’autres modifications :
 
 ![Exporter une scène](../assets/images/apps-in-meetings/build-a-scene.png)
 
 Une scène complexe qui utilise l’axe Z est illustré dans l’exemple de mise en marche pas à pas.
 
-## <a name="sample-scenejson"></a>Exemple scene.jssur
+## <a name="sample-scenejson"></a>Exemple scene.json
 
-Scene.jssur les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participants sont définis dans un système de coordonnées du monde. L’axe X pointe vers la droite et l’axe Y pointe vers le bas.
+Scene.json et les images indiquent la position exacte des sièges. Une scène se compose d’images bitmap, de sprites et de rectangles dans lequel placer les vidéos des participants. Ces sprites et zones de participants sont définis dans un système de coordonnées du monde. L’axe X pointe vers la droite et l’axe Y pointe vers le bas.
 
 Les scènes personnalisées en mode ensemble prise en charge le zoom avant sur les participants actuels. Cette fonctionnalité est utile pour les petites réunions dans une grande scène. Un sprite est une image bitmap statique positionnée dans le monde. La valeur Z du sprite détermine la position du sprite. Le rendu commence par le sprite avec la valeur Z la plus faible, donc une valeur Z plus élevée signifie qu’il est plus proche de la caméra. Chaque participant possède son propre flux vidéo, qui est segmenté afin que seul le premier plan soit rendu.
 
-Le code suivant est le scene.jssur l’exemple :
+Le code suivant est l’exemple scene.json :
 
 ```json
 {
@@ -201,11 +204,11 @@ Le code suivant est le scene.jssur l’exemple :
 }
 ```
 
-Chaque scène possède un ID et un nom uniques. Le JSON de scène contient également des informations sur toutes les ressources utilisées pour la scène. Chaque bien contient un nom de fichier, une largeur, une hauteur et une position sur les axes X et Y. De même, chaque siège contient un ID de siège, sa largeur, sa hauteur et sa position sur les axes X et Y. L’ordre d’altération est généré automatiquement et modifié selon les préférences. Le numéro de l’ordre d’appel correspond à l’ordre des personnes qui rejoignent l’appel.
+Chaque scène possède un ID et un nom uniques. Le JSON de scène contient également des informations sur toutes les ressources utilisées pour la scène. Chaque bien contient un nom de fichier, une largeur, une hauteur et une position sur les axes X et Y. De même, chaque siège contient un ID de siège, sa largeur, sa hauteur et sa position sur les axes X et Y. L’ordre d’altération est généré automatiquement et modifié selon les préférences. Le numéro de l’ordre d’accès correspond à l’ordre des personnes qui rejoignent l’appel.
 
 Représente `zOrder` l’ordre de placement des images et des sièges le long de l’axe Z. Elle donne une idée de profondeur ou de partition si nécessaire. Consultez l’exemple de mise en place pas à pas. L’exemple utilise `zOrder` le .
 
-Maintenant que vous avez vu l’exemple scene.jsactivé, vous pouvez activer les scènes personnalisées du mode Ensemble pour vous engager dans des scènes.
+Maintenant que vous avez passé par l’exemple scene.json, vous pouvez activer les scènes personnalisées du mode Ensemble pour vous engager dans des scènes.
 
 ## <a name="activate-custom-together-mode-scenes"></a>Activer des scènes personnalisées en mode ensemble
 
@@ -218,7 +221,7 @@ Obtenez plus d’informations sur la façon dont un utilisateur s’engage avec 
     >[!NOTE]
     > Lors de la sélection **de l’aperçu** dans Le studio de scène, la scène est installée en tant qu’application dans Microsoft Teams. Il s’agit du modèle pour qu’un développeur teste et teste des scènes à partir du studio Scene studio. Une fois qu’une scène est livrée en tant qu’application, les utilisateurs voient ces scènes dans la galerie de scène.
 
-1. Dans la **page de la** galerie dans le coin supérieur gauche, sélectionnez Mode **Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
+1. Dans la **galerie dans** le coin supérieur gauche, sélectionnez **Mode Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
 
 1. Sélectionnez **Modifier la scène** pour modifier la scène par défaut.
 

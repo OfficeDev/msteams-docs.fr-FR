@@ -4,19 +4,19 @@ description: Décrit l’authentification Teams et comment l’utiliser dans les
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Authentification teams OAuth SSO AAD
-ms.openlocfilehash: 40d5659251b1faff087c6ee6458800ede2a5c840
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156682"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475768"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 
 > [!Note]
 > L’authentification web sur les clients mobiles nécessite la version 1.4.1 ou ultérieure du SDK client JavaScript Teams version ultérieure.
 
-Pour accéder aux informations utilisateur protégées par Azure Active Directory (AAD) et accéder aux données à partir de services tels que Facebook et Twitter, l’application établit une connexion fiable avec ces fournisseurs. Si l’application utilise les API Graph Microsoft dans l’étendue utilisateur, authentifier l’utilisateur pour récupérer les jetons d’authentification appropriés.
+Pour accéder aux informations utilisateur protégées par Azure Active Directory (AAD) et accéder aux données à partir de services tels que Facebook et Twitter, l’application établit une connexion fiable avec ces fournisseurs. Si l’application utilise les API microsoft Graph dans l’étendue utilisateur, authentifier l’utilisateur pour récupérer les jetons d’authentification appropriés.
 
 Dans Teams, il existe deux flux d’authentification différents pour l’application. Effectuez un flux d’authentification basé sur le web traditionnel dans une [page](~/tabs/how-to/create-tab-pages/content-page.md) de contenu incorporée dans un onglet, une page de configuration ou un module de tâche. Si l’application contient un robot de conversation, utilisez le flux OAuthPrompt et éventuellement le service du jeton d’Azure Bot Framework pour authentifier un utilisateur dans le cadre d’une conversation.
 
@@ -51,6 +51,7 @@ fournit un exemple de SDK d’authentification du bot v3.
 
 ## <a name="configure-the-identity-provider"></a>Configuration du fournisseur d’identité
 
-Quel que soit le flux d’authentification de l’application, configurez le fournisseur d’identité pour qu’il communique Teams’application. La plupart des exemples et des pas à pas concernent principalement l’utilisation d’AAD comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité.
+Quel que soit le flux d’authentification de l’application, configurez le fournisseur d’identité pour qu’il communique avec Teams’application. La plupart des exemples et des pas à pas concernent principalement l’utilisation d’AAD comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité.
 
 Pour plus d’informations, [voir configuration d’un fournisseur d’identité.](~/concepts/authentication/configure-identity-provider.md)
+

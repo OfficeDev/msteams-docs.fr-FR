@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Api d’authentification unique SSO AAD d’authentification teams
-ms.openlocfilehash: eddbc681155d1fea03ca2c362f5519c4d2542887
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155845"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475684"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -67,6 +67,7 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 > * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge, à l’image, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` Graph [autorisations.](#get-an-access-token-with-graph-permissions)
 > * Il est important que le nom de domaine de votre application soit identique au nom de domaine que vous avez enregistré pour votre application AAD.
 > * Actuellement, plusieurs domaines par application ne sont pas pris en charge.
+> * L’utilisateur doit définir `accessTokenAcceptedVersion` `v2` pour une nouvelle application.
 
 **Pour inscrire votre application via le portail AAD**
 
@@ -81,9 +82,9 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 1. Sélectionnez **Exposer une API** sous **Gérer**.
 
     > [!NOTE]
-    > Si vous construisez une application avec un bot et un onglet, entrez l’URI de l’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+    > Si vous construisez une application avec un bot et un onglet, entrez l’URI d’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
-1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les barres obliques doubles et le GUID. L’ID entier doit avoir la forme de `api://fully-qualified-domain-name.com/{AppID}` . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
+1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les doubles barres obliques et le GUID. L’ID entier doit avoir la forme `api://fully-qualified-domain-name.com/{AppID}` de . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
 1. Sélectionnez **Ajouter une étendue**. Dans le panneau qui s’ouvre, **entrez access_as_user** comme **nom d’étendue.**
 1. In the **Qui can consent?** box, enter **Admins and users**.
 1. Entrez les détails dans les zones de configuration des invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue :
@@ -120,7 +121,7 @@ Félicitations ! Vous avez rempli les conditions préalables à l’inscription 
 
 > [!NOTE]
 >
-> * ¹ Si votre application AAD est inscrite dans le même client que celui où vous faites une demande d’authentification dans Teams, l’utilisateur ne peut pas être invité à donner son consentement et un jeton d’accès lui est accordé immédiatement. Les utilisateurs consentent uniquement à ces autorisations si l’application AAD est inscrite dans un autre client.
+> * ¹ Si votre application AAD est inscrite dans le même client que celui où vous faites une demande d’authentification dans Teams, l’utilisateur ne peut pas être invité à donner son consentement et se voir accorder un jeton d’accès immédiatement. Les utilisateurs consentent uniquement à ces autorisations si l’application AAD est inscrite dans un autre client.
 > * ² Si le domaine personnalisé n’est pas ajouté à AAD, vous obtenez une erreur indiquant que le nom d’hôte ne doit pas être basé sur un domaine déjà propriétaire. Pour ajouter un domaine personnalisé à AAD et l’enregistrer, suivez la procédure d’ajout d’un nom de domaine personnalisé à [la procédure AAD,](/azure/active-directory/fundamentals/add-custom-domain) puis répétez l’étape 5. Vous pouvez également obtenir cette erreur si vous n’êtes pas signé avec des informations d’identification d’administrateur dans Office 365 location.
 > * Si vous ne recevez pas le nom d’utilisateur principal (UPN) dans le jeton d’accès renvoyé, vous pouvez l’ajouter en tant que revendication facultative [dans](/azure/active-directory/develop/active-directory-optional-claims) AAD.
 
@@ -139,11 +140,11 @@ Utilisez le code suivant pour ajouter de nouvelles propriétés à Teams manifes
 
 > [!div class="checklist"]
 > * **id** : ID client de l’application. Il s’agit de l’ID d’application que vous avez obtenu dans le cadre de l’inscription de l’application auprès d’Azure AD.
->* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI (y compris le protocole) que vous avez enregistré lors de la création de votre étape `api://` `scope` 6. Vous ne devez pas inclure le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine, y compris les sous-domaines, utilisés dans les URL de votre manifeste d Teams’application.
+>* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI (y compris le protocole) que vous avez enregistré lors de la création de votre à `api://` `scope` l’étape 6. Vous ne devez pas inclure le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine, y compris les sous-domaines, utilisés dans les URL de votre manifeste d Teams’application.
 
 > [!NOTE]
 >
->* La ressource d’une application AAD est généralement la racine de son URL de site et de l’appID (par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ). Cette valeur est également utilisée pour vous assurer que votre demande est provenant du même domaine. Assurez-vous `contentURL` que l’onglet utilise les mêmes domaines que votre propriété de ressource.
+>* La ressource d’une application AAD est généralement la racine de son URL de site et de l’appID (par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ). Cette valeur est également utilisée pour vous assurer que votre demande est provenant du même domaine. Assurez-vous que `contentURL` l’onglet utilise les mêmes domaines que votre propriété de ressource.
 >* Vous devez utiliser la version de manifeste 1.5 ou une version supérieure pour implémenter le `webApplicationInfo` champ.
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. Obtenir un jeton d’accès à partir de votre code côté client
@@ -176,7 +177,7 @@ Après avoir reçu le jeton d’accès dans le rappel de réussite, décodez le 
 
 ### <a name="get-an-access-token-with-graph-permissions"></a>Obtenir un jeton d’accès avec Graph autorisations
 
-Notre implémentation actuelle pour l' utilisateur unique accorde uniquement le consentement pour les autorisations au niveau de l’utilisateur qui ne sont pas utilisables pour effectuer Graph appels. Pour obtenir les autorisations (étendues) nécessaires pour effectuer un appel Graph, les solutions d’personnalisation de l’personnalisation doivent implémenter un service web personnalisé pour échanger le jeton obtenu à partir du SDK JavaScript Teams contre un jeton qui inclut les étendues nécessaires. Cela s’accomplit à l’aide du flux « de la part [de » d’AAD.](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
+Notre implémentation actuelle pour l' utilisateur unique accorde uniquement le consentement pour les autorisations au niveau de l’utilisateur qui ne sont pas utilisables pour effectuer Graph appels. Pour obtenir les autorisations (étendues) nécessaires pour effectuer un appel Graph, les solutions d’personnalisation de service doivent implémenter un service web personnalisé pour échanger le jeton obtenu à partir du SDK JavaScript Teams contre un jeton qui inclut les étendues nécessaires. Cela s’accomplit à l’aide du flux « de la part [de » d’AAD.](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
 
 #### <a name="tenant-admin-consent"></a>Consentement de l’administrateur client
 

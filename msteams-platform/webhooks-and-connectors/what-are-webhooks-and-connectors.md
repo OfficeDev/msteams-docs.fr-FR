@@ -5,12 +5,12 @@ description: Comprendre comment les webhooks et les connecteurs peuvent connecte
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156988"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475756"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
 
@@ -40,7 +40,7 @@ Office 365 Les connecteurs vous permettent de créer une page de configuration p
 
 ## <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
-Les messages actionnables permettent aux utilisateurs d’agir sans quitter leur client de messagerie, ce qui augmente l’implication des utilisateurs. Avec Office 365 webhooks entrants, vous pouvez envoyer des messages en publiant une charge utile JSON sur l’URL du webhook.
+Les messages actionnables permettent aux utilisateurs d’agir sans quitter leur client de messagerie, ce qui augmente l’engagement de l’utilisateur. Avec Office 365 webhooks entrants, vous pouvez envoyer des messages en publiant une charge utile JSON sur l’URL du webhook.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -3,23 +3,23 @@ title: Vue d’ensemble des actions universelles pour les cartes adaptatives
 description: Vue d’ensemble rapide des actions universelles pour les cartes adaptatives.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155722"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475712"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Actions universelles pour les cartes adaptatives
 
-Les actions universelles pour les cartes adaptatives ont évolué à partir d’un retour du développeur qui, même si la disposition et le rendu des cartes adaptatives étaient universels, la gestion des actions n’était pas. Même si un développeur souhaitait envoyer la même carte à différents endroits, il doit gérer les actions différemment.
+Les actions universelles pour les cartes adaptatives ont évolué à partir des commentaires du développeur qui, même si la disposition et le rendu des cartes adaptatives étaient universels, la gestion des actions n’était pas. Même si un développeur souhaitait envoyer la même carte à différents endroits, il doit gérer les actions différemment.
 
 Universal Actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute` which works across apps, such as Teams and Outlook.
 
 Ce document vous aide à comprendre comment utiliser le modèle Actions universelles pour améliorer l’expérience utilisateur de l’interaction avec les cartes adaptatives sur les plateformes et les applications.
 
 > [!NOTE]
-> La prise en charge des actions universelles pour les cartes adaptatives est disponible uniquement pour les cartes envoyées par le bot. La prise en charge des cartes envoyées par le biais de la zone de composition et des cartes de déploiement de liens sera bientôt disponible.
+> La prise en charge des actions universelles pour les cartes adaptatives v1.4 est disponible uniquement pour les cartes envoyées par le bot. La prise en charge des cartes envoyées par le biais de la zone de composition et des cartes de déploiement de liens sera bientôt disponible.
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>Améliorer les expériences utilisateur avec les actions universelles pour les cartes adaptatives
 
@@ -83,7 +83,7 @@ Pour plus d’informations, voir [l’exemple pour les affichages spécifiques d
 
 ### <a name="sequential-workflow-support"></a>Prise en charge séquentielle du flux de travail
 
-Avec la prise en charge séquentielle du flux de travail, les utilisateurs peuvent avancer dans une série de flux de travail sans envoyer différentes cartes séparément. Cela est rendu possible par la possibilité de renvoyer une `Action.Execute` carte adaptative en réponse à une action. En outre, tout utilisateur de la conversation ou du canal peut avancer dans son flux de travail sans modifier la carte pour les autres utilisateurs de la conversation.
+Avec la prise en charge séquentielle du flux de travail, les utilisateurs peuvent avancer dans une série de flux de travail sans envoyer différentes cartes séparément. Cela est rendu possible par la possibilité de renvoyer une `Action.Execute` carte adaptative en réponse à une action. En outre, tous les utilisateurs de la conversation ou du canal peuvent avancer dans leur flux de travail sans modifier la carte pour les autres utilisateurs de la conversation.
 
 L’image suivante illustre un exemple de robot de commande de produits : <br/>
 
@@ -97,13 +97,13 @@ Pour plus d’informations, voir [l’exemple de flux de travail séquentiel.](S
 
 ### <a name="up-to-date-views"></a>Affichages à jour
 
-Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Par exemple, il peut s’agit d’une demande d’approbation envoyée par un utilisateur. Après l’approbation, la carte doit afficher automatiquement les détails sur l’heure d’approbation de la demande et sur les personnes qui ont approuvé la demande. Le modèle d’actualisation vous permet de fournir ces affichages à jour. L’image suivante illustre un flux d’approbation en plusieurs étapes et la façon dont les vues de différents utilisateurs sont affichées.
+Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Par exemple, il peut s’agit d’une demande d’approbation envoyée par un utilisateur. Après approbation, la carte doit afficher automatiquement les détails sur l’heure d’approbation de la demande et sur les personnes qui ont approuvé la demande. Le modèle d’actualisation vous permet de fournir ces affichages à jour. L’image suivante illustre un flux d’approbation en plusieurs étapes et la façon dont les vues de différents utilisateurs sont affichées.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Affichages utilisateur spécifiques à jour":::
 
 Pour plus d’informations, voir [l’exemple d’affichages à jour.](Up-To-Date-Views.md)
 
-À présent, vous pouvez comprendre comment les cartes adaptatives peuvent être transformées avec le nouveau modèle Actions universelles pour fournir une expérience utilisateur unique et améliorée.
+À présent, vous pouvez comprendre comment les cartes adaptatives peuvent être transformées avec le nouveau modèle Actions universelles pour offrir une expérience utilisateur unique et améliorée.
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>Cartes adaptatives et nouveau modèle Actions universelles
 
@@ -113,7 +113,7 @@ Vous pouvez commencer par mettre à jour des scénarios à l’aide du guide de 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Qu’est-ce que les robots ?](~/bots/what-are-bots.md)
+* [Qu’est-ce que les bots ?](~/bots/what-are-bots.md)
 * [Vue d’ensemble des cartes adaptatives](~/task-modules-and-cards/what-are-cards.md)
 * [Cartes adaptatives @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Cartes adaptatives @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)

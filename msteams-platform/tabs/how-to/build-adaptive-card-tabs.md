@@ -5,12 +5,12 @@ description: Créer des onglets à l’aide de cartes adaptatives
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8a43efabbd9c40537854450581a4e7d996086fc5
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157000"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475586"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -26,13 +26,13 @@ Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vo
 
 Les onglets de carte adaptative sont un nouveau moyen de créer des onglets dans Teams. Au lieu d’incorporer du contenu web dans un IFrame, vous pouvez restituer des cartes adaptatives dans un onglet. Lorsque le frontal est restituer avec des cartes adaptatives, le système frontal est alimenté par un bot. Le bot est responsable de l’acceptation des demandes et de la réponse appropriée avec la carte adaptative qui est rendue.
 
-Vous pouvez créer vos onglets avec des blocs de construction d’interface utilisateur (IU) prêts à l’emploi, natifs sur ordinateur de bureau, web et mobile. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application. L’article identifie également la façon dont l’activité d’appel demande et envoie des informations sous l’onglet avec des cartes adaptatives, et son effet sur le flux de travail du module de tâche.
+Vous pouvez créer vos onglets avec des blocs de construction d’interface utilisateur (IU) prêts à l’emploi, natifs sur ordinateur de bureau, web et mobile. Cet article vous aide à comprendre les modifications à apporter au manifeste de l’application. L’article identifie également la façon dont l’activité d’appel demande et envoie des informations sous l’onglet à l’aide de cartes adaptatives, et son effet sur le flux de travail du module de tâche.
 
-L’image suivante montre les onglets de build avec des cartes adaptatives sur ordinateur de bureau et mobile :
+L’image suivante montre les onglets de build avec cartes adaptatives dans les ordinateurs de bureau et mobiles :
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Exemple de carte adaptative rendue dans les onglets." border="false":::
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, vous devez :
 
@@ -103,15 +103,16 @@ Voici un exemple de manifeste d’onglet carte adaptative :
 
 ## <a name="invoke-activities"></a>Appeler des activités
 
-La communication entre l’onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
+La communication entre votre onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
 
 > [!NOTE]
-> Les bots doivent envoyer toutes les réponses à [l’URL du service.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) L’URL du service est reçue dans le cadre de la charge `activity` utile entrante.
+> * Les bots doivent envoyer toutes les réponses à [l’URL du service.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) L’URL du service est reçue dans le cadre de la charge `activity` utile entrante.
+> * La taille de la charge utile d’appel a augmenté jusqu’à 80 000b.
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>Récupérer la carte adaptative à restituer dans un onglet
 
 `tab/fetch`est la première demande d’appel que votre bot reçoit lorsqu’un utilisateur ouvre un onglet Carte adaptative. Lorsque votre bot reçoit la demande, il envoie une réponse de tabulation **continue** ou une réponse **d’th de tabulation.**
-La **réponse** continue inclut un tableau pour les **cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
+La **réponse** continue inclut un tableau pour **les cartes,** qui est rendu verticalement sur l’onglet dans l’ordre du tableau.
 
 > [!NOTE]
 > Pour plus d’informations sur la réponse **d’authentification,** voir [l’authentification.](#authentication)
@@ -345,7 +346,7 @@ Dans les sections précédentes, vous avez vu que la plupart des paradigmes de d
 1. Sélectionnez **Se connecter**. Vous êtes redirigé vers l’URL d’authentification fournie dans la propriété du corps de la `value` réponse d’authentification. 
 1. Une fenêtre contextuelle apparaît. Cette fenêtre pop-up héberge votre page web à l’aide de l’URL d’authentification.
 1. Après vous être connectez, fermez la fenêtre. Un **code d’authentification** est envoyé au client Teams client.
-1. Le Teams client ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée.
+1. Le Teams ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée.
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` flux de données d’authentification
 

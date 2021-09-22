@@ -5,12 +5,12 @@ keywords: Format de cartes de bots teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: abbdc0d1fa77744ae061e5430c4450d0e7cf83c7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155718"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475809"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -31,7 +31,7 @@ Vous pouvez formater des cartes adaptatives et Office 365 connecteur avec Markdo
 Les types de carte suivants prise en charge la mise en forme Markdown dans Teams :
 
 * Cartes adaptatives : Markdown est pris en charge dans le champ de carte `Textblock` adaptative, ainsi que dans `Fact.Title` `Fact.Value` . Le code HTML n’est pas pris en charge dans les cartes adaptatives.
-* Cartes de connecteur O365 : Markdown et html limité sont pris en charge dans les cartes de connecteur O365 dans les champs de texte.
+* Office 365 Cartes de connecteur : markdown et html limité sont pris en charge Office 365 cartes de connecteur dans les champs de texte.
 
 Vous pouvez utiliser des nouvelles lignes pour les cartes adaptatives à l’aide ou des `\r` `\n` séquences d’échappatoire pour les nouvelles lignes dans les listes. La mise en forme est différente entre le bureau et les versions mobiles de Teams pour les cartes adaptatives. Les mentions basées sur une carte sont pris en charge dans les clients web, de bureau et mobiles. Vous pouvez utiliser la propriété de masquage d’informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs au sein de l’élément d’entrée `Input.Text` de carte adaptative. Vous pouvez développer la largeur d’une carte adaptative à l’aide de `width` l’objet. Vous pouvez activer la prise en charge des en-têtes de type dans les cartes adaptatives et filtrer l’ensemble des choix d’entrée à mesure que l’utilisateur tape l’entrée. Vous pouvez utiliser la propriété pour ajouter la possibilité d’afficher des images en vue de la `msteams` scène de manière sélective.
 
@@ -53,7 +53,7 @@ Les balises Markdown suivantes ne sont pas pris en charge :
 
 * En-têtes
 * Tables
-* Images
+* Des images
 * Texte préformaté
 * Blockquotes
 
@@ -67,7 +67,7 @@ Sur le bureau, la mise en forme de markdown de carte adaptative apparaît comme 
 
 ![Mise en forme Markdown de carte adaptative dans le client de bureau](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-Sur iOS, la mise en forme Markdown de carte adaptative apparaît comme illustré dans l’image suivante :
+Sur iOS, la mise en forme markdown de carte adaptative apparaît comme illustré dans l’image suivante :
 
 ![Mise en forme markdown de carte adaptative dans iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
@@ -116,14 +116,14 @@ Le code suivant illustre un exemple de mise en forme des cartes adaptatives :
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>Prise en charge des mentions dans les cartes adaptatives v1.2
+### <a name="mention-support-within-adaptive-cards"></a>Prise en charge des mentions dans les cartes adaptatives 
 
 Vous pouvez ajouter des @mentions dans un corps de carte adaptative pour les bots et les réponses d’extension de messagerie. Pour ajouter @mentions cartes, suivez la même logique de notification et le même rendu que celui des [mentions basées](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)sur les messages dans les conversations de canal et de groupe.
 
 Les bots et les extensions de messagerie peuvent inclure des mentions dans le contenu de la carte dans les éléments [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) et [FactSet.](https://adaptivecards.io/explorer/FactSet.html)
 
 > [!NOTE]
-> * [Les éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans les cartes adaptatives v1.2 sur Teams plateforme.
+> * [Les éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans les cartes adaptatives Teams plateforme.
 > * Les mentions de canal et d’équipe ne sont pas pris en charge dans les messages de bot.
 
 Pour inclure une mention dans une carte adaptative, votre application doit inclure les éléments suivants :
@@ -164,6 +164,130 @@ Le code suivant montre un exemple de carte adaptative avec une mention :
   }
 }
 ```
+
+### <a name="aad-object-id-and-upn-in-user-mention"></a>ID d’objet AAD et UPN dans la mention utilisateur 
+
+Teams permet de mentionner les utilisateurs avec leur ID d’objet AAD et leur nom d’utilisateur principal (UPN), en plus des ID de mention existants. Les bots avec cartes adaptatives et connecteurs avec webhooks entrants supportent les deux ID de mention utilisateur. 
+
+Le tableau suivant décrit les nouveaux ID de mention d’utilisateur pris en charge :
+
+|ID  | Fonctionnalités de prise en charge |   Description | Exemple |
+|----------|--------|---------------|---------|
+| ID d’objet AAD | Bot, Connecteur |  ID d’objet de l’utilisateur AAD |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Connecteur | UPN de l’utilisateur AAD | john.smith@microsoft.com |
+
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mention d’utilisateur dans les bots avec cartes adaptatives 
+
+Les bots peuvent prendre en charge la mention utilisateur avec l’ID d’objet AAD et l’UPN, en plus des ID existants. La prise en charge de deux nouveaux ID est disponible dans les bots pour les messages texte, le corps des cartes adaptatives et la réponse d’extension de messagerie. Les bots supportent les ID de mention dans les conversations et `invoke` les scénarios. L’utilisateur reçoit une notification de flux d'@mentioned avec les ID. 
+
+> [!NOTE]
+> La mise à jour du schéma et les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec des cartes adaptatives dans bot.
+
+##### <a name="example"></a>Exemple 
+
+Exemple de mention d’utilisateur dans les bots avec cartes adaptatives comme suit :
+
+```json 
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+    }
+  ],
+  "msteams": {
+    "entities": [
+      {
+        "type": "mention",
+        "text": "<at>Adele UPN</at>",
+        "mentioned": {
+          "id": "AdeleV@contoso.onmicrosoft.com",
+          "name": "Adele Vance"
+        }
+      },
+      {
+        "type": "mention",
+        "text": "<at>Adele AAD</at>",
+        "mentioned": {
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+          "name": "Adele Vance"
+        }
+      }
+    ]
+  }
+}
+```
+
+L’image suivante illustre la mention utilisateur avec carte adaptative dans bot :
+
+![Mention d’utilisateur dans un bot avec carte adaptative](~/assets/images/authentication/user-mention-in-bot.png)
+
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mention d’utilisateur dans le webhook entrant avec cartes adaptatives 
+
+Les webhooks entrants commencent à prendre en charge la mention utilisateur dans les cartes adaptatives avec l’ID d’objet AAD et l’UPN.
+
+> [!NOTE]    
+> * Activez la mention utilisateur dans le schéma pour les webhooks entrants afin de prendre en charge l’ID d’objet AAD et l’UPN. 
+> * Les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec l’ID d’objet AAD et l’UPN.      
+> * La notification de flux d’activités pour le webhook entrant avec mention d’utilisateur sera disponible dans la prochaine version.
+
+##### <a name="example"></a>Exemple 
+
+Exemple de mention d’utilisateur dans le webhook entrant comme suit :
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Sample Adaptive Card with User Mention"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "msteams": {
+                "entities": [
+                    {
+                        "type": "mention",
+                        "text": "<at>Adele UPN</at>",
+                        "mentioned": {
+                          "id": "AdeleV@contoso.onmicrosoft.com",
+                          "name": "Adele Vance"
+                        }
+                      },
+                      {
+                        "type": "mention",
+                        "text": "<at>Adele AAD</at>",
+                        "mentioned": {
+                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                          "name": "Adele Vance"
+                        }
+                      }
+                ]
+            }
+        }
+    }]
+}
+```
+
+L’image suivante illustre la mention de l’utilisateur dans le webhook entrant :
+
+![Mention d’utilisateur dans le webhook entrant](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
 
 ### <a name="information-masking-in-adaptive-cards"></a>Masquage d’informations dans les cartes adaptatives
 
@@ -283,13 +407,13 @@ L’image apparaît en mode Étape lorsque l’utilisateur sélectionne l’icô
 
 ![Image étendue en vue de la phase](../../assets/images/cards/adaptivecard-expand-image.png)
 
-Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
+Dans la vue d’étape, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner dans votre carte adaptative les images qui doivent avoir cette fonctionnalité.
 
 > [!NOTE]
 > * Les fonctionnalités de zoom avant et arrière s’appliquent uniquement aux éléments image de type image dans une carte adaptative.
 > * Pour Teams applications mobiles, la fonctionnalité d’affichage de la scène pour les images dans les cartes adaptatives est disponible par défaut. Les utilisateurs peuvent afficher des images de carte adaptative en vue de l’étape en appuyant simplement sur l’image, que l’attribut `allowExpand` soit présent ou non.
 
-# <a name="markdown-format-for-o365-connector-cards"></a>[Format Markdown pour les cartes de connecteur O365](#tab/connector-md)
+# <a name="markdown-format-for-office-365-connector-cards"></a>[Format Markdown pour les cartes Office 365 Connector](#tab/connector-md)
 
 Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML.
 
@@ -382,12 +506,12 @@ Le code suivant montre un exemple de mise en forme pour les cartes de connecteur
 
 Les types de carte suivants peuvent être formaté au format HTML Teams :
 
-* Cartes de connecteur O365 : la mise en forme limitée markdown et HTML est prise en charge dans les Office 365 connecteur.
+* Office 365 Cartes de connecteur : le markdown limité et la mise en forme HTML sont pris en charge Office 365 cartes connecteur.
 * Cartes Hero et miniatures : les balises HTML sont pris en charge pour les cartes simples, telles que les cartes hero et miniatures.
 
-La mise en forme est différente entre le bureau et les versions mobiles de Teams pour les cartes de connecteur O365 et les cartes simples. Dans cette section, vous pouvez passer par l’exemple de format HTML pour les cartes de connecteur et les cartes simples.
+La mise en forme est différente entre le bureau et les versions mobiles de Teams pour les cartes Office 365 connecteur et les cartes simples. Dans cette section, vous pouvez passer par l’exemple de format HTML pour les cartes de connecteur et les cartes simples.
 
-# <a name="html-format-for-o365-connector-cards"></a>[Format HTML pour les cartes de connecteur O365](#tab/connector-html)
+# <a name="html-format-for-office-365-connector-cards"></a>[Format HTML pour les cartes Office 365 connecteur de connexion](#tab/connector-html)
 
 Les cartes de connecteurs prise en charge la mise en forme Limitée markdown et HTML.
 
@@ -408,7 +532,7 @@ Dans les cartes de connecteur, les nouvelles lignes sont restituer au format HTM
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards"></a>Différences entre les appareils mobiles et les ordinateurs de bureau pour les cartes de connecteur
 
-Sur le bureau, la mise en forme HTML pour les cartes de connecteur apparaît comme illustré dans l’image suivante :
+Sur le bureau, la mise en forme HTML pour les cartes de connecteur s’affiche comme illustré dans l’image suivante :
 
 ![Mise en forme HTML pour les cartes de connecteur dans le client de bureau](../../assets/images/cards/Connector-desktop-html-combined.png)
 
@@ -416,7 +540,7 @@ Sur iOS, la mise en forme HTML apparaît comme illustré dans l’image suivante
 
 ![Mise en forme HTML pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
-Les cartes de connecteur utilisant du code HTML pour iOS comportent les problèmes suivants :
+Les cartes de connecteur utilisant html pour iOS incluent les problèmes suivants :
 
 * Les images en ligne ne sont pas restituer sur iOS à l’aide de Markdown ou html dans les cartes de connecteur.
 * Le texte préformaté est restituer, mais n’a pas d’arrière-plan gris.

@@ -4,18 +4,18 @@ description: Décrit les liens profonds et leur utilisation dans vos application
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: lien profond teams
-ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156707"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475775"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
 Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Les scénarios dans lequel la création de liens profonds sont utiles sont les suivants :
 
-* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour avertir l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
+* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour informer l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d’une conversation ou la planification d’une réunion, en pré-remplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
 > [!NOTE]
@@ -59,7 +59,7 @@ Fournissez les champs suivants :
 ### <a name="generate-a-deep-link-to-your-tab"></a>Générer un lien profond vers votre onglet
 
 > [!NOTE]
-> Les onglets personnels ont une étendue, tandis que les onglets de canal et `personal` de groupe utilisent `team` ou `group` utilisent des étendues. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable possède une `channel` propriété associée à son objet de contexte. Pour plus [d’informations](~/resources/schema/manifest-schema.md) sur les étendues d’onglet, voir la référence de manifeste.
+> Les onglets personnels ont une étendue, tandis que les onglets de canal et `personal` de groupe utilisent `team` ou utilisent des `group` étendues. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable possède une `channel` propriété associée à son objet de contexte. Pour plus [d’informations](~/resources/schema/manifest-schema.md) sur les étendues d’onglet, voir la référence de manifeste.
 
 > [!NOTE]
 > Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et en raison de cet ID d’entité. Les liens profonds vers les onglets sans ID d’entité naviguent toujours vers l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
@@ -69,7 +69,7 @@ Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> Si le bot envoie un message contenant un lien profond, un nouvel onglet de navigateur s’ouvre lorsque l’utilisateur `TextBlock` sélectionne le lien. Cela se produit dans Chrome et dans l Microsoft Teams de bureau, les deux s’exécutant sur Linux.
+> Si le bot envoie un message contenant un lien profond, un nouvel onglet de navigateur s’ouvre lorsque l’utilisateur `TextBlock` sélectionne le lien. Cela se produit dans Chrome et dans l’Microsoft Teams de bureau, les deux s’exécutant sur Linux.
 > Si le bot envoie la même URL de lien profond dans un , l’onglet Teams est ouvert dans l’onglet du navigateur actuel lorsque l’utilisateur sélectionne `Action.OpenUrl` le lien. Un nouvel onglet de navigateur n’est pas ouvert.
 
 Les paramètres de requête sont les suivants :
@@ -84,7 +84,7 @@ Les paramètres de requête sont les suivants :
 | `subEntityId`&emsp; | ID de l’élément dans l’onglet. |Task456 |
 | `channelId`&emsp; | ID Microsoft Teams canal disponible à partir du contexte de [l’onglet.](~/tabs/how-to/access-teams-context.md) Cette propriété est disponible uniquement dans les onglets configurables avec une étendue **d’équipe.** Il n’est pas disponible dans les onglets statiques, qui ont une étendue **personnelle.**| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
-Exemples :
+Exemples :
 
 * Lien vers un onglet configurable lui-même : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
 * Lien vers un élément de tâche dans l’onglet configurable : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
@@ -124,7 +124,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
 ```
 
-## <a name="deep-linking-to-a-chat"></a>Lien profond vers une conversation
+## <a name="deep-linking-to-a-chat"></a>Liaison profonde à une conversation
 
 Vous pouvez créer des liens profonds vers des conversations privées entre les utilisateurs en spécifiant l’ensemble des participants. Si une conversation n’existe pas avec les participants spécifiés, le lien permet à l’utilisateur d’accéder à une nouvelle conversation vide. Les nouvelles conversations sont créées en état brouillon jusqu’à ce que l’utilisateur envoie le premier message. Sinon, vous pouvez spécifier le nom de la conversation si elle n’existe pas déjà, ainsi que le texte à insérer dans la zone de composition de l’utilisateur. Vous pouvez voir cette fonctionnalité comme un raccourci pour l’utilisateur qui fait l’action manuelle de naviguer vers ou créer la conversation, puis de taper le message.
 
@@ -140,7 +140,7 @@ Exemple : `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Les paramètres de requête sont les suivants :
 
-* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, par exemple une adresse de messagerie uniquement.
+* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, par exemple une adresse e-mail uniquement.
 * `topicName`: champ facultatif pour le nom complet de la conversation, dans le cas d’une conversation avec 3 utilisateurs ou plus. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
 * `message`: champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est en état brouillon.
 
@@ -159,7 +159,7 @@ Les paramètres de requête sont les suivants :
 * `objectUrl`: URL d’objet du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Par exemple, `https://microsoft.sharepoint.com/teams/(filepath)`
 * `baseUrl`: URL de base du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Par exemple, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Nom du service, ID d’application. Par exemple, teams.
-* `threadId`: ThreadId est l’ID d’équipe de l’équipe dans laquelle le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier d’OneDrive’un utilisateur. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `threadId`: threadId est l’ID d’équipe de l’équipe dans laquelle le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier d’OneDrive’un utilisateur. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ID de groupe du fichier, ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
 > [!NOTE]
@@ -219,10 +219,13 @@ Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un
 
 Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
+> [!NOTE]
+> Les paramètres de recherche ne supportent pas le `+` signal à la place de l’espace blanc ( ` ` ). Assurez-vous que votre code d’encodage d’URI renvoie des espaces, par exemple, est `%20` `?subject=test%20subject` bon, mais `?subject=test+subject` est mauvais.
+
 Les paramètres de requête sont les suivants :
 
 * `attendees`: Liste facultative d’ID d’utilisateurs séparés par des virgules représentant les participants à la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Pour l’instant, le champ ID utilisateur prend uniquement en charge Azure AD UserPrincipalName, généralement une adresse de messagerie.
-* `startTime`: Heure de début facultative de l’événement. Il doit être au [format ISO 8601 long](https://en.wikipedia.org/wiki/ISO_8601), par exemple *2018-03-12T23:55:25+02:00*.
+* `startTime`: Heure de début facultative de l’événement. Il doit être au [format ISO 8601 long,](https://en.wikipedia.org/wiki/ISO_8601)par exemple *2018-03-12T23:55:25+02:00*.
 * `endTime`: Heure de fin facultative de l’événement, également au format ISO 8601.
 * `subject`: Champ facultatif pour l’objet de la réunion.
 * `content`: champ facultatif pour le champ Détails de la réunion.
@@ -257,7 +260,7 @@ Les paramètres de requête suivants sont les suivants :
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C # |Node.js|
+| Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
 |ID de sous-entité consommant un lien profond  |Microsoft Teams exemple d’application pour montrer le lien profond entre la conversation de bot et l’ID de sous-entité de consommation d’onglets.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
