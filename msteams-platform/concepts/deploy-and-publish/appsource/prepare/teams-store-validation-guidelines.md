@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5e2f26fcdbd2e11fcb28331cd9d226d63c9a2aad
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439689"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475705"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -23,7 +23,7 @@ Le fait de suivre ces instructions augmente la probabilité que votre applicatio
 
 ### <a name="app-name"></a>Nom de l'application
 
-Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le magasin. Souvenez-vous des informations suivantes sur les noms d’application :
+Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le magasin. N’oubliez ce qui suit concernant les noms d’application :
 
 * Le nom doit inclure des termes susceptibles d’intéresser vos utilisateurs.
 * Les noms des principales fonctionnalités Teams&#8212;telles que **Conversation**, **Contacts**, **Calendrier**, **Appels**, **Fichiers**, **Activité**, **Équipes**, **Applications** et **Aide**&#8212; ne doivent pas être inclus dans le nom de votre application.
@@ -68,7 +68,7 @@ Les bots doivent toujours demander l’autorisation de télécharger un fichier 
 
 ### <a name="external-domains"></a>Domaines externes
 
-Dans la plupart des cas, vous ne devez pas inclure de domaines en dehors du ressort de votre organisation (y compris les caractères génériques) et des services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes comprennent :
+Dans la plupart des cas, vous ne devez pas inclure de domaines qui ne sont pas contrôlables par votre organisation (y compris les caractères génériques) et des services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes incluent :
 
 * Si votre application utilise le OAuthCard d’Azure Bot Service, vous devez inclure `token.botframework.com` en tant que domaine valide, sinon le bouton **Se connecter** ne fonctionne pas.
 * Si votre application repose sur SharePoint, vous pouvez inclure le site racine SharePoint associé en tant que domaine valide à l’aide de la propriété de contexte `{teamSiteDomain}`.
@@ -192,6 +192,7 @@ La description longue peut fournir un narratif attrayant qui met en évidence la
 * Utilisez la voix active et parlez directement aux utilisateurs. Par exemple, *Vous pouvez...*.
 * Répertoriez les fonctionnalités à l’aide de points à puces pour faciliter l’examen de la description.
 * Décrivez clairement les limitations, conditions ou exceptions de la fonctionnalité, des fonctions et livrables décrits dans le référencement et les documents associés avant que l’utilisateur installe votre application. Les fonctionnalités Teams que votre application prend en charge doivent être liées aux fonctions principales décrites dans votre référencement.
+* Vérifiez que la description de l’application correspond aux fonctionnalités disponibles dans l’application Teams. Toute référence à des flux de travail en dehors de l’application Teams doit être limitée et distinctement appelée à partir des fonctionnalités de l’application Teams.
 * Incluez un lien d’aide ou de support.
 * Faites référence à **Microsoft 365** au lieu d’**Office 365**.
 * Si vous devez référencer **Teams**, écrivez la première référence en tant que **Microsoft Teams**. Les références suivantes peuvent être raccourcies en **Teams**.
@@ -212,15 +213,19 @@ La description longue peut fournir un narratif attrayant qui met en évidence la
 * Abrégez **Microsoft** en tant que **MS** ou **MSFT**.
 * Indiquez que l’application est une offre de Microsoft, y compris à l’aide de slogans ou d’accroches Microsoft.
 * Utilisez des noms de marque protégés par des droits d’auteur que vous ne possédez pas.
-* Inclure des fautes de frappe, des erreurs grammaticales et des majuscules inutiles (par exemple, **Utilisateurs** au lieu de **utilisateurs**).
-* Incluez des liens vers AppSource.
-* Utilisez le langage suivant, sauf si vous êtes un partenaire Microsoft certifié :
+ * Utilisez le langage suivant, sauf si vous êtes un partenaire Microsoft certifié :
   * « ... certifié pour ... »
   * « ... optimisé par ... »
+* Inclut les fautes de frappe, les erreurs grammaticales et les majuscules inutiles, telles que **Utilisateurs** au lieu de **utilisateurs**.
+* Incluez des liens vers AppSource.
+* Effectuez des revendications non vérifiées (par exemple : meilleure, supérieure, classée), sauf si elles sont accompagnées de la source de la revendication.
+* Comparez votre offre avec d’autres offres du marché.
+
+
 
 ### <a name="screenshots"></a>Captures d’écran
 
-Les captures d’écran fournissent un aperçu visuel évident de votre application pour compléter le nom, l’icône et les descriptions de votre application. Souvenez-vous des éléments suivants concernant les captures d’écran :
+Les captures d’écran fournissent un aperçu visuel évident de votre application pour compléter le nom, l’icône et les descriptions de votre application. N’oubliez pas de qui suit en ce qui concerne les captures d’écran :
 
 * Vous pouvez avoir jusqu’à cinq captures d’écran par référencement.
 * Les types de fichiers pris en charge sont PNG, JPEG et GIF.
@@ -288,12 +293,12 @@ Si votre application inclut un onglet, assurez-vous qu’il respecte ces recomma
 
 * Les onglets ne doivent pas avoir plus de trois niveaux de navigation.
 * Les onglets ne doivent pas fournir de navigation en conflit avec la principale navigation de Teams.
-* Les pages secondaires et troisièmes d’un onglet doivent être ouvertes dans un affichage de niveau 2 et 3 dans la zone d’onglet principale, qui est accessible via des barres de navigation ou une navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation par onglets :
+* Les pages secondaires et tertiaires d’un onglet doivent être ouvertes dans un affichage de niveau 2 et 3 dans la zone d’onglet principale, qui est accessible via des barres de navigation ou le volet de navigation gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation par onglets :
     * Boutons Retour
     * En-têtes de page
     * Menus d’hamburger
 * La tabulation ne doit pas avoir de défilement horizontal.
-* Les liens profonds dans les onglets ne doivent pas être liés à une page web externe, mais à un autre emplacement dans Teams. Par exemple, les modules de tâche ou d’autres onglets.
+* Les liens profonds dans les onglets ne doivent pas être liés à une page web externe, mais à un autre emplacement dans Teams. Par exemple, les modules de tâches ou d’autres onglets.
 * Les onglets ne doivent pas permettre aux utilisateurs de naviguer en dehors de Teams pour l’expérience d’application principale.
 
 ### <a name="usability"></a>Facilité d’utilisation
@@ -303,6 +308,7 @@ Si votre application inclut un onglet, assurez-vous qu’il respecte ces recomma
 * Les onglets dans un contexte personnel peuvent agréger le contenu des instances partagées de l’application.
 * Les onglets doivent répondre aux thèmes de Teams. Lorsqu’un utilisateur modifie le thème, le thème de l’application doit refléter la sélection.
 * Les onglets doivent utiliser, dans la mesure du possible, des composants de style Teams, tels que les polices Teams, les rampes de types, les palettes de couleurs, le système de grille, le mouvement, le ton de la voix, etc.
+* Si les fonctionnalités de votre application nécessitent des modifications dans les paramètres, incluez un onglet **Paramètres**.
 * Les onglets doivent suivre, dans la mesure du possible, la conception de l’interaction Teams, telle que la navigation dans la page, la position et l’utilisation des boîtes de dialogue, des hiérarchies d’informations, etc.
 * Le contenu de l’onglet dans l’IFrame ne doit pas inclure de fonctionnalités qui imitent les fonctionnalités principales de Teams. Par exemple, les bots, les extensions de messagerie, les appels, les réunions, etc.
 
@@ -320,7 +326,7 @@ Si votre application inclut un bot, assurez-vous qu’il respecte ces recommanda
 
 ### <a name="bot-commands"></a>Commandes de bot
 
-L’analyse de l’entrée utilisateur et la prévision de l’intention de l’utilisateur sont difficiles. Les commandes de bot fournissent aux utilisateurs un ensemble de mots ou d’expressions que votre bot comprend afin qu’ils (et votre bot) n’aient pas à deviner.
+Il est difficile d’analyser des entrées utilisateur et de prédire l’intention de l’utilisateur. Les commandes de bot fournissent aux utilisateurs un ensemble de mots ou d’expressions que votre bot comprend afin qu’ils (et votre bot) n’aient pas à deviner.
 
 * Il est vivement recommandé de répertorier les commandes de bot prises en charge dans les configurations de votre application. Ces commandes s’affichent dans la zone de rédaction lorsqu’un utilisateur tente d’envoyer un message à votre bot.
 * Toutes les commandes que votre bot prend en charge doivent fonctionner correctement, y compris les commandes **Bonjour**, **Hello** et **Aide**.
@@ -410,7 +416,7 @@ Si votre application inclut une extension de réunion, assurez-vous qu’elle re
 
 ### <a name="in-meeting-tabs"></a>Onglets de réunion
 
-* Doivent être réactifs. Veillez à maintenir le remplissage et les tailles de composants.
+* Doit être réactif. Veillez à maintenir le remplissage et les tailles de composants.
 * Doit avoir un bouton Retour s’il existe plusieurs couches de navigation.
 * Ne doit pas inclure plusieurs boutons d’arrêt ou de fermeture. Cela peut dérouter les utilisateurs, car il existe déjà un bouton d’en-tête intégré pour faire disparaître l’onglet.
 * Ne doit pas avoir de défilement horizontal.
