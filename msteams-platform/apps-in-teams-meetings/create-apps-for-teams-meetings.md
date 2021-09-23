@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
+ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155645"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59487479"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Conditions préalables et références d’API pour les applications dans les réunions Teams
 
@@ -30,9 +30,9 @@ Les applications pour Teams réunions, vous pouvez développer les fonctionnalit
 
 * `GetParticipant`L’API doit avoir un ID et une inscription de bot pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
-* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
 
-* `Meeting Details`L’API doit avoir une inscription de bot et un ID de bot. Il nécessite le SDK bot pour obtenir `TurnContext` .
+* `Meeting Details`L’API doit avoir un enregistrement de bot et un ID de bot. Il nécessite le SDK bot pour obtenir `TurnContext` .
 
 * Pour les événements de réunion en temps réel, vous devez connaître `TurnContext` l’objet disponible via le Bot SDK. `Activity`L’objet dans contient la charge utile avec `TurnContext` l’heure de début et de fin réelle. Les événements de réunion en temps réel nécessitent un ID de bot inscrit à partir de la Teams web.
 
@@ -73,7 +73,7 @@ Pour identifier et récupérer des informations contextuelles pour le contenu de
 > * Ne pas mettre en cache les rôles des participants, car l’organisateur de la réunion peut modifier les rôles à tout moment.
 > * Teams ne prend actuellement pas en charge les grandes listes de distribution ou les tailles de liste de plus de 350 participants pour `GetParticipant` l’API.
 
-L’API permet à un bot de récupérer les informations des participants par ID de réunion et `GetParticipant` ID de participant. L’API inclut des paramètres de requête, des exemples et des codes de réponse.
+L’API permet à un bot de récupérer les informations des participants par ID de réunion et `GetParticipant` ID de participant. L’API inclut des paramètres de requête, des exemples et des codes de réponse. L’API est prise en charge dans les réunions privées programmées ou périodiques et les réunions de canal programmées ou périodiques. 
 
 #### <a name="query-parameters"></a>Paramètres de requête
 
@@ -168,7 +168,7 @@ Le corps de la réponse JSON pour `GetParticipant` l’API est :
 | **403** | Obtenir des informations sur les participants n’est pas partagé avec l’application. Si l’application n’est pas installée dans la réunion, elle déclenche la réponse d’erreur 403 la plus courante. Si l’administrateur client désactive ou bloque l’application pendant la migration du site en direct, la réponse d’erreur 403 est déclenchée. |
 | **200** | Les informations sur les participants sont récupérées avec succès.|
 | **401** | L’application répond avec un jeton non valide.|
-| **404** | La réunion a expiré ou le participant est indessable.|
+| **404** | La réunion a expiré ou le participant est in retrouve.|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
@@ -178,7 +178,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 > * Lorsqu’une boîte de dialogue de réunion est invoquée, le contenu est présenté comme un message de conversation.
 > * Actuellement, l’envoi de notifications ciblées n’est pas pris en charge.
 
-L’API vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la `NotificationSignal` conversation utilisateur-bot. Cette API vous permet de signaler en fonction de l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. L’API inclut le paramètre de requête, des exemples et des codes de réponse.
+L’API vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation `NotificationSignal` utilisateur-bot. Cette API vous permet de signaler en fonction de l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. L’API inclut le paramètre de requête, des exemples et des codes de réponse.
 
 #### <a name="query-parameter"></a>Paramètre de requête
 
@@ -497,11 +497,11 @@ meetingEventInfoObject);
     await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
 }
 ```
-* Avoir des paramètres `meetingId` `userId` et dans `tenantId` l’URL de l’API de réunion. Les paramètres sont disponibles dans le cadre de l’activité Teams Client SDK et bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [sso tab .](../tabs/how-to/authentication/auth-aad-sso.md)
+* Avoir des paramètres `meetingId` `userId` et dans `tenantId` l’URL de l’API de réunion. Les paramètres sont disponibles dans le cadre de l’activité Teams Client SDK et bot. En outre, vous pouvez récupérer des informations fiables pour l’ID d’utilisateur et l’ID de locataire à l’aide de l’authentification [SSO onglet](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * Avoir un ID et une inscription de bot dans `GetParticipant` l’API pour générer des jetons d’th. Pour plus d’informations, voir [l’inscription et l’ID du bot.](../build-your-first-app/build-bot.md)
 
-* Maintenez votre application à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, vérifiez le paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
+* Maintenez votre application à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue de réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, vérifiez le paramètre `bot Id` d’achèvement dans `NotificationSignal` l’API.
 
 * Avoir un enregistrement de bot et un ID de bot dans `MeetingDetails` l’API. Il nécessite le SDK bot pour obtenir `TurnContext` .
 
