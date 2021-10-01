@@ -5,12 +5,12 @@ description: Découvrez comment déployer un lien, ouvrir l’affichage de la sc
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156748"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017302"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -104,11 +104,11 @@ L’image suivante affiche une vue d’étape invoquée via un lien profond :
 
 ### <a name="syntax"></a>Syntaxe
 
-Voici la syntaxe du lien profond :  
- 
-https://teams.microsoft.com/l/stage/{appId}/0?context={« contentUrl »:"[contentUrl] »,"websiteUrl »:"[websiteUrl] »,"name »:"[name]"}
+Voici la syntaxe du lien profond : 
 
-### <a name="examples"></a>Exemples
+https://teams.microsoft.com/l/stage/{appId}/0?context={\« contentUrl \" : \" « [contentUrl] » \" , \" websiteUrl \" : \" « [websiteUrl] » \" , name : \" \" \" Contoso \" }
+ 
+### <a name="examples"></a>範例
 
 Lorsqu’un utilisateur entre une URL, elle est déployée dans une carte adaptative.
 
@@ -132,15 +132,15 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Nom de la propriété | Type | Nombre de caractères | Description |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Chaîne | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
-| `name` | Chaîne | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
-| `contentUrl` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
-| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
-| `removeUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
+| `entityId` | String | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
+| `name` | String | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
+| `contentUrl` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
+| `websiteUrl?` | String | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
+| `removeUrl?` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C # |Node.js|
+| Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
 |Onglet en vue de la phase |Microsoft Teams exemple d’application d’onglet pour montrer l’onglet en vue de la phase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     

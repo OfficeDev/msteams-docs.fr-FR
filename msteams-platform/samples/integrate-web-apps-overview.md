@@ -5,21 +5,21 @@ description: Vue d’ensemble de l’intégration d’applications web et de fon
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7d4056a23f126d636de3920d02a316440e51564e
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156689"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017309"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
-Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
-Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton Share-to-Teams pour votre site web, l’ajout d’un onglet Microsoft Teams dans SharePoint, la création de liens profonds et l’intégration des fonctionnalités d’appareil.
+Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour que votre application soit native à Teams.
+Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton Partager vers Teams pour votre site web, l’ajout d’un onglet Microsoft Teams dans SharePoint, la création de liens profonds et l’intégration des fonctionnalités d’appareil.
 
-## <a name="prerequisites"></a>Configuration requise   
+## <a name="prerequisites"></a>Conditions préalables   
 
-Pour une intégration efficace, assurez-vous de mieux comprendre les conditions préalables suivantes :
+Pour une intégration efficace, veillez à mieux comprendre les conditions préalables suivantes :
 * Teams fonctionnalités. 
 * SharePoint requises pour le stockage de fichiers et de données.
 * Conditions requises pour les API.
@@ -81,6 +81,13 @@ Microsoft Teams plateforme de développement améliore en permanence les fonctio
 ## <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
 Vous pouvez intégrer le contrôle Teams sélecateur de personnes natives qui permet aux utilisateurs de rechercher et de sélectionner des personnes dans l’expérience d’application web.
+
+## <a name="integrate-teams-in-your-external-app"></a>Intégrer des Teams dans votre application externe
+Vous pouvez incorporer vos propres expériences dans Microsoft Teams en Teams applications. Si vous souhaitez  inverser ce modèle et intégrer Teams ou d’autres fonctionnalités de communication dans votre propre expérience d’application externe, voir [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services est un service basé sur le cloud avec des API REST et des SDK de bibliothèque client pour vous aider à intégrer la communication dans vos propres applications personnalisées. Vous pouvez incorporer des composants Web Teams génériques ou de style React pour appeler et discuter à l’aide de la bibliothèque d’interface [utilisateur.](https://azure.github.io/communication-ui-library/)
+
+Les applications Azure Communication Services peuvent utiliser la fonctionnalité de prévisualisation publique pour interopérer avec [Teams](/azure/communication-services/concepts/teams-interop) et permettre à votre application personnalisée de participer Teams réunions de manière anonyme. Par exemple, vous pouvez intégrer des appels vidéo dans une application bancaire mobile et permettre aux utilisateurs finaux de rencontrer virtuellement des employés de la banque à l’aide Microsoft Teams. 
+
+Vous pouvez également intégrer Microsoft 365 pour créer des applications externes qui incorporent la vidéo et les appels PSTN au nom d’Teams utilisateur. Si vous avez utilisé [des SDK Skype Entreprise](/skype-sdk/appsdk/skypeappsdk) par le passé, ces fonctionnalités dans le cadre d’Azure Communication Services sont recommandées en remplacement.
 
 ## <a name="see-also"></a>Voir aussi
 

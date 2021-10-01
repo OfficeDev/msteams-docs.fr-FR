@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: e35393a2696ace22068e34566c3dad4a3109bd73
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156767"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017337"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -208,13 +208,6 @@ Vous recherchez une source d’inspiration pour le développement d’applicatio
 
    :::column-end:::
 :::row-end:::
-
-## <a name="integrate-teams-in-your-external-app"></a>Intégrer des Teams dans votre application externe
-Cette page se concentre sur l’incorporation de vos propres expériences dans Microsoft Teams en Teams applications. Si vous souhaitez  inverser ce modèle et intégrer Teams ou d’autres fonctionnalités de communication dans votre propre expérience d’application externe, voir [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services est un service basé sur le cloud avec des API REST et des SDK de bibliothèque client pour vous aider à intégrer la communication dans vos propres applications personnalisées. Vous pouvez incorporer des composants Web Teams génériques ou de style React pour appeler et discuter à l’aide de la bibliothèque d’interface [utilisateur.](https://azure.github.io/communication-ui-library/)
-
-Les applications Azure Communication Services peuvent utiliser la fonctionnalité de prévisualisation publique pour interopérer avec [Teams](/azure/communication-services/concepts/teams-interop) et permettre à votre application personnalisée de participer Teams réunions de manière anonyme. Par exemple, vous pouvez intégrer des appels vidéo dans une application bancaire mobile et permettre aux utilisateurs finaux de rencontrer virtuellement des employés de la banque à l’aide Microsoft Teams. 
-
-Vous pouvez également intégrer Microsoft 365 pour créer des applications externes qui incorporent la vidéo et les appels PSTN au nom d’Teams utilisateur. Si vous avez utilisé [des SDK Skype Entreprise](/skype-sdk/appsdk/skypeappsdk) par le passé, ces fonctionnalités dans le cadre d’Azure Communication Services sont recommandées en remplacement.
 
 ## <a name="see-also"></a>Voir aussi
 
