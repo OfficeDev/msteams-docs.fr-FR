@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360727"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096690"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Créer votre première application Teams en C #
 
@@ -125,32 +125,35 @@ Visual Studio la prise en charge intégrée du déploiement d’applications pou
 
 **Mettre à jour le package d’application**
 
+> [!NOTE]
+>  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 # <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
 
-**Pour installer le portail du développeur (prévisualisation) dans Teams**
+**Pour configurer le package d’application dans le Portail des développeurs (prévisualisation) dans Teams**
 
 
-1. Sélectionnez **l’icône** Applications en bas de la barre de gauche, puis recherchez **Portail du développeur.**
+1. 1.Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-1. Sélectionnez **Portail du développeur** et **Ouvrez.**
+1. Go to **Apps**.
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
-1. Sélectionnez l’onglet Applications et **sélectionnez Importer une application existante.**
+1. Sélectionnez **Importer une application existante.**
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Sélectionnez **Hello World** et **sélectionnez Importer.** **L’application Hello World** est importée dans le Portail des développeurs. 
 
     Vous pouvez configurer votre application à l’aide du portail Teams développeur. Le manifeste se trouve sous Distribuer. Vous pouvez utiliser le manifeste pour configurer des fonctionnalités, des ressources requises et d’autres attributs importants pour votre application. Pour plus d’informations sur la configuration de votre application à l’aide du Portail du développeur, voir [Teams Portail du développeur.](../concepts/build-and-test/teams-developer-portal.md)
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/tdp/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>
@@ -177,7 +180,7 @@ Après avoir installé l’application dans Teams, vous devez la configurer pour
 
 1. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab.
 1. Sélectionnez **Hello World** dans la **liste Ajouter un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de sélectionner l’onglet à afficher dans ce canal. 
-1. Cliquez sur **Enregistrer**. `Hello World`L’onglet est chargé avec l’onglet.
+1. Sélectionnez **Enregistrer**. `Hello World`L’onglet est chargé avec l’onglet.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 

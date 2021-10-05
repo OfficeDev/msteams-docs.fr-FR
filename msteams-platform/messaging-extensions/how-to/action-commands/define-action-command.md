@@ -5,12 +5,12 @@ description: Vue d’ensemble des commandes d’action d’extension de messager
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155518"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096661"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
@@ -35,7 +35,7 @@ Tout d’abord, vous devez déterminer l’emplacement à partir de lequel votre
 
 * Message : directement à partir d’un message existant via le `...` menu de dépassement d’un message. 
     > [!NOTE] 
-    > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de le présenter avec un module de tâche.
+    > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de lui présenter un module de tâche.
 
 L’image suivante affiche les emplacements d’où la commande d’action est invoquée :
 
@@ -55,7 +55,7 @@ Si vous choisissez de créer le module de tâche avec une liste statique de para
 
 Dans la plupart des cas, la commande d’action entraîne l’insertion d’une carte dans la zone de composition du message. L’utilisateur peut l’envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l’utilisateur et le bot ne peut ni modifier ni mettre à jour la carte.
 
-Si l’extension de messagerie est invoquée à partir de la zone de composition ou directement à partir d’un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l’objet au manifeste de l’application en utilisant le même ID et en `bot` définissant les étendues appropriées.
+Si l’extension de messagerie est invoquée à partir de la zone de composition ou directement à partir d’un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l’objet au manifeste de l’application à l’aide du même ID et définir `bot` les étendues appropriées.
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Ajouter la commande d’action au manifeste de votre application
 
@@ -65,6 +65,13 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 * [Créer une commande d’action manuellement](#create-an-action-command-manually)
 
 ### <a name="create-an-action-command-using-app-studio"></a>Créer une commande d’action à l’aide d’App Studio
+
+Vous pouvez créer une commande d’action à l’aide de ** App Studio** ou **du portail du développeur.**
+
+> [!NOTE]
+>  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
 
 > [!NOTE]
 > La condition préalable à la création d’une commande d’action est que vous avez déjà créé une extension de messagerie. Pour plus d’informations sur la création d’une extension de messagerie, voir [créer une extension de messagerie.](~/messaging-extensions/how-to/create-messaging-extension.md)
@@ -78,7 +85,7 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
     
-1. Pour créer une extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
+1. Pour créer une extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
@@ -115,7 +122,57 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
 1. Sélectionnez **Enregistrer**.
-1. Pour ajouter d’autres paramètres, sélectionnez **le bouton Ajouter** dans la section **Paramètres.**
+1. Pour ajouter d’autres paramètres, sélectionnez **le bouton** Ajouter dans la section **Paramètres.**
+
+# <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
+
+**Pour créer une commande d’action à l’aide du portail du développeur**
+
+1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
+    
+      ![Capture d’écran de TDP](~/assets/images/tdp/tdp_home_1.png)
+
+1. Go to **Apps**.
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. Si vous avez déjà créé votre package d’application dans **le Portail** du développeur, sélectionnez-le dans la liste. Si ce n’est pas **le cas, sélectionnez** Importer une application existante.
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. Allez aux **fonctionnalités de l’application.** 
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. Sélectionnez **les extensions de messagerie dans** les **fonctionnalités de l’application.** Une fenêtre instantanée s’affiche pour configurer l’extension de messagerie.
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+ 
+1. Sélectionnez **un bot d’extension de message** dans la liste bas sous **ID des extensions** de messagerie, puis **sélectionnez Enregistrer.**
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. Sélectionnez **Ajouter une commande.** Une fenêtre pop-up s’affiche pour ajouter une commande.
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. Sélectionnez le type de la commande en **fonction de l’action** pour configurer l’extension de messagerie. Sélectionnez **Paramètres dynamiques** pour créer une commande d’action dynamique.
+
+    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
+
+1. Sélectionnez **paramètres statiques** pour créer une commande d’action statique.   
+
+    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
+
+1. Entrez les champs de commande. 
+
+    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
+
+1. Entrez les champs de paramètre, puis **sélectionnez Enregistrer.**
+
+    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
+ 
+---
 
 ### <a name="create-an-action-command-manually"></a>Créer une commande d’action manuellement
 
@@ -126,7 +183,7 @@ Pour ajouter manuellement votre commande d’extension de messagerie basée sur 
 | `id` | Cette propriété est un ID unique que vous affectez à cette commande. La demande de l’utilisateur inclut cet ID. | Oui | 1.0 |
 | `title` | Cette propriété est un nom de commande. Cette valeur apparaît dans l’interface utilisateur. | Oui | 1.0 |
 | `type` | Cette propriété doit être une `action` . | Non | 1.4 |
-| `fetchTask` | Cette propriété est définie pour une carte adaptative ou un affichage web incorporé pour votre module de tâche, et pour une liste statique de paramètres ou lors du chargement de l’affichage `true` `false` web par un `taskInfo` . | Non | 1.4 |
+| `fetchTask` | Cette propriété est définie sur pour une carte adaptative ou un affichage web incorporé pour votre module de tâche, et pour une liste statique de paramètres ou lors du chargement de l’affichage `true` `false` web par un `taskInfo` . | Non | 1.4 |
 | `context` | Cette propriété est un tableau facultatif de valeurs qui définit l’endroit d’où l’extension de messagerie est invoquée. Les valeurs possibles sont `message`, `compose` ou `commandBox`. La valeur par défaut est `["compose", "commandBox"]`. | Non | 1,5 |
 
 Si vous utilisez une liste statique de paramètres, vous devez également ajouter les paramètres suivants :

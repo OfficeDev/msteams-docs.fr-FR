@@ -5,12 +5,12 @@ description: Définissez les commandes de recherche d’extension de messagerie 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155878"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096598"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -38,9 +38,17 @@ L’image suivante affiche les emplacements d’appel de la commande de recherch
 
 Pour ajouter la commande de recherche au manifeste de votre application, vous devez ajouter un nouvel objet au niveau supérieur du manifeste JSON de `composeExtension` votre application. Vous pouvez ajouter la commande de recherche à l’aide d’App Studio ou manuellement.
 
-### <a name="create-a-search-command-using-app-studio"></a>Créer une commande de recherche à l’aide d’App Studio
+### <a name="create-a-search-command"></a>Créer une commande de recherche 
 
-La condition préalable à la création d’une commande de recherche est que vous devez déjà avoir créé une extension de messagerie. Pour plus d’informations sur la création d’une extension de messagerie, voir [créer une extension de messagerie.](~/messaging-extensions/how-to/create-messaging-extension.md)
+Vous pouvez créer une commande de recherche à l’aide de ** App Studio** ou **du portail du développeur.**
+
+> [!NOTE]
+>  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+> [!NOTE]
+> La condition préalable à la création d’une commande de recherche est que vous devez déjà avoir créé une extension de messagerie. Pour plus d’informations sur la création d’une extension de messagerie, voir [créer une extension de messagerie.](~/messaging-extensions/how-to/create-messaging-extension.md)
 
 **Pour créer une commande de recherche**
 
@@ -51,7 +59,7 @@ La condition préalable à la création d’une commande de recherche est que vo
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
-1. Pour créer l’extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
+1. Pour créer l’extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
@@ -69,6 +77,49 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
 1. Ajoutez votre paramètre de recherche et sélectionnez **Enregistrer.**
+
+# <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
+
+**Pour créer une commande de recherche à l’aide du portail du développeur**
+
+1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
+    
+   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
+    
+1. Go to **Apps**.
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. Si vous avez déjà créé votre package d’application dans **le Portail** du développeur, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, **sélectionnez Importer une application existante.**
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. Allez aux **fonctionnalités de l’application.**  
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. Sélectionnez **les extensions de messagerie dans** les **fonctionnalités de l’application.** Une fenêtre instantanée s’affiche pour configurer l’extension de messagerie.
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+
+1. Sélectionnez **un bot d’extension de message** dans la liste bas sous **ID des extensions** de message, puis **sélectionnez Enregistrer.**
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. Sélectionnez **Ajouter une commande.** Une fenêtre pop-up s’affiche pour ajouter une commande.
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. Sélectionnez **une commande de recherche** basée sur la recherche et entrez des champs de commande.
+
+    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
+
+1. Entrez les champs de paramètre, puis **sélectionnez Enregistrer.**
+
+    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
+
+---
+
 
 ### <a name="create-a-search-command-manually"></a>Créer une commande de recherche manuellement 
 

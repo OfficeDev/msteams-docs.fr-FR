@@ -5,31 +5,28 @@ keywords: mise en place des équipes du portail de développement
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 028086c3ad39f26cdf7874ed574a8488232700c3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 84f3e5724adf3256fff3086158345fc3777513bb
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155579"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096572"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
-> [!NOTE]
-> Le Portail des développeurs pour Teams est actuellement en prévisualisation [pour les développeurs publics.](~/resources/dev-preview/developer-preview-intro.md)
-
-Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des développeurs pour Teams</a> est le principal outil de configuration, de distribution et de gestion de Microsoft Teams applications. Avec le Portail des développeurs, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’runtime, et bien plus encore.
+Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des développeurs pour Teams</a> est l’outil principal pour configurer, distribuer et gérer vos applications Microsoft Teams client. Avec le Portail des développeurs, vous pouvez collaborer avec des collègues sur votre application, configurer des environnements d’runtime, et bien plus encore.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Capture d’écran montrant la page d’accueil du portail de développement pour Teams.":::
 
 ## <a name="register-an-app"></a>Inscrire une application
 
-Le Portail des développeurs propose deux façons d’inscrire une Teams application :
+Vous pouvez inscrire votre application Teams dans le Portail des développeurs de l’une des manières suivantes :
 
-* Inscrire une toute nouvelle application
+* Inscrire une nouvelle application
 * Importer un package d’application existant
 
 > [!NOTE]
-> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code,](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)vous pouvez gérer cette application dans le Portail du développeur.
+> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), vous pouvez gérer cette application dans le Portail des développeurs.
 
 ## <a name="set-up-an-environment"></a>Configurer un environnement
 
@@ -38,7 +35,7 @@ Vous pouvez configurer des environnements et des variables globales pour facilit
 **Pour configurer un environnement**
 
 1. Dans le portail du développeur, sélectionnez l’application sur qui vous travaillez.
-2. Go to the **Environments** page and select **+ Add an environment**.
+2. Go to **Environments** and select **+ Add an environment**.
 3. Sélectionnez **+ Ajoutez une variable** pour créer des variables de configuration pour votre environnement.
 
 **Pour utiliser des variables**
@@ -50,7 +47,7 @@ Utilisez les noms de variables au lieu de valeurs codées en dur pour définir l
 
 ## <a name="identify-app-owners"></a>Identifier les propriétaires d’applications
 
-Chaque application inclut une page **Propriétaires,** dans laquelle vous pouvez partager l’inscription de votre application avec des collègues de votre organisation. Le **rôle Collaborateur** dispose des mêmes autorisations que le rôle **Propriétaire,** à l’exception de la possibilité de supprimer une application.
+Chaque application inclut **les propriétaires,** où vous pouvez partager l’inscription de votre application avec des collègues de votre organisation. Le **rôle Collaborateur** dispose des mêmes autorisations que le rôle **Propriétaire,** à l’exception de la possibilité de supprimer une application.
 
 ## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>Configurer les fonctionnalités de votre application et d’autres métadonnées importantes
 
@@ -58,29 +55,61 @@ Une Teams est une application web. Comme toutes les applications web, son code s
 
 Pour installer et restituer votre application dans Teams, vous devez inclure un ensemble de configurations Teams reconnu. Pour ce faire, il s’agit généralement d’un manifeste d’application, un fichier JSON qui contient toutes les métadonnées dont Teams a besoin pour afficher le contenu de votre application. Le Portail des développeurs fait abstraction de ce processus et inclut de nouvelles fonctionnalités et outils pour vous aider à réussir.
 
+### <a name="basic-app-configuration"></a>Configuration d’application de base 
+
+**Informations de base sur l’application :** Les utilisateurs voient sur la page de détails de votre application dans Teams, tels que l’ID de l’application, les noms d’application, les descriptions, les informations du développeur, la version, les URL d’application et l’ID Microsoft Partner Network.
+
+**Image de marque :** Les applications nécessitent une icône de couleur et de plan au format PNG. Pour publier votre application dans Teams store, les icônes doivent répondre à des exigences de taille spécifiques.
+
+**Fonctionnalités :** Teams fonctionnalités que vous pouvez inclure dans votre application. Vous pouvez ajouter une ou plusieurs fonctionnalités en fonction des cas d’utilisation de votre application.
+
+**Autorisations :** Spécifiez à quoi les utilisateurs doivent consentir lors de l’utilisation de votre application.
+
+**Sign-on unique :** Configurez votre application pour authentifier les utilisateurs à l’authentification unique (SSO).
+
+**Domaines :** List all the domains your app needs to navigate to. Utilisez des caractères génériques pour inclure plusieurs sous-domaine. Par exemple, `*.example.com`.
+
+### <a name="advanced-app-configuration"></a>Configuration d’application avancée
+
+**Contenu de l’application :** Configurez les fonctionnalités facultatives telles que l’indicateur de chargement et le mode plein écran pour votre application.
+
+**Personnalisation de l’application :** Sélectionnez les propriétés que Teams administrateurs peuvent personnaliser sur votre application.
+
+**Paramètres de première partie :** Fonctionnalités pour les applications tierces qui s’étendent au-delà des fonctionnalités publiques.
+
+### <a name="distribute-your-app"></a>Distribuer votre application.
+
+**Package d’application :** Le package d’application décrit la configuration, les fonctionnalités, les ressources requises et d’autres attributs importants de votre application. Par exemple, le schéma de manifeste.
+
+**Vols :** Contrôler qui obtient les mises à jour de l’application. Par exemple, vous pouvez publier une mise à jour pour les employés de Microsoft afin d’identifier et de corriger les bogues avant de les publier au public.
+
+**Publier dans votre organisation (Microsoft) :** Rendez votre application accessible aux membres de votre organisation. Une fois approuvée par votre administrateur informatique, votre application sera Teams sous Applications > conçues pour votre organisation.
+
+**Publiez dans le Teams store :** L’outil de validation d’application vérifie votre package d’application par rapport aux cas de test que Microsoft utilise, lors de la révision de votre application. Résolvez les erreurs ou avertissements et lisez la liste de contrôle avant de l’envoyer.
+
 ## <a name="test-your-app-directly-in-teams"></a>Testez votre application directement dans Teams
 
-Le Portail des développeurs fournit des options de test et de débogage de votre application :
+Le Portail des développeurs fournit des options pour tester et déboguer votre application :
 
-* Dans la page **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
-* **L’aperçu Teams** bouton vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
+* Dans **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
+* **La prévisualisation** Teams vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
 
 ## <a name="distribute-your-app"></a>Distribuer votre application.
 
-À partir du portail  du développeur, utilisez le bouton Distribuer pour télécharger un package d’application, publier dans votre organisation ou publier sur le Teams store.
+À partir du portail du développeur, utilisez **Distribute** pour télécharger un package d’application, publier sur votre organisation ou publier sur le Teams store.
 
 Pour plus d’informations, [voir distribuer votre Teams application.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
 
-Dans  la page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
+Dans **Vue d’ensemble,** vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID d’application.
 
 | Métrique | Définition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *R30 mensuel* | Mesure d’utilisation par défaut. Il indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans cette fenêtre de 30 jours en temps UTC. |
-| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application au cours d’un jour donné au cours de l’UTC. |
+| *R30 mensuel* | Mesure d’utilisation par défaut. Il indique le nombre d’utilisateurs actifs uniques, qui ont utilisé votre application dans cette fenêtre de 30 jours en temps UTC. |
+| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques, qui ont utilisé votre application un jour donné au cours de l’UTC. |
 
-L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 derniers jours. L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.
+L’utilisation mensuelle et quotidienne est indiquée pour les sept derniers jours, 30 jours et 60 jours. L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.
 
 ## <a name="use-tools-to-create-app-features"></a>Utiliser des outils pour créer des fonctionnalités d’application
 

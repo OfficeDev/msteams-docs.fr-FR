@@ -5,12 +5,12 @@ description: Comment ajouter l’authentification OAuth à un bot dans Microsoft
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 3612e194b0e05526bbe38dc66a2b75037a003eed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0fe330fe9eb6689998ff02df9403f00112379c66
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155560"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096646"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à Teams bot
 
@@ -30,7 +30,7 @@ Voici les titres des sections de cet article :
 - **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité.** Le fournisseur émettra un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder à des ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, [Microsoft Teams flux d’authentification pour les bots.](auth-flow-bot.md)
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous y inscrire et échanger des messages avec lui dans une conversation.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 - Connaissance des principes [de base du bot,][concept-basics] [de la gestion de l’état,][concept-state]de la bibliothèque [de][concept-dialogs]boîtes de dialogue et de la façon d’implémenter un flux de [conversation séquentiel.][simple-dialog]
 - Connaissance du développement Azure et OAuth 2.0.
@@ -38,7 +38,7 @@ Voici les titres des sections de cet article :
 - Compte Azure. Si nécessaire, vous pouvez créer un [compte gratuit Azure.](https://azure.microsoft.com/free/)
 - L’exemple suivant :
 
-    | Échantillon | Version de BotBuilder | Demonstrates |
+    | Exemple | Version de BotBuilder | Demonstrates |
     |:---|:---:|:---|
     | **Authentification de bot** [dans cs-auth-sample][teams-auth-bot-cs] | v4 | Prise en charge d’OAuthCard |
     | **Authentification de bot** [dans js-auth-sample][teams-auth-bot-js] | v4| Prise en charge d’OAuthCard  |
@@ -207,7 +207,7 @@ Une fois les paramètres préliminaires terminés, nous allons nous concentrer s
 1. Clone [cs-auth-sample][teams-auth-bot-cs].
 1. Lancez Visual Studio.
 1. Dans la barre d’outils, **sélectionnez Fichier -> Ouvrir -> Project/Solution** et ouvrez le projet bot.
-1. Dans C# mise **à jourappsettings.jsles informations suivantes** :
+1. Dans C# update **appsettings.json** comme suit :
 
     - Définissez `ConnectionName` ce nom sur le nom de la connexion de fournisseur d’identité que vous avez ajoutée à l’inscription du canal du bot. Le nom que nous avons utilisé dans cet exemple *est BotTeamsAuthADv1*.
     - Définissez `MicrosoftAppId` ce dernier sur **l’ID d’application** du bot que vous avez enregistré au moment de l’inscription du canal du bot.
@@ -382,13 +382,30 @@ L’Assistant suivant s’affiche :
 1. Sélectionnez le bouton **Ajouter à une équipe**.
 1. Dans la fenêtre suivante, sélectionnez l’équipe dans laquelle vous souhaitez utiliser le bot.
 1. Sélectionnez **le bouton Configurer un bot.**
-1. Sélectionnez les trois points (&#x25cf;&#x25cf;&#x25cf;) dans le panneau gauche. Sélectionnez ensuite **l’icône App Studio.**
-1. Sélectionnez **l’onglet Éditeur de** manifeste. Vous devriez voir l’icône du bot que vous avez téléchargé.
-1. En outre, vous devriez être en mesure de voir le bot répertorié en tant que contact dans la liste de conversation que vous pouvez utiliser pour échanger des messages avec le bot.
+
+Vous pouvez utiliser App Studio ou le portail de développement pour tester le bot.
+
+> [!NOTE]
+>  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+11. Dans le panneau gauche, sélectionnez les trois points (....).). Sélectionnez ensuite l’icône App Studio.
+12. Sélectionnez **l’onglet Éditeur de** manifeste. Vous devriez voir l’icône du bot que vous avez téléchargé.
+13. En outre, vous devriez être en mesure de voir le bot répertorié en tant que contact dans la liste de conversation que vous pouvez utiliser pour échanger des messages avec le bot.
+ 
+# <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
+
+11. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
+12. Sélectionnez **Applications** dans le panneau gauche. Ensuite, **sélectionnez Importer une application.**
+13. Sélectionnez **les fonctionnalités de l’application** et **sélectionnez Bot**. Vous pouvez voir l’icône du bot que vous avez téléchargé.
+14. En outre, vous pouvez voir le bot répertorié en tant que contact dans la liste de conversation que vous pouvez utiliser pour échanger des messages avec le bot.
+
+---
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Test du bot localement dans Teams
 
-Microsoft Teams est un produit entièrement basé sur le cloud, tous les services accessibles doivent être disponibles à partir du cloud à l’aide de points de terminaison HTTPS. Par conséquent, pour permettre au bot (notre exemple) de fonctionner dans Teams, vous devez publier le code dans le cloud de votre choix ou rendre une instance en cours d’exécution localement accessible en externe via un outil de **tunneling.** Nous vous  [recommandons ngrok](https://ngrok.com/download), qui crée une URL adressan externe pour un port que vous ouvrez localement sur votre ordinateur.
+Microsoft Teams est un produit entièrement basé sur le cloud, tous les services accessibles doivent être disponibles à partir du cloud à l’aide de points de terminaison HTTPS. Par conséquent, pour permettre au bot (notre exemple) de fonctionner dans Teams, vous devez publier le code dans le cloud de votre choix ou rendre une instance en cours d’exécution localement accessible en externe via un outil de **tunneling.** Nous vous [recommandons ngrok](https://ngrok.com/download), qui crée une URL adressan externe pour un port que vous ouvrez localement sur votre ordinateur.
 Pour configurer ngrok en vue de l’exécution locale de Microsoft Teams’application, suivez les étapes suivantes :
 
 1. Dans une fenêtre terminal, allez dans le répertoire où vous `ngrok.exe` avez installé. Nous vous suggérons de définir *le chemin d’accès de la variable* d’environnement pour qu’il pointe vers celui-ci.
@@ -416,7 +433,7 @@ Cela lance ngrok pour écouter sur le port que vous spécifiez. En retour, il vo
 
 ## <a name="additional-information"></a>Informations supplémentaires
 
-### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.jssur
+### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
 Ce manifeste contient les informations requises par Microsoft Teams pour se connecter au bot :  
 

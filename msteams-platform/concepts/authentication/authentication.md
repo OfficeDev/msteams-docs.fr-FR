@@ -4,12 +4,12 @@ description: Décrit l’authentification Teams et comment l’utiliser dans les
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Authentification teams OAuth SSO AAD
-ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a49c209b3f421006b2a75f314fb0cbe4a591d86c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475768"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096709"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 
@@ -36,12 +36,12 @@ L’OAuthPrompt d’Azure Bot Framework facilite l’authentification pour les a
 
 Pour plus d’informations sur l’utilisation d’OAuthPrompt, voir :
 
-* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans l’application Teams. Cela illustre un flux d’authentification non basé sur le web utilisé pour les bots sur Teams web, application de bureau et applications mobiles.
+* [La vue d’ensemble du flux](~/bots/how-to/authentication/auth-flow-bot.md) d’authentification de bot décrit le fonctionnement de l’authentification au sein d’un bot dans l’application Teams. Cela illustre un flux d’authentification non basé sur le web utilisé pour les bots sur Teams web, d’application de bureau et d’applications mobiles.
 * [L’authentification](~/bots/how-to/authentication/add-authentication.md) de bot décrit comment ajouter l’authentification OAuth au bot Teams bot.
 
 ## <a name="code-sample"></a>Exemple de code
 
-fournit un exemple de SDK d’authentification du bot v3.
+Exemples d’authentification Bot Framework v4.
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -51,7 +51,7 @@ fournit un exemple de SDK d’authentification du bot v3.
 
 ## <a name="configure-the-identity-provider"></a>Configuration du fournisseur d’identité
 
-Quel que soit le flux d’authentification de l’application, configurez le fournisseur d’identité pour qu’il communique avec Teams’application. La plupart des exemples et des pas à pas concernent principalement l’utilisation d’AAD comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité.
+Quel que soit le flux d’authentification de l’application, configurez le fournisseur d’identité pour qu’il communique Teams’application. La plupart des exemples et des pas à pas concernent principalement l’utilisation d’AAD comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité.
 
 Pour plus d’informations, [voir configuration d’un fournisseur d’identité.](~/concepts/authentication/configure-identity-provider.md)
 

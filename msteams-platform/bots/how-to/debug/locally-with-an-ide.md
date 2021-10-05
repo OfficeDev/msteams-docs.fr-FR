@@ -5,12 +5,12 @@ description: Test et débogage de votre bot localement avec un IDE
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c07d1a9eb8a28b328a1a60ba299f05d39b460fbe
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155685"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096555"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -20,8 +20,11 @@ Lorsque vous testez votre bot, vous devez prendre en compte les contextes dans l
 
 La façon la plus complète de tester votre bot consiste à créer un package d’application et à le télécharger sur Teams. Il s’agit de la seule méthode pour tester les fonctionnalités complètes disponibles pour votre bot, dans toutes les étendues.
 
+> [!NOTE]
+>  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+
 Il existe deux méthodes pour charger votre application :
-* Utilisez [App Studio.](~/concepts/build-and-test/app-studio-overview.md)
+* Utilisez [le portail du développeur](https://dev.teams.microsoft.com/) ou App [Studio.](~/concepts/build-and-test/app-studio-overview.md)
 * [Créez un package d’application](~/concepts/build-and-test/apps-package.md) manuellement, puis [téléchargez votre application.](~/concepts/deploy-and-publish/apps-upload.md)
 
 > [!NOTE]
