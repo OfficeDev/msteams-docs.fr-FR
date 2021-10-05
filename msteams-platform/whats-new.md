@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: nouveautés des équipes
-ms.openlocfilehash: d456e4892cdbd93d9dde51f64972c836724c4f1b
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096541"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119656"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|10/05/2021|Planifier vos applications pour Teams mobile|[Planifier des onglets réactifs pour Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Documentation pour les développeurs](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams prend en charge l’ID d’objet AAD et l’UPN dans la mention utilisateur pour les bots et les webhooks entrants. |[ID d’objet AAD et UPN dans la mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)utilisateur , [Cartes - Vue d’ensemble](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Prise en charge de la validation des entrées sur les cartes adaptatives (v1.3 pour toutes les fonctionnalités) et les actions universelles (v1.4 pour les cartes envoyées par un bot). |[Validation des entrées](/adaptive-cards/authoring-cards/input-validation), [Actions universelles pour les cartes adaptatives v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |

@@ -5,12 +5,12 @@ description: Décrire les concepts fondamentaux du développement Teams platefor
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156827"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119649"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de développement d’applications
 
@@ -32,6 +32,9 @@ Vous pouvez reconnaître les problèmes des utilisateurs et identifier les répo
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
 [La cartographie de vos cas d’utilisation](../concepts/design/map-use-cases.md) couvre certains scénarios courants et la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
+
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
+[Planifiez des onglets réactifs Teams mobile couvre](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) des scénarios courants et facilite la planification des applications pour Teams mobile. Guides de document sur la façon de mettre en place une stratégie pour les applications sur mobile. Vous pouvez également en savoir plus sur les différents satges et les différents types d’Teams app.
 
 ## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
