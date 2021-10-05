@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: dac0874850094c7f3bbe83f6cbc4f26209213410
+ms.sourcegitcommit: 5bb12fd185a3bd6e308cc3a65b54341a5ae10af9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096690"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60116738"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>Créer votre première application Teams en C #
 
@@ -134,10 +134,10 @@ Visual Studio la prise en charge intégrée du déploiement d’applications pou
 
 # <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
 
-**Pour configurer le package d’application dans le Portail des développeurs (prévisualisation) dans Teams**
+**Pour configurer le package d’application dans le portail du développeur dans Teams**
 
 
-1. 1.Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
+1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 
      <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
