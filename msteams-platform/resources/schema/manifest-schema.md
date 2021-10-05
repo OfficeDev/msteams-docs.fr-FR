@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017323"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60127258"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
-Le Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,..., et 1.6 sont également pris en charge (à l’aide de « v1.x » dans l’URL).
+Le Teams de l’application décrit comment l’application s’intègre au Microsoft Teams produit. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,..., et 1.11 sont également pris en charge (à l’aide de « v1.x » dans l’URL).
 Pour plus d’informations sur les modifications apportées dans chaque version, voir [le journal des modifications du manifeste.](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
 
 L’exemple de schéma suivant montre toutes les options d’extensibilité :
@@ -23,8 +23,8 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.10",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -290,6 +290,8 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
       }
     ]
   },
+  "defaultBlockUntilAdminAction": true,
+  "publisherDocsUrl": "https://website.com/app-info",
   "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
     "meetings": "tab", 
@@ -474,11 +476,11 @@ L’élément est un tableau (un seul élément est actuellement autorisé par a
 |---|---|---|---|---|
 |`botId`|string|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. L’ID peut être identique à [l’ID d’application global.](#id)|
 |`scopes`|tableau d’enums|3|✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
-|`needsChannelSelector`|valeur booléenne|||Indique si le bot utilise ou non un conseil de l’utilisateur pour ajouter le bot à un canal spécifique. Valeur par défaut : **`false`**|
-|`isNotificationOnly`|valeur booléenne|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Valeur par défaut : **`false`**|
+|`needsChannelSelector`|booléen|||Indique si le bot utilise ou non un conseil de l’utilisateur pour ajouter le bot à un canal spécifique. Valeur par défaut : **`false`**|
+|`isNotificationOnly`|booléen|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Valeur par défaut : **`false`**|
 |`supportsFiles`|valeur booléenne|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Valeur par défaut : **`false`**|
 |`supportsCalling`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels audio. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  La propriété est fournie uniquement à des fins de test et d’exploration et ne doit pas être utilisée dans les applications de production. Valeur par défaut : **`false`**|
-|`supportsVideo`|valeur booléenne|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  La propriété est fournie uniquement à des fins de test et d’exploration et ne doit pas être utilisée dans les applications de production. Valeur par défaut : **`false`**|
+|`supportsVideo`|booléen|||Valeur indiquant où un bot prend en charge les appels vidéo. **IMPORTANT**: cette propriété est actuellement expérimentale. Les propriétés expérimentales peuvent ne pas être complètes et peuvent subir des modifications avant de devenir entièrement disponibles.  La propriété est fournie uniquement à des fins de test et d’exploration et ne doit pas être utilisée dans les applications de production. Valeur par défaut : **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -542,7 +544,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`title`|string|32 caractères|✔|Nom de la commande conviviale.|
 |`type`|string|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Par défaut : **requête**.|
 |`description`|string|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|valeur booléenne|||Une valeur booléle indique si la commande s’exécute initialement sans paramètre. La valeur par défaut est **False**.|
+|`initialRun`|booléen|||Une valeur booléle indique si la commande s’exécute initialement sans paramètre. La valeur par défaut est **False**.|
 |`context`|tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
 |`fetchTask`|booléen|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche. La valeur par défaut est **False**.|
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
@@ -628,7 +630,7 @@ Indiquez l’endroit où une application personnelle est rendue avec ou sans bar
 > [!NOTE]
 > `isFullScreen`fonctionne uniquement avec SharePoint onglets et les applications du Store.
 
-## <a name="activities"></a>activities
+## <a name="activities"></a>activités
 
 **Facultatif**— objet
 
@@ -737,3 +739,17 @@ Vous pouvez définir l’une des propriétés suivantes :
 * `developerUrl`: URL HTTPS du site web du développeur.
 * `privacyUrl`: URL HTTPS de la politique de confidentialité du développeur.
 * `termsOfUseUrl`: URL HTTPS des conditions d’utilisation du développeur.
+
+## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
+
+**Facultatif**— booléen
+ 
+Lorsque la propriété est définie sur true, l’application est masquée aux utilisateurs par défaut jusqu’à ce que `defaultBlockUntilAdminAction` l’administrateur l’autorise. Si la valeur **est true,** l’application est masquée pour tous les clients et utilisateurs finaux. Les administrateurs client peuvent voir l’application dans Teams centre d’administration et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**.
+
+## <a name="publisherdocsurl"></a>publisherDocsUrl
+
+**Facultatif** - chaîne
+
+**Taille maximale** - 128 caractères
+
+La propriété dépend de `defaultBlockUntilAdminAction` . Lorsque la propriété est définie sur `defaultBlockUntilAdminAction` **true,** l’URL HTTPS fournit une page d’informations pour que les administrateurs obtiennent des instructions avant d’autoriser une application, qui est bloquée `publisherDocsUrl` par défaut.

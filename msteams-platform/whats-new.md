@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: nouveautés des équipes
-ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 13e749352662872d0b457085cc919b2357e9c348
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119656"
+ms.locfileid: "60127286"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -30,9 +30,11 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|10/05/2021| Masquez Teams application jusqu’à ce que l’administrateur autorise le masque l’application. | [Masquer Teams application jusqu’à ce que l’administrateur approuve](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|Planifier vos applications pour Teams mobile|[Planifier des onglets réactifs pour Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Documentation pour les développeurs](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams prend en charge l’ID d’objet AAD et l’UPN dans la mention utilisateur pour les bots et les webhooks entrants. |[ID d’objet AAD et UPN dans la mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)utilisateur , [Cartes - Vue d’ensemble](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|09/08/2021|L’étape de réunion est désormais disponible dans GA.|[Activer et configurer vos applications pour Teams réunions](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/16/2021| Prise en charge de la validation des entrées sur les cartes adaptatives (v1.3 pour toutes les fonctionnalités) et les actions universelles (v1.4 pour les cartes envoyées par un bot). |[Validation des entrées](/adaptive-cards/authoring-cards/input-validation), [Actions universelles pour les cartes adaptatives v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|L’étape de réunion est désormais disponible dans GA.|[Activer et configurer vos applications pour Teams réunions](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| La fonctionnalité de scènes en mode ensemble personnalisé combine les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés. | [Scènes personnalisées du mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md) |
