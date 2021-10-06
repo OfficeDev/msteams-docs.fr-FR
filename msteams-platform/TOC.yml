@@ -44,6 +44,8 @@
       href: concepts/design/understand-use-cases.md
     - name: Mise en correspondance des cas d'utilisation avec les capacités de l'application Teams
       href: concepts/design/map-use-cases.md
+    - name: Planifier des onglets réactifs pour Teams mobile
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: Fonctionnalités de l’appareil
       items:
         - name: Présentation
@@ -92,7 +94,7 @@
           href: task-modules-and-cards/task-modules/design-teams-task-modules.md
         - name: Notifications de flux d’activités
           href: concepts/design/activity-feed-notifications.md
-    - name: Activer la personnalisation d’application
+    - name: Personnalisation d’application
       href: concepts/design/enable-app-customization.md
 - name: Outils et kits de développement durable
   items:
@@ -394,7 +396,7 @@
           href: /azure/bot-service/bot-service-debug-inspection-middleware
         - name: Déboguer votre robot d’appel et de réunion localement
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-    - name: Microsoft Graph
+    - name: "Microsoft\_Graph"
       items:
         - name: Tester les autorisations de consentement spécifiques aux ressources
           href: graph-api/rsc/test-resource-specific-consent.md
