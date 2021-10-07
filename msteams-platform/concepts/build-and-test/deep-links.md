@@ -4,18 +4,18 @@ description: Décrit les liens profonds et leur utilisation dans vos application
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: lien profond teams
-ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: fbf4d933db63ee634000bb5fc277c385fc3cfa44
+ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475775"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "60223047"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
 Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Les scénarios dans lequel la création de liens profonds sont utiles sont les suivants :
 
-* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour informer l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
+* Navigation de l’utilisateur vers le contenu dans l’un des onglets de votre application. Par exemple, votre application peut avoir un bot qui envoie des messages pour avertir l’utilisateur d’une activité importante. Lorsque l’utilisateur tape sur la notification, le lien profond navigue vers l’onglet afin que l’utilisateur puisse afficher plus de détails sur l’activité.
 * Votre application automatise ou simplifie certaines tâches utilisateur, telles que la création d’une conversation ou la planification d’une réunion, en pré-remplissant les liens profonds avec les paramètres requis. Cela évite aux utilisateurs d’entrer manuellement des informations.
 
 > [!NOTE]
@@ -36,7 +36,7 @@ Vous pouvez créer des liens vers des informations et des fonctionnalités dans 
 
 ## <a name="deep-linking-to-your-tab"></a>Liaison profonde à votre onglet
 
-Vous pouvez créer des liens profonds vers des entités dans Teams. Il est utilisé pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Par exemple, si votre onglet contient une liste de tâches, les membres de l’équipe peuvent créer et partager des liens vers des tâches individuelles. Lorsque vous sélectionnez le lien, il navigue vers votre onglet qui se concentre sur l’élément spécifique. Pour implémenter cela, vous ajoutez une action **de** lien de copie à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l’utilisateur prend cette action, vous appelez pour afficher une boîte de dialogue contenant un lien que l’utilisateur `shareDeepLink()` peut copier dans le Presse-papiers. Lorsque vous passez cet appel, vous passez également un ID pour [](~/tabs/how-to/access-teams-context.md) votre élément, que vous obtenez dans le contexte lorsque le lien est suivi et que votre onglet est rechargé.
+Vous pouvez créer des liens profonds vers des entités dans Teams. Il est utilisé pour créer des liens qui naviguent vers le contenu et les informations dans votre onglet. Par exemple, si votre onglet contient une liste de tâches, les membres de l’équipe peuvent créer et partager des liens vers des tâches individuelles. Lorsque vous sélectionnez le lien, il navigue vers votre onglet qui se concentre sur l’élément spécifique. Pour implémenter cela, vous ajoutez une action **de** lien de copie à chaque élément, de la manière la mieux adaptée à votre interface utilisateur. Lorsque l’utilisateur fait cette action, vous appelez pour afficher une boîte de dialogue contenant un lien que l’utilisateur `shareDeepLink()` peut copier dans le Presse-papiers. Lorsque vous passez cet appel, vous passez également un ID pour [](~/tabs/how-to/access-teams-context.md) votre élément, que vous obtenez dans le contexte lorsque le lien est suivi et que votre onglet est rechargé.
 
 Vous pouvez également générer des liens profonds par programme, en utilisant le format spécifié plus loin dans cette rubrique. Vous pouvez utiliser des liens profonds dans les [messages](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) [de bot](~/bots/what-are-bots.md) et de connecteur qui informent les utilisateurs des modifications apportées à votre onglet ou aux éléments qu’il insérez.
 
@@ -59,7 +59,7 @@ Fournissez les champs suivants :
 ### <a name="generate-a-deep-link-to-your-tab"></a>Générer un lien profond vers votre onglet
 
 > [!NOTE]
-> Les onglets personnels ont une étendue, tandis que les onglets de canal et `personal` de groupe utilisent `team` ou utilisent des `group` étendues. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable possède une `channel` propriété associée à son objet de contexte. Pour plus [d’informations](~/resources/schema/manifest-schema.md) sur les étendues d’onglet, voir la référence de manifeste.
+> Les onglets personnels ont une étendue, tandis que les onglets de canal et `personal` de groupe utilisent `team` ou `group` utilisent des étendues. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable possède une `channel` propriété associée à son objet de contexte. Pour plus [d’informations](~/resources/schema/manifest-schema.md) sur les étendues d’onglet, voir la référence de manifeste.
 
 > [!NOTE]
 > Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et en raison de cet ID d’entité. Les liens profonds vers les onglets sans ID d’entité naviguent toujours vers l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
@@ -102,7 +102,7 @@ Exemples :
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>Utiliser un lien profond à partir d’un onglet
 
-Lorsque vous naviguez vers un lien profond, Microsoft Teams navigue simplement vers l’onglet et fournit un mécanisme via la bibliothèque JavaScript Microsoft Teams pour récupérer l’ID de sous-entité s’il existe.
+Lorsque vous accédez à un lien profond, Microsoft Teams navigue simplement vers l’onglet et fournit un mécanisme via la bibliothèque JavaScript Microsoft Teams pour récupérer l’ID de sous-entité s’il existe.
 
 [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-)L’appel renvoie un contexte qui inclut le champ si l’onglet est inclus dans un lien `subEntityId` profond.
 
@@ -124,7 +124,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
 ```
 
-## <a name="deep-linking-to-a-chat"></a>Liaison profonde à une conversation
+## <a name="deep-linking-to-a-chat"></a>Lien profond vers une conversation
 
 Vous pouvez créer des liens profonds vers des conversations privées entre les utilisateurs en spécifiant l’ensemble des participants. Si une conversation n’existe pas avec les participants spécifiés, le lien permet à l’utilisateur d’accéder à une nouvelle conversation vide. Les nouvelles conversations sont créées en état brouillon jusqu’à ce que l’utilisateur envoie le premier message. Sinon, vous pouvez spécifier le nom de la conversation si elle n’existe pas déjà, ainsi que le texte à insérer dans la zone de composition de l’utilisateur. Vous pouvez voir cette fonctionnalité comme un raccourci pour l’utilisateur qui fait l’action manuelle de naviguer vers ou créer la conversation, puis de taper le message.
 
@@ -140,9 +140,9 @@ Exemple : `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Les paramètres de requête sont les suivants :
 
-* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, par exemple une adresse e-mail uniquement.
+* `users`: Liste des ID d’utilisateurs séparés par des virgules représentant les participants à la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge Azure AD UserPrincipalName, par exemple une adresse de messagerie uniquement.
 * `topicName`: champ facultatif pour le nom complet de la conversation, dans le cas d’une conversation avec 3 utilisateurs ou plus. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
-* `message`: champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est en état brouillon.
+* `message`: champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est dans un état brouillon.
 
 Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d’URL dans le bouton de votre carte ou appuyez sur l’action par le biais du `openUrl` type d’action.
 
@@ -150,30 +150,32 @@ Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d’URL 
 
 Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de messagerie :
 
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 Les paramètres de requête sont les suivants :
 
+* `fileId`: ID de fichier unique de Sharepoint Online, également appelé sourcedoc. Par exemple 1FA202A5-3762-4F10-B550-C04F81F6ACBD
 * `tenantId`: Exemple d’ID de client, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Type de fichier pris en charge, tel que docx, pptx, xlsx et pdf
 * `objectUrl`: URL d’objet du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Par exemple, `https://microsoft.sharepoint.com/teams/(filepath)`
 * `baseUrl`: URL de base du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Par exemple, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Nom du service, ID d’application. Par exemple, teams.
-* `threadId`: threadId est l’ID d’équipe de l’équipe dans laquelle le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier d’OneDrive’un utilisateur. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `threadId`: ThreadId est l’ID d’équipe de l’équipe dans laquelle le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier d’OneDrive’un utilisateur. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ID de groupe du fichier, ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
 > [!NOTE]
 > Vous pouvez voir `threadId` et `groupId` dans l’URL à partir du canal.  
 
-Le format de lien profond suivant est utilisé dans un bot, un connecteur ou une carte d’extension de messagerie : `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+Le format de lien profond suivant est utilisé dans un bot, un connecteur ou une carte d’extension de messagerie : `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 L’exemple de format suivant montre le lien profond vers les fichiers :
 
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
 ### <a name="serialization-of-this-object"></a>Sérialisation de cet objet :
 ```
 {
+fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
 tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
 filetype: = "pptx",
 objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
@@ -186,7 +188,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-app"></a>Lien profond vers une application
 
-Créez des liens profonds pour l’application une fois l’application répertoriée dans le Teams store. Pour créer un lien pour lancer Teams, vous pouvez également l’associer à l’URL suivante à votre ID d’application `https://teams.microsoft.com/l/app/<your-app-id>` : Une boîte de dialogue s’affiche pour installer l’application. 
+Créez des liens profonds pour l’application une fois que l’application est répertoriée dans Teams store. Pour créer un lien pour lancer Teams, vous pouvez également l’associer à l’URL suivante à votre ID d’application `https://teams.microsoft.com/l/app/<your-app-id>` : Une boîte de dialogue s’affiche pour installer l’application. 
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Liaisons profondes pour SharePoint Framework onglets
 
@@ -198,10 +200,10 @@ Le format de lien profond suivant peut être utilisé dans un bot, un connecteur
 
 Les paramètres de requête sont les suivants :
 
-* `appID`: Votre ID manifeste **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `appID`: Votre ID de manifeste, par exemple **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: ID d’élément que vous avez fourni lors de [la configuration de l’onglet.](~/tabs/how-to/create-tab-pages/configuration-page.md) Par exemple, **tasklist123**.
-* `entityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet - `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` .
+* `entityWebUrl`: champ facultatif avec une URL de base à utiliser si le client ne prend pas en charge le rendu de l’onglet ou `https://tasklist.example.com/123` `https://tasklist.example.com/list123/task456` .
 * `entityName`: une étiquette pour l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond, Liste des tâches 123 ou Tâche 456.
 
 Exemple : https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
