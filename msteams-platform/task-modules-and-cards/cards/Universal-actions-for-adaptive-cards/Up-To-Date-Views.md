@@ -4,16 +4,16 @@ description: Exemple d’affichages à jour à l’aide du bot universel
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
+ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155837"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60238236"
 ---
 # <a name="up-to-date-cards"></a>Cartes actualisées
 
-Vous pouvez désormais fournir les dernières informations à vos utilisateurs sur les cartes adaptatives. Incluez une combinaison d’actualisation et de modification de message dans Teams. Mettez à jour dynamiquement les affichages spécifiques de l’utilisateur à leur état le plus récent en cas de modification de votre service. Par exemple, pour les cartes de gestion de projet ou de tickets, mettez à jour les commentaires et l’état de la tâche. Pour les approbations, l’état le plus récent est reflété tout en fournissant des informations et des actions différenciées.
+Vous pouvez désormais fournir les dernières informations à vos utilisateurs sur les cartes adaptatives. Incluez une combinaison d’actualisation et de modification de message dans Teams. Mettez à jour dynamiquement les affichages spécifiques de l’utilisateur à leur état le plus récent en cas de modification de votre service. Par exemple, pour la gestion de projet ou les cartes de tickets, mettez à jour les commentaires et l’état de la tâche. Pour les approbations, l’état le plus récent est reflété tout en fournissant des informations et des actions différenciées.
 
 Par exemple, un utilisateur peut créer une demande d’approbation de biens dans Teams conversation. Alex crée une demande d’approbation et l’affecte à Megan et Nestor. Voici les deux parties pour créer la demande d’approbation :
 
@@ -22,7 +22,7 @@ Par exemple, un utilisateur peut créer une demande d’approbation de biens dan
 
 * Pour que l’état de la carte reste toujours à jour, Teams mécanisme de modification de message peut être utilisé. Par exemple, pour chaque approbation, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs d’actualisation automatique, à laquelle le bot peut répondre avec la carte utilisateur spécifique mise `adaptiveCard/action` à jour.
 
-Pour plus d’informations, [voir comment modifier un message de bot.](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
+Pour plus d’informations, [voir comment modifier un message de bot.](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
 
 ## <a name="approval-base-card"></a>Carte de base d’approbation
 
@@ -112,7 +112,7 @@ Le code suivant fournit un exemple de carte d’approbation avec les boutons **A
 
 Les deux rôles présentés aux utilisateurs en fonction de la demande d’approbation sont les suivants :
 
-* Carte de base d’approbation : présentée aux utilisateurs qui ne font pas partie de la liste des approuveurs et que la demande n’est pas encore approuvée ou rejetée, et ne fait pas partie de la liste dans la propriété du JSON de carte `userIds` `refresh` adaptative.
+* Carte de base d’approbation : présentée aux utilisateurs qui ne font pas partie de la liste des approuveurs et que la demande n’est pas encore approuvée ou rejetée, et qu’elle ne fait pas partie de la liste dans la propriété du JSON de carte `userIds` `refresh` adaptative.
 * Carte d’approbation  avec **boutons** Approuver ou Rejeter : affichée aux utilisateurs qui font partie de la liste des approuveurs et à la liste dans la propriété du JSON de carte `userIds` adaptative. `refresh`
 
 **Pour envoyer la demande d’approbation de biens**
@@ -263,7 +263,7 @@ Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse a
 
 |Exemple de nom | Description | . NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques de l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques à l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 
