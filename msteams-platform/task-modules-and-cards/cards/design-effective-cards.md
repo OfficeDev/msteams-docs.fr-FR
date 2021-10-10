@@ -4,12 +4,12 @@ description: Découvrez comment concevoir des Cartes adaptatives pour Teams et o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0a8964de024b01237632db1214ce24fdd5b6bd29
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
+ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156886"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60249798"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 
@@ -119,7 +119,7 @@ Permet d’obtenir des entrées rapides d’un utilisateur pour créer automatiq
 
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Exemple montrant une carte de ticket de demande de Carte adaptative." border="false":::
 
-### <a name="image-set"></a>Jeu d’images
+### <a name="imageset"></a>ImageSet
 
 Permet d’envoyer plusieurs miniatures d’image.
 
@@ -131,7 +131,7 @@ Permet d’envoyer plusieurs miniatures d’image.
 
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Exemple montrant une carte de jeu d’image de Carte adaptative." border="false":::
 
-### <a name="action-set"></a>Jeu d’actions
+### <a name="actionset"></a>Exemple pour ActionSet
 
 Utilisez cette option lorsque vous souhaitez que l’utilisateur sélectionne un bouton, puis recueille d'autres entrées utilisateur sur la même carte.
 
@@ -143,7 +143,7 @@ Utilisez cette option lorsque vous souhaitez que l’utilisateur sélectionne un
 
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Exemple montrant une carte de jeu d’action de Carte adaptative." border="false":::
 
-### <a name="choice-set"></a>Ensemble de choix
+### <a name="choiceset"></a>ChoiceSet
 
 Permet de collecter plusieurs entrées de l’utilisateur.
 
@@ -181,9 +181,477 @@ Les cartes adaptatives ont une grande flexibilité. Mais au minimum, nous vous s
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
-Utilisez ces recommandations pour créer une expérience d’application de qualité.
+Cartes conçues pour une échelle d’écran étroite sur des écrans plus larges (l’inverse n’est pas vrai). Vous devez également supposer que les utilisateurs n’afficheront pas uniquement vos cartes sur le Bureau.
 
-### <a name="primary-and-secondary-actions"></a>Actions principales et secondaires
+### <a name="column-layouts"></a>Mises en page des colonnes
+
+Permet [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) de mettre en forme le contenu de votre carte dans un tableau ou une grille. Plusieurs options s’offrent à vous pour la mise en forme de la largeur des colonnes. Ces recommandations vous aident à comprendre quand utiliser chacune d’elles.
+
+* `"width": "auto"`: dimensionne chaque colonne de l’application pour qu’elle corresponde au contenu de l’application `ColumnSet` que vous incluez dans cette colonne.
+   * **À** faire : utilisez lorsque vous avez un contenu de largeur variable et n’avez pas besoin de hiérarchiser une colonne spécifique.
+   * **À faire** : Pour chaque `TextBlock` , définir `"wrap": true` puisque le texte ne s’enveloppe pas par défaut.
+   * **À ne pas faire**: définir `"width": "auto"` pour chaque conteneur de colonnes. Par exemple, si vous avez une entrée et un bouton côte à côte, le bouton peut être coupé sur certains écrans. Définissez plutôt la colonne avec des boutons et d’autres contenus qui `auto` doivent toujours être complètement visibles.
+* `"width": "stretch"`: dimensionne les colonnes en fonction de la `ColumnSet` largeur disponible. Lorsque plusieurs colonnes `"stretch"` utilisent la valeur, elles partagent également la largeur disponible.
+   * **À faire** : utilisez avec une colonne si toutes vos autres colonnes ont une largeur statique. Par exemple, vous avez des images miniatures dans une colonne d’une largeur de 50 pixels.
+* `"width": "<number>"`: dimensionne les colonnes à l’aide d’une proportion de la `ColumnSet` largeur disponible. Par exemple, si vous définissez trois colonnes avec , et , les colonnes `"width": "1"`, `"width": "4"` et `"width": "5"`, prenons jusqu’à 10, 40 et 50 pour cent de la largeur disponible.
+* `"width": "<number>px"`: dimensionne les colonnes à une largeur de pixel spécifique. Cette approche est utile lors de la création de tableaux.
+   * **À faire** : utilisez lorsque la largeur de ce que vous affichez n’a pas besoin de changer (par exemple, les nombres et les pourcentages).
+   * **Ne pas** : dépasser accidentellement la largeur de ce que la carte peut afficher. N’oubliez pas que la largeur d’écran disponible dépend de l’appareil. Teams pour téléphone ne prend pas non plus en charge le défilement horizontal comme Teams bureau.
+
+#### <a name="example-knowing-when-to-stretch-columns"></a>Exemple : savoir quand étirer les colonnes
+
+# <a name="design"></a>[Concevoir](#tab/design)
+
+**À faire** : dans cet écran, il y a deux colonnes en bas de la carte. La largeur du composant d’entrée est définie sur `stretch`, tandis que la largeur du bouton **Sélectionner** est définie sur `auto` . Cela garantit que le bouton reste entièrement en vue.
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="L’image montre comment définir la largeur de colonne dans les cartes adaptatives.":::
+
+**À ne pas faire**: dans cet écran, les deux colonnes `width` ont été définies sur `auto` . Ainsi, **le bouton Sélectionner** à droite est légèrement coupé par rapport à l’entrée.
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="L’image montre comment ne pas définir la largeur de colonne dans les cartes adaptatives.":::
+
+# <a name="code"></a>[Code](#tab/code)
+
+Voici le code pour l’implémentation de l’exemple de conception que vous devez suivre.
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "I wasn't able to identify the type of expense. Select from the list:",
+      "wrap": true,
+      "id": "typePrompt",
+      "spacing": "Medium",
+      "size": "Medium"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Phone Bill",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Phone Bill",
+              "action": "Phone Bill"
+            },
+            "action": "Phone Bill"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Taxi and Other Transportation",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Taxi and Other Transportation",
+              "action": "Taxi and Other Transportation"
+            },
+            "action": "Taxi and Other Transportation"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Entertainment_misc",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Entertainment_misc",
+              "action": "Entertainment_misc"
+            },
+            "action": "Entertainment_misc"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Car Rental",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Car Rental",
+              "action": "Car Rental"
+            },
+            "action": "Car Rental"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Airfare",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Airfare",
+              "action": "Airfare"
+            },
+            "action": "Airfare"
+          }
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "     ",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "choices": [
+                {
+                  "title": "Meals",
+                  "value": "Meals"
+                },
+                {
+                  "title": "Parking/Tolls",
+                  "value": "Parking/Tolls"
+                },
+                {
+                  "title": "Accomodation",
+                  "value": "Accomodation"
+                },
+                {
+                  "title": "Fuel-Gas/Petrol/Diesel",
+                  "value": "Fuel-Gas/Petrol/Diesel"
+                },
+                {
+                  "title": "Hotel",
+                  "value": "Hotel"
+                },
+                {
+                  "title": "Meals - Employees Only",
+                  "value": "Meals - Employees Only"
+                },
+                {
+                  "title": "Accomodations",
+                  "value": "Accomodations"
+                },
+                {
+                  "title": "Misc.Expenses",
+                  "value": "Misc.Expenses"
+                },
+                {
+                  "title": "Please Categorize",
+                  "value": "Please Categorize"
+                }
+              ],
+              "placeholder": "All",
+              "id": "expenseTypes",
+              "value": "Meals - Employees Only"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Select",
+                  "data": {
+                    "msteams": {
+                      "type": "messageBack",
+                      "displayText": "Select",
+                      "action": "applyType"
+                    },
+                    "action": "applyType"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "spacing": "ExtraLarge"
+    }
+  ]
+}
+```
+
+---
+
+#### <a name="example-using-fewer-columns"></a>Exemple : utilisation de moins de colonnes
+
+**À faire** : les dispositions ont tendance à s’afficher mieux sur les appareils mobiles avec moins de colonnes.
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="L’image montre la quantité de colonnes adaptée dans les cartes adaptatives.":::
+
+**À ne pas faire** : l’utilisation d’un trop grand nombre de colonnes peut encombrer le contenu de votre carte sur un appareil mobile.
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="L’image montre comment un trop grand nombre de colonnes peut avoir une incidence négative sur la disposition de la carte adaptative.":::
+
+#### <a name="example-fixed-width-has-its-place"></a>Exemple : la largeur fixe a sa place
+
+# <a name="design"></a>[Concevoir](#tab/design)
+
+Lorsque la taille d’un affichage n’a pas besoin de changer, définissez les colonnes sur une largeur de pixel spécifique. Cet exemple montre la taille de la colonne de gauche à 50 pixels, tandis que les descriptions en dessous des miniatures étendent la longueur de la carte.
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="L’image montre comment définir la largeur de colonne dans les cartes adaptatives.":::
+
+# <a name="code"></a>[Code](#tab/code)
+
+Voici le code pour implémenter l’exemple de conception.
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Pick up where you left off?",
+      "weight": "bolder"
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "medium",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1083",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Silver Star Mountain Range"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Maps",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.msn.com"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1082",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "style": "emphasis",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Kitchen Remodel for Homes"
+            },
+            {
+              "type": "TextBlock",
+              "text": "With EMPHASIS",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.AdaptiveCards.io"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1080",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "The Witcher: A Series"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Netflix",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.outlook.com"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Resume all",
+      "url": "ms-cortana:resume-all"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "More activities",
+      "url": "ms-cortana:more-activities"
+    }
+  ]
+}
+```
+
+---
+
+### <a name="text"></a>Text
+
+Que vous utilisiez [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), ou [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), définissez`wrap` la propriété`true` de sorte que le texte de votre carte ne soit pas tronqué sur mobile.
+
+#### <a name="example-making-sure-text-doesnt-truncate"></a>Exemple : s’assurer que le texte n’est pas tronqué
+
+# <a name="design"></a>[Concevoir](#tab/design)
+
+**À faire** : dans cet écran, la carte a une `wrap` propriété définie sur `true`. Cela permet au texte de s’ajuster à n’importe quelle taille d’écran.
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="L’image montre comment encapsuler du texte dans des cartes adaptatives.":::
+
+**N’utilisez pas**: dans cet écran, la carte n’utilise pas la propriété, de sorte que le texte se `wrap` coupe sur un écran mobile.
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="L'image montre ce qui peut se passer si vous n'enroulez pas le texte dans les cartes adaptatives.":::
+
+# <a name="code"></a>[Code](#tab/code)
+
+Voici le code pour l’implémentation de l’exemple de conception que vous devez suivre.
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "What cuisine do you want?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor",
+      "style": "compact",
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Chineese",
+          "value": "1"
+        },
+        {
+          "title": "Indian",
+          "value": "2"
+        },
+        {
+          "title": "Italian",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Select the dishes that you like?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor2",
+      "style": "expanded",
+      "wrap" : true,
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Cauliflower with potatoes sautéed with garam masala",
+          "wrap" : true,
+          "value": "1"
+        },
+        {
+          "title": "Patties of potato mixed with some vegetables fried",
+          "wrap" : true,
+          "value": "2"
+        },
+        {
+          "title": "Green capsicum with potatoes sautéed with cumin seeds",
+          "wrap" : true,
+          "value": "3"
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### <a name="containers"></a>Containers
+
+A `Container` vous permet de grouper un ensemble d’éléments associés.
+
+* **À faire** : utilisez la `style` propriété pour mettre en avant un conteneur.
+* **À faire** : utilisez `selectAction` la propriété pour associer une action aux autres éléments du conteneur.
+* **À faire** : utilisez la `Action.ToggleVisibility` propriété pour rendre un groupe d’éléments réductible.
+* **À ne pas faire** : utilisez des conteneurs pour une raison autre que celle mentionnée précédemment.
+
+### <a name="images"></a>Des images
+
+Suivez ces instructions lorsque vous insérez des images dans vos cartes.
+
+* **À faire** : concevoir des images pour les écrans haute résolution afin d’éviter la pixelisation. Il est préférable d'afficher une image de 100x100 pixels en 50x50 pixels que l'inverse.
+* **À faire** : si vous devez contrôler la taille exacte de vos images, utilisez les `width` propriétés et les `height` propriétés.
+* **À ne pas faire** : incluez le remplissage avec vos images. Cela introduit généralement des problèmes d’espacement et de disposition indésirables.
+* En ce qui concerne la couleur d’arrière-plan :
+   * **À faire** : utilisez des arrière-plans transparents afin que vos images s’adaptent à n’importe Teams thème. 
+   * **À ne pas faire** : inclure une couleur d’arrière-plan fixe, sauf si une couleur spécifique doit être visible pour vos utilisateurs.
+   * **À ne pas faire** : ajoutez une couleur d’arrière-plan à une couleur `TextBlock` qui nuit à la lisibilité. Par exemple, si votre arrière-plan est sombre, utilisez une couleur de texte plus claire et inversement.
+
+### <a name="actions"></a>Actions
 
 :::row:::
    :::column span="":::
