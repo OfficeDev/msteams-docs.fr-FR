@@ -5,12 +5,12 @@ description: Découvrez comment créer une extension Microsoft Teams messagerie 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b7de5b5178d893e391b0e97a699f1cba029d59d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155674"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260645"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -20,7 +20,7 @@ ms.locfileid: "59155674"
 À un niveau élevé, vous devez effectuer les étapes suivantes pour créer une extension de messagerie.
 
 1. Préparer votre environnement de développement
-2. Créer et déployer votre service web (lors du développement, utilisez un service de tunneling tel que ngrok pour l’exécuter localement)
+2. Créer et déployer votre service web (tout en développant un service de tunneling comme ngrok pour l’exécuter localement)
 3. Inscrivez votre service web à l’aide de Bot Framework
 4. Créer votre package d’application
 5. Télécharger votre package dans Microsoft Teams
@@ -42,7 +42,8 @@ Le cœur de votre extension de messagerie est votre service web. Il définit un 
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Inscrivez votre service web à l’aide de Bot Framework
 
-Les extensions de messagerie tirez parti du schéma de messagerie et du protocole de communication sécurisé de Bot Framework. Si vous n’en avez pas déjà, vous devrez inscrire votre service web sur Bot Framework. ID de l’application Microsoft (nous l’appellerons ID de bot à partir de l’intérieur de Teams, pour l’identifier à partir d’autres ID d’application que vous pourriez utiliser) et le point de terminaison de messagerie de votre inscription avec Bot Framework sera utilisé dans votre extension de messagerie pour recevoir et répondre aux demandes. Si vous utilisez une inscription existante, veillez à activer le [canal Microsoft Teams.](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)
+Les extensions de messagerie tirez parti du schéma de messagerie et du protocole de communication sécurisée de Bot Framework. Si vous n’en avez pas déjà, vous devrez inscrire votre service web sur Bot Framework. ID de l’application Microsoft (nous l’appellerons ID de bot à partir de l’intérieur de Teams, pour l’identifier à partir d’autres ID d’application que vous pourriez utiliser) et le point de terminaison de messagerie de votre inscription avec Bot Framework sera utilisé dans votre extension de messagerie pour recevoir et répondre aux demandes. Si vous utilisez une inscription existante, veillez à activer le [canal Microsoft Teams.](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)
+
 
 Si vous suivez l’un des démarrages rapides ou démarrez à partir de l’un des exemples disponibles, vous serez guidé tout au long de l’inscription de votre service web. Si vous souhaitez inscrire manuellement votre service, trois options s’offrent à vous. Si vous choisissez de vous inscrire sans utiliser d’abonnement Azure, vous ne pourrez pas tirer parti du flux d’authentification OAuth simplifié fourni par Bot Framework. Vous pourrez migrer votre inscription vers Azure après sa création.
 
@@ -85,7 +86,7 @@ La définition d’extension est un objet qui a la structure suivante :
 | Nom de la propriété | Objectif | Obligatoire ? |
 |---|---|---|
 | `botId` | ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Il doit généralement être identique à l’ID de votre application Teams globale. | Oui |
-| `canUpdateConfiguration` | Active **Paramètres’élément** de menu. | Non |
+| `canUpdateConfiguration` | Active **l Paramètres** de menu. | Non |
 | `commands` | Tableau de commandes pris en charge par cette extension de messagerie. Vous êtes limité à 10 commandes. | Oui |
 
 #### <a name="define-your-commands"></a>Définir vos commandes
@@ -225,7 +226,7 @@ L’exemple suivant est un objet d’extension de messagerie simple dans le mani
 
 ## <a name="add-your-invoke-message-handlers"></a>Ajouter vos handlers de messages d’appel
 
-Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez gérer le message d’appel initial, collecter des informations auprès de l’utilisateur, puis traiter ces informations et répondre de manière appropriée. Pour ce faire, vous devez d’abord décider du type de commande que vous souhaitez ajouter à votre extension de messagerie et ajouter une [commande d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md) ou ajouter une commande [de recherche.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez gérer le message d’appel initial, collecter des informations auprès de l’utilisateur, puis traiter ces informations et répondre de manière appropriée. Pour ce faire, vous devez d’abord décider du type de commande que vous souhaitez ajouter à votre extension de messagerie, puis ajouter une [commande d’action](~/messaging-extensions/how-to/action-commands/define-action-command.md) ou ajouter une commande [de recherche.](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Extensions de messagerie dans Teams réunions
 
@@ -242,7 +243,7 @@ Une fois la réunion commencée, Teams participants peuvent interagir directemen
 
 1. **Expérience utilisateur**. L’extension de messagerie doit se comporter de la même manière qu’en dehors d’une réunion.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 * [Créer des commandes d'action](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Créer les commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)

@@ -4,12 +4,12 @@ description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo p
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156874"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260662"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire les appels et le bot de réunions pour Microsoft Teams
 
@@ -21,12 +21,12 @@ Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne 
 
 ## <a name="new-manifest-settings"></a>Nouveaux paramètres de manifeste
 
-Les bots d’appels et de réunions en ligne ont les deux paramètres supplémentaires suivants dans le manifest.jsqui activent l’audio ou la vidéo pour votre bot dans Teams.
+Les bots d’appels et de réunions en ligne ont les deux paramètres supplémentaires suivants dans manifest.json qui activent l’audio ou la vidéo pour votre bot dans Teams.
 
-* `bots[0].supportsCalling`. S’il est présent et qu’il est Teams, il permet à votre bot de `true` participer à des appels et à des réunions en ligne.
+* `bots[0].supportsCalling`. S’il est présent et qu’il est Teams, votre bot peut participer à `true` des appels et à des réunions en ligne.
 * `bots[0].supportsVideo`. S’il est présent et `true` qu’il est Teams que votre bot prend en charge la vidéo.
 
-Si vous souhaitez que votre IDE valide correctement l'manifest.jssur le schéma de vos appels et bot de réunions pour ces valeurs, vous pouvez modifier l’attribut comme `$schema` suit :
+Si vous souhaitez que votre IDE valide correctement le schéma manifest.json pour vos appels et bot de réunions pour ces valeurs, vous pouvez modifier l’attribut comme `$schema` suit :
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -84,7 +84,7 @@ Vous devez configurer les autorisations d’application pour votre bot à l’av
 
 Pour les applications utilisant le point de terminaison AAD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois le consentement de l’administrateur enregistré par AAD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
 
-Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison AAD `/adminconsent` V2. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur.](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)
+Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison AAD `/adminconsent` V2. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
 > Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à l’inscription de votre bot, choisissez **Options avancées** Modifier le manifeste de  >  **l’application.** Ajoutez votre URL de redirection à la `replyUrls` collection.

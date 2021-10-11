@@ -5,23 +5,23 @@ ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156820"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260617"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams de messagerie
 
-Vous pouvez fournir votre application Microsoft Teams à une personne, une équipe, une organisation ou toute autre personne qui souhaite l’utiliser. La distribution dépend de plusieurs facteurs, notamment les besoins des utilisateurs, les exigences professionnelles et techniques, ainsi que vos objectifs pour l’application.
+Vous pouvez fournir votre application Microsoft Teams à une personne, une équipe, une organisation ou toute autre personne qui souhaite l’utiliser. La distribution dépend de plusieurs facteurs, notamment les besoins des utilisateurs, les besoins professionnels, les exigences techniques et vos objectifs pour l’application.
 
 ## <a name="upload-your-app-in-teams"></a>Télécharger votre application dans Teams
 
 Chargez une application pour une utilisation personnelle, collaborez avec votre équipe ou testez et déboguer. Ce type de distribution ne nécessite pas de processus de révision formel.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version secondaire sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour les GCC-High et le Département de la Défense (DOD).
+> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
 
 Pour plus d’informations, [voir charger votre application dans Teams](apps-upload.md).
 
@@ -46,7 +46,7 @@ Pour plus d’informations, [voir publier sur le Teams store.](~/concepts/deploy
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Programme de conformité de l’application Microsoft 365](/microsoft-365-app-certification/overview)
+* [Programme de conformité d’Application Microsoft 365](/microsoft-365-app-certification/overview)
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -6,16 +6,16 @@ keywords: samesite des attributs de cookie
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156755"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260650"
 ---
 # <a name="samesite-cookie-attribute"></a>Attribut de cookie SameSite 
 
-Les cookies sont des chaînes de texte, envoyées à partir de sites web et stockées sur un ordinateur par le navigateur web. Ils sont utilisés pour l’authentification et la personnalisation. Par exemple, les cookies sont utilisés pour rappeler des informations avec état, conserver les paramètres utilisateur, enregistrer l’activité de navigation et afficher des publicités pertinentes. Les cookies sont toujours liés à un domaine particulier et sont installés par différentes parties. 
+Les cookies sont des chaînes de texte envoyées à partir de sites web et stockées sur un ordinateur par le navigateur web. Ils sont utilisés pour l’authentification et la personnalisation. Par exemple, les cookies sont utilisés pour rappeler des informations avec état, conserver les paramètres utilisateur, enregistrer l’activité de navigation et afficher des publicités pertinentes. Les cookies sont toujours liés à un domaine particulier et sont installés par différentes parties. 
 
 ## <a name="types-of-cookies"></a>Types de cookies
 
@@ -43,10 +43,10 @@ Chrome 80, publié en février 2020, introduit de nouvelles valeurs de cookie et
  
 Les attributs de cookie SameSite sont les suivants :
 
-|Setting | Application | Valeur |Spécification d’attribut |
+|Paramètres | Application | Valeur |Spécification d’attribut |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Les cookies sont envoyés automatiquement uniquement dans un contexte de première **partie** et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les demandes de sous-sites, telles que les appels de chargement d’images ou d’iframes. Ils sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple, en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |Le navigateur envoie uniquement des cookies pour les demandes de contexte de première partie. Il s’trouve des demandes provenant du site qui définissent le cookie. Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec `Strict` l’attribut n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
+| **Strict** |Le navigateur envoie uniquement les cookies pour les demandes de contexte de première partie. Il s’trouve des demandes provenant du site qui définissent le cookie. Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués avec `Strict` l’attribut n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
 | **Aucune** | Les cookies sont envoyés dans le contexte de première partie et les demandes d’origine croisée ; toutefois, la valeur doit être explicitement définie et toutes les demandes de navigateur doivent suivre le protocole HTTPS et inclure l’attribut qui nécessite une **`None`** connexion  **`Secure`** chiffrée. Les cookies qui ne respectent pas cette exigence sont **rejetés.** <br/>**Les deux attributs sont requis ensemble.** Si ce protocole est spécifié sans ou si le protocole HTTPS n’est pas utilisé, les cookies tiers  **`None`** **`Secure`**  sont rejetés.| Facultatif, mais, s’il est définie, le protocole HTTPS est requis. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams et ajustements
@@ -78,7 +78,7 @@ En fonction des restrictions SameSite mises à jour, un navigateur n’ajoute pa
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView est un composant système Chrome qui permet aux applications Android d’afficher le contenu web. Bien que les nouvelles restrictions soient par défaut, à partir de Chrome 80, elles ne sont pas immédiatement appliquées sur les webViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookieManager.](https://developer.android.com/reference/android/webkit/CookieManager)
+Android WebView est un composant système Chrome qui permet aux applications Android d’afficher le contenu web. Bien que les nouvelles restrictions soient par défaut, à partir de Chrome 80, elles ne sont pas immédiatement appliquées sur les WebViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookieManager.](https://developer.android.com/reference/android/webkit/CookieManager)
 
 > [!NOTE]     
 > * Vous devez déclarer les cookies de première partie `SameSite=Lax` en tant `SameSite=Strict` que ou, selon le cas.      

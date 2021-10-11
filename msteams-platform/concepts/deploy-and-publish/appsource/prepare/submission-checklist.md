@@ -1,18 +1,18 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Décrit les dernières étapes avant de soumettre votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
+description: Décrit les dernières étapes avant d’envoyer votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a01d08e4d1892109395a541522a0bb12e1a9c2e2
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096562"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260539"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
+# <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams au Store
 
 Vous avez conçu, créé et testé votre application Microsoft Teams web. Vous êtes maintenant prêt à la réen lister pour que les personnes peuvent découvrir et commencer à utiliser votre application.
 
@@ -32,7 +32,7 @@ L Microsoft Teams de validation d’application vous permet d’identifier et de
     > L’outil de validation d’application est également disponible [dans App Studio.](../../../build-and-test/app-studio-overview.md)
 1. Télécharger votre package d’application pour exécuter les tests automatisés.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
-1. [Résoudre les problèmes avec vos configurations ou](~/resources/schema/manifest-schema.md) votre application en général. Ces problèmes se produisent si les tests automatisés vous donnent des erreurs ou si vous n’avez pas satisfait à tous les critères de la liste de contrôle.
+1. [Résoudre les problèmes de configuration ou](~/resources/schema/manifest-schema.md) d’application en général. Ces problèmes se produisent si les tests automatisés vous donnent des erreurs ou si vous n’avez pas satisfait à tous les critères de la liste de contrôle.
 
 ## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
@@ -41,7 +41,7 @@ Fournissez des instructions et des ressources pour aider les réviseurs à teste
 * Identifiants
 * Clés de licence
 
-Vous pouvez ajouter des instructions dans l’Partner Center ou les télécharger vers un emplacement disponible publiquement sur SharePoint.
+Vous pouvez ajouter des instructions dans l’Partner Center ou les télécharger dans un emplacement disponible publiquement sur SharePoint.
 
 ### <a name="feature-list"></a>Liste des fonctionnalités
 
@@ -59,7 +59,7 @@ En fonction des fonctionnalités de votre application, vous devrez peut-être fo
 * Un compte ayant accès aux fonctionnalités premium ou mises à niveau (le cas échéant)
 * Deux comptes dans le même client pour tester l’expérience de collaboration pour les applications qui fonctionnent dans des contextes partagés (le cas échéant)
 
-### <a name="tenant-configurations"></a>Configurations client
+### <a name="tenant-configurations"></a>Configurations de client
 
 Si vous devez configurer un client Teams pour utiliser votre application, incluez ces instructions et les comptes administrateur et non administrateur pour la validation.
 
@@ -69,7 +69,7 @@ Fournissez un enregistrement de votre application afin que Microsoft puisse bien
 
 ## <a name="create-your-store-listing-details"></a>Créer les détails de la description dans le Store
 
-Les informations que [](https://partner.microsoft.com) vous envoyez à l'&#8212;de l'&#8212;, y compris votre nom, descriptions, icônes et images&#8212;, deviennent le Teams Store et la description Microsoft AppSource de votre application.
+Les informations que [](https://partner.microsoft.com) vous soumettez à l'&#8212;, notamment votre nom, descriptions, icônes et images&#8212;, deviennent le Teams Store et la description Microsoft AppSource de votre application.
 
 Une liste dans le Store peut être la première impression de votre application. Augmentez les installations avec une liste qui transmet efficacement les avantages, les fonctionnalités et la marque de votre application.
 
@@ -196,7 +196,7 @@ Lors de la soumission, vous êtes invité à catégoriser votre application. Le 
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière et ventes et marketing |
 | Social et fun | Galeries d’images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
 
-### <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
+### <a name="localize-your-store-listing"></a>Localiser la liste de votre magasin
 
 L’Partner Center prend [en charge les listes de magasins localisées.](/office/dev/store/prepare-localized-solutions) Pour plus d’informations, voir comment localiser votre [liste Teams’application.](../../../../concepts/build-and-test/apps-localization.md)
 

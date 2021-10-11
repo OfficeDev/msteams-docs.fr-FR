@@ -1,16 +1,16 @@
 ---
 title: Maintenir et prendre en charge votre application publiée
-description: Ce qu’il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
+description: Ce à quoi il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
 ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155841"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260629"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Gérer votre application Microsoft Teams publiée
 
@@ -28,7 +28,7 @@ Veillez à ce qui suit lors de la publication des mises à jour :
 
 ### <a name="app-updates-requiring-user-consent"></a>Mises à jour d’application nécessitant le consentement de l’utilisateur
 
-Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs n’ont à le faire qu’une seule fois et les nouvelles versions de votre application s’installent automatiquement.
+Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs doivent le faire une seule fois et les nouvelles versions de votre application s’installent automatiquement.
 
 Toutefois, si vous a apporté l’une des modifications suivantes à votre application, vos utilisateurs existants doivent accepter une autre demande d’autorisation pour installer la mise à jour :
 
@@ -44,13 +44,13 @@ Toutefois, si vous a apporté l’une des modifications suivantes à votre appli
 
 ## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 
-Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans le cadre d’une chronologie, la liste de votre application peut être supprimée du Store.
+Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans une chronologie, la liste de votre application peut être supprimée du Store.
 
 ## <a name="promote-your-app-on-another-site"></a>Promouvoir votre application sur un autre site
 
 Lorsque votre application est répertoriée dans le magasin Teams, vous pouvez créer un lien qui lance Teams et affiche une boîte de dialogue pour installer votre application. Vous pouvez inclure ce lien, par exemple, avec un bouton de téléchargement sur la page marketing de votre produit.
 
-Créez le lien à l’aide de l’URL suivante, à l’aide de votre ID d’application : `https://teams.microsoft.com/l/app/<your-app-id>`
+Créez le lien à l’aide de l’URL suivante, à l’aide de l’ID de votre application `https://teams.microsoft.com/l/app/<your-app-id>` :
 
 ## <a name="complete-microsoft-365-certification"></a>Certification Microsoft 365 complète
 

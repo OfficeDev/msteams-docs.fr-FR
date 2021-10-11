@@ -1,14 +1,14 @@
 ---
 title: Package de votre application
-description: Découvrez comment mettre en package votre application Microsoft Teams pour les tests, le téléchargement et la publication dans le Store.
+description: Découvrez comment mettre en package votre application Microsoft Teams pour le test, le téléchargement et la publication dans le Store.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156742"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260672"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Créer un package Microsoft Teams’application
 
@@ -30,11 +30,11 @@ Votre package d’application doit inclure deux versions PNG de l’icône de vo
 > [!Note]
 > Si votre application dispose d’un bot ou d’une extension de messagerie, vos icônes seront également incluses dans votre inscription Microsoft Azure Bot Service.
 
-Pour que votre application soit Teams révision du Store, ces icônes doivent respecter les exigences de taille suivantes.
+Pour que votre application soit Teams’avis dans le Store, ces icônes doivent respecter les exigences de taille suivantes.
 
 ### <a name="color-icon"></a>Icône Couleur
 
-La version de couleur de votre icône s’affiche dans la plupart Teams scénarios et doit être de 192 x 192 pixels. Votre symbole d’icône (96 x 96 pixels) peut être n’importe quelle couleur, mais il doit être sur un arrière-plan carré plein ou entièrement transparent.
+La version de couleur de votre icône s’affiche dans la plupart des scénarios Teams et doit être de 192x192 pixels. Votre symbole d’icône (96 x 96 pixels) peut être n’importe quelle couleur, mais il doit être sur un arrière-plan carré plein ou entièrement transparent.
 
 Teams votre icône pour afficher automatiquement un carré avec des coins arrondis dans plusieurs scénarios et une forme hexagonale dans les scénarios de bot. Pour roger le symbole sans perdre de détail, incluez 48 pixels de remplissage autour de votre symbole.
 
@@ -76,7 +76,7 @@ L’icône de couleur envoyée dans votre package d’application doit être car
 
 Vos icônes ne doivent pas imiter les produits protégés par des droits d’auteur que vous ne possédez pas. Par exemple, une conception similaire à un produit ou une marque Microsoft.
 
-### <a name="examples"></a>Exemples
+### <a name="examples"></a>範例
 
 Voici comment les icônes d’application s’affichent dans Teams fonctionnalités et contextes différents.
 
