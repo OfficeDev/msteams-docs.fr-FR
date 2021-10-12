@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475705"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260532"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -83,8 +83,8 @@ N’oubliez pas ce qui suit si votre application authentifie les utilisateurs av
 
 * **Expériences d’inscription, de connexion et de déconnexion** :
   * Les applications qui dépendent de comptes ou de services externes doivent fournir des expériences claires et simples d’inscription, de connexion et de déconnexion.
-  * Lorsqu’un utilisateur se déconnecte, il ne doit se déconnecter que de l’application et rester connecté à Teams.
-* **Expériences de partage de contenu** : les applications qui nécessitent une authentification auprès d’un service externe pour partager du contenu dans des canaux Teams doivent clairement indiquer dans la documentation d’aide (ou des ressources similaires) la façon de se déconnecter ou d’annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’annuler le partage de contenu doit être présente dans votre application Teams.
+  * Lorsqu’un utilisateur se déconnecte, il doit se déconnecter uniquement de l’application et rester connecté à Teams.
+* **Expériences de partage de contenu**: les applications qui nécessitent une authentification auprès d’un service externe pour partager du contenu dans les canaux Teams doivent indiquer clairement dans la documentation d’aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’annuler le partage de contenu doit être présente dans votre application Teams.
 
 #### <a name="government-community-cloud-listings"></a>Référencements Cloud de la communauté du secteur public
 
@@ -148,7 +148,7 @@ L’application Teams définit les configurations de votre application.
 
 * Votre manifeste doit se conformer au dernier schéma de manifeste. Pour plus d’informations, voir la [référence de manifeste](~/resources/schema/manifest-schema.md).
 * Si votre application inclut une extension de bot ou de messagerie, votre manifeste doit être cohérent avec les métadonnées Bot Framework, notamment le nom du bot, le logo, le lien de stratégie de confidentialité et le lien des conditions d’utilisation.
-* Si votre application utilise Azure Active Directory (Azure AD) pour l’authentification, incluez l’ID de l’application Azure AD (client) dans le manifeste. Pour plus d’informations, voir la [référence de manifeste](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Si votre application utilise Azure Active Directory (Azure AD) pour l’authentification, incluez l’ID d’application Azure AD (client) dans le manifeste. Pour plus d’informations, consultez la [référence de manifeste](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Icônes d’application
 
@@ -251,7 +251,7 @@ Les captures d’écran fournissent un aperçu visuel évident de votre applicat
 
 ### <a name="privacy-policy"></a>Déclaration de confidentialité
 
-La déclaration de confidentialité peut être spécifique à votre application Teams ou à une politique globale pour tous vos services.
+La politique de confidentialité peut être spécifique à votre application Teams ou à une stratégie globale pour tous vos services.
 
 * Si vous utilisez un modèle de déclaration de confidentialité générique, vous devez référencer des **services**, des **applications** et des **plateformes** pour inclure votre application Teams et votre service ou site web.
 * Doit inclure la façon dont vous traitez le stockage, la rétention et la suppression des données utilisateur. Vous devez également décrire les contrôles de sécurité que vous utilisez pour la protection des données.
@@ -341,7 +341,7 @@ Il est difficile d’analyser des entrées utilisateur et de prédire l’intent
 * Les bots de notification uniquement doivent envoyer un message de bienvenue informant qu’il ne répondra pas aux messages des utilisateurs.
 
 > [!TIP]
-> Dans les messages de bienvenue destinés à des utilisateurs individuels, une visite guidée en carrousel peut fournir une vue d’ensemble efficace de votre bot et de toutes les autres fonctionnalités de l’application. L’inclusion de boutons permettant aux utilisateurs d’essayer les commandes du bot est conseillée. Par exemple, **Créer une tâche**.
+> Dans les messages de bienvenue destinés à des utilisateurs individuels, une visite guidée en carrousel peut fournir une vue d’ensemble efficace de votre bot et de toutes les autres fonctionnalités de l’application. Il est recommandé d’inclure des boutons permettant aux utilisateurs d’essayer des commandes de bot. Par exemple, **Créer une tâche**.
 
 ### <a name="bot-message-spamming"></a>Message de bot indésirables
 
