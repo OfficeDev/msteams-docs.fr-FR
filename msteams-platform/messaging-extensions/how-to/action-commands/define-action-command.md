@@ -5,18 +5,18 @@ description: Vue d’ensemble des commandes d’action d’extension de messager
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096661"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291673"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Les commandes d’action vous permettent de présenter à vos utilisateurs une fenêtre popup modale appelée module de tâche dans Teams. Le module de tâche collecte ou affiche des informations, traite l’interaction et renvoie les informations à Teams. Ce document vous guide sur la sélection d’emplacements d’appel de commande d’action, la création de votre module de tâche, l’envoi d’un message final ou d’une carte, la création d’une commande d’action à l’aide d’app studio ou sa création manuelle. 
+Les commandes d’action vous permettent de présenter à vos utilisateurs une fenêtre popup modale appelée module de tâche dans Teams. Le module de tâche collecte ou affiche des informations, traite l’interaction et renvoie les informations Teams. Ce document vous guide sur la sélection d’emplacements d’appel de commande d’action, la création de votre module de tâche, l’envoi d’un message final ou d’une carte, la création d’une commande d’action à l’aide d’app studio ou sa création manuelle. 
 
 Avant de créer la commande d’action, vous devez déterminer les facteurs suivants :
 
@@ -66,10 +66,10 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 
 ### <a name="create-an-action-command-using-app-studio"></a>Créer une commande d’action à l’aide d’App Studio
 
-Vous pouvez créer une commande d’action à l’aide de ** App Studio** ou **du portail du développeur.**
+Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail du développeur.**
 
 > [!NOTE]
->  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+> App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 

@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156922"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291708"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
@@ -30,7 +30,7 @@ Avec Microsoft Graph, vous pouvez migrer l’historique des messages et les donn
 1. [Terminez le processus de migration des équipes et des canaux.](#step-4-complete-migration-mode)
 1. [Ajouter des membres d’équipe.](#step-five-add-team-members)
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 ### <a name="analyze-and-prepare-message-data"></a>Analyser et préparer les données des messages
 
@@ -42,11 +42,11 @@ Avec Microsoft Graph, vous pouvez migrer l’historique des messages et les donn
 ### <a name="set-up-your-office-365-tenant"></a>Configuration de votre client Office 365
 
 * Assurez-vous qu’Office 365 client existant pour les données d’importation. Pour plus d’informations sur la configuration d’Office 365 client client pour Teams, voir [préparer votre Office 365 client.](../../concepts/build-and-test/prepare-your-o365-tenant.md)
-* Assurez-vous que les membres de l’équipe sont Azure Active Directory (AAD). Pour plus d’informations, [voir ajouter un nouvel utilisateur](/azure/active-directory/fundamentals/add-users-azure-active-directory) à AAD.
+* Assurez-vous que les membres de l’équipe sont Azure Active Directory (AAD). Pour plus d’informations, [voir ajouter un nouvel](/azure/active-directory/fundamentals/add-users-azure-active-directory) utilisateur à AAD.
 
 ## <a name="step-1-create-a-team"></a>Étape 1 : Créer une équipe
 
-Étant donné que vous migrez des données existantes, il est essentiel de maintenir les timestamps des messages d’origine et d’empêcher l’activité de messagerie pendant le processus de migration pour recréer le flux de messages existant de l’utilisateur dans Teams. Pour ce faire, les résultats sont les suivants :
+Étant donné que vous migrez des données existantes, la maintenance des timestamps de message d’origine et l’empêchement de l’activité de messagerie pendant le processus de migration sont essentielles pour recréer le flux de messages existant de l’utilisateur dans Teams. Pour ce faire, les résultats sont les suivants :
 
 > [Créez une équipe avec](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) un timestamp de retour dans le temps à l’aide de la propriété de ressource `createdDateTime` d’équipe. Placez la nouvelle équipe dans un état spécial qui limite les utilisateurs à la plupart des activités au sein de l’équipe jusqu’à ce que le processus `migration mode` de migration soit terminé. Incluez `teamCreationMode` l’attribut d’instance avec la valeur dans la requête POST pour identifier explicitement la nouvelle équipe comme `migration` étant créée pour la migration.  
 
@@ -373,7 +373,7 @@ Le tableau suivant fournit l’étendue du contenu :
 |Images inline dans le cadre du message|À mentions|
 |Liens vers des fichiers existants dans SPO ou OneDrive|Réactions|
 |Messages avec texte enrichi|Vidéos|
-|Chaîne de réponse de message|Announcements|
+|Chaîne de réponse de message|Annonces|
 |Traitement à haut débit|Extraits de code|
 ||Autocollants|
 ||Emojis|

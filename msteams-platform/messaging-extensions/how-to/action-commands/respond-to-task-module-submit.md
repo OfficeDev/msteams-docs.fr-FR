@@ -5,12 +5,12 @@ description: Décrit comment répondre à l’action d’envoi du module de tâc
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157043"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291638"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’soumission du module de tâche
 
@@ -221,7 +221,7 @@ Le scénario suivant montre comment l’application Polly configure un sondage s
 
 ## <a name="respond-to-initial-submit-action"></a>Répondre à l’action d’soumission initiale
 
-Votre module de tâche doit répondre au message initial avec un aperçu de la carte que le `composeExtension/submitAction` bot envoie au canal. L’utilisateur peut vérifier la carte avant l’envoi, et également essayer d’installer votre bot dans la conversation si le bot n’est pas déjà installé.
+Votre module de tâche doit répondre au message initial avec un aperçu de la carte que le `composeExtension/submitAction` bot envoie au canal. L’utilisateur peut vérifier la carte avant l’envoi et essayer d’installer votre bot dans la conversation si le bot n’est pas déjà installé.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -587,9 +587,9 @@ La section suivante décrit les entités du `OnBehalfOf` tableau :
 |Champ|Type|Description|
 |:---|:---|:---|
 |`itemId`|Entier|Décrit l’identification de l’élément. Sa valeur doit être `0` .|
-|`mentionType`|Chaîne|Décrit la mention d’une « personne ».|
-|`mri`|Chaîne|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
-|`displayName`|Chaîne|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution de nom.|
+|`mentionType`|String|Décrit la mention d’une « personne ».|
+|`mri`|String|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
+|`displayName`|String|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution de nom.|
   
 ## <a name="code-sample"></a>Exemple de code
 
