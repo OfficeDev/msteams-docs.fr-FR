@@ -21,13 +21,10 @@
         "template_folder": "_themes"
     }],
     "JoinTOCPlugin": [{
-        "ConceptualTOC": "/msteams-platform/toc.yml",
+        "ConceptualTOC": "msteams-platform/toc.yml",
         "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
     },
-    {
-      "ConceptualTOC": "msteams-platform/TOC.yml",
-      "ReferenceTOCUrl": "/dotnet/api/msteams-client-docs-ref-dotnet/toc.json?view=msteams-client-dotnet-latest"
-    }],
+],
     "notification_subscribers": ["mor-oitac-eng@moravia.com"],
     "branches_to_filter": [
       "live-sxs",
