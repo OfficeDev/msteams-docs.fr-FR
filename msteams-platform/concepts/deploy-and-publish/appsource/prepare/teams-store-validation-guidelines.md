@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260532"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378897"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -108,6 +108,9 @@ Les applications qui s’exécutent sur la version iOS ou Android de Teams doive
 * Si votre application nécessite un compte, les utilisateurs doivent pouvoir ouvrir un compte gratuitement. L’utilisation du terme **compte gratuit** ou **gratuit** est interdite.
 * Vous pouvez déterminer si un compte est actif indéfiniment ou pendant une durée limitée, mais si le compte expire, aucune interface utilisateur, aucun texte ou lien indiquant la nécessité de payer ne peut s’afficher.
 * Les pages des conditions d’utilisation et de la déclaration de confidentialité de votre application ne doivent pas être liées à une interface utilisateur ou à des liens commerciaux payants.
+
+> [!NOTE]
+> Les descriptions du Windows Store Teams peuvent inclure des plans d’abonnement d’application ou des licences à acheter. Pour plus d’informations, consultez [inclure une offre SaaS avec votre application](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
 ## <a name="general-functionality-and-performance"></a>Fonctionnalités et performances générales
 
