@@ -6,12 +6,12 @@ keywords: autorisations natives d’appareil pour les fonctionnalités de carte 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156923"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496143"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement 
 
@@ -34,7 +34,7 @@ Pour intégrer des fonctionnalités d’emplacement, vous devez mettre à jour l
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 
-Mettez à jour [Teams’applicationmanifest.jsfichier en](../../resources/schema/manifest-schema.md#devicepermissions) ajoutant la `devicePermissions` propriété et en spécifiant `geolocation` . Il permet à votre application de demander les autorisations requises aux utilisateurs avant de commencer à utiliser les fonctionnalités de localisation. La mise à jour du manifeste de l’application est la suivante :
+Mettez à jour Teams fichier [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) de l’application en ajoutant la `devicePermissions` propriété et en spécifiant `geolocation` . Il permet à votre application de demander les autorisations requises aux utilisateurs avant de commencer à utiliser les fonctionnalités de localisation. La mise à jour du manifeste de l’application est la suivante :
 
 ``` json
 "devicePermissions": [
@@ -43,7 +43,8 @@ Mettez à jour [Teams’applicationmanifest.jsfichier en](../../resources/schema
 ```
 
 > [!NOTE]
-> **L’invite Demander des autorisations** s’affiche automatiquement lorsqu’une API Teams est lancée. Pour plus d’informations, voir [demander des autorisations d’appareil.](native-device-permissions.md)
+> * **L’invite Demander des autorisations** s’affiche automatiquement lorsqu’une API Teams est lancée. Pour plus d’informations, voir [demander des autorisations d’appareil.](native-device-permissions.md)    
+> * Les autorisations d’appareil sont différentes dans le navigateur. Pour plus d’informations, voir [autorisations d’appareil de navigateur.](browser-device-permissions.md)   
 
 ## <a name="location-apis"></a>API d’emplacement
 

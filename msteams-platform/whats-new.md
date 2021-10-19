@@ -4,19 +4,19 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: nouveautés des équipes
-ms.openlocfilehash: 3f32691f13632a695c04f7d1007c78b16040a611
-ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
+ms.openlocfilehash: 3e2c7a2002192b7d752602f33865aafb12a8239f
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/19/2021
-ms.locfileid: "60483484"
+ms.locfileid: "60496213"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
 Découvrez Microsoft Teams fonctionnalités de plateforme généralement disponibles (GA) et dans la prévisualisation du développeur.
 
 > [!IMPORTANT]
-> Vous pouvez désormais obtenir les dernières mises à jour Teams plateforme en vous abonnant au flux rss [ ![ de téléchargement.](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates) Pour plus d’informations, voir [configurer le flux RSS.](#get-latest-updates)
+> Vous pouvez désormais obtenir les dernières mises à jour Teams plateforme en vous abonnant au flux de téléchargement [ ![ de flux](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)RSS. Pour plus d’informations, voir [configurer le flux RSS.](#get-latest-updates)
 
 ## <a name="ga-features"></a>Fonctionnalités ga
 
@@ -37,7 +37,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 |10/04/2021| Nouveau portail pour les développeurs Teams pour la gestion de vos applications Teams de développement. | [Documentation pour les développeurs](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams prend en charge AAD’ID d’objet et l’UPN dans la mention utilisateur pour les bots et les webhooks entrants. |[AAD’ID d’objet et l’UPN dans la mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)utilisateur, [Vue d’ensemble des cartes](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |09/08/2021|L’étape de réunion est désormais disponible dans GA.|[Activer et configurer vos applications pour Teams réunions](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|08/16/2021| Prise en charge de la validation des entrées sur les cartes adaptatives (v1.3 pour toutes les fonctionnalités) et les actions universelles (v1.4 pour les cartes envoyées par un bot). |[Validation des entrées](/adaptive-cards/authoring-cards/input-validation), [Actions universelles pour les cartes adaptatives v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|08/16/2021| Prise en charge de la validation des entrées sur les cartes adaptatives (v1.3 pour toutes les fonctionnalités) et les actions universelles (v1.4 pour les cartes envoyées par un bot). |[Validation d’entrée](/adaptive-cards/authoring-cards/input-validation), [Actions universelles pour les cartes adaptatives v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|L’étape de réunion est désormais disponible dans GA.|[Activer et configurer vos applications pour Teams réunions](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| La fonctionnalité de scènes en mode ensemble personnalisé combine les participants dans une scène virtuelle unique et place leurs flux vidéo dans des sièges pré-déterminés. | [Scènes personnalisées du mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduction d’un guide pas à pas pour créer un bot Teams avec l' sign-on unique (SSO). | [Guide pas à pas pour créer un bot Teams avec l' cesso](sbs-bots-with-sso.yml) |
@@ -49,12 +49,12 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 |06/25/2021| Introduction du guide pas à pas pour envoyer des messages proactifs. | [Guide pas à pas pour envoyer des messages proactifs](sbs-send-proactive.yml) |
 |06/09/2021| Vue d’étape pour les images dans les cartes adaptatives avec `allowExpand` attribut. | [Vue d’étape des images dans les cartes adaptatives](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Onglets de conversation. | [Démarrer et poursuivre des conversations sur le contenu de vos onglets](~/tabs/how-to/conversational-tabs.md) |
-|05/24/2021| Mise à jour Teams recommandations en matière de conception d’application avec des modèles mobiles et bien plus encore.|[Conception de votre application Teams web](~/concepts/design/design-teams-app-overview.md)
+|05/24/2021| Mise à jour Teams recommandations en matière de conception d’applications avec des modèles mobiles et bien plus encore.|[Conception de votre application Teams web](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| Ajout d’informations sur mConnect et Skooler.|[Système de gestion de l’apprentissage par le chat](resources/moodle-overview.md)
 |05/10/2021| Version 1.10 du manifeste de l’application publiée.|[Schéma du manifeste](resources/schema/manifest-schema.md) |
 |05/10/2021| Nouvelle fonctionnalité de personnalisation d’application.| [Activer les orgs pour personnaliser votre application](concepts/design/enable-app-customization.md) |
 |05/07/2021| Liens profonds pour les appels audio et vidéo dans la conversation. |[Liens profonds](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
-|04/30/2021|Nouvelles instructions sur la publication d’applications dans Teams store.|[Publier votre application dans le Teams, Teams](concepts/deploy-and-publish/appsource/publish.md) [de validation du Store](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+|04/30/2021|De nouveaux conseils sur la publication d’applications dans Teams store.|[Publier votre application dans le Teams, Teams](concepts/deploy-and-publish/appsource/publish.md) [de validation du Store](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Prise en charge des actions universelles pour les cartes adaptatives v1.4. | [Actions universelles pour les cartes adaptatives](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | Affichages spécifiques à l’utilisateur. | [Affichages spécifiques à l’utilisateur](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
 |04/29/2021 | Flux de travail séquentiels. | [Flux de travail séquentiels](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
@@ -155,14 +155,14 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 | 08/15/2018 | Les cartes adaptatives sont désormais Teams.|[Actions de carte adaptative dans Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Prise en charge du client pour DevTools.| [DevTools pour le client Microsoft Teams bureau](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Les extensions de messagerie prend désormais en charge plusieurs commandes. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
-| 08/07/2018 | La configuration en ligne est désormais prise en charge dans les connecteurs. La documentation des connecteurs a également été révisée et étendue pour des raisons de clarté.| [Connecteurs](~/concepts/connectors/connectors.md)|
+| 08/07/2018 | La configuration inline est désormais prise en charge dans les connecteurs. La documentation des connecteurs a également été révisée et étendue pour des raisons de clarté.| [Connecteurs](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Votre bot peut désormais envoyer et recevoir des fichiers.| [Envoyer et recevoir des fichiers via votre bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Des informations sur la nouvelle certification des applications ont été ajoutées à la section Publication. |[Autorisations de manifeste](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | Davantage d’espace a été alloué à la page de configuration de l’onglet. | [La page de configuration de l’onglet est beaucoup plus grande](tabs/design/tabs.md)|
 | 07/12/2018 | Informations sur l’accès invité. | [Accès invité dans Microsoft Teams](/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Des informations sur Microsoft Teams catalogue d’applications client ont été ajoutées. | [Publier votre application Microsoft Teams web](~/publishing/apps-publish.md)|
 | 05/29/2018 | Les cartes adaptatives sont pris en charge dans Teams. | [Actions de carte adaptative dans Teams](task-modules-and-cards/cards/cards-reference.md) |
-| 04/17/2018 | ReplyToID a été ajouté à la charge utile pour les `Invoke` actions de carte et les actions de `MessageBack` carte. Ceci est particulièrement utile si vous devez mettre à jour le message dont l’action de carte est d’provenance. | [Actions de carte](~/concepts/cards/cards-actions.md)|
+| 04/17/2018 | ReplyToID a été ajouté à la charge utile pour les `Invoke` actions de carte et de `MessageBack` carte. Ceci est particulièrement utile si vous devez mettre à jour le message dont l’action de carte est d’provenance. | [Actions de carte](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Ajout de cette rubrique pour suivre les modifications apportées à l’interface de programmation Teams et à cet ensemble de documentation. | [Nouveautés](~/whats-new.md)|
 | 04/10/2018 | URL d’authentification modifiées pour utiliser de manière cohérente l’ID de client dans le chemin d’accès. | [Flux d’authentification pour l’authentification par onglets](~/concepts/authentication/auth-flow-tab.md) [AAD onglets](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Ajout d’instructions de conception pour l’utilisation de la zone de commande. |[Zone de commande](~/resources/design/framework/command-box.md)|
@@ -183,12 +183,13 @@ La prévisualisation pour développeurs est un programme public qui fournit un a
 
 | **Date** | **Notes** | **Rubriques modifiées** |
 | -------- | --------- | ------------------ |
+|10/19/2021|Autorisations d’appareil pour le navigateur.| [Autorisations d’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
 |10/14/2021 | Monétisez votre Teams application avec une offre SaaS transactable. | [Incluez une offre SaaS avec votre application Teams.](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |06/23/2021| API Détails de la réunion et événements de Teams en temps réel. | [Créer des applications pour les réunions Teams](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Comportement de désinstallation pour une application personnelle avec un bot | [Désinstaller les mises à jour de comportement dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentement spécifique aux ressources pour les conversations. |[Consentement spécifique aux](graph-api/rsc/resource-specific-consent.md)ressources, [Tester les autorisations](graph-api/rsc/test-resource-specific-consent.md) de consentement propres aux ressources dans Teams|
 |05/25/2021| Mise à jour Teams Shared Computer Toolkit pour [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) et [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Prendre en Teams développement d’applications](~/get-started/prerequisites.md) |
-|05/24/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique à une ressource (RSC).|[Recevoir tous les messages avec RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)vue d’ensemble [de la conversation de bot,](~/bots/how-to/conversations/conversation-basics.md) [conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)de canal et de groupe et schéma de manifeste d’aperçu [développeur](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/24/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC).|[Recevoir tous les messages avec RSC,](~/bots/how-to/conversations/channel-messages-with-rsc.md)vue d’ensemble [de la conversation de bot,](~/bots/how-to/conversations/conversation-basics.md) [conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)de canal et de groupe et schéma de manifeste d’aperçu [développeur](~/resources/schema/manifest-schema-dev-preview.md) |
 
 Pour plus d’informations, voir [la prévisualisation pour](~/resources/dev-preview/developer-preview-intro.md)les développeurs publics Teams .
 
