@@ -5,17 +5,14 @@ description: Découvrez comment déployer un lien, ouvrir l’affichage de la sc
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
+ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017302"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60483498"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
-
-> [!NOTE]
-> Cette fonctionnalité est disponible uniquement en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics.
 
 Stage View est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous forme d’onglet.
  
@@ -28,7 +25,7 @@ L’affichage d’étape est un composant d’interface utilisateur en plein éc
 
 ## <a name="advantage-of-stage-view"></a>Avantage de l’affichage de l’étape
 
-L’affichage par étapes permet d’offrir une expérience plus transparente de l’affichage du contenu Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide futur. Cela entraîne un plus grand engagement de l’utilisateur avec votre application.
+L’affichage de l’étape permet d’offrir une expérience plus transparente de l’affichage du contenu Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide futur. Cela entraîne un plus grand engagement de l’utilisateur avec votre application.
 
 ## <a name="stage-view-vs-task-module"></a>Affichage de l’étape et module de tâche
 
@@ -92,7 +89,7 @@ Voici le processus d’appel de l’affichage de l’étape :
 * Le bot répond par un `200` code.
 
 > [!NOTE]
-> Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsqu’un utilisateur sélectionne **Afficher** sur un client mobile, l’utilisateur est conduit au navigateur de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
+> Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsqu’un utilisateur sélectionne **Afficher** sur un client mobile, l’utilisateur est conduit vers le navigateur de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Appeler l’affichage de l’étape par le biais d’un lien profond
 
@@ -108,7 +105,7 @@ Voici la syntaxe du lien profond :
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={\« contentUrl \" : \" « [contentUrl] » \" , \" websiteUrl \" : \" « [websiteUrl] » \" , name : \" \" \" Contoso \" }
  
-### <a name="examples"></a>範例
+### <a name="examples"></a>Exemples
 
 Lorsqu’un utilisateur entre une URL, elle est déployée dans une carte adaptative.
 
@@ -125,7 +122,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > * Le `name` lien profond est facultatif. S’il n’est pas inclus, le nom de l’application le remplace.
 > * Le lien profond peut également être transmis via une `OpenURL` action.
-> * Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsque les utilisateurs sélectionnent un lien profond vers une vue d’étape, ils sont conduits au navigateur web de leur appareil. Le navigateur web ouvre l’URL spécifiée dans le `websiteUrl` paramètre du lien profond.
+> * Actuellement, Teams clients mobiles ne la prise en charge de la fonctionnalité d’affichage de la scène. Lorsque les utilisateurs sélectionnent un lien profond vers une vue d’étape, ils sont conduits vers le navigateur web de leur appareil. Le navigateur web ouvre l’URL spécifiée dans le `websiteUrl` paramètre du lien profond.
 > * Lorsque vous lancez une étape à partir d’un certain contexte, assurez-vous que votre application fonctionne dans ce contexte. Par exemple, si votre vue d’étape est lancée à partir d’une application personnelle, vous devez vous assurer que votre application a une étendue personnelle.
 
 ## <a name="tab-information-property"></a>Propriété d’informations sur l’onglet
