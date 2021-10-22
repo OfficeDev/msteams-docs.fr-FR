@@ -52,6 +52,8 @@
           href: concepts/device-capabilities/device-capabilities-overview.md
         - name: Demande des autorisations d’appareil
           href: concepts/device-capabilities/native-device-permissions.md
+        - name: Autorisations de périphérique pour le navigateur
+          href: concepts/device-capabilities/browser-device-permissions.md
         - name: Intégrer les fonctionnalités médias
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: Intégrer la fonctionnalité de scanneur QR ou code-barres
