@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 8ef68f351e8d0d7ee39dfc5ae3816337fc592920
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017330"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566238"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -22,7 +22,7 @@ Les conversations de base sont gérées via le connecteur Bot Framework, une API
 * Fonctionnalités supplémentaires pour gérer le flux et l’état des conversations.
 * Méthodes simples pour incorporer des services cognitives, tels que le traitement du langage naturel (NLP).
 
-Votre bot reçoit des messages Teams à l’aide de la propriété et envoie des réponses de message unique ou `Text` multiples aux utilisateurs.
+Votre bot reçoit des messages de Teams à l’aide de la propriété et envoie des réponses de message simples ou `Text` multiples aux utilisateurs.
 
 ## <a name="receive-a-message"></a>Recevoir un message
 
@@ -206,7 +206,7 @@ Un objet `channelData` type dans une activité envoyée à votre bot contient le
 * `team`: Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.
   * `id`: GUID du canal.
   * `name`: Nom de l’équipe transmis uniquement en cas d’événements [de changement de nom d’équipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `channel`: Transmis uniquement dans les contextes de canal lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes où le bot a été ajouté.
+* `channel`: Transmis uniquement dans les contextes de canal, lorsque le bot est mentionné ou pour les événements dans les canaux dans teams, où le bot a été ajouté.
   * `id`: GUID du canal.
   * `name`: Nom du canal transmis uniquement en cas d’événements [de modification de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channelData.teamsTeamId`: Deprecated. Cette propriété est incluse uniquement pour la compatibilité ascendante.
@@ -236,7 +236,7 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 
 ## <a name="message-content"></a>Contenu du message
 
-| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
+| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Remarques                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
 | Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.  |
@@ -247,7 +247,7 @@ Vous pouvez également ajouter des notifications à votre message à l’aide de
 
 ## <a name="notifications-to-your-message"></a>Notifications à votre message
 
-Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété `TeamsChannelData` des objets sur `Notification.Alert` *true*. Le fait qu’une notification soit ou non élevée dépend des paramètres de Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété des objets `TeamsChannelData` `Notification.Alert` sur *true*. Le fait qu’une notification soit ou non élevée dépend des paramètres de Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
 
 > [!NOTE]
 > Le **champ Résumé** affiche tout texte de l’utilisateur en tant que message de notification dans le flux.
@@ -376,12 +376,12 @@ Pour en savoir plus sur les cartes et les cartes dans les bots, consultez [la do
 
 Voici les codes d’état, leur code d’erreur et leurs valeurs de message :
 
-| Code d’état | Code d’erreur et valeurs de message | Description |
+| Code d'état | Code d’erreur et valeurs de message | Description |
 |----------------|-----------------|-----------------|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message :** l’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation 1:1 ou un canal via les paramètres de modération. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message :** le bot ne fait pas partie de la liste des conversations. | Le bot ne fait pas partie de la conversation. |
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: l’administrateur client a désactivé ce bot. | Le client a bloqué le bot. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: aucune inscription trouvée pour ce bot. | L’inscription pour ce bot est in trouvée. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: aucune inscription trouvée pour ce bot. | L’inscription de ce bot est in trouvée. |
 | 412 | **Code**: `PreconditionFailed` <br/> **Message :** Échec de la condition préalable, veuillez essayer à nouveau. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message :** Conversation in trouvée. | La conversation est in trouvée. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message :** taille du message trop grande. | La taille de la demande entrante était trop importante. |

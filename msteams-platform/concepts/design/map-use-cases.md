@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155605"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566287"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
@@ -33,10 +33,10 @@ Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe o
 * Pour l’étendue personnelle, posez-vous les questions suivantes :
   * Existe-t-il des interactions un-à-un avec l’application requises pour des raisons de confidentialité ou pour d’autres raisons ? Par exemple, vérification du solde des congés ou d’autres informations privées.
   * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, la recherche d’événements à l’échelle de l’organisation à venir dans une entreprise.
-  * Existe-t-il des notifications personnalisées ou des messages qui devront être envoyés à un utilisateur dans l’Teams’application ? Par exemple, les rappels pour les approbations ou les inscriptions.
+  * Existe-t-il des notifications personnalisées ou des messages qui devront être envoyés à un utilisateur tout au long de l Teams’application ? Par exemple, les rappels pour les approbations ou les inscriptions.
 * Pour une étendue partagée (équipe, canal ou conversation), posez-vous les questions suivantes :
   * Les informations présentées par l’application, sous l’onglet ou par le biais d’un bot, sont-ils pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, application Scrum.
-  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes dans différentes équipes. 
+  * Le contexte de l’application peut-il changer en fonction de l’équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du Planificateur sont différentes dans différentes équipes. 
   * Est-il possible que tous les membres d’une personne qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket.
 
 Les scénarios suivants vous guident dans la sélection de points d’entrée et d’éléments d’interface utilisateur qui fonctionnent bien Teams fonctionnalités de l’application :
@@ -46,7 +46,7 @@ Les scénarios suivants vous guident dans la sélection de points d’entrée et
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>Créer, partager et collaborer sur des éléments dans un système externe
 
-L’application Microsoft Teams est un excellent moyen d’interagir avec vos données et vous pouvez choisir parmi divers points d’intégration.
+Les applications pour Microsoft Teams sont un excellent moyen d’interagir avec vos données et vous pouvez choisir parmi divers points d’intégration.
 
 * **Extensions de messagerie avec commandes de recherche**: rechercher des systèmes externes et partager les résultats sous forme de carte interactive.
 
@@ -72,7 +72,7 @@ Parfois, vous avez simplement besoin d’un moyen rapide pour démarrer un proce
 
 ## <a name="send-notifications-and-alerts"></a>Envoyer des notifications et des alertes
 
-Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
+Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions couramment utilisées et des liens vers des informations supplémentaires.
 
 * **Bots de conversation**: envoyez des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
 
@@ -82,13 +82,13 @@ Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Te
 
 Les personnes ont des questions et vous avez probablement une grande partie des réponses stockées quelque part. Malheureusement, il est souvent assez difficile de connecter les deux.
 
-* **Bots de conversation**: traitement du langage naturel, IA, apprentissage automatique et tous les mots à la une. Utilisez un bot optimisé par le cloud intelligent pour connecter vos utilisateurs aux réponses dont ils ont besoin.
+* **Bots conversationnels**: traitement du langage naturel, IA, apprentissage automatique et tous les mots-clés. Utilisez un bot optimisé par le cloud intelligent pour connecter vos utilisateurs aux réponses dont ils ont besoin.
 
 * **Onglets**: incorporez votre portail web existant dans Teams ou créez une version spécifique Teams pour ajouter des fonctionnalités.
 
 ## <a name="get-social"></a>Obtenir des réseaux sociaux
 
-Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des images, d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
+Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Penser en termes d’application à page unique
 

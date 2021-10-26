@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: a10c991c374392afca0ce793c0c34ea3fc0ca611
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: eae30ddfd735730208c4f1ac47cfd5ec2a8c2c88
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155616"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566294"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprendre Microsoft Teams fonctionnalités de l’application
 
 L’extensibilité ou les points d’entrée sont différentes façons dont une application peut se manifester pour un utilisateur. Par exemple, un utilisateur peut interagir avec une application sur un onglet de zone de dessin pour faire une activité ou peut choisir d’en faire de même à l’aide d’un bot de conversation. Les différentes fonctionnalités utilisées pour créer votre application Teams vous permettent d’augmenter son étendue d’utilisation.
 
-Il existe plusieurs façons d’étendre Teams, de sorte que chaque application est unique. Certaines n’ont qu’une seule fonctionnalité, telle qu’un webhook, tandis que d’autres disposent de plusieurs fonctionnalités pour offrir aux utilisateurs différentes options. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l’onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
+Il existe plusieurs façons d’étendre Teams, de sorte que chaque application est unique. Certaines n’ont qu’une seule fonctionnalité, telle qu’un webhook, tandis que d’autres disposent de plusieurs fonctionnalités pour offrir différentes options aux utilisateurs. Par exemple, votre application peut afficher des données  dans un emplacement central, autrement dit, l’onglet et présenter ces mêmes informations via une interface de conversation, autrement dit, le **bot**.
 
 ## <a name="app-capabilities"></a>Fonctionnalités de l’application
 
@@ -37,17 +37,17 @@ L’illustration suivante vous donne une idée des fonctionnalités qui fourniro
 ## <a name="always-consider-your-user"></a>Toujours prendre en compte votre utilisateur
 
 Lorsque vous vous familiarisez avec Teams développement d’applications, vous en comprenez les principes de base. Vous comprenez qu’il existe plusieurs façons de créer certaines fonctionnalités. Dans de tels scénarios, réfléchissez à la façon dont vous pouvez offrir une expérience plus native à votre utilisateur.
-Par exemple, vous pouvez collecter les entrées utilisateur dans un formulaire créé sous la forme d’un onglet dans l’application. Vous pouvez également le faire à l’aide d’un module de tâche sans changer d’affichage et perturber le flux de travail de l’utilisateur. Il est important de choisir des points d’extension qui fournissent le moins d’écart par rapport au flux de travail normal d’un utilisateur.
+Par exemple, vous pouvez collecter les entrées utilisateur dans un formulaire créé sous la forme d’un onglet dans l’application. Vous pouvez également le faire à l’aide d’un module de tâche sans changer d’affichage ni perturber le flux de travail de l’utilisateur. Il est important de choisir des points d’extension qui fournissent le moins d’écart par rapport au flux de travail normal d’un utilisateur.
 
 ## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
 
-Cloud de la communauté du secteur public est une copie de l’environnement commercial axée sur le secteur secteur. Les sous-traitants du département de la Défense (DOD) et du gouvernement fédéral sont tenus de respecter les exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins des sous-traitants DOD et fédéraux. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
+Cloud de la communauté du secteur public est une copie de l’environnement commercial axée sur le secteur secteur. Le département de la Défense (DOD) et les sous-traitants fédéraux doivent répondre aux exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins des sous-traitants DOD et fédéraux. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
 
 Le tableau suivant inclut Teams fonctionnalités et la disponibilité de Cloud de la communauté du secteur public, Cloud de la communauté du secteur public-High et DOD :
 
 | Fonctionnalités   | GCC | GCC-High | DOD |
 |-------------|---------|
-| Teams comme dans les applications développées en interne | ✔️'application est activée si elle Cloud de la communauté du secteur public. | ✔️'application est activée si elle Cloud de la communauté du secteur public-High. | ✔️'application est activée si elle possède un DOD. |
+| Teams les applications que vous possédez, comme dans les applications développées en interne | ✔️'application est activée si elle Cloud de la communauté du secteur public. | ✔️'application est activée si elle Cloud de la communauté du secteur public-High. | ✔️'application est activée si elle possède un DOD. |
 | Applications Microsoft | ✔️ applications Microsoft compatibles avec Cloud de la communauté du secteur public | ✔️ applications Microsoft compatibles avec GCC-High | ✔️ applications Microsoft compatibles avec LE DOD |
 | Applications 3p ou tierces | ✔️ applications tierces sont disponibles. Désactivée par défaut et l’administrateur client utilise sa propre discrétion pour l’activer. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
@@ -59,8 +59,8 @@ Le tableau suivant inclut Teams fonctionnalités et la disponibilité de Cloud d
 
 La liste suivante permet d’identifier la disponibilité de Cloud de la communauté du secteur public, Cloud de la communauté du secteur public-High et DOD pour les fonctionnalités :
 
-* Pour les applications tierces, voir [applications web et](../samples/integrating-web-apps.md) [extensibilité des applications de réunion.](../apps-in-teams-meetings/meeting-app-extensibility.md)
-* Pour les bots, voir créer votre premier [bot de conversation](../get-started/first-app-bot.md)pour Teams , conception de votre bot [Teams](../bots/design/bots.md), ajouter des [bots](../resources/bot-v3/bots-overview.md)à Microsoft Teams applications et [bots](../bots/what-are-bots.md)dans Teams .
+* Pour les applications tierces, voir [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion.](../apps-in-teams-meetings/meeting-app-extensibility.md)
+* Pour les bots, voir créer votre premier [bot de conversation](../get-started/first-app-bot.md)pour Teams , la conception de votre bot [Teams](../bots/design/bots.md), ajouter des [bots](../resources/bot-v3/bots-overview.md)aux applications Microsoft Teams et les [bots](../bots/what-are-bots.md)dans Teams .
 * Pour le chargement de version d’Teams, voir activer la personnalisation de votre application [Teams,](../concepts/design/enable-app-customization.md)distribuer votre [application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)et Télécharger votre application dans [Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Pour les connecteurs personnalisés, [voir créer Office 365 connecteurs pour Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 

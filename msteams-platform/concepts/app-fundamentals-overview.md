@@ -5,12 +5,12 @@ description: Décrire les concepts fondamentaux du développement Teams platefor
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: f94a53c8aec4ca158745853d31ab7f2b8db2bd40
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119649"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566378"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de développement d’applications
 

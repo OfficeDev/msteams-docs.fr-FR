@@ -4,13 +4,13 @@ description: Décrit comment envoyer des messages proactifs avec Microsoft Teams
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID utilisateur
-ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID de l’utilisateur
+ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156862"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566280"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -28,7 +28,7 @@ L’envoi d’un message proactif est différent de l’envoi d’un message nor
 
 **Pour envoyer un message proactif**
 
-1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID de](#get-the-user-id-team-id-or-channel-id)canal, si nécessaire.
+1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID](#get-the-user-id-team-id-or-channel-id)de canal, si nécessaire.
 1. [Créez la conversation,](#create-the-conversation)si nécessaire.
 1. [Obtenir l’ID de conversation](#get-the-conversation-id).
 1. [Envoyez le message](#send-the-message).
@@ -67,7 +67,7 @@ Une fois que vous avez reçu les informations d’adresse appropriées, vous pou
 
 ## <a name="send-the-message"></a>Envoyer le message
 
-Maintenant que vous avez les bonnes informations d’adresse, vous pouvez envoyer votre message. Si vous utilisez le SDK, vous devez utiliser la méthode et la méthode et effectuer un `continueConversation` `conversationId` appel `tenantId` d’API direct. Vous devez définir correctement `conversationParameters` l’envoi de votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code.](#code-sample)
+Maintenant que vous avez les bonnes informations d’adresse, vous pouvez envoyer votre message. Si vous utilisez le SDK, vous devez utiliser la méthode, ainsi que la méthode et effectuer un `continueConversation` `conversationId` appel `tenantId` d’API direct. Vous devez définir correctement `conversationParameters` l’envoi de votre message. Consultez la section [exemples](#samples) ou utilisez l’un des exemples répertoriés dans la section [exemple de code.](#code-sample)
 
 Maintenant que vous avez envoyé le message proactif, vous devez suivre ces meilleures pratiques tout en envoyant des messages proactifs pour un meilleur échange d’informations entre les utilisateurs et le bot.
 
@@ -87,11 +87,11 @@ Les messages d’accueil médiocres peuvent entraîner le blocage de votre bot p
 
 ### <a name="notification-messages"></a>Les messages de notification
 
-Pour envoyer des notifications à l’aide d’une messagerie proactive, assurez-vous que vos utilisateurs ont un chemin d’accès clair pour prendre des mesures communes en fonction de votre notification. Assurez-vous que les utilisateurs comprennent clairement pourquoi ils ont reçu une notification. Les messages de notification de bonne qualité incluent généralement les suivants :
+Pour envoyer des notifications à l’aide d’une messagerie proactive, assurez-vous que vos utilisateurs ont un chemin d’accès clair pour prendre des mesures communes en fonction de votre notification. Assurez-vous que les utilisateurs comprennent clairement pourquoi ils ont reçu une notification. Les messages de notification de bonne qualité sont généralement les suivants :
 
 * Ce qui s’est passé : une indication claire de ce qui est arrivé à l’origine de la notification.
-* Résultat : il doit être clair sur quel élément a été mis à jour pour provoquer la notification.
-* Qui ou ce qui l’a déclenché : Qui ou l’action qui a déclenché l’envoi de la notification.
+* Résultat : il doit être clair, quel élément est mis à jour pour obtenir la notification.
+* Qui ou ce qui l’a déclenché : Qui ou ce qui a pris des mesures, qui a provoqué l’envoi de la notification.
 * Que peuvent faire les utilisateurs en réponse : faciliter l’action de vos utilisateurs en fonction de vos notifications.
 * Comment les utilisateurs peuvent-ils refuser : vous devez fournir un chemin d’accès aux utilisateurs pour qu’ils ne choisissent pas d’autres notifications.
 
@@ -107,15 +107,15 @@ Lorsque vous utilisez une messagerie proactive pour envoyer des messages program
 ## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive à l’aide Graph
 
 > [!Note]
-> L’installation proactive des applications à l’Graph est actuellement en version bêta.
+> L’installation proactive des applications à l Graph est actuellement en version bêta.
 
 Envoyer un message de manière proactive aux utilisateurs qui n’ont pas précédemment installé ou interagi avec votre application. Par exemple, vous souhaitez utiliser le communicateur [d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Dans ce cas, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs. Mettre en cache les valeurs nécessaires à partir `conversationUpdate` de l’événement que votre application reçoit lors de l’installation.
 
 Vous pouvez uniquement installer des applications qui se trouver dans votre catalogue d’applications d’organisation ou dans Teams App Store.
 
-Voir [installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps) dans la documentation Graph et l’installation proactive du bot et la messagerie dans Teams avec [Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Il existe également un [exemple Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) sur la plateforme GitHub web.
+Voir [installer des applications pour les](/graph/api/userteamwork-post-installedapps) utilisateurs dans la documentation Graph et l’installation proactive du bot et la messagerie dans Teams avec [Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). Il existe également un [exemple Microsoft .NET Framework](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) sur la plateforme GitHub web.
 
-## <a name="samples"></a>Exemples
+## <a name="samples"></a>Échantillons
 
 Le code suivant montre comment envoyer des messages proactifs :
 
@@ -262,7 +262,7 @@ Vous devez fournir l’ID d’utilisateur et l’ID de client. Si l’appel réu
 ---
 
 > [!NOTE]
-> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
+> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot ou de Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
 
 ## <a name="code-sample"></a>Exemple de code
 

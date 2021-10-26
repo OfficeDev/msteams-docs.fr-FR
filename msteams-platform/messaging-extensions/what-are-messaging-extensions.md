@@ -5,12 +5,12 @@ description: Vue d’ensemble des extensions de messagerie sur la plateforme Mic
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155881"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566140"
 ---
 # <a name="messaging-extensions"></a>Extensions de messagerie
 
@@ -20,11 +20,14 @@ L’image suivante affiche les emplacements d’où les extensions de messagerie
 
 ![emplacements d’appel d’extension de messagerie](~/assets/images/messaging-extension-invoke-locations.png)
 
+> [!NOTE]
+> @mentioning extensions de message n’est plus prise en charge dans la zone de composition.
+
 ## <a name="scenarios-where-messaging-extensions-are-used"></a>Scénarios dans lequel les extensions de messagerie sont utilisées
 
 | Scénario | Exemple |
 |:-----------------|:-----------------|
-|Vous souhaitez qu’un système externe soit en mesure d’action et que le résultat de l’action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître le créneau horaire réservé.|
+|Vous souhaitez qu’un système externe soit en mesure d’action et que le résultat de l’action soit renvoyé à votre conversation.|Réservez une ressource et autorisez le canal à connaître l’créneau horaire réservé.|
 |Vous souhaitez trouver quelque chose dans un système externe et partager les résultats avec la conversation.|Recherchez un élément de travail dans Azure DevOps et partagez-le avec le groupe en tant que carte adaptative.|
 |Vous souhaitez effectuer une tâche complexe impliquant plusieurs étapes ou une grande quantité d’informations dans un système externe et partager les résultats avec une conversation.|Créez un bogue dans votre système de suivi en fonction d’un message Teams, affectez ce bogue à Bob et envoyez une carte au thread de conversation avec les détails du bogue.|
 
@@ -49,10 +52,10 @@ Les commandes d’action sont déclenchées à partir de la zone de composition 
 
 ### <a name="search-commands"></a>Commandes de recherche
 
-Les commandes de recherche permettent aux utilisateurs de rechercher des informations manuellement dans un système externe via une zone de recherche, ou en csérant un lien vers un domaine surveillé dans la zone de composition du message et en insérant les résultats de la recherche dans un message. Dans le flux de commande de recherche le plus élémentaire, le message d’appel initial inclut la chaîne de recherche envoyée par l’utilisateur. Vous répondez avec une liste de cartes et d’aperçus de carte. Le client Teams affiche une liste d’aperçus de carte pour l’utilisateur. Lorsque l’utilisateur sélectionne une carte dans la liste, la carte pleine taille est insérée dans la zone de composition du message.
+Les commandes de recherche permettent aux utilisateurs de rechercher des informations manuellement dans un système externe via une zone de recherche, ou en csérant un lien vers un domaine surveillé dans la zone de composition du message et en insérant les résultats de la recherche dans un message. Dans le flux de commande de recherche le plus simple, le message d’appel initial inclut la chaîne de recherche envoyée par l’utilisateur. Vous répondez avec une liste de cartes et d’aperçus de carte. Le client Teams affiche une liste d’aperçus de carte pour l’utilisateur. Lorsque l’utilisateur sélectionne une carte dans la liste, la carte pleine taille est insérée dans la zone de composition du message.
 
 Les cartes sont déclenchées à partir de la zone de composition du message ou de la zone de commande et ne sont pas déclenchées à partir d’un message. Ils ne peuvent pas être déclenchés à partir d’un message.
-L’image suivante affiche le module de tâche de recherche d’extension de messagerie :
+L’image suivante affiche le module de tâche de la tâche de recherche d’extension de messagerie :
 
 ![Commande de recherche d’extension de messagerie](~/assets/images/search-extension.png)
 
@@ -61,7 +64,7 @@ L’image suivante affiche le module de tâche de recherche d’extension de mes
 
 ## <a name="link-unfurling"></a>Déploiement de lien
 
-Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est connue sous le nom de déploiement de lien. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
+Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est appelée déploiement de liens. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu’un lien est passé dans l’extension de messagerie :
  
 ![lien de déploiement](../assets/images/messaging-extension/unfurl-link.png)

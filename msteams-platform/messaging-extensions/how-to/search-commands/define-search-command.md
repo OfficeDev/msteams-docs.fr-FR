@@ -5,12 +5,12 @@ description: Définissez les commandes de recherche d’extension de messagerie 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096598"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566364"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -28,7 +28,7 @@ La commande de recherche est invoquée à partir de l’un des emplacements suiv
 * Zone de composition de message : boutons situés en bas de la zone composer un message.
 * Zone de commande : en @mentioning dans la zone de commande.
 
-Lorsque la commande de recherche est invoquée à partir de la zone composer un message, l’utilisateur envoie les résultats à la conversation. Lorsqu’il est appelé à partir de la zone de commande, l’utilisateur interagit avec la carte résultante ou la copie pour l’utiliser ailleurs.
+  Lorsque la commande de recherche est invoquée à partir de la zone composer un message, l’utilisateur envoie les résultats à la conversation. Lorsqu’il est appelé à partir de la zone de commande, l’utilisateur interagit avec la carte résultante ou la copie pour l’utiliser ailleurs.
 
 L’image suivante affiche les emplacements d’appel de la commande de recherche :
 
@@ -53,8 +53,8 @@ Vous pouvez créer une commande de recherche à l’aide de ** App Studio** ou *
 **Pour créer une commande de recherche**
 
 1. Ouvrez **App Studio** à partir Microsoft Teams client, puis sélectionnez l’onglet **Éditeur de** manifeste.
-1.  Si vous avez déjà créé votre package d’application dans **App Studio,** sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
-1. Après avoir importé le package d’application, sélectionnez **les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
+1.  Si vous avez déjà créé votre package d’application **dans App Studio,** sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Après avoir importé le package d’application, **sélectionnez les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
 1. Sélectionnez **Configurer dans** la fenêtre pour inclure l’extension de messagerie dans l’expérience de votre application. L’image suivante affiche la page de mise en place de l’extension de messagerie : 
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
@@ -80,7 +80,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
 
 # <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
 
-**Pour créer une commande de recherche à l’aide du portail du développeur**
+**Pour créer une commande de recherche à l’aide du Portail du développeur**
 
 1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
     
@@ -102,7 +102,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     
    <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
 
-1. Sélectionnez **un bot d’extension de message** dans la liste bas sous **ID des extensions** de message, puis **sélectionnez Enregistrer.**
+1. Sélectionnez **un bot d’extension de message** dans la liste bas sous **ID des extensions** de message, puis sélectionnez **Enregistrer.**
 
     <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
 

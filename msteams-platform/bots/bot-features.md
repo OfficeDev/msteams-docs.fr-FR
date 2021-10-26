@@ -5,12 +5,12 @@ description: Vue d’ensemble des outils et des SDK pour la création Microsoft 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155561"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566343"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -30,7 +30,7 @@ Votre bot Teams se compose des suivants :
 * Votre Teams d’application, qui connecte le client Teams à votre service web.
 
 > [!TIP]
-> Utilisez le portail du développeur pour inscrire votre service web auprès de Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
+> Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
 
 [Bot Framework est](https://dev.botframework.com/) un SDK enrichi utilisé pour créer des bots à l’aide de C#, Java, Python et JavaScript. Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement le modifier pour qu’il fonctionne Teams. Utilisez les C# ou Node.js pour tirer parti de nos [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Ces packages étendent les classes et méthodes de base du SDK Bot Builder comme suit :
 
@@ -78,7 +78,11 @@ Dans les cas où les bots fonctionnent mieux dans un canal, ils fonctionnent ég
 
 ### <a name="in-a-one-to-one-chat"></a>Dans une conversation un-à-un
 
-La conversation un-à-un est un moyen traditionnel pour un bot de conversation d’interagir avec un utilisateur. Voici quelques exemples de bots de conversation un-à-un : les bots Q&A, les bots qui lancent des flux de travail dans d’autres systèmes, les bots qui indiquent les conversations et les bots qui prennent des notes. Avant de créer des chatbots un-à-un, pensez à déterminer si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
+La conversation un-à-un est un moyen traditionnel pour un bot de conversation d’interagir avec un utilisateur. Voici quelques exemples de bots de conversation un-à-un :
+* Q&A bots
+* bots qui lancent des flux de travail dans d’autres systèmes 
+* bots qui indiquent aux personnes
+* Les bots qui prennent des notes avant de créer des chatbots un-à-un, estiment si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
@@ -86,7 +90,7 @@ Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences à plusieurs tour dans la conversation
 
-Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
+Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler.** En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
 UTILISATEUR : planifier une réunion avec Megan.
 
@@ -102,9 +106,9 @@ BOT : quel jour ?
 
 ### <a name="support-too-many-commands"></a>Prise en charge d’un trop grand nombre de commandes
 
-Comme il n’existe que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
+Comme il n’y a que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
 
-### <a name="maintain-a-large-knowledge-base"></a>Maintenir une base de connaissances importante
+### <a name="maintain-a-large-knowledge-base"></a>Gérer une base de connaissances importante
 
 L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
 

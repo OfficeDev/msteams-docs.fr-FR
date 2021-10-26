@@ -5,12 +5,12 @@ description: Ajouter une mise en forme enrichie à vos messages de bot
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155682"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566224"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
@@ -32,7 +32,7 @@ Teams prend en charge un sous-ensemble de balises de mise en forme XML ou HTML e
 
 Actuellement, les limitations suivantes s’appliquent à la mise en forme :
 
-* Les messages texte uniquement ne sont pas en charge de la mise en forme des tableaux.
+* Les messages texte uniquement ne sont pas en charge de la mise en forme de tableau.
 * Les cartes enrichies ne peuvent être formatées que dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre.
 * Les cartes enrichies ne prisent pas en charge le markdown ou la mise en forme de tableau.
 
@@ -64,9 +64,9 @@ La prise en charge de la mise en forme du texte varie selon le type de message e
 
 ### <a name="text-only-messages"></a>Messages texte uniquement
 
-Le tableau suivant fournit une liste des styles et ceux qui sont pris en charge sur ordinateur de bureau, iOS et Android :
+Le tableau suivant fournit une liste des styles pris en charge sur les ordinateurs de bureau, iOS et Android :
 
-| Style                     | Bureau | iOS | Android |
+| Style                     | Ordinateur de bureau | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | Gras                      | ✔ | ✔ | ✔ |
 | Italic                    | ✔ | ✔ | ✔ |

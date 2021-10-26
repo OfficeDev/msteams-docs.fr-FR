@@ -5,24 +5,24 @@ description: Guide pour planifier la création d’une application sur Teams mob
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: a2c8c601ef2c007c112f1e0e5309f0aa90fce106
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60123881"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566147"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
 
- Teams plateforme offre la possibilité de créer des applications sur les appareils mobiles et de bureau. Les utilisateurs de votre application peuvent préférer un ordinateur de bureau ou un appareil mobile, ou les deux. Les utilisateurs peuvent préparer des données sur un ordinateur de bureau, mais consomment et partagent davantage de données à l’aide d’appareils mobiles. La clé pour créer une application consiste à comprendre et à répondre aux besoins des utilisateurs. Il existe des fonctionnalités telles que les bots, les extensions de messagerie et les connecteurs qui fonctionnent en toute transparence sur ordinateur de bureau et mobile. Toutefois, la création d’onglets et de modules de tâches nécessite la planification de l’hébergement de votre expérience web sur Teams mobile. Guides de document pour planifier vos pages web réactives sur Teams mobile.
+ Teams plateforme offre la possibilité de créer des applications sur les appareils mobiles et de bureau. Les utilisateurs de votre application peuvent préférer un ordinateur de bureau ou un appareil mobile, ou les deux. Les utilisateurs peuvent préparer des données sur un ordinateur de bureau, mais consomment et partagent davantage de données à l’aide de l’appareil mobile. La clé pour créer une application consiste à comprendre et à répondre aux besoins des utilisateurs. Il existe des fonctionnalités telles que les bots, les extensions de messagerie et les connecteurs qui fonctionnent en toute transparence sur ordinateur de bureau et mobile. Toutefois, la création d’onglets et de modules de tâches nécessite la planification de l’hébergement de votre expérience web sur Teams mobile. Guides de document pour planifier vos pages web réactives sur Teams mobile.
 
 ## <a name="identify-apps-scope"></a>Identifier l’étendue des applications
 
 La liste suivante fournit les informations clés pour planifier la création d’applications pour Teams mobile :
 
-* Envisagez la fonctionnalité d’appareil Teams’application. Par exemple, si vous avez une application très performant sur un ordinateur de bureau, vous pouvez explorer pour créer une application similaire sur mobile. À l’origine, il peut être difficile de déplacer l’intégralité de l’expérience de bureau sur un appareil mobile. Vous pouvez commencer par des scénarios de base mais courants. Ajoutez des fonctionnalités et des fonctionnalités après avoir collecté plus d’informations et de commentaires des utilisateurs.
+* Envisagez la fonctionnalité de l’Teams’application. Par exemple, si vous avez une application très performant sur un ordinateur de bureau, vous pouvez explorer pour créer une application similaire sur mobile. À l’origine, il peut être difficile de déplacer l’intégralité de l’expérience de bureau sur un appareil mobile. Vous pouvez commencer par des scénarios de base mais courants. Ajoutez des fonctionnalités et des fonctionnalités après avoir collecté plus d’informations et de commentaires des utilisateurs.
 
-* Veillez à cibler la personne d’utilisateur appropriée sur mobile. Par exemple, si vous créez une application qui fournit un service aux utilisateurs finaux et fournit également un accès aux données aux développeurs et aux cadres supérieurs, les utilisateurs finaux peuvent utiliser davantage l’application pendant que vous commencez à créer l’application sur Teams mobile. Vous pouvez répondre à toutes les personnes que vous avez sur votre application de bureau. Toutefois, il est recommandé de commencer avec une personne avec une base plus grande et les utilisateurs précoces possibles pour une expérience d’écran plus petite. Comme dans l’exemple, les utilisateurs finaux sont les personnes d’utilisateur appropriées. Vous pouvez progressivement ajouter des fonctionnalités pour prendre en charge d’autres utilisateurs sur votre Teams mobile. 
+* Veillez à cibler la personne d’utilisateur appropriée sur mobile. Par exemple, si vous créez une application qui fournit un service aux utilisateurs finaux et fournit également un accès aux données aux développeurs et aux cadres supérieurs, les utilisateurs finaux peuvent utiliser davantage l’application pendant que vous commencez à créer l’application sur Teams mobile. Vous pouvez répondre à toutes les personnes que vous avez sur votre application de bureau. Toutefois, il est recommandé de commencer par persona avec une base plus grande et les utilisateurs précoces possibles pour une expérience d’écran plus petite. Comme dans l’exemple, les utilisateurs finaux sont les personnes d’utilisateur appropriées. Vous pouvez progressivement ajouter des fonctionnalités pour prendre en charge d’autres personnes utilisateur sur votre Teams mobile. 
 
 ## <a name="understand-different-stages-to-build-apps"></a>Comprendre les différentes étapes de la construction d’applications
 
@@ -34,7 +34,7 @@ Une fois que vous avez identifié l’étendue de l’application, il est temps 
 
 2. **Actions rapides**
 
-   Utiliser l’application sur un appareil mobile. Une fois que vos utilisateurs ont commencé à consommer le contenu sur mobile, vous pouvez faire migrer votre application au niveau suivant en migrer certaines actions à partir de l’application de bureau. Vous pouvez optimiser et créer de nouvelles actions pour les appareils mobiles.
+   Utiliser l’application sur un appareil mobile. Une fois que vos utilisateurs ont commencé à consommer le contenu sur un appareil mobile, vous pouvez mettre à l’échelle votre application au niveau suivant en migrer certaines actions à partir de l’application de bureau. Vous pouvez optimiser et créer de nouvelles actions pour les appareils mobiles.
 
 3. **Activation**
 
@@ -57,7 +57,7 @@ Vous pouvez comprendre comment planifier des onglets réactifs pour les applicat
 
 **Consommation**
 
-Dans la première étape, vous pouvez implémenter l’expérience de consommation la plus basique, pour afficher les données. L’objectif de toute application dans le domaine est d’afficher des données sous forme de visualisations. Dans votre application, vous pouvez afficher les visualisations récemment vues sur le bureau ou la liste de tous les graphiques autorisés pour les utilisateurs. Après avoir créé des tableaux de bord sur un ordinateur de bureau, les utilisateurs peuvent accéder aux informations à l’aide de l’appareil mobile. Vous pouvez afficher un affichage détaillé de n’importe quel graphique sélectionné par l’utilisateur sous la forme d’une vue étendue dans vos onglets ou à l’aide de modules de tâche.
+Dans la première étape, vous pouvez implémenter l’expérience de consommation la plus basique, pour afficher les données. L’objectif de n’importe quelle application dans le domaine est d’afficher des données sous forme de visualisations. Dans votre application, vous pouvez afficher les visualisations récemment vues sur le bureau ou la liste de tous les graphiques autorisés pour les utilisateurs. Après avoir créé des tableaux de bord sur un ordinateur de bureau, les utilisateurs peuvent accéder aux informations à l’aide de l’appareil mobile. Vous pouvez afficher un affichage détaillé de n’importe quel graphique sélectionné par l’utilisateur sous la forme d’une vue étendue dans vos onglets ou à l’aide de modules de tâche.
 
 Vous pouvez afficher les informations suivantes : 
 
@@ -69,7 +69,7 @@ Vous pouvez afficher les informations suivantes :
 
 **Actions rapides**
 
-Dans la deuxième étape, les utilisateurs peuvent travailler sur les graphiques et les visuels existants à partir de l’expérience de bureau. Vous pouvez introduire les actions suivantes :
+Dans la deuxième étape, les utilisateurs peuvent travailler sur les graphiques et les éléments visuels existants à partir de l’expérience de bureau. Vous pouvez introduire les actions suivantes :
 
 * Rechercher du contenu
 * Filtrer les données

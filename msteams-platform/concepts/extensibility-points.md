@@ -5,16 +5,16 @@ description: Décrit l’endroit où les personnes peuvent découvrir et utilise
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3d4f3150447603fe8462b3a8166f6bc76de7cc03
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155806"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566350"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
-La plateforme Teams fournit un ensemble flexible de points d’entrée, tels qu’une équipe, un canal et une conversation où les personnes peuvent découvrir et utiliser votre application. Votre application peut être aussi simple que l'intégration d'un contenu web existant dans un onglet ou une application à plusieurs facettes avec laquelle les utilisateurs interagissent dans plusieurs contextes.
+La plateforme Teams fournit un ensemble flexible de points d’entrée, tels qu’une équipe, un canal et une conversation, où les personnes peuvent découvrir et utiliser votre application. Votre application peut être aussi simple que l'intégration d'un contenu web existant dans un onglet ou une application à plusieurs facettes avec laquelle les utilisateurs interagissent dans plusieurs contextes.
 Les applications les plus réussies sont natives Teams, donc choisissez soigneusement les points d’entrée de votre application.
 
 ## <a name="shared-app-experiences"></a>Expériences d’application partagées
@@ -25,7 +25,7 @@ La liste suivante montre comment les fonctionnalités Teams’application sont c
 
 * [**Les onglets**](~/tabs/what-are-tabs.md) offrent une expérience web intégrée en plein écran configurée pour l’équipe, le canal ou la conversation de groupe. Tous les membres interagissent avec le même contenu web, de sorte qu’une expérience d’application mono-page sans état est typique.
 
-* [**Les extensions de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md) sont des raccourcis permettant d'insérer du contenu externe dans une conversation ou de prendre des mesures concernant les messages sans quitter Teams. [Le déploiement de liens](~/messaging-extensions/how-to/link-unfurling.md) fournit un contenu enrichi lors du partage de contenu à partir d’une URL commune.
+* [**Les extensions de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md) sont des raccourcis permettant d'insérer du contenu externe dans une conversation ou de prendre des mesures concernant les messages sans quitter Teams. [Le déploiement de liens fournit](~/messaging-extensions/how-to/link-unfurling.md) un contenu enrichi lors du partage de contenu à partir d’une URL commune.
 
 * Les bots interagissent avec les membres de la conversation par le biais d’une conversation et de la réponse à des [**événements,**](~/bots/what-are-bots.md) tels que l’ajout d’un nouveau membre ou le changement de nom d’un canal. 
    > [!NOTE]
@@ -47,7 +47,7 @@ La liste suivante montre comment les fonctionnalités Teams sont couramment util
 
 ## <a name="see-also"></a>Voir aussi
 
-[Teams recommandations en matière de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
+[Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
 [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>Étape suivante
