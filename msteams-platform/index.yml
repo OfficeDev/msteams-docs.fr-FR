@@ -4,7 +4,7 @@ summary: 'Obtenez de la documentation, des exemples de code, des didacticiels et
 brand: teams
 metadata:
   title: Microsoft Teams Documentation pour les développeurs de plateforme
-  description: 'La plateforme Microsoft Teams développeur permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, mettre l’accent sur la réduction du changement de contexte et créer une collaboration autour du contenu et des flux de travail existants.'
+  description: 'La plateforme de développement Microsoft Teams permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, fournir le focus en réduisant le changement de contexte et créer une collaboration autour du contenu et des flux de travail existants.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -113,14 +113,14 @@ conceptualContent:
           text: Intégrer un onglet Teams’un SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
-          text: Intégration avec le système de gestion de l’apprentissage de l’informatique
+          text: Intégration avec le système de gestion de l’apprentissage par le chat
         - url: /microsoftteams/platform/samples/app-templates
           itemType: reference
           text: Intégrer des modèles d’application prêts pour la production
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Intégrer des connecteurs Shifts prêts pour la production
-    - title: Community
+    - title: Communauté
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -149,7 +149,7 @@ conceptualContent:
           itemType: concept
           text: Utilisateurs finaux
 tools:
-  title: SDKs et outils
+  title: Outils et kits de développement durable
   items:
     - title: Microsoft Teams Shared Computer Toolkit extension de Visual Studio Code
       imageSrc: /media/logos/logo_vs-code.svg
@@ -157,6 +157,12 @@ tools:
     - title: Microsoft Teams Shared Computer Toolkit extension de Visual Studio
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
+    - title: Portail du développeur
+      imageSrc: ./assets/icons/devp-logo.png
+      url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
+    - title: Kits de développement logiciel (SDK) Microsoft Graph
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - title: SDK client JavaScript pour les onglets et autres expériences hébergées
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
@@ -166,12 +172,6 @@ tools:
     - title: Kits de développement logiciel (SDK) Bot Framework .NET pour les bots et extensions de messagerie
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: Kits de développement logiciel (SDK) Microsoft Graph
-      imageSrc: ./assets/icons/graph-icon-1.png
-      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
-    - title: "Microsoft Teams\_App\_Studio"
-      imageSrc: ./assets/icons/AppStudioIcon.png
-      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
     - title: Générateur Yeoman pour Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

@@ -3,30 +3,30 @@ title: Onglets sur les appareils mobiles
 description: Décrit les considérations pour les développeurs pour l’implémentation d’onglets sur Microsoft Teams mobile.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bc853c995e0a580a2a2580caa8d7c420f7d9680e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b540369b2da9fb0d6eae5d6fd8ddf121992147d
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155583"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719853"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
 Lorsque vous construisez une application Microsoft Teams qui inclut un onglet, vous devez tester le fonctionnement de votre onglet sur les clients Microsoft Teams Android et iOS. Cet article décrit certains des scénarios clés que vous devez prendre en considération.
 
-Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour garantir une expérience utilisateur optimale, vous devez suivre les instructions pour les onglets sur les appareils mobiles de cet article lors de la création de vos onglets.
+Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété. Pour garantir une expérience utilisateur optimale, vous devez suivre les instructions pour les onglets sur les appareils mobiles de cet article lors de la création de vos onglets.
 
 Les [applications distribuées via Teams store ont](~/concepts/deploy-and-publish/appsource/publish.md) un processus d’approbation distinct pour les clients mobiles. Le comportement par défaut de ces applications est le suivant :
 
-| **Fonctionnalité de l’application** | **Comportement si l’application est approuvée** | **Comportement si l’application n’est pas approuvée** |
+| **Fonctionnalité d’application** | **Comportement si l’application est approuvée** | **Comportement si l’application n’est pas approuvée** |
 | --- | --- | --- |
 | **Onglets personnels** | L’application apparaît dans la barre inférieure des clients mobiles. Les onglets s’ouvrent dans Teams client. | L’application n’apparaît pas dans la barre inférieure des clients mobiles. |
-| **Onglets de canal et de groupe** | L’onglet s’ouvre dans le Teams client à l’aide `contentUrl` de . | L’onglet s’ouvre dans un navigateur en dehors du Teams client à `websiteUrl` l’aide. |
+| **Onglets de canal et de groupe** | L’onglet s’ouvre dans le Teams client à l’aide `contentUrl` de . | L’onglet s’ouvre dans un navigateur en dehors Teams client à `websiteUrl` l’aide. |
 
 > [!NOTE]
 > * Les applications soumises à [AppSource](https://appsource.microsoft.com) pour publication sur Teams sont évaluées automatiquement pour la réactivité mobile. Pour toutes les requêtes, teamsubm@microsoft.com.
 > * Pour toutes les applications qui ne sont pas distribuées via AppSource, les onglets s’ouvrent dans une vue web dans l’application au sein des clients Teams par défaut et aucun processus d’approbation distinct n’est requis.
-> * Le comportement par défaut des applications s’applique uniquement s’il est distribué via Teams store. Par défaut, tous les onglets s’ouvrent dans le client Teams client.
+> * Le comportement par défaut des applications est applicable uniquement s’il est distribué via Teams store. Par défaut, tous les onglets s’ouvrent dans Teams client.
 > * Pour lancer une évaluation de votre application pour la convivialité mobile, teamsubm@microsoft.com les détails de votre application.
 
 ## <a name="authentication"></a>Authentification
@@ -43,7 +43,7 @@ Vous devez vérifier que votre onglet fonctionne correctement sur des appareils 
 
 ## <a name="distribution"></a>Distribution
 
-Les applications répertoriées dans Teams store doivent être approuvées pour que l’utilisation mobile fonctionne correctement dans Teams client mobile. La disponibilité et le comportement des onglets dépendent de l’approbation ou non de votre application.
+Les applications répertoriées dans Teams store doivent être approuvées pour une utilisation mobile afin de fonctionner correctement dans Teams client mobile. La disponibilité et le comportement des onglets dépendent de l’approbation ou non de votre application.
 
 ### <a name="apps-on-teams-store-approved-for-mobile"></a>Applications sur Teams store approuvées pour les appareils mobiles
 
@@ -60,7 +60,7 @@ Le tableau suivant décrit la disponibilité et le comportement des onglets lors
 
 | Fonctionnalité | Disponibilité mobile ? | Comportement mobile |
 |----------|-----------|------------|
-|Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams à l’aide de la configuration de votre application, qui doit également être incluse dans la fonction de `websiteUrl` votre code `setSettings()` [source.](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true) Toutefois, les utilisateurs peuvent afficher l’onglet dans  le client mobile Teams en sélectionnant Plus en regard de l’application et en choisissant **Ouvrir,** ce qui déclenche la configuration de votre `contentUrl` application.|
+|Onglet Canal et groupe|Oui|L’onglet s’ouvre dans le navigateur par défaut de l’appareil au lieu du client mobile Teams à l’aide de la configuration de votre application, qui doit également être incluse dans la fonction de `websiteUrl` votre code `setSettings()` [source.](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace) Toutefois, les utilisateurs peuvent afficher l’onglet dans  le client mobile Teams en sélectionnant Plus en regard de l’application et en choisissant **Ouvrir,** ce qui déclenche la configuration de votre `contentUrl` application.|
 |Application personnelle|Non|Non applicable|
 
 ### <a name="apps-not-on-teams-store"></a>Applications non stockées dans Teams store

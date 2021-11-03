@@ -5,12 +5,12 @@ description: Définissez les commandes de recherche d’extension de messagerie 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566364"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720126"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -38,28 +38,20 @@ L’image suivante affiche les emplacements d’appel de la commande de recherch
 
 Pour ajouter la commande de recherche au manifeste de votre application, vous devez ajouter un nouvel objet au niveau supérieur du manifeste JSON de `composeExtension` votre application. Vous pouvez ajouter la commande de recherche à l’aide d’App Studio ou manuellement.
 
-### <a name="create-a-search-command"></a>Créer une commande de recherche 
+### <a name="create-a-search-command-using-app-studio"></a>Créer une commande de recherche à l’aide d’App Studio
 
-Vous pouvez créer une commande de recherche à l’aide de ** App Studio** ou **du portail du développeur.**
-
-> [!NOTE]
->  App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
-
-> [!NOTE]
-> La condition préalable à la création d’une commande de recherche est que vous devez déjà avoir créé une extension de messagerie. Pour plus d’informations sur la création d’une extension de messagerie, voir [créer une extension de messagerie.](~/messaging-extensions/how-to/create-messaging-extension.md)
+La condition préalable à la création d’une commande de recherche est que vous devez déjà avoir créé une extension de messagerie. Pour plus d’informations sur la création d’une extension de messagerie, voir [créer une extension de messagerie.](~/messaging-extensions/how-to/create-messaging-extension.md)
 
 **Pour créer une commande de recherche**
 
 1. Ouvrez **App Studio** à partir Microsoft Teams client, puis sélectionnez l’onglet **Éditeur de** manifeste.
-1.  Si vous avez déjà créé votre package d’application **dans App Studio,** sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
-1. Après avoir importé le package d’application, **sélectionnez les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
+1.  Si vous avez déjà créé votre package d’application dans **App Studio,** sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Après avoir importé le package d’application, sélectionnez **les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
 1. Sélectionnez **Configurer dans** la fenêtre pour inclure l’extension de messagerie dans l’expérience de votre application. L’image suivante affiche la page de mise en place de l’extension de messagerie : 
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
-1. Pour créer l’extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
+1. Pour créer l’extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
@@ -72,54 +64,11 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Ajoutez **un ID de commande** et un **titre.**
-1. Sélectionnez l’emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d’un message** ne modifie pas actuellement le comportement de votre commande de recherche. L’image suivante affiche l’emplacement d’appel de la commande de recherche :
+1. Sélectionnez l’emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d’un message** ne modifie pas actuellement le comportement de votre commande de recherche. L’image suivante affiche l’emplacement d’appel de commande de recherche :
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
 1. Ajoutez votre paramètre de recherche et sélectionnez **Enregistrer.**
-
-# <a name="developer-portal"></a>[Portail du développeur](#tab/DP)
-
-**Pour créer une commande de recherche à l’aide du Portail du développeur**
-
-1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
-    
-   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
-    
-1. Go to **Apps**.
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. Si vous avez déjà créé votre package d’application dans **le Portail** du développeur, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, **sélectionnez Importer une application existante.**
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Allez aux **fonctionnalités de l’application.**  
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Sélectionnez **les extensions de messagerie dans** les **fonctionnalités de l’application.** Une fenêtre instantanée s’affiche pour configurer l’extension de messagerie.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
-
-1. Sélectionnez **un bot d’extension de message** dans la liste bas sous **ID des extensions** de message, puis sélectionnez **Enregistrer.**
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Sélectionnez **Ajouter une commande.** Une fenêtre pop-up s’affiche pour ajouter une commande.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Sélectionnez **une commande de recherche** basée sur la recherche et entrez des champs de commande.
-
-    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
-
-1. Entrez les champs de paramètre, puis **sélectionnez Enregistrer.**
-
-    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
-
----
-
 
 ### <a name="create-a-search-command-manually"></a>Créer une commande de recherche manuellement 
 
@@ -178,7 +127,7 @@ Pour obtenir le manifeste complet de l’application, voir [schéma de manifeste
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

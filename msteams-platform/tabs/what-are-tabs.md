@@ -5,12 +5,12 @@ description: Vue d’ensemble des onglets personnalisés sur la plateforme Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a4ad7c0d832f7a4c71c3749053333298086dcd28
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f18760670f81bea0e0c2bad6da9f15bd1982f0f
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155729"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719839"
 ---
 # <a name="microsoft-teams-tabs"></a>Onglets Microsoft Teams
 
@@ -38,7 +38,7 @@ Deux types d’onglets sont disponibles dans Teams, personnel et canal ou groupe
 
 Vous pouvez [créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) dans le cadre d’un onglet personnel, d’un onglet de canal ou de groupe ou d’un module de tâche. Vous pouvez créer une page de [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) qui permet aux utilisateurs de configurer une application Microsoft Teams et de l’utiliser pour configurer un onglet de conversation de canal ou de groupe, une extension de messagerie ou un connecteur Office 365. Vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation et de créer une [page](~/tabs/how-to/create-tab-pages/removal-page.md) de suppression d’onglets pour votre application. Lorsque vous créez une application Teams qui inclut un onglet, vous devez tester le fonctionnement de votre onglet sur les clients Teams [Android et iOS.](~/tabs/design/tabs-mobile.md) Votre onglet doit obtenir [le contexte par](~/tabs/how-to/access-teams-context.md) le biais d’informations de base, de paramètres régionaux et de thèmes, ou qui identifie ce qui se trouve dans `entityId` `subEntityId` l’onglet.
 
-Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes les fonctionnalités de l’application Teams en éliminant la nécessité d’un autre système principal pour vos bots et onglets. [Stage View](~/tabs/tabs-link-unfurling.md) est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous la forme d’un onglet. Le [service](~/tabs/tabs-link-unfurling.md) de déploiement de lien existant est mis à jour de sorte qu’il soit utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Vous pouvez créer des [onglets](~/tabs/how-to/conversational-tabs.md) de conversation à l’aide de sous-entités de conversation qui permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier. Vous pouvez modifier les [marges des onglets](~/resources/removing-tab-margins.md) pour améliorer l’expérience du développeur lors de la création d’applications.
+Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes les fonctionnalités de l’application Teams en éliminant la nécessité d’un autre système principal pour vos bots et onglets. [Stage View](~/tabs/tabs-link-unfurling.md) est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous la forme d’un onglet. Le [service](~/tabs/tabs-link-unfurling.md) de déploiement de lien existant est mis à jour, de sorte qu’il est utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Vous pouvez créer des [onglets](~/tabs/how-to/conversational-tabs.md) de conversation à l’aide de sous-entités de conversation qui permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier. Vous pouvez modifier les [marges des onglets](~/resources/removing-tab-margins.md) pour améliorer l’expérience du développeur lors de la création d’applications.
 
 ## <a name="tab-features"></a>Fonctionnalités de l’onglet
 
@@ -94,4 +94,4 @@ Vous pouvez avoir plusieurs canaux ou onglets de groupe et jusqu’à 16 onglets
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Configuration requise](~/tabs/how-to/tab-requirements.md)
+> [Conditions préalables](~/tabs/how-to/tab-requirements.md)

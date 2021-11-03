@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: d079d015826759e86b9888029d4f8925a6cc5730
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 40b4f428c6e1c493a360588ce3dc569e067d4d0a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291603"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720196"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -56,8 +56,8 @@ L’API permet à un bot de récupérer les informations des participants par ID
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
-|**participantId**| String | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
+|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
 |**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso tabulation. | 
 
 ### <a name="example"></a>Exemple
@@ -163,7 +163,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 |---|---|----|---|
 |**conversationId**| String | Oui | L’identificateur de conversation est disponible dans le cadre de Bot Invoke. |
 
-### <a name="examples"></a>範例
+### <a name="examples"></a>Exemples
 
 `Bot ID`L’objet est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
@@ -238,7 +238,7 @@ L’API est disponible via Bot Services.
 
 ### <a name="prerequisite"></a>Conditions préalables
 
-Pour utiliser l’API Détails de la réunion, vous devez obtenir les autorisations RSC. Utilisez l’exemple suivant pour configurer la propriété du manifeste de votre `webApplicationInfo` application :
+Pour utiliser l’API Détails de la réunion, vous devez obtenir des autorisations RSC. Utilisez l’exemple suivant pour configurer la propriété du manifeste de votre `webApplicationInfo` application :
 
 ```json
 "webApplicationInfo": {
@@ -256,7 +256,7 @@ L’API Détails de la réunion inclut le paramètre de requête suivant :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
+|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
 
 ### <a name="example"></a>Exemple
 
@@ -308,9 +308,6 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 ```
 
 ## <a name="real-time-teams-meeting-events"></a>Événements de réunion Teams en temps réel
-
-> [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
 
 L’utilisateur peut recevoir des événements de réunion en temps réel. Dès qu’une application est associée à une réunion, l’heure de début et de fin de la réunion réelle est partagée avec le bot.
 
@@ -465,13 +462,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>Exemple de code
 
-|Exemple de nom | Description | C # | Node.js | 
+|Exemple de nom | Description | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | Extensibilité des réunions | Microsoft Teams’extensibilité de réunion pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bulle de contenu de réunion | Microsoft Teams d’extensibilité de réunion pour interagir avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| MeetingSidePanel | Microsoft Teams d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| MeetingSidePanel | Microsoft Teams exemple d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | Onglet Détails de la réunion | Microsoft Teams exemple d’extensibilité de réunion pour interagir avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|Exemple d’événements de réunion|Exemple d’application pour afficher les événements de réunion Teams en temps réel|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+|Exemple d’événements de réunion|Exemple d’application pour afficher les événements de Teams en temps réel|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Exemple de recrutement de réunion|Exemple d’application pour afficher l’expérience de réunion pour le scénario de recrutement.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Installation de l’application à l’aide du code QR|Exemple d’application qui génère le code QR et installe l’application à l’aide du code QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 

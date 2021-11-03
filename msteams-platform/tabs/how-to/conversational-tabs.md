@@ -6,26 +6,26 @@ keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156994"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720371"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
-Les sous-entités de conversation permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier, également appelé entité. Un canal classique ou un onglet configurable permet à l’utilisateur d’avoir une conversation sur un onglet, mais l’utilisateur a besoin d’une conversation plus axée. L’exigence d’une conversation plus axée peut se produire soit s’il y a trop de contenu pour avoir une discussion centralisée, soit parce que le contenu a changé au fil du temps, ce qui rend la conversation non pertinente pour le contenu affiché. Les sous-entités de conversation offrent une expérience de conversation beaucoup plus axée sur les onglets dynamiques.
+Les sous-entités de conversation permettent aux utilisateurs d’avoir des conversations sur les sous-entités dans votre onglet. Par exemple, une tâche, un patient et une opportunité de vente spécifiques, au lieu de discuter de l’onglet entier, également appelé entité. Un canal traditionnel ou un onglet configurable permet à l’utilisateur d’avoir une conversation sur un onglet, mais l’utilisateur a besoin d’une conversation plus axée. L’exigence d’une conversation plus axée peut se produire soit s’il y a trop de contenu pour avoir une discussion centralisée, soit parce que le contenu a changé au fil du temps, ce qui rend la conversation non pertinente pour le contenu affiché. Les sous-entités de conversation offrent une expérience de conversation beaucoup plus axée sur les onglets dynamiques.
 
 Les sous-entités de conversation sont uniquement pris en charge dans les canaux. Ils peuvent être utilisés à partir d’un onglet personnel ou statique pour créer ou poursuivre des conversations dans des onglets déjà épinglés à un canal. L’onglet statique est utile si vous souhaitez fournir un emplacement à un utilisateur pour afficher et accéder aux conversations qui se produisent sur plusieurs canaux.
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-entités ↔ conversations dans une base de données principale. L’offre est fournie, mais vous devez la stocker et la renvoyer à Teams pour que les utilisateurs `conversationId` `conversationId` poursuivent la conversation.
+Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-↔ conversations dans une base de données principale. L’offre est fournie, mais vous devez la stocker et la renvoyer à Teams pour que les utilisateurs `conversationId` `conversationId` poursuivent la conversation.
 
 ## <a name="start-a-new-conversation"></a>Démarrer une nouvelle conversation
 
-Pour démarrer une nouvelle conversation, utilisez la `openConversation()` fonction. Le démarrage et la poursuite d’une conversation sont tous gérés par cette méthode. Les entrées de la fonction changent en fonction de l’action que vous souhaitez prendre. Du point de vue des utilisateurs, le panneau de conversation s’ouvre à droite de l’écran, soit pour initier une conversation, soit poursuivre une conversation.
+Pour démarrer une nouvelle conversation, utilisez la `openConversation()` fonction. Le démarrage et la poursuite d’une conversation sont tous gérés par cette méthode. Les entrées de la fonction changent en fonction de l’action que vous souhaitez entreprendre, du point de vue de l’utilisateur, ce qui ouvre le panneau de conversation à droite de l’écran, soit pour lancer une conversation, soit pour poursuivre une conversation.
 
 ``` javascript
 microsoftTeams.conversations.openConversation(openConversationRequest);
@@ -33,12 +33,12 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation prend les** entrées suivantes pour démarrer une conversation dans un canal :
 
-* **subEntityId**: il s’agit de l’ID de votre sous-entité spécifique. Par exemple, task-123.
-* **entityId**: il s’agit de l’ID de l’instance d’onglet lors de sa création. L’ID est important pour renvoyer à la même instance d’onglet.
-* **channelId**: il s’agit du canal dans lequel réside l’instance d’onglet.
+* **subEntityId**: ID de votre sous-entité spécifique. Par exemple, task-123.
+* **entityId**: ID de l’instance d’onglet lors de sa création. L’ID est important pour renvoyer à la même instance d’onglet.
+* **channelId**: canal dans lequel réside l’instance d’onglet.
    > [!NOTE]
-   > ChannelId **est** facultatif pour les onglets de canal. Toutefois, il est recommandé si vous souhaitez conserver votre implémentation entre les onglets de canal et statiques.
-* **title**: il s’agit du titre affiché à l’utilisateur dans le panneau de conversation.
+   > Le **channelId est** facultatif pour les onglets de canal. Toutefois, il est recommandé si vous souhaitez conserver votre implémentation entre les onglets de canal et statiques.
+* **title**: titre présenté à l’utilisateur dans le panneau de conversation.
 
 La plupart de ces valeurs peuvent également être récupérées à partir de `getContext` l’API.
 
@@ -50,7 +50,7 @@ L’image suivante montre le panneau de conversation :
 
 ![Sous-entités de conversation : démarrer une conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
 
-Si l’utilisateur démarre une conversation, il est important d’écouter le rappel de cet événement afin de récupérer et d’enregistrer la **conversationId**:
+Si l’utilisateur démarre une conversation, il est important d’écouter le rappel de cet événement pour récupérer et enregistrer la **conversationId**:
 
 ```javascript
 microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
@@ -62,7 +62,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 ## <a name="continue-a-conversation"></a>Poursuivre une conversation
 
-Après le démarrage d’une conversation, les appels suivants nécessitent que vous fournissiez également les mêmes entrées que dans le démarrage d’une nouvelle conversation, mais incluez également `openConversation()` **la conversationId**. [](#start-a-new-conversation) Le panneau de conversation s’ouvre pour l’utilisateur avec la conversation appropriée en vue. Les utilisateurs peuvent voir les messages nouveaux ou entrants en temps réel.
+Après le démarrage d’une conversation, les appels suivants doivent exiger que vous fournissiez également les mêmes entrées que dans le démarrage d’une nouvelle conversation, mais incluez également `openConversation()` **la conversationId**. [](#start-a-new-conversation) Le panneau de conversation s’ouvre pour les utilisateurs avec la conversation appropriée en vue. Les utilisateurs peuvent voir les messages nouveaux ou entrants en temps réel.
 
 L’image suivante montre le panneau de conversation avec la conversation appropriée :
 
@@ -70,9 +70,9 @@ L’image suivante montre le panneau de conversation avec la conversation approp
 
 ## <a name="enhance-a-conversation"></a>Améliorer une conversation
 
-Il est important que votre onglet inclut [des liens profonds vers votre sous-entité.](~/concepts/build-and-test/deep-links.md) Par exemple, l’utilisateur qui sélectionne le lien profond de l’onglet dans la conversation de canal. Le comportement attendu consiste à recevoir le lien profond, à ouvrir cette sous-entité, puis à ouvrir le panneau de conversation pour cette sous-entité.
+Il est important que votre onglet inclut des [liens profonds vers votre sous-entité.](~/concepts/build-and-test/deep-links.md) Par exemple, l’utilisateur qui sélectionne le lien d’onglet profondeur de la conversation de canal. Le comportement attendu consiste à recevoir le lien profond, à ouvrir cette sous-entité, puis à ouvrir le panneau de conversation pour cette sous-entité.
 
-Pour prendre en charge les sous-entités de conversation à partir de votre onglet personnel ou statique, vous n’avez rien à modifier dans votre implémentation. Nous viennent uniquement en charge le démarrage ou la poursuite des conversations à partir d’onglets de canal qui sont déjà épinglés. La prise en charge des onglets statiques vous permet de fournir un emplacement unique permettant à vos utilisateurs d’interagir avec toutes vos sous-entités. Il est important que vous enregistrez le , et lorsque votre onglet est initialement créé dans un canal pour avoir les propriétés droites lors de l’ouverture de l’affichage de conversation dans un `subEntityId` `entityId` onglet `channelId` statique.
+Pour prendre en charge les sous-entrées de conversation à partir de votre onglet personnel ou statique, vous n’avez rien à modifier dans votre implémentation. Nous viennent uniquement en charge le démarrage ou la poursuite des conversations à partir d’onglets de canal qui sont déjà épinglés. La prise en charge des onglets statiques vous permet de fournir un emplacement unique à vos utilisateurs pour interagir avec toutes vos sous-entités. Il est important que vous enregistrez le , et lorsque votre onglet est initialement créé dans un canal pour avoir les propriétés droites lors de l’ouverture de l’affichage de conversation dans un `subEntityId` `entityId` onglet `channelId` statique.
 
 ## <a name="close-a-conversation"></a>Fermer une conversation
 
@@ -92,7 +92,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C # |Node.js|
+| Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
 |Créer un onglet Conversationnel| Microsoft Teams exemple d’application d’onglet pour démontrer la création d’un onglet de conversation. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Comprendre les applications de réunions unifiées
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a69d0f709cdf3af52164d8ab336d3ec2a8f7de74
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 15a43721e8f5091f0a0bb3b69f781f1472b8e681
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260686"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720182"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -45,7 +45,7 @@ Avec l’expérience d’application préalable à la réunion, vous pouvez trou
 **Pour ajouter des onglets à une réunion existante**
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
-1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
+1. Sélectionnez **l’onglet Détails,** puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
 
     <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
@@ -103,7 +103,7 @@ La boîte de dialogue de réunion s’affiche et vous permet d’entrer votre r�
 > * Si la boîte de dialogue de réunion s’est correctement restituer, elle envoie une notification de téléchargement des résultats.
 > * Le manifeste de votre application spécifie les endroits où vous souhaitez que les applications apparaissent. Pour ce faire, vous pouvez spécifier le champ de contexte dans le manifeste. Il fait également partie d’une expérience de partage de la phase de réunion, sous réserve des instructions de [conception spécifiées.](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md)
 
-L’image suivante illustre le panneau latéral en réunion :
+L’image suivante illustre le panneau latéral de la réunion :
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -150,7 +150,7 @@ Pour implémenter l’extension de messagerie, commencez par créer une [extensi
 
 Les Teams réunions unifiées vous permettent de concevoir votre application en fonction des rôles des participants à une réunion.
 
-## <a name="participant-roles-in-a-meeting"></a>Rôles des participants dans une réunion
+## <a name="participant-roles-in-a-meeting"></a>Rôles des participants à une réunion
 
 ![Participants à une réunion](../assets/images/apps-in-meetings/participant-roles.png)
 
@@ -186,10 +186,10 @@ La liste suivante détaille les différents types d’utilisateurs, ainsi que le
     > [!IMPORTANT]
     > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)
 
-* **Anonyme**: les utilisateurs anonymes n’ont pas d’identité AAD et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être organisateur, mais peut être présentateur ou participant.
+* **Anonyme**: les utilisateurs anonymes n’ont pas AAD identité et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être organisateur, mais peut être présentateur ou participant.
 
     > [!NOTE]
-    > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale par défaut au niveau de l’utilisateur. Pour plus d’informations, voir [gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
+    > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale au niveau de l’utilisateur par défaut. Pour plus d’informations, voir [gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
 
 Un invité ou un utilisateur anonyme ne peut pas ajouter, supprimer ou désinstaller des applications.
 
@@ -197,9 +197,9 @@ Le tableau suivant fournit les types d’utilisateur et répertorie les fonction
 
 | Type d’utilisateur | Onglets | Bots | Extensions de messagerie | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion | 
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Non disponible | Peut afficher, mais ne peut pas interagir avec l’application lors de la phase de réunion |
-| Invité qui fait partie du client AAD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Disponible | Peut afficher et interagir avec l’application sur la phase de réunion |
-| Utilisateur fédéré. Pour plus d’informations, voir [utilisateurs non standard.](/microsoftteams/non-standard-users) | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir d’une carte adaptative sont autorisées. | Non disponible | Peut afficher et interagir avec l’application sur la phase de réunion |
+| Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut afficher et interagir avec l’application sur la phase de réunion |
+| Invité, faisant partie du client AAD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion |
+| Utilisateur fédéré, pour plus d’informations, voir [utilisateurs non standard.](/microsoftteams/non-standard-users) | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion |
 
 ## <a name="see-also"></a>Voir aussi
 

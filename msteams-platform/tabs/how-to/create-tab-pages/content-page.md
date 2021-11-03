@@ -1,17 +1,17 @@
 ---
 title: Créer une page de contenu
 author: surbhigupta
-description: Comment créer une page de contenu
+description: comment créer une page de contenu
 keywords: 'onglets teams : canal de groupe configurable statique'
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155516"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720312"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -78,12 +78,12 @@ Assurez-vous que tous les domaines d’URL utilisés dans vos onglets sont inclu
 
 ## <a name="show-a-native-loading-indicator"></a>Afficher un indicateur de chargement natif
 
-À partir [du schéma de manifeste v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement [natif.](../../../resources/schema/manifest-schema.md#showloadingindicator) Par exemple, page de [contenu d’onglet,](#integrate-your-code-with-teams) [page de configuration,](configuration-page.md) [page de suppression](removal-page.md)et [modules de tâche dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+À partir [du schéma de manifeste v1.7,](../../../resources/schema/manifest-schema.md)vous pouvez fournir un indicateur de chargement [natif.](../../../resources/schema/manifest-schema.md#showloadingindicator) Par exemple, page [de contenu d’onglet,](#integrate-your-code-with-teams) [page de configuration,](configuration-page.md) [page de suppression](removal-page.md)et [modules de tâche dans les onglets](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 > * Le comportement sur les clients mobiles n’est pas configurable via la propriété de l’indicateur de chargement natif. Les clients mobiles affichent cet indicateur par défaut sur les pages de contenu et les modules de tâche iframe. Cet indicateur sur mobile s’affiche lorsqu’une demande d’extraction de contenu est effectuée et est rejetée dès que la demande est terminée.
 
-Si vous indiquez dans le manifeste de votre application, toutes les pages de configuration, de contenu et de suppression d’onglets et tous les modules de tâche iframe doivent suivre `showLoadingIndicator : true`  les étapes suivantes :
+Si vous indiquez dans le manifeste de votre application, toutes les configurations d’onglets, le contenu, les pages de suppression et tous les modules de tâche iframe doivent suivre les `showLoadingIndicator : true`  étapes suivantes :
 
 **Pour afficher l’indicateur de chargement**
 
@@ -107,7 +107,6 @@ Si vous indiquez dans le manifeste de votre application, toutes les pages de con
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-* [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
 
 ## <a name="next-step"></a>Étape suivante
 

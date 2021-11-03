@@ -1,40 +1,39 @@
 ---
 title: Authentification pour les bots utilisant Azure Active Directory
-description: Décrit l’authentification Azure AD Teams et comment l’utiliser dans vos bots
-keywords: Bots d’authentification Teams AAD
+description: Décrit Azure AD l’authentification Teams et comment l’utiliser dans vos bots
+keywords: Bots d’authentification teams AAD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1f13e561e94029f007ff055627f335d00ee1c441
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155757"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720070"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Authentifier un utilisateur dans un bot Microsoft Teams client
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Il existe de nombreux services que vous souhaitez peut-être consommer dans votre application Teams, et la plupart de ces services nécessitent une authentification et une autorisation pour accéder au service. Les services incluent Facebook, Twitter et bien Teams. Les utilisateurs Teams ont des informations de profil utilisateur stockées dans Azure Active Directory (Azure AD) à l’aide de Microsoft Graph. Cet article se concentre sur l’authentification à l’aide d’Azure AD pour accéder à ces informations.
+Il existe de nombreux services que vous souhaitez peut-être consommer dans votre application Teams, et la plupart de ces services nécessitent une authentification et une autorisation pour obtenir l’accès. Les services incluent Facebook, Twitter et Teams. Les utilisateurs Teams ont des informations de profil utilisateur stockées dans Azure Active Directory (Azure AD) à l’aide de Microsoft Graph. Cette rubrique se concentre sur l’authentification à l Azure AD pour obtenir l’accès.
+OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est une condition préalable pour travailler avec l’authentification dans Teams et Azure AD. Les exemples suivants utilisent le flux d’octroi implicite OAuth 2.0 pour finir par lire les informations de profil de l’utilisateur à partir de Azure AD et Microsoft Graph.
 
-OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est une condition préalable à l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0 pour finir par lire les informations de profil de l’utilisateur à partir d’Azure AD et de Microsoft Graph.
-
-Le flux d’authentification décrit dans cet article est très similaire à celui des onglets, sauf que les onglets peuvent utiliser un flux d’authentification web et que les bots nécessitent l’authentification basée sur le code. Les concepts de cet article seront également utiles lors de l’implémentation de l’authentification à partir de la plateforme mobile.
+Le flux d’authentification décrit dans cette rubrique est similaire aux onglets, sauf que les onglets peuvent utiliser le flux d’authentification web et que les bots nécessitent que l’authentification soit pilotée à partir du code. Les concepts de cette rubrique seront également utiles lors de l’implémentation de l’authentification à partir de la plateforme mobile.
 
 Pour une vue d’ensemble du flux d’authentification pour les bots, consultez la rubrique [Flux d’authentification dans les bots.](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)
 
 ## <a name="configuring-identity-providers"></a>Configuration des fournisseurs d’identité
 
-Consultez la rubrique [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+Consultez la rubrique [Configurer](~/concepts/authentication/configure-identity-provider.md) les fournisseurs d’identité pour obtenir la procédure détaillée de configuration des URL de redirection de rappel OAuth 2.0 lors de l’utilisation de Azure Active Directory comme fournisseur d’identité.
 
 ## <a name="initiate-authentication-flow"></a>Démarrer le flux d’authentification
 
-Le flux d’authentification doit être déclenché par une action de l’utilisateur. Vous ne devez pas ouvrir automatiquement la fenêtre d’authentification, car cela est susceptible de déclencher le bloqueur de fenêtres d’authentification du navigateur et de dérouter l’utilisateur.
+Le flux d’authentification doit être déclenché par une action de l’utilisateur. N’ouvrez pas automatiquement la fenêtre d’authentification, car elle peut déclencher le bloqueur de fenêtres d’authentification du navigateur et dérouter l’utilisateur.
 
 ## <a name="add-ui-to-start-authentication"></a>Ajouter une interface utilisateur pour démarrer l’authentification
 
-Ajoutez une interface utilisateur au bot pour permettre à l’utilisateur de se connecter en cas de besoin. Ici, elle est effectuée à partir d’une carte miniature, dans TypeScript :
+Ajoutez une interface utilisateur au bot pour permettre à l’utilisateur de se connecter si nécessaire. Ici, elle est effectuée à partir d’une carte miniature, dans TypeScript :
 
 ```typescript
 // Show prompt of options
@@ -65,7 +64,7 @@ En raison de la validation qui doit être effectuée pour des raisons de sécuri
 
 La validation et la prise en charge mobile sont expliquées dans la rubrique [Flux d’authentification dans les bots.](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)
 
-N’oubliez pas d’ajouter le domaine de votre URL de redirection d’authentification à [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) la section du manifeste. Si ce n’est pas le cas, la fenêtre de connexion ne s’affiche pas.
+N’oubliez pas d’ajouter le domaine de votre URL de redirection d’authentification à [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) la section du manifeste. Si vous ne vous connectez pas, la fenêtre popup ne s’affiche pas.
 
 ## <a name="showing-user-profile-information"></a>Affichage des informations de profil utilisateur
 

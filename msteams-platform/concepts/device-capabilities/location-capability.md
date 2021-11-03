@@ -6,12 +6,12 @@ keywords: autorisations natives d’appareil pour les fonctionnalités de carte 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496143"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719790"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement 
 
@@ -102,6 +102,12 @@ Vous devez vous assurer de gérer ces erreurs de manière appropriée dans votre
 | **4000** | INVALID_ARGUMENTS | L’API est invoquée avec des arguments obligatoires erronés ou insuffisants.|
 | **8000** | USER_ABORT |L’utilisateur a annulé l’opération.|
 | **9000** | OLD_PLATFORM | L’utilisateur se trouve sur une ancienne build de plateforme où l’implémentation de l’API n’est pas présente. La mise à niveau de la build doit résoudre le problème.|
+
+### <a name="code-sample"></a>Exemple de code
+
+|Exemple de nom | Description | C# | Node.js | 
+|----------------|-----------------|--------------|--------------|
+| Emplacement actuel d’enregistrement de l’application | Les utilisateurs peuvent vérifier l’emplacement actuel et afficher toutes les vérifications d’emplacement précédentes.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

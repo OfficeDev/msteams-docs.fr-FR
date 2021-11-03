@@ -5,12 +5,12 @@ description: Guide de démarrage rapide sur la création d’un onglet personnel
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155581"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719931"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -66,11 +66,11 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
     yo teams
     ```
 
-1. Ensuite, fournissez une série de valeurs utilisées dans le fichiermanifest.js **application** :
+1. Ensuite, fournissez une série de valeurs utilisées dans le fichier **manifest.json** de votre application :
 
-    ![Capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    **Quel est le nom de votre solution ?**
+    **Quel est le nom de votre solution ?**
 
     Le nom de la solution est le nom de votre projet. Vous pouvez accepter le nom suggéré en sélectionnant **Entrée.**
 
@@ -136,7 +136,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     **Avez-vous besoin d’une prise en charge de l’authentification unique Azure AD pour l’onglet ?**
 
-    Choisissez **de** ne pas inclure la prise en charge de l' sign-on unique Azure AD pour l’onglet. La valeur par défaut est oui, entrez **n**.
+    Choisissez **de** ne pas inclure Azure AD prise en charge de l' sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
 
     > [!IMPORTANT]
     > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
@@ -169,19 +169,19 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
     </html>
     ```
 
-1. Enregistrez **personal.html** dans le dossier **web** de votre application à l’emplacement suivant :
+1. Enregistrez **personal.html** dans le dossier web de **votre** application à l’emplacement suivant :
 
     ```bash
     ./src/app/web/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Ouvrez **manifest.jsà partir** de l’emplacement suivant dans votre éditeur de code :
+1. Ouvrez **manifest.json à** partir de l’emplacement suivant dans votre éditeur de code :
 
     ```bash
     ./src/manifest/manifest.json/
     ```
 
-1. Ajoutez ce qui suit au tableau `staticTabs` vide ( ) et `staticTabs":[]` ajoutez l’objet JSON suivant :
+1. Ajoutez ce qui suit au tableau vide ( ) et `staticTabs` `staticTabs":[]` ajoutez l’objet JSON suivant :
 
     ```json
     {
@@ -195,7 +195,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
 1. Mettez à jour le composant de chemin **d’accès contentURL** **yourDefaultTabNameTab** avec votre nom d’onglet réel.
 
-1. Enregistrez **l'manifest.jsmise à jour dans le** fichier.
+1. Enregistrez le fichier **manifest.json** mis à jour.
 
 1. Pour fournir votre page de contenu dans un IFrame, ouvrez **Tab.ts** dans votre éditeur de code à partir du chemin d’accès suivant :
 
@@ -217,13 +217,13 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
 #### <a name="create-the-app-package"></a>Créer le package d’application
 
-Vous devez avoir un package d’application pour tester votre onglet dans Teams. Il s’agit d’un dossier zip qui contient les fichiers obligatoires suivants :
+Vous devez avoir un package d’application pour tester votre onglet dans Teams. Il s’agit d’un dossier zip qui contient les fichiers requis suivants :
 
 - Icône **en couleurs complètes** de 192 x 192 pixels.
 - Icône **de plan transparente de** 32 x 32 pixels.
-- Un **manifest.jssur** le fichier qui spécifie les attributs de votre application.
+- Fichier **manifest.json** qui spécifie les attributs de votre application.
 
-Le package est créé par le biais d’une tâche Gulp qui valide l'manifest.jssur le fichier et génère le dossier zip dans le répertoire **./package.** Dans l’invite de commandes, entrez la commande suivante :
+Le package est créé par le biais d’une tâche Gulp qui valide le fichier manifest.json et génère le dossier zip dans le répertoire **./package.** Dans l’invite de commandes, entrez la commande suivante :
 
 ```bash
 gulp manifest
@@ -279,7 +279,7 @@ gulp ngrok-serve
 
     ![Ajout de votre onglet personnel](../../assets/images/tab-images/addingpersonaltab.png)
 
-1. **Sélectionnez** Ajouter dans la boîte de dialogue de fenêtre pop-up. Votre onglet est téléchargé vers Teams.
+1. Sélectionnez **Ajouter** dans la boîte de dialogue. Votre onglet est téléchargé vers Teams.
 
     ![Onglet personnel chargé](../../assets/images/tab-images/personaltabuploaded.png)
 
@@ -291,7 +291,7 @@ Dans la barre de navigation à l’extrême gauche Teams, sélectionnez les &#x2
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>Créer un onglet personnel personnalisé à l’aide ASP.NET Core
 
-Vous pouvez créer un onglet personnel personnalisé à l’aide de C# et ASP.NET Core pages De l’ordinateur. [App Studio](~/concepts/build-and-test/app-studio-overview.md) est également utilisé pour compléter le manifeste de votre application et déployer votre onglet sur Teams.
+Vous pouvez créer un onglet personnel personnalisé à l’aide C# et ASP.NET Core pages Dente. [App Studio](~/concepts/build-and-test/app-studio-overview.md) est également utilisé pour compléter le manifeste de votre application et déployer votre onglet sur Teams.
 
 ### <a name="prerequisites-for-personal-tab"></a>Conditions préalables pour l’onglet personnel
 
@@ -302,7 +302,7 @@ Vous devez connaître les conditions préalables suivantes :
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft.](https://developer.microsoft.com/en-us/microsoft-365/dev-program) L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
 
-- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** Store App dans le coin inférieur gauche de ![ l’application ](~/assets/images/tab-images/storeApp.png) Teams, puis **recherchez App Studio.** Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez Ajouter **dans** la boîte de dialogue pop-up pour l’installer.
+- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** Store App dans le coin inférieur gauche de ![ l’application ](~/assets/images/tab-images/storeApp.png) Teams, puis **recherchez App Studio.** Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez Ajouter **dans** la boîte de dialogue pour l’installer.
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
@@ -336,7 +336,7 @@ Vous pouvez également récupérer le code source en téléchargeant le dossier 
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire de fichiers statiques est ajouté à la méthode à l’aide du `Configure()` code suivant :
+Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du `Configure()` code suivant :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -364,7 +364,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 - Icône **en couleurs complètes** de 192 x 192 pixels.
 - Icône **de plan transparente de** 32 x 32 pixels.
-- Un **manifest.jssur** le fichier qui spécifie les attributs de votre application.
+- Fichier **manifest.json** qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams charge le spécifié dans votre manifeste, l’incorpore dans un iframe <et l’restituer `contentUrl` \> dans votre onglet.
 
@@ -427,7 +427,7 @@ Pour tester votre onglet, utilisez [ngrok](https://ngrok.com/docs). Les points d
 
     Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
 
-2. Vérifiez que **ngrok** s’exécute et fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
+2. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
 > [!TIP]
 > Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution.** Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour chaque endroit qui utilise cette URL.
@@ -439,7 +439,7 @@ Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le** débogage 
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>Télécharger onglet avec App Studio pour Teams
 
 > [!NOTE]
-> **App Studio peut** être utilisé pour modifier votre **manifest.jsfichier** et télécharger le package terminé dans Teams. Vous pouvez également modifier manuellement **manifest.jssur**. Si vous le faites, veillez à générer à nouveau la solution pour créerTab.zip **fichier** à télécharger.
+> **App Studio** peut être utilisé pour modifier votre **fichier manifest.json** et télécharger le package terminé dans Teams. Vous pouvez également modifier manuellement **manifest.json**. Si vous le faites, veillez à générer à nouveau la solution pour créerTab.zip **fichier** à télécharger.
 
 **Pour télécharger votre onglet avec App Studio**
 
@@ -461,7 +461,7 @@ Une fois que vous avez chargé votre package d’application dans App Studio, vo
 
 Sélectionnez la vignette de l’onglet nouvellement importé de la page d’accueil de l’éditeur de manifeste.
 
-Il existe une liste d’étapes sur le côté gauche de l’éditeur de manifeste. Sur le côté droit de l’éditeur de manifeste figure une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par votre **manifest.js,** mais vous devez mettre à jour certains champs.
+Il existe une liste d’étapes sur le côté gauche de l’éditeur de manifeste. Sur le côté droit de l’éditeur de manifeste figure une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par **votre manifest.json,** mais vous devez mettre à jour certains champs.
 
 ##### <a name="details-app-details"></a>Détails : détails de l’application
 
@@ -564,7 +564,7 @@ Vous pouvez également récupérer le code source en téléchargeant le dossier 
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire de fichiers statiques est ajouté à la méthode à l’aide du `Configure()` code suivant :
+Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de `ConfigureServices()` dépendances. En outre, le modèle vide n’active pas la portion de contenu statique par défaut, de sorte que l’intermédiaire de fichiers statiques est ajouté à la méthode à l’aide du `Configure()` code suivant :
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -588,7 +588,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 * Icône **en couleurs complètes** de 192 x 192 pixels.
 * Icône **de plan transparente de** 32 x 32 pixels.
-* Un **manifest.jssur** le fichier qui spécifie les attributs de votre application.
+* Fichier **manifest.json** qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Microsoft Teams charge le spécifié dans votre manifeste, l’incorpore dans un IFrame et l’restituer `contentUrl` dans votre onglet.
 
@@ -620,7 +620,7 @@ Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit s
 
 #### <a name="views"></a>Affichages
 
-Ces affichages sont les différents affichages dans ASP.NET Core MVC :
+Ces affichages sont les différents dans ASP.NET Core MVC :
 
 * Accueil : ASP.NET Core fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** s’affiche en tant que page d’accueil de votre application.
 
@@ -646,14 +646,14 @@ Les contrôleurs utilisent la propriété pour transférer dynamiquement des `Vi
 
     Veillez à ce que l’invite de commandes avec ngrok soit en cours d’exécution et notez l’URL.
 
-1. Vérifiez que **ngrok** s’exécute et fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
+1. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
 > [!TIP]
 > Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution.** Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour chaque endroit qui utilise cette URL.
 
 #### <a name="run-your-application"></a>Exécuter votre application
 
-Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage de votre** application.
+Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage de votre** application.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
@@ -680,6 +680,70 @@ Si vous créez un bot avec une **étendue** personnelle, il apparaît par défau
    ]
 }
 ```
+
+## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Ajouter `registerOnFocused` une API pour les onglets ou les applications personnelles
+
+`registerOnFocused`L’API du SDK vous permet d’utiliser un clavier sur Teams. Vous pouvez revenir à une application personnelle et maintenir le focus sur un onglet ou une application personnelle à l’aide des touches Ctrl, Shift et F6. Par exemple, vous pouvez vous éloigner de l’application personnelle pour rechercher quelque chose, puis revenir à l’application personnelle ou utiliser Ctrl+F6 pour contourner les endroits requis. 
+
+Le code suivant fournit un exemple de définition de handler sur le SDK lorsque le focus doit être renvoyé à `registerFocusEnterHandler` l’onglet ou à l’application personnelle :
+
+```csharp
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+```
+
+Une fois que le handler est déclenché avec le mot clé, le handler est appelé avec une fonction de rappel qui prend un `focusEnter` `registerFocusEnterHandler` paramètre appelé `focusEnterHandler` `navigateForward` . La valeur de `navigateForward` détermine le type d’événements. Il `focusEnterHandler` est appelé uniquement par Ctrl+F6 et non par la touche de tabulation.   
+Les clés utiles pour les événements de déplacement Teams sont les suivantes :    
+* Forward event -> Ctrl+F6 keys
+* Événement backward - > touches Ctrl+Shift+F6
+
+```csharp
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+```
+
+### <a name="personal-app"></a>Application personnelle
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Exemple d’options pour l’ajout de l’API registerOnFocussed" border="false":::
+
+#### <a name="personal-app---forward-event"></a>Application personnelle - Événement Forward
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Exemple d’options pour l’ajout d’un déplacement de l’API registerOnFocussed" border="false":::
+
+#### <a name="personal-app---backward-event"></a>Application personnelle - Événement arrière
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Exemple d’options pour ajouter un déplacement arrière de l’API registerOnFocussed" border="false":::
+
+### <a name="tab"></a>Tab
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Exemple d’options pour l’ajout de l’API registerOnFocussed pour l’onglet" border="false":::
 
 ## <a name="see-also"></a>Voir aussi
 

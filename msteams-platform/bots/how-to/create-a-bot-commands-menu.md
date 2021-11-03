@@ -5,18 +5,18 @@ description: Comment créer un menu de commandes pour votre bot Microsoft Teams 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155686"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720105"
 ---
 # <a name="bot-command-menus"></a>Menus de commande du bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Pour définir un ensemble de commandes principales à qui votre bot peut répondre, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot. La liste des commandes est présentée aux utilisateurs dans la zone composer un message lorsqu’ils sont en conversation avec votre bot. Sélectionnez une commande dans la liste pour insérer la chaîne de commande dans la zone composer un message et sélectionnez **Envoyer**.
+Pour définir un ensemble de commandes principales à qui votre bot peut répondre, vous pouvez ajouter un menu de commandes avec une liste déroulante de commandes pour votre bot. La liste des commandes est présentée aux utilisateurs dans la zone composer un message lorsqu’ils sont en conversation avec votre bot. Sélectionnez une commande dans la liste pour insérer la chaîne de commande dans la zone composer un message et sélectionnez **Envoyer.**
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -44,7 +44,7 @@ Pour créer un menu de commandes pour votre bot, vous devez modifier un manifest
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. Dans **App Studio,** sélectionnez **l’onglet Éditeur de** manifeste. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, voir [mettre à jour un package d’application.](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)
+2. Dans **App Studio,** sélectionnez **l’onglet Éditeur de** manifeste. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, voir [mettre à jour un package d’application.](~/get-started/deploy-csharp-app-studio.md)
 
 3. Dans le volet gauche de l’éditeur **de manifeste** et dans la **section** **Fonctionnalités,** sélectionnez Bots .
 
@@ -60,7 +60,7 @@ Pour créer un menu de commandes pour votre bot, vous devez modifier un manifest
 
     ![Bouton de menu Nouvelles commandes App Studio](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Créer un menu de commandes pour votre bot en le Manifest.jssur
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Créer un menu de commandes pour votre bot en éditant Manifest.json
 
 Une autre façon de créer un menu de commandes consiste à le créer directement dans le fichier manifeste lors du développement de votre code source de bot. Pour utiliser cette méthode, suivez les points ci-après :
 
@@ -181,7 +181,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 Vous pouvez analyser la **\@ partie Mention** du texte du message à l’aide d’une méthode statique fournie avec Bot Framework. Il s’agit d’une méthode de `TurnContext` la classe nommée `removeMentionText` .
 
-Le code JavaScript pour l’utilisation de la partie **\@ Mention** du texte du message est le suivant :
+Le code JavaScript pour l’utilisation de la **\@ partie Mention** du texte du message est le suivant :
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -207,7 +207,7 @@ Voici les meilleures pratiques en matière de menu de commandes :
 
 * Restez simple : le menu bot est destiné à présenter les fonctionnalités clés de votre bot.
 * Restez bref : les options de menu ne doivent pas être longues et ne doivent pas être des instructions de langage naturel complexes. Ce doivent être des commandes simples.
-* Restez invocable : les commandes ou les actions de menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans le bot.
+* Gardez-le invocable : les commandes ou les actions de menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans le bot.
 
 > [!NOTE]
 > Si vous supprimez des commandes de votre manifeste, vous devez redéployer votre application pour implémenter les modifications. En règle générale, les modifications apportées au manifeste vous obligent à redéployer votre application.

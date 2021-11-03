@@ -6,24 +6,24 @@ keywords: Canal de groupe onglets teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155580"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720189"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
-Une page de configuration est un type spécial de [page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
+Une page de configuration est un type spécial [de page de contenu.](content-page.md) Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
 
-* Onglet de conversation de canal ou de groupe : recueillez des informations auprès des utilisateurs et définissez la page de contenu `contentUrl` à afficher.
+* Onglet de conversation de canal ou de groupe : collecter des informations auprès des utilisateurs et définir l’affichage de la `contentUrl` page de contenu.
 * Une [extension de messagerie](~/messaging-extensions/what-are-messaging-extensions.md).
-* Un [connecteur Office 365 .](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* Un [connecteur Office 365.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un onglet de conversation de canal ou de groupe
 
-L’application doit référencer [le Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . Les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud.
+L’application doit référencer [Microsoft Teams SDK client JavaScript et](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) appeler `microsoft.initialize()` . Les URL utilisées doivent être sécurisées par des points de terminaison HTTPS et disponibles à partir du cloud.
 
 ### <a name="example"></a>Exemple
 
@@ -90,11 +90,11 @@ Le code suivant est un exemple de code correspondant pour la page de configurati
 
 Choisissez le **bouton Sélectionner gris** ou **Rouge** dans la page de configuration pour afficher le contenu de l’onglet avec une icône grise ou rouge.
 
-L’image suivante affiche le contenu de l’onglet avec une icône grise :
+L’image suivante affiche le contenu de l’onglet avec **l’icône** Gris sélectionnée :
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-L’image suivante affiche le contenu de l’onglet avec une icône rouge :
+L’image suivante affiche le contenu de l’onglet avec **l’icône** Rouge sélectionnée :
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
@@ -123,7 +123,7 @@ Pour plus d’informations sur les propriétés utilisées pour la configuration
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservé dans le `configurationUrl`
 
-Ajoutez des espaces réservé à l’interface de contexte à votre `configurationUrl` base. Par exemple :
+Ajoutez des espaces réservé à l’interface de contexte à votre `configurationUrl` base. Par exemple :
 
 ##### <a name="base-url"></a>URL de base
 
@@ -178,7 +178,7 @@ Le code suivant fournit un exemple d’ajout de cette fonction à la page de con
 
 ## <a name="context-and-authentication"></a>Contexte et authentification
 
-Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir authentifier un utilisateur dans un Microsoft Teams onglet .](~/tabs/how-to/authentication/auth-flow-tab.md) Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation. Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` tableau et dans `validDomains` celui-ci.
+Authentifier avant d’autoriser un utilisateur à configurer votre application. Dans le cas contraire, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, [voir authentifier un utilisateur dans Microsoft Teams onglet .](~/tabs/how-to/authentication/auth-flow-tab.md) Utilisez les informations de contexte pour construire les demandes d’authentification et les URL de page d’autorisation. Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le `manifest.json` tableau et dans `validDomains` celui-ci.
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
 
@@ -198,7 +198,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur les clients mobiles Teams, la configuration doit avoir `setSettings()` une valeur pour `websiteUrl` . Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
+Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur les clients Teams mobiles, la configuration doit `setSettings()` avoir une valeur pour `websiteUrl` . Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
 
 ## <a name="see-also"></a>Voir aussi
 

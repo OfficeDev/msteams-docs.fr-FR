@@ -1,20 +1,20 @@
 ---
 title: Prise en charge de l' sso pour vos extensions de messagerie
 author: KirtiPereira
-description: Comment activer la prise en charge de l' sso pour vos extensions de messagerie
+description: Comment activer la prise en charge de l' luiso pour vos extensions de messagerie
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: efda0e946204a756d75874a55ac728f81f8ebaef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155758"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720056"
 ---
-# <a name="single-sign-on-sso-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique (SSO) pour les extensions de messagerie
+# <a name="single-sign-on-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique pour les extensions de messagerie
  
-La prise en charge de l' sign-on unique est désormais disponible pour les extensions de messagerie et le déploiement de liens. L’activation de l’authentification unique (SSO) pour les extensions de messagerie actualisent silencieusement le jeton d’authentification, ce qui réduit le nombre de fois que vous devez entrer vos informations d’identification de connexion pour Microsoft Teams.
+La prise en charge de l' sign-on unique (SSO) est désormais disponible pour les extensions de messagerie et le déploiement de liens. L’activation de l’authentification unique pour les extensions de messagerie par défaut actualise le jeton d’authentification, ce qui réduit le nombre de fois que vous devez entrer les informations d’identification de connexion pour Microsoft Teams.
 
 Ce document vous guide sur la façon d’activer l’authentification sso et de stocker votre jeton d’authentification, si nécessaire.
 
@@ -22,24 +22,24 @@ Ce document vous guide sur la façon d’activer l’authentification sso et de 
 
 La condition préalable à l’activer pour les extensions de messagerie et le déploiement des liens est la suivante :
 * Vous devez avoir un [compte Azure.](https://azure.microsoft.com/free/)
-* Vous devez configurer votre application via le portail AAD et mettre à jour votre manifeste d’application Teams pour votre bot, comme défini dans l’inscription de votre application via le portail [AAD.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
+* Vous devez configurer votre application via le portail AAD et mettre à jour le manifeste de votre application Teams tel que défini dans enregistrer votre application via le portail [AAD.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
 
 > [!NOTE]
-> Pour plus d’informations sur la création d’un compte Azure et la mise à jour du manifeste de votre application, voir la prise en charge de l' [sign-on unique (SSO) pour les bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)
+> Pour plus d’informations sur la création d’un compte Azure et la mise à jour du manifeste de votre application, consultez la prise en charge de l' [sign-on unique (SSO) pour les bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 
 ## <a name="enable-sso-for-messaging-extensions-and-link-unfurling"></a>Activer l' sso pour les extensions de messagerie et le déploiement de liens
 
 Une fois les conditions préalables terminées, vous pouvez activer l’ingso pour les extensions de messagerie et le déploiement des liaisons.
 
 **Pour activer l' utilisateur sso**
-1. Mettez à jour les détails [de connexion OAuth de](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) vos bots dans le portail Azure.
+1. Mettez à jour les détails [de connexion OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de vos bots dans le portail Azure.
 2. Téléchargez [l’exemple d’extensions de messagerie](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) et suivez les instructions d’installation fournies par l’Assistant.
    > [!NOTE]
    > Utilisez la connexion OAuth de vos bots lors de la configuration de vos extensions de messagerie.
 3. Dans le fichier [TeamsMessagingExtensionsSearchAuthConfigBot.cs,](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) mettez à jour la valeur de *l’th* à *silentAuth* dans et / ou `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` .  
 
     > [!NOTE]
-    > Nous ne prise en charge pas d’autres ssO de handlers, à l’exception du fichier `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` TeamsMessagingExtensionsSearchAuthConfigBot.cs.
+    > Nous ne tenons pas d’autres sso de handlers, à l’exception du fichier `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` TeamsMessagingExtensionsSearchAuthConfigBot.cs.
    
 4. Vous recevez le jeton dans le handler dans la charge utile ou dans le , en fonction du scénario pour lequel vous activez l' `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` cesso pour `OnTeamsAppBasedLinkQueryAsync` :
 

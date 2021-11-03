@@ -4,18 +4,18 @@ author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360481"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720210"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
 Chaque équipe dispose d’une façon différente de communiquer et de collaborer sur des tâches. Pour effectuer ces différentes tâches, personnalisez Teams des applications pour les réunions. Activez vos applications pour Teams réunions et configurez les applications pour qu’elles soient disponibles dans l’étendue de la réunion dans leur manifeste d’application.
 
-## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour les Teams réunion
+## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour Teams réunions
 
 Pour activer votre application pour les réunions Teams, mettez à jour votre manifeste d’application et utilisez les propriétés de contexte pour déterminer où votre application doit apparaître.
 
@@ -24,7 +24,7 @@ Pour activer votre application pour les réunions Teams, mettez à jour votre ma
 Les fonctionnalités de l’application réunions sont déclarées dans le manifeste de votre application à l’aide `configurableTabs` des `scopes` tableaux et des `context` tableaux. L’étendue définit qui peut accéder et le contexte définit l’endroit où votre application est disponible.
 
 > [!NOTE]
-> * Vous devez mettre à jour votre manifeste d’application avec [le schéma de manifeste.](../resources/schema/manifest-schema-dev-preview.md)
+> * Vous devez mettre à jour le manifeste de votre application avec [le schéma de manifeste.](../resources/schema/manifest-schema-dev-preview.md)
 > * Les applications dans les réunions nécessitent une `groupchat` étendue. `team`L’étendue fonctionne pour les onglets dans les canaux uniquement.
 
 Le manifeste de l’application doit inclure l’extrait de code suivant :
@@ -97,6 +97,7 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots.**
 
 > [!NOTE]
+> * La bulle de contenu publie une carte adaptative ou une carte simultanément dans la conversation de réunion accessible aux utilisateurs. Cela aide les utilisateurs lorsque la réunion ou l’Teams’application est réduite.
 > * L’identité de l’utilisateur doit être confirmée à [l’aide de l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
 > * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
 > * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, voir [les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
@@ -118,13 +119,13 @@ L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est 
 
 #### <a name="in-meeting-dialog-box"></a>Boîte de dialogue En réunion
 
-La boîte de dialogue de réunion est utilisée pour impliquer les participants pendant la réunion et recueillir des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](API-references.md#notificationsignal-api) l’API pour déclencher une notification de bulle. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
+La boîte de dialogue de réunion est utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](API-references.md#notificationsignal-api) l’API pour déclencher une notification de bulle. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
 
 La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher la bulle de contenu dans une réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
 
 > [!NOTE]
 > * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur effectue une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, voir Teams module de [tâche du SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial doit reposer sur les métadonnées de demande dans l’objet, `from.id` et non sur les `from` `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` Azure Active Directory (AAD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial doit reposer sur les métadonnées de demande dans l’objet, `from.id` et non sur les `from` `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Azure Active Directory (AAD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 #### <a name="shared-meeting-stage"></a>Étape de réunion partagée
 

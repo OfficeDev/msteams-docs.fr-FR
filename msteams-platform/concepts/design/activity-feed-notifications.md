@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des notifications de flux d’activit�
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156803"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719916"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Conception de notifications de flux d’activités pour Microsoft Teams application
 
@@ -36,8 +36,8 @@ Le flux d’activités permet aux utilisateurs d’accéder à leurs notificatio
 |2|**Icône type d’activité/application**: représente le type d’activité. Pour les notifications d’application, l’icône de ligne est remplacée par une icône d’application.|
 |3|**Titre (première ligne) : Actor + reason**: *Actor*: Nom de l’utilisateur ou de l’application qui a initié l’activité. *Raison*: décrit l’activité.|
 |4 |**Timestamp :** indique quand l’activité s’est produite.|
-|5 |**Emplacement (deuxième ligne)**: indique où l’activité s’est produite Teams.|
-|6 |**Informations tertiaires (troisième ligne)**: Facultatif. Affiche un aperçu de texte ou des informations supplémentaires.|
+|5|**Emplacement (deuxième ligne)**: indique où l’activité s’est produite Teams.|
+|6 |**Aperçu de texte (troisième ligne)**: affiche une ligne tronquée à partir du début de la notification.|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>Types de cartes de notification de flux d’activités
 
@@ -64,7 +64,7 @@ Chaque activité génère une notification système. Ce qui s’affiche dépend 
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de cartes Teams d’activité sur différents systèmes d’exploitation." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variantes de Teams d’activité sur différents systèmes d’exploitation." border="false":::
 
 |Compteur|Description|
 |----------|-----------|

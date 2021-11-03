@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566287"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720385"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
@@ -32,7 +32,7 @@ Vous pouvez choisir entre l’étendue personnelle et l’étendue d’équipe o
 
 * Pour l’étendue personnelle, posez-vous les questions suivantes :
   * Existe-t-il des interactions un-à-un avec l’application requises pour des raisons de confidentialité ou pour d’autres raisons ? Par exemple, vérification du solde des congés ou d’autres informations privées.
-  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, la recherche d’événements à l’échelle de l’organisation à venir dans une entreprise.
+  * Existe-t-il une collaboration entre les utilisateurs qui n’ont peut-être pas de Teams ? Par exemple, recherche des événements à venir à l’échelle de l’organisation dans une entreprise.
   * Existe-t-il des notifications personnalisées ou des messages qui devront être envoyés à un utilisateur tout au long de l Teams’application ? Par exemple, les rappels pour les approbations ou les inscriptions.
 * Pour une étendue partagée (équipe, canal ou conversation), posez-vous les questions suivantes :
   * Les informations présentées par l’application, sous l’onglet ou par le biais d’un bot, sont-ils pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, application Scrum.
@@ -60,21 +60,21 @@ Les applications pour Microsoft Teams sont un excellent moyen d’interagir avec
 
 ## <a name="initiate-workflows-and-processes"></a>Démarrer des flux de travail et des processus
 
-Parfois, vous avez simplement besoin d’un moyen rapide pour démarrer un processus ou un flux de travail dans un système externe.
+Parfois, vous avez simplement besoin d’un moyen rapide pour initier un processus ou un flux de travail dans un système externe.
 
 * **Commandes d’action** des extensions de messagerie : déclencher à partir de messages, ce qui permet à vos utilisateurs d’envoyer rapidement le contenu d’un message à vos services web.
 
 * **Modules de tâche**: ouvrez-les à partir d’un onglet, d’un bot ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail.
 
-* **Bots de conversation**: interagir avec vos utilisateurs via du texte et des cartes enrichies.
+* **Bots de conversation**: interagissez avec vos utilisateurs par le biais de texte et de cartes enrichies.
 
 * **Webhooks sortants**: un bon choix pour une interaction simple de va-et-vient lorsque vous n’avez pas besoin de créer un bot conversationnel entier.
 
 ## <a name="send-notifications-and-alerts"></a>Envoyer des notifications et des alertes
 
-Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions couramment utilisées et des liens vers des informations supplémentaires.
+Envoyez des notifications asynchrones et des alertes à vos utilisateurs dans Teams. Utilisez des cartes interactives pour fournir un accès rapide aux actions courantes et des liens vers des informations supplémentaires.
 
-* **Bots de conversation**: envoyez des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
+* **Bots de conversation**: envoient des messages proactifs à des groupes, des canaux ou des utilisateurs individuels.
 
 * **Connecteurs et webhooks entrants**: autoriser un canal à s’abonner pour recevoir des messages. Un connecteur permet aux utilisateurs d’adapter l’abonnement avec une page de configuration.
 
@@ -88,15 +88,15 @@ Les personnes ont des questions et vous avez probablement une grande partie des 
 
 ## <a name="get-social"></a>Obtenir des réseaux sociaux
 
-Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
+Une plateforme de collaboration est intrinsèquement une plateforme sociale. Laissez votre côté créatif être libre et ajoutez du plaisir à votre lieu de travail. Tous les utilisateurs doivent être en mesure d’envoyer des images, d’envoyer des félicitations, d’obtenir des mèmes, d’envoyer des emojis ou d’autres choses qui vous semblent l’être.
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>Penser en termes d’application à page unique
 
 Les onglets sont des pages web incorporées. À peu près tout ce que vous pouvez faire dans une SPA, vous pouvez le faire dans un onglet Teams. Il vous suffit d’être attentif à l’étendue. Les onglets de groupe et de canal sont pour les expériences partagées et les onglets personnels pour les expériences personnelles. La liste des choses de l’équipe passe sous l’onglet de canal et la liste de vos objets est dans l’onglet personnel.
 
-## <a name="start-small"></a>Démarrer petit
+## <a name="initiate-small"></a>Lancer petit
 
-Vous ne savez pas par où commencer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et commencer par là. Une fois que vous avez une idée du flux d’informations dans les différents contextes de Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
+Vous ne savez pas où lancer ? Vous vous sentez un peu submergé par la grande variété d’options à votre disposition ? Vous devez choisir une fonctionnalité principale de votre application et y lancer l’application. Une fois que vous avez une idée du flux d’informations dans les différents contextes de Teams, il est beaucoup plus simple d’imaginer une interaction plus complexe.
 
 ## <a name="put-it-all-together"></a>Mettre tout en place
 
@@ -104,4 +104,4 @@ Cela étant dit, les meilleures applications combinent généralement plusieurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer votre première application Microsoft Teams de messagerie](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Créer votre première application Microsoft Teams de messagerie](../../get-started/get-started-overview.md)

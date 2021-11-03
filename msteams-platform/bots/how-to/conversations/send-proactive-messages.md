@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID de l’utilisateur
-ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566280"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720077"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -28,10 +28,10 @@ L’envoi d’un message proactif est différent de l’envoi d’un message nor
 
 **Pour envoyer un message proactif**
 
-1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID](#get-the-user-id-team-id-or-channel-id)de canal, si nécessaire.
+1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID de](#get-the-user-id-team-id-or-channel-id)canal, si nécessaire.
 1. [Créez la conversation,](#create-the-conversation)si nécessaire.
 1. [Obtenir l’ID de conversation](#get-the-conversation-id).
-1. [Envoyez le message](#send-the-message).
+1. [Envoyer le message](#send-the-message).
 
 Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des liens vers des exemples de travail complets pour les conversations un-à-un et les groupes ou canaux, voir [l’exemple de code.](#code-sample)
 
@@ -47,7 +47,7 @@ Pour créer une conversation ou un thread de conversation dans un canal, vous de
 * Vous pouvez récupérer la [liste des membres d’une](~/bots/how-to/get-teams-context.md) équipe sur laquelle votre application est installée.
 * Chaque activité que reçoit votre bot doit contenir les informations requises.
 
-Quelle que soit la façon dont vous obtenez les informations, vous devez stocker ou créer `tenantId` `userId` une `channelId` conversation. Vous pouvez également l’utiliser pour créer un thread de conversation dans le canal général ou `teamId` par défaut d’une équipe.
+Quelle que soit la façon dont vous obtenez les informations, vous devez stocker le ou pour `tenantId` `userId` créer une `channelId` conversation. Vous pouvez également l’utiliser pour créer un thread de conversation dans le canal général ou `teamId` par défaut d’une équipe.
 
 Il `userId` est propre à votre ID de bot et à un utilisateur particulier. Vous ne pouvez pas réutiliser les `userId` bots. Il `channelId` s’agit d’une stratégie globale. Toutefois, votre bot doit être installé dans l’équipe avant de pouvoir envoyer un message proactif à un canal.
 
@@ -73,7 +73,7 @@ Maintenant que vous avez envoyé le message proactif, vous devez suivre ces meil
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 
-L’envoi de messages proactifs aux utilisateurs est un moyen très efficace de communiquer avec vos utilisateurs. Toutefois, de leur point de vue, ce message peut apparaître complètement non improvisé et, dans le cas des messages de bienvenue, c’est la première fois qu’ils interagissent avec votre application. Par conséquent, il est très important d’utiliser avec parcimonie la messagerie proactive, et non de mettre vos utilisateurs en courrier indésirable, et de fournir suffisamment d’informations pour que les utilisateurs comprennent pourquoi ils reçoivent les messages.
+L’envoi de messages proactifs aux utilisateurs est un moyen efficace de communiquer avec vos utilisateurs. Toutefois, du point de vue de l’utilisateur, le message s’affiche de manière non improvisée. S’il existe un message de bienvenue, c’est la première fois qu’il interagit avec votre application. Il est important d’utiliser cette fonctionnalité et de fournir les informations complètes à l’utilisateur pour comprendre l’objectif de ce message.
 
 ### <a name="welcome-messages"></a>Les messages de bienvenue
 
@@ -82,8 +82,7 @@ Lorsque la messagerie proactive est utilisée pour envoyer un message de bienven
 * Pourquoi un utilisateur reçoit le message : il doit être très clair pour l’utilisateur pourquoi il reçoit le message. Si votre bot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, faites-leur savoir dans quel canal il a été installé et qui l’a installé.
 * Que proposez-vous : les utilisateurs doivent être en mesure d’identifier ce qu’ils peuvent faire avec votre application et la valeur que vous pouvez leur apporter.
 * Que doivent-ils faire ensuite : inviter les utilisateurs à essayer une commande ou à interagir avec votre application.
-
-Les messages d’accueil médiocres peuvent entraîner le blocage de votre bot par les utilisateurs. Écrivez au point et effacer les messages de bienvenue. Itérer sur les messages de bienvenue s’ils n’ont pas l’effet souhaité.
+Les messages d’accueil médiocres peuvent amener les utilisateurs à bloquer votre bot. Écrivez au point et effacer les messages de bienvenue. Itérer sur les messages de bienvenue s’ils n’ont pas l’effet souhaité.
 
 ### <a name="notification-messages"></a>Les messages de notification
 
@@ -101,7 +100,7 @@ Pour envoyer des messages à un grand groupe d’utilisateurs, par exemple à vo
 
 Lorsque vous utilisez une messagerie proactive pour envoyer des messages programmés aux utilisateurs, vérifiez que votre fuseau horaire est mis à jour vers leur fuseau horaire. Cela garantit que les messages sont remis aux utilisateurs au moment approprié. Les messages de planification incluent généralement :
 
-* Pourquoi l’utilisateur reçoit-il le message : faciliter la compréhension de la raison pour laquelle il reçoit le message ?
+* Why is the user receiving the message: Make it easy for your users to understand the reason for which they’re receiving the message.
 * Que peut faire l’utilisateur ensuite : les utilisateurs peuvent prendre l’action requise en fonction du contenu du message.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive à l’aide Graph
@@ -262,7 +261,7 @@ Vous devez fournir l’ID d’utilisateur et l’ID de client. Si l’appel réu
 ---
 
 > [!NOTE]
-> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot ou de Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
+> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
 
 ## <a name="code-sample"></a>Exemple de code
 

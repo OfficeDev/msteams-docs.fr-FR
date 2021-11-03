@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017337"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720112"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams applications apportent des informations clés, des outils couran
 Les applications vous permettent d’étendre Teams pour répondre à vos besoins. Créez un tout nouveau Teams ou intégrez une application existante.
 
 > [!div class="nextstepaction"]
-> [Démarrer](get-started/prerequisites.md)
+> [Démarrer](get-started/get-started-overview.md)
 
 ## <a name="what-are-teams-apps"></a>Qu’est-ce Teams applications ?
 
@@ -153,7 +153,7 @@ Utiliser des données **Teams**: l’API [Microsoft Graph pour Teams](/graph/tea
 Familiarisez-vous rapidement avec la création de Teams en mettant en place votre environnement et en créant une application simple.
 
 > [!div class="nextstepaction"]
-> [Créer votre première application](get-started/prerequisites.md)
+> [Créer votre première application](get-started/get-started-overview.md)
 
    :::column-end:::
    :::column span="":::
