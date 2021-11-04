@@ -10,26 +10,18 @@
 - name: Prise en main
   expanded: false
   items:
-    - name: Vue d'ensemble
-      href: get-started/code-samples.md
-    - name: Conditions préalables
-      href: get-started/prerequisites.md
-    - name: Créer votre première application à l’aide de React
-      href: get-started/first-app-react.md
+    - name: Vue d’ensemble du Démarrage
+      href: get-started/get-started-overview.md
+    - name: Créer votre première application à l’aide de JavaScript
+      href: sbs-gs-javascript.yml
     - name: Créer votre première application à l’aide de Blazor
-      href: get-started/first-app-blazor.md
+      href: sbs-gs-blazor.yml
     - name: Créer votre première application à l’aide de SPFx
-      href: get-started/first-app-spfx.md
+      href: sbs-gs-spfx.yml
     - name: Créer votre première application à l’aide C# de .NET
-      href: get-started/get-started-dotnet-app-studio.md
+      href: sbs-gs-csharp.yml
     - name: Créer votre première application à l’aide de Node.js
-      href: get-started/get-started-nodejs-app-studio.md
-    - name: Créer votre première application à l’aide du générateur Yeoman
-      href: get-started/get-started-yeoman.md
-    - name: Créer votre premier bot conversationnel
-      href: get-started/first-app-bot.md
-    - name: Créer votre première extension de messagerie
-      href: get-started/first-message-extension.md
+      href: sbs-gs-nodejs.yml
     - name: Exemples de code
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Principes fondamentaux de l'application
