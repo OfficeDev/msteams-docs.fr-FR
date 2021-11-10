@@ -1,19 +1,19 @@
 ---
 title: Ajouter l'onglet Teams à SharePoint
 author: surbhigupta
-description: Comment déployer votre onglet Teams existant SharePoint en tant que SharePoint Framework Web Part.
+description: Découvrez comment déployer votre onglet Teams existant sur SharePoint en tant que SharePoint Framework web à l’aide d’exemples de code.
 keywords: teams tabs sharepoint framework development
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6561164f177277e76b80e3c33ee57b9383bbd527
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 766b9974419a6b4bfeb273a0d9d682a685b2da2d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155646"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887872"
 ---
-# <a name="add-teams-tab-to-sharepoint"></a>Ajouter l'onglet Teams à SharePoint 
+# <a name="add-teams-tab-to-sharepoint"></a>Ajouter l'onglet Teams à SharePoint
 
 Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams et SharePoint en ajoutant un onglet Microsoft Teams dans SharePoint en tant que SPFx web. Ce document vous guide sur la façon dont vous pouvez prendre un onglet à partir d’un exemple d Microsoft Teams appl’application et l’utiliser dans SharePoint. 
 
@@ -34,7 +34,7 @@ Avec la version de novembre Teams et SharePoint Framework version 1.7, les déve
                     </div>
                     <div class="cardText">
                         <h3>Teams Onglets dans SharePoint</h3>
-                        <p>Créez des expériences d’application enrichies SharePoint en mettant votre application Teams en SharePoint (cet article).</p>
+                        <p>Créez des expériences d’application enrichies SharePoint en Teams votre application SharePoint (cet article).</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ Avec la version de novembre Teams et SharePoint Framework version 1.7, les déve
 
 ### <a name="teams-tabs-in-sharepoint"></a>Teams onglets dans SharePoint
 
-Avec SharePoint Framework v.1.7, vous pouvez héberger vos onglets Teams dans SharePoint. Comme les onglets hébergés dans SharePoint offrent une expérience de **page** complète similaire, en exposant toutes les fonctionnalités des onglets Teams tout en conservant le contexte et la familiarité d’un site SharePoint.
+Avec SharePoint Framework v.1.7, vous pouvez héberger vos onglets Teams dans SharePoint. Comme les onglets hébergés dans SharePoint offrent une expérience de **page** complète similaire, en exposant toutes les fonctionnalités des onglets Teams tout en conservant le contexte et les caractéristiques d’un site SharePoint web.
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint Framework dans Teams
 
@@ -118,9 +118,9 @@ L’image suivante affiche l’écran correspondant :
 
    ![Vue SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-1. Vous pouvez voir l’expérience de SharePoint pages de texte. Nommez votre page sous **le nom Mon Teams onglet**.
+1. Vous pouvez voir l’expérience de SharePoint pages de texte. Nommez votre page sous **le nom Teams Onglet .**
 
-1. Ouvrez la boîte à outils du volet Web En sélectionnant le bouton, puis sélectionnez `+` votre onglet Teams, nommé **Contoso HR**. Les composants Web Parts sont triés par ordre alphabétique. S’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour la trouver. Cela crée un élément Web Part dans la zone de dessin qui contient votre Teams de dessin. L’image suivante affiche l’affichage Onglet :
+1. Ouvrez la boîte à outils du service Web En sélectionnant le bouton, puis sélectionnez `+` votre onglet Teams, nommé **Contoso HR**. Les composants Web Parts sont triés par ordre alphabétique. S’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour la trouver. Cela crée un élément Web Part dans la zone de dessin qui contient votre Teams onglet. L’image suivante affiche l’affichage Onglet :
 
    ![Affichage Onglet](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
@@ -134,7 +134,7 @@ L’image suivante affiche l’écran correspondant :
 
 Une fois votre page publiée, vous pouvez explorer comment transformer votre application Teams en une expérience plus complète à [l’intérieur SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). Cela convertit la page actuelle en page d’application, affichant la mise en page normale SharePoint page avec une expérience de page complète pour l’onglet Teams page. 
 
-L’image suivante montre l’expérience complète de l Teams appapplante dans SharePoint : ![ Image des onglets dans SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+L’image suivante montre l’expérience complète de l Teams appapplment dans SharePoint : ![ Image des onglets dans SharePoint](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>Exemple de code
 | **Exemple de nom** | **Description** | **SPFx** |

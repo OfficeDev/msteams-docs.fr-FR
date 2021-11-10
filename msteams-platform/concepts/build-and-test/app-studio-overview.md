@@ -4,12 +4,12 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: adbd6bf8c2c2ec0dae8444d222fc3f3b26279e8f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155885"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888565"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 
@@ -76,7 +76,7 @@ La section Fonctionnalités de l'Éditeur de manifeste est l'endroit où les fon
 
   Vous devez également fournir d'autres domaines à partir desquels l'onglet doit être chargé ou lié.
 
-* **Onglets personnels.** Cette section vous permet de définir un ensemble d’onglets qui sont présentés par défaut dans l’expérience d’application personnelle (expérience dont dispose un utilisateur avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir des lesquels l’onglet s’attend à se charger ou à laquelle il doit établir un lien.
+* **Onglets personnels.** Cette section vous permet de définir un ensemble d’onglets présentés par défaut dans l’expérience d’application personnelle (expérience dont dispose un utilisateur avec votre application en dehors du contexte d’une équipe ou d’un canal). Dans cette section, indiquez le nom de l’onglet, un identificateur unique, l’URL qui pointe vers l’interface utilisateur à afficher dans Teams et éventuellement l’URL à utiliser si un utilisateur choisit d’afficher l’onglet dans un navigateur. Avec Teams onglets, fournissez tous les domaines supplémentaires à partir des lesquels l’onglet s’attend à se charger ou à lier.
 
 ##### <a name="bots"></a>Bots
 
@@ -128,7 +128,7 @@ Si vous avez déjà une carte que vous voulez vérifier dans Teams, vous pouvez 
 ### <a name="react-control-library"></a>Bibliothèque de contrôles React
 
 >[!Note]
-> Cet React bibliothèque de contrôles est bientôt supprimé. Envisagez [d’utiliser Fluent des](https://microsoft.github.io/fluent-ui-react/) contrôles react de l’interface utilisateur utilisateur comme alternative précédemment à l’interface utilisateur Stardust.
+> Cet React bibliothèque de contrôles est bientôt supprimé. Envisagez [d’utiliser Fluent des](https://microsoft.github.io/fluent-ui-react/) contrôles react de l’interface utilisateur utilisateur en tant qu’autre interface utilisateur Stardust précédemment.
 
 La création d’une application qui suit les meilleures pratiques de Teams est un excellent moyen de donner à votre application une apparence qui s’adapte parfaitement à l’expérience cliente de Teams. Les contrôles d’interface utilisateur sont essentiels pour atteindre cet objectif. Pour simplifier la création d’une interface utilisateur cohérente, App Studio fournit plusieurs catégories de contrôles d’interface utilisateur qui suivent les principes de conception de Teams.
 
@@ -148,3 +148,7 @@ Les contrôles incluent :
 * Onglets
 * Tables
 * Icônes
+
+## <a name="see-also"></a>Voir aussi
+
+[Gérer vos applications avec le Portail des développeurs pour Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

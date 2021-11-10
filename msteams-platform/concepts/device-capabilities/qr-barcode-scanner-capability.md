@@ -6,18 +6,18 @@ keywords: Fonctionnalités natives d’appareil photo qr code qrcode code-barres
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a3ec2b8735c0d1a9a234fba6a34e7040d819fc9b
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c21408ccbca6cd12d37d2066cf50f3468b669012
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566357"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887998"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>Intégrer la fonctionnalité de scanneur QR ou code-barres 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>Intégrer la fonctionnalité de scanneur QR ou code-barres
 
 Le code-barres est une méthode de représentation des données sous forme visuelle et lisible par l’ordinateur. Le code-barres contient des informations sur un produit, telles qu’un type, une taille, un fabricant et un pays d’origine sous la forme de barres et d’espaces. Le code est lu à l’aide du scanneur optique sur votre appareil photo natif. Pour une expérience de collaboration enrichie, vous pouvez intégrer la fonctionnalité de QR ou de scanneur de code-barres fournie dans la plateforme Teams avec votre application Teams.   
 
-Vous pouvez utiliser [Microsoft Teams SDK client JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires à votre application pour accéder aux fonctionnalités natives de l’appareil de l’utilisateur. [](native-device-permissions.md) Utilisez [l’API scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) pour intégrer la fonctionnalité de scanneur dans votre application. 
+Vous pouvez utiliser [Microsoft Teams SDK client JavaScript,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)qui fournit les outils nécessaires à votre application pour accéder aux fonctionnalités natives de l’appareil de l’utilisateur. [](native-device-permissions.md) Utilisez [l’API scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) pour intégrer la fonctionnalité de scanneur dans votre application.
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>Avantage de l’intégration des fonctionnalités de QR ou de scanneur de code-barres
 
@@ -34,7 +34,7 @@ Il est important de vous familiariser avec les erreurs de réponse [d’API](#er
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 
-Mettez à jour Teams fichier [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) de l’application en ajoutant la `devicePermissions` propriété et en spécifiant `media` . Il permet à votre application de demander les autorisations requises aux utilisateurs avant qu’ils commencent à utiliser la QR ou la fonctionnalité de scanneur de code-barres. La mise à jour du manifeste de l’application est la suivante :
+Mettez à jour Teams fichier [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) de l’application en ajoutant la `devicePermissions` propriété et en spécifiant `media` . Il permet à votre application de demander les autorisations requises aux utilisateurs avant qu’ils ne commencent à utiliser la fonctionnalité de QR ou de scanneur de code-barres. La mise à jour du manifeste de l’application est la suivante :
 
 ``` json
 "devicePermissions": [
@@ -112,4 +112,3 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 * [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
 * [Intégrer des fonctionnalités d’emplacement dans Teams](location-capability.md)
 * [Intégrer le s picker de personnes dans Teams](people-picker-capability.md)
-

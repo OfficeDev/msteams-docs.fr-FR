@@ -1,15 +1,15 @@
 ---
 title: Utiliser des modules de tâche dans Microsoft Teams onglets
-description: Explique comment appeler des modules de tâche à partir Teams onglets à l’aide Microsoft Teams SDK client.
+description: Explique comment appeler des modules de tâche à partir Teams onglets et envoyer son résultat à l’aide du SDK client Microsoft Teams client. Il inclut des exemples de code.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: modules de tâche teams tabs client sdk
-ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: sdk client des onglets des modules de tâche teams
+ms.openlocfilehash: 618775644b43f16a6de49f7bc2fa92a512b73591
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156688"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888558"
 ---
 # <a name="use-task-modules-in-tabs"></a>Utiliser des modules de tâche dans les onglets
 
@@ -35,7 +35,7 @@ Vous pouvez voir comment l’utilisation d’un module de tâche à partir d’u
 
 Pour appeler un module de tâche à partir d’un onglet, utilisez la transmission d’un objet `microsoftTeams.tasks.startTask()` [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) et d’une fonction de `submitHandler` rappel facultative. Deux cas sont à prendre en compte :
 
-* La valeur de `TaskInfo.url` est définie sur une URL. La fenêtre du module de tâche s’affiche `TaskModule.url` et est chargée en tant `<iframe>` qu’intérieur. JavaScript sur cette page appelle `microsoftTeams.initialize()` . S’il existe une fonction sur la page et qu’il existe une erreur lors de l’appel, alors est appelé avec la chaîne d’erreur indiquant `submitHandler` `microsoftTeams.tasks.startTask()` la `submitHandler` `err` même. Pour plus d’informations, consultez les [erreurs d’appel du module de tâche.](#task-module-invocation-errors)
+* La valeur de `TaskInfo.url` est définie sur une URL. La fenêtre du module de tâche s’affiche `TaskModule.url` et est chargée en tant `<iframe>` qu’intérieur. JavaScript sur cette page appelle `microsoftTeams.initialize()` . S’il existe une fonction sur la page et qu’une erreur s’affiche lors de l’appel, elle est alors invoquée avec la chaîne d’erreur indiquant `submitHandler` `microsoftTeams.tasks.startTask()` la `submitHandler` `err` même. Pour plus d’informations, consultez les [erreurs d’appel du module de tâche.](#task-module-invocation-errors)
 * La valeur est `taskInfo.card` le [JSON d’une carte adaptative.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment) Il n’existe aucune fonction JavaScript à appeler lorsque l’utilisateur ferme ou appuie sur un `submitHandler` bouton de la carte adaptative. La seule façon de recevoir ce que l’utilisateur a entré consiste à transmettre le résultat à un bot. Pour utiliser un module de tâche carte adaptative à partir d’un onglet, votre application doit inclure un bot pour obtenir une réponse de l’utilisateur.
 
 La section suivante donne un exemple d’facturation d’un module de tâche.
@@ -74,7 +74,7 @@ La méthode est très simple et elle fait écho à la valeur de la console ou `s
 
 ## <a name="submit-the-result-of-a-task-module"></a>Envoyer le résultat d’un module de tâche
 
-La `submitHandler` fonction réside dans la page web et est utilisée avec `TaskInfo.url` `TaskInfo.url` . En cas d’erreur lors de l’appel du module de tâche, votre fonction est immédiatement invoquée avec une chaîne indiquant quelle erreur s’est `submitHandler` `err` [produite.](#task-module-invocation-errors) La fonction est également appelée avec une chaîne lorsque l’utilisateur sélectionne X en haut à droite du module de tâche `submitHandler` `err` pour le fermer.
+La `submitHandler` fonction réside dans la page web et est utilisée avec `TaskInfo.url` `TaskInfo.url` . En cas d’erreur lors de l’appel du module de tâche, votre fonction est immédiatement invoquée avec une chaîne indiquant quelle `submitHandler` erreur s’est `err` [produite.](#task-module-invocation-errors) La fonction est également appelée avec une chaîne lorsque l’utilisateur sélectionne X en haut à droite du module de tâche `submitHandler` `err` pour le fermer.
 
 S’il n’y a aucune erreur d’appel et que l’utilisateur ne sélectionne pas X pour le faire disparaître, l’utilisateur choisit un bouton lorsque vous avez terminé. Selon qu’il s’agit d’une URL ou d’une carte adaptative dans le module de tâche, les sections suivantes fournissent des détails sur ce qui se produit.
 
@@ -133,11 +133,11 @@ Le tableau suivant fournit les valeurs possibles qui `err` peuvent être reçues
 |----------------|-----------------|--------------|----------------|
 |Exemples d’onglets de module de tâche et bots-V3 | Exemples de création de modules de tâche. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
-## <a name="see-also"></a>Voir aussi
-
-[Appeler et ignorer des modules de tâche](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Utilisation de modules de tâche à partir de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Appeler et ignorer des modules de tâche](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

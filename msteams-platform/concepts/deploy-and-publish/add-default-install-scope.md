@@ -1,15 +1,15 @@
 ---
 title: Configurer les options d’installation par défaut pour votre application
-description: Indique comment spécifier les options d’installation par défaut de votre application.
+description: Décrit comment spécifier les options d’installation par défaut de votre application et la fonctionnalité par défaut pour les étendues partagées.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 48f12faca9d8f67ec78e08736f16f8ad5a43dcd2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156821"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889089"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurer les options d’installation par défaut pour Microsoft Teams application
 
@@ -34,7 +34,7 @@ Configurez l’étendue d’installation par défaut de votre application. Vous 
 **Pour configurer l’étendue d’installation par défaut dans le manifeste de votre application**
 
 1. Ouvrez le manifeste de votre application et ajoutez la `defaultInstallScope` propriété.
-2. Définissez la valeur d’étendue d’installation par défaut comme `personal` , , `team` ou `groupchat` `meetings` .
+2. Définissez la valeur d’étendue d’installation par défaut en `personal` tant que , , ou `team` `groupchat` `meetings` .
 
     ```json
     "defaultInstallScope": "meetings",

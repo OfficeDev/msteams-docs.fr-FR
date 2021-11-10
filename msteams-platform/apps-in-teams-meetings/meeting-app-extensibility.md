@@ -1,19 +1,19 @@
 ---
 title: Applications de réunions unifiées
 author: surbhigupta
-description: Comprendre les applications de réunions unifiées
+description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 15a43721e8f5091f0a0bb3b69f781f1472b8e681
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 920c0ee23ffeb2ea7943579254a115bf2d82fea3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720182"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887726"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
-Teams applications de réunions unifiées sont basées sur les concepts suivants :
+Teams applications de réunions unifiées reposent sur les concepts suivants :
 
 * Le cycle de vie des réunions se produit selon différentes étapes : avant la réunion, en réunion et après la réunion.  
 * Il existe trois rôles de participant distincts dans une réunion : organisateur, présentateur et participant. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
@@ -35,7 +35,7 @@ Les onglets permettent aux membres de l’équipe d’accéder aux services et a
 > Si vous avez intégré un onglet à votre réunion, votre application doit suivre le flux d’authentification unique Teams [(SSO) pour les onglets.](../tabs/how-to/authentication/auth-aad-sso.md)
 
 > [!NOTE]
-> * Les réunions privées programmées ne permettent que la prise en charge des applications.
+> * Les réunions privées programmées ne supportent que les applications.
 > * L’option Ajouter une application pour Teams’onglet d’extension de réunion n’est pas prise en charge Teams client web.
 
 #### <a name="pre-meeting-app-experience"></a>Expérience d’application avant la réunion
@@ -45,7 +45,7 @@ Avec l’expérience d’application préalable à la réunion, vous pouvez trou
 **Pour ajouter des onglets à une réunion existante**
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
-1. Sélectionnez **l’onglet Détails,** puis sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
+1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
 
     <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
@@ -53,7 +53,7 @@ Avec l’expérience d’application préalable à la réunion, vous pouvez trou
 
    > [!NOTE]
    > * Vous pouvez également ajouter un onglet à une réunion existante à l’aide de l’onglet **Conversation de** réunion.
-   > * La disposition des onglets doit être organisée, s’il y a plus de 10 sondages ou enquêtes.
+   > * La disposition des onglets doit être dans un état organisé, s’il y a plus de 10 sondages ou enquêtes.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -71,7 +71,7 @@ Après avoir ajouté les onglets à une réunion existante sur mobile, vous pouv
 
 Grâce à l’expérience d’application en réunion, vous pouvez impliquer des participants pendant la réunion à l’aide d’applications et de la boîte de dialogue de réunion. Les applications de réunion sont hébergées dans la barre d’outils de la fenêtre de réunion en tant qu’onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter le contenu actionnable aux participants à la réunion. Pour plus d’informations, voir [créer des applications pour Teams réunions.](create-apps-for-teams-meetings.md)
 
-Pour les appareils mobiles, les applications de réunion sont disponibles à partir **>** les &#x25CF;&#x25CF;&#x25CF; de la réunion. Sélectionnez **Applications** pour afficher toutes les applications disponibles dans la réunion.
+Pour les appareils mobiles, les applications de réunion sont disponibles à partir **>** des &#x25CF;&#x25CF;&#x25CF; dans la réunion. Sélectionnez **Applications** pour afficher toutes les applications disponibles dans la réunion.
 
 **Pour utiliser des onglets pendant une réunion**
 
@@ -103,7 +103,7 @@ La boîte de dialogue de réunion s’affiche et vous permet d’entrer votre r�
 > * Si la boîte de dialogue de réunion s’est correctement restituer, elle envoie une notification de téléchargement des résultats.
 > * Le manifeste de votre application spécifie les endroits où vous souhaitez que les applications apparaissent. Pour ce faire, vous pouvez spécifier le champ de contexte dans le manifeste. Il fait également partie d’une expérience de partage de la phase de réunion, sous réserve des instructions de [conception spécifiées.](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md)
 
-L’image suivante illustre le panneau latéral de la réunion :
+L’image suivante illustre le panneau latéral en réunion :
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -117,7 +117,7 @@ L’image suivante illustre le panneau latéral de la réunion :
 
 Le tableau suivant décrit le comportement de l’application lorsqu’elle est approuvée et non approuvée :
 
-|Fonctionnalité de l’application | L’application est approuvée | L’application n’est pas approuvée |
+|Fonctionnalité d’application | L’application est approuvée | L’application n’est pas approuvée |
 |---|---|---|
 | Extensibilité de réunion | L’application s’affiche dans les réunions. | L’application n’apparaîtra pas dans les réunions pour les clients mobiles. |
 
@@ -142,11 +142,11 @@ L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Intégrer des bots dans le cycle de vie de la réunion
 
-Les bots activés dans l’étendue groupchat commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot,](../build-your-first-app/build-bot.md) puis continuez à créer des applications [pour Teams réunions.](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
+Les bots activés dans l’étendue groupchat commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot,](../build-your-first-app/build-bot.md) puis continuez à créer des [applications pour Teams réunions.](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Intégrer des extensions de messagerie dans le cycle de vie de la réunion
 
-Pour implémenter l’extension de messagerie, commencez par créer une [extension](../messaging-extensions/how-to/create-messaging-extension.md) de messagerie, puis continuez à créer des applications [pour Teams réunions.](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
+Pour implémenter l’extension de messagerie, commencez par créer une [extension](../messaging-extensions/how-to/create-messaging-extension.md) de messagerie, puis continuez à créer des applications pour [Teams réunions.](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
 
 Les Teams réunions unifiées vous permettent de concevoir votre application en fonction des rôles des participants à une réunion.
 
@@ -163,7 +163,7 @@ Les paramètres de participant par défaut sont déterminés par l’administrat
 > [!NOTE]
 > Seul un organisateur ou un présentateur peut ajouter, supprimer ou désinstaller des applications.
 
-Pour plus d’informations, voir [les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
+Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 Après avoir conçu votre application en fonction des rôles des participants à une réunion, vous pouvez identifier chaque type d’utilisateur pour les réunions et sélectionner ce à quoi ils peuvent accéder.
 
@@ -186,10 +186,10 @@ La liste suivante détaille les différents types d’utilisateurs, ainsi que le
     > [!IMPORTANT]
     > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)
 
-* **Anonyme**: les utilisateurs anonymes n’ont pas AAD identité et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être organisateur, mais peut être présentateur ou participant.
+* **Anonyme**: les utilisateurs anonymes n’ont pas AAD identité et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être un organisateur, mais peut être présentateur ou participant.
 
     > [!NOTE]
-    > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale au niveau de l’utilisateur par défaut. Pour plus d’informations, voir [gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
+    > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale par défaut au niveau de l’utilisateur. Pour plus d’informations, voir [gérer les applications.](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)
 
 Un invité ou un utilisateur anonyme ne peut pas ajouter, supprimer ou désinstaller des applications.
 
@@ -201,14 +201,14 @@ Le tableau suivant fournit les types d’utilisateur et répertorie les fonction
 | Invité, faisant partie du client AAD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion |
 | Utilisateur fédéré, pour plus d’informations, voir [utilisateurs non standard.](/microsoftteams/non-standard-users) | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion |
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Conditions préalables et références d’API pour les applications dans les réunions Teams](create-apps-for-teams-meetings.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Extension de la messagerie](../messaging-extensions/what-are-messaging-extensions.md)
 * [Concevoir votre application](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Conditions préalables et références d’API pour les applications dans les réunions Teams](create-apps-for-teams-meetings.md)

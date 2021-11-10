@@ -1,16 +1,16 @@
 ---
 title: Ajouter Power Virtual Agents chatbot à Teams
 author: surbhigupta
-description: intégration d’un Power Virtual Agents chatbot dans la plateforme Teams web
+description: Apprenez à intégrer un chatbot Power Virtual Agents la plateforme Teams pour créer des chatbots de conversation et l’intégrer à Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 5a4aa24ceb5a73be56cfd069b02ca7b980d17055
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c8f2f61157d1a08dcf7410b86a2f8bda221a6c50
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156869"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887580"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Ajouter le chatbot Power Virtual Agents 
 
@@ -34,9 +34,9 @@ Pour rendre votre chatbot disponible dans Teams via le portail Power Virtual Age
 1. **Publier le contenu du bot le plus récent**  
 Après avoir créé un chatbot dans le portail Power Virtual Agents, vous devez publier votre bot pour que Teams utilisateurs puisse interagir avec celui-ci. Pour plus d’informations, [voir Publier le contenu du bot le plus récent.](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)
 
-   ![publier dans le portail des agents virtuels d’alimentation](../../assets/images/pva-publish.png)
+   ![publier dans le portail des agents virtuels avec alimentation](../../assets/images/pva-publish.png)
 
-1. **Configurer le canal Teams de distribution**  
+1. **Configurer le canal Teams canal**  
 Après avoir publié votre bot, ajoutez le canal Teams pour le mettre à la disposition Teams utilisateurs.
 
    ![canaux dans le portail des agents virtuels d’alimentation](../../assets/images/pva-channels.png)
@@ -51,7 +51,7 @@ Si [le](/microsoftteams/admin-settings) téléchargement d’applications person
 1. **Installer App Studio dans Teams**  
 App Studio est une application Teams application. Installez App Studio à partir du magasin Teams qui simplifie le processus de création et d’inscription du bot dans Teams : 
 
-   1. Sélectionnez l’icône du Magasin d’applications Teams instance, puis recherchez **App Studio.**
+   1. Sélectionnez l’icône du Magasin d’applications Teams instance, puis **recherchez App Studio.**
 
       &emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="../../assets/images/get-started/app-studio-store.png"/>   
 
@@ -71,7 +71,7 @@ Remplissez tous les champs requis. Pour obtenir une description complète de cha
 
 1. **Configurer votre bot** Pour configurer le bot, effectuez les étapes suivantes : 
      1. Ouvrez **l’onglet Bots.** 
-     1. Sélectionnez   >  **Installer le bot existant** et entrez le nom de votre bot.
+     1. Sélectionnez   >  **Le bot d’installation** existant et entrez le nom de votre bot.
 
    ![Mise en place d’un bot](../../assets/images/get-started/bot-set-up.png) 
 
@@ -87,7 +87,7 @@ Pour ajouter votre ID d’application, effectuez les étapes suivantes :
     ![ajouter un ID d’application](../../assets/images/get-started/add-app-id.png)
 
 1. **Ajouter des domaines valides pour votre bot**  
-Cette étape est requise uniquement si votre bot nécessite que l’utilisateur se connecte. Sélectionnez **Domaines et autorisations et,** dans le **champ Domaines valides,** fournissez l’entrée suivante :
+Cette étape est requise uniquement si votre bot nécessite que l’utilisateur se connecte. Sélectionnez **Domaines et autorisations** et, dans le **champ Domaines valides,** fournissez l’entrée suivante :
 
     ```bash
        token.botframework.com

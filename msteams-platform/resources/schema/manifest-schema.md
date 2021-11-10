@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378890"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888285"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -318,7 +318,7 @@ Le schéma définit les propriétés suivantes :
 
 Chaîne facultative, mais recommandée
 
-L https:// URL référente au schéma JSON pour le manifeste.
+L https:// URL qui fait référence au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -457,7 +457,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`contentUrl`|string||✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
 |`websiteUrl`|string|||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`searchUrl`|string|||L https:// URL pointant vers les requêtes de recherche d’un utilisateur.|
-|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 |`context` | tableau d’enums| 2|| Ensemble `contextItem` d’étendues où un onglet est pris en charge.|
 
 > [!NOTE]
@@ -525,7 +525,7 @@ L’élément est un tableau (maximum d’un élément) avec tous les éléments
 
 |Nom| Type | Taille maximale | Obligatoire | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui permet de récupérer l’extension de messagerie, tel qu’inscrit auprès de Bot Framework. L’ID peut être identique à l’ID d’application global.|
+|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. L’ID peut être identique à l’ID d’application global.|
 |`commands`|tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie.|
 |`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d’objets|5||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
@@ -550,21 +550,21 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
+|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
 |`taskInfo.url`|string|||URL webview initiale.|
 |`parameters`|tableau d’objets|5 éléments|✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Le nom du paramètre est inclus dans la demande de l’utilisateur.|
 |`parameters.title`|string|32 caractères|✔|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameters.value`|string|512 caractères||Valeur initiale du paramètre.|
-|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’une `text, textarea, number, date, time, toggle, choiceset` des .|
+|`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’un `text, textarea, number, date, time, toggle, choiceset` des .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
 |`parameters.choices.title`|string|128 caractères|✔|Titre du choix.|
 |`parameters.choices.value`|string|512 caractères|✔|Valeur du choix.|
 
 ## <a name="permissions"></a>autorisations
 
-**Facultatif —** tableau de chaînes
+**Facultatif :** tableau de chaînes
 
 Tableau de , qui spécifie les autorisations que l’application demande, qui indiquent aux utilisateurs finals le `string` fonctionnement de l’extension. Les options suivantes ne sont pas exclusives :
 
@@ -575,7 +575,7 @@ Si vous modifiez ces autorisations pendant la mise à jour de l’application, v
 
 ## <a name="devicepermissions"></a>devicePermissions
 
-**Facultatif —** tableau de chaînes
+**Facultatif :** tableau de chaînes
 
 Fournit les fonctionnalités natives sur l’appareil d’un utilisateur à qui votre application demande l’accès. Les options sont :
 
@@ -587,7 +587,7 @@ Fournit les fonctionnalités natives sur l’appareil d’un utilisateur à qui 
 
 ## <a name="validdomains"></a>validDomains
 
-**Facultatif,** sauf **obligatoire** lorsqu’il est indiqué.
+**Facultatif,** sauf **obligatoire lorsqu’il** est indiqué.
 
 Liste des domaines valides pour les sites web que l’application s’attend à charger dans Teams client. Les listes de domaines peuvent inclure des caractères génériques, par exemple, `*.example.com` . Le domaine valide correspond exactement à un segment du domaine ; si vous avez besoin d’une `a.b.example.com` correspondance, utilisez `*.*.example.com` . Si la configuration de votre onglet ou l’interface utilisateur de contenu navigue vers un autre domaine que la configuration de l’onglet, ce domaine doit être spécifié ici.
 
@@ -609,7 +609,7 @@ Fournissez votre ID d’application Azure Active Directory (AAD) et des informat
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|AAD’ID d’application de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l’oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -723,7 +723,7 @@ Lorsqu’une étendue d’installation de groupe est sélectionnée, elle défin
 
 **Facultatif** - tableau
 
-Le `configurableProperties` bloc définit les propriétés d’application que les administrateurs Teams personnaliser. Pour plus d’informations, voir [activer la personnalisation de l’application.](~/concepts/design/enable-app-customization.md)
+Le `configurableProperties` bloc définit les propriétés d’application que les administrateurs Teams personnaliser. Pour plus d’informations, voir [activer la personnalisation de l’application.](~/concepts/design/enable-app-customization.md) La fonctionnalité de personnalisation d’application n’est pas prise en charge dans les applications personnalisées ou LOB.
 
 > [!NOTE]
 > Au moins une propriété doit être définie. Vous pouvez définir un maximum de neuf propriétés dans ce bloc.
@@ -744,7 +744,8 @@ Vous pouvez définir l’une des propriétés suivantes :
 
 **Facultatif**— booléen
  
-Lorsque la propriété est définie sur true, l’application est masquée aux utilisateurs par défaut jusqu’à ce que `defaultBlockUntilAdminAction` l’administrateur l’autorise. Si la valeur **est true,** l’application est masquée pour tous les clients et utilisateurs finaux. Les administrateurs client peuvent voir l’application dans Teams centre d’administration et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**.
+Lorsque la propriété est définie sur true, l’application est masquée aux utilisateurs par défaut jusqu’à ce que `defaultBlockUntilAdminAction` l’administrateur l’autorise. Si la valeur **est true,** l’application est masquée pour tous les clients et utilisateurs finaux. Les administrateurs client peuvent voir l’application dans Teams centre d’administration et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**. Pour plus d’informations sur le bloc d’application par défaut, voir [Masquer Teams application jusqu’à ce que l’administrateur approuve.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
+
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -753,3 +754,11 @@ Lorsque la propriété est définie sur true, l’application est masquée aux u
 **Taille maximale** - 128 caractères
 
 La propriété dépend de `defaultBlockUntilAdminAction` . Lorsque la propriété est définie sur `defaultBlockUntilAdminAction` **true,** l’URL HTTPS fournit une page d’informations pour que les administrateurs obtiennent des instructions avant d’autoriser une application, qui est bloquée `publisherDocsUrl` par défaut.
+
+## <a name="see-also"></a>Voir aussi
+
+* [Comprendre la structure Microsoft Teams’application](~/concepts/design/app-structure.md)
+* [Activer la personnalisation d’application](~/concepts/design/enable-app-customization.md)
+* [Localiser votre application](~/concepts/build-and-test/apps-localization.md)
+* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Référence du schéma de manifeste d’aperçu du développeur - Teams](~/resources/schema/manifest-schema-dev-preview.md)

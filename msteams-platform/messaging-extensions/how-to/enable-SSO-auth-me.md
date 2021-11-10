@@ -1,16 +1,16 @@
 ---
-title: Prise en charge de l' sso pour vos extensions de messagerie
+title: Prise en charge de l' luiso pour vos extensions de messagerie
 author: KirtiPereira
-description: Comment activer la prise en charge de l' luiso pour vos extensions de messagerie
+description: Découvrez comment activer la prise en charge de l’ation sso pour vos extensions de messagerie à l’aide d’exemples de code.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720056"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889390"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique pour les extensions de messagerie
  
@@ -27,11 +27,11 @@ La condition préalable à l’activer pour les extensions de messagerie et le d
 > [!NOTE]
 > Pour plus d’informations sur la création d’un compte Azure et la mise à jour du manifeste de votre application, consultez la prise en charge de l' [sign-on unique (SSO) pour les bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 
-## <a name="enable-sso-for-messaging-extensions-and-link-unfurling"></a>Activer l' sso pour les extensions de messagerie et le déploiement de liens
+## <a name="enable-sso-for-messaging-extensions-and-link-unfurling"></a>Activer l’ation SSO pour les extensions de messagerie et le déploiement de liens
 
 Une fois les conditions préalables terminées, vous pouvez activer l’ingso pour les extensions de messagerie et le déploiement des liaisons.
 
-**Pour activer l' utilisateur sso**
+**Pour activer l' utilisateur SSO**
 1. Mettez à jour les détails [de connexion OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de vos bots dans le portail Azure.
 2. Téléchargez [l’exemple d’extensions de messagerie](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) et suivez les instructions d’installation fournies par l’Assistant.
    > [!NOTE]
@@ -41,7 +41,7 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
     > [!NOTE]
     > Nous ne tenons pas d’autres sso de handlers, à l’exception du fichier `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` TeamsMessagingExtensionsSearchAuthConfigBot.cs.
    
-4. Vous recevez le jeton dans le handler dans la charge utile ou dans le , en fonction du scénario pour lequel vous activez l' `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` cesso pour `OnTeamsAppBasedLinkQueryAsync` :
+4. Vous recevez le jeton dans le handler dans la charge utile ou dans le , en fonction du scénario pour lequel vous activez l' `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` cesso `OnTeamsAppBasedLinkQueryAsync` :
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
@@ -119,4 +119,3 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
 * [Ajouter l’authentification à vos extensions de messagerie](add-authentication.md)
 * [Utiliser l' sso pour les bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Déploiement de lien](link-unfurling.md)
-

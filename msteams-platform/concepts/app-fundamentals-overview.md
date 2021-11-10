@@ -1,16 +1,17 @@
 ---
 title: Vue d’ensemble des principes de base du développement d’applications
 author: heath-hamilton
-description: Décrire les concepts fondamentaux du développement Teams plateformes.
+description: Décrire les concepts fondamentaux du développement de plateformes Teams, tels que les fonctionnalités d’application et les points d’entrée, comprendre les cas d’utilisation et les macaler aux fonctionnalités de l’application et planifier des applications.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: f94a53c8aec4ca158745853d31ab7f2b8db2bd40
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: fonctionnalité d’utilisation des cas d’extensibilité des points d’entrée
+ms.openlocfilehash: 63a11c949a56bf024632efc7cad5ef38ce918c2b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566378"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889271"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de développement d’applications
 
@@ -27,26 +28,25 @@ Vous pouvez reconnaître les problèmes des utilisateurs et identifier les répo
 * Avez-vous besoin d’une authentification ?
 * Quel problème votre application va-t-elle résoudre ?
 * Qui les utilisateurs finaux de l’application ?
-* Comment l’expérience d’intégration doit-elle être et que peut faire l’application ?
+* Comment l’expérience d’intégration doit-elle être et quelles autres sont les autres activités de l’application ?
 
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
 
-[La cartographie de vos cas d’utilisation](../concepts/design/map-use-cases.md) couvre certains scénarios courants et la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
+[Maposez vos cas d’utilisation](../concepts/design/map-use-cases.md) sur certains scénarios courants et sur la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
 
 ## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
 [Planifiez des onglets réactifs Teams mobile couvre](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) des scénarios courants et facilite la planification des applications pour Teams mobile. Guides de document sur la façon de mettre en place une stratégie pour les applications sur mobile. Vous pouvez également en savoir plus sur les différents satges et les différents types d’Teams app.
 
-## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
+## <a name="integrate-device-capabilities"></a>Intégrer des fonctionnalités d’appareil
 
-Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
-
-## <a name="see-also"></a>Voir aussi
-
-* [Intégrer des applications web à Teams](../samples/integrating-web-apps.md)
-* [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md) 
+Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams.
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Comprendre Teams fonctionnalités de l’application](capabilities-overview.md)
 
+## <a name="see-also"></a>Voir aussi
+
+* [Intégrer des applications web à Teams](../samples/integrating-web-apps.md)
+* [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)

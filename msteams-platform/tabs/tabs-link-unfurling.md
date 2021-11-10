@@ -1,16 +1,16 @@
 ---
 title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez comment déployer un lien, ouvrir l’affichage Étape et épingler un onglet avec Microsoft Teams’application.
+description: Découvrez comment déployer un lien, ouvrir la vue d’étape et épingler un onglet avec Microsoft Teams’application. Découvrez l’affichage de la scène et son appel à l’aide d’une carte adaptative à l’aide d’exemples et d’exemples de code.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720343"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887566"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -34,10 +34,10 @@ L’affichage de l’étape permet d’offrir une expérience plus transparente 
 
 Vous pouvez appeler l’affichage de l’étape des manières suivantes :
 
-* [Appeler la vue d’étape à partir d’une carte adaptative](#invoke-stage-view-from-adaptive-card)
+* [Appeler l’affichage de l’étape à partir d’une carte adaptative](#invoke-stage-view-from-adaptive-card)
 * [Appeler l’affichage de l’étape par le biais d’un lien profond](#invoke-stage-view-through-deep-link)
 
-## <a name="invoke-stage-view-from-adaptive-card"></a>Appeler la vue d’étape à partir d’une carte adaptative
+## <a name="invoke-stage-view-from-adaptive-card"></a>Appeler l’affichage de l’étape à partir d’une carte adaptative
 
 Lorsque l’utilisateur entre une URL sur le client de bureau Teams, [](../task-modules-and-cards/cards/cards-actions.md) le bot est appelé et renvoie une carte adaptative avec la possibilité d’ouvrir l’URL dans une étape. Une fois qu’une étape est lancée et que l’étape est fournie, vous pouvez ajouter la possibilité d’épingler l’étape `tabInfo` sous la mesure d’un onglet.  
 
@@ -128,7 +128,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | `entityId` | Chaîne | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
 | `name` | Chaîne | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
 | `contentUrl` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
-| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
+| `websiteUrl?` | String | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
 | `removeUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code
@@ -138,14 +138,14 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |Onglet en vue de l’étape |Microsoft Teams exemple d’application d’onglet pour montrer l’onglet en vue de la phase.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Déploiement des liens des extensions de messagerie](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)

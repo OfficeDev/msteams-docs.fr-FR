@@ -1,16 +1,16 @@
 ---
 title: Concevoir votre application avec des composants d’interface utilisateur avancés
 author: heath-hamilton
-description: Découvrez les composants d’interface utilisateur utilisés dans Teams .
+description: Découvrez les composants Teams’interface utilisateur, tels que les barres de barre de notification, la vue d’étape et les cas d’utilisation pertinents.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d42205ff7d62d1c65956baed4f7841c8fe70b2e5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719846"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889257"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>Conception de votre application Microsoft Teams avec des composants d’interface utilisateur avancés
 
@@ -36,13 +36,13 @@ Les barre de navigation sont une aide à la navigation qui véhicule la hiérarc
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="L’exemple montre un modèle de lacrumb sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="L’exemple montre un modèle de lacrumb sur le bureau." border="false":::
 
 ## <a name="left-nav"></a>Navigation gauche
 
-Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre onglet Teams de navigation. Dans l’exemple suivant, le navigation gauche se trouve entre la liste de canaux et le contenu de l’onglet.
+Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre onglet Teams gauche. Dans l’exemple suivant, le navigation gauche se trouve entre la liste de canaux et le contenu de l’onglet.
 
 ### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
@@ -51,15 +51,15 @@ Utilisez le navigation de gauche pour parcourir plusieurs pages dans votre ongle
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur un appareil mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="L’exemple montre un modèle de navigation gauche sur un ordinateur de bureau." border="false":::
 
 ## <a name="notification-bar"></a>Barre de notification
 
-Une barre de notification est une zone dédiée à l’affichage de messages brefs et importants qui ne nécessitent pas que l’utilisateur prenne des mesures immédiates. Des icônes et des couleurs d’arrière-plan spécifiques sont associées à des types de messages spécifiques (voir ci-dessous).
+Une barre de notification est une zone dédiée à l’affichage de messages brefs et importants qui ne nécessitent pas que l’utilisateur prenne des mesures immédiates. Des icônes et couleurs d’arrière-plan spécifiques sont associées à des types de messages spécifiques (voir ci-dessous).
 
 ### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
@@ -71,7 +71,7 @@ Une barre de notification est une zone dédiée à l’affichage de messages bre
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Exemple de modèle d’interface utilisateur de barre de notification sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="L’exemple montre les modèles d’interface utilisateur de la barre de notification sur le bureau." border="false":::
 
@@ -92,9 +92,9 @@ Votre application peut lancer une étape à partir d’une carte adaptative, d�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="L’exemple montre un modèle d’étape sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur le bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="L’exemple montre un modèle d’étape sur ordinateur de bureau." border="false":::
 
 ## <a name="toolbar"></a>Barre d'outils
 
@@ -110,6 +110,6 @@ Une barre d’outils est un conteneur permettant de grouper un ensemble de contr
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="L’exemple montre un modèle de barre d’outils sur mobile." border="false":::
 
-### <a name="desktop"></a>Ordinateur de bureau
+### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="L’exemple montre un modèle de barre d’outils sur un ordinateur de bureau." border="false":::

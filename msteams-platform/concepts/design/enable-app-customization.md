@@ -5,12 +5,13 @@ description: Comprendre comment Teams administrateurs peuvent personnaliser votr
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 4e6699d2c021eb15f5a977517b616aeb256430c1
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+keywords: marque de couleur d’accentuer masquer l’approbation de l’application
+ms.openlocfilehash: 3519ad5dc91b27d947c752161bfe3c477281f1f7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127269"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888166"
 ---
 # <a name="customize-your-teams-app"></a>Personnaliser votre application Teams client
 
@@ -21,7 +22,7 @@ Vous pouvez permettre aux clients de personnaliser certains aspects de votre app
 Voici quelques exemples possibles de cette fonctionnalité :
 
 * Modification de la couleur d’accentuage de l’application pour qu’elle corresponde à la marque d’une organisation.
-* Mise à jour du nom de l’application de *Contoso* vers *l’agent Contoso*, qui est le nom que les utilisateurs de l’organisation voient. (Remarque : les utilisateurs qui ajoutent un connecteur à une conversation ou un canal voient toujours le nom de l’application d’origine, *Contoso.)*
+* Mise à jour du nom de l’application de *Contoso* vers *l’agent Contoso,* qui est le nom que les utilisateurs de l’organisation voient. (Remarque : les utilisateurs qui ajoutent un connecteur à une conversation ou un canal voient toujours le nom de l’application d’origine, *Contoso.)*
 
 Vous pouvez activer cette fonctionnalité dans le Portail des développeurs [pour Teams](https://dev.teams.microsoft.com/home). Cette `configurableProperties` configuration, qui n’est pas disponible dans les versions antérieures à la version 1.10 du manifeste Teams’application.
 
@@ -35,7 +36,7 @@ Fournir des instructions pour les clients (Teams administrateurs) qui souhaitent
 
 ## <a name="hide-teams-app-until-admin-approves"></a>Masquer Teams application jusqu’à ce que l’administrateur approuve
 
-Pour améliorer Teams’expérience d’application, vous pouvez masquer une application aux utilisateurs par défaut jusqu’à ce que l’administrateur autorise à le faire. Par exemple, Contoso Electronics a créé une application de service d’Teams. Pour activer le fonctionnement approprié de l’application, Contoso Electronics souhaite que les clients d’abord configurer des propriétés spécifiques de l’application. L’application est masquée par défaut et n’est accessible aux utilisateurs qu’une fois que l’administrateur l’autorise.
+Pour améliorer Teams l’expérience d’application, vous pouvez masquer une application aux utilisateurs par défaut jusqu’à ce que l’administrateur autorise à la désinsidation de l’application. Par exemple, Contoso Electronics a créé une application de service d’Teams. Pour activer le fonctionnement approprié de l’application, Contoso Electronics souhaite que les clients d’abord configurer des propriétés spécifiques de l’application. L’application est masquée par défaut et n’est accessible aux utilisateurs qu’une fois que l’administrateur l’autorise.
 
 Pour masquer l’application, dans le fichier manifeste de l’application, définissez `defaultBlockUntilAdminAction` la propriété sur `true` . Lorsque la propriété est définie sur , dans Teams centre d’administration > Gérer les applications , Bloqué par l’éditeur apparaît dans `true` l’état de l’application :  
 
@@ -52,4 +53,6 @@ Si, par défaut, vous ne souhaitez pas que l’application soit masquée, vous p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Personnaliser des applications dans le Centre d Teams’administration Windows](/MicrosoftTeams/customize-apps)
+* [Schéma manifesh d’application](/MicrosoftTeams/manifest-schema)
+* [Personnaliser des applications dans le Centre d Teams’administration Windows](/MicrosoftTeams/customize-apps)
+

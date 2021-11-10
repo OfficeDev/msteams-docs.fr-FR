@@ -1,16 +1,16 @@
 ---
 title: Messages dans les conversations des robots
-description: Décrit comment avoir une conversation avec un bot Microsoft Teams de travail
+description: Décrit comment avoir une conversation avec un bot Microsoft Teams de travail. Découvrez comment Teams canal, notification à votre message, messages image, cartes adaptatives à l’aide d’exemples de code.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566238"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889334"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -119,7 +119,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>Envoyer un message
 
-Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité. Dans le handler d’activité du bot, utilisez la méthode de l’objet de contexte turn pour `SendActivityAsync` envoyer une seule réponse de message. Utilisez la méthode de l’objet `SendActivitiesAsync` pour envoyer plusieurs réponses à la fois.
+Pour envoyer un message texte, spécifiez la chaîne que vous voulez envoyer en tant qu’activité. Dans le handler d’activité du bot, utilisez la méthode de l’objet de contexte turn pour `SendActivityAsync` envoyer une seule réponse de message. Utilisez la méthode de `SendActivitiesAsync` l’objet pour envoyer plusieurs réponses à la fois.
 
 Le code suivant montre un exemple d’envoi d’un message lorsqu’un utilisateur est ajouté à une conversation :
 
@@ -189,7 +189,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Le fractionnement de message se produit lorsqu’un message texte et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un message texte et l’autre avec une pièce jointe. Lorsque l’activité est fractionée, vous ne recevez pas l’ID de message en réponse, qui est utilisé pour mettre à jour ou supprimer [le](~/bots/how-to/update-and-delete-bot-messages.md) message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+> Le fractionnement de message se produit lorsqu’un message texte et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un simple message texte et l’autre avec une pièce jointe. Lorsque l’activité est fractionée, vous ne recevez pas [](~/bots/how-to/update-and-delete-bot-messages.md) l’ID du message en réponse, qui est utilisé pour mettre à jour ou supprimer le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
 
 Les messages envoyés entre les utilisateurs et les bots incluent des données de canal interne dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le SDK Bot Builder vous permet de modifier la structure des messages.
 
@@ -205,7 +205,7 @@ Un objet `channelData` type dans une activité envoyée à votre bot contient le
 * `tenant.id`: Azure Active Directory ID de client transmis dans tous les contextes.
 * `team`: Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.
   * `id`: GUID du canal.
-  * `name`: Nom de l’équipe transmis uniquement en cas d’événements [de changement de nom d’équipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+  * `name`: nom de l’équipe transmis uniquement en cas d’événements [de changement de nom d’équipe.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * `channel`: Transmis uniquement dans les contextes de canal, lorsque le bot est mentionné ou pour les événements dans les canaux dans teams, où le bot a été ajouté.
   * `id`: GUID du canal.
   * `name`: Nom du canal transmis uniquement en cas d’événements [de modification de canal.](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
@@ -236,7 +236,7 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 
 ## <a name="message-content"></a>Contenu du message
 
-| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Remarques                                                                                   |
+| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
 | Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.  |
@@ -333,7 +333,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utilisez : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)` .
@@ -378,11 +378,11 @@ Voici les codes d’état, leur code d’erreur et leurs valeurs de message :
 
 | Code d'état | Code d’erreur et valeurs de message | Description |
 |----------------|-----------------|-----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message :** l’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation 1:1 ou un canal via les paramètres de modération. |
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message :** l’utilisateur a bloqué la conversation avec le bot. | L’utilisateur a bloqué le bot dans une conversation en une:1 ou dans un canal via les paramètres de modération. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message :** le bot ne fait pas partie de la liste des conversations. | Le bot ne fait pas partie de la conversation. |
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: l’administrateur client a désactivé ce bot. | Le client a bloqué le bot. |
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message :** l’administrateur client a désactivé ce bot. | Le client a bloqué le bot. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: aucune inscription trouvée pour ce bot. | L’inscription de ce bot est in trouvée. |
-| 412 | **Code**: `PreconditionFailed` <br/> **Message :** Échec de la condition préalable, veuillez essayer à nouveau. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message :** la condition préalable a échoué, veuillez essayer à nouveau. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message :** Conversation in trouvée. | La conversation est in trouvée. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message :** taille du message trop grande. | La taille de la demande entrante était trop importante. |
 | 429 | **Code**: `Throttled` <br/> **Message**: trop de demandes. Renvoie également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, voir [limite de taux.](~/bots/how-to/rate-limit.md) |
@@ -393,13 +393,14 @@ Voici les codes d’état, leur code d’erreur et leurs valeurs de message :
 |----------------|-----------------|--------------|----------------|-----------|
 | Bot de conversation Teams | Gestion des événements de messagerie et de conversation. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a>Voir aussi
-
-- [Envoyer des messages proactifs](~/bots/how-to/conversations/send-proactive-messages.md)
-
-- [S’abonner à des événements de conversation](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Menus de commande du bot](~/bots/how-to/create-a-bot-commands-menu.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Envoyer des messages proactifs](~/bots/how-to/conversations/send-proactive-messages.md)
+* [S’abonner à des événements de conversation](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Envoyer et recevoir des fichiers via le bot](~/bots/how-to/bots-filesv4.md)
+* [Envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)

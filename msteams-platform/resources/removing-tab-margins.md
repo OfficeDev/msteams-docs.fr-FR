@@ -6,12 +6,12 @@ keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 79c4d887a028d9da722325985f9bbd62740e3781
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157006"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888075"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
@@ -25,15 +25,15 @@ Vous pouvez créer des applications qui semblent plus natives Teams en suppriman
 
 ## <a name="guidelines"></a>Conseils
 
-La suppression des marges de tabulation affecte Teams applications qui utilisent des onglets. Dans ce cas, vous pouvez ajouter des marges autour de vos conceptions d’onglets lorsque cela est nécessaire. Les conceptions d’applications en production ont un effet de remplissage supplémentaire, c’est-à-dire les marges fournies par les Teams et les marges fournies par l’onglet. Toutefois, l’espacement supplémentaire n’est que temporaire et disparaît dans quelques semaines, ne laissant que le remplissage fourni par l’application.
+La suppression des marges de tabulation affecte Teams applications qui utilisent des onglets. Dans ce cas, vous pouvez ajouter des marges autour de vos conceptions d’onglets lorsque cela est nécessaire. Les conceptions d’applications en production ont un effet de remplissage supplémentaire, c’est-à-dire les marges fournies par les Teams et les marges fournies par l’onglet. Toutefois, le remplissage supplémentaire n’est que temporaire et disparaît dans quelques semaines, ne laissant que le remplissage fourni par l’application.
 
 ## <a name="faq"></a>FAQ
 
-**Est-il possible pour le chrome de l’application, comme la barre d’en-tête ou la barre des tâches, d’toucher les bords de nos conceptions ?**
+**Est-ce que le chrome de l’application, tel que la barre d’en-tête ou la barre des tâches, est autorisé à toucher les bords de nos conceptions ?**
 
-Oui, cela est correct et Teams encourage une telle conception. Cela permet à l’application de se sentir native.
+Oui, cela est correct et Teams encourage cette conception. Cela permet à l’application de se sentir native.
 
-**Est-il possible pour le contenu de l’application, comme le texte, les logos et les images, d’toucher les bords gauche et droit de nos conceptions ?**
+**Le contenu de l’application, tel que le texte, les logos et les images, est-il autorisé à toucher les bords gauche et droit de nos conceptions ?**
 
 Non, vous devez fournir votre propre remplissage ou marges à gauche et à droite de tout le contenu de l’application pour vous assurer qu’il ne touche pas les bords de votre interface utilisateur. Vous pouvez également ajouter des marges en haut de votre onglet, si nécessaire.
 

@@ -1,17 +1,17 @@
 ---
 title: Utiliser Microsoft Graph pour autoriser l’installation proactive d’un bot et la messagerie dans Teams
-description: Décrit la messagerie proactive dans Teams et comment implémenter.
+description: Décrit la messagerie proactive dans Teams et comment l’implémenter. Découvrez comment activer l’installation proactive de l’application et la messagerie à l’aide d’un exemple de code.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: équipes d’installation de conversation de messagerie proactive Graph
-ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: installation de conversation de messagerie proactive teams Graph
+ms.openlocfilehash: a3b7ffd24f7601c8247f1f11c6fe1a562d9cd847
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155882"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888005"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
 
@@ -20,7 +20,7 @@ ms.locfileid: "59155882"
 
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans Teams
 
-Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’enquêtes et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou **basées sur des** boîtes de dialogue :
+Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’sondages et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou **basées sur des** boîtes de dialogue :
 
 |Type de message | Description |
 |----------------|-------------- |
@@ -37,24 +37,24 @@ Les autorisations de type de ressource [TeamsAppInstallation](/graph/api/resourc
 
 |Autorisation d’application | Description|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Permet à une application Teams de lire, d’installer, de mettre à niveau et de se désinstaller elle-même pour n’importe quel *utilisateur,* sans se connecter ou utiliser préalablement.|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Permet à une Teams de lire, d’installer, de mettre à niveau et de se désinstaller elle-même pour n’importe quel *utilisateur,* sans se connecter ou utiliser préalablement.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Permet à une Teams de lire, d’installer, de mettre à niveau et de se désinstaller elle-même dans n’importe quelle *équipe,* sans se connecter ou utiliser préalablement.|
 
 Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) à votre manifeste d’application avec les valeurs suivantes :
 
-* **id**: ID de votre Azure Active Directory (AAD).
+* **id**: ID Azure Active Directory (AAD) d’application.
 * **ressource**: URL de ressource pour l’application.
 
 > [!NOTE]
 >
 > * Votre bot nécessite des autorisations d’application et non des autorisations déléguées par l’utilisateur, car l’installation est pour d’autres utilisateurs.
 >
-> * Un administrateur client AAD doit [explicitement accorder des autorisations à une application.](/graph/security-authorization#grant-permissions-to-an-application) Une fois les autorisations accordées à l’application, tous les membres du client AAD obtiennent les autorisations accordées.
+> * Un administrateur AAD client doit [explicitement accorder des autorisations à une application.](/graph/security-authorization#grant-permissions-to-an-application) Une fois les autorisations accordées à l’application, tous les membres du client AAD obtiennent les autorisations accordées.
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Activer l’installation proactive de l’application et la messagerie
 
 > [!IMPORTANT]
-> Microsoft Graph installer uniquement les applications publiées dans le magasin d’applications de votre organisation ou le Teams store.
+> Microsoft Graph installer uniquement les applications publiées dans le magasin d’applications de votre organisation ou dans Teams store.
 
 ### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>Créer et publier votre bot de messagerie proactive pour Teams
 
@@ -77,7 +77,7 @@ Vous pouvez récupérer les `teamsAppId` informations suivantes :
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    La demande doit renvoyer un `teamsApp` `id` objet, qui est l’ID d’application généré par le catalogue de l’application. Ceci est différent de l’ID que vous avez fourni dans votre manifeste Teams application :
+    La demande doit renvoyer un objet, qui est `teamsApp` l’ID d’application généré par le catalogue de `id` l’application. Ceci est différent de l’ID que vous avez fourni dans votre manifeste Teams application :
 
     ```json
     {
@@ -195,12 +195,13 @@ Votre bot peut [envoyer des messages proactifs](/azure/bot-service/bot-builder-h
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | Installation proactive de l’application et envoi de notifications proactives | Cet exemple montre comment utiliser l’installation proactive de l’application pour les utilisateurs et envoyer des notifications proactives en appelant les API Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-## <a name="see-also"></a>Voir aussi
-
-* [**Gérer les stratégies de configuration d’application dans Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [Envoyer des notifications proactives aux utilisateurs SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="additional-code-samples"></a>Exemples de code supplémentaires
 >
 > [!div class="nextstepaction"]
 > [**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
+## <a name="see-also"></a>Voir aussi
+
+* [**Gérer les stratégies de configuration d’application dans Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [Envoyer des notifications proactives aux utilisateurs SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)

@@ -1,16 +1,16 @@
 ---
 title: Définir des commandes d’action d’extension de messagerie
 author: surbhigupta
-description: Vue d’ensemble des commandes d’action d’extension de messagerie
+description: Vue d’ensemble des commandes d’action d’extension de messagerie avec un exemple de manifeste d’application
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720140"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887991"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
@@ -53,20 +53,20 @@ Si vous choisissez de créer le module de tâche avec une liste statique de para
 
 ## <a name="select-how-the-final-message-is-sent"></a>Sélectionner la façon dont le message final est envoyé
 
-Dans la plupart des cas, la commande d’action entraîne l’insertion d’une carte dans la zone de composition du message. L’utilisateur peut l’envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l’utilisateur et le bot ne peut ni modifier ni mettre à jour la carte.
+Dans la plupart des cas, la commande d’action entraîne l’insertion d’une carte dans la zone composer un message. L’utilisateur peut l’envoyer dans le canal ou la conversation. Dans ce cas, le message provient de l’utilisateur et le bot ne peut ni modifier ni mettre à jour la carte.
 
 Si l’extension de messagerie est invoquée à partir de la zone de composition ou directement à partir d’un message, votre service web peut insérer la réponse finale directement dans le canal ou la conversation. Dans ce cas, la carte adaptative provient du bot, le bot la met à jour et répond au thread de conversation si nécessaire. Vous devez ajouter l’objet au manifeste de l’application en utilisant le même ID et en `bot` définissant les étendues appropriées.
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Ajouter la commande d’action au manifeste de votre application
 
-Pour ajouter la commande d’action au manifeste de l’application, vous devez ajouter un nouvel objet au niveau supérieur `composeExtension` du manifeste d’application JSON. Pour ce faire, vous pouvez utiliser l’une des méthodes suivantes :
+Pour ajouter la commande d’action au manifeste de l’application, vous devez ajouter un nouvel objet au niveau supérieur du `composeExtension` manifeste d’application JSON. Pour ce faire, vous pouvez utiliser l’une des méthodes suivantes :
 
 * [Créer une commande d’action à l’aide d’App Studio](#create-an-action-command-using-app-studio)
 * [Créer une commande d’action manuellement](#create-an-action-command-manually)
 
 ### <a name="create-an-action-command-using-app-studio"></a>Créer une commande d’action à l’aide d’App Studio
 
-Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail du développeur.**
+Vous pouvez créer une commande d’action à **l’aide d’App Studio** **ou du portail du développeur.**
 
 > [!NOTE]
 > App Studio sera bientôt supprimé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
@@ -85,7 +85,7 @@ Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **d
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
     
-1. Pour créer une extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
+1. Pour créer une extension de messagerie, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un nouveau. Sélectionnez Créer une option **de bot,** donnez un nom au nouveau bot, puis sélectionnez **Créer.** L’image suivante affiche la création d’un bot pour l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
@@ -112,7 +112,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
 
    <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
 
-1. Pour utiliser des paramètres dynamiques, sélectionnez **Récupérer un ensemble dynamique de paramètres à partir de votre bot.** L’image suivante affiche la sélection du paramètre de commande d’action :
+1. Pour utiliser des paramètres dynamiques, sélectionnez récupérer un ensemble dynamique de **paramètres à partir de votre bot.** L’image suivante affiche la sélection du paramètre de commande d’action :
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
     
@@ -122,7 +122,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
 1. Sélectionnez **Enregistrer**.
-1. Pour ajouter d’autres paramètres, sélectionnez **le bouton** Ajouter dans la section **Paramètres.**
+1. Pour ajouter d’autres paramètres, sélectionnez **le bouton Ajouter** dans la section **Paramètres.**
 
 ### <a name="create-an-action-command-manually"></a>Créer une commande d’action manuellement
 
@@ -212,7 +212,7 @@ La section suivante est un exemple `composeExtensions` d’objet définissant de
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante
@@ -226,4 +226,3 @@ Si vous utilisez les paramètres ou un affichage web incorporé avec un `taskInf
 
 > [!div class="nextstepaction"]
 > [Répondre à l’soumission du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

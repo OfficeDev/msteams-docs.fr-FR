@@ -1,15 +1,15 @@
 ---
 title: Tester la vue d’ensemble de votre application
-description: Décrit le processus de test de votre application Teams personnalisée dans Microsoft 365
+description: Décrit le processus de test et de débogage de votre application Teams personnalisée dans Microsoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Configurer Microsoft 365 client Teams l’application de test
-ms.openlocfilehash: 045159133b53b83e256eea9bab09f71e45bf02cf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9cbb650fc248d12fc310cc8b1aaaded7b9a87140
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155577"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889264"
 ---
 # <a name="test-your-app"></a>Tester votre application
 
@@ -29,19 +29,19 @@ Pour tester et déboguer votre application, vous devez créer au moins un espace
 
 Testez votre bot localement. Pour plus d’informations, voir [déboguer votre bot localement avec un IDE.](~/bots/how-to/debug/locally-with-an-ide.md) Vous pouvez également déboguer votre bot avec des logiciels [intermédiaires d’inspection](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) et des [outils adaptatifs.](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true) 
 
-Pour afficher les journaux de la console, afficher ou modifier des requêtes html, css et réseau pendant l’utilisation, ajoutez des points d’arrêt à votre code JavaScript et effectuez un débogage interactif pour accéder aux DevTools. Pour plus d’informations, [voir Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
+Pour afficher les journaux de la console, afficher ou modifier des requêtes html, css et réseau pendant l’runtime, ajoutez des points d’arrêt à votre code JavaScript et effectuez un débogage interactif pour accéder aux DevTools. Pour plus d’informations, [voir Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
 
 ## <a name="add-test-data-to-your-microsoft-365-tenant"></a>Ajouter des données de test à votre client Microsoft 365 client
 
 Ajoutez les données de test Microsoft 365 client test. Pour plus d’informations, voir ajouter des données de test à [votre client de test Office 365](~/concepts/build-and-test/test-data.md)et remplir toutes les conditions préalables avant de commencer à télécharger vos données de test.
+
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Préparer votre client Microsoft Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
 * [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Préparer votre client Microsoft Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)

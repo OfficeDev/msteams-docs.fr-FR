@@ -3,21 +3,21 @@ title: Utiliser des modules de tâche dans Microsoft Teams bots
 description: Utilisation des modules de tâche avec Microsoft Teams bots, y compris les cartes Bot Framework, les cartes adaptatives et les liens profonds.
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: bots d’équipes de modules de tâche
-ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: modules de tâche teams bots carte adaptative liens profonds
+ms.openlocfilehash: c46b647ca9fa446db6ae51ae6d33dbabdef18296
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156881"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888306"
 ---
 # <a name="use-task-modules-from-bots"></a>Utiliser des modules de tâches à partir de bots
-
+ 
 Les modules de tâche peuvent être appelés à partir de bots Microsoft Teams à l’aide de boutons sur les cartes adaptatives et les cartes Bot Framework qui sont hero, thumbnail et Office 365 Connector. Les modules de tâche sont souvent une meilleure expérience utilisateur que plusieurs étapes de conversation. Suivez l’état du bot et autorisez l’utilisateur à interrompre ou annuler la séquence.
 
 Il existe deux façons d’invoquer des modules de tâche :
 
-* Un nouveau type de message d’appel : l’utilisation de l’action de carte pour les cartes Bot Framework ou de l’action de carte pour les cartes adaptatives, avec , module de tâche, une URL ou une carte adaptative, est récupérée dynamiquement à partir de votre `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` bot.
+* Un nouveau type de message d’appel : l’utilisation de l’action de carte pour les cartes Bot Framework ou de l’action de carte pour les cartes adaptatives, avec un module de tâche, une URL ou une carte adaptative, est récupérée dynamiquement à partir de votre `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` bot.
 * URL de lien profond : à l’aide de la syntaxe de lien profond pour les [modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)de tâche, vous pouvez utiliser l’action de carte pour les cartes Bot Framework ou l’action de carte pour les cartes adaptatives, `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) respectivement. Avec les URL de lien profond, l’URL du module de tâche ou le corps de la carte adaptative est déjà connu pour éviter un aller-retour serveur par rapport à `task/fetch` .
 
 > [!IMPORTANT]
@@ -35,7 +35,7 @@ Les étapes suivantes fournissent le module d’appel de tâche à l’aide de l
 
 1. Cette image montre une carte Hero Bot Framework avec une action **acheter** `invoke` [une carte.](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) La valeur de `type` la propriété est et le reste de `task/fetch` l’objet `value` peut être de votre choix.
 1. Le bot reçoit le `invoke` message HTTP POST.
-1. Le bot crée un objet de réponse et le renvoie dans le corps de la réponse POST avec un code de réponse HTTP 200. Pour plus d’informations sur le schéma des réponses, consultez [la discussion sur la tâche/envoyer.](#the-flexibility-of-tasksubmit) Le code suivant fournit un exemple de corps de la réponse HTTP qui contient un objet [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) incorporé dans un objet wrapper :
+1. Le bot crée un objet de réponse et le renvoie dans le corps de la réponse POST avec un code de réponse HTTP 200. Pour plus d’informations sur le schéma des réponses, voir [la discussion sur la tâche/envoyer.](#the-flexibility-of-tasksubmit) Le code suivant fournit un exemple de corps de la réponse HTTP qui contient un objet [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) incorporé dans un objet wrapper :
 
     ```json
     {
@@ -62,7 +62,7 @@ La section suivante fournit des détails sur l’envoi du résultat d’un modul
 
 Lorsque l’utilisateur a terminé le module de tâche, la soumission du résultat au bot est similaire à la façon dont il fonctionne avec les onglets. Pour plus d’informations, [voir l’exemple d’envoi du résultat d’un module de tâche.](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module) Il existe quelques différences comme suit :
 
-* HTML ou JavaScript : une fois que vous avez validé ce que l’utilisateur a entré, vous appelez la fonction SDK appelée ci-après comme à des fins de `TaskInfo.url` `microsoftTeams.tasks.submitTask()` `submitTask()` lisibilité. Vous pouvez appeler sans paramètre si vous souhaitez Teams le module de tâche, mais vous devez transmettre un objet ou une `submitTask()` chaîne à votre `submitHandler` . Passez-le en tant que premier paramètre, `result` . Teams appelle , `submitHandler` `err` est `null` et est `result` l’objet ou la chaîne que vous avez transmis à `submitTask()` . Si vous `submitTask()` appelez avec `result` un paramètre, vous devez transmettre un ou `appId` plusieurs tableaux de `appId` chaînes. Cela permet Teams vérifier que l’application qui envoie le résultat est la même que celle qui a appelé le module de tâche. Votre bot reçoit un `task/submit` message incluant `result` . Pour plus d’informations, [voir la charge utile des `task/fetch` `task/submit` messages.](#payload-of-taskfetch-and-tasksubmit-messages)
+* HTML ou JavaScript c’est-à-dire : une fois que vous avez validé ce que l’utilisateur a entré, vous appelez la fonction SDK appelée ci-après comme à des fins de `TaskInfo.url` `microsoftTeams.tasks.submitTask()` `submitTask()` lisibilité. Vous pouvez appeler sans paramètre si vous souhaitez Teams le module de tâche, mais vous devez transmettre un objet ou une `submitTask()` chaîne à votre `submitHandler` . Passez-le en tant que premier paramètre, `result` . Teams appelle , `submitHandler` `err` est `null` et est `result` l’objet ou la chaîne que vous avez transmis à `submitTask()` . Si vous `submitTask()` appelez avec `result` un paramètre, vous devez transmettre un ou `appId` plusieurs tableaux de `appId` chaînes. Cela permet Teams vérifier que l’application qui envoie le résultat est la même que celle qui a appelé le module de tâche. Votre bot reçoit un `task/submit` message incluant `result` . Pour plus d’informations, [voir la charge utile des `task/fetch` `task/submit` messages.](#payload-of-taskfetch-and-tasksubmit-messages)
 * Carte adaptative : le corps de la carte adaptative tel qu’il est rempli par l’utilisateur est envoyé au bot par le biais d’un message lorsque l’utilisateur `TaskInfo.card` `task/submit` sélectionne un `Action.Submit` bouton.
 
 La section suivante fournit des détails sur la flexibilité de `task/submit` .
@@ -73,7 +73,7 @@ Lorsque l’utilisateur termine avec un module de tâche appelé à partir d’u
 
 | Réponse du corps HTTP                      | Scénario                                |
 | --------------------------------------- | --------------------------------------- |
-| Aucun ne tient compte du `task/submit` message | La réponse la plus simple n’est pas du tout une réponse. Votre bot n’est pas tenu de répondre lorsque l’utilisateur a terminé avec le module de tâche. |
+| Aucun ne ignore le `task/submit` message | La réponse la plus simple n’est pas du tout une réponse. Votre bot n’est pas tenu de répondre lorsque l’utilisateur a terminé avec le module de tâche. |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams affiche la valeur d’un message dans `value` une boîte de message. |
 | <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Vous permet de chaîner des séquences de cartes adaptatives ensemble dans un Assistant ou une expérience en plusieurs étapes. |
 
@@ -90,7 +90,7 @@ Cette section définit le schéma de ce que votre bot reçoit lorsqu’il reçoi
 | -------- | ------------------------------------ |
 | `type`   | Est toujours `invoke` .           |
 | `name`   | Est soit `task/fetch` `task/submit` ou . |
-| `value`  | Est la charge utile définie par le développeur. La structure de `value` l’objet est identique à ce qui est envoyé à partir Teams. Dans ce cas, toutefois, il est différent. Elle nécessite la prise en charge de l’extraction dynamique à partir de Bot Framework, c’est-à-dire les actions de carte `task/fetch` `value` `Action.Submit` adaptative, autrement dit. `data` Un moyen de communiquer Teams au bot est nécessaire en plus de ce `context` qui est inclus dans ou `value` `data` .<br/><br/>Combinez « value » et « data » dans un objet parent :<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `value`  | Est la charge utile définie par le développeur. La structure de `value` l’objet est la même que ce qui est envoyé à partir Teams. Dans ce cas, toutefois, il est différent. Elle nécessite la prise en charge de l’extraction dynamique à partir de Bot Framework, c’est-à-dire les actions de carte `task/fetch` `value` `Action.Submit` adaptative, autrement dit. `data` Un moyen de communiquer Teams au bot est nécessaire en plus de ce `context` qui est inclus dans ou `value` `data` .<br/><br/>Combinez « value » et « data » dans un objet parent :<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 La section suivante fournit un exemple de réception et de réponse à des messages dans `task/fetch` `task/submit` Node.js.
 

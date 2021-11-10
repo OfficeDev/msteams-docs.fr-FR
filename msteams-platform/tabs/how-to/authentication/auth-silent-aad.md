@@ -1,22 +1,22 @@
 ---
 title: Authentification en mode silencieux
-description: Décrit l’authentification silencieuse
+description: Décrit l’authentification silencieuse, l’authentification unique, Azure Active Directory pour les onglets
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Authentification SSO teams sans AAD
-ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: Onglet silencieux de l’authentification AAD teams
+ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291624"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888026"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
 > [!NOTE]
 > Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, assurez-vous que vous utilisez au moins la version 1.4.1 du SDK JavaScript Teams.
 
-L’authentification sans Azure Active Directory (AAD) réduit le nombre de fois qu’un utilisateur entre ses informations d’identification de connexion en actualisation silencieuse du jeton d’authentification. Pour obtenir une véritable prise en charge de l' sign-on unique, voir [la documentation de l’oD unique.](~/tabs/how-to/authentication/auth-aad-sso.md)
+L’authentification sans Azure Active Directory (AAD) réduit le nombre de fois qu’un utilisateur entre ses informations d’identification de connexion en actualisation silencieuse du jeton d’authentification. Pour obtenir une prise en charge de l' sign-on unique réelle, voir [la documentation de l’oD unique.](~/tabs/how-to/authentication/auth-aad-sso.md)
 
 Si vous souhaitez conserver votre code entièrement côté client, vous pouvez utiliser la bibliothèque d’authentification [AAD](/azure/active-directory/develop/active-directory-authentication-libraries) pour JavaScript pour obtenir un jeton d’accès AAD silencieusement. Si l’utilisateur s’est récemment inscrit, il ne voit jamais de boîte de dialogue de fenêtre pop-up.
 
@@ -27,13 +27,13 @@ Même si la bibliothèque ADAL.js est optimisée pour les applications AngularJS
 
 ## <a name="how-silent-authentication-works"></a>Fonctionnement de l’authentification silencieuse
 
-La ADAL.js crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. Mais la bibliothèque spécifie , par `prompt=none` Azure AD n’affiche jamais la page de se connecte. Si l’interaction utilisateur est requise parce que l’utilisateur doit se connecter ou accorder l’accès à l’application, AAD renvoie immédiatement une erreur qui ADAL.js signale à votre application. À ce stade, votre application peut afficher un bouton de signature si nécessaire.
+La ADAL.js crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. Toutefois, la bibliothèque spécifie `prompt=none` , Azure AD affiche jamais la page de se connecte. Si l’interaction utilisateur est requise parce que l’utilisateur doit se connecter ou accorder l’accès à l’application, AAD renvoie immédiatement une erreur ADAL.js signale à votre application. À ce stade, votre application peut afficher un bouton de signature si nécessaire.
 
 ## <a name="how-to-do-silent-authentication"></a>Procédure d’authentification silencieuse
 
 Le code de cet article provient de l’Teams exemple d’application qui est Teams [exemple d’authentification.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-[Lancez l’onglet configurable de](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) l’authentification simple et sans AAD et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
+[Lancez l’onglet configurable](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) d’authentification simple et silencieuse à l’AAD et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
 
 ### <a name="include-and-configure-adal"></a>Inclure et configurer ADAL
 
@@ -135,3 +135,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## <a name="see-also"></a>Voir aussi
+
+[Configurer les fournisseurs d’identité pour qu’ils utilisent AAD](~/concepts/authentication/configure-identity-provider.md)

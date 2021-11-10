@@ -1,16 +1,16 @@
 ---
 title: Ajouter des données de test à votre client Microsoft 365 test
-description: Configurer votre abonnement Office 365 programme pour les développeurs pour tester Microsoft Teams applications
+description: Configurer votre abonnement Office 365 programme pour les développeurs pour tester Microsoft Teams applications à l’aide d’extraits de code
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: test des équipes de programme pour les développeurs d’applications
 ms.date: 11/01/2019
-ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156826"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888411"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client Microsoft 365 test
 
@@ -22,7 +22,7 @@ Vous pouvez tester votre application Microsoft Teams avec des exemples de donné
 2. [Configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
 3. [Utilisez des packs d’exemples de données avec votre abonnement Microsoft 365 développeur pour installer le pack de contenu Utilisateurs.](/office/developer-program/install-sample-packs)
 4. [Installez le Teams module PowerShell.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Installez le module Azure AD PowerShell.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
+5. [Installez le Azure AD module PowerShell.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
 > [!NOTE]
 > Vous devez avoir des autorisations d’administrateur global dans le client pour exécuter les scripts.

@@ -5,12 +5,12 @@ description: Vue d’ensemble des outils et des SDK pour la création Microsoft 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d6a1ce32fce03ada547cf769ff5a634f9d6f01de
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566343"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888425"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -27,7 +27,7 @@ Votre bot Teams se compose des suivants :
 
 * Un service web accessible au public hébergé par vous.
 * Une inscription Bot Framework pour votre service web.
-* Votre Teams d’application, qui connecte le client Teams à votre service web.
+* Votre Teams d’application, qui connecte le client Teams client à votre service web.
 
 > [!TIP]
 > Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
@@ -57,11 +57,11 @@ Les bots dans Microsoft Teams peuvent être intégrés dans une conversation à 
 | :-- | :-- | :-- |
 | Portée massive | Moins de membres | Méthode traditionnelle |
 | Interactions individuelles concises | @mention bot  | Q&A bots |
-| @mention bot | Similaire au canal | Bots qui indiquent à leurs personnes et prennent des notes |
+| @mention bot | Similaire au canal | Bots qui indiquent aux personnes à qui ils s’en prennent et qui prennent des notes |
 
 ### <a name="in-a-channel"></a>Dans un canal
 
-Les canaux contiennent des conversations entre plusieurs personnes, même jusqu’à deux milliers. Cela peut donner à votre bot une portée massive, mais les interactions individuelles doivent être concises. Les interactions multi turn traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez utiliser des cartes interactives ou des modules de tâche, ou déplacer la conversation vers une conversation un-à-un pour collecter de nombreuses informations. Votre bot n’a accès qu’aux messages où il se `@mentioned` trouve. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide Graph microsoft et des autorisations au niveau de l’organisation.
+Les canaux contiennent des conversations entre plusieurs personnes, même jusqu’à deux milliers. Cela peut donner à votre bot une portée massive, mais les interactions individuelles doivent être concises. Les interactions multi turn traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez utiliser des cartes interactives ou des modules de tâche, ou déplacer la conversation vers une conversation un-à-un pour collecter de nombreuses informations. Votre bot n’a accès qu’aux messages où il se `@mentioned` trouve. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide Graph Microsoft et des autorisations au niveau de l’organisation.
 
 Les bots fonctionnent mieux dans un canal dans les cas suivants :
 
@@ -82,7 +82,7 @@ La conversation un-à-un est un moyen traditionnel pour un bot de conversation d
 * Q&A bots
 * bots qui lancent des flux de travail dans d’autres systèmes 
 * bots qui indiquent aux personnes
-* Les bots qui prennent des notes avant de créer des chatbots un-à-un, estiment si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
+* les bots qui prennent des notes avant de créer des chatbots un-à-un, pensez à déterminer si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
@@ -92,7 +92,7 @@ Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen
 
 Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler.** En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
-UTILISATEUR : planifier une réunion avec Megan.
+USER : planifier une réunion avec Megan.
 
 BOT : j’ai trouvé 200 résultats, veuillez inclure un prénom et un nom.
 
@@ -110,7 +110,7 @@ Comme il n’y a que six commandes visibles dans le menu bot actuel, il est peu 
 
 ### <a name="maintain-a-large-knowledge-base"></a>Gérer une base de connaissances importante
 
-L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
+L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux aux interactions courtes et rapides, et ne sont pas en train de passer au travers de longues listes à la recherche d’une réponse.
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -122,3 +122,11 @@ L’un des inconvénients des bots est qu’il est difficile de maintenir une ba
 
 > [!div class="nextstepaction"]
 > [Gestionnaire d'activité du robot](~/bots/bot-basics.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Appels et réunions robots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Conversations de robots](~/bots/how-to/conversations/conversation-basics.md)
+* [Menus de commande du bot](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Flux d’authentification pour les bots dans Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
+* [Utiliser des modules de tâches à partir de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

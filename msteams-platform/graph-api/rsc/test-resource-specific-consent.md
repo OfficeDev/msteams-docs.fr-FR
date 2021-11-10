@@ -1,29 +1,29 @@
 ---
 title: Tester les autorisations de consentement propres aux ressources dans Teams
-description: Détails du test du consentement spécifique aux ressources Teams postman
+description: Détails du test du consentement spécifique aux ressources Teams l’aide de Postman avec des exemples de code
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: Autorisation OAuth DSO Teams AAD rsc Postman Graph
-ms.openlocfilehash: 66fff68e69f90f49e07cdd87266830f93cb0be2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Autorisation teams OAuth SSO AAD rsc Postman Graph
+ms.openlocfilehash: fc926e307c2e3ee5d1336c09e264930abe20d9d0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155564"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887719"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
 > [!NOTE]
-> Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation publique pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
+> Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
 
 Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques (équipes ou conversations) au sein d’une organisation. Pour plus d’informations, voir consentement spécifique à la [ressource (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
 > [!NOTE]
 > Pour tester les autorisations RSC, votre fichier manifeste d’application Teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
 >
-> - **id**: votre ID d’application Azure AD, voir Inscrire votre [application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
+> - **id :** votre ID Azure AD’application, voir Inscrire votre [application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)
 > - **ressource**: n’importe quelle chaîne, voir la remarque dans Mettre à [jour votre Teams manifeste d’application.](resource-specific-consent.md#update-your-teams-app-manifest)
 > - **autorisations d’application**: autorisations RSC pour votre application, voir [Autorisations propres aux ressources.](resource-specific-consent.md#resource-specific-permissions)
 
@@ -81,34 +81,34 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
 >[!NOTE]
 >Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste sous `applicationPermissions` .
 
->Si l’application est destinée à accéder aux API d’appel/multimédia, il doit s’agit de l’ID d’application `webApplicationInfo.Id` AAD [d’un service de bot Azure.](/graph/cloud-communications-get-started#register-a-bot)
+>Si l’application est destinée à accéder aux API d’appel/de média, il doit s’agit de `webApplicationInfo.Id` l’ID AAD’application [d’un service de bot Azure.](/graph/cloud-communications-get-started#register-a-bot)
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Test ajout d’autorisations RSC à une équipe à l’aide de l’application Postman
 
 Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le code de [test JSON RSC](test-team-rsc-json-file.md) pour l’équipe dans votre environnement local et mettre à jour les valeurs suivantes :
 
-* `azureADAppId`: ID d’application Azure AD de votre application.
-* `azureADAppSecret`: mot de passe de votre application Azure AD.
+* `azureADAppId`: ID d’Azure AD application de votre application.
+* `azureADAppSecret`: votre mot Azure AD application.
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
 * `teamGroupId`: vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
-    1. Dans le Teams client, **sélectionnez Teams** la barre de navigation à l’extrême gauche.
+    1. Dans le Teams client, **sélectionnez Teams** dans la barre de navigation à l’extrême gauche.
     2. Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
     3. Sélectionnez **l’icône Options** supplémentaires (&#8943;).
     4. Sélectionnez **Obtenir un lien vers l’équipe.** 
-    5. Copiez et enregistrez la **valeur groupId** à partir de la chaîne.
+    5. Copiez et enregistrez **la valeur groupId** à partir de la chaîne.
 
 ## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>Test ajout d’autorisations RSC à une conversation à l’aide de l’application Postman
 
 Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le code de [test JSON RSC](test-chat-rsc-json-file.md) pour les conversations dans votre environnement local et mettre à jour les valeurs suivantes :
 
-* `azureADAppId`: ID d’application Azure AD de votre application.
-* `azureADAppSecret`: mot de passe de votre application Azure AD.
+* `azureADAppId`: ID d’Azure AD application de votre application.
+* `azureADAppSecret`: votre mot Azure AD application.
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
-* `tenantId`: nom ou ID d’objet AAD de votre client.
-* `chatId`: vous pouvez obtenir l’ID de thread de conversation à partir du client *web* Teams comme suit :
+* `tenantId`: nom ou ID AAD’objet de votre client.
+* `chatId`: vous pouvez obtenir l’ID de thread de conversation à partir Teams *client web* comme suit :
 
-    1. Dans le Teams web, sélectionnez **Conversation** dans la barre de navigation de l’extrême gauche.
+    1. Dans le Teams web, sélectionnez **Conversation** dans la barre de navigation à l’extrême gauche.
     2. Sélectionnez la conversation dans laquelle l’application est installée dans le menu déroulant.
     3. Copiez l’URL web et enregistrez l’ID de thread de conversation à partir de la chaîne.
 ![ID de thread de conversation à partir de l’URL web.](../../assets/images/chat-thread-id.png)
@@ -130,10 +130,10 @@ Exécutez l’ensemble de la collection d’autorisations pour chaque appel d’
 1. Désinstallez l’application de la ressource spécifique.
 2. Suivez les étapes pour la conversation ou l’équipe : 
     1. [Test a ajouté des autorisations RSC à une équipe à l’aide de Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
-    2. [Test ajout d’autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
+    2. [Test a ajouté des autorisations RSC à une conversation à l’aide de Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Vérifiez tous les codes d’état de réponse pour vérifier que les appels d’API spécifiques ont échoué avec un code d’état **HTTP 403**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[API et Graph microsoft Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
-
+* [API et Graph microsoft Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+* [Consentement spécifique à la ressource](~/graph-api/rsc/resource-specific-consent.md)

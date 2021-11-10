@@ -1,16 +1,16 @@
 ---
 title: Gérer vos applications avec le Portail du développeur
-description: Découvrez comment gérer vos applications à l’aide du portail de développement pour Microsoft Teams.
+description: Découvrez comment configurer, distribuer et gérer vos applications à l’aide du portail de développement pour Microsoft Teams.
 keywords: mise en place des équipes du portail de développement
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c8a31f55131fb594a8d47c05e40533512e7de689
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720392"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888551"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
@@ -43,7 +43,7 @@ Vous pouvez configurer des environnements et des variables globales pour facilit
 Utilisez les noms de variables au lieu de valeurs codées en dur pour définir les configurations de votre application.
 
 1. Entrez `{{` n’importe quel champ dans le portail du développeur. Une dropdown avec toutes les variables que vous avez créées pour l’environnement choisi ainsi que les variables globales s’affiche.  
-1. Avant de télécharger votre package d’application (par exemple, lorsque vous êtes prêt à publier sur le Teams Store), sélectionnez l’environnement que vous souhaitez utiliser. Les configurations de votre application sont mises à jour automatiquement en fonction de l’environnement. 
+1. Avant de télécharger votre package d’application (par exemple, lorsque vous êtes prêt à publier sur le Teams Store), sélectionnez l’environnement que vous souhaitez utiliser. Les configurations de votre application sont automatiquement mises à jour en fonction de l’environnement. 
 
 ## <a name="identify-app-owners"></a>Identifier les propriétaires d’applications
 
@@ -57,7 +57,7 @@ Pour installer et restituer votre application dans Teams, vous devez inclure un 
 
 ## <a name="test-your-app-directly-in-teams"></a>Testez votre application directement dans Teams
 
-Le Portail des développeurs fournit des options de test et de débogage de votre application :
+Le Portail des développeurs fournit des options pour tester et déboguer votre application :
 
 * Dans la page **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
 * **L’aperçu Teams** bouton vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
@@ -70,12 +70,12 @@ Pour plus d’informations, [voir distribuer votre Teams application.](~/concept
 
 ## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
 
-Dans **la** page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
+Dans  la page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
 
 | Métrique | Définition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *R30 mensuel* | Mesure d’utilisation par défaut. Il indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans cette fenêtre de 30 jours en temps UTC. |
-| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application au cours d’un jour donné au cours de l’UTC. |
+| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans un jour donné en UTC. |
 
 L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 derniers jours. L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.
 

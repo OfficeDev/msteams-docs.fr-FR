@@ -1,17 +1,17 @@
 ---
 title: Créer une page de configuration
 author: surbhigupta
-description: Comment créer une page de configuration
+description: Découvrez comment créer une page de configuration pour configurer un canal ou une conversation de groupe pour des paramètres, tels que l’obtention de données de contexte, l’insertion d’espaces réservé et l’authentification à l’aide d’exemples de code.
 keywords: Canal de groupe onglets teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720189"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888019"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -109,7 +109,7 @@ Le code de la page de configuration Teams que les exigences de configuration son
 >[!NOTE]
 >
 >* Si vous inscrivez un handler d’enregistrement à l’aide de , le rappel doit appeler ou `microsoftTeams.settings.registerOnSaveHandler()` indiquer le résultat de la `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` configuration.
->* Si vous n’enregistrez pas de handler d’enregistrement, l’appel est effectué automatiquement lorsque `saveEvent.notifySuccess()` l’utilisateur sélectionne **Enregistrer**.
+>* Si vous n’enregistrez pas de handler d’enregistrement, l’appel est effectué automatiquement `saveEvent.notifySuccess()` lorsque l’utilisateur sélectionne **Enregistrer**.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obtenir des données de contexte pour les paramètres de l’onglet
 
@@ -123,7 +123,7 @@ Pour plus d’informations sur les propriétés utilisées pour la configuration
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservé dans le `configurationUrl`
 
-Ajoutez des espaces réservé à l’interface de contexte à votre `configurationUrl` base. Par exemple :
+Ajoutez des espaces réservé à l’interface de contexte à votre `configurationUrl` base. Par exemple :
 
 ##### <a name="base-url"></a>URL de base
 
@@ -200,6 +200,11 @@ microsoftTeams.settings.setSettings({
 
 Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur les clients Teams mobiles, la configuration doit `setSettings()` avoir une valeur pour `websiteUrl` . Pour plus d’informations, [voir les conseils pour les onglets sur mobile.](~/tabs/design/tabs-mobile.md)
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
@@ -207,8 +212,3 @@ Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur les cl
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)

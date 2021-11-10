@@ -1,16 +1,16 @@
 ---
 title: Notifications d’appel entrant
-description: Informations techniques détaillées sur la gestion des notifications des appels entrants
+description: En savoir plus sur les informations techniques détaillées sur la gestion des notifications des appels entrants, la redirection et l’authentification des appels à l’aide d’exemples de code
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel de l’affinité de région de rappel des notifications d’appel
 ms.date: 04/02/2019
-ms.openlocfilehash: eb05499b32a0e62b9aa5b073770632c081b8526a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155559"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889159"
 ---
 # <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 
@@ -39,7 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) réponse. Vous pouvez spécifier `callbackUri` la situation pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le routage vers `callbackUri` l’instance de droite.
+Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) réponse. Vous pouvez spécifier `callbackUri` la situation à utiliser pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le routage vers `callbackUri` l’instance de droite.
 
 La section suivante fournit des détails sur l’authentification du rappel en inspectant le jeton publié sur votre webhook.
 

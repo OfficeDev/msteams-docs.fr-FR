@@ -5,16 +5,16 @@ description: Obtenez une idée générale de la façon dont vous pouvez utiliser
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 34401bf53196601b8836012fa4c96296510472a8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1b9d425f57cf1fa49aac41b4d21a0bf4befb3407
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156940"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889096"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processus de conception pour Microsoft Teams applications
 
-Il existe plusieurs outils et ressources pour concevoir votre Microsoft Teams app. Les étapes suivantes décrivent quand et comment vous pouvez les utiliser pendant le processus de conception. (Certaines étapes peuvent être techniquement en dehors du processus de conception, mais sont incluses pour un contexte supplémentaire.)
+Il existe plusieurs outils et ressources pour concevoir votre application Microsoft Teams web. Les étapes suivantes décrivent quand et comment vous pouvez les utiliser pendant le processus de conception. (Certaines étapes peuvent être techniquement en dehors du processus de conception, mais sont incluses pour un contexte supplémentaire.)
 
 :::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagramme montrant un exemple du processus Teams conception d’application." border="false":::
 
@@ -102,7 +102,7 @@ Actuellement, tous les modèles répertoriés dans le kit d’interface utilisat
 
 ### <a name="build-with-basic-ui-components"></a>Créer avec des composants d’interface utilisateur de base
 
-À la différence de la phase de conception, vous pouvez utiliser ces composants d’interface utilisateur Fluent dans votre projet d’application si un modèle d’interface utilisateur manque un élément dont vous avez besoin ou si vous souhaitez simplement créer l’application à partir de zéro. 
+À la différence de la phase de conception, vous pouvez utiliser ces composants d’interface utilisateur Fluent dans votre projet d’application si un modèle d’interface utilisateur ne vous manque pas, ou si vous souhaitez simplement créer l’application à partir de zéro. 
 
 (Remarque : si vous remarquez un manque de quelque chose ou si vous avez une idée pour un modèle, envisagez de contribuer au Teams bibliothèque d’interface utilisateur.)
 
@@ -116,3 +116,6 @@ Que vous débutiez sur votre application ou que vous soyez proche d’une applic
 * **Microsoft Teams de validation** du Store : fournit des normes que toutes les applications Teams doivent suivre, et pas seulement les applications répertoriées dans le Windows Store. Pour plus d’informations, voir les [instructions.](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 * **Meilleures pratiques en matière** de conception : ces documents et le kit d’interface utilisateur fournissent les meilleures pratiques pour concevoir des applications de haute qualité. Par exemple, consultez les [meilleures pratiques en matière de conception de bots.](~/bots/design/bots.md#best-practices)
 
+## <a name="see-also"></a>Voir aussi
+
+[Conception de notifications de flux d’activités](~/concepts/design/activity-feed-notifications.md)

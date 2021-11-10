@@ -4,12 +4,12 @@ description: Décrit les fonctionnalités de la prévisualisation pour les déve
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams prévisualiser les fonctionnalités de développement
-ms.openlocfilehash: 8cf3f4faf4387aba6ea6238b0469bae840aba87f
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 756d30b0cbeb47be2b355bc9fe126e3bc39b3806
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260622"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888502"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Prévisualisation pour les développeurs publics Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "60260622"
 
 La prévisualisation pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre Microsoft Teams application. Nous vous souhaitons également la [bienvenue sur](~/feedback.md) toutes les fonctionnalités de la prévisualisation du développeur. La prévisualisation développeur est activée par client Microsoft Teams, vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
 
-## <a name="developer-preview-app-manifest"></a>Manifeste de l’application d’aperçu développeur
+## <a name="developer-preview-app-manifest"></a>Manifeste de l’application d’aperçu du développeur
 
 De nombreuses fonctionnalités activées dans la prévisualisation du développeur nécessitent des modifications de votre fichier JSON de manifeste d’application. Pour ce faire, vous devez utiliser le schéma de [manifeste d’aperçu du développeur.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne serez pas en mesure d’utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour apporter ces modifications, ni de l’utiliser pour télécharger votre application à des moments de test. Pour télécharger votre application, vous devez cliquer sur l’icône dans la barre de l’application, `More apps` puis sélectionner le `Upload a custom app link` . À l’aide de cette méthode, vous pouvez uniquement charger une version compressée de votre package d’application.
 
@@ -52,5 +52,6 @@ Pour activer la prévisualisation pour les développeurs publics sur un client m
 
 Utilisez le même élément de menu sous À propos → aperçu développeur, puis cliquez dessus pour le désactiver.
 
+## <a name="see-also"></a>Voir aussi
 
-
+[Tester et déboguer votre application Microsoft Teams de test](~/concepts/build-and-test/debug.md)

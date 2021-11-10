@@ -1,48 +1,48 @@
 ---
 title: Créer un assistant virtuel
-description: Comment créer des bots Virtual Assistant et des compétences à utiliser dans Microsoft Teams
+description: Découvrez comment créer un bot Virtual Assistant pour Microsoft Teams à l’aide d’exemples de code et d’extraits de code avec des fonctionnalités telles que des cartes adaptatives ; gestion des interruptions, des demandes de module de tâche, des étendues d’application collaborative et des extensions de message ; à l’aide du manifeste de compétences ; Prise en charge de plusieurs langues, validation des revendications, intégration LUIS et mode.
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: bots d’assistant virtuel Teams
-ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2082e160387bd6ad80fa526e3dab39b385a6e955
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566245"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889229"
 ---
-# <a name="create-virtual-assistant"></a>Créer un assistant virtuel 
+# <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
-Virtual Assistant est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. Le [Virtual Assistant](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) principal est le bloc de construction de base qui réunit les technologies Microsoft requises pour créer une Virtual Assistant, y compris le [SDK Bot Framework,](https://github.com/microsoft/botframework-sdk)language [understanding (LUIS)](https://www.luis.ai/)et [QnA Maker](https://www.qnamaker.ai/). Il regroupe également les fonctionnalités essentielles, notamment l’inscription des compétences, les comptes liés, l’intention de conversation de base de proposer aux utilisateurs un large éventail d’interactions et d’expériences transparentes. En outre, les fonctionnalités de modèle incluent de riches exemples de compétences de conversation [réutilisables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Les compétences individuelles sont intégrées dans une solution Virtual Assistant pour permettre plusieurs scénarios. À l’aide du SDK Bot Framework, les compétences sont présentées sous forme de code source, ce qui vous permet de personnaliser et d’étendre selon vos besoins. Pour plus d’informations sur les compétences de Bot Framework, voir [Qu’est-ce qu’une compétence Bot Framework](https://microsoft.github.io/botframework-solutions/overview/skills/). Ce document vous guide sur les Virtual Assistant d’implémentation pour les organisations, la création d’une Virtual Assistant axée sur Teams, l’exemple connexe, l’exemple de code et les limitations des Virtual Assistant.
+Virtual Assistant est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. Le [Virtual Assistant](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) principal est le bloc de construction de base qui réunit les technologies Microsoft requises pour créer une Virtual Assistant, y compris le [SDK Bot Framework,](https://github.com/microsoft/botframework-sdk)language [understanding (LUIS)](https://www.luis.ai/)et [QnA Maker](https://www.qnamaker.ai/). Il regroupe également les fonctionnalités essentielles, notamment l’inscription des compétences, les comptes liés, l’intention de conversation de base de proposer aux utilisateurs une gamme d’interactions et d’expériences transparentes. En outre, les fonctionnalités de modèle incluent de riches exemples de compétences de conversation [réutilisables.](https://microsoft.github.io/botframework-solutions/overview/skills)  Les compétences individuelles sont intégrées dans une solution Virtual Assistant pour permettre plusieurs scénarios. À l’aide du SDK Bot Framework, les compétences sont présentées sous forme de code source, ce qui vous permet de personnaliser et d’étendre selon vos besoins. Pour plus d’informations sur les compétences de Bot Framework, voir [Qu’est-ce qu’une compétence Bot Framework](https://microsoft.github.io/botframework-solutions/overview/skills/). Ce document vous guide sur les Virtual Assistant d’implémentation pour les organisations, la création d’une Virtual Assistant axée sur Teams, l’exemple connexe, l’exemple de code et les limitations des Virtual Assistant.
 L’image suivante affiche la vue d’ensemble de l’Assistant virtuel :
 
 ![Virtual Assistant de vue d’ensemble](../assets/images/bots/virtual-assistant/overview.png)
 
-Les activités de message texte sont acheminées vers les compétences associées par le Virtual Assistant à l’aide [d’un modèle de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) distribution. 
+Les activités de message texte sont acheminées vers les compétences associées par le Virtual Assistant à l’aide [d’un modèle de](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) distribution.
 
 ## <a name="implementation-considerations"></a>Considérations sur l’implémentation
 
 La décision d’ajouter un Virtual Assistant de nombreux déterminants et diffère pour chaque organisation. Les facteurs de prise en charge d’une implémentation Virtual Assistant pour votre organisation sont les suivants :
 
 * Une équipe centrale gère toutes les expériences des employés. Il a la possibilité de créer une expérience Virtual Assistant et de gérer les mises à jour de l’expérience de base, y compris l’ajout de nouvelles compétences.
-* Plusieurs applications existent dans les fonctions métiers et le nombre devrait augmenter à l’avenir.
+* Plusieurs applications existent dans les fonctions métiers et le nombre est censé augmenter à l’avenir.
 * Les applications existantes sont personnalisables, elles sont la propriété de l’organisation et sont converties en compétences pour un Virtual Assistant.
-* L’équipe centrale des expériences des employés est en mesure d’influencer les personnalisations des applications existantes. Il fournit également des instructions nécessaires pour intégrer des applications existantes en tant que compétences Virtual Assistant expérience utilisateur.
+* L’équipe centrale d’expériences des employés est en mesure d’influencer les personnalisations des applications existantes. Il fournit également des instructions nécessaires pour intégrer des applications existantes en tant que compétences Virtual Assistant expérience utilisateur.
 
-L’image suivante affiche les fonctions métiers des Virtual Assistant : 
+L’image suivante affiche les fonctions métier des Virtual Assistant :
 
 ![L’équipe centrale maintient l’assistant, et les équipes de fonction professionnelle contribuent aux compétences](../assets/images/bots/virtual-assistant/business-functions.png)
 
-## <a name="create-a-teams-focused-virtual-assistant"></a>Créer un Teams centré sur Virtual Assistant
+## <a name="create-a-teams-focused-virtual-assistant"></a>Créer une Teams axée sur Virtual Assistant
 
-Microsoft a publié un modèle [Visual Studio pour](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) créer des assistants virtuels et des compétences. Avec le Visual Studio, vous pouvez créer une Virtual Assistant, optimisée par une expérience textuelle avec prise en charge de cartes enrichies limitées avec des actions. Nous avons amélioré le modèle Visual Studio de base pour inclure Microsoft Teams fonctionnalités de plateforme et de Teams expériences d’application. Quelques-unes des fonctionnalités incluent la prise en charge des cartes adaptatives enrichies, des modules de tâche, des conversations d’équipe ou de groupe et des extensions de messagerie. Pour plus d’informations sur l’extension Virtual Assistant la Microsoft Teams, voir didacticiel : Étendre [votre Virtual Assistant à Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
+Microsoft a publié un modèle [Visual Studio pour](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) créer des assistants virtuels et des compétences. Avec le Visual Studio, vous pouvez créer une Virtual Assistant, optimisée par une expérience textuelle avec prise en charge de cartes enrichies limitées avec des actions. Nous avons amélioré le modèle Visual Studio de base pour inclure Microsoft Teams fonctionnalités de plateforme et de Teams expériences d’application. Quelques-unes des fonctionnalités incluent la prise en charge des cartes adaptatives enrichies, des modules de tâche, des conversations d’équipe ou de groupe et des extensions de messagerie. Pour plus d’informations sur l’extension Virtual Assistant aux Microsoft Teams, voir didacticiel : Étendre [votre Virtual Assistant à Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
 L’image suivante affiche le diagramme de haut niveau d’une solution Virtual Assistant suivante :
 
 ![Diagramme de haut niveau d’une solution Virtual Assistant de données](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>Ajouter des cartes adaptatives à votre Virtual Assistant
 
-Pour envoyer correctement les demandes, Virtual Assistant devez identifier le modèle LUIS approprié et les compétences correspondantes qui lui sont associées. Toutefois, le mécanisme de distribution ne peut pas être utilisé pour les activités d’action de carte, car le modèle LUIS associé à une compétence est formé aux textes d’action de carte. Les textes d’action de carte sont des mots clés fixes, prédéfin définis et ne sont pas commentés par un utilisateur.
+Pour envoyer correctement les demandes, Virtual Assistant devez identifier le modèle LUIS approprié et les compétences correspondantes qui lui sont associées. Toutefois, le mécanisme de distribution ne peut pas être utilisé pour les activités d’action de carte, car le modèle LUIS associé à une compétence est formé pour les textes d’action de carte. Les textes d’action de carte sont des mots clés fixes, prédéfin définis et ne sont pas commentés par un utilisateur.
 
 Cet inconvénient est résolu par l’incorporation d’informations de compétences dans la charge utile de l’action de carte. Chaque compétence doit être incorporer `skillId` dans le champ des actions de  `value` carte. Vous devez vous assurer que chaque activité d’action de carte porte les informations pertinentes sur les compétences et Virtual Assistant pouvez utiliser ces informations pour la distribution.
 
@@ -170,7 +170,7 @@ Le forwarding de demande est effectué par le biais de [la méthode SkillHttpCli
         }
 ```
 
-Une approche similaire est suivie pour la distribution des actions de carte et les réponses de module de tâche. Les données d’action d’extraction et d’soumission du module de tâche sont mises à jour pour inclure `skillId` . La méthode d’extension d’activité extrait de la charge utile qui fournit des détails sur les compétences qui `GetSkillId` `skillId` doivent être invoquées.
+Une approche similaire est suivie pour la distribution des actions de carte et les réponses de module de tâche. Les données d’action d’extraction et d’soumission du module de tâche sont mises à jour pour inclure `skillId` . La méthode d’extension d’activité extrait de la charge utile qui fournit des détails sur la compétence qui `GetSkillId` `skillId` doit être invoquée.
 
 L’extrait de code et les méthodes sont `OnTeamsTaskModuleFetchAsync` `OnTeamsTaskModuleSubmitAsync` donnés dans la section suivante :
 
@@ -501,17 +501,17 @@ En parallèle, ajoutez le `.lu` fichier correspondant dans le chemin luisFolder.
                 | - book-a-meeting.lu
 ```
 
-Pour modifier `languages` le paramètre, mettez à jour la commande botskills comme suit :
+Pour modifier le `languages` paramètre, mettez à jour la commande botskills comme suit :
 
 ```json
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-Virtual Assistant pour `SetLocaleMiddleware` identifier les paramètres régionaux actuels et appeler le modèle de distribution correspondant. L’activité bot framework possède un champ de paramètres régionaux qui est utilisé par cet intermédiaire. Vous pouvez également utiliser la même technique pour vos compétences. Le bot book-a-room n’utilise pas cet middleware et obtient à la place les paramètres régionaux de l’entité [clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)de l’activité Bot Framework.
+Virtual Assistant pour `SetLocaleMiddleware` identifier les paramètres régionaux actuels et appeler le modèle de répartition correspondant. L’activité bot framework possède un champ de paramètres régionaux qui est utilisé par cet intermédiaire. Vous pouvez également utiliser la même chose pour vos compétences. Le bot book-a-room n’utilise pas cet middleware et obtient à la place les paramètres régionaux de l’entité [clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)de l’activité Bot Framework.
 
 ### <a name="claim-validation"></a>Validation des revendications
 
-Nous avons ajouté [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) pour limiter les appelants à la compétence. Pour permettre à un Virtual Assistant d’appeler cette compétence, remplir le tableau à partir de cet `AllowedCallers` `appsettings` ID Virtual Assistant’application.
+Nous avons ajouté [claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) pour limiter les appelants à la compétence. Pour permettre à un Virtual Assistant d’appeler cette compétence, remplir le tableau à partir de cet `AllowedCallers` `appsettings` ID d’Virtual Assistant’application.
 
 ```
 "AllowedCallers": [ "<caller_VA1_appId>", "<caller_VA2_appId>" ],
@@ -527,7 +527,7 @@ Pour plus d’informations sur l’ajout de la validation des revendications à 
 
 ### <a name="limitation-of-card-refresh"></a>Limitation de l’actualisation de la carte 
 
-La mise à jour de l’activité, telle que l’actualisation de la carte n’est pas encore prise en charge Virtual Assistant[(problème github).](https://github.com/microsoft/botbuilder-dotnet/issues/3686) Par conséquent, nous avons remplacé tous les appels d’actualisation de carte `UpdateActivityAsync` par la publication de nouveaux appels de `SendActivityAsync` carte.
+La mise à jour de l’activité, telle que l’actualisation de carte n’est pas encore prise en charge par Virtual Assistant ([problème github](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Par conséquent, nous avons remplacé tous les appels d’actualisation de `UpdateActivityAsync` carte par la publication de nouveaux appels de `SendActivityAsync` carte.
 
 ### <a name="card-actions-and-task-module-flows"></a>Actions de carte et flux de module de tâche
 
@@ -555,18 +555,18 @@ Pour plus d’informations, [reportez-vous](/microsoftteams/platform/samples/vir
     }
 ```
 
-Vous pouvez également tirer parti des compétences existantes à partir du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou créer une compétence entièrement à partir de zéro. Pour créer une compétence, consultez des [didacticiels pour créer une compétence.](https://microsoft.github.io/botframework-solutions/overview/skills/) Pour obtenir Virtual Assistant documentation sur l’architecture des compétences et des compétences,[voir Virtual Assistant et l’architecture des compétences.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
+Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou créer une compétence entièrement à partir de zéro. Pour créer une compétence, consultez des [didacticiels pour créer une compétence.](https://microsoft.github.io/botframework-solutions/overview/skills/) Pour obtenir Virtual Assistant documentation sur l’architecture des compétences et des compétences,[voir Virtual Assistant et l’architecture des compétences.](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)  
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitations des Virtual Assistant 
 
-* **EndOfConversation**: une compétence doit envoyer une activité à la `endOfConversation` fin d’une conversation. En fonction de l’activité, un Virtual Assistant contexte avec cette compétence particulière et revient dans Virtual Assistant contexte racine de l’entreprise. Pour le bot Book-a-room, il n’existe aucun état clair où la conversation est terminée. Par conséquent, nous n’avons pas envoyé à partir du bot et lorsque l’utilisateur souhaite revenir au contexte racine, il peut simplement le faire `endOfConversation` `Book-a-room` par `start over` commande.  
+* **EndOfConversation**: une compétence doit envoyer une activité à la fin `endOfConversation` d’une conversation. En fonction de l’activité, un Virtual Assistant contexte avec cette compétence particulière et revient dans le contexte racine Virtual Assistant’entreprise. Pour le bot Book-a-room, il n’existe aucun état clair où la conversation est terminée. Par conséquent, nous n’avons pas envoyé à partir du bot et lorsque l’utilisateur souhaite revenir au contexte racine, il peut simplement le faire `endOfConversation` `Book-a-room` par `start over` commande.  
 * **Actualisation de la** carte : l’actualisation de la carte n’est pas encore prise en charge Virtual Assistant.  
 * **Extensions de messagerie**:
   * Actuellement, un Virtual Assistant peut prendre en charge un maximum de dix commandes pour les extensions de messagerie.
   * La configuration des extensions de messagerie n’est pas limitée aux commandes individuelles, mais à l’ensemble de l’extension elle-même. Cela limite la configuration de chaque compétence individuelle par le biais de Virtual Assistant.
   * Les ID de commande des extensions de messagerie ont une longueur maximale de [64](../resources/schema/manifest-schema.md#composeextensions) caractères et 37 caractères sont utilisés pour incorporer des informations de compétences. Par conséquent, les contraintes mises à jour pour l’ID de commande sont limitées à 27 caractères.
 
-Vous pouvez également tirer parti des compétences existantes à partir du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou créer une compétence entièrement à partir de zéro. Vous pouvez trouver des didacticiels pour la suite [ici.](https://microsoft.github.io/botframework-solutions/overview/skills/) Reportez-vous [à la documentation relative](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) à l Virtual Assistant et à l’architecture des compétences.
+Vous pouvez également tirer parti des compétences existantes du référentiel [de solutions Bot Framework](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou créer une compétence entièrement à partir de zéro. Vous pouvez trouver des didacticiels pour la suite [ici.](https://microsoft.github.io/botframework-solutions/overview/skills/) Reportez-vous [à la documentation relative](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) à l Virtual Assistant et à l’architecture des compétences.
 
 ## <a name="code-sample"></a>Exemple de code
 

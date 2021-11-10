@@ -5,18 +5,18 @@ description: Vue d’ensemble des extensions de messagerie sur la plateforme Mic
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 1ef83dd8dc87b54f7ec02e110565b9ecb0a14667
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566140"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889369"
 ---
 # <a name="messaging-extensions"></a>Extensions de messagerie
 
 Les extensions de messagerie permettent aux utilisateurs d’interagir avec votre service web par le biais de boutons et de formulaires dans Microsoft Teams client. Ils peuvent rechercher ou initier des actions dans un système externe à partir de la zone de composition du message, de la zone de commande ou directement à partir d’un message. Vous pouvez renvoyer les résultats de cette interaction au client Microsoft Teams sous la forme d’une carte richement mise en forme. Ce document donne une vue d’ensemble de l’extension de messagerie, des tâches effectuées dans différents scénarios, de l’utilisation de l’extension de messagerie, des commandes d’action et de recherche, et du déploiement de liens.
 
-L’image suivante affiche les emplacements d’où les extensions de messagerie sont invoquées :
+L’image suivante affiche les emplacements d’appel des extensions de messagerie :
 
 ![emplacements d’appel d’extension de messagerie](~/assets/images/messaging-extension-invoke-locations.png)
 
@@ -52,7 +52,7 @@ Les commandes d’action sont déclenchées à partir de la zone de composition 
 
 ### <a name="search-commands"></a>Commandes de recherche
 
-Les commandes de recherche permettent aux utilisateurs de rechercher des informations manuellement dans un système externe via une zone de recherche, ou en csérant un lien vers un domaine surveillé dans la zone de composition du message et en insérant les résultats de la recherche dans un message. Dans le flux de commande de recherche le plus simple, le message d’appel initial inclut la chaîne de recherche envoyée par l’utilisateur. Vous répondez avec une liste de cartes et d’aperçus de carte. Le client Teams affiche une liste d’aperçus de carte pour l’utilisateur. Lorsque l’utilisateur sélectionne une carte dans la liste, la carte pleine taille est insérée dans la zone de composition du message.
+Les commandes de recherche permettent aux utilisateurs de rechercher des informations manuellement dans un système externe via une zone de recherche, ou en csérant un lien vers un domaine surveillé dans la zone de composition du message et en insérant les résultats de la recherche dans un message. Dans le flux de commande de recherche le plus élémentaire, le message d’appel initial inclut la chaîne de recherche envoyée par l’utilisateur. Vous répondez avec une liste de cartes et d’aperçus de carte. Le client Teams affiche une liste d’aperçus de carte pour l’utilisateur. Lorsque l’utilisateur sélectionne une carte dans la liste, la carte pleine taille est insérée dans la zone de composition du message.
 
 Les cartes sont déclenchées à partir de la zone de composition du message ou de la zone de commande et ne sont pas déclenchées à partir d’un message. Ils ne peuvent pas être déclenchés à partir d’un message.
 L’image suivante affiche le module de tâche de la tâche de recherche d’extension de messagerie :
@@ -64,7 +64,7 @@ L’image suivante affiche le module de tâche de la tâche de recherche d’ext
 
 ## <a name="link-unfurling"></a>Déploiement de lien
 
-Un service web est appelé lorsqu’une URL est passée dans la zone de composition du message. Cette fonctionnalité est appelée déploiement de liens. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
+Un service web est appelé lorsqu’une URL est pastée dans la zone composer un message. Cette fonctionnalité est appelée déploiement de liens. Vous pouvez vous abonner pour recevoir un appel lorsque les URL contenant un domaine particulier sont passées dans la zone de rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter Microsoft Teams client.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu’un lien est passé dans l’extension de messagerie :
  
 ![lien de déploiement](../assets/images/messaging-extension/unfurl-link.png)
@@ -78,11 +78,6 @@ Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu
 | Extension de messagerie avec commandes basées sur l’action | Cet exemple montre comment créer une extension de messagerie basée sur une action. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extension de messagerie avec commandes basées sur la recherche | Cet exemple montre comment créer une extension de messagerie basée sur la recherche. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-## <a name="see-also"></a>Voir aussi
-
-[Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)
-
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
@@ -90,3 +85,7 @@ Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu
 
 > [!div class="nextstepaction"]
 > [Définir la commande d’extension de messagerie de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Créer une extension de messagerie](../build-your-first-app/build-messaging-extension.md)

@@ -1,16 +1,16 @@
 ---
 title: Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio
-description: Commencer à créer d’excellentes applications personnalisées directement Visual Studio l’aide Microsoft Teams Shared Computer Toolkit
+description: Commencer à créer d’excellentes applications personnalisées directement Visual Studio l’aide Microsoft Teams Shared Computer Toolkit. Découvrez comment configurer votre application dans Visual Studio, valider votre application et la publier à partir de Visual Studio portail de développement.
 keywords: boîte à outils visual studio teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155524"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888012"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio
 
@@ -32,7 +32,7 @@ Le Microsoft Teams Shared Computer Toolkit pour Visual Studio est disponible en 
 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Configurer votre application](#configure-your-app)
-- [Exécutez votre application dans Teams](#install-and-run-your-app-locally)
+- [Exécuter votre application dans Teams](#install-and-run-your-app-locally)
 - [Valider votre application](#validate-your-app)
 - [Publier votre application](#publish-your-app-to-teams)
 
@@ -55,8 +55,8 @@ L’application Teams principale englobe trois composants :
 
     > [!div class="checklist"]
     >
-    > - Le manifest.jssur
-    > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou de l’organisation.
+    > - Manifest.json
+    > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou d’organisation.
     > - Icône [de plan à](../resources/schema/manifest-schema.md#icons) afficher dans la barre Teams’activité.
 
 Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
@@ -64,11 +64,11 @@ Lorsqu’une application est installée, le client Teams pare le fichier manifes
 > [!NOTE]
 >Si ce n’est pas déjà fait, vous devez vous Microsoft 365 votre compte d’utilisateur pour poursuivre le processus de développement.
 >
-> Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement [Microsoft 365 programme pour les développeurs.](https://developer.microsoft.com/microsoft-365/dev-program) Il est gratuit pendant 90 jours et renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio Enterprise ou Professional, les deux programmes incluent un abonnement Microsoft 365 développeur [gratuit,](https://aka.ms/MyVisualStudioBenefits)actif pendant toute la durée de Visual Studio abonnement. Pour plus d’informations, [voir configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
+> Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement [au Microsoft 365 développeur.](https://developer.microsoft.com/microsoft-365/dev-program) Il est gratuit pendant 90 jours et renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio Enterprise ou Professional, les deux programmes incluent un abonnement Microsoft 365 développeur [gratuit,](https://aka.ms/MyVisualStudioBenefits)actif pendant toute la durée de vie de Visual Studio abonnement. Pour plus d’informations, [voir configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
 
 ### <a name="configuration-steps"></a>Étapes de configuration
 
-1. Pour configurer votre application, sélectionnez le menu **Project > TeamsFx > configurer pour l’électrable sso...**
+1. Pour configurer votre application, sélectionnez le menu Project > TeamsFx > configurer pour l’électrable **SSO....**
 
 Lorsque vous y invitez, connectez-vous à votre compte Microsoft qui possède un client M365.
 

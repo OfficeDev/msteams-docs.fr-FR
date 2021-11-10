@@ -1,15 +1,15 @@
 ---
 title: Optimisez votre robot grâce à la limitation du débit dans Teams
-description: Limitation des taux et meilleures pratiques en Microsoft Teams
+description: Découvrez la limite de taux de gestion pour les bots avec la limite par bot par thread et par limite pour tous les bots à l’aide d’exemples de code. En outre, découvrez les meilleures pratiques en matière de limitation des taux Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Limitation des taux de bots teams
-ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: limitation des taux de bots teams
+ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155621"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889292"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
@@ -55,7 +55,7 @@ Une fois que vous `HTTP 429` avez géré les réponses, vous pouvez passer par l
 
 ## <a name="detect-transient-exceptions-example"></a>Exemple de détection d’exceptions temporaires
 
-Le code suivant illustre un exemple d’utilisation du blocage exponentiel à l’aide du bloc d’application de gestion des pannes temporaires :
+Le code suivant illustre un exemple d’utilisation du blocage exponentiel à l’aide du bloc d’application de gestion des erreurs temporaires :
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -85,11 +85,11 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 
 Vous pouvez effectuer des tentatives de retour et des tentatives à l’aide de [la gestion des erreurs temporaires.](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29) Pour obtenir des instructions sur l’obtention et l’installation du package NuGet, voir l’ajout du bloc d’application de gestion des erreurs [temporaires à votre solution.](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN) Voir aussi [la gestion des erreurs temporaires.](/azure/architecture/best-practices/transient-faults)
 
-Après avoir passé en détail l’exemple de détection des exceptions temporaires, prenons l’exemple de la fonction de retour exponentiel. Vous pouvez utiliser l’arrêt exponentiel au lieu de réessayer en cas d’échec.
+Après avoir découvert l’exemple de détection d’exceptions temporaires, prenons l’exemple de la fonction d’inserrable exponentielle. Vous pouvez utiliser l’arrêt exponentiel au lieu de réessayer en cas d’échec.
 
 ## <a name="backoff-example"></a>Exemple de mise en arrière
 
-En plus de détecter les limites de taux, vous pouvez également effectuer une coupure exponentielle.
+En plus de détecter les limites de taux, vous pouvez également effectuer une limitation exponentielle.
 
 Le code suivant illustre un exemple de coupure exponentielle :
 
@@ -140,33 +140,33 @@ Le tableau suivant fournit les limites par bot par thread :
 | Créer une conversation | 30 | 60 |
 | Créer une conversation | 3600 | 1800 |
 | Obtenir les membres de la conversation| 1 | 14  |
-| Obtenir les membres de la conversation| 2 | 16  |
+| Obtenir les membres de la conversation| 2 | 16 |
 | Obtenir les membres de la conversation| 30 | 120 |
 | Obtenir les membres de la conversation| 3600 | 3600 |
 | Obtenir des conversations | 1 | 14  |
-| Obtenir des conversations | 2 | 16  |
+| Obtenir des conversations | 2 | 16 |
 | Obtenir des conversations | 30 | 120 |
 | Obtenir des conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Les versions précédentes et les API sont `TeamsInfo.getMembers` en cours `TeamsInfo.GetMembersAsync` d’utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l’API paginée, voir Modifications apportées à l’API bot pour les membres d’équipe et [de conversation.](../../resources/team-chat-member-api-changes.md)
+> Les versions `TeamsInfo.getMembers` précédentes et `TeamsInfo.GetMembersAsync` les API sont en cours d’utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l’API paginée, voir Modifications apportées à l’API bot pour les membres de l’équipe [et de la conversation.](../../resources/team-chat-member-api-changes.md)
 
 Vous pouvez également gérer la limite de taux à l’aide de la limite par thread pour tous les bots.
 
 ## <a name="per-thread-limit-for-all-bots"></a>Limite par thread pour tous les bots
 
-La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer au sein d’une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
+La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer dans une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
 
 Le tableau suivant fournit la limite par thread pour tous les bots :
 
 | Scénario | Période en secondes | Nombre maximal d’opérations autorisées |
 | --- | --- | --- |
 | Envoyer à la conversation | 1 | 14  |
-| Envoyer à la conversation | 2 | 16  |
+| Envoyer à la conversation | 2 | 16 |
 | Créer une conversation | 1 | 14  |
-| Créer une conversation | 2 | 16  |
+| Créer une conversation | 2 | 16 |
 | Créer une conversation| 1 | 14  |
-| Créer une conversation| 2 | 16  |
+| Créer une conversation| 2 | 16 |
 | Obtenir les membres de la conversation| 1 | 28 |
 | Obtenir les membres de la conversation| 2 | 32 |
 | Obtenir des conversations | 1 | 28 |
@@ -176,4 +176,3 @@ Le tableau suivant fournit la limite par thread pour tous les bots :
 
 > [!div class="nextstepaction"]
 > [Appels et réunions robots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-

@@ -1,15 +1,15 @@
 ---
 title: Cartes et modules de tâche
-description: Cartes et modules de tâche.
+description: Découvrez les types de cartes pris en charge dans les bots pour Teams, tels que les cartes adaptatives, la carte Hero, la carte miniature, etc. Découvrez les actions de carte et l’vot de modules de tâche dans les canaux, les bots ou les liens profonds.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 89185baa9900f2c8dbef62ab9a2fc85242fc49a1
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719832"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888271"
 ---
 # <a name="cards-and-task-modules"></a>Cartes et modules de tâche
 
@@ -21,14 +21,16 @@ Les types de cartes suivants sont pris en charge dans les bots pour Teams :
 
 * Carte adaptative
 * Carte Hero
-* Carte de liste 
+* Carte de liste
 * Office 365 Carte de connecteur
 * Carte d’accusé de réception
 * Carte de signature
 * Carte miniature
 * Collections de cartes
 
-Vous pouvez formater le texte de la carte à l’aide d’un sous-ensemble de formats XML ou HTML ou Markdown en fonction du type de carte. Vous pouvez ajouter et répondre à des actions de carte qui :
+Vous pouvez formater le texte de la carte à l’aide d’un sous-ensemble de formats XML ou HTML ou Markdown en fonction du type de carte.
+
+Vous pouvez ajouter et répondre à des actions de carte qui :
 * Ouvrir une URL
 * Envoyer des messages et de la charge utile au bot
 * Lancer le flux OAuth

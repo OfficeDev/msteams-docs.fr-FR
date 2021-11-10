@@ -1,23 +1,23 @@
 ---
 title: Inscrire les appels et le bot de réunions pour Microsoft Teams
-description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams
+description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams, créer un bot ou ajouter des fonctionnalités d’appel et ajouter des autorisations de graphique.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 144e623ea21da51b8a06bf20f50a60345dda081a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260662"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889103"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire les appels et le bot de réunions pour Microsoft Teams
 
-Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams ordinaire avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
+Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams régulier avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
 
 * Il existe une nouvelle version du manifeste Teams’application avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo` . Ces paramètres sont inclus dans la [version](../../resources/dev-preview/developer-preview-intro.md) préliminaire du développeur du manifeste Teams’application.
 * [Les Graph microsoft](./registering-calling-bot.md#add-graph-permissions) doivent être configurées pour l’ID d’application Microsoft de votre bot.
-* Les autorisations Graph appels et les API de réunions en ligne nécessitent le consentement de l’administrateur client.
+* Les Graph et les autorisations d’API de réunion en ligne nécessitent le consentement de l’administrateur client.
 
 ## <a name="new-manifest-settings"></a>Nouveaux paramètres de manifeste
 
@@ -50,7 +50,7 @@ La section suivante fournit une liste des autorisations d’application pris en 
 
 ## <a name="add-graph-permissions"></a>Ajouter Graph autorisations d’autorisation
 
-Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph api d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateurs inscrits. Un administrateur client doit donner son consentement aux autorisations d’application.
+Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph’API d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d’application.
 
 ### <a name="application-permissions-for-calls"></a>Autorisations d’application pour les appels
 
@@ -82,12 +82,12 @@ Vous devez configurer les autorisations d’application pour votre bot à l’av
 
 ### <a name="get-tenant-administrator-consent"></a>Obtenir le consentement de l’administrateur client
 
-Pour les applications utilisant le point de terminaison AAD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois le consentement de l’administrateur enregistré par AAD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
+Pour les applications utilisant le point de terminaison AAD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois que le consentement de l’administrateur est enregistré AAD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
 
 Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison AAD `/adminconsent` V2. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
-> Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à l’inscription de votre bot, choisissez **Options avancées** Modifier le manifeste de  >  **l’application.** Ajoutez votre URL de redirection à la `replyUrls` collection.
+> Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à votre inscription de bot, choisissez **Options avancées** Modifier le manifeste de  >  **l’application.** Ajoutez votre URL de redirection à la `replyUrls` collection.
 
 > [!IMPORTANT]
 > Chaque fois que vous modifiez les autorisations de votre application, vous devez également répéter le processus de consentement de l’administrateur. Les modifications apportées dans le portail d’inscription des applications ne sont pas reflétées tant que l’administrateur du client n’a pas réapplité le consentement.
@@ -96,3 +96,8 @@ Vous pouvez compter sur un administrateur pour accorder les autorisations dont v
 
 > [!div class="nextstepaction"]
 > [Notifications d’appel entrant](~/bots/calls-and-meetings/call-notifications.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Notifications d’appel entrant](~/bots/calls-and-meetings/call-notifications.md)
+* [Développer des bots d’appels et de réunion en ligne sur votre PC local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

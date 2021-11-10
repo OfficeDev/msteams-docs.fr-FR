@@ -1,19 +1,19 @@
 ---
 title: Intégrer les fonctionnalités d’emplacement
 author: Rajeshwari-v
-description: Utilisation du SDK Teams client JavaScript pour tirer parti des fonctionnalités d’emplacement
+description: Découvrez comment utiliser le SDK Teams client JavaScript pour tirer parti des fonctionnalités d’emplacement à l’aide d’extraits de code et d’exemples
 keywords: autorisations natives d’appareil pour les fonctionnalités de carte d’emplacement
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: db86b2bf80bcc0f4f56c9998a573f0a7cbd1e9c3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719790"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888439"
 ---
-# <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement 
+# <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement
 
 Vous pouvez intégrer les fonctionnalités d’emplacement de l’appareil natif à votre Teams application.  
 
@@ -25,12 +25,12 @@ Le principal avantage de l’intégration des fonctionnalités d’emplacement d
 
 Les exemples suivants montrent comment l’intégration des fonctionnalités d’emplacement est utilisée dans différents scénarios :
 * Dans une usine, le responsable peut suivre la présence des employés en leur demandant de prendre un selfie à proximité de l’usine et de le partager via l’application spécifiée. Les données d’emplacement sont également capturées et envoyées avec l’image.
-* Les fonctionnalités d’emplacement permettent au personnel de maintenance d’un fournisseur de services de partager des données d’état d’état authentiques des pylônes cellulaires avec la direction. La direction peut comparer les différences entre les informations d’emplacement capturées et les données envoyées par le personnel de maintenance.
+* Les fonctionnalités d’emplacement permettent au personnel de maintenance d’un fournisseur de services de partager des données d’état d’état authentiques des pylônes cellulaires avec la direction. La direction peut comparer toute insérialisation entre les informations d’emplacement capturées et les données envoyées par le personnel de maintenance.
 
 Pour intégrer des fonctionnalités d’emplacement, vous devez mettre à jour le fichier manifeste de l’application et appeler les API. Pour une intégration efficace, vous devez bien comprendre les [extraits](#code-snippets) de code pour appeler les API d’emplacement. Il est important de vous familiariser avec les erreurs de réponse [d’API](#error-handling) pour gérer les erreurs dans votre Teams application.
 
 > [!NOTE] 
-> Actuellement, Microsoft Teams prise en charge des fonctionnalités d’emplacement est disponible uniquement pour les clients mobiles.
+> Actuellement, Microsoft Teams prise en charge des fonctionnalités de localisation est disponible uniquement pour les clients mobiles.
 
 ## <a name="update-manifest"></a>Mettre à jour le manifeste
 

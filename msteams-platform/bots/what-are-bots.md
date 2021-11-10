@@ -1,20 +1,20 @@
 ---
 title: Bots dans Microsoft Teams
 author: surbhigupta
-description: Vue d’ensemble des bots Microsoft Teams.
+description: Vue d’ensemble des bots dans Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a5702afcc4e87486d23f363e2e7ec0476f597a71
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155618"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887851"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
-Un bot également appelé bot de conversation est une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs, telles que le service clientèle ou le personnel de support technique. Parmi les exemples de bots utilisés quotidiennement, citons les bots qui fournissent des informations sur la météo, qui réservent des réservations de réservations ou qui fournissent des informations de voyage. Une interaction de bot peut être une question et une réponse rapides, ou il peut s’agit d’une conversation complexe qui permet d’accéder aux services.
+Un bot également appelé bot de conversation est une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs, telles que le service clientèle ou le personnel de support technique. Parmi les exemples de bots utilisés quotidiennement, citons les bots qui fournissent des informations sur la météo, qui réservent des réservations de réservation de réservation ou qui fournissent des informations de voyage. Une interaction de bot peut être une question et une réponse rapides, ou il peut s’agit d’une conversation complexe qui permet d’accéder aux services.
 
 > [!IMPORTANT]
 > Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais pas dans les GCC-High et le département de la Défense (DOD).
@@ -35,7 +35,7 @@ La recherche de la combinaison de cartes, de texte et de modules de tâche est e
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="Exemple de bot FAQ" border="true":::
 
-Chaque interaction entre l’utilisateur et le bot est représentée comme une activité. Lorsqu’un bot reçoit une activité, il la transmet à ses handlers d’activité. Pour plus d’informations, voir [les handlers d’activité des bots.](~/bots/bot-basics.md) 
+Chaque interaction entre l’utilisateur et le bot est représentée comme une activité. Lorsqu’un bot reçoit une activité, il la transmet à ses sous-traites d’activité. Pour plus d’informations, voir [les handlers d’activité des bots.](~/bots/bot-basics.md) 
 
 En outre, les bots sont des applications qui ont une interface de conversation. Vous pouvez interagir avec un bot à l’aide de texte, de cartes interactives et de reconnaissance vocale. Un bot se comporte différemment selon qu’il s’agit d’une conversation de canal ou de groupe, ou d’une conversation un-à-un. Les conversations sont gérées via le connecteur Bot Framework. Pour plus d’informations, voir [les informations de base de la conversation.](~/bots/how-to/conversations/conversation-basics.md)
 
@@ -43,17 +43,21 @@ Votre bot nécessite des informations contextuelles, telles que des détails de 
 
 Vous pouvez également envoyer et recevoir des fichiers via le bot à l’aide Graph API ou Teams’API de bot. Pour plus d’informations, voir [envoyer et recevoir des fichiers via le bot.](~/bots/how-to/bots-filesv4.md)
 
-En outre, la limitation des taux est utilisée pour optimiser les bots utilisés pour votre application Teams de recherche. Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Pour plus d’informations, voir [optimiser votre bot avec une limite](~/bots/how-to/rate-limit.md)de taux Teams .
+En outre, la limitation des taux est utilisée pour optimiser les bots utilisés pour Teams application. Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de taux pour les demandes entrantes. Pour plus d’informations, voir [optimiser votre bot avec une limite](~/bots/how-to/rate-limit.md)de taux Teams .
 
 Avec les API Microsoft Graph pour les appels et les réunions en ligne, Microsoft Teams applications peuvent désormais interagir avec les utilisateurs à l’aide de la voix et de la vidéo. Pour plus d’informations, voir [les bots d’appels et de réunions.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
 
 Vous pouvez utiliser les API Teams bot pour obtenir des informations pour un ou plusieurs membres d’une conversation ou d’une équipe. Pour plus d’informations, voir [les modifications apportées aux API Teams bot pour](~/resources/team-chat-member-api-changes.md)récupérer des membres d’équipe ou de conversation.
 
-## <a name="see-also"></a>Voir aussi
-
-[Créer un robot pour Teams](~/bots/how-to/create-a-bot-for-teams.md)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Bots et kits de développement](~/bots/bot-features.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Créer un robot pour Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Inscrire les appels et le bot de réunions pour Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
+* [Ajouter l’authentification à Teams bot](~/bots/how-to/authentication/add-authentication.md)
+* [Gestionnaire d'activité du robot](~/bots/bot-basics.md)
+* [Événements de conversation dans votre robot Teams](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

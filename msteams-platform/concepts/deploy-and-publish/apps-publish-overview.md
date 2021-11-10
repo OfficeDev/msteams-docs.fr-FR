@@ -1,16 +1,17 @@
 ---
 title: 'Vue d’ensemble : distribuer votre application'
-description: Décrit les options de publication de votre Microsoft Teams application.
+description: Décrit les options de publication de votre application Microsoft Teams, de téléchargement de votre application et de Cloud de la communauté du secteur public.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+keywords: déployer le chargement de l’application de publication gcc
+ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260617"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889187"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams de messagerie
 
@@ -27,9 +28,9 @@ Pour plus d’informations, [voir charger votre application dans Teams](apps-upl
 
 ## <a name="publish-your-app-to-your-org"></a>Publier votre application dans votre organisation
 
-Rendez votre application accessible aux personnes de votre organisation. Ce type de distribution nécessite l’Teams’administrateur.
+Rendez votre application disponible pour les personnes de votre organisation. Ce type de distribution nécessite l’Teams’administrateur.
 
-Pour plus d’informations, [voir gérer vos applications dans le centre d Teams’administration.](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
+Pour plus d’informations, [voir gérer vos applications dans le centre Teams’administration.](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
 
 ### <a name="government-community-cloud-gcc-organizations"></a>Cloud de la communauté du secteur public organisations (Cloud de la communauté du secteur public)
 
@@ -44,11 +45,11 @@ Rendez votre application accessible à tous. Ce type de distribution nécessite 
 
 Pour plus d’informations, [voir publier sur le Teams store.](~/concepts/deploy-and-publish/appsource/publish.md)
 
-## <a name="see-also"></a>Voir aussi
-
-* [Programme de conformité d’Application Microsoft 365](/microsoft-365-app-certification/overview)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Configurer les options d’installation par défaut de l’application](~/concepts/deploy-and-publish/add-default-install-scope.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Programme de conformité de l’application Microsoft 365](/microsoft-365-app-certification/overview)

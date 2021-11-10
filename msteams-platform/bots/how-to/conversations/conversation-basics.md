@@ -1,16 +1,16 @@
 ---
 title: Concepts de base d’une conversation
-description: Présentation des conversations
+description: Présentation des conversations de bot dans un canal, une conversation personnelle et un environnement de conversation de groupe.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: conversations basics messages
-ms.openlocfilehash: 767efd3b6351e3f771f6ffe5cb6ff36181009f4b
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keyword: conversations basics messages groupchap group channel
+ms.openlocfilehash: ec8e5b2d632912aac6cc9e1e06e6db3a7f1ed948
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156989"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887440"
 ---
 # <a name="conversation-basics"></a>Concepts de base d’une conversation
 
@@ -28,10 +28,10 @@ Un bot se comporte différemment en fonction de la conversation dans qui il est 
 
 * Les bots dans les conversations de canal et de groupe doivent être @mentionnés par l’utilisateur pour être appelés dans un canal.
 
-* Les bots dans une conversation un-à-un ne nécessitent pas de @mention. Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
+* Les bots d’une conversation un-à-un ne nécessitent pas de @mention. Tous les messages envoyés par l’utilisateur sont acheminés vers votre bot.
 
 > [!NOTE]
-> Les bots peuvent être activés pour recevoir tous les messages de canal dans une équipe sans être @mentioned à l’aide des autorisations de consentement spécifiques aux ressources (RSC). Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
+> Les bots peuvent être activés pour recevoir tous les messages de canal dans une équipe sans être @mentioned à l’aide d’autorisations de consentement spécifiques aux ressources (RSC). Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../../../resources/dev-preview/developer-preview-intro.md) uniquement. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
 
 Pour que le bot fonctionne dans une conversation ou une étendue particulière, ajoutez la prise en charge à cette étendue dans le manifeste [de l’application.](~/resources/schema/manifest-schema.md)
 

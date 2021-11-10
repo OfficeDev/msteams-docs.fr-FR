@@ -1,16 +1,17 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Décrit les dernières étapes avant d’envoyer votre Microsoft Teams pour qu’elle soit répertoriée dans le Store.
+description: Décrit les dernières étapes avant d’envoyer votre Microsoft Teams pour qu’elle soit répertoriée dans le Store. Découvrez comment valider votre package d’application, compiler les instructions de test et créer les détails de votre description dans le Store.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: distribution du magasin de soumission - Localisation des instructions de validation du package d’application
+ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720350"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889166"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission Microsoft Teams store
 
@@ -30,7 +31,7 @@ L Microsoft Teams de validation d’application vous permet d’identifier et de
 1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Remarque : l’outil est également disponible [dans App Studio.)](../../../build-and-test/app-studio-overview.md)
 1. Télécharger votre package d’application pour exécuter les tests automatisés.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
-1. [Résoudre les problèmes avec vos configurations ou](~/resources/schema/manifest-schema.md) votre application en général. Ces problèmes se produisent si les tests automatisés vous donnent des erreurs ou si vous n’avez pas satisfait à tous les critères de la liste de contrôle.
+1. [Résoudre les problèmes de configuration ou](~/resources/schema/manifest-schema.md) d’application en général. Ces problèmes se produisent si les tests automatisés vous donnent des erreurs ou si vous n’avez pas satisfait à tous les critères de la liste de contrôle.
 
 ## <a name="compile-testing-instructions"></a>Compiler les instructions de test
 
@@ -194,7 +195,7 @@ Lors de la soumission, vous êtes invité à catégoriser votre application. Le 
 | Ventes et support | Gestion des clients et des contacts, support client, gestion financière et ventes et marketing |
 | Social et fun | Galeries d’images et de vidéos, style de vie, actualités et météo, réseau social, voyage et navigation |
 
-### <a name="localize-your-store-listing"></a>Localisez votre liste dans le Store
+### <a name="localize-your-store-listing"></a>Localiser la liste de votre magasin
 
 L’Partner Center prend [en charge les listes de magasins localisées.](/office/dev/store/prepare-localized-solutions) Pour plus d’informations, voir comment localiser votre [liste Teams’application.](../../../../concepts/build-and-test/apps-localization.md)
 
@@ -213,3 +214,7 @@ L’Partner Center prend [en charge les listes de magasins localisées.](/office
 
 > [!div class="nextstepaction"]
 > [Envoyer votre application](/office/dev/store/add-in-submission-guide)
+
+## <a name="see-also"></a>Voir aussi
+
+[Résoudre les problèmes en cas d’échec Microsoft Teams soumission au Store](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

@@ -4,13 +4,13 @@ description: Décrit comment envoyer des messages proactifs avec Microsoft Teams
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID de l’utilisateur
-ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID utilisateur
+ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720077"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889299"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -28,14 +28,14 @@ L’envoi d’un message proactif est différent de l’envoi d’un message nor
 
 **Pour envoyer un message proactif**
 
-1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID de](#get-the-user-id-team-id-or-channel-id)canal, si nécessaire.
+1. [Obtenez l’ID d’utilisateur, l’ID d’équipe ou l’ID](#get-the-user-id-team-id-or-channel-id)de canal, si nécessaire.
 1. [Créez la conversation,](#create-the-conversation)si nécessaire.
 1. [Obtenir l’ID de conversation](#get-the-conversation-id).
 1. [Envoyer le message](#send-the-message).
 
 Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des liens vers des exemples de travail complets pour les conversations un-à-un et les groupes ou canaux, voir [l’exemple de code.](#code-sample)
 
-Pour utiliser efficacement les messages proactifs, consultez les meilleures pratiques en matière [de messagerie proactive.](#best-practices-for-proactive-messaging) Dans certains scénarios, vous devez installer votre application de manière proactive à [l’aide de Graph](#proactively-install-your-app-using-graph). Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des exemples de travail complets pour les conversations et les groupes ou canaux un-à-un, voir [l’exemple de code.](#code-sample)
+Pour utiliser efficacement les messages proactifs, consultez les meilleures pratiques en matière [de messagerie proactive.](#best-practices-for-proactive-messaging) Dans certains scénarios, vous devez installer votre application de manière proactive à [l’aide Graph](#proactively-install-your-app-using-graph). Les extraits de code de la section [exemples](#samples) sont pour la création d’une conversation un-à-un. Pour obtenir des exemples de travail complets pour les conversations et les groupes ou canaux un-à-un, voir [l’exemple de code.](#code-sample)
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Obtenir l’ID d’utilisateur, l’ID d’équipe ou l’ID de canal
 
@@ -49,7 +49,7 @@ Pour créer une conversation ou un thread de conversation dans un canal, vous de
 
 Quelle que soit la façon dont vous obtenez les informations, vous devez stocker le ou pour `tenantId` `userId` créer une `channelId` conversation. Vous pouvez également l’utiliser pour créer un thread de conversation dans le canal général ou `teamId` par défaut d’une équipe.
 
-Il `userId` est propre à votre ID de bot et à un utilisateur particulier. Vous ne pouvez pas réutiliser les `userId` bots. Il `channelId` s’agit d’une stratégie globale. Toutefois, votre bot doit être installé dans l’équipe avant de pouvoir envoyer un message proactif à un canal.
+Il `userId` est propre à votre ID de bot et à un utilisateur particulier. Vous ne pouvez pas réutiliser les `userId` bots. `channelId`L’objectif est global. Toutefois, votre bot doit être installé dans l’équipe avant de pouvoir envoyer un message proactif à un canal.
 
 Une fois que vous avez les informations de l’utilisateur ou du canal, vous devez créer la conversation.
 
@@ -106,7 +106,7 @@ Lorsque vous utilisez une messagerie proactive pour envoyer des messages program
 ## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive à l’aide Graph
 
 > [!Note]
-> L’installation proactive des applications à l Graph est actuellement en version bêta.
+> L’installation proactive des applications à l’Graph est actuellement en version bêta.
 
 Envoyer un message de manière proactive aux utilisateurs qui n’ont pas précédemment installé ou interagi avec votre application. Par exemple, vous souhaitez utiliser le communicateur [d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Dans ce cas, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs. Mettre en cache les valeurs nécessaires à partir `conversationUpdate` de l’événement que votre application reçoit lors de l’installation.
 
@@ -261,7 +261,7 @@ Vous devez fournir l’ID d’utilisateur et l’ID de client. Si l’appel réu
 ---
 
 > [!NOTE]
-> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
+> Actuellement, les bots ne peuvent pas créer de conversation de groupe par le biais d’API de bot ou de Graph. `createConversation` est disponible uniquement pour les conversations 1:1.
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -278,11 +278,13 @@ Le tableau suivant fournit un exemple de code simple qui incorpore le flux de co
 > [!div class="nextstepaction"]
 > [Teams exemples de code de messagerie proactifs](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="see-also"></a>Voir aussi
-
-[**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Formatez vos messages robots.](~/bots/how-to/format-your-bot-messages.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [Conversations de canal et de groupe avec un bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Répondre à l’action d’soumission du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

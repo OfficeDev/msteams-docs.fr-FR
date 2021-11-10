@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Applications web
-ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155599"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889208"
 ---
 # <a name="web-apps"></a>Applications web 
 
@@ -84,12 +84,12 @@ En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-
 
 Azure Active Directory (AD) est le fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Azure AD.
 
-Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
+Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des instructions pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)
 
-Pour SharePoint pages, vous pouvez uniquement utiliser l’oD unique et vous ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’oD unique fonctionne pour une autre application, car l’ID est l’application SharePoint.
+Pour SharePoint pages, vous pouvez uniquement utiliser l’oD unique et vous ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’oD unique fonctionne pour une autre application, car l’ID est l’SharePoint appl.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 
@@ -103,7 +103,7 @@ Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
+Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
 
 ## <a name="be-smart-when-messaging-users"></a>Soyez intelligent lors de la messagerie des utilisateurs
 
@@ -111,11 +111,11 @@ Vous pouvez créer des liens vers des informations et des fonctionnalités dans 
 
 Utilisez un [bot dans](../bots/what-are-bots.md) votre application Teams pour les conversations multi-threads, car il offre plus de flexibilité qu’un [webhook.](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-Les bots vous permettent également d’envoyer des **messages proactifs** à des utilisateurs individuels ou à des canaux. Les messages proactifs sont des messages non improvisés déclenchés par un événement externe et non un message envoyé à un bot. Par exemple, votre bot envoie un message de bienvenue lorsqu’il est installé ou qu’un nouvel utilisateur rejoint un canal. 
+Les bots vous permettent également d’envoyer des **messages proactifs** à des utilisateurs individuels ou à des canaux. Les messages proactifs sont des messages non improvisés déclenchés par un événement externe et non un message envoyé à un bot. Par exemple, votre bot envoie un message de bienvenue lorsqu’il est installé ou qu’un nouvel utilisateur rejoint un canal.
 
 L’envoi de messages proactifs Teams identificateurs spécifiques. Vous pouvez capturer les informations en extraire des données de liste ou de profil [utilisateur,](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)en vous abonnant à des [événements de conversation](../bots/how-to/conversations/subscribe-to-conversation-events.md)ou en utilisant Microsoft [Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
-Ne pas envoyer de courrier indésirable aux utilisateurs avec des messages excessifs. Si la fonctionnalité Teams la prend en charge, les utilisateurs peuvent configurer les paramètres de notification pour votre application.   
+Ne pas envoyer de courrier indésirable aux utilisateurs avec des messages excessifs. Si la fonctionnalité Teams la prend en charge, les utilisateurs peuvent configurer les paramètres de notification pour votre application.
 Voici un exemple de message de notification : **Ne m’envoyez pas de messages non sollicités.**
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Utiliser les SharePoint pour le stockage de fichiers et de données
@@ -126,4 +126,8 @@ Lorsqu’une équipe est créée, une [collection SharePoint de sites](/microsof
 
 ## <a name="see-also"></a>Voir aussi
 
-[Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+* [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
+* [Solutions à code faible et sans code pour Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Créer un bouton de partage pour Teams](../concepts/build-and-test/share-to-teams.md)
+* [Attributs de cookie SameSite](~/resources/samesite-cookie-update.md)
+* [Intégrer Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

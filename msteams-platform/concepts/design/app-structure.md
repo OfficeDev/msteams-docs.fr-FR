@@ -5,12 +5,13 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: extensions de messagerie mobile de messagerie de réunion de canal filaire
+ms.openlocfilehash: 3d63cc705ac567b0b19db2e3caf4a84420dae9bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156802"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887573"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>Comprendre la structure Microsoft Teams’application
 
@@ -22,7 +23,7 @@ Les images filaire suivantes vous montrent :
 * Étendues que chaque fonctionnalité prend en charge.
 
 > [!TIP]
-> **Que signifie l’étendue ?** Une étendue est un domaine dans Teams où les personnes peuvent utiliser votre application. Les applications peuvent avoir une ou plusieurs étendues, notamment personnelles, des canaux, des conversations et des réunions.
+> **Que signifie l’étendue ?** Une étendue est une zone de Teams où les personnes peuvent utiliser votre application. Les applications peuvent avoir une ou plusieurs étendues, notamment personnelles, des canaux, des conversations et des réunions.
 
 ## <a name="personal-apps"></a>Applications personnelles
 
@@ -58,7 +59,7 @@ La zone de dessin est une vue web pour vous aider à personnaliser entièrement 
 
 La zone de dessin est un iframe qui vous permet de personnaliser entièrement l’expérience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets de bureau." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les onglets sur ordinateur de bureau." border="false":::
 
 ## <a name="bots"></a>Bots
 
@@ -68,7 +69,7 @@ Les bots sont des applications conversationnelles qui s’intègrent Teams fonct
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les bots sur appareils mobiles." border="false":::
 
 ### <a name="desktop"></a>Bureau
 
@@ -92,13 +93,13 @@ Les extensions de messagerie sont des raccourcis permettant d’insérer du cont
 
 Les extensions de réunion sont des applications pour améliorer les réunions en direct. Vous pouvez héberger le contenu de votre application dans plusieurs scénarios, notamment avant, pendant et après les réunions.
 
-***Étendues pris en charge**: réunions, conversations*
+***Étendues prise en charge**: réunions, conversations*
 
 ### <a name="mobile"></a>Mobile
 
 La surface est une vue web, qui vous permet de personnaliser l’expérience, mais gardez à l’esprit que pendant les réunions, ces applications utilisent un thème foncé.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Image conceptuelle montrant les zones frontales dans Teams que les développeurs peuvent personnaliser pour les extensions de réunion sur appareils mobiles." border="false":::
 
 ### <a name="desktop"></a>Bureau
 

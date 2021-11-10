@@ -5,12 +5,12 @@ keywords: kit de ressources teams Visual Studio Code
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4425ea5ac6daa400d33497e031cf37639cd2722a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155536"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889320"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio Code
 
@@ -21,7 +21,7 @@ Vous pouvez également utiliser le kit de ressources avec Visual Studio ou en ta
 ## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>Installer le Teams Shared Computer Toolkit pour Visual Studio Code
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou Afficher **> extensions**).
+1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Afficher > extensions**).
 1. Dans la zone de recherche, entrez _Teams Shared Computer Toolkit_.
 1. Sélectionnez le bouton d’installation vert en Teams Shared Computer Toolkit.
 
@@ -41,7 +41,7 @@ Les outils suivants sont installés par l’extension Visual Studio Code si néc
 
     Certaines Teams d’application (bots de conversation, extensions de messagerie et webhooks entrants) nécessitent des connexions entrantes.  Vous devez exposer votre système de développement à la Teams via un tunnel. Un tunnel n’est pas requis pour les applications qui incluent uniquement des onglets.  Ce package est installé dans le répertoire du projet (à l’aide de npm `devDependencies` ).
 
-## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Utilisez la Teams Shared Computer Toolkit pour Visual Studio Code
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Utilisez le Teams Shared Computer Toolkit pour Visual Studio Code
 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Configurer votre application](#configure-your-app)
@@ -73,7 +73,7 @@ Le Teams Shared Computer Toolkit peut créer des applications React hébergées 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Capture d’écran présentant comment sélectionner l’hébergement pour votre nouvelle application.":::
 
-1. Éventuellement, à l’étape Des ressources **cloud,** sélectionnez les ressources cloud que votre application utilise. Vous pouvez sélectionner l’accès CRUD (créer, lire, mettre à jour et supprimer) à une table SQL une API :
+1. Éventuellement, à l’étape **Ressources cloud,** sélectionnez les ressources cloud que votre application utilise. Vous pouvez sélectionner l’accès CRUD (créer, lire, mettre à jour et supprimer) à une table SQL une API :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Capture d’écran présentant comment ajouter des ressources cloud à votre nouvelle application.":::
 
@@ -99,16 +99,16 @@ L’application Teams principale englobe trois composants :
 
       > [!div class="checklist"]
       >
-      > - Le manifest.jsest alors en cours.
-      > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou de l’organisation.
+      > - Manifest.json.
+      > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou d’organisation.
       > - Icône [de plan à](../resources/schema/manifest-schema.md#icons) afficher dans la barre Teams’activité.
 
-Le manifeste et les icônes sont stockés dans le dossier de votre projet avant d’être chargés `.fx` vers Teams. Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
+Le manifeste et les icônes sont stockés dans le dossier de votre projet avant d’être téléchargés `.fx` vers Teams. Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
 
 1. Pour configurer votre application, accédez à **l’onglet Teams Shared Computer Toolkit** dans Visual Studio Code.
 1. Sélectionnez **l’Éditeur** de **manifeste dans Project** section.
 
-La modification des champs dans la page détails de l’application met à jour le contenu du manifest.jssur le fichier qui est finalement livré dans le cadre du package d’application.
+La modification des champs dans la page détails de l’application met à jour le contenu du fichier manifest.json qui est finalement livré dans le cadre du package d’application.
 
 ## <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
 
@@ -129,7 +129,7 @@ Pour créer et exécuter votre application localement :
 1. Vous serez peut-être invité à vous connecter. Dans ce cas, connectez-vous à l'aide de votre compte M365.
 1. Lorsque vous êtes invité à installer l’application sur Teams, appuyez sur **Ajouter**.
 
-Le back-end et le frontend sont raccordés au débo Visual Studio Code débogger.  Cela vous permet de définir des points d’arrêt n’importe où dans votre code et d’inspecter l’état.  Vous pouvez également utiliser n’importe quel outil de débogage frontal (par exemple, React Outils de développement) dans le navigateur.  Pour plus d’informations sur le débogage dans Visual Studio Code, [examinez la documentation.](https://code.visualstudio.com/Docs/editor/debugging)
+Le back-end et le frontend sont raccordés au débo Visual Studio Code débogger.  Cela vous permet de définir des points d’arrêt n’importe où dans votre code et d’inspecter l’état.  Vous pouvez également utiliser n’importe quel outil de débogage frontal (tel que les outils React développeur) dans le navigateur.  Pour plus d’informations sur le débogage dans Visual Studio Code, [examinez la documentation.](https://code.visualstudio.com/Docs/editor/debugging)
 
 ## <a name="publish-your-app-to-teams"></a>Publier votre application sur Teams
 
@@ -138,9 +138,14 @@ Avant de pouvoir être utilisé par d’autres personnes, vous devez publier vot
 1. Pour publier votre application, accédez à **l’onglet Teams Shared Computer Toolkit** dans Visual Studio Code.
 1. Sélectionnez **Publier à Teams** dans la section **Project** de publication.
 
-Si vous utilisez l’hébergement Azure, vous devez avoir mis en service et déployé sur le cloud. Pour une procédure pas à pas du processus SPFx de publication, voir [le didacticiel SPFx de publication.](../get-started/first-app-spfx.md)
+Si vous utilisez l’hébergement Azure, vous devez avoir mis en service et déployé sur le cloud. Pour une procédure pas à pas du processus SPFx publication, voir le [didacticiel SPFx de publication.](../get-started/first-app-spfx.md)
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Maintenance et prise en charge de votre application publiée](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio](~/toolkit/visual-studio-overview.md)
+* [Créer des onglets et d’autres expériences hébergées avec Microsoft Teams SDK client JavaScript](~/tabs/how-to/using-teams-client-sdk.md)

@@ -1,16 +1,16 @@
 ---
 title: Définir les commandes de recherche d’extension de messagerie
 author: surbhigupta
-description: Définissez les commandes de recherche d’extension de messagerie pour Microsoft Teams applications.
+description: Découvrez les commandes de recherche d’extension de messagerie pour Microsoft Teams applications, pour créer une commande de recherche via le manifeste de l’application et manuellement à l’aide d’exemples de code et d’exemples.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720126"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889383"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -70,7 +70,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
 
 1. Ajoutez votre paramètre de recherche et sélectionnez **Enregistrer.**
 
-### <a name="create-a-search-command-manually"></a>Créer une commande de recherche manuellement 
+### <a name="create-a-search-command-manually"></a>Créer une commande de recherche manuellement
 
 Pour ajouter manuellement votre commande de recherche d’extension de messagerie au manifeste de votre application, vous devez ajouter les paramètres suivants à votre `composeExtension.commands` tableau d’objets :
 
@@ -95,7 +95,7 @@ Vous devez ajouter les détails du paramètre de recherche, qui définit le text
 
 #### <a name="example"></a>Exemple
 
-La section suivante est un exemple du manifeste d’application simple de `composeExtensions` l’objet définissant une commande de recherche : 
+La section suivante est un exemple du manifeste d’application simple de `composeExtensions` l’objet définissant une commande de recherche :
 
 ```json
 {
@@ -127,7 +127,7 @@ Pour obtenir le manifeste complet de l’application, voir [schéma de manifeste
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

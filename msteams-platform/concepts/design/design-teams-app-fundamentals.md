@@ -1,16 +1,17 @@
 ---
-title: Concevoir votre application - Comprendre le système de conception
-description: Découvrez les principes de base de la conception de votre application Microsoft Teams, notamment la disposition, le modèle de couleurs et bien plus encore.
+title: 'Concevoir votre application : comprendre le système de conception'
+description: Découvrez les principes de base de la conception de votre application Microsoft Teams, notamment les avatars, la disposition, les icônes, le jeu de couleurs, etc.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: icônes d’avatars de grille de disposition segoe ui typography
+ms.openlocfilehash: 6e372f049b18e5e95b1381c81f8f2f1f1f2a1e8d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156946"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887747"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams de conception d’application
 
@@ -22,7 +23,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
 
    :::column span="3":::
 
-      Teams s’appuie sur une disposition de grille pour garantir des relations cohérentes et élégantes entre les composants de conception. L’unité de base de 4 pixels de la grille permet aux composants de s’écheller de manière cohérente sur toutes les tailles d’affichage Teams.
+      Teams s’appuie sur une disposition de grille pour garantir des relations cohérentes et élégantes entre les composants de conception. L’unité de base de 4 pixels de la grille permet aux composants de s’écheller de façon cohérente sur toutes les tailles d’affichage Teams.
 
       * [Voir les instructions de disposition complète (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implémenter la disposition (Fluent’interface utilisateur)](https://developer.microsoft.com/fluentui#/styles/web/layout)
@@ -47,7 +48,7 @@ Découvrez rapidement les principes de base de la conception d’application Tea
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Image conceptuelle d’Teams avatars." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Image conceptuelle de Teams avatars." border="false":::
 
    :::column-end:::
 :::row-end:::

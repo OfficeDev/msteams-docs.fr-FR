@@ -4,12 +4,12 @@ description: Comment commencer à prendre en Teams dans Microsoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Configurer le Microsoft 365 de Teams client
-ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b7da66460df12efd1e3c5bd45a9dfa6572e4b4c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155557"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888152"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Préparer votre client Microsoft Office 365
 
@@ -18,7 +18,7 @@ Microsoft 365 abonnés peuvent développer des applications pour Microsoft Teams
 * De base
 * Standard
 * Enterprise E1, E3 et E5
-* Developer
+* Développeur
 * Éducation, Éducation Plus et Éducation E5
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Activez Teams pour votre organisation et pour plus d’informations, consultez [
 5. Sélectionnez **Enregistrer**. Votre client test peut autoriser le chargement de version test d’une application personnalisée.
 
     > [!Note]
-    > Le chargement de version secondaire peut prendre jusqu’à 24 heures. En attendant, vous pouvez utiliser le **chargement pour \<your tenant>** tester votre application. Pour télécharger le fichier .zip package de l’application, voir [télécharger des applications personnalisées.](/microsoftteams/upload-custom-apps#upload)
+    > Le chargement de version secondaire peut prendre jusqu’à 24 heures pour être actif. En attendant, vous pouvez utiliser le **chargement pour \<your tenant>** tester votre application. Pour télécharger le fichier .zip package de l’application, voir [télécharger des applications personnalisées.](/microsoftteams/upload-custom-apps#upload)
 
     ![Télécharger’application](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
@@ -66,3 +66,6 @@ Pour plus d’informations sur l’interaction de ces paramètres, voir gérer l
 > [!div class="nextstepaction"] 
 > [Choix d’une configuration de test](~/concepts/build-and-test/debug.md)
 
+## <a name="see-also"></a>Voir aussi
+
+[Ajouter des données de test à votre client Microsoft 365 test](~/concepts/build-and-test/test-data.md)

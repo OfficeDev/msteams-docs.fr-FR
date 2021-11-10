@@ -1,16 +1,16 @@
 ---
 title: Déploiement de lien
 author: surbhigupta
-description: Comment effectuer le déploiement de liens avec l’extension de messagerie dans une Microsoft Teams application.
+description: Découvrez comment ajouter un déploiement de lien avec une extension de messagerie dans une application Microsoft Teams avec le manifeste de l’application ou manuellement à l’aide d’exemples et d’exemples de code.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291722"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889397"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
@@ -31,7 +31,7 @@ L Azure DevOps de messagerie utilise le déploiement de liens pour rechercher le
 Pour ajouter le déploiement de lien au manifeste de votre application, ajoutez un nouveau tableau à la `messageHandlers` `composeExtensions` section du manifeste JSON de votre application. Vous pouvez ajouter le tableau à l’aide d’App Studio ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par `*.example.com` exemple. Cela correspond exactement à un segment du domaine ; si vous avez besoin d’une `a.b.example.com` correspondance, utilisez `*.*.example.com` .
 
 > [!NOTE]
-> N’ajoutez pas de domaines qui ne sont pas dans votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, `*.com` . `*.org`
+> N’ajoutez pas de domaines qui ne sont pas dans votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` non valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, `*.com` . `*.org`
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Ajouter un déploiement de lien à l’aide d’App Studio
 
@@ -70,7 +70,7 @@ Pour obtenir un exemple de manifeste complet, voir [la référence de manifeste.
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>Gérer `composeExtension/queryLink` l’appel
 
-Après avoir ajouté le domaine au manifeste de l’application, vous devez mettre à jour le code de votre service web pour gérer la demande d’appel. Utilisez l’URL reçue pour rechercher votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
+Après avoir ajouté le domaine au manifeste de l’application, vous devez mettre à jour votre code de service web pour gérer la demande d’appel. Utilisez l’URL reçue pour effectuer une recherche dans votre service et créer une réponse de carte. Si vous répondez avec plusieurs cartes, seule la première réponse de carte est utilisée.
 
 Les types de carte suivants sont pris en charge :
 
@@ -79,7 +79,7 @@ Les types de carte suivants sont pris en charge :
 * [Office 365 Carte de connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Miniatures. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
+Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
 
 ### <a name="example"></a>Exemple
 

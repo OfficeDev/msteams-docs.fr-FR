@@ -5,12 +5,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156995"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887391"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -24,7 +24,7 @@ Les cartes de connecteurs prendre en charge les actions suivantes :
 
 - `ActionCard`: présente un ou plusieurs types d’entrée et actions associées.
 - `HttpPOST`: envoie une requête POST à une URL.
-- `OpenUri`: ouvre l’URI dans un navigateur ou une application distinct, cible éventuellement différents URI basés sur les systèmes d’exploitation.
+- `OpenUri`: ouvre l’URI dans un navigateur ou une application distinct, cible éventuellement différentes URI en fonction des systèmes d’exploitation.
 
 L'action `ActionCard` prend en charge trois types d'entrée :
 
@@ -166,7 +166,7 @@ Ce message fournit la carte suivante dans le canal :
    ```
 
     > [!NOTE]
-    > Si la publication réussit, vous devez voir une sortie **simple de 1** `curl` par .
+    > Si la post réussit, vous devez voir une sortie **simple de 1** `curl` par .
 
 1. Vérifiez la Microsoft Teams client pour la nouvelle carte publiée.
 
@@ -183,12 +183,12 @@ Ce message fournit la carte suivante dans le canal :
    ```
 
     > [!NOTE]
-    > Si la publication réussit, vous devez voir une sortie **simple de 1** `Invoke-RestMethod` par .
+    > Si la post réussit, vous devez voir une sortie **simple de 1** `Invoke-RestMethod` par .
 
 1. Vérifiez le canal Microsoft Teams associé à l’URL de webhook. Vous pouvez voir la nouvelle carte publiée sur le canal. Avant d’utiliser le connecteur pour tester ou publier votre application, vous devez :
 
     - [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Modifiez la partie du manifeste sur les noms de fichiers des icônes au lieu `icons` des URL.
+    - Modifiez la partie du manifeste sur les noms de fichier des icônes au lieu `icons` des URL.
 
 ---
 
@@ -235,7 +235,7 @@ Ce message fournit la carte suivante dans le canal :
 
 1. Testez votre carte adaptative avec Postman :
 
-    * Testez la carte adaptative à l’aide [de Postman](https://www.postman.com) pour envoyer une requête POST à l’URL, créée pour configurer le webhook entrant.
+    * Testez la carte adaptative à [l’aide de Postman](https://www.postman.com) pour envoyer une requête POST à l’URL, créée pour configurer le webhook entrant.
     * Collez le fichier JSON dans le corps de la demande et affichez le message de carte adaptative dans Teams.
 
 > [!TIP]
@@ -251,13 +251,13 @@ Le tableau suivant fournit les détails des transactions basées sur le temps :
 
 | Durée en secondes  | Nombre maximal de demandes autorisées  |
 |---|---|
-| 1   | 4   |  
+| 1   | 4  |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Une [logique de nouvelle tentative avec](/azure/architecture/patterns/retry) un délai d’attente exponentiel peut atténuer la limitation des taux pour les cas où les demandes dépassent les limites en l’espace d’une seconde. Suivez [les meilleures pratiques](../../bots/how-to/rate-limit.md) pour éviter d’atteindre les limites de taux.
+Une [logique de nouvelle tentative avec](/azure/architecture/patterns/retry) un délai d’attente exponentiel peut atténuer la limitation des taux pour les cas où les demandes dépassent les limites en l’espace d’une seconde. Suivez [les meilleures pratiques pour](../../bots/how-to/rate-limit.md) éviter d’atteindre les limites de taux.
 
 > [!NOTE]
 > Une [logique de nouvelle tentative avec](/azure/architecture/patterns/retry) un délai d’attente exponentiel peut atténuer la limitation des taux pour les cas où les demandes dépassent les limites en l’espace d’une seconde. Référez-vous aux [réponses du protocole HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) pour éviter de vous heurter aux limites de taux.
@@ -285,3 +285,5 @@ Ces limites sont en place pour réduire le courrier indésirable d’un canal pa
 * [Office 365 Connecteurs pour Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Créer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Créer un webhook sortant](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Limite de taux pour Teams messages de bots](~/bots/how-to/rate-limit.md)
+* [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)

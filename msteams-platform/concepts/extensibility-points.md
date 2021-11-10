@@ -1,16 +1,16 @@
 ---
 title: Points d’entrée pour les applications Teams
 author: heath-hamilton
-description: Décrit l’endroit où les personnes peuvent découvrir et utiliser votre application dans Teams.
+description: Décrit les points d’entrée de votre application, tels que l’équipe, le canal et la conversation dans une expérience d’application personnelle et partagée
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 3d4f3150447603fe8462b3a8166f6bc76de7cc03
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 1bfaed5ec9c2ef1bec9dc3699dbb5914be213a44
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566350"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889078"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
@@ -45,12 +45,12 @@ La liste suivante montre comment les fonctionnalités Teams sont couramment util
 
 * [**Les onglets**](~/tabs/what-are-tabs.md) offrent une expérience web incorporée plein écran qui est significative pour l’utilisateur qui la regarde.
 
-## <a name="see-also"></a>Voir aussi
-
-[Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
-[Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Comprendre les cas d’utilisation](../concepts/design/understand-use-cases.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
+[Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)

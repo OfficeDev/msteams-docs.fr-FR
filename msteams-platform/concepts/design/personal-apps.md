@@ -1,35 +1,36 @@
 ---
 title: Conception de votre application personnelle
-description: Découvrez comment concevoir une application Teams et obtenir le kit Microsoft Teams’interface utilisateur.
+description: Découvrez comment concevoir une application Teams personnelle et obtenir le kit d’interface utilisateur Microsoft Teams, créer des composants, tels que, tableau de bord, formulaire, tableau de tâches pour l’expérience mobile et de bureau. Découvrez les meilleures pratiques en matière de développement d’applications personnelles.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+keywords: Modèle de formulaire de tableau de bord iFrame du bot de navigation webview d’application personnelle du kit d’interface utilisateur
+ms.openlocfilehash: 44196ee6b1d91754e29b62dd3f6c6e40b3246602
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360717"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888159"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Conception de votre application personnelle pour Microsoft Teams
 
-Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu, d’autres fois il offre à l’utilisateur une vue d’ensemble de tout ce qui lui est propre lorsque l’application a été configurée sous la forme d’un onglet dans plusieurs canaux.
+Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu, d’autres fois, il offre à l’utilisateur une vue d’ensemble de tout ce qui lui est propre lorsque l’application a été configurée sous la forme d’un onglet dans plusieurs canaux.
 
 Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des applications personnelles dans Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions complètes sur la conception d’applications personnelles, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit Microsoft Teams’interface utilisateur. Le kit d’interface utilisateur contient également des rubriques essentielles telles que l’accessibilité et le resserrement réactif qui ne sont pas abordés ici.
+Vous trouverez des instructions complètes sur la conception d’applications personnelles, y compris des éléments que vous pouvez récupérer et modifier selon vos besoins, dans le kit d’interface Microsoft Teams’interface utilisateur. Le kit d’interface utilisateur contient également des rubriques essentielles telles que l’accessibilité et le dimensionnement réactif qui ne sont pas abordés ici.
 
 > [!div class="nextstepaction"]
-> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>Ajouter une application personnelle
 
 Les utilisateurs peuvent ajouter une application personnelle à partir du  Teams store ou du flyout d’application en sélectionnant l’icône Plus sur le côté gauche de Teams (illustré dans l’exemple suivant).
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du flyout de l’application." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="L’exemple montre comment ajouter une application personnelle à partir du volant de l’application." border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>Utiliser une application personnelle (espace de travail privé)
 
@@ -47,17 +48,17 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher du contenu d
 |----------|-----------|
 |A|**Attribution de l’application**: nom de votre application.|
 |B|**Onglets :** fournit la navigation pour votre application personnelle.|
-|C|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires.|
+|C|**Menu plus :** inclut des options et des informations supplémentaires sur l’application.|
 |D|**Navigation principale**: fournit la navigation vers les autres fonctionnalités principales Teams votre application.|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="L’exemple illustre l’anatomie structurelle de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |A|**Onglets :** fournit la navigation pour votre application personnelle.|
-|1|**webview**: affiche le contenu de votre application.|
+|1|**affichage web** : affiche le contenu de votre application.|
 
-#### <a name="desktop"></a>Desktop
+#### <a name="desktop"></a>Ordinateur de bureau
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Cet exemple montre l’anatomie des composants de l’onglet personnel." border="false":::
 
@@ -66,29 +67,29 @@ Avec un espace de travail privé, les utilisateurs peuvent afficher du contenu d
 |A|**Attribution de l’application**: nom et logo de votre application.|
 |B|**Onglets :** fournit la navigation pour votre application personnelle.|
 |C|**Affichage popout :** pousse le contenu de votre application d’une fenêtre parent vers une fenêtre enfant autonome.|
-|D|**Menu supplémentaire**: inclut des informations et options d’application supplémentaires. (Vous pouvez également Paramètres **un** onglet.)|
+|D|**Menu plus :** inclut des options et des informations supplémentaires sur l’application. (Vous pouvez également Paramètres **un** onglet.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Cet exemple montre l’anatomie structurelle de l’onglet personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |A|**Onglets :** fournit la navigation pour votre application personnelle.|
-|1|**iframe**: affiche le contenu de votre application.|
+|1|**IFrame** : affiche le contenu de votre application.|
 
 ### <a name="design-with-ui-templates-and-advanced-components"></a>Conception avec des modèles d’interface utilisateur et des composants avancés
 
 Utilisez l’un des Teams et composants suivants pour vous aider à concevoir votre onglet personnel :
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list): les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
-* [Tableau des](../../concepts/design/design-teams-app-ui-templates.md#task-board)tâches : un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
-* [Tableau de](../../concepts/design/design-teams-app-ui-templates.md#dashboard)bord : un tableau de bord est un canevas contenant plusieurs cartes qui fournissent une vue d’ensemble des données ou du contenu.
-* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form): les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
-* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state): le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list) : les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
+* [Tableau des tâches](../../concepts/design/design-teams-app-ui-templates.md#task-board) : un tableau des tâches, parfois appelé « tableau kanban » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets.
+* [Tableau de bord](../../concepts/design/design-teams-app-ui-templates.md#dashboard) : un tableau de bord est un espace contenant plusieurs cartes qui fournissent une vue d’ensemble de données ou de contenu.
+* [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form) : les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
+* [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state) : le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la connexion, les expériences de première exécution, les messages d’erreur et bien plus encore.
 * [Navigation gauche](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav): le composant de navigation gauche peut vous aider si votre application personnelle nécessite une navigation. En règle générale, vous devez conserver la navigation au minimum.
 
 ## <a name="use-a-personal-app-bot"></a>Utiliser une application personnelle (bot)
 
-Les applications personnelles peuvent inclure un bot pour les conversations un-à-un et des notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur le tableau de bord). Les utilisateurs interagissent avec le bot dans un onglet que vous spécifiez.
+Les applications personnelles peuvent inclure un bot pour les conversations un-à-un et les notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur l’artboard). Les utilisateurs interagissent avec le bot dans un onglet que vous spécifiez.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie : application personnelle (bot)
 
@@ -103,13 +104,13 @@ Les applications personnelles peuvent inclure un bot pour les conversations un-�
 |C|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
 |D|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 
-#### <a name="desktop"></a>Desktop
+#### <a name="desktop"></a>Bureau
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="L’exemple montre l’anatomie du composant de bot personnel." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications des bots.|
+|A|**Onglet Bot**: par exemple, incluez un onglet **Conversation** pour accéder aux conversations et notifications du bot.|
 |B|**Message du bot**: les bots envoient souvent des messages et des notifications sous la forme d’une carte (par exemple, une carte adaptative).|
 |C|**Zone de composition**: champ d’entrée pour l’envoi de messages au bot.|
 
@@ -141,7 +142,7 @@ Avec le resserré réactif, les onglets de droite peuvent être tronqués ou en 
 
 #### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a>À faire : les onglets doivent être de hiérarchie égale et représenter des pages d’application clés
 
-Vos onglets doivent catégoriser les principales fonctionnalités et le contenu de votre application. Avec le resserré réactif, le contenu à droite peut être tronqué ou hors de vue.
+Vos onglets doivent catégoriser les principales fonctionnalités et le contenu de votre application. Avec le resserrage réactif, le contenu à droite peut être tronqué ou hors de vue.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="L’exemple montre une application personnelle avec des onglets de hiérarchie égale." border="false":::
 

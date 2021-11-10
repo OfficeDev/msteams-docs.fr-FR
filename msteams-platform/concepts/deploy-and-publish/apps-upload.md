@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 7648f0f4ae1a3a89e051bea45249855c41befd9d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155617"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888187"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Télécharger votre application dans Microsoft Teams
 
@@ -21,7 +21,7 @@ Vous pouvez télécharger une version Microsoft Teams applications sans avoir à
 * Vous avez créé une application pour un petit groupe d’utilisateurs, par exemple, votre groupe de travail.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version secondaire sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour les GCC-High et le Département de la Défense (DOD).
+> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -31,19 +31,19 @@ Vous pouvez télécharger une version Microsoft Teams applications sans avoir à
 
 ## <a name="upload-your-app"></a>Télécharger votre application
 
-Vous pouvez recharger une version de votre application vers une équipe, une conversation, une réunion ou pour une utilisation personnelle en fonction de la façon dont vous avez configuré l’étendue de votre application.
+Vous pouvez charger une version de votre application vers une équipe, une conversation, une réunion ou pour une utilisation personnelle en fonction de la façon dont vous avez configuré l’étendue de votre application.
 
 1. Connectez-vous au client Teams avec [votre compte Microsoft 365 de développement.](~/build-your-first-app/build-and-run.md#prerequisites)
 1. Sélectionnez **applications** et choisissez **Télécharger une application personnalisée.**
 1. Sélectionnez votre package d'.zip fichier. Une boîte de dialogue d’installation s’affiche.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d’écran montrant un exemple de boîte Teams’installation d’une application.":::
 1. Ajoutez votre application à Teams.
 
 ## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement
 
 Si le chargement de version de votre application échoue, faites les choses suivantes jusqu’à ce que le problème soit résolu :
 
-1. Revenir en arrière dans les instructions de création [de votre package d’application.](../../concepts/build-and-test/apps-package.md)
+1. Revenir en arrière dans les instructions de [création de votre package d’application.](../../concepts/build-and-test/apps-package.md)
 1. [Validez à nouveau votre package d’application.](https://dev.teams.microsoft.com/appvalidation.html)
 1. Assurez-vous que le manifeste de votre application correspond au [schéma le plus récent.](../../resources/schema/manifest-schema.md)
 
@@ -53,7 +53,7 @@ Teams propose plusieurs façons d’ouvrir des applications. Pour plus d’infor
 
 ## <a name="update-your-app"></a>Mettre à jour votre application
 
-Vous n’avez pas à recharger votre application de nouveau si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
+Vous n’avez pas besoin de recharger une version de votre application si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
 
 ## <a name="remove-your-app"></a>Supprimer votre application
 
@@ -66,3 +66,8 @@ Pour supprimer votre application, cliquez avec le bouton droit sur l’icône de
 
 > [!div class="nextstepaction"]
 > [Utiliser votre application Teams de messagerie](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Configurer les options d’installation par défaut](~/concepts/deploy-and-publish/add-default-install-scope.md)
+* [Gérer votre application Microsoft Teams publiée](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

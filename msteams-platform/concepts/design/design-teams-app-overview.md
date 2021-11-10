@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des Microsoft Teams applications. Les 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360467"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888138"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams web
 
@@ -22,7 +22,7 @@ Que vous êtes concepteur, chef de produit, développeur ou fabricant à l’aid
 
 Concevoir une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement Teams fonctionnalités et contextes.
 
-Ces instructions et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
+Ces recommandations et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
 
 ## <a name="teams-app-design-principles"></a>Teams de conception d’application
 
@@ -57,7 +57,7 @@ Les personnes de tous horizons, de tous les compétences et de toutes les discip
 
 ### <a name="light"></a>Light
 
-L’application se concentre sur les scénarios de base qui se fondent avec Teams flux de travail.
+L’application se concentre sur les scénarios principaux qui se fondent avec Teams flux de travail.
 
    :::column-end:::
 :::row-end:::
@@ -84,12 +84,12 @@ L’application est basée sur un scénario que les personnes doivent faire dans
 
 ### <a name="easy-to-use"></a>Facile à utiliser
 
-L’interface utilisateur est facile à comprendre, agréable en apparence et en ton, et rend les utilisateurs plus productifs.
+L’interface utilisateur est facile à comprendre, agréable dans l’apparence et le ton et rend les utilisateurs plus productifs.
 
    :::column-end:::
    :::column span="":::
 
-### <a name="responsive"></a>Réactive
+### <a name="responsive"></a>Réactif
 
 L’application est sans périphérique et sans écran.
 
@@ -133,7 +133,7 @@ Créez rapidement des conceptions complexes et haute fidélité avec des modèle
 
 ## <a name="basic-ui-components"></a>Composants d’interface utilisateur de base
 
-En fonction de Fluent’interface utilisateur, [](design-teams-app-basic-ui-components.md) voici les principaux éléments que vous pouvez utiliser pour créer Teams expériences de base à partir de zéro.
+En fonction de Fluent’interface utilisateur, [](design-teams-app-basic-ui-components.md) voici les principaux éléments que vous pouvez utiliser pour créer Teams expériences à partir de zéro.
 
 ## <a name="tools-and-samples"></a>Outils et exemples
 
@@ -174,7 +174,7 @@ Pour en savoir plus, essayez l’une des ressources suivantes :
 Obtenez des exemples de code et des détails d’implémentation pour les composants Fluent’interface utilisateur de base utilisés pour créer Teams expériences utilisateur.
 
 > [!div class="nextstepaction"]
-> [Essayer Teams composants d’interface utilisateur (Fluent’interface utilisateur)](https://fluentsite.z22.web.core.windows.net/)
+> [Essayez Teams composants d’interface utilisateur (Fluent’interface utilisateur)](https://fluentsite.z22.web.core.windows.net/)
 
 ### <a name="adaptive-cards-designer"></a>Concepteur de cartes adaptatives
 
@@ -182,3 +182,10 @@ Concevez des cartes adaptatives dans notre outil web.
 
 > [!div class="nextstepaction"]
 > [Essayer le concepteur Cartes adaptatives](https://adaptivecards.io/designer/)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Conditions préalables et références d’API pour les applications dans les réunions Teams](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Conception de votre bot Microsoft Teams](~/bots/design/bots.md)
+* [Créer un assistant virtuel](~/samples/virtual-assistant.md)
+* [Conception de modules de tâches pour votre application Microsoft Teams](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

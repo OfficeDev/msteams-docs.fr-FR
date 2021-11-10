@@ -3,29 +3,29 @@ title: Configurer les fournisseurs d’identité OAuth 2.0
 description: Décrit comment configurer des fournisseurs d’identité axés sur les Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: authentification teams AAD fournisseur d’identité oauth
-ms.openlocfilehash: d14dc4811faae13535ad1029a8820c5904f44774
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: Authentification Teams AAD fournisseur d’identité oauth
+ms.openlocfilehash: cae2cc3d2feba8c17ad895864fd1b5995095f71b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291617"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887433"
 ---
 # <a name="configure-identity-providers"></a>Configurer les fournisseurs d’identité
 
 ## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>Configuration d’une application pour utiliser Azure Active Directory comme fournisseur d’identité
 
-Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; les applications doivent être inscrites à l’avance. Pour ce faire, Azure AD, suivez les étapes suivantes :
+Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; doivent être inscrites à l’avance. Pour ce faire, Azure AD, suivez les étapes suivantes :
 
 1. Ouvrez le [portail d’inscription des applications.](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
-2. Sélectionnez votre application pour afficher ses propriétés ou cliquez sur le bouton « Nouvelle inscription ». Recherchez la section **URI de** redirection pour l’application.
+2. Sélectionnez votre application pour afficher ses propriétés ou sélectionnez le bouton « Nouvelle inscription ». Recherchez la section **URI de** redirection pour l’application.
 
-3. Dans le menu déroulant, assurez-vous **que le site Web** est sélectionné. Mettez à jour l’URL de votre point de terminaison d’authentification. Pour les exemples d’applications TypeScript/Node.js et C# sur GitHub, les URL de redirection seront similaires à ceci :
+3. Sélectionnez **Web** dans le menu déroulant. Mettez à jour l’URL de votre point de terminaison d’authentification. Pour les exemples d’applications TypeScript/Node.js et C# sur GitHub, les URL de redirection sont similaires à ce qui suit :
 
     Rediriger les URL : `https://<hostname>/bot-auth/simple-start`
 
-Remplacez `<hostname>` par votre hôte réel. Il peut s’agit d’un site d’hébergement dédié tel qu’Azure, Glitch ou un tunnel ngrok vers localhost sur votre ordinateur de développement tel que `abcd1234.ngrok.io` . Vous n’avez peut-être pas ces informations si vous n’avez pas terminé ou hébergé votre application (ou l’exemple d’application mentionné ci-dessus), mais vous pouvez toujours revenir à cette page lorsque ces informations sont connues.
+Remplacez par votre hôte réel, qui peut être un site d’hébergement dédié tel qu’Azure, Glitch ou un tunnel ngrok vers localhost sur votre ordinateur de développement tel `<hostname>` que `abcd1234.ngrok.io` . Vous n’avez peut-être pas ces informations si vous n’avez pas terminé ou hébergé votre application (ou l’exemple d’application mentionné ci-dessus), mais vous pouvez toujours revenir à cette page lorsque ces informations sont connues.
 
 ## <a name="other-authentication-providers"></a>Autres fournisseurs d’authentification
 

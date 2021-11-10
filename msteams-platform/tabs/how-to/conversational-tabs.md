@@ -1,17 +1,17 @@
 ---
 title: Créer des onglets de conversation
 author: surbhigupta
-description: Créer une conversation de sous-entité conversationnelle pour vos onglets de canal
+description: Apprenez à créer une conversation de sous-entité de conversation pour vos onglets de canal, pour gérer les conversations à l’aide d’exemples de code
 keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720371"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889362"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -70,7 +70,7 @@ L’image suivante montre le panneau de conversation avec la conversation approp
 
 ## <a name="enhance-a-conversation"></a>Améliorer une conversation
 
-Il est important que votre onglet inclut des [liens profonds vers votre sous-entité.](~/concepts/build-and-test/deep-links.md) Par exemple, l’utilisateur qui sélectionne le lien d’onglet profondeur de la conversation de canal. Le comportement attendu consiste à recevoir le lien profond, à ouvrir cette sous-entité, puis à ouvrir le panneau de conversation pour cette sous-entité.
+Il est important que votre onglet inclut des [liens profonds vers votre sous-entité.](~/concepts/build-and-test/deep-links.md) Par exemple, l’utilisateur qui sélectionne le lien de tabulation en profondeur à partir de la conversation de canal. Le comportement attendu consiste à recevoir le lien profond, à ouvrir cette sous-entité, puis à ouvrir le panneau de conversation pour cette sous-entité.
 
 Pour prendre en charge les sous-entrées de conversation à partir de votre onglet personnel ou statique, vous n’avez rien à modifier dans votre implémentation. Nous viennent uniquement en charge le démarrage ou la poursuite des conversations à partir d’onglets de canal qui sont déjà épinglés. La prise en charge des onglets statiques vous permet de fournir un emplacement unique à vos utilisateurs pour interagir avec toutes vos sous-entités. Il est important que vous enregistrez le , et lorsque votre onglet est initialement créé dans un canal pour avoir les propriétés droites lors de l’ouverture de l’affichage de conversation dans un `subEntityId` `entityId` onglet `channelId` statique.
 
@@ -96,6 +96,11 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 |-------------|-------------|------|----|
 |Créer un onglet Conversationnel| Microsoft Teams exemple d’application d’onglet pour démontrer la création d’un onglet de conversation. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
@@ -103,8 +108,3 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)

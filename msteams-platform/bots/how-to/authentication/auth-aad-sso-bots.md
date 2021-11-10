@@ -1,15 +1,15 @@
 ---
 title: Support de l'identification unique pour les robots
 description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un développeur de bot peut utiliser une carte de signature ou le service de bot Azure avec la prise en charge de la carte OAuth.
-keywords: token, user token, SSO support for bots
+keywords: token, user token, SSO support for bots, permission, Microsoft Graph, AAD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e3f4c7a1c803baba2687e3803a820dc351f9ca33
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 55f1185dfca79a2457e563bcf5ebbc035859a7f2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475728"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887865"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l' sign-on unique (SSO) pour les bots
 
@@ -22,7 +22,7 @@ L’authentification unique dans Azure Active Directory (AAD) réduit le nombre 
 
 ![Bot SSO lors de l’runtime diagram](../../../assets/images/bots/bots-sso-diagram.png)
 
-Pour obtenir des jetons d’authentification et d’application bot, complétez les étapes suivantes :
+Pour obtenir l’authentification et les jetons d’application bot, complétez les étapes suivantes :
 
 1. Le robot envoie un message avec une carte OAuth qui contient la propriété `tokenExchangeResource`. Il indique Teams obtenir un jeton d’authentification pour l’application bot. L’utilisateur reçoit des messages sur tous les points de terminaison d’utilisateur actifs.
 
@@ -31,11 +31,11 @@ Pour obtenir des jetons d’authentification et d’application bot, complétez 
     >* Le jeton bot est reçu de chaque point de terminaison d’utilisateur actif.
     >* L’application doit être installée dans l’étendue personnelle pour la prise en charge de l’authentification unique.
 
-1. Si l’utilisateur actuel utilise votre application bot pour la première fois, une invite de demande s’affiche pour demander à l’utilisateur d’appliquer l’une des procédures suivantes :
+1. Si l’utilisateur actuel utilise votre application bot pour la première fois, une invite de demande s’affiche pour demander à l’utilisateur de faire l’une des choses suivantes :
     * Fournir le consentement, si nécessaire.
     * Gérer l’authentification étape par étape, telle que l’authentification à deux facteurs.
 
-1. Teams demande le jeton d’application bot au point de terminaison AAD pour l’utilisateur actuel.
+1. Teams demande le jeton d’application bot au point AAD de l’utilisateur actuel.
 
 1. AAD envoie le jeton d’application bot à l’Teams application.
 
@@ -51,30 +51,30 @@ Pour développer un robot DSO, Teams les étapes suivantes :
 1. [Mettez à jour Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot)
 1. [Ajoutez le code pour demander et recevoir un jeton de bot](#add-the-code-to-request-and-receive-a-bot-token).
 
-### <a name="register-your-app-through-the-aad-portal"></a>Inscrire votre application via le portail AAD
+### <a name="register-your-app-through-the-aad-portal"></a>Inscrire votre application via le portail AAD client
 
-Les étapes d’inscription de votre application via le portail AAD sont similaires au flux d' utilisateur unique [de l’onglet.](../../../tabs/how-to/authentication/auth-aad-sso.md) Pour inscrire votre application, complétez les étapes suivantes :
+Les étapes d’inscription de votre application via le portail AAD sont similaires au flux d' utilisateur unique de [l’onglet.](../../../tabs/how-to/authentication/auth-aad-sso.md) Pour inscrire votre application, complétez les étapes suivantes :
 
 1. Inscrivez une nouvelle application dans le [portail Azure Active Directory – Inscriptions des](https://go.microsoft.com/fwlink/?linkid=2083908) applications.
-2. Sélectionnez **Nouvelle inscription**. La page **Inscrire une application** s’affiche.
+2. Sélectionnez **Nouvelle inscription.** La page **Inscrire une application** s’affiche.
 3. Dans la page **Inscrire une application,** entrez les valeurs suivantes :
     1. Entrez un **nom** pour votre application.
     2. Choisissez les **types de comptes pris en** charge, sélectionnez le type de compte client unique ou multi-locataire.
 
         > [!NOTE]
         >
-        > Les utilisateurs ne sont pas invités à donner leur consentement et se voir accorder des jetons d’accès immédiatement, si l’application AAD est inscrite dans le même client qu’ils font une demande d’authentification dans Teams. Toutefois, les utilisateurs doivent donner leur consentement aux autorisations, si l’application AAD est inscrite dans un autre client.
+        > Les utilisateurs ne sont pas invités à donner leur consentement et se voir accorder des jetons d’accès immédiatement, si l’application AAD est inscrite dans le même client qu’il fait une demande d’authentification dans Teams. Toutefois, les utilisateurs doivent donner leur consentement aux autorisations, si l’application AAD est inscrite dans un autre client.
 
     3. Choisissez **Inscrire**.
 4. Dans la page vue d’ensemble, copiez et enregistrez **l’ID de l’application (client).** Vous en aurez besoin ultérieurement lors de la mise à jour Teams manifeste de l’application.
 5. Sélectionnez **Exposer une API** sous **Gérer**. 
 
    > [!IMPORTANT]
-    > * Si vous construisez un bot autonome, entrez l’URI d’ID d’application sous le nom `api://botid-{YourBotId}` . Ici, **YourBotId est** votre ID d’application AAD.
+    > * Si vous construisez un bot autonome, entrez l’URI d’ID d’application sous le nom `api://botid-{YourBotId}` . Ici, **YourBotId est** votre ID AAD’application.
     > * Si vous construisez une application avec un bot et un onglet, entrez l’URI d’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
-5. Sélectionnez les autorisations dont votre application a besoin pour le point de terminaison AAD et, éventuellement, pour Microsoft Graph.
-6. [Accordez des autorisations](/azure/active-directory/develop/v2-permissions-and-consent) Teams applications mobiles, web et de bureau.
+5. Sélectionnez les autorisations dont votre application a besoin pour AAD point de terminaison et, éventuellement, pour Microsoft Graph.
+6. [Accorder des autorisations](/azure/active-directory/develop/v2-permissions-and-consent) pour Teams applications de bureau, web et mobiles.
 7. Sélectionnez **Ajouter une étendue**.
 8. Dans le panneau qui s’ouvre, ajoutez une application cliente en entrant `access_as_user` le nom de **l’étendue.**
 
@@ -84,7 +84,7 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
     > Vous devez connaître les restrictions importantes suivantes :
     >
     > * Seules les autorisations de l’API microsoft Graph de niveau utilisateur, telles que la messagerie, le profil, offline_access et OpenId, sont pris en charge. Si vous avez besoin d’accéder à d’autres Graph microsoft, telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` avec Graph [autorisations.](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)
-    > * Le nom de domaine de votre application doit être identique au nom de domaine que vous avez enregistré pour votre application AAD.
+    > * Le nom de domaine de votre application doit être identique au nom de domaine que vous avez inscrit pour AAD application.
     > * Plusieurs domaines par application ne sont actuellement pas pris en charge.
     > * Les applications qui utilisent le domaine ne sont pas pris en charge `azurewebsites.net` car elles sont courantes et peuvent être un risque pour la sécurité.
 
@@ -110,14 +110,14 @@ Pour mettre à jour le portail Azure avec la connexion OAuth, effectuer les éta
 6. Pour remplir le formulaire Nouveau paramètre de connexion, effectuez les étapes **suivantes** :
 
     >[!NOTE]
-    > **L’octroi** implicite peut être requis dans l’application AAD.
+    > **L’octroi** implicite peut être requis dans l AAD application.
 
-    1. Entrez un **nom dans** la page Nouveau paramètre **de connexion.** Il s’agit du nom qui est référent dans les paramètres de votre code de service de bot à l’étape *5* de l' sso bot lors [de l’utilisation.](#bot-sso-at-runtime)
+    1. Entrez un **nom dans** la page Nouveau paramètre **de connexion.** Il s’agit du nom qui est référent dans les paramètres de votre code de service de bot à l’étape *5* de l' sso du bot lors [de l’utilisation.](#bot-sso-at-runtime)
     2. Dans la **drop-down Fournisseur** de services, **sélectionnez Azure Active Directory v2**.
-    3. Entrez les informations d’identification du client, telles que **l’ID client** et la **secret client** pour l’application AAD.
-    4. Pour **l’URL Exchange** jeton, utilisez la valeur d’étendue définie dans Mettre à jour [Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot) L’URL Exchange jeton indique au SDK que cette application AAD est configurée pour l' sso.
+    3. Entrez les informations d’identification du client, telles que **l’ID client** et la secret **client** pour l’application AAD client.
+    4. Pour **l’URL Exchange** jeton, utilisez la valeur d’étendue définie dans Mettre à jour [Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot) L’URL Exchange de jeton indique au SDK que cette application AAD est configurée pour l' sso.
     5. Dans la **zone ID client,** entrez *commun*.
-    6. Ajoutez toutes les **étendues configurées** lors de la spécification d’autorisations pour les API en aval pour votre application AAD. Avec l’ID client et la secret client fournis, le magasin de jetons échange le jeton contre un jeton graphique avec des autorisations définies.
+    6. Ajoutez toutes les **étendues configurées** lors de la spécification d’autorisations pour les API en aval pour AAD application. Avec l’ID client et la secret client fournis, le magasin de jetons échange le jeton contre un jeton graphique avec des autorisations définies.
     7. Sélectionnez **Enregistrer**.
 
     ![Affichage des paramètres VuSSOBotConnection](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
@@ -145,8 +145,8 @@ Si l’application contient un bot et un onglet, utilisez le code suivant pour a
 
 **webApplicationInfo** est le parent des éléments suivants :
 
-* **id** : ID client de l’application. Il s’agit de l’ID d’application que vous avez obtenu dans le cadre de l’inscription de l’application auprès d’AAD. Ne partagez pas cet ID d’application avec plusieurs Teams applications. Créez une application AAD pour chaque manifeste d’application qui utilise `webApplicationInfo` .
-* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI, y compris le protocole que vous avez enregistré lors de la création de votre dans Enregistrer votre `api://` application via le portail `scope` [AAD](#register-your-app-through-the-aad-portal). Vous ne devez pas inclure le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine et aux sous-domaines utilisés dans les URL de votre manifeste Teams’application.
+* **id** : ID client de l’application. Il s’agit de l’ID d’application que vous avez obtenu dans le cadre de l’inscription de l’application auprès AAD. Ne partagez pas cet ID d’application avec plusieurs Teams applications. Créez une application AAD pour chaque manifeste d’application qui utilise `webApplicationInfo` .
+* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI, y compris le protocole que vous avez inscrit lors de la création de votre application dans Enregistrer votre application `api://` `scope` via le portail [AAD.](#register-your-app-through-the-aad-portal) Vous ne devez pas inclure le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine et aux sous-domaines utilisés dans les URL de votre manifeste Teams’application.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Ajouter le code pour demander et recevoir un jeton de bot
 
@@ -191,7 +191,7 @@ Lorsque l’utilisateur sélectionne **Continuer**, ces événements se produise
 
 #### <a name="receive-the-bot-token"></a>Recevoir le jeton du bot
 
-La réponse avec le jeton est envoyée par le biais d’une activité d’appel avec le même schéma que les autres activités d’appel que les bots reçoivent aujourd’hui. La seule différence est le nom de l’appel, **la sign-in/tokenExchange** et le **champ valeur.** Le **champ** valeur contient **l’ID**, une chaîne de  la demande initiale pour obtenir le jeton et le champ de jeton, une valeur de chaîne incluant le jeton.
+La réponse avec le jeton est envoyée par le biais d’une activité d’appel avec le même schéma que les autres activités d’appel que les bots reçoivent aujourd’hui. La seule différence est le nom de l’appel, **la sign-in/tokenExchange** et le **champ valeur.** Le **champ** de valeur contient **l’ID**, une chaîne  de la demande initiale pour obtenir le jeton et le champ de jeton, une valeur de chaîne incluant le jeton.
 
 >[!NOTE]
 > Vous pouvez recevoir plusieurs réponses pour une demande donnée si l’utilisateur a plusieurs points de terminaison actifs. Vous devez déduplicer les réponses avec le jeton.
@@ -246,7 +246,7 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne parvient pa
 
 1. Le client démarre une conversation avec le bot déclenchant un scénario OAuth.
 2. Le bot renvoie une carte OAuth au client.
-3. Le client intercepte la carte OAuth avant de l’afficher à l’utilisateur et vérifie s’il contient une `TokenExchangeResource` propriété.
+3. Le client intercepte la carte OAuth avant de l’afficher à l’utilisateur et vérifie si elle contient une `TokenExchangeResource` propriété.
 4. Si la propriété existe, le client envoie un `TokenExchangeInvokeRequest` message au bot. Le client doit avoir un jeton échangeable pour l’utilisateur, qui doit être un jeton Azure AD v2 et dont l’audience doit être identique à la `TokenExchangeResource.Uri` propriété. Le client envoie une activité d’appel au bot avec le code suivant :
 
     ```json
@@ -262,7 +262,7 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne parvient pa
     }
     ```
 
-5. Le bot traite `TokenExchangeInvokeRequest` le client et renvoie un retour au `TokenExchangeInvokeResponse` client. Le client doit attendre qu’il reçoit le `TokenExchangeInvokeResponse` .
+5. Le bot traite le `TokenExchangeInvokeRequest` client et renvoie un retour au `TokenExchangeInvokeResponse` client. Le client doit attendre qu’il reçoit le `TokenExchangeInvokeResponse` .
 
     ```json
     {

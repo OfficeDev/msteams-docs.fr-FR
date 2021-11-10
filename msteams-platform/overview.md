@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720112"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888033"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Créer des applications pour Microsoft Teams
 
@@ -48,7 +48,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 :::row:::
    :::column span="1":::
 
-**Collaborer plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
+**Collaborez plus facilement**: affichez votre contenu web dans un [onglet](tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
 
    :::column-end:::
 
@@ -100,7 +100,7 @@ Teams applications sont une combinaison de [fonctionnalités.](concepts/capabili
 
    :::column span="1":::
 
-**Créer des applications pour les réunions**: il existe plusieurs options pour incorporer votre application dans l’expérience [Teams’appel.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+**Créer des applications pour les réunions**: il existe plusieurs options pour incorporer votre application dans l’expérience Teams [d’appel.](apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
    :::column-end:::
 
@@ -211,8 +211,6 @@ Vous recherchez une source d’inspiration pour le développement d’applicatio
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Ajouter un bouton Partager à Teams votre site web](concepts/build-and-test/share-to-teams.md)
-* [Concevoir votre application Teams web](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* SDK Bot Framework pour [JavaScript et](https://github.com/Microsoft/botbuilder-js) [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Distribuer votre application Teams de messagerie](concepts/deploy-and-publish/apps-publish-overview.md)
+* [Principes fondamentaux de l'application](~/concepts/app-fundamentals-overview.md)
+* [Concevoir votre application Teams web](~/concepts/design/design-teams-app-process.md)
+* [Map vos cas d’utilisation Teams fonctionnalités de l’application](~/concepts/design/map-use-cases.md)

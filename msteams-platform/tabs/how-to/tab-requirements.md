@@ -6,23 +6,23 @@ keywords: Canal de groupe onglets teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155649"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888054"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
 Teams onglets doivent respecter les conditions préalables suivantes :
 
 * Vous devez permettre à vos pages d’onglets d’être affichées dans un iFrame, à l’aide des en-têtes de réponse HTTP X-Frame-Options et Content-Security-Policy.
-  * Définissez l’en-tête : `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
+  * Définir l’en-tête : `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * Pour la compatibilité d’Internet Explorer 11, définissez `X-Content-Security-Policy` .
   * Sinon, définissez l’en-tête `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Cet en-tête est supprimé, mais toujours accepté par la plupart des navigateurs.
 
-* En règle générale, comme protection contre le détournement de clic, les pages de connexion ne s’restituer dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou sur les cookies.
+* En règle générale, comme protection contre les détournements de clics, les pages de connexion ne s’restitueraient pas dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou les cookies.
 
     > [!NOTE]
     > Chrome 80, dont la publication est prévue début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. Pour plus d’informations, voir [l’attribut de cookie SameSite.](../../resources/samesite-cookie-update.md)
@@ -35,7 +35,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 
 * Pour que l’authentification fonctionne sur les clients mobiles, vous devez mettre à niveau Teams SDK JavaScript vers au moins la version 1.4.1.
 
-* Si vous choisissez que votre onglet de canal ou de groupe apparaisse sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété.
+* Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams clients mobiles, la configuration doit avoir une valeur `setSettings()` pour la `websiteUrl` propriété.
 
 * L’onglet Teams MS ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
 
@@ -43,17 +43,15 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 * [Extension de kit de ressources Teams pour Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Extension de kit de ressources Teams pour Visual Studio](../../toolkit/visual-studio-overview.md)
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer votre première application à l’aide de React](../../get-started/first-app-react.md)
 * [Créer votre première application à l’aide de Blazor](../../get-started/first-app-blazor.md)
 * [Créer votre première application à l’aide de SPFx](../../get-started/first-app-spfx.md)
-* [Créer votre premier bot conversationnel](../../get-started/first-app-bot.md)
-* [Créer votre première extension de message](../../get-started/first-message-extension.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)

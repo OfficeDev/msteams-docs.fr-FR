@@ -4,12 +4,12 @@ description: Décrit les cartes et leur utilisation dans les bots, les connecteu
 ms.localizationpriority: medium
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: 9ddfada39f6170e7fc81092028747230b87e35e3
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: a6e7f706d114422e99668b6a123dd3feb2cf886c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291610"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888292"
 ---
 # <a name="cards"></a>Cartes
 
@@ -26,7 +26,7 @@ Les bots pour Teams les types de cartes suivants :
 - Carte miniature
 - Collections de cartes
 
-Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l’aide de Markdown ou html, en fonction du type de carte. Cartes utilisées par les bots et extensions de messagerie dans Microsoft Teams, ajouter et répondre à ces actions de carte, `openUrl` `messageBack` , , et `imBack` `invoke` `signin` .
+Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l’aide de Markdown ou html, en fonction du type de carte. Cartes utilisées par les bots et les extensions de messagerie dans Microsoft Teams, ajouter et répondre à ces actions de carte, `openUrl` `messageBack` , , et `imBack` `invoke` `signin` .
 
 Teams utilise des cartes à trois endroits différents :
 
@@ -36,7 +36,7 @@ Teams utilise des cartes à trois endroits différents :
 
 ## <a name="cards-in-connectors"></a>Cartes dans les connecteurs
 
-Les cartes ont d’abord été définies dans Outlook et Office 365 et sont désormais utilisées dans le cadre des connecteurs Office 365 de connexion. Comme de nombreuses applications Office 365, Teams prend en charge les connecteurs. Pour plus d’informations, [voir Office 365 Connectors for Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). Vous pouvez trouver la spécification pour les cartes dans les connecteurs dans la référence [de carte de message actionnable.](/outlook/actionable-messages/card-reference)
+Les cartes ont d’abord été définies dans Outlook et Office 365 et sont désormais utilisées dans le cadre des connecteurs Office 365 de connexion. Comme de nombreuses applications Office 365, Teams prend en charge les connecteurs. Pour plus d’informations, [voir Office 365 Connectors for Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). Vous pouvez trouver la spécification pour les cartes dans les connecteurs dans la référence de carte [de message actionnable.](/outlook/actionable-messages/card-reference)
 
 ## <a name="cards-in-bots"></a>Cartes dans les bots
 
@@ -56,7 +56,7 @@ Toutes les cartes utilisées par Teams sont répertoriées dans les [types de ca
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-[Les cartes](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) adaptatives sont une nouvelle spécification de produit croisé pour les cartes dans les produits Microsoft, y compris les bots, Cortana, Outlook et Windows. Ils sont le type de carte recommandé pour les nouveaux Teams développement. Pour obtenir des informations générales sur l’équipe des cartes adaptatives, voir [vue d’ensemble des cartes adaptatives.](/adaptive-cards) Vous pouvez utiliser des cartes adaptatives partout où vous utilisez des cartes Hero, des cartes Office 365 et des cartes miniatures existantes.
+[Les cartes](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) adaptatives sont une nouvelle spécification entre produits pour les cartes des produits Microsoft, notamment les bots, Cortana, Outlook et Windows. Ils sont le type de carte recommandé pour les nouveaux Teams développement. Pour obtenir des informations générales sur l’équipe des cartes adaptatives, voir [vue d’ensemble des cartes adaptatives.](/adaptive-cards) Vous pouvez utiliser des cartes adaptatives partout où vous utilisez des cartes Hero, des cartes Office 365 et des cartes miniatures existantes.
 
 Outre les cartes adaptatives, Teams prend en charge deux autres types de cartes :
 
@@ -71,18 +71,19 @@ Outre les cartes adaptatives, Teams prend en charge deux autres types de cartes 
 > * Tous les éléments de schéma de carte adaptative native, à l’exception `Action.Submit` de , sont entièrement pris en charge.
 > * Les actions prises en [**charge sont Action.OpenURL,**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**Action.ShowCard,**](https://adaptivecards.io/explorer/Action.ShowCard.html) [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)et [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
-Les cartes adaptatives avec les webhooks entrants vous permettent d’utiliser les fonctionnalités riches et flexibles des cartes adaptatives. Il envoie des données à l’aide de webhooks entrants Teams partir de leur service web.
+Les cartes adaptatives avec webhooks entrants vous permettent d’utiliser les fonctionnalités riches et flexibles des cartes adaptatives. Il envoie des données à l’aide de webhooks entrants Teams partir de leur service web.
 
 ## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>Prise en charge de AAD’ID d’objet et d’UPN dans la mention utilisateur 
 
-Les bots avec cartes adaptatives peuvent prendre en charge les ID de mention utilisateur, tels que l’ID d’objet AAD et le nom d’utilisateur principal (UPN) en plus des ID existants. Les webhooks entrants commencent à prendre en charge la mention utilisateur dans la carte adaptative AAD L’ID d’objet et l’UPN.
-
-## <a name="see-also"></a>Voir aussi
-
-* [Formater des cartes dans Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Concevoir des cartes adaptatives](~/task-modules-and-cards/cards/design-effective-cards.md)
+Les bots avec cartes adaptatives prendre en charge les ID de mention utilisateur, tels que AAD ID d’objet et nom d’utilisateur principal (UPN) en plus des ID existants. Les webhooks entrants commencent à prendre en charge la mention utilisateur dans la carte adaptative avec l’ID AAD’objet et l’UPN.
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Types de cartes](~/task-modules-and-cards/cards/cards-reference.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Formater les cartes dans Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Concevoir des cartes adaptatives](~/task-modules-and-cards/cards/design-effective-cards.md)
+* [Cartes adaptatives dans les bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)

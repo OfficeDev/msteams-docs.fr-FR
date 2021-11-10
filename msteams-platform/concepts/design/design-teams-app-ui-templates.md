@@ -5,18 +5,18 @@ description: Concevez votre application plus rapidement avec des composants d’
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156935"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887802"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Conception de votre application Microsoft Teams avec des modèles d’interface utilisateur
 
-Concevez votre application Microsoft Teams plus rapidement avec des modèles d’interface utilisateur. Les modèles sont un ensemble de composants basés sur l’interface utilisateur Fluent qui fonctionnent dans les cas d’utilisation Teams courants, ce qui vous donne plus de temps pour déterminer la meilleure expérience pour vos utilisateurs.
+Concevez votre Microsoft Teams application plus rapidement avec des modèles d’interface utilisateur. Les modèles sont un ensemble de composants basés sur l’interface utilisateur Fluent qui fonctionnent dans les cas d’utilisation Teams courants, ce qui vous donne plus de temps pour déterminer la meilleure expérience pour vos utilisateurs.
 
-## <a name="getting-started-with-tools-and-samples"></a>Mise en place des outils et des exemples
+## <a name="getting-started-with-tools-and-samples"></a>Mise en place d’outils et d’exemples
 
 Les ressources suivantes peuvent vous aider à concevoir et développer votre application à l’aide de modèles d’interface utilisateur.
 
@@ -50,7 +50,7 @@ Installez un exemple d’application pour voir l’apparence et le comportement 
 
 Un tableau de bord affiche différents types de contenu dans un emplacement central (Teams application ou onglet personnel). Les utilisateurs doivent pouvoir personnaliser au moins une partie de ce qu’ils voient sur un tableau de bord.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
 * Analyser les données
 * Mesures du rapport
@@ -68,26 +68,26 @@ Un tableau de bord affiche différents types de contenu dans un emplacement cent
 
 Vous pouvez utiliser différentes tailles de carte (unique, double et complète) pour empiler et organiser les visualisations de données sur la même page. Les cartes s’adaptent à la disposition des colonnes et remplissent des espaces vides.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
 * Afficher des informations complexes
 * Créer un tableau de bord
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="L’exemple illustre un modèle d’interface utilisateur de visualisation de données sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="L’exemple montre un modèle d’interface utilisateur de visualisation de données sur un appareil mobile." border="false":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple montre un modèle d’interface utilisateur de visualisation de données sur un ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple illustre un modèle d’interface utilisateur de visualisation de données sur un ordinateur de bureau." border="false":::
 
 ## <a name="empty-state"></a>État vide
 
 Le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc. Il est très flexible : adaptez-le pour utiliser un, quelques-uns ou tous les composants de la conception suivante.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
-* Se connecter
+* Connexion
 * Messages de bienvenue et expériences de première expérience
 * Messages de réussite
 * Messages d’erreur
@@ -100,11 +100,11 @@ Le modèle d’état vide peut être utilisé pour de nombreux scénarios, y com
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’état vide sur un ordinateur de bureau." border="false":::
 
-## <a name="filter"></a>Filtrer
+## <a name="filter"></a>Filtre
 
 Un filtre vous permet de réduire les informations que vous voyez en fonction des critères sélectionnés. Vous pouvez inclure des filtres avec des tableaux, des listes, des cartes et d’autres composants qui organisent le contenu.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
 Organisation du contenu dans :
 
@@ -117,11 +117,11 @@ Organisation du contenu dans :
 
 ## <a name="form"></a>Formulaire
 
-Les formulaires sont utilisés pour collecter, valider et envoyer des entrées utilisateur de manière structurée. Effacer l’étiquetage et les regroupements logiques de champs d’entrée sont essentiels pour une bonne expérience utilisateur.
+Les formulaires sont utilisés pour collecter, valider et envoyer des entrées utilisateur de manière structurée. L’étiquetage clair et les regroupements logiques de champs d’entrée sont essentiels pour une bonne expérience utilisateur.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
-* Se connecter
+* Connexion
 * Profils utilisateur
 * Paramètres
 * Collection d’entrées utilisateur
@@ -138,7 +138,7 @@ Les formulaires sont utilisés pour collecter, valider et envoyer des entrées u
 
 Vous pouvez utiliser une liste pour afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
 * Afficher les données
 * Actions contextuelles sur le contenu de l’application
@@ -151,9 +151,9 @@ Vous pouvez utiliser une liste pour afficher les éléments associés dans un fo
 
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="L’exemple montre un modèle d’interface utilisateur de liste sur un ordinateur de bureau." border="false":::
 
-## <a name="sign-in"></a>Se connecter
+## <a name="sign-in"></a>Connexion
 
-Vous pouvez concevoir des flux de Teams d’application pour différents contextes et fournisseurs d’identité. L’exemple suivant inclut l’authentification unique (SSO), que nous recommandons pour l’expérience d’authentification la plus simple.
+Vous pouvez concevoir des flux de Teams d’application pour différents contextes et fournisseurs d’identité. L’exemple suivant inclut l’authentification unique (SSO), que nous vous recommandons pour l’expérience d’authentification la plus simple.
 
 ### <a name="top-use-case"></a>Cas d’utilisation principaux
 
@@ -169,7 +169,7 @@ Vous pouvez concevoir des flux de Teams d’application pour différents context
 
 ## <a name="settings"></a>Paramètres
 
-Paramètres sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base.)](~/concepts/design/design-teams-app-basic-ui-components.md)
+Paramètres’écran sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base.)](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 ### <a name="top-use-case"></a>Cas d’utilisation principaux
 
@@ -181,7 +181,7 @@ Paramètres sont les écrans où les utilisateurs peuvent configurer leurs préf
 
 Un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets. Il peut également être utilisé pour trier n’importe quel type de contenu en catégories. Vous pouvez modifier et déplacer les cartes entre les colonnes.
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
 * Gestion de projet. Affectation de tâches et état de suivi
 * Brainstorming. Ajout d’idées dans différentes catégories
@@ -193,22 +193,28 @@ Un tableau des tâches, parfois appelé « kanban board » ou « pistes de cours
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="L’exemple montre un modèle d’interface utilisateur du tableau des tâches sur un ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="L’exemple montre un modèle d’interface utilisateur du tableau des tâches sur le bureau." border="false":::
 
 ## <a name="wizard"></a>Assistant
 
 Un Assistant guide un utilisateur à travers plusieurs écrans pour effectuer une tâche (par exemple, un processus d’installation).
 
-### <a name="top-use-cases"></a>Principaux cas d’utilisation
+### <a name="top-use-cases"></a>Cas d’utilisation principaux
 
-* Installation
+* Configuration
 * Intégration
 * Expériences de première expérience
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’assistant sur mobile." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’Assistant sur mobile." border="false":::
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Un exemple illustre un modèle d’interface utilisateur d’Assistant sur un ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="L’exemple montre un modèle d’interface utilisateur d’Assistant sur un ordinateur de bureau." border="false":::
+
+## <a name="see-also"></a>Voir aussi
+
+* [Concevoir votre application avec des composants Fluent’interface utilisateur de base](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Conception de votre application Microsoft Teams avec des composants d’interface utilisateur avancés](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [Formatez vos messages robots.](~/bots/how-to/format-your-bot-messages.md)

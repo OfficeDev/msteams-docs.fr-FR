@@ -1,15 +1,16 @@
 ---
 title: Affichages à jour
-description: Exemple d’affichages à jour à l’aide du bot universel
+description: En savoir plus sur les affichages à jour à l’aide du bot universel avec des exemples de code
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
-ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
+keywords: rejet adaptatif de carte de base d’approbation
+ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60238236"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887405"
 ---
 # <a name="up-to-date-cards"></a>Cartes actualisées
 
@@ -20,7 +21,7 @@ Par exemple, un utilisateur peut créer une demande d’approbation de biens dan
 * Les affichages spécifiques à l’utilisateur peuvent être appliqués à `refresh` l’aide de la propriété des cartes adaptatives.
 À l’aide des affichages  spécifiques de l’utilisateur, vous pouvez afficher une carte avec des boutons Approuver ou Rejeter à un ensemble d’utilisateurs et afficher une carte sans ces boutons à d’autres utilisateurs. 
 
-* Pour que l’état de la carte reste toujours à jour, Teams mécanisme de modification de message peut être utilisé. Par exemple, pour chaque approbation, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs d’actualisation automatique, à laquelle le bot peut répondre avec la carte utilisateur spécifique mise `adaptiveCard/action` à jour.
+* Pour que l’état de la carte reste toujours à jour, Teams mécanisme de modification de message peut être utilisé. Par exemple, pour chaque approbation, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs d’actualisation automatique, auquel le bot peut répondre avec la carte spécifique de `adaptiveCard/action` l’utilisateur mise à jour.
 
 Pour plus d’informations, [voir comment modifier un message de bot.](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
 

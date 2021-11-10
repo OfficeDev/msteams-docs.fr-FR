@@ -2,24 +2,24 @@
 title: Créer une page de suppression d’onglets
 author: surbhigupta
 description: Comment créer une page de suppression d’onglets
-keywords: suppression des onglets teams du canal de groupe configurable
+keywords: Suppression de suppression configurable du canal de groupe d’onglets teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155603"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889236"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
-Vous pouvez étendre et améliorer l’expérience utilisateur en prendre en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un onglet de canal ou de groupe et vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation. En outre, l’expérience de suppression d’onglet offre aux utilisateurs des options post-suppression pour supprimer ou archiver du contenu.
+Vous pouvez étendre et améliorer l’expérience utilisateur en prendre en charge les options de suppression et de modification dans votre application. Teams permet aux utilisateurs de renommer ou de supprimer un onglet de canal ou de groupe et vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation. En outre, l’expérience de suppression d’onglets offre aux utilisateurs des options post-suppression pour supprimer ou archiver du contenu.
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Activer la reconfiguration de votre onglet après l’installation
 
-Votre **manifest.jsdéfinit** les fonctionnalités et fonctionnalités de votre onglet. La propriété d’instance d’onglet prend une valeur boolé générale qui indique si un utilisateur peut modifier ou reconfigurer l’onglet `canUpdateConfiguration` après sa création. Le tableau suivant fournit les détails de la propriété :
+Votre **manifest.json définit** les fonctionnalités et fonctionnalités de votre onglet. La propriété d’instance d’onglet prend une valeur boolé générale qui indique si un utilisateur peut modifier ou reconfigurer l’onglet `canUpdateConfiguration` après sa création. Le tableau suivant fournit les détails de la propriété :
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -31,7 +31,7 @@ Lorsque votre onglet est téléchargé vers un canal ou une conversation de grou
 | ----------------------- | :----: | ----- | ----------- |
 |     Paramètres            |   √    |       |La page est rechargée dans un IFrame, ce qui permet à l’utilisateur de `configurationUrl` reconfigurer l’onglet. |
 |     Renommer              |   √    |   √   | L’utilisateur peut modifier le nom de l’onglet tel qu’il apparaît dans la barre d’onglets.          |
-|     Supprimer              |   √    |   √   |  Si la propriété et la valeur sont incluses dans la page de configuration, la page de suppression est chargée dans un IFrame et présentée `removeURL` à l’utilisateur.   Si une page de suppression n’est pas incluse, une boîte de dialogue de confirmation est présentée à l’utilisateur.          |
+|     Supprimer              |   √    |   √   |  Si la propriété et la valeur sont incluses dans la page de configuration, la page de suppression est chargée dans un IFrame et présentée `removeURL` à l’utilisateur.   Si une page de suppression n’est pas incluse, une boîte de dialogue de confirmation s’est présentée à l’utilisateur.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Créer une page de suppression d’onglets pour votre application
 
@@ -39,7 +39,7 @@ La page de suppression facultative est une page HTML que vous hébergez et qui s
 
 ### <a name="register-a-remove-handler"></a>Inscrire un remove handler
 
-Si vous le souhaitez, dans votre logique de page de suppression, vous pouvez appeler le handler d’événements lorsque l’utilisateur supprime une `registerOnRemoveHandler((RemoveEvent) => {}` configuration d’onglet existante. La méthode prend l’interface et exécute le code dans le handler lorsqu’un utilisateur tente [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) de supprimer du contenu. La méthode permet d’effectuer des opérations de nettoyage, telles que la suppression de la ressource sous-jacente qui alimentera le contenu de l’onglet. À la fois, un seul handler de suppression peut être inscrit.
+Si vous le souhaitez, dans votre logique de page de suppression, vous pouvez appeler le handler d’événements lorsque l’utilisateur supprime une `registerOnRemoveHandler((RemoveEvent) => {}` configuration d’onglet existante. La méthode prend l’interface et exécute le code dans le handler lorsqu’un utilisateur tente [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) de supprimer du contenu. La méthode est utilisée pour effectuer des opérations de nettoyage telles que la suppression de la ressource sous-jacente qui alimentera le contenu de l’onglet. À la fois, un seul handler de suppression peut être inscrit.
 
 `RemoveEvent`L’interface décrit un objet avec deux méthodes :
 
@@ -91,14 +91,14 @@ Une fois le handler de suppression exécuté, ou avertit Teams `removeEvent.noti
 > * Teams active le bouton **Supprimer** après cinq secondes, même si votre onglet n’a pas `setValidityState()` appelé.
 > * Lorsque l’utilisateur sélectionne **Supprimer,** Teams l’onglet après 30 secondes, que les actions soient terminées ou non.
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)

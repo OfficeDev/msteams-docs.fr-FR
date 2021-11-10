@@ -1,20 +1,20 @@
 ---
 title: Envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot
-description: décrit comment envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot.
+description: Décrit comment envoyer l’ID de locataire et l’ID de conversation aux en-têtes de requête du bot.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bdfe224824fb7fd42fdc8ea93dc7d492bc731218
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 054b5bed99b1569a74ba4f69b144bd1edd60fd3d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155620"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889278"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Envoyer l’ID client et l’ID de conversation aux en-têtes de requête du bot
 
-Les demandes sortantes en cours au bot ne contiennent pas dans l’en-tête ou l’URL d’informations qui permettent aux bots d’router le trafic sans décompresser toute la charge utile. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID de client dans les en-têtes.
+Les demandes sortantes en cours au bot ne contiennent pas dans l’en-tête ou l’URL des informations qui permettent aux bots d’router le trafic sans décompresser toute la charge utile. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID client dans les en-têtes.
 
-## <a name="request-header-fields"></a>Champs d’en-tête de requête
+## <a name="request-header-fields"></a>Champs d’en-tête de demande
 
 Deux champs d’en-tête de requête non standard sont ajoutés à toutes les demandes envoyées aux bots, à la fois pour le flux asynchrone et le flux synchrone. Le tableau suivant fournit les champs d’en-tête de requête et leurs valeurs :
 
@@ -25,4 +25,4 @@ Deux champs d’en-tête de requête non standard sont ajoutés à toutes les de
 
 Si le client ou l’ID de conversation n’est pas présent dans l’activité ou n’a pas été validé côté service, la valeur est vide.
 
-![Champs d’en-tête de requête](~/assets/images/bots/requestheaderfields.png)
+![Champs d’en-tête de demande](~/assets/images/bots/requestheaderfields.png)

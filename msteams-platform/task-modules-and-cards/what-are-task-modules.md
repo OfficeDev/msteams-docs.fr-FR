@@ -1,16 +1,16 @@
 ---
 title: Modules de tâche
 author: surbhigupta
-description: Ajouter des expériences popup modales pour collecter ou afficher des informations à vos utilisateurs à partir de Microsoft Teams applications
+description: Ajouter des expériences de fenêtres popup modales pour collecter ou afficher des informations à vos utilisateurs à partir de Microsoft Teams applications
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a82552f43456aa1ddee0b68f13a8c5435165ed64
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156749"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888299"
 ---
 # <a name="task-modules"></a>Modules de tâche
 
@@ -28,7 +28,7 @@ Les modules de tâche peuvent être appelés de trois façons :
 
 * Onglets de canal ou personnels : à l’aide du SDK onglets Microsoft Teams, vous pouvez appeler des modules de tâche à partir de boutons, de liens ou de menus de votre onglet. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets.](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
 * Bots : utilisation de boutons sur [les cartes envoyées](~/task-modules-and-cards/cards/cards-reference.md) à partir de votre bot. Cela est utile lorsque vous n’exigez pas que tous les personnes d’un canal voient ce que vous faites avec un bot. Par exemple, lorsque les utilisateurs répondent à un sondage dans un canal, il n’est pas utile de voir un enregistrement de ce sondage en cours de création. Pour plus d’informations, voir [l’utilisation de modules](~/task-modules-and-cards/task-modules/task-modules-bots.md)de tâche Teams bots.
-* En dehors Teams à partir d’un lien profond : vous pouvez également créer des URL pour appeler un module de tâche de n’importe où. Pour plus d’informations, voir [la syntaxe de lien profond](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)du module de tâche.
+* En dehors Teams à partir d’un lien profond : vous pouvez également créer des URL pour appeler un module de tâche de n’importe où. Pour plus d’informations, voir [la syntaxe de lien profond du module de tâche.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)
 
 ## <a name="components-of-a-task-module"></a>Composants d’un module de tâche
 
@@ -50,11 +50,11 @@ Un module de tâche inclut les éléments suivants, comme illustré dans l’ima
 6. Si vous affichez une carte adaptative à l’aide de la propriété de l’objet `card` [TaskInfo,](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) le remplissage est ajouté pour vous. Pour plus d’informations, voir le module de tâche [CSS pour les modules de tâche HTML ou JavaScript.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)
 7. Les boutons de carte adaptative s’affichent après la sélection **de l’inscription.** Lorsque vous utilisez votre propre page, créez vos propres boutons.
 
-## <a name="see-also"></a>Voir aussi
-
-[Cartes](~/task-modules-and-cards/what-are-cards.md)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Appeler et ignorer des modules de tâche](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Cartes](~/task-modules-and-cards/what-are-cards.md)

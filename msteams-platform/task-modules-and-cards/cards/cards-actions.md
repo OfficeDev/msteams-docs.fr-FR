@@ -4,12 +4,12 @@ description: Décrit les actions de carte dans Microsoft Teams et comment les ut
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: fb1ff1df6e91c17efd5a01123935fb03f0a0ed98
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155714"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889327"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -29,7 +29,7 @@ Les cartes utilisées par les bots et les extensions de messagerie Teams les typ
 > [!NOTE]
 >* Teams ne prend pas en charge `CardAction` les types non répertoriés dans le tableau précédent.
 >* Teams ne prend pas en charge la `potentialActions` propriété.
->* Les actions de carte sont différentes [des actions suggérées](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans Bot Framework ou Azure Bot Service. Les actions suggérées ne sont pas prises en charge dans Microsoft Teams. Si vous souhaitez que les boutons apparaissent dans un message Teams bot, utilisez une carte.
+>* Les actions de carte sont différentes [des actions suggérées](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) dans Bot Framework ou Azure Bot Service. Les actions suggérées ne sont pas prises en charge dans Microsoft Teams. Si vous souhaitez que les boutons apparaissent sur un message Teams bot, utilisez une carte.
 >* Si vous utilisez une action de carte dans le cadre d’une extension de messagerie, les actions ne fonctionnent pas tant que la carte n’est pas envoyée au canal. Les actions ne fonctionnent pas lorsque la carte se trouve dans la zone composer un message.
 
 ## <a name="action-type-openurl"></a>Type d’action openUrl
@@ -155,7 +155,7 @@ CardFactory.actions([
 
 `replyToId` contient l’ID du message d’où provenait l’action de carte. Utilisez-le si vous souhaitez mettre à jour le message.
 
-Le code suivant illustre un exemple de message entrant :
+Le code suivant montre un exemple de message entrant :
 
 ```json
 {
@@ -323,7 +323,7 @@ CardFactory.actions([
 
 La propriété de niveau `replyToId` supérieur contient l’ID du message d’où provenait l’action de carte. Utilisez-le si vous souhaitez mettre à jour le message.
 
-Le code suivant illustre un exemple de message d’appel entrant :
+Le code suivant montre un exemple de message d’appel entrant :
 
 ```json
 {
@@ -556,12 +556,14 @@ Le code suivant illustre un exemple de cartes adaptatives `invoke` avec une acti
   }
 }
 ```
-
-## <a name="see-also"></a>Voir aussi
-
-[Référence de cartes](./cards-reference.md)
-
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
 > [Actions universelles pour les cartes adaptatives](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Référence de cartes](./cards-reference.md)
+* [Utiliser des modules de tâches à partir de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Cartes adaptatives dans les bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Actions universelles pour les cartes adaptatives](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)

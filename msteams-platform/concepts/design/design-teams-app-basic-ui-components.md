@@ -1,20 +1,21 @@
 ---
 title: Concevoir votre application avec des composants Fluent’interface utilisateur de base
 author: heath-hamilton
-description: Découvrez les composants d’interface utilisateur primitifs couramment utilisés pour créer Microsoft Teams applications et obtenir Microsoft Teams kit d’interface utilisateur.
+description: Découvrez les composants d’interface utilisateur primitifs couramment utilisés pour créer Microsoft Teams applications et obtenir Microsoft Teams kit d’interface utilisateur. Découvrez les composants, tels que les repères de chemin d’accès, la carte, le carrousel, la dropdown, le filigrane, le s picker, le tableau croisé dynamique, le basculement, l’aide à la clé et bien plus encore.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Les composants de l’interface utilisateur fluent kit de la carte de bouton de la ligne de repère de la carte de bouton de la bascule carrousel de la sélection de signets de sélection pivot
+ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155833"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887496"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants Fluent’interface utilisateur de base
 
-Vous pouvez créer votre application Teams à partir de zéro à l’aide des composants Fluent’interface utilisateur de base suivants. Conçus aussi platement que possible, ces composants peuvent fonctionner dans différents cas d’utilisation, thèmes et tailles d’écran.
+Vous pouvez créer votre application Teams à partir de zéro à l’aide des composants de base Fluent’interface utilisateur suivants. Conçus aussi platement que possible, ces composants peuvent fonctionner dans différents cas d’utilisation, thèmes et tailles d’écran.
 
 Les illustrations de cette page montrent l’apparence des composants Teams thèmes par défaut (clair) et foncés.
 
@@ -27,7 +28,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 ## <a name="alert"></a>Alerte
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="L’exemple illustre un composant d’interface utilisateur d’alerte." border="false":::
+:::image type="content" source="../../assets/images/components/alert.png" alt-text="Exemple de composant d’interface utilisateur d’alerte." border="false":::
 
 ## <a name="button"></a>Bouton
 
@@ -63,7 +64,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 ## <a name="dropdown"></a>Liste déroulante
 
-:::image type="content" source="../../assets/images/components/dropdown.png" alt-text="Exemple de composant d’interface utilisateur de ladown." border="false":::
+:::image type="content" source="../../assets/images/components/dropdown.png" alt-text="L’exemple montre un composant d’interface utilisateur de ladown." border="false":::
 
 ## <a name="group-list"></a>Liste de groupes
 
@@ -87,7 +88,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 ## <a name="picker"></a>S picker
 
-:::image type="content" source="../../assets/images/components/picker.png" alt-text="L’exemple montre un composant d’interface utilisateur du suceur." border="false":::
+:::image type="content" source="../../assets/images/components/picker.png" alt-text="L’exemple montre un composant d’interface utilisateur du s’il s’agit." border="false":::
 
 ## <a name="pivot"></a>Pivot
 

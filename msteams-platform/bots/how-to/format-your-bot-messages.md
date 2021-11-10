@@ -1,16 +1,16 @@
 ---
 title: Formatez vos messages robots.
 author: surbhigupta
-description: Ajouter une mise en forme enrichie à vos messages de bot
+description: Ajoutez une mise en forme enrichie aux messages de votre bot, telle que les messages de type strikethrough, ordered and unordered list, hyperlink, image link, etc.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 3116b13f524279d4cca88fe649602d14d3542bbc
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566224"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887426"
 ---
 # <a name="format-your-bot-messages"></a>Formatez vos messages robots.
 
@@ -18,7 +18,7 @@ La mise en forme des messages vous permet de mettre en avant les meilleurs messa
 
 ## <a name="format-text-content"></a>Mise en forme du contenu de texte
 
-Pour mettre en forme vos messages de bot, vous pouvez définir la propriété facultative pour contrôler le rendu du contenu texte de votre [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) message bot.
+Pour mettre en forme vos messages de bot, vous pouvez définir la propriété facultative pour contrôler le rendu du contenu du texte de votre [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) bot.
 
 Microsoft Teams prend en charge les options de mise en forme suivantes :
 
@@ -66,7 +66,7 @@ La prise en charge de la mise en forme du texte varie selon le type de message e
 
 Le tableau suivant fournit une liste des styles pris en charge sur les ordinateurs de bureau, iOS et Android :
 
-| Style                     | Ordinateur de bureau | iOS | Android |
+| Style                     | Bureau | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | Gras                      | ✔ | ✔ | ✔ |
 | Italic                    | ✔ | ✔ | ✔ |

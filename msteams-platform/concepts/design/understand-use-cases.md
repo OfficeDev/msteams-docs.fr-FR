@@ -1,20 +1,20 @@
 ---
 title: Comprendre les cas d’utilisation de votre application
 author: heath-hamilton
-description: Lorsque vous planifiez votre Microsoft Teams, vous devez d’abord comprendre les problèmes que votre application tente de résoudre.
+description: Planifier votre application, comprendre votre utilisateur et ses besoins, comprendre les problèmes que votre application pourrait résoudre, planifier l’authentification des utilisateurs et leur expérience d’intégration
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720154"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888418"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
-La plateforme Microsoft Teams offre une grande variété de points d’entrée et d’éléments d’interface [utilisateur](../../concepts/extensibility-points.md) dont votre application peut tirer parti.
+La plateforme Microsoft Teams offre une grande variété de points d’entrée et d’éléments [d’interface utilisateur](../../concepts/extensibility-points.md) dont votre application peut tirer parti.
 > [!NOTE]
 > Avant de commencer à créer vos cas d’utilisation, vous devez bien comprendre les fonctionnalités de Teams et ce qui est possible sur la plateforme Teams les utiliser.
 
@@ -26,7 +26,7 @@ Chaque application a un problème principal ou doit être résolu. Avant de comm
 
 * Quels sont les avantages et les inconvénients du système d’état actuel utilisé par vos utilisateurs ?
 * Quels sont les problèmes rencontrés par vos utilisateurs que vous voulez résoudre ?
-* Quelles fonctionnalités ou fonctionnalités vos utilisateurs aiment et aiment dans leur façon actuelle de faire le processus ?
+* Quelles fonctionnalités vos utilisateurs aiment et aiment-ils dans leur façon actuelle de faire le processus ?
 
 ## <a name="understand-your-user"></a>Comprendre votre utilisateur
 
@@ -60,7 +60,7 @@ Vous devez déterminer dès le début si vous devez protéger les services que v
 
 ## <a name="decide-what-goes-in-teams"></a>Décider de ce qui se passe Teams
 
-Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l’ensemble de l’application sera à l’intérieur du client Teams client. Vérifiez s’il est logique de n’apporter qu’une partie de l’expérience. Avec une combinaison d’onglets, d’extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
+Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l’ensemble de l’application va se trouver à l’intérieur du client Teams client. Vérifiez s’il est logique de n’apporter qu’une partie de l’expérience. Avec une combinaison d’onglets, d’extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
 N’oubliez pas qui sont vos utilisateurs et le problème que vous essayez de résoudre. Ont-ils déjà un système pour résoudre la plupart du problème ou vous devez simplement étendre un sous-ensemble de fonctionnalités dans Teams ? En règle générale, si vous comptez apporter une partie de votre solution, vous devez vous concentrer sur le partage, la collaboration, l’initiative et la surveillance des flux de travail.
 
 ## <a name="plan-the-onboarding-experience"></a>Planifier l’expérience d’intégration
@@ -81,3 +81,7 @@ Identifiez les nouvelles fonctionnalités que l’utilisateur préférera dans l
 
 > [!div class="nextstepaction"]
 > [Ma cartographier vos cas d’utilisation](../../concepts/design/map-use-cases.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Fonctionnalités de l’appareil](~/concepts/device-capabilities/device-capabilities-overview.md)

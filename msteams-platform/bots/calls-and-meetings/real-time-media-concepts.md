@@ -1,23 +1,23 @@
 ---
 title: Appels multimédias en temps réel et réunions en ligne avec Microsoft Teams
-description: Comprendre les concepts clés dans la création d’un bot qui peut mener des appels audio et vidéo en temps réel et des réunions en ligne.
+description: Comprendre les concepts clés dans la création d’un bot qui peut mener des appels audio et vidéo en temps réel et des réunions en ligne. En savoir plus sur les sessions multimédias, la fréquence d’images, le format audio/vidéo et la référence aux ressources des développeurs
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media-hosted media
-ms.openlocfilehash: 5c7fce3e8d584781037b5d1169706c9f197e3a96
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media
+ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156868"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889061"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Appels et réunions multimédias en temps réel avec Microsoft Teams
 
 La plateforme Real-time Media permet aux bots d’interagir avec Microsoft Teams appels et réunions à l’aide de la voix en temps réel, de la vidéo et du partage d’écran. La plateforme Real-time Media est une fonctionnalité avancée qui permet au bot d’envoyer et de recevoir du contenu vocal et vidéo image par image. Le bot dispose d’un accès brut aux flux multimédias vocaux, vidéo et de partage d’écran. Il existe des robots multimédias hébergés par un service plus simples qui s’appuient sur la plateforme multimédia en temps réel pour tout le traitement multimédia. Les bots qui traitéent les médias eux-mêmes sont appelés bots multimédias hébergés par l’application.
 
-Par exemple, dans un appel 1:1 avec un bot, lorsque l’utilisateur parle, le bot reçoit 50 images audio par seconde. Le bot reçoit des trames audio avec chaque image de 20 millisecondes (ms) d’audio. Un bot multimédia hébergé par l’application peut faire la reconnaissance vocale en temps réel à mesure que les trames audio sont reçues. Il n’est pas nécessaire d’attendre un enregistrement une fois que l’utilisateur a cessé de parler. Le bot peut également envoyer et recevoir des vidéos haute résolution, y compris du contenu de partage d’écran vidéo.
+Par exemple, dans un appel 1:1 avec un bot, lorsque l’utilisateur parle, le bot reçoit 50 images audio par seconde. Le bot reçoit des trames audio avec chaque image de 20 millisecondes (ms) d’audio. Un bot multimédia hébergé par l’application peut faire la reconnaissance vocale en temps réel à mesure que les trames audio sont reçues. Il n’est pas nécessaire d’attendre un enregistrement une fois que l’utilisateur a cessé de parler. Le bot peut également envoyer et recevoir des vidéos haute définition, y compris du contenu de partage d’écran vidéo.
 
-La plateforme fournit une API simple de socket permettant au bot d’envoyer et de recevoir des médias. Il gère le codage et le décodage en temps réel des paquets audio ou vidéo. Il utilise des codecs tels que LARE ET G.722 pour l’audio et H.264 pour la vidéo. La plateforme gère également le chiffrement ou le déchiffrement de tous les paquets multimédias et la transmission réseau de paquets. Le bot n’est concerné que par le contenu audio ou vidéo réel. Un bot multimédia en temps réel participe à des appels et des réunions en temps réel avec plusieurs participants.
+La plateforme fournit une API simple de socket permettant au bot d’envoyer et de recevoir du média. Il gère le codage et le décodage en temps réel des paquets audio ou vidéo. Il utilise des codecs tels que LARE ET G.722 pour l’audio et H.264 pour la vidéo. La plateforme gère également le chiffrement ou le déchiffrement de tous les paquets multimédias et la transmission du réseau de paquets. Le bot n’est concerné que par le contenu audio ou vidéo réel. Un bot multimédia en temps réel participe à des appels et des réunions en temps réel avec plusieurs participants.
 
 ## <a name="media-session"></a>Session multimédia
 
@@ -31,19 +31,19 @@ La section suivante fournit des détails sur l’envoi et la réception de médi
 
 ## <a name="frames-and-frame-rate"></a>Trames et fréquence d’images
 
-Un bot multimédia en temps réel interagit directement avec les modalités audio et vidéo d’une session multimédia. Le bot envoie et reçoit du contenu multimédia sous la mesure d’une séquence d’images et chaque image est une unité de contenu. Une seconde de l’audio est transmise sous la mesure d’une séquence de 50 images. Chaque image contient 20 ms qui est 1/50e de seconde de contenu de reconnaissance vocale. Une seconde de vidéo est transmise en tant que séquence de 30 images fixes. Chaque image est conçue pour être vue pendant seulement 33,3 ms, soit 1/30e de seconde avant la trame vidéo suivante. Le nombre d’images transmises ou rendues par seconde est appelé fréquence d’images.
+Un bot multimédia en temps réel interagit directement avec les modalités audio et vidéo d’une session multimédia. Le bot envoie et reçoit du contenu multimédia sous la mesure d’une séquence d’images et chaque image est une unité de contenu. Une seconde de l’audio est transmise sous la mesure d’une séquence de 50 images. Chaque image contient 20 ms qui est 1/50e de seconde de contenu de reconnaissance vocale. Une seconde de vidéo est transmise en tant que séquence de 30 images fixes. Chaque image est destinée à être vue pendant 33,3 ms, soit 1/30e de seconde avant la trame vidéo suivante. Le nombre d’images transmises ou rendues par seconde est appelé fréquence d’images.
 
 La section suivante fournit des détails sur le format audio et vidéo utilisé dans les appels et réunions multimédias en temps réel.
 
 ## <a name="audio-and-video-format"></a>Format audio et vidéo
 
-Au format audio, chaque seconde de l’audio est représentée sous forme de 16 000 échantillons, chaque échantillon contenant 16 bits de données. Un cadre audio de 20 ms contient 320 échantillons de 640 octets de données.
+Au format audio, chaque seconde de l’audio est représentée sous forme de 16 000 échantillons, chaque échantillon contenant 16 bits de données. Un cadre audio de 20 ms contient 320 échantillons de données de 640 octets.
 
 Dans le format vidéo, plusieurs formats sont pris en charge. Deux propriétés clés d’un format vidéo sont sa taille d’image et son format de couleur. Les tailles d’images pris en charge incluent 640 x 360 pixels, 1280 x 720 pixels et 1920 x 1080 pixels. Les formats de couleur pris en charge incluent NV12 qui est de 12 bits par pixel et RVB24 qui est de 24 bits par pixel.
 
-Une image vidéo de 720 p contient 921 600 pixels, soit 1 280 fois 720. Au format de couleur RVB24, chaque pixel est représenté sous la forme de 3 octets de 24 bits, dont 1 octet chacun des composants de couleur rouge, vert et bleu. Une seule image vidéo RVB24 de 720 p nécessite 2 764 800 octets de données, soit 921 600 pixels et 3 octets par pixel. À une fréquence d’images variable, l’envoi de trames vidéo RVB24 de 720 p implique le traitement d’environ 80 mégaoctets par seconde de contenu. 80 mégaoctets sont considérablement compressés par le codec vidéo H.264 avant la transmission réseau.
+Une image vidéo de 720 p contient 921 600 pixels, soit 1 280 fois 720. Dans le format de couleur RVB24, chaque pixel est représenté sous la forme de 3 octets de 24 bits, dont 1 octet chacun des composants de couleur rouge, vert et bleu. Une seule image vidéo RVB24 de 720 p nécessite 2 764 800 octets de données, soit 921 600 pixels et 3 octets par pixel. À une fréquence d’images variable, l’envoi de trames vidéo RVB24 de 720 p implique le traitement d’environ 80 mégaoctets par seconde de contenu. 80 mégaoctets sont considérablement compressés par le codec vidéo H.264 avant la transmission réseau.
 
-Une fonctionnalité avancée de la plateforme permet à un bot d’envoyer ou de recevoir des vidéos sous forme d’images H.264 codées. Les bots qui fournissent leur propre encodeur ou décodeur H.264 sont pris en charge, ou le flux vidéo décodé en bitmaps RGB24 ou NV12 brutes n’est pas requis.
+Une fonctionnalité avancée de la plateforme permet à un bot d’envoyer ou de recevoir des vidéos sous forme d’images H.264 codées. Les bots qui fournissent leur propre encodeur ou décodeur H.264 sont pris en charge, ou le flux vidéo décodé en bitmaps RVB24 ou NV12 brutes n’est pas requis.
 
 La section suivante fournit des détails sur les participants à la réunion qui sont des haut-parleurs actifs et dominants.
 
@@ -69,3 +69,7 @@ Les bots multimédias hébergés par l’application nécessitent .NET ou C# et 
 
 > [!div class="nextstepaction"]
 > [Enregistrer un bot appelant](~/bots/calls-and-meetings/registering-calling-bot.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Formats multimédias pris en charge pour les bots](~/resources/media-formats.md)

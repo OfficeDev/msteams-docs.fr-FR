@@ -3,12 +3,12 @@ title: Package de votre application
 description: Découvrez comment mettre en package votre application Microsoft Teams pour le test, le téléchargement et la publication dans le Store.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 44b8f21361c39bd723ff375b385569125b65ea27
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260672"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889306"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Créer un package Microsoft Teams’application
 
@@ -76,7 +76,7 @@ L’icône de couleur envoyée dans votre package d’application doit être car
 
 Vos icônes ne doivent pas imiter les produits protégés par des droits d’auteur que vous ne possédez pas. Par exemple, une conception similaire à un produit ou une marque Microsoft.
 
-### <a name="examples"></a>範例
+### <a name="examples"></a>Exemples
 
 Voici comment les icônes d’application s’affichent dans Teams fonctionnalités et contextes différents.
 
@@ -102,3 +102,7 @@ Choisissez la façon dont vous prévoyez de distribuer votre application :
 > [Publier votre application dans votre organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
 > [Publier votre application dans le Store](~/concepts/deploy-and-publish/appsource/publish.md)
+
+## <a name="see-also"></a>Voir aussi
+
+[Gérer vos applications avec le Portail des développeurs pour Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

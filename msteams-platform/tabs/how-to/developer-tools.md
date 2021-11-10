@@ -1,22 +1,22 @@
 ---
 title: DevTools pour les onglets Microsoft Teams
-description: Décrit comment se rendre à DevTools lors de l’utilisation du Microsoft Teams DevTools
+description: Décrit comment se rendre à DevTools lors de l’utilisation du client de bureau Microsoft Teams et du débogage
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools debug mobile chrome desktop client developer tools
-ms.openlocfilehash: 9aee38c6b063e54c876d11bfc498a9fcce9fbcf1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: Devtools debug mobile chrome desktop client developer tools tab
+ms.openlocfilehash: 6844648df311bd9ae326e74919cc64e871e54b05
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155670"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887419"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools pour les onglets Microsoft Teams
 
 Lorsque Teams est en cours d’exécution dans un navigateur, il est facile d’accéder à DevTools : F12 sur Windows ou Command-Option-I sur MacOS. DevTools vous donne accès à :
 
 1. Afficher les journaux de la console.
-1. Afficher ou modifier les requêtes HTML, CSS et réseau pendant l’utilisation.
+1. Afficher ou modifier les demandes HTML, CSS et réseau pendant l’utilisation.
 1. Ajoutez des points d’arrêt à votre code JavaScript et effectuez un débogage interactif.
 
 > [!NOTE]
@@ -24,7 +24,7 @@ Lorsque Teams est en cours d’exécution dans un navigateur, il est facile d’
 
 ## <a name="access-devtools-on-the-desktop"></a>Accéder à DevTools sur le bureau
 
-Bien que la version web et la version de bureau de Teams soient presque identiques, il existe certaines différences en ce qui concerne l’authentification. Parfois, la seule façon de déterminer ce qui se passe est d’utiliser DevTools. Pour utiliser DevTools dans le client de bureau, vous devez :
+Bien que la version web et la version de bureau de Teams soient presque identiques, il existe certaines différences en ce qui concerne l’authentification. Parfois, le seul moyen de déterminer ce qui se passe est d’utiliser les DevTools. Pour utiliser DevTools dans le client de bureau, vous devez :
 
 1. Assurez-vous que vous avez activé la [prévisualisation pour les développeurs.](~/resources/dev-preview/developer-preview-intro.md)
 1. Ouvrez un onglet pour avoir quelque chose à inspecter avec DevTools.
@@ -39,7 +39,7 @@ L’exemple suivant montre que DevTools ouvre et inspecte une boîte de dialogue
 
 ## <a name="access-devtools-from-an-android-device"></a>Accéder à DevTools à partir d’un appareil Android
 
-Vous pouvez également activer devTools à partir du client Teams Android. Pour activer DevTools, vous devez :
+Vous pouvez également activer DevTools à partir du client Teams Android. Pour activer DevTools, vous devez :
 
 1. Activez la [prévisualisation pour les développeurs.](~/resources/dev-preview/developer-preview-intro.md)
 1. Connecter votre appareil sur votre ordinateur de bureau et configurer votre appareil Android pour [le débogage à distance.](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)

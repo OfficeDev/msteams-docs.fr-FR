@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439696"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887538"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -24,10 +24,10 @@ Votre onglet nécessite des informations contextuelles pour afficher le contenu 
 Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être particulièrement utile lorsque :
 
 * Vous créez ou associez des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
-* Vous lancez un flux d’authentification à partir de Azure Active Directory (AAD) ou d’un autre fournisseur d’identité, et vous n’avez pas besoin que l’utilisateur entre à nouveau son nom d’utilisateur. Pour plus d’informations, [voir authentifier un utilisateur dans Microsoft Teams onglet .](~/concepts/authentication/authentication.md)
+* Vous lancez un flux d’authentification à partir de Azure Active Directory (AAD) ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur. Pour plus d’informations, [voir authentifier un utilisateur dans Microsoft Teams onglet .](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
-> Bien que ces informations utilisateur contribuent à une expérience utilisateur fluide, vous ne devez pas les utiliser comme preuve d’identité. Par exemple, un attaquant peut charger votre page dans un navigateur et restituer des informations ou des demandes dangereuses.
+> Bien que ces informations utilisateur contribuent à une expérience utilisateur fluide, vous ne devez pas les utiliser comme preuve d’identité.  Par exemple, un attaquant peut charger votre page dans un navigateur et restituer des informations ou des demandes dangereuses.
 
 ## <a name="access-context-information"></a>Accéder aux informations de contexte
 
@@ -38,22 +38,22 @@ Vous pouvez accéder aux informations de contexte de deux façons :
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>Obtenir le contexte en insérant des valeurs d’espace réservé d’URL
 
-Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft Teams remplace les espaces réservés par les valeurs appropriées lorsqu’il détermine l’URL de configuration ou de contenu. Les espaces réservé disponibles incluent tous les champs de [l’objet](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) de contexte. Voici les scénarios les plus courants :
+Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft Teams remplace les espaces réservés par les valeurs appropriées lorsqu’il détermine l’URL de configuration ou de contenu. Les espaces disponibles incluent tous les champs de [l’objet de](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) contexte. Voici les scénarios les plus courants :
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: ID que vous [avez](~/concepts/build-and-test/deep-links.md) fourni lors de la génération d’un lien profond pour un élément spécifique dans cet onglet. Cela doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, le défilement vers ou l’activation d’un élément de contenu spécifique.
 * {loginHint}: valeur appropriée comme conseil de connexion pour AAD. Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel dans le client actuel.
-* {userObjectId}: ID d’objet AAD de l’utilisateur actuel dans le client actuel.
+* {userObjectId}: ID AAD’objet de l’utilisateur actuel dans le client actuel.
 * {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default` que , `dark` ou `contrast` .
 * {groupId}: ID du groupe Office 365 dans lequel réside l’onglet.
-* {tid}: ID de client AAD de l’utilisateur actuel.
+* {tid}: ID AAD client de l’utilisateur actuel.
 * {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId. Par exemple, en-us.
 
 > [!NOTE]
 > L’espace réservé `{upn}`précédent est désormais supprimé. Pour des raisons de compatibilité ascendante, il s'agit actuellement d'un synonyme de `{loginHint}`.
 
-Par exemple, dans votre manifeste d’onglet, vous définissez l’attribut sur , l’utilisateur qui est inscrit `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` possède les attributs suivants :
+Par exemple, dans le manifeste de votre onglet, vous définissez l’attribut sur , l’utilisateur qui est inscrit `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` possède les attributs suivants :
 
 * Leur nom d’utilisateur **est user@example.com**.
 * Leur ID de locataire d’entreprise **est e2653c-etc.**
@@ -135,14 +135,15 @@ Vous pouvez inscrire votre application pour être informée si le thème change 
 
 `theme`L’argument dans la fonction est une chaîne avec une valeur de , ou `default` `dark` `contrast` .
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Recommandations en matière de conception d’onglets](../../tabs/design/tabs.md)
 * [Teams onglets](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Utiliser des modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

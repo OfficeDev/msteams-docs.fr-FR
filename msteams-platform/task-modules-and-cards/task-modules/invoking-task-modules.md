@@ -1,15 +1,15 @@
 ---
 title: Appeler et ignorer des modules de tâche
-description: Appeler et ignorer les modules de tâche.
+description: En savoir plus sur l’appel et le masage des modules de tâche, l’objet d’informations de tâche, le resserrage du module de tâche, la syntaxe de lien profond du module de tâche à l’aide d’exemples de code
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ab6425ae90c04e142e5d69f4a41ff49358731a23
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 226548dca8001fecce4cd784a7411d4ca5841e5e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155710"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887531"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Appeler et ignorer des modules de tâche
 
@@ -17,9 +17,9 @@ Les modules de tâche peuvent être appelés à partir d’onglets, de bots ou d
 
 | Appel à l’aide | Module de tâche avec HTML ou JavaScript | Module de tâche avec carte adaptative |
 | --- | --- | --- |
-| JavaScript dans un onglet | 1. Utilisez la fonction Teams SDK client `tasks.startTask()` avec une fonction de rappel `submitHandler(err, result)` facultative. <br/><br/> 2. Dans le code du module de tâche, lorsque l’utilisateur a effectué les actions, appelez la fonction Teams SDK avec un objet `tasks.submitTask()` `result` en tant que paramètre. Si un `submitHandler` rappel a été spécifié dans , Teams `tasks.startTask()` l’appelle avec `result` comme paramètre. Si une erreur s’est produite lors de l’appel, la fonction est `tasks.startTask()` appelée avec une chaîne à la `submitHandler` `err` place. <br/><br/> 3. Vous pouvez également spécifier un lorsque `completionBotId` vous appelez `teams.startTask()` . Ensuite, `result` il est envoyé au bot à la place. | 1. Appelez la fonction Teams client SDK avec un objet TaskInfo et contenant le JSON de la carte adaptative à afficher dans la fenêtre pop-up du module de `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` tâche. <br/><br/> 2. Si un rappel a été spécifié dans , Teams l’appelle avec une chaîne, s’il y a eu une erreur lors de l’appel ou si l’utilisateur ferme la fenêtre `submitHandler` pop-up du module de tâche à l’aide du X en haut à `tasks.startTask()` `err` `tasks.startTask()` droite. <br/><br/> 3. Si l’utilisateur appuie sur un `Action.Submit` bouton, son `data` objet est renvoyé en tant que valeur de `result` . |
-| Bouton de carte bot | 1. Les boutons de carte bot, en fonction du type de bouton, peuvent appeler des modules de tâche de deux manières : une URL de lien profond ou en envoyant un `task/fetch` message. <br/><br/> 2. Si l’action du bouton est le type de bouton pour les cartes adaptatives, un événement qui est une demande HTTP POST est envoyé `type` `task/fetch` au `Action.Submit` `task/fetch invoke` bot. Le bot répond au POST avec HTTP 200 et le corps de la réponse contenant un wrapper autour de [l’objet TaskInfo](#the-taskinfo-object). Pour plus d’informations, [voir l’appel `task/fetch` d’un module de tâche à l’aide de ](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch). Teams affiche le module de tâche. <br/><br/> 3. Une fois que l’utilisateur a effectué les actions, appelez la fonction Teams SDK avec un `tasks.submitTask()` objet en tant que `result` paramètre. Le bot reçoit un `task/submit invoke` message contenant `result` l’objet. <br/><br/> 4. Vous pouvez répondre au message de trois manières différentes, en ne faisant rien qui soit correctement effectué par la tâche, en affichant un message à l’utilisateur dans une fenêtre ou en invoquant une autre fenêtre de module de `task/submit` tâche. Pour plus d’informations, [voir la discussion détaillée sur `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). | <ul><li> Comme les boutons sur les cartes Bot Framework, les boutons des cartes adaptatives offrent deux moyens d’appel des modules de tâche, d’URL de liens profonds avec des boutons et d’utilisation `Action.openUrl` `task/fetch` de `Action.Submit` boutons. </li></ul> <br/><br/> <ul><li> Les modules de tâche avec cartes adaptatives fonctionnent de manière très similaire au cas HTML ou JavaScript. La principale différence est que, étant donné qu’il n’existe pas de JavaScript lorsque vous utilisez des cartes adaptatives, il n’existe aucun moyen d’appeler `tasks.submitTask()` . Au lieu de cela, Teams l’objet et le renvoie en tant que `data` `Action.Submit` charge utile de `task/submit` l’événement. Pour plus d’informations, voir [flexibilité de `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). </li></ul> |
-| URL du lien profond <br/>[Syntaxe d'URL](#task-module-deep-link-syntax) | 1. Teams le module de tâche qui est l’URL qui apparaît à l’intérieur du paramètre spécifié dans le `<iframe>` `url` paramètre du lien profond. Il n’y `submitHandler` a pas de rappel. <br/><br/> 2. Dans le JavaScript de la page dans le module de tâche, appelez pour le fermer avec un objet en tant que paramètre, comme lors de l’appel à partir d’un onglet ou d’un bouton de carte `tasks.submitTask()` `result` bot. Toutefois, la logique d’achèvement est légèrement différente. Si votre logique d’achèvement réside sur le client, c’est-à-dire s’il n’y a pas de bot, il n’y a pas de rappel, de sorte que toute logique d’achèvement doit se trouver dans le code précédant `submitHandler` l’appel vers `tasks.submitTask()` . Les erreurs d’appel sont uniquement signalées via la console. Si vous avez un bot, vous pouvez spécifier un paramètre dans le lien profond pour envoyer l’objet `completionBotId` `result` via un `task/submit` événement. | 1. Teams appelle le module de tâche qui est le corps de la carte JSON de la carte adaptative spécifiée en tant que valeur codée URL du paramètre du lien `card` profond. <br/><br/> 2. L’utilisateur ferme le module de tâche en sélectionnant le X en haut à droite du module de tâche ou en appuyant sur un bouton `Action.Submit` de la carte. Étant donné qu’il n’y a pas d’appel, l’utilisateur doit avoir un bot pour envoyer la valeur des champs de `submitHandler` carte adaptative. L’utilisateur doit utiliser le paramètre dans le lien profond pour spécifier le bot pour envoyer les données à l’aide `completionBotId` d’un `task/submit invoke` événement. |
+| JavaScript dans un onglet | 1. Utilisez la fonction Teams SDK client `tasks.startTask()` avec une fonction de rappel `submitHandler(err, result)` facultative. <br/><br/> 2. Dans le code du module de tâche, lorsque l’utilisateur a effectué les actions, appelez la fonction Teams SDK avec un objet `tasks.submitTask()` `result` comme paramètre. Si un `submitHandler` rappel a été spécifié dans , Teams `tasks.startTask()` l’appelle avec `result` comme paramètre. Si une erreur s’est produite lors de l’appel, la fonction est `tasks.startTask()` appelée avec une chaîne à la `submitHandler` `err` place. <br/><br/> 3. Vous pouvez également spécifier un lorsque `completionBotId` vous appelez `teams.startTask()` . Ensuite, `result` il est envoyé au bot à la place. | 1. Appelez la fonction Teams client SDK avec un objet TaskInfo et contenant le JSON de la carte adaptative à afficher dans la fenêtre `tasks.startTask()` pop-up du module de [](#the-taskinfo-object) `TaskInfo.card` tâche. <br/><br/> 2. Si un rappel a été spécifié dans , Teams l’appelle avec une chaîne, s’il y a eu une erreur lors de l’appel ou si l’utilisateur ferme le module de tâche à l’aide du X dans le coin supérieur `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` droit. <br/><br/> 3. Si l’utilisateur appuie sur un `Action.Submit` bouton, son `data` objet est renvoyé en tant que valeur de `result` . |
+| Bouton de carte bot | 1. Les boutons de carte de bot, en fonction du type de bouton, peuvent appeler des modules de tâche de deux manières : une URL de lien profond ou l’envoi `task/fetch` d’un message. <br/><br/> 2. Si l’action du bouton est le type de bouton pour les cartes adaptatives, un événement qui est une demande HTTP POST est envoyé `type` `task/fetch` au `Action.Submit` `task/fetch invoke` bot. Le bot répond au POST avec HTTP 200 et le corps de la réponse contenant un wrapper autour de [l’objet TaskInfo](#the-taskinfo-object). Pour plus d’informations, [voir l’appel `task/fetch` d’un module de tâche à l’aide de ](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch). Teams affiche le module de tâche. <br/><br/> 3. Une fois que l’utilisateur a effectué les actions, appelez la fonction Teams SDK avec un `tasks.submitTask()` objet en tant que `result` paramètre. Le bot reçoit un `task/submit invoke` message contenant `result` l’objet. <br/><br/> 4. Vous pouvez répondre au message de trois manières différentes, en ne faisant rien qui soit correctement effectué par la tâche, en affichant un message à l’utilisateur dans une fenêtre pop-up ou en invoquant une autre fenêtre de module de `task/submit` tâche. Pour plus d’informations, [voir la discussion détaillée sur `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). | <ul><li> Comme les boutons sur les cartes Bot Framework, les boutons des cartes adaptatives offrent deux moyens d’appel de modules de tâche, d’URL de liens profonds avec des boutons et d’utilisation de `Action.openUrl` `task/fetch` `Action.Submit` boutons. </li></ul> <br/><br/> <ul><li> Les modules de tâche avec cartes adaptatives fonctionnent de manière très similaire au cas HTML ou JavaScript. La principale différence est qu’il n’existe pas de JavaScript lorsque vous utilisez des cartes adaptatives, il n’existe aucun moyen d’appeler `tasks.submitTask()` . Au lieu de cela, Teams l’objet et le renvoie en tant `data` que charge utile de `Action.Submit` `task/submit` l’événement. Pour plus d’informations, voir [flexibilité de `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit). </li></ul> |
+| URL du lien profond <br/>[Syntaxe d'URL](#task-module-deep-link-syntax) | 1. Teams le module de tâche qui est l’URL qui apparaît à l’intérieur du paramètre spécifié dans le `<iframe>` `url` paramètre du lien profond. Il n’y `submitHandler` a pas de rappel. <br/><br/> 2. Dans le JavaScript de la page dans le module de tâche, appelez pour le fermer avec un objet en tant que paramètre, comme lors de l’appel à partir d’un onglet ou d’un bouton de carte `tasks.submitTask()` `result` bot. Toutefois, la logique d’achèvement est légèrement différente. Si votre logique d’achèvement réside sur le client, c’est-à-dire s’il n’y a pas de bot, il n’y a pas de rappel, de sorte que toute logique d’achèvement doit se trouver dans le code précédant `submitHandler` l’appel vers `tasks.submitTask()` . Les erreurs d’appel sont uniquement signalées via la console. Si vous avez un bot, vous pouvez spécifier un paramètre dans le lien profond pour envoyer l’objet `completionBotId` `result` via un `task/submit` événement. | 1. Teams appelle le module de tâche qui est le corps de la carte JSON de la carte adaptative spécifiée en tant que valeur codée URL du paramètre du lien `card` profond. <br/><br/> 2. L’utilisateur ferme le module de tâche en sélectionnant le X dans le coin supérieur droit du module de tâche ou en appuyant sur un bouton `Action.Submit` de la carte. Étant donné qu’il n’y a pas d’appel, l’utilisateur doit avoir un bot pour envoyer la valeur des champs de `submitHandler` carte adaptative. L’utilisateur doit utiliser le paramètre dans le lien profond pour spécifier le bot pour envoyer les données à l’aide `completionBotId` d’un `task/submit invoke` événement. |
 
 La section suivante spécifie `TaskInfo` l’objet qui définit certains attributs pour un module de tâche.
 
@@ -50,7 +50,7 @@ Si et sont , ou , la taille du rectangle rouge dans l’image suivante est une p
 
 ![Exemple de module de tâche](~/assets/images/task-module/task-module-example.png)
 
-Les modules de tâche appelés à partir d’un onglet peuvent être resserrisés dynamiquement. Après l’appel, vous pouvez appeler l’endroit où les propriétés de hauteur et de largeur de l’objet newSize sont conformes à la spécification `tasks.startTask()` `tasks.updateTask(newSize)` TaskInfo, par `{ height: 'medium', width: 'medium' }` exemple.
+Les modules de tâche appelés à partir d’un onglet peuvent être resserrisés dynamiquement. Après l’appel, vous pouvez appeler l’endroit où les propriétés de hauteur et de largeur sur l’objet newSize sont conformes à la spécification `tasks.startTask()` `tasks.updateTask(newSize)` TaskInfo, par `{ height: 'medium', width: 'medium' }` exemple.
 
 La section suivante fournit des exemples d’incorporation de modules de tâche dans une vidéo YouTube et une application PowerApp.
 
@@ -154,7 +154,7 @@ Le code suivant fournit un exemple de carte adaptative :
 }
 ```
 
-Le code suivant fournit un exemple de pièce jointe d’une carte de bot de carte adaptative lorsque vous voquer à partir d’un bot :
+Le code suivant fournit un exemple de pièce jointe de carte bot carte adaptative lorsque vous voquer à partir d’un bot :
 
 ```json
 {
@@ -190,7 +190,7 @@ Un lien profond de module de tâche est une sérialisation de l’objet TaskInfo
 Pour les types de données et les valeurs permises pour `<TaskInfo.url>` , , et , voir `<TaskInfo.card>` `<TaskInfo.height>` `<TaskInfo.width>` `<TaskInfo.title>` [l’objet TaskInfo](#the-taskinfo-object).
 
 > [!TIP]
-> URL encoder le lien profond lors de `card` l’utilisation [ `encodeURI()` ](https://www.w3schools.com/jsref/jsref_encodeURI.asp)du paramètre, par exemple, la fonction JavaScript .
+> URL encoder le lien profond lors de `card` l’utilisation du paramètre, par [ `encodeURI()` ](https://www.w3schools.com/jsref/jsref_encodeURI.asp)exemple, la fonction JavaScript .
 
 Le tableau suivant fournit des informations sur `APP_ID` et `BOT_APP_ID` :
 
@@ -208,7 +208,7 @@ La section suivante fournit des détails sur l’utilisation d’un clavier avec
 
 Avec les modules de tâche HTML ou JavaScript, vous devez vous assurer que le module de tâche de votre application peut être utilisé avec un clavier. Les programmes de lecteur d’écran dépendent également de la possibilité de naviguer à l’aide du clavier. Cela inclut les deux éléments suivants :
 
-* Utilisation de [l’attribut tabindex dans](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) vos balises HTML pour contrôler les éléments qui peuvent être concentrés. En outre, utilisez l’attribut tabindex pour identifier l’endroit où il participe à la navigation séquentielle au clavier généralement avec les touches <kbd>Tab</kbd> et <kbd>Shift-Tab.</kbd>
+* Utilisation de [l’attribut tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) dans vos balises HTML pour contrôler les éléments qui peuvent être concentrés. En outre, utilisez l’attribut tabindex pour identifier l’endroit où il participe à la navigation séquentielle au clavier généralement avec les touches <kbd>Tab</kbd> et <kbd>Shift-Tab.</kbd>
 * Gestion de la <kbd>touche Échap</kbd> dans javaScript pour votre module de tâche. Le code suivant fournit un exemple de la façon de gérer la touche <kbd>Échap</kbd> :
 
     ```javascript
@@ -220,7 +220,7 @@ Avec les modules de tâche HTML ou JavaScript, vous devez vous assurer que le mo
     }
     ```
 
-Microsoft Teams s’assure que la navigation au clavier fonctionne correctement à partir de l’en-tête du module de tâche dans votre code HTML et inversement.
+Microsoft Teams garantit que la navigation au clavier fonctionne correctement à partir de l’en-tête du module de tâche dans votre code HTML et inversement.
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -229,14 +229,14 @@ Microsoft Teams s’assure que la navigation au clavier fonctionne correctement 
 |Exemples de module de tâche bots-V4 | Exemples de création de modules de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 |Exemples d’onglets de module de tâche et bots-V3 | Exemples de création de modules de tâche. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Utiliser des modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Demande des autorisations d’appareil](~/concepts/device-capabilities/native-device-permissions.md)
 * [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Intégrer des fonctionnalités d’emplacement dans Teams](~/concepts/device-capabilities/location-capability.md)
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Utiliser des modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
