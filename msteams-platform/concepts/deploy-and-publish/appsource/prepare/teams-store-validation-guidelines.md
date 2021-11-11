@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 5b485e08029ba6a1028ffa19482cd767007b2444
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720224"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888509"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -466,3 +466,10 @@ Les applications ne doivent pas afficher de publicités, y compris les publicit�
 
 > [!div class="nextstepaction"]
 > [Créer un compte d’Espace partenaires](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+
+## <a name="see-also"></a>Voir aussi
+
+* [Distribuer votre application.](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [Préparer l'envoi de votre magasin](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Tester et déboguer votre application](~/concepts/build-and-test/debug.md)
+* [Créer un compte de développeur de l’Espace partenaires](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
