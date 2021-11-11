@@ -1,16 +1,17 @@
 ---
 title: Onglets de conception pour ordinateur de bureau, web et mobile
-description: Découvrez comment concevoir un onglet Teams pour ordinateur de bureau, web et mobile, et obtenir le kit d’interface utilisateur de Microsoft Teams.
+description: Découvrez comment concevoir un onglet Teams pour ordinateur de bureau, web et mobile, et obtenir le kit d’interface utilisateur de Microsoft Teams. Découvrez la fonctionnalité et l’apparence de l’onglet, la création de l’authentification utilisateur, les notifications de tabulation et la liaison approfondie dans les onglets.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 99588b35e5de0a4d6c06e5d1353af312429081cc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: Discussion sur le thread de la vue basée sur le rôle de liaison approfondie de l’AUTHENTIFICATION unique de la configuration de l’onglet
+ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475628"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887921"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevoir votre onglet pour Microsoft Teams
 
@@ -62,9 +63,9 @@ Il existe un bref processus de configuration pour ajouter une application en tan
 |3|**IFrame** : espace réactif pour le contenu de votre application (par exemple, authentification ou paramètres d’onglet).|
 |4|**À propos du lien** : ouvre une boîte de dialogue affichant plus d’informations sur l’application, telles qu’une description complète, les autorisations requises par l’application et les liens vers votre politique de confidentialité et les conditions d’utilisation.|
 |5|**Bouton Fermer** : ferme la boîte de dialogue.|
-|6|**Option Avertir les membres de l’équipe** : la boîte de dialogue demande aux utilisateurs s’ils souhaitent créer un billet pour informer d’autres utilisateurs qu’ils ont ajouté un onglet.|
-|7|**Bouton Précédent** : passe à l’étape précédente en fonction de l’endroit où la boîte de dialogue s’est ouverte.|
-|8|**Bouton Enregistrer** : termine la configuration de l’onglet.|
+|6 |**Option Avertir les membres de l’équipe** : la boîte de dialogue demande aux utilisateurs s’ils souhaitent créer un billet pour informer d’autres utilisateurs qu’ils ont ajouté un onglet.|
+|7 |**Bouton Précédent** : passe à l’étape précédente en fonction de l’endroit où la boîte de dialogue s’est ouverte.|
+|8 |**Bouton Enregistrer** : termine la configuration de l’onglet.|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>Authentification d’onglet avec l’authentification unique
 
@@ -282,3 +283,7 @@ Si vous n’utilisez pas de jetons de couleur Teams, vos conceptions seront moin
 
    :::column-end:::
 :::row-end:::
+
+## <a name="see-also"></a>Voir aussi
+
+[Modifications des marges de l’onglet](~/resources/removing-tab-margins.md)

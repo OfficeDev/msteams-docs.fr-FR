@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: schéma de manifeste teams
-ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888285"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912205"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -298,7 +298,7 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
     "team": "bot", 
     "groupchat": "bot"
   },
- "configurableProperties": {
+ "configurableProperties": [
      "name",
      "shortDescription",
      "longDescription",
@@ -308,6 +308,9 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
+ ],
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -340,7 +343,7 @@ Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (M
 
 **Obligatoire**: ID d’application Microsoft
 
-L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework. Vous avez un ID si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail [d’inscription des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
+L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework. Vous avez un ID si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription [des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
 
 > [!NOTE]
 > Si vous envoyez une mise à jour à votre application existante dans AppSource, l’ID de votre manifeste ne doit pas être modifié.
@@ -349,7 +352,7 @@ L’ID est un identificateur unique généré par Microsoft pour l’application
 
 **Obligatoire**— objet
 
-Spécifie des informations sur votre entreprise. Pour les applications envoyées au Teams store, ces valeurs doivent correspondre aux informations de votre listing dans le Windows Store. Pour plus d’informations, voir les Teams [de publication du Store.](~/concepts/deploy-and-publish/appsource/publish.md)
+Spécifie des informations sur votre entreprise. Pour les applications envoyées au Teams store, ces valeurs doivent correspondre aux informations de votre listing dans le Windows Store. Pour plus d’informations, voir les [Teams de publication du Store.](~/concepts/deploy-and-publish/appsource/publish.md)
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -359,7 +362,7 @@ Spécifie des informations sur votre entreprise. Pour les applications envoyées
 |`termsOfUseUrl`|2 048 caractères|✔|L https:// URL vers les conditions d’utilisation du développeur.|
 |`mpnId`|10 caractères| |**Facultatif** ID Microsoft Partner Network qui identifie l’organisation partenaire qui construit l’application.|
 
-## <a name="name"></a>name
+## <a name="name"></a>nom
 
 **Obligatoire**— objet
 
@@ -457,7 +460,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`contentUrl`|string||✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
 |`websiteUrl`|string|||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`searchUrl`|string|||L https:// URL pointant vers les requêtes de recherche d’un utilisateur.|
-|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 |`context` | tableau d’enums| 2|| Ensemble `contextItem` d’étendues où un onglet est pris en charge.|
 
 > [!NOTE]
@@ -746,7 +749,6 @@ Vous pouvez définir l’une des propriétés suivantes :
  
 Lorsque la propriété est définie sur true, l’application est masquée aux utilisateurs par défaut jusqu’à ce que `defaultBlockUntilAdminAction` l’administrateur l’autorise. Si la valeur **est true,** l’application est masquée pour tous les clients et utilisateurs finaux. Les administrateurs client peuvent voir l’application dans Teams centre d’administration et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**. Pour plus d’informations sur le bloc d’application par défaut, voir [Masquer Teams application jusqu’à ce que l’administrateur approuve.](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)
 
-
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
 **Facultatif** - chaîne
@@ -754,6 +756,16 @@ Lorsque la propriété est définie sur true, l’application est masquée aux u
 **Taille maximale** - 128 caractères
 
 La propriété dépend de `defaultBlockUntilAdminAction` . Lorsque la propriété est définie sur `defaultBlockUntilAdminAction` **true,** l’URL HTTPS fournit une page d’informations pour que les administrateurs obtiennent des instructions avant d’autoriser une application, qui est bloquée `publisherDocsUrl` par défaut.
+
+## <a name="subscriptionoffer"></a>subscriptionOffer
+
+**Facultatif** - objet
+
+Spécifie l’offre SaaS associée à votre application.
+
+|Nom| Type| Taille maximale | Requis | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2 048 caractères | ✔ | Identificateur unique qui inclut votre ID Publisher et votre ID d’offre, que vous pouvez trouver dans [l’Partner Center](https://partner.microsoft.com/dashboard). Vous devez mettre en forme la chaîne comme `publisherId.offerId` .|
 
 ## <a name="see-also"></a>Voir aussi
 

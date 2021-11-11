@@ -1,19 +1,19 @@
 ---
 author: heath-hamilton
-description: Meilleures pratiques pour l’intégration d’applications web existantes à Microsoft Teams
+description: Meilleures pratiques ou considérations pour l’intégration d’applications web existantes à Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Applications web
-ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+title: Considérations sur l’intégration Teams des données
+ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889208"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912254"
 ---
-# <a name="web-apps"></a>Applications web 
+# <a name="considerations-for-teams-integration"></a>Considérations sur l’intégration Teams des données 
 
 Vous pouvez rendre les applications web adaptées Teams fonctionnalités sociales et collaboratives de votre Teams.
   
@@ -103,7 +103,7 @@ Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
+Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
 
 ## <a name="be-smart-when-messaging-users"></a>Soyez intelligent lors de la messagerie des utilisateurs
 
