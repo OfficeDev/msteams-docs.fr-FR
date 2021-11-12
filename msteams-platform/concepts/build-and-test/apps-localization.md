@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 50dc306a5a06dd7a73a47fbcf94a8a70aa5d6aa6
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 82174caf6154e78a3cae80640c0b9d1d7fe00a68
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887552"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949571"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
-Vous devez prendre en compte les facteurs suivants pour trouver votre application Microsoft Teams suivante :
+Prenez en compte les facteurs suivants pour trouver votre Microsoft Teams application :
 
 1. [Localisez votre liste AppSource.](#localize-your-appsource-listing)
 1. [Localisez les chaînes dans le manifeste de votre application.](#localize-strings-in-your-app-manifest) 
@@ -46,7 +46,7 @@ Les images que vous téléchargez avec l’anglais sont utilisées dans AppSourc
 
 Vous devez utiliser le schéma Microsoft Teams’application et `v1.5` ultérieurement pour le localiser. Pour ce faire, vous pouvez définir l’attribut dans votre fichier manifest.json sur ou une version supérieure et mettre à jour la propriété en `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** version `manifestVersion` `$schema` `1.5` (dans ce cas). 
 
-Vous devez ajouter la `localizationInfo` propriété avec la langue par défaut que votre application prend en charge. La langue par défaut est utilisée comme langue de base finale si les paramètres client de l’utilisateur ne correspondent à aucune de vos langues supplémentaires.
+Vous devez ajouter la `localizationInfo` propriété avec la langue par défaut que votre application prend en charge. La langue par défaut est utilisée comme langue de base finale si les paramètres du client de l’utilisateur ne correspondent à aucune de vos langues supplémentaires.
 
 ### <a name="example-manifestjson-change"></a>Exemple de modification manifest.json
 
@@ -84,7 +84,7 @@ Voici un exemple de localisation .json :
 ```
 
 
-Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent respecter le schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété `localizationInfo` de votre manifeste. Chaque fichier correspond à une balise de langue, que le client Teams utilise pour sélectionner les chaînes appropriées. La balise de langue prend la forme de, mais vous pouvez omettre la partie pour cibler toutes les régions qui prennent en charge `<language>-<region>` `<region>` la langue souhaitée.
+Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent respecter le schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété `localizationInfo` de votre manifeste. Chaque fichier est en corrélation avec une balise de langue, que le client Teams utilise pour sélectionner les chaînes appropriées. La balise de langue prend la forme de, mais vous pouvez omettre la partie pour cibler toutes les régions qui prennent en charge `<language>-<region>` `<region>` la langue souhaitée.
 
 Le client Teams applique les chaînes dans l’ordre suivant : chaînes de langue par défaut -> chaînes de langue de l’utilisateur uniquement -> langue de l’utilisateur + chaînes de région de l’utilisateur.
 

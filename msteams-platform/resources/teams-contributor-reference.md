@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d6a984f4e0816cd3a2312f82f669b8299467948b
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889243"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949641"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuer à la documentation Teams
 
@@ -31,7 +31,7 @@ Teams documentation technique fait partie de la bibliothèque de documentation t
 
    1. Sélectionnez l’icône **Extensions** dans la barre d’activité latérale ou utilisez la commande **Afficher => Extensions** ou Ctrl+Shift+X et, recherchez **Microsoft Docs Authoring Pack**.
    1. Sélectionnez **Installer**.
-   1. Après l’installation, **le bouton Installer** change sur le bouton **Gérer** l’engrenage.
+   1. Après l’installation, **l’installation** est apportée au **bouton Gérer** l’engrenage.
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Consulter le Guide des contributeurs Microsoft Docs
 
@@ -51,13 +51,13 @@ Les pages **Microsoft Docs** sont écrites dans la syntaxe **MarkDown** et sont 
 
 ## <a name="file-paths"></a>Chemins d’accès aux fichiers
 
-Lorsque vous utilisez des chemins d’accès relatifs et créez des liens vers d’autres ensembles de documents, il est important de définir un chemin d’accès de fichier valide pour les liens hypertexte dans votre documentation. Votre build réussit sur GitHub uniquement si le chemin d’accès au fichier est correct ou valide.
+Lorsque vous utilisez des chemins d’accès relatifs et que vous créez des liens vers d’autres ensembles de documents, il est important de définir un chemin d’accès au fichier valide pour les liens hypertexte dans votre documentation. Votre build réussit sur GitHub uniquement si le chemin d’accès au fichier est correct ou valide.
  
 Pour plus d’informations sur les liens hypertexte et les chemins d’accès aux fichiers, voir [les liens d’utilisation dans la documentation.](/contribute/how-to-write-links)
 
 > [!IMPORTANT]
 > Pour référencer un article qui fait **partie du** document Teams plateforme de données :<br>
-> &emsp;&#x2714; utiliser un chemin d’accès relatif sans barre oblique de premier plan.<br>
+> &emsp;&#x2714; utiliser un chemin d’accès relatif sans barre oblique principale.<br>
 > &emsp;&#x2714; inclure l’extension de fichier Markdown.<br>
 >Ex: **parent directory/directory/path-to-article.md** —> [Building an app for Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > Pour référencer un article de la bibliothèque Microsoft Docs qui ne fait **pas** partie du document Teams plateforme microsoft :<br>
@@ -67,7 +67,7 @@ Pour plus d’informations sur les liens hypertexte et les chemins d’accès au
 
 ## <a name="code-samples-and-snippets"></a>Exemples de code et extraits de code
 
-Les exemples de code jouent un rôle important pour utiliser efficacement les API et les SDK. Les exemples de code bien présentés peuvent communiquer le fonctionnement plus clairement que le texte descriptif et les informations d’instruction uniquement. Vos exemples de code doivent être précis, concis, bien documentés et concis et concis. Le code facile à lire doit être facile à comprendre, tester, déboguer, gérer, modifier et étendre. Pour plus d’informations, [voir comment inclure du code dans des documents.](/contribute/code-in-docs)
+Les exemples de code jouent un rôle important pour utiliser efficacement les API et les SDK. Des exemples de code bien présentés peuvent communiquer plus clairement que le texte descriptif et les informations d’instruction uniquement. Vos exemples de code doivent être précis, concis, bien documentés et concis et concis. Le code facile à lire doit être facile à comprendre, tester, déboguer, gérer, modifier et étendre. Pour plus d’informations, [voir comment inclure du code dans des documents.](/contribute/code-in-docs)
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -77,8 +77,8 @@ Les exemples de code jouent un rôle important pour utiliser efficacement les AP
 ## <a name="see-also"></a>Voir aussi
 
 * [Documents Microsoft](/)
-* [guide des collaborateurs](/contribute)
-* [Style de documentation et démarrage rapide de la voix](/contribute/style-quick-start)
+* [Guide des collaborateurs](/contribute)
+* [Style docs et démarrage rapide de la voix](/contribute/style-quick-start)
 * [Edge : outils de lisibilité du code source Astuces](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)

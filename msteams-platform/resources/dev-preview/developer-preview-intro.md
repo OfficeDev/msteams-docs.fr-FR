@@ -4,31 +4,31 @@ description: Décrit les fonctionnalités de la prévisualisation pour les déve
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams prévisualiser les fonctionnalités de développement
-ms.openlocfilehash: 756d30b0cbeb47be2b355bc9fe126e3bc39b3806
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9337a0fbc89b02783db9253cc2975a68658b4268
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888502"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949585"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Prévisualisation pour les développeurs publics Microsoft Teams
 
 >[!NOTE]
 >Les fonctionnalités incluses dans la prévisualisation peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
 
-La prévisualisation pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre Microsoft Teams application. Nous vous souhaitons également la [bienvenue sur](~/feedback.md) toutes les fonctionnalités de la prévisualisation du développeur. La prévisualisation développeur est activée par client Microsoft Teams, vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
+La prévisualisation pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre Microsoft Teams application. Nous vous souhaitons également la [bienvenue sur](~/feedback.md) toutes les fonctionnalités de la prévisualisation pour les développeurs. La prévisualisation développeur est activée par client Microsoft Teams, vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
 
 ## <a name="developer-preview-app-manifest"></a>Manifeste de l’application d’aperçu du développeur
 
 De nombreuses fonctionnalités activées dans la prévisualisation du développeur nécessitent des modifications de votre fichier JSON de manifeste d’application. Pour ce faire, vous devez utiliser le schéma de [manifeste d’aperçu du développeur.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne serez pas en mesure d’utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour apporter ces modifications, ni de l’utiliser pour télécharger votre application à des moments de test. Pour télécharger votre application, vous devez cliquer sur l’icône dans la barre de l’application, `More apps` puis sélectionner le `Upload a custom app link` . À l’aide de cette méthode, vous pouvez uniquement charger une version compressée de votre package d’application.
 
-Il peut s’avérer utile d’utiliser App Studio pour créer les parties d’aperçu non développeur de votre package d’application, puis exporter ce package et modifier manuellement le fichier pour ajouter les fonctionnalités d’aperçu de développeur que vous souhaitez `manifest.json` utiliser. Une fois que vous avez ajouté les fonctionnalités d’aperçu du développeur au fichier, vous ne pourrez pas `manifest.json` ré-importer le package dans App Studio.
+Il peut s’avérer utile d’utiliser App Studio pour créer les parties d’aperçu non développeur de votre package d’application, puis exporter ce package et modifier manuellement le fichier pour ajouter les fonctionnalités d’aperçu de développeur que vous souhaitez `manifest.json` utiliser. Une fois que vous avez ajouté les fonctionnalités d’aperçu développeur au fichier, vous ne pourrez pas `manifest.json` ré-importer le package dans App Studio.
 
 ## <a name="enable-developer-preview"></a>Activer la prévisualisation pour les développeurs
 
 La prévisualisation du développeur est activée par client, mais l’option d’activer la prévisualisation du développeur est contrôlée au niveau de l’organisation. Pour activer l’option d’activer la prévisualisation du développeur pour une personne, vous devez vous assurer qu’elle a la possibilité de télécharger des applications personnalisées. Pour plus [d’informations, voir](~/concepts/build-and-test/prepare-your-o365-tenant.md) configuration de votre client.
 
-L’utilisation d’une application qui contient des fonctionnalités de prévisualisation pour les développeurs peut entraîner un comportement inattendu des clients qui n’ont pas activé la prévisualisation du développeur. Si vous ne voyez pas d’entrée pour la prévisualisation pour les développeurs, la raison la plus probable est que votre organisation n’est pas configurée pour le téléchargement d’applications.
+L’utilisation d’une application qui contient des fonctionnalités de prévisualisation pour les développeurs peut entraîner un comportement inattendu des clients qui n’ont pas activé la prévisualisation pour les développeurs. Si vous ne voyez pas d’entrée pour la prévisualisation pour les développeurs, la raison la plus probable est que votre organisation n’est pas configurée pour le téléchargement d’applications.
 
 ### <a name="on-a-desktop-or-web-client"></a>Sur un client de bureau ou web
 
