@@ -442,7 +442,7 @@
   items:
     - name: Aperçu
       href: samples/integrate-web-apps-overview.md
-    - name: Applications web
+    - name: Considérations pour l’intégration de Teams
       href: samples/integrating-web-apps.md
     - name: Applications de la plate-forme d'énergie
       items:
