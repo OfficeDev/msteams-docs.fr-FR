@@ -5,12 +5,12 @@ description: Vue d’ensemble des outils et des SDK pour la création Microsoft 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d6a1ce32fce03ada547cf769ff5a634f9d6f01de
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3c39ed5c39a92967ebf8b90760bd28e7bb6366f3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888425"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948382"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -27,7 +27,7 @@ Votre bot Teams se compose des suivants :
 
 * Un service web accessible au public hébergé par vous.
 * Une inscription Bot Framework pour votre service web.
-* Votre Teams d’application, qui connecte le client Teams client à votre service web.
+* Votre Teams d’application, qui connecte le client Teams à votre service web.
 
 > [!TIP]
 > Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
@@ -86,11 +86,11 @@ La conversation un-à-un est un moyen traditionnel pour un bot de conversation d
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
-Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge un nombre excessif de commandes, notamment un large éventail de commandes, ne réussit pas ou n’est pas considéré comme positif par les utilisateurs.
+Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen lent et complexe d’accomplir une tâche. Un bot qui prend en charge un nombre excessif de commandes, en particulier un large éventail de commandes, ne réussit pas ou n’est pas considéré comme positif par les utilisateurs.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences à plusieurs tour dans la conversation
 
-Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler.** En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
+Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
 USER : planifier une réunion avec Megan.
 
@@ -106,11 +106,11 @@ BOT : quel jour ?
 
 ### <a name="support-too-many-commands"></a>Prise en charge d’un trop grand nombre de commandes
 
-Comme il n’y a que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
+Comme il n’existe que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
 
-### <a name="maintain-a-large-knowledge-base"></a>Gérer une base de connaissances importante
+### <a name="maintain-a-large-knowledge-base"></a>Maintenir une base de connaissances importante
 
-L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux aux interactions courtes et rapides, et ne sont pas en train de passer au travers de longues listes à la recherche d’une réponse.
+L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
 
 ## <a name="code-sample"></a>Exemple de code
 

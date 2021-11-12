@@ -5,12 +5,12 @@ keywords: kit de ressources teams Visual Studio Code
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8eeaadf28b9bdb46c91a803a66b4855d2a5e848c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889320"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948438"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio Code
 
@@ -21,7 +21,7 @@ Vous pouvez également utiliser le kit de ressources avec Visual Studio ou en ta
 ## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>Installer le Teams Shared Computer Toolkit pour Visual Studio Code
 
 1. Ouvrez Visual Studio Code.
-1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou **Afficher > extensions**).
+1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X**  /  **⌘⇧-X** ou Afficher **> extensions**).
 1. Dans la zone de recherche, entrez _Teams Shared Computer Toolkit_.
 1. Sélectionnez le bouton d’installation vert en Teams Shared Computer Toolkit.
 
@@ -41,7 +41,7 @@ Les outils suivants sont installés par l’extension Visual Studio Code si néc
 
     Certaines Teams d’application (bots de conversation, extensions de messagerie et webhooks entrants) nécessitent des connexions entrantes.  Vous devez exposer votre système de développement à la Teams via un tunnel. Un tunnel n’est pas requis pour les applications qui incluent uniquement des onglets.  Ce package est installé dans le répertoire du projet (à l’aide de npm `devDependencies` ).
 
-## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Utilisez le Teams Shared Computer Toolkit pour Visual Studio Code
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Utilisez la Teams Shared Computer Toolkit pour Visual Studio Code
 
 - [Configurer un nouveau projet](#set-up-a-new-teams-project)
 - [Configurer votre application](#configure-your-app)
@@ -50,7 +50,7 @@ Les outils suivants sont installés par l’extension Visual Studio Code si néc
 
 ## <a name="set-up-a-new-teams-project"></a>Configurer un nouveau projet Teams projet
 
-Le Teams Shared Computer Toolkit peut créer des applications React hébergées dans Azure ou des composants Web SPFx hébergés sur votre environnement de SharePoint M365. Pour créer une application React à héberger sur Azure :
+Le Teams Shared Computer Toolkit peut créer des applications React hébergées dans Azure ou des composants Web SPFx hébergés sur votre environnement SharePoint M365. Pour créer une application React à héberger sur Azure :
 
 1. Ouvrez Visual Studio Code.
 1. Ouvrez le Kit de ressources Teams en sélectionnant l’icône Teams dans la barre latérale :
@@ -73,7 +73,7 @@ Le Teams Shared Computer Toolkit peut créer des applications React hébergées 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Capture d’écran présentant comment sélectionner l’hébergement pour votre nouvelle application.":::
 
-1. Éventuellement, à l’étape **Ressources cloud,** sélectionnez les ressources cloud que votre application utilise. Vous pouvez sélectionner l’accès CRUD (créer, lire, mettre à jour et supprimer) à une table SQL une API :
+1. Éventuellement, à l’étape Des ressources **cloud,** sélectionnez les ressources cloud que votre application utilise. Vous pouvez sélectionner l’accès CRUD (créer, lire, mettre à jour et supprimer) à une table SQL une API :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Capture d’écran présentant comment ajouter des ressources cloud à votre nouvelle application.":::
 
@@ -85,7 +85,7 @@ Le Teams Shared Computer Toolkit peut créer des applications React hébergées 
 
 1. Entrez un nom approprié pour votre application, tel que `helloworld`. Le nom de l’application doit contenir des caractères alphanumériques uniquement.  Appuyez sur **Entrer** pour continuer.
 
-Votre application Teams est créée en quelques secondes. L’application échafaudée contient du code pour gérer l' sign-on unique Azure Active Directory et l’accès au microsoft Graph.  Si vous avez sélectionné des ressources Azure, le code de ces ressources est également disponible.
+Votre Teams’application est créée en quelques secondes. L’application échafaudée contient du code pour gérer l' sign-on unique Azure Active Directory et l’accès au microsoft Graph.  Si vous avez sélectionné des ressources Azure, le code de ces ressources est également disponible.
 
 Pour une procédure pas à pas du processus SPFx création et de publication, voir [le didacticiel SPFx de publication.](../get-started/first-app-spfx.md)
 
@@ -129,7 +129,7 @@ Pour créer et exécuter votre application localement :
 1. Vous serez peut-être invité à vous connecter. Dans ce cas, connectez-vous à l'aide de votre compte M365.
 1. Lorsque vous êtes invité à installer l’application sur Teams, appuyez sur **Ajouter**.
 
-Le back-end et le frontend sont raccordés au débo Visual Studio Code débogger.  Cela vous permet de définir des points d’arrêt n’importe où dans votre code et d’inspecter l’état.  Vous pouvez également utiliser n’importe quel outil de débogage frontal (tel que les outils React développeur) dans le navigateur.  Pour plus d’informations sur le débogage dans Visual Studio Code, [examinez la documentation.](https://code.visualstudio.com/Docs/editor/debugging)
+Le back-end et le frontend sont raccordés au débo Visual Studio Code débogger.  Cela vous permet de définir des points d’arrêt n’importe où dans votre code et d’inspecter l’état.  Vous pouvez également utiliser n’importe quel outil de débogage frontal (par exemple, React Outils de développement) dans le navigateur.  Pour plus d’informations sur le débogage dans Visual Studio Code, [examinez la documentation.](https://code.visualstudio.com/Docs/editor/debugging)
 
 ## <a name="publish-your-app-to-teams"></a>Publier votre application sur Teams
 
@@ -138,7 +138,7 @@ Avant de pouvoir être utilisé par d’autres personnes, vous devez publier vot
 1. Pour publier votre application, accédez à **l’onglet Teams Shared Computer Toolkit** dans Visual Studio Code.
 1. Sélectionnez **Publier à Teams** dans la section **Project** de publication.
 
-Si vous utilisez l’hébergement Azure, vous devez avoir mis en service et déployé sur le cloud. Pour une procédure pas à pas du processus SPFx publication, voir le [didacticiel SPFx de publication.](../get-started/first-app-spfx.md)
+Si vous utilisez l’hébergement Azure, vous devez avoir mis en service et déployé sur le cloud. Pour une procédure pas à pas du processus SPFx de publication, voir [le didacticiel SPFx de publication.](../get-started/first-app-spfx.md)
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -3,8 +3,8 @@ title: Microsoft Teams documentation pour les développeurs
 summary: 'Obtenez de la documentation, des exemples de code, des didacticiels et bien plus encore pour vous aider à créer des applications Microsoft Teams personnalisées.'
 brand: teams
 metadata:
-  title: Microsoft Teams Documentation pour les développeurs de plateforme
-  description: 'La plateforme de développement Microsoft Teams permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, fournir le focus en réduisant le changement de contexte et créer une collaboration autour du contenu et des flux de travail existants.'
+  title: documentation Microsoft Teams développeur de plateforme web
+  description: 'La plateforme Microsoft Teams développeur permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, mettre l’accent sur la réduction du changement de contexte et créer une collaboration autour du contenu et des flux de travail existants.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -74,7 +74,7 @@ conceptualContent:
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: Applications pour Teams réunions
-        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+        - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Cartes et modules de tâche
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
@@ -113,14 +113,14 @@ conceptualContent:
           text: Intégrer un onglet Teams’un SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
-          text: Intégration avec le système de gestion de l’apprentissage par le chat
+          text: Intégration avec le système de gestion de l’apprentissage de l’informatique
         - url: /microsoftteams/platform/samples/app-templates
           itemType: reference
           text: Intégrer des modèles d’application prêts pour la production
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: Intégrer des connecteurs Shifts prêts pour la production
-    - title: Communauté
+    - title: Community
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -133,7 +133,7 @@ conceptualContent:
           text: Annonces
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams Réponse et Community développeur
+          text: Microsoft Teams réponse et Community développeur
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: Contribuer à la Microsoft Teams documentation

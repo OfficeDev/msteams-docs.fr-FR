@@ -6,23 +6,23 @@ keywords: Canal de groupe onglets teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888054"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948606"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
 Teams onglets doivent respecter les conditions préalables suivantes :
 
 * Vous devez permettre à vos pages d’onglets d’être affichées dans un iFrame, à l’aide des en-têtes de réponse HTTP X-Frame-Options et Content-Security-Policy.
-  * Définir l’en-tête : `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
+  * Définissez l’en-tête : `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * Pour la compatibilité d’Internet Explorer 11, définissez `X-Content-Security-Policy` .
   * Sinon, définissez l’en-tête `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` . Cet en-tête est supprimé, mais toujours accepté par la plupart des navigateurs.
 
-* En règle générale, comme protection contre les détournements de clics, les pages de connexion ne s’restitueraient pas dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou les cookies.
+* En règle générale, comme protection contre le détournement de clic, les pages de connexion ne s’restituer dans les iFrames. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou les cookies.
 
     > [!NOTE]
     > Chrome 80, dont la publication est prévue début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. Pour plus d’informations, voir [l’attribut de cookie SameSite.](../../resources/samesite-cookie-update.md)
@@ -51,7 +51,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams onglets](~/tabs/what-are-tabs.md)
-* [Créer votre première application à l’aide de React](../../get-started/first-app-react.md)
+* [Créer votre première application à l’aide de JavaScript](../../get-started/first-app-react.md)
 * [Créer votre première application à l’aide de Blazor](../../get-started/first-app-blazor.md)
 * [Créer votre première application à l’aide de SPFx](../../get-started/first-app-spfx.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)

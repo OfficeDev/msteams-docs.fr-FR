@@ -5,12 +5,12 @@ description: Concevez votre application plus rapidement avec des composants d’
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887802"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948445"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Conception de votre application Microsoft Teams avec des modèles d’interface utilisateur
 
@@ -20,14 +20,14 @@ Concevez votre Microsoft Teams application plus rapidement avec des modèles d�
 
 Les ressources suivantes peuvent vous aider à concevoir et développer votre application à l’aide de modèles d’interface utilisateur.
 
-### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
 Récupérer des modèles d’interface utilisateur pour la conception de votre application à partir du kit d’interface utilisateur Microsoft Teams, qui inclut également des informations complètes sur l’utilisation, l’anatomie, l’accessibilité et les meilleures pratiques.
 
 > [!div class="nextstepaction"]
 > [Obtenir le kit d’interface utilisateur (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Bibliothèque d’interface utilisateur
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams’interface utilisateur
 
 Affichez et testez les Teams d’interface utilisateur et les composants associés dans votre navigateur.
 
@@ -50,7 +50,7 @@ Installez un exemple d’application pour voir l’apparence et le comportement 
 
 Un tableau de bord affiche différents types de contenu dans un emplacement central (Teams application ou onglet personnel). Les utilisateurs doivent pouvoir personnaliser au moins une partie de ce qu’ils voient sur un tableau de bord.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Analyser les données
 * Mesures du rapport
@@ -68,7 +68,7 @@ Un tableau de bord affiche différents types de contenu dans un emplacement cent
 
 Vous pouvez utiliser différentes tailles de carte (unique, double et complète) pour empiler et organiser les visualisations de données sur la même page. Les cartes s’adaptent à la disposition des colonnes et remplissent des espaces vides.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Afficher des informations complexes
 * Créer un tableau de bord
@@ -79,13 +79,13 @@ Vous pouvez utiliser différentes tailles de carte (unique, double et complète)
 
 ### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple illustre un modèle d’interface utilisateur de visualisation de données sur un ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="L’exemple montre un modèle d’interface utilisateur de visualisation de données sur un ordinateur de bureau." border="false":::
 
 ## <a name="empty-state"></a>État vide
 
 Le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la signature, les expériences de première utilisation, les messages d’erreur, etc. Il est très flexible : adaptez-le pour utiliser un, quelques-uns ou tous les composants de la conception suivante.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Connexion
 * Messages de bienvenue et expériences de première expérience
@@ -104,7 +104,7 @@ Le modèle d’état vide peut être utilisé pour de nombreux scénarios, y com
 
 Un filtre vous permet de réduire les informations que vous voyez en fonction des critères sélectionnés. Vous pouvez inclure des filtres avec des tableaux, des listes, des cartes et d’autres composants qui organisent le contenu.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 Organisation du contenu dans :
 
@@ -119,7 +119,7 @@ Organisation du contenu dans :
 
 Les formulaires sont utilisés pour collecter, valider et envoyer des entrées utilisateur de manière structurée. L’étiquetage clair et les regroupements logiques de champs d’entrée sont essentiels pour une bonne expérience utilisateur.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Connexion
 * Profils utilisateur
@@ -134,11 +134,11 @@ Les formulaires sont utilisés pour collecter, valider et envoyer des entrées u
 
 :::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur un ordinateur de bureau." border="false":::
 
-## <a name="list"></a>Liste
+## <a name="list"></a>Répertorier
 
 Vous pouvez utiliser une liste pour afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Afficher les données
 * Actions contextuelles sur le contenu de l’application
@@ -169,7 +169,7 @@ Vous pouvez concevoir des flux de Teams d’application pour différents context
 
 ## <a name="settings"></a>Paramètres
 
-Paramètres’écran sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base.)](~/concepts/design/design-teams-app-basic-ui-components.md)
+Paramètres sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base.)](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 ### <a name="top-use-case"></a>Cas d’utilisation principaux
 
@@ -181,7 +181,7 @@ Paramètres’écran sont les écrans où les utilisateurs peuvent configurer le
 
 Un tableau des tâches, parfois appelé « kanban board » ou « pistes de course » est une collection de cartes souvent utilisées pour suivre l’état des éléments de travail ou des tickets. Il peut également être utilisé pour trier n’importe quel type de contenu en catégories. Vous pouvez modifier et déplacer les cartes entre les colonnes.
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Gestion de projet. Affectation de tâches et état de suivi
 * Brainstorming. Ajout d’idées dans différentes catégories
@@ -199,7 +199,7 @@ Un tableau des tâches, parfois appelé « kanban board » ou « pistes de cours
 
 Un Assistant guide un utilisateur à travers plusieurs écrans pour effectuer une tâche (par exemple, un processus d’installation).
 
-### <a name="top-use-cases"></a>Cas d’utilisation principaux
+### <a name="top-use-cases"></a>Principaux cas d’utilisation
 
 * Configuration
 * Intégration

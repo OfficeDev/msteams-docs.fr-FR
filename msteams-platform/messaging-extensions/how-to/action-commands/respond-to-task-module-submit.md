@@ -1,18 +1,18 @@
 ---
-title: Répondre à l’action d’soumission du module de tâche
+title: Répondre à l’action d’envoi du module de tâche
 author: surbhigupta
 description: Décrit comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de messagerie avec un message proactif, un autre module de tâche, un bot de carte adaptative et d’autres exemples de code.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889411"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948410"
 ---
-# <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’soumission du module de tâche
+# <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -71,7 +71,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramètre indique d’où votre extension de messagerie a été déclenchée. `data`L’objet contient les champs du formulaire en tant que paramètres et les valeurs envoyées par l’utilisateur. L’objet JSON met en évidence les champs les plus pertinents.
+Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramètre indique d’où votre extension de messagerie a été déclenchée. L’objet contient les champs du formulaire en tant que paramètres et les `data` valeurs envoyées par l’utilisateur. L’objet JSON met en évidence les champs les plus pertinents.
 
 ```json
 {
@@ -101,7 +101,7 @@ Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramè
 
 ## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>Répondre avec une carte insérée dans la zone composer un message
 
-Le moyen le plus courant de répondre à la demande consiste à insérer une carte `composeExtension/submitAction` dans la zone de composition d’un message. L’utilisateur soumet la carte à la conversation. Pour plus d’informations sur l’utilisation des cartes, voir [cartes et actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
+Le moyen le plus courant de répondre à la demande consiste à insérer une carte `composeExtension/submitAction` dans la zone de composition d’un message. L’utilisateur soumet la carte à la conversation. Pour plus d’informations sur l’utilisation des cartes, voir [les cartes et les actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -198,7 +198,7 @@ Vous pouvez choisir de répondre à `submitAction` l’événement avec un modul
 * Modifiez dynamiquement la collection d’informations en fonction de l’entrée de l’utilisateur.
 * Validez les informations envoyées par l’utilisateur et renvoyez le formulaire avec un message d’erreur en cas de problème. 
 
-La méthode de réponse est la même que [pour répondre à l’événement `fetchTask` initial.](~/messaging-extensions/how-to/action-commands/create-task-module.md) Si vous utilisez le SDK Bot Framework, les mêmes déclencheurs d’événement pour les deux actions d’soumission. Pour que cela fonctionne, vous devez ajouter une logique qui détermine la réponse correcte.
+La méthode de réponse est la même que [pour répondre à l’événement `fetchTask` initial.](~/messaging-extensions/how-to/action-commands/create-task-module.md) Si vous utilisez le SDK Bot Framework, les mêmes déclencheurs d’événements pour les deux actions d’soumission. Pour que cela fonctionne, vous devez ajouter une logique qui détermine la réponse correcte.
 
 ## <a name="bot-response-with-adaptive-card"></a>Réponse du bot avec carte adaptative
 
@@ -589,15 +589,15 @@ La section suivante décrit les entités du `OnBehalfOf` tableau :
 |Champ|Type|Description|
 |:---|:---|:---|
 |`itemId`|Entier|Décrit l’identification de l’élément. Sa valeur doit être `0` .|
-|`mentionType`|String|Décrit la mention d’une « personne ».|
-|`mri`|String|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
-|`displayName`|String|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution des noms.|
+|`mentionType`|Chaîne|Décrit la mention d’une « personne ».|
+|`mri`|Chaîne|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
+|`displayName`|Chaîne|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution des noms.|
   
 ## <a name="code-sample"></a>Exemple de code
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

@@ -5,12 +5,12 @@ description: Planifier votre application, comprendre votre utilisateur et ses be
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888418"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948388"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
@@ -22,7 +22,7 @@ Chaque méthode d’interaction avec vos utilisateurs a ses forces et ses faible
 
 ## <a name="understand-the-problem"></a>Comprendre le problème
 
-Chaque application a un problème principal ou doit être résolu. Avant de commencer à créer une application, vous devez expliquer ce qu’est ce problème. Dans son cœur, Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l’obtention d’une collaboration efficace sont parfaitement adaptées. Il s’agit également d’une plateforme sociale, d’une plateforme trans-plateforme native, qui se trouve au cœur de Office 365 et qui offre une zone de dessin personnelle pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une Teams application. Vous pouvez résoudre un large éventail de problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
+Chaque application a un problème principal ou doit être résolu. Avant de commencer à créer une application, vous devez expliquer ce qu’est ce problème. Dans son cœur, Teams est une plateforme de collaboration, de sorte que les applications qui permettent de combler les lacunes dans l’obtention d’une collaboration efficace sont parfaitement adaptées. Il s’agit également d’une plateforme sociale, d’une plateforme trans-plateforme native, qui se trouve au cœur de Office 365 et qui offre une zone de dessin personnelle pour vous aider à créer des applications. Dans cette plateforme sociale, il existe un large éventail de besoins qui peuvent être résolus avec une Teams application. Vous pouvez résoudre de nombreux problèmes, à condition que vous compreniez celui que vous essayez de résoudre. Avant de commencer à créer une application, posez-vous des questions pertinentes, telles que :
 
 * Quels sont les avantages et les inconvénients du système d’état actuel utilisé par vos utilisateurs ?
 * Quels sont les problèmes rencontrés par vos utilisateurs que vous voulez résoudre ?
@@ -53,21 +53,21 @@ Le fait de connaître les limitations des applications pour l’accessibilité d
 
 Vous devez déterminer dès le début si vous devez protéger les services que vous exposez et à quel niveau. N’oubliez pas que les services web exposés dans votre application Teams sont disponibles publiquement sur Internet. Par contre, si vous devez les sécuriser, commencez à y penser maintenant. Si vous avez besoin d’une solution qui nécessite que vous fournissiez l’accès invité pour les utilisateurs en dehors du client, des restrictions et des autorisations d’accès doivent être placées pour protéger les informations confidentielles. Vous devrez concevoir des applications en raison des limitations qui s’appliquent à l’accès des utilisateurs invités. Par conséquent, posez-vous des questions, telles que : 
 
-* Les utilisateurs accèderont-ils à différents affichages des données en fonction de leurs rôles ?
+* Les utilisateurs accèderont-ils à différentes vues des données en fonction de leurs rôles ?
 * Y a-t-il des pii impliquées ?
 * Les interactions seront-ils également basées sur les rôles d’utilisateur ?
 * Les utilisateurs externes accèderont-ils à l’application ?
 
 ## <a name="decide-what-goes-in-teams"></a>Décider de ce qui se passe Teams
 
-Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l’ensemble de l’application va se trouver à l’intérieur du client Teams client. Vérifiez s’il est logique de n’apporter qu’une partie de l’expérience. Avec une combinaison d’onglets, d’extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
+Que vous construisiez quelque chose de nouveau ou que vous insérait une solution existante dans Teams, il est important de décider si l’ensemble de l’application sera à l’intérieur du client Teams client. Vérifiez s’il est logique de n’apporter qu’une partie de l’expérience. Avec une combinaison d’onglets, d’extensions de messagerie, de modules de tâche, de cartes adaptatives et de bots conversationnels, vous pouvez créer des applications complexes entièrement Teams.
 N’oubliez pas qui sont vos utilisateurs et le problème que vous essayez de résoudre. Ont-ils déjà un système pour résoudre la plupart du problème ou vous devez simplement étendre un sous-ensemble de fonctionnalités dans Teams ? En règle générale, si vous comptez apporter une partie de votre solution, vous devez vous concentrer sur le partage, la collaboration, l’initiative et la surveillance des flux de travail.
 
 ## <a name="plan-the-onboarding-experience"></a>Planifier l’expérience d’intégration
 
 Votre expérience d’intégration peut faire la différence entre la réussite ou l’échec de votre application. Pour chaque fonctionnalité de votre application et chaque contexte dans lequel cette fonctionnalité peut être installée, vous devez avoir un plan pour vous présenter. La façon dont vous introduisez votre bot de conversation lorsqu’il est installé dans un canal avec un millier de personnes est différente lorsqu’il est installé dans une conversation un-à-un. Que se passe-t-il lorsqu’un utilisateur configure votre onglet pour la première fois dans un canal ? Si vous partagez des cartes avec une extension de messagerie, est-il logique d’ajouter un petit lien vers une **page** En savoir plus pour présenter aux utilisateurs ce que votre application peut faire d’autre ?
 
-Le fait de connaître vos utilisateurs vous aide à créer l’expérience la plus agréable. Pensez-vous que la plupart des personnes ont déjà un contexte sur l’objectif de votre application ou qu’ils ont déjà utilisé vos services dans un autre contexte ? Est-ce qu’ils arrivent dans votre application sans connaissances préalables ? Concevoir votre expérience d’intégration avec vos utilisateurs clés à l’esprit.
+Le fait de connaître vos utilisateurs vous aide à créer la bonne expérience. Pensez-vous que la plupart des personnes ont déjà un contexte sur l’objectif de votre application ou qu’ils ont déjà utilisé vos services dans un autre contexte ? Est-ce qu’ils arrivent dans votre application sans connaissances préalables ? Concevoir votre expérience d’intégration avec vos utilisateurs clés à l’esprit.
 
 N’oubliez pas que les utilisateurs peuvent découvrir votre application de différentes manières. Ils peuvent être ceux qui l’installent ou ils peuvent être introduits dans votre application lorsqu’un autre utilisateur l’utilise pour partager du contenu. Si vous souhaitez que davantage d’utilisateurs utilisent votre application, vous devez rechercher des moyens de vous présenter à tout le monde.
 

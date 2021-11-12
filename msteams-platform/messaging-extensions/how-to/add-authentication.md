@@ -5,12 +5,12 @@ description: Découvrez comment ajouter l’authentification à une extension de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 808ff41c848864bfd86d12fe0dc236e249fa3157
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889404"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948627"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -45,9 +45,9 @@ Votre service doit vérifier que le code d’authentification reçu à l’étap
 
 ### <a name="respond-with-a-sign-in-action"></a>Répondre par une action de signature
 
-Pour inviter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
+Pour inciter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
 
-#### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de sign-in
+#### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de signature
 
 ```json
 {
@@ -73,7 +73,7 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 
 Votre expérience de se connecte doit être réactive et tenir dans une fenêtre pop-up. Il doit s’intégrer au [SDK Microsoft Teams client JavaScript,](/javascript/api/overview/msteams-client)qui utilise la transmission de message.
 
-Comme avec d’autres expériences incorporées en cours d Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID d’utilisateur Teams à votre fenêtre, qui le transmet ensuite à l’URL de la signature OAuth.
+Comme avec d’autres expériences incorporées en cours d Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID d’utilisateur Teams dans votre fenêtre, qui le transmet ensuite à l’URL de la signature OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de la signature
 
@@ -136,7 +136,7 @@ Lorsque la demande de se connecte est terminée et redirige vers votre page, ell
 ## <a name="code-sample"></a>Exemple de code
 |**Exemple de nom** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie des résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
 ## <a name="see-also"></a>Voir aussi
 

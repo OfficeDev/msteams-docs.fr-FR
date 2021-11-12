@@ -5,12 +5,12 @@ description: Obtenez une idée générale de la façon dont vous pouvez utiliser
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1b9d425f57cf1fa49aac41b4d21a0bf4befb3407
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 95af942973b25a085662eb303077dff6cba815e5
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889096"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948599"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processus de conception pour Microsoft Teams applications
 
@@ -37,12 +37,12 @@ Microsoft fournit des outils pour faciliter la conception de votre Teams applica
 
 ### <a name="get-the-microsoft-teams-ui-kit"></a>Obtenir le kit Microsoft Teams’interface utilisateur
 
-Le kit Microsoft Teams’interface utilisateur peut vous aider à développer une application Teams efficace dans un laps de temps plus court. Le kit d’interface utilisateur contient tout ce que vous voyez dans ces documents relatifs à Teams conception d’application et bien plus encore, notamment des exemples complets et des variantes.
+Le kit Microsoft Teams’interface utilisateur peut vous aider à développer une application Teams efficace dans un délai le plus court. Le kit d’interface utilisateur contient tout ce que vous voyez dans ces documents relatifs Teams conception d’application et bien plus encore, notamment des exemples complets et des variantes.
 
 Le kit d’interface utilisateur dispose également de modèles et de composants pré-créés que vous pouvez copier et modifier selon vos besoins. Ainsi, vous pouvez passer plus de temps à concevoir la meilleure expérience utilisateur au lieu de vous soucier de l’apparence d’un bouton.
 
 > [!TIP]
-> **Le kit d’interface utilisateur est-il pour moi ?** Si vous avez une partie dans la création d’une Teams, oui. Comprendre comment créer une application Teams n’est pas seulement utile aux concepteurs, mais également aux responsables de produits, aux développeurs qui utilisent des IDE et aux créateurs de création avec des outils à code faible (par exemple, Microsoft Power Platform).
+> **Le kit d’interface utilisateur est-il pour moi ?** Si vous avez une partie de la création d’une Teams, oui. Comprendre comment créer une application Teams n’est pas seulement utile aux concepteurs, mais également aux responsables de produits, aux développeurs qui utilisent des IDE et aux créateurs de création avec des outils à code faible (par exemple, Microsoft Power Platform).
 
 1. Go to the [Microsoft Teams UI Kit Figma page](https://www.figma.com/community/file/916836509871353159).
 1. Sélectionnez **Dupliquer** pour ouvrir le kit d’interface utilisateur. (Vous de devez d’abord créer un compte Figma.)
@@ -102,7 +102,7 @@ Actuellement, tous les modèles répertoriés dans le kit d’interface utilisat
 
 ### <a name="build-with-basic-ui-components"></a>Créer avec des composants d’interface utilisateur de base
 
-À la différence de la phase de conception, vous pouvez utiliser ces composants d’interface utilisateur Fluent dans votre projet d’application si un modèle d’interface utilisateur ne vous manque pas, ou si vous souhaitez simplement créer l’application à partir de zéro. 
+À la différence de la phase de conception, vous pouvez utiliser ces composants d’interface utilisateur Fluent dans votre projet d’application si un modèle d’interface utilisateur manque un élément dont vous avez besoin ou si vous souhaitez simplement créer l’application à partir de zéro. 
 
 (Remarque : si vous remarquez un manque de quelque chose ou si vous avez une idée pour un modèle, envisagez de contribuer au Teams bibliothèque d’interface utilisateur.)
 

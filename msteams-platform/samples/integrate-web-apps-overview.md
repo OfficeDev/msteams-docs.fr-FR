@@ -1,26 +1,26 @@
 ---
 title: Intégrer les applications Web
 author: Rajeshwari-v
-description: Vue d’ensemble de l’intégration des applications web et des fonctionnalités d’appareil Microsoft Teams application.
+description: Vue d’ensemble de l’intégration d’applications web et de fonctionnalités d’appareil Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Partage d’assistant d’agent virtuel lien profond avec les applications power platform power apps pour les personnes Teams
-ms.openlocfilehash: 54f5345f44c35abbefabba642899a92d515e0aa2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 77daf673fd20c82803b0498487d04fe5232c28ef
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889215"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948578"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
 Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
-Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton Share-to-Teams pour votre site web, l’ajout d’un onglet Microsoft Teams dans SharePoint, la création de liens profonds et l’intégration des fonctionnalités d’appareil.
+Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à l’esprit, la création d’un bouton De partage à Teams pour votre site web, l’ajout d’un Microsoft Teams  dans l SharePoint, la création de liens profonds et l’intégration des fonctionnalités de l’appareil.
 
 ## <a name="prerequisites"></a>Configuration requise   
 
-Pour une intégration efficace, assurez-vous de mieux comprendre les conditions préalables suivantes :
+Pour une intégration efficace, veillez à mieux comprendre les conditions préalables suivantes :
 * Teams fonctionnalités. 
 * SharePoint requises pour le stockage de fichiers et de données.
 * Conditions requises pour les API.
@@ -55,9 +55,9 @@ Virtual Assistant est un modèle open source Microsoft qui vous permet de créer
 
 Vous pouvez utiliser un modèle d’application pour créer des applications personnalisées en fonction des besoins de votre organisation. Ce sont des applications prêtes pour la production Microsoft Teams qui sont pilotées par la communauté, open source et disponibles sur GitHub. Chaque modèle contient des instructions détaillées pour déployer et installer l’application pour votre organisation. Il fournit une application prête à l’emploi que vous pouvez installer et commencer à utiliser immédiatement. 
 
-## <a name="teams-shifts-work-force-management-connectors"></a>Teams Shifts Work Force Management connectors
+## <a name="teams-shifts-work-force-management-connectors"></a>Teams les connecteurs de gestion de la force de travail
 
-Teams Les connecteurs de gestion des équipes de travail sont des intégrations prêtes pour la production, open source et communautaires. Ils offrent une expérience transparente et un processus rapide pour la transformation numérique des employés de première ligne avec Teams Shifts.
+Teams les connecteurs de gestion des équipes de travail sont des intégrations prêtes pour la production, open source et communautaires. Ils offrent une expérience transparente et un processus rapide pour la transformation numérique des employés de première ligne avec Teams Shifts.
 
 ## <a name="install-moodle-lms"></a>Installer Moodle LMS
 
@@ -75,7 +75,7 @@ Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams
 
 Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Ces liens profonds naviguent vers le contenu et les informations de votre onglet. Vous pouvez utiliser des liens profonds pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
 
-## <a name="integrate-device-capabilities"></a>Intégrer des fonctionnalités d’appareil
+## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
 Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
 
@@ -94,7 +94,7 @@ Vous pouvez également intégrer Microsoft 365 pour créer des applications exte
 
 * [Ma map les cas d’utilisation de votre application Teams fonctionnalités de plateforme](~/concepts/design/map-use-cases.md)
 * [Déterminer les points d’entrée de votre application](~/concepts/extensibility-points.md)
-* [Intégrer les applications Web](~/samples/integrating-web-apps.md)
+* [Considérations à prendre en compte pour Teams’intégration](~/samples/integrating-web-apps.md)
 * [Créer des applications personnalisées à code faible pour Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Ajouter un chatbot Power Virtual Agents](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Créer un assistant virtuel](~/samples/virtual-assistant.md)

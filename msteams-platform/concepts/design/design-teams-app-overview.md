@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des Microsoft Teams applications. Les 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888138"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948564"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Conception de votre application Microsoft Teams web
 
@@ -22,7 +22,7 @@ Que vous êtes concepteur, chef de produit, développeur ou fabricant à l’aid
 
 Concevoir une application Teams s’approche de la conception d’une application web conventionnelle, mais également un peu différente. Une conception efficace met en évidence les attributs uniques de votre application tout en s’ajustant naturellement Teams fonctionnalités et contextes.
 
-Ces recommandations et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
+Ces instructions et ressources peuvent vous aider à trouver cet équilibre. Vous savez ce qu’il faut faire et ce qu’il faut éviter lors de la conception de votre application Teams (par exemple, navigation à plusieurs niveaux dans un onglet).
 
 ## <a name="teams-app-design-principles"></a>Teams de conception d’application
 
@@ -57,7 +57,7 @@ Les personnes de tous horizons, de tous les compétences et de toutes les discip
 
 ### <a name="light"></a>Light
 
-L’application se concentre sur les scénarios principaux qui se fondent avec Teams flux de travail.
+L’application se concentre sur les scénarios de base qui se fondent avec Teams flux de travail.
 
    :::column-end:::
 :::row-end:::
@@ -84,7 +84,7 @@ L’application est basée sur un scénario que les personnes doivent faire dans
 
 ### <a name="easy-to-use"></a>Facile à utiliser
 
-L’interface utilisateur est facile à comprendre, agréable dans l’apparence et le ton et rend les utilisateurs plus productifs.
+L’interface utilisateur est facile à comprendre, agréable en apparence et en ton, et rend les utilisateurs plus productifs.
 
    :::column-end:::
    :::column span="":::
@@ -139,14 +139,14 @@ En fonction de Fluent’interface utilisateur, [](design-teams-app-basic-ui-comp
 
 Les outils suivants peuvent aider les concepteurs et les développeurs à démarrer :
 
-### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
+### <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
 Concevez une Teams avec des composants d’interface utilisateur, des modèles et des exemples que vous pouvez faire glisser, déposer et modifier selon vos besoins. Le kit d’interface utilisateur inclut également des informations complètes sur l’apparence et le comportement des applications dans Teams différents scénarios.
 
 > [!div class="nextstepaction"]
 > [Obtenir le kit d’interface utilisateur (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams Bibliothèque d’interface utilisateur
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams’interface utilisateur
 
 Affichez et testez les Teams d’interface utilisateur et les composants associés dans votre navigateur.
 
@@ -169,7 +169,7 @@ Vous pouvez télécharger un exemple d’application pour voir l’apparence et 
 
 Pour en savoir plus, essayez l’une des ressources suivantes :
 
-### <a name="fluent-ui-documentation"></a>Fluent Documentation de l’interface utilisateur
+### <a name="fluent-ui-documentation"></a>Fluent de l’interface utilisateur
 
 Obtenez des exemples de code et des détails d’implémentation pour les composants Fluent’interface utilisateur de base utilisés pour créer Teams expériences utilisateur.
 

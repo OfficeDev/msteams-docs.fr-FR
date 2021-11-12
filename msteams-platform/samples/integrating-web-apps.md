@@ -5,15 +5,15 @@ ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considérations sur l’intégration Teams des données
-ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+title: Considérations à prendre en compte pour Teams’intégration
+ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912254"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948571"
 ---
-# <a name="considerations-for-teams-integration"></a>Considérations sur l’intégration Teams des données 
+# <a name="considerations-for-teams-integration"></a>Considérations à prendre en compte pour Teams’intégration 
 
 Vous pouvez rendre les applications web adaptées Teams fonctionnalités sociales et collaboratives de votre Teams.
   
@@ -23,7 +23,7 @@ Les différents types d’applications que vous pouvez intégrer à Teams sont l
 * **SharePoint**: page SharePoint que vous souhaitez faire surface dans Teams.
 
 Vous pouvez maîtr et suivre les recommandations appropriées applicables à votre scénario d’intégration.
-Ce document donne une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
+Ce document offre une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
  
 ## <a name="get-to-know-teams-platform-capabilities"></a>Faire connaître les fonctionnalités Teams plateforme
 
@@ -48,9 +48,9 @@ Votre application Teams doit inclure les fonctionnalités de collaboration requi
 
 L’intégration de toutes les fonctionnalités d’une application existante dans Teams entraîne souvent une expérience utilisateur forcée ou contre nature, en particulier dans les applications plus volumineuses. Commencez avec les fonctionnalités les plus importantes et celles qui s’intègrent plus naturellement à Teams. Vous pouvez permettre aux utilisateurs de lancer l’application principale et d’accéder à son ensemble complet de fonctionnalités.
 
-**Conditions préalables à l’intégration de votre application à Teams** Voici les conditions préalables à l’intégration de votre application avec Teams. 
+**Les conditions préalables à l’intégration** de votre application Teams suivantes sont les conditions préalables à l’intégration de votre application avec Teams. 
 
-1. [Maposez les cas d’utilisation de votre application Teams fonctionnalités de la plateforme.](../concepts/design/map-use-cases.md)
+1. [Maptez les cas d’utilisation de votre application Teams fonctionnalités de plateforme.](../concepts/design/map-use-cases.md)
 1. [Déterminez les points d’entrée de votre application.](../concepts/extensibility-points.md) S’agit-il d’un usage personnel, d’une collaboration ou des deux ?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>Comprendre les SharePoint et les options
@@ -74,7 +74,7 @@ Si votre application est utilisée par plusieurs organisations, envisagez l’h�
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge de liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
+Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur les Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge des liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
 
 En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-to/access-teams-context.md) [bot.](../bots/how-to/get-teams-context.md)
 
@@ -84,7 +84,7 @@ En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-
 
 Azure Active Directory (AD) est le fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Azure AD.
 
-Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des instructions pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
+Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)
@@ -103,7 +103,7 @@ Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs éléments d’une application pour une expérience Teams native.
+Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
 
 ## <a name="be-smart-when-messaging-users"></a>Soyez intelligent lors de la messagerie des utilisateurs
 

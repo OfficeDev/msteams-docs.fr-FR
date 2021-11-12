@@ -5,12 +5,12 @@ description: Décrit les points d’entrée de votre application, tels que l’�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 1bfaed5ec9c2ef1bec9dc3699dbb5914be213a44
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2dd2670787c3da9140b5798db3e7d28b30271f70
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889078"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948417"
 ---
 # <a name="entry-points-for-teams-apps"></a>Points d’entrée pour les applications Teams
 
@@ -25,7 +25,7 @@ La liste suivante montre comment les fonctionnalités Teams’application sont c
 
 * [**Les onglets**](~/tabs/what-are-tabs.md) offrent une expérience web intégrée en plein écran configurée pour l’équipe, le canal ou la conversation de groupe. Tous les membres interagissent avec le même contenu web, de sorte qu’une expérience d’application mono-page sans état est typique.
 
-* [**Les extensions de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md) sont des raccourcis permettant d'insérer du contenu externe dans une conversation ou de prendre des mesures concernant les messages sans quitter Teams. [Le déploiement de liens fournit](~/messaging-extensions/how-to/link-unfurling.md) un contenu enrichi lors du partage de contenu à partir d’une URL commune.
+* [**Les extensions de messagerie**](~/messaging-extensions/what-are-messaging-extensions.md) sont des raccourcis permettant d'insérer du contenu externe dans une conversation ou de prendre des mesures concernant les messages sans quitter Teams. [Le déploiement de liens](~/messaging-extensions/how-to/link-unfurling.md) fournit un contenu enrichi lors du partage de contenu à partir d’une URL commune.
 
 * Les bots interagissent avec les membres de la conversation par le biais d’une conversation et de la réponse à des [**événements,**](~/bots/what-are-bots.md) tels que l’ajout d’un nouveau membre ou le changement de nom d’un canal. 
    > [!NOTE]
@@ -52,5 +52,5 @@ La liste suivante montre comment les fonctionnalités Teams sont couramment util
 
 ## <a name="see-also"></a>Voir aussi
 
-[Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
-[Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
+* [Teams de conception d’application](../concepts/design/design-teams-app-overview.md) <br>
+* [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
