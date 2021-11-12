@@ -4,12 +4,12 @@ description: Décrit l’authentification silencieuse, l’authentification uniq
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Onglet silencieux de l’authentification AAD teams
-ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e5e8de1878aaec29c8ae1cd8dc1350a110d38b5e
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888026"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949046"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
@@ -27,13 +27,13 @@ Même si la bibliothèque ADAL.js est optimisée pour les applications AngularJS
 
 ## <a name="how-silent-authentication-works"></a>Fonctionnement de l’authentification silencieuse
 
-La ADAL.js crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. Toutefois, la bibliothèque spécifie `prompt=none` , Azure AD affiche jamais la page de se connecte. Si l’interaction utilisateur est requise parce que l’utilisateur doit se connecter ou accorder l’accès à l’application, AAD renvoie immédiatement une erreur ADAL.js signale à votre application. À ce stade, votre application peut afficher un bouton de signature si nécessaire.
+La ADAL.js crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. Toutefois, la bibliothèque spécifie `prompt=none` , Azure AD affiche jamais la page de se connecte. Si l’interaction utilisateur est requise parce que l’utilisateur doit se connecter ou accorder l’accès à l’application, AAD renvoie immédiatement une erreur qui ADAL.js signale à votre application. À ce stade, votre application peut afficher un bouton de signature si nécessaire.
 
 ## <a name="how-to-do-silent-authentication"></a>Procédure d’authentification silencieuse
 
 Le code de cet article provient de l’Teams exemple d’application qui est Teams [exemple d’authentification.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
 
-[Lancez l’onglet configurable](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) d’authentification simple et silencieuse à l’AAD et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
+[Lancez l’onglet configurable de](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) l’authentification simple et sans AAD et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
 
 ### <a name="include-and-configure-adal"></a>Inclure et configurer ADAL
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e14e521941d253a3f259cf93f36bff4d620d55f2
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888187"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949060"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Télécharger votre application dans Microsoft Teams
 
@@ -36,7 +36,7 @@ Vous pouvez charger une version de votre application vers une équipe, une conve
 1. Connectez-vous au client Teams avec [votre compte Microsoft 365 de développement.](~/build-your-first-app/build-and-run.md#prerequisites)
 1. Sélectionnez **applications** et choisissez **Télécharger une application personnalisée.**
 1. Sélectionnez votre package d'.zip fichier. Une boîte de dialogue d’installation s’affiche.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d’écran montrant un exemple de boîte Teams’installation d’une application.":::
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. Ajoutez votre application à Teams.
 
 ## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement
@@ -53,7 +53,7 @@ Teams propose plusieurs façons d’ouvrir des applications. Pour plus d’infor
 
 ## <a name="update-your-app"></a>Mettre à jour votre application
 
-Vous n’avez pas besoin de recharger une version de votre application si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
+Vous n’avez pas à recharger votre application de nouveau si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
 
 ## <a name="remove-your-app"></a>Supprimer votre application
 

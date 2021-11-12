@@ -5,12 +5,12 @@ description: Comprendre comment les webhooks et les connecteurs peuvent connecte
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 6530462d3b0fe23ae6703dd059bba59d72f321b8
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475756"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949053"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks et connecteurs
 
@@ -33,7 +33,7 @@ Les webhooks entrants vous aident à publier des messages à partir d’applicat
 
 ### <a name="office-365-connectors"></a>Connecteurs Office 365
 
-Office 365 Les connecteurs vous permettent de créer une page de configuration personnalisée pour votre webhook entrant et de les créer un package dans le cadre d’Teams app. Vous envoyez des messages principalement à l’aide Office 365 cartes connecteur et vous avez la possibilité d’y ajouter un ensemble limité d’actions de carte. Par exemple, un connecteur météo qui permet aux utilisateurs de sélectionner un emplacement et une heure de la journée, pour recevoir des mises à jour sur la météo de demain. Ils sont configurés au niveau du canal, mais sont installés au niveau de l’équipe.
+Office 365 connecteurs vous permettent de créer une page de configuration personnalisée pour votre webhook entrant et de les créer un package dans le cadre d’une application Teams personnalisée. Vous envoyez des messages principalement à l’aide Office 365 cartes connecteur et vous avez la possibilité d’y ajouter un ensemble limité d’actions de carte. Par exemple, un connecteur météo qui permet aux utilisateurs de sélectionner un emplacement et une heure de la journée, pour recevoir des mises à jour sur la météo de demain. Ils sont configurés au niveau du canal, mais sont installés au niveau de l’équipe.
 
 > [!NOTE]
 > Vous pouvez distribuer l’application Office 365 Connector Teams à notre AppStore.
@@ -42,13 +42,14 @@ Office 365 Les connecteurs vous permettent de créer une page de configuration p
 
 Les messages actionnables permettent aux utilisateurs d’agir sans quitter leur client de messagerie, ce qui augmente l’engagement de l’utilisateur. Avec Office 365 webhooks entrants, vous pouvez envoyer des messages en publiant une charge utile JSON sur l’URL du webhook.
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Créer un webhook sortant](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Créer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Créer un connecteur Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Créer et envoyer des messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer un webhook sortant](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

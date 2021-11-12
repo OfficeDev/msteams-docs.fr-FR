@@ -6,12 +6,12 @@ author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: déployer le chargement de l’application de publication gcc
-ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889187"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949109"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams de messagerie
 
@@ -52,4 +52,4 @@ Pour plus d’informations, [voir publier sur le Teams store.](~/concepts/deploy
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Programme de conformité de l’application Microsoft 365](/microsoft-365-app-certification/overview)
+[Programme de conformité d’Application Microsoft 365](/microsoft-365-app-certification/overview)
