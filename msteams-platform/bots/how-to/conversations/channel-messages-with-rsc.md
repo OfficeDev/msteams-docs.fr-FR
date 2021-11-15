@@ -4,37 +4,38 @@ author: surbhigupta12
 description: Recevoir tous les messages de canal avec des autorisations RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6c509475a94d7f161dd6fb26c46ecb669c4059a1
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155523"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960228"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recevoir tous les messages de canal avec RSC
 
-> [!NOTE]
-> Cette fonctionnalité est actuellement disponible en prévisualisation [pour les](../../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
+Le modèle d’autorisations de consentement spécifique aux ressources(RSC), développé à l’origine pour Teams Graph API, est étendu aux scénarios de bot.
 
-Le modèle d’autorisations de consentement spécifique aux ressources(RSC), développé à l’origine pour Teams Graph API, est désormais étendu aux scénarios de bot.
-
-Actuellement, les bots peuvent uniquement recevoir des messages de canal utilisateur lorsqu’ils sont @mentioned. À l’aide de RSC, vous pouvez désormais demander aux propriétaires d’équipe de consentir à ce qu’un bot reçoie des messages utilisateur sur les canaux standard d’une équipe sans @mentioned. Cette fonctionnalité est activée en spécifiant l’autorisation dans le manifeste d’une `ChannelMessage.Read.Group` application Teams RSC. Après la configuration, les propriétaires d’équipe peuvent donner leur consentement pendant le processus d’installation de l’application.
+À l’aide de RSC, vous pouvez désormais demander aux propriétaires d’équipe de consentir à ce qu’un bot reçoie des messages utilisateur sur les canaux standard d’une équipe sans @mentioned. Cette fonctionnalité est activée en spécifiant l’autorisation dans le manifeste d’une `ChannelMessage.Read.Group` application Teams RSC. Après la configuration, les propriétaires d’équipe peuvent donner leur consentement pendant le processus d’installation de l’application.
 
 Pour plus d’informations sur l’activation du RSC pour votre application, voir le consentement spécifique à [la ressource dans Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>Activer les bots pour recevoir tous les messages de canal
 
-`ChannelMessage.Read.Group`L’autorisation RSC est étendue aux bots. Avec le consentement de l’utilisateur, cette autorisation permet aux applications graphiques d’obtenir tous les messages d’une conversation et aux robots de recevoir tous les messages de canal sans @mentioned.
+`ChannelMessage.Read.Group`L’autorisation RSC est étendue aux bots. Avec le consentement de l’utilisateur, cette autorisation permet aux applications graphiques d’obtenir tous les messages d’une conversation et aux robots de recevoir tous les messages de canal sans être @mentioned.
+
+> [!NOTE]
+> * Les services qui ont besoin d’accéder à toutes les données Teams message électronique doivent utiliser les API Graph qui permettent également d’accéder aux données archivées dans les canaux et les conversations.
+> * Les bots doivent utiliser l’autorisation RSC de manière appropriée pour créer et améliorer l’expérience attrayante pour les utilisateurs de l’équipe, sinon ils ne passeront pas l’approbation `ChannelMessage.Read.Group` du Store. La description de l’application doit inclure la façon dont le bot utilise les données qu’il lit.
+> * L’autorisation RSC peut ne pas être utilisée par les bots comme moyen d’extraire de `ChannelMessage.Read.Group` grandes quantités de données client. 
 
 ## <a name="update-app-manifest"></a>Mettre à jour le manifeste de l’application
 
-Pour que votre bot reçoit tous les messages de canal, RSC doit être configuré dans le manifeste de l’application Teams avec l’autorisation spécifiée `ChannelMessage.Read.Group` dans la `webApplicationInfo` propriété.
-
+Pour que votre bot reçoit tous les messages de canal, RSC doit être configuré dans le manifeste Teams’application avec l’autorisation spécifiée `ChannelMessage.Read.Group` dans la `webApplicationInfo` propriété.
 ![Mettre à jour le manifeste de l’application](~/bots/how-to/conversations/Media/appmanifest.png)
 
 Voici un exemple de `webApplicationInfo` l’objet :
 
-* **id**: ID de votre Azure Active Directory (AAD). Cela peut être le même que votre ID de bot.
+* **id**: ID Azure Active Directory (AAD) d’application. Il peut s’en trouver de même que votre ID de bot.
 * **ressource**: Toute chaîne. Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur.
 * **applicationPermissions**: les autorisations RSC pour votre application doivent `ChannelMessage.Read.Group` être spécifiées. Pour plus d’informations, [voir autorisations spécifiques aux ressources.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)
 
@@ -50,7 +51,7 @@ Le code suivant fournit un exemple de manifeste d’application :
   }
 ```
 
-## <a name="sideload-in-a-team-to-test"></a>Chargement de version test dans une équipe
+## <a name="sideload-in-a-team"></a>Chargement de version de version dans une équipe
 
 Pour tester le chargement d’une version test dans une équipe, si tous les messages de canal d’une équipe avec RSC sont reçus sans être @mentioned :
 
@@ -91,4 +92,4 @@ Pour tester le chargement d’une version test dans une équipe, si tous les mes
 * [Conversations de robots](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Consentement spécifique à la ressource](/microsoftteams/resource-specific-consent)
 * [Tester le consentement spécifique aux ressources](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
-* [Télécharger’application personnalisée dans Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Télécharger application personnalisée dans Teams](~/concepts/deploy-and-publish/apps-upload.md)
