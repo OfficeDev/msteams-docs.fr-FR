@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 920c0ee23ffeb2ea7943579254a115bf2d82fea3
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887726"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041705"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -115,11 +115,13 @@ L’image suivante illustre le panneau latéral en réunion :
 
 ---
 
-Le tableau suivant décrit le comportement de l’application lorsqu’elle est approuvée et non approuvée :
+Le tableau suivant décrit le comportement de l’application lorsqu’elle est validée et non validée :
 
-|Fonctionnalité d’application | L’application est approuvée | L’application n’est pas approuvée |
+|Fonctionnalité d’application | L’application est validée | L’application n’est pas validée |
 |---|---|---|
 | Extensibilité de réunion | L’application s’affiche dans les réunions. | L’application n’apparaîtra pas dans les réunions pour les clients mobiles. |
+
+Pour plus d’informations, voir [les instructions de validation du Store.](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
 #### <a name="post-meeting-app-experience"></a>Expérience d’application post-réunion
 

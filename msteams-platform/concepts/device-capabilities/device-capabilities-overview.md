@@ -3,21 +3,21 @@ title: 'Fonctionnalités de l’appareil : vue d’ensemble'
 author: Rajeshwari-v
 description: Vue d’ensemble des fonctionnalités natives de l’appareil, telles que l’appareil photo, l’image, le média, le microphone, le micro, le code qr, etc.
 ms.author: surbhigupta
-keywords: Image de l’image de l’appareil photo microphone microphone qr code code code-barres code-barres analyse scanneur emplacement des fonctionnalités natives d’autorisations de périphérique
+keywords: Image de l’image de l’appareil photo microphone microphone qr code code-barres analyser les fonctionnalités natives d’autorisations de l’appareil
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d51b9532822a6cb9df2f69975722d16da6ee2531
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889138"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041712"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
 Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’intégrer des fonctionnalités d’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à leurs applications web. Cette intégration réduit le obstacle au développement d’applications, accélère le cycle de développement et crée de nouveaux scénarios ou cas d’utilisation pour la communauté des développeurs.
 
-Les autorisations d’appareil sont différentes dans le navigateur. Pour plus d’informations, voir [autorisations d’appareil de navigateur.](browser-device-permissions.md)
+Les autorisations d’appareil sont différentes dans le navigateur. Auparavant, le navigateur géré comment accorder des autorisations d’accès et maintenant ces autorisations sont gérées dans Microsoft Teams. Pour plus d’informations, voir [autorisations d’appareil de navigateur.](browser-device-permissions.md)
 
 ## <a name="native-device-capabilities"></a>Fonctionnalités natives de l’appareil
 

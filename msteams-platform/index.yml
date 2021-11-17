@@ -4,7 +4,7 @@ summary: 'Obtenez de la documentation, des exemples de code, des didacticiels et
 brand: teams
 metadata:
   title: documentation Microsoft Teams développeur de plateforme web
-  description: 'La plateforme Microsoft Teams développeur permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, mettre l’accent sur la réduction du changement de contexte et créer une collaboration autour du contenu et des flux de travail existants.'
+  description: 'La plateforme de développement Microsoft Teams permet aux développeurs d’intégrer facilement leurs propres applications et services pour améliorer leur productivité, prendre des décisions plus rapidement, fournir le focus en réduisant le changement de contexte et créer une collaboration autour du contenu et des flux de travail existants.'
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -60,6 +60,9 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Connecter services web aux canaux et aux équipes avec des webhooks et Office 365 connecteurs
+        - url: /microsoftteams/platform/m365-apps/overview
+          itemType: overview
+          text: Étendre Teams applications à travers Microsoft 365
     - title: Fonctionnalités
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -113,7 +116,7 @@ conceptualContent:
           text: Intégrer un onglet Teams’un SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
-          text: Intégration avec le système de gestion de l’apprentissage de l’informatique
+          text: Intégration avec le système de gestion de l’apprentissage par le chat
         - url: /microsoftteams/platform/samples/app-templates
           itemType: reference
           text: Intégrer des modèles d’application prêts pour la production
@@ -157,7 +160,7 @@ tools:
     - title: Microsoft Teams Shared Computer Toolkit extension de Visual Studio
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
-    - title: Portail du développeur
+    - title: Portail des développeurs
       imageSrc: ./assets/icons/devp-logo.png
       url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
     - title: Kits de développement logiciel (SDK) Microsoft Graph
