@@ -5,12 +5,12 @@ keywords: boîte à outils visual studio teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e4caacc495fdd7510575a373f33db129c08bad87
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888012"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075471"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio
 
@@ -86,8 +86,3 @@ Dans le portail du développeur [Teams,](https://dev.teams.microsoft.com/home)vo
 
 - Votre administrateur informatique examine ces envois.
 - Vous pouvez revenir à **la** page Publier pour vérifier l’état de votre soumission et savoir si votre application a été approuvée ou rejetée par votre administrateur informatique. C’est également là que vous pouvez soumettre des mises à jour à votre application ou annuler les soumissions actives.
-
-## <a name="next-step"></a>Étape suivante
-
-> [!div class="nextstepaction"]
-> [Créer et exécuter votre première application Microsoft Teams avec Blazor](../get-started/first-app-blazor.md)

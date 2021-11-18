@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0ae8a3b5f080258e870e4b21c91071de6aac4fd5
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887691"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075450"
 ---
 # <a name="apps-for-teams-meetings"></a>Applications pour Teams réunions
 
@@ -22,8 +22,6 @@ Les utilisateurs peuvent accéder aux applications pendant les réunions à l’
 * Pré-phase d’un tableau kanban.
 * Lancez une boîte de dialogue actionnable en réunion.
 * Créer une enquête post-réunion.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
 L’illustration suivante vous donne une idée des fonctionnalités d’extensibilité des applications de réunion :
 

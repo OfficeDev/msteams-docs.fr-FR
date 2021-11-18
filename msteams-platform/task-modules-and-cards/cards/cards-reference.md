@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: medium
 keywords: Référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 03aa96d0007129946f54ac250f339b74462fd8ec
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 47e87ea28a1e003838152cd7f535a23d6861ac6f
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889124"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075589"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -51,7 +51,7 @@ Vous pouvez identifier et utiliser différents types de cartes en fonction des b
 | [Carte adaptative](#adaptive-card) | Cette carte est hautement personnalisable et peut contenir n’importe quelle combinaison de texte, de reconnaissance vocale, d’images, de boutons et de champs d’entrée. |
 | [Carte Hero](#hero-card) | Cette carte contient généralement une seule grande image, un ou plusieurs boutons et une petite quantité de texte. |
 | [Carte de liste](#list-card) | Cette carte contient une liste de défilement d’éléments. |
-| [Office 365 Carte de connecteur](#office-365-connector-card) | Cette carte possède une disposition flexible avec plusieurs sections, champs, images et actions. |
+| [carte Office 365 connecteur d’Office 365](#office-365-connector-card) | Cette carte possède une disposition flexible avec plusieurs sections, champs, images et actions. |
 | [Carte d’accusé de réception](#receipt-card) | Cette carte fournit un reçu à l’utilisateur. |
 | [Carte de signature](#signin-card) | Cette carte permet à un bot de demander à un utilisateur de se rendre. |
 | [Carte miniature](#thumbnail-card) | Cette carte contient généralement une seule image miniature, du texte court et un ou plusieurs boutons. |
@@ -62,7 +62,7 @@ Vous pouvez identifier et utiliser différents types de cartes en fonction des b
 | Type de carte | Bots | Aperçus des extensions de message | Résultats de l’extension de message | Modules de tâche | Webhooks sortants | Webhooks entrants | Connecteurs Office 365 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Carte adaptative | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 Carte de connecteur | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| carte Office 365 connecteur d’Office 365 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Carte Hero | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Carte miniature | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Carte de liste | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -110,8 +110,6 @@ Pour plus d’informations sur la mise en forme du texte dans les cartes, voir [
 Après avoir identifié les propriétés communes de toutes les cartes, vous pouvez désormais utiliser des cartes adaptatives, ce qui vous permet d’augmenter l’engagement et l’efficacité en ajoutant votre contenu actionnable directement dans les applications que vous utilisez.
 
 ## <a name="adaptive-card"></a>Carte adaptative
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
 Une carte adaptative est une carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de reconnaissance vocale, d’images, de boutons et de champs d’entrée. Pour plus d’informations, voir [Cartes adaptatives.](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07)
 
@@ -424,7 +422,7 @@ Le code suivant montre un exemple de carte de liste :
 
 ## <a name="office-365-connector-card"></a>carte Office 365 connecteur
 
-Vous pouvez utiliser une carte connecteur Office 365 qui fournit une disposition flexible et constitue un excellent moyen d’obtenir des informations utiles. La carte Office 365 connecteur est prise en charge dans Teams, et non dans Bot Framework. Cette carte fournit une disposition flexible avec plusieurs sections, champs, images et actions. Cette carte contient une carte de connecteur afin qu’elle puisse être utilisée par des bots. Pour plus d’informations sur les différences entre les cartes de connecteur et la carte connecteur Office 365, consultez des informations supplémentaires [sur la carte Office 365 connecteur.](#additional-information-on-the-office-365-connector-card)
+Vous pouvez utiliser une carte connecteur Office 365 qui fournit une disposition flexible et constitue un excellent moyen d’obtenir des informations utiles. La carte Office 365 connecteur est prise en charge dans Teams, et non dans Bot Framework. Cette carte fournit une disposition flexible avec plusieurs sections, champs, images et actions. Cette carte contient une carte de connecteur afin qu’elle puisse être utilisée par des bots. Pour plus d’informations sur les différences entre les cartes de connecteur et la carte connecteur Office 365, consultez des informations supplémentaires sur [la carte Office 365 connecteur.](#additional-information-on-the-office-365-connector-card)
 
 ### <a name="support-for-office-365-connector-cards"></a>Prise en charge des cartes Office 365 connecteur de connexion
 
@@ -447,7 +445,7 @@ Le tableau suivant fournit les propriétés de la carte Office 365 connecteur :
 
 ### <a name="additional-information-on-the-office-365-connector-card"></a>Informations supplémentaires sur la carte Office 365 Connector
 
-Office 365 Les cartes de connecteur fonctionnent correctement Microsoft Teams, y compris les [ `ActionCard` actions.](/outlook/actionable-messages/card-reference#actioncard-action)
+Office 365 cartes de connecteur fonctionnent correctement dans Microsoft Teams, y compris les [ `ActionCard` actions.](/outlook/actionable-messages/card-reference#actioncard-action)
 
 La différence importante entre l’utilisation de cartes de connecteur à partir d’un connecteur et l’utilisation de cartes de connecteur dans votre bot est la gestion des actions de carte. Le tableau suivant répertorie la différence :
 

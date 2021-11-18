@@ -6,12 +6,12 @@ metadata:
   description: Présentation de la création d’applications pour Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
-  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+  ms.openlocfilehash: 30e47cc11a2799442aa8f7639000f13690046d21
+  ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61061950"
+  ms.lasthandoff: 11/18/2021
+  ms.locfileid: "61075575"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -51,8 +51,6 @@ landingContent:
     links:
     - text: Créer une application avec JavaScript
       url: sbs-gs-javascript.yml
-    - text: Créer une application avec Blazor
-      url: sbs-gs-blazor.yml
     - text: Créer une application avec SPFx
       url: sbs-gs-spfx.yml
     - text: Créer une application avec C# ou .NET
@@ -93,6 +91,14 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: Manifeste d'application
       url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Teams scénarios d’application
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Scénarios de build pour Teams application
+      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - text: Meilleures pratiques en matière Teams scénarios d’application
+      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: Publier et distribuer
   linkLists:
   - linkListType: concept

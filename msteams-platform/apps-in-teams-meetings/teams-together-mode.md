@@ -3,12 +3,12 @@ title: Scènes personnalisées en mode ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 3820a711dfa759e3ad9429efd6b848cbe47e4623
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912240"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075457"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -18,20 +18,18 @@ Les scènes personnalisées en mode ensemble Microsoft Teams un environnement de
 * Combinez numériquement les participants dans une scène virtuelle unique. 
 * Placez les flux vidéo des participants dans des sièges pré-déterminés conçus et corrigés par le créateur de scène.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
-
 Dans les scènes personnalisées du mode Ensemble, la scène est un artefact. La scène est créée par le développeur de scène à l’aide de Microsoft Scene studio. Dans un paramètre de scène en cours, les participants ont des sièges avec des flux vidéo. Les vidéos sont restituer dans ces sièges. Les applications de scène uniquement sont recommandées, car l’expérience pour ces applications est claire.
 
 Le processus suivant donne une vue d’ensemble pour créer une application de scène uniquement :
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Créer une application de scène uniquement" border="false":::
 
-Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création de package d’application en arrière-plan. Plusieurs scènes d’un même package d’application s’affichent sous la forme d’une liste plate pour les utilisateurs.
+Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio Scene gère la création de package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
 
 > [!NOTE]
 > Les utilisateurs ne peuvent pas lancer le mode Ensemble à partir d’un appareil mobile. Toutefois, une fois qu’un utilisateur rejoint une réunion via mobile et le mode Ensemble est allumé à partir du bureau, les utilisateurs mobiles qui ont allumé la vidéo apparaissent en mode Ensemble sur le bureau. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 Vous devez avoir une connaissance de base des éléments suivants pour utiliser des scènes personnalisées du mode Ensemble :
 
@@ -45,7 +43,7 @@ Vous devez avoir une connaissance de base des éléments suivants pour utiliser 
 Prenons les pratiques suivantes pour une expérience de création de scène :
 
 * Assurez-vous que toutes les images sont au format PNG.
-* Assurez-vous que le package final avec toutes les images rassemblées ne doit pas dépasser la résolution 1920x1080. La résolution est un nombre even. Cette résolution est une condition requise pour que les scènes soient affichées correctement.
+* Assurez-vous que le package final avec toutes les images rassemblées ne doit pas dépasser la résolution 1920 x 1080. La résolution est un nombre even. Cette résolution est une condition requise pour que les scènes soient affichées correctement.
 * Assurez-vous que la taille de scène maximale est de 10 Mo.
 * Assurez-vous que la taille maximale de chaque image est de 5 Mo. Une scène est une collection de plusieurs images. La limite est pour chaque image individuelle.
 * Veillez à sélectionner **Transparent** selon les besoins. Cette case à cocher est disponible dans le panneau droit lorsqu’une image est sélectionnée. Les images qui se chevauchent doivent être marquées comme **transparentes** pour indiquer qu’elles se chevauchent dans la scène.
@@ -102,7 +100,7 @@ L’image suivante montre chaque siège représenté en tant qu’avatar pour la
 
 1. Sélectionnez le nombre de participants pour la scène dans la zone Nombre **de participants,** puis sélectionnez **Ajouter**. Une fois la scène livrée, les emplacements d’avatar sont remplacés par les flux vidéo du participant réel. Vous pouvez faire glisser les images des participants autour de la scène et les placer à la position requise. Vous pouvez les re tailler à l’aide de la flèche de re resize.
 
-1. Sélectionnez n’importe quelle image de participant, puis **sélectionnez Affecter** une place pour affecter l’emplacement au participant.
+1. Sélectionnez n’importe quelle image de participant, puis **sélectionnez Affecter** une place pour affecter la place au participant.
 
 1. Sélectionnez **le rôle Organisateur** de réunion ou **Présentateur** pour le participant. Au cours d’une réunion, un participant doit avoir le rôle d’organisateur de la réunion :
 
@@ -121,7 +119,7 @@ L’image suivante montre chaque siège représenté en tant qu’avatar pour la
 
     ![Lancer des scènes personnalisées du mode Ensemble](../assets/images/apps-in-meetings/launchtogethermode.png)
 
-    La scène peut ensuite être vue dans la galerie personnalisée des scènes du mode Ensemble.
+    La scène peut ensuite être vue dans la galerie de scènes personnalisée du mode Ensemble.
 
 Si vous le souhaitez, vous pouvez sélectionner **Partager** **dans** le menu déroulant Enregistrer. Vous pouvez créer un lien partageable pour distribuer vos scènes à d’autres personnes. L’utilisateur peut ouvrir le lien pour installer la scène et commencer à l’utiliser.
 
@@ -206,7 +204,7 @@ Le code suivant est l’exemple scene.json :
 
 Chaque scène possède un ID et un nom uniques. Le JSON de scène contient également des informations sur toutes les ressources utilisées pour la scène. Chaque bien contient un nom de fichier, une largeur, une hauteur et une position sur les axes X et Y. De même, chaque siège contient un ID de siège, sa largeur, sa hauteur et sa position sur les axes X et Y. L’ordre d’altération est généré automatiquement et modifié selon les préférences. Le numéro de l’ordre d’appel correspond à l’ordre des personnes qui rejoignent l’appel.
 
-Représente `zOrder` l’ordre de placement des images et des sièges le long de l’axe Z. Elle donne une idée de profondeur ou de partition si nécessaire. Consultez l’exemple de mise en marche pas à pas. L’exemple utilise `zOrder` le .
+Représente `zOrder` l’ordre de placement des images et des sièges le long de l’axe Z. Elle donne une idée de profondeur ou de partition si nécessaire. Consultez l’exemple de mise en place pas à pas. L’exemple utilise `zOrder` le .
 
 Maintenant que vous avez passé par l’exemple scene.json, vous pouvez activer les scènes personnalisées du mode Ensemble pour vous engager dans des scènes.
 
@@ -221,7 +219,7 @@ Obtenez plus d’informations sur la façon dont un utilisateur s’engage avec 
     >[!NOTE]
     > Lors de la sélection **de l’aperçu** dans Le studio de scène, la scène est installée en tant qu’application dans Microsoft Teams. Il s’agit du modèle pour qu’un développeur teste et teste des scènes à partir du studio Scene studio. Une fois qu’une scène est livrée en tant qu’application, les utilisateurs voient ces scènes dans la galerie de scène.
 
-1. Dans la **page de la** galerie dans le coin supérieur gauche, sélectionnez Mode **Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
+1. Dans la **galerie dans** le coin supérieur gauche, sélectionnez **Mode Ensemble.** La **boîte de dialogue s’affiche** et la scène ajoutée est disponible.
 
 1. Sélectionnez **Modifier la scène** pour modifier la scène par défaut.
 

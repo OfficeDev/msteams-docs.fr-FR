@@ -4,16 +4,16 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Authentification unique Teams AAD api d’authentification unique
-ms.openlocfilehash: e242562c4e533b1a79f14598ad6edcf2bf561b03
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 627c63d758705884adb7c1b5629ecf8f3d13d834
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720336"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075436"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
-Les utilisateurs se connectent à Microsoft Teams par le biais de leur compte Office 365, scolaire ou Microsoft qui est Office 365, Outlook. Vous pouvez tirer parti de l’avantage en permettant à une sign on unique d’autoriser votre onglet Teams ou module de tâche sur les clients de bureau ou mobiles. Si un utilisateur se connecte une seule fois, il n’a pas besoin de se résigner sur un autre appareil, car il est connecté automatiquement. De plus, votre jeton d’accès est déjà pré-accessible pour améliorer les performances et les temps de chargement.
+Les utilisateurs se connectent à Microsoft Teams par le biais de leur compte Office 365, scolaire ou Microsoft qui est Office 365, Outlook, vous pouvez tirer parti de l’avantage en permettant à une sign on unique d’autoriser votre onglet Teams ou module de tâche sur les clients de bureau ou mobiles. Si un utilisateur se connecte une seule fois, il n’a pas besoin de se résigner sur un autre appareil, car il est connecté automatiquement. De plus, votre jeton d’accès est déjà pré-accessible pour améliorer les performances et les temps de chargement.
 
 > [!NOTE]
 > **Teams versions de client mobile avec prise en charge de l' sso**  
@@ -29,7 +29,7 @@ Les utilisateurs se connectent à Microsoft Teams par le biais de leur compte Of
 > [!NOTE]
 > **Démarrage rapide**  
 >
-> Le chemin d’accès le plus simple pour commencer avec l' sso tabulation est le kit Teams outils pour Visual Studio Code. Pour plus d’informations, [voir SSO avec Teams toolkit et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
+> Le chemin d’accès le plus simple pour commencer avec l' sso tabulation est d’utiliser Teams outils pour Visual Studio Code. Pour plus d’informations, [voir SSO avec Teams toolkit et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 
@@ -39,14 +39,14 @@ L’image suivante illustre le fonctionnement du processus DSO :
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. Dans l’onglet, un appel JavaScript est effectué pour `getAuthToken()`. `getAuthToken()`indique Teams obtenir un jeton d’accès pour l’application onglet.
-2. Si l’utilisateur actuel utilise votre application d’onglet pour la première fois, une invite de demande de consentement s’impose. Il existe également une invite de demande pour gérer l’authentification par étapes, telle que l’authentification à deux facteurs.
+2. Si l’utilisateur actuel utilise votre application d’onglet pour la première fois, il existe une invite de demande de consentement si le consentement est requis. Il existe également une invite de demande pour gérer l’authentification par étapes, telle que l’authentification à deux facteurs.
 3. Teams demande le jeton d’accès à l’onglet au point Azure Active Directory (AAD) pour l’utilisateur actuel.
 4. AAD envoie le jeton d’accès à l’onglet à Teams application.
 5. Teams envoie le jeton d’accès à l’onglet à l’onglet dans le cadre de l’objet de résultat renvoyé par `getAuthToken()` l’appel.
 6. Le jeton est analysé dans l’application de l’onglet à l’aide de JavaScript, afin d’extraire les informations requises, telles que l’adresse de l’utilisateur.
 
 > [!NOTE]
-> L’adresse est uniquement valide pour donner son consentement à un ensemble limité d’API de niveau utilisateur , à savoir `getAuthToken()` e-mail, profil, offline_access et OpenId. Il n’est pas utilisé pour d’autres Graph étendues telles que `User.Read` ou `Mail.Read` . Pour obtenir des solutions de contournement suggérées, voir Obtenir un [jeton d’accès Graph autorisations.](#get-an-access-token-with-graph-permissions)
+> Le n’est valide que pour donner son consentement à un ensemble limité d’API au niveau de l’utilisateur , c’est-à-dire la messagerie, le `getAuthToken()` profil, offline_access et OpenId. Il n’est pas utilisé pour d’autres Graph étendues telles que `User.Read` ou `Mail.Read` . Pour obtenir des solutions de contournement suggérées, voir Obtenir un [jeton d’accès Graph autorisations.](#get-an-access-token-with-graph-permissions)
 
 L’API DSO fonctionne également dans les [modules de tâche](../../../task-modules-and-cards/what-are-task-modules.md) qui incorporent du contenu web.
 
@@ -54,26 +54,26 @@ L’API DSO fonctionne également dans les [modules de tâche](../../../task-mod
 
 Cette section décrit les tâches impliquées dans la création d’un onglet Teams qui utilise l' sso. Ces tâches sont linguistiques et non spécifiques à l’infrastructure.
 
-### <a name="1-create-your-aad-application"></a>1. Créez votre application AAD application
+### <a name="1-create-your-aad-application"></a>1. Créer votre application AAD application
 
-**Pour inscrire votre application dans la vue [d’AAD portail](https://azure.microsoft.com/features/azure-portal/)**
+**Pour inscrire votre application dans la vue [d’ensemble AAD portail](https://azure.microsoft.com/features/azure-portal/)**
 
 1. Obtenez votre [ID AAD application .](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
 1. Spécifiez les autorisations dont votre application a besoin pour AAD point de terminaison et, éventuellement, Graph.
-1. [Accordez des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) Teams applications mobiles, web et de bureau.
-1. Pré-autoriser les Teams en sélectionnant  le bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
+1. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour Teams applications de bureau, web et mobiles.
+1. Pré-autoriser Teams en sélectionnant le  bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
 
 > [!NOTE]
 > Vous devez connaître certaines restrictions importantes :
 >
-> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge , c’est-à-dire, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’Graph étendues telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` Graph [autorisations.](#get-an-access-token-with-graph-permissions)
+> * Seules les autorisations d’API Graph niveau utilisateur sont pris en charge , c’est-à-dire, e-mail, profil, offline_access, OpenId. Si vous devez avoir accès à d’autres Graph telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` Graph [autorisations.](#get-an-access-token-with-graph-permissions)
 > * Il est important que le nom de domaine de votre application soit identique au nom de domaine que vous avez inscrit pour AAD application.
 > * Actuellement, plusieurs domaines par application ne sont pas pris en charge.
-> * L’utilisateur doit définir `accessTokenAcceptedVersion` `v2` pour une nouvelle application.
+> * L’utilisateur doit définir `accessTokenAcceptedVersion` `2` pour une nouvelle application.
 
 **Pour inscrire votre application via le portail AAD web**
 
-1. Enregistrez une nouvelle application dans le [portail d AAD appensagements de l’application.](https://go.microsoft.com/fwlink/?linkid=2083908)
+1. Inscrivez une nouvelle application dans le [portail d AAD appens de](https://go.microsoft.com/fwlink/?linkid=2083908) votre entreprise.
 1. Sélectionnez **Nouvelle inscription.** La page **Inscrire une application** s’affiche.
 1. Dans la page **Inscrire une application,** entrez les valeurs suivantes :
     1. Entrez un **nom** pour votre application.
@@ -84,19 +84,19 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
 1. Sélectionnez **Exposer une API** sous **Gérer**.
 
     > [!NOTE]
-    > Si vous construisez une application avec un bot et un onglet, entrez l’URI de l’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+    > Si vous construisez une application avec un bot et un onglet, entrez l’URI d’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
 
-1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les barres obliques doubles et le GUID. L’ID entier doit avoir la forme `api://fully-qualified-domain-name.com/{AppID}` de . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
+1. Sélectionnez **le lien** Définir pour générer l’URI d’ID d’application sous la forme `api://{AppID}` . Insérez votre nom de domaine complet avec une barre oblique « / » à la fin, entre les doubles barres obliques et le GUID. L’ID entier doit avoir la forme `api://fully-qualified-domain-name.com/{AppID}` de . ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` . Le nom de domaine complet est le nom de domaine lisible par l’homme à partir duquel votre application est servie. Si vous utilisez un service de tunneling tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
 1. Sélectionnez **Ajouter une étendue**. Dans le panneau qui s’ouvre, **entrez access_as_user** comme **nom d’étendue.**
 1. In the **Qui can consent?** box, enter **Admins and users**.
-1. Entrez les détails dans les zones de configuration des invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue :
+1. Entrez les détails dans les zones pour configurer les invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue :
     * **Titre du consentement de l’administrateur :** Teams peut accéder au profil de l’utilisateur.
     * **Description du consentement de** l’administrateur : Teams peut appeler les API web de l’application en tant qu’utilisateur actuel.
     * **Titre de consentement utilisateur**: Teams pouvez accéder à votre profil et effectuer des demandes en votre nom.
     * **Description du consentement de l’utilisateur** : Teams pouvez appeler les API de cette application avec les mêmes droits que vous.
 1. Vérifiez que **State** est défini comme **Enabled**.
 1. Sélectionnez **Ajouter une étendue** pour enregistrer les détails. La partie domaine  du nom d’étendue affichée sous le champ de texte doit automatiquement correspondre à l’URI **d’ID** d’application définie à l’étape précédente, avec ajouté à `/access_as_user` la `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` fin.
-1. Dans la section **Applications clientes autorisées,** identifiez les applications que vous souhaitez autoriser pour l’application web de votre application. Sélectionnez **Ajouter une application cliente.** Entrez chacun des ID clients suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
+1. Dans la section **Applications clientes autorisées,** identifiez les applications que vous souhaitez autoriser pour l’application web de votre application. Sélectionnez **Ajouter une application cliente.** Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`pour Teams application mobile ou de bureau.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`pour Teams application web.
 1. Accédez aux **autorisations d’API.** Sélectionnez **Ajouter une autorisation** Microsoft  >  **Graph**  >  **autorisations déléguées,** puis ajoutez les autorisations suivantes à partir Graph API :
@@ -114,12 +114,12 @@ Cette section décrit les tâches impliquées dans la création d’un onglet Te
     Pour entrer un URI de redirection :
     * Sélectionnez **Ajouter une plateforme.**
     * Sélectionnez **web**.
-    * Entrez **l’URI de redirection** de votre application. Cet URI est le même nom de domaine complet que celui que vous avez entré à l’étape 5. Il est également suivi de l’itinéraire d’API dans lequel une réponse d’authentification est envoyée. Si vous êtes suivi de l’un des Teams, l’URI est `https://subdomain.example.com/auth-end` . Pour plus d’informations, [voir flux de code d’autorisation OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+    * Entrez **l’URI de redirection** de votre application. Cet URI est le même nom de domaine complet que celui que vous avez entré à l’étape 5. Il est également suivi de l’itinéraire d’API dans lequel une réponse d’authentification est envoyée. Si vous êtes en train de suivre l’un des Teams, l’URI est `https://subdomain.example.com/auth-end` . Pour plus d’informations, [voir flux de code d’autorisation OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 
     > [!NOTE]
     > L’octroi implicite n’est pas requis pour l' sso tabulation.
 
-Félicitations ! Vous avez rempli les conditions préalables à l’inscription de l’application pour continuer avec votre application d’os d’onglet.
+Félicitations ! Vous avez rempli les conditions préalables à l’inscription de l’application pour poursuivre l’application d' ces onglets.
 
 > [!NOTE]
 >
@@ -173,7 +173,7 @@ Après avoir reçu le jeton d’accès dans le rappel de réussite, décodez le 
 
 |**Exemple de nom**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| SSO d’onglet |Microsoft Teams exemple d’application pour les onglets Azure AD' sso| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Affichage,](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs) </br>[Teams Shared Computer Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| SSO d’onglet |Microsoft Teams exemple d’application pour les onglets et Azure AD ssO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[Affichage,](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs) </br>[Teams Shared Computer Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>Limitations connues
 

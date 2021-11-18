@@ -4,12 +4,12 @@ description: Décrit les cartes et leur utilisation dans les bots, les connecteu
 ms.localizationpriority: medium
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061957"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075443"
 ---
 # <a name="cards"></a>Cartes
 
@@ -54,8 +54,6 @@ Toutes les cartes utilisées par Teams sont répertoriées dans les [types de ca
 
 ## <a name="adaptive-cards"></a>Cartes adaptatives
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
 [Les cartes](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) adaptatives sont une nouvelle spécification entre produits pour les cartes des produits Microsoft, notamment les bots, Cortana, Outlook et Windows. Ils sont le type de carte recommandé pour les nouveaux Teams développement. Pour obtenir des informations générales sur l’équipe des cartes adaptatives, voir [vue d’ensemble des cartes adaptatives.](/adaptive-cards) Vous pouvez utiliser des cartes adaptatives partout où vous utilisez des cartes Hero, des cartes Office 365 et des cartes miniatures existantes.
 
 Outre les cartes adaptatives, Teams prend en charge deux autres types de cartes :
@@ -68,8 +66,6 @@ Outre les cartes adaptatives, Teams prend en charge deux autres types de cartes 
 La recherche d’avance de type ajoutée [](~/task-modules-and-cards/cards/dynamic-search.md) en tant que contrôle d’entrée dans les cartes adaptatives permet une expérience de recherche dynamique à partir d’un jeu de données chargé dynamiquement. Il permet également aux utilisateurs d’effectuer une recherche statique à l’avance de type dans une liste avec un nombre limité de choix. Les clients mobiles et de bureau viennent en charge l’expérience de recherche dynamique avant le type. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartes adaptatives et webhooks entrants
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
 
 > [!NOTE]
 > * Tous les éléments de schéma de carte adaptative native, à l’exception `Action.Submit` de , sont entièrement pris en charge.

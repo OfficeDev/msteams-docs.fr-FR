@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: 51e04b9a43cab20b6854ae9dc8a08b174f36add7
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041705"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075464"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -18,8 +18,6 @@ Teams applications de réunions unifiées reposent sur les concepts suivants :
 * Le cycle de vie des réunions se produit selon différentes étapes : avant la réunion, en réunion et après la réunion.  
 * Il existe trois rôles de participant distincts dans une réunion : organisateur, présentateur et participant. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
 * Il existe différents [types d’utilisateurs](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) dans une réunion : utilisateurs en [client,](/microsoftteams/guest-access)invités, [fédérés](/microsoftteams/manage-external-access)et anonymes.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
 Cet article traite des informations sur le cycle de vie des réunions et sur la façon d’intégrer des onglets, des bots et des extensions de messagerie. Il identifie différents rôles de participant et types d’utilisateurs.
 

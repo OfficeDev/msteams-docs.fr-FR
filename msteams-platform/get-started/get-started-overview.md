@@ -1,15 +1,15 @@
 ---
 title: Mise en place - Vue d’ensemble
-description: Vue d’ensemble de la documentation Microsoft Teams développeur
+description: Vue d’ensemble de la mise en Microsoft Teams documentation du développeur
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams exemples de développeur
-ms.openlocfilehash: 0b2ded130bf68f1db8715c8ff6e10336db6aeb2c
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720088"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075478"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -23,7 +23,7 @@ Voici une idée de ce que vous allez apprendre :
 - Obtenez de l’expérience avec les Shared Computer Toolkit et les SDK.
 - Configurez et créez différents types d’Teams applications.
 
-Examinons rapidement les options de l’environnement de création que vous pouvez choisir et la feuille de route pour la création et le déploiement d’Teams app.
+Examinons rapidement les options de l’environnement de build parmi les options que vous pouvez choisir et la feuille de route pour la création et le déploiement d’une Teams de création.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration montrant les étapes de base pour créer et déployer une Teams application.":::
 
@@ -47,13 +47,10 @@ Si vous connaissez déjà le flux de travail Yeoman, vous préférez peut-être 
 
 ## <a name="build-your-first-teams-app"></a>Créer votre première application Teams de messagerie
 
-Maintenant, nous allons créer votre première Teams application. Tout d’abord, sélectionnez votre langue (ou votre infrastructure) et préparez votre environnement de développement.
+Maintenant, nous allons créer votre première application Teams’application. Tout d’abord, sélectionnez votre langue (ou votre infrastructure) et préparez votre environnement de développement.
 
 > [!div class="nextstepaction"]
 > [Créer une application Teams avec JavaScript à l’aide de React](../sbs-gs-javascript.yml)
-
-> [!div class="nextstepaction"]
-> [Créer une application Teams avec Blazor](../sbs-gs-blazor.yml)
 
 > [!div class="nextstepaction"]
 > [Créer une application Teams avec SPFx](../sbs-gs-spfx.yml)
@@ -63,4 +60,3 @@ Maintenant, nous allons créer votre première Teams application. Tout d’abord
 
 > [!div class="nextstepaction"]
 > [Créer une application Teams avec Node.js](../sbs-gs-nodejs.yml)
-

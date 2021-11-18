@@ -5,17 +5,14 @@ description: Décrit la recherche typeahead avec le contrôle Input.ChoiceSet da
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: ef77d35bc92726ac0d9d0264585a32249dbeb75b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61062063"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075582"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>Recherche typeahead dans les cartes adaptatives  
-
-> [!NOTE]
-> Actuellement, cette fonctionnalité est disponible en prévisualisation [pour les](~/resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
+# <a name="typeahead-search-in-adaptive-cards"></a>Recherche typeahead dans les cartes adaptatives
 
 La fonctionnalité de recherche Typeahead dans les cartes adaptatives offre une expérience de recherche améliorée sur `input.choiceset` le composant. Il fournit une liste de choix pour entrer du texte dans le champ de recherche. Vous pouvez incorporer la recherche typeahead avec des cartes adaptatives pour rechercher et sélectionner des données.
 
@@ -301,3 +298,6 @@ Exemple de charge utile qui contient une recherche de typeahead statique et dyna
 ```
 
 ## <a name="see-also"></a>Voir aussi
+
+* [Actions universelles pour les cartes adaptatives](Universal-actions-for-adaptive-cards/Overview.md)
+* [Modules de tâche](../what-are-task-modules.md)
