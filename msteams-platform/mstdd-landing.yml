@@ -6,12 +6,12 @@ metadata:
   description: Présentation de la création d’applications pour Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 9d08880e0cb4d1788d0a88f5f3b38cc71bdfc396
-  ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
+  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61051188"
+  ms.locfileid: "61061950"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -19,6 +19,8 @@ landingContent:
     links:
     - text: Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office (aperçu)
       url: ~/m365-apps/overview.md
+    - text: Recherche typeahead dans la carte adaptative
+      url: ~/task-modules-and-cards/cards/dynamic-search.md
     - text: Permettre aux bots de recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC)
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
     - text: Monétiser votre Teams application avec une offre SaaS transactable

@@ -4,12 +4,12 @@ description: Décrit les cartes et leur utilisation dans les bots, les connecteu
 ms.localizationpriority: medium
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: a6e7f706d114422e99668b6a123dd3feb2cf886c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888292"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061957"
 ---
 # <a name="cards"></a>Cartes
 
@@ -20,7 +20,7 @@ Les bots pour Teams les types de cartes suivants :
 - Carte adaptative
 - Carte Hero
 - Carte de liste
-- Office 365 Carte de connecteur
+- carte Office 365 connecteur d’Office 365
 - Carte d’accusé de réception
 - Carte de signature
 - Carte miniature
@@ -62,6 +62,10 @@ Outre les cartes adaptatives, Teams prend en charge deux autres types de cartes 
 
 * Cartes de connecteur : utilisées dans le cadre Office 365 connecteurs.
 * Cartes simples : utilisées à partir de Bot Framework, telles que les cartes miniatures et hero.
+
+### <a name="type-ahead-search-in-adaptive-cards"></a>Recherche à l’avance de type dans les cartes adaptatives  
+
+La recherche d’avance de type ajoutée [](~/task-modules-and-cards/cards/dynamic-search.md) en tant que contrôle d’entrée dans les cartes adaptatives permet une expérience de recherche dynamique à partir d’un jeu de données chargé dynamiquement. Il permet également aux utilisateurs d’effectuer une recherche statique à l’avance de type dans une liste avec un nombre limité de choix. Les clients mobiles et de bureau viennent en charge l’expérience de recherche dynamique avant le type. 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartes adaptatives et webhooks entrants
 

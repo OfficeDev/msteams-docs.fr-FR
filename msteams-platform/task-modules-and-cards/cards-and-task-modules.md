@@ -4,12 +4,12 @@ description: Découvrez les types de cartes pris en charge dans les bots pour Te
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 08128a81c913134c8c2e7d5b124c796661636b85
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888271"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061971"
 ---
 # <a name="cards-and-task-modules"></a>Cartes et modules de tâche
 
@@ -22,7 +22,7 @@ Les types de cartes suivants sont pris en charge dans les bots pour Teams :
 * Carte adaptative
 * Carte Hero
 * Carte de liste
-* Office 365 Carte de connecteur
+* carte Office 365 connecteur d’Office 365
 * Carte d’accusé de réception
 * Carte de signature
 * Carte miniature
@@ -35,6 +35,7 @@ Vous pouvez ajouter et répondre à des actions de carte qui :
 * Envoyer des messages et de la charge utile au bot
 * Lancer le flux OAuth
 
+Vous pouvez offrir une expérience [de recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) dans un jeu de données de grande taille à l’aide du contrôle d’avance de type dans les cartes adaptatives. Vous pouvez également effectuer une recherche statique à l’avance de type dans un nombre limité de choix. Vous pouvez appeler les modules de tâche dans des onglets de canal ou personnels, des bots ou des liens profonds. L’expérience de votre utilisateur pour les flux de travail nécessitant une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir Teams bots à l’aide de boutons sur les cartes adaptatives et les cartes Bot Framework.
 Vous pouvez appeler les modules de tâche dans des onglets de canal ou personnels, des bots ou des liens profonds. L’expérience de votre utilisateur pour les flux de travail nécessitant une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir Teams bots à l’aide de boutons sur les cartes adaptatives et les cartes Bot Framework.
 
 ## <a name="see-also"></a>Voir aussi
