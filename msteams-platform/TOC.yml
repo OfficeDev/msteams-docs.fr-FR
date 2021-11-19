@@ -14,8 +14,6 @@
       href: get-started/get-started-overview.md
     - name: Créer votre première application à l’aide de JavaScript
       href: sbs-gs-javascript.yml
-    - name: Créer votre première application à l’aide de Blazor
-      href: sbs-gs-blazor.yml
     - name: Créer votre première application à l’aide de SPFx
       href: sbs-gs-spfx.yml
     - name: Créer votre première application à l’aide C# de .NET
