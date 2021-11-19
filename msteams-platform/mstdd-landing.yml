@@ -6,17 +6,19 @@ metadata:
   description: Présentation de la création d’applications pour Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 30e47cc11a2799442aa8f7639000f13690046d21
-  ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+  ms.openlocfilehash: 6b0bfc48abee1941bc9b24d5ccc256c27d5940d6
+  ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 11/18/2021
-  ms.locfileid: "61075575"
+  ms.locfileid: "61078738"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
+    - text: Instructions de validation du magasin Microsoft Teams
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office (aperçu)
       url: ~/m365-apps/overview.md
     - text: Recherche typeahead dans la carte adaptative

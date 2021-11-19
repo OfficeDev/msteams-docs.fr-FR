@@ -3,13 +3,13 @@ title: Nouveautés
 description: Décrit toutes les nouvelles fonctionnalités de développement dans Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: nouveautés des équipes
-ms.openlocfilehash: f980c31389408e51ddc44337db1c5b8a93f1ff1c
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
+ms.openlocfilehash: ba1dab69442ec7693462456fd26bb58b9223df6c
+ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061978"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61078745"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+| 11/17/2021| Mise à jour des Microsoft Teams de validation du magasin de données|[Recommandations en matière de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Recherche de typeahead statique et dynamique pour les utilisateurs de bureau et mobiles.| • Créer des cartes et des modules de tâche > créer des cartes > [recherche Typeahead dans les cartes adaptatives](task-modules-and-cards/cards/dynamic-search.md) </br> • Créer des cartes et des modules de tâche > créer des cartes > vue d> la recherche à l’avance sur les types  [dans les cartes adaptatives](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Créer des cartes et des modules de tâche > vue d> [cartes et modules de tâche](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office (aperçu) | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 | 11/13/2021| Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC). | • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous les messages de canal [avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créez des bots > conversations de bot > [conversation bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) |
@@ -36,11 +37,12 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Mettre à jour** | **Recherchez ici** |
+| **Date** | **Mise à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
-| 11/17/2021| Recherche de typeahead statique et dynamique pour les utilisateurs de bureau et mobiles.| • Créer des cartes et des modules de tâche > créer des cartes > [recherche Typeahead dans les cartes adaptatives](task-modules-and-cards/cards/dynamic-search.md) </br> • Créer des cartes et des modules de tâche > créer des cartes > vue d> la recherche à l’avance sur les types  [dans les cartes adaptatives](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Créer des cartes et des modules de tâche > vue d> [cartes et modules de tâche](task-modules-and-cards/cards-and-task-modules.md)|
-| 11/13/2021| Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC). | • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous les messages de canal [avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|10/28/2021 | Monétisez votre Teams application avec une offre SaaS transactable.| Distribuer votre application > publier sur le Teams store > inclure une offre [SaaS](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) avec votre application Teams application |
+|11/17/2021| Mise à jour des Microsoft Teams de validation du magasin de données|[Recommandations en matière de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
+|11/17/2021| Recherche de typeahead statique et dynamique pour les utilisateurs de bureau et mobiles.| • Créer des cartes et des modules de tâche > créer des cartes > [recherche Typeahead dans les cartes adaptatives](task-modules-and-cards/cards/dynamic-search.md) </br> • Créer des cartes et des modules de tâche > créer des cartes > vue d> la recherche à l’avance sur les types  [dans les cartes adaptatives](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Créer des cartes et des modules de tâche > vue d> [cartes et modules de tâche](task-modules-and-cards/cards-and-task-modules.md)|
+|11/13/2021| Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC). | • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous les messages de canal [avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021| Monétisez votre Teams application avec une offre SaaS transactable.| Distribuer votre application > publier sur le Teams store > inclure une offre [SaaS](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) avec votre application Teams application |
 |10/25/2021| Mise à jour du module de mise en Microsoft Teams documentation du développeur avec une nouvelle structure et de nouvelles procédures dans un guide pas à pas.| Mise en > [la mise en place de votre première Teams application](get-started/get-started-overview.md) |
 |10/21/2021| Ajoutez une `registerOnFocused` API pour les onglets ou les applications personnelles. | Créer des onglets > créer des onglets personnels > [API Ajouter `registerOnFocused` des onglets ou des applications personnelles](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| L’étape de réunion est désormais disponible dans GA. | Créer des applications pour Teams réunions > activer et configurer vos [applications pour Teams réunions](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
@@ -94,7 +96,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Mettre à jour** | **Recherchez ici** |
+| **Date** | **Mise à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Intégration de la plateforme d’identité Teams Shared Computer Toolkit et Visual Studio Code pour les onglets.|[Authentification unique avec authentification unique Teams Shared Computer Toolkit et Visual Studio Code pour les onglets](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams manifeste de l’application mis à jour vers la version 1.8.|[Référence : schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -128,7 +130,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Mettre à jour** | **Recherchez ici** |
+| **Date** | **Mise à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | Le `replyToId` paramètre dans les charges utiles envoyées à un bot n’est plus chiffré, ce qui vous permet d’utiliser cette valeur pour créer des liens profonds vers ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre `legacy.replyToId` .  |
 | 11/05/2019 | Sign-on unique using the Teams JavaScript SDK. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -158,7 +160,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Mettre à jour** | **Recherchez ici** |
+| **Date** | **Mise à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Les onglets de la conversation de groupe sont désormais disponibles dans la version finale de Teams. Dans le cadre de ce travail, la section Onglets a été retravaillée pour plus de clarté.| [Onglets configurables](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | La mise en place de Node JS et de .NET/C# a été mise à jour pour utiliser App Studio dans Teams et une nouvelle section a été ajoutée sur l’hébergement d’applications Teams node dans Azure. | Commencer à travailler sur la plateforme Microsoft Teams avec [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)et App Studio, commencer sur la plateforme Microsoft Teams avec [Node JS](~/get-started/get-started-nodejs-app-studio.md)et App Studio, héberger votre application [node Teams dans Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -198,7 +200,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 La prévisualisation pour développeurs est un programme public qui fournit un accès en avant-première aux fonctionnalités Teams plateforme.  
 
-| **Date** | **Mettre à jour** | **Recherchez ici** |
+| **Date** | **Mise à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
 | 11/15/2021 | Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC).| • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous [les messages avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifeste d’application > prévisualisation pour les développeurs > [schéma de manifeste de prévisualisation pour les développeurs](~/resources/schema/manifest-schema-dev-preview.md) |
