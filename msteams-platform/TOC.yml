@@ -300,6 +300,8 @@
           href: task-modules-and-cards/cards/cards-format.md
         - name: Actions de carte
           href: task-modules-and-cards/cards/cards-actions.md
+        - name: Recherche anticipée dans la carte adaptative
+          href: task-modules-and-cards/cards/dynamic-search.md
         - name: Actions universelles pour les cartes adaptatives
           items:
             - name: Présentation
