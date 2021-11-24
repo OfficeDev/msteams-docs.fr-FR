@@ -1,0 +1,150 @@
+### YamlMime:Tutorial
+title: Générateur de jetons de réunion
+metadata:
+  title: Générateur de jetons de réunion
+  description: Dans ce didacticiel, vous allez apprendre à configurer un générateur de jetons de réunion pour Teams.
+  audience: Developer
+  level: Beginner
+  ms.date: 11/24/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialTitle: En savoir plus pour authentifier les applications Teams réunion
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 1345a7a9afa088622ee3a8e419e3861ea00fab8c
+  ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 11/24/2021
+  ms.locfileid: "61156692"
+items:
+- durationInMinutes: 1
+  content: >
+    L’application Générateur de jetons de réunion vous permet d’améliorer votre expérience de réunion Teams en permettant aux participants de la réunion de demander un jeton. L’application génère des jetons de manière séquentielle afin que chaque participant ait la même opportunité d’interagir dans la réunion. Par exemple, l’application est utile dans les sessions Q&A et dans les réunions, telles que les réunions scrum.
+
+
+    > [!NOTE]
+
+    > Les onglets de réunion pour l’application Générateur de jetons de réunion sont disponibles uniquement dans Teams **client de bureau.**
+
+
+    **Principales fonctionnalités du générateur de jetons de réunion**
+
+
+    * Affiche le jeton actuel qui est en cours de service dans la réunion.
+
+    * Affiche la liste d’utilisateurs triée par numéro de jeton.
+
+    * Génère un jeton pour l’utilisateur sur demande.
+
+    * Affiche le numéro de jeton de l’utilisateur actuel.
+
+    * Permet à l’organisateur d’ignorer le jeton de réunion actuel.
+
+
+    **Différentes façons d’interagir avec l’utilisateur**
+
+
+    * Jeton : demande un jeton pour l’utilisateur.
+
+    * Terminé : confirme la génération de jetons pour l’utilisateur.
+
+    * Skip : ignore l’utilisateur actuel et passe à la personne suivante en ligne pour un jeton.
+
+       > [!NOTE]
+       > L’ignorer est disponible uniquement pour les organisateurs de la réunion.
+
+    Ce guide pas à pas vous aide à générer un jeton de réunion pour étendre les réunions dans Teams. Vous verrez le résultat suivant :
+
+       ![Votre jeton](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+- title: Configuration requise
+  durationInMinutes: 1
+  content: "Veillez à installer les outils suivants et à configurer votre environnement de développement :  \n\n* [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 ou ultérieure\n* [ngrok](https://ngrok.com/download) dernière version (uniquement pour le test de la boîte de développement) ou toute solution de tunneling équivalente\n* [Obtenir un client Teams développeur gratuit](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n\nAssurez-vous d’avoir une connaissance approfondie des technologies suivantes :\n\n* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET version principale](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) 3.1\n* [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 ou ultérieure\n"
+- title: Configurer l’environnement local
+  durationInMinutes: 1
+  content: "Clonez `Microsoft-Teams-Samples` le référentiel dans votre GitHub :  \n\n 1. Ouvrez [Microsoft Teams exemples.](https://github.com/OfficeDev/Microsoft-Teams-Samples)\n 1. Sélectionnez **code**.\n 1. Dans le menu déroulant, sélectionnez **Ouvrir avec GitHub Bureau.**\n\n    ![Référentiel de clones](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)\n\n 1. Sélectionnez **Clone**. \n"
+- title: Créer et inscrire votre bot dans AAD web
+  durationInMinutes: 5
+  content: "Pour créer et inscrire votre bot dans Azure Active Directory(AAD), créer un tunnel à l’aide de ngrok et ajouter un point de terminaison de messagerie, effectuez les étapes suivantes :\n\n* Créez une ressource Azure Bot pour inscrire le bot auprès d’Azure Bot Service.\n* Créez une secret client qui permet l’authentification sso du bot.\n* Ajoutez Microsoft Teams canal pour déployer le bot sur un canal Teams’accès.\n* Utilisez ngrok pour créer un tunnel vers les points de terminaison de votre serveur web.\n* Ajoutez le point de terminaison de messagerie au tunnel ngrok que vous avez créé.\n\n**Pour créer une ressource Azure Bot**\n\n1. Accédez au [Portail Azure](https://portal.azure.com/).\n1. Sélectionnez **Créer une ressource**.\n1. Dans la zone de recherche, entrez **Azure Bot**.\n1. Sélectionnez **Entrée**.\n1. Sélectionnez **Azure Bot**.\n\n     ![Créer une carte de bot Azure](~/assets/images/bots/createazurebot.png)\n\n1. Sélectionnez **Créer**.\n1. Entrez le nom de handle de bot requis dans **le handle bot.**\n1. Dans la **liste de** listes des abonnements, sélectionnez **msteams.nonprod.pub.msft.aplt**.\n1. Dans la liste **de listes** des groupes de ressources, sélectionnez votre groupe de ressources existant. Vous pouvez également créer un nouveau groupe de ressources (sélectionnez Créer **un** nouvel > entrez le nom de la ressource > sélectionnez **OK).**\n\n1. Sélectionnez l’emplacement requis dans **la liste** de listes de listes listes des emplacements du nouveau groupe de ressources.\n\n    ![Créer un bot Azure de ressources](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png)\n\n1. Dans la section **ID de l’application Microsoft,** l’option Créer un **ID** d’application Microsoft est sélectionnée par défaut. \n\n   Vous pouvez  soit sélectionner Utiliser l’inscription d’application existante et entrer **l’ID** d’application existant et le mot de passe **de** l’application existante, soit sélectionner Créer un **ID d’application Microsoft.**\n\n   > [!NOTE]\n   > Vous ne pouvez pas créer plusieurs bots avec le même **ID d’application Microsoft.**\n\n1. Sélectionnez **Examiner et créer**.\n\n    ![Créer un ID d’application Microsoft](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)\n\n1. Si la validation est validée, sélectionnez **Créer.**\n\n    La mise en service de votre service de bot prend quelques instants.\n\n1. Sélectionnez **Accéder à la ressource**. \n\n    ![Déployer l’application](~/assets/images/meeting-token-generator/meeting-token-generator-botdeployment.png)\n\n    Votre bot Azure est créé.\n\n    ![Ressource de bot Azure créée](~/assets/images/meeting-token-generator/meeting-token-generator-bot-page.png)\n\n**Pour créer une secret client**\n\n  Effectuez les étapes suivantes si vous avez créé un **ID d’application Microsoft**:\n\n1. Dans le panneau gauche, sélectionnez **Configuration**. \n\n   > [!TIP]\n   > Enregistrez **l’ID d’application Microsoft** ou **l’ID client** pour référence ultérieure.\n\n1. En plus de **l’ID de l’application Microsoft,** sélectionnez **Gérer.**\n\n    ![ID d’application Microsoft](~/assets/images/meeting-token-generator/meeting-token-generator-config.png)\n\n1. Dans la section **Secrets client,** sélectionnez **Nouvelle secret client.** \n\n    ![Nouvelle secret client](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)\n\n   La **fenêtre Ajouter une secret client** s’affiche.  \n\n1. Entrez **une description.**\n\n1. Sélectionnez **Ajouter**.\n\n    ![Ajouter une secret client à l’application](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)\n\n1. Dans la **colonne Valeur,** **sélectionnez Copier dans le Presse-papiers.**\n\n     ![Valeur de la secret client](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)\n   \n   > [!TIP]\n   > Enregistrez la **valeur des secrets client** ou le mot de passe de l’application pour référence ultérieure.\n\n**Pour ajouter le Microsoft Teams canal**\n\n1. Sélectionnez **Accueil**.\n\n    ![Page d’accueil](~/assets/images/meeting-token-generator/meeting-token-generator-gotohome.png)\n\n1. Sélectionnez votre bot à partir **des ressources récentes.**\n\n1. Sélectionnez **Canaux** dans le volet gauche. \n\n1. Sélectionnez **Microsoft Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n1. Cochez la case pour accepter les **conditions d’utilisation.**\n\n1. Sélectionnez **Accepter**.\n\n      ![Conditions d’utilisation](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)\n\n1. Sélectionnez **Enregistrer**.\n\n      ![Sélectionnez Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   \n\n**Pour créer un tunnel pour un serveur web local**\n\nUtilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Exécutez la commande suivante dans ngrok :\n\n ```bash\n ngrok http -host-header=localhost 3978\n ```\n\n> [!NOTE]\n> Lors de la création d’un tunnel ngrok, utilisez plutôt la ligne de commande pour `localhost 5000` `3978` exécuter votre application. \n\n> [!TIP]\n> Si vous rencontrez **ERR_NGROK_4018**, suivez les étapes fournies dans l’invite de commandes pour vous inscrire et authentifier ngrok. Exécutez ensuite la commande `ngrok http -host-header=localhost 3978` .\n\n\n**Pour ajouter un point de terminaison de messagerie**\n\n1. À partir de ngrok, copiez l’URL HTTPS (https vers io).\n\n    ![URL HTTPS ngrok](~/assets/images/meeting-token-generator/meeting-token-generator-ngrok.png)\n\n    > [!NOTE]\n    > L’URL HTTPS dans votre ngrok est votre nom de domaine complet.\n    > Il `WebAppDomain` s’agit d’un nom de domaine complet qui ne `https://` l’inclut pas.\n\n1. Dans **Paramètres** pour le bot Azure que vous avez créé, sélectionnez **Configuration**.\n\n1. Dans **le point de terminaison de messagerie,** utilisez l’URL HTTPS disponible à partir de ngrok et à la fin de l’URL ajouter **/api/messages**.\n\n    ![Point de terminaison de messagerie](~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png)\n\n1. Sélectionnez **Appliquer**.\n\n    Vous avez correctement installé un bot dans Azure Bot Service.\n"
+- title: Mettre à jour l AAD’inscription de l’application pour l' sso tabulation
+  durationInMinutes: 1
+  content: "**Pour inscrire votre application via le portail AAD web**  \n\n1. Accédez au [Portail Azure](https://portal.azure.com/).\n\n1. Sélectionnez **Azure Active Directory**.\n\n1. Dans le panneau de navigation de gauche, sélectionnez **Inscriptions d’applications.**\n\n1. Sélectionnez votre bot.\n\n   ![Inscription d’application](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)\n\n1. Sélectionnez **Exposer une API** sous **Gérer**.\n\n1. Sélectionnez **Définir**.\n\n   ![Exposer une API](~/assets/images/meeting-token-generator/meeting-token-generator-exposeanapi.png)\n\n1. Définissez **l’URI de l’ID d’application** sous la forme `api://{AppID}` .\n\n   ![Lien Définir](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)\n\n1. Insérez `WebAppDomain` la valeur entre et `api://` `/{AppID}` .</br>\n    `api://ae57****.ngrok.io/{AppID}`</br>\n    \n   Le nom de domaine est mis en surbrillant dans l’image suivante :\n    \n    ![URI ID d'application](~/assets/images/meeting-token-generator/meeting-token-generator-appIDuri.png)\n\n    > [!NOTE]\n    > Si vous utilisez un service de tunneling tel que ngrok, veillez à mettre à jour la valeur chaque fois que votre sous-domaine ngrok change.\n    > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, où `f631****.ngrok.io` est le nouveau nom de sous-domaine ngrok.\n\n1. Sélectionnez **Ajouter une étendue**. \n\n1. Dans le panneau qui s’affiche, entrez `access_as_user` le nom de **l’étendue.**\n\n1. Définissez **Qui pouvez consentir à** `Admins and users` .\n\n1. Pour configurer les invites de consentement de l’administrateur et de l’utilisateur avec les valeurs appropriées pour l’étendue, fournissez les informations `access_as_user` suivantes dans les champs :</br>\n\n     * Entrez `Teams can access the user’s profile` le nom complet du consentement de **l’administrateur.**\n\n     * Entrez `Allows Teams to call the app’s web APIs as the current user` en tant que description du consentement de **l’administrateur.**\n\n     * Entrez `Teams can access the user profile and make requests on the user’s behalf` le nom complet du consentement de **l’utilisateur.**\n\n     * Entrez `Enable Teams to call this app’s APIs with the same rights as the user` en tant que description du consentement de **l’utilisateur.**\n\n   L’image suivante montre les champs et les valeurs :\n\n    ![Ajouter une étendue](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)\n\n1. Vérifiez que **State** est défini comme **Enabled**.\n\n1. Sélectionnez **Ajouter une étendue** à enregistrer.\n   Le **nom de l’étendue** doit correspondre à l’URI **de l’ID** d’application avec `/access_as_user` ajouté à la fin.</br>\n       `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`\n\n    ![Étendues](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) \n\n1. Dans la section **Applications clientes autorisées,** identifiez les applications que vous souhaitez autoriser pour l’application web de votre application. \n\n1. Sélectionnez **Ajouter une application cliente.** \n\n1. Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée :</br>\n\n     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Teams application mobile ou de bureau)\n     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`(Teams application web)\n\n     ![Ajouter une application cliente](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) \n\n   L’image suivante affiche les ID clients :\n\n     ![Applications clientes](~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png) \n\n1. Dans le panneau gauche, sélectionnez **Autorisations d’API.** \n\n   > [!NOTE]\n   > Les utilisateurs doivent consentir à ces autorisations uniquement si AAD’application est inscrite dans un autre client.\n\n1. Sélectionnez **Ajouter une autorisation**.\n\n1. Sélectionnez **Microsoft Graph**.\n\n1. Sélectionnez **Autorisations déléguées**.\n\n    Par défaut, **User.Read** est vérifié.\n\n     ![Utilisateur](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)\n\n1. Ajoutez les autorisations suivantes :</br>\n     * **email**\n     * **offline_access**\n     * **OpenId**\n     * **profil**\n\n1. Sélectionnez **Ajouter des autorisations**.\n\n     ![Autres autorisations](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)\n\n1. Dans le panneau gauche, sélectionnez **Authentification** pour définir un URI de redirection. \n\n   > [!NOTE]\n   > Si une application n’est pas accordée au consentement de l’administrateur informatique, les utilisateurs doivent donner leur consentement la première fois qu’ils utilisent une application.\n           \n     1. Sélectionnez **Ajouter une plateforme.**\n     1. Sélectionnez **Web**.\n\n        ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)\n\n     1. Entrez l’URI de redirection de votre application en l’aérant `auth-end` au nom de domaine complet :</br> \n       `https://ae57****.ngrok.io/auth-end`. </br>\n\n     1. Activez **l’octroi implicite et les flux hybrides** en sélectionnant les case à cocher suivantes :\n         * **Jetons d’ID**\n         * **Jetons d’accès**\n\n     1. Sélectionnez **Configurer**.\n\n        ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)\n"
+- title: Configurer les paramètres de l’application
+  durationInMinutes: 1
+  content: "1. Accédez **à appsettings.json dans** le référentiel cloné.\n\n    ![Emplacement des paramètres de l’application](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)\n\n1. Ouvrez **appsettings.json** **dans Visual Studio Code** et mettez à jour les informations suivantes :  \n\n     * Définissez `\"MicrosoftAppId\"` sur **l’ID d’application Microsoft de votre bot.**\n     * `\"MicrosoftAppPassword\"`Définissez-la sur la valeur de l’ID de la secret client de votre bot.\n     * Définissez `\"AzureAd\".\"TenantId\"` ce dernier sur l’ID de locataire du client où l’application est utilisée.\n\n         > [!NOTE]\n         > L’exemple fonctionne uniquement dans le client actuel.\n\n     * Définissez `\"AzureAd\".\"ApplicationId\"` sur **l’ID d’application Microsoft de votre bot.**\n     * Définissez `\"ContentBubbleUrl\"` sur l’URL de l’iframe de bulle de `(https://[WebAppDomain]/contentBubble.html)` contenu.\n\n         > [!NOTE]\n         > `WebAppDomain` est votre domaine ngrok, donc l’URL de la bulle de contenu est similaire à `https://ae57****.ngrok.io/contentBubble.html` .\n\n    ![Paramètres de l’application](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)\n"
+- title: Configurer le fichier manifeste
+  durationInMinutes: 1
+  content: >
+    1. Accédez **à manifest.json dans** le référentiel cloné.
+
+        ![Emplacement du fichier manifeste](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
+
+    1. Ouvrez **manifest.json** **dans Visual Studio Code** et a apporté les modifications suivantes :
+
+         * Définir `manifestVersion` sur `1.11` .
+
+           > [!NOTE]
+           > Fournissez la dernière version.
+
+         * Définir `$schema` sur `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json` .
+         * Définir `resource` sur `api://[WebAppDomainName]/[MicrosoftAppId]` .
+         * Remplacer `[companyName]` par `Contoso` .
+         * Remplacez les sections suivantes par votre nom de domaine complet :
+           * `[websiteUrl]`
+           * `[privacyUrl]`
+           * `[termsOfUseUrl]`
+
+
+           ![Image1 du manifeste](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-1.png)
+
+         * Remplacez toutes les occurrences `[WebAppDomainName]` de votre nom de domaine ngrok.
+         * Remplacez toutes les occurrences `[MicrosoftAppId]` de **l’ID d’application Microsoft de votre bot.**
+
+           ![Image2 du manifeste](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png)
+- title: Créer une application cliente à l’aide de l’installation npm
+  durationInMinutes: 1
+  content: >
+    **Pour créer une application cliente à l’aide de l’installation npm pour générer un dossier distribuable**
+
+
+    1. Accédez au dossier **Application** dans le référentiel cloné.
+
+    1. Copiez le chemin **d’accès** au dossier de l’application.
+
+    1. Ouvrez une nouvelle fenêtre d’invite de commandes, modifiez le répertoire actuel en chemin d’accès à **l’application** copiée.
+
+       ![Chemin d’accès au dossier de l’application](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
+
+    1. Exécutez `npm install` cette application pour télécharger les packages et les dépendances.
+
+    1. Exécutez `npm run build` l’application pour la créer.
+
+       ![Créer une application](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
+
+       Le processus génère le dossier distribuable ou **/dist** à l’intérieur du dossier **d’application** où les biens sont copiés. Le serveur sert les fichiers statiques à partir de l’emplacement.
+
+       ![Dossier distribuable](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
+- title: Créer et exécuter le service
+  durationInMinutes: 1
+  content: "**Pour créer et exécuter le service à l’aide Visual Studio 2019 ou de la ligne de commande**\n\n# <a name=\"visual-studio-2019\"></a>[Visual Studio 2019](#tab/vs2019)\n\n   1. Lancement **Visual Studio 2019**.\n   1. Accédez **à Fichier** ouvert  >    >  **Project/Solution**.\n\n      ![Ouvrir un fichier](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)\n\n   1. Sélectionnez **le fichier TokenApp.csproj** dans **le dossier csharp.**\n\n      ![Fichier de jeton](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)\n\n   1. Appuyez sur **F5** pour exécuter le projet.\n\n   1. Sélectionnez **Oui** si la boîte de dialogue suivante s’affiche :\n\n      ![Certificat d’autorisation](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)\n\n      Une page web s’ouvre avec un message **: l’application est prête !**.\n\n      ![Application prête](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) \n\n    \n# <a name=\"command-line\"></a>[Ligne de commande](#tab/cli)\n\nAccédez au **dossier csharp** dans une fenêtre d’invite de commandes et entrez la commande suivante :\n\n```bash\ndotnet run\n```\n\n![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)\n  \n"
+- title: Activer la prévisualisation pour les développeurs
+  durationInMinutes: 1
+  content: "**Pour activer la prévisualisation pour les développeurs dans votre client Teams bureau**\n\n1. Activez le téléchargement d’applications dans la console d’administration de votre client.\n   1. Connectez-vous [Centre d'administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.\n   1. Dans le panneau gauche, **sélectionnez Afficher tout.**\n   1. Sélectionnez **Teams**.\n\n      ![Menu Centre d’administration](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)\n\n   1. Dans le panneau gauche, sélectionnez **Teams applications.**\n   \n   1. Sélectionnez **les stratégies d’installation.**\n\n      ![Stratégies d’installation](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) \n\n   1. Sélectionnez **Global**.\n\n      ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideloadimage.png)\n\n   1. Basculez Télécharger **les applications personnalisées** en position **on.**\n\n      ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)\n\n   1. Sélectionnez **Enregistrer**. \n   \n      Votre client test peut autoriser le chargement de version test d’une application personnalisée.\n\n      > [!NOTE]\n      > Le chargement de version secondaire prend un certain temps pour devenir actif.\n\n1. Go to **Microsoft Teams**.\n\n1. Dans le coin supérieur droit de votre interface Teams, sélectionnez `...` .\n\n1. Sélectionnez **À propos de**. \n\n1. Sélectionnez **l’aperçu développeur.**\n\n    ![Aperçu pour les développeurs](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)\n\n1. Sélectionnez **Basculer vers l’aperçu développeur.**\n\n    ![Basculer vers la prévisualisation pour les développeurs](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)\n"
+- title: Ajouter une application de jeton de réunion à Teams
+  durationInMinutes: 1
+  content: "**Pour créer une réunion Teams et ajouter une application de jeton de réunion**\n\n1. Dans votre référentiel cloné, accédez à **csharp > Resources > Manifest**.\n\n1. Créez une .zip avec les fichiers suivants présents dans le **dossier manifeste** : \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![Fichier zip](~/assets/images/meeting-token-generator/meeting-token-generator-zipfile.png) \n\n1. Créez une réunion avec quelques présentateurs et participants.\n\n1. Une fois la réunion créée, rendez-vous sur la page des détails de la réunion et **sélectionnez Ajouter** **une application.**\n\n   ![Ajouter une application](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) \n\n1. Dans la fenêtre qui s’ouvre, sélectionnez **Gérer les applications.**\n\n   ![Gérer les applications](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)\n\n1. Sélectionnez **Télécharger une application personnalisée.** \n\n   ![Télécharger application personnalisée](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)\n\n1. Sélectionnez **Ouvrir** pour télécharger le .zip que vous avez créé dans le **dossier manifeste.**\n\n   ![Sélectionner un fichier zip](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)\n\n1. Sélectionnez **Ajouter**.\n\n   ![Ajouter l’application](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)\n\n   La section **Gérer les** applications affiche la liste des applications.\n\n   ![Application dans Gérer les applications](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)\n\n1. Go to Teams meeting.\n\n1. Sélectionnez **Ajouter une application**. \n\n   Dans la page de sélection de l’application, l’application s’affiche en tant **qu’application de jeton de réunion.**\n\n   ![Icône d’application dans Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)\n\n1. Sélectionnez **l’application jeton de réunion.**\n\n1. Sélectionnez **Enregistrer**.\n\n   ![Application d’accueil](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)\n\n   L’application est visible dans la conversation de réunion. \n\n1. Démarrez la réunion. \n\n   L’icône est visible dans la barre de contrôle de réunion.\n\n    ![Jeton dans Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)\n\n > [!NOTE] \n > Lorsque vous travaillez sur votre propre projet, veillez à utiliser un mécanisme de stockage durable pour stocker les informations de jeton et l’URL du service pour le client.\n"
+- title: Défi complet
+  durationInMinutes: 1
+  content: >
+    Avez-vous eu un projet comme celui-ci ?
+
+
+    ![Votre jeton](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+- content: >-
+    Vous avez terminé le didacticiel pour commencer avec une application Générateur de jetons de réunion.
+
+
+    Découvrez à quoi ressemble votre application dans un scénario en temps réel :
+
+
+    ![En temps réel](~/assets/images/meeting-token-generator/meeting-token-generator-realtimescenario.png)
