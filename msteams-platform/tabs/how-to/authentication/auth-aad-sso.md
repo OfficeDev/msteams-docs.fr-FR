@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Authentification unique Teams AAD api d’authentification unique
-ms.openlocfilehash: 627c63d758705884adb7c1b5629ecf8f3d13d834
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 96916d526dba7a6ff7b019fb070b53943b3c216c
+ms.sourcegitcommit: 345d713a680c0e0978d7f82c0330c1fd0d6b3e7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075436"
+ms.lasthandoff: 11/23/2021
+ms.locfileid: "61151896"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
