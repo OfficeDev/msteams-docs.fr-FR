@@ -5,12 +5,12 @@ description: Découvrez comment déployer un lien, ouvrir la vue d’étape et �
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887566"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178261"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -43,9 +43,9 @@ Lorsque l’utilisateur entre une URL sur le client de bureau Teams, [](../task-
 
 Les images suivantes affichent une étape ouverte à partir d’une carte adaptative :
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="700"/>
+[![Ouvrir une étape à partir de la carte adaptative](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
+[![Ouvrir une étape](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
 
 ### <a name="example"></a>Exemple
 
@@ -125,11 +125,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Nom de la propriété | Type | Nombre de caractères | Description |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Chaîne | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
-| `name` | Chaîne | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
+| `entityId` | String | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
+| `name` | String | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
 | `contentUrl` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
 | `websiteUrl?` | String | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
-| `removeUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
+| `removeUrl?` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code
 

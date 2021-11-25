@@ -5,24 +5,24 @@ description: Découvrez comment ajouter un déploiement de lien avec une extensi
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889397"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178292"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Ce document vous guide sur la façon d’ajouter le déploiement de lien au manifeste de votre application à l’aide d’App studio et manuellement. Avec le déploiement de lien, votre application peut s’inscrire pour recevoir une activité lorsque des URL avec un domaine particulier sont passées dans la `invoke` zone de composition du message. Il contient l’URL complète qui a été passée dans la zone de rédaction du message et vous pouvez répondre avec une carte que l’utilisateur peut déployer, fournissant des informations ou `invoke` des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l’URL servant de terme de recherche.
+Ce document vous guide sur la façon d’ajouter le déploiement de lien au manifeste de votre application à l’aide d’App studio et manuellement. Avec le déploiement de lien, votre application peut s’inscrire pour recevoir une activité lorsque des URL avec un domaine particulier sont passées dans la `invoke` zone de composition du message. Contient l’URL complète qui a été passée dans la zone de rédaction du message et vous pouvez répondre avec une carte que l’utilisateur peut déployer, fournissant des informations ou `invoke` des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l’URL servant de terme de recherche.
 
 > [!NOTE]
 > * Actuellement, le déploiement de liaison n’est pas pris en charge sur les clients mobiles.
 > * Le résultat du déploiement du lien est mis en cache pendant 30 minutes.
 
-L Azure DevOps de messagerie utilise le déploiement de liens pour rechercher les URL qui sont passées dans la zone de composition du message pointant vers un élément de travail. Dans l’image suivante, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps, que l’extension de messagerie a résolue en une carte :
+L Azure DevOps de messagerie utilise le déploiement de liaison pour rechercher les URL qui sont passées dans la zone de composition du message pointant vers un élément de travail. Dans l’image suivante, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps, que l’extension de messagerie a résolue en une carte :
 
 ![Exemple de déploiement de lien](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -40,6 +40,7 @@ Pour ajouter le déploiement de lien au manifeste de votre application, ajoutez 
 1. Dans la page **Extension de** messagerie, ajoutez le domaine que vous souhaitez rechercher dans la section Des **handlers de** messages. L’image suivante explique le processus :
 
     ![section des handlers de messages dans App Studio](~/assets/images/link-unfurling.png)
+
     
 ### <a name="add-link-unfurling-manually"></a>Ajouter manuellement le déploiement de lien
 
@@ -76,10 +77,10 @@ Les types de carte suivants sont pris en charge :
 
 * [Carte miniature](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Carte Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Carte de connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [carte Office 365 connecteur d’Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
+Pour plus d’informations, voir [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### <a name="example"></a>Exemple
 

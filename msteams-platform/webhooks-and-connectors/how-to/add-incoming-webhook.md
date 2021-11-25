@@ -6,12 +6,12 @@ keywords: onglets teams webhook sortant
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888313"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178299"
 ---
 # <a name="create-incoming-webhook"></a>Créer un webhook entrant
 
@@ -35,7 +35,7 @@ Le tableau suivant fournit les fonctionnalités et la description du webhook ent
 |Définitions de ressources sécurisées|Les messages sont formatés en tant que charges utiles JSON. Cette structure de messagerie déclarative empêche l’insertion de code malveillant.|
 
 > [!NOTE]
-> * Teams bots, extensions de messagerie, webhook entrant et Bot Framework prise en charge les cartes adaptatives, une infrastructure de plateforme de cartes croisées ouverte. Actuellement, [les connecteurs Teams ne](../../webhooks-and-connectors/how-to/connectors-creating.md) prisent pas en charge les cartes adaptatives. Toutefois, il est possible de créer un [flux](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) qui publie des cartes adaptatives sur Teams canal.
+> * Teams bots, extensions de messagerie, webhook entrant et Bot Framework prise en charge les cartes adaptatives. Les cartes adaptatives sont une infrastructure ouverte de plateforme de cartes croisées qui peut être utilisée sur toutes les plateformes telles que Windows, Android, iOS, etc. Actuellement, [Teams connecteurs ne](../../webhooks-and-connectors/how-to/connectors-creating.md) sont pas en charge les cartes adaptatives. Toutefois, il est possible de créer un [flux](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) qui publie des cartes adaptatives sur Teams canal.
 > * Pour plus d’informations sur les cartes et les webhooks, voir [Cartes adaptatives et Webhooks entrants.](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>Créer un webhook entrant

@@ -5,18 +5,18 @@ description: Découvrez comment répondre à la commande de recherche à partir 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889376"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178278"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Une fois que l’utilisateur a soumis la commande de recherche, votre service web reçoit un message d’appel qui contient un objet avec `composeExtension/query` `value` les paramètres de recherche. Cet appel est déclenché dans les conditions suivantes :
+Une fois que l’utilisateur a soumis la commande de recherche, votre service web reçoit un message d’appel qui contient un objet avec `composeExtension/query` `value` les paramètres de recherche. Cet appel est déclenché avec les conditions suivantes :
 
 * À mesure que des caractères sont entrés dans la zone de recherche.
 * `initialRun` est définie sur true dans le manifeste de votre application, vous recevez le message d’appel dès que la commande de recherche est invoquée. Pour plus d’informations, [voir la requête par défaut.](#default-query)
@@ -98,22 +98,27 @@ Teams prend en charge les types de carte suivants :
 
 * [Carte miniature](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Carte Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Carte de connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [carte Office 365 connecteur d’Office 365](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Carte adaptative](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 Pour avoir une meilleure compréhension et une meilleure vue d’ensemble des cartes, voyez [ce que sont les cartes.](~/task-modules-and-cards/what-are-cards.md)
 
 Pour découvrir comment utiliser les types de carte miniature et hero, voir ajouter des cartes et [des actions de carte.](~/task-modules-and-cards/cards/cards-actions.md)
 
-Pour plus d’informations sur la carte connecteur Office 365, voir Utilisation de [cartes Office 365 connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+Pour plus d’informations sur la carte connecteur Office 365, voir [Utilisation Office 365 cartes de connecteur.](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+
 
 La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de l’une des deux manières :
 
 * Utilisation de la `preview` propriété dans `attachment` l’objet. La `preview` pièce jointe ne peut être qu’une carte hero ou miniature.
-* Extrait de la base `title` et `text` des `image` propriétés de la pièce jointe. Elles sont utilisées uniquement si la `preview` propriété n’est pas définie et que ces propriétés sont disponibles.
-* Les actions d’appui et de bouton de carte Hero ou Miniature, sauf appel, ne sont pas prises en charge dans la carte d’aperçu.
+* Extraction à partir de la base `title` `text` et des `image` propriétés de `attachment` l’objet. Les propriétés de base sont utilisées uniquement si la `preview` propriété n’est pas spécifiée.
 
-Vous pouvez afficher un aperçu d’une carte adaptative ou d’une carte connecteur Office 365 dans la liste des résultats à l’aide de sa propriété d’aperçu. La propriété d’aperçu n’est pas nécessaire si les résultats sont déjà des cartes Hero ou Thumbnail. Si vous utilisez la pièce jointe d’aperçu, il doit s’agit d’une carte Hero ou miniature. Si aucune propriété d’aperçu n’est spécifiée, l’aperçu de la carte échoue et rien n’est affiché.
+Pour la carte Hero ou miniature, sauf que l’action d’appel d’autres actions telles que le bouton et l’appui ne sont pas prises en charge dans la carte d’aperçu.
+
+Pour envoyer une carte adaptative ou une carte de connecteur Ofiice 365, vous devez inclure un aperçu. La `preview` propriété doit être une carte Hero ou Miniature. Si vous ne spécifiez pas la propriété d’aperçu dans `attachment` l’objet, un aperçu n’est pas généré.
+
+Pour les cartes Hero et Thumbnail, vous n’avez pas besoin de spécifier une propriété d’aperçu, un aperçu est généré par défaut. L’exemple suivant affiche la fonctionnalité de déploiement de lien lorsqu’un lien est passé dans l’extension de messagerie :  
+![déploiement de lien](~/assets/images/messaging-extension/link-unfurl.gif)
 
 ### <a name="response-example"></a>Exemple de réponse
 
@@ -311,6 +316,76 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 ```
 
 * * *
+
+### <a name="enable-and-handle-tap-actions"></a>Activer et gérer les actions d’pression
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
+{
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
+
+    var card = new ThumbnailCard
+    {
+        Title = "Card Select Item",
+        Subtitle = description
+    };
+
+    var attachment = new MessagingExtensionAttachment
+    {
+        ContentType = ThumbnailCard.ContentType,
+        Content = card,
+    };
+
+    return Task.FromResult(new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+        {
+            Type = "result",
+            AttachmentLayout = "list",
+            Attachments = new List<MessagingExtensionAttachment> { attachment }
+        }
+    });
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+async handleTeamsMessagingExtensionSelectItem(context, obj) {
+        return {
+            composeExtension: {
+                  type: 'result',
+                  attachmentLayout: 'list',
+                  attachments: [CardFactory.thumbnailCard(obj.Item3)]
+            }
+        };
+    } 
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "name": "composeExtension/selectItem",
+    "type": "invoke",
+    "value": {
+        "Item1": "Package_Name",
+        "Item2": "Version",
+        "Item3": "Package Description"
+    },
+    .
+    .
+    .
+}
+```
+
+* * *
+
+> [!NOTE]
+> `OnTeamsMessagingExtensionSelectItemAsync` n’est pas déclenché dans l’application mobile teams.
 
 ## <a name="default-query"></a>Requête par défaut
 

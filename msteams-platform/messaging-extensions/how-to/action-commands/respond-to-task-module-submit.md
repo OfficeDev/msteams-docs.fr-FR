@@ -5,12 +5,12 @@ description: Décrit comment répondre à l’action d’envoi du module de tâc
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fba79695458374e80cfe604377fd7d7c5e05a2ff
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948410"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178284"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
@@ -21,12 +21,12 @@ Une fois qu’un utilisateur a soumis le module de tâche, votre service web re�
 
 Vous avez les options suivantes pour répondre :
 
-* Aucune réponse : utilisez l’action d’soumission pour déclencher un processus dans un système externe, et ne fournissez pas de commentaires à l’utilisateur, il est utile pour les processus de longue durée et choisissez de fournir des commentaires en alternative. Par exemple, vous pouvez envoyer des commentaires avec un [message proactif.](~/bots/how-to/conversations/send-proactive-messages.md)
+* Aucune réponse : utilisez l’action d’soumission pour déclencher un processus dans un système externe et ne pas fournir de commentaires à l’utilisateur. Il est utile pour les processus de longue durée et pour fournir des commentaires en alternative. Par exemple, vous pouvez envoyer des commentaires avec un [message proactif.](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Autre module de tâche](#respond-with-another-task-module): vous pouvez répondre avec un module de tâche supplémentaire dans le cadre d’une interaction en plusieurs étapes.
 * [Réponse de carte](#respond-with-a-card-inserted-into-the-compose-message-area): vous pouvez répondre avec une carte avec qui l’utilisateur peut interagir ou l’insérer dans un message.
 * [Carte adaptative du bot](#bot-response-with-adaptive-card): insérez une carte adaptative directement dans la conversation.
 * [Demandez à l’utilisateur de s’authentifier.](~/messaging-extensions/how-to/add-authentication.md)
-* [Demandez à l’utilisateur de fournir une configuration supplémentaire]~/get-started/first-message-extension.md).
+* [Demandez à l’utilisateur de fournir une configuration supplémentaire.](~/get-started/first-message-extension.md)
 
 Pour l’authentification ou la configuration, une fois que l’utilisateur a terminé le processus, l’appel d’origine est resenté à votre service web. Le tableau suivant indique les types de réponses disponibles en fonction de l’emplacement d’appel `commandContext` de l’extension de messagerie : 
 
@@ -71,7 +71,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramètre indique d’où votre extension de messagerie a été déclenchée. L’objet contient les champs du formulaire en tant que paramètres et les `data` valeurs envoyées par l’utilisateur. L’objet JSON met en évidence les champs les plus pertinents.
+Voici un exemple de l’objet JSON que vous recevez. Le `commandContext` paramètre indique d’où votre extension de messagerie a été déclenchée. `data`L’objet contient les champs du formulaire en tant que paramètres et les valeurs envoyées par l’utilisateur. L’objet JSON met en évidence les champs les plus pertinents.
 
 ```json
 {
@@ -589,15 +589,15 @@ La section suivante décrit les entités du `OnBehalfOf` tableau :
 |Champ|Type|Description|
 |:---|:---|:---|
 |`itemId`|Entier|Décrit l’identification de l’élément. Sa valeur doit être `0` .|
-|`mentionType`|Chaîne|Décrit la mention d’une « personne ».|
-|`mri`|Chaîne|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
-|`displayName`|Chaîne|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution des noms.|
+|`mentionType`|String|Décrit la mention d’une « personne ».|
+|`mri`|String|Identificateur de ressource de message (IRM) de la personne au nom de laquelle le message est envoyé. Le nom de l’expéditeur du message s’affiche comme « \<user\> \<bot name\> jusqu’à ».|
+|`displayName`|String|Nom de la personne. Utilisé comme solution de retour en cas d’indisponibilité de la résolution des noms.|
   
 ## <a name="code-sample"></a>Exemple de code
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

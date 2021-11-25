@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912205"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178243"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -343,7 +343,7 @@ Cette chaîne de version doit suivre la [norme de semver](http://semver.org/) (M
 
 **Obligatoire**: ID d’application Microsoft
 
-L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework. Vous avez un ID si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription [des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
+L’ID est un identificateur unique généré par Microsoft pour l’application. Vous avez un ID si votre bot est inscrit via le Microsoft Bot Framework. Vous avez un ID si l’application web de votre onglet se signe déjà avec Microsoft. Vous devez entrer l’ID ici. Sinon, vous devez générer un nouvel ID sur le portail [d’inscription des applications Microsoft.](https://aka.ms/appregistrations) Utilisez le même ID si vous ajoutez un bot.
 
 > [!NOTE]
 > Si vous envoyez une mise à jour à votre application existante dans AppSource, l’ID de votre manifeste ne doit pas être modifié.
@@ -379,7 +379,7 @@ Nom de l’expérience de votre application, affiché aux utilisateurs dans l’
 
 Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource.
 
-Assurez-vous que votre description décrit votre expérience et aide les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et doivent être `full` différentes. Votre description courte ne peut pas être répétée dans la description longue et ne doit inclure aucun autre nom d’application.
+Assurez-vous que votre description décrit votre expérience et aide les clients potentiels à comprendre ce que fait votre expérience. Vous devez le noter dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs `short` de et doivent être `full` différentes. Votre description courte ne peut pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -460,7 +460,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`contentUrl`|string||✔|Url https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone Teams dessin.|
 |`websiteUrl`|string|||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`searchUrl`|string|||L https:// URL pointant vers les requêtes de recherche d’un utilisateur.|
-|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
+|`scopes`|tableau d’enums|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de `personal` l’expérience personnelle.|
 |`context` | tableau d’enums| 2|| Ensemble `contextItem` d’étendues où un onglet est pris en charge.|
 
 > [!NOTE]
@@ -553,13 +553,13 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
-|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
+|`taskInfo.height`|string|||Hauteur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » ou « moyenne » ou « petite ».|
 |`taskInfo.url`|string|||URL webview initiale.|
 |`parameters`|tableau d’objets|5 éléments|✔|Liste des paramètres pris par la commande. Minimum : 1 ; maximum : 5.|
 |`parameters.name`|string|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Le nom du paramètre est inclus dans la demande de l’utilisateur.|
 |`parameters.title`|string|32 caractères|✔|Titre convivial du paramètre.|
 |`parameters.description`|string|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
-|`parameters.value`|string|512 caractères||Valeur initiale du paramètre.|
+|`parameters.value`|string|512 caractères||Valeur initiale du paramètre. Actuellement, la valeur n’est pas prise en charge|
 |`parameters.inputType`|string|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true` . L’un `text, textarea, number, date, time, toggle, choiceset` des .|
 |`parameters.choices`|tableau d’objets|10 éléments||Options de choix pour `choiceset` le . Utilisez uniquement lorsque `parameter.inputType` `choiceset` c’est le cas.|
 |`parameters.choices.title`|string|128 caractères|✔|Titre du choix.|
@@ -590,13 +590,13 @@ Fournit les fonctionnalités natives sur l’appareil d’un utilisateur à qui 
 
 ## <a name="validdomains"></a>validDomains
 
-**Facultatif,** sauf **obligatoire lorsqu’il** est indiqué.
+**Facultatif,** sauf **obligatoire** lorsqu’il est indiqué.
 
 Liste des domaines valides pour les sites web que l’application s’attend à charger dans Teams client. Les listes de domaines peuvent inclure des caractères génériques, par exemple, `*.example.com` . Le domaine valide correspond exactement à un segment du domaine ; si vous avez besoin d’une `a.b.example.com` correspondance, utilisez `*.*.example.com` . Si la configuration de votre onglet ou l’interface utilisateur de contenu navigue vers un autre domaine que la configuration de l’onglet, ce domaine doit être spécifié ici.
 
 **N’incluez** pas les domaines des fournisseurs d’identité que vous souhaitez prendre en charge dans votre application. Par exemple, pour vous authentifier à l’aide d’un ID Google, il est nécessaire de rediriger vers accounts.google.com, toutefois, vous ne devez pas inclure accounts.google.com dans `validDomains[]` .
 
-Teams applications qui nécessitent leurs propres URL de SharePoint pour fonctionner, inclut « {teamsitedomain} » dans leur liste de domaines valide.
+Teams applications qui nécessitent leurs propres URL SharePoint pour fonctionner, inclut « {teamsitedomain} » dans leur liste de domaines valide.
 
 > [!IMPORTANT]
 > N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, toutefois, `*.onmicrosoft.com` n’est pas valide.
@@ -612,7 +612,7 @@ Fournissez votre ID d’application Azure Active Directory (AAD) et des informat
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|AAD’ID d’application de l’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l’oD SSO, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l' sso. </br> **REMARQUE :** Si vous n’utilisez pas l' sso, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, pour éviter une réponse https://notapplicable d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez le consentement précis [spécifique à une ressource.](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -633,7 +633,7 @@ Indiquez l’endroit où une application personnelle est rendue avec ou sans bar
 > [!NOTE]
 > `isFullScreen`fonctionne uniquement avec SharePoint onglets et les applications du Store.
 
-## <a name="activities"></a>activités
+## <a name="activities"></a>activities
 
 **Facultatif**— objet
 

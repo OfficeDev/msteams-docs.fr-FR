@@ -5,12 +5,12 @@ description: Découvrez comment activer la prise en charge de l’ation sso pour
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889390"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178250"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique pour les extensions de messagerie
  
@@ -87,15 +87,16 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
                 JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
                 var tokenExchangeRequest =
                 ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
-                tokenExchangeResponse = await (turnContext.Adapter as IExtendedUserTokenProvider).ExchangeTokenAsync(
-                 turnContext,
-                 _connectionName,
-                 turnContext.Activity.From.Id,
-                 new TokenExchangeRequest
+                var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+                tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                                turnContext.Activity.From.Id,
+                                 _connectionName,
+                                 turnContext.Activity.ChannelId,
+                                 new TokenExchangeRequest
                  {
                      Token = tokenExchangeRequest.Token,
                  },
-                 cancellationToken).ConfigureAwait(false);
+                  cancellationToken).ConfigureAwait(false);
             }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
             catch
