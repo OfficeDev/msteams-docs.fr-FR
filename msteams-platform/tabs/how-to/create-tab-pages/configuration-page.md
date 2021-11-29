@@ -6,12 +6,12 @@ keywords: Canal de groupe onglets teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888019"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216215"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -108,6 +108,7 @@ Le code de la page de configuration Teams que les exigences de configuration son
 
 >[!NOTE]
 >
+>* Vous avez 30 secondes pour terminer l’opération d’enregistrement (rappel de registerOnSaveHandler) avant le délai d’avance. Après le délai, un message d’erreur générique s’affiche.
 >* Si vous inscrivez un handler d’enregistrement à l’aide de , le rappel doit appeler ou `microsoftTeams.settings.registerOnSaveHandler()` indiquer le résultat de la `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` configuration.
 >* Si vous n’enregistrez pas de handler d’enregistrement, l’appel est effectué automatiquement `saveEvent.notifySuccess()` lorsque l’utilisateur sélectionne **Enregistrer**.
 
@@ -123,7 +124,7 @@ Pour plus d’informations sur les propriétés utilisées pour la configuration
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservé dans le `configurationUrl`
 
-Ajoutez des espaces réservé à l’interface de contexte à votre `configurationUrl` base. Par exemple :
+Ajoutez des espaces réservé à l’interface de contexte à votre `configurationUrl` base. Par exemple :
 
 ##### <a name="base-url"></a>URL de base
 
@@ -184,7 +185,7 @@ Authentifier avant d’autoriser un utilisateur à configurer votre application.
 
 Définissez la propriété de votre manifeste sur , qui permet aux utilisateurs de modifier, reconfigurer ou renommer un canal `canUpdateConfiguration` ou un onglet de `true` groupe. Indiquez également ce qu’il advient du contenu lorsqu’un onglet est supprimé, en incluant une page d’options de suppression dans l’application et en fixant une valeur pour la propriété `removeUrl` dans la  `setSettings()` configuration. L’utilisateur peut désinstaller les onglets personnels, mais ne peut pas les modifier. Pour plus d’informations, [voir créer une page de suppression pour votre onglet.](~/tabs/how-to/create-tab-pages/removal-page.md)
 
-`setSettings()`Microsoft Teams configuration de la page de suppression :
+Microsoft Teams de `setSettings()` la page de suppression :
 
 ```javascript
 microsoftTeams.settings.setSettings({

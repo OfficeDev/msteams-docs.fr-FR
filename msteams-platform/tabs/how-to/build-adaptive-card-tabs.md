@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Flux de données d’authentification d’application personnelle de carte adaptative
-ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887559"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216096"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -104,7 +104,7 @@ Voici un exemple de manifeste d’onglet carte adaptative :
 
 ## <a name="invoke-activities"></a>Appeler des activités
 
-La communication entre l’onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
+La communication entre votre onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant.** Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
 
 > [!NOTE]
 > * Les bots doivent envoyer toutes les réponses à [l’URL du service.](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) L’URL du service est reçue dans le cadre de la charge `activity` utile entrante.
@@ -155,7 +155,7 @@ Le code suivant fournit des exemples de `tab/fetch` requête et de réponse :
                 },
                 {
                     "card": adaptiveCard2,
-                }
+                },
                 {
                     "card": adaptiveCard3
                 }  
@@ -173,7 +173,7 @@ Une fois qu’une carte adaptative est restituer dans l’onglet, elle peut rép
 Lorsqu’un utilisateur sélectionne un bouton sous l’onglet Carte adaptative, la demande est déclenchée à votre bot avec les données correspondantes par le biais de la `tab/submit` `Action.Submit` fonction de carte adaptative. Les données de carte adaptative sont disponibles via la propriété de données de la `tab/submit` demande. Vous recevez l’une des réponses suivantes à votre demande :
 
 * Réponse de code d’état HTTP `200` sans corps. Une réponse 200 vide n’entraîne aucune action du client.
-* L’onglet standard `200` **continue la** réponse, comme expliqué dans récupérer la [carte adaptative](#fetch-adaptive-card-to-render-to-a-tab). Une réponse **de tabulation continue** déclenche la mise à jour de l’onglet Carte adaptative rendue par le client avec les cartes adaptatives fournies dans le tableau de cartes de la **réponse continue.**
+* L’onglet standard `200` **continue la** réponse, comme expliqué dans fetch Adaptive [Card](#fetch-adaptive-card-to-render-to-a-tab). Une réponse **de tabulation continue** déclenche la mise à jour de l’onglet Carte adaptative rendue par le client avec les cartes adaptatives fournies dans le tableau de cartes de la **réponse continue.**
 
 Le code suivant fournit des exemples de `tab/submit` requête et de réponse :
 
@@ -333,7 +333,7 @@ Le code suivant fournit des exemples de `task/submit` requête et de réponse :
 
 ## <a name="authentication"></a>Authentification
 
-Dans les sections précédentes, vous avez vu que la plupart des paradigmes de développement peuvent être étendus des demandes et réponses du module de tâche en demandes et réponses d’onglets. En ce qui concerne la gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md)
+Dans les sections précédentes, vous avez vu que la plupart des paradigmes de développement peuvent être étendus des demandes et réponses du module de tâche en demandes d’onglet et en réponses. En ce qui concerne la gestion de l’authentification, le flux de travail de l’onglet Carte adaptative suit le modèle d’authentification pour les extensions de messagerie. Pour plus d’informations, voir [ajouter une authentification.](../../messaging-extensions/how-to/add-authentication.md)
 
 `tab/fetch`les demandes peuvent avoir une **réponse continue** ou **auth.** Lorsqu’une demande est déclenchée et reçoit une réponse d’th d’onglet, la page de signature `tab/fetch` s’affiche à  l’utilisateur.
 
@@ -347,7 +347,7 @@ Dans les sections précédentes, vous avez vu que la plupart des paradigmes de d
 1. Sélectionnez **Connexion**. Vous êtes redirigé vers l’URL d’authentification fournie dans la `value` propriété du corps de la réponse d’authentification. 
 1. Une fenêtre contextuelle apparaît. Cette fenêtre pop-up héberge votre page web à l’aide de l’URL d’authentification.
 1. Après vous être connectez, fermez la fenêtre. Un **code d’authentification** est envoyé au client Teams client.
-1. Le Teams client ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée.
+1. Le Teams ressue ensuite la demande à votre service, qui inclut le code d’authentification fourni `tab/fetch` par votre page web hébergée.
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` flux de données d’authentification
 

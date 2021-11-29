@@ -5,12 +5,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 'équipes connecteur O365 '
-ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887391"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216194"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -18,7 +18,7 @@ Vous pouvez créer des messages actionnables et les envoyer via le webhook entra
 
 ## <a name="create-actionable-messages"></a>Créer des messages actionnables
 
-Les messages actionnables incluent trois boutons visibles sur la carte. Chaque bouton est défini dans la propriété du message à l’aide d’actions, chacune avec un type d’entrée, un champ de texte, un s sélectionneur de dates ou une liste à `potentialAction` `ActionCard` choix multiples. Chaque `ActionCard` action est associée, par `HttpPOST` exemple.
+Les messages actionnables incluent six boutons visibles sur la carte. Chaque bouton est défini dans la propriété du message à l’aide d’actions, chacune avec un type d’entrée, un champ de texte, un s sélectionneur de dates ou une liste à `potentialAction` `ActionCard` choix multiples. Chaque `ActionCard` action est associée, par `HttpPOST` exemple.
 
 Les cartes de connecteurs prendre en charge les actions suivantes :
 
@@ -282,8 +282,9 @@ Ces limites sont en place pour réduire le courrier indésirable d’un canal pa
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Office 365 Connecteurs pour Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Créer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Créer un webhook sortant](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Limite de taux pour Teams messages de bots](~/bots/how-to/rate-limit.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Mettre en forme des cartes dans Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)

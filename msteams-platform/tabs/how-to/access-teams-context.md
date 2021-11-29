@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887538"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216103"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -24,7 +24,9 @@ Votre onglet nécessite des informations contextuelles pour afficher le contenu 
 Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être particulièrement utile lorsque :
 
 * Vous créez ou associez des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
-* Vous lancez un flux d’authentification à partir de Azure Active Directory (AAD) ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur. Pour plus d’informations, [voir authentifier un utilisateur dans Microsoft Teams onglet .](~/concepts/authentication/authentication.md)
+* Vous lancez un flux d’authentification à partir de Azure Active Directory (AAD) ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur. 
+
+Pour plus d’informations, [voir authentifier un utilisateur dans votre Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Bien que ces informations utilisateur contribuent à une expérience utilisateur fluide, vous ne devez pas les utiliser comme preuve d’identité.  Par exemple, un attaquant peut charger votre page dans un navigateur et restituer des informations ou des demandes dangereuses.
@@ -48,7 +50,7 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 * {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default` que , `dark` ou `contrast` .
 * {groupId}: ID du groupe Office 365 dans lequel réside l’onglet.
 * {tid}: ID AAD client de l’utilisateur actuel.
-* {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId. Par exemple, en-us.
+* {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId(en-us).
 
 > [!NOTE]
 > L’espace réservé `{upn}`précédent est désormais supprimé. Pour des raisons de compatibilité ascendante, il s'agit actuellement d'un synonyme de `{loginHint}`.
@@ -106,7 +108,8 @@ Le code suivant fournit un exemple de variable de contexte :
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -115,7 +118,9 @@ Le code suivant fournit un exemple de variable de contexte :
 > [!Note]
 > Les canaux privés sont actuellement en prévisualisation du développeur privé.
 
-Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité `getContext` du canal. Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé :
+Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité `getContext` du canal. 
+
+Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé :
 
 * `groupId`: Non définie pour les canaux privés
 * `teamId`: définir sur le threadId du canal privé

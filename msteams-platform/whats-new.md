@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: d5c84010937478788ddc5836b53906b120cdbf4e
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: 9b4593fc2a0affb2e6e529a55cf51c05daca69aa
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156613"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216110"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|11/29/2021|Mode interactif pour partager l’étape de la réunion.|[Étape de réunion partagée,](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) [références de l’API des applications de](apps-in-teams-meetings/API-references.md)réunion et schéma de manifeste de [prévisualisation du développeur](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021| Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|
 | 11/17/2021| Mise à jour des Microsoft Teams de validation du magasin de données|[Recommandations en matière de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Recherche de typeahead statique et dynamique pour les utilisateurs de bureau et mobiles.| • Créer des cartes et des modules de tâche > créer des cartes > [recherche Typeahead dans les cartes adaptatives](task-modules-and-cards/cards/dynamic-search.md) </br> • Créer des cartes et des modules de tâche > créer des cartes > vue d> la recherche à l’avance sur les types  [dans les cartes adaptatives](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Créer des cartes et des modules de tâche > vue d> [cartes et modules de tâche](task-modules-and-cards/cards-and-task-modules.md)|
@@ -204,7 +205,8 @@ La prévisualisation pour développeurs est un programme public qui fournit un a
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
-| 11/15/2021 | Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
+|11/29/2021|Mode interactif pour partager l’étape de la réunion.|[Étape de réunion partagée,](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) [références de l’API des applications de](apps-in-teams-meetings/API-references.md)réunion et schéma de manifeste de [prévisualisation du développeur](resources/schema/manifest-schema-dev-preview.md)|
+|11/15/2021| Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC).| • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous [les messages avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifeste d’application > prévisualisation pour les développeurs > [schéma de manifeste de prévisualisation pour les développeurs](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Autorisations d’appareil pour le navigateur.| Principes fondamentaux de l'> de l’appareil > [les autorisations de l’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|Comportement de désinstallation pour une application personnelle avec un bot.| Créer des bots > conversations de bot > des mises à jour de comportement de [désinstallation dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

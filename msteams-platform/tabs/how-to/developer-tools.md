@@ -4,12 +4,12 @@ description: Décrit comment se rendre à DevTools lors de l’utilisation du cl
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Devtools debug mobile chrome desktop client developer tools tab
-ms.openlocfilehash: 6844648df311bd9ae326e74919cc64e871e54b05
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: b9bc3f5afa43684b260f8618b5450e94c91e95f1
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887419"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216203"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools pour les onglets Microsoft Teams
 
@@ -35,7 +35,7 @@ Bien que la version web et la version de bureau de Teams soient presque identiqu
 
 L’exemple suivant montre que DevTools ouvre et inspecte une boîte de dialogue de configuration d’onglet :
 
-   ![Tab et DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+   [![Tab et DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
 
 ## <a name="access-devtools-from-an-android-device"></a>Accéder à DevTools à partir d’un appareil Android
 
