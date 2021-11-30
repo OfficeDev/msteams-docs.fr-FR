@@ -2,20 +2,28 @@
 title: 'Vue d’ensemble : distribuer votre application'
 description: Décrit les options de publication de votre application Microsoft Teams, de téléchargement de votre application et de Cloud de la communauté du secteur public.
 ms.topic: conceptual
-author: KirtiPereira
+author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: déployer le chargement de l’application de publication gcc
-ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 567abdb058f3618236840c993a0ab1a4d638c016
+ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949109"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "61233497"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams de messagerie
 
 Vous pouvez fournir votre application Microsoft Teams à une personne, une équipe, une organisation ou toute autre personne qui souhaite l’utiliser. La distribution dépend de plusieurs facteurs, notamment les besoins des utilisateurs, les besoins professionnels, les exigences techniques et vos objectifs pour l’application.
+
+## <a name="configure-default-install-options"></a>Configurer les options d’installation par défaut
+
+Vous configurez les options d’installation par défaut. Par exemple, si la fonctionnalité principale de votre application est un bot, vous pouvez également faire du bot la fonctionnalité par défaut lorsqu’un utilisateur installe votre application dans une équipe.
+
+## <a name="create-your-app-package"></a>Créer votre package d’application
+
+Pour distribuer votre application Microsoft Teams, vous devez avoir un package d’application valide.  Un package d’application est un fichier zip qui contient un manifeste **d’application et** des **icônes d’application.**
 
 ## <a name="upload-your-app-in-teams"></a>Télécharger votre application dans Teams
 

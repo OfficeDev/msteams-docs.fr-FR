@@ -91,7 +91,37 @@
 - name: Outils et kits de développement durable
   items:
     - name: Extension de kit de ressources Teams pour Visual Studio Code
-      href: toolkit/visual-studio-code-overview.md
+      items:
+        - name: Notions de base du Kit de ressources Teams
+          href: toolkit/teams-toolkit-fundamentals.md
+        - name: Création d’un projet
+          href: toolkit/create-new-project.md
+        - name: Préparer des comptes pour créer une application Teams
+          href: toolkit/accounts.md
+        - name: Provisionner des ressources cloud
+          href: toolkit/provision.md
+        - name: Déployer l’application Teams dans le cloud
+          href: toolkit/deploy.md
+        - name: Publier des applications Teams à l’aide du Kit de ressources Teams
+          href: toolkit/publish.md
+        - name: Ajouter des fonctionnalités à l’application Teams
+          href: toolkit/add-capability.md
+        - name: Ajouter des ressources cloud à l’application Teams
+          href: toolkit/add-resource.md
+        - name: Personnaliser le manifeste de l’application Teams
+          href: toolkit/TeamsFx-manifest-customization.md
+        - name: Aperçu du manifeste de l’application Teams
+          href: toolkit/TeamsFx-manifest-preview.md
+        - name: Gérer plusieurs environnements
+          href: toolkit/TeamsFx-multi-env.md
+        - name: Collaboration avec d’autres développeurs sur Teams Toolkit
+          href: toolkit/TeamsFx-collaboration.md
+        - name: Utiliser le flux de travail CI/CD
+          href: toolkit/use-CICD-template.md
+        - name: Interface CLI du Kit de ressources Teams
+          href: toolkit/TeamsFx-CLI.md
+        - name: Kit de développement logiciel (SDK) TeamsFx
+          href: toolkit/TeamsFx-SDK.md
     - name: Extension de kit de ressources Teams pour Visual Studio
       href: toolkit/visual-studio-overview.md
     - name: Générateur Yeoman pour Microsoft Teams (GitHub)
