@@ -11,17 +11,19 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
-  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+  ms.openlocfilehash: f7b9281097adfb5fc86722f4cba584b7d37285c7
+  ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 11/30/2021
-  ms.locfileid: "61227827"
+  ms.lasthandoff: 12/01/2021
+  ms.locfileid: "61246698"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
+    - text: Nouvelle icône du Store introduite
+      url: ~/concepts/design/personal-apps.md
     - text: Teams Shared Computer Toolkit for Visual Studio Code (Preview)
       url: ~/toolkit/teams-toolkit-fundamentals.md
     - text: Mode interactif pour partager l’étape de la réunion (aperçu)

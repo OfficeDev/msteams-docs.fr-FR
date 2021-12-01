@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 9138e0b73ce6b96a6e3bd4d087294785280c6383
+ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246070"
+ms.locfileid: "61246705"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|12/01/2021 | Nouvelle icône du Store introduite | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/30/2021 | Mise à jour de la build de votre première application SPFx guide pas à pas pour Teams Shared Computer Toolkit mises à jour 3.0.0. | Commencer à > [créer votre première application à l’aide de SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK pour > Teams Shared Computer Toolkit des Visual Studio Code > [Teams Shared Computer Toolkit fondamentaux](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |Mode interactif pour partager l’étape de la réunion.|• Créer des applications pour Teams réunions > [étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créez des applications pour Teams réunions > [références d’API d’applications de réunion](apps-in-teams-meetings/API-references.md) </br> • Manifeste d’application > prévisualisation pour les développeurs publics > [schéma de manifeste de prévisualisation pour les développeurs](resources/schema/manifest-schema-dev-preview.md)|
@@ -43,6 +44,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|12/01/2021 | Nouvelle icône du Store introduite | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Mise à jour des Microsoft Teams de validation du magasin de données|[Recommandations en matière de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Recherche de typeahead statique et dynamique pour les utilisateurs de bureau et mobiles.| • Créer des cartes et des modules de tâche > créer des cartes > [recherche Typeahead dans les cartes adaptatives](task-modules-and-cards/cards/dynamic-search.md) </br> • Créer des cartes et des modules de tâche > créer des cartes > vue d> la recherche à l’avance sur les types  [dans les cartes adaptatives](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Créer des cartes et des modules de tâche > vue d> [cartes et modules de tâche](task-modules-and-cards/cards-and-task-modules.md)|
