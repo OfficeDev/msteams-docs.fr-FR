@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: tabs bots messaging extensions webhooks connectors gcc
-ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948403"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246077"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Comprendre Microsoft Teams fonctionnalités de l’application
 
@@ -33,7 +33,7 @@ Votre application peut également tirer parti des fonctionnalités avancées, te
 
 L’illustration suivante vous donne une idée des fonctionnalités qui fourniront les fonctionnalités que vous souhaitez dans votre application :
 
-:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Carte de l’esprit illustrant Teams fonctionnalités de l’application.":::
+:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Carte d’esprit illustrant Teams fonctionnalités de l’application.":::
 
 ## <a name="always-consider-your-user"></a>Toujours prendre en compte votre utilisateur
 
@@ -42,17 +42,22 @@ Par exemple, vous pouvez collecter les entrées utilisateur dans un formulaire c
 
 ## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
 
-Cloud de la communauté du secteur public est une copie de l’environnement commercial axée sur le secteur secteur. Le département de la Défense (DOD) et les sous-traitants fédéraux doivent répondre aux exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins des sous-traitants DOD et fédéraux. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
+Cloud de la communauté du secteur public est une copie de l’environnement commercial axée sur le gouvernement. Le département de la Défense (DOD) et les sous-traitants fédéraux doivent répondre aux exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins des sous-traitants DOD et fédéraux. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
+
+> [!NOTE]
+> Teams magasin a évolué :
+> 
+> Auparavant, les applications LOB étaient mises à jour en sélectionnant les ellipses sur la vignette. Avec l’expérience Teams store mise à jour, vous pouvez désormais mettre à jour les applications cœur de commerce en vous connectant [au Centre d’administration Teams.](https://admin.teams.microsoft.com)
 
 Le tableau suivant inclut Teams fonctionnalités et la disponibilité de Cloud de la communauté du secteur public, Cloud de la communauté du secteur public-High et DOD :
 
 | Fonctionnalités   | GCC | GCC-High | DOD |
 |-------------|---------|
-| Teams comme dans les applications développées en interne | ✔️'application est activée si elle Cloud de la communauté du secteur public. | ✔️'application est activée si elle Cloud de la communauté du secteur public-High. | ✔️'application est activée si elle possède un DOD. |
+| Teams les applications que vous possédez, comme dans les applications développées en interne | ✔️'application est activée si elle Cloud de la communauté du secteur public. | ✔️'application est activée si elle Cloud de la communauté du secteur public-High. | ✔️'application est activée si elle possède un DOD. |
 | Applications Microsoft | ✔️ applications Microsoft compatibles avec Cloud de la communauté du secteur public | ✔️ applications Microsoft compatibles avec GCC-High | ✔️ applications Microsoft compatibles avec LE DOD |
 | Applications 3p ou tierces | ✔️ applications tierces sont disponibles. Désactivée par défaut et l’administrateur client utilise sa propre discrétion pour l’activer. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
-| Applications personnalisées ou d’onglets Lob |  ✔️ | ✔️ | ✔️ |
+| Applications personnalisées ou onglets Lob |  ✔️ | ✔️ | ✔️ |
 | Chargement de version de version d’application | ✔️ | ❌ | ❌ |
 | Bots personnalisés ou Lob | ✔️ | ❌ | ❌ |
 | Extensions de messagerie personnalisées | ❌ | ❌ | ❌ |
@@ -61,7 +66,7 @@ Le tableau suivant inclut Teams fonctionnalités et la disponibilité de Cloud d
 La liste suivante permet d’identifier la disponibilité de Cloud de la communauté du secteur public, Cloud de la communauté du secteur public-High et DOD pour les fonctionnalités :
 
 * Pour les applications tierces, voir [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion.](../apps-in-teams-meetings/meeting-app-extensibility.md)
-* Pour les bots, voir créer votre premier [bot de conversation](../get-started/first-app-bot.md)pour Teams , conception de votre bot [Teams](../bots/design/bots.md), ajouter des [bots](../resources/bot-v3/bots-overview.md)à Microsoft Teams applications et [bots](../bots/what-are-bots.md)dans Teams .
+* Pour les bots, voir créer votre premier [bot de conversation](../get-started/first-app-bot.md)pour Teams , la conception de votre bot [Teams](../bots/design/bots.md), ajouter des [bots](../resources/bot-v3/bots-overview.md)aux applications Microsoft Teams et les [bots](../bots/what-are-bots.md)dans Teams .
 * Pour le chargement de version d’Teams, voir activer la personnalisation de votre application [Teams,](../concepts/design/enable-app-customization.md)distribuer votre [application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)et Télécharger votre application dans [Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Pour les connecteurs personnalisés, [voir créer Office 365 connecteurs pour Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 

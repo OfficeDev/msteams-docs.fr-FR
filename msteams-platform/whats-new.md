@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: 5aa0d3c29f8a9e5e2d5c80cb0d7fa1b59418c784
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227851"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246070"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+| 11/30/2021 | Mise à jour de la build de votre première application SPFx guide pas à pas pour Teams Shared Computer Toolkit mises à jour 3.0.0. | Commencer à > [créer votre première application à l’aide de SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK pour > Teams Shared Computer Toolkit des Visual Studio Code > [Teams Shared Computer Toolkit fondamentaux](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |Mode interactif pour partager l’étape de la réunion.|• Créer des applications pour Teams réunions > [étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créez des applications pour Teams réunions > [références d’API d’applications de réunion](apps-in-teams-meetings/API-references.md) </br> • Manifeste d’application > prévisualisation pour les développeurs publics > [schéma de manifeste de prévisualisation pour les développeurs](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021 | Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|

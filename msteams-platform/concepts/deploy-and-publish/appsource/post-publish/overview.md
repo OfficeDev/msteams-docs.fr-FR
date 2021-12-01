@@ -5,18 +5,23 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260629"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246084"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Gérer votre application Microsoft Teams publiée
 
 Une fois votre application répertoriée dans le Microsoft Teams, commencez à réfléchir à la façon dont vous allez gérer l’application à l’avenir et augmenter les téléchargements et l’utilisation.
 
 ## <a name="publish-updates-to-your-app"></a>Publier des mises à jour sur votre application
+
+> [!NOTE]
+> Teams magasin a évolué :
+> 
+> Auparavant, les liens étaient copiés en sélectionnant des ellipses sur la vignette de l’application. Une fois l’expérience Teams mise à jour mise à jour, vous accéderez à la même expérience à partir de l’onglet Détails des applications. Cette mise à jour sera généralement disponible d’ici le 01 mars 2022.
 
 Vous pouvez soumettre des modifications à votre application (par exemple, de nouvelles fonctionnalités ou même des métadonnées) dans l’Partner Center. Ces modifications nécessitent un nouveau processus de révision.
 
@@ -29,7 +34,6 @@ Veillez à ce qui suit lors de la publication des mises à jour :
 ### <a name="app-updates-requiring-user-consent"></a>Mises à jour d’application nécessitant le consentement de l’utilisateur
 
 Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs doivent le faire une seule fois et les nouvelles versions de votre application s’installent automatiquement.
-
 Toutefois, si vous a apporté l’une des modifications suivantes à votre application, vos utilisateurs existants doivent accepter une autre demande d’autorisation pour installer la mise à jour :
 
 * Ajoutez ou supprimez un bot.
@@ -40,7 +44,7 @@ Toutefois, si vous a apporté l’une des modifications suivantes à votre appli
 * Ajoutez un onglet personnel.
 * Ajoutez un canal et un onglet de groupe.
 * Ajoutez un connecteur.
-* Modifiez les configurations liées à l’inscription Azure Active Directory de votre application (Azure AD). Pour plus d’informations, voir [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) .
+* Modifiez les configurations liées à l’inscription Azure Active Directory (Azure AD) de votre application. Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 
