@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 2e88f6716621443be09eddb4f458e1e5f3f61d6d
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 58a3e5bd240aa835a2f1d1c593d5c46e9dfcf2a4
+ms.sourcegitcommit: 96a4a118d31dcb3c273f880e282042f38757f5f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216187"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "61285534"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste de prévisualisation pour les développeurs publics pour Microsoft Teams
 
@@ -63,18 +63,8 @@ Le Microsoft Teams de l’application décrit comment l’application s’intèg
   "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
       "canUpdateConfiguration": true,
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage"
+      "scopes": [ "team", "groupchat" ]"context":[
       ]
     }
   ],

@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: f7b9281097adfb5fc86722f4cba584b7d37285c7
-  ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
+  ms.openlocfilehash: babeb1470a5488d6dd31f0d905b64220cbc66a87
+  ms.sourcegitcommit: 96a4a118d31dcb3c273f880e282042f38757f5f7
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/01/2021
-  ms.locfileid: "61246698"
+  ms.lasthandoff: 12/03/2021
+  ms.locfileid: "61285555"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -26,8 +26,6 @@ landingContent:
       url: ~/concepts/design/personal-apps.md
     - text: Teams Shared Computer Toolkit for Visual Studio Code (Preview)
       url: ~/toolkit/teams-toolkit-fundamentals.md
-    - text: Mode interactif pour partager l’étape de la réunion (aperçu)
-      url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
     - text: Instructions de validation du magasin Microsoft Teams
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office (aperçu)
