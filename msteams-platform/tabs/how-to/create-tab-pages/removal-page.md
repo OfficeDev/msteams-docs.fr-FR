@@ -6,12 +6,12 @@ keywords: Suppression de suppression configurable du canal de groupe d’onglets
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 094e12667fc17db9cc02c0cdf50eaa935dc7ced9
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889236"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323295"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
@@ -23,7 +23,7 @@ Votre **manifest.json définit** les fonctionnalités et fonctionnalités de vot
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. La valeur par défaut est `true`. |
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. La valeur par défaut est `true`. |
 
 Lorsque votre onglet est téléchargé vers un canal ou une conversation de groupe, Teams un menu déroulant de clic droit pour votre onglet. Les options disponibles sont déterminées par le `canUpdateConfiguration` paramètre. Le tableau suivant fournit les détails des paramètres :
 
@@ -79,7 +79,6 @@ Voici un exemple de bloc de code de suppression d’onglet :
     }
   </script>
 </body>
-
 ```
 
 Lorsqu’un utilisateur  sélectionne Supprimer du menu déroulant de l’onglet, Teams charge la page facultative affectée dans votre page de `removeUrl` **configuration,** dans un IFrame. L’utilisateur voit un bouton chargé avec la fonction qui appelle et active le bouton Supprimer affiché en bas de `onClick()` `microsoftTeams.settings.setValidityState(true)` l’IFrame de la page de suppression. 
@@ -88,7 +87,7 @@ Une fois le handler de suppression exécuté, ou avertit Teams `removeEvent.noti
 
 >[!NOTE]
 > * Pour vous assurer que le contrôle d’un utilisateur autorisé sur un onglet n’est pas inhibé, Teams supprime l’onglet dans les cas de réussite et d’échec.
-> * Teams active le bouton **Supprimer** après cinq secondes, même si votre onglet n’a pas `setValidityState()` appelé.
+> * Après avoir appelé le `registerOnRemoveHandler` handler d’événements, vous avez 15 secondes pour répondre à la méthode. Par défaut, Teams active le  bouton Supprimer au bout de cinq secondes, même si vous n’appelez pas `setValidityState(true)` . 
 > * Lorsque l’utilisateur sélectionne **Supprimer,** Teams l’onglet après 30 secondes, que les actions soient terminées ou non.
 
 ## <a name="next-step"></a>Étape suivante

@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Authentification unique Teams AAD api d’authentification unique
-ms.openlocfilehash: 96916d526dba7a6ff7b019fb070b53943b3c216c
-ms.sourcegitcommit: 345d713a680c0e0978d7f82c0330c1fd0d6b3e7b
+ms.openlocfilehash: 3e941e905f2c75825c502f67f49bb4cec5e601fa
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2021
-ms.locfileid: "61151896"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323288"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -55,13 +55,6 @@ L’API DSO fonctionne également dans les [modules de tâche](../../../task-mod
 Cette section décrit les tâches impliquées dans la création d’un onglet Teams qui utilise l' sso. Ces tâches sont linguistiques et non spécifiques à l’infrastructure.
 
 ### <a name="1-create-your-aad-application"></a>1. Créer votre application AAD application
-
-**Pour inscrire votre application dans la vue [d’ensemble AAD portail](https://azure.microsoft.com/features/azure-portal/)**
-
-1. Obtenez votre [ID AAD application .](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
-1. Spécifiez les autorisations dont votre application a besoin pour AAD point de terminaison et, éventuellement, Graph.
-1. [Accorder des autorisations](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) pour Teams applications de bureau, web et mobiles.
-1. Pré-autoriser Teams en sélectionnant le  bouton Ajouter une étendue et dans le panneau qui s’ouvre, entrez **access_as_user** comme nom **d’étendue.**
 
 > [!NOTE]
 > Vous devez connaître certaines restrictions importantes :
