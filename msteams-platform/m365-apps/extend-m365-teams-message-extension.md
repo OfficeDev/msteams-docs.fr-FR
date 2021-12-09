@@ -3,12 +3,13 @@ title: Étendre une extension Teams message à travers Microsoft 365
 description: Voici comment mettre à jour votre extension de messagerie Teams basée sur la recherche pour qu’elle s’exécute dans Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 6adde57b6c5f59d28234afaacc721fba3812bd24
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960336"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391354"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Étendre une extension Teams message à travers Microsoft 365
 
@@ -26,7 +27,7 @@ Le processus de mise à jour de votre extension Teams de message basée sur la O
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de message dans les deux Outlook pour Windows bureau et web.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
@@ -42,7 +43,9 @@ Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
 Si vous avez une extension de messagerie existante, faites une copie ou une branche de votre projet de production pour tester et mettez à jour votre ID d’application dans le manifeste de l’application pour utiliser un nouvel identificateur (distinct de l’ID d’application de production).
 
-Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de l’exemple de recherche [d’extension](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) de messagerie Teams pour créer et inscrire rapidement un bot.
+Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de l’exemple de recherche [d’extension](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) de messagerie Teams pour créer rapidement une extension de messagerie basée sur la recherche Microsoft Teams. Vous pouvez également commencer avec le même exemple de recherche d’extensions de messagerie Teams mis à jour pour l’aperçu du [SDK TeamsJS v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) et passer à l’aperçu de votre extension de messagerie [dans Outlook](#preview-your-message-extension-in-outlook). L’exemple mis à jour est également disponible dans Teams Shared Computer Toolkit extension : *Exemples*  >  *d’affichage de développement*  >  **NPM Search Connector**.
+
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="Exemple de connecteur de recherche NPM dans Teams Shared Computer Toolkit":::
 
 ## <a name="update-the-app-manifest"></a>Mettre à jour le manifeste de l’application
 
@@ -129,7 +132,7 @@ Pour afficher un aperçu de l’exécution de votre application Outlook sur Wind
 
 Pour afficher un aperçu de l’exécution de votre application Outlook sur le web, connectez-vous [outlook.com](https://www.outlook.com) à l’aide des informations d’identification de votre client de test. Cliquez sur **Nouveau message.** Ouvrez le menu **volant Plus** d’applications en bas de la fenêtre de composition. Votre extension de message sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 Outlook extensions de messagerie Teams activées sont en prévisualisation et ne sont pas pris en charge pour une utilisation en production. Voici comment distribuer votre extension de messagerie Outlook pour afficher un aperçu des audiences à des fins de test.
 

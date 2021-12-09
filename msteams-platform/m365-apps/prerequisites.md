@@ -3,12 +3,13 @@ title: Configurer votre environnement dev pour l’extension Teams applications 
 description: Voici les conditions préalables à l’extension de vos applications Teams à travers Microsoft 365
 ms.date: 11/15/2021
 ms.topic: how-to
-ms.openlocfilehash: d9e6ecb9e0cdbdb4754de12dff4399c02bf88863
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 967e45bb59c431476ead902e1413ab743c566779
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960274"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391345"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365-preview"></a>Configurer votre environnement dev pour l’extension Teams applications sur M365 (prévisualisation)
 
@@ -17,7 +18,7 @@ L’environnement de développement pour l’extension Teams applications à tra
 > [!div class="checklist"]
 > * [Obtenir un client développeur M365 (bac à sable) et activer le chargement indépendant](#prepare-a-developer-tenant-for-testing)
 > * [Inscrire votre client M365 dans *des Office 365 ciblées*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
-> * [Configurer votre compte pour accéder aux versions d’aperçu Outlook et Office](#install-beta-office-apps-in-your-test-environment)
+> * [Configurer votre compte pour accéder aux versions d’aperçu Outlook et Office](#install-office-apps-in-your-test-environment)
 > * [Basculer vers la version d’aperçu du développeur de Teams](#switch-to-the-developer-preview-version-of-teams)
 > * [*Facultatif*] [Installer Teams Shared Computer Toolkit extension de Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
@@ -38,23 +39,22 @@ Si vous avez un client existant, vérifiez que le chargement de version latéral
 
 Pour afficher un aperçu Teams applications en cours d’exécution outlook.com ou office.com, choisissez votre client test pour Office 365 [de publication ciblées.](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release)
 
-1. Connectez-vous Centre d'administration Microsoft 365 à l’aide des informations d’identification de  votre client test et  accédez à l’onglet Profil organisationnel. Sélectionnez les préférences de publication et sélectionnez l’une des préférences de publication ciblée : [](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile)
+1. Connectez-vous Centre d'administration Microsoft 365 à l’aide des informations d’identification de votre client test et accédez à l’onglet Profil d’organisation (*Paramètres* Profil d’organisation des [](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile)  >  *paramètres* de  >>  l’organisation).) Sélectionnez **les préférences de publication** et l’une des préférences de *publication* ciblée :
 
-:::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centre d'administration Microsoft 365 menu « Préférences de publication » avec l’option de publication ciblée sélectionnée":::
+  :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centre d'administration Microsoft 365 menu « Préférences de publication » avec l’option de publication ciblée sélectionnée":::
 
-Pour plus d’informations sur Office 365 options de publication, voir Configurer les options de publication [standard](/microsoft-365/admin/manage/release-options-in-office-365) ou ciblée dans *Centre d'administration Microsoft 365'aide.*
+  Pour plus d’informations sur Office 365 options de publication, voir Configurer les options de publication [standard](/microsoft-365/admin/manage/release-options-in-office-365) ou ciblée dans *Centre d'administration Microsoft 365'aide.*
 
 1. Vérifiez que votre client dispose de la prise en charge Teams onglets personnels en cours d’exécution sur office.com et outlook.com en vous signant avec vos informations d’identification client de test. Si vous voyez une option d’ellipses (**...**) sur la barre latérale (point d’entrée pour les onglets personnels chargés de Teams), votre client est pris en charge.
 
-:::image type="content" source="images/outlook-web-ellipses.png" alt-text="Ellipses '...' point d’entrée vers les applications Teams d’onglets chargés de outlook.com":::
+  :::image type="content" source="images/outlook-web-ellipses.png" alt-text="Ellipses '...' point d’entrée vers les applications Teams d’onglets chargés de outlook.com":::
 
 1. Vérifiez la prise en charge du client test pour  les extensions de messagerie dans outlook.com en vérifiant l’option Plus d’applications dans Outlook zone de message de composition.
-``
 
 > [!NOTE]
-> Si vous avez choisi d’opter pour des publication ciblées, mais que ces options ne s’offrent pas à vous, il est probable que la prise en charge des fonctionnalités de prévisualisation soit encore en cours de déploiement sur votre client. Pour les dernières mises à jour, [voir Microsoft Teams blog du développeur.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
+> Si vous avez choisi d’opter pour les publication ciblées, mais que ces options ne s’offrent pas à vous, il est probable que la prise en charge des fonctionnalités de prévisualisation soit encore en cours de déploiement sur votre client. Pour les dernières mises à jour, [voir Microsoft Teams blog du développeur.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
 
-## <a name="install-beta-office-apps-in-your-test-environment"></a>Installer les applications beta Office dans votre environnement de test
+## <a name="install-office-apps-in-your-test-environment"></a>Installer Office applications de test dans votre environnement de test
 
 > [!IMPORTANT]
 > Reportez-vous au blog du développeur [Microsoft Teams - Microsoft 365](https://devblogs.microsoft.com/microsoft365dev/category/teams/) pour vérifier si Outlook pour la prise en charge du bureau Windows pour les extensions de message Teams est disponible pour votre client test.
@@ -63,8 +63,7 @@ Vous pouvez prévisualiser Teams applications s’exécutant dans Outlook sur Wi
 
 Voici les étapes à suivre pour installer Office 365 applications de canal *bêta* dans votre environnement de test :
 
-1. Dans votre environnement de test, connectez-vous à Centre d'administration Microsoft 365 ( à l’aide des informations d’identification que vous avez créées pour votre client test (par exemple, domaine nom d’utilisateur https://admin.microsoft.com)  @ .onmicrosoft.com).
-1. Dans le Centre d’administration, sélectionnez **Installer Office** (ou Passer à la configuration *guidée)* pour installer les applications de bureau dans votre environnement de test. Vous pouvez éventuellement ajouter un utilisateur de test (utile pour le test).
+1. Connectez-vous à votre environnement de test à l’aide de votre compte client test.
 1. Téléchargez [l Office de déploiement et](https://www.microsoft.com/download/details.aspx?id=49117) extrayez-le dans un dossier local.
 1. Ouvrez *configuration-Office365-x86.xml* (ou le **x64.xml*, en fonction de votre environnement) dans un éditeur de texte et mettez à jour la valeur *du* canal sur `BetaChannel` .
 1. À partir d’une invite de commandes avec élévation dex64.xml, exécutez (ou utilisez le fichier `setup.exe /configure configuration-Office365-x86.xml` **x64.xml,* en fonction de votre configuration).
@@ -74,13 +73,17 @@ Voici les étapes à suivre pour installer Office 365 applications de canal *bê
 
    :::image type="content" source="images/outlook-coming-soon.png" alt-text="Bouton « Bientôt disponible » Outlook bureau bascule sur « On » }":::
 
+  > [!NOTE]
+  > Vous devrez peut-être fermer Outlook puis redémarrer votre ordinateur pour *que* le bouton Bientôt disponible s’affiche.
+
 Vous pouvez vérifier que votre client prend en charge les onglets personnels Teams en cours d’exécution sur Outlook pour le bureau Windows en vous signant avec vos informations d’identification de client test et en cherchant une option d’ellipses (**...**) sur la barre latérale (point d’entrée pour les onglets personnels Teams chargés de nouveau).
 
 :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses '...' point d’entrée vers les applications Teams onglets chargés de Outlook bureau":::
 
 De même, vous pouvez vérifier la prise en charge du client de test pour  les extensions de messagerie dans Outlook pour le bureau Windows en vérifiant l’option Plus d’applications dans le ruban Outlook composer un message.
 
-Si vous avez choisi d’opter pour des publication ciblées, mais que ces options de sélection ne s’afficheront pas, il est probable que la prise en charge des fonctionnalités de prévisualisation soit encore en cours de déploiement sur votre client. Pour les dernières mises à jour, [voir Microsoft Teams blog du développeur.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
+> [!NOTE]
+> Si vous avez choisi d’opter pour les versions bêta du canal, mais que vous ne voyez pas ces options de sélection, il est probable que la prise en charge des fonctionnalités de prévisualisation soit encore en cours de déploiement sur votre client. Pour les dernières mises à jour, [voir Microsoft Teams blog du développeur.](https://devblogs.microsoft.com/microsoft365dev/category/teams/)
 
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>Basculer vers la version d’aperçu du développeur de Teams
 
@@ -98,7 +101,7 @@ Si vous le souhaitez, vous pouvez tirer parti [Visual Studio Code](https://code.
 
 Le Teams Shared Computer Toolkit d’extension pour [Visual Studio Code](https://aka.ms/teams-toolkit) (ou une Teams) fournit des commandes qui peuvent vous aider à modifier votre code Teams existant pour qu’il soit compatible avec les Outlook `v2.10.0` et Office. Continuez [à activer Teams onglet personnel](extend-m365-teams-personal-tab.md) pour Office et Outlook pour en savoir plus.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
-- [Activer un onglet Teams pour les Office et Outlook](extend-m365-teams-personal-tab.md)
-- [Activer une extension Teams messagerie pour Outlook](extend-m365-teams-message-extension.md)
+- [Activer un onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md)
+- [Activer une extension de messagerie Teams pour Outlook](extend-m365-teams-message-extension.md)

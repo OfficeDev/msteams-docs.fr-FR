@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: babeb1470a5488d6dd31f0d905b64220cbc66a87
-  ms.sourcegitcommit: 96a4a118d31dcb3c273f880e282042f38757f5f7
+  ms.openlocfilehash: bf0225a26d5d6a65fa3e3ae9e357eeaded27c819
+  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/03/2021
-  ms.locfileid: "61285555"
+  ms.lasthandoff: 12/09/2021
+  ms.locfileid: "61391658"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -46,6 +46,8 @@ landingContent:
       url: ~/bots/how-to/conversations/send-proactive-messages.md
     - text: Ajouter l’authentification aux bots
       url: ~/bots/how-to/authentication/add-authentication.md
+    - text: Activer et configurer les applications pour les meetings
+      url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
     - text: Guide pas à pas pour les messages proactifs
@@ -54,6 +56,10 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: Guide pas à pas pour générer un jeton de réunion
       url: ~/sbs-meeting-token-generator.yml
+    - text: Guide pas à pas pour la création d’un panneau latéral de réunions
+      url: ~/sbs-meetings-sidepanel.yml
+    - text: Guide pas à pas pour l’affichage des étapes des réunions
+      url: ~/sbs-meetings-stage-view.yml
 - title: Prise en main
   linkLists:
   - linkListType: get-started

@@ -1,16 +1,16 @@
 ---
 title: Créer votre compte de développeur Espace partenaires
-description: FAQ sur la création d’un compte de développeur Espace partenaires pour la publication de votre application dans Microsoft Teams store.
+description: FAQ sur la création d’un compte de développeur espace partenaires pour la publication de votre application dans Microsoft Teams store.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889418"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391672"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Créer un compte de développeur de l’Espace partenaires
 
@@ -135,16 +135,6 @@ N’oubliez pas les informations suivantes sur le processus de vérification du 
 
 <details>
 
-<summary><b>Comment obtenir une assistance supplémentaire pour les problèmes liés à mon compte ?</b></summary>
-
-Pour plus [d’informations,](/azure/marketplace/partner-center-portal/support) voir la prise en charge du programme Commercial Marketplace dans l’Espace partenaires.
-
-<br>
-
-</details>
-
-<details>
-
 <summary><b>J’ai vérifié mes dossiers de courrier et je n’ai pas reçu l’e-mail de vérification. Que dois-je faire ensuite ?</b></summary>
 
 Procédez comme suit :
@@ -191,7 +181,7 @@ Les tickets de support sont résolus dans une semaine. Recherchez les mises à j
 
 <details>
 
-<summary><b>J’ai créé un ticket de support, mais je n’ai pas reçu de mise à jour depuis sept jours ou jours ou jours. Où puis-je obtenir de l’aide ?</b></summary>
+<summary><b>J’ai créé un ticket de support, mais je n’ai pas reçu de mise à jour depuis sept jours ou moins. Où puis-je obtenir de l’aide ?</b></summary>
 
 Envoyez un <a href="mailto:teamsubm@microsoft.com">e-mail teamsubm@microsoft.com</a> avec les détails suivants :
 

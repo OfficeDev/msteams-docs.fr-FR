@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: 180d1f02353b0a04a89b16e040be0927f568f916
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: 2f5ec4d3ab2c9be9480dd4400aed1ba503879940
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323281"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391742"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,8 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+| 12/09/2021| Introduction du guide pas à pas pour créer le panneau latéral des réunions. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un panneau latéral de réunions [dans Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Introduction du guide pas à pas de l’affichage étape par étape des réunions. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un affichage étape par [étape des réunions](sbs-meetings-stage-view.yml)| 
 |12/01/2021 | Nouvelle icône du Store introduite | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
 |
 
@@ -37,6 +39,8 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 12/09/2021| Introduction du guide pas à pas pour créer le panneau latéral des réunions. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un panneau latéral de réunions [dans Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Introduction du guide pas à pas de l’affichage étape par étape des réunions. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un affichage étape par [étape des réunions](sbs-meetings-stage-view.yml)|
 |12/01/2021 | Nouvelle icône du Store introduite | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Mise à jour des Microsoft Teams de validation du magasin de données|[Recommandations en matière de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|

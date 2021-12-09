@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178243"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61392371"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -633,7 +633,7 @@ Indiquez l’endroit où une application personnelle est rendue avec ou sans bar
 > [!NOTE]
 > `isFullScreen`fonctionne uniquement avec SharePoint onglets et les applications du Store.
 
-## <a name="activities"></a>activities
+## <a name="activities"></a>activités
 
 **Facultatif**— objet
 
@@ -755,7 +755,7 @@ Lorsque la propriété est définie sur true, l’application est masquée aux u
 
 **Taille maximale** - 128 caractères
 
-La propriété dépend de `defaultBlockUntilAdminAction` . Lorsque la propriété est définie sur `defaultBlockUntilAdminAction` **true,** l’URL HTTPS fournit une page d’informations pour que les administrateurs obtiennent des instructions avant d’autoriser une application, qui est bloquée `publisherDocsUrl` par défaut.
+Il s’agit d’une URL HTTPS vers une page d’informations permettant aux administrateurs d’obtenir des instructions avant d’autoriser une application, qui est `publisherDocsUrl` bloquée par défaut. Il peut également être utilisé pour fournir des instructions ou des informations sur l’application qui peuvent être utiles pour l’administrateur client.
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 

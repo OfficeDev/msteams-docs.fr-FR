@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: bb58e7f54fe3ad75b2a52148540119ae5dbbc9e6
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 42949c9cdd3cb8e117925f170b2ab44e3bda1a1d
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227933"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391679"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Collaborer sur Teams projet à l’aide Teams Shared Computer Toolkit
 
@@ -82,9 +82,7 @@ Teams Shared Computer Toolkit prend désormais en charge la fonctionnalité de c
       4. Go to [Azure Active Directory,](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)select **App registration** from left panel, and find your AAD App.
       5. Dans la page AAD gestion des applications, sélectionnez **Propriétaires** dans le panneau gauche.
       6. Recherchez et supprimez le collaborateur.
-    
 
-1. La fonctionnalité de collaboration prend uniquement en charge le projet hébergé sur Azure, SPFx projet hébergé sera pris en charge à l’avenir.
 
 1. Le collaborateur ajouté à votre projet ne recevra aucune notification. Project propriétaire doit avertir le collaborateur hors connexion.
 

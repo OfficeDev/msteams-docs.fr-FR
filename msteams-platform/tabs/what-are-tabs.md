@@ -5,12 +5,12 @@ description: Vue d’ensemble des onglets personnalisés sur la plateforme Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ea777a615358467f12a6f98c5e06fc5dd14b7418
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075429"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391728"
 ---
 # <a name="microsoft-teams-tabs"></a>Onglets Microsoft Teams
 
@@ -33,7 +33,10 @@ Deux types d’onglets sont disponibles dans Teams, personnel et canal ou groupe
 
 Vous pouvez [créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) dans le cadre d’un onglet personnel, d’un onglet de canal ou de groupe ou d’un module de tâche. Vous pouvez créer une page de [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) qui permet aux utilisateurs de configurer une application Microsoft Teams et de l’utiliser pour configurer un onglet de conversation de canal ou de groupe, une extension de messagerie ou un connecteur Office 365. Vous pouvez permettre aux utilisateurs de reconfigurer votre onglet après l’installation et de créer une [page](~/tabs/how-to/create-tab-pages/removal-page.md) de suppression d’onglets pour votre application. Lorsque vous créez une application Teams qui inclut un onglet, vous devez tester le fonctionnement de votre onglet sur les clients d’Teams [Android et iOS.](~/tabs/design/tabs-mobile.md) Votre onglet doit obtenir [le contexte par](~/tabs/how-to/access-teams-context.md) le biais d’informations de base, de paramètres régionaux et de thèmes, ou qui identifie ce qui se trouve dans `entityId` `subEntityId` l’onglet.
 
-Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes les fonctionnalités de l’application Teams en éliminant la nécessité d’un autre système principal pour vos bots et onglets. [Stage View](~/tabs/tabs-link-unfurling.md) est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous forme d’onglet. Le [service](~/tabs/tabs-link-unfurling.md) de déploiement de lien existant est mis à jour, de sorte qu’il est utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Vous pouvez créer des [onglets](~/tabs/how-to/conversational-tabs.md) de conversation à l’aide de sous-entités de conversation qui permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier. Vous pouvez modifier les [marges des onglets](~/resources/removing-tab-margins.md) pour améliorer l’expérience du développeur lors de la création d’applications.
+Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes les fonctionnalités de l’application Teams en éliminant la nécessité d’un autre système principal pour vos bots et onglets. [Stage View](~/tabs/tabs-link-unfurling.md) est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous forme d’onglet. Le [service](~/tabs/tabs-link-unfurling.md) de déploiement de lien existant est mis à jour, de sorte qu’il est utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Vous pouvez créer des [onglets](~/tabs/how-to/conversational-tabs.md) de conversation à l’aide de sous-entités de conversation qui permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier. Vous pouvez modifier les [marges des onglets](~/resources/removing-tab-margins.md) pour améliorer l’expérience du développeur lors de la création d’applications. Vous pouvez faire glisser l’onglet et le placer à la position souhaitée pour échanger les positions de tabulation dans vos applications personnelles et conversations de canal ou de groupe. 
+
+> [!NOTE]
+> **Les** **onglets Billets,** **Fichiers** et Conversation ne peuvent pas être déplacés de leur position.
 
 ## <a name="tab-features"></a>Fonctionnalités de l’onglet
 
