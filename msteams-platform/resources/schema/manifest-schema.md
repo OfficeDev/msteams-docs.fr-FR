@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: schéma de manifeste teams
-ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 358aa6e35e2916dd554b7f9bbf1655601ce77820
+ms.sourcegitcommit: 2e0764cdb955cf12c5dce7b9ec671a653fec218c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392371"
+ms.lasthandoff: 12/13/2021
+ms.locfileid: "61424099"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste pour Microsoft Teams
 
@@ -368,7 +368,7 @@ Spécifie des informations sur votre entreprise. Pour les applications envoyées
 
 Nom de l’expérience de votre application, affiché aux utilisateurs dans l’Teams expérience utilisateur. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs `short` de et doivent être `full` différentes.
 
-|Nom| Taille maximale | Requis | Description|
+|Name| Taille maximale | Requis | Description|
 |---|---|---|---|
 |`short`|30 caractères|✔|Nom d’affichage court de l’application.|
 |`full`|100 caractères||Nom complet de l’application, utilisé si le nom complet de l’application dépasse 30 caractères.|
@@ -406,7 +406,7 @@ Autorise la spécification d’une langue par défaut et fournit des pointeurs v
 
 Tableau d’objets spécifiant davantage de traductions linguistiques.
 
-|Nom| Taille maximale | Requis | Description|
+|Name| Taille maximale | Requis | Description|
 |---|---|---|---|
 |`languageTag`||✔|Balise de langue des chaînes dans le fichier fourni.|
 |`file`||✔|Chemin d’accès relatif au fichier .json contenant les chaînes traduites.|
@@ -440,7 +440,7 @@ Utilisé lorsque l’expérience de votre application possède une expérience d
 |---|---|---|---|---|
 |`configurationUrl`|string|2 048 caractères|✔|Url https:// à utiliser lors de la configuration de l’onglet.|
 |`scopes`|tableau d’enums|1|✔|Actuellement, les onglets configurables ne peuvent que les `team` étendues et les `groupchat` étendues. |
-|`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut **: true**.|
+|`canUpdateConfiguration`|booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut **: true**.|
 |`context` |tableau d’enums|6 ||Ensemble `contextItem` d’étendues où un [onglet est pris en charge.](../../tabs/how-to/access-teams-context.md) Par défaut **: [channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
 |`supportedSharePointHosts`|tableau d’enums|1||Définit la façon dont votre onglet est mis à disposition dans SharePoint. Les options sont `sharePointFullPage` les `sharePointWebPart` |
@@ -526,11 +526,11 @@ Définit une extension de messagerie pour l’application.
 
 L’élément est un tableau (maximum d’un élément) avec tous les éléments de type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une extension de messagerie.
 
-|Nom| Type | Taille maximale | Obligatoire | Description|
+|Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui backs the messaging extension, tel qu’inscrit auprès de Bot Framework. L’ID peut être identique à l’ID d’application global.|
 |`commands`|tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie.|
-|`canUpdateConfiguration`|valeur booléenne|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
+|`canUpdateConfiguration`|booléen|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. Par défaut : **false**.|
 |`messageHandlers`|tableau d’objets|5||Liste des handlers qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
 |`messageHandlers.type`|string|||Type de handler de messages. Doit être `"link"`.|
 |`messageHandlers.value.domains`|tableau de chaînes|||Tableau de domaines pour l’inscription du handler de message de lien.|
@@ -547,9 +547,9 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`title`|string|32 caractères|✔|Nom de la commande conviviale.|
 |`type`|string|64 caractères||Type de la commande. L’un `query` ou `action` l’autre . Par défaut : **requête**.|
 |`description`|string|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|valeur booléenne|||Une valeur booléle indique si la commande s’exécute initialement sans paramètre. La valeur par défaut est **False**.|
+|`initialRun`|booléen|||Une valeur booléle indique si la commande s’exécute initialement sans paramètre. La valeur par défaut est **False**.|
 |`context`|tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de message peut être invoquée. N’importe quelle `compose` combinaison de `commandBox` , `message` . La valeur par défaut est `["compose","commandBox"]`.|
-|`fetchTask`|valeur booléenne|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche. La valeur par défaut est **False**.|
+|`fetchTask`|booléen|||Valeur booléle qui indique s’il doit extraire dynamiquement le module de tâche. La valeur par défaut est **False**.|
 |`taskInfo`|objet|||Spécifiez le module de tâche à pré-charger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|string|||Largeur de la boîte de dialogue : nombre en pixels ou disposition par défaut telle que « grande » , « moyenne » ou « petite ».|
@@ -631,7 +631,7 @@ Indique si l’indicateur de chargement s’affiche ou non lorsqu’une applicat
 Indiquez l’endroit où une application personnelle est rendue avec ou sans barre d’en-tête d’onglet. La valeur par défaut est **False**.
 
 > [!NOTE]
-> `isFullScreen`fonctionne uniquement avec SharePoint onglets et les applications du Store.
+> `isFullScreen` fonctionne uniquement pour les applications publiées dans votre organisation.
 
 ## <a name="activities"></a>activités
 
