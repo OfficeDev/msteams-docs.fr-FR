@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Authentification unique Teams AAD api d’authentification unique
-ms.openlocfilehash: 3e941e905f2c75825c502f67f49bb4cec5e601fa
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323288"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569503"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -199,3 +199,10 @@ La solution d’authentification décrite ci-dessus fonctionne uniquement pour l
 
 > [!NOTE]
 > L’ation SSO est prise en charge pour les applications du client au sein AAD clients B2C.
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas pour](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) authentifier les onglets et les extensions de messagerie.
+
+## <a name="see-also"></a>Voir aussi
+[Teams Bot avec 3 000 000 000 000](../../../sbs-bots-with-sso.yml)

@@ -5,12 +5,12 @@ description: Découvrez comment tester et déboguer votre bot localement avec un
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9ac6e2f7bf173e68e111b0d792ec89ba266c188f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888229"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569573"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -21,11 +21,13 @@ Lorsque vous testez votre bot, vous devez prendre en compte les contextes dans l
 La façon la plus complète de tester votre bot consiste à créer un package d’application et à le télécharger sur Teams. Il s’agit de la seule méthode pour tester les fonctionnalités complètes disponibles pour votre bot, dans toutes les étendues.
 
 Il existe deux méthodes pour charger votre application :
+
 * Utilisez [App Studio.](~/concepts/build-and-test/app-studio-overview.md)
 * [Créez un package d’application](~/concepts/build-and-test/apps-package.md) manuellement, puis [téléchargez votre application.](~/concepts/deploy-and-publish/apps-upload.md)
 
 > [!NOTE]
-> Si vous avez besoin de modifier votre manifeste et de retélé télécharger votre application, vous devez supprimer votre [bot](#delete-a-bot-from-teams) avant de télécharger votre package d’application modifié.
+> Pour modifier le manifeste et re-télécharger votre application, supprimez le [bot](#delete-a-bot-from-teams) avant de télécharger le package d’application modifié.
+> Pour tester le bot, activez le chargement de version test dans Teams. Voir [activer le chargement de version de version de chargement.](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
 
 ## <a name="debug-your-bot-locally"></a>Déboguer votre bot localement
 
@@ -35,7 +37,7 @@ Si vous hébergez votre bot localement pendant le développement, vous devez uti
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Utilisez le point de terminaison https fourni par ngrok dans le manifeste de votre application. 
+Utilisez le point de terminaison https fourni par ngrok dans le manifeste de votre application.
 
 > [!NOTE]
 > Si vous fermez votre fenêtre de commande et redémarrez, une nouvelle URL est générée et vous devez mettre à jour l’adresse de votre point de terminaison du bot pour l’utiliser.

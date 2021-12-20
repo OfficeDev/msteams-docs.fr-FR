@@ -5,12 +5,12 @@ keywords: Format de cartes de bots Teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216229"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569531"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -296,7 +296,7 @@ Utilisez la propriété de masquage d’informations pour masquer des informatio
 > [!NOTE]
 > La fonctionnalité prend uniquement en charge le masquage d’informations côté client. Le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse de point de terminaison HTTPS spécifiée lors de la [configuration du bot.](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)
 
-Pour masquer des informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `isMasked` sa valeur sur  `Input.Text` **true**.
+Pour masquer des informations dans les cartes adaptatives, ajoutez la propriété à taper et définissez `style` sa valeur sur  `input.text` **Password**.
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>Exemple de carte adaptative avec propriété de masquage
 

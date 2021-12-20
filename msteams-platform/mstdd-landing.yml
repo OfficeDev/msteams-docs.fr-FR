@@ -11,17 +11,19 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 22d603225eb3dacc15b6491ea2daede0fdcfc690
-  ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+  ms.openlocfilehash: ad54e998cf2097686ad41ba4db9fe44f44219ff2
+  ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/09/2021
-  ms.locfileid: "61392364"
+  ms.lasthandoff: 12/20/2021
+  ms.locfileid: "61569489"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
+    - text: Recommandations en matière d’applications liées à l’offre SaaS
+      url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
     - text: Nouvelle icône du Store introduite
       url: ~/concepts/design/personal-apps.md
     - text: Teams Shared Computer Toolkit for Visual Studio Code (Preview)
@@ -48,6 +50,8 @@ landingContent:
       url: ~/bots/how-to/authentication/add-authentication.md
     - text: Activer et configurer les applications pour les meetings
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - text: Utiliser l’authentification sso pour les onglets
+      url: tabs/how-to/authentication/auth-aad-sso.md
   - linkListType: tutorial
     links:
     - text: Guide pas à pas pour les messages proactifs
@@ -56,10 +60,14 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: Guide pas à pas pour générer un jeton de réunion
       url: ~/sbs-meeting-token-generator.yml
+    - text: Guide pas à pas pour la bulle de contenu de réunion
+      url: ~/sbs-meeting-content-bubble.yml
     - text: Guide pas à pas pour la création d’un espace de réunion secondaire
       url: ~/sbs-meetings-sidepanel.yml
-    - text: Guide pas à pas pour l’affichage des étapes des réunions
+    - text: Guide pas à pas pour l’affichage de l’étape de la réunion
       url: ~/sbs-meetings-stage-view.yml
+    - text: Guide pas à pas avec l' sso pour les onglets et les extensions de messagerie
+      url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
 - title: Prise en main
   linkLists:
   - linkListType: get-started

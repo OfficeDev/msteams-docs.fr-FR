@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles fonctionnalités de développement dan
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: 81c050bd36e2b07fa0dfbc1a96c1d0b1fe7e1724
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 70531b0fc772e282d8fead5b11831b6ae84651e3
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392378"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569510"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,10 +22,12 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|12/20/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+|12/20/2021| Introduction du guide pas à pas pour les onglets et les extensions de messagerie avec l' sign-on unique (SSO). | Ajouter des onglets > authentification > utiliser l’authentification > guide pas à pas avec l’authentification sso pour les onglets et les [extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml) de messagerie|
+| 12/20/2021| Introduction du guide pas à pas pour créer une bulle de contenu de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une bulle de [contenu de réunion](sbs-meeting-content-bubble.yml) |
+| 12/09/2021| Introduction d’un guide pas à pas pour la vue d’étape de la réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une vue d’étape [des réunions](sbs-meetings-stage-view.yml)|
 | 12/09/2021| Introduction d’un guide pas à pas pour créer un espace de réunion secondaire. | Créer des applications pour Teams réunions > Activer et configurer des applications pour les réunions > Guide pas à pas pour créer un espace de réunion secondaire [dans Teams](sbs-meetings-sidepanel.yml)|
-| 12/09/2021| Introduction du guide pas à pas de l’affichage étape par étape des réunions. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un affichage étape par [étape des réunions](sbs-meetings-stage-view.yml)| 
-|12/01/2021 | Nouvelle icône du Store introduite | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
-|
+|12/01/2021 | Introduction de la nouvelle icône store. | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
 
 ## <a name="ga-features"></a>Fonctionnalités ga
 
@@ -39,10 +41,13 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
-| 12/09/2021| Introduction d’un guide pas à pas pour créer un espace de réunion secondaire. | Créer des applications pour Teams réunions > Activer et configurer des applications pour les réunions > Guide pas à pas pour créer un espace de réunion secondaire [dans Teams](sbs-meetings-sidepanel.yml)|
-| 12/09/2021| Introduction du guide pas à pas de l’affichage étape par étape des réunions. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un affichage étape par [étape des réunions](sbs-meetings-stage-view.yml)|
-|12/01/2021 | Nouvelle icône du Store introduite | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
-| 11/24/2021| Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|
+|12/20/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+|12/20/2021| Introduction du guide pas à pas pour les onglets et les extensions de messagerie avec l' sign-on unique (SSO). | Ajouter des onglets > authentification > utiliser l’authentification > guide pas à pas avec l’authentification sso pour les onglets et les [extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml) de messagerie|
+|12/20/2021| Introduction du guide pas à pas pour créer une bulle de contenu de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une bulle de [contenu de réunion](sbs-meeting-content-bubble.yml) |
+|12/09/2021| Introduction d’un guide pas à pas pour la vue d’étape de la réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une vue d’étape [des réunions](sbs-meetings-stage-view.yml)|
+|12/09/2021| Introduction d’un guide pas à pas pour créer un espace de réunion secondaire. | Créer des applications pour Teams réunions > Activer et configurer des applications pour les réunions > Guide pas à pas pour créer un espace de réunion secondaire [dans Teams](sbs-meetings-sidepanel.yml)|
+|12/01/2021 | Introduction de la nouvelle icône store. | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
+|11/24/2021| Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Mise à jour des Microsoft Teams de validation du magasin de données|[Recommandations en matière de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Recherche de typeahead statique et dynamique pour les utilisateurs de bureau et mobiles.| • Créer des cartes et des modules de tâche > créer des cartes > [recherche Typeahead dans les cartes adaptatives](task-modules-and-cards/cards/dynamic-search.md) </br> • Créer des cartes et des modules de tâche > créer des cartes > vue d> la recherche à l’avance sur les types  [dans les cartes adaptatives](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Créer des cartes et des modules de tâche > vue d> [cartes et modules de tâche](task-modules-and-cards/cards-and-task-modules.md)|
 |11/13/2021| Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC). | • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous les messages de canal [avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) |

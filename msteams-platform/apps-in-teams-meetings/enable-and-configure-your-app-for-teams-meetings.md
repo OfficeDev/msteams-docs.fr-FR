@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, la phase de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392490"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569419"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -141,9 +141,10 @@ Les configurations des réunions après [et avant](#before-a-meeting) sont les m
 
 ## <a name="step-by-step-guides"></a>Guides pas à pas
 
-* Suivez le [guide pas à pas pour](../sbs-meeting-token-generator.yml) générer un jeton **de** réunion dans votre Teams réunion.
-* Suivez le [guide pas à pas pour](../sbs-meetings-sidepanel.yml) générer un **sidepanel** de réunion dans votre Teams réunion.
-* Suivez le [guide pas à pas](../sbs-meetings-stage-view.yml) pour générer une vue d’étape réunions dans Teams réunion.
+* Suivez le [guide pas à pas pour](../sbs-meeting-token-generator.yml) générer un jeton de réunion dans votre Teams réunion.
+* Suivez le [guide pas à pas pour](../sbs-meetings-sidepanel.yml) générer un sidepanel de réunion dans votre Teams réunion.
+* Suivez le [guide pas à pas pour](../sbs-meetings-stage-view.yml) générer une vue d’étape de la réunion dans Teams réunion.
+* Suivez le [guide pas à pas pour](../sbs-meeting-content-bubble.yml) générer une bulle de contenu de réunion dans votre Teams réunion.
 
 ## <a name="next-step"></a>Étape suivante
 

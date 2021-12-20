@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Manifeste du bot d’inscription du canal du bot de groupe de ressources Azure
-ms.openlocfilehash: da3a506ef4c1eeb77f97ce517a68005750026915
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887900"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569524"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à Teams bot
 
@@ -39,7 +39,7 @@ Voici les titres des sections de cet article :
 - Compte Azure. Si nécessaire, vous pouvez créer un [compte gratuit Azure.](https://azure.microsoft.com/free/)
 - L’exemple suivant :
 
-    | Exemple | Version de BotBuilder | Demonstrates |
+    | Échantillon | Version de BotBuilder | Demonstrates |
     |:---|:---:|:---|
     | **Authentification de bot** [dans cs-auth-sample][teams-auth-bot-cs] | v4 | Prise en charge d’OAuthCard |
     | **Authentification de bot** [dans js-auth-sample][teams-auth-bot-js] | v4| Prise en charge d’OAuthCard  |
@@ -83,7 +83,7 @@ Vous utilisez un groupe de ressources pour créer des ressources individuelles p
 L’inscription des canaux du bot inscrit votre service web en tant que bot auprès de Bot Framework, à condition que vous avez un ID d’application Microsoft et un mot de passe d’application (secret client).
 
 > [!IMPORTANT]
-> Vous ne devez inscrire votre bot que s’il n’est pas hébergé dans Azure. Si vous [avez créé un bot via](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) le portail Azure, il est déjà inscrit auprès du service. Si vous avez créé votre bot via [Bot Framework](https://dev.botframework.com/bots/new) ou [AppStudio,](~/concepts/build-and-test/app-studio-overview.md) votre bot n’est pas inscrit dans Azure.
+> Vous ne devez inscrire votre bot que s’il n’est pas hébergé dans Azure. Si vous [avez créé un bot via](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) le portail Azure, il est déjà inscrit auprès du service. Si vous avez créé votre bot via [Bot Framework](https://dev.botframework.com/bots/new) ou [le portail](../../../concepts/build-and-test/teams-developer-portal.md) de développement, votre bot n’est pas inscrit dans Azure.
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -95,7 +95,7 @@ Pour plus d’informations, [voir Créer un bot pour Teams](../create-a-bot-for-
 ## <a name="create-the-identity-provider"></a>Créer le fournisseur d’identité
 
 Vous avez besoin d’un fournisseur d’identité qui peut être utilisé pour l’authentification.
-Dans cette procédure, vous allez utiliser un fournisseur Azure AD de données . d Azure AD fournisseurs d’identité pris en charge peuvent également être utilisés.
+Dans cette procédure, vous allez utiliser un fournisseur Azure AD de données , d’autres Azure AD d’identité pris en charge peuvent également être utilisés.
 
 1. Dans le [**portail Azure,**][azure-portal]dans le panneau de navigation de gauche, **sélectionnez Azure Active Directory**.
     > [!TIP]
@@ -126,7 +126,7 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD de données .
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Configurer la connexion du fournisseur d’identité et l’inscrire auprès du bot
 
-Remarque : il existe deux options pour les fournisseurs de services Azure AD V1 et Azure AD V2.  Les différences entre les deux fournisseurs sont résumées [ici,](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)mais en général, V2 offre plus de flexibilité en ce qui concerne la modification des autorisations de bot.  Graph Les autorisations d’API sont répertoriées dans le champ d’étendues et, à mesure que de nouvelles autorisations sont ajoutées, les bots permettent aux utilisateurs d’autoriser les nouvelles autorisations à la prochaine connexion.  Pour V1, le consentement du bot doit être supprimé par l’utilisateur pour que de nouvelles autorisations soient invités dans la boîte de dialogue OAuth. 
+Remarque : il existe deux options pour les fournisseurs de services Azure AD V1 et Azure AD V2.  Les différences entre les deux fournisseurs sont résumées [ici,](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)mais en général, V2 offre plus de flexibilité en ce qui concerne la modification des autorisations de bot.  Graph’API sont répertoriées dans le champ d’étendues et, à mesure que de nouvelles autorisations sont ajoutées, les bots permettent aux utilisateurs d’autoriser les nouvelles autorisations à la prochaine connexion.  Pour V1, le consentement du bot doit être supprimé par l’utilisateur pour que de nouvelles autorisations soient invités dans la boîte de dialogue OAuth. 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
@@ -172,7 +172,7 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
     1. **Fournisseur de services**. Sélectionnez **Azure Active Directory v2**. Une fois cette sélection sélectionnée, les Azure AD spécifiques sont affichés.
     1. **ID client**. Entrez l’ID d’application (client) que vous avez enregistré pour votre application de fournisseur d’identité Azure dans les étapes ci-dessus.
     1. **Secret client**. Entrez le secret que vous avez enregistré pour votre application de fournisseur d’identité Azure dans les étapes ci-dessus.
-    1. **URL de Exchange jeton**. Laissez ce vide.
+    1. **URL de Exchange jeton**. Laissez ce champ vide.
     1. **ID de client**, entrez l’ID d’annuaire **(client)**  que vous avez enregistré précédemment pour votre application d’identité Azure ou commun en fonction du type de compte pris en charge sélectionné lors de la création de l’application fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez ces critères :
 
         - Si vous avez sélectionné des comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement - Client *unique)* ou des comptes dans un répertoire d’organisation *(annuaire Microsoft AAD - Multi-client),* entrez l’ID de locataire que vous avez enregistré précédemment pour l’application AAD.  Il s’agit du client associé aux utilisateurs qui peuvent être authentifiés.
@@ -309,7 +309,7 @@ Une fois que vous avez configuré le mécanisme d’authentification, vous pouve
 1. Dans **l’URL du bot,** entrez l’URL locale du bot. Généralement, `http://localhost:3978/api/messages` .
 1. Dans **l’ID d’application Microsoft,** entrez l’ID d’application du bot à partir de `appsettings.json` .
 1. Dans le **mot de passe de l’application Microsoft,** entrez le mot de passe de l’application du bot à partir du `appsettings.json` .
-1. Sélectionnez **Connecter**.
+1. Sélectionnez **Connexion**.
 1. Une fois que le bot est en cours d’exécution, entrez du texte pour afficher la carte de signature.
 1. Sélectionnez le bouton **Se connecter**.
 1. Une boîte de dialogue s’affiche pour confirmer **l’ouverture de l’URL.** Cela permet à l’utilisateur du bot (vous) d’être authentifié.  
