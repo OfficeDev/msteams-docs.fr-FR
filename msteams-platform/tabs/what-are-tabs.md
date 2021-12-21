@@ -5,14 +5,14 @@ description: Vue d’ensemble des onglets personnalisés sur la plateforme Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: b48091c0701ebbb84e87e80cc3378f788bcb30b3
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391728"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573562"
 ---
-# <a name="microsoft-teams-tabs"></a>Onglets Microsoft Teams
+# <a name="build-tabs-for-microsoft-teams"></a>Créer des onglets pour Microsoft Teams
 
 Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Il s’agit de balises html <iframe simples qui pointent vers des domaines déclarés dans le manifeste de l’application et qui peuvent être ajoutées dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur \> individuel. Vous pouvez inclure des onglets personnalisés avec votre application pour incorporer votre propre contenu web dans Teams ou ajouter Teams fonctionnalités spécifiques à votre contenu web. Pour plus d’informations, [Teams SDK client JavaScript.](/javascript/api/overview/msteams-client)
 
@@ -36,7 +36,7 @@ Vous pouvez [créer une page de contenu](~/tabs/how-to/create-tab-pages/content-
 Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes les fonctionnalités de l’application Teams en éliminant la nécessité d’un autre système principal pour vos bots et onglets. [Stage View](~/tabs/tabs-link-unfurling.md) est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran en Teams et épinglé sous forme d’onglet. Le [service](~/tabs/tabs-link-unfurling.md) de déploiement de lien existant est mis à jour, de sorte qu’il est utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Vous pouvez créer des [onglets](~/tabs/how-to/conversational-tabs.md) de conversation à l’aide de sous-entités de conversation qui permettent aux utilisateurs d’avoir des conversations sur des sous-entités dans votre onglet, telles que des tâches spécifiques, des patients et des opportunités de vente, au lieu de discuter de l’onglet entier. Vous pouvez modifier les [marges des onglets](~/resources/removing-tab-margins.md) pour améliorer l’expérience du développeur lors de la création d’applications. Vous pouvez faire glisser l’onglet et le placer à la position souhaitée pour échanger les positions de tabulation dans vos applications personnelles et conversations de canal ou de groupe. 
 
 > [!NOTE]
-> **Les** **onglets Billets,** **Fichiers** et Conversation ne peuvent pas être déplacés de leur position.
+> **Les** publications **et** les fichiers ne peuvent pas être déplacés de leur poste.
 
 ## <a name="tab-features"></a>Fonctionnalités de l’onglet
 

@@ -1,0 +1,19 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: personal-tab
+  title: Type d’environnement onglet personnel
+  prompt: 'Choisissez le type d’environnement dans lequel vous souhaitez créer un onglet personnel :'
+  pivots:
+  - id: node-js
+    title: Node.js
+  - id: asp-net-core
+    title: ASP.NET Core
+  - id: asp-net-core-mvc
+    title: ASP.NET Core MVC
+metadata:
+  ms.openlocfilehash: 0e886a6d5a1dce0320ea803bff9646cd01687011
+  ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 12/21/2021
+  ms.locfileid: "61574606"

@@ -5,12 +5,12 @@ description: Découvrez comment répondre à la commande de recherche à partir 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: b31bdc167c033785edc971b96b2ebfc44c265995
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178278"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573413"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 
@@ -115,10 +115,9 @@ La liste des résultats s’affiche dans l Microsoft Teams’interface utilisate
 
 Pour la carte Hero ou miniature, sauf que l’action d’appel d’autres actions telles que le bouton et l’appui ne sont pas prises en charge dans la carte d’aperçu.
 
-Pour envoyer une carte adaptative ou une carte de connecteur Ofiice 365, vous devez inclure un aperçu. La `preview` propriété doit être une carte Hero ou Miniature. Si vous ne spécifiez pas la propriété d’aperçu dans `attachment` l’objet, un aperçu n’est pas généré.
+Pour envoyer une carte adaptative ou une carte connecteur Office 365, vous devez inclure un aperçu. La `preview` propriété doit être une carte Hero ou Miniature. Si vous ne spécifiez pas la propriété d’aperçu dans `attachment` l’objet, un aperçu n’est pas généré.
 
-Pour les cartes Hero et Thumbnail, vous n’avez pas besoin de spécifier une propriété d’aperçu, un aperçu est généré par défaut. L’exemple suivant affiche la fonctionnalité de déploiement de lien lorsqu’un lien est passé dans l’extension de messagerie :  
-![déploiement de lien](~/assets/images/messaging-extension/link-unfurl.gif)
+Pour les cartes Hero et Thumbnail, vous n’avez pas besoin de spécifier une propriété d’aperçu, un aperçu est généré par défaut.
 
 ### <a name="response-example"></a>Exemple de réponse
 
