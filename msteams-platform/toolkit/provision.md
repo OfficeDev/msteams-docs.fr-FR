@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e11c66e7e818a090305e320ed21080c7ca897856
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: c8899131876533fdd64913fb6790cff9f258e8f5
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228084"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591784"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud
 
@@ -51,7 +51,7 @@ Lorsque vous créez un projet, vous obtenez toutes les ressources Azure à crée
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Création de ressources pour l Teams’onglet
 
-|Ressources|Objectif de cette ressource| Notes |
+|Ressources|Objectif de cette ressource| Remarques |
 |----------|--------------------------------|-----|
 | Stockage Azure | Héberger votre application d’onglet | Permet à la fonctionnalité d’application web statique d’héberger votre application Onglet |
 | App Service Plan for Simple Auth | Héberger l’application web d’th simple | |
@@ -60,7 +60,7 @@ Lorsque vous créez un projet, vous obtenez toutes les ressources Azure à crée
 
 ### <a name="resources-created-for-teams-bot-or-messaging-extension-application"></a>Ressources créées pour Teams application Bot ou Extension de messagerie
 
-|Ressources|Objectif de cette ressource| Notes |
+|Ressources|Objectif de cette ressource| Remarques |
 |----------|--------------------------------|-----|
 | Azure Bot Service | Enregistre votre application en tant que bot avec Bot Framework | Connecte le bot à Teams |
 | Plan de service d’application pour bot | Héberger l’application web du bot | |
@@ -69,7 +69,7 @@ Lorsque vous créez un projet, vous obtenez toutes les ressources Azure à crée
 
 ### <a name="resources-created-when-including-azure-functions-in-the-project"></a>Ressources créées lors de l’inclure à des fonctions Azure dans le projet
 
-|Ressources|Objectif de cette ressource| Notes |
+|Ressources|Objectif de cette ressource| Remarques |
 |----------|--------------------------------|-----|
 | Plan du service d’application pour function app | Héberger l’application de fonction | |
 | Function App | Héberger vos API de fonctions Azure | Ajoute l’identité attribuée à l’utilisateur pour faciliter l’accès à d’autres ressources Azure. <br /> Ajoute une règle CORS pour autoriser les demandes à partir de votre application d’onglet <br /> Ajoute un paramètre d’authentification qui autorise uniquement les demandes provenant de votre Teams application. <br /> Ajoute les paramètres d’application requis par [le SDK TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -78,7 +78,7 @@ Lorsque vous créez un projet, vous obtenez toutes les ressources Azure à crée
 
 ### <a name="resources-created-when-including-azure-sql-in-the-project"></a>Ressources créées lors de l’SQL Azure dans le projet
 
-|Ressources|Objectif de cette ressource| Notes |
+|Ressources|Objectif de cette ressource| Remarques |
 |----------|--------------------------------|-----|
 | Azure SQL Server | Héberger l’instance Azure SQL Database instance | Permet à tous les services Azure d’accéder au serveur |
 | Base de données Azure SQL | Stocker des données pour votre application | Accorde à l’utilisateur une autorisation de lecture/écriture sur la base de données |
@@ -94,7 +94,7 @@ Lorsque vous créez un projet, vous obtenez toutes les ressources Azure à crée
 | Gestion des API OAuth Server | Permet à Microsoft Power Platform d’accéder à vos API hébergées dans Function App |
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure |
 
-## <a name="customize-resource-provision"></a>Personnaliser la mise en service des ressources 
+## <a name="customize-resource-provision"></a>Personnaliser la mise en service des ressources
 
 Teams Shared Computer Toolkit vous permet d’utiliser une infrastructure comme approche de code pour définir les ressources Azure que vous souhaitez mettre en service et la façon dont vous souhaitez les configurer. Les outils utilisent ARM modèle pour définir des ressources Azure. Le ARM est un ensemble de fichiers biceps qui définit l’infrastructure et la configuration de votre projet. Vous pouvez personnaliser les ressources Azure créées en modifiant ARM modèle. Pour plus d’informations, [voir le document bicep.](/azure/azure-resource-manager/bicep.md) La mise en service ARM implique la modification des deux jeux de fichiers, paramètres et modèles suivants :
 

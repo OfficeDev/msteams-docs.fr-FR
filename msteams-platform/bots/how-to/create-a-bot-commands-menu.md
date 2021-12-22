@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de message de composition de menu commande @mention
-ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888236"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591791"
 ---
 # <a name="bot-command-menus"></a>Menus de commande du bot
 
@@ -163,7 +163,7 @@ Vous devez gérer les commandes de menu dans le code de votre bot lorsque vous t
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>Gérer les commandes de menu dans le code de votre bot
 
-Les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés `@botname` dans un message. Chaque message reçu par un bot lorsqu’il se trouve dans une étendue de groupe ou de canal contient son nom dans le texte du message renvoyé. Avant de gérer la commande renvoyée, l’utilisation de votre message doit gérer le message reçu par un bot avec son nom.
+Les bots d’un groupe ou d’un canal répondent uniquement lorsqu’ils sont mentionnés `@botname` dans un message. Chaque message reçu par un bot lorsqu’il se trouve dans une étendue de groupe ou de canal contient son nom dans le texte du message. Avant de gérer la commande renvoyée, l’utilisation de votre message doit gérer le message reçu par un bot avec son nom.
 
 > [!NOTE]
 > Pour gérer les commandes dans le code, elles sont envoyées à votre bot en tant que message normal. Vous devez les gérer comme vous le feriez pour tout autre message de vos utilisateurs. Les commandes du code insèrent du texte pré-configuré dans la zone de texte. L’utilisateur doit ensuite envoyer ce texte comme il le fait pour tout autre message.

@@ -1,15 +1,15 @@
 ---
 title: Nouveautés
-description: Décrit toutes les nouvelles fonctionnalités de développement dans Microsoft Teams
+description: Décrit toutes les fonctionnalités de développement nouvelles ou les plus récentes dans Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: 70531b0fc772e282d8fead5b11831b6ae84651e3
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e1ab810630a27cf83b8b104d0d0087ae5a709ec6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569510"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591798"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,9 +22,10 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
-|12/20/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+| 12/21/2021 | Mise à jour des modules JavaScript, C# et Node.js pris en Teams Shared Computer Toolkit 3.0.0. | • Commencer à > [créer votre première application avec JavaScript](sbs-gs-javascript.yml) <br> • Commencer à > créer votre première application avec [C# ou .NET](sbs-gs-csharp.yml) <br> • Commencer à> [créer votre première application avec Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduction du guide pas à pas pour les onglets et les extensions de messagerie avec l' sign-on unique (SSO). | Ajouter des onglets > authentification > utiliser l’authentification > guide pas à pas avec l’authentification sso pour les onglets et les [extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml) de messagerie|
 | 12/20/2021| Introduction du guide pas à pas pour créer une bulle de contenu de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une bulle de [contenu de réunion](sbs-meeting-content-bubble.yml) |
+|12/13/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
 | 12/09/2021| Introduction d’un guide pas à pas pour la vue d’étape de la réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une vue d’étape [des réunions](sbs-meetings-stage-view.yml)|
 | 12/09/2021| Introduction d’un guide pas à pas pour créer un espace de réunion secondaire. | Créer des applications pour Teams réunions > Activer et configurer des applications pour les réunions > Guide pas à pas pour créer un espace de réunion secondaire [dans Teams](sbs-meetings-sidepanel.yml)|
 |12/01/2021 | Introduction de la nouvelle icône store. | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
@@ -41,10 +42,11 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
-|12/20/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+| 12/21/2021 | Mise à jour des modules JavaScript, C# et Node.js pris en Teams Shared Computer Toolkit 3.0.0. | • Commencer à > [créer votre première application avec JavaScript](sbs-gs-javascript.yml) <br> • Commencer à > créer votre première application avec [C# ou .NET](sbs-gs-csharp.yml) <br> • Commencer à> [créer votre première application avec Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduction du guide pas à pas pour les onglets et les extensions de messagerie avec l' sign-on unique (SSO). | Ajouter des onglets > authentification > utiliser l’authentification > guide pas à pas avec l’authentification sso pour les onglets et les [extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml) de messagerie|
 |12/20/2021| Introduction du guide pas à pas pour créer une bulle de contenu de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une bulle de [contenu de réunion](sbs-meeting-content-bubble.yml) |
 |12/09/2021| Introduction d’un guide pas à pas pour la vue d’étape de la réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une vue d’étape [des réunions](sbs-meetings-stage-view.yml)|
+|12/13/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
 |12/09/2021| Introduction d’un guide pas à pas pour créer un espace de réunion secondaire. | Créer des applications pour Teams réunions > Activer et configurer des applications pour les réunions > Guide pas à pas pour créer un espace de réunion secondaire [dans Teams](sbs-meetings-sidepanel.yml)|
 |12/01/2021 | Introduction de la nouvelle icône store. | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
 |11/24/2021| Introduction du guide pas à pas pour générer un jeton de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer un jeton de réunion [dans Teams](sbs-meeting-token-generator.yml)|
