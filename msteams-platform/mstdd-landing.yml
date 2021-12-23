@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: ad54e998cf2097686ad41ba4db9fe44f44219ff2
-  ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
+  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/20/2021
-  ms.locfileid: "61569489"
+  ms.lasthandoff: 12/23/2021
+  ms.locfileid: "61598940"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -54,6 +54,8 @@ landingContent:
       url: tabs/how-to/authentication/auth-aad-sso.md
   - linkListType: tutorial
     links:
+    - text: Guide pas à pas pour les onglets avec cartes adaptatives
+      url: ~/sbs-tab-with-adaptive-cards.yml
     - text: Guide pas à pas pour les messages proactifs
       url: ~/sbs-send-proactive.yml
     - text: Guide pas à pas pour ajouter l’authentification aux bots

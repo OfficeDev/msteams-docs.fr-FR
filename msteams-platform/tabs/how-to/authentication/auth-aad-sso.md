@@ -4,12 +4,12 @@ description: Décrit l' sign-on unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Authentification unique Teams AAD api d’authentification unique
-ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 107c03fe7ecb2bc6fd38ede7797e6a2a23bac012
+ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569503"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598947"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l' sign-on unique (SSO) pour les onglets
 
@@ -200,9 +200,10 @@ La solution d’authentification décrite ci-dessus fonctionne uniquement pour l
 > [!NOTE]
 > L’ation SSO est prise en charge pour les applications du client au sein AAD clients B2C.
 
-## <a name="step-by-step-guide"></a>Guide pas à pas
+## <a name="step-by-step-guides"></a>Guides pas à pas
 
-Suivez le [guide pas à pas pour](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) authentifier les onglets et les extensions de messagerie.
+* Suivez le [guide pas à pas pour](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) authentifier les onglets et les extensions de messagerie.
+* Suivez le [guide pas à pas pour](../../../sbs-tab-with-adaptive-cards.yml) créer un onglet avec des cartes adaptatives.
 
 ## <a name="see-also"></a>Voir aussi
 [Teams Bot avec 3 000 000 000 000](../../../sbs-bots-with-sso.yml)
