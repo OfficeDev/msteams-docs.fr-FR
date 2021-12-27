@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
-  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
+  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
+  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/23/2021
-  ms.locfileid: "61598940"
+  ms.lasthandoff: 12/27/2021
+  ms.locfileid: "61608453"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -52,8 +52,12 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - text: Utiliser l’authentification sso pour les onglets
       url: tabs/how-to/authentication/auth-aad-sso.md
+    - text: Autorisation d’appareil pour le navigateur
+      url: concepts/device-capabilities/browser-device-permissions.md
   - linkListType: tutorial
     links:
+    - text: Guide pas à pas pour les autorisations d’appareil Onglet
+      url: ~/sbs-tab-device-permissions.yml
     - text: Guide pas à pas pour les onglets avec cartes adaptatives
       url: ~/sbs-tab-with-adaptive-cards.yml
     - text: Guide pas à pas pour les messages proactifs

@@ -4,12 +4,12 @@ keywords: autorisations des fonctionnalités des applications Teams
 description: Récupérer en toute sécurité la prise en charge des autorisations d’appareil pour les applications dans notre client web
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348348"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608383"
 ---
 # <a name="device-permissions-for-the-browser"></a>Autorisations de périphérique pour le navigateur
 
@@ -46,6 +46,9 @@ Teams qui nécessitent des autorisations d’appareil dans le navigateur doit af
 |----------------|-----------------|--------------|
 | Autorisations d’appareil d’onglet pour le navigateur | L’exemple de code montre comment afficher les autorisations d’appareil pour le navigateur. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas pour](../../sbs-tab-device-permissions.yml) accorder l’autorisation d’appareil d’onglet dans Microsoft Teams.
 
 ## <a name="see-also"></a>Voir aussi
 

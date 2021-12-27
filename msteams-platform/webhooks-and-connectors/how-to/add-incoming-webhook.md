@@ -6,12 +6,12 @@ keywords: onglets teams webhook sortant
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 9950bc6d610b280deff83c44ff26a5e4359d3b98
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178299"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608390"
 ---
 # <a name="create-incoming-webhook"></a>Créer un webhook entrant
 
@@ -57,6 +57,8 @@ Le tableau suivant fournit les fonctionnalités et la description du webhook ent
     ![Unique URL](~/assets/images/url.png)
 
 Le webhook est disponible dans le canal Teams webhook.
+
+Vous pouvez créer et envoyer des messages actionnables via le webhook entrant ou Office 365 connector. Pour plus d’informations, voir [Créer et envoyer des messages.](/webhooks-and-connectors/how-to/connectors-using?tabs=cURL)
 
 > [!NOTE]
 > Dans Teams, sélectionnez **Paramètres** autorisations de membre autoriser les membres à créer, mettre à jour et supprimer des  >    >  **connecteurs,** afin que n’importe quel membre d’équipe puisse ajouter, modifier ou supprimer un connecteur.

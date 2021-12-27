@@ -4,12 +4,12 @@ description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un 
 keywords: token, user token, SSO support for bots, permission, Microsoft Graph, AAD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b33bb933d8f4cdfc3bdc4ba04082d992021decbb
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: f9934d29b9c340b7e3543420a212ae9304ba22e6
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323330"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608446"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l' sign-on unique (SSO) pour les bots
 
@@ -386,3 +386,7 @@ Ouvrez [Teams exemple d’th,](https://github.com/microsoft/BotBuilder-Samples/t
 |**Exemple de nom** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
 |Bot framework SDK | Exemple d’utilisation du SDK Bot Framework. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas,](../../../sbs-bots-with-sso.yml)qui vous aide à créer un bot avec l’authentification sso activée.

@@ -1,0 +1,49 @@
+### YamlMime:Tutorial
+title: Autorisations d’appareil d’onglet
+metadata:
+  title: Autorisations d’appareil d’onglet
+  description: Dans ce didacticiel, vous allez apprendre à accorder des autorisations d’appareil d’onglet pour Microsoft Teams applications.
+  audience: Developer
+  level: Beginner
+  ms.date: 12/24/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
+  nextTutorialTitle: En savoir plus sur les autorisations d’appareil pour le navigateur
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: b1ba241b5ba6aa2f95e8948ef7a87a99bd0b732b
+  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+  ms.translationtype: MT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 12/27/2021
+  ms.locfileid: "61608540"
+items:
+- durationInMinutes: 1
+  content: >
+    > [!NOTE]
+
+    > La dernière mise à jour sur la façon dont les autorisations d’appareil sont gérées dans le navigateur est actuellement disponible en [prévisualisation publique pour les](resources/dev-preview/developer-preview-intro.md) développeurs uniquement. Cette mise à jour sera généralement disponible d’ici le 01 février 2022.
+
+
+    Teams application qui nécessite des autorisations d’appareil, telles que l’emplacement, l’appareil photo ou l’accès au microphone, oblige désormais les utilisateurs à accorder manuellement des autorisations au niveau de l’application dans le navigateur web. Auparavant, le navigateur géré comment accorder des autorisations d’accès, mais maintenant ces autorisations sont gérées dans Microsoft Teams.
+
+
+    Ce guide pas à pas vous aide à mettre en place des autorisations d’onglet sur Microsoft Teams. Vous verrez le résultat suivant :
+
+      ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
+- title: Configuration requise
+  durationInMinutes: 1
+  content: "Veillez à installer les outils suivants et à configurer votre environnement de développement :  \n\n* Installez [ngrok](https://ngrok.com/) ou une solution de tunneling équivalente.\n* Installez [Node.js](https://nodejs.org/en/).\n* Visual Studio Code ou la dernière version.\n* [Microsoft 365 un compte de](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) développeur ou un accès Teams un compte avec les autorisations appropriées pour installer une application.\n"
+- title: Configurer et exécuter l’application d’autorisations d’appareil Onglet sur Teams
+  durationInMinutes: 1
+  content: "La façon la plus complète de tester votre application consiste à créer un package d’application et à le télécharger sur Teams. Cette méthode est le seul moyen de tester les fonctionnalités complètes disponibles pour votre application, dans toutes les étendues. \n\nPour configurer et exécuter l’application Teams en chargeant le fichier manifest.zip, effectuez les choses suivantes :\n\n1. Configurez et exécutez votre application d’autorisations d’appareil onglet.\n2. Commencez votre service de tunnel pour obtenir un point de terminaison https.\n3. Exécutez les autorisations de périphérique d’onglet en chargeant le fichier manifest.zip dans Teams.\n\n**Pour configurer et exécuter votre application d’autorisations d’appareil onglet :**\n\n1. Ouvrez **l’invite** de commandes et clonez un **clone git de https://github.com/OfficeDev/Microsoft-Teams-Samples.git référentiel.** Veillez à noter le **chemin d’accès** où le référentiel est cloné.\n2. Dans l’Explorateur de **fichiers,** go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.\n3. Dans **l’invite de commandes,** entrez **l’emplacement cd (emplacement du dossier node js)** et exécutez cette commande.\n4. Exécutez la commande suivante dans **l’invite de commandes**:\n\n   ```command-prompt\n    npm install\n    ```\n5. Exécutez l’application dans **l’invite de commandes à l’aide** de la commande suivante :\n\n   ```command-prompt\n   npm start\n   ```\n6. Vous pouvez voir la sortie suivante dans le navigateur :\n\n   ![react](~/assets/images/tab-device-permission/sbs-react.PNG)\n\n**Commencez votre service de tunnel pour obtenir un point de terminaison https :**\n\n1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.\n2. Ouvrez le terminal **ngrok** et démarrez un tunnel ngrok avec la commande suivante (vous aurez besoin du point de terminaison https pour mettre à jour le fichier manifeste) :\n\n   ```ngrok\n   ngrok http 3000 --host-header=localhost\n   ```  \n    \n**Pour exécuter les autorisations de périphérique d’onglet en chargeant le fichier manifest.zip dans Teams :**\n\n1. Dans l’Explorateur de **fichiers,** go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.\n2. Ouvrez **le fichier manifest.json** dans visual studio code.\n3. Dans le **fichier manifest.json,** recherchez **<<BASE_URI_DOMAIN>>** et remplacez-le par votre point de terminaison https à partir de ngrok, à l’exception de la partie « https:// » à tous les endroits.\n\n   ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)\n\n4. Compressez les fichiers dans **le dossier/appPackage** manifest.zip.\n5. Ouvrez Teams navigateur à l’aide de l’ID client.\n6. Pour télécharger **manifest.zip,** sélectionnez **Applications > Télécharger une application personnalisée** et ouvrez **manifest.zip**.\n7. Sélectionnez **l’application d’autorisation d’appareil Onglet.**\n8. Sélectionnez **Ajouter** pour ajouter l’application d’autorisation de périphérique d’onglet.\n\n    ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)\n\n9. Ouvrez **l’autorisation d’appareil onglet** et sélectionnez **Onglet Autorisation** de l’appareil pour voir la sortie suivante :\n\n    ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)\n\n10. Ouvrez le Teams pour voir les sorties suivantes :\n\n    ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)\n\n11. Ouvrez le bureau Teams.\n12. Pour télécharger **manifest.zip,** sélectionnez **Applications > Télécharger une application personnalisée** et ouvrez **manifest.zip**.\n13. Sélectionnez **Ajouter** pour ajouter l’application d’autorisation d’appareil d’onglet et vous verrez la sortie suivante :  \n\n    ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)\n"
+- title: Tester votre application
+  durationInMinutes: 1
+  content: "Pour vous assurer que l’application d’autorisation d’appareil onglet permet à l’utilisateur d’accorder l’autorisation, vous devez tester l’application après avoir téléchargé l’application dans Teams.\n\n # <a name=\"desktop\"></a>[Imprimante de bureau](#tab/Desktop)\n\n  Pour tester l’application sur un ordinateur de bureau, sélectionnez l’icône **Autorisation** de l’application et obtenez les invites suivantes pour accepter la demande d’autorisation :\n\n   ![desktoppermissionteams](~/assets/images\\tab-device-permission\\desktop-teams-permission.png)\n\n  # <a name=\"browser\"></a>[Navigateur](#tab/Browser)\n\n  Pour tester l’application dans le navigateur, **sélectionnez Obtenir un emplacement** pour voir les sorties suivantes :\n\n   ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)\n\n # <a name=\"mobile\"></a>[Mobile](#tab/Mobile)\n\n  Pour tester l’application sur un appareil mobile, sélectionnez le bouton respectif pour tester le scénario et obtenez les invites suivantes pour accepter la demande d’autorisation :\n\n   ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)\n\n--- \n"
+- title: Défi complet
+  durationInMinutes: 1
+  content: >
+    Avez-vous eu un projet comme celui-ci ?
+
+      ![tabdeviceimage](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
+- content: Vous avez terminé le didacticiel et vous pouvez maintenant accorder l’autorisation d’appareil d’onglet Microsoft Teams applications.

@@ -5,12 +5,12 @@ description: Découvrez comment tester et déboguer votre bot localement avec un
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: d9ddbb3aa4f93b8981fbba03d879a77f4175e81e
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569573"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608460"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -74,6 +74,9 @@ Vous pouvez également initier une conversation avec votre bot à l’aide de so
 
    3. Sélectionnez votre bot et envoyez un message pour lancer une conversation.
       Vous pouvez également coller l’ID d’application de votre bot dans la zone de recherche en haut à gauche Microsoft Teams. Dans la page des résultats de la recherche, accédez à l’onglet **Personnes** pour voir votre bot et commencer à discuter avec lui.
+
+> [!Note]
+> Pour Microsoft Teams faire référence à l’ID d’application de votre bot, activez [le chargement de version latéral des applications.](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)      
 
 Votre bot reçoit l’événement lorsque vous ajoutez les bots à une équipe, sans les informations de `conversationUpdate` l’équipe dans `channelData` l’objet.
 

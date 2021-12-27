@@ -4,13 +4,13 @@ description: Décrit comment envoyer des messages proactifs avec Microsoft Teams
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID utilisateur
-ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+Keywords: envoyer un message pour obtenir l’ID de conversation de l’ID de canal de l’ID de l’utilisateur
+ms.openlocfilehash: c4e84461af7a9e162c9f4391a01284be735392de
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889299"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608439"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -73,7 +73,7 @@ Maintenant que vous avez envoyé le message proactif, vous devez suivre ces meil
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 
-L’envoi de messages proactifs aux utilisateurs est un moyen efficace de communiquer avec vos utilisateurs. Toutefois, du point de vue de l’utilisateur, le message s’affiche de manière non improvisée. S’il existe un message de bienvenue, c’est la première fois qu’il interagit avec votre application. Il est important d’utiliser cette fonctionnalité et de fournir les informations complètes à l’utilisateur pour comprendre l’objectif de ce message.
+L’envoi de messages proactifs aux utilisateurs est un moyen efficace de communiquer avec vos utilisateurs. Toutefois, du point de vue de l’utilisateur, le message s’affiche de manière non improvisée. S’il existe un message de bienvenue, il s’agit de la première fois qu’il interagit avec votre application. Il est important d’utiliser cette fonctionnalité et de fournir les informations complètes à l’utilisateur pour comprendre l’objectif de ce message.
 
 ### <a name="welcome-messages"></a>Les messages de bienvenue
 
@@ -106,7 +106,7 @@ Lorsque vous utilisez une messagerie proactive pour envoyer des messages program
 ## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive à l’aide Graph
 
 > [!Note]
-> L’installation proactive des applications à l’Graph est actuellement en version bêta.
+> L’installation proactive des applications à l Graph est actuellement en version bêta.
 
 Envoyer un message de manière proactive aux utilisateurs qui n’ont pas précédemment installé ou interagi avec votre application. Par exemple, vous souhaitez utiliser le communicateur [d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’ensemble de votre organisation. Dans ce cas, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs. Mettre en cache les valeurs nécessaires à partir `conversationUpdate` de l’événement que votre application reçoit lors de l’installation.
 
@@ -269,7 +269,7 @@ Le tableau suivant fournit un exemple de code simple qui incorpore le flux de co
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams Informations de base sur les conversations  | Présente les principes de base des conversations Teams, notamment l’envoi de messages proactifs un-à-un.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Teams de base de la conversation  | Présente les principes de base des conversations Teams, notamment l’envoi de messages proactifs un-à-un.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Démarrer un nouveau thread dans un canal | Illustre la création d’un thread dans un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 | Installation proactive de l’application et envoi de notifications proactives | Cet exemple montre comment utiliser l’installation proactive de l’application pour les utilisateurs et envoyer des notifications proactives en appelant les API Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
@@ -277,6 +277,10 @@ Le tableau suivant fournit un exemple de code simple qui incorpore le flux de co
 
 > [!div class="nextstepaction"]
 > [Teams exemples de code de messagerie proactifs](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas,](../../../sbs-send-proactive.yml)qui vous permet d’envoyer un message proactif à partir d’un bot.
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -287,4 +291,4 @@ Le tableau suivant fournit un exemple de code simple qui incorpore le flux de co
 
 * [**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Conversations de canal et de groupe avec un bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
-* [Répondre à l’action d’soumission du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Répondre à l’action d’envoi du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

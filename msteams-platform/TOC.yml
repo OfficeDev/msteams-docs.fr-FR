@@ -237,9 +237,6 @@
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: Messages proactifs
           href: bots/how-to/conversations/send-proactive-messages.md
-          items:
-            - name: Guide pas à pas
-              href: sbs-send-proactive.yml
         - name: Formatez vos messages robots.
           href: bots/how-to/format-your-bot-messages.md
         - name: Mettre à jour et supprimer des messages de bot
@@ -376,8 +373,6 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Utiliser l'authentification SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-        - name: Guide étape par étape pour les bots avec SSO
-          href: sbs-bots-with-sso.yml
     - name: Extensions de messagerie
       items:
         - name: Ajouter une authentification à votre extension de messagerie
@@ -432,7 +427,7 @@
           href: /azure/bot-service/bot-service-debug-inspection-middleware
         - name: Déboguer votre robot d’appel et de réunion localement
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-    - name: "Microsoft\_Graph"
+    - name: Microsoft Graph
       items:
         - name: Tester les autorisations de consentement spécifiques aux ressources
           href: graph-api/rsc/test-resource-specific-consent.md
