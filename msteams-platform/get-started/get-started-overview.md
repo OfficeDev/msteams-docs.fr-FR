@@ -4,12 +4,12 @@ description: Vue d’ensemble de la mise en Microsoft Teams documentation du dé
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams exemples de développeur
-ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
+ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569496"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "61619801"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -63,4 +63,5 @@ Maintenant, nous allons créer votre première application Teams’application. 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft Teams exemples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teams exemples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Ressources Git et GitHub ressources](/contribute/additional-resources)

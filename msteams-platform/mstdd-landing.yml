@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
-  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+  ms.openlocfilehash: 6c4f9fcdc64a470eaeed96b2575e00b5c2439c76
+  ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/27/2021
-  ms.locfileid: "61608453"
+  ms.lasthandoff: 12/28/2021
+  ms.locfileid: "61619794"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -80,6 +80,8 @@ landingContent:
     links:
     - text: Commencer à créer des applications
       url: ../msteams-platform/get-started/get-started-overview.md
+    - text: Prendre en GitHub
+      url: /contribute/additional-resources
   - linkListType: tutorial
     links:
     - text: Créer une application avec JavaScript
