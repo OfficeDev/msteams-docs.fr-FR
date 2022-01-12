@@ -5,12 +5,12 @@ description: Décrit la recherche typeahead avec le contrôle Input.ChoiceSet da
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
+ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075582"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "61722181"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Recherche typeahead dans les cartes adaptatives
 
@@ -297,7 +297,125 @@ Exemple de charge utile qui contient une recherche de typeahead statique et dyna
 }
 ```
 
+## <a name="code-snippets-for-invoke-request-and-response"></a>Extraits de code pour la demande d’appel et la réponse
+
+### <a name="invoke-request"></a>Demande d’appel
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### <a name="response"></a>Réponse
+
+#### <a name="c"></a>[C#](#tab/csharp)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "application/search")
+    {
+    var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+    var searchResponseData = new
+    {
+        type = "application/vnd.microsoft.search.searchResponse",
+        value = new
+        {
+        results = packages
+        }
+    };
+    var jsonString = JsonConvert.SerializeObject(searchResponseData);
+    JObject jsonData = JObject.Parse(jsonString);
+    return new InvokeResponse()
+    {
+        Status = 200,
+        Body = jsonData
+    };
+    }
+
+    return null;
+}
+```
+
+#### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
+                },
+                {
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
+                }
+            ]
+        }
+    }
+}
+```
+
+---
+
+## <a name="code-sample"></a>Exemple de code
+
+|Exemple de nom | Description | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Contrôle de recherche à l’avance sur les cartes adaptatives | L’exemple présente les fonctionnalités du contrôle de recherche avant les types statiques et dynamiques dans les cartes adaptatives. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+
 ## <a name="see-also"></a>Voir aussi
 
 * [Actions universelles pour les cartes adaptatives](Universal-actions-for-adaptive-cards/Overview.md)
-* [Modules de tâche](../what-are-task-modules.md)
+* [Modules de tâches](../what-are-task-modules.md)
