@@ -7,7 +7,7 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
 ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 01/12/2022
 ms.locfileid: "61768279"
