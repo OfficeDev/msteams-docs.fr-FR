@@ -5,12 +5,12 @@ description: Vue d’ensemble des commandes d’action d’extension de messager
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3590309abf3e994333c907c69785f58af0162890
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887991"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768237"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
@@ -29,11 +29,20 @@ Avant de créer la commande d’action, vous devez déterminer les facteurs suiv
 Tout d’abord, vous devez déterminer l’emplacement à partir de lequel votre commande d’action doit être invoquée. En spécifiant le manifeste de votre application, votre commande peut être invoquée à partir d’un ou plusieurs `context` des emplacements suivants :
 
 * Zone de composition de message : boutons situés en bas de la zone composer un message.
-* Zone de commande : en @mentioning votre application dans la zone de commande. 
+
+    Contexte de commande = composer
+
+* Zone de commande : en @mentioning votre application dans la zone de commande.
+
+    Contexte de commandes = commandBox
+
    > [!NOTE]
    > Si l’extension de messagerie est invoquée à partir de la zone de commande, vous ne pouvez pas répondre par un message bot inséré directement dans la conversation.
 
-* Message : directement à partir d’un message existant via le `...` menu de dépassement d’un message. 
+* Message : directement à partir d’un message existant via le `...` menu de dépassement d’un message.
+
+    Contexte des commandes = message
+
     > [!NOTE] 
     > L’appel initial à votre bot inclut un objet JSON contenant le message à partir duquel il a été appelé. Vous pouvez traiter le message avant de le présenter avec un module de tâche.
 

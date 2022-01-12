@@ -1,44 +1,42 @@
 ---
-title: TeamsFx SDK
+title: Kit de développement logiciel (SDK) TeamsFx
 author: MuyangAmigo
 description: À propos du SDK TeamsFx
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 63c5fad9c795c513b476f305c09d94ffad7c5d61
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: d0ec446b51363bbbe4c3322ec1d840ad4068ff74
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228073"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768370"
 ---
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>SDK TeamsFx pour TypeScript ou JavaScript
 
-TeamsFx vise à réduire les tâches d’implémentation des identités et l’accès aux ressources cloud jusqu’aux instructions à ligne unique avec « configuration zéro ».
+TeamsFx vise à réduire les tâches d’implémentation de l’identité et l’accès aux ressources cloud aux instructions à ligne unique avec une configuration nulle.
 
 Utilisez la bibliothèque pour :
 
 - Accédez aux fonctionnalités principales dans l’environnement client et serveur de la même manière.
 - Écrivez du code d’authentification utilisateur de manière simplifiée.
-
-   * [Code source](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-   * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-   * [Documentation de référence de l'API](https://aka.ms/teamsfx-sdk-help) 
-   * [Échantillons](https://github.com/OfficeDev/TeamsFx-Samples)
-
+ 
 ## <a name="get-started"></a>Prise en main
 
 Le Kit de développement logiciel (SDK) TeamsFx est pré-configuré dans un projet échafaudé à l’aide du kit de ressources TeamsFx ou de l’CLI.
-Pour plus d’informations sur Teams projet d’application, voir [README](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+Pour plus d’informations, [voir Teams projet d’application.](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)
 
-### <a name="prerequisites"></a>Configuration requise
+### <a name="prerequisites"></a>Conditions préalables
 
-- Node.js version `10.x.x` supérieure ou supérieure.
-- Si votre projet a installé des packages associés en tant que dépendances, assurez-vous qu’ils sont de `botbuilder` la même version et de la même [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` version. ([Problème : tous les packages BOTBUILDER doivent être de la même version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+- Node.js version `10.x.x` ultérieure.
+- Si votre projet a installé des packages associés en tant que dépendances, assurez-vous qu’ils sont de la `botbuilder` même version et que la version est [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` . ([Problème : tous les packages BOTBUILDER doivent être de la même version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
-> [!TIP]
-> Un projet créé par le kit de ressources TeamsFx VS Code’extension ou l’outil CLI.
+Pour plus d’informations, reportez-vous aux rubriques suivantes :
+* [Code source](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
+* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
+* [Documentation de référence de l'API](https://aka.ms/teamsfx-sdk-help) 
+* [Échantillons](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Installer le `@microsoft/teamsfx` package
 
@@ -48,9 +46,9 @@ Installez le SDK TeamsFx pour TypeScript ou JavaScript avec `npm` :
 npm install @microsoft/teamsfx
 ```
 
-### <a name="create-and-authenticate-a-microsoftgraphclient"></a>Créer et authentifier un `MicrosoftGraphClient`
+### <a name="create-and-authenticate-microsoftgraphclient"></a>Créer et s’authentifier `MicrosoftGraphClient`
 
-Pour créer un objet client graph pour accéder à l’API microsoft Graph, vous aurez besoin des informations d’identification pour l’authentification. Le SDK fournit plusieurs classes d’informations d’identification qui répondent à différentes exigences. Vous devez charger la configuration avant d’utiliser des informations d’identification.
+Pour créer un objet client graph pour accéder à l’API microsoft Graph, vous aurez besoin des informations d’identification pour vous authentifier. Le SDK fournit plusieurs classes d’informations d’identification qui répondent à différentes exigences. Vous devez charger la configuration avant d’utiliser des informations d’identification.
 
 - Dans l’environnement de navigateur, vous devez passer explicitement les paramètres de configuration. La React projet a fourni des variables d’environnement à utiliser.
 
@@ -72,9 +70,7 @@ loadConfiguration();
 
 #### <a name="using-teams-app-user-credential"></a>Utilisation des informations Teams’utilisateur de l’application
 
-Utilisez l’extrait de code ci-dessous :
-
-> [Remarque] Vous pouvez uniquement utiliser cette classe d’informations d’identification dans l’application de navigateur comme Teams Tab App.
+Utilisez l’extrait de code suivant :
 
 ```ts
 loadConfiguration({
@@ -88,11 +84,14 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+> [!NOTE]
+> Vous pouvez utiliser cette classe d’informations d’identification dans l’application de navigateur, Teams Application Onglet.
 
 #### <a name="using-microsoft-365-tenant-credential"></a>Utilisation des informations Microsoft 365 client
 
-Elle ne nécessite pas l’interaction avec Teams’application. Vous pouvez appeler Microsoft Graph en tant qu’application.
-Utilisez l’extrait de code ci-dessous :
+Microsoft 365 d’identification du client n’a pas besoin d’interagir Teams utilisateur de l’application. Vous pouvez appeler Microsoft Graph en tant qu’application.
+
+Utilisez l’extrait de code suivant :
 
 ```ts
 loadConfiguration();
@@ -105,30 +104,29 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="credentials"></a>Identifiants
 
-Il existe 3 classes d’informations d’identification situées sous le dossier [d’informations](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) d’identification pour simplifier l’authentification. 
+Il existe 3 classes d’informations d’identification situées sous le dossier [d’informations](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) d’identification pour simplifier l’authentification.
 
-Les classes d’informations `TokenCredential` d’identification implémentent une interface largement utilisée dans les API de bibliothèque Azure. Ils sont conçus pour fournir un jeton d’accès pour des étendues spécifiques.
-Les classes d’informations d’identification représentent différentes identités dans certains scénarios.
+Les classes d’informations `TokenCredential` d’identification implémentent une interface largement utilisée dans les API de bibliothèque Azure. Ils sont conçus pour fournir des jetons d’accès pour des étendues spécifiques. Les classes d’informations d’identification suivantes représentent différentes identités dans certains scénarios :
 
-`TeamsUserCredential`représente Teams’identité de l’utilisateur actuel. L’utilisation de ces informations d’identification demande le consentement de l’utilisateur pour la première fois.
-`M365TenantCredential`représente Microsoft 365 de client. Elle est généralement utilisée lorsque l’utilisateur n’est pas impliqué comme un travail d’automatisation déclenché dans le temps.
-`OnBehalfOfUserCredential` utilise le flux « de la part de ». Il a besoin d’un jeton d’accès et vous pouvez obtenir un nouveau jeton pour une étendue différente. Il est conçu pour être utilisé dans les scénarios azure function ou bot.
+* `TeamsUserCredential`représente Teams’identité de l’utilisateur actuel. L’utilisation de ces informations d’identification demande le consentement de l’utilisateur pour la première fois.
+* `M365TenantCredential`représente Microsoft 365 de client. Elle est généralement utilisée lorsque l’utilisateur n’est pas impliqué comme un travail d’automatisation déclenché dans le temps.
+* `OnBehalfOfUserCredential` utilise le flux « de la part de ». Il a besoin d’un jeton d’accès et vous pouvez obtenir un nouveau jeton pour une étendue différente. Il est conçu pour être utilisé dans les scénarios azure function ou bot.
 
 ### <a name="bots"></a>Bots
 
-Les classes associées au bot sont stockées sous le [dossier bot.](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)
+Les classes associées au bot sont stockées sous [le dossier bot.](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)
 
-`TeamsBotSsoPrompt` a une bonne intégration avec Bot Framework. Il simplifie le processus d’authentification lorsque vous développez une application bot.
+`TeamsBotSsoPrompt` peut s’intégrer à Bot Framework. Il simplifie le processus d’authentification pour le développement d’une application bot.
 
 ### <a name="helper-functions"></a>Fonctions d’aide
 
-Le SDK TeamsFx fournit des fonctions d’aide pour faciliter la configuration des bibliothèques tierces. Ils se trouvent sous le [dossier](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) principal.
+Le SDK TeamsFx fournit des fonctions d’aide pour faciliter la configuration des bibliothèques tierces. Ils se trouvent sous le [dossier principal.](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)
 
 ### <a name="error-handling"></a>Gestion des erreurs
 
-L’API le lance `ErrorWithCode` en cas d’erreur. Chacune `ErrorWithCode` contient un code d’erreur et un message d’erreur.
+La réponse d’erreur de l’API `ErrorWithCode` est , qui contient le code d’erreur et le message d’erreur.
 
-Par exemple, pour filtrer une erreur spécifique, vous pouvez utiliser la vérification suivante :
+Par exemple, pour filtrer une erreur spécifique, vous pouvez utiliser l’extrait de code suivant :
 
 ```ts
 try {
@@ -163,13 +161,7 @@ try {
 
 ## <a name="scenarios"></a>Scénarios
 
-Les sections suivantes fournissent plusieurs extraits de code couvrant certains des scénarios les plus courants :
-
-- [Utiliser l’API Graph’onglet dans l’application Onglet](#use-graph-api-in-tab-app)
-- [Appeler la fonction Azure dans l’application Onglet](#call-azure-function-in-tab-app)
-- [Accéder à SQL base de données dans Azure Function](#access-sql-database-in-azure-function)
-- [Utiliser l’authentification basée sur les certificats dans azure Function](#use-certificate-based-authentication-in-azure-function)
-- [Utiliser l’API Graph dans l’application Bot](#use-graph-api-in-bot-application)
+La section suivante fournit plusieurs extraits de code pour les scénarios courants :
 
 ### <a name="use-graph-api-in-tab-app"></a>Utiliser l’API Graph’onglet dans l’application Onglet
 
@@ -283,14 +275,13 @@ dialogs.add(
 
 ### <a name="configure-log"></a>Configurer le journal
 
-Vous pouvez définir le niveau de journal client et rediriger les sorties lors de l’utilisation de cette bibliothèque.
-La journalisation est désactivée par défaut, vous pouvez l’activer en fixant le niveau du journal.
+Vous pouvez définir le niveau de journal client et rediriger les sorties lors de l’utilisation de cette bibliothèque. La journalisation est désactivée par défaut, vous pouvez l’activer en fixant le niveau du journal.
 
 #### <a name="enable-log-by-setting-log-level"></a>Activer le journal en setting log level
 
-Lorsque le niveau de journalisation est activé, la journalisation est activée. Il imprime les informations du journal sur la console par défaut.
+La journalisation est activée uniquement lorsque vous définissez le niveau du journal. Par défaut, il imprime les informations du journal sur la console.
 
-Définissez le niveau de journal à l’aide de l’extrait de code ci-dessous :
+Définissez le niveau de journal à l’aide de l’extrait de code suivant :
 
 ```ts
 // Only need the warning and error messages.
@@ -309,7 +300,8 @@ setLogger(context.log);
 
 ##### <a name="redirect-by-setting-custom-log-function"></a>Rediriger en setting custom log function
 
-Notez que la fonction de journal ne prend pas effet si vous définissez un journal personnalisé.
+> [!NOTE]
+> La fonction Log ne prend pas effet si vous définissez un enregistreur personnalisé.
 
 ```ts
 setLogLevel(LogLevel.Info);

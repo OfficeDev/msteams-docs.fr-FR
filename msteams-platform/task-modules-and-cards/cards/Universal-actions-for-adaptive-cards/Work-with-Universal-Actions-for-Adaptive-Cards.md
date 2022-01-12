@@ -1,14 +1,14 @@
 ---
 title: Travailler avec les actions universelles pour les cartes adaptatives
-description: Apprenez à utiliser les actions universelles pour les cartes adaptatives, notamment le schéma pour UniversalActions pour les cartes adaptatives, le modèle Actualiser et la compatibilité ascendante à l’aide d’exemples de code.
+description: Apprenez à utiliser les actions universelles pour les cartes adaptatives, notamment le schéma pour UniversalActions pour les cartes adaptatives, le modèle d’actualisation et la compatibilité ascendante à l’aide d’exemples de code.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888362"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768607"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Travailler avec les actions universelles pour les cartes adaptatives
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur la prise en charge des clients plus anciens, voir
 
 Lors de la conception de cartes adaptatives, `Action.Submit` remplacez et `Action.Http` par `Action.Execute` . Le schéma pour `Action.Execute` est similaire à celui de `Action.Submit` .
 
-Pour plus d’informations, [voir schéma et propriétés Action.Execute.](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+Pour plus d’informations, voir le schéma et les [propriétés Action.Execute.](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 À présent, vous pouvez utiliser le modèle d’actualisation pour permettre aux cartes adaptatives de se mettre à jour automatiquement.
 
@@ -70,9 +70,19 @@ Les fonctionnalités des UserIds en actualisation sont les suivantes :
 
 * Si la propriété de liste est spécifiée comme dans la section Actualiser de la carte, la carte n’est `userIds` `userIds: []` pas actualisée automatiquement. Au lieu de cela, une **option** Actualiser la carte s’affiche pour l’utilisateur dans le menu à trois points du site web ou du bureau, et dans le menu contextif long sur mobile, c’est-à-dire, Android ou iOS pour actualiser manuellement la carte.
 
-* La propriété UserIds est ajoutée, car les canaux Teams peuvent inclure un grand nombre de membres. Si tous les membres voient le canal en même temps, une actualisation automatique inconditionnelle entraîne de nombreux appels simultanés au bot. La propriété doit toujours être incluse pour identifier les utilisateurs qui doivent obtenir une actualisation automatique avec un maximum de `userIds` *60 mrIs d’utilisateurs ..*
+* La propriété UserIds est ajoutée, car les canaux Teams peuvent inclure un grand nombre de membres. Si tous les membres voient le canal en même temps, une actualisation automatique inconditionnelle entraîne de nombreux appels simultanés au bot. La propriété doit toujours être incluse pour identifier les utilisateurs qui doivent obtenir une actualisation automatique avec un maximum de `userIds` *60 (insé) MRI d’utilisateur.*
 
 * Vous pouvez récupérer les TEAMS utilisateur du membre de la conversation. Pour plus d’informations sur l’ajout de la liste userIds dans la section Actualiser de la carte adaptative, voir récupérer la liste ou [le profil utilisateur.](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+
+ Vous pouvez obtenir l’utilisateur IRM pour le canal, la conversation de groupe ou la conversation 1:1 à l’aide de l’exemple suivant :
+
+ 1. Utilisation de TurnContext  
+
+     `userMRI= turnContext.Activity.From.Id`
+
+ 1. Utilisation de la méthode GetMemberAsync
+  
+     `var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);var userMRI = member.Id;`
 
 * Exemple de Teams’utilisateurSYRY est`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 

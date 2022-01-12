@@ -4,12 +4,12 @@ description: Décrit toutes les fonctionnalités de développement nouvelles ou 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 'teams : nouveautés et fonctionnalités des dernières mises à jour'
-ms.openlocfilehash: a1fcc2bd015d8260dd0282010cbcbd0e20226d10
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: c540be24b4fc1e9965a5e3896ca36f6c4d9abb37
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608376"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768453"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,15 +22,8 @@ Découvrez Microsoft Teams fonctionnalités de plateforme qui sont généralemen
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
-|12/24/2021| Introduction du guide pas à pas pour accorder des autorisations d’appareil Onglet. | Principes fondamentaux de l>'appareil > guide pas à pas pour accorder des [autorisations](sbs-tab-device-permissions.yml) d’appareil Onglet |
-|12/23/2021| Introduction du guide pas à pas pour créer des onglets avec des cartes adaptatives.| Ajouter des onglets > l’authentification > utiliser l’authentification > guide pas à pas pour créer des onglets avec des [cartes adaptatives](sbs-tab-with-adaptive-cards.yml) |
-| 12/21/2021 | Mise à jour des modules JavaScript, C# et Node.js pris en Teams Shared Computer Toolkit 3.0.0. | • Commencer à > [créer votre première application avec JavaScript](sbs-gs-javascript.yml) <br> • Commencer à > créer votre première application avec [C# ou .NET](sbs-gs-csharp.yml) <br> • Commencer à> [créer votre première application avec Node.js](sbs-gs-nodejs.yml) |
-|12/20/2021| Introduction du guide pas à pas pour les onglets et les extensions de messagerie avec l' sign-on unique (SSO). | Ajouter des onglets > authentification > utiliser l’authentification > guide pas à pas avec l’authentification sso pour les onglets et les [extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml) de messagerie|
-| 12/20/2021| Introduction du guide pas à pas pour créer une bulle de contenu de réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une bulle de [contenu de réunion](sbs-meeting-content-bubble.yml) |
-|12/13/2021 | Introduction des instructions pour l’application liée à l’offre SaaS. | Distribuer votre application > publier dans le Teams store > consulter les recommandations de validation de la boutique > recommandations pour les applications liées à l’offre [SaaS](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
-| 12/09/2021| Introduction d’un guide pas à pas pour la vue d’étape de la réunion. | Créer des applications pour Teams réunions > activer et configurer des applications pour les réunions > guide pas à pas pour créer une vue d’étape [des réunions](sbs-meetings-stage-view.yml)|
-| 12/09/2021| Introduction d’un guide pas à pas pour créer un espace de réunion secondaire. | Créer des applications pour Teams réunions > Activer et configurer des applications pour les réunions > Guide pas à pas pour créer un espace de réunion secondaire [dans Teams](sbs-meetings-sidepanel.yml)|
-|12/01/2021 | Introduction de la nouvelle icône store. | • Concevez vos fonctionnalités > application > conception de [votre application personnelle](concepts/design/personal-apps.md) pour Microsoft Teams</br> • Concevez vos composants d>'interface utilisateur > conception de votre application Microsoft Teams avec des [composants d’interface utilisateur avancés](concepts/design/design-teams-app-advanced-ui-components.md) |
+|01/10/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK pour > Teams Shared Computer Toolkit des Visual Studio Code > [Teams Shared Computer Toolkit fondamentaux](toolkit/teams-toolkit-fundamentals.md) |
+|
 
 ## <a name="ga-features"></a>Fonctionnalités ga
 
@@ -44,6 +37,7 @@ Microsoft Teams fonctionnalités de plateforme qui sont disponibles pour tous le
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|12/24/2021| Introduction du guide pas à pas pour accorder des autorisations d’appareil Onglet. | Principes fondamentaux de l>'appareil > guide pas à pas pour accorder des [autorisations](sbs-tab-device-permissions.yml) d’appareil Onglet |
 |12/23/2021| Introduction du guide pas à pas pour créer des onglets avec des cartes adaptatives.| Ajouter des onglets > l’authentification > utiliser l’authentification > guide pas à pas pour créer des onglets avec des [cartes adaptatives](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | Mise à jour des modules JavaScript, C# et Node.js pris en Teams Shared Computer Toolkit 3.0.0. | • Commencer à > [créer votre première application avec JavaScript](sbs-gs-javascript.yml) <br> • Commencer à > créer votre première application avec [C# ou .NET](sbs-gs-csharp.yml) <br> • Commencer à> [créer votre première application avec Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduction du guide pas à pas pour les onglets et les extensions de messagerie avec l' sign-on unique (SSO). | Ajouter des onglets > authentification > utiliser l’authentification > guide pas à pas avec l’authentification sso pour les onglets et les [extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml) de messagerie|
@@ -216,8 +210,8 @@ La prévisualisation pour développeurs est un programme public qui fournit un a
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+|01/10/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK pour > Teams Shared Computer Toolkit des Visual Studio Code > [Teams Shared Computer Toolkit fondamentaux](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduction du guide pas à pas pour accorder des autorisations d’appareil Onglet. | Principes fondamentaux de l>'appareil > guide pas à pas pour accorder des [autorisations](sbs-tab-device-permissions.yml) d’appareil Onglet |
-|11/30/2021 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK pour > Teams Shared Computer Toolkit des Visual Studio Code > [Teams Shared Computer Toolkit fondamentaux](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Les bots peuvent être activés pour recevoir tous les messages de canal à l’aide du consentement spécifique aux ressources (RSC).| • Créez des bots > conversations de bot > messages dans les conversations de bot > recevoir tous [les messages avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifeste d’application > prévisualisation pour les développeurs > [schéma de manifeste de prévisualisation pour les développeurs](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Autorisations d’appareil pour le navigateur.| Principes fondamentaux de l'> de l’appareil > [les autorisations de l’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |

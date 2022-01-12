@@ -5,12 +5,12 @@ description: Découvrez comment ajouter l’authentification à une extension de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949095"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768446"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -67,7 +67,8 @@ Pour inciter un utilisateur non authentifié à se connecter, répondez avec une
 ```
 
 > [!NOTE]
-> Pour que l’expérience de se connecte soit hébergée dans une fenêtre Teams, la partie domaine de l’URL doit se trouver dans la liste des domaines valides de votre application. Pour plus d’informations, [voir validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma de manifeste.
+> * Pour que l’expérience de se connecte soit hébergée dans une fenêtre Teams, la partie domaine de l’URL doit se trouver dans la liste des domaines valides de votre application. Pour plus d’informations, [voir validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma de manifeste.
+> * La taille de la fenêtre d’authentification peut être définie en incluant les paramètres de chaîne de requête de largeur et de `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` hauteur.
 
 ### <a name="start-the-sign-in-flow"></a>Démarrer le flux de la signature
 
@@ -136,7 +137,7 @@ Lorsque la demande de se connecte est terminée et redirige vers votre page, ell
 ## <a name="code-sample"></a>Exemple de code
 |**Exemple de nom** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie des résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
 ## <a name="see-also"></a>Voir aussi
 
