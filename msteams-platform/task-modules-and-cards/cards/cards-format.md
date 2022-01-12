@@ -5,12 +5,12 @@ keywords: Format de cartes de bots Teams
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e157828f4070e13b4ef73fb02fef8d1cebdb34fa
+ms.sourcegitcommit: 241b17ee149aa096b787d12afa8bcbd16513b0e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569531"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61934011"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -232,7 +232,6 @@ Les webhooks entrants commencent à prendre en charge la mention utilisateur dan
 > [!NOTE]    
 > * Activez la mention utilisateur dans le schéma pour les webhooks entrants pour prendre en charge AAD’ID d’objet et UPN. 
 > * Les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec AAD ID d’objet et UPN.      
-> * La notification de flux d’activités pour le webhook entrant avec mention d’utilisateur sera disponible dans la prochaine version.
 
 ##### <a name="example"></a>Exemple 
 
@@ -652,5 +651,5 @@ Vous pouvez tester la mise en forme dans vos propres cartes en modifiant ce code
 
 * [Actions de carte](./cards-actions.md)
 * [Utiliser des modules de tâches à partir de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Modules de tâche](~/task-modules-and-cards/cards/cards-format.md)
+* [Modules de tâches](~/task-modules-and-cards/cards/cards-format.md)
 * [Formatez vos messages robots.](~/bots/how-to/format-your-bot-messages.md)
