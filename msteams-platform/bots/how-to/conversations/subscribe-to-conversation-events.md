@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction de message du canal bot d’événements
-ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
+ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888278"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "62014555"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -20,7 +20,7 @@ ms.locfileid: "60888278"
 Lorsque vous construisez vos bots de conversation Microsoft Teams, vous pouvez utiliser des événements de conversation. Teams envoie des notifications à votre bot pour les événements de conversation qui se produisent dans les étendues où votre bot est actif. Vous pouvez capturer ces événements dans votre code et prendre les mesures suivantes :
 
 * Déclencher un message de bienvenue lorsque votre bot est ajouté à une équipe.
-* Déclencher un message de bienvenue lorsqu’un nouveau membre d’équipe est ajouté ou supprimé.
+* Déclencher un message de bienvenue lorsqu’un nouveau membre de l’équipe est ajouté ou supprimé.
 * Déclencher une notification lorsqu’un canal est créé, renommé ou supprimé.
 * Lorsqu’un message bot est aimé par un utilisateur.
 
@@ -50,7 +50,7 @@ Le tableau suivant présente la liste des événements de Teams de conversation 
 | Canal supprimé     | channelDeleted    | OnTeamsChannelDeletedAsync | [Un canal est supprimé.](#channel-deleted) | Équipe |
 | Canal restauré    | channelRestored    | OnTeamsChannelRestoredAsync | [Un canal est restauré.](#channel-deleted) | Équipe |
 | Membres ajoutés   | membersAdded   | OnTeamsMembersAddedAsync   | [Un membre est ajouté.](#team-members-added) | Tous |
-| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et équipe |
+| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et l’équipe |
 | Équipe renommée        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Une équipe est renommée](#team-renamed).       | Équipe |
 | Équipe supprimée        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Une équipe est supprimée.](#team-deleted)       | Équipe |
 | Équipe archivée        | teamArchived       | OnTeamsTeamArchivedAsync    | [Une équipe est archivée.](#team-archived)       | Équipe |
@@ -61,7 +61,7 @@ Le tableau suivant présente la liste des événements de Teams de conversation 
 
 L’événement créé par le canal est envoyé à votre bot chaque fois qu’un nouveau canal est créé dans une équipe où votre bot est installé.
 
-Le code suivant montre un exemple d’événement de canal créé :
+Le code suivant montre un exemple d’événement créé par le canal :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -403,7 +403,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>Membres d’équipe ajoutés
 
-L’événement est envoyé à votre bot la première fois qu’il est `teamMemberAdded` ajouté à une conversation. L’événement est envoyé à votre bot chaque fois qu’un nouvel utilisateur est ajouté à une conversation d’équipe ou de groupe où votre bot est installé. Les informations utilisateur qui sont des ID, sont uniques pour votre bot et peuvent être mises en cache pour une utilisation ultérieure par votre service, telles que l’envoi d’un message à un utilisateur spécifique.
+`teamMemberAdded`L’événement est envoyé à votre bot la première fois qu’il est ajouté à une conversation. L’événement est envoyé à votre bot chaque fois qu’un nouvel utilisateur est ajouté à une conversation d’équipe ou de groupe où votre bot est installé. Les informations utilisateur qui sont des ID, sont uniques pour votre bot et peuvent être mises en cache pour une utilisation ultérieure par votre service, telles que l’envoi d’un message à un utilisateur spécifique.
 
 Le code suivant montre un exemple d’événement ajouté aux membres de l’équipe :
 
@@ -550,7 +550,7 @@ async def on_teams_members_added(
 `teamMemberRemoved`L’événement est envoyé à votre bot s’il est supprimé d’une équipe. L’événement est envoyé à votre bot chaque fois qu’un utilisateur est supprimé d’une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez `Activity` l’objet du `turnContext` .  Si le champ de l’objet est identique au champ de l’objet, le membre supprimé est le bot, sinon il `Id` `MembersRemoved` `Id` s’agit `Recipient` d’un utilisateur. Le bot est `Id` généralement `28:<MicrosoftAppId>` .
 
 > [!NOTE]
-> Lorsqu’un utilisateur est définitivement supprimé d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
+> Lorsqu’un utilisateur est supprimé définitivement d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
 
 Le code suivant montre un exemple d’événement supprimé des membres de l’équipe :
 
@@ -741,7 +741,7 @@ async def on_teams_team_renamed(
 
 Votre bot est averti lorsque l’équipe est supprimée. Il reçoit un `conversationUpdate` événement avec `eventType.teamDeleted` dans `channelData` l’objet.
 
-Le code suivant illustre un exemple d’événement supprimé par l’équipe :
+Le code suivant montre un exemple d’événement supprimé par l’équipe :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1290,7 +1290,7 @@ async def on_reactions_removed(
 Le bot reçoit un `installationUpdate` événement lorsque vous installez un bot sur un thread de conversation. La désinstallation du bot du thread déclenche également l’événement. Lors de l’installation d’un bot, le champ **d’action** dans l’événement est définie pour ajouter *,* et lorsque le bot est désinstallé, le champ **d’action** est définie pour *supprimer*.
  
 > [!NOTE]
-> Lorsque vous mettre à niveau une application, puis ajoutez ou supprimez un bot, l’action déclenche également `installationUpdate` l’événement. Le **champ d’action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot.
+> Lorsque vous mettre à niveau une application, puis ajouter ou supprimer un bot, l’action déclenche également `installationUpdate` l’événement. Le **champ d’action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot.
 
 ### <a name="install-update-event"></a>Installer l’événement de mise à jour
 
@@ -1322,7 +1322,17 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-Non disponible
+```typescript
+async onInstallationUpdateActivity(context: TurnContext) {
+        var activity = context.activity.action;
+        if(activity == "Add") {
+            await context.sendActivity(MessageFactory.text("Added"));
+        }
+        else {
+            await context.sendActivity(MessageFactory.text("Uninstalled"));
+        }
+    }
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1381,7 +1391,13 @@ Non disponible
 
 # <a name="python"></a>[Python](#tab/python)
 
-Non disponible
+```python
+async def on_installation_update(self, turn_context: TurnContext):
+   if turn_context.activity.action == "add":   
+       await turn_context.send_activity(MessageFactory.text("Added"))
+   else:
+       await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+```
 
 ---
 
