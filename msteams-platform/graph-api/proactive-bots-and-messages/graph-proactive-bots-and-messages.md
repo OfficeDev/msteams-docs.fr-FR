@@ -6,21 +6,18 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: installation de conversation de messagerie proactive teams Graph
-ms.openlocfilehash: a52d36150ee384841cde73e9a00510cabc31f144
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: d65be003bd6fe245e8a6ca80ca8823a2e935ff43
+ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949578"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62043223"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
 
->[!IMPORTANT]
-> Microsoft Graph et Microsoft Teams prévisualisations publiques sont disponibles pour un accès et des commentaires en avant-première. Bien que cette version ait fait l’objet de tests approfondis, elle n’est pas destinée à être mise en production.
-
 ## <a name="proactive-messaging-in-teams"></a>Messagerie proactive dans Teams
 
-Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’enquêtes et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou basées **sur des** boîtes de dialogue :
+Les messages proactifs sont initiés par des bots pour démarrer des conversations avec un utilisateur. Ils servent de nombreuses fonctions, notamment l’envoi de messages de bienvenue, la conduite d’enquêtes ou d’sondages et la diffusion de notifications à l’échelle de l’organisation. Les messages proactifs Teams peuvent être remis en tant que conversations **ad hoc** ou **basées sur des** boîtes de dialogue :
 
 |Type de message | Description |
 |----------------|-------------- |
@@ -49,7 +46,7 @@ Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo
 >
 > * Votre bot nécessite des autorisations d’application et non des autorisations déléguées par l’utilisateur, car l’installation est pour d’autres utilisateurs.
 >
-> * Un administrateur AAD client doit [explicitement accorder des autorisations à une application.](/graph/security-authorization#grant-permissions-to-an-application) Une fois les autorisations accordées à l’application, tous les membres du AAD client obtiennent les autorisations accordées.
+> * Un administrateur AAD client doit [explicitement accorder des autorisations à une application.](/graph/security-authorization#grant-permissions-to-an-application) Une fois les autorisations accordées à l’application, tous les membres du client AAD obtiennent les autorisations accordées.
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Activer l’installation proactive de l’application et la messagerie
 
@@ -137,7 +134,7 @@ La requête renvoie :
 
 Vous pouvez installer votre application comme suit :
 
-**Référence de la page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Référence de page Graph Microsoft : installer** [l’application pour l’utilisateur](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **Requête HTTP POST** :
 
@@ -156,14 +153,14 @@ Si l’utilisateur a Microsoft Teams en cours d’exécution, l’installation d
 
 Lorsque votre application est installée pour l’utilisateur, le bot reçoit une notification d’événement qui contient les informations nécessaires `conversationUpdate` [](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) pour envoyer le message proactif.
 
-**Référence de la page Graph Microsoft : obtenir** une [conversation](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Référence de la page Graph Microsoft : obtenir** une [conversation](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 1. Vous devez avoir votre `{teamsAppInstallationId}` application. Si vous ne l’avez pas, utilisez ce qui suit :
 
     **Requête HTTP GET** :
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
     ```
 
     La **propriété id** de la réponse est le `teamsAppInstallationId` .
@@ -173,7 +170,7 @@ Lorsque votre application est installée pour l’utilisateur, le bot reçoit un
     **Requête HTTP GET** (autorisation — `TeamsAppInstallation.ReadWriteSelfForUser.All` ) :  
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
     ```
 
     La **propriété id** de la réponse est le `chatId` .
@@ -183,7 +180,7 @@ Lorsque votre application est installée pour l’utilisateur, le bot reçoit un
     **Requête HTTP GET** (autorisation — `Chat.Read.All` ) :
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
     ```
 
 ### <a name="send-proactive-messages"></a>Envoyer des messages proactifs
