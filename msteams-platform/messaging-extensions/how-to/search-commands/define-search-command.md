@@ -5,12 +5,12 @@ description: Découvrez les commandes de recherche d’extension de messagerie p
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4cfbb57176f5c1bdcac5e120e23284b6bd705df3
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889383"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059074"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -45,8 +45,8 @@ La condition préalable à la création d’une commande de recherche est que vo
 **Pour créer une commande de recherche**
 
 1. Ouvrez **App Studio** à partir Microsoft Teams client, puis sélectionnez l’onglet **Éditeur de** manifeste.
-1.  Si vous avez déjà créé votre package d’application dans **App Studio,** sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
-1. Après avoir importé le package d’application, sélectionnez **les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
+1.  Si vous avez déjà créé votre package d’application **dans App Studio,** sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Après avoir importé le package d’application, **sélectionnez les extensions de messagerie sous** **Fonctionnalités.** Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
 1. Sélectionnez **Configurer dans** la fenêtre pour inclure l’extension de messagerie dans l’expérience de votre application. L’image suivante affiche la page de mise en place de l’extension de messagerie : 
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
@@ -64,7 +64,7 @@ L’image suivante affiche l’ajout de commande pour l’extension de messageri
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Ajoutez **un ID de commande** et un **titre.**
-1. Sélectionnez l’emplacement à partir de lequel votre commande de recherche doit être invoquée. La sélection **d’un message** ne modifie pas actuellement le comportement de votre commande de recherche. L’image suivante affiche l’emplacement d’appel de commande de recherche :
+1. Sélectionnez l’emplacement à partir de lequel votre commande de recherche doit être invoquée. L’image suivante affiche l’emplacement d’appel de commande de recherche :
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
@@ -127,7 +127,7 @@ Pour obtenir le manifeste complet de l’application, voir [schéma de manifeste
 
 | Exemple de nom           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’soumission du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

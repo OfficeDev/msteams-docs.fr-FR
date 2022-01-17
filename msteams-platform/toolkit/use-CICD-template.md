@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5ca5f81fd857296f2e81dbce97673f5a10c66ab7
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768572"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059067"
 ---
 # <a name="cicd-guide"></a>Guide CI/CD
 
@@ -77,11 +77,9 @@ Le tableau suivant répertorie toutes les clés secrètes requises pour créer u
 |M365_ACCOUNT_PASSWORD|Mot de passe du compte M365.|
 |M365_TENANT_ID|Pour identifier le client dans lequel l’application Teams sera créée/publiée. Cette valeur est facultative, sauf si vous avez un compte multi-locataire et que vous souhaitez utiliser un autre client. Pour plus d’informations, voir comment trouver votre ID de [client M365.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-> [!NOTE]
-> Actuellement, le style d’authentification non interactif pour M365 est utilisé dans les flux de travail CI ou CD, assurez-vous que votre compte M365 dispose de privilèges suffisants dans votre client et que l’authentification multifacteur ou d’autres fonctionnalités de sécurité avancées ne sont pas activées. Pour plus d’informations, voir Configurer les informations d’identification [M365](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) pour vous assurer que vous avez désactivé l’authentification multifacteur et les paramètres de sécurité par défaut pour les informations d’identification utilisées dans le flux de travail.
 
 > [!NOTE]
-> Actuellement, le principal de service pour Azure est utilisé dans les flux de travail CI/CD. Pour plus d’informations, voir[créer des principes de service Azure.](#create-azure-service-principals)
+> Actuellement, le principal de service pour Azure est utilisé dans les flux de travail CI/CD. Pour plus d’informations, voir [créer des principes de service Azure.](#create-azure-service-principals)
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>Configurer des pipelines CI ou CD avec Azure DevOps
 
