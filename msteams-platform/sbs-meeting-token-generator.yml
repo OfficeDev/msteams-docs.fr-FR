@@ -10,13 +10,13 @@ metadata:
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: En savoir plus pour activer et configurer des applications pour les réunions
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: 9869cdb36aac4f1df982e82031c241a38d94684d
-  ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+  ms.localizationpriority: high
+  ms.openlocfilehash: 8d5707eb112a9888f637cfe2f1aaf726fd045715
+  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/04/2022
-  ms.locfileid: "61722223"
+  ms.lasthandoff: 01/17/2022
+  ms.locfileid: "62059699"
 items:
 - durationInMinutes: 1
   content: >
@@ -57,7 +57,7 @@ items:
     Ce guide pas à pas vous aide à générer un jeton de réunion pour étendre les réunions dans Teams. Vous verrez le résultat suivant :
 
        ![Votre jeton](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
-- title: Conditions préalables
+- title: Configuration requise
   durationInMinutes: 1
   content: "Veillez à installer les outils suivants et à configurer votre environnement de développement :  \n\n* [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 ou ultérieure\n* [ngrok](https://ngrok.com/download) dernière version (uniquement pour le test de la boîte de développement) ou toute solution de tunneling équivalente\n\n  > [!NOTE]\n  > Après avoir téléchargé ngrok, inscrivez-vous et installez [authtoken](https://ngrok.com/download).\n\n* [Obtenir un client Teams développeur gratuit](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n\nAssurez-vous d’avoir une connaissance approfondie des technologies suivantes :\n\n* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET version principale](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) 3.1\n* [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 ou ultérieure\n"
 - title: Configurer l’environnement local

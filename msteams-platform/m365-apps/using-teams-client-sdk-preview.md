@@ -4,12 +4,13 @@ description: Comprendre les modifications apportées avec Microsoft Teams javaSc
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
-ms.openlocfilehash: 646bebc22a31f01ea98cb367b8c8292b07c2e8f3
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.localizationpriority: medium
+ms.openlocfilehash: 7a8b5ed919cac07b1d0710a1f23c0ade0cca2ffb
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391338"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059820"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams version préliminaire du SDK client JavaScript v2
 
@@ -357,7 +358,7 @@ Vous pouvez également visualiser les modifications en révisant la fonction dan
 | `userObjectId` | `app.Context.user.id`|
 | ` userTeamRole` | `app.Context.team.userRole`|
 | `userDisplayName` | `app.Context.user.displayName` |
-| N/A | `app.Context.app.host.name`|
+| S/O | `app.Context.app.host.name`|
 
 ## <a name="next-steps"></a>Prochaines étapes
 

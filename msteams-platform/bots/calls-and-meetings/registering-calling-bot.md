@@ -4,18 +4,18 @@ description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo p
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948620"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062508"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire les appels et le bot de réunions pour Microsoft Teams
 
 Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams régulier avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
 
-* Il existe une nouvelle version du manifeste Teams’application avec deux paramètres `supportsCalling` supplémentaires, et `supportsVideo` . Ces paramètres sont inclus dans la [version](../../resources/dev-preview/developer-preview-intro.md) préliminaire du développeur du manifeste Teams’application.
+* Il existe une nouvelle version du manifeste Teams’application avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo` . Ces paramètres sont inclus dans le schéma de manifeste [pour Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Les Graph microsoft](./registering-calling-bot.md#add-graph-permissions) doivent être configurées pour l’ID d’application Microsoft de votre bot.
 * Les Graph et les autorisations d’API de réunion en ligne nécessitent le consentement de l’administrateur client.
 
@@ -23,13 +23,13 @@ Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne 
 
 Les bots d’appels et de réunions en ligne ont les deux paramètres supplémentaires suivants dans manifest.json qui activent l’audio ou la vidéo pour votre bot dans Teams.
 
-* `bots[0].supportsCalling`. S’il est présent et qu’il est Teams, il permet à votre bot de `true` participer à des appels et à des réunions en ligne.
+* `bots[0].supportsCalling`. S’il est présent et qu’il est Teams, votre bot peut participer à `true` des appels et à des réunions en ligne.
 * `bots[0].supportsVideo`. S’il est présent et `true` qu’il est Teams que votre bot prend en charge la vidéo.
 
 Si vous souhaitez que votre IDE valide correctement le schéma manifest.json pour vos appels et bot de réunions pour ces valeurs, vous pouvez modifier l’attribut comme `$schema` suit :
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 La section suivante vous permet de créer un bot ou d’ajouter des fonctionnalités d’appel à votre bot existant.
@@ -50,13 +50,13 @@ La section suivante fournit une liste des autorisations d’application pris en 
 
 ## <a name="add-graph-permissions"></a>Ajouter Graph autorisations d’autorisation
 
-Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph api d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateurs inscrits. Un administrateur client doit donner son consentement aux autorisations d’application.
+Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph’API d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d’application.
 
 ### <a name="application-permissions-for-calls"></a>Autorisations d’application pour les appels
 
 Le tableau suivant fournit une liste des autorisations d’application pour les appels :
 
-|Autorisation    |Chaîne d’affichage   |Description |Consentement de l’administrateur requis |
+|Permission    |Chaîne d’affichage   |Description |Consentement de l’administrateur requis |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |Lancez les appels sortants 1:1 à partir de l’aperçu de l’application. |Permet à l’application de passer des appels sortants à un seul utilisateur et de transférer des appels à des utilisateurs dans l’annuaire de votre organisation, sans utilisateur connecté.|Oui|
 | Calls.InitiateGroupCall.All |Lancez des appels de groupe sortants à partir de l’aperçu de l’application. |Permet à l’application de passer des appels sortants à plusieurs utilisateurs et d’ajouter des participants à des réunions dans votre organisation, sans utilisateur connecté.|Oui|
@@ -71,7 +71,7 @@ Le tableau suivant fournit une liste des autorisations d’application pour les 
 
 Le tableau suivant fournit une liste des autorisations d’application pour les réunions en ligne :
 
-|Autorisation    |Chaîne d’affichage   |Description |Consentement de l’administrateur requis |
+|Permission    |Chaîne d’affichage   |Description |Consentement de l’administrateur requis |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | OnlineMeetings.Read.All |Lire les détails de la réunion en ligne à partir de l’aperçu de l’application|Permet à l’application de lire les détails d’une réunion en ligne dans votre organisation, sans utilisateur.|Oui|
 | OnlineMeetings.ReadWrite.All |Lire et créer des réunions en ligne à partir de l’aperçu de l’application pour le compte d’un utilisateur|Permet à l’application de créer des réunions en ligne dans votre organisation au nom d’un utilisateur, sans utilisateur.|Oui|
@@ -87,7 +87,7 @@ Pour les applications utilisant le point de terminaison AAD V1, un administrateu
 Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison AAD `/adminconsent` V2. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
-> Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à l’inscription de votre bot, choisissez **Options avancées** Modifier le manifeste de  >  **l’application.** Ajoutez votre URL de redirection à la `replyUrls` collection.
+> Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à votre inscription de bot, choisissez **Options avancées** Modifier le manifeste de  >  **l’application.** Ajoutez votre URL de redirection à la `replyUrls` collection.
 
 > [!IMPORTANT]
 > Chaque fois que vous modifiez les autorisations de votre application, vous devez également répéter le processus de consentement de l’administrateur. Les modifications apportées dans le portail d’inscription des applications ne sont pas reflétées tant que l’administrateur du client n’a pas réapplité le consentement.

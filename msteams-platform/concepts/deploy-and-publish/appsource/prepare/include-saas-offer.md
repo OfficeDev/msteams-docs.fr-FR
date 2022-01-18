@@ -4,13 +4,13 @@ description: Découvrez comment monétiser votre application Microsoft Teams ave
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: 711f40ad24a0d714f4555ceb134009d6810b947f
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.localizationpriority: medium
+ms.openlocfilehash: b358b7bbdd780851eedb78ca2151bc062d402f99
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348355"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059615"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Inclure une offre SaaS avec votre application Microsoft Teams application
 

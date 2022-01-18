@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b78ca5b46442f30db3adfe314d627d3fc95682be
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043230"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059778"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -214,7 +214,7 @@ Un objet `channelData` type dans une activité envoyée à votre bot contient le
 * `channelData.teamsTeamId`: Deprecated. Cette propriété est incluse uniquement pour la compatibilité ascendante.
 * `channelData.teamsChannelId`: Deprecated. Cette propriété est incluse uniquement pour la compatibilité ascendante.
 
-### <a name="example-channeldata-object-or-channelcreated-event"></a>Exemple d’objet channelData ou d’événement channelCreated
+### <a name="example-channeldata-object-channelcreated-event"></a>Exemple d’objet channelData (événement channelCreated)
 
 Le code suivant montre un exemple d’objet channelData :
 
@@ -234,22 +234,20 @@ Le code suivant montre un exemple d’objet channelData :
 }
 ```
 
-Les messages reçus ou envoyés à votre bot peuvent inclure différents types de contenu de message.
-
 ## <a name="message-content"></a>Contenu du message
+
+Les messages reçus ou envoyés à votre bot peuvent inclure différents types de contenu de message.
 
 | Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
 | Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.  |
 | Cartes     | ✖                | ✔                | Consultez la référence [Teams carte de visite](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes pris en charge. |
-| Emojis    | ✖                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, par exemple U+1F600 pour le visage. |
-
-Vous pouvez également ajouter des notifications à votre message à l’aide de la `Notification.Alert` propriété.
+| Emojis    | ✔                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, par exemple U+1F600 pour le visage. |
 
 ## <a name="notifications-to-your-message"></a>Notifications à votre message
 
-Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété des objets `TeamsChannelData` `Notification.Alert` sur *true*. Le fait qu’une notification soit ou non élevée dépend des paramètres de Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
+Vous pouvez également ajouter des notifications à votre message à l’aide de la `Notification.Alert` propriété. Les notifications avertissent les utilisateurs des nouvelles tâches, mentions et commentaires. Ces alertes sont liées à ce sur quoi les utilisateurs travaillent ou ce qu’ils doivent examiner en insérant une notification dans leur flux d’activités. Pour que les notifications se déclenchent à partir de votre message bot, définissez la propriété des objets `TeamsChannelData` `Notification.Alert` sur *true*. Le fait qu’une notification soit ou non élevée dépend des paramètres de Teams de l’utilisateur individuel et vous ne pouvez pas remplacer ces paramètres. Le type de notification est soit une bannière, soit une bannière et un e-mail.
 
 > [!NOTE]
 > Le **champ Résumé** affiche tout texte de l’utilisateur en tant que message de notification dans le flux.

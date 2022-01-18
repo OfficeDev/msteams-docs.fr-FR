@@ -1,57 +1,57 @@
 ---
-title: Aperçu du développeur
-description: Décrit les fonctionnalités de la prévisualisation pour les développeurs publics de Microsoft Teams
+title: Aperçu pour les développeurs
+description: Décrit les fonctionnalités de l’aperçu public de Microsoft Teams pour les développeurs
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: Teams prévisualiser les fonctionnalités de développement
-ms.openlocfilehash: 9337a0fbc89b02783db9253cc2975a68658b4268
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: aperçu des fonctionnalités pour les développeurs de teams
+ms.openlocfilehash: ee367daaf1570e75a5da7518cc2b0e27704741c4
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949585"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059792"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Prévisualisation pour les développeurs publics Microsoft Teams
+# <a name="public-developer-preview-for-microsoft-teams"></a>Aperçu public pour les développeurs de Microsoft Teams
 
 >[!NOTE]
->Les fonctionnalités incluses dans la prévisualisation peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
+>Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
 
-La prévisualisation pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre Microsoft Teams application. Nous vous souhaitons également la [bienvenue sur](~/feedback.md) toutes les fonctionnalités de la prévisualisation pour les développeurs. La prévisualisation développeur est activée par client Microsoft Teams, vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
+L’aperçu pour développeurs est un programme public pour les développeurs qui fournit un accès en avant-première aux fonctionnalités non publiées de Microsoft Teams. Cela vous permet d’explorer et de tester les fonctionnalités à venir pour une inclusion potentielle dans votre application Microsoft Teams. Nous sommes également heureux de recevoir des [commentaires](~/feedback.md) sur toute fonctionnalité de l’aperçu pour les développeurs. L’aperçu pour les développeurs est activé pour chaque client Microsoft Teams. Vous n’avez donc pas à vous soucier d’affecter l’ensemble de votre organisation.
 
-## <a name="developer-preview-app-manifest"></a>Manifeste de l’application d’aperçu du développeur
+## <a name="developer-preview-app-manifest"></a>Manifeste de l’application de l’aperçu pour les développeurs
 
-De nombreuses fonctionnalités activées dans la prévisualisation du développeur nécessitent des modifications de votre fichier JSON de manifeste d’application. Pour ce faire, vous devez utiliser le schéma de [manifeste d’aperçu du développeur.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne serez pas en mesure d’utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour apporter ces modifications, ni de l’utiliser pour télécharger votre application à des moments de test. Pour télécharger votre application, vous devez cliquer sur l’icône dans la barre de l’application, `More apps` puis sélectionner le `Upload a custom app link` . À l’aide de cette méthode, vous pouvez uniquement charger une version compressée de votre package d’application.
+De nombreuses fonctionnalités activées dans l’aperçu pour les développeurs nécessiteront des modifications du fichier JSON du manifeste de votre application. Pour ce faire, vous devez utiliser le [schéma de manifeste d’aperçu du développeur.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne pourrez pas utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour effectuer ces modifications, ni pour télécharger votre application à des fins de test. Pour charger votre application, vous devez cliquer sur l’icône `More apps` dans la barre de l’application, puis sélectionner le `Upload a custom app link`. Avec cette méthode, vous ne pouvez télécharger qu’une version compressée du package de votre application.
 
-Il peut s’avérer utile d’utiliser App Studio pour créer les parties d’aperçu non développeur de votre package d’application, puis exporter ce package et modifier manuellement le fichier pour ajouter les fonctionnalités d’aperçu de développeur que vous souhaitez `manifest.json` utiliser. Une fois que vous avez ajouté les fonctionnalités d’aperçu développeur au fichier, vous ne pourrez pas `manifest.json` ré-importer le package dans App Studio.
+Il peut être utile d’utiliser App Studio pour créer les parties du package de votre applications qui ne sont pas des aperçus pour les développeurs, puis d’exporter ce package et de modifier manuellement le fichier `manifest.json` afin d’ajouter les fonctionnalités d’aperçu pour les développeurs que vous souhaitez utiliser. Une fois que vous avez ajouté les fonctionnalités d’aperçu pour les développeurs au fichier `manifest.json`, vous ne pourrez pas réimporter le package dans App Studio.
 
-## <a name="enable-developer-preview"></a>Activer la prévisualisation pour les développeurs
+## <a name="enable-developer-preview"></a>Activer l’aperçu pour les développeurs
 
-La prévisualisation du développeur est activée par client, mais l’option d’activer la prévisualisation du développeur est contrôlée au niveau de l’organisation. Pour activer l’option d’activer la prévisualisation du développeur pour une personne, vous devez vous assurer qu’elle a la possibilité de télécharger des applications personnalisées. Pour plus [d’informations, voir](~/concepts/build-and-test/prepare-your-o365-tenant.md) configuration de votre client.
+L’aperçu pour développeur est activé pour chaque client, mais l’option d’activer l’aperçu pour les développeurs est contrôlée au niveau de l’organisation. Pour activer l’option qui permet d’activer l’aperçu pour les développeurs pour une personne, vous devez vous assurer que cette dernière a la possibilité de charger des applications personnalisées. Pour plus d’informations, consultez [configuration de votre client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-L’utilisation d’une application qui contient des fonctionnalités de prévisualisation pour les développeurs peut entraîner un comportement inattendu des clients qui n’ont pas activé la prévisualisation pour les développeurs. Si vous ne voyez pas d’entrée pour la prévisualisation pour les développeurs, la raison la plus probable est que votre organisation n’est pas configurée pour le téléchargement d’applications.
+L’utilisation d’une application contenant des fonctionnalités de l’aperçu pour les développeurs peut provoquer un comportement inattendu chez les clients qui n’ont pas activé l’aperçu pour les développeurs. Si vous ne voyez pas d’entrée pour l’aperçu pour les développeurs, la raison la plus probable est que votre organisation n’est pas configurée pour le chargement d’applications.
 
-### <a name="on-a-desktop-or-web-client"></a>Sur un client de bureau ou web
+### <a name="on-a-desktop-or-web-client"></a>Sur un ordinateur de bureau ou un client web
 
-Pour activer la prévisualisation pour les développeurs publics sur un client de bureau ou web, vous devez :
+Pour activer l’aperçu public pour les développeurs sur un ordinateur de bureau ou un client web, vous devez procéder comme suit :
 
-1. Activation du téléchargement d’applications dans la console d’administration de votre client, comme décrit [ici.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. Cliquez sur votre profil (en haut à droite ou en bas à gauche de l’interface Teams)) pour afficher le menu Teams menu.
-1. Select About → Developer preview.
-1. Sélectionnez **Basculer vers l’aperçu développeur.**
+1. Activez le chargement d’applications dans la console d’administration de votre client comme décrit [ici](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+1. Cliquez sur votre profil (en haut à droite ou en bas à gauche de l’interface Teams) pour afficher le menu de Teams.
+1. Sélectionnez À propos → Aperçu pour les développeurs.
+1. Sélectionnez **Basculer vers l’aperçu pour les développeurs**.
 
 ### <a name="on-a-mobile-client"></a>Sur un client mobile
 
-Pour activer la prévisualisation pour les développeurs publics sur un client mobile, vous devez :
+Pour activer l’aperçu public pour les développeurs sur un client mobile, vous devez procéder comme suit :
 
-1. Activation du téléchargement d’applications dans la console d’administration de votre client, comme décrit [ici.](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. Ouvrez le menu hamburger en haut à gauche, puis **sélectionnez Paramètres**.
-1. Sélectionnez **À propos de**.
-1. Cliquez sur le bouton bascule d’aperçu développeur.
+1. Activez le chargement d’applications dans la console d’administration de votre client comme décrit [ici](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+1. Ouvrez le menu hamburger en haut à gauche, puis sélectionnez **Paramètres**.
+1. Sélectionnez **À propos**.
+1. Cliquez sur le bouton bascule d’aperçu pour les développeurs.
 
-## <a name="disable-developer-preview"></a>Désactiver la prévisualisation pour les développeurs
+## <a name="disable-developer-preview"></a>Désactiver l’aperçu pour les développeurs
 
-Utilisez le même élément de menu sous À propos → aperçu développeur, puis cliquez dessus pour le désactiver.
+Utilisez le même élément de menu sous À propos → aperçu pour les développeurs, puis cliquez dessus pour le désactiver.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Tester et déboguer votre application Microsoft Teams de test](~/concepts/build-and-test/debug.md)
+[Tester et déboguer votre application Microsoft Teams](~/concepts/build-and-test/debug.md)

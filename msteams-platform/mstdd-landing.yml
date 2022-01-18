@@ -11,12 +11,13 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 803120578195772ae13405baeb0d61d03b2282eb
-  ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
+  ms.localizationpriority: high
+  ms.openlocfilehash: 58d64f6a8c0e596e8a8b688746497ad67578db30
+  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 01/17/2022
-  ms.locfileid: "62059088"
+  ms.locfileid: "62059799"
 landingContent:
 - title: Explorer la dernière version
   linkLists:

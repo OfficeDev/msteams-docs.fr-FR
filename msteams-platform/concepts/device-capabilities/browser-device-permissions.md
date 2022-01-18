@@ -2,14 +2,14 @@
 title: Autorisations de périphérique pour le navigateur
 keywords: autorisations des fonctionnalités des applications Teams
 description: Récupérer en toute sécurité la prise en charge des autorisations d’appareil pour les applications dans notre client web
-localization_priority: Normal
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: fbdca08c813d341c12fcfc824d21a6ff96d02749
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608383"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059785"
 ---
 # <a name="device-permissions-for-the-browser"></a>Autorisations de périphérique pour le navigateur
 

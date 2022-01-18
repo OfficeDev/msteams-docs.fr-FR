@@ -325,7 +325,9 @@
           href: task-modules-and-cards/cards/cards-format.md
         - name: Actions de carte
           href: task-modules-and-cards/cards/cards-actions.md
-        - name: Recherche anticipée dans la carte adaptative
+        - name: Sélectionneur de personnes dans les Cartes adaptatives
+          href: task-modules-and-cards/cards/people-picker.md
+        - name: Recherche en saisie semi-automatique dans les Cartes adaptatives
           href: task-modules-and-cards/cards/dynamic-search.md
         - name: Actions universelles pour les cartes adaptatives
           items:

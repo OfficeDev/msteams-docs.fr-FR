@@ -4,12 +4,13 @@ description: Étendre vos expériences Teams d’application à d’autres domai
 ms.date: 11/15/2021
 ms.topic: overview
 ms.custom: m365apps
-ms.openlocfilehash: 23251d06c38df847a98d27bbc7010b76681a4ea9
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.localizationpriority: medium
+ms.openlocfilehash: 2dc1ab5323944a319e4a729639212d25ec92ccfc
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391331"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059720"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Étendre Teams applications à travers Microsoft 365
 
