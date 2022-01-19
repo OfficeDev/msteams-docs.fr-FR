@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams onglet avec cartes adaptatives
+title: Onglet Créer avec cartes adaptatives
 metadata:
-  title: Teams onglet avec cartes adaptatives
+  title: Onglet Créer avec cartes adaptatives
   description: Dans ce didacticiel, vous allez apprendre à configurer des cartes adaptatives dans un onglet pour Teams.
   audience: Developer
   level: Beginner
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: En savoir plus sur l’authentification par onglet
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 61a999d64574a2a4b0877378b093569ba7f850c9
-  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+  ms.openlocfilehash: ce55f44b5adf485408a48af3a50d07b51d612cad
+  ms.sourcegitcommit: 05cce11f412af64f85afc7ebbfa485c307f2d95e
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/17/2022
-  ms.locfileid: "62059650"
+  ms.lasthandoff: 01/18/2022
+  ms.locfileid: "62064066"
 items:
 - durationInMinutes: 1
   content: >

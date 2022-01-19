@@ -1,53 +1,53 @@
 ---
-title: Mise en place - Vue d’ensemble
-description: Vue d’ensemble de la mise en Microsoft Teams documentation du développeur
-ms.localizationpriority: medium
+title: Démarrage - Vue d’ensemble
+description: Vue d’ensemble de Démarrage pour la documentation pour les développeurs Microsoft Teams
+ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams exemples de développeur
-ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
-ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
-ms.translationtype: MT
+keywords: Exemples de développeurs Microsoft Teams
+ms.openlocfilehash: be53bc97ecc5df84ab4358927f4332764068d1c4
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/28/2021
-ms.locfileid: "61619801"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059643"
 ---
 # <a name="get-started"></a>Prise en main
 
-Bienvenue dans la création et le déploiement d’applications personnalisées pour Microsoft Teams !
+Bienvenue dans Démarrage pour créer et déployer des applications personnalisées pour Microsoft Teams !
 
-Parcourir les étapes pour créer une application de base Teams réelle. La mise en place vous présente également des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
+Suivez les étapes pour créer une application Teams de base et réelle. Le Démarrage vous présente également des outils courants, des concepts fondamentaux et des fonctionnalités plus avancées.
 
 Voici une idée de ce que vous allez apprendre :
 
-- Rapidement opérationnel avec le Microsoft Teams Shared Computer Toolkit (une extension Visual Studio Code).
-- Obtenez de l’expérience avec les Shared Computer Toolkit et les SDK.
-- Configurez et créez différents types d’Teams applications.
+- Devenez rapidement opérationnel avec le Kit de ressources Microsoft Teams (extension Visual Studio Code).
+- Bénéficiez d’une expérience avec le Kit de ressources et les Kits de développement logiciel (SDK).
+- Configurez et générez différents types d’applications Teams.
 
-Examinons rapidement les options de l’environnement de build parmi les options que vous pouvez choisir et la feuille de route pour la création et le déploiement d’une Teams de création.
+Examinons rapidement les options d’environnement de build parmi lesquelles vous pouvez choisir, ainsi que la feuille de route de la création et du déploiement d’une application Teams.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration montrant les étapes de base pour créer et déployer Teams application":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration montrant les étapes de base pour créer et déployer une application Teams":::
 
 ## <a name="app-capabilities-and-development-tools"></a>Fonctionnalités d’application et outils de développement
 
-Selon les fonctionnalités de votre application, choisissez un ensemble d’outils de développement approprié.
+Selon les fonctionnalités souhaitées pour votre application, choisissez un ensemble d’outils de développement approprié.
 
-| Fonctionnalités de l’application | Interactions avec l’utilisateur | Outils recommandés | Kits de développement logiciel (SDK) | Piles/langues technologiques |
+| Fonctionnalités de l’application | Interactions utilisateur | Outils recommandés | Kits de développement logiciel (SDK) | Piles/langues technologiques |
 |--------|-------------|--------|--------|--------|
-| Onglets | Une expérience web incorporée en plein écran. | VS Code avec une extension Teams Shared Computer Toolkit ou [l’CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) si vous préférez utiliser CLI | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) pour lesibs principaux et [SDK Teams client pour](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) les fonctionnalités d’interface utilisateur | Technologie web en général, HTML, CSS et JavaScript (incl. React). |
-| Bots | Bot de conversation qui converse avec les membres. | VS Code avec une extension Teams Shared Computer Toolkit, ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [SDK Bot Framework](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
-| Extensions de messagerie | Raccourcis pour insérer du contenu externe dans une conversation ou prendre des mesures sur les messages. | VS Code avec une extension Teams Shared Computer Toolkit, ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [SDK Bot Framework](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
+| Onglets | Une expérience web incorporée en plein écran. | VS Code avec l’extension Teams Toolkit ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) si vous préférez utiliser l’interface CLI | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) pour les bibliothèques principales et [SDK client Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) pour les fonctionnalités de l’interface utilisateur | Technologie web en général, HTML, CSS et JavaScript (incl. React). |
+| Bots | Bot de conversation qui discute avec les membres. | VS Code avec l’extension Teams Toolkit ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
+| Extensions de messagerie | Raccourcis permettant d’insérer du contenu externe dans une conversation ou d’agir sur des messages. | VS Code avec l’extension Teams Toolkit ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
 
 *Vous n’êtes pas limité à l’utilisation de ces piles particulières !*
 
-Si vous connaissez déjà le flux de travail Yeoman, vous préférez peut-être utiliser le générateur [Yeoman YoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) pour créer vos applications.
+Si vous êtes déjà familiarisé avec le workflow Yeoman, vous préférerez peut-être utiliser [Générateur Yeoman yoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) pour créer vos applications.
 
 > [!NOTE]
-> Si vous utilisez App Studio, nous vous recommandons d’essayer le Portail des développeurs pour configurer, distribuer et gérer vos applications Teams client.
+> Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams.
 
 
-## <a name="build-your-first-teams-app"></a>Créer votre première application Teams de messagerie
+## <a name="build-your-first-teams-app"></a>Créer votre première application Teams
 
-Maintenant, nous allons créer votre première application Teams’application. Tout d’abord, sélectionnez votre langue (ou votre infrastructure) et préparez votre environnement de développement.
+Nous allons maintenant créer votre première application Teams. Tout d’abord, choisissez votre langage (ou infrastructure) et préparez votre environnement de développement.
 
 > [!div class="nextstepaction"]
 > [Créer une application Teams avec JavaScript à l’aide de React](../sbs-gs-javascript.yml)
@@ -59,9 +59,9 @@ Maintenant, nous allons créer votre première application Teams’application. 
 > [Créer une application Teams avec C# ou .NET](../sbs-gs-csharp.yml)
 
 > [!div class="nextstepaction"]
-> [Créer une application Teams avec Node.js](../sbs-gs-nodejs.yml)
+> [Créer une application Teams avec node.js](../sbs-gs-nodejs.yml)
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Microsoft Teams exemples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Ressources Git et GitHub ressources](/contribute/additional-resources)
+* [Exemples Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Ressources Git et GitHub](/contribute/additional-resources)
