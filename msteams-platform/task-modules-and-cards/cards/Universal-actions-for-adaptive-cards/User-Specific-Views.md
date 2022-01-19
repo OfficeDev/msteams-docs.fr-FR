@@ -4,12 +4,12 @@ description: En savoir plus sur les affichages spécifiques de l’utilisateur �
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e6dc1cc87f5a9896933566475d69ce9ad311fbfb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889201"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081064"
 ---
 # <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
@@ -211,3 +211,4 @@ Recommandations en matière de conception de carte à garder à l’esprit lors 
 
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
 * [Affichages à jour](Up-To-Date-Views.md)
+* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8b5ed919cac07b1d0710a1f23c0ade0cca2ffb
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 4214cc4a738b979a7fa95b2bd9c5110ea0360c68
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059820"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081092"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams version préliminaire du SDK client JavaScript v2
 
@@ -46,7 +46,7 @@ Voici les deux mises à jour clés dont vous aurez besoin pour exécuter une app
 
 ### <a name="2-updating-the-manifest"></a>2. Mise à jour du manifeste
 
-# <a name="teams-toolkit"></a>[Teams Shared Computer Toolkit](#tab/manifest-teams-toolkit)
+# <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez *la palette de commandes*: `Ctrl+Shift+P`
 1. Exécutez **Teams : mettre à** niveau Teams manifeste pour prendre en charge Outlook commande Office applications et sélectionnez votre fichier manifeste d’application. Les modifications seront apportées en place.
@@ -112,7 +112,7 @@ Doit être mis à jour comme indiqué dans :
 ```js
 import { app, Context } from "@microsoft/teams-js";
 
-app.getContext().then((context: Context) => {
+app.getContext().then((context) => {
     /*...*/
 });
 ```
@@ -358,7 +358,7 @@ Vous pouvez également visualiser les modifications en révisant la fonction dan
 | `userObjectId` | `app.Context.user.id`|
 | ` userTeamRole` | `app.Context.team.userRole`|
 | `userDisplayName` | `app.Context.user.displayName` |
-| S/O | `app.Context.app.host.name`|
+| N/A | `app.Context.app.host.name`|
 
 ## <a name="next-steps"></a>Prochaines étapes
 

@@ -5,17 +5,17 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ad9b3a2e30a2daf25dd31344b4e674f3db3d25
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059629"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081075"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet Teams’une page à l’autre Microsoft 365
 
 > [!NOTE]
-> *L’extension d Teams onglet personnel sur* Microsoft 365 est actuellement disponible uniquement en prévisualisation [pour les développeurs publics.](../resources/dev-preview/developer-preview-intro.md) Les fonctionnalités incluses dans la prévisualisation peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
+> *L’extension d Teams onglet personnel sur* Microsoft 365 est actuellement disponible uniquement en prévisualisation [pour les développeurs publics.](../resources/dev-preview/developer-preview-intro.md) Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
 
 Les onglets personnels offrent un excellent moyen d’améliorer Microsoft Teams expérience utilisateur. À l’aide d’onglets personnels, vous pouvez fournir à un utilisateur un accès à son application directement dans Teams, sans que l’utilisateur n’a à quitter l’expérience ou à se connecter à nouveau. Avec cet aperçu, les onglets personnels peuvent s’afficher dans d’Microsoft 365 applications. Ce didacticiel illustre le processus de prise d’un onglet personnel Teams existant et sa mise à jour pour qu’il s’exécute à la fois dans les expériences de bureau et web Outlook, ainsi que dans Office sur le Web (office.com).
 
@@ -63,7 +63,7 @@ Vous devez utiliser le schéma de manifeste d’aperçu [du développeur Teams](
 
 Vous pouvez utiliser Teams Shared Computer Toolkit pour mettre à jour le manifeste de votre application ou appliquer les modifications manuellement :
 
-# <a name="teams-toolkit"></a>[Teams Shared Computer Toolkit](#tab/manifest-teams-toolkit)
+# <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez *la palette de commandes*: `Ctrl+Shift+P`
 1. Exécutez la `Teams: Upgrade Teams manifest to support Outlook and Office apps` commande et sélectionnez votre fichier manifeste d’application. Les modifications seront apportées en place.
@@ -177,7 +177,7 @@ Lorsque vous Teams mis à niveau votre onglet personnel et que vous le chargez d
 
 Pour afficher votre application s’exécutant Outlook sur Windows bureau, lancez Outlook et connectez-vous à l’aide de votre compte de client dev. Cliquez sur les ellipses (**...**) sur la barre latérale. Le titre de votre application installée s’affiche parmi vos applications installées.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale pour voir vos onglets personnels installés":::
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale du client de bureau Office pour voir vos onglets personnels installés":::
 
 Cliquez sur l’icône de votre application pour lancer votre application dans Outlook.
 
@@ -185,9 +185,14 @@ Cliquez sur l’icône de votre application pour lancer votre application dans O
 
 Pour afficher votre application dans Outlook sur le web, visitez et connectez-vous à https://outlook.office.com l’aide de votre compte de client dev. Cliquez sur les ellipses (**...**) sur la barre latérale. Le titre de votre application installée s’affiche parmi vos applications installées.
 
+:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale de outlook.com pour voir vos onglets personnels installés":::
+
 Cliquez sur l’icône de votre application pour lancer et afficher un aperçu de votre application s’exécutant Outlook sur le web.
 
 ### <a name="office-on-the-web"></a>Office sur le web
+
+> [!IMPORTANT]
+> Reportez-vous aux dernières mises à jour du [blog Microsoft Teams - Microsoft 365 Developer](https://devblogs.microsoft.com/microsoft365dev/) pour vérifier si la prise en charge de Office.com pour Teams applications personnelles est disponible pour votre client test.
 
 Pour afficher un aperçu de votre application en cours d Office sur le Web, connectez-vous office.com avec les informations d’identification du client de test. Cliquez sur les ellipses (**...**) sur la barre latérale. Le titre de votre application installée s’affiche parmi vos applications installées.
 

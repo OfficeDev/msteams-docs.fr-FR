@@ -4,12 +4,12 @@ description: Décrit les actions de carte dans Microsoft Teams et comment les ut
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889327"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081057"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -567,3 +567,4 @@ Le code suivant illustre un exemple de cartes adaptatives `invoke` avec une acti
 * [Utiliser des modules de tâches à partir de bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Cartes adaptatives dans les bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Actions universelles pour les cartes adaptatives](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
+* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

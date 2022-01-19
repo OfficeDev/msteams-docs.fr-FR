@@ -3,12 +3,12 @@ title: Travailler avec les actions universelles pour les cartes adaptatives
 description: Apprenez à utiliser les actions universelles pour les cartes adaptatives, notamment le schéma pour UniversalActions pour les cartes adaptatives, le modèle d’actualisation et la compatibilité ascendante à l’aide d’exemples de code.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768607"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080952"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>Travailler avec les actions universelles pour les cartes adaptatives
 
@@ -124,3 +124,4 @@ Pour plus d’informations, [voir compatibilité ascendante sur Teams](/adaptive
 * [Comment fonctionnent les bots ?](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Flux de travail séquentiels](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Cartes actualisées](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

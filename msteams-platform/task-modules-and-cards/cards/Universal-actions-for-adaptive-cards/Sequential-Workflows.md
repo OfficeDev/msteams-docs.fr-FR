@@ -4,12 +4,12 @@ description: En savoir plus sur les flux de travail séquentiels pour les cartes
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889110"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081050"
 ---
 # <a name="sequential-workflows"></a>Flux de travail séquentiels
 
@@ -136,3 +136,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [Actions de carte adaptative dans Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Comment fonctionnent les bots ?](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
+* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

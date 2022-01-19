@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059778"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081103"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -241,7 +241,7 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 | Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
-| Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.  |
+| Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
 | Cartes     | ✖                | ✔                | Consultez la référence [Teams carte de visite](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes pris en charge. |
 | Emojis    | ✔                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, par exemple U+1F600 pour le visage. |
 
@@ -331,7 +331,7 @@ Pour améliorer votre message, vous pouvez inclure des images en tant que pièce
 
 Les images sont envoyées en ajoutant des pièces jointes à un message. Pour plus d’informations sur les pièces jointes, voir [la documentation bot Framework.](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)
 
-Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Gif animé non pris en charge.
+Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
 Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
@@ -342,7 +342,7 @@ Un bot de conversation peut inclure des cartes adaptatives qui simplifient les f
 
 ## <a name="adaptive-cards"></a>Cartes adaptatives
 
-Les cartes adaptatives peuvent être authored dans un bot et affichées dans plusieurs applications telles que Teams, votre site web, etc. Pour plus d’informations, voir [Cartes adaptatives.](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+Les cartes adaptatives peuvent être authored dans un bot et affichées dans plusieurs applications telles que Teams, votre site web, etc. Pour plus d’informations, voir [Cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 Le code suivant illustre un exemple d’envoi d’une carte adaptative simple :
 
@@ -370,7 +370,25 @@ Le code suivant illustre un exemple d’envoi d’une carte adaptative simple :
 }
 ```
 
-Pour en savoir plus sur les cartes et les cartes dans les bots, consultez [la documentation des cartes.](~/task-modules-and-cards/what-are-cards.md)
+### <a name="form-completion-feedback"></a>Retour d’achèvement du formulaire
+
+Le message d’achèvement du formulaire apparaît dans les cartes adaptatives lors de l’envoi d’une réponse au bot. Le message peut être de deux types , erreur ou réussite :
+
+* **Erreur**: lorsqu’une réponse envoyée au bot échoue, un problème **s’est produite, le** message Try again s’affiche.
+
+    ![Message d’erreur](~/assets/images/Cards/error-message.png)
+
+* **Réussite**: lorsqu’une réponse envoyée au bot réussit, votre réponse a été envoyée au message **de l’application.**
+
+    ![Message de réussite](~/assets/images/Cards/success.PNG)
+
+Vous pouvez sélectionner **Fermer ou** changer de conversation pour faire disparaître le message.    
+
+**Réponse sur les appareils mobiles**:
+
+Le message d’erreur apparaît en bas de la carte adaptative.
+
+Pour plus d’informations sur les cartes et les cartes dans les bots, voir [la documentation des cartes.](~/task-modules-and-cards/what-are-cards.md)
 
 ## <a name="status-code-responses"></a>Réponses de code d’état
 

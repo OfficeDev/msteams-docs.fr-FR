@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Teams documentation pour les développeurs
-summary: Bienvenue dans la documentation Microsoft Teams développeur. Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les personnes se rassemblent, apprennent et travaillent de plus en plus.
+summary: Bienvenue dans la documentation Microsoft Teams développeur. Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les contacts se réunissent, apprennent et travaillent de plus en plus.
 metadata:
   title: Microsoft Teams documentation pour les développeurs
   description: Présentation de la création d’applications pour Teams
@@ -12,18 +12,20 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea705be66fdf5521fc68cedeb89eeb6d97319c32
-  ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+  ms.openlocfilehash: de250e7f4e744b293abce91998fa7b65ab22c215
+  ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/18/2022
-  ms.locfileid: "62062488"
+  ms.lasthandoff: 01/19/2022
+  ms.locfileid: "62081043"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
-    - text: S sélectionneur de personnes dans les cartes adaptatives
+    - text: Retour d’achèvement du formulaire cartes adaptatives
+      url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
+    - text: Sélecteur de personnes dans les Cartes adaptatives
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Shared Computer Toolkit for Visual Studio Code (Preview)
       url: ~/toolkit/teams-toolkit-fundamentals.md

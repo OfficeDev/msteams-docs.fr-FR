@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Flux de données d’authentification d’application personnelle de carte adaptative
-ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216096"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080966"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
@@ -432,7 +432,7 @@ Le code suivant montre un exemple de requête rééditée :
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
+> [Déploiement de liens d’onglets et vue d’étape](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -441,3 +441,4 @@ Le code suivant montre un exemple de requête rééditée :
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
+* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

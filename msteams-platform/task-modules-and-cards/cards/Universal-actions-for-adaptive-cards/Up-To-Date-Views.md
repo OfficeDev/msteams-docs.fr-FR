@@ -5,12 +5,12 @@ author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: rejet adaptatif de carte de base d’approbation
-ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0fce06ee940a172c02b00c3ae417f6b31090f5e0
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887405"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081148"
 ---
 # <a name="up-to-date-cards"></a>Cartes actualisées
 
@@ -270,3 +270,4 @@ Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse a
 
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
 * [Affichages spécifiques à l’utilisateur](User-Specific-Views.md)
+* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

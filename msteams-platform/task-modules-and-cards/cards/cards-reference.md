@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: high
 keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 81d38b4b068b647b55e130e320d4edb67d332cd4
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059713"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081134"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -953,3 +953,4 @@ Les cartes suivantes sont implémentées par Bot Framework, mais ne sont pas pri
 * [Cartes de format](~/task-modules-and-cards/cards/cards-format.md)
 * [Cartes actualisées](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Travailler avec les actions universelles pour les cartes adaptatives](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Commentaires sur l’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
