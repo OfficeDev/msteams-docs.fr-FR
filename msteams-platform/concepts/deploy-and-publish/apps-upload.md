@@ -1,73 +1,73 @@
 ---
-title: Télécharger votre application personnalisée
-description: Découvrez comment recharger une version de version de votre application dans Microsoft Teams. Le chargement de version test est courant lors du test et du débogage d’une application pendant le développement.
+title: Téléchargez votre application personnalisée
+description: Découvrez comment charger votre application dans Microsoft Teams. Le chargement latéral est courant lors du test et du débogage d'une application pendant le développement.
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: e14e521941d253a3f259cf93f36bff4d620d55f2
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fa67f6b1261619565cb62d5e1333367904089244
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949060"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059608"
 ---
-# <a name="upload-your-app-in-microsoft-teams"></a>Télécharger votre application dans Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
-Vous pouvez télécharger une version Microsoft Teams applications sans avoir à publier dans votre organisation ou le Teams store. Cela est logique dans les scénarios suivants :
+Vous pouvez télécharger les applications Microsoft Teams sans avoir à les publier dans votre organisation ou dans le magasin Teams. Cela a du sens dans les scénarios suivants :
 
-* Vous souhaitez tester et déboguer une application localement vous-même ou avec d’autres développeurs.
-* Vous avez créé une application uniquement pour vous-même. Par exemple, pour automatiser un flux de travail.
-* Vous avez créé une application pour un petit groupe d’utilisateurs, par exemple, votre groupe de travail.
+* Vous souhaitez tester et déboguer une application localement vous-même ou avec d'autres développeurs.
+* Vous avez créé une application rien que pour vous. Par exemple, pour automatiser un workflow.
+* Vous avez créé une application pour un petit groupe d'utilisateurs, tel que votre groupe de travail.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
+> Actuellement, les applications de chargement latéral sont disponibles dans Government Community Cloud (GCC), mais ne sont pas disponibles pour GCC-High et Department of Defence (DOD).
 
 ## <a name="prerequisites"></a>Configuration requise
 
-* Créez votre [package d’application](~/concepts/build-and-test/apps-package.md) [et validez-le pour les](https://dev.teams.microsoft.com/appvalidation.html) erreurs.
-* [Activez le chargement d’applications personnalisées](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) dans Teams.
-* Assurez-vous que votre application est en cours d’exécution et accessible via HTTPs.
+* Créez votre [package d'application](~/concepts/build-and-test/apps-package.md) et [validez-le](https://dev.teams.microsoft.com/appvalidation.html) pour les erreurs.
+* [Activez le téléchargement d'applications personnalisées](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) dans Teams.
+* Assurez-vous que votre application est en cours d'exécution et accessible via HTTPs.
 
 ## <a name="upload-your-app"></a>Télécharger votre application
 
-Vous pouvez charger une version de votre application vers une équipe, une conversation, une réunion ou pour une utilisation personnelle en fonction de la façon dont vous avez configuré l’étendue de votre application.
+Vous pouvez télécharger votre application dans une équipe, un chat, une réunion ou pour un usage personnel selon la façon dont vous avez configuré la portée de votre application.
 
-1. Connectez-vous au client Teams avec [votre compte Microsoft 365 de développement.](~/build-your-first-app/build-and-run.md#prerequisites)
-1. Sélectionnez **applications** et choisissez **Télécharger une application personnalisée.**
-1. Sélectionnez votre package d'.zip fichier. Une boîte de dialogue d’installation s’affiche.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
+1. Connectez-vous au client Teams avec votre [compte de développement Microsoft 365](~/build-your-first-app/build-and-run.md#prerequisites).
+1. Sélectionnez **Applications** et choisissez **Charger une application personnalisée**.
+1. Sélectionnez le fichier .zip de votre package d'application. Une boîte de dialogue d'installation s'affiche.
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d'écran montrant un exemple de boîte de dialogue d'installation de l'application Teams.":::
 1. Ajoutez votre application à Teams.
 
 ## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement
 
-Si le chargement de version de votre application échoue, faites les choses suivantes jusqu’à ce que le problème soit résolu :
+Si votre application ne parvient pas à se charger, procédez comme suit jusqu'à ce que le problème soit résolu :
 
-1. Revenir en arrière dans les instructions de [création de votre package d’application.](../../concepts/build-and-test/apps-package.md)
-1. [Validez à nouveau votre package d’application.](https://dev.teams.microsoft.com/appvalidation.html)
-1. Assurez-vous que le manifeste de votre application correspond au [schéma le plus récent.](../../resources/schema/manifest-schema.md)
+1. Reprendre les instructions de [création de votre package d'application](../../concepts/build-and-test/apps-package.md).
+1. [Valider à nouveau votre package d'application.](https://dev.teams.microsoft.com/appvalidation.html)
+1. Assurez-vous que le manifeste de votre application correspond au dernier [schéma](../../resources/schema/manifest-schema.md).
 
 ## <a name="access-your-app"></a>Accéder à votre application
 
-Teams propose plusieurs façons d’ouvrir des applications. Pour plus d’informations, [voir accéder à vos applications dans Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
+Teams propose plusieurs façons d'ouvrir des applications. Pour plus d'informations, voir [accéder à vos applications dans Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 ## <a name="update-your-app"></a>Mettre à jour votre application
 
-Vous n’avez pas à recharger votre application de nouveau si vous a apporté des modifications de code (celles-ci sont reflétées dans Teams en temps réel). Toutefois, vous devez réinstaller si vous modifiez des configurations d’application.
+Vous n'avez pas besoin de charger à nouveau votre application si vous apportez des modifications au code (celles-ci sont reflétées dans Teams en temps réel). Cependant, vous devez réinstaller si vous modifiez des configurations d'application.
 
 ## <a name="remove-your-app"></a>Supprimer votre application
 
-Pour supprimer votre application, cliquez avec le bouton droit sur l’icône de l’Teams puis **sélectionnez Désinstaller.**
+Pour supprimer votre application, cliquez avec le bouton droit sur l'icône de l'application dans Teams et sélectionnez **Désinstaller**.
 
 > [!NOTE]
-> Vous ne pouvez pas supprimer entièrement l’activité du bot personnel. Si vous supprimez l’application et l’ajoutez à nouveau, une nouvelle communication avec le bot s’ajoute à la conversation précédente avec elle.
+> Vous ne pouvez pas supprimer entièrement l'activité personnelle du bot. Si vous supprimez l'application et l'ajoutez à nouveau, la nouvelle communication avec le bot s'ajoute à la conversation précédente avec lui.
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Utiliser votre application Teams de messagerie](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+> [Utiliser votre application Teams](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Configurer les options d’installation par défaut](~/concepts/deploy-and-publish/add-default-install-scope.md)
-* [Gérer votre application Microsoft Teams publiée](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+* [Maintenir votre application Microsoft Teams publiée](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
