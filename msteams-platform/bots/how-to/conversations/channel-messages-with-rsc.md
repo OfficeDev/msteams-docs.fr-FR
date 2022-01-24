@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recevoir tous les messages de canal avec des autorisations RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c509475a94d7f161dd6fb26c46ecb669c4059a1
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.openlocfilehash: abe6bc821c9e4ffe05b1cf35480f9c559401014e
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960228"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185441"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recevoir tous les messages de canal avec RSC
 
@@ -81,9 +81,39 @@ Pour tester le chargement d’une version test dans une équipe, si tous les mes
 
     ![Le bot reçoit un message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
+## <a name="code-snippets"></a>Extraits de code
+
+Le code suivant fournit un exemple d’autorisations RSC :
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+this.onMessage(async (context, next) => {
+   await context.sendActivity(MessageFactory.text("Using RSC the bot can recieve messages across channles in team without being @mentioned."))
+   await next();
+});
+```
+
+---
+
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom | Description | C # |Node.js|
+| Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
 |Messages de canal avec autorisations RSC| Microsoft Teams exemple d’application montrant comment un bot peut recevoir tous les messages de canal avec RSC sans être @mentioned.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 

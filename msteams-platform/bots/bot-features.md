@@ -5,12 +5,12 @@ description: Vue d’ensemble des outils et des SDK pour la création Microsoft 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3c39ed5c39a92967ebf8b90760bd28e7bb6366f3
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948382"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185421"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -27,7 +27,7 @@ Votre bot Teams se compose des suivants :
 
 * Un service web accessible au public hébergé par vous.
 * Une inscription Bot Framework pour votre service web.
-* Votre Teams d’application, qui connecte le client Teams à votre service web.
+* Votre Teams d’application, qui connecte le client Teams client à votre service web.
 
 > [!TIP]
 > Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
@@ -82,7 +82,7 @@ La conversation un-à-un est un moyen traditionnel pour un bot de conversation d
 * Q&A bots
 * bots qui lancent des flux de travail dans d’autres systèmes 
 * bots qui indiquent aux personnes
-* les bots qui prennent des notes avant de créer des chatbots un-à-un, pensez à déterminer si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
+* Les bots qui prennent des notes avant de créer des chatbots un-à-un, estiment si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
 
 ## <a name="disadvantages-of-bots"></a>Inconvénients des bots
 
@@ -90,7 +90,7 @@ Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences à plusieurs tour dans la conversation
 
-Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
+Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler.** En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
 USER : planifier une réunion avec Megan.
 
@@ -106,11 +106,84 @@ BOT : quel jour ?
 
 ### <a name="support-too-many-commands"></a>Prise en charge d’un trop grand nombre de commandes
 
-Comme il n’existe que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
+Comme il n’y a que six commandes visibles dans le menu bot actuel, il est peu probable que tout ce qui se trouve en plus soit utilisé avec une fréquence quelconque. Bots qui vont plus loin dans un domaine spécifique plutôt que d’essayer d’être un travail d’assistant large et mieux.
 
-### <a name="maintain-a-large-knowledge-base"></a>Maintenir une base de connaissances importante
+### <a name="maintain-a-large-knowledge-base"></a>Gérer une base de connaissances importante
 
-L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux pour les interactions courtes et rapides, et ne pas passer au travers de longues listes à la recherche d’une réponse.
+L’un des inconvénients des bots est qu’il est difficile de maintenir une base de connaissances de récupération importante avec des réponses nonrankées. Les bots conviennent mieux aux interactions courtes et rapides, et ne sont pas en train de passer au travers de longues listes à la recherche d’une réponse.
+
+## <a name="code-snippets"></a>Extraits de code
+
+Le code suivant fournit un exemple d’activité de bot pour une étendue d’équipe de canal :
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+---
+
+Le code suivant fournit un exemple d’activité de bot pour une conversation un-à-un :
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+// Handle message activity
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    turnContext.Activity.RemoveRecipientMention();
+    var text = turnContext.Activity.Text.Trim().ToLower();
+        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+this.onMessage(async (context, next) => {
+    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await next();
+});
+```
+
+---
 
 ## <a name="code-sample"></a>Exemple de code
 
@@ -125,7 +198,7 @@ L’un des inconvénients des bots est qu’il est difficile de maintenir une ba
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Appels et réunions robots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Bots d’appels et de réunions](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversations de robots](~/bots/how-to/conversations/conversation-basics.md)
 * [Menus de commande du bot](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Flux d’authentification pour les bots dans Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

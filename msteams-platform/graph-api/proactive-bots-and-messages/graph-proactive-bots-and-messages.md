@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: installation de conversation de messagerie proactive teams Graph
-ms.openlocfilehash: d65be003bd6fe245e8a6ca80ca8823a2e935ff43
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043223"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185426"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
 
@@ -187,16 +187,61 @@ Lorsque votre application est installée pour l’utilisateur, le bot reçoit un
 
 Votre bot peut [envoyer des messages proactifs](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) une fois qu’il a été ajouté pour un utilisateur ou une équipe et qu’il a reçu toutes les informations utilisateur.
 
+## <a name="code-snippets"></a>Extraits de code
+
+Le code suivant fournit un exemple d’envoi de messages proactifs :
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+   int msgSentCount = 0;
+
+   // Send notification to all the members
+   foreach (var conversationReference in _conversationReferences.Values)
+   {
+       await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
+       msgSentCount++;
+   }
+
+   return msgSentCount;
+}
+
+private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
+{
+   await turnContext.SendActivityAsync("Proactive hello.");
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+server.get('/api/notify', async (req, res) => {
+    for (const conversationReference of Object.values(conversationReferences)) {
+        await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
+            await context.sendActivity('proactive hello');
+        });
+    }
+
+    res.setHeader('Content-Type', 'text/html');
+    res.writeHead(200);
+    res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
+    res.end();
+});
+```
+---
+
 ## <a name="code-sample"></a>Exemple de code
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Installation proactive de l’application et envoi de notifications proactives | Cet exemple montre comment utiliser l’installation proactive de l’application pour les utilisateurs et envoyer des notifications proactives en appelant les API Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| Installation proactive de l’application et envoi de notifications proactives | Cet exemple indique comment utiliser l’installation proactive de l’application pour les utilisateurs et envoyer des notifications proactives en appelant les API Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
 ## <a name="additional-code-samples"></a>Exemples de code supplémentaires
 >
 > [!div class="nextstepaction"]
-> [**Teams exemples de code de messagerie proactifs**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [**Exemples de code Teams de messagerie proactive**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -4,12 +4,12 @@ keywords: teams apps capabilities permissions device native scan qr barcode imag
 description: Comment mettre à jour le manifeste de votre application afin de demander l’accès à des fonctionnalités natives qui nécessitent généralement le consentement de l’utilisateur, telles que l’analyse qr, le code-barres, l’image, l’audio et les fonctionnalités vidéo
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 24556765866eb271e30e9d1c7294c38352c78092
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: e6ee04f47c87df8be7a424993a4f0c916b5a69f3
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041726"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185455"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Demander des autorisations d’appareil pour votre application Microsoft Teams client
 
@@ -96,7 +96,7 @@ Chaque propriété vous permet d’inviter l’utilisateur à demander son conse
 
 Après l’ajout au manifeste de votre application, vérifiez les autorisations à l’aide de `devicePermissions` **l’API d’autorisations HTML5** sans provoquer d’invite :
 
-``` Javascript
+``` JavaScript
 // Different query options:
 navigator.permissions.query({ name: 'camera' });
 navigator.permissions.query({ name: 'microphone' });
@@ -125,52 +125,98 @@ Tirez parti de l’API HTML5 ou Teams appropriée pour afficher une invite pour 
 Par exemple :
  * Pour demander à l’utilisateur d’accéder à son emplacement, vous devez appeler `getCurrentPosition()` :
 
-    ```Javascript
+    ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
  * Pour demander à l’utilisateur d’accéder à son appareil photo sur un ordinateur de bureau ou sur le web, vous devez appeler `getUserMedia()` :
 
-    ```Javascript
+    ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
  * Pour capturer l’image sur un appareil mobile, Teams mobile demande l’autorisation lorsque vous appelez `captureImage()` :
 
-    ```Javascript
-    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-      /* ... */
-    });
+    ```JavaScript
+            function captureImage() {
+            microsoftTeams.media.captureImage((error, files) => {
+                // If there's any error, an alert shows the error message/code
+                if (error) {
+                    if (error.message) {
+                        alert(" ErrorCode: " + error.errorCode + error.message);
+                    } else {
+                        alert(" ErrorCode: " + error.errorCode);
+                    }
+                } else if (files) {
+                    image = files[0].content;
+                    // Adding this image string in src attr of image tag will display the image on web page.
+                    let imageString = "data:" + item.mimeType + ";base64," + image;
+                }
+            });
+        } 
     ```
 
  * Les notifications inviteront l’utilisateur à appeler `requestPermission()` :
 
-    ```Javascript
+    ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
 * Pour utiliser l’appareil photo ou accéder à la galerie de photos, Teams mobile demande l’autorisation lorsque vous appelez `selectMedia()` :
 
     ```JavaScript
-    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    );
-    ```
+     function selectMedia() {
+     microsoftTeams.media.selectMedia(mediaInput, (error, attachments) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         } else if (attachments) {
+             // creating image array which contains image string for all attached images. 
+             const imageArray = attachments.map((item, index) => {
+                 return ("data:" + item.mimeType + ";base64," + item.preview)
+             })
+         }
+     });
+    } 
+  ```
 
 * Pour utiliser le microphone, Teams mobile demande l’autorisation lorsque vous appelez `selectMedia()` :
 
-    ```JavaScript 
-    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    });
+    ```JavaScript
+     function selectMedia() {
+     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         }
+
+         if (attachments) {
+             // taking the first attachment  
+             let audioResult = attachments[0];
+
+             // setting audio string which can be used in Video tag
+             let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
+         }
+     });
+     }
     ```
 
 * Pour demander à l’utilisateur de partager un emplacement sur l’interface de carte, Teams mobile demande l’autorisation lorsque vous appelez `getLocation()` :
 
     ```JavaScript 
-    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-      /* ... *
-    /});
+     function getLocation() {
+     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+         let currentLocation = JSON.stringify(location);
+     });
+     } 
     ```
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
@@ -198,7 +244,7 @@ Les autorisations d’appareil sont stockées pour chaque session de connexion. 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Autorisations de périphérique pour le navigateur](browser-device-permissions.md)
+* [Autorisations d’appareil pour le navigateur](browser-device-permissions.md)
 * [Intégrer des fonctionnalités multimédias dans Teams](mobile-camera-image-permissions.md)
 * [Intégrer la fonctionnalité de QR ou de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
 * [Intégrer des fonctionnalités d’emplacement dans Teams](location-capability.md)

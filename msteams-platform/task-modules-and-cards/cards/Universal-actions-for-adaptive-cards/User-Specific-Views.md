@@ -4,12 +4,12 @@ description: En savoir plus sur les affichages spécifiques de l’utilisateur �
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081064"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185434"
 ---
 # <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
@@ -181,7 +181,9 @@ Le code suivant fournit un exemple de carte de réponse d’appel adaptiveCard/a
 
 Le code suivant fournit un exemple de réponse d’appel pour renvoyer des cartes adaptatives :
 
-```C#
+### <a name="c"></a>[C#](#tab/C)
+
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -192,6 +194,26 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```
+
+---
 
 Recommandations en matière de conception de carte à garder à l’esprit lors de la conception d’affichages spécifiques à l’utilisateur :
 
@@ -211,4 +233,4 @@ Recommandations en matière de conception de carte à garder à l’esprit lors 
 
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
 * [Affichages à jour](Up-To-Date-Views.md)
-* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Commentaires sur l’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
