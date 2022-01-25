@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recevoir tous les messages de canal avec des autorisations RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: abe6bc821c9e4ffe05b1cf35480f9c559401014e
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: e499b414a91f815bfe84172a8559f3b7cfd6d839
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185441"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212453"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recevoir tous les messages de canal avec RSC
 
@@ -35,7 +35,7 @@ Pour que votre bot reçoit tous les messages de canal, RSC doit être configuré
 
 Voici un exemple de `webApplicationInfo` l’objet :
 
-* **id**: ID Azure Active Directory (AAD) d’application. Il peut s’en trouver de même que votre ID de bot.
+* **id :** votre ID Azure Active Directory’application. Il peut s’en trouver de même que votre ID de bot.
 * **ressource**: Toute chaîne. Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur.
 * **applicationPermissions**: les autorisations RSC pour votre application doivent `ChannelMessage.Read.Group` être spécifiées. Pour plus d’informations, [voir autorisations spécifiques aux ressources.](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)
 

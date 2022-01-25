@@ -1,19 +1,19 @@
 ---
-title: S sélectionneur de personnes dans les cartes adaptatives
+title: Sélecteur de personnes dans les Cartes adaptatives
 description: Décrit comment utiliser le contrôle S sélectionneur de personnes dans les cartes adaptatives
 localization_priority: Normal
 keywords: Socheur de personnes de cartes adaptatives
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: d0183ea8f00c14e93586c0c12e02b837a41572c9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062547"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212474"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>S sélectionneur de personnes dans les cartes adaptatives
+# <a name="people-picker-in-adaptive-cards"></a>Sélecteur de personnes dans les Cartes adaptatives
 
 >[!NOTE]
 > Actuellement, le s picker de [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) personnes dans les cartes adaptatives est disponible en prévisualisation publique pour les développeurs uniquement pour les appareils mobiles et généralement disponible (GA) pour les ordinateurs de bureau.
@@ -160,25 +160,25 @@ Pour activer la recherche dans une liste de membres de conversation, utilisez le
 
 ### <a name="data-submission"></a>Soumission de données
 
-Vous pouvez utiliser `Action.Submit` ou envoyer des données `Action.Execute` sélectionnées à votre bot. La charge utile reçue sur votre bot est une liste des ID AAD ou des ID fournis `invoke` dans la liste statique.
-Dans le sélecateur de personnes, lorsqu’un utilisateur est sélectionné dans le contrôle, il s’agit de la valeur `AAD ID` renvoyée. Il `AAD ID` s’agit d’une chaîne qui identifie de manière unique un utilisateur dans l’annuaire.
+Vous pouvez utiliser `Action.Submit` ou envoyer des données `Action.Execute` sélectionnées à votre bot. La charge utile reçue sur votre bot est une liste des ID Azure AD ou des ID fournis `invoke` dans la liste statique.
+Dans le sélecateur de personnes, lorsqu’un utilisateur est sélectionné dans le contrôle, il s’agit de la valeur `Azure AD ID` renvoyée. Il `Azure AD ID` s’agit d’une chaîne qui identifie de manière unique un utilisateur dans l’annuaire.
 
 Le format de la valeur envoyée au bot dépend de la valeur de la `isMultiSelect` propriété :
 
 |valeur de `isMultiSelect`|Format|
 |--|--|
-|false _(sélection unique)_|<selected_AAD_ID>|
-|true _(sélection multiple)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>|  
+|false _(sélection unique)_|<selected_Azure_AD_ID>|
+|true _(sélection multiple)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Avec le sélectionneur de personnes, l’utilisateur correspondant est `AAD ID` sélectionné au préalable. 
+Avec le sélectionneur de personnes, l’utilisateur correspondant est `Azure AD ID` sélectionné au préalable. 
 
 ## <a name="preselection-of-user"></a>Préselection de l’utilisateur
 
 Le sélecateur de personnes prend en charge la pré-sélection de l’utilisateur dans le contrôle, lors de la création et de l’envoi d’une carte adaptative. `Input.ChoiceSet` prend en `value` charge la propriété utilisée pour présélectionner un utilisateur. Le format de cette propriété est identique au format de valeur soumise `value` dans [l’envoi de données.](#data-submission)  
 La liste suivante fournit les informations pour présélectionner les utilisateurs :
 
-* Pour un utilisateur unique dans le contrôle, spécifiez `AAD ID` l’utilisateur en tant que `value` . 
-* Pour plusieurs utilisateurs, par exemple, spécifiez une chaîne de s séparées `isMultiSelect` `true` par des `AAD ID` virgules.  
+* Pour un utilisateur unique dans le contrôle, spécifiez `Azure AD ID` l’utilisateur en tant que `value` . 
+* Pour plusieurs utilisateurs, par exemple, spécifiez une chaîne de s séparées `isMultiSelect` `true` par des `Azure AD ID` virgules.  
 
 L’exemple suivant décrit la pré-sélection d’un utilisateur unique :
 
@@ -200,7 +200,7 @@ L’exemple suivant décrit la pré-sélection d’un utilisateur unique :
                 "dataset": "graph.microsoft.com/users"
             },
             "id": "people-picker",
-            "value": "<AAD ID 1>"
+            "value": "<Azure AD ID 1>"
         }
     ],
     "actions": [
@@ -235,7 +235,7 @@ L’exemple suivant décrit la pré-sélection de plusieurs utilisateurs :
             },
             "id": "people-picker",
             "isMultiSelect": true,
-            "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>"
+            "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
         }
     ],
     "actions": [

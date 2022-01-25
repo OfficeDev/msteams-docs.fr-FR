@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, la phase de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569419"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212025"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -125,7 +125,7 @@ La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le m
 
 > [!NOTE]
 > * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur effectue une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, voir Teams module de [tâche du SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial doit reposer sur les métadonnées de demande dans l’objet, `from.id` et non sur les `from` `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Azure Active Directory (AAD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial doit reposer sur les métadonnées de demande dans l’objet, `from.id` et non sur les `from` `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Azure Active Directory’ID de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
 
 ### <a name="after-a-meeting"></a>Après une réunion
 
@@ -139,7 +139,7 @@ Les configurations des réunions après [et avant](#before-a-meeting) sont les m
 |Exemple d’étape de réunion | Exemple d’application pour afficher un onglet lors de la phase de réunion pour la collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |Panneau latéral de réunion | Exemple d’application pour montrer comment ajouter un ordre du jour dans un panneau latéral de réunion | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
-## <a name="step-by-step-guides"></a>Guides pas à pas
+## <a name="step-by-step-guides"></a>Guides détaillés
 
 * Suivez le [guide pas à pas pour](../sbs-meeting-token-generator.yml) générer un jeton de réunion dans votre Teams réunion.
 * Suivez le [guide pas à pas pour](../sbs-meetings-sidepanel.yml) générer un sidepanel de réunion dans votre Teams réunion.

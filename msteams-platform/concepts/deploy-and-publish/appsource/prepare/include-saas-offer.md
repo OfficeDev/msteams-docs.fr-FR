@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b358b7bbdd780851eedb78ca2151bc062d402f99
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 597896d79408fa596e9949166fceda97ef440d07
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059615"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212004"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Inclure une offre SaaS avec votre application Microsoft Teams application
 
@@ -49,7 +49,7 @@ Lorsque vous planifiez la monétisation de Teams’application, voici quelques �
 
 * Déterminez votre modèle d’abonnement. Une offre SaaS transactable peut inclure plusieurs plans d’abonnement. Les plans d’abonnement public disponibles pour tout le monde sont les plus courants, mais vous pouvez également cibler des clients spécifiques avec des offres uniquement pour eux. Pour plus d’informations, [consultez les offres privées sur le marketplace commercial Microsoft.](/azure/marketplace/private-offers)
 * En savoir plus sur l’option de vente par le biais [ *de La*](/azure/marketplace/plan-saas-offer#listing-options) liste Microsoft pour votre offre SaaS, qui est requise si vous souhaitez que les utilisateurs achètent des plans d’abonnement pour votre application directement via le Teams store.
-* Découvrez comment Azure Active Directory (Azure AD) d' signer [(SSO)](/azure/marketplace/azure-ad-saas) permet à vos clients d’acheter et de gérer des abonnements. (Azure AD' sso est requise pour Teams applications avec des offres SaaS.)
+* Découvrez comment [Azure Active Directory l' sign-on unique (SSO)](/azure/marketplace/azure-ad-saas) permet à vos clients d’acheter et de gérer des abonnements. (Azure AD' sso est requise pour Teams applications avec des offres SaaS.)
 * Comprenez que vous êtes responsable de la gestion et du paiement de l’infrastructure requise pour prendre en charge l’utilisation de votre offre SaaS par vos clients.
 * Planifiez l’utilisation des appareils mobiles. Pour éviter de violer les stratégies du Magasin d’applications tiers, votre application ne peut pas inclure de liens qui permettent aux utilisateurs d’acheter des plans d’abonnement sur un appareil mobile. Toutefois, vous pouvez toujours indiquer si votre application comporte des fonctionnalités qui nécessitent un plan d’abonnement. Pour plus d’informations, voir les [stratégies de certification de marketplace commerciales associées.](/legal/marketplace/certification-policies#114048-mobile-experience)
 

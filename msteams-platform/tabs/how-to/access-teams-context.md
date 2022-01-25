@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216103"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212418"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -24,7 +24,7 @@ Votre onglet nécessite des informations contextuelles pour afficher le contenu 
 Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être particulièrement utile lorsque :
 
 * Vous créez ou associez des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
-* Vous lancez un flux d’authentification à partir de Azure Active Directory (AAD) ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur. 
+* Vous lancez un flux d’authentification à partir Azure Active Directory ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur. 
 
 Pour plus d’informations, [voir authentifier un utilisateur dans votre Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -44,12 +44,12 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: ID que vous [avez](~/concepts/build-and-test/deep-links.md) fourni lors de la génération d’un lien profond pour un élément spécifique dans cet onglet. Cela doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, le défilement vers ou l’activation d’un élément de contenu spécifique.
-* {loginHint}: valeur appropriée comme conseil de connexion pour AAD. Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
+* {loginHint}: valeur appropriée comme conseil de connexion pour Azure AD. Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel dans le client actuel.
-* {userObjectId}: ID AAD’objet de l’utilisateur actuel dans le client actuel.
+* {userObjectId}: ID Azure AD’objet de l’utilisateur actuel dans le client actuel.
 * {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default` que , `dark` ou `contrast` .
 * {groupId}: ID du groupe Office 365 dans lequel réside l’onglet.
-* {tid}: ID AAD client de l’utilisateur actuel.
+* {tid}: ID de client Azure AD de l’utilisateur actuel.
 * {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId(en-us).
 
 > [!NOTE]

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: liste des canaux de profil utilisateur de liste de liste de contexte bot
-ms.openlocfilehash: eb935515e4f130e57cf634dd9716306cce9f3a05
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: f75598caa876c8c65db9fc265cb68ae455f10fcf
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888243"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212425"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir Teams contexte spécifique pour votre bot
 
@@ -21,9 +21,9 @@ Un bot peut accéder à des données de contexte supplémentaires sur une équip
 
 ## <a name="fetch-the-roster-or-user-profile"></a>Récupérer la liste ou le profil utilisateur
 
-Votre bot peut interroger la liste des membres et leurs profils utilisateur de base, notamment les ID d’utilisateur Teams et les informations de Azure Active Directory (AAD), telles que le nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, pour vérifier si un utilisateur s’est connecté à un onglet à l’AAD ses informations d’identification, il est membre de l’équipe. Pour obtenir les membres de la conversation, la taille de page minimale ou maximale dépend de l’implémentation. La taille de page inférieure à 50, traitée comme 50 et supérieure à 500, est limitée à 500. Même si vous utilisez la version non pagyée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, voir [les modifications apportées aux API Teams bot pour](~/resources/team-chat-member-api-changes.md)récupérer des membres d’équipe ou de conversation.
+Votre bot peut interroger la liste des membres et leurs profils utilisateur de base, notamment les ID d’utilisateur Teams et les informations Azure Active Directory, telles que le nom et objectId. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, pour vérifier si un utilisateur s’est connecté à un onglet via Azure AD informations d’identification, est membre de l’équipe. Pour obtenir les membres de la conversation, la taille de page minimale ou maximale dépend de l’implémentation. La taille de page inférieure à 50, traitée comme 50 et supérieure à 500, est limitée à 500. Même si vous utilisez la version non pagyée, elle n’est pas fiable dans les grandes équipes et ne doit pas être utilisée. Pour plus d’informations, voir [les modifications apportées aux API Teams bot pour](~/resources/team-chat-member-api-changes.md)récupérer des membres d’équipe ou de conversation.
 
-L’exemple de code suivant utilise le point de terminaison pagyé pour récupérer la liste :
+L’exemple de code suivant utilise le point de terminaison pagé pour extraire la liste :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -128,7 +128,7 @@ Après avoir récupéré la liste ou le profil utilisateur, vous pouvez obtenir 
 
 ## <a name="get-single-member-details"></a>Obtenir les détails d’un seul membre
 
-Vous pouvez également récupérer les détails d’un utilisateur particulier à l’aide Teams ID d’utilisateur, UPN ou AAD’objet.
+Vous pouvez également récupérer les détails d’un utilisateur particulier à l’aide Teams ID d’utilisateur, UPN ou Azure AD’objet.
 
 L’exemple de code suivant est utilisé pour obtenir les détails d’un seul membre :
 
@@ -192,7 +192,7 @@ Response body
 }
 ```
 
-Voici l’exemple de réponse pour les utilisateurs anonymes :
+Voici l’exemple de réponse pour l’utilisateur anonyme :
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -212,7 +212,7 @@ Une fois que vous avez obtenir les détails d’un seul membre, vous pouvez obte
 
 ## <a name="get-teams-details"></a>Obtenir les détails de l’équipe
 
-Lorsqu’il est installé dans une équipe, votre bot peut interroger des métadonnées sur cette équipe, y compris l’ID AAD groupe.
+Lorsqu’il est installé dans une équipe, votre bot peut interroger des métadonnées sur cette équipe, y compris l’ID Azure AD groupe.
 
 L’exemple de code suivant est utilisé pour obtenir les détails de l’équipe :
 

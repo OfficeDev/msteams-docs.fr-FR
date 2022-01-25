@@ -1,17 +1,17 @@
 ---
-title: Inscrire les appels et le bot de réunions pour Microsoft Teams
+title: Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams, créer un bot ou ajouter des fonctionnalités d’appel et ajouter des autorisations de graphique.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 2d2a3411d8db09c6bdf2199efb9cb5e721701135
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062508"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212488"
 ---
-# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Inscrire les appels et le bot de réunions pour Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 
 Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams régulier avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
 
@@ -78,13 +78,13 @@ Le tableau suivant fournit une liste des autorisations d’application pour les 
 
 ### <a name="assign-permissions"></a>Attribuer des autorisations
 
-Vous devez configurer les autorisations d’application pour votre bot à l’avance à l’aide du portail [Azure](https://aka.ms/aadapplist) si vous préférez utiliser le point de terminaison [Azure Active Directory (AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+Vous devez configurer les autorisations d’application pour votre bot à l’avance à l’aide du portail [Azure](https://aka.ms/aadapplist) si vous préférez utiliser le point de terminaison [Azure Active Directory V1](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### <a name="get-tenant-administrator-consent"></a>Obtenir le consentement de l’administrateur client
 
-Pour les applications utilisant le point de terminaison AAD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois que le consentement de l’administrateur est enregistré AAD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
+Pour les applications utilisant le point de terminaison Azure AD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois que le consentement de l’administrateur est enregistré Azure AD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
 
-Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison AAD `/adminconsent` V2. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur.](/graph/uth-v2-service#3-get-administrator-consent)
+Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur le [portail Azure.](https://portal.azure.com) Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison Azure AD `/adminconsent` V2. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur.](/graph/uth-v2-service#3-get-administrator-consent)
 
 > [!NOTE]
 > Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à votre inscription de bot, choisissez **Options avancées** Modifier le manifeste de  >  **l’application.** Ajoutez votre URL de redirection à la `replyUrls` collection.

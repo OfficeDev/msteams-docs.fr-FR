@@ -5,13 +5,13 @@ ms.localizationpriority: medium
 author: jecha
 ms.author: jecha
 ms.topic: how-to
-keywords: Autorisation teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 55565e5199c3db725d75fadd00212971a77b30b5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: Autorisation teams OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: c7d4b763c269b879a15f2375aebd6fcca055420a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889250"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62211962"
 ---
 # <a name="test-chat-rsc-postman-collection-for-json"></a>Test de la collection Postman RSC de conversation pour JSON
 

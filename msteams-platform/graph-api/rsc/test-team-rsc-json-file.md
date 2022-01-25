@@ -5,13 +5,13 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: how-to
-keywords: Autorisation teams OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 2b88b6766c446ccd9c4bffb0e58b211a55cd1031
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: Autorisation teams OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: 88b2b97ee3fcd00537b8e9f281d4e9473d147e47
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888376"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212516"
 ---
 # <a name="test-team-rsc-postman-collection-json"></a>Test team RSC Postman collection JSON
 

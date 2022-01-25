@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: a723a0d0d72f032b08addd1df68aa5c2f688d184
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059692"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212018"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -607,11 +607,11 @@ L’objet est un tableau avec tous les éléments du type `string`.
 
 **Facultatif**— objet
 
-Fournissez votre ID d’application Azure Active Directory (AAD) et les informations Microsoft Graph pour aider les utilisateurs à se connecter de manière transparente à votre application. Si votre application est inscrite dans AAD, vous devez fournir l’ID de l’application. Les administrateurs peuvent facilement examiner les autorisations et accorder leur consentement dans le Centre d’administration Teams.
+Fournissez votre ID d’application Azure Active Directory et vos informations de Microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans Azure AD, vous devez fournir l’ID d’application. Les administrateurs peuvent facilement examiner les autorisations et accorder leur consentement dans le Centre d’administration Teams.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|string|36 caractères|✔|ID d’application AAD de l’application. Cet ID doit être un GUID.|
+|`id`|string|36 caractères|✔|Application Azure AD ID d’application. Cet ID doit être un GUID.|
 |`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, https://notapplicable pour éviter une réponse d’erreur. |
 |`applicationPermissions`|tableau de chaînes|128 caractères||Spécifiez un consentement granulaire [spécifique à la ressource](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions).|
 

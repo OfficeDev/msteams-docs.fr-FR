@@ -5,12 +5,12 @@ keywords: contexte des bots teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4d737564a77cdccc693a8fa3889476a1cf015be2
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155873"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212039"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtenir le contexte de votre bot Microsoft Teams de recherche
 
@@ -26,7 +26,7 @@ Votre bot peut accéder à un contexte supplémentaire sur l’équipe ou la con
 
 ## <a name="fetch-the-team-roster"></a>Récupérer la liste d’équipe
 
-Votre bot peut interroger la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent Teams’ID d’utilisateur et Azure Active Directory (AAD) tels que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, vérifiez si un utilisateur connecté à un onglet via les informations d’identification AAD est membre de l’équipe.
+Votre bot peut interroger la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent Teams’ID d’utilisateur et Azure Active Directory informations telles que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, vérifiez si un utilisateur s’est connecté à un onglet via Azure AD d’identification est un membre de l’équipe.
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 
@@ -196,7 +196,7 @@ connector.fetchChannelList(
 Vous pouvez extraire le clientInfo au sein de l’activité de votre bot. ClientInfo contient les propriétés suivantes :
 
 * Locale
-* Pays
+* Country
 * Plateforme
 * Fuseau horaire
 

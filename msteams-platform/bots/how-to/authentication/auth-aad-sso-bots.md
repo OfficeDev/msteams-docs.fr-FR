@@ -1,22 +1,22 @@
 ---
 title: Support de l'identification unique pour les robots
 description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un développeur de bot peut utiliser une carte de visite ou le service de bot Azure avec la prise en charge de la carte OAuth.
-keywords: token, user token, SSO support for bots, permission, Microsoft Graph, AAD
+keywords: token, user token, SSO support for bots, permission, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: f9934d29b9c340b7e3543420a212ae9304ba22e6
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: 7ce49841522187570944d304224dba557d38ccc6
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608446"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212572"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l' sign-on unique (SSO) pour les bots
 
-L’authentification unique dans Azure Active Directory (AAD) actualise silencieusement le jeton d’authentification pour réduire le nombre de fois que les utilisateurs doivent entrer leurs informations d’identification de connexion. Si les utilisateurs acceptent d’utiliser votre application, ils n’ont pas à donner à nouveau leur consentement sur un autre appareil, car ils sont connectés automatiquement. Les onglets et les bots ont un flux similaire pour la prise en charge de l' cesso. [Toutefois, le](#request-a-bot-token) bot demande des jetons et [reçoit des réponses](#receive-the-bot-token) avec un protocole différent.
+L’authentification unique dans Azure Active Directory actualisez silencieusement le jeton d’authentification pour réduire le nombre de fois que les utilisateurs doivent entrer leurs informations d’identification de connexion. Si les utilisateurs acceptent d’utiliser votre application, ils n’ont pas à donner à nouveau leur consentement sur un autre appareil, car ils sont connectés automatiquement. Les onglets et les bots ont un flux similaire pour la prise en charge de l' cesso. [Toutefois, le](#request-a-bot-token) bot demande des jetons et [reçoit des réponses](#receive-the-bot-token) avec un protocole différent.
 
 >[!NOTE]
-> OAuth 2.0 est une norme ouverte d’authentification et d’autorisation utilisée par AAD et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans Teams.
+> OAuth 2.0 est une norme ouverte d’authentification et d’autorisation utilisée par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans Teams.
 
 ## <a name="bot-sso-at-runtime"></a>SO du bot lors de l’runtime
 
@@ -39,9 +39,9 @@ Les étapes suivantes vous aident à l’authentification et aux jetons d’appl
     * Donner l’autorisation, si nécessaire.
     * Gérer l’authentification étape par étape, telle que l’authentification à deux facteurs.
 
-1. Teams demande le jeton d’application bot au point AAD de l’utilisateur actuel.
+1. Teams demande le jeton d’application bot au Azure AD point de terminaison de l’utilisateur actuel.
 
-1. AAD envoie le jeton d’application bot à l’Teams application.
+1. Azure AD envoie le jeton d’application bot à l’Teams application.
 
 1. Teams envoie le jeton au bot dans le cadre de l’objet de valeur renvoyé par l’facturation avec **sign-in/tokenExchange**.
   
@@ -51,17 +51,17 @@ Les étapes suivantes vous aident à l’authentification et aux jetons d’appl
   
 Les étapes suivantes vous guident pour développer des bots d’Teams d' lui-même :
 
-1. [Inscrivez votre application via le portail AAD.](#register-your-app-through-the-aad-portal)
+1. [Inscrivez votre application via le portail Azure AD.](#register-your-app-through-the-azure-ad-portal)
 1. [Mettez à jour Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot)
 1. [Ajoutez le code pour demander et recevoir un jeton de bot](#add-the-code-to-request-and-receive-a-bot-token).
 
-### <a name="register-your-app-through-the-aad-portal"></a>Inscrire votre application via le portail AAD client
+### <a name="register-your-app-through-the-azure-ad-portal"></a>Inscrire votre application via le portail Azure AD web
 
-Les étapes d’inscription de votre application via le portail AAD sont similaires au flux d' utilisateur unique de [l’onglet.](../../../tabs/how-to/authentication/auth-aad-sso.md) Les étapes suivantes vous guident pour inscrire votre application :
+Les étapes d’inscription de votre application via le portail Azure AD sont similaires au flux d' utilisateur unique de [l’onglet.](../../../tabs/how-to/authentication/auth-aad-sso.md) Les étapes suivantes vous guident pour inscrire votre application :
 
 1. Inscrivez une nouvelle application dans le [portail Azure Active Directory – Inscriptions des](https://go.microsoft.com/fwlink/?linkid=2083908) applications.
 
-1. Sélectionnez **Nouvelle inscription.** La page **Inscrire une application** s’affiche.
+1. Sélectionnez **Nouvelle inscription**. La page **Inscrire une application** s’affiche.
 
     ![Nouvelle inscription](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
@@ -69,7 +69,7 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
 
    > [!NOTE]
    >
-   > Les utilisateurs ne sont pas invités à donner leur consentement et se voir accorder des jetons d’accès immédiatement, si l’application AAD est inscrite dans le même client qu’il fait une demande d’authentification dans Teams. Toutefois, les utilisateurs doivent donner leur consentement aux autorisations, si l’application AAD est inscrite dans un autre client.
+   > Les utilisateurs ne sont pas invités à donner leur consentement et se voir accorder des jetons d’accès immédiatement, si l’application Azure AD est inscrite dans le même client qu’il fait une demande d’authentification dans Teams. Toutefois, les utilisateurs doivent donner leur consentement aux autorisations, si l’application Azure AD est inscrite dans un autre client.
 
     * Entrez **le nom** de votre application.
     * Sélectionnez **les types de** comptes pris en charge, par exemple, client unique ou multi-locataire.
@@ -81,16 +81,14 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
 1. Copiez la valeur de **l’ID d’application (client).**
 1. Sous **Gérer,** allez à **Exposer une API**
 
-
-   > [!TIP] 
+   > [!TIP]
    > Pour mettre à jour le manifeste de votre application ultérieurement, enregistrez la valeur **de l’ID de l’application (client).**
 
-
    > [!IMPORTANT]
-   > * Si vous construisez un bot autonome, entrez l’URI d’ID d’application sous le nom `api://botid-{YourBotId}` . Ici, **YourBotId est** votre ID AAD’application.
-   > * Si vous construisez une application avec un bot et un onglet, entrez l’URI d’ID d’application sous le nom `api://fully-qualified-domain-name.com/botid-{YourBotId}` .
+   > * Si vous construisez un bot autonome, entrez l’URI d’ID d’application sous le nom `api://botid-{YourBotId}` . Ici, *YourBotId est* votre ID Azure AD’application.
+   > * Si vous créez une application avec un bot et un onglet, saisissez l'URI de l'ID d'application au format `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Sélectionnez les autorisations dont votre application a besoin pour AAD point de terminaison et, éventuellement, pour Microsoft Graph.
+1. Sélectionnez les autorisations dont votre application a besoin pour Azure AD point de terminaison et, éventuellement, pour Microsoft Graph.
 1. [Accorder des autorisations](/azure/active-directory/develop/v2-permissions-and-consent) pour Teams applications de bureau, web et mobiles.
 1. Sélectionnez **Ajouter une étendue**.
 1. Dans le panneau qui vous invite, entrez `access_as_user` le nom de **l’étendue.**
@@ -101,14 +99,14 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
    > Vous devez connaître les restrictions importantes suivantes :
    >
    > * Seules les autorisations de l’API microsoft Graph de niveau utilisateur, telles que la messagerie, le profil, offline_access et OpenId, sont pris en charge. Si vous avez besoin d’accéder à d’autres Graph microsoft, telles que ou , voir Obtenir un jeton d’accès `User.Read` `Mail.Read` avec Graph [autorisations.](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)
-   > * Le nom de domaine de votre application doit être identique au nom de domaine que vous avez inscrit pour AAD application.
+   > * Le nom de domaine de votre application doit être identique au nom de domaine que vous avez inscrit pour Azure AD application.
    > * Plusieurs domaines par application ne sont actuellement pas pris en charge.
    > * Les applications qui utilisent le domaine ne sont pas pris en charge `azurewebsites.net` car elles sont courantes et peuvent être un risque pour la sécurité.
 
 1. In the **Qui can consent?**, enter **Admins and users**.
 1. Entrez les détails suivants pour configurer les invites de consentement de l’administrateur et de l’utilisateur avec des valeurs appropriées pour `access_as_user` l’étendue.
     * **Nom complet du** consentement de l’administrateur : Teams pouvez accéder au profil de l’utilisateur.
-    * **Description du consentement de** l’administrateur : Teams peut appeler les API web de l’application en tant qu’utilisateur actuel.
+    * **Description du consentement de l'administrateur** : les équipes peuvent appeler les API Web de l'application en tant qu'utilisateur actuel.
     * Nom complet du consentement **de l’utilisateur**: Teams pouvez accéder à votre profil et effectuer des demandes en votre nom.
     * **Description du consentement de** l’utilisateur : Teams pouvez appeler les API de cette application avec les mêmes droits que vous.
 
@@ -116,18 +114,18 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
 
 1. Assurez-vous que l’état **est** activé.
 
-    ![État](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
+    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
 1. Sélectionnez **Ajouter une étendue** pour enregistrer les détails. La partie domaine  du nom d’étendue affiché doit automatiquement correspondre à l’URI **d’ID d’application** définie à l’étape précédente, avec ajouté `/access_as_user` à la `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` fin.
 
 1. Dans les **applications clientes autorisées,** identifiez les applications que vous souhaitez autoriser pour l’application web de votre application.
-1. Sélectionnez **Ajouter une application cliente.**
+1. Sélectionnez **Ajouter une application cliente**.
 
     ![application cliente](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
 
-1. Entrez chacun des ID client suivants et sélectionnez l’étendue autorisée que vous avez créée à l’étape précédente :
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`pour Teams application mobile ou de bureau.
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`pour Teams application web.
+1. Entrez chacun des ID client suivants et sélectionnez la portée autorisée que vous avez créée à l'étape précédente :
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` pour l'application mobile ou de bureau Teams.
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` pour l'application Web Teams.
 
     ![id client](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
@@ -143,7 +141,7 @@ Les étapes d’inscription de votre application via le portail AAD sont similai
 1. Entrez les **URIs de redirection** pour votre application.
 
    >[!NOTE]
-   > Cet URI doit être un nom de domaine complet. Il est également suivi de l’itinéraire d’API dans lequel une réponse d’authentification est envoyée. Si vous êtes en train de suivre l’un des Teams, l’URI est `https://token.botframework.com/.auth/web/redirect` . Pour plus d’informations, [voir flux de code d’autorisation OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+   > Cet URI doit être un nom de domaine complet. Il est également suivi de la route API où une réponse d'authentification est envoyée. Si vous suivez l'un des exemples Teams, l'URI est `https://token.botframework.com/.auth/web/redirect`. Pour plus d'informations, consultez [Flux de code d'autorisation OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
     ![URI de redirection](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
 
@@ -187,7 +185,7 @@ Les étapes suivantes vous guident pour mettre à jour le portail Azure avec la 
 1. Les étapes suivantes vous guident pour remplir le formulaire **Nouveau paramètre de** connexion :
 
    >[!NOTE]
-   > **L’octroi** implicite peut être requis dans l AAD application.
+   > **L’octroi** implicite peut être requis dans l Azure AD application.
 
     * Entrez **le nom** dans la page Nouveau paramètre de **connexion.**
 
@@ -195,10 +193,10 @@ Les étapes suivantes vous guident pour mettre à jour le portail Azure avec la 
     > Le **nom** est référent aux paramètres de votre code de service de bot à l’étape *5* de l' [sso du bot lors de l’utilisation.](#bot-sso-at-runtime)
 
     * Dans la **drop-down Fournisseur** de services, **sélectionnez Azure Active Directory v2**.
-    * Entrez les informations d’identification du client, telles que **l’ID client** et la secret **client** pour l’application AAD client.
-    * Pour **l’URL Exchange** jeton, utilisez la valeur d’étendue définie dans Mettre à jour [Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot) L’URL Exchange de jeton indique au SDK que cette application AAD est configurée pour l' sso.
+    * Entrez les informations d’identification du client, telles que **l’ID client** et la secret **client** pour l’application Azure AD client.
+    * Pour **l’URL Exchange** jeton, utilisez la valeur d’étendue définie dans Mettre à jour [Teams manifeste d’application pour votre bot.](#update-your-teams-application-manifest-for-your-bot) L’URL Exchange de jeton indique au SDK que cette application Azure AD est configurée pour l' sso.
     * Dans **l’ID de client,** entrez *commun*.
-    * Ajoutez toutes les **étendues configurées** lors de la spécification d’autorisations pour les API en aval pour AAD application. Avec l’ID client et la secret client fournis, le magasin de jetons échange le jeton contre un jeton graphique avec des autorisations définies.
+    * Ajoutez toutes les **étendues configurées** lors de la spécification d’autorisations pour les API en aval pour Azure AD application. Avec l’ID client et la secret client fournis, le magasin de jetons échange le jeton contre un jeton graphique avec des autorisations définies.
     * Sélectionnez **Enregistrer**.
     * Sélectionnez **Appliquer**.
    
@@ -227,8 +225,8 @@ Si l’application contient un bot et un onglet, utilisez le code suivant pour a
 
 **webApplicationInfo** est le parent des éléments suivants :
 
-* **id** : ID client de l’application. Il s’agit de l’ID d’application que vous avez obtenu dans le cadre de l’inscription de l’application auprès AAD. Ne partagez pas cet ID d’application avec plusieurs Teams applications. Créez une application AAD pour chaque manifeste d’application qui utilise `webApplicationInfo` .
-* **ressource** : domaine et sous-domaine de votre application. Il s’agit du même URI, y compris le protocole que vous avez inscrit lors de la création de votre application dans Enregistrer votre application `api://` `scope` via le portail [AAD.](#register-your-app-through-the-aad-portal) N’incluez pas le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine et aux sous-domaines utilisés dans les URL de votre manifeste Teams’application.
+* **id** – ID client de l'application. Il s’agit de l’ID d’application que vous avez obtenu dans le cadre de l’inscription de l’application auprès Azure AD. Ne partagez pas cet ID d’application avec plusieurs Teams applications. Créez une application Azure AD pour chaque manifeste d’application qui utilise `webApplicationInfo` .
+* **ressource** – Le domaine et le sous-domaine de votre application. Il s’agit du même URI, y compris le protocole que vous avez inscrit lors de la création de votre application dans Enregistrer votre application `api://` `scope` via le portail [Azure AD.](#register-your-app-through-the-azure-ad-portal) N’incluez pas le `access_as_user` chemin d’accès dans votre ressource. La partie domaine de cet URI doit correspondre au domaine et aux sous-domaines utilisés dans les URL de votre manifeste Teams’application.
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>Ajouter le code pour demander et recevoir un jeton de bot
 

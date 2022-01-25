@@ -1,17 +1,17 @@
 ---
 title: Installer Moodle LMS
 description: Comment installer et configurer l’application d’intégration Dentele pour Microsoft Teams
-keywords: Teams Plug-ins d’intégration d’application Dente
+keywords: Teams plug-ins d’intégration de l’application Enfichable
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: f87264adc75e504feddc10f470f739747fb3d96b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7460a4f6e1a15df30ebc9b1c50f43b561908c7d4
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888131"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212383"
 ---
 # <a name="install-moodle-lms"></a>Installer Moodle LMS
 
@@ -20,7 +20,7 @@ Dans cet article, vous allez découvrir comment installer le LMS Dentelet.
 > [!NOTE]
 > Pour aider les administrateurs informatiques à configurer facilement l’intégration de Teams et De Latuale, open source Microsoft 365 Plug-ins De l’espace de jeu Est mis à jour pour les raisons suivantes :
 >
-> * Inscription automatique de votre serveur Dente avec [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/).
+> * Inscription automatique de votre serveur Dente avec [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
 >
 > * Déploiement en un seul clic de votre bot Assistant d’accès à Azure.
 >
@@ -57,7 +57,7 @@ Assurez-vous d’installer et de télécharger les données suivantes avant de p
     >
     > En outre, les [plug-ins Microsoft 365 Teams Thème](https://moodle.org/plugins/theme_boost_o365teams) sont vivement recommandés.
 
-### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 Plug-ins Dentelé
+### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365 plug-ins Le chatin
 
 1. Connectez-vous à votre serveur En tant qu’administrateur, puis sélectionnez Administration du **site** dans le bloc [Paramètres](https://docs.moodle.org/22/en/Settings_block) situé dans le panneau de navigation de gauche.
 
@@ -75,7 +75,7 @@ Assurez-vous d’installer et de télécharger les données suivantes avant de p
     >
     > * Si vous n’avez pas de site Vous pouvez le faire, rendez-vous dans le repo [D’Azure,](https://github.com/azure/moodle) puis déployez rapidement une instance De Sondessage et personnalisez-la en fonction de vos besoins.
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory-azure-ad"></a>2. Configurez la connexion entre les plug-ins Microsoft 365 et les Azure Active Directory (Azure AD)
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory"></a>2. Configurez la connexion entre les plug-ins Microsoft 365 et les Azure Active Directory
 
 Vous devez configurer la connexion entre les plug-ins Microsoft 365 et les Azure AD.
 
@@ -228,7 +228,7 @@ Après avoir généré votre ID d’application et votre mot de passe, déployez
 
 Une fois le déploiement des ressources terminé sur Azure, vous devez configurer les plug-ins Microsoft 365 Leindent avec un point de terminaison de messagerie. Vous devez obtenir le point de terminaison à partir de votre bot dans Azure :
 
-1. Connectez-vous au [Portail Azure](https://portal.azure.com).
+1. Connectez-vous au [portail Azure](https://portal.azure.com).
 
 1. Dans le volet gauche, sélectionnez les groupes de ressources et sélectionnez le groupe de ressources que vous avez utilisé ou créé lors du déploiement de votre bot. 
 

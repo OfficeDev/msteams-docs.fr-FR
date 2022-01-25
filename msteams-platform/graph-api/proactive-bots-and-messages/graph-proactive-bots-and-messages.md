@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: installation de conversation de messagerie proactive teams Graph
-ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 6802c7aed4664969d32b7b183a2dbe6729939493
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185426"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212404"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Installation proactive d’applications à l’aide de l’API Graph pour envoyer des messages
 
@@ -39,14 +39,14 @@ Les autorisations de type de ressource [TeamsAppInstallation](/graph/api/resourc
 
 Pour utiliser ces autorisations, vous devez ajouter une clé [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) à votre manifeste d’application avec les valeurs suivantes :
 
-* **id**: ID Azure Active Directory (AAD) d’application.
+* **id :** votre ID Azure Active Directory’application.
 * **ressource**: URL de ressource pour l’application.
 
 > [!NOTE]
 >
 > * Votre bot nécessite des autorisations d’application et non des autorisations déléguées par l’utilisateur, car l’installation est pour d’autres utilisateurs.
 >
-> * Un administrateur AAD client doit [explicitement accorder des autorisations à une application.](/graph/security-authorization#grant-permissions-to-an-application) Une fois les autorisations accordées à l’application, tous les membres du client AAD obtiennent les autorisations accordées.
+> * Un administrateur Azure AD client doit explicitement [accorder des autorisations à une application.](/graph/security-authorization#grant-permissions-to-an-application) Une fois les autorisations accordées à l’application, tous les membres du Azure AD client obtiennent les autorisations accordées.
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>Activer l’installation proactive de l’application et la messagerie
 

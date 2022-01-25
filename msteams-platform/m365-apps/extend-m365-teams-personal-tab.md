@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 828b3fa2886782d8e7a28f506bbb6526b4b9c848
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081075"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212060"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet Teams’une page à l’autre Microsoft 365
 
@@ -25,7 +25,7 @@ La mise à jour de votre application personnelle pour qu’elle s’exécute Out
 > * Mettre à jour le manifeste de votre application
 > * Mettre à jour vos références du SDK TeamsJS 
 > * Modifier vos en-têtes de stratégie de sécurité du contenu
-> * Mettre à jour AAD’inscription de votre application pour l' sign ment unique (SSO)
+> * Mettre à jour Azure AD’inscription de votre application pour l' sign ment unique (SSO)
 
 Le test de votre application nécessite les étapes suivantes :
 
@@ -120,9 +120,9 @@ Si votre application [](https://developer.mozilla.org/en-US/docs/Web/HTTP/Header
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-aad-app-registration-for-sso"></a>Mettre à jour AAD’inscription de l’application pour l' sso
+## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour Azure AD’inscription de l’application pour l' sso
 
-Azure Active Directory L' signature unique (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook que dans [Teams.](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)Toutefois, vous devrez ajouter plusieurs identificateurs  d’application client à l’inscription de l’application AAD de votre application onglet dans le portail d’inscription des applications de votre client.
+Azure Active Directory l' signature unique (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook que dans [Teams.](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)Toutefois, vous devrez ajouter plusieurs identificateurs d’application client à l’inscription de l’application Azure AD de votre application onglet dans le portail d’inscription des applications de votre client. 
 
 1. Connectez-vous [au portail Azure avec](https://portal.azure.com) votre compte client en bac à sable.
 1. Ouvrez le **blade d’inscription de** l’application.
@@ -144,7 +144,7 @@ Dans la section **Applications clientes autorisées,** assurez-vous que toutes l
 |Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-app-in-teams"></a>Chargez une version de version de votre application dans Teams
+## <a name="sideload-your-app-in-teams"></a>Charger une version test de votre application dans Teams
 
 La dernière étape consiste à recharger une version de votre onglet personnel mis à jour[(package](/microsoftteams/platform/concepts/build-and-test/apps-package)d’application) dans Microsoft Teams. Une fois terminée, votre application peut s’exécuter dans Office et Outlook, en plus de Teams.
 

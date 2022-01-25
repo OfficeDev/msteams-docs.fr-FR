@@ -5,12 +5,12 @@ description: Découvrez comment activer la prise en charge de l’ation sso pour
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: de0f08cf73c5ba353398693b95c94d45be2eb727
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178250"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212551"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Prise en charge de l' sign-on unique pour les extensions de messagerie
  
@@ -21,8 +21,9 @@ Ce document vous guide sur la façon d’activer l’authentification sso et de 
 ## <a name="prerequisites"></a>Configuration requise
 
 La condition préalable à l’activer pour les extensions de messagerie et le déploiement des liens est la suivante :
+
 * Vous devez avoir un [compte Azure.](https://azure.microsoft.com/free/)
-* Vous devez configurer votre application via le portail AAD et mettre à jour le manifeste de votre application Teams tel que défini dans enregistrer votre application via le portail [AAD.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
+* Vous devez configurer votre application via le portail Azure AD et mettre à jour le manifeste de votre application Teams tel que défini dans enregistrer votre application via le portail [Azure AD.](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)
 
 > [!NOTE]
 > Pour plus d’informations sur la création d’un compte Azure et la mise à jour du manifeste de votre application, consultez la prise en charge de l' [sign-on unique (SSO) pour les bots.](../../bots/how-to/authentication/auth-aad-sso-bots.md)

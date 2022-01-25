@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction de message du canal bot d’événements
-ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
-ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
+ms.openlocfilehash: 4cb48c73b139ece4d16f935b611701def35e89b7
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "62014555"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212544"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -1346,7 +1346,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "serviceUrl": "https://smba.trafficmanager.net/amer/", 
   "from": { 
     "id": "sample id", 
-    "aadObjectId": "sample AAD Object ID" 
+    "aadObjectId": "sample Azure AD Object ID" 
   },
   "conversation": { 
     "isGroup": true, 

@@ -5,14 +5,14 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246084"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212411"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>Gérer votre application Microsoft Teams publiée
+# <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
 Une fois votre application répertoriée dans le Microsoft Teams, commencez à réfléchir à la façon dont vous allez gérer l’application à l’avenir et augmenter les téléchargements et l’utilisation.
 
@@ -44,7 +44,7 @@ Toutefois, si vous a apporté l’une des modifications suivantes à votre appli
 * Ajoutez un onglet personnel.
 * Ajoutez un canal et un onglet de groupe.
 * Ajoutez un connecteur.
-* Modifiez les configurations liées à l’inscription Azure Active Directory (Azure AD) de votre application. Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modifiez les configurations liées à l’inscription Azure Active Directory votre application. Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 

@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c0bb7eb75ee982e7c08d3039e59f03fc7f18146
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 5aa701bc884a290c5030d54c67d31dd47d794d94
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768462"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212467"
 ---
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>Gérer plusieurs environnements dans Teams Shared Computer Toolkit
 
@@ -78,8 +78,8 @@ Le tableau suivant répertorie les scénarios courants pris en charge pour l’a
 | Scénarios | Emplacement| Description |
 | --- | --- | --- |
 | Personnaliser la ressource Azure | <ul> <li>Fichiers biceps sous `templates/azure` .</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [Personnalisez ARM paramètres et modèles.](provision.md#customize-arm-parameters-and-templates) |
-| Réutiliser une application AAD existante pour Teams application | <ul> <li>`auth` section dans `.fx/config.<envName>.json` .</li> </ul> |  [Utilisez une application AAD existante pour votre application Teams.](provision.md#use-an-existing-aad-app-for-your-teams-app) |
-| Réutiliser une application AAD existante pour le bot | <ul> <li>`bot` section dans `.fx/config.<envName>.json` .</li> </ul> | [Utilisez une application AAD existante pour votre bot.](provision.md#use-an-existing-aad-app-for-your-bot) |
+| Réutiliser une application Azure AD existante pour Teams application | <ul> <li>`auth` section dans `.fx/config.<envName>.json` .</li> </ul> |  [Utilisez une application Azure AD existante pour votre application Teams.](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Réutiliser une application Azure AD existante pour le bot | <ul> <li>`bot` section dans `.fx/config.<envName>.json` .</li> </ul> | [Utilisez une application Azure AD existante pour votre bot.](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Ignorer l’ajout d’utilisateurs lors de l’SQL | <ul> <li>`skipAddingSqlUser` dans `.fx/config.<envName>.json` .</li> </ul> | [Ignorez l’ajout d’un utilisateur SQL base de données.](provision.md#skip-adding-user-for-sql-database) |
 | Personnaliser le manifeste de l’application | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` section dans `.fx/config.<envName>.json` .</li>  </ul> | [Personnalisez Teams manifeste d’application dans Teams Shared Computer Toolkit](TeamsFx-manifest-customization.md). |
 

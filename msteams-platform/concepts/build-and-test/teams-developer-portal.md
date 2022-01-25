@@ -5,12 +5,12 @@ keywords: mise en place des équipes du portail de développement
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888551"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212537"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
@@ -26,7 +26,7 @@ Le Portail des développeurs propose deux façons d’inscrire une Teams applica
 * Importer un package d’application existant
 
 > [!NOTE]
-> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), vous pouvez gérer cette application dans le Portail des développeurs.
+> Si vous créez une application à [l’aide Microsoft Teams Shared Computer Toolkit pour Visual Studio Code,](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)vous pouvez gérer cette application dans le Portail du développeur.
 
 ## <a name="set-up-an-environment"></a>Configurer un environnement
 
@@ -57,7 +57,7 @@ Pour installer et restituer votre application dans Teams, vous devez inclure un 
 
 ## <a name="test-your-app-directly-in-teams"></a>Testez votre application directement dans Teams
 
-Le Portail des développeurs fournit des options pour tester et déboguer votre application :
+Le Portail des développeurs fournit des options de test et de débogage de votre application :
 
 * Dans la page **Vue d’ensemble,** vous pouvez voir un instantané de la validation des configurations de votre application par rapport Teams cas de test du Store.
 * **L’aperçu Teams** bouton vous permet de lancer rapidement votre application dans le client Teams pour le débogage.
@@ -66,7 +66,7 @@ Le Portail des développeurs fournit des options pour tester et déboguer votre 
 
 À partir du portail  du développeur, utilisez le bouton Distribuer pour télécharger un package d’application, publier dans votre organisation ou publier sur le Teams store.
 
-Pour plus d’informations, [voir distribuer votre Teams application.](~/concepts/deploy-and-publish/apps-publish-overview.md)
+Pour plus d’informations, [voir distribuer votre Teams app.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
 ## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
 
@@ -75,7 +75,7 @@ Dans  la page Vue d’ensemble, vous pouvez voir le nombre total d’utilisateur
 | Métrique | Définition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *R30 mensuel* | Mesure d’utilisation par défaut. Il indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans cette fenêtre de 30 jours en temps UTC. |
-| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans un jour donné en UTC. |
+| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application au cours d’un jour donné au cours de l’UTC. |
 
 L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 derniers jours. L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.
 
@@ -85,7 +85,7 @@ Le Portail des développeurs inclut également des outils pour vous aider à cr�
 
 * **Scene studio :** concevoir [des scènes personnalisées](~/apps-in-teams-meetings/teams-together-mode.md) en mode ensemble pour Teams réunions.
 * **Éditeur de cartes adaptatives**: créez et prévisualiser des cartes adaptatives à inclure avec vos applications.
-* **Plateforme d'identités Microsoft gestion** des applications : inscrivez vos applications avec Azure Active Directory (Azure AD) pour aider les utilisateurs à se connecter et à fournir l’accès aux API.
+* **Plateforme d'identités Microsoft gestion des** applications : inscrivez vos applications auprès Azure Active Directory pour aider les utilisateurs à se connecter et à fournir l’accès aux API.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
 description: Meilleures pratiques ou considérations pour l’intégration d’applications web existantes à Microsoft Teams
-ms.author: v-heha
+ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations à prendre en compte pour Teams’intégration
-ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 7de3e91a0971bc540536a25265e6e6871a5da92c
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948571"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212446"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations à prendre en compte pour Teams’intégration 
 
@@ -23,8 +23,8 @@ Les différents types d’applications que vous pouvez intégrer à Teams sont l
 * **SharePoint**: page SharePoint que vous souhaitez faire surface dans Teams.
 
 Vous pouvez maîtr et suivre les recommandations appropriées applicables à votre scénario d’intégration.
-Ce document offre une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
- 
+Ce document donne une vue d’ensemble des fonctionnalités de Teams, des exigences de point de partage pour le stockage de fichiers et de données, des exigences d’API, de l’authentification et de la liaison approfondie de votre application avec Teams.
+
 ## <a name="get-to-know-teams-platform-capabilities"></a>Faire connaître les fonctionnalités Teams plateforme
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
@@ -48,9 +48,9 @@ Votre application Teams doit inclure les fonctionnalités de collaboration requi
 
 L’intégration de toutes les fonctionnalités d’une application existante dans Teams entraîne souvent une expérience utilisateur forcée ou contre nature, en particulier dans les applications plus volumineuses. Commencez avec les fonctionnalités les plus importantes et celles qui s’intègrent plus naturellement à Teams. Vous pouvez permettre aux utilisateurs de lancer l’application principale et d’accéder à son ensemble complet de fonctionnalités.
 
-**Les conditions préalables à l’intégration** de votre application Teams suivantes sont les conditions préalables à l’intégration de votre application avec Teams. 
+**Conditions préalables à l’intégration de votre application avec Teams**
 
-1. [Maptez les cas d’utilisation de votre application Teams fonctionnalités de plateforme.](../concepts/design/map-use-cases.md)
+1. [Maposez les cas d’utilisation de votre application Teams fonctionnalités de la plateforme.](../concepts/design/map-use-cases.md)
 1. [Déterminez les points d’entrée de votre application.](../concepts/extensibility-points.md) S’agit-il d’un usage personnel, d’une collaboration ou des deux ?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>Comprendre les SharePoint et les options
@@ -68,28 +68,28 @@ Vous pouvez également créer un onglet Teams à [l’aide de la SharePoint Fram
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Si votre application est utilisée par plusieurs organisations, envisagez l’hébergement à plusieurs clients qui rend votre produit évolutif et simplifie grandement la distribution.
+Si votre application est utilisée par plusieurs organisations, envisagez d’héberger plusieurs locataires. Cela rend votre produit évolutif et simplifie la distribution.
 
 ## <a name="review-your-apis"></a>Passer en revue vos API
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration*
 
-Vous devez faire en sorte que les API et structures de données existantes de votre application la prise en charge lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur les Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge des liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
+Les API et structures de données de votre application doivent prendre en charge l’application lors de l’intégration à Teams. Pour étendre la prise en charge, vous devez enrichir les API et [](../concepts/build-and-test/deep-links.md)les structures de données avec des informations contextuelles sur les Teams pour le mappage d’identité, [](../concepts/authentication/configure-identity-provider.md)la prise en charge des liens profonds et l’incorporation de Microsoft [Graph](/graph/teams-concept-overview).
 
-En savoir plus sur l’obtention de contexte pour Teams [onglet ou](../tabs/how-to/access-teams-context.md) [bot.](../bots/how-to/get-teams-context.md)
+Découvrez comment obtenir du contexte pour votre onglet Teams [ou](../tabs/how-to/access-teams-context.md) [bot.](../bots/how-to/get-teams-context.md)
 
 ## <a name="understand-authentication-options"></a>Comprendre les options d’authentification
 
 ***Scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Azure Active Directory (AD) est le fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Azure AD.
+Azure Active Directory fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Azure AD.
 
 Teams des mécanismes d' sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications.](/microsoftteams/manage-apps)
 
-Pour SharePoint pages, vous pouvez uniquement utiliser l’oD unique et vous ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’oD unique fonctionne pour une autre application, car l’ID est l’SharePoint appl.
+Pour SharePoint pages Azure AD, vous ne pouvez utiliser l’sOS que si vous souhaitez qu’elle fonctionne pour une autre application, car l’ID est l’SharePoint de l’application.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 
@@ -122,12 +122,12 @@ Voici un exemple de message de notification : **Ne m’envoyez pas de messages n
 
 ***Scénarios d’intégration :** Applications autonomes, applications de collaboration, SharePoint pages*
 
-Lorsqu’une équipe est créée, une [collection SharePoint de sites](/microsoftteams/sharepoint-onedrive-interact) est également mise en service pour prendre en charge le stockage de fichiers et de données pour cette équipe. Votre application doit tirer parti de cette fonctionnalité si elle interagit avec des fichiers. Utilisez la collection de sites pour stocker des données brutes dans SharePoint listes et Excel.
+Lorsqu’une équipe est créée, une [collection SharePoint de sites](/microsoftteams/sharepoint-onedrive-interact) est également mise en service pour prendre en charge le stockage de fichiers et de données pour cette équipe. Votre application doit tirer parti de cette fonctionnalité si elle interagit avec des fichiers. Utilisez la collection de sites pour stocker des données brutes dans SharePoint listes et Microsoft Excel.
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
 * [Solutions à code faible et sans code pour Microsoft Teams](~/samples/teams-low-code-solutions.md)
-* [Créer un bouton de partage pour Teams](../concepts/build-and-test/share-to-teams.md)
+* [Créer un bouton de partage Teams](../concepts/build-and-test/share-to-teams.md)
 * [Attributs de cookie SameSite](~/resources/samesite-cookie-update.md)
 * [Intégrer Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

@@ -6,25 +6,25 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1440af663d0c3d26bdad968a7e0549c51d28dccb
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9a39b84c3cfa94c410df5774d4a177535e1cfdd6
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768403"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212348"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Collaborer sur Teams projet à l’aide Teams Shared Computer Toolkit
 
-Plusieurs développeurs peuvent travailler ensemble pour déboguer, mettre en service et déployer pour le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations de Teams App et AAD App.Teams Shared Computer Toolkit prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs du projet TeamsFx à déboguer, mettre en service et  déployer le même projet TeamsFx.
+Plusieurs développeurs peuvent travailler ensemble pour déboguer, mettre en service et déployer pour le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations de Teams App et Azure AD App.Teams Shared Computer Toolkit prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs au projet TeamsFx à déboguer,  et déployer le même projet TeamsFx.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 * Conditions préalables pour le compte
 
     Pour mettre en service des ressources cloud, vous devez avoir les comptes suivants. Pour plus d’informations, voir, [préparer les comptes à la Teams’application.](accounts.md)
 
-    * Abonnement Microsoft 365
-    * Azure avec un abonnement valide
+  * Abonnement Microsoft 365
+  * Azure avec un abonnement valide
 
 * [Installez Teams Shared Computer Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
@@ -50,7 +50,7 @@ La liste suivante nous guide pour comprendre le processus de collaboration et sa
 
 * Pour afficher les collaborateurs dans l’environnement actuel, sélectionnez List **M365 Teams App (avec AAD App),** puis les collaborateurs sont répertoriés dans le canal de sortie, comme illustré dans l’image suivante :
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="liste":::
 
 * Push the project to GitHub.
 
@@ -77,8 +77,8 @@ Vous ne pouvez pas supprimer des collaborateurs directement de Teams Shared Comp
   1. Go to Teams Developer Portal and select your Teams app by name or app ID.
   2. Sélectionnez **Propriétaires** dans le panneau gauche.
   3. Sélectionnez et supprimez le collaborateur.
-  4. Go to [Azure Active Directory,](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)select **App registration** from left panel, and find your AAD App.
-  5. Sélectionnez **Propriétaires** dans le panneau gauche dans AAD page gestion des applications.
+  4. Go to [Azure Active Directory,](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)select **App registration** from left panel, and find your Azure AD App.
+  5. Sélectionnez **Propriétaires** dans le panneau gauche dans Azure AD page gestion des applications.
   6. Sélectionnez et supprimez le collaborateur.
 
 > [!NOTE]
@@ -87,6 +87,6 @@ Vous ne pouvez pas supprimer des collaborateurs directement de Teams Shared Comp
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Mise en service des ressources cloud](provision.md)
-* [Déployer Teams application dans le cloud](deploy.md)
+* [Provisionner des ressources cloud](provision.md)
+* [Déployer l’application Teams dans le cloud](deploy.md)
 * [Gérer plusieurs environnements](TeamsFx-multi-env.md)

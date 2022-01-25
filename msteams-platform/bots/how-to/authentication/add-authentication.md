@@ -1,25 +1,25 @@
 ---
-title: Ajouter l’authentification à Teams bot
+title: Ajouter l’authentification à votre bot Teams
 author: surbhigupta
-description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams l’aide AAD. Découvrez comment créer, déployer et intégrer des bots activés pour l’authentification.
+description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams l’aide Azure AD. Découvrez comment créer, déployer et intégrer des bots activés pour l’authentification.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Manifeste du bot d’inscription du canal du bot de groupe de ressources Azure
-ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 6ca9706dc946fcd98f573b9f7cdb05368156184d
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569524"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212495"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à Teams bot
+# <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
 Il arrive parfois que vous devrez créer des bots dans Microsoft Teams qui peuvent accéder aux ressources pour le compte de l’utilisateur, telles qu’un service de messagerie.
 
 Cet article montre comment utiliser l’authentification SDK Azure Bot Service v4, basée sur OAuth 2.0. Cela facilite le développement d’un bot qui peut utiliser des jetons d’authentification basés sur les informations d’identification de l’utilisateur. L’élément clé de tout cela est l’utilisation de fournisseurs **d’identité,** comme nous le constaterons plus tard.
 
-OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisée par Azure Active Directory (Azure AD) et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans Teams.
+OAuth 2.0 est une norme ouverte d’authentification et d’autorisation utilisée par Azure Active Directory et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans Teams.
 
 Voir [OAuth 2 Simplifié pour](https://aka.ms/oauth2-simplified) une compréhension de base et [OAuth 2.0](https://oauth.net/2/) pour la spécification complète.
 
@@ -146,9 +146,9 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
     1. **URL de connexion**. Entrez `https://login.microsoftonline.com` .
     1. **ID de client**, entrez l’ID d’annuaire **(client)**  que vous avez enregistré précédemment pour votre application d’identité Azure ou commun en fonction du type de compte pris en charge sélectionné lors de la création de l’application fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez ces critères :
 
-        - Si vous avez sélectionné des comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement - Client *unique)* ou des comptes dans un répertoire d’organisation *(annuaire Microsoft AAD - Multi-client),* entrez l’ID de locataire que vous avez enregistré précédemment pour l’application AAD.  Il s’agit du client associé aux utilisateurs qui peuvent être authentifiés.
+        - Si vous avez sélectionné des comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement - Client *unique)* ou des comptes dans un répertoire d’organisation *(annuaire Microsoft AAD - Multi-client),* entrez l’ID de locataire que vous avez enregistré précédemment pour l’application Azure AD.  Il s’agit du client associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné des comptes dans un répertoire d’organisation (n’importe quel répertoire AAD - comptes Microsoft multi-clients et  personnels par *exemple, Skype, Xbox, Outlook),* entrez le mot commun au lieu d’un ID de client. Dans le cas contraire, AAD’application vérifiera via le client dont l’ID a été sélectionné et exclura les comptes Microsoft personnels.
+        - Si vous avez sélectionné des comptes dans un répertoire d’organisation (n’importe quel répertoire AAD - comptes Microsoft multi-clients et  personnels par *exemple, Skype, Xbox, Outlook),* entrez le mot commun au lieu d’un ID de client. Dans le cas contraire, Azure AD’application vérifiera via le client dont l’ID a été sélectionné et exclura les comptes Microsoft personnels.
 
     h. Pour **l’URL de** la ressource, entrez `https://graph.microsoft.com/` . Cela n’est pas utilisé dans l’exemple de code actuel.  
     i. Laissez **les étendues** vides. L’image suivante est un exemple :
@@ -175,9 +175,9 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
     1. **URL de Exchange jeton**. Laissez ce champ vide.
     1. **ID de client**, entrez l’ID d’annuaire **(client)**  que vous avez enregistré précédemment pour votre application d’identité Azure ou commun en fonction du type de compte pris en charge sélectionné lors de la création de l’application fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez ces critères :
 
-        - Si vous avez sélectionné des comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement - Client *unique)* ou des comptes dans un répertoire d’organisation *(annuaire Microsoft AAD - Multi-client),* entrez l’ID de locataire que vous avez enregistré précédemment pour l’application AAD.  Il s’agit du client associé aux utilisateurs qui peuvent être authentifiés.
+        - Si vous avez sélectionné des comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement - Client *unique)* ou des comptes dans un répertoire d’organisation *(annuaire Microsoft AAD - Multi-client),* entrez l’ID de locataire que vous avez enregistré précédemment pour l’application Azure AD.  Il s’agit du client associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné des comptes dans un répertoire d’organisation (n’importe quel répertoire AAD - comptes Microsoft multi-clients et  personnels par *exemple, Skype, Xbox, Outlook),* entrez le mot commun au lieu d’un ID de client. Dans le cas contraire, AAD’application vérifiera via le client dont l’ID a été sélectionné et exclura les comptes Microsoft personnels.
+        - Si vous avez sélectionné des comptes dans un répertoire d’organisation (n’importe quel répertoire AAD - comptes Microsoft multi-clients et  personnels par *exemple, Skype, Xbox, Outlook),* entrez le mot commun au lieu d’un ID de client. Dans le cas contraire, Azure AD’application vérifiera via le client dont l’ID a été sélectionné et exclura les comptes Microsoft personnels.
 
     1. Pour **les étendues,** entrez une liste délimitée par des espaces d’autorisations graphiques que cette application requiert par exemple : User.Read User.ReadBasic.All Mail.Read 
 
