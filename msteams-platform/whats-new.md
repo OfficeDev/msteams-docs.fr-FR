@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080959"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214341"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|25/01/2022| API DE PANIER | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#cart-api)|
 |19/01/2022| Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Sélecteur de personnes dans les cartes adaptatives (aperçu du développeur pour le mobile et GA pour le bureau) | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
@@ -38,6 +39,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|25/01/2022| API DE PANIER | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#cart-api)|
 |19/01/2022| Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Sélectionneur de personnes dans les cartes adaptatives pour le bureau | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
@@ -76,7 +78,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 |05/10/2021| Cachez l'application Teams jusqu'à ce que l'administrateur permette de la rétablir.| Concevoir votre application > [Cacher l'application Teams jusqu'à l'approbation de l'administrateur](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)  |
 |05/10/2021| Planifiez vos applications pour Teams mobile. | Fondamentaux de l'application > [Planifier des onglets réactifs pour Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)  |
 |04/10/2021| Lancement du nouveau portail de développeur pour les équipes pour la gestion de vos applications Teams | Outils et SDK > [Portail des développeurs pour les équipes](concepts/build-and-test/teams-developer-portal.md)  |
-|21/09/2021|Teams prend en charge l'ID d'objet AAD et l'UPN dans la mention d'utilisateur pour les bots et les webhooks entrants | - Construire des cartes et modules de tâches > Construire des cartes > [ID objet AAD et UPN dans la mention de l'utilisateur](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)  </br> - Modules de tâches et cartes de construction > Cartes de construction > [Cartes - Vue d'ensemble](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)  |
+|21/09/2021|Teams prend en charge l'ID d'objet Azure AD et le nom d’utilisateur principal dans la mention d'utilisateur pour les bots et les webhooks entrants | • Créer des cartes et des modules de tâche > Créer des cartes > [ID d’objet Azure AD et nom d’utilisateur principal dans la mention utilisateur](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> - Modules de tâches et cartes de construction > Cartes de construction > [Cartes - Vue d'ensemble](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)  |
 |16/08/2021| Prise en charge de la validation des entrées sur les cartes adaptatives (v1.3 pour toutes les fonctionnalités) et les actions universelles (v1.4 pour les cartes envoyées par le bot) | - Cartes adaptatives > Cartes de création > [Validation des entrées](/adaptive-cards/authoring-cards/input-validation) </br> - Fiches de construction et modules de tâches > Fiches de construction > Actions universelles pour les fiches adaptatives > [Actions universelles pour les fiches adaptatives v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)  |
 |30/08/2021| La fonction de scènes Custom Together Mode combine les participants dans une seule scène virtuelle et place leurs flux vidéo dans des sièges prédéterminés | Créer des applications pour les réunions Teams > [Scènes personnalisées du mode Together](~/apps-in-teams-meetings/teams-together-mode.md) |
 |25/08/2021| Présentation d'un guide étape par étape pour créer un robot Teams avec une authentification unique (SSO).| Ajouter une authentification > Bots > [Guide étape par étape pour créer un bot Teams avec SSO](sbs-bots-with-sso.yml)  |
@@ -206,7 +208,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 29/05/2018 | Les cartes adaptatives sont pris en charge dans Teams. | [Actions de carte adaptative dans Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 17/04/2018 | replyToID a été ajouté à la charge utile pour les actions de carte `Invoke` et `MessageBack` . Ceci est particulièrement utile si vous devez mettre à jour le message dont l’action de carte est d’provenance. | [Actions de carte](~/concepts/cards/cards-actions.md)|
 | 12/04/2018 | Ajout de cette rubrique pour suivre les modifications apportées à l’interface de programmation Teams et à cet ensemble de documentation. | [Nouveautés](~/whats-new.md)|
-| 10/04/2018 | Modification des URL d'authentification pour utiliser systématiquement l'ID du locataire dans le chemin. | [Flux d'authentification pour les onglets](~/concepts/authentication/auth-flow-tab.md), [authentification des onglets AAD](~/concepts/authentication/auth-tab-AAD.md)|
+| 10/04/2018 | Modification des URL d'authentification pour utiliser systématiquement l'ID du locataire dans le chemin. | [Flux d’authentification pour les onglets](~/concepts/authentication/auth-flow-tab.md) [Authentification des onglets Azure AD](~/concepts/authentication/auth-tab-AAD.md)|
 | 06/04/2018 | Ajout de directives de conception pour l'utilisation de la boîte de commande. |[Zone de commande](~/resources/design/framework/command-box.md)|
 | 02/04/2018 | Utilisation de robots pour envoyer des notifications pour votre application. |[Bots avec notification seulement](~/concepts/bots/bots-notification-only.md)|
 | 27/03/2018 | Documentation étendue pour la messagerie proactive. |[Démarrer une conversation](./concepts/bots/bot-conversations/bots-conv-proactive.md)|

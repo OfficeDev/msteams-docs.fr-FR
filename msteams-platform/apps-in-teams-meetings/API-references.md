@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: requête de signal de notification usercontext de l’api de rôle de participant aux réunions teams
-ms.openlocfilehash: 3ec6539e8a4970a00650c1bc35d72ea656a0eb38
-ms.sourcegitcommit: 0ae40fdf74b43834160821956b754cab94a60bb7
+ms.openlocfilehash: 74d1082d1f3bbfeb3b2b1a96c321832799315b55
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "61558707"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214329"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -48,9 +48,9 @@ L’API permet à un bot de récupérer les informations des participants par ID
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
 |**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
-|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso onglet. | 
+|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso onglet. |
 
 ### <a name="example"></a>Exemple
 
@@ -155,7 +155,7 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 |---|---|----|---|
 |**conversationId**| String | Oui | L’identificateur de conversation est disponible dans le cadre de Bot Invoke. |
 
-### <a name="examples"></a>Exemples
+### <a name="examples"></a>範例
 
 `Bot ID`L’objet est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
@@ -300,6 +300,63 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
     }
 } 
 ```
+
+## <a name="cart-api"></a>API DE PANIER
+
+L’API CART expose un point de terminaison POST pour Microsoft Teams cart, des légendes fermées de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux dans une Microsoft Teams réunion lorsqu’ils ont activé les légendes.
+
+### <a name="cart-url"></a>URL DE PANIER
+
+Vous pouvez obtenir l’URL cart pour le point de terminaison POST à partir de la page **Options** de réunion dans une Microsoft Teams réunion. Pour plus d’informations, voir [les légendes CART dans une Microsoft Teams réunion.](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47) Vous n’avez pas besoin de modifier l’URL cart pour utiliser les légendes CART.
+
+#### <a name="query-parameter"></a>Paramètre de requête
+
+L’URL CART inclut les paramètres de requête suivants :
+
+|Valeur|Type|Requis|Description|
+|---|---|----|----|
+|**meetingId**| Chaîne | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**token**| Chaîne | Oui |Jeton d’autorisation.<br/> Par exemple, token=04751eac |
+
+#### <a name="example"></a>Exemple
+
+```http
+https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
+```
+
+### <a name="method"></a>Méthode
+
+|Resource|Méthode|Description|
+|----|----|----|
+|/cartcaption|POST|Gérer les légendes pour la réunion, qui a été démarrée|
+
+> [!NOTE]
+> Assurez-vous que le type de contenu pour toutes les demandes est en texte simple avec le codage UTF-8. Le corps de la demande contient uniquement des légendes.
+
+#### <a name="example"></a>Exemple
+
+```http
+POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1
+Host: api.captions.office.microsoft.com
+Content-Type: text/plain
+Content-Length: 22
+Hello I’m Cortana, welcome to my meeting. 
+```
+
+> [!Note]  
+> Chaque requête POST génère une nouvelle ligne de légendes. Pour vous assurer que l’utilisateur final dispose de suffisamment de temps pour lire le contenu, limitez chaque corps de requête POST à 80 à 120 caractères.
+
+### <a name="error-codes"></a>Codes d’erreur
+
+L’API CART inclut les codes d’erreur suivants :
+
+|Code d'erreur|Description|
+|---|---|
+| **400** | Demande non bonne. Le corps de la réponse a plus d’informations. Par exemple, tous les paramètres requis ne sont pas présentés.|
+| **401** | Non autorisé. Jeton non bon ou expiré. Si vous recevez cette erreur, générez une nouvelle URL de panier dans Teams. |
+| **404** | Réunion in trouvée ou non démarrée. Si vous recevez cette erreur, veillez à démarrer la réunion et à sélectionner les légendes de début. Une fois que les légendes sont activées dans la réunion, vous pouvez commencer à les ajouter à la réunion.|
+| **500** |Erreur interne au serveur. Pour plus d’informations, [contactez le support technique ou fournissez des commentaires.](../feedback.md)|
+
 ## <a name="real-time-teams-meeting-events"></a>Événements de réunion Teams en temps réel
 
 L’utilisateur peut recevoir des événements de réunion en temps réel. Dès qu’une application est associée à une réunion, l’heure de début et de fin de la réunion réelle est partagée avec le bot.
@@ -472,7 +529,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="see-also"></a>Voir aussi
 
 * [Teams d’authentification pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Applications pour Teams réunions](teams-apps-in-meetings.md)
+* [Applications pour les réunions Teams](teams-apps-in-meetings.md)
 
 ## <a name="next-steps"></a>Prochaines étapes
 
