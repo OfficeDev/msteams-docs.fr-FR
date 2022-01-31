@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 'onglets teams : message actionnable de webhook sortant vérifiant le webhook'
-ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059748"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281762"
 ---
 # <a name="create-outgoing-webhook"></a>Créer des webhooks sortants
 
@@ -25,8 +25,8 @@ Le tableau suivant fournit les fonctionnalités et la description des webhooks s
 | ------- | ----------- |
 | Configuration délimitée| Les webhooks sont limités au niveau de l’équipe. Processus de configuration obligatoire pour chaque ajout d’un webhook sortant. |
 | Messagerie réactive| Les utilisateurs doivent utiliser une @mention pour que le webhook reçoive des messages. Actuellement, les utilisateurs peuvent uniquement envoyer un webhook sortant dans les canaux publics et non dans l’étendue personnelle ou privée. |
-|Échange de messages HTTP standard|Les réponses apparaissent dans la même chaîne que le message de demande d’origine et peuvent inclure n’importe quel contenu de message Bot Framework, par exemple du texte enrichi, des images, des cartes et des emojis. Bien que les webhooks sortants puissent utiliser des cartes, ils ne peuvent utiliser aucune action de carte à l’exception de `openURL` .|
-| Prise en charge des méthodes de l’API Teams|Les webhooks sortants envoient une demande HTTP POST à un service web et obtiennent une réponse. Ils ne peuvent pas accéder à d’autres API, comme récupérer la liste de présence ou la liste des canaux d’une équipe.|
+|Échange de messages HTTP standard|Les réponses s’affichent dans la même chaîne que le message de demande initial et peuvent inclure n’importe quel contenu de message Bot Framework. Par exemple, un texte enrichi, des images, des cartes et des emojis. Bien que les webhooks sortants puissent utiliser des cartes, ils ne peuvent utiliser aucune action de carte à l’exception de `openURL`.|
+| Prise en charge des méthodes de l’API Teams|Les webhooks sortants envoient une demande HTTP POST à un service web et obtiennent une réponse. Ils ne peuvent pas accéder à d’autres API, telles que la récupération de la liste de présence ou de la liste des canaux d’une équipe.|
 
 ## <a name="create-outgoing-webhooks"></a>Créer des webhooks sortants
 
@@ -61,7 +61,7 @@ Créez des webhooks sortants et ajoutez des bots personnalisés à Teams.
 
     ![créer un webhook sortant](~/assets/images/outgoingwebhook.png)
 
-Une boîte de dialogue [Code d’authentification de message basé sur le hachage (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) s’affiche. Il s’agit d’un jeton de sécurité utilisé pour authentifier les appels entre Teams et le service extérieur désigné.
+Une boîte de dialogue [Code d’authentification de message basé sur le hachage (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) s’affiche. Il s’agit d’un jeton de sécurité utilisé pour authentifier les appels entre Teams et le service extérieur désigné. Le jeton de sécurité HMAC n’expire pas et il est unique pour chaque configuration.
 
 >[!NOTE]
 > Le webhook sortant est disponible pour les utilisateurs de l’équipe, seulement si l’URL est valide et si les jetons d’authentification du serveur et du client sont égaux. Par exemple, une poignée de main HMAC.
@@ -69,7 +69,7 @@ Une boîte de dialogue [Code d’authentification de message basé sur le hachag
 Le scénario suivant fournit les détails pour ajouter un webhook sortant :
 
 * Scénario : envoyez des notifications de changement d’état sur un serveur de base de données de canal Teams à votre application.
-* Exemple : vous avez une application métier qui suit toutes les opérations CRUD, telles que créer, lire, mettre à jour et supprimer. Ces opérations sont réalisées sur les enregistrements de l’employé par les utilisateurs RH du canal Teams au sein d’une location Office 365.
+* Exemple : vous avez une application métier qui suit toutes les opérations CRUD (créer, lire, mettre à jour et supprimer). Ces opérations sont réalisées sur les enregistrements de l’employé par les utilisateurs RH du canal Teams au sein d’une location Office 365.
 
 # <a name="url-json-payload"></a>[Charge utile JSON d’URL](#tab/urljsonpayload)
 **Créer une URL sur le serveur de votre application pour accepter et traiter une demande POST avec une charge utile JSON**
