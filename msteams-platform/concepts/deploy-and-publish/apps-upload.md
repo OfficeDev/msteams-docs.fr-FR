@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fa67f6b1261619565cb62d5e1333367904089244
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059608"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281755"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
@@ -38,6 +38,9 @@ Vous pouvez télécharger votre application dans une équipe, un chat, une réun
 1. Sélectionnez le fichier .zip de votre package d'application. Une boîte de dialogue d'installation s'affiche.
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d'écran montrant un exemple de boîte de dialogue d'installation de l'application Teams.":::
 1. Ajoutez votre application à Teams.
+
+> [!NOTE]
+> En ajoutant le bot à Microsoft Teams, vous ne pouvez pas obtenir les paramètres régionaux de Microsoft Teams, car l’activité du bot n’est pas initiée par l’action de l’utilisateur, comme l’envoi d’un message. Par conséquent, `turnContext.Activity.GetLocale();` retourne une valeur null.
 
 ## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement
 
