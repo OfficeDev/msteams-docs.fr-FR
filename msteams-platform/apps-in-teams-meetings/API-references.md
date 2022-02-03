@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: requête de signal de notification usercontext de l’api de rôle de participant aux réunions teams
-ms.openlocfilehash: 74d1082d1f3bbfeb3b2b1a96c321832799315b55
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
+ms.openlocfilehash: dd46dc2622915055e46e07ae34d48c690d6d8d8e
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214329"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323147"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -29,10 +29,11 @@ Le tableau suivant fournit une liste des API :
 |**GetParticipant**| Permet à un bot de récupérer les informations des participants par ID de réunion et ID de participant. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot. Il vous permet de signaler en fonction de l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Détails de la réunion** | Permet d’obtenir des métadonnées de réunion statiques. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**CART**|Permet de publier des sous-titres pour une réunion, qui a été démarrée.|**POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1**|Microsoft Teams SDK client|
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-Pour identifier et récupérer des informations contextuelles pour le contenu de votre onglet, voir obtenir le contexte de votre onglet [Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). est utilisé par un onglet lors de l’exécution dans le contexte de la réunion et est ajouté pour la charge utile de `meetingId` réponse.
+Pour identifier et récupérer des informations contextuelles pour le contenu de votre onglet, voir obtenir le contexte de votre onglet [Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` Est utilisé par un onglet lors de l’exécution dans le contexte de la réunion et est ajouté pour la charge utile de réponse.
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
@@ -40,21 +41,21 @@ Pour identifier et récupérer des informations contextuelles pour le contenu de
 > * Ne pas mettre en cache les rôles des participants, car l’organisateur de la réunion peut modifier les rôles à tout moment.
 > * Teams ne prend actuellement pas en charge les listes de distribution ou les tailles de listes de plus de 350 participants `GetParticipant` pour le API.
 
-L’API permet à un bot de récupérer les informations des participants par ID de réunion et `GetParticipant` ID de participant. L’API inclut des paramètres de requête, des exemples et des codes de réponse.
+L’API `GetParticipant` permet à un bot de récupérer les informations des participants par ID de réunion et ID de participant. L’API inclut des paramètres de requête, des exemples et des codes de réponse.
 
 ### <a name="query-parameters"></a>Paramètres de requête
 
-`GetParticipant`L’API inclut les paramètres de requête suivants :
+L’API `GetParticipant` inclut les paramètres de requête suivants :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
-|**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l' sso tabulation. |
-|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l' sso onglet. |
+|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l’sso tabulation. |
+|**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l’sso onglet. |
 
 ### <a name="example"></a>Exemple
 
-`GetParticipant`L’API inclut les exemples suivants :
+L’API `GetParticipant` inclut les exemples suivants :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -100,7 +101,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-Le corps de la réponse JSON pour `GetParticipant` l’API est :
+Le corps de la réponse JSON pour l’API `GetParticipant` est :
 
 ```json
 {
@@ -128,7 +129,7 @@ Le corps de la réponse JSON pour `GetParticipant` l’API est :
 
 ### <a name="response-codes"></a>Codes de réponse
 
-`GetParticipant`L’API renvoie les codes de réponse suivants :
+L’API `GetParticipant` renvoie les codes de réponse suivants :
 
 |Code de réponse|Description|
 |---|---|
@@ -139,7 +140,7 @@ Le corps de la réponse JSON pour `GetParticipant` l’API est :
 
 ## <a name="notificationsignal-api"></a>NotificationSignal API
 
-Tous les utilisateurs d’une réunion reçoivent les notifications envoyées via `NotificationSignal` l’API.
+Tous les utilisateurs d’une réunion reçoivent les notifications envoyées via l’API `NotificationSignal` .
 
 > [!NOTE]
 > * Lorsqu’une boîte de dialogue de réunion est invoquée, le contenu est présenté comme un message de conversation.
@@ -149,22 +150,22 @@ Tous les utilisateurs d’une réunion reçoivent les notifications envoyées vi
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
-`NotificationSignal`L’API inclut le paramètre de requête suivant :
+L’API `NotificationSignal` inclut le paramètre de requête suivant :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
 |**conversationId**| String | Oui | L’identificateur de conversation est disponible dans le cadre de Bot Invoke. |
 
-### <a name="examples"></a>範例
+### <a name="examples"></a>Exemples
 
-`Bot ID`L’objet est déclaré dans le manifeste et le bot reçoit un objet de résultat.
+L’objet `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
 > [!NOTE]
-> * Le `completionBotId` paramètre est facultatif dans `externalResourceUrl` l’exemple de charge utile demandé. `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
-> * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour vous assurer que les dimensions sont dans les limites autorisées, consultez les [instructions de conception.](design/designing-apps-in-meetings.md)
-> * L’URL est la page chargée en tant que dans la boîte de dialogue `<iframe>` de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
+> * Le `completionBotId` paramètre est facultatif `externalResourceUrl` dans l’exemple de charge utile demandé. `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
+> * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour vous assurer que les dimensions sont dans les limites autorisées, consultez les [instructions de conception](design/designing-apps-in-meetings.md).
+> * L’URL est la page chargée en tant que `<iframe>` dans la boîte de dialogue de la réunion. Le domaine doit se trouver dans le tableau de l’application `validDomains` dans le manifeste de votre application.
 
-`NotificationSignal`L’API inclut les exemples suivants :
+L’API `NotificationSignal` inclut les exemples suivants :
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -211,7 +212,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### <a name="response-codes"></a>Codes de réponse
 
-`NotificationSignal`L’API inclut les codes de réponse suivants :
+L’API `NotificationSignal` inclut les codes de réponse suivants :
 
 |Code de réponse|Description|
 |---|---|
@@ -231,7 +232,7 @@ L’API est disponible via Bot Services.
 ### <a name="prerequisite"></a>Conditions préalables
 
 > [!NOTE] 
-> Vérifiez si votre application répond à toutes les conditions préalables répertoriées dans les conditions préalables pour [les applications Teams réunions.](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+> Vérifiez si votre application répond à toutes les conditions préalables répertoriées dans les conditions [préalables pour les applications Teams réunions](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
 
 Pour utiliser l’API Détails de la réunion, vous devez obtenir des autorisations RSC. Utilisez l’exemple suivant pour configurer la propriété du manifeste de votre `webApplicationInfo` application :
 
@@ -303,7 +304,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 
 ## <a name="cart-api"></a>API DE PANIER
 
-L’API CART expose un point de terminaison POST pour Microsoft Teams cart, des légendes fermées de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux dans une Microsoft Teams réunion lorsqu’ils ont activé les légendes.
+L’API de traduction en temps réel (CART) d’accès aux communications expose un point de terminaison POST pour Microsoft Teams cart, des légendes fermées de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux dans une Microsoft Teams réunion lorsqu’ils ont activé les légendes.
 
 ### <a name="cart-url"></a>URL DE PANIER
 
@@ -315,7 +316,7 @@ L’URL CART inclut les paramètres de requête suivants :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|----|
-|**meetingId**| Chaîne | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| String | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| Chaîne | Oui |Jeton d’autorisation.<br/> Par exemple, token=04751eac |
 
 #### <a name="example"></a>Exemple
@@ -326,7 +327,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>Méthode
 
-|Resource|Méthode|Description|
+|Ressource|Méthode|Description|
 |----|----|----|
 |/cartcaption|POST|Gérer les légendes pour la réunion, qui a été démarrée|
 
@@ -355,7 +356,7 @@ L’API CART inclut les codes d’erreur suivants :
 | **400** | Demande non bonne. Le corps de la réponse a plus d’informations. Par exemple, tous les paramètres requis ne sont pas présentés.|
 | **401** | Non autorisé. Jeton non bon ou expiré. Si vous recevez cette erreur, générez une nouvelle URL de panier dans Teams. |
 | **404** | Réunion in trouvée ou non démarrée. Si vous recevez cette erreur, veillez à démarrer la réunion et à sélectionner les légendes de début. Une fois que les légendes sont activées dans la réunion, vous pouvez commencer à les ajouter à la réunion.|
-| **500** |Erreur interne au serveur. Pour plus d’informations, [contactez le support technique ou fournissez des commentaires.](../feedback.md)|
+| **500** |Erreur interne au serveur. Pour plus d’informations, [contactez le support technique ou fournissez des commentaires](../feedback.md).|
 
 ## <a name="real-time-teams-meeting-events"></a>Événements de réunion Teams en temps réel
 
@@ -366,9 +367,9 @@ Les heures de début et de fin réelles d’une réunion sont différentes des h
 ### <a name="prerequisite"></a>Conditions préalables
 
 > [!NOTE] 
-> Vérifiez si votre application répond à toutes les conditions préalables répertoriées dans les conditions préalables pour [les applications Teams réunions.](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+> Vérifiez si votre application répond à toutes les conditions préalables répertoriées dans les conditions [préalables pour les applications Teams réunions](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
 
-Le manifeste de votre application doit avoir la propriété pour recevoir les événements de `webApplicationInfo` début et de fin de réunion. Utilisez l’exemple suivant pour configurer votre manifeste :
+Le manifeste de votre application doit avoir la propriété `webApplicationInfo` pour recevoir les événements de début et de fin de réunion. Utilisez l’exemple suivant pour configurer votre manifeste :
 
 ```json
 "webApplicationInfo": {
@@ -486,16 +487,16 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 
 ### <a name="example-of-getting-metadata-of-a-meeting"></a>Exemple d’obtention des métadonnées d’une réunion
 
-Votre bot reçoit l’événement via `OnEventActivityAsync` le handler.
+Votre bot reçoit l’événement via le `OnEventActivityAsync` handler.
 
-Pour désérialiser la charge utile json, un objet modèle est introduit pour obtenir les métadonnées d’une réunion. Les métadonnées d’une réunion se trouve dans la `value` propriété dans la charge utile de l’événement. L’objet modèle est créé, dont les variables membres correspondent aux clés sous `MeetingStartEndEventvalue` la propriété dans la charge utile de `value` l’événement.
+Pour désérialiser la charge utile json, un objet modèle est introduit pour obtenir les métadonnées d’une réunion. Les métadonnées d’une réunion se trouve dans la propriété `value` dans la charge utile de l’événement. L’objet `MeetingStartEndEventvalue` modèle est créé, dont les variables membres correspondent aux clés sous la `value` propriété dans la charge utile de l’événement.
      
 > [!NOTE]      
-> * Obtenir l’ID de réunion à partir `turnContext.ChannelData` de .    
+> * Obtenir l’ID de réunion à partir de `turnContext.ChannelData`.    
 > * N’utilisez pas l’ID de conversation comme ID de réunion.     
-> * N’utilisez pas l’ID de réunion de la charge utile des événements de `turncontext.activity.value` réunion. 
+> * N’utilisez pas l’ID de réunion de la charge utile des événements de réunion `turncontext.activity.value`. 
       
-Le code suivant montre comment capturer les métadonnées d’une réunion qui est , , , , et à partir d’un événement de `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` début/fin de réunion :
+Le code suivant montre comment capturer `MeetingType`les métadonnées d’une réunion qui est , `Title`, `Id`, `JoinUrl`, et `StartTime``EndTime` à partir d’un événement de début/fin de réunion :
 
 Événement de début de réunion
 ```csharp

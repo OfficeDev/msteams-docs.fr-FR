@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, la phase de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: e0bf9f06d9a72f711e45291cd5f212ef1b2718c3
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212025"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323175"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -21,11 +21,11 @@ Pour activer votre application pour les Teams, mettez à jour le manifeste de vo
 
 ### <a name="update-your-app-manifest"></a>Mettre à jour le manifeste de votre application
 
-Les fonctionnalités de l’application réunions sont déclarées dans le manifeste de votre application à l’aide `configurableTabs` des `scopes` tableaux et des `context` tableaux. L’étendue définit qui peut accéder et le contexte définit l’endroit où votre application est disponible.
+Les fonctionnalités de l’application réunions sont déclarées dans le manifeste de votre application à l’aide `configurableTabs`des tableaux et des `scopes`tableaux `context` . L’étendue définit qui peut accéder et le contexte définit l’endroit où votre application est disponible.
 
 > [!NOTE]
-> * Vous devez mettre à jour le manifeste de votre application avec [le schéma de manifeste.](../resources/schema/manifest-schema-dev-preview.md)
-> * Les applications dans les réunions nécessitent une `groupchat` étendue. `team`L’étendue fonctionne pour les onglets dans les canaux uniquement.
+> * Vous devez mettre à jour le manifeste de votre application avec [le schéma de manifeste](../resources/schema/manifest-schema-dev-preview.md).
+> * Les applications dans les réunions nécessitent une `groupchat` étendue. L’étendue `team` fonctionne pour les onglets dans les canaux uniquement.
 
 Le manifeste de l’application doit inclure l’extrait de code suivant :
 
@@ -53,7 +53,7 @@ Le manifeste de l’application doit inclure l’extrait de code suivant :
 
 ### <a name="context-property"></a>Propriété Context
 
-La propriété détermine ce qui doit être affiché lorsqu’un utilisateur appelle une application dans une réunion en fonction de l’endroit où il `context` appelle l’application. `context`L’onglet et `scopes` les propriétés vous permettent de déterminer où votre application doit apparaître. Les onglets de la `team` ou de `groupchat` l’étendue peuvent avoir plusieurs contextes. Voici les valeurs de la propriété à partir de laquelle vous pouvez utiliser l’ensemble ou `context` certaines des valeurs :
+La `context` propriété détermine ce qui doit être affiché lorsqu’un utilisateur appelle une application dans une réunion en fonction de l’endroit où il appelle l’application. L’onglet `context` et `scopes` les propriétés vous permettent de déterminer où votre application doit apparaître. Les onglets de la ou `team` de l’étendue `groupchat` peuvent avoir plusieurs contextes. Voici les valeurs de la `context` propriété à partir de laquelle vous pouvez utiliser l’ensemble ou certaines des valeurs :
 
 |Valeur|Description|
 |---|---|
@@ -62,7 +62,7 @@ La propriété détermine ce qui doit être affiché lorsqu’un utilisateur app
 | **meetingChatTab** | Onglet dans l’en-tête d’une conversation de groupe entre un ensemble d’utilisateurs pour une réunion programmée. Vous pouvez spécifier **meetingChatTab** ou **meetingDetailsTab** pour vous assurer que les applications fonctionnent sur mobile. |
 | **meetingDetailsTab** | Onglet dans l’en-tête de l’affichage Détails de la réunion du calendrier. Vous pouvez spécifier **meetingChatTab** ou **meetingDetailsTab** pour vous assurer que les applications fonctionnent sur mobile. |
 | **meetingSidePanel** | Panneau en réunion ouvert via la barre unifiée (barre U). |
-| **meetingStage** | Une application de `meetingSidePanel` l’étape de réunion peut être partagée. Vous ne pouvez pas utiliser cette application sur les clients mobiles ou Teams salle. |
+| **meetingStage** | Une application de l’étape `meetingSidePanel` de réunion peut être partagée. Vous ne pouvez pas utiliser cette application sur les clients mobiles ou de salle Teams. |
 
 Après avoir activé votre application pour Teams réunions, vous devez configurer votre application avant une réunion, pendant une réunion et après une réunion.
 
@@ -94,38 +94,38 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 
 **Pour ajouter un bot à une réunion**
 
-Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots.**
+Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots**.
 
 > [!NOTE]
 > * La bulle de contenu publie une carte adaptative ou une carte simultanément dans la conversation de réunion accessible aux utilisateurs. Cela aide les utilisateurs lorsque la réunion ou l’Teams’application est réduite.
-> * L’identité de l’utilisateur doit être confirmée à l’aide de [l' ssO Onglets.](../tabs/how-to/authentication/auth-aad-sso.md) Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de `GetParticipant` l’API.
+> * L’identité de l’utilisateur doit être confirmée à l’aide de [l’ssO Onglets](../tabs/how-to/authentication/auth-aad-sso.md). Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de l’API `GetParticipant` .
 > * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
-> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, [voir les rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
+> * Les attributions de rôle peuvent être modifiées pendant une réunion. Pour plus d’informations, voir [rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)
 
 ### <a name="during-a-meeting"></a>Lors d'une réunion
 
-Au cours d’une réunion, vous pouvez utiliser la boîte de dialogue ou la boîte de dialogue en réunion pour créer des expériences `meetingSidePanel` uniques pour vos applications.
+Au cours d’une réunion, vous pouvez utiliser `meetingSidePanel` la boîte de dialogue ou la boîte de dialogue en réunion pour créer des expériences uniques pour vos applications.
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
-Cela vous permet de personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles `meetingSidePanel` d’affichages et d’actions. Dans le manifeste de votre application, vous devez `meetingSidePanel` l’ajouter au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est restituer dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext.](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+Cela `meetingSidePanel` vous permet de personnaliser les expériences d’une réunion qui permettent aux organisateurs et aux présentateurs d’avoir différents ensembles d’affichages et d’actions. Dans le manifeste de votre application, vous devez l’ajouter `meetingSidePanel` au tableau de contexte. Dans la réunion et dans tous les scénarios, l’application est restituer dans un onglet de réunion de 320 pixels de largeur. Pour plus d’informations, [voir l’interface FrameContext](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
-Pour utiliser l’API pour router les `userContext` demandes, voir Teams [SDK](../tabs/how-to/access-teams-context.md#user-context). Pour plus d’informations, [Teams flux d’authentification pour les onglets.](../tabs/how-to/authentication/auth-flow-tab.md) Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Par conséquent, les onglets peuvent utiliser OAuth 2.0 directement. Pour plus d’informations, voir Plateforme d'identités Microsoft flux de code d’autorisation [OAuth 2.0.](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
+Pour utiliser l’API `userContext` pour router les demandes, voir [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). Pour plus d’informations, [Teams flux d’authentification pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md). Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Par conséquent, les onglets peuvent utiliser OAuth 2.0 directement. Pour plus d’informations, [voir Plateforme d'identités Microsoft flux de code d’autorisation OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est en affichage en réunion. L’utilisateur peut publier des cartes d’extension de message de composition. AppName en réunion est une boîte à outils qui indique le nom de l’application dans la barre U de la réunion.
 
 > [!NOTE]
-> Utilisez la version 1.7.0 ou une version ultérieure du [SDK Teams,](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)car les versions antérieures ne peuvent pas prendre en charge le panneau latéral.
+> Utilisez la version 1.7.0 ou une version ultérieure du [SDK Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), car les versions antérieures ne peuvent pas prendre en charge le panneau latéral.
 
 #### <a name="in-meeting-dialog-box"></a>Boîte de dialogue En réunion
 
-La boîte de dialogue de réunion est utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez [`NotificationSignal`](API-references.md#notificationsignal-api) l’API pour déclencher une notification de bulle. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
+La boîte de dialogue de réunion est utilisée pour impliquer les participants pendant la réunion et collecter des informations ou des commentaires pendant la réunion. Utilisez l’API [`NotificationSignal`](API-references.md#notificationsignal-api) pour déclencher une notification de bulle. Dans le cadre de la charge utile de demande de notification, incluez l’URL où le contenu à afficher est hébergé.
 
-La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher la bulle de contenu dans une réunion. Vous pouvez utiliser la `submitTask` méthode pour envoyer des données dans une conversation de réunion.
+La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le module de tâche n’est pas appelé dans une conversation de réunion. Une URL de ressource externe est utilisée pour afficher la bulle de contenu dans une réunion. Vous pouvez utiliser la méthode `submitTask` pour envoyer des données dans une conversation de réunion.
 
 > [!NOTE]
-> * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur effectue une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, voir Teams module de [tâche du SDK.](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)
-> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial doit reposer sur les métadonnées de demande dans l’objet, `from.id` et non sur les `from` `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Azure Active Directory’ID de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) dans les onglets [et créer et envoyer le module de tâche.](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)
+> * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur effectue une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, [voir Teams module de tâche du SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true).
+> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial `from.id` doit reposer sur les métadonnées `from` de demande dans l’objet, et non sur les `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Azure Active Directory’ID de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) [et créer et envoyer le module de tâche](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Après une réunion
 
@@ -144,7 +144,7 @@ Les configurations des réunions après [et avant](#before-a-meeting) sont les m
 * Suivez le [guide pas à pas pour](../sbs-meeting-token-generator.yml) générer un jeton de réunion dans votre Teams réunion.
 * Suivez le [guide pas à pas pour](../sbs-meetings-sidepanel.yml) générer un sidepanel de réunion dans votre Teams réunion.
 * Suivez le [guide pas à pas pour](../sbs-meetings-stage-view.yml) générer une vue d’étape de la réunion dans Teams réunion.
-* Suivez le [guide pas à pas pour](../sbs-meeting-content-bubble.yml) générer une bulle de contenu de réunion dans votre Teams réunion.
+* Suivez le [guide pas à pas pour](../sbs-meeting-content-bubble.yml) générer une bulle de contenu de réunion dans Teams réunion.
 
 ## <a name="next-step"></a>Étape suivante
 
