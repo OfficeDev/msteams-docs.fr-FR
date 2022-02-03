@@ -3,12 +3,12 @@ title: Empaqueter votre application
 description: Découvrez comment empaqueter votre application Microsoft Teams pour le test, le téléchargement et la publication dans le Store.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 002da681a464770a31fa6963e96fdff54701b35f
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: f3f725280e24296f1f2d9c919a14585e07d86c75
+ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059678"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62345389"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Créer un package de l’application Microsoft Teams
 
@@ -16,6 +16,12 @@ Vous avez besoin d’un package de l’application, mais vous prévoyez de distr
 
 * **Manifeste de l’application** : décrit la configuration de votre application, notamment ses fonctionnalités, les ressources requises et d’autres attributs importants.
 * **Icônes d’application** : chaque package nécessite une icône de couleur et de contour pour votre application.
+
+## <a name="teams-doesnt-host-your-app"></a>Teams n’héberge pas votre application
+
+Lorsqu’un utilisateur installe votre application dans Teams, il installe un package d’application qui contient un seul fichier de configuration (également appelé manifeste d’application) et les icônes de votre application. La logique de l’application et le stockage des données sont hébergés ailleurs, par exemple sur localhost pendant le développement et sur Azure Web Services. Teams accède à ces ressources via HTTPS.
+
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration montrant l’hébergement d’applications pour Application Teams" border="true":::
 
 ## <a name="app-manifest"></a>Manifeste d'application
 
