@@ -92,7 +92,7 @@
   items:
     - name: Extension de kit de ressources Teams pour Visual Studio Code
       items:
-        - name: Notions de base du Kit de ressources Teams
+        - name: Vue d’ensemble du Kit de ressources Teams
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Création d’un projet
           href: toolkit/create-new-project.md
@@ -465,6 +465,10 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Tenir à jour votre application publiée
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: Monétiser votre application
+      items:
+        - name: Aperçu
+          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: Inclure une offre SaaS avec votre application
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
 - name: Manifeste d'application
