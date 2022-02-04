@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Les composants de l’interface utilisateur fluent kit de la carte de bouton de la ligne de repère de la carte de bouton de la bascule carrousel de la sélection de signets de sélection pivot
-ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 40a0c789275d98ab5bfbe74a61aa04a0e2daee32
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887496"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362962"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>Conception de votre application Microsoft Teams avec des composants Fluent’interface utilisateur de base
 
@@ -21,14 +21,14 @@ Les illustrations de cette page montrent l’apparence des composants Teams thè
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent’interface</a>utilisateur, le kit Microsoft Teams’interface utilisateur inclut des composants et des modèles spécifiquement conçus pour créer des applications Teams. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
+Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent’interface</a> utilisateur, le kit Microsoft Teams’interface utilisateur inclut des composants et des modèles spécifiquement conçus pour créer des applications Teams web. Dans le kit d’interface utilisateur, vous pouvez récupérer et insérer les composants répertoriés ici directement dans votre conception et voir d’autres exemples d’utilisation de chaque composant.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>Alerte
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="Exemple de composant d’interface utilisateur d’alerte." border="false":::
+:::image type="content" source="../../assets/images/components/alert-button.png" alt-text="Exemple de composant d’interface utilisateur d’alerte." border="false":::
 
 ## <a name="button"></a>Bouton
 
@@ -70,7 +70,7 @@ Basé sur <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank"
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="Exemple de composant d’interface utilisateur de liste de groupes." border="false":::
 
-## <a name="hyperlink"></a>Lien hypertexte
+## <a name="hyperlink"></a>Hyperlink
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="Exemple de composant d’interface utilisateur de lien hypertexte." border="false":::
 

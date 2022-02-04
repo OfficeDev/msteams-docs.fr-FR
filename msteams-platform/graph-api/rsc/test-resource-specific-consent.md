@@ -6,33 +6,211 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Autorisation teams OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: fe3819b0da9783a6cf3aacac08a6045337e27600
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 8bde324791199d1369c5accf454774cdc1c9a828
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212481"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362927"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
 > [!NOTE]
-> Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs publics uniquement.
+> Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation pour les développeurs publics](../../resources/dev-preview/developer-preview-intro.md) uniquement.
 
-Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques (équipes ou conversations) au sein d’une organisation. Pour plus d’informations, voir consentement spécifique à la [ressource (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques (équipes ou conversations) au sein d’une organisation. Pour plus d’informations, voir [consentement spécifique aux ressources (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
-> [!NOTE]
-> Pour tester les autorisations RSC, votre fichier manifeste d’application Teams doit inclure une clé **webApplicationInfo** remplie avec les champs suivants :
->
-> - **id :** votre ID Azure AD’application, voir Inscrire votre [application dans le portail Azure AD.](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)
-> - **ressource**: n’importe quelle chaîne, voir la remarque dans Mettre à [jour votre Teams manifeste d’application.](resource-specific-consent.md#update-your-teams-app-manifest)
-> - **autorisations d’application**: autorisations RSC pour votre application, voir [Autorisations propres aux ressources.](resource-specific-consent.md#resource-specific-permissions)
+## <a name="prerequisites"></a>Conditions préalables
 
-## <a name="example-for-a-team"></a>Exemple pour une équipe
+Assurez-vous de vérifier les modifications de manifeste d’application suivantes pour le consentement spécifique aux ressources avant de tester :
+
+<br>
+
+<details>
+
+<summary><b>Autorisations RSC pour la version 1.12 du manifeste d’application</b></summary>
+
+Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) au manifeste de votre application avec les valeurs suivantes :
+
+|Nom| Type | Description|
+|---|---|---|
+|`id` |Chaîne |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|Chaîne| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
+
+Spécifiez les autorisations requises par l’application.
+
+|Nom| Type | Description|
+|---|---|---|
+|`authorization`|Objet|Liste des autorisations dont l’application a besoin pour fonctionner. Pour plus d’informations, voir [autorisation](../../resources/schema/manifest-schema.md#authorization).|
+
+Exemple pour RSC dans une équipe
+
 ```json
-"webApplicationInfo":{
-    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource":"https://AnyString",
-    "applicationPermissions":[
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamMember.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Group",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+
+Exemple de RSC dans une conversation
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "ChatSettings.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatSettings.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMessage.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMember.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Chat.Manage.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.AccessMedia.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.JoinGroupCalls.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+    
+> [!NOTE]
+> Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste `authorization`sous .
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>Autorisations RSC pour la version 1.11 ou antérieure du manifeste d’application</b></summary>
+
+Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) au manifeste de votre application avec les valeurs suivantes :
+
+|Nom| Type | Description|
+|---|---|---|
+|`id` |Chaîne |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
+|`applicationPermissions`|Tableau de chaînes|Autorisations RSC pour votre application. Pour plus d’informations, [voir autorisations spécifiques aux ressources](resource-specific-consent.md#resource-specific-permissions).|
+
+Exemple pour RSC dans une équipe
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
         "TeamSettings.Read.Group",
         "TeamSettings.ReadWrite.Group",
         "ChannelSettings.Read.Group",
@@ -48,15 +226,16 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
         "TeamMember.Read.Group",
         "TeamsActivity.Send.Group"
     ]
-   }
+  }
 ```
 
-## <a name="example-for-a-chat"></a>Exemple pour une conversation
+Exemple de RSC dans une conversation
+
 ```json
-"webApplicationInfo":{
-    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource":"https://AnyString",
-    "applicationPermissions":[
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
         "ChatSettings.Read.Chat",
         "ChatSettings.ReadWrite.Chat",
         "ChatMessage.Read.Chat",
@@ -72,39 +251,44 @@ Le consentement spécifique aux ressources (RSC) est une intégration d’API Mi
         "Calls.JoinGroupCalls.Chat",
         "TeamsActivity.Send.Chat"
     ]
-   }
+  }
 ```
+
+<br>
+
+> [!NOTE]
+> Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste `applicationPermissions`sous .
+    
+</details>
 
 > [!IMPORTANT]
 > Dans le manifeste de votre application, incluez uniquement les autorisations RSC dont vous souhaitez que votre application soit propriétaire.
 
->[!NOTE]
->Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste sous `applicationPermissions` .
-
->Si l’application est destinée à accéder aux API d’appel/de média, il doit s’agit de `webApplicationInfo.Id` l’ID Azure AD’application [d’un service de bot Azure.](/graph/cloud-communications-get-started#register-a-bot)
+> [!NOTE]
+> Si l’application est destinée à accéder aux API d’appel/multimédia, `webApplicationInfo.Id` il doit s’agit de l’ID Azure AD’application [d’un service de bot Azure](/graph/cloud-communications-get-started#register-a-bot).
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Test ajout d’autorisations RSC à une équipe à l’aide de l’application Postman
 
-Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le code de [test JSON RSC](test-team-rsc-json-file.md) pour l’équipe dans votre environnement local et mettre à jour les valeurs suivantes :
+Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le [code de test JSON RSC](test-team-rsc-json-file.md) pour l’équipe dans votre environnement local et mettre à jour les valeurs suivantes :
 
 * `azureADAppId`: ID d’Azure AD application de votre application.
 * `azureADAppSecret`: votre mot Azure AD application.
-* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
+* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default.
 * `teamGroupId`: vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
-    1. Dans le Teams client, **sélectionnez Teams** dans la barre de navigation à l’extrême gauche.
+    1. Dans le Teams client, sélectionnez **Teams** dans la barre de navigation à l’extrême gauche.
     2. Sélectionnez l’équipe où l’application est installée dans le menu déroulant.
     3. Sélectionnez **l’icône Options** supplémentaires (&#8943;).
-    4. Sélectionnez **Obtenir un lien vers l’équipe.** 
+    4. **Sélectionnez Obtenir un lien vers l’équipe**. 
     5. Copiez et enregistrez **la valeur groupId** à partir de la chaîne.
 
 ## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>Test ajout d’autorisations RSC à une conversation à l’aide de l’application Postman
 
-Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le code de [test JSON RSC](test-chat-rsc-json-file.md) pour les conversations dans votre environnement local et mettre à jour les valeurs suivantes :
+Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le [code de test JSON RSC](test-chat-rsc-json-file.md) pour les conversations dans votre environnement local et mettre à jour les valeurs suivantes :
 
 * `azureADAppId`: ID d’Azure AD application de votre application.
 * `azureADAppSecret`: votre mot Azure AD application.
-* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default .
+* `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default.
 * `tenantId`: nom ou ID Azure AD’objet de votre client.
 * `chatId`: vous pouvez obtenir l’ID de thread de conversation à partir Teams *client web* comme suit :
 
@@ -115,10 +299,10 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de de
 
 ### <a name="use-postman"></a>Utiliser Postman
 
-1. Ouvrez [l’application Postman.](https://www.postman.com)
-2. Sélectionnez   >  **le fichier**  >  **d’importation de** fichiers pour télécharger le fichier JSON mis à jour à partir de votre environnement.  
-3. Sélectionnez **l’onglet Collections.** 
-4. Sélectionnez le chevron en regard du test RSC pour développer l’affichage des **>** détails et afficher les demandes d’API. 
+1. Ouvrez [l’application Postman](https://www.postman.com) .
+2. **Sélectionnez fichier** **FileImportImport** >  >  pour télécharger le fichier JSON mis à jour à partir de votre environnement.  
+3. Sélectionnez **l’onglet Collections** . 
+4. Sélectionnez le chevron **>** en regard du **test RSC** pour développer l’affichage des détails et afficher les demandes d’API.
 
 Exécutez l’ensemble de la collection d’autorisations pour chaque appel d’API. Les autorisations que vous avez spécifiées dans le manifeste de votre application doivent réussir, tandis que celles qui ne sont pas spécifiées doivent échouer avec un code d’état HTTP 403. Vérifiez tous les codes d’état de réponse pour vérifier que le comportement des autorisations RSC dans votre application répond aux attentes.
 

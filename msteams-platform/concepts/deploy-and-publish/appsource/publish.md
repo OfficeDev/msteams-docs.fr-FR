@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a05ff22944756151842a58fa0cd955c61d2c1c5c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2949d8611600b8841a5a4e3e945c5944f0b11f49
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888516"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362808"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publier votre application dans le Microsoft Teams store
 
-Vous pouvez distribuer votre application directement dans le Store Microsoft Teams et atteindre des millions d’utilisateurs dans le monde entier. Si votre application est également présente dans le Store, vous pouvez immédiatement atteindre les clients potentiels.
+Vous pouvez distribuer votre application directement dans le Store Microsoft Teams et atteindre des millions d’utilisateurs dans le monde entier. Si votre application est également présente dans le Store, vous pouvez immédiatement atteindre des clients potentiels.
 
-Les applications publiées dans Teams store sont également automatiquement répertoriées sur [Microsoft AppSource,](https://appsource.microsoft.com)qui est la place de marché officielle pour Microsoft 365 applications et solutions.
+Les applications publiées dans Teams store sont également automatiquement répertoriées sur [Microsoft AppSource](https://appsource.microsoft.com), qui est la place de marché officielle pour Microsoft 365 applications et solutions.
 
 ## <a name="understand-the-publishing-process"></a>Comprendre le processus de publication
 
@@ -28,11 +28,11 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 > [!TIP]
 > Le fait de suivre attentivement les étapes préalables à la soumission peut augmenter le risque que Microsoft approuve votre application pour publication.
 
-1. [Examinez les Teams de validation](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) du Store pour vous assurer que votre application répond Teams et aux normes du Store.
-1. [Créez un compte de développeur de l’Espace partenaires.](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
-1. [Préparez votre soumission au Store,](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)qui inclut l’exécution de tests automatisés, la compilation de notes de test, la création d’une liste de magasins, entre autres tâches importantes pour accélérer le processus de révision.
+1. [Examinez les Teams de validation du Store](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) pour vous assurer que votre application répond Teams et aux normes du Store.
+1. [Créez un compte de développeur de l’Espace partenaires](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
+1. [Préparez votre soumission au Store](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), qui inclut l’exécution de tests automatisés, la compilation de notes de test, la création d’une liste de magasins, entre autres tâches importantes pour accélérer le processus de révision.
 1. [Soumettez votre application via](/office/dev/store/add-in-submission-guide) l’Partner Center.
-1. Si votre soumission échoue, travaillez directement avec Microsoft pour résoudre les problèmes et soumettre à nouveau [votre application.](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+1. Si votre soumission échoue, travaillez directement avec Microsoft pour résoudre les problèmes et soumettre à nouveau [votre application](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
    :::column-end:::
    :::column span="1":::
@@ -56,3 +56,4 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 * [Publier votre application Teams sur votre organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 * [Planifier l’expérience d’intégration pour les utilisateurs](../../design/understand-use-cases.md#plan-the-onboarding-experience)
 * [Distribution d’applications d’onglets sur un appareil mobile](../../../tabs/design/tabs-mobile.md#distribution)
+* [Aperçu de test pour les applications monétisées](prepare/Test-preview-for-monetized-apps.md)

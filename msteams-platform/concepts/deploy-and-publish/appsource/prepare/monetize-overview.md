@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 545336a058e8b3d11da5b4ed737e0eb8f1cf2aa6
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 8bf223dbb2ff63eca1ae466354c854af6466e523
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323256"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362899"
 ---
 # <a name="monetize-your-app"></a>Monétiser votre application
 
@@ -20,7 +20,7 @@ Microsoft Teams App Store fournit des fonctionnalités qui vous permettent de mo
 
 :::row:::
     :::column:::
-        ![Facturer un prix pour votre application](~/assets/images/saas-offer/pricing-charge-price.png)
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Facturer un prix pour votre application":::
     :::column-end:::
     :::column span="2":::
 
@@ -33,7 +33,7 @@ Avec une offre [SaaS (Software-as-a-Service)](~/concepts/deploy-and-publish/apps
 
 :::row:::
     :::column:::
-![Essais gratuits](~/assets/images/saas-offer/pricing-free-trial.png)
+     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="Essais gratuits":::
     :::column-end:::
     :::column span="2":::
 
@@ -41,6 +41,33 @@ Avec une offre [SaaS (Software-as-a-Service)](~/concepts/deploy-and-publish/apps
 
 Vous pouvez proposer une version d’essai gratuite de votre application pour que davantage de clients l’essaient. Pour inciter les clients à acheter la version complète, vous pouvez limiter les fonctionnalités de la version d’essai (par exemple, en incluant uniquement un nombre limité de réponses pour une semaine) ou spécifier une période pour la version d’essai.
 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test de l’offre SaaS d’aperçu":::
+    :::column-end:::
+    :::column span="2":::
+
+**Aperçu de test pour l’application monétisée**
+
+Avec une offre SaaS (Software as a Service) transactable, vous pouvez tester l’expérience d’achat de bout en bout pour vos applications monétisées dans Teams avant de publier.
+
+[Aperçu de test pour les applications monétisées](Test-preview-for-monetized-apps.md)
+
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![Achats dans l’application](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+    :::column-end:::
+    :::column span="2":::
+**Achats dans l’application**
+
+Que vous facturez un prix pour votre application ou que vous la proposiez gratuitement, vous pouvez utiliser des achats in-app dans votre application pour fournir un flux de revenus continu. Utilisez les achats dans l’application pour laisser les clients passer d’une version gratuite à une version payante de votre application.
+
+[Utiliser des achats dans l’application](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
     :::column-end:::
 :::row-end:::
 
