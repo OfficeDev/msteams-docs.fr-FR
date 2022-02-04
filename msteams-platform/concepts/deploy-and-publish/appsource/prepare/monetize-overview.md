@@ -5,13 +5,8 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 8bf223dbb2ff63eca1ae466354c854af6466e523
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362899"
 ---
+
 # <a name="monetize-your-app"></a>Monétiser votre application
 
 Microsoft Teams App Store fournit des fonctionnalités qui vous permettent de monétiser vos applications et de gagner des clients en impliquant vos utilisateurs. Les rubriques de cette section vous montrent comment créer ces fonctionnalités dans votre application.
@@ -45,6 +40,18 @@ Vous pouvez proposer une version d’essai gratuite de votre application pour qu
 :::row-end:::
 :::row:::
     :::column:::
+        ![Achats dans l’application](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+    :::column-end:::
+    :::column span="2":::
+**Achats dans l’application**
+
+Que vous facturez un prix pour votre application ou que vous la proposiez gratuitement, vous pouvez utiliser des achats in-app dans votre application pour fournir un flux de revenus continu. Utilisez les achats dans l’application pour laisser les clients passer d’une version gratuite à une version payante de votre application.
+
+[Utiliser des achats dans l’application](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
         :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test de l’offre SaaS d’aperçu":::
     :::column-end:::
     :::column span="2":::
@@ -57,20 +64,6 @@ Avec une offre SaaS (Software as a Service) transactable, vous pouvez tester l�
 
     :::column-end:::
 :::row-end:::
-
-:::row:::
-    :::column:::
-        ![Achats dans l’application](~/assets/images/saas-offer/pricing-in-app-purchases.png)
-    :::column-end:::
-    :::column span="2":::
-**Achats dans l’application**
-
-Que vous facturez un prix pour votre application ou que vous la proposiez gratuitement, vous pouvez utiliser des achats in-app dans votre application pour fournir un flux de revenus continu. Utilisez les achats dans l’application pour laisser les clients passer d’une version gratuite à une version payante de votre application.
-
-[Utiliser des achats dans l’application](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-    :::column-end:::
-:::row-end:::
-
 ## <a name="next-step"></a>Étape suivante
 
 [Inclure une offre SaaS avec votre application Microsoft Teams application](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

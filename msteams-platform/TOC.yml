@@ -471,6 +471,10 @@
           href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: Inclure une offre SaaS avec votre application
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+        - name: Achats dans l'application
+          href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+        - name: Aperçu de test pour les applications monétisées
+          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: Manifeste d'application
   items:
     - name: Schéma de manifeste d’application

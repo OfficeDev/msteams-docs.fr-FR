@@ -6,13 +6,8 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Requête de signal de notification de contexte utilisateur de l’api de rôle de participant aux réunions teams
-ms.openlocfilehash: 2335233db1c973ed134968c7192a32d4bf9b5a34
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362724"
 ---
+
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
 L’extensibilité de réunion fournit des API pour améliorer l’expérience de réunion. Vous pouvez effectuer les choses suivantes à l’aide des API répertoriées :
@@ -28,12 +23,12 @@ Le tableau suivant fournit une liste des API disponibles dans les SDK Microsoft 
 |[**Obtenir le contexte utilisateur**](#get-user-context-api)| Obtenez des informations contextuelles pour afficher le contenu pertinent dans Teams onglet.| MSTC SDK|
 |[**Obtenir des Participants**](#get-participant-api)| Récupérer les informations des participants par ID de réunion et ID de participant. |MSBF SDK|
 |[**Envoyer un signal de notification**](#send-notification-signal-api)| Fournir des signaux de réunion à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot et permet d’avertir l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. |MSBF SDK|
-|[**Obtenir les détails de la réunion**](#get-meeting-details-api)| Obtenir les métadonnées statiques d’une réunion. |Bot SDK |
+|[**Obtenir les détails de la réunion**](#get-meeting-details-api)| Obtenir les métadonnées statiques d’une réunion. |MSBF SDK |
 |[**Envoyer des légendes en temps réel**](#send-real-time-captions-api)| Envoyer des légendes en temps réel à une réunion en cours. |MSTC SDK|
 |[**Partager du contenu d’application pour la phase**](#share-app-content-to-stage-api)| Partagez des parties spécifiques de l’application pour la phase de réunion à partir du volet côté application d’une réunion. |MSTC SDK|
 |[**Obtenir l’état de partage de la phase de contenu de l’application**](#get-app-content-stage-sharing-state-api)| Récupérer des informations sur l’état de partage des applications lors de la phase de réunion. |MSTC SDK|
 |[**Obtenir les fonctionnalités de partage de la phase de contenu de l’application**](#get-app-content-stage-sharing-capabilities-api)| Récupérer les fonctionnalités des applications pour le partage à l’étape de la réunion. |MSTC SDK|
-|[**Obtenir des événements de réunion Teams en temps réel**](#get-real-time-teams-meeting-events-api)|Récupérer les événements de réunion en temps réel, tels que l’heure réelle de début et de fin.| Bot SDK|
+|[**Obtenir des événements de réunion Teams en temps réel**](#get-real-time-teams-meeting-events-api)|Récupérer les événements de réunion en temps réel, tels que l’heure réelle de début et de fin.| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>API Obtenir le contexte utilisateur
 
@@ -54,7 +49,7 @@ Le tableau suivant inclut les paramètres de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
 |**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l’sso tabulation. |
 |**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l’sso onglet. |
 
@@ -380,7 +375,7 @@ L’URL CART inclut les paramètres de requête suivants :
 |Valeur|Type|Requis|Description|
 |---|---|----|----|
 |**meetingId**| Chaîne | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
-|**token**| String | Oui |Jeton d’autorisation.<br/> Par exemple, token=04751eac |
+|**token**| Chaîne | Oui |Jeton d’autorisation.<br/> Par exemple, token=04751eac |
 
 #### <a name="example"></a>Exemple
 

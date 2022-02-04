@@ -5,13 +5,8 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 455809e64a934384d28e00bdf721ae8c66cb7d19
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62363438"
 ---
+
 # <a name="in-app-purchases"></a>Achats dans l’application
 
 Microsoft Teams des API que vous pouvez utiliser pour implémenter les achats in-app afin de passer de la version gratuite à la version payante Teams applications. L’achat dans l’application vous permet de convertir des utilisateurs de plans gratuits en plans payants directement à partir de votre application.
@@ -106,6 +101,10 @@ L’exemple suivant montre aux utilisateurs d’acheter des plans d’abonnement
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement." border="true":::
 
+## <a name="next-step"></a>Étape suivante
+
+> [!div class="nextstepaction"]
+> [Aperçu de test pour les applications monétisées](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>Voir aussi
 
