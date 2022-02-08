@@ -6,13 +6,8 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation oAuth d’autorisation oAuth Azure AD rsc Graph
-ms.openlocfilehash: 25b8a8b4ab04f2ff3a574a1e6c4422b38aaa977d
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362752"
 ---
+
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
 > [!NOTE]
@@ -91,9 +86,9 @@ Pour plus d’informations, voir [autorisations de consentement](/graph/permissi
 
 ### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>Configurer les paramètres de consentement du propriétaire du groupe pour RSC dans une équipe
 
-Vous pouvez activer ou [désactiver le consentement](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) du propriétaire du groupe directement dans le portail Azure :
+Vous pouvez activer ou [désactiver le consentement](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) du propriétaire du groupe directement dans Microsoft Azure portail :
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) en tant [qu’administrateur général ou administrateur d’entreprise](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Connectez-vous au [portail Microsoft Azure en](https://portal.azure.com) tant [qu’administrateur général ou administrateur d’entreprise](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. **Sélectionnez Azure Active Directory** >  **Enterprise applicationsConsent** >  **et les paramètres de consentement permissionsUser** > .[](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)
 1. Activer, désactiver ou limiter le consentement de l’utilisateur avec le consentement du propriétaire du groupe étiqueté pour les applications accédant **aux données**. La valeur par défaut **est Autoriser le consentement du propriétaire du groupe pour tous les propriétaires du groupe**. Pour qu’un propriétaire d’équipe installe une application à l’aide de RSC, le consentement du propriétaire du groupe doit être activé pour cet utilisateur.
 
@@ -103,9 +98,9 @@ En outre, vous pouvez activer ou désactiver le consentement du propriétaire du
 
 ### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>Configurer les paramètres de consentement de l’utilisateur pour RSC dans une conversation
 
-Vous pouvez activer ou désactiver le consentement de [l’utilisateur](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directement dans le portail Azure :
+Vous pouvez activer ou désactiver le consentement de [l’utilisateur](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directement dans Microsoft Azure portail :
 
-1. Connectez-vous au [portail Azure](https://portal.azure.com) en tant [qu’administrateur général ou administrateur d’entreprise](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Connectez-vous au [portail Microsoft Azure en](https://portal.azure.com) tant [qu’administrateur général ou administrateur d’entreprise](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. **Sélectionnez Azure Active Directory** >  **Enterprise applicationsConsent** >  **et les paramètres de consentement permissionsUser** > .[](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)
 1. Activer, désactiver ou limiter le consentement de l’utilisateur avec le consentement utilisateur étiqueté pour **le contrôle pour les applications**. La valeur par défaut **est Autoriser le consentement de l’utilisateur pour les applications**. Pour qu’un membre de conversation installe une application à l’aide de RSC, le consentement de l’utilisateur doit être activé pour cet utilisateur.
 
@@ -159,8 +154,8 @@ Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#
 
 |Nom| Type | Description|
 |---|---|---|
-|`id` |Chaîne |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|Chaîne| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
+|`id` |String |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
 
 Spécifiez les autorisations requises par l’application.
 
@@ -327,8 +322,8 @@ Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#
 
 |Nom| Type | Description|
 |---|---|---|
-|`id` |Chaîne |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|Chaîne| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
+|`id` |String |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
 |`applicationPermissions`|Tableau de chaînes|Autorisations RSC pour votre application. Pour plus d’informations, [voir autorisations spécifiques aux ressources](resource-specific-consent.md#resource-specific-permissions).|
 
 Exemple pour RSC dans une équipe

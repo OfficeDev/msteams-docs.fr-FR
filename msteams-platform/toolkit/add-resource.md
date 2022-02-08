@@ -17,14 +17,14 @@ TeamsFx vous aide à mettre en service des ressources cloud pour l’hébergemen
 [Installez Teams Shared Computer Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Assurez-vous que Teams projet d’application est VS Code.
+> Assurez-vous que vous Teams projet d’application dans Visual Studio Code.
 
 ## <a name="add-cloud-resources-using-teams-toolkit"></a>Ajouter des ressources cloud à l’aide Teams Shared Computer Toolkit
 
 > [!IMPORTANT]
 > Vous devez mettre en service chaque environnement après avoir ajouté une ressource.
 
-1. **Ouvrez Visual Studio Code**.
+1. **Ouvrez Microsoft Visual Studio Code**.
 1. **Sélectionnez Teams Shared Computer Toolkit** dans le volet gauche.
 1. Dans le Teams Shared Computer Toolkit barre latérale, **sélectionnez Ajouter des ressources cloud** :
 
@@ -76,7 +76,7 @@ Après avoir ajouté des ressources, les modifications supplémentaires apporté
 
 |Ressources|Modifications|Description|
 |---------------|---------------|-----------------------------|
-|Fonctions Azure|Un code de modèle de fonctions Azure est ajouté dans un sous-foldeur avec chemin d’accès `yourProjectFolder/api`</br></br>`launch.json` et `task.json` mis à jour sous le `.vscode` dossier.| Inclut un modèle de déclencheur Http Hello World dans votre projet.</br></br> Inclut les scripts nécessaires Visual Studio Code à exécuter lorsque vous souhaitez déboguer votre application localement.|
+|Fonctions Azure|Un code de modèle de fonctions Azure est ajouté dans un sous-foldeur avec chemin d’accès `yourProjectFolder/api`</br></br>`launch.json` et `task.json` mis à jour sous le `.visual studio code` dossier.| Inclut un modèle de déclencheur Http Hello World dans votre projet.</br></br> Inclut les scripts nécessaires Visual Studio Code à exécuter lorsque vous souhaitez déboguer votre application localement.|
 |Gestion des API Azure|Fichier de spécification d’API ouvert ajouté dans un sous-dossier avec chemin d’accès `yourProjectFolder/openapi`|Définit votre API après la publication, il s’agit du fichier de spécification d’API.|
 
 ## <a name="limitation"></a>Restriction

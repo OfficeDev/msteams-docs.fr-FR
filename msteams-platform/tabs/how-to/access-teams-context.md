@@ -4,20 +4,15 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212418"
 ---
+
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
 Votre onglet nécessite des informations contextuelles pour afficher le contenu pertinent :
 
 * Informations de base sur l’utilisateur, l’équipe ou l’entreprise.
 * Informations sur les paramètres régionaux et le thème.
-* Lisez `entityId` ou identifie ce qui se trouve dans cet `subEntityId` onglet.
+* Lisez ou `entityId` identifie `subEntityId` ce qui se trouve dans cet onglet.
 
 ## <a name="user-context"></a>Contexte utilisateur
 
@@ -43,11 +38,11 @@ Vous pouvez accéder aux informations de contexte de deux façons :
 Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Microsoft Teams remplace les espaces réservés par les valeurs appropriées lorsqu’il détermine l’URL de configuration ou de contenu. Les espaces disponibles incluent tous les champs de [l’objet de](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) contexte. Voici les scénarios les plus courants :
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
-* {subEntityId}: ID que vous [avez](~/concepts/build-and-test/deep-links.md) fourni lors de la génération d’un lien profond pour un élément spécifique dans cet onglet. Cela doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, le défilement vers ou l’activation d’un élément de contenu spécifique.
+* {subEntityId}: ID que [vous avez fourni](~/concepts/build-and-test/deep-links.md) lors de la génération d’un lien profond pour un élément spécifique dans cet onglet. Cela doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, le défilement vers ou l’activation d’un élément de contenu spécifique.
 * {loginHint}: valeur appropriée comme conseil de connexion pour Azure AD. Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel dans le client actuel.
 * {userObjectId}: ID Azure AD’objet de l’utilisateur actuel dans le client actuel.
-* {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default` que , `dark` ou `contrast` .
+* {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default`que , `dark`ou `contrast`.
 * {groupId}: ID du groupe Office 365 dans lequel réside l’onglet.
 * {tid}: ID de client Azure AD de l’utilisateur actuel.
 * {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId(en-us).
@@ -55,12 +50,12 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 > [!NOTE]
 > L’espace réservé `{upn}`précédent est désormais supprimé. Pour des raisons de compatibilité ascendante, il s'agit actuellement d'un synonyme de `{loginHint}`.
 
-Par exemple, dans le manifeste de votre onglet, vous définissez l’attribut sur , l’utilisateur qui est inscrit `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` possède les attributs suivants :
+Par exemple, dans le manifeste de votre onglet `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`, vous définissez l’attribut sur , l’utilisateur qui est inscrit possède les attributs suivants :
 
 * Leur nom d’utilisateur **est user@example.com**.
-* Leur ID de locataire d’entreprise **est e2653c-etc.**
-* Ils sont membres du groupe Office 365 avec l’ID **00209384-etc.**
-* L’utilisateur a Teams thème **foncé.**
+* Leur ID de locataire d’entreprise **est e2653c-etc**.
+* Ils sont membres du groupe Office 365 avec l’ID **00209384, etc**.
+* L’utilisateur a Teams **thème foncé.**
 
 Lorsqu’ils configurent l’onglet, Teams appelle l’URL suivante :
 
@@ -86,7 +81,7 @@ Le code suivant fournit un exemple de variable de contexte :
     "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
-    "groupId": "Guid identifying the current O365 Group ID",
+    "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
     "teamType": "The type of team",
@@ -118,7 +113,7 @@ Le code suivant fournit un exemple de variable de contexte :
 > [!Note]
 > Les canaux privés sont actuellement en prévisualisation du développeur privé.
 
-Lorsque votre page de contenu est chargée dans un canal privé, les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité `getContext` du canal. 
+Lorsque votre page de contenu est chargée dans un canal privé, `getContext` les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité du canal. 
 
 Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé :
 
@@ -129,16 +124,16 @@ Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans 
 * `teamSitePath`: Définir sur le chemin d’accès d’un site SharePoint distinct et unique pour le canal privé
 * `teamSiteDomain`: Définir sur le domaine d’un domaine de site SharePoint distinct et unique pour le canal privé
 
-Si votre page utilise l’une de ces valeurs, vous devez vérifier le champ pour déterminer si votre page est chargée dans un canal privé et y `channelType` répondre de manière appropriée.
+Si votre page utilise l’une de ces valeurs, `channelType` vous devez vérifier le champ pour déterminer si votre page est chargée dans un canal privé et y répondre de manière appropriée.
 
 > [!Note]
 > `teamSiteUrl` fonctionne également bien pour les canaux standard.
 
 ## <a name="handle-theme-change"></a>Gérer la modification du thème
 
-Vous pouvez inscrire votre application pour être informée si le thème change en `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` appelant.
+Vous pouvez inscrire votre application pour être informée si le thème change en appelant `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-`theme`L’argument dans la fonction est une chaîne avec une valeur de , ou `default` `dark` `contrast` .
+L’argument `theme` dans la fonction est une chaîne avec une valeur `default`de , `dark`ou `contrast`.
 
 ## <a name="next-step"></a>Étape suivante
 

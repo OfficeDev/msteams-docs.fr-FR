@@ -2,16 +2,8 @@
 title: Configurer votre environnement dev pour l’extension Teams applications à travers Microsoft 365
 description: Voici les conditions préalables à l’extension de vos applications Teams à travers Microsoft 365
 ms.date: 11/15/2021
-ms.topic: how-to
-ms.custom: m365apps
-ms.openlocfilehash: e024b11f03c605144a5d1cac6904cdd0095ec15c
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281699"
 ---
-# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>Configurer votre environnement dev pour l’extension Teams applications sur M365
+# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurer votre environnement dev pour l’extension Teams applications à travers Microsoft 365
 
 > [!NOTE]
 > Étendre l’application Teams Microsoft 365 est actuellement disponible uniquement en [prévisualisation pour les développeurs publics](~/resources/dev-preview/developer-preview-intro.md).
@@ -21,11 +13,11 @@ L’environnement de développement pour l’extension Teams applications à tra
 Pour la configuration de votre environnement de développement :
 
 > [!div class="checklist"]
-> * [Obtenir le client développeur M365 (bac à sable) et activer le chargement indépendant](#prepare-a-developer-tenant-for-testing)
-> * [Inscrire votre client M365 dans *des Office 365 ciblées*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [Obtenir Microsoft 365 développeur (bac à sable) et activer le chargement indépendant](#prepare-a-developer-tenant-for-testing)
+> * [Inscrire votre client Microsoft 365 client dans *les Office 365 de publication ciblées*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configurer votre compte pour accéder aux versions d’aperçu Outlook et Office](#install-office-apps-in-your-test-environment)
 > * [Basculer vers la version d’aperçu du développeur de Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Facultatif*] [Installer Teams Shared Computer Toolkit extension de Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*Facultatif*] [Installer Teams Shared Computer Toolkit extension de Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>Préparer un client développeur pour le test
 

@@ -25,7 +25,7 @@ Les guides suivants vous aident à créer un projet d’application Teams à l�
 
  Vous pouvez créer un projet à partir **d’exemples de galerie**. Sélectionnez l’exemple requis pour créer des applications. Les étapes suivantes vous guident pour créer des applications à partir d’exemples :
 
- 1. **Ouvrez Teams Shared Computer Toolkit** à partir Visual Studio Code.
+ 1. **Ouvrez Teams Shared Computer Toolkit** à partir Microsoft Visual Studio Code.
  1. Sélectionnez **la** section DÉVELOPPEMENT dans l’arborescence.
  1. **Sélectionnez Afficher les exemples**. L’exemple de galerie apparaît comme illustré dans l’image suivante :
    

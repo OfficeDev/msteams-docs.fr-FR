@@ -2,7 +2,7 @@
 title: Bulle de contenu de réunion
 metadata:
   title: Bulle de contenu de réunion
-  description: Dans ce didacticiel, vous allez apprendre à envoyer une réponse à une bulle de contenu de réunion Teams.
+  description: 'Dans ce didacticiel, vous allez apprendre à envoyer une réponse à une bulle de contenu de réunion Teams.'
   audience: Developer
   level: Beginner
   ms.date: 12/03/2021
@@ -11,78 +11,431 @@ metadata:
   nextTutorialTitle: En savoir plus pour activer et configurer des applications pour les réunions
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: c5667daf6685e0ddc0a5f5ce478ed9ef1be8a912
-  ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
-  ms.translationtype: MT
-  ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/31/2022
-  ms.locfileid: "62281928"
 items:
-- durationInMinutes: 1
-  content: >
-    Microsoft Teams vous permet d’interagir avec le bot de bulles de contenu Teams réunion.
+  - durationInMinutes: 1
+    content: |
+      Microsoft Teams vous permet d’interagir avec le bot de bulles de contenu Teams réunion.
 
+      > [!NOTE]
+      > La bulle de contenu de réunion est disponible uniquement pour Azure AD utilisateurs et non pour les utilisateurs anonymes.
 
-    > [!NOTE]
+      **Principales fonctionnalités de la bulle de contenu de réunion**
 
-    > La bulle de contenu de réunion est disponible uniquement pour Azure AD utilisateurs et non pour les utilisateurs anonymes.
+      * Vous verrez les éléments de l’agenda répertoriés dans une carte adaptative.
+      * Vous pouvez sélectionner n’importe quelle option dans l’agenda donné.
+      * Vous pouvez envoyer vos commentaires sur les bulles de contenu ou les cartes adaptatives envoyées dans la conversation.
 
+      Ce guide pas à pas vous permet d’envoyer des commentaires au bot de bulles de contenu lors de réunions Teams avec des participants. Vous verrez le résultat suivant :
 
-    **Principales fonctionnalités de la bulle de contenu de réunion**
+         ![Introduction aux bulles de contenu de réunion](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
+  - title: Conditions préalables
+    durationInMinutes: 1
+    content: |
+      Veillez à installer les outils suivants et à configurer votre environnement de développement :  
 
+      * Microsoft Teams avec un compte valide
+      * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+      * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+      * [ngrok](https://ngrok.com/download) dernière version (uniquement pour le test de la boîte de développement) ou toute solution de tunneling équivalente
 
-    * Vous verrez les éléments de l’agenda répertoriés dans une carte adaptative.
+        > [!NOTE]
+        > Après avoir téléchargé ngrok, inscrivez-vous et installez [authtoken](https://ngrok.com/download).
 
-    * Vous pouvez sélectionner n’importe quelle option dans l’agenda donné.
+      Assurez-vous de bien connaître les [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+  - title: Configurer l’environnement local
+    durationInMinutes: 1
+    content: |
+      Clonez `Microsoft-Teams-Samples` le référentiel dans votre GitHub :  
 
-    * Vous pouvez envoyer vos commentaires sur les bulles de contenu ou les cartes adaptatives envoyées dans la conversation.
+       1. Ouvrez [Microsoft Teams exemples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+       1. **Sélectionnez Code**.
+       1. Dans le menu déroulant, sélectionnez **Ouvrir avec GitHub Bureau**.
 
+          ![Référentiel de clones](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository1.png)
 
-    Ce guide pas à pas vous permet d’envoyer des commentaires au bot de bulles de contenu lors de réunions Teams avec des participants. Vous verrez le résultat suivant :
+       1. **Sélectionnez Clone**. 
+  - title: Créer et inscrire votre bot sur Azure AD web
+    durationInMinutes: 5
+    content: |
+      Pour créer et inscrire votre bot dans Azure Active Directory, créez un tunnel à l’aide de ngrok et ajoutez un point de terminaison de messagerie, effectuez les étapes suivantes :
 
-       ![Introduction aux bulles de contenu de réunion](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
-- title: Configuration requise
-  durationInMinutes: 1
-  content: "Veillez à installer les outils suivants et à configurer votre environnement de développement :  \n\n* Microsoft Teams avec un compte valide\n* [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) dernière version (uniquement pour le test de la boîte de développement) ou toute solution de tunneling équivalente\n\n  > [!NOTE]\n  > Après avoir téléchargé ngrok, inscrivez-vous et installez [authtoken](https://ngrok.com/download).\n\nAssurez-vous de bien connaître les [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).\n"
-- title: Configurer l’environnement local
-  durationInMinutes: 1
-  content: "Clonez `Microsoft-Teams-Samples` le référentiel dans votre GitHub :  \n\n 1. Ouvrez [Microsoft Teams exemples](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n 1. **Sélectionnez Code**.\n 1. Dans le menu déroulant, sélectionnez **Ouvrir avec GitHub Bureau**.\n\n    ![Référentiel de clones](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository1.png)\n\n 1. **Sélectionnez Clone**. \n"
-- title: Créer et inscrire votre bot sur Azure AD web
-  durationInMinutes: 5
-  content: "Pour créer et inscrire votre bot dans Azure Active Directory, créez un tunnel à l’aide de ngrok et ajoutez un point de terminaison de messagerie, effectuez les étapes suivantes :\n\n* Créez une ressource Azure Bot pour inscrire le bot auprès d’Azure Bot Service.\n* Créez une secret client qui permet l’authentification sso du bot.\n* Ajoutez Microsoft Teams canal pour déployer le bot sur un canal Teams’accès.\n* Utilisez ngrok pour créer un tunnel vers les points de terminaison de votre serveur web.\n* Ajoutez le point de terminaison de messagerie au tunnel ngrok que vous avez créé.\n\n**Pour créer une ressource Azure Bot**\n\n1. Accédez au [Portail Azure](https://portal.azure.com/).\n1. Sélectionnez **Créer une ressource**.\n1. Dans la zone de recherche, entrez **Azure Bot**.\n1. **Sélectionnez Entrée**.\n1. **Sélectionnez Azure Bot**.\n\n     ![Créer une carte de bot Azure](~/assets/images/bots/createazurebot.png)\n\n1. Sélectionnez **Créer**.\n1. Entrez le nom de handle de bot requis dans **le handle bot**.\n1. Dans la **liste de** listes des abonnements, sélectionnez **msteams.nonprod.pub.msft.aplt**.\n1. Dans la liste **de listes** des groupes de ressources, sélectionnez votre groupe de ressources existant. Vous pouvez également créer un nouveau groupe de ressources (sélectionnez **Créer un nouvel** > entrez le nom de la ressource **> ok).**\n\n1. Sélectionnez l’emplacement requis dans **la liste** de listes de listes listes des emplacements du nouveau groupe de ressources.\n\n    ![Créer un bot Azure de ressources](~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png)\n\n1. Dans la section **ID de l’application Microsoft** , l’option Créer un **ID** d’application Microsoft est sélectionnée par défaut. \n\n   Vous pouvez soit sélectionner  Utiliser l’inscription d’application existante et entrer **l’ID** d’application existant et le mot de passe **de** l’application existante, soit sélectionner Créer un **ID d’application Microsoft**.\n\n   > [!NOTE]\n   > Vous ne pouvez pas créer plusieurs bots avec le même **ID d’application Microsoft**.\n\n1. Sélectionnez **Examiner et créer**.\n\n    ![Créer un ID d’application Microsoft](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)\n\n1. Si la validation réussit, sélectionnez **Créer**.\n\n    La mise en service de votre service de bot prend quelques instants.\n\n1. Sélectionnez **Accéder à la ressource**. \n\n    ![Déployer l’application](~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment.png)\n\n    Votre bot Azure est créé.\n\n    ![Ressource de bot Azure créée](~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group.png)\n\n**Pour créer une secret client**\n\n  Effectuez les étapes suivantes si vous avez créé un **ID d’application Microsoft** :\n\n1. Dans le panneau gauche, sélectionnez **Configuration**. \n\n   > [!TIP]\n   > Enregistrez **l’ID d’application Microsoft** ou **l’ID client** pour référence ultérieure.\n\n1. **Sélectionnez Multi-tens sous** **Type de bot**.\n\n   ![ID d’application Microsoft](~/assets/images/meeting-content-bubble/bot-type.png)       \n\n1. En plus de **l’ID de l’application Microsoft**, sélectionnez **Gérer**.\n\n    ![ID d’application Microsoft](~/assets/images/meeting-content-bubble/meeting-content-bubble-view-configuration.png)\n\n1. Dans la section **Secrets client** , sélectionnez **Nouvelle secret client**. \n\n    ![Nouvelle secret client](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)\n\n   La **fenêtre Ajouter une secret client** s’affiche.  \n\n1. Entrez **la description**.\n\n1. Sélectionnez **Ajouter**.\n\n    ![Ajouter une secret client à l’application](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)\n\n1. Dans la **colonne Valeur** , **sélectionnez Copier dans le Presse-papiers**.\n\n     ![Valeur de la secret client](~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret.png)\n   \n   > [!TIP]\n   > Enregistrez la **valeur des secrets client** ou le mot de passe de l’application pour référence ultérieure.\n\n**Pour ajouter le Microsoft Teams canal**\n\n1. Sélectionnez **Accueil**.\n\n1. Sélectionnez votre bot à partir **des ressources récentes**.\n\n1. **Sélectionnez Canaux** dans le volet gauche. \n\n1. **Sélectionnez Microsoft Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n1. Cochez la case pour accepter les **conditions d’utilisation**.\n\n1. **Sélectionnez Accepter**.\n\n      ![Conditions d’utilisation](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)\n\n1. Sélectionnez **Enregistrer**.\n\n      ![Sélectionnez Teams](~/assets/images/meeting-token-generator/config-teams.png)   \n\n**Pour créer un tunnel pour un serveur web local**\n\nUtilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Exécutez la commande suivante dans ngrok :\n\n ```bash\n ngrok http -host-header=localhost 3978\n ```\n\n**Pour ajouter un point de terminaison de messagerie**\n\n1. À partir de ngrok, copiez l’URL HTTPS (https vers io).\n\n    ![URL HTTPS ngrok](~/assets/images/meeting-content-bubble/meeting-content-bubble-messaging-end-point.png)\n\n    > [!NOTE]\n    > L’URL HTTPS dans votre ngrok est votre nom de domaine complet.\n    > Il `WebAppDomain` s’agit d’un nom de domaine complet qui ne l’inclut `https://` pas.\n\n1. Dans **Paramètres** pour le bot Azure que vous avez créé, sélectionnez **Configuration**.\n\n1. Dans **le point de terminaison de messagerie**, utilisez l’URL HTTPS disponible à partir de ngrok et à la fin de l’URL, **ajoutez /api/messages**.\n\n    ![Point de terminaison de messagerie](~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point.png)\n\n1. Sélectionnez **Appliquer**.\n\n    Vous avez correctement installé un bot dans Azure Bot Service.\n"
-- title: Mettre à jour l’Azure AD’inscription de l’application
-  durationInMinutes: 1
-  content: "**Pour inscrire votre application via le portail Azure AD web**  \n\n1. Accédez au [Portail Azure](https://portal.azure.com/).\n\n1. Sélectionnez **Azure Active Directory**.\n\n1. Dans le panneau de navigation de gauche, sélectionnez **Inscriptions d’applications**.\n\n1. Sélectionnez votre bot.\n\n1. Sélectionnez **Exposer une API** sous **Gérer**.\n\n1. Sélectionnez **Définir**.\n\n1. Définissez **l’URI de l’ID d’application** sous la forme `api://{AppID}`.\n\n   ![Lien Définir](~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api.png)\n\n1. Insérez `WebAppDomain` la valeur entre `api://` et `/{AppID}`.</br>\n    `api://****.ngrok.io/{AppID}`</br>\n    \n    ![URI ID d'application](~/assets/images/meeting-content-bubble/meeting-content-bubble-expose-api.png)\n\n    > [!NOTE]\n    > Si vous utilisez un service de tunneling tel que ngrok, veillez à mettre à jour la valeur chaque fois que votre sous-domaine ngrok change.\n    > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, où `f631****.ngrok.io` est le nouveau nom de sous-domaine ngrok.\n\n1. Sélectionnez **Ajouter une étendue**. \n\n    ![Ajouter une étendue](~/assets/images/meeting-content-bubble/selectscope.png)\n\n1. Dans le panneau qui s’affiche, entrez `access_as_user` le nom de **l’étendue**.\n\n1. **Définissez Qui pouvez consentir à** `Admins and users`.\n\n1. Pour configurer les invites de consentement de l’administrateur et de l’utilisateur avec les valeurs `access_as_user` appropriées pour l’étendue, fournissez les informations suivantes dans les champs :</br>\n\n     * Entrez le `Teams can access the user’s profile` **nom complet du consentement de l’administrateur**.\n\n     * Entrez la `Allows Teams to call the app’s web APIs as the current user` **description du consentement de l’administrateur**.\n\n     * Entrez le `Teams can access the user profile and make requests on the user’s behalf` **nom complet du consentement de l’utilisateur**.\n\n     * Entrez en `Enable Teams to call this app’s APIs with the same rights as the user` tant **que description du consentement de l’utilisateur**.\n\n1. Vérifiez que **State** est défini comme **Enabled**.\n\n1. **Sélectionnez Ajouter une étendue** à enregistrer.\n\n    ![Ajouter une étendue](~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user.png)\n\n   > [!NOTE]\n   > Le **nom de l’étendue** doit correspondre à l’URI **de l’ID** d’application avec `/access_as_user` ajouté à la fin.</br>\n       `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`\n\n    ![Portée](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope.png)\n\n1. Dans la section **Applications clientes autorisées**, identifiez les applications que vous souhaitez autoriser pour l'application Web de votre application. \n\n1. Sélectionnez **Ajouter une application cliente**. \n\n    ![Ajouter une application cliente](~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png) \n\n1. Entrez **l’ID client** : `1fec8e78-bce4-4aaf-ab1b-5451cc387264` pour Teams application mobile ou de bureau. \n\n    ![Ajouter l’application cliente 1](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png) \n\n   Vous pouvez entrer **l’ID client** : `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` pour Teams application web.\n\n    ![Ajouter l’application cliente 2](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png) \n\n1. **Sélectionnez les étendues autorisées**.\n\n     ![Ajouter une application cliente](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png)\n\n   L’image suivante affiche les ID clients :\n\n     ![Applications clientes](~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png) \n\n1. Dans le panneau gauche, sélectionnez **Autorisations d’API**. \n\n   > [!NOTE]\n   > Les utilisateurs doivent consentir à ces autorisations uniquement si Azure AD’application est inscrite dans un autre client.\n\n1. Sélectionnez **Ajouter une autorisation**.\n\n1. **Sélectionnez Microsoft Graph**.\n\n1. Sélectionnez **Autorisations déléguées**.\n\n    Par défaut, **User.Read** est sélectionné.\n\n     ![Utilisateur](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)\n\n1. Ajoutez les autorisations suivantes :</br>\n     * **email**\n     * **offline_access**\n     * **OpenId**\n     * **profil**\n\n1. Sélectionnez **Ajouter des autorisations**.\n\n     ![Autres autorisations](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)\n\n1. Dans le panneau gauche, sélectionnez **Authentification** pour définir un URI de redirection. \n\n   > [!NOTE]\n   > Si une application n’est pas accordée au consentement de l’administrateur informatique, les utilisateurs doivent donner leur consentement la première fois qu’ils utilisent une application.\n           \n     1. Sélectionnez **Ajouter une plateforme**.\n     1. Sélectionnez **Web**.\n\n        ![Web](~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web.png)\n\n     1. Entrez l’URI de redirection de votre application en l’aérant `auth-end` au nom de domaine complet :</br> \n       `https://****.ngrok.io/auth-end`. </br>\n\n     1. **Activez l’octroi implicite et les flux hybrides** en sélectionnant les case à cocher suivantes :\n         * **Jetons d’ID**\n         * **Jetons d’accès**\n\n     1. Sélectionnez **Configurer**.\n\n        ![Auth-end](~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web.png)\n"
-- title: Configurer les paramètres de l’application
-  durationInMinutes: 1
-  content: "1. Accédez **à appsettings.json dans** le référentiel cloné.\n\n    ![Emplacement des paramètres de l’application](~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png)\n\n1. **Ouvrez appsettings.json** **Visual Studio 2019** et mettez à jour les informations suivantes :  \n\n     * Définissez `\"MicrosoftAppId\"` ce dernier sur **l’ID d’application Microsoft de votre bot**.\n     * Définissez-la `\"MicrosoftAppPassword\"` sur la valeur de l’ID de la secret client de votre bot.\n     * Définissez `\"BaseURL\"` sur votre `webAppDomain`.\n\n    ![Paramètres de l’application](~/assets/images/meeting-content-bubble/appsettings-json.png)\n"
-- title: Configurer le fichier manifeste
-  durationInMinutes: 1
-  content: >
-    1. Accédez **à manifest.json dans** le référentiel cloné.
+      * Créez une ressource Azure Bot pour inscrire le bot auprès d’Azure Bot Service.
+      * Créez une secret client qui permet l’authentification sso du bot.
+      * Ajoutez Microsoft Teams canal pour déployer le bot sur un canal Teams’accès.
+      * Utilisez ngrok pour créer un tunnel vers les points de terminaison de votre serveur web.
+      * Ajoutez le point de terminaison de messagerie au tunnel ngrok que vous avez créé.
 
+      **Pour créer une ressource Azure Bot**
 
-    1. **Ouvrez manifest.json** **Visual Studio 2019** et a apporté les modifications suivantes :
+      1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+      1. Sélectionnez **Créer une ressource**.
+      1. Dans la zone de recherche, entrez **Azure Bot**.
+      1. **Sélectionnez Entrée**.
+      1. **Sélectionnez Azure Bot**.
 
-         * Définir sur `id``[MicrosoftAppId]`
-         * Définir sur `botId``[MicrosoftAppId]`
-         * Définir sur `validDomains``[WebAppDomainName]`
+           ![Créer une carte de bot Azure](~/assets/images/bots/createazurebot.png)
+
+      1. Sélectionnez **Créer**.
+      1. Entrez le nom de handle de bot requis dans **le handle bot**.
+      1. Dans la **liste de** listes des abonnements, sélectionnez **msteams.nonprod.pub.msft.aplt**.
+      1. Dans la liste **de listes** des groupes de ressources, sélectionnez votre groupe de ressources existant. Vous pouvez également créer un nouveau groupe de ressources (sélectionnez **Créer un nouvel** > entrez le nom de la ressource **> ok).**
+
+      1. Sélectionnez l’emplacement requis dans **la liste** de listes de listes listes des emplacements du nouveau groupe de ressources.
+
+          ![Créer un bot Azure de ressources](~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png)
+
+      1. Dans la section **ID de l’application Microsoft** , l’option Créer un **ID** d’application Microsoft est sélectionnée par défaut. 
+
+         Vous pouvez soit sélectionner  Utiliser l’inscription d’application existante et entrer **l’ID** d’application existant et le mot de passe **de** l’application existante, soit sélectionner Créer un **ID d’application Microsoft**.
+
+         > [!NOTE]
+         > Vous ne pouvez pas créer plusieurs bots avec le même **ID d’application Microsoft**.
+
+      1. Sélectionnez **Examiner et créer**.
+
+          ![Créer un ID d’application Microsoft](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
+
+      1. Si la validation réussit, sélectionnez **Créer**.
+
+          La mise en service de votre service de bot prend quelques instants.
+
+      1. Sélectionnez **Accéder à la ressource**. 
+
+          ![Déployer l’application](~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment.png)
+
+          Votre bot Azure est créé.
+
+          ![Ressource de bot Azure créée](~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group.png)
+
+      **Pour créer une secret client**
+
+        Effectuez les étapes suivantes si vous avez créé un **ID d’application Microsoft** :
+
+      1. Dans le panneau gauche, sélectionnez **Configuration**. 
+
+         > [!TIP]
+         > Enregistrez **l’ID d’application Microsoft** ou **l’ID client** pour référence ultérieure.
+
+      1. **Sélectionnez Multi-tens sous** **Type de bot**.
+
+         ![ID d’application Microsoft](~/assets/images/meeting-content-bubble/bot-type.png)       
+
+      1. En plus de **l’ID de l’application Microsoft**, sélectionnez **Gérer**.
+
+          ![ID d’application Microsoft](~/assets/images/meeting-content-bubble/meeting-content-bubble-view-configuration.png)
+
+      1. Dans la section **Secrets client** , sélectionnez **Nouvelle secret client**. 
+
+          ![Nouvelle secret client](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
+
+         La **fenêtre Ajouter une secret client** s’affiche.  
+
+      1. Entrez **la description**.
+
+      1. Sélectionnez **Ajouter**.
+
+          ![Ajouter une secret client à l’application](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)
+
+      1. Dans la **colonne Valeur** , **sélectionnez Copier dans le Presse-papiers**.
+
+           ![Valeur de la secret client](~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret.png)
+         
+         > [!TIP]
+         > Enregistrez la **valeur des secrets client** ou le mot de passe de l’application pour référence ultérieure.
+
+      **Pour ajouter le Microsoft Teams canal**
+
+      1. Sélectionnez **Accueil**.
+
+      1. Sélectionnez votre bot à partir **des ressources récentes**.
+
+      1. **Sélectionnez Canaux** dans le volet gauche. 
+
+      1. **Sélectionnez Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
+      1. Cochez la case pour accepter les **conditions d’utilisation**.
+
+      1. **Sélectionnez Accepter**.
+
+            ![Conditions d’utilisation](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
+
+      1. Sélectionnez **Enregistrer**.
+
+            ![Sélectionnez Teams](~/assets/images/meeting-token-generator/config-teams.png)   
+
+      **Pour créer un tunnel pour un serveur web local**
+
+      Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Exécutez la commande suivante dans ngrok :
+
+       ```bash
+       ngrok http -host-header=localhost 3978
+       ```
+
+      **Pour ajouter un point de terminaison de messagerie**
+
+      1. À partir de ngrok, copiez l’URL HTTPS (https vers io).
+
+          ![URL HTTPS ngrok](~/assets/images/meeting-content-bubble/meeting-content-bubble-messaging-end-point.png)
 
           > [!NOTE]
-          > `WebAppDomain` est votre domaine ngrok.
+          > L’URL HTTPS dans votre ngrok est votre nom de domaine complet.
+          > Il `WebAppDomain` s’agit d’un nom de domaine complet qui ne l’inclut `https://` pas.
 
-          ![Image1 du manifeste](~/assets/images/meeting-content-bubble/manifest-set.png)
-- title: Créer et exécuter le service
-  durationInMinutes: 1
-  content: "**Pour créer et exécuter le service à l’aide Visual Studio 2019**\n\n   1. **Lancez Visual Studio 2019**.\n   1. Accédez **à** **FileOpen** >  >  **Project/Solution**.\n\n      ![Ouvrir un fichier](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)\n\n   1. Ouvrez `ContentBubbleBot.sln` le fichier.\n\n      ![Ouvrir un fichier](~/assets/images/meeting-content-bubble/proj-sln.png)\n\n   1. **Appuyez sur fn+F5** pour exécuter le projet.\n\n      Une page web s’ouvre avec un message **Votre bot est prêt !**.\n\n      ![Application prête](~/assets/images/meeting-content-bubble/your-bot-is-ready.png) \n"
-- title: Ajouter une application de bulle de contenu de réunion à Teams
-  durationInMinutes: 1
-  content: "**Pour créer une réunion Teams et ajouter une bulle de contenu de réunion**\n\n1. Dans votre référentiel cloné, accédez à **csharp > Resources > Manifest**.\n\n1. Créez une .zip avec les fichiers suivants présents dans le **dossier manifeste** : \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![Fichier zip](~/assets/images/meeting-content-bubble/create-manifest-zip.png) \n\n1. Créez une réunion avec quelques présentateurs et participants.\n\n1. Une fois la réunion créée, sélectionnez **+** **Ajouter une application**.\n\n   ![Ajouter une application](~/assets/images/meeting-content-bubble/add-an-app.png) \n\n1. Dans la fenêtre qui s’ouvre, sélectionnez **Gérer les applications**.\n\n   ![Gérer les applications](~/assets/images/meeting-content-bubble/manage-apps.png)\n\n1. **Sélectionnez Télécharger une application personnalisée**. \n\n   ![Télécharger application personnalisée](~/assets/images/meeting-content-bubble/upload-custom-app.png)\n\n1. **Sélectionnez Ouvrir** pour télécharger le .zip que vous avez créé dans le **dossier manifeste**.\n\n   ![Télécharger application zip](~/assets/images/meeting-content-bubble/zip.png)\n\n1. Sélectionnez **Ajouter**.\n\n   ![Ajouter l’application](~/assets/images/meeting-content-bubble/content-bubble-demo.png)\n\n1. La section **Gérer les** applications affiche la liste des applications.\n\n   ![Gérer les applications](~/assets/images/meeting-content-bubble/Manage.png)\n\n1. Allez à la conversation de réunion.\n\n1. **L’application de démonstration** de bulle de contenu envoie une réponse automatique à la conversation de réunion.\n\n   ![Réponse de démonstration de bulle de contenu](~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png)\n\n1. Envoyez un **message hello** au bot.\n\n   ![Bot de mention](~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png)\n\n1. Le bot vous envoie les éléments de l’agenda répertoriés dans une carte adaptative.\n\n1. Sélectionnez n’importe quelle option et **sélectionnez Agenda Push** pour envoyer une réponse.\n\n   ![Le bot vous envoie une carte adaptative](~/assets/images/meeting-content-bubble/push-agenda.png)\n\n1. Le bot envoie une **carte adaptative** de commentaires.\n\n1. Sélectionnez **Oui** ou **Non**.\n\n1. Sélectionnez **Envoyer**.\n\n   ![Le bot vous envoie une carte de commentaires](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)\n\n    Le bot vous envoie un message de commentaires.\n  \n"
-- title: Défi complet
-  durationInMinutes: 1
-  content: >
-    Avez-vous eu un projet comme celui-ci ?
+      1. Dans **Paramètres** pour le bot Azure que vous avez créé, sélectionnez **Configuration**.
 
+      1. Dans **le point de terminaison de messagerie**, utilisez l’URL HTTPS disponible à partir de ngrok et à la fin de l’URL, **ajoutez /api/messages**.
 
-    ![Ordinateur de bureau et mobile de démonstration des bulles de contenu](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
-- content: Vous avez terminé le didacticiel pour commencer avec une application de bulle de contenu de réunion.
+          ![Point de terminaison de messagerie](~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point.png)
+
+      1. Sélectionnez **Appliquer**.
+
+          Vous avez correctement installé un bot dans Azure Bot Service.
+  - title: Mettre à jour l’Azure AD’inscription de l’application
+    durationInMinutes: 1
+    content: |
+      **Pour inscrire votre application via le portail Azure AD web**  
+
+      1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+
+      1. Sélectionnez **Azure Active Directory**.
+
+      1. Dans le panneau de navigation de gauche, sélectionnez **Inscriptions d’applications**.
+
+      1. Sélectionnez votre bot.
+
+      1. Sélectionnez **Exposer une API** sous **Gérer**.
+
+      1. Sélectionnez **Définir**.
+
+      1. Définissez **l’URI de l’ID d’application** sous la forme `api://{AppID}`.
+
+         ![Lien Définir](~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api.png)
+
+      1. Insérez `WebAppDomain` la valeur entre `api://` et `/{AppID}`.</br>
+          `api://****.ngrok.io/{AppID}`</br>
+          
+          ![URI ID d'application](~/assets/images/meeting-content-bubble/meeting-content-bubble-expose-api.png)
+
+          > [!NOTE]
+          > Si vous utilisez un service de tunneling tel que ngrok, veillez à mettre à jour la valeur chaque fois que votre sous-domaine ngrok change.
+          > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, où `f631****.ngrok.io` est le nouveau nom de sous-domaine ngrok.
+
+      1. Sélectionnez **Ajouter une étendue**. 
+
+          ![Ajouter une étendue](~/assets/images/meeting-content-bubble/selectscope.png)
+
+      1. Dans le panneau qui s’affiche, entrez `access_as_user` le nom de **l’étendue**.
+
+      1. **Définissez Qui pouvez consentir à** `Admins and users`.
+
+      1. Pour configurer les invites de consentement de l’administrateur et de l’utilisateur avec les valeurs `access_as_user` appropriées pour l’étendue, fournissez les informations suivantes dans les champs :</br>
+
+           * Entrez le `Teams can access the user’s profile` **nom complet du consentement de l’administrateur**.
+
+           * Entrez la `Allows Teams to call the app’s web APIs as the current user` **description du consentement de l’administrateur**.
+
+           * Entrez le `Teams can access the user profile and make requests on the user’s behalf` **nom complet du consentement de l’utilisateur**.
+
+           * Entrez en `Enable Teams to call this app’s APIs with the same rights as the user` tant **que description du consentement de l’utilisateur**.
+
+      1. Vérifiez que **State** est défini comme **Enabled**.
+
+      1. **Sélectionnez Ajouter une étendue** à enregistrer.
+
+          ![Ajouter une étendue](~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user.png)
+
+         > [!NOTE]
+         > Le **nom de l’étendue** doit correspondre à l’URI **de l’ID** d’application avec `/access_as_user` ajouté à la fin.</br>
+             `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+
+          ![Portée](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope.png)
+
+      1. Dans la section **Applications clientes autorisées**, identifiez les applications que vous souhaitez autoriser pour l'application Web de votre application. 
+
+      1. Sélectionnez **Ajouter une application cliente**. 
+
+          ![Ajouter une application cliente](~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png) 
+
+      1. Entrez **l’ID client** : `1fec8e78-bce4-4aaf-ab1b-5451cc387264` pour Teams application mobile ou de bureau. 
+
+          ![Ajouter l’application cliente 1](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png) 
+
+         Vous pouvez entrer **l’ID client** : `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` pour Teams application web.
+
+          ![Ajouter l’application cliente 2](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png) 
+
+      1. **Sélectionnez les étendues autorisées**.
+
+           ![Ajouter une application cliente](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png)
+
+         L’image suivante affiche les ID clients :
+
+           ![Applications clientes](~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png) 
+
+      1. Dans le panneau gauche, sélectionnez **Autorisations d’API**. 
+
+         > [!NOTE]
+         > Les utilisateurs doivent consentir à ces autorisations uniquement si Azure AD’application est inscrite dans un autre client.
+
+      1. Sélectionnez **Ajouter une autorisation**.
+
+      1. **Sélectionnez Microsoft Graph**.
+
+      1. Sélectionnez **Autorisations déléguées**.
+
+          Par défaut, **User.Read** est sélectionné.
+
+           ![Utilisateur](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
+
+      1. Ajoutez les autorisations suivantes :</br>
+           * **email**
+           * **offline_access**
+           * **OpenId**
+           * **profil**
+
+      1. Sélectionnez **Ajouter des autorisations**.
+
+           ![Autres autorisations](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
+
+      1. Dans le panneau gauche, sélectionnez **Authentification** pour définir un URI de redirection. 
+
+         > [!NOTE]
+         > Si une application n’est pas accordée au consentement de l’administrateur informatique, les utilisateurs doivent donner leur consentement la première fois qu’ils utilisent une application.
+                 
+           1. Sélectionnez **Ajouter une plateforme**.
+           1. Sélectionnez **Web**.
+
+              ![Web](~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web.png)
+
+           1. Entrez l’URI de redirection de votre application en l’aérant `auth-end` au nom de domaine complet :</br> 
+             `https://****.ngrok.io/auth-end`. </br>
+
+           1. **Activez l’octroi implicite et les flux hybrides** en sélectionnant les case à cocher suivantes :
+               * **Jetons d’ID**
+               * **Jetons d’accès**
+
+           1. Sélectionnez **Configurer**.
+
+              ![Auth-end](~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web.png)
+  - title: Configurer les paramètres de l’application
+    durationInMinutes: 1
+    content: |
+      1. Accédez **à appsettings.json dans** le référentiel cloné.
+
+          ![Emplacement des paramètres de l’application](~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png)
+
+      1. **Ouvrez appsettings.json** **Visual Studio 2019** et mettez à jour les informations suivantes :  
+
+           * Définissez `"MicrosoftAppId"` ce dernier sur **l’ID d’application Microsoft de votre bot**.
+           * Définissez-la `"MicrosoftAppPassword"` sur la valeur de l’ID de la secret client de votre bot.
+           * Définissez `"BaseURL"` sur votre `webAppDomain`.
+
+          ![Paramètres de l’application](~/assets/images/meeting-content-bubble/appsettings-json.png)
+  - title: Configurer le fichier manifeste
+    durationInMinutes: 1
+    content: |
+      1. Accédez **à manifest.json dans** le référentiel cloné.
+
+      1. **Ouvrez manifest.json** **Visual Studio 2019** et a apporté les modifications suivantes :
+
+           * Définir sur `id``[MicrosoftAppId]`
+           * Définir sur `botId``[MicrosoftAppId]`
+           * Définir sur `validDomains``[WebAppDomainName]`
+
+            > [!NOTE]
+            > `WebAppDomain` est votre domaine ngrok.
+
+            ![Image1 du manifeste](~/assets/images/meeting-content-bubble/manifest-set.png)
+  - title: Créer et exécuter le service
+    durationInMinutes: 1
+    content: |
+      **Pour créer et exécuter le service à l’aide Visual Studio 2019**
+
+         1. **Lancez Visual Studio 2019**.
+         1. Accédez **à** **FileOpen** >  >  **Project/Solution**.
+
+            ![Ouvrir un fichier](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+
+         1. Ouvrez `ContentBubbleBot.sln` le fichier.
+
+            ![Ouvrir un fichier](~/assets/images/meeting-content-bubble/proj-sln.png)
+
+         1. **Appuyez sur fn+F5** pour exécuter le projet.
+
+            Une page web s’ouvre avec un message **Votre bot est prêt !**.
+
+            ![Application prête](~/assets/images/meeting-content-bubble/your-bot-is-ready.png) 
+  - title: Ajouter une application de bulle de contenu de réunion à Teams
+    durationInMinutes: 1
+    content: |
+      **Pour créer une réunion Teams et ajouter une bulle de contenu de réunion**
+
+      1. Dans votre référentiel cloné, accédez à **csharp > Resources > Manifest**.
+
+      1. Créez une .zip avec les fichiers suivants présents dans le **dossier manifeste** : 
+         * manifest.json
+         * icon-outline.png
+         * icon-color.png
+
+         ![Fichier zip](~/assets/images/meeting-content-bubble/create-manifest-zip.png) 
+
+      1. Créez une réunion avec quelques présentateurs et participants.
+
+      1. Une fois la réunion créée, sélectionnez **+** **Ajouter une application**.
+
+         ![Ajouter une application](~/assets/images/meeting-content-bubble/add-an-app.png) 
+
+      1. Dans la fenêtre qui s’ouvre, sélectionnez **Gérer les applications**.
+
+         ![Gérer les applications](~/assets/images/meeting-content-bubble/manage-apps.png)
+
+      1. **Sélectionnez Télécharger une application personnalisée**. 
+
+         ![Télécharger application personnalisée](~/assets/images/meeting-content-bubble/upload-custom-app.png)
+
+      1. **Sélectionnez Ouvrir** pour télécharger le .zip que vous avez créé dans le **dossier manifeste**.
+
+         ![Télécharger application zip](~/assets/images/meeting-content-bubble/zip.png)
+
+      1. Sélectionnez **Ajouter**.
+
+         ![Ajouter l’application](~/assets/images/meeting-content-bubble/content-bubble-demo.png)
+
+      1. La section **Gérer les** applications affiche la liste des applications.
+
+         ![Gérer les applications](~/assets/images/meeting-content-bubble/Manage.png)
+
+      1. Allez à la conversation de réunion.
+
+      1. **L’application de démonstration** de bulle de contenu envoie une réponse automatique à la conversation de réunion.
+
+         ![Réponse de démonstration de bulle de contenu](~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png)
+
+      1. Envoyez un **message hello** au bot.
+
+         ![Bot de mention](~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png)
+
+      1. Le bot vous envoie les éléments de l’agenda répertoriés dans une carte adaptative.
+
+      1. Sélectionnez n’importe quelle option et **sélectionnez Agenda Push** pour envoyer une réponse.
+
+         ![Le bot vous envoie une carte adaptative](~/assets/images/meeting-content-bubble/push-agenda.png)
+
+      1. Le bot envoie une **carte adaptative** de commentaires.
+
+      1. Sélectionnez **Oui** ou **Non**.
+
+      1. Sélectionnez **Envoyer**.
+
+         ![Le bot vous envoie une carte de commentaires](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
+
+          Le bot vous envoie un message de commentaires.
+        
+  - title: Défi complet
+    durationInMinutes: 1
+    content: |
+      Avez-vous eu un projet comme celui-ci ?
+
+      ![Ordinateur de bureau et mobile de démonstration des bulles de contenu](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
+  - content: |
+      Vous avez terminé le didacticiel pour commencer avec une application de bulle de contenu de réunion.

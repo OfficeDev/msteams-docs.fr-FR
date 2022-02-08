@@ -5,31 +5,26 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: test des équipes de programme pour les développeurs d’applications
 ms.date: 11/01/2019
-ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212558"
 ---
+
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client Microsoft 365 test
 
 Vous pouvez tester votre application Microsoft Teams avec des exemples de données avec un abonnement Microsoft 365 développeur.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
-1. [Rejoignez le Microsoft 365 développeur,](/office/developer-program/office-365-developer-program)si vous n’avez pas de client test.
+1. [Rejoignez le Microsoft 365 développeur](/office/developer-program/office-365-developer-program), si vous n’avez pas de client test.
 2. [Configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
-3. [Utilisez des packs d’exemples de données avec votre abonnement Microsoft 365 développeur pour installer le pack de contenu Utilisateurs.](/office/developer-program/install-sample-packs)
-4. [Installez le Teams module PowerShell.](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Installez le Azure AD module PowerShell.](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
+3. [Utilisez des packs d’exemples de données avec votre abonnement Microsoft 365 développeur pour installer le pack de contenu Utilisateurs](/office/developer-program/install-sample-packs).
+4. [Installez le Teams module PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+5. [Installez le Azure AD module PowerShell](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
 > Vous devez avoir des autorisations d’administrateur global dans le client pour exécuter les scripts.
 
 ## <a name="allow-users-to-upload-apps"></a>Autoriser les utilisateurs à télécharger des applications
 
-Par défaut, seuls les administrateurs globaux ou les administrateurs Teams service peuvent télécharger (charger une version de version de chargement) d’applications dans un client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester. Pour plus d’informations, [voir gérer les stratégies et paramètres](/microsoftteams/teams-custom-app-policies-and-settings)d’application personnalisés dans Teams .
+Par défaut, seuls les administrateurs globaux ou les administrateurs Teams service peuvent télécharger (charger une version de version de chargement) d’applications dans un client. Vous pouvez également autoriser les utilisateurs à télécharger des applications personnalisées pour leur propre utilisation ou vers des équipes pour les tester. Pour plus d’informations, voir [gérer les stratégies et paramètres d’application personnalisés dans Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## <a name="create-teams-and-channels-for-testing"></a>Créer des équipes et des canaux pour les tests
 
@@ -164,7 +159,7 @@ Par défaut, seuls les administrateurs globaux ou les administrateurs Teams serv
 
         try {
 
-            # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 

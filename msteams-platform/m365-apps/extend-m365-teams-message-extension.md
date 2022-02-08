@@ -4,12 +4,6 @@ description: Voici comment mettre à jour votre extension de messagerie Teams ba
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345379"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Étendre une extension Teams messagerie à travers Microsoft 365
 
@@ -27,14 +21,14 @@ Le processus de mise à jour de votre extension de Teams de messagerie basée su
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de messagerie dans les deux Outlook pour Windows bureau et web.
 
-## <a name="prerequisites"></a>Conditions requises
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
  - Un client Microsoft 365 programme pour les développeurs en bac à sable (sandbox)
  - Votre client bac à sable (sandbox) inscrit *à Office 365 releases ciblées*
  - Un environnement de test avec Office applications installées à partir du canal Microsoft 365 Apps *bêta*
- - Visual Studio Code avec l’extension Teams Shared Computer Toolkit (prévisualisation) (facultatif)
+ - Microsoft Visual Studio code avec l’extension Teams Shared Computer Toolkit (prévisualisation) (facultatif)
 
 > [!div class="nextstepaction"]
 > [Installer les composants prérequis](prerequisites.md)
@@ -80,7 +74,7 @@ Dans Microsoft Teams, une extension de messagerie se compose d’un service web 
 
 Pour que les utilisateurs interagissent avec votre extension de messagerie à partir Outlook, vous devez ajouter un canal Outlook à votre bot :
 
-1. À [partir du portail Azure](https://portal.azure.com) (ou [du portail Bot Framework](https://dev.botframework.com) si vous vous y êtes inscrit précédemment), accédez à votre ressource bot.
+1. À [Microsoft Azure portail (ou](https://portal.azure.com) [portail Bot Framework](https://dev.botframework.com) si vous vous y êtes inscrit précédemment), accédez à votre ressource bot.
 
 1. Dans *Paramètres*, sélectionnez **Canaux**.
 

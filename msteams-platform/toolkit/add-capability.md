@@ -30,7 +30,7 @@ Vous pouvez créer une application Teams avec l’une Teams fonctionnalités de 
 > [!IMPORTANT]
 > Vous devez effectuer une mise en service pour chaque environnement une fois que vous avez ajouté des fonctionnalités à votre Teams application.
 
-1. **Ouvrez Visual Studio Code**.
+1. **Ouvrez Microsoft Visual Studio Code**.
 1. Sélectionnez **Teams Shared Computer Toolkit** dans le panneau gauche.
 1. **Sélectionnez Ajouter des fonctionnalités** :
 
