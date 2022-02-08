@@ -5,12 +5,12 @@ keywords: contexte des bots teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 4d737564a77cdccc693a8fa3889476a1cf015be2
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 94d94f3f4c9c522a0fbccb448ba371e96da6c070
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212039"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443992"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Obtenir le contexte de votre bot Microsoft Teams de recherche
 
@@ -22,20 +22,20 @@ Votre bot peut accéder à un contexte supplémentaire sur l’équipe ou la con
 >
 > * Microsoft Teams’API de bot spécifiques sont les plus accessibles via nos extensions pour le SDK Bot Builder.
 > * Pour C# ou .NET, téléchargez notre package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
-> * Pour Node.js développement, le Générateur de bot pour Teams est intégré au [SDK Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
+> * Pour Node.js développement, le Générateur de bot pour Teams est incorporé dans le [SDK Bot Framework](https://github.com/microsoft/botframework-sdk) v4.6.
 
 ## <a name="fetch-the-team-roster"></a>Récupérer la liste d’équipe
 
-Votre bot peut interroger la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent Teams’ID d’utilisateur et Azure Active Directory informations telles que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, vérifiez si un utilisateur s’est connecté à un onglet via Azure AD d’identification est un membre de l’équipe.
+Votre bot peut interroger la liste des membres de l’équipe et leurs profils de base. Les profils de base incluent Teams’ID d’utilisateur et Microsoft Azure Active Directory (Azure AD) tels que le nom et l’ID d’objet. Vous pouvez utiliser ces informations pour corréler les identités des utilisateurs. Par exemple, vérifiez si un utilisateur s’est connecté à un onglet à l’Microsoft Azure Active Directory (Azure AD) est un membre de l’équipe.
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 
-Émettre directement une requête GET sur [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) , en utilisant la valeur comme point de `serviceUrl` terminaison.
+Émettre directement une requête GET sur [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), en utilisant la `serviceUrl` valeur comme point de terminaison.
 
-Vous pouvez le trouver dans l’objet de la charge utile d’activité que votre `teamId` `channeldata` bot reçoit dans les scénarios suivants :
+Vous `teamId` pouvez le trouver dans l’objet `channeldata` de la charge utile d’activité que votre bot reçoit dans les scénarios suivants :
 
-* Lorsqu’un utilisateur échange des messages ou interagit avec votre bot dans un contexte d’équipe. Pour plus d’informations, voir [la réception de messages.](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)
-* Lorsqu’un nouvel utilisateur ou bot est ajouté à une équipe. Pour plus d’informations, [voir bot ou utilisateur ajouté à une équipe.](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)
+* Lorsqu’un utilisateur échange des messages ou interagit avec votre bot dans un contexte d’équipe. Pour plus d’informations, voir [réception de messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages).
+* Lorsqu’un nouvel utilisateur ou bot est ajouté à une équipe. Pour plus d’informations, [voir bot ou utilisateur ajouté à une équipe](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team).
 
 > [!NOTE]
 >
@@ -122,7 +122,7 @@ connector.fetchMembers(
 
 Vous pouvez appeler l’API pour toute conversation personnelle afin d’obtenir les informations de profil de l’utilisateur qui discute avec votre bot.
 
-L’appel d’API, les méthodes du SDK et l’objet de réponse sont identiques à la récupération de la liste d’équipe. La seule différence est que vous passez le `conversationId` . `teamId`
+L’appel d’API, les méthodes du SDK et l’objet de réponse sont identiques à la récupération de la liste d’équipe. La seule différence est que vous passez le `conversationId` .`teamId`
 
 ## <a name="fetch-the-list-of-channels-in-a-team"></a>Récupérer la liste des canaux d’une équipe
 
@@ -135,9 +135,9 @@ Votre bot peut interroger la liste des canaux d’une équipe.
 
 ### <a name="rest-api-example"></a>Exemple d’API REST
 
-Émettre directement une requête GET sur `/teams/{teamId}/conversations/` , en utilisant la valeur comme point de `serviceUrl` terminaison.
+Émettre directement une requête GET sur `/teams/{teamId}/conversations/`, en utilisant la `serviceUrl` valeur comme point de terminaison.
 
-La seule source est `teamId` un message du contexte d’équipe. Le message est un message d’un utilisateur ou le message que votre bot reçoit lorsqu’il est ajouté à une équipe. Pour plus d’informations, [voir bot ou utilisateur ajouté à une équipe.](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)
+La seule source est un `teamId` message du contexte d’équipe. Le message est un message d’un utilisateur ou le message que votre bot reçoit lorsqu’il est ajouté à une équipe. Pour plus d’informations, [voir bot ou utilisateur ajouté à une équipe](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 > [!NOTE]
 > La `serviceUrl` valeur tend à être stable, mais peut changer. Lorsqu’un nouveau message arrive, votre bot doit vérifier sa valeur `serviceUrl` stockée.
@@ -165,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>Exemple .NET
 
-L’exemple suivant utilise l’appel des extensions Teams pour le `FetchChannelList` [SDK Bot Builder pour .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
+L’exemple suivant utilise l’appel `FetchChannelList` des [extensions Teams pour le SDK Bot Builder pour .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) :
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -173,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js exemple
 
-L’exemple suivant utilise `fetchChannelList` l’appel des extensions Teams pour le [SDK Bot Builder pour Node.js](https://www.npmjs.com/package/botbuilder-teams):
+L’exemple suivant utilise `fetchChannelList` l’appel [des extensions Teams pour le SDK Bot Builder pour Node.js](https://www.npmjs.com/package/botbuilder-teams):
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
@@ -227,4 +227,4 @@ var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemples Bot Framework.](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Exemples Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

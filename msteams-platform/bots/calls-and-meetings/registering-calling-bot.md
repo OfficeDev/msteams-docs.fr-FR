@@ -1,9 +1,15 @@
 ---
 title: Enregistrer le bot d’appels et de réunions pour Microsoft Teams
-description: 'Découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams, créer un bot ou ajouter des fonctionnalités d’appel et ajouter des autorisations de graphique.'
+description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo pour Microsoft Teams, créer un bot ou ajouter des fonctionnalités d’appel et ajouter des autorisations de graphique.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
+ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443925"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 
@@ -85,6 +91,10 @@ Vous pouvez compter sur un administrateur pour accorder les autorisations dont v
 
 > [!IMPORTANT]
 > Chaque fois que vous modifiez les autorisations de votre application, vous devez également répéter le processus de consentement de l’administrateur. Les modifications apportées dans le portail d’inscription des applications ne sont pas reflétées tant que l’administrateur du client n’a pas réapplité le consentement.
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas](../../sbs-calling-and-meeting.yml) pour configurer les appels et les réunions dans un bot.
 
 ## <a name="next-step"></a>Étape suivante
 
