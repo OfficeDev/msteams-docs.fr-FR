@@ -4,8 +4,13 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
+ms.openlocfilehash: 1172e0c94d89e36b1a48851fbef02264f0007777
+ms.sourcegitcommit: 7c627372e4eb838a1f437618473406fa9764a8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62432731"
 ---
-
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
 Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont généralement disponibles (GA) et dans l'aperçu du développeur.
@@ -17,8 +22,9 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
-|03/02/2022| Introduction de la version 1.12 du manifeste d’application |  • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022 |Mode interactif pour partager l’étape de la réunion|• Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
+|07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
+|03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
+|03/02/2022 |Mode interactif pour partager l’étape de la réunion| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |03/02/2022| Aperçu du test pour les applications monétisées (aperçu du développeur)| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -228,8 +234,9 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+|07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022 |Mode interactif pour partager l’étape de la réunion|• Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022 |Mode interactif pour partager l’étape de la réunion| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |03/02/2022| Aperçu du test pour les applications monétisées| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |17/01/2022| Sélectionneur de personnes en cartes adaptatives pour mobile  | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
