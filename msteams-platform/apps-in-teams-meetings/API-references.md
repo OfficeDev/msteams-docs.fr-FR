@@ -6,8 +6,13 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Requête de signal de notification de contexte utilisateur de l’api de rôle de participant aux réunions teams
+ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
+ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62470787"
 ---
-
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
 L’extensibilité de réunion fournit des API pour améliorer l’expérience de réunion. Vous pouvez effectuer les choses suivantes à l’aide des API répertoriées :
@@ -374,7 +379,7 @@ L’URL CART inclut les paramètres de requête suivants :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|----|
-|**meetingId**| String | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| Chaîne | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| String | Oui |Jeton d’autorisation.<br/> Par exemple, token=04751eac |
 
 #### <a name="example"></a>Exemple
@@ -385,7 +390,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>Méthode
 
-|Resource|Méthode|Description|
+|Ressource|Méthode|Description|
 |----|----|----|
 |/cartcaption|POST|Gérer les légendes pour la réunion, qui a été démarrée|
 
@@ -426,7 +431,7 @@ Pour utiliser l’API `shareAppContentToStage` , vous devez obtenir les autorisa
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",
@@ -481,7 +486,7 @@ Le tableau suivant inclut les paramètres de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**callback**| String | Oui | Le rappel contient deux paramètres, erreur et résultat. *L’erreur* peut contenir une erreur de type *SdkError*, en cas d’erreur, ou null lorsque le partage réussit. Le *résultat* peut contenir un `AppContentStageSharingState` objet, indiquant une récupération réussie, ou null, indiquant l’échec de la récupération.|
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres, erreur et résultat. *L’erreur* peut contenir une erreur de type *SdkError*, en cas d’erreur, ou null lorsque le partage réussit. Le *résultat* peut contenir un `AppContentStageSharingState` objet, indiquant une récupération réussie, ou null, indiquant l’échec de la récupération.|
 
 ### <a name="example"></a>Exemple
 
