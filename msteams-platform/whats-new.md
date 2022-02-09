@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 1172e0c94d89e36b1a48851fbef02264f0007777
-ms.sourcegitcommit: 7c627372e4eb838a1f437618473406fa9764a8fd
+ms.openlocfilehash: a33e704b8c66d460b6946b60947601bac9fb9269
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62432731"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443971"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,15 +22,16 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022 |Mode interactif pour partager l’étape de la réunion| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
+|03/02/2022| Mode interactif pour partager l’étape de la réunion| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |03/02/2022| Aperçu du test pour les applications monétisées (aperçu du développeur)| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/01/2022| Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |17/01/2022| Sélecteur de personnes dans les cartes adaptatives (aperçu du développeur pour le mobile et GA pour le bureau) | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
-|10/01/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
+|10/01/2022| Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
 
 ## <a name="ga-features"></a>Caractéristiques de GA
 
@@ -44,6 +45,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App Manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) |
 |25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |19/01/2022| Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
