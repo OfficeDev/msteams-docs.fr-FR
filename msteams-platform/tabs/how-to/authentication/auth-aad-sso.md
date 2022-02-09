@@ -4,12 +4,12 @@ description: Décrit l'authentification unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Authentification unique Teams Azure AD api d’authentification unique
-ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 065b8a75348e026a7e4bc2514438c70dbef479d7
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212355"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435159"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l'authentification unique (SSO) pour les onglets
 
@@ -29,7 +29,7 @@ Les utilisateurs se connectent à Microsoft Teams via leur compte professionnel,
 > [!NOTE]
 > **Démarrage rapide**  
 >
-> Le chemin le plus simple pour démarrer avec l'onglet SSO est avec la boîte à outils Teams pour Visual Studio Code. Pour plus d'informations, consultez [SSO avec la boîte à outils Teams et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
+> Le chemin d’accès le plus simple pour commencer à utiliser l’authentification unique est le kit de ressources Teams pour Microsoft Visual Studio Code. Pour plus d'informations, consultez [SSO avec la boîte à outils Teams et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 
