@@ -1,13 +1,18 @@
 ---
 title: Créer un onglet personnel
 author: laujan
-description: 'Guide de démarrage rapide pour créer un onglet personnel avec le générateur Yeoman, ASP.NET Core ou ASP.NET Core MVC pour Microsoft Teams à l’aide de Node.js et mettre à jour le manifeste de l’application.'
+description: Guide de démarrage rapide pour créer un onglet personnel avec le générateur Yeoman, ASP.NET Core ou ASP.NET Core MVC pour Microsoft Teams à l’aide de Node.js et mettre à jour le manifeste de l’application.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET du magasin d’autorisations de domaine de conversation appmanifest du package MVC
+ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518029"
 ---
-
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
 ## <a name="create-a-custom-personal-tab"></a>Créer un onglet personnel personnalisé
@@ -130,9 +135,9 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     Utilisez les touches de direction pour sélectionner **Personnel (statique).**
 
-    **Avez-vous besoin d’une prise en charge de l’authentification unique Azure AD pour l’onglet ?**
+    **Avez-vous besoin Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet ?**
 
-    Choisissez **de** ne pas inclure Azure AD prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
+    Choisissez **de** ne pas inclure Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
 
     > [!IMPORTANT]
     > Le composant **de chemin d’accès yourDefaultTabNameTab** est la valeur que vous avez entrée dans le générateur pour le nom de l’onglet par **défaut, ainsi** que le mot **Tab**.

@@ -6,8 +6,13 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation oAuth d’autorisation oAuth Azure AD rsc Graph
+ms.openlocfilehash: dbbda0dced53530c1688faa626bc63fe0bf1be76
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518162"
 ---
-
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
 > [!NOTE]
@@ -140,7 +145,7 @@ Pour plus d’informations, voir [obtenir l’accès au nom](/graph/auth-v2-user
 Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votre application. 
 
 > [!IMPORTANT]
-> Les autorisations non RSC sont stockées dans le portail Azure. Ne les ajoutez pas au manifeste de l’application.
+> Les autorisations autres que RSC sont stockées dans le portail Microsoft Azure web. Ne les ajoutez pas au manifeste de l’application.
 
 ### <a name="manifest-changes-for-resource-specific-consent"></a>Modifications de manifeste pour le consentement spécifique aux ressources
 

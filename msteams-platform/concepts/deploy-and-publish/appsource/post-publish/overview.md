@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212411"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518561"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
@@ -44,7 +44,7 @@ Toutefois, si vous a apporté l’une des modifications suivantes à votre appli
 * Ajoutez un onglet personnel.
 * Ajoutez un canal et un onglet de groupe.
 * Ajoutez un connecteur.
-* Modifiez les configurations liées à l’inscription Azure Active Directory votre application. Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modifiez les configurations liées à l’inscription Microsoft Azure Active Directory (Azure AD) de votre application. Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
 
@@ -54,11 +54,11 @@ Microsoft exécute des tests d’automatisation quotidiens sur les applications 
 
 Lorsque votre application est répertoriée dans le magasin Teams, vous pouvez créer un lien qui lance Teams et affiche une boîte de dialogue pour installer votre application. Vous pouvez inclure ce lien, par exemple, avec un bouton de téléchargement sur la page marketing de votre produit.
 
-Créez le lien à l’aide de l’URL suivante, à l’aide de l’ID de votre application `https://teams.microsoft.com/l/app/<your-app-id>` :
+Créez le lien à l’aide de l’URL suivante, à l’aide de l’ID de votre application : `https://teams.microsoft.com/l/app/<your-app-id>`
 
 ## <a name="complete-microsoft-365-certification"></a>Certification Microsoft 365 complète
 
-[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’un application Office ou un add-in tiers est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
+[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’un application Office tiers ou un module est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
 
 ## <a name="see-also"></a>Voir aussi
 

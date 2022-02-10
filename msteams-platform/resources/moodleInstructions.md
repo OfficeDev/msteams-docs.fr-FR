@@ -6,8 +6,13 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
+ms.openlocfilehash: bdbfb1727784b3bf638b7d443b660c334ebfaa70
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518148"
 ---
-
 # <a name="install-moodle-lms"></a>Installer Moodle LMS
 
 Dans cet article, vous allez découvrir comment installer le LMS Dentelet.
@@ -15,7 +20,7 @@ Dans cet article, vous allez découvrir comment installer le LMS Dentelet.
 > [!NOTE]
 > Pour aider les administrateurs informatiques à configurer facilement l’intégration de Teams et De Latuale, open source Microsoft 365 Plug-ins De l’espace de jeu Est mis à jour pour les raisons suivantes :
 >
-> * Inscription automatique de votre serveur Delns avec [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
+> * Inscription automatique de votre serveur Delns avec [Microsoft Azure Active Directory (Microsoft Azure Active Directory (Azure AD)).](https://azure.microsoft.com/services/active-directory/)
 >
 > * Déploiement en un seul clic de votre bot Assistant d’accès à Azure.
 >
@@ -25,13 +30,13 @@ Dans cet article, vous allez découvrir comment installer le LMS Dentelet.
 >
 > Pour en savoir plus sur les fonctionnalités que fournit cette intégration, [voir Microsoft Teams et Sondèle](https://education.microsoft.com/resource/3dffb3a8).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Voici les conditions préalables à l’installation de Sondèle :
 
 * Informations d’identification de l’administrateur en cas de mauvaises choses.
 
-* Azure AD’informations d’identification de l’administrateur.
+* Microsoft Azure Active Directory (Azure AD) d’administrateur.
 
 * Un abonnement Azure dans lequel vous pouvez créer de nouvelles ressources.
 
@@ -70,18 +75,18 @@ Assurez-vous d’installer et de télécharger les données suivantes avant de p
     >
     > * Si vous n’avez pas de site Vous pouvez le faire, rendez-vous dans le repo [D’Azure,](https://github.com/azure/moodle) puis déployez rapidement une instance De Sondessage et personnalisez-la en fonction de vos besoins.
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory"></a>2. Configurez la connexion entre les plug-ins Microsoft 365 et les Azure Active Directory
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-microsoft-azure-active-directory-microsoft-azure-active-directory-azure-ad"></a>2. Configurer la connexion entre les plug-ins Microsoft 365 et les Microsoft Azure Active Directory (Microsoft Azure Active Directory (Azure AD))
 
-Vous devez configurer la connexion entre les plug-ins Microsoft 365 et les Azure AD.
+Vous devez configurer la connexion entre les plug-ins Microsoft 365 et Microsoft Azure Active Directory (Azure AD).
 
 ### <a name="requisites"></a>Conditions requises
 
-Inscrivez Votre application En tant qu’application dans votre Azure AD, à l’aide du script PowerShell. Le script a les dispositions suivantes :
+Inscrivez Votre application En tant qu’application dans votre Microsoft Azure Active Directory (Azure AD), à l’aide du script PowerShell. Le script a les dispositions suivantes :
 
-* Une nouvelle application Azure AD pour votre client Microsoft 365 client, qui est utilisée par les plug-ins Microsoft 365 Lev.
+* Une nouvelle application Microsoft Azure Active Directory (Azure AD) pour votre client Microsoft 365, qui est utilisée par les plug-ins Microsoft 365 Etoile.
 * L’application pour votre client Microsoft 365, configurer les URL de réponse requises et les autorisations pour l’application mise en service, et renvoie le `AppID` et `Key`.
 
-Utilisez la page d’installation `AppID` `Key` générée et dans votre Microsoft 365 Plug-ins Enfichables Pour configurer votre site serveur Dentele avec Azure AD.
+Utilisez la page d’installation `AppID` `Key` des plug-ins Microsoft 365 et générée dans votre ordinateur pour configurer votre site serveur Dentele avec Microsoft Azure Active Directory (Azure AD).
 
 > [!IMPORTANT]
 >
@@ -120,7 +125,7 @@ Utilisez la page d’installation `AppID` `Key` générée et dans votre Microso
     1. Entrez `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`.
     1. Entrez `./Moodle-AzureAD-Script.ps1`.
     1. Connectez-vous à Microsoft 365 compte d’administrateur dans la fenêtre pop-up.
-    1. Entrez le nom de l’application Azure AD, par exemple, Les plug-ins Il est vrai ou Non.
+    1. Entrez le nom de l’application Microsoft Azure Active Directory (Azure AD), par exemple, Les plug-ins Il est vrai ou Non.
     1. Entrez l’URL de votre serveur Dentelé.
     1. Copiez **l’ID d’application (`AppID`)** et la clé **d’application(`Key`)** générés par le script et enregistrez-les.
 
@@ -132,33 +137,33 @@ Utilisez la page d’installation `AppID` `Key` générée et dans votre Microso
 
 1. Une fois la page actualisée, vous pouvez voir une autre nouvelle section consentement de **l’administrateur & informations supplémentaires**.
     1. **Sélectionnez Fournir le lien Consentement de** l’administrateur, entrez Microsoft 365 informations d’identification de l’administrateur général, puis acceptez **d’accorder** les autorisations.
-    1. En de côté du **Azure AD client**, sélectionnez **le bouton** Détecter.
+    1. En de côté du **Microsoft Azure Active Directory client (Azure AD),** sélectionnez le **bouton** Détecter.
     1. À côté de l **OneDrive Entreprise URL**, sélectionnez **le bouton** Détecter.
     1. Une fois les champs remplis, sélectionnez de nouveau le bouton Enregistrer **les modifications** .
 
 1. Sélectionnez le **bouton** Mettre à jour pour vérifier l’installation, puis sélectionnez **Enregistrer les modifications**.
 
-1. Synchronisez les utilisateurs entre votre serveur Et votre Azure AD. Pour commencer :
+1. Synchronisez les utilisateurs entre votre serveur Et votre Microsoft Azure Active Directory (Azure AD). Pour commencer :
 
     > [!NOTE]
     > En fonction de votre environnement, vous pouvez sélectionner différentes options au cours de cette étape.
 
-1. Synchronisez les utilisateurs entre votre serveur Et votre Azure AD. En fonction de votre environnement, vous pouvez sélectionner différentes options au cours de cette étape. Pour commencer :
+1. Synchronisez les utilisateurs entre votre serveur Et votre Microsoft Azure Active Directory (Azure AD). En fonction de votre environnement, vous pouvez sélectionner différentes options au cours de cette étape. Pour commencer :
     1. Basculez vers **l’onglet Paramètres synchronisation**.
 
-    1. Dans la section **Synchroniser les utilisateurs Azure AD**, cochez les case qui s’appliquent à votre environnement. Vous devez sélectionner ce qui suit :  
+    1. Dans la section Synchroniser **les utilisateurs Microsoft Azure Active Directory (Azure AD),** cochez les case qui s’appliquent à votre environnement. Vous devez sélectionner ce qui suit :  
 
-        ✔ Créez des comptes dans Le Chateille pour les utilisateurs Azure AD.
+        ✔ Créez des comptes dans Le Chateille pour les utilisateurs Microsoft Azure Active Directory (Azure AD).
 
-        ✔ Mettez à jour tous les comptes dans Le Chatin pour les utilisateurs Azure AD.
+        ✔ Mettez à jour tous les comptes dans Le Chatin pour les utilisateurs Microsoft Azure Active Directory (Azure AD).
 
-    1. Dans la section **Restriction de création d’utilisateur**, vous pouvez configurer un filtre pour limiter le nombre Azure AD utilisateurs synchronisés avec Lele.
-    1. La section **Mappage des** champs utilisateur vous permet de personnaliser le Azure AD mappage de champ profil utilisateur De façon à ce qu’il soit différent.
+    1. Dans la section **Restriction de création** d’utilisateurs, vous pouvez configurer un filtre pour limiter les utilisateurs Microsoft Azure Active Directory (Azure AD) synchronisés avec Lele.
+    1. La section **Mappage des** champs utilisateur vous permet de personnaliser l’Microsoft Azure Active Directory (Azure AD) au mappage de champ Profil utilisateur En toute convivialisation.
     1. Dans la section **Teams** synchroniser, vous pouvez choisir de créer automatiquement des groupes, par exemple des équipes pour une partie ou l’ensemble de vos cours Dente, existants.
 
-13. Pour valider [les travaux cron](https://docs.moodle.org/310/en/Cron) et les exécuter manuellement pour la première utilisation, sélectionnez le lien de **la page** Gestion des tâches programmées dans **la section** Synchroniser Azure AD utilisateurs. Vous êtes alors sur la page **Tâches programmées** .
+13. Pour valider [les travaux cron](https://docs.moodle.org/310/en/Cron) et les exécuter manuellement pour la première utilisation, sélectionnez le lien de **la page** Gestion des tâches programmées dans la section Synchroniser les utilisateurs avec Microsoft Azure Active Directory **(Azure AD**). Vous êtes alors sur la page **Tâches programmées** .
 
-    1. Faites défiler vers le bas et recherchez les **utilisateurs** de synchronisation Azure AD travail, puis **sélectionnez Exécuter maintenant**.
+    1. Faites défiler vers le bas et recherchez les utilisateurs **de synchronisation Microsoft Azure Active Directory (Azure AD)** et sélectionnez **Exécuter maintenant**.
     1. Si vous choisissez de créer des groupes en fonction des cours existants, vous pouvez également exécuter le travail Créer des groupes d’utilisateurs **Microsoft 365** travail.
 
     > [!NOTE]

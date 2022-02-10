@@ -1,12 +1,17 @@
 ---
 title: Créer un onglet de canal ou de groupe
 author: laujan
-description: 'Guide de démarrage rapide sur la création d’un onglet de canal et de groupe avec le générateur Yeoman pour Microsoft Teams, y compris la révision du code source avec des exemples de code.'
+description: Guide de démarrage rapide sur la création d’un onglet de canal et de groupe avec le générateur Yeoman pour Microsoft Teams, y compris la révision du code source avec des exemples de code.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
+ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518260"
 ---
-
 # <a name="create-a-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe
 
 ## <a name="create-a-custom-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe personnalisé
@@ -129,9 +134,9 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     Vous pouvez sélectionner une équipe ou une conversation de groupe.
 
-    **Avez-vous besoin d’une prise en charge de l’authentification unique Azure AD pour l’onglet ?**
+    **Avez-vous besoin Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet ?**
 
-    Choisissez **de** ne pas inclure Azure AD prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
+    Choisissez **de** ne pas inclure Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
 
     **Voulez-vous que cet onglet soit disponible dans SharePoint Online ? (Y/n)**
 

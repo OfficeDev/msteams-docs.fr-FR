@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c014495e3ae2a969bbebc28aed62aded18576c82
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362934"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518547"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste de prévisualisation pour les développeurs publics pour Microsoft Teams
 
@@ -394,7 +394,7 @@ L’objet est un tableau avec tous les éléments du type `object`. Ce bloc est 
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|Chaîne|2 048 caractères|✔|L’URL https:// à utiliser lors de la configuration de l’onglet.|
+|`configurationUrl`|String|2 048 caractères|✔|L’URL https:// à utiliser lors de la configuration de l’onglet.|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne prennent en charge que les étendues `team` et `groupchat`. |
 |`context` |tableau d’énumération|6 ||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut `channelTab`: , `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`et `meetingSidePanel``meetingStage`.|
@@ -415,10 +415,10 @@ L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 caractères|✔|Identificateur unique de l’entité affichée par l’onglet.|
-|`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
-|`contentUrl`|Chaîne|2 048 caractères|✔|L’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de canevas de Teams.|
+|`name`|String|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
+|`contentUrl`|String|2 048 caractères|✔|L’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de canevas de Teams.|
 |`contentBotId`|   | | | ID Microsoft Teams’application spécifié pour le bot dans le portail Bot Framework. |
-|`websiteUrl`|Chaîne|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
+|`websiteUrl`|String|2 048 caractères||L https:// URL pointant vers si un utilisateur choisit d’afficher dans un navigateur.|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que `personal` l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de l’expérience personnelle.|
 
 ## <a name="bots"></a>bots
@@ -456,7 +456,7 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`configurationUrl`|Chaîne|2 048 caractères|✔|L’URL https:// à utiliser lors de la configuration du connecteur.|
+|`configurationUrl`|String|2 048 caractères|✔|L’URL https:// à utiliser lors de la configuration du connecteur.|
 |`connectorId`|String|64 caractères|✔|Identificateur unique du connecteur qui correspond à son ID dans le [tableau de bord du développeur de connecteurs.](https://aka.ms/connectorsdashboard)|
 |`scopes`|Tableau de l’énum|1|✔|Spécifie si le connecteur offre une expérience dans le contexte d’un canal dans un `team`, ou une expérience limitée à un utilisateur individuel seul (`personal`). Actuellement, seule l’étendue `team` est prise en charge.|
 
@@ -473,7 +473,7 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 |Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`botId`|Chaîne|64|✔|L'ID de l'application Microsoft pour le bot qui accompagne l'extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global](#id).|
+|`botId`|String|64|✔|L'ID de l'application Microsoft pour le bot qui accompagne l'extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global](#id).|
 |`canUpdateConfiguration`|Boolean|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie|
 
@@ -487,27 +487,27 @@ Chaque élément de commande est un objet avec la structure suivante :
 |---|---|---|---|---|
 |`id`|String|64 caractères|✔|ID de la commande.|
 |`type`|String|64 caractères||Type de la commande. L’un des `query` ou `action`. Valeur par défaut : `query`|
-|`title`|Chaîne|32 caractères|✔|Le nom de la commande conviviale.|
-|`description`|String|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
+|`title`|String|32 caractères|✔|Le nom de la commande conviviale.|
+|`description`|Chaîne|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
 |`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
 |`context`|Tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de messagerie peut être invoquée. N’importe quelle combinaison `compose`de , `commandBox`. `message` La valeur par défaut est `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||Valeur booléle qui indique si le module de tâche doit être récupéré dynamiquement.|
 |`taskInfo`|Objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
-|`taskInfo.title`|Chaîne|64||Titre de la boîte de dialogue initiale.|
-|`taskInfo.width`|Chaîne|||Largeur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
+|`taskInfo.title`|String|64||Titre de la boîte de dialogue initiale.|
+|`taskInfo.width`|String|||Largeur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
 |`taskInfo.height`|Chaîne|||Hauteur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
-|`taskInfo.url`|Chaîne|||URL webview initiale.|
+|`taskInfo.url`|String|||URL webview initiale.|
 |`messageHandlers`|Tableau d’objets|5||Liste des gestionnaires qui permettent d’appeler des applications lorsque certaines conditions sont remplies. Les domaines doivent également être répertoriés dans `validDomains`.|
-|`messageHandlers.type`|Chaîne|||Type de gestionnaire de messages. Doit être `"link"`.|
+|`messageHandlers.type`|String|||Type de gestionnaire de messages. Doit être `"link"`.|
 |`messageHandlers.value.domains`|Tableau de chaînes|||Tableau de domaines pour lequel le gestionnaire de messages de lien peut s’inscrire.|
 |`parameters`|Tableau d’objets|5|✔|Liste des paramètres que prend la commande. Minimum : 1 ; maximum : 5|
 |`parameter.name`|String|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Ceci est inclus dans la demande de l’utilisateur.|
-|`parameter.title`|String|32 caractères|✔|Titre convivial du paramètre.|
+|`parameter.title`|Chaîne|32 caractères|✔|Titre convivial du paramètre.|
 |`parameter.description`|Chaîne|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
 |`parameter.inputType`|String|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true`. L’un des , , , `time``date`, , `toggle``choiceset`. `number``textarea``text`|
 |`parameter.choices`|Tableau d’objets|10||Options de choix pour `choiceset`le . Utilisez uniquement lorsque c’est `parameter.inputType` le cas `choiceset`.|
 |`parameter.choices.title`|String|128||Titre du choix.|
-|`parameter.choices.value`|Chaîne|512||Valeur du choix.|
+|`parameter.choices.value`|String|512||Valeur du choix.|
 
 ## <a name="permissions"></a>autorisations
 
@@ -549,12 +549,12 @@ L’objet est un tableau avec tous les éléments du type `string`.
 
 **Optional**
 
-Spécifiez votre ID d Azure AD applence et Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
+Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et des informations Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|Chaîne|36 caractères|✔|Application Azure AD ID d’application. Cet ID doit être un GUID.|
-|`resource`|String|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l’sso.|
+|`id`|String|36 caractères|✔|Microsoft Azure Active Directory (Azure AD) de l’application. Cet ID doit être un GUID.|
+|`resource`|Chaîne|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l’sso.|
 |`applicationPermissions`|Tableau|Maximum 100 éléments|✔|Autorisations de ressources pour l’application.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -617,7 +617,7 @@ Spécifie l’offre SaaS associée à votre application.
 
 **Facultatif**— objet
 
-Spécifiez la définition de l’extension de réunion. Pour plus d’informations, [voir les scènes personnalisées du mode Ensemble dans Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Spécifiez la définition de l’extension de réunion. Pour plus d’informations, voir [les scènes personnalisées du mode Ensemble dans Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -636,7 +636,7 @@ Spécifiez la définition de l’extension de réunion. Pour plus d’informatio
 
 ## <a name="authorization"></a>autorisation
 
-**Facultatif** — objet
+**Facultatif**— objet
 
 Spécifiez et consolidez les informations relatives à l’autorisation pour l’application.
 
@@ -648,14 +648,14 @@ Spécifiez et consolidez les informations relatives à l’autorisation pour l�
 
 |Nom| Type|Taille maximale|Requis |Description|
 |---|---|---|---|---|
-|`resourceSpecific`| tableau d’objets|16 éléments||Autorisations qui gardent l’accès aux données au niveau de l’instance de ressource.|
+|`resourceSpecific`| tableau d’objets|16 éléments||Autorisations qui protègent l’accès aux données au niveau de l’instance de ressource.|
 
 ### <a name="authorizationpermissionsresourcespecific"></a>authorization.permissions.resourceSpecific
 
 |Nom| Type|Taille maximale|Requis |Description|
 |---|---|---|---|---|
 |`type`|string||✔| Type de l’autorisation spécifique à la ressource. Options : `Application` et `Delegated`.|
-|`name`|string|128 caractères|✔|Nom de l’autorisation spécifique à la ressource. <br> Pour plus d’informations, voir [Autorisations d’application](../../graph-api/rsc/resource-specific-consent.md) et [autorisations déléguées](#delegated-permissions).|
+|`name`|string|128 caractères|✔|Nom de l’autorisation spécifique à la ressource. <br> Pour plus d’informations, consultez [Autorisations d’application](../../graph-api/rsc/resource-specific-consent.md) et [autorisations déléguées](#delegated-permissions).|
 
 ### <a name="delegated-permissions"></a>Autorisations déléguées
 
@@ -665,24 +665,24 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
 
     |**Name**|**Description**|
     |---|---|
-    |`ChannelMeetingParticipant.Read.Group`| Permet à l’application de lire les informations des participants, notamment le nom, le rôle, l’ID, les horaires de participation et les heures de gauche, des réunions de canal associées à cette équipe, au nom de l’utilisateur.|
-    |`InAppPurchase.Allow.Group`| Permet à l’application d’afficher les offres Marketplace aux utilisateurs de cette équipe et d’effectuer leurs achats au sein de l’application, au nom de l’utilisateur inscrit.|
-    |`ChannelMeetingStage.Write.Group`| Permet à l’application d’afficher du contenu sur l’étape de la réunion dans les réunions de canal associées à cette équipe, au nom de l’utilisateur inscrit.|
+    |`ChannelMeetingParticipant.Read.Group`| Permet à l’application de lire les informations des participants, notamment le nom, le rôle, l’ID, les horaires de participation et le temps restant, des réunions de canal associées à cette équipe, au nom de l’utilisateur connecté.|
+    |`InAppPurchase.Allow.Group`| Permet à l’application d’afficher les offres Marketplace aux utilisateurs de cette équipe et d’effectuer leurs achats au sein de l’application, au nom de l’utilisateur connecté.|
+    |`ChannelMeetingStage.Write.Group`| Permet à l’application d’afficher du contenu sur la fenêtre de partage des réunions de canal associées à cette équipe, pour le compte de l’utilisateur connecté.|
 
 * **Autorisations spécifiques aux ressources pour les conversations ou les réunions**
 
     |**Name**|**Description**|
     |---|---|
-    |`InAppPurchase.Allow.Chat`|Permet à l’application d’afficher les offres Marketplace aux utilisateurs de cette conversation, ainsi que toute réunion associée, et d’effectuer leurs achats au sein de l’application, au nom de l’utilisateur inscrit.|
-    |`MeetingStage.Write.Chat`|Permet à l’application d’afficher du contenu sur l’étape de la réunion dans les réunions associées à cette conversation, au nom de l’utilisateur inscrit.|
-    |`OnlineMeetingParticipant.Read.Chat`|Permet à l’application de lire les informations des participants, y compris le nom, le rôle, l’ID, les heures de participation et de gauche, de la réunion associée à cette conversation, au nom de l’utilisateur.|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permet à l’application de faire bascule l’audio entrant pour les participants aux réunions associées à cette conversation, au nom de l’utilisateur.|
+    |`InAppPurchase.Allow.Chat`|Permet à l’application d’afficher les offres Marketplace aux utilisateurs de cette conversation, ainsi que toute réunion associée, et d’effectuer leurs achats au sein de l’application, au nom de l’utilisateur connecté.|
+    |`MeetingStage.Write.Chat`|Permet à l’application d’afficher du contenu sur la phase de réunion dans les réunions associées à cette conversation, au nom de l’utilisateur connecté.|
+    |`OnlineMeetingParticipant.Read.Chat`|Permet à l’application de lire les informations des participants, y compris le nom, le rôle, l’ID, les heures de participation et les heures restantes, de la réunion associée à cette conversation, au nom de l’utilisateur.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permet à l’application de basculer l’audio entrant pour les participants aux réunions associées à cette conversation, pour le compte de l’utilisateur connecté.|
 
 * **Autorisations spécifiques aux ressources pour les utilisateurs**
 
     |**Name**|**Description**|
     |---|---|
-    |`InAppPurchase.Allow.User`|Permet à l’application d’afficher les offres marketplace de l’utilisateur et d’effectuer les achats de l’utilisateur au sein de l’application, au nom de l’utilisateur.|
+    |`InAppPurchase.Allow.User`|Permet à l’application d’afficher les offres marketplace de l’utilisateur et d’effectuer les achats de l’utilisateur au sein de l’application, au nom de l’utilisateur connecté.|
 
 ## <a name="see-also"></a>Voir aussi
 

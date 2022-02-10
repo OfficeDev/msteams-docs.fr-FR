@@ -6,9 +6,13 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518323"
 ---
-
-
 # <a name="prepare-accounts-to-build-teams-apps"></a>Préparer les comptes à créer des applications Teams client
 
 Pour développer Teams’application, vous avez besoin d’au moins un compte Microsoft 365 avec un abonnement valide. Si vous souhaitez héberger vos ressources back-end sur Azure, vous avez besoin d’un compte Azure. Le compte Azure est facultatif si votre application existante est hébergée sur un autre fournisseur cloud et que vous souhaitez intégrer l’application existante à Teams plateforme.
@@ -42,7 +46,7 @@ Vous pouvez vous inscrire au programme pour les développeurs à l’aide d’un
 
 - **Compte de travail pour les entreprises**
 
-  Permet d’accéder à tous les services cloud Microsoft de niveau petite, moyenne et entreprise, tels qu’Azure, Microsoft Intune ou Microsoft 365. Lorsque vous vous inscrivez à l’un de ces services en tant qu’organisation, un répertoire informatique est automatiquement configuré dans Azure Active Directory pour représenter votre organisation.
+  Permet d’accéder à tous les services cloud Microsoft de niveau petite, moyenne et entreprise, tels qu’Azure, Microsoft Intune ou Microsoft 365. Lorsque vous vous inscrivez à l’un de ces services en tant qu’organisation, un annuaire informatique est automatiquement mis en service dans Microsoft Azure Active Directory (Azure AD) pour représenter votre organisation.
 
 - **Visual Studio ID**
 

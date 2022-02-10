@@ -1,22 +1,22 @@
 ---
-title: Sélecteur de personnes dans les Cartes adaptatives
+title: Sélectionneur de personnes dans les Cartes adaptatives
 description: Décrit comment utiliser le contrôle S sélectionneur de personnes dans les cartes adaptatives
 localization_priority: Normal
 keywords: Socheur de personnes de cartes adaptatives
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212474"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518302"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>Sélecteur de personnes dans les Cartes adaptatives
+# <a name="people-picker-in-adaptive-cards"></a>Sélectionneur de personnes dans les Cartes adaptatives
 
 >[!NOTE]
-> Actuellement, le s picker de [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) personnes dans les cartes adaptatives est disponible en prévisualisation publique pour les développeurs uniquement pour les appareils mobiles et généralement disponible (GA) pour les ordinateurs de bureau.
+> Actuellement, le s picker de personnes dans les cartes [](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) adaptatives est disponible en prévisualisation publique pour les développeurs uniquement pour les appareils mobiles et généralement disponible (GA) pour les ordinateurs de bureau.
 
 Le sélecateur de personnes permet aux utilisateurs de rechercher et de sélectionner des utilisateurs dans la carte adaptative. Vous pouvez ajouter le s sélectionneur de personnes en tant que contrôle d’entrée à la carte adaptative, qui fonctionne sur les conversations, les canaux, les modules de tâche et les onglets. Le s picker de personnes prend en charge les fonctionnalités suivantes :        
 
@@ -46,7 +46,7 @@ L’utilisateur A (Robert) reçoit un ticket pour une tâche dans un canal et r�
 
 **Pour réaffecter une tâche**
 
-1. Sélectionnez **Réaffecter l’endroit** où le champ du sélecateur de personnes est préresigné avec le nom pour réaffecter la tâche à l’utilisateur prévu.
+1. **Sélectionnez Réaffecter l’endroit** où le champ du sélecateur de personnes est préresigné avec le nom pour réaffecter la tâche à l’utilisateur prévu.
 1. Supprimez le nom de l’utilisateur incorrect. 
 1. Sélectionnez les utilisateurs prévus selon le scénario d’image, l’utilisateur B (Mona) et l’utilisateur C (Robin) pour la tâche. 
 1. Sélectionnez **Affecter**. Après l’affectation, les informations sont envoyées au bot. 
@@ -59,7 +59,7 @@ L’image suivante illustre le scénario de réaffectation :
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
 > [!NOTE]
-> Actuellement, cette fonctionnalité est disponible en prévisualisation [pour les](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) développeurs publics uniquement.
+> Actuellement, cette fonctionnalité est disponible en prévisualisation [pour les développeurs publics](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) uniquement.
 
 Les clients mobiles Android et iOS prend en charge le s picker de personnes dans les cartes adaptatives. Vous pouvez utiliser le sélecateur de personnes dans un appareil mobile pour rechercher et sélectionner un utilisateur afin d’améliorer l’expérience utilisateur. L’expérience de recherche est similaire à toute autre expérience de sélection d’utilisateur sur mobile.
 
@@ -69,7 +69,7 @@ L’utilisateur A (Robert) reçoit un ticket pour une tâche dans un canal et r�
 
 **Pour réaffecter une tâche**
 
-1. Sélectionnez **Réaffecter l’endroit** où le champ du sélecateur de personnes est préresigné avec le nom pour réaffecter la tâche à l’utilisateur prévu.
+1. **Sélectionnez Réaffecter l’endroit** où le champ du sélecateur de personnes est préresigné avec le nom pour réaffecter la tâche à l’utilisateur prévu.
 1. Supprimez le nom de l’utilisateur incorrect.
 1. Sélectionnez les utilisateurs prévus selon le scénario d’image, l’utilisateur B (Mona) et l’utilisateur C (Robin) pour la tâche.
 1. Sélectionnez **Terminé**.
@@ -84,18 +84,18 @@ L’image suivante illustre le scénario de réaffectation :
 
 ## <a name="implement-people-picker"></a>Implémenter le s picker de personnes
 
-Le s picker de personnes est implémenté en tant qu’extension du [contrôle Input.ChoiceSet.](https://adaptivecards.io/explorer/Input.ChoiceSet.html) Le contrôle d’entrée inclut les sélections suivantes :   
+Le s picker de personnes est implémenté en tant qu’extension du [contrôle Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) . Le contrôle d’entrée inclut les sélections suivantes :   
 
 * Dropdown, par exemple une sélection étendue.
 * Bouton d’radio, tel qu’une sélection unique.
 * Cases à cocher, telles que plusieurs sélections.  
 
 > [!NOTE]
-> Le `Input.ChoiceSet` contrôle est basé sur les `style` `isMultiSelect` propriétés et les propriétés.  
+> Le `Input.ChoiceSet` contrôle est basé sur les propriétés `style` et les `isMultiSelect` propriétés.  
 
 ### <a name="update-schema"></a>Mettre à jour un schéma
 
-Les propriétés suivantes sont des ajouts au schéma afin d’activer l’expérience du `Input.ChoiceSet` s picker de personnes sur la carte :  
+Les propriétés suivantes sont des ajouts au `Input.ChoiceSet` schéma afin d’activer l’expérience du s picker de personnes sur la carte :  
 
 #### <a name="inputchoiceset-control"></a>Contrôle Input.ChoiceSet
 
@@ -107,7 +107,7 @@ Les propriétés suivantes sont des ajouts au schéma afin d’activer l’expé
 
 |Propriété |Type |Requis |Description|
 |--|--|--|--|
-|**dataset** |Chaîne |Oui |Type de données à extraire dynamiquement.|   
+|**dataset** |String |Oui |Type de données à extraire dynamiquement.|   
 
 #### <a name="dataset"></a>dataset
 Le tableau suivant fournit des valeurs prédéfines en tant que **jeu de données** pour le s picker de personnes :   
@@ -160,8 +160,8 @@ Pour activer la recherche dans une liste de membres de conversation, utilisez le
 
 ### <a name="data-submission"></a>Soumission de données
 
-Vous pouvez utiliser `Action.Submit` ou envoyer des données `Action.Execute` sélectionnées à votre bot. La charge utile reçue sur votre bot est une liste des ID Azure AD ou des ID fournis `invoke` dans la liste statique.
-Dans le sélecateur de personnes, lorsqu’un utilisateur est sélectionné dans le contrôle, il s’agit de la valeur `Azure AD ID` renvoyée. Il `Azure AD ID` s’agit d’une chaîne qui identifie de manière unique un utilisateur dans l’annuaire.
+Vous pouvez utiliser ou `Action.Submit` envoyer `Action.Execute` des données sélectionnées à votre bot. La `invoke` charge utile reçue sur votre bot est une liste d’ID Microsoft Azure Active Directory (Azure AD) ou des ID fournis dans la liste statique.
+Dans le sélecateur de personnes, lorsqu’un utilisateur est sélectionné dans le contrôle, `Microsoft Azure Active Directory (Azure AD) ID` il s’agit de la valeur renvoyée. Il `Microsoft Azure Active Directory (Azure AD) ID` s’agit d’une chaîne qui identifie de manière unique un utilisateur dans l’annuaire.
 
 Le format de la valeur envoyée au bot dépend de la valeur de la `isMultiSelect` propriété :
 
@@ -170,15 +170,15 @@ Le format de la valeur envoyée au bot dépend de la valeur de la `isMultiSelect
 |false _(sélection unique)_|<selected_Azure_AD_ID>|
 |true _(sélection multiple)_|<selected_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-Avec le sélectionneur de personnes, l’utilisateur correspondant est `Azure AD ID` sélectionné au préalable. 
+Avec le `Azure AD ID`sélectionneur de personnes, l’utilisateur correspondant est sélectionné au préalable. 
 
 ## <a name="preselection-of-user"></a>Préselection de l’utilisateur
 
-Le sélecateur de personnes prend en charge la pré-sélection de l’utilisateur dans le contrôle, lors de la création et de l’envoi d’une carte adaptative. `Input.ChoiceSet` prend en `value` charge la propriété utilisée pour présélectionner un utilisateur. Le format de cette propriété est identique au format de valeur soumise `value` dans [l’envoi de données.](#data-submission)  
+Le sélecateur de personnes prend en charge la pré-sélection de l’utilisateur dans le contrôle, lors de la création et de l’envoi d’une carte adaptative. `Input.ChoiceSet` prend en charge `value` la propriété utilisée pour présélectionner un utilisateur. Le format de cette propriété `value` est identique au format de valeur soumise dans [l’envoi de données](#data-submission).  
 La liste suivante fournit les informations pour présélectionner les utilisateurs :
 
-* Pour un utilisateur unique dans le contrôle, spécifiez `Azure AD ID` l’utilisateur en tant que `value` . 
-* Pour plusieurs utilisateurs, par exemple, spécifiez une chaîne de s séparées `isMultiSelect` `true` par des `Azure AD ID` virgules.  
+* Pour un utilisateur unique dans le contrôle, spécifiez l’utilisateur `Microsoft Azure Active Directory (Azure AD) ID` en tant que `value`. 
+* Pour plusieurs utilisateurs, par exemple `isMultiSelect` `true`, spécifiez une chaîne de s séparées par des virgules `Microsoft Azure Active Directory (Azure AD) ID`.  
 
 L’exemple suivant décrit la pré-sélection d’un utilisateur unique :
 
@@ -251,12 +251,12 @@ L’exemple suivant décrit la pré-sélection de plusieurs utilisateurs :
  
 ## <a name="static-choices"></a>Choix statiques
 
-Les choix statiques sont pris en charge dans les scénarios où les profils personnalisés doivent être insérés dans les jeux de données prédéfinits. `Input.ChoiceSet` prend en charge `choices` la spécification statique dans le json. Le choix statique est utilisé pour créer les choix que l’utilisateur peut sélectionner.
+Les choix statiques sont pris en charge dans les scénarios où les profils personnalisés doivent être insérés dans les jeux de données prédéfinits. `Input.ChoiceSet` prend en charge la `choices` spécification statique dans le json. Le choix statique est utilisé pour créer les choix que l’utilisateur peut sélectionner.
 
 > [!NOTE]
 > Les `choices` données statiques sont utilisées avec des jeux de données dynamiques. 
 
-Le choix se compose de `title` et `value` . Lorsqu’ils sont utilisés avec le s sélectionneur de personnes, ces choix sont convertis en profils utilisateur qui ont le nom et `title` `value` l’identificateur. Ces profils personnalisés font également partie des résultats de recherche lorsque la requête de recherche correspond à ce qui est `title` donné.    
+Le choix se compose de `title` et `value`. Lorsqu’ils sont utilisés avec le s sélectionneur de personnes, ces choix `title` sont convertis en profils utilisateur qui ont le nom et l’identificateur `value` . Ces profils personnalisés font également partie des résultats de recherche lorsque la requête de recherche correspond à ce qui est donné `title`.    
 L’exemple suivant décrit les choix statiques : 
 
 ```json

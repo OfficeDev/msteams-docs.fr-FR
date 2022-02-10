@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 0efaea87af8128086db3e0e6416014d97f0af5a2
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362773"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517987"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Inclure une offre SaaS avec votre application Microsoft Teams application
 
@@ -49,7 +49,7 @@ Lorsque vous planifiez la monétisation de Teams’application, voici quelques �
 
 * Déterminez votre modèle d’abonnement. Une offre SaaS transactable peut inclure plusieurs plans d’abonnement. Les plans d’abonnement public disponibles pour tout le monde sont les plus courants, mais vous pouvez également cibler des clients spécifiques avec des offres uniquement pour eux. Pour plus d’informations, [consultez les offres privées sur le marketplace commercial Microsoft](/azure/marketplace/private-offers).
 * En savoir plus sur l’option de vente par le biais [*de La liste Microsoft*](/azure/marketplace/plan-saas-offer#listing-options) pour votre offre SaaS, qui est requise si vous souhaitez que les utilisateurs achètent des plans d’abonnement pour votre application directement via le Teams store.
-* Découvrez comment [Azure Active Directory l’signature unique (SSO)](/azure/marketplace/azure-ad-saas) permet à vos clients d’acheter et de gérer des abonnements. (Azure AD’sso est requise pour Teams applications avec des offres SaaS.)
+* Découvrez comment [Azure Active Directory l’signature unique (SSO)](/azure/marketplace/azure-ad-saas) permet à vos clients d’acheter et de gérer des abonnements. (Microsoft Azure Active Directory (Azure AD) SSO est requise pour Teams applications avec des offres SaaS.)
 * Comprenez que vous êtes responsable de la gestion et du paiement de l’infrastructure requise pour prendre en charge l’utilisation de votre offre SaaS par vos clients.
 * Planifiez l’utilisation des appareils mobiles. Pour éviter de violer les stratégies du Magasin d’applications tiers, votre application ne peut pas inclure de liens qui permettent aux utilisateurs d’acheter des plans d’abonnement sur un appareil mobile. Toutefois, vous pouvez toujours indiquer si votre application comporte des fonctionnalités qui nécessitent un plan d’abonnement. Pour plus d’informations, voir les [stratégies de certification de marketplace commerciales associées](/legal/marketplace/certification-policies#114048-mobile-experience).
 
@@ -81,7 +81,7 @@ Pour obtenir des instructions complètes, [voir créer la page d’accueil de vo
 
 Envisagez les approches suivantes lors de la création d’une page d’accueil Teams’application que vous monétisez. Consultez un exemple de page d’accueil dans [l’expérience d’achat de l’utilisateur final](#end-user-purchasing-experience).
 
-* Les utilisateurs doivent être en mesure de se connecter à votre page d’accueil avec les mêmes informations d’Azure AD qu’ils ont utilisées pour acheter l’abonnement. Pour plus d’informations, [voir Azure AD et les offres SaaS transactables sur le marketplace commercial](/azure/marketplace/azure-ad-saas).
+* Les utilisateurs doivent pouvoir se connecter à votre page d’accueil avec les mêmes informations d’identification Microsoft Azure Active Directory (Azure AD) qu’ils ont utilisées pour acheter l’abonnement. Pour plus d’informations, [voir Microsoft Azure Active Directory (Azure AD) et les offres SaaS transactables sur le marketplace commercial](/azure/marketplace/azure-ad-saas).
 * Autorisez les utilisateurs à prendre les mesures suivantes sur votre page d’accueil. N’oubliez pas de considérer ce qui est approprié pour le rôle et les autorisations d’un utilisateur (par exemple, vous pouvez autoriser uniquement les administrateurs d’abonnement à rechercher des utilisateurs) :
   * Recherchez des utilisateurs dans leur organisation à l’aide de la messagerie électronique ou d’une autre forme d’identité.
   * Consultez les utilisateurs à qui ils peuvent attribuer des licences dans une liste.

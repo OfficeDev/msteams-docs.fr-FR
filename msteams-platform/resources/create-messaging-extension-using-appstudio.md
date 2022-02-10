@@ -5,6 +5,12 @@ description: Découvrez comment créer une extension Microsoft Teams messagerie 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
+ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518155"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -41,7 +47,7 @@ Les extensions de messagerie tirez parti du schéma de messagerie et du protocol
 
 Si vous suivez l’un des démarrages rapides ou démarrez à partir de l’un des exemples disponibles, vous serez guidé tout au long de l’inscription de votre service web. Si vous souhaitez inscrire manuellement votre service, trois options s’offrent à vous. Si vous choisissez de vous inscrire sans utiliser d’abonnement Azure, vous ne pourrez pas tirer parti du flux d’authentification OAuth simplifié fourni par Bot Framework. Vous pourrez migrer votre inscription vers Azure après sa création.
 
-* Si vous avez un abonnement Azure (ou que vous souhaitez en créer un), vous pouvez inscrire votre service web manuellement à l’aide du portail Microsoft Azure web. Créez une ressource « Inscription des canaux bots ». Vous pouvez choisir le niveau de tarification gratuit, car les messages provenant de Microsoft Teams ne sont pas comptabilisés dans le nombre total de messages par mois.
+* Si vous avez un abonnement Azure (ou que vous souhaitez en créer un), vous pouvez inscrire votre service web manuellement à l’aide Microsoft Azure portail. Créez une ressource « Inscription des canaux bots ». Vous pouvez choisir le niveau de tarification gratuit, car les messages provenant de Microsoft Teams ne sont pas comptabilisés dans le nombre total de messages par mois.
 * Si vous ne souhaitez pas utiliser un abonnement Azure, vous pouvez utiliser le [portail d’inscription hérité](https://dev.botframework.com/bots/new).
 * App Studio peut également vous aider à inscrire votre service web (bot). Les services Web enregistrés via App Studio ne sont pas enregistrés dans Azure. Vous pouvez utiliser le [portail hérité pour](https://dev.botframework.com/bots) afficher, gérer et migrer vos inscriptions.
 

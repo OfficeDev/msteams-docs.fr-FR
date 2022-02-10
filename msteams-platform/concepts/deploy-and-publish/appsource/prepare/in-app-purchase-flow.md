@@ -5,9 +5,14 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518239"
 ---
-
-# <a name="in-app-purchases"></a>Achats dans l’application
+# <a name="in-app-purchases"></a>Achats dans l'application
 
 Microsoft Teams des API que vous pouvez utiliser pour implémenter les achats in-app afin de passer de la version gratuite à la version payante Teams applications. L’achat dans l’application vous permet de convertir des utilisateurs de plans gratuits en plans payants directement à partir de votre application.
 
@@ -38,10 +43,11 @@ Pour activer l’expérience d’achat dans l’application, mettez à jour Team
     "permissions": {
         "resourceSpecific": [
             {
-             "name": "InAppPurchase.Allow.User",
-             "type": "Delegated"
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated"
             }
         ]
+    }
 }
 ```
 
@@ -104,7 +110,7 @@ L’exemple suivant montre aux utilisateurs d’acheter des plans d’abonnement
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Aperçu de test pour les applications monétisées](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
+> [Aperçu du test pour les applications monétisées](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,13 +6,18 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: af96227df93bb2c236607791e3870b1882d2da5f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518372"
 ---
-
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Collaborer sur Teams projet à l’aide Teams Shared Computer Toolkit
 
-Plusieurs développeurs peuvent travailler ensemble pour déboguer, mettre en service et déployer pour le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations de Teams App et Azure AD App.Teams Shared Computer Toolkit prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs au projet TeamsFx à déboguer,  et déployer le même projet TeamsFx.
+Plusieurs développeurs peuvent travailler ensemble pour déboguer, mettre en service et déployer le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations de Teams App et Microsoft Azure Active Directory (Azure AD) App.Teams Shared Computer Toolkit  prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs au projet TeamsFx à déboguer, mettre en service et déployer le même projet TeamsFx.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 * Conditions préalables pour le compte
 
@@ -39,11 +44,11 @@ La liste suivante nous guide pour comprendre le processus de collaboration et sa
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborateurs":::
 
-* **Sélectionnez Ajouter Microsoft 365 Teams app (avec Azure AD App)** et ajoutez d’autres Microsoft 365 de messagerie de compte en tant que collaborateur. Le compte à ajouter doit se trouver sur le même client que le propriétaire du projet pour le débogage à distance, comme illustré dans l’image :
+* **Sélectionnez Ajouter Microsoft 365 Teams app (avec les propriétaires Microsoft Azure Active Directory (Azure AD)** et ajoutez d’autres adresses Microsoft 365 de messagerie de compte en tant que collaborateur. Le compte à ajouter doit se trouver sur le même client que le propriétaire du projet pour le débogage à distance, comme illustré dans l’image :
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* Pour afficher les collaborateurs dans l’environnement actuel, sélectionnez List **Microsoft 365 Teams App (avec Azure AD App),** puis les collaborateurs sont répertoriés dans le canal de sortie, comme illustré dans l’image suivante :
+* Pour afficher les collaborateurs dans l’environnement actuel, sélectionnez List Microsoft 365 Teams App (avec les propriétaires de l’application **Microsoft Azure Active Directory (Azure AD),** puis les collaborateurs sont répertoriés dans le canal de sortie, comme illustré dans l’image suivante :
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
@@ -72,8 +77,8 @@ Vous ne pouvez pas supprimer des collaborateurs directement de Teams Shared Comp
   1. Go to Teams Developer Portal and select your Teams app by name or app ID.
   2. Sélectionnez **Propriétaires** dans le panneau gauche.
   3. Sélectionnez et supprimez le collaborateur.
-  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
-  5. Sélectionnez **Propriétaires** dans le panneau gauche de la page Azure AD gestion des applications.
+  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Microsoft Azure Active Directory (Azure AD) App.
+  5. **Sélectionnez Propriétaires** dans le panneau gauche dans Microsoft Azure Active Directory page de gestion des applications (Azure AD).
   6. Sélectionnez et supprimez le collaborateur.
 
 > [!NOTE]

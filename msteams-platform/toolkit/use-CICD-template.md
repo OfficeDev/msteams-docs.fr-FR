@@ -6,8 +6,13 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518113"
 ---
-
 # <a name="cicd-guide"></a>Guide CI/CD
 
 TeamsFx permet d’automatiser votre flux de travail de développement tout en Teams application. Le document fournit des outils et des modèles pour vous aider à commencer à définir des pipelines CI ou CD avec GitHub, Azure Devops et Jenkins.
@@ -239,9 +244,9 @@ Veillez à définir les informations d’identification Azure et Microsoft365 da
 Pour mettre en service et déployer des ressources ciblant Azure à l’intérieur de CI/CD, vous devez créer un principal de service Azure à utiliser.
 
 Pour créer des principaux de service Azure, effectuez les étapes suivantes :
-1. Inscrivez une application Azure AD client unique.
-2. Attribuez un rôle à votre application Azure AD pour accéder à votre abonnement Azure, `Contributor` et le rôle est recommandé. 
-3. Créez une nouvelle Azure AD’application secrète.
+1. Inscrivez une application Microsoft Azure Active Directory (Azure AD) dans un seul client.
+2. Attribuez un rôle à votre application Microsoft Azure Active Directory (Azure AD) pour accéder à votre abonnement Azure et `Contributor` le rôle est recommandé. 
+3. Créez une nouvelle Microsoft Azure Active Directory (Azure AD) d’application.
 
 > [!TIP]
 > Enregistrez votre ID de client, votre ID d’application(AZURE_SERVICE_PRINCIPAL_NAME) et le secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) pour une utilisation ultérieure.

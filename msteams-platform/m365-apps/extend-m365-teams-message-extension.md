@@ -4,6 +4,12 @@ description: Voici comment mettre à jour votre extension de messagerie Teams ba
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
+ms.openlocfilehash: 410f019beeed078ed51c37c241e08511572e18b8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518106"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Étendre une extension Teams messagerie à travers Microsoft 365
 
@@ -21,7 +27,7 @@ Le processus de mise à jour de votre extension de Teams de messagerie basée su
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de messagerie dans les deux Outlook pour Windows bureau et web.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
@@ -86,14 +92,14 @@ Pour que les utilisateurs interagissent avec votre extension de messagerie à pa
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Volet Canaux des bots Azure répertoriant les canaux Microsoft Teams et Outlook’équipe":::
 
-## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour Azure AD’inscription de l’application pour l’sso
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Mise à Microsoft Azure Active Directory (Azure AD) d’application pour l’sso
 
 > [!NOTE]
 > Vous pouvez ignorer l’étape si vous utilisez un exemple de recherche [d’extension](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) de messagerie Teams, car le scénario n’implique pas l’authentification Azure Active Directory (AAD) Sign-On unique.
 
-Azure Active Directory L’signature unique (SSO) pour les extensions de messagerie fonctionne de la même manière dans Outlook que dans [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), mais vous devez ajouter plusieurs identificateurs d’application client à l’inscription d’application Azure AD de votre bot dans le portail d’inscription des applications de votre client.
+Azure Active Directory’signature unique (SSO) pour les extensions de messagerie fonctionne de la même manière dans Outlook que dans [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), mais vous devez ajouter plusieurs identificateurs d’application client au Microsoft Azure Active Directory (Azure AD ) inscription de votre bot dans le portail d’inscription *des applications de votre* client.
 
-1. Connectez-vous [au portail Azure avec](https://portal.azure.com) votre compte client en bac à sable.
+1. Connectez-vous [Microsoft Azure portail avec](https://portal.azure.com) votre compte client en bac à sable.
 1. **Ouvrez les inscriptions de l’application**.
 1. Sélectionnez le nom de votre application pour ouvrir son inscription.
 1. **Sélectionnez Exposer une API** (sous *Gérer*).

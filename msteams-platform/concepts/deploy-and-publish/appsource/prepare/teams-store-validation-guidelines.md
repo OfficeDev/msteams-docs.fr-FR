@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212123"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518232"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -231,7 +231,7 @@ Les applications doivent être entièrement fonctionnelles sur les dernières ve
 
 * Microsoft Windows
 * macOS
-* Microsoft Edge
+* MicrosoftEdge&nbsp;
 * Google Chrome
 * iOS
 * Android
@@ -271,7 +271,7 @@ Le manifeste de l'application Teams définit la configuration de votre applicati
 
 * Votre manifeste doit être conforme à un schéma de manifeste publié publiquement. Pour plus d'informations, consultez la [référence du manifeste](~/resources/schema/manifest-schema.md). Ne soumettez pas votre application à l'aide d'une version d'aperçu du manifeste.
 * Si votre application inclut un bot ou une extension de messagerie, les détails du manifeste de l'application doivent être cohérents avec les métadonnées de Bot Framework, notamment le nom du bot, le logo, le lien vers la politique de confidentialité et le lien vers les conditions d'utilisation.
-* Si votre application utilise Azure Active Directory pour l’authentification, incluez l’ID Azure AD application (client) dans le manifeste. Pour plus d’informations, voir la [référence de manifeste](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Si votre application utilise Azure Active Directory pour l’authentification, incluez l’ID d’application (client) Microsoft Azure Active Directory (Azure AD) dans le manifeste. Pour plus d’informations, voir la [référence de manifeste](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### <a name="app-icons"></a>Icônes d’application
 
@@ -1423,7 +1423,7 @@ Si votre application utilise les [API de flux d'activité fournies par Microsoft
 
 Le Programme de conformité d’Application Microsoft 365 est destiné à aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité concernant votre application. Si vous publiez une application dans le magasin Teams, vous devez effectuer les niveaux suivants du programme : 
 
-  * **Vérification de l’éditeur** : permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité des développeurs d’applications procédant à une intégration avec la Plateforme d'identités Microsoft. Une fois terminé, un badge bleu **vérifié** s’affiche sur la boîte Azure Active Directory consentement et d’autres écrans. Pour plus d'informations, voir [Marquer votre application comme vérifiée par l'éditeur](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+  * **Vérification de l’éditeur** : permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité des développeurs d’applications procédant à une intégration avec la Plateforme d'identités Microsoft. Une fois terminé, un badge bleu **vérifié** s’affiche dans la boîte de dialogue Azure Active Directory consentement et d’autres écrans. Pour plus d'informations, voir [Marquer votre application comme vérifiée par l'éditeur](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row::: 
     :::column span="":::
