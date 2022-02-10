@@ -5,12 +5,12 @@ keywords: format des cartes de bots teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212376"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443945"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -115,6 +115,14 @@ Le code suivant montre un exemple de mise en forme Cartes adaptatives :
     ]
 }
 ```
+
+Les cartes adaptatives prennent en charge.les émojis. Le code suivant montre un exemple de Cartes adaptatives avec un émoji :
+
+``` json
+{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
+```
+
+:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Carte adaptative avec un emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>Mentionner la prise en charge dans Cartes adaptatives 
 
