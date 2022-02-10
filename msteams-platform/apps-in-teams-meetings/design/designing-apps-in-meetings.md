@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Modèle de kit d’interface utilisateur lors de la réunion - Phase de réunion partagée avec le comportement réactif
-ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
-ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61051195"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523794"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension Microsoft Teams réunion
 
@@ -38,13 +38,13 @@ Dans les détails de la réunion, les utilisateurs peuvent sélectionner Ajouter
 
 #### <a name="mobile"></a>Mobile
 
-Une fois que l’application a été ajoutée (par exemple, sur le bureau), les utilisateurs peuvent accéder à l’application dans une réunion en sélectionnant **Plus** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: .
+Une fois que l’application a été ajoutée (par exemple, sur le bureau), les utilisateurs peuvent accéder à l’application dans une réunion en sélectionnant **Plus** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion lors d’une réunion sur mobile." border="false":::
 
 #### <a name="desktop"></a>Ordinateur de bureau
 
-Lors d’une réunion, les utilisateurs peuvent **sélectionner** Ajouter une :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **application** et l’application de leur choix.
+Lors d’une réunion, les utilisateurs **peuvent sélectionner** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: >  Ajouter une **application** et l’application de leur choix.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="L’exemple montre comment ajouter une extension de réunion au cours d’une réunion." border="false":::
 
@@ -101,11 +101,11 @@ Les personnes peuvent utiliser l’onglet réunion pour :
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Icône de l’application (sélectionnée)**: logo d’application transparent de 16 pixels.|
-|2|**Nom de l'application**|
-|3|**En-tête**: inclut le nom de votre application.|
+|1|**Icône de l’application (sélectionnée)** : logo d’application transparent de 16 pixels.|
+|2|**Nom de l’application**|
+|3|**En-tête :** inclut le nom de votre application.|
 |4|**Bouton Fermer :** ferme l’onglet. Utilisez toujours l’icône de fermeture supérieure droite au lieu d’une action dans le pied de plan.|
-|5|**Barre de notification**: les alertes d’erreur s’affichent directement sous l’en-tête et poussent le contenu de l’iFrame vers le bas de 20 pixels.|
+|5|**Barre de notification** : les alertes d’erreur s’affichent directement sous l’en-tête et poussent le reste du contenu de votre iframe vers le bas de 20 pixels.|
 |6 |**IFrame** : affiche le contenu de votre application.|
 
 ### <a name="spacing"></a>Espacement
@@ -168,32 +168,36 @@ Il existe deux variantes d’en-tête. Dans la mesure du possible, utilisez la v
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Avatar**: personne qui lance la boîte de dialogue en réunion.|
+|1|**Avatar** : personne qui initie la boîte de dialogue en réunion.|
 |2|**Icône de l’application**|
-|3|**Nom de l'application**|
+|3|**Nom de l’application**|
 |4|**Bouton Fermer :** ferme la boîte de dialogue.|
-|5|**Chaîne d’action**: décrit généralement qui a initié la boîte de dialogue.|
+|5|**Chaîne d’action** : décrit généralement l’auteur de la boîte de dialogue.|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>Comportement réactif : boîtes de dialogue en réunion
 
 Les boîtes de dialogue de réunion peuvent varier en taille pour tenir compte de différents scénarios. Veillez à maintenir le remplissage et les tailles de composants.
 
-* **Largeur**: vous pouvez spécifier la largeur de l’iframe de la boîte de dialogue n’importe où dans la plage de tailles prise en charge.
-* **Hauteur**: vous pouvez spécifier la hauteur de l’iframe de la boîte de dialogue n’importe où dans la plage de tailles prise en charge. Vous pouvez également autoriser les utilisateurs à faire défiler verticalement si le contenu de votre application dépasse la hauteur maximale.
-
-Pour implémenter, spécifiez la largeur et la hauteur à l’aide de la [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) clé.
+* **Largeur** : vous pouvez spécifier la largeur de l’iframe de la boîte de dialogue n’importe où dans la plage de tailles prise en charge.
+* **Hauteur** : vous pouvez spécifier la hauteur de l’iframe de la boîte de dialogue n’importe où dans la plage de tailles prise en charge. Vous pouvez également autoriser les utilisateurs à faire défiler verticalement si le contenu de votre application dépasse la hauteur maximale.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Exemple de boîte de dialogue en réunion. Largeur : Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Hauteur : 300 pixels (iframe)." border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>Utiliser l’étape de réunion partagée
 
-La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer avec le contenu de l’application en temps réel. Par exemple, les utilisateurs peuvent se concentrer sur la modification d’un document, le brainstorming avec un tableau blanc ou l’examen d’un tableau de bord.
+Vous pouvez permettre aux utilisateurs de partager et d’interagir avec tout ou partie du contenu de votre application lors de la phase de réunion. Voici quelques exemples d’utilisation possible de cette fonctionnalité lors d’une réunion :
 
-Les applications partagées à l’étape de la réunion occupent le même espace qu’un écran partagé. L’étape se réoriente pour tous les participants à la réunion.
+* Modification d’un document
+* Tableau blanc
+* Examen d’un tableau de bord
+* Regarder une vidéo
+* Lecture d’un jeu
+
+Les applications partagées à l’étape de la réunion occupent le même espace qu’un écran partagé. L’étape se réoriente également pour tous les participants à la réunion de la même manière.
 
 > [!NOTE]
-> Tous les utilisateurs en réunion peuvent voir l’application lorsqu’ils sont partagés à partir du Bureau. Actuellement, les utilisateurs mobiles ne peuvent pas partager de contenu d’application à l’étape de la réunion.
- 
+> Actuellement, les utilisateurs mobiles ne peuvent pas partager de contenu d’application à l’étape de la réunion. Cependant, ils peuvent voir le contenu partagé à partir du bureau.
+
 ### <a name="use-cases"></a>Cas d’utilisation
 
 L’étape de la réunion partagée est une question de collaboration et de participation. Voici quelques exemples de scénarios pour vous aider à commencer.
@@ -201,12 +205,14 @@ L’étape de la réunion partagée est une question de collaboration et de part
 :::row:::
    :::column span="1":::
 
-**Modifier et réviser :** examinez les tableaux de bord et la planification avec tous les utilisateurs de la réunion.
+**Modification et révision :** examinez les tableaux de bord et la planification avec tous les utilisateurs de la réunion.
 
    :::column-end:::
    :::column span="3":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="L’exemple montre un tableau de bord en cours de révision lors de la phase de réunion partagée." border="false":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="L’exemple montre un composant de tableau de bord en cours de révision lors de la phase de réunion partagée." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -237,23 +243,35 @@ L’étape de la réunion partagée est une question de collaboration et de part
    :::column-end:::
 :::row-end:::
 
-### <a name="anatomy-shared-meeting-stage"></a>Anatomie : étape de réunion partagée
+### <a name="anatomy-share-all-app-content-to-a-meeting"></a>Anatomie : partager tout le contenu de l’application à une réunion
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="L’image illustre l’anatomie de conception de la phase de réunion partagée." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="L’image illustre l’anatomie de conception de la phase de réunion partagée lorsque tout le contenu de l’application est partagé." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
-|1|**Icône de l’application**: l’icône en surbrillant indique que l’onglet de l’application en réunion est ouvert.|
-|2|**Bouton Partager à l’étape de la réunion**: point d’entrée pour partager l’application à la phase de réunion. S’affiche si vous configurez votre application pour utiliser la phase de réunion partagée.|
-|3|**IFrame** : affiche le contenu de votre application.|
-|4|**Bouton Arrêter le partage :** arrête le partage de l’application à la phase de réunion. S’affiche uniquement pour le participant qui a démarré le partage.|
-|5|**Attribution du présentateur**: affiche le nom du participant qui a partagé l’application.|
+|1|**Icône de l’application** : l’icône en surbrillant indique que l’onglet De réunion de l’application est ouvert.|
+|2|**Bouton Partager avec la réunion** : point d’entrée pour partager l’application avec la réunion. S’affiche si vous configurez votre application pour utiliser la phase de réunion partagée.|
+|3|**Attribution du présentateur** : affiche le nom du participant qui a partagé l’application.|
+|4|**IFrame** : affiche le contenu de votre application.|
+|5|**Bouton Arrêter le partage :** arrête le partage de l’application à la phase de réunion. S’affiche uniquement pour le participant qui a démarré le partage.|
+
+### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomie : partager du contenu d’application spécifique à une réunion
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="L’image illustre l’anatomie de conception de la phase de réunion partagée lorsque seul le contenu d’application spécifique est partagé." border="false":::
+
+|Compteur|Description|
+|----------|-----------|
+|1|**Icône de l’application** : l’icône en surbrillant indique que l’onglet De réunion de l’application est ouvert.|
+|2|**Bouton Partager avec la réunion** : point d’entrée pour partager l’application avec la réunion. Pour une expérience cohérente, utilisez toujours l’icône Teams partage standard. **Partager avec une réunion** est le texte par défaut recommandé, mais vous pouvez également le personnaliser pour vos cas d’utilisation. Par exemple, **lire ensemble pour** une application de jeu ou **Regarder ensemble** pour une application vidéo. Dans les deux cas, assurez-vous que l’action créera une expérience partagée et interactive avec tous les utilisateurs de la réunion.|
+|3|**Attribution du présentateur** : affiche le nom du participant qui a partagé l’application.|
+|4|**IFrame** : affiche le contenu de votre application.|
+|5|**Bouton Arrêter le partage :** arrête le partage de l’application à la phase de réunion. S’affiche uniquement pour le participant qui a démarré le partage.|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>Comportement réactif : étape de réunion partagée
 
 Les applications partagées au stade de la réunion varient en taille en fonction de l’état de la réunion et de la façon dont l’utilisateur re dimensionne la fenêtre. Maintenez le remplissage et la disposition réactive de la navigation et des contrôles comme vous le feriez dans un navigateur.
 
-* **Panneau latéral**: un utilisateur peut ouvrir le panneau latéral à tout moment au cours d’une réunion pour discuter, afficher la liste de membres ou utiliser une application (c’est-à-dire, l’onglet de la réunion). L’étape est réorganiser dynamiquement lorsque le panneau est ouvert.
+* **Panneau** latéral : un utilisateur peut ouvrir le panneau latéral à tout moment au cours d’une réunion pour discuter, afficher la liste de membres ou utiliser une application (c’est-à-dire, l’onglet de la réunion). L’étape est réorganiser dynamiquement lorsque le panneau est ouvert.
 * **Grille vidéo et audio :** la grille vidéo et audio est toujours visible pour afficher les participants à la réunion. Lorsqu’un utilisateur met à la une ou épingle une personne dans la réunion, cela augmente la hauteur ou la largeur de la grille des participants en fonction de l’orientation.
 
 #### <a name="meeting-stage-without-side-panel"></a>Étape de la réunion (sans panneau latéral)
@@ -270,7 +288,7 @@ Lorsque le panneau latéral est ouvert, l’étape de la réunion est de 918 x 5
 
 ## <a name="after-a-meeting"></a>Après une réunion
 
-Vous pouvez revenir à une réunion une fois qu’elle s’est terminée et afficher le contenu de l’application. Dans cet exemple, l’organisateur de la réunion peut examiner les résultats des sondages dans l’onglet **Contoso.** (Remarque : du point de vue de la conception, il n’y a aucune différence entre l’expérience de l’onglet avant et après la réunion.)
+Vous pouvez revenir à une réunion une fois qu’elle s’est terminée et afficher le contenu de l’application. Dans cet exemple, l’organisateur de la réunion peut examiner les résultats des sondages dans l’onglet **Contoso** . (Remarque : du point de vue de la conception, il n’y a aucune différence entre l’expérience de l’onglet avant et après la réunion.)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="L’exemple d’illustration montre un onglet après la réunion." border="false":::
 
@@ -449,7 +467,7 @@ Teams réunions sont optimisées pour le thème foncé afin de réduire les brui
 
 #### <a name="dont-use-unfamiliar-colors"></a>À ne pas faire : utiliser des couleurs inconnues
 
-Les couleurs qui entrent en conflit avec l’environnement de réunion peuvent être gênantes et apparaître moins natives Teams. Découvrez la palette de couleurs [Teams,](https://developer.microsoft.com/fluentui#/styles/web/colors/products)y compris les neutres du thème d’appel.
+Les couleurs qui entrent en conflit avec l’environnement de réunion peuvent être gênantes et apparaître moins natives Teams. Découvrez la palette de couleurs Teams[,](https://developer.microsoft.com/fluentui#/styles/web/colors/products) y compris les neutres du thème d’appel.
 
    :::column-end:::
 :::row-end:::

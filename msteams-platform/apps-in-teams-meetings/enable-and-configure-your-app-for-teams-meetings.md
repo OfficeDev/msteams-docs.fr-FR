@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, la phase de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 45c12a52758bc86f2ab05112a69a8342ade9a5af
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518036"
+ms.locfileid: "62523779"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -128,9 +128,6 @@ La boîte de dialogue en réunion ne doit pas utiliser le module de tâche. Le m
 > * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial `from.id` doit reposer sur les métadonnées `from` de demande dans l’objet, et non sur les `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Microsoft Azure Active Directory (Azure AD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) [et créer et envoyer le module de tâche](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### <a name="shared-meeting-stage"></a>Étape de réunion partagée
-
-> [!NOTE]
-> Actuellement, cette fonctionnalité est disponible en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md) uniquement.
 
 La phase de réunion partagée permet aux participants à la réunion d’interagir et de collaborer sur le contenu de l’application en temps réel. Vous pouvez partager vos applications à l’étape de la réunion collaborative des manières suivantes :
 

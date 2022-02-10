@@ -5,12 +5,12 @@ description: Une vue d’ensemble des onglets personnalisés sur la plateforme T
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c9d4e7a97cc9272faab32408683f6d8d43338a0d
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435180"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518344"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
 
@@ -43,7 +43,7 @@ Vous pouvez créer des onglets avec des cartes adaptatives et centraliser toutes
 Les fonctionnalités de l’onglet sont les suivantes :
 
 * Si un onglet est ajouté à une application qui possède également un bot, le bot est également ajouté à l’équipe.
-* Sensibilisation de l'ID Azure Active Directory de l'utilisateur actuel.
+* Sensibilisation de l’ID Microsoft Azure Active Directory (Azure AD) de l’utilisateur actuel.
 * Sensibilisation des paramètres régionaux pour que l’utilisateur indique la langue qui est `en-us`
 * Fonctionnalité d' authentification unique (SSO), si prise en charge.
 * Possibilité d’utiliser des bots ou des notifications d’application pour créer un lien profond vers l’onglet ou une sous-entité au sein du service, par exemple un élément de travail individuel.
