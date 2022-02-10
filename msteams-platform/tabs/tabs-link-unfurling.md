@@ -5,12 +5,12 @@ description: Découvrez comment déployer un lien, ouvrir la vue d’étape et �
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 48c7ae69b10702d58be933b5619fd6bdeb8cecf3
+ms.sourcegitcommit: 3332ca6f61d2d60ddb20140f6d163905ea177157
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178261"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62516518"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -39,7 +39,7 @@ Vous pouvez appeler l’affichage de l’étape des manières suivantes :
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>Appeler l’affichage de l’étape à partir d’une carte adaptative
 
-Lorsque l’utilisateur entre une URL sur le client de bureau Teams, [](../task-modules-and-cards/cards/cards-actions.md) le bot est appelé et renvoie une carte adaptative avec la possibilité d’ouvrir l’URL dans une étape. Une fois qu’une étape est lancée et que l’étape est fournie, vous pouvez ajouter la possibilité d’épingler l’étape `tabInfo` sous la mesure d’un onglet.  
+Lorsque l’utilisateur entre une URL sur le client de bureau Teams, le bot est appelé et renvoie une carte adaptative avec la possibilité d’ouvrir l’URL dans une étape.[](../task-modules-and-cards/cards/cards-actions.md) Une fois qu’une étape est lancée `tabInfo` et que l’étape est fournie, vous pouvez ajouter la possibilité d’épingler l’étape sous la mesure d’un onglet.  
 
 Les images suivantes affichent une étape ouverte à partir d’une carte adaptative :
 
@@ -72,35 +72,31 @@ Voici le code pour ouvrir une étape à partir d’une carte adaptative :
 } 
 ```
 
-Le `invoke` type de requête doit être `composeExtension/queryLink` .
+Le `invoke` type de requête doit être `composeExtension/queryLink`.
 
 > [!NOTE]
 > * `invoke` est similaire au flux de travail `appLinking` actuel. 
-> * Pour conserver la cohérence, il est recommandé de nommer `Action.Submit` comme `View` .
-> * `websiteUrl` est une propriété obligatoire à passer dans `TabInfo` l’objet.
+> * Pour conserver la cohérence, il est recommandé de nommer `Action.Submit` comme `View`.
+> * `websiteUrl` est une propriété obligatoire à passer dans l’objet `TabInfo` .
 
 Voici le processus d’appel de l’affichage de l’étape :
 
-* Lorsque l’utilisateur sélectionne **Affichage,** le bot reçoit une `invoke` demande. Le type de requête `composeExtension/queryLink` est .
-* `invoke` La réponse du bot contient une carte adaptative avec son `tab/tabInfoAction` type.
+* Lorsque l’utilisateur sélectionne **Affichage**, le bot reçoit une `invoke` demande. Le type de requête est `composeExtension/queryLink`.
+* `invoke` La réponse du bot contient une carte adaptative avec son type `tab/tabInfoAction` .
 * Le bot répond par un `200` code.
 
 > [!NOTE]
-> Sur Teams clients mobiles, l’utilisation de l’affichage de phase pour les applications distribuées via le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) sans expérience optimisée pour moblie ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de `TabInfo` l’objet.
+> Sur Teams clients mobiles, l’utilisation de l’affichage de phase pour les applications distribuées via le magasin [Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) sans expérience optimisée pour moblie ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo` .
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Appeler l’affichage de l’étape par le biais d’un lien profond
 
-Pour appeler l’affichage de l’étape via un lien profond à partir de votre onglet, vous devez encapsuler l’URL du lien profond dans `microsoftTeams.executeDeeplink(url)` l’API. Le lien profond peut également être transmis via une `OpenURL` action dans la carte.
-
-L’image suivante affiche une vue d’étape invoquée via un lien profond :
-
-<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
+Pour appeler l’affichage de l’étape via un lien profond à partir de votre onglet, vous devez encapsuler l’URL du lien profond dans l’API `microsoftTeams.executeDeeplink(url)` . Le lien profond peut également être transmis via une `OpenURL` action dans la carte.
 
 ### <a name="syntax"></a>Syntaxe
 
 Voici la syntaxe du lien profond : 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\« contentUrl \" : \" « [contentUrl] » \" , \" websiteUrl \" : \" « [websiteUrl] » \" , name : \" \" \" Contoso \" }
+https://teams.microsoft.com/l/stage/{appId}/0?context={« contentUrl »:"contentUrl »,"websiteUrl »:"websiteUrl »,"name »:"Contoso"}
  
 ### <a name="examples"></a>Exemples
 
@@ -110,13 +106,28 @@ Voici les exemples de liens profonds pour appeler l’affichage de l’étape :
 
 **Exemple 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl »::"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
+Non codé
+ 
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
+
+Codé
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 **Exemple 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"websiteUrl »::"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx »,"name »:"Contoso"}
+Non codé
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={« contentUrl »:"https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx »,"websiteUrl »:" »https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"name »:"Contoso"}
+
+Codé
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 > [!NOTE]
+> Tous les liens profonds doivent être encodés avant de pouvoir l’encoder. Nous ne  prise en charge pas les URL non codées.
 > * Le `name` lien profond est facultatif. S’il n’est pas inclus, le nom de l’application le remplace.
 > * Le lien profond peut également être transmis via une `OpenURL` action.
 > * Lorsque vous lancez une étape à partir d’un certain contexte, assurez-vous que votre application fonctionne dans ce contexte. Par exemple, si votre vue d’étape est lancée à partir d’une application personnelle, vous devez vous assurer que votre application a une étendue personnelle.
@@ -127,8 +138,8 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | Cette propriété est un identificateur unique de l’entité affichée par l’onglet. Ce champ est obligatoire.|
 | `name` | String | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
-| `contentUrl` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
-| `websiteUrl?` | String | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
+| `contentUrl` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans Teams dessin. Ce champ est obligatoire.|
+| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// pointer vers, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
 | `removeUrl?` | String | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code
