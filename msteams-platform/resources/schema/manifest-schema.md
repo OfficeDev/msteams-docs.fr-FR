@@ -5,8 +5,13 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
+ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518358"
 ---
-
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
 Le manifeste Teams décrit comment l’application s’intègre au produit Microsoft Teams. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,..., et 1.12 sont également pris en charge (à l’aide de « v1.x » dans l’URL).
@@ -619,11 +624,11 @@ L’objet est un tableau avec tous les éléments du type `string`.
 
 **Facultatif**— objet
 
-Fournissez votre ID d’application Azure Active Directory et vos informations de Microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans Azure AD, vous devez fournir l’ID d’application. Les administrateurs peuvent facilement examiner les autorisations et accorder leur consentement dans le Centre d’administration Teams.
+Fournissez votre ID d’application Azure Active Directory et vos informations de Microsoft Graph pour aider les utilisateurs à se connecter en toute transparence à votre application. Si votre application est inscrite dans Microsoft Azure Active Directory (Azure AD), vous devez fournir l’ID de l’application. Les administrateurs peuvent facilement examiner les autorisations et accorder leur consentement dans le Centre d’administration Teams.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|string|36 caractères|✔|Application Azure AD ID d’application. Cet ID doit être un GUID.|
+|`id`|string|36 caractères|✔|ID de l'application Microsoft Azure Active Directory (Azure AD). Cet ID doit être un GUID.|
 |`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, https://notapplicable pour éviter une réponse d’erreur. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
