@@ -4,12 +4,12 @@ description: Décrit les liens profonds et comment les utiliser dans vos applica
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: lien profond des équipes
-ms.openlocfilehash: 63aa2849360d709e261c88472090caaf066f98c1
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059304"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518246"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
@@ -140,7 +140,7 @@ Exemple : `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 
 Les paramètres de requête sont les suivants :
 
-* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID utilisateur prend en charge le Azure AD UserPrincipalName, par exemple une adresse e-mail uniquement.
+* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID d’utilisateur prend en charge Microsoft Azure Active Directory Domain Services (Azure AD) UserPrincipalName, telle qu’une adresse e-mail uniquement.
 * `topicName` : champ facultatif pour le nom d’affichage de la conversation, dans le cas d’une conversation avec au moins 3 utilisateurs. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
 * `message` : champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est dans un état brouillon.
 
@@ -226,7 +226,7 @@ Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atte
 
 Les paramètres de requête sont les suivants :
 
-* `attendees` : liste facultative d’ID utilisateur séparés par des virgules représentant les participants de la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Actuellement, le champ ID d’utilisateur prend uniquement en charge le Azure AD UserPrincipalName, généralement une adresse e-mail.
+* `attendees` : liste facultative d’ID utilisateur séparés par des virgules représentant les participants de la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Actuellement, le champ ID d’utilisateur prend uniquement en charge le UserPrincipalName Microsoft Azure Active Directory Domain Services (Azure AD), généralement une adresse e-mail.
 * `startTime` : heure de début facultative de l’événement. Il doit être au [format ISO 8601 long](https://en.wikipedia.org/wiki/ISO_8601), par exemple *2018-03-12T23:55:25+02:00*.
 * `endTime` : heure de fin facultative de l’événement, également au format ISO 8601.
 * `subject` : champ facultatif pour l’objet de la réunion.
@@ -259,7 +259,7 @@ En cas d’appel vidéo, le client demande une confirmation et active la vidéo 
 | Effectuer un appel audio et vidéo à une combinaison d’utilisateurs VoIP et RTC | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber &gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Voici les paramètres de requête :
-* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de l’appel. Actuellement, le champ ID d’utilisateur prend en charge le Azure AD UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn url 4 :&lt;numéro de téléphone&gt;.
+* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de l’appel. Actuellement, le champ ID d’utilisateur prend en charge le Microsoft Azure Active Directory Domain Services (Azure AD) UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn mri 4 :&lt;numéro de téléphone&gt;.
 * `withVideo` : il s’agit d’un paramètre facultatif que vous pouvez utiliser pour effectuer un appel vidéo. La définition de ce paramètre active uniquement la caméra de l’appelant. Le destinataire de l’appel peut répondre par le biais d’un appel audio ou audio et vidéo via la fenêtre de notification d’appel Teams. 
 * `Source` : il s’agit d’un paramètre facultatif, qui informe sur la source du lien profond.
 

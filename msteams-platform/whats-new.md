@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: a33e704b8c66d460b6946b60947601bac9fb9269
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443971"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523786"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,10 +22,10 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|11/02/2022| Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022| Mode interactif pour partager l’étape de la réunion| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |03/02/2022| Aperçu du test pour les applications monétisées (aperçu du développeur)| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -45,6 +45,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|11/02/2022| Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App Manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) |
 |25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -238,7 +239,6 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 | -------- | --------- | ------------------ |
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022 |Mode interactif pour partager l’étape de la réunion| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |03/02/2022| Aperçu du test pour les applications monétisées| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |17/01/2022| Sélectionneur de personnes en cartes adaptatives pour mobile  | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|

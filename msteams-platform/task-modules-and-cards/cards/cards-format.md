@@ -5,12 +5,12 @@ keywords: format des cartes de bots teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 965f74bd2756fc4a2beb9c65ebf8da577f12dc89
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443945"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518351"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -173,16 +173,16 @@ Le code suivant montre un exemple de carte adaptative avec une mention :
 }
 ```
 
-### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>ID d’objet Azure AD et UPN dans la mention utilisateur 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory Domain Services (Azure AD) ID d’objet et UPN dans la mention utilisateur 
 
-La plateforme Teams permet de mentionner des utilisateurs avec leur ID d’objet Azure AD et leur nom d’utilisateur principal (UPN), en plus des ID de mention existants. Les bots avec Cartes adaptatives et connecteurs avec des webhooks entrants prennent en charge les deux ID de mention utilisateur. 
+La plateforme Teams permet de mentionner des utilisateurs avec leur ID d’objet Microsoft Azure Active Directory Domain Services (Azure AD) et leur nom d’utilisateur principal (UPN), en plus des ID de mention existants. Les bots avec Cartes adaptatives et connecteurs avec des webhooks entrants prennent en charge les deux ID de mention utilisateur. 
 
 Le tableau suivant décrit les ID de mention utilisateur qui viennent d’être pris en charge :
 
 |Id  | Fonctionnalités de prise en charge |   Description | Exemple |
 |----------|--------|---------------|---------|
-| ID d’objet Azure AD | Bot, Connecteur |  ID d’objet de l’utilisateur Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connecteur | UPN de l’utilisateur Azure AD | john.smith@microsoft.com |
+| ID d’objet Microsoft Azure Active Directory Domain Services (Azure AD) | Bot, Connecteur |  ID d’objet de l’utilisateur Microsoft Azure Active Directory Domain Services (Azure AD) |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Connecteur | UPN de l’utilisateur Microsoft Azure Active Directory Domain Services (Azure AD) | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mention utilisateur dans les bots avec Cartes adaptatives 
 
@@ -235,11 +235,11 @@ L’image suivante illustre la mention utilisateur avec la carte adaptative dans
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mention utilisateur dans le webhook entrant avec Cartes adaptatives 
 
-Les webhooks entrants commencent à prendre en charge la mention utilisateur dans Cartes adaptatives avec l’ID d’objet Azure AD et l’UPN.
+Les webhooks entrants commencent à prendre en charge la mention utilisateur dans la Carte adaptative avec l’ID d’objet Microsoft Azure Active Directory Domain Services (Azure AD) et l’UPN.
 
 > [!NOTE]    
-> * Activez la mention utilisateur dans le schéma des webhooks entrants pour prendre en charge Azure AD’ID d’objet et l’UPN. 
-> * Les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec Azure AD’ID d’objet et l’UPN.      
+> * Activez la mention utilisateur dans le schéma des webhooks entrants pour prendre en charge l’ID d’objet Microsoft Azure Active Directory (Azure AD) et l’UPN. 
+> * Les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec l’ID d’objet Microsoft Azure Active Directory Domain Services (Azure AD) et l’UPN.      
 
 ##### <a name="example"></a>Exemple 
 
