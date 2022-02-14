@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 2c20fcb473fea847e19451d3ca883cf4b93337a4
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523786"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801389"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici  |
 | --- | --- | --- |
+|02/09/2022| Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
 |11/02/2022| Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
@@ -45,6 +46,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|02/09/2022| Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
 |11/02/2022| Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
 |08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App Manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) |

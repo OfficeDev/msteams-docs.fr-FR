@@ -1,15 +1,20 @@
 ---
 title: Conditions requises et considérations pour les robots multimédias hébergés par l’application
-description: 'Comprendre les exigences et considérations importantes, ainsi que les considérations relatives à l’évolutivité et aux performances liées à la création de bots multimédias hébergés par l’application pour Microsoft Teams à l’aide d’exemples et d’exemples de code.'
+description: Comprendre les exigences et considérations importantes, ainsi que les considérations relatives à l’évolutivité et aux performances liées à la création de bots multimédias hébergés par l’application pour Microsoft Teams à l’aide d’exemples et d’exemples de code.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: serveur multimédia hébergé par Windows’application Azure VM
 ms.date: 11/16/2018
+ms.openlocfilehash: 1e9fa106376a3068039dd74c8e0b4f2b8c8802d6
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801368"
 ---
-
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Conditions requises et considérations pour les robots multimédias hébergés par l’application
 
-Un bot multimédia hébergé par l’application nécessite que [`Microsoft.Graph.Communications.Calls.Media` la bibliothèque .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) accède aux flux multimédias audio et vidéo. Le bot doit être déployé sur un ordinateur Windows Server ou un système d’exploitation invité Windows Server dans Azure.
+Un bot multimédia hébergé par l’application nécessite que [`Microsoft.Graph.Communications.Calls.Media` la bibliothèque .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) accède aux flux multimédias audio et vidéo. Le bot doit être déployé sur un ordinateur local Windows Server ou un système d’exploitation invité Windows Server dans Azure.
 
 > [!NOTE]
 > * Les instructions pour le développement de bots de messagerie et de réponse vocale interactive (IVR) ne s’appliquent pas complètement à la création de bots multimédias hébergés par l’application.

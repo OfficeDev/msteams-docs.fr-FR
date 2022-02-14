@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: b1c728fd27b1cecdf8e2fd7c62e6eaabf01b3cc7
-  ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+  ms.openlocfilehash: 5c6428985d0220cb4578c082214dd2d935ea55b9
+  ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/08/2022
-  ms.locfileid: "62443894"
+  ms.lasthandoff: 02/14/2022
+  ms.locfileid: "62801375"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - text: Commentaires sur l'achèvement du formulaire des cartes adaptatives
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: Sélectionneur de personnes dans les Cartes adaptatives
+    - text: Sélecteur de personnes dans les Cartes adaptatives
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams Shared Computer Toolkit for Visual Studio Code (Preview)
       url: ~/toolkit/teams-toolkit-fundamentals.md
@@ -53,10 +53,12 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Explorer les applications à code faible pour Teams
       url: ~/samples/teams-low-code-solutions.md
-- title: Didacticiels
+- title: Tutoriels
   linkLists:
   - linkListType: concept
     links:
+    - text: Envoyer et recevoir des fichiers
+      url: bots/how-to/bots-filesv4.md
     - text: Teams bot d’appel et de réunion
       url: bots/calls-and-meetings/registering-calling-bot.md
     - text: Autorisation d’appareil pour le navigateur
@@ -71,6 +73,8 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
+    - text: Télécharger fichiers à Teams partir d’un bot
+      url: ~/sbs-file-handling-in-bot.yml
     - text: Créer un bot d’appel et de réunion
       url: ~/sbs-calling-and-meeting.yml
     - text: Configurer les autorisations de périphérique Onglet
@@ -89,8 +93,6 @@ landingContent:
       url: ~/sbs-meetings-sidepanel.yml
     - text: Générer un affichage de l’étape réunions
       url: ~/sbs-meetings-stage-view.yml
-    - text: Interagir avec le bot de bulles de contenu dans les réunions
-      url: ~/sbs-meeting-content-bubble.yml
 - title: Prise en main
   linkLists:
   - linkListType: get-started
