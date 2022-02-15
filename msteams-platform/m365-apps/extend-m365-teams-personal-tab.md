@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9c6c88835dc24c64f93605d09ac15da5409add0f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518022"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821415"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet Teams’une page à l’autre Microsoft 365
 
@@ -36,7 +36,7 @@ Le test de votre application nécessite les étapes suivantes :
 
 Après ces étapes, votre application doit apparaître dans les versions d’Outlook et Office applications.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prerequisites
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
@@ -120,16 +120,16 @@ Si votre application utilise des en-têtes de stratégie de sécurité du [conte
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Mise à Microsoft Azure Active Directory (Azure AD) d’application pour l’sso
+## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour Azure AD’inscription de l’application pour l’sso
 
-Azure Active Directory l’signature unique (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook que dans [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), mais vous devrez ajouter plusieurs identificateurs d’application client au Microsoft Azure Active Directory ( Azure AD) inscription de votre application onglet dans le portail d’inscription des *applications de votre* client.
+Azure Active Directory L’signature unique (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook que dans [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), mais vous devez ajouter plusieurs identificateurs d’application client à l’inscription de l’application Azure AD de votre application onglet dans le portail d’inscription des applications de votre client.
 
 1. Connectez-vous [Microsoft Azure portail avec](https://portal.azure.com) votre compte client en bac à sable.
 1. Ouvrez le **blade d’inscription de l’application** .
 1. Sélectionnez le nom de votre application d’onglet personnel pour ouvrir son inscription. 
 1. **Sélectionnez Exposer une API** (sous *Gérer*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du blade *App registrations* sur Microsoft Azure portail":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du blade *App registrations* sur le portail Azure":::
 
 Dans la section **Applications clientes autorisées** , assurez-vous que toutes les valeurs `Client Id` suivantes sont ajoutées :
 

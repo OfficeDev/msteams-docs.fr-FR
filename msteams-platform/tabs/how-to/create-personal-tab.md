@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET du magasin d’autorisations de domaine de conversation appmanifest du package MVC
-ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 6fd5abaf21458560c65626982f57ae4a8eac722e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518029"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821681"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -137,7 +137,7 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
     **Avez-vous besoin Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet ?**
 
-    Choisissez **de** ne pas inclure Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
+    Choisissez **de** ne pas inclure Azure AD prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
 
     > [!IMPORTANT]
     > Le composant **de chemin d’accès yourDefaultTabNameTab** est la valeur que vous avez entrée dans le générateur pour le nom de l’onglet par **défaut, ainsi** que le mot **Tab**.
@@ -742,7 +742,7 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Exemple d’options pour ajouter un déplacement arrière de l’API registerOnFocussed" border="false":::
 
-### <a name="tab"></a>Onglet
+### <a name="tab"></a>Tab
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Exemple d’options pour l’ajout de l’API registerOnFocussed pour l’onglet" border="false":::
 

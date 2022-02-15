@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations à prendre en compte pour Teams’intégration
-ms.openlocfilehash: 0e80a051bb3964b3ade44e1f2c60fe4bf2242138
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a67124f5556ed8b197b981ac150a652dc8d25ec1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518470"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821345"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations à prendre en compte pour Teams’intégration 
 
@@ -84,12 +84,12 @@ Découvrez comment obtenir du contexte pour votre onglet Teams [ou](../tabs/how-
 
 Azure Active Directory fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Microsoft Azure Active Directory (Azure AD).
 
-Teams dispose de mécanismes d’sign-on (SSO) avec Microsoft Azure Active Directory (Azure AD) pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
+Teams des mécanismes d’sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications](/microsoftteams/manage-apps).
 
-Pour SharePoint pages, vous pouvez uniquement utiliser l’oD unique et vous ne pouvez pas ajouter un autre ID de Microsoft Azure Active Directory (Azure AD) si vous souhaitez que l’puisque l’ID est l’application SharePoint.
+Pour SharePoint pages Azure AD, vous ne pouvez utiliser l’sOS que si vous souhaitez qu’elle fonctionne pour une autre application, car l’ID est l’SharePoint de l’application.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 

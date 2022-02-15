@@ -4,12 +4,12 @@ description: Décrit les liens profonds et comment les utiliser dans vos applica
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: lien profond des équipes
-ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518246"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821387"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
@@ -226,7 +226,7 @@ Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atte
 
 Les paramètres de requête sont les suivants :
 
-* `attendees` : liste facultative d’ID utilisateur séparés par des virgules représentant les participants de la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Actuellement, le champ ID d’utilisateur prend uniquement en charge le UserPrincipalName Microsoft Azure Active Directory Domain Services (Azure AD), généralement une adresse e-mail.
+* `attendees` : liste facultative d’ID utilisateur séparés par des virgules représentant les participants de la réunion. L’utilisateur qui effectue l’action est l’organisateur de la réunion. Actuellement, le champ ID d’utilisateur prend uniquement en charge le Azure AD UserPrincipalName, généralement une adresse e-mail.
 * `startTime` : heure de début facultative de l’événement. Il doit être au [format ISO 8601 long](https://en.wikipedia.org/wiki/ISO_8601), par exemple *2018-03-12T23:55:25+02:00*.
 * `endTime` : heure de fin facultative de l’événement, également au format ISO 8601.
 * `subject` : champ facultatif pour l’objet de la réunion.
@@ -246,9 +246,6 @@ En cas d’appel vidéo, le client demande une confirmation et active la vidéo 
 > [!NOTE]
 > Ce lien profond ne peut pas être utilisé pour appeler une réunion.
 
-> [!NOTE]
-> Actuellement, le lien profond à appeler n’est pas pris en charge sur les appareils mobiles Teams.
-
 ### <a name="generate-a-deep-link-to-a-call"></a>Générer un lien profond vers un appel
 
 | Lien profond | Format | Exemple |
@@ -259,7 +256,7 @@ En cas d’appel vidéo, le client demande une confirmation et active la vidéo 
 | Effectuer un appel audio et vidéo à une combinaison d’utilisateurs VoIP et RTC | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber &gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Voici les paramètres de requête :
-* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de l’appel. Actuellement, le champ ID d’utilisateur prend en charge le Microsoft Azure Active Directory Domain Services (Azure AD) UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn mri 4 :&lt;numéro de téléphone&gt;.
+* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de l’appel. Actuellement, le champ ID d’utilisateur prend en charge le Azure AD UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn url 4 :&lt;numéro de téléphone&gt;.
 * `withVideo` : il s’agit d’un paramètre facultatif que vous pouvez utiliser pour effectuer un appel vidéo. La définition de ce paramètre active uniquement la caméra de l’appelant. Le destinataire de l’appel peut répondre par le biais d’un appel audio ou audio et vidéo via la fenêtre de notification d’appel Teams. 
 * `Source` : il s’agit d’un paramètre facultatif, qui informe sur la source du lien profond.
 

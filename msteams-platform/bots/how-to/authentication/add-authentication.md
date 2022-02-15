@@ -1,13 +1,18 @@
 ---
 title: Ajouter l’authentification à votre bot Teams
 author: surbhigupta
-description: 'Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams à l’aide Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots activés pour l’authentification.'
+description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams à l’aide Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots activés pour l’authentification.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifeste du bot d’inscription du bot de groupe de ressources Azure
+ms.openlocfilehash: 8236a31eef3422ac8efca6f06437a62efafc778e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821611"
 ---
-
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
 Il arrive parfois que vous devrez créer des bots dans Microsoft Teams qui peuvent accéder aux ressources pour le compte de l’utilisateur, telles qu’un service de messagerie.
@@ -26,7 +31,7 @@ Voici les titres des sections de cet article :
 - **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émettra un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder à des ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, [Microsoft Teams flux d’authentification pour les bots](auth-flow-bot.md).
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous inscrire et échanger des messages avec lui dans une conversation.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 - Connaissance des principes [de base du bot][concept-basics], [de la gestion de l’état][concept-state], de la bibliothèque [de][concept-dialogs] boîtes de dialogue et de la façon d’implémenter un [flux de conversation séquentiel][simple-dialog].
 - Connaissance du développement Azure et OAuth 2.0.
@@ -60,7 +65,7 @@ Vous utilisez un groupe de ressources pour créer des ressources individuelles p
 
 ## <a name="create-the-service-plan"></a>Créer le plan de service
 
-1. Dans le [**portail Microsoft Azure,**][azure-portal] dans le panneau de navigation de gauche, **sélectionnez Créer une ressource**.
+1. Dans le [**portail Azure**][azure-portal], dans le panneau de navigation de gauche, **sélectionnez Créer une ressource**.
 1. Dans la zone de recherche, tapez *Plan de service d’application*. Sélectionnez la carte **Plan du service d’application** dans les résultats de la recherche.
 1. Sélectionnez **Créer**.
 1. Vous serez invité à fournir les informations suivantes :
@@ -78,9 +83,9 @@ Vous utilisez un groupe de ressources pour créer des ressources individuelles p
 L’inscription de ressource Azure Bot inscrit votre service web en tant que bot auprès de Bot Framework qui vous fournit un ID d’application Microsoft et un mot de passe d’application (secret client).
 
 > [!IMPORTANT]
-> Vous ne devez inscrire votre bot que s’il n’est pas hébergé dans Azure. Si vous [avez créé un bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) via le portail Microsoft Azure, il est déjà inscrit auprès du service. Si vous avez créé votre bot via [Bot Framework](https://dev.botframework.com/bots/new) ou [le portail](../../../concepts/build-and-test/teams-developer-portal.md) de développement, votre bot n’est pas inscrit dans Azure.
+> Vous ne devez inscrire votre bot que s’il n’est pas hébergé dans Azure. Si vous [avez créé un bot via](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) le portail Azure, il est déjà inscrit auprès du service. Si vous avez créé votre bot via [Bot Framework](https://dev.botframework.com/bots/new) ou [le portail](../../../concepts/build-and-test/teams-developer-portal.md) de développement, votre bot n’est pas inscrit dans Azure.
 
-1. Visitez [**Microsoft Azure portail et**][azure-portal] **recherchez Azure Bot** dans **la section Créer une** ressource.
+1. Visitez [**le portail Azure**][azure-portal] et recherchez **Azure Bot** dans **la section Créer une** ressource.
 1. Ouvrez **le bot Azure et** sélectionnez **Créer**.
 1. Entrez le nom de handle du bot dans **le champ De handle bot** .
 1. Sélectionnez **votre abonnement dans** la liste liste.
@@ -101,7 +106,7 @@ L’inscription de ressource Azure Bot inscrit votre service web en tant que bot
 
 1. Sélectionnez **Accéder à la ressource**. Le bot et les ressources associées sont répertoriés dans le groupe de ressources.
 
-    ![Accédez à cette ressource :](~/assets/images/adaptive-cards/go-to-resource-card.png)
+    ![Go to resource](~/assets/images/adaptive-cards/go-to-resource-card.png)
 
     Votre bot Azure est maintenant créé.
     
@@ -155,7 +160,7 @@ Pour plus d’informations, [voir Créer un bot pour Teams](../create-a-bot-for-
 Vous avez besoin d’un fournisseur d’identité qui peut être utilisé pour l’authentification.
 Dans cette procédure, vous allez utiliser un fournisseur Azure AD de données , d’autres Azure AD d’identité pris en charge peuvent également être utilisés.
 
-1. Dans le [**portail Microsoft Azure,**][azure-portal] dans le panneau de navigation de gauche, sélectionnez **Azure Active Directory**.
+1. Dans le [**portail Azure**][azure-portal], dans le panneau de navigation de gauche, **sélectionnez Azure Active Directory**.
     > [!TIP]
     > Vous devez créer et inscrire cette ressource Azure AD dans un client dans lequel vous pouvez consentir à déléguer les autorisations demandées par une application.
     > Pour obtenir des instructions sur la création d’un client, voir [Accéder au portail et créer un client](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
@@ -188,7 +193,7 @@ Remarque : il existe deux options pour les fournisseurs de services Microsoft Az
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v1"></a>Microsoft Azure Active Directory (Azure AD) V1
 
-1. Dans le [**portail Microsoft Azure,**][azure-portal] sélectionnez votre groupe de ressources dans le tableau de bord.
+1. Dans le [**portail Azure**][azure-portal], sélectionnez votre groupe de ressources dans le tableau de bord.
 1. Sélectionnez le lien d’inscription de votre bot.
 1. Ouvrez la page de ressources et **sélectionnez Configuration** **sous Paramètres**. 
 1. **Sélectionnez Ajouter une connexion OAuth Paramètres**.    
@@ -217,7 +222,7 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
-1. Dans le [**portail Microsoft Azure,**][azure-portal] sélectionnez votre bot Azure dans le tableau de bord.
+1. Dans le [**portail Azure**][azure-portal], sélectionnez votre bot Azure dans le tableau de bord.
 1. Dans la page de ressources, **sélectionnez Configuration** **sous Paramètres**. 
 1. **Sélectionnez Ajouter une connexion OAuth Paramètres**.  
 L’image suivante affiche la sélection correspondante dans la page de ressources :        
@@ -326,7 +331,7 @@ Vous pouvez également utiliser Visual Studio, vous pouvez suivre les étapes su
 
 1. Sélectionnez **Créer**.
 1. Si le déploiement se termine correctement, vous devez le voir dans Visual Studio. En outre, une page s’affiche dans votre navigateur par défaut pour dire *que votre bot est prêt !*. L’URL sera similaire à celle-ci : `https://botteamsauth.azurewebsites.net/` Enregistrez-le dans un fichier.
-1. Dans votre navigateur, accédez au portail [**Microsoft Azure web**][azure-portal].
+1. Dans votre navigateur, accédez au [**portail Azure**][azure-portal].
 1. Vérifiez votre groupe de ressources, le bot doit être répertorié avec les autres ressources. L’image suivante est un exemple :
 
     ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
@@ -399,7 +404,7 @@ Une fois que vous avez configuré le mécanisme d’authentification, vous pouve
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. Dans votre navigateur, accédez au portail [**Microsoft Azure web**][azure-portal].
+1. Dans votre navigateur, accédez au [**portail Azure**][azure-portal].
 1. Recherchez votre groupe de ressources.
 1. Sélectionnez le lien de la ressource. La page de ressources s’affiche.
 1. Dans la page de ressources, **sélectionnez Tester dans la conversation web**. Le bot démarre et affiche les salutations prédéfinës.
@@ -460,7 +465,7 @@ Cela lance ngrok pour écouter sur le port que vous spécifiez. En retour, il vo
 1. Copiez l’adresse HTTPS de forwarding. Il doit être similaire à ce qui suit : `https://dea822bf.ngrok.io/`
 1. Append `/api/messages` pour obtenir `https://dea822bf.ngrok.io/api/messages`. Il s’agit du **point de terminaison des messages** pour le bot s’exécutant localement sur votre ordinateur et accessible sur le web dans une conversation Microsoft Teams.
 1. Une dernière étape consiste à mettre à jour le point de terminaison des messages du bot déployé. Dans l’exemple, nous avons déployé le bot dans Azure. Nous allons donc effectuer les étapes suivantes :
-    1. Dans votre navigateur, accédez au [**portail Microsoft Azure web**][azure-portal].
+    1. Dans votre navigateur, accédez au [**portail Azure**][azure-portal].
     1. Sélectionnez votre **inscription de bot**.
     1. Dans le panneau gauche, sélectionnez **Paramètres**.
     1. Dans le panneau droit, dans **la zone Point** de terminaison de messagerie, entrez l’URL ngrok, dans notre exemple. `https://dea822bf.ngrok.io/api/messages`

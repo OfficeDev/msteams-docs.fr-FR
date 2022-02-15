@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 8b5726dff792ee6f4e63ea4cfd89a90b88fc52b5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518015"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821604"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -177,7 +177,7 @@ Les types d’utilisateurs, tels que l’organisateur, le présentateur ou le pa
 La liste suivante détaille les différents types d’utilisateurs, ainsi que leur accessibilité et leurs performances :
 
 * **Dans le client :** les utilisateurs dans le client appartiennent à l’organisation et ont des informations d’identification Microsoft Azure Active Directory (Azure AD) pour le client. Ce sont des employés à plein temps, sur site ou distants. Un utilisateur dans le client peut être organisateur, présentateur ou participant.
-* **Invité** : un invité est un participant d’une autre organisation invité à accéder Teams ou d’autres ressources dans le client de l’organisation. Les invités sont ajoutés au Microsoft Azure Active Directory (Azure AD) de l’organisation et ont les mêmes fonctionnalités Teams qu’un membre natif de l’équipe. Ils ont accès aux conversations d’équipe, aux réunions et aux fichiers. Un invité peut être organisateur, présentateur ou participant. Pour plus d’informations, [voir l’accès invité dans Teams](/microsoftteams/guest-access).
+* **Invité** : un invité est un participant d’une autre organisation invité à accéder Teams ou d’autres ressources dans le client de l’organisation. Les invités sont ajoutés au Azure AD de l’organisation et ont les mêmes fonctionnalités Teams qu’un membre d’équipe natif. Ils ont accès aux conversations d’équipe, aux réunions et aux fichiers. Un invité peut être organisateur, présentateur ou participant. Pour plus d’informations, [voir l’accès invité dans Teams](/microsoftteams/guest-access).
 * **Fédéré ou externe** : un utilisateur fédéré est un utilisateur Teams d’une autre organisation qui a été invité à participer à une réunion. Les utilisateurs fédérés ont des informations d’identification valides avec des partenaires fédérés et sont autorisés par Teams. Ils n’ont pas accès à vos équipes ou à d’autres ressources partagées de votre organisation. L’accès invité est une meilleure option pour les utilisateurs externes qui ont accès aux équipes et aux canaux. Pour plus d’informations, [voir gérer l’accès externe dans Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
@@ -186,7 +186,7 @@ La liste suivante détaille les différents types d’utilisateurs, ainsi que le
     > [!IMPORTANT]
     > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications](/microsoftteams/manage-apps).
 
-* **Anonyme** : les utilisateurs anonymes n’ont pas d’identité Microsoft Azure Active Directory (Azure AD) et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être un organisateur, mais peut être présentateur ou participant.
+* **Anonyme** : les utilisateurs anonymes n’ont pas Azure AD identité et ne sont pas fédérés avec un client. Les participants anonymes sont comme des utilisateurs externes, mais leur identité n’est pas affichée dans la réunion. Les utilisateurs anonymes ne peuvent pas accéder aux applications dans une fenêtre de réunion. Un utilisateur anonyme ne peut pas être un organisateur, mais peut être présentateur ou participant.
 
     > [!NOTE]
     > Les utilisateurs anonymes héritent de la stratégie d’autorisation d’application globale par défaut au niveau de l’utilisateur. Pour plus d’informations, voir [gérer les applications](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
@@ -198,7 +198,7 @@ Le tableau suivant fournit les types d’utilisateur et répertorie les fonction
 | Type d’utilisateur | Onglets | Bots | Extensions de messagerie | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion | Bulle de contenu |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut afficher et interagir avec l’application sur la phase de réunion | Non disponible |
-| Invité, faisant partie du client Microsoft Azure Active Directory (Azure AD) | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion | Disponible |
+| Invité, faisant partie du client Azure AD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion | Disponible |
 | Pour plus d’informations, consultez les utilisateurs [non standard](/microsoftteams/non-standard-users). | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | L’interaction est autorisée. L’acquisition, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion | Non disponible |
 
 ## <a name="next-step"></a>Étape suivante

@@ -3,19 +3,19 @@ title: Configurer les fournisseurs d’identité OAuth 2.0
 description: Décrit comment configurer des fournisseurs d’identité axés sur Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: fournisseur d’identité oauth Microsoft Azure Active Directory (Azure AD) teams
-ms.openlocfilehash: 93622275a8bfc9007af751d8b9f6304a73450ec7
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+keywords: Authentification teams Azure AD fournisseur d’identité oauth
+ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517973"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821352"
 ---
 # <a name="configure-identity-providers"></a>Configurer les fournisseurs d’identité
 
-## <a name="configuring-an-application-to-use-microsoft-azure-active-directory-azure-ad-as-an-identity-provider"></a>Configuration d’une application pour utiliser Microsoft Azure Active Directory (Azure AD) en tant que fournisseur d’identité
+## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>Configuration d’une application pour utiliser Azure AD en tant que fournisseur d’identité
 
-Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; doivent être inscrites à l’avance. Pour ce faire, Microsoft Azure Active Directory (Azure AD), suivez les étapes suivantes :
+Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; doivent être inscrites à l’avance. Pour ce faire, Azure AD, suivez les étapes suivantes :
 
 1. Ouvrez le [portail d’inscription des applications](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 

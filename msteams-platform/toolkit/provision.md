@@ -6,18 +6,18 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6a922c98dc158105abf1225a6f292c95d063428d
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: db295beddf8b0492816c757703e89f3010666eab
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517959"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821562"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud
 
 TeamsFx s’intègre à Azure et Microsoft 365 cloud, ce qui vous permet de placer votre application dans Azure avec une seule commande. TeamsFx s’intègre à Azure Resource Manager qui vous permet de mettre en service des ressources Azure, dont votre application a besoin pour l’approche du code.  
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prerequisites
 
 * Conditions préalables pour le compte Pour mettre en service des ressources cloud, vous devez avoir les comptes suivants :
 
@@ -50,7 +50,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Création de ressources pour l Teams’onglet
 
-|Ressource|Objectif|Description |
+|Resource|Objectif|Description |
 |----------|--------------------------------|-----|
 | Stockage Azure | Héberger votre application d’onglet | Permet à la fonctionnalité d’application web statique d’héberger votre application Onglet |
 | Plan de service d’application pour l’thème simple | Héberger l’application web d’th simple |Non applicable |
@@ -59,7 +59,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Création de ressources pour Teams application de bot ou d’extension de messagerie
 
-|Ressource|Objectif| Description |
+|Resource|Objectif| Description |
 |----------|--------------------------------|-----|
 | Service de bot Azure | Enregistre votre application en tant que bot avec l’infrastructure du bot | Connecte le bot à Teams |
 | Plan de service d’application pour bot | Héberger l’application web du bot |Non applicable |
@@ -68,7 +68,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>Création de ressources pour les fonctions Azure dans le projet
 
-|Ressource|Objectif| Description|
+|Resource|Objectif| Description|
 |----------|--------------------------------|-----|
 | Plan de service d’application pour l’application de fonction | Héberger l’application de fonction |Non applicable |
 | Application de fonction | Héberger vos API de fonctions Azure | Ajoute l’identité affectée à l’utilisateur pour accéder à d’autres ressources Azure. <br /> Ajoute une règle CORS (Cross-Origin Resource Sharing) pour autoriser les demandes à partir de votre application d’onglet <br /> Ajoute un paramètre d’authentification qui autorise uniquement les demandes provenant de votre Teams application. <br /> Ajoute les paramètres d’application requis par [le SDK TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -77,7 +77,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>Création de ressources pour les SQL Azure dans le projet
 
-|Ressource|Objectif | Description |
+|Resource|Objectif | Description |
 |----------|--------------------------------|-----|
 | Serveur SQL Azure | Héberger l’instance de base de données Azure SQL | Permet à tous les services Azure d’accéder au serveur |
 | Base de données azure SQL données | Stocker des données pour votre application | Accorde à l’utilisateur une identité, une autorisation de lecture ou d’écriture sur la base de données |
@@ -85,9 +85,9 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Création de ressources pour la gestion des API Azure dans le projet
 
-|Ressource|Objectif|
+|Resource|Objectif|
 |----------|--------------------------------|
-| Microsoft Azure Active Directory (Azure AD) pour le service de gestion des API | Permet aux API d’accès microsoft Power Platform gérées par le service de gestion des API |
+| Azure AD application pour le service de gestion des API | Permet aux API d’accès microsoft Power Platform gérées par le service de gestion des API |
 | Service de gestion des API | Gérer vos API hébergées dans l’application de fonction |
 | Produit de gestion des API | Grouper vos API, définir les conditions d’utilisation et les stratégies d’utilisation |
 | Serveur OAuth de gestion des API | Permet à Microsoft Power Platform d’accéder à vos API hébergées dans l’application de fonction |
@@ -97,7 +97,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 |Ressources|Objectif de cette ressource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Gérer les secrets (par exemple, Microsoft Azure Active Directory (Azure AD) client d’application) utilisés par d’autres services Azure |
+| Azure Key Vault Service | Gérer les secrets (par exemple, la Azure AD client de l’application) utilisé par d’autres services Azure |
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure |
 
 ## <a name="customize-resource-provision"></a>Personnaliser la mise en service des ressources
@@ -214,7 +214,7 @@ Vous pouvez personnaliser les scénarios suivants :
 
 #### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Utiliser une application Azure AD existante pour votre bot
 
-Vous pouvez ajouter l’extrait de configuration `.fx/configs/config.{env}.json` suivant au fichier pour utiliser une application Microsoft Azure Active Directory (Azure AD) créée par vous-même pour Teams application. Pour créer une application Microsoft Azure Active Directory (Azure AD), voir <https://aka.ms/teamsfx-existing-aad-doc>.
+Vous pouvez ajouter l’extrait de configuration `.fx/configs/config.{env}.json` suivant au fichier pour utiliser une application Azure AD créée par vous-même pour votre Teams application. Pour créer une application Azure AD, voir <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -228,11 +228,11 @@ Vous pouvez ajouter l’extrait de configuration `.fx/configs/config.{env}.json`
 Après avoir ajouté l’extrait de code, ajoutez votre clé secrète à la variable d’environnement associée afin que l’outil puisse résoudre la clé secrète réelle pendant la mise en service.
 
 > [!NOTE]
-> Veillez à ne pas partager la même Microsoft Azure Active Directory (Azure AD) dans plusieurs environnements. Si vous n’êtes pas autorisé à mettre à jour l’application Microsoft Azure Active Directory (Azure AD), vous pouvez obtenir un avertissement avec des instructions sur la mise à jour manuelle de l’application Microsoft Azure Active Directory (Azure AD). Suivez les instructions pour mettre à jour votre application Microsoft Azure Active Directory (Azure AD) après la mise en service.
+> Veillez à ne pas partager la même Azure AD’application dans plusieurs environnements. Si vous n’êtes pas autorisé à mettre à jour l’application Azure AD, vous pouvez obtenir un avertissement avec des instructions sur la mise à jour manuelle de l’application Azure AD’application. Suivez les instructions pour mettre à jour votre application Azure AD après la mise en service.
 
 #### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Utiliser une application Azure AD existante pour votre application Teams existante
 
-Vous pouvez ajouter l’extrait de configuration `.fx/configs/config.{env}.json` suivant au fichier pour utiliser une application Microsoft Azure Active Directory (Azure AD) créée par vous-même pour votre bot :
+Vous pouvez ajouter l’extrait de configuration `.fx/configs/config.{env}.json` suivant au fichier pour utiliser une application Azure AD créée par vous-même pour votre bot :
 
 ```json
 "bot": {

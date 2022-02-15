@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: autorisation OAuth SSO teams Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 15a2a80a8f1ce280b462ed6e6e99242fb30f0dc3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 4e8affcc75682390f403be5b2c0ebb99029dbe19
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518120"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821625"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Tester les autorisations de consentement propres aux ressources dans Teams
 
@@ -20,7 +20,7 @@ ms.locfileid: "62518120"
 
 Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques (équipes ou conversations) au sein d’une organisation. Pour plus d’informations, voir [consentement spécifique aux ressources (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prerequisites
 
 Assurez-vous de vérifier les modifications de manifeste d’application suivantes pour le consentement spécifique aux ressources avant de tester :
 
@@ -34,7 +34,7 @@ Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#
 
 |Nom| Type | Description|
 |---|---|---|
-|`id` |String |Votre ID Microsoft Azure Active Directory (Azure AD) d’application. Pour plus d’informations, voir [inscrire votre application dans le portail Microsoft Azure Active Directory (Azure AD).](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
+|`id` |String |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
 
 Spécifiez les autorisations requises par l’application.
@@ -200,8 +200,8 @@ Ajoutez [une clé webApplicationInfo](../../resources/schema/manifest-schema.md#
 
 |Nom| Type | Description|
 |---|---|---|
-|`id` |String |Votre ID Microsoft Azure Active Directory (Azure AD) d’application. Pour plus d’informations, voir [inscrire votre application dans le portail Microsoft Azure Active Directory (Azure AD).](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)|
-|`resource`|Chaîne| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
+|`id` |String |Votre ID Azure AD’application. Pour plus d’informations, voir [inscrire votre application sur le Azure AD web](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| Ce champ n’a aucune opération dans RSC, mais doit être ajouté et avoir une valeur pour éviter une réponse d’erreur ; n’importe quelle chaîne le fera.|
 |`applicationPermissions`|Tableau de chaînes|Autorisations RSC pour votre application. Pour plus d’informations, [voir autorisations spécifiques aux ressources](resource-specific-consent.md#resource-specific-permissions).|
 
 Exemple pour RSC dans une équipe
@@ -265,14 +265,14 @@ Exemple de RSC dans une conversation
 > Dans le manifeste de votre application, incluez uniquement les autorisations RSC dont vous souhaitez que votre application soit propriétaire.
 
 > [!NOTE]
-> Si l’application est destinée à accéder aux API d’appel/multimédia, `webApplicationInfo.Id` il doit s’agit de l’ID d’application Microsoft Azure Active Directory (Azure AD) [d’un service de bot Azure](/graph/cloud-communications-get-started#register-a-bot).
+> Si l’application est destinée à accéder aux API d’appel/multimédia, `webApplicationInfo.Id` il doit s’agit de l’ID Azure AD’application [d’un service de bot Azure](/graph/cloud-communications-get-started#register-a-bot).
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Test ajout d’autorisations RSC à une équipe à l’aide de l’application Postman
 
 Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le [code de test JSON RSC](test-team-rsc-json-file.md) pour l’équipe dans votre environnement local et mettre à jour les valeurs suivantes :
 
-* `azureADAppId`: ID d’Microsoft Azure Active Directory (Azure AD) de votre application.
-* `azureADAppSecret`: Votre mot Microsoft Azure Active Directory d’application (Azure AD).
+* `azureADAppId`: ID d’Azure AD application de votre application.
+* `azureADAppSecret`: votre mot Azure AD application.
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default.
 * `teamGroupId`: vous pouvez obtenir l’ID de groupe d’équipe à partir du client Teams comme suit :
 
@@ -286,10 +286,10 @@ Pour vérifier si les autorisations RSC sont honorées par la charge utile de de
 
 Pour vérifier si les autorisations RSC sont honorées par la charge utile de demande d’API, vous devez copier le [code de test JSON RSC](test-chat-rsc-json-file.md) pour les conversations dans votre environnement local et mettre à jour les valeurs suivantes :
 
-* `azureADAppId`: ID d’Microsoft Azure Active Directory (Azure AD) de votre application.
-* `azureADAppSecret`: Votre mot Microsoft Azure Active Directory d’application (Azure AD).
+* `azureADAppId`: ID d’Azure AD application de votre application.
+* `azureADAppSecret`: votre mot Azure AD application.
 * `token_scope`: l’étendue est requise pour obtenir un jeton. définissez la valeur sur https://graph.microsoft.com/.default.
-* `tenantId`: nom ou ID d Microsoft Azure Active Directory (Azure AD) de votre client.
+* `tenantId`: nom ou ID Azure AD’objet de votre client.
 * `chatId`: vous pouvez obtenir l’ID de thread de conversation à partir Teams *client web* comme suit :
 
     1. Dans le Teams web, sélectionnez **Conversation** dans la barre de navigation à l’extrême gauche.

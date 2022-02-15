@@ -1,11 +1,16 @@
 ---
 title: Support de l'identification unique pour les robots
-description: 'Décrit comment obtenir un jeton d’utilisateur. Actuellement, un développeur de bot peut utiliser une carte de visite ou le service de bot Azure avec la prise en charge de la carte OAuth.'
-keywords: 'token, user token, SSO support for bots, permission, Microsoft Graph, Azure AD'
+description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un développeur de bot peut utiliser une carte de visite ou le service de bot Azure avec la prise en charge de la carte OAuth.
+keywords: token, user token, SSO support for bots, permission, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.openlocfilehash: 760c9f964298e120dfaf5cfadd199f5a7d02454f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821597"
 ---
-
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l’sign-on unique (SSO) pour les bots
 
 L’authentification unique dans Azure Active Directory actualisez silencieusement le jeton d’authentification pour réduire le nombre de fois que les utilisateurs doivent entrer leurs informations d’identification de connexion. Si les utilisateurs acceptent d’utiliser votre application, ils n’ont pas à donner à nouveau leur consentement sur un autre appareil, car ils sont connectés automatiquement. Les onglets et les bots ont un flux similaire pour la prise en charge de l’cesso. Toutefois [, le bot demande des jetons](#request-a-bot-token) et [reçoit des réponses](#receive-the-bot-token) avec un protocole différent.
@@ -154,7 +159,7 @@ Les étapes d’inscription de votre application via Azure AD portail sont simil
 
 #### <a name="update-manifest-in-microsoft-azure-portal"></a>Mettre à jour le manifeste dans Microsoft Azure portail
 
-Les étapes suivantes vous guident pour mettre à jour le manifeste du bot dans Microsoft Azure portail :
+Les étapes suivantes vous guident pour mettre à jour le manifeste du bot dans le portail Azure :
 
 1. **Sélectionnez Manifeste** dans le volet gauche.
 1. Assurez-vous que l’élément de config est définie sur **« accessTokenAcceptedVersion » : 2**. Si ce n’est pas le cas, modifiez sa valeur sur **2**.
@@ -169,9 +174,9 @@ Les étapes suivantes vous guident pour mettre à jour le manifeste du bot dans 
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>Mettre à jour le portail Azure avec la connexion OAuth
 
-Les étapes suivantes vous guident pour mettre à jour le portail Microsoft Azure avec la connexion OAuth :
+Les étapes suivantes vous guident pour mettre à jour le portail Azure avec la connexion OAuth :
 
-1. Dans le portail Microsoft Azure, allez sur [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. Dans le portail Azure, allez à [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. Go to **Configuration** on the left pane.
 1. **Sélectionnez Ajouter une connexion OAuth Paramètres**.
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, la phase de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523779"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821590"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -140,7 +140,7 @@ Les participants peuvent partager l’ensemble de l’application à l’étape 
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-Pour partager l’intégralité de l’application à l’étape, dans le manifeste de l’application, vous devez configurer `meetingStage` `meetingSidePanel` et en tant que contextes de trame. Par exemple :
+Pour partager l’intégralité de l’application à l’étape, dans le manifeste de l’application, vous devez configurer `meetingStage` `meetingSidePanel` et en tant que contextes de trame. Par exemple :
 
 ```json
 "configurableTabs": [
@@ -168,7 +168,7 @@ Les participants peuvent partager des parties spécifiques de l’application à
 
 Pour partager des parties spécifiques de l’application à des étapes, vous devez appeler les API associées dans la bibliothèque Teams SDK client. Pour plus d’informations, voir la [référence d’API](API-references.md).
 
-Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial `from.id` doit reposer sur les métadonnées `from` de demande dans l’objet, et non sur les `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Microsoft Azure Active Directory (Azure AD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) [et créer et envoyer le module de tâche](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial `from.id` doit reposer sur les métadonnées `from` de demande dans l’objet, et non sur les `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Azure AD’ID de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) [et créer et envoyer le module de tâche](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="after-a-meeting"></a>Après une réunion
 

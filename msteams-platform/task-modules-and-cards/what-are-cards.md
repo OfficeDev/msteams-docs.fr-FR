@@ -4,12 +4,12 @@ description: Décrit les cartes et leur utilisation dans des bots, des connecteu
 ms.localizationpriority: high
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: 3cbe26e9c84996242a22e8d0325914e7bde87f8c
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517980"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821583"
 ---
 # <a name="cards"></a>Cartes
 
@@ -79,7 +79,7 @@ Les Cartes adaptatives avec Webhooks entrants vous permettent d’utiliser les f
 
 ## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Support pour Azure AD Object ID et UPN dans la mention de l'utilisateur 
 
-Les bots avec Cartes adaptatives prennent en charge les ID de mention utilisateur, tels que l’ID d’objet Microsoft Azure Active Directory (Azure AD) et le nom d’utilisateur principal (UPN) en plus des ID existants. Les webhooks entrants commencent à prendre en charge la mention utilisateur dans la Carte adaptative avec l’ID d’objet Microsoft Azure Active Directory (Azure AD) et l’UPN.
+Les bots avec Cartes adaptatives prennent en charge les ID de mention utilisateur, tels que l’ID d’objet Microsoft Azure Active Directory (Azure AD) et le nom d’utilisateur principal (UPN) en plus des ID existants. Les webhooks entrants commencent à prendre en charge la mention utilisateur dans les cartes adaptatives avec l’ID Azure AD’objet et l’UPN.
 
 ## <a name="next-step"></a>Étape suivante
 

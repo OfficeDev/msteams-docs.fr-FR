@@ -4,12 +4,12 @@ description: Décrit le flux d’authentification dans les onglets, OAuth par Az
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Onglets de flux d’authentification Teams
-ms.openlocfilehash: a4d6c184ca0747a2b0328e0194ebad472e9dfa6e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: c0a3617332d3392c36f21645d4fb0074008ced40
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518295"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821373"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams’authentification pour les onglets
 
@@ -27,9 +27,9 @@ Par exemple, le flux d’authentification pour les onglets et les bots utilisant
 ![Diagramme de séquence d’authentification par onglet](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. L’utilisateur interagit avec le contenu de la page de configuration ou de contenu de  l’onglet, généralement un bouton Se connecter **ou Se connecter**.
-2. L’onglet construit l’URL de sa page de démarrage d’th. Éventuellement, il utilise des informations provenant d’espaces `microsoftTeams.getContext()` réservé d’URL ou appelle Teams SDK client pour simplifier l’expérience d’authentification de l’utilisateur. Par exemple, lors de l’authentification auprès d’A Microsoft Azure Active Directory (Azure AD), `login_hint` si le paramètre est définie sur l’adresse e-mail de l’utilisateur, l’utilisateur n’a pas besoin de se connecter s’il l’a fait récemment. Cela est dû au Microsoft Azure Active Directory (Azure AD) utilise les informations d’identification mises en cache de l’utilisateur. La fenêtre pop-up s’affiche brièvement, puis disparaît.
+2. L’onglet construit l’URL de sa page de démarrage d’th. Éventuellement, il utilise des informations provenant d’espaces `microsoftTeams.getContext()` réservé d’URL ou appelle Teams SDK client pour simplifier l’expérience d’authentification de l’utilisateur. Par exemple, lors de l’authentification avec A Azure AD, `login_hint` si le paramètre est définie sur l’adresse e-mail de l’utilisateur, l’utilisateur n’a pas besoin de se connecter s’il l’a fait récemment. Cela est dû au Azure AD utilise les informations d’identification mises en cache de l’utilisateur. La fenêtre pop-up s’affiche brièvement, puis disparaît.
 3. L’onglet appelle ensuite la méthode `microsoftTeams.authentication.authenticate()` et inscrit les fonctions `successCallback` et `failureCallback`.
-4. Teams ouvre la page d’accueil dans un iframe dans une fenêtre fenêtre pop-up. La page de démarrage génère des données aléatoires`state`, les enregistre pour une validation future et les redirige vers le point de terminaison du fournisseur d’identité`/authorize`, `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` par exemple pour Microsoft Azure Active Directory (Azure AD). Remplacez `<tenant id>` par votre propre ID de client context.tid.
+4. Teams ouvre la page d’accueil dans un iframe dans une fenêtre fenêtre pop-up. La page de démarrage génère des données aléatoires`state`, les enregistre pour une validation future et les redirige vers le point de terminaison du fournisseur d’identité`/authorize`, `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` par exemple pour Azure AD. Remplacez `<tenant id>` par votre propre ID de client context.tid.
 Comme d’autres flux d’th d’application dans Teams, la page `validDomains` de démarrage doit se trouver sur un domaine qui se trouve dans sa liste et sur le même domaine que la page de redirection de la publication de la signature.
 
     > [!NOTE]
@@ -51,11 +51,11 @@ Exemple de code montrant le processus d’authentification par onglet :
 
 | **Exemple de nom** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Authentification Teams onglets | Processus d’authentification pour les onglets utilisant Microsoft Azure Active Directory (Azure AD). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Authentification Teams onglets | Processus d’authentification pour les onglets utilisant Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 
-Pour une implémentation détaillée de l’authentification par tabulation à l Microsoft Azure Active Directory (Azure AD), voir :
+Pour une implémentation détaillée de l’authentification par tabulation à l Azure AD, voir :
 
 * [Authentifier un utilisateur dans un onglet Teams’accès](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Authentification en mode silencieux](~/tabs/how-to/authentication/auth-silent-AAD.md)

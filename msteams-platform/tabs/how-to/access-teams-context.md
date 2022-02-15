@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: ca77ba61a880bb12067f884e8c294700938cc6be
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518127"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821730"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -44,12 +44,12 @@ Utilisez des espaces réservés dans vos URL de configuration ou de contenu. Mic
 
 * {entityId} : ID que vous avez fourni pour l’élément dans cet onglet lors de la première [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: ID que [vous avez fourni](~/concepts/build-and-test/deep-links.md) lors de la génération d’un lien profond pour un élément spécifique dans cet onglet. Cela doit être utilisé pour restaurer un état spécifique au sein d’une entité ; par exemple, le défilement vers ou l’activation d’un élément de contenu spécifique.
-* {loginHint}: valeur appropriée comme conseil de connexion pour Microsoft Azure Active Directory (Azure AD). Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
+* {loginHint}: valeur appropriée comme conseil de connexion pour Azure AD. Il s’agit généralement du nom de connexion de l’utilisateur actuel dans son client d’accueil.
 * {userPrincipalName} : nom d’utilisateur principal de l’utilisateur actuel dans le client actuel.
-* {userObjectId}: ID Microsoft Azure Active Directory (Azure AD) de l’utilisateur actuel dans le client actuel.
+* {userObjectId}: ID Azure AD’objet de l’utilisateur actuel dans le client actuel.
 * {theme}: Thème de l’interface utilisateur actuelle (IU) tel `default`que , `dark`ou `contrast`.
 * {groupId}: ID du groupe Office 365 dans lequel réside l’onglet.
-* {tid}: ID Microsoft Azure Active Directory client (Azure AD) de l’utilisateur actuel.
+* {tid}: ID de client Azure AD de l’utilisateur actuel.
 * {locale}: paramètres régionaux actuels de l’utilisateur au format languageId-countryId(en-us).
 
 > [!NOTE]
@@ -82,10 +82,10 @@ Le code suivant fournit un exemple de variable de contexte :
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
-    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
