@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518358"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821660"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -628,7 +628,7 @@ Fournissez votre ID d’application Azure Active Directory et vos informations d
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|string|36 caractères|✔|ID de l'application Microsoft Azure Active Directory (Azure AD). Cet ID doit être un GUID.|
+|`id`|string|36 caractères|✔|Application Azure AD ID d’application. Cet ID doit être un GUID.|
 |`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, https://notapplicable pour éviter une réponse d’erreur. |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
