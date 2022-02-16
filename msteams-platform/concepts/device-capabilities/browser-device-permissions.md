@@ -4,20 +4,20 @@ keywords: autorisations des fonctionnalités des applications Teams
 description: Récupérer en toute sécurité la prise en charge des autorisations d’appareil pour les applications dans notre client web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: fbdca08c813d341c12fcfc824d21a6ff96d02749
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 18843d9d4981e83cf83472e37519344706f599bb
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059785"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855885"
 ---
 # <a name="device-permissions-for-the-browser"></a>Autorisations de périphérique pour le navigateur
 
 > [!NOTE]
-> La dernière mise à jour sur la façon dont les autorisations d’appareil sont gérées dans le navigateur est actuellement disponible en [prévisualisation publique pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs uniquement. Cette mise à jour sera généralement disponible d’ici le 01 février 2022.
+> La dernière mise à jour sur la façon dont les autorisations d’appareil sont gérées dans le navigateur est actuellement disponible en [prévisualisation publique pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs uniquement. Cette mise à jour sera généralement disponible à partir du 01 février 2022 et se terminera fin février.
 
 
-Teams qui nécessitent des autorisations d’appareil, telles que l’accès à l’appareil photo ou au microphone, obligent désormais les utilisateurs à accorder manuellement des autorisations au niveau de chaque application dans le navigateur web. Auparavant, le navigateur géré comment accorder des autorisations d’accès, mais maintenant ces autorisations sont gérées dans Microsoft Teams. Cela a une incidence sur la façon dont vous concevez votre application et s’ils requièrent ces autorisations dans le navigateur.
+Teams qui nécessitent des autorisations d’appareil, telles que l’accès à l’appareil photo ou au microphone, obligent désormais les utilisateurs à accorder manuellement des autorisations au niveau de chaque application dans le navigateur web. Auparavant, le navigateur  géré comment accorder des autorisations d’accès, mais maintenant ces autorisations sont gérées dans Microsoft Teams. Cela a une incidence sur la façon dont vous concevez votre application et s’ils requièrent ces autorisations dans le navigateur.
 
 ## <a name="enable-apps-device-permissions"></a>Activer les autorisations d’appareil de l’application
 Si votre application Teams a déclaré dans le manifeste de [l’application](native-device-permissions.md#specify-permissions) qu’elle a besoin d’autorisations d’appareil, l’option **Autorisations** de l’application s’affiche pour permettre aux utilisateurs d’activer les autorisations d’appareil de l’application. **L’option Autorisations d’application** est disponible dans les fonctionnalités suivantes : 
@@ -25,7 +25,7 @@ Si votre application Teams a déclaré dans le manifeste de [l’application](na
 * **Applications personnelles et boîtes de dialogue de module de** tâche : l’option **Autorisations** d’application est disponible dans le coin supérieur droit de la page.
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
-* **Onglets Conversations, canal** ou réunion : l’option **Autorisations** de l’application est disponible dans ladown de l’onglet. ![ Drop-down Des autorisations d’application](../../assets/images/tabs/drop-downapppermissions.png)
+* **Onglets Conversations, canal ou réunion** : l’option **Autorisations** de l’application est disponible dans ladown de l’onglet. ![ Drop-down Des autorisations d’application](../../assets/images/tabs/drop-downapppermissions.png)
 
 Une fois **l’option d’autorisations d’application** sélectionnée, une fenêtre apparaît dans laquelle l’utilisateur peut activer le bouton Autorisations.
 
