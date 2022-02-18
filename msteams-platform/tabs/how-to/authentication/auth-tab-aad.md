@@ -4,12 +4,12 @@ description: Décrit l’authentification Teams et comment l’utiliser dans les
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 2ceca46148c79b07dd417e84b0736f69ee520b8b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821716"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897934"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifier un utilisateur dans un onglet Microsoft Teams’accès
 
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>Remarques
 
 * L’URL à qui vous passez `microsoftTeams.authentication.authenticate()` est la page de démarrage du flux d’authentification. Dans cet exemple, c’est `/tab-auth/simple-start`. Cela doit correspondre à ce que vous avez inscrit dans Azure AD [portail d’inscription des applications](https://apps.dev.microsoft.com).
 
@@ -91,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 Une fois que l’utilisateur a terminé l’autorisation, il est redirigé vers la page de rappel que vous avez spécifiée pour votre application sur `/tab-auth/simple-end`.
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>Remarques
 
 * Consultez [obtenir des informations de contexte utilisateur](~/tabs/how-to/access-teams-context.md) pour obtenir de l’aide sur la création de demandes d’authentification et d’URL. Par exemple, vous pouvez utiliser le nom de connexion de l’utilisateur comme valeur de Azure AD connexion, ce qui signifie que l’utilisateur `login_hint` peut avoir besoin de taper moins. N’oubliez pas que vous ne devez pas utiliser ce contexte directement comme preuve d’identité, car un attaquant peut charger votre page dans un navigateur malveillant et lui fournir les informations qu’il souhaite.
 * Bien que le contexte de l’onglet fournit des informations utiles concernant l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obtenez en tant que paramètres d’URL de l’URL `microsoftTeams.getContext()` de contenu de votre onglet ou en appelant la fonction dans le SDK client Microsoft Teams. Un acteur malveillant peut appeler l’URL de contenu de votre onglet avec ses propres paramètres, et une page web usurpant l’identité de Microsoft Teams peut charger l’URL de contenu de votre onglet dans un iframe `getContext()` et renvoyer ses propres données à la fonction. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des conseils et les valider avant de les utiliser.
@@ -136,7 +136,7 @@ if (hashParams["error"]) {
 
 Ce code permet d’Azure AD paires `window.location.hash` `getHashParameters()` clé-valeur à l’aide de la fonction d’aide. `access_token``state` Si elle trouve un jeton d’accès et que la valeur est identique à celle fournie au début du flux d’authentification, elle renvoie le jeton d’accès à l’onglet `notifySuccess()`en appelant ; `notifyFailure()`sinon, elle signale une erreur avec .
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>Remarques
 
 `NotifyFailure()` présente les raisons d’échec prédéfinës suivantes :
 
@@ -165,7 +165,7 @@ Exemple de code montrant le processus d’authentification d’onglet à l’aid
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Planifier l’authentification des utilisateurs](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Planifier l’authentification des utilisateurs](../../../concepts/design/understand-use-cases.md)
 * [Concevoir votre onglet pour Microsoft Teams](~/tabs/design/tabs.md)
 * [Authentification en mode silencieux](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [Ajouter une authentification à votre extension de messagerie](~/messaging-extensions/how-to/add-authentication.md)

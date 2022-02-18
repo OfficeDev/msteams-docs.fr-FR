@@ -12,21 +12,25 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 5c6428985d0220cb4578c082214dd2d935ea55b9
-  ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+  ms.openlocfilehash: 80cb52581677215ed199aba964ca626f46fdc915
+  ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 02/14/2022
-  ms.locfileid: "62801375"
+  ms.lasthandoff: 02/18/2022
+  ms.locfileid: "62898018"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
+    - text: Glossaire
+      url: ~/get-started/glossary.md
+    - text: Vue d’ensemble
+      url: ~/overview.md
+    - text: Planifier votre application
+      url: ~/concepts/app-fundamentals-overview.md
     - text: Schéma de manifeste d’application version 1.12
       url: ~/resources/schema/manifest-schema.md
-    - text: Schéma de manifeste de prévisualisation pour les développeurs publics
-      url: ~/resources/schema/manifest-schema-dev-preview.md
     - text: Mode interactif pour partager l’étape de la réunion
       url: ~/apps-in-teams-meetings/API-references.md
     - text: Aperçu du test pour les applications monétisées
@@ -37,8 +41,6 @@ landingContent:
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
     - text: Sélecteur de personnes dans les Cartes adaptatives
       url: ~/task-modules-and-cards/cards/people-picker.md
-    - text: Teams Shared Computer Toolkit for Visual Studio Code (Preview)
-      url: ~/toolkit/teams-toolkit-fundamentals.md
     - text: Les onglets personnels et les extensions de messagerie s’exécutent Outlook et Office (aperçu)
       url: ~/m365-apps/overview.md
 - title: Favoris à tout moment
@@ -53,46 +55,6 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Explorer les applications à code faible pour Teams
       url: ~/samples/teams-low-code-solutions.md
-- title: Tutoriels
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Envoyer et recevoir des fichiers
-      url: bots/how-to/bots-filesv4.md
-    - text: Teams bot d’appel et de réunion
-      url: bots/calls-and-meetings/registering-calling-bot.md
-    - text: Autorisation d’appareil pour le navigateur
-      url: concepts/device-capabilities/browser-device-permissions.md
-    - text: Utiliser l’authentification sso pour les onglets
-      url: tabs/how-to/authentication/auth-aad-sso.md
-    - text: Messages proactifs
-      url: ~/bots/how-to/conversations/send-proactive-messages.md
-    - text: Ajouter l’authentification aux bots
-      url: ~/bots/how-to/authentication/add-authentication.md
-    - text: Activer et configurer les applications pour les meetings
-      url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  - linkListType: tutorial
-    links:
-    - text: Télécharger fichiers à Teams partir d’un bot
-      url: ~/sbs-file-handling-in-bot.yml
-    - text: Créer un bot d’appel et de réunion
-      url: ~/sbs-calling-and-meeting.yml
-    - text: Configurer les autorisations de périphérique Onglet
-      url: ~/sbs-tab-device-permissions.yml
-    - text: Configurer l’pertinence des onglets et des extensions de messagerie
-      url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
-    - text: Créer des onglets avec des cartes adaptatives
-      url: ~/sbs-tab-with-adaptive-cards.yml
-    - text: Créer un bot pour envoyer des messages proactifs
-      url: ~/sbs-send-proactive.yml
-    - text: Créer un bot avec l’authentification sso
-      url: ~/sbs-bots-with-sso.yml
-    - text: Générer un jeton de réunion pour étendre une réunion
-      url: ~/sbs-meeting-token-generator.yml
-    - text: Créer un sidepanel de réunion
-      url: ~/sbs-meetings-sidepanel.yml
-    - text: Générer un affichage de l’étape réunions
-      url: ~/sbs-meetings-stage-view.yml
 - title: Prise en main
   linkLists:
   - linkListType: get-started
@@ -145,6 +107,36 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: Manifeste d'application
       url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Schéma de manifeste de prévisualisation pour les développeurs publics
+      url: ~/resources/schema/manifest-schema-dev-preview.md
+- title: Guides détaillés
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Créer un bot d’appel et de réunion
+      url: ~/sbs-calling-and-meeting.yml
+    - text: Configurer les autorisations de périphérique Onglet
+      url: ~/sbs-tab-device-permissions.yml
+    - text: Configurer l’pertinence des onglets et des extensions de messagerie
+      url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
+    - text: Créer des onglets avec des cartes adaptatives
+      url: ~/sbs-tab-with-adaptive-cards.yml
+    - text: Créer un bot pour envoyer des messages proactifs
+      url: ~/sbs-send-proactive.yml
+    - text: Créer un bot avec l’authentification sso
+      url: ~/sbs-bots-with-sso.yml
+    - text: Générer un jeton de réunion pour étendre une réunion
+      url: ~/sbs-meeting-token-generator.yml
+    - text: Créer un sidepanel de réunion
+      url: ~/sbs-meetings-sidepanel.yml
+    - text: Générer un affichage de l’étape réunions
+      url: ~/sbs-meetings-stage-view.yml
+    - text: Interagir avec le bot de bulles de contenu dans les réunions
+      url: ~/sbs-meeting-content-bubble.yml
+  - linkListType: tutorial
+    links:
+    - text: Télécharger fichiers à Teams partir d’un bot
+      url: ~/sbs-file-handling-in-bot.yml
 - title: Teams scénarios d’application
   linkLists:
   - linkListType: reference
