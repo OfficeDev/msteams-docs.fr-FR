@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: envoyer un message obtenir l’identifiant utilisateur identification du canal identification de la conversation
-ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059771"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896326"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -104,9 +104,6 @@ Lorsque vous utilisez une messagerie proactive pour envoyer des messages planifi
 * Que peut faire l’utilisateur par la suite : les utilisateurs peuvent prendre les mesures nécessaires en fonction du contenu du message.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive en utilisant Graph
-
-> [!Note]
-> L’installation proactive des applications à l’aide de Graph est actuellement en version bêta.
 
 Envoyez de manière proactive un message aux utilisateurs qui n’ont pas précédemment installé ou interagi avec votre application. Par exemple, vous souhaitez utiliser le [communicateur d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’échelle de votre organisation. Dans ce cas, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs. Mettez en cache les valeurs nécessaires à partir de l’événement `conversationUpdate` que votre application reçoit lors de l’installation.
 
@@ -259,9 +256,6 @@ Vous devez fournir l’identifiant utilisateur et l’identifiant du client. Si 
 ```
 
 ---
-
-> [!NOTE]
-> Les bots ne peuvent actuellement pas créer de conversations de groupe via les API de bots ou de Graph. `createConversation` est disponible uniquement pour les conversations individuelles.
 
 ## <a name="code-sample"></a>Exemple de code
 
