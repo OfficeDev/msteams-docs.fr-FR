@@ -1,52 +1,107 @@
 ---
-title: Vue d’ensemble des principes de base du développement d’applications
+title: Vue d’ensemble de la planification de votre application
 author: heath-hamilton
-description: Décrire les concepts fondamentaux du développement de plateformes Teams, tels que les fonctionnalités d’application et les points d’entrée, comprendre les cas d’utilisation et les macaler aux fonctionnalités de l’application et planifier des applications.
+description: Présentez les éléments de la planification d’une application, de la compréhension des cas d’usage, des fonctionnalités d’application et d’autres fonctionnalités Teams.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: fonctionnalité d’utilisation des cas d’extensibilité des points d’entrée
-ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: fonctionnalité d’appareil d’extensibilité des points d’entrée
+ms.openlocfilehash: 904b2b0ccf9ed815cbe750514818289b86a2f58b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948424"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898044"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams de développement d’applications
+# <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
-Microsoft Teams base de l’application donnent la direction dont vous avez besoin pour créer votre application Teams personnalisée. Vous pouvez reconnaître l’infrastructure requise pour planifier votre Teams application. Le document vous aide à comprendre la communication utilisateur-application et à déterminer le type de surfaces d’application que vous devez utiliser ou les API dont votre application peut avoir besoin dans le processus. Inspirez-vous pour adopter l’interactivité qui peut renforcer l’expérience d’application lorsque vous intégrez Teams.
+La création d’une application Teams exceptionnelle consiste à trouver la bonne combinaison de fonctionnalités pour répondre aux besoins de votre utilisateur. La conception, les fonctionnalités et les capacités d'une application découlent de cet objectif.
 
-## <a name="capabilities-and-entry-points"></a>Fonctionnalités et points d’entrée
+Au fond, Teams est une plateforme de collaboration. Il s’agit également d’une plateforme sociale, est multiplateforme en mode natif, se trouve au cœur d’Office 365 et offre un canevas personnel pour vous permettre de créer des applications.
 
-Vous pouvez étendre votre application Teams de plusieurs manières. Pour pouvoir étendre votre application, vous devez comprendre toutes les fonctionnalités de base et les points d’entrée qui fonctionnent dans un espace de collaboration. Vous pouvez tester les points d’extension pour créer vos applications. Les composants importants d’un projet d’application vous aident à configurer correctement votre page d’application. Teams application peut avoir [plusieurs fonctionnalités et](../concepts/capabilities-overview.md) points [d’entrée.](../concepts/extensibility-points.md)
+Dans cette section, découvrez comment :
 
-## <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
+ - Identifiez et mappez les cas d’utilisation aux fonctionnalités Teams.
+ - Utilisez la liste de vérification de planification.
+ - Planifiez au-delà du déploiement de l’application.
 
-Vous pouvez reconnaître les problèmes des utilisateurs et identifier les réponses à certains problèmes courants auxquels ils sont confrontés. Vous pouvez créer votre application Teams en trouvant la combinaison qui répond aux besoins de vos utilisateurs. [Comprendre les cas d’utilisation](../concepts/design/understand-use-cases.md) pour savoir comment un utilisateur final interagit avec votre application. Vous apprenez à comprendre l’utilisateur et son problème. Voici quelques questions fréquemment posées :
+## <a name="plan-with-teams"></a>Planifier avec Teams
 
-* Avez-vous besoin d’une authentification ?
-* Quel problème votre application va-t-elle résoudre ?
-* Qui les utilisateurs finaux de l’application ?
-* Comment l’expérience d’intégration doit-elle être et que peut faire l’application ?
+Teams en tant que plateforme vous offre des kits de ressources, des bibliothèques et des applications à chaque étape du développement d’applications. Examinons le cycle de vie de création d’applications :
 
-## <a name="map-your-use-cases-to-teams-app-capabilities"></a>Map vos cas d’utilisation Teams fonctionnalités de l’application
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration montre la planification de votre application" border="true":::
 
-[La cartographie de vos cas d’utilisation](../concepts/design/map-use-cases.md) couvre certains scénarios courants et la façon de choisir les fonctionnalités de votre application. Des informations pour partager votre application et collaborer sur des éléments dans un système externe sont fournies. Vous pouvez également apprendre à initier des flux de travail et à envoyer des notifications aux utilisateurs. Obtenez des conseils supplémentaires sur l’endroit où commencer, la mise en réseau avec les utilisateurs, les bots de conversation et la combinaison de plusieurs fonctionnalités.
+- [Avant de créer](#before-you-build)
+- [Pendant la build](#during-build)
+- [Post-build](#post-build)
+- [Liste de vérification de planification](../concepts/design/planning-checklist.md)
 
-## <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
-[Planifiez des onglets réactifs Teams mobile couvre](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) des scénarios courants et facilite la planification des applications pour Teams mobile. Guides de document sur la façon de mettre en place une stratégie pour les applications sur mobile. Vous pouvez également en savoir plus sur les différents satges et les différents types d’Teams app.
+### <a name="before-you-build"></a>Avant de créer
 
-## <a name="integrate-device-capabilities"></a>Intégrer des fonctionnalités d’appareil
+Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs de la façon dont une application Teams peut vous aider. Créez votre cas d’usage autour du problème, déterminez comment une application peut le résoudre et dessinez une solution.
 
-Microsoft Teams plateforme de développement améliore en permanence les fonctionnalités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams.
+- **Comprendre votre cas d’utilisation et les fonctionnalités d’application Teams**: comprendre les besoins de votre utilisateur et identifier les fonctionnalités appropriées.
+
+- **Mapper vos cas d’usage**: mappez les cas d’usage courants aux fonctionnalités Teams en fonction des exigences, telles que le partage, la collaboration, les flux de travail, les plateformes sociales pertinentes, etc.
+
+- **Planifier des onglets réactifs pour Teams mobile**: cela couvre les scénarios courants et aide à planifier des applications pour Teams mobile.
+
+### <a name="during-build"></a>Pendant la build
+
+- **Créer et générer un projet d’application**: avec Teams, vous pouvez choisir l’environnement de génération qui correspond le mieux aux besoins de votre application. Utilisez le Kit de ressources Teams ou d’autres Kits de développement logiciel (SDK), tels que C#, Blazor, Node.js, etc. pour commencer.
+
+- **Concevoir l’interface utilisateur de votre application**: utilisez le Kit de ressources d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir la disposition de votre application.
+
+- **Utiliser Teams en tant que plateforme**: la plateforme Teams vous aide à créer une application unique ou multi-capacité. Votre application Teams repose sur les produits et services intégrés qui renforcent l’expérience de l’application.
+
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams." border="true":::
+
+    Vos applications apparaissent dans Teams sous forme d’onglets, de bots, d’extensions de messagerie, de connecteurs et de webhooks, ou en tant qu’application multi-fonctionnalités. Ces fonctionnalités sont optimisées sur le serveur principal par les applications Azure, Microsoft Graph, SharePoint et Power qui permettent d’automatiser les tâches et les processus.
+
+    Ensemble, ces fonctionnalités donnent vie à votre solution d’application.
+
+- **Intégrer des fonctionnalités d’appareil**: vous pouvez intégrer les fonctionnalités natives de l’appareil dans votre application, telles que l’appareil photo, la QR ou le scanneur de codes-barres, la galerie de photos, le microphone et l’emplacement.
+
+### <a name="post-build"></a>Post-build
+
+- Intégrez votre application à Teams et à d’autres applications, telles que Microsoft 365, Microsoft Graph, etc.
+- Utilisez Developer Portal pour configurer, gérer et déployer votre application.
+
+<details>
+<summary><b>En savoir plus sur Cloud de la communauté du secteur public (GCC)</b></summary>
+
+Cloud de la communauté du secteur public est une copie axée sur le secteur public de l’environnement commercial. Le Ministère de la défense (DOD) et les sous-traitants fédéral doivent respecter les exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins du DOD et des sous-traitants fédéral. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
+
+Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pour GCC, GCC-High et DOD :
+
+| Fonctionnalités   | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+| Applications appartenant à Teams comme dans les applications développées en interne | ✔️ L’application est activée si elle a GCC. | ✔️ L’application est activée si elle a GCC-High. | ✔️ L’application est activée si elle possède un DOD. |
+| Applications Microsoft | ✔️ Applications Microsoft conformes à GCC | ✔️ Applications Microsoft conformes à GCC-High | ✔️ Applications Microsoft conformes à DOD |
+| Applications 3p ou tierces | ✔️ Des applications tierces sont disponibles. Désactivé par défaut et l’administrateur du locataire utilise sa propre discrétion pour l’activer. | ❌ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Applications de tabulation personnalisées ou métier |  ✔️ | ✔️ | ✔️ |
+| Chargement indépendant d’applications | ✔️ | ❌ | ❌ |
+| Bots personnalisés ou Lob | ✔️ | ❌ | ❌ |
+| Extensions de messagerie personnalisées | ❌ | ❌ | ❌ |
+| Connecteurs personnalisés | ❌ | ❌ | ❌ |
+
+La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :
+
+- Pour les applications tierces, consultez [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion](../apps-in-teams-meetings/meeting-app-extensibility.md).
+- Pour les bots, consultez [créer votre premier bot conversationnel pour Teams](../get-started/first-app-bot.md), [concevoir votre bot Teams](../bots/design/bots.md), [ajouter des bots aux applications Microsoft Teams](../resources/bot-v3/bots-overview.md)et [bots dans Teams](../bots/what-are-bots.md).
+- Pour le chargement indépendant des applications, consultez [permettre à votre application Teams d’être personnalisée](../concepts/design/enable-app-customization.md), [distribuer votre application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)et [Charger votre application dans Teams](../concepts/deploy-and-publish/apps-upload.md).
+- Pour les connecteurs personnalisés, consultez [créer des connecteurs Office 365 pour Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+
+</details>
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Comprendre Teams fonctionnalités de l’application](capabilities-overview.md)
+> [Cas d’utilisation et fonctionnalités Teams](design/understand-use-cases.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Considérations à prendre en compte pour Teams’intégration](../samples/integrating-web-apps.md)
-* [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
+- [Liste de vérification de planification](../concepts/design/planning-checklist.md)
+- [Considérations relatives à l’intégration de Teams](../samples/integrating-web-apps.md)
+- [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)

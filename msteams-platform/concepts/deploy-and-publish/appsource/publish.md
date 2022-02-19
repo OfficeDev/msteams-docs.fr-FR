@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896319"
+ms.locfileid: "62898063"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -95,7 +95,7 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
      1. Validez votre package d’application à l’aide du [Developer Portal](https://dev.teams.microsoft.com/home) Teams pour identifier et corriger les erreurs de package.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="validation de la boutique":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Validation de l’application du Store Teams dans Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
  
      1. Testez automatiquement votre application soigneusement avant la soumission de l’application pour vous assurer qu’elle respecte les stratégies du Store. Chargez une version test de l’application dans Teams et testez les flux utilisateur de bout en bout pour votre application. Assurez-vous que la fonctionnalité fonctionne comme prévu, que les liens ne sont pas rompus, que l’expérience utilisateur n’est pas bloquée et que les limitations sont clairement mises en évidence.
 
@@ -130,6 +130,6 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 * [Publication sur Microsoft 365 App Stores](/office/dev/store/)
 * [Charger votre application Teams](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publier votre application Teams sur votre organisation](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [Planifier l’expérience d’intégration pour les utilisateurs](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Planifier l’expérience d’intégration pour les utilisateurs](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distribution d’applications d’onglets sur des mobiles](../../../tabs/design/tabs-mobile.md#distribution)
 * [Aperçu du test pour les applications monétisées](prepare/Test-preview-for-monetized-apps.md)
