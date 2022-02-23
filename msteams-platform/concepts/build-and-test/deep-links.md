@@ -4,12 +4,12 @@ description: Décrit les liens profonds et comment les utiliser dans vos applica
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: lien profond des équipes
-ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821387"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897913"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits 
 
@@ -80,16 +80,32 @@ Les paramètres de requête sont les suivants :
 | `entityId`&emsp; | ID de l’élément dans l’onglet, que vous avez fourni lors de la [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).|Liste des tâches123|
 | `entityWebUrl` ou `subEntityWebUrl`&emsp; | Champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet. | `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` |
 | `entityLabel` ou `subEntityLabel`&emsp; | Étiquette de l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond. | Liste des tâches 123 ou » Tâche 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| Objet JSON contenant les champs suivants :</br></br> * ID de l’élément dans l’onglet. </br></br> * ID de canal Microsoft Teams disponible à partir du [contexte](~/tabs/how-to/access-teams-context.md) de l’onglet. | 
-| `subEntityId`&emsp; | ID de l’élément dans l’onglet. |Tâche456 |
-| `channelId`&emsp; | ID de canal Microsoft Teams disponible à partir du [contexte](~/tabs/how-to/access-teams-context.md) de l’onglet. Cette propriété est disponible uniquement dans les onglets configurables avec une étendue d’**équipe**. Il n’est pas disponible dans les onglets statiques, qui ont une étendue de **personnel**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | ID de l’élément dans l’onglet. |Tâche456 |
+| `context.channelId`&emsp; | ID de canal Microsoft Teams disponible à partir de l’onglet [contexte](~/tabs/how-to/access-teams-context.md). Cette propriété est disponible uniquement dans les onglets configurables avec une étendue d’**équipe**. Il n’est pas disponible dans les onglets statiques, qui ont une étendue de **personnel**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `chatId`&emsp; | ChatId disponible à partir du [contexte](~/tabs/how-to/access-teams-context.md) d’onglet pour la conversation de groupe et de réunion | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `contextType`&emsp; |  La conversation est le seul contextType pris en charge pour les réunions | conversation |
 
-Exemples :
+**Exemples** :
 
-* Lier à un onglet configurable lui-même : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Lien vers un élément de tâche sous l’onglet configurable : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Lier à un onglet statique lui-même : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Lien vers un élément de tâche dans l’onglet statique : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Lien vers un onglet statique (personnel) lui-même :
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* Lien vers un élément de tâche dans l’onglet statique (personnel) :
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+
+* Lier à un onglet configurable lui-même : 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Lien vers un élément de tâche sous l’onglet configurable : 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+    
+* Lien vers une application onglet ajoutée à une réunion ou une conversation de groupe : 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Assurez-vous que tous les paramètres de requête sont encodés correctement en URI. Vous devez suivre les exemples précédents à l’aide du dernier exemple :
