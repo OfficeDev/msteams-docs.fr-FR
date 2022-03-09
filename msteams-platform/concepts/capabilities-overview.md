@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: connecteurs webhooks des extensions de messagerie des bots tabulations
-ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897969"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355544"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Comprendre les fonctionnalités de l’application Microsoft Teams
 
@@ -23,7 +23,7 @@ Il existe plusieurs façons d’étendre Teams afin que chaque application soit 
 
 Par exemple, un utilisateur peut interagir avec une application dans un onglet de canevas pour effectuer une activité ou peut choisir de faire de même à l’aide d’un bot conversationnel. Vous ne pouvez utiliser qu’une seule fonctionnalité, telle qu’un webhook, tandis que d’autres disposent de plusieurs fonctionnalités pour offrir aux utilisateurs différentes options.
 
-Ces fonctionnalités peuvent exister dans différentes étendues. Par exemple, votre application peut afficher des données dans un emplacement partagé central, c’est-à-dire l’onglet, et présenter ces mêmes informations par le biais d’une interface de conversation personnelle, c’est-à-dire le bot.
+Ces capacités peuvent exister dans différents domaines. Par exemple, votre application peut afficher des données dans un emplacement central partagé, c'est-à-dire l'onglet, et présenter ces mêmes informations dans une interface conversationnelle personnelle, c'est-à-dire le robot.
 
 ## <a name="app-capabilities"></a>Fonctionnalités de l’application
 
@@ -142,15 +142,15 @@ L’[API Microsoft Graph pour Teams](/graph/teams-concept-overview) API permet 
 
    :::column-end:::
 
-> [!NOTE]
-> Le magasin Teams a évolué :
-> 
-> Auparavant, les applications métier étaient mises à jour en sélectionnant les points de suspension sur la vignette. Avec l’expérience mise à jour du Magasin Teams, vous pouvez maintenant mettre à jour les applications métier en vous connectant au [Centre d’administration Teams](https://admin.teams.microsoft.com).
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Représentation conceptuelle de l’API Microsoft Graph pour Teams." border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> Le magasin Teams a évolué : Auparavant, les applications de la LPP étaient mises à jour en sélectionnant les ellipses sur la tuile. Avec l’expérience mise à jour du Magasin Teams, vous pouvez maintenant mettre à jour les applications métier en vous connectant au [Centre d’administration Teams](https://admin.teams.microsoft.com).
 
 ## <a name="choose-the-correct-scope-for-your-app"></a>Choisir l’étendue appropriée pour votre application
 

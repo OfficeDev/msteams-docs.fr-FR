@@ -5,28 +5,29 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: envoyer un message obtenir l’identifiant utilisateur identification du canal identification de la conversation
-ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896326"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355733"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-Un message proactif est un message envoyé par un bot qui ne répond pas à la demande d’un utilisateur. Cela peut inclure des messages tels que :
+Un message proactif est un message envoyé par un bot qui n'est pas en réponse à une demande d'un utilisateur. Il peut s'agir de messages tels que :
 
 * Les messages de bienvenue
 * Notifications
 * Messages planifiés
 
-Pour que votre bot envoie un message proactif à un utilisateur, une conversation de groupe ou d’équipe, il doit disposer d’accès pour envoyer le message. Pour une conversation de groupe ou d’équipe, l’application contenant votre bot doit d’abord être installée à cet emplacement. Vous pouvez [installer votre application de manière proactive à l’aide de Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une [stratégie d’application](/microsoftteams/teams-custom-app-policies-and-settings) pour la transmettre aux équipes et utilisateurs de votre client. Pour les utilisateurs, votre application doit être installée pour l’utilisateur ou votre utilisateur doit faire partie d’une équipe au sein de laquelle votre application est installée.
+Pour que votre bot envoie un message proactif à un utilisateur, une conversation de groupe ou d’équipe, il doit disposer d’accès pour envoyer le message. Pour une conversation de groupe ou d’équipe, l’application contenant votre bot doit d’abord être installée à cet emplacement.
+Vous pouvez [installer votre application de manière proactive à l’aide de Microsoft Graph](#proactively-install-your-app-using-graph) dans une équipe, si nécessaire, ou utiliser une [stratégie d’application](/microsoftteams/teams-custom-app-policies-and-settings) pour la transmettre aux équipes et utilisateurs de votre client. Pour les utilisateurs, votre application doit être installée pour l’utilisateur ou votre utilisateur doit faire partie d’une équipe au sein de laquelle votre application est installée.
 
 L’envoi d’un message proactif est différent de l’envoi d’un message classique. Il n’existe aucun `turnContext` actif à utiliser pour la réponse. Vous devez créer la conversation avant l’envoi du message. Par exemple, une nouvelle conversation individuelle ou un nouveau thread de conversation dans un canal. Vous ne pouvez pas créer une conversation de groupe ou un nouveau canal dans une équipe à l’aide d’une messagerie proactive.
 
-**Pour envoyer un message proactif**
+Pour envoyer un message proactif, suivez ces étapes :
 
 1. [Obtenez l’identifiant utilisateur, l’identification de l’équipe ou l’identification du canal](#get-the-user-id-team-id-or-channel-id) (si nécessaire).
 1. [Créez la conversation](#create-the-conversation) (si nécessaire).
