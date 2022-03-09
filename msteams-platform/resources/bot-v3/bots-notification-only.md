@@ -5,31 +5,31 @@ keywords: notification des bots teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 71dbc07445a57194e90ba3985c3aff1e2d4f2cdf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d3ee5343ea159950859237f2a488557d9063eb6e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155545"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355726"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Bots de notification uniquement dans Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Si l’unique objectif de votre bot est de remettre une notification aux utilisateurs et qu’il n’est pas conversationnel, vous pouvez activer le champ `isNotificationOnly` dans le manifeste de votre application. Cela produit les modifications suivantes :
+Si l’unique objectif de votre bot est de remettre une notification aux utilisateurs et qu’il n’est pas conversationnel, `isNotificationOnly` vous pouvez activer le champ dans le manifeste de votre application. Cela produit les modifications suivantes :
 
 * Les utilisateurs ne peuvent pas envoyer de message à votre bot de notification uniquement.
 * Les utilisateurs ne peuvent @mention le bot.
 
 > [!NOTE]
-> Les applications de bot uniquement s’surfacent dans le bac d’application personnel dans les deux cas : `isNotificationOnly: true` ou `isNotificationOnly: false` .
+> Les applications de bot uniquement s’surfacent dans le bac d’application personnel dans les deux cas : `isNotificationOnly: true` ou `isNotificationOnly: false`.
 
 ## <a name="app-manifest"></a>Manifeste d'application
 
-Pour l’activer, définissez `isNotificationOnly` sur `true` .
+Pour l’activer, définissez sur `isNotificationOnly` `true`.
 
 > [!NOTE]
-> N’ignorez pas que la valeur `isNotificationOnly` est boolén et non une chaîne.
+> La valeur est `isNotificationOnly` Boolean et non une chaîne.
 
 ```json
 {
@@ -50,4 +50,4 @@ Pour l’activer, définissez `isNotificationOnly` sur `true` .
 
 ## <a name="best-practices-and-limitations"></a>Meilleures pratiques et limitations
 
-* Les bots de notification uniquement utilisent une messagerie proactive pour communiquer avec l’utilisateur. Pour plus d’informations, [consultez la messagerie proactive pour les bots.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
+* Les bots de notification uniquement utilisent une messagerie proactive pour communiquer avec l’utilisateur. Pour plus d’informations, voir [Messagerie proactive pour les bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).

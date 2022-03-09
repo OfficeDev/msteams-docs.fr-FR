@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2aa433731d71f672182339bca82f851a61ec5895
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518232"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356062"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -19,7 +19,7 @@ Le respect de ces directives augmente les chances que votre application réussis
 > [!NOTE]
 > * Certaines instructions peuvent ne pas être applicables à votre application. Par exemple, si votre application n’inclut pas de bot, vous pouvez ignorer les instructions liées aux bots.
 > * Nous avons recoupé ces directives avec les politiques de certification commerciale de Microsoft et ajouté les choses à faire et à ne pas faire avec des exemples de scénarios de réussite ou d'échec rencontrés dans notre processus de validation.
-> * Certaines directives sont marquées comme *Correction obligatoire*. Si votre soumission d'application ne respecte pas ces directives obligatoires, vous recevrez un rapport d'échec de notre part avec des mesures pour atténuer. Votre soumission d'application ne passera la validation du Microsoft Teams Store qu'une fois que vous aurez résolu les problèmes. 
+> * Certaines directives sont marquées comme *Correction obligatoire*. Si votre soumission d'application ne respecte pas ces directives obligatoires, vous recevrez un rapport d'échec de notre part avec des mesures pour atténuer. La soumission de votre application Microsoft Teams la validation du Store uniquement une fois que vous avez résolu les problèmes. 
 > * D'autres directives sont marquées comme *Correction obligatoire*. Pour une expérience utilisateur idéale, nous vous suggérons de résoudre les problèmes. Cependant, la publication de votre application ne sera pas bloquée sur la boutique Teams si vous choisissez de ne pas résoudre les problèmes. 
 
 
@@ -103,7 +103,7 @@ Pour plus d'informations sur la mise en œuvre de l'authentification des applica
   * Les applications qui nécessitent que l'administrateur du locataire effectue une configuration unique doivent appeler la dépendance à l'administrateur du locataire pour configurer l'application (avant qu'un autre utilisateur du locataire ne puisse installer et utiliser l'application).  
   La dépendance doit être indiquée dans le manifeste de l'application, la description longue AppSource, tous les points de contact de la première exécution (message de bienvenue du bot, configuration de l'onglet ou page de configuration), le texte d'aide considéré comme nécessaire dans le cadre de la réponse du bot, de l'extension de composition ou du contenu de l'onglet statique.
   
-* **Expériences de partage de contenu** : les applications qui nécessitent une authentification auprès d'un service externe pour partager du contenu dans les canaux Teams doivent indiquer clairement dans la documentation d'aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité de ne pas partager de contenu doit être présente dans votre application Teams.
+* **Expériences de partage de contenu** : les applications qui nécessitent une authentification auprès d'un service externe pour partager du contenu dans les canaux Teams doivent indiquer clairement dans la documentation d'aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’un partage de contenu doit être présente dans Teams application.
 
 ## <a name="security"></a>Sécurité
 > [!NOTE]  
@@ -191,7 +191,7 @@ Les robots doivent toujours demander la permission de télécharger un fichier e
 > [!NOTE]
 > Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) et fournit des conseils aux développeurs sur l'utilisation des domaines restreints dans la `validDomains` Propriété de manifeste.
 
-N'incluez pas les domaines hors du contrôle de votre organisation (y compris les caractères génériques) et les services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes comprennent :
+N’incluez pas les domaines en dehors du contrôle de votre organisation (y compris les caractères génériques) et les services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes comprennent :
 
   * Si votre application utilise le OAuthCard d’Azure Bot Service, vous devez inclure `token.botframework.com` en tant que domaine valide, sinon le bouton **Se connecter** ne fonctionne pas.
   * Si votre application repose sur SharePoint, vous pouvez inclure le site racine SharePoint associé en tant que domaine valide à l’aide de la propriété de contexte `{teamSiteDomain}`.
@@ -279,7 +279,7 @@ Le manifeste de l'application Teams définit la configuration de votre applicati
 
 Les icônes sont l’un des principaux éléments que les utilisateurs voient lors de la navigation dans le magasin Teams. Vos icônes doivent communiquer la marque et l'objectif de votre application tout en respectant les exigences suivantes :
 
-* Votre package d’application doit inclure deux versions PNG de l’icône de votre application : une icône de couleur et une icône de plan.
+* Votre package d’application doit inclure deux versions .png de l’icône de votre application : une icône de couleur et une icône de plan.
 * La version couleur de votre icône doit être de 192x192 pixels. Votre symbole d'icône peut être de n'importe quelle couleur, mais il doit être placé sur un fond carré uni ou entièrement transparent.
 * La version simplifiée de votre icône s'affiche dans les scénarios suivants :
   * Lorsque votre application est utilisée et **hébergée** dans la barre d'applications sur le côté gauche de Teams.
@@ -1367,7 +1367,7 @@ Utilisez les directives suivantes pour les extensions de réunion :
 * Ne doivent pas utiliser de modules de tâche.
 * Doivent s’aligner sur le centre de la phase de réunion.
 
-:::row::: 
+:::row:::
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1375,13 +1375,12 @@ Utilisez les directives suivantes pour les extensions de réunion :
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end::: 
-     
+:::row-end:::
 
 * Doit être rejeté après qu'un utilisateur a sélectionné un bouton ou effectué une action.
 
-* **Mode Ensemble** : assurez-vous de prendre en compte les meilleures pratiques suivantes pour une expérience de création de scène : 
-  * Toutes les images sont au format PNG.
+* **Mode Ensemble** : assurez-vous de prendre en compte les meilleures pratiques suivantes pour une expérience de création de scène :
+  * Toutes les images sont au .png format.
   * Le package final avec toutes les images rassemblées ne doit pas dépasser une résolution de 1920x1080. La résolution est un nombre pair. Cette résolution est une exigence pour que les scènes soient affichées avec succès.
   * La taille maximale de la scène est de 10 Mo.
   * La taille maximale de chaque image est de 5 Mo. Une scène est une collection de plusieurs images. La limite est pour chaque image individuelle.
@@ -1423,7 +1422,7 @@ Si votre application utilise les [API de flux d'activité fournies par Microsoft
 
 Le Programme de conformité d’Application Microsoft 365 est destiné à aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité concernant votre application. Si vous publiez une application dans le magasin Teams, vous devez effectuer les niveaux suivants du programme : 
 
-  * **Vérification de l’éditeur** : permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité des développeurs d’applications procédant à une intégration avec la Plateforme d'identités Microsoft. Une fois terminé, un badge bleu **vérifié** s’affiche dans la boîte de dialogue Azure Active Directory consentement et d’autres écrans. Pour plus d'informations, voir [Marquer votre application comme vérifiée par l'éditeur](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+  * **Vérification de l’éditeur** : permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité des développeurs d’applications procédant à une intégration avec la Plateforme d'identités Microsoft. Une fois terminé, un badge bleu **vérifié** s’affiche sur la boîte Azure Active Directory consentement et d’autres écrans. Pour plus d'informations, voir [Marquer votre application comme vérifiée par l'éditeur](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row::: 
     :::column span="":::

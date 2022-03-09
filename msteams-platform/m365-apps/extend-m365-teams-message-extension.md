@@ -1,24 +1,24 @@
 ---
 title: Étendre une extension Teams messagerie à travers Microsoft 365
 description: Voici comment mettre à jour votre extension de messagerie Teams basée sur la recherche pour qu’elle s’exécute dans Outlook
-ms.date: 11/15/2021
+ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 93775e543610500452da6ebd6535c1945d2f8dda
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821653"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356006"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Étendre une extension Teams messagerie à travers Microsoft 365
 
 > [!NOTE]
-> *L’extension d Teams extension de* messagerie Microsoft 365 est actuellement disponible uniquement en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md). Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
+> *L’extension d Teams de messagerie* sur Microsoft 365 est actuellement disponible uniquement en prévisualisation [pour les développeurs publics](../resources/dev-preview/developer-preview-intro.md). Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
 
 Les [extensions de messagerie basées](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) sur la recherche permettent aux utilisateurs de rechercher un système externe et de partager des résultats via la zone de composition de message du client Microsoft Teams client. En étendant vos applications [Teams sur Microsoft 365 (](overview.md)prévisualisation), vous pouvez désormais apporter vos extensions de messagerie Teams basées sur la recherche à Outlook pour les expériences de bureau et web Windows.
 
-Le processus de mise à jour de votre extension de Teams de messagerie basée sur la Outlook nécessite les étapes suivantes :
+Le processus de mise à jour de votre extension de Teams de messagerie basée sur la Outlook à exécuter implique les étapes suivantes :
 
 > [!div class="checklist"]
 > * Mettre à jour le manifeste de votre application
@@ -27,11 +27,11 @@ Le processus de mise à jour de votre extension de Teams de messagerie basée su
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de messagerie dans les deux Outlook pour Windows bureau et web.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
- - Un client Microsoft 365 programme pour les développeurs en bac à sable (sandbox)
+ - Un Microsoft 365 du programme pour les développeurs en bac à sable
  - Votre client bac à sable (sandbox) inscrit *à Office 365 releases ciblées*
  - Un environnement de test avec Office applications installées à partir du canal Microsoft 365 Apps *bêta*
  - Microsoft Visual Studio code avec l’extension Teams Shared Computer Toolkit (prévisualisation) (facultatif)
@@ -49,7 +49,7 @@ Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez
 
 ## <a name="update-the-app-manifest"></a>Mettre à jour le manifeste de l’application
 
-Vous devez utiliser le schéma de manifeste d’aperçu [Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `m365DevPreview` développeur et la version du manifeste pour permettre à votre extension de messagerie Teams de s’exécuter dans Outlook.
+Vous devez utiliser le schéma de manifeste d’aperçu [Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `m365DevPreview` développeur et la version du manifeste pour permettre à votre extension de messagerie Teams s’exécuter dans Outlook.
 
 Vous avez deux options pour mettre à jour votre manifeste d’application :
 
@@ -95,7 +95,7 @@ Pour que les utilisateurs interagissent avec votre extension de messagerie à pa
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>Mise à Microsoft Azure Active Directory (Azure AD) d’application pour l’sso
 
 > [!NOTE]
-> Vous pouvez ignorer l’étape si vous utilisez un exemple de recherche [d’extension](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) de messagerie Teams, car le scénario n’implique pas l’authentification Azure Active Directory (AAD) Sign-On unique.
+> Vous pouvez ignorer cette étape si vous utilisez l’exemple de recherche [d’extension](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) de messagerie Teams, car le scénario n’implique pas l’authentification Azure Active Directory (AAD) Sign-On unique.
 
 Azure Active Directory L’signature unique (SSO) pour les extensions de messagerie fonctionne de la même manière dans Outlook que dans [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), mais vous devez ajouter plusieurs identificateurs d’application client à l’inscription d’application Azure AD de votre bot dans le portail d’inscription des applications de votre client.
 
@@ -122,11 +122,11 @@ La dernière étape consiste à recharger une version de votre extension de mess
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option « Zip Teams package de métadonnées » dans l’extension Teams Shared Computer Toolkit pour Visual Studio Code":::
 
-1. Connectez-vous à Teams avec votre compte de client bac à sable et vérifiez que vous êtes dans  la prévisualisation publique du développeur en cliquant sur le menu des ellipses (**...**) en fonction de votre profil utilisateur et en ouvrant Sur le point de vérifier que  l’option d’aperçu développeur est surliée.
+1. Connectez-vous à Teams avec votre compte client en bac à sable et vérifiez que vous êtes  dans l’aperçu public pour les développeurs en cliquant sur le menu des ellipses (**...**) en fonction de votre profil utilisateur et en ouvrant Sur le point de vérifier que  l’option d’aperçu développeur est surliée.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="À Teams menu des ellipses, ouvrez « À propos de » et vérifiez que l’option « Aperçu développeur » est cochée":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans Teams menu des ellipses, ouvrez « À propos de » et vérifiez que l’option « Aperçu développeur » est cochée":::
 
-1. Ouvrez *le* volet Applications, puis cliquez **Télécharger une application** personnalisée, **puis Télécharger pour moi ou mes équipes**.
+1. Ouvrez *le* volet Applications, puis cliquez **sur Télécharger une** application personnalisée, puis Télécharger pour moi **ou mes équipes**.
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Bouton « Télécharger application personnalisée » dans le volet Teams applications":::
 
@@ -138,28 +138,42 @@ Une fois le chargement de version Teams, votre extension de messagerie sera disp
 
 Vous êtes maintenant prêt à tester votre extension de messagerie en cours d’exécution Outlook sur Windows bureau et sur le web. Bien que votre extension de messagerie mise à jour continue de s’exécuter dans Teams avec une prise en charge complète des [fonctionnalités pour les extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) de messagerie, il existe des limitations dans cet aperçu préliminaire de l’expérience Outlook à prendre en compte :
 
-* Les extensions de messagerie Outlook sont limitées au contexte de [*composition de* messagerie](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Même si votre extension `commandBox` Teams messagerie électronique inclut en tant que  contexte dans son manifeste, l’aperçu actuel est limité à l’option de composition de messagerie (`compose`). L’vot d’une extension de messagerie à partir de la zone Outlook *recherche* n’est pas pris en charge.
+* Les extensions de messagerie Outlook sont limitées au contexte de [*composition de* messagerie](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Même si votre extension `commandBox` Teams messagerie électronique inclut en tant que contexte  dans son manifeste, l’aperçu actuel est limité à l’option de composition de messagerie (`compose`). L’Outlook d’une extension de messagerie n’est pas prise  en charge.
 * [Les commandes d’extension de messagerie basées](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) sur l’action ne sont pas prises en charge dans Outlook. Si votre application dispose de commandes basées sur la recherche et l’action, elle s’Outlook mais le menu d’action n’est pas disponible.
 * L’insertion de plus de cinq [cartes adaptatives](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) dans un e-mail n’est pas prise en charge . Les cartes adaptatives v1.4 et ultérieures ne sont pas pris en charge.
 * [Les actions de](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) carte de type `messageBack`, `imBack`et `invoke`ne `signin` sont pas prises en charge pour les cartes insérées. La prise en charge est limitée `openURL`à : sur clic, l’utilisateur est redirigé vers l’URL spécifiée dans un nouvel onglet.
 
 Lorsque vous testez votre extension de messagerie, vous pouvez identifier la source (provenant de Teams par rapport à Outlook) des demandes de bot par [le channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) de l’objet [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md). Lorsqu’un utilisateur effectue une requête, votre service reçoit un objet Bot Framework `Activity` standard. L’une des propriétés de l’objet Activity `channelId`est , `msteams` `outlook`qui aura la valeur de ou, en fonction de l’origine de la demande de bot. Pour plus d’informations,  [voir le SDK des extensions de messagerie basées sur la recherche](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
-### <a name="outlook"></a>Outlook
-
-Pour afficher un aperçu de l’exécution de votre application Outlook sur Windows bureau, Outlook connecté avec les informations d’identification de votre client de test. Cliquez sur **Nouveau courrier électronique**. Ouvrez **le menu volant Plus** d’applications dans le ruban supérieur. Votre extension de messagerie sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
-
 ### <a name="outlook-on-the-web"></a>Outlook sur le web
 
-Pour afficher un aperçu de votre application en cours d Outlook sur le web, connectez-vous [outlook.com](https://www.outlook.com) à l’aide des informations d’identification de votre client de test. Cliquez sur **Nouveau message**. Ouvrez **le menu volant Plus** d’applications en bas de la fenêtre de composition. Votre extension de messagerie sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
+Pour afficher un aperçu de l’exécution de votre application Outlook sur le web :
 
-## <a name="next-steps"></a>Prochaines étapes
+1. Connectez-vous à [outlook.com](https://www.outlook.com) à l’aide des informations d’identification de votre client de test.
+1. Cliquez sur **Nouveau message**.
+1. Ouvrez **le menu volant Plus** d’applications en bas de la fenêtre de composition.
+
+Votre extension de messagerie sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
+
+### <a name="outlook"></a>Outlook
+
+> [!IMPORTANT]
+> Reportez-vous aux dernières mises à jour du [blog Microsoft Teams - Microsoft 365 Developer](https://devblogs.microsoft.com/microsoft365dev/) pour vérifier si Outlook sur le bureau Windows la prise en charge des applications Teams personnelles est disponible pour votre client test.
+
+Pour afficher un aperçu de l’exécution de votre application Outlook sur Windows bureau :
+
+1. Lancez Outlook connecté avec les informations d’identification de votre client de test. 1. Cliquez sur **Nouveau courrier électronique**.
+1. Ouvrez **le menu volant Plus** d’applications dans le ruban supérieur.
+
+Votre extension de messagerie sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
+
+## <a name="next-steps"></a>Étapes suivantes
 
 Outlook extensions de messagerie Teams activées sont en prévisualisation et ne sont pas pris en charge pour une utilisation en production. Voici comment distribuer votre extension de messagerie Outlook pour afficher un aperçu des audiences à des fins de test.
 
 ### <a name="single-tenant-distribution"></a>Distribution d’un seul client
 
-Outlook onglets personnels Office et activés pour l’aperçu peuvent être distribués à une audience en prévisualisation sur un client de test (ou de production) de l’une des trois manières ci-après :
+Outlook onglets personnels Office et activés pour l’Office peuvent être distribués à une audience en prévisualisation sur un client de test (ou de production) de l’une des trois manières ci-après :
 
 #### <a name="teams-client"></a>Teams client
 
@@ -167,12 +181,12 @@ Dans le menu *Applications*, *sélectionnez Gérer vos applicationsSoumettre* > 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-En tant qu’administrateur Teams, vous pouvez télécharger et préinstaller le package d’application pour le client de votre organisation à partir de https://admin.teams.microsoft.com/. [Consultez Télécharger vos applications personnalisées dans le Centre d Microsoft Teams’administration Windows pour](/MicrosoftTeams/upload-custom-apps) plus d’informations.
+En tant Teams, vous pouvez télécharger et préinstaller le package d’application pour le client de votre organisation à partir de https://admin.teams.microsoft.com/. Voir [Télécharger vos applications personnalisées dans le centre d’administration Microsoft Teams pour](/MicrosoftTeams/upload-custom-apps) plus d’informations.
 
 #### <a name="microsoft-admin-center"></a>Centre d’administration Microsoft
 
-En tant qu’administrateur général, vous pouvez télécharger et préinstaller le package d’application à partir de https://admin.microsoft.com/. Pour [plus d’informations, voir Tester et déployer Microsoft 365 Apps par](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) des partenaires dans le portail des applications intégrées.
+En tant qu’administrateur général, vous pouvez télécharger et préinstaller le package d’application à partir de https://admin.microsoft.com/. Pour [plus d’informations, voir Tester et déployer Microsoft 365 Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) par des partenaires dans le portail des applications intégrées.
 
-### <a name="multi-tenant-distribution"></a>Distribution multi-locataires
+### <a name="multitenant-distribution"></a>Distribution multi-tension
 
-La distribution vers Microsoft AppSource n’est pas encore prise en charge pendant cette prévisualisation préliminaire pour les développeurs Outlook extensions de messagerie Teams activées pour les développeurs.
+La distribution vers Microsoft AppSource n’est pas encore prise en charge pendant cette prévisualisation préliminaire pour les développeurs Outlook extensions de messagerie Teams activées.

@@ -5,12 +5,12 @@ description: Concevez votre application plus rapidement avec des composants d’
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: f77517774237cce49976990a790987972d79118d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362941"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356433"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>Conception de votre application Microsoft Teams avec des modèles d’interface utilisateur
 
@@ -27,7 +27,7 @@ Récupérer des modèles d’interface utilisateur pour la conception de votre a
 > [!div class="nextstepaction"]
 > [Obtenir le kit d’interface utilisateur (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams’interface utilisateur
+### <a name="microsoft-teams-ui-library"></a>Bibliothèque d’interface utilisateur Microsoft Teams
 
 Affichez et testez les Teams d’interface utilisateur et les composants associés dans votre navigateur.
 
@@ -146,9 +146,9 @@ Les formulaires sont utilisés pour collecter, valider et envoyer des entrées u
 
 ### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur un ordinateur de bureau." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="L’exemple montre un modèle d’interface utilisateur de formulaire sur un ordinateur de bureau." border="false":::
 
-## <a name="list"></a>Répertorier
+## <a name="list"></a>Liste
 
 Vous pouvez utiliser une liste pour afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 
@@ -183,7 +183,7 @@ Vous pouvez concevoir des flux de Teams d’application pour différents context
 
 ## <a name="settings"></a>Paramètres
 
-Paramètres’écran sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base](~/concepts/design/design-teams-app-basic-ui-components.md).)
+Paramètres sont les écrans où les utilisateurs peuvent configurer leurs préférences avec votre application. (Remarque : Paramètres est un conteneur pour les [composants d’interface utilisateur de base](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
 ### <a name="top-use-case"></a>Cas d’utilisation principaux
 

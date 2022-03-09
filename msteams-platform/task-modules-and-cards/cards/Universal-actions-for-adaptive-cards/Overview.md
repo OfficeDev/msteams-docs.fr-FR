@@ -3,18 +3,18 @@ title: Vue d’ensemble des actions universelles pour les cartes adaptatives
 description: Vue d’ensemble rapide des actions universelles pour les cartes adaptatives, telles que les affichages spécifiques de l’utilisateur, la prise en charge séquentielle des flux de travail, et bien plus encore pour les environnements de bureau et mobiles
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: c294e235074bd6a2c9ae148c20e355a9c86325c5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8ec546b0345c1fd26caf0b3016a788e14b623ae2
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889355"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356162"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Actions universelles pour les cartes adaptatives
 
 Les actions universelles pour les cartes adaptatives ont évolué à partir des commentaires du développeur qui, même si la disposition et le rendu des cartes adaptatives étaient universels, la gestion des actions n’était pas. Même si un développeur souhaitait envoyer la même carte à différents endroits, il doit gérer les actions différemment.
 
-Universal Actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute` which works across apps, such as Teams and Outlook.
+Universal Actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`which works across apps, such as Teams and Outlook.
 
 Ce document vous aide à comprendre comment utiliser le modèle Actions universelles pour améliorer l’expérience utilisateur lors de l’interaction avec les cartes adaptatives sur les plateformes et les applications.
 
@@ -34,26 +34,26 @@ Les actions universelles pour les cartes adaptatives améliorent l’expérience
 
 Avant les actions universelles pour les cartes adaptatives, différents hôtes fournissaient différents modèles d’action comme suit :
 
-* Teams ou bots utilisés, une approche qui reporte le modèle de communication réel `Action.Submit` au canal sous-jacent.
-* Outlook utilisé pour communiquer avec le service backend spécifié explicitement dans la charge utile de `Action.Http` carte adaptative.
+* Teams ou bots utilisés`Action.Submit`, une approche qui reporte le modèle de communication réel au canal sous-jacent.
+* Outlook utilisé pour `Action.Http` communiquer avec le service back-end spécifié explicitement dans la charge utile de carte adaptative.
 
 L’image suivante illustre le modèle d’action incohérent actuel :
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Modèle d’action incohérent":::
 
-Avec les actions universelles pour les cartes adaptatives, vous pouvez utiliser la gestion des `Action.Execute` actions sur différentes plateformes. `Action.Execute`fonctionne sur les hubs, notamment Teams et Outlook. En outre, une carte adaptative peut être renvoyée en réponse à une `Action.Execute` demande d’appel déclenchée.
+Avec les actions universelles pour les cartes adaptatives, vous pouvez utiliser `Action.Execute` la gestion des actions sur différentes plateformes. `Action.Execute`fonctionne sur les hubs, notamment Teams et Outlook. En outre, une carte adaptative peut être renvoyée en réponse à une demande `Action.Execute` d’appel déclenchée.
 
 L’image suivante montre le nouveau modèle d’action universelle :
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="Nouvelles actions universelles pour les cartes adaptatives":::
 
-Vous pouvez désormais envoyer la même carte aux deux Teams et Outlook et les synchroniser les unes avec les autres à l’aide du bot sous-jacent. Toute action entreprise sur l’une ou l’autre plateforme est reflétée dans l’autre avec cette build une seule *fois,* déployer n’importe où (Actions universelles pour les cartes adaptatives).
+Vous pouvez désormais envoyer la même carte aux deux Teams et Outlook et les synchroniser les unes avec les autres à l’aide du bot sous-jacent. Toute action entreprise sur l’une ou l’autre plateforme est reflétée dans l’autre avec cette build une seule fois *,* déployer n’importe où (Actions universelles pour les cartes adaptatives).
 
 L’image suivante illustre les actions universelles pour les cartes adaptatives pour Teams et Outlook :
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Même carte mobile pour Teams et Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Même carte mobile pour Teams et Outlook":::
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
@@ -65,7 +65,7 @@ L’image suivante illustre les actions universelles pour les cartes adaptatives
 
 Aujourd’hui, tous les utilisateurs Teams chat ou canal voient exactement les mêmes actions d’affichage et de bouton sur la carte adaptative. Toutefois, dans certains scénarios, certains utilisateurs doivent agir différemment et avoir accès à différentes informations au sein de la même conversation ou canal.
 
-Par exemple, si vous envoyez une carte de rapport d’incident dans une conversation ou un canal, seul l’utilisateur affecté à l’incident doit voir un **bouton Résoudre.** En revanche, le créateur de  l’incident doit voir un bouton Modifier et tous les autres utilisateurs doivent uniquement être en mesure d’afficher les détails de l’incident. Cela est rendu possible par les affichages spécifiques de l’utilisateur qui sont activés par la `refresh` propriété.
+Par exemple, si vous envoyez une carte de rapport d’incident dans une conversation ou un canal, seul l’utilisateur affecté à l’incident doit voir un **bouton Résoudre** . En revanche, le créateur de l’incident doit voir  un bouton Modifier et tous les autres utilisateurs doivent uniquement être en mesure d’afficher les détails de l’incident. Cela est rendu possible par les affichages spécifiques de l’utilisateur qui sont activés par la `refresh` propriété.
 
 L’image suivante montre un exemple d’extension de messagerie de ticket dans laquelle différents utilisateurs de la conversation sont affichés différentes actions en fonction de l’exigence :
 
@@ -79,11 +79,11 @@ L’image suivante montre un exemple d’extension de messagerie de ticket dans 
 
 * * *
 
-Pour plus d’informations, voir [l’exemple pour les affichages spécifiques de l’utilisateur.](User-Specific-Views.md)
+Pour plus d’informations, voir [l’exemple d’affichages spécifiques à l’utilisateur](User-Specific-Views.md).
 
 ### <a name="sequential-workflow-support"></a>Prise en charge séquentielle du flux de travail
 
-Avec la prise en charge séquentielle du flux de travail, les utilisateurs peuvent avancer dans une série de flux de travail sans envoyer différentes cartes séparément. Cela est rendu possible par la possibilité de renvoyer une carte adaptative `Action.Execute` en réponse à une action. En outre, tous les utilisateurs de la conversation ou du canal peuvent avancer dans leur flux de travail sans modifier la carte pour les autres utilisateurs de la conversation.
+Avec la prise en charge séquentielle du flux de travail, les utilisateurs peuvent avancer dans une série de flux de travail sans envoyer différentes cartes séparément. Cela est rendu possible par la possibilité de renvoyer `Action.Execute` une carte adaptative en réponse à une action. En outre, tous les utilisateurs de la conversation ou du canal peuvent avancer dans leur flux de travail sans modifier la carte pour les autres utilisateurs de la conversation.
 
 L’image suivante illustre un exemple de robot de commande de restauration : <br/>
 
@@ -93,7 +93,7 @@ L’image suivante montre les différents états pour les différents utilisateu
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="États du bot de restauration":::
 
-Pour plus d’informations, voir [l’exemple de flux de travail séquentiel.](Sequential-Workflows.md)
+Pour plus d’informations, voir [l’exemple de flux de travail séquentiel](Sequential-Workflows.md).
 
 ### <a name="up-to-date-views"></a>Affichages à jour
 
@@ -101,15 +101,15 @@ Vous pouvez créer des cartes adaptatives qui se met à jour automatiquement. Pa
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Affichages utilisateur spécifiques à jour":::
 
-Pour plus d’informations, voir [l’exemple d’affichages à jour.](Up-To-Date-Views.md)
+Pour plus d’informations, voir [l’exemple d’affichages à jour](Up-To-Date-Views.md).
 
 À présent, vous pouvez comprendre comment les cartes adaptatives peuvent être transformées avec le nouveau modèle Actions universelles pour offrir une expérience utilisateur unique et améliorée.
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>Cartes adaptatives et nouveau modèle Actions universelles
 
-Les cartes adaptatives sont une combinaison de contenu, tel que du texte et des graphiques, et d’actions qui peuvent être effectuées par un utilisateur. Pour plus d’informations, voir [Cartes adaptatives.](http://adaptivecards.io/) Les nouvelles actions universelles pour les cartes adaptatives permettent une gestion courante des actions de carte adaptative sur les plateformes et les applications. Pour plus d’informations, voir [Modèle d’action universelle.](/adaptive-cards/authoring-cards/universal-action-model)
+Les cartes adaptatives sont une combinaison de contenu, tel que du texte et des graphiques, et d’actions qui peuvent être effectuées par un utilisateur. Pour plus d’informations, voir [Cartes adaptatives](http://adaptivecards.io/). Les nouvelles actions universelles pour les cartes adaptatives permettent une gestion courante des actions de carte adaptative sur les plateformes et les applications. Pour plus d’informations, voir [Modèle d’action universelle](/adaptive-cards/authoring-cards/universal-action-model).
 
-Vous pouvez commencer par mettre à jour des scénarios à l’aide du guide de [démarrage rapide](Work-with-universal-actions-for-adaptive-cards.md) et tirer parti des actions universelles.
+Vous pouvez commencer par mettre à jour des scénarios à l’aide du [guide de démarrage rapide](Work-with-universal-actions-for-adaptive-cards.md) et tirer parti des actions universelles.
 
 ## <a name="next-step"></a>Étape suivante
 

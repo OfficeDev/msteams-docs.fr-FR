@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: liste des canaux de profil utilisateur de liste de liste de contexte bot
-ms.openlocfilehash: c356ea8e498f68ba1aec5c438840a366818070d0
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 0b7bba5e642d5cedc7a4c07c441a52fc9298d0f2
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821618"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355551"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtenir Teams contexte spécifique pour votre bot
 
@@ -59,7 +59,7 @@ export class MyBot extends TeamsActivityHandler {
             var members = [];
 
             do {
-                var pagedMembers = await TeamsInfo.getPagedMembers(context, 100, continuationToken);
+                var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
                 continuationToken = pagedMembers.continuationToken;
                 members.push(...pagedMembers.members);
             }
@@ -124,7 +124,7 @@ Response body
 
 * * *
 
-Après avoir récupéré la liste ou le profil utilisateur, vous pouvez obtenir les détails d’un seul membre. Actuellement, pour récupérer des informations pour un ou plusieurs membres d’une conversation ou d’une équipe, utilisez les API Microsoft Teams bot `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` pour C# ou pour les API TypeScript.
+Après avoir récupéré la liste ou le profil utilisateur, vous pouvez obtenir les détails d’un seul membre. Actuellement, pour récupérer des informations pour un ou plusieurs membres d’une conversation ou d’une équipe, utilisez les API de bot `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` Microsoft Teams pour C# ou pour les API TypeScript.
 
 ## <a name="get-single-member-details"></a>Obtenir les détails d’un seul membre
 
@@ -152,10 +152,11 @@ export class MyBot extends TeamsActivityHandler {
         super();
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
-        const member = await TeamsInfo.getMember(context, encodeURI('someone@somecompany.com'));
+        this.onMessage(async (turnContext, next) => {
+            const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
 
-        // By calling next() you ensure that the next BotHandler is run.
-        await next();
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
         });
     }
 }

@@ -4,16 +4,16 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821604"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355590"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
-Teams applications de réunions unifiées reposent sur les concepts suivants :
+Teams applications de réunions unifiées sont basées sur les concepts suivants :
 
 * Le cycle de vie d'une réunion comporte différentes étapes : avant la réunion, pendant la réunion et après la réunion.  
 * Il existe trois rôles distincts pour les participants à une réunion : organisateur, présentateur et participant. Pour plus d’informations, voir [rôles dans une Teams réunion.](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)  
@@ -34,7 +34,7 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 
 > [!NOTE]
 > * Les réunions privées programmées ne supportent que les applications.
-> * L’option Ajouter une application pour Teams’onglet d’extension de réunion n’est pas prise en charge Teams client web.
+> * L’option Ajouter une application Teams’onglet d’extension de réunion n’est pas prise en charge Teams client web.
 
 #### <a name="pre-meeting-app-experience"></a>Expérience de l'application avant la réunion
 
@@ -61,7 +61,7 @@ Avec l'expérience de l'application de pré-réunion, vous pouvez rechercher et 
 
 Après avoir ajouté les onglets à une réunion existante sur mobile, vous pouvez voir les mêmes applications dans l’expérience de pré-réunion sous la section **Plus** des détails de la réunion.
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
@@ -85,7 +85,7 @@ Pour les appareils mobiles, les applications de réunion sont disponibles à **p
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-Après avoir entré la réunion et ajouté l’application à partir d’un ordinateur de bureau ou web, l’application est visible dans la Teams sous la section **Applications**. **Sélectionnez Applications** pour afficher la liste des applications. L’utilisateur peut lancer n’importe quelle application en tant que panneau latéral en réunion de l’application.
+Une fois entrée dans la réunion et ajouté l’application à partir du bureau ou du web, l’application est visible dans la Teams sous la section **Applications**. **Sélectionnez Applications** pour afficher la liste des applications. L’utilisateur peut lancer n’importe quelle application en tant que panneau latéral en réunion de l’application.
 
 La boîte de dialogue de réunion s’affiche et vous permet d’entrer votre réponse en tant que commentaire.
 
@@ -105,7 +105,7 @@ L’image suivante illustre le panneau latéral en réunion :
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-![Panneau latéral en réunion](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![Panneau latéral en réunion](../assets/images/in-meeting-dialog.png)
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 

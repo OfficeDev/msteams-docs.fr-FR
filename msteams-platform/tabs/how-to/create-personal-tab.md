@@ -6,25 +6,25 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET du magasin d’autorisations de domaine de conversation appmanifest du package MVC
-ms.openlocfilehash: 6fd5abaf21458560c65626982f57ae4a8eac722e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: c9334410fa98e4407234921d08654dfe0ae5bbfa
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821681"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355831"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
 ## <a name="create-a-custom-personal-tab"></a>Créer un onglet personnel personnalisé
 
-Vous pouvez créer un onglet personnel à l'Node.js Yeoman Generator, ASP.NET Core ou ASP.NET Core MVC.
+Vous pouvez créer un onglet personnel à l'Node.js Yeoman Generator, ASP.NET Core ou ASP.NET Core MVC. Pour un onglet personnel sur Microsoft Teams mobile, consultez [les onglets sur mobile](~/tabs/design/tabs-mobile.md).
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
 ### <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator"></a>Créer un onglet personnel personnalisé à l'Node.js et le générateur Yeoman
 
 > [!NOTE]
-> Cet article suit les étapes décrites dans la build de votre premier Wiki [Microsoft Teams’application](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App), qui se trouve dans le référentiel microsoft OfficeDev GitHub.
+> Cet article suit les étapes décrites dans la build de votre premier Wiki [Microsoft Teams’application](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App), qui se trouve dans le référentiel GitHub Microsoft OfficeDev.
 
 Vous pouvez créer un onglet personnel personnalisé à l’aide [Teams générateur Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). L’application est également téléchargée vers Teams.
 
@@ -32,7 +32,7 @@ Vous pouvez créer un onglet personnel personnalisé à l’aide [Teams généra
 
 Vous devez connaître les conditions préalables suivantes :
 
-- Vous devez avoir un client Office 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur. L’abonnement reste actif tant que vous l’utilisez pour le développement continu. Bienvenue [dans le programme Office 365 développeur.](/office/developer-program/microsoft-365-developer-program)
@@ -292,13 +292,13 @@ Dans la barre de navigation à l’extrême gauche Teams, sélectionnez les &#x2
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>Créer un onglet personnel personnalisé à l’aide ASP.NET Core
 
-Vous pouvez créer un onglet personnel personnalisé à l’aide C# et ASP.NET Core pages Dente. [App Studio](~/concepts/build-and-test/app-studio-overview.md) est également utilisé pour compléter le manifeste de votre application et déployer votre onglet sur Teams.
+Vous pouvez créer un onglet personnel personnalisé à l’aide de C# et ASP.NET Core pages De la page Page. [App Studio](~/concepts/build-and-test/app-studio-overview.md) est également utilisé pour compléter le manifeste de votre application et déployer votre onglet sur Teams.
 
 ### <a name="prerequisites-for-personal-tab"></a>Conditions préalables pour l’onglet personnel
 
 Vous devez connaître les conditions préalables suivantes :
 
-- Vous devez avoir un client Office 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
@@ -307,7 +307,7 @@ Vous devez connaître les conditions préalables suivantes :
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur plusieurs** plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
 
 - Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
 
@@ -395,7 +395,7 @@ Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit s
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Pour que votre onglet s’affiche dans Teams, vous devez inclure le **SDK** `microsoftTeams.initialize()` client JavaScript Microsoft Teams et inclure un appel après le chargement de votre page. Votre onglet et l’application Teams communiquent de cette manière :
+Pour que votre onglet s’affiche Teams, vous devez inclure le **SDK** `microsoftTeams.initialize()` client JavaScript Microsoft Teams et inclure un appel après le chargement de votre page. Votre onglet et l’application Teams communiquent de cette manière :
 
 Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
@@ -440,7 +440,7 @@ Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** 
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>Télécharger onglet avec App Studio pour Teams
 
 > [!NOTE]
-> **App Studio peut** être utilisé pour modifier votre **fichier manifest.json** et télécharger le package terminé dans Teams. Vous pouvez également modifier manuellement **manifest.json**. Si vous le faites, veillez à générer à nouveau la solution pour créer **Tab.zipfichier à** télécharger.
+> **App Studio** peut être utilisé pour modifier votre **fichier manifest.json** et télécharger le package terminé dans Teams. Vous pouvez également modifier manuellement **manifest.json**. Si vous le faites, veillez à générer à nouveau la solution pour créer **Tab.zipfichier à** télécharger.
 
 **Pour télécharger votre onglet avec App Studio**
 
@@ -527,7 +527,7 @@ Vous pouvez créer un onglet personnel personnalisé à l’aide C# et ASP.NET C
 
 ### <a name="prerequisites-for-personal-tab-with-aspnet-core-mvc"></a>Conditions préalables pour l’onglet personnel avec ASP.NET Core MVC
 
-- Vous devez avoir un client Microsoft 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Vous devez avoir un client Microsoft 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
@@ -536,7 +536,7 @@ Vous pouvez créer un onglet personnel personnalisé à l’aide C# et ASP.NET C
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur plusieurs** plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
 
 - Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
 
@@ -625,7 +625,7 @@ Ces affichages sont les différents dans ASP.NET Core MVC :
 
 * Accueil : ASP.NET Core fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** s’affiche en tant que page d’accueil de votre application.
 
-* Partagé : le contrôle de **_Layout.cshtml** contient la structure de page globale de l’application et les éléments visuels partagés. Il fait également référence à la Teams bibliothèque.
+* Partagé : le contrôle de **_Layout.cshtml contient** la structure de page globale de l’application et les éléments visuels partagés. Il fait également référence à la Teams bibliothèque.
 
 #### <a name="controllers"></a>Contrôleurs
 

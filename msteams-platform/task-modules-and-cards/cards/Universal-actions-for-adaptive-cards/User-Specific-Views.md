@@ -4,16 +4,19 @@ description: En savoir plus sur les affichages spécifiques de l’utilisateur �
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185434"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356363"
 ---
 # <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
-Auparavant, si des cartes adaptatives ont été envoyées dans Teams conversation, tous les utilisateurs voient exactement le même contenu de carte. Avec l’introduction du modèle Actions universelles et des cartes adaptatives, les développeurs de bots peuvent désormais fournir des affichages spécifiques aux utilisateurs de cartes `refresh` adaptatives aux utilisateurs. La même carte adaptative peut désormais être actualisée sur une carte adaptative spécifique à l’utilisateur. Un maximum de 60 utilisateurs différents peuvent voir une version différente de la carte avec des informations ou des actions supplémentaires. La carte adaptative fournit des scénarios puissants tels que les approbations, les contrôles de créateur de sondage, la gestion des tickets, la gestion des incidents et les cartes de gestion de projet.
+Auparavant, si des cartes adaptatives ont été envoyées dans Teams conversation, tous les utilisateurs voient exactement le même contenu de carte. Avec l’introduction du modèle Actions `refresh` universelles et des cartes adaptatives, les développeurs de bots peuvent désormais fournir des affichages spécifiques aux utilisateurs de cartes adaptatives aux utilisateurs. La même carte adaptative peut désormais être actualisée sur une carte adaptative spécifique à l’utilisateur. Un maximum de 60 utilisateurs différents peuvent voir une version différente de la carte avec des informations ou des actions supplémentaires. La carte adaptative fournit des scénarios puissants tels que les approbations, les contrôles de créateur de sondage, la gestion des tickets, la gestion des incidents et les cartes de gestion de projet.
+
+> [!NOTE]
+> L’affichage spécifique à l’utilisateur est pris en charge pour les cartes adaptatives envoyées par un bot et dépend des actions universelles.
 
 Par exemple, Megan, inspecteur de sécurité chez Contoso, souhaite créer un incident et l’affecter à Alex. Megan souhaite également que tous les membres de l’équipe soient informés de l’incident. Megan utilise l’extension de message de rapport d’incident Contoso optimisée par les actions universelles pour les cartes adaptatives.
 
@@ -64,9 +67,9 @@ Le code suivant fournit un exemple de cartes adaptatives :
 **Pour envoyer des cartes adaptatives, actualisez les affichages spécifiques de l’utilisateur et invoquez des demandes au bot**
 
 1. Lorsque Megan crée un incident, le bot envoie la carte adaptative ou la carte commune avec les détails de l’incident dans Teams conversation.
-2. Désormais, cette carte est automatiquement actualisée en vue spécifique de l’utilisateur pour Megan et Alex. Les MRI utilisateur d’Alex et Megan sont ajoutés dans la propriété de propriété du JSON de `userIds` `refresh` carte adaptative. La carte reste la même pour les autres utilisateurs de la conversation.
-3. Pour Megan, l’actualisation automatique déclenche une `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer une carte de créateur d’incident avec un bouton en réponse `Edit` à cette demande d’appel.
-4. De même pour Alex, l’actualisation automatique déclenche une autre `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer un bouton de carte de propriétaire d’incident en réponse `Resolve` à cette demande d’appel.
+2. Désormais, cette carte est automatiquement actualisée en vue spécifique de l’utilisateur pour Megan et Alex. Les MRI `userIds` utilisateur d’Alex et Megan sont ajoutés dans la propriété de `refresh` propriété du JSON de carte adaptative. La carte reste la même pour les autres utilisateurs de la conversation.
+3. Pour Megan, l’actualisation automatique déclenche une demande `adaptiveCard/action` d’appel au bot. Le bot peut renvoyer une carte de créateur d’incident `Edit` avec un bouton en réponse à cette demande d’appel.
+4. De même pour Alex, l’actualisation automatique déclenche une autre `adaptiveCard/action` demande d’appel au bot. Le bot peut renvoyer un bouton de carte de propriétaire `Resolve` d’incident en réponse à cette demande d’appel.
 
 ## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>Appeler la demande envoyée depuis Teams client au bot
 
@@ -217,10 +220,10 @@ const cardRes = {
 
 Recommandations en matière de conception de carte à garder à l’esprit lors de la conception d’affichages spécifiques à l’utilisateur :
 
-* Vous pouvez créer un maximum de **60 affichages** spécifiques à l’utilisateur pour une carte spécifique envoyée à une conversation ou un canal en spécifiant leur `userIds` dans la `refresh` section.
+* Vous pouvez créer un maximum de **60 affichages** spécifiques à l’utilisateur pour une carte spécifique envoyée à une conversation `userIds` ou un canal en spécifiant leur dans la `refresh` section.
 * **Carte de base :** Version de base de la carte que le développeur du bot envoie à la conversation. La version de base est la version de la carte adaptative pour tous les utilisateurs qui ne sont pas spécifiés dans la `userIds` section.
 * Une mise à jour de message peut être utilisée pour mettre à jour la carte de base et actualiser simultanément la carte spécifique de l’utilisateur. L’ouverture de la conversation ou du canal actualisera également la carte pour les utilisateurs avec l’actualisation activée.
-* Pour les scénarios avec des groupes plus importants dans lesquels les utilisateurs basculent vers une vue d’action, qui nécessite des mises à jour dynamiques pour les répondeurs, vous pouvez continuer à ajouter jusqu’à 60 utilisateurs à la `userIds` liste. Vous pouvez supprimer le premier répondeur de la liste lorsque le 61e utilisateur répond. Pour les utilisateurs qui sont supprimés de la liste, vous pouvez fournir un bouton d’actualisation manuelle ou utiliser le bouton Actualiser dans le menu options du message pour obtenir le `userIds` dernier résultat.
+* Pour les scénarios avec des groupes plus importants dans lesquels les utilisateurs basculent vers une vue d’action, qui nécessite des mises à jour dynamiques pour les répondeurs, vous pouvez continuer à ajouter jusqu’à 60 utilisateurs à la `userIds` liste. Vous pouvez supprimer le premier répondeur de la liste lorsque le 61e utilisateur répond. Pour les utilisateurs `userIds` qui sont supprimés de la liste, vous pouvez fournir un bouton d’actualisation manuelle ou utiliser le bouton Actualiser dans le menu options du message pour obtenir le dernier résultat.
 * Invitez les utilisateurs à obtenir un affichage spécifique de l’utilisateur, où ils ne voient qu’un affichage particulier de la carte ou certaines actions.
 
 ## <a name="code-sample"></a>Exemple de code

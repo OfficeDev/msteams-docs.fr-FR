@@ -6,20 +6,21 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations à prendre en compte pour Teams’intégration
-ms.openlocfilehash: a67124f5556ed8b197b981ac150a652dc8d25ec1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: a21bb050008af935ee370d3e65d95a63a7090fb0
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821345"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356251"
 ---
-# <a name="considerations-for-teams-integration"></a>Considérations à prendre en compte pour Teams’intégration 
+# <a name="considerations-for-teams-integration"></a>Considérations à prendre en compte pour Teams’intégration
 
 Vous pouvez rendre les applications web adaptées Teams fonctionnalités sociales et collaboratives de votre Teams.
   
 Les différents types d’applications que vous pouvez intégrer à Teams sont les suivants :
-* **Applications autonomes** : une application autonome est une application à page unique ou grande, et complexe. L’utilisateur peut en utiliser certains aspects dans Teams.
-* **Applications de collaboration** : une application déjà conçue pour les fonctionnalités sociales et collaboratives inhérentes aux Teams.
+
+* **Applications autonomes** : une application autonome est une application à page unique ou grande, et complexe. L’utilisateur peut utiliser certains aspects de celui-ci dans Teams.
+* **Applications de collaboration** : une application déjà conçue pour les fonctionnalités sociales et collaboratives inhérentes à Teams.
 * **SharePoint** : page SharePoint que vous souhaitez faire surface dans Teams.
 
 Vous pouvez maîtr et suivre les recommandations appropriées applicables à votre scénario d’intégration.
@@ -29,14 +30,14 @@ Ce document donne une vue d’ensemble des fonctionnalités de Teams, des exigen
 
 ***Scénarios d’intégration** : applications autonomes, applications de collaboration, SharePoint*
 
-Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour travailler avec l’intégration des applications, il est important de se familiariser avec la terminologie Teams développement.
+Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour travailler avec l’intégration des applications, il est important de se familiariser avec Teams terminologie de développement.
 
 |Fonctionnalités d’application courantes   |Teams plateforme   |
 |----------|-----------|
 |Page web incorporée, page d’accueil ou vue web  |[Onglets](../tabs/what-are-tabs.md)  |
 |Partager des raccourcis et des extensions  |[Extensions de messagerie](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Raccourcis et extensions d’action  |[Extensions de messagerie](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Chatbots  |[Bots](../bots/what-are-bots.md) |
+|Chatbots |[Bots](../bots/what-are-bots.md) |
 |Notifications de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks entrants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connecteurs Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Services externes de message  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks sortants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Modals  |[Modules de tâche](../task-modules-and-cards/what-are-task-modules.md)  |
@@ -48,7 +49,7 @@ Votre application Teams doit inclure les fonctionnalités de collaboration requi
 
 L’intégration de toutes les fonctionnalités d’une application existante dans Teams entraîne souvent une expérience utilisateur forcée ou contre nature, en particulier dans les applications plus volumineuses. Commencez avec les fonctionnalités les plus importantes et celles qui s’intègrent plus naturellement à Teams. Vous pouvez permettre aux utilisateurs de lancer l’application principale et d’accéder à son ensemble complet de fonctionnalités.
 
-**Conditions préalables à l’intégration de votre application avec Teams**
+Voici les conditions préalables à l’intégration de votre application avec Teams.
 
 1. [Maptez les cas d’utilisation de votre application Teams fonctionnalités de plateforme.](../concepts/design/map-use-cases.md)
 1. [Déterminez les points d’entrée de votre application](../concepts/extensibility-points.md). S’agit-il d’un usage personnel, d’une collaboration ou des deux ?
@@ -64,11 +65,11 @@ Pour intégrer une page SharePoint [sous](/MicrosoftTeams/teams-standalone-stati
 
 Vous pouvez également créer un onglet Teams à [l’aide de la SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
-## <a name="aim-towards-multi-tenancy"></a>Objectif de l’expérience d’une location multiple
+## <a name="aim-towards-multitenancy"></a>Objectif de l’location multiple
 
 ***Scénarios d’intégration** : applications autonomes, applications de collaboration, SharePoint*
 
-Si votre application est utilisée par plusieurs organisations, envisagez d’héberger plusieurs locataires. Cela rend votre produit évolutif et simplifie la distribution.
+Si votre application est utilisée par plusieurs organisations, envisagez l’hébergement multi-hébergement. Cela rend votre produit évolutif et simplifie la distribution.
 
 ## <a name="review-your-apis"></a>Passer en revue vos API
 
@@ -84,12 +85,12 @@ Découvrez comment obtenir du contexte pour votre onglet Teams [ou](../tabs/how-
 
 Azure Active Directory fournisseur d’identité pour Teams. Si votre application utilise un autre fournisseur d’identité, vous devez soit faire un exercice de mappage d’identité, soit combiner avec Microsoft Azure Active Directory (Azure AD).
 
-Teams des mécanismes d’sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
+Teams a des mécanismes d’sign-on (SSO) avec Azure AD pour les applications tierces. Il fournit également des conseils pour les flux d’authentification à d’autres fournisseurs d’identité à l’aide de normes telles que OAuth et Open ID Connecter, appelés OIDC.
 
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD). Les applications tierces sont désactivées par défaut pour les Cloud de la communauté du secteur public. Pour activer les applications tierces pour Cloud de la communauté du secteur public, voir gérer les stratégies [d’autorisation](/microsoftteams/teams-app-permission-policies) d’application et [gérer les applications](/microsoftteams/manage-apps).
 
-Pour SharePoint pages Azure AD, vous ne pouvez utiliser l’sOS que si vous souhaitez qu’elle fonctionne pour une autre application, car l’ID est l’SharePoint de l’application.
+Pour SharePoint pages Azure AD, vous ne pouvez utiliser l’sOS que si vous souhaitez qu’elle fonctionne pour une autre application, car l’ID est l’SharePoint’application.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 
@@ -103,7 +104,7 @@ Veillez à suivre [Teams de conception](../concepts/design/understand-use-cases.
 
 ***Scénarios d’intégration** : applications autonomes, applications de collaboration, SharePoint*
 
-Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams plus native.
+Vous pouvez créer des liens vers des informations et des fonctionnalités dans Teams. Utilisez [des liens profonds](../concepts/build-and-test/deep-links.md) pour lier votre application à Teams car ils relient plusieurs parties d’une application pour une expérience Teams native.
 
 ## <a name="be-smart-when-messaging-users"></a>Soyez intelligent lors de la messagerie des utilisateurs
 

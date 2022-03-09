@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821730"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356265"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -115,9 +115,6 @@ Le code suivant fournit un exemple de variable de contexte :
 
 ## <a name="retrieve-context-in-private-channels"></a>Récupérer le contexte dans les canaux privés
 
-> [!Note]
-> Les canaux privés sont actuellement en prévisualisation du développeur privé.
-
 Lorsque votre page de contenu est chargée dans un canal privé, `getContext` les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité du canal. 
 
 Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé :
@@ -127,12 +124,32 @@ Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans 
 * `teamName`: Définir sur le nom du canal privé
 * `teamSiteUrl`: Définir sur l’URL d’un site SharePoint distinct et unique pour le canal privé
 * `teamSitePath`: Définir sur le chemin d’accès d’un site SharePoint distinct et unique pour le canal privé
-* `teamSiteDomain`: Définir sur le domaine d’un domaine de site SharePoint distinct et unique pour le canal privé
+* `teamSiteDomain`: Définir sur le domaine d’un domaine de site SharePoint unique distinct pour le canal privé
 
-Si votre page utilise l’une de ces valeurs, `channelType` vous devez vérifier le champ pour déterminer si votre page est chargée dans un canal privé et y répondre de manière appropriée.
+Si votre page utilise l’une de ces valeurs, `channelType` `Private` la valeur du champ doit être pour déterminer si votre page est chargée dans un canal privé et peut répondre de manière appropriée.
 
-> [!Note]
-> `teamSiteUrl` fonctionne également bien pour les canaux standard.
+## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Récupérer le contexte dans Microsoft Teams Connecter canaux partagés
+
+> [!NOTE]
+> Actuellement, les Microsoft Teams Connecter partagés sont en [prévisualisation développeur](../../resources/dev-preview/developer-preview-intro.md) uniquement.
+
+Lorsque votre page de contenu est chargée dans un canal partagé Microsoft Teams Connecter, `getContext` les données que vous recevez de l’appel sont modifiées en raison de la liste unique d’utilisateurs dans les canaux partagés. 
+
+Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal partagé :
+
+* `groupId`: Non définie pour les canaux partagés.
+* `teamId`: Définie sur l’équipe `threadId` , le canal est partagé pour l’utilisateur actuel. Si l’utilisateur a accès à plusieurs équipes, `teamId` l’équipe qui héberge (crée) le canal partagé est définie.
+* `teamName`: Définie sur le nom de l’équipe, le canal est partagé pour l’utilisateur actuel. Si l’utilisateur a accès à plusieurs équipes, `teamName` l’équipe qui héberge (crée) le canal partagé est définie.
+* `teamSiteUrl`: définissez l’URL d’un site SharePoint distinct et unique pour le canal partagé.
+* `teamSitePath`: définir sur le chemin d’accès d’un site SharePoint distinct et unique pour le canal partagé.
+* `teamSiteDomain`: définissez ce domaine sur le domaine d’un SharePoint de site distinct et unique pour le canal partagé.
+
+Outre ces modifications de champ, deux nouveaux champs sont disponibles pour les canaux partagés :
+
+* `hostTeamGroupId`: définir sur l’équipe `groupId` associée à l’équipe d’hébergement ou l’équipe qui a créé le canal partagé. La propriété peut faire en sorte que les appels Graph API Microsoft récupèrent l’appartenance au canal partagé.
+* `hostTeamTenantId`: définir sur l’équipe `tenantId` associée à l’équipe d’hébergement ou l’équipe qui a créé le canal partagé. La propriété peut être référencé avec l’ID `tid` `getContext` de locataire de l’utilisateur actuel trouvé dans le champ pour déterminer si l’utilisateur est interne ou externe au client de l’équipe d’hébergement.
+
+Si votre page utilise l’une de ces valeurs, `channelType` `Shared` la valeur du champ doit être pour déterminer si votre page est chargée dans un canal partagé et peut répondre de manière appropriée.
 
 ## <a name="handle-theme-change"></a>Gérer la modification du thème
 

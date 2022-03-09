@@ -5,21 +5,27 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518561"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356013"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
 Une fois votre application répertoriée dans le Microsoft Teams, commencez à réfléchir à la façon dont vous allez gérer l’application à l’avenir et augmenter les téléchargements et l’utilisation.
 
+## <a name="analyze-app-usage"></a>Analyser l’utilisation des applications
+
+Vous pouvez suivre l’utilisation de votre application dans [le rapport Teams’utilisation de l’application dans](/office/dev/store/teams-apps-usage) l’Partner Center. Les mesures incluent les utilisateurs actifs mensuels, quotidiens et hebdomadaires, ainsi que les graphiques de rétention et d’intensité qui vous permettent de suivre l’évolution et la fréquence de l’utilisation.
+
+L’apparition des données pour les applications récemment publiées prend environ une semaine dans le rapport.
+
 ## <a name="publish-updates-to-your-app"></a>Publier des mises à jour sur votre application
 
 > [!NOTE]
-> Teams magasin a évolué :
+> Le magasin Teams a évolué :
 > 
 > Auparavant, les liens étaient copiés en sélectionnant des ellipses sur la vignette de l’application. Une fois l’expérience Teams mise à jour mise à jour, vous accéderez à la même expérience à partir de l’onglet Détails des applications. Cette mise à jour sera généralement disponible d’ici le 01 mars 2022.
 
@@ -58,7 +64,7 @@ Créez le lien à l’aide de l’URL suivante, à l’aide de l’ID de votre a
 
 ## <a name="complete-microsoft-365-certification"></a>Certification Microsoft 365 complète
 
-[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’un application Office tiers ou un module est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
+[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’un application Office ou un add-in tiers est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
 
 ## <a name="see-also"></a>Voir aussi
 

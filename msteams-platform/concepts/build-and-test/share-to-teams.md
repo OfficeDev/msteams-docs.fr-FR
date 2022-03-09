@@ -1,15 +1,15 @@
 ---
 title: Créer un bouton de partage pour Teams
-description: Découvrez comment ajouter le bouton Partager à Teams votre site web, avec un aperçu du site web, à l’aide d’exemples de code
+description: Découvrez comment ajouter le bouton Partager Teams incorporé sur votre site web, avec un aperçu du site web, à l’aide d’exemples de code
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Partager Teams-à-Teams
-ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518491"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355873"
 ---
 # <a name="create-share-to-teams-button"></a>Créer un bouton de partage pour Teams
 
@@ -40,7 +40,7 @@ L’image suivante affiche l’expérience Teams de partage :
     </div>
     ```
 
-    Une fois l’exécution de cette Microsoft Teams, l’icône est ajoutée à votre site web. L’image suivante montre l’icône Partager Teams partage :
+    Une fois l’exécution de cette Microsoft Teams, l’icône est ajoutée à votre site web. L’image suivante illustre l’icône Partager Teams-à-vous :
 
     ![Icône Partager Teams partage](~/assets/icons/share-to-teams-icon.png)
 
@@ -82,9 +82,9 @@ Le tableau suivant présente les balises nécessaires :
 |Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Image miniature| aucun. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-Vous pouvez utiliser les versions HTML par défaut ou Open Graph version.
+Vous pouvez utiliser les versions HTML par défaut ou la version Open Graph.
 
-## <a name="share-to-teams-for-education"></a>Partager avec les Teams pour l'éducation
+## <a name="share-to-teams-for-education"></a>Partager à Teams pour l'éducation
 
 Pour les enseignants qui utilisent le bouton Partager Teams, il existe une option supplémentaire pour .`Create an Assignment` Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée, en fonction du lien partagé. L’image suivante affiche Share-to-Teams pour l’éducation : 
 
@@ -95,7 +95,7 @@ Pour les enseignants qui utilisent le bouton Partager Teams, il existe une optio
 | Propriété | Attribut HTML | Type | Par défaut | Description |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | s/o | Href du contenu à partager. |
-| preview | `data-preview` | booléen (sous la mesure d’une chaîne) | `true` | Indique si un aperçu du contenu à partager doit être présenté ou non. |
+| preview | `data-preview` | Booléen (en tant que chaîne) | `true` | Indique si un aperçu du contenu à partager doit être présenté ou non. |
 | iconPxSize | `data-icon-px-size` | number (sous la mesure d’une chaîne) | `32` | Taille en pixels du bouton De partage à Teams à restituer. |
 | msgText | `data-msg-text` | string | s/o | Texte par défaut à insérer avant le lien dans la zone de composition du message. Le nombre maximal de caractères est de 200. |
 | assignInstr | `data-assign-instr` | string | s/o | Texte par défaut à insérer dans le champ « Instructions » des affectations. Le nombre maximal de caractères est de 200. |

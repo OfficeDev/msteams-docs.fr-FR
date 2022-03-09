@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Aperçu du schéma de manifeste teams pour les développeurs
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: bf2bcb1d7c72dc1fbd02de6ecab9ec0848c604c4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518547"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356258"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : schéma de manifeste de prévisualisation pour les développeurs publics pour Microsoft Teams
 
@@ -19,7 +19,7 @@ Pour plus d’informations sur la façon d’activer la prévisualisation pour l
 > [!NOTE]
 > Si vous n’utilisez pas les fonctionnalités de prévisualisation pour les développeurs, notamment l’exécution d’onglets personnels Teams et d’extensions de messagerie dans [](~/resources/schema/manifest-schema.md) Outlook et Office, utilisez plutôt le manifeste de l’application pour les [fonctionnalités](../../m365-apps/overview.md) ga.
 
-Le Microsoft Teams de l’application décrit comment l’application s’intègre à la plateforme Microsoft Teams web. Votre manifeste doit être conforme au schéma hébergé sur [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
+Le Microsoft Teams décrivent comment l’application s’intègre à la plateforme Microsoft Teams web. Votre manifeste doit être conforme au schéma hébergé sur [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
 ## <a name="sample-full-manifest"></a>Exemple du manifeste complet
 
@@ -395,7 +395,7 @@ L’objet est un tableau avec tous les éléments du type `object`. Ce bloc est 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|String|2 048 caractères|✔|L’URL https:// à utiliser lors de la configuration de l’onglet.|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Valeur par défaut : `true`|
+|`canUpdateConfiguration`|Boolean|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Par défaut :`true`|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne prennent en charge que les étendues `team` et `groupchat`. |
 |`context` |tableau d’énumération|6 ||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut `channelTab`: , `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`et `meetingSidePanel``meetingStage`.|
 |`sharePointPreviewImage`|Chaîne|2048||Chemin d’accès relatif à une image d’aperçu d’onglet à utiliser dans SharePoint. Taille 1024 x 768. |
@@ -432,7 +432,7 @@ L’objet est un tableau (un&mdash; seul élément est autorisé par application
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|String|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Cela peut être identique à [l’ID d’application global](#id).|
-|`needsChannelSelector`|Boolean|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Valeur par défaut : `false`|
+|`needsChannelSelector`|Boolean|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Par défaut :`false`|
 |`isNotificationOnly`|Boolean|||Indique si un bot est unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Par défaut :`false`|
 |`supportsFiles`|Boolean|||Indique si le bot prend en charge la possibilité de télécharger des fichiers dans une conversation personnelle. Par défaut :`false`|
 |`scopes`|Tableau de l’énum|3|✔|Indique si le bot offre une expérience dans le contexte d’un canal dans une `team`, dans une conversation de groupe (`groupchat`) ou dans une expérience limitée à un utilisateur individuel (`personal`). Ces options ne sont pas exclusives.|
@@ -474,7 +474,7 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 |Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`botId`|String|64|✔|L'ID de l'application Microsoft pour le bot qui accompagne l'extension de messagerie, tel qu’inscrit auprès de Bot Framework. Cela peut être identique à [l’ID d’application global](#id).|
-|`canUpdateConfiguration`|Boolean|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d’une extension de messagerie peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -486,12 +486,12 @@ Chaque élément de commande est un objet avec la structure suivante :
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|String|64 caractères|✔|ID de la commande.|
-|`type`|String|64 caractères||Type de la commande. L’un des `query` ou `action`. Valeur par défaut : `query`|
+|`type`|String|64 caractères||Type de la commande. L’un des `query` ou `action`. Par défaut :`query`|
 |`title`|String|32 caractères|✔|Le nom de la commande conviviale.|
 |`description`|Chaîne|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Valeur par défaut : `false`|
+|`initialRun`|Boolean|||Valeur boolé américaine qui indique si la commande doit être exécuté initialement sans paramètre. Par défaut :`false`|
 |`context`|Tableau de chaînes|3||Définit l’endroit à partir de lequel l’extension de messagerie peut être invoquée. N’importe quelle combinaison `compose`de , `commandBox`. `message` La valeur par défaut est `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||Valeur booléle qui indique si le module de tâche doit être récupéré dynamiquement.|
+|`fetchTask`|Boolean|||Valeur Boolean qui indique s’il doit extraire le module de tâche dynamiquement.|
 |`taskInfo`|Objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
 |`taskInfo.title`|String|64||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|String|||Largeur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
@@ -549,11 +549,11 @@ L’objet est un tableau avec tous les éléments du type `string`.
 
 **Optional**
 
-Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et des informations Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
+Spécifiez votre ID d’Microsoft Azure Active Directory (Azure AD) et des informations Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`id`|String|36 caractères|✔|Microsoft Azure Active Directory (Azure AD) de l’application. Cet ID doit être un GUID.|
+|`id`|String|36 caractères|✔|ID de l'application Microsoft Azure Active Directory (Azure AD). Cet ID doit être un GUID.|
 |`resource`|Chaîne|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition d’un jeton d’th pour l’sso.|
 |`applicationPermissions`|Tableau|Maximum 100 éléments|✔|Autorisations de ressources pour l’application.|
 

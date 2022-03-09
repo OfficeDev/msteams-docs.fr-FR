@@ -5,18 +5,18 @@ description: Guide de démarrage rapide sur la création d’un onglet de canal 
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518260"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355845"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe
 
 ## <a name="create-a-custom-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe personnalisé
 
-Vous pouvez créer un onglet de canal ou de groupe à l'Node.js et le générateur Yeoman, ASP. NETCore ou ASP. NETCore MVC.
+Vous pouvez créer un onglet de canal ou de groupe à l'Node.js et le générateur Yeoman, ASP. NETCore ou ASP. NETCore MVC. Pour un onglet de canal ou de groupe Microsoft Teams mobile, consultez [les onglets sur mobile](~/tabs/design/tabs-mobile.md).
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
@@ -25,13 +25,13 @@ Vous pouvez créer un onglet de canal ou de groupe à l'Node.js et le générate
 > [!NOTE]
 > Cet article suit les étapes décrites dans la build Your [first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-Vous pouvez créer un onglet de canal ou de groupe personnalisé à [l’aide Teams générateur Yeoman](https://github.com/OfficeDev/generator-teams/).
+Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’aide [Teams générateur Yeoman](https://github.com/OfficeDev/generator-teams/).
 
 ### <a name="prerequisites-for-apps"></a>Conditions préalables pour les applications
 
 Vous devez connaître les conditions préalables suivantes :
 
-- Vous devez avoir un client Office 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur. L’abonnement reste actif tant que vous l’utilisez pour le développement continu. Bienvenue [dans le programme Office 365 développeur.](/office/developer-program/microsoft-365-developer-program)
@@ -227,7 +227,7 @@ gulp ngrok-serve
 **Pour télécharger votre application sur Teams**
 
 1. Go to Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com) , vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
-1. Dans vos équipes dans le volet gauche, sélectionnez les &#x25CF;&#x25CF;&#x25CF; à côté de l’équipe que vous utilisez pour tester votre onglet et choisissez **Gérer l’équipe**.
+1. Dans vos équipes dans le volet gauche, sélectionnez les &#x25CF;&#x25CF;&#x25CF; en de côté de l’équipe que vous utilisez pour tester votre onglet et choisissez Gérer **l’équipe**.
 1. Dans le volet principal, sélectionnez **Applications** dans la barre d’onglets et choisissez **Télécharger une** application personnalisée située dans le coin inférieur droit de la page.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
 
@@ -250,7 +250,7 @@ Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’C# et AS
 
 Vous devez connaître les conditions préalables suivantes :
 
-- Vous devez avoir un client Office 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
@@ -259,7 +259,7 @@ Vous devez connaître les conditions préalables suivantes :
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur plusieurs** plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
 
 - Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
 
@@ -368,7 +368,7 @@ Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons 
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-Pour que votre onglet s’affiche dans Teams, vous devez inclure le **SDK** `microsoftTeams.initialize()` client JavaScript Microsoft Teams et inclure un appel après le chargement de votre page. Voici comment votre onglet et le client Teams communiquent :
+Pour que votre onglet s’affiche Teams, vous devez inclure le **SDK** `microsoftTeams.initialize()` client JavaScript Microsoft Teams et inclure un appel après le chargement de votre page. Voici comment votre onglet et le client Teams communiquent :
 
 Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
 
@@ -488,7 +488,7 @@ Dans la section **Domaines et autorisations** , les domaines de vos **onglets** 
 > [!IMPORTANT]
 > À droite, dans **Description**, vous voyez l’avertissement suivant :
 >
-> &#9888; « **Le tableau « validDomains » ne peut pas contenir un site de tunnel...** »
+> &#9888; « **Le tableau « validDomains » ne peut pas contenir de site de tunnel...** »
 >
 > Cet avertissement peut être ignoré lors du test de votre onglet.
 
@@ -512,7 +512,7 @@ Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’C# et AS
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>Conditions préalables pour un onglet de groupe ou de canal personnalisé
 
-- Vous devez avoir un client Microsoft 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- Vous devez avoir un client Microsoft 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
@@ -521,7 +521,7 @@ Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’C# et AS
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur plusieurs** plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
 
 - Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
 
@@ -610,7 +610,7 @@ Voici les différentes vues dans ASP.NET Core MVC :
 
 * Accueil : ASP.NET Core fichiers appelés **Index** comme page d’accueil ou par défaut du site. Lorsque l’URL de votre navigateur pointe vers la racine du site, **Index.cshtml** s’affiche en tant que page d’accueil de votre application.
 
-* Partagé : le contrôle de **_Layout.cshtml** contient la structure de page globale de l’application et les éléments visuels partagés. Il référencera également la bibliothèque Teams bibliothèque.
+* Partagé : le contrôle de **_Layout.cshtml contient** la structure de page globale de l’application et les éléments visuels partagés. Il référencera également la bibliothèque Teams bibliothèque.
 
 #### <a name="controllers"></a>Contrôleurs
 

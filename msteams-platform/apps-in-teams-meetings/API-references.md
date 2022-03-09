@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Requête de signal de notification de contexte utilisateur de l’api de rôle de participant aux réunions teams
-ms.openlocfilehash: 3dd234e99068c2d7014a04f378a131b5d325a2c8
-ms.sourcegitcommit: 58f1c3e6a4fab0778ff035e0bbddcee267a0e8e2
+ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "62857236"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355789"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -25,9 +25,9 @@ Le tableau suivant fournit une liste des API disponibles dans les SDK Microsoft 
 
 |Méthode| Description| Source|
 |---|---|----|
-|[**Obtenir le contexte utilisateur**](#get-user-context-api)| Obtenez des informations contextuelles pour afficher le contenu pertinent dans Teams onglet.| MSTC SDK|
+|[**Obtenir le contexte utilisateur**](#get-user-context-api)| Obtenez des informations contextuelles pour afficher le contenu pertinent dans un onglet Teams’écran.| MSTC SDK|
 |[**Obtenir des Participants**](#get-participant-api)| Récupérer les informations des participants par ID de réunion et ID de participant. |MSBF SDK|
-|[**Envoyer un signal de notification**](#send-notification-signal-api)| Fournir des signaux de réunion à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot et permet d’avertir l’action de l’utilisateur qui affiche une boîte de dialogue en réunion. |MSBF SDK|
+|[**Envoyer une notification en réunion**](#send-an-in-meeting-notification)| Fournir des signaux de réunion à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot et permet d’avertir l’action de l’utilisateur qui affiche une notification de réunion. |MSBF SDK|
 |[**Obtenir les détails de la réunion**](#get-meeting-details-api)| Obtenir les métadonnées statiques d’une réunion. |MSBF SDK |
 |[**Envoyer des légendes en temps réel**](#send-real-time-captions-api)| Envoyer des légendes en temps réel à une réunion en cours. |MSTC SDK|
 |[**Partager du contenu d’application pour la phase**](#share-app-content-to-stage-api)| Partagez des parties spécifiques de l’application pour la phase de réunion à partir du volet côté application d’une réunion. |MSTC SDK|
@@ -54,7 +54,7 @@ Le tableau suivant inclut les paramètres de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
+|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
 |**participantId**| String | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l’sso tabulation. |
 |**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l’sso onglet. |
 
@@ -136,13 +136,15 @@ Le tableau suivant fournit les codes de réponse :
 | **401** | L’application répond avec un jeton non valide.|
 | **404** | La réunion a expiré ou les participants ne sont pas disponibles.|
 
-## <a name="send-notification-signal-api"></a>API de signal d’envoi de notification
+## <a name="send-an-in-meeting-notification"></a>Envoyer une notification de réunion
 
-Tous les utilisateurs d’une réunion reçoivent les notifications envoyées via l’API `NotificationSignal` . `NotificationSignal` L’API vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot. Vous pouvez envoyer un signal en fonction de l’action de l’utilisateur, une boîte de dialogue de réunion. L’API inclut le paramètre de requête, des exemples et des codes de réponse.
+Tous les utilisateurs d’une réunion reçoivent les notifications envoyées par le biais de la charge utile de notification de réunion. La charge utile de notification en réunion déclenche une notification de réunion et vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot. Vous pouvez envoyer une notification de réunion en fonction de l’action de l’utilisateur. La charge utile est disponible via Bot Services.
 
 > [!NOTE]
-> * Lorsqu’une boîte de dialogue de réunion est invoquée, le contenu est présenté comme un message de conversation.
-> * Actuellement, l’envoi de notifications ciblées n’est pas pris en charge.
+> * Lorsqu’une notification de réunion est invoquée, le contenu est présenté comme un message de conversation.
+> * Actuellement, l’envoi de notifications ciblées et la prise en charge de webapp ne sont pas pris en charge.
+> * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur effectue une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, [Teams module de tâche du SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
+> * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial `from.id` doit reposer sur les métadonnées `from` de demande dans l’objet, et non sur les `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Microsoft Azure Active Directory (Azure AD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) [et créer et envoyer le module de tâche](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -152,14 +154,14 @@ Le tableau suivant inclut les paramètres de requête :
 |---|---|----|---|
 |**conversationId**| String | Oui | L’identificateur de conversation est disponible dans le cadre de Bot Invoke. |
 
-### <a name="examples"></a>Exemples
+### <a name="examples"></a>範例
 
 L’objet `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
 > [!NOTE]
 > * Le `completionBotId` paramètre est facultatif `externalResourceUrl` dans l’exemple de charge utile demandé.
 > * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour plus d’informations, voir [les instructions de conception](design/designing-apps-in-meetings.md).
-> * L’URL est la page, qui se charge comme `<iframe>` dans la boîte de dialogue de la réunion. Le domaine doit se trouver dans le tableau des `validDomains` applications dans le manifeste de votre application.
+> * L’URL est la page, qui se charge comme dans `<iframe>` la notification de réunion. Le domaine doit se trouver dans le tableau des `validDomains` applications dans le manifeste de votre application.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -364,7 +366,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 
 ## <a name="send-real-time-captions-api"></a>API Envoyer des légendes en temps réel
 
-L’API d’envoi de légendes en temps réel expose un point de terminaison POST pour les légendes de traduction en temps réel (CART) d’accès aux communications Microsoft Teams, des légendes fermées de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux dans une Microsoft Teams réunion lorsqu’ils ont activé les légendes.
+L’API d’envoi de légendes en temps réel expose un point de terminaison POST pour les légendes de traduction en temps réel (CART) d’accès aux communications Microsoft Teams, ainsi que des légendes fermées de type humain. Le contenu texte envoyé à ce point de terminaison apparaît aux utilisateurs finaux dans une Microsoft Teams réunion lorsqu’ils ont activé les légendes.
 
 ### <a name="cart-url"></a>URL DE PANIER
 
@@ -387,7 +389,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>Méthode
 
-|Resource|Méthode|Description|
+|Ressource|Méthode|Description|
 |----|----|----|
 |/cartcaption|POST|Gérer les légendes pour la réunion, qui a été démarrée|
 
@@ -424,7 +426,7 @@ L’API `shareAppContentToStage` vous permet de partager des parties spécifique
 
 ### <a name="prerequisite"></a>Conditions préalables
 
-Pour utiliser l’API `shareAppContentToStage` , vous devez obtenir les autorisations RSC. Dans le manifeste de l’application, configurez la `authorization` propriété, ainsi que le `name` et `type` dans le `resourceSpecific` champ. Par exemple :
+Pour utiliser l’API `shareAppContentToStage` , vous devez obtenir les autorisations RSC. Dans le manifeste de l’application, configurez la `authorization` propriété, ainsi que le `name` et `type` dans le `resourceSpecific` champ. Par exemple :
 
 ```json
 "authorization": {
@@ -620,7 +622,7 @@ Le code suivant montre comment capturer `MeetingType`les métadonnées d’une r
 
 Événement de début de réunion
 ```csharp
-protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
@@ -742,20 +744,20 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 
 |Exemple de nom | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Extensibilité des réunions | Microsoft Teams’extensibilité de réunion pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| Extensibilité des réunions | Microsoft Teams d’extensibilité de réunion pour transmettre des jetons. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Bot de bulles de contenu de réunion | Microsoft Teams exemple d’extensibilité de réunion pour l’interaction avec le bot de bulles de contenu dans une réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | MeetingSidePanel | Microsoft Teams exemple d’extensibilité de réunion pour interagir avec le panneau latéral en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Onglet Détails de la réunion | Microsoft Teams exemple d’extensibilité de réunion pour interagir avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Onglet Détails de la réunion | Microsoft Teams exemple d’extensibilité de réunion pour l’interaction avec l’onglet Détails en réunion. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |Exemple d’événements de réunion|Exemple d’application pour afficher les événements de Teams en temps réel|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Exemple de recrutement de réunion|Exemple d’application pour afficher l’expérience de réunion pour le scénario de recrutement.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |Installation de l’application à l’aide du code QR|Exemple d’application qui génère le code QR et installe l’application à l’aide du code QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Teams d’authentification pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Teams’authentification pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Applications pour les réunions Teams](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>Prochaines étapes
+## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
 > [Activer et configurer vos applications pour Teams réunions](enable-and-configure-your-app-for-teams-meetings.md)

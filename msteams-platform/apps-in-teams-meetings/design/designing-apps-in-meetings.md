@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Modèle de kit d’interface utilisateur lors de la réunion - Phase de réunion partagée avec le comportement réactif
-ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: bb83da351a6b9d2b1219ef1e265e5e6269b34f26
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523794"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355822"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Conception de votre extension Microsoft Teams réunion
 
@@ -97,7 +97,7 @@ Les personnes peuvent utiliser l’onglet réunion pour :
 
 ### <a name="anatomy-in-meeting-tab"></a>Anatomie : onglet En réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un onglet en réunion." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’un onglet en réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -153,7 +153,7 @@ Les boîtes de dialogue de réunion sont déclenchées par un utilisateur (tel q
 
 ### <a name="anatomy-in-meeting-dialog"></a>Anatomie : boîte de dialogue en réunion
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="L’exemple montre l’anatomie structurelle d’une boîte de dialogue en réunion." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
@@ -467,7 +467,7 @@ Teams réunions sont optimisées pour le thème foncé afin de réduire les brui
 
 #### <a name="dont-use-unfamiliar-colors"></a>À ne pas faire : utiliser des couleurs inconnues
 
-Les couleurs qui entrent en conflit avec l’environnement de réunion peuvent être gênantes et apparaître moins natives Teams. Découvrez la palette de couleurs Teams[,](https://developer.microsoft.com/fluentui#/styles/web/colors/products) y compris les neutres du thème d’appel.
+Les couleurs qui entrent en conflit avec l’environnement de réunion peuvent être gênantes et apparaître moins natives Teams. Découvrez la palette de couleurs Teams[,](https://developer.microsoft.com/fluentui#/styles/web/colors/products) y compris les couleurs neutres du thème d’appel.
 
    :::column-end:::
 :::row-end:::

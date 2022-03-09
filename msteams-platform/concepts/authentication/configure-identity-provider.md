@@ -3,17 +3,17 @@ title: Configurer les fournisseurs d’identité OAuth 2.0
 description: Décrit comment configurer des fournisseurs d’identité axés sur Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Authentification teams Azure AD fournisseur d’identité oauth
-ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+keywords: authentification teams Azure AD fournisseur d’identité oauth
+ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821352"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356412"
 ---
 # <a name="configure-identity-providers"></a>Configurer les fournisseurs d’identité
 
-## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>Configuration d’une application pour utiliser Azure AD en tant que fournisseur d’identité
+## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>Configuration d’une application pour utiliser Azure AD comme fournisseur d’identité
 
 Les fournisseurs d’identité qui la prise en charge d’OAuth 2.0 n’authentifiera pas les demandes provenant d’applications inconnues ; doivent être inscrites à l’avance. Pour ce faire, Azure AD, suivez les étapes suivantes :
 
@@ -32,3 +32,11 @@ Remplacez `<hostname>` par votre hôte réel, qui peut être un site d’héberg
 * **LinkedIn :** Suivez les instructions de [configuration de votre application LinkedIn](/linkedin/talent/apply-with-linkedin)
 
 * **Google :** Obtenir les informations d’identification du client OAuth 2.0 à partir de la [console d’API Google](https://console.developers.google.com/)
+
+* **Fournisseurs OAuth externes à partir d’onglets :** Pour plus d’informations, voir [Utiliser des fournisseurs OAuth externes](../../tabs/how-to/authentication/auth-oauth-provider.md)
+
+## <a name="see-also"></a>Voir aussi 
+
+* [Authentifier un utilisateur dans un bot Microsoft Teams client](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Prise en charge de l'authentification unique (SSO) pour les onglets](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [Authentifier un utilisateur dans un onglet Microsoft Teams’accès](../../tabs/how-to/authentication/auth-tab-aad.md)

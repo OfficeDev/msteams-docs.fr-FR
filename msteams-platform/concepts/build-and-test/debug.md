@@ -4,20 +4,20 @@ description: Décrit les options de test et de débogage Microsoft Teams applica
 keywords: les équipes exécutent des applications de débogage hébergées localement sur le cloud
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 2c28090d82737d5231ed68a2fd3ef6896d701022
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: eddcd41a7bebae183df079bc5dfe67deed65056e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949018"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355705"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Choisir une configuration pour tester et déboguer votre Microsoft Teams application
 
 Microsoft Teams applications contiennent une ou plusieurs fonctionnalités et les façons de les exécuter ou même de les héberger sont différentes. Pour le débogage, utilisez l’une des méthodes suivantes :
 
-* **Purement local**: pour les bots, vous pouvez tester votre expérience dans le bot Emulator. Pour d’autres contenus, vous pouvez exécuter localement dans votre navigateur et traiter le contenu via `http://localhost` .
-* **Hébergé localement dans Teams**: cela implique l’exécution de l’application localement dans un logiciel de tunneling et la création d’un [](~/concepts/deploy-and-publish/apps-upload.md) [package](~/concepts/build-and-test/apps-package.md) à télécharger dans Teams. Cela vous permet d’exécuter et de déboguer facilement votre application dans le client Teams client.
-* **Hébergé dans le cloud dans Teams**: cela simule véritablement la prise en charge du niveau de production pour une Teams application. Cela implique le téléchargement de votre solution vers votre serveur ou fournisseur [](~/concepts/deploy-and-publish/apps-upload.md) cloud accessible en externe de votre choix et la création d’un [package](~/concepts/build-and-test/apps-package.md) à télécharger dans Teams.
+* **Purement local** : pour les bots, vous pouvez tester votre expérience dans bot Emulator. Pour d’autres contenus, vous pouvez exécuter localement dans votre navigateur et traiter le contenu via `http://localhost`.
+* **Hébergé localement dans Teams** : cela implique l’exécution de l’application localement dans un logiciel de tunneling et la création [](~/concepts/deploy-and-publish/apps-upload.md) d’un [package](~/concepts/build-and-test/apps-package.md) à charger dans Teams. Cela vous permet d’exécuter et de déboguer facilement votre application dans le client Teams client.
+* **Hébergé dans le cloud dans Teams** : cela simule véritablement la prise en charge du niveau de production pour une Teams application. Cela implique le téléchargement de votre solution vers votre serveur ou fournisseur cloud accessible en externe de votre choix et la création d’un [package](~/concepts/build-and-test/apps-package.md) à télécharger dans Teams.[](~/concepts/deploy-and-publish/apps-upload.md)
 
 Exécutez l’expérience à partir de votre propre ordinateur pour des tests de Teams local ou purement local. En faisant cela, vous pouvez compiler et exécuter dans votre environnement de développement intégré et tirer pleinement parti des techniques, telles que les points d’arrêt et le débogage d’étape.
 
@@ -29,7 +29,7 @@ Utilisez plusieurs manifestes et packages pour conserver la séparation entre le
 ## <a name="purely-local"></a>Purement local
 
 > [!NOTE]
-> L’exécution locale du bot ne vous donne pas accès aux fonctionnalités de l’application Teams ni aux fonctions de bot spécifiques à Teams telles que les appels de liste de travail et d’autres fonctionnalités propres au canal. En outre, certaines fonctionnalités sont autorisées par Bot Framework dans bot Emulator qui peuvent ne pas fonctionner lors de l’exécution dans Microsoft Teams.
+> L’exécution locale du bot ne vous permet pas d’accéder aux fonctionnalités de l’application Teams ni aux fonctions de bot spécifiques à Teams telles que les appels de liste de membres et d’autres fonctionnalités propres au canal. En outre, certaines fonctionnalités sont autorisées par Bot Framework dans bot Emulator qui peuvent ne pas fonctionner lors de l’exécution en Microsoft Teams.
 
 Votre bot peut s’exécuter dans le bot Emulator. Cela vous permet de tester une partie de la logique principale du bot, de voir une disposition approximative des messages et d’effectuer des tests simples. Voici les étapes à suivre :
 
@@ -43,12 +43,12 @@ Votre bot peut s’exécuter dans le bot Emulator. Cela vous permet de tester un
 
 Microsoft Teams est un produit entièrement basé sur le cloud, tous les services accessibles doivent être disponibles publiquement à l’aide des points de terminaison HTTPS. Par conséquent, pour permettre à votre application de fonctionner dans Teams, vous devez publier le code dans le cloud de votre choix ou rendre notre instance locale en cours d’exécution accessible en externe. Nous pouvons le faire avec un logiciel de tunneling.
 
-Bien que vous pouvez utiliser n’importe quel outil de votre choix, nous utilisons et recommandons [ngrok,](https://ngrok.com/download)qui crée une URL adressan externe pour un port que vous ouvrez localement sur votre ordinateur. 
+Bien que vous pouvez utiliser n’importe quel outil de votre choix, nous utilisons et recommandons [ngrok](https://ngrok.com/download), qui crée une URL adressan externe pour un port que vous ouvrez localement sur votre ordinateur.
 
-**Pour configurer ngrok en vue de l’exécution locale de Microsoft Teams’application**
+Pour configurer ngrok en vue de l’exécution Microsoft Teams votre application localement, suivez les étapes suivantes :
 
 1. Go to the directory where you have ngrok.exe installed in a terminal application. Vous pouvez l’ajouter en tant que variable de chemin d’accès pour éviter cette étape.
-2. Exécutez, par exemple, `ngrok http 3978 --host-header=localhost:3978` ou remplacez le numéro de port selon vos besoins.
+2. Exécutez, par exemple, `ngrok http 3978 --host-header=localhost:3978`ou remplacez le numéro de port selon vos besoins.
    Cela lance ngrok pour la liste sur le port que vous spécifiez. En retour, il vous donne une URL adressan externe valide tant que ngrok est en cours d’exécution.
 
 > [!NOTE]
@@ -56,10 +56,10 @@ Bien que vous pouvez utiliser n’importe quel outil de votre choix, nous utilis
 
 Pour utiliser ngrok dans votre projet en fonction des fonctionnalités que vous utilisez, vous devez remplacer toutes les références d’URL dans votre code, configuration et fichier manifest.json pour utiliser ce point de terminaison d’URL.
 
-Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point de terminaison de messagerie du bot pour utiliser ce nouveau point de terminaison ngrok. Par exemple, `https://2d1224fb.ngrok.io/api/messages`. Vous pouvez vérifier que ngrok fonctionne en testant la réponse du bot dans la fenêtre de conversation test du portail Bot Framework. Là encore, comme l’émulateur, ce test ne vous permet pas d’accéder Teams fonctionnalités spécifiques.
+Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point de terminaison de messagerie du bot pour utiliser ce nouveau point de terminaison ngrok. Par exemple : `https://2d1224fb.ngrok.io/api/messages`. Vous pouvez vérifier que ngrok fonctionne en testant la réponse du bot dans la fenêtre de conversation test du portail Bot Framework. Là encore, comme l’émulateur, ce test ne vous permet pas d’accéder Teams fonctionnalités spécifiques.
 
 > [!NOTE]
-> Pour mettre à jour le point de terminaison de messagerie d’un bot, vous devez utiliser Bot Framework. Sélectionnez votre bot dans [votre liste de bots dans Bot Framework.](https://dev.botframework.com/bots) Vous n’avez pas besoin de migrer votre bot vers Microsoft Azure. Vous pouvez également mettre à jour votre point de terminaison de messagerie via [App Studio.](~/concepts/build-and-test/app-studio-overview.md)
+> Pour mettre à jour le point de terminaison de messagerie d’un bot, vous devez utiliser Bot Framework. Sélectionnez votre bot [dans votre liste de bots dans Bot Framework](https://dev.botframework.com/bots). Vous n’avez pas besoin de migrer votre bot vers Microsoft Azure. Vous pouvez également mettre à jour votre point de terminaison de messagerie via [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## <a name="cloud-hosted"></a>Hébergé dans le cloud
 
@@ -70,14 +70,14 @@ Vous pouvez utiliser n’importe quel service adressan externe pour héberger vo
 
 ## <a name="load-and-run-your-experience"></a>Charger et exécuter votre expérience
 
-Pour charger et exécuter votre expérience au sein Microsoft Teams, vous devez créer un package et le télécharger dans Teams. Pour plus d’informations, reportez-vous aux rubriques suivantes :
+Pour charger et exécuter votre expérience dans Microsoft Teams, vous devez créer un package et le télécharger dans Teams. Pour plus d’informations, voir :
 
-* [Créez le package pour votre application Microsoft Teams.](~/concepts/build-and-test/apps-package.md)
+* [Créez le package pour votre Microsoft Teams application.](~/concepts/build-and-test/apps-package.md)
 * [Télécharger votre application dans Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
 ## <a name="next-step"></a>Étape suivante
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Ajouter des données de test à votre environnement](~/concepts/build-and-test/test-data.md)
 
 ## <a name="see-also"></a>Voir aussi

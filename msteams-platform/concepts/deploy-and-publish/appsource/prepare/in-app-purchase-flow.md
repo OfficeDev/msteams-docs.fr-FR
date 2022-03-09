@@ -5,19 +5,19 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518239"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356469"
 ---
 # <a name="in-app-purchases"></a>Achats dans l'application
 
 Microsoft Teams des API que vous pouvez utiliser pour implémenter les achats in-app afin de passer de la version gratuite à la version payante Teams applications. L’achat dans l’application vous permet de convertir des utilisateurs de plans gratuits en plans payants directement à partir de votre application.
 
 > [!NOTE]
-> Les achats dans l’application pour Teams applications sont actuellement disponibles uniquement en [**prévisualisation développeur**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
+> Les achats in-app pour Teams applications sont actuellement disponibles uniquement en [**prévisualisation développeur**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 ## <a name="implement-in-app-purchases"></a>Implémenter des achats dans l’application
 
@@ -88,24 +88,23 @@ L’exemple suivant montre aux utilisateurs d’acheter des plans d’abonnement
 
 1. Dans le Teams **Store**, recherchez et sélectionnez l’application.
 
-1. Dans la boîte de dialogue Détails de l’application, **sélectionnez Acheter un abonnement** ou **Ajouter pour moi**. 
+1. Dans la boîte de dialogue Détails de l’application, **sélectionnez Acheter un abonnement** ou **Ajouter pour moi**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Achat de l’abonnement pour l’application sélectionnée." border="true":::
 
-    
 1. **Add for me** propose une version d’essai gratuite de l’application, puis la met à niveau vers une version payante.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Mise à niveau vers l’abonnement pour l’application sélectionnée." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Mise à niveau vers l’abonnement pour l’application sélectionnée." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
 1. Dans la **boîte de dialogue Choisir un plan d’abonnement** , choisissez le plan et sélectionnez **Checkout**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Sélection du plan d’abonnement approprié." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Sélection du plan d’abonnement approprié." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
 1. Terminez la transaction et **sélectionnez Configurer maintenant** pour configurer votre abonnement.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configuration de l’abonnement." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configuration de l’abonnement." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
 
 ## <a name="next-step"></a>Étape suivante
 

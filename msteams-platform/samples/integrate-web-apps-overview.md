@@ -1,27 +1,28 @@
 ---
 title: Intégrer les applications Web
 author: Rajeshwari-v
-description: Vue d’ensemble de l’intégration d’applications web et de fonctionnalités d’appareil Microsoft Teams application.
+description: Vue d’ensemble de l’intégration des applications web et des fonctionnalités d’appareil Microsoft Teams application.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-keywords: Partage d’assistant d’agent virtuel lien profond avec les applications power platform power apps pour les personnes Teams
-ms.openlocfilehash: 77daf673fd20c82803b0498487d04fe5232c28ef
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+keywords: Partage d’assistant d’agent virtuel lien profond avec l’assistant d’agent virtuel power platform power apps Teams
+ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948578"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355957"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
 Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
-Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, des Power Virtual Agents, des Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à l’esprit, la création d’un bouton De partage à Teams pour votre site web, l’ajout d’un Microsoft Teams  dans l SharePoint, la création de liens profonds et l’intégration des fonctionnalités de l’appareil.
+Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, Power Virtual Agents, Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton De partage à Teams pour votre site web, l’ajout d’un Microsoft Teams  dans l SharePoint, la création de liens profonds et l’intégration des fonctionnalités de l’appareil.
 
-## <a name="prerequisites"></a>Configuration requise   
+## <a name="prerequisites"></a>Conditions préalables
 
-Pour une intégration efficace, veillez à mieux comprendre les conditions préalables suivantes :
-* Teams fonctionnalités. 
+Pour une intégration efficace, assurez-vous de mieux comprendre les conditions préalables suivantes :
+
+* Teams fonctionnalités.
 * SharePoint requises pour le stockage de fichiers et de données.
 * Conditions requises pour les API.
 * Authentification.
@@ -32,6 +33,7 @@ Pour une intégration efficace, veillez à mieux comprendre les conditions préa
 ## <a name="low-code-platforms"></a>Plateformes de code faible
 
 Les plateformes à code faible offrent une approche intuitive du développement de logiciels et nécessitent peu ou pas de codage pour créer des applications et des processus. Vous pouvez créer facilement des applications personnalisées avec des plateformes à code faible. Ces plateformes se composent d’une interface visuelle, de connecteurs vers des services back end et d’un système de gestion du cycle de vie des applications intégré pour créer, déboguer, déployer et gérer des applications. Microsoft fournit les passerelles innovantes suivantes pour créer rapidement des applications compatibles Teams à l’aide d’attributs de code faible :
+
 * Plateforme Microsoft Power
 * Microsoft Teams modèles d’application
 
@@ -49,11 +51,11 @@ Power Virtual Agent est une solution d’interface graphique guidée sans code. 
 
 ### <a name="create-virtual-assistant"></a>Créer un assistant virtuel
 
-Virtual Assistant est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la marque organisationnelle et des données nécessaires. 
+Virtual Assistant est un modèle open source Microsoft qui vous permet de créer une solution conversationnelle robuste tout en conservant un contrôle total de l’expérience utilisateur, de la  marque organisationnelle et des données nécessaires.
 
 ## <a name="app-templates"></a>Modèles d’application
 
-Vous pouvez utiliser un modèle d’application pour créer des applications personnalisées en fonction des besoins de votre organisation. Ce sont des applications prêtes pour la production Microsoft Teams qui sont pilotées par la communauté, open source et disponibles sur GitHub. Chaque modèle contient des instructions détaillées pour déployer et installer l’application pour votre organisation. Il fournit une application prête à l’emploi que vous pouvez installer et commencer à utiliser immédiatement. 
+Vous pouvez utiliser un modèle d’application pour créer des applications personnalisées en fonction des besoins de votre organisation. Ce sont des applications prêtes pour la production Microsoft Teams qui sont pilotées par la communauté, open source et disponibles sur GitHub. Chaque modèle contient des instructions détaillées pour déployer et installer l’application pour votre organisation. Il fournit une application prête à l’emploi que vous pouvez installer et commencer à utiliser immédiatement.
 
 ## <a name="teams-shifts-work-force-management-connectors"></a>Teams les connecteurs de gestion de la force de travail
 
@@ -65,11 +67,11 @@ Il s’agit d’un système open source Learning Management System (LMS) populai
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Créer un bouton Partager vers Teams sur votre site web
 
-Les sites web tiers peuvent utiliser le script de lancement pour incorporer le partage Teams boutons sur leurs pages web. Lorsque vous sélectionnez le bouton, il lance le partage pour Teams expérience utilisateur dans une fenêtre pop-up. Cela vous permet de partager un lien directement avec n’importe quelle personne Microsoft Teams canal sans changer de contexte.
+Les sites web tiers peuvent utiliser le script de lancement pour incorporer le partage Teams boutons sur leurs pages web. Lorsque vous sélectionnez le bouton, il lance le partage pour Teams expérience utilisateur dans une fenêtre pop-up. Cela vous permet de partager un lien directement avec n’importe quelle personne ou Microsoft Teams canal sans changer de contexte.
 
-## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Ajouter un Microsoft Teams dans SharePoint
+## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>Ajouter un onglet Microsoft Teams dans SharePoint
 
-Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams et SharePoint en ajoutant un onglet Microsoft Teams dans SharePoint en tant que SPFx web. 
+Vous pouvez obtenir une expérience d’intégration riche entre Microsoft Teams et SharePoint en ajoutant un onglet Microsoft Teams dans SharePoint en tant que SPFx web.
 
 ## <a name="create-deep-link"></a>Créer un lien profond
 
@@ -77,16 +79,17 @@ Vous pouvez créer des liens profonds vers les entités dans Teams. Vous pouvez 
 
 ## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
-Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams. 
+Microsoft Teams plateforme améliore en permanence les capacités des développeurs en s’alignant sur les expériences intégrées de la première partie. La plateforme Teams améliorée permet aux partenaires d’accéder et d’intégrer les fonctionnalités natives de l’appareil, telles que l’appareil photo, le scanneur de QR ou de code-barres, la galerie de photos, le microphone et l’emplacement à l’aide d’API dédiées disponibles dans le SDK client JavaScript Microsoft Teams.
 
 ## <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
 Vous pouvez intégrer le contrôle Teams sélecateur de personnes natives qui permet aux utilisateurs de rechercher et de sélectionner des personnes dans l’expérience d’application web.
 
 ## <a name="integrate-teams-in-your-external-app"></a>Intégrer des Teams dans votre application externe
-Vous pouvez incorporer vos propres expériences dans Microsoft Teams en Teams applications. Si vous souhaitez  inverser ce modèle et intégrer Teams ou d’autres fonctionnalités de communication dans votre propre expérience d’application externe, voir [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services est un service basé sur le cloud avec des API REST et des SDK de bibliothèque client pour vous aider à intégrer la communication dans vos propres applications personnalisées. Vous pouvez incorporer des composants Web Teams génériques ou de style React pour appeler et discuter à l’aide de la bibliothèque d’interface [utilisateur.](https://azure.github.io/communication-ui-library/)
 
-Les applications Azure Communication Services peuvent utiliser la fonctionnalité de prévisualisation publique pour interopérer avec [Teams](/azure/communication-services/concepts/teams-interop) et permettre à votre application personnalisée de participer Teams réunions de manière anonyme. Par exemple, vous pouvez intégrer des appels vidéo dans une application bancaire mobile et permettre aux utilisateurs finaux de rencontrer virtuellement des employés de la banque à l’aide Microsoft Teams. 
+Vous pouvez incorporer vos propres expériences dans Microsoft Teams en Teams applications. Si vous souhaitez inverser ce  modèle et intégrer Teams ou d’autres fonctionnalités de communication dans votre propre expérience d’application externe, voir [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services est un service basé sur le cloud avec des API REST et des SDK de bibliothèque client pour vous aider à intégrer la communication dans vos propres applications personnalisées. Vous pouvez incorporer des composants Web Teams génériques ou de style React pour appeler et discuter à l’aide de la bibliothèque [d’interface utilisateur](https://azure.github.io/communication-ui-library/).
+
+Les applications Azure Communication Services peuvent utiliser la fonctionnalité de prévisualisation publique pour interopérer avec [Teams](/azure/communication-services/concepts/teams-interop) et permettre à votre application personnalisée de participer Teams réunions de manière anonyme. Par exemple, vous pouvez intégrer des appels vidéo dans une application bancaire mobile et permettre aux utilisateurs finaux de rencontrer virtuellement des employés de la banque à l’aide Microsoft Teams.
 
 Vous pouvez également intégrer Microsoft 365 pour créer des applications externes qui incorporent la vidéo et les appels PSTN au nom d’Teams utilisateur. Si vous avez utilisé [des SDK Skype Entreprise](/skype-sdk/appsdk/skypeappsdk) par le passé, ces fonctionnalités dans le cadre d’Azure Communication Services sont recommandées en remplacement.
 
@@ -94,7 +97,7 @@ Vous pouvez également intégrer Microsoft 365 pour créer des applications exte
 
 * [Ma map les cas d’utilisation de votre application Teams fonctionnalités de plateforme](~/concepts/design/map-use-cases.md)
 * [Déterminer les points d’entrée de votre application](~/concepts/extensibility-points.md)
-* [Considérations à prendre en compte pour Teams’intégration](~/samples/integrating-web-apps.md)
+* [Considérations relatives à l’intégration de Teams](~/samples/integrating-web-apps.md)
 * [Créer des applications personnalisées à code faible pour Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Ajouter un chatbot Power Virtual Agents](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Créer un assistant virtuel](~/samples/virtual-assistant.md)

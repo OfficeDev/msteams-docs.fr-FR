@@ -5,34 +5,34 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
-ms.openlocfilehash: 82174caf6154e78a3cae80640c0b9d1d7fe00a68
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: ec734017a807f744a4b44d7d3594638a5ec72b32
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949571"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355523"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
 Prenez en compte les facteurs suivants pour trouver votre Microsoft Teams application :
 
-1. [Localisez votre liste AppSource.](#localize-your-appsource-listing)
-1. [Localisez les chaînes dans le manifeste de votre application.](#localize-strings-in-your-app-manifest) 
-1. [Gérer les envois de texte localisées de vos utilisateurs.](#handle-localized-text-submissions-from-your-users)
+1. [Localisez votre liste AppSource](#localize-your-appsource-listing).
+1. [Localisez les chaînes dans le manifeste de votre application](#localize-strings-in-your-app-manifest). 
+1. [Gérer les envois de texte localisées de vos utilisateurs](#handle-localized-text-submissions-from-your-users).
 
 ## <a name="localize-your-appsource-listing"></a>Localisez votre liste AppSource
 
-Si vous publiez l’application dans le Store, vous devez savoir que la recherche dans AppSource n’est pas encore prise en charge. Pour prendre en charge les listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Les informations de langue par défaut que vous fournissez dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste apparaissent dans la liste du site [web AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource est un endroit pour tous les besoins de votre équipe. regroupez tous les outils, y compris les conversations, les réunions, les appels, les fichiers et les outils, pour permettre un travail d’équipe plus productif.") de votre application. Actuellement, la langue par défaut est l’anglais.
+Si vous publiez l’application dans le Store, fournissez des métadonnées (descriptions, captures d’écran, nom) dans les langues dans qui vous souhaitez que votre application soit répertoriée et spécifiez explicitement ces langues sur la page **Descriptions Marketplace** dans l’Partner Center. Pour plus d’informations, [voir les fronts Microsoft AppSource localisées](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Pour prendre en charge les listes localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre liste. Les informations de langue par défaut que vous fournissez dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) pour votre liste apparaissent dans la liste du site [web AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource est un endroit pour tous les besoins de votre équipe. regroupez tous les outils, y compris les conversations, les réunions, les appels, les fichiers et les outils, pour permettre un travail d’équipe plus productif.") de votre application. Actuellement, la langue par défaut est l’anglais.
 
 ### <a name="configure-localization"></a>Configurer la localisation
 
-Pour configurer une langue supplémentaire pour votre application, dans [l’Partner Center,](/office/dev/store/submit-to-appsource-via-partner-center)sélectionnez l’anglais et la langue supplémentaire de l’application. Le français est utilisé comme langue supplémentaire dans l’exemple suivant :
+Pour configurer une langue supplémentaire pour votre application, dans [l’Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), sélectionnez l’anglais et la langue supplémentaire de l’application. Le français est utilisé comme langue supplémentaire dans l’exemple suivant :
 
 1. Ajouter l’anglais
     * Entrez le nom de l’application.
     * Entrez une brève description de l’application en anglais.
     * Entrez la description longue de l’application en anglais.
-    * Dans la description longue, entrez : **Cette application est disponible en français.**
+    * Dans la description longue, entrez : **Cette application est disponible en français**.
     * Télécharger images de l’interface utilisateur de votre application (en anglais).
 2. Ajouter le français
     * Entrez le nom de l’application.
@@ -44,13 +44,13 @@ Les images que vous téléchargez avec l’anglais sont utilisées dans AppSourc
 
 ## <a name="localize-strings-in-your-app-manifest"></a>Localiser les chaînes dans le manifeste de votre application
 
-Vous devez utiliser le schéma Microsoft Teams’application et `v1.5` ultérieurement pour le localiser. Pour ce faire, vous pouvez définir l’attribut dans votre fichier manifest.json sur ou une version supérieure et mettre à jour la propriété en `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** version `manifestVersion` `$schema` `1.5` (dans ce cas). 
+Vous devez utiliser le schéma Microsoft Teams’application `v1.5` et ultérieurement pour le localiser. Pour ce faire, vous pouvez `$schema` définir l’attribut dans votre fichier manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` sur ou une version supérieure et mettre à jour la propriété en version (`1.5`dans ce cas). 
 
-Vous devez ajouter la `localizationInfo` propriété avec la langue par défaut que votre application prend en charge. La langue par défaut est utilisée comme langue de base finale si les paramètres du client de l’utilisateur ne correspondent à aucune de vos langues supplémentaires.
+Vous devez ajouter la propriété `localizationInfo` avec la langue par défaut que votre application prend en charge. La langue par défaut est utilisée comme langue de base finale si les paramètres client de l’utilisateur ne correspondent à aucune de vos langues supplémentaires.
 
 ### <a name="example-manifestjson-change"></a>Exemple de modification manifest.json
 
-Le manifeste.json suivant permet d’ajouter la propriété avec la langue par défaut que votre application prend en charge `localizationInfo` avec `additionalLanguages` :
+Le manifeste.json suivant permet d’ajouter `localizationInfo` la propriété avec la langue par défaut que votre application prend en charge avec `additionalLanguages`:
 
 ```json
 {
@@ -84,7 +84,7 @@ Voici un exemple de localisation .json :
 ```
 
 
-Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent respecter le schéma [JSON](../../resources/schema/localization-schema.md) du fichier de localisation et ils doivent être ajoutés à la propriété `localizationInfo` de votre manifeste. Chaque fichier est en corrélation avec une balise de langue, que le client Teams utilise pour sélectionner les chaînes appropriées. La balise de langue prend la forme de, mais vous pouvez omettre la partie pour cibler toutes les régions qui prennent en charge `<language>-<region>` `<region>` la langue souhaitée.
+Vous pouvez fournir des fichiers .json supplémentaires avec des traductions de toutes les chaînes orientées utilisateur dans votre manifeste. Ces fichiers doivent respecter le schéma [JSON](../../resources/schema/localization-schema.md) `localizationInfo` du fichier de localisation et ils doivent être ajoutés à la propriété de votre manifeste. Chaque fichier correspond à une balise de langue, que le client Teams utilise pour sélectionner les chaînes appropriées. La balise de langue prend la forme de `<language>-<region>` `<region>` , mais vous pouvez omettre la partie pour cibler toutes les régions qui prennent en charge la langue souhaitée.
 
 Le client Teams applique les chaînes dans l’ordre suivant : chaînes de langue par défaut -> chaînes de langue de l’utilisateur uniquement -> langue de l’utilisateur + chaînes de région de l’utilisateur.
 
@@ -151,7 +151,7 @@ La modification manifest.json est indiquée dans l’exemple suivant :
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>Gérer les envois de texte localisées de vos utilisateurs
 
-Si vous fournissez des versions localisées de votre application, les utilisateurs répondent avec la même langue. Comme Teams ne traduit pas les soumissions de l’utilisateur dans la langue par défaut, votre application doit gérer les réponses linguistiques localisées. Par exemple, si vous fournissez une valeur localisée, les réponses à votre bot sont le texte localisée de la commande, et non `commandList` la langue par défaut. Votre application doit répondre correctement.
+Si vous fournissez des versions localisées de votre application, les utilisateurs répondent avec la même langue. Comme Teams ne traduit pas les soumissions de l’utilisateur dans la langue par défaut, votre application doit gérer les réponses linguistiques localisées. Par exemple, si vous fournissez une langue `commandList`localisée, les réponses à votre bot sont le texte localisée de la commande, et non la langue par défaut. Votre application doit répondre correctement.
 
 ## <a name="code-sample"></a>Exemple de code
 

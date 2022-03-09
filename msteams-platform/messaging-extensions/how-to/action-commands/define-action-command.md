@@ -5,12 +5,12 @@ description: Vue d’ensemble des commandes d’action d’extension de messager
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1c533dacca3b50fb96311ad95a9828e9978ba5f9
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281909"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355887"
 ---
 # <a name="define-messaging-extension-action-commands"></a>Définir des commandes d’action d’extension de messagerie
 
@@ -223,6 +223,11 @@ La section suivante est un exemple d’objet `composeExtensions` définissant de
 |:---------------------|:--------------|:---------|:--------|
 |Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas](../../../sbs-meetingextension-action.yml) pour créer Teams extension de messagerie basée sur une action.
+
 ## <a name="next-step"></a>Étape suivante
 
 Si vous utilisez une carte adaptative ou un affichage web `taskInfo` incorporé sans objet, l’étape suivante consiste à :
@@ -234,3 +239,4 @@ Si vous utilisez les paramètres ou un affichage web `taskInfo` incorporé avec 
 
 > [!div class="nextstepaction"]
 > [Répondre à l’soumission du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

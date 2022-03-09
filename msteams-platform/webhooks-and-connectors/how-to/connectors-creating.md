@@ -6,27 +6,27 @@ keywords: connecteur Office365 teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801382"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356097"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
 Avec Microsoft Teams applications, vous pouvez ajouter votre connecteur Office 365 existant ou en créer un nouveau dans Teams. Pour plus d’informations, [voir créer votre propre connecteur](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-## <a name="add-a-connector-to-teams-app"></a>Ajouter un connecteur à Teams application
+## <a name="add-a-connector-to-teams-app"></a>Ajouter un connecteur à l Teams appl;
 
 Vous pouvez créer un [package et](~/concepts/build-and-test/apps-package.md) [publier votre](~/concepts/deploy-and-publish/apps-publish.md) connecteur dans le cadre de votre soumission AppSource. Vous pouvez distribuer votre connecteur inscrit dans le cadre de votre package Teams’application. Pour plus d’informations sur les points d’entrée Teams’application, voir [fonctionnalités](~/concepts/extensibility-points.md). Vous pouvez également fournir le package aux utilisateurs directement pour le chargement dans Teams.
 
 Pour distribuer votre connecteur, inscrivez-le dans le Tableau [de bord du développeur de connecteurs](https://aka.ms/connectorsdashboard).
 
-Pour qu’un connecteur fonctionne uniquement dans Microsoft Teams, suivez les instructions pour soumettre le connecteur afin de publier votre application dans l’article [Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md). Dans le cas contraire, un connecteur inscrit fonctionne dans tous les produits Office 365 qui la prise en charge des applications, y compris Outlook et Teams.
+Pour qu’un connecteur fonctionne uniquement dans Microsoft Teams, suivez les instructions pour soumettre le connecteur en [publiant](~/concepts/deploy-and-publish/appsource/publish.md) votre application dans l’article Microsoft Teams store. Dans le cas contraire, un connecteur inscrit fonctionne dans tous les produits Office 365 qui la prise en charge des applications, y compris Outlook et Teams.
 
 > [!IMPORTANT]
-> Votre connecteur est enregistré après avoir sélectionné **Enregistrer** dans le tableau de bord du développeur de connecteurs. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de publication de votre [application Microsoft Teams app dans AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si vous ne souhaitez pas publier votre application dans AppSource, distribuez-la directement à l’organisation. Une [fois les connecteurs publiés pour votre organisation](#publish-connectors-for-the-organization), aucune action supplémentaire n’est requise sur le tableau de bord du connecteur.
+> Votre connecteur est enregistré après avoir sélectionné **Enregistrer** dans le tableau de bord du développeur de connecteurs. Si vous souhaitez publier votre connecteur dans AppSource, suivez les instructions de publication de votre [application Microsoft Teams dans AppSource](~/concepts/deploy-and-publish/apps-publish.md). Si vous ne souhaitez pas publier votre application dans AppSource, distribuez-la directement à l’organisation. Une [fois les connecteurs publiés pour votre organisation](#publish-connectors-for-the-organization), aucune action supplémentaire n’est requise sur le tableau de bord du connecteur.
 
 ### <a name="integrate-the-configuration-experience"></a>Intégrer l’expérience de configuration
 
@@ -136,7 +136,7 @@ Le tableau suivant fournit les paramètres et les détails des propriétés `Get
 | `configName`  | Nom de la configuration, tel que définie par votre code lors de l’appel `setSettings()`. |
 | `contentUrl` | URL de la page de configuration, définie par votre code lors de l’appel `setSettings()`. |
 | `webhookUrl` | URL de webhook créée pour le connecteur. Utilisez l’URL de webhook pour post JSON structuré pour envoyer des cartes au canal. Elle est `webhookUrl` renvoyée uniquement lorsque l’application renvoie des données avec succès. |
-| `appType` | Les valeurs renvoyées peuvent `mail`être respectivement `groups`Office 365 `teams` courrier électronique, Office 365 groupes de messagerie ou Microsoft Teams correspondant. |
+| `appType` | Les valeurs renvoyées peuvent `mail`être respectivement `groups`Office 365 `teams` mail, Office 365 Groups ou Microsoft Teams correspondant. |
 | `userObjectId` | ID unique correspondant à l’Office 365 qui a initié la mise en place du connecteur. Il doit être sécurisé. Cette valeur peut être utilisée pour associer l’utilisateur Office 365, qui a installé la configuration dans votre service. |
 
 #### <a name="handle-edits"></a>Gérer les modifications
@@ -259,7 +259,7 @@ Le connecteur est disponible dans la section &#9679;&#9679;&#9679; > **Plus d’
 
 ## <a name="distribute-webhook-and-connector"></a>Distribuer le webhook et le connecteur
 
-1. [Configurer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) directement pour votre équipe.
+1. [Configurer un webhook entrant](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) directement pour votre équipe.
 1. Ajoutez [une page de configuration](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) [et publiez votre webhook entrant](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) dans un connecteur Office 365.
 1. Packagez et publiez votre connecteur dans le cadre de [votre soumission AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) .
 
