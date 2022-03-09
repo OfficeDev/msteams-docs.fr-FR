@@ -5,12 +5,12 @@ keywords: format des cartes de bots teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 08c78748039fd8feccc1750abd17af7bcbc2d441
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821674"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356440"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -20,9 +20,9 @@ Voici les deux façons d’ajouter une mise en forme de texte enrichi à vos car
 
 Les cartes prennent uniquement en charge la mise en forme dans la propriété de texte, et non dans les propriétés de titre ou de sous-titre. La mise en forme peut être spécifiée à l’aide d’un sous-ensemble de mise en forme XML ou HTML ou Markdown, selon le type de carte. Pour le développement actuel et futur de Cartes adaptatives, la mise en forme Markdown est recommandée.
 
-La prise en charge de la mise en forme diffère d’un type de carte à l’autre. Le rendu de la carte peut différer légèrement entre le bureau et les clients Microsoft Teams mobiles, ainsi que Teams dans le navigateur de bureau.
+La prise en charge du formatage diffère selon les types de cartes. Le rendu de la carte peut différer légèrement entre le client Microsoft Teams de bureau et le client Microsoft Teams mobile, ainsi qu'entre Teams et le navigateur de bureau.
 
-Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Les images peuvent être mises en forme en tant que fichiers `.png`, `.jpg`ou `.gif` et ne doivent pas dépasser 1 024 x 1 024 px ou 1 Mo. Le GIF animé n’est pas pris en charge. Pour plus d’informations, consultez [types de cartes](./cards-reference.md#inline-card-images).
+Vous pouvez inclure une image incluse avec n’importe quelle carte Teams. Les formats d'image pris en charge sont les formats .png, .jpg ou .gif. Les dimensions ne doivent pas dépasser 1024 x 1024 px et la taille du fichier doit être inférieure à 1 Mo. Les images .gif animées ne sont pas prises en charge. Pour plus d’informations, consultez [types de cartes](./cards-reference.md#inline-card-images).
 
 Vous pouvez mettre en forme Cartes adaptatives et les cartes connecteur Office 365 avec Markdown qui incluent certains styles pris en charge.
 
@@ -116,7 +116,7 @@ Le code suivant montre un exemple de mise en forme Cartes adaptatives :
 }
 ```
 
-Les cartes adaptatives prennent en charge.les émojis. Le code suivant montre un exemple de Cartes adaptatives avec un émoji :
+Les cartes adaptatives supportent les emoji. Le code suivant montre un exemple de cartes adaptatives avec un emoji :
 
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
@@ -301,7 +301,7 @@ L’image suivante illustre la mention de l’utilisateur dans le webhook entran
 Utilisez la propriété de masquage des informations pour masquer des informations spécifiques, telles que le mot de passe ou les informations sensibles des utilisateurs dans l’élément d’entrée [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) carte adaptative.
 
 > [!NOTE]
-> La fonctionnalité prend uniquement en charge le masquage des informations côté client. Le texte d’entrée masqué est envoyé en tant que texte clair à l’adresse du point de terminaison HTTPS qui a été spécifiée pendant [configuration du bot](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
+> Cette fonction ne prend en charge que le masquage des informations côté client. Le texte d'entrée masqué est envoyé en clair à l'adresse du point de terminaison HTTPS qui a été spécifiée lors de [la configuration du bot](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
 
 Pour masquer les informations dans Cartes adaptatives, ajoutez la propriété `style` à **type**`input.text`et définissez sa valeur sur **mot de passe**.
 
@@ -610,7 +610,7 @@ Le code suivant montre un exemple de mise en forme pour les cartes de connecteur
 
 # <a name="html-format-for-hero-and-thumbnail-cards"></a>[format HTML pour les cartes](#tab/simple-html) de bannière et de miniatures
 
-Les balises HTML sont prises en charge pour les cartes simples, telles que les cartes de bannière et de miniatures. Markdown n’est pas pris en charge.
+Les balises HTML sont prises en charge pour les cartes simples, telles que les cartes héros et vignettes. Le format Markdown n'est pas pris en charge.
 
 | Style | Exemple | HTML |
 | --- | --- | --- |

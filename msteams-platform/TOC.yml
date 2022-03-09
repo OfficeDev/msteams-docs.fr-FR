@@ -359,6 +359,8 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: Utiliser l'authentification SSO
           href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: Utiliser des fournisseurs OAuth externes
+          href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flux d’authentification dans des bots
@@ -435,7 +437,7 @@
           href: /azure/bot-service/bot-service-debug-inspection-middleware
         - name: Déboguer votre robot d’appel et de réunion localement
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-    - name: Microsoft Graph
+    - name: "Microsoft\_Graph"
       items:
         - name: Tester les autorisations de consentement spécifiques aux ressources
           href: graph-api/rsc/test-resource-specific-consent.md
@@ -471,6 +473,8 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: Tenir à jour votre application publiée
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: Paramètres de classement du store Microsoft Teams
+          href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     - name: Monétiser votre application
       items:
         - name: Aperçu

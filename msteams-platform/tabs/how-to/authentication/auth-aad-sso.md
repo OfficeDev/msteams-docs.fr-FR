@@ -4,12 +4,12 @@ description: Décrit l'authentification unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API d’authentification unique Microsoft Azure Active Directory Domain Services d’authentification unique Teams (Azure AD)
-ms.openlocfilehash: edd7e08167c0efb93b7a578de12b7e1873aa193f
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821723"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356104"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l'authentification unique (SSO) pour les onglets
 
@@ -21,8 +21,8 @@ Les utilisateurs se connectent à Microsoft Teams via leur compte professionnel,
 > ✔Teams pour Android (1416/1.0.0.2020073101 et versions ultérieures)
 >
 > ✔Teams pour iOS (_Version_: 2.0.18 et versions ultérieures)  
-> 
-> ✔Teams JavaScript SDK (_Version_: 1.10 et versions ultérieures) pour que SSO fonctionne dans le panneau latéral de la réunion. 
+>
+> ✔Teams JavaScript SDK (_Version_: 1.10 et versions ultérieures) pour que SSO fonctionne dans le panneau latéral de la réunion.
 >
 > Pour une expérience optimale avec Teams, utilisez la dernière version d'iOS et d'Android.
 
@@ -30,6 +30,14 @@ Les utilisateurs se connectent à Microsoft Teams via leur compte professionnel,
 > **Démarrage rapide**  
 >
 > Le chemin d’accès le plus simple pour commencer à utiliser l’authentification unique est le kit de ressources Teams pour Microsoft Visual Studio Code. Pour plus d'informations, consultez [SSO avec la boîte à outils Teams et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## <a name="how-sso-works-at-runtime"></a>Mode de fonctionnement de l’authentification unique SSO en cours d’exécution
 
@@ -39,7 +47,7 @@ L'image suivante montre comment fonctionne le processus SSO :
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. Dans l’onglet, un appel JavaScript est effectué pour `getAuthToken()`. `getAuthToken()` indique à Teams d'obtenir un jeton d'accès pour l'application de l'onglet.
-2. Si l'utilisateur actuel utilise votre application d'onglet pour la première fois, il y a une invite de demande de consentement si le consentement est requis. Alternativement, il existe une invite de demande pour gérer l'authentification renforcée telle que l'authentification à deux facteurs.
+2. Si l'utilisateur actuel utilise votre application d'onglet pour la première fois, une invite de demande de consentement est prévue si le consentement est requis. Il est également possible de demander la gestion d'une authentification renforcée, telle que l'authentification à deux facteurs.
 3. Teams demande le jeton d'accès de l'onglet au point de terminaison Azure AD pour l'utilisateur actuel.
 4. Azure AD envoie le jeton d’accès à l’onglet à l’application Teams.
 5. Teams envoie le jeton d'accès à l'onglet à l'onglet dans le cadre de l'objet de résultat renvoyé par l'`getAuthToken()` appel.
@@ -52,7 +60,7 @@ L'API SSO fonctionne également dans les [modules de tâches](../../../task-modu
 
 ## <a name="develop-an-sso-microsoft-teams-tab"></a>Développer un onglet SSO Microsoft Teams
 
-Cette section décrit les tâches impliquées dans la création d'un onglet Teams qui utilise SSO. Ces tâches sont indépendantes du langage et du framework.
+Cette section décrit les tâches nécessaires à la création d'un onglet Teams qui utilise le SSO. Ces tâches sont indépendantes du langage et de la structure.
 
 ### <a name="1-create-your-azure-ad-application"></a>1. Créer votre application Azure AD
 
@@ -64,13 +72,13 @@ Cette section décrit les tâches impliquées dans la création d'un onglet Team
 > * Actuellement, plusieurs domaines par application ne sont pas pris en charge.
 > * L’utilisateur doit définir `accessTokenAcceptedVersion` sur `2` pour une nouvelle application.
 
-**Pour inscrire votre application via le portail Azure AD web**
+Pour enregistrer votre application via le portail Azure AD, suivez ces étapes :
 
 1. Inscrivez une nouvelle application dans le portail [Inscriptions Azure AD App](https://go.microsoft.com/fwlink/?linkid=2083908).
 1. Sélectionnez **Nouvelle inscription**. La page **Inscrire une application** s’affiche.
 1. Dans la page **Inscrire une application**, entrez les valeurs suivantes :
     1. Entrez un **Nom** pour votre application.
-    2. Choisissez les **Types de compte pris en charge**, sélectionnez le type de compte client unique ou multi-locataire. ¹
+    2. Choisissez les **Types de compte pris en charge**, sélectionnez le type de compte client unique ou multi-locataire.
     * Laissez **Redirect URI** vide.
     3. Choisissez **Inscrire**.
 1. Sur la page de présentation, copiez et enregistrez l'**ID d'application (client)**. Vous devez l'avoir plus tard lors de la mise à jour de votre manifeste d'application Teams.
@@ -80,7 +88,7 @@ Cette section décrit les tâches impliquées dans la création d'un onglet Team
     > Si vous créez une application avec un bot et un onglet, saisissez l'URI de l'ID d'application au format `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 1. Sélectionnez le lien **Définir** pour générer l'URI de l'ID d'application sous la forme `api://{AppID}`. Insérez votre nom de domaine complet avec une barre oblique "/" ajoutée à la fin, entre les doubles barres obliques et le GUID. L'ID complet doit avoir la forme `api://fully-qualified-domain-name.com/{AppID}`. ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. Le nom de domaine complet est le nom de domaine lisible par l'homme à partir duquel votre application est servie. Si vous utilisez un service de tunnellisation tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
-1. Sélectionnez **Ajouter une étendue**. Dans le panneau qui s'ouvre, entrez **access_as_user** comme **Nom de l'étendue**.
+1. Sélectionnez **ajouter une portée** . Dans le panneau qui s'ouvre, **entrez access_as_user** comme **nom d'étendue**.
 1. Dans la section **Qui peut consentir ?**, saisissez **Administrateurs et utilisateurs**.
 1. Entrez les détails dans les cases pour configurer les invites de consentement de l'administrateur et de l'utilisateur avec des valeurs adaptées à l'`access_as_user` étendue :
     * **Titre du consentement de l’administrateur :** Teams peut accéder au profil de l’utilisateur.
@@ -88,7 +96,7 @@ Cette section décrit les tâches impliquées dans la création d'un onglet Team
     * **Titre de consentement de l'utilisateur** : les équipes peuvent accéder à votre profil et faire des demandes en votre nom.
     * **Description du consentement de l'utilisateur :** Teams peuvent appeler les API de cette application avec les mêmes droits que vous.
 1. Vérifiez que **State** est défini comme **Enabled**.
-1. Sélectionnez **Ajouter une étendue** pour enregistrer les détails. La partie domaine du **nom de l'étendue** affichée sous le champ de texte doit automatiquement correspondre à l'URI de l'**ID d'application** défini à l'étape précédente, avec `/access_as_user` ajouté à la fin `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+1. Sélectionnez **ajouter une portée** pour enregistrer les détails. La **partie domaine du nom** de l'application affichée sous le champ de texte doit automatiquement correspondre à l' URI de **l' ID de l'application** défini à l'étape précédente, avec `/access_as_user`un ajout à la fin`api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 1. Dans la section **Applications clientes autorisées**, identifiez les applications que vous souhaitez autoriser pour l'application Web de votre application. Sélectionnez **Ajouter une application cliente**. Entrez chacun des ID client suivants et sélectionnez la portée autorisée que vous avez créée à l'étape précédente :
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` pour l'application mobile ou de bureau Teams.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` pour l'application Web Teams.
@@ -112,7 +120,7 @@ Cette section décrit les tâches impliquées dans la création d'un onglet Team
     > [!NOTE]
     > L'octroi implicite n'est pas requis pour l'onglet SSO.
 
-Félicitations ! Vous avez rempli les conditions préalables d'enregistrement de l'application pour continuer avec votre application SSO d'onglet.
+Félicitations ! Vous avez rempli les conditions préalables à l'enregistrement de l'application pour continuer avec votre application SSO pour les onglets.
 
 > [!NOTE]
 >
@@ -143,6 +151,9 @@ Utilisez le code suivant pour ajouter de nouvelles propriétés à votre manifes
 >* Vous devez utiliser la version 1.5 ou supérieure du manifeste pour implémenter le `webApplicationInfo` champ.
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. Obtenez un jeton d'accès à partir de votre code côté client
+
+> [!NOTE]
+> Pour éviter des erreurs telles que `Teams SDK Error: resourceDisabled`, assurez-vous que l' URI de l'ID de l'application est correctement configuré dans l'enregistrement de l'application Azure AD et dans votre application Teams.
 
 Utilisez l'API d'authentification suivante :
 
@@ -244,7 +255,7 @@ Un moyen simple de consentir au nom d'une organisation en tant qu'administrateur
 
 Une autre approche pour obtenir des étendues Graph consiste à présenter une boîte de dialogue de consentement à l'aide de notre [approche d'authentification Azure AD existante basée sur le Web](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). Cette approche implique l'affichage d'une boîte de dialogue de consentement Azure AD.
 
-**Pour demander un consentement supplémentaire à l'aide de l'API Auth**
+Pour demander un consentement supplémentaire à l'aide de l'API Auth, suivez ces étapes :
 
 1. Le jeton récupéré à l’aide de `getAuthToken()` doit être échangé côté serveur à l’aide du[flux on-behalf-of](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) Azure AD pour obtenir l’accès à ces autres API Graph. Assurez-vous d'utiliser le point de terminaison v2 Graph pour cet échange.
 2. Si l’échange échoue, Azure AD retourne une exception d’octroi non valide. Il y a généralement l'un des deux messages d'erreur, `invalid_grant` ou `interaction_required`.
@@ -268,4 +279,5 @@ La solution d’authentification décrite ci-dessus fonctionne uniquement pour l
 * Suivez le [guide détaillé](../../../sbs-tab-with-adaptive-cards.yml) pour créer un onglet avec des cartes adaptatives.
 
 ## <a name="see-also"></a>Voir aussi
+
 [Teams Bot avec authentification unique](../../../sbs-bots-with-sso.yml)
