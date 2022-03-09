@@ -5,12 +5,12 @@ description: Découvrez comment concevoir des modules de tâches pour les applic
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1cf22c8ff94e5d1a6132bd382395067d3623b4bf
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475635"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355966"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Conception de modules de tâches pour votre application Microsoft Teams
 
@@ -32,12 +32,12 @@ Les modules de tâches peuvent être lancés à partir de pratiquement n’impor
 * **Onglet** : un module de tâches peut être lancé à partir de n’importe quel lien d’un onglet. À utiliser dans les scénarios où vous souhaitez que l’utilisateur se concentre sur une interaction.
 * **Bot** : un module de tâches peut être lancé à partir d’un lien à l’intérieur d’un message de bot.
 * **Carte adaptative** : un module de tâches peut être lancé à partir d’une carte adaptative (envoyée avec une extension de messagerie ou par un bot) lorsqu’un utilisateur sélectionne un bouton.
-* **Extension de messagerie (commandes d’action)**  : les extensions de messagerie vous permettent d’agir en particulier sur le contenu des messages. La sélection d’une action ouvre un module de tâches.
-* **Extension de messagerie (contexte de la zone de rédaction)**  : dans la zone de rédaction, vous pouvez concevoir une extension de messagerie pour ouvrir un module de tâches au lieu du menu volant classique. Réservez les modules de tâches pour les interactions complexes, telles que le remplissage d’un formulaire.
+* **Extension de messagerie (commandes d’action)**  : les extensions de messagerie vous permettent d’agir en particulier sur le contenu des messages. La sélection d’une option ouvre un module de tâches.
+* **Extension de messagerie (contexte de la zone de rédaction)**  : dans la zone de rédaction, vous pouvez concevoir une extension de messagerie pour ouvrir un module de tâches au lieu du menu volant classique. Réservez les modules de tâches pour des interactions complexes, telles qu’un formulaire à remplir.
 
 ## <a name="anatomy"></a>Anatomie
 
-Les modules de tâches offrent une surface flexible pour les expériences d’application hébergées. Ils sont créés à l’aide d’un IFrame (bureau) ou d’une vue web (mobile), afin que vous puissiez concevoir des modules de tâches avec nos modèles d’interface utilisateur (recommandés) ou à partir de zéro.
+Les modules de tâches fournissent une surface flexible pour les expériences d’application hébergée. Ils sont créés à l’aide d’un IFrame (bureau) ou d’une vue web (mobile), afin que vous puissiez concevoir des modules de tâches avec nos modèles d’interface utilisateur (recommandés) ou à partir de zéro.
 
 Ils peuvent également être créés avec l’infrastructure de [Cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md), ce qui peut être un moyen plus simple et plus rapide de faciliter des scénarios courants (tels que les formulaires).
 
@@ -64,13 +64,13 @@ Ils peuvent également être créés avec l’infrastructure de [Cartes adaptati
 |3|**En-tête** : rendre les en-têtes clairs et concis. Décrivez la tâche que vous souhaitez que les utilisateurs effectuent.
 |4|**Bouton Fermer** : ferme le module de tâches. Ne pas appliquer de modifications non enregistrées dans le contenu de l’application.|
 |5|**IFrame** : espace réactif qui héberge le contenu de votre application.|
-|6|**Actions (facultatives)**  : boutons liés au contenu de votre application.|
+|6 |**Actions (facultatives)**  : boutons liés au contenu de votre application.|
 
 ## <a name="designing-with-ui-templates"></a>Conception avec des modèles d’interface utilisateur
 
-Envisagez d’utiliser des modèles pour les dispositions courantes à l’intérieur de vos modules de tâches. Chacun d’eux est constitué de composants plus petits pour créer une conception réactive et élégante qui peut être utilisée de manière prête à l’emploi ou personnalisée à votre scénario ou à l’apparence de votre marque.
+Envisagez l’utilisation de modèles pour des dispositions courantes dans vos modules de tâches. Chacun d’eux est constitué de composants plus petits pour créer une conception réactive et élégante qui peut être utilisée de manière prête à l’emploi ou personnalisée à votre scénario ou à l’apparence de votre marque.
 
-* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list) : les listes peuvent afficher les éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
+* [Liste](../../concepts/design/design-teams-app-ui-templates.md#list) : les listes peuvent afficher des éléments associés dans un format lisible et permettre aux utilisateurs d’agir sur une liste entière ou sur des éléments individuels.
 * [Formulaire](../../concepts/design/design-teams-app-ui-templates.md#form) : les formulaires sont conçus pour collecter, valider et envoyer des entrées utilisateur de manière structurée.
 * [État vide](../../concepts/design/design-teams-app-ui-templates.md#empty-state) : le modèle d’état vide peut être utilisé pour de nombreux scénarios, y compris la connexion, les expériences de première exécution, les messages d’erreur et bien plus encore.
 
@@ -98,7 +98,7 @@ Les modules de tâches sont un excellent emplacement pour afficher des formulair
 
 #### <a name="desktop"></a>Bureau
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="Exemple de formulaire dans un module de tâches." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Exemple de formulaire dans un module de tâches." border="false":::
 
 ### <a name="sign-in"></a>Connexion
 
@@ -243,7 +243,7 @@ Consultez le modèle d’interface utilisateur de formulaires pour obtenir des i
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>À ne pas faire : placer des messages d’erreur dans des boîtes de dialogue
 
-Ne pas afficher de message d’erreur dans une boîte de dialogue au-dessus d’un module de tâches. Cela crée une expérience utilisateur portant à confusion.
+Ne pas afficher de message d’erreur dans une boîte de dialogue au-dessus d’un module de tâches. Cela crée une expérience déconcertante.
 
    :::column-end:::
 :::row-end:::

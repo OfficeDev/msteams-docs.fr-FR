@@ -4,24 +4,33 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: a6cdb2cf19895b7a7179ec100a66066e948076d1
-ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
+ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "62881636"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356076"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
 Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont généralement disponibles (GA) et dans l'aperçu du développeur.
 
 > [!IMPORTANT]
-> Vous pouvez désormais obtenir les dernières mises à jour de la plateforme Teams en vous abonnant au flux de[![ téléchargement RSS](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Pour plus d'informations, voir [Configurer le flux RSS](#get-latest-updates).
+> Vous pouvez désormais obtenir les dernières mises à jour de la plateforme Teams en vous abonnant au flux RSS[![ télécharger le flux](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Pour plus d’informations, consultez [configurer le flux RSS](#get-latest-updates).
 
 ## <a name="latest-updates-bullhorn-icon"></a>Dernières mises à jour ![icône du porte-voix](~/assets/images/bullhorn.png)
 
-| Date | Update | Recherchez ici  |
+| Date | Update | Recherchez ici |
 | --- | --- | --- |
+|03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
+|25/02/2022| Introduction du guide pas à pas pour appeler des modules de tâche dans Teams| Créer des cartes et des modules de tâche > Créer des modules de tâche > Utiliser des modules de tâche à partir de bots > [appeler un module de tâche à partir Teams](sbs-botbuilder-taskmodule.yml)|
+|24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur l’action | Générer des extensions de messagerie > Commandes d'action > Définir des commandes d’action > [Générer une extension de messagerie basée sur des actions](sbs-meetingextension-action.yml)|
+|24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur la recherche | Générer des extensions de messagerie > Commandes de recherche > Définir des commandes de recherche > [Générer une extension de messagerie basée sur la recherche](sbs-messagingextension-searchcommand.yml)|
+|24/02/2022| Présentation du guide pas à pas pour créer des webhooks sortants | Générer des webhooks et des connecteurs > Générer des webhooks sortants > [Générer des webhooks sortants](sbs-outgoing-webhooks.yml)|
+| 23/02/2022 |Paramètres de classement du store Microsoft Teams| Distribuer votre application > Publier dans le magasin Teams > [Paramètres de classement des magasins Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 18/02/2022 | Présentation d’un glossaire complet pour la documentation des développeurs Microsoft Teams pour vous aider à trouver rapidement la définition d’un terme | [Glossaire](~/get-started/glossary.md) |
+| 18/02/2022 | Mise à jour du module Vue d’ensemble pour mapper l’application Teams aux objectifs de l’organisation, à l’histoire utilisateur et à l’exploration des fonctionnalités de l’application Teams | [Vue d’ensemble > Application Teams adaptée à](overview.md) |
+| 18/02/2022 | Mise à jour du module Notions de base de l’application pour planifier votre application afin d’inclure des cas d’usage de mappage aux fonctionnalités Teams et une liste de vérification de planification d’application | [Planifier votre application > Vue d’ensemble](~/concepts/app-fundamentals-overview.md) |
 |17/02/2022| À quoi vous attendre après avoir envoyé votre application ?| Distribuer votre application > Publier dans le Magasin Teams > [Vue d’ensemble](concepts/deploy-and-publish/appsource/publish.md)|
 |15/02/2022| Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [Guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
 |11/02/2022| Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
@@ -29,11 +38,8 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
 |03/02/2022| Aperçu du test pour les applications monétisées (aperçu du développeur)| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-|25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|19/01/2022| Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|17/01/2022| Sélecteur de personnes dans les cartes adaptatives (aperçu du développeur pour le mobile et GA pour le bureau) | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
-|10/01/2022| Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
+|03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
+
 
 ## <a name="ga-features"></a>Caractéristiques de GA
 
@@ -42,27 +48,40 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 <br>
 
 <details>
-
 <summary><b>2022</b></summary>
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
-|15/02/2022| Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [Guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
-|11/02/2022| Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
-|08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
-|02/02/2022| Introduction de la version 1.12 du manifeste d’application | App Manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) |
-|25/01/2022| API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|19/01/2022| Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|17/01/2022| Sélectionneur de personnes dans les cartes adaptatives pour le bureau | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
-
-<br>
+|03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
+| 25/02/2022| Introduction du guide pas à pas pour appeler des modules de tâche dans Teams| Créer des cartes et des modules de tâche > Créer des modules de tâche > Utiliser des modules de tâche à partir de bots > [appeler un module de tâche à partir Teams](sbs-botbuilder-taskmodule.yml)|
+| 24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur l’action | Générer des extensions de messagerie > Commandes d'action > Définir des commandes d’action > [Générer une extension de messagerie basée sur des actions](sbs-meetingextension-action.yml)|
+| 24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur la recherche | Générer des extensions de messagerie > Commandes de recherche > Définir des commandes de recherche > [Générer une extension de messagerie basée sur la recherche](sbs-messagingextension-searchcommand.yml)|
+| 24/02/2022| Présentation du guide pas à pas pour créer des webhooks sortants | Générer des webhooks et des connecteurs > Générer des webhooks sortants > [Générer des webhooks sortants](sbs-outgoing-webhooks.yml)|
+| 23/02/2022 |Paramètres de classement du store Microsoft Teams| Distribuer votre application > Publier dans le magasin Teams > [Paramètres de classement des magasins Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 18/02/2022 | Présentation d’un glossaire complet pour la documentation des développeurs Microsoft Teams pour vous aider à trouver rapidement la définition d’un terme | [Glossaire](~/get-started/glossary.md) |
+| 18/02/2022 | Mise à jour du module Vue d’ensemble pour mapper l’application Teams aux objectifs de l’organisation, à l’histoire utilisateur et à l’exploration des fonctionnalités de l’application Teams | [Vue d’ensemble > Application Teams adaptée à](overview.md) |
+| 18/02/2022 | Mise à jour du module Notions de base de l’application pour planifier votre application afin d’inclure des cas d’usage de mappage aux fonctionnalités Teams et une liste de vérification de planification d’application | [Planifier votre application > Vue d’ensemble](~/concepts/app-fundamentals-overview.md) |
+| 17/02/2022 | À quoi vous attendre après avoir envoyé votre application ?| Distribuer votre application > Publier dans le Magasin Teams > [Vue d’ensemble](concepts/deploy-and-publish/appsource/publish.md) |
+| 15/02/2022 | Présentation d’un guide pas à pas pour charger des fichiers dans Teams à partir d’un bot | Créer des bots > envoyer et recevoir des fichiers > [Guide pas à pas pour charger des fichiers dans Teams à partir d’un bot](sbs-file-handling-in-bot.yml) |
+| 11/02/2022 | Étape de réunion partagée| • Créer des applications pour les réunions Teams > [Étape de réunion partagée](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Créer des applications pour les réunions Teams > [Références de Meeting apps API](apps-in-teams-meetings/API-references.md) </br> • App manifest > Aperçu public pour les développeurs > [Schéma de manifeste de l’aperçu du développeur](resources/schema/manifest-schema-dev-preview.md)|
+| 08/02/2022 | Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
+| 02/02/2022 | Introduction de la version 1.12 du manifeste d’application | App Manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) |
+| 25/01/2022 | API Envoyer des légendes en temps réel | Créer des applications pour les réunions Teams > Références d’API Applications de réunion> [Références d’API Applications de réunion](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
+| 19/01/2022 | Commentaires sur l'achèvement du formulaire des cartes adaptatives | Créer des bots > Conversations avec un bot > Messages dans les conversations de bot > [Commentaires sur l'achèvement du formulaire](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+| 17/01/2022 | Sélectionneur de personnes dans les cartes adaptatives pour le bureau | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-  
+ 
 <br>
 
 <details>
+<summary><b>Mises à jour plus anciennes</b></summary>
+<br>
+Explorez les mises à jour des versions GA précédentes répertoriées ici.
+<br><br>
 
+
+<details>
 <summary><b>2021</b></summary>
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
@@ -128,10 +147,6 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 <br>
 
 <details>
-<summary><b>Mises à jour plus anciennes</b></summary>
-
-<details>
-  
 <summary><b>2020</b></summary>
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
@@ -170,7 +185,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
-| 26/12/2019 | Le `replyToId` paramètre des charges utiles envoyées à un robot n'est plus crypté, ce qui permet d'utiliser cette valeur pour construire des liens profonds vers ces messages. Les charges utiles du message comprennent les valeurs cryptées dans le paramètre `legacy.replyToId`.  |
+| 26/12/2019 | Le `replyToId` paramètre des charges utiles envoyées à un robot n'est plus crypté, ce qui permet d'utiliser cette valeur pour construire des liens profonds vers ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre `legacy.replyToId`.  |
 | 05/11/2019 | Connexion unique à l'aide du SDK JavaScript de Teams. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
 | 31/10/2019 | La documentation sur les bots conversationnels et les extensions de messagerie a été mise à jour pour tenir compte du Bot Framework SDK 4.6. La documentation relative au SDK v3 est disponible dans la section Ressources. | Documentation complète sur les bots et les extensions de messagerie |
 | 31/10/2019 | Nouvelle structure de la documentation et refactoriser les articles principaux. Signalez les liens morts ou les 404 en créant un GitHub. | Tous! |
@@ -187,15 +202,12 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 23/04/2019 | Les extensions de messagerie basées sur l’action sont désormais disponibles. | [Extensions de message basées sur l’action](~/concepts/messaging-extensions/create-extensions.md) |
 | 18/02/2019 | Création de liens profonds vers une conversation privée. | [Liaison profonde à une conversation](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 23/01/2019 | Faire apparaître les informations SKU et licenceType dans le contexte de l'onglet. | [Contexte de l’onglet](~/concepts/tabs/tabs-context.md) |
-
-<br>
-
+|
 </details>
 
 <br>
 
 <details>
-
 <summary><b>2018</b></summary>
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
@@ -228,9 +240,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 03/03/2018 | Ajout de la documentation Teams App Studio. |[Développer rapidement des applications avec Teams App Studio](~/get-started/get-started-app-studio.md), à l’aide de la bibliothèque de [contrôles dans App Studio](~/get-started/app-studio-component-library.md)|
 | 27/02/2018 | Ajout d'un exemple de code pour démontrer la méthode AsTeamsChannelAccounts(). |[Obtenir un contexte pour votre bot](~/concepts/bots/bots-context.md)|
 | 05/02/2018 | Ajout de rubriques pour commencer à utiliser C#. |[Prise en main de la plateforme Microsoft Teams avec C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
-
-<br>
-
+|
 </details>
 </details>
 
@@ -257,7 +267,7 @@ Pour plus d’informations, voir [la prévisualisation pour](~/resources/dev-pre
 
 ## <a name="teams-app-template-catalog"></a>Teams catalogue de modèles d’application
 
-En plus de nouvelles fonctionnalités, nous fournissons également des [modèles](samples/app-templates.md) d’application Teams prêt pour la production que vous pouvez déployer immédiatement ou modifier selon vos besoins. Les modèles nouvellement ajoutés sont indiqués par une étoile ..
+En plus de nouvelles fonctionnalités, nous fournissons également des [modèles d’application Teams prêt pour la production](samples/app-templates.md) que vous pouvez déployer immédiatement ou modifier selon vos besoins. Les modèles nouvellement ajoutés sont indiqués par une étoile ☆.
 
 ## <a name="submit-your-feedback"></a>Envoyer vos commentaires
 
