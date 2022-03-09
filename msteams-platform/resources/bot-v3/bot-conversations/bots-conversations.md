@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: messages de bots teams
 ms.date: 05/20/2019
-ms.openlocfilehash: ce3d3d1dd39707d08c720e75c67ec61b606f676a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518498"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399218"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation avec un bot Microsoft Teams’équipe
 
@@ -86,7 +86,7 @@ Nous vous recommandons de spécifier la hauteur et la largeur de chaque image à
 Selon les étendues déclarées, votre bot peut recevoir des messages dans les contextes suivants :
 
 * **conversation personnelle** Les utilisateurs peuvent interagir dans une conversation privée avec un bot en sélectionnant simplement le bot ajouté dans l’historique des conversations ou en tapant son nom ou son ID d’application dans la zone À : d’une nouvelle conversation.
-* **Canaux** Un bot peut être mentionné (« @_botname_ ») dans un canal s’il a été ajouté à l’équipe. Notez que les réponses supplémentaires à un bot dans un canal nécessitent de mentionner le bot. Il ne répondra pas aux réponses lorsqu’il n’est pas mentionné.
+* **Canaux** Un bot peut être mentionné (« @*botname* ») dans un canal s’il a été ajouté à l’équipe. Notez que les réponses supplémentaires à un bot dans un canal nécessitent de mentionner le bot. Il ne répondra pas aux réponses lorsqu’il n’est pas mentionné.
 
 Pour les messages entrants, votre bot reçoit un objet [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) de type `messageType: message`. Bien que l’objet `Activity` puisse contenir d’autres types d’informations, tels que les mises à jour de canal [envoyées](~/resources/bot-v3/bots-notifications.md#channel-updates) à votre bot, `message` le type représente la communication entre le bot et l’utilisateur.
 
@@ -191,7 +191,7 @@ Un objet channelData classique dans une activité envoyée à votre bot contient
 
 ### <a name="net-example"></a>Exemple .NET
 
-Le package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet fournit `TeamsChannelData` un objet spécialisé, qui expose les propriétés pour accéder Teams des informations spécifiques.
+Le package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet fournit `TeamsChannelData` un objet spécialisé, qui expose les propriétés pour accéder Teams informations spécifiques.
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();

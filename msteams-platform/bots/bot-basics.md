@@ -6,19 +6,24 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: événement de canal de consentement de carte bot de l’infrastructure du handler d’activité
+ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398644"
 ---
-
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
-Ce document s’appuie sur l’article sur le fonctionnement [des bots](https://aka.ms/how-bots-work) dans la [documentation principale de Bot Framework](https://aka.ms/azure-bot-service-docs). La principale différence entre les bots développés pour Microsoft Teams et Bot Framework principal est dans les fonctionnalités fournies dans Teams.
+Ce document s’appuie sur l’article sur le fonctionnement [des bots](https://aka.ms/how-bots-work) dans la [documentation principale de Bot Framework](https://aka.ms/azure-bot-service-docs). La principale différence entre les bots développés pour Microsoft Teams et l’infrastructure bot principale est dans les fonctionnalités fournies dans Teams.
 
-Pour organiser la logique de conversation de votre bot, un responsable de l’activité est utilisé. Les activités sont gérées de deux manières à l’aide Teams’activité et de la logique du bot. Le Teams d’activité ajoute la prise en charge Microsoft Teams des interactions et des événements spécifiques. L’objet bot contient le raisonnement ou la logique de conversation d’un tour et expose un sous-traiteur de tour, qui est la méthode qui peut accepter les activités entrantes à partir de la carte du bot.
+Pour organiser la logique de conversation de votre bot, un responsable de l’activité est utilisé. Les activités sont gérées de deux manières à l’aide Teams’activité et de la logique du bot. Le Teams d’activité ajoute la prise en charge Microsoft Teams événements et interactions spécifiques. L’objet bot contient le raisonnement ou la logique de conversation d’un tour et expose un sous-traiteur de tour, qui est la méthode qui peut accepter les activités entrantes à partir de la carte du bot.
 
 ## <a name="teams-activity-handlers"></a>Teams d’activité de l’entreprise
 
-Teams d’activité est dérivé du Microsoft Bot Framework’activité de l’entreprise. Il route toutes les Teams avant d’autoriser toute activité non Teams des activités spécifiques à gérer.
+Teams d’activité est dérivé du Microsoft Bot Framework’activité de l’entreprise. Il a pour Teams toutes les activités avant d’autoriser Teams activités spécifiques non spécifiques à gérer.
 
-Lorsqu’un bot pour Teams une activité, il est acheminé vers les responsables de l’activité. Toutes les activités sont acheminées par le biais d’un seul handler de base appelé « turn handler ». Le sous-traiteur de tour appelle le handler d’activité requis pour gérer les activités reçues. Le Teams bot est dérivé `TeamsActivityHandler` de la classe, qui est dérivée de la classe bot Framework`ActivityHandler`.
+Lorsqu’un bot pour Teams une activité, il est acheminé vers les responsables de l’activité. Toutes les activités sont acheminées par le biais d’un seul handler de base appelé « turn handler ». Le sous-traiteur de tour appelle le handler d’activité requis pour gérer les activités reçues. Le Teams bot est dérivé de `TeamsActivityHandler` la classe, qui est dérivée de la classe bot Framework`ActivityHandler`.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -26,7 +31,7 @@ Les bots sont créés à l’aide de Bot Framework. Si les bots reçoivent une a
 
 Dans la Teams de l’activité, il existe deux principaux Teams d’activité, `OnConversationUpdateActivityAsync` et `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync`route toutes les activités de mise à jour de `OnInvokeActivityAsync` conversation et Teams les activités d’appel.
 
-Pour implémenter votre logique pour Teams d’activité spécifiques, vous devez remplacer les méthodes dans votre bot, comme indiqué dans la section logique [du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces handlers, par conséquent, vous devez ajouter la logique que vous souhaitez dans votre substitution.
+Pour implémenter votre logique pour Teams d’activité spécifiques, vous devez remplacer les méthodes dans votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces handlers, par conséquent, vous devez ajouter la logique que vous souhaitez dans votre substitution.
 
 Extraits de code pour les Teams d’activité :
 
@@ -55,9 +60,9 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsTeamRenamedAsync`
@@ -65,9 +70,9 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersAddedAsync`
@@ -75,9 +80,9 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 ```csharp
 
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersRemovedAsync`
@@ -85,9 +90,9 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 ```csharp
 
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
@@ -96,7 +101,7 @@ Les bots sont créés à l’aide de Bot Framework. Si les bots reçoivent une a
 
 Dans la Teams de l’activité, il existe deux principaux Teams d’activité, `dispatchConversationUpdateActivity` et `onInvokeActivity`. `dispatchConversationUpdateActivity`route toutes les activités de mise à jour de `onInvokeActivity` conversation et Teams les activités d’appel.
 
-Pour implémenter votre logique pour Teams d’activité spécifiques, vous devez remplacer les méthodes dans votre bot, comme indiqué dans la section logique [du bot](#bot-logic). Définissez votre logique de bot pour ces handlers, puis assurez-vous d’appeler `next()` à la fin. En appelant, `next()` vous vous assurez que le prochain handler s’exécute.
+Pour implémenter votre logique pour Teams d’activité spécifiques, vous devez remplacer les méthodes dans votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Définissez votre logique de bot pour ces handlers, puis assurez-vous d’appeler `next()` à la fin. En appelant, `next()` vous vous assurez que le prochain handler s’exécute.
 
 Extraits de code pour les Teams d’activité :
 
@@ -146,7 +151,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -156,7 +161,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -166,7 +171,7 @@ Les bots sont créés à l’aide de Bot Framework. Si les bots reçoivent une a
 
 Dans la Teams de l’activité, il existe deux principaux Teams d’activité, `on_conversation_update_activity` et `on_invoke_activity`. `on_conversation_update_activity`route toutes les activités de mise à jour de `on_invoke_activity` conversation et Teams les activités d’appel.
 
-Pour implémenter votre logique pour Teams d’activité spécifiques, vous devez remplacer les méthodes dans votre bot, comme indiqué dans la section logique [du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces handlers, par conséquent, vous devez ajouter la logique que vous souhaitez dans votre substitution.
+Pour implémenter votre logique pour Teams d’activité spécifiques, vous devez remplacer les méthodes dans votre bot, comme indiqué dans la section [logique du bot](#bot-logic). Il n’existe aucune implémentation de base pour ces handlers, par conséquent, vous devez ajouter la logique que vous souhaitez dans votre substitution.
 
 ---
 
@@ -334,7 +339,7 @@ Les activités d’appel répertoriées dans cette section sont pour les bots de
 
 ---
 
-* * *
+---
 
 Maintenant que vous vous êtes familiarisé avec les personnes qui gèrent l’activité des bots, laissez-nous voir comment les bots se comportent différemment en fonction de la conversation et des messages qu’il reçoit ou envoie.
 

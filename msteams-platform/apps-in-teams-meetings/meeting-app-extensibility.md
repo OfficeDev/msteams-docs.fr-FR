@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355590"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398847"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -33,6 +33,7 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 > Si vous avez intégré un onglet à votre réunion, votre application doit suivre le flux d’authentification unique Teams pour les [onglets](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
+>
 > * Les réunions privées programmées ne supportent que les applications.
 > * L’option Ajouter une application Teams’onglet d’extension de réunion n’est pas prise en charge Teams client web.
 
@@ -40,7 +41,7 @@ Les onglets permettent aux membres de l'équipe d'accéder aux services et au co
 
 Avec l'expérience de l'application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion. Vous pouvez également effectuer des tâches préalables à la réunion, telles que l'élaboration d'un sondage pour sonder les participants à la réunion.
 
-**Pour ajouter des onglets à une réunion existante**
+Pour ajouter des onglets à une réunion existante :
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
 1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
@@ -50,6 +51,7 @@ Avec l'expérience de l'application de pré-réunion, vous pouvez rechercher et 
 1. Dans la galerie d’onglets, sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’onglet.
 
    > [!NOTE]
+   >
    > * Vous pouvez également ajouter un onglet à une réunion existante à l’aide de l’onglet **Conversation de** réunion.
    > * La disposition des onglets doit être dans un état organisé, s’il y a plus de 10 sondages ou enquêtes.
 
@@ -71,7 +73,7 @@ Avec l'expérience de l'application en réunion, vous pouvez engager les partici
 
 Pour les appareils mobiles, les applications de réunion sont disponibles à **partir > des** &#x25CF;&#x25CF;&#x25CF; lors de la réunion. **Sélectionnez Applications** pour afficher toutes les applications disponibles dans la réunion.
 
-**Pour utiliser des onglets pendant une réunion**
+Pour utiliser des onglets pendant une réunion :
 
 1. Go to Teams.
 1. Dans votre calendrier, sélectionnez une réunion dans laquelle vous souhaitez utiliser un onglet.
@@ -97,6 +99,7 @@ La boîte de dialogue de réunion s’affiche et vous permet d’entrer votre r�
 ---
 
 > [!NOTE]
+>
 > * Les applications peuvent tirer parti Teams SDK `meetingId`client pour accéder au , et `userMri``frameContext` pour restituer l’expérience de manière appropriée.
 > * Si la boîte de dialogue de réunion s’est correctement restituer, elle envoie une notification de téléchargement des résultats.
 > * Le manifeste de votre application spécifie les endroits où vous souhaitez que les applications apparaissent. Pour ce faire, vous pouvez spécifier le champ de contexte dans le manifeste. Il fait également partie d’une expérience de partage de la phase de réunion, sous réserve des instructions de [conception spécifiées](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).

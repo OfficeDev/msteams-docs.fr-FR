@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Requête de signal de notification de contexte utilisateur de l’api de rôle de participant aux réunions teams
-ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355789"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398868"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -42,6 +42,7 @@ Pour identifier et récupérer des informations contextuelles pour le contenu de
 ## <a name="get-participant-api"></a>Obtenir l’API de participant
 
 > [!NOTE]
+>
 > * Ne pas mettre en cache les rôles des participants, car l’organisateur de la réunion peut modifier les rôles à tout moment.
 > * Actuellement, l’API `GetParticipant` est uniquement prise en charge pour les listes de distribution ou les listes de listes de moins de 350 participants.
 
@@ -55,7 +56,7 @@ Le tableau suivant inclut les paramètres de requête :
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
 |**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK.|
-|**participantId**| String | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l’sso tabulation. |
+|**participantId**| Chaîne | Oui | L’ID de participant est l’ID utilisateur. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de participant à partir de l’sso tabulation. |
 |**tenantId**| String | Oui | L’ID de client est requis pour les utilisateurs du client. Il est disponible dans tabulation SSO, Bot Invoke et Teams Client SDK. Il est recommandé d’obtenir un ID de client à partir de l’sso onglet. |
 
 ### <a name="example"></a>Exemple
@@ -141,11 +142,12 @@ Le tableau suivant fournit les codes de réponse :
 Tous les utilisateurs d’une réunion reçoivent les notifications envoyées par le biais de la charge utile de notification de réunion. La charge utile de notification en réunion déclenche une notification de réunion et vous permet de fournir des signaux de réunion fournis à l’aide de l’API de notification de conversation existante pour la conversation utilisateur-bot. Vous pouvez envoyer une notification de réunion en fonction de l’action de l’utilisateur. La charge utile est disponible via Bot Services.
 
 > [!NOTE]
+>
 > * Lorsqu’une notification de réunion est invoquée, le contenu est présenté comme un message de conversation.
 > * Actuellement, l’envoi de notifications ciblées et la prise en charge de webapp ne sont pas pris en charge.
 > * Vous devez appeler la [fonction submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) pour ignorer automatiquement une fois qu’un utilisateur effectue une action dans l’affichage web. Il s’agit d’une condition requise pour la soumission d’application. Pour plus d’informations, [Teams module de tâche du SDK](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * Si vous souhaitez que votre application prise en charge des utilisateurs anonymes, la charge utile de la demande d’appel initial `from.id` doit reposer sur les métadonnées `from` de demande dans l’objet, et non sur les `from.aadObjectId` métadonnées de demande. `from.id`est l’ID d’utilisateur `from.aadObjectId` et Microsoft Azure Active Directory (Azure AD) de l’utilisateur. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets](../task-modules-and-cards/task-modules/task-modules-tabs.md) [et créer et envoyer le module de tâche](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
-
+>
 ### <a name="query-parameter"></a>Paramètre de requête
 
 Le tableau suivant inclut les paramètres de requête :
@@ -154,11 +156,12 @@ Le tableau suivant inclut les paramètres de requête :
 |---|---|----|---|
 |**conversationId**| String | Oui | L’identificateur de conversation est disponible dans le cadre de Bot Invoke. |
 
-### <a name="examples"></a>範例
+### <a name="examples"></a>Exemples
 
 L’objet `Bot ID` est déclaré dans le manifeste et le bot reçoit un objet de résultat.
 
 > [!NOTE]
+>
 > * Le `completionBotId` paramètre est facultatif `externalResourceUrl` dans l’exemple de charge utile demandé.
 > * Les `externalResourceUrl` paramètres de largeur et de hauteur doivent être en pixels. Pour plus d’informations, voir [les instructions de conception](design/designing-apps-in-meetings.md).
 > * L’URL est la page, qui se charge comme dans `<iframe>` la notification de réunion. Le domaine doit se trouver dans le tableau des `validDomains` applications dans le manifeste de votre application.
@@ -308,14 +311,14 @@ Utilisez l’exemple suivant pour configurer la propriété de votre manifeste d
 
 > [!NOTE]
 > Le bot peut recevoir automatiquement des événements de début ou de fin de réunion à partir de toutes les réunions créées `ChannelMeeting.ReadBasic.Group` dans tous les canaux en ajoutant au manifeste pour l’autorisation RSC.
- 
+
 ### <a name="query-parameter"></a>Paramètre de requête
 
 Le tableau suivant répertorie le paramètre de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**meetingId**| String | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
+|**meetingId**| Chaîne | Oui | L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. |
 
 ### <a name="example"></a>Exemple
 
@@ -378,7 +381,7 @@ L’URL CART inclut les paramètres de requête suivants :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|----|
-|**meetingId**| String | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| Chaîne | Oui |L’identificateur de réunion est disponible via Bot Invoke et Teams Client SDK. <br/>Par exemple, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-42411-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| String | Oui |Jeton d’autorisation.<br/> Par exemple, token=04751eac |
 
 #### <a name="example"></a>Exemple
@@ -389,7 +392,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>Méthode
 
-|Ressource|Méthode|Description|
+|Resource|Méthode|Description|
 |----|----|----|
 |/cartcaption|POST|Gérer les légendes pour la réunion, qui a été démarrée|
 
@@ -447,7 +450,7 @@ Le tableau suivant inclut les paramètres de requête :
 
 |Valeur|Type|Requis|Description|
 |---|---|----|---|
-|**callback**| String | Oui | Le rappel contient deux paramètres, erreur et résultat. *L’erreur* peut contenir une erreur de type *SdkError* ou null lorsque le partage réussit. Le *résultat peut* contenir une valeur true, en cas de réussite d’un partage, ou null en cas d’échec du partage.|
+|**callback**| Chaîne | Oui | Le rappel contient deux paramètres, erreur et résultat. *L’erreur* peut contenir une erreur de type *SdkError* ou null lorsque le partage réussit. Le *résultat peut* contenir une valeur true, en cas de réussite d’un partage, ou null en cas d’échec du partage.|
 |**appContentURL**| String | Oui | URL qui sera partagée sur l’étape.|
 
 ### <a name="example"></a>Exemple
@@ -495,7 +498,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 Le corps de la réponse JSON pour l’API `getAppContentStageSharingState` est :
 
@@ -535,7 +538,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 Le corps de la réponse JSON pour l’API `getAppContentStageSharingCapabilities` est :
 
@@ -614,6 +617,7 @@ Le manifeste de votre application doit avoir la propriété `webApplicationInfo`
 Le bot reçoit l’événement via le `OnEventActivityAsync` handler. Pour désérialiser la charge utile JSON, un objet modèle est introduit pour obtenir les métadonnées d’une réunion. Les métadonnées d’une réunion se trouve dans la propriété `value` dans la charge utile de l’événement. L’objet `MeetingStartEndEventvalue` modèle est créé, dont les variables membres correspondent aux clés sous la `value` propriété dans la charge utile de l’événement.
 
 > [!NOTE]
+>
 > * Obtenir l’ID de réunion à partir de `turnContext.ChannelData`.
 > * N’utilisez pas l’ID de conversation comme ID de réunion.
 > * N’utilisez pas l’ID de réunion de la charge utile des événements de réunion `turncontext.activity.value`.
@@ -621,6 +625,7 @@ Le bot reçoit l’événement via le `OnEventActivityAsync` handler. Pour dés�
 Le code suivant montre comment capturer `MeetingType`les métadonnées d’une réunion qui est , `Title`, `Id`, `JoinUrl`, et `StartTime``EndTime` à partir d’un événement de début/fin de réunion :
 
 Événement de début de réunion
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -629,6 +634,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Événement de fin de réunion
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -757,7 +763,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 * [Teams’authentification pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Applications pour les réunions Teams](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 > [!div class="nextstepaction"]
 > [Activer et configurer vos applications pour Teams réunions](enable-and-configure-your-app-for-teams-meetings.md)

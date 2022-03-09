@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517994"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399351"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -191,7 +191,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Le fractionnement de message se produit lorsqu’un message texte et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un simple message texte et l’autre avec une pièce jointe. Lorsque l’activité est fractionée, vous ne recevez pas l’ID du message en réponse[](~/bots/how-to/update-and-delete-bot-messages.md), qui est utilisé pour mettre à jour ou supprimer le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
+> Le fractionnement de message se produit lorsqu’un message texte et une pièce jointe sont envoyés dans la même charge utile d’activité. Cette activité est divisée en activités distinctes par Microsoft Teams, l’une avec un message texte et l’autre avec une pièce jointe. Lorsque l’activité est fractionée, vous ne recevez pas l’ID du message en réponse[](~/bots/how-to/update-and-delete-bot-messages.md), qui est utilisé pour mettre à jour ou supprimer le message de manière proactive. Il est recommandé d’envoyer des activités distinctes au lieu de dépendre du fractionnement des messages.
 
 Les messages envoyés entre les utilisateurs et les bots incluent des données de canal interne dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le SDK Bot Builder vous permet de modifier la structure des messages.
 
@@ -204,7 +204,7 @@ L’objet `channelData` n’est pas inclus dans les messages dans les conversati
 Un objet type `channelData` dans une activité envoyée à votre bot contient les informations suivantes :
 
 * `eventType`: Teams type d’événement transmis uniquement en cas d’événements [de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory client (Azure AD) transmis dans tous les contextes.
+* `tenant.id`: Microsoft Azure Active Directory (Azure AD) de client transmis dans tous les contextes.
 * `team`: Transmis uniquement dans les contextes de canal, et non dans la conversation personnelle.
   * `id`: GUID du canal.
   * `name`: Nom de l’équipe transmis uniquement en cas d’événements de [changement de nom d’équipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -243,7 +243,7 @@ Les messages reçus ou envoyés à votre bot peuvent inclure différents types d
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
 | Images  | ✔                | ✔                | Maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
 | Cartes     | ✖                | ✔                | Consultez la référence [Teams carte de visite](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes pris en charge. |
-| Emojis    | ✔                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, par exemple U+1F600 pour le visage. |
+| Emojis    | ✔                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, par exemple U+1F600 pour le visage de panoramique. |
 
 ## <a name="notifications-to-your-message"></a>Notifications à votre message
 
@@ -331,9 +331,9 @@ Pour améliorer votre message, vous pouvez inclure des images en tant que pièce
 
 Les images sont envoyées en ajoutant des pièces jointes à un message. Pour plus d’informations sur les pièces jointes, voir [la documentation bot Framework](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Les images peuvent être au maximum 1024×1024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
+Les images peuvent être au maximum 1 024 × 1 024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utilisez : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -382,7 +382,7 @@ Le message d’achèvement du formulaire apparaît dans les cartes adaptatives l
 
     ![Message de réussite](~/assets/images/Cards/success.PNG)
 
-Vous pouvez sélectionner **Fermer ou** changer de conversation pour faire disparaître le message.    
+Vous pouvez sélectionner **Fermer ou** changer de conversation pour faire disparaître le message.
 
 **Réponse sur les appareils mobiles** :
 

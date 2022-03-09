@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b4e693e127b06469a1f31a486fa8db9cc7ab4ba5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356265"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398805"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -24,7 +24,7 @@ Votre onglet nécessite des informations contextuelles pour afficher le contenu 
 Le contexte de l’utilisateur, de l’équipe ou de l’entreprise peut être particulièrement utile lorsque :
 
 * Vous créez ou associez des ressources dans votre application à l’utilisateur ou à l’équipe spécifié.
-* Vous lancez un flux d’authentification à partir de Microsoft Azure Active Directory (Azure AD) ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur. 
+* Vous lancez un flux d’authentification à partir de Microsoft Azure Active Directory (Azure AD) ou d’un autre fournisseur d’identité et vous n’exigez pas que l’utilisateur entre à nouveau son nom d’utilisateur.
 
 Pour plus d’informations, [voir authentifier un utilisateur dans votre Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -115,7 +115,7 @@ Le code suivant fournit un exemple de variable de contexte :
 
 ## <a name="retrieve-context-in-private-channels"></a>Récupérer le contexte dans les canaux privés
 
-Lorsque votre page de contenu est chargée dans un canal privé, `getContext` les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité du canal. 
+Lorsque votre page de contenu est chargée dans un canal privé, `getContext` les données que vous recevez de l’appel sont obscurcies pour protéger la confidentialité du canal.
 
 Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal privé :
 
@@ -133,7 +133,7 @@ Si votre page utilise l’une de ces valeurs, `channelType` `Private` la valeur 
 > [!NOTE]
 > Actuellement, les Microsoft Teams Connecter partagés sont en [prévisualisation développeur](../../resources/dev-preview/developer-preview-intro.md) uniquement.
 
-Lorsque votre page de contenu est chargée dans un canal partagé Microsoft Teams Connecter, `getContext` les données que vous recevez de l’appel sont modifiées en raison de la liste unique d’utilisateurs dans les canaux partagés. 
+Lorsque votre page de contenu est chargée dans un canal partagé Microsoft Teams Connecter, `getContext` les données que vous recevez de l’appel sont modifiées en raison de la liste unique d’utilisateurs dans les canaux partagés.
 
 Les champs suivants sont modifiés lorsque votre page de contenu se trouve dans un canal partagé :
 

@@ -4,12 +4,12 @@ description: Décrit comment obtenir un jeton d’utilisateur. Actuellement, un 
 keywords: token, user token, SSO support for bots, permission, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 16e57a6ffc95aa9814016d56b66721ec44b07308
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: a51b96cdb5d2b37f826f533dae58bed117b71700
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355901"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399365"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Prise en charge de l’sign-on unique (SSO) pour les bots
 
@@ -33,7 +33,6 @@ Les étapes suivantes vous aident à l’authentification et aux jetons d’appl
    > * Un utilisateur peut avoir plusieurs points de terminaison actifs à la fois.
    > * Le jeton bot est reçu de chaque point de terminaison d’utilisateur actif.
    > * L’application doit être installée dans l’étendue personnelle pour la prise en charge de l’authentification unique.
-
 
 1. Si l’utilisateur actuel utilise votre application bot pour la première fois, une invite de demande s’affiche pour lui demander d’appliquer l’une des actions suivantes :
     * Donner l’autorisation, si nécessaire.
@@ -85,6 +84,7 @@ Les étapes d’inscription de votre application via Azure AD portail sont simil
    > Pour mettre à jour le manifeste de votre application ultérieurement, enregistrez la valeur **de l’ID de l’application (** client).
 
    > [!IMPORTANT]
+   >
    > * Si vous construisez un bot autonome, entrez l’URI d’ID d’application sous le nom `api://botid-{YourBotId}`. Ici *, YourBotId est* votre ID Azure AD’application.
    > * Si vous créez une application avec un bot et un onglet, saisissez l'URI de l'ID d'application au format `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
@@ -146,9 +146,9 @@ Les étapes d’inscription de votre application via Azure AD portail sont simil
 1. Les étapes suivantes vous aideront à activer l’octroi implicite :
     * Sélectionnez **Authentification** dans le volet gauche.
     * Cochez **les jetons Access** et **les jetons d’ID** .
-    
+
     ![Flux d’octroi](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
-    
+
     * **Sélectionnez Enregistrer** pour enregistrer les modifications.
 
 1. Ajoutez les **autorisations d’API nécessaires**.
@@ -163,7 +163,6 @@ Les étapes suivantes vous guident pour mettre à jour le manifeste du bot dans 
 1. Assurez-vous que l’élément de config est définie sur **« accessTokenAcceptedVersion » : 2**. Si ce n’est pas le cas, modifiez sa valeur sur **2**.
 
     ![Mettre à jour le manifeste](~/assets/images/bots/update-manifest.png)
-
 
    >[!NOTE]
    > Si vous êtes déjà en cours de test de votre bot dans Teams, vous devez vous dé connectez à partir de cette application et dé sign out de Teams. Connectez-vous à nouveau pour voir cette modification.
@@ -197,7 +196,7 @@ Les étapes suivantes vous guident pour mettre à jour le portail Azure avec la 
     * Ajoutez toutes les **étendues configurées** lors de la spécification d’autorisations pour les API en aval pour Azure AD application. Avec l’ID client et la secret client fournis, le magasin de jetons échange le jeton contre un jeton graphique avec des autorisations définies.
     * Sélectionnez **Enregistrer**.
     * Sélectionnez **Appliquer**.
-   
+
     ![Paramètre de connexion](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### <a name="update-your-teams-application-manifest-for-your-bot"></a>Mettre à jour Teams manifeste d’application pour votre bot
@@ -211,6 +210,7 @@ Si l’application contient un bot autonome, utilisez le code suivant pour ajout
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
+
 Si l’application contient un bot et un onglet, utilisez le code suivant pour ajouter de nouvelles propriétés au manifeste Teams’application :
 
 ```json
@@ -356,7 +356,6 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne parvient pa
 
 6. S’il `TokenExchangeInvokeResponse` en possède `200``status` une, le client n’affiche pas la carte OAuth. Voir [l’image de flux normal](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). Pour toute autre carte `status` ou si elle n’est `TokenExchangeInvokeResponse` pas reçue, le client affiche la carte OAuth à l’utilisateur. Voir [l’image de flux de récupération](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). S’il existe des erreurs ou des dépendances non satisfaits, telles que le consentement de l’utilisateur, cette activité garantit que le flux DSO revient au flux OAuthCard normal.
 
-
 ### <a name="update-the-auth-sample"></a>Mettre à jour l’exemple d’th
 
 [Ouvrez Teams exemple d’th,](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) puis complétez les étapes suivantes pour le mettre à jour :
@@ -379,7 +378,8 @@ Pour comprendre ce que fait le bot lorsque l’échange de jetons ne parvient pa
 4. Zip the manifest with the profile images and install it in Teams.
 
 ## <a name="code-sample"></a>Exemple de code
-|**Exemple de nom** | **Description** |**.NET** | 
+
+|**Exemple de nom** | **Description** |**.NET** |
 |----------------|-----------------|--------------|
 |Bot framework SDK | Exemple d’utilisation du SDK Bot Framework. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 

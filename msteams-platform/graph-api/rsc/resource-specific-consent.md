@@ -6,19 +6,19 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: autorisation oAuth d’autorisation oAuth Azure AD rsc Graph
-ms.openlocfilehash: 613416c7363de8a9351e56f5cdb2a6a339b74392
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 071ad1a7f7c8263bafdfb0d2521676d0e6992d8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821688"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399281"
 ---
 # <a name="resource-specific-consent"></a>Consentement spécifique à la ressource
 
 > [!NOTE]
 > Le consentement spécifique aux ressources pour l’étendue de conversation est disponible en [prévisualisation pour les développeurs publics](../../resources/dev-preview/developer-preview-intro.md) uniquement.
 
-Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Microsoft Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques, équipes ou conversations, au sein d’une organisation. Le modèle d’autorisations RSC  permet aux propriétaires d’équipe et de *conversation* d’accorder le consentement d’une application pour accéder aux données d’une équipe et aux données d’une conversation, et de les modifier, respectivement. 
+Le consentement spécifique aux ressources (RSC) est une intégration d’API Microsoft Teams et Microsoft Graph qui permet à votre application d’utiliser des points de terminaison d’API pour gérer des ressources spécifiques, équipes ou conversations, au sein d’une organisation. Le modèle d’autorisations RSC  permet aux propriétaires d’équipe et de *conversation* d’accorder le consentement d’une application pour accéder aux données d’une équipe et aux données d’une conversation, et de les modifier, respectivement.
 
 **Remarque :** Si une conversation est associée à une réunion ou à un appel, les autorisations RSC appropriées s’appliquent également à ces ressources.
 
@@ -75,13 +75,13 @@ Pour plus d’informations, voir [autorisations de consentement](/graph/permissi
 
 ## <a name="enable-rsc-in-your-application"></a>Activer RSC dans votre application
 
-1. [Configurez les paramètres de consentement dans le portail Azure AD web](#configure-consent-settings-in-the-azure-ad-portal).
+1. [Configurez les paramètres de consentement dans le portail Azure AD client](#configure-consent-settings-in-the-azure-ad-portal).
     1. [Configurez les paramètres de consentement du propriétaire du groupe pour RSC dans une équipe](#configure-group-owner-consent-settings-for-rsc-in-a-team).
     1. [Configurez les paramètres de consentement de l’utilisateur pour RSC dans une conversation](#configure-user-consent-settings-for-rsc-in-a-chat).
 1. [Enregistrez votre application auprès Plateforme d'identités Microsoft l’aide Azure AD portail.](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)
 1. [Examinez vos autorisations d’application dans le Azure AD web](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtenez un jeton d’accès à partir de la plateforme d’identité](#obtain-an-access-token-from-the-microsoft-identity-platform).
-1. [Mettez à jour Teams manifeste de votre application](#update-your-teams-app-manifest).
+1. [Mettez à jour Teams manifeste de votre application.](#update-your-teams-app-manifest)
 1. [Installez votre application directement dans Teams](#sideload-your-app-in-teams).
 1. [Vérifiez que votre application a ajouté des autorisations RSC](#check-your-app-for-added-rsc-permissions).
     1. [Vérifiez que votre application a ajouté des autorisations RSC dans une équipe](#check-your-app-for-added-rsc-permissions-in-a-team).
@@ -134,15 +134,15 @@ Pour effectuer des Graph API, vous devez obtenir un jeton d’accès pour votre 
 
 Vous devez avoir les valeurs suivantes du processus d Azure AD’inscription pour récupérer un jeton d’accès à partir de la plateforme d’identité :
 
-- **ID d’application attribué** par le portail d’inscription de l’application. Si votre application prend en charge l’sign-on unique (SSO), vous devez utiliser le même ID d’application pour votre application et l’cesso.
-- La **clé secrète/mot de passe** client ou une paire de clés publiques ou **privées certificat**. N’est pas nécessaire pour les applications natives.
-- **URI de redirection** ou URL de réponse pour que votre application reçoie des réponses de Azure AD.
+* **ID d’application attribué** par le portail d’inscription de l’application. Si votre application prend en charge l’sign-on unique (SSO), vous devez utiliser le même ID d’application pour votre application et l’cesso.
+* La **clé secrète/mot de passe** client ou une paire de clés publiques ou **privées certificat**. N’est pas nécessaire pour les applications natives.
+* **URI de redirection** ou URL de réponse pour que votre application reçoie des réponses de Azure AD.
 
 Pour plus d’informations, voir [obtenir l’accès au nom](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) d’un utilisateur et [obtenir l’accès sans utilisateur](/graph/auth-v2-service).
 
 ## <a name="update-your-teams-app-manifest"></a>Mettre à jour le manifeste Teams’application
 
-Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votre application. 
+Les autorisations RSC sont déclarées dans le fichier JSON de manifeste de votre application.
 
 > [!IMPORTANT]
 > Les autorisations non RSC sont stockées dans le portail Azure. Ne les ajoutez pas au manifeste de l’application.
@@ -312,7 +312,7 @@ Exemple de RSC dans une conversation
 
 > [!NOTE]
 > Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste `authorization`sous .
-    
+
 <br>
 
 </details>
@@ -383,14 +383,14 @@ Exemple de RSC dans une conversation
 
 > [!NOTE]
 > Si l’application est destinée à prendre en charge l’installation dans les étendues d’équipe et de conversation, les autorisations d’équipe et de conversation peuvent être spécifiées dans le même manifeste `applicationPermissions`sous .
-    
+
 <br>
 
 </details>
 
 ## <a name="sideload-your-app-in-teams"></a>Charger une version test de votre application dans Teams
 
-Si votre administrateur Teams autorise les téléchargements d’applications personnalisées, vous pouvez [](~/concepts/deploy-and-publish/apps-upload.md) charger une version de votre application directement vers une équipe ou une conversation spécifique.
+Si votre administrateur Teams autorise les téléchargements d’applications personnalisées, vous [](~/concepts/deploy-and-publish/apps-upload.md) pouvez charger une version de votre application directement vers une équipe ou une conversation spécifique.
 
 ## <a name="check-your-app-for-added-rsc-permissions"></a>Vérifier l’ajout d’autorisations RSC dans votre application
 
@@ -426,7 +426,7 @@ Pour plus d’informations sur la façon d’obtenir des détails sur les applic
 1. Connectez-vous **à Graph Explorer**.
 1. Faites un **appel GET** au point de terminaison suivant : `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. Le `clientAppId` champ de la réponse sera map mapé à l’Teams `webApplicationInfo.id` manifeste de l’application.
 
-    ![Graph’explorateur pour obtenir des autorisations RSC de conversation pour l’appel GET](../../assets/images/chat-graph-permissions.png)
+    ![Graph’explorateur pour obtenir des autorisations RSC d’appel de conversation](../../assets/images/chat-graph-permissions.png)
 
 Pour plus d’informations sur la façon d’obtenir des détails sur les applications installées dans une conversation spécifique, voir obtenir les noms et autres [détails des applications installées](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat) dans la conversation spécifiée.
 
@@ -434,9 +434,9 @@ Pour plus d’informations sur la façon d’obtenir des détails sur les applic
 
 | **Exemple de nom** | **Description** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific consent (RSC) | Utilisez RSC pour appeler Graph API. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific consentement (RSC) | Utilisez RSC pour appeler Graph API. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>Voir aussi
- 
+
 * [Tester les autorisations de consentement propres aux ressources dans Teams](test-resource-specific-consent.md)
 * [Consentement spécifique aux ressources dans Microsoft Teams pour les administrateurs](/MicrosoftTeams/resource-specific-consent)

@@ -4,27 +4,27 @@ description: Décrit les cartes et leur utilisation dans des bots, des connecteu
 ms.localizationpriority: high
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821583"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398651"
 ---
 # <a name="cards"></a>Cartes
 
 Une carte est un conteneur d’interface utilisateur (IU) pour des informations courtes ou connexes. Les cartes peuvent avoir plusieurs propriétés et pièces jointes et inclure des boutons qui déclenchent des [actions de carte](~/task-modules-and-cards/cards/cards-actions.md). L’utilisation de cartes vous permet d’organiser des informations en groupes et de permettre aux utilisateurs d’interagir avec des parties spécifiques de celles-ci.
 
 Les bots pour Teams prennent en charge les types de cartes suivants :
- 
-- Carte adaptative
-- Carte Hero
-- Carte de liste
-- Carte Connecteur Office 365
-- Carte de réception
-- Carte de signature
-- Carte miniature
-- Collections de cartes
+
+* Carte adaptative
+* Carte Hero
+* Carte de liste
+* Carte Connecteur Office 365
+* Carte de réception
+* Carte de signature
+* Carte miniature
+* Collections de cartes
 
 Vous pouvez ajouter une mise en forme de texte enrichi à vos cartes à l’aide de Markdown ou HTML, suivant le type de carte. Les cartes sont utilisées par les bots et les extensions de messagerie dans Microsoft Teams. Elles ajoutent et répondent aux actions de ces cartes, `openUrl`, `messageBack`, `imBack`, `invoke` et `signin`.
 
@@ -63,21 +63,22 @@ Outre les Cartes adaptatives, Teams prend en charge deux autres types de cartes�
 
 ### <a name="people-picker-in-adaptive-cards"></a>Sélecteur de personnes dans les Cartes adaptatives
 
-Le [Sélecteur de personnes](cards/people-picker.md#people-picker-in-adaptive-cards) ajouté en tant que contrôle d’entrée dans les Cartes adaptatives permet la recherche et la sélection de personnes. Vous pouvez l’utiliser dans les conversations, les canaux, les modules de tâche et les onglets. Les clients mobiles et de bureau prennent en charge le Sélecteur de personnes, offrant une expérience de saisie inline. 
+Le [Sélecteur de personnes](cards/people-picker.md#people-picker-in-adaptive-cards) ajouté en tant que contrôle d’entrée dans les Cartes adaptatives permet la recherche et la sélection de personnes. Vous pouvez l’utiliser dans les conversations, les canaux, les modules de tâche et les onglets. Les clients mobiles et de bureau prennent en charge le Sélecteur de personnes, offrant une expérience de saisie inline.
 
 ### <a name="type-ahead-search-in-adaptive-cards"></a>Recherche en saisie semi-automatique dans les Cartes adaptatives  
 
-La recherche en saisie semi-automatique en tant que contrôle d’entrée dans les Cartes adaptatives permet une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) à partir d’un jeu de données chargé de manière dynamique. Elle permet également aux utilisateurs d’effectuer une recherche statique en saisie semi-automatique dans une liste avec un nombre de choix limité. Les clients mobiles et de bureau prennent en charge l’expérience de recherche dynamique en saisie semi-automatique. 
+La recherche en saisie semi-automatique en tant que contrôle d’entrée dans les Cartes adaptatives permet une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) à partir d’un jeu de données chargé de manière dynamique. Elle permet également aux utilisateurs d’effectuer une recherche statique en saisie semi-automatique dans une liste avec un nombre de choix limité. Les clients mobiles et de bureau prennent en charge l’expérience de recherche dynamique en saisie semi-automatique.
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>Cartes adaptatives et Webhooks entrants
 
 > [!NOTE]
+>
 > * Tous les éléments de schéma de Carte adaptative native, à l’exception de `Action.Submit`, sont entièrement pris en charge.
 > * Les actions prises en charge sont [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), et [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Les Cartes adaptatives avec Webhooks entrants vous permettent d’utiliser les fonctionnalités enrichies et flexibles des Cartes adaptatives. Elles envoient des données à l’aide des Webhooks entrants dans Teams à partir de leur service web.
 
-## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Support pour Azure AD Object ID et UPN dans la mention de l'utilisateur 
+## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>Support pour Azure AD Object ID et UPN dans la mention de l'utilisateur
 
 Les bots avec Cartes adaptatives prennent en charge les ID de mention utilisateur, tels que l’ID d’objet Microsoft Azure Active Directory (Azure AD) et le nom d’utilisateur principal (UPN) en plus des ID existants. Les webhooks entrants commencent à prendre en charge la mention utilisateur dans les cartes adaptatives avec l’ID Azure AD’objet et l’UPN.
 

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: d87d1cd2e6a1e380d8e68585e313bed7913a18c6
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 7a0db979b39173f03dddd2725aee3237894914f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898200"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399008"
 ---
 # <a name="from-ideas-to-teams-app"></a>Des idées à l’application Teams
 
@@ -55,7 +55,7 @@ Approfondissons cette histoire et découvrons-la.
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="... afin que les clients puissent connaître les conditions météorologiques et planifier à l’avance" border="false"::: 
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="... afin que les clients puissent connaître les conditions météorologiques et planifier à l’avance" border="false":::
    :::column-end:::
    :::column span="":::
       #### <a name="list-app-requirements-and-benefits"></a>Répertorier les exigences et les avantages des applications

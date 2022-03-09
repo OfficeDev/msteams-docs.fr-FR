@@ -1,37 +1,44 @@
 ---
-title: Microsoft Teams version préliminaire du SDK client JavaScript v2
+title: Microsoft Teams javaScript client SDK v2 Preview
 description: Comprendre les modifications apportées avec Microsoft Teams javaScript client SDK v2 Preview
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
+ms.openlocfilehash: 2e78746c226c8fa9e34f37e405f992f1bd7d2fd1
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399260"
 ---
-# <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams version préliminaire du SDK client JavaScript v2
+# <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams javaScript client SDK v2 Preview
 
-Avec le [SDK client JavaScript v2 Preview Microsoft Teams, le SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true) Teams existant (`@microsoft/teams-js``TeamsJS`ou simplement) a été refactorisation pour permettre aux développeurs Teams d’étendre les applications Teams pour qu’elles s’exécutent en [Outlook et Office](overview.md). Du point de vue fonctionnel, le SDK TeamsJS v2 Preview (`@microsoft/teams-js@next`) est un sur-ensemble du SDK TeamsJS actuel, il prend en charge les fonctionnalités d’application Teams existantes tout en ajoutant la possibilité d’héberger des applications Teams dans Outlook et Office.
+Avec le [SDK client JavaScript v2 Preview Microsoft Teams, le SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true) Teams existant (`@microsoft/teams-js``TeamsJS`ou simplement) Teams été refactorisant pour permettre aux développeurs d’étendre les applications Teams pour qu’elles s’exécutent en [Outlook et Office](overview.md). Du point de vue fonctionnel, le SDK TeamsJS v2 Preview (`@microsoft/teams-js@next`) est un sur-ensemble du SDK TeamsJS actuel, il prend en charge les fonctionnalités d’application Teams existantes tout en ajoutant la possibilité d’héberger des applications Teams dans Outlook et Office.
 
 Il existe deux modifications importantes dans l’aperçu du SDK TeamsJS v2 dont votre code devra tenir compte pour pouvoir s’exécuter dans d’Microsoft 365 applications :
 
 * [**Les fonctions de rappel retournent désormais des objets Promise.**](#callbacks-converted-to-promises) Toutes les fonctions existantes avec un paramètre de rappel ont été modernisers pour renvoyer un objet JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) afin d’améliorer la gestion des opérations asynchrones et la lisibilité du code.
 
- - [**Les API sont désormais organisées en *fonctionnalités*.**](#apis-organized-into-capabilities) Vous pouvez voir les fonctionnalités comme des regroupements logiques d’API qui fournissent des fonctionnalités similaires, `authentication`telles que , `calendar`, `mail`, `monetization`et `meeting``sharing`.
+* [**Les API sont désormais organisées en *fonctionnalités*.**](#apis-organized-into-capabilities) Vous pouvez voir les fonctionnalités comme des regroupements logiques d’API qui fournissent des fonctionnalités similaires, `authentication`telles que , `calendar`, `mail`, `monetization`et `meeting``sharing`.
 
- Vous pouvez utiliser [l’extension Teams Shared Computer Toolkit](https://aka.ms/teams-toolkit) pour Microsoft Visual Studio Code afin de simplifier le processus de mise à jour de votre application Teams, comme décrit dans la section suivante.
+ Vous pouvez utiliser [l’extension Teams Shared Computer Toolkit pour](https://aka.ms/teams-toolkit) Microsoft Visual Studio Code afin de simplifier le processus de mise à jour de votre application Teams, comme décrit dans la section suivante.
 
 > [!NOTE]
 > Pour qu’une application Teams existante s’exécute en Outlook et Office nécessite les deux :
+>
 > 1. Dépendance sur le ou les `@microsoft/teams-js@2.0.0-beta.1` ultérieures, et
 > 2. Modification du code d’application existant en fonction des modifications requises décrites dans ce document.
 >
->  Si vous référencez `@microsoft/teams-js@2.0.0-beta.1` (ou une ultérieure) à partir d’une application Teams existante, vous verrez des avertissements d’annulation si votre code appelle des API qui ont été modifiées. Une couche de traduction d’API (mappage du SDK actuel pour prévisualiser les appels d’API du SDK) est fournie pour permettre aux applications Teams existantes de continuer à fonctionner dans Teams jusqu’à ce qu’elles soient en mesure de mettre à jour le code pour fonctionner avec l’aperçu du SDK TeamsJS v2. Une fois que vous avez mis à jour votre code avec les modifications décrites dans cet article, votre onglet personnel s’exécute également Outlook et Office.
+> Si vous référencez `@microsoft/teams-js@2.0.0-beta.1` (ou une ultérieure) à partir d’une application Teams existante, vous verrez des avertissements d’annulation si votre code appelle des API qui ont été modifiées. Une couche de traduction d’API (mappage du SDK actuel pour prévisualiser les appels d’API du SDK) est fournie pour permettre aux applications Teams existantes de continuer à fonctionner dans Teams jusqu’à ce qu’elles soient en mesure de mettre à jour le code pour fonctionner avec l’aperçu du SDK TeamsJS v2. Une fois que vous avez mis à jour votre code avec les modifications décrites dans cet article, votre onglet personnel s’exécute également Outlook et Office.
 
-## <a name="updating-to-the-teams-client-sdk-v2-preview"></a>Mise à jour vers le Teams client SDK v2 Preview
+## <a name="updating-to-the-teams-client-sdk-v2-preview"></a>Mise à jour vers le SDK Teams client v2 Preview
 
 Le moyen le plus simple de mettre à jour votre application Teams pour utiliser l’aperçu du SDK TeamsJS v2 consiste à utiliser [l’extension Teams Shared Computer Toolkit](https://aka.ms/teams-toolkit) pour Visual Studio Code. Cette section vous présente les étapes à suivre pour ce faire. Si vous préférez mettre à jour manuellement votre code, consultez les [rappels convertis en promesses](#callbacks-converted-to-promises) et LES API organisées [en sections](#apis-organized-into-capabilities) de fonctionnalités pour plus d’informations sur les modifications d’API requises.
 
 ### <a name="1-install-the-latest-teams-toolkit-visual-studio-code-extension"></a>1. Installer la dernière extension de Teams Shared Computer Toolkit Visual Studio Code
 
-Dans la *Visual Studio Code d’extensions Marketplace*, recherchez **Teams Shared Computer Toolkit** et installez la version ou version `2.10.0` ultérieure. Le kit de ressources fournit deux commandes pour aider le processus :
+Dans la *Visual Studio Code d’extensions Marketplace*, recherchez **Teams Shared Computer Toolkit et installez** la version `2.10.0` ou version ultérieure. Le kit de ressources fournit deux commandes pour aider le processus :
 
 1. Commande de mise à jour de votre schéma de manifeste
 1. Commande pour mettre à jour vos références et sites d’appel du SDK
@@ -43,7 +50,7 @@ Voici les deux mises à jour clés dont vous aurez besoin pour exécuter une app
 # <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez *la palette de commandes* : `Ctrl+Shift+P`
-1. **Exécutez Teams : mettre à niveau Teams manifeste pour** prendre en charge Outlook et Office commande d’applications, puis sélectionnez votre fichier manifeste d’application. Les modifications seront apportées en place.
+1. **Exécutez Teams : mettre à niveau Teams manifeste pour** prendre en charge Outlook commande Office applications et sélectionnez votre fichier manifeste d’application. Les modifications seront apportées en place.
 
 # <a name="manual-steps"></a>[Étapes manuelles](#tab/manifest-manual)
 
@@ -55,6 +62,7 @@ Ouvrez votre Teams de l’application et mettez à jour les `$schema` `manifestV
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Si vous avez utilisé Teams Shared Computer Toolkit pour créer votre application personnelle, vous pouvez également l’utiliser pour valider les modifications apportées à votre fichier manifeste et identifier les erreurs éventuelles. Ouvrez la palette `Ctrl+Shift+P` de commandes et recherchez **Teams :** Valider le fichier manifeste ou sélectionnez l’option dans le menu Déploiement de l’Teams Shared Computer Toolkit (recherchez l’icône Teams sur le côté gauche de Visual Studio Code).
@@ -72,6 +80,7 @@ Pour s’exécuter Outlook et Office, votre application doit dépendre du [packa
 Une fois l’exécution terminée, `package.json` l’utilitaire aura mis à jour votre fichier avec la dépendance du SDK TeamsJS v2 Preview (`@microsoft/teams-js@2.0.0-beta.1` ou version ultérieure), `*.js/.ts` `*.jsx/.tsx` et vos fichiers et vos fichiers seront mis à jour avec :
 
 > [!div class="checklist"]
+>
 > * `package.json` références au SDK TeamsJS v2 Preview
 > * Instructions Import pour le SDK TeamsJS v2 Preview
 > * [Appels de fonction, d’enum et d’interface](#apis-organized-into-capabilities) au SDK TeamsJS v2 Preview
@@ -83,7 +92,7 @@ Une fois l’exécution terminée, `package.json` l’utilitaire aura mis à jou
 
 ## <a name="callbacks-converted-to-promises"></a>Rappels convertis en promesses
 
-Teams API qui ont précédemment pris un paramètre de rappel ont été mises à jour pour renvoyer un objet Promise [JavaScript.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) Il s’agit des API suivantes :
+Teams API qui ont précédemment pris un paramètre de rappel ont été mises à jour pour renvoyer un objet De [promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) JavaScript. Il s’agit des API suivantes :
 
 ```js
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, core.executeDeepLink, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, media.captureImage, media.getMedia, media.selectMedia, media.viewImages, media.scanBarCode, meeting.getAppContentStageSharingCapabilities, meeting.getAuthenticationTokenForAnonymousUser, meeting.getIncomingClientAudioState, meeting.getLiveStreamState, meeting.getMeetingDetails, meeting.requestStartLiveStreaming, meeting.requestStopLiveStreaming, meeting.shareAppContentToStage, meeting.stopSharingAppContentToStage, meeting.toggleIncomingClientAudio, meeting.getAppContentStageSharingState, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.config.setConfig, pages.config.getConfig, people.selectPeople, ChildAppWindow.postMessage, ParentAppWindow.postMessage
@@ -229,7 +238,7 @@ L’espace `pages` de noms inclut des fonctionnalités pour l’exécution et la
 | - | - |
 | `getTabInstances` |  `pages.tabs.getTabInstances` |
 | `getMruTabInstances` | `pages.tabs.getMruTabInstances` |
-| ` navigateToTab` | `pages.tabs.navigateToTab` |
+| `navigateToTab` | `pages.tabs.navigateToTab` |
 
 | Espace de noms d’origine `navigation` | Nouvel espace de noms `pages.tabs` |
 | - | - |
@@ -346,11 +355,11 @@ Vous pouvez également visualiser les modifications en révisant la  [`transform
 | `tenantSKU`| `app.Context.user.tenant.teamsSku` |
 | `tid`| `app.Context.user.tenant.id` |
 | `upn` | `app.Context.user.userPrincipalName` |
-|` userClickTime`| `app.Context.app.userClickTime`|
+|`userClickTime`| `app.Context.app.userClickTime`|
 | `userFileOpenPreference` | `app.Context.app.userFileOpenPreference` |
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
-| ` userTeamRole` | `app.Context.team.userRole`|
+| `userTeamRole` | `app.Context.team.userRole`|
 | `userDisplayName` | `app.Context.user.displayName` |
 | S/O | `app.Context.app.host.name`|
 

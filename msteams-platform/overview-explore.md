@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 96728036f330eb2181f9818411e218e1ec3c2016
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898192"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398966"
 ---
 # <a name="explore-teams-platform-features"></a>Explorer les fonctionnalités de la plateforme Teams
 
@@ -23,7 +23,7 @@ Avec Teams, vous pouvez créer votre application dans un environnement riche en 
 
 | Fonctionnalité | Description | Utile pour |
 | --- | --- | --- |
-|Onglets | Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Vous pouvez les ajouter dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur individuel. | Onglet personnel, onglet canal ou groupe, affichage intermédiaire et déploiement de liens. |
+|Onglets | Les onglets sont des pages Web adaptées à Teams et intégrées à Microsoft Teams. Vous pouvez les ajouter dans le cadre d'un canal au sein d'une équipe, d'une discussion de groupe ou d'une application personnelle pour un utilisateur individuel. | Onglet personnel, onglet canal ou groupe, affichage intermédiaire et déploiement de liens. |
 | Bots | Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs. Une interaction de bot peut être une question et une réponse rapides, ou il peut s’agir d’une conversation complexe qui fournit l’accès aux services. | Service clientèle, informations sur la météo, réservations de repas ou informations de voyage. |
 | Extensions de messagerie | Les extensions de messagerie permettent aux utilisateurs d’interagir avec votre client Teams de service web. Ils recherchent ou démarrent des actions dans un système externe. Vous pouvez envoyer le résultat de l’interaction au client Teams sous la forme d’une carte enrichie. | Réservez une ressource et autorisez le canal à connaître l’intervalle de temps réservé. Recherchez un élément de travail et partagez-le avec le groupe sous forme de carte adaptative. Créez un bogue dans votre système de suivi en fonction d’un message Teams, attribuez ce bogue à un utilisateur et envoyez une carte au thread de conversation avec les détails du bogue. |
 |Extensions de réunion | Vous pouvez créer des applications pour rendre les réunions plus productives. | Demandez aux personnes de répondre à une enquête pendant un appel ou d’envoyer un rappel rapide qui n’interrompt pas le flux de la réunion. |
@@ -32,7 +32,6 @@ Avec Teams, vous pouvez créer votre application dans un environnement riche en 
 | Microsoft Graph | Microsoft Graph est la passerelle vers les données et l’intelligence dans Microsoft 365 et peut être incorporée dans n’importe quel type d’application Teams. | Créez, gérez, recherchez et archivez un grand nombre d’équipes et renseignez-les avec des utilisateurs et des canaux. |
 | Carte adaptative | Les cartes vous aident à organiser les informations en groupes et donnent aux utilisateurs la possibilité d’interagir avec des parties spécifiques des informations. | Partage à l’aide de texte et d’images ; collecte d’informations à l’aide de formulaires d’entrée. |
 | Modules de tâche | Les modules de tâche vous permettent de créer des expériences contextuelles modales dans votre application Teams. | Exécutez votre propre code HTML ou JavaScript personnalisé. Affichez un widget basé sur <`iframe`>, tel qu’une vidéo YouTube ou Microsoft Stream. |
-|
 
 ## <a name="dive-deeper"></a>Approfondissez vos connaissances
 

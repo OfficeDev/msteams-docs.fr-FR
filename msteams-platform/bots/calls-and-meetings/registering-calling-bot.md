@@ -4,18 +4,18 @@ description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo p
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: c05f0e84dd0b56f9bdb503a73886cfa0cd5024fa
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821366"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398665"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 
 Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams régulier avec les fonctionnalités supplémentaires suivantes utilisées pour inscrire le bot :
 
-* Il existe une nouvelle version du manifeste Teams’application avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo`. Ces paramètres sont inclus dans le schéma [ de manifeste pour Microsoft Teams](../../resources/schema/manifest-schema.md).
+* Il existe une nouvelle version du manifeste Teams’application avec deux paramètres supplémentaires, `supportsCalling` et `supportsVideo`. Ces paramètres sont inclus dans le schéma [de manifeste pour Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Les Graph microsoft](./registering-calling-bot.md#add-graph-permissions) doivent être configurées pour l’ID d’application Microsoft de votre bot.
 * Les Graph et les autorisations d’API de réunion en ligne nécessitent le consentement de l’administrateur client.
 
@@ -23,7 +23,7 @@ Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne 
 
 Les bots d’appels et de réunions en ligne ont les deux paramètres supplémentaires suivants dans manifest.json qui activent l’audio ou la vidéo pour votre bot dans Teams.
 
-* `bots[0].supportsCalling`. S’il est présent et `true`qu’il est Teams, votre bot peut participer à des appels et à des réunions en ligne.
+* `bots[0].supportsCalling`. S’il est présent et qu’il `true`est Teams, votre bot peut participer à des appels et à des réunions en ligne.
 * `bots[0].supportsVideo`. S’il est présent et qu’il `true`est Teams que votre bot prend en charge la vidéo.
 
 Si vous souhaitez que votre IDE valide correctement le schéma manifest.json pour vos appels et bot de réunions pour ces valeurs, `$schema` vous pouvez modifier l’attribut comme suit :
@@ -38,7 +38,7 @@ La section suivante vous permet de créer un bot ou d’ajouter des fonctionnali
 
 Pour plus d’informations sur la création de bots, voir [créer un bot pour Teams](../how-to/create-a-bot-for-teams.md).
 
-**Pour créer un bot pour Teams**
+Pour créer un bot pour Teams :
 
 1. Utilisez ce lien pour créer un bot, `https://dev.botframework.com/bots/new`. Sinon, si vous sélectionnez le bouton Créer un **bot** dans le portail Bot Framework, vous créez votre bot dans Microsoft Azure, pour lequel vous devez avoir un compte Azure.
 1. Ajoutez le Teams canal de distribution.
@@ -50,7 +50,7 @@ La section suivante fournit une liste des autorisations d’application pris en 
 
 ## <a name="add-graph-permissions"></a>Ajouter Graph autorisations d’autorisation
 
-Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph’API d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d’application.
+Le Graph fournit des autorisations granulaires pour contrôler l’accès des applications aux ressources. Vous déterminez les autorisations pour Graph votre application. Les Graph api d’appel de prise en charge des autorisations d’application, qui sont utilisées par les applications qui s’exécutent sans utilisateur inscrit. Un administrateur client doit donner son consentement aux autorisations d’application.
 
 ### <a name="application-permissions-for-calls"></a>Autorisations d’application pour les appels
 
@@ -82,9 +82,9 @@ Vous devez configurer les autorisations d’application pour votre bot à l’av
 
 ### <a name="get-tenant-administrator-consent"></a>Obtenir le consentement de l’administrateur client
 
-Pour les applications utilisant le point de terminaison Azure AD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Microsoft Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois que le consentement de l’administrateur est enregistré Azure AD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
+Pour les applications utilisant le point de terminaison Azure AD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Microsoft Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois le consentement de l’administrateur enregistré Azure AD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
 
-Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur [le Microsoft Azure web](https://portal.azure.com). Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide du point de terminaison Azure AD V2`/adminconsent`. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur](/graph/uth-v2-service#3-get-administrator-consent).
+Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur [le Microsoft Azure web](https://portal.azure.com). Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide Azure AD point de terminaison V2`/adminconsent`. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à l’inscription de votre bot, choisissez Manifeste de l’application **Options** >  **avancéesEdit**. Ajoutez votre URL de redirection à la `replyUrls` collection.

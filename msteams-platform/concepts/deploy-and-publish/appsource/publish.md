@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 777892c0e1437b3e8022cf2929b160e3602fe035
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355747"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398931"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -27,13 +27,13 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
 :::row:::
    :::column span="":::
-      
+
    :::column-end:::
    :::column span="3":::
       :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Processus de publication de l’App Store Teams" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
-      
+
    :::column-end:::
 :::row-end:::
 
@@ -59,7 +59,7 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
   * Résumé de tous les problèmes
 
-  * Détails des échecs ou des problèmes liés aux liens de stratégie et à la catégorisation : 
+  * Détails des échecs ou des problèmes liés aux liens de stratégie et à la catégorisation :
 
     * Correctif obligatoire : ces problèmes doivent être résolus avant l’approbation de l’application.
 

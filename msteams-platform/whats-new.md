@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356076"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398812"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -39,7 +39,6 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 |03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
 |03/02/2022| Aperçu du test pour les applications monétisées (aperçu du développeur)| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
-
 
 ## <a name="ga-features"></a>Caractéristiques de GA
 
@@ -71,7 +70,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 | 17/01/2022 | Sélectionneur de personnes dans les cartes adaptatives pour le bureau | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
- 
+
 <br>
 
 <details>
@@ -79,7 +78,6 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 <br>
 Explorez les mises à jour des versions GA précédentes répertoriées ici.
 <br><br>
-
 
 <details>
 <summary><b>2021</b></summary>
@@ -253,7 +251,7 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
 |03/02/2022| Aperçu du test pour les applications monétisées| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
+|03/02/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |17/01/2022| Sélectionneur de personnes en cartes adaptatives pour mobile  | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
 |24/12/2021| Introduction d'un guide étape par étape pour accorder des autorisations d'appareil Tab | Principes de base des applications > Capacités des appareils > [Guide étape par étape pour accorder des autorisations à l'appareil Tab](sbs-tab-device-permissions.yml)  |

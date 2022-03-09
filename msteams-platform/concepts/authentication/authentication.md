@@ -4,12 +4,12 @@ description: Décrit l’authentification Teams et comment l’utiliser dans les
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Authentification OAuth d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 79b50b8e2ba91d8b141cb36b38f0d94713131d43
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: efc065f317d0877b3e5f158566cba6d5d095505f
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821359"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399344"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Authentifier les utilisateurs dans Microsoft Teams
 
@@ -48,10 +48,9 @@ fournit un exemple de SDK d’authentification du bot v3.
 | Authentification bot | Cet exemple montre comment démarrer avec l’authentification dans un bot pour Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Tab, Bot and Messaging Extension (ME) SSO | Cet exemple montre s’il s’agit d’une 3D pour l’onglet, le bot et l’me - recherche, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Non disponible |
 
-
 ## <a name="configure-the-identity-provider"></a>Configuration du fournisseur d’identité
 
-Quel que soit le flux d’authentification de l’application, configurez le fournisseur d’identité pour qu’il communique avec Teams’application. La plupart des exemples et des conseils traitent principalement de l’utilisation Azure AD comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité. 
+Quel que soit le flux d’authentification de l’application, configurez le fournisseur d’identité pour qu’il communique avec Teams’application. La plupart des exemples et des conseils traitent principalement de l’utilisation Azure AD comme fournisseur d’identité. Les concepts s’appliquent toutefois, quel que soit le fournisseur d’identité.
 
 Pour plus d’informations, [voir configuration d’un fournisseur d’identité](~/concepts/authentication/configure-identity-provider.md).
 
@@ -61,6 +60,6 @@ Après la mise à jour d’iOS 14, Apple a bloqué l’accès par défaut aux [c
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Microsoft Teams’authentification pour les onglets](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [Flux d’authentification Microsoft Teams pour les onglets](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [Support de l'identification unique pour les robots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Ajouter une authentification à votre extension de messagerie](~/messaging-extensions/how-to/add-authentication.md)

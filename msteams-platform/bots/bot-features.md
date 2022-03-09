@@ -5,12 +5,12 @@ description: Vue d’ensemble des outils et des SDK pour la création Microsoft 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185421"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398658"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -30,24 +30,24 @@ Votre bot Teams se compose des suivants :
 * Votre Teams d’application, qui connecte le client Teams client à votre service web.
 
 > [!TIP]
-> Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications avec le portail](~/concepts/build-and-test/teams-developer-portal.md)de développement pour Teams .
+> Utilisez le portail du développeur pour inscrire votre service web avec Bot Framework et spécifier les configurations de votre application. Pour plus d’informations, [voir gérer vos applications à l’Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
-[Bot Framework est](https://dev.botframework.com/) un SDK enrichi utilisé pour créer des bots à l’aide de C#, Java, Python et JavaScript. Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement le modifier pour qu’il fonctionne Teams. Utilisez les C# ou Node.js pour tirer parti de nos [SDK.](/microsoftteams/platform/#pivot=sdk-tools) Ces packages étendent les classes et méthodes de base du SDK Bot Builder comme suit :
+[Bot Framework est](https://dev.botframework.com/) un SDK enrichi utilisé pour créer des bots à l’aide de C#, Java, Python et JavaScript. Si vous avez déjà un bot basé sur Bot Framework, vous pouvez facilement le modifier pour qu’il fonctionne Teams. Utilisez les C# ou Node.js pour tirer parti de nos [SDK](/microsoftteams/platform/#pivot=sdk-tools). Ces packages étendent les classes et méthodes de base du SDK Bot Builder comme suit :
 
 * Utilisez des types de carte spécialisés tels que la carte Office 365 connecteur.
 * Définissez Teams données de canal spécifiques sur les activités.
 * Traiter les demandes d’extension de messagerie.
 
 > [!IMPORTANT]
-> Vous pouvez développer des Teams dans n’importe quelle technologie de programmation web et appeler directement les [API REST Bot Framework.](/bot-framework/rest-api/bot-framework-rest-overview) Toutefois, vous devez effectuer la gestion des jetons dans tous les cas.
+> Vous pouvez développer des Teams dans n’importe quelle technologie de programmation web et appeler directement les [API REST Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview). Toutefois, vous devez effectuer la gestion des jetons dans tous les cas.
 
 ## <a name="bots-with-power-virtual-agents"></a>Bots avec Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) est un service chatbot construit sur la plateforme Microsoft Power et Bot Framework. Le processus de développement de Power Virtual Agent utilise une approche guidée, sans code et interface graphique qui permet aux membres de votre équipe de créer et de gérer facilement un agent virtuel intelligent. Après avoir créé votre chatbot dans le [portail Power Virtual Agents,](https://powervirtualagents.microsoft.com)vous pouvez facilement l’intégrer [à Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Pour plus d’informations sur la mise en place, [voir Power Virtual Agents documentation.](/power-virtual-agents)
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) est un service chatbot construit sur la plateforme Microsoft Power et Bot Framework. Le processus de développement de Power Virtual Agent utilise une approche guidée, sans code et interface graphique qui permet aux membres de votre équipe de créer et de gérer facilement un agent virtuel intelligent. Après avoir créé votre chatbot dans le [portail Power Virtual Agents](https://powervirtualagents.microsoft.com), vous pouvez facilement l’intégrer à [Teams](how-to/add-power-virtual-agents-bot-to-teams.md). Pour plus d’informations sur la mise en Power Virtual Agents [documentation](/power-virtual-agents).
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots avec webhooks et connecteurs
 
-Les webhooks et les connecteurs connectent votre bot à vos services web. À l’aide de webhooks et de connecteurs, vous pouvez créer un bot simple pour une interaction de base, comme la création d’un flux de travail ou d’autres commandes simples. Ils sont disponibles uniquement dans l’équipe où vous les créez et sont destinés à des processus simples spécifiques au flux de travail de votre entreprise. Pour plus d’informations, [voir les webhooks et les connecteurs.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+Les webhooks et les connecteurs connectent votre bot à vos services web. À l’aide de webhooks et de connecteurs, vous pouvez créer un bot simple pour une interaction de base, comme la création d’un flux de travail ou d’autres commandes simples. Ils sont disponibles uniquement dans l’équipe où vous les créez et sont destinés à des processus simples spécifiques au flux de travail de votre entreprise. Pour plus d’informations, [voir les webhooks et les connecteurs](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="advantages-of-bots"></a>Avantages des bots
 
@@ -61,7 +61,7 @@ Les bots dans Microsoft Teams peuvent être intégrés dans une conversation à 
 
 ### <a name="in-a-channel"></a>Dans un canal
 
-Les canaux contiennent des conversations entre plusieurs personnes, même jusqu’à deux milliers. Cela peut donner à votre bot une portée massive, mais les interactions individuelles doivent être concises. Les interactions multi turn traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez utiliser des cartes interactives ou des modules de tâche, ou déplacer la conversation vers une conversation un-à-un pour collecter de nombreuses informations. Votre bot n’a accès qu’aux messages où il se `@mentioned` trouve. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide Graph Microsoft et des autorisations au niveau de l’organisation.
+Les canaux contiennent des conversations entre plusieurs personnes, même jusqu’à deux milliers. Cela peut donner à votre bot une portée massive, mais les interactions individuelles doivent être concises. Les interactions multi turn traditionnelles ne fonctionnent pas. Au lieu de cela, vous devez utiliser des cartes interactives ou des modules de tâche, ou déplacer la conversation vers une conversation un-à-un pour collecter de nombreuses informations. Votre bot n’a accès qu’aux messages où il se trouve `@mentioned`. Vous pouvez récupérer des messages supplémentaires à partir de la conversation à l’aide Graph microsoft et des autorisations au niveau de l’organisation.
 
 Les bots fonctionnent mieux dans un canal dans les cas suivants :
 
@@ -72,15 +72,16 @@ Les bots fonctionnent mieux dans un canal dans les cas suivants :
 
 ### <a name="in-a-group-chat"></a>Dans une conversation de groupe
 
-Les conversations de groupe sont des conversations non thématiques entre trois personnes au minimum. Elles impliquent généralement moins de membres qu’un canal et sont plus éphémères. Comme pour un canal, votre bot n’a accès qu’aux messages où il `@mentioned` se trouve directement.
+Les conversations de groupe sont des conversations non thématiques entre trois personnes au minimum. Elles impliquent généralement moins de membres qu’un canal et sont plus éphémères. Comme pour un canal, votre bot n’a accès qu’aux messages où il se `@mentioned` trouve directement.
 
 Dans les cas où les bots fonctionnent mieux dans un canal, ils fonctionnent également mieux dans une conversation de groupe.
 
 ### <a name="in-a-one-to-one-chat"></a>Dans une conversation un-à-un
 
 La conversation un-à-un est un moyen traditionnel pour un bot de conversation d’interagir avec un utilisateur. Voici quelques exemples de bots de conversation un-à-un :
+
 * Q&A bots
-* bots qui lancent des flux de travail dans d’autres systèmes 
+* bots qui lancent des flux de travail dans d’autres systèmes
 * bots qui indiquent aux personnes
 * Les bots qui prennent des notes avant de créer des chatbots un-à-un, estiment si une interface basée sur la conversation est la meilleure façon de présenter vos fonctionnalités.
 
@@ -90,7 +91,7 @@ Une boîte de dialogue complète entre votre bot et l’utilisateur est un moyen
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Avoir des expériences à plusieurs tour dans la conversation
 
-Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler.** En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
+Une boîte de dialogue complète nécessite que le développeur conserve l’état. Pour quitter cet état, l’utilisateur doit avoir le délai d’accès ou sélectionner **Annuler**. En outre, le processus est fastidieux. Par exemple, consultez le scénario de conversation suivant :
 
 USER : planifier une réunion avec Megan.
 
@@ -170,7 +171,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
     turnContext.Activity.RemoveRecipientMention();
     var text = turnContext.Activity.Text.Trim().ToLower();
-        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
 }
 ```
 
@@ -198,7 +199,7 @@ this.onMessage(async (context, next) => {
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Bots d’appels et de réunions](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [Appels et réunions robots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversations de robots](~/bots/how-to/conversations/conversation-basics.md)
 * [Menus de commande du bot](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Flux d’authentification pour les bots dans Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

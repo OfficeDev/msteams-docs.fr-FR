@@ -1,30 +1,34 @@
 ---
 title: Teams Shared Computer Toolkit vue d’ensemble
 author: zyxiaoyuer
-description: 'Vue d’Teams Shared Computer Toolkit, installation de Teams Shared Computer Toolkit et présentation des fonctionnalités Shared Computer Toolkit d’installation'
+description: Vue d’Teams Shared Computer Toolkit, installation de Teams Shared Computer Toolkit et présentation des fonctionnalités Shared Computer Toolkit de projet
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: fd3a72d3738fb835a5ef1e8092d1e59c06dad454
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398819"
 ---
-
 # <a name="teams-toolkit-overview"></a>Teams Shared Computer Toolkit vue d’ensemble
 
 > [!NOTE]
 > Actuellement, cette fonctionnalité est disponible en prévisualisation **pour les développeurs publics** uniquement.
 
+Teams Shared Computer Toolkit for Microsoft Visual Studio Code vous permet de créer et de déployer des applications Teams avec une identité intégrée, l’accès au stockage cloud, les données de Microsoft Graph et d’autres services dans Azure et Microsoft 365 approche de configuration zéro. Pour Teams développement d’applications, similaire à Teams Shared Computer Toolkit pour Visual Studio, vous pouvez utiliser l’outil [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui se compose de Shared Computer Toolkit `teamsfx`.
+Teams Shared Computer Toolkit vous permet de créer, déboguer et déployer votre application Teams directement à partir Visual Studio Code. Le développement d’applications avec le kit de ressources présente les avantages de :
 
-Teams Shared Computer Toolkit for Microsoft Visual Studio Code vous permet de créer et de déployer des applications Teams avec une identité intégrée, l’accès au stockage cloud, les données de Microsoft Graph et d’autres services dans Azure et Microsoft 365 avec approche de configuration zéro. Pour Teams développement d’applications, similaire à Teams Shared Computer Toolkit pour Visual Studio, vous pouvez utiliser l’outil [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui se compose de Shared Computer Toolkit `teamsfx`.
-Teams Shared Computer Toolkit vous permet de créer, déboguer et déployer votre application Teams directement à partir de Visual Studio Code. Le développement d’applications avec le kit de ressources présente les avantages de :
-
-- Identité intégrée
-- Accès au stockage cloud
-- Données de Microsoft Graph
-- Azure et les services Microsoft 365 avec une approche de configuration zéro
+* Identité intégrée
+* Accès au stockage cloud
+* Données de Microsoft Graph
+* Azure et les services Microsoft 365 avec une approche de configuration zéro
 
 Teams Shared Computer Toolkit tous les outils nécessaires pour créer une application Teams au même endroit.
 
-Pour Teams développement d’applications, similaire à Teams Shared Computer Toolkit pour Visual Studio Code, vous pouvez utiliser l’outil [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui `teamsfx`se compose de Shared Computer Toolkit .
+Pour Teams développement d’applications, similaire à Teams Shared Computer Toolkit pour Visual Studio Code, vous pouvez utiliser l’outil [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui se compose de Shared Computer Toolkit `teamsfx`.
 
 ## <a name="user-journey-of-teams-toolkit"></a>Parcours de l’Teams Shared Computer Toolkit
 
@@ -34,16 +38,15 @@ Teams Shared Computer Toolkit automatise le travail manuel et offre une intégra
 
 Les principaux jalons de ce parcours sont les :
 
-1. Commencez par créer un projet ou essayez un exemple d’Teams application.
+1. Commencez par créer un projet ou essayez un exemple d’Teams app.
 1. Ajoutez des fonctionnalités ou modifiez le fichier manifeste selon vos besoins.
 1. Utilisez Microsoft 365 pour créer et déboguer votre application Teams client.
 1. Utilisez un compte Azure pour mettre en service et déployer votre application dans le cloud.
 1. Publiez votre application sur Teams.
 
-
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>Installer Teams Shared Computer Toolkit pour Visual Studio Code
 
-1. **Ouvrez Visual Studio Code.**
+1. Ouvrez **Visual Studio Code.**
 1. Sélectionnez l’affichage Extensions (**Ctrl+Shift+X** / **⌘⇧-X** ou Afficher **> extensions)** :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="install":::
@@ -61,10 +64,9 @@ Les principaux jalons de ce parcours sont les :
 
 ## <a name="take-a-tour-of-teams-toolkit"></a>Faites une visite guidée de Teams Shared Computer Toolkit
 
-Après Shared Computer Toolkit’installation, l’interface Teams Shared Computer Toolkit’utilisateur s’affiche, comme illustré dans l’image suivante :
+Après Shared Computer Toolkit’installation, vous verrez l’interface Teams Shared Computer Toolkit’utilisateur, comme illustré dans l’image suivante :
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini fonctions":::
-
 
 Vous pouvez sélectionner **Démarrage** rapide pour explorer le Teams Shared Computer Toolkit ou sélectionner Créer une application Teams **pour** créer un projet Teams projet. Si vous avez un projet Teams créé par Teams Shared Computer Toolkit v2.+ ouvert dans Visual Studio Code, vous verrez l’interface utilisateur Teams Shared Computer Toolkit avec toutes les fonctionnalités, comme illustré dans l’image suivante : Vous pouvez sélectionner démarrage rapide pour explorer la  Teams Shared Computer Toolkit, ou **sélectionnez Créer une application Teams pour** créer un Teams projet. Vous pouvez afficher la liste de toutes les fonctionnalités Shared Computer Toolkit lorsque vous créez ou ouvrez un projet existant dans Visual Studio Code barre latérale.
 
@@ -90,19 +92,19 @@ Teams Shared Computer Toolkit vous permet de créer et de personnaliser Teams pr
 
 ### <a name="create-a-new-teams-app"></a>Créer une application Teams de messagerie
 
-Il vous permet de commencer avec Teams développement d’applications en créant un projet Teams à l’aide de Teams Shared Computer Toolkit à l’aide de Créer  un nouveau projet ou créer à partir **d’exemples**.
+Il vous permet de commencer avec le développement Teams d’applications en créant un projet Teams à l’aide de Teams Shared Computer Toolkit à l’aide  de Créer un nouveau projet ou créer à partir **d’exemples**.
 
 ### <a name="add-capabilities"></a>Ajouter des fonctionnalités
 
-Il permet d’ajouter d’autres fonctionnalités de Teams requises à Teams’application au cours du processus de développement.
+Il permet d’ajouter d’autres fonctionnalités Teams requises à Teams appl' pendant le processus de développement.
 
 ### <a name="add-cloud-resources"></a>Ajouter des ressources cloud
 
 Il vous permet d’ajouter, si vous le souhaitez, des ressources cloud adaptées à vos besoins de développement.
 
-### <a name="edit-manifest-file"></a>Modifier le fichier manifeste 
+### <a name="edit-manifest-file"></a>Modifier le fichier manifeste
 
-Il vous permet de modifier l’intégration Teams’application avec Teams client.
+Il vous permet de modifier l’intégration Teams’application Teams client.
 
 ## <a name="deployment"></a>Déploiement
 
@@ -141,7 +143,7 @@ Explorons les fonctionnalités Teams Shared Computer Toolkit de recherche.
 | Teams Shared Computer Toolkit fonctionnalités | Inclut... | Ce que vous pouvez faire |
 | --- | --- | --- |
 | **Comptes** | &nbsp; | &nbsp; |
-| &nbsp; | Microsoft 365 compte | Utilisez votre compte Microsoft 365 avec un abonnement E5 valide pour créer votre application. |
+| &nbsp; | Compte Microsoft 365 | Utilisez votre compte Microsoft 365 avec un abonnement E5 valide pour créer votre application. |
 | &nbsp; | Compte Azure | Utilisez votre compte Azure pour déployer l’application sur Azure. |
 | **Environnement** | &nbsp; | &nbsp; |
 | &nbsp; | local | Déployez votre application dans l’environnement local par défaut avec des configurations d’environnement d’ordinateur local. |
@@ -160,7 +162,7 @@ Explorons les fonctionnalités Teams Shared Computer Toolkit de recherche.
 | &nbsp; | Documentation pour les développeurs | Utilisez le portail du développeur pour configurer et gérer votre application Teams client. |
 | &nbsp; | Guide CI/CD | Automatisez votre flux de travail de développement lors de la création Teams application. |
 | **Aide et commentaires** | &nbsp; | &nbsp; |
-| &nbsp; | Démarrage rapide | Affichez l Teams Shared Computer Toolkit de démarrage rapide dans Visual Studio Code.  |
+| &nbsp; | Démarrage rapide | Affichez l’aide Teams Shared Computer Toolkit démarrage rapide dans Visual Studio Code.  |
 | &nbsp; | Documentation | Sélectionnez cette sélection pour accéder à Microsoft Teams documentation du développeur. |
 | &nbsp; | Signaler les problèmes sur GitHub | Choisissez d’accéder GitHub page et de lever des problèmes. |
 |

@@ -4,17 +4,17 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948634"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399176"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 
 > [!TIP]
-> **Essayez le portail du développeur**: App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+> **Essayez le portail du développeur** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur](https://dev.teams.microsoft.com/).
 
 App Studio vous permet de créer et d’intégrer facilement vos propres applications Microsoft Teams, que vous développiez des applications personnalisées pour votre entreprise ou des applications SaaS pour des équipes du monde entier, en rationalisant la création du manifeste et du package pour votre application et en fournissant des outils utiles comme l'éditeur de cartes et une bibliothèque de contrôle React.
 
@@ -27,7 +27,7 @@ App Studio vous permet de créer et d’intégrer facilement vos propres applica
 
 ## <a name="installing-app-studio"></a>Installation de App Studio
 
-App Studio est une application Teams disponible dans la boutique Teams. Suivez ce lien pour télécharger directement [App Studio.](https://aka.ms/InstallTeamsAppStudio) Vous pouvez également trouver l’application dans l’App Store.
+App Studio est une application Teams disponible dans la boutique Teams. Suivez ce lien pour télécharger directement [App Studio](https://aka.ms/InstallTeamsAppStudio). Vous pouvez également trouver l’application dans l’App Store.
 
 Dans le Store, recherchez App Studio.
 
@@ -108,18 +108,19 @@ Chaque commande nécessite un titre et un ID. La commande peut éventuellement c
 * Description facultative.
 
 > [!NOTE]
-> Pour créer une extension de messagerie à l’aide d’App Studio, voir créer une [extension de messagerie à l’aide d’app studio.](~/resources/create-messaging-extension-using-appstudio.md)
+> Pour créer une extension de messagerie à l’aide d’App Studio, voir [créer une extension de messagerie à l’aide d’app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### <a name="test-and-distribute"></a>Tester et distribuer
 
 Une fois que vous avez fini de définir votre application, la section Tester et distribuer vous permet d’exporter la définition de votre application en tant que fichier zip, qui peut ensuite être partagé et téléchargé dans le client Teams à des moments de test. Cliquer sur Exporter télécharge le fichier zip sous *appname.zip* dans votre répertoire de téléchargement par défaut.
 
 ##### <a name="publish-your-app-to-teams"></a>Publier votre application sur Teams
+
 Sur la page d’accueil de votre projet, vous pouvez télécharger votre application dans une équipe, l’envoyer sur le magasin d’applications personnalisé de votre entreprise pour les utilisateurs de votre organisation ou envoyer votre application à la source de l’application pour tous les utilisateurs Teams. Votre administrateur informatique examine ces envois. Vous pouvez revenir à la page *Publier* pour vérifier l’état de votre envoi et savoir si votre application a été approuvée ou refusée par votre administrateur informatique. C’est également ici que vous pouvez envoyer des mises à jour à votre application ou annuler les envois en cours.
 
 ### <a name="card-editor"></a>Éditeur de carte
 
-Une carte est un conteneur pour des éléments d’informations courts ou associés. Microsoft Teams prend en charge les cartes, qui peuvent avoir plusieurs propriétés et pièces jointes. Les cartes sont un moyen clé pour les bots et les connecteurs de relayer des informations utilisables pour les utilisateurs. 
+Une carte est un conteneur pour des éléments d’informations courts ou associés. Microsoft Teams prend en charge les cartes, qui peuvent avoir plusieurs propriétés et pièces jointes. Les cartes sont un moyen clé pour les bots et les connecteurs de relayer des informations utilisables pour les utilisateurs.
 
 Pour faciliter ce processus et réduire les risques d’erreur, l’onglet Éditeur de cartes vous permet de créer des cartes Hero ou des cartes miniatures à l’aide d’un formulaire, ainsi que de vérifier et de tester la carte résultante (exactement comme l’aurait vu un utilisateur) via un bot. Elle fournit également le code JSON, C# ou Node.js correspondant pour la carte que vous pouvez copier/coller dans le code source de votre application.
 

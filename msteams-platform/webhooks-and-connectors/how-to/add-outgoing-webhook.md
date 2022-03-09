@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 'Onglets teams : message actionnable de webhook sortant vérifiant le webhook'
-ms.openlocfilehash: 2b77118e76bfde8c0fac7c74fce4dab1d78c7dd5
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c849fd10c19a7af198147cb39fa90c2fdd5052a8
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356293"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399106"
 ---
 # <a name="create-outgoing-webhook"></a>Créer des webhooks sortants
 
@@ -124,6 +124,7 @@ Les réponses de vos webhooks sortants s’affichent dans la même chaîne de r�
 ---
 
 > [!NOTE]
+>
 > * Vous pouvez envoyer une carte adaptative, une carte de bannière et des SMS en tant que pièce jointe avec un webhook sortant.
 > * Les cartes prennent en charge la mise en forme. Pour plus d’informations, consultez [Mettre en forme des cartes avec Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 
@@ -198,30 +199,30 @@ var responseMsg = JSON.stringify({
 
 ```json
 {
-    "type": "message",
-    "attachments": [
-        {
-            "contentType": "application/vnd.microsoft.card.adaptive",
-            "content": {
-                "type": "AdaptiveCard",
-                "version": "1.4",
-                "body": [
-                    {
-                        "type": "TextBlock",
-                        "text": "Request sent by: Megan"
-                    },
-                    {
-                        "type": "Image",
-                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "Sample image for Adaptive Card.."
-                    }
-                ]
-            }
-        }
+ "type": "message",
+ "attachments": [
+  {
+   "contentType": "application/vnd.microsoft.card.adaptive",
+   "content": {
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Request sent by: Megan"
+     },
+     {
+      "type": "Image",
+      "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Sample image for Adaptive Card.."
+     }
     ]
+   }
+  }
+ ]
 }
 ```
 
@@ -232,7 +233,6 @@ var responseMsg = JSON.stringify({
 |**Exemple de nom** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Webhooks sortants | Exemples pour créer des bots personnalisés à utiliser dans Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
-
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 

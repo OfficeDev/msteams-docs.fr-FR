@@ -5,16 +5,17 @@ keywords: format des cartes de bots teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356440"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398735"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
 Voici les deux façons d’ajouter une mise en forme de texte enrichi à vos cartes :
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -124,13 +125,14 @@ Les cartes adaptatives supportent les emoji. Le code suivant montre un exemple d
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Carte adaptative avec un emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### <a name="mention-support-within-adaptive-cards"></a>Mentionner la prise en charge dans Cartes adaptatives 
+### <a name="mention-support-within-adaptive-cards"></a>Mentionner la prise en charge dans Cartes adaptatives
 
 Vous pouvez ajouter @mentions dans un corps de carte adaptative pour les bots et les réponses d’extension de messagerie. Pour ajouter @mentions dans les cartes, suivez la même logique de notification et de rendu que celle des mentions de [basées sur les messages dans les conversations de canal et de groupe](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Les bots et les extensions de messagerie peuvent inclure des mentions dans le contenu de la carte dans [éléments](https://adaptivecards.io/explorer/TextBlock.html) TextBlock et [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
+>
 > * [éléments multimédias](https://adaptivecards.io/explorer/Media.html) ne sont actuellement pas pris en charge dans Cartes adaptatives sur la plateforme Teams.
 > * Les mentions de canal et d’équipe ne sont pas prises en charge dans les messages de bot.
 
@@ -173,29 +175,29 @@ Le code suivant montre un exemple de carte adaptative avec une mention :
 }
 ```
 
-### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory Domain Services (Azure AD) ID d’objet et UPN dans la mention utilisateur 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory Domain Services (Azure AD) ID d’objet et UPN dans la mention utilisateur
 
-La plateforme Teams permet de mentionner des utilisateurs avec leur ID d’objet Azure AD et leur nom d’utilisateur principal (UPN), en plus des ID de mention existants. Les bots avec Cartes adaptatives et connecteurs avec des webhooks entrants prennent en charge les deux ID de mention utilisateur. 
+La plateforme Teams permet de mentionner des utilisateurs avec leur ID d’objet Azure AD et leur nom d’utilisateur principal (UPN), en plus des ID de mention existants. Les bots avec Cartes adaptatives et connecteurs avec des webhooks entrants prennent en charge les deux ID de mention utilisateur.
 
 Le tableau suivant décrit les ID de mention utilisateur qui viennent d’être pris en charge :
 
-|Id  | Fonctionnalités de prise en charge |   Description | Exemple |
+|Id  | Fonctionnalités de prise en charge | Description | Exemple |
 |----------|--------|---------------|---------|
-| ID d’objet Azure AD | Bot, Connecteur |  ID d’objet de l’utilisateur Azure AD |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| ID d’objet Azure AD | Bot, Connecteur |  ID d’objet de l’utilisateur Azure AD | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connecteur | UPN de l’utilisateur Azure AD | john.smith@microsoft.com |
 
-#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mention utilisateur dans les bots avec Cartes adaptatives 
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mention utilisateur dans les bots avec Cartes adaptatives
 
-Les bots prennent en charge la mention utilisateur avec l’ID d’objet Azure AD et l’UPN, en plus des ID existants. La prise en charge de deux nouveaux ID est disponible dans les bots pour les sms, le corps Cartes adaptatives et la réponse d’extension de messagerie. Les bots prennent en charge les ID de mention dans les scénarios de conversation et de `invoke` . L’utilisateur reçoit une notification de flux d’activité lorsqu’il est @mentioned avec les ID. 
+Les bots prennent en charge la mention utilisateur avec l’ID d’objet Azure AD et l’UPN, en plus des ID existants. La prise en charge de deux nouveaux ID est disponible dans les bots pour les sms, le corps Cartes adaptatives et la réponse d’extension de messagerie. Les bots prennent en charge les ID de mention dans les scénarios de conversation et de `invoke` . L’utilisateur reçoit une notification de flux d’activité lorsqu’il est @mentioned avec les ID.
 
 > [!NOTE]
 > La mise à jour du schéma et les modifications de l’interface utilisateur/de l’expérience utilisateur ne sont pas nécessaires pour les mentions utilisateur avec Cartes adaptatives dans bot.
 
-##### <a name="example"></a>Exemple 
+##### <a name="example"></a>Exemple
 
 Exemple de mention utilisateur dans les bots avec Cartes adaptatives comme suit :
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -233,15 +235,16 @@ L’image suivante illustre la mention utilisateur avec la carte adaptative dans
 
 ![Mention utilisateur dans le bot avec carte adaptative](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mention utilisateur dans le webhook entrant avec Cartes adaptatives 
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mention utilisateur dans le webhook entrant avec Cartes adaptatives
 
 Les webhooks entrants commencent à prendre en charge la mention utilisateur dans Cartes adaptatives avec l’ID d’objet Azure AD et l’UPN.
 
-> [!NOTE]    
-> * Activez la mention utilisateur dans le schéma des webhooks entrants pour prendre en charge Azure AD’ID d’objet et l’UPN. 
-> * Les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec Azure AD’ID d’objet et l’UPN.      
+> [!NOTE]
+>
+> * Activez la mention utilisateur dans le schéma des webhooks entrants pour prendre en charge Azure AD’ID d’objet et l’UPN.
+> * Les modifications de l’interface utilisateur/expérience utilisateur ne sont pas requises pour les mentions utilisateur avec Azure AD’ID d’objet et l’UPN.
 
-##### <a name="example"></a>Exemple 
+##### <a name="example"></a>Exemple
 
 Exemple de mention utilisateur dans le webhook entrant comme suit :
 
@@ -417,6 +420,7 @@ L’image s’affiche en mode intermédiaire lorsque l’utilisateur sélectionn
 Dans l’affichage intermédiaire, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
 
 > [!NOTE]
+>
 > * La fonctionnalité de zoom avant et de zoom arrière s’applique uniquement aux éléments d’image qui sont du type d’image dans une carte adaptative.
 > * Pour les applications mobiles Teams, la fonctionnalité d’affichage intermédiaire pour les images dans Cartes adaptatives est disponible par défaut. Les utilisateurs peuvent afficher les images de carte adaptative en mode intermédiaire en appuyant simplement sur l’image, que l’attribut `allowExpand` soit présent ou non.
 
@@ -427,7 +431,7 @@ Les cartes de connecteur prennent en charge des formats Markdown et HTML limité
 | Style | Exemple | Markdown |
 | --- | --- | --- |
 | Gras | **text** | `**text**` |
-| Italic | *text* | `*text*` |
+| Italic | _text_ | `*text*` |
 | En-tête (niveaux 1&ndash;3) | **Text** | `### Text`|
 | Barré | ~~text~~ | `~~text~~` |
 | Liste non triée | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -525,7 +529,7 @@ Les cartes de connecteur prennent en charge des formats Markdown et HTML limité
 | Style | Exemple | HTML |
 | --- | --- | --- |
 | Gras | **text** | `<strong>text</strong>` |
-| Italic | *text* | `<em>text</em>` |
+| Italic | _text_ | `<em>text</em>` |
 | En-tête (niveaux 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | Barré | ~~text~~ | `<strike>text</strike>` |
 | Liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -615,7 +619,7 @@ Les balises HTML sont prises en charge pour les cartes simples, telles que les c
 | Style | Exemple | HTML |
 | --- | --- | --- |
 | Gras | **text** | `<strong>text</strong>` |
-| Italic | *text* | `<em>text</em>` |
+| Italic | _text_ | `<em>text</em>` |
 | En-tête (niveaux 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | Barré | ~~text~~ | `<strike>text</strike>` |
 | Liste non triée | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |

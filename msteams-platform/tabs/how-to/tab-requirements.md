@@ -6,8 +6,13 @@ keywords: Canal de groupe onglets teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
+ms.openlocfilehash: eeb83f6bdd335c4d536f18915cff8b04a85761a5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399190"
 ---
-
 # <a name="prerequisites"></a>Conditions préalables
 
 Teams onglets doivent respecter les conditions préalables suivantes :
@@ -26,7 +31,7 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 
 * Vous devez mettre en forme vos onglets en fonction Teams thème, de la conception et de l’intention du client. En règle générale, les onglets fonctionnent mieux lorsqu’ils sont conçus pour répondre à un besoin spécifique et qu’ils se concentrent sur un petit ensemble de tâches ou un sous-ensemble de données pertinentes pour l’emplacement du canal de l’onglet.
 
-* Dans votre page de contenu, ajoutez une référence [Microsoft Teams SDK client JavaScript](/javascript/api/overview/msteams-client) à l’aide de balises de script. Après le chargement de votre page, appelez-la `microsoftTeams.initialize()`, sinon votre page n’est pas affichée.
+* Dans votre page de contenu, ajoutez une référence Microsoft Teams [SDK client JavaScript](/javascript/api/overview/msteams-client) à l’aide de balises de script. Après le chargement de votre page, appelez-la `microsoftTeams.initialize()`, sinon votre page n’est pas affichée.
 
 * Pour que l’authentification fonctionne sur les clients mobiles, vous devez mettre à niveau Teams SDK JavaScript vers au moins la version 1.4.1.
 
@@ -35,7 +40,8 @@ Teams onglets doivent respecter les conditions préalables suivantes :
 * L’onglet Teams MS ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
 
 ## <a name="tools-you-can-use-to-build-tabs"></a>Outils que vous pouvez utiliser pour créer des onglets
-* [Teams Shared Computer Toolkit for Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+
+* [Kit de ressources Microsoft Teams pour Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Extension de kit de ressources Teams pour Visual Studio](../../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>Étape suivante

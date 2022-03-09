@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356419"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399099"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -481,7 +481,7 @@ Cet élément est un tableau (maximum de 16 éléments) avec tous les éléments
 |`context` | tableau d’énumération| 2|| L’ensemble `contextItem` des étendues où un onglet est pris en charge.|
 
 > [!NOTE]
->  La fonctionnalité searchUrl n'est pas disponible pour les développeurs tiers. Si vos onglets nécessitent des informations dépendantes du contexte pour afficher du contenu pertinent ou pour initier un flux d'authentification, Pour plus d'informations, voir [Obtenir un contexte pour votre onglet Microsoft Teams](../../tabs/how-to/access-teams-context.md).
+> La fonctionnalité searchUrl n'est pas disponible pour les développeurs tiers. Si vos onglets nécessitent des informations dépendantes du contexte pour afficher du contenu pertinent ou pour initier un flux d'authentification, Pour plus d'informations, voir [Obtenir un contexte pour votre onglet Microsoft Teams](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>bots
 
@@ -638,7 +638,6 @@ Indique si l'indicateur de chargement doit être affiché ou non lorsqu'une appl
 >[!NOTE]
 >Si vous sélectionnez`showLoadingIndicator` comme true dans le manifeste de votre application, pour charger correctement la page, modifiez les pages de contenu de vos onglets et modules de tâches, comme décrit dans le document [Afficher un indicateur de chargement natif](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
 
-
 ## <a name="isfullscreen"></a>IsFullScreen
 
  **Facultatif**— booléen
@@ -717,6 +716,7 @@ Définissez les propriétés utilisées par votre application pour publier un fl
 **Facultatif**— chaîne
 
 Spécifie l’étendue d’installation définie par défaut pour cette application. L’étendue définie est l’option affichée sur le bouton lorsqu’un utilisateur tente d’ajouter l’application. Les options sont :
+
 * `personal`
 * `team`
 * `groupchat`
@@ -727,14 +727,15 @@ Spécifie l’étendue d’installation définie par défaut pour cette applicat
 **Facultatif**— objet
 
 Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capacité par défaut lorsque l'utilisateur installe l'application. Les options sont les suivantes :
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -761,7 +762,7 @@ Vous pouvez définir l’une des propriétés suivantes :
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 **Facultatif**— booléen
- 
+
 Lorsque la propriété `defaultBlockUntilAdminAction` est définie sur **true**, l’application est masquée par défaut aux utilisateurs jusqu’à ce que l’administrateur l’autorise. Si la valeur est **true**, l’application est masquée pour tous les locataires et tous les utilisateurs finaux. Les administrateurs de locataire peuvent voir l’application dans le Centre d’administration Teams et prendre des mesures pour autoriser ou bloquer l’application. La valeur par défaut est **false**. Pour plus d’informations sur le bloc d’application par défaut, consultez [Masquer l’application Teams jusqu’à ce que l’administrateur approuve](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl

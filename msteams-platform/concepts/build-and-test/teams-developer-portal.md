@@ -5,12 +5,12 @@ keywords: mise en place des équipes du portail de développement
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355712"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399323"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
@@ -18,7 +18,7 @@ Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des dévelo
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Capture d’écran montrant la page d’accueil du portail de développement pour Teams.":::
 
-> [!NOTE] 
+> [!NOTE]
 > Pour l’instant, le portail du développeur n’est pas disponible pour les Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-Haut ou Département de la Défense (DOD).
 
 ## <a name="register-an-app"></a>Inscrire une application
@@ -35,18 +35,18 @@ Le Portail des développeurs propose deux façons d’inscrire une Teams applica
 
 Vous pouvez configurer des environnements et des variables globales pour faciliter la transition de votre application de votre runtime local vers la production. Les variables globales sont utilisées dans tous les environnements.
 
-**Pour configurer un environnement**
+Pour configurer un environnement :
 
 1. Dans le portail du développeur, sélectionnez l’application sur qui vous travaillez.
 2. Go to the **Environments** page and select **+ Add an environment**.
 3. **Sélectionnez + Ajoutez une variable** pour créer des variables de configuration pour votre environnement.
 
-**Pour utiliser des variables**
+Pour utiliser des variables :
 
 Utilisez les noms de variables au lieu de valeurs codées en dur pour définir les configurations de votre application.
 
 1. Entrez `{{` n’importe quel champ dans le portail du développeur. Une dropdown avec toutes les variables que vous avez créées pour l’environnement choisi ainsi que les variables globales s’affiche.  
-1. Avant de télécharger votre package d’application (par exemple, lorsque vous êtes prêt à publier sur le Teams Store), sélectionnez l’environnement que vous souhaitez utiliser. Les configurations de votre application sont automatiquement mises à jour en fonction de l’environnement. 
+1. Avant de télécharger votre package d’application (par exemple, lorsque vous êtes prêt à publier sur le Teams Store), sélectionnez l’environnement que vous souhaitez utiliser. Les configurations de votre application sont automatiquement mises à jour en fonction de l’environnement.
 
 ## <a name="identify-app-owners"></a>Identifier les propriétaires d’applications
 

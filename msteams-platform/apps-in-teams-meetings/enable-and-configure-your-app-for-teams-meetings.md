@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, l’étape de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355798"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398861"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -24,6 +24,7 @@ Pour activer votre application pour les réunions Teams, mettez à jour le manif
 Les fonctionnalités de l’application réunions sont déclarées dans le manifeste de votre application à l’aide `configurableTabs`des tableaux et des `scopes`tableaux `context` . L’étendue définit qui peut accéder et le contexte définit l’endroit où votre application est disponible.
 
 > [!NOTE]
+>
 > * Vous devez mettre à jour le manifeste de votre application avec [le schéma de manifeste](../resources/schema/manifest-schema-dev-preview.md).
 > * Les applications dans les réunions nécessitent une `groupchat` étendue. L’étendue `team` fonctionne pour les onglets dans les canaux uniquement.
 
@@ -78,7 +79,7 @@ Teams réunions fournissent une expérience de collaboration pour votre organisa
 
 Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et des extensions de messagerie. Les utilisateurs ayant des rôles d’organisateur et de présentateur peuvent ajouter des onglets à une réunion.
 
-**Pour ajouter un onglet à une réunion**
+Pour ajouter un onglet à une réunion :
 
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
 1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -87,16 +88,17 @@ Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et de
 
 1. Dans la galerie d’onglets qui s’affiche, sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’onglet.
 
-**Pour ajouter une extension de messagerie à une réunion**
+Pour ajouter une extension de messagerie à une réunion :
 
 1. Sélectionnez les &#x25CF;&#x25CF;&#x25CF; situées dans la zone composer un message de la conversation.
 1. Sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’extension de messagerie.
 
-**Pour ajouter un bot à une réunion**
+Pour ajouter un bot à une réunion :
 
 Dans une conversation de réunion, entrez la **@** clé et sélectionnez **Obtenir des bots**.
 
 > [!NOTE]
+>
 > * La bulle de contenu publie une carte adaptative ou une carte simultanément dans la conversation de réunion accessible aux utilisateurs. Cela aide les utilisateurs lorsque la réunion ou l’application Teams est réduite.
 > * L’identité de l’utilisateur doit être confirmée à l’aide de [l’ssO Onglets](../tabs/how-to/authentication/auth-aad-sso.md). Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de l’API `GetParticipant` .
 > * En fonction du rôle utilisateur, l’application a la possibilité de fournir des expériences spécifiques au rôle. Par exemple, une application de sondage permet uniquement aux organisateurs et aux présentateurs de créer un sondage.
@@ -156,7 +158,7 @@ Pour partager l’intégralité de l’application à l’étape, dans le manife
   ]
 ```
 
-Pour plus d’informations, voir [le manifeste de l’application](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+Pour plus d’informations, voir [le manifeste de l’application](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ##### <a name="share-specific-parts-of-the-app-to-stage"></a>Partager des parties spécifiques de l’application pour la phase
 

@@ -5,12 +5,12 @@ description: Guide de démarrage rapide sur la création d’un onglet de canal 
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b576e2515df65dba06686740508c07a645fb5bd7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355845"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399337"
 ---
 # <a name="create-a-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe
 
@@ -31,24 +31,24 @@ Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’aide [Te
 
 Vous devez connaître les conditions préalables suivantes :
 
-- Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+* Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
     > Si vous n’avez pas de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur. L’abonnement reste actif tant que vous l’utilisez pour le développement continu. Bienvenue [dans le programme Office 365 développeur.](/office/developer-program/microsoft-365-developer-program)
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- N’importe quel éditeur de texte ou IDE. Vous pouvez installer et utiliser [Microsoft Visual Studio Code](https://code.visualstudio.com/download) gratuit.
+* N’importe quel éditeur de texte ou IDE. Vous pouvez installer et utiliser [Microsoft Visual Studio Code](https://code.visualstudio.com/download) gratuit.
 
-- [Node.js/npm](https://nodejs.org/en/). Utilisez la dernière version de LTS. Le nœud Gestionnaire de package (npm) s’installe dans votre système avec l’installation de Node.js.
+* [Node.js/npm](https://nodejs.org/en/). Utilisez la dernière version de LTS. Le nœud Gestionnaire de package (npm) s’installe dans votre système avec l’installation de Node.js.
 
-- Une fois que vous avez installé Node.js, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en entrant les commandes suivantes dans votre invite de commandes :
+* Une fois que vous avez installé Node.js, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en entrant les commandes suivantes dans votre invite de commandes :
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Installez le générateur Microsoft Teams Apps en entrant les commandes suivantes dans votre invite de commandes :
+* Installez le générateur Microsoft Teams Apps en entrant les commandes suivantes dans votre invite de commandes :
 
     ```bash
     npm install generator-teams --global
@@ -173,9 +173,9 @@ En outre, ce projet nécessite que les logiciels suivants sont installés dans v
 
 Vous devez avoir un package d’application pour tester votre onglet dans Teams. Il s’agit d’un dossier zip qui contient les fichiers obligatoires suivants :
 
-- Icône **en couleurs complètes** de 192 x 192 pixels.
-- Icône **de plan transparente de** 32 x 32 pixels.
-- Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Icône **en couleurs complètes** de 192 x 192 pixels.
+* Icône **de plan transparente de** 32 x 32 pixels.
+* Fichier **manifest.json** qui spécifie les attributs de votre application.
 
 Le package est créé par le biais d’une tâche Gulp qui valide le fichier manifest.json et génère le dossier zip dans le répertoire **./package**. Dans l’invite de commandes, entrez la commande suivante :
 
@@ -253,15 +253,15 @@ Vous devez connaître les conditions préalables suivantes :
 - Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
+    > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
 
-- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) dans le coin inférieur gauche de l’application Teams et **recherchez App Studio**. Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez **Ajouter dans la** boîte de dialogue pour l’installer.
+* Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) dans le coin inférieur gauche de l’application Teams et **recherchez App Studio**. Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez **Ajouter dans la** boîte de dialogue pour l’installer.
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+* Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
 
-- Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
+* Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obtenir le code source
 
@@ -280,15 +280,15 @@ Vous pouvez également récupérer le code source en téléchargeant le dossier 
 1. Pour créer et exécuter votre application, appuyez sur **F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage** .
 1. Dans un navigateur, go to the following URLs and verify the application loaded properly:
 
-    - `http://localhost:44355`
-    - `http://localhost:44355/privacy`
-    - `http://localhost:44355/tou`
+    * `http://localhost:44355`
+    * `http://localhost:44355/privacy`
+    * `http://localhost:44355/tou`
 
 ### <a name="review-the-source-code"></a>Passer en revue le code source
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendances `ConfigureServices()` . En outre, le modèle vide n’active pas le traitement du contenu statique par défaut, `Configure()` de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du code suivant :
+Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé * Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendances `ConfigureServices()` . En outre, le modèle vide n’active pas le traitement du contenu statique par défaut, `Configure()` de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du code suivant :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -318,9 +318,9 @@ Ce C# contient une méthode qui est appelée à partir de **Tab.cshtml** lors de
 
 Ce dossier contient les fichiers de package d’application requis suivants :
 
-- Icône **en couleurs complètes** de 192 x 192 pixels.
-- Icône **de plan transparente de** 32 x 32 pixels.
-- Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Icône **en couleurs complètes** de 192 x 192 pixels.
+* Icône **de plan transparente de** 32 x 32 pixels.
+* Fichier **manifest.json** qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams. Lorsqu’un utilisateur choisit d’ajouter ou de mettre à jour votre onglet, Microsoft Teams `configurationUrl` charge le contenu spécifié dans votre manifeste, l’incorpore dans un IFrame et l’restituer dans votre onglet.
 
@@ -352,15 +352,15 @@ Microsoft Teams est un produit basé sur le cloud et nécessite que le contenu d
 
 Pour tester votre onglet, utilisez [ngrok](https://ngrok.com/docs). Les points de terminaison web de votre serveur sont disponibles lorsque ngrok est en cours d’exécution sur votre ordinateur. Dans la version gratuite de ngrok, si vous fermez ngrok, les URL sont différentes lors du prochain démarrage.
 
-- À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante :
+* À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante :
 
     ```bash
     ngrok http https://localhost:44355 -host-header="localhost:44355"
     ```
 
-- Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application lorsqu’elle est en cours d’exécution sur le port 44355. Il doit ressembler à `https://y8rCgT2b.ngrok.io/` **l’endroit où y8rCgT2b** est remplacé par votre URL HTTPS alpha-numérique ngrok.
+* Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application lorsqu’elle est en cours d’exécution sur le port 44355. Il doit ressembler à `https://y8rCgT2b.ngrok.io/` **l’endroit où y8rCgT2b** est remplacé par votre URL HTTPS alpha-numérique ngrok.
 
-- Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
+* Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
 
 ### <a name="update-your-application"></a>Mettre à jour votre application
 
@@ -512,18 +512,18 @@ Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’C# et AS
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>Conditions préalables pour un onglet de groupe ou de canal personnalisé
 
-- Vous devez avoir un client Microsoft 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+* Vous devez avoir un client Microsoft 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
     > [!NOTE]
-    > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/en-us/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
+    > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
 
-- Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) dans le coin inférieur gauche de l’application Teams et **recherchez App Studio**. Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez **Ajouter dans la** boîte de dialogue pour l’installer.
+* Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) dans le coin inférieur gauche de l’application Teams et **recherchez App Studio**. Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez **Ajouter dans la** boîte de dialogue pour l’installer.
 
 En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
 
-- Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+* Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
 
-- Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
+* Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
 
 ### <a name="get-the-source-code"></a>Obtenir le code source
 
@@ -542,9 +542,9 @@ Vous pouvez également récupérer le code source en téléchargeant le dossier 
 1. Pour créer et exécuter votre application, appuyez sur **F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage** .
 1. Dans un navigateur, accédez aux URL suivantes et vérifiez que l’application s’est chargée correctement :
 
-    - `http://localhost:44360`
-    - `http://localhost:44360/privacy`
-    - `http://localhost:44360/tou`
+    * `http://localhost:44360`
+    * `http://localhost:44360/privacy`
+    * `http://localhost:44360/tou`
 
 ### <a name="review-the-source-code"></a>Passer en revue le code source
 
@@ -572,9 +572,9 @@ Dans ASP.NET Core, le dossier racine web est l’endroit où l’application rec
 
 Ce dossier contient les fichiers de package d’application requis suivants :
 
-- Icône **en couleurs complètes** de 192 x 192 pixels.
-- Icône **de plan transparente de** 32 x 32 pixels.
-- Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Icône **en couleurs complètes** de 192 x 192 pixels.
+* Icône **de plan transparente de** 32 x 32 pixels.
+* Fichier **manifest.json** qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet vers Teams.
 

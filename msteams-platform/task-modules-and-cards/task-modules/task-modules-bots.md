@@ -4,15 +4,15 @@ description: Utilisation des modules de tâche avec Microsoft Teams bots, y comp
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: modules de tâche teams bots carte adaptative liens profonds
-ms.openlocfilehash: 39df7f3845cc11e6e15da03c72b0c792a795af35
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 932bcaf858d0788a773b417647a92d2f52e9e45b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355719"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399050"
 ---
 # <a name="use-task-modules-from-bots"></a>Utiliser des modules de tâches à partir de bots
- 
+
 Les modules de tâche peuvent être appelés à partir de bots Microsoft Teams à l’aide de boutons sur les cartes adaptatives et les cartes Bot Framework qui sont hero, thumbnail et Office 365 Connector. Les modules de tâche sont souvent une meilleure expérience utilisateur que plusieurs étapes de conversation. Suivez l’état du bot et autorisez l’utilisateur à interrompre ou annuler la séquence.
 
 Il existe deux façons d’invoquer des modules de tâche :

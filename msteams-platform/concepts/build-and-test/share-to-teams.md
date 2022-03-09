@@ -4,18 +4,19 @@ description: Découvrez comment ajouter le bouton Partager Teams incorporé sur 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Partager Teams-à-Teams
-ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ff558bc78206389fa5e39618488c1929968bf3b2
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355873"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399358"
 ---
 # <a name="create-share-to-teams-button"></a>Créer un bouton de partage pour Teams
 
 Les sites web tiers peuvent utiliser le script de lancement pour incorporer des boutons De partage à Teams sur leurs pages web. Lorsque vous la sélectionnez, elle lance l’expérience de partage à Teams dans une fenêtre pop-up. Cela vous permet de partager un lien directement avec n’importe quelle personne Microsoft Teams canal sans changer de contexte. Ce document vous guide sur la création et l’incorporation d’un bouton Share-to-Teams pour votre site web, la création de l’aperçu de votre site web et l’extension de Share-to-Teams pour l'éducation.
 
 > [!NOTE]
+>
 > * Seules les versions de bureau de MicrosoftEdge&nbsp; et Google Chrome sont pris en charge.
 > * L’utilisation de freemium ou de comptes invités n’est pas prise en charge.  
 
@@ -53,6 +54,7 @@ L’image suivante affiche l’expérience Teams de partage :
       data-icon-px-size="64">
     </div>
     ```
+
 1. Si le lien partagé nécessite l’authentification de l’utilisateur et que l’aperçu de l’URL de votre lien à partager ne s’affiche pas bien dans Teams, vous pouvez désactiver l’aperçu de l’URL `data-preview` `false`en ajoutant le jeu d’attributs à .
 
     ```html
@@ -69,7 +71,7 @@ L’image suivante affiche l’expérience Teams de partage :
 
 Lorsque votre site web est partagé avec Teams, la carte insérée dans le canal sélectionné contient un aperçu de votre site web. Vous pouvez contrôler le comportement de cet aperçu en vous assurant que les métadon données appropriées sont ajoutées au site web en cours de partage, telles que l’URL `data-href` .  
 
-**Pour afficher l’aperçu**
+Pour afficher l’aperçu :
 
 * Vous devez inclure soit une **image miniature**, soit un **titre** et une **description**. Pour obtenir de meilleurs résultats, incluez les trois.
 * L’URL partagée ne nécessite pas d’authentification. Si elle nécessite une authentification, vous pouvez la partager, mais l’aperçu n’est pas créé.
@@ -86,7 +88,7 @@ Vous pouvez utiliser les versions HTML par défaut ou la version Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Partager à Teams pour l'éducation
 
-Pour les enseignants qui utilisent le bouton Partager Teams, il existe une option supplémentaire pour .`Create an Assignment` Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée, en fonction du lien partagé. L’image suivante affiche Share-to-Teams pour l’éducation : 
+Pour les enseignants qui utilisent le bouton Partager Teams, il existe une option supplémentaire pour .`Create an Assignment` Cela vous permet de créer rapidement une affectation dans l’équipe sélectionnée, en fonction du lien partagé. L’image suivante affiche Share-to-Teams pour l’éducation :
 
 ![Partager pour Teams l’éducation popup](~/assets/images/share-to-teams-popup-edu.png)
 

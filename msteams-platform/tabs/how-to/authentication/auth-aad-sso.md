@@ -4,12 +4,12 @@ description: Décrit l'authentification unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API d’authentification unique Microsoft Azure Active Directory Domain Services d’authentification unique Teams (Azure AD)
-ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356104"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398889"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l'authentification unique (SSO) pour les onglets
 
@@ -24,9 +24,7 @@ Les utilisateurs se connectent à Microsoft Teams via leur compte professionnel,
 >
 > ✔Teams JavaScript SDK (_Version_: 1.10 et versions ultérieures) pour que SSO fonctionne dans le panneau latéral de la réunion.
 >
-> Pour une expérience optimale avec Teams, utilisez la dernière version d'iOS et d'Android.
-
-> [!NOTE]
+> Pour une expérience optimale avec Teams, utilisez la dernière version d'iOS et d'Android.[!NOTE]
 > **Démarrage rapide**  
 >
 > Le chemin d’accès le plus simple pour commencer à utiliser l’authentification unique est le kit de ressources Teams pour Microsoft Visual Studio Code. Pour plus d'informations, consultez [SSO avec la boîte à outils Teams et Visual Studio Code pour les onglets](../../../toolkit/visual-studio-code-tab-sso.md)
@@ -142,9 +140,9 @@ Utilisez le code suivant pour ajouter de nouvelles propriétés à votre manifes
 * **WebApplicationInfo** est le parent des éléments suivants :
 
 > [!div class="checklist"]
+>
 > * **id** – ID client de l'application. Il s'agit de l'ID d'application que vous avez obtenu lors de l'inscription de l'application auprès d'Azure AD.
 >* **ressource** – Le domaine et le sous-domaine de votre application. Il s'agit du même URI (y compris le `api://` protocole) que vous avez enregistré lors de la création de votre `scope` à l'étape 6. Vous ne devez pas inclure le `access_as_user` chemin dans votre ressource. La partie domaine de cet URI doit correspondre au domaine, y compris les sous-domaines, utilisés dans les URL de votre manifeste d'application Teams.
-
 > [!NOTE]
 >
 >* La ressource d’une application Azure AD est généralement la racine de son URL de site et de l’ID d’application (par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). Cette valeur est également utilisée pour garantir que votre demande provient du même domaine. Assurez-vous que le `contentURL` pour votre onglet utilise les mêmes domaines que votre propriété de ressource.
@@ -233,6 +231,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## <a name="code-sample"></a>Exemple de code
