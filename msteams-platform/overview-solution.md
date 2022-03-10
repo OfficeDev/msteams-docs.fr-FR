@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 6bee9d01aa89d04eccbc1f20e9a7fca1efb62ab3
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898216"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398721"
 ---
 # <a name="the-teams-solution"></a>La solution Teams
 
@@ -21,7 +21,7 @@ La plateforme Microsoft Teams est une plateforme puissante et flexible qui vous 
 
 Vous avez affiché les offres Teams. Vous pouvez désormais les mapper aux besoins de l’utilisateur. Revoyons le scénario.
 
-Le développeur de l’agence Tours and Travel souhaite créer une application pour ses utilisateurs, les voyageur. L’application doit :
+Le développeur de l’agence Tours and Travel souhaite créer une application pour ses utilisateurs, les travelers. L’application doit :
 
 - Vérifiez et envoyez les prévisions aux voyageurs inscrits auprès de l’agence de voyage.
 - Informez les utilisateurs un jour avant la date de départ afin qu’ils puissent planifier.
@@ -34,7 +34,6 @@ Collez et mappez les exigences aux fonctionnalités Teams :
 | **Intégration** | &nbsp; | &nbsp; | Microsoft Graph, API Météo |
 | **Scope** | &nbsp; | Application personnelle | &nbsp; |
 | **Point d'intégration** | &nbsp; | Conversation | &nbsp; |
-|
 
 La **solution d’application Teams** : un *bot de conversation personnelle* de l’application Teams qui vérifie et *envoie des notifications de prévision* à *des utilisateurs inscrits* avant leur date de voyage.
 
@@ -70,7 +69,7 @@ En tant que plateforme de création d’applications, Teams offre la gamme compl
 De la conception à la création et à la distribution d’une application Teams, vous pouvez utiliser différents outils et services. Voici un exemple de flux de développement :
 
 1. Planifiez votre projet et déterminez l’exigence.
-1. Concevoir l’application. Utilisez le Kit d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir l’interface utilisateur des onglets.
+1. Concevez l’application. Utilisez le Kit d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir l’interface utilisateur des onglets.
 1. Créez l’application avec JavaScript à l’aide du Kit de ressources Teams.
 1. Étendez les fonctionnalités en ajoutant des fonctionnalités Teams et des données M365 avec Microsoft Graph.
 1. Testez l’application sur un locataire de développeur avec des exemples de données utilisateur.
@@ -122,7 +121,7 @@ De la conception à la création et à la distribution d’une application Teams
         **Créer votre application**
     :::column-end:::
     :::column span="2":::
-        Vous recherchez de l’inspiration pour le développement d’applications ? Parcourez notre liste de scénarios réels et de solutions industrielles avec des maquettes de concept haute fidélité pour comprendre les différentes façons dont les applications Teams peuvent aider vos utilisateurs.
+        Vous recherchez de l’inspiration pour le développement d’applications ? Parcourez notre liste de scénarios réels et de solutions du secteur avec un concept haute fidélité fictif pour comprendre les différentes façons dont une application Teams peut aider vos utilisateurs.
 
         > [!div class="nextstepaction"]
         > [Voir les scénarios d’application](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -182,7 +181,7 @@ De la conception à la création et à la distribution d’une application Teams
         **Un petit code suffit**
     :::column-end:::
     :::column span="2":::
-        Vous n’avez pas besoin d’être un programmeur expert pour créer une application Teams remarquable. Essayez l’une des nombreuses solutions à faible code.
+        Vous n’avez pas besoin d’être un programmeur expert pour créer une application Teams exceptionnelle. Essayez l’une des solutions à faible code.
 
         > [!div class="nextstepaction"]
         > [Créer une application à faible code](samples/teams-low-code-solutions.md)
