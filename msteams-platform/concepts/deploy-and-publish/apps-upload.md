@@ -2,11 +2,16 @@
 title: Téléchargez votre application personnalisée
 description: Découvrez comment charger votre application dans Microsoft Teams. Le chargement latéral est courant lors du test et du débogage d'une application pendant le développement.
 ms.topic: how-to
-author: KirtiPereira
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356279"
 ---
-
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
 Vous pouvez télécharger les applications Microsoft Teams sans avoir à les publier dans votre organisation ou dans le magasin Teams. Cela a du sens dans les scénarios suivants :
@@ -58,7 +63,7 @@ Vous n'avez pas besoin de charger à nouveau votre application si vous apportez 
 Pour supprimer votre application, cliquez avec le bouton droit sur l'icône de l'application dans Teams et sélectionnez **Désinstaller**.
 
 > [!NOTE]
-> Vous ne pouvez pas supprimer entièrement l'activité personnelle du bot. Si vous supprimez l'application et l'ajoutez à nouveau, la nouvelle communication avec le bot s'ajoute à la conversation précédente avec lui.
+> Vous ne pouvez pas supprimer entièrement l’activité personnelle du bot. Si vous supprimez l’application et l’ajoutez à nouveau, la nouvelle communication avec le bot s’ajoute à la conversation précédente avec lui.
 
 ## <a name="next-step"></a>Étape suivante
 
