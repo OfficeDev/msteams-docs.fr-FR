@@ -5,12 +5,12 @@ description: Planifiez votre application, comprenez votre utilisateur et ses bes
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898153"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399057"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
@@ -64,7 +64,7 @@ Une [application personnelle](../../concepts/design/personal-apps.md)est un espa
 
 #### <a name="tabs"></a>Onglets
 
-Affichez votre contenu web dans un [onglet](../../tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
+Affichez votre contenu web basé dans un [onglet](../../tabs/what-are-tabs.md) où les utilisateurs peuvent discuter et travailler dessus ensemble.
 
    :::column-end:::
 
@@ -163,7 +163,7 @@ L’API [Microsoft Graph pour Teams](/graph/teams-concept-overview) permet d’a
 
 > [!NOTE]
 > Le magasin Teams a évolué :
-> 
+>
 > Auparavant, les applications métier étaient mises à jour en sélectionnant les points de suspension sur la vignette. Avec l’expérience mise à jour du Magasin Teams, vous pouvez maintenant mettre à jour les applications métier en vous connectant au [centre d’administration Teams](https://admin.teams.microsoft.com).
 
 ### <a name="app-scope"></a>Étendue de l’application
@@ -173,7 +173,7 @@ Votre application peut avoir l’une des étendues suivantes :
 - **Expérience d’application personnelle**: une application personnelle est un espace dédié ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités importantes pour eux.
 - **Expérience d’application partagée**: l’équipe, le canal et la conversation sont des espaces de collaboration. Les applications de ces contextes sont accessibles à tous les utilisateurs de cet espace. Les espaces de collaboration se concentrent généralement sur les flux de travail pour les interactions de votre application ou sur le déverrouillage de nouvelles interactions sociales.
 
-Une application peut exister dans différentes étendues. Par exemple :
+Une application peut exister dans différentes étendues. Par exemple :
 
 - Votre application peut afficher des données dans un emplacement partagé central, c’est-à-dit un onglet.
 - Il peut également présenter ces mêmes informations par le biais d’une interface conversationnelle personnelle, c’est-à-d., un bot.
