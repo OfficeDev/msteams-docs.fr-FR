@@ -6,24 +6,24 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: fonctionnalité d’appareil d’extensibilité des points d’entrée
-ms.openlocfilehash: 904b2b0ccf9ed815cbe750514818289b86a2f58b
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898044"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399169"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
 La création d’une application Teams exceptionnelle consiste à trouver la bonne combinaison de fonctionnalités pour répondre aux besoins de votre utilisateur. La conception, les fonctionnalités et les capacités d'une application découlent de cet objectif.
 
-Au fond, Teams est une plateforme de collaboration. Il s’agit également d’une plateforme sociale, est multiplateforme en mode natif, se trouve au cœur d’Office 365 et offre un canevas personnel pour vous permettre de créer des applications.
+Au fond, Teams est une plateforme de collaboration. Il s’agit également d’une plateforme sociale, une multiplateforme en mode natif, qui se trouve au cœur d’Office 365 et offre un canevas personnel pour vous permettre de créer des applications.
 
 Dans cette section, découvrez comment :
 
- - Identifiez et mappez les cas d’utilisation aux fonctionnalités Teams.
- - Utilisez la liste de vérification de planification.
- - Planifiez au-delà du déploiement de l’application.
+* Identifiez et mappez les cas d’utilisation aux fonctionnalités Teams.
+* Utilisez la liste de vérification de planification.
+* Planifiez au-delà du déploiement de l’application.
 
 ## <a name="plan-with-teams"></a>Planifier avec Teams
 
@@ -31,28 +31,28 @@ Teams en tant que plateforme vous offre des kits de ressources, des bibliothèqu
 
 :::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration montre la planification de votre application" border="true":::
 
-- [Avant de créer](#before-you-build)
-- [Pendant la build](#during-build)
-- [Post-build](#post-build)
-- [Liste de vérification de planification](../concepts/design/planning-checklist.md)
+* [Avant de créer](#before-you-build)
+* [Pendant la build](#during-build)
+* [Post-build](#post-build)
+* [Liste de vérification de planification](../concepts/design/planning-checklist.md)
 
 ### <a name="before-you-build"></a>Avant de créer
 
 Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs de la façon dont une application Teams peut vous aider. Créez votre cas d’usage autour du problème, déterminez comment une application peut le résoudre et dessinez une solution.
 
-- **Comprendre votre cas d’utilisation et les fonctionnalités d’application Teams**: comprendre les besoins de votre utilisateur et identifier les fonctionnalités appropriées.
+* **Comprendre votre cas d’utilisation et les fonctionnalités d’application Teams**: comprendre les besoins de votre utilisateur et identifier les fonctionnalités appropriées.
 
-- **Mapper vos cas d’usage**: mappez les cas d’usage courants aux fonctionnalités Teams en fonction des exigences, telles que le partage, la collaboration, les flux de travail, les plateformes sociales pertinentes, etc.
+* **Mapper vos cas d’usage**: mappez les cas d’usage courants aux fonctionnalités Teams en fonction des exigences, telles que le partage, la collaboration, les flux de travail, les plateformes sociales pertinentes, etc.
 
-- **Planifier des onglets réactifs pour Teams mobile**: cela couvre les scénarios courants et aide à planifier des applications pour Teams mobile.
+* **Planifier des onglets réactifs pour Teams mobile**: cela couvre les scénarios courants et aide à planifier des applications pour Teams mobile.
 
 ### <a name="during-build"></a>Pendant la build
 
-- **Créer et générer un projet d’application**: avec Teams, vous pouvez choisir l’environnement de génération qui correspond le mieux aux besoins de votre application. Utilisez le Kit de ressources Teams ou d’autres Kits de développement logiciel (SDK), tels que C#, Blazor, Node.js, etc. pour commencer.
+* **Créer et générer un projet d’application**: avec Teams, vous pouvez choisir l’environnement de génération qui correspond le mieux aux besoins de votre application. Utilisez le Kit de ressources Teams ou d’autres Kits de développement logiciel (SDK), tels que C#, Blazor, Node.js, etc. pour commencer.
 
-- **Concevoir l’interface utilisateur de votre application**: utilisez le Kit de ressources d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir la disposition de votre application.
+* **Concevoir l’interface utilisateur de votre application**: utilisez le Kit de ressources d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir la disposition de votre application.
 
-- **Utiliser Teams en tant que plateforme**: la plateforme Teams vous aide à créer une application unique ou multi-capacité. Votre application Teams repose sur les produits et services intégrés qui renforcent l’expérience de l’application.
+* **Utiliser Teams en tant que plateforme**: la plateforme Teams vous aide à créer une application unique ou multi-capacité. Votre application Teams repose sur les produits et services intégrés qui renforcent l’expérience de l’application.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams." border="true":::
 
@@ -60,12 +60,12 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 
     Ensemble, ces fonctionnalités donnent vie à votre solution d’application.
 
-- **Intégrer des fonctionnalités d’appareil**: vous pouvez intégrer les fonctionnalités natives de l’appareil dans votre application, telles que l’appareil photo, la QR ou le scanneur de codes-barres, la galerie de photos, le microphone et l’emplacement.
+* **Intégrer des fonctionnalités d’appareil**: vous pouvez intégrer les fonctionnalités natives de l’appareil dans votre application, telles que l’appareil photo, la QR ou le scanneur de codes-barres, la galerie de photos, le microphone et l’emplacement.
 
 ### <a name="post-build"></a>Post-build
 
-- Intégrez votre application à Teams et à d’autres applications, telles que Microsoft 365, Microsoft Graph, etc.
-- Utilisez Developer Portal pour configurer, gérer et déployer votre application.
+* Intégrez votre application à Teams et à d’autres applications, telles que Microsoft 365, Microsoft Graph, etc.
+* Utilisez Developer Portal pour configurer, gérer et déployer votre application.
 
 <details>
 <summary><b>En savoir plus sur Cloud de la communauté du secteur public (GCC)</b></summary>
@@ -78,7 +78,7 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 |-------------|---------|---|---|
 | Applications appartenant à Teams comme dans les applications développées en interne | ✔️ L’application est activée si elle a GCC. | ✔️ L’application est activée si elle a GCC-High. | ✔️ L’application est activée si elle possède un DOD. |
 | Applications Microsoft | ✔️ Applications Microsoft conformes à GCC | ✔️ Applications Microsoft conformes à GCC-High | ✔️ Applications Microsoft conformes à DOD |
-| Applications 3p ou tierces | ✔️ Des applications tierces sont disponibles. Désactivé par défaut et l’administrateur du locataire utilise sa propre discrétion pour l’activer. | ❌ | ❌ |
+| Applications 3p ou tierces | ✔️ Des applications tierces sont disponibles. Désactivées par défaut et l’administrateur client utilise sa propre discrétion pour les activer. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Applications de tabulation personnalisées ou métier |  ✔️ | ✔️ | ✔️ |
 | Chargement indépendant d’applications | ✔️ | ❌ | ❌ |
@@ -88,10 +88,10 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 
 La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :
 
-- Pour les applications tierces, consultez [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion](../apps-in-teams-meetings/meeting-app-extensibility.md).
-- Pour les bots, consultez [créer votre premier bot conversationnel pour Teams](../get-started/first-app-bot.md), [concevoir votre bot Teams](../bots/design/bots.md), [ajouter des bots aux applications Microsoft Teams](../resources/bot-v3/bots-overview.md)et [bots dans Teams](../bots/what-are-bots.md).
-- Pour le chargement indépendant des applications, consultez [permettre à votre application Teams d’être personnalisée](../concepts/design/enable-app-customization.md), [distribuer votre application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)et [Charger votre application dans Teams](../concepts/deploy-and-publish/apps-upload.md).
-- Pour les connecteurs personnalisés, consultez [créer des connecteurs Office 365 pour Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+* Pour les applications tierces, consultez [applications web](../samples/integrating-web-apps.md) et [extensibilité des applications de réunion](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* Pour les bots, consultez [créer votre premier bot conversationnel pour Teams](../get-started/first-app-bot.md), [concevoir votre bot Teams](../bots/design/bots.md), [ajouter des bots aux applications Microsoft Teams](../resources/bot-v3/bots-overview.md)et [bots dans Teams](../bots/what-are-bots.md).
+* Pour le chargement indépendant des applications, consultez [permettre à votre application Teams d’être personnalisée](../concepts/design/enable-app-customization.md), [distribuer votre application Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)et [Charger votre application dans Teams](../concepts/deploy-and-publish/apps-upload.md).
+* Pour les connecteurs personnalisés, consultez [créer des connecteurs Office 365 pour Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 </details>
 
@@ -102,6 +102,6 @@ La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DO
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Liste de vérification de planification](../concepts/design/planning-checklist.md)
-- [Considérations relatives à l’intégration de Teams](../samples/integrating-web-apps.md)
-- [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)
+* [Liste de vérification de planification](../concepts/design/planning-checklist.md)
+* [Considérations relatives à l’intégration de Teams](../samples/integrating-web-apps.md)
+* [Créer votre première application Microsoft Teams de messagerie](../build-your-first-app/build-first-app-overview.md)

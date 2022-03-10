@@ -3,19 +3,19 @@ title: Scènes personnalisées en mode Ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0f2f57cb36ba7caed7acaffa3bcfc1e2e57c59c2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059664"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356083"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
 Les scènes personnalisées en mode Ensemble dans Microsoft Teams fournissent un environnement de réunion immersif et attrayant avec les actions suivantes :
 
-* Rassemblez les personnes et encouragez-les à activer leur vidéo. 
-* Combinez numériquement les participants dans une scène virtuelle unique. 
+* Rassemblez les personnes et encouragez-les à activer leur vidéo.
+* Combinez numériquement les participants dans une scène virtuelle unique.
 * Placez les flux vidéo des participants dans des sièges pré-déterminés conçus et corrigés par le créateur de la scène.
 
 Dans les scènes personnalisées du mode Ensemble, la scène est un artefact. La scène est créée par le développeur de la scènes à l'aide du studio de scène Microsoft. Dans une scène conçue, les participants disposent de sièges avec des flux vidéo. Les vidéos sont restituer dans ces sièges. Nous vous recommandons les applications de scène uniquement car l'expérience avec ces applications est claire.
@@ -27,7 +27,7 @@ Le processus suivant donne une vue d'ensemble de la création d'une application 
 Une application de scène uniquement est toujours une application dans Microsoft Teams. Le studio de scène gère la création de package d’application en arrière-plan. Plusieurs scènes d’un package d’application unique s’affichent sous la forme d’une liste plate pour les utilisateurs.
 
 > [!NOTE]
-> Les utilisateurs ne peuvent pas lancer le mode Ensemble à partir d’un appareil mobile. Toutefois, quand un utilisateur rejoint une réunion via mobile et que le mode Ensemble est allumé à partir du bureau, les utilisateurs mobiles qui ont allumé la vidéo apparaissent en mode Ensemble sur le bureau. 
+> Toutefois, quand un utilisateur rejoint une réunion via mobile et que le mode Ensemble est allumé à partir du bureau, les utilisateurs mobiles qui ont allumé la vidéo apparaissent en mode Ensemble sur le bureau.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -54,7 +54,7 @@ Microsoft dispose d’un studio de scène qui vous permet de créer des scènes.
 
 Une scène dans le contexte du studio de scène est un artefact qui contient les éléments suivants :
 
-* Sièges réservés aux organisateurs et présentateurs de réunion. Le présentateur ne fait pas référence à l’utilisateur qui partage activement. Il fait référence au [rôle de réunion](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Sièges réservés aux organisateurs et présentateurs de réunion. Le présentateur ne fait pas référence à l’utilisateur qui partage activement. Il fait référence au [rôle de réunion](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Siège et image pour chaque participant avec une largeur et une hauteur réglables. Seul le format PNG est pris en charge pour l’image.
 
@@ -66,7 +66,7 @@ L’image suivante montre chaque siège représenté comme un avatar pour la cr�
 
 ![Studio de scène](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**Pour créer une scène à l’aide du studio de scène**
+Pour créer une scène à l'aide du studio de scène, procédez comme suit :
 
 1. Accédez à [Éditeur de scenes : portail des développeurs Teams](https://dev.teams.microsoft.com/scenes).
 
@@ -86,7 +86,7 @@ L’image suivante montre chaque siège représenté comme un avatar pour la cr�
     ![Ajouter des images dans l’environnement](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * Vous pouvez télécharger [ fichiersSampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) et [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) avec les images.
+    >Vous pouvez télécharger [ fichiersSampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) et [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) avec les images.
 
 1. Sélectionnez l’image que vous avez ajoutée.
 
@@ -212,7 +212,7 @@ Maintenant que vous avez parcouru l’exemple scene.json, vous pouvez activer le
 
 Obtenez plus d’informations sur la façon dont un utilisateur s’engage avec des scènes dans des scènes personnalisées du mode Ensemble.
 
-**Pour sélectionner des scènes et activer des scènes personnalisées en mode Ensemble**
+Pour sélectionner des scènes et activer des scènes personnalisées en mode Ensemble, procédez comme suit :
 
 1. Créez une réunion de test.
 

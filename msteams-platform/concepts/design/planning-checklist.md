@@ -5,12 +5,12 @@ description: "Questions à prendre en compte lors de la planification de votre a
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 8b8f60909f6e88caea46e38b21735cf2851036ed
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898189"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399316"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 
@@ -34,7 +34,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | 3 | Utilisent-ils des équipes et des canaux ou principalement des conversations de groupe ? |
 | 4 | Quel est le niveau de sophistication technique de vos principaux utilisateurs ? |
 | 5 | Vous avez besoin d'une expérience d'intégration complète ou quelques conseils peuvent suffire ? |
-|
+
 </details>
 <br>
 <details>
@@ -45,7 +45,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | 1 | Quels sont les avantages et les inconvénients du système d'état actuel utilisé par vos utilisateurs ? |
 | 2 | Quels sont les problèmes auxquels sont confrontés vos utilisateurs et que vous souhaitez résoudre ? |
 | 3 | Quelles sont les fonctionnalités ou les capacités que vos utilisateurs apprécient dans leur façon actuelle d'effectuer le processus ? |
-|
+
 </details>
 <br>
 <details>
@@ -57,7 +57,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | 2 | Qui est propriétaire des données du back-end (internes ou tierces) ? |
 | 3 | Y a-t-il des pare-feu qui ont un impact sur le fonctionnement de l'application ? |
 | 4 | Existe-t-il des API pour accéder aux données dont vous avez besoin pour le fonctionnement de votre application ? |
-|
+
 </details>
 <br>
 <details>
@@ -69,7 +69,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | 2 | Y a-t-il des informations d’identification personnelle impliquées ? |
 | 3 | Les interactions seront-elles également basées sur les rôles des utilisateurs ? |
 | 4 | Des utilisateurs externes auront-ils accès à l'application ? |
-|
+
 </details>
 <br>
 <details>
@@ -81,7 +81,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | 2 | Si vous partagez des cartes avec une extension de messagerie, est-il judicieux d'ajouter un petit lien vers une page d'information pour présenter aux utilisateurs les autres possibilités offertes par votre application ? |
 | 3 | Vous attendez-vous à ce que la plupart des gens aient déjà une idée de ce à quoi sert votre application, ou qu'ils aient déjà utilisé vos services dans un autre contexte ? |
 | 4 | Viennent-ils sur votre application sans aucune connaissance préalable ? |
-|
+
 </details>
 <br>
 <details>
@@ -92,7 +92,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | 1 | Des interactions individuelles avec l'application sont-elles nécessaires pour des raisons de confidentialité ou autres ? Par exemple, la vérification du solde des congés ou d'autres informations privées. |
 | 2 | Y aura-t-il une collaboration entre des utilisateurs qui n'ont peut-être pas d'équipes communes ? Par exemple, trouver les événements à venir au sein d'une entreprise. |
 | 3 | Y a-t-il des notifications ou des messages personnalisés qui devront être envoyés à un utilisateur tout au long de l'expérience de l'application Teams ? |
-|
+
 </details>
 <br>
 <details>
@@ -100,10 +100,10 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 
 | # | Facteurs |
 | --- | --- |
-| 1 | Les informations présentées par l'application, que ce soit sous forme d'onglet ou par le biais d'un robot, sont-elles pertinentes et utiles pour la plupart des membres d'une équipe ? Par exemple, application Scrum. |
+| 1 | Les informations présentées par l’application, sous l’onglet ou via un bot, sont-elles pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, l’application Scrum. |
 | 2 | Le contexte de l'application pourrait-il changer en fonction de l'équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes selon les équipes. |
-| 3 | Est-il possible que tous les membres d'un persona qui ont besoin de collaborer fassent partie d'une seule et même équipe ? Par exemple, les agents travaillant sur un ticket. |
-|
+| 3 | Est-il possible que tous les membres d’un personnage qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket. |
+
 </details>
 <br>
 <details>

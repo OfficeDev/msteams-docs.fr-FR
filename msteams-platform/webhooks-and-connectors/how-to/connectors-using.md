@@ -5,12 +5,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: connecteur Office365 teams
-ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355635"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398875"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -44,6 +44,7 @@ Pour afficher la liste à sélection multiple dans le style compact, spécifiez 
 Pour plus d’informations sur les actions de carte de connecteur, consultez [Actions.](/outlook/actionable-messages/card-reference#actions)
 
 > [!NOTE]
+>
 > * Spécifier `compact` pour la propriété `style` dans Microsoft Teams revient à spécifier `normal` pour la propriété `style` dans Microsoft Outlook.
 > * Pour l’action HttpPOST, le jeton du porteur est inclus dans les demandes. Ce jeton inclut l’identité Microsoft Azure Active Directory (Azure AD) de l’utilisateur Office 365 qui a pris la mesure.
 
@@ -187,14 +188,15 @@ Pour publier un message sur le webhook avec PowerShell, procédez comme suit :
 
 1. Vérifiez le canal Microsoft Teams associé à l’URL de webhook. Vous pouvez voir la nouvelle carte publiée sur le canal. Avant d’utiliser le connecteur pour tester ou publier votre application, vous devez effectuer les opérations suivantes :
 
-    - [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Modifiez la `icons` partie du manifeste sur les noms de fichier des icônes au lieu des URL.
+    * [Incluez deux icônes](../../concepts/build-and-test/apps-package.md#app-icons).
+    * Modifiez la `icons` partie du manifeste sur les noms de fichier des icônes au lieu des URL.
 
 ---
 
 ## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>Envoyer des cartes adaptatives à l'aide d'un Webhook entrant
 
 > [!NOTE]
+>
 > * Tous les éléments de schéma de carte adaptative native, à l’exception de `Action.Submit`, sont entièrement pris en charge.
 > * Les actions prises en charge sont [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), et [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
