@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: high
 keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081134"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399379"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -19,7 +19,7 @@ Avant d’identifier les différents types de cartes, sachez comment créer une 
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>Créer une carte de bannière, une carte miniature ou une carte adaptative
 
-**Pour créer une carte de bannière, une carte miniature ou une carte adaptative à partir d’App Studio**
+Pour créer une carte de bannière, une carte miniature ou une carte adaptative à partir d’App Studio :
 
 1. Accédez à **App Studio** depuis Teams.
 1. Sélectionnez **Éditeur de carte**.
@@ -85,7 +85,7 @@ La carte peut contenir une image incorporée en incluant un lien vers l’image 
 
 La taille des images est augmentée ou réduite afin de maintenir les proportions pour couvrir la zone d’image. Les images sont ensuite rognées à partir du centre pour obtenir les proportions appropriées pour la carte.
 
-Les images doivent être au maximum de 1024 × 1024 et au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
+Les images doivent être au maximum 1024×1024 et au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
 Le tableau suivant fournit les propriétés des images de carte en incorporée :
 
@@ -111,7 +111,7 @@ Après avoir identifié les propriétés communes de toutes les cartes, vous pou
 
 ## <a name="adaptive-card"></a>Carte adaptative
 
-Une carte adaptative est une carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de reconnaissance vocale, d’images, de boutons et de champs d’entrée. Pour plus d’informations, voir [Cartes adaptatives](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
+Une carte adaptative est une carte personnalisable qui peut contenir n’importe quelle combinaison de texte, de parole, d’images, de boutons et de champs d’entrée. Pour plus d’informations, consultez [Cartes adaptatives](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### <a name="support-for-adaptive-cards"></a>Prise en charge des cartes adaptatives
 
@@ -122,6 +122,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * La plateforme Teams prend en charge la version 1.4 ou antérieure des fonctionnalités de la carte adaptative pour les cartes envoyées par le bot et les extensions de messagerie basées sur l’action.
 > * La plateforme Teams prend en charge la version 1.3 ou antérieure des fonctionnalités de la carte adaptative pour d’autres capacités, telles que les cartes envoyées par l’utilisateur (extensions de messagerie basées sur la recherche et déploiement de liens), les onglets et les modules de tâches.
 > * Le style d’action positif ou destructif n’est pas pris en charge dans les cartes adaptatives sur la plateforme Teams.
@@ -297,7 +298,7 @@ Le tableau suivant fournit les propriétés d’une carte de bannière :
 | sous-titre | Texte enrichi  | Sous-titre de la carte. Deux lignes maximum.|
 | text | Texte enrichi  | Le texte apparaît sous le sous-titre. Pour les options de mise en forme, voir [mise en forme de carte](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 16:9. |
-| boutons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. Six maximum. |
+| boutons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle.Six maximum. |
 | appuyer | Objet Action | Activé lorsque l’utilisateur appuie sur la carte elle-même. |
 
 ### <a name="example-of-a-hero-card"></a>Exemple de carte de bannière
@@ -362,7 +363,7 @@ Le tableau suivant fournit les propriétés d’une carte de liste :
 | --- | --- | --- |
 | title | Texte enrichi  | Titre de la carte. 2 lignes maximum.|
 | éléments | Tableau d’éléments de liste | Ensemble d’éléments applicables à la carte.|
-| boutons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. 6 maximum. |
+| boutons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. Maximum 6. |
 
 ### <a name="example-of-a-list-card"></a>Exemple de carte de liste
 
@@ -447,7 +448,7 @@ Le tableau suivant fournit les propriétés de la carte Connecteur Office 365 
 
 Les cartes Connecteur Office 365 fonctionnent correctement dans Microsoft Teams, y compris les actions [ `ActionCard` ](/outlook/actionable-messages/card-reference#actioncard-action).
 
-La différence importante entre l’utilisation de cartes de connecteur à partir d’un connecteur et l’utilisation de cartes de connecteur dans votre bot est la gestion des actions de carte. Le tableau suivant répertorie la différence :
+La différence importante entre l’utilisation de cartes de connecteur à partir d’un connecteur et l’utilisation de cartes de connecteur dans votre bot est la gestion des actions de carte. Le tableau suivant répertorie la différence :
 
 | Connector | Bot |
 | --- | --- |
@@ -659,7 +660,7 @@ Le tableau suivant fournit les propriétés d’une carte miniature :
 | sous-titre | Texte enrichi  | Sous-titre de la carte. 2 lignes maximum.|
 | text | Texte enrichi  | Le texte apparaît sous le sous-titre. Pour les options de mise en forme, voir [mise en forme de carte](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Tableau d’images | Image affichée en haut de la carte. Proportions 1:1 carré. |
-| boutons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. 6 maximum. |
+| boutons | Tableau d’objets d’action | Ensemble d’actions applicables à la carte actuelle. Maximum 6. |
 | appuyer | Objet Action | Activé lorsque l’utilisateur appuie sur la carte elle-même. |
 
 ### <a name="example-of-a-thumbnail-card"></a>Exemple de carte miniature
