@@ -3,12 +3,12 @@ title: Empaqueter votre application
 description: Découvrez comment empaqueter votre application Microsoft Teams pour le test, le téléchargement et la publication dans le Store.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: f3f725280e24296f1f2d9c919a14585e07d86c75
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
+ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345389"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356069"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Créer un package de l’application Microsoft Teams
 
@@ -25,13 +25,13 @@ Lorsqu’un utilisateur installe votre application dans Teams, il installe un pa
 
 ## <a name="app-manifest"></a>Manifeste d'application
 
-Votre fichier manifeste de l’application doit se trouver au niveau supérieur du package avec le nom `manifest.json`. 
+Votre fichier manifeste de l’application doit se trouver au niveau supérieur du package avec le nom `manifest.json`.
 
 Lors de la publication dans le store Teams, assurez-vous que votre manifeste fait référence au [schéma](~/resources/schema/manifest-schema.md) le plus récent.
 
 ## <a name="app-icons"></a>Icônes d’application
 
-Votre package de l’application doit inclure deux versions PNG de l’icône de votre application : une version de couleur et une version de contour.
+Votre package de l’application doit inclure deux versions de format PNG de l’icône de votre application : une version de couleur et une version de contour.
 
 > [!Note]
 > Si votre application dispose d’un bot ou d’une extension de messagerie, vos icônes seront également incluses dans votre inscription Microsoft Azure Bot Service.
