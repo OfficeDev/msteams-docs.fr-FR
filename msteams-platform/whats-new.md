@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398812"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453438"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|10/03/2022| Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |
 |03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Introduction du guide pas à pas pour appeler des modules de tâche dans Teams| Créer des cartes et des modules de tâche > Créer des modules de tâche > Utiliser des modules de tâche à partir de bots > [appeler un module de tâche à partir Teams](sbs-botbuilder-taskmodule.yml)|
 |24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur l’action | Générer des extensions de messagerie > Commandes d'action > Définir des commandes d’action > [Générer une extension de messagerie basée sur des actions](sbs-meetingextension-action.yml)|
@@ -51,6 +52,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|10/03/2022 | Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |  
 |03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Introduction du guide pas à pas pour appeler des modules de tâche dans Teams| Créer des cartes et des modules de tâche > Créer des modules de tâche > Utiliser des modules de tâche à partir de bots > [appeler un module de tâche à partir Teams](sbs-botbuilder-taskmodule.yml)|
 | 24/02/2022| Introduction du guide pas à pas pour créer une extension de messagerie basée sur l’action | Générer des extensions de messagerie > Commandes d'action > Définir des commandes d’action > [Générer une extension de messagerie basée sur des actions](sbs-meetingextension-action.yml)|

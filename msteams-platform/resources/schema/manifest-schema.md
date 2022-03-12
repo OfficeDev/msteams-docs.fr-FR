@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399099"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453767"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -825,13 +825,17 @@ Spécifiez et consolidez les informations relatives à l’autorisation pour l�
 |Nom| Type|Taille maximale|Requis |Description|
 |---|---|---|---|---|
 |`type`|string||✔| Le type de l'autorisation spécifique à la ressource. Options : `Application`et `Delegated`.|
-|`name`|string|128 caractères|✔|Nom de l’autorisation spécifique à la ressource. <br> Pour plus d’informations, consultez [Autorisations d’application](../../graph-api/rsc/resource-specific-consent.md) et [autorisations déléguées](#delegated-permissions).|
+|`name`|string|128 caractères|✔|Nom de l’autorisation spécifique à la ressource. Pour plus d’informations, consultez [Autorisations d'application spécifiques aux ressources](#resource-specific-application-permissions) et [Autorisations déléguées spécifiques aux ressources](#resource-specific-delegated-permissions)|
 
-### <a name="delegated-permissions"></a>Autorisations déléguées
+#### <a name="resource-specific-application-permissions"></a>Autorisations d’application spécifiques aux ressources
+
+Les autorisations d’application permettent à l’application d’accéder aux données sans utilisateur connecté. Pour plus d’informations sur les autorisations d’application, consultez [Consentement spécifique aux ressources pour MS Graph et MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+
+#### <a name="resource-specific-delegated-permissions"></a>Autorisations déléguées spécifiques aux ressources
 
 Les autorisations déléguées permettent à l’application d’accéder aux données pour le compte de l’utilisateur.
 
-* **Autorisations spécifiques aux ressources pour les équipes**
+* **Autorisations déléguées spécifiques aux ressources pour les équipes**
 
     |**Name**|**Description**|
     |---|---|
@@ -839,7 +843,7 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |`InAppPurchase.Allow.Group`| Permet à l’application d’afficher les offres Marketplace aux utilisateurs de cette équipe et d’effectuer leurs achats au sein de l’application, au nom de l’utilisateur connecté.|
     |`ChannelMeetingStage.Write.Group`| Permet à l’application d’afficher du contenu sur la fenêtre de partage des réunions de canal associées à cette équipe, pour le compte de l’utilisateur connecté.|
 
-* **Autorisations spécifiques aux ressources pour les conversations ou les réunions**
+* **Autorisations déléguées spécifiques aux ressources pour les conversations ou les réunions**
 
     |**Name**|**Description**|
     |---|---|
@@ -848,7 +852,7 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |`OnlineMeetingParticipant.Read.Chat`|Permet à l’application de lire les informations des participants, y compris le nom, le rôle, l’ID, les heures de participation et les heures restantes, de la réunion associée à cette conversation, au nom de l’utilisateur.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permet à l’application de basculer l’audio entrant pour les participants aux réunions associées à cette conversation, pour le compte de l’utilisateur connecté.|
 
-* **Autorisations spécifiques aux ressources pour les utilisateurs**
+* **Autorisations déléguées spécifiques aux ressources pour les utilisateurs**
 
     |**Name**|**Description**|
     |---|---|
