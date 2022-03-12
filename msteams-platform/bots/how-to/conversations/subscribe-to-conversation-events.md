@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction de message du canal bot d’événements
-ms.openlocfilehash: 4cb48c73b139ece4d16f935b611701def35e89b7
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 8052ec921a0e0e72ea6b64323ec713b84d18d18d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212544"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453445"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -29,11 +29,12 @@ Lorsque vous construisez vos bots de conversation Microsoft Teams, vous pouvez u
 Vous pouvez utiliser les événements de mise à jour de conversation pour fournir de meilleures notifications et des actions de bot plus efficaces.
 
 > [!IMPORTANT]
+>
 > * Vous pouvez ajouter de nouveaux événements à tout moment et votre bot commence à les recevoir.
 > * Vous devez concevoir votre bot pour recevoir des événements inattendus.
-> * Si vous utilisez le SDK Bot Framework, votre bot répond automatiquement à tous les événements que vous choisissez de `200 - OK` ne pas gérer.
+> * Si vous utilisez le SDK Bot Framework, votre bot répond automatiquement à tous `200 - OK` les événements que vous choisissez de ne pas gérer.
 
-Un bot reçoit un `conversationUpdate` événement dans l’un des cas suivants :
+Un bot reçoit un événement `conversationUpdate` dans l’un des cas suivants :
 
 * Lorsque le bot a été ajouté à une conversation.
 * D’autres membres sont ajoutés à une conversation ou supprimés d’une conversation.
@@ -41,20 +42,20 @@ Un bot reçoit un `conversationUpdate` événement dans l’un des cas suivants 
 
 L’événement `conversationUpdate` est envoyé à votre robot lorsqu’il reçoit des informations sur les mises à jour d’appartenance pour les équipes dans lesquelles il a été ajouté. Il reçoit également une mise à jour lorsqu’elle a été ajoutée pour la première fois pour des conversations personnelles.
 
-Le tableau suivant présente la liste des événements de Teams de conversation avec plus de détails :
+Le tableau suivant présente la liste des événements de mise Teams conversation avec plus de détails :
 
 | Action        | EventType         | Méthode appelée              | Description                | Portée |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| Canal créé     | channelCreated    | OnTeamsChannelCreatedAsync | [Un canal est créé.](#channel-created) | Équipe |
+| Canal créé     | channelCreated    | OnTeamsChannelCreatedAsync | [Un canal est créé](#channel-created). | Équipe |
 | Canal renommé     | channelRenamed    | OnTeamsChannelRenamedAsync | [Un canal est renommé](#channel-renamed). | Équipe |
-| Canal supprimé     | channelDeleted    | OnTeamsChannelDeletedAsync | [Un canal est supprimé.](#channel-deleted) | Équipe |
-| Canal restauré    | channelRestored    | OnTeamsChannelRestoredAsync | [Un canal est restauré.](#channel-deleted) | Équipe |
-| Membres ajoutés   | membersAdded   | OnTeamsMembersAddedAsync   | [Un membre est ajouté.](#team-members-added) | Tous |
-| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé.](#team-members-removed) | groupChat et l’équipe |
+| Canal supprimé     | channelDeleted    | OnTeamsChannelDeletedAsync | [Un canal est supprimé](#channel-deleted). | Équipe |
+| Canal restauré    | channelRestored    | OnTeamsChannelRestoredAsync | [Un canal est restauré](#channel-deleted). | Équipe |
+| Membres ajoutés   | membersAdded   | OnTeamsMembersAddedAsync   | [Un membre est ajouté](#team-members-added). | Tous |
+| Membres supprimés | membersRemoved | OnTeamsMembersRemovedAsync | [Un membre est supprimé](#team-members-removed). | groupChat et l’équipe |
 | Équipe renommée        | teamRenamed       | OnTeamsTeamRenamedAsync    | [Une équipe est renommée](#team-renamed).       | Équipe |
-| Équipe supprimée        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Une équipe est supprimée.](#team-deleted)       | Équipe |
-| Équipe archivée        | teamArchived       | OnTeamsTeamArchivedAsync    | [Une équipe est archivée.](#team-archived)       | Équipe |
-| Équipe non archivée        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Une équipe n’est pasarchive .](#team-unarchived)       | Équipe |
+| Équipe supprimée        | teamDeleted       | OnTeamsTeamDeletedAsync    | [Une équipe est supprimée](#team-deleted).       | Équipe |
+| Équipe archivée        | teamArchived       | OnTeamsTeamArchivedAsync    | [Une équipe est archivée](#team-archived).       | Équipe |
+| Équipe non archivée        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [Une équipe n’est pasarchive.](#team-unarchived)       | Équipe |
 | Équipe restaurée        | teamRestored      | OnTeamsTeamRestoredAsync    | [Une équipe est restaurée](#team-restored)       | Équipe |
 
 ### <a name="channel-created"></a>Canal créé
@@ -135,13 +136,13 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_created(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(
-            f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-        )
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
 ```
 
 ---
@@ -219,11 +220,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_renamed(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The new channel name is {channel_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new channel name is {channel_info.name}")
+ )
 ```
 
 ---
@@ -303,11 +304,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_deleted(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The deleted channel is {channel_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The deleted channel is {channel_info.name}")
+ )
 ```
 
 ---
@@ -390,20 +391,20 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_restored(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(
-            f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
-        )
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
 ```
 
 ---
 
 ### <a name="team-members-added"></a>Membres d’équipe ajoutés
 
-`teamMemberAdded`L’événement est envoyé à votre bot la première fois qu’il est ajouté à une conversation. L’événement est envoyé à votre bot chaque fois qu’un nouvel utilisateur est ajouté à une conversation d’équipe ou de groupe où votre bot est installé. Les informations utilisateur qui sont des ID, sont uniques pour votre bot et peuvent être mises en cache pour une utilisation ultérieure par votre service, telles que l’envoi d’un message à un utilisateur spécifique.
+L’événement `teamMemberAdded` est envoyé à votre bot la première fois qu’il est ajouté à une conversation. L’événement est envoyé à votre bot chaque fois qu’un nouvel utilisateur est ajouté à une conversation d’équipe ou de groupe où votre bot est installé. Les informations utilisateur qui sont des ID, sont uniques pour votre bot et peuvent être mises en cache pour une utilisation ultérieure par votre service, telles que l’envoi d’un message à un utilisateur spécifique.
 
 Le code suivant montre un exemple d’événement ajouté aux membres de l’équipe :
 
@@ -534,23 +535,23 @@ Il s’agit du message que votre bot reçoit lorsque le bot est ajouté à une c
 
 ```python
 async def on_teams_members_added(
-    self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
+ self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
-    for member in teams_members_added:
-        await turn_context.send_activity(
-            MessageFactory.text(f"Welcome your new team member {member.id}")
-        )
-    return
+ for member in teams_members_added:
+  await turn_context.send_activity(
+   MessageFactory.text(f"Welcome your new team member {member.id}")
+  )
+ return
 ```
 
 ---
 
 ### <a name="team-members-removed"></a>Membres d’équipe supprimés
 
-`teamMemberRemoved`L’événement est envoyé à votre bot s’il est supprimé d’une équipe. L’événement est envoyé à votre bot chaque fois qu’un utilisateur est supprimé d’une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez `Activity` l’objet du `turnContext` .  Si le champ de l’objet est identique au champ de l’objet, le membre supprimé est le bot, sinon il `Id` `MembersRemoved` `Id` s’agit `Recipient` d’un utilisateur. Le bot est `Id` généralement `28:<MicrosoftAppId>` .
+L’événement `teamMemberRemoved` est envoyé à votre bot s’il est supprimé d’une équipe. L’événement est envoyé à votre bot chaque fois qu’un utilisateur est supprimé d’une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez l’objet `Activity` du `turnContext`.  Si le `Id` champ de l’objet `MembersRemoved` `Id` `Recipient` est identique au champ de l’objet, le membre supprimé est le bot, sinon il s’agit d’un utilisateur. Le bot est généralement `Id` `28:<MicrosoftAppId>`.
 
 > [!NOTE]
-> Lorsqu’un utilisateur est supprimé définitivement d’un client, `membersRemoved conversationUpdate` l’événement est déclenché.
+> Lorsqu’un utilisateur est supprimé définitivement d’un client, l’événement `membersRemoved conversationUpdate` est déclenché.
 
 Le code suivant montre un exemple d’événement supprimé des membres de l’équipe :
 
@@ -601,7 +602,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-L’objet de l’exemple de charge utile suivant est basé sur l’ajout d’un membre à une équipe plutôt qu’à une conversation de groupe ou sur le début d’une nouvelle `channelData` conversation un-à-un :
+L’objet `channelData` de l’exemple de charge utile suivant est basé sur l’ajout d’un membre à une équipe plutôt qu’à une conversation de groupe ou sur le début d’une nouvelle conversation un-à-un :
 
 ```json
 {
@@ -646,20 +647,20 @@ L’objet de l’exemple de charge utile suivant est basé sur l’ajout d’un 
 
 ```python
 async def on_teams_members_removed(
-    self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
+ self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
-    for member in teams_members_removed:
-        await turn_context.send_activity(
-            MessageFactory.text(f"Say goodbye to {member.id}")
-        )
-    return
+ for member in teams_members_removed:
+  await turn_context.send_activity(
+   MessageFactory.text(f"Say goodbye to {member.id}")
+  )
+ return
 ```
 
 ---
 
 ### <a name="team-renamed"></a>Équipe renommée
 
-Votre bot est averti lorsque l’équipe est renommée. Il reçoit un `conversationUpdate` événement avec `eventType.teamRenamed` dans `channelData` l’objet.
+Votre bot est averti lorsque l’équipe est renommée. Il reçoit un événement `conversationUpdate` avec `eventType.teamRenamed` dans l’objet `channelData` .
 
 Le code suivant montre un exemple d’événement renommé d’équipe :
 
@@ -728,18 +729,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_renamed(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The new team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new team name is {team_info.name}")
+ )
 ```
 
 ---
 
 ### <a name="team-deleted"></a>Équipe supprimée
 
-Votre bot est averti lorsque l’équipe est supprimée. Il reçoit un `conversationUpdate` événement avec `eventType.teamDeleted` dans `channelData` l’objet.
+Votre bot est averti lorsque l’équipe est supprimée. Il reçoit un événement `conversationUpdate` avec `eventType.teamDeleted` dans l’objet `channelData` .
 
 Le code suivant montre un exemple d’événement supprimé par l’équipe :
 
@@ -805,17 +806,17 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_deleted(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    //handle delete event
-    )
+ //handle delete event
+ )
 ```
 
 ---
 
 ### <a name="team-restored"></a>Équipe restaurée
 
-Le bot reçoit une notification lorsqu’une équipe est restaurée après avoir été supprimée. Il reçoit un `conversationUpdate` événement avec `eventType.teamrestored` dans `channelData` l’objet.
+Le bot reçoit une notification lorsqu’une équipe est restaurée après avoir été supprimée. Il reçoit un événement `conversationUpdate` avec `eventType.teamrestored` dans l’objet `channelData` .
 
 Le code suivant illustre un exemple d’événement restauré par l’équipe :
 
@@ -884,18 +885,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_restored(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
 
 ### <a name="team-archived"></a>Équipe archivée
 
-Le bot reçoit une notification lorsque l’équipe est installée et archivée. Il reçoit un `conversationUpdate` événement avec `eventType.teamarchived` dans `channelData` l’objet.
+Le bot reçoit une notification lorsque l’équipe est installée et archivée. Il reçoit un événement `conversationUpdate` avec `eventType.teamarchived` dans l’objet `channelData` .
 
 Le code suivant montre un exemple d’événement d’équipe archivé :
 
@@ -964,19 +965,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_archived(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
 
-
 ### <a name="team-unarchived"></a>Équipe non archivée
 
-Le bot reçoit une notification lorsque l’équipe est installée et désarchive. Il reçoit un `conversationUpdate` événement avec `eventType.teamUnarchived` dans `channelData` l’objet.
+Le bot reçoit une notification lorsque l’équipe est installée et désarchive. Il reçoit un événement `conversationUpdate` avec `eventType.teamUnarchived` dans l’objet `channelData` .
 
 Le code suivant montre un exemple d’événement nonarchif d’équipe :
 
@@ -1045,11 +1045,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_unarchived(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
@@ -1058,12 +1058,12 @@ Maintenant que vous avez travaillé avec les événements de mise à jour de con
 
 ## <a name="message-reaction-events"></a>Événements de réaction aux messages
 
-L’événement est envoyé lorsqu’un utilisateur ajoute ou supprime des réactions à un message envoyé `messageReaction` par votre bot. Contient l’ID du message et le type de réaction au `replyToId` `Type` format texte. Les types de réactions sont notamment les enfants, les cœurs, les enfants, les enfants, les enfants et les surprises. Cet événement ne contient pas le contenu du message d’origine. Si le traitement des réactions à vos messages est important pour votre bot, vous devez stocker les messages lorsque vous les envoyez. Le tableau suivant fournit plus d’informations sur le type d’événement et les objets de charge utile :
+L’événement `messageReaction` est envoyé lorsqu’un utilisateur ajoute ou supprime des réactions à un message envoyé par votre bot. Contient `replyToId` l’ID du message et `Type` le type de réaction au format texte. Les types de réactions sont notamment les enfants, les cœurs, les enfants, les enfants, les enfants et les surprises. Cet événement ne contient pas le contenu du message d’origine. Si le traitement des réactions à vos messages est important pour votre bot, vous devez stocker les messages lorsque vous les envoyez. Le tableau suivant fournit plus d’informations sur le type d’événement et les objets de charge utile :
 
 | EventType       | Objet Payload   | Description                                                             | Portée |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Réactions ajoutées au message du bot.](#reactions-added-to-bot-message)           | Tous   |
-| messageReaction | reactionsRemoved | [Réactions supprimées du message du bot.](#reactions-removed-from-bot-message) | Tous |
+| messageReaction | reactionsAdded   | [Réactions ajoutées au message du bot](#reactions-added-to-bot-message).           | Tous   |
+| messageReaction | reactionsRemoved | [Réactions supprimées du message du bot](#reactions-removed-from-bot-message). | Tous |
 
 ### <a name="reactions-added-to-bot-message"></a>Réactions ajoutées au message du bot
 
@@ -1157,21 +1157,21 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_reactions_added(
-    self, message_reactions: List[MessageReaction], turn_context: TurnContext
+ self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
-    for reaction in message_reactions:
-        activity = await self._log.find(turn_context.activity.reply_to_id)
-        if not activity:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"Activity {turn_context.activity.reply_to_id} not found in log",
-            )
-        else:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"You added '{reaction.type}' regarding '{activity.text}'",
-            )
-    return
+ for reaction in message_reactions:
+  activity = await self._log.find(turn_context.activity.reply_to_id)
+  if not activity:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"Activity {turn_context.activity.reply_to_id} not found in log",
+   )
+  else:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"You added '{reaction.type}' regarding '{activity.text}'",
+   )
+ return
 ```
 
 ---
@@ -1266,35 +1266,35 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_reactions_removed(
-    self, message_reactions: List[MessageReaction], turn_context: TurnContext
+ self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
-    for reaction in message_reactions:
-        activity = await self._log.find(turn_context.activity.reply_to_id)
-        if not activity:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"Activity {turn_context.activity.reply_to_id} not found in log",
-            )
-        else:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"You removed '{reaction.type}' regarding '{activity.text}'",
-            )
-    return
+ for reaction in message_reactions:
+  activity = await self._log.find(turn_context.activity.reply_to_id)
+  if not activity:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"Activity {turn_context.activity.reply_to_id} not found in log",
+   )
+  else:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"You removed '{reaction.type}' regarding '{activity.text}'",
+   )
+ return
 ```
 
 ---
 
 ## <a name="installation-update-event"></a>Événement de mise à jour d’installation
 
-Le bot reçoit un `installationUpdate` événement lorsque vous installez un bot sur un thread de conversation. La désinstallation du bot du thread déclenche également l’événement. Lors de l’installation d’un bot, le champ **d’action** dans l’événement est définie pour ajouter *,* et lorsque le bot est désinstallé, le champ **d’action** est définie pour *supprimer*.
- 
+Le bot reçoit un événement `installationUpdate` lorsque vous installez un bot sur un thread de conversation. La désinstallation du bot du thread déclenche également l’événement. Lors de l’installation d’un bot, le champ **d’action** dans l’événement est définie pour *ajouter, et* lorsque le bot est désinstallé, le champ **d’action** est définie sur *supprimer*.
+
 > [!NOTE]
-> Lorsque vous mettre à niveau une application, puis ajouter ou supprimer un bot, l’action déclenche également `installationUpdate` l’événement. Le **champ d’action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot.
+> Lorsque vous mettre à niveau une application, puis ajouter ou supprimer un bot, l’action déclenche également l’événement `installationUpdate` . Le **champ d’action** est définie sur *add-upgrade* si vous ajoutez un bot ou *remove-upgrade* si vous supprimez un bot.
 
 ### <a name="install-update-event"></a>Installer l’événement de mise à jour
 
-Utilisez `installationUpdate` l’événement pour envoyer un message d’introduction à partir de votre bot lors de l’installation. Cet événement vous aide à répondre à vos exigences de confidentialité et de rétention des données. Vous pouvez également nettoyer et supprimer des données utilisateur ou thread lorsque le bot est désinstallé.
+Utilisez l’événement `installationUpdate` pour envoyer un message d’introduction à partir de votre bot lors de l’installation. Cet événement vous aide à répondre à vos exigences de confidentialité et de rétention des données. Vous pouvez également nettoyer et supprimer des données utilisateur ou thread lorsque le bot est désinstallé.
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1310,7 +1310,7 @@ else
 } return; }
 ```
 
-Vous pouvez également utiliser un  handler dédié pour ajouter ou supprimer des *scénarios* en tant que méthode alternative pour capturer un événement.
+Vous pouvez également utiliser un handler dédié pour  ajouter ou supprimer *des scénarios* en tant que méthode alternative pour capturer un événement.
 
 ```csharp
 protected override async Task
@@ -1404,7 +1404,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>Comportement de désinstallation pour une application personnelle avec un bot
 
 > [!NOTE]
-> Le comportement de désinstallation pour une application personnelle avec un bot est actuellement disponible uniquement en prévisualisation [pour les développeurs publics.](../../../resources/dev-preview/developer-preview-intro.md)
+> Le comportement de désinstallation pour une application personnelle avec un bot est actuellement disponible uniquement en [prévisualisation pour les développeurs publics](../../../resources/dev-preview/developer-preview-intro.md).
 
 Lorsque vous désinstallez une application, le bot est également désinstallé. Lorsqu’un utilisateur envoie un message à votre application, il reçoit un code de réponse 403. Votre bot reçoit un code de réponse 403 pour les nouveaux messages publiés par votre bot. Le comportement de post-désinstallation pour les bots dans l’étendue personnelle avec les Teams et groupChat sont désormais alignés. Vous ne pouvez pas envoyer ou recevoir de messages après la désinstallation d’une application.
 

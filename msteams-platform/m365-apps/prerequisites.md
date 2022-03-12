@@ -2,12 +2,12 @@
 title: Configurer votre environnement dev pour l’extension Teams applications à travers Microsoft 365
 description: Voici les conditions préalables à l’extension de vos applications Teams à travers Microsoft 365
 ms.date: 02/11/2022
-ms.openlocfilehash: eec44e149e81b420c507b0580896d2c5a4a99cc2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1f9b893c185d7cbae249ccc77de2a52cbdcb409a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355999"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452738"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurer votre environnement dev pour l’extension Teams applications à travers Microsoft 365
 
@@ -19,6 +19,7 @@ L’environnement de développement pour l’extension Teams applications à tra
 Pour la configuration de votre environnement de développement :
 
 > [!div class="checklist"]
+>
 > * [Obtenir Microsoft 365 développeur (bac à sable) et activer le chargement indépendant](#prepare-a-developer-tenant-for-testing)
 > * [Inscrire votre client Microsoft 365 client dans *les Office 365 de publication ciblées*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configurer votre compte pour accéder aux versions d’aperçu Outlook et Office](#install-office-apps-in-your-test-environment)
@@ -48,7 +49,7 @@ Pour inscrire votre client test pour les Office 365 de publication ciblées :
     1. **Publication cible pour les utilisateurs sélectionnés**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Centre d'administration Microsoft 365 menu « Préférences de publication » avec l’option de publication ciblée sélectionnée":::
-    
+
 1. Sélectionnez **Enregistrer**.
 
 Pour plus d’informations Office 365 options de publication, voir [Configurer les options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) de publication standard ou ciblée *dans Centre d'administration Microsoft 365'aide*.
@@ -71,7 +72,7 @@ Pour installer Office 365 applications de canal bêta dans votre environnement d
 1. **Ouvrez la** >  **Office** **AccountAbout** >  Outlook.  
    Si le numéro de build **est 14416** ou supérieur et que le canal est le canal *bêta, vous* exécutez Microsoft 365 version bêta du canal.
 1. Dans le coin supérieur droit, activer le **basculement Bientôt** disponible.
-    
+
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="Option bascule « Bientôt disponible » dans Outlook":::
 
 > [!NOTE]
@@ -106,7 +107,7 @@ Si vous le souhaitez, vous pouvez [utiliser Visual Studio Code](https://code.vis
 
 [L’extension Teams Shared Computer Toolkit pour Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0`ou ultérieure) fournit des commandes qui peuvent vous aider à modifier votre code Teams existant pour qu’il soit compatible avec les Outlook et Office. Pour plus d’informations, [voir activer Teams onglet personnel pour Office et Outlook](extend-m365-teams-personal-tab.md).
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
-- [Activer un onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md)
-- [Activer une extension de messagerie Teams pour Outlook](extend-m365-teams-message-extension.md)
+* [Activer un onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md)
+* [Activer une extension de messagerie Teams pour Outlook](extend-m365-teams-message-extension.md)

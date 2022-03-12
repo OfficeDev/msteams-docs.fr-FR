@@ -4,12 +4,12 @@ description: Découvrez comment implémenter des onglets sur Microsoft Teams mob
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Distribution de l’authentification de groupe de canaux d’onglets d’application mobile
-ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356370"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452591"
 ---
 # <a name="tabs-on-mobile"></a>Onglets sur les appareils mobiles
 
@@ -25,6 +25,7 @@ Les [applications distribuées via Teams store ont](~/concepts/deploy-and-publis
 | **Onglets de canal et de groupe** | L’onglet s’ouvre dans le Teams client à l’aide de `contentUrl`. | L’onglet s’ouvre dans un navigateur en dehors Teams client à l’aide de `websiteUrl`. |
 
 > [!NOTE]
+>
 > * Les applications soumises à [AppSource](https://appsource.microsoft.com) pour publication sur Teams sont évaluées automatiquement pour la réactivité mobile. Pour toutes les requêtes, teamsubm@microsoft.com.
 > * Pour toutes les applications qui ne sont pas distribuées via AppSource, les onglets s’ouvrent dans une vue web dans l’application dans les clients Teams par défaut et aucun processus d’approbation distinct n’est requis.
 > * Le comportement par défaut des applications s’applique uniquement s’il est distribué via Teams store. Par défaut, tous les onglets s’ouvrent dans Teams client.

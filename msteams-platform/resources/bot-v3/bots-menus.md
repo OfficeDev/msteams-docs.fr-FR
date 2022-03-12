@@ -5,12 +5,12 @@ keywords: Création de menus de bots Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 14100c9032f0adf964975abbe436c84194475a99
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f339f23298c14607eb1d9ca12daa50bcc98775b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157042"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452899"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>Ajouter un menu bot dans Microsoft Teams
 
@@ -23,12 +23,13 @@ Pour faciliter la découverte et former les utilisateurs sur les fonctionnalité
 Lorsqu’un utilisateur sélectionne un élément de menu, la chaîne de commande est insérée dans la zone de texte pour aider l’utilisateur à terminer le message du bot.
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>Prise en charge du menu bot sur Teams application mobile
-> [!NOTE] 
-> Les menus du bot ne sont pas affichés sur les appareils mobiles.
+
+> [!NOTE]
+> Les menus bot ne sont pas affichés sur les appareils mobiles.
 
 ## <a name="app-manifest"></a>Manifeste d'application
 
-Pour créer un menu bot, ajoutez un nouvel objet au manifeste [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) de votre application sous la section bot. Vous pouvez déclarer des menus individuels avec des commandes distinctes pour chaque étendue que votre bot prend en charge ( ou ) Chaque menu prend en charge jusqu’à `personal` `groupChat` `team` 10 commandes.
+Pour créer un menu bot, ajoutez un nouvel [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) objet au manifeste de votre application sous la section bot. Vous pouvez déclarer des menus individuels avec des commandes distinctes pour chaque étendue que votre bot prend en charge (`personal`ou `groupChat``team`) Chaque menu prend en charge jusqu’à 10 commandes.
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>Extrait de manifeste - menu unique pour les deux étendues
 
@@ -116,7 +117,7 @@ Pour créer un menu bot, ajoutez un nouvel objet au manifeste [`commandLists`](~
 }
 ```
 
-## <a name="best-practices"></a>Meilleures pratiques
+## <a name="best-practices"></a>Bonnes pratiques
 
 * Restez simple : le menu bot est destiné à présenter les fonctionnalités clés de votre bot.
 * N’oubliez pas que les options de menu ne doivent pas être des instructions de langage naturel très longues et complexes, mais des commandes simples.

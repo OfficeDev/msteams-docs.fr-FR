@@ -5,29 +5,29 @@ description: Découvrez comment gérer l’action d’appel initiale et répondr
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b30388e88505e9d0049da5271187c06c68efd5f5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 30ef2cdbe5bde14120a0ba8b17040c26a5de2a45
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889180"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453480"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
- 
+
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Vous pouvez créer le module de tâche à l’aide d’une carte adaptative ou d’un affichage web incorporé. Pour créer un module de tâche, vous devez effectuer le processus appelé demande d’appel initiale. Ce document traite de la demande d’appel initiale, des propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation 1:1, d’une conversation de groupe, d’un canal (nouveau billet), d’un canal (réponse au thread) et d’une zone de commande. 
+Vous pouvez créer le module de tâche à l’aide d’une carte adaptative ou d’un affichage web incorporé. Pour créer un module de tâche, vous devez effectuer le processus appelé demande d’appel initiale. Ce document traite de la demande d’appel initiale, des propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation 1:1, d’une conversation de groupe, d’un canal (nouveau billet), d’un canal (réponse au thread) et d’une zone de commande.
 > [!NOTE]
 > Si vous ne remplissez pas le module de tâche avec des paramètres définis dans le manifeste de l’application, vous devez créer le module de tâche pour les utilisateurs avec une carte adaptative ou un affichage web incorporé.
 
 ## <a name="the-initial-invoke-request"></a>Demande d’appel initiale
 
-Dans le processus de la demande d’appel initiale, votre service reçoit un objet de type et vous devez répondre avec un objet contenant une carte adaptative ou une URL vers l’affichage `Activity` `composeExtension/fetchTask` web `task` incorporé. En plus des propriétés d’activité standard du bot, la charge utile d’appel initiale contient les métadonnées de requête suivantes :
+Dans le processus de la demande d’appel initiale, votre service `Activity` reçoit un objet de type `composeExtension/fetchTask`et `task` vous devez répondre avec un objet contenant une carte adaptative ou une URL vers l’affichage web incorporé. En plus des propriétés d’activité standard du bot, la charge utile d’appel initiale contient les métadonnées de requête suivantes :
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Type de demande. Il doit `invoke` l’être. |
-|`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
+|`type`| Type de demande. Il doit l’être `invoke`. |
+|`name`| Type de commande qui est émis pour votre service. Il doit l’être `composeExtension/fetchTask`. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
@@ -35,8 +35,8 @@ Dans le processus de la demande d’appel initiale, votre service reçoit un obj
 |`channelData.channel.id`| ID de canal (si la demande a été faite dans un canal). |
 |`channelData.team.id`| ID d’équipe (si la demande a été faite dans un canal). |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
-|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit `default` s’y `contrast` trouver, ou `dark` . |
+|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit l’être `compose`. |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit s’y `default`trouver, `contrast` ou `dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -70,14 +70,14 @@ Le code de la demande d’appel initiale est donné dans l’exemple suivant :
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation 1:1 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation 1:1
 
 Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation 1:1 sont répertoriées comme suit :
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Type de demande. Il doit `invoke` l’être. |
-|`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
+|`type`| Type de demande. Il doit l’être `invoke`. |
+|`name`| Type de commande qui est émis pour votre service. Il doit l’être `composeExtension/fetchTask`. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
@@ -85,8 +85,8 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l’ID du message auquel ce message est une réponse. |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
-|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit `default` s’y `contrast` trouver, ou `dark` . |
+|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit l’être `compose`. |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit s’y `default`trouver, `contrast` ou `dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -121,14 +121,14 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de groupe 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de groupe
 
 Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une conversation de groupe sont répertoriées comme suit :
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Type de demande. Il doit `invoke` l’être. |
-|`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
+|`type`| Type de demande. Il doit l’être `invoke`. |
+|`name`| Type de commande qui est émis pour votre service. Il doit l’être `composeExtension/fetchTask`. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
@@ -136,8 +136,8 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l’ID du message auquel ce message est une réponse. |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
-|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit `default` s’y `contrast` trouver, ou `dark` . |
+|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit l’être `compose`. |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit s’y `default`trouver, `contrast` ou `dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -220,14 +220,14 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’un canal (nouveau billet) 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’un canal (nouveau billet)
 
 Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’un canal (nouveau billet) sont répertoriées comme suit :
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Type de demande. Il doit `invoke` l’être. |
-|`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
+|`type`| Type de demande. Il doit l’être `invoke`. |
+|`name`| Type de commande qui est émis pour votre service. Il doit l’être `composeExtension/fetchTask`. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
@@ -237,8 +237,8 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l’ID du message auquel ce message est une réponse. |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
-|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
+|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit l’être `compose`. |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Elle doit être `default`, `contrast`ou `dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -286,14 +286,14 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’un canal (réponse au thread) 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’un canal (réponse au thread)
 
 Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’un canal (réponse au thread) sont répertoriées comme suit :
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Type de demande. Il doit `invoke` l’être. |
-|`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
+|`type`| Type de demande. Il doit l’être `invoke`. |
+|`name`| Type de commande qui est émis pour votre service. Il doit l’être `composeExtension/fetchTask`. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
@@ -303,8 +303,8 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`ChannelData.legacy. replyToId`| Obtient ou définit l’ID du message auquel ce message est une réponse. |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
-|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit `default` s’y `contrast` trouver, ou `dark` . |
+|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit l’être `compose`. |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Il doit s’y `default`trouver, `contrast` ou `dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -395,22 +395,22 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une zone de commande 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>Propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une zone de commande
 
 Les propriétés de l’activité de charge utile lorsqu’un module de tâche est appelé à partir d’une zone de commande sont répertoriées comme suit :
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Type de demande. Il doit `invoke` l’être. |
-|`name`| Type de commande qui est émis pour votre service. Il doit `composeExtension/fetchTask` l’être. |
+|`type`| Type de demande. Il doit l’être `invoke`. |
+|`name`| Type de commande qui est émis pour votre service. Il doit l’être `composeExtension/fetchTask`. |
 |`from.id`| ID de l’utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Azure Active Directory’ID d’objet de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID du client Azure Active Directory. |
 |`channelData.source.name`| Nom source de l’endroit où le module de tâche est appelé. |
 |`value.commandId` | Contient l’ID de la commande qui a été invoquée. |
-|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit `compose` l’être. |
-|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Elle doit être `default` , `contrast` ou `dark` . |
+|`value.commandContext` | Contexte qui a déclenché l’événement. Il doit l’être `compose`. |
+|`value.context.theme` | Thème client de l’utilisateur, utile pour la mise en forme de l’affichage web incorporé. Elle doit être `default`, `contrast`ou `dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -457,7 +457,7 @@ Les propriétés de l’activité de charge utile lorsqu’un module de tâche e
 }
 ```
 
-### <a name="example"></a>Exemple 
+### <a name="example"></a>Exemple
 
 La section de code suivante est un exemple de `fetchTask` requête :
 
@@ -543,7 +543,8 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## <a name="initial-invoke-request-from-a-message"></a>Demande d’appel initiale à partir d’un message
 
-Lorsque votre bot est appelé à partir d’un message, l’objet de la demande d’appel initiale doit contenir les détails du message à partir de quel message votre extension de messagerie `value` est invoquée. Les tableaux et les tableaux sont facultatifs et ne sont pas présents s’il n’y a aucune réaction ou `reactions` mention dans le message `mentions` d’origine. La section suivante est un exemple de `value` l’objet :
+Lorsque votre bot est appelé à partir d’un message, `value` l’objet de la demande d’appel initiale doit contenir les détails du message à partir de quel message votre extension de messagerie est invoquée. Les `reactions` tableaux `mentions` et les tableaux sont facultatifs et ne sont pas présents s’il n’y a aucune réaction ou mention dans le message d’origine.
+La section suivante est un exemple de l’objet `value` :
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -643,31 +644,31 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-to-the-fetchtask"></a>Répondre à fetchTask
 
-Répondez à la demande d’appel avec un objet qui contient un objet avec la carte adaptative ou l’URL web, ou `task` un message de chaîne `taskInfo` simple.
+Répondez à la demande d’appel `task` `taskInfo` avec un objet qui contient un objet avec la carte adaptative ou l’URL web, ou un message de chaîne simple.
 
 |Nom de la propriété|Objectif|
 |---|---|
-|`type`| Il peut `continue` s’agit de présenter un formulaire ou `message` d’utiliser une fenêtre popup simple. |
-|`value`| Objet `taskInfo` d’un formulaire ou `string` d’un message. |
+|`type`| Il peut s’agit `continue` de présenter un formulaire ou d’utiliser `message` une fenêtre popup simple. |
+|`value`| Objet d’un `taskInfo` formulaire ou d’un `string` message. |
 
 Le schéma de l’objet taskInfo est :
 
 |Nom de la propriété|Objectif|
 |---|---|
 |`title`| Titre du module de tâche.|
-|`height`| Il doit s’agit d’un nombre integer (en pixels) `small` ou , ou , `medium` `large` .|
-|`width`| Il doit s’agit d’un nombre integer (en pixels) `small` ou , ou , `medium` `large` .|
+|`height`| Il doit s’agit d’un nombre integer (en pixels) ou `small`, ou , `medium``large`.|
+|`width`| Il doit s’agit d’un nombre integer (en pixels) ou `small`, ou , `medium``large`.|
 |`card`| Carte adaptative définissant le formulaire (si vous en utilisez un).
 |`url`| URL à ouvrir dans le module de tâche en tant qu’affichage web incorporé.|
 |`fallbackUrl`| Si un client ne prend pas en charge la fonctionnalité de module de tâche, cette URL est ouverte dans un onglet de navigateur. |
 
 ### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a>Répondre à fetchTask avec une carte adaptative
 
-Lorsque vous utilisez une carte adaptative, vous devez répondre avec un objet contenant `task` `value` une carte adaptative.
+Lorsque vous utilisez une carte adaptative, vous devez répondre avec un `task` `value` objet contenant une carte adaptative.
 
 #### <a name="example"></a>Exemple
 
-La section de code suivante est un exemple de `fetchTask` réponse avec une carte adaptative :
+La section de code suivante est un exemple de réponse avec `fetchTask` une carte adaptative :
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -821,7 +822,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="create-a-task-module-with-an-embedded-web-view"></a>Créer un module de tâche avec un affichage web incorporé
 
-Lorsque vous utilisez un affichage web incorporé, vous devez répondre avec un objet avec l’objet contenant l’URL du formulaire web que `task` `value` vous souhaitez charger. Les domaines d’une URL que vous souhaitez charger doivent être inclus dans le tableau dans le manifeste `validDomains` de votre application. Pour plus d’informations sur la création de votre affichage web incorporé, voir la [documentation du module de tâche.](~/task-modules-and-cards/what-are-task-modules.md) 
+Lorsque vous utilisez un affichage web incorporé, `task` `value` vous devez répondre avec un objet avec l’objet contenant l’URL du formulaire web que vous souhaitez charger. Les domaines d’une URL que vous souhaitez charger doivent être inclus dans le tableau `validDomains` dans le manifeste de votre application. Pour plus d’informations sur la création de votre affichage web incorporé, voir la [documentation du module de tâche](~/task-modules-and-cards/what-are-task-modules.md).
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -899,9 +900,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 Si l’application contient un bot de conversation, installez-le dans la conversation, puis chargez le module de tâche. Le bot est utile pour obtenir un contexte supplémentaire pour le module de tâche. Un exemple de ce scénario consiste à extraire la liste de membres pour remplir un contrôle de s picker de personnes ou la liste des canaux d’une équipe.
 
-Lorsque l’extension de messagerie reçoit l’appel, vérifiez si le bot est installé dans le contexte actuel `composeExtension/fetchTask` pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d’obtenir une liste. Si le bot n’est pas installé, renvoyer une carte adaptative avec une action qui demande à l’utilisateur d’installer le bot. L’utilisateur doit avoir l’autorisation d’installer les applications à cet emplacement pour vérification. Si l’installation de l’application échoue, l’utilisateur reçoit un message pour contacter l’administrateur.
+Lorsque l’extension de messagerie reçoit `composeExtension/fetchTask` l’appel, vérifiez si le bot est installé dans le contexte actuel pour faciliter le flux. Par exemple, vérifiez le flux avec un appel d’obtenir une liste. Si le bot n’est pas installé, renvoyer une carte adaptative avec une action qui demande à l’utilisateur d’installer le bot. L’utilisateur doit avoir l’autorisation d’installer les applications à cet emplacement pour vérification. Si l’installation de l’application échoue, l’utilisateur reçoit un message pour contacter l’administrateur.
 
-#### <a name="example"></a>Exemple 
+#### <a name="example"></a>Exemple
 
 La section de code suivante est un exemple de réponse :
 
@@ -929,9 +930,9 @@ La section de code suivante est un exemple de réponse :
 }
 ```
 
-Après l’installation du bot conversationnel, il reçoit un autre message d’appel `name = composeExtension/submitAction` avec , et `value.data.msteams.justInTimeInstall = true` .
+Après l’installation du bot conversationnel, il reçoit un autre message d’appel avec `name = composeExtension/submitAction`, et `value.data.msteams.justInTimeInstall = true`.
 
-#### <a name="example"></a>Exemple 
+#### <a name="example"></a>Exemple
 
 La section de code suivante est un exemple de réponse de tâche à l’appel :
 
@@ -959,9 +960,9 @@ La section de code suivante est un exemple de réponse de tâche à l’appel :
 
 La réponse à la tâche à l’appel doit être similaire à celle du bot installé.
 
-#### <a name="example"></a>Exemple 
+#### <a name="example"></a>Exemple
 
-La section de code suivante est un exemple d’installation juste-à-temps de l’application avec carte adaptative : 
+La section de code suivante est un exemple d’installation juste-à-temps de l’application avec carte adaptative :
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -982,14 +983,14 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Exemple de nom           | Description | .NET    | Node.js   |   
+| Exemple de nom           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams d’extension de messagerie| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à une action d’soumission de module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 |Teams d’extension de messagerie   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Répondre à la commande d’action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## <a name="see-also"></a>Voir aussi

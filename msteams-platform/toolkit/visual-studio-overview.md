@@ -1,79 +1,85 @@
 ---
 title: Créer des applications avec les Teams Shared Computer Toolkit et Visual Studio
-description: 'Commencer à créer d’excellentes applications personnalisées directement Visual Studio l’aide Microsoft Teams Shared Computer Toolkit. Découvrez comment configurer votre application dans Visual Studio, valider votre application et la publier à partir de Visual Studio portail de développement.'
+description: Commencer à créer d’excellentes applications personnalisées directement Visual Studio avec le Microsoft Teams Shared Computer Toolkit. Découvrez comment configurer votre application dans Visual Studio, valider votre application et la publier à partir de Visual Studio portail de développement.
 keywords: boîte à outils visual studio teams
 ms.localizationpriority: medium
 ms.topic: overview
+ms.date: 1/13/2022
 ms.author: johmil
+ms.openlocfilehash: c34f1113cd4da5f1b416dba6bc950b3588accecf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453429"
 ---
+# <a name="teams-toolkit-for-visual-studio"></a>Extension de kit de ressources Teams pour Visual Studio
 
-# <a name="build-apps-with-the-teams-toolkit-and-microsoft-visual-studio"></a>Créer des applications avec les Teams Shared Computer Toolkit et Microsoft Visual Studio
+Créez, testez et développez des Teams à l’intérieur de votre IDE.
 
-Le Kit de ressources Microsoft Teams vous permet de créer des applications personnalisées d’équipes directement dans l’environnement de développement intégré (IDE) Visual Studio. Le kit de ressources Microsoft Teams vous guide au cours du processus et vous fournit toutes les fonctionnalités nécessaires pour créer, déboguer et lancer votre application Teams.
+L’extension de Teams Shared Computer Toolkit pour Visual Studio facilite la création de projets pour Teams, la configuration automatique des applications dans le portail de développement Teams, l’utilisation et le débogage dans Teams, la configuration de l’hébergement cloud et l’utilisation de [TeamsFx](https://github.com/OfficeDev/teamsfx) à partir de votre IDE.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="install-teams-toolkit-for-visual-studio"></a>Installer Teams Shared Computer Toolkit pour Visual Studio
 
-1. [Activer la prévisualisation pour les développeurs](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
+>[!NOTE]
+> En tant que condition préalable, veillez à utiliser Visual Studio 2022 17.1 Preview 2 ou version plus nouvelle pour suivre les instructions ci-dessous.
 
-2. Assurez-vous que **<span>le module ASP.NET</span>** de développement web a été ajouté à votre instance Visual Studio web. Pour plus d’informations, [voir Modifier Visual Studio en ajoutant ou en supprimant des charges de travail et des composants](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true).
+1. Si vous avez déjà Visual Studio 2022 17.1 Preview 2, passez à l’étape suivante. Dans le cas [contraire, installez Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/).
+2. Ouvrez le Visual Studio Installer.
+3. **Sélectionnez Modifier** pour votre installation VS 2022 Preview existante.
+4. Sélectionnez la **charge ASP.NET charge de travail de développement web**.
+5. À droite, développez la section **ASP.NET développement web** et sélectionnez Microsoft Teams **outils** de développement dans la liste facultative des composants.
+6. **Sélectionnez Installer** **ou Modifier** dans le Visual Studio Installer pour terminer le processus d’installation.
 
-![Module de asp.net Visual Studio](../assets/images/visual-studio-web-dev-module.png)
+![Sélection des outils Microsoft Teams de développement dans le programme Visual Studio installer.) installé.](images/teams-development-tools-vs-installer.png)
 
-## <a name="install-the-teams-toolkit"></a>Installer le Teams Shared Computer Toolkit
+## <a name="get-started-quickly-with-a-new-project"></a>Mise en place rapide d’un nouveau projet
 
-Le Microsoft Teams Shared Computer Toolkit pour Visual Studio est disponible en téléchargement à partir de [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) ou directement à partir du menu **Extensions** dans Visual Studio.
+Teams Shared Computer Toolkit modèles de projet fournissent l’ensemble du code, des fichiers et de la configuration dont vous avez besoin pour prendre en Teams projet d’application.
 
-## <a name="use-the-toolkit"></a>Utiliser le kit de ressources
-
-- [Configurer un nouveau projet](#set-up-a-new-teams-project)
-- [Configurer votre application](#configure-your-app)
-- [Exécuter votre application dans Teams](#install-and-run-your-app-locally)
-- [Valider votre application](#validate-your-app)
-- [Publier votre application](#publish-your-app-to-teams)
-
-## <a name="set-up-a-new-teams-project"></a>Configurer un nouveau projet Teams projet
-
-1. Lancez Visual Studio 2019.
-2. **Sélectionnez Créer un projet**.
-3. Recherchez Microsoft Teams **app, puis** sélectionnez **Suivant**.
-4. Dans configurer **votre nouveau projet**, entrez le **Project,** **l’emplacement** et le **nom de la solution**.
-5. **Sélectionnez Suivant** pour entrer un nom pour l’application.
-6. Dans l’écran Informations supplémentaires, entrez un nom **d’application** et un nom de développeur ou de **société pour votre** Teams app.
-
-## <a name="configure-your-app"></a>Configurer votre application
-
-L’application Teams principale englobe trois composants :
-
-- Le Microsoft Teams client (web, de bureau ou mobile) où les utilisateurs interagissent avec votre application.
-- Serveur qui répond aux demandes de contenu affichées dans Teams. Par exemple, le contenu d’onglet HTML ou une carte adaptative de bot.
-- Un package Teams’application se compose de trois fichiers :
-
-    > [!div class="checklist"]
-    >
-    > - Manifest.json
-    > - Icône [de couleur que](../resources/schema/manifest-schema.md#icons) votre application peut afficher dans le catalogue d’applications public ou d’organisation.
-    > - Icône [de plan à](../resources/schema/manifest-schema.md#icons) afficher dans la barre Teams’activité.
-
-Lorsqu’une application est installée, le client Teams pare le fichier manifeste pour déterminer les informations nécessaires, telles que le nom de votre application et l’URL où se trouvent les services.
+Le Microsoft Teams de projet Application vous permet de spécifier un compte Microsoft 365 requis pour inscrire et configurer automatiquement votre nouvelle application Teams client.
 
 > [!NOTE]
->Si ce n’est pas déjà fait, vous devez vous Microsoft 365 votre compte d’utilisateur pour poursuivre le processus de développement.
->
 > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement [Microsoft 365 programme pour les développeurs](https://developer.microsoft.com/microsoft-365/dev-program). Il est gratuit pendant 90 jours et renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio Enterprise ou Professional, les deux programmes incluent un abonnement Microsoft 365 [développeur gratuit,](https://aka.ms/MyVisualStudioBenefits) actif pendant toute la durée de Visual Studio abonnement. Pour plus d’informations, [voir configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
 
-### <a name="configuration-steps"></a>Étapes de configuration
+1. Lancez Visual Studio 2022.
+1. Dans la fenêtre de démarrage, choisissez **Créer un projet**.
+1. Dans la **zone Rechercher des modèles**, entrez Microsoft Teams App.
+1. Sélectionnez le **Microsoft Teams d’application** et sélectionnez **Suivant**.
+1. Dans la **fenêtre Configurer votre nouveau projet**, tapez ou entrez _HelloTeams_ dans la **Project nom**. Ensuite, sélectionnez **Créer**.
+1. Dans la **fenêtre Créer une application Teams**, choisissez ou connectez-vous à un compte Microsoft 365 à l’aide du sélecteur **de comptes**. Ensuite, sélectionnez **Créer**.
 
-1. Pour configurer votre application, sélectionnez le menu **Project > TeamsFx > configurer pour l’électrable SSO...**.
+![Création d’un Microsoft Teams d’application dans Visual Studio.](images/teams-toolkit-vs-new-project.png)
 
-Lorsque vous y invitez, connectez-vous à votre compte Microsoft qui possède un client M365.
+Visual Studio ouvre votre nouveau projet et Teams Shared Computer Toolkit vous configurera le nouveau projet dans Teams Portail du développeur. Le projet est ajouté pour l’organisation Teams liée au compte Microsoft 365 que vous avez choisi dans les étapes ci-dessus et crée une nouvelle Azure Active Directory inscription. Cela est nécessaire pour que l’application s’exécute Teams.
 
-## <a name="install-and-run-your-app-locally"></a>Installer et exécuter votre application localement
+## <a name="run-and-debug-your-app-in-teams"></a>Exécuter et déboguer votre application dans Teams
 
-Appuyez sur F5 pour démarrer le débogage. La boîte de dialogue d’installation de l’application s’affiche dans Teams client.
+Vous pouvez lancer votre projet d’application s’exécutant localement à partir Visual Studio.
 
-## <a name="validate-your-app"></a>Valider votre application
+1. Ouvrez ou [créez un Teams d’application.](#get-started-quickly-with-a-new-project)
+2. **Appuyez sur F5** ou **sélectionnez Déboguer > démarrer le débogage** dans Visual Studio.
 
-Le menu **Project > validation teamsFx > Teams manifeste** vous permet de vérifier que votre package d’application est valide.
+Visual Studio lancez votre projet Teams’application dans un navigateur et démarrez le débogage.
+
+## <a name="host-your-teams-app-in-the-cloud-and-preview-it"></a>Héberger votre application Teams dans le cloud et la prévisualiser
+
+Vous pouvez créer et configurer automatiquement des ressources cloud pour l’hébergement de votre application dans Azure à l’aide Teams Shared Computer Toolkit.
+
+1. Sélectionnez l **Project > Teams Shared Computer Toolkit > approvisionnement dans le menu Cloud**.
+2. Dans la fenêtre Sélectionner votre abonnement, choisissez l’abonnement Azure avec qui vous souhaitez créer des ressources.
+
+Teams Shared Computer Toolkit créer des ressources Azure dans cet abonnement, mais aucun code n’est déployé au cours de cette étape. Pour déployer votre projet sur ces nouvelles ressources :
+
+1. Sélectionnez le **Project > Teams Shared Computer Toolkit > déployer dans le menu Cloud**.
+
+## <a name="preview-your-app-running-from-cloud-resources"></a>Afficher un aperçu de l’exécution de votre application à partir des ressources cloud
+
+Vous pouvez exécuter votre application dans un navigateur à l’aide des ressources distantes pour vérifier que tout fonctionne. Il n’est pas encore possible de déboguer pendant ce scénario.
+
+1. Sélectionnez le **menu Project > Teams Shared Computer Toolkit > aperçu Teams’application**.
+
+Votre application s’ouvre dans un navigateur et utilise les ressources créées par les étapes de mise en service et de déploiement.
 
 ## <a name="publish-your-app-to-teams"></a>Publier votre application sur Teams
 

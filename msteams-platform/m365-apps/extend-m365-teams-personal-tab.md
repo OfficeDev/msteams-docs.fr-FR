@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e914793fcd0d7bbaa2442f282224c4ca94d99a85
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356304"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453718"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet Teams’une page à l’autre Microsoft 365
 
@@ -22,21 +22,23 @@ Les onglets personnels offrent un excellent moyen d’améliorer Microsoft Teams
 La mise à jour de votre application personnelle pour qu’elle s’exécute Outlook et Office Famille implique les étapes suivantes :
 
 > [!div class="checklist"]
+>
 > * Mettre à jour le manifeste de votre application
-> * Mettre à jour vos références du SDK TeamsJS 
+> * Mettre à jour vos références du SDK TeamsJS
 > * Modifier vos en-têtes de stratégie de sécurité du contenu
 > * Mettre à jour Microsoft Azure Active Directory (Azure AD) inscription de l’application pour l’signature unique (SSO)
 
 Le test de votre application nécessite les étapes suivantes :
 
 > [!div class="checklist"]
+>
 > * Inscrire votre client Microsoft 365 client dans *les Office 365 de publication ciblées*
 > * Configurer votre compte pour accéder aux versions d’Outlook et Office applications
 > * Chargez une version de votre application mise à jour dans Teams
 
 Après ces étapes, votre application doit apparaître dans les versions d’aperçu Outlook et Office applications.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
@@ -55,7 +57,6 @@ Si vous avez une application d’onglet personnel existante, faites une copie ou
 Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de l’exemple de mise en route avec la liste de [todos](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application d’onglet personnel à l’aide de l’extension Teams Shared Computer Toolkit pour Visual Studio Code. Vous pouvez également commencer avec le même exemple de liste de todos mis à jour pour l’aperçu du [SDK TeamsJS v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) et passer à l’aperçu de votre onglet personnel dans d’autres Microsoft 365 [expériences](#preview-your-personal-tab-in-other-microsoft-365-experiences). L’exemple mis à jour est également disponible dans Teams Shared Computer Toolkit extension : *DevelopmentView* >  *samplesTodo* >  **List (Works in Teams, Outlook and Office)**.
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Exemple de liste de todos (fonctionne dans Teams, Outlook et Office) dans Teams Shared Computer Toolkit":::
-
 
 ## <a name="update-the-app-manifest"></a>Mettre à jour le manifeste de l’application
 
@@ -78,6 +79,7 @@ Ouvrez votre Teams de l’application et mettez à jour les `$schema` `manifestV
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Si vous avez utilisé Teams Shared Computer Toolkit pour créer votre application personnelle, vous pouvez également l’utiliser pour valider les modifications apportées à votre fichier manifeste et identifier les erreurs éventuelles. Ouvrez la palette `Ctrl+Shift+P` de commandes et recherchez **Teams :** Valider le fichier manifeste ou sélectionnez l’option dans le menu Déploiement de l’Teams Shared Computer Toolkit (recherchez l’icône Teams sur le côté gauche de Visual Studio Code).
@@ -96,6 +98,7 @@ Vous pouvez utiliser Teams Shared Computer Toolkit pour automatiser certaines de
 Une fois l’exécution terminée, `package.json` l’utilitaire aura mis à jour votre fichier avec la dépendance du SDK TeamsJS (`@microsoft/teams-js@2.0.0-beta.1`ou version ultérieure), `*.jsx/.tsx` `*.js/.ts` et vos fichiers et vos fichiers seront mis à jour avec :
 
 > [!div class="checklist"]
+>
 > * `package.json` références à la prévisualisation du SDK TeamsJS
 > * Instructions Import pour l’aperçu du SDK TeamsJS
 > * [Appels de fonction, d’enum et d’interface](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) vers l’aperçu du SDK TeamsJS
@@ -126,7 +129,7 @@ Azure Active Directory l’signature unique (SSO) pour les onglets personnels fo
 
 1. Connectez-vous [Microsoft Azure portail avec](https://portal.azure.com) votre compte client en bac à sable.
 1. Ouvrez le **blade d’inscription de l’application** .
-1. Sélectionnez le nom de votre application d’onglet personnel pour ouvrir son inscription. 
+1. Sélectionnez le nom de votre application d’onglet personnel pour ouvrir son inscription.
 1. **Sélectionnez Exposer une API** (sous *Gérer*).
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du blade *App registrations* sur le portail Azure":::
@@ -179,7 +182,7 @@ Pour afficher votre application en cours d’exécution Outlook sur Windows bure
 
 1. Lancez Outlook et connectez-vous à l’aide de votre compte de client dev.
 1. Cliquez sur les ellipses (**...**) dans la barre latérale. Le titre de votre application installée s’affiche parmi vos applications installées.
-1.  Cliquez sur l’icône de votre application pour lancer votre application dans Outlook.
+1. Cliquez sur l’icône de votre application pour lancer votre application dans Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale du client de bureau Outlook pour voir vos onglets personnels installés":::
 
@@ -187,7 +190,7 @@ Pour afficher votre application en cours d’exécution Outlook sur Windows bure
 
 Pour afficher votre application dans Outlook sur le web :
 
-1. Accédez à https://outlook.office.com votre compte de client dev et connectez-vous à l’aide de votre compte de client dev.
+1. Accédez à [Outlook sur le web](https://outlook.office.com) et connectez-vous à l’aide de votre compte de client dev.
 1. Cliquez sur les ellipses (**...**) dans la barre latérale. Le titre de votre application installée s’affiche parmi vos applications installées.
 1. Cliquez sur l’icône de votre application pour lancer et afficher un aperçu de votre application en cours d’exécution Outlook sur le web.
 
@@ -213,7 +216,7 @@ Pour afficher un aperçu de l’exécution de votre application Office sur le We
 
 :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale de office.com pour voir vos onglets personnels installés":::
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 Outlook- et Office onglets personnels activés sont en prévisualisation et ne sont pas pris en charge pour une utilisation en production. Voici comment distribuer votre application d’onglet personnel pour afficher un aperçu des audiences à des fins de test.
 
@@ -227,11 +230,11 @@ Dans le menu *Applications*, *sélectionnez Gérer vos applicationsSoumettre* > 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-En tant Teams, vous pouvez télécharger et préinstaller le package d’application pour le client de votre organisation à partir de https://admin.teams.microsoft.com/. Voir [Télécharger vos applications personnalisées dans le centre d’administration Microsoft Teams pour](/MicrosoftTeams/upload-custom-apps) plus d’informations.
+En tant qu’administrateur Teams, vous pouvez télécharger et préinstaller le package d’application pour le client de votre organisation à partir Teams [administrateur.](https://admin.teams.microsoft.com/) [Consultez Télécharger vos applications personnalisées dans le Centre d Microsoft Teams’administration Windows pour](/MicrosoftTeams/upload-custom-apps) plus d’informations.
 
 #### <a name="microsoft-admin-center"></a>Centre d’administration Microsoft
 
-En tant qu’administrateur général, vous pouvez télécharger et préinstaller le package d’application à partir de https://admin.microsoft.com/. Pour [plus d’informations, voir Tester et déployer Microsoft 365 Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) par des partenaires dans le portail des applications intégrées.
+En tant qu’administrateur général, vous pouvez télécharger et préinstaller le package d’application à partir de [l’administrateur Microsoft](https://admin.microsoft.com/). Pour [plus d’informations, voir Tester et déployer Microsoft 365 Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) par des partenaires dans le portail des applications intégrées.
 
 ### <a name="multitenant-distribution"></a>Distribution multi-tension
 

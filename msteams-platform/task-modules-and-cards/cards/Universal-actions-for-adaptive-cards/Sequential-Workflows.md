@@ -4,18 +4,18 @@ description: En savoir plus sur les flux de travail séquentiels pour les cartes
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: ce715749d1b9fb5e1cff6457eebd3cac9674c58c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081050"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453249"
 ---
 # <a name="sequential-workflows"></a>Flux de travail séquentiels
 
 Les cartes adaptatives peuvent désormais prendre en charge les flux de travail séquentiels qui sont mis à jour lors de l’action de l’utilisateur. À l’aide des flux de travail séquentiels, les cartes adaptatives sont mises à jour lors de l’action de l’utilisateur et l’utilisateur peut avancer dans une série de cartes qui nécessitent une entrée utilisateur. `Action.Execute` prend en charge les flux de travail séquentiels, qui permettent aux développeurs de bots de retourner des cartes adaptatives en réponse à une action de l’utilisateur.
 
-Par exemple, prenez un scénario dans lequel la salle d’information souhaite prendre une commande pour une équipe ou un canal. Avec le choix de l’utilisateur pour divers éléments, tels que la cuisine et les `Action.Execute` cuisines peuvent être enregistrés séquentiellement. L’utilisateur peut également passer d’une carte à l’autre selon la logique définie par le développeur du bot. <br/>
+Par exemple, prenez un scénario dans lequel la salle d’information souhaite prendre une commande pour une équipe ou un canal. Avec `Action.Execute` le choix de l’utilisateur pour divers éléments, tels que la cuisine et les cuisines peuvent être enregistrés séquentiellement. L’utilisateur peut également passer d’une carte à l’autre selon la logique définie par le développeur du bot. <br/>
 
 L’image suivante illustre le flux de travail séquentiel :
 
@@ -130,10 +130,9 @@ var adaptiveCardResponse = JObject.FromObject(new
 | Teams bot de restauration | Créez un bot qui accepte l’ordre des produits à l’aide de cartes adaptatives. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| N’est pas encore disponible. |
 | Cartes adaptatives de flux de travail séquentiels | Montrer comment implémenter des flux de travail séquentiels, des affichages spécifiques à l’utilisateur et des cartes adaptatives à jour dans les bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
-
 ## <a name="see-also"></a>Voir aussi
 
 * [Actions de carte adaptative dans Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [Comment fonctionnent les bots ?](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
-* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Commentaires sur l’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

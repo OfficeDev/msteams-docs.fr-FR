@@ -6,31 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 1e78827d4105eefb112bef40d059804a94050f2d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453620"
 ---
-
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>SDK TeamsFx pour TypeScript ou JavaScript
 
 TeamsFx vise à réduire les tâches d’implémentation de l’identité et l’accès aux ressources cloud aux instructions à ligne unique avec une configuration nulle.
 
 Utilisez la bibliothèque pour :
 
-- Accédez aux fonctionnalités principales dans l’environnement client et serveur de la même manière.
-- Écrivez du code d’authentification utilisateur de manière simplifiée.
+* Accédez aux fonctionnalités principales dans l’environnement client et serveur de la même manière.
+* Écrivez du code d’authentification utilisateur de manière simplifiée.
 
 ## <a name="get-started"></a>Prise en main
 
-Le Kit de développement logiciel (SDK) TeamsFx est pré-configuré dans un projet échafaudé à l’aide du kit de ressources TeamsFx ou de l’CLI.
+Le Kit de développement logiciel (SDK) TeamsFx est préconfiguré dans un projet généré automatiquement à l’aide du Kit de ressources TeamsFx ou de l’interface CLI.
 Pour plus d’informations, [voir Teams projet d’application](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Configuration requise
 
-- Node.js version ultérieure `10.x.x` .
-- Si votre projet a installé des `botbuilder` [packages associés](https://github.com/Microsoft/botbuilder-js#packages) en tant que dépendances, assurez-vous qu’ils sont de la même version et que la version est .`>= 4.9.3` ([Problème : tous les packages BOTBUILDER doivent être de la même version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* Node.js version ultérieure `10.x.x` .
+* Si votre projet a installé des `botbuilder` [packages associés](https://github.com/Microsoft/botbuilder-js#packages) en tant que dépendances, assurez-vous qu’ils sont de la même version et que la version est .`>= 4.9.3` ([Problème : tous les packages BOTBUILDER doivent être de la même version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
-Pour plus d’informations, consultez :
-* [Code source](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-* [Documentation de référence de l'API](https://aka.ms/teamsfx-sdk-help) 
+Pour plus d’informations, reportez-vous aux rubriques suivantes :
+
+* [Code source](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [Documentation de référence de l'API](https://aka.ms/teamsfx-sdk-help)
 * [Échantillons](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>Installer le `@microsoft/teamsfx` package
@@ -45,7 +51,7 @@ npm install @microsoft/teamsfx
 
 Pour créer un objet client graph pour accéder à l’API microsoft Graph, vous aurez besoin des informations d’identification pour vous authentifier. Le SDK fournit plusieurs classes d’informations d’identification qui répondent à différentes exigences. Vous devez charger la configuration avant d’utiliser des informations d’identification.
 
-- Dans l’environnement de navigateur, vous devez passer explicitement les paramètres de configuration. La React projet a fourni des variables d’environnement à utiliser.
+* Dans l’environnement de navigateur, vous devez passer explicitement les paramètres de configuration. La React projet a fourni des variables d’environnement à utiliser.
 
 ```ts
 loadConfiguration({
@@ -56,7 +62,7 @@ loadConfiguration({
 });
 ```
 
-- Dans un environnement NodeJS tel qu’Azure Function, vous pouvez simplement appeler `loadConfiguration`. Il se charge à partir des variables d’environnement par défaut.
+* Dans un environnement NodeJS tel qu’Azure Function, vous pouvez simplement appeler `loadConfiguration`. Il se charge à partir des variables d’environnement par défaut.
 
 ```ts
 loadConfiguration();
@@ -77,8 +83,9 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+
 > [!NOTE]
-> Vous pouvez utiliser cette classe d’informations d’identification dans l’application de navigateur, Teams Application Onglet.
+> Vous pouvez utiliser cette classe d’informations d’identification dans l’application de navigateur, Teams Tab App.
 
 #### <a name="using-microsoft-365-tenant-credential"></a>Utilisation des informations Microsoft 365 client
 
@@ -102,7 +109,7 @@ Il existe 3 classes d’informations d’identification situées sous le dossier
 Les classes d’informations `TokenCredential` d’identification implémentent une interface largement utilisée dans les API de bibliothèque Azure. Ils sont conçus pour fournir des jetons d’accès pour des étendues spécifiques. Les classes d’informations d’identification suivantes représentent différentes identités dans certains scénarios :
 
 * `TeamsUserCredential`représente Teams’identité de l’utilisateur actuel. L’utilisation de ces informations d’identification demande le consentement de l’utilisateur pour la première fois.
-* `M365TenantCredential`représente Microsoft 365 de client. Elle est généralement utilisée lorsque l’utilisateur n’est pas impliqué comme un travail d’automatisation déclenché dans le temps.
+* `M365TenantCredential`représente Microsoft 365 client. Elle est généralement utilisée lorsque l’utilisateur n’est pas impliqué comme un travail d’automatisation déclenché dans le temps.
 * `OnBehalfOfUserCredential` utilise le flux « de la part de ». Il a besoin d’un jeton d’accès et vous pouvez obtenir un nouveau jeton pour une étendue différente. Il est conçu pour être utilisé dans les scénarios azure function ou bot.
 
 ### <a name="bots"></a>Bots
@@ -196,7 +203,7 @@ const response = await axios.default.get(apiConfig.endpoint + "api/httptrigger1"
 
 ### <a name="access-sql-database-in-azure-function"></a>Accéder à SQL base de données dans Azure Function
 
-Utilisez la `tedious` bibliothèque pour accéder SQL et tirer parti `DefaultTediousConnectionConfiguration` de cette gestion de l’authentification.
+Utilisez la `tedious` bibliothèque pour accéder à SQL qui `DefaultTediousConnectionConfiguration` gère l’authentification.
 En dehors `tedious`de , vous pouvez également composer la config de connexion d’SQL bibliothèques basées sur le résultat de `sqlConnectionConfig.getConfig()`.
 
 ```ts

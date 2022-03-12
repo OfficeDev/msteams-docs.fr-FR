@@ -6,16 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Flux de données d’authentification d’application personnelle de carte adaptative
-ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355861"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453263"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Créer des onglets avec les Cartes adaptatives
 
 > [!IMPORTANT]
+>
 > * Les onglets avec cartes adaptatives sont actuellement uniquement pris en charge en tant qu’applications personnelles.
 
 Lorsque vous développez un onglet à l’aide de la méthode traditionnelle, vous pouvez être face à ces problèmes :
@@ -33,7 +34,7 @@ L’image suivante montre les onglets de build avec cartes adaptatives dans les 
 
 :::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Exemple de carte adaptative rendue dans les onglets." border="false":::
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Avant de commencer à utiliser des cartes adaptatives pour créer des onglets, vous devez :
 
@@ -107,6 +108,7 @@ Voici un exemple de manifeste d’onglet carte adaptative :
 La communication entre votre onglet Carte adaptative et votre bot s’fait par le biais `invoke` d’activités. Chaque `invoke` activité a un nom **correspondant**. Utilisez le nom de chaque activité pour différencier chaque demande. `tab/fetch` et `tab/submit` sont les activités couvertes dans cette section.
 
 > [!NOTE]
+>
 > * Les bots doivent envoyer toutes les réponses à [l’URL du service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). L’URL du service est reçue dans le cadre de la charge utile `activity` entrante.
 > * La taille de la charge utile d’appel a augmenté jusqu’à 80 000b.
 
@@ -235,6 +237,7 @@ Avec l’introduction de l’onglet Carte adaptative, il existe un changement da
 Le code suivant fournit des exemples de requête `task/fetch` et de réponse :
 
 **`task/fetch` request**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -432,7 +435,7 @@ Le code suivant montre un exemple de requête rééditée :
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Déploiement du lien des onglets et vue des étapes](~/tabs/tabs-link-unfurling.md)
+> [Déploiement de liens d’onglets et vue d’étape](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>Voir aussi
 

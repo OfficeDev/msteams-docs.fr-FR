@@ -5,12 +5,12 @@ author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: rejet adaptatif de carte de base d’approbation
-ms.openlocfilehash: 0fce06ee940a172c02b00c3ae417f6b31090f5e0
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 3eea8e3c08927ab797525a10f59774410197d0e1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081148"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453732"
 ---
 # <a name="up-to-date-cards"></a>Cartes actualisées
 
@@ -18,12 +18,12 @@ Vous pouvez désormais fournir les dernières informations à vos utilisateurs s
 
 Par exemple, un utilisateur peut créer une demande d’approbation de biens dans Teams conversation. Alex crée une demande d’approbation et l’affecte à Megan et Nestor. Voici les deux parties pour créer la demande d’approbation :
 
-* Les affichages spécifiques à l’utilisateur peuvent être appliqués à `refresh` l’aide de la propriété des cartes adaptatives.
-À l’aide des affichages  spécifiques de l’utilisateur, vous pouvez afficher une carte avec des boutons Approuver ou Rejeter à un ensemble d’utilisateurs et afficher une carte sans ces boutons à d’autres utilisateurs. 
+* Les affichages spécifiques à l’utilisateur peuvent être appliqués à l’aide `refresh` de la propriété des cartes adaptatives.
+À l’aide des affichages spécifiques de  l’utilisateur, vous pouvez afficher une carte avec des boutons Approuver ou Rejeter à un ensemble d’utilisateurs et afficher une carte sans ces boutons à d’autres utilisateurs.
 
-* Pour que l’état de la carte reste toujours à jour, Teams mécanisme de modification de message peut être utilisé. Par exemple, pour chaque approbation, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs d’actualisation automatique, auquel le bot peut répondre avec la carte spécifique de `adaptiveCard/action` l’utilisateur mise à jour.
+* Pour que l’état de la carte reste toujours à jour, Teams mécanisme de modification des messages peut être utilisé. Par exemple, pour chaque approbation, le bot peut déclencher une modification de message pour tous les utilisateurs. Cette modification de message de bot déclenche une demande d’appel pour tous les utilisateurs `adaptiveCard/action` d’actualisation automatique, auquel le bot peut répondre avec la carte spécifique de l’utilisateur mise à jour.
 
-Pour plus d’informations, [voir comment modifier un message de bot.](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
+Pour plus d’informations, voir [comment modifier un message de bot](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## <a name="approval-base-card"></a>Carte de base d’approbation
 
@@ -61,7 +61,7 @@ Le code suivant fournit un exemple de carte de base d’approbation :
 
 ## <a name="approval-card-with-approve-and-reject-buttons"></a>Carte d’approbation avec boutons Approuver et Rejeter
 
-Le code suivant fournit un exemple de carte d’approbation avec les boutons **Approuver** **et** Rejeter :
+Le code suivant fournit un exemple de carte d’approbation avec les boutons **Approuver** **et Rejeter** :
 
 ```JSON
 {
@@ -113,32 +113,32 @@ Le code suivant fournit un exemple de carte d’approbation avec les boutons **A
 
 Les deux rôles présentés aux utilisateurs en fonction de la demande d’approbation sont les suivants :
 
-* Carte de base d’approbation : présentée aux utilisateurs qui ne font pas partie de la liste des approuveurs et que la demande n’est pas encore approuvée ou rejetée, et qu’elle ne fait pas partie de la liste dans la propriété du JSON de carte `userIds` `refresh` adaptative.
-* Carte d’approbation  avec **boutons** Approuver ou Rejeter : affichée aux utilisateurs qui font partie de la liste des approuveurs et à la liste dans la propriété du JSON de carte `userIds` adaptative. `refresh`
+* Carte de base d’approbation : présentée aux utilisateurs qui ne font pas partie de la liste des approuveurs et que la demande n’est pas encore approuvée ou rejetée, `userIds` `refresh` et qu’elle ne fait pas partie de la liste dans la propriété du JSON de carte adaptative.
+* Carte d’approbation avec  **boutons** Approuver ou Rejeter : affichée aux utilisateurs `userIds` `refresh` qui font partie de la liste des approuveurs et à la liste dans la propriété du JSON de carte adaptative.
 
-**Pour envoyer la demande d’approbation de biens**
+Pour envoyer la demande d’approbation de bien :
 
 1. Alex raises an asset approval request in a Teams conversation and assigns it to Megan and Nestor.
 2. Le bot envoie la carte de base d’approbation dans la conversation.
-3. Tous les autres utilisateurs de la conversation voient la carte envoyée par le bot. L’actualisation automatique est déclenchée pour Megan et Nestor,  qui  voient désormais la carte spécifique de l’utilisateur avec des boutons Approuver ou Rejeter lorsque leurs MRIS utilisateur sont ajoutés à la liste dans la propriété de la carte `userIds` adaptative. `refresh`
+3. Tous les autres utilisateurs de la conversation voient la carte envoyée par le bot. L’actualisation automatique est déclenchée pour Megan et Nestor, qui voient désormais la carte spécifique  de l’utilisateur avec des boutons Approuver ou Rejeter lorsque leurs  MRIS `userIds` `refresh` utilisateur sont ajoutés à la liste dans la propriété de la carte adaptative.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="Affichages spécifiques à l’utilisateur":::
 
-4. Nestor sélectionne le **bouton Approuver,** qui est alimenté avec `Action.Execute` . Le bot obtient `adaptiveCard/action` une demande d’appel à laquelle il peut renvoyer une carte adaptative en réponse.
+4. Nestor sélectionne le **bouton Approuver** , qui est alimenté avec `Action.Execute`. Le bot obtient une `adaptiveCard/action` demande d’appel à laquelle il peut renvoyer une carte adaptative en réponse.
 5. Le bot déclenche une modification de message avec une carte mise à jour, ce qui indique que Nestor a approuvé la demande pendant que l’approbation de Megan est en attente.
-6. La modification du message du bot déclenche une actualisation automatique pour Megan et voit la carte spécifique de  l’utilisateur mise à jour, qui indique que Nestor a approuvé la demande, mais voit également les boutons Approuver ou Rejeter.  L’utilisateur DE NEstor EST supprimé de la liste dans la propriété de cette carte adaptative JSON aux étapes `userIds` `refresh` 4 et 5. À présent, l’actualisation automatique est déclenchée uniquement pour Megan.
+6. La modification du message du bot déclenche une actualisation automatique pour Megan et voit la carte spécifique de l’utilisateur mise à jour, qui indique que Nestor a approuvé la demande,  mais voit  également les boutons Approuver ou Rejeter. L’utilisateur DE NEstor EST `userIds` `refresh` supprimé de la liste dans la propriété de cette carte adaptative JSON aux étapes 4 et 5. À présent, l’actualisation automatique est déclenchée uniquement pour Megan.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Affichages utilisateur spécifiques à jour":::
 
-7. À présent, Megan sélectionne le **bouton Approuver,** qui est alimenté avec `Action.Execute` . Le bot obtient `adaptiveCard/action` une demande d’appel à laquelle il peut renvoyer une carte adaptative en réponse.
+7. À présent, Megan sélectionne le **bouton Approuver** , qui est alimenté avec `Action.Execute`. Le bot obtient une `adaptiveCard/action` demande d’appel à laquelle il peut renvoyer une carte adaptative en réponse.
 8. Le bot déclenche une modification de message avec une carte mise à jour, ce qui indique que Nestor et Megan ont approuvé la demande.
-9. La modification du message du bot ne déclenche aucune actualisation automatique. L’utilisateur DE MEGAN EST également supprimé de la liste dans la propriété de cette carte adaptative JSON aux `userIds` `refresh` étapes 7 et 8.
+9. La modification du message du bot ne déclenche aucune actualisation automatique. L’utilisateur DE MEGAN EST `userIds` `refresh` également supprimé de la liste dans la propriété de cette carte adaptative JSON aux étapes 7 et 8.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png" alt-text="Affichages à jour":::
 
-## <a name="adaptive-card-sent-as-response-of-adaptivecardaction-and-message-edit"></a>Carte adaptative envoyée en réponse à `adaptiveCard/action` et `message edit`
+## <a name="adaptive-card-sent-as-response-of-adaptivecardaction-and-message-edit"></a>Carte adaptative envoyée en réponse à et `adaptiveCard/action``message edit`
 
-Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse aux étapes `adaptiveCard/action` `message edit` 4 et 5 :
+Le code suivant fournit un exemple de cartes adaptatives `adaptiveCard/action` `message edit` envoyées en réponse aux étapes 4 et 5 :
 
 ```JSON
 {
@@ -174,7 +174,7 @@ Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse a
 }
 ```
 
-Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse à un appel via `adaptiveCard/action` l’actualisation automatique pour l’étape 6 :
+Le code suivant fournit un exemple de cartes adaptatives envoyées en `adaptiveCard/action` réponse à un appel via l’actualisation automatique pour l’étape 6 :
 
 ```JSON
 {
@@ -228,7 +228,7 @@ Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse �
 }
 ```
 
-Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse aux étapes `adaptiveCard/action` `message edit` 7 et 8 :
+Le code suivant fournit un exemple de cartes adaptatives `adaptiveCard/action` `message edit` envoyées en réponse aux étapes 7 et 8 :
 
 ```JSON
 {
@@ -270,4 +270,4 @@ Le code suivant fournit un exemple de cartes adaptatives envoyées en réponse a
 
 * [Travailler avec les actions universelles pour les cartes adaptatives](Work-with-universal-actions-for-adaptive-cards.md)
 * [Affichages spécifiques à l’utilisateur](User-Specific-Views.md)
-* [Retour d’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Commentaires sur l’achèvement du formulaire](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

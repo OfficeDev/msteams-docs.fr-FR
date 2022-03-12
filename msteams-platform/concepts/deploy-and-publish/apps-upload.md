@@ -5,19 +5,19 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: e3a22378819d8fb1e865e2122b7977bcbabbbb74
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356279"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453329"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
-Vous pouvez télécharger les applications Microsoft Teams sans avoir à les publier dans votre organisation ou dans le magasin Teams. Cela a du sens dans les scénarios suivants :
+Vous pouvez télécharger les applications Microsoft Teams sans avoir à les publier dans votre organisation ou dans le magasin Teams dans les situations suivantes :
 
 * Vous souhaitez tester et déboguer une application localement vous-même ou avec d'autres développeurs.
-* Vous avez créé une application rien que pour vous. Par exemple, pour automatiser un workflow.
+* Vous avez créé une application pour vous-même afin d’automatiser un flux de travail.
 * Vous avez créé une application pour un petit groupe d'utilisateurs, tel que votre groupe de travail.
 
 > [!IMPORTANT]
@@ -25,29 +25,32 @@ Vous pouvez télécharger les applications Microsoft Teams sans avoir à les pub
 
 ## <a name="prerequisites"></a>Configuration requise
 
-* Créez votre [package d'application](~/concepts/build-and-test/apps-package.md) et [validez-le](https://dev.teams.microsoft.com/appvalidation.html) pour les erreurs.
+* Veillez à créer votre [package d'application](~/concepts/build-and-test/apps-package.md) et [à le valider](https://dev.teams.microsoft.com/appvalidation.html) pour les erreurs.
 * [Activez le téléchargement d'applications personnalisées](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) dans Teams.
-* Assurez-vous que votre application est en cours d'exécution et accessible via HTTPs.
+* Assurez-vous que votre application est en cours d'exécution et accessible via HTTPS.
 
 ## <a name="upload-your-app"></a>Télécharger votre application
 
 Vous pouvez télécharger votre application dans une équipe, un chat, une réunion ou pour un usage personnel selon la façon dont vous avez configuré la portée de votre application.
 
 1. Connectez-vous au client Teams avec votre [compte de développement Microsoft 365](~/build-your-first-app/build-and-run.md#prerequisites).
-1. Sélectionnez **Applications** et choisissez **Charger une application personnalisée**.
-1. Sélectionnez le fichier .zip de votre package d'application. Une boîte de dialogue d'installation s'affiche.
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d'écran montrant un exemple de boîte de dialogue d'installation de l'application Teams.":::
-1. Ajoutez votre application à Teams.
+1. Sélectionnez **Applications**, puis **Gérer vos applications**.
+1. Sélectionnez **Charger une application personnalisée**.
+1. Sélectionnez le ficher .zip de votre package d'application. L’écran suivant s’affiche :
 
-> [!NOTE]
-> La méthode `onInstallationUpdateActivityAsync()` est utilisée pour obtenir les paramètres régionaux de Microsoft Teams lors de l’ajout du bot à Microsoft Teams.
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d'écran montrant un exemple de boîte de dialogue d'installation de l'application Teams.":::
 
-## <a name="troubleshoot-upload-issues"></a>Résoudre les problèmes de téléchargement
+1. Sélectionnez **Ajouter** pour ajouter l’application à Teams.
 
-Si votre application ne parvient pas à se charger, procédez comme suit jusqu'à ce que le problème soit résolu :
+    > [!NOTE]
+    > La méthode `onInstallationUpdateActivityAsync()` est utilisée pour obtenir les paramètres régionaux de Microsoft Teams lors de l’ajout du bot à Microsoft Teams.
 
-1. Reprendre les instructions de [création de votre package d'application](../../concepts/build-and-test/apps-package.md).
-1. [Valider à nouveau votre package d'application.](https://dev.teams.microsoft.com/appvalidation.html)
+## <a name="troubleshooting"></a>Résolution des problèmes
+
+Si votre application ne parvient pas à charger une version test ou si vous rencontrez des problèmes de chargement, vérifiez les options suivantes :
+
+1. Assurez-vous que vous avez suivi toutes les instructions pour la [création de votre package d’application](../../concepts/build-and-test/apps-package.md).
+1. [Validez votre package d'application](https://dev.teams.microsoft.com/appvalidation.html).
 1. Assurez-vous que le manifeste de votre application correspond au dernier [schéma](../../resources/schema/manifest-schema.md).
 
 ## <a name="access-your-app"></a>Accéder à votre application

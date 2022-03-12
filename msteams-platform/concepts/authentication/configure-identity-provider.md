@@ -4,12 +4,12 @@ description: Décrit comment configurer des fournisseurs d’identité axés sur
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: authentification teams Azure AD fournisseur d’identité oauth
-ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ee99bf10f517eb928be0231a1188d2d5db74709d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356412"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452717"
 ---
 # <a name="configure-identity-providers"></a>Configurer les fournisseurs d’identité
 
@@ -35,7 +35,7 @@ Remplacez `<hostname>` par votre hôte réel, qui peut être un site d’héberg
 
 * **Fournisseurs OAuth externes à partir d’onglets :** Pour plus d’informations, voir [Utiliser des fournisseurs OAuth externes](../../tabs/how-to/authentication/auth-oauth-provider.md)
 
-## <a name="see-also"></a>Voir aussi 
+## <a name="see-also"></a>Voir aussi
 
 * [Authentifier un utilisateur dans un bot Microsoft Teams client](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [Prise en charge de l'authentification unique (SSO) pour les onglets](../../tabs/how-to/authentication/auth-aad-sso.md)

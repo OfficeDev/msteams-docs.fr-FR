@@ -5,13 +5,18 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: test des équipes de programme pour les développeurs d’applications
 ms.date: 11/01/2019
+ms.openlocfilehash: 907b6e7b6734a16afa1335cf5198d2d88cad645b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452703"
 ---
-
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client Microsoft 365 test
 
 Vous pouvez tester votre application Microsoft Teams avec des exemples de données avec un abonnement Microsoft 365 développeur.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 1. [Rejoignez le Microsoft 365 développeur](/office/developer-program/office-365-developer-program), si vous n’avez pas de client test.
 2. [Configurer un abonnement Microsoft 365 développeur.](/office/developer-program/office-365-developer-program-get-started)
@@ -243,6 +248,6 @@ Par défaut, seuls les administrateurs globaux ou les administrateurs Teams serv
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Déboguer votre onglet](~/tabs/how-to/developer-tools.md) 
+* [Déboguer votre onglet](~/tabs/how-to/developer-tools.md)
 * [Déboguer vos bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Tester les autorisations RSC](~/graph-api/rsc/test-resource-specific-consent.md)

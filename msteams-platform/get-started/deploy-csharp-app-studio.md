@@ -6,42 +6,41 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 08afc6a5d83d49f1fa6c2543f8a0ee4e001a3dc4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: edc8fc04c652c1317949194a958da8614dc59af0
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60721073"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452983"
 ---
 # <a name="update-c-app-package-in-app-studio"></a>Mettre à jour C# package d’application dans App Studio
 
 > [!TIP]
-> **Essayez le portail du développeur**: App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur.](https://dev.teams.microsoft.com/)
+> **Essayez le portail du développeur** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail du développeur](https://dev.teams.microsoft.com/).
 
 App Studio est une application Teams que vous pouvez installer à partir du Teams store. Cela simplifie la création et l’inscription d’une application.
 
 Pour mettre à jour le package d’application, vous suivrez les étapes suivantes :
 
-1. Pour installer App Studio dans Teams,  sélectionnez l’icône Applications en bas de la barre de gauche, puis recherchez **App Studio**:
+1. Pour installer App Studio dans Teams, sélectionnez l’icône  Applications en bas de la barre de gauche et recherchez **App Studio** :
 
     <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
-1. Sélectionnez la **vignette App Studio** et choisissez **Installer.** App Studio est installé :
+1. Sélectionnez la **vignette App Studio** et choisissez **Installer**. App Studio est installé :
 
     <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-1. Pour créer le package d’application pour votre application Teams, sélectionnez l’onglet Éditeur de **manifeste** dans **App Studio**:
+1. Pour créer le package d’application pour votre application Teams, sélectionnez l’onglet Éditeur **de manifeste** **dans App Studio** :
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
+    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Le fichier manifest.json peut se trouver dans Visual Studio manifeste sous ```Microsoft.Teams.Samples.HelloWorld.Web```.
 
-    L’exemple est livré avec son propre manifeste et est conçu pour créer un package d’application lorsque le projet est créé. Le fichier manifest.json peut se trouver dans Visual Studio manifeste sous ```Microsoft.Teams.Samples.HelloWorld.Web``` .
+     Dans Visual Studio, le fichier manifest.json se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web`. Cette étape est décrite par l’image suivante :  
 
-     Dans Visual Studio, le fichier manifest.json se trouve sous **Manifeste** dans `Microsoft.Teams.Samples.HelloWorld.Web` . Cette étape est décrite par l’image suivante :  
-    
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
 
-1. Maintenant, pour modifier ce package d’application, **sélectionnez Importer** une application existante dans l’éditeur **de manifeste**:
+1. Maintenant, pour modifier ce package d’application, **sélectionnez Importer une application existante** dans l’éditeur **de manifeste** :
 
     <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
@@ -55,37 +54,37 @@ Pour mettre à jour le package d’application, vous suivrez les étapes suivant
 
     Sur le côté gauche de l’éditeur de manifeste se trouve une liste d’étapes. Sur le côté droit se trouve une liste des propriétés qui doivent être remplies pour chaque étape. Lorsque vous avez commencé avec un exemple d’application, la plupart des informations sont déjà terminées. Les étapes suivantes vous permettent de mettre à jour les propriétés de l’application Hello World.
 
-#### <a name="app-details"></a>Détails de l’application
+## <a name="app-details"></a>Détails de l’application
 
-Sélectionnez **les détails de l’application** **sous Détails.** Sélectionnez **le bouton** Générer pour créer un ID d’application.
+Sélectionnez **les détails de l’application** **sous Détails**. Sélectionnez **le bouton** Générer pour créer un ID d’application.
 
-Votre nouvel ID d’application est similaire à `2322041b-72bf-459d-b107-f4f335bc35bd` .
+Votre nouvel ID d’application est similaire à `2322041b-72bf-459d-b107-f4f335bc35bd`.
 
-Dans le volet droit, vous allez voir  les détails de l’application, y compris les informations sur le développeur et les **détails de** pertinence. Ces détails sont importants si vous écrivez une nouvelle application pour la distribution.
+Dans le volet droit, vous allez voir les détails de l’application, y compris les informations sur le développeur et les **détails de** pertinence. Ces détails sont importants si vous écrivez une nouvelle application pour la distribution.
 
-#### <a name="tabs"></a>Onglets
+## <a name="tabs"></a>Onglets
 
 Il est simple d’ajouter des onglets à une Teams application. L’exemple d’application prend déjà en charge plusieurs onglets et vous pouvez les activer.
 
-##### <a name="team-tab"></a>Onglet Équipe
+### <a name="team-tab"></a>Onglet Équipe
 
 Votre application ne peut avoir qu’un seul onglet d’équipe :
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-Dans cet exemple, l’onglet Équipe est l’endroit où votre page de configuration s’affiche. Sélectionnez **le symbole ...** de l’URL de configuration de l’onglet et choisissez **Modifier** dans le menu déroulant.  Remplacez l’URL par l’URL que vous avez utilisée lors de `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` l’hébergement de votre application.
+Dans cet exemple, l’onglet Équipe est l’endroit où votre page de configuration s’affiche. Sélectionnez **le symbole ...** de **l’URL de configuration de l’onglet** et choisissez **Modifier** dans le menu déroulant. Remplacez l’URL `https://yourteamsapp.ngrok.io/configure` par `yourteamsapp.ngrok.io` l’URL que vous avez utilisée lors de l’hébergement de votre application.
 
-##### <a name="personal-tabs"></a>Onglets personnels
+### <a name="personal-tabs"></a>Onglets personnels
 
 Votre application peut avoir jusqu’à 16 onglets, y compris l’onglet Équipe.
 
-Les onglets personnels sont différents de l’onglet Équipe. **L’onglet Hello** est déjà répertorié dans la liste des onglets personnels avec une valeur d’espace `com.contoso.helloworld.hellotab` réservé. Sélectionnez **le symbole ...** de l’URL de configuration de l’onglet et choisissez **Modifier** dans le menu déroulant.  La boîte de dialogue suivante s’affiche :
+Les onglets personnels sont différents de l’onglet Équipe. **L’onglet Hello** est déjà répertorié dans la liste des onglets personnels avec une valeur d’espace réservé `com.contoso.helloworld.hellotab`. Sélectionnez **le symbole ...** de **l’URL de configuration de l’onglet** et choisissez **Modifier** dans le menu déroulant. La boîte de dialogue suivante s’affiche :
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
 Mettez à jour les zones suivantes avec l’URL de votre application :
 
-- Modifier la **zone URL** de contenu en `https://yourteamsapp.ngrok.io/hello`
+- Modifier la zone **URL** de contenu en `https://yourteamsapp.ngrok.io/hello`
 - Modifier la zone **URL du site** web en `https://yourteamsapp.ngrok.io/hello`
 
 Remplacez `yourteamsapp.ngrok.io` par l’URL que vous avez utilisée lors de l’hébergement de votre application.
@@ -103,16 +102,16 @@ Le bot qui a été importé à partir de l’exemple n’a pas d’ID d’applic
 
 Pour configurer votre bot, complétez les étapes suivantes :
 
-1. Sélectionnez **Supprimer** en face du bot importé dans la liste des bots. Il ne reste plus aucun bot à afficher. 
-1. Sélectionnez **Programme d’installation** pour afficher la boîte de dialogue Configurer **un bot.**
+1. **Sélectionnez Supprimer** en face du bot importé dans la liste des bots. Il ne reste plus aucun bot à afficher.
+1. **Sélectionnez Le programme** d’installation pour afficher **la boîte de dialogue Configurer un bot**.
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
 1. Ajoutez un nom de bot **Contoso bot** et cochez les trois cases sous **Étendue**.
-1. Sélectionnez **Enregistrer** pour quitter la boîte de dialogue. App Studio enregistre votre bot auprès de Microsoft et affiche votre nouveau bot dans la liste des bots. 
+1. **Sélectionnez Enregistrer** pour quitter la boîte de dialogue. App Studio inscrit votre bot auprès de Microsoft et affiche votre nouveau bot dans la liste des bots.
 1. À présent, ouvrez un fichier texte dans le bloc-notes et copiez-y votre nouvel ID de bot.
-1. Cliquez **sur Générer un nouveau** mot de passe et notez le mot de passe dans le même fichier texte que celui où vous avez noté votre ID d’application de bot.
-1. Mettez à jour **l’adresse du point** de terminaison du bot et remplacez-la par l’URL que vous avez `https://yourteamsapp.ngrok.io/api/messages` utilisée lors de `yourteamsapp.ngrok.io` l’hébergement de votre application.
+1. Cliquez **sur Générer un nouveau mot de** passe, puis notez le mot de passe dans le même fichier texte que celui où vous avez noté votre ID d’application de bot.
+1. Mettez à **jour l’adresse** `https://yourteamsapp.ngrok.io/api/messages``yourteamsapp.ngrok.io` du point de terminaison du bot et remplacez-la par l’URL que vous avez utilisée lors de l’hébergement de votre application.
 1. Enregistrez maintenant votre fichier texte, car vous devez ajouter les informations du fichier à votre application hébergée pour permettre une communication sécurisée avec votre bot.
 
 #### <a name="messaging-extensions"></a>Extensions de messagerie
@@ -121,29 +120,29 @@ Les extensions de messagerie permet aux utilisateurs de demander des information
 
 Pour configurer votre extension de messagerie, complétez les étapes suivantes :
 
-1. Sélectionnez **les extensions de messagerie** sous **Fonctionnalités** dans le volet gauche d’App Studio pour configurer l’extension de messagerie :
+1. **Sélectionnez les extensions de messagerie** sous **Fonctionnalités** dans le volet gauche d’App Studio pour configurer l’extension de messagerie :
 
     <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
     L’exemple d’extension de messagerie est répertorié dans le volet **Extensions** de messagerie.
 
-1. Sélectionnez **Supprimer** pour supprimer l’extension de messagerie, sélectionnez **Configurer** et suivez les mêmes étapes que pour les [bots.](#bots) La **boîte de dialogue Extension** de messagerie s’affiche.
-1. Sélectionnez **l’onglet Utiliser le bot** existant et **sélectionnez l’un de mes bots existants.**
+1. **Sélectionnez Supprimer** pour supprimer l’extension de messagerie, sélectionnez **Configurer** et suivez les mêmes étapes que pour les [bots](#bots). La **boîte de dialogue Extension** de messagerie s’affiche.
+1. Sélectionnez **l’onglet Utiliser le bot** existant et **sélectionnez l’un de mes bots existants**.
 1. Sélectionnez le bot que vous avez créé dans le menu déroulant. Ajoutez un **nom de bot** et **sélectionnez Enregistrer** pour fermer la boîte de dialogue.
-1. Sous la section **Commande,** sélectionnez **Ajouter.** Pour ajouter une commande basée sur la recherche, sélectionnez l’option Autoriser les utilisateurs à interroger votre service pour obtenir des informations et insérez-la dans une option **de message.**
-1. Dans la **boîte de dialogue Nouvelle commande,** entrez les valeurs suivantes :
+1. Sous la section **Commande** , sélectionnez **Ajouter**. Pour ajouter une commande basée sur la recherche, sélectionnez l’option Autoriser les utilisateurs à interroger votre service pour obtenir des informations et insérez-la **dans une option de message** .
+1. Dans la **boîte de dialogue Nouvelle commande** , entrez les valeurs suivantes :
 
-    Sous **nouvelle commande**:
+    Sous **nouvelle commande** :
 
-    - **ID de commande**: entrer du texte aléatoire
-    - **Titre**: entrer un titre aléatoire
-    - **Description**: entrez une description aléatoire
+    - **ID de commande :** entrer du texte aléatoire
+    - **Titre :** entrer un titre aléatoire
+    - **Description** : entrez une description aléatoire
 
-    Sous **paramètre**:
+    Sous **Paramètre** :
 
-    - **Name**: Entrez le nom du paramètre
-    - **Titre**: entrez le titre de la carte
-    - **Description**: entrez la description de la carte
+    - **Nom :** entrez le nom du paramètre
+    - **Titre** : entrer le titre de la carte
+    - **Description** : entrer la description de la carte
 
 1. Après avoir entré les informations, **sélectionnez Enregistrer** pour fermer la boîte de dialogue.
 
@@ -152,19 +151,19 @@ Pour configurer votre extension de messagerie, complétez les étapes suivantes 
 Une fois que vous avez entré les détails de votre application, complétez les étapes suivantes pour inscrire votre application dans Teams :
 
 1. Utilisez **Test et distribuez** App Studio pour installer votre application dans Teams.
-1. Mettez à jour votre application hébergée avec l’ID d’application et le mot de passe de votre bot. Pour l’exemple d’application, utilisez les mêmes ID d’application et mot de passe pour le bot et l’extension de messagerie. 
-1. Sélectionnez **Test et distribuez-le** **sous Terminer** dans le volet gauche d’App Studio :
+1. Mettez à jour votre application hébergée avec l’ID d’application et le mot de passe de votre bot. Pour l’exemple d’application, utilisez les mêmes ID d’application et mot de passe pour le bot et l’extension de messagerie.
+1. **Sélectionnez Test et distribuez-le** **sous Terminer** dans le volet gauche d’App Studio :
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-1. Pour télécharger votre application sur Teams, sélectionnez le bouton **Installer** sous **Tester et distribuer**:
+1. Pour télécharger votre application sur Teams, sélectionnez le bouton **Installer** sous **Tester et distribuer** :
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
-    
-    > [!NOTE]
-    > Si vous ne parvenez pas à charger une version de version de chargement de l’application, vérifiez si vous avez activé le téléchargement [d’applications personnalisées.](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option)
 
-1. Sélectionnez **la zone de** recherche dans la section Ajouter à une équipe et sélectionnez une équipe pour ajouter l’exemple d’application.  Vous pouvez configurer une équipe spéciale pour les tests.
+    > [!NOTE]
+    > Si vous ne parvenez pas à charger une version de chargement de version de l’application, vérifiez si vous avez activé [le chargement d’applications personnalisées](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
+
+1. Sélectionnez **la zone de** recherche dans la section Ajouter **à une** équipe et sélectionnez une équipe pour ajouter l’exemple d’application. Vous pouvez configurer une équipe spéciale pour les tests.
 1. Sélectionnez **le bouton** Installer en bas de la boîte de dialogue.
 
     Votre application est désormais disponible dans Teams. Toutefois, le bot et l’extension de messagerie ne fonctionneront pas tant que vous n’aurez pas mis à jour l’environnement des applications hébergées avec les ID d’application et les mots de passe.
@@ -175,20 +174,20 @@ Une fois que vous avez entré les détails de votre application, complétez les 
 
 Une fois que vous avez entré les détails de votre application, complétez les étapes suivantes pour inscrire votre application dans Teams :
 
-1. Utilisez **la prévisualisation** du portail du développeur pour installer votre application dans Teams.
+1. Utilisez **l’aperçu** du portail du développeur pour installer votre application dans Teams.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image montrant le bouton Aperçu" border="false":::
 
 1. Mettez à jour votre application hébergée avec l’ID d’application et le mot de passe de votre bot. Pour l’exemple d’application, utilisez les mêmes ID d’application et mot de passe pour le bot et l’extension de messagerie.
 
-1. Sélectionnez **Publier pour le stocker**  sous **Publier** dans le volet gauche du Portail du développeur :
+1. **Sélectionnez Publier pour le stocker** **sous Publier** dans le volet gauche du Portail du développeur :
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image montrant l’option Publier dans le volet gauche" border="false":::
 
     > [!NOTE]
-    > Si vous ne parvenez pas à charger une version de version de chargement de l’application, vérifiez si vous avez activé le téléchargement [d’applications personnalisées.](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option)
+    > Si vous ne parvenez pas à charger une version de chargement de version de l’application, vérifiez si vous avez activé [le chargement d’applications personnalisées](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
-1. Sélectionnez **Ajouter** pour installer l’application sur Teams.
+1. **Sélectionnez Ajouter** pour installer l’application sur Teams.
 
     Votre application est désormais disponible dans Teams. Toutefois, le bot et l’extension de messagerie ne fonctionneront pas tant que vous n’aurez pas mis à jour l’environnement des applications hébergées avec les ID d’application et les mots de passe.
 
@@ -211,17 +210,17 @@ L’exemple d’application nécessite que les variables d’environnement soien
 
     Après avoir apporté ces modifications, resserez l’application. Si vous utilisez ngrok, vous pouvez exécuter l’application localement et, si vous l’avez hébergée dans Azure, redéployer l’application.
 
-## <a name="test-the-app-capabilities-in-teams"></a>Testez les fonctionnalités de l’application dans Teams
+## <a name="test-the-app-capabilities-in-teams"></a>Tester les fonctionnalités de l’application dans Teams
 
 ### <a name="test-your-tab"></a>Tester votre onglet
 
 Après avoir installé l’application dans Teams, configurez-la pour afficher l’onglet que vous souhaitez que l’application charge.
 
-**Pour configurer l’onglet de l’application**
+Pour configurer l’onglet de l’application :
 
 1. Go to a channel in the team where you installed the sample app, and select the **'+'** button to add a new tab.
-1. Sélectionnez **Hello World** dans la **liste Ajouter un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de sélectionner l’onglet à afficher dans ce canal.
-1. Sélectionnez **Enregistrer**. `Hello World`L’onglet est chargé avec l’onglet.
+1. **Sélectionnez Hello World** dans la **liste Ajouter un** onglet. Une boîte de dialogue de configuration s’affiche pour vous permettre de sélectionner l’onglet à afficher dans ce canal.
+1. Sélectionnez **Enregistrer**. L’onglet `Hello World` est chargé avec l’onglet.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
@@ -229,17 +228,17 @@ Après avoir installé l’application dans Teams, configurez-la pour afficher l
 
 Vous pouvez maintenant tester le bot dans Teams.
 
-**Pour tester votre bot**
+Pour tester votre bot :
 
-- Sélectionnez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name` . Ce type de message est appelé **\@ mention.** Le bot répond à tout message que vous envoyez.
+- Sélectionnez un canal dans l’équipe où vous avez inscrit votre application et tapez `@your-bot-name`. Ce type de message est appelé **mention\@**. Le bot répond à tout message que vous envoyez.
 
     <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>Tester votre extension de messagerie
 
-**Pour tester votre extension de messagerie**
+Pour tester votre extension de messagerie :
 
-1. **Sélectionnez...** sous la zone d’entrée dans l’affichage de votre conversation. Un menu avec **l’application « Hello World** » s’affiche.
+1. **Sélectionnez...** sous la zone d’entrée dans l’affichage de votre conversation. Un menu avec **l’application « Hello World » s’affiche** .
 1. Sélectionnez le menu, un ensemble de textes aléatoires s’affiche. Vous pouvez sélectionner l’un des textes aléatoires insérés dans votre conversation.
 
     <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />

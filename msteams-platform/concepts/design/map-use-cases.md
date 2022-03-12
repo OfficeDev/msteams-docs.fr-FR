@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398903"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452829"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Mappez votre cas d’usage aux fonctionnalités Teams
 
@@ -18,9 +18,9 @@ Un cas d’usage bien défini vous permet de représenter l’infrastructure des
 
 Vous pouvez mapper votre cas d’utilisation en fonction des éléments suivants :
 
-- Partage et collaboration sur des éléments dans un système externe.
-- Démarrage des flux de travail et envoi de notifications aux utilisateurs.
-- Utilisation de plateformes sociales, bots conversationnels et combinaison de plusieurs fonctionnalités.
+* Partage et collaboration sur des éléments dans un système externe.
+* Démarrage des flux de travail et envoi de notifications aux utilisateurs.
+* Utilisation de plateformes sociales, bots conversationnels et combinaison de plusieurs fonctionnalités.
 
 ## <a name="common-use-cases-mapped-to-teams-capabilities"></a>Cas d’usage courants mappés aux fonctionnalités Teams
 
@@ -92,10 +92,10 @@ Examinons comment les fonctionnalités Teams activent différentes fonctionnalit
 
 Par exemple :
 
-- Utilisez la fonctionnalité **onglet** pour afficher les modules de tâches, demander des autorisations d’appareil, afficher <`iframe`> contenu ou utiliser des liens profonds.
-- Utilisez la fonctionnalité **extension de messagerie** pour envoyer des cartes, déployer des liens ou prendre des mesures sur les messages.
+* Utilisez la fonctionnalité **onglet** pour afficher les modules de tâches, demander des autorisations d’appareil, afficher <`iframe`> contenu ou utiliser des liens profonds.
+* Utilisez la fonctionnalité **extension de messagerie** pour envoyer des cartes, déployer des liens ou prendre des mesures sur les messages.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Liste de vérification de planification](../design/planning-checklist.md)
-- [Créer votre première application Microsoft Teams](../../get-started/get-started-overview.md)
+* [Liste de vérification de planification](../design/planning-checklist.md)
+* [Créer votre première application Microsoft Teams](../../get-started/get-started-overview.md)

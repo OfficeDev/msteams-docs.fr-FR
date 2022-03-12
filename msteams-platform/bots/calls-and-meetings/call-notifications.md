@@ -5,20 +5,20 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel de l’affinité de région de rappel des notifications d’appel
 ms.date: 04/02/2019
-ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216089"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453053"
 ---
 # <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 
-Lors [de l’inscription d’un bot d’appels](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)et de réunions pour Microsoft Teams, le webhook pour l’URL d’appel est mentionné. Cette URL est le point de terminaison de webhook pour tous les appels entrants à votre bot.
+Lors [de l’inscription d’un bot d’appels et de](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities) Microsoft Teams, le webhook pour l’URL d’appel est mentionné. Cette URL est le point de terminaison de webhook pour tous les appels entrants à votre bot.
 
 ## <a name="protocol-determination"></a>Détermination du protocole
 
-La notification entrante est fournie dans un format hérité pour assurer la compatibilité avec le [protocole Skype précédent.](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) Pour convertir l’appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournir la réponse suivante :
+La notification entrante est fournie dans un format hérité pour assurer la compatibilité avec le [protocole Skype précédent](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Pour convertir l’appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournir la réponse suivante :
 
 ```http
 HTTP/1.1 204 No Content
@@ -39,8 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) réponse. Vous pouvez spécifier `callbackUri` la situation à utiliser pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le routage vers `callbackUri` l’instance de droite.
-
+Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) réponse. Vous pouvez spécifier la situation `callbackUri` à utiliser pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, `callbackUri` et vous souhaitez incorporer ces informations dans le routage vers l’instance de droite.
 
 La section suivante fournit des détails sur l’authentification du rappel en inspectant le jeton publié sur votre webhook.
 
@@ -86,11 +85,11 @@ La configuration OpenID publiée sur <https://api.aps.skype.com/v1/.well-known/O
 
 * `aud` où audience est l’URI d’ID d’application spécifié pour l’application.
 * `tid` est l’ID de client pour Contoso.com.
-* `iss` est l’émetteur du jeton, `https://api.botframework.com` .
+* `iss` est l’émetteur du jeton, `https://api.botframework.com`.
 
 Pour votre gestion du code, le webhook doit valider le jeton, vérifier qu’il n’a pas expiré et vérifier s’il a été signé par la configuration OpenID publiée. Vous devez également vérifier si aud correspond à votre ID d’application avant d’accepter la demande de rappel.
 
-Pour plus d’informations, voir [valider les demandes entrantes.](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)
+Pour plus d’informations, voir [valider les demandes entrantes](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
 ## <a name="next-step"></a>Étape suivante
 

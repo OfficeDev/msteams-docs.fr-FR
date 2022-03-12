@@ -4,16 +4,16 @@ description: Décrit comment spécifier les options d’installation par défaut
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a6857e549c688bd7078aeaceae4b9f5a885ae2c3
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889089"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453207"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Configurer les options d’installation par défaut pour Microsoft Teams application
 
-Il est courant qu’une application puisse prendre en charge plusieurs scénarios dans Teams, mais vous l’avez peut-être conçue avec une étendue et une fonctionnalité spécifiques à l’esprit. Par exemple, si votre application est principalement destinée à une utilisation en équipe ou en canal, vous pouvez vous assurer que la première option d’installation que les utilisateurs voient dans le Store est Ajouter **à une équipe.**
+Il est courant qu’une application puisse prendre en charge plusieurs scénarios dans Teams, mais vous l’avez peut-être conçue avec une étendue et une fonctionnalité spécifiques à l’esprit. Par exemple, si votre application est principalement destinée à une utilisation en équipe ou en canal, vous pouvez vous assurer que la première option d’installation que les utilisateurs voient dans le Store est Ajouter **à une équipe**.
 
 :::row:::
    :::column span="2":::
@@ -31,17 +31,17 @@ Si la fonctionnalité principale de votre application est un bot, vous pouvez é
 
 Configurez l’étendue d’installation par défaut de votre application. Vous ne pouvez définir qu’une seule étendue à la fois.
 
-**Pour configurer l’étendue d’installation par défaut dans le manifeste de votre application**
+Pour configurer l’étendue d’installation par défaut dans le manifeste de votre application :
 
 1. Ouvrez le manifeste de votre application et ajoutez la `defaultInstallScope` propriété.
-2. Définissez la valeur d’étendue d’installation par défaut en `personal` tant que , , ou `team` `groupchat` `meetings` .
+2. Définissez la valeur d’étendue d’installation par défaut en tant que , `personal`, `team`ou `groupchat``meetings`.
 
     ```json
     "defaultInstallScope": "meetings",
     ```
 
 > [!NOTE]
-> Pour plus d’informations, voir le schéma [de manifeste d’application.](~/resources/schema/manifest-schema.md)
+> Pour plus d’informations, voir le schéma [de manifeste de l’application](~/resources/schema/manifest-schema.md).
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>Configurer la fonctionnalité par défaut pour les étendues partagées
 
@@ -50,14 +50,14 @@ Configurez la fonctionnalité par défaut lorsque votre application est install�
 > [!NOTE]
 > `defaultGroupCapability` fournit la fonctionnalité par défaut qui sera ajoutée à l’équipe, au groupchat ou à la réunion. Sélectionnez un onglet, un bot ou un connecteur comme fonctionnalité par défaut pour votre application, mais vous devez vous assurer que vous avez fourni la fonctionnalité sélectionnée dans la définition de votre application.
 
-**Pour configurer les détails dans le manifeste de l’application**
+Pour configurer les détails dans le manifeste de l’application :
 
-1. Ouvrez le manifeste de votre application et `defaultGroupCapability` ajoutez-y la propriété.
-2. Définissez une valeur `team` de `groupchat` , ou `meetings` .
-3. Pour la fonctionnalité de groupe sélectionnée, les fonctionnalités de groupe disponibles `bot` sont, `tab` ou `connector` . 
+1. Ouvrez le manifeste de votre application et ajoutez-y `defaultGroupCapability` la propriété.
+2. Définissez une valeur de `team`, `groupchat`ou `meetings`.
+3. Pour la fonctionnalité de groupe sélectionnée, les fonctionnalités de groupe disponibles sont, `bot`ou `tab``connector`.
 
     > [!NOTE]
-    > Vous ne pouvez sélectionner qu’une seule fonctionnalité par défaut, ou pour la `bot` `tab` fonctionnalité de groupe `connector` sélectionnée.
+    > Vous ne pouvez sélectionner qu’une seule fonctionnalité par défaut, `bot`ou `tab``connector` pour la fonctionnalité de groupe sélectionnée.
 
     ```json
     "defaultGroupCapability": {
@@ -68,7 +68,7 @@ Configurez la fonctionnalité par défaut lorsque votre application est install�
     ```
 
 > [!NOTE]
-> Pour plus d’informations, voir le schéma [de manifeste d’application.](~/resources/schema/manifest-schema.md)
+> Pour plus d’informations, voir le schéma [de manifeste de l’application](~/resources/schema/manifest-schema.md).
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -5,12 +5,12 @@ keywords: les fichiers de bots teams envoient la réception
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ec77aeff3771efd648b77215ca2eb53a4bcad8e9
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801354"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452843"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 
@@ -19,7 +19,7 @@ ms.locfileid: "62801354"
 
 Il existe deux façons d’envoyer et de recevoir des fichiers à partir d’un bot :
 
-* [**Utilisez les API Microsoft Graph :**](#use-the-graph-apis) cette méthode fonctionne pour les bots dans toutes les Microsoft Teams étendues :
+* [**Utilisez les API microsoft Graph :**](#use-the-graph-apis) cette méthode fonctionne pour les bots dans toutes les Microsoft Teams étendues :
   * `personal`
   * `channel`
   * `groupchat`
@@ -88,7 +88,7 @@ En tant que meilleure pratique, reconnaissez le chargement du fichier en renvoya
 
 ### <a name="upload-files-to-personal-chat"></a>Télécharger fichiers dans une conversation personnelle
 
-**Pour télécharger un fichier vers un utilisateur**
+Pour télécharger un fichier vers un utilisateur :
 
 1. Envoyez un message à l’utilisateur demandant l’autorisation d’écrire le fichier. Ce message doit contenir une `FileConsentCard` pièce jointe avec le nom du fichier à télécharger.
 2. Si l’utilisateur accepte le téléchargement du fichier, le bot reçoit une activité d’appel avec une URL d’emplacement.
@@ -173,7 +173,7 @@ De même, si l’utilisateur refuse le fichier, le bot reçoit l’événement s
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>Informer l’utilisateur d’un fichier téléchargé
 
-Après avoir chargé un fichier sur le compte de l’OneDrive, envoyez un message de confirmation à l’utilisateur. Le message doit contenir la pièce jointe `FileCard` suivante que l’utilisateur peut sélectionner, soit pour afficher un aperçu, soit l’ouvrir dans OneDrive, ou télécharger localement :
+Après avoir chargé un fichier sur le compte de l’OneDrive, envoyez un message de confirmation à l’utilisateur. Le message doit contenir la pièce `FileCard` jointe suivante que l’utilisateur peut sélectionner, soit pour afficher un aperçu, soit l’ouvrir dans OneDrive, ou télécharger localement :
 
 ```json
 {
@@ -193,7 +193,7 @@ Le tableau suivant décrit les propriétés de contenu de la pièce jointe :
 
 | Propriété | Objectif |
 | --- | --- |
-| `uniqueId` | OneDrive ou SharePoint’élément de lecteur. |
+| `uniqueId` | OneDrive’ident SharePoint’élément de lecteur. |
 | `fileType` | Type de fichier, tel que .pdf ou .docx. |
 
 ### <a name="fetch-inline-images-from-message"></a>Récupérer des images en ligne à partir d’un message

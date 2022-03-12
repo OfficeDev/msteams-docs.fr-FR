@@ -5,12 +5,12 @@ description: Découvrez comment ajouter l’authentification à une extension de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 932f62a086cc87d0d1662a4f27d1b6bdd199b8af
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768446"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452941"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -28,7 +28,7 @@ Chaque demande à vos services inclut l’ID d’utilisateur, le nom d’afficha
 },
 ```
 
-Les `id` `aadObjectId` valeurs et les valeurs sont garanties pour l’utilisateur Teams authentifié. Ils sont utilisés comme clés pour rechercher les informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID Azure Active Directory client, qui est utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également l’ID d’équipe et l’ID de canal d’où provient la demande.
+Les valeurs `id` `aadObjectId` et les valeurs sont garanties pour l’utilisateur Teams authentifié. Ils sont utilisés comme clés pour rechercher les informations d’identification ou tout état mis en cache dans votre service. En outre, chaque demande contient l’ID Azure Active Directory client, qui est utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également l’ID d’équipe et l’ID de canal d’où provient la demande.
 
 ## <a name="authentication"></a>Authentification
 
@@ -36,16 +36,16 @@ Si votre service nécessite une authentification utilisateur, les utilisateurs d
 
 1. Un utilisateur envoie une requête ou la requête par défaut est automatiquement envoyée à votre service.
 1. Votre service vérifie si l’utilisateur est authentifié en inspectant l’Teams’utilisateur.
-1. Si l’utilisateur n’est pas authentifié, renvoyez une réponse avec une action suggérée, y compris `auth` `openUrl` l’URL d’authentification.
+1. Si l’utilisateur n’est pas authentifié, renvoyez `auth` `openUrl` une réponse avec une action suggérée, y compris l’URL d’authentification.
 1. Le client Microsoft Teams lance une boîte de dialogue hébergeant votre page web à l’aide de l’URL d’authentification donnée.
-1. Une fois que l’utilisateur se signe, vous devez fermer votre fenêtre et envoyer un **code d’authentification** au client Teams client.
+1. Une fois que l’utilisateur se signe, vous devez fermer votre fenêtre et envoyer un **code** d’authentification au client Teams client.
 1. Le Teams client ressue ensuite la requête à votre service, qui inclut le code d’authentification passé à l’étape 5.
 
 Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5. Cela garantit qu’un utilisateur malveillant ne tente pas d’usurper ou de compromettre le flux de la signature. Cela permet effectivement de « fermer la boucle » pour terminer la séquence d’authentification sécurisée.
 
 ### <a name="respond-with-a-sign-in-action"></a>Répondre par une action de signature
 
-Pour inciter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type qui inclut `openUrl` l’URL d’authentification.
+Pour inciter un utilisateur non authentifié à se connecter, répondez avec une action suggérée de type `openUrl` qui inclut l’URL d’authentification.
 
 #### <a name="response-example-for-a-sign-in-action"></a>Exemple de réponse pour une action de signature
 
@@ -67,14 +67,15 @@ Pour inciter un utilisateur non authentifié à se connecter, répondez avec une
 ```
 
 > [!NOTE]
+>
 > * Pour que l’expérience de se connecte soit hébergée dans une fenêtre Teams, la partie domaine de l’URL doit se trouver dans la liste des domaines valides de votre application. Pour plus d’informations, [voir validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma de manifeste.
-> * La taille de la fenêtre d’authentification peut être définie en incluant les paramètres de chaîne de requête de largeur et de `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` hauteur.
+> * La taille de la fenêtre d’authentification peut être définie en incluant les paramètres de chaîne de requête de largeur et de hauteur. `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`
 
 ### <a name="start-the-sign-in-flow"></a>Démarrer le flux de la signature
 
-Votre expérience de se connecte doit être réactive et tenir dans une fenêtre pop-up. Il doit s’intégrer au [SDK Microsoft Teams client JavaScript,](/javascript/api/overview/msteams-client)qui utilise la transmission de message.
+Votre expérience de se connecte doit être réactive et tenir dans une fenêtre pop-up. Il doit s’intégrer [au SDK Microsoft Teams client JavaScript](/javascript/api/overview/msteams-client), qui utilise la transmission de message.
 
-Comme avec d’autres expériences incorporées en cours d Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord `microsoftTeams.initialize()` appeler. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID d’utilisateur Teams dans votre fenêtre, qui le transmet ensuite à l’URL de la signature OAuth.
+Comme avec d’autres expériences incorporées en cours d Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler`microsoftTeams.initialize()`. Si votre code effectue un flux OAuth, vous pouvez transmettre l’ID d’utilisateur Teams à votre fenêtre, qui le transmet ensuite à l’URL de la signature OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de la signature
 
@@ -135,10 +136,11 @@ Lorsque la demande de se connecte est terminée et redirige vers votre page, ell
 ```
 
 ## <a name="code-sample"></a>Exemple de code
+
 |**Exemple de nom** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|Extensions de messagerie : th et config | Extension de messagerie qui possède une page de configuration, accepte les demandes de recherche et renvoie les résultats une fois que l’utilisateur s’est inscrit. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l' sign-on unique (SSO) pour les extensions de messagerie](~/messaging-extensions/how-to/enable-sso-auth-me.md)
+[Prise en charge de l’sign-on unique (SSO) pour les extensions de messagerie](~/messaging-extensions/how-to/enable-sso-auth-me.md)

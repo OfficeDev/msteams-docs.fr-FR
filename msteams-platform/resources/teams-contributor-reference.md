@@ -5,8 +5,13 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
+ms.openlocfilehash: 10c7bbf952311dd1668a3fa1b013228d9dd58000
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453116"
 ---
-
 # <a name="contribute-to-teams-documentation"></a>Contribuer à la documentation Teams
 
 Teams documentation technique fait partie de la bibliothèque de documentation technique **Microsoft Docs**. Le contenu est organisé en groupes appelés ensembles de documents, chacun représentant un groupe de documents associés gérés en tant qu’entité unique. Les articles du même ensemble de documents ont la même extension de chemin d’URL **docs.microsoft.com.** Par exemple, `/docs.microsoft.com/microsoftteams/...` est le début du chemin d Teams fichier docset. Teams articles sont écrits en syntaxe Markdown et hébergés sur GitHub.
@@ -19,7 +24,6 @@ Teams documentation technique fait partie de la bibliothèque de documentation t
 > * Installez [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 > * Installez [docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directement à partir de VS Code Marketplace.
 <br>&emsp;&emsp; ou
-
 > [!div class="checklist"]
 >
 > * Installez dans VS Code :
@@ -30,7 +34,7 @@ Teams documentation technique fait partie de la bibliothèque de documentation t
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Consulter le Guide des contributeurs Microsoft Docs
 
-Le guide des collaborateurs fournit des instructions pour créer, publier et mettre à jour du contenu technique sur la **plateforme Microsoft Docs** . 
+Le guide des collaborateurs fournit des instructions pour créer, publier et mettre à jour du contenu technique sur la **plateforme Microsoft Docs** .
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Guides d’écriture, de style et de contenu Microsoft
 
@@ -47,18 +51,19 @@ Le guide des collaborateurs fournit des instructions pour créer, publier et met
 ## <a name="file-paths"></a>Chemins d’accès aux fichiers
 
 Lorsque vous utilisez des chemins d’accès relatifs et créez des liens vers d’autres ensembles de documents, il est important de définir un chemin d’accès de fichier valide pour les liens hypertexte dans votre documentation. Votre build réussit sur GitHub uniquement si le chemin d’accès au fichier est correct ou valide.
- 
+
 Pour plus d’informations sur les liens hypertexte et les chemins d’accès aux fichiers, [consultez les liens de la documentation](/contribute/how-to-write-links).
 
 > [!IMPORTANT]
-> Pour référencer un article qui fait **partie du** document Teams plateforme :<br>
+> Pour référencer un article qui fait **partie du** document Teams plateforme de données :<br>
 > &emsp;&#x2714; utiliser un chemin d’accès relatif sans barre oblique de premier plan.<br>
-> &emsp;&#x2714; inclure l’extension de fichier Markdown.<br>
+> &emsp;&#x2714; l’extension de fichier Markdown.<br>
 >Ex: **parent directory/directory/path-to-article.md** —> [Building an app for Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> Pour référencer un article de la bibliothèque Microsoft Docs qui ne fait **pas** partie du jeu de documents Teams plateforme microsoft :<br>
+> Pour référencer un article de la bibliothèque Microsoft Docs qui ne fait **pas** partie du document Teams plateforme microsoft :<br>
 > &emsp;&#x2714; utilisez un chemin d’accès relatif qui commence par une barre oblique.<br>
-> &emsp;&#x2714; n’incluez pas l’extension de fichier. <br> Ex : **/docset/address-to-file-location** —> [l’API Microsoft Graph pour](/graph/api/resources/teams-api-overview) travailler avec Microsoft Teams<br><br>
-> Pour référencer une page en dehors de la bibliothèque Microsoft Docs, telle que GitHub, utilisez le chemin d’accès `https` complet du fichier.<br>
+> &emsp;&#x2714; n’incluez pas l’extension de fichier. <br>
+> Ex : **/docset/address-to-file-location** —> [l’API Microsoft Graph pour](/graph/api/resources/teams-api-overview) travailler avec Microsoft Teams<br><br>
+> Pour référencer une page en dehors de la bibliothèque Microsoft Docs, par exemple GitHub, utilisez le chemin d’accès `https` complet du fichier.<br>
 
 ## <a name="code-samples-and-snippets"></a>Exemples de code et extraits de code
 

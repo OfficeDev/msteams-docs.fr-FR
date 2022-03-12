@@ -4,12 +4,12 @@ description: Voici comment mettre à jour votre extension de messagerie Teams ba
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356006"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453515"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Étendre une extension Teams messagerie à travers Microsoft 365
 
@@ -21,20 +21,21 @@ Les [extensions de messagerie basées](/microsoftteams/platform/messaging-extens
 Le processus de mise à jour de votre extension de Teams de messagerie basée sur la Outlook à exécuter implique les étapes suivantes :
 
 > [!div class="checklist"]
+>
 > * Mettre à jour le manifeste de votre application
 > * Ajouter un canal Outlook pour votre bot
 > * Chargez une version de version de votre application mise à jour dans Teams
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de messagerie dans les deux Outlook pour Windows bureau et web.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
- - Un Microsoft 365 du programme pour les développeurs en bac à sable
- - Votre client bac à sable (sandbox) inscrit *à Office 365 releases ciblées*
- - Un environnement de test avec Office applications installées à partir du canal Microsoft 365 Apps *bêta*
- - Microsoft Visual Studio code avec l’extension Teams Shared Computer Toolkit (prévisualisation) (facultatif)
+* Un Microsoft 365 du programme pour les développeurs en bac à sable
+* Votre client bac à sable (sandbox) inscrit *à Office 365 releases ciblées*
+* Un environnement de test avec Office applications installées à partir du canal Microsoft 365 Apps *bêta*
+* Microsoft Visual Studio code avec l’extension Teams Shared Computer Toolkit (prévisualisation) (facultatif)
 
 > [!div class="nextstepaction"]
 > [Installer les composants prérequis](prerequisites.md)
@@ -68,6 +69,7 @@ Ouvrez votre Teams de l’application et mettez à jour les `$schema` `manifestV
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 Si vous avez utilisé Teams Shared Computer Toolkit pour créer votre application d’extension de messagerie, vous pouvez l’utiliser pour valider les modifications apportées à votre fichier manifeste et identifier les erreurs éventuelles. Ouvrez la palette `Ctrl+Shift+P` de commandes et recherchez **Teams :** Valider le fichier manifeste ou sélectionnez l’option dans le menu Déploiement de l’Teams Shared Computer Toolkit (recherchez l’icône Teams sur le côté gauche de Visual Studio Code).
@@ -167,7 +169,7 @@ Pour afficher un aperçu de l’exécution de votre application Outlook sur Wind
 
 Votre extension de messagerie sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 Outlook extensions de messagerie Teams activées sont en prévisualisation et ne sont pas pris en charge pour une utilisation en production. Voici comment distribuer votre extension de messagerie Outlook pour afficher un aperçu des audiences à des fins de test.
 
@@ -181,11 +183,11 @@ Dans le menu *Applications*, *sélectionnez Gérer vos applicationsSoumettre* > 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams Admin Center
 
-En tant Teams, vous pouvez télécharger et préinstaller le package d’application pour le client de votre organisation à partir de https://admin.teams.microsoft.com/. Voir [Télécharger vos applications personnalisées dans le centre d’administration Microsoft Teams pour](/MicrosoftTeams/upload-custom-apps) plus d’informations.
+En tant qu’administrateur Teams, vous pouvez télécharger et préinstaller le package d’application pour le client de votre organisation à partir Teams [administrateur.](https://admin.teams.microsoft.com/) [Consultez Télécharger vos applications personnalisées dans le Centre d Microsoft Teams’administration Windows pour](/MicrosoftTeams/upload-custom-apps) plus d’informations.
 
 #### <a name="microsoft-admin-center"></a>Centre d’administration Microsoft
 
-En tant qu’administrateur général, vous pouvez télécharger et préinstaller le package d’application à partir de https://admin.microsoft.com/. Pour [plus d’informations, voir Tester et déployer Microsoft 365 Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) par des partenaires dans le portail des applications intégrées.
+En tant qu’administrateur général, vous pouvez télécharger et préinstaller le package d’application à partir de [l’administrateur Microsoft](https://admin.microsoft.com/). Pour [plus d’informations, voir Tester et déployer Microsoft 365 Apps](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) par des partenaires dans le portail des applications intégrées.
 
 ### <a name="multitenant-distribution"></a>Distribution multi-tension
 

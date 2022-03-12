@@ -5,12 +5,12 @@ description: Découvrez les commandes de recherche d’extension de messagerie p
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ba8fdf2426fbedb88d7df11cee1957deaba9b721
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356356"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452969"
 ---
 # <a name="define-messaging-extension-search-commands"></a>Définir les commandes de recherche d’extension de messagerie
 
@@ -42,12 +42,12 @@ Pour ajouter la commande de recherche au manifeste de votre application, `compos
 
 La condition préalable à la création d’une commande de recherche est que vous devez déjà avoir créé une extension de messagerie. Pour plus d’informations sur la création d’une extension de messagerie, voir [créer une extension de messagerie](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**Pour créer une commande de recherche**
+Pour créer une commande de recherche :
 
 1. **Ouvrez App Studio** à partir Microsoft Teams client, puis sélectionnez **l’onglet Éditeur de** manifeste.
-1.  Si vous avez déjà créé votre package d’application **dans App Studio**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
+1. Si vous avez déjà créé votre package d’application **dans App Studio**, sélectionnez-le dans la liste. Si vous n’avez pas créé de package d’application, importez-en un existant.
 1. Après avoir importé le package d’application, sélectionnez **extensions de messagerie sous** **Fonctionnalités**. Vous obtenez une fenêtre instantanée pour configurer l’extension de messagerie.
-1. **Sélectionnez Configurer dans** la fenêtre pour inclure l’extension de messagerie dans l’expérience de votre application. L’image suivante affiche la page de mise en place de l’extension de messagerie : 
+1. **Sélectionnez Configurer dans** la fenêtre pour inclure l’extension de messagerie dans l’expérience de votre application. L’image suivante affiche la page de mise en place de l’extension de messagerie :
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -55,7 +55,7 @@ La condition préalable à la création d’une commande de recherche est que vo
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. **Sélectionnez Ajouter** dans **la section Commande** de la page Extensions de messagerie pour inclure les commandes qui déterminent le comportement de l’extension de messagerie.   
+1. **Sélectionnez Ajouter** dans **la section Commande** de la page Extensions de messagerie pour inclure les commandes qui déterminent le comportement de l’extension de messagerie.
 L’image suivante affiche l’ajout de commande pour l’extension de messagerie :
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -121,6 +121,7 @@ La section suivante est un exemple du manifeste d’application simple de l’ob
 ...
 }
 ```
+
 Pour obtenir le manifeste complet de l’application, voir [schéma de manifeste d’application](~/resources/schema/manifest-schema.md).
 
 ## <a name="code-sample"></a>Exemple de code
@@ -137,4 +138,3 @@ Suivez le [guide pas à pas](../../../sbs-messagingextension-searchcommand.yml) 
 
 > [!div class="nextstepaction"]
 > [Répondez aux commandes de recherche](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

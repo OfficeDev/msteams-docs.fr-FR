@@ -5,6 +5,12 @@ keywords: teams visual studio code toolkit tabs sso graph authentication Azure i
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
+ms.openlocfilehash: c971cd99be0e283050561db2a0f1b89c9e20c9cf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452542"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>Authentification par authentification unique avec Teams Toolkit et Visual Studio Code pour les onglets
 
@@ -13,7 +19,7 @@ ms.author: lajanuar
 >
 > Pour plus d’informations, lisez les [conditions préalables](../get-started/prerequisites.md) et suivez l’un des didacticiels les plus nouveaux.
 
-Le Microsoft Teams Shared Computer Toolkit vous permet de créer l’authentification unique (SSO) pour les applications onglet directement dans Visual Studio Code. Le kit de ressources vous guide tout au long du processus et fournit tout ce dont vous avez besoin, y compris la mise en service de votre Plateforme d'identités Microsoft inscription dans le portail Microsoft Azure web.
+Le Microsoft Teams Shared Computer Toolkit vous permet de créer l’authentification unique (SSO) pour les applications onglet directement dans Visual Studio Code. Le kit de ressources vous guide tout au long du processus et fournit tout ce dont vous avez besoin, y compris la mise en service de votre Plateforme d'identités Microsoft inscription sur le portail Microsoft Azure web.
 
 ## <a name="get-started--create-a-project"></a>Mise en place : créer un projet
 
@@ -39,8 +45,8 @@ Si vous souhaitez en savoir plus sur la façon dont votre inscription d’applic
 
 1. **Sélectionnez npm installer** dans le `api-server` dossier. Ensuite **, npm démarre**.
 1. **Sélectionnez npm installer** dans le `.src` dossier. Ensuite **, npm démarre**.
-1. Si vous utilisez un service de tunneling comme [ngrok](https://ngrok.com/), exécutez-le et assurez-vous que l’URL correspond à ce que vous avez entré dans l’Assistant création de projet. Si ce n’est pas le cas, vous devrez mettre à jour votre _URI d’API_ et rediriger l’URL dans l’inscription de l’application qui a été créée dans Azure.
-1. Accédez à la barre d’activité sur le côté gauche de Visual Studio Code fenêtre.
+1. Si vous utilisez un service de tunneling comme [ngrok](https://ngrok.com/), exécutez-le et assurez-vous que l’URL correspond à ce que vous avez entré dans l’Assistant création de projet. Si ce n’est pas le cas, vous devrez mettre à jour votre *URI d’API* et rediriger l’URL dans l’inscription de l’application qui a été créée dans Azure.
+1. Accédez à la barre d’activité sur le côté gauche de la fenêtre Visual Studio Code’activité.
 1. Sélectionnez **l’icône** Exécuter pour afficher **l’affichage Exécuter et déboguer** .
 1. Vous pouvez également utiliser le raccourci clavier **Ctrl+Shift+D**.
 

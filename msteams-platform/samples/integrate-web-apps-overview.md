@@ -6,19 +6,19 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Partage d’assistant d’agent virtuel lien profond avec l’assistant d’agent virtuel power platform power apps Teams
-ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 274525b61ae95021cde41095e4bb37133e05b3e8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355957"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453690"
 ---
 # <a name="integrate-web-apps"></a>Intégrer les applications Web
 
 Vous pouvez fournir une expérience utilisateur enrichie en intégrant les fonctionnalités d’une application web existante à Microsoft Teams plateforme. Veillez à suivre [Teams de conception](~/concepts/design/understand-use-cases.md) pour rendre votre application native à Teams.
 Ce document donne une vue d’ensemble des conditions préalables à l’intégration d’applications web à Teams, à la plateforme Power pour créer des applications Power, Power Virtual Agents, Virtual Assistant, des modèles d’application, des connecteurs Shift, Le LMS à LMS, la création d’un bouton De partage à Teams pour votre site web, l’ajout d’un Microsoft Teams  dans l SharePoint, la création de liens profonds et l’intégration des fonctionnalités de l’appareil.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour une intégration efficace, assurez-vous de mieux comprendre les conditions préalables suivantes :
 
@@ -40,6 +40,9 @@ Les plateformes à code faible offrent une approche intuitive du développement 
 ## <a name="microsoft-power-platform"></a>Plateforme Microsoft Power
 
 La plateforme Microsoft Power combine quatre technologies Microsoft robustes, telles que Power BI, Power Apps, Power Automate et Power Virtual Agents dans une plateforme d’applications puissante. Ces technologies vous permettent de créer des solutions, d’automatiser des processus, d’analyser des données et de créer des agents virtuels dans un environnement unifié et intégré.
+
+>[!NOTE]
+>Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications qui doivent être publiées dans le Teams’application store. Les applications Microsoft Power Platform peuvent être publiées dans le magasin d’applications d’une organisation uniquement.
 
 ### <a name="power-apps"></a>Power Apps
 

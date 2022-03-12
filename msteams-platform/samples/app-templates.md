@@ -6,12 +6,12 @@ keywords: démonstration Microsoft Teams modèles de modèles
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5821894793ae99ae559ebedba068331a48b1aed
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 961ad0ff22a528dc1267023d4f4ff288ba7202ca
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398742"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453137"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Modèles d’application pour Microsoft Teams
 
@@ -111,7 +111,8 @@ L’intégration de nouveaux employés est un Microsoft Teams intégré et une s
 Les exemples de code de modèle d’application sont un ensemble d’exemples d’applications Microsoft Teams fonctionnalités de plateforme.
 
 > [!NOTE]
-> Microsoft ne gère pas activement le code source. Le code source complet est open source et vous pouvez explorer, bifurcation et modifier le code source pour répondre à vos besoins spécifiques.
+> * Microsoft ne gère pas activement le code source. Le code source complet est open source et vous pouvez explorer, bifurcation et modifier le code source pour répondre à vos besoins spécifiques.
+> * Vous ne devez pas utiliser Microsoft Power Platform pour créer des applications qui doivent être publiées dans le Teams’application store. Les applications Microsoft Power Platform peuvent être publiées dans le magasin d’applications d’une organisation uniquement.
 
 Le tableau suivant décrit les exemples de code de modèle d’application :  
 

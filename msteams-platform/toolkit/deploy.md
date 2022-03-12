@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0eeda4842ad3f0443d46b5075b1520b0042130ec
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768377"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452549"
 ---
 # <a name="deploy-to-the-cloud"></a>Déployer dans le cloud
 
@@ -26,16 +26,18 @@ Teams Shared Computer Toolkit vous permet de déployer ou de télécharger le co
 * [Installez Teams Shared Computer Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!NOTE]
+>
 > * Assurez-vous que Teams projet d’application est ouvert dans du code VS.
-> * Avant de déployer le code de projet sur le cloud, [provisionnez les ressources cloud.](provision.md)
+> * Avant de déployer le code de projet sur le cloud, [provisionnez les ressources cloud](provision.md).
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>Déployer des Teams à l’aide Teams Shared Computer Toolkit
 
 Les guides de mise en place vous aident à déployer à l’aide Teams Shared Computer Toolkit. Vous pouvez utiliser les applications suivantes pour déployer votre Teams suivante :
+
 * [Déployer votre application sur Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Déployer votre application sur SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workload"></a>Détails sur la charge Teams d’application
+## <a name="details-on-teams-app-workload"></a>Détails sur la charge de travail Teams’application
 
 | Teams charge de travail de l’application | Code source | Artefact de build| Ressource cible |
 |-------------|----------|---------------|---------------|

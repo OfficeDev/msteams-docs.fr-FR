@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356013"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453578"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
@@ -20,13 +20,13 @@ Une fois votre application répertoriée dans le Microsoft Teams, commencez à r
 
 Vous pouvez suivre l’utilisation de votre application dans [le rapport Teams’utilisation de l’application dans](/office/dev/store/teams-apps-usage) l’Partner Center. Les mesures incluent les utilisateurs actifs mensuels, quotidiens et hebdomadaires, ainsi que les graphiques de rétention et d’intensité qui vous permettent de suivre l’évolution et la fréquence de l’utilisation.
 
-L’apparition des données pour les applications récemment publiées prend environ une semaine dans le rapport.
+L’affichage des données concernant les applications récemment publiées prend environ une semaine dans le rapport.
 
 ## <a name="publish-updates-to-your-app"></a>Publier des mises à jour sur votre application
 
 > [!NOTE]
 > Le magasin Teams a évolué :
-> 
+>
 > Auparavant, les liens étaient copiés en sélectionnant des ellipses sur la vignette de l’application. Une fois l’expérience Teams mise à jour mise à jour, vous accéderez à la même expérience à partir de l’onglet Détails des applications. Cette mise à jour sera généralement disponible d’ici le 01 mars 2022.
 
 Vous pouvez soumettre des modifications à votre application (par exemple, de nouvelles fonctionnalités ou même des métadonnées) dans l’Partner Center. Ces modifications nécessitent un nouveau processus de révision.

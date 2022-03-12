@@ -437,7 +437,7 @@
           href: /azure/bot-service/bot-service-debug-inspection-middleware
         - name: Déboguer votre robot d’appel et de réunion localement
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-    - name: "Microsoft\_Graph"
+    - name: Microsoft Graph
       items:
         - name: Tester les autorisations de consentement spécifiques aux ressources
           href: graph-api/rsc/test-resource-specific-consent.md
@@ -501,14 +501,14 @@
       href: samples/integrate-web-apps-overview.md
     - name: Considérations pour l’intégration de Teams
       href: samples/integrating-web-apps.md
+    - name: Créer un assistant virtuel
+      href: samples/virtual-assistant.md
     - name: Applications de la plate-forme d'énergie
       items:
         - name: Vue d'ensemble
           href: samples/teams-low-code-solutions.md
         - name: Ajouter le chatbot Power Virtual Agents
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: Créer un assistant virtuel
-          href: samples/virtual-assistant.md
     - name: Modèles d’application pour Microsoft Teams
       href: samples/app-templates.md
     - name: Connecteurs Shifts prêts pour la production
@@ -517,8 +517,12 @@
       items:
         - name: Présentation
           href: resources/moodle-overview.md
-        - name: Installer Moodle LMS
-          href: resources/moodleInstructions.md
+        - name: Plug-ins Microsoft 365
+          href: resources/m365-plugins/m365-plugins-overview.md
+        - name: Applications partenaires pour Moodle
+          href: resources/partner-apps-for-moodle.md
+        - name: FAQ Moodle
+          href: resources/faqs.md
     - name: Créer un bouton de partage pour Teams
       href: concepts/build-and-test/share-to-teams.md
     - name: Ajouter un onglet Teams à SharePoint

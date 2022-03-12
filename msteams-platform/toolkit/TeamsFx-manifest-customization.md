@@ -6,14 +6,19 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 047cd9bcd86c103c3c9cab22793fb7d187f7493d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453599"
 ---
-
 # <a name="customize-app-manifest-in-teams-toolkit"></a>Personnaliser le manifeste de l’application dans Teams Shared Computer Toolkit
 
 Teams Shared Computer Toolkit se compose des fichiers de modèles de manifeste suivants sous le `templates/appPackage` dossier :
 
-- `manifest.local.template.json` - application d’équipes de débogage locale
-- `manifest.remote.template.json` - partagé dans tous les environnements
+* `manifest.local.template.json` - application d’équipes de débogage locale
+* `manifest.remote.template.json` - partagé dans tous les environnements
 
 ## <a name="prerequisite"></a>Conditions préalables
 
@@ -28,11 +33,11 @@ Pendant le débogage local, Teams Shared Computer Toolkit charge `manifest.local
 
 ## <a name="supported-placeholder-in-manifestremotetemplatejson"></a>Espace réservé pris en charge dans manifest.remote.template.json
 
-- `{{state.xx}}`est un espace réservé prédéfiny dont la valeur est résolue par Teams Shared Computer Toolkit, défini dans `state.{env}.json`. Veillez à ne pas modifier les valeurs à l’état. {env}.json.
-- `{{config.manifest.xx}}` est un espace réservé personnalisé dont la valeur est résolue à partir de `config.{env}.json`.
-  - Vous pouvez ajouter un paramètre personnalisé comme suit :
-    - Ajoutez un espace réservé dans manifest.remote.template.json avec le modèle : `{{config.manifest.xx}}`
-    - Ajoutez une valeur de config dans la config. {env}.json
+* `{{state.xx}}`est un espace réservé prédéfiny dont la valeur est résolue par Teams Shared Computer Toolkit, défini dans `state.{env}.json`. Veillez à ne pas modifier les valeurs à l’état. {env}.json.
+* `{{config.manifest.xx}}` est un espace réservé personnalisé dont la valeur est résolue à partir de `config.{env}.json`.
+  * Vous pouvez ajouter un paramètre personnalisé comme suit :
+    * Ajoutez un espace réservé dans manifest.remote.template.json avec le modèle : `{{config.manifest.xx}}`
+    * Ajoutez une valeur de config dans la config. {env}.json
 
         ```json
         {

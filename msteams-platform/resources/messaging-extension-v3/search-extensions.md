@@ -5,12 +5,12 @@ keywords: teams messaging extensions messaging extensions search
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443985"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453711"
 ---
 # <a name="search-with-messaging-extensions"></a>Rechercher avec des extensions de messagerie
 
@@ -24,11 +24,11 @@ Les sections suivantes décrivent comment faire :
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="search-type-message-extensions"></a>Extensions de message de type de recherche
+## <a name="search-type-message-extensions"></a>Extensions de message de type de recherche
 
 Pour l’extension de messagerie basée sur la recherche, définissez le `type` paramètre sur `query`. Vous trouverez ci-dessous un exemple de manifeste avec une seule commande de recherche. Une seule extension de messagerie peut avoir jusqu’à 10 commandes différentes associées. Cela peut inclure à la fois plusieurs commandes de recherche et plusieurs commandes basées sur l’action.
 
-#### <a name="complete-app-manifest-example"></a>Exemple de manifeste d’application complet
+### <a name="complete-app-manifest-example"></a>Exemple de manifeste d’application complet
 
 ```json
 {
@@ -85,7 +85,7 @@ Pour l’extension de messagerie basée sur la recherche, définissez le `type` 
 }
 ```
 
-### <a name="test-via-uploading"></a>Test via le chargement
+## <a name="test-via-uploading"></a>Test via le chargement
 
 Vous pouvez tester votre extension de messagerie en chargeant votre application.
 
@@ -95,9 +95,9 @@ Pour ouvrir votre extension de messagerie, accédez à vos conversations ou cana
 
 La majeure partie de votre travail implique l’événement `onQuery` , qui gère toutes les interactions dans la fenêtre d’extension de messagerie.
 
-Si vous le définissez `canUpdateConfiguration` `true` dans le manifeste, vous activez l’élément **de menu Paramètres** pour votre extension de messagerie et vous devez également gérer et `onQuerySettingsUrl` `onSettingsUpdate`.
+Si vous le définissez `canUpdateConfiguration` `true` dans le manifeste, vous activez **l’élément de menu Paramètres** pour votre extension de messagerie et vous devez également gérer et `onQuerySettingsUrl` `onSettingsUpdate`.
 
-### <a name="handle-onquery-events"></a>Gérer les événements onQuery
+## <a name="handle-onquery-events"></a>Gérer les événements onQuery
 
 Une extension de messagerie reçoit un événement `onQuery` lorsque quelque chose se produit dans la fenêtre d’extension de messagerie ou est envoyé à la fenêtre.
 
@@ -109,9 +109,9 @@ Ensuite, vérifiez si elle `initialRun` est définie ; si c’est le cas, prenez
 
 Le reste de votre responsable invite `onQuery` l’utilisateur à fournir des informations, affiche une liste de cartes d’aperçu et renvoie la carte sélectionnée par l’utilisateur.
 
-### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Gérer les événements onQuerySettingsUrl et onSettingsUpdate
+## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>Gérer les événements onQuerySettingsUrl et onSettingsUpdate
 
-Les événements `onQuerySettingsUrl` `onSettingsUpdate` et les événements fonctionnent ensemble pour activer **l’Paramètres** de menu.
+Les événements `onQuerySettingsUrl` `onSettingsUpdate` et les événements fonctionnent ensemble pour **activer Paramètres’élément** de menu.
 
 ![Captures d’écran des emplacements de l Paramètres de menu](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
@@ -195,7 +195,7 @@ Les paramètres de requête se trouvent dans l’objet value, qui inclut les pro
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>Recevoir des demandes à partir de liens insérés dans la zone composer un message
 
-Comme alternative (ou en plus) à la recherche de votre service externe, vous pouvez utiliser une URL insérée dans la zone de composition de message pour interroger votre service et renvoyer une carte. Dans la capture d’écran ci-dessous, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps que l’extension de messagerie a résolue en une carte.
+Comme alternative (ou en plus) à la recherche de votre service externe, vous pouvez utiliser une URL insérée dans la zone de composition de message pour interroger votre service et renvoyer une carte. Dans la capture d’écran ci-dessous, un utilisateur a passé une URL pour un élément de travail dans Azure DevOps dont l’extension de messagerie a été résolue en une carte.
 
 ![Exemple de déploiement de lien](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -261,7 +261,7 @@ Pour plus d’informations, voir [Cartes](~/task-modules-and-cards/what-are-card
 
 Pour découvrir comment utiliser les types de carte miniature et hero, voir [Ajouter des cartes et des actions de carte](~/task-modules-and-cards/cards/cards-actions.md).
 
-Pour obtenir une documentation supplémentaire concernant la carte Office 365 connector, voir [Utilisation Office 365 cartes connecteur](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+Pour obtenir de la documentation supplémentaire sur la carte Office 365 connector, voir [Using Office 365 Connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card) cards.
 
 La liste des résultats s’affiche dans l Microsoft Teams’interface utilisateur avec un aperçu de chaque élément. L’aperçu est généré de deux manières :
 
@@ -454,10 +454,10 @@ Si votre service requiert l’authentification de l’utilisateur, vous devez le
 La séquence est la suivante :
 
 1. Un utilisateur envoie une requête ou la requête par défaut est automatiquement envoyée à votre service.
-2. Votre service vérifie si l’utilisateur s’est d’abord authentifié en inspectant l’Teams’utilisateur.
+2. Votre service vérifie si l’utilisateur s’est d’abord authentifié en inspectant Teams’ID utilisateur.
 3. Si l’utilisateur ne s’est pas authentifié, renvoyez `auth` `openUrl` une réponse avec une action suggérée, y compris l’URL d’authentification.
 4. Le client Microsoft Teams ouvre une fenêtre pop-up hébergeant votre page web à l’aide de l’URL d’authentification donnée.
-5. Une fois que l’utilisateur se signe, vous devez fermer votre fenêtre et envoyer un « code d’authentification » au client Teams client.
+5. Une fois que l’utilisateur s’est Teams, vous devez fermer votre fenêtre et envoyer un « code d’authentification ».
 6. Le Teams client ressue ensuite la requête à votre service, qui inclut le code d’authentification passé à l’étape 5.
 
 Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5. Cela garantit qu’un utilisateur malveillant ne tente pas d’usurper ou de compromettre le flux de la signature. Cela permet effectivement de « fermer la boucle » pour terminer la séquence d’authentification sécurisée.

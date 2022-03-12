@@ -6,11 +6,16 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 246a871c26b0194d74e7d1fc8a3cb8be64d55fe6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453235"
 ---
-
 # <a name="add-capabilities-to-your-teams-apps"></a>Ajouter des fonctionnalités à vos applications Teams applications
 
-Vous pouvez créer une application Teams avec l’une Teams fonctionnalités de l’application. Pendant le développement d’applications, vous pouvez utiliser Teams Shared Computer Toolkit pour ajouter des fonctionnalités à votre Teams application. Le tableau suivant répertorie les fonctionnalités Teams’application :
+Vous pouvez créer une application Teams avec l’une des fonctionnalités Teams’application. Pendant le développement d’applications, vous pouvez utiliser Teams Shared Computer Toolkit pour ajouter d’autres fonctionnalités à votre Teams application. Le tableau suivant répertorie les fonctionnalités Teams’application :
 
 |**Fonctionnalité**|**Description**|
 |--------|-------------|
@@ -28,7 +33,7 @@ Vous pouvez créer une application Teams avec l’une Teams fonctionnalités de 
 ## <a name="add-capabilities-using-teams-toolkit"></a>Ajouter des fonctionnalités à l’aide Teams Shared Computer Toolkit
 
 > [!IMPORTANT]
-> Vous devez effectuer une mise en service pour chaque environnement une fois que vous avez ajouté des fonctionnalités à votre Teams application.
+> Vous devez effectuer une mise en service pour chaque environnement une fois que vous avez ajouté des fonctionnalités à votre Teams appl.
 
 1. **Ouvrez Microsoft Visual Studio Code**.
 1. Sélectionnez **Teams Shared Computer Toolkit** dans le panneau gauche.
@@ -36,8 +41,8 @@ Vous pouvez créer une application Teams avec l’une Teams fonctionnalités de 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="fonctionnalités":::
 
-   Vous pouvez également ouvrir la palette de commandes et entrer **Teams : Ajouter des fonctionnalités** : 
-      
+   Vous pouvez également ouvrir la palette de commandes et entrer **Teams : Ajouter des fonctionnalités** :
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Autres fonctionnalités":::
 
 1. Dans la fenêtre pop-up, sélectionnez les fonctionnalités à inclure dans votre projet :
@@ -61,7 +66,7 @@ Les fonctionnalités sélectionnées sont correctement ajoutées à votre projet
 
 ## <a name="supported-capabilities-matrix"></a>Matrice des fonctionnalités prise en charge
 
-Outre les fonctionnalités que votre application Teams a déjà, vous pouvez choisir d’ajouter différentes fonctionnalités à votre application Teams web. Le tableau suivant fournit les différentes fonctionnalités Teams’application : 
+Outre les fonctionnalités que votre application Teams a déjà, vous pouvez choisir d’ajouter différentes fonctionnalités à votre Teams application. Le tableau suivant fournit les différentes fonctionnalités Teams’application :
 
 |Fonctionnalités existantes|D’autres fonctionnalités prise en charge peuvent être ajoutées|
 |--------------------|--------------------|
@@ -78,26 +83,26 @@ Outre les fonctionnalités que votre application Teams a déjà, vous pouvez cho
 
 Après avoir ajouté un bot et une extension de messagerie, les modifications apportées à votre projet sont les suivantes :
 
-- Un code de modèle de bot est ajouté dans un sous-foldeur avec le chemin d’accès `yourProjectFolder/bot`. Cela inclut un **modèle d’application bot Hello World** dans votre projet.
-- `launch.json`et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement. 
-- `manifest.remote.template.json`et `manifest.local.template.json` le fichier sous `templates/appPackage` dossier est mis à jour, ce qui inclut les informations relatives au bot dans le fichier manifeste qui représente votre application dans la plateforme Teams web. Les modifications sont les suivantes :
-  - ID de votre bot.
-  - Étendues de votre bot.
-  - Commandes à qui l’application bot Hello World peut répondre.
-- Les fichiers sous `templates/azure/teamsfx` seront mis à jour et `templates/azure/provision/xxx`le fichier .bicep sera régénéré.
-- Les fichiers sous `.fx/config` sont régénérés, ce qui garantit que votre projet est définie avec les configurations qui vous sont données pour la fonctionnalité nouvellement ajoutée.
+* Un code de modèle de bot est ajouté dans un sous-foldeur avec le chemin d’accès `yourProjectFolder/bot`. Cela inclut un **modèle d’application bot Hello World** dans votre projet.
+* `launch.json`et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement.
+* `manifest.remote.template.json`et `manifest.local.template.json` le fichier sous `templates/appPackage` dossier est mis à jour, ce qui inclut les informations relatives au bot dans le fichier manifeste qui représente votre application dans la plateforme Teams web. Les modifications sont les suivantes :
+  * ID de votre bot.
+  * Étendues de votre bot.
+  * Commandes à qui l’application bot Hello World peut répondre.
+* Les fichiers sous `templates/azure/teamsfx` seront mis à jour et `templates/azure/provision/xxx`le fichier .bicep sera régénéré.
+* Les fichiers sous `.fx/config` sont régénérés, ce qui garantit que votre projet est définie avec les configurations qui vous sont données pour la fonctionnalité nouvellement ajoutée.
 
 Une fois l’onglet ajouté, les modifications apportées à votre projet sont les suivantes :
 
-- Un code `yourProjectFolder/tab`de modèle d’onglet frontal est ajouté dans un sous-dossier avec le chemin d’accès, qui inclut un modèle d’application d’onglet **Hello World** dans votre projet.
-- `launch.json`et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement. 
-- `manifest.remote.template.json`et `manifest.local.template.json` le fichier sous `templates/appPackage` le dossier est mis à jour, ce qui inclut des informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams, les modifications sont les suivantes :
-  - Onglets configurables et statiques.
-  - Étendues des onglets.
-- Les fichiers sous `templates/azure/teamsfx` seront mis à jour et `templates/azure/provision/xxx`le fichier .bicep sera régénéré.
-- Le fichier sous `.fx/config` est régénéré, ce qui garantit que votre projet est bien définie avec les configurations pour la fonctionnalité nouvellement ajoutée.
+* Un code `yourProjectFolder/tab`de modèle d’onglet frontal est ajouté dans un sous-dossier avec le chemin d’accès, qui inclut un modèle d’application d’onglet **Hello World** dans votre projet.
+* `launch.json`et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement.
+* `manifest.remote.template.json`et `manifest.local.template.json` le fichier sous `templates/appPackage` le dossier est mis à jour, ce qui inclut des informations relatives aux onglets dans le fichier manifeste qui représente votre application dans la plateforme Teams, les modifications sont les suivantes :
+  * Onglets configurables et statiques.
+  * Étendues des onglets.
+* Les fichiers sous `templates/azure/teamsfx` seront mis à jour et `templates/azure/provision/xxx`le fichier .bicep sera régénéré.
+* Le fichier sous `.fx/config` est régénéré, ce qui garantit que votre projet est bien définie avec les configurations pour la fonctionnalité nouvellement ajoutée.
 
-## <a name="limitations"></a>Limitations
+## <a name="limitations"></a>Limites
 
 Les limitations à TeamsFx lors de l’ajout de fonctionnalités sont les suivantes :
 

@@ -6,12 +6,12 @@ keywords: samesite des attributs de cookie
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 3c587056821eff3c24358a1dfbf6ecc63351a3c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518477"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452584"
 ---
 # <a name="samesite-cookie-attribute"></a>Attribut de cookie SameSite
 
@@ -24,7 +24,7 @@ Les types de cookies et leurs étendues correspondantes sont les suivants :
 |Cookie|Portée|
 | ------ | ------ |
 |Cookie de première partie|Un cookie de première partie est créé par des sites web visités par un utilisateur. Il permet d’enregistrer des données, telles que des éléments de panier, des informations d’identification de connexion. Par exemple, les cookies d’authentification et d’autres analyses.|
-|Cookie de deuxième partie|Un cookie tiers est techniquement identique à un cookie de première partie. La différence est que les données sont partagées avec une deuxième partie via un accord de partenariat de données. Par exemple, vous [pouvez Microsoft Teams et de rapports](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
+|Cookie de deuxième partie|Un cookie tiers est techniquement identique à un cookie de première partie. La différence est que les données sont partagées avec une deuxième partie via un accord de partenariat de données. Par exemple, Microsoft Teams [analytique et de rapports](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
 |Cookie tiers|Un cookie tiers est installé par un domaine autre que celui que l’utilisateur a visité explicitement et est principalement utilisé pour le suivi. Par exemple, les **boutons** J’aime, la portion de la vidéo et les conversations en direct.|
 
 ## <a name="cookies-and-http-requests"></a>Cookies et requêtes HTTP
@@ -40,10 +40,10 @@ Vous pouvez choisir de ne pas ajouter l’attribut de cookie `SetCookie` SameSit
 ## <a name="samesite-cookie-attribute-2020-release"></a>Attribut de cookie SameSite : version 2020
 
 Chrome 80, publié en février 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Trois valeurs sont passées dans l’attribut SameSite mis à jour : **Strict**, **Lax** ou **None**. S’il n’est pas spécifié, l’attribut SameSite des cookies prend la valeur `SameSite=Lax` par défaut.
- 
+
 Les attributs de cookie SameSite sont les suivants :
 
-|Paramètres | Application | Valeur |Spécification d’attribut |
+|Setting | Application | Valeur |Spécification d’attribut |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Les cookies sont envoyés automatiquement uniquement dans un contexte de première **partie** et avec des requêtes HTTP GET. Les cookies SameSite sont retenus sur les demandes de sous-sites, telles que les appels de chargement d’images ou d’iframes. Ils sont envoyés lorsqu’un utilisateur navigue vers l’URL à partir d’un site externe, par exemple, en suivant un lien.| **Par défaut** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |Le navigateur envoie uniquement les cookies pour les demandes de contexte de première partie. Ce sont des demandes provenant du site qui définissent le cookie. Si la demande provient d’une URL différente de celle de l’emplacement actuel, aucun des cookies marqués `Strict` avec l’attribut n’est envoyé.| Facultatif |`Set-Cookie: key=value; SameSite=Strict`|
@@ -81,6 +81,7 @@ En fonction des restrictions SameSite mises à jour, un navigateur n’ajoute pa
 Android WebView est un composant système Chrome qui permet aux applications Android d’afficher le contenu web. Bien que les nouvelles restrictions soient par défaut, à partir de Chrome 80, elles ne sont pas immédiatement appliquées sur les WebViews. Elles seront appliquées à l’avenir. Pour se préparer, Android permet aux applications natives de définir des cookies directement via [l’API CookieManager](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
+>
 > * Vous devez déclarer les cookies de première partie en tant `SameSite=Lax` que ou `SameSite=Strict`, selon le cas.
 > * Vous devez déclarer des cookies tiers comme `SameSite=None; Secure`.
 

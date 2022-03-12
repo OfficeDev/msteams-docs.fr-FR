@@ -5,15 +5,20 @@ description: Découvrez comment activer la prise en charge de l’ation sso pour
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.openlocfilehash: 3543d86d15755642a1617e07514db95a6a812313
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453466"
 ---
-
 # <a name="single-sign-on-support-for-messaging-extensions"></a>Prise en charge de l’sign-on unique pour les extensions de messagerie
- 
+
 La prise en charge de l’sign-on unique (SSO) est désormais disponible pour les extensions de messagerie et le déploiement de liens. L’activation de l’authentification unique pour les extensions de messagerie par défaut actualise le jeton d’authentification, ce qui réduit le nombre de fois que vous devez entrer les informations d’identification de connexion pour Microsoft Teams.
 
 Ce document vous guide sur la façon d’activer l’authentification sso et de stocker votre jeton d’authentification, si nécessaire.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 La condition préalable à l’activer pour les extensions de messagerie et le déploiement des liens est la suivante :
 
@@ -27,7 +32,8 @@ La condition préalable à l’activer pour les extensions de messagerie et le d
 
 Une fois les conditions préalables terminées, vous pouvez activer l’ingso pour les extensions de messagerie et le déploiement des liaisons.
 
-**Pour activer l’utilisateur SSO**
+Pour activer l’sso :
+
 1. Mettez à jour les détails [de connexion OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de vos bots dans le Microsoft Azure web.
 2. Téléchargez [l’exemple d’extensions de messagerie](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) et suivez les instructions d’installation fournies par l’Assistant.
    > [!NOTE]
@@ -36,7 +42,7 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
 
     > [!NOTE]
     > Nous ne tenons pas d’autres sso de handlers, `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` à l’exception du fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs.
-   
+
 4. Vous recevez le jeton dans `OnTeamsMessagingExtensionQueryAsync` le handler `turnContext.Activity.Value` `OnTeamsAppBasedLinkQueryAsync`dans la charge utile ou dans le , en fonction du scénario pour lequel vous activez l’cesso :
 
     ```json
@@ -50,7 +56,7 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
      ```
   
     Si vous utilisez la connexion OAuth, ajoutez le code suivant au fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs pour mettre à jour ou ajouter le jeton dans le magasin :
-    
+
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
@@ -109,7 +115,7 @@ Une fois les conditions préalables terminées, vous pouvez activer l’ingso po
             return true;
         }
     
-    ```    
+    ```
 
 ## <a name="see-also"></a>Voir aussi
 

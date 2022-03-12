@@ -4,12 +4,12 @@ description: En savoir plus sur les affichages spécifiques de l’utilisateur �
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 472620da2bcd15f34b111afe170eb74e31e64492
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356363"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453109"
 ---
 # <a name="user-specific-views"></a>Affichages spécifiques à l’utilisateur
 
@@ -64,7 +64,7 @@ Le code suivant fournit un exemple de cartes adaptatives :
 }
 ```
 
-**Pour envoyer des cartes adaptatives, actualisez les affichages spécifiques de l’utilisateur et invoquez des demandes au bot**
+Pour envoyer des cartes adaptatives, actualisez les affichages spécifiques de l’utilisateur et voquant les demandes au bot :
 
 1. Lorsque Megan crée un incident, le bot envoie la carte adaptative ou la carte commune avec les détails de l’incident dans Teams conversation.
 2. Désormais, cette carte est automatiquement actualisée en vue spécifique de l’utilisateur pour Megan et Alex. Les MRI `userIds` utilisateur d’Alex et Megan sont ajoutés dans la propriété de `refresh` propriété du JSON de carte adaptative. La carte reste la même pour les autres utilisateurs de la conversation.
@@ -216,7 +216,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 Recommandations en matière de conception de carte à garder à l’esprit lors de la conception d’affichages spécifiques à l’utilisateur :
 

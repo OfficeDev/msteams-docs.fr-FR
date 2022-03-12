@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 45f5d58708b3ec7e452d864c6dfb6fcc79b4a48d
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323182"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453662"
 ---
 # <a name="teamsfx-library"></a>Bibliothèque TeamsFx
 
@@ -19,19 +19,19 @@ Microsoft Teams Framework (TeamsFx) est une bibliothèque encapsulant des foncti
 
 Voici la liste des principales fonctionnalités TeamsFx :
 
-- **Collaboration TeamsFx : permet aux** développeurs et au propriétaire du projet d’inviter d’autres collaborateurs au projet TeamsFx. Vous pouvez collaborer pour déboguer et déployer un projet TeamsFx.
+* **Collaboration TeamsFx : permet aux** développeurs et au propriétaire du projet d’inviter d’autres collaborateurs au projet TeamsFx. Vous pouvez collaborer pour déboguer et déployer un projet TeamsFx.
 
-- **CLI TeamsFx** : il accélère Teams développement d’applications. Il permet également un scénario CI/CD dans lequel vous pouvez intégrer l’CLI dans des scripts pour l’automatisation.
+* **CLI TeamsFx** : il accélère Teams développement d’applications. Il permet également un scénario CI/CD dans lequel vous pouvez intégrer l’CLI dans des scripts pour l’automatisation.
 
-- Kit de développement logiciel **(SDK) TeamsFx** : le Kit de développement logiciel (SDK) TeamsFx est la bibliothèque de code TeamsFx principale qui encapsule l’authentification simple pour le code côté client et côté serveur adapté aux développeurs Teams.
-
+* Kit de développement logiciel **(SDK) TeamsFx** : le Kit de développement logiciel (SDK) TeamsFx est la bibliothèque de code TeamsFx principale qui encapsule l’authentification simple pour le code côté client et côté serveur adapté aux développeurs Teams.
 
 ## <a name="teamsfx-command-line-interface"></a>Interface de ligne de commande TeamsFx
 
-L’interface de ligne de commande TeamsFx est une interface de ligne de commande basée sur du texte qui accélère Teams développement d’applications. Il vise à fournir une expérience centrée sur le clavier tout en Teams applications. Il permet également un scénario CI/CD dans lequel vous pouvez intégrer l’CLI dans des scripts pour l’automatisation.
+L’interface de ligne de commande TeamsFx est une interface de ligne de commande basée sur du texte qui accélère Teams développement d’applications. Il vise à fournir une expérience centrée sur le clavier lors de la création d Teams applications. Il permet également un scénario CI/CD dans lequel vous pouvez intégrer l’CLI dans des scripts pour l’automatisation.
 
 Pour plus d’informations, reportez-vous aux rubriques suivantes :
-* [Code source](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) 
+
+* [Code source](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
 ## <a name="get-started"></a>Prise en main
@@ -72,11 +72,11 @@ Par défaut, passe `teamsfx new` en mode interactif et vous guide tout au long d
 
 ### <a name="parameters-for-teamsfx-new"></a>Paramètres pour `teamsfx new`
 
-| Paramètre | Conditions requises | Description |
+| Parameter | Conditions requises | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Oui| Nom de votre application Teams application.|
 |`--interactive`| Non | Sélectionnez les options de manière interactive. Les options sont et `true` la `false` valeur par défaut est `true`.|
-|`--capabilities`| Non| Choisissez Teams fonctionnalités de l’application, les options multiples sont `tab`, `bot`et `tab-spfx``messaging-extension` . La valeur par défaut est `tab`.|
+|`--capabilities`| Non| Choisissez Teams fonctionnalités de l’application, les options multiples sont `tab`, `bot`et `messaging-extension` `tab-spfx`. La valeur par défaut est `tab`.|
 |`--programming-language`| Non| Langage de programmation pour le projet. Les options sont ou `javascript` et `typescript` la valeur par défaut est `javascript`.|
 |`--folder`| Non | Project répertoire. Un sous-dossier avec le nom de votre application est créé sous ce répertoire. La valeur par défaut est `./`.|
 |`--spfx-framework-type`| Non| Applicable si `Tab(SPfx)` la fonctionnalité est sélectionnée. Infrastructure frontale. Les options sont `none` et `react`, et la valeur par défaut est `none`.|
@@ -162,7 +162,7 @@ Gérer les ressources dans l’application actuelle. Pris `<resource-type>` en c
 
 ### <a name="parameters-for-teamsfx-resource-add-azure-function"></a>Paramètres pour `teamsfx resource add azure-function`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |----------------  |-------------|-------------|
 |`--function-name`| Oui | Fournissez un nom de fonction. La valeur par défaut est `getuserprofile`. |
 
@@ -170,7 +170,7 @@ Gérer les ressources dans l’application actuelle. Pris `<resource-type>` en c
 
 #### `--function-name`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--function-name`| Oui | Fournissez un nom de fonction. La valeur par défaut est `getuserprofile`. |
 
@@ -182,7 +182,7 @@ Gérer les ressources dans l’application actuelle. Pris `<resource-type>` en c
 > [!TIP]
 > Les options prennent effet lorsque vous essayez d’utiliser une `APIM` instance existante. Par défaut, vous n’avez pas besoin de spécifier d’options et il crée une nouvelle instance au cours de l’étape `teamsfx provision` .
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--subscription`| Oui | Sélectionner un abonnement Azure|
 |`--apim-resource-group`| Oui| Nom du groupe de ressources. |
@@ -198,7 +198,7 @@ Mise en service des ressources cloud dans l’application actuelle.
 
 ### <a name="parameters-for-teamsfx-provision"></a>Paramètres pour `teamsfx provision`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui| Sélectionnez un environnement pour le projet. |
 |`--subscription`| Non | Spécifiez un ID d’abonnement Azure. |
@@ -212,7 +212,7 @@ Cette commande est utilisée pour déployer l’application actuelle. Par défau
 
 ### <a name="parameters-for-teamsfx-deploy"></a>Paramètres pour `teamsfx deploy`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui| Sélectionnez un environnement existant pour le projet. |
 |`--open-api-document`| Non | Applicable lorsqu’il existe une ressource APIM dans le projet. Chemin d’accès au fichier de document api ouvert. |
@@ -245,15 +245,15 @@ Afficher un aperçu de l’application actuelle à partir d’un emplacement loc
 
 ### <a name="parameters-for-teamsfx-preview"></a>Paramètres pour `teamsfx preview`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--local`| Non | Afficher un aperçu de l’application en local. `--local` est exclusif avec `--remote`. |
 |`--remote`| Non | Afficher un aperçu de l’application à partir d’une application distante. `--remote` est exclusif avec `--local`. |
 |`--env`| Non | Sélectionnez un environnement existant pour le projet lorsque le paramètre `--remote` est appended. |
 |`--folder`| Non | Project répertoire racine. La valeur par défaut est `./`. |
-|`--browser`| Non | Navigateur pour ouvrir Teams client web. Les options sont `chrome`, et `default` `edge` telles que le navigateur par défaut du système et la valeur est `default`. |
+|`--browser`| Non | Navigateur à ouvrir Teams client web. Les options sont `chrome`, et `default` `edge` telles que le navigateur par défaut du système et la valeur est `default`. |
 |`--browser-arg`| Non | Argument à transmettre au navigateur, nécessite --browser, peut être utilisé plusieurs fois, par exemple, --browser-args= »--guest » |
-|`--sharepoint-site`| Non | SharePoint URL du site, `{your-tenant-name}.sharepoint.com` par exemple pour SPFx prévisualisation à distance du projet. |
+|`--sharepoint-site`| Non | SharePoint’URL du site, `{your-tenant-name}.sharepoint.com` par exemple pour SPFx prévisualisation à distance du projet. |
 
 ### <a name="scenarios-for-teamsfx-preview"></a>Scénarios pour `teamsfx preview`
 
@@ -261,9 +261,9 @@ Afficher un aperçu de l’application actuelle à partir d’un emplacement loc
 
 Dépendances :
 
-- Node.js
-- Kit de développement logiciel .NET
-- Outils azure Functions Core
+* Node.js
+* Kit de développement logiciel .NET
+* Outils azure Functions Core
 
 ```bash
 teamsfx preview --local
@@ -291,7 +291,7 @@ Gérez les données de configuration dans l’étendue utilisateur ou dans l’�
 
 ### <a name="parameters-for-teamsfx-config"></a>Paramètres pour `teamsfx config`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui | Sélectionnez un environnement existant pour le projet. |
 |`--folder`| Non | Project répertoire. Il est utilisé pour obtenir ou définir la configuration du projet. La valeur par défaut est `./`. |
@@ -310,8 +310,9 @@ teamsfx config set telemetry off
 #### <a name="disable-environment-checker"></a>Désactiver l’vérification de l’environnement
 
 Il existe trois configurations pour activer ou désactiver Node.js, la validation du SDK .NET et des outils principaux des fonctions Azure, et toutes sont activées par défaut. Vous pouvez définir la configuration sur « off » si vous n’avez pas besoin de la validation des dépendances et que vous souhaitez installer les dépendances par vous-même. Consultez les guides suivants :
+
 * [Node.js'installation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
-* [Guide d’installation du SDK .NET](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk) 
+* [Guide d’installation du SDK .NET](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
 * [Guide d’installation des outils azure Functions Core](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
 
 Pour désactiver la validation du SDK .NET, vous pouvez utiliser la commande suivante :
@@ -357,14 +358,14 @@ L’CLI TeamsFx fournit des `teamsFx permission` commandes pour un scénario de 
 
 ### <a name="parameters-for-teamsfx-permission-grant"></a>Paramètres pour `teamsfx permission grant`
 
-| Paramètre  | Conditions requises | Description |
+| Parameter  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui | Fournissez le nom de l’env. |
 |`--email`| Oui | Fournissez l’adresse Microsoft 365 de messagerie du collaborateur. Assurez-vous que le compte du collaborateur se trouve dans le même client avec le créateur. |
 
 ### <a name="parameters-for-teamsfx-permission-status"></a>Paramètres pour `teamsfx permission status`
 
-| Paramètre | Conditions requises | Description |
+| Parameter | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui | Fournissez le nom de l’env. |
 |`--list-all-collaborators` | Non | Avec cet indicateur, Teams Shared Computer Toolkit CLI imprime tous les collaborateurs de ce projet. |
@@ -385,7 +386,7 @@ Après avoir reçu l’autorisation requise, le créateur et les collaborateurs 
 
 #### <a name="show-permission-status"></a>Afficher l’état des autorisations
 
-Project créateurs et collaborateurs `teamsfx permission status` peuvent utiliser la commande pour afficher son Microsoft 365 de compte pour un env spécifique :
+Project créateurs et `teamsfx permission status` collaborateurs peuvent utiliser la commande pour afficher son Microsoft 365 de compte de contenu pour un env spécifique :
 
 ```bash
 teamsfx permission status --env dev
@@ -393,7 +394,7 @@ teamsfx permission status --env dev
 
 #### <a name="list-all-collaborators"></a>Liste de tous les collaborateurs
 
-Project créateurs et collaborateurs `teamsfx permission status` peuvent utiliser la commande pour afficher tous les collaborateurs pour un env spécifique :
+Project créateur et collaborateurs `teamsfx permission status` peuvent utiliser la commande pour afficher tous les collaborateurs pour un env spécifique :
 
 ```bash
 teamsfx permission status --env dev --list-all-collaborators
@@ -403,26 +404,26 @@ teamsfx permission status --env dev --list-all-collaborators
 
 En tant que créateur de projet :
 
-- Pour créer un nouvel onglet TeamsFx ou un projet de bot, sélectionnez Azure comme type d’hôte :
+* Pour créer un nouvel onglet TeamsFx ou un projet de bot, sélectionnez Azure comme type d’hôte :
 
   ```bash
   teamsfx new --interactive false --app-name newapp --host-type azure
   ```
 
-- Pour vous connecter à Microsoft 365 compte Azure et à un compte Azure :
+* Pour vous connecter à Microsoft 365 compte Azure et à un compte Azure :
 
   ```bash
   teamsfx account login azure
   teamsfx account login Microsoft 365
   ```
 
-- Pour mettre en service votre projet :
+* Pour mettre en service votre projet :
 
   ```bash
   teamsfx provision
   ```
 
-- Pour afficher les collaborateurs :
+* Pour afficher les collaborateurs :
 
   ```bash
   teamsfx permission status --env dev --list-all-collaborators
@@ -430,7 +431,7 @@ En tant que créateur de projet :
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
 
-- Pour ajouter un autre compte en tant que collaborateur. Assurez-vous que le compte ajouté se trouve sous le même client :
+* Pour ajouter un autre compte en tant que collaborateur. Assurez-vous que le compte ajouté se trouve sous le même client :
 
   ```bash
   teamsfx permission grant --env dev --email user-email@user-tenant.com
@@ -438,36 +439,36 @@ En tant que créateur de projet :
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="autorisation":::
 
-- Pour pousser votre projet à l’GitHub
+* Pour pousser votre projet à l’GitHub
 
 En tant que collaborateur Project :
 
-- Clonez le projet à partir GitHub.
-- Connectez-vous Microsoft 365 compte. Assurez-vous que le même Microsoft 365 compte est ajouté :
+* Clonez le projet à partir GitHub.
+* Connectez-vous Microsoft 365 compte. Assurez-vous que le même Microsoft 365 compte est ajouté :
 
   ```bash
   teamsfx account login Microsoft 365
   ```
 
-- Connectez-vous au compte Azure avec l’autorisation de collaborateur pour toutes les ressources Azure.
+* Connectez-vous au compte Azure avec l’autorisation de collaborateur pour toutes les ressources Azure.
 
   ```bash
   teamsfx account login azure
   ```
 
-- Vérifiez l’état de l’autorisation. Vous devez avoir l’autorisation propriétaire du projet :
+* Vérifiez l’état de l’autorisation. Vous devez avoir l’autorisation propriétaire du projet :
 
   ```bash
   teamsfx permission status --env dev
   ```
+
   ![état de l’autorisation](./images/permission-status.png)
 
-- Mettez à jour le code de l’onglet et déployez le projet à distance.
-- Lancez à distance et le projet doit fonctionner comme il se doit.
+* Mettez à jour le code de l’onglet et déployez le projet à distance.
+* Lancez à distance et le projet doit fonctionner comme il se doit.
 
 ## <a name="see-also"></a>Voir aussi
 
 * [SDK TeamsFx pour TypeScript ou JavaScript](TeamsFx-SDK.md)
 * [Gérer plusieurs environnements dans Teams Shared Computer Toolkit](TeamsFx-multi-env.md)
 * [Collaborer sur Teams projet à l’aide Teams Shared Computer Toolkit](TeamsFx-collaboration.md)
- 

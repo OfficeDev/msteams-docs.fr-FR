@@ -4,12 +4,12 @@ author: surbhigupta12
 description: Recevoir tous les messages de canal avec des autorisations RSC
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d573e6e52f09537a9cb5e815529ff9ee2ab31cae
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: b18b4f64d34abc1dec71c526c1f604978dc77cdf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518310"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453452"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>Recevoir tous les messages de canal avec RSC
 
@@ -21,12 +21,13 @@ Pour plus d’informations sur l’activation du RSC pour votre application, voi
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>Activer les bots pour recevoir tous les messages de canal
 
-L’autorisation `ChannelMessage.Read.Group` RSC est étendue aux bots. Avec le consentement de l’utilisateur, cette autorisation permet aux applications graphiques d’obtenir tous les messages d’une conversation et aux robots de recevoir tous les messages de canal sans être @mentioned.
+L’autorisation `ChannelMessage.Read.Group` RSC est étendue aux bots. Avec le consentement de l’utilisateur, cette autorisation permet aux applications graphiques d’obtenir tous les messages d’une conversation et aux robots de recevoir tous les messages de canal sans @mentioned.
 
 > [!NOTE]
+>
 > * Les services qui ont besoin d’accéder à toutes les données Teams message électronique doivent utiliser les API Graph qui permettent également d’accéder aux données archivées dans les canaux et les conversations.
 > * Les bots doivent utiliser l’autorisation `ChannelMessage.Read.Group` RSC de manière appropriée pour créer et améliorer l’expérience attrayante pour les utilisateurs de l’équipe, sinon ils ne passeront pas l’approbation du Store. La description de l’application doit inclure la façon dont le bot utilise les données qu’il lit.
-> * L’autorisation `ChannelMessage.Read.Group` RSC peut ne pas être utilisée par les bots comme moyen d’extraire de grandes quantités de données client. 
+> * L’autorisation `ChannelMessage.Read.Group` RSC peut ne pas être utilisée par les bots comme moyen d’extraire de grandes quantités de données client.
 
 ## <a name="update-app-manifest"></a>Mettre à jour le manifeste de l’application
 
@@ -93,7 +94,7 @@ Le code suivant fournit un exemple d’autorisations RSC :
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
+  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
 }
 ```
 
@@ -115,7 +116,7 @@ this.onMessage(async (context, next) => {
 
 | Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|Messages de canal avec autorisations RSC| Microsoft Teams exemple d’application montrant comment un bot peut recevoir tous les messages de canal avec RSC sans être @mentioned.|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|Messages de canal avec autorisations RSC| Microsoft Teams exemple d’application montrant comment un bot peut recevoir tous les messages de canal avec RSC sans être @mentioned.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

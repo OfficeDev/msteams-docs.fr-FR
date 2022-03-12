@@ -5,12 +5,12 @@ description: Découvrez comment créer une extension Microsoft Teams messagerie 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: cf4d2efae2c5628ad32beadbc61174ea2bb037a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518155"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452906"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
@@ -44,10 +44,9 @@ Le cœur de votre extension de messagerie est votre service web. Il définit un 
 
 Les extensions de messagerie tirez parti du schéma de messagerie et du protocole de communication sécurisée de Bot Framework. Si vous n’en avez pas déjà, vous devrez inscrire votre service web sur Bot Framework. ID de l’application Microsoft (nous l’appellerons ID de bot à partir de l’intérieur de Teams, pour l’identifier à partir d’autres ID d’application que vous pourriez utiliser) et le point de terminaison de messagerie de votre inscription avec Bot Framework sera utilisé dans votre extension de messagerie pour recevoir et répondre aux demandes. Si vous utilisez une inscription existante, veillez à activer le [canal Microsoft Teams existant](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0).
 
-
 Si vous suivez l’un des démarrages rapides ou démarrez à partir de l’un des exemples disponibles, vous serez guidé tout au long de l’inscription de votre service web. Si vous souhaitez inscrire manuellement votre service, trois options s’offrent à vous. Si vous choisissez de vous inscrire sans utiliser d’abonnement Azure, vous ne pourrez pas tirer parti du flux d’authentification OAuth simplifié fourni par Bot Framework. Vous pourrez migrer votre inscription vers Azure après sa création.
 
-* Si vous avez un abonnement Azure (ou que vous souhaitez en créer un), vous pouvez inscrire votre service web manuellement à l’aide Microsoft Azure portail. Créez une ressource « Inscription des canaux bots ». Vous pouvez choisir le niveau de tarification gratuit, car les messages provenant de Microsoft Teams ne sont pas comptabilisés dans le nombre total de messages par mois.
+* Si vous avez un abonnement Azure (ou que vous souhaitez en créer un), vous pouvez inscrire votre service web manuellement à l’aide Microsoft Azure portail. Créez une ressource « Inscription des canaux bots ». Vous pouvez choisir le niveau de tarification gratuit, car les messages provenant Microsoft Teams ne sont pas comptabilisés dans le nombre total de messages par mois.
 * Si vous ne souhaitez pas utiliser un abonnement Azure, vous pouvez utiliser le [portail d’inscription hérité](https://dev.botframework.com/bots/new).
 * App Studio peut également vous aider à inscrire votre service web (bot). Les services Web enregistrés via App Studio ne sont pas enregistrés dans Azure. Vous pouvez utiliser le [portail hérité pour](https://dev.botframework.com/bots) afficher, gérer et migrer vos inscriptions.
 
@@ -68,7 +67,7 @@ Vous pouvez utiliser l’application App Studio à partir du client Microsoft Te
 7. Le **bouton** Ajouter dans la section **Commande** vous guide tout au long de l’ajout de commandes à votre extension de messagerie. Pour plus [d’informations](#learn-more) sur l’ajout de commandes, voir la section En savoir plus. N’oubliez pas que vous pouvez définir jusqu’à 10 commandes pour votre extension de messagerie.
 8. La **section Gérer les messages** vous permet d’ajouter un domaine sur le déclenchement de votre messagerie. Pour [plus d’informations, voir](~/messaging-extensions/how-to/link-unfurling.md) déploiement de lien.
 
-À partir de **l’onglet Terminer =>** tester et distribuer,  vous pouvez télécharger votre package d’application (qui inclut votre manifeste d’application ainsi que les icônes de votre application) ou **installer le package**.
+À partir de **l’onglet Terminer => tester** et distribuer, vous  pouvez télécharger votre package d’application (qui inclut votre manifeste d’application ainsi que les icônes de votre application) ou **installer le package**.
 
 ### <a name="create-your-app-manifest-manually"></a>Créer manuellement le manifeste de votre application
 
@@ -235,7 +234,7 @@ Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez 
 
 Une fois la réunion commencée, Teams participants peuvent interagir directement avec votre extension de messagerie pendant un appel en direct. Prenons les considérations suivantes lors de la création de votre extension de messagerie en réunion :
 
-1. **Emplacement :** Votre extension de messagerie peut être invoquée à partir de la zone de composition d’un message, de la zone de commande ou @mentioned dans la conversation de réunion.
+1. **Emplacement :** Votre extension de messagerie peut être invoquée à partir de la zone de composition d’un message, de la zone de commande ou @mentioned la conversation de réunion.
 
 1. **Métadonnées**. Lorsque votre extension de messagerie est invoquée, elle peut identifier l’utilisateur et le client à partir de `userId` et `tenantId`. `meetingId` fait partie de l’objet `channelData`. Votre application peut utiliser la demande `userId` d’API `meetingId`  et pour `GetParticipant` récupérer les rôles d’utilisateur.
 

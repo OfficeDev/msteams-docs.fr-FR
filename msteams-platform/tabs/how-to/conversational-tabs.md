@@ -6,12 +6,12 @@ keywords: Canal d’onglets teams configurable
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ac58448ec390d0e954c0737d5b0700d0d91b04b1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889362"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452598"
 ---
 # <a name="create-conversational-tabs"></a>Créer des onglets de conversation
 
@@ -21,7 +21,7 @@ Les sous-entités de conversation sont uniquement pris en charge dans les canaux
 
 ## <a name="prerequisites"></a>Configuration requise
 
-Pour prendre en charge les sous-entités conversationnelles, votre application web d’onglet doit pouvoir stocker un mappage entre les sous-↔ conversations dans une base de données principale. L’offre est fournie, mais vous devez la stocker et la renvoyer à Teams pour que les utilisateurs `conversationId` `conversationId` poursuivent la conversation.
+Pour prendre en charge les sous-entités de conversation, votre application web d’onglet doit pouvoir stocker un mappage entre les conversations de sous-entités ↔ dans une base de données principale. L’offre `conversationId` est fournie, mais vous devez la `conversationId` stocker et la renvoyer à Teams pour que les utilisateurs poursuivent la conversation.
 
 ## <a name="start-a-new-conversation"></a>Démarrer une nouvelle conversation
 
@@ -33,14 +33,14 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation prend les** entrées suivantes pour démarrer une conversation dans un canal :
 
-* **subEntityId**: ID de votre sous-entité spécifique. Par exemple, task-123.
-* **entityId**: ID de l’instance d’onglet lors de sa création. L’ID est important pour renvoyer à la même instance d’onglet.
-* **channelId**: canal dans lequel réside l’instance d’onglet.
+* **subEntityId** : ID de votre sous-entité spécifique. Par exemple, task-123.
+* **entityId :** ID de l’instance d’onglet lors de sa création. L’ID est important pour renvoyer à la même instance d’onglet.
+* **channelId** : canal dans lequel réside l’instance d’onglet.
    > [!NOTE]
-   > Le **channelId est** facultatif pour les onglets de canal. Toutefois, il est recommandé si vous souhaitez conserver votre implémentation entre les onglets de canal et statiques.
-* **title**: titre présenté à l’utilisateur dans le panneau de conversation.
+   > Le **channelId est** facultatif pour les onglets de canal. Toutefois, il est recommandé de conserver votre implémentation entre les onglets de canal et statiques de la même manière.
+* **titre** : titre présenté à l’utilisateur dans le panneau de conversation.
 
-La plupart de ces valeurs peuvent également être récupérées à partir de `getContext` l’API.
+La plupart de ces valeurs peuvent également être récupérées à partir de l’API `getContext` .
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
@@ -50,7 +50,7 @@ L’image suivante montre le panneau de conversation :
 
 ![Sous-entités de conversation : démarrer une conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
 
-Si l’utilisateur démarre une conversation, il est important d’écouter le rappel de cet événement pour récupérer et enregistrer la **conversationId**:
+Si l’utilisateur démarre une conversation, il est important d’écouter le rappel de cet événement pour récupérer et enregistrer la **conversationId** :
 
 ```javascript
 microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
@@ -58,11 +58,11 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 };
 ```
 
-`conversationResponse`L’objet contient des informations relatives à la conversation qui a été démarrée. Il est recommandé d’enregistrer toutes les propriétés de cet objet de réponse pour une utilisation ultérieure.
+L’objet `conversationResponse` contient des informations relatives à la conversation qui a été démarrée. Il est recommandé d’enregistrer toutes les propriétés de cet objet de réponse pour une utilisation ultérieure.
 
 ## <a name="continue-a-conversation"></a>Poursuivre une conversation
 
-Après le démarrage d’une conversation, les appels suivants doivent exiger que vous fournissiez également les mêmes entrées que dans le démarrage d’une nouvelle conversation, mais incluez également `openConversation()` **la conversationId**. [](#start-a-new-conversation) Le panneau de conversation s’ouvre pour les utilisateurs avec la conversation appropriée en vue. Les utilisateurs peuvent voir les messages nouveaux ou entrants en temps réel.
+Après le démarrage d’une conversation, `openConversation()` les appels suivants doivent exiger que vous fournissiez également les mêmes entrées que dans le démarrage d’une nouvelle [conversation](#start-a-new-conversation), mais incluez également **la conversationId**. Le panneau de conversation s’ouvre pour les utilisateurs avec la conversation appropriée en vue. Les utilisateurs peuvent voir les messages nouveaux ou entrants en temps réel.
 
 L’image suivante montre le panneau de conversation avec la conversation appropriée :
 
@@ -70,9 +70,9 @@ L’image suivante montre le panneau de conversation avec la conversation approp
 
 ## <a name="enhance-a-conversation"></a>Améliorer une conversation
 
-Il est important que votre onglet inclut des [liens profonds vers votre sous-entité.](~/concepts/build-and-test/deep-links.md) Par exemple, l’utilisateur qui sélectionne le lien de tabulation en profondeur à partir de la conversation de canal. Le comportement attendu consiste à recevoir le lien profond, à ouvrir cette sous-entité, puis à ouvrir le panneau de conversation pour cette sous-entité.
+Il est important que votre onglet inclut des [liens profonds vers votre sous-entité](~/concepts/build-and-test/deep-links.md). Par exemple, l’utilisateur qui sélectionne le lien de tabulation en profondeur à partir de la conversation de canal. Le comportement attendu consiste à recevoir le lien profond, à ouvrir cette sous-entité, puis à ouvrir le panneau de conversation pour cette sous-entité.
 
-Pour prendre en charge les sous-entrées de conversation à partir de votre onglet personnel ou statique, vous n’avez rien à modifier dans votre implémentation. Nous viennent uniquement en charge le démarrage ou la poursuite des conversations à partir d’onglets de canal qui sont déjà épinglés. La prise en charge des onglets statiques vous permet de fournir un emplacement unique à vos utilisateurs pour interagir avec toutes vos sous-entités. Il est important que vous enregistrez le , et lorsque votre onglet est initialement créé dans un canal pour avoir les propriétés droites lors de l’ouverture de l’affichage de conversation dans un `subEntityId` `entityId` onglet `channelId` statique.
+Pour prendre en charge les sous-entrées de conversation à partir de votre onglet personnel ou statique, vous n’avez rien à modifier dans votre implémentation. Nous viennent uniquement en charge le démarrage ou la poursuite des conversations à partir d’onglets de canal qui sont déjà épinglés. La prise en charge des onglets statiques vous permet de fournir un emplacement unique permettant à vos utilisateurs d’interagir avec toutes vos sous-entités. Il est important que `subEntityId`vous enregistrez le , et `entityId``channelId` lorsque votre onglet est initialement créé dans un canal pour avoir les propriétés droites lors de l’ouverture de l’affichage de conversation dans un onglet statique.
 
 ## <a name="close-a-conversation"></a>Fermer une conversation
 

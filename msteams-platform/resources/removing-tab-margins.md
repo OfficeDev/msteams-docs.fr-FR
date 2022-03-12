@@ -6,22 +6,22 @@ keywords: remplissage des marges de suppression de tabulation
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7260c0baf6a33b69988d07cb6d0aef7f90b6c62f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888075"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452836"
 ---
 # <a name="tab-margin-changes"></a>Modifications des marges de l’onglet
 
 Ce document décrit comment la suppression des marges autour de tous les onglets Microsoft Teams améliore l’expérience de création de votre application. Il s’agit d’une amélioration introduite dans Microsoft Teams 2021.
-Vous pouvez créer des applications qui semblent plus natives Teams en supprimant les marges autour de tous les onglets. Les onglets avec marges supprimées s’alignent Microsoft Teams conceptions du [kit d’interface utilisateur de Microsoft Teams'](~/tabs/design/tabs.md). La plupart des applications offrent une apparence améliorée sans marges.
+Vous pouvez créer des applications qui semblent plus natives Teams en supprimant les marges autour de tous les onglets. Les onglets avec marges supprimées s’alignent Microsoft Teams conceptions du [kit d’interface utilisateur de l’utilisateur.](~/tabs/design/tabs.md) La plupart des applications offrent une apparence améliorée sans marges.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tabulation et sans marges" border="false":::
 
 > [!NOTE]
-> Cette fonctionnalité n’est pas applicable aux clients mobiles, car les onglets des clients mobiles n’ont pas de marges. 
+> Cette fonctionnalité n’est pas applicable aux clients mobiles, car les onglets des clients mobiles n’ont pas de marges.
 
 ## <a name="guidelines"></a>Conseils
 
@@ -44,8 +44,9 @@ Non, vous devez fournir votre propre remplissage ou marges à gauche et à droit
 * Bas : 0px
 
 > [!IMPORTANT]
+>
 > * Les marges de tous les onglets sont supprimées : onglets personnels, onglets de conversation (groupe), onglets de réunion et onglets de canal.
-> * La modification de suppression de la marge de tabulation s’applique à tous les onglets. Il n’existe aucun moyen d’opter ou de refuser la modification. 
+> * La modification de suppression de la marge de tabulation s’applique à tous les onglets. Il n’existe aucun moyen d’opter ou de refuser la modification.
 > * La modification des marges de tabulation peut affecter les onglets qui s’appuient sur Microsoft Teams pour fournir des marges autour de leur interface utilisateur.
 
 ## <a name="see-also"></a>Voir aussi

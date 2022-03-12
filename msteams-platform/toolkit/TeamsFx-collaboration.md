@@ -1,27 +1,27 @@
 ---
-title: Collaborer sur des équipes TeamsFx Project l’aide Teams Shared Computer Toolkit
+title: Collaborer sur les équipes TeamsFx Project l’aide Teams Shared Computer Toolkit
 author: yanjiang
-description: Collaborer sur des équipes TeamsFx Project l’aide Teams Shared Computer Toolkit
+description: Collaborer sur les équipes TeamsFx Project l’aide Teams Shared Computer Toolkit
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 692eebc774de42bddb2f832cb22681991ac0d87b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 423e03e373edb1980186ea3dc43f2817d2e25636
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821380"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452563"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Collaborer sur Teams projet à l’aide Teams Shared Computer Toolkit
 
-Plusieurs développeurs peuvent travailler ensemble pour déboguer, mettre en service et déployer le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations de Teams App et Microsoft Azure Active Directory (Azure AD) App.Teams Shared Computer Toolkit  prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs au projet TeamsFx à déboguer, mettre en service et déployer le même projet TeamsFx.
+Plusieurs développeurs peuvent travailler ensemble pour déboguer, mettre en service et déployer le même projet TeamsFx, mais cela nécessite de définir manuellement les autorisations de Teams App and Microsoft Azure Active Directory (Azure AD) App.Teams Shared Computer Toolkit  prend en charge la fonctionnalité de collaboration pour permettre aux développeurs et au propriétaire du projet d’inviter d’autres développeurs ou collaborateurs au projet TeamsFx à déboguer, mettre en service et déployer le même projet TeamsFx.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Configuration requise
 
 * Conditions préalables pour le compte
 
-    Pour mettre en service des ressources cloud, vous devez avoir les comptes suivants. Pour plus d’informations, voir, [préparer les comptes pour créer Teams application](accounts.md).
+    Pour mettre en service des ressources cloud, vous devez avoir les comptes suivants. Pour plus d’informations, voir, [préparer les comptes pour créer Teams’application](accounts.md).
 
   * Abonnement Microsoft 365
   * Azure avec un abonnement valide
@@ -48,7 +48,7 @@ La liste suivante nous guide pour comprendre le processus de collaboration et sa
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* Pour afficher les collaborateurs dans l’environnement actuel, sélectionnez List **Microsoft 365 Teams App (avec Azure AD App),** puis les collaborateurs sont répertoriés dans le canal de sortie, comme illustré dans l’image suivante :
+* Pour afficher les collaborateurs dans l’environnement actuel, **sélectionnez List Microsoft 365 Teams App (avec Azure AD App),** puis les collaborateurs sont répertoriés dans le canal de sortie, comme illustré dans l’image suivante :
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
@@ -78,10 +78,11 @@ Vous ne pouvez pas supprimer des collaborateurs directement de Teams Shared Comp
   2. Sélectionnez **Propriétaires** dans le panneau gauche.
   3. Sélectionnez et supprimez le collaborateur.
   4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
-  5. Sélectionnez **Propriétaires** dans le panneau gauche de la page Azure AD gestion des applications.
+  5. Sélectionnez **Propriétaires** dans le panneau gauche dans Azure AD page gestion des applications.
   6. Sélectionnez et supprimez le collaborateur.
 
 > [!NOTE]
+>
 > * Le collaborateur ajouté à votre projet ne recevra aucune notification. Project propriétaire doit avertir le collaborateur hors connexion.
 > * Les autorisations associées à Azure doivent être définies manuellement par l’administrateur d’abonnement Azure Microsoft Azure portail. Le compte Azure doit avoir un rôle de collaborateur pour l’abonnement afin que les développeurs peuvent collaborer pour mettre en service et déployer le projet TeamsFx.
 
