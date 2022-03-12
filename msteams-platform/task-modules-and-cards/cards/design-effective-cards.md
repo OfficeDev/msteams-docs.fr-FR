@@ -4,12 +4,12 @@ description: Découvrez comment concevoir des Cartes adaptatives pour Teams et o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 86b5bdea89f49f6e98ce84920e3fbe1cdb4f378e
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948641"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398623"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 
@@ -188,15 +188,15 @@ Cartes conçues pour une échelle d’écran étroite sur des écrans plus large
 Permet [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) de mettre en forme le contenu de votre carte dans un tableau ou une grille. Plusieurs options s’offrent à vous pour la mise en forme de la largeur des colonnes. Ces recommandations vous aident à comprendre quand utiliser chacune d’elles.
 
 * `"width": "auto"`: dimensionne chaque colonne de l’application pour qu’elle corresponde au contenu de l’application `ColumnSet` que vous incluez dans cette colonne.
-   * **À** faire : utilisez lorsque vous avez un contenu de largeur variable et n’avez pas besoin de hiérarchiser une colonne spécifique.
-   * **À faire** : Pour chaque `TextBlock` , définir `"wrap": true` puisque le texte ne s’enveloppe pas par défaut.
-   * **À ne pas faire**: définir `"width": "auto"` pour chaque conteneur de colonnes. Par exemple, si vous avez une entrée et un bouton côte à côte, le bouton peut être coupé sur certains écrans. Définissez plutôt la colonne avec des boutons et d’autres contenus qui `auto` doivent toujours être complètement visibles.
+  * **À** faire : utilisez lorsque vous avez un contenu de largeur variable et n’avez pas besoin de hiérarchiser une colonne spécifique.
+  * **À faire** : Pour chaque `TextBlock` , définir `"wrap": true` puisque le texte ne s’enveloppe pas par défaut.
+  * **À ne pas faire**: définir `"width": "auto"` pour chaque conteneur de colonnes. Par exemple, si vous avez une entrée et un bouton côte à côte, le bouton peut être coupé sur certains écrans. Définissez plutôt la colonne avec des boutons et d’autres contenus qui `auto` doivent toujours être complètement visibles.
 * `"width": "stretch"`: dimensionne les colonnes en fonction de la `ColumnSet` largeur disponible. Lorsque plusieurs colonnes `"stretch"` utilisent la valeur, elles partagent également la largeur disponible.
-   * **À faire** : utilisez avec une colonne si toutes vos autres colonnes ont une largeur statique. Par exemple, vous avez des images miniatures dans une colonne d’une largeur de 50 pixels.
-* `"width": "<number>"`: dimensionne les colonnes à l’aide d’une proportion de la `ColumnSet` largeur disponible. Par exemple, si vous définissez trois colonnes avec , et , les colonnes `"width": "1"`, `"width": "4"` et `"width": "5"`, prenons jusqu’à 10, 40 et 50 pour cent de la largeur disponible.
+  * **À faire** : utilisez avec une colonne si toutes vos autres colonnes ont une largeur statique. Par exemple, vous avez des images miniatures dans une colonne d’une largeur de 50 pixels.
+* `"width": "<number>"`: Dimensionne les colonnes en utilisant une proportion de la largeur `ColumnSet`disponible. Par exemple, si vous définissez trois colonnes avec `"width": "1"`, `"width": "4"`, et `"width": "5"`, les colonnes occuperont 10, 40 et 50 pour cent de la largeur disponible.
 * `"width": "<number>px"`: dimensionne les colonnes à une largeur de pixel spécifique. Cette approche est utile lors de la création de tableaux.
-   * **À faire** : utilisez lorsque la largeur de ce que vous affichez n’a pas besoin de changer (par exemple, les nombres et les pourcentages).
-   * **Ne pas** : dépasser accidentellement la largeur de ce que la carte peut afficher. N’oubliez pas que la largeur d’écran disponible dépend de l’appareil. Teams pour téléphone ne prend pas non plus en charge le défilement horizontal comme Teams bureau.
+  * **À faire** : utilisez lorsque la largeur de ce que vous affichez n’a pas besoin de changer (par exemple, les nombres et les pourcentages).
+  * **Ne pas** : dépasser accidentellement la largeur de ce que la carte peut afficher. N’oubliez pas que la largeur d’écran disponible dépend de l’appareil. Teams pour téléphone ne prend pas non plus en charge le défilement horizontal comme Teams bureau.
 
 #### <a name="example-knowing-when-to-stretch-columns"></a>Exemple : savoir quand étirer les colonnes
 
@@ -647,9 +647,9 @@ Suivez ces instructions lorsque vous insérez des images dans vos cartes.
 * **À faire** : si vous devez contrôler la taille exacte de vos images, utilisez les `width` propriétés et les `height` propriétés.
 * **À ne pas faire** : incluez le remplissage avec vos images. Cela introduit généralement des problèmes d’espacement et de disposition indésirables.
 * En ce qui concerne la couleur d’arrière-plan :
-   * **À faire** : utilisez des arrière-plans transparents afin que vos images s’adaptent à n’importe Teams thème. 
-   * **À ne pas faire** : inclure une couleur d’arrière-plan fixe, sauf si une couleur spécifique doit être visible pour vos utilisateurs.
-   * **À ne pas faire** : ajoutez une couleur d’arrière-plan à une couleur `TextBlock` qui nuit à la lisibilité. Par exemple, si votre arrière-plan est sombre, utilisez une couleur de texte plus claire et inversement.
+  * **À faire** : utilisez des arrière-plans transparents afin que vos images s’adaptent à n’importe Teams thème.
+  * **À ne pas faire** : inclure une couleur d’arrière-plan fixe, sauf si une couleur spécifique doit être visible pour vos utilisateurs.
+  * **À ne pas faire** : ajoutez une couleur d’arrière-plan à une couleur `TextBlock` qui nuit à la lisibilité. Par exemple, si votre arrière-plan est sombre, utilisez une couleur de texte plus claire et inversement.
 
 ### <a name="actions"></a>Actions
 
