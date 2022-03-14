@@ -4,16 +4,28 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, l’étape de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398861"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464358"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
 Chaque équipe dispose d’une façon différente de communiquer et de collaborer sur des tâches. Pour effectuer ces différentes tâches, personnalisez Teams avec des applications pour les réunions. Activez vos applications pour Teams réunions et configurez les applications pour qu’elles soient disponibles dans l’étendue de la réunion dans leur manifeste d’application.
+
+## <a name="prerequisites"></a>Configuration requise
+
+Les applications pour Teams réunions, vous pouvez développer les fonctionnalités de vos applications tout au long du cycle de vie des réunions. Avant de travailler avec des applications pour Teams réunions, vous devez remplir les conditions préalables suivantes :
+
+* Savoir comment développer des Teams applications. Pour plus d’informations sur le développement d’Teams’application, voir [Teams développement d’applications](../overview.md).
+
+* Utilisez votre application qui prend en charge les onglets configurables dans l’étendue groupchat. Pour plus d’informations, voir [étendue de conversation de groupe](../resources/schema/manifest-schema.md#configurabletabs) et [créer un onglet de groupe](../build-your-first-app/build-channel-tab.md).
+
+* Respectez les recommandations [Teams la conception d’onglets](../tabs/design/tabs.md) pour les scénarios préalables et post-réunion. Pour les expériences pendant les réunions, [reportez-vous](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) aux recommandations en matière de conception d’onglets de réunion et de boîte de dialogue [en réunion](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
+
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités d’événements de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et dans d’autres étapes du cycle de vie de la réunion. Pour la boîte de dialogue de réunion, voir paramètre `completionBotId` dans la charge utile de [notification de réunion](API-references.md#send-an-in-meeting-notification).
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour les Teams réunion
 
@@ -54,7 +66,11 @@ Le manifeste de l’application doit inclure l’extrait de code suivant :
 
 ### <a name="context-property"></a>Propriété Context
 
-La `context` propriété détermine ce qui doit être affiché lorsqu’un utilisateur appelle une application dans une réunion en fonction de l’endroit où il appelle l’application. L’onglet `context` et `scopes` les propriétés vous permettent de déterminer où votre application doit apparaître. Les onglets de la ou `team` de l’étendue `groupchat` peuvent avoir plusieurs contextes. Voici les valeurs de la `context` propriété à partir de laquelle vous pouvez utiliser l’ensemble ou certaines des valeurs :
+La `context` propriété détermine ce qui doit être affiché lorsqu’un utilisateur appelle une application dans une réunion en fonction de l’endroit où il appelle l’application. L’onglet `context` et `scopes` les propriétés vous permettent de déterminer où votre application doit apparaître. Les onglets de la ou `team` de l’étendue `groupchat` peuvent avoir plusieurs contextes.
+
+Prendre en charge l’étendue `groupchat` pour activer votre application dans les conversations préalables à la réunion et post-réunion. Avec l’expérience d’application de pré-réunion, vous pouvez rechercher et ajouter des applications de réunion et effectuer les tâches préalables à la réunion. Avec l’expérience de l’application post-réunion, vous pouvez afficher les résultats de la réunion, tels que les résultats des sondages ou les frais.
+
+ Voici les valeurs de la `context` propriété à partir de laquelle vous pouvez utiliser l’ensemble ou certaines des valeurs :
 
 |Valeur|Description|
 |---|---|
@@ -140,7 +156,7 @@ Les participants peuvent partager l’ensemble de l’application à l’étape 
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-Pour partager l’intégralité de l’application à l’étape, dans le manifeste de l’application, vous devez configurer `meetingStage` `meetingSidePanel` et en tant que contextes de trame. Par exemple :
+Pour partager l’intégralité de l’application à l’étape, dans le manifeste de l’application, vous devez configurer `meetingStage` `meetingSidePanel` et en tant que contextes de trame. Par exemple :
 
 ```json
 "configurableTabs": [

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398847"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466498"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -46,7 +46,7 @@ Pour ajouter des onglets à une réunion existante :
 1. Dans votre calendrier, sélectionnez une réunion à laquelle vous souhaitez ajouter un onglet.
 1. Sélectionnez **l’onglet Détails** et sélectionnez <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. La galerie d’onglets s’affiche.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Expérience de l'application avant la réunion":::
 
 1. Dans la galerie d’onglets, sélectionnez l’application à ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’onglet.
 
@@ -57,7 +57,7 @@ Pour ajouter des onglets à une réunion existante :
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-![Affichage de l’onglet avant la réunion](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="Onglets pendant une réunion":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -69,7 +69,7 @@ Après avoir ajouté les onglets à une réunion existante sur mobile, vous pouv
 
 #### <a name="in-meeting-app-experience"></a>Expérience d'application en réunion
 
-Avec l'expérience de l'application en réunion, vous pouvez engager les participants pendant la réunion en utilisant des applications et la boîte de dialogue en réunion. Les applications de réunion sont hébergées sur la barre d'outils de la fenêtre de réunion en tant qu'onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter du contenu exploitable aux participants à la réunion. Pour plus d’informations, voir [créer des applications pour Teams réunions](create-apps-for-teams-meetings.md).
+Avec l'expérience de l'application en réunion, vous pouvez engager les participants pendant la réunion en utilisant des applications et la boîte de dialogue en réunion. Les applications de réunion sont hébergées sur la barre d'outils de la fenêtre de réunion en tant qu'onglet de réunion. Utilisez la boîte de dialogue de réunion pour présenter du contenu exploitable aux participants à la réunion. Pour plus d’informations, [voir Activer et configurer vos applications pour Teams réunions](enable-and-configure-your-app-for-teams-meetings.md).
 
 Pour les appareils mobiles, les applications de réunion sont disponibles à **partir > des** &#x25CF;&#x25CF;&#x25CF; lors de la réunion. **Sélectionnez Applications** pour afficher toutes les applications disponibles dans la réunion.
 
@@ -82,8 +82,6 @@ Pour utiliser des onglets pendant une réunion :
 1. Dans la boîte de dialogue de réunion, entrez votre réponse en tant que commentaire.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
-
-![Affichage boîte de dialogue](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
@@ -132,11 +130,11 @@ L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-![Affichage après la réunion](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Onglet Contoso avec résultats":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Expérience d’application après la réunion":::
 
 ---
 
@@ -155,7 +153,7 @@ Les Teams réunions unifiées vous permettent de concevoir votre application en 
 
 ## <a name="participant-roles-in-a-meeting"></a>Rôles des participants à une réunion
 
-![Participants à une réunion](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Rôles des participants à une réunion":::
 
 Les paramètres de participant par défaut sont déterminés par l’administrateur informatique d’une organisation. Les rôles des participants à une réunion sont les suivants :
 
@@ -207,7 +205,7 @@ Le tableau suivant fournit les types d’utilisateur et répertorie les fonction
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Conditions préalables et références d’API pour les applications dans les réunions Teams](create-apps-for-teams-meetings.md)
+> [Activer et configurer vos applications pour Teams réunions](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>Voir aussi
 
