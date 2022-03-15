@@ -4,13 +4,13 @@ description: Décrit les instructions que chaque application soumise au magasin 
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: medium
-ms.openlocfilehash: 6326c8ff28857ab75436e61de5b8783842642acb
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399134"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501927"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -20,8 +20,8 @@ Le respect de ces directives augmente les chances que votre application réussis
 >
 > * Certaines instructions peuvent ne pas être applicables à votre application. Par exemple, si votre application n’inclut pas de bot, vous pouvez ignorer les instructions liées aux bots.
 > * Nous avons recoupé ces directives avec les politiques de certification commerciale de Microsoft et ajouté les choses à faire et à ne pas faire avec des exemples de scénarios de réussite ou d'échec rencontrés dans notre processus de validation.
-> * Certaines directives sont marquées comme *Correction obligatoire*. Si votre soumission d'application ne respecte pas ces directives obligatoires, vous recevrez un rapport d'échec de notre part avec des mesures pour atténuer. La soumission de votre application Microsoft Teams la validation du Store uniquement une fois que vous avez résolu les problèmes.
-> * D'autres directives sont marquées comme *Correction obligatoire*. Pour une expérience utilisateur idéale, nous vous suggérons de résoudre les problèmes. Cependant, la publication de votre application ne sera pas bloquée sur la boutique Teams si vous choisissez de ne pas résoudre les problèmes.
+> * Certaines directives sont marquées comme *Correction obligatoire*. Si votre soumission d'application ne respecte pas ces directives obligatoires, vous recevrez un rapport d'échec de notre part avec des mesures pour atténuer. Votre soumission d'application ne passera la validation du Microsoft Teams Store qu'une fois que vous aurez résolu les problèmes.
+> * D’autres instructions sont marquées comme *suggestions de correction*. Pour une expérience utilisateur idéale, nous vous suggérons de résoudre les problèmes. Toutefois, la publication de votre soumission d’application ne sera pas bloquée sur le magasin Teams, si vous choisissez de ne pas résoudre les problèmes.
 
 ## <a name="value-proposition"></a>Proposition de valeur
 
@@ -52,7 +52,7 @@ Le nom d’une application joue un rôle essentiel dans la façon dont les utili
 * Si votre application fait partie d'un partenariat officiel avec Microsoft, le nom de votre application doit apparaître en premier. Par exemple, **Connecteur Contoso pour Microsoft Teams**.
 * Ne doit pas copier le nom d’une application répertoriée dans le magasin ou une autre offre sur la place de marché commerciale.
 * Ne doit pas contenir de termes vulgaires ou désobligeants. Le nom ne doit pas non plus inclure un langage qui manque d’égard en matière de race ou de culture.
-* Doit être unique. Si votre application (Contoso) est répertoriée dans le magasin Microsoft Teams et Microsoft AppSource et que vous souhaitez répertorier une autre application spécifique à une zone géographique, telle que Contoso Mexique, votre soumission doit répondre aux critères suivants :
+* Doit être unique. Si votre application (Contoso) est répertoriée dans le Microsoft Teams Store et Microsoft AppSource et que vous souhaitez répertorier une autre application spécifique à une zone géographique, telle que Contoso Mexico, votre soumission doit répondre aux critères suivants :
   * Appelez la fonctionnalité spécifique à la région de l'application dans le titre, les métadonnées, l'expérience de l'application de première réponse et les sections d'aide. Par exemple, le titre doit être Contoso Mexico. Le titre de l'application doit clairement différencier une application existante du même développeur pour éviter toute confusion chez l'utilisateur final.
   * Lors du téléchargement du package d'application dans Partner Center, sélectionnez les bons **marchés** où l'application sera disponible dans la section **Disponibilité**.
 
@@ -104,7 +104,7 @@ Pour plus d'informations sur la mise en œuvre de l'authentification des applica
   * Les applications qui nécessitent que l'administrateur du locataire effectue une configuration unique doivent appeler la dépendance à l'administrateur du locataire pour configurer l'application (avant qu'un autre utilisateur du locataire ne puisse installer et utiliser l'application).  
   La dépendance doit être indiquée dans le manifeste de l'application, la description longue AppSource, tous les points de contact de la première exécution (message de bienvenue du bot, configuration de l'onglet ou page de configuration), le texte d'aide considéré comme nécessaire dans le cadre de la réponse du bot, de l'extension de composition ou du contenu de l'onglet statique.
   
-* **Expériences de partage de contenu** : les applications qui nécessitent une authentification auprès d'un service externe pour partager du contenu dans les canaux Teams doivent indiquer clairement dans la documentation d'aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’un partage de contenu doit être présente dans Teams application.
+* **Expériences de partage de contenu**: les applications qui nécessitent une authentification auprès d’un service externe pour partager du contenu dans les canaux Teams doivent clairement indiquer dans la documentation d’aide (ou des ressources similaires) comment déconnecter ou annuler le partage de contenu si cette fonctionnalité est prise en charge sur le service externe. Cela ne signifie pas que la possibilité d’annuler le partage de contenu doit être présente dans votre application Teams.
 
 ## <a name="security"></a>Sécurité
 
@@ -159,7 +159,7 @@ Les applications qui s’exécutent sur la version iOS ou Android de Teams doive
 :::row-end:::
 
 * Si votre application nécessite un compte, les utilisateurs peuvent créer un compte gratuitement. L’utilisation du terme **compte gratuit** ou **gratuit** est interdite.
-* Vous pouvez déterminer si un compte est actif indéfiniment ou pour une durée limitée. Lorsque le compte expire, l'application ne doit pas afficher d'interface utilisateur, de texte ou de liens indiquant la nécessité de payer.
+* Vous pouvez déterminer si un compte est actif indéfiniment ou pendant une durée limitée. Lorsque le compte expire, l’application ne doit pas afficher l’interface utilisateur, le texte ou les liens indiquant la nécessité de payer.
 * La politique de confidentialité et les conditions d'utilisation de votre application doivent être exemptes d'interface utilisateur ou de liens liés au commerce.
 
 ### <a name="bots"></a>Bots
@@ -190,7 +190,7 @@ Les robots doivent toujours demander la permission de télécharger un fichier e
 > [!NOTE]
 > Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) et fournit des conseils aux développeurs sur l'utilisation des domaines restreints dans la `validDomains` Propriété de manifeste.
 
-N’incluez pas les domaines en dehors du contrôle de votre organisation (y compris les caractères génériques) et les services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes comprennent :
+N’incluez pas les domaines en dehors du contrôle de votre organisation (y compris les caractères génériques) et les services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes sont les suivantes :
 
 * Si votre application utilise le OAuthCard d’Azure Bot Service, vous devez inclure `token.botframework.com` en tant que domaine valide, sinon le bouton **Se connecter** ne fonctionne pas.
 * Si votre application repose sur SharePoint, vous pouvez inclure le site racine SharePoint associé en tant que domaine valide à l’aide de la propriété de contexte `{teamSiteDomain}`.
@@ -230,7 +230,7 @@ Les applications doivent être entièrement fonctionnelles sur les dernières ve
 
 * Microsoft Windows
 * macOS
-* MicrosoftEdge&nbsp;
+* Microsoft Edge&nbsp;
 * Google Chrome
 * iOS
 * Android
@@ -279,7 +279,7 @@ Le manifeste de l'application Teams définit la configuration de votre applicati
 
 Les icônes sont l’un des principaux éléments que les utilisateurs voient lors de la navigation dans le magasin Teams. Vos icônes doivent communiquer la marque et l'objectif de votre application tout en respectant les exigences suivantes :
 
-* Votre package d’application doit inclure deux versions .png de l’icône de votre application : une icône de couleur et une icône de plan.
+* Votre package d’application doit inclure deux versions .png de votre icône d’application : une icône de couleur et une icône de contour.
 * La version couleur de votre icône doit être de 192x192 pixels. Votre symbole d'icône peut être de n'importe quelle couleur, mais il doit être placé sur un fond carré uni ou entièrement transparent.
 * La version simplifiée de votre icône s'affiche dans les scénarios suivants :
   * Lorsque votre application est utilisée et **hébergée** dans la barre d'applications sur le côté gauche de Teams.
@@ -357,7 +357,7 @@ La description longue peut fournir un narratif attrayant qui met en évidence la
 
 ### <a name="screenshots"></a>Captures d’écran
 
-Les captures d’écran fournissent un aperçu visuel évident de votre application pour compléter le nom, l’icône et les descriptions de votre application. N'oubliez pas ce qui suit :
+Les captures d’écran fournissent un aperçu visuel important de votre application pour compléter le nom, l’icône et les descriptions de votre application. N’oubliez pas les éléments suivants :
 
 * Vous pouvez avoir jusqu’à cinq captures d’écran par référencement.
 * Les types de fichiers pris en charge sont PNG, JPEG et GIF.
@@ -519,7 +519,7 @@ Si votre application comprend un onglet, assurez-vous qu'il respecte ces directi
    :::column-end:::
 :::row-end:::
 
-* L'écran de configuration des onglets ne doit pas intégrer un site Web entier. Gardez votre expérience de configuration concentrée. Par exemple, si vous créez une application de gestion de projet qui permet aux utilisateurs de configurer un projet dans un canal, gardez l'écran de configuration de l'onglet concentré pour permettre à l'utilisateur de sélectionner un projet dans votre application à configurer dans le canal. [*Correction obligatoire*]
+* L’écran de configuration de l’onglet ne doit pas incorporer un site web entier. Concentrez-vous sur votre expérience de configuration. Par exemple, si vous créez une application de gestion de projet qui permet aux utilisateurs de configurer un projet dans un canal, gardez l’écran de configuration de l’onglet axé sur l’autorisation de l’utilisateur à sélectionner un projet à partir de votre application à configurer dans le canal. [*correctif obligatoire*]
 
 :::row:::
    :::column span="":::
@@ -565,7 +565,7 @@ Si votre application comprend un onglet, assurez-vous qu'il respecte ces directi
 
 ### <a name="views"></a>Affichages
 
-* La zone de l'écran de connexion ne doit pas utiliser de grands logos. [*Correction obligatoire*]
+* La zone d’écran de connexion ne doit pas utiliser de grands logos. [*correctif obligatoire*]
 
 :::row:::
    :::column span="":::
@@ -577,7 +577,7 @@ Si votre application comprend un onglet, assurez-vous qu'il respecte ces directi
    :::column-end:::
 :::row-end:::
 
-* Le contenu peut être simplifié en le décomposant sur plusieurs onglets. [*Correctif suggéré*]
+* Le contenu peut être simplifié en répartissant plusieurs onglets. [*correction suggérée*]
 
 :::row:::
    :::column span="":::
@@ -589,7 +589,7 @@ Si votre application comprend un onglet, assurez-vous qu'il respecte ces directi
    :::column-end:::
 :::row-end:::
 
-* Les onglets ne doivent pas avoir d'en-tête en double. Supprimez le logo en double de l'iframe, car le cadre d'onglets affiche déjà l'icône et le nom de l'application. [*Correctif suggéré*]
+* Les onglets ne doivent pas avoir d’en-tête en double. Supprimez le logo dupliqué de l’iframe, car l’infrastructure d’onglet affiche déjà l’icône et le nom de l’application. [*correction suggérée*]
 
  :::row:::
     :::column span="":::
@@ -659,7 +659,7 @@ Concevez votre application avec des composants Fluent UI [de base](~/concepts/de
    :::column-end:::
 :::row-end:::
 
-* Les onglets avec barre d'outils dans le rail gauche doivent laisser un espacement de 20 pixels à partir de la navigation gauche de Teams. [*Correction obligatoire*]
+* Les onglets avec barre d’outils dans le rail gauche doivent laisser un espacement de 20 px à partir de la navigation à gauche de Teams. [*correctif obligatoire*]
 
 :::row:::
     :::column span="":::
@@ -671,13 +671,13 @@ Concevez votre application avec des composants Fluent UI [de base](~/concepts/de
    :::column-end:::
 :::row-end:::  
 
-* Les pages secondaire et troisième d'un onglet doivent être ouvertes dans une vue de niveau deux (L2) et de niveau trois (L3) dans la zone d'onglet principale, qui est parcourue via le fil d'Ariane ou la navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation dans les onglets : [*Correctif obligatoire*]
+* Les pages secondaire et troisième d’un onglet doivent être ouvertes dans une vue de niveau deux (L2) et de niveau 3 (L3) dans la zone d’onglet principale, qui est parcourue via des barres de navigation ou une navigation à gauche. Vous pouvez également inclure les composants suivants pour faciliter la navigation dans les onglets : [*Correctif obligatoire*]
   * Boutons Retour
   * En-têtes de page
   * Menus d’hamburger
-* L'onglet ne doit pas avoir de défilement horizontal. Les applications de tableau blanc et d'autres applications qui nécessitent un canevas plus grand pour permettre aux utilisateurs de collaborer sans une expérience d'application perçue comme cassée, peuvent utiliser le défilement horizontal en fonction de leurs besoins commerciaux. [*Correctif suggéré*]
+* L’onglet ne doit pas comporter de défilement horizontal. Les applications de tableau blanc et d’autres applications qui nécessitent un canevas plus grand pour permettre aux utilisateurs de collaborer sans expérience d’application rompue, peuvent utiliser le défilement horizontal en fonction de leurs besoins métier. [*correction suggérée*]
 
-* Les liens profonds dans les onglets ne doivent pas être liés à une page Web externe mais au sein de Teams. Par exemple, les modules de tâche ou d’autres onglets. [*Correction obligatoire*]
+* Les liens profonds dans les onglets ne doivent pas être liés à une page web externe, mais dans Teams. Par exemple, les modules de tâches ou d’autres onglets. [*correctif obligatoire*]
 
 :::row:::
     :::column span="":::
@@ -783,7 +783,7 @@ Concevez votre application avec des composants Fluent UI [de base](~/concepts/de
    :::column-end:::
 :::row-end:::
 
-* Les onglets doivent utiliser des composants de style Teams tels que les polices Teams, les rampes de types, les palettes de couleurs, le système de grille, le mouvement, le ton de la voix, etc., dans la mesure du possible. Pour plus d'informations, consultez les [instructions de conception des onglets](/microsoftteams/platform/tabs/design/tabs). [*Correctif suggéré*]
+* Les onglets doivent utiliser des composants de style Teams, tels que les polices Teams, les palettes de types, les palettes de couleurs, le système de grille, le mouvement, le ton de la voix, etc. dans la mesure du possible. Pour plus d’informations, consultez [instructions de conception de l’onglet](/microsoftteams/platform/tabs/design/tabs). [*correction suggérée*]
 
 :::row:::
     :::column span="":::
@@ -796,7 +796,7 @@ Concevez votre application avec des composants Fluent UI [de base](~/concepts/de
 :::row-end:::
 
 * Si la fonctionnalité de votre application nécessite des modifications des paramètres, incluez un onglet **Paramètres**. [*Correction suggérée*]
-* Les onglets doivent suivre la conception de l'interaction Teams telle que la navigation dans la page, la position et l'utilisation des boîtes de dialogue, les hiérarchies d'informations, etc. Pour plus d'informations, voir [Kit d'interface utilisateur Microsoft Teams Fluent](~/concepts/design/design-teams-app-basic-ui-components.md)
+* Les onglets doivent suivre la conception de l’interaction Teams, par exemple, la navigation dans la page, la position et l’utilisation des dialogues, des hiérarchies d’informations, etc. Pour plus d’informations, consultez le[kit d’interface utilisateur Fluent de Microsoft Teams](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * Le contenu de l’onglet dans l’IFrame ne doit pas inclure de fonctionnalités qui imitent les fonctionnalités principales de Teams. Par exemple, les bots, les extensions de messagerie, les appels, les réunions, etc.
 
@@ -847,7 +847,7 @@ Si votre application inclut un bot, assurez-vous qu'il respecte ces directives.
 
 ### <a name="bot-commands"></a>Commandes de bot
 
-L’analyse de l’entrée utilisateur et la prévision de l’intention de l’utilisateur sont difficiles. Les commandes de bot fournissent aux utilisateurs un ensemble de mots ou de phrases que votre bot doit comprendre.
+L’analyse des entrées utilisateur et la prédiction de l’intention de l’utilisateur sont difficiles. Les commandes bot fournissent aux utilisateurs un ensemble de mots ou d’expressions que votre bot peut comprendre.
 
 * Il est vivement recommandé de répertorier les commandes de bot prises en charge dans les configurations de votre application. Ces commandes s’affichent dans la zone de rédaction lorsqu’un utilisateur tente d’envoyer un message à votre bot.
 
@@ -1107,7 +1107,7 @@ Les extensions de messagerie basées sur les actions doivent effectuer les opér
    :::column-end:::
 :::row-end:::
 
-* Passez le contexte du message à l’état de travail suivant. [*Correction obligatoire*]
+* Passez le contexte de message à l’état de travail suivant. [*correctif obligatoire*]
 
 :::row:::
     :::column span="":::
@@ -1342,7 +1342,7 @@ Utilisez les directives suivantes pour les extensions de réunion :
 * Doit être rejeté après qu'un utilisateur a sélectionné un bouton ou effectué une action.
 
 * **Mode Ensemble** : assurez-vous de prendre en compte les meilleures pratiques suivantes pour une expérience de création de scène :
-  * Toutes les images sont au .png format.
+  * Toutes les images sont au format .png.
   * Le package final avec toutes les images rassemblées ne doit pas dépasser une résolution de 1920x1080. La résolution est un nombre pair. Cette résolution est une exigence pour que les scènes soient affichées avec succès.
   * La taille maximale de la scène est de 10 Mo.
   * La taille maximale de chaque image est de 5 Mo. Une scène est une collection de plusieurs images. La limite est pour chaque image individuelle.
@@ -1384,7 +1384,7 @@ Si votre application utilise les [API de flux d'activité fournies par Microsoft
 
 Le Programme de conformité d’Application Microsoft 365 est destiné à aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité concernant votre application. Si vous publiez une application dans le magasin Teams, vous devez effectuer les niveaux suivants du programme :
 
-* **Vérification de l’éditeur** : permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité des développeurs d’applications procédant à une intégration avec la Plateforme d'identités Microsoft. Une fois terminé, un badge bleu **vérifié** s’affiche sur la boîte Azure Active Directory consentement et d’autres écrans. Pour plus d'informations, voir [Marquer votre application comme vérifiée par l'éditeur](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+* **Vérification de l’éditeur** : permet aux administrateurs et aux utilisateurs finaux de comprendre l’authenticité des développeurs d’applications procédant à une intégration avec la Plateforme d'identités Microsoft. Une fois terminé, un badge de **vérifié** bleu s’affiche dans la boîte de dialogue de consentement Azure Active Directory et sur d’autres écrans. Pour plus d'informations, voir [Marquer votre application comme vérifiée par l'éditeur](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row:::
     :::column span="":::
