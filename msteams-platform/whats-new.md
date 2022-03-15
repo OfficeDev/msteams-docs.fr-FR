@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453438"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492987"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |
 |03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
 |25/02/2022| Introduction du guide pas à pas pour appeler des modules de tâche dans Teams| Créer des cartes et des modules de tâche > Créer des modules de tâche > Utiliser des modules de tâche à partir de bots > [appeler un module de tâche à partir Teams](sbs-botbuilder-taskmodule.yml)|
@@ -38,8 +39,6 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 |08/02/2022| Introduction d’un guide étape par étape pour créer un bot d’appel et de réunion.| Construire des bots > Appels et réunions bots > Enregistrer les appels et les réunions bot > [Guide étape par étape pour créer un bot Appels et réunions](sbs-calling-and-meeting.yml) |
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022| Aperçu du test pour les applications monétisées (aperçu du développeur)| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Flux d’achat intégré à l’application pour la monétisation des applications (aperçu de développeur) | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
 ## <a name="ga-features"></a>Caractéristiques de GA
 
@@ -52,6 +51,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |  
 |03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 25/02/2022| Introduction du guide pas à pas pour appeler des modules de tâche dans Teams| Créer des cartes et des modules de tâche > Créer des modules de tâche > Utiliser des modules de tâche à partir de bots > [appeler un module de tâche à partir Teams](sbs-botbuilder-taskmodule.yml)|
@@ -156,7 +156,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 |10/11/2020|Les équipes élaborent des directives de conception |[ Lignes directrices pour la conception du Bot ](bots/design/bots.md)|
 |30/09/2020|L'envoi et la réception de fichiers aux robots sur des appareils mobiles sont désormais pris en charge |[Envoyez et recevez des fichiers à travers votre bot](resources/bot-v3/bots-files.md)|
 |22/09/2020|De nouvelles informations pour démarrer le développement de Teams |[Créez votre première application Teams : aperçu](build-your-first-app/build-first-app-overview.md)|
-|18/09/2020|Prise en charge des applications Teams réunion (version préliminaire) |[Créer des applications pour les réunions Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md) et [les réunions Apps in Teams](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+|18/09/2020|Prise en charge des applications Teams réunion (version préliminaire) |[Applications pour les réunions Teams](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |19/08/2020|Importez des messages Teams avec Microsoft Graph |[Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 |12/08/2020 |Le support des cartes adaptatives dans les webhooks entrants a été déplacé vers GA |[Envoyer des cartes adaptatives à l'aide d'un webhook entrant](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |10/08/2020|Commencez à créer des applications Teams avec la boîte à outils Visual Studio |[Créez des applications avec la boîte à outils Microsoft Teams et Visual Studio Code](toolkit/visual-studio-overview.md) |

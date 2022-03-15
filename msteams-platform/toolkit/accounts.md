@@ -1,117 +1,135 @@
 ---
-title: Préparer les comptes à créer des applications Teams client
+title: Préparer des comptes pour créer des applications Teams
 author: zyxiaoyuer
-description: Préparer les comptes à créer des applications Teams client
-ms.author: zhany
-ms.localizationpriority: medium
+description: Préparer des comptes pour créer des applications Teams
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.date: 03/14/2022
+ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452570"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464299"
 ---
-# <a name="prepare-accounts-to-build-teams-apps"></a>Préparer les comptes à créer des applications Teams client
+# <a name="prepare-accounts-to-build-teams-apps"></a>Préparer des comptes pour créer des applications Teams
 
-Pour développer Teams’application, vous avez besoin d’au moins un compte Microsoft 365 avec un abonnement valide. Si vous souhaitez héberger vos ressources back-end sur Azure, vous avez besoin d’un compte Azure. Le compte Azure est facultatif si votre application existante est hébergée sur un autre fournisseur cloud et que vous souhaitez intégrer l’application existante à Teams plateforme.
+Pour créer une application Teams et la charger, vous devez préparer les comptes suivants :
+
+* [Compte Microsoft 365 avec un abonnement valide.](accounts.md#microsoft-365-account)
+* [Compte Azure pour héberger les ressources principales sur Azure](accounts.md#azure-account-to-host-backend-resources).
 
 ## <a name="microsoft-365-account"></a>Compte Microsoft 365
 
-Si vous n’avez pas de compte Microsoft 365 existant avec un abonnement valide, vous pouvez en créer un en rejoignant le programme Microsoft 365 [développeur](https://developer.microsoft.com/microsoft-365/dev-program). Le programme Microsoft 365 développeur inclut un abonnement Microsoft 365 E5 développeur que vous pouvez utiliser pour créer votre propre bac à sable et développer des solutions indépendantes de votre environnement de production.
+Pour créer un compte Microsoft 365, inscrivez-vous à un abonnement au programme Microsoft 365 développeur. L’abonnement est gratuit pendant 90 jours et continue de se renouveler tant que vous l’utilisez pour l’activité de développement.
 
-## <a name="azure-account"></a>Compte Azure
+Si vous avez un abonnement Visual Studio Enterprise ou Professionnel, les deux programmes incluent un abonnement gratuit Microsoft 365 [développeur](https://aka.ms/MyVisualStudioBenefits). Il est actif tant que votre abonnement Visual Studio est actif. Pour plus d’informations, consultez l’[abonnement développeur Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
 
-Si vous souhaitez héberger des ressources liées à votre application ou accéder à des ressources dans Azure, vous devez avoir un abonnement Azure. Vous pouvez [créer un compte gratuit avant](https://azure.microsoft.com/free/) de commencer.
+### <a name="microsoft-365-developer-program"></a>Programme de développement Microsoft 365
 
-## <a name="join-microsoft-365-developer-program"></a>Rejoindre Microsoft 365 programme pour les développeurs
+Pour obtenir un compte de développeur Teams gratuit, rejoignez le programme Microsoft 365 développeurs et effectuez les étapes suivantes :
 
-Si vous n’avez pas de compte Microsoft 365, vous devez vous inscrire à un abonnement au programme Microsoft 365 [développeur](https://developer.microsoft.com/microsoft-365/dev-program). L’abonnement est gratuit pendant 90 jours et continue à être renouvelé tant que vous l’utilisez pour l’activité de développement. Si vous avez un abonnement Visual Studio Enterprise ou Professional, les deux programmes incluent un abonnement Microsoft 365 [développeur gratuit](https://aka.ms/MyVisualStudioBenefits). Il est actif tant que votre abonnement Visual Studio est actif. Pour plus d’informations, [voir configurer un abonnement Microsoft 365 développeur.](https://developer.microsoft.com/microsoft-365/dev-program)
+1. Accédez au[Programme pour les développeurs Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
+2. Sélectionnez **Rejoindre maintenant**.
+3. Sélectionnez **Configurer l’abonnement E5**.
+4. Configurez votre compte d’administrateur.
 
-1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-2. **Sélectionnez Rejoindre maintenant**.
-3. **Sélectionnez Configurer l’abonnement E5**.
-4. Configurer votre compte d’administrateur. Une fois que vous avez terminé, vous devez voir l’écran suivant :
+   L’image suivante s’affiche une fois l’abonnement terminé :
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagramme  shows Microsoft 365 program":::
+    :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagramme qui montre le programme Microsoft 365":::
 
-## <a name="accounts-for-microsoft-365-developer-program"></a>Comptes pour le programme Microsoft 365 développeur
+### <a name="microsoft-365-developer-account-types"></a>Types de comptes de développeur Microsoft 365
 
 Vous pouvez vous inscrire au programme pour les développeurs à l’aide d’un des types de comptes suivants :
 
-* **Compte Microsoft pour une utilisation personnelle**
+- **Compte Microsoft pour un usage personnel**
 
-  Permet d’accéder à tous les produits et services cloud Microsoft orientés grand public, tels que Outlook, Messenger, OneDrive, MSN, Xbox Live ou Microsoft 365. Toute inscription à une boîte aux lettres Outlook.com crée automatiquement un compte Microsoft. Une fois le compte Microsoft créé, celui-ci peut être utilisé pour accéder aux services de cloud computing Microsoft liés aux consommateurs ou à Azure.
+    Le compte Microsoft vous permet d’accéder aux produits et services cloud Microsoft, tels qu’Outlook, Messenger, OneDrive, MSN, Xbox Live ou Microsoft 365. Vous pouvez vous inscrire à une boîte aux lettres Outlook.com pour créer un compte Microsoft, qui peut être utilisé pour accéder aux services cloud Microsoft ou Azure liés aux consommateurs.
 
-* **Compte de travail pour les entreprises**
+- **Compte professionnel Microsoft pour les entreprises**
 
-  Permet d’accéder à tous les services cloud Microsoft de niveau petite, moyenne et entreprise, tels qu’Azure, Microsoft Intune ou Microsoft 365. Lorsque vous vous inscrivez à l’un de ces services en tant qu’organisation, un annuaire informatique est automatiquement mis en service dans Microsoft Azure Active Directory (Azure AD) pour représenter votre organisation.
+     Ce compte permet d’accéder à tous les services cloud Microsoft de petite, moyenne et moyenne entreprise, tels qu’Azure, Microsoft Intune ou Microsoft 365. Lorsque vous vous inscrivez à l’un de ces services en tant qu’organisation, un annuaire cloud est automatiquement approvisionné dans Microsoft Azure Active Directory (Azure AD) pour représenter votre organisation.
 
-* **Visual Studio ID**
+- **ID d’utilisateur Visual Studio**
 
-  Vous pouvez créer des abonnements Visual Studio Professional ou Enterprise . Nous vous recommandons d’utiliser cette option pour rejoindre le programme développeur à partir de la galerie Visual Studio pour bénéficier de tous les avantages en tant qu’abonné Visual Studio.
+    L’ID d’utilisateur créé pour utiliser Visual Studio Professional ou l’abonnement Entreprise peut être utilisé pour rejoindre le programme de développement au sein de la galerie Visual Studio afin de bénéficier de tous les avantages en tant qu’abonné Visual Studio.
 
-## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teams’autorisation de chargement ou de chargement de version de version de chargement d’une application client
+## <a name="azure-account-to-host-backend-resources"></a>Compte Azure pour héberger des ressources principales
+
+Le compte Azure est facultatif si votre application existante est hébergée sur un autre fournisseur de cloud et que vous souhaitez intégrer l’application existante sur la plateforme Teams.
+
+**ID Visual Studio**
+
+Si vous souhaitez héberger les ressources associées à votre application ou accéder aux ressources dans Azure, vous pouvez [créer un compte gratuit](https://azure.microsoft.com/free/) avant de commencer. Vous pouvez également choisir d’héberger vos ressources back-end à l’aide d’un autre fournisseur de cloud ou sur vos propres serveurs s’ils sont disponibles à partir du domaine public.
+
+## <a name="teams-custom-app-upload-or-sideload-permission"></a>Autorisation de chargement ou de chargement de version test d’une application personnalisée Teams
 
 > [!IMPORTANT]
-> Pendant le développement, vous devez charger votre application dans votre Teams sans la distribuer. C’est ce que **l’on appelle le chargement de version de version de chargement.**
+> Après avoir créé l’application, vous devez charger votre application dans Teams sans la distribuer. Ce processus est appelé **chargement indépendant**.
 
-La liste suivante fournit des étapes pour vérifier si l’autorisation de chargement de version de version de l’application est activée. Les deux méthodes sont les suivantes :
+   Vous pouvez vérifier si l’autorisation de chargement indépendant est activée à l’aide de Visual Studio Code ou du client Teams.
 
-* **Pour utiliser du code Microsoft Visual studio**
+* **Vérifier l’autorisation de chargement indépendant à l’aide de Visual Studio Code**
 
     1. Ouvrez **Visual Studio Code**.
-    1. Sélectionnez **Teams Shared Computer Toolkit** dans le panneau gauche.
-    1. **Sélectionnez Comptes et** connectez-vous à votre compte Microsoft 365 client.
-    1. Vérifiez si vous pouvez voir l’option **Chargement de version side activée** , comme illustré dans l’image :
+    1. Sélectionnez **Kit de ressources Teams** dans le volet gauche. Si vous ne parvenez pas à voir l’option, vérifiez que vous avez installé l’extension du Kit de ressources Teams.
+    1. Sélectionnez **Comptes** et connectez-vous à votre compte Microsoft 365.
+    1. Vérifiez si vous pouvez afficher l’option **Chargement indépendant activé** comme illustré dans l’image suivante :
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Activer le chargement de version de version":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Activer le chargement indépendant" border="true":::
 
-* **Pour utiliser Teams compte**
+* **Vérifier l’autorisation de chargement indépendant à l’aide du client Teams**
 
-    1. **Ouvrez Microsoft Teams**.
-    2. Sélectionnez **Applications dans** la barre de gauche.
-    3. **Sélectionnez Publier une application**.
+    1. Ouvrez **Microsoft Teams**.
+    2. Sélectionnez **Applications** dans le panneau gauche.
+    3. Sélectionnez **Publier une application**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publier une application":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publier une application" border="true":::
 
-    4. Vérifiez si vous pouvez voir l’option **Télécharger une application personnalisée** comme illustré dans l’image :
+    4. Vérifiez si vous pouvez voir l’option **Charger une application personnalisée** comme illustré dans l’image suivante :
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Télécharger application personnalisée":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Charger une application personnalisée" border="true":::
 
-Si vous ne pouvez pas voir **Télécharger’une** option d’application personnalisée, cela indique que vous n’êtes pas autorisé à recharger une version de version de chargement de version. Sans autorisation de chargement de version d’équipe, vous ne pourrez pas faire de débogage local ou distant. Il est donc très important d’obtenir l’autorisation de chargement de version de version de votre compte avant d’en faire le débogage pour Teams application. Si vous êtes administrateur de votre client, vous pouvez ouvrir le paramètre de chargement de version secondaire pour votre client ou organisation. Si vous n’êtes pas un administrateur, contactez votre administrateur client pour obtenir l’autorisation.
+        Si vous ne parvenez pas à afficher l’option **Charger une application personnalisée**, cela indique que vous n’avez pas l’autorisation requise pour le chargement indépendant.
+        * Pour un administrateur de locataire, activez le paramètre de chargement indépendant pour votre locataire ou organisation dans le Centre d’administration Teams.
+        * Si vous n’êtes pas un administrateur de locataire, vous devez contacter votre administrateur de locataire pour activer le chargement indépendant.
 
-## <a name="enable-custom-app-uploading-for-your-organization"></a>Activer le chargement d’applications personnalisées pour votre organisation
+### <a name="upload-your-custom-app"></a>Téléchargez votre application personnalisée
 
 > [!IMPORTANT]
-> Pour activer le chargement ou le chargement indépendant de l’application personnalisée pour votre client développeur, vous devez être l’administrateur de votre client.
+> Pour activer le téléchargement d'applications personnalisées ou le sideloading pour votre locataire développeur, vous devez être l'administrateur de votre locataire.
 
-1. Connectez-vous [Centre d'administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.
+**Pour charger l’application personnalisée**
 
-2. **Sélectionnez Afficher** >  **tout Teams**.
+1. Connectez-vous à [Centre d’administration Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) avec vos informations d’identification d’administrateur.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="afficher tout":::
+2. Sélectionnez **Afficher tout** > **Teams**.
 
-> [!NOTE]
-> L’option d’Teams peut prendre jusqu’à  **24** heures. Vous pouvez [charger votre application personnalisée dans un environnement Teams pour](/microsoftteams/upload-custom-apps) les tests et la validation à ce moment-là.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="afficher tout" border="true":::
 
-3. Accédez à **Teams appsSetup** >  **PoliciesGlobal** > .
+   > [!Note]
+   > L’affichage de l’option **Teams** peut prendre **jusqu’à** 24 heures. Vous pouvez [charger votre application personnalisée dans un environnement Teams](/microsoftteams/upload-custom-apps) à des fins de test et de validation.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set bolies":::
+3. Accédez à **Applications Teams** > **Stratégies d’installation**.
 
-4. Basculez Télécharger applications personnalisées à **la position Sur**.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="définir des stratégies":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="bascule":::
+4. Définissez le bouton bascule **Charger des applications personnalisées** sur la position **Activé** .
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="Bouton bascule":::
 
 5. Sélectionnez **Enregistrer**.
 
-> [!Note]
-> Le chargement de version secondaire peut prendre jusqu’à 24 heures pour être actif. En attendant, vous pouvez utiliser le **chargement pour votre client** pour tester votre application. Pour télécharger le fichier .zip package de l’application, voir [télécharger des applications personnalisées](/microsoftteams/teams-app-setup-policies).
+   > [!Note]
+   > L’activité du chargement indépendant peut prendre jusqu’à 24 heures. En attendant, vous pouvez utiliser **chargement pour votre client** afin de tester votre application. Pour charger le fichier de package .zip de l’application, consultez [Charger des applications personnalisées](/microsoftteams/teams-app-setup-policies).
 
-Pour plus d’informations, voir [gérer les stratégies et paramètres](/microsoftteams/teams-custom-app-policies-and-settings) d’application personnalisés dans Teams et gérer les stratégies de configuration d’application [dans Teams](/microsoftteams/teams-app-setup-policies).
+Pour plus d’informations, consultez [Gérer les paramètres et les stratégies d’application personnalisés dans Teams](/microsoftteams/teams-custom-app-policies-and-settings) et [Gérer les stratégies de configuration des applications dans Teams](/microsoftteams/teams-app-setup-policies).
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Créer un projet Teams projet](create-new-project.md)
+* [Créer une application Teams à l’aide du kit de ressources Teams](create-new-project.md)
 * [Provisionner des ressources cloud](provision.md)
+* [Déployer l’application Teams dans le cloud](deploy.md)
+* [Publier votre application Teams](TeamsFx-collaboration.md)
+* [Gérer plusieurs environnements](TeamsFx-multi-env.md)
