@@ -86,7 +86,7 @@
       items:
         - name: Vue d’ensemble du Kit de ressources Teams
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Création d’un projet
+        - name: Créer une application Teams.
           href: toolkit/create-new-project.md
         - name: Préparer des comptes pour créer une application Teams
           href: toolkit/accounts.md
@@ -283,8 +283,6 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Applications de réunions unifiées
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Conditions préalables et références d’API pour les applications dans les réunions Teams
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: Activer et configurer les applications pour les meetings
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Références API des applications de réunion

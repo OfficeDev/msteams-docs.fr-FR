@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: a6366181f81942d12a63fb5be6b0bb505e85ff73
-  ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+  ms.openlocfilehash: ea2f1761fc846e08fde5a8321ab35e06a64f70ac
+  ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/12/2022
-  ms.locfileid: "63453291"
+  ms.lasthandoff: 03/14/2022
+  ms.locfileid: "63492945"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -145,6 +145,8 @@ landingContent:
       url: ~/sbs-meetingextension-action.yml
     - text: Créer des webhooks sortants
       url: ~/sbs-outgoing-webhooks.yml
+    - text: Créer Teams connecteurs
+      url: ~/sbs-teams-connectors.yml
 - title: Teams scénarios d’application
   linkLists:
   - linkListType: reference

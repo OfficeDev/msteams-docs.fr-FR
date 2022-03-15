@@ -6,12 +6,12 @@ keywords: connecteur Office365 teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399197"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492980"
 ---
 # <a name="create-office-365-connectors"></a>Créer des connecteurs Office 365
 
@@ -238,6 +238,8 @@ Après avoir téléchargé l’application, ouvrez la liste des connecteurs à p
 
 Pour vérifier que l’action `HttpPOST` fonctionne correctement, [envoyez des messages à votre connecteur](~/webhooks-and-connectors/how-to/connectors-using.md).
 
+Suivez le [guide pas à pas](../../sbs-teams-connectors.yml) pour créer et tester les connecteurs dans votre Microsoft Teams.
+
 ## <a name="publish-connectors-for-the-organization"></a>Publier des connecteurs pour l’organisation
 
 Si vous souhaitez que le connecteur soit disponible uniquement pour les utilisateurs de votre organisation, vous pouvez télécharger votre application de connecteur personnalisée dans le catalogue [d’applications de votre organisation](~/concepts/deploy-and-publish/apps-publish.md).
@@ -272,6 +274,10 @@ Le tableau suivant fournit le nom de l’exemple et sa description :
 |----------------|------------------|--------|----------------|
 | Connecteurs | Exemple Office 365 connecteur générant des notifications vers Teams canal.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Exemple de connecteurs génériques |Exemple de code pour un connecteur générique facile à personnaliser pour tout système qui prend en charge les webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas pour](../../sbs-teams-connectors.yml) créer et tester le connecteur dans Teams.
 
 ## <a name="see-also"></a>Voir aussi
 

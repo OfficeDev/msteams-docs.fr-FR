@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: manifeste du bot d’inscription du bot de groupe de ressources Azure
-ms.openlocfilehash: 0151cc8fd756ee7ed7dbaecaef5739690f7f9302
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399372"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63493025"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -31,7 +31,7 @@ Voici les titres des sections de cet article :
 - **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émettra un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder à des ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, [Microsoft Teams flux d’authentification pour les bots](auth-flow-bot.md).
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous inscrire et échanger des messages avec lui dans une conversation.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 - Connaissance des principes [de base du bot][concept-basics], [de la gestion de l’état][concept-state], de la bibliothèque [de][concept-dialogs] boîtes de dialogue et de la façon d’implémenter un [flux de conversation séquentiel][simple-dialog].
 - Connaissance du développement Azure et OAuth 2.0.
@@ -141,9 +141,10 @@ Pour ajouter le Microsoft Teams canal :
     ![Page d’accueil du bot](~/assets/images/adaptive-cards/bot-home-page.png)
 
 1. Ouvrez votre bot, qui est répertorié dans la section **Ressources récentes** .
-1. **Sélectionnez Canaux** dans le volet gauche et sélectionnez **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    ![Canal Teams](~/assets/images/adaptive-cards/channel-teams.png)
+1. **Sélectionnez Canaux** dans le volet gauche et **sélectionnez Microsoft Teams** :::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::.
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="Canal Teams":::
 
 1. Cochez la case pour accepter les conditions d’utilisation et sélectionnez **Accepter**.</br>
 
