@@ -1,20 +1,20 @@
 ---
-title: Flux d’achat dans l’application pour la monétisation des applications
-description: Découvrez les tâches et concepts de base nécessaires pour implémenter des achats in-app et des fonctionnalités d’essai dans les applications Teams.
+title: Flux d’achats intégrés pour la monétisation des applications
+description: Apprenez les tâches et les concepts de base nécessaires pour mettre en œuvre les achats in-app et la fonctionnalité d'essai dans les applications d'équipe.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356469"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501983"
 ---
 # <a name="in-app-purchases"></a>Achats dans l'application
 
-Microsoft Teams des API que vous pouvez utiliser pour implémenter les achats in-app afin de passer de la version gratuite à la version payante Teams applications. L’achat dans l’application vous permet de convertir des utilisateurs de plans gratuits en plans payants directement à partir de votre application.
+Microsoft Teams des API que vous pouvez utiliser pour implémenter les achats in-app afin de passer de la version gratuite à la version payante Teams applications. L'achat in-app vous permet de faire passer les utilisateurs d'une formule gratuite à une formule payante directement à partir de votre application.
 
 > [!NOTE]
 > Les achats in-app pour Teams applications sont actuellement disponibles uniquement en [**prévisualisation développeur**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
@@ -25,17 +25,17 @@ Pour proposer une expérience d’achat in-app aux utilisateurs de votre applica
 
 * L’application repose sur [Teams bibliothèque du SDK client](https://github.com/OfficeDev/microsoft-teams-library-js).
 
-* L’application est activée avec une offre [SaaS transactable](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
+* L’application est activée avec une offre [SaaS négociable](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
 * L’application est activée avec [les autorisations RSC](#update-manifest).
 
 * L’application est invoquée avec [l’API`openPurchaseExperience`](#purchase-experience-api).
 
-L’expérience d’achat dans l’application peut être activée soit en mettant à jour le fichier  **manifest.json**, soit en activant afficher les offres d’achat dans l’application à partir de la section **Autorisations** de votre **portail du développeur**.
+L’expérience d’achat dans l’application peut être activée soit en mettant à jour le fichier  **manifest.json**, soit en activant **afficher les offres d’achat** dans l’application à partir de la section **Autorisations** de votre **portail du développeur**.
 
-### <a name="update-manifest"></a>Mettre à jour le manifeste
+### <a name="update-manifest"></a>Mise à jour du manifeste
 
-Pour activer l’expérience d’achat dans l’application, mettez à jour Teams fichier **manifest.json** de l’application en ajoutant les autorisations RSC. Il permet aux utilisateurs de votre application de mettre à niveau vers une version payante de votre application et de commencer à utiliser de nouvelles fonctionnalités. La mise à jour du manifeste de l’application est la suivante :
+Pour activer l’expérience d’achat dans l’application, mettez à jour Teams fichier **manifest.json** de l’application en ajoutant les autorisations RSC. Il permet aux utilisateurs de votre application de passer à une version payante de votre application et de commencer à utiliser de nouvelles fonctionnalités. La mise à jour du manifeste de l’application est la suivante :
 
 ```json
 
@@ -53,7 +53,7 @@ Pour activer l’expérience d’achat dans l’application, mettez à jour Team
 
 ### <a name="purchase-experience-api"></a>API Expérience d’achat
 
-Pour déclencher l’achat in-app de l’application, invoke the `openPurchaseExperience` API from your web app.
+Pour déclencher l'achat in-app pour l'application, invoquez `openPurchaseExperience`l'API depuis votre application web.
 
 Voici un exemple d’appel de l’API à partir de l’application :
 
@@ -92,19 +92,19 @@ L’exemple suivant montre aux utilisateurs d’acheter des plans d’abonnement
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Achat de l’abonnement pour l’application sélectionnée." border="true":::
 
-1. **Add for me** propose une version d’essai gratuite de l’application, puis la met à niveau vers une version payante.
+1. **Add for me** propose une version d’essai gratuite de l’application, puis la **met à niveau** vers une version payante.
 
     :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Mise à niveau vers l’abonnement pour l’application sélectionnée." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
-1. Dans la **boîte de dialogue Choisir un plan d’abonnement** , choisissez le plan et sélectionnez **Checkout**.
+1. Dans la boîte de dialogue **Choisir un plan d’abonnement** , choisissez le plan et sélectionnez **Validation de l’achat**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Sélection du plan d’abonnement approprié." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Sélection du plan d’abonnement approprié" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
 1. Terminez la transaction et **sélectionnez Configurer maintenant** pour configurer votre abonnement.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configuration de l’abonnement." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Configuration de l’abonnement" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Page d’accueil de l’abonnement" lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -113,5 +113,5 @@ L’exemple suivant montre aux utilisateurs d’acheter des plans d’abonnement
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Inclure une offre SaaS avec votre application Microsoft Teams application](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Inclure une offre SaaS avec votre application Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [Créer une offre SaaS (Software as a Service)](include-saas-offer.md#create-your-saas-offer)
