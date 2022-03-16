@@ -1,29 +1,29 @@
 ---
-title: Microsoft Teams de classement du magasin
-description: Le magasin Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs.
+title: Paramètres de classement du store Microsoft Teams
+description: Le store Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs.
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: f9d88decf4079cfd1c0ecae2819e12a699f0bf8d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.openlocfilehash: 10b637c388a862f7085216361ecb60d4d0bd72c4
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63360416"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501934"
 ---
-# <a name="microsoft-teams-store-ranking-parameters"></a>Microsoft Teams de classement du magasin
+# <a name="microsoft-teams-store-ranking-parameters"></a>Paramètres de classement du store Microsoft Teams
 
-Les informations de cette déclaration de divulgation s’appliquent au magasin Microsoft Teams dans lequel Microsoft met des applications tierces à la disposition des utilisateurs. Le magasin Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs. Les paramètres de classement répertoriés ne sont pas exhaustifs et sont destinés à fournir à notre communauté d’éditeurs une compréhension de haut niveau des principaux paramètres que la boutique utilise pour déterminer le classement. Tous les termes définis utilisés mais non définis dans le présent contrat auront la signification qui y est inscrite dans Microsoft Publisher contrat.
+Les informations contenues dans cette déclaration s'appliquent au store Microsoft Teams dans lequel Microsoft met des applications tierces à la disposition des utilisateurs. Le store Microsoft Teams classe les résultats de recherche d’application dans le Store à l’aide d’un ensemble de paramètres de classement pour fournir des résultats de recherche pertinents aux utilisateurs. Les paramètres de classement répertoriés ne sont pas exhaustifs et sont destinés à fournir à notre communauté d'éditeurs une compréhension de haut niveau des principaux paramètres utilisés par la vitrine dans les déterminations de classement. Tous les termes définis utilisés dans le présent document, mais qui ne sont pas autrement définis, auront la signification qui leur est attribuée dans le contrat Microsoft Publisher.
 
-L’équipe éditoriale du magasin Microsoft Teams détermine la présence et l’emplacement d’une application dans les sections éditoriales telles que la bannière publicitaire sur le magasin Microsoft Teams en fonction des paramètres de classement et est utilisée comme critères objectifs appliqués de la même manière à toutes les applications du Microsoft Teams  qui inclut les propres applications de Microsoft et toutes les applications de développeur tierces. Les principaux paramètres utilisés pour déterminer les emplacements d’application sont les suivants :
+L’équipe éditoriale du store Microsoft Teams Store détermine l’importance et l’emplacement d’une application dans les sections éditoriales telles que la bannière promotionnelle sur le store Microsoft Teams en fonction des paramètres de classement. Ces critères objectifs sont appliqués de la même manière à toutes les applications du store Microsoft Teams, y compris les applications de Microsoft et celles des développeurs tiers. Voici les principaux paramètres utilisés pour déterminer le placement des applications :
 
-* Données d’utilisation historiques : les applications avec des volumes d’utilisation plus élevés dans le magasin Teams ont tendance à se classer plus haut que les applications dont l’utilisation est plus faible.
+* Données historiques d'utilisation : les applications dont le volume d'utilisation est plus élevé dans le magasin Teams ont tendance à être mieux classées que les applications moins utilisées.
 
-* Données d’engagement utilisateur : les applications dont l’implication des utilisateurs dans le magasin Teams ont tendance à se classer plus haut que les applications dont l’engagement est inférieur.
+* Données sur l'engagement des utilisateurs : les applications dont l'engagement des utilisateurs est plus élevé dans le magasin Teams tendent à être mieux classées que les applications dont l'engagement est plus faible.
 
-* Qualité et valeur des applications : les applications qui ont une valeur distincte et offrent une expérience utilisateur de haute qualité ont tendance à se classer plus haut.
+* Qualité et valeur des applications : les applications qui ont une valeur distincte et offrent une expérience utilisateur de haute qualité ont tendance à être mieux classées.
 
-* Pertinence des audiences : les applications susceptibles d’être plus pertinentes pour un public particulier (par exemple, en fonction de leurs paramètres de langue et de leur type de licence tels que Éducation, Enterprise ou Petite et Moyenne Entreprise) ont tendance à se classer plus haut que les applications qui sont susceptibles d’être moins pertinentes.
+* Pertinence pour le public : les applications qui sont susceptibles d'être plus pertinentes pour un public particulier (par exemple, en fonction de leurs paramètres linguistiques et du type de licence, comme Éducation, Entreprise ou Petites et moyennes entreprises) ont tendance à être mieux classées que les applications qui sont susceptibles d'être moins pertinentes.
 
-* Mise à jour d’application ou nouvelle version : les applications de haute qualité récemment publiées ou mises à jour ont tendance à se classer plus haut que les applications publiées ou mises à jour à une date antérieure.
+* Mise à jour ou nouvelle version de l'application : les applications de haute qualité récemment publiées ou mises à jour ont tendance à être mieux classées que celles qui ont été publiées ou mises à jour à une date antérieure.
