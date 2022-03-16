@@ -4,12 +4,12 @@ description: Décrit l’authentification à l’aide de fournisseurs OAuth exte
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Authentification Teams à l’aide d’un fournisseur OAuth externe
-ms.openlocfilehash: c9327eb731d537d0f4eff04cc381a883bde5d98e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: df9a9e36ecd203cd2b6c482af00b60ddfb145114
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63360522"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464258"
 ---
 # <a name="use-external-oauth-providers"></a>Utiliser des fournisseurs OAuth externes
 
@@ -31,8 +31,8 @@ Le tableau suivant fournit la liste des paramètres et fonctions de l’API `aut
 |`isExternal` | Le type de paramètre est booléen, ce qui indique que la fenêtre d’authentification s’ouvre dans un navigateur externe.|
 |`failureCallback`| La fonction est appelée si l’authentification échoue et que la fenêtre contextuelle d’authentification indique la raison de l’échec.|
 |`height` |Hauteur préférée pour la fenêtre contextuelle. La valeur peut être ignorée en dehors des limites acceptables.|
-|`successCallback`| La fonction est appelée si l’authentification réussit, avec le résultat renvoyé à partir de la fenêtre contextuelle d’authentification. Authcode est le résultat.|
-|`url`  <br>|URL du serveur d’applications 3P pour la fenêtre contextuelle d’authentification, avec les deux espaces réservés de paramètre suivants :</br> <br> - `oauthRedirectMethod`: transmettre l’espace réservé dans `{}`. Cet espace réservé est remplacé par un lien profond ou une page web par une plateforme Teams, qui informe le serveur d’applications si l’appel provient de la plateforme mobile.</br> <br> - `authId`: Cet espace réservé est remplacé par UUID. Le serveur d’applications l’utilise pour conserver la session.| 
+|`successCallback`| La fonction est appelée, si l’authentification réussit, avec le résultat renvoyé à partir de la fenêtre contextuelle d’authentification. L’authcode est le résultat.|
+|`url`  <br>|URL du serveur d’applications 3P pour la fenêtre contextuelle d’authentification, avec les deux espaces réservés de paramètre suivants :</br> <br> - `oauthRedirectMethod` : Transmettre l’espace réservé dans `{}`. Cet espace est remplacé par un lien profond ou une page web par la plateforme Teams, qui informe le serveur d’applications si l’appel provient de la plateforme mobile.</br> <br> - `authId`: Cet espace réservé est remplacé par UUID. Le serveur d’applications l’utilise pour conserver la session.| 
 |`width`|Largeur préférée pour la fenêtre contextuelle. La valeur peut être ignorée en dehors des limites acceptables.|
 
 Pour plus d’informations sur les paramètres, voir [interface des paramètres d’authentification](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
@@ -47,95 +47,94 @@ L’image suivante fournit le flux pour ajouter l’authentification aux navigat
 
  :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth" border="true":::
 
-### <a name="steps-to-perform-authentication-to-external-browsers"></a>Procédure pour effectuer l’authentification sur les navigateurs externes
+**Pour ajouter l’authentification à des navigateurs externes**
 
-<!-- #### 1. Pass `isExternal` and placeholders in `url` -->
-**1. Lancer le processus auth-login externe**
+1. Lancer le processus de d’auth-login externe.
 
-L’application 3P appelle la fonction `microsoftTeams.authentication.authenticate` du Kit de développement logiciel (SDK) avec `isExternal` défini sur true pour lancer le processus auth-login externe. 
+   L’application 3P appelle la fonction `microsoftTeams.authentication.authenticate` du Kit de développement logiciel (SDK) avec `isExternal` défini sur true pour lancer le processus auth-login externe. 
 
-Le `url` transmis contient des espaces réservés pour `{authId}` et `{oauthRedirectMethod}`.  
+   Le `url` transmis contient des espaces réservés pour `{authId}` et `{oauthRedirectMethod}`.  
 
 
-```JavaScript
-microsoftTeams.authentication.authenticate({
-   url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
-   isExternal: true,
-   successCallback: function (result) {
-   //sucess 
-   } failureCallback: function (reason) {
-   //failure 
-    }
-});
-```
+    ```JavaScript
+    microsoftTeams.authentication.authenticate({
+       url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
+       isExternal: true,
+       successCallback: function (result) {
+       //sucess 
+       } failureCallback: function (reason) {
+       //failure 
+        }
+    });
+    ```
 
-**2. Lien Teams dans un navigateur externe**
+2. Lien Teams ouvert dans un navigateur externe.
 
-Les clients Teams ouvrir l’URL dans un navigateur externe après avoir remplacé les espaces réservés pour `oauthRedirectMethod` et `authId` par des valeurs appropriées. 
+   Les clients Teams ouvrir l’URL dans un navigateur externe après avoir remplacé les espaces réservés pour `oauthRedirectMethod` et `authId` par des valeurs appropriées. 
 
-#### <a name="example"></a>Exemple
+   #### <a name="example"></a>Exemple
 
-```http
- https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890 
-```
+   ```http
+    https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890 
+   ```
 
-**3. Réponse du serveur d’applications 3P**
+3. La réponse du serveur d’applications 3P.
 
-Le serveur d’applications 3P reçoit et enregistre `url` avec les deux paramètres de requête suivants :
+   Le serveur d’applications 3P reçoit et enregistre `url` avec les deux paramètres de requête suivants :
 
-| Paramètre | Description|
-| --- | --- |
-| `oauthRedirectMethod` |Indique comment l’application 3P doit renvoyer la réponse de la demande d’authentification à Teams, avec l’une des deux valeurs : lien profond ou page.|
-|`authId` | L’ID de demande que Teams a créé pour cette demande d’authentification spécifique qui doit être renvoyée à Teams via un lien profond.|
+   | Paramètre | Description|
+   | --- | --- |
+   | `oauthRedirectMethod` |Indique comment l’application 3P doit renvoyer la réponse de la demande d’authentification à Teams, avec l’une des deux valeurs : lien profond ou page.|
+   |`authId` | L’ID de demande que Teams a créé pour cette demande d’authentification spécifique qui doit être renvoyée à Teams via un lien profond.|
 
-> [!TIP]
-> L’application 3P peut maintenir `authId`, `oauthRedirectMethod` dans le paramètre de requête `state` OAuth lors de la génération de l’URL de connexion pour OAuthProvider. `state` contient `authId` et `oauthRedirectMethod` transmis lorsque OAuthProvider redirige vers le serveur 3P et que l’application 3P utilise les valeurs pour renvoyer la réponse d’authentification à Teams comme décrit dans **6. Réponse du serveur d’applications 3P à Teams**. 
+    > [!TIP]
+    > L’application 3P peut maintenir `authId`, `oauthRedirectMethod` dans le paramètre de requête `state` OAuth lors de la génération de l’URL de connexion pour OAuthProvider. `state` contient `authId` et `oauthRedirectMethod` transmis lorsque OAuthProvider redirige vers le serveur 3P et que l’application 3P utilise les valeurs pour renvoyer la réponse d’authentification à Teams comme décrit dans **6. Réponse du serveur d’applications 3P à Teams**. 
 
-**4. Le serveur d’applications 3P redirige vers `url`** spécifié
+4. Le serveur d’applications 3P redirige vers `url` spécifié
 
-Le serveur d’applications 3P redirige vers la page d’authentification des fournisseurs OAuth dans le navigateur externe. `redirect_uri` est un itinéraire dédié sur le serveur d’applications 3P. Vous pouvez inscrire `redirect_uri` dans la console de développement du fournisseur OAuth en tant que statique. Les paramètres doivent être envoyés via l’objet d’état. 
+   Le serveur d’applications 3P redirige vers la page d’authentification des fournisseurs OAuth dans le navigateur externe. `redirect_uri` est un itinéraire dédié sur le serveur d’applications 3P. Vous pouvez inscrire `redirect_uri` dans la console de développement du fournisseur OAuth en tant que statique. Les paramètres doivent être envoyés via l’objet d’état. 
 
-#### <a name="example"></a>Exemple
+   #### <a name="example"></a>Exemple
 
-```http
-https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://3p.app.server/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…&response_type=code&access_type=offline&scope= … 
-```
+    ```http
+    https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://3p.app.server/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…    &response_type=code&access_type=offline&scope= … 
+    ```
 
-**5. Connexion au navigateur externe**
+5. Connexion au navigateur externe.
 
-L’utilisateur se connecte au navigateur externe. Les fournisseurs OAuth redirigent vers `redirect_uri` avec le code d’authentification et l’objet d’état.
+   L’utilisateur se connecte au navigateur externe. Les fournisseurs OAuth redirigent vers le `redirect_uri` avec le code d’authentification et l’objet d’état.
 
-**6. Réponse du serveur d’applications 3P à Teams** 
+6. Le serveur d’applications 3P vérifie et répond à Teams.
 
-Le serveur d’applications 3P gère la réponse et vérifie `oauthRedirectMethod`, qui est renvoyé par le fournisseur OAuth externe dans l’objet d’état pour déterminer si la réponse doit être renvoyée via un lien profond auth-callback ou par le biais d’une page web qui appelle `notifySuccess()`.
+   Le serveur d’applications 3P gère la réponse et vérifie `oauthRedirectMethod`, qui est renvoyé par le fournisseur OAuth externe dans l’objet d’état pour déterminer si la réponse doit être renvoyée via un lien profond auth-callback ou par le biais d’une page web qui appelle `notifySuccess()`.
 
-```JavaScript
-const state = JSON.parse(req.query.state)
-if (state.oauthRedirectMethod === 'deeplink') {
-   return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
-}
-else {
-// continue redirecting to a web-page that will call notifySuccsss() – usually this method is used in Teams-Web
-…
-```
+      ```JavaScript
+      const state = JSON.parse(req.query.state)
+      if (state.oauthRedirectMethod === 'deeplink') {
+         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
+      }
+      else {
+      // continue redirecting to a web-page that will call notifySuccsss() – usually this method is used in Teams-Web
+      …
+      ```
 
-**7. L’application 3P génère un lien profond**
+7. L’application 3P génère un lien profond.
 
-L’application 3P génère un lien profond pour Teams mobile au format suivant et renvoie le code d’authentification avec l’ID de session à Teams.
- 
-```JavaScript
-return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
-```
+   L’application 3P génère un lien profond pour Teams mobile au format suivant et renvoie le code d’authentification avec l’ID de session à Teams.
 
- **8. Résultats de rappel de réussite Teams**
+   ```JavaScript
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   ```
 
-Teams appelle le rappel de réussite et envoie le résultat (code d’authentification) à l’application 3P. L’application 3P reçoit le code dans le rappel de réussite et utilise le code pour récupérer le jeton, puis les informations utilisateur et mettre à jour l’interface utilisateur.
+ 8. Teams appelle le rappel de réussite et envoie le résultat.
 
-```JavaScript
-successCallback: function (result) { 
-… 
-} 
-```
+    Teams appelle le rappel de réussite et envoie le résultat (code d’authentification) à l’application 3P. L’application 3P reçoit le code dans le rappel de réussite et utilise le code pour récupérer le jeton, puis les informations utilisateur et mettre à jour l’interface utilisateur.
+
+      ```JavaScript
+      successCallback: function (result) { 
+      … 
+      } 
+      ```
 
 ## <a name="see-also"></a>Voir aussi
 
