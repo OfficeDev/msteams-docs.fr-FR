@@ -1,24 +1,24 @@
 ---
 title: Maintenir et prendre en charge votre application publiée
-description: Ce à quoi il faut penser une fois que votre magasin est répertorié dans Teams store et AppSource.
+description: Ce à quoi vous devez penser une fois que votre Store est répertoriée sur les magasins Teams et AppSource.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453578"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501941"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
-Une fois votre application répertoriée dans le Microsoft Teams, commencez à réfléchir à la façon dont vous allez gérer l’application à l’avenir et augmenter les téléchargements et l’utilisation.
+Une fois votre application répertoriée dans le store Microsoft Teams, commencez à réfléchir à la façon dont vous allez gérer l’application à l’avenir et augmenter les téléchargements et l’utilisation.
 
 ## <a name="analyze-app-usage"></a>Analyser l’utilisation des applications
 
-Vous pouvez suivre l’utilisation de votre application dans [le rapport Teams’utilisation de l’application dans](/office/dev/store/teams-apps-usage) l’Partner Center. Les mesures incluent les utilisateurs actifs mensuels, quotidiens et hebdomadaires, ainsi que les graphiques de rétention et d’intensité qui vous permettent de suivre l’évolution et la fréquence de l’utilisation.
+Vous pouvez suivre l’utilisation de votre application dans le [rapport d’utilisation des applications Teams](/office/dev/store/teams-apps-usage) dans Espace partenaires. Les mesures incluent les utilisateurs actifs mensuels, quotidiens et hebdomadaires, ainsi que les graphiques de rétention et d’intensité qui vous permettent de suivre l’évolution et la fréquence de l’utilisation.
 
 L’affichage des données concernant les applications récemment publiées prend environ une semaine dans le rapport.
 
@@ -27,44 +27,44 @@ L’affichage des données concernant les applications récemment publiées pren
 > [!NOTE]
 > Le magasin Teams a évolué :
 >
-> Auparavant, les liens étaient copiés en sélectionnant des ellipses sur la vignette de l’application. Une fois l’expérience Teams mise à jour mise à jour, vous accéderez à la même expérience à partir de l’onglet Détails des applications. Cette mise à jour sera généralement disponible d’ici le 01 mars 2022.
+> Auparavant, les liens étaient copiés en sélectionnant des points de suspension sur la vignette de l’application. Avec l’expérience mise à jour du magasin Teams, vous accédez de la même manière à partir de l’onglet Détails des applications. Cette mise à jour sera mise à la disposition générale d’ici le 1er mars 2022.
 
-Vous pouvez soumettre des modifications à votre application (par exemple, de nouvelles fonctionnalités ou même des métadonnées) dans l’Partner Center. Ces modifications nécessitent un nouveau processus de révision.
+Vous pouvez envoyer des modifications à votre application (telles que de nouvelles fonctionnalités ou même des métadonnées) dans Espace partenaires. Ces modifications nécessitent un nouveau processus de révision.
 
-Veillez à ce qui suit lors de la publication des mises à jour :
+Vérifiez les éléments suivants lors de la publication des mises à jour :
 
 * Ne modifiez pas votre ID d’application.
 * Incrémentez le numéro de version de votre application.
-* Dans l’Partner Center, ne sélectionnez **pas Ajouter une nouvelle application** pour la mise à jour. À la place, allez sur la page de votre application.
+* Dans Espace partenaires, ne sélectionnez pas **Ajouter une nouvelle application** pour effectuer la mise à jour. Accédez plutôt à la page de votre application.
 
 ### <a name="app-updates-requiring-user-consent"></a>Mises à jour d’application nécessitant le consentement de l’utilisateur
 
-Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs doivent le faire une seule fois et les nouvelles versions de votre application s’installent automatiquement.
-Toutefois, si vous a apporté l’une des modifications suivantes à votre application, vos utilisateurs existants doivent accepter une autre demande d’autorisation pour installer la mise à jour :
+Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs doivent effectuer cette opération une seule fois et les nouvelles versions de votre application s’installent automatiquement.
+Toutefois, si vous apportez l’une des modifications suivantes à votre application, vos utilisateurs existants doivent accepter une autre demande d’autorisation pour installer la mise à jour :
 
-* Ajoutez ou supprimez un bot.
-* Modifiez l’ID du bot.
-* Modifier la configuration de notification à sens seul d’un bot.
-* Modifier la prise en charge d’un bot pour le chargement et le téléchargement de fichiers.
-* Ajouter ou supprimer une extension de messagerie.
-* Ajoutez un onglet personnel.
-* Ajoutez un canal et un onglet de groupe.
-* Ajoutez un connecteur.
-* Modifiez les configurations liées à l’inscription Microsoft Azure Active Directory (Azure AD) de votre application. Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Ajout ou suppression d’un bot.
+* Modification de l’ID du bot.
+* Modification de la configuration de notification unidirectionnelle d’un bot.
+* Modification de la prise en charge d’un bot pour le chargement et le téléchargement de fichiers.
+* Ajout ou suppression d’une extension de messagerie.
+* Ajout d’un onglet personnel.
+* Création d’un onglet de canal et de groupe.
+* Ajout d’un connecteur.
+* Modification des configurations liées à l’inscription de votre application Microsoft Azure Active Directory (Azure AD). Pour plus dʼinformations, reportez-vous à [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes avec votre application publiée
+## <a name="fix-issues-with-your-published-app"></a>Résoudre les problèmes liés à votre application publiée
 
-Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans Teams store. Si des problèmes avec votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans une chronologie, la liste de votre application peut être supprimée du Store.
+Microsoft exécute des tests d’automatisation quotidiens sur les applications répertoriées dans le magasin Teams. Si des problèmes liés à votre application sont identifiés, nous vous contactons avec un rapport détaillé sur la façon de reproduire les problèmes et les recommandations pour les résoudre. Si vous ne pouvez pas résoudre les problèmes dans une chronologie, la liste de votre application peut être supprimée du Store.
 
 ## <a name="promote-your-app-on-another-site"></a>Promouvoir votre application sur un autre site
 
-Lorsque votre application est répertoriée dans le magasin Teams, vous pouvez créer un lien qui lance Teams et affiche une boîte de dialogue pour installer votre application. Vous pouvez inclure ce lien, par exemple, avec un bouton de téléchargement sur la page marketing de votre produit.
+Lorsque votre application est répertoriée dans le Magasin Teams, vous pouvez créer un lien qui lance Teams et affiche une boîte de dialogue pour installer votre application. Vous pouvez inclure ce lien, par exemple, avec un bouton de téléchargement sur la page marketing de votre produit.
 
-Créez le lien à l’aide de l’URL suivante, à l’aide de l’ID de votre application : `https://teams.microsoft.com/l/app/<your-app-id>`
+Créez le lien à l’aide de l’URL suivante ajoutée à votre ID d’application : `https://teams.microsoft.com/l/app/<your-app-id>`.
 
-## <a name="complete-microsoft-365-certification"></a>Certification Microsoft 365 complète
+## <a name="complete-microsoft-365-certification"></a>Terminer la certification Microsoft 365
 
-[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’un application Office ou un add-in tiers est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
+[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’une application ou un complément Office tiers est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
 
 ## <a name="see-also"></a>Voir aussi
 
