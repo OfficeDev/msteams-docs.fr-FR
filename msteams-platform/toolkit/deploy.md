@@ -1,17 +1,17 @@
 ---
 title: Déployer dans le cloud
 author: MuyangAmigo
-description: Déployer dans le cloud
+description: Déployer l’application sur le cloud, Azure ou SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452549"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558816"
 ---
 # <a name="deploy-to-the-cloud"></a>Déployer dans le cloud
 
@@ -55,4 +55,4 @@ Les guides de mise en place vous aident à déployer à l’aide Teams Shared Co
 * [Ajouter des fonctionnalités Teams’application](add-capability.md)
 * [Déployer du code de projet avec des pipelines CI/CD](use-CICD-template.md)
 * [Gérer plusieurs environnements](TeamsFx-multi-env.md)
-* [Collaborer avec d’autres développeurs sur Teams projet](TeamsFx-collaboration.md)
+* [Collaborer avec d’autres développeurs sur des projets Teams](TeamsFx-collaboration.md)

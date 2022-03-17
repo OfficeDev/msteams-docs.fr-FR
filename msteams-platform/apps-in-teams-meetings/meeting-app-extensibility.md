@@ -4,12 +4,12 @@ author: surbhigupta
 description: Découvrez le cycle de vie des réunions, la création de l’expérience de réunion de l’utilisateur tout au long du cycle de vie de la réunion dans un environnement de bureau et mobile, les rôles des participants et les types d’utilisateurs. En outre, découvrez l’intégration des bots et de l’extension de messagerie dans le cycle de vie des réunions.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466498"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558844"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -24,6 +24,9 @@ Cet article traite des informations sur le cycle de vie des réunions et sur la 
 ## <a name="meeting-lifecycle"></a>Cycle de vie des réunions
 
 Un cycle de vie de réunion consiste en une expérience d'application avant, pendant et après la réunion. Vous pouvez intégrer des onglets, des bots et des extensions de messagerie à chaque étape du cycle de vie de la réunion.
+
+> [!NOTE]
+> Les extensions de réunion telles que les bots, les cartes, les extensions de message et les actions de message sont prises en charge dans le client web. Toutefois, les expériences hébergées telles que les onglets, les bulles de contenu et le partage par étape ne sont actuellement pas entièrement pris en charge.
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>Intégrer des onglets dans le cycle de vie de la réunion
 
@@ -143,7 +146,7 @@ L’image suivante affiche l’onglet **Contoso** avec les résultats du sondage
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>Intégrer des bots dans le cycle de vie de la réunion
 
-Les bots activés dans l’étendue groupchat commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot](../build-your-first-app/build-bot.md), puis continuez à créer des [applications pour Teams réunions](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Les bots activés dans l’étendue de conversation de groupe commencent à fonctionner dans les réunions. Pour implémenter des bots, commencez par [créer un bot](../build-your-first-app/build-bot.md), puis continuez à créer des [applications pour Teams réunions](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>Intégrer des extensions de messagerie dans le cycle de vie de la réunion
 
@@ -158,8 +161,14 @@ Les Teams réunions unifiées vous permettent de concevoir votre application en 
 Les paramètres de participant par défaut sont déterminés par l’administrateur informatique d’une organisation. Les rôles des participants à une réunion sont les suivants :
 
 * **Organisateur** : l’organisateur prévoit une réunion, définit les options de la réunion, attribue des rôles de réunion et démarre la réunion. Les utilisateurs  ayant Microsoft 365 et une licence Teams ne peuvent être que les organisateurs et contrôler les autorisations des participants. Un organisateur de réunion peut modifier les paramètres d’une réunion spécifique. Les organisateurs peuvent apporter ces modifications sur la page web **Des options de** réunion.
+
 * **Présentateur** : les présentateurs ont les mêmes fonctionnalités que les organisateurs avec des exclusions. Un présentateur ne peut pas supprimer un organisateur de la session ou modifier les options de réunion pour la session. Par défaut, les participants qui rejoignent une réunion ont le rôle de présentateur.
-* **Participant** : un participant est un utilisateur qui a été invité à participer à une réunion. Toutefois, les participants ne sont pas autorisés à agir en tant que présentateur. Les participants peuvent interagir avec d’autres membres de la réunion, mais ne peuvent pas gérer les paramètres de la réunion ni partager le contenu.
+
+* **Participant** : un participant est un utilisateur qui est invité à participer à la réunion. Les participants ont des fonctionnalités limitées pendant la réunion, telles que :
+  * Ils peuvent interagir avec d’autres membres de la réunion, mais ne peuvent pas gérer les paramètres de réunion ni partager le contenu.  
+  * Ils peuvent afficher ou interagir avec l’application Onglet sur la phase de réunion sans installer l’application ou sans droit d’application.
+  * Ils ne peuvent pas afficher ou interagir avec l’application dans le panneau latéral sans droits d’application.
+  * Ils ne sont pas autorisés à agir en tant que présentateur.
 
 > [!NOTE]
 > Seul un organisateur ou un présentateur peut ajouter, supprimer ou désinstaller des applications.
