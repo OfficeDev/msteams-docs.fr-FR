@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: adf168daf1e85370324f114e8dc74b509d9fd9c2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453571"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674991"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud
 
@@ -33,7 +33,7 @@ TeamsFx s’intègre à Azure et Microsoft 365 cloud, ce qui vous permet de plac
 
 L’approvisionnement est effectué avec une seule commande Teams Shared Computer Toolkit pour Visual Studio Code ou l’CLI TeamsFx comme suit :
 
-[Mise en service d’une application azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
+[Mise en service d’une application azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
 ## <a name="resource-creation"></a>Création de ressources
 
@@ -50,7 +50,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Création de ressources pour l’application Teams tabulation
 
-|Ressource|Objectif|Description |
+|Resource|Objectif|Description |
 |----------|--------------------------------|-----|
 | Stockage Azure | Héberger votre application d’onglet | Permet à la fonctionnalité d’application web statique d’héberger votre application Onglet |
 | Plan de service d’application pour l’thème simple | Héberger l’application web d’th simple |Non applicable |
@@ -59,7 +59,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>Création de ressources pour Teams application de bot ou d’extension de messagerie
 
-|Ressource|Objectif| Description |
+|Resource|Objectif| Description |
 |----------|--------------------------------|-----|
 | Service de bot Azure | Enregistre votre application en tant que bot avec l’infrastructure du bot | Connecte le bot à Teams |
 | Plan de service d’application pour bot | Héberger l’application web du bot |Non applicable |
@@ -68,7 +68,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>Création de ressources pour les fonctions Azure dans le projet
 
-|Ressource|Objectif| Description|
+|Resource|Objectif| Description|
 |----------|--------------------------------|-----|
 | Plan de service d’application pour l’application de fonction | Héberger l’application de fonction |Non applicable |
 | Application de fonction | Héberger vos API de fonctions Azure | Ajoute l’identité affectée à l’utilisateur pour accéder à d’autres ressources Azure. <br /> Ajoute une règle CORS (Cross-Origin Resource Sharing) pour autoriser les demandes à partir de votre application d’onglet <br /> Ajoute un paramètre d’authentification qui autorise uniquement les demandes provenant de votre Teams app. <br /> Ajoute les paramètres d’application requis par [le SDK TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -77,7 +77,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>Création de ressources pour les SQL Azure dans le projet
 
-|Ressource|Objectif | Description |
+|Resource|Objectif | Description |
 |----------|--------------------------------|-----|
 | Serveur SQL Azure | Héberger l’instance de base de données Azure SQL | Permet à tous les services Azure d’accéder au serveur |
 | Base de données azure SQL données | Stocker des données pour votre application | Accorde à l’utilisateur une identité, une autorisation de lecture ou d’écriture sur la base de données |
@@ -85,7 +85,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Création de ressources pour la gestion des API Azure dans le projet
 
-|Ressource|Objectif|
+|Resource|Objectif|
 |----------|--------------------------------|
 | Azure AD application pour le service de gestion des API | Permet aux API d’accès microsoft Power Platform gérées par le service de gestion des API |
 | Service de gestion des API | Gérer vos API hébergées dans l’application de fonction |
@@ -137,14 +137,14 @@ Le tableau suivant fournit une liste des paramètres prédéfincis disponibles :
 | simpleAuthWebAppName | ${resourceBaseName}simpleAuth | Nom de l’application web d’th simple | 2 à 60 alphanumériques et tirets <br /> Impossible de commencer ou de se terminer par un trait d’union |
 | simpleAuthSku | F1 | Référence (SKU) du plan de service d’application d’th simple | Non applicable |
 | frontendHostingStorageName | Onglet ${resourceBaseName}. | Nom du compte de stockage d’hébergement frontal | 3 à 24 lettres minuscules et chiffres |
-| frontendHostingStorageSku | Standard_LRS | Référence (SKU) du compte de stockage d’hébergement frontal |[SSO disponibles](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch)|
+| frontendHostingStorageSku | Standard_LRS | Référence (SKU) du compte de stockage d’hébergement frontal |[SSO disponibles](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep)|
 | functionServerfarmsName | ${resourceBaseName}api | Nom du plan de service des applications de fonction | 1 à 40 alphanumériques et tirets |
 | functionServerfarmsSku | Y1 | Référence (SKU) du plan de service des applications de fonction | Non applicable|
 | functionAppName | ${resourceBaseName}api | Nom de l’application de fonction | 2 à 60 alphanumériques et tirets <br /> Impossible de commencer ou de se terminer par un trait d’union |
 | functionStorageName | ${resourceBaseName}api | Nom du compte de stockage de l’application de fonction | 3 à 24 lettres minuscules et chiffres |
-| functionStorageSku | Standard_LRS | Référence (SKU) du compte de stockage de l’application de fonction | [SSO disponibles](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch=pr-en-us-4713) |
+| functionStorageSku | Standard_LRS | Référence (SKU) du compte de stockage de l’application de fonction | [SSO disponibles](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) |
 | botServiceName | ${resourceBaseName} | Nom du service de bot Azure | 2 à 64 caractères alphanumériques, traits de soulignement, point et traits d’union <br /> Commencer par alphanumérique |
-| botServiceSku | F0 | Référence (SKU) du service de bot Azure | [SSO disponibles](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep&branch) |
+| botServiceSku | F0 | Référence (SKU) du service de bot Azure | [SSO disponibles](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep) |
 | botDisplayName | ${resourceBaseName} | Nom d’affichage de votre bot | 1 à 42 caractères |
 | botServerfarmsName | ${resourceBaseName}bot | Nom du plan de service d’application du bot | 1 à 40 alphanumériques et tirets |
 | botWebAppName | ${resourceBaseName}bot | Nom de l’application web du bot | 2 à 60 alphanumériques et tirets <br /> Impossible de commencer ou de se terminer par un trait d’union |
@@ -154,7 +154,7 @@ Le tableau suivant fournit une liste des paramètres prédéfincis disponibles :
 | sqlDatabaseName | ${resourceBaseName} | Nom de la base de données azure SQL données | 1 à 128 caractères, ne peut pas utiliser <>*%&:\/? ou des caractères de contrôle <br /> Ne peut pas se terminer par un point ou un espace |
 | sqlDatabaseSku | De base | Référence (SKU) de la base SQL azure | Non applicable  |
 | apimServiceName | ${resourceBaseName} | Nom du service APIM | 1 à 50 alphanumériques et tirets <br /> Commencer par une lettre et terminer par alphanumérique |
-| apimServiceSku | Consommation | Référence (SKU) du service APIM | [SSO disponibles](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch) |
+| apimServiceSku | Consommation | Référence (SKU) du service APIM | [SSO disponibles](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | Nom du produit APIM | 1 à 80 alphanumériques et tirets <br /> Commencer par une lettre et terminer par alphanumérique |
 | apimOauthServerName | ${resourceBaseName} | Nom du serveur OAuth APIM | 1 à 80 alphanumériques et tirets <br /> Commencer par une lettre et terminer par alphanumérique |
 | keyVaultSkuName | standard | Nom de référence (SKU) du service Azure Key Vault| |
@@ -197,10 +197,10 @@ L’exemple suivant lit la valeur du paramètre à partir `mySelfHostedDbConnect
 
 #### <a name="customize-arm-template-files"></a>Personnaliser les ARM modèles de fichiers
 
-Si les modèles prédéfincis ne répondent pas aux exigences de votre application, vous pouvez personnaliser les modèles ARM sous dossier `templates/azure` . Par exemple, vous pouvez personnaliser le modèle ARM pour créer des ressources Azure supplémentaires pour votre application. Vous devez avoir une connaissance de base du langage bicep, qui est utilisé pour ARM modèle. Vous pouvez commencer à utiliser le biceps à [l’occasion de la documentation sur le biceps](/azure/azure-resource-manager/bicep/?branch).
+Si les modèles prédéfincis ne répondent pas aux exigences de votre application, vous pouvez personnaliser les modèles ARM sous dossier `templates/azure` . Par exemple, vous pouvez personnaliser le modèle ARM pour créer des ressources Azure supplémentaires pour votre application. Vous devez avoir une connaissance de base du langage bicep, qui est utilisé pour ARM modèle. Vous pouvez commencer à utiliser le biceps à [l’occasion de la documentation sur le biceps](/azure/azure-resource-manager/bicep/).
 
 > [!NOTE]
-> Le ARM est partagé par tous les environnements. Vous pouvez utiliser le [déploiement conditionnel](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) si le comportement de la mise en service varie d’un environnement à l’autre.
+> Le ARM est partagé par tous les environnements. Vous pouvez utiliser le [déploiement conditionnel](/azure/azure-resource-manager/bicep/conditional-resource-deployment) si le comportement de la mise en service varie d’un environnement à l’autre.
 
 Pour vous assurer que l’outil TeamsFx fonctionne correctement, assurez-vous de personnaliser ARM modèle, qui répond aux exigences suivantes. Si vous utilisez un autre outil pour le développement, vous pouvez ignorer ces exigences.
 
@@ -353,7 +353,7 @@ Avant la mise en service, l’outil vous demande si vous souhaitez créer un gro
 
 <summary><b>Comment puis-je fournir une application sharepoint ?</b></summary>
 
-Vous pouvez suivre la [mise en service SharePoint’application basée sur l’application](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch).
+Vous pouvez suivre la [mise en service SharePoint’application basée sur l’application](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
 > Actuellement, l’application de création Teams avec sharepoint Framework avec Teams Shared Computer Toolkit n’a pas d’intégration directe avec Azure, le contenu de la documentation ne s’applique pas aux applications basées sur SPFx.
@@ -366,4 +366,4 @@ Vous pouvez suivre la [mise en service SharePoint’application basée sur l’a
 
 * [Déployer l’application Teams dans le cloud](deploy.md)
 * [Gérer plusieurs environnements](TeamsFx-multi-env.md)
-* [Collaborer avec d’autres développeurs sur Teams projet](TeamsFx-collaboration.md)
+* [Collaborer avec d’autres développeurs sur des projets Teams](TeamsFx-collaboration.md)

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501927"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674977"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -425,7 +425,8 @@ Si votre application prend en charge la localisation, votre package d’applicat
 ## <a name="apps-linked-to-saas-offer"></a>Applications liées à l'offre SaaS
 
 * Les ISV doivent prendre en charge la possibilité pour plusieurs utilisateurs (abonnés) d'un même locataire de gérer leur propre abonnement et d'attribuer des licences aux utilisateurs du locataire.
-* L'offre doit répondre à toutes les [exigences techniques](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759) des applications Teams liées à une offre SaaS.
+*
+ L'offre doit répondre à toutes les [exigences techniques](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) des applications Teams liées à une offre SaaS.
 * Les applications Teams liées à l'offre SaaS doivent répondre à toutes les exigences définies dans [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas).
 * `subscriptionOffer` détails mentionnés dans le fichier manifeste doivent être corrects. Dans le manifeste de votre application, ajoutez ou mettez à jour le nœud `subscriptionOffer` avec la valeur `publisherId.offerId`. Par exemple, si votre ID d'éditeur est `contoso1234` et que votre ID d'offre est `offer01`, la valeur que vous spécifiez dans le manifeste de votre application doit être `contoso1234.offer01`.
 * L'offre SaaS liée à l'application Teams doit être en ligne dans AppSource et les offres d'aperçu ne sont pas acceptées pour l'approbation du magasin.
@@ -444,7 +445,7 @@ Si votre application prend en charge la localisation, votre package d’applicat
 
 * Fournir une introduction aux abonnés sur la façon d'utiliser le produit.
 * Autoriser l'abonné à attribuer des licences.
-* Fournissez différentes manières d'interagir avec l'assistance pour les problèmes, telles que la FAQ, la base de connaissances et l'adresse e-mail.
+* Proposez différents moyens d'entrer en contact avec le service d'assistance en cas de problème, tels que la FAQ, la base de connaissances et l'adresse électronique.
 * Validez les utilisateurs pour vous assurer qu'ils n'ont pas déjà une licence attribuée par un autre utilisateur.
 * Notifier les utilisateurs après l'attribution de la licence.
 * Guidez les utilisateurs à travers le bot de discussion Teams ou par e-mail, sur la façon d'ajouter l'application à Teams et de commencer.
@@ -452,8 +453,8 @@ Si votre application prend en charge la localisation, votre package d’applicat
 ### <a name="usability-and-functionality"></a>Convivialité et fonctionnalité  
 
 * Une fois l'achat et l'attribution des licences réussis, vous devez fournir les éléments suivants :
-  * Accès aux utilisateurs pour les fonctionnalités du plan souscrit.
-  * Valeur ajoutée et avantages significatifs du plan d'abonnement pour les utilisateurs.
+* Accès aux utilisateurs pour les fonctionnalités du plan souscrit.
+* Valeur ajoutée et avantages significatifs du plan d'abonnement pour les utilisateurs.
 * À partir de votre application Teams, fournissez un lien vers la page d'accueil de l'application SaaS pour que les abonnés puissent gérer les licences à l'avenir.
 
 ### <a name="configure-and-test-saas-application"></a>Configurer et tester l'application SaaS

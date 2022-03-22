@@ -4,12 +4,12 @@ description: En savoir plus sur l’appel et le masage des modules de tâche, l�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d25847b0be86822f15c9443c28907031b98fea
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 84cca74d6e81dce9bbcd7637b5d0b6537524d831
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399330"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674725"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Appeler et ignorer des modules de tâche
 
@@ -208,7 +208,7 @@ La section suivante fournit des détails sur l’utilisation d’un clavier avec
 
 Avec les modules de tâche HTML ou JavaScript, vous devez vous assurer que le module de tâche de votre application peut être utilisé avec un clavier. Les programmes de lecteur d’écran dépendent également de la possibilité de naviguer à l’aide du clavier. Cela inclut les deux éléments suivants :
 
-* Utilisation de [l’attribut tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) dans vos balises HTML pour contrôler les éléments qui peuvent être concentrés. En outre, utilisez l’attribut tabindex pour identifier l’endroit où il participe à la navigation séquentielle au clavier généralement avec les touches <kbd>Tab</kbd> et <kbd>Shift-Tab</kbd> .
+* Utilisation de [l’attribut tabindex](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) dans vos balises HTML pour contrôler les éléments qui peuvent être concentrés. En outre, utilisez l’attribut tabindex pour identifier l’endroit où il participe à la navigation séquentielle au clavier généralement avec les touches <kbd>Tab</kbd> et <kbd>Shift-Tab</kbd> .
 * Gestion de la <kbd>touche Échap</kbd> dans javaScript pour votre module de tâche. Le code suivant fournit un exemple de la façon de gérer la touche <kbd>Échap</kbd> :
 
     ```javascript

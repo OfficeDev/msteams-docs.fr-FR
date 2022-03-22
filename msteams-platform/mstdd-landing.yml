@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 78174c98666bd8cfc30d04eb669258ae116dcb4d
-  ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+  ms.openlocfilehash: be18ebf8a7fcbffd20f6a0d1edfc633829cb9be4
+  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/15/2022
-  ms.locfileid: "63501969"
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63674802"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -156,7 +156,7 @@ landingContent:
     - text: Scénarios de build pour Teams application
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Meilleures pratiques en matière Teams scénarios d’application
-      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
     - text: Explorer les applications à code faible pour Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publier et distribuer

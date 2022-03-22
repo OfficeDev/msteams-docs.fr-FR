@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: high
 keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399379"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558826"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -130,7 +130,7 @@ Le tableau suivant fournit les fonctionnalités qui prennent en charge les carte
 
 ### <a name="example-of-adaptive-card"></a>Exemple de carte adaptative
 
-![Exemple d’une carte adaptative](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Exemple d’une carte adaptative" border="true":::
 
 Le code suivant montre un exemple de carte adaptative :
 
@@ -273,6 +273,8 @@ Référence Bot Framework :
 
 * [Cartes adaptatives Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Carte adaptative C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+Pour en savoir plus sur les cartes adaptatives, voir [Cartes adaptatives](/adaptive-cards/).
 
 Vous pouvez désormais travailler avec une carte de bannière, qui est une carte multi-usage utilisée pour mettre visuellement en évidence une sélection d’utilisateurs potentiels.
 

@@ -6,12 +6,12 @@ keywords: autorisations natives d’appareil pour les fonctionnalités de carte 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 40b0f3da9b6811a7172aa5207dd7680c70db7719
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: a375d8f7c2692c9da8e220474c2c0ece97b623c2
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452822"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675012"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement
 
@@ -34,7 +34,7 @@ Il est important de vous familiariser avec les erreurs de réponse [d’API](#er
 > [!NOTE]
 > Actuellement, Microsoft Teams prise en charge des fonctionnalités de localisation est disponible uniquement pour les clients mobiles.
 
-## <a name="update-manifest"></a>Mettre à jour le manifeste
+## <a name="update-manifest"></a>Mise à jour du manifeste
 
 Mettez à jour Teams fichier [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) de l’application en ajoutant la `devicePermissions` propriété et en spécifiant `geolocation`. Il permet à votre application de demander les autorisations requises aux utilisateurs avant de commencer à utiliser les fonctionnalités de localisation. La mise à jour du manifeste de l’application est la suivante :
 
@@ -45,7 +45,6 @@ Mettez à jour Teams fichier [manifest.json](../../resources/schema/manifest-sch
 ```
 
 > [!NOTE]
->
 > * **L’invite Demander des autorisations** s’affiche automatiquement lorsqu’une API Teams est lancée. Pour plus d’informations, voir [demander des autorisations d’appareil](native-device-permissions.md).
 > * Les autorisations d’appareil sont différentes dans le navigateur. Pour plus d’informations, voir [autorisations d’appareil de navigateur](browser-device-permissions.md).
 

@@ -19,7 +19,7 @@ highlightedContent:
     - title: "Vous n’Teams de développement ? \U0001F680Commencez ici !"
       itemType: get-started
       url: /microsoftteams/platform/get-started/get-started-overview
-    - title: Planifier votre application
+    - title: Programmez votre application
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
     - title: Concevoir votre application
@@ -76,7 +76,7 @@ conceptualContent:
           text: Extensions de messagerie
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
-          text: Applications pour Teams réunions
+          text: Applications pour les réunions Teams
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Cartes et modules de tâche
@@ -87,7 +87,7 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
-          text: Monétiser votre Teams application avec une offre SaaS transactable
+          text: Monétisez votre application Teams avec une offre SaaS transactionnelle
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: Authentification des utilisateurs et authentification sso
@@ -103,7 +103,7 @@ conceptualContent:
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
           text: Scénarios de build pour Teams applications
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+        - url: 'https://developer.microsoft.com/microsoft-teams/app-development-resources'
           itemType: reference
           text: Meilleures pratiques en matière Teams scénarios d’application
     - title: Intégrer
@@ -133,8 +133,8 @@ conceptualContent:
           text: Blog pour les développeurs de Microsoft Teams
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
-          text: Microsoft Teams d’appel de la communauté
-        - url: 'https://docs.microsoft.com/en-us/teamblog/'
+          text: Microsoft Teams de la communauté
+        - url: 'https://docs.microsoft.com/teamblog/'
           itemType: whats-new
           text: Annonces
         - url: /microsoftteams/platform/feedback
@@ -151,7 +151,7 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: Professionnels de l’informatique
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+        - url: 'https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b'
           itemType: concept
           text: Utilisateurs finaux
 tools:
