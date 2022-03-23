@@ -5,12 +5,12 @@ description: Comment envoyer, recevoir et gérer des messages pour un bot dans u
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ab856bb7d07e23d9dc6d6fed318313262779b79f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6c3d476ec51c75431d4a39e35b7307771b919d26
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889313"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727498"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -18,24 +18,26 @@ ms.locfileid: "60889313"
 
 Pour installer le bot Microsoft Teams dans une conversation d’équipe ou de groupe, ajoutez l’étendue `teams` `groupchat` ou l’étendue à votre bot. Cela permet à tous les membres de la conversation d’interagir avec votre robot. Une fois le bot installé, il a accès aux métadonnées sur la conversation, telles que la liste des membres de la conversation. En outre, lorsqu’il est installé dans une équipe, le bot a accès aux détails de cette équipe et à la liste complète des canaux.
 
-Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans @mentioning lui.
+Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans @mentioning le.
 
 > [!NOTE]
 > Cette fonctionnalité est actuellement disponible en prévisualisation [pour les développeurs publics](../../../resources/dev-preview/developer-preview-intro.md) uniquement.
 >
-> À l’aide du consentement spécifique aux ressources ( RSC), les bots peuvent recevoir tous les messages de canal dans les équipes dans qui il est installé sans être @mentioned. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC.](channel-messages-with-rsc.md)
+> À l’aide du consentement spécifique aux ressources ( RSC), les bots peuvent recevoir tous les messages de canal dans les équipes dans qui il est installé sans être @mentioned. Pour plus d’informations, [voir recevoir tous les messages de canal avec RSC](channel-messages-with-rsc.md).
+>
+> La publication d’un message ou d’une carte adaptative sur un canal privé n’est actuellement pas prise en charge.
 
 ## <a name="design-guidelines"></a>Instructions de conception
 
-Contrairement aux conversations personnelles, dans les conversations de groupe et les canaux, votre bot doit fournir une présentation rapide. Vous devez suivre ces instructions et d’autres recommandations en matière de conception de bot. Pour plus d’informations sur la conception de bots dans Teams, voir comment concevoir des conversations de bot dans des canaux [et des conversations.](~/bots/design/bots.md)
+Contrairement aux conversations personnelles, dans les conversations de groupe et les canaux, votre bot doit fournir une présentation rapide. Vous devez suivre ces instructions et d’autres recommandations en matière de conception de bot. Pour plus d’informations sur la conception de bots dans Teams, voir comment concevoir des conversations de bot dans des canaux [et des conversations](~/bots/design/bots.md).
 
 À présent, vous pouvez créer de nouveaux threads de conversation et gérer facilement différentes conversations dans les canaux.
 
 ## <a name="create-new-conversation-threads"></a>Créer des threads de conversation
 
-Lorsque votre bot est installé dans une équipe, vous devez créer un thread de conversation plutôt que de répondre à un thread existant. Parfois, il est difficile de différencier deux conversations. Si la conversation est threadée, il est plus facile d’organiser et de gérer différentes conversations dans les canaux. Il s’agit d’une [forme de messagerie proactive.](~/bots/how-to/conversations/send-proactive-messages.md)
+Lorsque votre bot est installé dans une équipe, vous devez créer un thread de conversation plutôt que de répondre à un thread existant. Parfois, il est difficile de différencier deux conversations. Si la conversation est threadée, il est plus facile d’organiser et de gérer différentes conversations dans les canaux. Il s’agit d’une forme [de messagerie proactive](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Ensuite, vous pouvez récupérer des mentions à l’aide de l’objet et ajouter des `entities` mentions à vos messages à l’aide de `Mention` l’objet.
+Ensuite, vous pouvez récupérer des mentions à l’aide de l’objet `entities` et ajouter des mentions à vos messages à l’aide de l’objet `Mention` .
 
 ## <a name="work-with-mentions"></a>Travailler avec des mentions
 
@@ -45,9 +47,9 @@ Vous devez également les @mentions du contenu du message reçu par votre bot.
 
 ### <a name="retrieve-mentions"></a>Récupérer des mentions
 
-Les mentions sont renvoyées dans l’objet dans la charge utile et contiennent l’ID unique de l’utilisateur et le nom `entities` de l’utilisateur mentionné. Le texte du message inclut également la mention, telle que `<at>@John Smith<at>` . Toutefois, ne comptez pas sur le texte du message pour récupérer des informations sur l’utilisateur. Il est possible pour la personne qui envoie le message de le modifier. Par conséquent, utilisez `entities` l’objet.
+Les mentions sont renvoyées dans l’objet `entities` dans la charge utile et contiennent l’ID unique de l’utilisateur et le nom de l’utilisateur mentionné. Le texte du message inclut également la mention, telle que `<at>@John Smith<at>`. Toutefois, ne comptez pas sur le texte du message pour récupérer des informations sur l’utilisateur. Il est possible pour la personne qui envoie le message de le modifier. Par conséquent, utilisez l’objet `entities` .
 
-Vous pouvez récupérer toutes les mentions dans le message en appelant la fonction dans le SDK Bot Builder, qui renvoie un `GetMentions` tableau `Mention` d’objets.
+Vous pouvez récupérer toutes les mentions dans le message `GetMentions` en appelant la fonction dans le SDK Bot Builder, qui renvoie un tableau d’objets `Mention` .
 
 Le code suivant montre un exemple d’extraction de mentions :
 
@@ -146,9 +148,9 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 Votre bot peut mentionner d’autres utilisateurs dans les messages publiés dans les canaux.
 
-`Mention`L’objet possède deux propriétés que vous devez définir à l’aide des propriétés suivantes :
+L’objet `Mention` possède deux propriétés que vous devez définir à l’aide des propriétés suivantes :
 
-* Incluez *@username* dans le texte du message.
+* *Incluez @username* dans le texte du message.
 * Incluez l’objet mention à l’intérieur de la collection entities.
 
 Le SDK Bot Framework fournit des méthodes d’aide et des objets pour créer des mentions.
@@ -194,7 +196,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-Le `text` champ de l’objet dans le `entities` tableau doit correspondre à une partie du champ de `text` message. Si ce n’est pas le cas, la mention est ignorée.
+Le `text` champ de l’objet dans le tableau `entities` doit correspondre à une partie du champ de message `text` . Si ce n’est pas le cas, la mention est ignorée.
 
 ```json
 {
@@ -257,7 +259,7 @@ Vous pouvez maintenant envoyer un message d’introduction lorsque votre bot est
 
 ## <a name="send-a-message-on-installation"></a>Envoyer un message lors de l’installation
 
-Lorsque votre bot est ajouté pour la première fois au groupe ou à l’équipe, un message d’introduction doit être envoyé. Le message doit fournir une brève description des fonctionnalités du bot et de leur utilisation. Vous devez vous abonner à `conversationUpdate` l’événement avec `teamMemberAdded` eventType.  L’événement est envoyé lorsqu’un nouveau membre d’équipe est ajouté. Vérifiez si le nouveau membre ajouté est le bot. Pour plus d’informations, [voir l’envoi d’un message de bienvenue à un nouveau membre de l’équipe.](~/bots/how-to/conversations/send-proactive-messages.md)
+Lorsque votre bot est ajouté pour la première fois au groupe ou à l’équipe, un message d’introduction doit être envoyé. Le message doit fournir une brève description des fonctionnalités du bot et de leur utilisation. Vous devez vous abonner à l’événement `conversationUpdate` avec eventType `teamMemberAdded` .  L’événement est envoyé lorsqu’un nouveau membre d’équipe est ajouté. Vérifiez si le nouveau membre ajouté est le bot. Pour plus d’informations, [voir l’envoi d’un message de bienvenue à un nouveau membre de l’équipe](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Envoyez un message personnel à chaque membre de l’équipe lorsque le bot est ajouté. Pour ce faire, obtenez la liste de l’équipe et envoyez un message direct à chaque utilisateur.
 

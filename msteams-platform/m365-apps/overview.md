@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 895660e49e468583d7443799dd0c55d7950619e0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1936e6a660d77855e53257f40925cf54b05de0de
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355511"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727289"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Étendre Teams applications à travers Microsoft 365
 
@@ -40,7 +40,9 @@ Avec cet aperçu, vous pouvez étendre vos extensions de messagerie Teams basée
 
 Après le chargement de version Teams, votre extension de messagerie apparaît comme l’une de vos applications installées dans la Outlook zone de message de composition.
 
-## <a name="next-steps"></a>Étapes suivantes
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Extension de messagerie en cours d’exécution Outlook et Teams":::
+
+## <a name="next-steps"></a>Prochaines étapes
 
 Configurer votre environnement dev pour l’extension Teams applications à travers Microsoft 365 :
 

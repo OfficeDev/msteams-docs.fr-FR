@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6828350ab09dede3022bb9cad61756eccc9988f0
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501997"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727338"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Inclure une offre SaaS avec votre application Microsoft Teams
 
@@ -52,6 +52,7 @@ Lors de la planification de la monétisation de votre application Teams, voici q
 * Découvrez comment [l’authentification unique (SSO) Azure Active Directory](/azure/marketplace/azure-ad-saas) permet à vos clients de acheter et de gérer des abonnements. (L’authentification unique Microsoft Azure Active Directory (Azure AD) est requise pour les applications Teams avec des offres SaaS.)
 * Comprenez que vous êtes responsable de la gestion et du paiement de l’infrastructure requise pour prendre en charge l’utilisation de votre offre SaaS par vos clients.
 * Offres pour mobiles. Pour éviter toute violation des stratégies tierces du magasin d’applications, votre application ne peut pas inclure de liens qui permettent aux utilisateurs de souscrire à des offres d’abonnement sur les appareils mobiles. Toutefois, vous pouvez toujours indiquer si votre application comporte des fonctionnalités qui nécessitent une offre d’abonnement. Pour plus d’informations, consultez les [stratégies de certification de la place de marché commerciale](/legal/marketplace/certification-policies#114048-mobile-experience) associées.
+* Teams ne prend actuellement pas en charge les modèles tarifaires forfaitaires. Toutefois, vous pouvez créer une offre transactionnelle à taux fixe dans Espace partenaires. Pour plus d’informations, consultez [meilleures pratiques pour la vente d’une offre transactionnelle à taux fixe](#best-practices-for-selling-a-flat-rate-transactable-offer).
 
 ## <a name="integrate-with-the-saas-fulfillment-apis"></a>Intégrer avec les API de traitement SaaS
 
@@ -69,7 +70,7 @@ Pour obtenir des instructions complètes et des informations de référence sur 
 
 * Avec les offres SaaS pouvant effectuer des transactions pour les applications Teams, les offres d’abonnement (licences) doivent être attribuées à des utilisateurs individuels plutôt qu’à des groupes ou à une organisation entière.
 * Lorsqu’une offre d’abonnement est attribuée aux utilisateurs, informez-les par le biais d’un bot Teams ou d’un e-mail. Dans la messagerie, incluez des informations sur l’ajout de l’application à Teams et la prise en main.
-* Considérez qu’il y aura plusieurs administrateurs. En d’autres termes, plusieurs utilisateurs de la même organisation peuvent acheter et gérer leurs propres abonnements.
+* Soutenir l'idée d'administrateurs multiples. En d'autres termes, plusieurs utilisateurs d'une même organisation peuvent acheter et gérer leurs propres abonnements.
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>Créer une page d’accueil pour la gestion des abonnements
 
@@ -82,7 +83,7 @@ Pour obtenir des instructions complètes, consultez [créer la page d’accueil 
 Tenez compte des approches suivantes lors de la création d’une page d’accueil pour l’application Teams que vous monétiser. Consultez un exemple de page d’accueil dans l'[expérience d’achat de l’utilisateur final](#end-user-purchasing-experience).
 
 * Les utilisateurs doivent être en mesure de se connecter à votre page d’accueil avec les mêmes informations d’identification Azure AD que celles utilisées pour acheter l’abonnement. Pour plus d’informations, consultez [Azure AD et offres SaaS pouvant faire l’objet d’une transaction dans la Place de marché commerciale](/azure/marketplace/azure-ad-saas).
-* Autorisez les utilisateurs à effectuer les actions suivantes sur votre page d’accueil. N’oubliez pas de prendre en compte les éléments appropriés pour un rôle d’utilisateur et des autorisations (par exemple, vous pouvez autoriser uniquement les administrateurs d’abonnement à rechercher des utilisateurs) :
+* Autorisez les utilisateurs à effectuer les actions suivantes sur votre page de renvoi. N'oubliez pas de tenir compte de ce qui est approprié pour le rôle et les autorisations d'un utilisateur (par exemple, vous pouvez autoriser uniquement les administrateurs de l'abonnement à rechercher des utilisateurs) :
   * Rechercher des utilisateurs dans leur organisation à l’aide de la messagerie électronique ou d’une autre forme d’identité.
   * Afficher les utilisateurs auxquels ils peuvent attribuer des licences dans une liste.
   * Attribuer des licences à un ou plusieurs utilisateurs en même temps.
@@ -112,7 +113,7 @@ Consultez [Créer une offre SaaS](/azure/marketplace/create-new-saas-offer) pour
 
     * Sous **Intégration à Microsoft 365**, ajoutez le lien AppSource à la liste de votre application. Cette étape permet de s’assurer que les utilisateurs peuvent acheter vos offres d’abonnement dans AppSource en plus de Teams.
 
-1. Stockez vos ID d’éditeur et d’offre. (Vous en aurez besoin plus tard pour lier l’offre à votre application dans le Portail des développeurs.)
+1. Enregistrez vos identifiants d'éditeur et d'offre. (Vous en aurez besoin plus tard pour lier l'offre à votre application dans le portail des développeurs).
 
 1. Publiez votre offre sur la place de marché commerciale.
 
@@ -121,7 +122,7 @@ Consultez [Créer une offre SaaS](/azure/marketplace/create-new-saas-offer) pour
 Nous vous recommandons vivement de vérifier l’expérience d’achat de bout en bout avant de publier votre offre SaaS. Pour ce faire, vous pouvez créer une offre distincte à des fins de test. Pour plus d’informations, consultez [vue d’ensemble de l’offre de test](/azure/marketplace/plan-saas-offer#test-offer), [créer une offre de test](/azure/marketplace/create-saas-dev-test-offer)et [prévisualiser votre offre](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Vous pouvez tester une transaction de bout en bout dans Teams jusqu’à ce que votre application termine la validation du Store. Pour plus d’informations, consultez [Préversion de test pour les applications monétisées](Test-preview-for-monetized-apps.md).
+> Vous pouvez tester une transaction de bout en bout dans Teams jusqu’à ce que votre application termine la validation du Store. Pour plus d'informations, voir [Aperçu du test pour les applications monétisées](Test-preview-for-monetized-apps.md).
 
 Du point de vue de Teams, ces tests doivent vérifier que le nombre de licences et d’affectations correspond à ce qu’il se passe dans le Centre d’administration Teams lorsque les utilisateurs :
 
@@ -202,6 +203,24 @@ Si vous dissociez une offre SaaS incluse dans la liste de votre magasin Teams, v
 1. Une fois l’offre dissociée, procédez comme suit pour mettre à jour votre description dans le Store :
    1. Sélectionnez **Distribuer > Publier dans le magasin Teams**.
    1. Sélectionnez **Ouvrir Espace partenaires** pour commencer le processus de republication de votre application sans l’offre.
+
+## <a name="best-practices-for-selling-a-flat-rate-transactable-offer"></a>Meilleures pratiques pour la vente d’une offre à taux fixe pouvant faire l’objet d’une transaction
+
+1. Créez votre [offre SaaS transactionnelle forfaitaire](/azure/marketplace/plan-saas-offer) et [publiez-la sur AppSource](/azure/marketplace/test-publish-saas-offer).
+
+1. Liez votre [offre SaaS à l'application Teams](/azure/marketplace/create-new-saas-offer) dans Partner Center.
+
+    > [!CAUTION]
+    > N'ajoutez pas l'ID de l'offre et l'ID de l'éditeur au manifeste de l'application. L’application ne réussira pas le processus de soumission du Magasin Teams.
+
+1. Créez un message dans votre application Teams indiquant qu'un abonnement est nécessaire et fournissez un hyperlien vers votre offre SaaS dans AppSource pour promouvoir votre offre forfaitaire.
+
+   > [!NOTE]
+   > Assurez-vous que les liens du marché n'apparaissent pas sur les appareils mobiles et les tablettes afin de respecter les [politiques des magasins d'applications tiers](/legal/marketplace/certification-policies).
+
+1. Envoyez votre application pour validation.
+
+1. Une fois que la place de marché Teams prend en charge la tarification forfaitaire, mettez à jour votre manifeste d'application avec l'ID de l'offre et l'ID de l'éditeur et soumettez à nouveau votre application pour validation.
 
 ## <a name="see-also"></a>Voir aussi
 

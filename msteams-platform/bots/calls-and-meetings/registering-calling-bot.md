@@ -4,12 +4,12 @@ description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo p
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: c05f0e84dd0b56f9bdb503a73886cfa0cd5024fa
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398665"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727564"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 
@@ -91,6 +91,12 @@ Vous pouvez compter sur un administrateur pour accorder les autorisations dont v
 
 > [!IMPORTANT]
 > Chaque fois que vous modifiez les autorisations de votre application, vous devez également répéter le processus de consentement de l’administrateur. Les modifications apportées dans le portail d’inscription des applications ne sont pas reflétées tant que l’administrateur du client n’a pas réapplité le consentement.
+
+## <a name="code-sample"></a>Exemple de code
+
+| **Exemple de nom** | **Description** | **Graph** |
+|---------------|----------|--------|
+| Bot d’appel et de réunion | L’exemple d’application permet à Bot de créer un appel, de participer à une réunion et de transférer un appel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 

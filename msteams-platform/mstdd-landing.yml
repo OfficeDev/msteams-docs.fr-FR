@@ -12,19 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: be18ebf8a7fcbffd20f6a0d1edfc633829cb9be4
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: f0b94a66f15ed6fe7b5bf479a6e2e613e7bf7d49
+  ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674802"
+  ms.lasthandoff: 03/22/2022
+  ms.locfileid: "63727898"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
-    - text: Plug-ins LMS et Microsoft 365 plug-ins
-      url: ~/resources/moodle-overview.md
+    - text: Déboguer votre Teams application
+      url: ~/toolkit/debug-local.md
     - text: Menu de dépassement des cartes adaptatives
       url: ~/task-modules-and-cards/cards/cards-format.md
     - text: Glossaire
@@ -53,6 +53,8 @@ landingContent:
       url: /contribute/additional-resources
   - linkListType: tutorial
     links:
+    - text: Créer votre première application à l’aide de Blazor
+      url: sbs-gs-blazorapp.yml
     - text: Créer une application avec JavaScript
       url: sbs-gs-javascript.yml
     - text: Créer une application avec SPFx

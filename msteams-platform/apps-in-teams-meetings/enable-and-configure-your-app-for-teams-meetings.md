@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour les réunions Teams et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue de réunion, l’étape de réunion partagée, le sidepanel de réunion, et bien plus encore
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 576ee5dc7d34ae49b6b166a43bd59e8251d519a2
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558837"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727301"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -183,6 +183,10 @@ Les participants peuvent partager des parties spécifiques de l’application à
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 Pour partager des parties spécifiques de l’application à des étapes, vous devez appeler les API associées dans la bibliothèque Teams SDK client. Pour plus d’informations, voir la [référence d’API](API-references.md).
+
+> [!NOTE]
+> * Pour partager des parties spécifiques de l’application en phase, utilisez Teams version 1.12 ou ultérieure du manifeste.
+> * Le partage de parties spécifiques de l’application à l’étape est pris en charge Teams clients de bureau uniquement.
 
 ### <a name="after-a-meeting"></a>Après une réunion
 

@@ -4,12 +4,12 @@ description: Vue d’ensemble de Démarrage pour la documentation pour les déve
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemples de développeurs Microsoft Teams
-ms.openlocfilehash: 32f6e94e7c1773812fbdca26106dbd319cc45262
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 6a5b8b2ca2a8685db5cd78ece283ea2a2938e8ab
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399001"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727641"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -26,6 +26,7 @@ Voici une idée de ce que vous allez apprendre :
 Examinons rapidement les options d’environnement de build parmi lesquelles vous pouvez choisir, ainsi que la feuille de route de la création et du déploiement d’une application Teams.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration montrant les étapes de base pour créer et déployer une application Teams":::
+
 
 ## <a name="app-capabilities-and-development-tools"></a>Fonctionnalités d’application et outils de développement
 

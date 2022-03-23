@@ -10,7 +10,7 @@ Le déploiement se compose de deux étapes.  Tout d’abord, les ressources clou
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-Sélectionnez l’Teams Shared Computer Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: dans la barre Visual Studio Code côté.
+Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: du kit de ressources Teams dans la barre latérale Visual Studio Code.
 
 1. **Sélectionnez Provision dans le cloud**.
 
@@ -81,6 +81,7 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Capture d’écran montrant l’application de lancement à distance." border="false":::
 
 1. Sélectionnez **Ajouter**.
+
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
 
    Votre application est chargée sur le site Azure.

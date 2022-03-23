@@ -4,12 +4,12 @@ description: Découvrez comment vos applications Microsoft Teams peuvent interag
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’appels audio vidéo de réunions vocales en ligne vocale en temps réel pour les flux multimédias
-ms.openlocfilehash: a0172bff6487da25ff7d482a24fa797f97b049b6
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398672"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727631"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Appels et bots de réunions en ligne
 
@@ -93,7 +93,6 @@ Les médias en temps réel font référence à des scénarios où les médias do
 | **Exemple de nom** | **Description** | **Graph** |
 |---------------|----------|--------|
 | Graph communication | Graph communications pour interagir avec la plateforme de communication de Microsoft. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Bot d’appel et de réunion | L’exemple d’application permet à Bot de créer un appel, de participer à une réunion et de transférer un appel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: cccd5865c93a41c858d12b8e4e268f4169e672e7
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492987"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727280"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,8 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams |  • Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
+|22/03/2022| Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
 |03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |
 |03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |
@@ -51,6 +53,8 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams|  • Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
+|22/03/2022| Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
 |03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |  
 |03/03/2022 | Comment ajouter l’authentification à l’aide d’un fournisseur OAuth externe| Ajouter l’authentification > Onglets > [Utiliser des fournisseurs OAuth externes](tabs/how-to/authentication/auth-oauth-provider.md) |

@@ -4,12 +4,12 @@ description: Voici comment mettre à jour votre extension de messagerie Teams ba
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453515"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727524"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>Étendre une extension Teams messagerie à travers Microsoft 365
 
@@ -28,7 +28,7 @@ Le processus de mise à jour de votre extension de Teams de messagerie basée su
 
 Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de messagerie dans les deux Outlook pour Windows bureau et web.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
@@ -152,8 +152,10 @@ Lorsque vous testez votre extension de messagerie, vous pouvez identifier la sou
 Pour afficher un aperçu de l’exécution de votre application Outlook sur le web :
 
 1. Connectez-vous à [outlook.com](https://www.outlook.com) à l’aide des informations d’identification de votre client de test.
-1. Cliquez sur **Nouveau message**.
-1. Ouvrez **le menu volant Plus** d’applications en bas de la fenêtre de composition.
+1. **Sélectionnez Nouveau message**.
+1. **Ouvrez le** menu volant Autres applications en bas de la fenêtre de composition.
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Cliquez sur le menu « Autres applications » en bas de la fenêtre de composition de messagerie pour utiliser votre extension de message":::
 
 Votre extension de messagerie sera répertoriée. Vous pouvez l’appeler à partir de là et l’utiliser comme vous le feriez lors de la composition d’un message Teams.
 
