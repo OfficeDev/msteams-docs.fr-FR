@@ -4,12 +4,12 @@ description: Découvrez comment vos applications Microsoft Teams peuvent interag
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’appels audio vidéo de réunions vocales en ligne vocale en temps réel pour les flux multimédias
-ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727631"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784001"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Appels et bots de réunions en ligne
 
@@ -108,3 +108,5 @@ Les médias en temps réel font référence à des scénarios où les médias do
 * [Comment développer des bots d’appels et de réunions en ligne sur votre ordinateur](./debugging-local-testing-calling-meeting-bots.md)
 * [Conditions requises et considérations pour les robots multimédias hébergés par l’application](./requirements-considerations-application-hosted-media-bots.md)
 * [Informations techniques sur la gestion des notifications d’appels entrants](./call-notifications.md)
+* [Configurer un standard automatique](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Configurer la réponse automatique pour les Salles Microsoft Teams sur les appareils de téléphone Teams android et vidéo](/microsoftteams/set-up-auto-answer-on-teams-android)

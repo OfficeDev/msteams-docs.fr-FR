@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: fonctionnalité d’appareil d’extensibilité des points d’entrée
-ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399169"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766036"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -52,7 +52,7 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 
 * **Concevoir l’interface utilisateur de votre application**: utilisez le Kit de ressources d’interface utilisateur Teams et la bibliothèque d’interface utilisateur pour concevoir la disposition de votre application.
 
-* **Utiliser Teams en tant que plateforme**: la plateforme Teams vous aide à créer une application unique ou multi-capacité. Votre application Teams repose sur les produits et services intégrés qui renforcent l’expérience de l’application.
+* **Utiliser Teams en tant que plateforme**: la plateforme Teams vous aide à créer une application unique ou multi-capacité. Votre application Teams est prise en charge par les produits et services intégrés qui renforcent l’expérience de l’application.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams." border="true":::
 

@@ -5,16 +5,16 @@ description: Guide pour planifier la création d’une application sur Teams mob
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4a32f5e0045def6571f347ebd1bbf8b56f4e082b
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453522"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766127"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planifier des onglets réactifs pour Teams mobile
 
- Teams plateforme offre la possibilité de créer des applications sur les appareils mobiles et de bureau. Les utilisateurs de votre application peuvent préférer un ordinateur de bureau ou un appareil mobile, ou les deux. Les utilisateurs peuvent préparer des données sur un ordinateur de bureau, mais consomment et partagent davantage de données à l’aide de l’appareil mobile. La clé pour créer une application consiste à comprendre et à répondre aux besoins des utilisateurs. Il existe des fonctionnalités telles que les bots, les extensions de messagerie et les connecteurs qui fonctionnent en toute transparence sur ordinateur de bureau et mobile. Toutefois, la création d’onglets et de modules de tâches nécessite la planification de l’hébergement de votre expérience web sur Teams mobile. Guides de document pour planifier vos pages web réactives sur Teams mobile.
+ Teams plateforme offre la possibilité de créer des applications sur les appareils mobiles et de bureau. Les utilisateurs de votre application peuvent préférer un ordinateur de bureau ou un appareil mobile, ou les deux. Les utilisateurs peuvent préparer des données sur un ordinateur de bureau, mais consomment et partagent davantage de données à l’aide de l’appareil mobile. La clé pour créer une application consiste à comprendre et à répondre aux besoins des utilisateurs. Il existe des fonctionnalités telles que les bots, les extensions de messagerie et les connecteurs qui fonctionnent en toute transparence sur ordinateur de bureau et mobile. Toutefois, la création d’onglets et de modules de tâches nécessite la planification de l’hébergement de votre expérience web sur Teams mobile. Les guides d’article pour planifier vos pages web réactives sur Teams mobile.
 
 ## <a name="identify-apps-scope"></a>Identifier l’étendue des applications
 

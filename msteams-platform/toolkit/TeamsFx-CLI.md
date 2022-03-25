@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4751bcdee0addc21c7aaa165cf29d78a895d723d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453662"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766148"
 ---
 # <a name="teamsfx-library"></a>Bibliothèque TeamsFx
 
@@ -72,7 +72,7 @@ Par défaut, passe `teamsfx new` en mode interactif et vous guide tout au long d
 
 ### <a name="parameters-for-teamsfx-new"></a>Paramètres pour `teamsfx new`
 
-| Parameter | Conditions requises | Description |
+| Paramètre | Conditions requises | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Oui| Nom de votre application Teams application.|
 |`--interactive`| Non | Sélectionnez les options de manière interactive. Les options sont et `true` la `false` valeur par défaut est `true`.|
@@ -162,7 +162,7 @@ Gérer les ressources dans l’application actuelle. Pris `<resource-type>` en c
 
 ### <a name="parameters-for-teamsfx-resource-add-azure-function"></a>Paramètres pour `teamsfx resource add azure-function`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |----------------  |-------------|-------------|
 |`--function-name`| Oui | Fournissez un nom de fonction. La valeur par défaut est `getuserprofile`. |
 
@@ -170,7 +170,7 @@ Gérer les ressources dans l’application actuelle. Pris `<resource-type>` en c
 
 #### `--function-name`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--function-name`| Oui | Fournissez un nom de fonction. La valeur par défaut est `getuserprofile`. |
 
@@ -182,7 +182,7 @@ Gérer les ressources dans l’application actuelle. Pris `<resource-type>` en c
 > [!TIP]
 > Les options prennent effet lorsque vous essayez d’utiliser une `APIM` instance existante. Par défaut, vous n’avez pas besoin de spécifier d’options et il crée une nouvelle instance au cours de l’étape `teamsfx provision` .
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--subscription`| Oui | Sélectionner un abonnement Azure|
 |`--apim-resource-group`| Oui| Nom du groupe de ressources. |
@@ -198,7 +198,7 @@ Mise en service des ressources cloud dans l’application actuelle.
 
 ### <a name="parameters-for-teamsfx-provision"></a>Paramètres pour `teamsfx provision`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui| Sélectionnez un environnement pour le projet. |
 |`--subscription`| Non | Spécifiez un ID d’abonnement Azure. |
@@ -212,7 +212,7 @@ Cette commande est utilisée pour déployer l’application actuelle. Par défau
 
 ### <a name="parameters-for-teamsfx-deploy"></a>Paramètres pour `teamsfx deploy`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui| Sélectionnez un environnement existant pour le projet. |
 |`--open-api-document`| Non | Applicable lorsqu’il existe une ressource APIM dans le projet. Chemin d’accès au fichier de document api ouvert. |
@@ -245,7 +245,7 @@ Afficher un aperçu de l’application actuelle à partir d’un emplacement loc
 
 ### <a name="parameters-for-teamsfx-preview"></a>Paramètres pour `teamsfx preview`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--local`| Non | Afficher un aperçu de l’application en local. `--local` est exclusif avec `--remote`. |
 |`--remote`| Non | Afficher un aperçu de l’application à partir d’une application distante. `--remote` est exclusif avec `--local`. |
@@ -291,7 +291,7 @@ Gérez les données de configuration dans l’étendue utilisateur ou dans l’�
 
 ### <a name="parameters-for-teamsfx-config"></a>Paramètres pour `teamsfx config`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui | Sélectionnez un environnement existant pour le projet. |
 |`--folder`| Non | Project répertoire. Il est utilisé pour obtenir ou définir la configuration du projet. La valeur par défaut est `./`. |
@@ -358,14 +358,14 @@ L’CLI TeamsFx fournit des `teamsFx permission` commandes pour un scénario de 
 
 ### <a name="parameters-for-teamsfx-permission-grant"></a>Paramètres pour `teamsfx permission grant`
 
-| Parameter  | Conditions requises | Description |
+| Paramètre  | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui | Fournissez le nom de l’env. |
 |`--email`| Oui | Fournissez l’adresse Microsoft 365 de messagerie du collaborateur. Assurez-vous que le compte du collaborateur se trouve dans le même client avec le créateur. |
 
 ### <a name="parameters-for-teamsfx-permission-status"></a>Paramètres pour `teamsfx permission status`
 
-| Parameter | Conditions requises | Description |
+| Paramètre | Conditions requises | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Oui | Fournissez le nom de l’env. |
 |`--list-all-collaborators` | Non | Avec cet indicateur, Teams Shared Computer Toolkit CLI imprime tous les collaborateurs de ce projet. |
@@ -472,3 +472,4 @@ En tant que collaborateur Project :
 * [SDK TeamsFx pour TypeScript ou JavaScript](TeamsFx-SDK.md)
 * [Gérer plusieurs environnements dans Teams Shared Computer Toolkit](TeamsFx-multi-env.md)
 * [Collaborer sur Teams projet à l’aide Teams Shared Computer Toolkit](TeamsFx-collaboration.md)
+* [Vue d’ensemble du Kit de ressources Teams](teams-toolkit-fundamentals.md)

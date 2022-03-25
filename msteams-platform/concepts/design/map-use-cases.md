@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452829"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765938"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Mappez votre cas d’usage aux fonctionnalités Teams
 

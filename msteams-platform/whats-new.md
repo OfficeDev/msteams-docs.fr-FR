@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: cccd5865c93a41c858d12b8e4e268f4169e672e7
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 4c48e2e5ca7ac9dcaaf73189cc724f5c86385ee0
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727280"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765952"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,7 +22,8 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
-|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams |  • Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
+|23/03/2022| Introduction d’un guide pas à pas pour déployer des liens dans Teams à l’aide d’un bot | Créer des extensions de messagerie > Ajouter un déploiement de lien > [Liens de déploiement dans Teams à l’aide de bot](sbs-botbuilder-linkunfurling.yml).|
+|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams |  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
 |03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
 |10/03/2022| Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |
@@ -42,6 +43,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |03/02/2022| Introduction de la version 1.12 du manifeste d’application | • App manifest > [schéma de manifeste d’application](resources/schema/manifest-schema.md) </br> - App manifest > Public developer preview > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
 
+
 ## <a name="ga-features"></a>Caractéristiques de GA
 
 Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour tous les développeurs d'applications.
@@ -53,7 +55,8 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
-|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams|  • Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
+|23/03/2022| Introduction d’un guide pas à pas pour déployer des liens dans Teams à l’aide d’un bot | Créer des extensions de messagerie > Ajouter un déploiement de lien > [Liens de déploiement dans Teams à l’aide de bot](sbs-botbuilder-linkunfurling.yml).|
+|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams|  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
 |03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
 |10/03/2022 | Ajout d'informations sur les plug-in Moodle LMS et Microsoft 365 | Intégrer aux équipes > Moodle LMS > [Système de gestion de l'apprentissage Moodle](resources/moodle-overview.md) |  
