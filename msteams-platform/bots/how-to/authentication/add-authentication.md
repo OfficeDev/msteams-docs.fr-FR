@@ -5,13 +5,13 @@ description: Comment ajouter l’authentification OAuth à un bot dans Microsoft
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: manifeste du bot d’inscription du bot de groupe de ressources Azure
-ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+keywords: Déploiement du manifeste du bot d’enregistrement d’émulateur Azure du groupe de ressources
+ms.openlocfilehash: f0dafb52774c43a511076134d2b39b91de0743a7
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63493025"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464823"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
@@ -31,7 +31,7 @@ Voici les titres des sections de cet article :
 - **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émettra un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder à des ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, [Microsoft Teams flux d’authentification pour les bots](auth-flow-bot.md).
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous inscrire et échanger des messages avec lui dans une conversation.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 - Connaissance des principes [de base du bot][concept-basics], [de la gestion de l’état][concept-state], de la bibliothèque [de][concept-dialogs] boîtes de dialogue et de la façon d’implémenter un [flux de conversation séquentiel][simple-dialog].
 - Connaissance du développement Azure et OAuth 2.0.
@@ -358,7 +358,7 @@ Si un bot nécessite une authentification, vous devez configurer le Emulator. Po
 1. Cochez la case **en authentification version 1.0**.
 1. Entrez le chemin d’accès local à **l’outil ngrok** . *Consultez* le Wiki Bot Framework Emulator/ngrok [d’intégration](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)) de tunneling. Pour plus d’informations sur l’outil, [voir ngrok](https://ngrok.com/).
 1. Cochez la case **par Exécuter ngrok au démarrage Emulator démarrage**.
-1. Sélectionnez le **bouton** Enregistrer.
+1. Sélectionnez le bouton **Enregistrer** .
 
 Lorsque le bot affiche une carte de visite et que l’utilisateur sélectionne le bouton de signature, le Emulator ouvre une page que l’utilisateur peut utiliser pour se connecter avec le fournisseur d’authentification.
 Une fois que l’utilisateur a fait cela, le fournisseur génère un jeton utilisateur et l’envoie au bot. Après cela, le bot peut agir pour le compte de l’utilisateur.
@@ -436,7 +436,7 @@ and when for these, and just reference that from here, along with the set of ste
     1. Assurez-vous que **l’ID d’application du bot** que vous avez reçu au moment de l’inscription du bot est affecté à `id` et `botId`.
     1. Affectez cette valeur : `validDomains: [ "token.botframework.com" ]`.
 1. Sélectionnez **et compresser** `manifest.json`les fichiers et `outline.png`les `color.png` fichiers.
-1. **Ouvrez Microsoft Teams**.
+1. Ouvrez **Microsoft Teams**.
 1. Dans le panneau gauche, en bas, sélectionnez **l’icône Applications**.
 1. Dans le panneau droit, en bas, sélectionnez **Télécharger une application personnalisée**.
 1. Accédez au dossier `TeamsAppManifest` et téléchargez le manifeste compressé.

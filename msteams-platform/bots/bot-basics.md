@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: événement de canal de consentement de carte bot de l’infrastructure du handler d’activité
-ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 59c03c339187010867d9fd380d4ac9798e3aa20c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398644"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464774"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
@@ -184,7 +184,9 @@ La logique du bot traite les activités entrantes à partir d’un ou plusieurs 
 #### <a name="core-bot-framework-handlers"></a>Principaux handlers Bot Framework
 
 >[!NOTE]
-> À l’exception des activités  des membres ajoutés et supprimés, tous les responsables d’activité décrits dans cette section continuent de fonctionner de la même Teams bot.
+>
+>* À l’exception des activités  des membres ajoutés et supprimés, tous les responsables d’activité décrits dans cette section continuent de fonctionner de la même Teams bot.
+>* `onInstallationUpdateActivityAsync()`permet d’obtenir des Teams locales lors de l’ajout du bot à Teams.
 
 Les responsables d’activité sont différents dans le contexte d’une équipe, où un nouveau membre est ajouté à l’équipe au lieu d’un thread de message.
 

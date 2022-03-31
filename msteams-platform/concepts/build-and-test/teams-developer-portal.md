@@ -5,12 +5,12 @@ keywords: mise en place des équipes du portail de développement
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399323"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511233"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
@@ -19,7 +19,9 @@ Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des dévelo
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Capture d’écran montrant la page d’accueil du portail de développement pour Teams.":::
 
 > [!NOTE]
-> Pour l’instant, le portail du développeur n’est pas disponible pour les Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-Haut ou Département de la Défense (DOD).
+>
+> * Pour l’instant, le portail du développeur n’est pas disponible pour les Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-Haut ou Département de la Défense (DOD).
+> * Toutefois, vous pouvez utiliser un client normal pour créer une application dans le portail du développeur, télécharger l’application et télécharger l’application à l’aide de [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) dans un cloud national. Pour plus d’informations, voir [Déploiements dans le cloud national](/graph/deployments).
 
 ## <a name="register-an-app"></a>Inscrire une application
 
@@ -71,17 +73,6 @@ Le Portail des développeurs fournit des options de test et de débogage de votr
 
 Pour plus d’informations, [voir distribuer votre Teams app.](~/concepts/deploy-and-publish/apps-publish-overview.md)
 
-## <a name="analyze-your-apps-usage"></a>Analyser l’utilisation de votre application
-
-Dans la page Vue **d’ensemble** , vous pouvez voir le nombre total d’utilisateurs actifs pour votre application. Ces mesures sont disponibles pour les applications publiées dans le Teams store ou le catalogue d’applications d’une organisation via le Portail du développeur et limitées à l’ID de l’application.
-
-| Métrique | Définition |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *R30 mensuel* | Mesure d’utilisation par défaut. Il indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application dans cette fenêtre de 30 jours en temps UTC. |
-| *Tous les jours* | Indique le nombre d’utilisateurs actifs uniques qui ont utilisé votre application au cours d’un jour donné au cours de l’UTC. |
-
-L’utilisation mensuelle et quotidienne est indiquée pour les sept, 30 et 60 derniers jours. L’utilisation doit être reflétée pour un jour donné dans les 24 à 48 heures. L’affichage des nouvelles applications peut prendre jusqu’à 3 à 5 jours.
-
 ## <a name="use-tools-to-create-app-features"></a>Utiliser des outils pour créer des fonctionnalités d’application
 
 Le Portail des développeurs inclut également des outils pour vous aider à créer certaines fonctionnalités clés de Teams applications. Voici quelques-uns de ces outils :
@@ -92,4 +83,4 @@ Le Portail des développeurs inclut également des outils pour vous aider à cr�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Inclure une offre SaaS avec votre application Microsoft Teams application](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Inclure une offre SaaS avec votre application Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

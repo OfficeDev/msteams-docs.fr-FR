@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 1db2f2933f2da47310468c5374b1b6a27b7fffbc
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675005"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464795"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
@@ -41,9 +41,6 @@ Vous pouvez télécharger votre application dans une équipe, un chat, une réun
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d'écran montrant un exemple de boîte de dialogue d'installation de l'application Teams.":::
 
 1. Sélectionnez **Ajouter** pour ajouter l’application à Teams.
-
-    > [!NOTE]
-    > La méthode `onInstallationUpdateActivityAsync()` est utilisée pour obtenir les paramètres régionaux de Microsoft Teams lors de l’ajout du bot à Microsoft Teams.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 

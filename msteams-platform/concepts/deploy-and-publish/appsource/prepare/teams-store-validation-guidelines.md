@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674977"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511250"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -25,15 +25,13 @@ Le respect de ces directives augmente les chances que votre application réussis
 
 ## <a name="value-proposition"></a>Proposition de valeur
 
-> [!NOTE]  
-> Cette section est conforme au [Numéro de politique de certification commerciale Microsoft 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) et fournit des conseils supplémentaires aux développeurs d'applications Microsoft Teams sur la proposition de valeur de leur offre.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie de certification commerciale de [Microsoft, numéro 1140.1, ](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements)et fournit des conseils supplémentaires aux développeurs d'applications Microsoft Teams sur la proposition de valeur de leur offre.
 
 ### <a name="app-name"></a>Nom de l'application
 
 [*Correction obligatoire*]
 
-> [!NOTE]  
-> Cette section est conforme au [numéro de politique de certification commerciale 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) et fournit des conseils supplémentaires aux développeurs sur la manière de nommer leurs applications.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie de certification commerciale de Microsoft[, numéro 1140.1.1](/legal/marketplace/certification-policies#114011-app-name), et fournit des conseils supplémentaires aux développeurs pour nommer leurs applications.
 
 Le nom d’une application joue un rôle essentiel dans la façon dont les utilisateurs la découvrent dans le magasin. Utilisez les instructions suivantes pour nommer une application :
 
@@ -63,8 +61,7 @@ Le nom d’une application joue un rôle essentiel dans la façon dont les utili
 
 [*Correction obligatoire*]
 
-> [!NOTE]  
-> Cette section est conforme à la politique de certification commerciale Microsoft n° [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value) et [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) et fournit des conseils supplémentaires aux développeurs sur la création d'applications adaptées au lieu de travail.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie de certification commerciale de Microsoft [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value) et [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) et fournit des conseils supplémentaires aux développeurs sur la création d'applications adaptées au lieu de travail.
 
 Le contenu de l'application doit être adapté à la consommation générale sur le lieu de travail et respecter toutes les restrictions énumérées dans les politiques de certification du marché commercial. Le contenu lié à la religion, à la politique, aux jeux et aux divertissements prolongés est interdit.
 
@@ -74,8 +71,7 @@ Votre application doit permettre la collaboration de groupe, améliorer la produ
 
 [*Correction obligatoire*]
 
-> [!NOTE]  
-> Cette section est conforme à la politique de certification commerciale [Politique de certification commerciale Microsoft numéro 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est en ligne avec [la stratégie de certification commerciale de Microsoft numéro 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
 
 Les applications doivent se concentrer sur l'expérience Teams et ne pas inclure les noms, icônes ou images d'autres plates-formes ou services de collaboration similaires basés sur le chat dans le contenu de l'application ou dans les métadonnées de l'application, à moins que l'application ne fournisse une interopérabilité spécifique.
 
@@ -87,14 +83,13 @@ Les noms de fonctionnalités d'application dans les boutons et autres textes de 
 
 [*Correction obligatoire*]
 
-> [!NOTE]  
-> Cette section est conforme à la [Politique de certification commerciale Microsoft numéro 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) et fournit des conseils aux développeurs sur l'authentification de leurs applications avec des services externes.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est en ligne avec la stratégie de certification commerciale [Microsoft numéro 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) et fournit des conseils aux développeurs sur l'authentification de leurs applications avec des services externes.
 
 Pour plus d'informations sur la mise en œuvre de l'authentification des applications, consultez l'[authentification dans Teams](~/concepts/authentication/authentication.md).
 
 #### <a name="authenticating-with-external-services"></a>Authentification avec des services externes
 
- Si votre application authentifie les utilisateurs avec un service externe, suivez ces instructions :
+Si votre application authentifie les utilisateurs avec un service externe, suivez ces instructions :
 
 * **Expériences d’inscription, de connexion et de déconnexion** :
   * Les applications qui dépendent de comptes ou de services externes doivent fournir une expérience de connexion, de déconnexion et d'inscription claire et simple.
@@ -108,15 +103,14 @@ Pour plus d'informations sur la mise en œuvre de l'authentification des applica
 
 ## <a name="security"></a>Sécurité
 
-> [!NOTE]  
-> Cette section est conforme au [Numéro de politique de certification commerciale Microsoft 1140.3](/legal/marketplace/certification-policies#11403-security).
+
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie de certification commerciale de [Microsoft, numéro 1140.3](/legal/marketplace/certification-policies#11403-security).
 
 ### <a name="financial-information"></a>Informations financières
 
 [*Correction obligatoire*]
 
-> [!NOTE]  
-> Cette section est conforme au [Numéro de politique de certification commerciale Microsoft 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) et fournit des conseils sur la transmission d'informations financières au sein de l'interface Teams et informe les développeurs des scénarios de paiement restreint sur la version mobile (Android et iOS) de leur application Teams.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme au numéro 1140.3.1[ de la stratégie de certification commerciale de Microsoft](/legal/marketplace/certification-policies#114031-financial-transactions). Elle fournit des conseils sur la transmission d'informations financières dans l'interface Teams et informe les développeurs des scénarios de paiement restreints sur la version mobile (Android et iOS) de leur application Teams.
 
 Les applications ne doivent pas demander aux utilisateurs d'effectuer des paiements dans l'interface Teams et de transmettre des informations financières aux utilisateurs via une interface de bot.  
 
@@ -166,8 +160,7 @@ Les applications qui s’exécutent sur la version iOS ou Android de Teams doive
 
 [*Correction obligatoire*]
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie 1140.3.2 du[ marché commercial de Microsoft](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 
 Pour les applications qui utilisent Microsoft Azure Bot Service (par exemple, les bots et les extensions de messagerie), vous devez respecter toutes les conditions définies dans les [Conditions d’utilisation des services en ligne Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
@@ -187,8 +180,7 @@ Les robots doivent toujours demander la permission de télécharger un fichier e
 
 [*Correction obligatoire*]
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) et fournit des conseils aux développeurs sur l'utilisation des domaines restreints dans la `validDomains` Propriété de manifeste.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme [à la stratégie 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) du marché commercial de Microsoft et fournit des conseils aux développeurs sur l'utilisation des domaines restreints`validDomains` dans la propriété du manifeste.
 
 N’incluez pas les domaines en dehors du contrôle de votre organisation (y compris les caractères génériques) et les services de tunneling dans les configurations de domaine de votre application. Les exceptions suivantes sont les suivantes :
 
@@ -209,8 +201,7 @@ L'application doit avertir les utilisateurs avant de télécharger des fichiers 
 
 ## <a name="general-functionality-and-performance"></a>Fonctionnalités et performances générales
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.4](/legal/marketplace/certification-policies#11404-functionality).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4 du marché commercial de Microsoft](/legal/marketplace/certification-policies#11404-functionality).
 
 ### <a name="launching-external-functionality"></a>Lancement des fonctionnalités externes
 
@@ -466,8 +457,7 @@ Si la configuration de votre application à des fins de test est complexe, fourn
 
 ## <a name="tabs"></a>Onglets
 
-> [!NOTE]  
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4.2 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114042-tabs).
 Si votre application comprend un onglet, assurez-vous qu'il respecte ces directives.
 > [!TIP]
 > Pour plus d'informations sur la création d'une expérience d'application de haute qualité, consultez les [directives de conception de l'onglet Teams](~/tabs/design/tabs.md).
@@ -838,8 +828,7 @@ Concevez votre application avec des composants Fluent UI [de base](~/concepts/de
 
 ## <a name="bots"></a>Bots
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.4.3](/legal/marketplace/certification-policies#114043-bots).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4.3 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114043-bots).
 
 Si votre application inclut un bot, assurez-vous qu'il respecte ces directives.
 
@@ -1074,8 +1063,7 @@ Les applications qui fournissent uniquement des notifications avec du contenu te
 
 ## <a name="messaging-extensions"></a>Extensions de messagerie
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4.4 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
 Si votre application comprend une extension de messagerie, assurez-vous qu'elle respecte ces consignes.
 
@@ -1217,8 +1205,7 @@ Les applications de déploiement de liens uniquement n'apportent pas de valeur s
 
 ## <a name="task-modules"></a>Modules de tâche
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4.5 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114045-task-modules).
 
 Un module de tâche doit inclure une icône et le nom court de l’application avec laquelle il est associé. Les modules de tâches ne doivent pas intégrer une application entière et afficher uniquement les composants requis pour effectuer une action spécifique. [*Correction obligatoire*]
 
@@ -1249,8 +1236,8 @@ Pour plus d'informations, consultez [Instructions de conception du module de tâ
 
 ## <a name="meeting-extensions"></a>Extensions de réunion
 
-> [!NOTE]
-> Cette section est conforme au [Numéro de politique du marché commercial Microsoft 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).[!TIP]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie[ 1140.4.6 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114046-meeting-extensions).
+> [!TIP]
 > Pour plus d'informations sur la création d'une expérience d'application de haute qualité, consultez les [directives de conception d'extension de réunion Teams](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 Utilisez les directives suivantes pour les extensions de réunion :
@@ -1351,8 +1338,7 @@ Utilisez les directives suivantes pour les extensions de réunion :
 
 ## <a name="notifications"></a>Notifications
 
-> [!NOTE]
-> Cette section est conforme à la [politique du marché commercial Microsoft numéro 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4.7 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114047-notification-apis).
 
 Si votre application utilise les [API de flux d'activité fournies par Microsoft Graph](/graph/teams-send-activityfeednotifications), assurez-vous qu'elle respecte les directives suivantes.
 
@@ -1380,8 +1366,7 @@ Si votre application utilise les [API de flux d'activité fournies par Microsoft
 
 ## <a name="microsoft-365-app-compliance-program"></a>Programme de conformité d’Application Microsoft 365
 
-> [!NOTE]
-> Cette section est conforme à la [politique du marché commercial Microsoft numéro 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la stratégie [1140.6 du marché commercial de Microsoft](/legal/marketplace/certification-policies#11406-publisher-attestation).
 
 Le Programme de conformité d’Application Microsoft 365 est destiné à aider les organisations à évaluer et à gérer les risques en évaluant les informations de sécurité et de conformité concernant votre application. Si vous publiez une application dans le magasin Teams, vous devez effectuer les niveaux suivants du programme :
 
@@ -1399,13 +1384,11 @@ Le Programme de conformité d’Application Microsoft 365 est destiné à aide
 
 * **Attestation d’éditeur** : processus dans lequel vous partagez des informations générales, de gestion des données et de sécurité et de conformité pour permettre aux clients potentiels de prendre des décisions informées sur l’utilisation de votre application.
 
-> [!NOTE]
-> Si vous soumettez une application qui n’a pas été répertoriée précédemment, vous ne pouvez pas officiellement terminer l’attestation d’éditeur tant que votre application n’est pas dans le magasin Teams. Si vous êtes mettez à jour une application répertoriée, achevez l’attestation d’éditeur avant de soumettre la dernière version de l’application.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Si vous soumettez une application qui n'a pas été répertoriée auparavant, vous ne pouvez pas compléter officiellement l'attestation d'éditeur tant que votre application n'est pas dans le Teams Store. Si vous êtes mettez à jour une application répertoriée, achevez l’attestation d’éditeur avant de soumettre la dernière version de l’application.
 
 ## <a name="advertising"></a>Publicité
 
-> [!NOTE]
-> Cette section est conforme à la [politique du marché commercial Microsoft numéro 1140.7](/legal/marketplace/certification-policies#11407-advertising).
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie du marché commercial de Microsoft, numéro 1140.7](/legal/marketplace/certification-policies#11407-advertising).
 
 Les applications ne doivent pas afficher de publicité, y compris les publicités dynamiques, les bannières publicitaires et les publicités dans les messages.
 

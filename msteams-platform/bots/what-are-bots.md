@@ -5,12 +5,12 @@ description: Présentation des bots dans Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a795ae8c75774f5f3814e5b664314c0f32f30bcb
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323196"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498223"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
@@ -37,13 +37,13 @@ Chaque interaction entre l’utilisateur et le bot est représentée comme une a
 
 Les bots sont des applications qui ont une interface de conversation. Vous pouvez interagir avec un bot à l’aide de texte, de cartes interactives et de reconnaissance vocale. Un bot se comporte différemment dans une conversation de canal ou de groupe et dans une conversation privée. Les conversations sont gérées via le connecteur Bot Framework. Voir [les informations de base des conversations](~/bots/how-to/conversations/conversation-basics.md).
 
-Votre bot a besoin d’informations contextuelles, telles que les détails du profil utilisateur, pour accéder au contenu pertinent et améliorer l’expérience du bot. Voir [obtenir le contexte Teams](~/bots/how-to/get-teams-context.md).
+Votre bot nécessite des informations contextuelles, telles que les détails du profil utilisateur, pour accéder au contenu pertinent et améliorer l’expérience du bot. Consultez [obtenir le contexte Teams](~/bots/how-to/get-teams-context.md).
 
 Vous pouvez envoyer et recevoir des fichiers via le bot à l’aide des API Graph ou des API de bot Teams. Consultez [Envoyer et recevoir des fichiers via un bot](~/bots/how-to/bots-filesv4.md).
 
 La limitation de débit permet d’optimiser les bots utilisés pour l’application Teams. Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de débit pour les demandes entrantes. Voir [optimiser votre bot avec une limite de débit dans Teams](~/bots/how-to/rate-limit.md).
 
-Avec les API Microsoft Graph pour les appels et les réunions en ligne, les applications Microsoft Teams peuvent désormais interagir avec les utilisateurs à l’aide de la voix et de la vidéo. Voir [les bots d’appels et de réunions.](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+Avec Microsoft Graph API pour les appels et les réunions en ligne, les applications Microsoft Teams peuvent désormais interagir avec les utilisateurs à l’aide de la voix et de la vidéo. Consultez [les bots d’appels et de réunions](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
 
 Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour les membres d’une conversation ou d’une équipe. Consultez [les modifications apportées aux API de bot Teams pour récupérer les membres de l’équipe ou de la conversation](~/resources/team-chat-member-api-changes.md).
 
@@ -64,6 +64,7 @@ Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour les
 ## <a name="see-also"></a>Voir aussi
 
 * [Créer un robot pour Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Fonctionnement des bots Microsoft Teams](/azure/bot-service/bot-builder-basics-teams)
 * [Enregistrer le bot d’appels et de réunions pour Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Ajouter l’authentification à votre bot Teams](~/bots/how-to/authentication/add-authentication.md)
 * [Gestionnaire d'activité du robot](~/bots/bot-basics.md)
