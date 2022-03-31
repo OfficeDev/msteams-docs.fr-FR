@@ -5,290 +5,258 @@ description: Guide de démarrage rapide sur la création d’un onglet de canal 
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: b576e2515df65dba06686740508c07a645fb5bd7
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+zone_pivot_groups: teams-app-environment
+ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399337"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590665"
 ---
-# <a name="create-a-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe
+# <a name="channel-or-group-tab"></a>Onglet Canal ou groupe
 
-## <a name="create-a-custom-channel-or-group-tab"></a>Créer un onglet de canal ou de groupe personnalisé
+Les onglets de canal ou de groupe offrent du contenu aux canaux et aux conversations de groupe, et sont un excellent moyen de créer des espaces de collaboration autour de contenu web dédié.
 
-Vous pouvez créer un onglet de canal ou de groupe à l'Node.js et le générateur Yeoman, ASP. NETCore ou ASP. NETCore MVC. Pour un onglet de canal ou de groupe Microsoft Teams mobile, consultez [les onglets sur mobile](~/tabs/design/tabs-mobile.md).
+::: zone pivot="node-java-script"
 
-# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+## <a name="create-a-custom-channel-or-group-tab-with-nodejs"></a>Créer un onglet de canal ou de groupe personnalisé avec Node.js
 
-### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>Créer un canal et un onglet de groupe personnalisés à l’aide Node.js et du générateur Yeoman
+1. À l’invite de commandes, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en entrant la commande suivante après avoir installé le **Node.js**:
 
-> [!NOTE]
-> Cet article suit les étapes décrites dans la build Your [first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
-
-Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’aide [Teams générateur Yeoman](https://github.com/OfficeDev/generator-teams/).
-
-### <a name="prerequisites-for-apps"></a>Conditions préalables pour les applications
-
-Vous devez connaître les conditions préalables suivantes :
-
-* Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-
-    > [!NOTE]
-    > Si vous n’avez pas de compte Office 365, vous pouvez vous inscrire à un abonnement gratuit via le programme Office 365 développeur. L’abonnement reste actif tant que vous l’utilisez pour le développement continu. Bienvenue [dans le programme Office 365 développeur.](/office/developer-program/microsoft-365-developer-program)
-
-En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
-
-* N’importe quel éditeur de texte ou IDE. Vous pouvez installer et utiliser [Microsoft Visual Studio Code](https://code.visualstudio.com/download) gratuit.
-
-* [Node.js/npm](https://nodejs.org/en/). Utilisez la dernière version de LTS. Le nœud Gestionnaire de package (npm) s’installe dans votre système avec l’installation de Node.js.
-
-* Une fois que vous avez installé Node.js, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en entrant les commandes suivantes dans votre invite de commandes :
-
-    ```bash
+    ```cmd
     npm install yo gulp-cli --global
     ```
 
-* Installez le générateur Microsoft Teams Apps en entrant les commandes suivantes dans votre invite de commandes :
+2. À l’invite de commandes, installez Microsoft Teams générateur d’application en entrant la commande suivante :
 
-    ```bash
+    ```cmd
     npm install generator-teams --global
     ```
 
-### <a name="generate-your-project"></a>Générer votre projet
+Voici les étapes à suivre pour créer un onglet de canal ou de groupe :
 
-**Pour générer votre projet**
+* [Générer votre application avec un onglet de canal ou de groupe](#generate-your-application-with-a-channel-or-group-tab)
+* [Créer votre package d’application](#create-your-app-package)
+* [Créer et exécuter votre application](#build-and-run-your-application)
+* [Établir un tunnel sécurisé vers votre onglet](#establish-a-secure-tunnel-to-your-tab)
+* [Télécharger votre application à Teams](#upload-your-application-to-teams)
 
-1. À l’invite de commandes, créez un répertoire pour votre projet d’onglet.
+### <a name="generate-your-application-with-a-channel-or-group-tab"></a>Générer votre application avec un onglet de canal ou de groupe
 
-1. Pour démarrer le générateur, allez dans votre nouveau répertoire et tapez la commande suivante :
+1. À l’invite de commandes, créez un répertoire pour votre onglet de canal ou de groupe.
 
-    ```bash
+1. Entrez la commande suivante dans votre nouveau répertoire pour démarrer le générateur Microsoft Teams App :
+
+    ```cmd
     yo teams
     ```
 
-1. Ensuite, fournissez une série de valeurs utilisées dans le fichier **manifest.json de votre** application :
+1. Fournissez vos valeurs à une série de questions posées par Microsoft Teams générateur d’application pour mettre à jour votre **fichier manifest.json** :
 
     ![capture d’écran d’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    **Quel est le nom de votre solution ?**
+    <details>
+    <summary><b>Série de questions pour mettre à jour votre fichier manifest.json</b></summary>
 
-    Il s’agit du nom de votre projet. Vous pouvez accepter le nom suggéré en sélectionnant la **touche** Entrée.
+    * **Quel est le nom de votre solution ?**
 
-    **Où souhaitez-vous placer les fichiers ?**
+        Le nom de la solution est le nom de votre projet. Vous pouvez accepter le nom suggéré en sélectionnant **Entrée**.
 
-    Vous êtes actuellement dans votre répertoire de projet. **Sélectionnez Entrée**.
+    * **Où souhaitez-vous placer les fichiers ?**
 
-    **Titre de votre Microsoft Teams d’application ?**
+        Vous êtes actuellement dans votre répertoire de projet. **Sélectionnez Entrée**.
 
-    Il s’agit du nom de votre package d’application qui sera utilisé dans le manifeste et la description de l’application. Entrez un titre ou **sélectionnez Entrée** pour accepter le nom par défaut.
+    * **Titre de votre Microsoft Teams d’application ?**
 
-    **Votre nom (d’entreprise) ? (32 caractères maximum)**
+        Le titre est le nom de votre package d’application et est utilisé dans le manifeste et la description de l’application. Entrez un titre ou **sélectionnez Entrée** pour accepter le nom par défaut.
 
-    Le nom de votre société sera utilisé dans le manifeste de l’application. Entrez un nom de société ou **sélectionnez Entrée** pour accepter le nom par défaut.
+    * **Votre nom (d’entreprise) ? (32 caractères maximum)**
 
-    **Quelle version de manifeste souhaitez-vous utiliser ?**
+        Le nom de votre société sera utilisé dans le manifeste de l’application. Entrez un nom de société ou **sélectionnez Entrée** pour accepter le nom par défaut.
 
-    Sélectionnez le schéma par défaut.
+    * **Quelle version de manifeste souhaitez-vous utiliser ?**
 
-    **La échafaudage rapide ? (Y/n)**
+        Sélectionnez le schéma par défaut.
 
-    La valeur par défaut est Oui ; entrez **n** pour entrer votre ID partenaire Microsoft.
+    * **La échafaudage rapide ? (Y/n)**
 
-    **Entrez votre ID partenaire Microsoft, si vous en avez un ? (Laissez vide pour ignorer)**
+        La valeur par défaut est Oui ; entrez **n** pour entrer votre ID partenaire Microsoft.
 
-    Ce champ n’est pas obligatoire et ne doit être utilisé que si vous faites déjà partie de [Microsoft Partner Network](https://partner.microsoft.com).
+    * **Entrez votre ID partenaire Microsoft, si vous en avez un ? (Laissez vide pour ignorer)**
 
-    **Que voulez-vous ajouter à votre projet ?**
+        Ce champ n’est pas obligatoire et ne doit être utilisé que si vous faites déjà partie de [Microsoft Partner Network](https://partner.microsoft.com).
 
-    **Sélectionnez ( &ast; ) Un onglet**.
+    * **Que voulez-vous ajouter à votre projet ?**
 
-    **L’URL dans laquelle vous hébergez cette solution ?**
+        **Sélectionnez ( &ast; ) Un onglet**.
 
-    Par défaut, le générateur suggère une URL de sites web Azure. Vous testez uniquement votre application localement, par conséquent, une URL valide n’est pas nécessaire.
+    * **L’URL dans laquelle vous hébergez cette solution ?**
 
-    **Voulez-vous afficher un indicateur de chargement lors du chargement de votre application/onglet ?**
+        Par défaut, le générateur suggère une URL de sites web Azure. Vous testez uniquement votre application localement, de sorte qu’une URL valide n’est pas nécessaire.
 
-    Choisissez **de ne** pas inclure d’indicateur de chargement lors du chargement de votre application ou de votre onglet. La valeur par défaut est non, entrez **n**.
+    * **Voulez-vous afficher un indicateur de chargement lors du chargement de votre application/onglet ?**
 
-   **Voulez-vous que les applications personnelles soient restituées sans barre d’en-tête d’onglet ?**
+        Choisissez **de ne** pas inclure d’indicateur de chargement lors du chargement de votre application ou de votre onglet. La valeur par défaut est non, entrez **n**.
 
-    Choisissez **de** ne pas inclure d’applications personnelles à restituer sans barre d’en-tête d’onglet. La valeur par défaut est non, entrez **n**.
+    * **Voulez-vous que les applications personnelles soient restituées sans barre d’en-tête d’onglet ?**
 
-    **Souhaitez-vous inclure l’infrastructure test et les tests initiaux ? (y/N)**
+        Choisissez **de** ne pas inclure d’applications personnelles à restituer sans barre d’en-tête d’onglet. La valeur par défaut est non, entrez **n**.
 
-    Choisissez **de ne** pas inclure d’infrastructure de test pour ce projet. La valeur par défaut est Oui ; entrez **n**.
+    * **Souhaitez-vous inclure l’infrastructure test et les tests initiaux ? (y/N)**
 
-    **Voulez-vous utiliser Azure Applications Informations pour la télémétrie ? (y/N)**
+        Choisissez **de ne** pas inclure d’infrastructure de test pour ce projet. La valeur par défaut est non, entrez **n**.
 
-    Choisissez **de ne** pas inclure [azure application Informations](/azure/azure-monitor/app/app-insights-overview). La valeur par défaut est non ; entrez **n**.
+    * **Souhaitez-vous inclure la prise en charge esLint ? (y/N)**
 
-    **Nom de l’onglet par défaut (16 caractères maximum) ?**
+        Choisissez de ne pas inclure la prise en charge esLint. La valeur par défaut est non, entrez **n**.
 
-    Nommez votre onglet. Ce nom d’onglet sera utilisé dans l’ensemble de votre projet en tant que composant de chemin d’URL ou de fichier.
+    * **Voulez-vous utiliser Azure Applications Informations pour la télémétrie ? (y/N)**
 
-    **Quel type d’onglet voulez-vous créer ?**
+        Choisissez **de ne** pas inclure [Azure Application Informations](/azure/azure-monitor/app/app-insights-overview). La valeur par défaut est non ; entrez **n**.
 
-    Utilisez les touches de direction pour sélectionner **l’onglet Configurable** .
+    * **Nom de l’onglet par défaut (16 caractères maximum) ?**
 
-    **Quelles étendues avez-vous l’intention d’utiliser pour votre onglet ?**
+        Nommez votre onglet. Ce nom d’onglet est utilisé dans l’ensemble de votre projet en tant que composant de chemin d’URL ou de fichier.
 
-    Vous pouvez sélectionner une équipe ou une conversation de groupe.
+    * **Quel type d’onglet voulez-vous créer ?**
 
-    **Avez-vous besoin Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet ?**
+        Utilisez les touches de direction pour sélectionner **l’onglet Configurable** .
 
-    Choisissez **de** ne pas inclure Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
+    * **Quelles étendues avez-vous l’intention d’utiliser pour votre onglet ?**
 
-    **Voulez-vous que cet onglet soit disponible dans SharePoint Online ? (Y/n)**
+        Vous pouvez sélectionner une équipe ou une conversation de groupe.
 
-    Entrez **n**.
+    * **Avez-vous besoin Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet ?**
 
-    > [!IMPORTANT]
-    > Le composant **de chemin d’accès yourDefaultTabNameTab** est la valeur que vous avez entrée dans le générateur pour le nom de l’onglet par **défaut, ainsi** que le mot **Tab**.
-    >
-    > Par exemple : DefaultTabName: **MyTab** > **/MyTabTab/**
+        Choisissez **de** ne pas inclure Microsoft Azure Active Directory (Azure AD) prise en charge de l’sign-on unique pour l’onglet. La valeur par défaut est oui, entrez **n**.
 
-1. Dans Visual Studio Code’éditeur de code ou n’importe quel éditeur de code, allez dans le répertoire de votre projet et ouvrez le fichier suivant :
+    * **Voulez-vous que cet onglet soit disponible dans SharePoint Online ? (Y/n)**
 
-    ```bash
-    ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
-    ```
+        Entrez **n**.
 
-1. Recherchez la `render()` méthode et ajoutez la balise `<div>` et le contenu suivants en haut du `<PanelBody>` code de conteneur :
+    </details>
 
-    ```html
-        <PanelBody>
-            <div style={styles.section}>
-                Hello World! Yo Teams rocks!
-            </div>
-        </PanelBody>
-    ```
+> [!IMPORTANT]
+> Le composant **de chemin d’accès yourDefaultTabNameTab** est la valeur que vous avez entrée dans le générateur pour le nom de l’onglet par **défaut, ainsi** que le mot **Tab**.
+>
+> Par exemple : DefaultTabName est **MyTab** puis **/MyTabTab/**
 
-1. Veillez à enregistrer le fichier mis à jour.
+### <a name="create-your-app-package"></a>Créer votre package d’application
 
-### <a name="build-and-run-your-application"></a>Créer et exécuter votre application
+Vous devez avoir un package d’application pour créer et exécuter votre application dans Teams. Le package d’application est créé par le biais d’une tâche Gulp qui valide le **fichier manifest.json** et génère le dossier zip dans le répertoire **./package** . À l'invite de commandes, tapez la commande suivante :
 
-À l’invite de commandes, ouvrez le répertoire de votre projet pour effectuer les tâches suivantes.
-
-#### <a name="create-the-app-package"></a>Créer le package d’application
-
-Vous devez avoir un package d’application pour tester votre onglet dans Teams. Il s’agit d’un dossier zip qui contient les fichiers obligatoires suivants :
-
-* Icône **en couleurs complètes** de 192 x 192 pixels.
-* Icône **de plan transparente de** 32 x 32 pixels.
-* Fichier **manifest.json** qui spécifie les attributs de votre application.
-
-Le package est créé par le biais d’une tâche Gulp qui valide le fichier manifest.json et génère le dossier zip dans le répertoire **./package**. Dans l’invite de commandes, entrez la commande suivante :
-
-```bash
+```cmd
 gulp manifest
 ```
 
+### <a name="build-and-run-your-application"></a>Créer et exécuter votre application
+
 #### <a name="build-your-application"></a>Créer votre application
 
-La commande de build transpile votre solution dans le **dossier ./dist** . Entrez la commande suivante dans l’invite de commandes :
+Entrez la commande suivante à l’invite de commandes pour transpiler votre solution dans **le dossier ./dist** :
 
-```bash
+```cmd
 gulp build
 ```
 
-#### <a name="run-your-application-in-localhost"></a>Exécuter votre application dans localhost
+#### <a name="run-your-application"></a>Exécuter votre application
 
-1. Démarrez un serveur web local en entrant ce qui suit dans l’invite de commandes :
+1. À l’invite de commandes, entrez la commande suivante pour démarrer un serveur web local :
 
     ```bash
     gulp serve
     ```
 
-1. Entrez `http://localhost:3007/<yourDefaultAppNameTab>/` dans votre navigateur, remplacez **yourDefaultAppNameTab** par votre nom d’onglet et affichez la page d’accueil de votre application comme illustré dans l’image suivante :
+1. Entrez `http://localhost:3007/<yourDefaultAppNameTab>/` dans votre navigateur pour afficher la page d’accueil de votre application.
 
-    ![capture d’écran de la page d’accueil](~/assets/images/tab-images/homePage.png)
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut" border="true":::
 
 1. Pour afficher la page de configuration de votre onglet, allez sur `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. Les exemples suivants sont présentés :
 
-    ![Capture d’écran de la page de configuration](~/assets/images/tab-images/configurationPage.png)
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Page de configuration de l’onglet" border="true":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-Microsoft Teams est un produit basé sur le cloud et nécessite que le contenu de votre onglet soit disponible à partir du cloud à l’aide de points de terminaison HTTPS. Teams n’autorise pas l’hébergement local. Vous devez publier votre onglet sur une URL publique ou utiliser un proxy qui expose votre port local à une URL internet.
+Pour établir un tunnel sécurisé sur votre onglet, quittez l’host local et entrez la commande suivante :
 
-Pour tester votre extension d’onglet, [utilisez ngrok](https://ngrok.com/docs), qui est intégré à cette application. Ngrok est un outil logiciel de proxy inverse qui crée un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Les points de terminaison web de votre serveur sont disponibles pendant la session en cours sur votre ordinateur. Lorsque l’ordinateur est arrêté ou mis en veille, le service n’est plus disponible.
-
-Dans votre invite de commandes, quittez localhost et entrez les commandes suivantes :
-
-```bash
+```cmd
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> Une fois que votre onglet a été téléchargé sur Microsoft Teams et enregistré, vous pouvez l’afficher dans la galerie d’onglets, l’ajouter à la barre d’onglets et interagir avec lui jusqu’à la fin de votre session tunnel ngrok. Si vous redémarrez votre session ngrok, vous devez mettre à jour votre application avec la nouvelle URL.
+> Une fois que votre onglet est téléchargé vers Microsoft Teams via **ngrok** et enregistré, vous pouvez l’afficher dans Teams jusqu’à la fin de votre session tunnel. Si vous redémarrez votre session ngrok, vous devez mettre à jour votre application avec la nouvelle URL.
 
 ### <a name="upload-your-application-to-teams"></a>Télécharger votre application à Teams
 
-**Pour télécharger votre application sur Teams**
+1. Go to Microsoft Teams and select **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. **Sélectionnez Gérer vos applications**.
+1. **Sélectionnez Publier une application et** **Télécharger une application personnalisée**.
 
-1. Go to Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com) , vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
-1. Dans vos équipes dans le volet gauche, sélectionnez les &#x25CF;&#x25CF;&#x25CF; en de côté de l’équipe que vous utilisez pour tester votre onglet et choisissez Gérer **l’équipe**.
-1. Dans le volet principal, sélectionnez **Applications** dans la barre d’onglets et choisissez **Télécharger une** application personnalisée située dans le coin inférieur droit de la page.
+    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Télécharger application personnalisée" border="true":::
+
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
+    
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet Canal téléchargé" border="true":::
 
-    ![Onglet Canal ajouté](../../assets/images/tab-images/channeltabadded.png)
+1. **Sélectionnez Ajouter** dans la fenêtre pop-up. Votre onglet est téléchargé vers Teams.
+    
+    > [!NOTE]
+    > Si  **Add** ne s’affiche pas dans la boîte de dialogue, supprimez le code suivant du manifeste du dossier zip du package d’application téléchargé. Une fois encore, compressez le dossier et téléchargez-le sur Teams.
+    >
+    >```Json
+    >"staticTabs": [],
+    >"bots": [],
+    >"connectors": [],
+    >"composeExtensions": [],
+    >```
 
-1. **Sélectionnez Ajouter** dans la boîte de dialogue. Votre onglet se charge dans Teams.
-1. Revenir à votre équipe, choisir le canal dans lequel vous souhaitez afficher l’onglet, ➕ sélectionner dans la barre d’onglets et choisir votre onglet dans la galerie.
+1. Revenir à votre équipe, choisir le canal dans lequel vous souhaitez ajouter l’onglet, ➕ sélectionner dans la barre d’onglets et choisir votre onglet dans la liste.
 1. Suivez les instructions pour ajouter un onglet. Il existe une boîte de dialogue de configuration personnalisée pour votre canal ou onglet de groupe.
 1. **Sélectionnez Enregistrer** et votre onglet est ajouté à la barre d’onglets du canal.
 
-    ![Onglet canal chargé](../../assets/images/tab-images/channeltabuploaded.png)
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Onglet canal chargé" border="true":::
 
-# <a name="aspnet-core"></a>[ASP.NET Core](#tab/aspnetcore)
+::: zone-end
 
-### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core"></a>Créer un onglet de canal ou de groupe personnalisé avec ASP.NET Core
+::: zone pivot="razor-csharp"
 
-Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’C# et ASP.Net page Principale. [App Studio pour Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) est également utilisé pour finaliser le manifeste de votre application et déployer votre onglet sur Teams.
+## <a name="create-a-custom-channel-or-group-tab-with-aspnet-core"></a>Créer un onglet de canal ou de groupe personnalisé avec ASP.NET Core
 
-### <a name="prerequisites-for-teams-apps"></a>Conditions préalables pour Teams applications
+1. À l’invite de commandes, créez un répertoire pour votre projet d’onglet.
 
-Vous devez connaître les conditions préalables suivantes :
+1. Clonez l’exemple de référentiel dans votre nouveau répertoire à l’aide de la commande suivante ou vous pouvez télécharger le [code source](https://github.com/OfficeDev/Microsoft-Teams-Samples) et extraire les fichiers :
 
-- Vous devez avoir un client Office 365 et une équipe configurée avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
-    > [!NOTE]
-    > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
+Voici les étapes à suivre pour créer un onglet de canal ou de groupe :
 
-* Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) dans le coin inférieur gauche de l’application Teams et **recherchez App Studio**. Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez **Ajouter dans la** boîte de dialogue pour l’installer.
+* [Générer votre application avec un onglet de canal ou de groupe](#generate-your-application-with-a-channel-or-group-tab-1)
+* [Établir un tunnel sécurisé vers votre onglet](#establish-a-secure-tunnel-to-your-tab-1)
+* [Mettre à jour votre application](#update-your-application)
+* [Créer et exécuter votre application](#build-and-run-your-application-1)
+* [Mettre à jour votre package d’application avec le Portail du développeur](#update-your-app-package-with-developer-portal)
+* [Afficher un aperçu de votre application dans Teams](#preview-your-app-in-teams)
 
-En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
+### <a name="generate-your-application-with-a-channel-or-group-tab"></a>Générer votre application avec un onglet de canal ou de groupe
 
-* Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
+1. Ouvrez Visual Studio puis **sélectionnez Ouvrir un projet ou une solution**.
 
-* Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
+1. Go to Microsoft-Teams-Samplessamplestab-channel-grouprazor-csharp  >  >  >  folder and open **channelGroupTab.sln**.
 
-### <a name="get-the-source-code"></a>Obtenir le code source
+1. Dans Visual Studio, appuyez sur **F5** ou choisissez Démarrer  le débogage à partir du menu **Débogage** de votre application pour vérifier si l’application s’est chargée correctement. Dans un navigateur, allez aux URL suivantes :
 
-À l’invite de commandes, créez un répertoire pour votre projet d’onglet. Un projet simple est fourni pour vous aider à démarrer. Clonez l’exemple de référentiel dans votre nouveau répertoire à l’aide de la commande suivante :
+    * https://localhost:3978/
+    * https://localhost:3978/privacy
+    * https://localhost:3978/tou
 
-```bash
-git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
-```
-
-Vous pouvez également récupérer le code source en téléchargeant le dossier zip et en extrayant les fichiers.
-
-**Pour créer et exécuter le projet d’onglet**
-
-1. Une fois que vous avez le code source, Visual Studio puis **sélectionnez Ouvrir un projet ou une solution**.
-1. Go to the tab application directory and open **ChannelGroupTab.sln**.
-1. Pour créer et exécuter votre application, appuyez sur **F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage** .
-1. Dans un navigateur, go to the following URLs and verify the application loaded properly:
-
-    * `http://localhost:44355`
-    * `http://localhost:44355/privacy`
-    * `http://localhost:44355/tou`
-
-### <a name="review-the-source-code"></a>Passer en revue le code source
+<details>
+<summary><b>Passer en revue le code source</b></summary>
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé * Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendances `ConfigureServices()` . En outre, le modèle vide n’active pas le traitement du contenu statique par défaut, `Configure()` de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du code suivant :
+Ce projet a été créé à partir ASP.NET Core modèle vide d’application web 3.1 avec la case à cocher Avancé * Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendances `ConfigureServices()` . En outre, le modèle vide n’active pas le traitement du contenu statique par défaut, `Configure()` de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du code suivant :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -326,7 +294,7 @@ Ces fichiers doivent être compressés dans un package d’application pour êtr
 
 #### <a name="csproj"></a>.csproj
 
-Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et **sélectionnez Modifier Project fichier**. À la fin du fichier, vous voyez le code suivant qui crée et met à jour votre dossier zip lorsque l’application est créée :
+Dans la Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier**. À la fin du fichier, vous voyez le code suivant qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ```xml
 <PropertyGroup>
@@ -346,55 +314,42 @@ Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit s
   </ItemGroup>
 ```
 
-### <a name="establish-a-secure-tunnel-to-your-tab-for-teams"></a>Établir un tunnel sécurisé vers votre onglet pour Teams
+</details>
 
-Microsoft Teams est un produit basé sur le cloud et nécessite que le contenu de votre onglet soit disponible à partir du cloud à l’aide de points de terminaison HTTPS. Teams n’autorise pas l’hébergement local. Vous devez publier votre onglet sur une URL publique ou utiliser un proxy qui expose votre port local à une URL internet.
+### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-Pour tester votre onglet, utilisez [ngrok](https://ngrok.com/docs). Les points de terminaison web de votre serveur sont disponibles lorsque ngrok est en cours d’exécution sur votre ordinateur. Dans la version gratuite de ngrok, si vous fermez ngrok, les URL sont différentes lors du prochain démarrage.
+À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante pour établir un tunnel sécurisé sur votre onglet :
 
-* À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante :
+```cmd
+ngrok http 3978 --host-header=localhost
+```
 
-    ```bash
-    ngrok http https://localhost:44355 -host-header="localhost:44355"
-    ```
-
-* Ngrok écoute les demandes provenant d’Internet et les approvisionnement vers votre application lorsqu’elle est en cours d’exécution sur le port 44355. Il doit ressembler à `https://y8rCgT2b.ngrok.io/` **l’endroit où y8rCgT2b** est remplacé par votre URL HTTPS alpha-numérique ngrok.
-
-* Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
+Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
 
 ### <a name="update-your-application"></a>Mettre à jour votre application
 
-Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du **bouton Sélectionner**  `saveGray()` `saveRed()`gris ou Rouge déclenche ou, respectivement,  `settings.setValidityState(true)`définit et active le bouton Enregistrer sur la page de configuration. Ce code vous permet Teams que vous avez rempli les conditions requises pour la configuration et que l’installation peut se poursuivre. Les paramètres sont `settings.setSettings` définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+1. Go to the **PagesShared**  >  folder and open **_Layout.cshtml**, and add the following to the <head> section balises :
 
-#### <a name="_layoutcshtml"></a>_Layout.cshtml
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
+    
+    > [!IMPORTANT]
+    > Ne copiez pas et collez les `<script src="...">` URL de cette page, car elles ne représentent pas la dernière version. Pour obtenir la dernière version du SDK, toujours Microsoft Teams [API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
+    
+1. En haut de la balise `script` , insérez un appel à `microsoftTeams.initialize();`.
 
-Pour que votre onglet s’affiche Teams, vous devez inclure le **SDK** `microsoftTeams.initialize()` client JavaScript Microsoft Teams et inclure un appel après le chargement de votre page. Voici comment votre onglet et le client Teams communiquent :
+1. Go to the **Pages** folder and open **Tab.cshtml**
 
-Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
-
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
-
-> [!IMPORTANT]
-> Ne copiez pas et collez les `<script src="...">` URL de cette page, car elles ne représentent pas la dernière version. Pour obtenir la dernière version du SDK, toujours Microsoft Teams [API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
-
-#### <a name="tabcshtml"></a>Tab.cshtml
-
-**Pour mettre à jour Tab.cshtml**
-
-1. **Ouvrez Tab.cshtml** dans Visual Studio et mettez à jour l’incorporé `<script>`.
-
-1. En haut du script, appelez `microsoftTeams.initialize()`.
+    Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du **bouton Sélectionner**  `saveGray()` `saveRed()`gris ou Rouge déclenche ou, respectivement,  `settings.setValidityState(true)`définit et active le bouton Enregistrer sur la page de configuration. Ce code vous permet Teams que vous avez rempli les conditions requises pour la configuration et que l’installation peut se poursuivre. Les paramètres sont `settings.setSettings` définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
 1. Mettez à jour `websiteUrl` les valeurs `contentUrl` de chaque fonction avec l’URL HTTPS ngrok dans votre onglet.
 
     Votre code doit maintenant inclure les données suivantes avec **y8rCgT2b** remplacé par votre URL ngrok :
 
     ```javascript
-        microsoftTeams.initialize();
-
+        
         let saveGray = () => {
             microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
                 microsoftTeams.settings.setSettings({
@@ -422,135 +377,100 @@ Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to t
 
 1. Enregistrez le **tab.cshtml mis à jour**.
 
-### <a name="build-and-run-your-application-for-teams"></a>Créer et exécuter votre application pour Teams
-
-**Pour créer et exécuter votre application**
+### <a name="build-and-run-your-application"></a>Créer et exécuter votre application
 
 1. Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage**.
+
 1. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
-> [!TIP]
-> Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution**. Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour votre application avec la nouvelle URL.
+    > [!TIP]
+    > Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution**. Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour votre application avec la nouvelle URL.
 
-### <a name="upload-your-tab-for-teams"></a>Télécharger votre onglet pour Teams
-
-> [!NOTE]
-> App Studio peut être utilisé pour modifier votre **fichier manifest.json** et télécharger le package terminé dans Teams. Vous pouvez également modifier manuellement le **fichier manifest.json** . Si vous le faites, veillez à générer à nouveau la solution pour créer **tab.zipfichier à** télécharger.
-
-**Pour télécharger votre onglet avec App Studio**
+### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec le Portail du développeur
 
 1. Go to Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
 
-1. Go to **App Studio** and select the **Manifest editor** tab.
+1. Accédez à votre **portail développeur** dans Teams.
 
-1. **Sélectionnez Importer une application existante dans** **l’éditeur** de manifeste pour commencer à mettre à jour le package d’application pour votre onglet. Le code source est livré avec son propre manifeste partiellement complet. Le nom de votre package d’application **esttab.zip**. Il est disponible à partir du chemin d’accès suivant :
+1. **Ouvrez applications** et sélectionnez **Importer l’application**.
+
+1. Le nom de votre package d’application **esttab.zip**. Il est disponible dans le chemin d’accès suivant :
 
     ```bash
-    /bin/Debug/netcoreapp2.2/tab.zip
+    /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Télécharger **tab.zip** app Studio.
+1. **Sélectionneztab.zip** et ouvrez-le dans le Portail du développeur.
 
-#### <a name="update-your-app-package-with-manifest-editor"></a>Mettre à jour votre package d’application avec l’éditeur de manifeste
+1. Un **ID d’application par défaut** est créé et rempli dans la section **Informations de** base.
 
-Une fois que vous avez chargé votre package d’application dans App Studio, vous devez le configurer.
+1. Ajoutez la description courte et longue de votre application dans **Descriptions**.
 
-Sélectionnez la vignette de votre onglet nouvellement importé dans le panneau droit de la page d’accueil de l’éditeur de manifeste.
+1. Dans **Les informations du** développeur, ajoutez les détails requis et dans le site web (doit être une **URL HTTPS valide)** donnez votre URL HTTPS ngrok.
 
-Il existe une liste d’étapes sur le côté gauche de l’éditeur de manifeste, et à droite, une liste de propriétés qui doivent avoir des valeurs pour chacune de ces étapes. La plupart des informations ont été fournies par **votre manifest.json** , mais vous devez mettre à jour certains champs.
+1. Dans **les URL d’application**, mettez à jour la politique de confidentialité `https://<yourngrokurl>/privacy` et les conditions d’utilisation pour `https://<yourngrokurl>/tou` et enregistrer.
 
-##### <a name="details-app-details"></a>Détails : détails de l’application
+1. Dans **les fonctionnalités de** l’application, sélectionnez Application personnelle, entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide. 
 
-Dans la section **Détails de l’application** :
+1. Sélectionnez **Enregistrer**.
 
-1. Sous **Identification**, **sélectionnez Générer** pour remplacer l’ID d’espace réservé par le GUID requis pour votre onglet.
+1. Dans la section Domaines, les domaines de vos onglets doivent contenir votre URL ngrok sans le préfixe `<yourngrokurl>.ngrok.io`HTTPS.
 
-1. Sous **Informations sur le développeur**, mettez **à jour le site web** avec votre URL HTTPS **ngrok** .
+### <a name="preview-your-app-in-teams"></a>Afficher un aperçu de votre application dans Teams
 
-1. Sous **URL d’application**, mettez à jour la déclaration **de confidentialité** `https://<yourngrokurl>/privacy` et les **conditions d’utilisation** `https://<yourngrokurl>/tou`>.
+1. **Sélectionnez Aperçu dans Teams** la barre d’outils du Portail du développeur. Le portail du développeur vous informe que votre application est correctement rechargée.
 
-##### <a name="capabilities-tabs"></a>Fonctionnalités : onglets
+1. **Sélectionnez Gérer vos applications**. Votre application est répertoriée dans les applications téléchargées de côté.
 
-Dans la section **Onglets** :
+1. Recherchez votre application à l’aide de la recherche, sélectionnez &#x25CF;&#x25CF;&#x25CF;.
 
-1. Sous **l’onglet Équipe**, sélectionnez **Ajouter**.
+1. Sélectionnez **l’option Afficher les détails** . La fenêtre détails de l’application s’affiche pour votre application.
 
-1. Dans la **fenêtre pop-up de** l’onglet Équipe, mettez à jour **l’URL de configuration** sur `https://<yourngrokurl>/tab`.
+1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdownAdd" border="true":::&nbsp; >  **to team** to load the tab in a team. Votre onglet est désormais disponible dans Teams.
 
-1. **Assurez-vous que les case** à cocher Mise  à jour de la configuration **, Équipe** et Groupe sont sélectionnées et sélectionnez **Enregistrer**.
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Onglet canal ASPNET chargé" border="true":::
 
-##### <a name="finish-domains-and-permissions"></a>Finish: Domains and permissions
+::: zone-end
 
-Dans la section **Domaines et autorisations** , les domaines de vos **onglets** doivent contenir votre URL ngrok sans le préfixe `<yourngrokurl>.ngrok.io/`HTTPS.
+::: zone pivot="mvc-csharp"
 
-##### <a name="finish-test-and-distribute"></a>Fin : Tester et distribuer
+## <a name="create-a-custom-channel-or-group-tab-with-aspnet-core-mvc"></a>Créer un onglet de canal ou de groupe personnalisé avec ASP.NET Core MVC
 
-> [!IMPORTANT]
-> À droite, dans **Description**, vous voyez l’avertissement suivant :
->
-> &#9888; « **Le tableau « validDomains » ne peut pas contenir de site de tunnel...** »
->
-> Cet avertissement peut être ignoré lors du test de votre onglet.
+1. À l’invite de commandes, créez un répertoire pour votre projet d’onglet.
 
-1. Dans la section **Tester et distribuer** , sélectionnez **Installer**.
+1. Clonez l’exemple de référentiel dans votre nouveau répertoire à l’aide de la commande suivante ou vous pouvez télécharger le [code source](https://github.com/OfficeDev/Microsoft-Teams-Samples) et extraire les fichiers :
 
-1. Dans la boîte de dialogue de fenêtre instantanée,  sélectionnez Ajouter à une équipe ou, dans la zone de la boîte de dialogue, sélectionnez Ajouter **à une conversation**.
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
-1. Choisissez l’équipe ou la conversation dans laquelle vous souhaitez afficher l’onglet, puis **sélectionnez Configurer un onglet**.
+Voici les étapes à suivre pour créer un onglet de canal ou de groupe :
 
-1. Dans la boîte de dialogue de fenêtre pop-up suivante, sélectionnez Gris ou **Rouge**, puis sélectionnez **Enregistrer**.
+* [Générer votre application avec un onglet de canal ou de groupe](#generate-your-application-with-a-channel-or-group-tab-2)
+* [Établir un tunnel sécurisé vers votre onglet](#establish-a-secure-tunnel-to-your-tab-2)
+* [Mettre à jour votre application](#update-your-application-1)
+* [Créer et exécuter votre application](#build-and-run-your-application-2)
+* [Mettre à jour votre package d’application avec le Portail du développeur](#update-your-app-package-with-developer-portal-1)
+* [Afficher un aperçu de votre application dans Teams](#preview-your-app-in-teams-1)
 
-1. Pour afficher votre onglet, allez à l’équipe ou à la conversation dans laquelle vous avez installé l’onglet, puis sélectionnez-le dans la barre d’onglets. La page que vous avez choisie lors de la configuration s’affiche.
+### <a name="generate-your-application-with-a-channel-or-group-tab"></a>Générer votre application avec un onglet de canal ou de groupe
 
-    ![Onglet canal ASPNET chargé](../../assets/images/tab-images/channeltabaspnetuploaded.png)
+1. Ouvrez Visual Studio puis **sélectionnez Ouvrir un projet ou une solution**.
 
-# <a name="aspnet-core-mvc"></a>[ASP.NET Core MVC](#tab/aspnetcoremvc)
+1. Go to Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp  >  >  >  folder and open **ChannelGroupTabMVC.sln**.
 
-### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core-mvc"></a>Créer un onglet de canal ou de groupe personnalisé avec ASP.NET Core MVC
+1. Dans Visual Studio, appuyez sur **F5** ou choisissez Démarrer  le débogage à partir du menu **Débogage** de votre application pour vérifier si l’application s’est chargée correctement. Dans un navigateur, allez aux URL suivantes :
 
-Vous pouvez créer un onglet de canal ou de groupe personnalisé à l’C# et ASP.Net Core MVC. [App Studio pour Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) est également utilisé pour finaliser le manifeste de votre application et déployer votre onglet sur Teams.
+    * https://localhost:3978/
+    * https://localhost:3978/privacy
+    * https://localhost:3978/tou
 
-### <a name="prerequisites-for-custom-channel-or-group-tab"></a>Conditions préalables pour un onglet de groupe ou de canal personnalisé
-
-* Vous devez avoir un client Microsoft 365 et une équipe configurés avec l’application Autoriser le téléchargement **d’applications** personnalisées activée. Pour plus d’informations, [voir préparer votre Office 365 client](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-
-    > [!NOTE]
-    > Si vous n’avez pas de compte Microsoft 365, vous pouvez vous inscrire à un abonnement gratuit via le programme [pour les développeurs Microsoft](https://developer.microsoft.com/microsoft-365/dev-program). L’abonnement reste actif tant que vous l’utilisez pour le développement continu.
-
-* Utilisez App Studio pour importer votre application dans Teams. Pour installer App Studio, sélectionnez **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) dans le coin inférieur gauche de l’application Teams et **recherchez App Studio**. Une fois que vous avez trouvé la vignette, sélectionnez-la et choisissez **Ajouter dans la** boîte de dialogue pour l’installer.
-
-En outre, ce projet nécessite que les logiciels suivants sont installés dans votre environnement de développement :
-
-* Version actuelle de l’Visual Studio IDE avec la charge de travail de développement **.NET CORE sur** plusieurs plateformes installée. Si vous n’avez pas encore Visual Studio, vous pouvez télécharger et installer la dernière version [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) gratuitement.
-
-* Outil de proxy inverse [ngrok](https://ngrok.com) . Utilisez ngrok pour créer un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Vous pouvez [télécharger ngrok](https://ngrok.com/download).
-
-### <a name="get-the-source-code"></a>Obtenir le code source
-
-À l’invite de commandes, créez un répertoire pour votre projet d’onglet. Un projet [d’onglet de groupe](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) de canaux simple est fourni pour vous aider à démarrer. Clonez l’exemple de référentiel dans votre nouveau répertoire à l’aide de la commande suivante :
-
-```bash
-git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
-```
-
-Vous pouvez également récupérer le code source en téléchargeant le dossier zip et en extrayant les fichiers.
-
-**Pour créer et exécuter le projet d’onglet**
-
-1. Une fois que vous avez le code source, Visual Studio puis **sélectionnez Ouvrir un projet ou une solution**.
-1. Go to the tab application directory and open **ChannelGroupTabMVC.sln**.
-1. Pour créer et exécuter votre application, appuyez sur **F5** ou choisissez **Démarrer le** débogage dans le menu **Débogage** .
-1. Dans un navigateur, accédez aux URL suivantes et vérifiez que l’application s’est chargée correctement :
-
-    * `http://localhost:44360`
-    * `http://localhost:44360/privacy`
-    * `http://localhost:44360/tou`
-
-### <a name="review-the-source-code"></a>Passer en revue le code source
+<details>
+<summary><b>Passer en revue le code source</b></summary>
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir ASP.NET Core modèle vide application web 2.2 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendances `ConfigureServices()` . En outre, le modèle vide n’active pas le traitement du contenu statique par défaut, `Configure()` de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du code suivant :
+Ce projet a été créé à partir ASP.NET Core modèle vide d’application web 3.1 avec la case à cocher Avancé - Configurer pour **HTTPS** sélectionnée lors de l’installation. Les services MVC sont enregistrés par la méthode de l’infrastructure d’injection de dépendances `ConfigureServices()` . En outre, le modèle vide n’active pas le traitement du contenu statique par défaut, `Configure()` de sorte que l’intermédiaire des fichiers statiques est ajouté à la méthode à l’aide du code suivant :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -580,7 +500,7 @@ Ces fichiers doivent être compressés dans un package d’application pour êtr
 
 #### <a name="csproj"></a>.csproj
 
-Dans la Visual Studio’Explorateur de solutions, cliquez avec le bouton droit sur le projet et **sélectionnez Modifier Project fichier**. À la fin du fichier, vous voyez le code suivant qui crée et met à jour votre dossier zip lorsque l’application est créée :
+Dans la Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Modifier Project fichier**. À la fin du fichier, vous voyez le code suivant qui crée et met à jour votre dossier zip lorsque l’application est créée :
 
 ```xml
 <PropertyGroup>
@@ -616,25 +536,123 @@ Voici les différentes vues dans ASP.NET Core MVC :
 
 Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiquement des valeurs vers les vues.
 
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
+</details>
 
-* Ouvrez une invite de commandes à la racine du répertoire de votre projet et exécutez la commande suivante :
+### <a name="establish-a-secure-tunnel-to-your-tab"></a>Établir un tunnel sécurisé vers votre onglet
 
-    ```bash
-    ngrok http https://localhost:443560 -host-header="localhost:44360"
-    ```
+À l’invite de commandes à la racine du répertoire de votre projet, exécutez la commande suivante pour établir un tunnel sécurisé sur votre onglet :
 
-* Ngrok écoute les demandes provenant d’Internet et les route vers votre application lorsqu’elle est en cours d’exécution sur le port 44355. Il doit ressembler à `https://y8rCgT2b.ngrok.io/` **l’endroit où y8rCgT2b** est remplacé par votre URL HTTPS alpha-numérique ngrok.
+```cmd
+ngrok http 3978 --host-header=localhost
+```
 
-* Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
+Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution et notez l’URL.
 
 ### <a name="update-your-application"></a>Mettre à jour votre application
 
-Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du **bouton Sélectionner**  gris  ou Rouge, `saveGray()` `saveRed()`déclenche ou, respectivement, `settings.setValidityState(true)`définit et active le bouton Enregistrer sur la page de configuration. Ce code vous permet Teams que vous avez rempli les conditions requises pour la configuration et que l’installation peut se poursuivre. Lors de l’enregistrer, les paramètres sont `settings.setSettings` définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
+1. Go to the **ViewsShared**  >  folder and open **_Layout.cshtml**, and add the following to the <head> section balises :
 
-[!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
+    
+    > [!IMPORTANT]
+    > Ne copiez pas et collez les `<script src="...">` URL de cette page, car elles ne représentent pas la dernière version. Pour obtenir la dernière version du SDK, toujours Microsoft Teams [API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
+    
+1. En haut de la balise `script` , insérez un appel à `microsoftTeams.initialize();`.
 
----
+1. Go to the **Tab** folder and open **Tab.cshtml**
+
+    Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du **bouton Sélectionner**  `saveGray()` `saveRed()`gris ou Rouge déclenche ou, respectivement,  `settings.setValidityState(true)`définit et active le bouton Enregistrer sur la page de configuration. Ce code vous permet Teams que vous avez rempli les conditions requises pour la configuration et que l’installation peut se poursuivre. Les paramètres sont `settings.setSettings` définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue. 
+
+1. Mettez à jour `websiteUrl` les valeurs `contentUrl` de chaque fonction avec l’URL HTTPS ngrok dans votre onglet.
+
+    Votre code doit maintenant inclure les données suivantes avec **y8rCgT2b** remplacé par votre URL ngrok :
+
+    ```javascript
+
+        let saveGray = () => {
+            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                    contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                saveEvent.notifySuccess();
+            });
+        }
+    
+        let saveRed = () => {
+            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                    contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                saveEvent.notifySuccess();
+            });
+        }
+    ```
+
+1. Veillez à enregistrer le **tab.cshtml mis à jour**.
+
+### <a name="build-and-run-your-application"></a>Créer et exécuter votre application
+
+1. Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage**.
+
+1. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
+
+    > [!TIP]
+    > Vous devez avoir votre application en cours d Visual Studio et ngrok en cours d’exécution pour effectuer les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour travailler dessus, **maintenez ngrok en cours d’exécution**. Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il renvoie une nouvelle URL et vous devez mettre à jour votre application avec la nouvelle URL.
+
+### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec le Portail du développeur
+
+1. Go to Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
+
+1. Go to **Developer portal** in Teams.
+
+1. **Ouvrez applications** et sélectionnez **Importer l’application**.
+
+1. Le nom de votre package d’application **esttab.zip**. Il est disponible dans le chemin d’accès suivant :
+
+    ```bash
+    /bin/Debug/netcoreapp3.1/tab.zip
+    ```
+
+1. **Sélectionneztab.zip** et ouvrez-le dans le Portail du développeur.
+
+1. Un **ID d’application par défaut** est créé et rempli dans la section **Informations de** base.
+
+1. Ajoutez la description courte et longue de votre application dans **Descriptions**.
+
+1. Dans **Les informations du** développeur, ajoutez les détails requis et dans le site web (doit être une **URL HTTPS valide)** donnez votre URL HTTPS ngrok.
+
+1. Dans **les URL d’application**, mettez à jour la politique de confidentialité `https://<yourngrokurl>/privacy` et les conditions d’utilisation pour `https://<yourngrokurl>/tou` et enregistrer.
+
+1. Dans **les fonctionnalités de** l’application, sélectionnez Application personnelle, entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide.
+
+1. Sélectionnez **Enregistrer**.
+
+1. Dans la section Domaines, les domaines de vos onglets doivent contenir votre URL ngrok sans le préfixe `<yourngrokurl>.ngrok.io`HTTPS.
+
+### <a name="preview-your-app-in-teams"></a>Afficher un aperçu de votre application dans Teams
+
+1. **Sélectionnez Aperçu dans Teams** la barre d’outils du Portail du développeur. Le portail du développeur vous informe que votre application est correctement rechargée.
+
+1. **Sélectionnez Gérer vos applications**. Votre application est répertoriée dans les applications téléchargées de côté.
+
+1. Recherchez votre application à l’aide de la recherche, sélectionnez &#x25CF;&#x25CF;&#x25CF;.
+
+1. Sélectionnez **l’option Afficher les détails** . La fenêtre détails de l’application s’affiche pour votre application.
+
+1. Sélectionnez &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="l’onglet Canal ASPNET uploadedAdd" border="true":::&nbsp; >  **vers** l’équipe pour charger l’onglet Teams. Votre onglet est désormais disponible dans Teams.
+
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Onglet canal ASPNET MVC téléchargé" border="true":::
+
+::: zone-end
 
 ## <a name="next-step"></a>Étape suivante
 

@@ -2,7 +2,7 @@
 title: Envoyer des messages proactifs
 metadata:
   title: Envoyer des messages proactifs
-  description: Dans ce scénario, vous allez apprendre à envoyer des messages proactifs
+  description: Dans ce module, découvrez comment envoyer des messages proactifs, tels que des messages de bienvenue, des messages programmés et des notifications à partir d’un bot
   audience: Developer
   level: Beginner
   ms.date: 06/23/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: En savoir plus sur les messages proactifs
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 0a89892df09816785a3848db442c1573ba9f04f8
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: 9738be897a0f520c137424eb8f5d062c41396f13
+  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674844"
+  ms.lasthandoff: 03/31/2022
+  ms.locfileid: "64571221"
 items:
 - durationInMinutes: 1
   content: "Un message proactif est un message envoyé par un bot qui ne répond pas à une demande d’un utilisateur. Cela peut inclure des messages tels que :\n - Les messages de bienvenue\n - Notifications\n - Messages planifiés\n \nCe guide pas à pas vous aide à envoyer un message proactif à partir d’un bot. Vous verrez les sorties suivantes :\n\n* Message d’bonjour proactif dans la conversation        \n![Hello proactif dans la conversation](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* Message Hello proactif en tant que carte adaptative    \n![Hello proactif dans la carte adaptative](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"

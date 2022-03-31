@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 376d12b1fce2352ebfd92312c3154806b9bda5e2
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464816"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590758"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet Teams’une page à l’autre Microsoft 365
 
@@ -38,7 +38,7 @@ Le test de votre application nécessite les étapes suivantes :
 
 Après ces étapes, votre application doit apparaître dans les versions d’aperçu Outlook et Office applications.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
 Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
@@ -54,7 +54,7 @@ Pour terminer ce didacticiel, vous aurez besoin des instructions ci-après :
 
 Si vous avez une application d’onglet personnel existante, faites une copie ou une branche de votre projet de production pour tester et mettez à jour votre ID d’application dans le manifeste de l’application pour utiliser un nouvel identificateur (distinct de l’ID d’application de production).
 
-Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de l’exemple de mise en route avec la liste de [todos](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application d’onglet personnel à l’aide de l’extension Teams Shared Computer Toolkit pour Visual Studio Code. Vous pouvez également commencer avec le même exemple de liste de todos mis à jour pour l’aperçu du [SDK TeamsJS v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) et passer à l’aperçu de votre onglet personnel dans d’autres Microsoft 365 [expériences](#preview-your-personal-tab-in-other-microsoft-365-experiences). L’exemple mis à jour est également disponible dans Teams Shared Computer Toolkit extension : *DevelopmentView* >  *samplesTodo* >  **List (Works in Teams, Outlook and Office)**.
+Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de Prise en main avec l’exemple de liste de [todos](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application d’onglet personnel à l’aide de l’extension Teams Shared Computer Toolkit pour Visual Studio Code. Vous pouvez également commencer avec le même exemple de liste de todos mis à jour pour l’aperçu du [SDK TeamsJS v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) et passer à l’aperçu de votre onglet personnel dans d’autres Microsoft 365 [expériences](#preview-your-personal-tab-in-other-microsoft-365-experiences). L’exemple mis à jour est également disponible dans Teams Shared Computer Toolkit extension : *DevelopmentView* >  *samplesTodo* >  **List (Works in Teams, Outlook and Office)**.
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Exemple de liste de todos (fonctionne dans Teams, Outlook et Office) dans Teams Shared Computer Toolkit":::
 
@@ -119,20 +119,20 @@ Si votre application utilise des en-têtes de stratégie de sécurité du [conte
 
 |Microsoft 365 hôte| autorisation frame-ancêtre|
 |--|--|
-| Teams | `teams.microsoft.com` |
-| Bureau | `*.office.com` |
+| Équipes | `teams.microsoft.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour Azure AD’inscription de l’application pour l’sso
 
-Azure Active Directory l’signature unique (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook que dans [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso). Toutefois, vous devez ajouter plusieurs identificateurs d’application client à l’inscription de l’application Azure AD de votre application onglet dans le portail d’inscription des applications de votre client.
+Azure Active Directory L’signature unique (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook que dans [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), mais vous devez ajouter plusieurs identificateurs d’application client à l’inscription de l’application Azure AD de votre application onglet dans l’application *de votre client inscriptions d'applications* portail.
 
 1. Connectez-vous [Microsoft Azure portail avec](https://portal.azure.com) votre compte client en bac à sable.
-1. Ouvrez le **blade d’inscription de l’application** .
+1. Ouvrez **le inscriptions d'applications’espace**.
 1. Sélectionnez le nom de votre application d’onglet personnel pour ouvrir son inscription.
 1. **Sélectionnez Exposer une API** (sous *Gérer*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du blade *App registrations* sur le portail Azure":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du blade *inscriptions d'applications* sur Portail Azure":::
 
 Dans la section **Applications clientes autorisées** , assurez-vous que toutes les valeurs `Client Id` suivantes sont ajoutées :
 
@@ -173,9 +173,9 @@ Vous pouvez épingler l’application pour un accès rapide ou trouver votre app
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Afficher un aperçu de votre onglet personnel dans d’Microsoft 365 expériences utilisateur
 
-Lorsque vous Teams mis à niveau votre onglet personnel et que vous le chargez de nouveau dans Teams, il s’exécute également dans les clients de bureau et web Outlook et les clients Office sur le Web (office.com). Voici comment l’afficher en aperçu à partir de Microsoft 365 expériences utilisateur.
+Lorsque vous mettre à niveau votre onglet personnel Teams et le chargez de nouveau dans Teams, il s’exécute en Outlook sur Windows, sur le web, sur Office sur Windows et sur le web (office.com). Voici comment l’afficher en aperçu à partir de Microsoft 365 expériences utilisateur.
 
-### <a name="outlook"></a>Outlook
+### <a name="outlook-on-windows"></a>Outlook sur Windows
 
 Pour afficher votre application en cours d’exécution Outlook sur Windows bureau :
 
@@ -195,7 +195,7 @@ Pour afficher votre application dans Outlook sur le web :
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale de outlook.com pour voir vos onglets personnels installés":::
 
-### <a name="office"></a>Bureau
+### <a name="office-on-windows"></a>Office pour Windows
 
 Pour afficher votre application en cours d’exécution Office sur Windows bureau :
 
@@ -215,7 +215,7 @@ Pour afficher un aperçu de l’exécution de votre application Office sur le We
 
 :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » sur la barre latérale de office.com pour voir vos onglets personnels installés":::
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Prochaines étapes
 
 Outlook- et Office onglets personnels activés sont en prévisualisation et ne sont pas pris en charge pour une utilisation en production. Voici comment distribuer votre application d’onglet personnel pour afficher un aperçu des audiences à des fins de test.
 

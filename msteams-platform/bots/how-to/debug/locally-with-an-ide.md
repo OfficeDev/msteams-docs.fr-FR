@@ -5,12 +5,12 @@ description: Découvrez comment tester et déboguer votre bot localement avec un
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0085d38ef2dafc4708772222fb9b173a12afedd7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453368"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590702"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
@@ -27,7 +27,7 @@ Il existe deux méthodes pour charger votre application :
 
 > [!NOTE]
 > Pour modifier le manifeste et re-télécharger votre application, supprimez le [bot](#delete-a-bot-from-teams) avant de télécharger le package d’application modifié.
-> Pour tester le bot, activez le chargement de version test dans Teams. Voir [activer le chargement de version latérale](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> Pour tester le bot, activez le chargement de version test dans Teams. Voir [activer le chargement de version latérale](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## <a name="debug-your-bot-locally"></a>Déboguer votre bot localement
 

@@ -1,16 +1,16 @@
 ---
 title: Envoyer et recevoir des fichiers via le bot
-description: Découvrez comment envoyer et recevoir des fichiers via le bot, utiliser des API Graph pour toutes les étendues Teams, utiliser des API de bot Teams à l’aide d’exemples de code et d’exemples.
+description: Découvrez comment envoyer et recevoir des fichiers via le bot à l’aide Graph API pour les étendues personnelles, de canal et de groupchat. Utilisez Teams’API de bot à l’aide d’exemples de code basés sur le SDK v4 Bot Framework.
 keywords: les fichiers de bots teams envoient la réception
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 787de4c774ae1b4cde71f74ed578668ca99a8f95
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452843"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590723"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 

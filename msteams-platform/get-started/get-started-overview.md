@@ -4,12 +4,12 @@ description: Vue d’ensemble de Démarrage pour la documentation pour les déve
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemples de développeurs Microsoft Teams
-ms.openlocfilehash: 4dc9c77cacea5af84164bbb6e7c56a50461a0b0d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: e30aae82c4251b9d32556032a7f4165ffc6ab4b1
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765875"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571424"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -49,7 +49,7 @@ Si vous êtes déjà familiarisé avec le workflow Yeoman, vous préférerez peu
 Nous allons maintenant créer votre première application Teams. Tout d’abord, choisissez votre langage (ou infrastructure) et préparez votre environnement de développement.
 
 > [!div class="nextstepaction"]
-> [Créer une application Teams à l’aide de Blazor](../sbs-gs-blazorapp.yml)
+> [Créer une application Teams à l’aide de Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
 > [Créer une application Teams avec JavaScript à l’aide de React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]

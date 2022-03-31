@@ -4,12 +4,12 @@ description: Découvrez comment inscrire un nouveau bot d’appel audio/vidéo p
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’un média audio/vidéo audio/vidéo de bot
-ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1a90e430ba0c5bc4ae1ab246baa85a5d33507a43
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727564"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590765"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Enregistrer le bot d’appels et de réunions pour Microsoft Teams
 
@@ -84,7 +84,7 @@ Vous devez configurer les autorisations d’application pour votre bot à l’av
 
 Pour les applications utilisant le point de terminaison Azure AD V1, un administrateur client peut consentir aux autorisations d’application à l’aide du portail [Microsoft Azure](https://portal.azure.com) lorsque votre application est installée dans son organisation. Vous pouvez également fournir une expérience d’inscription dans votre application par le biais de laquelle les administrateurs peuvent consentir aux autorisations que vous avez configurées. Une fois le consentement de l’administrateur enregistré Azure AD, votre application peut demander des jetons sans avoir à demander à nouveau le consentement.
 
-Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur [le Microsoft Azure web](https://portal.azure.com). Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide Azure AD point de terminaison V2`/adminconsent`. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur](/graph/uth-v2-service#3-get-administrator-consent).
+Vous pouvez compter sur un administrateur pour accorder les autorisations dont votre application a besoin sur [le Microsoft Azure web](https://portal.azure.com). Une meilleure option consiste à fournir une expérience d’inscription aux administrateurs à l’aide Azure AD point de terminaison V2`/adminconsent`. Pour plus d’informations, voir [les instructions sur la construction d’une URL de consentement d’administrateur](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > Pour construire l’URL de consentement de l’administrateur client, un URI de redirection configuré ou une URL de réponse dans le portail [d’inscription](https://apps.dev.microsoft.com/) de l’application est requis. Pour ajouter des URL de réponse pour votre bot, accédez à l’inscription de votre bot, choisissez Manifeste de l’application **Options** >  **avancéesEdit**. Ajoutez votre URL de redirection à la `replyUrls` collection.
@@ -111,3 +111,4 @@ Suivez le [guide pas à pas](../../sbs-calling-and-meeting.yml) pour configurer 
 
 * [Notifications d’appel entrant](~/bots/calls-and-meetings/call-notifications.md)
 * [Développer des bots d’appels et de réunion en ligne sur votre PC local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [Afficher l’autorisation de l’application et accorder le consentement de l’administrateur](/MicrosoftTeams/app-permissions-admin-center)

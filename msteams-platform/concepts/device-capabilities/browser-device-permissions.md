@@ -4,18 +4,14 @@ keywords: autorisations des fonctionnalités des applications Teams
 description: Récupérer en toute sécurité la prise en charge des autorisations d’appareil pour les applications dans notre client web
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 2b1d00a6bd0059df042dacedb043d89c73a972f9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 02a3602f17923506cba6aa6e83548595aac60852
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453004"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571473"
 ---
 # <a name="device-permissions-for-the-browser"></a>Autorisations de périphérique pour le navigateur
-
-> [!NOTE]
-> La dernière mise à jour sur la façon dont les autorisations d’appareil sont gérées dans le navigateur est actuellement disponible en [prévisualisation publique pour les](../../resources/dev-preview/developer-preview-intro.md) développeurs uniquement.
-> Cette mise à jour sera généralement disponible à partir du 01 février 2022 et se terminera fin février.
 
 Teams qui nécessitent des autorisations d’appareil, telles que l’accès à l’appareil photo ou au microphone, obligent désormais les utilisateurs à accorder manuellement des autorisations au niveau de chaque application dans le navigateur web. Auparavant, le navigateur  géré comment accorder des autorisations d’accès, mais maintenant ces autorisations sont gérées dans Microsoft Teams. Cela a une incidence sur la façon dont vous concevez votre application et s’ils requièrent ces autorisations dans le navigateur.
 

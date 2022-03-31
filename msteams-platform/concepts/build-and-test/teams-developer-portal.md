@@ -5,12 +5,12 @@ keywords: mise en place des équipes du portail de développement
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511233"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464781"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Gérer vos applications avec le Portail des développeurs pour Microsoft Teams
 
@@ -19,9 +19,7 @@ Le <a href="https://dev.teams.microsoft.com" target="_blank">Portail des dévelo
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Capture d’écran montrant la page d’accueil du portail de développement pour Teams.":::
 
 > [!NOTE]
->
-> * Pour l’instant, le portail du développeur n’est pas disponible pour les Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-Haut ou Département de la Défense (DOD).
-> * Toutefois, vous pouvez utiliser un client normal pour créer une application dans le portail du développeur, télécharger l’application et télécharger l’application à l’aide de [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) dans un cloud national. Pour plus d’informations, voir [Déploiements dans le cloud national](/graph/deployments).
+> Pour l’instant, le portail du développeur n’est pas disponible pour les Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), Cloud de la communauté du secteur public-Haut ou Département de la Défense (DOD).
 
 ## <a name="register-an-app"></a>Inscrire une application
 

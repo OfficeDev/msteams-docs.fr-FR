@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 0528654b2867552af802fb95e3a6e47ca3228414
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674991"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590646"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud
 
@@ -66,7 +66,7 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 | Application web pour bot | Héberger votre application de bot | Ajoute l’identité affectée à l’utilisateur pour accéder à d’autres ressources Azure. <br /> Ajoute les paramètres d’application requis par [le SDK TeamsFx](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure | Partagé entre différentes fonctionnalités et ressources |
 
-### <a name="resource-creation-for-azure-functions-in-the-project"></a>Création de ressources pour les fonctions Azure dans le projet
+### <a name="resource-creation-for-azure-functions-in-the-project"></a>Création de ressources pour Azure Functions dans le projet
 
 |Resource|Objectif| Description|
 |----------|--------------------------------|-----|
@@ -75,15 +75,15 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 | Stockage Azure pour l’application de fonction | Requis pour créer une application de fonction |Non applicable|
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure | Partagé entre différentes fonctionnalités et ressources |
 
-### <a name="resource-creation-for-azure-sql-in-the-project"></a>Création de ressources pour les SQL Azure dans le projet
+### <a name="resource-creation-for-azure-sql-in-the-project"></a>Création de ressources pour Azure SQL dans le projet
 
 |Resource|Objectif | Description |
 |----------|--------------------------------|-----|
-| Serveur SQL Azure | Héberger l’instance de base de données Azure SQL | Permet à tous les services Azure d’accéder au serveur |
-| Base de données azure SQL données | Stocker des données pour votre application | Accorde à l’utilisateur une identité, une autorisation de lecture ou d’écriture sur la base de données |
+| Azure SQL serveur | Héberger l’instance Azure SQL base de données | Permet à tous les services Azure d’accéder au serveur |
+| Azure SQL de données | Stocker des données pour votre application | Accorde à l’utilisateur une identité, une autorisation de lecture ou d’écriture sur la base de données |
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure | Partagé entre différentes fonctionnalités et ressources |
 
-### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Création de ressources pour la gestion des API Azure dans le projet
+### <a name="resource-creation-for-azure-api-management-in-the-project"></a>Création de ressources pour les Gestion des API Azure dans le projet
 
 |Resource|Objectif|
 |----------|--------------------------------|
@@ -93,16 +93,16 @@ Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure.
 | Serveur OAuth de gestion des API | Permet à Microsoft Power Platform d’accéder à vos API hébergées dans l’application de fonction |
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure |
 
-### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Ressources créées lors de l’inclure à Azure Key Vault dans le projet
+### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Ressources créées lors de l’Key Vault Azure dans le projet
 
 |Ressources|Objectif de cette ressource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Gérer les secrets (par exemple, Azure AD client d’application) utilisés par d’autres services Azure |
+| Service Azure Key Vault | Gérer les secrets (par exemple, Azure AD client d’application) utilisés par d’autres services Azure |
 | Identité attribuée à l’utilisateur | Authentifier les demandes de service à service Azure |
 
 ## <a name="customize-resource-provision"></a>Personnaliser la mise en service des ressources
 
-Teams Shared Computer Toolkit vous permet d’utiliser une infrastructure comme approche de code pour définir les ressources Azure que vous souhaitez mettre en service et la façon dont vous souhaitez la configurer. L’outil utilise ARM modèle pour définir des ressources Azure. Le ARM est un ensemble de fichiers biceps qui définit l’infrastructure et la configuration de votre projet. Vous pouvez personnaliser les ressources Azure en modifiant le ARM de gestion. Pour plus d’informations, [voir le document bicep](/azure/azure-resource-manager/bicep.md).
+Teams Shared Computer Toolkit vous permet d’utiliser une infrastructure comme approche de code pour définir les ressources Azure que vous souhaitez mettre en service et la façon dont vous souhaitez la configurer. L’outil utilise ARM modèle pour définir des ressources Azure. Le ARM est un ensemble de fichiers biceps qui définit l’infrastructure et la configuration de votre projet. Vous pouvez personnaliser les ressources Azure en modifiant le ARM de gestion. Pour plus d’informations, [voir le document bicep](/azure/azure-resource-manager/bicep).
 
 La mise en service ARM implique la modification des jeux de fichiers, paramètres et modèles suivants :
 
@@ -148,16 +148,16 @@ Le tableau suivant fournit une liste des paramètres prédéfincis disponibles :
 | botDisplayName | ${resourceBaseName} | Nom d’affichage de votre bot | 1 à 42 caractères |
 | botServerfarmsName | ${resourceBaseName}bot | Nom du plan de service d’application du bot | 1 à 40 alphanumériques et tirets |
 | botWebAppName | ${resourceBaseName}bot | Nom de l’application web du bot | 2 à 60 alphanumériques et tirets <br /> Impossible de commencer ou de se terminer par un trait d’union |
-| botWebAppSKU | F1 | Référence (SKU) du plan de service Bot App | Non applicable |
+| botWebAppSKU | F1 | Référence (SKU) du plan App Service bot | Non applicable |
 | userAssignedIdentityName | ${resourceBaseName} | Nom de l’identité attribuée à l’utilisateur | 3 à 128 caractères alphanumériques, tirets et traits de soulignement <br /> Commencer par une lettre ou un numéro |
-| sqlServerName | ${resourceBaseName} | Nom du serveur Azure SQL server | 1 à 63 lettres minuscules, chiffres et tirets <br /> Ne peut pas commencer ou se terminer par un trait d’union |
-| sqlDatabaseName | ${resourceBaseName} | Nom de la base de données azure SQL données | 1 à 128 caractères, ne peut pas utiliser <>*%&:\/? ou des caractères de contrôle <br /> Ne peut pas se terminer par un point ou un espace |
-| sqlDatabaseSku | De base | Référence (SKU) de la base SQL azure | Non applicable  |
+| sqlServerName | ${resourceBaseName} | Nom du Azure SQL serveur | 1 à 63 lettres minuscules, chiffres et tirets <br /> Ne peut pas commencer ou se terminer par un trait d’union |
+| sqlDatabaseName | ${resourceBaseName} | Nom de la base Azure SQL données | 1 à 128 caractères, ne peut pas utiliser <>*%&:\/? ou des caractères de contrôle <br /> Ne peut pas se terminer par un point ou un espace |
+| sqlDatabaseSku | De base | Référence (SKU) de la base Azure SQL données | Non applicable  |
 | apimServiceName | ${resourceBaseName} | Nom du service APIM | 1 à 50 alphanumériques et tirets <br /> Commencer par une lettre et terminer par alphanumérique |
 | apimServiceSku | Consommation | Référence (SKU) du service APIM | [SSO disponibles](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | Nom du produit APIM | 1 à 80 alphanumériques et tirets <br /> Commencer par une lettre et terminer par alphanumérique |
 | apimOauthServerName | ${resourceBaseName} | Nom du serveur OAuth APIM | 1 à 80 alphanumériques et tirets <br /> Commencer par une lettre et terminer par alphanumérique |
-| keyVaultSkuName | standard | Nom de référence (SKU) du service Azure Key Vault| |
+| keyVaultSkuName | standard | Nom de référence (SKU) d’Azure Key Vault Service| |
 
 En attendant, les paramètres suivants sont disponibles avec les valeurs remplies pendant la mise en service. L’objectif de ces espaces réservé est de nous assurer que nous pouvons créer de nouvelles ressources pour vous dans un nouvel environnement. Les valeurs réelles sont résolues à partir de `.fx/states/state.{env}.json`.
 
@@ -178,8 +178,8 @@ En attendant, les paramètres suivants sont disponibles avec les valeurs remplie
 
 | Nom du paramètre | Titulaire d’une place de valeur par défaut | Signification du titulaire de la place | Comment personnaliser |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Compte d’administrateur SQL Server Azure que vous avez fourni lors de la mise en service | Supprimer l’espace réservé et remplir la valeur réelle |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Mot de passe d SQL Server’administrateur Azure que vous avez fourni lors de la mise en service | Supprimer l’espace réservé et remplir la valeur réelle |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL d’administration du serveur que vous avez fourni lors de la mise en service | Supprimer l’espace réservé et remplir la valeur réelle |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL mot de passe d’administrateur de serveur que vous avez fourni lors de la mise en service | Supprimer l’espace réservé et remplir la valeur réelle |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | Courrier électronique de l’éditeur de l’APIM, la valeur par défaut est votre compte Azure | Supprimer l’espace réservé et remplir la valeur réelle |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | Nom d’éditeur de l’APIM, la valeur par défaut est votre compte Azure | Supprimer l’espace réservé et remplir la valeur réelle |
 
