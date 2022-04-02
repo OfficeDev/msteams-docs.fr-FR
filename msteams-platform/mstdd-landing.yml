@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 2162a3ca1e5cd82612217deba2df163e1fb175f6
-  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+  ms.openlocfilehash: a5a2f2c99f85333c4ebc5909499040b6b533b8b1
+  ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 03/31/2022
-  ms.locfileid: "64571095"
+  ms.lasthandoff: 04/01/2022
+  ms.locfileid: "64612649"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
   - linkListType: concept
     links:
+    - text: Créer Teams bot de conversation
+      url: ~/sbs-teams-conversation-bot.yml
     - text: Créer votre première application à l’aide de Blazor
       url: sbs-gs-blazorupdate.yml
     - text: Autorisations de périphérique pour le navigateur
@@ -41,8 +43,6 @@ landingContent:
       url: ~/resources/schema/manifest-schema.md
     - text: Aperçu du test pour les applications monétisées
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    - text: Flux d’achats intégrés pour la monétisation des applications
-      url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
 - title: Prise en main
   linkLists:
   - linkListType: get-started
@@ -117,6 +117,8 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
+    - text: Créer Teams bot de conversation
+      url: ~/sbs-teams-conversation-bot.yml
     - text: Créer un bot d’appel et de réunion
       url: ~/sbs-calling-and-meeting.yml
     - text: Configurer les autorisations de périphérique Onglet
@@ -133,10 +135,6 @@ landingContent:
       url: ~/sbs-meeting-token-generator.yml
     - text: Créer un sidepanel de réunion
       url: ~/sbs-meetings-sidepanel.yml
-    - text: Générer un affichage de l’étape réunions
-      url: ~/sbs-meetings-stage-view.yml
-    - text: Interagir avec le bot de bulles de contenu dans les réunions
-      url: ~/sbs-meeting-content-bubble.yml
   - linkListType: tutorial
     links:
     - text: Télécharger fichiers à Teams partir d’un bot

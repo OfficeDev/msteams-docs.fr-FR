@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET du magasin d’autorisations de domaine de conversation appmanifest du package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 43302047a3c5712a17e2bc506eca2eeb350db825
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571363"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614543"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -23,8 +23,6 @@ Assurez-vous que vous avez tous les [prérequis pour](~/tabs/how-to/tab-requirem
 ::: zone pivot="node-java-script"
 
 ## <a name="create-a-personal-tab-with-nodejs"></a>Créer un onglet personnel avec Node.js
-
-Pour créer un onglet personnel avec Node.js
 
 1. À l’invite de commandes, installez les packages [Yeoman](https://yeoman.io/) et [gulp-cli](https://www.npmjs.com/package/gulp-cli) en entrant la commande suivante après avoir installé le Node.js :
 
@@ -178,8 +176,8 @@ Créez une page de contenu et mettez à jour les fichiers existants de l’appli
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -279,8 +277,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core"></a>Créer un onglet personnel avec ASP.NET Core
-
-Vous pouvez créer un onglet personnel personnalisé à l’aide de C# et ASP.NET Core pages De la page Page. Pour créer un onglet personnel avec ASP.NET Core
 
 1. À l’invite de commandes, créez un répertoire pour votre projet d’onglet.
 
@@ -444,8 +440,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core-mvc"></a>Créer un onglet personnel avec ASP.NET Core MVC
-
-Vous pouvez créer un onglet personnel personnalisé à l’aide C# et ASP.NET Core MVC. Pour créer un onglet personnel avec ASP.NET Core MVC
 
 1. À l’invite de commandes, créez un répertoire pour votre projet d’onglet.
 

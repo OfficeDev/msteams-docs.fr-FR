@@ -5,12 +5,12 @@ description: Comment envoyer, recevoir et gérer des messages pour un bot dans u
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6c3d476ec51c75431d4a39e35b7307771b919d26
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 737aba65007f3e5ed359bc67a49c3fb3e7cc5479
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727498"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612628"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -271,6 +271,10 @@ N’envoyez pas de message dans les cas suivants :
 * Un membre d’équipe est ajouté à un groupe ou un canal.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="step-by-step-guide"></a>Guide pas à pas
+
+Suivez le [guide pas à pas](../../../sbs-teams-conversation-bot.yml) pour créer un bot Teams conversationnel.
 
 ## <a name="next-step"></a>Étape suivante
 

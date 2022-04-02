@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464795"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571105"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
@@ -33,14 +33,16 @@ Vous pouvez télécharger les applications Microsoft Teams sans avoir à les pub
 
 Vous pouvez télécharger votre application dans une équipe, un chat, une réunion ou pour un usage personnel selon la façon dont vous avez configuré la portée de votre application.
 
-1. Connectez-vous au client Teams avec votre [compte de développement Microsoft 365](~/build-your-first-app/build-and-run.md#prerequisites).
+1. Connectez-vous au client Teams avec votre [compte de développement Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 1. Sélectionnez **Applications**, puis **Gérer vos applications**.
 1. Sélectionnez **Charger une application personnalisée**.
-1. Sélectionnez le ficher .zip de votre package d'application. L’écran suivant s’affiche :
+1. Sélectionnez le fichier .zip de votre package d'application.
+2. Ajoutez votre application à Teams en fonction de vos besoins :</br>
 
-    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Capture d'écran montrant un exemple de boîte de dialogue d'installation de l'application Teams.":::
+   Sélectionnez **Ajouter** pour ajouter votre application personnelle.</br>
+   b. Utilisez le menu déroulant pour ajouter votre application à une équipe ou à une conversation.
 
-1. Sélectionnez **Ajouter** pour ajouter l’application à Teams.
+![Créer une application Teams](~/assets/videos/app-teams.gif)
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -63,7 +65,9 @@ Vous n'avez pas besoin de charger à nouveau votre application si vous apportez 
 Pour supprimer votre application, cliquez avec le bouton droit sur l'icône de l'application dans Teams et sélectionnez **Désinstaller**.
 
 > [!NOTE]
-> Vous ne pouvez pas supprimer entièrement l’activité personnelle du bot. Si vous supprimez l’application et l’ajoutez à nouveau, la nouvelle communication avec le bot s’ajoute à la conversation précédente avec lui.
+>
+> * Vous ne pouvez pas supprimer entièrement l’activité personnelle du bot. Si vous supprimez l’application et l’ajoutez à nouveau, la nouvelle communication avec le bot s’ajoute à la conversation précédente avec lui.
+> * Actuellement, vous ne pouvez pas migrer votre application personnalisée vers le Magasin Teams. Si vous souhaitez répertorier votre application dans le Magasin Teams, consultez [Publier votre application dans le Microsoft Teams Store](appsource/publish.md).
 
 ## <a name="next-step"></a>Étape suivante
 

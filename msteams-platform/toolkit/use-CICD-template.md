@@ -1,17 +1,17 @@
 ---
-title: Prise en charge ci ou CD pour Teams développeurs d’applications
+title: Découvrez comment utiliser des modèles de pipeline CI ou CD dans GitHub, Azure Devops et Jenkins pour les développeurs Teams application
 author: MuyangAmigo
 description: Modèles TORS
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453410"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614536"
 ---
 # <a name="cicd-guide"></a>Guide CI/CD
 
@@ -224,7 +224,7 @@ Suivez [using-credentials pour](https://www.jenkins.io/doc/book/using/using-cred
 |`M365_ACCOUNT_PASSWORD`|Mot de passe du compte Microsoft 365 client.|
 |`M365_TENANT_ID`|Pour identifier le client dans lequel l’application Teams est créée ou publiée. La valeur est facultative, sauf si vous avez un compte multi-locataire et que vous souhaitez utiliser un autre client. En savoir plus [sur la façon de trouver votre ID Microsoft 365 client.](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-## <a name="get-started-guide-for-other-platforms"></a>Guide de mise en place pour d’autres plateformes
+## <a name="get-started-guide-for-other-platforms"></a>Démarrage guide pour d’autres plateformes
 
 Vous pouvez suivre les exemples de scripts Bash répertoriés pour créer et personnaliser des pipelines CI ou CD sur d’autres plateformes :
 
@@ -274,7 +274,7 @@ Pour publier votre application, effectuez les étapes suivantes :
 
 ### <a name="see-also"></a>Voir aussi
 
-* [Démarrage rapide des actions de GitHub](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [Démarrage rapide pour GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Créer votre premier Azure DevOps pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Créer votre premier pipeline Jenkins](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Gérer vos applications avec le Portail des développeurs pour Microsoft Teams](/concepts/build-and-test/teams-developer-portal)

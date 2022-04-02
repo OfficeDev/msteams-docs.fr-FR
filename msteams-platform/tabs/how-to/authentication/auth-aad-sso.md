@@ -4,12 +4,12 @@ description: Décrit l'authentification unique (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: API d’authentification unique Microsoft Azure Active Directory Domain Services d’authentification unique Teams (Azure AD)
-ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464809"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571319"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l'authentification unique (SSO) pour les onglets
 
@@ -83,7 +83,10 @@ Pour enregistrer votre application via le portail Azure AD, suivez ces étapes :
 1. Sélectionnez **Exposer une API** sous **Gérer**.
 
     > [!NOTE]
-    > Si vous créez une application avec un bot et un onglet, saisissez l'URI de l'ID d'application au format `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Si vous créez une application avec un bot et un onglet, saisissez l'URI de l'ID d'application au format `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Utilisez des lettres minuscules pour le nom de domaine, n’utilisez pas de majuscules. Par exemple, pour créer un service d’application ou une application web, entrez le nom de la ressource de base comme `demoapplication`, puis l’URL sera `https://demoapplication.azurewebsites.net`. Toutefois, si vous utilisez le nom de la ressource de base comme `DemoApplication`, l’URL sera `https://DemoApplication.azurewebsites.net` , ce qui prend en charge le bureau, le web et iOS, mais pas android.
 
 1. Sélectionnez le lien **Définir** pour générer l'URI de l'ID d'application sous la forme `api://{AppID}`. Insérez votre nom de domaine complet avec une barre oblique "/" ajoutée à la fin, entre les doubles barres obliques et le GUID. L'ID complet doit avoir la forme `api://fully-qualified-domain-name.com/{AppID}`. ² Par exemple, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. Le nom de domaine complet est le nom de domaine lisible par l'homme à partir duquel votre application est servie. Si vous utilisez un service de tunnellisation tel que ngrok, vous devez mettre à jour cette valeur chaque fois que votre sous-domaine ngrok change.
 1. Sélectionnez **ajouter une portée** . Dans le panneau qui s'ouvre, **entrez access_as_user** comme **nom d'étendue**.

@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: fe6eb9a35173ee01ef5df8857bfe92892abc3630
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 66d09bc650c7e20b1dd8c4edf7060bf71c52fff1
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511240"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612656"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,7 +22,12 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|04/01/2022| Présentation du guide pas à pas pour créer un bot conversationnel Teams| Créer des bots > Conversations de bot > Conversations de groupe et de canal > Guide pas à pas pour créer Teams [Bot conversationnel](sbs-teams-conversation-bot.yml) |
+|30/03/2022| Mise à jour du module Démarrage avec l’application Blazor à l’aide d’onglets et de bots|  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorupdate.yml)|
+|30/03/2022|Autorisations de périphérique pour le navigateur | Intégrer des fonctionnalités d’appareil > [Autorisations d’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
+|29/03/2022 | Intégrer Sélecteur de personnes | Intégrer à Teams > [Intégrer Sélecteur de personnes](concepts/device-capabilities/people-picker-capability.md)|
 |23/03/2022| Introduction d’un guide pas à pas pour déployer des liens dans Teams à l’aide d’un bot | Créer des extensions de messagerie > Ajouter un déploiement de lien > [Liens de déploiement dans Teams à l’aide de bot](sbs-botbuilder-linkunfurling.yml).|
+|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams |  • Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams |  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
 |03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
@@ -40,7 +45,12 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
-|23/03/2022| Introduction d’un guide pas à pas pour déployer des liens dans Teams à l’aide d’un bot | Créer des extensions de messagerie > Ajouter un déploiement de lien > [Liens de déploiement dans Teams à l’aide de bot](sbs-botbuilder-linkunfurling.yml).|
+|04/01/2022| Présentation du guide pas à pas pour créer un bot conversationnel Teams| Créer des bots > Conversations de bot > Conversations de groupe et de canal > Guide pas à pas pour créer Teams [Bot conversationnel](sbs-teams-conversation-bot.yml) |
+|30/03/2022| Mise à jour du module Démarrage avec l’application Blazor à l’aide d’onglets et de bots|  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorupdate.yml)|
+|30/03/2022|Autorisations de périphérique pour le navigateur | Intégrer des fonctionnalités d’appareil > [Autorisations d’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
+|29/03/2022 |Intégrer Sélecteur de personnes | Intégrer à Teams > [Intégrer Sélecteur de personnes](concepts/device-capabilities/people-picker-capability.md)
+|23/03/2022| Introduction d’un guide pas à pas pour déployer des liens dans Teams à l’aide d’un bot | Créer des extensions de messagerie > Ajouter un déploiement de lien > [Liens de déploiement dans Teams à l’aide de bot](sbs-botbuilder-linkunfurling.yml).|  
+|22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams|  • Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Mise à jour de la prise en main de l’application Blazor pour Teams|  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorapp.yml)|
 |22/03/2022| Ajout d’informations sur le processus de débogage| • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Déboguer votre application Teams localement](toolkit/debug-local.md) </br> • Outils et SDK> Kit de ressources Teams pour Visual Studio Code > [Processus de débogage en arrière-plan](toolkit/debug-background-process.md)|
 |03/14/2022| Présentation d'un guide étape par étape pour construire et tester un connecteur dans Microsoft Teams. | Créer des webhooks et des connecteurs > Créer des connecteurs Office 365 > [Créer des connecteurs Teams](sbs-teams-connectors.yml)|
@@ -251,7 +261,6 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 |24/12/2021| Introduction d'un guide étape par étape pour accorder des autorisations d'appareil Tab | Principes de base des applications > Capacités des appareils > [Guide étape par étape pour accorder des autorisations à l'appareil Tab](sbs-tab-device-permissions.yml)  |
 |15/11/2021| Les onglets personnels et les extensions de messagerie fonctionnent dans Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 |28/10/2021|Les bots peuvent être activés pour recevoir tous les messages du canal en utilisant le consentement spécifique aux ressources (RSC) | - Construire des bots > Conversations entre bots > Messages dans les conversations entre bots > [Recevoir tous les messages avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)  </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifeste d’application > prévisualisation pour les développeurs > [schéma de manifeste de prévisualisation pour les développeurs](~/resources/schema/manifest-schema-dev-preview.md) |
-|10/19/2021|Autorisations de périphérique pour le navigateur | Principes fondamentaux de l'> de l’appareil > [les autorisations de l’appareil pour le navigateur](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|Comportement de désinstallation pour une application personnelle avec un bot | Créer des bots > conversations de bot > des mises à jour de comportement de [désinstallation dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentement spécifique aux ressources pour les conversations | • Utiliser Teams données de gestion avec le consentement microsoft Graph > [ressource spécifique](graph-api/rsc/resource-specific-consent.md) </br> • Testez votre application > Microsoft Graph > les autorisations de [consentement spécifiques](graph-api/rsc/test-resource-specific-consent.md) aux ressources dans Teams|
 
