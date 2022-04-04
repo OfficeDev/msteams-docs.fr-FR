@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET du magasin d’autorisations de domaine de conversation appmanifest du package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: d19ecc04aa14561d443a65d4ea896c210fdf4d94
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614543"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636163"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Ajout de votre onglet personnel" border="true":::
 
-1. **Sélectionnez Ajouter** dans la fenêtre pop-up. Votre onglet est téléchargé vers Teams.
+1. **Sélectionnez Ajouter** dans la boîte de dialogue. Votre onglet est téléchargé vers Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Onglet personnel chargé" border="true":::
 
@@ -370,14 +370,14 @@ Dans Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le
 
 ### <a name="update-and-run-your-application"></a>Mettre à jour et exécuter votre application
 
-1. Go to the **PagesShared**  >  folder and open **_Layout.cshtml** and add the following to the `<head>` tags section:
+1. Ouvrez Visual Studio Explorateur de solutions et allez dans le dossier **PagesShared** > , ouvrez **_Layout.cshtml** et ajoutez ce qui suit à la `<head>` section des balises :
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. **Ouvrez PersonalTab.cshtml** à partir du dossier **Pages**, ajoutez `microsoftTeams.initialize()` les balises `<script>` et enregistrez.
+1. Dans Visual Studio Explorateur de solutions **ouvrez PersonalTab.cshtml** à partir du dossier **Pages**, `microsoftTeams.initialize()` `<script>` ajoutez les balises et enregistrez.
 
 1. Dans Visual Studio, sélectionnez **F5** ou démarrez **le débogage** à partir du menu **Débogage de votre** application.
 
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec le Portail du développeur
 
-1. Go to **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. **Ouvrez applications** et sélectionnez **Importer l’application**.
 
@@ -411,7 +411,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Dans **les URL d’application**, mettez à jour la politique de confidentialité `https://<yourngrokurl>/privacy` et les conditions d’utilisation pour `https://<yourngrokurl>/tou` et enregistrer.
 
-1. Dans **les fonctionnalités de** l’application, sélectionnez Application personnelle, entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide.
+1. Dans **les fonctionnalités de** l’application, **sélectionnez Personal appCreate** >  **votre premier onglet d’application** personnelle et entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide et **sélectionnez Context** en tant que personalTab dans la liste liste et **ajoutez**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -419,15 +419,9 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Afficher un aperçu de votre application dans Teams
 
-1. **Sélectionnez Aperçu dans Teams** la barre d’outils du Portail du développeur. Le portail du développeur vous informe que votre application est correctement rechargée.
+1. **Sélectionnez Aperçu dans Teams** barre d’outils du Portail du développeur, le Portail du développeur vous informe que votre application est correctement rechargée. La page **Ajouter** s’affiche pour votre application dans Teams.
 
-1. **Sélectionnez Gérer vos applications**. Votre application est répertoriée dans les applications téléchargées de côté.
-
-1. Recherchez votre application à l’aide de la recherche, sélectionnez les trois points dans sa ligne.
-
-1. Sélectionnez **l’option** Afficher. La page **Ajouter** s’affiche pour votre application.
-
-1. **Sélectionnez Ajouter** pour charger l’onglet sur Teams. Votre onglet est désormais disponible dans Teams.
+1. **Sélectionnez Ajouter** pour charger l’onglet dans Teams. Votre onglet est désormais disponible dans Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Onglet par défaut" border="true":::
 
@@ -545,14 +539,14 @@ Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiqueme
 
 ### <a name="update-and-run-your-application"></a>Mettre à jour et exécuter votre application
 
-1. Go to **ViewsShared**  >  folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+1. Ouvrez Visual Studio Explorateur de solutions et allez dans le dossier **ViewsShared**  >  et ouvrez **_Layout.cshtml**, puis ajoutez ce qui suit à la `<head>` section des balises :
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. **Ouvrez PersonalTab.cshtml** à partir du **dossier ViewsPersonalTab** `microsoftTeams.initialize()`  > , ajoutez-le à l’intérieur des `<script>` balises et enregistrez- le.
+1. Dans Visual Studio Explorateur de solutions **ouvrez PersonalTab.cshtml** à partir du dossier **ViewsPersonalTab** `microsoftTeams.initialize()`  > `<script>` et ajoutez-le à l’intérieur des balises et enregistrez.
 
 1. Dans Visual Studio, sélectionnez **F5** ou démarrez **le débogage** à partir du menu **Débogage de votre** application.
 
@@ -566,7 +560,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec le Portail du développeur
 
-1. Go to **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. **Ouvrez applications** et sélectionnez **Importer l’application**.
 
@@ -586,7 +580,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Dans **les URL d’application**, mettez à jour la politique de confidentialité `https://<yourngrokurl>/privacy` et les conditions d’utilisation pour `https://<yourngrokurl>/tou` et enregistrer.
 
-1. Dans **les fonctionnalités de** l’application, sélectionnez Application personnelle, entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide.
+1. Dans **les fonctionnalités de** l’application, **sélectionnez Personal appCreate** >  **votre premier onglet d’application** personnelle et entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide et **sélectionnez Context** en tant que personalTab dans la liste liste et **ajoutez**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -594,13 +588,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Afficher un aperçu de votre application dans Teams
 
-1. **Sélectionnez Aperçu dans Teams** la barre d’outils du Portail du développeur. Le portail du développeur vous informe que votre application est correctement rechargée.
-
-1. **Sélectionnez Gérer vos applications**. Votre application est répertoriée dans les applications téléchargées de côté.
-
-1. Recherchez votre application à l’aide de la recherche, sélectionnez les trois points dans sa ligne.
-
-1. **Sélectionnez l’option** Afficher. La page **Ajouter** s’affiche pour votre application.
+1. **Sélectionnez Aperçu dans Teams** barre d’outils du Portail du développeur, le Portail du développeur vous informe que votre application est correctement rechargée. La page **Ajouter** s’affiche pour votre application dans Teams.
 
 1. **Sélectionnez Ajouter** pour charger l’onglet sur Teams. Votre onglet est désormais disponible dans Teams.
 

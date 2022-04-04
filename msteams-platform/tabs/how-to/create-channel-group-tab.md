@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 31da2a8ee267ef42e6c0abd4e3bd695cf69d2f01
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590665"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636143"
 ---
 # <a name="channel-or-group-tab"></a>Onglet Canal ou groupe
 
@@ -171,7 +171,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Onglet par défaut" border="true":::
 
-1. Pour afficher la page de configuration de votre onglet, allez sur `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. Les exemples suivants sont présentés :
+1. Pour afficher la page de configuration de votre onglet, allez sur `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Les exemples suivants sont présentés :
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Page de configuration de l’onglet" border="true":::
 
@@ -198,7 +198,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet Canal téléchargé" border="true":::
 
-1. **Sélectionnez Ajouter** dans la fenêtre pop-up. Votre onglet est téléchargé vers Teams.
+1. **Sélectionnez Ajouter** dans la boîte de dialogue. Votre onglet est téléchargé vers Teams.
     
     > [!NOTE]
     > Si  **Add** ne s’affiche pas dans la boîte de dialogue, supprimez le code suivant du manifeste du dossier zip du package d’application téléchargé. Une fois encore, compressez le dossier et téléchargez-le sur Teams.
@@ -210,11 +210,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Revenir à votre équipe, choisir le canal dans lequel vous souhaitez ajouter l’onglet, ➕ sélectionner dans la barre d’onglets et choisir votre onglet dans la liste.
 1. Suivez les instructions pour ajouter un onglet. Il existe une boîte de dialogue de configuration personnalisée pour votre canal ou onglet de groupe.
 1. **Sélectionnez Enregistrer** et votre onglet est ajouté à la barre d’onglets du canal.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Onglet canal chargé" border="true":::
+    
+    Maintenant, vous avez créé et ajouté avec succès votre onglet de canal ou de groupe dans Teams.
 
 ::: zone-end
 
@@ -245,7 +246,7 @@ Voici les étapes à suivre pour créer un onglet de canal ou de groupe :
 
 1. Go to Microsoft-Teams-Samplessamplestab-channel-grouprazor-csharp  >  >  >  folder and open **channelGroupTab.sln**.
 
-1. Dans Visual Studio, appuyez sur **F5** ou choisissez Démarrer  le débogage à partir du menu **Débogage** de votre application pour vérifier si l’application s’est chargée correctement. Dans un navigateur, allez aux URL suivantes :
+1. Dans Visual Studio, sélectionnez **F5** ou démarrez le  débogage à partir du menu **Débogage** de votre application pour vérifier si l’application s’est chargée correctement. Dans un navigateur, allez aux URL suivantes :
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -328,7 +329,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="update-your-application"></a>Mettre à jour votre application
 
-1. Go to the **PagesShared**  >  folder and open **_Layout.cshtml**, and add the following to the <head> section balises :
+1. Ouvrez Visual Studio Explorateur de solutions et allez dans le dossier **PagesShared**  >  et ouvrez **_Layout.cshtml**, puis ajoutez les données suivantes à la <head> section balises :
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -338,9 +339,9 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
     > [!IMPORTANT]
     > Ne copiez pas et collez les `<script src="...">` URL de cette page, car elles ne représentent pas la dernière version. Pour obtenir la dernière version du SDK, toujours Microsoft Teams [API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. En haut de la balise `script` , insérez un appel à `microsoftTeams.initialize();`.
+1. Insérez un appel `microsoftTeams.initialize();` dans la `script` balise.
 
-1. Go to the **Pages** folder and open **Tab.cshtml**
+1. In Visual Studio Explorateur de solutions go to the **Pages** folder and open **Tab.cshtml**
 
     Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du **bouton Sélectionner**  `saveGray()` `saveRed()`gris ou Rouge déclenche ou, respectivement,  `settings.setValidityState(true)`définit et active le bouton Enregistrer sur la page de configuration. Ce code vous permet Teams que vous avez rempli les conditions requises pour la configuration et que l’installation peut se poursuivre. Les paramètres sont `settings.setSettings` définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue.
 
@@ -379,7 +380,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="build-and-run-your-application"></a>Créer et exécuter votre application
 
-1. Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage**.
+1. Dans Visual Studio, sélectionnez **F5** ou démarrez **le débogage** dans le menu **Débogage**.
 
 1. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
@@ -390,7 +391,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Go to Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
 
-1. Accédez à votre **portail développeur** dans Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. **Ouvrez applications** et sélectionnez **Importer l’application**.
 
@@ -410,7 +411,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans **les URL d’application**, mettez à jour la politique de confidentialité `https://<yourngrokurl>/privacy` et les conditions d’utilisation pour `https://<yourngrokurl>/tou` et enregistrer.
 
-1. Dans **les fonctionnalités de** l’application, sélectionnez Application personnelle, entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide. 
+1. Dans **les fonctionnalités de l’application**, sélectionnez Application de groupe et de canal. Mettez à jour **l’URL de configuration** avec `https://<yourngrokurl>/tab` et sélectionnez l’étendue de votre **onglet**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -418,17 +419,13 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="preview-your-app-in-teams"></a>Afficher un aperçu de votre application dans Teams
 
-1. **Sélectionnez Aperçu dans Teams** la barre d’outils du Portail du développeur. Le portail du développeur vous informe que votre application est correctement rechargée.
+1. **Sélectionnez Aperçu dans Teams** barre d’outils du Portail du développeur, le Portail du développeur vous informe que votre application est correctement rechargée. La page **Ajouter** s’affiche pour votre application dans Teams.
 
-1. **Sélectionnez Gérer vos applications**. Votre application est répertoriée dans les applications téléchargées de côté.
-
-1. Recherchez votre application à l’aide de la recherche, sélectionnez &#x25CF;&#x25CF;&#x25CF;.
-
-1. Sélectionnez **l’option Afficher les détails** . La fenêtre détails de l’application s’affiche pour votre application.
-
-1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdownAdd" border="true":::&nbsp; >  **to team** to load the tab in a team. Votre onglet est désormais disponible dans Teams.
+1. **Sélectionnez Ajouter à l’équipe** pour configurer l’onglet dans une équipe. Configurez votre onglet et sélectionnez **Enregistrer**. Votre onglet est désormais disponible dans Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Onglet canal ASPNET chargé" border="true":::
+    
+    Maintenant, vous avez créé et ajouté avec succès votre onglet de canal ou de groupe dans Teams.
 
 ::: zone-end
 
@@ -459,7 +456,7 @@ Voici les étapes à suivre pour créer un onglet de canal ou de groupe :
 
 1. Go to Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp  >  >  >  folder and open **ChannelGroupTabMVC.sln**.
 
-1. Dans Visual Studio, appuyez sur **F5** ou choisissez Démarrer  le débogage à partir du menu **Débogage** de votre application pour vérifier si l’application s’est chargée correctement. Dans un navigateur, allez aux URL suivantes :
+1. Dans Visual Studio, sélectionnez **F5** ou démarrez le  débogage à partir du menu **Débogage** de votre application pour vérifier si l’application s’est chargée correctement. Dans un navigateur, allez aux URL suivantes :
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -550,7 +547,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="update-your-application"></a>Mettre à jour votre application
 
-1. Go to the **ViewsShared**  >  folder and open **_Layout.cshtml**, and add the following to the <head> section balises :
+1. Ouvrez Visual Studio Explorateur de solutions,puis allez dans le dossier **ViewsShared**  >  et ouvrez **_Layout.cshtml**, puis ajoutez ce qui suit à la <head> section balises :
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -560,9 +557,9 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
     > [!IMPORTANT]
     > Ne copiez pas et collez les `<script src="...">` URL de cette page, car elles ne représentent pas la dernière version. Pour obtenir la dernière version du SDK, toujours Microsoft Teams [API JavaScript](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. En haut de la balise `script` , insérez un appel à `microsoftTeams.initialize();`.
+1. Insérez un appel `microsoftTeams.initialize();` dans la `script` balise.
 
-1. Go to the **Tab** folder and open **Tab.cshtml**
+1. In Visual Studio Explorateur de solutions go to the **Tab** folder and open **Tab.cshtml**
 
     Dans **Tab.cshtml** , l’application présente à l’utilisateur deux boutons d’option pour afficher l’onglet avec une icône rouge ou grise. Le choix du **bouton Sélectionner**  `saveGray()` `saveRed()`gris ou Rouge déclenche ou, respectivement,  `settings.setValidityState(true)`définit et active le bouton Enregistrer sur la page de configuration. Ce code vous permet Teams que vous avez rempli les conditions requises pour la configuration et que l’installation peut se poursuivre. Les paramètres sont `settings.setSettings` définies. Enfin, `saveEvent.notifySuccess()` est appelée pour indiquer que l’URL de contenu a été correctement résolue. 
 
@@ -601,7 +598,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="build-and-run-your-application"></a>Créer et exécuter votre application
 
-1. Dans Visual Studio, appuyez **sur F5** ou choisissez **Démarrer le débogage** dans le menu **Débogage**.
+1. Dans Visual Studio, sélectionnez **F5** ou démarrez **le débogage** dans le menu **Débogage**.
 
 1. Vérifiez que **ngrok** fonctionne correctement en ouvrant votre navigateur et en allant sur votre page de contenu via l’URL HTTPS ngrok fournie dans la fenêtre d’invite de commandes.
 
@@ -612,7 +609,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Go to Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des outils de développement [de votre navigateur](~/tabs/how-to/developer-tools.md).
 
-1. Go to **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. **Ouvrez applications** et sélectionnez **Importer l’application**.
 
@@ -632,7 +629,7 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Dans **les URL d’application**, mettez à jour la politique de confidentialité `https://<yourngrokurl>/privacy` et les conditions d’utilisation pour `https://<yourngrokurl>/tou` et enregistrer.
 
-1. Dans **les fonctionnalités de** l’application, sélectionnez Application personnelle, entrez le nom et mettez à jour **l’URL de** contenu avec `https://<yourngrokurl>/personalTab`. Laissez le champ URL du site web vide.
+1. Dans **les fonctionnalités de l’application**, sélectionnez Application de groupe et de canal. Mettez à jour **l’URL de configuration** avec `https://<yourngrokurl>/tab` et sélectionnez l’étendue de votre **onglet**.
 
 1. Sélectionnez **Enregistrer**.
 
@@ -640,17 +637,13 @@ Veillez à maintenir l’invite de commandes avec ngrok en cours d’exécution 
 
 ### <a name="preview-your-app-in-teams"></a>Afficher un aperçu de votre application dans Teams
 
-1. **Sélectionnez Aperçu dans Teams** la barre d’outils du Portail du développeur. Le portail du développeur vous informe que votre application est correctement rechargée.
+1. **Sélectionnez Aperçu dans Teams** barre d’outils du Portail du développeur, le Portail du développeur vous informe que votre application est correctement rechargée. La page **Ajouter** s’affiche pour votre application dans Teams.
 
-1. **Sélectionnez Gérer vos applications**. Votre application est répertoriée dans les applications téléchargées de côté.
-
-1. Recherchez votre application à l’aide de la recherche, sélectionnez &#x25CF;&#x25CF;&#x25CF;.
-
-1. Sélectionnez **l’option Afficher les détails** . La fenêtre détails de l’application s’affiche pour votre application.
-
-1. Sélectionnez &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="l’onglet Canal ASPNET uploadedAdd" border="true":::&nbsp; >  **vers** l’équipe pour charger l’onglet Teams. Votre onglet est désormais disponible dans Teams.
+1. **Sélectionnez Ajouter à l’équipe** pour configurer l’onglet dans une équipe. Configurez votre onglet et sélectionnez **Enregistrer**. Votre onglet est désormais disponible dans Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Onglet canal ASPNET MVC téléchargé" border="true":::
+    
+    Maintenant, vous avez créé et ajouté avec succès votre onglet de canal ou de groupe dans Teams.
 
 ::: zone-end
 
