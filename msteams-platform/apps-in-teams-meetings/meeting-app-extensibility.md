@@ -1,16 +1,11 @@
 ---
 title: Applications de réunions unifiées
 author: surbhigupta
-description: Découvrez comment Teams de réunion et l’expérience de réunion de l’utilisateur dans l’environnement de bureau et mobile, les rôles et types de participants et d’utilisateurs, intégrer les bots et l’extension de messagerie dans le cycle de vie de la réunion.
+description: 'Découvrez comment Teams de réunion et l’expérience de réunion de l’utilisateur dans l’environnement de bureau et mobile, les rôles et types de participants et d’utilisateurs, intégrer les bots et l’extension de messagerie dans le cycle de vie de la réunion.'
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571130"
 ---
+
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
 Teams applications de réunions unifiées sont basées sur les concepts suivants :
@@ -85,6 +80,9 @@ Pour utiliser des onglets pendant une réunion :
 1. Dans la boîte de dialogue de réunion, entrez votre réponse en tant que commentaire.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Affichage Bureau":::
+
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
