@@ -6,12 +6,12 @@ keywords: onglets teams webhook sortant
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399113"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685624"
 ---
 # <a name="create-an-incoming-webhook"></a>Créer un webhook entrant
 
@@ -95,5 +95,5 @@ Pour supprimer un webhook entrant d’un canal Teams, procédez comme suit :
 * [Créer un webhook sortant](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Créer un connecteur Office 365](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Créer et envoyer des messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Créer un bouton de partage pour Teams](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Partager vers Teams à partir d’applications web](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Intégrer les applications Web](~/samples/integrate-web-apps-overview.md)
