@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET magasin d’autorisations de domaine de conversation appmanifest de package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b0da768a74ab6925f95ce89e38cecdaa96e084e6
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
+ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685645"
+ms.locfileid: "64686682"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -252,12 +252,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Télécharger votre application à Teams
 
-1. Accédez à Microsoft Teams et sélectionnez **Store**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Sélectionnez **Gérer vos applications**
-1. Sélectionnez **Publier une application** et **Télécharger une application personnalisée**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Télécharger application personnalisée" border="true":::
-
+1. Accédez à Microsoft Teams et sélectionnez **Applications**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Sélectionnez **Gérer vos applications** et **Télécharger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip, puis choisissez **Ouvrir**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Ajout de votre onglet personnel" border="true":::
