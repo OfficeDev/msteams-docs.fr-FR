@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 736b8821a7d0f9e1eda35377bc4937e68c035c75
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: bc7cb1fceef586959be44ba680874914c4f07cc1
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686675"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737048"
 ---
 # <a name="channel-or-group-tab"></a>Onglet Canal ou groupe
 
@@ -51,7 +51,7 @@ Voici les étapes à suivre pour créer un canal ou un onglet de groupe :
     yo teams
     ```
 
-1. Fournissez vos valeurs à une série de questions posées par Microsoft Teams générateur d’applications pour mettre à jour votre fichier **manifest.json** :
+1. Fournissez vos valeurs à une série de questions posées par Microsoft Teams générateur d’applications pour mettre à jour votre `manifest.json` fichier :
 
     ![capture d’écran de l’ouverture du générateur](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -137,13 +137,17 @@ Voici les étapes à suivre pour créer un canal ou un onglet de groupe :
     </details>
 
 > [!IMPORTANT]
-> Le composant de chemin **d’accès yourDefaultTabNameTab** est la valeur que vous avez entrée dans le générateur pour le **nom de tabulation par défaut** , ainsi que le mot **Tab**.
->
-> Par exemple : DefaultTabName est **MyTab** puis **/MyTabTab/**
+> Le composant de chemin **d’accès yourDefaultTabNameTab** est la valeur que vous avez entrée dans le générateur pour le **nom de tabulation par défaut** , ainsi que le mot **Tab**. Par exemple, `DefaultTabName` est **MyTab** puis **/MyTabTab/**.
+
+<!--- TBD: this info seems removed from the main branch.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
+--->
 
 ### <a name="create-your-app-package"></a>Créer votre package d’application
 
-Vous devez disposer d’un package d’application pour générer et exécuter votre application dans Teams. Le package d’application est créé via une tâche gulp qui valide le fichier **manifest.json** et génère le dossier zip dans le répertoire **./package** . À l'invite de commandes, tapez la commande suivante :
+Vous devez disposer d’un package d’application pour générer et exécuter votre application dans Teams. Le package d’application est créé via une tâche Gulp qui valide le `manifest.json` fichier et génère le dossier zip dans le `./package` répertoire. À l'invite de commandes, tapez la commande suivante :
 
 ```cmd
 gulp manifest
@@ -153,7 +157,7 @@ gulp manifest
 
 #### <a name="build-your-application"></a>Générer votre application
 
-Entrez la commande suivante à l’invite de commandes pour transpiler votre solution dans le dossier **./dist** :
+Entrez la commande suivante à l’invite de commandes pour transpiler votre solution dans le `./dist` dossier :
 
 ```cmd
 gulp build
@@ -191,11 +195,11 @@ gulp ngrok-serve
 1. Accédez à Microsoft Teams et sélectionnez **Applications**&nbsp; :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Sélectionnez **Gérer vos applications** et **Télécharger une application personnalisée**.
 1. Accédez au répertoire de votre projet, accédez au dossier **./package** , sélectionnez le dossier zip du package d’application, puis choisissez **Ouvrir**.
-    
+
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Onglet Canal chargé" border="true":::
 
 1. Sélectionnez **Ajouter** dans la boîte de dialogue. Votre onglet est chargé dans Teams.
-    
+
     > [!NOTE]
     > Si  **l’option Ajouter** ne s’affiche pas dans la boîte de dialogue, supprimez le code suivant du manifeste du dossier zip du package d’application chargé. Compressez à nouveau le dossier et chargez-le dans Teams.
     >
@@ -210,7 +214,7 @@ gulp ngrok-serve
 1. Sélectionnez **Enregistrer** et votre onglet est ajouté à la barre d’onglets du canal.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Onglet Canal chargé" border="true":::
-    
+
     Vous avez maintenant créé et ajouté votre canal ou onglet de groupe dans Teams.
 
 ::: zone-end
@@ -285,7 +289,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 * Icône **de couleur complète** mesurant 192 x 192 pixels.
 * **Icône de contour transparente** mesurant 32 x 32 pixels.
-* Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Fichier `manifest.json` qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés pour charger votre onglet dans Teams. Lorsqu’un utilisateur choisit d’ajouter ou de mettre à jour votre onglet, Microsoft Teams charge le `configurationUrl` fichier spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
 
@@ -383,6 +387,11 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
     > [!TIP]
     > Vous devez avoir votre application en cours d’exécution Visual Studio et ngrok pour suivre les étapes fournies dans cet article. Si vous devez arrêter l’exécution de votre application dans Visual Studio pour y travailler, **continuez à exécuter ngrok**. Il écoute et reprend le routage de la demande de votre application lorsqu’elle redémarre dans Visual Studio. Si vous devez redémarrer le service ngrok, il retourne une nouvelle URL et vous devez mettre à jour votre application avec la nouvelle URL.
 
+<!--- TBD: This note seems to be removed from main. Commenting it for now.
+> [!NOTE]
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
+--->
+
 ### <a name="update-your-app-package-with-developer-portal"></a>Mettre à jour votre package d’application avec le portail des développeurs
 
 1. Allez à Microsoft Teams. Si vous utilisez la [version web](https://teams.microsoft.com), vous pouvez inspecter votre code frontal à l’aide des [outils de développement](~/tabs/how-to/developer-tools.md) de votre navigateur.
@@ -391,13 +400,18 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 1. Ouvrez **Applications** et sélectionnez **Importer l’application**.
 
-1. Le nom de votre package d’application est **tab.zip**. Elle est disponible dans le chemin d’accès suivant :
+<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+--->
+
+1. Le nom de votre package d’application est `tab.zip`. Elle est disponible dans le chemin d’accès suivant :
 
     ```bash
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. Sélectionnez **tab.zip** et ouvrez-le dans le portail des développeurs.
+1. Sélectionnez et ouvrez-le `tab.zip` dans le portail des développeurs.
 
 1. Un **ID d’application** par défaut est créé et rempli dans la section **Informations de base** .
 
@@ -487,7 +501,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 * Icône **de couleur complète** mesurant 192 x 192 pixels.
 * **Icône de contour transparente** mesurant 32 x 32 pixels.
-* Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Fichier `manifest.json` qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés pour charger votre onglet dans Teams.
 

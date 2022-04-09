@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501983"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736876"
 ---
 # <a name="in-app-purchases"></a>Achats dans l'application
 
@@ -31,11 +31,11 @@ Pour proposer une expérience d’achat in-app aux utilisateurs de votre applica
 
 * L’application est invoquée avec [l’API`openPurchaseExperience`](#purchase-experience-api).
 
-L’expérience d’achat dans l’application peut être activée soit en mettant à jour le fichier  **manifest.json**, soit en activant **afficher les offres d’achat** dans l’application à partir de la section **Autorisations** de votre **portail du développeur**.
+L’expérience d’achat dans l’application peut être activée soit en mettant à jour le fichier  `manifest.json`, soit en activant **afficher les offres d’achat** dans l’application à partir de la section **Autorisations** de votre **portail du développeur**.
 
 ### <a name="update-manifest"></a>Mise à jour du manifeste
 
-Pour activer l’expérience d’achat dans l’application, mettez à jour Teams fichier **manifest.json** de l’application en ajoutant les autorisations RSC. Il permet aux utilisateurs de votre application de passer à une version payante de votre application et de commencer à utiliser de nouvelles fonctionnalités. La mise à jour du manifeste de l’application est la suivante :
+Pour activer l’expérience d’achat dans l’application, mettez à jour Teams fichier `manifest.json` de l’application en ajoutant les autorisations RSC. Il permet aux utilisateurs de votre application de passer à une version payante de votre application et de commencer à utiliser de nouvelles fonctionnalités. La mise à jour du manifeste de l’application est la suivante :
 
 ```json
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET magasin d’autorisations de domaine de conversation appmanifest de package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686682"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737213"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
@@ -55,7 +55,7 @@ Voici les étapes à suivre pour créer un onglet personnel :
     yo teams
     ```
 
-1. Fournissez vos valeurs à une série de questions posées par Microsoft Teams générateur d’applications pour mettre à jour votre fichier **manifest.json**.
+1. Fournissez vos valeurs à une série de questions posées par Microsoft Teams générateur d’applications pour mettre à jour votre `manifest.json` fichier.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="générateur Teams" border="true":::
 
@@ -164,7 +164,7 @@ Créez une page de contenu et mettez à jour les fichiers existants de l’appli
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Ouvrez **manifest.json** à partir de l’emplacement suivant dans votre Visual Studio Code :
+1. Ouvrez `manifest.json` à partir de l’emplacement suivant dans votre Visual Studio Code :
 
     ```
      ./src/manifest/manifest.json
@@ -189,7 +189,7 @@ Créez une page de contenu et mettez à jour les fichiers existants de l’appli
 
 1. Mettez à jour le composant de chemin **contentURL** **yourDefaultTabNameTab** avec le nom de votre onglet réel.
 
-1. Enregistrez le fichier **manifest.json** mis à jour.
+1. Enregistrez le fichier mis à jour `manifest.json` .
 
 1. Ouvrez **Tab.ts** dans votre Visual Studio Code à partir du chemin d’accès suivant pour fournir votre page de contenu dans un IFrame :
 
@@ -207,11 +207,7 @@ Créez une page de contenu et mettez à jour les fichiers existants de l’appli
 
 ### <a name="create-your-app-package"></a>Créer votre package d’application
 
-Vous devez disposer d’un package d’application pour générer et exécuter votre application dans Teams. Le package d’application est créé via une tâche gulp qui valide le fichier **manifest.json** et génère le dossier zip dans le répertoire **./package** . À l'invite de commandes, tapez la commande suivante :
-
-```cmd
-gulp manifest
-```
+Vous devez disposer d’un package d’application pour générer et exécuter votre application dans Teams. Le package d’application est créé via une tâche Gulp qui valide le `manifest.json` fichier et génère le dossier zip dans le `./package` répertoire. À l’invite de commandes, utilisez la commande `gulp manifest`.
 
 ### <a name="build-and-run-your-application"></a>Générer et exécuter votre application
 
@@ -334,9 +330,9 @@ ASP.NET Core traite les fichiers appelés **Index** comme la page d’accueil ou
 
 Ce dossier contient les fichiers de package d’application requis suivants :
 
-* Icône **de couleur complète** mesurant 192 x 192 pixels.
-* **Icône de contour transparente** mesurant 32 x 32 pixels.
-* Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Icône de couleur complète mesurant 192 x 192 pixels.
+* Icône de contour transparente mesurant 32 x 32 pixels.
+* Fichier `manifest.json` qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet sur Teams. Microsoft Teams charge le `contentUrl` fichier spécifié dans votre manifeste, l’incorpore dans un iframe\> <et le restitue dans votre onglet.
 
@@ -391,13 +387,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Ouvrez **Applications** et sélectionnez **Importer l’application**.
 
-1. Le nom de votre package d’application est **tab.zip**. Elle est disponible dans le chemin d’accès suivant :
+1. Le nom du fichier de package d’application est `tab.zip` et il est disponible au `/bin/Debug/netcoreapp3.1/tab.zip` chemin d’accès.
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Sélectionnez **tab.zip** et ouvrez-le dans le portail des développeurs.
+1. Sélectionnez et ouvrez-le `tab.zip` dans le portail des développeurs.
 
 1. Un **ID d’application** par défaut est créé et rempli dans la section **Informations de base** .
 
@@ -489,7 +481,7 @@ Ce dossier contient les fichiers de package d’application requis suivants :
 
 * Icône **de couleur complète** mesurant 192 x 192 pixels.
 * **Icône de contour transparente** mesurant 32 x 32 pixels.
-* Fichier **manifest.json** qui spécifie les attributs de votre application.
+* Fichier `manifest.json` qui spécifie les attributs de votre application.
 
 Ces fichiers doivent être compressés dans un package d’application pour être utilisés lors du chargement de votre onglet sur Teams. Microsoft Teams charge le `contentUrl` fichier spécifié dans votre manifeste, l’incorpore dans un IFrame et le restitue dans votre onglet.
 
@@ -700,4 +692,4 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Créer des onglets de conversation](~/tabs/how-to/conversational-tabs.md)
-* [Partager vers Teams à partir d’une application ou d’un onglet personnel](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Partager dans Teams à partir d’une application ou d’un onglet personnel](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 3117195b697061b4199ac629f73d8ffd2d93cd6a
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
+ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590744"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64706150"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -809,7 +809,7 @@ Spécifiez la définition de l'extension de réunion. Pour plus d'informations, 
 **Facultatif**— objet
 
 > [!NOTE]
-> Si vous définissez la propriété `manifestVersion` sur **1.12**, la propriété d’autorisation est incompatible avec les versions antérieures du manifeste. L’autorisation est prise en charge pour la version 1.12 du manifeste.
+> Si vous définissez la propriété `manifestVersion` à 1.12, la propriété d'autorisation est incompatible avec les anciennes versions (version 1.11 ou antérieure) du manifeste. L’autorisation est prise en charge pour la version 1.12 du manifeste.
 
 Spécifiez et consolidez les informations relatives à l’autorisation pour l’application.
 

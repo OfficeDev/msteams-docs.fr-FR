@@ -3,12 +3,12 @@ title: Scènes personnalisées en mode Ensemble
 description: Travailler avec des scènes personnalisées du mode Ensemble
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356083"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736871"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Scènes personnalisées en mode Ensemble dans Teams
 
@@ -125,7 +125,7 @@ Si vous le souhaitez, vous pouvez sélectionner **Partager** dans le menu dérou
 
 Après la prévisualisation, la scène est livrée en tant qu’application à Teams en suivant les étapes de soumission de l’application. Cette étape nécessite le package d’application. Pour la scène qui a été conçue, le package d’application est différent du package de scène. Le package d’application créé automatiquement se trouve dans la section **Applications** du centre de développement Teams.
 
-Si vous le souhaitez, le package de scène est récupéré en sélectionnant **Exporter** dans le menu déroulant **Enregistrer**. Un fichier **.zip**, qui est le package de scène, est téléchargé. Le package de scène inclut un fichier scene.json et les ressources PNG utilisées pour générer une scène. Le package de scène est examiné pour incorporer d’autres modifications :
+Si vous le souhaitez, le package de scène est récupéré en sélectionnant **Exporter** dans le menu déroulant **Enregistrer**. Un fichier .zip, qui est le package de scène, est téléchargé. Le package de scène inclut un fichier scene.json et les ressources PNG utilisées pour générer une scène. Le package de scène est examiné pour incorporer d’autres modifications :
 
 ![Exporter une scène](../assets/images/apps-in-meetings/build-a-scene.png)
 
