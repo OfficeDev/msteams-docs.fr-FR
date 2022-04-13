@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
+ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398931"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64793796"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -51,7 +51,7 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
 * **Tests fonctionnels et expérience approfondies**
 
-  Votre application est minutieusement examinée par un validateur pour garantir la conformité aux [stratégies de certification de la Place de marché commerciale Microsoft](/legal/marketplace/certification-policies) en mettant l’accent sur les tests fonctionnels et d’expérience utilisateur approfondis, les vérifications d’utilisation et les vérifications des métadonnées. La validation de l’application est effectuée sur les clients bureau, web et mobile.
+  Votre application est minutieusement examinée par un évaluateur pour garantir la conformité aux [Stratégies de certification de la place de marché commerciale Microsoft](/legal/marketplace/certification-policies) en mettant l'accent sur des tests fonctionnels et d'expérience utilisateur approfondis, des contrôles de convivialité et des contrôles de métadonnées. La validation des applications est effectuée sur des clients de bureau, web et mobiles. Nous mettons tout en œuvre pour vous fournir un rapport de test détaillé dans les 24 heures ouvrables suivant la soumission.
 
 * **Publication d’application guidée via le service concierge**
 
