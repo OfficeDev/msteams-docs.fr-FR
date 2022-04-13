@@ -4,12 +4,12 @@ author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue en réunion, la phase de réunion partagée, le sidepanel de réunion, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1f77d0924eec9c52dc2f3d10566010c2953bd66b
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820194"
+ms.locfileid: "64826977"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
@@ -25,7 +25,7 @@ Avec les applications pour Teams réunions, vous pouvez étendre les fonctionnal
 
 * Respectez [les instructions générales de conception des onglets Teams pour les scénarios](../tabs/design/tabs.md) de pré-réunion et de post-réunion. Pour obtenir des expériences pendant les réunions, [reportez-vous aux instructions de conception de l’onglet en réunion](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) et [aux instructions de conception des dialogues en réunion](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités événementielles de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et d’autres étapes tout au long du cycle de vie de la réunion. Pour la boîte de dialogue en réunion, consultez `completionBotId` le paramètre dans la [charge utile de notification dans la réunion](API-references.md#send-an-in-meeting-notification).
+* Pour que votre application soit mise à jour en temps réel, elle doit être à jour en fonction des activités événementielles de la réunion. Ces événements peuvent se trouver dans la boîte de dialogue en réunion et d’autres étapes au cours du cycle de vie de la réunion. Pour la boîte de dialogue en réunion, consultez `completionBotId` le paramètre dans la [charge utile de notification dans la réunion](API-references.md#send-an-in-meeting-notification).
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Activer votre application pour Teams réunions
 
@@ -114,8 +114,7 @@ Pour ajouter un bot à une réunion :
 Dans une conversation de réunion, entrez la **@** clé et **sélectionnez Obtenir des bots**.
 
 > [!NOTE]
->
-> * La bulle de contenu publie une carte adaptative ou une carte simultanément dans la conversation de réunion auxquelles les utilisateurs peuvent accéder. Cela aide les utilisateurs lorsque la réunion ou l’application Teams est réduite.
+> * La boîte de dialogue en réunion affiche une boîte de dialogue dans une réunion et publie simultanément une carte adaptative dans la conversation de réunion auxquelles les utilisateurs peuvent accéder. La carte adaptative dans la conversation de réunion aide les utilisateurs lors de la participation à la réunion ou si l’application Teams est réduite.
 > * L’identité de l’utilisateur doit être confirmée à l’aide [de l’authentification unique Tabs](../tabs/how-to/authentication/auth-aad-sso.md). Après l’authentification, l’application peut récupérer le rôle d’utilisateur à l’aide de l’API `GetParticipant` .
 > * En fonction du rôle d’utilisateur, l’application peut fournir des expériences spécifiques au rôle. Par exemple, une application d’interrogation autorise uniquement les organisateurs et les présentateurs à créer un sondage.
 > * Les attributions de rôles peuvent être modifiées pendant qu’une réunion est en cours. Pour plus d’informations, consultez [les rôles dans une réunion Teams](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
