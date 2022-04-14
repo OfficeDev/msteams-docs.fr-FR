@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET magasin d’autorisations de domaine de conversation appmanifest de package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: fda21b5bf9908529a9a20820867551202b761362
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737213"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838482"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
-Les onglets personnels, ainsi que les bots d’étendue personnelle, font partie des applications personnelles et sont limitées à un seul utilisateur. Ils peuvent être épinglés au volet gauche pour un accès facile. Vous pouvez également [réorganiser](#reorder-static-personal-tabs) et ajouter [`registerOnFocused` l’API](#add-registeronfocused-api-for-tabs-or-personal-apps) pour les onglets personnels.
+Les onglets personnels, ainsi que les bots d’étendue personnelle, font partie des applications personnelles et sont limitées à un seul utilisateur. Ils peuvent être épinglés au volet gauche pour un accès facile. Vous pouvez également [réorganiser](#reorder-static-personal-tabs) vos onglets personnels.
 
 Assurez-vous que vous disposez de tous les [prérequis](~/tabs/how-to/tab-requirements.md) pour créer votre onglet personnel.
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
    Vous avez maintenant créé et ajouté votre onglet personnel dans Teams.
   
-   Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réorganiser](#reorder-static-personal-tabs) et ajouter [`registerOnFocused` l’API](#add-registeronfocused-api-for-tabs-or-personal-apps) pour votre onglet personnel.
+   Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réorganiser](#reorder-static-personal-tabs) votre onglet personnel.
 
 ::: zone-end
 
@@ -415,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
    Vous avez maintenant créé et ajouté votre onglet personnel dans Teams.
   
-   Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réorganiser](#reorder-static-personal-tabs) et ajouter [`registerOnFocused` l’API](#add-registeronfocused-api-for-tabs-or-personal-apps) pour votre onglet personnel.
+   Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réorganiser](#reorder-static-personal-tabs) votre onglet personnel.
 
 ::: zone-end
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    Vous avez maintenant créé et ajouté votre onglet personnel dans Teams.
 
-   Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réorganiser](#reorder-static-personal-tabs) et ajouter [`registerOnFocused` l’API](#add-registeronfocused-api-for-tabs-or-personal-apps) pour votre onglet personnel.
+   Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réorganiser](#reorder-static-personal-tabs) votre onglet personnel.
 
 ::: zone-end
 
@@ -611,75 +611,6 @@ Si vous créez un bot avec une étendue **personnelle** , il apparaît par défa
 }
 
 ```
-
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>Ajouter une `registerOnFocused` API pour les onglets ou les applications personnelles
-
-L’API `registerOnFocused` du Kit de développement logiciel (SDK) vous permet d’utiliser un clavier sur Teams. Vous pouvez revenir à une application personnelle et maintenir le focus sur un onglet ou une application personnelle à l’aide des touches Ctrl, Maj et F6. Par exemple, vous pouvez vous éloigner de l’application personnelle pour rechercher quelque chose, puis revenir à l’application personnelle ou utiliser Ctrl+F6 pour parcourir les emplacements requis.
-
-Le code suivant fournit un exemple de définition de gestionnaire sur le `registerFocusEnterHandler` Kit de développement logiciel (SDK) lorsque le focus doit être retourné à l’onglet ou à l’application personnelle :
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-Une fois le gestionnaire déclenché avec le mot clé `focusEnter`, le gestionnaire `registerFocusEnterHandler` est appelé avec une fonction `focusEnterHandler` de rappel qui accepte un paramètre appelé `navigateForward`. La valeur de `navigateForward` détermine le type d’événements. Elle `focusEnterHandler` est appelée uniquement par Ctrl+F6 et non par la touche tabulation.
-Les clés utiles pour déplacer des événements dans Teams sont les suivantes :
-
-* Événement de transfert : touches Ctrl+F6
-* Événement précédent : touches Ctrl+Maj+F6
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### <a name="personal-app"></a>Application personnelle
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Exemple montrant les options d’ajout de l’API registerOnFocussed" border="true":::
-
-#### <a name="personal-app-forward-event"></a>Application personnelle : transférer l’événement
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Exemple montrant les options permettant d’ajouter le déplacement vers l’avant de l’API registerOnFocussed" border="true":::
-
-#### <a name="personal-app-backward-event"></a>Application personnelle : événement précédent
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Exemple montrant les options permettant d’ajouter l’API registerOnFocussed vers l’arrière" border="true":::
-
-### <a name="tab"></a>Onglet
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Exemple montrant les options d’ajout de l’API registerOnFocussed pour l’onglet" border="true":::
 
 ## <a name="next-step"></a>Étape suivante
 

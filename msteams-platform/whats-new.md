@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706157"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838472"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -116,7 +116,6 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 |13/11/2021| Les bots peuvent être activés pour recevoir tous les messages du canal en utilisant le consentement spécifique aux ressources (RSC) | - Construire des bots > Conversations des bots > Messages dans les conversations des bots > [Recevoir tous les messages du canal avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)  </br> - Construire des bots > Conversations des bots > [Aperçu des conversations des bots](~/bots/how-to/conversations/conversation-basics.md)  </br> - Construire des bots > Conversations avec les bots > [Conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md)  |
 |28/10/2021| Monétisez votre application Teams avec une offre SaaS transactionnelle | Distribuez votre application > Publiez dans le magasin Teams > [Incluez une offre SaaS avec votre application Teams](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).  |
 |25/10/2021| Mise à jour du module de mise en route pour la documentation du développeur Microsoft Teams avec une nouvelle structure et de nouvelles procédures dans un guide étape par étape | Démarrage > [Démarrez avec votre première application Teams](get-started/get-started-overview.md)  |
-|21/10/2021| Ajouter une `registerOnFocused` API pour les onglets ou les applications personnelles | Créer des onglets > Créer des onglets personnels > [Ajouter `registerOnFocused` une API pour les onglets ou les applications personnelles](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)  |
 |20/10/2021| La scène de réunion est maintenant disponible en GA | Créer des applications pour les réunions Teams > [Activer et configurer vos applications pour les réunions Teams](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)  |
 |20/10/2021| API Meeting Details et événements de réunion Teams en temps réel | Créer des applications pour des réunions Teams > [Obtenir les détails de la réunion API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |18/10/2021| Déploiement du lien des onglets et vue des étapes | Construire des onglets > [Déploiement des liens d'onglets et vue d'ensemble de la scène](tabs/tabs-link-unfurling.md)  |
