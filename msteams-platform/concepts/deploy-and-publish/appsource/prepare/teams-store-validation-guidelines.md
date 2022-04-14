@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511250"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826991"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -1027,9 +1027,9 @@ Pour plus d'informations sur les cartes, consultez :
 
 L'expérience du bot doit être entièrement réactive sur mobile. Les réponses des bots doivent fournir une voie à suivre, le cas échéant. Le bot doit être réactif et échouer avec un message d'erreur gracieux pour les échecs. Les messages de bot envoyés dans la portée personnelle à la base de l'utilisateur sur des déclencheurs dans une portée collaborative doivent fournir des informations contextuelles (y compris l'origine du message).
 
-### <a name="notification-only-bots"></a>Notification uniquement bots
+### <a name="notification-only-bots"></a>Notification uniquement pour les bots
 
-Les applications constituées de robots de notification uniquement fournissent une valeur utilisateur en déclenchant des notifications utilisateur en fonction de certains déclencheurs ou événements dans l'application principale ou le backend. Par exemple, un nouveau prospect ou un nouveau prospect est ajouté pour le suivi de l'équipe commerciale.
+Les applications constituées de robots de notification uniquement fournissent une valeur utilisateur en déclenchant des notifications utilisateur en fonction de certains déclencheurs ou événements dans l'application principale ou le backend. Par exemple, un nouveau prospect ou un nouveau prospect est ajouté pour le suivi de l'équipe commerciale. Un bot de notification de haute qualité avertit les utilisateurs régulièrement sur certaines saisies semi-automatiques d’événements, telles que les saisies semi-automatiques de workflow ou les alertes.
 
 Une notification fournit de la valeur dans Teams si :
 
