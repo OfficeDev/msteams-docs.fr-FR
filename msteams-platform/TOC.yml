@@ -20,10 +20,10 @@
   items:
     - name: Vue d’ensemble du Démarrage
       href: get-started/get-started-overview.md
-    - name: Créer votre première application à l’aide de Blazor
-      href: sbs-gs-blazorupdate.yml
     - name: Créer votre première application à l’aide de JavaScript
       href: sbs-gs-javascript.yml
+    - name: Créer votre première application à l’aide de Blazor
+      href: sbs-gs-blazorupdate.yml
     - name: Créer votre première application à l’aide de SPFx
       href: sbs-gs-spfx.yml
     - name: Créer votre première application à l’aide C# de .NET

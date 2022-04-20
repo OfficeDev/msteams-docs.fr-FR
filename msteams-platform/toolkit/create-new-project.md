@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
+ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498216"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64910549"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Créer une application Teams à l’aide du Kit de ressources Teams
 
@@ -44,7 +44,7 @@ Pour plus d’informations, consultez [Créer une application Onglet Teams (Reac
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>Guides pas à pas à l’aide du Kit de ressources Teams
 
-* [Créer une application Teams à l’aide de Blazor](../sbs-gs-blazorapp.yml)
+* [Créer une application Teams à l’aide de Blazor](../sbs-gs-blazorupdate.yml)
 * [Créer une application Teams avec JavaScript à l’aide de React](../sbs-gs-javascript.yml)
 * [Créer une application Teams avec SPFx](../sbs-gs-spfx.yml)
 * [Créer une application Teams avec C# ou .NET](../sbs-gs-csharp.yml)

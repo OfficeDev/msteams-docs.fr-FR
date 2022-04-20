@@ -5,12 +5,12 @@ description: Présentation des bots dans Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498223"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952302"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
@@ -55,7 +55,7 @@ Vous pouvez utiliser les API de bot Teams pour obtenir des informations pour les
 > [!div class="nextstepaction"]
 > [Bots et kits de développement](~/bots/bot-features.md)
 
-## <a name="code-sample"></a>Exemple de code
+## <a name="code-samples"></a>Exemples de code
 
 |Exemple de nom | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
