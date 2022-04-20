@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: bf93fe8ae8cbe6e62cf6ec4ee0ec702bc4865f09
-  ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+  ms.openlocfilehash: 0620d86549ad5ce72710f14b7eae11b9d2aee539
+  ms.sourcegitcommit: 128479e0b231b7b3310cfeb1ab4da6c1d8a597ad
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/18/2022
-  ms.locfileid: "64910521"
+  ms.lasthandoff: 04/19/2022
+  ms.locfileid: "64918097"
 landingContent:
 - title: Explorer la dernière version
   linkLists:
@@ -121,7 +121,7 @@ landingContent:
       url: ~/sbs-teams-conversation-bot.yml
     - text: Créer un bot d’appel et de réunion
       url: ~/sbs-calling-and-meeting.yml
-    - text: Configurer les autorisations de l’appareil Tab
+    - text: Accorder des autorisations d’appareil d’onglet
       url: ~/sbs-tab-device-permissions.yml
     - text: Configurer l’authentification unique pour les onglets et les extensions de messagerie
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
