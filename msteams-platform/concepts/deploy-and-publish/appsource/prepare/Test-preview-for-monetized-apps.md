@@ -6,17 +6,14 @@ ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
 keywords: équipes applications SaaS offre avant-première offre test avant-première saas monétisé
-ms.openlocfilehash: a9427ba61d1432485e1630eb42f72106c0e842ca
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501955"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073815"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Aperçu du test pour les applications monétisées
-
-> [!NOTE]
-> L'aperçu des tests pour les applications monétisées n'est actuellement disponible que dans [**l'aperçu pour développeurs**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 Vous pouvez créer une offre de logiciel en tant que service (SaaS) et tester l'expérience d'achat de bout en bout pour vos applications monétisées dans Teams. Les utilisateurs ajoutés en tant que public de l'aperçu de l'application Teams peuvent examiner votre offre SaaS avant que vous ne la publiiez.
 
@@ -37,13 +34,13 @@ Vous pouvez générer l’ID d’offre d’aperçu à partir du lien **d’aper�
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID de l’offre d’aperçu" border="true" :::
 
     > [!NOTE]
-    > Contrairement à un ID d’offre publique, l’ID de l’offre d’aperçu peut être reconnu avec le suffixe *-preview* . Par exemple, **publisherId.offerId-preview**.
+    > Contrairement à un ID d’offre publique, l’ID d’offre en préversion peut être reconnu avec le suffixe *-preview*. Par exemple, **publisherId.offerId-preview**.
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>Configurer votre application avec l’ID d’offre d’aperçu
 
 Avant de commencer, connectez-vous **au portail du développeur** à l’aide d’un compte de développeur avec une **audience d’aperçu** pour que les utilisateurs voient vos plans d’abonnement dans Teams store.
 
-Une fois que vous avez généré votre ID d’offre d’aperçu, liez l’ID de l’offre à l’application Teams. Pour lier l’ID de l’offre :
+Une fois que vous avez généré votre ID d’offre en préversion, liez l’ID de l’offre à votre application Teams. Pour lier l’ID de l’offre :
 
 1. Allez sur le [portail des développeurs](https://dev.teams.microsoft.com/) et connectez-vous en utilisant vos identifiants de développeur.
 1. Sélectionnez **Applications** dans le volet gauche.

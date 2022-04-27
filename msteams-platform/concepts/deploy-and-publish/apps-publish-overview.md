@@ -1,21 +1,21 @@
 ---
-title: 'Vue d’ensemble : distribuer votre application'
-description: Décrit les options de publication de votre application Microsoft Teams, de téléchargement de votre application et de Cloud de la communauté du secteur public.
+title: Vue d’ensemble - Distribuer votre application
+description: Décrit les options de publication de votre application Microsoft Teams, de chargement de votre application et de Cloud de la communauté du secteur public.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
-keywords: déployer le chargement de l’application de publication gcc
-ms.openlocfilehash: 567abdb058f3618236840c993a0ab1a4d638c016
-ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
+keywords: déployer publier le gcc de chargement d’application
+ms.openlocfilehash: f691edee8f4e3aab34aa616f9bbf0ed451874070
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61233497"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073068"
 ---
-# <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams de messagerie
+# <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams
 
-Vous pouvez fournir votre application Microsoft Teams à une personne, une équipe, une organisation ou toute autre personne qui souhaite l’utiliser. La distribution dépend de plusieurs facteurs, notamment les besoins des utilisateurs, les besoins professionnels, les exigences techniques et vos objectifs pour l’application.
+Vous pouvez fournir votre application Microsoft Teams à une personne, une équipe, une organisation ou toute personne qui souhaite l’utiliser. La façon dont vous distribuez dépend de plusieurs facteurs, notamment les besoins des utilisateurs, l’entreprise, les exigences techniques et vos objectifs pour l’application.
 
 ## <a name="configure-default-install-options"></a>Configurer les options d’installation par défaut
 
@@ -23,35 +23,35 @@ Vous configurez les options d’installation par défaut. Par exemple, si la fon
 
 ## <a name="create-your-app-package"></a>Créer votre package d’application
 
-Pour distribuer votre application Microsoft Teams, vous devez avoir un package d’application valide.  Un package d’application est un fichier zip qui contient un manifeste **d’application et** des **icônes d’application.**
+Pour distribuer votre application Microsoft Teams, vous devez disposer d’un package d’application valide.  Un package d’application est un fichier zip qui contient un **manifeste d’application** et **des icônes d’application**.
 
 ## <a name="upload-your-app-in-teams"></a>Télécharger votre application dans Teams
 
-Chargez une application pour une utilisation personnelle, collaborez avec votre équipe ou testez et déboguer. Ce type de distribution ne nécessite pas de processus de révision formel.
+Chargez une application à des fins personnelles, collaborez avec votre équipe ou testez et déboguez. Ce type de distribution ne nécessite pas de processus d’examen formel.
 
 > [!IMPORTANT]
-> Pour l’instant, les applications de chargement de version Cloud de la communauté du secteur public (Cloud de la communauté du secteur public), mais ne sont pas disponibles pour GCC-High et le Département de la Défense (DOD).
+> Actuellement, les applications de chargement latéral sont disponibles dans Government Community Cloud (GCC), mais ne sont pas disponibles pour GCC-High et Department of Defence (DOD).
 
-Pour plus d’informations, [voir charger votre application dans Teams](apps-upload.md).
+Pour plus d’informations, consultez [charger votre application dans Teams](apps-upload.md).
 
 ## <a name="publish-your-app-to-your-org"></a>Publier votre application dans votre organisation
 
-Rendez votre application disponible pour les personnes de votre organisation. Ce type de distribution nécessite l’Teams’administrateur.
+Mettez votre application à la disposition des personnes de votre organisation. Ce type de distribution nécessite l’approbation de votre administrateur Teams.
 
-Pour plus d’informations, [voir gérer vos applications dans le centre Teams’administration.](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
+Pour plus d’informations, consultez [gérer vos applications dans le centre d’administration Teams](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
-### <a name="government-community-cloud-gcc-organizations"></a>Cloud de la communauté du secteur public organisations (Cloud de la communauté du secteur public)
+### <a name="government-community-cloud-gcc-organizations"></a>organisations Cloud de la communauté du secteur public (Cloud de la communauté du secteur public)
 
-Dans Cloud de la communauté du secteur public Teams environnements, les applications Microsoft compatibles sont activées par défaut. Toutefois, avant de publier une application, assurez-vous que tous les points de terminaison de l’application sont conformes aux Cloud de la communauté du secteur public de votre organisation.
+Dans Cloud de la communauté du secteur public Teams environnements, les applications Microsoft conformes sont activées par défaut. Toutefois, avant de publier une application, assurez-vous que tous les points de terminaison de l’application sont conformes aux exigences de votre organisation Cloud de la communauté du secteur public. Pour plus d’informations, consultez [Cloud de la communauté du secteur public](../app-fundamentals-overview.md#government-community-cloud).
 
 > [!IMPORTANT]
->Si votre application comprend un bot ou une extension de messagerie, vous devez sélectionner l’option **Microsoft Teams** pour le gouvernement lors de la configuration d’un canal entre votre bot et Teams dans Azure. Pour plus d’informations, voir [connecter un bot à des canaux.](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)
+>Si votre application inclut un bot ou une extension de messagerie, vous devez sélectionner l’option **Microsoft Teams for Government** lors de la configuration d’un canal entre votre bot et Teams dans Azure. Pour plus d’informations, consultez [Connecter un bot aux canaux](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
-## <a name="publish-your-app-to-the-teams-store"></a>Publier votre application dans le Teams store
+## <a name="publish-your-app-to-the-teams-store"></a>Publier votre application dans le Teams Store
 
-Rendez votre application accessible à tous. Ce type de distribution nécessite l’approbation de Microsoft.
+Mettez votre application à la disposition de tous. Ce type de distribution nécessite l’approbation de Microsoft.
 
-Pour plus d’informations, [voir publier sur le Teams store.](~/concepts/deploy-and-publish/appsource/publish.md)
+Pour plus d’informations, consultez [publier dans le magasin Teams](~/concepts/deploy-and-publish/appsource/publish.md).
 
 ## <a name="next-step"></a>Étape suivante
 

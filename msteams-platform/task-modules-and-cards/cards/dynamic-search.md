@@ -1,30 +1,30 @@
 ---
 title: Recherche en saisie semi-automatique dans les Cartes adaptatives
 author: Rajeshwari-v
-description: Décrit la recherche typeahead avec le contrôle Input.ChoiceSet dans les cartes adaptatives
+description: Décrit la recherche en tête de type avec le contrôle Input.ChoiceSet dans les cartes adaptatives
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453830"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073792"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Recherche en saisie semi-automatique dans les Cartes adaptatives
 
-La fonctionnalité de recherche Typeahead dans les cartes adaptatives offre une expérience de recherche améliorée sur le `input.choiceset` composant. Il fournit une liste de choix pour entrer du texte dans le champ de recherche. Vous pouvez incorporer la recherche typeahead avec des cartes adaptatives pour rechercher et sélectionner des données.
+La fonctionnalité de recherche en tête de type dans les cartes adaptatives offre une expérience de recherche améliorée sur le `input.choiceset` composant. Il fournit une liste de choix pour entrer du texte dans le champ de recherche. Vous pouvez incorporer la recherche en tête de type avec les cartes adaptatives pour rechercher et sélectionner des données.
 
-Vous pouvez utiliser la recherche typeahead pour les recherches suivantes :
+Vous pouvez utiliser la recherche de typeahead pour les recherches suivantes :
 
 * [Recherche statique](#static-typeahead-search)
 * [Recherche dynamique](#dynamic-typeahead-search)
 
 ## <a name="static-typeahead-search"></a>Recherche de typeahead statique
 
-La recherche de typeahead statique permet aux utilisateurs de rechercher à partir des valeurs spécifiées dans `input.choiceset` la charge utile de carte adaptative. La recherche de typeahead statique peut être utilisée pour afficher plusieurs choix à l’utilisateur. La taille de la charge utile dans la recherche statique augmente avec le nombre de choix spécifié dans la charge utile.
-Lorsque l’utilisateur commence à entrer le texte, les choix sont filtrés, qui correspondent partiellement à l’entrée. La liste finale met en évidence les caractères d’entrée qui correspondent à la recherche.
+La recherche statique de typehead permet aux utilisateurs de rechercher à partir des valeurs spécifiées dans `input.choiceset` la charge utile de la carte adaptative. La recherche de tête de type statique peut être utilisée pour afficher plusieurs choix à l’utilisateur. La taille de la charge utile dans la recherche statique augmente avec le nombre de choix spécifiés dans la charge utile.
+Lorsque l’utilisateur commence à entrer les textes, les choix sont filtrés, qui correspondent partiellement à l’entrée. La liste déroulante met en évidence les caractères d’entrée qui correspondent à la recherche.
 
 L’image suivante illustre la recherche de typeahead statique :
 
@@ -32,70 +32,70 @@ L’image suivante illustre la recherche de typeahead statique :
 
 ## <a name="dynamic-typeahead-search"></a>Recherche de typeahead dynamique
 
-La recherche de typeahead dynamique est utile pour rechercher et sélectionner des données à partir de grands ensembles de données. Les jeux de données sont chargés dynamiquement à partir du jeu de données spécifié dans la charge utile de la carte. La fonctionnalité d’avance de type permet de filtrer les choix à mesure que l’utilisateur tape.
+La recherche dynamique en tête de type est utile pour rechercher et sélectionner des données dans des jeux de données volumineux. Les jeux de données sont chargés dynamiquement à partir du jeu de données spécifié dans la charge utile de la carte. La fonctionnalité type ahead permet de filtrer les choix en fonction des types de l’utilisateur.
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-![Recherche de typeahead dynamique](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="Recherche de typeahead dynamique":::
 
-![Image de recherche de typeahead dynamique 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="Recherche dynamique de typehead 2":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-Les clients mobiles Android et iOS supportent la recherche typeahead dans les cartes adaptatives.
+Les clients mobiles Android et iOS prennent en charge la recherche en tête de type dans les cartes adaptatives.
 
 **Scénario**
 
-John est un employé du Store qui travaille dans un magasin Xbox. Le magasin utilise un bot pour répondre aux nouvelles demandes d’achat des clients. Un client peut effectuer des recherches à partir des milliers de jeux disponibles. La recherche typeahead dans les cartes adaptatives est utilisée pour rechercher et sélectionner les choix des clients.
+John est un employé du magasin qui travaille dans un magasin xbox. Le magasin utilise un bot pour prendre de nouvelles demandes d’achat auprès des clients. Un client peut effectuer une recherche à partir des milliers de jeux disponibles. La recherche en tête de type dans les cartes adaptatives est utilisée pour rechercher et sélectionner les choix des clients.
 
-**Pour utiliser la recherche typeahead dans les cartes adaptatives**
+**Pour utiliser la recherche de typeahead dans les cartes adaptatives**
 
-1. L’utilisateur A ouvre le bot du magasin.
-1. L’utilisateur A envoie une commande au bot pour une **demande de nouveau client**. Le bot répond avec la carte adaptative qui possède un `Input.ChoiceSet` composant.
-1. L’utilisateur A utilise la recherche typeahead pour rechercher et sélectionner les informations en fonction du choix du client.
+1. L’utilisateur A ouvre le bot du store.
+1. L’utilisateur A envoie une commande au bot pour une **nouvelle demande du client**. Le bot répond avec la carte adaptative qui a `Input.ChoiceSet` un composant.
+1. L’utilisateur A utilise la recherche de typeahead pour rechercher et sélectionner les informations en fonction du choix du client.
 
-L’image suivante illustre l’expérience mobile de la recherche typeahead :
+L’image suivante illustre l’expérience mobile de la recherche de typeahead :
 
 ![Recherche de typeahead statique](~/assets/images/Cards/static-typeahead-search.gif)
 
 ---
 
 > [!NOTE]
-> Vous ne pouvez pas obtenir des expériences de carte enrichies avec la recherche dynamique, telles que les extensions de messagerie basée sur une requête.
+> Vous ne pouvez pas obtenir d’expériences de carte enrichies avec la recherche dynamique, comme les extensions de messagerie basées sur des requêtes.
 
-## <a name="implement-typeahead-search"></a>Implémenter la recherche typeahead
+## <a name="implement-typeahead-search"></a>Implémenter la recherche de typeahead
 
-`Input.ChoiceSet` est l’un des composants d’entrée importants dans les cartes adaptatives. Vous pouvez ajouter un contrôle de recherche typeahead au composant `Input.ChoiceSet` pour implémenter la recherche typeahead. Vous pouvez rechercher et sélectionner les informations requises avec les sélections suivantes :
+`Input.ChoiceSet` est l’un des composants d’entrée importants dans les cartes adaptatives. Vous pouvez ajouter un contrôle de recherche de typehead au `Input.ChoiceSet` composant pour implémenter la recherche de typeahead. Vous pouvez rechercher et sélectionner les informations requises avec les sélections suivantes :
 
-* Dropdown, telle que la sélection étendue.
-* Bouton d’radio, tel qu’une sélection unique.
+* Liste déroulante, telle que la sélection développée.
+* Case d’option, telle qu’une sélection unique.
 * Cases à cocher, telles que plusieurs sélections.
 
 > [!NOTE]
-> Le `Input.ChoiceSet` contrôle est basé sur le style et les propriétés `isMultiSelect` .
+> Le `Input.ChoiceSet` contrôle est basé sur le style et `isMultiSelect` les propriétés.
 
 ### <a name="schema-properties"></a>Propriétés du schéma
 
-Les propriétés suivantes sont les nouveaux ajouts au [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schéma pour activer la recherche typeahead :
+Les propriétés suivantes sont les nouveaux ajouts au schéma pour activer la [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) recherche de typeahead :
 
 | Propriété| Type | Requis | Description |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Étendu <br/> Filtré | Non | Ajoute un style filtré à la liste des validations prise en charge pour l’avance de type statique.|
-| choices.data | Data.Query | Non | Active l’avance de type dynamique à mesure que l’utilisateur tape, en extraire un ensemble de choix à distance à partir d’un système back-end. |
+| style | Compact <br/> Étendu <br/> Filtrée | Non | Ajoute un style filtré à la liste des validations prises en charge pour le type statique à l’avance.|
+| choices.data | Data.Query | Non | Active l’avance dynamique au fur et à mesure que l’utilisateur tape, en extrayant un ensemble distant de choix à partir d’un serveur principal. |
 
-### <a name="dataquery-definition"></a>Définition data.query
+### <a name="dataquery-definition"></a>Définition de Data.Query
 
 | Propriété| Type | Requis | Description |
 |-----------|------|----------|-------------|
 | type | Data.Query | Oui | Spécifie qu’il s’agit d’un objet Data.Query.|
-| dataset | Chaîne | Oui | Spécifie le type de données qui sont récupérées dynamiquement. |
-| value | Chaîne | Non | Remplit pour la demande d’appel au bot avec l’entrée que l’utilisateur a fournie au `ChoiceSet`bot. |
-| count | Nombre | Non | Remplit pour la demande d’appel au bot pour spécifier le nombre d’éléments qui doivent être renvoyés. Le bot l’ignore si les utilisateurs souhaitent envoyer une quantité différente. |
-| skip | Nombre | Non | Remplit pour la demande d’appel au bot pour indiquer que les utilisateurs souhaitent paginer et avancer dans la liste. |
+| Dataset | String | Oui | Spécifie le type de données extraites dynamiquement. |
+| value | String | Non | Remplit la demande d’appel au bot avec l’entrée que l’utilisateur a fournie au `ChoiceSet`. |
+| count | Nombre | Non | Remplit la demande d’appel au bot pour spécifier le nombre d’éléments qui doivent être retournés. Le bot l’ignore si les utilisateurs souhaitent envoyer un montant différent. |
+| skip | Nombre | Non | Remplit la demande d’appel au bot pour indiquer que les utilisateurs souhaitent paginer et avancer dans la liste. |
 
 ### <a name="example"></a>Exemple
 
-Exemple de charge utile qui contient une recherche de typeahead statique et dynamique avec une seule & options à sélection multiple comme suit :
+L’exemple de charge utile qui contient la recherche de typehead statique et dynamique avec une seule & options de sélection multiple comme suit :
 
 ```json
 {
@@ -297,9 +297,9 @@ Exemple de charge utile qui contient une recherche de typeahead statique et dyna
 }
 ```
 
-## <a name="code-snippets-for-invoke-request-and-response"></a>Extraits de code pour la demande d’appel et la réponse
+## <a name="code-snippets-for-invoke-request-and-response"></a>Extraits de code pour appeler la requête et la réponse
 
-### <a name="invoke-request"></a>Demande d’appel
+### <a name="invoke-request"></a>Appeler une demande
 
 ```json
 {
@@ -413,7 +413,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 |**Exemple de nom** | **Description** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| Contrôle de recherche Typeahead sur les cartes adaptatives | L’exemple présente les fonctionnalités du contrôle de recherche de tête de type statique et dynamique dans les cartes adaptatives. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| Contrôle de recherche en tête de type sur les cartes adaptatives | L’exemple montre les fonctionnalités du contrôle de recherche de type statique et dynamique dans les cartes adaptatives. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

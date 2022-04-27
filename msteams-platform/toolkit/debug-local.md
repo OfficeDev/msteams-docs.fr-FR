@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 25a851f0dcc956139551a46b713dc2e7df3f626d
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63731699"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073672"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
@@ -53,7 +53,7 @@ Vous pouvez mettre à jour et enregistrer les codes sources de l'onglet, du bot,
 
 #### <a name="stop-debugging"></a>Arrêter le débogage
 
-Lorsque vous avez terminé le débogage local, vous pouvez sélectionner **Arrêter** ou **Déconnecter** dans la barre d'outils de débogage flottante pour arrêter toutes les sessions de débogage et terminer les tâches. L’image suivante illustre l’action d’arrêt du débogage :
+Lorsque vous avez terminé le débogage local, vous pouvez sélectionner **Arrêter** ou **Déconnecter** dans la barre d'outils de débogage flottante pour arrêter toutes les sessions de débogage et terminer les tâches. L'image suivante montre l'action d'arrêt du débogage :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="arrêter le débogage":::
 
@@ -133,13 +133,13 @@ Shared Computer Toolkit lance une nouvelle instance de navigateur Edge ou Chrome
 </details>
 
 
-#### <a name="2-debug-your-app"></a>2. Déboguer votre application 
+#### <a name="2-debug-your-app"></a>2. Déboguer votre application
 
 Après le processus de mise en place initial, le Teams Shared Computer Toolkit démarre les processus suivants :
 
-  a. [Démarre les services d’application](#starts-app-services). </br>
-  b. [Lance les débogueurs](#launches-debuggers).   </br>
-  c. [Désactiver l'application Teams](#sideloads-the-teams-app)
+a. [Démarre les services d’application](#starts-app-services). </br>
+b. [Lance les débogueurs](#launches-debuggers).   </br>
+      c. [Désactiver l'application Teams](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>Démarre les services d’application.
 
@@ -149,7 +149,7 @@ Exécute les tâches définies comme `.vscode/tasks.json` suit :
 | --- | --- | --- |
 |  Tab |  **Démarrer frontal** |  onglets |
 |  Extensions pour robots ou messageries |  **Démarrer le bot** |  robot |
-|  Azure Functions |  **Démarrer le back-end** |  api |
+|  Azure Functions |  **Démarrer le back-end** |  API |
 
 L'image suivante affiche les noms des tâches dans l'onglet **Terminal** de **sortie** de Visual Studio Code pendant l'exécution de l'onglet, du bot ou de l'extension de messagerie, et des Azure Functions.
 
@@ -196,7 +196,16 @@ Teams Toolkit vous permet de personnaliser les paramètres de débogage pour cr�
 
 1. Dans Visual Studio Code paramètres, **assurez-vous que Ngrok est installé et démarré (ngrok).**
 
-1. Définissez la configuration botDomain et botEndpoint sur `.fx/configs/localSettings.json` votre domaine et votre point de terminaison.
+1. Définissez la configuration botDomain et botEndpoint sur `.fx/configs/config.local.json` votre domaine et votre point de terminaison.
+
+```json
+{
+    "bot": {
+        "siteEndpoint": "https://your-bot-tunneling-url"
+    }
+}
+
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Personnaliser le point de terminaison du bot":::
 
@@ -207,7 +216,16 @@ Teams Toolkit vous permet de personnaliser les paramètres de débogage pour cr�
 
 1. Dans Visual Studio Code paramètres de développement, désévérez vérifier que le certificat de développement est **approuvé (devCert).**
 
-1. Définissez la configuration `.fx/configs/localSettings.json` sslCertFile et sslKeyFile sur le chemin d’accès au fichier de certificat et le chemin d’accès au fichier de clé.
+1. Définissez la configuration de `sslCertFile` et `sslKeyFile` dans `.fx/configs/config.local.json` sur le chemin d’accès au fichier de certificat et le chemin d’accès au fichier de clé.
+
+```json
+{
+    "frontend": {
+        "sslCertFile": "",
+        "sslKeyFile": ""
+    }
+}
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Personnaliser le certificat":::
 

@@ -1,54 +1,54 @@
 ---
 title: Modules de tâche
 author: surbhigupta
-description: Ajouter des expériences de fenêtres popup modales pour collecter ou afficher des informations à vos utilisateurs à partir de Microsoft Teams applications
+description: Ajouter des expériences contextuelles modales pour collecter ou afficher des informations à vos utilisateurs à partir de vos applications Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888299"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073549"
 ---
 # <a name="task-modules"></a>Modules de tâche
 
-Les modules de tâche vous permettent de créer des expériences de fenêtres pop-up modales dans Teams application. Dans la fenêtre pop-up, vous pouvez :
+Les modules de tâche vous permettent de créer des expériences contextuelles modales dans votre application Teams. Dans la fenêtre contextuelle, vous pouvez :
 
 * Exécutez votre propre code HTML ou JavaScript personnalisé.
-* Afficher un `<iframe>` widget basé sur une vidéo YouTube ou Microsoft Stream.
+* Affichez un `<iframe>`widget basé sur youTube ou Microsoft Stream vidéo.
 * Afficher une [carte adaptative](/adaptive-cards/).
 
-Les modules de tâche sont utiles pour lancer et effectuer des tâches ou afficher des informations enrichies, telles que des vidéos ou des tableaux de bord Power Business Intelligence (BI). Une expérience de fenêtre pop-up est souvent plus naturelle pour les utilisateurs qui lancent et terminent des tâches par rapport à une expérience de bot basée sur un onglet ou une conversation.
+Les modules de tâches sont utiles pour lancer et terminer des tâches ou afficher des informations enrichies, telles que des vidéos ou des tableaux de bord Power Business Intelligence (BI). Une expérience contextuelle est souvent plus naturelle pour les utilisateurs qui lancent et effectuent des tâches par rapport à une expérience de bot basée sur un onglet ou une conversation.
 
-Les modules de tâche s’appuient sur les bases Microsoft Teams onglets. Il s’agit essentiellement d’un onglet à l’intérieur d’une fenêtre pop-up. Ils utilisent le même SDK, donc si vous avez créé un onglet, vous êtes déjà familiarisé avec la création d’un module de tâche.
+Les modules de tâche s’appuient sur les bases des onglets Microsoft Teams. Il s’agit essentiellement d’un onglet à l’intérieur d’une fenêtre contextuelle. Ils utilisent le même Kit de développement logiciel (SDK), donc si vous avez créé un onglet, vous êtes déjà familiarisé avec la création d’un module de tâche.
 
 Les modules de tâche peuvent être appelés de trois façons :
 
-* Onglets de canal ou personnels : à l’aide du SDK onglets Microsoft Teams, vous pouvez appeler des modules de tâche à partir de boutons, de liens ou de menus de votre onglet. Pour plus d’informations, voir [l’utilisation de modules de tâche dans les onglets.](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
-* Bots : utilisation de boutons sur [les cartes envoyées](~/task-modules-and-cards/cards/cards-reference.md) à partir de votre bot. Cela est utile lorsque vous n’exigez pas que tous les personnes d’un canal voient ce que vous faites avec un bot. Par exemple, lorsque les utilisateurs répondent à un sondage dans un canal, il n’est pas utile de voir un enregistrement de ce sondage en cours de création. Pour plus d’informations, voir [l’utilisation de modules](~/task-modules-and-cards/task-modules/task-modules-bots.md)de tâche Teams bots.
-* En dehors Teams à partir d’un lien profond : vous pouvez également créer des URL pour appeler un module de tâche de n’importe où. Pour plus d’informations, voir [la syntaxe de lien profond du module de tâche.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)
+* Onglets de canal ou personnels : à l’aide du Kit de développement logiciel (SDK) Tabs Microsoft Teams, vous pouvez appeler des modules de tâche à partir de boutons, de liens ou de menus sous votre onglet. Pour plus d’informations, consultez [l’utilisation de modules de tâches dans des onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* Bots : Utilisation de boutons sur les [cartes](~/task-modules-and-cards/cards/cards-reference.md) envoyées à partir de votre bot. Cela est utile lorsque vous n’avez pas besoin que tous les utilisateurs d’un canal voient ce que vous faites avec un bot. Par exemple, lorsque les utilisateurs répondent à un sondage dans un canal, il n’est pas utile de voir un enregistrement de ce sondage en cours de création. Pour plus d’informations, consultez [l’utilisation de modules de tâches à partir de bots Teams](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+* En dehors de Teams à partir d’un lien profond : vous pouvez également créer des URL pour appeler un module de tâche n’importe où. Pour plus d’informations, consultez [la syntaxe de lien profond du module de tâches](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
 ## <a name="components-of-a-task-module"></a>Composants d’un module de tâche
 
 Voici à quoi ressemble un module de tâche lorsqu’il est appelé à partir d’un bot :
 
-![Exemple de module de tâche](~/assets/images/task-module/task-module-example.png)
+:::image type="content" source="../assets/images/task-module/task-module-example.png" alt-text="exemple de module de tâche":::
 
 Un module de tâche inclut les éléments suivants, comme illustré dans l’image précédente :
 
-1. Icône de votre [ `color` application.](~/resources/schema/manifest-schema.md#icons)
-2. Nom de votre [ `short` application.](~/resources/schema/manifest-schema.md#name)
+1. Icône de [`color`](~/resources/schema/manifest-schema.md#icons)votre application.
+2. Nom de [`short`](~/resources/schema/manifest-schema.md#name)votre application.
 3. Titre du module de tâche spécifié dans la `title` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
-4. Bouton Fermer ou annuler du module de tâche. Si l’utilisateur sélectionne ce bouton, votre application reçoit un `err` événement. Pour plus d’informations, [voir l’exemple d’envoi du résultat d’un module de tâche.](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)
+4. Bouton Fermer ou annuler du module de tâche. Si l’utilisateur sélectionne ce bouton, votre application reçoit un `err` événement. Pour plus d’informations, consultez [l’exemple d’envoi du résultat d’un module de tâche](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module).
 
     > [!NOTE]
-    > Il n’est actuellement pas possible de détecter `err` l’événement lorsqu’un module de tâche est appelé à partir d’un bot.
+    > Il n’est actuellement pas possible de détecter l’événement `err` lorsqu’un module de tâche est appelé à partir d’un bot.
 
-5. Le rectangle bleu est l’endroit où votre page web apparaît si vous chargez votre propre page web à l’aide de la `url` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Pour plus d’informations, [voir le resserrage du module de tâche.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)
-6. Si vous affichez une carte adaptative à l’aide de la propriété de l’objet `card` [TaskInfo,](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) le remplissage est ajouté pour vous. Pour plus d’informations, voir le module de tâche [CSS pour les modules de tâche HTML ou JavaScript.](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)
-7. Les boutons de carte adaptative s’affichent après la sélection **de l’inscription.** Lorsque vous utilisez votre propre page, créez vos propres boutons.
+5. Le rectangle bleu est l’endroit où votre page web s’affiche si vous chargez votre propre page web à l’aide de la `url` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Pour plus d’informations, consultez [le dimensionnement du module de tâche](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
+6. Si vous affichez une carte adaptative à l’aide de la `card` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) , le remplissage est ajouté pour vous. Pour plus d’informations, consultez le [module de tâche CSS pour les modules de tâche HTML ou JavaScript](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
+7. Les boutons de carte adaptative s’affichent après avoir sélectionné **S’inscrire**. Lorsque vous utilisez votre propre page, créez vos propres boutons.
 
 ## <a name="next-step"></a>Étape suivante
 

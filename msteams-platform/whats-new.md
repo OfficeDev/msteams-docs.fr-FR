@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952386"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073089"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|04/20/2022 |  Mettre en place des pipelines CI/CD | Outils et SDK > Teams Toolkit for Visual Studio Code > [Mettre en place des pipelines CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Téléchargez votre application dans Microsoft Teams | Distribuer votre application > [Télécharger votre application](concepts/deploy-and-publish/apps-upload.md)|
 |06/04/2022| Partager dans Teams à partir d’une application ou d’un onglet personnel (préversion développeur) | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |04/01/2022| Présentation du guide pas à pas pour créer un bot conversationnel Teams| Créer des bots > Conversations de bot > Conversations de groupe et de canal > Guide pas à pas pour créer Teams [Bot conversationnel](sbs-teams-conversation-bot.yml) |
@@ -61,6 +62,10 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|04/26/2022|Comportement de désinstallation pour une application personnelle avec un bot | Créer des bots > conversations de bot > des mises à jour de comportement de [désinstallation dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|04/22/2022| Aperçu du test pour les applications monétisées | Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+|04/22/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|04/20/2022 |  Mettre en place des pipelines CI/CD | Outils et SDK > Teams Toolkit for Visual Studio Code > [Mettre en place des pipelines CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Téléchargez votre application dans Microsoft Teams | Distribuer votre application > [Télécharger votre application](concepts/deploy-and-publish/apps-upload.md)|
 |04/01/2022| Présentation du guide pas à pas pour créer un bot conversationnel Teams| Créer des bots > Conversations de bot > Conversations de groupe et de canal > Guide pas à pas pour créer Teams [Bot conversationnel](sbs-teams-conversation-bot.yml) |
 |30/03/2022| Mise à jour du module Démarrage avec l’application Blazor à l’aide d’onglets et de bots|  Démarrage > [Créer votre première application à l’aide de Blazor](sbs-gs-blazorupdate.yml)|
@@ -269,14 +274,10 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 |06/04/2022| Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |07/02/2022| Outils et kits de développement durable |Kit de ressources Teams pour Visual Studio Code > </br> • Ajouter des fonctionnalités aux applications Teams> [Ajouter des fonctionnalités aux applications Teams](toolkit/add-capability.md) </br> • Ajoutez des ressources cloud aux applications Teams> [Ajouter des ressources cloud aux applications Teams](toolkit/add-resource.md) |
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
-|03/02/2022| Aperçu du test pour les applications monétisées| Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|03/02/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |17/01/2022| Sélectionneur de personnes en cartes adaptatives pour mobile  | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
-|24/12/2021| Introduction d'un guide étape par étape pour accorder des autorisations d'appareil Tab | Principes de base des applications > Capacités des appareils > [Guide étape par étape pour accorder des autorisations à l'appareil Tab](sbs-tab-device-permissions.yml)  |
 |15/11/2021| Les onglets personnels et les extensions de messagerie fonctionnent dans Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 |28/10/2021|Les bots peuvent être activés pour recevoir tous les messages du canal en utilisant le consentement spécifique aux ressources (RSC) | - Construire des bots > Conversations entre bots > Messages dans les conversations entre bots > [Recevoir tous les messages avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)  </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifeste d’application > prévisualisation pour les développeurs > [schéma de manifeste de prévisualisation pour les développeurs](~/resources/schema/manifest-schema-dev-preview.md) |
-|06/21/2021|Comportement de désinstallation pour une application personnelle avec un bot | Créer des bots > conversations de bot > des mises à jour de comportement de [désinstallation dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Consentement spécifique aux ressources pour les conversations | • Utiliser Teams données de gestion avec le consentement microsoft Graph > [ressource spécifique](graph-api/rsc/resource-specific-consent.md) </br> • Testez votre application > Microsoft Graph > les autorisations de [consentement spécifiques](graph-api/rsc/test-resource-specific-consent.md) aux ressources dans Teams|
 
 Pour plus d’informations, voir [la prévisualisation pour](~/resources/dev-preview/developer-preview-intro.md)les développeurs publics Teams .

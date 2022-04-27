@@ -6,38 +6,39 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 047cd9bcd86c103c3c9cab22793fb7d187f7493d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: de85674891a53c1e87b43ae1d472daf35716c348
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453599"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073539"
 ---
-# <a name="customize-app-manifest-in-teams-toolkit"></a>Personnaliser le manifeste de l’application dans Teams Shared Computer Toolkit
+# <a name="customize-app-manifest-in-toolkit"></a>Personnaliser le manifeste de l’application dans Shared Computer Toolkit
 
-Teams Shared Computer Toolkit se compose des fichiers de modèles de manifeste suivants sous le `templates/appPackage` dossier :
+Teams Shared Computer Toolkit se compose des fichiers de modèle de manifeste suivants sous `manifest.template.json` un dossier dans des environnements locaux et distants :
 
-* `manifest.local.template.json` - application d’équipes de débogage locale
-* `manifest.remote.template.json` - partagé dans tous les environnements
+* `manifest.template.json`
+* `templates/appPackage`
+
 
 ## <a name="prerequisite"></a>Conditions préalables
 
-* [Installez Teams Shared Computer Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* [Installer la dernière version d’Office](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
 > [!TIP]
-> Assurez-vous que Teams projet d’application est ouvert dans Visual Studio Code.
+> Vérifiez que Teams projet d’application est ouvert dans Visual Studio Code.
 
-Lors de la configuration, Teams Shared Computer Toolkit charge `manifest.remote.template.json`le manifeste à partir de , combiné avec les configurations `state.{env}.json` `config.{env}.json`à partir et , et crée une application Teams dans [le portail de développement](https://dev.teams.microsoft.com/apps).
+Pendant le débogage ou l’approvisionnement local, Teams Shared Computer Toolkit charge le manifeste à partir de `manifest.template.json`, avec les configurations de `state.{env}.json`, `config.{env}.json`et crée l’application Teams dans le [portail de développement](https://dev.teams.microsoft.com/apps).
 
-Pendant le débogage local, Teams Shared Computer Toolkit charge `manifest.local.template.json`le manifeste à partir de , combiné avec les configurations `localSettings.json`de , et crée une application Teams dans [le portail de développement](https://dev.teams.microsoft.com/apps).
 
-## <a name="supported-placeholder-in-manifestremotetemplatejson"></a>Espace réservé pris en charge dans manifest.remote.template.json
+## <a name="placeholders-supported-in-manifesttemplatejson"></a>Espaces réservés pris en charge dans manifest.template.json
 
-* `{{state.xx}}`est un espace réservé prédéfiny dont la valeur est résolue par Teams Shared Computer Toolkit, défini dans `state.{env}.json`. Veillez à ne pas modifier les valeurs à l’état. {env}.json.
-* `{{config.manifest.xx}}` est un espace réservé personnalisé dont la valeur est résolue à partir de `config.{env}.json`.
-  * Vous pouvez ajouter un paramètre personnalisé comme suit :
-    * Ajoutez un espace réservé dans manifest.remote.template.json avec le modèle : `{{config.manifest.xx}}`
-    * Ajoutez une valeur de config dans la config. {env}.json
+* `{{state.xx}}`est un espace réservé prédéfini et sa valeur est résolue par Teams Shared Computer Toolkit, défini dans `state.{env}.json`. Veillez à ne pas modifier les valeurs dans l’état. {env}.json
+* `{{config.manifest.xx}}` est un espace réservé personnalisé et sa valeur est résolue à partir de `config.{env}.json`
+
+  1. Vous pouvez ajouter un paramètre personnalisé comme suit :
+      1. Ajoutez un espace réservé dans manifest.template.json avec le modèle : `{{config.manifest.xx}}`
+      2. Ajoutez une valeur de configuration dans la configuration. {env}.json
 
         ```json
         {
@@ -47,15 +48,8 @@ Pendant le débogage local, Teams Shared Computer Toolkit charge `manifest.local
         }
         ```
 
-    Outre chaque espace réservé de la config `manifest.remote.template.json`, il existe un `Go to config file`. Vous pouvez accéder au fichier de configuration en le sélectionnant.
-
-## <a name="supported-placeholder-in-manifestlocaltemplatejson"></a>Espace réservé pris en charge dans manifest.local.template.json
-
-`{{localSettings.xx}}`est un espace réservé prédéfiny dont la valeur est résolue par Teams Shared Computer Toolkit, défini dans `localSettings.json`. Veillez à ne pas modifier les valeurs dans localSettings.json.
-
- > [!NOTE]
- > Veillez à ne pas personnaliser le manifeste local.
+   2. Vous pouvez accéder au fichier de configuration en sélectionnant l’un des espaces réservés de configuration **Go to config file** or **View the state file** in `manifest.template.json`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prévisualiser Teams manifeste de l’application dans Teams Shared Computer Toolkit](TeamsFx-manifest-preview.md)
+[Aperçu du manifeste d’application Teams dans Teams Shared Computer Toolkit](TeamsFx-manifest-preview.md)
