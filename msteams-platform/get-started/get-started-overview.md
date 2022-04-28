@@ -4,12 +4,12 @@ description: Vue d’ensemble de Démarrage pour la documentation pour les déve
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemples de développeurs Microsoft Teams
-ms.openlocfilehash: 779bd362924e30743981043a5d856986eb3faadb
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 12fea3fcbdceddfba4c0f60db2ed64b20f801284
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952295"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104356"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -35,7 +35,7 @@ Selon les fonctionnalités souhaitées pour votre application, choisissez un ens
 |--------|-------------|--------|--------|--------|
 | Onglets | Une expérience web incorporée en plein écran. | Microsoft Visual Studio Code avec une extension de kit de ressources Teams, ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) si vous préférez utiliser CLI | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) pour les bibliothèques principales et [SDK client Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) pour les fonctionnalités de l’interface utilisateur | Technologie web en général, HTML, CSS et JavaScript (incl. React). |
 | Bots | Bot de conversation qui discute avec les membres. | Visual Studio Code avec une extension de kit de ressources Teams ,ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
-| Extensions de messagerie | Raccourcis permettant d’insérer du contenu externe dans une conversation ou d’agir sur des messages. | Visual Studio Code avec une extension de kit de ressources Teams ,ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
+| Extensions de messages | Raccourcis permettant d’insérer du contenu externe dans une conversation ou d’agir sur des messages. | Visual Studio Code avec une extension de kit de ressources Teams ,ou [CLI TeamsFx](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [SDK TeamsFx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) et [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java et Python. |
 
 *Vous n’êtes pas limité à l’utilisation de ces piles particulières !*
 

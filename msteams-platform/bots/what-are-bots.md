@@ -5,12 +5,12 @@ description: Présentation des bots dans Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952302"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102420"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
@@ -21,11 +21,11 @@ Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’un
 
 Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web à l’aide de texte, de cartes interactives et de modules de tâche.
 
-![Appeler un bot à l’aide de texte](~/assets/images/invokebotwithtext.png)
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="Service web utilisant du texte"lightbox="../assets/images/invokebotwithtext.png":::
 
-![Appeler un bot à l’aide d’une carte](~/assets/images/invokebotwithcard.png)
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="service web à l’aide de cartes interactives"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="service web à l’aide du module de tâche"lightbox="../assets/images/task-module-example.png"border="true":::
 
 Les bots de conversation sont extrêmement flexibles. Les bots peuvent gérer quelques commandes de base ou des tâches complexes qui impliquent l’intelligence artificielle et le traitement du langage naturel. Les bots peuvent faire partie d’une application plus grande ou être autonomes.
 

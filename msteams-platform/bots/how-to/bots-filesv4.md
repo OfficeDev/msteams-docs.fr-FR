@@ -5,12 +5,12 @@ keywords: teams bots files send receive
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ebfa6bf24899d8bc88a15018b0d74d395bb56c79
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 22c88a435628c34942eb8f5652b9170f861a0446
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820299"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102528"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>Envoyer et recevoir des fichiers via le bot
 
@@ -99,7 +99,7 @@ Pour charger un fichier vers un utilisateur :
 
 Le message de bureau suivant contient un objet pièce jointe simple demandant à l’utilisateur l’autorisation de charger le fichier :
 
-![Carte de consentement demandant à l’utilisateur l’autorisation de charger le fichier](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Carte de consentement demandant à l’utilisateur l’autorisation de charger le fichier"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 Le message mobile suivant contient un objet pièce jointe demandant à l’utilisateur l’autorisation de charger le fichier :
 
@@ -200,7 +200,7 @@ Le tableau suivant décrit les propriétés de contenu de la pièce jointe :
 
 Récupérez les images incluses qui font partie du message à l’aide du jeton d’accès du bot.
 
-![Image incorporée](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="Image incorporée"border="true":::
 
 Le code suivant montre un exemple d’extraction d’images inline à partir d’un message :
 

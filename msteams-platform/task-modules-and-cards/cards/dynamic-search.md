@@ -5,12 +5,12 @@ description: Décrit la recherche en tête de type avec le contrôle Input.Choic
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073792"
+ms.locfileid: "65103438"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>Recherche en saisie semi-automatique dans les Cartes adaptatives
 
@@ -61,7 +61,7 @@ L’image suivante illustre l’expérience mobile de la recherche de typeahead 
 ---
 
 > [!NOTE]
-> Vous ne pouvez pas obtenir d’expériences de carte enrichies avec la recherche dynamique, comme les extensions de messagerie basées sur des requêtes.
+> Vous ne pouvez pas obtenir d’expériences de carte enrichies avec la recherche dynamique, comme les extensions de message basées sur des requêtes.
 
 ## <a name="implement-typeahead-search"></a>Implémenter la recherche de typeahead
 
@@ -88,8 +88,8 @@ Les propriétés suivantes sont les nouveaux ajouts au schéma pour activer la [
 | Propriété| Type | Requis | Description |
 |-----------|------|----------|-------------|
 | type | Data.Query | Oui | Spécifie qu’il s’agit d’un objet Data.Query.|
-| Dataset | String | Oui | Spécifie le type de données extraites dynamiquement. |
-| value | String | Non | Remplit la demande d’appel au bot avec l’entrée que l’utilisateur a fournie au `ChoiceSet`. |
+| Dataset | Chaîne | Oui | Spécifie le type de données extraites dynamiquement. |
+| value | Chaîne | Non | Remplit la demande d’appel au bot avec l’entrée que l’utilisateur a fournie au `ChoiceSet`. |
 | count | Nombre | Non | Remplit la demande d’appel au bot pour spécifier le nombre d’éléments qui doivent être retournés. Le bot l’ignore si les utilisateurs souhaitent envoyer un montant différent. |
 | skip | Nombre | Non | Remplit la demande d’appel au bot pour indiquer que les utilisateurs souhaitent paginer et avancer dans la liste. |
 

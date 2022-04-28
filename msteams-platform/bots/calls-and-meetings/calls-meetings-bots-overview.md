@@ -4,12 +4,12 @@ description: Découvrez comment vos applications Microsoft Teams peuvent interag
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’appels audio vidéo IVR voix en ligne réunions en temps réel flux multimédia bot
-ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073822"
+ms.locfileid: "65102504"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots d’appels et de réunions en ligne
 
@@ -45,7 +45,7 @@ Les appels dans Teams peuvent être purement audio ou audio et vidéo. Au lieu d
 
 Les appels sont d’égal à égal entre une personne et votre bot, ou multipartie entre votre bot et deux personnes ou plus dans un appel de groupe.
 
-![Types d’appels](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Types d’appels"border="true":::
 
 Voici les différents types d’appels et autorisations requis pour l’appel :
 
@@ -63,7 +63,7 @@ Il existe deux types de signaux: l’appel entrant et l’appel entrant. Voici l
 
 * Pour recevoir un appel entrant, vous entrez un point de terminaison dans les paramètres de votre bot. Ce point de terminaison reçoit une notification lorsqu’un appel entrant est lancé. Vous pouvez répondre à l’appel, le rejeter ou le rediriger vers quelqu’un d’autre.
 
-    ![Gestion des appels](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Gestion des appels"border="true":::
 
 * Lorsqu’un bot est dans un appel, il existe des API pour désactiver et désactiver le bot et pour démarrer ou arrêter le partage de contenu vidéo ou de bureau avec d’autres participants.
 * Le bot peut également accéder à la liste des participants, inviter de nouveaux participants et les désactiver.

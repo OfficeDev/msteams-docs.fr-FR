@@ -3,12 +3,12 @@ title: Empaqueter votre application
 description: Découvrez comment empaqueter votre application Microsoft Teams pour le test, le téléchargement et la publication dans le Store.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356069"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104090"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Créer un package de l’application Microsoft Teams
 
@@ -34,7 +34,7 @@ Lors de la publication dans le store Teams, assurez-vous que votre manifeste fai
 Votre package de l’application doit inclure deux versions de format PNG de l’icône de votre application : une version de couleur et une version de contour.
 
 > [!Note]
-> Si votre application dispose d’un bot ou d’une extension de messagerie, vos icônes seront également incluses dans votre inscription Microsoft Azure Bot Service.
+> Si votre application dispose d’un bot ou d’une extension de message, vos icônes seront également incluses dans votre inscription Microsoft Azure Bot Service.
 
 Pour que votre application soit approuvé par le store Teams, ces icônes doivent respecter les exigences de taille suivantes.
 
@@ -51,7 +51,7 @@ Teams rogne automatiquement votre icône pour afficher un carré avec des coins 
 Une icône de contour s’affiche dans deux scénarios :
 
 * Lorsque votre application est en cours d’utilisation et « hissée » dans la barre de l’application sur le côté gauche de Teams.
-* Lorsqu'un utilisateur épingle l'extension de messagerie de votre application.
+* Lorsqu’un utilisateur épingle l’extension de message de votre application.
 
 L’icône doit être de 32 x 32 pixels. Il peut être blanc avec un arrière-plan transparent ou transparent avec un arrière-plan blanc (aucune autre couleur n’est autorisée). L’icône de contour ne doit pas avoir de remplissage supplémentaire autour du symbole.
 
@@ -94,7 +94,7 @@ Voici comment les icônes d’application apparaissent dans différentes fonctio
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="Exemple montrant l’apparence d’une icône d’application sur un bot à l’intérieur d’un canal." border="false":::
 
-#### <a name="messaging-extension"></a>Extension de la messagerie
+#### <a name="message-extension"></a>Extension de message
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<texte de remplacement>" border="false":::
 

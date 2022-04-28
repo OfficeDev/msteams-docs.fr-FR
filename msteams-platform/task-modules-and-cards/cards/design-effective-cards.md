@@ -4,18 +4,18 @@ description: Découvrez comment concevoir des Cartes adaptatives pour Teams et o
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398623"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103901"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Conception de Cartes adaptatives pour votre application Microsoft Teams
 
-Une carte adaptative contient un corps libre d’éléments de carte et un ensemble facultatif d’actions. Les cartes adaptatives sont des extraits de contenu exploitables que vous pouvez ajouter à une conversation par le biais d'un bot ou d'une extension de messagerie. À l’aide de texte, de graphiques et de boutons, ces cartes fournissent une communication enrichie à votre public.
+Une carte adaptative contient un corps libre d’éléments de carte et un ensemble facultatif d’actions. Les cartes adaptatives sont des extraits de contenu exploitables que vous pouvez ajouter à une conversation via un bot ou une extension de message. À l’aide de texte, de graphiques et de boutons, ces cartes fournissent une communication enrichie à votre public.
 
-L’infrastructure de carte adaptative est utilisée dans de nombreux produits Microsoft, y compris Teams. Vous pouvez envoyer des cartes à l’intérieur des messages aux utilisateurs via des bots ou des extensions de messagerie. Les utilisateurs peuvent également effectuer des actions sur les cartes lorsqu’ils sont présents.
+L’infrastructure de carte adaptative est utilisée dans de nombreux produits Microsoft, y compris Teams. Vous pouvez envoyer des cartes dans des messages aux utilisateurs via des bots ou des extensions de message. Les utilisateurs peuvent également effectuer des actions sur les cartes lorsqu’ils sont présents.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Exemple de vue d’ensemble d’une carte adaptative." border="false":::
 

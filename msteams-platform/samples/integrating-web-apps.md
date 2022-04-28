@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations relatives à l’intégration de Teams
-ms.openlocfilehash: eb278d078c7b195ff5d2d2a2f980ffc9db74f748
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: bbd5b046d7b1afca5cc3fa5c8afb21a3698f43eb
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685596"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104349"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations relatives à l’intégration de Teams
 
@@ -35,8 +35,8 @@ Votre application Teams doit inclure les fonctionnalités collaboratives requise
 |Fonctionnalités courantes de l’application   |fonctionnalités de plateforme Teams   |
 |----------|-----------|
 |Page web incorporée, page d’accueil ou vue web  |[Onglets](../tabs/what-are-tabs.md)  |
-|Partager des raccourcis et des extensions  |[Extensions de messagerie](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Raccourcis et extensions d’action  |[Extensions de messagerie](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Partager des raccourcis et des extensions  |[Extensions de message](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Raccourcis et extensions d’action  |[Extensions de message](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Notifications de canal  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks entrants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connecteurs Office 365](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Services externes de message  |[Bots](../bots/what-are-bots.md)<br/>[Webhooks sortants](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |

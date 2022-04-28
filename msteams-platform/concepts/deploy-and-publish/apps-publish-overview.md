@@ -6,12 +6,12 @@ author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: déployer publier le gcc de chargement d’application
-ms.openlocfilehash: f691edee8f4e3aab34aa616f9bbf0ed451874070
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 5db182f9276865fc98d277f642f7e58fd4a52df5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073068"
+ms.locfileid: "65104433"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams
 
@@ -45,7 +45,7 @@ Pour plus d’informations, consultez [gérer vos applications dans le centre d�
 Dans Cloud de la communauté du secteur public Teams environnements, les applications Microsoft conformes sont activées par défaut. Toutefois, avant de publier une application, assurez-vous que tous les points de terminaison de l’application sont conformes aux exigences de votre organisation Cloud de la communauté du secteur public. Pour plus d’informations, consultez [Cloud de la communauté du secteur public](../app-fundamentals-overview.md#government-community-cloud).
 
 > [!IMPORTANT]
->Si votre application inclut un bot ou une extension de messagerie, vous devez sélectionner l’option **Microsoft Teams for Government** lors de la configuration d’un canal entre votre bot et Teams dans Azure. Pour plus d’informations, consultez [Connecter un bot aux canaux](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+>Si votre application inclut un bot ou une extension de message, vous devez sélectionner l’option **Microsoft Teams for Government** lors de la configuration d’un canal entre votre bot et Teams dans Azure. Pour plus d’informations, consultez [Connecter un bot aux canaux](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
 ## <a name="publish-your-app-to-the-teams-store"></a>Publier votre application dans le Teams Store
 

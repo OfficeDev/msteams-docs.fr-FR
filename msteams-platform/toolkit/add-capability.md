@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073530"
+ms.locfileid: "65103270"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Ajouter des fonctionnalités à vos applications Teams
 
@@ -21,7 +21,7 @@ Pendant le développement d’applications, vous pouvez créer une application T
 |--------|-------------|
 | Onglets |  Les onglets sont des balises HTML simples qui pointent vers des domaines déclarés dans le manifeste de l’application. Vous pouvez ajouter des onglets dans le cadre d’un canal au sein d’une équipe, d’une conversation de groupe ou d’une application personnelle pour un utilisateur individuel|
 | Bots |  Les bots aident à interagir avec votre service web via du texte, des cartes interactives et des modules de tâches|
-| Extensions de messagerie | Les extensions de messagerie permettent d’interagir avec votre service web via des boutons et des formulaires dans le client Microsoft Teams|
+| Extensions de message | Les extensions de message permettent d’interagir avec votre service web via des boutons et des formulaires dans le client Microsoft Teams|
 
 ## <a name="prerequisite"></a>Conditions préalables
 
@@ -35,7 +35,8 @@ Pendant le développement d’applications, vous pouvez créer une application T
 Les limitations de TeamsFx lors de l’ajout de fonctionnalités supplémentaires sont les suivantes :
 
 * Vous pouvez ajouter des onglets jusqu’à 16 instances
-* Vous pouvez ajouter un bot et une extension de messagerie pour une instance chacune
+* Vous pouvez ajouter l’extension de bot et de message pour une instance chacune
+
 ## <a name="add-capabilities"></a>Ajouter des fonctionnalités
 
 > [!Note]
@@ -69,7 +70,7 @@ Les fonctionnalités sélectionnées sont correctement ajoutées à votre projet
    |-----------------------|----------|
    |Pour ajouter un onglet|`teamsfx capability add tab`|
    |Pour ajouter un bot|`teamsfx capability add bot`|
-   |Pour ajouter une extension de messagerie|`teamsfx capability add messaging-extension`|
+   |Pour ajouter l’extension de message|`teamsfx capability add messaging-extension`|
 
 ## <a name="supported-capabilities"></a>Fonctionnalités prises en charge
 
@@ -77,18 +78,18 @@ Outre les fonctionnalités déjà disponibles pour votre application Teams, vous
 
 |Fonctionnalités existantes|Autres fonctionnalités prises en charge|
 |--------------------|--------------------|
-|Onglets avec SPFx|Aucun|
-|Onglets avec Azure|Bot et extension de messagerie|
+|Onglets avec SPFx|Aucune|
+|Onglets avec Azure|Bot et extension de message|
 |Bot|Onglets|
-|Extension de la messagerie|Onglets et bot|
+|Extension de message|Onglets et bot|
 |Onglets et bot|Onglets et extension de message|
-|Onglets et extension de messagerie|Onglets et bot|
-|Onglets, bot et extension de messagerie|Onglets|
+|Onglets et extension de message|Onglets et bot|
+|Onglets, bot et extension de message|Onglets|
 |Onglets |Bot et extension de message|
 
-## <a name="add-bot-tab-and-messaging-extension"></a>Ajouter le bot, l’onglet et l’extension de messagerie
+## <a name="add-bot-tab-and-message-extension"></a>Ajouter le bot, l’onglet et l’extension de message
 
-Après avoir ajouté un bot et une extension de messagerie, les modifications apportées à votre projet sont les suivantes :
+Après l’ajout d’un bot et d’une extension de message, les modifications apportées à votre projet sont les suivantes :
 
 * Un code de modèle de bot est ajouté dans un sous-dossier avec chemin d’accès `yourProjectFolder/bot`. Cela inclut un modèle d’application de bot **Hello World** dans votre projet
 * `launch.json`et `task.json` sous `.vscode` le dossier sont mis à jour, ce qui inclut les scripts nécessaires pour Visual Studio Code, et est exécuté lorsque vous souhaitez déboguer votre application localement
@@ -108,7 +109,6 @@ Après l’ajout de l’onglet, les modifications apportées à votre projet son
   * Étendues des onglets
 * Les fichiers sous `templates/azure/teamsfx` seront mis à jour et `templates/azure/provision/xxx`le fichier .bicep régénéré
 * Le fichier sous `.fx/config` est régénéré, ce qui garantit que votre projet est défini avec les configurations appropriées pour la fonctionnalité nouvellement ajoutée
-
 
 
 ## <a name="see-also"></a>Voir aussi

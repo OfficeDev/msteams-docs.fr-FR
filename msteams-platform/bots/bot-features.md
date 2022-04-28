@@ -5,12 +5,12 @@ description: Vue d’ensemble des outils et kits de développement logiciel (SDK
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a50f93e718dcff35d810f0f8748c97095b49b138
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 52f933aaddd5a02319ae1c0a35e9a4a26b617b57
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073745"
+ms.locfileid: "65104321"
 ---
 # <a name="bots-and-sdks"></a>Bots et kits de développement
 
@@ -36,7 +36,7 @@ Bot [Framework](https://dev.botframework.com/) est un kit de développement logi
 
 * Utilisez des types de cartes spécialisés comme la carte de connecteur Office 365.
 * Définissez Teams données de canal spécifiques sur les activités.
-* Traiter les demandes d’extension de messagerie.
+* Traiter les demandes d’extension de message.
 
 > [!IMPORTANT]
 > Vous pouvez développer Teams applications dans n’importe quelle technologie de programmation web et appeler directement les [API REST Bot Framework](/bot-framework/rest-api/bot-framework-rest-overview). Toutefois, vous devez gérer les jetons dans tous les cas.

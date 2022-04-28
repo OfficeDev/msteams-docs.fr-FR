@@ -1,17 +1,17 @@
 ---
 title: Applications pour les réunions Teams
 author: surbhigupta
-description: vue d’ensemble des applications Teams réunions basées sur le rôle des participants et des utilisateurs
+description: vue d’ensemble des applications dans Teams réunions en fonction du rôle des participants et des utilisateurs
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: Api de rôle d’utilisateur participant aux réunions teams apps
-ms.openlocfilehash: 9715467d17205a7a913f36da099782a0f0da69df
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+keywords: Applications Teams rencontre l’API de rôle de participant utilisateur
+ms.openlocfilehash: cdccc6eafdfad25b813ca08419981aec1a9ce18a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466424"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103298"
 ---
 # <a name="apps-for-teams-meetings"></a>Applications pour les réunions Teams
 
@@ -19,21 +19,21 @@ Les réunions permettent la collaboration, le partenariat, la communication écl
 
 Les utilisateurs peuvent accéder aux applications pendant les réunions à l’aide de la galerie d’onglets à partir de leur calendrier, par exemple :
 
-* Pré-phase d’un tableau kanban.
+* Pré-étape d’un tableau Kanban.
 * Lancez une boîte de dialogue actionnable en réunion.
-* Créer une enquête post-réunion.
+* Créez une enquête post-réunion.
 
-L’illustration suivante vous donne une idée des fonctionnalités d’extensibilité des applications de réunion :
+L’illustration suivante vous donne une idée des fonctionnalités d’extensibilité de l’application de réunion :
 
 ![Extensibilité de l’application de réunion](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-Cet article fournit une vue d’ensemble de l’extensibilité des applications de réunion, des références d’API, de l’activer et de la configurer pour les réunions, ainsi que des scènes personnalisées du mode ensemble dans Teams.
+Cet article fournit une vue d’ensemble de l’extensibilité des applications de réunion, des références d’API, de l’activation et de la configuration des applications pour les réunions, ainsi que des scènes personnalisées en mode Ensemble dans Teams.
 
-Améliorez votre expérience de réunion en utilisant la fonction d'extensibilité des réunions. Cette fonctionnalité vous permet d'intégrer vos applications dans les réunions. Il comprend également différentes étapes du cycle de vie d'une réunion, où vous pouvez intégrer des onglets, des bots et des extensions de messagerie. Vous pouvez identifier différents rôles de participants et types d’utilisateurs, obtenir des événements de réunion et générer des boîtes de dialogue en réunion.
+Améliorez votre expérience de réunion en utilisant la fonction d'extensibilité des réunions. Cette fonctionnalité vous permet d'intégrer vos applications dans les réunions. Il inclut également différentes étapes d’un cycle de vie de réunion, où vous pouvez intégrer des onglets, des bots et des extensions de message. Vous pouvez identifier différents rôles de participant et types d’utilisateurs, obtenir des événements de réunion et générer des dialogues dans la réunion.
 
-Pour personnaliser Teams des applications pour les réunions, activez vos applications pour les réunions Teams en mettant à jour le manifeste de l’application et configurez également les applications pour les scénarios de réunion.
+Pour personnaliser Teams avec des applications pour les réunions, activez vos applications pour Teams réunions en mettant à jour le manifeste de l’application et en configurant les applications pour les scénarios de réunion.
 
-La nouvelle fonctionnalité de scènes en mode ensemble personnalisée permet aux utilisateurs de collaborer à une réunion avec leur équipe au même endroit.
+La nouvelle fonctionnalité personnalisée de scènes en mode Ensemble permet aux utilisateurs de collaborer dans une réunion avec leur équipe au même endroit.
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -42,8 +42,8 @@ La nouvelle fonctionnalité de scènes en mode ensemble personnalisée permet au
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Conception de votre extension Microsoft Teams réunion](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Références d’API d’applications de réunion : Teams](~/apps-in-teams-meetings/api-references.md)
-* [Scènes personnalisées en mode ensemble](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Conception de votre extension de réunion Microsoft Teams](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Références d’API d’applications de réunion - Teams](~/apps-in-teams-meetings/api-references.md)
+* [Personnaliser les scènes en mode Ensemble](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Activer et configurer vos applications pour Teams réunions](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [Cycle de vie des réunions](meeting-app-extensibility.md#meeting-lifecycle)

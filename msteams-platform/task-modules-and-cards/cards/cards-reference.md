@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: high
 keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571494"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104139"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -26,7 +26,7 @@ Pour créer une carte de bannière, une carte miniature ou une carte adaptative 
 1. Sélectionnez **Créer une carte**.
 1. Sélectionnez **Créer** pour l’une des cartes parmi la **carte de bannière**, la **carte miniature** ou la **carte adaptative**. Les détails des métadonnées, les boutons et les exemples de code json, csharp et node sont affichés pour cette carte.
 
-    ![Détails de la carte de bannière](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Détails de la carte de bannière":::
 
 1. Sélectionnez **M’envoyer cette carte**. La carte vous est envoyée en tant que message de conversation.
 
@@ -117,14 +117,14 @@ Une carte adaptative est une carte personnalisable qui peut contenir n’importe
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge les cartes adaptatives :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
 >
-> * La plateforme Teams prend en charge la version 1.4 ou antérieure des fonctionnalités de la carte adaptative pour les cartes envoyées par le bot et les extensions de messagerie basées sur l’action.
-> * La plateforme Teams prend en charge la version 1.3 ou antérieure des fonctionnalités de la carte adaptative pour d’autres capacités, telles que les cartes envoyées par l’utilisateur (extensions de messagerie basées sur la recherche et déploiement de liens), les onglets et les modules de tâches.
+> * La plateforme Teams prend en charge la version 1.4 ou antérieure des fonctionnalités de carte adaptative pour les cartes envoyées par le bot et les extensions de message basées sur des actions.
+> * La plateforme Teams prend en charge la version 1.3 ou antérieure des fonctionnalités de carte adaptative pour d’autres fonctionnalités, telles que les cartes envoyées par l’utilisateur (extensions de message basées sur la recherche et déploiement de liens), les onglets et les modules de tâches.
 > * Le style d’action positif ou destructif n’est pas pris en charge dans les cartes adaptatives sur la plateforme Teams.
 > * Les éléments multimédias ne sont actuellement pas pris en charge dans la carte adaptative sur la plateforme Teams.
 
@@ -269,7 +269,7 @@ Le code suivant montre un exemple de carte adaptative :
 
 #### <a name="additional-information-on-adaptive-cards"></a>Informations supplémentaires sur les cartes adaptatives
 
-Vous pouvez passer des valeurs dynamiques dans une carte adaptative à l’aide du symbole dollar ($) et des accolades. Pour plus d’informations, consultez [Cartes adaptatives](/adaptive-cards/templating/).
+Vous pouvez passer des valeurs dynamiques dans une carte adaptative à l’aide du symbole dollar ($) et des accolades. Pour plus d’informations, consultez [Cartes adaptatives création de modèles](/adaptive-cards/templating/).
 
 Exemple :
 
@@ -300,7 +300,7 @@ Carte qui contient généralement une seule grande image, un ou plusieurs bouton
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge les cartes de bannière :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -319,7 +319,7 @@ Le tableau suivant fournit les propriétés d’une carte de bannière :
 
 ### <a name="example-of-a-hero-card"></a>Exemple de carte de bannière
 
-![Exemple de carte de bannière](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Carte de bannière":::
 
 Le code suivant montre un exemple de carte de bannière :
 
@@ -367,7 +367,7 @@ La carte de liste a été ajoutée par Teams pour fournir des fonctions au-delà
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge les cartes de liste :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -445,7 +445,7 @@ Vous pouvez travailler avec une carte Connecteur Office 365 qui offre une mise 
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge les cartes Connecteur Office 365 :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -567,13 +567,13 @@ Teams prend en charge la carte de réception. Il s’agit d’une carte qui perm
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge des cartes de réception :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 ### <a name="example-of-a-receipt-card"></a>Exemple de carte de réception
 
-![Exemple de carte de réception](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="carte de réception":::
 
 Le code suivant montre un exemple de carte de réception :
 
@@ -641,7 +641,7 @@ L’action de connexion peut être utilisée à partir de n’importe quelle car
 
 Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge des cartes de connexion :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -660,11 +660,11 @@ Vous pouvez travailler avec une carte miniature qui est utilisée pour envoyer u
 
 Le tableau suivant fournit les fonctionnalités qui assurent la prise en charge des cartes miniatures :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![Exemple de carte miniature](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="carte miniature":::
 
 ### <a name="properties-of-a-thumbnail-card"></a>Propriétés d’une carte miniature
 
@@ -743,7 +743,7 @@ La [disposition carrousel](/azure/bot-service/bot-builder-howto-add-media-attach
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge les collections de carrousels :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -756,7 +756,7 @@ Les propriétés d’une carte carrousel sont identiques à celles des cartes de
 
 #### <a name="example-of-a-carousel-collection"></a>Exemple de collection de carrousels
 
-![Exemple de carrousel de cartes](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Collection de carrousels":::
 
 Le code suivant montre un exemple de collection de carrousels :
 
@@ -937,13 +937,13 @@ La disposition de liste affiche une liste de cartes empilées verticalement, év
 
 Le tableau suivant fournit les fonctionnalités qui prennent en charge les collections de listes :
 
-| Bots dans Teams | Extensions de messagerie  | Connecteurs | Bot Framework |
+| Bots dans Teams | Extensions de messages  | Connecteurs | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 #### <a name="example-of-a-list-collection"></a>Exemple de collection de listes
 
-![Exemple de liste de cartes](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="collection de listes":::
 
 Les propriétés des collections de listes sont identiques à celles des cartes de bannière et miniatures.
 

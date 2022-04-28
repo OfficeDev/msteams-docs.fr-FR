@@ -4,18 +4,18 @@ author: surbhigupta
 description: Activer et configurer vos applications pour Teams réunions et différents scénarios de réunion, mettre à jour le manifeste de l’application, configurer des fonctionnalités, telles que la boîte de dialogue en réunion, la phase de réunion partagée, le sidepanel de réunion, etc.
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 4c3f571797df2810e76fc7145e9e9441adbd1e9b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826977"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103347"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Activer et configurer vos applications pour Teams réunions
 
 Chaque équipe a une façon différente de communiquer et de collaborer des tâches. Pour effectuer ces différentes tâches, personnalisez Teams avec des applications pour les réunions. Activez vos applications pour Teams réunions et configurez-les pour qu’elles soient disponibles dans l’étendue de la réunion dans leur manifeste d’application.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Avec les applications pour Teams réunions, vous pouvez étendre les fonctionnalités de vos applications tout au long du cycle de vie des réunions. Avant de travailler avec des applications pour Teams réunions, vous devez remplir les conditions préalables suivantes :
 
@@ -93,7 +93,7 @@ Teams réunions offrent une expérience collaborative à votre organisation. Con
 
 ### <a name="before-a-meeting"></a>Avant une réunion
 
-Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et des extensions de messagerie. Les utilisateurs disposant de rôles d’organisateur et de présentateur peuvent ajouter des onglets à une réunion.
+Avant une réunion, les utilisateurs peuvent ajouter des onglets, des bots et des extensions de message. Les utilisateurs disposant de rôles d’organisateur et de présentateur peuvent ajouter des onglets à une réunion.
 
 Pour ajouter un onglet à une réunion :
 
@@ -104,10 +104,10 @@ Pour ajouter un onglet à une réunion :
 
 1. Dans la galerie d’onglets qui s’affiche, sélectionnez l’application que vous souhaitez ajouter et suivez les étapes nécessaires. L’application est installée sous forme d’onglet.
 
-Pour ajouter une extension de messagerie à une réunion :
+Pour ajouter une extension de message à une réunion :
 
 1. Sélectionnez les points de suspension &#x25CF;&#x25CF;&#x25CF; situés dans la zone de composition du message dans la conversation.
-1. Sélectionnez l’application que vous souhaitez ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’extension de messagerie.
+1. Sélectionnez l’application que vous souhaitez ajouter et suivez les étapes nécessaires. L’application est installée en tant qu’extension de message.
 
 Pour ajouter un bot à une réunion :
 
@@ -129,7 +129,7 @@ Vous `meetingSidePanel` pouvez ainsi personnaliser les expériences d’une réu
 
 Pour utiliser l’API `userContext` pour router les demandes, consultez [Teams Kit de développement logiciel (SDK](../tabs/how-to/access-teams-context.md#user-context)). Pour plus d’informations, consultez [Teams flux d’authentification pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md). Le flux d’authentification pour les onglets est similaire au flux d’authentification pour les sites web. Les onglets peuvent donc utiliser OAuth 2.0 directement. Pour plus d’informations, consultez [Plateforme d'identités Microsoft et le flux de code d’autorisation OAuth 2.0](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-L’extension de messagerie fonctionne comme prévu lorsqu’un utilisateur est en mode réunion. L’utilisateur peut publier des cartes d’extension de message de composition. AppName in-meeting est une info-bulle qui indique le nom de l’application dans la barre U de la réunion.
+L’extension de message fonctionne comme prévu lorsqu’un utilisateur est en mode réunion. L’utilisateur peut publier des cartes d’extension de message de composition. AppName in-meeting est une info-bulle qui indique le nom de l’application dans la barre U de la réunion.
 
 > [!NOTE]
 > Utilisez la version 1.7.0 ou ultérieure de [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), car les versions antérieures ne prennent pas en charge le panneau latéral.
