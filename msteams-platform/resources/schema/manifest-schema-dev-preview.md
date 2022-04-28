@@ -1,23 +1,23 @@
 ---
-title: Informations de référence sur le schéma du manifeste de la préversion publique du développeur
+title: Informations de référence sur le schéma du manifeste de la préversion du développeur public
 description: Exemple de fichier manifeste et description de tous ses composants pris en charge pour Microsoft Teams
 ms.topic: reference
-keywords: Teams manifest schema Developer Preview
-ms.localizationpriority: medium
+keywords: Aperçu du développeur du schéma de manifeste teams
+ms.localizationpriority: high
 ms.date: 11/15/2021
-ms.openlocfilehash: e388dc955acbe3ba0c116f2a5d5f610d3cbdc3c3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104062"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110329"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la préversion du développeur public pour Microsoft Teams
+# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
 
-Pour plus d’informations sur l’activation de la préversion des [développeurs, consultez la préversion publique des développeurs pour Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+Pour plus d’informations sur l’activation de la préversion des développeurs, consultez [Aperçu publique des développeurs pour Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> Si vous n’utilisez pas les fonctionnalités d’aperçu du développeur, notamment l’exécution [Teams onglets personnels et les extensions de message dans Outlook et Office](../../m365-apps/overview.md), utilisez plutôt le [manifeste d’application pour les fonctionnalités de disponibilité générale](~/resources/schema/manifest-schema.md).
+> Si vous n’utilisez pas les fonctionnalités d’aperçu des développeurs, notamment l’exécution des [Onglets personnels Teams et extensions de message dans Outlook et Office](../../m365-apps/overview.md), utilisez plutôt le manifeste d’[application pour les fonctionnalités de disponibilité générale](~/resources/schema/manifest-schema.md) .
 
 Le manifeste Microsoft Teams décrit comment l’application s’intègre à la plateforme Microsoft Teams. Votre manifeste doit être conforme au schéma hébergé sur [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) .
 
@@ -276,21 +276,21 @@ Le schéma définit les propriétés suivantes :
 
 ## <a name="schema"></a>$schema
 
-*Facultatif, mais recommandé* &ndash; String
+*Facultatif, mais recommandé*&ndash; chaîne
 
-`https://` URL faisant référence au schéma JSON pour le manifeste.
+URL `https://` faisant référence au schéma JSON pour le manifeste.
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**Obligatoire** &ndash; String
+Chaîne **requise**&ndash;
 
-Version du schéma de manifeste utilisé par ce manifeste. Utilisez uniquement `m365DevPreview` si vous affichez un aperçu [Teams applications s’exécutant dans Office et Outlook](../../m365-apps/overview.md). Sinon, utilisez `devPreview` toutes les autres fonctionnalités d’aperçu Teams.
+Version du schéma de manifeste que ce manifeste utilise. Utilisez `m365DevPreview` uniquement si vous affichez un aperçu applications [Teams s’exécutant dans Office et Outlook](../../m365-apps/overview.md). Sinon, utilisez `devPreview` pour toutes les autres fonctionnalités teams en préversion.
 
 ## <a name="version"></a>version
 
-**Obligatoire** &ndash; String
+Chaîne **requise**&ndash;
 
-Version de l’application spécifique. Si vous mettez à jour un élément dans votre manifeste, la version doit également être incrémentée. Ainsi, lorsque le nouveau manifeste est installé, il remplace celui existant et l’utilisateur a accès aux nouvelles fonctionnalités. Si cette application a été soumise au Store, le nouveau manifeste doit être soumis à nouveau et validé à nouveau. Ensuite, les utilisateurs de cette application recevront automatiquement le nouveau manifeste mis à jour dans quelques heures, après son approbation.
+Version de l’application spécifique. Si vous mettez à jour un élément dans votre manifeste, la version doit également être incrémentée. Ainsi, lorsque le nouveau manifeste est installé, il remplace celui existant et l’utilisateur obtient la nouvelle fonctionnalité. Si cette application a été envoyée au Store, le nouveau manifeste devra être soumis à nouveau et validé à nouveau. Ensuite, les utilisateurs de cette application recevront automatiquement le nouveau manifeste mis à jour dans quelques heures, après son approbation.
 
 Si les autorisations demandées par l’application changent, les utilisateurs sont invités à mettre à niveau et à donner à nouveau leur consentement à l’application.
 
@@ -300,33 +300,33 @@ Cette chaîne de version doit suivre la norme de [semver](http://semver.org/) (M
 
 **Obligatoire** &ndash; ID d’application Microsoft
 
-Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via le Microsoft Bot Framework, ou si l’application web de votre onglet se connecte déjà auprès de Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), l’entrer ici, puis le réutiliser lorsque vous [ajoutez un bot](~/bots/how-to/create-a-bot-for-teams.md).
+Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via le Microsoft Bot Framework, ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), entrez-le ici, puis réutilisez-le lorsque vous [ajouter un bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
-**Obligatoire** &ndash; String
+Chaîne **requise**&ndash;
 
-Identificateur unique pour cette application en notation de domaine inversée ; par exemple, com.example.myapp.
+Identificateur unique de cette application en notation de domaine inverse ; par exemple, com.example.myapp.
 
 ## <a name="developer"></a>developer
 
-Obligatoire:
+Obligatoire :
 
 Spécifie des informations sur votre entreprise. Pour les applications soumises à AppSource (anciennement Office Store), ces valeurs doivent correspondre aux informations contenues dans votre entrée AppSource.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
 |`name`|32 caractères|✔|Nom complet du développeur.|
-|`websiteUrl`|2 048 caractères|✔|L’URL https:// du site web du développeur. Ce lien doit amener les utilisateurs vers votre entreprise ou votre page d’accueil spécifique au produit.|
+|`websiteUrl`|2 048 caractères|✔|L’URL https:// du site web du développeur. Ce lien doit diriger les utilisateurs vers votre entreprise ou votre page d’accueil spécifique au produit.|
 |`privacyUrl`|2 048 caractères|✔|L’URL https:// vers la politique de confidentialité du développeur.|
 |`termsOfUseUrl`|2 048 caractères|✔|L’URL https:// vers les conditions d’utilisation du développeur.|
 |`mpnId`|10 caractères|✔|**Facultatif** L’ID Microsoft Partner Network qui identifie l’organisation partenaire qui construit l’application.|
 
 ## <a name="localizationinfo"></a>localizationInfo
 
-Optionnel:
+Facultatif :
 
-Autorise la spécification d’une langue par défaut, ainsi que des pointeurs vers des fichiers de langue supplémentaires. Voir [localisation](~/concepts/build-and-test/apps-localization.md).
+Autorise la spécification d’une langue par défaut, ainsi que les pointeurs vers des fichiers de langue supplémentaires. Consultez [localisation](~/concepts/build-and-test/apps-localization.md).
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -343,9 +343,9 @@ Tableau d’objets spécifiant des traductions de langue supplémentaires.
 
 ## <a name="name"></a>nom
 
-Obligatoire:
+Obligatoire :
 
-Nom de l’expérience de votre application, affiché à destination des utilisateurs dans l’expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs de `short` et `full` ne doivent pas être les mêmes.
+Nom de l’expérience de votre application, affiché à destination des utilisateurs dans l’expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs de `short` et de `full` ne doivent pas être les mêmes.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -354,11 +354,11 @@ Nom de l’expérience de votre application, affiché à destination des utilisa
 
 ## <a name="description"></a>description
 
-Obligatoire:
+Obligatoire :
 
 Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations figurant dans votre entrée AppSource.
 
-Assurez-vous que votre description décrit avec précision votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Vous devez également noter, dans la description complète, si un compte externe est requis pour une utilisation. Les valeurs de `short` et `full` ne doivent pas être les mêmes.  Votre brève description ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
+Assurez-vous que votre description décrit avec précision votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Notez également, dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs de `short` et de `full` ne doivent pas être les mêmes.  Votre brève description ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -367,7 +367,7 @@ Assurez-vous que votre description décrit avec précision votre expérience et 
 
 ## <a name="icons"></a>icons
 
-Obligatoire:
+Obligatoire :
 
 Icônes utilisées dans l’application Teams. Les fichiers d’icône doivent être inclus dans le package de chargement.
 
@@ -378,38 +378,38 @@ Icônes utilisées dans l’application Teams. Les fichiers d’icône doivent �
 
 ## <a name="accentcolor"></a>accentColor
 
-**Obligatoire** &ndash; String
+Chaîne **requise**&ndash;
 
-Couleur à utiliser conjointement avec et comme arrière-plan pour vos icônes de plan.
+Couleur à utiliser conjointement avec et comme arrière-plan pour vos icônes de contour.
 
 La valeur doit être un code de couleur HTML valide commençant par « # » par exemple `#4464ee`.
 
 ## <a name="configurabletabs"></a>configurableTabs
 
-Optionnel:
+Facultatif :
 
-Utilisé lorsque l’expérience de votre application possède une expérience d’onglet de canal d’équipe qui nécessite une configuration supplémentaire avant d’être ajoutée. Les onglets configurables sont pris en charge uniquement dans l’étendue Teams, et actuellement un seul onglet par application est pris en charge.
+Utilisé lorsque l’expérience de votre application possède une expérience d’onglet de canal d’équipe qui nécessite une configuration supplémentaire avant d’être ajoutée. Les onglets configurables sont pris en charge uniquement dans l’étendue Teams, et actuellement, un seul onglet par application est pris en charge.
 
 L’objet est un tableau avec tous les éléments du type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent une solution d’onglet de canal configurable.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`configurationUrl`|Chaîne|2 048 caractères|✔|L’URL https:// à utiliser lors de la configuration de l’onglet.|
-|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Par défaut: `true`|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si une instance de la configuration de l’onglet peut être mise à jour par l’utilisateur après sa création. Par défaut : `true`|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets configurables ne prennent en charge que les étendues `team` et `groupchat`. |
-|`context` |tableau d’énumération|6 ||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut : `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`et `meetingStage`.|
+|`context` |tableau d’énumération|6 ||L’ensemble des `contextItem` étendues où un [onglet est pris en charge](../../tabs/how-to/access-teams-context.md). Par défaut : `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` et `meetingStage`.|
 |`sharePointPreviewImage`|Chaîne|2048||Un chemin de fichier relatif vers une image d'aperçu d'onglet à utiliser dans SharePoint. Taille 1024x768. |
 |`supportedSharePointHosts`|Tableau de l’énum|1||Définit la façon dont votre onglet sera mis à disposition dans SharePoint. Les options sont `sharePointFullPage` et `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
-Optionnel:
+Facultatif :
 
 Définit un ensemble d’onglets qui peuvent être « épinglés » par défaut, sans que l’utilisateur les ajoute manuellement. Les onglets statiques déclarés dans `personal` l’étendue sont toujours épinglés à l’expérience personnelle de l’application. Les onglets statiques déclarés dans `team` l’étendue ne sont actuellement pas pris en charge.
 
-Affichez des onglets avec des cartes adaptatives en spécifiant `contentBotId` plutôt que `contentUrl` dans le bloc **staticTabs** .
+Affichez les onglets avec Cartes adaptatives en spécifiant `contentBotId` au lieu de `contentUrl` dans le bloc **staticTabs**.
 
-L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent une solution d’onglet statique.
+L’objet est un tableau (au maximum 16 éléments) avec tous les éléments du type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent une solution d’onglet statique.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -417,28 +417,28 @@ L’objet est un tableau (maximum de 16 éléments) avec tous les éléments du 
 |`name`|Chaîne|128 caractères|✔|Nom d’affichage de l’onglet dans l’interface de canal.|
 |`contentUrl`|Chaîne|2 048 caractères|✔|L’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans la zone de canevas de Teams.|
 |`contentBotId`|   | | | ID d’application Microsoft Teams spécifié pour le bot dans le portail Bot Framework. |
-|`websiteUrl`|Chaîne|2 048 caractères||L https:// URL vers laquelle pointer si un utilisateur choisit d’afficher dans un navigateur.|
+|`websiteUrl`|Chaîne|2 048 caractères||URL https:// vers laquelle pointer si un utilisateur choisit d’afficher dans un navigateur.|
 |`scopes`|Tableau de l’énum|1|✔|Actuellement, les onglets statiques ne peuvent prendre en charge que `personal` l’étendue, ce qui signifie qu’elle peut être mise en service uniquement dans le cadre de l’expérience personnelle.|
 
 ## <a name="bots"></a>bots
 
-Optionnel:
+Facultatif :
 
 Définit une solution bot, ainsi que des informations facultatives telles que les propriétés de commande par défaut.
 
-L’objet est un tableau (maximum de 1 élément&mdash;, un seul bot est autorisé par application) avec tous les éléments du type `object`. Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
+L’objet est un tableau (au maximum 1 élément&mdash;actuellement un seul bot est autorisé par application) avec tous les éléments du type `object`. Ce bloc est requis uniquement pour les solutions qui offrent une expérience de bot.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`botId`|String|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Cela peut bien être le même que [l’ID d’application](#id) global.|
-|`needsChannelSelector`|Boolean|||Indique si le bot utilise ou non un indicateur d’utilisateur pour ajouter le bot à un canal spécifique. Par défaut :`false`|
+|`botId`|String|64 caractères|✔|ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Cela peut être identique à l’[ID d’application](#id) global.|
+|`needsChannelSelector`|Booléen|||Indique si le bot utilise ou non un indicateur utilisateur pour ajouter le bot à un canal spécifique. Par défaut : `false`|
 |`isNotificationOnly`|Booléen|||Indique si un bot est un bot unidirectionnel, de notification uniquement, par opposition à un bot conversationnel. Par défaut : `false`|
 |`supportsFiles`|Booléen|||Indique si le bot prend en charge la possibilité de charger/télécharger des fichiers dans le chat personnel. Par défaut : `false`|
 |`scopes`|Tableau de l’énum|3|✔|Spécifie si le bot offre une expérience dans le contexte d'un canal dans un`team` , dans un chat de groupe (`groupchat` ), ou une expérience scopée à un utilisateur individuel seul (`personal` ). Ces options sont non exclusives.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Liste facultative de commandes que votre bot peut recommander aux utilisateurs. L’objet est un tableau (maximum de 2 éléments) avec tous les éléments de type `object`; vous devez définir une liste de commandes distincte pour chaque étendue prise en charge par votre bot. Pour plus d’informations, consultez [les menus bot](~/bots/how-to/create-a-bot-commands-menu.md).
+Liste facultative de commandes que votre bot peut recommander aux utilisateurs. L’objet est un tableau (2 éléments maximum) avec tous les éléments de type `object`; vous devez définir une liste de commandes distincte pour chaque étendue prise en charge par votre bot. Pour plus d’informations, consultez [Menus bot](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -447,11 +447,11 @@ Liste facultative de commandes que votre bot peut recommander aux utilisateurs. 
 
 ## <a name="connectors"></a>connecteurs
 
-Optionnel:
+Facultatif :
 
 Le `connectors` bloc définit un connecteur Office 365 pour l’application.
 
-L’objet est un tableau (maximum de 1 élément) avec tous les éléments de type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent un connecteur.
+L’objet est un tableau (maximum 1 élément) avec tous les éléments de type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent un connecteur.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -461,18 +461,18 @@ L’objet est un tableau (maximum de 1 élément) avec tous les éléments de ty
 
 ## <a name="composeextensions"></a>composeExtensions
 
-Optionnel:
+Facultatif :
 
 Définit une extension de message pour l’application.
 
 > [!NOTE]
-> Le nom de la fonctionnalité est passé de « compose extension » à « extension de message » en novembre 2017, mais le nom du manifeste reste le même afin que les extensions existantes continuent de fonctionner.
+> Le nom de la fonctionnalité est passé de « extension composée  » à « extension de message » en novembre 2017, mais le nom du manifeste reste le même afin que les extensions existantes continuent de fonctionner.
 
-L’objet est un tableau (maximum de 1 élément) avec tous les éléments de type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent une extension de message.
+L’objet est un tableau (maximum 1 élément) avec tous les éléments de type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent une extension de message.
 
 |Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`botId`|Chaîne|64|✔|ID d’application Microsoft unique pour le bot qui sauvegarde l’extension de message, tel qu’il est inscrit auprès de Bot Framework. Cela peut bien être le même que [l’ID d’application](#id) global.|
+|`botId`|Chaîne|64|✔|ID d’application Microsoft unique pour le bot qui sauvegarde l’extension de message, tel qu’il est inscrit auprès de l’infrastructure de bot. Cela peut être identique à l’[ID d’application](#id) global.|
 |`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d’une extension de message peut être mise à jour par l’utilisateur. La valeur par défaut est `false`.|
 |`commands`|Tableau d’objets|10|✔|Tableau de commandes prises en charge par l’extension de message|
 
@@ -485,12 +485,12 @@ Chaque élément de commande est un objet avec la structure suivante :
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|String|64 caractères|✔|ID de la commande.|
-|`type`|String|64 caractères||Type de la commande. L’un des `query` ou `action`. Par défaut: `query`|
+|`type`|String|64 caractères||Type de la commande. L’un des `query` ou `action`. Par défaut : `query`|
 |`title`|Chaîne|32 caractères|✔|Le nom de la commande conviviale.|
 |`description`|Chaîne|128 caractères||Description qui apparaît aux utilisateurs pour indiquer l’objectif de cette commande.|
-|`initialRun`|Boolean|||Valeur booléenne qui indique si la commande doit être exécutée initialement sans paramètres. Par défaut: `false`|
-|`context`|Tableau de chaînes|3||Définit l’emplacement à partir duquel l’extension de message peut être appelée. Toute combinaison de `compose`, `commandBox``message`. La valeur par défaut est `["compose", "commandBox"]`|
-|`fetchTask`|Booléen|||Valeur booléenne qui indique si elle doit extraire le module de tâche dynamiquement.|
+|`initialRun`|Boolean|||Valeur booléenne qui indique si la commande doit être exécutée initialement sans paramètres. Par défaut : `false`|
+|`context`|Tableau de chaînes|3||Définit l’emplacement à partir duquel l’extension de message peut être appelée. Toute combinaison de `compose`, `commandBox`, `message`. La valeur par défaut est `["compose", "commandBox"]`.|
+|`fetchTask`|Booléen|||Valeur booléenne qui indique si le module de tâche doit être extrait dynamiquement.|
 |`taskInfo`|Objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de message.|
 |`taskInfo.title`|Chaîne|64||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|Chaîne|||Largeur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
@@ -503,16 +503,16 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`parameter.name`|String|64 caractères|✔|Nom du paramètre tel qu’il apparaît dans le client. Cela est inclus dans la demande de l’utilisateur.|
 |`parameter.title`|Chaîne|32 caractères|✔|Titre convivial du paramètre.|
 |`parameter.description`|Chaîne|128 caractères||Chaîne conviviale qui décrit l’objectif de ce paramètre.|
-|`parameter.inputType`|Chaîne|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true`. One of `text`, `textarea`, `number`, `date``time`, `toggle``choiceset`.|
-|`parameter.choices`|Tableau d’objets|10||Options de choix pour le `choiceset`. Utilisez uniquement quand `parameter.inputType` est `choiceset`.|
+|`parameter.inputType`|Chaîne|128 caractères||Définit le type de contrôle affiché sur un module de tâche pour `fetchTask: true`. L’un des `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
+|`parameter.choices`|Tableau d’objets|10||Options de choix pour le `choiceset`. Utilisez uniquement lorsque `parameter.inputType` est `choiceset`.|
 |`parameter.choices.title`|Chaîne|128||Titre du choix.|
 |`parameter.choices.value`|Chaîne|512||Valeur du choix.|
 
 ## <a name="permissions"></a>autorisations
 
-Optionnel:
+Facultatif :
 
-Tableau qui `string` spécifie les autorisations demandées par l’application, ce qui permet aux utilisateurs finaux de savoir comment l’extension s’exécutera. Les options suivantes ne sont pas exclusives :
+Tableau de `string` qui spécifie les autorisations que l’application demande, ce qui permet aux utilisateurs finaux de savoir comment l’extension s’exécutera. Les options suivantes ne sont pas exclusives :
 
 * `identity` &emsp;Nécessite des informations d’identité d’utilisateur.
 * `messageTeamMembers` &emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe.
@@ -521,9 +521,9 @@ Si vous modifiez ces autorisations lors de la mise à jour de votre application,
 
 ## <a name="devicepermissions"></a>devicePermissions
 
-**Optionnel** Tableau de chaînes
+**Facultatif** Tableau de chaînes
 
-Spécifie les fonctionnalités natives sur l’appareil d’un utilisateur auquel votre application peut demander l’accès. Les options sont :
+Spécifie les fonctionnalités natives sur l’appareil d’un utilisateur auxquels votre application peut demander l’accès. Les options sont les suivantes :
 
 * `geolocation`
 * `media`
@@ -533,28 +533,28 @@ Spécifie les fonctionnalités natives sur l’appareil d’un utilisateur auque
 
 ## <a name="validdomains"></a>validDomains
 
-**Facultatif**, sauf **Obligatoire** si indiqué
+**Facultatif**, sauf **Obligatoire** lorsque indiqué.
 
-Liste des domaines valides à partir desquels l’application s’attend à charger du contenu. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine ; si vous avez besoin de correspondre `a.b.example.com` , puis utilisez `*.*.example.com`. Si la configuration de votre onglet ou votre interface utilisateur de contenu doit accéder à un autre domaine en plus de celui utilisé pour la configuration de tabulation, ce domaine doit être spécifié ici.
+Liste des domaines valides à partir desquels l’application s’attend à charger tout contenu. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine, si vous devez faire correspondre `a.b.example.com` utilisez `*.*.example.com`. Si la configuration de votre onglet ou l’interface utilisateur du contenu doit accéder à un autre domaine en plus de celui utilisé pour la configuration de tabulation, ce domaine doit être spécifié ici.
 
-Toutefois, il **n’est pas** nécessaire d’inclure les domaines des fournisseurs d’identité que vous souhaitez prendre en charge dans votre application. Par exemple, pour vous authentifier à l’aide d’un ID Google, il est nécessaire de rediriger vers accounts.google.com, mais vous ne devez pas inclure accounts.google.com dans `validDomains[]`.
+Toutefois, il n’est **pas** nécessaire d’inclure les domaines des fournisseurs d’identité que vous souhaitez prendre en charge dans votre application. Par exemple, pour vous authentifier à l’aide d’un ID Google, il est nécessaire de rediriger vers accounts.google.com, mais vous ne devez pas inclure accounts.google.com dans `validDomains[]`.
 
 > [!IMPORTANT]
-> N’ajoutez pas de domaines qui sont hors de votre contrôle, directement ou via des caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide.
+> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide.
 
 L’objet est un tableau avec tous les éléments du type `string`.
 
 ## <a name="webapplicationinfo"></a>WebApplicationInfo
 
-Optionnel:
+Facultatif :
 
-Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et Graph informations pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
+Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et les informations Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|Chaîne|36 caractères|✔|ID de l'application Microsoft Azure Active Directory (Azure AD). Cet ID doit être un GUID.|
 |`resource`|Chaîne|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton d’authentification pour l’authentification unique.|
-|`applicationPermissions`|Tableau|Maximum 100 éléments|✔|Autorisations de ressource pour l’application.|
+|`applicationPermissions`|Tableau|100 éléments maximum|✔|Autorisations de ressource pour l’application.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -569,10 +569,10 @@ Vous pouvez définir l’une des propriétés suivantes :
 
 * `name` : Nom d’affichage de l’application.
 * `shortDescription` : Description courte de l’application.
-* `longDescription`: description détaillée de l’application.
+* `longDescription` : description détaillée de l’application.
 * `smallImageUrl` : Icône de contour de l’application.
 * `largeImageUrl` : Icône de couleur de l’application.
-* `accentColor`: couleur à utiliser conjointement avec et comme arrière-plan pour vos icônes de contour.
+* `accentColor` : couleur à utiliser conjointement avec et comme arrière-plan pour vos icônes de contour.
 * `developerUrl` : URL HTTPS du site web du développeur.
 * `privacyUrl` : URL HTTPS de la politique de confidentialité du développeur.
 * `termsOfUseUrl` : URL HTTPS des conditions d’utilisation du développeur.
