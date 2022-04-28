@@ -3,13 +3,13 @@ title: Développer des extensions de message
 description: Décrit comment bien démarrer avec les extensions de message dans Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: extensions de message teams
-ms.openlocfilehash: b1d219bbb8e79a99836ad20b35442e10ec537c4a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+keywords: extensions de messagerie teams
+ms.openlocfilehash: 8d44ea8ffe3c265a5c65ae2e842fe4f55f950e58
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104331"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111919"
 ---
 # <a name="develop-message-extensions-for-microsoft-teams"></a>Développer des extensions de message pour Microsoft Teams
 

@@ -4,13 +4,13 @@ author: surbhigupta
 description: Découvrez comment répondre à la commande de recherche à partir d’une extension de message dans une application Microsoft Teams à l’aide d’exemples de code et d’exemples
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104503"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111933"
 ---
 # <a name="respond-to-search-command"></a>Répondre à la commande de recherche
 

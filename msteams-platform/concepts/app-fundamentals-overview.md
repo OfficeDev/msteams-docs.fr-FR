@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: fonctionnalité d’appareil d’extensibilité des points d’entrée
-ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073110"
+ms.locfileid: "65104027"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -56,7 +56,7 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Représentation conceptuelle de la solution Teams." border="true":::
 
-    Vos applications apparaissent dans Teams sous forme d’onglets, de bots, d’extensions de messagerie, de connecteurs et de webhooks, ou en tant qu’application multi-fonctionnalités. Ces fonctionnalités sont optimisées sur le serveur principal par les applications Azure, Microsoft Graph, SharePoint et Power qui permettent d’automatiser les tâches et les processus.
+    Vos applications apparaissent dans Teams sous forme d’onglets, de bots, d’extensions de message, de connecteurs et de webhooks, ou en tant qu’application multi-fonctionnalités. Ces fonctionnalités sont optimisées sur le serveur principal par les applications Azure, Microsoft Graph, SharePoint et Power qui permettent d’automatiser les tâches et les processus.
 
     Ensemble, ces fonctionnalités donnent vie à votre solution d’application.
 
@@ -82,7 +82,7 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 | Applications de tabulation personnalisées ou métier |  ✔️ | ✔️ | ✔️ |
 | Chargement indépendant d’applications | ✔️ | ❌ | ❌ |
 | Bots personnalisés ou Lob | ✔️ | ❌ | ❌ |
-| Extensions de messagerie personnalisées | ❌ | ❌ | ❌ |
+| Extensions de message personnalisées | ❌ | ❌ | ❌ |
 | Connecteurs personnalisés | ❌ | ❌ | ❌ |
 
 La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :

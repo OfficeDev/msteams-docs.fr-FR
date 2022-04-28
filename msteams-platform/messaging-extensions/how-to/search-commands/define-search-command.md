@@ -4,13 +4,13 @@ author: surbhigupta
 description: Découvrez les commandes de recherche d’extension de message pour Microsoft Teams applications, pour créer une commande de recherche via le manifeste de l’application et manuellement à l’aide d’exemples de code et d’exemples.
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: f7933b1ef7de40ac889e0ae6d8063f6b21991cc7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 9615b1ab599f567815df5f68155a8ab2abb292ca
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104300"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111625"
 ---
 # <a name="define-message-extension-search-commands"></a>Définir des commandes de recherche d’extension de message
 

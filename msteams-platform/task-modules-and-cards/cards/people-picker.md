@@ -1,17 +1,17 @@
 ---
 title: Sélectionneur de personnes dans les Cartes adaptatives
 description: Décrit comment utiliser le contrôle Sélecteur de personnes dans les cartes adaptatives
-localization_priority: Normal
+localization_priority: Medium
 keywords: Sélecteur de personnes cartes adaptatives
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 8a78be74d8142600ccc08093744491a19900e60b
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073423"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111632"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>Sélectionneur de personnes dans les Cartes adaptatives
 
@@ -107,7 +107,7 @@ Les propriétés suivantes sont des ajouts au schéma pour activer l’expérien
 
 |Propriété |Type |Requis |Description|
 |--|--|--|--|
-|**Dataset** |String |Oui |Type de données qui doivent être extraites dynamiquement.|
+|**Dataset** |Chaîne |Oui |Type de données qui doivent être extraites dynamiquement.|
 
 #### <a name="dataset"></a>Dataset
 

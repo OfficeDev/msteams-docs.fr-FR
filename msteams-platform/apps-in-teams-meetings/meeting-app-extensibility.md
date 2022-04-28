@@ -3,13 +3,13 @@ title: Applications de réunions unifiées
 author: surbhigupta
 description: Découvrez Teams cycle de vie des réunions et l’expérience de réunion de l’utilisateur dans l’environnement de bureau et mobile, les rôles et types de participants et d’utilisateurs, intégrer des bots et l’extension de message dans le cycle de vie des réunions.
 ms.topic: conceptual
-ms.localizationpriority: none
-ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103333"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111345"
 ---
 # <a name="unified-meetings-apps"></a>Applications de réunions unifiées
 
@@ -210,7 +210,7 @@ Un utilisateur invité ou anonyme ne peut pas ajouter, supprimer ou désinstalle
 
 Le tableau suivant fournit les types d’utilisateurs et répertorie les fonctionnalités auxquelles chaque utilisateur peut accéder :
 
-| Type d’utilisateur | Onglets | Bots | Extensions de message | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion |
+| Type d’utilisateur | Onglets | Bots | Extensions de messages | Cartes adaptatives | Modules de tâche | Boîtes de dialogue en réunion | Étape de la réunion |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Utilisateur anonyme | Non disponible | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Non disponible | Non disponible |
 | Invité, partie du client Azure AD | L’interaction est autorisée. La création, la mise à jour et la suppression ne sont pas autorisées. | Non disponible | Non disponible | Les interactions dans la conversation de réunion sont autorisées. | Les interactions dans la conversation de réunion à partir de la carte adaptative sont autorisées. | Disponible | Peut démarrer, afficher et interagir avec l’application lors de la phase de réunion uniquement sur Teams client de bureau |
