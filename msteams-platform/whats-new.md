@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
+ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104048"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65132708"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|28/04/2022| Raisons courantes de l’échec de validation d’application | Distribuer votre application > Publier dans le magasin Teams > [Raisons courantes de l’échec de validation de l’application](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Mettre en place des pipelines CI/CD | Outils et SDK > Teams Toolkit for Visual Studio Code > [Mettre en place des pipelines CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Téléchargez votre application dans Microsoft Teams | Distribuer votre application > [Télécharger votre application](concepts/deploy-and-publish/apps-upload.md)|
 |06/04/2022| Partager dans Teams à partir d’une application ou d’un onglet personnel (préversion développeur) | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
