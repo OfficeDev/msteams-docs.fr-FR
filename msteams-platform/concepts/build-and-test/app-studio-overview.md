@@ -4,17 +4,17 @@ description: Prise en main de la création de superbes applications dans Microso
 keywords: mise en place d’app studio teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3c87edeaf7404e0a9f362f1233cd543c7a0d963a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 175d4718e91a8ebe2c72b3c06530952fe007baf9
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103915"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135716"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Gérer vos applications avec App Studio pour Microsoft Teams
 
 > [!TIP]
-> **Essayez le portail des développeurs** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec le nouveau [portail des développeurs](https://dev.teams.microsoft.com/).
+> **Essayez le portail des développeurs** : App Studio a évolué. Configurez, distribuez et gérez vos applications Teams avec la nouvelle [Developer Portal](https://dev.teams.microsoft.com/). <br> App Studio sera déconseillé d’ici le 30 juin 2022.
 
 App Studio vous permet de créer et d’intégrer facilement vos propres applications Microsoft Teams, que vous développiez des applications personnalisées pour votre entreprise ou des applications SaaS pour des équipes du monde entier, en rationalisant la création du manifeste et du package pour votre application et en fournissant des outils utiles comme l'éditeur de cartes et une bibliothèque de contrôle React.
 

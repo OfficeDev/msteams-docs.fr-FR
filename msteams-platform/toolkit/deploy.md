@@ -3,51 +3,51 @@ title: Déployer à partir du cloud
 author: MuyangAmigo
 description: Déployer une application dans le cloud, Azure ou SharePoint
 ms.author: zhany
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 3e9368dcaa87003da2872a500ffaa281092774df
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104146"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111569"
 ---
 # <a name="deploy-to-the-cloud"></a>Déployer à partir du cloud
 
-Teams Shared Computer Toolkit vous aide à déployer ou à charger le code front-end et back-end dans votre application sur vos ressources cloud provisionnées dans Azure.
+Le Kit de ressources Teams vous aide à déployer ou à charger le code frontal et le code principal de votre application vers vos ressources cloud provisionnées dans Azure.
 
-* L’onglet, tel que les applications front-end, est déployé sur le stockage Azure et configuré pour l’hébergement web statique ou un site sharepoint.
-* Les API back-end sont déployées sur les fonctions Azure.
-* Le bot ou l’extension de message est déployé sur Azure App Service.
+* L’onglet, tel que les applications frontales, est déployé vers le stockage Azure et configuré pour l’hébergement web statique ou un site SharePoint.
+* Les API principales sont déployées vers les fonctions Azure.
+* Le bot ou l’extension de message est déployé vers Azure App Service.
 
 ## <a name="prerequisite"></a>Conditions préalables
 
-* [Installez Teams Shared Computer Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* [Installez le Kit de ressources Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!NOTE]
 >
-> * Vérifiez que vous avez Teams projet d’application ouvert dans VS Code.
-> * Avant de déployer du code de projet dans le cloud, [provisionnez les ressources cloud](provision.md).
+> * Vérifiez que le projet d’application Teams est ouvert dans VS Code.
+> * Avant de déployer le code de projet vers le cloud, [approvisionnez les ressources cloud](provision.md).
 
-## <a name="deploy-teams-apps-using-teams-toolkit"></a>Déployer des applications Teams à l’aide de Teams Shared Computer Toolkit
+## <a name="deploy-teams-apps-using-teams-toolkit"></a>Déployer des applications Teams à l’aide du Kit de ressources Teams
 
-Les guides de prise en main vous aident à déployer à l’aide de Teams Shared Computer Toolkit. Vous pouvez utiliser les éléments suivants pour déployer votre application Teams :
+Les guides de démarrage vous aident à déployer à l’aide du Kit de ressources Teams. Vous pouvez utiliser les éléments suivants pour déployer votre application Teams :
 
-* [Déployer votre application sur Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
-* [Déployer votre application sur SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+* [Déployer votre application vers Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
+* [Déployer votre extension vers SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workload"></a>Détails sur Teams charge de travail de l’application
+## <a name="details-on-teams-app-workload"></a>Détails sur la charge de travail de l’application Teams
 
-| Teams charge de travail de l’application | Code source | Artefact de build| Ressource cible |
+| Charge de travail de l’application Teams | Code source | Artefact de build| Ressource cible |
 |-------------|----------|---------------|---------------|
-|Onglets avec React </br> Charge de travail front-end| `yourProjectFolder/tabs`| `tabs/build` |Stockage Azure |
-|Onglets avec SharePoint </br> Charge de travail front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |catalogue d’applications SharePoint |
-|API sur les fonctions Azure </br> Charge de travail principale | `yourProjectFolder/api`| Non applicable |Fonctions Azure |
+|Onglets avec React </br> Charge de travail frontale| `yourProjectFolder/tabs`| `tabs/build` |Stockage Azure |
+|Onglets avec SharePoint </br> Charge de travail frontale | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |Catalogue des applications SharePoint |
+|Les API sur Azure Functions </br> Charge de travail principale | `yourProjectFolder/api`| Non applicable |Azure Functions |
 |Bots et extensions de message </br> Charge de travail principale | `yourProjectFolder/bot` | Non applicable | Azure App Service |
 
 > [!NOTE]
-> Lorsque vous incluez une ressource de gestion des API Azure dans votre projet et que vous déclenchez le déploiement. Vous pouvez publier vos API dans azure functions sur le service de gestion des API Azure.
+> Lorsque vous incluez une ressource de gestion d’API Azure dans votre projet et que vous déclenchez le déploiement. Vous pouvez publier vos API dans Azure Functions vers le service de gestion des API Azure.
 
 ## <a name="see-also"></a>Voir aussi
 
