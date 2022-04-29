@@ -1,37 +1,37 @@
 ---
 title: Créer une page de configuration
 author: surbhigupta
-description: Découvrez comment créer une page de configuration pour configurer un canal ou une conversation de groupe pour des paramètres tels que l’obtention de données de contexte, l’insertion d’espaces réservés et l’authentification à l’aide d’exemples de code.
-keywords: Canal de groupe des onglets Teams configurable
-ms.localizationpriority: medium
+description: Apprenez à créer une page de configuration pour configurer les paramètres d'un canal ou d'un groupe de discussion, comme l'obtention de données contextuelles, l'insertion d'espaces réservés et l'authentification, à l'aide d'exemples de code.
+keywords: onglets d'équipes canal de groupe configurable
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dc1c5c7c8852d13ab490ae0782be0a01eef3fbea
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 912e38fc63d8c897f086d27362ad249688ce7ce9
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103417"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111639"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
-Une page de configuration est un type spécial de [page de contenu](content-page.md). Les utilisateurs configurent certains aspects de l’application Microsoft Teams à l’aide de la page de configuration et utilisent cette configuration dans le cadre des éléments suivants :
+Une page de configuration est un type particulier de [page de contenu](content-page.md). Les utilisateurs configurent certains aspects de l'application Microsoft Teams à l'aide de la page de configuration et utilisent cette configuration dans le cadre de ce qui suit :
 
-* Onglet Canal ou conversation de groupe : collectez des informations auprès des utilisateurs et définissez la `contentUrl` page de contenu à afficher.
-* Extension [de message](~/messaging-extensions/what-are-messaging-extensions.md).
-* [Connecteur Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+* Un onglet de canal ou de groupe de discussion : Recueillir des informations auprès des utilisateurs et `contentUrl`définir le de la page de contenu à afficher.
+* Une [extension du message](~/messaging-extensions/what-are-messaging-extensions.md).
+* Un [connecteur Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un canal ou un onglet de conversation de groupe
+## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un onglet de canal ou de groupe de conversation
 
-L’application doit référencer le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et appeler`microsoft.initialize()`. Les URL utilisées doivent être des points de terminaison HTTPS sécurisés et disponibles à partir du cloud.
+L'application doit faire référence au SDK client [JavaScript de Microsoft Teams ](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)et appeler`microsoft.initialize()`. Les URL utilisées doivent être des points d'extrémité HTTPS sécurisés et disponibles depuis le cloud.
 
 ### <a name="example"></a>Exemple
 
-L’image suivante illustre un exemple de page de configuration :
+Un exemple de page de configuration est présenté dans l'image suivante :
 
 <img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
 
-Le code suivant est un exemple de code correspondant pour la page de configuration :
+Le code suivant est un exemple de code correspondant à la page de configuration :
 
 ```html
 <head>
@@ -88,43 +88,43 @@ Le code suivant est un exemple de code correspondant pour la page de configurati
 </body>
 ```
 
-Sélectionnez **le bouton Sélectionner gris** ou **Sélectionner rouge** dans la page de configuration pour afficher le contenu de l’onglet avec une icône grise ou rouge.
+Choisissez le bouton **Sélectionner le gris** ou **Sélectionner le rouge** dans la page de configuration, pour afficher le contenu de l'onglet avec une icône grise ou rouge.
 
-L’image suivante affiche le contenu de l’onglet avec l’icône **Gris** sélectionnée :
+L'image suivante affiche le contenu de l'onglet avec l'icône **gris** sélectionné :
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-L’image suivante affiche le contenu de l’onglet avec l’icône **Rouge** sélectionnée :
+L'image suivante affiche le contenu de l'onglet avec l'icône **rouge** sélectionnée :
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-Le choix du bouton approprié déclenche ou `saveRed()`appelle les éléments suivants `saveGray()` :
+Le fait de choisir le bouton approprié déclenche l'une ou l'autre `saveGray()`ou `saveRed()`, et invoque ce qui suit :
 
-* Défini sur `settings.setValidityState(true)` true.
-* Le `microsoftTeams.settings.registerOnSaveHandler()` gestionnaire d’événements est déclenché.
-* **L’enregistrement** sur la page de configuration de l’application est activé.
+* Défini `settings.setValidityState(true)`à vrai.
+* Le `microsoftTeams.settings.registerOnSaveHandler()`gestionnaire d'événements est déclenché.
+* **Enregistrer** sur la page de configuration de l'application, est activé.
 
-Le code de la page de configuration informe Teams que les exigences de configuration sont satisfaites et que l’installation peut continuer. Lorsque l’utilisateur sélectionne **Enregistrer**, les paramètres sont `settings.setSettings()` définis, comme défini par l’interface `Settings` . Pour plus d’informations, consultez [l’interface des paramètres](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` est appelé pour indiquer que l’URL de contenu a été résolue.
+Le code de la page de configuration informe les équipes que les exigences de configuration sont satisfaites et que l'installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer**, les paramètres sont `settings.setSettings()` définis, comme défini par l’interface `Settings` . Pour plus d'informations, voir [l'interface de paramétrage](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` est appelé pour indiquer que l'URL du contenu a été résolu avec succès.
 
 >[!NOTE]
 >
->* Vous avez 30 secondes pour terminer l’opération d’enregistrement (le rappel à registerOnSaveHandler) avant le délai d’expiration. Après le délai d’expiration, un message d’erreur générique s’affiche.
->* Si vous inscrivez un gestionnaire d’enregistrement à l’aide `microsoftTeams.settings.registerOnSaveHandler()`, le rappel doit appeler `saveEvent.notifySuccess()` ou `saveEvent.notifyFailure()` indiquer le résultat de la configuration.
->* Si vous n’inscrivez pas de gestionnaire d’enregistrement, l’appel `saveEvent.notifySuccess()` est effectué automatiquement lorsque l’utilisateur sélectionne **Enregistrer**.
+>* Vous disposez de 30 secondes pour effectuer l'opération de sauvegarde (le rappel de registerOnSaveHandler) avant le délai d'attente. Une fois le délai écoulé, un message d'erreur générique apparaît.
+>* Si vous enregistrez un gestionnaire de sauvegarde à l'aide de , la fonction de `microsoftTeams.settings.registerOnSaveHandler()`rappel doit invoquer `saveEvent.notifySuccess()`ou`saveEvent.notifyFailure()` pour indiquer le résultat de la configuration.
+>* Si vous n'enregistrez pas de gestionnaire d'enregistrement, `saveEvent.notifySuccess()`l'appel est effectué automatiquement lorsque l'utilisateur sélectionne **Enregistrer**.
 
-### <a name="get-context-data-for-your-tab-settings"></a>Obtenir des données de contexte pour vos paramètres d’onglet
+### <a name="get-context-data-for-your-tab-settings"></a>Obtenez des données contextuelles pour les paramètres de votre onglet
 
-Votre onglet nécessite des informations contextuelles pour afficher du contenu pertinent. Les informations contextuelles améliorent l’attrait de votre onglet en fournissant une expérience utilisateur plus personnalisée.
+Votre onglet nécessite des informations contextuelles pour afficher un contenu pertinent. Les informations contextuelles renforcent encore l'attrait de votre onglet en offrant une expérience utilisateur plus personnalisée.
 
-Pour plus d’informations sur les propriétés utilisées pour la configuration des onglets, consultez [l’interface de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Collectez les valeurs des variables de données de contexte des deux manières suivantes :
+Pour plus d'informations sur les propriétés utilisées pour la configuration des onglets, voir [Interface contextuelle](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Recueillez les valeurs des variables de données contextuelles des deux manières suivantes :
 
-* Insérez des espaces réservés de chaîne de requête URL dans celui de `configurationURL`votre manifeste.
+* Insérez des chaînes de requête d'URL dans le manifeste. `configurationURL`.
 
-* Utilisez la méthode [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)`microsoftTeams.getContext((context) =>{})`.
+* Utilisez la [méthode du SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})`Teams.
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>Insérer des espaces réservés dans le `configurationUrl`
 
-Ajoutez des espaces réservés d’interface de contexte à votre base `configurationUrl`. Par exemple :
+Ajouter des espaces réservés à l'interface contextuelle à votre base `configurationUrl`. Par exemple :
 
 ##### <a name="base-url"></a>URL de base
 
@@ -134,7 +134,7 @@ Ajoutez des espaces réservés d’interface de contexte à votre base `configur
 ...
 ```
 
-#### <a name="base-url-with-query-strings"></a>URL de base avec des chaînes de requête
+#### <a name="base-url-with-query-strings"></a>URL de base avec chaînes d'interrogation
 
 ```json
 ...
@@ -142,7 +142,7 @@ Ajoutez des espaces réservés d’interface de contexte à votre base `configur
 ...
 ```
 
-Une fois votre page chargée, Teams met à jour les espaces réservés de chaîne de requête avec les valeurs appropriées. Incluez la logique dans la page de configuration pour récupérer et utiliser ces valeurs. Pour plus d’informations sur l’utilisation des chaînes de requête URL, consultez [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) dans MDN Web Docs. L’exemple de code suivant permet d’extraire une valeur de la `configurationUrl` propriété :
+Une fois votre page téléchargée, Teams met à jour les espaces réservés aux chaînes de requête avec les valeurs pertinentes. Incluez une logique dans la page de configuration pour récupérer et utiliser ces valeurs. Pour plus d'informations sur l'utilisation des chaînes de requête d'URL, voir [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) dans MDN Web Docs. L'exemple de code suivant permet d'extraire une valeur de la `configurationUrl`propriété :
 
 ```html
 <script>
@@ -157,11 +157,11 @@ document.write(getId());
 </script>
 ```
 
-### <a name="use-the-getcontext-function-to-retrieve-context"></a>Utiliser la fonction pour récupérer le `getContext()` contexte
+### <a name="use-the-getcontext-function-to-retrieve-context"></a>Utilisez `getContext()`la fonction pour récupérer le contexte
 
-La `microsoftTeams.getContext((context) => {})` fonction récupère [l’interface de contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) lorsqu’elle est appelée.
+La `microsoftTeams.getContext((context) => {})`fonction récupère [l'interface du contexte](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) lorsqu'elle est invoquée.
 
-Le code suivant fournit un exemple d’ajout de cette fonction à la page de configuration pour récupérer des valeurs de contexte :
+Le code suivant fournit un exemple d'ajout de cette fonction à la page de configuration pour récupérer les valeurs du contexte :
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -179,13 +179,13 @@ Le code suivant fournit un exemple d’ajout de cette fonction à la page de con
 
 ## <a name="context-and-authentication"></a>Contexte et authentification
 
-S’authentifier avant d’autoriser un utilisateur à configurer votre application. Sinon, votre contenu peut inclure des sources qui ont leurs protocoles d’authentification. Pour plus d’informations, consultez [l’authentification d’un utilisateur dans un onglet Microsoft Teams](~/tabs/how-to/authentication/auth-flow-tab.md). Utilisez les informations de contexte pour construire les requêtes d’authentification et les URL de page d’autorisation. Assurez-vous que tous les domaines utilisés dans vos pages d’onglets sont répertoriés dans le tableau et `validDomains` dans le `manifest.json` tableau.
+Authentifiez-vous avant de permettre à un utilisateur de configurer votre application. Sinon, votre contenu pourrait inclure des sources qui ont leurs protocoles d'authentification. Pour plus d'informations, voir [authentifier un utilisateur dans un onglet Microsoft Teams](~/tabs/how-to/authentication/auth-flow-tab.md) . Utilisez les informations contextuelles pour construire les demandes d'authentification et les URL des pages d'autorisation. Assurez-vous que tous les domaines utilisés dans vos pages d'onglet sont répertoriés dans le `manifest.json`tableau`validDomains` et.
 
 ## <a name="modify-or-remove-a-tab"></a>Modifier ou supprimer un onglet
 
-Définissez la propriété `true`de `canUpdateConfiguration` votre manifeste sur , ce qui permet aux utilisateurs de modifier, reconfigurer ou renommer un canal ou un onglet de groupe. Indiquez également ce qui arrive au contenu lorsqu’un onglet est supprimé, en incluant une page d’options de suppression dans l’application et en définissant une valeur pour la `removeUrl` propriété dans la `setSettings()` configuration. L’utilisateur peut désinstaller les onglets personnels, mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
+Définissez la `canUpdateConfiguration`propriété de`true` votre manifeste sur , qui permet aux utilisateurs de modifier, reconfigurer ou renommer un canal ou un onglet de groupe. Indiquez également ce qui arrive au contenu lorsqu'un onglet est supprimé, en incluant une page d'options de suppression dans l'application et en définissant une valeur pour la `removeUrl` propriété dans la`setSettings()`  configuration. L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setSettings()` Microsoft Teams configuration de la page de suppression :
+Page de `setSettings()`configuration de Microsoft Teams pour la suppression :
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -199,17 +199,17 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>Clients mobiles
 
-Si vous choisissez d’afficher l’onglet de votre canal ou groupe sur le Teams clients mobiles, la `setSettings()` configuration doit avoir une valeur pour `websiteUrl`. Pour plus d’informations, consultez [les conseils relatifs aux onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md).
+Si vous choisissez de faire apparaître votre onglet de canal ou de groupe sur les clients mobiles Teams, la `setSettings()`configuration doit avoir une valeur pour `websiteUrl`. Pour plus d'informations, voir [les conseils pour les onglets sur les téléphones portables.](~/tabs/design/tabs-mobile.md)
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
+> [Créer une page de retrait pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 * [onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Créer un canal ou un onglet de groupe](~/tabs/how-to/create-channel-group-tab.md)
+* [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)

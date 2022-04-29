@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: les instructions de validation de package d’application de la banque de soumissions sont localisées
-ms.openlocfilehash: 4d3116a305ee1b5d353310bdc047c282822af173
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501990"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135751"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission au Microsoft Teams store
 
@@ -24,7 +24,7 @@ Avant de soumettre votre application à [Espace partenaires](/office/dev/store/u
 Bien que votre application fonctionne dans un environnement de test, vous devez vérifier votre package d’application pour éviter de rencontrer des problèmes pendant le processus de soumission.
 
 > [!NOTE]
-> App Studio sera bientôt déconseillé. Configurez, distribuez et gérez vos applications Teams avec le nouveau [Developer Portal](https://dev.teams.microsoft.com/)
+ > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
 
 L’outil de validation d’application Microsoft Teams vous permet d’identifier et de résoudre les problèmes avant de les soumettre à Espace partenaires. L’outil vérifie automatiquement les configurations de votre application par rapport aux cas de test utilisés lors de la validation du Store.
 
@@ -95,7 +95,7 @@ Vous devez avoir une description courte et longue de votre application.
 
 #### <a name="short-description"></a>Description courte
 
-Résumé concis de votre application qui doit être original, attrayant et destiné à votre public cible. Votre description courte doit tenir sur une seule phrase.
+Résumé concis de votre application qui doit être original, attrayant et destiné à votre public cible. Conservez la brève description d’une phrase.
 
 :::row:::
 

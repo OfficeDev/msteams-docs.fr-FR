@@ -1,24 +1,24 @@
 ---
-title: Ajouter l’authentification à votre extension de message
+title: Ajouter une authentification à votre extension de messagerie
 author: surbhigupta
-description: Découvrez comment ajouter l’authentification à une extension de message à l’aide d’exemples de code et d’exemples
-ms.localizationpriority: medium
+description: Découvrez comment ajouter l’authentification à une extension de messagerie à l’aide d’exemples de code et d’exemples
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e3f799214a5007f90c03b2a7f9ac280c8e8760e1
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104412"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135709"
 ---
-# <a name="add-authentication-to-your-message-extension"></a>Ajouter l’authentification à votre extension de message
+# <a name="add-authentication-to-your-message-extension"></a>Ajouter une authentification à votre extension de messagerie
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ## <a name="identify-the-user"></a>Identifier l’utilisateur
 
-Chaque demande adressée à vos services inclut l’ID d’utilisateur, le nom complet de l’utilisateur et Azure Active Directory ID d’objet.
+Chaque requête adressée à vos services inclut l’ID d’utilisateur, le nom complet de l’utilisateur et l’ID objet Azure Active Directory.
 
 ```json
 "from": {
@@ -28,18 +28,18 @@ Chaque demande adressée à vos services inclut l’ID d’utilisateur, le nom c
 },
 ```
 
-Les `id` valeurs et `aadObjectId` les valeurs sont garanties pour l’utilisateur Teams authentifié. Elles sont utilisées comme clés pour rechercher les informations d’identification ou tout état mis en cache dans votre service. En outre, chaque requête contient l’ID de locataire Azure Active Directory, qui est utilisé pour identifier l’organisation de l’utilisateur. Le cas échéant, la demande contient également l’ID d’équipe et l’ID de canal d’où provient la demande.
+Les valeurs `id` et `aadObjectId` sont garanties pour l’utilisateur Teams authentifié. Elles sont utilisées comme clés pour rechercher les informations d’identification ou tout état mis en cache dans votre service. En outre, chaque requête contient l’ID de locataire Azure Active Directory, qui est utilisé pour identifier l’organisation des utilisateurs’. Le cas échéant, la requête contient également l’ID d’équipe et l’ID de canal d’où provient la demande.
 
 ## <a name="authentication"></a>Authentification
 
-Si votre service nécessite une authentification utilisateur, les utilisateurs doivent se connecter avant d’utiliser l’extension de message. Les étapes d’authentification sont similaires à celles d’un bot ou d’un onglet. La séquence est la suivante :
+Si votre service requiert l’authentification de l’utilisateur, les utilisateurs doivent se connecter avant d’utiliser l’extension de message. Les étapes d’authentification sont similaires à celles d’un bot ou d’un onglet. La séquence est la suivante :
 
 1. L’utilisateur émet une requête ou la requête par défaut est automatiquement envoyée à votre service.
 1. Votre service vérifie si l’utilisateur est authentifié en inspectant l’ID d’utilisateur Teams.
-1. Si l’utilisateur n’est pas authentifié, renvoyez une `auth` réponse avec une `openUrl` action suggérée, y compris l’URL d’authentification.
+1. Si l’utilisateur n’est pas authentifié, renvoyez une réponse `auth` avec une action suggérée `openUrl`, y compris l’URL d’authentification.
 1. Le client Microsoft Teams lance une boîte de dialogue hébergeant votre page web à l’aide de l’URL d’authentification donnée.
 1. Une fois que l’utilisateur s’est connecté, vous devez fermer votre fenêtre et envoyer un **code d’authentification** au client Teams.
-1. Le client Teams réexécutera ensuite la requête à votre service, ce qui inclut le code d’authentification passé à l’étape 5.
+1. Le client Teams publie ensuite la requête à sur votre service, qui inclut le code d’authentification passé à l’étape 5.
 
 Votre service doit vérifier que le code d’authentification reçu à l’étape 6 correspond à celui de l’étape 5. Cela garantit qu’un utilisateur malveillant n’essaie pas d’usurper ou de compromettre le flux de connexion. Cela « ferme la boucle » pour terminer la séquence d’authentification sécurisée.
 
@@ -68,25 +68,25 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 
 > [!NOTE]
 >
-> * Pour que l’expérience de connexion soit hébergée dans une fenêtre contextuelle Teams, la partie domaine de l’URL doit figurer dans la liste des domaines valides de votre application. Pour plus d’informations, consultez [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma de manifeste.
-> * La taille de la fenêtre contextuelle d’authentification peut être définie en incluant les paramètres de chaîne de requête de largeur et de hauteur. `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`
+> * Pour que l’expérience de connexion soit hébergée dans une fenêtre contextuelle Teams, la partie domaine de l’URL doit figurer dans la liste de vos applications’ de domaines valides. Pour plus d’informations, consultez [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma du manifeste.
+> * La taille de la fenêtre contextuelle d’authentification peut être définie en incluant des paramètres de chaîne de requête de largeur et de hauteur, `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"`.
 
 ### <a name="start-the-sign-in-flow"></a>Démarrer le flux de connexion
 
-Votre expérience de connexion doit être réactive et tenir dans une fenêtre contextuelle. Il doit s’intégrer au [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client), qui utilise la transmission de messages.
+Votre expérience de connexion doit être réactive et tenir dans une fenêtre contextuelle. Il doit s’intégrer au [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client), qui utilise la transmission de messages.
 
-Comme avec d’autres expériences incorporées s’exécutant dans Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler `microsoftTeams.initialize()`. Si votre code exécute un flux OAuth, vous pouvez passer l’ID d’utilisateur Teams dans votre fenêtre, qui le transmet ensuite à l’URL de connexion OAuth.
+Comme pour les autres expériences incorporées s’exécutant dans Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler `microsoftTeams.initialize()`. Si votre code exécute un flux OAuth, vous pouvez passer l’ID utilisateur Teams dans votre fenêtre, qui le transmet ensuite à l’URL de connexion OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de connexion
 
-Une fois la demande de connexion terminée et redirigée vers votre page, elle doit effectuer les étapes suivantes :
+Une fois la requête de connexion terminée et redirigée vers votre page, elle doit effectuer les étapes suivantes :
 
-1. Générez un code de sécurité, un nombre aléatoire. Vous devez mettre en cache ce code sur votre service, ainsi que les informations d’identification obtenues via le flux de connexion, comme les jetons OAuth 2.0.
+1. Générez un code de sécurité, un nombre aléatoire. Vous devez mettre en cache ce code sur votre service, ainsi que les informations d’identification obtenues via le flux de connexion, tels que les jetons OAuth 2.0.
 1. Appelez `microsoftTeams.authentication.notifySuccess` et transmettez le code de sécurité.
 
-À ce stade, la fenêtre se ferme et le contrôle est passé au client Teams. Le client réissue maintenant la requête utilisateur d’origine, ainsi que le code de sécurité dans la `state` propriété. Votre code peut utiliser le code de sécurité pour rechercher les informations d’identification stockées précédemment pour terminer la séquence d’authentification, puis terminer la demande de l’utilisateur.
+À ce stade, la fenêtre se ferme et le contrôle est passé au client Teams. Le client publie à nouveau la requête utilisateur d’origine, ainsi que le code de sécurité dans la propriété `state` . Votre code peut utiliser le code de sécurité pour rechercher les informations d’identification stockées précédemment afin de terminer la séquence d’authentification, puis la requête de l’utilisateur.
 
-#### <a name="reissued-request-example"></a>Exemple de demande rééditée
+#### <a name="reissued-request-example"></a>Exemple de nouvelle publication de requête
 
 ```json
 {
@@ -143,4 +143,4 @@ Une fois la demande de connexion terminée et redirigée vers votre page, elle d
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’authentification unique (SSO) pour les extensions de message](~/messaging-extensions/how-to/enable-sso-auth-me.md)
+[Prise en charge de l’authentification unique pour les extensions de message](~/messaging-extensions/how-to/enable-sso-auth-me.md)

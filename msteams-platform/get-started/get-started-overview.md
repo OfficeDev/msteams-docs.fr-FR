@@ -4,12 +4,12 @@ description: Vue d’ensemble de Démarrage pour la documentation pour les déve
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemples de développeurs Microsoft Teams
-ms.openlocfilehash: 12fea3fcbdceddfba4c0f60db2ed64b20f801284
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104356"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135765"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -42,7 +42,7 @@ Selon les fonctionnalités souhaitées pour votre application, choisissez un ens
 Si vous êtes déjà familiarisé avec le workflow Yeoman, vous préférerez peut-être utiliser [Générateur Yeoman yoTeams](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) pour créer vos applications.
 
 > [!NOTE]
-> Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams.
+> Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams.<br> App Studio sera déconseillé d’ici le 30 juin 2022.
 
 ## <a name="build-your-first-teams-app"></a>Créer votre première application Teams
 

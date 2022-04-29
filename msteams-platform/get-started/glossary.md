@@ -4,12 +4,12 @@ description: Glossaire de la documentation pour développeurs Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Définition des développeurs Microsoft Teams
-ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f5b5461949367adc8ce101866556abf657259312
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103992"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135723"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -27,7 +27,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Package de l’application](../concepts/build-and-test/apps-package.md) | Un package d’application Teams est un fichier zip qui contient le fichier manifeste de l’application, l’icône de couleur et l’icône de contour. |
 | [Autorisation de l’application](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Une option dans une application Teams pour activer les autorisations d’appareil. Il est disponible uniquement lorsque le fichier manifeste de l’application déclare que l’application a besoin d’autorisations d’appareil. <br> **Voir aussi** : Autorisations d’appareil |
 | [Étendue de l’application](../concepts/design/app-structure.md) | Zone dans Teams où les utilisateurs peuvent utiliser votre application. Les applications peuvent avoir une ou plusieurs étendues, notamment personnelles, canaux, conversations et réunions. Une application Teams peut exister entre les étendues. |
-| [App Studio](../concepts/build-and-test/app-studio-overview.md) | Une application pour commencer à créer ou intégrer vos propres applications Microsoft Teams. Il a maintenant évolué vers le portail des développeurs. <br> **Voir aussi** : [Portail des développeurs](#d) |
+| [App Studio](../concepts/build-and-test/app-studio-overview.md) | Une application pour commencer à créer ou intégrer vos propres applications Microsoft Teams. Il a maintenant évolué vers le portail des développeurs. <br> > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022 <br> **Voir aussi** : [Portail des développeurs](#d) |
 | Bac d’application | Un bac d’application situé dans la barre inférieure d’une application mobile Teams. Il collecte toutes les applications qui sont ouvertes mais qui ne sont pas actuellement utilisées ou actives. <br>**Voir aussi** : [Teams Mobile](#t) |
 | [Ressource Azure](../toolkit/provision.md) | Un service disponible via Azure que votre application Teams peut utiliser pour le déploiement Azure. Il peut s’agir de comptes de stockage, d’applications web, de bases de données, etc. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Service de gestion des identités et des accès basé sur le cloud de Microsoft. Il permet aux utilisateurs authentifiés d’accéder aux ressources Azure internes et externes. |
