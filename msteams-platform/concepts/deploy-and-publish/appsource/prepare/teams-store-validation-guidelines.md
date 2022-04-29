@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826991"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103971"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Instructions de validation du magasin Microsoft Teams
 
@@ -274,7 +274,7 @@ Les icônes sont l’un des principaux éléments que les utilisateurs voient lo
 * La version couleur de votre icône doit être de 192x192 pixels. Votre symbole d'icône peut être de n'importe quelle couleur, mais il doit être placé sur un fond carré uni ou entièrement transparent.
 * La version simplifiée de votre icône s'affiche dans les scénarios suivants :
   * Lorsque votre application est utilisée et **hébergée** dans la barre d'applications sur le côté gauche de Teams.
-  * Lorsqu'un utilisateur épingle l'extension de messagerie de votre application.
+  * Lorsqu’un utilisateur épingle l’extension de message de votre application.
 
 * Le contour doit être de 32x32 pixels et peut être blanc avec un fond transparent ou transparent avec un fond blanc. L'icône ne doit pas avoir de rembourrage supplémentaire autour du symbole.
 
@@ -1061,7 +1061,7 @@ Les applications qui fournissent uniquement des notifications avec du contenu te
 > [!TIP]
 > Prévisualisez les informations et fournissez des actions utilisateur de base en ligne dans la carte publiée afin que l'utilisateur n'ait pas à naviguer en dehors des équipes pour toutes les actions (quelle que soit la complexité).
 
-## <a name="messaging-extensions"></a>Extensions de messagerie
+## <a name="message-extensions"></a>Extensions de messages
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::Cette section est conforme à la [stratégie 1140.4.4 du marché commercial de Microsoft](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
@@ -1142,7 +1142,7 @@ Les extensions de messagerie basées sur les actions doivent effectuer les opér
 
 ### <a name="preview-links-link-unfurling"></a>Liens d’aperçu (déploiement de liens)
 
-Les extensions de messagerie doivent prévisualiser les liens reconnus dans la zone de rédaction des équipes. N'ajoutez pas de domaines hors de votre contrôle (qu'il s'agisse d'URL absolues ou de caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` non valide. Les domaines de premier niveau sont également interdits. Par exemple : `*.com` ou `*.org`. [*Correction obligatoire*]
+Les extensions de messagerie doivent prévisualiser les liens reconnus dans la zone de rédaction Teams. N'ajoutez pas de domaines hors de votre contrôle (qu'il s'agisse d'URL absolues ou de caractères génériques). Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` non valide. Les domaines de premier niveau sont également interdits. Par exemple : `*.com` ou `*.org`. [*Correction obligatoire*]
 
 ### <a name="search-commands"></a>Commandes de recherche
 
@@ -1170,7 +1170,7 @@ Les extensions de messagerie doivent prévisualiser les liens reconnus dans la z
    :::column-end:::
 :::row-end:::
 
-### <a name="search-based-messaging-extension-only-apps"></a>Extensions de messagerie basées sur la recherche uniquement pour les applications
+### <a name="search-based-message-extension-only-apps"></a>Extensions de messagerie basées sur la recherche uniquement pour les applications
 
 [*Correction obligatoire*]
 
@@ -1279,7 +1279,7 @@ Utilisez les directives suivantes pour les extensions de réunion :
    :::column-end:::
 :::row-end:::
 
-* Les extensions de messagerie doivent fonctionner de la même manière pendant les réunions comme en dehors des réunions.
+* Les extensions de messagerie doivent fonctionner de la même manière pendant les réunion qu’en dehors des réunions.
 
 ### <a name="in-meeting-tabs"></a>Onglets de réunion
 

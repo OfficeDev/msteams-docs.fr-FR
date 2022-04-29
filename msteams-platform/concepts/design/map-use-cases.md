@@ -5,12 +5,12 @@ description: Identifiez comment les cas d’utilisation de votre application peu
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 9fdf2c56bab0a822d0c3769d6d7e9fdb6aa3a929
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765938"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103326"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>Mappez votre cas d’usage aux fonctionnalités Teams
 
@@ -51,8 +51,8 @@ Un moyen rapide de démarrer un processus ou un flux de travail dans un système
 
 | **Si vous voulez...** | **Essayez ceci...** |
 | --- | --- |
-| Déclenchez des messages, ce qui permet à vos utilisateurs d’envoyer rapidement le contenu d’un message à vos services web. | Commandes d’action des extensions de messagerie |
-| Ouvrez des messages à partir d’un onglet, d’un bot ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail. | Modules de tâche |
+| Déclenchez des messages, ce qui permet à vos utilisateurs d’envoyer rapidement le contenu d’un message à vos services web. | Extensions de messagerie de commandes d’action |
+| Ouvrez des messages à partir d’un onglet, d’un bot, ou d’une extension de messagerie pour collecter des informations avant de lancer un flux de travail. | Modules de tâche |
 | Interagissez avec vos utilisateurs via du texte et des cartes enrichies. | Bots conversationnels |
 | Un bon choix pour une interaction simple de va-et-vient quand vous n’avez pas besoin de créer un bot conversationnel entier. |  Webhooks sortants |
 

@@ -5,12 +5,12 @@ description: Une vue d’ensemble des onglets personnalisés sur la plateforme T
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727915"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103291"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
 

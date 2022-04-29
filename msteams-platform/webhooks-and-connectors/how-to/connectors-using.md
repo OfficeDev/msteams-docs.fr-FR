@@ -5,12 +5,12 @@ description: Décrit l’utilisation des Connecteurs Office 365 dans Microsoft T
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: connecteur Office365 teams
-ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398875"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104076"
 ---
 # <a name="create-and-send-messages"></a>Créer et envoyer des messages
 
@@ -262,7 +262,7 @@ Le tableau suivant fournit les détails de la transaction basée sur le temps :
 Une [logique de nouvelle tentative avec un recul exponentiel](/azure/architecture/patterns/retry) peut atténuer la limitation du débit dans les cas où les demandes dépassent les limites en une seconde. Suivez les [meilleures pratiques](../../bots/how-to/rate-limit.md) pour éviter d’atteindre les limites de taux.
 
 > [!NOTE]
-> Une [logique de nouvelle tentative avec un délai d’attente exponentiel](/azure/architecture/patterns/retry) peut atténuer la limitation des taux pour les cas où les demandes dépassent les limites en l’espace d’une seconde. Référez-vous aux [réponses du protocole HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) pour éviter de vous heurter aux limites de taux.
+> Une [logique de nouvelle tentative avec un recul exponentiel](/azure/architecture/patterns/retry) peut atténuer la limitation du débit dans les cas où les demandes dépassent les limites en une seconde. Reportez-vous aux[réponses HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) pour éviter d’atteindre les limites de taux.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

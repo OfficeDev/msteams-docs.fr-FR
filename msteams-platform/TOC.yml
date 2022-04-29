@@ -64,7 +64,7 @@
           href: tabs/design/tabs.md
         - name: Bots
           href: bots/design/bots.md
-        - name: Extensions de messagerie
+        - name: Extensions de messages
           href: messaging-extensions/design/messaging-extension-design.md
         - name: Extensions de réunion
           href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
@@ -176,9 +176,9 @@
               href: resources/bot-v3/bots-text-formats.md
             - name: Tester un bot
               href: resources/bot-v3/bots-test.md
-        - name: Extensions de messagerie – SDK v3
+        - name: Kit de développement logiciel (SDK) d’extensions de message (v3)
           items:
-            - name: Extensions de messagerie – SDK v3
+            - name: Kit de développement logiciel (SDK) d’extensions de message (v3)
               href: resources/messaging-extension-v3/messaging-extensions-overview.md
             - name: Extensions de recherche
               href: resources/messaging-extension-v3/search-extensions.md
@@ -265,7 +265,7 @@
           href: resources/media-formats.md
     - name: Modifications de l’API du bot pour les membres de l’équipe et de la conversation
       href: resources/team-chat-member-api-changes.md
-- name: Créer des extensions de messagerie
+- name: Build d’extensions de messages
   items:
     - name: Vue d'ensemble
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -375,11 +375,11 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: Utiliser l'authentification SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: Extensions de messagerie
+    - name: Extensions de messages
       items:
         - name: Ajouter une authentification à votre extension de messagerie
           href: messaging-extensions/how-to/add-authentication.md
-        - name: Activer l’authentification unique des extensions de messagerie
+        - name: Activer l’authentification unique pour les extensions de messagerie
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: Intégrer les fonctionnalités de l’appareil
   items:
