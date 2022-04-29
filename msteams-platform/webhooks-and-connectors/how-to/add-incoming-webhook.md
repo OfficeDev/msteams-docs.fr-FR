@@ -6,19 +6,19 @@ keywords: onglets teams webhook sortant
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685624"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104020"
 ---
 # <a name="create-an-incoming-webhook"></a>Créer un webhook entrant
 
 Un webhook entrant permet aux applications externes de partager du contenu dans les canaux Microsoft Teams. Les webhooks sont utilisés comme outils pour suivre et notifier. Les webhooks fournissent une URL unique pour envoyer une charge utile JSON avec un message au format de carte. Les cartes sont des conteneurs d’interface utilisateur qui incluent du contenu et des actions liées à un seul sujet. Vous pouvez utiliser des cartes dans les fonctionnalités suivantes :
 
 * Bots
-* Extensions de messagerie
+* Extensions de messages
 * Connecteurs
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Fonctionnalités clés d’un webhook entrant
@@ -39,7 +39,7 @@ Le tableau suivant fournit les fonctionnalités et la description d’un webhook
 
 > [!NOTE]
 >
-> * Les bots Teams, les extensions de messagerie, les webhooks entrants et Bot Framework prennent en charge les cartes adaptatives. Les cartes adaptatives sont une infrastructure de plateforme multiplateforme ouverte qui est utilisée sur toutes les plateformes telles que Windows, Android, iOS, etc. Actuellement, les [connecteurs Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) ne prennent pas en charge les cartes adaptatives. Toutefois, il est possible de créer un [flux](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) qui publie des cartes adaptatives sur un canal Teams.
+> * Les bots Teams, les extensions de message, le webhook entrant et le Bot Framework prennent en charge les Cartes adaptatives. Les cartes adaptatives sont une infrastructure de plateforme multiplateforme ouverte qui est utilisée sur toutes les plateformes telles que Windows, Android, iOS, etc. Actuellement, les [connecteurs Teams](../../webhooks-and-connectors/how-to/connectors-creating.md) ne prennent pas en charge les cartes adaptatives. Toutefois, il est possible de créer un [flux](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) qui publie des cartes adaptatives sur un canal Teams.
 > * Pour plus d’informations sur les cartes et les webhooks, consultez [Cartes adaptatives et Webhooks entrants.](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-an-incoming-webhook"></a>Créer un webhook entrant

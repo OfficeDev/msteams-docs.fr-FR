@@ -481,6 +481,8 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Paramètres de classement du store Microsoft Teams
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+        - name: Raisons courantes de l’échec de validation d’application
+          href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: Monétiser votre application
   items:
     - name: Aperçu

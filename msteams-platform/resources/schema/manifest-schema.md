@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706150"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104006"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -535,25 +535,25 @@ L’objet est un tableau (maximum d’un élément) avec tous les éléments de 
 
 **Facultatif**— tableau
 
-Définit une extension de messagerie pour l’application.
+Définit une extension de message pour l’application.
 
 > [!NOTE]
-> Le nom de la fonctionnalité a été modifié de « extension de composition » à « extension de messagerie » en novembre 2017, mais le nom du manifeste reste le même pour que les extensions existantes continuent de fonctionner.
+> Le nom de la fonctionnalité est passé de « extension composée  » à « extension de message » en novembre 2017, mais le nom du manifeste reste le même afin que les extensions existantes continuent de fonctionner.
 
-L’élément est un tableau (maximum d’un élément) avec tous les éléments de type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une extension de messagerie.
+L’élément est un tableau (maximum d’un élément) avec tous les éléments de type `object` . Ce bloc est requis uniquement pour les solutions qui fournissent une extension de message.
 
 |Nom| Type | Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|L'ID de l'application Microsoft pour le bot qui accompagne l'extension de messagerie, tel qu’inscrit auprès de Bot Framework. L’ID peut être identique à l’ID d’application global.|
-|`commands`|tableau d’objets|10|✔|Tableau de commandes pris en charge par l’extension de messagerie.|
-|`canUpdateConfiguration`|Booléen|||Une valeur indiquant si la configuration d'une extension de messagerie peut être mise à jour par l'utilisateur. Valeur par défaut : **faux**.|
+|`botId`|string|64|✔|ID d’application Microsoft unique pour le bot qui sauvegarde l’extension de message, tel qu’il est inscrit auprès de l’infrastructure de bot. L’ID peut être identique à l’ID d’application global.|
+|`commands`|tableau d’objets|10|✔|Tableau de commandes prises en charge par l’extension de message.|
+|`canUpdateConfiguration`|Booléen|||Valeur indiquant si la configuration d’une extension de message peut être mise à jour par l’utilisateur. Valeur par défaut : **false**.|
 |`messageHandlers`|tableau d’Objets|5||Liste des gestionnaires qui permettent d’appeler des applications lorsque certaines conditions sont remplies.|
 |`messageHandlers.type`|string|||Le type de gestionnaire de messages. Doit être `"link"`.|
 |`messageHandlers.value.domains`|tableau de Chaînes|||Tableau de domaines pour lequel le gestionnaire de messages de lien peut s’inscrire.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-Votre extension de messagerie doit déclarer une ou plusieurs commandes avec un maximum de 10 commandes. Chaque commande apparaît dans Microsoft Teams en tant qu’interaction potentielle à partir du point d’entrée basé sur l’IU.
+Votre extension de message doit déclarer une ou plusieurs commandes avec un maximum de 10 commandes. Chaque commande apparaît dans Microsoft Teams en tant qu’interaction potentielle à partir du point d’entrée basé sur l’IU.
 
 Chaque élément de commande est un objet avec la structure suivante :
 
@@ -566,7 +566,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 |`initialRun`|Boolean|||Une valeur booléenne indique si la commande s'exécute initialement sans paramètres. La valeur par défaut est **faux**.|
 |`context`|tableau de Chaînes|3||Définit l’emplacement à partir duquel l’extension de message peut être appelée. N’importe quelle combinaison de `compose`,`commandBox` ,`message` . La valeur par défaut est `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||Une valeur booléenne qui indique si le module de tâche doit être récupéré dynamiquement. La valeur par défaut est **faux**.|
-|`taskInfo`|objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de messagerie.|
+|`taskInfo`|objet|||Spécifiez le module de tâche à précharger lors de l’utilisation d’une commande d’extension de message.|
 |`taskInfo.title`|string|64 caractères||Titre de la boîte de dialogue initiale.|
 |`taskInfo.width`|chaîne|||Largeur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
 |`taskInfo.height`|string|||Hauteur de la boîte de dialogue : un nombre en pixels ou une disposition par défaut telle que « grand », « moyen » ou « petit ».|
@@ -809,7 +809,7 @@ Spécifiez la définition de l'extension de réunion. Pour plus d'informations, 
 **Facultatif**— objet
 
 > [!NOTE]
-> Si vous définissez la propriété `manifestVersion` à 1.12, la propriété d'autorisation est incompatible avec les anciennes versions (version 1.11 ou antérieure) du manifeste. L’autorisation est prise en charge pour la version 1.12 du manifeste.
+> Si vous définissez la propriété `manifestVersion` sur 1.12, la propriété d’autorisation est incompatible avec les versions antérieures (version 1.11 ou antérieure) du manifeste. L’autorisation est prise en charge pour la version 1.12 du manifeste.
 
 Spécifiez et consolidez les informations relatives à l’autorisation pour l’application.
 

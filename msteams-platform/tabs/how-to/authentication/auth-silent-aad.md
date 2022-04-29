@@ -1,46 +1,46 @@
 ---
 title: Authentification en mode silencieux
-description: Décrit l’authentification silencieuse, l’authentification unique, Azure AD pour les onglets
+description: Décrit l’authentification silencieuse, l’authentification unique Azure AD pour les onglets
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: Onglet silencieux de l’authentification Azure AD teams
-ms.openlocfilehash: e59b7ff30a0659b670796c56b97eda437f907739
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Onglet Azure AD silencieux de l’authentification unique Teams
+ms.openlocfilehash: 699582414a4699a69519e41232e4354d8125337b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821569"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111646"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
 > [!IMPORTANT]
-> Le support et le développement de Microsoft pour la bibliothèque d’authentification Active Directory (ADAL), y compris les correctifs de sécurité, se terminent le **30 juin 2022**. Mettez à jour vos applications pour utiliser la bibliothèque d’authentification Microsoft (MSAL) afin de continuer à recevoir du support. Voir [Migrer des applications vers la bibliothèque d’authentification Microsoft (MSAL).](/azure/active-directory/develop/msal-migration)
+> Le support et le développement Microsoft pour la bibliothèque d’authentification Active Directory (ADAL), y compris les correctifs de sécurité, se terminent le **30 juin 2022**. Mettez à jour vos applications pour utiliser la bibliothèque d’authentification Microsoft (MSAL) pour continuer à bénéficier du support. Consultez [Migrer des applications vers la bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-migration).
 
 > [!NOTE]
-> Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, assurez-vous que vous utilisez Teams JavaScript SDK version 1.4.1 ou ultérieure.
+> Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, assurez-vous que vous utilisez le Kit de développement logiciel (SDK) JavaScript Teams version 1.4.1 ou ultérieure.
 
-L’authentification Azure AD réduit le nombre de fois qu’un utilisateur entre ses informations d’identification en actualisation silencieuse du jeton d’authentification. Pour obtenir une prise en charge de l’sign-on unique réelle, voir [la documentation de l’oD unique](~/tabs/how-to/authentication/auth-aad-sso.md).
+L’authentification silencieuse dans Azure AD réduit le nombre de fois qu’un utilisateur entre ses informations d’identification en actualisant silencieusement le jeton d’authentification. Pour obtenir la prise en charge de l’authentification unique réelle, consultez [la documentation de l’authentification](~/tabs/how-to/authentication/auth-aad-sso.md) unique.
 
-Pour conserver votre code côté client, utilisez la bibliothèque d’authentification [Azure AD](/azure/active-directory/develop/active-directory-authentication-libraries) pour JavaScript pour obtenir un jeton d’accès Microsoft Azure Active Directory (Azure AD) en mode silencieux. Si l’utilisateur s’est récemment inscrit, il ne voit pas de boîte de dialogue de fenêtre pop-up.
+Pour conserver votre code côté client, utilisez la bibliothèque d’authentification [Azure AD](/azure/active-directory/develop/active-directory-authentication-libraries) pour JavaScript afin d’obtenir un jeton d’accès Microsoft Azure Active Directory (Azure AD) en mode silencieux. Si l’utilisateur s’est connecté récemment, il ne voit pas de boîte de dialogue contextuelle.
 
-Bien que la bibliothèque d’authentification Active Directory soit optimisée pour les applications AngularJS, elle fonctionne également avec les applications Mono-page (SPA) JavaScript.
+Bien que Bibliothèque d'authentification Active Directory soit optimisé pour les applications AngularJS, il fonctionne également avec les applications monopages (SPA) JavaScript.
 
 > [!NOTE]
-> Actuellement, l’authentification silencieuse fonctionne uniquement pour les onglets. Elle ne fonctionne pas lors de la signature à partir d’un bot.
+> Actuellement, l’authentification silencieuse fonctionne uniquement pour les onglets. Il ne fonctionne pas lors de la connexion à partir d’un bot.
 
 ## <a name="how-silent-authentication-works"></a>Fonctionnement de l’authentification silencieuse
 
-La bibliothèque d’authentification Active Directory crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. Toutefois, la bibliothèque spécifie `prompt=none`, Azure AD n’affiche pas la page de signature. L’interaction utilisateur peut être nécessaire si l’utilisateur doit se connecter ou accorder l’accès à l’application. Si une interaction utilisateur est nécessaire, Azure AD renvoie une erreur que la bibliothèque signale à votre application. Si nécessaire, votre application peut désormais afficher une option de connect.
+La bibliothèque d’authentification Active Directory crée un iframe masqué pour le flux d’octroi implicite OAuth 2.0. Mais la bibliothèque spécifie `prompt=none`, de sorte que Azure AD n’affiche pas la page de connexion. Une interaction utilisateur peut être nécessaire si l’utilisateur doit se connecter ou accorder l’accès à l’application. Si l’interaction utilisateur est nécessaire, Azure AD renvoie une erreur que la bibliothèque signale à votre application. Si nécessaire, votre application peut désormais afficher une option de connexion.
 
 ## <a name="how-to-do-silent-authentication"></a>Procédure d’authentification silencieuse
 
-Le code de cet article provient de l’Teams exemple d’application qui [est Teams exemple d’authentification.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)
+Le code de cet article provient de l’exemple d’application Teams qui est [nœud d’exemple d’authentification Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
-[Lancez l’onglet configurable d’authentification](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) simple et silencieuse à l’Azure AD et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
+[Lancer l’onglet configurable d’authentification silencieuse et simple à l’aide de Azure AD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) et suivez les instructions pour exécuter l’exemple sur votre ordinateur local.
 
-### <a name="include-and-configure-active-directory-authentication-library"></a>Inclure et configurer la bibliothèque d’authentification Active Directory
+### <a name="include-and-configure-active-directory-authentication-library"></a>Inclure et configurer Bibliothèque d'authentification Active Directory
 
-Incluez la bibliothèque d’authentification Active Directory dans vos pages d’onglets et configurez la bibliothèque avec votre ID client et l’URL de redirection :
+Incluez Bibliothèque d'authentification Active Directory dans vos pages d’onglets et configurez la bibliothèque avec votre ID client et l’URL de redirection :
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -56,9 +56,9 @@ Incluez la bibliothèque d’authentification Active Directory dans vos pages d�
 </script>
 ```
 
-### <a name="get-the-user-context"></a>Obtenir le contexte utilisateur
+### <a name="get-the-user-context"></a>Obtenir l'utilisateur pour le contexte actuel
 
-Dans la page de contenu de l’onglet, `microsoftTeams.getContext()` appelez pour obtenir un conseil de connect pour l’utilisateur actuel. L’indication est utilisée comme un conseil `loginHint` dans l’appel Azure AD.
+Dans la page de contenu de l’onglet, appelez `microsoftTeams.getContext()` pour obtenir un indicateur de connexion pour l’utilisateur actuel. L’indicateur est utilisé comme un `loginHint` appel à Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -73,9 +73,9 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>Authentifier
 
-Si un jeton nonpiré est mis en cache pour l’utilisateur dans la bibliothèque d’authentification Active Directory, utilisez-le. Vous pourrez également appeler `acquireToken(resource, callback)` pour recevoir silencieusement un jeton. La bibliothèque appelle une fonction de rappel avec le jeton demandé ou génère une erreur en cas d’échec de l’authentification.
+Si un jeton non expiré est mis en cache pour la bibliothèque d’authentification Active Directory pour l’utilisateur, utilisez le jeton. Vous pouvez également appeler `acquireToken(resource, callback)` pour recevoir un jeton en mode silencieux. La bibliothèque appelle une fonction de rappel avec le jeton demandé ou génère une erreur en cas d’échec de l’authentification.
 
-Si vous obtenez une erreur dans la fonction de rappel, affichez et utilisez une option de signature explicite.
+Si vous obtenez une erreur dans la fonction de rappel, affichez et utilisez une option de connexion explicite.
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from Active Directory Authentication Library
@@ -108,9 +108,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>Traiter la valeur de retour
 
-La bibliothèque d’authentification Active Directory `AuthenticationContext.handleWindowCallback(hash)` permet d’Azure AD en appelant dans la page de rappel de la signature.
+La bibliothèque d’authentification Active Directory analyse le résultat de Azure AD en appelant `AuthenticationContext.handleWindowCallback(hash)` la page de rappel de connexion.
 
-Vérifiez que vous avez un utilisateur valide et que vous `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` appelez ou pour signaler l’état à votre page de contenu d’onglet principal.
+Vérifiez que vous disposez d’un utilisateur valide et appelez `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()` pour signaler l’état à votre page de contenu de l’onglet principal.
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
@@ -125,12 +125,12 @@ if (authContext.isCallback(window.location.hash)) {
 }
 ```
 
-### <a name="handle-the-sign-out-flow"></a>Gérer le flux de la signature
+### <a name="handle-the-sign-out-flow"></a>Gérer le flux de déconnexion
 
-Utilisez le code suivant pour gérer le flux de Azure AD’authentification :
+Utilisez le code suivant pour gérer le flux de déconnexion dans Azure AD l’authentification :
 
 > [!NOTE]
-> Lorsque vous vous déconnectez de Teams’onglet ou du bot, la session en cours est effacée.
+> Lorsque vous déconnexion à partir de Teams onglet ou bot, la session active est désactivée.
 
 ```javascript
 function logout() {
@@ -141,5 +141,5 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Configurer les fournisseurs d’identité pour qu’ils utilisent Azure AD](../../../concepts/authentication/configure-identity-provider.md)
-* [En savoir plus sur la bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-overview)
+* [Configurer des fournisseurs d’identité pour utiliser Azure AD](../../../concepts/authentication/configure-identity-provider.md)
+* [Connaître la bibliothèque d'authentification de Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) 

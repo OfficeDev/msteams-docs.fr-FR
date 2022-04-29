@@ -6,22 +6,22 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 14f74a89122d3622f6abfecaff80bdab6f63a71a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 47d9f7af804f8d060dbb03b5d20eb672582899f1
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398749"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104496"
 ---
 # <a name="teams-app-that-fits"></a>Application Teams adaptée
 
 Microsoft Teams offre une collection d’applications fournies par Microsoft ou des services externes. Les applications Teams peuvent être des onglets, des bots ou des extensions de messagerie ou n’importe quelle combinaison des trois. Ces applications augmentent la valeur de votre expérience collaborative Teams.
 
-Les applications peuvent être personnelles ou partagées. Une application personnelle permet une communication individuelle, tandis qu’une application partagée permet à plusieurs utilisateurs de partager un espace d’application pour collaborer.
+Une application peut être personnelle ou partagée. Une application personnelle permet une communication individuelle, tandis qu’une application partagée permet à plusieurs utilisateurs de partager un espace d’application pour collaborer.
 
 ## <a name="driving-organizational-goals"></a>Atteindre les objectifs organisationnels
 
-La collaboration et la communication sont essentielles pour une organisation. La communication concise, l’intégration aux services nécessaires et l’accessibilité pendant vos déplacements sont les raisons pour lesquelles les organisations choisissent de plus en plus de s’appuyer sur des applications.
+La collaboration et la communication sont essentielles pour une organisation. La communication concise, l’intégration aux services nécessaires et l’accessibilité en déplacement sont les raisons pour lesquelles les organisations choisissent de plus en plus de s’appuyer sur des applications.
 
 Les organisations l’utilisent pour communiquer avec leurs clients, fournir des services et partager des informations. Mais ce n’est pas tout ! Les applications sont le lieu de réunion où les personnes peuvent travailler ensemble. Une application bien placée permet de créer un environnement cohérent pour les besoins externes et internes de l’entreprise.
 

@@ -1,104 +1,104 @@
 ---
-title: Conception de votre extension de messagerie
-description: Découvrez comment concevoir une extension de messagerie Teams et obtenir le Kit d’interface utilisateur de Microsoft Teams.
-keywords: équipes conception lignes directrices référence extension de la messagerie conseils meilleure pratique
+title: Conception de votre extension de message
+description: Découvrez comment concevoir une extension de message Teams et obtenir le Kit d’interface utilisateur Microsoft Teams.
+keywords: conseils sur les extensions de message de référence pour les instructions de conception d’équipes
 author: heath-hamilton
 ms.localizationpriority: high
-ms.author: qinch
+ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 3cc9ac28bd07d3d79894a59cb2ff436fa43dda0d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4021f52359d2c97382fa988679bbfe2f9bd0ecab
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155563"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104097"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Conception de votre extension de messagerie Microsoft Teams
+# <a name="designing-your-microsoft-teams-message-extension"></a>Conception de votre extension de message Microsoft Teams
 
-Les extensions de messagerie sont des raccourcis permettant d’insérer du contenu d’application ou agir sur un message sans quitter la conversation.
-Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les personnes peuvent ajouter, utiliser et gérer des extensions de messagerie dans Teams.
+Les extensions de message sont des raccourcis permettant d’insérer du contenu d’application ou d’agir sur un message sans quitter la conversation.
+Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les utilisateurs peuvent ajouter, utiliser et gérer des extensions de message dans Teams.
 
 ## <a name="microsoft-teams-ui-kit"></a>Kit d’interface utilisateur de Microsoft Teams
 
-Vous trouverez des instructions plus détaillées sur la conception de l’extension de messagerie, y compris les éléments que vous pouvez récupérer et modifier selon vos besoins, dans le Kit d’interface utilisateur de Microsoft Teams.
+Vous trouverez des instructions complètes de conception d’extension de message, y compris des éléments que vous pouvez récupérer et modifier si nécessaire, dans le Kit d’interface utilisateur Microsoft Teams.
 
 > [!div class="nextstepaction"]
 > [Obtenir le Kit d’interface utilisateur de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="add-a-messaging-extension"></a>Ajouter une extension de messagerie
+## <a name="add-a-message-extension"></a>Ajouter une extension de message
 
-Vous pouvez ajouter une extension de messagerie dans les contextes Teams suivants :
+Vous pouvez ajouter une extension de message dans les contextes Teams suivants :
 
 * À partir de Teams Store.
-* Dans un canal, une conversation ou une réunion (avant, pendant et après) près de la zone de rédaction. Il est important de noter que si vous ajoutez une extension de messagerie à l’un de ces emplacements, vous seul pouvez l’utiliser dans ce contexte.
+* Dans un canal, une conversation ou une réunion (avant, pendant et après) près de la zone de rédaction. Il est important de noter que si vous ajoutez une extension de message à l’un de ces emplacements, vous seul pouvez l’utiliser dans ce contexte.
 
-Les exemples suivants montrent comment ajouter une extension de messagerie dans un canal.
+Les exemples suivants montrent comment ajouter une extension de message dans un canal.
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="Exemple montrant comment ajouter une extension de messagerie près de la zone de rédaction dans un canal sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="L’exemple montre comment ajouter une extension de message près de la zone de composition dans un canal sur mobile." border="false":::
 
-### <a name="desktop"></a>Desktop
+### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Exemple montrant comment ajouter une extension de messagerie près de la zone de rédaction dans un canal." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="L’exemple montre comment ajouter une extension de message près de la zone de composition dans un canal." border="false":::
 
-## <a name="set-up-a-messaging-extension"></a>Configurer une extension de messagerie
+## <a name="set-up-a-message-extension"></a>Configurer une extension de message
 
-L'authentification n'est pas obligatoire, mais si votre application est une sorte d'outil de suivi des tickets, il se peut que vous ayez besoin que les utilisateurs se connectent pour utiliser l'extension de messagerie.
+L’authentification n’est pas obligatoire, mais si votre application ressemble à un outil de suivi des tickets, vous devrez peut-être vous connecter pour utiliser l’extension de message.
 
 Pour assurer la cohérence entre les applications Teams, vous ne pouvez pas personnaliser l’écran de connexion. Si vous utilisez l’authentification unique (SSO), les utilisateurs sont connectés automatiquement.
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Exemple présentant l'écran de configuration d'une extension de messagerie avec un bouton de connexion sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="L’exemple montre l’écran d’installation de l’extension de message avec un bouton de connexion sur mobile." border="false":::
 
-### <a name="desktop"></a>Desktop
+### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Exemple présentant l'écran de configuration d'une extension de messagerie avec un bouton de connexion." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="L’exemple montre l’écran d’installation de l’extension de message avec un bouton de connexion." border="false":::
 
-## <a name="types-of-messaging-extensions"></a>Types d’extensions de messagerie
+## <a name="types-of-message-extensions"></a>Types d’extensions de message
 
-Les extensions de messagerie peuvent avoir des commandes de recherche, des commandes d’action ou les deux. Vos commandes dépendent des fonctionnalités de votre application et de la façon dont elles s’intègrent aux cas d'utilisation Teams.
+Les extensions de message peuvent avoir des commandes de recherche, des commandes d’action ou les deux. Vos commandes dépendent des fonctionnalités de votre application et de la façon dont elles s’intègrent aux cas d'utilisation Teams.
 
 ### <a name="search-commands"></a>Commandes de recherche
 
-Avec les commandes de recherche, les utilisateurs peuvent recourir à votre extension de messagerie pour trouver rapidement du contenu externe et les insérer dans un message. Les commandes de recherche sont généralement disponibles dans la zone de rédaction. Par exemple, vous pouvez démarrer ou ajouter à une discussion en partageant un élément de contenu, sans jamais quitter Teams.
+Avec les commandes de recherche, les utilisateurs peuvent utiliser votre extension de message pour rechercher rapidement du contenu externe et les insérer dans un message. Les commandes de recherche sont généralement disponibles dans la zone de rédaction. Par exemple, vous pouvez démarrer ou ajouter à une discussion en partageant un élément de contenu, sans jamais quitter Teams.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="Exemple d'une extension de messagerie basée sur la recherche et lancée à partir de la zone de rédaction sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="L’exemple montre une extension de message basée sur la recherche lancée à partir de la zone de composition sur mobile." border="false":::
 
-#### <a name="desktop"></a>Desktop
+#### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Exemple d'une extension de messagerie basée sur la recherche et lancée à partir de la zone de rédaction." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="L’exemple montre une extension de message basée sur la recherche lancée à partir de la zone de composition." border="false":::
 
 #### <a name="compose-box-layout-options"></a>Options de disposition de la zone de rédaction
 
-Vous disposez de certaines options pour afficher les résultats de recherche de l’extension de messagerie, notamment [liste et les vues de grille](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
+Vous disposez de certaines options pour afficher les résultats de la recherche d’extension de message, notamment la [liste et les vues de grille](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations montrant les options de disposition pour les résultats de recherche d’extension de messagerie." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations montrant les options de disposition pour les résultats de recherche d’extension de message." border="false":::
 
 ### <a name="action-commands"></a>Commandes d'action
 
 Les commandes d’action permettent aux utilisateurs de déclencher des actions et de traiter des demandes dans des services externes dans Teams. Par exemple, si votre application assure le suivi des commandes, un utilisateur peut créer une nouvelle commande en utilisant le contenu du message d'un collègue, et ce, directement dans sa conversation.
 
-Les extensions de messagerie basées sur des actions nécessitent souvent que les utilisateurs remplissent un formulaire ou un autre type de configuration au sein d’un modal. Vous pouvez créer ces expériences avec [modules de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
+Les extensions de message basées sur des actions nécessitent souvent que les utilisateurs remplissent un formulaire ou un autre type de configuration au sein d’un modal. Vous pouvez créer ces expériences avec [modules de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
-## <a name="open-a-messaging-extension"></a>Ouvrir une extension de messagerie
+## <a name="open-a-message-extension"></a>Ouvrir une extension de message
 
-La zone de rédaction et les messages ou publications sont les principaux contextes dans lesquels les utilisateurs utilisent des extensions de messagerie.
+La zone de composition et les messages ou les billets sont les principaux contextes dans lesquels les utilisateurs utilisent des extensions de message.
 
 ### <a name="from-the-compose-box"></a>À partir de la zone de rédaction
 
-Une fois ajoutée, les utilisateurs peuvent ouvrir votre extension de messagerie en sélectionnant l'icône de votre application sous la zone de rédaction. Dans ces exemples, l’extension comporte des commandes de recherche et d’action.
+Une fois ajoutés, les utilisateurs peuvent ouvrir votre extension de message en sélectionnant l’icône de votre application sous la zone de composition. Dans ces exemples, l’extension comporte des commandes de recherche et d’action.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="Exemple montrant comment ouvrir une extension de messagerie à partir de la zone de rédaction sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir de la zone de composition sur un appareil mobile." border="false":::
 
-#### <a name="desktop"></a>Desktop
+#### <a name="desktop"></a>Ordinateur de bureau
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Exemple montrant comment ouvrir une extension de messagerie à partir de la zone de rédaction." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir de la zone de composition." border="false":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>À partir d’un message de conversation ou d’un billet de canal
 
@@ -106,19 +106,19 @@ Une fois ajoutés, les utilisateurs peuvent sélectionner l’icône **Plus** ::
 
 #### <a name="chat-message"></a>Message de conversation
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Exemple montrant comment ouvrir une extension de messagerie à partir d’un message de conversation." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="L’exemple montrant comment ouvrir une extension de messagerie à partir d’un message de conversation." border="false":::
 
 #### <a name="channel-post"></a>Billet de canal
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="L’exemple montre comment ouvrir une extension de messagerie à partir d’un billet de canal sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="L’exemple montre comment ouvrir une extension de message à partir d’un billet de canal sur mobile." border="false":::
 
-## <a name="use-a-messaging-extension"></a>Utiliser une extension de messagerie
+## <a name="use-a-message-extension"></a>Utiliser une extension de message
 
-Les scénarios suivants montrent les principales façons dont les utilisateurs utilisent les extensions de messagerie.
+Les scénarios suivants montrent les principales façons dont les utilisateurs utilisent les extensions de message.
 
 ### <a name="insert-content-into-a-message"></a>Insérer du contenu dans un message
 
-**1. Sélectionner une extension de messagerie**. Les utilisateurs peuvent rechercher le contenu qu'ils veulent partager à partir de la zone de rédaction.
+**1. Sélectionnez une extension de message**. Les utilisateurs peuvent rechercher le contenu qu’ils souhaitent partager à partir de la zone de composition.
 
 #### <a name="mobile"></a>Mobile
 
@@ -128,7 +128,7 @@ Les scénarios suivants montrent les principales façons dont les utilisateurs u
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Exemple montrant un utilisateur recherchant du contenu à insérer à partir de la zone de rédaction." border="false":::
 
-**2. Insérer du contenu**. Une fois publiés, d’autres utilisateurs peuvent répondre ou sélectionner le contenu pour afficher plus d’informations dans votre application.
+**2. Insérer le contenu**. Une fois publiés, d’autres utilisateurs peuvent répondre ou sélectionner le contenu pour afficher plus d’informations dans votre application.
 
 #### <a name="mobile"></a>Mobile
 
@@ -140,9 +140,9 @@ Les scénarios suivants montrent les principales façons dont les utilisateurs u
 
 ### <a name="take-action-on-a-message"></a>Effectuez des actions sur un message
 
-**1. Sélectionner une extension de messagerie**. Votre application peut inclure une ou plusieurs commandes d’action.
+**1. Sélectionner une extension de message**. Votre application peut inclure une ou plusieurs commandes d’action.
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Exemple montrant un utilisateur sélectionnant une commande d’action d’extension de messagerie." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="L’exemple montre un utilisateur qui sélectionne une commande d’action d’extension de message." border="false":::
 
 **2. Terminer l'action**. Votre application peut recevoir et traiter le contenu ou les données envoyés par l’action de message. Les utilisateurs terminent l’action dans votre application tout en restant dans leur conversation.
 
@@ -150,7 +150,7 @@ Les scénarios suivants montrent les principales façons dont les utilisateurs u
 
 ### <a name="preview-links"></a>Liens d’aperçu
 
-Les extensions de messagerie vous permettent également d’insérer des liens enrichis à partir d’une URL reconnue dans un message (cette fonctionnalité est appelée [lien en cours de déploiement](../../messaging-extensions/how-to/link-unfurling.md).)
+Les extensions de message vous permettent également d’insérer des liens enrichis à partir d’une URL reconnue dans un message (cette fonctionnalité est appelée [le déploiement de liens](../../messaging-extensions/how-to/link-unfurling.md).)
 
 **1. Coller un lien reconnu** dans la zone de rédaction.
 
@@ -162,7 +162,7 @@ Les extensions de messagerie vous permettent également d’insérer des liens e
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Exemple montrant un utilisateur collant un lien dans la zone de rédaction." border="false":::
 
-**2. Insérer du contenu**. Si votre application reconnaît l’URL dans la zone de rédaction, elle affiche le lien sous la forme d’une carte qui fournit un aperçu riche en contenu du contenu web. (Pour plus d’informations, consultez les [Instructions de conception de Cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md) .)
+**2. Insérer le contenu**. Si votre application reconnaît l’URL dans la zone de composition, elle affiche le lien sous la forme d’une carte qui fournit un aperçu riche en contenu du contenu web. (Pour plus d’informations, consultez les [Instructions de conception de cartes adaptatives](../../task-modules-and-cards/cards/design-effective-cards.md) .)
 
 #### <a name="mobile"></a>Mobile
 
@@ -172,52 +172,52 @@ Les extensions de messagerie vous permettent également d’insérer des liens e
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Exemple montrant comment l'URL, étant donné qu'elle est reconnue par votre application, inclut un contenu enrichi dans la zone de rédaction." border="false":::
 
-## <a name="manage-a-messaging-extension"></a>Gérer une extension de messagerie
+## <a name="manage-a-message-extension"></a>Gérer une extension de message
 
-En cliquant avec le bouton droit sur votre icône, les utilisateurs peuvent épingler, supprimer ou configurer votre extension de messagerie.
+En cliquant avec le bouton droit sur votre icône, les utilisateurs peuvent épingler, supprimer ou configurer votre extension de message.
 
 ## <a name="anatomy"></a>Anatomie
 
-### <a name="messaging-extension-in-the-compose-box"></a>Extension de messagerie dans la zone de rédaction
+### <a name="message-extension-in-the-compose-box"></a>Extension de message dans la zone de composition
 
-L’exemple suivant est une extension de messagerie ouverte à partir de la zone de rédaction.
+Les exemples suivants montrent une extension de message ouverte à partir de la zone de composition.
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'une extension de messagerie dans la zone de rédaction sur un appareil mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une extension de message dans la zone de composition sur mobile." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |1|**Nom de l’application** : nom complet de votre application.|
-|2.|**Icône de menu Commandes d’action (facultatif)** : ouvre une liste de commandes d’action pour votre extension de messagerie (si vous en spécifiez une).
+|2|**Icône de menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de message (si vous en spécifiez une).
 |3|**Zone de recherche** : permet aux utilisateurs de trouver le contenu de l’application qu’ils souhaitent insérer.|
 |4|**Menu onglet (facultatif)** : fournit plusieurs catégories de contenu.|
 |5|**Menu commandes d’action (facultatif)** : affiche la liste des commandes d’action (le cas échéant).|
-|6|**Contenu de l’application** : principalement pour afficher les résultats de la recherche.|
+|6 |**Contenu de l’application** : principalement pour afficher les résultats de la recherche.|
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'une extension de messagerie dans la zone de rédaction." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’une extension de message dans la zone de composition." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |1|**Logo de l’application** : icône couleur du logo de votre application.|
 |2.|**Nom de l’application** : nom complet de votre application.|
-|3|**Icône de menu Commandes d’action (facultatif)** : ouvre une liste de commandes d’action pour votre extension de messagerie (si vous en spécifiez une).
+|3|**Icône de menu Commandes d’action (facultatif)**: ouvre une liste de commandes d’action pour votre extension de message (si vous en spécifiez une).
 |4|**Zone de recherche** : permet aux utilisateurs de trouver le contenu de l’application qu’ils souhaitent insérer.|
 |5|**Menu onglet (facultatif)** : fournit plusieurs catégories de contenu.|
-|6|**Menu commandes d’action (facultatif)** : affiche la liste des commandes d’action (le cas échéant).|
-|7|**Contenu de l’application** : principalement pour afficher les résultats de la recherche. L’exemple suivant utilise la disposition de liste (la disposition de la grille est une autre option).|
-|8|**Logo de l’application** : icône contour du logo de votre application.|
+|6 |**Menu commandes d’action (facultatif)** : affiche la liste des commandes d’action (le cas échéant).|
+|7 |**Contenu de l’application** : principalement pour afficher les résultats de la recherche. L’exemple suivant utilise la disposition de liste (la disposition de la grille est une autre option).|
+|8 |**Logo de l’application** : icône contour du logo de votre application.|
 
-### <a name="messaging-extension-management-menu"></a>Menu de gestion des extensions de messagerie
+### <a name="message-extension-management-menu"></a>Menu de gestion des extensions de message
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Illustration montrant l'anatomie de l'interface utilisateur d'un menu de gestion des extensions de messagerie." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="Illustration montrant l’anatomie de l’interface utilisateur d’un menu de gestion des extensions de message." border="false":::
 
 |Compteur|Description|
 |----------|-----------|
 |1|**Désépingler** : disponible si l’utilisateur a épinglé votre application.|
-|2.|**Supprimer** : supprime l’extension de messagerie du canal, de la conversation ou de la réunion.|
+|2|**Supprimer** : supprime l’extension de message du canal, de la conversation ou de la réunion.|
 
 ## <a name="best-practices"></a>Meilleures pratiques
 
@@ -231,7 +231,7 @@ Utilisez ces recommandations pour créer une expérience d’application de qual
 
 #### <a name="do-integrate-with-single-sign-on"></a>À faire : intégrer avec l’authentification unique
 
-L’authentification unique facilite, accélère et sécurise le processus de connexion. En outre, si un utilisateur s’est déjà connecté à votre application personnelle, il n’a pas besoin de ’ se reconnecter pour accéder à l’extension de messagerie.
+L’authentification unique facilite, accélère et sécurise le processus de connexion. En outre, si un utilisateur s’est déjà connecté à votre application personnelle, il n’a’ pas besoin de se reconnecter pour accéder à l’extension de message.
 
    :::column-end:::
    :::column span="":::
@@ -239,14 +239,14 @@ L’authentification unique facilite, accélère et sécurise le processus de co
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>À ne pas faire : retirer les utilisateurs de la conversation
 
-Les extensions de messagerie sont des raccourcis censés réduire le changement de contexte. Par exemple, votre extension ne doit pas diriger les utilisateurs vers une page web en dehors de Teams.
+Les extensions de message sont des raccourcis censés réduire le changement de contexte. Par exemple, votre extension ne doit pas diriger les utilisateurs vers une page web en dehors de Teams.
 
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>À faire : mettre en surbrillance votre extension de messagerie
+#### <a name="do-highlight-your-message-extension"></a>À faire : mettre en surbrillance votre extension de message
 
-Les extensions de messagerie ne sont pas toujours faciles à trouver. Incluez des captures d’écran de l’utilisation dans la page de détails de votre application. Si votre application inclut également un bot, vous pouvez inclure la documentation d’aide de l’extension de messagerie dans une visite guidée de bienvenue du bot.
+Les extensions de message ne sont pas toujours faciles à trouver. Incluez des captures d’écran de l’utilisation dans la page de détails de votre application. Si votre application inclut également un bot, vous pouvez inclure la documentation d’aide sur l’extension de message dans une visite guidée de bienvenue du bot.
 
 ### <a name="templating"></a>Création de modèles
 
@@ -256,7 +256,7 @@ Les extensions de messagerie ne sont pas toujours faciles à trouver. Incluez de
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>À faire : permettre à Teams de gérer une partie du travail de conception si possible
 
-Si cela s'avère utile pour vos cas d'utilisation, envisagez de créer une extension de messagerie basée sur la recherche. Teams affiche ces types d’extensions avec un thème et une accessibilité intégrés.
+Si cela est pertinent pour vos cas d’usage, envisagez de créer une extension de message basée sur la recherche. Teams affiche ces types d’extensions avec un thème et une accessibilité intégrés.
 
    :::column-end:::
    :::column span="":::
@@ -264,7 +264,7 @@ Si cela s'avère utile pour vos cas d'utilisation, envisagez de créer une exten
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>À ne pas faire : incorporer l’intégralité de votre application dans un module de tâche
 
-Si votre extension de messagerie nécessite des commandes d’action, conservez le module de tâche simple et affichez uniquement les composants nécessaires à l’exécution de l’action.
+Si votre extension de message nécessite des commandes d’action, gardez le module de tâche simple et affichez uniquement les composants nécessaires pour effectuer l’action.
 
    :::column-end:::
 :::row-end:::

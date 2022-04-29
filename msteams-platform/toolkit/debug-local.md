@@ -5,16 +5,16 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073672"
+ms.locfileid: "65104440"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
-Teams Shared Computer Toolkit vous permet de déboguer et de prévisualiser votre application Teams localement. Le débogage est le processus de vérification, de détection et de correction des problèmes ou des bogues pour garantir que le programme s’exécute correctement. Visual Studio Code vous permet de déboguer l’onglet, le bot, l’extension de messagerie et les fonctions Azure. Teams Shared Computer Toolkit prend en charge les fonctionnalités de débogage suivantes :
+Teams Shared Computer Toolkit vous permet de déboguer et de prévisualiser votre application Teams localement. Le débogage est le processus de vérification, de détection et de correction des problèmes ou des bogues pour garantir que le programme s’exécute correctement. Visual Studio Code vous permet de déboguer l’onglet, le bot, l’extension de message et Azure Functions. Teams Shared Computer Toolkit prend en charge les fonctionnalités de débogage suivantes :
 
 * [Démarrer le débogage](#start-debugging)
 * [Débogage multi-cibles](#multi-target-debugging)
@@ -37,17 +37,17 @@ Vous pouvez effectuer une seule opération, sélectionnez **F5** pour démarrer 
 
 #### <a name="multi-target-debugging"></a>Débogage multi-cibles
 
-Teams Shared Computer Toolkit utilise la fonctionnalité de débogage multi-cibles pour déboguer l’onglet, le bot, l’extension de messagerie et les fonctions Azure en même temps.
+Teams Toolkit utilise la fonctionnalité de débogage multi-cible pour déboguer simultanément l’onglet, le bot, l’extension de message et Azure Functions.
 
 #### <a name="toggle-breakpoints"></a>Basculez les points d’arrêt.
 
-Vous pouvez faire bascule des points d’arrêt sur les codes sources des onglets, des bots, des extensions de messagerie et des fonctions Azure. Les points d'arrêt s'exécutent lorsque vous interagissez avec l'application Teams dans un navigateur Web. L’image suivante montre les points d’arrêt bascule :
+Vous pouvez activer/désactiver les points d’arrêt sur les codes sources des onglets, des bots, des extensions de message et des Azure Functions. Les points d'arrêt s'exécutent lorsque vous interagissez avec l'application Teams dans un navigateur Web. L’image suivante montre les points d’arrêt bascule :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="basculez les points d’arrêt":::.
 
 #### <a name="hot-reload"></a>Recharge à chaud
 
-Vous pouvez mettre à jour et enregistrer les codes sources de l'onglet, du bot, de l'extension de messagerie et des Azure Functions en même temps lorsque vous déboguez l'application Teams. L'application se recharge et le débogueur se rattache aux langages de programmation.
+Vous pouvez mettre à jour et enregistrer les codes sources de tabulation, de bot, d’extension de message et de Azure Functions en même temps que vous déboguez l’application Teams. L’application se recharge et le débogueur se rattache aux langages de programmation.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="recharge à chaud pour les codes sources":::
 
@@ -148,10 +148,10 @@ Exécute les tâches définies comme `.vscode/tasks.json` suit :
 |  Composant |  Nom de la tâche  | Folder |
 | --- | --- | --- |
 |  Tab |  **Démarrer frontal** |  onglets |
-|  Extensions pour robots ou messageries |  **Démarrer le bot** |  robot |
+|  Extensions de bot ou de message |  **Démarrer le bot** |  robot |
 |  Azure Functions |  **Démarrer le back-end** |  API |
 
-L'image suivante affiche les noms des tâches dans l'onglet **Terminal** de **sortie** de Visual Studio Code pendant l'exécution de l'onglet, du bot ou de l'extension de messagerie, et des Azure Functions.
+L’image suivante affiche les noms des tâches sous l’onglet **Sortie****Terminal** de Visual Studio Code lors de l’exécution de l’onglet, de l’extension de bot ou de message, et Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Démarrer les services d’application":::
 
@@ -166,15 +166,15 @@ Le tableau suivant répertorie les noms et types de configuration de débogage p
 |  Composant |  Nom de configuration de débogage  | Type de configuration de débogage |
 | --- | --- | --- |
 |  Tab |  **Attacher au frontal (Edge)** ou **attacher au frontal (Chrome)**  |  pwa-msedge ou pwa-chrome  |
-|  Extensions pour robots ou messageries |   **Attacher au bot** |  pwa-node |
+|  Extensions de bot ou de message |   **Attacher au bot** |  pwa-node |
 | Azure Functions |   **Attacher au backend** |  pwa-node |
 
 Le tableau suivant répertorie les noms et les types de configuration de débogage pour le projet avec bot app et sans tab app :
 
 |  Composant |  Nom de configuration de débogage  | Type de configuration de débogage  |
 | --- | --- | --- |
-|  Bot ou extension de messagerie  | **Bot de lancement (Edge)** ou  **Bot de lancement (Chrome)**  |   pwa-msedge ou pwa-chrome  |
-|  Bot ou extension de messagerie  |   **Attacher au bot** |  pwa-node  |
+|  Bot ou extension de message  | **Bot de lancement (Edge)** ou  **Bot de lancement (Chrome)**  |   pwa-msedge ou pwa-chrome  |
+|  Bot ou extension de message  |   **Attacher au bot** |  pwa-node  |
 |  Azure Functions |  **Attacher au backend** |  pwa-node |
 
 #### <a name="sideloads-the-teams-app"></a>Désactiver l'application Teams
@@ -236,19 +236,19 @@ Teams Toolkit vous permet de personnaliser les paramètres de débogage pour cr�
 
 1. Pour l’onglet, mettez à jour `dev:teamsfx` le script dans `tabs/package.json`.
 
-1. Pour l’extension de bot ou de messagerie, mettez à jour le `dev:teamsfx` script dans `bot/package.json`.
+1. Pour l’extension de bot ou de message, mettez à jour le script`dev:teamsfx` dans `bot/package.json`
 
 1. Pour les fonctions Azure, mettez à jour le `dev:teamsfx` script dans `api/package.json` et pour le script de mise à `watch:teamsfx` jour TypeScript.
 
    > [!NOTE]
-   > Actuellement, l'onglet, le bot, les applications d'extension de messagerie et les ports Azure Functions ne prennent pas en charge la personnalisation.
+   > Actuellement, l’onglet, le bot, les applications d’extension de message et les ports Azure Functions ne prennent pas en charge la personnalisation.
 
 </details>
 
 <details>
 <summary><b>Ajouter des variables d’environnement</b></summary>
 
-Vous pouvez ajouter des variables d’environnement au fichier `.env.teamsfx.local` pour l’onglet, le bot, l’extension de messagerie et les fonctions Azure. Teams Shared Computer Toolkit charge les variables d’environnement que vous avez ajoutées pour démarrer les services pendant le débogage local.
+Vous pouvez ajouter des variables d’environnement à `.env.teamsfx.local` fichier pour l’onglet, le bot, l’extension de message et Azure Functions. Teams Shared Computer Toolkit charge les variables d’environnement que vous avez ajoutées pour démarrer les services pendant le débogage local.
 
  > [!NOTE]
  > Assurez-vous de démarrer un nouveau débogage local après avoir ajouté de nouvelles variables d'environnement, car les variables d'environnement ne supportent pas le rechargement à chaud.
@@ -259,7 +259,7 @@ Vous pouvez ajouter des variables d’environnement au fichier `.env.teamsfx.loc
 <summary><b>Débogage d’un composant partiel</b></summary>
 
 
-Teams Toolkit utilise le débogage multicible de Visual Studio Code pour déboguer simultanément l'onglet, le bot, l'extension de messagerie et les Azure Functions. Vous pouvez mettre à jour `.vscode/launch.json` et `.vscode/tasks.json` déboguer un composant partiel. Si vous souhaitez déboguer l'onglet uniquement dans un projet tab plus bot avec Azure Functions, utilisez les étapes suivantes :
+Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer simultanément l’onglet, le bot, l’extension de message et Azure Functions. Vous pouvez mettre à jour `.vscode/launch.json` et `.vscode/tasks.json` déboguer un composant partiel. Si vous souhaitez déboguer l'onglet uniquement dans un projet tab plus bot avec Azure Functions, utilisez les étapes suivantes :
 
 1. Comment **attacher au bot** et **attacher au back-end** à partir du composant de débogage dans `.vscode/launch.json` ?
 

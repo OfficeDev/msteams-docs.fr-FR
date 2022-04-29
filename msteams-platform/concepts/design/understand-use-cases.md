@@ -5,12 +5,12 @@ description: Dans cet article, découvrez les fonctionnalités de l’applicatio
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498230"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104377"
 ---
 # <a name="understand-your-use-cases"></a>Comprendre vos cas d’utilisation
 
@@ -97,15 +97,15 @@ Les conversations entraînent souvent la nécessité d’effectuer quelque chose
 
    :::column span="":::
 
-#### <a name="messaging-extensions"></a>Extensions de messagerie
+#### <a name="message-extensions"></a>Extensions de messages
 
-Avec [extensions de messagerie](../../messaging-extensions/what-are-messaging-extensions.md), vous pouvez rechercher et partager des informations externes. Vous pouvez également agir sur un message, par exemple créer un ticket d’aide basé sur le contenu d’une publication de canal.
+Avec les [extensions de message](../../messaging-extensions/what-are-messaging-extensions.md), vous pouvez rechercher et partager des informations externes. Vous pouvez également agir sur un message, par exemple créer un ticket d’aide basé sur le contenu d’une publication de canal.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Représentation conceptuelle de l’apparence des extensions de messagerie dans le client Teams." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Représentation conceptuelle des extensions de message dans le client Teams." border="false":::
 
    :::column-end:::
 :::row-end:::

@@ -5,12 +5,12 @@ description: "Questions à prendre en compte lors de la planification de votre a
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765931"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104307"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 
@@ -78,7 +78,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | # | Facteurs |
 | --- | --- |
 | 1 | Que se passe-t-il lorsqu'un utilisateur configure pour la première fois votre onglet dans un canal ? |
-| 2 | Si vous partagez des cartes avec une extension de messagerie, est-il judicieux d'ajouter un petit lien vers une page d'information pour présenter aux utilisateurs les autres possibilités offertes par votre application ? |
+| 2 | Si vous partagez des cartes avec une extension de messagerie, est-il judicieux d'ajouter un petit lien vers une page d'informations pour présenter aux utilisateurs les autres possibilités offertes par votre application ? |
 | 3 | Vous attendez-vous à ce que la plupart des gens aient déjà une idée de ce à quoi sert votre application, ou qu'ils aient déjà utilisé vos services dans un autre contexte ? |
 | 4 | Viennent-ils sur votre application sans aucune connaissance préalable ? |
 

@@ -2,60 +2,60 @@
 title: Conditions préalables
 author: surbhigupta
 description: Chaque onglet de Microsoft Teams doit respecter ces exigences.
-keywords: Canal de groupe onglets teams configurable
-ms.localizationpriority: medium
+keywords: canal de groupe des onglets Teams configurable
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe72691465ca785cefb6a96c8eb4005a64601a17
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
+ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571515"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110280"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
-Veillez à respecter les conditions préalables suivantes lors de la création Teams onglet personnel et de canal ou de groupe :
+Veillez à respecter les conditions préalables suivantes lors de la création de votre onglet de groupe ou de canal et Teams personnel :
 
-* Autorisez la découverte de pages d’onglets dans un iFrame, à l’aide des en-têtes de réponse HTTP X-Frame-Options et Content-Security-Policy.
+* Autorisez la découverte des pages de votre onglet dans un iFrame à l’aide des en-têtes de réponse HTTP X-Frame-Options et Content-Security-Policy.
   * Définir l’en-tête : `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * Pour la compatibilité d’Internet Explorer 11, définissez `X-Content-Security-Policy`.
-  * Sinon, définissez l’en-tête `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. Cet en-tête est supprimé, mais toujours accepté par la plupart des navigateurs.
+  * Vous pouvez également définir l’en-tête `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. Cet en-tête est déconseillé, mais il est toujours accepté par la plupart des navigateurs.
 
-* Les pages de connexion ne s’restitueraient pas dans les iFrames, par mesure de protection contre les détournements de clics. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou sur les cookies.
+* Les pages de connexion ne s’affichent pas dans les iFrames, en tant que dispositif de protection contre le détournement de clic. Votre logique d’authentification doit utiliser une méthode autre que la redirection. Par exemple, utilisez l’authentification basée sur les jetons ou sur les cookies.
 
     > [!NOTE]
-    > Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. Pour plus d’informations, voir [l’attribut de cookie SameSite](../../resources/samesite-cookie-update.md).
+    > Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement du navigateur par défaut. Pour plus d’informations, consultez [Attribut de cookie SameSite](../../resources/samesite-cookie-update.md).
 
-* Les restrictions de stratégie de même origine des navigateurs empêchent les pages web d’effectuer des demandes vers des domaines différents de la page web servie. Ainsi, vous pouvez rediriger la page de configuration ou de contenu vers un autre domaine ou sous-domaine. Votre logique de navigation entre domaines doit permettre au client `validDomains` Teams de valider l’origine par rapport à une liste statique dans le manifeste de l’application lors du chargement ou de la communication avec l’onglet.
+* La même restriction de stratégie d’origine des navigateurs empêche les pages web d’effectuer des requêtes vers des domaines autres que ceux de la page web servie. Vous pouvez donc rediriger la page de configuration ou de contenu vers un autre domaine ou sous-domaine. Votre logique de navigation inter-domaines doit permettre au client Teams de valider l’origine par rapport à une liste statique `validDomains` dans le manifeste de l’application lors du chargement ou de la communication avec l’onglet.
 
-* Stylez vos onglets en fonction Teams thème, de la conception et de l’intention du client. Les onglets fonctionnent mieux lorsqu’ils sont créés pour répondre à un besoin spécifique et qu’ils se concentrent sur un petit ensemble de tâches ou un sous-ensemble de données pertinentes pour l’emplacement du canal de l’onglet.
+* Stylisez vos onglets en fonction du thème, de la conception et de l’intention du client Teams. Les onglets fonctionnent mieux lorsqu’ils sont conçus pour répondre à un besoin spécifique et se concentrer sur un petit ensemble de tâches ou un sous-ensemble de données pertinent pour l’emplacement du canal de l’onglet.
 
-* Dans votre page de contenu, ajoutez une référence Microsoft Teams [SDK client JavaScript](/javascript/api/overview/msteams-client) à l’aide de balises de script. Après le chargement de votre page, appelez-la `microsoftTeams.initialize()`, sinon votre page n’est pas affichée.
+* Dans votre page de contenu, ajoutez une référence au [Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) à l’aide de balises de script. Une fois votre page chargée, appelez `microsoftTeams.initialize()`, sinon votre page ne s’affiche pas.
 
-* Pour que l’authentification fonctionne sur les clients mobiles, vous devez mettre à niveau Teams JavaScript SDK 1.4.1 et version ultérieure.
+* Pour que l’authentification fonctionne sur des clients mobiles, vous devez effectuer une mise à niveau vers Kit de développement logiciel (SDK) JavaScript Microsoft Teams 1.4.1 et versions ultérieures.
 
-* Si vous choisissez que votre onglet de canal ou de groupe s’affiche sur Teams client mobile, `setSettings()` la configuration doit avoir une valeur pour la `websiteUrl` propriété.
+* Si vous choisissez d’afficher l’onglet de votre canal ou de votre groupe sur un client mobile Teams, la configuration `setSettings()` doit avoir une valeur pour la propriété `websiteUrl`.
 
-* Microsoft Teams’onglet ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
+* L’onglet Microsoft Teams ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
 
 ## <a name="tools-to-build-tabs"></a>Outils pour créer des onglets
 
-| &nbsp; | Installer | Pour utiliser... |
+| &nbsp; | Installer | Pour l’utilisation... |
 | --- | --- | --- |
 | **Obligatoire** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Environnement d’runtime JavaScript back-end. Utilisez la dernière version de LTS v14.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/) | Navigateur avec outils de développement. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript ou SharePoint Framework (SPFx) build. |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET développement web**, ou charge de travail de **développement .NET Core sur plusieurs plateformes** | .NET. Vous pouvez installer l’édition communautaire gratuite de Visual Studio 2019. |
-| &nbsp; | [Git](https://git-scm.com/downloads) | Git pour utiliser le référentiel d’exemples d’applications GitHub. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams collaborer avec tous les personnes avec qui vous travaillez via des applications de conversation, de réunions, d’appels, le tout au même endroit. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok est un outil logiciel de proxy inverse. Ngrok crée un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web exécutant localement. Les points de terminaison web de votre serveur sont disponibles pendant la session en cours sur votre ordinateur. Lorsque l’ordinateur est arrêté ou en veille, le service n’est plus disponible. |
-| &nbsp; | [Documentation pour les développeurs](https://dev.teams.microsoft.com/) | Portail web pour configurer, gérer et distribuer votre application Teams y compris à votre organisation ou au Teams store. |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Environnement runtime JavaScript principal. Utilisez la dernière version de LTS v14.|
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/) | Un navigateur avec des outils de développement. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Environnements de build JavaScript, TypeScript ou SharePoint Framework (SPFx). |
+| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET et le développement web** ou la charge de travail **de développement multiplateforme .NET Core** | .NET. Vous pouvez installer l’édition communauté gratuite de Visual Studio 2019. |
+| &nbsp; | [Git](https://git-scm.com/downloads) | Git pour utiliser le référentiel d’exemples d’applications de GitHub. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams pour collaborer avec toutes les personnes avec lesquelles vous travaillez via les applications pour les conversations, les réunions, les appels, le tout au même endroit. |
+| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok est un outil logiciel de proxy inverse. Ngrok crée un tunnel vers les points de terminaison HTTPS disponibles publiquement de votre serveur web local en cours d’exécution. Les points de terminaison web de votre serveur sont disponibles pendant la session active sur votre ordinateur. Lorsque l’ordinateur est arrêté ou mis en veille, le service n’est plus disponible. |
+| &nbsp; | [Documentation pour les développeurs](https://dev.teams.microsoft.com/) | Portail web pour configurer, gérer et distribuer votre application Teams, y compris à votre organisation ou au magasin Teams. |
 
-### <a name="build-your-teams-tab"></a>Créer votre onglet Teams de projet
+### <a name="build-your-teams-tab"></a>Créer votre onglet Teams
 
-Maintenant, nous allons créer votre onglet. Tout d’abord, sélectionnez votre choix d’onglet à créer :
+Nous allons maintenant créer votre onglet. Toutefois, sélectionnez d’abord votre choix d’onglet à créer :
 
 > [!div class="nextstepaction"]
 > [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
@@ -64,5 +64,5 @@ Maintenant, nous allons créer votre onglet. Tout d’abord, sélectionnez votre
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Teams onglets](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)

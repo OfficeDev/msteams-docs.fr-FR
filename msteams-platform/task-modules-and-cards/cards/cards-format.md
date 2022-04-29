@@ -5,12 +5,12 @@ keywords: format des cartes de bots teams
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727266"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103950"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Mettre en forme des cartes dans Microsoft Teams
 
@@ -66,15 +66,15 @@ Vous pouvez utiliser les séquences d’échappement `\r` ou `\n` pour les sauts
 
 Sur le bureau, la mise en forme du markdown de carte adaptative s’affiche comme indiqué dans l’image suivante dans les navigateurs web et dans l’application cliente Teams :
 
-![Mise en forme markdown de carte adaptative dans le client de bureau](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="client de bureau markdown adaptatif":::
 
 Sur iOS, la mise en forme markdown de carte adaptative s’affiche comme illustré dans l’image suivante :
 
-![Mise en forme markdown de carte adaptative dans iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Mise en forme markdown de carte adaptative dans iOS":::
 
 Sur Android, la mise en forme markdown de carte adaptative s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme markdown de carte adaptative dans Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Mise en forme markdown de carte adaptative dans Android":::
 
 Pour plus d’informations, consultez [fonctionnalités de texte dans Cartes adaptatives](/adaptive-cards/create/textfeatures).
 
@@ -123,13 +123,13 @@ Les cartes adaptatives supportent les emoji. Le code suivant montre un exemple d
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Carte adaptative avec un emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Emoji de carte adaptative":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>Mentionner la prise en charge dans Cartes adaptatives
 
 Vous pouvez ajouter @mentions dans un corps de carte adaptative pour les bots et les réponses d’extension de messagerie. Pour ajouter @mentions dans les cartes, suivez la même logique de notification et de rendu que celle des mentions de [basées sur les messages dans les conversations de canal et de groupe](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
-Les bots et les extensions de messagerie peuvent inclure des mentions dans le contenu de la carte dans [éléments](https://adaptivecards.io/explorer/TextBlock.html) TextBlock et [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
+Les bots et les extensions de messagerie peuvent inclure des mentions dans le contenu de la carte dans les éléments[TextBlock](https://adaptivecards.io/explorer/TextBlock.html) et [FactSet](https://adaptivecards.io/explorer/FactSet.html) .
 
 > [!NOTE]
 >
@@ -188,7 +188,7 @@ Le tableau suivant décrit les ID de mention utilisateur qui viennent d’être 
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>Mention utilisateur dans les bots avec Cartes adaptatives
 
-Les bots prennent en charge la mention utilisateur avec l’ID d’objet Azure AD et l’UPN, en plus des ID existants. La prise en charge de deux nouveaux ID est disponible dans les bots pour les sms, le corps Cartes adaptatives et la réponse d’extension de messagerie. Les bots prennent en charge les ID de mention dans les scénarios de conversation et de `invoke` . L’utilisateur reçoit une notification de flux d’activité lorsqu’il est @mentioned avec les ID.
+Les bots prennent en charge la mention utilisateur avec l’ID d’objet Azure AD et l’UPN, en plus des ID existants. La prise en charge de deux nouveaux ID est disponible dans les bots pour les SMS, le corps, Cartes adaptatives et la réponse d’extension de messagerie. Les bots prennent en charge les ID de mention dans les scénarios de conversation et de `invoke` . L’utilisateur reçoit une notification de flux d’activité lorsqu’il est @mentioned avec les ID.
 
 > [!NOTE]
 > La mise à jour du schéma et les modifications de l’interface utilisateur/de l’expérience utilisateur ne sont pas nécessaires pour les mentions utilisateur avec Cartes adaptatives dans bot.
@@ -233,7 +233,7 @@ Exemple de mention utilisateur dans les bots avec Cartes adaptatives comme suit 
 
 L’image suivante illustre la mention utilisateur avec la carte adaptative dans bot :
 
-![Mention utilisateur dans le bot avec carte adaptative](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Mention utilisateur dans le bot avec carte adaptative":::
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>Mention utilisateur dans le webhook entrant avec Cartes adaptatives
 
@@ -297,7 +297,7 @@ Exemple de mention utilisateur dans le webhook entrant comme suit :
 
 L’image suivante illustre la mention de l’utilisateur dans le webhook entrant :
 
-![Mention utilisateur dans le webhook entrant](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Mention utilisateur dans le webhook entrant":::
 
 ### <a name="information-masking-in-adaptive-cards"></a>Masquage des informations dans Cartes adaptatives
 
@@ -322,7 +322,7 @@ Le code suivant montre un exemple de carte adaptative avec propriété de masqua
 
 L’image suivante est un exemple d’informations de masquage dans Cartes adaptatives :
 
-![Image des informations de masquage](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Image des informations de masquage":::
 
 ### <a name="full-width-adaptive-card"></a>Carte adaptative pleine largeur
 
@@ -359,11 +359,11 @@ Pour créer une carte adaptative pleine largeur, votre application doit inclure 
 
 L’image suivante montre une carte adaptative pleine largeur :
 
-![Vue Carte adaptative pleine largeur](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Vue Carte adaptative pleine largeur":::
 
 L’image suivante montre l’affichage par défaut de la carte adaptative lorsque vous n’avez pas défini la propriété `width` sur **Complète** :
 
-![Vue Carte adaptative à petite largeur](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Vue Carte adaptative à petite largeur":::
 
 ### <a name="typeahead-support"></a>Prise en charge de Typeahead
 
@@ -411,11 +411,11 @@ Dans une carte adaptative, vous pouvez utiliser la propriété `msteams` pour aj
 
 Lorsque les utilisateurs pointent sur l’image, une icône développer apparaît dans le coin supérieur droit, comme illustré dans l’image suivante :
 
-![Carte adaptative avec image extensible](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Carte adaptative avec image extensible":::
 
 L’image s’affiche en mode intermédiaire lorsque l’utilisateur sélectionne l’icône développer, comme illustré dans l’image suivante :
 
-![Image développée en mode Intermédiaire](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Image développée en mode Intermédiaire":::
 
 Dans l’affichage intermédiaire, les utilisateurs peuvent effectuer un zoom avant et un zoom arrière sur l’image. Vous pouvez sélectionner les images de votre carte adaptative qui doivent avoir cette fonctionnalité.
 
@@ -447,11 +447,11 @@ Dans les cartes de connecteur, les sauts de ligne sont affichés pour `\n\n`, ma
 
 Sur le Bureau, la mise en forme Markdown pour les cartes de connecteur s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme Markdown pour les cartes de connecteur dans le client De bureau](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Mise en forme markdown pour les cartes de connecteur":::
 
 Sur iOS, la mise en forme Markdown pour les cartes de connecteur s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme Markdown pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Mise en forme Markdown pour les cartes de connecteur dans le client iOS":::
 
 Les cartes de connecteur utilisant Markdown pour iOS incluent les problèmes suivants :
 
@@ -460,7 +460,7 @@ Les cartes de connecteur utilisant Markdown pour iOS incluent les problèmes sui
 
 Sur Android, la mise en forme Markdown pour les cartes de connecteur s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme Markdown pour les cartes de connecteur dans le client Android](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Mise en forme Markdown pour les cartes de connecteur dans le client Android":::
 
 ### <a name="format-example-for-markdown-connector-cards"></a>Exemple de format pour les cartes de connecteur Markdown
 
@@ -545,11 +545,11 @@ Dans les cartes de connecteur, les sauts de ligne sont rendus au format HTML à 
 
 Sur le Bureau, la mise en forme HTML des cartes de connecteur s’affiche comme illustré dans l’image suivante :
 
-![Mise en forme HTML pour les cartes de connecteur dans le client de bureau](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Mise en forme HTML pour les cartes de connecteur dans le client de bureau":::
 
 Sur iOS, la mise en forme HTML s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme HTML pour les cartes de connecteur dans le client iOS](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Mise en forme HTML pour les cartes de connecteur dans le client iOS":::
 
 Les cartes de connecteur utilisant HTML pour iOS incluent les problèmes suivants :
 
@@ -558,7 +558,7 @@ Les cartes de connecteur utilisant HTML pour iOS incluent les problèmes suivant
 
 Sur Android, la mise en forme HTML s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme HTML pour les cartes de connecteur dans le client Android](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Mise en forme HTML pour les cartes de connecteur dans le client Android":::
 
 ### <a name="format-sample-for-html-connector-cards"></a>Exemple de format pour les cartes de connecteur HTML
 
@@ -635,17 +635,17 @@ Les balises HTML sont prises en charge pour les cartes simples, telles que les c
 
 Sur le Bureau, la mise en forme HTML s’affiche comme illustré dans l’image suivante :
 
-![Mise en forme HTML dans le client de bureau](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Mise en forme HTML dans le client de bureau":::
 
 Sur iOS, la mise en forme HTML s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme HTML dans le client iOS](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Mise en forme HTML dans le client iOS":::
 
 La mise en forme des caractères, telle que le gras et l’italique, n’est pas rendue sur iOS.
 
 Sur Android, la mise en forme HTML s’affiche comme indiqué dans l’image suivante :
 
-![Mise en forme HTML dans le client Android](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Mise en forme HTML dans le client Android":::
 
 La mise en forme des caractères, telle que le gras et l’italique, s’affiche correctement sur Android.
 

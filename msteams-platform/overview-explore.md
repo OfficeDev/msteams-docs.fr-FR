@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: df8a19d907c2b9ca420ed49d143ff7b145e3f7ca
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398966"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104426"
 ---
 # <a name="explore-teams-platform-features"></a>Explorer les fonctionnalités de la plateforme Teams
 
@@ -25,7 +25,7 @@ Avec Teams, vous pouvez créer votre application dans un environnement riche en 
 | --- | --- | --- |
 |Onglets | Les onglets sont des pages Web adaptées à Teams et intégrées à Microsoft Teams. Vous pouvez les ajouter dans le cadre d'un canal au sein d'une équipe, d'une discussion de groupe ou d'une application personnelle pour un utilisateur individuel. | Onglet personnel, onglet canal ou groupe, affichage intermédiaire et déploiement de liens. |
 | Bots | Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches automatisées simples et répétitives effectuées par les utilisateurs. Une interaction de bot peut être une question et une réponse rapides, ou il peut s’agir d’une conversation complexe qui fournit l’accès aux services. | Service clientèle, informations sur la météo, réservations de repas ou informations de voyage. |
-| Extensions de messagerie | Les extensions de messagerie permettent aux utilisateurs d’interagir avec votre client Teams de service web. Ils recherchent ou démarrent des actions dans un système externe. Vous pouvez envoyer le résultat de l’interaction au client Teams sous la forme d’une carte enrichie. | Réservez une ressource et autorisez le canal à connaître l’intervalle de temps réservé. Recherchez un élément de travail et partagez-le avec le groupe sous forme de carte adaptative. Créez un bogue dans votre système de suivi en fonction d’un message Teams, attribuez ce bogue à un utilisateur et envoyez une carte au thread de conversation avec les détails du bogue. |
+| Extension de message | Les extensions de message permettent aux utilisateurs d’interagir avec votre client Teams de service web. Ils recherchent ou démarrent des actions dans un système externe. Vous pouvez envoyer le résultat de l’interaction au client Teams sous la forme d’une carte enrichie. | Réservez une ressource et autorisez le canal à connaître l’intervalle de temps réservé. Recherchez un élément de travail et partagez-le avec le groupe sous forme de carte adaptative. Créez un bogue dans votre système de suivi en fonction d’un message Teams, attribuez ce bogue à un utilisateur et envoyez une carte au thread de conversation avec les détails du bogue. |
 |Extensions de réunion | Vous pouvez créer des applications pour rendre les réunions plus productives. | Demandez aux personnes de répondre à une enquête pendant un appel ou d’envoyer un rappel rapide qui n’interrompt pas le flux de la réunion. |
 | Application personnelle | Une application personnelle est un espace dédié (onglet) ou un bot pour aider les utilisateurs à se concentrer sur leurs propres tâches ou à afficher les activités importantes pour eux. | OneNote est une application personnelle qui vous donne un espace de travail privé dans Teams. Le Planificateur offre une vue d’ensemble de toutes vos tâches, sur plusieurs tableaux que vous ou votre équipe avez ajoutés sous forme d’onglets de canal. |
 | Webhooks et connecteurs | Communiquez avec des applications externes et envoyez ou recevez des notifications et des messages d’autres applications. | Abonnez-vous pour recevoir des notifications et des messages de vos services web. |

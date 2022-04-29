@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475824"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104384"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Conception de votre bot Microsoft Teams
 
@@ -92,7 +92,7 @@ N’oubliez pas : dans le menu de commandes du bot (**Que puis-je faire ?**), 
 
 ### <a name="tours"></a>Visites guidées
 
-Vous pouvez inclure une visite guidée avec des messages d’accueil et si le bot répond à une commande telle qu’une « aide ». Une visite guidée est le moyen le plus efficace de décrire ce que peut faire votre bot. Le cas échéant, ils sont également utiles pour décrire les autres fonctionnalités de votre application. Par exemple, incluez des captures d’écran de votre extension de messagerie.
+Vous pouvez inclure une visite guidée avec des messages d’accueil et si le bot répond à une commande telle qu’une « aide ». Une visite guidée est le moyen le plus efficace de décrire ce que peut faire votre bot. Le cas échéant, ils sont également utiles pour décrire les autres fonctionnalités de votre application. Par exemple, incluez des captures d’écran de votre extension de message.
 
 > [!IMPORTANT]
 > Les visites guidées doivent être accessibles sans avoir à se connecter.
@@ -159,8 +159,8 @@ Vous pouvez utiliser des bots dans les contextes suivants :
 |3|**Onglets Personnalisé** : ouvre le contenu lié à votre application.|
 |4|**Onglet À propos** : affiche des informations de base sur votre application.|
 |5|**Bulle de conversation** : les conversations bot utilisent le cadre de stratégie de messagerie Teams.|
-|6|**Carte adaptative** : si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
-|7|**Menu de commandes** : affiche les commandes standard de votre bot (définies par vous).|
+|6 |**Carte adaptative** : si les réponses de votre bot incluent des cartes adaptatives, la carte prend toute la largeur de la bulle de conversation.|
+|7 |**Menu de commandes** : affiche les commandes standard de votre bot (définies par vous).|
 
 ### <a name="command-menu"></a>Menu de commandes
 
@@ -279,7 +279,7 @@ Dans les applications personnelles, un onglet peut compléter ce que votre bot p
 
 ## <a name="manage-a-bot"></a>Gérer un bot
 
-Les utilisateurs doivent pouvoir modifier les paramètres d’un bot. Vous pouvez fournir cette fonctionnalité avec des commandes bot, mais il est généralement plus efficace d’inclure tous les paramètres dans un [module de tâches](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (comme illustré dans l’exemple suivant).
+Les utilisateurs doivent être en mesure de modifier les paramètres d’un bot. Vous pouvez fournir cette fonctionnalité avec des commandes de bot, mais il est généralement plus efficace d’inclure tous les paramètres dans un [module de tâche](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (comme illustré dans l’exemple suivant).
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="L'exemple montre un module de tâches permettant de configurer les paramètres d'un bot." border="false":::
 

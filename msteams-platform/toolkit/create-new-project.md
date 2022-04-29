@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910549"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104153"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Créer une application Teams à l’aide du Kit de ressources Teams
 

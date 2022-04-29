@@ -4,12 +4,12 @@ description: Décrit les liens profonds et comment les utiliser dans vos applica
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: lien profond des équipes
-ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399309"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103922"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -63,7 +63,7 @@ Renseignez les champs suivants :
 > * Les onglets personnels ont un `personal`scope, tandis que les onglets canal et groupe utilisent `team`or `group`scopes. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable a un `channel`propriété associé à son objet de contexte. Pour plus d’informations sur les étendues d’onglets, consultez la référence du [manifeste](~/resources/schema/manifest-schema.md).
 > * Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et qu’en raison de cela a un ID d’entité. Les liens profonds vers des onglets sans ID d’entité accèdent toujours à l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
 
-Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de messagerie :
+Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message :
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -158,7 +158,7 @@ Par exemple, si vous renvoyez un profil utilisateur Office 365 à partir de vot
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>Générer un lien ciblé vers une conversation
 
-Utilisez ce format pour un lien ciblé que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de messagerie :
+Utilisez ce format pour un lien ciblé que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message :
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -174,25 +174,25 @@ Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d’URL 
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Générer des liens profonds vers un fichier dans le canal
 
-Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de messagerie :
+Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message :
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 Les paramètres de requête sont les suivants :
 
-* `fileId` : ID de fichier unique de Sharepoint Online, également appelé `sourcedoc`. Par exemple,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId` : ID de fichier unique de Sharepoint Online, également appelé `sourcedoc`. Par exemple,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId` : ID de client tel que `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType` : type de fichier pris en charge, tel que docx, pptx, xlsx et pdf.
 * `objectUrl` : URL de l’objet du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Par exemple : `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl` : URL de base du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Par exemple : `https://microsoft.sharepoint.com/teams`.
 * `serviceName` : nom du service, ID d’application. Par exemple, `teams`.
 * `threadId`: threadId est l’ID d’équipe de l’équipe où le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier OneDrive d’un utilisateur. threadId : 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId` : ID de groupe du fichier. Par exemple `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
+* `groupId` : ID de groupe du fichier. Par exemple, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > Vous pouvez voir `threadId`and `groupId` dans l’URL du canal.  
 
-Le format de lien profond suivant est utilisé dans un bot, un connecteur ou une carte d’extension de messagerie : 
+Le format de lien profond suivant est utilisé dans un bot, un connecteur ou une carte d’extension de message :
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -221,7 +221,7 @@ Créez des liens profonds pour l’application une fois l’application réperto
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>Liaison approfondie pour les onglets SharePoint Framework
 
-Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de messagerie : `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+Le format de lien profond suivant peut être utilisé dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > Lorsqu’un bot envoie un message TextBlock avec un lien ciblé, un nouvel onglet de navigateur s’ouvre lorsque les utilisateurs sélectionnent le lien. Cela se produit dans Chrome et l’application de bureau Microsoft Teams s’exécutant sur Linux.
@@ -246,7 +246,7 @@ Vous pouvez créer des liens profonds vers la boîte de dialogue de planificatio
 
 ### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>Générer un lien ciblé vers la boîte de dialogue de planification
 
-Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de messagerie : `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+Utilisez le format suivant pour un lien ciblé que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message : `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Exemple : `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -286,7 +286,7 @@ En cas d’appel vidéo, le client demande une confirmation et active la vidéo 
   
 Voici les paramètres de requête :
 
-* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de l’appel. Actuellement, le champ ID d’utilisateur prend en charge le Azure AD UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn url 4 :&lt;numéro de téléphone&gt;.
+* `users` : liste d’identifiants d’utilisateur séparés par des virgules représentant les participants de l’appel. Actuellement, le champ ID utilisateur prend en charge le Azure AD UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn url 4 :&lt;numéro de téléphone&gt;.
 * `withVideo` : il s’agit d’un paramètre facultatif que vous pouvez utiliser pour effectuer un appel vidéo. La définition de ce paramètre active uniquement la caméra de l’appelant. Le destinataire de l’appel peut répondre par le biais d’un appel audio ou audio et vidéo via la fenêtre de notification d’appel Teams.
 * `Source` : il s’agit d’un paramètre facultatif, qui informe sur la source du lien profond.
 

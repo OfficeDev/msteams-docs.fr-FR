@@ -1,19 +1,19 @@
 ---
 title: Tester le consentement spécifique à une ressource pour une équipe dans Teams
-description: Découvrez comment tester le consentement spécifique aux ressources pour une équipe dans Teams postman avec un exemple de fichier JSON.
-ms.localizationpriority: medium
+description: Découvrez comment tester le consentement spécifique à une ressource pour une équipe dans Teams à l’aide de Postman avec un exemple de fichier JSON.
+ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: how-to
-keywords: Autorisation teams OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: ab742dd9e472beec8e607c036639322fc916e1ac
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+keywords: autorisation OAuth SSO Azure AD graphique Postman rsc d’équipes
+ms.openlocfilehash: a069740411d43274f87c68a2ceadd46dfb7aa080
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452682"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111737"
 ---
-# <a name="test-team-rsc-postman-collection-json"></a>Test team RSC Postman collection JSON
+# <a name="test-team-rsc-postman-collection-json"></a>JSON de la collection Postman RSC de l’équipe de test
 
 ```json
 {

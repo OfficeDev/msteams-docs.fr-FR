@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073089"
+ms.locfileid: "65104048"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -208,9 +208,9 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | -------- | --------- | ------------------ |
 | 26/12/2019 | Le `replyToId` paramètre des charges utiles envoyées à un robot n'est plus crypté, ce qui permet d'utiliser cette valeur pour construire des liens profonds vers ces messages. Les charges utiles de message incluent les valeurs chiffrées dans le paramètre `legacy.replyToId`.  |
 | 05/11/2019 | Connexion unique à l'aide du SDK JavaScript de Teams. | [Authentification unique](tabs/how-to/authentication/auth-aad-sso.md) |
-| 31/10/2019 | La documentation sur les bots conversationnels et les extensions de messagerie a été mise à jour pour tenir compte du Bot Framework SDK 4.6. La documentation relative au SDK v3 est disponible dans la section Ressources. | Documentation complète sur les bots et les extensions de messagerie |
+| 31/10/2019 | La documentation sur les bots conversationnels et les extensions de messagerie a été mise à jour pour tenir compte du Bot Framework SDK 4.6. La documentation relative au SDK v3 est disponible dans la section Ressources. | Toute la documentation sur les bots et les extensions de messagerie |
 | 31/10/2019 | Nouvelle structure de la documentation et refactoriser les articles principaux. Signalez les liens morts ou les 404 en créant un GitHub. | Tous! |
-| 13/09/2019 | Le bot de demande est installé à partir de l’extension de messagerie basée sur l’action. | [Lancer des actions avec des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 13/09/2019 | Le bot de requête est installé à partir de l’extension de messagerie basée sur l’action. | [Lancer des actions avec des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 28/08/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs. | [Obtenir un contexte Teams pour votre onglet](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 20/06/2019 | Partagez un site web externe, à partir d’un site web externe, dans un canal Teams externe. | [Partager avec Teams](~/share-to-teams.md) |
 | 25/05/2019 | Répondez avec un message de bot à partir du module de tâche. | [Répondre avec un message bot à partir du module de tâche](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
@@ -276,7 +276,8 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 |02/02/2022| Introduction de la version 1.12 du manifeste d’application | App manifest > Aperçu public pour les développeurs > [Schéma du manifeste](resources/schema/manifest-schema-dev-preview.md)  |
 |17/01/2022| Sélectionneur de personnes en cartes adaptatives pour mobile  | Construire des fiches et des modules de tâches > Construire des fiches > [People Picker dans Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |10/01/2022 | Extension de kit de ressources Teams pour Visual Studio Code | Outils et SDK > Teams Toolkit for Visual Studio Code > [Principes fondamentaux de Teams Toolkit](toolkit/teams-toolkit-fundamentals.md) |
-|15/11/2021| Les onglets personnels et les extensions de messagerie fonctionnent dans Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
+|24/12/2021| Introduction d'un guide étape par étape pour accorder des autorisations d'appareil Tab | Principes de base des applications > Capacités des appareils > [Guide étape par étape pour accorder des autorisations à l'appareil Tab](sbs-tab-device-permissions.yml)  |
+|15/11/2021| Les onglets personnels et les extensions de messagerie s’exécutent dans Outlook et Office | [Étendre Teams applications à travers Microsoft 365](~/m365-apps/overview.md) |
 |28/10/2021|Les bots peuvent être activés pour recevoir tous les messages du canal en utilisant le consentement spécifique aux ressources (RSC) | - Construire des bots > Conversations entre bots > Messages dans les conversations entre bots > [Recevoir tous les messages avec RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)  </br> • Créer des bots > conversations de bot > [vue d’ensemble de la conversation de bot](~/bots/how-to/conversations/conversation-basics.md) </br> • Créez des bots > conversations de bot > [conversations de canal et de groupe](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • Manifeste d’application > prévisualisation pour les développeurs > [schéma de manifeste de prévisualisation pour les développeurs](~/resources/schema/manifest-schema-dev-preview.md) |
 |06/16/2021| Consentement spécifique aux ressources pour les conversations | • Utiliser Teams données de gestion avec le consentement microsoft Graph > [ressource spécifique](graph-api/rsc/resource-specific-consent.md) </br> • Testez votre application > Microsoft Graph > les autorisations de [consentement spécifiques](graph-api/rsc/test-resource-specific-consent.md) aux ressources dans Teams|
 
