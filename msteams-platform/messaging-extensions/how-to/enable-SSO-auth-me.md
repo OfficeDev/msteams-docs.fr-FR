@@ -1,49 +1,49 @@
 ---
-title: Prise en charge de l’authentification unique pour vos extensions de message
+title: Prise en charge de l’authentification unique pour vos extensions de messages
 author: KirtiPereira
-description: Découvrez comment activer la prise en charge de l’authentification unique pour vos extensions de message avec des exemples de code.
-ms.localizationpriority: medium
+description: Découvrez comment activer la prise en charge de l’authentification unique pour vos extensions de messagerie avec des exemples de code.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4ee49b349d287325bb029aa155a61219a8656e22
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104391"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111254"
 ---
-# <a name="single-sign-on-support-for-message-extensions"></a>Prise en charge de l’authentification unique pour les extensions de message
+# <a name="single-sign-on-support-for-message-extensions"></a>Prise en charge de l’authentification unique pour les extensions de messages
 
-La prise en charge de l’authentification unique (SSO) est désormais disponible pour les extensions de message et le déploiement de liens. L’activation de l’authentification unique pour les extensions de message par défaut actualise le jeton d’authentification, ce qui réduit le nombre de fois où vous devez entrer les informations d’identification de connexion pour Microsoft Teams.
+La prise en charge de l’authentification unique (SSO) est désormais disponible pour les extensions de messages et le déploiement de liens. L’activation de l’authentification unique pour les extensions de messages par défaut actualise le jeton d’authentification, ce qui réduit le nombre de fois où vous devez entrer les informations d’identification de connexion pour Microsoft Teams.
 
 Ce document vous guide sur la façon d’activer l’authentification unique et de stocker votre jeton d’authentification, si nécessaire.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Configuration requise
 
-La configuration requise pour activer l’authentification unique pour les extensions de message et le déploiement de liens est la suivante :
+La configuration requise pour activer l’authentification unique pour les extensions de messages et le déploiement de liens est la suivante :
 
-* Vous devez disposer d’un compte [Azure](https://azure.microsoft.com/free/) .
-* Vous devez configurer votre application via le portail Azure AD et mettre à jour Teams manifeste d’application tel que défini dans [l’inscription de votre application via le portail Azure AD](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
+* Vous devez disposer d’un compte [Azure](https://azure.microsoft.com/free/).
+* Vous devez configurer votre application via le portail Azure AD et mettre à jour le manifeste de l’application Teams tel que défini dans [Inscrire votre application via le portail Azure AD](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal).
 
 > [!NOTE]
-> Pour plus d’informations sur la création d’un compte Azure et la mise à jour du manifeste de votre application, consultez la prise en charge de l’authentification [unique (SSO) pour les bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+> Pour plus d’informations sur la création d’un compte Azure et la mise à jour du manifeste de votre application, consultez la rubrique [Prise en charge de l’authentification unique (SSO) pour les bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 
-## <a name="enable-sso-for-message-extensions-and-link-unfurling"></a>Activer l’authentification unique pour les extensions de message et le déploiement de liens
+## <a name="enable-sso-for-message-extensions-and-link-unfurling"></a>Activer l’authentification unique pour les extensions de messages et le déploiement de liens
 
-Une fois les prérequis remplis, vous pouvez activer l’authentification unique pour les extensions de message et le déploiement de liens.
+Une fois les prérequis remplis, vous pouvez activer l’authentification unique pour les extensions de messages et le déploiement de liens.
 
-Pour activer l’authentification unique :
+Activer l’authentification unique :
 
-1. Mettez à jour les détails de la [connexion OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de vos bots dans le portail Microsoft Azure.
-2. Téléchargez [l’exemple d’extensions de message](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) et suivez les instructions d’installation fournies par l’Assistant.
+1. Mettez à jour les détails de la [connexion OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) de vos bots dans le portail Microsoft Azure.
+2. Téléchargez l’[exemple d’extensions de messages](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config), puis suivez les instructions d’installation fournies par l’Assistant.
    > [!NOTE]
-   > Utilisez votre connexion OAuth bots lors de la configuration de vos extensions de message.
-3. Dans le fichier [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) , mettez à jour la valeur de *l’authentification* à *silentAuth* dans le `OnTeamsMessagingExtensionQueryAsync` et / ou `OnTeamsAppBasedLinkQueryAsync`.  
+   > Utilisez la connexion OAuth de vos bots lors de la configuration de vos extensions de messages.
+3. Dans le fichier [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs), mettez à jour la valeur de *auth* en *silentAuth* dans le `OnTeamsMessagingExtensionQueryAsync` et / ou `OnTeamsAppBasedLinkQueryAsync`.  
 
     > [!NOTE]
-    > Nous ne prenons pas en charge l’authentification unique d’autres gestionnaires, à l’exception `OnTeamsMessagingExtensionQueryAsync` du `OnTeamsAppBasedLinkQueryAsync` fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs.
+    > Nous ne prenons pas en charge l’authentification unique d’autres gestionnaires, à l’exception de `OnTeamsMessagingExtensionQueryAsync` et `OnTeamsAppBasedLinkQueryAsync` du fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs.
 
-4. Vous recevez le jeton dans `OnTeamsMessagingExtensionQueryAsync` le gestionnaire dans la `turnContext.Activity.Value` charge utile ou dans le , selon le `OnTeamsAppBasedLinkQueryAsync`scénario dans lequel vous activez l’authentification unique pour :
+4. Vous recevez le jeton dans le gestionnaire `OnTeamsMessagingExtensionQueryAsync` dans la charge utile `turnContext.Activity.Value` ou dans le `OnTeamsAppBasedLinkQueryAsync`, selon le scénario dans lequel vous activez l’authentification unique pour :
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
@@ -55,7 +55,7 @@ Pour activer l’authentification unique :
     
      ```
   
-    Si vous utilisez la connexion OAuth, ajoutez le code suivant au fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs pour mettre à jour ou ajouter le jeton dans le magasin :
+    Si vous utilisez la connexion OAuth, ajoutez le code suivant au fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs pour mettre à jour ou ajouter le jeton dans le magasin :
 
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -119,6 +119,6 @@ Pour activer l’authentification unique :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Ajouter l’authentification à vos extensions de message](add-authentication.md)
+* [Ajouter l’authentification à vos extension de messages](add-authentication.md)
 * [Utiliser l’authentification unique pour les bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Déploiement de lien](link-unfurling.md)
