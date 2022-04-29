@@ -1,31 +1,36 @@
 ---
-title: Conversations 1-sur-1 avec des bots
-description: Décrit le scénario de bout en bout d’une conversation 1-on-1 avec un bot dans Microsoft Teams
-keywords: scénarios teams 1on1 1to1 bot de conversation
-ms.localizationpriority: medium
+title: Conversations en tête-à-tête avec des bots
+description: Décrit le scénario de bout en bout d’une conversation en tête-à-tête avec un bot dans Microsoft Teams
+keywords: scenarios teams en tête-à-tête, bot de conversation en tête-à-tête
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: 2fd76b8bc5fa4cd260b70e15b92bef2dec2de683
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: d38285c212416d81a2108524946f0f9732a8dae9
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155543"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111940"
 ---
-# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation personnelle (un-à-un) avec un Microsoft Teams bot
+# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation personnelle (en tête-à-tête) avec un bot Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams permet aux utilisateurs de s’engager dans des conversations directes avec des bots intégrés au [Microsoft Bot Framework](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true). Les utilisateurs peuvent trouver des bots dans la galerie Découvrir les applications et les ajouter à leur expérience Teams pour les conversations personnelles. Les propriétaires d’équipe et les utilisateurs ayant les autorisations appropriées peuvent également ajouter des bots en tant que membres de l’équipe. Pour plus d’informations, voir [Interagir](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)dans un canal d’équipe ), qui les rend non seulement disponibles dans les canaux de cette équipe, mais également pour la conversation personnelle pour tous ces utilisateurs.
+Microsoft Teams permet aux utilisateurs d’engager des conversations directes avec des bots basés sur [Microsoft Bot Framework](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true). Les utilisateurs peuvent trouver des bots dans la galerie Discover Apps et les ajouter à leur expérience Teams pour des conversations personnelles. Les propriétaires d’équipe et les utilisateurs disposant des autorisations appropriées peuvent également ajouter des bots en tant que membres de l’équipe. Pour plus d’informations, consultez [Interagir dans un canal d’équipe](~/resources/bot-v3/bot-conversations/bots-conv-channel.md), qui les rend non seulement disponibles dans les canaux de cette équipe, mais également pour les utilisateurs de conversation personnelle.
 
-La conversation personnelle diffère de la conversation dans les canaux en ce que l’utilisateur n’a pas besoin @mention le bot. Si un bot est utilisé dans plusieurs contextes tels que personnel, groupChat ou canal, vous devez détecter si le bot se trouve dans une conversation ou un canal de groupe, et traiter les messages un peu différemment. Pour plus d’informations, voir [Interagir dans un canal d’équipe ou une conversation de groupe.](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)
+La conversation personnelle diffère de la conversation dans les canaux en ce que l’utilisateur n’a pas besoin de @mentionner le bot. Si un bot est utilisé dans plusieurs contextes, comme dans les étendues suivantes :
+* Personnel
+* Conversation de groupe.
+* Canal
 
-## <a name="designing-a-great-personal-bot"></a>Conception d’un bot personnel idéal
+Vous devez détecter si le bot se trouve dans une conversation de groupe ou un canal, et traiter les messages un peu différemment. Pour plus d’informations, consultez [Interagir dans un canal d’équipe ou une conversation de groupe](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
-Un bot de qualité dans Microsoft Teams permet aux utilisateurs d’obtenir les informations dont ils ont besoin, dans le contexte de l Teams expérience utilisateur. Les conversations personnelles avec un bot sont des échanges privés entre un bot et son utilisateur . Ils sont un excellent moyen de fournir des informations spécifiques et pertinentes pour cet utilisateur dans le contexte personnel. Un bot dans une conversation personnelle est vraiment une boîte de dialogue entre votre service et l’individu, où un bot dans une conversation de groupe ou un canal diffuse tout à un groupe de personnes.
+## <a name="designing-a-great-personal-bot"></a>Conception d’un bot personnel de qualité
 
-Selon l’expérience que vous souhaitez créer, le bot peut avoir besoin de travailler dans plusieurs étendues : personnel, groupchat et équipe. Le travail pour prendre en charge plusieurs étendues est minimal. Il n’est pas attendu dans Teams que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre bot est logique et fournit une valeur utilisateur dans les étendues que vous choisissez de prendre en charge.
+Un excellent bot dans Microsoft Teams permet aux utilisateurs d’obtenir les informations dont ils ont besoin, le tout dans le contexte de l’expérience Teams. Les conversations personnelles avec un bot sont des échanges privés entre un bot et son utilisateur ; ils constituent un excellent moyen de fournir des informations spécifiques et pertinentes à cet utilisateur dans le contexte personnel. Un bot dans une conversation personnelle est une boîte de dialogue entre votre service et l’individu, où un bot dans une conversation de groupe ou un canal diffuse tout à un groupe de personnes.
 
-## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Meilleure pratique : messages de bienvenue dans les conversations personnelles
+Selon l’expérience que vous souhaitez créer, le bot peut avoir besoin de travailler dans plusieurs étendues : personnel, conversation de groupe et équipe. Le travail de prise en charge de plusieurs étendues est minimal. Dans Teams, rien ne requiert que votre bot fonctionne dans toutes les étendues, mais vous devez vous assurer que votre bot est cohérent et qu’il apporte une valeur ajoutée aux utilisateurs dans les étendues que vous choisissez de prendre en charge.
 
-Votre bot doit envoyer de manière [proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et uniquement la première fois) qu’un utilisateur lance une conversation personnelle avec votre bot. Cette recommandation ne s’applique pas aux contacts pour la première fois dans un canal.
+## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Bonne pratique : messages d’accueil dans les conversations personnelles
+
+Votre bot doit [envoyer de manière proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et seulement la première fois) qu’un utilisateur lance une conversation personnelle avec votre bot. Cette recommandation ne s’applique pas aux premiers contacts dans un canal.

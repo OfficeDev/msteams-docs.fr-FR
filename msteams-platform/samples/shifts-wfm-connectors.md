@@ -1,74 +1,74 @@
 ---
 title: Connecteurs Shifts prêts pour la production
-description: Découvrez les avantages de l’utilisation des connecteurs Shifts de gestion du personnel pour Teams, tels que le connecteur Kronos vers Teams Shifts et le connecteur JDA vers Teams Shifts
+description: Découvrez les avantages de l’utilisation des connecteurs Shifts de gestion du personnel pour Teams, tels que le connecteur Kronos-to-Teams Shifts et le connecteur JDA-to-Teams Shifts
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: medium
-keywords: Microsoft Teams connecteurs kronos
+ms.localizationpriority: high
+keywords: Connecteurs Microsoft Teams kronos
 ms.author: lajanuar
-ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 3a294d20bc2032df7ef5dfa225922e9dccabf1df
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453102"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111765"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
-Teams les connecteurs WFM (Shifts Workforce Management) sont des intégrations prêtes pour la production, open source et communautaires, utiles pour les employés de première ligne. Ils offrent une expérience transparente et un processus rapide pour la transformation numérique des employés de première ligne avec Teams Shifts.
+Les connecteurs de gestion du personnel (WFM) Teams Shifts sont des intégrations prêtes pour la production, open source et basées sur la communauté, utiles pour les travailleurs de première ligne. Ils offrent une expérience transparente et un processus rapide pour la transformation numérique des travailleurs de première ligne avec Teams Shifts.
 
-Chaque connecteur fournit des instructions détaillées pour le déploiement et l’intégration à votre organisation. Le code source complet est disponible dans GitHub référentiel. Vous pouvez explorer en détail ou bifurcation et personnaliser pour répondre à vos besoins spécifiques.
+Chaque connecteur fournit des conseils détaillés pour le déploiement et l’intégration à votre organisation. Le code source complet est disponible dans le référentiel GitHub. Vous pouvez explorer en détail ou dupliquer, et personnaliser pour répondre à vos besoins spécifiques.
 
-Ce document donne une vue d’ensemble des principaux avantages de Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector et JDA-to-Teams Shifts connector.
+Ce document donne une vue d’ensemble des principaux avantages des connecteurs WFM Teams Shifts, du connecteur Kronos-to-Teams Shifts et du connecteur JDA-to-Teams Shifts.
 
-## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Principaux avantages de Teams connecteurs WFM Shifts
+## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Principaux avantages des connecteurs WFM Teams Shifts
 
-Voici les principaux avantages de Teams connecteurs WFM Shifts :
+Voici les principaux avantages des connecteurs WFM Teams Shifts :
 
-* **Expérience de plug-and-play :** Tous les connecteurs WFM Shifts incluent ARM scripts de déploiement Azure qui vous permettent d’héberger tous les services nécessaires dans Microsoft Azure. Aucun codage n’est requis pour déployer les applications.
+* **Expérience Plug-and-Play :** tous les connecteurs WFM Shifts incluent des scripts de déploiement ARM Azure qui vous permettent d’héberger tous les services nécessaires dans Microsoft Azure. Aucun codage n’est requis pour déployer les applications.
 
-* **Code prêt pour la production :** Tous les connecteurs Shifts sont conformes aux meilleures pratiques recommandées en matière de sécurité et d’infrastructure, et toutes les modifications envoyées par la communauté sont examinées pour garantir une conformité continue.
+* **Code prêt pour la production :** tous les connecteurs Shifts sont conformes aux meilleures pratiques recommandées en matière de sécurité et d’infrastructure, et toutes les modifications soumises par la communauté sont examinées pour garantir la conformité continue.
 
-* **Personnalisables et extensibles :** Alors que tous les connecteurs WFM Shifts sont prêts à être déployés pour une utilisation immédiate, avec l’ensemble de la base de code et des scripts de déploiement facilement disponibles. Vous pouvez facilement les personnaliser ou les étendre pour répondre à vos besoins uniques.
+* **Personnalisable et extensible :** alors que tous les connecteurs WFM Shifts sont prêts à être déployés pour une utilisation immédiate, l’ensemble des scripts de base de code et de déploiement sont facilement disponibles. Vous pouvez facilement les personnaliser ou les étendre pour répondre à vos besoins uniques.
 
-* **Documentation détaillée & prise en charge :** Tous les connecteurs WFM Shifts sont accompagnés d’une documentation de bout en bout pour les étapes d’architecture, de déploiement et de configuration de la solution. Les référentiels de connecteurs sont surveillés, afin que vous pouvez signaler les problèmes, défis ou difficultés que vous rencontrez via le suivi des problèmes GitHub référentiel.
+* **Documentation détaillée et prise en charge :** tous les connecteurs WFM Shifts sont accompagnés d’une documentation de bout en bout pour l’architecture de la solution, le déploiement et les étapes de configuration. Les référentiels de connecteurs sont surveillés afin que vous puissiez signaler les problèmes, les défis ou les difficultés que vous rencontrez via le suivi des problèmes du référentiel GitHub.
 
-* **Intégration transparente :** L’intégration entre les solutions WFM et Teams Shifts permet aux employés de première ligne d’utiliser l’application Teams Shifts pour afficher ou gérer leurs plannings et leurs heures d’équipe, et d’utiliser toutes les autres fonctionnalités de collaboration enrichies fournies dans Teams directement à partir de leur appareil mobile ou de leur bureau sans avoir à basculer le contexte vers une autre application.  
+* **Intégration transparente :** l’intégration entre les solutions WFM et Teams Shifts permet aux employés de première ligne d’utiliser l’application Teams Shifts pour afficher ou gérer leurs planifications et heures de travail. En outre, elle permet d’utiliser toutes les autres fonctionnalités de collaboration enrichies fournies dans Teams directement à partir de leur appareil mobile ou de leur bureau sans avoir à basculer le contexte vers une autre application.  
 
-Ouvrez la vue Shifts dans Teams :
+Ouvrir l’affichage des plannings dans Teams :
 
-L’affichage shifts dans Teams est illustré dans l’image suivante :
+L’affichage des plannings dans Teams est illustré dans l’image suivante :
 
-![Ouvrez les équipes dans Teams](../assets/images/teams-open-shifts-view.png)
+![Ouvrir les plannings dans Teams](../assets/images/teams-open-shifts-view.png)
 
-## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-to-Teams Shifts
+## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-to-Teams Shifts
 
-Avec le code open source, vous pouvez intégrer Kronos Workforce Central Version 8.1 et versions supérieures, avec des équipes Teams telles que, application de bureau ou de Teams mobile pour les scénarios de travail et de responsable de première ligne suivants :
+Avec le code open source, vous pouvez intégrer Kronos Workforce Central version 8.1 et versions ultérieures, avec Teams Shifts tels que l’application de bureau ou mobile Teams pour les scénarios de travail et de gestion de première ligne suivants :
 
-* Afficher la planification.
+* Afficher le planification.
 
-* Publier et demander des équipes d’ouverture.
+* Publier et demander des plannings ouverts.
 
-* Permutation.
+* Permuter les plannings.
 
-* Demander des congés.
+* Demander un congé.
 
-* Changements d’offre.
+* Proposer des plannings.
 
-Pour plus d’informations sur le déploiement du connecteur Kronos-to-Teams Shifts, voir [Get it on GitHub](https://aka.ms/KronosShiftsConnector).
+Pour plus d’informations sur le déploiement du connecteur Kronos-to-Teams Shifts, consultez [Obtenir sur GitHub](https://aka.ms/KronosShiftsConnector).
 
-## <a name="jda-to-teams-shifts-connector"></a>Connecteur JDA vers Teams Shifts
+## <a name="jda-to-teams-shifts-connector"></a>Connecteur JDA-to-Teams Shifts
 
-Avec le code open source, vous pouvez intégrer JDA, tel que BlueYonder Version 17.2 et versions supérieures, avec Teams Shifts tel que, application de bureau ou mobile Teams pour les scénarios de travail et de gestionnaire de première ligne suivants :
+Avec le code open source, vous pouvez intégrer JDA, par exemple BlueYonder version 17.2 et versions ultérieures, avec Teams Shifts tels que l’application de bureau ou mobile Teams pour les scénarios de travail et de gestionnaire de première ligne suivants :
 
-* Publiez des équipes et des groupes de planification dans JDA et affichez-les dans Teams.
+* Publier des groupes de plannings et de planification dans JDA et les afficher dans Teams.
 
-* Activer des scénarios de planification enrichis, y compris demander des permutations de décalage et des congés.
+* Activer des scénarios de planification enrichis, notamment la demande de permutation de plannings et de congés.
 
-* Définir la disponibilité des utilisateurs à [l’aide de l’API microsoft Graph pour Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
+* Définir la disponibilité des utilisateurs à l’aide de [Microsoft API Graph pour Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
 
-Pour plus d’informations sur la contribution et la suggestion, [consultez la GitHub](https://aka.ms/JDAShiftsConnector).
+Pour plus d’informations sur la contribution et la suggestion, consultez [Obtenir sur GitHub](https://aka.ms/JDAShiftsConnector).
 
 ## <a name="see-also"></a>Voir aussi
 
