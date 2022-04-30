@@ -1,51 +1,51 @@
 ---
 title: Notifications d’appel entrant
-description: En savoir plus sur les informations techniques détaillées sur la gestion des notifications des appels entrants, la redirection et l’authentification des appels à l’aide d’exemples de code
+description: En savoir plus sur les informations techniques détaillées sur la gestion des notifications à partir d’appels entrants, la redirection et l’authentification des appels à l’aide d’exemples de code
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: appel de l’affinité de région de rappel des notifications d’appel
+ms.localizationpriority: high
+keywords: appel appels notifications rappel région affinité
 ms.date: 04/02/2019
-ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
-ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
-ms.translationtype: MT
+ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63783994"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111548"
 ---
 # <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 
-Lors [de l’inscription d’un bot d’appels et de](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities) Microsoft Teams, le webhook pour l’URL d’appel est mentionné. Cette URL est le point de terminaison de webhook pour tous les appels entrants à votre bot.
+Dans [l’inscription d’un bot d’appels et de réunions pour Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), le Webhook pour l’URL d’appel est mentionné. Cette URL est le point de terminaison de webhook pour tous les appels entrants à votre bot.
 
 ## <a name="protocol-determination"></a>Détermination du protocole
 
-La notification entrante est fournie dans un format hérité pour assurer la compatibilité avec le [protocole Skype précédent](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). Pour convertir l’appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournir la réponse suivante :
+La notification entrante est fournie dans un format hérité pour la compatibilité avec le [protocole Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) précédent. Pour convertir l’appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournir la réponse suivante :
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-Votre bot reçoit de nouveau la notification, mais cette fois dans le protocole Microsoft Graph.
+Votre bot reçoit à nouveau la notification, mais cette fois dans le protocole Microsoft Graph.
 
-Dans une prochaine version de la plateforme Real-time Media, vous pouvez configurer le protocole que votre application prend en charge pour éviter de recevoir le rappel initial dans le format hérité.
+Dans une version ultérieure de la plateforme multimédia en temps réel, vous pouvez configurer le protocole pris en charge par votre application pour éviter de recevoir le rappel initial dans le format hérité.
 
-La section suivante fournit des détails sur les notifications d’appels entrants redirigées pour l’affinité de région vers votre déploiement.
+La section suivante fournit des détails sur les notifications d’appel entrantes redirigées pour l’affinité de région vers votre déploiement.
 
 ## <a name="redirects-for-region-affinity"></a>Redirections pour l’affinité de région
 
-Vous appelez votre webhook à partir du centre de données hébergeant l’appel. L’appel démarre dans un centre de données et ne prend pas en compte les affinités de région. La notification est envoyée à votre déploiement en fonction de la résolution GeoDNS. Si votre application détermine, en inspectant la charge utile de notification initiale ou autrement, qu’elle doit s’exécuter dans un autre déploiement, l’application fournit la réponse suivante :
+Vous appelez votre webhook à partir du centre de données qui héberge l’appel. L’appel commence dans un centre de données et ne prend pas en compte les affinités de région. La notification est envoyée à votre déploiement en fonction de la résolution GeoDNS. Si votre application détermine, en inspectant la charge utile de notification initiale ou autre, qu’elle doit s’exécuter dans un déploiement différent, l’application fournit la réponse suivante :
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Activez votre bot pour répondre à un appel entrant à l’aide de [l’API de](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) réponse. Vous pouvez spécifier la situation `callbackUri` à utiliser pour gérer cet appel particulier. Cela est utile pour les instances avec état dans laquelle votre appel est géré par une partition particulière, `callbackUri` et vous souhaitez incorporer ces informations dans le routage vers l’instance de droite.
+Permettre à votre bot de répondre à un appel entrant à l’aide de l’API [answer](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true). Vous pouvez spécifier le `callbackUri` pour gérer cet appel particulier. Cela est utile pour les instances avec état où votre appel est géré par une partition particulière, et vous souhaitez incorporer ces informations dans le `callbackUri` pour le routage vers l’instance appropriée.
 
 La section suivante fournit des détails sur l’authentification du rappel en inspectant le jeton publié sur votre webhook.
 
 ## <a name="authenticate-the-callback"></a>Authentifier le rappel
 
-Votre bot doit inspecter le jeton publié sur votre webhook pour valider la demande. Chaque fois que l’API publie sur le webhook, le message HTTP POST contient un jeton OAuth dans l’en-tête Authorization en tant que jeton de support, avec l’audience comme ID d’application de votre application.
+Votre bot doit inspecter le jeton publié sur votre webhook pour valider la demande. Chaque fois que l’API publie sur le webhook, le message HTTP POST contient un jeton OAuth dans l’en-tête Authorization en tant que jeton porteur, avec l’audience comme ID d’application de votre application.
 
 Votre application doit valider ce jeton avant d’accepter la demande de rappel.
 
@@ -83,20 +83,20 @@ Le jeton OAuth a les valeurs suivantes et est signé par Skype :
 
 La configuration OpenID publiée sur <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> peut être utilisée pour vérifier le jeton. Chaque valeur de jeton OAuth est utilisée comme suit :
 
-* `aud` où audience est l’URI d’ID d’application spécifié pour l’application.
-* `tid` est l’ID de client pour Contoso.com.
+* `aud` où l’audience correspond à l’URI de l’ID d’application spécifié pour l’application.
+* `tid` est l’ID de locataire pour Contoso.com.
 * `iss` est l’émetteur du jeton, `https://api.botframework.com`.
 
-Pour votre gestion du code, le webhook doit valider le jeton, vérifier qu’il n’a pas expiré et vérifier s’il a été signé par la configuration OpenID publiée. Vous devez également vérifier si aud correspond à votre ID d’application avant d’accepter la demande de rappel.
+Pour la gestion de votre code, le webhook doit valider le jeton, s’assurer qu’il n’a pas expiré et vérifier s’il a été signé par la configuration OpenID publiée. Vous devez également vérifier si l’authentification correspond à votre ID d’application avant d’accepter la demande de rappel.
 
-Pour plus d’informations, voir [valider les demandes entrantes](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
+Pour plus d’informations, consultez [valider les demandes entrantes](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Conditions requises et considérations pour les robots multimédias hébergés par l’application](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+> [exigences et considérations relatives aux bots multimédias hébergés par des applications](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Configurer un standard automatique](/microsoftteams/create-a-phone-system-auto-attendant)
-* [Configurer la réponse automatique pour les Salles Microsoft Teams sur les appareils de téléphone Teams android et vidéo](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Configurer la réponse automatique pour les salles Microsoft Teams sur les appareils mobiles vidéo Android et Teams](/microsoftteams/set-up-auto-answer-on-teams-android)
