@@ -1,29 +1,29 @@
 ---
 title: Optimisez votre robot grâce à la limitation du débit dans Teams
-description: Découvrez la limite de taux de gestion pour les bots avec la limite par bot par thread et par limite pour tous les bots à l’aide d’exemples de code. En outre, découvrez les meilleures pratiques en matière de limitation des taux Microsoft Teams.
+description: En savoir plus sur la gestion de la limite de débit pour les bots avec une limite par bot par thread et par limite pour tous les bots à l’aide d’exemples de code. En outre, découvrez les meilleures pratiques en matière de limitation du débit dans Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: limitation des taux de bots teams
-ms.openlocfilehash: 5f0eba162215aeda2c0f1e433b223f21628ea5e1
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: limitation du taux de bots teams
+ms.openlocfilehash: 09b3f0b79737e3da09b34ebe1931a7209632cca1
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453375"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111807"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
-La limitation des taux est une méthode pour limiter les messages à une certaine fréquence maximale. En règle générale, votre application doit limiter le nombre de messages qu’elle publie à une conversation individuelle ou à une conversation de canal. Cela garantit une expérience optimale et les messages n’apparaissent pas comme courrier indésirable pour vos utilisateurs.
+La limitation du débit est une méthode permettant de limiter les messages à une certaine fréquence maximale. En règle générale, votre application doit limiter le nombre de messages qu’elle publie dans une conversation ou une conversation de canal individuelle. Cela garantit une expérience optimale et les messages n’apparaissent pas comme du courrier indésirable pour vos utilisateurs.
 
-Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de débit pour les demandes entrantes. Les applications qui vont au-dessus de cette limite reçoivent un état d’erreur `HTTP 429 Too Many Requests` . Toutes les demandes sont soumises à la même stratégie de limitation des taux, y compris l’envoi de messages, les listes d’envoi et les extractions de listes.
+Pour protéger Microsoft Teams et ses utilisateurs, les API de bot fournissent une limite de débit pour les demandes entrantes. Les applications qui dépassent cette limite reçoivent un état d’erreur `HTTP 429 Too Many Requests`. Toutes les demandes sont soumises à la même stratégie de limitation de débit, y compris l’envoi de messages, d’énumérations de canaux et d’extractions de listes.
 
-Comme les valeurs exactes des limites de taux sont sujettes à modification, votre application doit implémenter le comportement d’insé backoff approprié lorsque l’API renvoie .`HTTP 429 Too Many Requests`
+Étant donné que les valeurs exactes des limites de débit sont susceptibles d’être modifiées, votre application doit implémenter le comportement d’interruption approprié lorsque l’API retourne `HTTP 429 Too Many Requests`.
 
-## <a name="handle-rate-limits"></a>Gérer les limites de taux
+## <a name="handle-rate-limits"></a>Gérer les limites de débit
 
-Lors de l’émission d’une opération du SDK Bot Builder, vous pouvez `Microsoft.Rest.HttpOperationException` gérer et vérifier le code d’état.
+Lors de l’émission d’une opération Bot Builder SDK, vous pouvez gérer `Microsoft.Rest.HttpOperationException` et vérifier le code d’état.
 
-Le code suivant illustre un exemple de gestion des limites de taux :
+Le code suivant montre un exemple de limites de débit de gestion :
 
 ```csharp
 try
@@ -40,22 +40,22 @@ catch (HttpOperationException ex)
 }
 ```
 
-Une fois que vous avez géré les limites de taux pour les bots, vous pouvez `HTTP 429` gérer les réponses à l’aide d’un retour exponentiel.
+Après avoir géré les limites de débit pour les bots, vous pouvez gérer `HTTP 429` réponses à l’aide d’un backoff exponentiel.
 
-## <a name="handle-http-429-responses"></a>Gérer les `HTTP 429` réponses
+## <a name="handle-http-429-responses"></a>Gérer `HTTP 429` réponses
 
-En règle générale, vous devez prendre des précautions simples pour éviter de recevoir des `HTTP 429` réponses. Par exemple, évitez d’émettre plusieurs demandes à la même conversation personnelle ou de canal. Créez plutôt un lot de demandes d’API.
+En général, vous devez prendre des précautions simples pour éviter de recevoir `HTTP 429` réponses. Par exemple, évitez d’émettre plusieurs demandes à la même conversation personnelle ou de canal. Au lieu de cela, créez un lot de demandes d’API.
 
-Il est recommandé d’utiliser un retour exponentiel avec une gigue aléatoire pour gérer les 429. Cela garantit que plusieurs demandes n’introduisent pas de collisions lors des nouvelles tentatives.
+L’utilisation d’un backoff exponentiel avec une instabilité aléatoire est la méthode recommandée pour gérer les 429. Cela garantit que plusieurs demandes n’introduisent pas de collisions lors des nouvelles tentatives.
 
-Une fois que vous avez `HTTP 429` géré les réponses, vous pouvez passer par l’exemple pour détecter les exceptions temporaires.
+Après avoir traité `HTTP 429` réponses, vous pouvez passer en revue l’exemple pour détecter les exceptions temporaires.
 
 > [!NOTE]
-> En plus de réessayer le code d’erreur **429**, les codes **d’erreur 412**, **502** et **504** doivent également être retenter.
+> En plus de réessayer le code d’erreur **429**, les codes d’erreur **412**, **502** et **504** doivent également être retentés.
 
 ## <a name="detect-transient-exceptions-example"></a>Exemple de détection d’exceptions temporaires
 
-Le code suivant illustre un exemple d’utilisation du blocage exponentiel à l’aide du bloc d’application de gestion des erreurs temporaires :
+Le code suivant montre un exemple d’utilisation du backoff exponentiel à l’aide du bloc d’application de gestion des erreurs temporaires :
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -83,15 +83,15 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-Vous pouvez effectuer des tentatives de retour et des tentatives à l’aide de [la gestion des erreurs temporaires](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Pour obtenir des instructions sur l’obtention et l’installation du package NuGet, voir l’ajout du bloc d’application de gestion des erreurs [temporaires à votre solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Voir aussi [la gestion des pannes temporaires](/azure/architecture/best-practices/transient-faults).
+Vous pouvez effectuer des backoffs et des nouvelles tentatives à l’aide de [gestion des erreurs temporaires](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). Pour obtenir des instructions sur l’obtention et l’installation du package NuGet, consultez [ajouter le bloc d’application de gestion des erreurs temporaires à votre solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). Consultez également de [gestion des erreurs temporaires](/azure/architecture/best-practices/transient-faults).
 
-Après avoir découvert l’exemple de détection d’exceptions temporaires, prenons l’exemple de la fonction d’inserrable exponentielle. Vous pouvez utiliser l’arrêt exponentiel au lieu de réessayer en cas d’échec.
+Une fois que vous avez passé en revue l’exemple de détection des exceptions temporaires, passez par l’exemple de backoff exponentiel. Vous pouvez utiliser le backoff exponentiel au lieu de réessayer en cas d’échec.
 
-## <a name="backoff-example"></a>Exemple de mise en arrière
+## <a name="backoff-example"></a>Exemple d’interruption
 
-En plus de détecter les limites de taux, vous pouvez également effectuer une limitation exponentielle.
+En plus de détecter les limites de débit, vous pouvez également effectuer un backoff exponentiel.
 
-Le code suivant illustre un exemple de coupure exponentielle :
+Le code suivant montre un exemple de backoff exponentiel :
 
 ```csharp
 /**
@@ -110,23 +110,23 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-Vous pouvez également exécuter une méthode `System.Action` avec la stratégie de nouvelle tentative décrite dans cette section. La bibliothèque référencé vous permet également de spécifier un intervalle fixe ou un mécanisme d’interruption linéaire.
+Vous pouvez également exécuter une méthode `System.Action` avec la stratégie de nouvelle tentative décrite dans cette section. La bibliothèque référencée vous permet également de spécifier un intervalle fixe ou un mécanisme de backoff linéaire.
 
-Stockez la valeur et la stratégie dans un fichier de configuration pour affiner et ajuster les valeurs au moment de l’exécuter.
+Stockez la valeur et la stratégie dans un fichier de configuration pour affiner et ajuster les valeurs au moment de l’exécution.
 
-Pour plus d’informations, [voir modèles de nouvelles tentatives](/azure/architecture/patterns/retry).
+Pour plus d’informations, consultez [modèles de nouvelles tentatives](/azure/architecture/patterns/retry).
 
-Vous pouvez également gérer la limite de taux à l’aide de la limite par bot par thread.
+Vous pouvez également gérer la limite de débit à l’aide de la limite par bot par thread.
 
-## <a name="per-bot-per-thread-limit"></a>Par bot par limite de thread
+## <a name="per-bot-per-thread-limit"></a>Limite par bot par thread
 
-La limite par bot par thread contrôle le trafic qu’un bot est autorisé à générer dans une seule conversation. Une conversation est 1:1 entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe. Ainsi, si l’application envoie un message bot à chaque utilisateur, la limite de thread ne se limite pas.
+La limite par bot par thread contrôle le trafic qu’un bot est autorisé à générer dans une conversation unique. Une conversation est 1:1 entre le bot et l’utilisateur, une conversation de groupe ou un canal dans une équipe. Par conséquent, si l’application envoie un message de bot à chaque utilisateur, la limite de threads ne se limite pas.
 
 >[!NOTE]
 >
-> * La limite de thread de 3 600 secondes et 1 800 opérations s’applique uniquement si plusieurs messages de bot sont envoyés à un seul utilisateur.
-> * La limite globale par application et par client est de 50 demandes par seconde (DEMANDES/s). Par conséquent, le nombre total de messages de bot par seconde ne doit pas franchir la limite de thread.
-> * Le fractionnement des messages au niveau du service entraîne un nombre de rps supérieur aux attentes. Si vous êtes préoccupé par l’approche des limites, vous devez implémenter la stratégie [de retour à la limite](#backoff-example). Les valeurs fournies dans cette section sont uniquement à des valeurs d’estimation.
+> * La limite de threads de 3 600 secondes et de 1 800 opérations s’applique uniquement si plusieurs messages de bot sont envoyés à un seul utilisateur.
+> * La limite globale par application et par locataire est de 50 demandes par seconde (RPS). Par conséquent, le nombre total de messages de bot par seconde ne doit pas dépasser la limite de threads.
+> * Le fractionnement des messages au niveau du service entraîne un RPS plus élevé que prévu. Si vous craignez de vous approcher des limites, vous devez mettre en œuvre la [stratégie de backoff](#backoff-example). Les valeurs fournies dans cette section sont uniquement à des fins d’estimation.
 
 Le tableau suivant fournit les limites par bot par thread :
 
@@ -150,13 +150,13 @@ Le tableau suivant fournit les limites par bot par thread :
 | Obtenir des conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Les versions précédentes `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` les API sont en cours d’utilisation. Ils sont limitées à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre SDK Bot Framework et le code pour utiliser les derniers points de terminaison de l’API paginée, voir Modifications apportées à l’API bot pour les membres d’équipe et [de conversation](../../resources/team-chat-member-api-changes.md).
+> Les versions précédentes de `TeamsInfo.getMembers` et `TeamsInfo.GetMembersAsync` API sont dépréciées. Ils sont limités à cinq demandes par minute et retournent un maximum de 10 000 membres par équipe. Pour mettre à jour votre kit de développement logiciel (SDK) Bot Framework et le code afin d’utiliser les derniers points de terminaison d’API paginés, consultez [modifications de l’API bot pour les membres d’équipe et de conversation](../../resources/team-chat-member-api-changes.md).
 
-Vous pouvez également gérer la limite de taux à l’aide de la limite par thread pour tous les bots.
+Vous pouvez également gérer la limite de débit à l’aide de la limite par thread pour tous les bots.
 
 ## <a name="per-thread-limit-for-all-bots"></a>Limite par thread pour tous les bots
 
-La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer dans une conversation unique. Une conversation est en tête à tête entre un bot et un utilisateur, une conversation de groupe ou un canal dans une équipe.
+La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer au sein d’une conversation unique. Une conversation ici est 1:1 entre le bot et l’utilisateur, une conversation de groupe ou un canal dans une équipe.
 
 Le tableau suivant fournit la limite par thread pour tous les bots :
 

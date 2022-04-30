@@ -2,14 +2,14 @@
 title: Messagerie proactive pour les bots
 description: Découvrez comment utiliser la messagerie proactive pour les bots dans Microsoft Teams
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: scénarios d’équipes bot de conversation de messagerie proactive
-ms.openlocfilehash: 9b554699a86c369da92d9fc7512a098dc8b5a7bf
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: scénarios teams - Bot de conversation de messagerie proactive
+ms.openlocfilehash: 12c6f9ad79d7e28f31e3985930557339e75ccbbf
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571004"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111485"
 ---
 # <a name="proactive-messaging-for-bots"></a>Messagerie proactive pour les bots
 
@@ -21,13 +21,13 @@ Un message proactif est un message envoyé par un bot pour démarrer une convers
 * Les réponses aux sondages
 * Les notifications d’événements externes
 
-L’envoi d’un message pour démarrer un nouveau thread de conversation est différent de l’envoi d’un message en réponse à une conversation existante : lorsque votre bot démarre une nouvelle conversation, il n’y a pas de conversation pré-existante pour publier le message. Pour envoyer un message proactif, vous devez :
+L’envoi d’un message pour démarrer un nouveau thread de conversation est différent de l’envoi d’un message en réponse à une conversation existante : lorsque votre bot démarre une nouvelle conversation, il n’existe aucune conversation préexistante dans laquelle publier le message. Pour envoyer un message proactif, vous devez :
 
-1. [Décider de ce que vous allez dire](#best-practices-for-proactive-messaging)
-1. [Obtenir l’ID unique et l’ID client de l’utilisateur](#obtain-necessary-user-information)
+1. [Décidez de ce que vous allez dire](#best-practices-for-proactive-messaging)
+1. [Obtenir l’ID unique et l’ID de locataire de l’utilisateur](#obtain-necessary-user-information)
 1. [Envoyer le message](#examples)
 
-Lorsque vous créez des  messages proactifs`MicrosoftAppCredentials.TrustServiceUrl`, vous devez appeler et transmettre l’URL `ConnectorClient` du service avant de créer l’url utilisée pour envoyer le message. Si ce n’est pas le cas, votre `401: Unauthorized` application reçoit une réponse. Pour plus d’informations, [voir les exemples ci-dessous](#net-example-from-this-sample).
+Lorsque vous créez des messages proactifs, vous **devez** appeler `MicrosoftAppCredentials.TrustServiceUrl`et transmettre l’URL du service avant de créer le `ConnectorClient` utilisé pour envoyer le message. Si ce n’est pas le cas, une réponse `401: Unauthorized` est reçue par votre application. Pour plus d’informations, consultez [les exemples ci-dessous](#net-example-from-this-sample).
 
 ## <a name="best-practices-for-proactive-messaging"></a>Meilleures pratiques en matière de messagerie proactive
 
@@ -37,45 +37,45 @@ Les messages proactifs sont généralement classés en deux catégories : les m
 
 ### <a name="welcome-messages"></a>Les messages de bienvenue
 
-Lorsque vous utilisez une messagerie proactive pour envoyer un message de bienvenue à un utilisateur, assurez-vous que, du point de vue de l’utilisateur, le message s’affiche de manière non improvisée. Lorsqu’il y a un message de bienvenue, il s’agira de leur première interaction avec votre application. Les meilleurs messages de bienvenue sont les suivants :
+Lorsque vous utilisez la messagerie proactive pour envoyer un message d’accueil à un utilisateur, assurez-vous que, du point de vue de l’utilisateur, le message semble non traité. Lorsqu’il y a un message de bienvenue, il s’agira de leur première interaction avec votre application. Les meilleurs messages d’accueil sont les suivants :
 
-* **Pourquoi ils reçoivent ce message** : l’utilisateur doit savoir clairement pourquoi il reçoit ce message. Si votre bot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, faites-leur savoir dans quel canal il a été installé et éventuellement qui l’a installé.
-* **Que proposez-vous** : que peuvent-ils faire avec votre application ? Quelle valeur pouvez-vous leur apporter ?
-* **Que doivent-ils faire ensuite** : invitez-les à essayer une commande ou interagissez avec votre application d’une certaine façon.
+* **Pourquoi ils reçoivent ce message**: il doit être clair pour l’utilisateur pourquoi il reçoit ce message. Si votre bot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, indiquez-leur dans quel canal il a été installé et éventuellement qui l’a installé.
+* **Que proposez-vous**: que peuvent-ils faire avec votre application ? Quelle valeur pouvez-vous leur apporter ?
+* **Que doivent-ils faire ensuite**: invitez-les à essayer une commande ou à interagir avec votre application d’une certaine manière.
 
 ### <a name="notification-messages"></a>Les messages de notification
 
-Lorsque vous utilisez une messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs ont un chemin d’accès clair pour effectuer des actions courantes en fonction de votre notification et comprendre clairement pourquoi la notification s’est produite. Les messages de notification de bonne qualité incluent généralement :
+Lorsque vous utilisez la messagerie proactive pour envoyer des notifications, vous devez vous assurer que vos utilisateurs disposent d'un chemin clair pour effectuer les actions courantes basées sur votre notification, et qu'ils comprennent clairement pourquoi la notification s'est produite. Les bons messages de notification comprennent généralement les éléments suivants
 
-* **Ce qui s’est** passé : une indication claire de ce qui est arrivé à l’origine de la notification.
-* **Ce qu’il s’est passé** : il doit être clair quel élément/élément a été mis à jour pour provoquer la notification.
-* **Qui l’avez-Qui** : Qui l’action à l’origine de l’envoi de la notification ?
-* **Ce qu’ils peuvent faire à ce sujet** : faciliter la tâche des utilisateurs en fonction de vos notifications.
-* **Comment ils peuvent refuser :** fournissez un chemin d’accès aux utilisateurs pour qu’ils ne choisissent pas d’autres notifications.
+* **Ce qui s’est passé**: une indication claire de la cause de la notification.
+* **Ce qui est arrivé à** : Il doit être clair quel élément/chose a été mis à jour pour provoquer la notification.
+* **Qui l'a fait** : Qui a pris l'action qui a provoqué l'envoi de la notification ?
+* **ce qu’ils peuvent faire**: facilitez la prise d’actions par vos utilisateurs en fonction de vos notifications.
+* **comment ils peuvent refuser**: indiquez un chemin d’accès permettant aux utilisateurs de refuser des notifications supplémentaires.
 
 ## <a name="obtain-necessary-user-information"></a>Obtenir les informations utilisateur nécessaires
 
-Les bots peuvent créer des conversations avec un utilisateur Microsoft Teams en obtenant son *ID unique* et son *ID client.* Vous pouvez obtenir ces valeurs à l’aide de l’une des méthodes suivantes :
+Les bots peuvent créer des conversations avec un utilisateur Microsoft Teams individuel en obtenant *l’ID unique de l’utilisateur* et *l’ID de locataire*. Vous pouvez obtenir ces valeurs à l’aide de l’une des méthodes suivantes :
 
-* En [extraire la liste de l’équipe](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) à partir d’un canal où votre application est installée.
-* En les mettre en cache lorsqu’un utilisateur [interagit avec votre bot dans un canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md).
-* Lorsqu’un utilisateur est [@mentioned dans une conversation de canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) , le bot fait partie de.
-* En les mettre [`conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) en cache lorsque vous recevez l’événement lorsque votre application est installée dans une étendue personnelle, ou que de nouveaux membres sont ajoutés à une conversation de canal ou de groupe qui.
+* En [récupérant la liste d’équipe](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) à partir d’un canal, votre application est installée.
+* En les mettant en cache lorsqu’un utilisateur [interagit avec votre bot dans un canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md).
+* Lorsqu’un utilisateur est [@mentioned dans une conversation de canal](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) le bot fait partie de.
+* En les mettant en cache lorsque vous [recevoir l’événement `conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) lorsque votre application est installée dans une étendue personnelle, ou que de nouveaux membres sont ajoutés à un canal ou à une conversation de groupe qui s’y ajoute.
 
 ### <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive en utilisant Graph
 
 > [!Note]
-> L’installation proactive d’applications à l’aide d’un graphique est actuellement en version bêta.
+> L’installation proactive d’applications à l’aide de Graph est actuellement en version bêta.
 
-Parfois, il peut s’agir de messages de manière proactive pour les utilisateurs qui n’ont pas installé votre application ou qui n’ont pas interagi avec celle-ci précédemment. Par exemple, vous souhaitez utiliser le [communicateur d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’échelle de votre organisation. Pour ce scénario, vous pouvez utiliser le API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache `conversationUpdate` les valeurs nécessaires à partir de l’événement que votre application recevra lors de l’installation.
+Parfois, il peut être nécessaire d’envoyer des messages proactifs aux utilisateurs qui n’ont pas déjà installé ou interagi avec votre application. Par exemple, vous souhaitez utiliser le [communicateur d’entreprise](~/samples/app-templates.md#company-communicator) pour envoyer des messages à l’échelle de votre organisation. Pour ce scénario, vous pouvez utiliser l’API Graph pour installer de manière proactive votre application pour vos utilisateurs, puis mettre en cache les valeurs nécessaires à partir du `conversationUpdate` événement que votre application recevra lors de l’installation.
 
-Vous pouvez uniquement installer des applications qui se trouver dans votre catalogue d’applications d’organisation ou dans Teams’application store.
+Vous pouvez uniquement installer des applications qui se trouvent dans votre catalogue d’applications d’organisation ou dans l’App Store Teams.
 
-Pour [plus d’informations](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true), voir Installer des applications pour les utilisateurs Graph documentation. Il existe également un [exemple dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+Pour plus d’informations, consultez [Installer des applications pour les utilisateurs](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) dans la documentation Graph. Il existe également un [exemple de dans .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## <a name="examples"></a>Exemples
 
-Veillez à vous authentifier et à avoir un jeton de support avant de créer une conversation à l’aide de l’API REST.
+Veillez à vous authentifier et à disposer d’un jeton de porteur avant de créer une conversation à l’aide de l’API REST.
 
 ```json
 POST /v3/conversations
@@ -97,7 +97,7 @@ POST /v3/conversations
 }
 ```
 
-Vous devez fournir l’identifiant utilisateur et l’identifiant du client. Si l’appel réussit, l’API renvoie avec l’objet de réponse suivant.
+Vous devez fournir l’identifiant utilisateur et l’identifiant du client. Si l’appel réussit, l’API retourne l’objet de réponse suivant.
 
 ```json
 {
@@ -109,7 +109,7 @@ Cet ID est l’ID de conversation unique de la conversation personnelle. Stockez
 
 ### <a name="using-net"></a>Utilisation de .NET
 
-Cet exemple utilise [le package Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
+Cet exemple utilise le package NuGet [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -158,11 +158,11 @@ bot.send(msg);
 
 ## <a name="creating-a-channel-conversation"></a>Créer une conversation de canal
 
-Le bot de votre équipe peut créer une chaîne de réponse dans un canal. Si vous utilisez le SDK Node.js Teams, `startReplyChain()`utilisez , qui vous donne une adresse entièrement remplie avec l’ID d’activité et l’ID de conversation corrects. Si vous utilisez C#, consultez l’exemple ci-dessous.
+Le bot de votre équipe peut créer une chaîne de réponse dans un canal. Si vous utilisez le Kit de développement logiciel (SDK) Node.js Teams, utilisez `startReplyChain()`, qui vous donne une adresse complète avec l’ID d’activité et l’ID de conversation corrects. Si vous utilisez C#, consultez l’exemple ci-dessous.
 
-Vous pouvez également utiliser l’API REST et émettre une demande POST à la [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) ressource.
+Vous pouvez également utiliser l’API REST et émettre une requête POST pour [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) ressource.
 
-### <a name="net-example-from-this-sample"></a>Exemple .NET (à partir [de cet exemple](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
+### <a name="net-example-from-this-sample"></a>Exemple .NET (à partir de [cet exemple](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
