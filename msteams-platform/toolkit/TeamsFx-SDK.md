@@ -3,64 +3,64 @@ title: Kit de développement logiciel (SDK) TeamsFx
 author: MuyangAmigo
 description: À propos du Kit de développement logiciel (SDK) TeamsFx
 ms.author: nintan
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ade31e39d48b92cca4309b16762dc95afccf1925
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
-ms.translationtype: MT
+ms.openlocfilehash: d54c3d962ecc9d1fd703bd4126d71564f8358794
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073096"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111219"
 ---
 # <a name="teamsfx-sdk"></a>Kit de développement logiciel (SDK) TeamsFx
 
-TeamsFx permet de réduire les tâches des développeurs en tirant parti de Teams’authentification unique et en accédant aux ressources cloud jusqu’à des instructions sur une seule ligne sans aucune configuration. Le Kit de développement logiciel (SDK) TeamsFx est conçu pour être utilisé dans le navigateur et l’environnement Node.js. Les scénarios courants sont les suivants :
+TeamsFx permet de réduire les tâches de développement en tirant parti de l’authentification unique Teams et en accédant aux ressources cloud jusqu’à des instructions sur une seule ligne sans configuration. Le Kit de développement logiciel (SDK) TeamsFx est conçu pour être utilisé dans le navigateur et l’environnement Node.js. Les scénarios courants sont les suivants :
 
-* application d’onglet Teams
+* Application onglet Teams
 * Fonction Azure
-* bot Teams
+* Bot Teams
 
 Vous pouvez utiliser le Kit de développement logiciel (SDK) TeamsFx pour :
 
 * Accéder aux fonctionnalités principales dans l’environnement client et serveur 
-* Écrire le code d’authentification utilisateur de manière simplifiée
+* Écrire du code d’authentification utilisateur de manière simplifiée
 
 ## <a name="prerequisites"></a>Configuration requise
 
 Installez les outils suivants et configurez votre environnement de développement :
 
 * Dernière version de Node.js
-* Si votre projet a installé `botbuilder` [des packages](https://github.com/Microsoft/botbuilder-js#packages) associés en tant que dépendances, vérifiez qu’ils sont de la même version. Actuellement, la version requise est 4.15.0 ou ultérieure. Pour plus d’informations, consultez [les packages du générateur de bots qui doivent être de la même version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
+* Si votre projet a installé `botbuilder` packages [associés](https://github.com/Microsoft/botbuilder-js#packages) en tant que dépendances, vérifiez qu’ils sont de la même version. Actuellement, la version requise est 4.15.0 ou ultérieure. Pour plus d’informations, consultez [packages bot builder doivent être de la même version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
 
 Vous devez avoir une connaissance pratique des éléments suivants :
 
 * [Code source](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
 * [Documentation de référence de l'API](https://aka.ms/teamsfx-sdk-help)
-* [Échantillons](https://github.com/OfficeDev/TeamsFx-Samples)
+* [Exemples](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ## <a name="get-started"></a>Prise en main
 
-Le Kit de développement logiciel (SDK) TeamsFx est préconfiguré dans le projet généré automatiquement à l’aide de TeamsFx Shared Computer Toolkit ou CLI.
-Pour plus d’informations, consultez [Teams projet d’application](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+Le Kit de développement logiciel (SDK) TeamsFx est préconfiguré dans le projet généré automatiquement à l’aide du Kit de ressources TeamsFx ou de l’interface CLI.
+Pour plus d’informations, consultez [projet d’application Teams](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
-### <a name="install-the-microsoftteamsfx-package"></a>Installer le `@microsoft/teamsfx` package
+### <a name="install-the-microsoftteamsfx-package"></a>Installer le package `@microsoft/teamsfx`
 
-Installez le Kit de développement logiciel (SDK) TeamsFx pour TypeScript ou JavaScript avec `npm`:
+Installez le Kit de développement logiciel (SDK) TeamsFx pour TypeScript ou JavaScript avec `npm` :
 
 ```bash
 npm install @microsoft/teamsfx
 ```
 
-### <a name="create-microsoftgraphclient-service"></a>Créer un `MicrosoftGraphClient` service
+### <a name="create-microsoftgraphclient-service"></a>Créer `MicrosoftGraphClient` service
 
-Pour créer un objet client graphe et accéder à Microsoft API Graph, vous avez besoin des informations d’identification pour vous authentifier. Le Kit de développement logiciel (SDK) fournit des API à configurer pour les développeurs.
+Pour créer un objet client graphe et accéder à l’API Microsoft Graph, vous avez besoin des informations d’identification pour vous authentifier. Le Kit de développement logiciel (SDK) fournit des API à configurer pour les développeurs.
 
 <br>
 
 <details>
-<summary><b>Appeler API Graph au nom de Teams User (User Identity)</b></summary>
+<summary><b>appeler API Graph pour le compte de l’utilisateur Teams (identité de l’utilisateur)</b></summary>
 
 Utilisez l’extrait de code suivant :
 
@@ -80,9 +80,9 @@ const profile = await graphClient.api("/me").get(); // Get the profile of curren
 <br>
 
 <details>
-<summary><b>Appeler API Graph sans utilisateur (identité de l’application)</b></summary>
+<summary><b>appeler API Graph sans d’utilisateur (identité d’application)</b></summary>
 
-Il ne nécessite pas l’interaction avec Teams utilisateur. Vous pouvez appeler Microsoft Graph en tant qu’identité d’application.
+Elle ne nécessite pas l’interaction avec l’utilisateur Teams. Vous pouvez appeler Microsoft Graph en tant qu’identité d’application.
 
 Utilisez l’extrait de code suivant :
 
@@ -105,7 +105,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>Classe TeamsFx
 
-L’instance de classe TeamsFx accède par défaut à tous les paramètres TeamsFx à partir de variables d’environnement. Vous pouvez également définir des valeurs de configuration personnalisées pour remplacer les valeurs par défaut. Pour plus d’informations, consultez [la configuration de remplacement](#override-configuration) . Lors de la création d’une instance TeamsFx, vous devez également spécifier le type d’identité. Il existe deux types d’identité :
+Par défaut, l’instance de classe TeamsFx accède à tous les paramètres TeamsFx à partir de variables d’environnement. Vous pouvez également définir des valeurs de configuration personnalisées pour remplacer les valeurs par défaut. Pour plus d’informations, consultez [configuration de remplacement.](#override-configuration) Lors de la création d’une instance TeamsFx, vous devez également spécifier le type d’identité. Il existe deux types d’identité :
 
 * Identité de l’utilisateur
 * Identité de l’application
@@ -115,7 +115,7 @@ L’instance de classe TeamsFx accède par défaut à tous les paramètres Teams
 | Command | Description |
 |----------------|-------------|
 | `new TeamsFx(IdentityType.User)`| L’application est authentifiée en tant qu’utilisateur Teams actuel. |
-| `TeamsFx:setSsoToken()`| Identité de l’utilisateur dans Node.js environnement (sans navigateur). |
+| `TeamsFx:setSsoToken()`| Identité de l’utilisateur dans l’environnement Node.js (sans navigateur). |
 | `TeamsFx:getUserInfo()` | Pour obtenir les informations de base de l’utilisateur. |
 | `TeamsFx:login()` | Il est utilisé pour permettre à l’utilisateur d’effectuer un processus de consentement, si vous souhaitez utiliser l’authentification unique pour obtenir un jeton d’accès pour certaines étendues OAuth. |
 
@@ -134,44 +134,44 @@ L’instance de classe TeamsFx accède par défaut à tous les paramètres Teams
 
 ### <a name="credential"></a>Credential
 
-Vous devez choisir le type d’identité lors de l’initialisation de TeamsFx. Une fois que vous avez spécifié le type d’identité lors de l’initialisation de TeamsFx, le Kit de développement logiciel (SDK) utilise différents types de classe d’informations d’identification pour représenter l’identité et obtenir le jeton d’accès par le flux d’authentification correspondant.
+Vous devez choisir le type d’identité lors de l’initialisation de TeamsFx. Une fois que vous avez spécifié le type d’identité lors de l’initialisation de TeamsFx, le Kit de développement logiciel (SDK) utilise différents types de classe d’informations d’identification pour représenter l’identité et obtenir un jeton d’accès par flux d’authentification correspondant.
 
-Il existe trois classes d’informations d’identification pour simplifier l’authentification. [dossier d’informations d’identification](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Les classes d’informations d’identification implémentent `TokenCredential` l’interface, qui est largement utilisée dans les API de bibliothèque Azure, conçue pour fournir des jetons d’accès pour des étendues spécifiques. D’autres API s’appuient sur un appel d’informations d’identification `TeamsFx:getCredential()` pour obtenir une instance de `TokenCredential`.
+Il existe trois classes d’informations d’identification pour simplifier l’authentification. [dossier d’informations d’identification](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Les classes d’informations d’identification implémentent `TokenCredential` interface, qui est largement utilisée dans les API de bibliothèque Azure, conçue pour fournir des jetons d’accès pour des étendues spécifiques. D’autres API s’appuient sur l’appel d’informations d’identification `TeamsFx:getCredential()` pour obtenir une instance de `TokenCredential`.
 
 Voici les scénarios correspondants pour chaque cible de classe d’informations d’identification.
 
 #### <a name="user-identity-in-browser-environment"></a>Identité de l’utilisateur dans l’environnement du navigateur
-`TeamsUserCredential`représente Teams l’identité de l’utilisateur actuel. L’utilisation de ces informations d’identification demande le consentement de l’utilisateur à la première fois. Il tire parti du flux Teams SSO et On-Behalf-Of pour effectuer l’échange de jetons. Le Kit de développement logiciel (SDK) utilise ces informations d’identification lorsque le développeur choisit l’identité de l’utilisateur dans l’environnement du navigateur.
+`TeamsUserCredential` représente l’identité de l’utilisateur actuel de Teams. L’utilisation de ces informations d’identification demande le consentement de l’utilisateur lors de la première utilisation. Il tire parti du flux Teams SSO et On-Behalf-Of pour effectuer l’échange de jetons. Le Kit de développement logiciel (SDK) utilise ces informations d’identification lorsque le développeur choisit l’identité de l’utilisateur dans l’environnement du navigateur.
 
 Configuration requise : `initiateLoginEndpoint`, `clientId`.
 
-#### <a name="user-identity-in-nodejs-environment"></a>Identité de l’utilisateur dans Node.js environnement
-`OnBehalfOfUserCredential`utilise le flux On-Behalf-Of et nécessite Teams jeton d’authentification unique. Il est conçu pour être utilisé dans les scénarios de fonction ou de bot Azure. Le Kit de développement logiciel (SDK) utilise ces informations d’identification lorsque le développeur choisit l’identité de l’utilisateur dans Node.js environnement.
+#### <a name="user-identity-in-nodejs-environment"></a>Identité de l’utilisateur dans l’environnement Node.js
+`OnBehalfOfUserCredential` utilise le flux On-Behalf-Of et a besoin d’un jeton d’authentification unique Teams. Il est conçu pour être utilisé dans des scénarios de fonction ou de bot Azure. Le Kit de développement logiciel (SDK) utilise ces informations d’identification lorsque le développeur choisit l’identité de l’utilisateur dans l’environnement Node.js.
 
-Configuration requise : `authorityHost`, `tenantId`, `clientId``clientSecret` ou `certificateContent`.
+Configuration requise : `authorityHost` `tenantId`, `clientId`, `clientSecret` ou `certificateContent`.
 
-#### <a name="application-identity-in-nodejs-environment"></a>Identité d’application dans Node.js environnement
-`AppCredential` représente l’identité de l’application. Il est généralement utilisé lorsque l’utilisateur n’est pas impliqué, comme le travail d’automatisation déclenché par le temps. Le Kit de développement logiciel (SDK) utilise ces informations d’identification lorsque le développeur choisit l’identité de l’application dans Node.js environnement.
+#### <a name="application-identity-in-nodejs-environment"></a>Identité d’application dans l’environnement Node.js
+`AppCredential` représente l’identité de l’application. Il est généralement utilisé lorsque l’utilisateur n’est pas impliqué comme un travail d’automatisation déclenché par le temps. Le Kit de développement logiciel (SDK) utilise ces informations d’identification lorsque le développeur choisit l’identité de l’application dans l’environnement Node.js.
 
-Configuration requise : `tenantId`, `clientId``clientSecret` ou `certificateContent`.
+Configuration requise : `tenantId` `clientId`, `clientSecret` ou `certificateContent`.
 
-### <a name="bot-sso"></a>Bot SSO
+### <a name="bot-sso"></a>Authentification unique du bot
 
-Les classes associées au bot sont stockées sous le [dossier du bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
+Les classes associées au bot sont stockées sous [dossier de bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
 `TeamsBotSsoPrompt` a une bonne intégration avec bot framework. Il simplifie le processus d’authentification lorsque vous développez une application de bot et que vous souhaitez tirer parti de l’authentification unique du bot.
 
-Configuration requise : `initiateLoginEndpoint`, `tenantId`, `clientId`et `applicationIdUri`.
+Configuration requise : `initiateLoginEndpoint` `tenantId`, `clientId` et `applicationIdUri`.
 
 ### <a name="supported-functions"></a>Fonctions prises en charge
 
-Le Kit de développement logiciel (SDK) TeamsFx fournit plusieurs fonctions pour faciliter la configuration des bibliothèques tierces. Ils se trouvent sous le [dossier principal](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
+Le Kit de développement logiciel (SDK) TeamsFx fournit plusieurs fonctions pour faciliter la configuration des bibliothèques tierces. Ils se trouvent sous [dossier principal](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
-*  Service Microsoft Graph :`createMicrosoftGraphClient` et `MsGraphAuthProvider` aide à créer une instance de Graph authentifiée.
-*  SQL :`getTediousConnectionConfig` retourne une configuration de connexion fastidieuse.
+*  Microsoft Graph Service:`createMicrosoftGraphClient` et `MsGraphAuthProvider` aider à créer une instance Graph authentifiée.
+*  SQL:`getTediousConnectionConfig` retourne une configuration de connexion fastidieuse.
 
 Configuration requise :
-* `sqlServerEndpoint`, `sqlUsername``sqlPassword` si vous souhaitez utiliser l’identité de l’utilisateur
+* `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` si vous souhaitez utiliser l’identité de l’utilisateur
 * `sqlServerEndpoint`, `sqlIdentityId` si vous souhaitez utiliser l’identité MSI
 
 ### <a name="error-handling"></a>Gestion des erreurs
@@ -218,7 +218,7 @@ La section suivante fournit plusieurs extraits de code pour les scénarios coura
 <details>
 <summary><b>Utiliser API Graph dans l’application onglet</b></summary>
  
-Utiliser `TeamsFx` et `createMicrosoftGraphClient`.
+Utilisez `TeamsFx` et `createMicrosoftGraphClient`.
 
 ```ts
 const teamsfx = new TeamsFx();
@@ -231,9 +231,9 @@ const profile = await graphClient.api("/me").get();
 <br>
 
 <details>
-<summary><b>Appeler la fonction Azure dans l’application onglet</b></summary>
+<summary><b>appeler la fonction Azure dans l’application d’onglet</b></summary>
 
-Utilisez `axios` la bibliothèque pour effectuer une requête HTTP à Azure Function.
+Utilisez `axios` bibliothèque pour effectuer une requête HTTP à Azure Function.
 
 ```ts
 const teamsfx = new TeamsFx();
@@ -252,11 +252,11 @@ const response = await axios.default.get(apiEndpoint + "api/httptrigger1", {
 <br>
 
 <details>
-<summary><b>Accéder à SQL base de données dans Azure Function</b></summary>
+<summary><b>accéder à la base de données SQL dans Azure Function</b></summary>
 
 
-Utilisez `tedious` la bibliothèque pour accéder à SQL et tirer parti `DefaultTediousConnectionConfiguration` de l’authentification.
-En dehors de `tedious`, vous pouvez également composer la configuration de connexion d’autres bibliothèques SQL en fonction du résultat de `sqlConnectionConfig.getConfig()`.
+Utilisez `tedious` bibliothèque pour accéder à SQL et tirer parti de `DefaultTediousConnectionConfiguration` qui gère l’authentification.
+Outre `tedious`, vous pouvez également composer la configuration de connexion d’autres bibliothèques SQL en fonction du résultat de `sqlConnectionConfig.getConfig()`.
 
 ```ts
 // Equivalent to:
@@ -283,7 +283,7 @@ connection.on("connect", (error) => {
 <br>
 
 <details>
-<summary><b>Utiliser l’authentification basée sur un certificat dans Azure Function</b></summary>
+<summary><b>utiliser l’authentification par certificat dans Azure Function</b></summary>
 
 ```ts
 const authConfig = {
@@ -304,9 +304,9 @@ const token = teamsfx.getCredential().getToken();
 <br>
 
 <details>
-<summary><b>Utiliser API Graph dans l’application bot</b></summary>
+<summary><b>Utiliser API Graph dans les</b> d’application de bot</summary>
 
-Ajouter `TeamsBotSsoPrompt` au jeu de dialogues.
+Ajoutez `TeamsBotSsoPrompt` au jeu de dialogues.
 
 ```ts
 const { ConversationState, MemoryStorage } = require("botbuilder");
@@ -365,7 +365,7 @@ setLogLevel(LogLevel.Warn);
 
 Vous pouvez rediriger la sortie du journal en définissant une fonction d’enregistreur d’événements ou de journal personnalisée.
 
-#### <a name="redirect-by-setting-custom-logger"></a>Rediriger en définissant l’enregistreur d’événements personnalisé
+#### <a name="redirect-by-setting-custom-logger"></a>Rediriger en définissant un enregistreur d’événements personnalisé
 
 ```ts
 setLogLevel(LogLevel.Info);
@@ -376,7 +376,7 @@ setLogger(context.log);
 #### <a name="redirect-by-setting-custom-log-function"></a>Rediriger en définissant une fonction de journal personnalisée
 
 > [!NOTE]
-> La fonction log ne prend pas effet si vous définissez un enregistreur d’événements personnalisé.
+> La fonction logarithmique ne prend pas effet si vous définissez un enregistreur d’événements personnalisé.
 
 ```ts
 setLogLevel(LogLevel.Info);
@@ -392,9 +392,9 @@ setLogFunction((level: LogLevel, message: string) => {
 ```
 
 ## <a name="override-configuration"></a>Remplacer la configuration
-Vous pouvez passer une configuration personnalisée lors de la création d’une instance TeamsFx pour remplacer la configuration par défaut ou définir les champs requis lorsque des variables d’environnement sont manquantes.
+Vous pouvez passer une configuration personnalisée lors de la création de l’instance TeamsFx pour remplacer la configuration par défaut ou définir les champs requis lorsque des variables d’environnement sont manquantes.
 
-- Si vous avez créé un projet d’onglet à l’aide de VS Code Shared Computer Toolkit, les valeurs de configuration suivantes sont utilisées à partir de variables d’environnement préconfigurées :
+- Si vous avez créé un projet d’onglet à l’aide de VS Code Toolkit, les valeurs de configuration suivantes seront utilisées à partir de variables d’environnement préconfigurées :
   * authorityHost (REACT_APP_AUTHORITY_HOST)
   * tenantId (REACT_APP_TENANT_ID)
   * clientId (REACT_APP_CLIENT_ID)
@@ -403,7 +403,7 @@ Vous pouvez passer une configuration personnalisée lors de la création d’une
   * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
   * apiName (REACT_APP_FUNC_NAME)
 
-- Si vous avez créé un projet de fonction/bot Azure à l’aide de VS Code Shared Computer Toolkit, les valeurs de configuration suivantes seront utilisées à partir de variables d’environnement préconfigurées :
+- Si vous avez créé un projet de fonction/bot Azure à l’aide de VS Code Toolkit, les valeurs de configuration suivantes seront utilisées à partir de variables d’environnement préconfigurées :
   * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
   * authorityHost (M365_AUTHORITY_HOST)
   * tenantId (M365_TENANT_ID)
@@ -419,19 +419,19 @@ Vous pouvez passer une configuration personnalisée lors de la création d’une
 
 ## <a name="upgrade-latest-sdk-version"></a>Mettre à niveau la dernière version du Kit de développement logiciel (SDK)
 
-Si vous utilisez la version du Kit de développement logiciel ( `loadConfiguration()`SDK), vous pouvez suivre ces étapes pour effectuer la mise à niveau vers la dernière version du SDK.
-1. Supprimer `loadConfiguration()` et passer des paramètres personnalisés à l’aide de `new TeamsFx(IdentityType.User, { ...customConfig })`
-2. Remplacer par `new TeamsUserCredential()``new TeamsFx()`
-3. Remplacer par `new M365TenantCredential()``new TeamsFx(IdentityType.App)`
-4. Remplacer par `new OnBehalfOfUserCredential(ssoToken)``new TeamsFx().setSsoToken(ssoToken)`
-5. Passer l’instance des fonctions d’assistance `TeamsFx` pour remplacer l’instance d’informations d’identification
+Si vous utilisez la version du Kit de développement logiciel (SDK) qui a `loadConfiguration()`, vous pouvez suivre ces étapes pour effectuer la mise à niveau vers la dernière version du SDK.
+1. Supprimez `loadConfiguration()` et transmettez les paramètres personnalisés à l’aide de `new TeamsFx(IdentityType.User, { ...customConfig })`
+2. Remplacer `new TeamsUserCredential()` par `new TeamsFx()`
+3. Remplacer `new M365TenantCredential()` par `new TeamsFx(IdentityType.App)`
+4. Remplacer `new OnBehalfOfUserCredential(ssoToken)` par `new TeamsFx().setSsoToken(ssoToken)`
+5. Passez l’instance de `TeamsFx` aux fonctions d’assistance pour remplacer l’instance d’informations d’identification
 
-Pour plus d’informations, consultez la [classe TeamsFx](#teamsfx-class).
+Pour plus d’informations, consultez [classe TeamsFx](#teamsfx-class).
 
 ## <a name="next-step"></a>Étape suivante
 
-[Exemples](https://github.com/OfficeDev/TeamsFx-Samples) de projet pour obtenir des exemples détaillés sur l’utilisation du Kit de développement logiciel (SDK) TeamsFx.
+[exemples](https://github.com/OfficeDev/TeamsFx-Samples) projet pour obtenir des exemples détaillés sur l’utilisation du Kit de développement logiciel (SDK) TeamsFx.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Galerie d’exemples Microsoft TeamsFx](https://github.com/OfficeDev/TeamsFx-Samples).
+[galerie d’exemples Microsoft TeamsFx](https://github.com/OfficeDev/TeamsFx-Samples).
