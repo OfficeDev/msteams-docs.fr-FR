@@ -1,55 +1,55 @@
 ---
 title: Déploiement du lien des onglets et vue des étapes
 author: Rajeshwari-v
-description: Découvrez comment déployer un lien, ouvrir le mode Étape et épingler un onglet avec Microsoft Teams application. Découvrez l’affichage intermédiaire et son appel à l’aide d’une carte adaptative à l’aide de l’exemple de code et de l’exemple.
+description: Découvrez comment déployer un lien, ouvrir la vue des étapes et épingler un onglet avec l'application Microsoft Teams. Découvrez la vue des étapes et son utilisation en utilisant la carte adaptative à l'aide d'un exemple de code et d'un échantillon.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: 043129d6a81543ac00acf8b64da49f75282823a2
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104083"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110294"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
-La vue d’étape est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran dans Teams et épinglé sous forme d’onglet.
+La vue des étapes est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran dans Teams et épinglé sous forme d’onglet.
 
-## <a name="stage-view"></a>Vue d’étape
+## <a name="stage-view"></a>Vue des étapes
 
-La vue d’étape est un composant d’interface utilisateur en plein écran que vous pouvez appeler pour exposer votre contenu web. Le service de déploiement de liaison existant est mis à jour afin qu’il soit utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Lorsqu’un utilisateur envoie une URL dans une conversation ou un canal, l’URL est déployée vers une carte adaptative. L’utilisateur peut sélectionner **Affichage** dans la carte et épingler le contenu sous la forme d’un onglet directement à partir de l’affichage étape.
+La vue des étapes est un composant d’interface utilisateur en plein écran que vous pouvez utiliser pour exposer votre contenu web. Le service existant de déploiement de liens est mis à jour de manière à ce qu'il soit utilisé pour transformer les URL en un onglet à l'aide d'une carte adaptative et de services de conversation. Lorsqu’un utilisateur envoie une URL dans une conversation ou un canal, l’URL est déployée vers une carte adaptative. L’utilisateur peut sélectionner **Affichage** dans la carte et épingler le contenu sous la forme d’un onglet directement à partir de la vue des étapes.
 
-## <a name="advantage-of-stage-view"></a>Avantage de l’affichage de l’étape
+## <a name="advantage-of-stage-view"></a>Avantage de la vue des étapes
 
-La vue d’étape permet d’obtenir une expérience plus transparente de l’affichage du contenu dans Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide ultérieur, ce qui entraîne un plus grand engagement de l’utilisateur avec votre application.
+La vue des étapes permet d’obtenir une expérience plus transparente de l’affichage du contenu dans Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide ultérieur, ce qui entraîne un plus grand engagement de l’utilisateur avec votre application.
 
-## <a name="stage-view-vs-task-module"></a>Vue d’étape et module de tâche
+## <a name="stage-view-vs-task-module"></a>Vue des étapes et module de tâche
 
-|Vue d’étape|Module de tâche|
+|Vue des étapes|Module de tâche|
 |:-----------|:-----------|
-|L’affichage intermédiaire est utile lorsque vous avez du contenu enrichi à afficher aux utilisateurs, par exemple une page, un tableau de bord, un fichier, etc. Il fournit des fonctionnalités enrichies qui permettent d’afficher votre contenu dans le canevas en plein écran.|[Le module de tâche](../task-modules-and-cards/task-modules/task-modules-tabs.md) est particulièrement utile pour afficher les messages qui nécessitent l’attention de l’utilisateur ou collecter les informations nécessaires pour passer à l’étape suivante.|
+|La vue des étapes est utile lorsque vous avez un contenu riche à afficher aux utilisateurs, comme une page, un tableau de bord, un fichier, etc. Il offre de riches fonctionnalités qui permettent de rendre votre contenu en plein écran.|[Le module de tâches](../task-modules-and-cards/task-modules/task-modules-tabs.md) est particulièrement utile pour afficher des messages qui requièrent l'attention de l'utilisateur, ou pour recueillir les informations nécessaires pour passer à l'étape suivante.|
   
-## <a name="invoke-stage-view"></a>Appeler l’affichage d’étape
+## <a name="invoke-stage-view"></a>Invoquer la vue de scène
 
-Vous pouvez appeler la vue d’étape de la manière suivante :
+Vous pouvez invoquer la vue des étapes de la manière suivante :
 
-* [Appeler la vue d’étape à partir d’une carte adaptative](#invoke-stage-view-from-adaptive-card)
-* [Appeler la vue d’étape par le biais d’un lien profond](#invoke-stage-view-through-deep-link)
+* [Appeler vue des étapes depuis la carte adaptative](#invoke-stage-view-from-adaptive-card)
+* [Appeler la vue des étapes par un lien profond](#invoke-stage-view-through-deep-link)
 
-## <a name="invoke-stage-view-from-adaptive-card"></a>Appeler la vue d’étape à partir d’une carte adaptative
+## <a name="invoke-stage-view-from-adaptive-card"></a>Invoquer la vue des étapes à partir de la carte adaptative
 
-Lorsque l’utilisateur entre une URL sur le client de bureau Teams, le bot est appelé et retourne une [carte adaptative](../task-modules-and-cards/cards/cards-actions.md) avec la possibilité d’ouvrir l’URL dans une phase. Une fois qu’une étape est lancée et fournie `tabInfo` , vous pouvez ajouter la possibilité d’épingler la phase sous forme d’onglet.  
+Lorsque l'utilisateur saisit une URL sur le client de bureau Teams, le robot est invoqué et renvoie une [carte adaptative](../task-modules-and-cards/cards/cards-actions.md) avec l'option d'ouvrir l'URL dans une étape. Une fois qu'une étape est lancée et que l'étape est `tabInfo`fournie, vous pouvez ajouter la possibilité d'épingler l'étape comme un onglet.  
 
-Les images suivantes affichent une étape ouverte à partir d’une carte adaptative :
+Les images suivantes montrent une scène ouverte à partir d'une carte adaptative :
 
-[![Ouvrir une étape à partir d’une carte adaptative](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+[![Ouvrir une étape de la carte adaptative](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
 [![Ouvrir une étape](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
 ### <a name="example"></a>Exemple
 
-Voici le code permettant d’ouvrir une étape à partir d’une carte adaptative :
+Voici le code pour ouvrir une scène à partir d'une carte adaptative :
 
 ```json
 {
@@ -72,46 +72,46 @@ Voici le code permettant d’ouvrir une étape à partir d’une carte adaptativ
 } 
 ```
 
-Le `invoke` type de requête doit être `composeExtension/queryLink`.
+Le `invoke`type de demande doit être `composeExtension/queryLink`.
 
 > [!NOTE]
 >
-> * `invoke` le flux de travail est similaire au flux de travail actuel `appLinking` .
-> * Pour maintenir la cohérence, il est recommandé de nommer `Action.Submit` `View`.
-> * `websiteUrl` est une propriété obligatoire à transmettre dans l’objet `TabInfo` .
+> * `invoke`Le flux de travail est similaire au flux de `appLinking`travail actuel.
+> * Pour maintenir la cohérence, il est recommandé `Action.Submit`d'attribuer un nom en tant que`View`.
+> * `websiteUrl`est une propriété obligatoire à passer dans `TabInfo`l'objet.
 
 Voici le processus d’appel de la vue d’étape :
 
-* Lorsque l’utilisateur sélectionne **Affichage**, le bot reçoit une `invoke` demande. Le type de requête est `composeExtension/queryLink`.
-* `invoke` la réponse du bot contient une carte adaptative avec le type `tab/tabInfoAction` qu’elle contient.
-* Le bot répond avec un `200` code.
+* Lorsque l'utilisateur sélectionne **Voir** , le robot reçoit une `invoke`demande. Le type de demande est `composeExtension/queryLink`.
+* `invoke` La réponse du robot contient une carte adaptative `tab/tabInfoAction`avec le type.
+* Le robot répond avec un `200` code.
 
 > [!NOTE]
-> Sur Teams clients mobiles, l’appel de l’affichage intermédiaire pour les applications distribuées par le biais du [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et l’absence d’expérience optimisée pour Moblie ouvre le navigateur web par défaut de l’appareil. Le navigateur ouvre l’URL spécifiée dans le `websiteUrl` paramètre de l’objet `TabInfo` .
+> Sur les clients mobiles de Teams, l'invocation de la vue des étapes pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur Web par défaut de l'appareil. Le navigateur ouvre l'URL spécifié dans le `websiteUrl`paramètre de `TabInfo`l'objet.
 
-## <a name="invoke-stage-view-through-deep-link"></a>Appeler la vue d’étape par le biais d’un lien profond
+## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 
-Pour appeler la vue d’étape via un lien profond à partir de votre onglet, vous devez encapsuler l’URL de lien profond dans l’API `microsoftTeams.executeDeeplink(url)` . Le lien profond peut également être transmis par le biais d’une `OpenURL` action dans la carte.
+Pour invoquer la vue des étapes par le biais d'un lien profond depuis votre onglet, vous devez intégrer l'URL du lien profond dans `microsoftTeams.executeDeeplink(url)`l'API. Le lien profond peut également être transmis par une `OpenURL`action dans la carte.
 
 ### <a name="syntax"></a>Syntaxe
 
-Voici la syntaxe de lien profond :
+Voici la syntaxe des liens profonds :
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={« contentUrl »:"contentUrl »,"websiteUrl »:"websiteUrl »,"name »:"Contoso"}
  
 ### <a name="examples"></a>Exemples
 
-Lorsqu’un utilisateur entre une URL, elle est déployée dans une carte adaptative.
+Lorsqu'un utilisateur saisit une URL, celle-ci se déploie en une carte adaptative.
 
-Voici les exemples de liens profonds permettant d’appeler la vue d’étape :
+Voici des exemples de liens profonds pour invoquer la vue des étapes :
 
 **Exemple 1 : URL avec threadId**
 
 URL non codée :
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={« contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title »:"Quotes:Miscellaneous »,"threadId »:"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={«contentUrl»:«https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191»,«websiteUrl»:«https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true«,"titre»:«Quotes:Miscellaneous»,«threadId»«19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2»}
 
-URL encodée :
+URL codée :
 
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
 
@@ -119,34 +119,34 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 URL non codée :
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={« contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title »:"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={« contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"itre »:"Quotes:Miscellaneous"}
 
 Encodé
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
 > [!NOTE]
-> Tous les liens profonds doivent être encodés avant de coller l’URL. Nous ne prenons pas en charge les URL non codées.
+> Tous les liens profonds doivent être encodés avant de coller l'URL. Nous ne prenons pas en charge les URL non codées.
 >
-> * L’option `name` est facultative dans le lien profond. S’il n’est pas inclus, le nom de l’application le remplace.
-> * Le lien profond peut également être transmis par le biais d’une `OpenURL` action.
-> * Lorsque vous lancez une phase à partir d’un certain contexte, assurez-vous que votre application fonctionne dans ce contexte. Par exemple, si votre mode Étape est lancé à partir d’une application personnelle, vous devez vous assurer que votre application a une étendue personnelle.
+> * Le `name`est facultatif en lien profond. S'il n'est pas inclus, le nom de l'application le remplace.
+> * Le lien profond peut également être transmis par une `OpenURL`action.
+> * Lorsque vous lancez une étape à partir d'un certain contexte, assurez-vous que votre application fonctionne dans ce contexte. Par exemple, si votre vue des étapes est lancée à partir d'une application personnelle, vous devez vous assurer que votre application a une portée personnelle.
 
-## <a name="tab-information-property"></a>Tab information, propriété
+## <a name="tab-information-property"></a>Propriété de l'information de l'onglet
 
 | Nom de la propriété | Type | Nombre de caractères | Description |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | Chaîne | 64 | Cette propriété est un identificateur unique pour l’entité affichée par l’onglet. Ce champ est obligatoire.|
-| `name` | Chaîne | 128 | Cette propriété est le nom complet de l’onglet dans l’interface de canal. Ce champ est facultatif.|
-| `contentUrl` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur de l’entité à afficher dans le canevas Teams. Ce champ est obligatoire.|
-| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// vers laquelle pointer, si un utilisateur choisit d’afficher dans un navigateur. Ce champ est obligatoire.|
-| `removeUrl?` | Chaîne | 2048 | Cette propriété est l’URL https:// qui pointe vers l’interface utilisateur à afficher lorsque l’utilisateur supprime l’onglet. Il s’agit d’un champ facultatif.|
+| `entityId` | Chaîne | 64 | Cette propriété est un identifiant unique pour l'entité que l'onglet affiche. Ce champ est obligatoire.|
+| `name` | Chaîne | 128 | Cette propriété est le nom d'affichage de l'onglet dans l'interface du canal. Ce champ est facultatif.|
+| `contentUrl` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur de l'entité à afficher dans le canevas Teams. Ce champ est obligatoire.|
+| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// vers laquelle il faut pointer, si un utilisateur choisit de l'afficher dans un navigateur. Ce champ est obligatoire.|
+| `removeUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur à afficher lorsque l'utilisateur supprime l'onglet. Il s'agit d'un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code
 
 | Exemple de nom | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|Tabulation en mode étape |Microsoft Teams’exemple d’application d’onglet pour illustrer l’onglet en mode étape.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+|Onglet dans la vue de l'étape |Exemple d'application d'onglet Microsoft Teams pour la démonstration de l'onglet dans la vue des étapes.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -155,7 +155,7 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Déploiement de liens d’extensions de message](~/messaging-extensions/how-to/link-unfurling.md)
+* [Déploiement du lien des extensions de message](~/messaging-extensions/how-to/link-unfurling.md)
 * [onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
-* [Créer un canal ou un onglet de groupe](~/tabs/how-to/create-channel-group-tab.md)
+* [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
