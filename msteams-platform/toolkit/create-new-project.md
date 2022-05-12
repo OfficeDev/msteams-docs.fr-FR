@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104153"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191263"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Créer une application Teams à l’aide du Kit de ressources Teams
 
@@ -53,6 +53,6 @@ Pour plus d’informations, consultez [Créer une application Onglet Teams (Reac
 
 * [Provisionner des ressources cloud](provision.md)
 * [Déployer l’application Teams dans le cloud](deploy.md)
-* [Publier votre application Teams](TeamsFx-collaboration.md)
+* [Publier votre application Teams](../concepts/deploy-and-publish/appsource/publish.md)
 * [Gérer plusieurs environnements](TeamsFx-multi-env.md)
 * [Collaborer avec d’autres développeurs sur des projets Teams](TeamsFx-collaboration.md)

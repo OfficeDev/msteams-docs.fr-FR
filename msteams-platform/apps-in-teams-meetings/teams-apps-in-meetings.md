@@ -4,14 +4,14 @@ author: surbhigupta
 description: aperçu des applications dans les réunions Teams en fonction du participant et du rôle de l'utilisateur
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: équipes applications réunions utilisateur participant rôle api
-ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111303"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296951"
 ---
 # <a name="apps-for-teams-meetings"></a>Applications pour les réunions Teams
 
@@ -38,7 +38,7 @@ La nouvelle fonctionnalité de scènes personnalisées en mode ensemble permet a
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Extensibilité de l’application de réunion](meeting-app-extensibility.md)
+> [Applications de réunions unifiées](meeting-app-extensibility.md)
 
 ## <a name="see-also"></a>Voir aussi
 

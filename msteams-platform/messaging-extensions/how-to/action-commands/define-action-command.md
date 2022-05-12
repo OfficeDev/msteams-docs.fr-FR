@@ -2,15 +2,15 @@
 title: Définir des commandes d’action d’extension de message
 author: surbhigupta
 description: Vue d’ensemble des commandes d’action d’extension de messagerie avec exemple de manifeste d’application
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135744"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297211"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -78,7 +78,7 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail des développeurs**.
 
 > [!NOTE]
- > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
+ > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Developer Portal Developer Portal](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 

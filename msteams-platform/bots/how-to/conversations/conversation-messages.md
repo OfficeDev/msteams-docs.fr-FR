@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102119"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191179"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -195,7 +195,7 @@ async def on_members_added_activity(
 
 Les messages envoyés entre les utilisateurs et les bots incluent des données de canal internes dans le message. Ces données permettent au bot de communiquer correctement sur ce canal. Le Kit de développement logiciel (SDK) Bot Builder vous permet de modifier la structure des messages.
 
-## <a name="teams-channel-data"></a>Teams données de canal
+## <a name="teams-channel-data"></a>Données du canal Teams
 
 L’objet `channelData` contient Teams informations spécifiques et constitue une source définitive pour les ID d’équipe et de canal. Si vous le souhaitez, vous pouvez mettre en cache et utiliser ces ID comme clés pour le stockage local. Le `TeamsActivityHandler` Kit de développement logiciel (SDK) extrait les informations importantes de l’objet `channelData` pour les rendre facilement accessibles. Toutefois, vous pouvez toujours accéder aux données d’origine à partir de l’objet `turnContext` .
 
@@ -204,10 +204,10 @@ L’objet `channelData` n’est pas inclus dans les messages dans les conversati
 Un objet classique `channelData` d’une activité envoyée à votre bot contient les informations suivantes :
 
 * `eventType`: Teams type d’événement passé uniquement dans les cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Azure Active Directory (Azure AD) ID de locataire passé dans tous les contextes.
+* `tenant.id`: ID de locataire Microsoft Azure Active Directory (Azure AD) passé dans tous les contextes.
 * `team`: transmis uniquement dans les contextes de canal, et non dans les conversations personnelles.
   * `id`: GUID pour le canal.
-  * `name`: nom de l’équipe passée uniquement en cas [d’événements de changement de nom d’équipe](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  * `name`: nom de l’équipe passée uniquement en cas [d’événements de changement de nom d’équipe](subscribe-to-conversation-events.md#team-renamed).
 * `channel`: transmis uniquement dans les contextes de canal, lorsque le bot est mentionné ou pour les événements dans les canaux dans les équipes, où le bot a été ajouté.
   * `id`: GUID pour le canal.
   * `name`: nom du canal passé uniquement en cas [d’événements de modification de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -238,10 +238,10 @@ Le code suivant montre un exemple d’objet channelData :
 
 Les messages reçus ou envoyés à votre bot peuvent inclure différents types de contenu de message.
 
-| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Remarques                                                                                   |
+| Format    | De l’utilisateur au bot | Du bot à l’utilisateur | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Texte enrichi  | ✔                | ✔                | Votre bot peut envoyer du texte enrichi, des images et des cartes. Les utilisateurs peuvent envoyer du texte enrichi et des images à votre bot.                                                                                        |
-| Images  | ✔                | ✔                | Maximum 1 024×1 024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
+| Images  | ✔                | ✔                | Maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.  |
 | Cartes     | ✖                | ✔                | Consultez la [référence de carte Teams](~/task-modules-and-cards/cards/cards-reference.md) pour les cartes prises en charge. |
 | Emojis    | ✔                | ✔                | Teams prend actuellement en charge les emojis via UTF-16, comme U+1F600 pour le visage grinçant. |
 
@@ -329,11 +329,11 @@ Pour améliorer votre message, vous pouvez inclure des images en tant que pièce
 
 ## <a name="picture-messages"></a>Messages d’image
 
-Les images sont envoyées en ajoutant des pièces jointes à un message. Pour plus d’informations sur les pièces jointes, consultez la [documentation de Bot Framework](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+Les images sont envoyées en ajoutant des pièces jointes à un message. Pour plus d’informations sur les pièces jointes, consultez [ajouter des pièces jointes multimédias aux messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Les images peuvent être au plus 1 024×1024 et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
+Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -401,7 +401,7 @@ Voici les codes d’état et leurs valeurs de code d’erreur et de message :
 | 403 | **Code** : `BotDisabledByAdmin` <br/> **Message** : l’administrateur client a désactivé ce bot. | Le locataire a bloqué le bot. |
 | 401 | **Code** : `BotNotRegistered` <br/> **Message** : Aucune inscription trouvée pour ce bot. | L’inscription de ce bot est introuvable. |
 | 412 | **Code** : `PreconditionFailed` <br/> **Message** : Échec de la condition préalable, veuillez réessayer. | Une condition préalable a échoué sur l’une de nos dépendances en raison de plusieurs opérations simultanées sur la même conversation. |
-| 404 | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation est introuvable. |
+| 404  | **Code** : `ConversationNotFound` <br/> **Message** : Conversation introuvable. | La conversation est introuvable. |
 | 413 | **Code** : `MessageSizeTooBig` <br/> **Message** : Taille du message trop grande. | La taille de la requête entrante était trop grande. |
 | 429 | **Code** : `Throttled` <br/> **Message** : Trop de demandes. Retourne également quand réessayer après. | Trop de demandes ont été envoyées par le bot. Pour plus d’informations, consultez [la limite de débit](~/bots/how-to/rate-limit.md). |
 
@@ -414,11 +414,11 @@ Voici les codes d’état et leurs valeurs de code d’erreur et de message :
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Menus de commande bot](~/bots/how-to/create-a-bot-commands-menu.md)
+> [Menus de commandes Bot](~/bots/how-to/create-a-bot-commands-menu.md)
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Envoyer des messages proactifs](~/bots/how-to/conversations/send-proactive-messages.md)
 * [S’abonner à des événements de conversation](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Envoyer et recevoir des fichiers via le bot](~/bots/how-to/bots-filesv4.md)
-* [Envoyer l’ID de locataire et l’ID de conversation aux en-têtes de requête du bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Envoyer l’ID de locataire et l’ID de conversation aux en-têtes de demande du bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
