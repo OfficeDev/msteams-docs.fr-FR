@@ -4,13 +4,13 @@ author: Rajeshwari-v
 description: Découvrez comment déployer un lien, ouvrir la vue des étapes et épingler un onglet avec l'application Microsoft Teams. Découvrez la vue des étapes et son utilisation en utilisant la carte adaptative à l'aide d'un exemple de code et d'un échantillon.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: high
-ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.localizationpriority: medium
+ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110294"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296958"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -22,7 +22,7 @@ La vue des étapes est un composant d’interface utilisateur en plein écran qu
 
 ## <a name="advantage-of-stage-view"></a>Avantage de la vue des étapes
 
-La vue des étapes permet d’obtenir une expérience plus transparente de l’affichage du contenu dans Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte, et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide ultérieur, ce qui entraîne un plus grand engagement de l’utilisateur avec votre application.
+L’Affichage étendu fournit une expérience plus transparente de l’affichage de contenu dans Teams. Les utilisateurs peuvent ouvrir et afficher le contenu fourni par votre application sans quitter le contexte et ils peuvent épingler le contenu à la conversation ou au canal pour un accès rapide ultérieur, ce qui entraîne un plus grand engagement de l’utilisateur avec votre application.
 
 ## <a name="stage-view-vs-task-module"></a>Vue des étapes et module de tâche
 
@@ -82,12 +82,12 @@ Le `invoke`type de demande doit être `composeExtension/queryLink`.
 
 Voici le processus d’appel de la vue d’étape :
 
-* Lorsque l'utilisateur sélectionne **Voir** , le robot reçoit une `invoke`demande. Le type de demande est `composeExtension/queryLink`.
+* Lorsque l'utilisateur sélectionne **Affichage** , le robot reçoit une `invoke`demande. Le type de demande st `composeExtension/queryLink`.
 * `invoke` La réponse du robot contient une carte adaptative `tab/tabInfoAction`avec le type.
 * Le robot répond avec un `200` code.
 
 > [!NOTE]
-> Sur les clients mobiles de Teams, l'invocation de la vue des étapes pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur Web par défaut de l'appareil. Le navigateur ouvre l'URL spécifié dans le `websiteUrl`paramètre de `TabInfo`l'objet.
+> Sur les clients mobiles de Teams, l'invocation de l’Affichage étendu pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur web par défaut de l'appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 
@@ -138,8 +138,8 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Chaîne | 64 | Cette propriété est un identifiant unique pour l'entité que l'onglet affiche. Ce champ est obligatoire.|
 | `name` | Chaîne | 128 | Cette propriété est le nom d'affichage de l'onglet dans l'interface du canal. Ce champ est facultatif.|
-| `contentUrl` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur de l'entité à afficher dans le canevas Teams. Ce champ est obligatoire.|
-| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// vers laquelle il faut pointer, si un utilisateur choisit de l'afficher dans un navigateur. Ce champ est obligatoire.|
+| `contentUrl` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur de l'entité à afficher dans le canevas Teams. Il s’agit d’un champ obligatoire.|
+| `websiteUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// vers laquelle il faut pointer, si un utilisateur choisit de l'afficher dans un navigateur. Il s’agit d’un champ obligatoire.|
 | `removeUrl?` | Chaîne | 2048 | Cette propriété est l'URL https:// qui pointe vers l'interface utilisateur à afficher lorsque l'utilisateur supprime l'onglet. Il s'agit d'un champ facultatif.|
 
 ## <a name="code-sample"></a>Exemple de code

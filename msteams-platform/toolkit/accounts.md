@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464299"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191193"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Préparer des comptes pour créer des applications Teams
 
@@ -28,7 +28,7 @@ Si vous avez un abonnement Visual Studio Enterprise ou Professionnel, les deux p
 
 ### <a name="microsoft-365-developer-program"></a>Programme de développement Microsoft 365
 
-Pour obtenir un compte de développeur Teams gratuit, rejoignez le programme Microsoft 365 développeurs et effectuez les étapes suivantes :
+Pour obtenir un compte de développeur Teams gratuit, rejoignez le programme Microsoft 365 pour les développeurs et effectuez les étapes suivantes :
 
 1. Accédez au[Programme pour les développeurs Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Sélectionnez **Rejoindre maintenant**.
@@ -53,7 +53,7 @@ Vous pouvez vous inscrire au programme pour les développeurs à l’aide d’un
 
 - **ID d’utilisateur Visual Studio**
 
-    L’ID d’utilisateur créé pour utiliser Visual Studio Professional ou l’abonnement Entreprise peut être utilisé pour rejoindre le programme de développement au sein de la galerie Visual Studio afin de bénéficier de tous les avantages en tant qu’abonné Visual Studio.
+    L’ID d’utilisateur créé pour utiliser Visual Studio Professional ou l’abonnement Entreprise peut être utilisé pour rejoindre le programme pour les développeurs au sein de la galerie Visual Studio afin de bénéficier de tous les avantages en tant qu’abonné Visual Studio.
 
 ## <a name="azure-account-to-host-backend-resources"></a>Compte Azure pour héberger des ressources principales
 
@@ -66,7 +66,7 @@ Si vous souhaitez héberger les ressources associées à votre application ou ac
 ## <a name="teams-custom-app-upload-or-sideload-permission"></a>Autorisation de chargement ou de chargement de version test d’une application personnalisée Teams
 
 > [!IMPORTANT]
-> Après avoir créé l’application, vous devez charger votre application dans Teams sans la distribuer. Ce processus est appelé **chargement indépendant**.
+> Après avoir créé l’application, vous devez charger votre application dans Teams sans la distribuer. Ce processus est connu sous le nom de **chargement de version test**.
 
    Vous pouvez vérifier si l’autorisation de chargement indépendant est activée à l’aide de Visual Studio Code ou du client Teams.
 
@@ -91,7 +91,7 @@ Si vous souhaitez héberger les ressources associées à votre application ou ac
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Charger une application personnalisée" border="true":::
 
-        Si vous ne parvenez pas à afficher l’option **Charger une application personnalisée**, cela indique que vous n’avez pas l’autorisation requise pour le chargement indépendant.
+        Si vous ne parvenez pas à afficher l’option Charger une application personnalisée,** cela indique que vous n’avez pas l’autorisation requise pour le chargement indépendant.
         * Pour un administrateur de locataire, activez le paramètre de chargement indépendant pour votre locataire ou organisation dans le Centre d’administration Teams.
         * Si vous n’êtes pas un administrateur de locataire, vous devez contacter votre administrateur de locataire pour activer le chargement indépendant.
 
@@ -131,5 +131,5 @@ Pour plus d’informations, consultez [Gérer les paramètres et les stratégies
 * [Créer une application Teams à l’aide du kit de ressources Teams](create-new-project.md)
 * [Provisionner des ressources cloud](provision.md)
 * [Déployer l’application Teams dans le cloud](deploy.md)
-* [Publier votre application Teams](TeamsFx-collaboration.md)
+* [Publier votre application Teams](../concepts/deploy-and-publish/appsource/publish.md)
 * [Gérer plusieurs environnements](TeamsFx-multi-env.md)

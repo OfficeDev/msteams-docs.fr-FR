@@ -3,15 +3,15 @@ title: Découvrez comment utiliser des modèles de pipeline CI/CD dans GitHub, A
 author: MuyangAmigo
 description: Modèles CI/CD
 ms.author: ruhe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 2242f5820495cc3004b7fcbf9c65bce94e7220d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 7f2e3c10fe7658ba7138aef8ddbc1028d5dcaca4
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111562"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297134"
 ---
 # <a name="set-up-cicd-pipelines"></a>Mettre en place des pipelines CI/CD
 
@@ -21,8 +21,8 @@ TeamsFx permet d’automatiser votre flux de travail de développement lors de l
 |Outils et modèles | Description |
 |---|---|
 |[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Action qui s’intègre à l’interface CLI TeamsFx.|
-|[Teams Toolkit dans Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension qui vous aide à développer une application Teams, ainsi que des workflows d’automatisation pour GitHub, Azure DevOps et Jenkins. |
-|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Outil en ligne de commande qui vous aide à développer une application Teams, ainsi que des workflows d’automatisation pour GitHub, Azure DevOps et Jenkins.|
+|[Teams Toolkit dans Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Extension Visual Studio Code qui vous aide à développer une application Teams et des flux de travail d’automatisation pour GitHub, Azure DevOps et Jenkins. |
+|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Outil en ligne de commande qui vous aide à développer une application Teams et des flux de travail d’automatisation pour GitHub, Azure DevOps et Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Modèles de script pour l’automatisation en dehors de GitHub, Azure DevOps ou Jenkins. |
 
 
@@ -131,7 +131,7 @@ Voici les modifications que vous pouvez apporter pour le script ou la définitio
 
 Voici les modifications que vous pouvez apporter pour le script ou la définition de workflow :
 
-1. Vérifiez que vous disposez d’un script de build npm ou personnalisez la façon dont vous générez dans le code Automation.
+1. Vérifiez que vous disposez d’un script de build npm ou personnalisez la façon dont vous générez dans le code d’automatisation.
 1. Vérifiez que vous disposez d’un script de test npm qui retourne zéro en cas de réussite ou modifiez les commandes de test.
 
 ### <a name="set-up-pipelines-with-jenkins"></a>Configurer des pipelines avec Jenkins
@@ -175,8 +175,8 @@ Pour configurer des pipelines avec Jenkins pour CI/CD :
 
 Voici quelques-unes des modifications que vous pouvez apporter à votre projet :
 
-1. Modifiez le mode de déclenchement du flux CI. La valeur par défaut consiste à utiliser les déclencheurs de **pollSCM** lorsqu’une nouvelle modification est envoyée dans la branche **dev**.
-1. Vérifiez que vous disposez d’un script de build npm ou personnalisez la façon dont vous générez dans le code Automation.
+1. Modifiez la façon dont le flux CI est déclenché. La valeur par défaut consiste à utiliser les déclencheurs de **pollSCM** lorsqu’une nouvelle modification est envoyée dans la branche **dev**.
+1. Vérifiez que vous disposez d’un script de build npm ou personnalisez la façon dont vous générez dans le code d’automatisation.
 1. Vérifiez que vous disposez d’un script de test npm qui retourne zéro en cas de réussite ou modifiez les commandes de test.
 
 
@@ -184,7 +184,7 @@ Voici quelques-unes des modifications que vous pouvez apporter à votre projet :
 
 Effectuez les étapes suivantes pour personnaliser le pipeline CD :
 
-1. Modifiez le flux de CD. La valeur par défaut consiste à utiliser les déclencheurs de `pollSCM` lorsqu’une nouvelle modification est envoyée dans la branche `main`.
+1. Modifiez le flux CD. La valeur par défaut consiste à utiliser les déclencheurs de `pollSCM` lorsqu’une nouvelle modification est envoyée dans la branche `main`.
 1. Modifiez les scripts de build si nécessaire.
 1. Supprimez les scripts de test si vous n’avez pas de tests.
 
@@ -203,7 +203,7 @@ Les scripts sont basés sur un outil de ligne de commande TeamsFx multiplateform
 > * Pour activer `@microsoft/teamsfx-cli` s’exécutant en mode CI, activez `CI_ENABLED` en `export CI_ENABLED=true`. En mode CI, `@microsoft/teamsfx-cli` est convivial pour CI/CD.
 > * Pour activer `@microsoft/teamsfx-cli` s’exécutant en mode non interactif, définissez une configuration globale avec la commande : `teamsfx config set -g interactive false`. En mode non interactif, `@microsoft/teamsfx-cli` n’invite pas les entrées.
 
-Veillez à configurer azure et Microsoft 365 les informations d’identification dans vos variables d’environnement en toute sécurité. Par exemple, si vous utilisez GitHub comme référentiel de code source, consultez [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Veillez à configurer azure et Microsoft 365 les informations d’identification dans vos variables d’environnement en toute sécurité. Par exemple, si vous utilisez GitHub comme référentiel de code source, consultez [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 
 ## <a name="provision-and-deploy-resources"></a>Provisionner et déployer des ressources
@@ -213,7 +213,7 @@ Pour provisionner et déployer des ressources ciblant Azure dans CI/CD, vous dev
 Procédez comme suit pour créer des principaux de service Azure :
 
 1. Inscrivez une application Microsoft Azure Active Directory (Azure AD) dans un seul locataire.
-2. Attribuez un rôle à votre application Azure AD pour accéder à votre abonnement Azure. Le rôle `Contributor` est recommandé.
+2. Attribuez un rôle à votre application Azure AD pour accéder à votre abonnement Azure. Le rôle `Contributor` est conseillé.
 3. Créez un secret d’application Azure AD.
 
 > [!TIP]
@@ -243,4 +243,4 @@ Procédez comme suit pour publier votre application :
 * [Démarrage rapide pour GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Créez votre premier pipeline Azure DevOps](/azure/devops/pipelines/create-first-pipeline)
 * [Créez votre premier pipeline Jenkins](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [Gérer vos applications avec le Portail des développeurs pour Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
+* [Gérer vos applications avec le Portail des développeurs pour Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md)

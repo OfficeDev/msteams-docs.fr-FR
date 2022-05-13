@@ -2,15 +2,15 @@
 title: Répondre à l’action d’envoi du module de tâche
 author: surbhigupta
 description: Décrit comment répondre à l’action d’envoi du module de tâche à partir d’une commande d’action d’extension de messagerie avec un message proactif, un autre module de tâche, un bot de carte adaptative, etc. à l’aide d’exemples de code.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dfd8b04c07c60231ed5dfdae4cc5acac2346fe2c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111492"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297197"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
@@ -204,7 +204,7 @@ La méthode de réponse est la même que [réponse à l’événement `fetchTask
 ## <a name="bot-response-with-adaptive-card"></a>Réponse du bot avec carte adaptative
 
 > [!NOTE]
-> La condition préalable pour obtenir la réponse du bot avec une carte adaptative est que vous devez ajouter l’objet `bot` au manifeste de votre application et définir l’étendue requise pour le bot. Utilisez le même ID que votre extension de message pour votre bot.
+> La condition préalable pour obtenir la réponse du bot avec une carte adaptative est que vous devez ajouter l’objet `bot` au manifeste de votre application et définir l’étendue requise pour le bot. Utilisez le même ID que l’extension de votre message pour votre bot.
 
 Vous pouvez également répondre au `submitAction` en insérant un message avec une carte adaptative dans le canal avec un bot. L’utilisateur peut afficher un aperçu du message avant de l’envoyer. Cela est utile dans les scénarios où vous collectez des informations auprès des utilisateurs avant de créer une réponse de carte adaptative, ou lorsque vous mettez à jour la carte après qu’une personne interagit avec elle.
 
@@ -548,7 +548,7 @@ Dans les scénarios où un bot envoie des messages pour le compte d’un utilisa
 
 Dans l’image suivante, à gauche se trouve un message de carte envoyé par un bot sans attribution d’utilisateur et à droite une carte envoyée par un bot avec attribution d’utilisateur.
 
-![bots d’attribution d’utilisateur](../../../assets/images/messaging-extension/user-attribution-bots.png)
+:::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="Bots d’attribution d’utilisateur":::
 
 Pour utiliser l’attribution d’utilisateur dans teams, vous devez ajouter l’entité de mention`OnBehalfOf` à `ChannelData` dans votre charge utile `Activity` envoyée à Teams.
 
@@ -602,7 +602,7 @@ La section suivante est une description des entités dans le tableau `OnBehalfOf
 | Exemple de nom           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Action d’extension de message Teams| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’envoi du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Recherche d’extension de message Teams   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Recherche d'extension des messages Teams   |  Décrit comment définir les commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante
 

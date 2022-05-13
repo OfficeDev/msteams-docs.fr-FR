@@ -2,23 +2,25 @@
 title: Extensions de messages
 author: surbhigupta
 description: Vue d’ensemble des extensions de messagerie sur la plateforme Microsoft Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c8814d7bd3b67ad88859eb381f1d7116fe1a5c43
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110385"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297141"
 ---
 # <a name="message-extensions"></a>Extensions de messages
 
-Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez ensuite renvoyer les résultats de cette interaction au client Microsoft Teams, généralement sous la forme d’une carte avec mise en forme enrichie. Ce document fournit une vue d’ensemble de l’extension de message, des tâches effectuées dans différents scénarios, du fonctionnement de l’extension de message, des commandes d’action et de recherche, et du déploiement de liens.
+Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez ensuite renvoyer les résultats de cette interaction au client Microsoft Teams, généralement sous la forme d’une carte avec mise en forme enrichie.
+
+Ce document fournit une vue d’ensemble de l’extension de message, des tâches effectuées dans différents scénarios, du fonctionnement de l’extension de message, des commandes d’action et de recherche, et du déploiement de liens.
 
 L’image suivante affiche les emplacements à partir desquels les extensions de message sont appelées :
 
-![emplacement de l'extension du message](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="emplacement de l'extension du message":::
 
 > [!NOTE]
 > L'@mention des extensions de message n'est plus prise en charge dans la boîte de composition.
@@ -48,7 +50,9 @@ Il existe deux types de commandes d’extension de message, la commande d’acti
 
 Les commandes d'action sont utilisées pour présenter aux utilisateurs une fenêtre pop-up modale pour collecter ou afficher des informations. Lorsque l'utilisateur soumet le formulaire, votre service web répond en insérant un message dans la conversation directement ou en insérant un message dans la zone de composition de messages. Après cela, l’utilisateur peut envoyer le message. Vous pouvez chaîner plusieurs formulaires ensemble pour des flux de travail plus complexes.
 
-Les commandes d’action sont déclenchées à partir de la zone de composition de message, de la zone de commande ou d’un message. Lorsque la commande est invoquée à partir d'un message, la charge utile JSON initiale envoyée à votre robot comprend l'intégralité du message à partir duquel elle a été invoquée. L’image suivante affiche le module de tâche de commande d’action d’extension de message : ![module de tâche de commande d’action d’extension de message](~/assets/images/task-module.png)
+Les commandes d’action sont déclenchées à partir de la zone de composition de message, de la zone de commande ou d’un message. Lorsque la commande est invoquée à partir d'un message, la charge utile JSON initiale envoyée à votre robot comprend l'intégralité du message à partir duquel elle a été invoquée. L'image suivante affiche le module de tâches de la commande d’action de l'extension de message :
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="Module de tâches de la commande d’action de l’extension de message":::
 
 ### <a name="search-commands"></a>Commandes de recherche
 
@@ -57,7 +61,7 @@ Les commandes de recherche permettent aux utilisateurs de rechercher des informa
 Les cartes sont déclenchées à partir de la zone de composition des messages ou de la boîte de commande et non à partir d'un message. Ils ne peuvent pas être déclenchés à partir d’un message.
 L'image suivante affiche le module de tâches de la commande de recherche d'extension de message :
 
-![commande de recherche d’extension de message](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="Commande de recherche d’extension de message":::
 
 > [!NOTE]
 > Pour plus d’informations sur les cartes, voir [ce que sont les cartes](../task-modules-and-cards/what-are-cards.md).
@@ -67,7 +71,7 @@ L'image suivante affiche le module de tâches de la commande de recherche d'exte
 Un service web est appelé lorsqu’une URL est collée dans la zone de composition du message. Cette fonctionnalité est appelée déploiement de liens. Avec de déploiement de lien, votre application peut s’inscrire pour recevoir une activité lorsque les URL avec un domaine particulier sont collées dans la zone rédaction d’un message. Votre service web peut « déployer » l’URL dans une carte détaillée, en fournissant plus d’informations que la carte d’aperçu du site web standard. Vous pouvez ajouter des boutons pour permettre aux utilisateurs d’agir immédiatement sans quitter le client Microsoft Teams.
 Les images suivantes affichent la fonctionnalité de déploiement de lien lorsqu’un lien est collé dans l’extension de message :
 
-![déployer le lien](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="déployer le lien":::
 
 ![Déploiement de lien](../assets/images/messaging-extension/link-unfurl.gif)
 

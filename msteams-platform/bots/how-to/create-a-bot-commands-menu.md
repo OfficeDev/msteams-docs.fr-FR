@@ -3,15 +3,15 @@ title: Créer un menu de commandes pour votre bot
 author: surbhigupta
 description: Découvrez comment créer un menu de commandes pour votre bot Microsoft Teams avec des exemples de code.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: '@mention de conversation de composition de message dans le menu commande'
-ms.openlocfilehash: 37d4c5f451efe9fe2caf137a89d12cdbbdb178d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111842"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296965"
 ---
 # <a name="bot-command-menus"></a>Menus de commandes du bot
 
@@ -41,15 +41,17 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 
 1. Ouvrez Teams et sélectionnez **Apps** dans le volet gauche. Dans la page **applications**, recherchez **App Studio**, puis sélectionnez **Ouvrir**.
    > [!NOTE]
-   > Si vous n’avez pas **App Studio**, vous pouvez le télécharger. Pour plus d'informations, voir [l'installation d'App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
+   > Si vous n’avez pas **App Studio**, vous pouvez la télécharger. Pour plus d'informations, voir [l'installation d'App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
-    :::image type="content" source="/media/AppStudio.png" alt-text="l’installation d’app studio"lightbox="media/AppStudio.png"border="true":::
+  > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
 
-2. Dans **App Studio**, sélectionnez l’onglet de **l’éditeur de manifeste**. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, consultez [mettre à jour un package d’application](~/get-started/deploy-csharp-app-studio.md).
+  :::image type="content" source="/media/AppStudio.png" alt-text="l’installation d’app studio"lightbox="media/AppStudio.png"border="true":::
+
+2. Dans **App Studio**, sélectionnez l’onglet de **Éditeur de manifeste**. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, voir [Mettre à jour un package d’application](~/get-started/deploy-csharp-app-studio.md).
 
 3. Dans le volet gauche de **l’éditeur de manifeste** et dans la section **fonctionnalités**, sélectionnez **Bots**.
 
-4. Dans le volet droit de **l’éditeur de manifeste** et dans la section **commandes**, sélectionnez **Ajouter**. L’écran **Nouvelle commande** s’affiche.
+4. Dans le volet droit de **Éditeur de manifeste** et dans la section **commandes**, sélectionnez **Ajouter**. L’écran **Nouvelle commande** s’affiche.
 
     :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="Sélectionnez le package d’application"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
 
@@ -190,7 +192,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-Vous pouvez analyser la partie **@Mention** du texte du message à l’aide d’une méthode statique fournie avec le Bot Framework. Il s’agit d’une méthode de la classe `TurnContext` nommée `remove_recipient_mention`.
+Vous pouvez analyser la partie **@Mention** du texte du message à l’aide d’une méthode statique fournie avec le Bot Framework. C’est une méthode de la classe `TurnContext` appelée `remove_recipient_mention`.
 
 Le code Python permettant d’analyser la **\@mention** partie du texte du message est la suivante :
 
@@ -207,7 +209,7 @@ Pour permettre le bon fonctionnement de votre code de bot, vous devez suivre que
 Voici les meilleures pratiques du menu de commandes :
 
 * Restez simple : le menu du bot est destiné à présenter les fonctionnalités clés de votre bot.
-* Restez bref : les options de menu ne doivent pas être longues et ne doivent pas être des instructions de langage naturel complexes. Il doit s’agir de commandes simples.
+* Restez bref : les options de menu ne doivent pas être longues et ne doivent pas être des instructions de langage naturel complexes. Elles doivent être de simples commandes.
 * Gardez-le invocable : les commandes ou les actions du menu bot doivent toujours être disponibles, quel que soit l’état de la conversation ou la boîte de dialogue dans lequel se trouve le bot.
 
 > [!NOTE]

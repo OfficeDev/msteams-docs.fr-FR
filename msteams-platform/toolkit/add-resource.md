@@ -3,15 +3,15 @@ title: Ajouter des ressources à vos applications Teams
 author: MuyangAmigo
 description: Décrit l’ajout de ressources du Kit de ressources Teams
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d2377dae24c26679125d9d50b354b7e9f549be31
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 50cd3de693f70fd0c8414408bd6f4e6d3332d544
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111856"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297204"
 ---
 # <a name="add-cloud-resources-to-your-teams-app"></a>Ajouter des ressources cloud à votre application Teams
 
@@ -65,7 +65,7 @@ TeamsFx s’intègre aux services Azure pour les scénarios suivants :
 
 - [Azure Functions](/azure/azure-functions/functions-overview) : solution sans serveur pour répondre à vos exigences à la demande, telles que la création d’API web pour votre backend d’applications Teams.
 - [Base de données SQL Azure](/azure/azure-sql/database/sql-database-paas-overview) : moteur de base de données PaaS (Platform-as-a-Service) qui vous sert de magasin de données d’applications Teams.
-- [Gestion des API Azure](/azure/azure-sql/database/sql-database-paas-overview) : passerelle d’API pouvant être utilisée pour gérer les API créées pour les applications Teams et les publier pour les utiliser sur d’autres applications, telles que les applications Power.
+- [Gestion des API Azure](deploy.md) : passerelle d’API pouvant être utilisée pour gérer les API créées pour les applications Teams et les publier pour les utiliser sur d’autres applications, telles que les applications Power.
 - [Azure Key Vault](/azure/key-vault/general/overview) : protégez les clés de chiffrement et d’autres clés secrètes utilisées par les applications et les services cloud.
 
 ## <a name="add-cloud-resources"></a>Ajouter des ressources cloud
