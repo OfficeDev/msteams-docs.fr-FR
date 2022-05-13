@@ -3,15 +3,15 @@ title: Événements de conversation
 author: WashingtonKayaker
 description: Comment utiliser les événements de conversation de votre bot Microsoft Teams, les mises à jour des événements de canal, les événements des membres de l’équipe et les événements de réaction aux messages avec des exemples de code.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction au message du canal du bot d’événements
-ms.openlocfilehash: 6d086ef2896a6fd19a128bcf4f1c8b363a21c5b3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111541"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297155"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
