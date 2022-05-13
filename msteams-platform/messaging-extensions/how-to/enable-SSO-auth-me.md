@@ -2,19 +2,19 @@
 title: Prise en charge de l’authentification unique pour vos extensions de messages
 author: KirtiPereira
 description: Découvrez comment activer la prise en charge de l’authentification unique pour vos extensions de messagerie avec des exemples de code.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111254"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296944"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Prise en charge de l’authentification unique pour les extensions de messages
 
-La prise en charge de l’authentification unique (SSO) est désormais disponible pour les extensions de messages et le déploiement de liens. L’activation de l’authentification unique pour les extensions de messages par défaut actualise le jeton d’authentification, ce qui réduit le nombre de fois où vous devez entrer les informations d’identification de connexion pour Microsoft Teams.
+La prise en charge de l’authentification unique (SSO) est désormais disponible pour les extensions de message et le déploiement de liens. L’activation de l’authentification unique pour les extensions de message par défaut actualise le jeton d’authentification, ce qui réduit le nombre de fois où vous devez saisir les informations d’identification de connexion pour Microsoft Teams.
 
 Ce document vous guide sur la façon d’activer l’authentification unique et de stocker votre jeton d’authentification, si nécessaire.
 

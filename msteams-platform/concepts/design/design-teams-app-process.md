@@ -2,15 +2,15 @@
 title: Processus de conception des applications
 author: heath-hamilton
 description: Obtenez une idée générale de comment et quand vous pouvez utiliser les outils et ressources Microsoft pour concevoir une application Microsoft Teams efficace.
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111268"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297218"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Processus de conception des applications Microsoft Teams
 
@@ -20,7 +20,7 @@ Il existe de nombreux outils et ressources pour concevoir votre application Micr
 
 ## <a name="plan-your-app"></a>Programmez votre application
 
-Pour concevoir une application Teams de qualité, il faut comprendre ce que vous voulez que l'application fasse et comment vous pensez que les gens vont l'utiliser. Toutefois, avant de commencer la conception, répondez aux questions suivantes :
+Concevoir une application Teams de haute qualité nécessite de comprendre ce que vous voulez que l’application fasse et comment vous pensez que les gens l’utiliseront. Avant de commencer à concevoir, cependant, répondez aux questions suivantes :
 
 * Qui sont vos utilisateurs ?
 * Quel est leur problème ?
@@ -113,7 +113,7 @@ Tout comme la phase de conception, vous pouvez utiliser ces composants d'interfa
 
 Que vous commenciez à travailler sur votre application ou que vous soyez sur le point d'avoir une application prête à être mise en production, nous vous recommandons de consulter régulièrement les ressources suivantes :
 
-* **Directives de validation de la boutique Microsoft Teams** : fournit des normes que toutes les applications Teams doivent respecter, et pas seulement les applications figurant dans la boutique. Pour plus d'informations, voir les [directives](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) .
+* **Directives de validation du magasin Microsoft Teams** : Fournit des normes que toutes les applications Teams doivent respecter, et pas seulement les applications répertoriées dans le magasin. Pour plus d’informations, consultez les [consignes](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Meilleures pratiques de conception** : Ces documents et le kit d'interface utilisateur fournissent les meilleures pratiques pour concevoir des applications de haute qualité. Par exemple, consultez les [meilleures pratiques pour la conception de robots](~/bots/design/bots.md#best-practices).
 
 ## <a name="see-also"></a>Voir aussi

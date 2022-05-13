@@ -4,12 +4,12 @@ description: Décrit les cartes et leur utilisation dans des bots, des connecteu
 ms.localizationpriority: high
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104454"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191256"
 ---
 # <a name="cards"></a>Cartes
 
@@ -36,7 +36,7 @@ Teams utilise des cartes dans trois endroits différents :
 
 ## <a name="cards-in-connectors"></a>Cartes dans les connecteurs
 
-Les cartes ont d’abord été définies comme partie d’Outlook et d’Office 365 et sont désormais utilisées dans le cadre des Connecteurs Office 365. Comme de nombreuses applications Office 365, Teams prend en charge les connecteurs. Pour obtenir plus d’informations, voir [Connecteurs Office 365 pour Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). Vous trouverez la spécification des cartes dans les connecteurs dans la [référence de carte de message actionnable](/outlook/actionable-messages/card-reference).
+Les cartes ont d’abord été définies comme partie d’Outlook et d’Office 365 et sont désormais utilisées dans le cadre des Connecteurs Office 365. Comme de nombreuses applications Office 365, Teams prend en charge les connecteurs. Pour obtenir plus d’informations, voir [créer des connecteurs Office 365](../webhooks-and-connectors/how-to/connectors-creating.md). Vous trouverez la spécification des cartes dans les connecteurs dans la [référence de carte de message actionnable](/outlook/actionable-messages/card-reference).
 
 ## <a name="cards-in-bots"></a>Cartes dans les bots
 

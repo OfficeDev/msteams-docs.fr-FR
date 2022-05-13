@@ -1,21 +1,21 @@
 ---
 title: Conception de votre application personnelle
-description: Découvrez comment concevoir une application personnelle Teams et obtenir le Kit d’interface utilisateur Microsoft Teams, créer des composants, tels que le tableau de bord, le formulaire, le tableau de tâches pour l’expérience Mobile et Bureau. Découvrez les meilleures pratiques pour le développement d’applications personnelles.
+description: Apprenez à concevoir une application personnelle Teams et obtenez le kit d’interface utilisateur Microsoft Teams, créez des composants, tels qu’un tableau de bord, un formulaire, un tableau des tâches pour l’expérience mobile et de bureau. Découvrez les meilleures pratiques pour développer des applications personnelles.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: Modèle de formulaire de tableau de bord iframe de l’onglet du bot de navigation web de l’application personnelle du kit d’interface utilisateur
-ms.openlocfilehash: 51087d0f055130e822d837d9e78eda5b1b28966a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111814"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297232"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Concevoir votre application personnelle pour Microsoft Teams
 
-Une application personnelle peut être un bot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un emplacement pour créer ou afficher du contenu, d’autres fois il offre à l’utilisateur une vue d’ensemble de tout ce qui lui appartient lorsque l’application a été configurée sous forme d’onglet dans plusieurs canaux.
+Une application personnelle peut être un robot, un espace de travail privé ou les deux. Parfois, il fonctionne comme un endroit pour créer ou afficher du contenu, d’autres fois, il offre à l’utilisateur une vue d’ensemble de tout ce qui lui appartient lorsque l’application a été configurée comme un onglet dans plusieurs canaux.
 
 Pour guider la conception de votre application, les informations suivantes décrivent et illustrent comment les utilisateurs peuvent ajouter, utiliser et gérer des applications personnelles dans Teams.
 
@@ -36,7 +36,7 @@ Les utilisateurs peuvent ajouter une application personnelle à partir du menu v
 
 Avec un espace de travail privé, les utilisateurs peuvent afficher le contenu de l’application qui leur est significatif dans un emplacement central sans quitter Teams.
 
-(Remarque d’implémentation : l’espace de travail privé est basé sur [*l’onglet personnel*](../../build-your-first-app/build-personal-tab.md) fonctionnalité.)
+(Remarque d’implémentation : l’espace de travail privé est basé sur [*l’onglet personnel*](../../tabs/how-to/create-personal-tab.md) fonctionnalité.)
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomie : application personnelle (espace de travail privé)
 
@@ -89,7 +89,7 @@ Utilisez l’un des modèles et composants Teams suivants pour vous aider à con
 
 ## <a name="use-a-personal-app-bot"></a>Utiliser une application personnelle (bot)
 
-Les applications personnelles peuvent inclure un bot pour les conversations individuelles et les notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur la planche graphique). Les utilisateurs interagissent avec le bot dans un onglet que vous spécifiez.
+Les applications personnelles peuvent inclure un bot pour les conversations en tête-à-tête et les notifications privées (par exemple, lorsqu’un collègue publie un commentaire sur le plan de travail). Les utilisateurs interagissent avec le bot dans un onglet que vous spécifiez.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomie : application personnelle (bot)
 
