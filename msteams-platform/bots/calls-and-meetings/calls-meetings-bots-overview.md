@@ -2,14 +2,14 @@
 title: Bots d’appels et de réunions en ligne
 description: Découvrez comment vos applications Microsoft Teams peuvent interagir avec les utilisateurs à l’aide de la voix et de la vidéo à l’aide d’API Microsoft Graph pour les appels et les réunions en ligne, et en savoir plus sur les flux multimédias en temps réel
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: appel d’appels audio vidéo IVR voice online réunions en temps réel flux multimédia bot
-ms.openlocfilehash: 6a21980a81e462ef278f060ebbad81ee3e941300
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65112010"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297169"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots d’appels et de réunions en ligne
 
@@ -111,3 +111,4 @@ Le média en temps réel fait référence à des scénarios dans lesquels le mé
 * [Configurer un standard automatique](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Configurer la réponse automatique pour les salles Microsoft Teams sur les appareils mobiles vidéo Android et Teams](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Stratégie d’enregistrement Teams](/MicrosoftTeams/teams-recording-policy)
+* [Utilisation de l’API de communication dans Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)

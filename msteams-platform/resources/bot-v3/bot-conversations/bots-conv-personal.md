@@ -2,15 +2,15 @@
 title: Conversations en tête-à-tête avec des bots
 description: Décrit le scénario de bout en bout d’une conversation en tête-à-tête avec un bot dans Microsoft Teams
 keywords: scenarios teams en tête-à-tête, bot de conversation en tête-à-tête
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: d38285c212416d81a2108524946f0f9732a8dae9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: eb08b542c707d9f520912cd04ca5b1b2b740d81c
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111940"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297190"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Avoir une conversation personnelle (en tête-à-tête) avec un bot Microsoft Teams
 
@@ -33,4 +33,4 @@ Selon l’expérience que vous souhaitez créer, le bot peut avoir besoin de tra
 
 ## <a name="best-practice-welcome-messages-in-personal-conversations"></a>Bonne pratique : messages d’accueil dans les conversations personnelles
 
-Votre bot doit [envoyer de manière proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et seulement la première fois) qu’un utilisateur lance une conversation personnelle avec votre bot. Cette recommandation ne s’applique pas aux premiers contacts dans un canal.
+Votre bot doit [envoyer de manière proactive](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) un message de bienvenue à une conversation personnelle la première fois (et seulement la première fois) qu’un utilisateur lance une conversation personnelle avec votre bot. Cette recommandation ne s'applique pas aux premiers contacts dans un canal.

@@ -2,15 +2,15 @@
 title: Déploiement de lien
 author: surbhigupta
 description: Découvrez comment ajouter un déploiement de lien avec l’extension de messagerie dans une application Microsoft Teams avec un manifeste d’application ou manuellement à l’aide d’exemples et d’exemples de code.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111247"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297183"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
@@ -25,7 +25,7 @@ Ce document vous guide sur la façon d’ajouter un déploiement de lien à votr
 
 L’extension de message Azure DevOps utilise le déploiement de liens pour rechercher les URL collées dans la zone de message de composition pointant vers un élément de travail. Dans l’image suivante, un utilisateur a collé une URL pour un élément de travail dans Azure DevOps, que l’extension de message a résolue dans une carte :
 
-![Exemple de déploiement de lien](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemple de déploiement de lien":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Ajouter un déploiement de lien au manifeste de votre application
 
@@ -38,9 +38,9 @@ Pour ajouter un déploiement de lien à votre manifeste d’application, ajoutez
 
 1. Ouvrez **App Studio** à partir du client Microsoft Teams, puis sélectionnez l’onglet **Éditeur de manifeste**.
 1. Chargez le manifeste de votre application.
-1. Dans la page **Extension de message**, ajoutez le domaine que vous souhaitez rechercher dans la section **Gestionnaires de messages** . L’image suivante explique le processus :
+1. Dans la page **Extension de message**, ajoutez le domaine que vous souhaitez rechercher dans la section **Gestionnaires de messages**. L'image suivante explique le processus :
 
-    ![section gestionnaires de messages dans App Studio](~/assets/images/link-unfurling.png)
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Section gestionnaires de messages dans App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Ajouter le déploiement manuel du lien
 
