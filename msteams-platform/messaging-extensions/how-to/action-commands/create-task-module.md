@@ -2,15 +2,15 @@
 title: Créer et envoyer le module de tâches
 author: surbhigupta
 description: Apprenez à gérer l'action initiale d'invocation et à répondre avec un module de tâche à partir d'une commande d'extension de messagerie d'action à l'aide d'exemples de code et d'échantillons.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5daf262bfad3c88477ec0a1104e45b7cb9848aac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 207355a797b6a52caad634981208c9314ea38401
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110350"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297000"
 ---
 # <a name="create-and-send-the-task-module"></a>Créer et envoyer le module de tâches
 
@@ -22,12 +22,12 @@ Vous pouvez créer le module de tâches en utilisant une carte adaptative ou une
 
 ## <a name="the-initial-invoke-request"></a>La demande initiale d'invocation
 
-Lors de la demande initiale d'invocation, votre service reçoit un `Activity`objet de type `composeExtension/fetchTask`, et vous devez répondre avec`task` un objet contenant soit une carte adaptative, soit une URL vers la vue Web intégrée. Outre les propriétés standard de l'activité du bot, les données utiles de l'invocation initiale contiennent les métadonnées de demande suivantes :
+Au cours de la demande d'invocation initiale, votre service reçoit un `Activity`objet de type`composeExtension/fetchTask` , et vous devez répondre avec un`task` objet contenant soit une carte adaptative, soit une URL vers la vue Web intégrée. En plus des propriétés standard de l'activité du bot, la charge utile de l'invocation initiale contient les métadonnées de demande suivantes :
 
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête. Il doit être `invoke`. |
-|`name`| Type de commande qui est émise à votre service. Il doit être `composeExtension/fetchTask`. |
+|`name`| Type de commande envoyée à votre service. Il doit être `composeExtension/fetchTask`. |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
@@ -36,7 +36,7 @@ Lors de la demande initiale d'invocation, votre service reçoit un `Activity`obj
 |`channelData.team.id`| Identification de l'équipe (si la demande a été faite dans un canal). |
 |`value.commandId` | Contient le numéro d'identification de la commande qui a été invoquée. |
 |`value.commandContext` | Le contexte qui a déclenché l'événement. Il doit être `compose`. |
-|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être `default`, `contrast` ou `dark`. |
+|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être`default` ,`contrast` ou`dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -77,7 +77,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête. Il doit être `invoke`. |
-|`name`| Type de commande qui est émise à votre service. Il doit être `composeExtension/fetchTask`. |
+|`name`| Type de commande envoyée à votre service. Il doit être `composeExtension/fetchTask`. |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
@@ -86,7 +86,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |`ChannelData.legacy. replyToId`| Obtient ou définit le numéro d'identification du message auquel ce message est une réponse. |
 |`value.commandId` | Contient le numéro d'identification de la commande qui a été invoquée. |
 |`value.commandContext` | Le contexte qui a déclenché l'événement. Il doit être `compose`. |
-|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être `default`, `contrast` ou `dark`. |
+|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être`default` ,`contrast` ou`dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -128,7 +128,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête. Il doit être `invoke`. |
-|`name`| Type de commande qui est émise à votre service. Il doit être `composeExtension/fetchTask`. |
+|`name`| Type de commande envoyée à votre service. Il doit être `composeExtension/fetchTask`. |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
@@ -137,7 +137,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |`ChannelData.legacy. replyToId`| Obtient ou définit le numéro d'identification du message auquel ce message est une réponse. |
 |`value.commandId` | Contient le numéro d'identification de la commande qui a été invoquée. |
 |`value.commandContext` | Le contexte qui a déclenché l'événement. Il doit être `compose`. |
-|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être `default`, `contrast` ou `dark`. |
+|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être`default` ,`contrast` ou`dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -227,7 +227,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête. Il doit être `invoke`. |
-|`name`| Type de commande qui est émise à votre service. Il doit être `composeExtension/fetchTask`. |
+|`name`| Type de commande envoyée à votre service. Il doit être `composeExtension/fetchTask`. |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
@@ -238,7 +238,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |`ChannelData.legacy. replyToId`| Obtient ou définit le numéro d'identification du message auquel ce message est une réponse. |
 |`value.commandId` | Contient le numéro d'identification de la commande qui a été invoquée. |
 |`value.commandContext` | Le contexte qui a déclenché l'événement. Il doit être `compose`. |
-|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être `default`, `contrast`, ou `dark`. |
+|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être`default` ,`contrast` , ou`dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -293,7 +293,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête. Il doit être `invoke`. |
-|`name`| Type de commande qui est émise à votre service. Il doit être `composeExtension/fetchTask`. |
+|`name`| Type de commande envoyée à votre service. Il doit être `composeExtension/fetchTask`. |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
@@ -304,7 +304,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |`ChannelData.legacy. replyToId`| Obtient ou définit le numéro d'identification du message auquel ce message est une réponse. |
 |`value.commandId` | Contient le numéro d'identification de la commande qui a été invoquée. |
 |`value.commandContext` | Le contexte qui a déclenché l'événement. Il doit être `compose`. |
-|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être `default`, `contrast` ou `dark`. |
+|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être`default` ,`contrast` ou`dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -402,7 +402,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête. Il doit être `invoke`. |
-|`name`| Type de commande qui est émise à votre service. Il doit être `composeExtension/fetchTask`. |
+|`name`| Type de commande envoyée à votre service. Il doit être `composeExtension/fetchTask`. |
 |`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
 |`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
 |`from.aadObjectId`| Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
@@ -410,7 +410,7 @@ Les propriétés de l'activité de la charge utile lorsqu'un module de tâche es
 |`channelData.source.name`| Le nom de la source à partir de laquelle le module de tâche est invoqué. |
 |`value.commandId` | Contient le numéro d'identification de la commande qui a été invoquée. |
 |`value.commandContext` | Le contexte qui a déclenché l'événement. Il doit être `compose`. |
-|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être `default`, `contrast`, ou `dark`. |
+|`value.context.theme` | Le thème client de l'utilisateur, utile pour le formatage des vues Web intégrées. Il doit être`default` ,`contrast` , ou`dark`. |
 
 ### <a name="example"></a>Exemple
 
@@ -983,9 +983,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="code-sample"></a>Exemple de code
 
-| Nom de l'échantillon           | Description | .NET    | Node.js   |
+| Exemple de nom           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Action d'extension du message de l'équipe| Décrit comment définir les commandes d'action, créer le module de tâches et répondre à l'action de soumission du module de tâches. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Action d’extension de message Teams| Décrit comment définir des commandes d’action, créer un module de tâche et répondre à l’action d’envoi du module de tâche. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 |Recherche d'extension des messages Teams   |  Décrit comment définir les commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>Étape suivante

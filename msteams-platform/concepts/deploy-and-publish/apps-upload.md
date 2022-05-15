@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952333"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191200"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
@@ -59,7 +59,7 @@ Si votre application ne parvient pas à charger une version test ou si vous renc
 
 ## <a name="manage-your-apps"></a>Gérer vos applications
 
-Gérer vos applications permet aux utilisateurs de disposer d’un emplacement dédié pour gérer, mettre à jour et supprimer leurs applications, autorisations et abonnements sur le client Teams. Les utilisateurs peuvent installer les applications à partir de **Gérer vos applications**.
+Gérer vos applications permet aux utilisateurs d'avoir un endroit dédié pour gérer, mettre à jour et supprimer leurs applications, permissions et abonnements sur le client Teams. Les utilisateurs peuvent installer les applications à partir de **gérer vos applications**.
 
 ### <a name="access-your-app"></a>Accéder à votre application
 
@@ -81,7 +81,7 @@ Teams propose plusieurs façons d’ouvrir des applications. Pour plus d'informa
 
 Vous n'avez pas besoin de charger à nouveau votre application si vous apportez des modifications au code (celles-ci sont reflétées dans Teams en temps réel). Cependant, vous devez réinstaller si vous modifiez des configurations d'application.
 
-Si une mise à jour est disponible pour votre application, l’option **Mise à jour disponible** est activée. Pour mettre à jour, suivez les étapes :
+Si une mise à jour est disponible pour votre application, l'option **Mise à jour disponible est activée**. Pour mettre à jour, suivez les étapes suivantes :
 
 1. Sélectionnez **Mettre à jour disponible** pour afficher la mise à jour.
 
@@ -115,7 +115,7 @@ Pour supprimer l’application de Teams, suivez les étapes :
 ## <a name="next-step"></a>Étape suivante
 
 > [!div class="nextstepaction"]
-> [Utiliser votre application Teams](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
+>[Créer des applications pour les réunions Teams](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## <a name="see-also"></a>Voir aussi
 
