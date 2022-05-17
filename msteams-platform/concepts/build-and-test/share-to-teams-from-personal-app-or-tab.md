@@ -1,17 +1,17 @@
 ---
-title: Partager vers Teams à partir d’une application ou d’un onglet personnel
+title: Partager dans Teams à partir d’une application ou d’un onglet personnel
 description: Découvrez comment ajouter le partage dans Teams incorporé sur votre application ou onglet personnel
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Partager Teams partager sur Teams
-ms.openlocfilehash: 7ece44c3b0a48ad2ce0ad72aed5ba9efc9cf57c2
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+keywords: Partager Teams – Partager dans Teams
+ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685700"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439362"
 ---
-# <a name="share-to-teams-from-personal-app-or-tab"></a>Partager vers Teams à partir d’une application ou d’un onglet personnel
+# <a name="share-to-teams-from-personal-app-or-tab"></a>Partager dans Teams à partir d’une application ou d’un onglet personnel
 
 > [!NOTE]
 > Le partage vers Teams est actuellement disponible uniquement en [préversion publique des développeurs](../../resources/dev-preview/developer-preview-intro.md).
@@ -43,6 +43,7 @@ microsoftTeams.sharing.shareWebContent({
           {
             type: 'URL',
             url: '<URL to be shared>',
+            message: 'Default message to be loaded in the compose box',
             preview: true
           }
         ]
@@ -55,6 +56,7 @@ La charge utile contient les paramètres suivants :
 |---|---|
 | `type` | Le type doit être `URL` |
 | `url` | `URL` à partager |
+|`message`| Message par défaut à charger dans la zone de composition |
 | `preview` | Définir pour `true` activer la préversion d’URL |
 
 L’image suivante montre l’option Partager vers Teams :
@@ -63,7 +65,7 @@ L’image suivante montre l’option Partager vers Teams :
 
 ## <a name="response-codes"></a>Codes de réponse
 
-Le tableau suivant fournit les codes de réponse :
+Le tableau suivant présente les codes de réponse :
 
 |Code de réponse|Description|
 |---|---|
@@ -71,7 +73,7 @@ Le tableau suivant fournit les codes de réponse :
 | **404** | Le fichier spécifié est introuvable à l’emplacement donné. |
 | **500** | Erreur interne rencontrée lors de l’exécution de l’opération requise. |
 | **501** | L’API n’est pas prise en charge dans le contexte actuel. |
-| **1000** | Autorisations refusées par l’utilisateur. |
+| **1 000** | Autorisations refusées par l’utilisateur. |
 | **2000** | Problème réseau. |
 | **3000** | Le matériel sous-jacent ne prend pas en charge la fonctionnalité. |
 | **4000** | Un ou plusieurs arguments ne sont pas valides. |
@@ -80,9 +82,9 @@ Le tableau suivant fournit les codes de réponse :
 | **7000** | La plateforme a limité la demande en raison de l’appel trop fréquent de l’API. |
 | **8000** | L’utilisateur a abandonné l’opération. |
 | **9000** | Le code de plateforme est ancien et n’implémente pas cette API. |
-| **10000** | La valeur de retour est trop grande et a dépassé nos limites de taille. |
+| **10 000** | La valeur de retour est trop grande et a dépassé nos limites de taille. |
 
-## <a name="limitations"></a>Limites
+## <a name="limitations"></a>Limitations
 
 Limitations à l’ajout d’un partage à Teams bouton :
 
