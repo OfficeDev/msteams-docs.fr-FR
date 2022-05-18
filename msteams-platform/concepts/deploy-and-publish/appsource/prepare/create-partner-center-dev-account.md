@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 6e348cc0db5c9b197b985b144105924c2c40669a
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 7d5e6d4d345f94e893a494c6dea2e719aece9da6
+ms.sourcegitcommit: ef582a5ac33e815854d58f2f1faeb06aa2d761ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501913"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65443900"
 ---
 # <a name="create-a-partner-center-developer-account"></a>Créer un compte de développeur Espace partenaires
 
@@ -207,6 +207,18 @@ Les ressources suivantes peuvent également vous aider :
 <br>
 
 </details>
+
+## <a name="update-apple-developer-id-on-partner-center"></a>Mettre à jour l’ID de développeur Apple sur l’Espace partenaires
+
+Pour permettre aux utilisateurs d’installer votre application sur la plateforme Teams iOS, vous devez mettre à jour votre ID de développeur Apple dans Microsoft Espace partenaires. Pour mettre à jour votre ID de développeur Apple, procédez comme suit :
+
+1. Connectez-vous à[Microsoft Espace partenaires](https://partner.microsoft.com/dashboard/home) à l’aide des informations d’identification d’administrateur général.
+1. Sélectionnez l’icône des paramètres dans le coin supérieur droit de la page.
+1. Accédez à la section **Informations juridiques** sous **Profil de l’organisation** dans le volet de gauche.
+1. Sélectionnez l’onglet **Développeur**.
+1. Tapez votre ID de développeur Apple.
+1. Accédez à la page de l’offre et republiez votre application Teams.
+   Votre ID de développeur Apple est maintenant mis à jour dans Microsoft Espace partenaires.
 
 ## <a name="next-step"></a>Étape suivante
 

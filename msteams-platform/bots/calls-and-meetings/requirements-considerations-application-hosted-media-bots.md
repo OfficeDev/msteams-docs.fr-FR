@@ -2,19 +2,19 @@
 title: Exigences et considérations relatives aux bots multimédias hébergés par des applications
 description: Comprendre les exigences et considérations importantes, ainsi que les considérations relatives à l’extensibilité et aux performances liées à la création de bots multimédias hébergés par des applications pour Microsoft Teams à l’aide d’exemples de code et d’exemples.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: machine virtuelle Windows Server Azure multimédia hébergée par une application
 ms.date: 11/16/2018
-ms.openlocfilehash: 35ad133d898b53538f51c2ae4c699cd19368f9af
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 109d5bd29112b7c233fadd921b141f2287246498
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111982"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296979"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Exigences et considérations relatives aux bots multimédias hébergés par des applications
 
-Un bot multimédia hébergé par une application requiert la [`Microsoft.Graph.Communications.Calls.Media` bibliothèque .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) pour accéder aux flux multimédias audio et vidéo. Le bot doit être déployé sur une machine locale Windows Server ou un système d’exploitation invité Windows Server dans Azure.
+Un bot multimédia hébergé par une application nécessite la [`Microsoft.Graph.Communications.Calls.Media` bibliothèque .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) pour accéder aux flux multimédias audio et vidéo. Le bot doit être déployé sur une machine locale Windows Server ou un système d’exploitation invité Windows Server dans Azure.
 
 > [!NOTE]
 >
@@ -34,7 +34,7 @@ Un bot multimédia hébergé par une application requiert les éléments suivant
   
 * Le bot ne peut pas être déployé en tant qu’application web Azure.
 
-* Le bot doit s’exécuter sur une version récente de la bibliothèque .NET `Microsoft.Graph.Communications.Calls.Media`. Le bot doit utiliser la dernière version disponible du [package NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), ou une version qui n’a pas plus de trois mois. Les versions antérieures de la bibliothèque sont déconseillées et ne fonctionnent pas après quelques mois. La mise à jour de la bibliothèque `Microsoft.Graph.Communications.Calls.Media` garantit la meilleure interopérabilité entre le bot et Microsoft Teams.
+* Le bot doit s’exécuter sur une version récente de la bibliothèque .NET `Microsoft.Graph.Communications.Calls.Media`. Le bot doit utiliser la dernière version disponible du [package NuGet](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), ou une version datant de moins de trois mois. Les versions antérieures de la bibliothèque sont déconseillées et ne fonctionnent pas après quelques mois. La mise à jour de la bibliothèque `Microsoft.Graph.Communications.Calls.Media` garantit la meilleure interopérabilité entre le bot et Microsoft Teams.
 
 La section suivante fournit des détails sur l’emplacement des appels multimédias en temps réel.
 
@@ -51,7 +51,7 @@ Les bots multimédias hébergés par l’application doivent être directement a
 * Chaque instance de machine virtuelle hébergeant un bot multimédia hébergé par une application dans Azure doit être directement accessible à partir d’Internet à l’aide d’une adresse IP publique au niveau de l’instance (ILPIP).
   * Pour obtenir et configurer un ILPIP pour un service cloud Azure, consultez [vue d’ensemble de l’adresse IP publique classique au niveau de l’instance](/azure/virtual-network/virtual-networks-instance-level-public-ip).
   * Pour configurer un ILPIP pour un groupe de machines virtuelles identiques, consultez [IPv4 public par machine virtuelle](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine).
-* Le service hébergeant un bot multimédia hébergé par une application doit également configurer chaque instance de machine virtuelle avec un port public qui correspond à l’instance spécifique.
+* Le service hébergeant un bot multimédia hébergé par une application doit également configurer chaque instance de machine virtuelle avec un port public, qui correspond à l’instance spécifique.
   * Pour un service cloud Azure, cela nécessite un point de terminaison d’entrée d’instance. Pour plus d’informations, consultez [activer la communication pour les instances de rôle dans Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
   * Pour un groupe de machines virtuelles identiques, une règle NAT sur l’équilibreur de charge doit être configurée. Pour plus d’informations, consultez [réseaux virtuels et machines virtuelles dans Azure](/azure/virtual-machines/windows/network-overview).
 

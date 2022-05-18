@@ -2,14 +2,14 @@
 title: Choix d’une configuration pour tester et déboguer votre application
 description: Décrit les options de test et de débogage des applications Microsoft Teams dans un environnement local et hébergé dans le cloud.
 keywords: les équipes exécutent des applications de débogage sur un hôte hébergé dans le cloud local
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135758"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296993"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Choisissez une configuration pour tester et déboguer votre application Microsoft Teams
 
@@ -71,7 +71,7 @@ Vous pouvez utiliser n’importe quel service adressable en externe pour héberg
 
 ## <a name="load-and-run-your-experience"></a>Charger et exécuter votre expérience
 
-Pour charger et exécuter votre expérience dans Microsoft Teams, vous devez créer un package et le charger dans Teams. Pour plus d’informations, reportez-vous aux rubriques suivantes :
+Pour charger et exécuter votre expérience dans Microsoft Teams, vous devez créer un package et le charger dans Teams. Pour plus d’informations, consultez :
 
 * [Créer le package pour votre application Microsoft Teams](~/concepts/build-and-test/apps-package.md).
 * [Charger votre application dans Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
