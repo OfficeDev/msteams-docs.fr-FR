@@ -2,15 +2,15 @@
 title: Ajouter une authentification à votre extension de messagerie
 author: surbhigupta
 description: Découvrez comment ajouter l’authentification à une extension de messagerie à l’aide d’exemples de code et d’exemples
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135709"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297007"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -68,7 +68,7 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 
 > [!NOTE]
 >
-> * Pour que l’expérience de connexion soit hébergée dans une fenêtre contextuelle Teams, la partie domaine de l’URL doit figurer dans la liste de vos applications’ de domaines valides. Pour plus d’informations, consultez [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma du manifeste.
+> * Pour que l’expérience de connexion soit hébergée dans une fenêtre contextuelle Teams, la partie domaine de l’URL doit figurer dans la liste des domaines valides de votre application. Pour plus d’informations, consultez [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma du manifeste.
 > * La taille de la fenêtre contextuelle d’authentification peut être définie en incluant des paramètres de chaîne de requête de largeur et de hauteur, `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"`.
 
 ### <a name="start-the-sign-in-flow"></a>Démarrer le flux de connexion
@@ -81,7 +81,7 @@ Comme pour les autres expériences incorporées s’exécutant dans Microsoft Te
 
 Une fois la requête de connexion terminée et redirigée vers votre page, elle doit effectuer les étapes suivantes :
 
-1. Générez un code de sécurité, un nombre aléatoire. Vous devez mettre en cache ce code sur votre service, ainsi que les informations d’identification obtenues via le flux de connexion, tels que les jetons OAuth 2.0.
+1. Générez un code de sécurité : nombre aléatoire. Vous devez mettre en cache ce code sur votre service, ainsi que les informations d’identification obtenues via le flux de connexion, tels que les jetons OAuth 2.0.
 1. Appelez `microsoftTeams.authentication.notifySuccess` et transmettez le code de sécurité.
 
 À ce stade, la fenêtre se ferme et le contrôle est passé au client Teams. Le client publie à nouveau la requête utilisateur d’origine, ainsi que le code de sécurité dans la propriété `state` . Votre code peut utiliser le code de sécurité pour rechercher les informations d’identification stockées précédemment afin de terminer la séquence d’authentification, puis la requête de l’utilisateur.
