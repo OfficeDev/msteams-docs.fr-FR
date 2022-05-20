@@ -4,15 +4,15 @@ description: Découvrez les avantages de l’utilisation des connecteurs Shifts 
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Connecteurs Microsoft Teams kronos
 ms.author: lajanuar
-ms.openlocfilehash: 3a294d20bc2032df7ef5dfa225922e9dccabf1df
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111765"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604263"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
@@ -41,34 +41,6 @@ Ouvrir l’affichage des plannings dans Teams :
 L’affichage des plannings dans Teams est illustré dans l’image suivante :
 
 ![Ouvrir les plannings dans Teams](../assets/images/teams-open-shifts-view.png)
-
-## <a name="kronos-to-teams-shifts-connector"></a>Connecteur Kronos-to-Teams Shifts
-
-Avec le code open source, vous pouvez intégrer Kronos Workforce Central version 8.1 et versions ultérieures, avec Teams Shifts tels que l’application de bureau ou mobile Teams pour les scénarios de travail et de gestion de première ligne suivants :
-
-* Afficher le planification.
-
-* Publier et demander des plannings ouverts.
-
-* Permuter les plannings.
-
-* Demander un congé.
-
-* Proposer des plannings.
-
-Pour plus d’informations sur le déploiement du connecteur Kronos-to-Teams Shifts, consultez [Obtenir sur GitHub](https://aka.ms/KronosShiftsConnector).
-
-## <a name="jda-to-teams-shifts-connector"></a>Connecteur JDA-to-Teams Shifts
-
-Avec le code open source, vous pouvez intégrer JDA, par exemple BlueYonder version 17.2 et versions ultérieures, avec Teams Shifts tels que l’application de bureau ou mobile Teams pour les scénarios de travail et de gestionnaire de première ligne suivants :
-
-* Publier des groupes de plannings et de planification dans JDA et les afficher dans Teams.
-
-* Activer des scénarios de planification enrichis, notamment la demande de permutation de plannings et de congés.
-
-* Définir la disponibilité des utilisateurs à l’aide de [Microsoft API Graph pour Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
-
-Pour plus d’informations sur la contribution et la suggestion, consultez [Obtenir sur GitHub](https://aka.ms/JDAShiftsConnector).
 
 ## <a name="see-also"></a>Voir aussi
 
