@@ -3,14 +3,14 @@ title: Ajouter des bots aux applications Microsoft Teams
 description: Décrit comment commencer à développer des bots dans Microsoft Teams
 ms.topic: conceptual
 keywords: développement de bots teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: a9a3ad2e4e60b43e6730c06b8bd8d2cee824b3fc
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111702"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602263"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Ajouter des bots aux applications Microsoft Teams
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111702"
 Créez et connectez des bots intelligents pour interagir naturellement avec les utilisateurs de Microsoft Teams par le biais d’une conversation. Ou fournissez un bot simple basé sur des commandes, à utiliser comme votre « ligne de commande » pour votre expérience d’application Teams plus large. Vous pouvez créer un bot de notification uniquement, qui peut envoyer (push) des informations pertinentes à vos utilisateurs directement dans un canal ou un message direct. Vous pouvez même apporter votre bot basé sur Bot Framework existant et ajouter une prise en charge spécifique à Teams pour améliorer votre expérience.
 
 > [!IMPORTANT]
-> Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (GCC), mais pas dans GCC-High et department of Defense (DOD).
+> Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) et GCC-High, mais pas dans le ministère de la Défense (DOD).
 
 ![Exemple de bot aidant un utilisateur](~/assets/images/bot_example.png)
 

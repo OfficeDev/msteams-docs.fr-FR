@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: fonctionnalité d’appareil d’extensibilité des points d’entrée
-ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104027"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602249"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planifier votre application avec les fonctionnalités Teams
 
@@ -71,6 +71,14 @@ Comprendre l’utilisateur et ses préoccupations sont les premiers indicateurs 
 
 Cloud de la communauté du secteur public (GCC) est une copie axée sur le secteur public de l’environnement commercial. Le Ministère de la défense (DOD) et les sous-traitants fédéral doivent respecter les exigences strictes en matière de cybersécurité et de conformité. À cet effet, GCC-High a été créé pour répondre aux besoins du DOD et des sous-traitants fédéral. GCC-High est une copie du cloud DOD, mais il existe dans son propre environnement souverain. Le cloud DOD est conçu pour le département de la Défense uniquement.
 
+Les points de terminaison pour le cloud du secteur public sont les suivants :
+
+| Tenant | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+|Client Teams|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
+|Administrateur Teams |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
+|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
+
 Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pour GCC, GCC-High et DOD :
 
 | Fonctionnalités   | GCC | GCC-High | DOD |
@@ -78,12 +86,13 @@ Le tableau suivant inclut les fonctionnalités et la disponibilité de Teams pou
 | Applications appartenant à Teams comme dans les applications développées en interne | ✔️ L’application est activée si elle a GCC. | ✔️ L’application est activée si elle a GCC-High. | ✔️ L’application est activée si elle possède un DOD. |
 | Applications Microsoft | ✔️ Applications Microsoft conformes à GCC | ✔️ Applications Microsoft conformes à GCC-High | ✔️ Applications Microsoft conformes à DOD |
 | Applications 3p ou tierces | ✔️ Des applications tierces sont disponibles. Désactivées par défaut et l’administrateur client utilise sa propre discrétion pour les activer. | ❌ | ❌ |
-| Bots | ✔️ | ❌ | ❌ |
-| Applications de tabulation personnalisées ou métier |  ✔️ | ✔️ | ✔️ |
+| Applications de tabulation personnalisées ou métier |  ✔️ | ✔️(****Interface utilisateur de conformité**_) | ✔️(_ ***Interface utilisateur de conformité***) |
+| Bots personnalisés ou Lob | ✔️ | ✔️(****Interface utilisateur de conformité***) | ❌ |
+| Extensions de message personnalisées | ✔️ | ✔️ | ❌ |
 | Chargement indépendant d’applications | ✔️ | ❌ | ❌ |
-| Bots personnalisés ou Lob | ✔️ | ❌ | ❌ |
-| Extensions de message personnalisées | ❌ | ❌ | ❌ |
 | Connecteurs personnalisés | ❌ | ❌ | ❌ |
+
+****Interface utilisateur de conformité*** : en autorisant les communications avec des tiers, les clients acceptent que ces communications soient traitées par le tiers et non par Microsoft. Le client est seul responsable de l’atténuation des risques associés à la connexion de bots tiers dans ses services. Microsoft n’approuve pas et ne donne aucune garantie, expresse ou implicite, concernant la sécurité des tiers que le client autorise à se connecter à son service. L’activation des bots étend votre limite système au-delà de ce client en fonction du bot dont vous choisissez de tirer parti. Il est de votre responsabilité de vous assurer que cela répond à vos exigences de conformité, notamment FedRAMP, DFARS, ITAR, etc. Il est de votre responsabilité d’évaluer le risque et la conformité de tout point de terminaison et URL auxquels vous vous connectez.
 
 La liste suivante permet d’identifier la disponibilité de GCC, GCC-High et DOD pour les fonctionnalités suivantes :
 

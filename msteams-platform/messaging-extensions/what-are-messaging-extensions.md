@@ -5,16 +5,19 @@ description: Vue d’ensemble des extensions de messagerie sur la plateforme Mic
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297141"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602256"
 ---
 # <a name="message-extensions"></a>Extensions de messages
 
 Les extensions de messagerie permettent aux utilisateurs du client Microsoft Teams d’interagir avec votre service web par le biais de boutons et de formulaires. Elles peuvent effectuer des recherches, ou lancer des actions, dans un système externe à partir de la zone de rédaction de message, de la zone de commande ou d’un message. Vous pouvez ensuite renvoyer les résultats de cette interaction au client Microsoft Teams, généralement sous la forme d’une carte avec mise en forme enrichie.
+
+> [!IMPORTANT]
+> Les extensions de message sont disponibles dans les environnements Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) et GCC-High, mais pas dans l’environnement du ministère de la Défense (DoD).
 
 Ce document fournit une vue d’ensemble de l’extension de message, des tâches effectuées dans différents scénarios, du fonctionnement de l’extension de message, des commandes d’action et de recherche, et du déploiement de liens.
 

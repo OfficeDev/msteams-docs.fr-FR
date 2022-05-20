@@ -5,12 +5,12 @@ description: Une vue d’ensemble des onglets personnalisés sur la plateforme T
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103291"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602277"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
 
@@ -18,6 +18,8 @@ Les onglets Teams des pages web sensibles incorporées dans Microsoft Teams. Ce 
 
 > [!IMPORTANT]
 > Actuellement, les onglets personnalisés sont disponibles dans le Cloud de la communauté du secteur public (GCC), Cloud de la communauté du secteur public-High (GCC-High), et le Département de la Défense (DOD).
+>
+> Nous vous recommandons d’utiliser le Kit de développement logiciel (SDK) client Teams via [package npm](https://www.npmjs.com/package/@microsoft/teams-js) et de l’associer à votre application, car actuellement le Kit de développement logiciel (SDK) client Teams n’est pas disponible dans le réseau de diffusion de contenu Cloud du secteur public.
 
 L’image suivante montre les onglets personnels :
 
