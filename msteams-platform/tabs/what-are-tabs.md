@@ -5,12 +5,12 @@ description: Une vue d’ensemble des onglets personnalisés sur la plateforme T
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602277"
+ms.locfileid: "65611450"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
 
@@ -75,6 +75,9 @@ Vous pouvez utiliser l’une des méthodes suivantes pour créer des onglets :
 Un onglet personnalisé est déclaré dans le manifeste de l’application de votre package d’application. Pour chaque page web que vous souhaitez inclure en tant qu’onglet dans votre application, vous définissez une URL et une étendue. En outre, vous pouvez ajouter le [SDK client JavaScript Teams](/javascript/api/overview/msteams-client) à votre page, et appeler `microsoftTeams.initialize()`après le chargement de votre page. Teams affiche votre page et donne accès à des informations spécifiques à Teams, par exemple le client Teams exécute le thème sombre.
 
 Que vous choisissiez d’exposer votre onglet au sein du canal ou du groupe, ou dans une portée personnelle, vous devez présenter une \>[page de contenu](~/tabs/how-to/create-tab-pages/content-page.md) HTML <iframe dans votre onglet. Pour les onglets personnels, l’URL de contenu est définie directement dans le manifeste de votre application Teams par la propriété `contentUrl` du tableau `staticTabs`. Le contenu de votre onglet est le même pour tous les utilisateurs.
+
+> [!Note]
+> L’application Teams ne reconnaît pas les sous-iframes. Par conséquent, elle ne se charge pas s’il existe un iframe dans l’application d’onglet.
 
 Pour les onglets de canal ou de groupe, vous pouvez également créer une page de configuration supplémentaire. Cette page vous permet de configurer l’URL de la page de contenu, généralement à l’aide de paramètres de chaîne de requête d’URL pour charger le contenu approprié pour ce contexte. Cela est dû au fait que votre onglet de canal ou de groupe peut être ajouté à plusieurs conversations d’équipe ou de groupe. À chaque installation ultérieure, vos utilisateurs peuvent configurer l’onglet, ce qui vous permet d’adapter l’expérience selon les besoins. Lorsque les utilisateurs ajoutent ou configurent un onglet, une URL est associée à l’onglet présenté dans l’interface utilisateur Teams. La configuration d’un onglet ajoute simplement des paramètres supplémentaires à cette URL. Par exemple, lorsque vous ajoutez l’onglet Azure Boards, la page de configuration vous permet de choisir le tableau chargé par l’onglet. L’URL de la page de configuration est spécifiée par la `configurationUrl` propriété dans le `configurableTabs`tableau dans le manifeste de votre application.
 
