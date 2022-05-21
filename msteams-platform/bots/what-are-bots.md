@@ -5,19 +5,21 @@ description: Présentation des bots dans Microsoft Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: d37b35e46156777022a5b19a7ccf6de1ab2e0fb9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191249"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602291"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
 Un bot est également appelé chatbot ou bot de conversation. Il s’agit d’une application qui exécute des tâches simples et répétitives effectuées par des utilisateurs tels que le service clientèle ou le personnel de support technique. L’utilisation quotidienne de bots inclut des bots qui fournissent des informations sur la météo, qui effectuent des réservations au restaurant ou qui fournissent des informations concernant les voyages. Les interactions avec les bots peuvent être des questions et réponses rapides ou des conversations complexes.
 
 > [!IMPORTANT]
-> Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et mais ne le sont pas dans GCC-High et le Département de la Défense (DOD).
+> Actuellement, les bots sont disponibles dans le Cloud de la communauté du secteur public (GCC) et GCC-High, mais pas dans le département de la Défense (DOD).
+> 
+> Les applications Bot dans Microsoft Teams sont disponibles dans GCC-High par le biais d’[Azure Bot Service](/azure/bot-service/channel-connect-teams).
 
 Les bots de conversation permettent aux utilisateurs d’interagir avec votre service web à l’aide de texte, de cartes interactives et de modules de tâche.
 

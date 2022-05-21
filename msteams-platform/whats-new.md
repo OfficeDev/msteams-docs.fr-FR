@@ -4,12 +4,12 @@ description: Décrit toutes les nouvelles ou dernières fonctionnalités pour le
 ms.topic: reference
 ms.localizationpriority: high
 keywords: dernières mises à jour des nouveautés Teams ou aperçu développeur et fonctionnalités
-ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
+ms.openlocfilehash: a65a63ef7fafe8ab63e5c865349ff2da6c8869fa
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132708"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602284"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -22,6 +22,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 
 | Date | Update | Recherchez ici |
 | --- | --- | --- |
+|05/19/2022|Bots et extensions de message pour Cloud de la communauté du secteur public et GCCH| • Création de bots > [Vue d’ensemble](bots/what-are-bots.md) </br> • Build d’extensions de messages > [Vue d’ensemble](messaging-extensions/what-are-messaging-extensions.md) |
 |28/04/2022| Raisons courantes de l’échec de validation d’application | Distribuer votre application > Publier dans le magasin Teams > [Raisons courantes de l’échec de validation de l’application](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |04/20/2022 |  Mettre en place des pipelines CI/CD | Outils et SDK > Teams Toolkit for Visual Studio Code > [Mettre en place des pipelines CI/CD](toolkit/use-CICD-template.md)|
 |19/04/2022 | Téléchargez votre application dans Microsoft Teams | Distribuer votre application > [Télécharger votre application](concepts/deploy-and-publish/apps-upload.md)|
@@ -63,6 +64,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+|05/19/2022|Bots et extensions de message pour Cloud de la communauté du secteur public et GCCH| • Création de bots > [Vue d’ensemble](bots/what-are-bots.md) </br> • Build d’extensions de messages > [Vue d’ensemble](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Comportement de désinstallation pour une application personnelle avec un bot | Créer des bots > conversations de bot > des mises à jour de comportement de [désinstallation dans les applications personnelles avec des bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |04/22/2022| Aperçu du test pour les applications monétisées | Monétiser votre application > [Tester l’aperçu pour les applications monétisées](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |04/22/2022| Flux d’achats intégrés pour la monétisation des applications | Monétiser votre application > [achats in-app](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
