@@ -1,15 +1,14 @@
 ---
 title: Créer des liens plus étroits
-description: Décrit les liens profonds et comment les utiliser dans vos applications
+description: Découvrez comment décrire les liens profonds Teams et comment les utiliser dans vos applications.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: lien profond des équipes
-ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103922"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611456"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -69,7 +68,7 @@ Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un
 
 > [!NOTE]
 > Si le bot envoie un message contenant un `TextBlock` avec un lien profond, un nouvel onglet de navigateur est ouvert lorsque l’utilisateur sélectionne le lien. Cela se produit dans Chrome et dans l’application de bureau Microsoft Teams, tous deux exécutés sur Linux.
-> Si le bot envoie la même URL de lien profond dans un `Action.OpenUrl`, l’onglet Teams est ouvert dans l’onglet du navigateur actuel lorsque l’utilisateur sélectionne le lien. Un nouvel onglet de navigateur n’est ouvert.
+> Si le bot envoie la même URL de lien profond dans un `Action.OpenUrl`, l’onglet Teams est ouvert dans l’onglet du navigateur actuel lorsque l’utilisateur sélectionne le lien. Aucun nouvel onglet de navigateur n’est ouvert.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
@@ -79,19 +78,19 @@ Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 Les paramètres de requête sont les suivants :
 
 | Nom du paramètre | Description | Exemple |
 |:------------|:--------------|:---------------------|
-| `appId`&emsp; | ID de votre manifeste. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `appId`&emsp; | ID du Centre d’administration Teams. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | ID de l’élément dans l’onglet, que vous avez fourni lors de la [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md).|Liste des tâches123|
 | `entityWebUrl` ou `subEntityWebUrl`&emsp; | Champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet. | `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456` |
 | `entityLabel` ou `subEntityLabel`&emsp; | Étiquette de l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond. | Liste des tâches 123 ou » Tâche 456 |
 | `context.subEntityId`&emsp; | ID de l’élément dans l’onglet. |Tâche456 |
-| `context.channelId`&emsp; | ID de canal Microsoft Teams disponible à partir de l’onglet [contexte](~/tabs/how-to/access-teams-context.md). Cette propriété est disponible uniquement dans les onglets configurables avec une étendue d’**équipe**. Il n’est pas disponible dans les onglets statiques, qui ont une étendue de **personnel**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.channelId`&emsp; | ID de canal Microsoft Teams disponible à partir de l’onglet [contexte](~/tabs/how-to/access-teams-context.md). Cette propriété est disponible uniquement dans les onglets configurables avec une étendue d’**équipe**. Il n’est pas disponible dans les onglets statiques, qui ont une étendue **personnelle**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId disponible à partir du [contexte](~/tabs/how-to/access-teams-context.md) d’onglet pour la conversation de groupe et de réunion | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  La conversation est le seul contextType pris en charge pour les réunions | conversation |
 
@@ -167,10 +166,30 @@ Exemple : `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@cont
 Les paramètres de requête sont les suivants :
 
 * `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de la conversation. L’utilisateur qui effectue l’action est toujours inclus en tant que participant. Actuellement, le champ ID d’utilisateur prend en charge Microsoft Azure Active Directory Domain Services (Azure AD) UserPrincipalName, telle qu’une adresse e-mail uniquement.
-* `topicName` : champ facultatif pour le nom d’affichage de la conversation, dans le cas d’une conversation avec au moins 3 utilisateurs. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
+* `topicName` : champ facultatif pour le nom complet de la conversation, dans le cas d’une conversation avec au moins trois utilisateurs. Si ce champ n’est pas spécifié, le nom complet de la conversation est basé sur les noms des participants.
 * `message` : champ facultatif pour le texte du message que vous souhaitez insérer dans la zone de composition de l’utilisateur actuel lorsque la conversation est dans un état brouillon.
 
 Pour utiliser ce lien profond avec votre bot, spécifiez-le comme cible d’URL dans le bouton de votre carte ou appuyez sur l’action via le type `openUrl`action.
+
+## <a name="generate-deep-links-to-channel-conversation"></a>Générer des liens profonds vers la conversation du canal
+
+Utilisez ce format de lien profond pour accéder à une conversation particulière dans le thread du canal :
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Exemple : `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+Les paramètres de requête sont les suivants :
+
+* `channelId` : ID du canal de la conversation. Par exemple `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId` : ID de client tel que `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId` : ID de groupe du fichier. Par exemple, `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId` : ID de message parent de la conversation.
+* `teamName` : nom de l’équipe.
+* `channelName` : nom du canal de l’équipe.
+
+> [!NOTE]
+> Vous pouvez voir `channelId`and `groupId` dans l’URL du canal.
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>Générer des liens profonds vers un fichier dans le canal
 
@@ -196,7 +215,7 @@ Le format de lien profond suivant est utilisé dans un bot, un connecteur ou une
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-L’exemple de format suivant montre le lien profond vers les fichiers :
+L’exemple de format suivant illustre le lien profond vers les fichiers :
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
@@ -232,7 +251,7 @@ Les paramètres de requête sont les suivants :
 * `appID`: votre ID de manifeste, par exemple `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
 * `entityID`: ID d’élément que vous avez fourni lors de la [configuration de l’onglet](~/tabs/how-to/create-tab-pages/configuration-page.md). Par exemple, `tasklist123`.
-* `entityWebUrl` : Champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet - `https://tasklist.example.com/123`ou`https://tasklist.example.com/list123/task456`.
+* `entityWebUrl` : champ facultatif avec une URL de secours à utiliser si le client ne prend pas en charge le rendu de l’onglet – `https://tasklist.example.com/123` ou `https://tasklist.example.com/list123/task456`.
 * `entityName` : étiquette de l’élément dans votre onglet, à utiliser lors de l’affichage du lien profond, Liste des tâches 123 ou la tâche 456.
 
 Exemple : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
@@ -262,7 +281,7 @@ Les paramètres de requête sont les suivants :
 * `content` : champ facultatif pour le champ détails de la réunion.
 
 > [!NOTE]
-> Actuellement, la spécification de l’emplacement n’est pas prise en charge. Vous devez spécifier le décalage UTC, ce qui signifie des fuseaux horaires lors de la génération de vos heures de début et de fin.
+> Actuellement, la spécification de l'emplacement n'est pas prise en charge. Vous devez spécifier le décalage UTC, c'est-à-dire les fuseaux horaires lors de la génération de vos heures de début et de fin.
 
 Pour utiliser ce lien profond avec votre bot, vous pouvez le spécifier comme cible d’URL dans le bouton de votre carte ou appuyer sur l’action via le type `openUrl`action.
 
