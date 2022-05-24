@@ -92,26 +92,24 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Créer une application Teams.
           href: toolkit/create-new-project.md
+        - name: Préparer des comptes pour créer une application Teams
+          href: toolkit/accounts.md
         - name: Déboguer votre application Teams localement
           href: toolkit/debug-local.md
         - name: Déboguer les processus en arrière-plan
           href: toolkit/debug-background-process.md
-        - name: Préparer des comptes pour créer une application Teams
-          href: toolkit/accounts.md
         - name: Provisionner des ressources cloud
           href: toolkit/provision.md
         - name: Déployer l’application Teams dans le cloud
           href: toolkit/deploy.md
+        - name: Prévisualiser et personnaliser le manifeste de l'application Teams
+          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Publier des applications Teams à l’aide du Kit de ressources Teams
           href: toolkit/publish.md
         - name: Ajouter des fonctionnalités à l’application Teams
           href: toolkit/add-capability.md
         - name: Ajouter des ressources cloud à l’application Teams
           href: toolkit/add-resource.md
-        - name: Personnaliser le manifeste de l’application Teams
-          href: toolkit/TeamsFx-manifest-customization.md
-        - name: Aperçu du manifeste de l’application Teams
-          href: toolkit/TeamsFx-manifest-preview.md
         - name: Gérer plusieurs environnements
           href: toolkit/TeamsFx-multi-env.md
         - name: Collaboration avec d’autres développeurs sur Teams Toolkit
@@ -132,8 +130,6 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: Kit de développement logiciel client JavaScript Teams
       href: tabs/how-to/using-teams-client-sdk.md
-    - name: Kit de développement logiciel client JavaScript Teams v2 Preview
-      href: m365-apps/using-teams-client-sdk-preview.md
     - name: Node.js Bot Framework pour les bots et les extensions de messagerie (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: .NET Bot Framework pour les bots et les extensions de messagerie (GitHub)
@@ -421,6 +417,8 @@
       href: m365-apps/extend-m365-teams-personal-tab.md
     - name: Activer une extension de messagerie Teams pour Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
+    - name: Publier des applications Teams pour Microsoft 365
+      href: m365-apps/publish.md
 - name: Tester votre application
   items:
     - name: Présentation

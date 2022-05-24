@@ -3,20 +3,18 @@ title: Vue d’ensemble du kit de ressources Teams
 author: zyxiaoyuer
 description: Vue d’ensemble du Kit de ressources Teams, installation de Teams Toolkit et visite guidée des fonctionnalités du Kit de ressources
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: de249f060581c2d8e1f90408c8431fe451125ef2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.date: 05/17/2022
+ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111422"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654617"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
 
-> [!NOTE]
-> Actuellement, cette fonctionnalité est disponible dans **préversion publique des développeurs** uniquement.
 
 Teams Toolkit for Microsoft Visual Studio Code vous aide à créer et déployer des applications Teams avec une identité intégrée, un accès au stockage cloud, des données de Microsoft Graph et d’autres services dans Azure et Microsoft 365 avec une approche de configuration zéro. Pour le développement d’applications Teams, similaire au Kit de ressources Teams pour Visual Studio, vous pouvez utiliser l’[outil CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui se compose de toolkit `teamsfx`.
 Teams Toolkit vous permet de créer, déboguer et déployer votre application Teams directement à partir de Visual Studio Code. Le développement d’applications avec le kit de ressources présente les avantages suivants :
@@ -27,8 +25,6 @@ Teams Toolkit vous permet de créer, déboguer et déployer votre application Te
 * Services Azure et Microsoft 365 avec une approche de configuration zéro
 
 Teams Toolkit propose tous les outils nécessaires à la création d’une application Teams au même endroit.
-
-Pour le développement d’applications Teams, similaire au Kit de ressources Teams pour Visual Studio Code, vous pouvez utiliser l’['outil CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui se compose de `teamsfx` kit de ressources.
 
 ## <a name="user-journey-of-teams-toolkit"></a>Parcours utilisateur du Kit de ressources Teams
 
@@ -47,17 +43,17 @@ Les principaux jalons de ce parcours sont les suivants :
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>Installer teams Toolkit pour Visual Studio Code
 
 1. Ouvrez **Visual Studio Code.**
-1. Sélectionnez la vue Extensions (**Ctrl+Maj+X** / **⌘⇧-X** ou **Afficher > extensions**) :
+1. Sélectionnez la vue Extensions (**Ctrl+Maj+X** / **⌘⇧-X** ou **Afficher les extensions >**).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="installer":::
 
-1. Entrez du **Kit de ressources Teams** dans la zone de recherche :
+1. Entrez **Teams Toolkit** dans la zone de recherche.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-2.png" alt-text="Kit de ressources":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="Kit de ressources":::
 
-1. Sélectionnez **installer**:
+1. Sélectionnez **Installer**.
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="installer le kit de ressources":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="install toolkit 4.0.0":::
 
 > [!TIP]
 > Vous pouvez installer teams Toolkit à partir de [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
@@ -66,13 +62,13 @@ Les principaux jalons de ce parcours sont les suivants :
 
 Après l’installation du Kit de ressources, l’interface utilisateur du Kit de ressources Teams s’affiche comme indiqué dans l’image suivante :
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini-fonctions":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini-fonctions":::
 
-Vous pouvez sélectionner **Démarrage rapide** pour explorer le Kit de ressources Teams ou sélectionner **Créer une application Teams** pour créer un projet Teams. Si vous avez un projet Teams créé par Teams Toolkit v2.+ ouvert dans Visual Studio Code, vous verrez l’interface utilisateur du Kit de ressources Teams avec toutes les fonctionnalités, comme illustré dans l’image suivante : vous pouvez sélectionner **Démarrage rapide** pour explorer le Kit de ressources Teams, ou sélectionner **Créer une application Teams** pour créer un projet Teams. Vous pouvez afficher la liste de toutes les fonctionnalités du Kit de ressources lorsque vous créez ou ouvrez un projet existant dans Visual Studio Code barre latérale.
+Vous pouvez sélectionner **Prise en main** pour explorer le kit de ressources Teams, ou sélectionner **Créer une application Teams** pour créer un projet Teams. Si vous avez un projet Teams créé par Teams Toolkit ouvert dans Visual Studio Code, vous verrez Teams’interface utilisateur du Kit de ressources avec toutes les fonctionnalités, comme illustré dans l’image suivante :
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="Fonctions":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="Capture d’écran du kit de ressourcesteams":::
 
-Passons en revue les sujets abordés dans ce document :
+Examinons les sujets abordés dans ce document.
 
 ## <a name="accounts"></a>Comptes
 
@@ -86,21 +82,19 @@ Teams Toolkit vous permet de créer et de gérer plusieurs environnements, d’a
 
 Il permet aux développeurs et au propriétaire du projet d’inviter d’autres collaborateurs au projet TeamsFx pour déboguer, approvisionner et déployer le même projet TeamsFx.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Projet Teamsfx":::
+
 ## <a name="development"></a>Développement
 
 Teams Toolkit vous aide à créer et personnaliser votre projet d’application Teams, ce qui simplifie le développement d’applications Teams.
 
 ### <a name="create-a-new-teams-app"></a>Créer une application Teams.
 
-Il vous aide à démarrer avec le développement d’applications Teams en créant un projet Teams à l’aide du Kit de ressources Teams à l’aide de **Créer un projet** ou **Créer à partir d’exemples**.
+Il vous aide à commencer par Teams développement d’applications en créant un projet Teams à l’aide de Teams Toolkit à l’aide de **Créer un projet** ou **de Démarrer à partir d’un exemple**.
 
-### <a name="add-capabilities"></a>Ajouter des fonctionnalités
+### <a name="add-features"></a>Ajouter des fonctionnalités
 
-Il permet d’ajouter d’autres fonctionnalités Teams requises à l’application Teams pendant le processus de développement.
-
-### <a name="add-cloud-resources"></a>Ajouter des ressources cloud
-
-Il vous permet d’ajouter éventuellement des ressources cloud adaptées à vos besoins de développement.
+Il vous permet d’ajouter incrémentiellement des fonctionnalités de Teams supplémentaires telles que **Tab** ou **Bot**, ou d’ajouter éventuellement des ressources Azure telles que **Azure SQL Database** ou **Azure Key Vault**, qui correspond à vos besoins de développement à votre application Teams actuelle. Vous pouvez également ajouter **des flux de travail d’authentification unique** ou **CI/CD** pour votre application Teams. 
 
 ### <a name="edit-manifest-file"></a>Modifier le fichier manifeste
 
@@ -121,10 +115,6 @@ Il s’intègre à Azure Resource Manager qui vous permet de provisionner des re
 ### <a name="publish-to-teams"></a>Publier dans Teams
 
 Après avoir créé l’application, vous pouvez distribuer votre application à différentes étendues, telles qu’une personne, une équipe, une organisation ou n’importe qui. Publier dans Teams vous aide à publier votre application développée.
-
-### <a name="cicd-guide"></a>Guide CI/CD
-
-Il permet d’automatiser votre flux de travail de développement lors de la création d’une application Teams. Le guide CI/CD fournit des outils et des modèles pour vous permettre de commencer à configurer des pipelines CI ou CD.
 
 #### <a name="teamsfx-cli"></a>TeamsFx CLI
 
@@ -151,8 +141,7 @@ Nous allons explorer les fonctionnalités du Kit de ressources Teams.
 | **Développement** | &nbsp; | &nbsp; |
 | &nbsp; | Créer une application Teams. | Utilisez l’Assistant Kit de ressources pour préparer la génération de modèles automatiques de projet pour le développement d’applications. |
 | &nbsp; | Afficher des exemples | Sélectionnez l’un des 12 exemples d’applications du Kit de ressources Teams. Le kit de ressources télécharge le code de l’application à partir de GitHub et vous pouvez générer l’exemple d’application. |
-| &nbsp; | Ajouter des fonctionnalités | Ajoutez d’autres fonctionnalités Teams requises à l’application Teams pendant le processus de développement. |
-| &nbsp; | Ajouter des ressources cloud | Ajoutez des ressources cloud facultatives adaptées à votre application. |
+| &nbsp; | Ajouter des fonctionnalités | - Ajoutez d’autres fonctionnalités de Teams requises pour Teams application pendant le processus de développement. </br> - Ajoutez des ressources cloud facultatives adaptées à votre application. |
 | &nbsp; | Modifier le fichier manifeste | Modifiez l’intégration de l’application Teams au client Teams. |
 | **Déploiement** | &nbsp; | &nbsp; |
 | &nbsp; | Provisionner dans le cloud | Allouez des ressources Azure pour votre application. Teams Toolkit est intégré à Azure Resource Manager. |
@@ -160,12 +149,12 @@ Nous allons explorer les fonctionnalités du Kit de ressources Teams.
 | &nbsp; | Déployer à partir du cloud | Déployez le code source sur Azure. |
 | &nbsp; | Publier dans Teams | Publiez votre application développée et distribuez-la à des étendues telles que personnelles, d’équipe, de canal ou d’organisation. |
 | &nbsp; | Documentation pour les développeurs | Utilisez Developer Portal pour configurer et gérer votre application Teams. |
-| &nbsp; | Guide CI/CD | Automatiser votre flux de travail de développement lors de la création d’une application Teams. |
 | **Aide et de commentaires** | &nbsp; | &nbsp; |
-| &nbsp; | Démarrage rapide | Affichez l’aide du kit de ressources Teams Démarrage rapide dans Visual Studio Code.  |
+| &nbsp; | Démarrage rapide | Consultez l’aide de démarrage rapide du kit de ressources Teams dans Visual Studio Code.  |
+| &nbsp; | Didacticiel | Sélectionnez cette option pour accéder à différents didacticiels. |
 | &nbsp; | Documentation | Sélectionnez cette option pour accéder à la documentation du développeur Microsoft Teams. |
 | &nbsp; | Signaler des problèmes sur GitHub | Sélectionnez cette option pour accéder à la page GitHub et signaler tout problème. |
-|
+
 
 > [!TIP]
 > Parcourez les problèmes existants avant d’en créer un, ou visitez [balise StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) pour soumettre des commentaires.

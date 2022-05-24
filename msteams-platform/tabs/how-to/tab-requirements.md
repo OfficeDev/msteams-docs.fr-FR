@@ -3,15 +3,15 @@ title: Conditions préalables
 author: surbhigupta
 description: Chaque onglet de Microsoft Teams doit respecter ces exigences.
 keywords: canal de groupe des onglets Teams configurable
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110280"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654893"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
@@ -44,7 +44,7 @@ Veillez à respecter les conditions préalables suivantes lors de la création d
 | &nbsp; | Installer | Pour l’utilisation... |
 | --- | --- | --- |
 | **Obligatoire** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Environnement runtime JavaScript principal. Utilisez la dernière version de LTS v14.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Environnement runtime JavaScript principal. Utilisez la dernière version de LTS v16.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommandé) ou [Google Chrome](https://www.google.com/chrome/) | Un navigateur avec des outils de développement. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Environnements de build JavaScript, TypeScript ou SharePoint Framework (SPFx). |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET et le développement web** ou la charge de travail **de développement multiplateforme .NET Core** | .NET. Vous pouvez installer l’édition communauté gratuite de Visual Studio 2019. |

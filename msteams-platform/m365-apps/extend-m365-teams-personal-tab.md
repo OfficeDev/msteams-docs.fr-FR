@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653782"
+ms.locfileid: "65654562"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -131,9 +131,9 @@ Si votre application utilise des en-têtes de stratégie [de sécurité de conte
 1. Sélectionnez le nom de votre application d’onglet personnel pour ouvrir son inscription d’application.
 1. Sélectionnez **Exposer une API** (sous *Gérer*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du panneau *inscriptions d'applications* sur Portail Azure":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Autoriser les ID clients à partir du panneau *inscriptions d'applications* sur Portail Azure":::
 
-Dans la section **Applications clientes autorisées** , vérifiez que toutes les valeurs suivantes `Client Id` sont ajoutées :
+1. Dans la section **Applications clientes autorisées** , vérifiez que toutes les valeurs suivantes `Client Id` sont ajoutées :
 
 |Application client Microsoft 365 | ID du client |
 |--|--|
@@ -184,7 +184,7 @@ Pour afficher votre application en cours d’exécution dans Outlook sur Windows
 1. Dans la barre latérale, sélectionnez  **Autres applications**. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Outlook.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Outlook client de bureau pour afficher vos onglets personnels installés":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Outlook client de bureau pour afficher vos onglets personnels installés":::
 
 ### <a name="outlook-on-the-web"></a>Outlook sur le web
 
@@ -194,7 +194,7 @@ Pour afficher votre application dans Outlook sur le web :
 1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer et afficher un aperçu de votre application en cours d’exécution dans Outlook sur le web.
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de outlook.com pour afficher vos onglets personnels installés":::.
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de outlook.com pour afficher vos onglets personnels installés":::.
 
 ### <a name="office-on-windows"></a>Office pour Windows
 
@@ -204,7 +204,7 @@ Pour afficher votre application en cours d’exécution dans Office sur Windows 
 1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Office.
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Office client de bureau pour afficher vos onglets personnels installés":::.
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Office client de bureau pour afficher vos onglets personnels installés":::.
 
 ### <a name="office-on-the-web"></a>Office sur le web
 
@@ -214,7 +214,7 @@ Pour afficher un aperçu de l’exécution de votre application dans Office sur 
 1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Office sur le Web.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -236,7 +236,7 @@ Utilisez les [Microsoft Teams canaux de la communauté des développeurs](/micro
 
 Lors de la première exécution du débogage local pour Office ou Outlook, vous êtes invité à vous connecter à votre compte de locataire Microsoft 365 et à installer un certificat de test auto-signé. Vous serez également invité à installer manuellement Teams. Sélectionnez **Installer dans Teams** pour ouvrir une fenêtre de navigateur et installer manuellement votre application. Cliquez ensuite sur **Continuer** pour continuer à déboguer votre application dans Office/Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Boîte de dialogue Boîte à outils Teams installer":::
 
 Fournissez des commentaires et signalez les problèmes liés à l’expérience de débogage Teams Toolkit dans [Microsoft Teams Framework (TeamsFx).](https://github.com/OfficeDev/TeamsFx/issues)
 

@@ -1,19 +1,17 @@
 ---
 title: Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
 description: Voici les conditions préalables à l’extension de vos applications Teams dans Microsoft 365
-ms.date: 02/11/2022
+ms.date: 05/24/2022
+ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 483ae6982dd51a16573655ed14dc93577642ba4b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 6e4376d01a398400a7aaefbe1fee14f5547ff372
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111499"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654733"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
-
-> [!NOTE]
-> L’extension de l’application Teams sur Microsoft 365 est actuellement disponible uniquement dans [préversion publique des développeurs](~/resources/dev-preview/developer-preview-intro.md).
 
 L’environnement de développement pour étendre des applications Teams sur Microsoft 365 est similaire au développement Microsoft Teams. Cet article décrit les configurations spécifiques requises pour exécuter des versions d’évaluation de Microsoft Teams et des applications Microsoft Office afin d’afficher un aperçu des applications Teams s’exécutant dans Outlook et Office.
 
@@ -23,22 +21,26 @@ Pour la configuration de votre environnement de développement :
 >
 > * [Obtenir Microsoft 365 Développeur (Sandbox) et activer le chargement indépendant](#prepare-a-developer-tenant-for-testing)
 > * [inscrire votre client Microsoft 365 dans *des versions ciblées d’Office 365*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
-> * [Configurer votre compte pour accéder aux préversions d’Outlook et d’Office](#install-office-apps-in-your-test-environment)
+> * [Installer Canal bêta builds d’applications Microsoft 365 dans votre environnement de test](#install-office-apps-in-your-test-environment)
 > * [basculer vers la préversion développeur de Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*facultatif*] [installer l’extension Teams Toolkit pour Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*facultatif*] [installer l’extension Teams Toolkit pour Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>Préparer un locataire de développeur pour le test
 
 Vous avez besoin d’un locataire de bac à sable Microsoft 365 abonnement développeur pour configurer votre environnement de développement. Si vous n’en avez pas encore, créez [un locataire de bac à sable](/office/developer-program/microsoft-365-developer-program-get-started) ou obtenez un locataire de test au sein de votre organisation.
 
-Une fois que vous avez un locataire, vous devez activer le chargement indépendant pour votre locataire, consultez [activer le chargement indépendant](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading). Pour vérifier si le chargement indépendant est activé, connectez-vous à Teams, sélectionnez **Apps** , puis recherchez **option Charger une application personnalisée** .
+Vous devez également activer le chargement indépendant pour votre client :
 
-:::image type="content" source="images/teams-sideloading-enabled.png" alt-text="charger une option d’application personnalisée":::
+1. Connectez-vous à Centre d’administration Microsoft 365 (https://admin.microsoft.com) avec vos informations d’identification client de test et sélectionnez **Teams** dans le volet latéral pour ouvrir le *Centre d’administration Microsoft Teams*
+1. Sélectionnez : Applications Teams > Gérer les applications > **paramètres d’application à l’échelle de l’organisation**
+1. Sous **Applications personnalisées**, activez l’option *Interaction avec les applications personnalisées*
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Activer le chargement indépendant pour les applications personnalisées à partir du Centre d’administration Teams":::
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>Inscrire votre locataire de développeur pour les versions ciblées d’Office 365
 
-> [!IMPORTANT]
-> Reportez-vous aux dernières mises à jour sur [Microsoft Teams - Microsoft 365 blog des développeurs](https://devblogs.microsoft.com/microsoft365dev/) pour vérifier si Outlook.com et Office.com prise en charge des applications Teams sont disponibles pour votre client de test.
+> [!Important]
+> Il peut s'écouler jusqu'à cinq jours après la création d'un client [Microsoft 365 developer sandbox](/office/developer-program/microsoft-365-developer-program-get-started) et l'inscription aux [versions ciblées d'Office 365](#enroll-your-developer-tenant-for-office-365-targeted-releases) pour que les applications Teams chargées en version test apparaissent dans Outlook et Office.
 
 Pour inscrire votre locataire de test aux versions ciblées d’Office 365 :
 
@@ -57,9 +59,6 @@ Pour plus d’informations sur les options de publication d’Office 365, consul
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Installer des applications Office dans votre environnement de test
 
-> [!IMPORTANT]
-> Reportez-vous aux dernières mises à jour sur [Microsoft Teams - Microsoft 365 Blog des développeurs](https://devblogs.microsoft.com/microsoft365dev/) pour vérifier si la prise en charge d’Outlook pour Windows pour les extensions de message Teams est disponible pour votre client de test.
-
 Vous pouvez afficher un aperçu des applications Teams s’exécutant dans Outlook sur le bureau Windows à l’aide d’une build *Canal bêta récente*. Vérifiez si vous devez [modifier le canal de mise à jour Microsoft 365 Apps](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) pour que votre client de test installe une build Office 365 Canal bêta.
 
 Pour installer des applications Office 365 Canal bêta dans votre environnement de test :
@@ -70,27 +69,15 @@ Pour installer des applications Office 365 Canal bêta dans votre environnement 
 1. Ouvrez l’invite de commandes et accédez au chemin d’accès au dossier local.
 1. Exécutez `setup.exe /configure configuration-Office365-x86.xml` (ou utilisez le fichier *de x64.xml **, selon votre configuration).
 1. Ouvrez Outlook (client de bureau) et configurez le compte de messagerie à l’aide de vos informations d’identification de locataire de test.
-1. Ouvrez **fichier** > **compte Office** > **à propos d’Outlook**.  
-   Si le numéro de build est **14416** ou supérieur et que le canal est *Canal bêta*, vous exécutez Microsoft 365 build de canal bêta.
-1. Dans le coin supérieur droit, activez le bouton bascule **Bientôt disponible** .
+1. Ouvrez **Fichier** > **Compte Office** > **À propos d’Outlook** pour confirmer que vous exécutez un build de *canal bêta* Microsoft 365 de Outlook.
 
-    :::image type="content" source="images/outlook-coming-soon.png" alt-text="Option bascule « Bientôt disponible » dans Outlook":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Accédez à « À propos d’Outlook » à partir de votre compte Office pour vérifier que vous exécutez une build Canal bêta.":::
 
-> [!NOTE]
-> Vous devrez peut-être fermer Outlook et redémarrer votre ordinateur pour que le bouton apparaisse *Bientôt*.
+1. Vérifiez que *Microsoft Edge WebView2 Runtime* est installé. Ouvrez Windows **Démarrer** > **Applications et fonctionnalités** et recherchez « webview » :
 
-Vous pouvez vérifier la prise en charge du locataire de test pour votre compte de locataire :
+    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Recherchez « webview » sous « Applications et fonctionnalités » dans vos paramètres Windows":::
 
-* Pour les onglets personnels Teams exécutés sur office.com, outlook.com et Outlook pour Windows, connectez-vous avec vos informations d’identification de locataire de test et recherchez l’option points de suspension (**...**) dans la barre latérale gauche d’Office ou d’Outlook.
-
-    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="option Ellipses (« ... ») dans la barre latérale gauche d’Outlook":::
-
-* Pour les extensions de message dans outlook.com et Outlook pour Windows, recherchez l’option **Plus d’applications** en bas du volet De composition de message d’Outlook.
-
-    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="'option « Autres applications » dans le volet de composition de messages Outlook":::
-
-> [!NOTE]
-> Si vous avez choisi Canal versions bêta, mais que vous ne voyez pas ces options de sélection, il est probable que la prise en charge des fonctionnalités en préversion soit en cours de déploiement sur votre locataire. Pour obtenir les dernières mises à jour, consultez [blog des développeurs Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/).
+    S’il n’est pas répertorié, installez [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) dans votre environnement de test.
 
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>Basculer vers la préversion développeur de Teams
 
@@ -102,13 +89,15 @@ Veillez à passer à la [Public Developer Preview](../resources/dev-preview/deve
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Option de préversion publique pour les développeurs dans Teams":::
 
-## <a name="install-visual-studio-code-and-teams-toolkit-preview-extension"></a>Installer Visual Studio Code et l’extension Teams Toolkit (préversion)
+## <a name="install-visual-studio-code-and-teams-toolkit-extension"></a>Installer Visual Studio Code et l’extension Teams Toolkit
 
 Si vous le souhaitez, vous pouvez utiliser [Visual Studio Code](https://code.visualstudio.com/) pour étendre les applications Teams à Office et Outlook.
 
-L’extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` ou version ultérieure) fournit des commandes qui peuvent vous aider à modifier votre code Teams existant pour qu’il soit compatible avec Outlook et Office. Pour plus d’informations, consultez [activer l’onglet Personnel teams pour Office et Outlook](extend-m365-teams-personal-tab.md).
+L'extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0`ou ultérieure) fournit des commandes qui peuvent aider à modifier votre code Teams existant pour qu'il soit compatible avec Outlook et Office. Pour plus d'informations, voir [activer l'onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
+
+Créez ou mettez à jour une application Teams pour qu’elle s’exécute sur Microsoft 365 :
 
 * [Activer un onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md)
 * [activer une extension de message Teams pour Outlook](extend-m365-teams-message-extension.md)

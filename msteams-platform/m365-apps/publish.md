@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5adb6162222da155318aeb818fd681a664816
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653703"
+ms.locfileid: "65656077"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publier des applications Teams pour Microsoft 365
 
@@ -42,7 +42,7 @@ En tant qu’administrateur général, vous pouvez charger et préinstaller le p
 
 ## <a name="multitenant-distribution"></a>Distribution multilocataires
 
-Le processus de soumission [de Microsoft AppSource](https://appsource.microsoft.com/) (Place de marché commerciale Microsoft) pour les applications Teams activées pour Outlook et Office est le même que pour les applications Teams traditionnelles. La seule différence est que vous devez utiliser Teams manifeste d’application [version 1.13](../tabs/how-to/using-teams-client-sdk.md) dans votre package d’application, qui introduit la prise en charge de Teams  applications qui s’exécutent sur Microsoft 365.
+Le processus de soumission [de Microsoft AppSource](https://appsource.microsoft.com/) (Place de marché commerciale Microsoft) pour les applications Teams activées pour Outlook et Office est identique à celui des applications Teams traditionnelles. La seule différence est que vous devez utiliser Teams manifeste d’application [version 1.13](../tabs/how-to/using-teams-client-sdk.md) dans votre package d’application, ce qui introduit la prise en charge des applications Teams qui s’exécutent sur Microsoft 365.
 
 > [!TIP]
 > Utilisez Teams Portail des développeurs pour [valider votre package d’application](https://dev.teams.microsoft.com/validation) afin de résoudre les erreurs ou les avertissements avant de les envoyer au magasin Teams (via [Microsoft Partner Network](https://partner.microsoft.com/)).

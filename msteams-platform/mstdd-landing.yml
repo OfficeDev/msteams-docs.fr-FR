@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 356e0138d9cc33725ac87cd9a4385d201be01df4
-  ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+  ms.openlocfilehash: 1404ad66f8ce221f2f94186636cba7d7722d8f6e
+  ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65653300"
+  ms.locfileid: "65656102"
 landingContent:
 - title: Microsoft Build 2022
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
       url: m365-apps/overview.md
     - text: Conseils sur les applications et nouveautés de TeamsJS version 2.0.0
       url: tabs/how-to/using-teams-client-sdk.md
+    - text: Teams Toolkit version 4.0.0 pour Visual Studio Code est désormais en disponibilité générale
+      url: toolkit/teams-toolkit-fundamentals.md
     - text: Bots et extensions de message dans Cloud de la communauté du secteur public et GCCH
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 - title: Prise en main
@@ -53,6 +55,10 @@ landingContent:
       url: sbs-gs-csharp.yml
     - text: Créer une application avec Node.js
       url: sbs-gs-nodejs.yml
+    - text: Créer un bot de commandes avec JavaScript
+      url: toolkit/add-capability.md
+    - text: Générer un bot de notification avec JavaScript
+      url: toolkit/add-capability.md
 - title: Monétiser votre application
   linkLists:
   - linkListType: concept
@@ -129,6 +135,10 @@ landingContent:
       url: ~/sbs-meetings-sidepanel.yml
   - linkListType: tutorial
     links:
+    - text: Créer un bot de commandes avec JavaScript
+      url: toolkit/add-capability.md
+    - text: Générer un bot de notification avec JavaScript
+      url: toolkit/add-capability.md
     - text: Télécharger fichiers à Teams à partir d’un bot
       url: ~/sbs-file-handling-in-bot.yml
     - text: Générer une bulle de contenu de réunion
