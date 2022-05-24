@@ -1,25 +1,22 @@
 ---
 title: Étendre une application onglet personnel Teams sur Microsoft 365
 description: Étendre une application onglet personnel Teams sur Microsoft 365
-ms.date: 02/11/2022
+ms.date: 05/24/2022
 ms.topic: tutorial
-ms.custom: Microsoft 365 apps
-ms.localizationpriority: high
-ms.openlocfilehash: 873a6fa6207d122581e18cef0ae922ffca87762f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.custom: m365apps
+ms.localizationpriority: medium
+ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111520"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653782"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
-> [!NOTE]
-> *L’extension d’un onglet personnel Teams sur Microsoft 365* est actuellement disponible uniquement en [préversion publique pour les développeurs](../resources/dev-preview/developer-preview-intro.md). Les fonctionnalités incluses dans l’aperçu peuvent ne pas être terminées et peuvent faire l’objet de modifications avant de devenir disponibles dans la version publique. Elles sont fournies uniquement à des fins de test et d’exploration. Elles ne doivent pas être utilisées dans les applications de production.
-
 Les onglets personnels offrent un excellent moyen d’améliorer l’expérience Microsoft Teams. À l’aide d’onglets personnels, vous pouvez fournir à un utilisateur l’accès à son application directement dans Teams, sans que l’utilisateur ait à quitter l’expérience ou à se reconnecter. Avec cette préversion, les onglets personnels peuvent s’allumer dans d’autres applications Microsoft 365. Ce didacticiel illustre le processus de prise d’un onglet personnel Teams existant et de mise à jour pour qu’il s’exécute à la fois dans les expériences de bureau et web Outlook, ainsi que Office sur le Web (office.com).
 
-La mise à jour de votre application personnelle pour qu’elle s’exécute dans Outlook et Office Accueil implique les étapes suivantes :
+La mise à jour de votre application personnelle pour qu’elle s’exécute dans Outlook et Office implique les étapes suivantes :
 
 > [!div class="checklist"]
 >
@@ -27,16 +24,9 @@ La mise à jour de votre application personnelle pour qu’elle s’exécute dan
 > * Mettre à jour les références de votre Kit de développement logiciel (SDK) TeamsJS
 > * Modifier vos en-têtes de stratégie de sécurité du contenu
 > * Mettre à jour l’inscription de votre application Microsoft Azure Active Directory (Azure AD) pour l’authentification unique (SSO)
-
-Le test de votre application nécessite les étapes suivantes :
-
-> [!div class="checklist"]
->
-> * Inscrire votre locataire Microsoft 365 dans *Office 365 versions ciblées*
-> * Configurer votre compte pour accéder aux versions préliminaires des applications Outlook et Office
 > * Charger une version test de votre application mise à jour dans Teams
 
-Après ces étapes, votre application doit apparaître dans les versions préliminaires des applications Outlook et Office.
+Le reste de ce guide vous guide tout au long de ces étapes et vous montre comment afficher un aperçu de votre onglet personnel dans d’autres applications Microsoft 365.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -52,22 +42,37 @@ Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 ## <a name="prepare-your-personal-tab-for-the-upgrade"></a>Préparer votre onglet personnel pour la mise à niveau
 
-Si vous disposez d’une application onglet personnel existante, effectuez une copie ou une branche de votre projet de production pour tester et mettre à jour votre ID d’application dans le manifeste de l’application pour utiliser un nouvel identificateur (distinct de l’ID d’application de production).
+Si vous disposez d’une application onglet personnelle existante, effectuez une copie ou une branche de votre projet de production pour tester et mettre à jour votre ID d’application dans le manifeste de l’application afin d’utiliser un nouvel identificateur (distinct de l’ID d’application de production, à des fins de test).
 
-Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration décrites dans [Prise en main avec l’exemple de liste Todo](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application onglet personnel à l’aide de l’extension Teams Shared Computer Toolkit pour Visual Studio Code. Vous pouvez également commencer avec le même [exemple de liste Todo mis à jour pour le Kit de développement logiciel (SDK) TeamsJS v2 (préversion](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365)) et passer à [l’aperçu de votre onglet personnel dans d’autres expériences Microsoft 365](#preview-your-personal-tab-in-other-microsoft-365-experiences). L’exemple mis à jour est également disponible dans Teams Shared Computer Toolkit extension : *DevelopmentView* >  *samplesTodo* >  **List (Fonctionne dans Teams, Outlook et Office).**
+Si vous souhaitez utiliser un exemple de code pour suivre ce didacticiel, suivez les étapes de configuration de [l’exemple de liste Todo](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) pour créer une application onglet personnel à l’aide de l’extension Teams Toolkit pour Visual Studio Code, puis revenez à cet article pour la mettre à jour pour Microsoft 365.
 
-:::image type="content" source="images/toolkit-todo-sample.png" alt-text="Exemple de liste Todo (fonctionne dans Teams, Outlook et Office) dans Teams Shared Computer Toolkit":::
+Vous pouvez également utiliser une application Simple Sign-On *Hello World* de base déjà activée Microsoft 365 dans la section de démarrage rapide suivante, puis passer au chargement indépendant de [votre application dans Teams](#sideload-your-app-in-teams).
+
+### <a name="quickstart"></a>Démarrage rapide
+
+Pour commencer avec un [onglet personnel](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) déjà activé pour s’exécuter dans Outlook et Office, utilisez Teams extension Toolkit pour Visual Studio Code.
+
+1. À partir de Visual Studio Code, ouvrez la palette de commandes (`Ctrl+Shift+P`), tapez `Teams: Create a new Teams app`.
+1. Sélectionnez **l’onglet personnel activé pour l’authentification unique**.
+
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Exemple de liste Todo (fonctionne dans Teams, Outlook et Office) dans Teams Shared Computer Toolkit":::
+
+1. Sélectionnez un emplacement sur votre ordinateur local pour le dossier de l’espace de travail.
+1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Provision in the cloud` pour créer les ressources d’application requises (plan App Service, compte Stockage, Application de fonction, Identité managée) dans votre compte Azure.
+1. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et tapez `Teams: Deploy to the cloud` pour déployer l’exemple de code sur les ressources approvisionnées dans Azure et démarrer l’application.
+
+À partir de là, vous pouvez passer directement au [chargement indépendant de votre application dans Teams](#sideload-your-app-in-teams) et afficher un aperçu de votre application dans Outlook et Office. (Le manifeste de l’application et les appels d’API TeamsJS ont déjà été mis à jour pour Microsoft 365.)
 
 ## <a name="update-the-app-manifest"></a>Mettre à jour le manifeste de l’application
 
-Vous devez utiliser le schéma de [manifeste d’aperçu du développeur Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) et la `Microsoft 365 DevPreview` version du manifeste pour permettre à votre onglet personnel Teams de s’exécuter dans Office et Outlook.
+Vous devez utiliser la version `1.13` Teams schéma de [manifeste du développeur](../resources/schema/manifest-schema.md) pour permettre à votre onglet personnel Teams de s’exécuter dans Outlook et Office.
 
-Vous pouvez utiliser Teams Shared Computer Toolkit pour mettre à jour le manifeste de votre application ou appliquer les modifications manuellement :
+Vous avez deux options pour mettre à jour le manifeste de votre application :
 
 # <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
-1. Ouvrez la *palette de commandes* : `Ctrl+Shift+P`
-1. Exécutez la `Teams: Upgrade Teams manifest to support Outlook and Office apps` commande et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées.
+1. Ouvrez la palette de commandes : `Ctrl+Shift+P`.
+1. Exécutez la `Teams: Upgrade Teams manifest` commande et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées.
 
 # <a name="manual-steps"></a>[Étapes manuelles](#tab/manifest-manual)
 
@@ -75,47 +80,41 @@ Ouvrez le manifeste de votre application Teams et mettez à jour les `$schema` e
 
 ```json
 {
-    "$schema" : "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion" : "m365DevPreview"
+    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion" : "1.13"
 }
 ```
 
 ---
 
-Si vous avez utilisé Teams Toolkit pour créer votre application personnelle, vous pouvez également l'utiliser pour valider les modifications apportées à votre fichier manifeste et identifier les éventuelles erreurs. Ouvrez la palette `Ctrl+Shift+P` de commandes et recherchez **Teams : Valider le fichier manifeste** ou sélectionnez l’option dans le menu Déploiement du Teams Shared Computer Toolkit (recherchez l’icône Teams sur le côté gauche de Visual Studio Code).
-
-:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Shared Computer Toolkit’option « Valider le fichier manifeste » sous le menu « Déploiement »":::
+Si vous avez utilisé Teams Toolkit pour créer votre application personnelle, vous pouvez également l'utiliser pour valider les modifications apportées à votre fichier manifeste et identifier les éventuelles erreurs. Ouvrez la palette de commandes (`Ctrl+Shift+P`) et recherchez **Teams : Valider le fichier manifeste**.
 
 ## <a name="update-sdk-references"></a>Mettre à jour les références du Kit de développement logiciel (SDK)
 
-Pour s’exécuter dans Outlook et Office, votre application doit dépendre du package `@microsoft/teams-js@2.0.0-beta.1` npm (ou d’une version *bêta* ultérieure). Bien que le code avec des `@microsoft/teams-js` versions de niveau inférieur soit pris en charge dans Outlook et Office, les avertissements de dépréciation sont enregistrés et la prise en charge des `@microsoft/teams-js` versions de niveau inférieur dans Outlook et Office finiront par cesser.
+Pour s’exécuter dans Outlook et Office, votre application doit référencer le package `@microsoft/teams-js@2.0.0` npm (ou version ultérieure). Bien que le code avec des versions de niveau inférieur soit pris en charge dans Outlook et Office, les avertissements de dépréciation sont enregistrés et la prise en charge des versions de niveau inférieur de TeamsJS dans Outlook et Office finiront par cesser.
 
-Vous pouvez utiliser Teams Shared Computer Toolkit pour automatiser certaines modifications de code afin d’adopter la version suivante, mais si vous souhaitez effectuer les étapes manuellement, consultez Microsoft Teams version préliminaire du Kit de développement logiciel ([SDK) client JavaScript](using-teams-client-sdk-preview.md) pour plus d’informations`@microsoft/teams-js`.
+Vous pouvez utiliser Teams Toolkit pour identifier et automatiser les modifications de code nécessaires à la mise à niveau de versions 1.x TeamsJS vers TeamsJS version 2.0.0. Vous pouvez également effectuer les mêmes étapes manuellement ; Pour plus d’informations, reportez-vous à [Microsoft Teams Kit de développement logiciel (SDK) client JavaScript](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20).
 
-1. Ouvrez la *palette de commandes* : `Ctrl+Shift+P`
-1. Exécutez la commande `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`.
+1. Ouvrez la *palette de commandes* : `Ctrl+Shift+P`.
+1. Exécutez la commande `Teams: Upgrade Teams JS SDK and code references`.
 
-Une fois l’opération terminée, l’utilitaire aura mis à jour votre `package.json` fichier avec la dépendance du Kit de développement logiciel (SDK) TeamsJS (`@microsoft/teams-js@2.0.0-beta.1`ou version ultérieure), et vos fichiers et `*.js/.ts` vous-même `*.jsx/.tsx` seront mis à jour avec :
+Une fois l’opération terminée, votre fichier *package.json* fait référence `@microsoft/teams-js@2.0.0` (ou version ultérieure) et vos `*.js/.ts` fichiers sont `*.jsx/.tsx` mis à jour avec :
 
 > [!div class="checklist"]
->
-> * `package.json` références à la préversion du Kit de développement logiciel (SDK) TeamsJS
-> * Importer des instructions pour la préversion du Kit de développement logiciel (SDK) TeamsJS
-> * [Appels de fonction, d’énumération et d’interface](using-teams-client-sdk-preview.md#apis-organized-into-capabilities) vers la préversion du Kit de développement logiciel (SDK) TeamsJS
-> * `TODO`rappels de commentaires pour passer en revue les zones susceptibles d’être affectées par les modifications apportées à l’interface [de contexte](using-teams-client-sdk-preview.md#updates-to-the-context-interface)
-> * `TODO` rappels de commentaire pour garantir que la [conversion en fonctions promises à partir de fonctions de style de rappel](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) s’est bien passée à chaque site d’appel que l’outil a trouvé.
+> * Importer des instructions pour teams-js@2.0.0
+> * [Appels de fonction, d’énumération et d’interface](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) pour teams-js@2.0.0
+> * `TODO`rappels de commentaires signalant les zones susceptibles d’être affectées par les modifications apportées à l’interface [de contexte](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface)
+> * `TODO` rappels de commentaire pour [convertir des fonctions de rappel en promesses](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
 > Le code contenu dans *.html* fichiers n’est pas pris en charge par les outils de mise à niveau et nécessite des modifications manuelles.
 
-> [!NOTE]
-> Si vous souhaitez mettre à jour manuellement votre code, consultez Microsoft Teams version préliminaire du Kit de développement logiciel ([SDK) client JavaScript](using-teams-client-sdk-preview.md) pour en savoir plus sur les modifications requises.
 
 ## <a name="configure-content-security-policy-headers"></a>Configurer les en-têtes de stratégie de sécurité du contenu
 
-[Comme dans Microsoft Teams](/microsoftteams/platform/tabs/what-are-tabs), les applications d’onglet sont hébergées dans des Office et des clients web Outlook ([éléments iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)).
+Comme dans Microsoft Teams, les applications d’onglet sont hébergées dans des [éléments iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) dans Office et Outlook clients web.
 
-Si votre application utilise des en-têtes de stratégie de [sécurité de contenu](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP), vérifiez que vous autorisez tous les [ancêtres frame-ancestors suivants dans vos en-têtes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) CSP :
+Si votre application utilise des en-têtes de stratégie [de sécurité de contenu](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (fournisseur de solutions Cloud), veillez à autoriser tous les [ancêtres frame-ancestors suivants dans vos en-têtes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) fournisseur de solutions Cloud :
 
 |Hôte Microsoft 365| autorisation frame-ancestor|
 |--|--|
@@ -125,7 +124,7 @@ Si votre application utilise des en-têtes de stratégie de [sécurité de conte
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Mettre à jour l’inscription d’application Azure AD pour l’authentification unique
 
-Azure Active Directory Single-sign on (SSO) pour les onglets personnels fonctionne de la même manière dans Office et Outlook [que dans Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), toutefois, vous devez ajouter plusieurs identificateurs d’application client à l’inscription d’application Azure AD de votre application onglet dans celle de *votre locataire. portail inscriptions d'applications*.
+[Azure Active Directory (AD) Authentification unique (SSO)](../tabs/how-to/authentication/auth-aad-sso.md) pour les onglets personnels fonctionne de la même façon dans Office et Outlook que dans Teams. Toutefois, vous devez ajouter plusieurs identificateurs d’application cliente à l’inscription d’application Azure AD de votre application onglet dans le portail *inscriptions d'applications* de votre locataire.
 
 1. Connectez-vous au [portail Microsoft Azure](https://portal.azure.com) avec votre compte de locataire de bac à sable( sandbox).
 1. Ouvrez le **panneau inscriptions d'applications**.
@@ -148,40 +147,42 @@ Dans la section **Applications clientes autorisées** , vérifiez que toutes les
 
 ## <a name="sideload-your-app-in-teams"></a>Charger une version test de votre application dans Teams
 
-La dernière étape consiste à charger de manière indépendante votre onglet personnel mis à jour ([package d’application](/microsoftteams/platform/concepts/build-and-test/apps-package)) dans Microsoft Teams. Une fois terminée, votre application sera disponible pour s’exécuter dans Office et Outlook, en plus de Teams.
+La dernière étape de l’exécution de votre application dans Office et Outlook consiste à charger de manière indépendante votre [package d’application](..//concepts/build-and-test/apps-package.md) onglet personnel mis à jour dans Microsoft Teams.
 
-1. Empaquetez votre application Teams ([icônes](/microsoftteams/platform/resources/schema/manifest-schema#icons) de manifeste et d’application) dans un fichier zip. Si vous avez utilisé Teams Shared Computer Toolkit pour créer votre application, vous pouvez facilement le faire à l’aide de l’option de **package de métadonnées Zip Teams** dans le menu *Déploiement* de Teams Shared Computer Toolkit ou dans la palette `Ctrl+Shift+P` de commandes de Visual Studio Code :
+1. Empaquetez votre application Teams (icônes [de manifeste](../resources/schema/manifest-schema.md) et [d’application](/microsoftteams/platform/resources/schema/manifest-schema#icons)) dans un fichier zip. Si vous avez utilisé teams Toolkit pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **package de métadonnées Zip Teams** dans le menu *Deployment* du Kit de ressources Teams :
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option « Zip Teams metadata package » dans Teams Shared Computer Toolkit extension pour Visual Studio Code":::
 
-1. Connectez-vous à Teams avec votre compte de locataire de bac à sable et vérifiez que vous êtes sur la préversion publique du développeur. Vous pouvez vérifier que vous êtes sur la préversion dans le client Teams en cliquant sur le menu des points de suspension (**...**) par votre profil utilisateur et en ouvrant **About** pour vérifier que l’option *d’aperçu développeur* est activée.
+1. Connectez-vous à Teams avec votre compte de locataire de bac à sable et basculez en mode *Developer Preview*. Sélectionnez le menu des points de suspension (**...**) en fonction de votre profil utilisateur, puis sélectionnez : À propos de > **aperçu du développeur**.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans Teams menu points de suspension, ouvrez « À propos » et vérifiez que l’option « Developer Preview » est cochée":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans Teams menu points de suspension, ouvrez « À propos » et sélectionnez l’option « Aperçu du développeur ».":::
 
-1. Ouvrez le volet *Applications*, cliquez Télécharger **une application personnalisée**, puis **Télécharger pour moi ou mes équipes**.
+1. Sélectionnez *Applications* pour ouvrir le volet **Gérer vos applications** . Sélectionnez Ensuite **Publier une application**.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Bouton « Télécharger une application personnalisée » dans le volet Teams « Applications »":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Ouvrez le volet « Gérer vos applications », puis sélectionnez « Publier une application »":::
 
-1. Sélectionnez votre package d’application, puis cliquez sur *Ouvrir*.
+1. Choisissez **Télécharger une option d’application personnalisée**, puis sélectionnez votre package d’application.
 
-Une fois chargé de manière indépendante via Teams, votre onglet personnel est disponible dans Outlook et Office. Veillez à vous connecter avec les mêmes informations d’identification que vous avez utilisées pour charger une version test de votre application dans Teams.
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option « Télécharger une application personnalisée » dans Teams":::
 
-Vous pouvez épingler l’application pour un accès rapide, ou vous pouvez trouver votre application dans le menu volant des points de suspension (**...**) parmi les applications récentes dans la barre latérale sur la gauche.
+Une fois qu’il est chargé à Teams, votre onglet personnel est disponible dans Outlook et Office. Veillez à vous connecter avec les mêmes informations d’identification que vous avez utilisées pour vous connecter à Teams pour charger une version test de votre application.
 
-> [!NOTE]
-> L’épinglage d’une application dans Teams ne l’épinglera pas en tant qu’application dans Office.com ou Outlook.
+Vous pouvez épingler l’application pour un accès rapide, ou vous pouvez trouver votre application dans le menu volant des points de suspension (**...**) parmi les applications récentes dans la barre latérale sur la gauche. L’épinglage d’une application dans Teams ne l’épinglera pas en tant qu’application dans Office ou Outlook.
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Afficher un aperçu de votre onglet personnel dans d’autres expériences Microsoft 365
 
-Lorsque vous mettez à niveau votre onglet personnel Teams et le chargez de manière indépendante dans Teams, il s’exécute dans Outlook sur Windows, sur le web, Office sur Windows et sur le web (office.com). Voici comment la prévisualiser à partir de ces expériences Microsoft 365.
+Voici comment afficher un aperçu de votre application s’exécutant dans Office et Outlook, les clients de bureau web et Windows.
+
+> [!NOTE]
+> La désinstallation de votre application de Teams la supprimera également des catalogues **Plus d’applications** dans Outlook et Office. Si vous utilisez l’exemple d’application Teams Toolkit fourni ci-dessus
 
 ### <a name="outlook-on-windows"></a>Outlook sur Windows
 
 Pour afficher votre application en cours d’exécution dans Outlook sur Windows bureau :
 
 1. Lancez Outlook et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Cliquez sur les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
-1. Cliquez sur l’icône de votre application pour lancer votre application dans Outlook.
+1. Dans la barre latérale, sélectionnez  **Autres applications**. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Sélectionnez l’icône de votre application pour lancer votre application dans Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Outlook client de bureau pour afficher vos onglets personnels installés":::
 
@@ -190,8 +191,8 @@ Pour afficher votre application en cours d’exécution dans Outlook sur Windows
 Pour afficher votre application dans Outlook sur le web :
 
 1. Accédez à [Outlook sur le web](https://outlook.office.com) et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Cliquez sur les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
-1. Cliquez sur l’icône de votre application pour lancer et afficher un aperçu de votre application en cours d’exécution dans Outlook sur le web.
+1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Sélectionnez l’icône de votre application pour lancer et afficher un aperçu de votre application en cours d’exécution dans Outlook sur le web.
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de outlook.com pour afficher vos onglets personnels installés":::.
 
@@ -200,8 +201,8 @@ Pour afficher votre application dans Outlook sur le web :
 Pour afficher votre application en cours d’exécution dans Office sur Windows bureau :
 
 1. Lancez Office et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Cliquez sur les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
-1. Cliquez sur l’icône de votre application pour lancer votre application dans Office.
+1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Sélectionnez l’icône de votre application pour lancer votre application dans Office.
 
 :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Office client de bureau pour afficher vos onglets personnels installés":::.
 
@@ -210,31 +211,46 @@ Pour afficher votre application en cours d’exécution dans Office sur Windows 
 Pour afficher un aperçu de l’exécution de votre application dans Office sur le Web :
 
 1. Connectez-vous office.com avec les informations d’identification du locataire de test.
-1. Cliquez sur les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
-1. Cliquez sur l’icône de votre application pour lancer votre application dans Office sur le Web.
+1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Sélectionnez l’icône de votre application pour lancer votre application dans Office sur le Web.
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de office.com pour afficher vos onglets personnels installés":::.
+:::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
+
+## <a name="troubleshooting"></a>Résolution des problèmes
+
+Actuellement, un sous-ensemble de types et de fonctionnalités d’application Teams sont pris en charge dans les clients Outlook et Office. Cette prise en charge s’étendra au fil du temps. 
+
+Reportez-vous à [Microsoft 365 prise en charge](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) pour vérifier la prise en charge de l’hôte pour différentes fonctionnalités TeamsJS.
+
+Pour obtenir un résumé global de Microsoft 365 prise en charge de l’hôte et de la plateforme pour les applications Teams, consultez [Étendre Teams applications sur Microsoft 365](overview.md).
+
+Vous pouvez vérifier la prise en charge par l’hôte d’une fonctionnalité donnée au moment de l’exécution en appelant la `isSupported()` fonction sur cette fonctionnalité (espace de noms) et en ajustant le comportement de l’application selon les besoins. Cela permet à votre application d’activer l’interface utilisateur et les fonctionnalités des hôtes qui la prennent en charge, et de fournir une expérience de secours appropriée dans les hôtes qui ne le prennent pas en charge. Pour plus d’informations, consultez [Différencier votre expérience d’application](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+
+Utilisez les [Microsoft Teams canaux de la communauté des développeurs](/microsoftteams/platform/feedback) pour signaler les problèmes et fournir des commentaires.
+
+### <a name="debugging"></a>Débogage
+
+À partir de Teams Toolkit, vous pouvez déboguer (`F5`) votre application onglet s’exécutant dans Office et Outlook, en plus de Teams.
+
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Choisissez parmi Teams, Outlook et Office cibles de débogage dans Teams Toolkit":::
+
+Lors de la première exécution du débogage local pour Office ou Outlook, vous êtes invité à vous connecter à votre compte de locataire Microsoft 365 et à installer un certificat de test auto-signé. Vous serez également invité à installer manuellement Teams. Sélectionnez **Installer dans Teams** pour ouvrir une fenêtre de navigateur et installer manuellement votre application. Cliquez ensuite sur **Continuer** pour continuer à déboguer votre application dans Office/Outlook.
+
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+
+Fournissez des commentaires et signalez les problèmes liés à l’expérience de débogage Teams Toolkit dans [Microsoft Teams Framework (TeamsFx).](https://github.com/OfficeDev/TeamsFx/issues)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Outlook et les onglets personnels compatibles avec Office sont en préversion et ne sont pas pris en charge pour une utilisation en production. Voici comment distribuer votre application d’onglet personnel aux audiences en préversion à des fins de test.
+Publiez votre application pour qu’elle soit détectable dans Teams, Outlook et Office :
 
-### <a name="single-tenant-distribution"></a>Distribution à locataire unique
+> [!div class="nextstepaction"]
+> [Publier des applications Teams pour Outlook et Office](publish.md)
 
-Outlook et les onglets personnels compatibles avec Office peuvent être distribués à un public en préversion sur un locataire de test (ou de production) de l’une des trois manières suivantes :
+## <a name="code-sample"></a>Exemple de code
 
-#### <a name="teams-client"></a>Client Teams
-
-Dans le menu *Applications*, sélectionnez *Gérer vos applications* >  **Soumettre une application à votre organisation**. Cela nécessite l’approbation de votre administrateur informatique.
-
-#### <a name="microsoft-teams-admin-center"></a>Centre d’administration Microsoft Teams
-
-En tant qu’administrateur Teams, vous pouvez charger et préinstaller le package d’application pour le locataire de votre organisation à partir de [Teams administrateur](https://admin.teams.microsoft.com/). Pour plus d’informations, consultez [Télécharger vos applications personnalisées dans le centre](/MicrosoftTeams/upload-custom-apps) d’administration Microsoft Teams.
-
-#### <a name="microsoft-admin-center"></a>Centre d’administration Microsoft Corporation
-
-En tant qu’administrateur général, vous pouvez charger et préinstaller le package d’application à partir de [l’administrateur Microsoft](https://admin.microsoft.com/). Pour plus d’informations, consultez [Tester et déployer Microsoft 365 Apps par des partenaires dans le portail des applications intégrées](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
-
-### <a name="multitenant-distribution"></a>Distribution multilocataires
-
-La distribution vers Microsoft AppSource n’est pas prise en charge lors de cette préversion précoce pour les développeurs des onglets personnels Outlook et Office activés Teams.
+| **Exemple de nom** | **Description** | **Node.js** |
+|---------------|--------------|--------|
+| Liste des tâches | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne uniquement dans Teams (utilisez cet exemple d’application pour essayer le processus de mise à niveau décrit dans ce didacticiel). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| Todo List (Microsoft 365) | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Éditeur d’images (Microsoft 365) | Créez, modifiez, ouvrez et enregistrez des images à l’aide de Microsoft API Graph. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |

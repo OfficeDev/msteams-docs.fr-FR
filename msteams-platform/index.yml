@@ -11,15 +11,15 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 6d1f1d89882fe0e2d19113aacd604d5e3cbc1c99
-  ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+  ms.openlocfilehash: f9f08d5a9fd8d2175c8934166ca11f5f8d2c6f4f
+  ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65103999"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65653293"
 highlightedContent:
   items:
-  - title: Quelles sont les nouveautés ?
+  - title: Microsoft Build 2022
     itemType: whats-new
     url: /microsoftteams/platform/whats-new
   - title: "Vous débutez avec Teams développement ? \U0001F680Commencez ici !"
@@ -37,7 +37,7 @@ highlightedContent:
   - title: Améliorer votre application avec Microsoft Graph
     itemType: how-to-guide
     url: /graph/teams-concept-overview
-  - title: Publier votre application dans le Teams Store
+  - title: Publier votre application dans le Magasin Teams
     itemType: deploy
     url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
   - title: Exemples de code
@@ -79,7 +79,7 @@ conceptualContent:
       text: Bots
     - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
       itemType: overview
-      text: Extensions de message
+      text: Extensions de messages
     - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
       itemType: overview
       text: Applications pour les réunions Teams
@@ -163,10 +163,10 @@ conceptualContent:
 tools:
   title: Outils et kits de développement durable
   items:
-  - title: extension Microsoft Teams Shared Computer Toolkit pour Visual Studio Code
+  - title: extension Microsoft Teams Toolkit pour Visual Studio Code
     imageSrc: /media/logos/logo_vs-code.svg
     url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-  - title: extension Microsoft Teams Shared Computer Toolkit pour Visual Studio
+  - title: extension Microsoft Teams Toolkit pour Visual Studio
     imageSrc: /media/logos/logo_vs-ide.svg
     url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: Portail des développeurs
