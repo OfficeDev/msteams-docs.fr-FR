@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 27e46454658bdc95e5baf5e7453fd50b1b92f03f
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: f3b96b60447596eae8c1cdf37f4b38f6653c444b
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654805"
+ms.locfileid: "65656648"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Ajouter des ressources cloud à l’application Teams
 
@@ -67,8 +67,8 @@ Si vous avez créé SPFx projet d’onglet basé, vous ne pouvez pas ajouter de 
   |---------------|----------|
   | Fonction Azure|`teamsfx add azure-function`|
   | Base de données SQL Azure|`teamsfx add azure-sql`|
-  | Gestion des API Azure|`teamsfx resource add azure-apim`|
-  | Azure Key Vault|`teamsfx resource add azure-keyvault`|
+  | Gestion des API Azure|`teamsfx add azure-apim`|
+  | Azure Key Vault|`teamsfx add azure-keyvault`|
 
 ## <a name="types-of-cloud-resources"></a>Types de ressources cloud
 

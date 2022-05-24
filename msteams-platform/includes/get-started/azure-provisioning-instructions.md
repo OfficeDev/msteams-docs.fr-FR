@@ -87,4 +87,4 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
 
-    Félicitations ! Votre application bot s’exécute désormais à distance à partir d’Azure !
+    Félicitations ! Votre application onglet s’exécute désormais à distance à partir d’Azure !

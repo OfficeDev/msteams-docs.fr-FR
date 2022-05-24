@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654617"
+ms.locfileid: "65656858"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
 
@@ -72,7 +72,7 @@ Examinons les sujets abordés dans ce document.
 
 ## <a name="accounts"></a>Comptes
 
-Pour développer une application Teams, vous avez besoin d’au moins un compte Microsoft 365 avec un abonnement valide. Si vous souhaitez héberger vos ressources principales sur Azure, un compte Azure est également nécessaire. Teams Toolkit prend en charge l’expérience intégrée pour se connecter, approvisionner et déployer des ressources Azure. Vous pouvez [créer un compte Azure gratuit](https://azure.microsoft.com/free/) avant de commencer.
+Pour développer une application Teams, vous avez besoin d’au moins un compte Microsoft 365 avec un abonnement valide. Si vous souhaitez héberger vos ressources principales sur Azure, un compte Azure est également nécessaire. Teams Toolkit prend en charge l’expérience intégrée de connexion, de provisionnement et de déploiement pour les ressources Azure. Vous pouvez [créer un compte Azure gratuit](https://azure.microsoft.com/free/) avant de commencer.
 
 ## <a name="environment"></a>Environnement
 
@@ -127,35 +127,35 @@ Il vous aide à réduire les tâches d’implémentation de l’identité et d�
 ## <a name="help-and-feedback"></a>Aide et commentaires
 
 Dans cette section, vous trouverez la documentation et les ressources dont vous avez besoin. Vous pouvez sélectionner **Signaler les problèmes sur GitHub** dans le Kit de ressources Teams pour obtenir un **Support rapide** de l’expert produit. Parcourez le problème avant d’en créer un nouveau, ou visitez [balise StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) pour soumettre des commentaires.
+<!--  
+Let's explore Teams Toolkit features.
 
-Nous allons explorer les fonctionnalités du Kit de ressources Teams.
-
-| Fonctionnalités du kit de ressources Teams | Comprend... | Ce que vous pouvez faire |
+| Teams Toolkit Features | Includes | What you can do |
 | --- | --- | --- |
-| **Comptes** | &nbsp; | &nbsp; |
-| &nbsp; | Compte Microsoft 365 | Utilisez votre compte Microsoft 365 avec un abonnement E5 valide pour créer votre application. |
-| &nbsp; | Compte Azure | Utilisez votre compte Azure pour déployer une application sur Azure. |
-| **Environnement** | &nbsp; | &nbsp; |
-| &nbsp; | local | Déployez votre application dans l’environnement local par défaut avec des configurations d’environnement d’ordinateur local. |
-| &nbsp; | dev | Déployez votre application dans l’environnement de développement par défaut avec des configurations d’environnement distant ou cloud. Vous pouvez créer d’autres environnements, selon vos besoins. |
-| **Développement** | &nbsp; | &nbsp; |
-| &nbsp; | Créer une application Teams. | Utilisez l’Assistant Kit de ressources pour préparer la génération de modèles automatiques de projet pour le développement d’applications. |
-| &nbsp; | Afficher des exemples | Sélectionnez l’un des 12 exemples d’applications du Kit de ressources Teams. Le kit de ressources télécharge le code de l’application à partir de GitHub et vous pouvez générer l’exemple d’application. |
-| &nbsp; | Ajouter des fonctionnalités | - Ajoutez d’autres fonctionnalités de Teams requises pour Teams application pendant le processus de développement. </br> - Ajoutez des ressources cloud facultatives adaptées à votre application. |
-| &nbsp; | Modifier le fichier manifeste | Modifiez l’intégration de l’application Teams au client Teams. |
-| **Déploiement** | &nbsp; | &nbsp; |
-| &nbsp; | Provisionner dans le cloud | Allouez des ressources Azure pour votre application. Teams Toolkit est intégré à Azure Resource Manager. |
-| &nbsp; | Package de métadonnées Zip Teams | Créez le package d’application qui peut être chargé dans Teams ou Developer Portal. Il contient le manifeste de l’application et les icônes d’application.  |
-| &nbsp; | Déployer à partir du cloud | Déployez le code source sur Azure. |
-| &nbsp; | Publier dans Teams | Publiez votre application développée et distribuez-la à des étendues telles que personnelles, d’équipe, de canal ou d’organisation. |
-| &nbsp; | Documentation pour les développeurs | Utilisez Developer Portal pour configurer et gérer votre application Teams. |
-| **Aide et de commentaires** | &nbsp; | &nbsp; |
-| &nbsp; | Démarrage rapide | Consultez l’aide de démarrage rapide du kit de ressources Teams dans Visual Studio Code.  |
-| &nbsp; | Didacticiel | Sélectionnez cette option pour accéder à différents didacticiels. |
-| &nbsp; | Documentation | Sélectionnez cette option pour accéder à la documentation du développeur Microsoft Teams. |
-| &nbsp; | Signaler des problèmes sur GitHub | Sélectionnez cette option pour accéder à la page GitHub et signaler tout problème. |
+| **Accounts** | &nbsp; | &nbsp; |
+| &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
+| &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
+| **Environment** | &nbsp; | &nbsp; |
+| &nbsp; | local | Deploy your app in the default local environment with local machine environment configurations. |
+| &nbsp; | dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
+| **Development** | &nbsp; | &nbsp; |
+| &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
+| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
+| &nbsp; | Add Features | - Add other required Teams capabilities to Teams app during development process. </br> - Add optional cloud resources suitable for your app. |
+| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
+| **Deployment** | &nbsp; | &nbsp; |
+| &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
+| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
+| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
+| &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
+| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
+| **Help and Feedback** | &nbsp; | &nbsp; |
+| &nbsp; | Quick start | View the Teams Toolkit Quick start help within Visual Studio Code.  |
+| &nbsp; | Tutorial | Select to access different tutorials. |
+| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
+| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 
-
+-->
 > [!TIP]
 > Parcourez les problèmes existants avant d’en créer un, ou visitez [balise StackOverflow `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) pour soumettre des commentaires.
 

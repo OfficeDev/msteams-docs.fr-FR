@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 4067b86bc3a8de0ed891e84ceef68f5f95741479
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655454"
+ms.locfileid: "65656774"
 ---
 # <a name="azure-ad-manifest"></a>Manifeste Azure AD
 
@@ -29,9 +29,9 @@ Vous pouvez personnaliser le modèle de manifeste Azure AD pour mettre à jour l
 
 2. Mettez à jour le modèle directement ou [référencez les valeurs d’un autre fichier](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Vous pouvez voir plusieurs scénarios de personnalisation ici :
   
-* [Ajouter une autorisation d’application](#customize-requiredresourceaccess)
-* [Préauthoriser une application cliente](#customize-preauthorizedapplications)
-* [Mettre à jour l’URL de redirection pour la réponse d’authentification](#customize-redirect-urls)
+   * [Ajouter une autorisation d’application](#customize-requiredresourceaccess)
+   * [Préauthoriser une application cliente](#customize-preauthorizedapplications)
+   * [Mettre à jour l’URL de redirection pour la réponse d’authentification](#customize-redirect-urls)
 
 3. [Déployez les modifications d’application Azure AD pour l’environnement local](#deploy-azure-ad-application-changes-for-local-environment).
   
@@ -223,8 +223,8 @@ L’objectif de code affiche le nom de l’application pour l’ID d’applicati
 
 2. Accédez à [Portail Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) et connectez-vous à Microsoft 365 compte.
   
-> [!NOTE]
-> Vérifiez que les informations d’identification de connexion de Teams application et du compte M365 sont identiques.
+   > [!NOTE]
+   > Vérifiez que les informations d’identification de connexion de Teams application et du compte M365 sont identiques.
 
 3. Ouvrez la [page Inscriptions d’applications](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), recherchez l’application Azure AD à l’aide de l’ID client que vous avez copié précédemment.
   
@@ -313,5 +313,4 @@ Vous devez interagir avec l’application Azure AD pendant différentes étapes 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Personnaliser le manifeste d’application dans le Kit de ressources](TeamsFx-manifest-customization.md)
-* [Aperçu du manifeste d’application dans le Kit de ressources](TeamsFx-manifest-preview.md)
+* [Afficher un aperçu et personnaliser le manifeste de l’application dans le Kit de ressources](TeamsFx-preview-and-customize-app-manifest.md)

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654562"
+ms.locfileid: "65656172"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -109,7 +109,6 @@ Une fois l’opération terminée, votre fichier *package.json* fait référence
 > [!IMPORTANT]
 > Le code contenu dans *.html* fichiers n’est pas pris en charge par les outils de mise à niveau et nécessite des modifications manuelles.
 
-
 ## <a name="configure-content-security-policy-headers"></a>Configurer les en-têtes de stratégie de sécurité du contenu
 
 Comme dans Microsoft Teams, les applications d’onglet sont hébergées dans des [éléments iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) dans Office et Outlook clients web.
@@ -135,15 +134,15 @@ Si votre application utilise des en-têtes de stratégie [de sécurité de conte
 
 1. Dans la section **Applications clientes autorisées** , vérifiez que toutes les valeurs suivantes `Client Id` sont ajoutées :
 
-|Application client Microsoft 365 | ID du client |
-|--|--|
-|Teams bureau, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Web Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Version de bureau d’Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-|Version de bureau d’Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Application client Microsoft 365 | ID du client |
+    |--|--|
+    |Teams bureau, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+    |Web Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Version de bureau d’Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Version de bureau d’Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>Charger une version test de votre application dans Teams
 
@@ -167,21 +166,21 @@ La dernière étape de l’exécution de votre application dans Office et Outloo
 
 Une fois qu’il est chargé à Teams, votre onglet personnel est disponible dans Outlook et Office. Veillez à vous connecter avec les mêmes informations d’identification que vous avez utilisées pour vous connecter à Teams pour charger une version test de votre application.
 
-Vous pouvez épingler l’application pour un accès rapide, ou vous pouvez trouver votre application dans le menu volant des points de suspension (**...**) parmi les applications récentes dans la barre latérale sur la gauche. L’épinglage d’une application dans Teams ne l’épinglera pas en tant qu’application dans Office ou Outlook.
+Vous pouvez épingler l’application pour un accès rapide, ou vous pouvez trouver votre application dans le menu volant des points de suspension (**...**) parmi les applications récentes dans la barre latérale sur la gauche. Épinglage d’une application dans Teams ne l’épinglez pas en tant qu’application dans Office ou Outlook.
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>Afficher un aperçu de votre onglet personnel dans d’autres expériences Microsoft 365
 
 Voici comment afficher un aperçu de votre application s’exécutant dans Office et Outlook, les clients de bureau web et Windows.
 
 > [!NOTE]
-> La désinstallation de votre application de Teams la supprimera également des catalogues **Plus d’applications** dans Outlook et Office. Si vous utilisez l’exemple d’application Teams Toolkit fourni ci-dessus
+> La désinstallation de votre application de Teams la supprime également des catalogues **Plus d’applications** dans Outlook et Office. Si vous utilisez l’exemple d’application Teams Toolkit fourni ci-dessus.
 
 ### <a name="outlook-on-windows"></a>Outlook sur Windows
 
 Pour afficher votre application en cours d’exécution dans Outlook sur Windows bureau :
 
 1. Lancez Outlook et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Dans la barre latérale, sélectionnez  **Autres applications**. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Dans la barre latérale, sélectionnez  **Autres applications**. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Outlook.
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Outlook client de bureau pour afficher vos onglets personnels installés":::
@@ -191,7 +190,7 @@ Pour afficher votre application en cours d’exécution dans Outlook sur Windows
 Pour afficher votre application dans Outlook sur le web :
 
 1. Accédez à [Outlook sur le web](https://outlook.office.com) et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer et afficher un aperçu de votre application en cours d’exécution dans Outlook sur le web.
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de outlook.com pour afficher vos onglets personnels installés":::.
@@ -201,7 +200,7 @@ Pour afficher votre application dans Outlook sur le web :
 Pour afficher votre application en cours d’exécution dans Office sur Windows bureau :
 
 1. Lancez Office et connectez-vous à l’aide de votre compte de locataire de développement.
-1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. Sélectionnez les points de suspension (**...**) dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Office.
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Cliquez sur l’option points de suspension (« Autres applications ») dans la barre latérale de Office client de bureau pour afficher vos onglets personnels installés":::.
@@ -210,15 +209,15 @@ Pour afficher votre application en cours d’exécution dans Office sur Windows 
 
 Pour afficher un aperçu de l’exécution de votre application dans Office sur le Web :
 
-1. Connectez-vous office.com avec les informations d’identification du locataire de test.
-1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaîtra parmi vos applications installées.
+1. **Connectez-vous à office.com** avec les informations d’identification du locataire de test.
+1. Sélectionnez l’icône **Applications** dans la barre latérale. Le titre de votre application chargée en version test apparaît parmi vos applications installées.
 1. Sélectionnez l’icône de votre application pour lancer votre application dans Office sur le Web.
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Cliquez sur l’option « Autres applications » dans la barre latérale de office.com pour afficher vos onglets personnels installés":::
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-Actuellement, un sous-ensemble de types et de fonctionnalités d’application Teams sont pris en charge dans les clients Outlook et Office. Cette prise en charge s’étendra au fil du temps. 
+Actuellement, un sous-ensemble de types et de fonctionnalités d’application Teams sont pris en charge dans les clients Outlook et Office. Cette prise en charge s’étend au fil du temps.
 
 Reportez-vous à [Microsoft 365 prise en charge](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) pour vérifier la prise en charge de l’hôte pour différentes fonctionnalités TeamsJS.
 
@@ -240,7 +239,7 @@ Lors de la première exécution du débogage local pour Office ou Outlook, vous 
 
 Fournissez des commentaires et signalez les problèmes liés à l’expérience de débogage Teams Toolkit dans [Microsoft Teams Framework (TeamsFx).](https://github.com/OfficeDev/TeamsFx/issues)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-step"></a>Étape suivante
 
 Publiez votre application pour qu’elle soit détectable dans Teams, Outlook et Office :
 

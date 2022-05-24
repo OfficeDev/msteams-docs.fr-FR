@@ -12,24 +12,24 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 1404ad66f8ce221f2f94186636cba7d7722d8f6e
-  ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+  ms.openlocfilehash: bc3bbdcb9afe75311f126a686a397eada38c573c
+  ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
   ms.translationtype: MT
   ms.contentlocale: fr-FR
   ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65656102"
+  ms.locfileid: "65656837"
 landingContent:
-- title: Microsoft Build 2022
+- title: 'Microsoft Build 2022 '
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Envoyer vos applications Outlook et Office au magasin Teams
+    - text: Envoyer vos applications Outlook et Office dans le store Teams
       url: m365-apps/overview.md
-    - text: Conseils sur les applications et nouveautés de TeamsJS version 2.0.0
+    - text: Conseils sur les applications et nouveautés de la version 2.0.0 de TeamsJS
       url: tabs/how-to/using-teams-client-sdk.md
-    - text: Teams Toolkit version 4.0.0 pour Visual Studio Code est désormais en disponibilité générale
+    - text: La version 4.0.0 du kit de ressources de Teams pour Visual Studio Code est désormais en disponibilité générale
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: Bots et extensions de message dans Cloud de la communauté du secteur public et GCCH
+    - text: Bots et extensions de message dans GCC et GCCH
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 - title: Prise en main
   linkLists:
@@ -56,9 +56,9 @@ landingContent:
     - text: Créer une application avec Node.js
       url: sbs-gs-nodejs.yml
     - text: Créer un bot de commandes avec JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-commandbot.yml
     - text: Générer un bot de notification avec JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-notificationbot.yml
 - title: Monétiser votre application
   linkLists:
   - linkListType: concept
@@ -119,8 +119,6 @@ landingContent:
       url: ~/sbs-teams-conversation-bot.yml
     - text: Créer un bot d’appel et de réunion
       url: ~/sbs-calling-and-meeting.yml
-    - text: Accorder des autorisations d’appareil d’onglet
-      url: ~/sbs-tab-device-permissions.yml
     - text: Configurer l’authentification unique pour les onglets et les extensions de message
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
     - text: Créer des onglets avec des cartes adaptatives
@@ -136,9 +134,9 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Créer un bot de commandes avec JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-commandbot.yml
     - text: Générer un bot de notification avec JavaScript
-      url: toolkit/add-capability.md
+      url: sbs-gs-notificationbot.yml
     - text: Télécharger fichiers à Teams à partir d’un bot
       url: ~/sbs-file-handling-in-bot.yml
     - text: Générer une bulle de contenu de réunion
@@ -162,7 +160,7 @@ landingContent:
     - text: Créer des scénarios pour Teams application
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Meilleures pratiques pour les scénarios d’application Teams
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explorer les applications à code faible pour Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publier et distribuer
