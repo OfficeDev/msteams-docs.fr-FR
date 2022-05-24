@@ -1,12 +1,14 @@
 ## <a name="deploy-your-app-to-azure"></a>Déployer votre application vers Azure
 
 Le déploiement se compose de deux étapes.  Tout d’abord, les ressources cloud nécessaires sont créées (également appelées approvisionnement). Ensuite, le code de votre application est copié dans les ressources cloud créées. Pour ce didacticiel, vous allez déployer l’application onglet.
-
-> <details>
-> <summary>Quelle est la différence entre provisionnement et déploiement ?</summary>
->
-> L’étape **Provision** crée des ressources dans Azure et Microsoft 365 pour votre application, mais aucun code (HTML, CSS, JavaScript, etc.) n’est copié dans les ressources. L’étape **Déployer** copie le code de votre application dans les ressources que vous avez créées pendant l’étape de provisionnement. Il est courant de déployer plusieurs fois sans provisionner de nouvelles ressources. Étant donné que l’étape de provisionnement peut prendre un certain temps, elle est distincte de l’étape de déploiement.
+<br> 
+<br>
+<details>
+<summary>Quelle est la différence entre provisionnement et déploiement ?</summary>
+<br>
+L’étape <b>Provision</b> crée des ressources dans Azure et Microsoft 365 pour votre application, mais aucun code (HTML, CSS, JavaScript, etc.) n’est copié dans les ressources. L’étape <b>Déployer</b> copie le code de votre application dans les ressources que vous avez créées pendant l’étape de provisionnement. Il est courant de déployer plusieurs fois sans provisionner de nouvelles ressources. Étant donné que l’étape de provisionnement peut prendre un certain temps, elle est distincte de l’étape de déploiement.
 </details>
+<br>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -31,7 +33,7 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
    Le processus d’approvisionnement crée des ressources dans le cloud Azure. Cela peut prendre un certain temps. Vous pouvez surveiller la progression en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, vous voyez l’avis suivant :
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="Capture d’écran montrant la boîte de dialogue d’approvisionnement complet." border="false":::
 
     Si vous le souhaitez, vous pouvez afficher les ressources approvisionnées. Pour ce didacticiel, vous n’avez pas besoin d’afficher les ressources.
 
@@ -45,6 +47,7 @@ Sélectionnez l’icône :::image type="icon" source="~/assets/images/teams-tool
 
    Comme pour le provisionnement, le déploiement prend un certain temps. Vous pouvez surveiller le processus en regardant les dialogues dans le coin inférieur droit. Après quelques minutes, un avis d’achèvement s’affiche.
 
+À présent, vous pouvez utiliser le même processus pour déployer vos applications Bot et Message Extension sur Azure.
 
 # <a name="command-line"></a>[Ligne de commande](#tab/cli)
 
@@ -81,10 +84,21 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
 
 1. Sélectionnez **Ajouter**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
+
+   Le kit de ressources affiche un message indiquant que l’application est ajoutée à Teams.
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement" border="true":::
+ 
+    - Si vous sélectionnez **Obtenir**, vous pouvez essayer l’application ultérieurement dans la liste des applications chargées de manière indépendante.
+    - Si vous sélectionnez **Essayer**, Teams charge votre application.
 
    Votre application est chargée sur le site Azure.
+   
+1. Sélectionnez **Essayer**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
+   L’application Extension de message est chargée dans une application de bot de conversation.
 
-    Félicitations ! Votre application onglet s’exécute désormais à distance à partir d’Azure !
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Capture d’écran montrant l’application chargée de manière indépendante dans Teams" border="false":::
+
+
