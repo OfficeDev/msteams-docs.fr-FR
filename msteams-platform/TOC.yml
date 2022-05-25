@@ -20,8 +20,12 @@
   items:
     - name: Vue d’ensemble du Démarrage
       href: get-started/get-started-overview.md
-    - name: Créer votre première application à l’aide de JavaScript
+    - name: Créer votre première application d’onglet à l’aide de JavaScript
       href: sbs-gs-javascript.yml
+    - name: Créer votre première application de bot à l’aide de JavaScript
+      href: sbs-gs-bot.yml
+    - name: Créer votre première application d’extension de message à l’aide de JavaScript
+      href: sbs-gs-msgext.yml
     - name: Créer votre première application à l’aide de Blazor
       href: sbs-gs-blazorupdate.yml
     - name: Créer votre première application à l’aide de SPFx
@@ -30,6 +34,10 @@
       href: sbs-gs-csharp.yml
     - name: Créer votre première application à l’aide de Node.js
       href: sbs-gs-nodejs.yml
+    - name: Créer un bot de notification avec JavaScript
+      href: sbs-gs-notificationbot.yml
+    - name: Générer un bot de commandes avec JavaScript
+      href: sbs-gs-commandbot.yml
     - name: Exemples de code
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Programmez votre application
@@ -104,18 +112,24 @@
           href: toolkit/deploy.md
         - name: Prévisualiser et personnaliser le manifeste de l'application Teams
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Publier des applications Teams à l’aide du Kit de ressources Teams
-          href: toolkit/publish.md
+        - name: Personnaliser le manifeste Azure AD
+          href: toolkit/AAD-manifest-customization.md
         - name: Ajouter des fonctionnalités à l’application Teams
           href: toolkit/add-capability.md
         - name: Ajouter des ressources cloud à l’application Teams
           href: toolkit/add-resource.md
+        - name: Ajouter l'authentification unique à l'application Teams
+          href: toolkit/add-single-sign-on.md
+        - name: Ajouter une connexion d’API à l’application Teams
+          href: toolkit/add-API-connection.md
+        - name: Mettre en place des pipelines CI/CD
+          href: toolkit/use-CICD-template.md
+        - name: Publier des applications Teams à l’aide du Kit de ressources Teams
+          href: toolkit/publish.md
         - name: Gérer plusieurs environnements
           href: toolkit/TeamsFx-multi-env.md
         - name: Collaboration avec d’autres développeurs sur Teams Toolkit
           href: toolkit/TeamsFx-collaboration.md
-        - name: Mettre en place des pipelines CI/CD
-          href: toolkit/use-CICD-template.md
         - name: Kit de développement logiciel (SDK) TeamsFx
           href: toolkit/TeamsFx-SDK.md
     - name: Interface CLI du Kit de ressources Teams
@@ -291,6 +305,24 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: Références API des applications de réunion
       href: apps-in-teams-meetings/API-references.md
+    - name: Collaboration améliorée avec Live Share
+      items:
+        - name: Vue d’ensemble
+          href: apps-in-teams-meetings/teams-live-share-overview.md
+        - name: Prise en main
+          items:
+            - name: Démarrage rapide
+              href: apps-in-teams-meetings/teams-live-share-quick-start.md
+            - name: Didacticiel Lanceur de dés
+              href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        - name: Fonctionnalités principales
+          href: apps-in-teams-meetings/teams-live-share-capabilities.md
+        - name: Fonctionnalités multimédias
+          href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+        - name: Didacticiel Poker agile
+          href: sbs-teams-live-share.yml
+        - name: FAQ sur le Kit de développement logiciel (SDK) de partage en direct
+          href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Scènes personnalisées en mode Ensemble dans Teams
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Construire webhooks et connecteurs
