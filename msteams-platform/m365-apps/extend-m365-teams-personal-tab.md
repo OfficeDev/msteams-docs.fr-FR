@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656172"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668136"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -72,7 +72,7 @@ Vous avez deux options pour mettre à jour le manifeste de votre application :
 # <a name="teams-toolkit"></a>[Toolkit Teams](#tab/manifest-teams-toolkit)
 
 1. Ouvrez la palette de commandes : `Ctrl+Shift+P`.
-1. Exécutez la `Teams: Upgrade Teams manifest` commande et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées.
+1. Exécutez la commande `Teams: Upgrade Teams manifest` et sélectionnez votre fichier manifeste d’application. Des modifications seront apportées en place.
 
 # <a name="manual-steps"></a>[Étapes manuelles](#tab/manifest-manual)
 
@@ -148,21 +148,21 @@ Si votre application utilise des en-têtes de stratégie [de sécurité de conte
 
 La dernière étape de l’exécution de votre application dans Office et Outlook consiste à charger de manière indépendante votre [package d’application](..//concepts/build-and-test/apps-package.md) onglet personnel mis à jour dans Microsoft Teams.
 
-1. Empaquetez votre application Teams (icônes [de manifeste](../resources/schema/manifest-schema.md) et [d’application](/microsoftteams/platform/resources/schema/manifest-schema#icons)) dans un fichier zip. Si vous avez utilisé teams Toolkit pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **package de métadonnées Zip Teams** dans le menu *Deployment* du Kit de ressources Teams :
+1. Empaquetez votre application Teams (icônes [de manifeste](../resources/schema/manifest-schema.md) et [d’application](/microsoftteams/platform/resources/schema/manifest-schema#icons)) dans un fichier zip. Si vous avez utilisé Teams Toolkit pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **zip Teams package de métadonnées** dans le menu **Déploiement** de Teams Toolkit.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option « Zip Teams metadata package » dans Teams Shared Computer Toolkit extension pour Visual Studio Code":::
 
-1. Connectez-vous à Teams avec votre compte de locataire de bac à sable et basculez en mode *Developer Preview*. Sélectionnez le menu des points de suspension (**...**) en fonction de votre profil utilisateur, puis sélectionnez : À propos de > **aperçu du développeur**.
+1. Connectez-vous à Teams avec votre compte client sandbox et basculez en mode *Aperçu développeur* . Sélectionnez le menu des points de suspension (**...**) selon votre profil utilisateur, puis sélectionnez : **À propos de** > **la préversion développeur**.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans Teams menu points de suspension, ouvrez « À propos » et sélectionnez l’option « Aperçu du développeur ».":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans le menu des points de suspension Teams, ouvrez « À propos de », puis sélectionnez l’option « Aperçu développeur »":::
 
-1. Sélectionnez *Applications* pour ouvrir le volet **Gérer vos applications** . Sélectionnez Ensuite **Publier une application**.
+1. Sélectionnez **Applications** pour ouvrir le volet **Gérer vos applications**. Sélectionnez Ensuite **Publier une application**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Ouvrez le volet « Gérer vos applications », puis sélectionnez « Publier une application »":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Ouvrez le volet « Gérer vos applications » et sélectionnez « Publier une application »":::
 
 1. Choisissez **Télécharger une option d’application personnalisée**, puis sélectionnez votre package d’application.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option « Télécharger une application personnalisée » dans Teams":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Option « Charger une application personnalisée » dans Teams":::
 
 Une fois qu’il est chargé à Teams, votre onglet personnel est disponible dans Outlook et Office. Veillez à vous connecter avec les mêmes informations d’identification que vous avez utilisées pour vous connecter à Teams pour charger une version test de votre application.
 
@@ -225,7 +225,7 @@ Pour obtenir un résumé global de Microsoft 365 prise en charge de l’hôte et
 
 Vous pouvez vérifier la prise en charge par l’hôte d’une fonctionnalité donnée au moment de l’exécution en appelant la `isSupported()` fonction sur cette fonctionnalité (espace de noms) et en ajustant le comportement de l’application selon les besoins. Cela permet à votre application d’activer l’interface utilisateur et les fonctionnalités des hôtes qui la prennent en charge, et de fournir une expérience de secours appropriée dans les hôtes qui ne le prennent pas en charge. Pour plus d’informations, consultez [Différencier votre expérience d’application](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
-Utilisez les [Microsoft Teams canaux de la communauté des développeurs](/microsoftteams/platform/feedback) pour signaler les problèmes et fournir des commentaires.
+Utilisez les [canaux de la communauté des développeurs Microsoft Teams](/microsoftteams/platform/feedback) pour signaler les problèmes et fournir des commentaires.
 
 ### <a name="debugging"></a>Débogage
 

@@ -1,15 +1,15 @@
 ---
 title: Aide et commentaires de la communauté des développeurs Microsoft Teams
 description: L’équipe produit Microsoft Teams répond à la communauté des développeurs par le biais de divers canaux de commentaires et de support.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: équipes commentaires développeur questions problèmes contact communauté aide demande bogues contributions communauté discussions soutien
-ms.openlocfilehash: 77da574ca83bd3c927366e7c5aeb7eebdc7a2d92
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: b5030f9e814dc7acf2ae2f5bb25719cc6c3f58f8
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111191"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668010"
 ---
 # <a name="support-and-feedback"></a>Assistance et commentaires
 
@@ -47,6 +47,7 @@ Soumettez des problèmes et posez des questions générales sur le Kit de dével
 |  **Problèmes liés à Teams Toolkit ou TeamsFx SDK et CLI** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png" border="false":::  [Problèmes GitHub](https://github.com/OfficeDev/TeamsFx/issues) : créez de nouveaux problèmes sur le [référentiel GitHub TeamsFx (Microsoft Teams Framework)](https://github.com/OfficeDev/TeamsFx) pour signaler des problèmes ou formuler une demande de fonctionnalité. Nous vous recommandons d’utiliser les problèmes GitHub pour les requêtes et pour recevoir de l’aide de la communauté. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png" border="false"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/teams-toolkit) : utilisez la balise `teams-toolkit` pour publier des questions. Suivez les instructions de Stack Overflow, telles que fournir un titre descriptif, une instruction de problème concise et des détails pour reproduire le problème. Les demandes de fonctionnalités ou les questions générales sont hors sujet. </li> </ul> |
 | **Problèmes ou suggestions concernant le Kit de développement logiciel (SDK) des extensions Bot et Message** | Soumettez des problèmes et des demandes de fonctionnalités au référentiel du Kit de développement logiciel (SDK) pour le langage de votre bot ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js) ou [Python](https://github.com/Microsoft/botbuilder-python)). Publiez des questions de procédure sur [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) à l’aide des balises `botframework` et `microsoft-teams`. |
 | **Problèmes ou suggestions concernant le Kit de développement logiciel (SDK) Tab** | Soumettez des problèmes et des demandes de fonctionnalités au référentiel du Kit de développement logiciel (SDK) pour [Bibliothèque JavaScript Microsoft Teams](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Utilisez la balise `microsoft-teams` pour publier des questions de procédure sur le Kit de développement logiciel (SDK) sur [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams). |
+| **Live Share problèmes ou suggestions du Kit de développement logiciel (SDK)** | Envoyez des problèmes et des demandes de fonctionnalités au référentiel du Kit de développement logiciel (SDK) pour [Live Share SDK](https://github.com/microsoft/live-share-sdk). Utilisez l’étiquette `live-share` pour `microsoft-teams` publier des questions de procédure sur le Kit de développement logiciel (SDK) sur [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams). |
 
 ### <a name="documentation-feedback"></a>Commentaires sur la documentation
 

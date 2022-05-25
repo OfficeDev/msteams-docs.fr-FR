@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656077"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668059"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publier des applications Teams pour Microsoft 365
 
@@ -26,7 +26,7 @@ Outlook extensions de message peuvent être distribuées aux locataires de test 
 
 ### <a name="teams-client"></a>Client Teams
 
-Dans le menu *Applications*, sélectionnez *Gérer vos applicationsPublish* >  *une applicationSubmit* >  **une application à votre organisation**. Cela nécessite l’approbation de votre administrateur informatique.
+Dans le menu **Applications** , sélectionnez **Gérer vos applications** > **Publier une application** > **Envoyer une application à votre organisation**. Cela nécessite l’approbation de votre administrateur informatique.
 
 ### <a name="teams-developer-portal"></a>portail des développeurs Teams
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac7b82d4a0c984f1db94c770be28d0bcda71c8e6
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 9cc0d88d5f992aa596509a6206a26baa413bdcf1
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656091"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668143"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Étendre Teams applications à travers Microsoft 365
 
@@ -20,7 +20,7 @@ L’extension de votre application Teams sur Microsoft 365 offre un moyen simpli
 
 La plateforme d’applications Teams continue d’évoluer et de s’étendre de manière holistique à l’écosystème Microsoft 365. Voici la prise en charge actuelle des éléments de plateforme d’application Teams dans Microsoft 365 (Teams, Outlook et Office en tant qu’hôtes d’applications) :
 
-|          | Élément de manifeste d’application | prise en charge Teams |prise en charge de Outlook* | prise en charge de Office* | Remarques |
+|          | Élément de manifeste d’application | prise en charge Teams |prise en charge de Outlook* | prise en charge de Office* | Notes |
 |--|--|--|--|--|--|
 | [**Onglets**](../tabs/what-are-tabs.md) (étendue personnelle)    |`staticTabs`  | Web, Bureau, Mobile | Web (version ciblée), Bureau (canal bêta) | Web (version ciblée)| Étendue de canal et de groupe non encore prise en charge pour Microsoft 365. Consultez [les notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Extensions de message**](../messaging-extensions/what-are-messaging-extensions.md) (basées sur la recherche)| `composeExtensions` | Web, Bureau, Mobile| Web (version ciblée), Bureau (canal bêta)| |L’action n’est pas encore prise en charge pour Microsoft 365. Consultez [les notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
@@ -69,7 +69,7 @@ Rejoignez le nombre croissant d’applications de production Teams dans le Magas
 
 Une fois publiée en tant qu’application Teams compatible Microsoft 365, votre application est détectable en tant qu’application installable à partir des magasins Outlook et application Office, en plus du magasin Teams. Lors de l’exécution dans Outlook et Office, votre application utilise les mêmes autorisations accordées dans Teams. Teams administrateurs peuvent [gérer l’accès aux applications Teams dans Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) pour les utilisateurs de leur organisation.
 
-Pour plus d’informations, consultez [Publier des applications Teams pour Microsoft 365](publish.md)
+Pour plus d’informations, consultez [Publier des applications Teams pour Microsoft 365](publish.md).
 
 ## <a name="next-step"></a>Étape suivante
 

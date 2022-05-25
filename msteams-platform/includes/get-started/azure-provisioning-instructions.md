@@ -82,23 +82,13 @@ Une fois les étapes d’approvisionnement et de déploiement terminées :
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Capture d’écran montrant l’application de lancement à distance." border="false":::
 
-1. Sélectionnez **Ajouter**.
+1. Sélectionnez **Ajouter** lorsque vous êtes invité à charger l’application sur Teams sur votre ordinateur local.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Capture d’écran montrant l’application en cours d’installation." border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="Capture d’écran montrant que le bot est ajouté sur Teams client.":::
 
-   Le kit de ressources affiche un message indiquant que l’application est ajoutée à Teams.
+   Vous pouvez taper `welcome` pour afficher une carte d’introduction et taper `learn` pour accéder à la documentation de commande de carte adaptative et de bot.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Capture d’écran montrant le message permettant d’essayer l’application maintenant ou ultérieurement" border="true":::
- 
-    - Si vous sélectionnez **Obtenir**, vous pouvez essayer l’application ultérieurement dans la liste des applications chargées de manière indépendante.
-    - Si vous sélectionnez **Essayer**, Teams charge votre application.
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Capture d’écran montrant la carte Learn dans le bot sur Teams client.":::       
 
-   Votre application est chargée sur le site Azure.
-   
-1. Sélectionnez **Essayer**.
-
-   L’application Extension de message est chargée dans une application de bot de conversation.
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Capture d’écran montrant l’application chargée de manière indépendante dans Teams" border="false":::
 
 

@@ -4,14 +4,14 @@ author: surbhigupta
 description: Identifier les références d’API d’applications de réunion avec des exemples et des exemples de code
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams Apps rencontre la requête de signal de notification de contexte utilisateur de l’API de rôle de participant utilisateur
-ms.openlocfilehash: 4f04d94d5fd9d1b38f7569db658fac10ccaa2650
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111352"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65667982"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -777,6 +777,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 
 * [Flux d’authentification Teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Applications pour les réunions Teams](teams-apps-in-meetings.md)
+* [SDK Live Share](teams-live-share-overview.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

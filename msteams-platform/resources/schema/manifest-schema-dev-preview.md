@@ -3,14 +3,14 @@ title: Informations de référence sur le schéma du manifeste de la préversion
 description: Exemple de fichier manifeste et description de tous ses composants pris en charge pour Microsoft Teams
 ms.topic: reference
 keywords: Aperçu du développeur du schéma de manifeste teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110329"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668129"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
 
@@ -284,7 +284,7 @@ URL `https://` faisant référence au schéma JSON pour le manifeste.
 
 Chaîne **requise**&ndash;
 
-Version du schéma de manifeste que ce manifeste utilise. Utilisez `m365DevPreview` uniquement si vous affichez un aperçu applications [Teams s’exécutant dans Office et Outlook](../../m365-apps/overview.md). Sinon, utilisez `devPreview` pour toutes les autres fonctionnalités teams en préversion.
+Version du schéma de manifeste que ce manifeste utilise.
 
 ## <a name="version"></a>version
 
@@ -556,6 +556,97 @@ Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) 
 |`resource`|Chaîne|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton d’authentification pour l’authentification unique.|
 |`applicationPermissions`|Tableau|100 éléments maximum|✔|Autorisations de ressource pour l’application.|
 
+## <a name="graphconnector"></a>graphConnector
+
+**Facultatif**— objet
+
+Spécifiez la configuration du connecteur Graph de l’application. Si cette valeur est présente [, webApplicationInfo.id](#webapplicationinfo) doit également être spécifiée.
+
+|Nom| Type| Taille maximale | Requis | Description|
+|---|---|---|---|---|
+|`notificationUrl`|string|2 048 caractères|✔|URL où les notifications Graph-connecteur pour l’application doivent être envoyées.|
+
+## <a name="showloadingindicator"></a>showLoadingIndicator
+
+**Facultatif**— booléen
+
+Indique si l’indicateur de chargement doit être affiché ou non lors du chargement d’une application ou d’un onglet. La valeur par défaut est **False**.
+> [!NOTE]
+> Si vous sélectionnez`showLoadingIndicator` comme true dans le manifeste de votre application, pour charger correctement la page, modifiez les pages de contenu de vos onglets et modules de tâches, comme décrit dans le document [Afficher un indicateur de chargement natif](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+
+## <a name="isfullscreen"></a>IsFullScreen
+
+ **Facultatif**— booléen
+
+Indique si une application personnelle est rendue avec ou sans barre d'en-tête d'onglet. La valeur par défaut est **faux**.
+
+> [!NOTE]
+> `isFullScreen` fonctionne uniquement pour les applications publiées dans votre organisation.
+
+## <a name="activities"></a>activités
+
+**Facultatif**— objet
+
+Définissez les propriétés utilisées par votre application pour publier un flux d’activité utilisateur.
+
+|Nom| Type| Taille maximale | Requis | Description|
+|---|---|---|---|---|
+|`activityTypes`|tableau d’Objets|128 éléments| | Indiquez les types d’activités que votre application peut publier dans un flux d’activités utilisateurs.|
+
+### <a name="activitiesactivitytypes"></a>activities.activityTypes
+
+|Nom| Type| Taille maximale | Requis | Description|
+|---|---|---|---|---|
+|`type`|string|32 caractères|✔|Le type de notification. *Voir ci-dessous*.|
+|`description`|string|128 caractères|✔|Une brève description de la notification. *Voir ci-dessous*.|
+|`templateText`|string|128 caractères|✔|Exemple : « {actor} a créé la tâche {taskId} pour vous »|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
+
 ## <a name="configurableproperties"></a>configurableProperties
 
 **Facultatif**— tableau
@@ -688,6 +779,15 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |**Name**|**Description**|
     |---|---|
     |`InAppPurchase.Allow.User`|Permet à l’application d’afficher les offres marketplace de l’utilisateur et d’effectuer les achats de l’utilisateur au sein de l’application, au nom de l’utilisateur connecté.|
+
+* **Autorisations spécifiques aux ressources pour Teams partage en direct**
+
+   |Nom| Description |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>Voir aussi
 
