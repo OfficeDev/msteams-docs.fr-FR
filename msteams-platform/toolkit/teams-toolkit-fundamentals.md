@@ -6,15 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 1b65fedbc34cb00771dde279a19ab1d6b4d8b16a
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656858"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673012"
 ---
 # <a name="teams-toolkit-overview"></a>Vue d’ensemble du kit de ressources Teams
-
 
 Teams Toolkit for Microsoft Visual Studio Code vous aide à créer et déployer des applications Teams avec une identité intégrée, un accès au stockage cloud, des données de Microsoft Graph et d’autres services dans Azure et Microsoft 365 avec une approche de configuration zéro. Pour le développement d’applications Teams, similaire au Kit de ressources Teams pour Visual Studio, vous pouvez utiliser l’[outil CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), qui se compose de toolkit `teamsfx`.
 Teams Toolkit vous permet de créer, déboguer et déployer votre application Teams directement à partir de Visual Studio Code. Le développement d’applications avec le kit de ressources présente les avantages suivants :

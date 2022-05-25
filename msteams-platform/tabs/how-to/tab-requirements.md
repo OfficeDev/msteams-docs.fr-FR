@@ -6,12 +6,12 @@ keywords: canal de groupe des onglets Teams configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654893"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672928"
 ---
 # <a name="prerequisites"></a>Configuration requise
 
@@ -31,13 +31,15 @@ Veillez à respecter les conditions préalables suivantes lors de la création d
 
 * Stylisez vos onglets en fonction du thème, de la conception et de l’intention du client Teams. Les onglets fonctionnent mieux lorsqu’ils sont conçus pour répondre à un besoin spécifique et se concentrer sur un petit ensemble de tâches ou un sous-ensemble de données pertinent pour l’emplacement du canal de l’onglet.
 
-* Dans votre page de contenu, ajoutez une référence au [Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) à l’aide de balises de script. Une fois votre page chargée, appelez `microsoftTeams.initialize()`, sinon votre page ne s’affiche pas.
+* Dans votre page de contenu, ajoutez une référence au [Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client) à l’aide de balises de script. Une fois votre page chargée, effectuez un appel à `app.initialize()`; sinon, votre page ne s’affichera pas.
 
 * Pour que l’authentification fonctionne sur des clients mobiles, vous devez effectuer une mise à niveau vers Kit de développement logiciel (SDK) JavaScript Microsoft Teams 1.4.1 et versions ultérieures.
 
-* Si vous choisissez d’afficher l’onglet de votre canal ou de votre groupe sur un client mobile Teams, la configuration `setSettings()` doit avoir une valeur pour la propriété `websiteUrl`.
+* Si vous choisissez d’afficher l’onglet de votre canal ou de votre groupe sur un client mobile Teams, la configuration `setConfig()` doit avoir une valeur pour la propriété `websiteUrl`.
 
-* L’onglet Microsoft Teams ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
+* Microsoft Teams’onglet ne prend pas en charge la possibilité de charger des sites web intranet qui utilisent des certificats auto-signés.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tools-to-build-tabs"></a>Outils pour créer des onglets
 

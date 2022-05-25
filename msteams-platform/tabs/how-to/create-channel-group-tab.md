@@ -2,16 +2,16 @@
 title: Créer un canal ou un onglet de groupe
 author: laujan
 description: Guide de démarrage rapide sur la création d’un canal et d’un onglet de groupe avec yeoman Generator pour Microsoft Teams, y compris l’examen du code source avec des exemples de code.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 1e2092e06fa79691a7cd633d5ff56572a7fe73ad
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111338"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672949"
 ---
 # <a name="channel-or-group-tab"></a>Onglets de canal ou de groupe
 
@@ -64,7 +64,7 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
     * **Où souhaitez-vous placer les fichiers ?**
 
-        Vous êtes actuellement dans le répertoire de votre projet. Sélectionnez **Entrée**.
+        Vous êtes actuellement dans le répertoire de votre projet. Ensuite, sélectionnez **Entrée**.
 
     * **Titre de votre projet d’application Microsoft Teams ?**
 
@@ -100,11 +100,11 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
     * **Voulez-vous que les applications personnelles soient restituées sans barre d’en-tête d’onglet ?**
 
-        Choisissez ne **pas** inclure les applications personnelles à afficher sans barre d’en-tête d’onglet. La valeur par défaut est non, entrez **n**.
+        Choisissez ne **pas** inclure les applications personnelles à afficher sans barre d’en-tête d’onglet. Valeur par défaut est non, entrez **n**.
 
     * **Voulez-vous inclure l’infrastructure de test et les tests initiaux ? (y/N)**
 
-        Choisissez ne **pas** inclure une infrastructure de test pour ce projet. La valeur par défaut est non, entrez **n**.
+        Choisissez **pas** pour inclure une infrastructure de test pour ce projet. La valeur par défaut est non, entrez **n**.
 
     * **Voulez-vous inclure la prise en charge d’ESLint ? (y/N)**
 
@@ -477,7 +477,7 @@ Voici les étapes de création d’un canal ou d’un onglet de groupe :
 
 #### <a name="startupcs"></a>Startup.cs
 
-Ce projet a été créé à partir d’un modèle vide d’application web ASP.NET Core 3.1 avec la case à cocher **Avancé - Configurer pour HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode `ConfigureServices()` de l’infrastructure d’injection de dépendances. En outre, le modèle vide n’active pas le traitement du contenu statique par défaut. Par conséquent, l’intergiciel de fichiers statiques est ajouté à la méthode `Configure()` à l’aide du code suivant :
+Ce projet a été créé à partir d’un modèle vide d’application web ASP.NET Core 3.1 avec la case à cocher **Avancé – Configurer pour HTTPS** sélectionnée lors de l’installation. Les services MVC sont inscrits par la méthode `ConfigureServices()` de l’infrastructure d’injection de dépendances. En outre, le modèle vide n’active pas le traitement du contenu statique par défaut. Par conséquent, l’intergiciel de fichiers statiques est ajouté à la méthode `Configure()` à l’aide du code suivant :
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -664,7 +664,7 @@ Veillez à conserver l’invite de commandes avec ngrok en cours d’exécution 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Onglets Teams](~/tabs/what-are-tabs.md)
+* [onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Onglets sur les appareils mobiles](~/tabs/design/tabs-mobile.md)
 * [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)

@@ -3,15 +3,15 @@ title: Créer une page de contenu
 author: surbhigupta
 description: comment créer une page de contenu
 keywords: onglets teams , canal de groupe configurable statique
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 68ce03e9b1ef303bd66043baed39baf954fb1d0f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111429"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673026"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
@@ -23,6 +23,8 @@ Une page de contenu est une page web qui est affichée dans le client Teams. Ces
 
 Cet article est spécifique à l’utilisation de pages de contenu sous forme d’onglets ; toutefois, la majorité des instructions s’appliquent ici, quelle que soit la façon dont la page de contenu est présentée à l’utilisateur.
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## <a name="tab-content-and-design-guidelines"></a>Instructions de conception et de contenu de tabulation
 
 L’objectif global de votre onglet est de fournir l’accès à du contenu significatif et attrayant qui a une valeur pratique et un objectif évident. Vous devez vous concentrer sur le nettoyage, la navigation et l’immersif de votre conception d’onglets.
@@ -31,9 +33,31 @@ Pour plus d’informations, consultez [instructions de conception de l’onglet]
 
 ## <a name="integrate-your-code-with-teams"></a>Intégrer votre code à Teams
 
-Pour que votre page s’affiche dans Teams, vous devez inclure le [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et inclure un appel à `microsoftTeams.initialize()` après le chargement de votre page.
+Pour que votre page s’affiche dans Teams, vous devez inclure le [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) et inclure un appel à `app.initialize()` après le chargement de votre page.
 
 Le code suivant fournit un exemple de la façon dont votre page et le client Teams communiquent :
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+...
+</head>
+
+<body>
+...
+    <script>
+    app.initialize();
+    </script>
+...
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
@@ -52,6 +76,8 @@ Le code suivant fournit un exemple de la façon dont votre page et le client Tea
 ...
 </body>
 ```
+
+***
 
 ## <a name="access-additional-content"></a>Accéder à du contenu supplémentaire
 
@@ -89,10 +115,10 @@ Si vous indiquez `showLoadingIndicator : true`  dans le manifeste de votre appli
 Pour afficher l’indicateur de chargement :
 
 1. Ajoutez `"showLoadingIndicator": true` à votre manifeste.
-1. Appel `microsoftTeams.initialize();`.
-1. Comme étape **obligatoire**, appelez `microsoftTeams.appInitialization.notifySuccess()` pour notifier aux équipes que votre application a été chargée avec succès. Teams masque ensuite l’indicateur de chargement, le cas échéant. Si `notifySuccess` n’est pas appelé dans les 30 secondes, il est supposé que votre application a expiré et qu’un écran d’erreur avec une option de nouvelle tentative s’affiche.
-1. **éventuellement**, si vous êtes prêt à imprimer à l’écran et que vous souhaitez charger tardivement le reste du contenu de votre application, vous pouvez masquer manuellement l’indicateur de chargement en appelant `microsoftTeams.appInitialization.notifyAppLoaded();`.
-1. Si le chargement de votre application échoue, vous pouvez appeler `microsoftTeams.appInitialization.notifyFailure(reason);` pour informer Teams qu’une erreur s’est produite. Un écran d’erreur s’affiche pour l’utilisateur. Le code suivant fournit un exemple de raisons d’échec d’application :
+1. Appel `app.initialize();`.
+1. Comme étape **obligatoire**, appelez `app.notifySuccess()` pour notifier aux équipes que votre application a été chargée avec succès. Ensuite, Teams masque l’indicateur de chargement, le cas échéant. S’il `notifySuccess` n’est pas appelé dans les 30 secondes, Teams suppose que votre application a expiré et affiche un écran d’erreur avec une option de nouvelle tentative.
+1. Si vous êtes prêt à imprimer à l’écran et souhaitez charger **tardivement** le reste du contenu de votre application, vous pouvez masquer l’indicateur de chargement manuellement en appelant `app.notifyAppLoaded();`.
+1. Si votre application ne se charge pas, vous pouvez appeler `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` pour informer Teams de l’échec et, éventuellement, fournir un message d’échec. Un écran d’erreur s’affiche pour l’utilisateur. Le code suivant montre l’énumération qui définit les raisons possibles pour lesquelles vous pouvez indiquer l’échec du chargement de l’application :
 
     ```typescript
     /* List of failure reasons */
