@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656144"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668073"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Étendre une extension de message Teams dans Microsoft 365
 
@@ -106,7 +106,7 @@ Pour que les utilisateurs interagissent avec votre extension de message à parti
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Cliquez sur Outlook, sélectionnez l'onglet Extensions de message, puis cliquez sur Enregistrer":::.
 
-1. Vérifiez que votre canal Outlook est répertorié avec Microsoft Teams dans le volet **canaux** de votre bot :
+1. Vérifiez que votre canal Outlook est répertorié avec Microsoft Teams dans le volet **Canaux** de votre bot.
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Le volet Azure Bot Channels répertorie les canaux Microsoft Teams et Outlook. ":::
 
@@ -123,27 +123,27 @@ L’authentification unique (SSO) Azure Active Directory (AD) pour les extension
 1. Sélectionnez **Exposer une API** (sous *Gérer*).
 1. Dans la section **applications clientes autorisées** , vérifiez que toutes les valeurs de `Client Id` suivantes sont répertoriées :
 
-|Application client Microsoft 365 | ID du client |
-|--|--|
-|Bureau et mobile Teams |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Web Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Version de bureau d’Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+   |Application client Microsoft 365 | ID du client |
+   |--|--|
+   |Bureau et mobile Teams |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+   |Web Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Version de bureau d’Outlook | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+   |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+   |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>Charger une version test de votre extension de message mise à jour dans Teams
 
 La dernière étape consiste à charger une version test de votre extension de message mise à jour ([package d’application](/microsoftteams/platform/concepts/build-and-test/apps-package)) dans Microsoft Teams. Une fois l’opération terminée, votre extension de message s’affiche dans votre *Apps* installée à partir de la zone de rédaction du message.
 
-1. Empaquetez votre application Teams ( [icônes](/microsoftteams/platform/resources/schema/manifest-schema#icons) du manifeste et d’application) dans un fichier zip. Si vous avez utilisé teams Toolkit pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **Zip Teams Metadata Package** dans le menu *Déploiement* du Kit de ressources Teams :
+1. Empaquetez votre application Teams ([icônes](/microsoftteams/platform/resources/schema/manifest-schema#icons) de manifeste et d’application) dans un fichier zip. Si vous avez utilisé le Kit de ressources Teams pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **Package de métadonnées Zip Teams** dans le menu *Déploiement* du Kit de ressources Teams.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option « Zip Teams metadata package » dans Teams Shared Computer Toolkit extension pour Visual Studio Code":::
 
-1. Connectez-vous à Teams avec votre compte client sandbox et basculez en mode *Aperçu développeur* . Sélectionnez le menu des points de suspension (**...**) selon votre profil utilisateur, puis sélectionnez : À propos de > **Aperçu développeur**.
+1. Connectez-vous à Teams avec votre compte client sandbox et basculez en mode *Aperçu développeur* . Sélectionnez le menu des points de suspension (**...**) près de votre profil utilisateur, puis sélectionnez : **À propos de** > **Aperçu développeur**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans le menu des points de suspension Teams, ouvrez « À propos de », puis sélectionnez l’option « Aperçu développeur »":::
 
-1. Sélectionnez *Applications* pour ouvrir le volet **Gérer vos applications**. Sélectionnez Ensuite **Publier une application**.
+1. Sélectionnez **Applications** pour ouvrir le volet **Gérer vos applications**. Sélectionnez Ensuite **Publier une application**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Ouvrez le volet « Gérer vos applications » et sélectionnez « Publier une application »":::
 

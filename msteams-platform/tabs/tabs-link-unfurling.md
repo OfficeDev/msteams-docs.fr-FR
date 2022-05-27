@@ -5,20 +5,20 @@ description: Découvrez comment déployer un lien, ouvrir la vue des étapes et 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296958"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756736"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
-La vue des étapes est un nouveau composant d’interface utilisateur qui vous permet d’afficher le contenu ouvert en plein écran dans Teams et épinglé sous forme d’onglet.
+La vue d’étape est un nouveau composant d’interface utilisateur. Il vous permet d’afficher le contenu qui est ouvert en plein écran dans Teams et épinglé sous forme d’onglet.
 
 ## <a name="stage-view"></a>Vue des étapes
 
-La vue des étapes est un composant d’interface utilisateur en plein écran que vous pouvez utiliser pour exposer votre contenu web. Le service existant de déploiement de liens est mis à jour de manière à ce qu'il soit utilisé pour transformer les URL en un onglet à l'aide d'une carte adaptative et de services de conversation. Lorsqu’un utilisateur envoie une URL dans une conversation ou un canal, l’URL est déployée vers une carte adaptative. L’utilisateur peut sélectionner **Affichage** dans la carte et épingler le contenu sous la forme d’un onglet directement à partir de la vue des étapes.
+La vue des étapes est un composant d’interface utilisateur en plein écran que vous pouvez utiliser pour exposer votre contenu web. Le service de déploiement de liaison existant est mis à jour afin qu’il soit utilisé pour transformer les URL en onglet à l’aide d’une carte adaptative et des services de conversation. Lorsqu’un utilisateur envoie une URL dans une conversation ou un canal, l’URL est déployée vers une carte adaptative. L’utilisateur peut sélectionner **Affichage** dans la carte et épingler le contenu sous la forme d’un onglet directement à partir de la vue des étapes.
 
 ## <a name="advantage-of-stage-view"></a>Avantage de la vue des étapes
 
@@ -101,7 +101,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={« contentUrl »:"conte
  
 ### <a name="examples"></a>Exemples
 
-Lorsqu'un utilisateur saisit une URL, celle-ci se déploie en une carte adaptative.
+Lorsqu’un utilisateur entre une URL, elle est déployée dans une carte adaptative.
 
 Voici des exemples de liens profonds pour invoquer la vue des étapes :
 
@@ -109,7 +109,7 @@ Voici des exemples de liens profonds pour invoquer la vue des étapes :
 
 URL non codée :
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={«contentUrl»:«https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191»,«websiteUrl»:«https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true«,"titre»:«Quotes:Miscellaneous»,«threadId»«19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2»}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={« contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title »:"Quotes: Miscellaneous »,"threadId »:"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 URL codée :
 
@@ -119,7 +119,7 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 URL non codée :
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={« contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"itre »:"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={« contentUrl »: »https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl »:"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true »,"title »:"Quotes: Miscellaneous"}
 
 Encodé
 

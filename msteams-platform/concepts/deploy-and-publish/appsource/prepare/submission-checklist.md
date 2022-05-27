@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: les instructions de validation de package d’application de la banque de soumissions sont localisées
-ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135751"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756778"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission au Microsoft Teams store
 
@@ -23,8 +23,8 @@ Avant de soumettre votre application à [Espace partenaires](/office/dev/store/u
 
 Bien que votre application fonctionne dans un environnement de test, vous devez vérifier votre package d’application pour éviter de rencontrer des problèmes pendant le processus de soumission.
 
-> [!NOTE]
- > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
+> [!WARNING]
+> Si vous utilisez App Studio, nous vous recommandons d’essayer le [Portail des développeurs](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
 
 L’outil de validation d’application Microsoft Teams vous permet d’identifier et de résoudre les problèmes avant de les soumettre à Espace partenaires. L’outil vérifie automatiquement les configurations de votre application par rapport aux cas de test utilisés lors de la validation du Store.
 
@@ -75,15 +75,15 @@ Une description dans le Store peut être la première impression d’une personn
 
 ### <a name="specify-a-short-name"></a>Spécifier un nom court
 
-Le nom de votre application (plus précisément, son [*nom court*](~/resources/schema/manifest-schema.md#name)) joue un rôle essentiel dans la façon dont les utilisateurs le découvrent dans le Store.
+Le nom de votre application (plus précisément, son *[nom court](~/resources/schema/manifest-schema.md#name)*) joue un rôle essentiel dans la façon dont les utilisateurs le découvrent dans le Store.
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage du nom court d’une application dans une description dans le Store.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage du nom court d’une application dans une description dans le Store.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -99,11 +99,11 @@ Résumé concis de votre application qui doit être original, attrayant et desti
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la brève description d’une application dans une description du Store.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la brève description d’une application dans une description du Store.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -121,11 +121,11 @@ Bien que cette description puisse contenir jusqu’à 4 000 caractères, la pl
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la description longue d’une application dans une description du Store.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Exemple de capture d’écran met en évidence l’affichage de la description longue d’une application dans une description du Store.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -143,11 +143,11 @@ Les captures d’écran fournissent un aperçu visuel évident de votre applicat
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Exemple de capture d’écran met en évidence l’affichage des captures d’écran d’application dans une description dans le Store.":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Exemple de capture d’écran met en évidence l’affichage des captures d’écran d’application dans une description dans le Store.":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -212,7 +212,6 @@ Espace partenaires prend en charge les[listes de magasins localisées](/office/d
 > Si vous soumettez une nouvelle application, vous ne pouvez pas terminer officiellement l’attestation du serveur de publication tant que votre application n’est pas répertoriée dans le Magasin Teams. Si vous mettez à jour une application répertoriée, effectuez l’attestation de l’éditeur avant de soumettre la dernière version de l’application pour validation.
 
 ## <a name="next-step"></a>Étape suivante
-
 > [!div class="nextstepaction"]
 > [Envoyer votre application](/office/dev/store/add-in-submission-guide)
 

@@ -4,12 +4,12 @@ description: Découvrez comment ajouter le partage dans Teams incorporé sur vot
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Partager Teams – Partager dans Teams
-ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439362"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757261"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>Partager dans Teams à partir d’une application ou d’un onglet personnel
 
@@ -84,7 +84,7 @@ Le tableau suivant présente les codes de réponse :
 | **9000** | Le code de plateforme est ancien et n’implémente pas cette API. |
 | **10 000** | La valeur de retour est trop grande et a dépassé nos limites de taille. |
 
-## <a name="limitations"></a>Limitations
+## <a name="limitations"></a>Limites
 
 Limitations à l’ajout d’un partage à Teams bouton :
 

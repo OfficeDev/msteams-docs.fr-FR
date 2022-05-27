@@ -2,14 +2,14 @@
 title: Authentification pour les onglets à l’aide de Azure Active Directory
 description: Décrit l’authentification dans Teams et comment l’utiliser dans des onglets
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 3341c7235e3fdbfeb401e6d22abf0869c1e9b181
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: aa60f3908a13b55add525a561fe3f60afaad6c87
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111674"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757317"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifier un utilisateur dans un onglet Microsoft Teams
 
@@ -20,7 +20,7 @@ Il existe de nombreux services que vous pouvez utiliser dans votre application T
 
 OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0 dans le but de lire les informations de profil de l’utilisateur à partir de Azure AD et Microsoft Graph.
 
-Le code de cet article provient de l’exemple d’application Teams [Exemple d’authentification par onglet Microsoft Teams (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Il contient un onglet statique qui demande un jeton d’accès pour Microsoft Graph et affiche les informations de profil de base de l’utilisateur actuel à partir de Azure AD.
+Le code de l’article provient de l’exemple d’application Teams [Microsoft Teams’exemple d’authentification par onglet (Node).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Il contient un onglet statique qui demande un jeton d’accès pour Microsoft Graph et affiche les informations de profil de base de l’utilisateur actuel à partir de Azure AD.
 
 Pour une vue d’ensemble du flux d’authentification pour les onglets, consultez [flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -32,11 +32,11 @@ Consultez la rubrique [Configurer les fournisseurs d’identité](~/concepts/aut
 
 ## <a name="initiate-authentication-flow"></a>Lancer le flux d’authentification
 
-Le flux d’authentification doit être déclenché par une action de l’utilisateur. Vous ne devez pas ouvrir la fenêtre contextuelle d’authentification automatiquement, car cela est susceptible de déclencher le bloqueur de fenêtres contextuelles du navigateur et de confondre l’utilisateur.
+Le flux d’authentification doit être déclenché par une action de l’utilisateur. Vous ne devez pas ouvrir la fenêtre contextuelle d’authentification automatiquement, car cela risque de déclencher le bloqueur de fenêtres contextuelles du navigateur et de confondre l’utilisateur.
 
 Ajoutez un bouton à votre page de configuration ou de contenu pour permettre à l’utilisateur de se connecter si nécessaire. Vous pouvez le faire dans l’onglet page de [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) ou dans n’importe quelle page de [contenu](~/tabs/how-to/create-tab-pages/content-page.md).
 
-Azure AD, comme la plupart des fournisseurs d’identité, n’autorise pas son contenu à être placé dans une iFrame. Cela signifie que vous devez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start`. Utilisez la fonction `microsoftTeams.authenticate()` du Kit de développement logiciel (SDK) client Microsoft Teams pour lancer cette page lorsque votre bouton est sélectionné.
+Azure AD, comme la plupart des fournisseurs d’identité, n’autorise pas le placement de son contenu dans un iframe. Cela signifie que vous devez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start`. Utilisez la fonction `microsoftTeams.authenticate()` du Kit de développement logiciel (SDK) client Microsoft Teams pour lancer cette page lorsque votre bouton est sélectionné.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -93,16 +93,16 @@ Une fois l’autorisation terminée, l’utilisateur est redirigé vers la page 
 
 ### <a name="notes"></a>Notes
 
-* Consultez [obtenir des informations de contexte utilisateur](~/tabs/how-to/access-teams-context.md) pour obtenir de l’aide sur la création de demandes d’authentification et d’URL. Par exemple, vous pouvez utiliser le nom de connexion de l’utilisateur comme valeur de `login_hint` pour Azure AD connexion, ce qui signifie que l’utilisateur peut avoir besoin de taper moins. N’oubliez pas que vous ne devez pas utiliser ce contexte directement comme preuve d’identité, car un attaquant pourrait charger votre page dans un navigateur malveillant et lui fournir les informations souhaitées.
+* Consultez [obtenir des informations de contexte utilisateur](~/tabs/how-to/access-teams-context.md) pour obtenir de l’aide sur la création de demandes d’authentification et d’URL. Par exemple, vous pouvez utiliser le nom de connexion de l’utilisateur comme valeur de `login_hint` pour Azure AD connexion, ce qui signifie que l’utilisateur peut avoir besoin de taper moins. N’oubliez pas que vous ne devez pas utiliser ce contexte directement comme preuve d’identité, car un attaquant peut charger votre page dans un navigateur malveillant et lui fournir toutes les informations souhaitées.
 * Bien que le contexte de l’onglet fournisse des informations utiles concernant l’utilisateur, n’utilisez pas ces informations pour authentifier l’utilisateur, que vous l’obteniez en tant que paramètres d’URL vers l’URL de contenu de votre onglet ou en appelant la fonction `microsoftTeams.getContext()` dans le Kit de développement logiciel (SDK) du client Microsoft Teams. Un acteur malveillant pourrait appeler l’URL de contenu de votre onglet avec ses propres paramètres, et une page web empruntant l’identité de Microsoft Teams pourrait charger l’URL de contenu de votre onglet dans une iFrame et retourner ses propres données à la fonction `getContext()`. Vous devez traiter les informations relatives à l’identité dans le contexte de l’onglet simplement comme des indicateurs et les valider avant de les utiliser.
-* Le paramètre `state` est utilisé pour confirmer que le service appelant l’URI de rappel est le service que vous avez appelé. Si le paramètre `state` dans le rappel ne correspond pas au paramètre que vous avez envoyé pendant l’appel, l’appel de retour n’est pas vérifié et doit être arrêté.
-* Il n’est pas nécessaire d’inclure le domaine du fournisseur d’identité dans la liste `validDomains` dans le fichier manifest.json de l’application.
+* Le paramètre `state` est utilisé pour confirmer que le service appelant l’URI de rappel est le service que vous avez appelé. Si le `state` paramètre dans le rappel ne correspond pas au paramètre que vous avez envoyé pendant l’appel, l’appel de retour n’est pas vérifié et doit être arrêté.
+* Il n’est pas nécessaire d’inclure le domaine du fournisseur d’identité dans la `validDomains` liste dans le fichier manifest.json de l’application.
 
 ## <a name="the-callback-page"></a>Page de rappel
 
-Dans la dernière section, vous avez appelé le service d’autorisation Azure AD et transmis des informations sur l’utilisateur et l’application afin que Azure AD puisse présenter à l’utilisateur sa propre expérience d’autorisation monolithique. Votre application n’a aucun contrôle sur ce qui se passe dans cette expérience. Tout ce qu’il sait est ce qui est retourné quand Azure AD appelle la page de rappel que vous avez fournie (`/tab-auth/simple-end`).
+Dans la dernière section, vous avez appelé le service d’autorisation Azure AD et transmis des informations sur l’utilisateur et l’application afin qu’Azure AD puisse présenter à l’utilisateur sa propre expérience d’autorisation monolithique. Votre application n’a aucun contrôle sur ce qui se passe dans cette expérience. Tout ce qu’il sait est ce qui est retourné quand Azure AD appelle la page de rappel que vous avez fournie (`/tab-auth/simple-end`).
 
-Dans cette page, vous devez déterminer la réussite ou l’échec en fonction des informations retournées par Azure AD et appeler `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()`. Si la connexion a réussi, vous aurez accès aux ressources de service.
+Dans cette page, vous devez déterminer la réussite ou l’échec en fonction des informations retournées par Azure AD et de l’appel `microsoftTeams.authentication.notifySuccess()` ou `microsoftTeams.authentication.notifyFailure()`. Si la connexion a réussi, vous aurez accès aux ressources de service.
 
 ````javascript
 // Split the key-value pairs passed from Azure AD
@@ -141,7 +141,7 @@ Ce code analyse les paires clé-valeur reçues de Azure AD dans `window.location
 `NotifyFailure()` présente les raisons d’échec prédéfinies suivantes :
 
 * `CancelledByUser` l’utilisateur a fermé la fenêtre contextuelle avant de terminer le flux d’authentification.
-* `FailedToOpenWindow` la fenêtre contextuelle n’a pas pu être ouverte. Lors de l’exécution de Microsoft Teams dans un navigateur, cela signifie généralement que la fenêtre a été bloquée par un bloqueur de fenêtres contextuelles.
+* `FailedToOpenWindow` La fenêtre contextuelle n’a pas pu être ouverte. Lors de l’exécution de Microsoft Teams dans un navigateur, cela signifie généralement que la fenêtre a été bloquée par un bloqueur de fenêtres contextuelles.
 
 En cas de réussite, vous pouvez actualiser ou recharger la page et afficher le contenu pertinent pour l’utilisateur authentifié. Si l’authentification échoue, un message d’erreur s’affiche.
 
@@ -152,7 +152,7 @@ Votre application peut définir son propre cookie de session afin que l’utilis
 > * Chrome 80, dont la publication est prévue début 2020, introduit de nouvelles valeurs de cookie et impose des stratégies de cookie par défaut. Il est recommandé de définir l’utilisation prévue pour vos cookies plutôt que de vous appuyer sur le comportement par défaut du navigateur. *consultez* [Attribut de cookie SameSite (mise à jour 2020)](../../../resources/samesite-cookie-update.md).
 > * Pour obtenir le jeton correct pour les utilisateurs Microsoft Teams gratuits et invités, il est important que les applications utilisent un point de terminaison spécifique au client `https://login.microsoftonline.com/**{tenantId}**`. Vous pouvez obtenir tenantId à partir du message du bot ou du contexte de l’onglet. Si les applications utilisent `https://login.microsoftonline.com/common`, les utilisateurs reçoivent des jetons incorrects et se connectent au client « d'origine » au lieu du client auquel ils sont actuellement connectés.
 
-Pour plus d’informations sur l’authentification unique (SSO), consultez l’article [Authentification silencieuse](~/tabs/how-to/authentication/auth-silent-AAD.md).
+Pour plus d’informations sur l'Sign-On authentification unique (SSO), consultez l’article [Authentification silencieuse](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## <a name="code-sample"></a>Exemple de code
 

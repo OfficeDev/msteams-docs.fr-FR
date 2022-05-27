@@ -4,12 +4,12 @@ description: Décrit les cartes et leur utilisation dans des bots, des connecteu
 ms.localizationpriority: high
 keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191256"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756477"
 ---
 # <a name="cards"></a>Cartes
 
@@ -54,7 +54,7 @@ Toutes les cartes utilisées par Teams sont répertoriées dans les [types de ca
 
 ## <a name="adaptive-cards"></a>Cartes adaptatives
 
-Les [Cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sont une nouvelle spécification inter-produits pour les cartes des produits Microsoft, notamment les bots, Cortana, Outlook et Windows. Elles constituent le type de carte recommandé pour les nouveau développement Teams. Pour obtenir des informations générales sur l’équipe des Cartes adaptatives, voir [Vue d’ensemble du format Cartes adaptatives](/adaptive-cards). Vous pouvez utiliser des Cartes adaptatives partout où vous utilisez des cartes Hero, des cartes Office 365 et des cartes miniatures existantes.
+Les [Cartes adaptatives](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) sont une nouvelle spécification inter-produits pour les cartes des produits Microsoft, notamment les bots, Cortana, Outlook et Windows. Elles constituent le type de carte recommandé pour les nouveaux développements Teams. Pour obtenir des informations générales sur l’équipe des Cartes adaptatives, voir [Vue d’ensemble du format Cartes adaptatives](/adaptive-cards). Vous pouvez utiliser des Cartes adaptatives partout où vous utilisez des cartes Hero, des cartes Office 365 et des cartes miniatures existantes.
 
 Outre les Cartes adaptatives, Teams prend en charge deux autres types de cartes :
 

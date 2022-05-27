@@ -4,12 +4,12 @@ description: Vue d’ensemble de Démarrage pour la documentation pour les déve
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Exemples de développeurs Microsoft Teams
-ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135765"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654773"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -58,6 +58,11 @@ Nous allons maintenant créer votre première application Teams. Tout d’abord,
 > [Créer une application Teams avec C# ou .NET](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]
 > [Créer une application Teams avec node.js](../sbs-gs-nodejs.yml)
+> [!div class="nextstepaction"]
+> [Générer un bot de notification avec JavaScript](../sbs-gs-notificationbot.yml)
+> [!div class="nextstepaction"]
+> [Créer un bot de commandes avec JavaScript](../sbs-gs-commandbot.yml)
+> [!div class="nextstepaction"]
 
 ## <a name="see-also"></a>Voir aussi
 

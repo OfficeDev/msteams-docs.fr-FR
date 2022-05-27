@@ -4,12 +4,12 @@ description: Décrit comment obtenir du contexte utilisateur dans vos onglets
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Contexte utilisateur sous l’onglet Équipes
-ms.openlocfilehash: 319aea79c38466969f84e1e00d44b127a77ef92f
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672917"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755943"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenir un contexte Teams pour votre onglet
 
@@ -110,6 +110,9 @@ En plus de ces modifications de champ, deux nouveaux champs sont disponibles pou
 
 Si votre page utilise l’une de ces valeurs, la valeur du `channelType` champ doit être `Shared` de déterminer si votre page est chargée dans un canal partagé et peut répondre de manière appropriée.
 
+> [!NOTE]
+> Chaque fois qu’un utilisateur redémarre ou recharge le Teams client de bureau ou web, un nouvel ID de session est créé, suivi par Teams session, tandis qu’un utilisateur quitte les applications Teams et le recharge dans Teams plateforme, un nouvel ID de session d’application est créé, suivi par session d’application.
+
 ## <a name="handle-theme-change"></a>Gérer la modification du thème
 
 Vous pouvez inscrire votre application pour être informé si le thème change en appelant `app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
@@ -121,10 +124,10 @@ L’argument `theme` dans la fonction est une chaîne avec la valeur `default`, 
 > [!div class="nextstepaction"]
 > [Créer des onglets avec les Cartes adaptatives](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 
 * [Instructions de conception de tabulation](../../tabs/design/tabs.md)
-* [onglets Teams](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Utiliser des modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

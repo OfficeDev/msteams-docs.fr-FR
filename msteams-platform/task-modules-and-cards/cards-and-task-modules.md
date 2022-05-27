@@ -3,13 +3,13 @@ title: Cartes et modules de tâche
 description: Découvrez les types de cartes pris en charge dans les bots pour Teams, telles que les cartes adaptatives, les bannières, les cartes miniatures et bien plus encore. Découvrez les actions de carte et l’appel de modules de tâche dans des canaux, des bots ou des liens profonds.
 author: surbhigupta12
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 42e8ecc32d873a951aac15d79185384481a4dfb8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d68e45608d445e30a4d6b5ea8f5b662cfc22b116
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111884"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756575"
 ---
 # <a name="cards-and-task-modules"></a>Cartes et modules de tâche
 
@@ -38,7 +38,7 @@ Vous pouvez ajouter et répondre aux actions de carte qui effectuent l’action 
 * Envoyer des messages et une charge utile au bot
 * Lancer le flux OAuth
 
-Vous pouvez fournir une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) au sein d’un jeu de données volumineux à l’aide du contrôle type-ahead dans les cartes adaptatives et effectuer une recherche statique type-ahead dans un nombre limité de choix. Vous pouvez appeler des modules de tâche dans des onglets de canal ou personnels, des bots ou des liens profonds. L’expérience de votre utilisateur pour tous les flux de travail qui nécessite une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir de bots Teams en utilisant des boutons sur les cartes adaptatives et les cartes Bot Framework.
+Vous pouvez fournir une expérience de [recherche dynamique](~/task-modules-and-cards/cards/dynamic-search.md) au sein d’un jeu de données volumineux à l’aide du contrôle type-ahead dans les cartes adaptatives et effectuer une recherche statique type-ahead dans un nombre limité de choix. Invoke the task modules in channel or personal tabs, bots, or deep links. L’expérience de votre utilisateur pour tous les flux de travail qui nécessite une entrée de données peut être améliorée en ajoutant un module de tâche à l’onglet de l’utilisateur. Vous pouvez appeler des modules de tâche à partir de bots Teams en utilisant des boutons sur les cartes adaptatives et les cartes Bot Framework.
 
 ## <a name="see-also"></a>Voir aussi
 

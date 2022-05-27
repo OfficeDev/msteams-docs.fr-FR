@@ -7,16 +7,16 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Connecteurs Microsoft Teams kronos
 ms.author: lajanuar
-ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: 78c76e93040354d37770988f45f1b94d35f6102c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604263"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757352"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 
-Les connecteurs de gestion du personnel (WFM) Teams Shifts sont des intégrations prêtes pour la production, open source et basées sur la communauté, utiles pour les travailleurs de première ligne. Ils offrent une expérience transparente et un processus rapide pour la transformation numérique des travailleurs de première ligne avec Teams Shifts.
+Teams les connecteurs WFM (Shifts Workforce Management) sont des intégrations prêtes pour la production, open source et basées sur la communauté, utiles pour les employés de première ligne. Ils offrent une expérience transparente et un processus rapide pour la transformation numérique des travailleurs de première ligne avec Teams Shifts.
 
 Chaque connecteur fournit des conseils détaillés pour le déploiement et l’intégration à votre organisation. Le code source complet est disponible dans le référentiel GitHub. Vous pouvez explorer en détail ou dupliquer, et personnaliser pour répondre à vos besoins spécifiques.
 
@@ -34,7 +34,7 @@ Voici les principaux avantages des connecteurs WFM Teams Shifts :
 
 * **Documentation détaillée et prise en charge :** tous les connecteurs WFM Shifts sont accompagnés d’une documentation de bout en bout pour l’architecture de la solution, le déploiement et les étapes de configuration. Les référentiels de connecteurs sont surveillés afin que vous puissiez signaler les problèmes, les défis ou les difficultés que vous rencontrez via le suivi des problèmes du référentiel GitHub.
 
-* **Intégration transparente :** l’intégration entre les solutions WFM et Teams Shifts permet aux employés de première ligne d’utiliser l’application Teams Shifts pour afficher ou gérer leurs planifications et heures de travail. En outre, elle permet d’utiliser toutes les autres fonctionnalités de collaboration enrichies fournies dans Teams directement à partir de leur appareil mobile ou de leur bureau sans avoir à basculer le contexte vers une autre application.  
+* **Intégration transparente :** L’intégration entre les solutions WFM et Teams Shifts permet aux employés de première ligne d’utiliser l’application Teams Shifts pour afficher ou gérer leurs planifications et heures de travail, et d’utiliser toutes les autres fonctionnalités de collaboration enrichies fournies dans Teams directement à partir de leur appareil mobile ou de leur bureau sans avoir à basculer le contexte vers une autre application.  
 
 Ouvrir l’affichage des plannings dans Teams :
 

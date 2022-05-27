@@ -3,14 +3,14 @@ title: Envoi et réception de fichiers à partir d’un bot
 description: Découvrez comment envoyer et recevoir des fichiers via le bot à l’aide d’API Graph pour les étendues personnelles, de canal et de groupchat. Utilisez Teams API de bot à l’aide d’exemples de code basés sur le Kit de développement logiciel (SDK) Bot Framework v3.
 keywords: équipes bots fichiers envoyer recevoir
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: b12e8e79e7d8d5180803004b4e0f238446a8fc98
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110357"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755901"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>Envoyez et recevez des fichiers à travers votre bot
 
@@ -89,7 +89,7 @@ Le chargement d’un fichier vers un utilisateur implique les étapes suivantes 
 
 Ce message de bureau contient un objet pièce jointe simple demandant à l’utilisateur l’autorisation de charger le fichier :
 
-![Capture d’écran de la carte de consentement demandant à l’utilisateur l’autorisation de charger le fichier](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="Capture d’écran de la carte de consentement demandant à l’utilisateur l’autorisation de charger le fichier" border="true":::
 
 Ce message mobile contient un objet pièce jointe demandant à l’utilisateur l’autorisation de charger le fichier :
 

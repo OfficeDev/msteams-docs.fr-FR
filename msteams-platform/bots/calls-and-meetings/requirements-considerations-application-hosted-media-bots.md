@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: machine virtuelle Windows Server Azure multimédia hébergée par une application
 ms.date: 11/16/2018
-ms.openlocfilehash: 109d5bd29112b7c233fadd921b141f2287246498
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296979"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756610"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Exigences et considérations relatives aux bots multimédias hébergés par des applications
 
@@ -38,7 +38,7 @@ Un bot multimédia hébergé par une application requiert les éléments suivant
 
 La section suivante fournit des détails sur l’emplacement des appels multimédias en temps réel.
 
-## <a name="real-time-media-calls-stay-where-they-are-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
+## <a name="real-time-media-calls-stay-where-theyre-created"></a>Les appels multimédias en temps réel restent là où ils sont créés
 
 Les appels multimédias en temps réel restent sur l’ordinateur sur lequel ils ont été créés. Un appel multimédia en temps réel est épinglé à l’instance de machine virtuelle qui a accepté ou démarré l’appel. Les médias d’un appel ou d’une réunion Microsoft Teams circulent vers cette instance de machine virtuelle, et les médias que le bot renvoie à Microsoft Teams doivent également provenir de cette machine virtuelle. S’il existe des appels multimédias en temps réel en cours lorsque la machine virtuelle est arrêtée, ces appels sont soudainement arrêtés. Si le bot a connaissance préalablement de l’arrêt de la machine virtuelle en attente, il peut mettre fin aux appels.
 
@@ -63,7 +63,7 @@ La section suivante fournit des détails sur les considérations relatives à l�
 
 Les bots multimédias hébergés par l’application nécessitent les considérations suivantes en matière d’extensibilité et de performances :
 
-* Les bots multimédias hébergés par des applications nécessitent une capacité de calcul et de réseau (bande passante) supérieure à celle des bots de messagerie et peuvent entraîner des coûts opérationnels beaucoup plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’extensibilité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut le gérer. Un bot vidéo peut être en mesure de ne gérer qu’une ou deux sessions multimédias simultanées par cœur d’UC (si vous utilisez le « raw » Formats vidéo RVB24 ou NV12).
+* Les bots multimédias hébergés par l’application nécessitent plus de capacité de calcul et de réseau (bande passante) que les bots de messagerie et peuvent entraîner des coûts opérationnels plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’extensibilité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut le gérer. Un bot vidéo peut être en mesure de ne gérer qu’une ou deux sessions multimédias simultanées par cœur d’UC (si vous utilisez le « raw » Formats vidéo RVB24 ou NV12).
 * La plateforme multimédia en temps réel ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la machine virtuelle pour décharger l’encodage/décodage vidéo H.264. Au lieu de cela, l’encodage et le décodage vidéo sont effectués dans les logiciels sur l’UC. Si un GPU est disponible, le bot peut en tirer parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
 * L’instance de machine virtuelle hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de la série Dv2 est recommandée. Pour les autres types de machines virtuelles Azure, un système avec quatre processeurs virtuels est la taille minimale requise. Des informations détaillées sur les types de machines virtuelles Azure sont disponibles dans la [documentation Azure](/azure/virtual-machines/windows/sizes-general).
 
@@ -73,8 +73,8 @@ Les exemples de bots multimédias hébergés par l’application sont les suivan
 
 | **Exemple de nom** | **Description** | **Graph** |
 |------------|-------------|-----------|
-| Exemple de média local | Exemples illustrant différents scénarios multimédias locaux. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| Exemple de média distant | Exemples qui illustrent différents scénarios multimédias distants. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| Exemple de média local | Exemple illustrant différents scénarios de médias locaux. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Exemple de média distant | Exemple illustrant différents scénarios de médias distants. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -84,8 +84,8 @@ Les exemples de bots multimédias hébergés par l’application sont les suivan
 ## <a name="see-also"></a>Voir aussi
 
 * Documentation du Kit de développement logiciel (SDK) [Graph Calling](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-* Les bots nécessitent plus de capacité de calcul et de bande passante réseau que les bots de messagerie et entraînent des coûts opérationnels nettement plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’extensibilité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut le gérer. Un bot vidéo ne peut supporter qu’une ou deux sessions multimédias simultanées par cœur de processeur si vous utilisez les formats vidéo RVB24 ou NV12 bruts.
-* La plateforme multimédia en temps réel ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la machine virtuelle pour décharger l’encodage vidéo H.264 ou le décodage. Au lieu de cela, l’encodage et le décodage vidéo sont effectués dans les logiciels sur l’UC. Si un GPU est disponible, le bot en tire parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
+* Les bots nécessitent plus de capacité de calcul et de bande passante réseau que les bots de messagerie et occasionnent des coûts opérationnels plus élevés. Un développeur de bot multimédia en temps réel doit mesurer avec soin l’extensibilité du bot et s’assurer qu’il n’accepte pas plus d’appels simultanés qu’il ne peut le gérer. Un bot vidéo ne peut supporter qu’une ou deux sessions multimédias simultanées par cœur de processeur si vous utilisez les formats vidéo RVB24 ou NV12 bruts.
+* La plateforme multimédia en temps réel ne tire actuellement parti d’aucune unité de traitement graphique (GPU) disponible sur la machine virtuelle pour décharger l’encodage ou le décodage vidéo H.264. Au lieu de cela, l’encodage et le décodage vidéo sont effectués dans les logiciels sur l’UC. Si un GPU est disponible, le bot en tire parti pour son propre rendu graphique, par exemple, si le bot utilise un moteur graphique 3D.
 * L’instance de machine virtuelle hébergeant le bot multimédia en temps réel doit avoir au moins 2 cœurs d’UC. Pour Azure, une machine virtuelle de la série Dv2 est recommandée. Pour les autres types de machines virtuelles Azure, un système avec 4 processeurs virtuels est la taille minimale requise. Pour plus d’informations sur les types de machines virtuelles Azure, consultez [documentation Azure](/azure/virtual-machines/windows/sizes-general).
 
 La section suivante fournit des exemples qui illustrent différents scénarios de médias locaux.

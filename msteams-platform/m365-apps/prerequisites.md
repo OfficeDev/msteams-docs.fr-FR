@@ -4,12 +4,12 @@ description: Voici les conditions préalables à l’extension de vos applicatio
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656179"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668024"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurez votre environnement de développement pour étendre les applications Teams sur Microsoft 365
 
@@ -31,9 +31,9 @@ Vous avez besoin d’un locataire de bac à sable Microsoft 365 abonnement déve
 
 Vous devez également activer le chargement indépendant pour votre client :
 
-1. Connectez-vous à Centre d’administration Microsoft 365 (https://admin.microsoft.com) avec vos informations d’identification client de test et sélectionnez **Teams** dans le volet latéral pour ouvrir le *Centre d’administration Microsoft Teams*
-1. Sélectionnez : Applications Teams > Gérer les applications > **paramètres d’application à l’échelle de l’organisation**
-1. Sous **Applications personnalisées**, activez l’option *Interaction avec les applications personnalisées*
+1. Connectez-vous à Centre d’administration Microsoft 365 (https://admin.microsoft.com) avec vos informations d’identification client de test et sélectionnez **Teams** dans le volet latéral pour ouvrir le *Centre d’administration Microsoft Teams*.
+1. Sélectionnez : Applications Teams > Gérer les applications > **Paramètres d’application à l’échelle de l’organisation**
+1. Sous **Applications personnalisées**, activez l’option *Interaction avec les applications personnalisées*.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Activer le chargement indépendant pour les applications personnalisées à partir du Centre d’administration Teams":::
 
@@ -73,7 +73,7 @@ Pour installer des applications Office 365 Canal bêta dans votre environnement 
 
     :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Accédez à « À propos d’Outlook » à partir de votre compte Office pour vérifier que vous exécutez une build Canal bêta.":::
 
-1. Vérifiez que *Microsoft Edge Runtime WebView2* est installé. Ouvrez Windows **Démarrage** > **Applications et fonctionnalités**, puis recherchez **webview** :
+1. Vérifiez que *Microsoft Edge WebView2 Runtime* est installé. Ouvrez Windows **Démarrage** > **Applications et fonctionnalités**, puis recherchez **webview** :
 
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Recherchez « webview » sous « Applications et fonctionnalités » dans vos paramètres Windows":::
 
@@ -99,5 +99,7 @@ L'extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit)
 
 Créez ou mettez à jour une application Teams pour qu’elle s’exécute sur Microsoft 365 :
 
-* [Activer un onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md)
-* [activer une extension de message Teams pour Outlook](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Activer un onglet personnel Teams pour Office et Outlook](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [activer une extension de message Teams pour Outlook](extend-m365-teams-message-extension.md)

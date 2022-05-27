@@ -3,21 +3,21 @@ title: Ajouter l’authentification à votre bot Teams
 author: surbhigupta
 description: Comment ajouter l’authentification OAuth à un bot dans Microsoft Teams à l’aide de Azure Active Directory. Découvrez comment créer, déployer et intégrer des bots prenant en charge l’authentification.
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: déploiement du manifeste de bot Azure d’inscription de bot de groupe de ressources
-ms.openlocfilehash: 3bdd66f6393c10cc4e5c2996fc517d671634d020
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 9594723f671f69a5dc4cb99f0ab48385603e3394
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111233"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756946"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Ajouter l’authentification à votre bot Teams
 
 Il peut arriver que vous deviez créer des bots dans Microsoft Teams qui peuvent accéder aux ressources pour le compte de l’utilisateur, comme un service de messagerie.
 
-Cet article montre comment utiliser l’authentification SDK Azure Bot Service v4, basée sur OAuth 2.0. Cela facilite le développement d’un bot qui peut utiliser des jetons d’authentification basés sur les informations d’identification de l’utilisateur. La clé dans tout cela est l’utilisation de **fournisseurs d’identité**, comme nous le verrons plus tard.
+Cet article montre comment utiliser l’authentification SDK Azure Bot Service v4, basée sur OAuth 2.0. Cela facilite le développement d’un bot qui peut utiliser des jetons d’authentification basés sur les informations d’identification de l’utilisateur. La clé dans tout cela est l’utilisation de **fournisseurs d’identité**, comme nous le verrons plus loin.
 
 OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisée par Microsoft Azure Active Directory (Azure AD) et de nombreux autres fournisseurs d’identité. Une compréhension de base du flux d’octroi implicite OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans les onglets Microsoft Teams.
 
@@ -28,7 +28,7 @@ Pour plus d’informations sur la façon dont Azure Bot Service gère l’authen
 Voici les titres des sections de cet article :
 
 - **Comment créer un bot prenant en charge l’authentification**. Vous allez utiliser [cs-auth-sample][teams-auth-bot-cs] pour gérer les informations d’identification de connexion utilisateur et la génération du jeton d’authentification.
-- **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émet un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder aux ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, consultez [Flux d’authentification Teams pour les bots](auth-flow-bot.md).
+- **Comment déployer le bot sur Azure et l’associer à un fournisseur d’identité**. Le fournisseur émet un jeton basé sur les informations d’identification de connexion de l’utilisateur. Le bot peut utiliser le jeton pour accéder aux ressources, telles qu’un service de messagerie, qui nécessitent une authentification. Pour plus d’informations, consultez [Microsoft Teams flux d’authentification pour les bots](auth-flow-bot.md).
 - **Comment intégrer le bot dans Microsoft Teams**. Une fois le bot intégré, vous pouvez vous connecter et échanger des messages avec lui dans une conversation.
 
 ## <a name="prerequisites"></a>Configuration requise
@@ -118,7 +118,7 @@ Pour créer une clé secrète client :
 
     ![ID d’application Microsoft](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
 
-1. À côté de **l’ID d’application Microsoft**, sélectionnez **Gérer**.
+1. En regard de **l’ID d’application Microsoft**, **sélectionnez Gérer**.
 
     ![Gérer le bot](~/assets/images/adaptive-cards/manage-bot-label.png)
 
@@ -159,7 +159,7 @@ Pour plus d’informations, consultez [Créer un robot pour Microsoft Teams](../
 ## <a name="create-the-identity-provider"></a>Créer un fournisseur d’identité
 
 Vous avez besoin d’un fournisseur d’identité qui peut être utilisé pour l’authentification.
-Dans cette procédure, vous allez utiliser un fournisseur Azure AD; d’autres Azure AD fournisseurs d’identité pris en charge peuvent également être utilisés.
+Dans cette procédure, vous allez utiliser un fournisseur Azure AD ; d’autres fournisseurs d’identité pris en charge par Azure AD peuvent également être utilisés.
 
 1. Dans le [**Portail Azure**][azure-portal], dans le volet de navigation gauche, sélectionnez **Azure Active Directory**.
     > [!TIP]
@@ -169,9 +169,9 @@ Dans cette procédure, vous allez utiliser un fournisseur Azure AD; d’autres A
 1. Dans le volet droit, sélectionnez l’onglet **Nouvelle inscription**, en haut à gauche.
 1. Il vous sera demandé de fournir les informations suivantes :
    1. **Nom**. Entrez le nom pour la nouvelle application de service. *Par exemple, BotTeamsIdentity* N’oubliez pas que le nom doit être unique.
-   1. Sélectionnez les **types de comptes pris en charge** pour votre application. Sélectionnez les *comptes de n'importe quel répertoire organisationnel (n'importe quel Microsoft Azure Active Directory (Azure AD) - Multilocataire) et les comptes Microsoft personnels (par exemple Skype, Xbox)*.
+   1. Sélectionnez les **types de comptes pris en charge** pour votre application. Sélectionnez *Comptes dans n’importe quel annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Multilocataire) et comptes Microsoft personnels (par exemple, Skype, Xbox).*
    1. Pour **l’URI de redirection** :<br/>
-       &#x2713;Sélectionner **le web**. <br/>
+       &#x2713;Sélectionner **le web**.<br/>
        &#x2713; définir l’URL sur `https://token.botframework.com/.auth/web/redirect`
    1. Sélectionnez **Inscrire**.
 
@@ -202,7 +202,7 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
 ![Configuration de SampleAppDemoBot](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. Remplissez le formulaire comme suit :
 
-    1. **Nom**. Entrez un nom descriptif pour la connexion. Vous allez utiliser ce nom dans votre bot dans le `appsettings.json` fichier. Par exemple *, BotTeamsAuthADv1*.
+    1. **Nom**. Entrez un nom descriptif pour la connexion. Vous allez utiliser ce nom dans votre bot dans le `appsettings.json` fichier. Par exemple, *BotTeamsAuthADv1*.
     1. **Fournisseur de services** Sélectionner la **prise en charge de CORS dans Microsoft Azure Active Directory (Azure AD)**. Une fois cette option sélectionnée, les champs spécifiques à Azure AD s’affichent.
     1. **ID client**. Entrez l’ID d’application (client) que vous avez enregistré pour votre application de fournisseur d’identité Azure dans les étapes ci-dessus.
     1. **Clé secrète client** Entrez le secret que vous avez enregistré pour votre application de fournisseur d’identité Azure dans les étapes ci-dessus.
@@ -210,9 +210,9 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
     1. **URL de connexion**. Entrez `https://login.microsoftonline.com`.
     1. **ID de locataire**, entrez **l’ID d’annuaire (locataire)** que vous avez enregistré précédemment pour votre application d’identité Azure ou **commun** en fonction du type de compte pris en charge sélectionné lors de la création de l’application de fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez les critères suivants :
 
-        - Si vous avez sélectionné *comptes dans cet annuaire organisationnel uniquement (Microsoft uniquement - Locataire unique)* ou *Comptes dans n’importe quel annuaire organisationnel (Microsoft Azure Active Directory (Azure AD) - Multilocataire)* entrez **l’ID de locataire** que vous avez enregistré précédemment pour le application Microsoft Azure Active Directory (Azure AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
+        - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans n’importe quel annuaire organisationnel (Microsoft Azure Active Directory (Azure AD ) - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour le Microsoft Azure Active Directory (Azure) Application AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Microsoft Azure Active Directory (Azure AD) vérifie via le locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
+        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Microsoft Azure Active Directory (Azure AD) vérifie via le locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     h. Pour **l’URL de ressource**, entrez `https://graph.microsoft.com/`. Cela n’est pas utilisé dans l’exemple de code actuel.  
     i. Laissez **les étendues** vides. L’image suivante est un exemple.
@@ -230,16 +230,16 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
 
 1. Remplissez le formulaire comme suit :
 
-    1. **Nom**. Entrez un nom descriptif pour la connexion. Vous allez utiliser ce nom dans votre bot dans le `appsettings.json` fichier. Par exemple *, BotTeamsAuthADv2*
+    1. **Nom**. Entrez un nom descriptif pour la connexion. Vous allez utiliser ce nom dans votre bot dans le `appsettings.json` fichier. Par exemple, *BotTeamsAuthADv2*.
     1. **Fournisseur de services** Sélectionnez **Microsoft Azure Active Directory v2**. Une fois cette option sélectionnée, les champs spécifiques à Microsoft Azure Active Directory (Azure AD) s’affichent.
     1. **ID client**. Entrez l’ID d’application (client) que vous avez enregistré pour votre application de fournisseur d’identité Azure dans les étapes ci-dessus.
     1. **Clé secrète client** Entrez le secret que vous avez enregistré pour votre application de fournisseur d’identité Azure dans les étapes ci-dessus.
     1. Jeton **URL Exchange** Laissez ce champ vide.
     1. **ID de locataire**, entrez **l’ID d’annuaire (locataire)** que vous avez enregistré précédemment pour votre application d’identité Azure ou **commun** en fonction du type de compte pris en charge sélectionné lors de la création de l’application de fournisseur d’identité. Pour déterminer la valeur à attribuer, suivez les critères suivants :
 
-        - Si vous avez sélectionné *comptes dans cet annuaire d’organisation uniquement (Microsoft uniquement - Locataire unique)* ou *Comptes dans un annuaire organisationnel (Microsoft Azure Active Directory - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour l’application Microsoft Azure Active Directory (Azure AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
+        - Si vous avez sélectionné *comptes uniquement dans cet annuaire organisationnel (Microsoft uniquement - Locataire unique)* ou *Comptes dans un annuaire organisationnel (Microsoft Azure Active Directory - Multilocataire),* entrez **l’ID de locataire** que vous avez enregistré précédemment pour l’application Microsoft Azure Active Directory (Azure AD). Il s’agit du locataire associé aux utilisateurs qui peuvent être authentifiés.
 
-        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Microsoft Azure Active Directory (Azure AD) vérifie via le locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
+        - Si vous avez sélectionné *Comptes dans un annuaire organisationnel (Tout Microsoft Azure Active Directory (Azure AD) - Comptes Microsoft multilocataires et personnels, par exemple, Skype, Xbox, Outlook)* entrez le mot **commun** au lieu d’un ID de locataire. Sinon, l’application Microsoft Azure Active Directory (Azure AD) vérifie via le locataire dont l’ID a été sélectionné et exclut les comptes Microsoft personnels.
 
     1. Pour **les étendues**, entrez une liste délimitée par des espaces des autorisations de graphe requises par cette application, par exemple : User.Read User.ReadBasic.All Mail.Read
 
@@ -247,7 +247,7 @@ L’image suivante affiche la sélection correspondante dans la page de ressourc
 
 ### <a name="test-the-connection"></a>Tester la connexion
 
-1. Sélectionnez l’entrée de connexion pour ouvrir la connexion que vous venez de créer.
+1. Sélectionnez l’entrée de connexion pour ouvrir la connexion que vous avez créée.
 1. Sélectionnez **Tester la connexion** en haut du panneau **Paramètres de connexion du fournisseur de** services.
 1. La première fois que vous effectuez cette opération, une nouvelle fenêtre de navigateur s’ouvre pour vous demander de sélectionner un compte. Sélectionnez le sous-réseau que vous souhaitez utiliser.
 1. Ensuite, vous serez invité à autoriser le fournisseur d’identité à utiliser vos données (informations d’identification). L’image suivante est un exemple.
@@ -270,7 +270,7 @@ Une fois les paramètres préliminaires terminés, concentrons-nous sur la créa
 1. Cloner [cs-auth-sample][teams-auth-bot-cs]
 1. Lancez Visual Studio.
 1. Dans la barre d’outils, sélectionnez **Fichier -> Ouvrir -> Project/Solution** et ouvrez le projet de bot.
-1. Dans C# Update **appsettings.json** , procédez comme suit :
+1. En C#, mettez à jour **appsettings.json** comme suit :
 
     - Définissez `ConnectionName` le nom de la connexion du fournisseur d’identité que vous avez ajoutée à l’inscription du bot. Le nom que nous avons utilisé dans cet exemple est *BotTeamsAuthADv1*.
     - Définissez `MicrosoftAppId` l’ID d’application **du bot** que vous avez enregistré au moment de l’inscription du bot.
@@ -316,11 +316,11 @@ Une fois les paramètres préliminaires terminés, concentrons-nous sur la créa
 
 ### <a name="deploy-the-bot-to-azure"></a>Déployer le bot sur Azure
 
-Pour déployer le bot, suivez les étapes décrites dans la procédure de [déploiement de votre bot sur Azure](https://aka.ms/azure-bot-deployment-cli).
+Pour déployer le bot, suivez les étapes de la procédure de [déploiement de votre bot sur Azure](https://aka.ms/azure-bot-deployment-cli).
 
 Dans Visual Studio, vous pouvez également effectuer les étapes suivantes :
 
-1. Dans Visual Studio *Explorateur de solutions* sélectionnez et maintenez le nom du projet enfoncé (ou cliquez avec le bouton droit).
+1. Dans Visual Studio *Explorateur de solutions*, sélectionnez et maintenez le nom du projet enfoncé (ou cliquez avec le bouton droit).
 1. Dans le menu déroulant qui apparaît, sélectionner **Publier**.
 1. Dans la fenêtre affichée, sélectionnez le **nouveau** lien.
 1. Dans la fenêtre de dialogue, sélectionnez **App Service** sur la gauche et **Créer nouveau** à droite.
@@ -390,7 +390,7 @@ Une fois que vous avez configuré le mécanisme d’authentification, vous pouve
 
     ![émulateur de connexion de bot d’authentification](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
-1. Si vous sélectionnez **Oui** lorsque le bot *vous demande Voulez-vous afficher votre jeton ?*, vous obtiendrez une réponse similaire à ce qui suit :
+1. Si vous sélectionnez **Oui** lorsque le bot vous demande *Voulez-vous afficher votre jeton ?* Vous obtiendrez une réponse similaire à ce qui suit :
 
     ![auth bot login emulateur token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 

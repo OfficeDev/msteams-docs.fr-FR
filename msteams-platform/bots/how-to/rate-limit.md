@@ -2,14 +2,14 @@
 title: Optimisez votre robot grâce à la limitation du débit dans Teams
 description: En savoir plus sur la gestion de la limite de débit pour les bots avec une limite par bot par thread et par limite pour tous les bots à l’aide d’exemples de code. En outre, découvrez les meilleures pratiques en matière de limitation du débit dans Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: limitation du taux de bots teams
-ms.openlocfilehash: 09b3f0b79737e3da09b34ebe1931a7209632cca1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111807"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757149"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Optimisez votre robot grâce à la limitation du débit dans Teams
 
@@ -120,7 +120,7 @@ Vous pouvez également gérer la limite de débit à l’aide de la limite par b
 
 ## <a name="per-bot-per-thread-limit"></a>Limite par bot par thread
 
-La limite par bot par thread contrôle le trafic qu’un bot est autorisé à générer dans une conversation unique. Une conversation est 1:1 entre le bot et l’utilisateur, une conversation de groupe ou un canal dans une équipe. Par conséquent, si l’application envoie un message de bot à chaque utilisateur, la limite de threads ne se limite pas.
+La limite par bot par thread contrôle le trafic qu’un bot est autorisé à générer dans une conversation unique. Une conversation est 1:1 entre le bot et l’utilisateur, une conversation de groupe ou un canal dans une équipe. Par conséquent, si l’application envoie un message de bot à chaque utilisateur, la limite de threads n’est pas limitée.
 
 >[!NOTE]
 >
@@ -140,11 +140,11 @@ Le tableau suivant fournit les limites par bot par thread :
 | Créer une conversation | 2 | 8  |
 | Créer une conversation | 30 | 60 |
 | Créer une conversation | 3600 | 1800 |
-| Obtenir les membres de la conversation| 1 | 14  |
+| Obtenir les membres de la conversation| 1 | 14 |
 | Obtenir les membres de la conversation| 2 | 16 |
 | Obtenir les membres de la conversation| 30 | 120 |
 | Obtenir les membres de la conversation| 3600 | 3600 |
-| Obtenir des conversations | 1 | 14  |
+| Obtenir des conversations | 1 | 14 |
 | Obtenir des conversations | 2 | 16 |
 | Obtenir des conversations | 30 | 120 |
 | Obtenir des conversations | 3600 | 3600 |
@@ -156,17 +156,17 @@ Vous pouvez également gérer la limite de débit à l’aide de la limite par t
 
 ## <a name="per-thread-limit-for-all-bots"></a>Limite par thread pour tous les bots
 
-La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer au sein d’une conversation unique. Une conversation ici est 1:1 entre le bot et l’utilisateur, une conversation de groupe ou un canal dans une équipe.
+La limite par thread pour tous les bots contrôle le trafic que tous les bots sont autorisés à générer au sein d’une conversation unique. Conversation 1:1 entre le bot et l’utilisateur, une conversation de groupe ou un canal dans une équipe.
 
 Le tableau suivant fournit la limite par thread pour tous les bots :
 
 | Scénario | Période en secondes | Nombre maximal d’opérations autorisées |
 | --- | --- | --- |
-| Envoyer à la conversation | 1 | 14  |
+| Envoyer à la conversation | 1 | 14 |
 | Envoyer à la conversation | 2 | 16 |
-| Créer une conversation | 1 | 14  |
+| Créer une conversation | 1 | 14 |
 | Créer une conversation | 2 | 16 |
-| Créer une conversation| 1 | 14  |
+| Créer une conversation| 1 | 14 |
 | Créer une conversation| 2 | 16 |
 | Obtenir les membres de la conversation| 1 | 28 |
 | Obtenir les membres de la conversation| 2 | 32 |

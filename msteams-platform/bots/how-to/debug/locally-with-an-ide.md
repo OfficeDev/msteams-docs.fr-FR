@@ -5,16 +5,16 @@ description: Découvrez comment tester et déboguer votre bot localement avec un
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: da6e04e4df8824f4dc13d63e0aa4cd5bb6afb48a
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 1c0c2124c12e9ab13bf72008e8dda0846f35d768
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297225"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757597"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>Tester et déboguer votre bot localement
 
-Lorsque vous testez votre bot, vous devez tenir compte à la fois des contextes dans lesquels vous souhaitez que votre bot s’exécute et de toute fonctionnalité que vous avez peut-être ajoutée à votre bot et qui nécessite des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous choisissez pour tester votre bot s’aligne sur ses fonctionnalités.
+Lors du test de votre bot, vous devez prendre en compte à la fois les contextes dans lesquels vous souhaitez que votre bot s’exécute et toutes les fonctionnalités que vous avez ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous choisissez pour tester votre bot s’aligne sur ses fonctionnalités.
 
 ## <a name="test-by-uploading-to-teams"></a>Tester en chargeant dans Teams
 
@@ -34,7 +34,7 @@ Il existe deux méthodes pour charger votre application :
 Si vous hébergez votre bot localement pendant le développement, vous devez utiliser un service de tunnel comme [ngrok](https://ngrok.com/) afin de tester votre bot. Après avoir téléchargé et installé ngrok, ajoutez `ngrok` à votre chemin d’accès et exécutez la commande suivante pour démarrer le service de tunneling :
 
 ```bash
-ngrok http <port> -host-header=localhost:<port>
+ngrok http <port> --host-header=localhost:<port>
 ```
 
 Utilisez le point de terminaison https fourni par ngrok dans le manifeste de votre application.
@@ -44,7 +44,7 @@ Utilisez le point de terminaison https fourni par ngrok dans le manifeste de vot
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>Tester votre bot sans le charger dans Teams
 
-Parfois, il est nécessaire de tester votre bot sans l’installer en tant qu’application dans Teams. Nous fournissons deux méthodes pour tester le bot. Tester votre bot sans l’installer en tant qu’application peut être utile pour s’assurer que votre bot est disponible et répond, cependant, cela ne vous permettra pas de tester l’ensemble des fonctionnalités de Microsoft Teams que vous avez ajoutées à votre bot. Si vous souhaitez tester entièrement votre bot, consultez [tester en téléchargeant des fichiers](#test-by-uploading-to-teams).
+Parfois, il est nécessaire de tester votre bot sans l’installer en tant qu’application dans Teams. Nous fournissons deux méthodes pour tester le bot. Le test de votre bot sans l’installer en tant qu’application peut être utile pour vous assurer que votre bot est disponible et répond. Toutefois, cela ne vous permettra pas de tester l’étendue complète des fonctionnalités de Microsoft Teams que vous avez ajoutées à votre bot. Si vous souhaitez tester entièrement votre bot, consultez [tester en téléchargeant des fichiers](#test-by-uploading-to-teams).
 
 ### <a name="use-the-bot-emulator"></a>Utiliser l’émulateur de bot
 
@@ -57,7 +57,7 @@ Pour plus d’informations, consultez [instructions complètes sur le Bot Framew
 > [!Important]
 > La communication avec votre bot par ID est destinée uniquement à des fins de test de base. Les fonctionnalités spécifiques à Teams que vous avez ajoutées à votre bot ne fonctionnent pas.
 
-Vous pouvez initier une conversation avec votre bot en utilisant son ID. Lorsqu’un bot est ajouté via l’une de ces méthodes, il n’est pas adressable dans les conversations de canal et vous ne pouvez pas tirer parti des autres fonctionnalités de l’application Microsoft Teams, telles que les onglets ou les extensions de message. Vous pouvez lancer une conversation de l’une des manières suivantes :
+Lancez une conversation avec votre bot à l’aide de son ID. Lorsqu’un bot est ajouté via l’une de ces méthodes, il n’est pas adressable dans les conversations de canal et vous ne pouvez pas tirer parti des autres fonctionnalités de l’application Microsoft Teams, telles que les onglets ou les extensions de message. Lancez une conversation de l’une des manières suivantes :
 
 * Dans la page [tableau de bord du bot](https://dev.botframework.com/bots) pour votre bot, sous **Canaux**, sélectionnez **Ajouter à Microsoft Teams**. Microsoft Teams lance une conversation personnelle avec votre bot.
 
@@ -82,7 +82,7 @@ Votre bot reçoit l’événement `conversationUpdate` lorsque vous ajoutez les 
 
 ## <a name="block-a-bot-in-personal-chat"></a>Bloquer un bot dans une conversation personnelle
 
-Les utilisateurs peuvent choisir d’empêcher votre bot d’envoyer des messages de conversation personnels. Ils peuvent activer/désactiver cette option en cliquant avec le bouton droit sur votre bot dans le canal de conversation et en choisissant **bloquer la conversation du bot**. Cela signifie que vos robots continuent d’envoyer des messages, mais que l’utilisateur ne reçoit pas les messages.
+Les utilisateurs peuvent choisir d’empêcher votre bot d’envoyer des messages de conversation personnels. Ils peuvent activer/désactiver cette option en cliquant avec le bouton droit sur votre bot dans le canal de conversation et en choisissant **bloquer la conversation du bot**. Cela signifie que vos bots continuent à envoyer des messages, mais l’utilisateur ne reçoit pas les messages.
 
 ![Blocage d’un bot](~/assets/images/bots/botdisable.png)
 

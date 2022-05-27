@@ -3,15 +3,15 @@ title: Utiliser Teams Shared Computer Toolkit pour mettre en service des ressour
 author: MuyangAmigo
 description: Provisionner des ressources cloud
 ms.author: shenwe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3e95f4d544c0cddc98afbb4aa5f3f36de3afb12c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6ab903ab731e3fe90161d2873f0ca8be5ed284fa
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111618"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757457"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Utiliser Teams Shared Computer Toolkit pour mettre en service des ressources cloud
 
@@ -21,10 +21,11 @@ TeamsFx s’intègre à Azure et Microsoft 365 cloud, ce qui vous permet de plac
 
 * Prérequis du compte Pour provisionner des ressources cloud, vous devez disposer des comptes suivants :
 
-  * Compte Microsoft 365 avec un abonnement valide.
-  * Azure avec un abonnement valide Pour plus d’informations, découvrez [comment préparer des comptes pour la création de l’application Teams](accounts.md).
+  * Microsoft 365 compte avec un abonnement valide.
+  * Azure avec un abonnement valide.
+  Pour plus d’informations, consultez [comment préparer des comptes pour la création d’Teams application](accounts.md).
 
-* [Installez Teams Shared Computer Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* [Installez le Kit de ressources Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
 > Vérifiez que vous avez Teams projet d’application ouvert dans VS Code.
@@ -39,9 +40,9 @@ L’approvisionnement est effectué avec une seule commande dans Teams Shared Co
 
 Lorsque vous déclenchez la commande de provisionnement dans Teams Shared Computer Toolkit ou TeamsFx CLI, vous pouvez obtenir les ressources suivantes :
 
-* L’application Microsoft Azure Active Directory (Azure AD) sous votre locataire Microsoft 365
-* Teams l’inscription d’application sous la plateforme Teams de votre locataire Microsoft 365
-* Ressources Azure sous votre abonnement Azure sélectionné
+* Microsoft Azure Active Directory application (Azure AD) sous votre locataire Microsoft 365.
+* Teams inscription d’application sous la plateforme Teams de votre locataire Microsoft 365.
+* Ressources Azure sous votre abonnement Azure sélectionné.
 
 Lorsque vous créez un projet, vous pouvez utiliser toutes les ressources Azure. Le modèle ARM définit toutes les ressources Azure et permet de créer les ressources Azure nécessaires lors de l’approvisionnement. Lorsque vous [ajoutez une nouvelle ressource de fonctionnalité](./add-resource.md) à un projet existant, le modèle ARM mis à jour reflète la dernière modification.
 
@@ -343,7 +344,7 @@ Si vous obtenez des erreurs avec Teams Shared Computer Toolkit dans Visual Studi
 
 <summary><b>Comment puis-je modifier le groupe de ressources lors de l’approvisionnement ?</b></summary>
 
-Avant l’approvisionnement, l’outil vous demande si vous souhaitez créer un groupe de ressources ou utiliser un groupe de ressources existant. Vous pouvez fournir un nouveau nom de groupe de ressources ou en choisir un existant dans cette étape.
+Avant l’approvisionnement, l’outil vous demande si vous souhaitez créer un groupe de ressources ou en utiliser un existant. Vous pouvez fournir un nouveau nom de groupe de ressources ou en choisir un existant dans cette étape.
 
 <br>
 

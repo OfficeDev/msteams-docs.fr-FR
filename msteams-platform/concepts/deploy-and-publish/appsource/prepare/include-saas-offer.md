@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: aa2aacb781909720bdb6a0bc27d593f9c73d11b0
+ms.sourcegitcommit: a4b3b2fb265142155508f9b396609da1280df35d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727338"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65696458"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Inclure une offre SaaS avec votre application Microsoft Teams
 
@@ -122,7 +122,7 @@ Consultez [Créer une offre SaaS](/azure/marketplace/create-new-saas-offer) pour
 Nous vous recommandons vivement de vérifier l’expérience d’achat de bout en bout avant de publier votre offre SaaS. Pour ce faire, vous pouvez créer une offre distincte à des fins de test. Pour plus d’informations, consultez [vue d’ensemble de l’offre de test](/azure/marketplace/plan-saas-offer#test-offer), [créer une offre de test](/azure/marketplace/create-saas-dev-test-offer)et [prévisualiser votre offre](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> Vous pouvez tester une transaction de bout en bout dans Teams jusqu’à ce que votre application termine la validation du Store. Pour plus d'informations, voir [Aperçu du test pour les applications monétisées](Test-preview-for-monetized-apps.md).
+> Vous pouvez tester une transaction de bout en bout dans Teams à l’aide de la [Préversion de test pour la fonctionnalité d’applications monétisées](Test-preview-for-monetized-apps.md). Pour les offres en direct, vous devez terminer le processus de validation du store de l’application.
 
 Du point de vue de Teams, ces tests doivent vérifier que le nombre de licences et d’affectations correspond à ce qu’il se passe dans le Centre d’administration Teams lorsque les utilisateurs :
 

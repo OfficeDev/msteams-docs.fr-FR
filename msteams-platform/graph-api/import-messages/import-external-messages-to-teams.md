@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: équipes importation messages api graphique microsoft migrate migration post
-ms.openlocfilehash: 72e33ae6c8792016394c7a464f132260a5231112
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3fb593bf72c1f8b495a45bad8eef6e2177684c7b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111744"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756919"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Importer des messages de plateforme tierces pour les équipes à l’aide de Microsoft Graph
 
@@ -354,7 +354,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Une fois la `completeMigration` demande effectuée, vous ne pouvez pas importer d’autres messages dans l’équipe.
+* Une fois la demande `completeMigration` effectuée, vous ne pouvez pas importer d’autres messages dans l’équipe.
 
 * Vous ne pouvez ajouter des membres de l'équipe à la nouvelle équipe qu'après que la `completeMigration`demande a renvoyé une réponse positive.
 

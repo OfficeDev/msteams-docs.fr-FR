@@ -4,12 +4,12 @@ description: Découvrez comment vos applications Microsoft Teams peuvent interag
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: appel d’appels audio vidéo IVR voice online réunions en temps réel flux multimédia bot
-ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 48c5283a1552c2f04651fe67254def0e6d60a8e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297169"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756729"
 ---
 # <a name="calls-and-online-meetings-bots"></a>Bots d’appels et de réunions en ligne
 
@@ -23,7 +23,7 @@ Pour utiliser ces API Graph dans une application Teams, vous créez un bot et sp
 
 En outre, la plateforme multimédia en temps réel permet aux bots d’interagir avec les appels et réunions Teams à l’aide de la voix, de la vidéo et du partage d’écran en temps réel. Un bot qui participe à des appels audio ou vidéo et à des réunions en ligne est un bot Microsoft Teams standard avec quelques fonctionnalités supplémentaires utilisées pour inscrire le bot.
 
-Le manifeste de l’application Teams avec deux paramètres supplémentaires `supportsCalling` et `supportsVideo`, les autorisations Graph pour l’ID d’application Microsoft de votre bot et le consentement de l’administrateur client vous permettent d’inscrire le bot. Lors de l’inscription d’un bot d’appels et de réunions pour Teams, l’URL du webhook est mentionnée, qui est le point de terminaison webhook pour tous les appels entrants à votre bot. Un bot multimédia hébergé par une application nécessite la bibliothèque Microsoft.Graph.Communications.Calls.Media .NET pour accéder aux flux multimédias audio et vidéo, et le bot doit être déployé sur une machine Windows Server ou un système d’exploitation invité Windows Server dans Azure. Bots sur Teams prend uniquement en charge un ensemble spécifique de formats multimédias pour le contenu audio et vidéo.
+Le manifeste de l’application Teams avec deux paramètres supplémentaires `supportsCalling` et `supportsVideo`, les autorisations Graph pour l’ID d’application Microsoft de votre bot et le consentement de l’administrateur client vous permettent d’inscrire le bot. Lors de l’inscription d’un bot d’appels et de réunions pour Teams, l’URL du webhook est mentionnée, qui est le point de terminaison webhook pour tous les appels entrants à votre bot. Un bot multimédia hébergé par une application nécessite la bibliothèque Microsoft.Graph.Communications.Calls.Media .NET pour accéder aux flux multimédias audio et vidéo, et le bot doit être déployé sur une machine Windows Server ou un système d’exploitation invité Windows Server dans Azure. Les bots sur Teams prennent en charge uniquement un ensemble spécifique de formats multimédias pour le contenu audio et vidéo.
 
 À présent, vous devez comprendre certains concepts fondamentaux, la terminologie et les conventions.
 
@@ -49,13 +49,13 @@ Les appels sont d’égal à égal entre une personne et votre bot, ou multipart
 
 Voici les différents types d’appels et autorisations requis pour l’appel :
 
-* Un utilisateur peut lancer un appel pair à pair avec votre bot ou inviter votre bot dans un appel multipartie existant. L’appel multipartie n’est pas encore activé dans l’interface utilisateur Teams.
+* Un utilisateur peut lancer un appel pair à pair avec votre bot ou inviter votre bot dans un appel multipartie existant. L’appel multiparte n’est pas encore activé dans l’interface utilisateur Teams.
 
     > [!NOTE]
     > Les appels lancés par l’utilisateur à un bot ne sont actuellement pas pris en charge sur la plateforme mobile Microsoft Teams.
 
-* Les autorisations Graph ne sont pas nécessaires pour qu’un utilisateur lance un appel d’égal à égal avec votre bot. Des autorisations supplémentaires sont nécessaires pour que votre bot participe à un appel en plusieurs parties ou pour que votre bot lance un appel pair à pair avec un utilisateur.
-* Un appel peut commencer comme pair à pair et devenir un appel multipartie. Votre bot peut lancer des appels en plusieurs parties en invitant d’autres personnes, à condition que votre bot dispose des autorisations appropriées. Si votre bot ne dispose pas des autorisations nécessaires pour participer aux appels de groupe et si un participant ajoute un autre participant à l’appel, votre bot est supprimé de l’appel.
+* Graph autorisations ne sont pas nécessaires pour qu’un utilisateur lance un appel d’égal à égal avec votre bot. Des autorisations supplémentaires sont nécessaires pour que votre bot participe à un appel en plusieurs parties ou pour que votre bot lance un appel pair à pair avec un utilisateur.
+* Un appel peut commencer comme pair à pair et devenir un appel multipartie. Votre bot peut lancer des appels en plusieurs parties en invitant d’autres personnes, à condition que votre bot dispose des autorisations appropriées. Si votre bot ne dispose pas des autorisations nécessaires pour participer à des appels de groupe et si un participant ajoute un autre participant à l’appel, votre bot est supprimé de l’appel.
 
 ### <a name="signals"></a>Signaux
 
@@ -74,11 +74,11 @@ Du point de vue d’un utilisateur Teams, il existe deux types de réunions en l
 
 ### <a name="real-time-media"></a>Média en temps réel
 
-Lorsqu’un bot participe à un appel ou à une réunion en ligne, il doit gérer les flux audio et vidéo. Lorsque les utilisateurs parlent lors d’un appel, s’affichent sur une webcam ou présentent leurs écrans dans une réunion, un bot s’affiche sous forme de flux audio et vidéo. Si un bot souhaite dire quelque chose d’aussi simple que, **appuyez sur 0 pour atteindre l’opérateur** dans un scénario de réponse vocale interactive (IVR), il nécessite de lire un . Fichier WAV. Collectivement, il s’agit d’un média ou d’un média en temps réel.
+Lorsqu’un bot participe à un appel ou à une réunion en ligne, il doit gérer les flux audio et vidéo. Lorsque les utilisateurs parlent lors d’un appel, s’affichent sur une webcam, ou présentent leurs écrans dans une réunion, à un bot, il est affiché sous forme de flux audio et vidéo. Si un bot souhaite dire quelque chose d’aussi simple que, **appuyez sur 0 pour atteindre l’opérateur** dans un scénario de réponse vocale interactive (IVR), il nécessite de lire un . Fichier WAV. Collectivement, il s’agit d’un média ou d’un média en temps réel.
 
-Le média en temps réel fait référence à des scénarios dans lesquels le média doit être traité en temps réel, par opposition à la lecture de contenu audio ou vidéo enregistré précédemment. La gestion des flux multimédias, en particulier les flux multimédias en temps réel, est extrêmement complexe. Microsoft a créé la plateforme multimédia en temps réel pour gérer ces scénarios et décharger autant que possible le traitement multimédia en temps réel. Lorsque le bot répond à un appel entrant ou rejoint un appel nouveau ou existant, il doit indiquer à la plateforme multimédia en temps réel comment les médias sont gérés. Si vous créez une application IVR, vous pouvez décharger le traitement audio coûteux vers Microsoft. Sinon, si votre bot nécessite un accès direct aux flux multimédias, ce scénario est également pris en charge. Il existe deux types de traitement multimédia :
+Le média en temps réel fait référence à des scénarios dans lesquels le média doit être traité en temps réel, par opposition à la lecture de contenu audio ou vidéo enregistré précédemment. Le traitement des flux multimédias, en particulier des flux multimédias en temps réel, est complexe. Microsoft a créé la plateforme multimédia en temps réel pour gérer ces scénarios et décharger autant que possible le traitement multimédia en temps réel. Lorsque le bot répond à un appel entrant ou rejoint un appel nouveau ou existant, il doit indiquer à la plateforme multimédia en temps réel comment les médias sont gérés. Si vous créez une application IVR, vous pouvez décharger le traitement audio coûteux vers Microsoft. Sinon, si votre bot nécessite un accès direct aux flux multimédias, ce scénario est également pris en charge. Il existe deux types de traitement multimédia :
 
-* **Média hébergé par le service** : les bots se concentrent sur la gestion du flux de travail d’application, comme le routage des appels et le déchargement du traitement audio vers la plateforme multimédia en temps réel Microsoft. Avec les médias hébergés par le service, vous disposez de plusieurs options pour implémenter et héberger votre bot. Un bot média hébergé par le service peut être implémenté en tant que service sans état, car il ne traite pas les médias localement. Les bots multimédias hébergés par le service peuvent utiliser les API suivantes :
+* **Média hébergé par le service** : les bots se concentrent sur la gestion du flux de travail d’application, comme le routage des appels et le déchargement du traitement audio vers la plateforme multimédia en temps réel Microsoft. Avec les médias hébergés par le service, vous disposez de plusieurs options pour implémenter et héberger votre bot. Un bot multimédia hébergé par un service peut être implémenté en tant que service sans état, car il ne traite pas les médias localement. Les bots multimédias hébergés par le service peuvent utiliser les API suivantes :
 
   * `PlayPrompt` pour lire un clip audio.
   * `Record` pour l’enregistrement de clips audio.

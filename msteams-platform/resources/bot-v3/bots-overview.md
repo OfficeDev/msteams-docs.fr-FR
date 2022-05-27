@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: développement de bots teams
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602263"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755852"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Ajouter des bots aux applications Microsoft Teams
 
@@ -21,7 +21,7 @@ Créez et connectez des bots intelligents pour interagir naturellement avec les 
 > [!IMPORTANT]
 > Actuellement, les bots sont disponibles dans Cloud de la communauté du secteur public (Cloud de la communauté du secteur public) et GCC-High, mais pas dans le ministère de la Défense (DOD).
 
-![Exemple de bot aidant un utilisateur](~/assets/images/bot_example.png)
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="Exemple de bot aidant un utilisateur" border="true":::
 
 ## <a name="what-you-need-to-know-bots"></a>Ce que vous devez savoir : bots
 

@@ -2,17 +2,17 @@
 title: Envoyer l’ID de locataire et l’ID de conversation aux en-têtes de demande du bot
 description: Décrit comment envoyer l’ID de locataire et l’ID de conversation aux en-têtes de demande du bot.
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 9b63dd81eeccbf78989a31a06baa5d678916acef
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 8aca2c11dbdfc84abe8c4d0ec40e2748d04f6301
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111289"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757289"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>Envoyer l’ID de locataire et l’ID de conversation aux en-têtes de demande du bot
 
-Les demandes sortantes actuelles adressées au bot ne contiennent pas d’informations dans l’en-tête ou l’URL qui aident les bots à acheminer le trafic sans décompresser la charge utile entière. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID de locataire dans les en-têtes.
+Les requêtes sortantes actuelles adressées au bot ne contiennent dans l’en-tête ou l’URL aucune information qui permet aux bots d’acheminer le trafic sans décompresser la charge utile entière. Les activités sont envoyées au bot via une URL similaire à https://<your_domain>/api/messages. Les demandes sont reçues pour afficher l’ID de conversation et l’ID de locataire dans les en-têtes.
 
 ## <a name="request-header-fields"></a>Champs d’en-tête de demande
 

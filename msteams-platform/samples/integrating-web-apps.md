@@ -3,15 +3,15 @@ author: heath-hamilton
 description: Meilleures pratiques ou considérations relatives à l’intégration d’applications web existantes à Microsoft Teams
 ms.author: surbhigupta
 ms.date: 08/26/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations relatives à l’intégration de Teams
-ms.openlocfilehash: 2e1d749a34d0dec2a38e84e57aa6147c791264c1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111660"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757639"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations relatives à l’intégration de Teams
 
@@ -30,7 +30,7 @@ Ce document donne une vue d’ensemble des fonctionnalités teams, des exigences
 
 ***scénarios d’intégration**: applications autonomes, applications de collaboration, SharePoint*
 
-Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour utiliser l’intégration d’applications, il est important de se familiariser avec la terminologie de développement Teams.
+Votre application Teams doit inclure les fonctionnalités de collaboration requises et attendues. Pour utiliser l’intégration d’applications, il est important de se familiariser avec Teams terminologie de développement.
 
 |Fonctionnalités d’application courantes   |Fonctionnalités de la plateforme Teams   |
 |----------|-----------|
@@ -61,7 +61,7 @@ Voici les conditions préalables à l’intégration de votre application à Tea
 Pour intégrer une page SharePoint [existante](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model) sous la forme d’un onglet Teams, vous devez prendre en compte les éléments suivants :
 
 * Il doit s’agir d’une page *moderne* SharePoint Online.
-* Seuls les onglets personnels sont pris en charge. Vous ne pouvez pas intégrer votre page sous forme d’onglet de canal.
+* Seuls les onglets personnels sont pris en charge. Vous ne pouvez pas intégrer votre page en tant qu’onglet de canal.
 
 Vous pouvez également créer un onglet Teams [à l’aide de l’infrastructure SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
@@ -90,7 +90,7 @@ Teams dispose de mécanismes d’authentification unique (SSO) avec Azure AD pou
 > [!IMPORTANT]
 > Actuellement, les applications tierces sont disponibles dans Cloud de la communauté du secteur public (GCC), mais ne sont pas disponibles pour GCC-High et le Ministère de la défense (DOD). Les applications tierces sont désactivées par défaut pour GCC. Pour activer des applications tierces pour GCC, consultez [gérer les stratégies d’autorisation d’application](/microsoftteams/teams-app-permission-policies) et [gérer les applications](/microsoftteams/manage-apps).
 
-Pour les pages SharePoint, vous pouvez uniquement utiliser l’authentification unique et ne pouvez pas ajouter un autre ID de Azure AD si vous souhaitez que l’authentification unique fonctionne pour une autre application, car l’ID est l’application SharePoint.
+Pour SharePoint pages, vous pouvez uniquement utiliser l’authentification unique et ne pouvez pas ajouter un autre ID Azure AD si vous souhaitez que l’authentification unique fonctionne pour une autre application, car l’ID est l’application SharePoint.
 
 En savoir plus sur [l’authentification dans Teams](../concepts/authentication/authentication.md).
 
@@ -116,7 +116,7 @@ Les bots vous permettent également d’envoyer **messages proactifs** à des ut
 
 L’envoi de messages proactifs nécessite des identificateurs spécifiques à Teams. Vous pouvez capturer les informations en [extrayant la liste ou les données de profil utilisateur](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [en vous abonnant aux événements de conversation](../bots/how-to/conversations/subscribe-to-conversation-events.md)ou en utilisant [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
-Ne pas envoyer de courrier indésirable aux utilisateurs avec un nombre excessif de messages. Si la fonctionnalité Teams la prend en charge, les utilisateurs peuvent configurer les paramètres de notification pour votre application.
+Ne pas envoyer de courrier indésirable aux utilisateurs avec des messages excessifs. Si la fonctionnalité Teams la prend en charge, les utilisateurs peuvent configurer les paramètres de notification pour votre application.
 Voici un exemple de message de notification : **ne m’envoyez pas de messages non traités**.
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>Utiliser SharePoint pour le stockage de fichiers et de données

@@ -4,12 +4,12 @@ description: Décrit les options de test et de débogage des applications Micros
 keywords: les équipes exécutent des applications de débogage sur un hôte hébergé dans le cloud local
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296993"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757009"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Choisissez une configuration pour tester et déboguer votre application Microsoft Teams
 
@@ -56,10 +56,12 @@ Pour configurer ngrok en vue d’exécuter votre application Microsoft Teams loc
 
 Pour utiliser ngrok dans votre projet en fonction des fonctionnalités que vous utilisez, vous devez remplacer toutes les références d’URL dans votre code, configuration et fichier manifest.json pour utiliser ce point de terminaison d’URL.
 
-Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point de terminaison de messagerie du bot pour utiliser ce nouveau point de terminaison ngrok. Par exemple : `https://2d1224fb.ngrok.io/api/messages`. Vous pouvez vérifier que ngrok fonctionne en testant la réponse du bot dans la fenêtre de conversation Test du portail Bot Framework. Là encore, à l’instar de l’émulateur, ce test ne vous permet pas d’accéder aux fonctionnalités spécifiques à Teams.
+Pour les bots inscrits dans le Microsoft Bot Framework, mettez à jour le point de terminaison de messagerie du bot pour utiliser ce nouveau point de terminaison ngrok. Par exemple : `https://2d1224fb.ngrok.io/api/messages`. Vous pouvez vérifier que ngrok fonctionne en testant la réponse du bot dans la fenêtre de conversation Test du portail Bot Framework. Là encore, comme l’émulateur, ce test ne vous permet pas d’accéder à Teams fonctionnalité spécifique.
 
 > [!NOTE]
 > * Pour mettre à jour le point de terminaison de messagerie d’un bot, vous devez utiliser le Bot Framework. Sélectionnez votre bot dans [votre liste de bots dans Bot Framework](https://dev.botframework.com/bots). Vous n’avez pas besoin de migrer votre bot vers Microsoft Azure. Vous pouvez également mettre à jour votre point de terminaison de messagerie via [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+
+> [!WARNING]
 > * Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
 
 ## <a name="cloud-hosted"></a>Hébergé dans le cloud

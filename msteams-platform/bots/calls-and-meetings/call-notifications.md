@@ -2,15 +2,15 @@
 title: Notifications d’appel entrant
 description: En savoir plus sur les informations techniques détaillées sur la gestion des notifications à partir d’appels entrants, la redirection et l’authentification des appels à l’aide d’exemples de code
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: appel appels notifications rappel région affinité
 ms.date: 04/02/2019
-ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111548"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757142"
 ---
 # <a name="incoming-call-notifications"></a>Notifications d’appel entrant
 
@@ -18,7 +18,7 @@ Dans [l’inscription d’un bot d’appels et de réunions pour Microsoft Teams
 
 ## <a name="protocol-determination"></a>Détermination du protocole
 
-La notification entrante est fournie dans un format hérité pour la compatibilité avec le [protocole Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) précédent. Pour convertir l’appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournir la réponse suivante :
+La notification entrante est fournie dans un format hérité pour la compatibilité avec le [protocole Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true) précédent. Pour convertir l’appel au protocole Microsoft Graph, votre bot doit déterminer si la notification est dans un format hérité et fournit la réponse suivante :
 
 ```http
 HTTP/1.1 204 No Content
@@ -32,7 +32,7 @@ La section suivante fournit des détails sur les notifications d’appel entrant
 
 ## <a name="redirects-for-region-affinity"></a>Redirections pour l’affinité de région
 
-Vous appelez votre webhook à partir du centre de données qui héberge l’appel. L’appel commence dans un centre de données et ne prend pas en compte les affinités de région. La notification est envoyée à votre déploiement en fonction de la résolution GeoDNS. Si votre application détermine, en inspectant la charge utile de notification initiale ou autre, qu’elle doit s’exécuter dans un déploiement différent, l’application fournit la réponse suivante :
+Vous appelez votre webhook à partir du centre de données qui héberge l’appel. L’appel démarre dans n’importe quel centre de données et ne prend pas en compte les affinités de région. La notification est envoyée à votre déploiement en fonction de la résolution GeoDNS. Si votre application détermine, en inspectant la charge utile de notification initiale ou autre, qu’elle doit s’exécuter dans un déploiement différent, l’application fournit la réponse suivante :
 
 ```http
 HTTP/1.1 302 Found
@@ -87,7 +87,7 @@ La configuration OpenID publiée sur <https://api.aps.skype.com/v1/.well-known/O
 * `tid` est l’ID de locataire pour Contoso.com.
 * `iss` est l’émetteur du jeton, `https://api.botframework.com`.
 
-Pour la gestion de votre code, le webhook doit valider le jeton, s’assurer qu’il n’a pas expiré et vérifier s’il a été signé par la configuration OpenID publiée. Vous devez également vérifier si l’authentification correspond à votre ID d’application avant d’accepter la demande de rappel.
+Pour votre gestion du code, le webhook doit valider le jeton, s’assurer qu’il n’a pas expiré et vérifier s’il a été signé par la configuration OpenID publiée. Vous devez également vérifier si l’authentification correspond à votre ID d’application avant d’accepter la demande de rappel.
 
 Pour plus d’informations, consultez [valider les demandes entrantes](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 

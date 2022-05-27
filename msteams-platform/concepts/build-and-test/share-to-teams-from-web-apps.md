@@ -4,12 +4,12 @@ description: Découvrez comment ajouter le bouton Partager dans Teams incorporé
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Partager Teams – Partager dans Teams
-ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439299"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757058"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Partager vers Teams à partir d’applications web
 
@@ -99,7 +99,7 @@ Vous pouvez utiliser les versions HTML par défaut ou la version Open Graph.
 
 ## <a name="share-to-teams-for-education"></a>Partager dans Teams pour l’Éducation
 
-Pour les enseignants qui utilisent le bouton Partager dans Teams, il existe une option supplémentaire pour `Create an Assignment`. Cela vous permet de créer rapidement une affectation dans l’équipe choisie, en fonction du lien partagé. L’image suivante affiche Partager dans Teams pour l’Éducation :
+Pour les enseignants qui utilisent le bouton Partager pour Teams, il existe une option `Create an Assignment` supplémentaire qui vous permet de créer rapidement un devoir dans l’équipe choisie, en fonction du lien partagé. L’image suivante affiche Partager dans Teams pour l’Éducation :
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Éducation contextuelle Partager dans Teams":::
 

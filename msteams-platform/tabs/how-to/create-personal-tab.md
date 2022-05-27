@@ -7,18 +7,20 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET magasin d’autorisations de domaine de conversation appmanifest de package MVC
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6acb5e0adf24dca7538b6ceaca470b9b6c3126f2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111240"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673019"
 ---
 # <a name="create-a-personal-tab"></a>Créer un onglet personnel
 
 Les onglets personnels, ainsi que les bots d’étendue personnelle, font partie des applications personnelles et sont limitées à un seul utilisateur. Ils peuvent être épinglés au volet gauche pour un accès facile. Vous pouvez également [réordonner](#reorder-static-personal-tabs) vos onglets personnels.
 
-Vérifiez que vous disposez de tous les [conditions préalables](~/tabs/how-to/tab-requirements.md) pour créer votre onglet personnel.
+Vérifiez que vous disposez de toutes les [conditions préalables](~/tabs/how-to/tab-requirements.md) pour créer votre onglet personnel.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -260,7 +262,7 @@ gulp ngrok-serve
 
 1. Dans le volet gauche de Teams, sélectionnez des points de suspension &#x25CF;&#x25CF;&#x25CF; puis choisissez votre application chargée pour afficher votre onglet personnel.
 
-   Vous avez créé et ajouté votre onglet personnel dans Teams.
+   Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
   
    Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réordonner](#reorder-static-personal-tabs) votre onglet personnel.
 
@@ -366,10 +368,10 @@ Dans Visual Studio Explorateur de solutions, cliquez avec le bouton droit sur le
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Dans Visual Studio Explorateur de solutions ouvrir **PersonalTab.cshtml** à partir du dossier **Pages** et ajoutez `microsoftTeams.initialize()` dans les balises `<script>` et enregistrez.
+1. Dans Visual Studio Explorateur de solutions ouvrir **PersonalTab.cshtml** à partir du dossier **Pages** et ajoutez `app.initialize()` dans les balises `<script>` et enregistrez.
 
 1. Dans Visual Studio, sélectionnez **F5** ou choisissez **Démarrer le débogage** dans le menu **Déboguer** de votre application.
 
@@ -413,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Onglet par défaut" border="true":::
 
-   Vous avez créé et ajouté votre onglet personnel dans Teams.
+   Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
   
    Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réordonner](#reorder-static-personal-tabs) votre onglet personnel.
 
@@ -531,10 +533,10 @@ Les contrôleurs utilisent la propriété `ViewBag` pour transférer dynamiqueme
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Dans Visual Studio Explorateur de solutions ouvrir **PersonalTab.cshtml** à partir du dossier **Vues** > **PersonalTab** et ajoutez `microsoftTeams.initialize()` à l’intérieur des balises `<script>` et enregistrez.
+1. Dans Visual Studio Explorateur de solutions ouvrir **PersonalTab.cshtml** à partir du dossier **Vues** > **PersonalTab** et ajoutez `app.initialize()` à l’intérieur des balises `<script>` et enregistrez.
 
 1. Dans Visual Studio, sélectionnez **F5** ou choisissez **Démarrer le débogage** dans le menu **Déboguer** de votre application.
 
@@ -582,7 +584,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Onglet personnel" border="true":::
   
-   Vous avez créé et ajouté votre onglet personnel dans Teams.
+   Vous avez maintenant créé et ajouté avec succès votre onglet personnel dans Teams.
 
    Comme vous disposez de votre onglet personnel dans Teams, vous pouvez également [réordonner](#reorder-static-personal-tabs) votre onglet personnel.
 

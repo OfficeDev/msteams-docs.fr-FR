@@ -1,19 +1,19 @@
 ---
 title: DevTools pour les onglets Microsoft Teams
 description: Décrit comment accéder à DevTools lors de l’utilisation du client de bureau Microsoft Teams et du débogage
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: onglet outils de développeur du client de bureau chrome mobile de débogage devtools
-ms.openlocfilehash: 4e7ea8ee51d5dd77345c0c7392775aa29050a9a5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111443"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757478"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>DevTools pour les onglets Microsoft Teams
 
-Lorsque Teams s’exécute dans un navigateur, il est facile d’accéder aux DevTools du navigateur : F12 sur Windows ou Commande-Option-I sur MacOS. DevTools vous donne accès à :
+Quand Teams s’exécute dans un navigateur, il est facile d’accéder aux DevTools : F12 du navigateur sur Windows ou Command-Option-I sur MacOS. DevTools vous donne accès à :
 
 1. Afficher les journaux de la console.
 1. Affichez ou modifiez les requêtes HTML, CSS et réseau pendant le runtime.

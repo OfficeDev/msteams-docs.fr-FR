@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: '@mention de conversation de composition de message dans le menu commande'
-ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296965"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757695"
 ---
 # <a name="bot-command-menus"></a>Menus de commandes du bot
 
@@ -42,8 +42,9 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 1. Ouvrez Teams et sélectionnez **Apps** dans le volet gauche. Dans la page **applications**, recherchez **App Studio**, puis sélectionnez **Ouvrir**.
    > [!NOTE]
    > Si vous n’avez pas **App Studio**, vous pouvez la télécharger. Pour plus d'informations, voir [l'installation d'App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
-
-  > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
+  
+   > [!WARNING]
+   > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
 
   :::image type="content" source="/media/AppStudio.png" alt-text="l’installation d’app studio"lightbox="media/AppStudio.png"border="true":::
 

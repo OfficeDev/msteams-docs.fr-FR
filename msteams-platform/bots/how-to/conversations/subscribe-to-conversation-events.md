@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversation de réaction au message du canal du bot d’événements
-ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297155"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757569"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Événements de conversation dans votre robot Teams
 
@@ -548,7 +548,7 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>Membres de l’équipe supprimés
 
-L’événement `teamMemberRemoved` est envoyé à votre bot s’il est supprimé d’une équipe. L’événement est envoyé à votre bot chaque fois qu’un utilisateur est supprimé d’une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez l’objet `Activity` du `turnContext`.  Si le champ `Id` de l’objet `MembersRemoved` est identique au champ `Id` de l’objet `Recipient`, le membre supprimé est le bot, sinon il s’agit d’un utilisateur. Le bot `Id`est généralement`28:<MicrosoftAppId>`.
+L’événement `teamMemberRemoved` est envoyé à votre bot s’il est supprimé d’une équipe. L’événement est envoyé à votre bot chaque fois qu’un utilisateur est supprimé d’une équipe dont il est membre. Pour déterminer si le nouveau membre supprimé était le bot lui-même ou un utilisateur, vérifiez l’objet `Activity` du `turnContext`.  Si le `Id` champ de l’objet `MembersRemoved` est identique au `Id` champ de l’objet `Recipient` , le membre supprimé est le bot, sinon il s’agit d’un utilisateur. Le bot `Id`est généralement`28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > Lorsqu’un utilisateur est définitivement supprimé d’un locataire, `membersRemoved conversationUpdate` événement est déclenché.
@@ -1058,7 +1058,7 @@ Maintenant que vous avez travaillé avec les événements de mise à jour de con
 
 ## <a name="message-reaction-events"></a>Événements de réaction aux messages
 
-L’événement `messageReaction` est envoyé lorsqu’un utilisateur ajoute ou supprime des réactions à un message qui a été envoyé par votre bot. Le `replyToId` contient l’ID du message, et le `Type` est le type de réaction au format texte. Les types de réactions sont les suivants : en colère, cœur, rire, genre, triste et surprise. Cet événement ne contient pas le contenu du message d’origine. Si le traitement des réactions à vos messages est important pour votre bot, vous devez stocker les messages lorsque vous les envoyez. Le tableau suivant fournit plus d’informations sur le type d’événement et les objets de charge utile :
+L’événement `messageReaction` est envoyé lorsqu’un utilisateur ajoute ou supprime des réactions à un message, qui a été envoyé par votre bot. Le `replyToId` contient l’ID du message, et le `Type` est le type de réaction au format texte. Les types de réactions sont les suivants : en colère, cœur, rire, genre, triste et surprise. Cet événement ne contient pas le contenu du message d’origine. Si le traitement des réactions à vos messages est important pour votre bot, vous devez stocker les messages lorsque vous les envoyez. Le tableau suivant fournit plus d’informations sur le type d’événement et les objets de charge utile :
 
 | EventType       | Objet de charge utile   | Description                                                             | Portée |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1414,7 +1414,7 @@ Lorsque vous utilisez ces événements d’installation et de désinstallation, 
 * Vous générez votre bot sans le kit de développement logiciel (SDK) Microsoft Bot Framework et, par conséquent, le bot donne une exception lors de la réception d’un événement inattendu.
 * Vous générez votre bot avec le SDK Microsoft Bot Framework et vous choisissez de modifier le comportement d’événement par défaut en remplaçant le handle d’événement de base.
 
-Il est important de savoir que de nouveaux événements peuvent être ajoutés à tout moment à l’avenir et que votre bot commence à les recevoir. Vous devez donc concevoir la possibilité de recevoir des événements inattendus. Si vous utilisez le SDK Bot Framework, votre bot répond automatiquement avec un 200 – OK aux événements que vous ne choisissez pas de gérer.
+Il est important de savoir que de nouveaux événements peuvent être ajoutés à tout moment à l’avenir et que votre bot commence à les recevoir. Vous devez donc concevoir la possibilité de recevoir des événements inattendus. Si vous utilisez le Kit de développement logiciel (SDK) Bot Framework, votre bot répond automatiquement avec un 200 : OK pour tous les événements que vous ne choisissez pas de gérer.
 
 ## <a name="code-sample"></a>Exemple de code
 

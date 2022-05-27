@@ -5,12 +5,12 @@ description: Découvrez les commandes de recherche d’extension de message pour
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 9615b1ab599f567815df5f68155a8ab2abb292ca
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 987d690beca81574244ae6fbf9e6614ee097ebcb
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111625"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756617"
 ---
 # <a name="define-message-extension-search-commands"></a>Définir des commandes de recherche d’extension de message
 
@@ -25,14 +25,14 @@ Les commandes de recherche d’extension de message permettent aux utilisateurs 
 
 La commande de recherche est appelée à partir de n’importe quel emplacement ou des deux emplacements suivants :
 
-* Zone de composition du message : boutons situés en bas de la zone de composition du message.
+* Zone de rédaction du message : boutons situés en bas de la zone de rédaction du message.
 * Zone de commande : en @mentioning dans la zone de commande.
 
   Lorsque la commande de recherche est appelée à partir de la zone de message de composition, l’utilisateur envoie les résultats à la conversation. Lorsqu’il est appelé à partir de la zone de commande, l’utilisateur interagit avec la carte résultante ou la copie pour l’utiliser ailleurs.
 
 L’image suivante affiche les emplacements d’appel de la commande de recherche :
 
-![rechercher des emplacements d’appel de commande](~/assets/images/messaging-extension/search-command-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Appeler des emplacements de commande de recherche":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>Ajouter la commande de recherche au manifeste de votre application
 
@@ -49,24 +49,29 @@ Pour créer une commande de recherche :
 1. Après avoir importé le package d’application, sélectionnez **Extensions de message** sous **Fonctionnalités**. Vous obtenez une fenêtre contextuelle pour configurer l’extension de message.
 1. Sélectionnez **Configurer** dans la fenêtre pour inclure l’extension de message dans votre expérience d’application. L’image suivante affiche la page de configuration de l’extension de message :
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Configuration de l’extension de messagerie":::
 
-1. Pour créer l’extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez **l’option Créer un bot** , donnez un nom au nouveau bot, puis sélectionnez **Créer**. L’image suivante affiche la création du bot pour l’extension de message :
+1. Pour créer l’extension de message, vous avez besoin d’un bot inscrit par Microsoft. Vous pouvez utiliser un bot existant ou en créer un. Sélectionnez l’option **Créer un bot**, donnez un nom au nouveau bot, puis sélectionnez **Créer**. L’image suivante affiche la création de bot pour l’extension de message :
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Créer un bot pour l’extension de messagerie":::
+
+1. Pour utiliser un bot existant, sélectionnez **Utiliser le bot existant**, puis **Sélectionnez Sélectionner dans l’un de mes bots existants** pour choisir les bots existants dans la liste déroulante, donnez un **nom de bot**, puis **sélectionnez Enregistrer** ou sélectionner **Connecter à un autre ID de bot** si vous avez déjà créé un ID de bot, donnez un nom de **bot** et sélectionnez **Enregistrer**.
+
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Utiliser un bot existant pour l’extension de messagerie":::
 
 1. Sélectionnez **Ajouter** dans la **section Commande** de la page Extensions de message pour inclure les commandes qui déterminent le comportement de l’extension de message.
-L’image suivante affiche l’ajout de commandes pour l’extension de message :
+L’image suivante affiche l’ajout de commande pour l’extension de message :
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Inclure la commande":::
+
 1. Sélectionnez **Autoriser les utilisateurs à interroger votre service pour obtenir des informations et à les insérer dans un message**. L’image suivante affiche la sélection du paramètre de commande de recherche :
 
-    <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Sélection du paramètre de commande Search":::
 
 1. Ajoutez un **ID de commande** et un **titre**.
 1. Sélectionnez l’emplacement à partir duquel votre commande de recherche doit être appelée. L’image suivante affiche l’emplacement d’appel de la commande de recherche :
 
-    <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="La commande Search appelle la sélection d’emplacement":::
 
 1. Ajoutez votre paramètre de recherche, puis **sélectionnez Enregistrer**.
 
@@ -128,7 +133,7 @@ Pour obtenir le manifeste complet de l’application, consultez [le schéma de m
 
 | Exemple de nom           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams recherche d’extension de message   |  Décrit comment définir des commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Recherche d'extension des messages Teams   |  Décrit comment définir les commandes de recherche et répondre aux recherches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 

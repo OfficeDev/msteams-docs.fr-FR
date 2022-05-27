@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191200"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756788"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
@@ -47,13 +47,13 @@ Vous pouvez télécharger votre application dans une équipe, un chat, une réun
 
    Sélectionnez **Ajouter** pour ajouter votre application personnelle.</br>b. Utilisez le menu déroulant pour ajouter votre application à une équipe ou à un chat.
 
-    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Créer une application Teams" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Description de l’application" border="true":::
 
 ## <a name="troubleshoot"></a>Résoudre des problèmes
 
 Si votre application ne parvient pas à charger une version test ou si vous rencontrez des problèmes de chargement, vérifiez les options suivantes :
 
-1. Assurez-vous que vous avez suivi toutes les instructions pour la [création de votre package d’application](../../concepts/build-and-test/apps-package.md).
+1. Vérifiez que vous avez suivi toutes les instructions pour la [création de votre package d’application](../../concepts/build-and-test/apps-package.md).
 1. [Validez votre package d'application](https://dev.teams.microsoft.com/appvalidation.html).
 1. Assurez-vous que le manifeste de votre application correspond au dernier [schéma](../../resources/schema/manifest-schema.md).
 
@@ -73,7 +73,7 @@ Pour accéder aux applications via **Gérer vos applications**, procédez comme 
     
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Accéder à la portée de l’application Teams" border="true":::
     
-1. Sélectionnez la portée de l’application pour accéder à l’application dans le canal ou la vue personnelle. La liste des étendues comprend uniquement l’étendue personnelle et l’étendue Teams. Les applications installées dans l’étendue du chat de groupe ne sont pas affichées dans cette vue pour le moment.
+1. Sélectionnez la portée de l’application pour accéder à l’application dans le canal ou la vue personnelle. La liste des étendues comprend uniquement l’étendue personnelle et l’étendue Teams. Les applications installées dans l’étendue de la conversation de groupe ne sont pas affichées dans cette vue pour le moment.
     
 Teams propose plusieurs façons d’ouvrir des applications. Pour plus d'informations, voir [accéder à vos applications dans Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
@@ -81,7 +81,7 @@ Teams propose plusieurs façons d’ouvrir des applications. Pour plus d'informa
 
 Vous n'avez pas besoin de charger à nouveau votre application si vous apportez des modifications au code (celles-ci sont reflétées dans Teams en temps réel). Cependant, vous devez réinstaller si vous modifiez des configurations d'application.
 
-Si une mise à jour est disponible pour votre application, l'option **Mise à jour disponible est activée**. Pour mettre à jour, suivez les étapes suivantes :
+Si une mise à jour est disponible pour votre application, l’option **Mise à jour disponible** est activée. Pour mettre à jour, suivez les étapes :
 
 1. Sélectionnez **Mettre à jour disponible** pour afficher la mise à jour.
 
@@ -96,7 +96,7 @@ Si une mise à jour est disponible pour votre application, l'option **Mise à jo
 
 ### <a name="remove-your-app"></a>Supprimer votre application
 
-Pour supprimer l’application de Teams, suivez les étapes :
+Pour supprimer l’application dans Teams, suivez les étapes :
 
 1. Recherchez l’application dans **Gérer votre application**.
 1. Sélectionnez &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Supprimer l’application dans Teams" border="false":::&nbsp; à l’étendue de l’application installée.

@@ -3,15 +3,15 @@ title: Ajouter l'onglet Teams à SharePoint
 author: surbhigupta
 description: Découvrez comment déployer votre onglet Teams existant sur SharePoint en tant que composant WebPart SharePoint Framework à l’aide d’exemples de code.
 keywords: développement dans sharepoint framework d’onglets teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111688"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757310"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Ajouter l'onglet Teams à SharePoint
 
@@ -74,7 +74,7 @@ Vous pouvez également implémenter des onglets Microsoft Teams à l’aide de 
 
 L’onglet utilisé ici est déjà hébergé sur Azure, pour vous concentrer sur le travail d’intégration requis.
 
-L’exemple d’application utilisé est une application de Gestion des talents. Il gère le processus d’embauche des candidats pour des postes ouverts au sein d’une équipe. Créez un exemple d’application Teams et chargez-la dans Teams. Ne créez pas d’application de gestion des talents réelle.
+L’exemple d’application utilisé est une application de Gestion des talents. Il gère le processus d’embauche des candidats pour des postes ouverts au sein d’une équipe. Créez un exemple d’application Teams et chargez-la dans Teams. Ne créez pas une application de gestion des talents réelle.
 
 ### <a name="benefits-of-this-approach"></a>Avantages de cette approche
 
@@ -95,7 +95,7 @@ Téléchargez [l’exemple de manifeste d’application](https://github.com/Micr
 
     ![charger une application personnalisée](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. Le fichier à charger se trouve dans votre dossier **Téléchargements**. On l’appelle TalentMgmt-Azure.zip. L’image suivante affiche l’écran correspondant :
+1. Le fichier à charger se trouve dans votre dossier **Téléchargements**. Ça s’appelle TalentMgmt-Azure.zip. L’image suivante affiche l’écran correspondant :
 
     ![TalentMgmt dans Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
@@ -118,7 +118,7 @@ L’image suivante affiche l’écran correspondant :
 
 1. Vous pouvez voir l’expérience d’autorisation de pages SharePoint. Nommez votre page en tant que **Mon onglet Teams**.
 
-1. Ouvrez la boîte à outils du composant WebPart en sélectionnant le bouton `+`, puis sélectionnez votre onglet Teams, appelé **Contoso HR**. Les composants WebPart sont triés par ordre alphabétique. S’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour le trouver. Cela crée un composant WebPart dans le canevas qui contient votre onglet Teams. L’image suivante présente l’affichage onglet :
+1. Ouvrez la boîte à outils du composant WebPart en sélectionnant le bouton `+`, puis sélectionnez votre onglet Teams, appelé **Contoso HR**. Les composants WebPart sont triés par ordre alphabétique. S’il s’agit d’une longue liste, vous pouvez utiliser la barre de recherche pour la trouver. Cela crée un composant WebPart dans le canevas qui contient votre onglet Teams. L’image suivante présente l’affichage onglet :
 
    ![Vue des onglets](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Aperçu du développeur du schéma de manifeste teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668129"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757492"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
 
@@ -290,7 +290,7 @@ Version du schéma de manifeste que ce manifeste utilise.
 
 Chaîne **requise**&ndash;
 
-Version de l’application spécifique. Si vous mettez à jour un élément dans votre manifeste, la version doit également être incrémentée. Ainsi, lorsque le nouveau manifeste est installé, il remplace celui existant et l’utilisateur obtient la nouvelle fonctionnalité. Si cette application a été envoyée au Store, le nouveau manifeste devra être soumis à nouveau et validé à nouveau. Ensuite, les utilisateurs de cette application recevront automatiquement le nouveau manifeste mis à jour dans quelques heures, après son approbation.
+Version de l’application spécifique. Si vous mettez à jour un élément dans votre manifeste, la version doit également être incrémentée. Ainsi, lorsque le nouveau manifeste est installé, il remplace celui existant et l’utilisateur a accès aux nouvelles fonctionnalités. Si cette application a été soumise au Store, le nouveau manifeste doit être soumis à nouveau et validé à nouveau. Ensuite, les utilisateurs de cette application recevront automatiquement le nouveau manifeste mis à jour dans quelques heures, après son approbation.
 
 Si les autorisations demandées par l’application changent, les utilisateurs sont invités à mettre à niveau et à donner à nouveau leur consentement à l’application.
 
@@ -300,7 +300,7 @@ Cette chaîne de version doit suivre la norme de [semver](http://semver.org/) (M
 
 **Obligatoire** &ndash; ID d’application Microsoft
 
-Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via le Microsoft Bot Framework, ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), entrez-le ici, puis réutilisez-le lorsque vous [ajouter un bot](~/bots/how-to/create-a-bot-for-teams.md).
+Identificateur unique généré par Microsoft pour cette application. Si vous avez inscrit un bot via le Microsoft Bot Framework, ou si l’application web de votre onglet se connecte déjà avec Microsoft, vous devez déjà avoir un ID et l’entrer ici. Sinon, vous devez générer un nouvel ID sur le portail d’inscription des applications Microsoft ([Mes applications](https://apps.dev.microsoft.com)), l’entrer ici, puis le réutiliser lorsque vous [ajoutez un bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## <a name="packagename"></a>packageName
 
@@ -326,7 +326,7 @@ Spécifie des informations sur votre entreprise. Pour les applications soumises 
 
 Facultatif :
 
-Autorise la spécification d’une langue par défaut, ainsi que les pointeurs vers des fichiers de langue supplémentaires. Consultez [localisation](~/concepts/build-and-test/apps-localization.md).
+Autorise la spécification d’une langue par défaut et les pointeurs vers des fichiers de langue supplémentaires. Consultez [localisation](~/concepts/build-and-test/apps-localization.md).
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -339,13 +339,13 @@ Tableau d’objets spécifiant des traductions de langue supplémentaires.
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
 |`languageTag`|4 caractères|✔|Balise de langue des chaînes dans le fichier fourni.|
-|`file`|4 caractères|✔|Chemin d’accès relatif à un fichier .json contenant les chaînes traduites.|
+|`file`|4 caractères|✔|Chemin d’accès relatif au fichier .json contenant les chaînes traduites.|
 
 ## <a name="name"></a>nom
 
 Obligatoire :
 
-Nom de l’expérience de votre application, affiché à destination des utilisateurs dans l’expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs de `short` et de `full` ne doivent pas être les mêmes.
+Nom de l’expérience de votre application, affiché à destination des utilisateurs dans l’expérience Teams. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations de votre entrée AppSource. Les valeurs de `short` et `full` ne doivent pas être les mêmes.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -358,7 +358,7 @@ Obligatoire :
 
 Décrit votre application aux utilisateurs. Pour les applications soumises à AppSource, ces valeurs doivent correspondre aux informations figurant dans votre entrée AppSource.
 
-Assurez-vous que votre description décrit avec précision votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Notez également, dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs de `short` et de `full` ne doivent pas être les mêmes.  Votre brève description ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
+Assurez-vous que votre description décrit avec précision votre expérience et fournit des informations pour aider les clients potentiels à comprendre ce que fait votre expérience. Notez également, dans la description complète, si un compte externe est requis pour être utilisé. Les valeurs de `short` et `full` ne doivent pas être les mêmes.  Votre brève description ne doit pas être répétée dans la description longue et ne doit pas inclure d’autre nom d’application.
 
 |Nom| Taille maximale | Requis | Description|
 |---|---|---|---|
@@ -380,7 +380,7 @@ Icônes utilisées dans l’application Teams. Les fichiers d’icône doivent �
 
 Chaîne **requise**&ndash;
 
-Couleur à utiliser conjointement avec et comme arrière-plan pour vos icônes de contour.
+Couleur à utiliser avec et comme arrière-plan pour vos icônes de contour.
 
 La valeur doit être un code de couleur HTML valide commençant par « # » par exemple `#4464ee`.
 
@@ -388,7 +388,7 @@ La valeur doit être un code de couleur HTML valide commençant par « # » par 
 
 Facultatif :
 
-Utilisé lorsque l’expérience de votre application possède une expérience d’onglet de canal d’équipe qui nécessite une configuration supplémentaire avant d’être ajoutée. Les onglets configurables sont pris en charge uniquement dans l’étendue Teams, et actuellement, un seul onglet par application est pris en charge.
+Utilisé lorsque votre expérience d’application dispose d’une expérience d’onglet de canal d’équipe qui nécessite une configuration supplémentaire avant d’être ajoutée. Les onglets configurables sont pris en charge uniquement dans l’étendue Teams, et actuellement, un seul onglet par application est pris en charge.
 
 L’objet est un tableau avec tous les éléments du type `object`. Ce bloc est requis uniquement pour les solutions qui fournissent une solution d’onglet de canal configurable.
 
@@ -512,7 +512,7 @@ Chaque élément de commande est un objet avec la structure suivante :
 
 Facultatif :
 
-Tableau de `string` qui spécifie les autorisations que l’application demande, ce qui permet aux utilisateurs finaux de savoir comment l’extension s’exécutera. Les options suivantes ne sont pas exclusives :
+Tableau de `string`, qui spécifie les autorisations demandées par l’application, qui permettent aux utilisateurs finaux de savoir comment l’extension s’exécutera. Les options suivantes ne sont pas exclusives :
 
 * `identity` &emsp;Nécessite des informations d’identité d’utilisateur.
 * `messageTeamMembers` &emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe.
@@ -548,7 +548,7 @@ L’objet est un tableau avec tous les éléments du type `string`.
 
 Facultatif :
 
-Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et les informations Graph pour aider les utilisateurs à se connecter en toute transparence à votre application Auzre AD.
+Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) et Graph informations pour aider les utilisateurs à se connecter en toute transparence à votre application Azure AD.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -560,11 +560,11 @@ Spécifiez votre ID d’application Microsoft Azure Active Directory (Azure AD) 
 
 **Facultatif**— objet
 
-Spécifiez la configuration du connecteur Graph de l’application. Si cette valeur est présente [, webApplicationInfo.id](#webapplicationinfo) doit également être spécifiée.
+Spécifiez la configuration du connecteur Graph de l’application. Si cette valeur est présente, alors [webApplicationInfo.id](#webapplicationinfo) doit également être spécifié.
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
-|`notificationUrl`|string|2 048 caractères|✔|URL où les notifications Graph-connecteur pour l’application doivent être envoyées.|
+|`notificationUrl`|string|2 048 caractères|✔|L’URL où les notifications Graph-connecteur pour l’application doivent être envoyées.|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -663,7 +663,7 @@ Vous pouvez définir l’une des propriétés suivantes :
 * `longDescription` : description détaillée de l’application.
 * `smallImageUrl` : Icône de contour de l’application.
 * `largeImageUrl` : Icône de couleur de l’application.
-* `accentColor` : couleur à utiliser conjointement avec et comme arrière-plan pour vos icônes de contour.
+* `accentColor`: couleur à utiliser avec et comme arrière-plan pour vos icônes de contour.
 * `developerUrl` : URL HTTPS du site web du développeur.
 * `privacyUrl` : URL HTTPS de la politique de confidentialité du développeur.
 * `termsOfUseUrl` : URL HTTPS des conditions d’utilisation du développeur.
@@ -692,7 +692,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer

@@ -4,12 +4,12 @@ description: L’équipe produit Microsoft Teams répond à la communauté des 
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: équipes commentaires développeur questions problèmes contact communauté aide demande bogues contributions communauté discussions soutien
-ms.openlocfilehash: b5030f9e814dc7acf2ae2f5bb25719cc6c3f58f8
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 4f2450361640da43bac2dbf17dd662d6f4e2e5e4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668010"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755845"
 ---
 # <a name="support-and-feedback"></a>Assistance et commentaires
 
@@ -64,7 +64,7 @@ Suggérez une fonctionnalité ou votez pour des demandes de fonctionnalités exi
 
 | **Canal de la communauté** | **Contact** |
 |:----------------------|:------------|
-| **Suggestions de fonctionnalités** | Publiez des suggestions de fonctionnalités sur :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: [Portail de commentaires Microsoft Teams sur UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform). |
+| **Suggestions de fonctionnalités** | Publiez des suggestions de fonctionnalités sur :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: [Microsoft Teams portail de commentaires](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
 | **Questions générales** | Envoyez des questions générales sur la plateforme des développeurs Microsoft Teams à [Aide de la communauté Microsoft Teams](mailto:microsoftteamsdev@microsoft.com). Nous encourageons la publication de questions sur les canaux mentionnés ici et l’utilisation de messages électroniques uniquement si aucun autre mode de communication n’est applicable. |
 
 ## <a name="see-also"></a>Voir aussi

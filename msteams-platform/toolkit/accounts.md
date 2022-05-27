@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: cb9985aa1f7b9f3f5eff3308f385afbefffba3b6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191193"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756953"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Préparer des comptes pour créer des applications Teams
 
@@ -91,7 +91,7 @@ Si vous souhaitez héberger les ressources associées à votre application ou ac
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Charger une application personnalisée" border="true":::
 
-        Si vous ne parvenez pas à afficher l’option Charger une application personnalisée,** cela indique que vous n’avez pas l’autorisation requise pour le chargement indépendant.
+        Si vous ne parvenez pas à afficher l’option **Charger une application personnalisée**, cela indique que vous n’avez pas l’autorisation requise pour le chargement indépendant.
         * Pour un administrateur de locataire, activez le paramètre de chargement indépendant pour votre locataire ou organisation dans le Centre d’administration Teams.
         * Si vous n’êtes pas un administrateur de locataire, vous devez contacter votre administrateur de locataire pour activer le chargement indépendant.
 

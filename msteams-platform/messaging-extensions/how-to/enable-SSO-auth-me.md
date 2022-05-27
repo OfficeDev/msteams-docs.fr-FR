@@ -5,12 +5,12 @@ description: Découvrez comment activer la prise en charge de l’authentificati
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296944"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757422"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>Prise en charge de l’authentification unique pour les extensions de messages
 
@@ -43,7 +43,7 @@ Activer l’authentification unique :
     > [!NOTE]
     > Nous ne prenons pas en charge l’authentification unique d’autres gestionnaires, à l’exception de `OnTeamsMessagingExtensionQueryAsync` et `OnTeamsAppBasedLinkQueryAsync` du fichier TeamsMessagingExtensionsSearchAuthConfigBot.cs.
 
-4. Vous recevez le jeton dans le gestionnaire `OnTeamsMessagingExtensionQueryAsync` dans la charge utile `turnContext.Activity.Value` ou dans le `OnTeamsAppBasedLinkQueryAsync`, selon le scénario dans lequel vous activez l’authentification unique pour :
+4. Vous recevez le jeton dans `OnTeamsMessagingExtensionQueryAsync` le gestionnaire dans la `turnContext.Activity.Value` charge utile ou dans le , selon le `OnTeamsAppBasedLinkQueryAsync`scénario dans lequel vous activez l’authentification unique pour :
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

@@ -5,12 +5,12 @@ keywords: contrôle sélecteur de personnes
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: cd7039693b146abb53e938ba020077a48c343bda
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: a2e2a21f0485e0df87f8963defbe54ed540e455a
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571456"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755894"
 ---
 # <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
@@ -72,7 +72,7 @@ Le contrôle People Picker sur le web ou le bureau est lancé dans une fenêtre 
 L’extrait de code suivant affiche l’utilisation des personnes `selectPeople` de l’API à partir d’une liste :
 
 ```javascript
- microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -89,7 +89,7 @@ L’extrait de code suivant affiche l’utilisation des personnes `selectPeople`
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  });
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
 ```
 
 ## <a name="error-handling"></a>Gestion des erreurs

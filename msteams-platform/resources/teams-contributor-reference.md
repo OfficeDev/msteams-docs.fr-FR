@@ -3,14 +3,14 @@ title: Contribuer à la documentation Teams
 description: étapes de création et de publication de la documentation Teams
 author: surbhigupta
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 480b8bc1692672023171f3b6e67e0ee526cbe509
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 047a3c84b99fd832cde0531a9a9197c880f294e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111898"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757681"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuer à la documentation Teams
 
@@ -22,9 +22,8 @@ La documentation Teams fait partie de la bibliothèque de documentation techniqu
 >
 > * Installez [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 > * Installez [Microsoft Visual Studio code](https://code.visualstudio.com/) (VS Code).
-> * Installez [docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directement à partir de la place de marché VS Code.
-<br>&emsp;&emsp; ou
-> [!div class="checklist"]
+> * Installez [docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directement à partir de la place de marché VS Code.<br>&emsp;&emsp; ou
+[!div class="checklist"]
 >
 > * Installer dans VS Code :
 
@@ -40,7 +39,7 @@ Le guide des contributeurs fournit des instructions pour créer, publier et mett
 
 * **[guide de style d’écriture Microsoft](/style-guide/welcome)**: le Guide de style d’écriture Microsoft est une ressource complète pour l’écriture technique et reflète l’approche moderne de Microsoft en matière de voix et de style. Pour des informations de référence simples, ajoutez ce guide en ligne au menu **favoris** de votre navigateur.
 
-* **[Écriture de contenu pour les développeurs](/style-guide/developer-content/)**: le contenu spécifique à Teams s’adresse à un public de développeurs ayant une compréhension fondamentale des concepts de programmation et des processus. Il est important de fournir des informations claires et techniques précises de manière attrayante tout en conservant le ton et le style de Microsoft.
+* **[Écriture de contenu pour les développeurs](/style-guide/developer-content/)**: le contenu spécifique à Teams s’adresse à un public de développeurs ayant une compréhension fondamentale des concepts de programmation et des processus. Il est important que vous deviez fournir des informations claires et techniquesment précises de manière convaincante tout en conservant le ton et le style de Microsoft.
 
 * **[écrire des instructions pas à pas](/style-guide/procedures-instructions/writing-step-by-step-instructions)**: les expériences appliquées et interactives sont un excellent moyen pour les développeurs d’en savoir plus sur les produits et technologies Microsoft. La présentation de procédures complexes ou simples dans un format progressif est naturelle et conviviale.
 
@@ -50,7 +49,7 @@ Le guide des contributeurs fournit des instructions pour créer, publier et mett
 
 ## <a name="file-paths"></a>Chemins d’accès
 
-Lorsque vous utilisez des chemins relatifs et créez des liens vers d’autres documents, il est important de définir un chemin d’accès de fichier valide pour les liens hypertexte dans votre documentation. Votre build réussit sur GitHub uniquement si le chemin d’accès au fichier est correct ou valide.
+Lorsque vous utilisez des chemins relatifs et créez des liens vers d’autres docsets, il est important de définir un chemin d’accès de fichier valide pour les liens hypertexte dans votre documentation. Votre build réussit sur GitHub uniquement si le chemin d’accès au fichier est correct ou valide.
 
 Pour plus d’informations sur les liens hypertexte et les chemins d’accès aux fichiers, consultez [utiliser des liens dans la documentation](/contribute/how-to-write-links).
 
@@ -60,8 +59,7 @@ Pour plus d’informations sur les liens hypertexte et les chemins d’accès au
 > &emsp;&#x2714; Incluez l’extension de fichier Markdown.<br>
 >Par exemple : **répertoire parent/répertoire/chemin d’accès à article.md**—> [Création d’une application pour Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > Pour référencer un article de bibliothèque Microsoft Docs qui **ne fait pas partie de** la documentation de la plateforme Teams :<br>
-> &emsp;&#x2714; Utilisez un chemin relatif qui commence par une barre oblique.<br>
-> &emsp;&#x2714; N’incluez pas l’extension de fichier. <br>
+> &emsp;&#x2714; Utilisez un chemin relatif qui commence par une barre oblique.<br>&emsp;&#x2714; N’incluez pas l’extension de fichier.<br>
 > Par exemple : **/docset/address-to-file-location**> [—Utiliser l’API Microsoft Graph pour travailler avec Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > Pour référencer une page en dehors de la bibliothèque Microsoft Docs, telle que GitHub, utilisez le chemin d’accès complet `https` fichier.<br>
 

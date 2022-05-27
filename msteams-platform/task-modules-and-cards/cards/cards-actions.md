@@ -1,15 +1,15 @@
 ---
 title: Ajouter des actions de carte dans un bot
 description: Décrit les actions de carte dans Microsoft Teams et comment les utiliser dans vos bots
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: actions de cartes de bots teams
-ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111576"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756484"
 ---
 # <a name="card-actions"></a>Actions de carte
 
@@ -98,7 +98,7 @@ Avec `messageBack`, vous pouvez créer une action entièrement personnalisée av
 | `value` | Envoyé à votre bot lorsque l’action est effectuée. Vous pouvez encoder le contexte de l’action, par exemple des identificateurs uniques ou un objet JSON. |
 | `text` | Envoyé à votre bot lorsque l’action est effectuée. Utilisez cette propriété pour simplifier le développement de bots. Votre code peut vérifier une seule propriété de niveau supérieur pour distribuer la logique du bot. |
 
-La flexibilité de `messageBack` signifie que votre code ne peut pas laisser de message utilisateur visible dans l’historique simplement en n’utilisant pas `displayText`.
+La flexibilité des `messageBack` moyens que votre code ne peut pas laisser un message utilisateur visible dans l’historique tout simplement en n’utilisant `displayText`pas .
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -427,7 +427,7 @@ Cartes adaptatives prendre en charge quatre types d’actions :
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-Vous pouvez également modifier la charge utile `Action.Submit` carte adaptative pour prendre en charge les actions de Bot Framework existantes à l’aide d’une propriété `msteams` dans l’objet `data` de `Action.Submit`. La section suivante fournit des détails sur l’utilisation des actions Bot Framework existantes avec Cartes adaptatives.
+Vous pouvez également modifier la charge utile `Action.Submit` carte adaptative pour prendre en charge les actions de Bot Framework existantes à l’aide d’une propriété `msteams` dans l’objet `data` de `Action.Submit`. La section suivante fournit des détails sur l’utilisation des actions Bot Framework existantes avec des cartes adaptatives.
 
 > [!NOTE]
 > L’ajout de `msteams` aux données avec une action Bot Framework ne fonctionne pas avec un module de tâche de carte adaptative.

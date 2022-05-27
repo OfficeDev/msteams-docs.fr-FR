@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: f0dc772043eca4fc624fbd04261ddbc921c91fc4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668136"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755950"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Étendre un onglet personnel Teams sur Microsoft 365
 
@@ -148,11 +148,11 @@ Si votre application utilise des en-têtes de stratégie [de sécurité de conte
 
 La dernière étape de l’exécution de votre application dans Office et Outlook consiste à charger de manière indépendante votre [package d’application](..//concepts/build-and-test/apps-package.md) onglet personnel mis à jour dans Microsoft Teams.
 
-1. Empaquetez votre application Teams (icônes [de manifeste](../resources/schema/manifest-schema.md) et [d’application](/microsoftteams/platform/resources/schema/manifest-schema#icons)) dans un fichier zip. Si vous avez utilisé Teams Toolkit pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **zip Teams package de métadonnées** dans le menu **Déploiement** de Teams Toolkit.
+1. Empaquetez votre application Teams (icônes [de manifeste](../resources/schema/manifest-schema.md) et [d’application](/microsoftteams/platform/resources/schema/manifest-schema#icons)) dans un fichier zip. Si vous avez utilisé le Kit de ressources Teams pour créer votre application, vous pouvez facilement le faire à l’aide de l’option **Package de métadonnées Zip Teams** dans le menu **Déploiement** du Kit de ressources Teams.
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Option « Zip Teams metadata package » dans Teams Shared Computer Toolkit extension pour Visual Studio Code":::
 
-1. Connectez-vous à Teams avec votre compte client sandbox et basculez en mode *Aperçu développeur* . Sélectionnez le menu des points de suspension (**...**) selon votre profil utilisateur, puis sélectionnez : **À propos de** > **la préversion développeur**.
+1. Connectez-vous à Teams avec votre compte client sandbox et basculez en mode *Aperçu développeur* . Sélectionnez le menu des points de suspension (**...**) près de votre profil utilisateur, puis sélectionnez : **À propos de** > **Aperçu développeur**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Dans le menu des points de suspension Teams, ouvrez « À propos de », puis sélectionnez l’option « Aperçu développeur »":::
 
@@ -239,13 +239,6 @@ Lors de la première exécution du débogage local pour Office ou Outlook, vous 
 
 Fournissez des commentaires et signalez les problèmes liés à l’expérience de débogage Teams Toolkit dans [Microsoft Teams Framework (TeamsFx).](https://github.com/OfficeDev/TeamsFx/issues)
 
-## <a name="next-step"></a>Étape suivante
-
-Publiez votre application pour qu’elle soit détectable dans Teams, Outlook et Office :
-
-> [!div class="nextstepaction"]
-> [Publier des applications Teams pour Outlook et Office](publish.md)
-
 ## <a name="code-sample"></a>Exemple de code
 
 | **Exemple de nom** | **Description** | **Node.js** |
@@ -253,3 +246,10 @@ Publiez votre application pour qu’elle soit détectable dans Teams, Outlook et
 | Liste des tâches | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne uniquement dans Teams (utilisez cet exemple d’application pour essayer le processus de mise à niveau décrit dans ce didacticiel). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Liste de tâches modifiable avec l’authentification unique générée avec React et Azure Functions. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Éditeur d’images (Microsoft 365) | Créez, modifiez, ouvrez et enregistrez des images à l’aide de Microsoft API Graph. Fonctionne dans Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## <a name="next-step"></a>Étape suivante
+
+Publiez votre application pour qu’elle soit détectable dans Teams, Outlook et Office :
+
+> [!div class="nextstepaction"]
+> [Publier des applications Teams pour Outlook et Office](publish.md)

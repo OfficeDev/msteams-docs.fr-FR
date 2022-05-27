@@ -6,12 +6,12 @@ keywords: onglets teams , canal de groupe configurable Supprimer la suppression
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672935"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757464"
 ---
 # <a name="create-a-removal-page"></a>Créer une page de suppression
 
@@ -21,7 +21,7 @@ Vous pouvez étendre et améliorer l’expérience utilisateur en prenant en cha
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>Activer la reconfiguration de votre onglet après l’installation
 
-Votre `manifest.json` définit les fonctionnalités et fonctionnalités de votre onglet. L’instance de tabulation `canUpdateConfiguration` propriété prend une valeur booléenne qui indique si un utilisateur peut modifier ou reconfigurer l’onglet après sa création. Le tableau suivant fournit les détails de la propriété :
+Votre `manifest.json` définit les fonctionnalités et fonctionnalités de votre onglet. La propriété d’instance `canUpdateConfiguration` d’onglet prend une valeur booléenne qui indique si un utilisateur peut modifier ou reconfigurer l’onglet après sa création. Le tableau suivant fournit les détails de la propriété :
 
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
@@ -33,7 +33,7 @@ Lorsque votre onglet est chargé dans un canal ou une conversation de groupe, Te
 | ----------------------- | :----: | ----- | ----------- |
 |     Paramètres            |   √    |       |La page `configurationUrl` est rechargée dans un IFrame permettant à l’utilisateur de reconfigurer l’onglet. |
 |     Renommer              |   √    |   √   | L’utilisateur peut modifier le nom de l’onglet tel qu’il apparaît dans la barre d’onglets.          |
-|     Supprimer              |   √    |   √   |  Si la propriété et la valeur `removeURL` sont incluses dans la **page de configuration**, la **page de suppression** est chargée dans un IFrame et présentée à l’utilisateur. Si aucune page de suppression n’est incluse, une boîte de dialogue de confirmation s’affiche à l’utilisateur.          |
+|     Supprimer              |   √    |   √   |  Si la propriété et la valeur `removeURL` sont incluses dans la **page de configuration**, la **page de suppression** est chargée dans un IFrame et présentée à l’utilisateur. Si aucune page de suppression n’est incluse, une boîte de dialogue confirmer s’affiche à l’utilisateur.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Créer une page de suppression d’onglet pour votre application
 
@@ -47,7 +47,7 @@ L’interface `RemoveEvent` décrit un objet avec deux méthodes :
 
 * La fonction `notifySuccess()` est requise. Il indique que la suppression de la ressource sous-jacente a réussi et que son contenu peut être supprimé.
 
-* La fonction `notifyFailure(string)` est facultative. Il indique que la suppression de la ressource sous-jacente a échoué et que son contenu ne peut pas être supprimé. Le paramètre de chaîne facultatif spécifie une raison de l’échec. Si elle est fournie, cette chaîne s’affiche pour l’utilisateur ; sinon, une erreur générique s’affiche.
+* La fonction `notifyFailure(string)` est facultative. Cela indique que la suppression de la ressource sous-jacente a échoué et que son contenu ne peut pas être supprimé. Le paramètre de chaîne facultatif spécifie une raison de l’échec. Si elle est fournie, cette chaîne s’affiche pour l’utilisateur ; sinon, une erreur générique s’affiche.
 
 #### <a name="use-the-getconfig-function"></a>Utiliser la fonction `getConfig()`
 
@@ -128,7 +128,7 @@ Une fois le gestionnaire de suppression exécuté, `removeEvent.notifySuccess()`
 
 ## <a name="see-also"></a>Voir aussi
 
-* [onglets Teams](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)

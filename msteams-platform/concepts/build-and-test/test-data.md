@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: test des équipes du programme développeur d’applications
 ms.date: 11/01/2019
-ms.openlocfilehash: 5c8848196f5c5493c49f3446f788181f4123120d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 6694c925e49d38fa15f908e58202907c7d479fa0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296986"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757023"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Ajouter des données de test à votre client de test Microsoft 365
 
@@ -18,7 +18,7 @@ Vous pouvez tester votre application Microsoft Teams avec des exemples de donné
 
 ## <a name="prerequisites"></a>Configuration requise
 
-1. [Rejoignez le programme de développement Microsoft 365](/office/developer-program/office-365-developer-program), si vous n’avez pas de client de test.
+1. [Rejoignez le programme de développement Microsoft 365](/office/developer-program/office-365-developer-program), si vous n’avez pas de locataire de test.
 2. [Configurez un abonnement Microsoft 365 Développeur](/office/developer-program/office-365-developer-program-get-started).
 3. [Utilisez des exemples de packs de données avec votre abonnement de développeur Microsoft 365 pour installer le pack de contenu Utilisateurs](/office/developer-program/install-sample-packs).
 4. [Installer le module Teams PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
@@ -238,7 +238,7 @@ Par défaut, seuls les administrateurs généraux ou les administrateurs de serv
     }
     ```
 
-3. Ouvrez une session Windows PowerShell en mode Administrateur et exécutez le script que vous venez d’enregistrer.
+3. Ouvrez une session Windows PowerShell en mode Administrateur et exécutez le script que vous avez enregistré.
 4. Lorsque vous êtes invité à fournir les informations d’identification, entrez les informations d’identification d’administrateur général que vous avez reçues lors de votre première inscription à votre abonnement développeur.
 
     > [!Note]

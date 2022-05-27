@@ -5,12 +5,12 @@ description: Ajouter des expériences contextuelles modales pour collecter ou af
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073549"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756596"
 ---
 # <a name="task-modules"></a>Modules de tâche
 
@@ -46,7 +46,7 @@ Un module de tâche inclut les éléments suivants, comme illustré dans l’ima
     > [!NOTE]
     > Il n’est actuellement pas possible de détecter l’événement `err` lorsqu’un module de tâche est appelé à partir d’un bot.
 
-5. Le rectangle bleu est l’endroit où votre page web s’affiche si vous chargez votre propre page web à l’aide de la `url` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Pour plus d’informations, consultez [le dimensionnement du module de tâche](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
+5. Le rectangle bleu est l’endroit où votre page web s’affiche si vous chargez votre propre page web à l’aide de la `url` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Pour plus d'informations, consultez [Dimensionnement du module de tâches](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).
 6. Si vous affichez une carte adaptative à l’aide de la `card` propriété de [l’objet TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) , le remplissage est ajouté pour vous. Pour plus d’informations, consultez le [module de tâche CSS pour les modules de tâche HTML ou JavaScript](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
 7. Les boutons de carte adaptative s’affichent après avoir sélectionné **S’inscrire**. Lorsque vous utilisez votre propre page, créez vos propres boutons.
 

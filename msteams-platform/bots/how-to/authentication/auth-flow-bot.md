@@ -2,18 +2,18 @@
 title: Flux d’authentification Microsoft Teams pour les bots
 description: Décrit le flux d’authentification Microsoft Teams dans les bots avec un exemple de code.
 keywords: bots de flux d’authentification Teams
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: f18d5a03ed62b55d162c7e10ba1546e4051f3744
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3e677c746b4cc548b4f8977dbaf61666c3fa85ce
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111849"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756869"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Flux d’authentification pour les bots dans Microsoft Teams
 
-OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure Active Directory et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams ; [voici une bonne vue d’ensemble](https://aaronparecki.com/oauth-2-simplified/) qui est plus facile à suivre que la [spécification formelle](https://oauth.net/2/). Le flux d’authentification pour les onglets et les bots est un peu différent – des sites web. Ils peuvent donc utiliser OAuth 2.0 directement, tandis que les bots ne le peuvent pas et doivent effectuer quelques actions différemment – mais les concepts de base sont identiques.
+OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure Active Directory et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams ; [voici une bonne vue d’ensemble](https://aaronparecki.com/oauth-2-simplified/) qui est plus facile à suivre que la [spécification formelle](https://oauth.net/2/). Le flux d’authentification pour les onglets et les bots est un peu différent : les onglets sont similaires aux sites web afin qu’ils puissent utiliser OAuth 2.0 directement, tandis que les bots ne le sont pas et doivent faire quelques choses différemment, mais les concepts de base sont identiques.
 
 Consultez le dépôt GitHub [Exemple d’authentification Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) pour obtenir un exemple illustrant le flux d’authentification pour les bots utilisant Node.js et le [type d’octroi de code d’autorisation OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/).
 

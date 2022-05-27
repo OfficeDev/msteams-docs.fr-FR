@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656774"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755936"
 ---
 # <a name="azure-ad-manifest"></a>Manifeste Azure AD
 
@@ -260,31 +260,31 @@ Vous devez interagir avec l’application Azure AD pendant différentes étapes 
 
     Teams Toolkit exécute les fonctions suivantes pendant le développement local (appelé F5) :
 
-    * Lisez le `state.local.json` fichier pour trouver une application Azure AD existante. Si une application Azure AD existe déjà, Teams Toolkit réutilise l’application Azure AD existante, sinon vous devez créer une application à l’aide du `aad.template.json` fichier
+    * Lisez le `state.local.json` fichier pour trouver une application Azure AD existante. Si une application Azure AD existe déjà, Teams Toolkit réutilise l’application Azure AD existante, sinon vous devez créer une application à l’aide du `aad.template.json` fichier.
 
     * Ignore initialement certaines propriétés du fichier manifeste qui nécessitent un contexte supplémentaire (comme la propriété replyUrls qui nécessite un point de terminaison de débogage local) lors de la création d’une application Azure AD avec le fichier manifeste.
 
-    * Une fois le démarrage de l’environnement de développement local réussi, les identificateurs de l’application Azure AD, replyUrls et d’autres propriétés qui ne sont pas disponibles pendant la phase de création sont mis à jour en conséquence.
+    * Une fois le démarrage de l’environnement de développement local réussi, les identificateurs, les replyUrls et d’autres propriétés de l’application Azure AD qui ne sont pas disponibles pendant l’étape de création sont mis à jour en conséquence.
 
-    * Les modifications que vous avez apportées à votre application Azure AD sont chargées lors de la prochaine session de débogage locale. Vous pouvez voir [les modifications apportées à l’application Azure AD](https://github.com/OfficeDev/TeamsFx/wiki/) pour appliquer manuellement les modifications apportées à l’application Azure AD
+    * Les modifications que vous avez apportées à votre application Azure AD sont chargées lors de la prochaine session de débogage locale. Vous pouvez voir [les modifications apportées à l’application Azure AD](https://github.com/OfficeDev/TeamsFx/wiki/) pour appliquer manuellement les modifications apportées à l’application Azure AD.
 
 4. **Pour provisionner des ressources cloud**
 
       Vous devez provisionner des ressources cloud et déployer votre application tout en déplaçant votre application vers le cloud. Au niveau des étapes, comme le développement local, Teams Toolkit :
 
-      * Lisez le `state.{env}.json` fichier pour trouver une application Azure AD existante. Si une application Azure AD existe déjà, Teams Toolkit réutilise l’application Azure AD existante, sinon vous devez créer une application à l’aide du `aad.template.json` fichier
+      * Lisez le `state.{env}.json` fichier pour trouver une application Azure AD existante. Si une application Azure AD existe déjà, Teams Toolkit réutilise l’application Azure AD existante, sinon vous devez créer une application à l’aide du `aad.template.json` fichier.
 
-      * Ignore initialement certaines propriétés du fichier manifeste qui nécessitent un contexte supplémentaire (par exemple, la propriété replyUrls nécessite un point de terminaison de serveur frontal ou de bot) lors de la création d’une application Azure AD avec le fichier manifeste
+      * Ignore initialement certaines propriétés du fichier manifeste qui nécessitent un contexte supplémentaire (par exemple, la propriété replyUrls nécessite un point de terminaison de serveur frontal ou de bot) lors de la création d’une application Azure AD avec le fichier manifeste.
 
-      * Une fois l’approvisionnement d’autres ressources terminé, les identificateurs et les replyUrls de l’application Azure AD sont mis à jour en fonction des points de terminaison appropriés
+      * Une fois l’approvisionnement d’autres ressources terminé, les identificateurs d’application Azure AD et replyUrls sont mis à jour en conséquence pour les points de terminaison appropriés.
 
 5. **Pour générer une application**
 
-    * La commande Déployer dans le cloud déploie votre application sur les ressources approvisionnées. Il n’inclut pas le déploiement des modifications apportées à l’application Azure AD
+    * La commande Déployer dans le cloud déploie votre application sur les ressources approvisionnées. Il n’inclut pas le déploiement des modifications apportées à l’application Azure AD.
 
-    * Vous pouvez voir, [Déployer des modifications d’application Azure AD pour l’environnement distant](#deploy-azure-ad-application-changes-for-remote-environment) afin de déployer des modifications d’application Azure AD pour l’environnement distant
+    * Vous pouvez voir, [Déployer les modifications d’application Azure AD pour l’environnement distant](#deploy-azure-ad-application-changes-for-remote-environment) afin de déployer des modifications d’application Azure AD pour l’environnement distant.
 
-    * Teams Toolkit met à jour l’application Azure AD en fonction du fichier de modèle de manifeste Azure AD
+    * Teams Toolkit met à jour l’application Azure AD en fonction du fichier de modèle de manifeste Azure AD.
 
 ## <a name="limitations"></a>Limites
 
@@ -306,11 +306,11 @@ Vous devez interagir avec l’application Azure AD pendant différentes étapes 
 
 2. Actuellement, `requiredResourceAccess` la propriété peut utiliser le nom de l’application de ressource lisible par l’utilisateur ou les chaînes de nom d’autorisation uniquement pour `Microsoft Graph` et `Office 365 SharePoint Online` les API. Pour les autres API, vous devez utiliser l’UUID à la place. Vous pouvez suivre ces étapes pour récupérer des ID à partir de Portail Azure :
 
-    * Inscrire une nouvelle application Azure AD sur [Portail Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-    * Sélectionner `API permissions` à partir de la page d’application Azure AD
+    * Inscrivez une nouvelle application Azure AD sur [Portail Azure](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    * Sélectionnez dans `API permissions` la page de l’application Azure AD.
     * Sélectionnez `add a permission` cette option pour ajouter l’autorisation souhaitée.
-    * Sélectionnez `Manifest`, dans la `requiredResourceAccess` propriété, vous pouvez trouver les ID d’API et d’autorisations
+    * Sélectionnez `Manifest`, dans la `requiredResourceAccess` propriété, les ID d’API et d’autorisations.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 
 * [Afficher un aperçu et personnaliser le manifeste de l’application dans le Kit de ressources](TeamsFx-preview-and-customize-app-manifest.md)

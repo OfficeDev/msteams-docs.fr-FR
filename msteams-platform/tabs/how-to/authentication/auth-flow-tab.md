@@ -2,14 +2,14 @@
 title: Flux d’authentification pour les onglets
 description: Décrit le flux d’authentification dans les onglets, OAuth par Azure AD, et fournit un exemple de code
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: onglets de flux d’authentification teams
-ms.openlocfilehash: 2589489598f51393f2a429f8701e9101cf80b273
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111450"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756491"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Flux d’authentification Microsoft Teams pour les onglets
 
@@ -27,7 +27,7 @@ Par exemple, le flux d’authentification pour les onglets et les bots utilisant
 ![Diagramme de séquence d’authentification par tabulation](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. L’utilisateur interagit avec le contenu de la page de configuration ou de contenu de l’onglet, généralement un bouton de **connexion** ou de **connexion** .
-2. L’onglet construit l’URL de sa page de démarrage d’authentification. Si vous le souhaitez, il utilise des informations provenant d’espaces réservés d’URL ou d’appels `microsoftTeams.getContext()` méthode du Kit de développement logiciel (SDK) client Teams pour simplifier l’expérience d’authentification de l’utilisateur. Par exemple, lors de l’authentification avec A Azure AD, si le paramètre `login_hint` est défini sur l’adresse e-mail de l’utilisateur, l’utilisateur n’a pas besoin de se connecter s’il l’a fait récemment. Cela est dû au fait que Azure AD utilise les informations d’identification mises en cache de l’utilisateur. La fenêtre contextuelle s’affiche brièvement, puis disparaît.
+2. L’onglet construit l’URL de sa page de démarrage d’authentification. Si vous le souhaitez, il utilise des informations provenant d’espaces réservés d’URL ou d’appels `microsoftTeams.getContext()` méthode du Kit de développement logiciel (SDK) client Teams pour simplifier l’expérience d’authentification de l’utilisateur. Par exemple, lors de l’authentification avec Azure AD, si le `login_hint` paramètre est défini sur l’adresse e-mail de l’utilisateur, l’utilisateur n’a pas à se connecter s’il l’a fait récemment. Cela est dû au fait que Azure AD utilise les informations d’identification mises en cache de l’utilisateur. La fenêtre contextuelle s’affiche brièvement, puis disparaît.
 3. L’onglet appelle ensuite la méthode `microsoftTeams.authentication.authenticate()` et inscrit les fonctions `successCallback` et `failureCallback`.
 4. Teams ouvre la page de démarrage dans un iframe dans une fenêtre contextuelle. La page de démarrage génère des données de `state` aléatoires, les enregistre pour une validation ultérieure et les redirige vers le point de terminaison `/authorize` du fournisseur d’identité, tel que `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` pour Azure AD. Remplacez `<tenant id>` par votre propre ID de locataire qui est context.tid.
 Comme pour les autres flux d’authentification d’application dans Teams, la page de démarrage doit se trouver sur un domaine figurant dans sa liste `validDomains` et sur le même domaine que la page de redirection de la publication de connexion.

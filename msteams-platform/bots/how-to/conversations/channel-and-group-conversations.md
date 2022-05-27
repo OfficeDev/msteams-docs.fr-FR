@@ -3,14 +3,14 @@ title: Canal et conversations de groupe avec un bot
 author: surbhigupta
 description: Comment envoyer, recevoir et gérer des messages pour un bot dans un canal ou une conversation de groupe. En savoir plus sur les instructions de conception, la création de threads de conversation, l’utilisation de @mentions à l’aide d’exemples de code
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2262e52e15bbd5598a0e0dad89bb38a6f0078eac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111555"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757177"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Conversations de canal et de groupe avec un bot
 
@@ -18,7 +18,7 @@ ms.locfileid: "65111555"
 
 Pour installer le bot Microsoft Teams dans une conversation d’équipe ou de groupe, ajoutez l’étendue `teams` ou `groupchat` à votre bot. Cela permet à tous les membres de la conversation d’interagir avec votre robot. Une fois le bot installé, il a accès aux métadonnées relatives à la conversation, telles que la liste des membres de la conversation. En outre, lorsqu’il est installé dans une équipe, le bot a accès aux détails de cette équipe et à la liste complète des canaux.
 
-Les bots d’un groupe ou d’un canal ne reçoivent des messages que lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou lorsqu’une personne répond à un message de votre bot sans l'@mentioning.
+Les bots d’un groupe ou d’un canal reçoivent uniquement des messages lorsqu’ils sont mentionnés @botname. Ils ne reçoivent aucun autre message envoyé à la conversation. Le robot doit être @mentionné directement. Votre bot ne reçoit pas de message lorsque l’équipe ou le canal est mentionné, ou quand quelqu’un répond à un message de votre bot sans l'@mentioning.
 
 > [!NOTE]
 > Cette fonctionnalité est actuellement disponible dans [préversion publique des développeurs](../../../resources/dev-preview/developer-preview-intro.md) uniquement.

@@ -2,18 +2,18 @@
 title: Autorisations de périphérique pour le navigateur
 keywords: autorisations des fonctionnalités des applications teams
 description: Rétablir en toute sécurité la prise en charge des autorisations d’appareil pour les applications dans notre client web
-localization_priority: high
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: beb9007593bd1c9a660429d9e92a08e39c1f4710
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111366"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756743"
 ---
 # <a name="device-permissions-for-the-browser"></a>Autorisations de périphérique pour le navigateur
 
-L’application Teams, qui nécessite des autorisations d’appareil, telles que l’accès à l’appareil photo ou au microphone, exige désormais que les utilisateurs accordent manuellement des autorisations au niveau de l’application dans le navigateur web. Auparavant, le navigateur gérait la façon d’accorder des autorisations d’accès, mais ces autorisations sont désormais gérées dans Microsoft Teams. Cela a des implications sur la façon dont vous concevez votre application et si elles nécessitent ces autorisations dans le navigateur.
+Teams application qui nécessite des autorisations d’appareil, telles que l’accès à l’appareil photo ou au microphone, exige maintenant que les utilisateurs accordent manuellement des autorisations par niveau d’application dans le navigateur web. Auparavant, le navigateur gérait la façon d’accorder des autorisations d’accès, mais ces autorisations sont désormais gérées dans Microsoft Teams. Cela a des implications sur la façon dont vous concevez votre application et si elles nécessitent ces autorisations dans le navigateur.
 
 ## <a name="enable-apps-device-permissions"></a>Activer les autorisations d’appareil de l’application
 
@@ -33,7 +33,7 @@ Un utilisateur doit activer ces autorisations dans le navigateur pour qu’elles
 
 ## <a name="recommendation"></a>Recommandation
 
-L’application Teams, qui nécessite des autorisations d’appareil dans le navigateur, doit afficher des instructions aux utilisateurs sur l’emplacement où trouver et activer ces autorisations dans l’interface utilisateur Teams. Selon le contexte dans lequel votre application s’exécute, vous devez vous assurer que vos instructions pointent l’utilisateur vers l’emplacement approprié pour accéder à ces autorisations, car elles diffèrent pour les applications personnelles, les dialogues de module de tâche, les onglets des conversations, les canaux ou les réunions.
+Teams application qui nécessite des autorisations d’appareil dans le navigateur doit afficher des instructions aux utilisateurs sur l’emplacement où trouver et activer ces autorisations dans l’interface utilisateur Teams. Selon le contexte dans lequel votre application s’exécute, vous devez vous assurer que vos instructions pointent l’utilisateur vers l’emplacement approprié pour accéder à ces autorisations. Les autorisations diffèrent pour les applications personnelles, les dialogues de module de tâche, les onglets des conversations, les canaux ou les réunions.
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>

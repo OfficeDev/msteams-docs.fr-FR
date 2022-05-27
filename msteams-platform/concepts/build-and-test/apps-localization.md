@@ -2,15 +2,15 @@
 title: Localiser votre application
 description: Décrit les considérations relatives à la localisation de votre application Microsoft Teams.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: les équipes publient la langue de localisation AppSource de publication dans le Store
 ms.date: 05/15/2018
-ms.openlocfilehash: 000a448a467e3ed8244413be0c3b68c7eee02ea5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2975365f56c573b66fda5e5a51106dc8cecf8c0f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111975"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757044"
 ---
 # <a name="localize-your-app"></a>Localiser votre application
 
@@ -22,7 +22,7 @@ Prenez en compte les facteurs suivants pour localiser votre application Microsof
 
 ## <a name="localize-your-appsource-listing"></a>Localiser votre description AppSource
 
-Si vous publiez l’application dans le Store, fournissez des métadonnées (descriptions, captures d’écran, nom) dans les langues dans lesquelles vous souhaitez que votre application soit répertoriée, et spécifiez explicitement ces langues dans la **listes de la Place de marché** page dans Espace partenaires. Pour plus d’informations, consultez [avants Microsoft AppSource localisés](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Pour prendre en charge les descriptions localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre description. Les informations de langue par défaut que vous fournissez dans [Espace partenaires](/office/dev/store/submit-to-appsource-via-partner-center) pour votre description s’affichent dans le site web [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource est un emplacement unique pour tous les besoins de votre équipe. rassemblez tous les éléments, y compris les conversations, les réunions, les appels, les fichiers et les outils pour permettre un travail d’équipe plus productif.") description de votre application. Actuellement, la langue par défaut est l’anglais.
+Si vous publiez l’application dans le Store, fournissez des métadonnées (descriptions, captures d’écran, nom) dans les langues dans lesquelles vous souhaitez que votre application soit répertoriée, et spécifiez explicitement ces langues dans la page **des descriptions** de la Place de marché dans l’Espace partenaires. Pour plus d’informations, consultez [avants Microsoft AppSource localisés](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts). Pour prendre en charge les descriptions localisées dans l’App Store, vous pouvez ajouter des langues supplémentaires à votre description. Les informations de langue par défaut que vous fournissez dans [Espace partenaires](/office/dev/store/submit-to-appsource-via-partner-center) pour votre description s’affichent dans le site web [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource est un emplacement unique pour tous les besoins de votre équipe. rassemblez tous les éléments, y compris les conversations, les réunions, les appels, les fichiers et les outils pour permettre un travail d’équipe plus productif.") description de votre application. Actuellement, la langue par défaut est l’anglais.
 
 ### <a name="configure-localization"></a>Configurer la localisation
 
@@ -97,7 +97,7 @@ Si la langue de l’utilisateur est définie sur « en-ca », les modifications 
 1. Le client Teams prend les chaînes « fr » et les remplace par les chaînes « en ».
 1. Étant donné qu’aucune localisation « en-ca » n’est fournie, les localisations « en » sont utilisées.
 
-Si la langue de l’utilisateur est définie sur « es-es », le client Teams prend les chaînes « fr ». Le client Teams ne remplace pas les chaînes par l’un des fichiers de langue, car aucune traduction 'es' ou 'es-es' n’est fournie.
+Si la langue de l’utilisateur est définie sur « es-es », le client Teams prend les chaînes « fr ». Le client Teams ne remplace pas les chaînes par l’un des fichiers linguistiques, car aucune traduction « es » ou « es-es » n’est fournie.
 
 Par conséquent, vous devez fournir des traductions de langue de niveau supérieur uniquement dans votre manifeste. Par exemple, `en` au lieu de `en-us`. Vous devez fournir des remplacements au niveau de la région uniquement pour les quelques chaînes qui en ont besoin.
 
@@ -150,7 +150,7 @@ La modification `manifest.json` est illustrée dans l’exemple suivant :
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>Gérer les soumissions de texte localisées de vos utilisateurs
 
-Si vous fournissez des versions localisées de votre application, les utilisateurs répondent avec la même langue. Étant donné que Teams ne traduit pas les envois d’utilisateurs dans la langue par défaut, votre application doit gérer les réponses de langue localisées. Par exemple, si vous fournissez un `commandList` localisé, les réponses à votre bot sont le texte localisé de la commande, et non la langue par défaut. Votre application doit répondre correctement.
+Si vous fournissez des versions localisées de votre application, les utilisateurs répondent avec la même langue. Comme Teams ne traduit pas les soumissions d’utilisateurs dans la langue par défaut, votre application doit gérer les réponses de langue localisées. Par exemple, si vous fournissez un `commandList` localisé, les réponses à votre bot sont le texte localisé de la commande, et non la langue par défaut. Votre application doit répondre correctement.
 
 ## <a name="code-sample"></a>Exemple de code
 

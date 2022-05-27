@@ -4,12 +4,12 @@ description: Réponses à certaines questions courantes
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 587451e3a0e89206a4ea49aaca3c682ab290ac5b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453933"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757548"
 ---
 # <a name="moodle-faq"></a>FAQ sur Moodle
 
@@ -35,7 +35,7 @@ Chaque instance de cours en équipe doit avoir un propriétaire, et la synchroni
 
 Les utilisateurs disposent de plusieurs options de connexion à partir de la page de connexion Moodle.
 
-* Pour vous connecter exclusivement à l’aide d’informations d’identification Microsoft 365 activez les paramètres de configuration **Forcer la redirection** pour le **plug-in auth_oidc**. Si le service est activé, l’utilisateur peut voir la page de connexion Microsoft.
+* Pour vous connecter exclusivement à l’aide d’informations d’identification Microsoft 365, activez les paramètres de configuration **Forcer la redirection** pour le **plug-in auth_oidc**. Si le service est activé, l’utilisateur peut voir la page de connexion Microsoft.
 * Pour vous connecter manuellement au portail Moodle, consultez [Moodle](https://moodle.org/login/index.php).
 
 <br>
@@ -119,7 +119,7 @@ La raison des incohérences avec les utilisateurs qui ne peuvent pas signer en u
 
 <summary><b>Tous les utilisateurs ne parviennent pas à se connecter à l'aide de leurs informations d'identification Microsoft 365. Que pouvons-nous faire pour résoudre ce problème ?</b></summary>
 
-Les utilisateurs qui n’ont pas pu se connecter au démarrage doivent signaler le problème et vérifier que la **clé secrète du client** de l’application n’a pas expiré.
+Les utilisateurs qui n’ont pas pu se connecter au démarrage doivent signaler le problème et vérifier que la **Clé secrète du client** de l’application n’a pas expiré.
 
 L'image suivante montre le message d'erreur reçu lorsque l'utilisateur signe en utilisant ses informations d'identification Microsoft 365 :
 

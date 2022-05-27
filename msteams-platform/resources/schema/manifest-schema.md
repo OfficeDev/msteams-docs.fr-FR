@@ -2,20 +2,22 @@
 title: Référence du schéma du manifeste
 description: Décrit le schéma du manifeste pour Microsoft Teams
 ms.topic: reference
-ms.author: lajanuar
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104006"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672907"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
-Le manifeste Teams décrit comment l’application s’intègre au produit Microsoft Teams. Votre manifeste doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,..., et 1.12 sont également pris en charge (à l’aide de « v1.x » dans l’URL).
+Le manifeste de l’application Microsoft Teams décrit comment votre application s’intègre au produit Microsoft Teams. Votre manifeste d’application doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,...,1.12 et la version actuelle 1.13 (voir la remarque ci-dessous) sont toutes prises en charge (à l’aide de « v1.x » dans l’URL).
 Pour plus d’informations sur les modifications apportées dans chaque version, voir [le journal des modifications du manifeste.](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
+
+> [!Important]
+> La version `1.13` du schéma de manifeste d’application Microsoft Teams permet de prendre en charge [l’extension des applications Teams à Outlook et Office](../../m365-apps/overview.md). Pour les applications Teams uniquement, utilisez la version (ou une version `1.12` antérieure). Les schémas 1.12 et 1.13 sont sinon les mêmes. Pour plus d'informations, reportez-vous à la vue d’ensemble du [Kit de développement logiciel (SDK) du client JavaScript de Teams](../../m365-apps/overview.md).
 
 L’exemple de schéma suivant montre toutes les options d’extensibilité :
 
@@ -23,8 +25,8 @@ L’exemple de schéma suivant montre toutes les options d’extensibilité :
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -344,7 +346,7 @@ L’URL https:// fait référence au schéma JSON pour le manifeste.
 
 **Obligatoire**— chaîne
 
-Version du schéma du manifeste que ce manifeste utilise.
+La version du schéma de manifeste que ce manifeste utilise. Utilisez `1.13` pour activer la prise en charge des applications Teams dans Outlook et Office; utilisez `1.12` (ou avant) pour les applications Teams uniquement.
 
 ## <a name="version"></a>version
 
@@ -630,6 +632,16 @@ Fournissez votre ID d’application Azure Active Directory et vos informations d
 |`id`|string|36 caractères|✔|Application Azure AD ID d’application. Cet ID doit être un GUID.|
 |`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, https://notapplicable pour éviter une réponse d’erreur. |
 
+## <a name="graphconnector"></a>graphConnector
+
+**Facultatif**— objet
+
+Spécifiez la configuration du connecteur Graph de l’application. Si cette valeur est présente, alors [webApplicationInfo.id](#webapplicationinfo) doit également être spécifié.
+
+|Nom| Type| Taille maximale | Requis | Description|
+|---|---|---|---|---|
+|`notificationUrl`|string|2 048 caractères|✔|L’URL où les notifications Graph-connecteur pour l’application doivent être envoyées.|
+
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 **Facultatif**— booléen
@@ -642,7 +654,7 @@ Indique si l'indicateur de chargement doit être affiché ou non lorsqu'une appl
 
  **Facultatif**— booléen
 
-Indique si une application personnelle est rendue avec ou sans barre d'en-tête d'onglet. La valeur par défaut est **faux**.
+Indique si une application personnelle est rendue sans barre d’en-tête d’onglet (mode plein écran). La valeur par défaut est **False**.
 
 > [!NOTE]
 > `isFullScreen` fonctionne uniquement pour les applications publiées dans votre organisation.

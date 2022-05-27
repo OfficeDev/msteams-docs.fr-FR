@@ -5,12 +5,12 @@ description: Vue d’ensemble des commandes d’action d’extension de messager
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297211"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756897"
 ---
 # <a name="define-message-extension-action-commands"></a>Définir des commandes d’action d’extension de message
 
@@ -54,7 +54,7 @@ L’image suivante affiche les emplacements à partir desquels la commande d’a
 
 En plus de sélectionner l’emplacement à partir duquel votre commande peut être appelée, vous devez également sélectionner comment remplir le formulaire dans le module de tâche pour vos utilisateurs. Vous disposez des trois options suivantes pour créer le formulaire rendu à l’intérieur du module de tâche :
 
-* **Liste statique de paramètres**: C’est la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application rendu par le client Teams, mais vous ne pouvez pas contrôler la mise en forme dans ce cas.
+* **Liste statique des paramètres** : il s’agit de la méthode la plus simple. Vous pouvez définir une liste de paramètres dans le manifeste de votre application Teams le client s’affiche, mais vous ne pouvez pas contrôler la mise en forme dans ce cas.
 * **Carte adaptative** : vous pouvez choisir d’utiliser une carte adaptative, qui offre un meilleur contrôle sur l’interface utilisateur, mais vous limite toujours sur les contrôles disponibles et les options de mise en forme.
 * **Vue web incorporée** : vous pouvez choisir d’incorporer une vue web personnalisée dans le module de tâche pour avoir un contrôle total sur l’interface utilisateur et les contrôles.
 
@@ -77,7 +77,7 @@ Pour ajouter la commande d’action au manifeste de l’application, vous devez 
 
 Vous pouvez créer une commande d’action à l’aide **d’App Studio** ou **du portail des développeurs**.
 
-> [!NOTE]
+> [!WARNING]
  > Si vous utilisez App Studio, nous vous recommandons d’essayer le [Developer Portal Developer Portal](https://dev.teams.microsoft.com/) pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022.
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
@@ -158,7 +158,7 @@ Si vous utilisez une liste statique de paramètres, vous devez également ajoute
 | `parameter.title` | Cette propriété est un titre ou une étiquette de paramètre convivial court. | Oui | 1.0 |
 | `parameter.inputType` | Cette propriété est définie sur le type d’entrée requis. Les valeurs possibles incluent `text`, `textarea`, `number`, `date`, `time`, `toggle`. La valeur par défaut est définie sur `text`. | Non | 1.4 |
 
-Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l’objet `taskInfo` pour extraire votre vue web sans appeler directement votre bot. Si vous sélectionnez cette option, le comportement est similaire à celui de l’utilisation d’une liste statique de paramètres. Dans la mesure où la première interaction avec votre bot est [réponse au module de tâche envoyer l’action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si vous utilisez un objet `taskInfo` , vous devez définir le paramètre `fetchTask` sur `false`.
+Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l’objet `taskInfo` pour extraire votre vue web sans appeler directement votre bot. Si vous sélectionnez cette option, le comportement est similaire à celui de l’utilisation d’une liste statique de paramètres. Dans la mesure où la première interaction avec votre bot est [réponse au module de tâche envoyer l’action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). Si vous utilisez un `taskInfo` objet, vous devez définir le paramètre `false`sur `fetchTask` .
 
 | Nom de la propriété | Objectif | Est-ce obligatoire ? | Version minimale du manifeste |
 |---|---|---|---|
@@ -170,7 +170,7 @@ Si vous utilisez une vue web incorporée, vous pouvez éventuellement ajouter l�
 
 #### <a name="app-manifest-example"></a>Exemple de manifeste d’application
 
-La section suivante est un exemple d’objet `composeExtensions` définissant deux commandes d’action. Il ne s’agit pas d’un exemple du manifeste complet. Pour obtenir le schéma complet du manifeste d’application, consultez [schéma de manifeste d’application](~/resources/schema/manifest-schema.md):
+La section suivante est un exemple d’objet `composeExtensions` définissant deux commandes d’action. Il ne s’agit pas d’un exemple de manifeste complet. Pour obtenir le schéma complet du manifeste d’application, consultez [schéma de manifeste d’application](~/resources/schema/manifest-schema.md):
 
 ```json
 ...
@@ -232,12 +232,12 @@ Suivez le [guide pas à pas](../../../sbs-meetingextension-action.yml) pour cré
 
 ## <a name="next-step"></a>Étape suivante
 
-Si vous utilisez une carte adaptative ou une vue web incorporée sans objet `taskInfo`, l’étape suivante consiste à :
+Si vous utilisez une carte adaptative ou une vue web incorporée sans `taskInfo` objet, l’étape suivante consiste à :
 
 > [!div class="nextstepaction"]
 > [Créer et répondre avec un module de tâche](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-Si vous utilisez les paramètres ou une vue web incorporée avec un objet `taskInfo`, l’étape suivante consiste à :
+Si vous utilisez les paramètres ou une vue web incorporée avec un `taskInfo` objet, l’étape suivante consiste à :
 
 > [!div class="nextstepaction"]
 > [Répondre à l’action d’envoi du module de tâche](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

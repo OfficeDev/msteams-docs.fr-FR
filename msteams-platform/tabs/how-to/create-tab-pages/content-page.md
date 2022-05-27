@@ -6,30 +6,30 @@ keywords: onglets teams , canal de groupe configurable statique
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673026"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757471"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>Créer une page de contenu pour votre onglet
 
-Une page de contenu est une page web qui est affichée dans le client Teams. Ces éléments font partie des éléments suivants :
+Une page de contenu est une page web qui est affichée dans le client Teams, qui fait partie des éléments suivants :
 
 * Onglet personnalisé à portée personnelle : dans ce cas, la page de contenu est la première page rencontrée par l’utilisateur.
 * Onglet personnalisé de canal ou de groupe : la page de contenu s’affiche après que l’utilisateur a épinglé et configuré l’onglet dans le contexte approprié.
 * [Module de tâche](~/task-modules-and-cards/what-are-task-modules.md): vous pouvez créer une page de contenu et l’incorporer en tant que vue web à l’intérieur d’un module de tâche. La page est rendue dans la fenêtre contextuelle modale.
 
-Cet article est spécifique à l’utilisation de pages de contenu sous forme d’onglets ; toutefois, la majorité des instructions s’appliquent ici, quelle que soit la façon dont la page de contenu est présentée à l’utilisateur.
+Cet article est spécifique à l’utilisation de pages de contenu sous forme d’onglets; toutefois, la plupart des conseils ici s’appliquent, quelle que soit la façon dont la page de contenu est présentée à l’utilisateur.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tab-content-and-design-guidelines"></a>Instructions de conception et de contenu de tabulation
 
-L’objectif global de votre onglet est de fournir l’accès à du contenu significatif et attrayant qui a une valeur pratique et un objectif évident. Vous devez vous concentrer sur le nettoyage, la navigation et l’immersif de votre conception d’onglets.
+L’objectif global de votre onglet est de fournir l’accès au contenu significatif et attrayant qui a une valeur pratique et un objectif évident. 
 
-Pour plus d’informations, consultez [instructions de conception de l’onglet](~/tabs/design/tabs.md) et [instructions de validation du Magasin Microsoft Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Vous devez vous concentrer sur le nettoyage de la conception de votre onglet, l’intuitive de navigation et l’immersif de contenu. Pour plus d’informations, consultez [les instructions de conception de l’onglet](~/tabs/design/tabs.md) et [Microsoft Teams les instructions de validation du magasin](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## <a name="integrate-your-code-with-teams"></a>Intégrer votre code à Teams
 
@@ -89,11 +89,11 @@ Le kit de développement logiciel (SDK) [JavaScript du client Teams](~/tabs/how-
 
 ### <a name="deep-links"></a>Liens profonds
 
-Vous pouvez créer des liens profonds vers des entités dans Teams. Ceux-ci sont utilisés pour créer des liens qui accèdent au contenu et aux informations dans votre onglet. Pour plus d’informations, consultez [créer des liens profonds vers du contenu et des fonctionnalités dans Teams](~/concepts/build-and-test/deep-links.md).
+Vous pouvez créer des liens profonds vers des entités dans Teams. Ils sont utilisés pour créer des liens qui accèdent au contenu et aux informations dans votre onglet. Pour plus d’informations, consultez [créer des liens approfondis vers du contenu et des fonctionnalités dans Teams](~/concepts/build-and-test/deep-links.md).
 
 ### <a name="task-modules"></a>Modules de tâche
 
-Un module de tâche est une expérience contextuelle modale que vous pouvez déclencher à partir de votre onglet. Dans une page de contenu, vous pouvez utiliser des modules de tâche pour présenter des formulaires permettant de collecter des informations supplémentaires, d’afficher les détails d’un élément dans une liste ou de présenter des informations supplémentaires à l’utilisateur. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou entièrement créés à l’aide de Cartes adaptatives. Pour plus d’informations, consultez [à l’aide de modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Un module de tâche est une expérience contextuelle modale que vous pouvez déclencher à partir de votre onglet. Dans une page de contenu, utilisez des modules de tâches pour présenter des formulaires permettant de collecter des informations supplémentaires, d’afficher les détails d’un élément dans une liste ou de présenter à l’utilisateur des informations supplémentaires. Les modules de tâches eux-mêmes peuvent être des pages de contenu supplémentaires ou entièrement créés à l’aide de Cartes adaptatives. Pour plus d’informations, consultez [à l’aide de modules de tâche dans les onglets](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Domaines valides
 
@@ -136,7 +136,7 @@ Pour afficher l’indicateur de chargement :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [onglets Teams](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Déploiement du lien des onglets et vue de scène](~/tabs/tabs-link-unfurling.md)
 * [Créer une page de configuration](~/tabs/how-to/create-tab-pages/configuration-page.md)

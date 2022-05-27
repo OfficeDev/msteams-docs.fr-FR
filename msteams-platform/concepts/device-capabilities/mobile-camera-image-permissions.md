@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: Découvrez comment utiliser Teams SDK client JavaScript pour activer les fonctionnalités multimédias à l’aide d’exemples de code.
 keywords: fonctionnalités du microphone d’image de caméra api multimédia d’autorisations natives d’appareil
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a65f39d3796bc0dacaa80f6badba7a011716edbf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111261"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756757"
 ---
 # <a name="integrate-media-capabilities"></a>Intégrer les fonctionnalités médias
 
@@ -28,7 +28,7 @@ Il est important de vous familiariser avec les [erreurs de réponse d’API](#er
 
 > [!NOTE]
 >
-> * Actuellement, la prise en charge par Microsoft Teams des capacités médiatiques n'est disponible que pour les clients mobiles.
+> * Actuellement, Microsoft Teams prend en charge les fonctionnalités multimédias est disponible uniquement pour les clients mobiles.
 > * Actuellement, Teams ne prend pas en charge les autorisations d’appareil pour les applications multi-fenêtres, les onglets et le panneau latéral de la réunion.
 > * Les autorisations d’appareil sont différentes dans le navigateur. Pour plus d'informations, consultez la section [Autorisations du périphérique de navigation](browser-device-permissions.md).
 
@@ -59,7 +59,7 @@ Les API [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.m
   
 > [!IMPORTANT]
 >
-> * Les `selectMedia`api , `getMedia`et `viewImages` , peuvent être appelées à partir de plusieurs surfaces Teams, telles que des modules de tâches, des onglets et des applications personnelles. Pour plus d’informations, consultez [Points d’entrée pour les applications Teams](../extensibility-points.md).
+> * Les `selectMedia`api , `getMedia`et `viewImages` , peuvent être appelées à partir de plusieurs surfaces Teams, telles que des modules de tâches, des onglets et des applications personnelles. Pour plus d’informations, consultez [Points d’entrée pour Teams applications](../extensibility-points.md).
 > * `selectMedia` L’API a été étendue pour prendre en charge les propriétés audio et de microphone.
 
 Vous devez utiliser l’ensemble d’API suivant pour activer les fonctionnalités multimédias de votre appareil :
@@ -81,15 +81,15 @@ L’image suivante illustre l’expérience d’application web de l’API `sele
 
 ## <a name="error-handling"></a>Gestion des erreurs
 
-Vous devez vous assurer de gérer ces erreurs de manière appropriée dans votre application Teams. Le tableau suivant répertorie les codes d’erreur et les conditions dans lesquelles les erreurs sont générées :
+Vous devez vous assurer de traiter ces erreurs de manière appropriée dans votre application Teams. Le tableau suivant répertorie les codes d'erreur et les conditions dans lesquelles les erreurs sont générées :
 
 |Code d’erreur |  Nom de l’erreur     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | L’API n’est pas prise en charge sur la plateforme actuelle.|
 | **404** | FILE_NOT_FOUND | Le fichier spécifié est introuvable à l’emplacement donné.|
-| **500** | INTERNAL_ERROR | Une erreur interne se produit lors de l’exécution de l’opération requise.|
+| **500** | INTERNAL_ERROR | Une erreur interne a été rencontrée lors de l'exécution de l'opération requise.|
 | **1 000** | PERMISSION_DENIED |L’autorisation est refusée par l’utilisateur.|
-| **3 000** | NO_HW_SUPPORT | Le matériel sous-jacent ne prend pas en charge la fonctionnalité.|
+| **3000** | NO_HW_SUPPORT | Le matériel sous-jacent ne prend pas en charge la fonctionnalité.|
 | **4000**| ARGUMENTS NON VALIDES | Un ou plusieurs arguments ne sont pas valides.|
 |  **8000** | USER_ABORT |L’utilisateur abandonne l’opération.|
 | **9000**| OLD_PLATFORM | Le code de plateforme est obsolète et n’implémente pas cette API.|

@@ -5,54 +5,54 @@ keywords: bots de flux d’authentification Teams
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: c29275933ada0d286ef1bfecf19fef787df9592c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4930edcef81fca60f45ecdfd9bab863eb4524753
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453186"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757205"
 ---
-# <a name="microsoft-teams-authentication-flow-for-bots"></a>Microsoft Teams’authentification pour les bots
+# <a name="microsoft-teams-authentication-flow-for-bots"></a>Microsoft Teams flux d’authentification pour les bots
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-OAuth 2.0 est une norme ouverte d’authentification et d’autorisation utilisée par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est une condition préalable à l’utilisation de l’authentification dans Teams; [Voici une bonne vue d’ensemble](https://aaronparecki.com/oauth-2-simplified/) plus facile à suivre que la [spécification formelle](https://oauth.net/2/). Le flux d’authentification pour les onglets et les bots est légèrement différent, car les onglets sont très similaires aux sites web afin qu’ils peuvent utiliser OAuth 2.0 directement, et les bots ne le sont pas et doivent faire quelques choses différemment, mais les concepts de base sont identiques.
+OAuth 2.0 est une norme ouverte pour l’authentification et l’autorisation utilisées par Azure AD et de nombreux autres fournisseurs d’identité. Une compréhension de base d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams ; [voici une bonne vue d’ensemble](https://aaronparecki.com/oauth-2-simplified/) qui est plus facile à suivre que la [spécification formelle](https://oauth.net/2/). Le flux d’authentification pour les onglets et les bots est différent, car les onglets sont similaires aux sites web afin qu’ils puissent utiliser OAuth 2.0 directement, et les bots ne sont pas et doivent faire quelques choses différemment, mais les concepts de base sont identiques.
 
-Consultez l’exemple GitHub d’authentification Microsoft Teams pour obtenir un exemple de flux d’authentification pour les bots utilisant Node à l’aide du type d’octroi de code d’autorisation [OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/).[](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+Consultez le dépôt GitHub [Microsoft Teams exemple d’authentification](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) pour obtenir un exemple illustrant le flux d’authentification pour les bots utilisant Node à l’aide du [type d’octroi de code d’autorisation OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/).
 
 ![Diagramme de séquence d’authentification de bot](~/assets/images/authentication/bot_auth_sequence_diagram.png)
 
 1. L’utilisateur envoie un message au bot.
 2. Le bot détermine si l’utilisateur doit se connecter.
     * Dans cet exemple, le bot stocke le jeton d’accès dans son magasin de données utilisateur. Il demande à l’utilisateur de se connecter s’il n’a pas de jeton validé pour le fournisseur d’identité sélectionné. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76))
-3. Le bot construit l’URL vers la page de démarrage du flux d’authentification et envoie une carte à l’utilisateur avec une `signin` action. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))
-    * Comme les autres flux d’authentification d’application `validDomains` dans Teams, la page de démarrage doit se trouver sur un domaine de votre liste et sur le même domaine que la page de redirection post-connexion.
-    * **IMPORTANT :** le flux d’octroi de code `state` d’autorisation OAuth 2.0 appelle un paramètre dans la demande d’authentification qui contient un jeton de session unique pour empêcher une attaque par falsification de demande entre [sites](https://en.wikipedia.org/wiki/Cross-site_request_forgery). L’exemple utilise un GUID généré de manière aléatoire.
-4. Lorsque l’utilisateur clique sur le  bouton de Teams, il ouvre une fenêtre popup et la navigue vers la page de démarrage.
-5. La page de démarrage redirige l’utilisateur vers le point de terminaison du fournisseur d’identité `authorize` . ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
-6. Sur le site du fournisseur, l’utilisateur se signe et accorde l’accès au bot.
-7. Le fournisseur redirige l’utilisateur vers la page de redirection OAuth du bot, avec un code d’autorisation.
-8. Le bot échange le code d’autorisation contre un jeton d’accès et associe provisoirement le jeton à l’utilisateur qui a initié le flux de la signature. Ci-dessous, nous appelons cela *un jeton provisoire*.
-    * Dans l’exemple, le bot `state` associe la valeur du paramètre à l’ID `state` de l’utilisateur qui a initié le processus de signature afin qu’il puisse ultérieurement la faire correspondre à la valeur renvoyée par le fournisseur d’identité. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
-    * **IMPORTANT** : le bot stocke le jeton qu’il reçoit du fournisseur d’identité et l’associe à un utilisateur spécifique, mais il est marqué comme « validation en attente ». Le jeton provisoire ne peut pas encore être utilisé : il doit être validé :
-      1. **Valider les informations reçues du fournisseur d’identité.** La valeur du paramètre `state` doit être confirmée par rapport à ce qui a été enregistré précédemment.
-      1. **Validez ce qui est reçu de Teams.** Une validation [d’authentification](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) en deux étapes est effectuée pour s’assurer que l’utilisateur qui a autorisé le bot auprès du fournisseur d’identité est le même utilisateur qui discute avec le bot. Cela protège contre [les attaques de l’intermédiaire et](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) les [attaques par hameçonnage](https://en.wikipedia.org/wiki/Phishing) . Le bot génère un code de vérification et le stocke, associé à l’utilisateur. Le code de vérification est envoyé automatiquement par Teams comme décrit ci-dessous aux étapes 9 et 10. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
-9. Le rappel OAuth rend une page qui appelle `notifySuccess("<verification code>")`. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
-10. Teams ferme la fenêtre popup et renvoie `<verification code>` `notifySuccess()` le message envoyé au bot. Le bot reçoit un message [d’appel](/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) avec `name = signin/verifyState`.
-11. Le bot vérifie le code de vérification entrant par rapport au code de vérification stocké avec le jeton provisoire de l’utilisateur. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
-12. S’ils correspondent, le bot marque le jeton comme validé et prêt à être utilisé. Sinon, le flux d’th échoue et le bot supprime le jeton provisoire.
+3. Le bot construit l’URL de la page de démarrage du flux d’authentification et envoie une carte à l’utilisateur avec une action de `signin`. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))
+    * Comme les autres flux d’authentification d’application dans Teams, la page de démarrage doit se trouver sur un domaine figurant dans votre `validDomains` liste et sur le même domaine que la page de redirection post-connexion.
+    * **IMPORTANT** : Le flux d’octroi de code d’autorisation OAuth 2.0 appelle un `state` paramètre dans la demande d’authentification, qui contient un jeton de session unique pour empêcher une [attaque de falsification de demande intersite](https://en.wikipedia.org/wiki/Cross-site_request_forgery). L’exemple utilise un GUID généré de manière aléatoire.
+4. Lorsque l’utilisateur *sélectionne le bouton* de connexion, Teams ouvre une fenêtre contextuelle et la navigue jusqu’à la page de démarrage.
+5. La page de démarrage redirige l’utilisateur vers le point de terminaison `authorize` du fournisseur d’identité. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
+6. Sur le site du fournisseur, l’utilisateur se connecte et accorde l’accès au bot.
+7. Le fournisseur dirige l’utilisateur vers la page de redirection OAuth du bot, avec un code d’autorisation.
+8. Le bot utilise le code d’autorisation contre un jeton d’accès et **provisoirement** associe le jeton à l’utilisateur qui a lancé le flux de connexion. Ci-dessous, nous appelons cela un *jeton provisoire*.
+    * Dans l’exemple, le bot associe la valeur du `state` paramètre à l’ID de l’utilisateur qui a initié le processus de connexion afin qu’il puisse la mettre en correspondance ultérieurement avec la `state` valeur retournée par le fournisseur d’identité. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L70-L99))
+    * **IMPORTANT** : le bot stocke le jeton qu’il reçoit du fournisseur d’identité et l’associe à un utilisateur spécifique, mais il est marqué comme « en attente de validation ». Le jeton provisoire ne peut pas encore être utilisé : il doit être validé :
+      1. **Validez ce qui a été reçu du fournisseur d’identité.** La valeur du paramètre `state` doit être confirmée par rapport à ce qui a été enregistré précédemment.
+      1. **Valider ce qui est reçu de Teams.** Une [validation de l’authentification en deux étapes](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) est effectuée pour s’assurer que l’utilisateur qui a autorisé le bot avec le fournisseur d’identité est le même utilisateur que celui qui discute avec le bot. Cela protège contre [l’intercepteur](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) et les attaques par [hameçonnage](https://en.wikipedia.org/wiki/Phishing) . Le bot génère un code de vérification et le stocke, en l'associant à l'utilisateur. Le code de vérification est envoyé automatiquement par Teams comme décrit ci-dessous dans les étapes 9 et 10. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/AuthBot.ts#L100-L113))
+9. Le rappel OAuth affiche une page qui appelle `notifySuccess("<verification code>")`. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/master/src/views/oauth-callback-success.hbs))
+10. Teams ferme la fenêtre contextuelle et renvoie l’envoi `<verification code>` au `notifySuccess()` bot. Le bot reçoit un message [d’appel](/bot-framework/dotnet/bot-builder-dotnet-activities#invoke) avec `name = signin/verifyState`.
+11. Le bot examine le code de vérification entrant par rapport au code de vérification stocké avec le jeton provisoire de l’utilisateur. ([Afficher le code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L127-L140))
+12. S’ils correspondent, le bot marque le jeton comme validé et prêt à être utilisé. Sinon, le flux d’authentification échoue et le bot supprime le jeton provisoire.
 
 > [!Note]
-> Si vous avez des problèmes avec l’authentification sur mobile, assurez-vous que votre SDK JavaScript est mis à jour vers la version 1.4.1 ou ultérieure.
+> Si vous rencontrez des problèmes d’authentification sur mobile, assurez-vous que votre Kit de développement logiciel (SDK) JavaScript est mis à jour vers la version 1.4.1 ou ultérieure.
 
 ## <a name="samples"></a>Échantillons
 
-Pour obtenir un exemple de code montrant le processus d’authentification du bot, voir :
+Pour obtenir un exemple de code montrant le processus d’authentification du bot, consultez :
 
-* [Microsoft Teams’authentification de bot (nœud)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams exemple d’authentification de bot (Nœud)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 
 ## <a name="more-details"></a>Plus de détails
 
-Pour obtenir des procédures pas à pas d’implémentation détaillées pour le ciblage de l’authentification Azure Active Directory voir :
+Pour obtenir des procédures pas à pas d’implémentation détaillées pour l’authentification de bot ciblant Azure Active Directory, consultez :
 
-* [Authentifier un utilisateur dans un bot Microsoft Teams client](~/resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [Authentifier un utilisateur dans un bot Microsoft Teams](~/resources/bot-v3/bot-authentication/auth-bot-AAD.md)

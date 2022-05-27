@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653279"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756932"
 ---
 # <a name="manage-multiple-environments"></a>Gérer plusieurs environnements
 
@@ -45,9 +45,9 @@ Après avoir créé un projet, le Kit de ressources Teams crée par défaut :
 1. Sélectionnez l’icône **Teams** dans la barre latérale
 2. Sélectionnez **+Teams : Créer un environnement** sous la section Environnement, comme illustré dans l’image suivante :
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="créer":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="créer":::
 
-Si vous avez plusieurs environnements, vous devez sélectionner un environnement existant pour créer le même environnement. La commande copie le contenu du fichier de `config.<newEnv>.json` et `azure.parameters.<newEnv>.json` de l’environnement existant que vous avez sélectionné dans le nouvel environnement créé.
+   Si vous avez plusieurs environnements, vous devez sélectionner un environnement existant pour créer le même environnement. La commande copie le contenu du fichier de `config.<newEnv>.json` et `azure.parameters.<newEnv>.json` de l’environnement existant que vous avez sélectionné dans le nouvel environnement créé.
 
 ## <a name="select-target-environment"></a>Sélectionner l’environnement cible
 
@@ -204,18 +204,21 @@ Comme le modèle de manifeste d’application Teams est partagé dans tous les e
     },
     ...
   }
- ```
-3. Exécutez la commande d’approvisionnement sur **tous** les environnements pour mettre à jour le nom de l’application dans les environnements distants. Pour exécuter la commande d’approvisionnement avec teams Toolkit, consultez [provisionnement](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. Exécutez la commande d’approvisionnement sur **tous** les environnements pour mettre à jour le nom de l’application dans les environnements distants. Pour exécuter la commande provision avec Teams Toolkit, consultez [provision](provision.md#provision-using-teams-toolkit).
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>scénario 4 : personnaliser les ressources Azure pour différents environnements</b></summary>
 Vous pouvez personnaliser les ressources Azure pour chaque environnement, par exemple spécifier le nom de la fonction Azure, en modifiant l’environnement correspondant à fx/configs/azure.parameters. {env}.json. le fichier.
 
-Pour plus d’informations sur les fichiers de paramètres et de modèles Bicep, consultez [provisionner des ressources cloud](provision.md)
-</details> <br
-
-
+Pour plus d’informations sur les fichiers de modèles et de paramètres Bicep, consultez [provisionner des ressources cloud](provision.md)
+</details>
+</br>
 
 ## <a name="see-also"></a>Voir aussi
 

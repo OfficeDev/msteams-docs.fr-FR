@@ -1,15 +1,14 @@
 ---
 title: Demander des autorisations d’appareil pour votre application Microsoft Teams
-keywords: Les fonctionnalités des applications Teams autorisent l’appareil à analyser l’image audio du code-barres qr en mode natif
-description: Comment mettre à jour le manifeste de votre application afin de demander l’accès aux fonctionnalités natives qui nécessitent généralement le consentement de l’utilisateur, telles que l’analyse qr, le code-barres, l’image, l’audio, les fonctionnalités vidéo
-ms.localizationpriority: high
+description: Découvrez comment mettre à jour le manifeste de votre application et demander l’accès aux fonctionnalités natives impliquant le consentement de l’utilisateur, l’emplacement, le code QR et le code-barres, l’image, l’audio et les fonctionnalités vidéo
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cccf527c3abf3a1674b2d1350dd15633ba35c7a8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 624a079d7c72f77fac4109d11cde13974359884f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111961"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757604"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Demander des autorisations d’appareil pour votre application Microsoft Teams
 
@@ -132,7 +131,7 @@ Par exemple :
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* Pour inviter l’utilisateur à accéder à sa caméra sur le Bureau ou sur le web, vous devez appeler `getUserMedia()`:
+* Pour inviter l’utilisateur à accéder à son appareil photo sur le bureau ou le web, vous devez appeler `getUserMedia()`:
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });

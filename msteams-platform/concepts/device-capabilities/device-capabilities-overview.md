@@ -1,17 +1,16 @@
 ---
 title: Fonctionnalités de l’appareil – Vue d’ensemble
 author: Rajeshwari-v
-description: Vue d’ensemble des fonctionnalités natives de l’appareil, telles que l’appareil photo, l’image, le média, le microphone, le micro, le code qr, etc.
+description: Découvrez comment intégrer des fonctionnalités d’appareil natif, telles que la caméra, l’image, le média, le microphone, le code QR, etc. avec Microsoft Teams application.
 ms.author: surbhigupta
-keywords: caméra image média microphone micro qr code codeqr code barre code-barre scan scanner plan de location fonctionnalités d’emplacement des autorisations d’appareil natives
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111751"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757030"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 

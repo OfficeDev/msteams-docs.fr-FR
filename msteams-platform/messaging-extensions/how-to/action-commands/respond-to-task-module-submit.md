@@ -5,12 +5,12 @@ description: Décrit comment répondre à l’action d’envoi du module de tâc
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297197"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757562"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Répondre à l’action d’envoi du module de tâche
 
@@ -21,14 +21,14 @@ Une fois qu’un utilisateur a envoyé le module de tâche, votre service web re
 
 Vous disposez des options suivantes pour répondre :
 
-* Aucune réponse : utilisez l’action d’envoi pour déclencher un processus dans un système externe et ne fournir aucun commentaire à l’utilisateur. Il est utile pour les processus de longue durée et pour fournir des commentaires de manière alternative. Par exemple, vous pouvez envoyer des commentaires avec un [message proactif](~/bots/how-to/conversations/send-proactive-messages.md).
+* Aucune réponse : utilisez l’action d’envoi pour déclencher un processus dans un système externe et ne fournir aucun commentaire à l’utilisateur. Il est utile pour les processus de longue durée et pour fournir des commentaires alternativement. Par exemple, vous pouvez envoyer des commentaires avec un [message proactif](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Un autre module de tâche](#respond-with-another-task-module): vous pouvez répondre avec un module de tâche supplémentaire dans le cadre d’une interaction en plusieurs étapes.
 * [Réponse de la carte](#respond-with-a-card-inserted-into-the-compose-message-area): vous pouvez répondre avec une carte avec laquelle l’utilisateur peut interagir ou l’insérer dans un message.
 * [Carte adaptative de bot](#bot-response-with-adaptive-card): insérez une carte adaptative directement dans la conversation.
 * [Demandez à l’utilisateur d’authentifier](~/messaging-extensions/how-to/add-authentication.md).
 * [Demandez à l’utilisateur de fournir une configuration supplémentaire](~/get-started/first-message-extension.md).
 
-Pour l’authentification ou la configuration, une fois que l’utilisateur a terminé le processus, l’appel d’origine est renvoyé à votre service web. Le tableau suivant indique les types de réponses disponibles en fonction de l’emplacement d’appel `commandContext` de l’extension de message :
+Pour l’authentification ou la configuration, une fois que l’utilisateur a terminé le processus, l’appel d’origine est renvoyé à votre service web. Le tableau suivant indique les types de réponses disponibles, en fonction de l’emplacement `commandContext` d’appel de l’extension de message :
 
 |Type de réponse | Composition | Barre de commandes | Message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -215,18 +215,18 @@ Pour configurer le sondage :
 1. L’utilisateur sélectionne l’extension de message pour appeler le module de tâche.
 1. L’utilisateur configure le sondage avec le module de tâche.
 1. Après avoir soumis le module de tâche, l’application utilise les informations fournies pour générer le sondage en tant que carte adaptative et l’envoie en tant que réponse `botMessagePreview` au client.
-1. L’utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot ne l’insère dans le canal. Si l’application n’est pas membre du canal, sélectionnez `Send` pour l’ajouter.
+1. L’utilisateur peut ensuite afficher un aperçu du message de carte adaptative avant que le bot ne l’insère dans le canal. Si l’application n’est pas membre du canal, sélectionnez-la `Send` pour l’ajouter.
 
     > [!NOTE]
     >
     > * Les utilisateurs peuvent également choisir de `Edit` le message, ce qui les renvoie au module de tâche d’origine.
     > * L’interaction avec la carte adaptative modifie le message avant de l’envoyer.
     >
-1. Une fois que l’utilisateur a sélectionné `Send` le bot publie le message sur le canal.
+1. Une fois l’utilisateur sélectionné `Send`, le bot publie le message sur le canal.
 
 ## <a name="respond-to-initial-submit-action"></a>Répondre à l’action d’envoi initiale
 
-Votre module de tâche doit répondre au message de `composeExtension/submitAction` initial avec un aperçu de la carte que le bot envoie au canal. L’utilisateur peut vérifier la carte avant de l’envoyer et essayer d’installer votre bot dans la conversation si le bot n’est pas déjà installé.
+Votre module de tâche doit répondre au message de `composeExtension/submitAction` initial avec un aperçu de la carte que le bot envoie au canal. L’utilisateur peut vérifier la carte avant de l’envoyer et essayer d’installer votre bot dans la conversation si le bot est déjà installé.
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
