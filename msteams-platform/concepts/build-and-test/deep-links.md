@@ -3,12 +3,12 @@ title: Créer des liens plus étroits
 description: Découvrez comment décrire les liens profonds Teams et comment les utiliser dans vos applications.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a57487f64070955b21c8b11bd9995f0f2201b0e2
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672956"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756768"
 ---
 # <a name="create-deep-links"></a>Créer des liens plus étroits
 
@@ -93,7 +93,7 @@ Vous pouvez également générer des liens profonds par programmation, en utilis
 
 Lors de la navigation vers un lien profond, Microsoft Teams navigue simplement vers l'onglet et fournit un mécanisme via la bibliothèque JavaScript de Microsoft Teams pour récupérer l'ID de la sous-page s'il existe.
 
-L’appel [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) (`microsoftTeams.getContext()`) dans TeamsJS v1 retourne une promesse qui sera résolue avec le contexte qui inclut la `subPageId` propriété (subEntityId pour TeamsJS v1) si l’onglet est parcouru via un lien profond. Pour plus d'informations, voir [l'interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
+L’appel [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) (`microsoftTeams.getContext()`) dans TeamsJS v1 retourne une promesse qui sera résolue avec le contexte qui inclut la `subPageId` propriété (subEntityId pour TeamsJS v1) si l’onglet est parcouru via un lien profond. Pour plus d'informations, voir [Interface PageInfo](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
 ### <a name="generate-a-deep-link-to-your-tab"></a>Générer un lien ciblé vers votre onglet
 
@@ -101,7 +101,7 @@ Bien qu’il soit recommandé d’utiliser `shareDeepLink()` pour générer un l
 
 > [!NOTE]
 >
-> * Les onglets personnels ont un `personal`scope, tandis que les onglets canal et groupe utilisent `team`or `group`scopes. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable a un `channel`propriété associé à son objet de contexte. Pour plus d’informations sur les étendues d’onglets, consultez la référence du [manifeste](~/resources/schema/manifest-schema.md).
+> * Les onglets personnels ont un `personal`scope, tandis que les onglets canal et groupe utilisent `team`or `group`scopes. Les deux types d’onglets ont une syntaxe légèrement différente, car seul l’onglet configurable a un `channel`propriété associé à son objet de contexte. Pour plus d’informations sur les étendues d’onglet, consultez la référence du [manifeste](~/resources/schema/manifest-schema.md).
 > * Les liens profonds fonctionnent correctement uniquement si l’onglet a été configuré à l’aide de la bibliothèque v0.4 ou ultérieure et qu’en raison de cela a un ID d’entité. Les liens profonds vers des onglets sans ID d’entité accèdent toujours à l’onglet, mais ne peuvent pas fournir l’ID de sous-entité à l’onglet.
 
 Utilisez le format suivant pour un lien profond que vous pouvez utiliser dans un bot, un connecteur ou une carte d’extension de message :
@@ -173,7 +173,7 @@ Vous pouvez accéder au contenu dans Teams à partir de votre onglet à l’aide
 
 L'un des avantages de l'utilisation de TeamsJS, en particulier pour les applications Teams susceptibles de fonctionner dans d'autres hôtes (Outlook et Office), est qu'il est possible de vérifier que l'hôte prend en charge la fonctionnalité que vous tentez d'utiliser. Pour vérifier la prise en charge d’une fonctionnalité par un hôte, vous pouvez utiliser la `isSupported()` fonction associée à l’espace de noms de l’API. Le SDK TeamsJS organise les API en capacités au moyen d'espaces de noms. Par exemple, avant l'utilisation d'une API dans `pages`l'espace de noms, vous pouvez vérifier la valeur booléenne renvoyée`pages.isSupported()` et prendre les mesures appropriées dans le contexte de votre application et de son interface utilisateur.  
 
-Pour plus d’informations sur les fonctionnalités et les API dans TeamsJS, consultez [les onglets Création et autres expériences hébergées avec le SDK client JavaScript Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+Pour plus d’informations sur les fonctionnalités et les API dans TeamsJS, consultez [Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
 ### <a name="navigate-within-your-app"></a>Navigation dans votre application
 
@@ -181,7 +181,7 @@ Il est possible de naviguer dans une application à l’aide de TeamsJS. Le code
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-Vous pouvez déclencher une navigation à partir de votre onglet à l’aide de la fonction [pages.navigateToApp(),](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) comme indiqué dans le code suivant :
+Vous pouvez déclencher une navigation à partir de votre onglet à l’aide de la fonction [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true), comme indiqué dans le code suivant :
 
 ```javascript
 if (pages.isSupported()) {
@@ -193,7 +193,7 @@ if (pages.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Pour plus d’informations sur l’utilisation de la fonctionnalité pages, consultez [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) et l’espace de noms [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) pour d’autres options de navigation. Si nécessaire, il est également possible d’ouvrir directement un lien profond à l’aide de la fonction [app.openLink().](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true)
+Pour plus d’informations sur l’utilisation de la fonctionnalité pages, consultez [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) et l’espace de noms [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) pour d’autres options de navigation. Si nécessaire, il est également possible d’ouvrir directement un lien profond à l’aide de la fonction [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true).
 
 # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
@@ -227,7 +227,7 @@ if(calendar.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-Pour plus d’informations sur l’utilisation du calendrier, consultez l’espace de [noms de calendrier](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) dans la documentation de référence de l’API.
+Pour plus d’informations sur l’utilisation du calendrier, consultez l’espace de noms de [calendrier](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) dans la documentation de référence de l’API.
 
 # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
@@ -328,9 +328,9 @@ Exemple : `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenan
 
 Les paramètres de requête sont les suivants :
 
-* `channelId` : ID du canal de la conversation. Par exemple `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `channelId` : ID du canal de la conversation. Par exemple : `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
 * `tenantId` : ID de client tel que `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
-* `groupId` : ID de groupe du fichier. Par exemple, `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `groupId` : ID de groupe du fichier. Par exemple : `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
 * `parentMessageId` : ID de message parent de la conversation.
 * `teamName` : nom de l’équipe.
 * `channelName` : nom du canal de l’équipe.
@@ -353,7 +353,7 @@ Les paramètres de requête sont les suivants :
 * `baseUrl` : URL de base du fichier. Le format est `https://{tenantName}.sharepoint.com/sites/{TeamName}`. Par exemple : `https://microsoft.sharepoint.com/teams`.
 * `serviceName` : nom du service, ID d’application. Par exemple : `teams`.
 * `threadId`: threadId est l’ID d’équipe de l’équipe où le fichier est stocké. Elle est facultative et ne peut pas être définie pour les fichiers stockés dans le dossier OneDrive d’un utilisateur. threadId : 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId` : ID de groupe du fichier. Par exemple, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
+* `groupId` : ID de groupe du fichier. Par exemple : `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > Vous pouvez voir `threadId`and `groupId` dans l’URL du canal.  
@@ -407,7 +407,7 @@ Exemple : `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fe
 
 Vous pouvez lancer des appels audio uniquement ou audio-vidéo à un seul utilisateur ou à un groupe d'utilisateurs, en spécifiant le type d'appel et les participants. Avant de passer l'appel, le client Teams demande une confirmation pour effectuer l'appel. En cas d'appel de groupe, vous pouvez appeler un ensemble d'utilisateurs VoIP et un ensemble d'utilisateurs PSTN dans la même invocation de lien profond.
 
-En cas d’appel vidéo, le client demande une confirmation et active la vidéo de l’appelant pour l’appel. Le destinataire de l’appel a le choix entre répondre par audio uniquement ou audio et vidéo, via la fenêtre de notification d’appel Teams.
+Dans un appel vidéo, le client demande une confirmation et active la vidéo de l’appelant pour l’appel. Le destinataire de l’appel a le choix entre répondre par audio uniquement ou audio et vidéo, via la fenêtre de notification d’appel Teams.
 
 > [!NOTE]
 > Cette méthode ne peut pas être utilisée pour appeler une réunion.
@@ -438,7 +438,7 @@ Bien que l'utilisation des API fortement typées de TeamsJS soit recommandée, v
   
 Voici les paramètres de requête :
 
-* `users` : liste d’identifiants d’utilisateur séparés par des virgules représentant les participants de l’appel. Actuellement, le champ ID utilisateur prend en charge le Azure AD UserPrincipalName, généralement une adresse e-mail, ou en cas d’appel RTC, il prend en charge un pstn url 4 :&lt;numéro de téléphone&gt;.
+* `users` : liste séparée par des virgules des ID d’utilisateur représentant les participants de l’appel. Actuellement, le champ ID d’utilisateur prend en charge le UserPrincipalName Azure AD, généralement une adresse e-mail, ou lors d’un appel RTC, il prend en charge un RTC mri 4 :&lt;numéro de téléphone&gt;.
 * `withVideo` : il s’agit d’un paramètre facultatif que vous pouvez utiliser pour effectuer un appel vidéo. La définition de ce paramètre active uniquement la caméra de l’appelant. Le destinataire de l’appel peut répondre par le biais d’un appel audio ou audio et vidéo via la fenêtre de notification d’appel Teams.
 * `Source` : il s’agit d’un paramètre facultatif, qui informe sur la source du lien profond.
 

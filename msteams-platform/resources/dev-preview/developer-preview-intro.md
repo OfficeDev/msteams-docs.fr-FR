@@ -4,12 +4,12 @@ description: Décrit les fonctionnalités de l’aperçu public de Microsoft Tea
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: aperçu des fonctionnalités pour les développeurs de teams
-ms.openlocfilehash: b84a13936e023c743829876f9d1c039d6744b063
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: a671a8ed6a1e4a49c731bcad78dd0d454a6bb600
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492952"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756876"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Aperçu public pour les développeurs de Microsoft Teams
 
@@ -20,7 +20,7 @@ L’aperçu pour développeurs est un programme public pour les développeurs qu
 
 ## <a name="developer-preview-app-manifest"></a>Manifeste de l’application de l’aperçu pour les développeurs
 
-De nombreuses fonctionnalités activées dans l’aperçu pour les développeurs nécessiteront des modifications du fichier JSON du manifeste de votre application. Pour ce faire, vous devez utiliser le [schéma de manifeste de l’aperçu pour les développeurs.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne pourrez pas utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour effectuer ces modifications, ni pour télécharger votre application à des fins de test. Pour charger votre application, vous devez cliquer sur l’icône `More apps` dans la barre de l’application, puis sélectionner le `Upload a custom app link`. Avec cette méthode, vous ne pouvez télécharger qu’une version compressée du package de votre application.
+De nombreuses fonctionnalités activées dans l’aperçu pour les développeurs nécessiteront des modifications du fichier JSON du manifeste de votre application. Pour ce faire, vous devez utiliser le [schéma de manifeste de l’aperçu pour les développeurs.](~/resources/schema/manifest-schema-dev-preview.md) Si vous utilisez ce schéma, vous ne pourrez pas utiliser [App Studio](~/concepts/build-and-test/app-studio-overview.md) pour effectuer ces modifications, ni pour télécharger votre application à des fins de test. Pour charger votre application, vous devez sélectionner l’icône `More apps` dans la barre de l’application, puis le `Upload a custom app link`. Avec cette méthode, vous ne pouvez télécharger qu’une version compressée du package de votre application.
 
 Il peut être utile d’utiliser App Studio pour créer les parties du package de votre applications qui ne sont pas des aperçus pour les développeurs, puis d’exporter ce package et de modifier manuellement le fichier `manifest.json` afin d’ajouter les fonctionnalités d’aperçu pour les développeurs que vous souhaitez utiliser. Une fois que vous avez ajouté les fonctionnalités de l’aperçu pour les développeurs au fichier `manifest.json`, vous ne pourrez pas réimporter le package dans App Studio.
 
@@ -50,7 +50,7 @@ Pour activer l’aperçu public pour les développeurs sur un client mobile :
 
 ## <a name="disable-developer-preview"></a>Désactiver l’aperçu pour les développeurs
 
-Utilisez le même élément de menu sous À propos → aperçu pour les développeurs, puis cliquez dessus pour le désactiver.
+Utilisez le même élément de menu sous À propos de → Aperçu pour les développeurs, puis cliquez dessus pour le désactiver.
 
 ## <a name="see-also"></a>Voir aussi
 

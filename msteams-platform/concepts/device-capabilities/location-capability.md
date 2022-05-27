@@ -6,12 +6,12 @@ keywords: capacités de la carte de localisation autorisations pour les appareil
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 369e9307a8007d45cc42ae4059b16cdcf9a3cc4c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111184"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757170"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement
 
@@ -26,10 +26,10 @@ Le principal avantage de l'intégration des capacités de localisation dans vos 
 Les exemples suivants montrent comment l'intégration des capacités de localisation est utilisée dans différents scénarios :
 
 * Dans une usine, le superviseur peut suivre la présence des travailleurs en leur demandant de prendre un selfie à proximité de l'usine et de le partager via l'application spécifiée. Les données de localisation sont également capturées et envoyées avec l'image.
-* Les capacités de localisation permettent au personnel de maintenance d'un fournisseur de services de partager des données authentiques sur l'état de santé des tours cellulaires avec la direction. La direction peut comparer toute discordance entre les informations de localisation capturées et les données soumises par le personnel de maintenance.
+* Les capacités de localisation permettent au personnel de maintenance d'un fournisseur de services de partager des données authentiques sur l'état d’intégrité des tours cellulaires avec la direction. La direction peut comparer toute discordance entre les informations de localisation capturées et les données soumises par le personnel de maintenance.
 
 Pour intégrer des fonctionnalités de localisation, vous devez mettre à jour le fichier manifeste de l'application et appeler les API. Pour une intégration efficace, vous devez avoir une bonne compréhension des [extraits de code](#code-snippets) pour appeler les API de localisation.
-Il est important de se familiariser avec les erreurs de réponse de l'[API pour gérer les erreurs](#error-handling) dans votre application Teams.
+Il est important de vous familiariser avec les [Erreurs de réponse de l'API](#error-handling) pour gérer les erreurs dans votre application Teams.
 
 > [!NOTE]
 > Actuellement, la prise en charge des capacités de localisation de Microsoft Teams n'est disponible que pour les clients mobiles.
@@ -100,10 +100,10 @@ Vous devez vous assurer de traiter ces erreurs de manière appropriée dans votr
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | L’API n’est pas prise en charge sur la plateforme actuelle.|
 | **500** | INTERNAL_ERROR | Une erreur interne a été rencontrée lors de l'exécution de l'opération requise.|
-| **1000** | PERMISSION_DENIED |L'utilisateur s'est vu refuser les droits d'accès à l'application Teams ou à l'application Web.|
+| **1 000** | PERMISSION_DENIED |L'utilisateur s'est vu refuser les droits d'accès à l'application Teams ou à l'application web.|
 | **4000** | ARGUMENTS NON VALIDES | L’API est appelée avec des arguments obligatoires incorrects ou insuffisants.|
 | **8000** | USER_ABORT |L’utilisateur a annulé l’opération.|
-| **9000** | OLD_PLATFORM | L'utilisateur est sur une ancienne plateforme où l'implémentation de l'API n'est pas présente. La mise à jour de la compilation devrait résoudre le problème.|
+| **9000** | OLD_PLATFORM | L'utilisateur est sur une ancienne build de plateforme où l'implémentation de l'API n'est pas présente. La mise à jour de la compilation devrait résoudre le problème.|
 
 ### <a name="code-sample"></a>Exemple de code
 

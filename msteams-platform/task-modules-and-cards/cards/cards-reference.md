@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: high
 keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104139"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757198"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -85,7 +85,7 @@ La carte peut contenir une image incorporée en incluant un lien vers l’image 
 
 La taille des images est augmentée ou réduite afin de maintenir les proportions pour couvrir la zone d’image. Les images sont ensuite rognées à partir du centre pour obtenir les proportions appropriées pour la carte.
 
-Les images doivent être au maximum 1024×1024 et au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
+Les images doivent être au maximum de 1024 × 1024 et au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
 Le tableau suivant fournit les propriétés des images de carte en incorporée :
 
@@ -561,7 +561,7 @@ Le code suivant montre un exemple de carte Connecteur Office 365 :
 
 ## <a name="receipt-card"></a>Carte de réception
 
-Teams prend en charge la carte de réception. Il s’agit d’une carte qui permet à un bot de fournir un reçu à l’utilisateur. Elle contient généralement la liste des éléments à inclure sur le reçu, telles que les informations relatives à la taxe et au total.
+Teams prend en charge la carte de réception, ce qui permet à un bot de fournir un reçu à l’utilisateur. Elle contient généralement la liste des éléments à inclure sur le reçu, telles que les informations relatives à la taxe et au total.
 
 ### <a name="support-for-receipt-cards"></a>Prise en charge des cartes de réception
 

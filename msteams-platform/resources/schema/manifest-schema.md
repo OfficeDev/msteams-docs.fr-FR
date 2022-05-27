@@ -4,12 +4,12 @@ description: Décrit le schéma du manifeste pour Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672907"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755880"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -17,7 +17,7 @@ Le manifeste de l’application Microsoft Teams décrit comment votre applicatio
 Pour plus d’informations sur les modifications apportées dans chaque version, voir [le journal des modifications du manifeste.](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
 
 > [!Important]
-> La version `1.13` du schéma de manifeste d’application Microsoft Teams permet de prendre en charge [l’extension des applications Teams à Outlook et Office](../../m365-apps/overview.md). Pour les applications Teams uniquement, utilisez la version (ou une version `1.12` antérieure). Les schémas 1.12 et 1.13 sont sinon les mêmes. Pour plus d'informations, reportez-vous à la vue d’ensemble du [Kit de développement logiciel (SDK) du client JavaScript de Teams](../../m365-apps/overview.md).
+> La version `1.13` du schéma de manifeste d’application Microsoft Teams permet de prendre en charge [l’extension des applications Teams à Outlook et Office](../../m365-apps/overview.md). Pour les applications Teams uniquement, utilisez la version (ou une version `1.12` antérieure). Les schémas 1.12 et 1.13 sont sinon les mêmes. Pour plus d'informations, reportez-vous à la vue d’ensemble du [Kit de développement logiciel (SDK) du client JavaScript de Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
 
 L’exemple de schéma suivant montre toutes les options d’extensibilité :
 
@@ -747,7 +747,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties

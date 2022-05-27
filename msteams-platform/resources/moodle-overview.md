@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
 keywords: liaisons profondes mConnect du système de gestion des formations moodle
-ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453122"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757345"
 ---
 # <a name="moodle-learning-management-system"></a>Système de gestion des formations Moodle
 
@@ -42,7 +42,7 @@ Le système de gestion des formations Moodle permet aux utilisateurs d’accéde
 
 Les scénarios suivants décrivent le potentiel de formation accélérée associant les services cloud de Microsoft et les cours de Moodle :
 
-* **Faciliter les réunions hybrides à distance** : les réunions et les services d’extensibilité Teams permettent aux enseignants de présenter des réunions en personne et à distance avec des étudiants. Du côté des étudiants, il est obligatoire d’avoir accès aux affichages partagés, aux applications et aux sondages pour les réunions à distance. Les tâches de suivi fournissent une transcription multilingue et des enregistrements audio et vidéo de cours. Teams et Moodle fonctionnent ensemble pour partager des listes, des activités et des tâches.
+* **Faciliter les réunions hybrides à distance** : les réunions et les services d’extensibilité Teams permettent aux enseignants de présenter des réunions en personne et à distance avec des étudiants. Du côté des étudiants, il est obligatoire d’avoir accès aux affichages partagés, aux applications et aux sondages pour les réunions à distance. Les tâches de suivi fournissent une transcription multilingue et des enregistrements de cours audio et vidéo. Teams et Moodle fonctionnent ensemble pour partager des listes, des activités et des tâches.
 
 * **Personnaliser les panneaux de réunion** : créez des expériences d’apprentissage collaboratif uniques à l’aide des points de terminaison de l’API Teams Graph. Pour d’autres plans ou projets supplémentaires, les utilisateurs peuvent interroger tous les nouveaux embauchés et classer les résultats à l’aide de sondages personnalisés. Il est possible de partager des questionnaires directement dans Teams tout en déplaçant les mises à jour vers le site Moodle de manière asynchrone.
 

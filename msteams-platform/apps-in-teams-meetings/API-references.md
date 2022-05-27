@@ -5,12 +5,12 @@ description: Identifiez les références d’API d’applications de réunion av
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755831"
+ms.locfileid: "65756582"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -534,7 +534,7 @@ Le tableau suivant présente les codes de réponse :
 |Code de réponse|Description|
 |---|---|
 | **500** | Erreur interne. |
-| **501** | API n’est pas prise en charge dans le contexte actuel.|
+| **501** | L’API n’est pas prise en charge dans le contexte actuel.|
 | **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à être mis en scène.|
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obtenir l’API d’état de partage de l’étape de contenu de l’API
@@ -574,7 +574,7 @@ Le tableau suivant présente les codes de réponse :
 |Code de réponse|Description|
 |---|---|
 | **500** | Erreur interne. |
-| **501** | API n’est pas prise en charge dans le contexte actuel.|
+| **501** | L’API n’est pas prise en charge dans le contexte actuel.|
 | **1 000** | L’application ne dispose pas des autorisations appropriées pour autoriser le partage à être mis en scène.|
 
 ## <a name="get-app-content-stage-sharing-capabilities-api"></a>Obtenir l'API des capacités de partage du contenu de l'application
