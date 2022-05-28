@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: envoyer un message obtenir l’identifiant utilisateur identification du canal identification de la conversation
-ms.openlocfilehash: fd3ed48022239aaa84e00c8b3b59701970d9a0af
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7b1227dd69e8245b6ad318eb5e7425893075d878
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602270"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757576"
 ---
 # <a name="proactive-messages"></a>Messages proactifs
 
@@ -87,20 +87,26 @@ L’envoi de messages proactifs aux utilisateurs constitue un moyen de communica
 
 Lorsque la messagerie proactive est utilisée pour envoyer un message de bienvenue à un utilisateur, il n’existe pas de contexte pour expliquer pourquoi les utilisateurs reçoivent le message. C’est également la première fois que les utilisateurs interagissent avec votre application. C’est l’opportunité de faire une bonne première impression. Les meilleurs messages de bienvenue doivent inclure :
 
-* La raison pour laquelle l’utilisateur reçoit le message : l’utilisateur doit comprendre clairement pourquoi il reçoit le message. Si votre bot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, faites-leur savoir dans quel canal le bot a été installé et qui l’a installé.
-* Ce que vous proposez : les utilisateurs doivent pouvoir identifier ce qu’ils peuvent faire avec votre application et la valeur que vous pouvez leur apporter.
-* Que doivent-ils faire par la suite : invitez les utilisateurs à essayer une commande ou à interagir avec votre application.
-Les messages d’accueil médiocres peuvent entraîner un blocage de votre bot par les utilisateurs. Écrivez des messages de bienvenue clairs et pertinents. Répétez les messages de bienvenue s’ils n’ont pas l’effet souhaité.
+* Pourquoi un utilisateur reçoit le message? La raison pour laquelle l’utilisateur reçoit le message : l’utilisateur doit comprendre clairement pourquoi il reçoit le message. Si votre robot a été installé dans un canal et que vous avez envoyé un message de bienvenue à tous les utilisateurs, faites-leur savoir dans quel canal il a été installé et qui l'a installé.
+
+* Que proposez-vous? Les utilisateurs doivent pouvoir identifier ce qu’ils peuvent faire avec votre application et la valeur que vous pouvez leur apporter.
+
+* Que doit faire Tailspin ensuite? Inviter les utilisateurs à essayer une commande ou à interagir avec votre application
+Les messages d’accueil médiocres peuvent entraîner un blocage de votre bot par les utilisateurs. Écrivez des messages de bienvenue clairs et pertinents. Répéter les messages de bienvenue s’ils n’ont pas l’effet souhaité
 
 ### <a name="notification-messages"></a>Les messages de notification
 
 Pour envoyer des notifications à l’aide d’une messagerie proactive, vérifiez que vos utilisateurs ont un chemin d’accès clair pour prendre des mesures communes basées sur votre notification. Veillez à ce que les utilisateurs comprennent clairement pourquoi ils ont reçu une notification. Les messages de notification de bonne qualité incluent ce qui suit :
 
-* Ce qui s’est produit : une indication claire de ce qui a causé la réception de la notification.
-* Résultat : il doit être clair et indiquer quel élément est mis à jour pour recevoir la notification.
-* La personne ou ce qui l’a déclenché : qui ou l’élément qui est intervenu ayant entraîné l’envoi de la notification.
-* Ce que les utilisateurs peuvent faire en réponse : faciliter l’action de vos utilisateurs en fonction de vos notifications.
-* Comment les utilisateurs peuvent-ils refuser les notifications : vous devez fournir un chemin d’accès aux utilisateurs afin qu’ils puissent désactiver les autres notifications.
+* Que s'est-il passé ? Une indication claire de ce qui a causé la réception de la notification.
+
+* Quel a été le résultat? Il doit être clair et indiquer quel élément est mis à jour pour recevoir la notification.
+
+* Qui ou ce qui l’a déclenché? Qui ou l’élément qui est intervenu ayant entraîné l’envoi de la notification
+
+* Que peuvent faire les utilisateurs en réponse? Faciliter l’action de vos utilisateurs en fonction de vos notifications
+
+* Comment les utilisateurs peuvent-ils refuser? Vous devez fournir un chemin d’accès aux utilisateurs afin qu’ils puissent désactiver les autres notifications.
 
 Pour envoyer des messages à un grand groupe d’utilisateurs, par exemple à votre organisation, installez votre application de manière proactive en utilisation Graph.
 
@@ -108,8 +114,9 @@ Pour envoyer des messages à un grand groupe d’utilisateurs, par exemple à vo
 
 Lorsque vous utilisez une messagerie proactive pour envoyer des messages planifiés aux utilisateurs, veillez à ce que votre fuseau horaire soit défini selon leur fuseau horaire. Cela garantit une remise des messages aux utilisateurs au moment pertinent. Les messages planifiés incluent généralement :
 
-* Pourquoi l’utilisateur reçoit le message : permettez aux utilisateurs de comprendre facilement la raison pour laquelle ils reçoivent le message.
-* Que peut faire l’utilisateur par la suite : les utilisateurs peuvent prendre les mesures nécessaires en fonction du contenu du message.
+* Pourquoi l’utilisateur reçoit-il le message? Pour permettre aux utilisateurs de comprendre facilement la raison pour laquelle ils reçoivent le message
+
+* Que peut faire l’utilisateur ensuite? Les utilisateurs peuvent prendre les mesures nécessaires en fonction du contenu du message.
 
 ## <a name="proactively-install-your-app-using-graph"></a>Installer votre application de manière proactive en utilisant Graph
 
@@ -267,7 +274,7 @@ Vous devez fournir l’identifiant utilisateur et l’identifiant du client. Si 
 
 ## <a name="code-sample"></a>Exemple de code
 
-Le tableau suivant fournit un exemple de code simple qui incorpore un flux de conversation simple dans une application Teams et indique comment créer un thread de conversation dans un canal Teams :
+Le tableau suivant fournit un exemple de code simple qui intègre le flux de conversation de base dans une application Teams et comment créer un nouveau fil de conversation dans un canal dans Teams :
 
 | **Exemple de nom** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|

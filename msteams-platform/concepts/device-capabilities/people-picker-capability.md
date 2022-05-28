@@ -5,12 +5,12 @@ keywords: contrôle sélecteur de personnes
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: a2e2a21f0485e0df87f8963defbe54ed540e455a
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755894"
+ms.locfileid: "65757590"
 ---
 # <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
@@ -34,14 +34,14 @@ L'API `selectPeople` vous permet d'ajouter le contrôle d'entrée Teams People P
 * Permet à l’utilisateur de rechercher et de sélectionner une ou plusieurs personnes dans la liste.
 * Retourne l’ID, le nom et l’adresse e-mail des utilisateurs sélectionnés à l’application web.
 
-Dans le cas d’une application personnelle, le contrôle recherche le nom ou l’ID de messagerie dans l’organisation au sein de Teams. Si l’application est ajoutée à une conversation ou à un canal, le contexte de recherche est configuré en fonction du scénario. La recherche est limitée dans les membres de cette conversation ou canal.
+Dans une application personnelle, le contrôle recherche le nom ou l'identifiant de messagerie dans toute l'organisation au sein de Teams. Si l’application est ajoutée à une conversation ou à un canal, le contexte de recherche est configuré en fonction du scénario. La recherche est limitée dans les membres de cette conversation ou canal.
 
 L’API `selectPeople` est livré avec les configurations d’entrée suivantes :
 
 |Paramètre de configuration|Type|Description| Valeur par défaut|
 |-----|------|--------------|------|
 |`title`|Chaîne| Il s’agit d’un paramètre facultatif qui définit le titre du contrôle S sélectionneur de personnes.|`selectPeople`|
-|`setSelected`|Chaîne| Il s’agit d’un paramètre facultatif. Vous devez transmettre Microsoft Azure Active Directory (Azure AD) des personnes à pré-sélectionné. Ce paramètre présélectionne les personnes lors du lancement du contrôle d’entrée du sélectionneur de personnes. Dans le cas d’une sélection unique, seul le premier utilisateur valide est pré-rempli en ignorant le reste.|**Null**|
+|`setSelected`|Chaîne| Il s’agit d’un paramètre facultatif. Vous devez transmettre Microsoft Azure Active Directory (Azure AD) des personnes à pré-sélectionné. Ce paramètre présélectionne les personnes lors du lancement du contrôle d’entrée du sélectionneur de personnes. Dans une sélection unique, seul le premier utilisateur valide est pré-rempli en ignorant le reste.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| Il s'agit d'un paramètre facultatif qui, lorsqu'il est défini sur true, lance le People Picker dans l'ensemble de l'organisation, même si l'application est ajoutée à un chat ou à un canal.|**False**|
 |`singleSelect`|Boolean|Il s'agit d'un paramètre facultatif qui, lorsqu'il est défini sur true, lance le People Picker et limite la sélection à un seul utilisateur.|**False**|
 
