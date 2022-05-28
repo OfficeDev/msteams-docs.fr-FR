@@ -5,12 +5,12 @@ description: "Questions à prendre en compte lors de la planification de votre a
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104307"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756750"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 
@@ -78,7 +78,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | # | Facteurs |
 | --- | --- |
 | 1 | Que se passe-t-il lorsqu'un utilisateur configure pour la première fois votre onglet dans un canal ? |
-| 2 | Si vous partagez des cartes avec une extension de messagerie, est-il judicieux d'ajouter un petit lien vers une page d'informations pour présenter aux utilisateurs les autres possibilités offertes par votre application ? |
+| 2 | Si vous partagez des cartes avec une extension de messagerie, est-il judicieux d'ajouter un petit lien vers une page d'informations pour présenter aux utilisateurs les autres possibilités offertes par votre application ? |
 | 3 | Vous attendez-vous à ce que la plupart des gens aient déjà une idée de ce à quoi sert votre application, ou qu'ils aient déjà utilisé vos services dans un autre contexte ? |
 | 4 | Viennent-ils sur votre application sans aucune connaissance préalable ? |
 
@@ -101,7 +101,7 @@ Voici une liste de questions à prendre en compte lorsque vous planifiez votre a
 | # | Facteurs |
 | --- | --- |
 | 1 | Les informations présentées par l’application, sous l’onglet ou via un bot, sont-elles pertinentes et utiles pour la plupart des membres d’une équipe ? Par exemple, l’application Scrum. |
-| 2 | Le contexte de l'application pourrait-il changer en fonction de l'équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes selon les équipes. |
+| 2 | Le contexte de l'application peut-il changer en fonction de l'équipe dans laquelle elle est ajoutée ? Par exemple, les tâches du planificateur sont différentes selon les équipes. |
 | 3 | Est-il possible que tous les membres d’un personnage qui ont besoin de collaborer font partie d’une seule équipe ? Par exemple, les agents travaillant sur un ticket. |
 
 </details>

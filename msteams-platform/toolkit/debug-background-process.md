@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 48c3716258477bf7b8dc1086a75aa7a495ff5026
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656158"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756883"
 ---
 # <a name="debug-background-process"></a>Processus de débogage en arrière-plan
 
@@ -19,11 +19,11 @@ Le flux de travail de débogage local implique les fichiers `.vscode/launch.json
 
 1. Le fichier `launch.json` configure le débogueur dans Visual Studio Code.
 
-2. VS Code exécute le fichier **preLaunchTask** composé, **Vérification de pré-débogage & Démarrer tout** dans le `.vscode/tasks.json` fichier
+2. Visual Studio Code exécute le fichier composé **preLaunchTask**, **Vérification de pré-débogage et démarrer tout** dans le fichier `.vscode/tasks.json`.
 
-3. VS Code lance ensuite les débogueurs spécifiés dans les configurations composées, telles que **Attacher au Bot**, **Attacher au Backend**, **Attacher au Frontend**, et **Lancer Bot**.
+3. Visual Studio Code lance ensuite les débogueurs spécifiés dans les configurations de fichier composé, telles que **Attacher au bot**, **Attacher au serveur principal**, **Attacher au serveur frontal** et **Lancer le bot**.
 
-4.  Le débogueur Microsoft Edge ou Chrome lance une nouvelle instance de navigateur et ouvre une page Web pour charger le client Teams
+4. Le débogueur Microsoft Edge ou Chrome lance une nouvelle instance de navigateur et ouvre une page Web pour charger le client Teams.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
@@ -38,16 +38,15 @@ Teams Toolkit vérifie les conditions préalables suivantes pendant le processus
   |Bot |  14, 16 (recommandé)|
   |Extension de message | 14, 16 (recommandé) |
 
-   
-* Si vous avez un compte Microsoft 365 avec des informations d'identification valides, le kit d'outils Teams vous invite à vous connecter au compte Microsoft 365, si vous ne l'avez pas encore fait
+* Si vous avez un compte Microsoft 365 avec des informations d'identification valides, le kit d'outils Teams vous invite à vous connecter au compte Microsoft 365, si vous ne l'avez pas encore fait.
 
-* Le chargement ou le chargement de version test d’une application personnalisée pour votre locataire de développeur est activé, si ce n’est pas le cas, le débogage local se termine
+* Le chargement indépendant ou le chargement d’une application personnalisée pour votre locataire développeur est activé. Si ce n’est pas le cas, le débogage local se termine.
 
-* La version binaire Ngrok 2.3 s’applique à l’extension de bot et de messagerie, si Ngrok n’est pas installé ou si la version ne correspond pas à l’exigence, le kit de ressources Teams installe le package Ngrok NPM `ngrok@4.2.2` dans `~/.fx/bin/ngrok`. La version binaire Ngrok est géré par Ngrok NPM dans `/.fx/bin/ngrok/node modules/ngrok/bin`
+* La version binaire Ngrok 2.3 s’applique à l’extension de bot et de message. Si Ngrok n’est pas installé ou si la version ne correspond pas à l’exigence, le kit de ressources Teams installe le package Ngrok NPM `ngrok@4.2.2` dans `~/.fx/bin/ngrok`. Le fichier binaire Ngrok est géré par le package NPM Ngrok dans `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-* Azure Functions Core Tools version 4, si Azure Functions Core Tools n’est pas installé ou si la version ne correspond pas à la configuration requise, le Kit de ressources Teams installe Azure Functions Core Tools package NPM, azure-functions-core-tools@3 pour **Windows** et pour **macOs** dans  `~/.fx/bin/func`. Le package NPM Azure Functions Core Tools gère `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` les outils azure Functions Core Tools binaires. Pour Linux, le débogage local se termine.
+* Azure Functions Core Tools version 4, si Azure Functions Core Tools n’est pas installé ou si la version ne correspond pas à la configuration requise, le Kit de ressources Teams installe Azure Functions Core Tools package NPM, azure-functions-core-tools@3 pour **Windows** et pour **MacOs** dans `~/.fx/bin/func`. Le package NPM Azure Functions Core Tools gère `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` les outils azure Functions Core Tools binaires. Pour Linux, le débogage local se termine.
 
-* kit SDK .NET Core version applicable à Azure Functions, si kit SDK .NET Core n’est pas installée ou si la version ne correspond pas à la configuration requise, le Kit de ressources Teams installe kit SDK .NET Core pour Windows et MacOS dans `~/.fx/bin/dotnet`.Pour Linux, le débogage local se termine
+* Version applicable du Kit de développement logiciel (SDK) .NET Core pour Azure Functions. Si le Kit de développement logiciel (SDK) .NET Core n’est pas installé ou si la version ne correspond pas à la configuration requise, le Kit de ressources Teams installe le Kit de développement logiciel (SDK) .NET Core pour Windows et MacOS dans `~/.fx/bin/dotnet`. Pour Linux, le débogage local se termine.
 
   Le tableau suivant répertorie les versions .NET Core :
 
@@ -56,15 +55,15 @@ Teams Toolkit vérifie les conditions préalables suivantes pendant le processus
   |Windows, macOs (x64) et Linux | **3.1 (recommandé)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Certificat de développement, si le certificat de développement pour localhost est installé pour l’onglet dans Windows ou macOS, le kit de ressources Teams vous invite à l’installer
+* Certificat de développement. Si le certificat de développement pour l’hôte local est installé pour l’onglet dans Windows ou MacOS, le kit de ressources Teams vous invite à l’installer.
 
-* Azure Functions extensions de liaison définies dans `api/extensions.csproj`, si Azure Functions extensions de liaison n’est pas installée, le Kit de ressources Teams installe Azure Functions extensions de liaison
+* Extensions de liaison Azure Functions définies dans `api/extensions.csproj`. Si les extensions de liaison Azure Functions ne sont pas installées, le Kit de ressources Teams installe des extensions de liaison Azure Functions.
 
-* Packages NPM, applicables à l'application tabulation, application de robot, à l'application d'extension de messagerie et aux fonctions Azure. Si NPM est installé, le Kit de ressources Teams installe tous les packages NPM
+* Packages NPM, applicables à l'application tabulation, application de robot, à l'application d'extension de messagerie et aux fonctions Azure. Si NPM n’est pas installé, le Kit de ressources Teams installe tous les packages NPM.
 
-* Bot et extension de messagerie, le Kit de ressources Teams démarre Ngrok pour créer un tunnel HTTP pour le bot et l’extension de messagerie
+* Extension de bot et de message. Le Kit de ressources Teams démarre Ngrok pour créer un tunnel HTTP pour le bot et l’extension de message.
 
-* Ports disponibles, si les ports tabulation, bot, extension de messagerie et Azure Functions ne sont pas disponibles, le débogage local se termine
+* Ports disponibles. Si les ports tabulation, bot, extension de message et Azure Functions ne sont pas disponibles, le débogage local se termine.
 
   Le tableau suivant répertorie les ports disponibles pour les composants :
 
@@ -75,7 +74,6 @@ Teams Toolkit vérifie les conditions préalables suivantes pendant le processus
   | Inspecteur de nœud pour l’extension de bot ou de messagerie | 9239 |
   | Azure Functions | 7071 |
   | Inspecteur de nœud pour les fonctions Azure | 9229 |
-
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
 
@@ -103,10 +101,8 @@ Use the following .NET Core versions:
 |Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |6.0 |
 
-
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
-
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams toolkit prompts you to install it.</br> -->
 
 Lorsque vous sélectionnez **Lancer le débogage (F5)**, le canal de sortie du Teams Toolkit affiche la progression et le résultat de la vérification des conditions préalables.
 
@@ -114,11 +110,11 @@ Lorsque vous sélectionnez **Lancer le débogage (F5)**, le canal de sortie du T
 
 ## <a name="register-and-configure-your-teams-app"></a>Inscrire et configurer votre application Teams
 
-Au cours du processus d'installation, Teams Toolkit prépare les enregistrements et les configurations suivants pour votre application Teams :
+Au cours du processus d'installation, le Kit de ressources Teams prépare les enregistrements et les configurations suivants pour votre application Teams :
 
 1. [Enregistre et configure l'application Azure AD](#registers-and-configures-azure-ad-application) : Teams Toolkit enregistre et configure votre application Azure AD.
 
-1. [Inscrit et configure le bot](#registers-and-configures-bot): Teams Toolkit inscrit et configure votre bot pour l’application d’onglet ou d’extension de messagerie
+1. [Inscrit et configure le bot](#registers-and-configures-bot) : le Kit de ressources Teams inscrit et configure votre bot pour l’application d’onglet ou d’extension de message.
 
 1. [Enregistre et configure l'application Teams](#registers-and-configures-teams-app): Teams Toolkit enregistre et configure votre application Teams.
 
@@ -126,16 +122,15 @@ Au cours du processus d'installation, Teams Toolkit prépare les enregistrements
 
 1. Inscrire une application Azure AD.
 
-1. Crée un secret client.
+1. Crée une secret client.
 
 1. Expose une API.
 
-    a. Configure l'URI d'identification de l'application. Pour l’onglet, `api://localhost/{appId}`. Pour l’extension de bot ou de message,  `api://botid-{botid}`
+    a. Configure l'URI d'identification de l'application. Pour l’onglet, `api://localhost/{appId}`. Pour l’extension de bot ou de message,  `api://botid-{botid}`.
 
-    b. Ajoute une étendue nommée `access_as_user`. L’active pour les **administrateurs et les utilisateurs**
+    b. Ajoute une étendue nommée `access_as_user`. L’active pour les **administrateurs et les utilisateurs**.
 
-
-4. Configure les autorisations d’API. Ajoute Microsoft Graph autorisation à **User.Read**
+4. Configure les autorisations d’API. Ajoute l’autorisation Graph Microsoft à **User.Read**.
 
     Le tableau suivant répertorie la configuration de l’authentification comme suit :
     
@@ -157,19 +152,19 @@ Au cours du processus d'installation, Teams Toolkit prépare les enregistrements
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
     
-### <a name="registers-and-configures-bot"></a>Enregistre et configure le bot 
+### <a name="registers-and-configures-bot"></a>Enregistre et configure le bot
 
 Pour l’application d’onglet ou l’application d’extension de messagerie :
 
 1. Inscrire une application Azure AD.
 
-1. Crée une clé secrète client pour l’application Azure AD
+1. Crée une secret client pour l’application Azure AD client.
 
-1. Inscrit un bot dans [Microsoft Bot Framework](https://dev.botframework.com/) à l’aide de l’application Azure AD
+1. Enregistre un bot dans [Microsoft Bot Framework](https://dev.botframework.com/) en utilisant l'application Azure AD.
 
-1. Ajoute le canal Microsoft Teams
+1. Ajoute Microsoft Teams canal.
 
-1. Configure le point de terminaison de messagerie comme `https://{ngrokTunnelId}.ngrok.io/api/messages`
+1. Configure le point de terminaison de messagerie comme `https://{ngrokTunnelId}.ngrok.io/api/messages`.
 
 ### <a name="registers-and-configures-teams-app"></a>Enregistrement et configuration de l'application Teams
 

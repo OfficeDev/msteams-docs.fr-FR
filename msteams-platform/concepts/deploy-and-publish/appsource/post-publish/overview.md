@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104531"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757016"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
@@ -29,7 +29,7 @@ L’affichage des données concernant les applications récemment publiées pren
 >
 > Auparavant, les liens étaient copiés en sélectionnant des points de suspension sur la vignette de l’application. Avec l’expérience mise à jour du magasin Teams, vous accédez de la même manière à partir de l’onglet Détails des applications. Cette mise à jour sera mise à la disposition générale d’ici le 1er mars 2022.
 
-Vous pouvez envoyer des modifications à votre application (telles que de nouvelles fonctionnalités ou même des métadonnées) dans Espace partenaires. Ces modifications nécessitent un nouveau processus de révision.
+Vous pouvez envoyer des modifications à votre application (telles que de nouvelles fonctionnalités ou même des métadonnées) dans Espace partenaires. Ces modifications nécessitent un nouveau processus d’évaluation.
 
 Vérifiez les éléments suivants lors de la publication des mises à jour :
 
