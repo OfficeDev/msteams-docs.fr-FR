@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
-ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
+ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64793796"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757282"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -51,23 +51,24 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
 * **Tests fonctionnels et expérience approfondies**
 
-  Votre application est minutieusement examinée par un évaluateur pour garantir la conformité aux [Stratégies de certification de la place de marché commerciale Microsoft](/legal/marketplace/certification-policies) en mettant l'accent sur des tests fonctionnels et d'expérience utilisateur approfondis, des contrôles de convivialité et des contrôles de métadonnées. La validation des applications est effectuée sur des clients de bureau, web et mobiles. Nous mettons tout en œuvre pour vous fournir un rapport de test détaillé dans les 24 heures ouvrables suivant la soumission.
+  Votre application est examinée en détail par un validateur pour garantir la conformité avec les stratégies de certification de la [Place de marché commerciale Microsoft](/legal/marketplace/certification-policies). 
+  L’accent sera mis sur les tests fonctionnels et d’expérience utilisateur approfondis, les vérifications d’utilisation et les vérifications des métadonnées. La validation des applications est effectuée sur les clients de bureau, web et mobiles. Nous mettons tout en œuvre pour vous fournir un rapport de test détaillé dans les 24 heures de travail qui suivent l’envoi.
 
 * **Publication d’application guidée via le service concierge**
 
-  Si aucun problème n’est observé avec votre application, votre application est approuvée et publiée dans le Magasin Teams. En cas de problème, vous recevrez un rapport de validation automatisé de Espace partenaires avec les détails de l’échec. Pour vous aider à publier votre application dans le Magasin Teams et à vous guider tout au long de ce processus, l’équipe de validation vous enverra un e-mail personnalisé à partir de notre service concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) qui inclut les informations suivantes :
+  Si aucun problème n’est observé avec votre application, votre application est approuvée et publiée dans le Magasin Teams. En revanche, si les problèmes sont présents, vous recevrez un rapport de validation automatisé de Espace partenaires avec les détails de l’échec. Pour vous aider à publier votre application dans le Magasin Teams et à vous guider tout au long de ce processus, l’équipe de validation vous enverra un e-mail personnalisé à partir de notre service concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) qui inclut les informations suivantes :
 
   * Résumé de tous les problèmes
 
   * Détails des échecs ou des problèmes liés aux liens de stratégie et à la catégorisation :
 
-    * Correctif obligatoire : ces problèmes doivent être résolus avant l’approbation de l’application.
+    * Correctif obligatoire : les problèmes doivent être résolus avant l’approbation de l’application.
 
-    * Solution suggérée : ces problèmes peuvent être résolus après l’approbation de l’application, car il s’agit de recommandations pour améliorer l’expérience de vos applications.
+    * Correction suggérée : les problèmes peuvent être résolus après l’approbation de l’application, car les problèmes sont des recommandations pour améliorer l’expérience de votre application.
 
-    * Bloqueur : ces problèmes empêchent l’équipe de validation de tester davantage les fonctionnalités de votre application et doivent être résolus pour que la validation continue.
+    * Bloqueur : les problèmes empêchent l’équipe de validation de tester davantage les fonctionnalités de votre application et doivent être résolus pour que la validation continue.
 
-    * Requête : ces requêtes peuvent être partagées pour obtenir des réponses à des questions spécifiques liées à votre application.
+    * Requête : les requêtes peuvent être partagées pour obtenir des réponses à des questions spécifiques liées à votre application.
 
   * Étapes pour recréer des problèmes via des instructions écrites ou un format vidéo.
 
@@ -89,7 +90,7 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
 * **Lors de la phase de conception**
 
-  Passez en revue les [instructions de validation du magasin](prepare/teams-store-validation-guidelines.md) au début du cycle de vie de votre application (phase de conception) pour vous assurer que vous générez votre application conformément aux exigences du Store. Si vous construisez votre application conformément à ces directives, vous éviterez tout remaniement dû à la non-adhésion aux politiques du magasin.
+  Passez en revue les [instructions de validation du magasin](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) au début du cycle de vie de votre application (phase de conception) pour vous assurer que vous générez votre application conformément aux exigences du Store. Si vous générez votre application conformément à ces instructions, cela empêchera tout retravail en raison d’un non-respect des stratégies de stockage.
 
 * **Avant la soumission de l’application**
 
@@ -106,30 +107,68 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
      1. Testez automatiquement votre application soigneusement avant la soumission de l’application pour vous assurer qu’elle respecte les stratégies du Store. Chargez une version test de l’application dans Teams et testez les flux utilisateur de bout en bout pour votre application. Assurez-vous que la fonctionnalité fonctionne comme prévu, que les liens ne sont pas rompus, que l’expérience utilisateur n’est pas bloquée et que les limitations sont clairement mises en évidence.
 
      1. Testez votre application sur les clients de bureau, web et mobiles. Assurez-vous que l’application répond à différents facteurs de forme.
-
+  
   1. Effectuez la[vérification de l’éditeur](/azure/active-directory/develop/publisher-verification-overview) avant de soumettre votre application. Si vous rencontrez des problèmes, vous pouvez créer un[ ticket de support](/azure/marketplace/partner-center-portal/support) pour la résolution.
 
   1. Lorsque vous préparez l’envoi de l’application, [suivez la liste de vérification](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) et incluez les détails suivants dans votre package de soumission :
 
-      1. Package d’application vérifié de manière approfondie.
+        1. Package d’application vérifié de manière approfondie.
 
-      1. Informations d’identification d’administrateur et d’utilisateur non administrateur pour tester les fonctionnalités de votre application (si votre application propose un modèle d’abonnement Premium).
+        1. Informations d’identification d’administrateur et d’utilisateur non administrateur pour tester les fonctionnalités de votre application (si votre application propose un modèle d’abonnement Premium).
 
-      1. Instructions de test détaillant les fonctionnalités de l’application et les scénarios pris en charge.
+        1. Instructions de test détaillant les fonctionnalités de l’application et les scénarios pris en charge.
 
-      1. Les instructions de configuration si votre application nécessite une configuration supplémentaire pour accéder aux fonctionnalités de l’application. Sinon, si votre application nécessite une configuration complexe, vous pouvez également fournir un [client de démonstration approvisionné](/office/developer-program/microsoft-365-developer-program-get-started) avec un accès administrateur afin que nos validateurs puissent ignorer les étapes de configuration.
+        1. Instructions de configuration si votre application nécessite davantage de configuration pour accéder aux fonctionnalités de l’application. Sinon, si votre application nécessite une configuration complexe, vous pouvez également fournir un [client de démonstration approvisionné](/office/developer-program/microsoft-365-developer-program-get-started) avec un accès administrateur afin que nos validateurs puissent ignorer les étapes de configuration.
 
-      1. Lien vers une vidéo de démonstration enregistrant un flux d’utilisateur clé pour votre application. Cette action est vivement recommandée.
+        1. Lien vers une vidéo de démonstration enregistrant un flux d’utilisateur clé pour votre application. Cette action est vivement recommandée.
 
 * **Après la soumission de l’application**
 
-  * Après avoir examiné le rapport de validation, répondez au thread d’e-mail avec toutes les requêtes liées au rapport de validation ou si vous avez besoin d’une prise en charge supplémentaire pour résoudre les problèmes signalés.
+  * Après avoir examiné le rapport de validation, répondez au thread d’e-mail avec toutes les requêtes liées au rapport de validation ou si vous avez besoin d’une assistance supplémentaire pour résoudre les problèmes signalés.
 
   * Assurez-vous que vous disposez d’une bande passante de développeur suffisante pour résoudre les problèmes signalés jusqu’à ce que l’application soit approuvée.
 
-  * Vérifiez que vous avez [résolu tous les problèmes](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) signalés par le service concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) avant de partager votre package d’application pour d’autres tests. Cela permet de réduire le nombre d’itérations requises pour valider votre application et, par conséquent, le temps nécessaire pour approuver votre application.
+  * Vérifiez que vous avez [résolu tous les problèmes](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) signalés par le service concierge [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) avant de partager votre package d’application pour d’autres tests. Cela permet de réduire le nombre d’itérations nécessaires à la validation de votre application et, par conséquent, le temps nécessaire pour approuver votre application.
   
-  * Évitez de modifier les fonctionnalités de l’application au cours du processus de validation. Cela peut entraîner la découverte de nouveaux problèmes et augmenter le temps nécessaire à l’approbation de votre application.
+  * Évitez de modifier les fonctionnalités de l’application pendant le processus de validation, ce qui peut entraîner la découverte de nouveaux problèmes et augmenter le temps nécessaire à l’approbation de votre application.
+
+## <a name="additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer"></a>Conseils supplémentaires pour une approbation rapide de la publication de votre application liée à une offre SaaS
+
+* **Lors de la phase de conception**
+
+  Passez en revue [les instructions de validation du Store spécifiques aux applications publiées avec des offres SaaS liées](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) au début du cycle de vie de votre application (phase de conception) pour vous assurer que vous générez votre application conformément aux exigences du Store et aux stratégies de la [Place de marché commerciale Microsoft applicables aux applications Teams liées aux offres SaaS](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). Si vous générez votre application conformément à ces instructions, cela empêchera tout retravail en raison d’un non-respect des stratégies de stockage.
+
+* **Avant la soumission de l’application**
+
+  1. Lorsque vous préparez l’envoi de l’application, vérifiez les points suivants :
+
+      1. Votre application est liée à une offre SaaS en direct (déjà publiée) sur AppSource avec au moins un plan avec des informations de tarification.
+
+      1. Vous avez correctement mentionné les détails `subscriptionOffer` dans le manifeste de votre application au format `publisherId.offerId`.
+
+      1. Vous devez vous assurer que votre offre SaaS liée est conçue pour prendre en charge les licences attribuées sur un [modèle nommé par utilisateur](/azure/marketplace/create-new-saas-offer-plans). Les offres SaaS liées qui prennent en charge d’autres modèles tarifaires tels que le tarif forfaitaire ne sont actuellement pas acceptées pour la publication dans le magasin Teams.
+
+      1. Incluez des instructions de test ou des instructions de configuration, ou créez un lien vers une vidéo de démonstration détaillant les fonctionnalités de l’application et les scénarios pris en charge, ainsi que toute information supplémentaire permettant à nos testeurs de comprendre facilement vos flux de travail du portail SaaS.
+
+  1. Vous devez [tester](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)de bout en bout les flux de travail de gestion des licences et des achats de bout en bout avant de soumettre votre application liée à une offre SaaS à des fins de validation. Vérifiez les points suivants :
+
+     1. Les utilisateurs administrateurs et non-administrateurs peuvent passer une commande et confirmer l’achat de votre abonnement. Les acheteurs peuvent accéder à la page d’accueil de l’application SaaS en sélectionnant  **Configurer maintenant** dans le Centre d’administration Microsoft. Testez et assurez-vous que vos acheteurs peuvent activer et configurer leur abonnement sur votre application SaaS. La messagerie sur votre application SaaS doit fournir suffisamment d’informations claires sur la façon de transférer à un acheteur.
+
+     1. La section **Gérer les abonnements** dans le Centre d’administration Microsoft affiche les détails corrects des abonnements proposés par vos utilisateurs de test. L’état de l’abonnement, le nombre de licences et d’autres détails doivent être exacts.
+
+     1. L’achat et la suppression des flux de travail de licence fonctionnent comme prévu. Assurez-vous que les acheteurs peuvent augmenter le nombre de licences du Centre d’administration Microsoft. Assurez-vous que le nombre de licences et l’attribution sur votre application SaaS reflètent les licences respectives et les bonnes personnes affectées. Vérifiez également que votre application SaaS offre un moyen de retirer une licence à un utilisateur. Après la suppression d’une licence, assurez-vous que les affectations restantes et le nombre restent intacts sur votre application SaaS et que les détails corrects sont reflétés dans le Centre d’administration Microsoft.
+
+     1. L’annulation de l’abonnement fonctionne comme prévu. Les acheteurs peuvent annuler un abonnement. Après l’annulation, vérifiez si l’état correct de l’abonnement est reflété dans le Centre d’administration Microsoft et votre application SaaS. Vérifiez que l’acheteur a perdu l’accès à l’abonnement après l’annulation réussie.
+
+     1. Le nouvel achat d’un abonnement est transparent. Après l’annulation d’un abonnement actif, effectuez des tests approfondis pour vous assurer que les acheteurs peuvent acheter l’abonnement.
+
+     1. Les acheteurs peuvent modifier leur offre souscrite. Une fois le plan modifié, les utilisateurs peuvent accéder aux fonctionnalités du plan mis à niveau ou rétrogradé.
+
+     1. Votre application SaaS contient des fonctionnalités de gestion des licences. Les acheteurs doivent être en mesure d’attribuer, de modifier et de réaffecter les licences disponibles aux utilisateurs. Vérifiez si les acheteurs peuvent ajouter ou supprimer des utilisateurs pour gérer les licences.
+  
+  1. Vous devez tester et vérifier que les flux d’achat de licence minimum et en bloc fonctionnent comme prévu.
+  
+  1. Vous devez vous assurer que les utilisateurs auxquels des licences sont attribuées ont accès aux fonctionnalités précises du plan acheté décrites dans la description de votre plan.
 
 ## <a name="see-also"></a>Voir aussi
 
