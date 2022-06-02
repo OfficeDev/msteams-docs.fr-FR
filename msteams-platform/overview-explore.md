@@ -1,17 +1,17 @@
 ---
 title: Exploration de Teams en tant que plateforme pour la création d’applications
 author: heath-hamilton
-description: Vue d’ensemble de l’exploration des fonctionnalités de la plateforme Microsoft Teams.
+description: Découvrez la vue d’ensemble de l’exploration des fonctionnalités de plateforme Microsoft Teams pour votre application sur le bureau et les appareils mobiles.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: df8a19d907c2b9ca420ed49d143ff7b145e3f7ca
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 769f0217d64295768159ccb77ae1726e83648468
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104426"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795146"
 ---
 # <a name="explore-teams-platform-features"></a>Explorer les fonctionnalités de la plateforme Teams
 

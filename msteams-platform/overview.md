@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 47d9f7af804f8d060dbb03b5d20eb672582899f1
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104496"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795160"
 ---
 # <a name="teams-app-that-fits"></a>Application Teams adaptée
 
