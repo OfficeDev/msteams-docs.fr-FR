@@ -381,20 +381,30 @@
   items:
     - name: Vue d'ensemble
       href: concepts/authentication/authentication.md
-    - name: Configurer les fournisseurs d’identité
-      href: concepts/authentication/configure-identity-provider.md
     - name: Onglets
       items:
-        - name: Flux d'authentification dans les onglets
-          href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: Utiliser l’authentification Azure AD
-          href: tabs/how-to/authentication/auth-tab-aad.md
-        - name: Utiliser l’authentification en mode silencieux
-          href: tabs/how-to/authentication/auth-silent-aad.md
-        - name: Utiliser l'authentification SSO
-          href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: Utiliser des fournisseurs OAuth externes
-          href: tabs/how-to/authentication/auth-oauth-provider.md
+        - name: Activer l’authentification unique (SSO) pour l’application d’onglet
+          items:
+            - name: Aperçu
+              href: tabs/how-to/authentication/tab-sso-overview.md
+            - name: Inscrire l’application d’onglet dans Azure AD
+              href: tabs/how-to/authentication/tab-sso-register-aad.md
+            - name: Ajouter du code pour activer l’authentification unique
+              href: tabs/how-to/authentication/tab-sso-code.md
+            - name: Mettre à jour le manifeste d’application pour l’authentification unique et la préversion
+              href: tabs/how-to/authentication/tab-sso-manifest.md
+            - name: Accorder des autorisations et des étendues à Microsoft Graph
+              href: tabs/how-to/authentication/tab-sso-graph-api.md
+            - name: Résolution des problèmes
+              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        - name: Utiliser l’authentification d’un fournisseur d’identité OAuth tiers
+          items:
+            - name: Vue d’ensemble
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: Configurer l’authentification d’un fournisseur d’identité OAuth tiers
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: Utiliser des fournisseurs OAuth externes
+              href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flux d’authentification dans des bots
@@ -583,6 +593,8 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localiser la référence de schéma JSON
           href: resources/schema/localization-schema.md
+    - name: Utiliser l’authentification en mode silencieux
+      href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Attribut de cookie SameSite
       href: resources/samesite-cookie-update.md
     - name: Contribuer à la documentation Teams

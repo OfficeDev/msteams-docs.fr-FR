@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757016"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887806"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
@@ -39,7 +39,7 @@ Vérifiez les éléments suivants lors de la publication des mises à jour :
 
 ### <a name="app-updates-requiring-user-consent"></a>Mises à jour d’application nécessitant le consentement de l’utilisateur
 
-Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, les utilisateurs doivent effectuer cette opération une seule fois et les nouvelles versions de votre application s’installent automatiquement.
+Lorsqu’un utilisateur installe votre application, il doit lui accorder l’autorisation d’accéder aux services et aux informations dont l’application a besoin pour fonctionner. Dans la plupart des cas, cette action ne doit être effectuée qu’une seule fois et la nouvelle version de votre application s'installe automatiquement.
 Toutefois, si vous apportez l’une des modifications suivantes à votre application, vos utilisateurs existants doivent accepter une autre demande d’autorisation pour installer la mise à jour :
 
 * Ajout ou suppression d’un bot.
