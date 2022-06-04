@@ -1,16 +1,16 @@
 ---
 title: Références API des applications de réunion
 author: surbhigupta
-description: Identifiez les références d’API d’applications de réunion avec des exemples et des exemples de code, Teams applications rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle de participant utilisateur.
+description: Identifiez les références d’API d’applications de réunion avec des exemples et des exemples de code, les applications Teams rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle de participant utilisateur.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756582"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887575"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -53,7 +53,7 @@ L’API `GetParticipant` doit disposer d’une inscription et d’un ID de bot p
 ### <a name="query-parameters"></a>Paramètres de requête
 
 > [!TIP]
-> Obtenez les ID de participant et les ID de locataire à partir de [l’authentification SSO de l’onglet](../tabs/how-to/authentication/auth-aad-sso.md).
+> Obtenez les ID de participant et les ID de locataire à partir de [l’authentification SSO de l’onglet](../tabs/how-to/authentication/tab-sso-overview.md).
 
 L’API `Meeting` doit avoir `meetingId`, `participantId`et `tenantId` en tant que paramètres d’URL. Les paramètres sont disponibles dans le cadre du kit de développement logiciel (SDK) client Teams et de l’activité du bot.
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nom de la propriété | Objectif |
 |---|---|
 | **user.id** | ID de l’utilisateur. |
-| **user.aadObjectId** | Azure Active Directory ID d’objet de l’utilisateur. |
+| **user.aadObjectId** | ID d’objet Azure Active Directory de l’utilisateur. |
 | **user.name** | Nom de l'utilisateur. |
 | **user.givenName** | Prénom de l’utilisateur.|
 | **user.surname** | Nom de l’utilisateur. |
@@ -406,7 +406,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 | Nom de la propriété | Objectif |
 |---|---|
 | **details.id** | ID de la réunion, encodé sous forme de chaîne BASE64. |
-| **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels API Graph MS. |
+| **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels d’API Graph MS. |
 | **details.scheduledStartTime** | Heure de début planifiée de la réunion, au format UTC. |
 | **details.scheduledEndTime** | Heure de fin planifiée de la réunion, au format UTC. |
 | **details.joinUrl** | URL utilisée pour rejoindre la réunion. |
@@ -487,7 +487,7 @@ L’API `shareAppContentToStage` vous permet de partager des parties spécifique
 
 ### <a name="prerequisite"></a>Conditions préalables
 
-*  Pour utiliser l’API `shareAppContentToStage` , vous devez obtenir les autorisations RSC. Dans le manifeste de l’application, configurez la `authorization` propriété `name`et le `type` champ`resourceSpecific`. Par exemple :
+* Pour utiliser l’API `shareAppContentToStage` , vous devez obtenir les autorisations RSC. Dans le manifeste de l’application, configurez la `authorization` propriété `name`et le `type` champ`resourceSpecific`. Par exemple :
 
     ```json
     "authorization": {
@@ -501,7 +501,8 @@ L’API `shareAppContentToStage` vous permet de partager des parties spécifique
     }
     }
     ```
-*  `appContentUrl` doit être autorisé par `validDomains` le tableau à l’intérieur de manifest.json, sinon l’API retournerait 501.
+
+* `appContentUrl` doit être autorisé par `validDomains` le tableau à l’intérieur de manifest.json, sinon l’API retournerait 501.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -818,7 +819,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **from.id** | Identification de l'utilisateur qui a envoyé la demande. |
 | **from.aadObjectId** | Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
 | **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
-| **conversation.tenantId** | Azure Active Directory ID de locataire de la conversation ou de la réunion. |
+| **conversation.tenantId** | ID de locataire Azure Active Directory de la conversation ou de la réunion. |
 | **conversation.id** | ID de conversation de réunion. |
 | **recipient.id** | ID de l’utilisateur qui reçoit la demande. |
 | **recipient.name** | Nom de l’utilisateur qui reçoit la demande. |
@@ -852,7 +853,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 
 * [Flux d’authentification Teams pour les onglets](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Applications pour les réunions Teams](teams-apps-in-meetings.md)
-* [SDK Live Share](teams-live-share-overview.md)
+* [FAQ sur le Kit de développement logiciel (SDK) de Live Share](teams-live-share-overview.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

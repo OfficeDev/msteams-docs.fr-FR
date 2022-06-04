@@ -1,34 +1,48 @@
 ---
-title: Authentification pour les onglets à l’aide de Azure Active Directory
+title: Configurer l’authentification OAuth tierce
 description: Décrit l’authentification dans Teams et comment l’utiliser dans des onglets
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: onglets d’authentification teams Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: aa60f3908a13b55add525a561fe3f60afaad6c87
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1cbd871a3066c5f8dd1cbba0837fdf8e4ab9be8f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757317"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887778"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Authentifier un utilisateur dans un onglet Microsoft Teams
+# <a name="configure-third-party-oauth-authentication"></a>Configurer l’authentification OAuth tierce
 
 > [!Note]
-> Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, vous devez vous assurer que vous utilisez la version 1.4.1 ou ultérieure du Kit de développement logiciel (SDK) JavaScript Teams.
+> Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, vérifiez que vous utilisez la version 1.4.1 ou ultérieure du Kit de développement logiciel (SDK) JavaScript Teams.
 
-Il existe de nombreux services que vous pouvez utiliser dans votre application Teams, et la plupart de ces services nécessitent une authentification et une autorisation pour accéder au service. Les services incluent Facebook, Twitter et Teams. Les informations de profil utilisateur Teams sont stockées dans Azure AD à l’aide de Microsoft Graph et cet article se concentre sur l’authentification à l’aide de Azure AD pour accéder à ces informations.
+Il existe de nombreux services que vous pouvez utiliser dans votre application Teams, et la plupart de ces services nécessitent une authentification et une autorisation pour accéder au service. Les services incluent Facebook, Twitter et Teams.
+Les informations de profil utilisateur Teams sont stockées dans Azure AD à l’aide de Microsoft Graph et cet article se concentre sur l’authentification à l’aide de Azure AD pour accéder à ces informations.
 
-OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0 dans le but de lire les informations de profil de l’utilisateur à partir de Azure AD et Microsoft Graph.
+OAuth 2.0 est une norme ouverte pour l’authentification utilisée par Azure AD et de nombreux autres fournisseurs de services. La compréhension d’OAuth 2.0 est un prérequis pour l’utilisation de l’authentification dans Teams et Azure AD. Les exemples ci-dessous utilisent le flux d’octroi implicite OAuth 2.0. Il lit les informations de profil de l’utilisateur à partir d’Azure AD et de Microsoft Graph.
 
-Le code de l’article provient de l’exemple d’application Teams [Microsoft Teams’exemple d’authentification par onglet (Node).](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Il contient un onglet statique qui demande un jeton d’accès pour Microsoft Graph et affiche les informations de profil de base de l’utilisateur actuel à partir de Azure AD.
+Le code de cet article provient de l’exemple d’application Teams [Exemple d’authentification par onglet Microsoft Teams (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). Il contient un onglet statique qui demande un jeton d’accès pour Microsoft Graph et affiche les informations de profil de base de l’utilisateur actuel à partir d’Azure AD.
 
-Pour une vue d’ensemble du flux d’authentification pour les onglets, consultez [flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md).
+Pour obtenir une vue d’ensemble du flux d’authentification pour les onglets, consultez [flux d’authentification dans les onglets](~/tabs/how-to/authentication/auth-flow-tab.md).
 
-Le flux d’authentification dans les onglets diffère légèrement du flux d’authentification dans les bots.
+Le flux d’authentification dans les onglets diffère du flux d’authentification dans les bots.
 
-## <a name="configuring-identity-providers"></a>Configuration des fournisseurs d’identité
+## <a name="configure-your-app-to-use-azure-ad-as-an-identity-provider"></a>Configurer votre application pour utiliser Azure AD en tant que fournisseur d’identité
 
-Consultez la rubrique [Configurer les fournisseurs d’identité](~/concepts/authentication/configure-identity-provider.md) pour obtenir des instructions détaillées sur la configuration des URL de redirection de rappel OAuth 2.0 lors de l’utilisation de Azure AD en tant que fournisseur d’identité.
+Les fournisseurs d’identité qui prennent en charge OAuth 2.0 n’authentifient pas les demandes provenant d’applications inconnues. Vous devez inscrire les applications à l’avance. Pour ce faire avec Azure AD, procédez comme suit :
+
+1. Ouvrez le [portail d’inscription d’application](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
+
+2. Sélectionnez votre application pour afficher ses propriétés, ou sélectionnez le bouton « Nouvelle inscription ». Recherchez la section **URI de redirection** pour l’application.
+
+3. Sélectionnez **Web** dans le menu déroulant. Mettez à jour l’URL vers votre point de terminaison d’authentification. Pour les exemples d’applications TypeScript/Node.js et C# sur GitHub, les URL de redirection sont similaires aux suivantes :
+
+    URL de redirection : `https://<hostname>/bot-auth/simple-start`
+
+Remplacez par `<hostname>` votre hôte réel. Cet hôte peut être un site d’hébergement dédié tel qu’Azure, Glitch ou un tunnel ngrok vers localhost sur votre machine de développement, par `abcd1234.ngrok.io`exemple . Si vous ne disposez pas de ces informations, vérifiez que vous avez terminé ou hébergé votre application (ou l’exemple d’application). Reprenez ce processus lorsque vous disposez de ces informations.
+
+> [!NOTE]
+> Vous pouvez choisir n’importe quel fournisseur OAuth tiers, tel que LinkedIn, Google, etc. Le processus d’activation de l’authentification pour ces fournisseurs est similaire à l’utilisation d’Azure AD en tant que fournisseur OAuth tiers. Pour plus d’informations sur l’utilisation d’un fournisseur OAuth tiers, visitez le site web du fournisseur particulier.
 
 ## <a name="initiate-authentication-flow"></a>Lancer le flux d’authentification
 
@@ -36,7 +50,7 @@ Le flux d’authentification doit être déclenché par une action de l’utilis
 
 Ajoutez un bouton à votre page de configuration ou de contenu pour permettre à l’utilisateur de se connecter si nécessaire. Vous pouvez le faire dans l’onglet page de [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) ou dans n’importe quelle page de [contenu](~/tabs/how-to/create-tab-pages/content-page.md).
 
-Azure AD, comme la plupart des fournisseurs d’identité, n’autorise pas le placement de son contenu dans un iframe. Cela signifie que vous devez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start`. Utilisez la fonction `microsoftTeams.authenticate()` du Kit de développement logiciel (SDK) client Microsoft Teams pour lancer cette page lorsque votre bouton est sélectionné.
+Azure AD, comme la plupart des fournisseurs d’identité, n’autorise pas le placement de son contenu dans un `iframe`. Cela signifie que vous devez ajouter une page contextuelle pour héberger le fournisseur d’identité. Dans l’exemple suivant, cette page est `/tab-auth/simple-start`. Utilisez la `microsoftTeams.authenticate()` fonction du Kit de développement logiciel (SDK) client Microsoft Teams pour lancer cette page lorsque le bouton est sélectionné.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -58,7 +72,7 @@ microsoftTeams.authentication.authenticate({
 
 * Le flux d’authentification doit commencer sur une page qui se trouve sur votre domaine. Ce domaine doit également être répertorié dans la section [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) du manifeste. Si ce n’est pas le cas, une fenêtre contextuelle vide s’affiche.
 
-* Si vous n’utilisez pas `microsoftTeams.authentication.authenticate()`, la fenêtre contextuelle ne se ferme pas à la fin du processus de connexion.
+* Si vous ne l’utilisez `microsoftTeams.authentication.authenticate()` pas, la fenêtre contextuelle ne se ferme pas à la fin du processus de connexion.
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>Accédez à la page d’autorisation à partir de votre page contextuelle
 

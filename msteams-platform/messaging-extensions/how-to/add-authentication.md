@@ -5,12 +5,12 @@ description: Découvrez comment ajouter l’authentification à une extension de
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297007"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887610"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>Ajouter une authentification à votre extension de messagerie
 
@@ -81,7 +81,7 @@ Comme pour les autres expériences incorporées s’exécutant dans Microsoft Te
 
 Une fois la requête de connexion terminée et redirigée vers votre page, elle doit effectuer les étapes suivantes :
 
-1. Générez un code de sécurité : nombre aléatoire. Vous devez mettre en cache ce code sur votre service, ainsi que les informations d’identification obtenues via le flux de connexion, tels que les jetons OAuth 2.0.
+1. Générez un code de sécurité, un nombre aléatoire. Vous devez mettre en cache ce code sur votre service, avec les informations d’identification obtenues via le flux de connexion, tels que les jetons OAuth 2.0.
 1. Appelez `microsoftTeams.authentication.notifySuccess` et transmettez le code de sécurité.
 
 À ce stade, la fenêtre se ferme et le contrôle est passé au client Teams. Le client publie à nouveau la requête utilisateur d’origine, ainsi que le code de sécurité dans la propriété `state` . Votre code peut utiliser le code de sécurité pour rechercher les informations d’identification stockées précédemment afin de terminer la séquence d’authentification, puis la requête de l’utilisateur.

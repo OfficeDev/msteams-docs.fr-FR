@@ -5,11 +5,11 @@ ms.topic: how-to
 ms.localizationpriority: high
 keywords: API d’authentification unique Microsoft Azure Active Directory Domain Services d’authentification unique Teams (Azure AD)
 ms.openlocfilehash: d9391489c8bafafa24ba52528f5d0b8440319a55
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104419"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65888343"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>Prise en charge de l'authentification unique (SSO) pour les onglets
 

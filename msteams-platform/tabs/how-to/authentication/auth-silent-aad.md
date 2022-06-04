@@ -2,14 +2,14 @@
 title: Authentification en mode silencieux
 description: Décrit l’authentification silencieuse, l’authentification unique Azure AD pour les onglets
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Onglet Azure AD silencieux de l’authentification unique Teams
-ms.openlocfilehash: 699582414a4699a69519e41232e4354d8125337b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111646"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887792"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111646"
 > [!NOTE]
 > Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, assurez-vous que vous utilisez le Kit de développement logiciel (SDK) JavaScript Teams version 1.4.1 ou ultérieure.
 
-L’authentification silencieuse dans Azure AD réduit le nombre de fois qu’un utilisateur entre ses informations d’identification en actualisant silencieusement le jeton d’authentification. Pour obtenir la prise en charge de l’authentification unique réelle, consultez [la documentation de l’authentification](~/tabs/how-to/authentication/auth-aad-sso.md) unique.
+L’authentification silencieuse dans Azure AD réduit le nombre de fois qu’un utilisateur entre ses informations d’identification en actualisant silencieusement le jeton d’authentification. Pour obtenir la prise en charge de l’authentification unique réelle, consultez [la documentation de l’authentification](~/tabs/how-to/authentication/tab-sso-overview.md) unique.
 
 Pour conserver votre code côté client, utilisez la bibliothèque d’authentification [Azure AD](/azure/active-directory/develop/active-directory-authentication-libraries) pour JavaScript afin d’obtenir un jeton d’accès Microsoft Azure Active Directory (Azure AD) en mode silencieux. Si l’utilisateur s’est connecté récemment, il ne voit pas de boîte de dialogue contextuelle.
 

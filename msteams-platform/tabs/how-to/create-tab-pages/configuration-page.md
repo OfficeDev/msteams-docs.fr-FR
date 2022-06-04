@@ -6,12 +6,12 @@ keywords: onglets d'équipes canal de groupe configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672942"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887631"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -245,7 +245,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Utilisez `getContext()`la fonction pour récupérer le contexte
 
-La `app.getContext()` fonction retourne une promesse qui se résout avec l’objet [d’interface de contexte](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) .
+La `app.getContext()` fonction retourne une promesse qui se résout avec l’objet [d’interface de contexte](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) .
 
 Le code suivant fournit un exemple d'ajout de cette fonction à la page de configuration pour récupérer les valeurs du contexte :
 
@@ -294,7 +294,7 @@ Authentifiez-vous avant de permettre à un utilisateur de configurer votre appli
 
 Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier, reconfigurer ou renommer un canal ou un onglet de groupe. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-`setConfig()` Microsoft Teams (anciennement`setSettings()`) configuration de la page de suppression :
+Configuration de Microsoft Teams `setConfig()` (anciennement `setSettings()`) pour la page de suppression :
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
@@ -336,7 +336,7 @@ Si vous choisissez de faire apparaître votre onglet de canal ou de groupe sur l
 
 ## <a name="see-also"></a>Voir aussi
 
-* [onglets Teams](~/tabs/what-are-tabs.md)
+* [Onglets Teams](~/tabs/what-are-tabs.md)
 * [Créer un onglet personnel](~/tabs/how-to/create-personal-tab.md)
 * [Créer un onglet de canal ou de groupe](~/tabs/how-to/create-channel-group-tab.md)
 * [Créer une page de contenu](~/tabs/how-to/create-tab-pages/content-page.md)

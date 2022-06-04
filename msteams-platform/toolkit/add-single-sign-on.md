@@ -6,16 +6,16 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 3b83104dd07d34989f85fa0b96182c5c43408d98
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656844"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887589"
 ---
-# <a name="add-single-sign-on-to-teams-app"></a>Ajouter l’authentification unique à Teams application
+# <a name="add-single-sign-on-to-teams-app"></a>Ajouter l'authentification unique à l'application Teams
 
-Microsoft Teams fournit une fonction d’authentification unique pour que l’application obtienne un jeton utilisateur Teams connecté pour accéder à Microsoft Graph et à d’autres API. Teams Toolkit facilite l’interaction en faisant abstraction de certains flux et intégrations Azure AD derrière certaines API simples. Cela vous permet d’ajouter facilement des fonctionnalités d’authentification unique à votre application Teams.
+Microsoft Teams fournit une fonction d’authentification unique pour que l’application obtienne un jeton d’utilisateur Teams connecté pour accéder à Microsoft Graph et à d’autres API. Teams Toolkit facilite l’interaction en faisant abstraction de certains flux et intégrations Azure AD derrière certaines API simples. Cela vous permet d’ajouter facilement des fonctionnalités d’authentification unique à votre application Teams.
 
 Pour les applications qui interagissent avec l’utilisateur dans une conversation, une équipe ou un canal, l’authentification unique se manifeste sous la forme d’une carte adaptative avec laquelle l’utilisateur peut interagir pour appeler le flux de consentement Azure AD.
 
@@ -28,9 +28,9 @@ Teams Toolkit vous aide à ajouter l’authentification unique aux fonctionnalit
 * Bot de notification : serveur restify
 * Bot de commandes
 
-### <a name="add-sso-using-visual-studio-code"></a>Ajouter l’authentification unique à l’aide de code Visual Studio
+### <a name="add-sso-using-visual-studio-code"></a>Ajouter l’authentification unique à l’aide de Visual Studio Code
 
-Les étapes suivantes vous aident à ajouter l’authentification unique à l’aide de Teams Toolkit dans Visual Studio Code
+Les étapes suivantes vous aident à ajouter l’authentification unique à l’aide du Kit de ressources Teams dans Visual Studio Code
 
 1. Ouvrez **Microsoft Visual Studio Code**.
 2. Sélectionnez Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
@@ -51,14 +51,14 @@ Vous pouvez exécuter `teamsfx add sso`  la commande dans le **répertoire racin
 > [!Note]
 > La fonctionnalité active l’authentification unique pour toutes les fonctionnalités applicables existantes. Suivez les mêmes étapes pour activer l’authentification unique si vous ajoutez une fonctionnalité ultérieurement au projet.
 
-## <a name="customize-your-project-using-teams-toolkit"></a>Personnaliser votre projet à l’aide de Teams Toolkit
+## <a name="customize-your-project-using-teams-toolkit"></a>Personnaliser votre projet à l’aide du Kit de ressources Teams
 
-Le tableau suivant répertorie les modifications apportées Teams Toolkit à votre projet :
+Le tableau suivant répertorie les modifications apportées par Teams Toolkit à votre projet :
 
    |**Type (Type)**|**Fichier**|**Objectif**|
    |--------|--------|-----------|
    |Créer|`aad.template.json` Sous `template/appPackage`|Le manifeste d’application Azure AD représente votre application Azure AD. `template/appPackage` permet d’inscrire une application Azure AD lors de l’étape de débogage ou de provisionnement local.|
-   |Modifier|`manifest.template.json` Sous `template/appPackage`|Un `webApplicationInfo` objet est ajouté à votre modèle de manifeste d’application Teams. Teams nécessite ce champ pour activer l’authentification unique. La modification est en vigueur lorsque vous déclenchez un débogage ou un provisionnement local.|
+   |Modifier|`manifest.template.json` Sous `template/appPackage`|Un `webApplicationInfo` objet est ajouté à votre modèle de manifeste d’application Teams. Teams requiert ce champ pour activer l’authentification unique. La modification est en vigueur lorsque vous déclenchez un débogage ou un provisionnement local.|
    |Créer|`auth/tab`|Le code de référence, les pages de redirection d’authentification et un `README.md` fichier sont générés dans ce chemin d’accès pour un projet d’onglet.|
    |Créer|`auth/bot`|Le code de référence, les pages de redirection d’authentification et un `README.md` fichier sont générés dans ce chemin d’accès pour un projet de bot.|
 
@@ -83,7 +83,7 @@ Les étapes suivantes vous aident à activer l’authentification unique dans vo
 
     * `InitTeamsFx`: le fichier implémente une fonction qui initialise le Kit de développement logiciel (SDK) TeamsFx et ouvre `GetUserProfile` le composant après l’initialisation du SDK
 
-    * `GetUserProfile`: le fichier implémente une fonction qui appelle Microsoft API Graph pour obtenir des informations utilisateur
+    * `GetUserProfile`: le fichier implémente une fonction qui appelle l’API Microsoft Graph pour obtenir des informations utilisateur
 
 3. Exécutez `npm install @microsoft/teamsfx-react` sous `tabs/`.
 
@@ -195,6 +195,7 @@ Les étapes suivantes vous aident à activer l’authentification unique dans vo
    }
 
    ```
+
 </details>
 <details>
 <summary><b>Ajouter une nouvelle commande au bot </b></summary>
@@ -204,7 +205,7 @@ Les étapes suivantes vous aident à activer l’authentification unique dans vo
 
 Les étapes suivantes vous aident à ajouter une nouvelle commande, après avoir ajouté l’authentification unique dans votre projet :
 
-1. Créez un fichier (`todo.ts`ou`todo.js`) sous `bot/src/` et ajoutez votre propre logique métier pour appeler API Graph :
+1. Créez un fichier (`todo.ts` ou `todo.js`) sous `bot/src/` et ajoutez votre propre logique métier pour appeler l’API Graph :
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
@@ -288,7 +289,7 @@ export async function showUserImage(context, ssoToken, param) {
 
      ```
 
-   * Ajoutez les lignes suivantes après la ligne ci-dessus pour inscrire une nouvelle commande `photo` et hook avec la méthode `showUserImage` ajoutée ci-dessus :
+   * Ajoutez les lignes suivantes après la ligne ci-dessus pour inscrire une nouvelle commande `photo` et vous connecter avec la méthode `showUserImage` ajoutée ci-dessus :
 
      ```bash
 
@@ -309,17 +310,18 @@ export async function showUserImage(context, ssoToken, param) {
    }
 
    ```
+
 </details>
 <br>
 
 ## <a name="debug-your-application"></a>Déboguer votre application
 
-Appuyez sur F5 pour déboguer votre application. Teams Toolkit utilise le fichier manifeste Azure AD pour inscrire une application Azure AD pour l’authentification unique. Pour Teams fonctionnalités de débogage local du Kit de ressources, consultez [Déboguer votre application Teams localement](debug-local.md).
+Appuyez sur F5 pour déboguer votre application. Teams Toolkit utilise le fichier manifeste Azure AD pour inscrire une application Azure AD pour l’authentification unique. Pour les fonctionnalités de débogage local du Kit de ressources Teams, consultez [Déboguer votre application Teams localement](debug-local.md).
 
 ## <a name="customize-azure-ad-application-registration"></a>Personnaliser l’inscription d’application Azure AD
 
 Le [manifeste de l’application Azure AD](/azure/active-directory/develop/reference-app-manifest) vous permet de personnaliser différents aspects de l’inscription d’application. Vous pouvez mettre à jour le manifeste en fonction des besoins. Si vous devez inclure des autorisations d’API supplémentaires pour accéder aux API souhaitées, consultez [les autorisations d’API pour accéder aux API souhaitées](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
-Pour afficher votre application Azure AD dans le portail Azure, consultez [Afficher l’application Azure AD dans Portail Azure](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal). 
+Pour afficher votre application Azure AD dans le portail Azure, consultez [Afficher l’application Azure AD dans le portail Azure](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## <a name="sso-authentication-concepts"></a>Concepts d’authentification unique
 
@@ -329,9 +331,9 @@ Les concepts suivants vous aident à effectuer l’authentification unique :
 
 L’authentification unique dans Microsoft Azure Active Directory (Azure AD) actualise silencieusement le jeton d’authentification pour réduire le nombre de fois où les utilisateurs doivent entrer leurs informations d’identification de connexion. Si les utilisateurs acceptent d'utiliser votre application, ils n'ont pas besoin de donner à nouveau leur consentement sur un autre appareil car ils sont automatiquement connectés.
 
-Teams onglets et bots ont un flux similaire pour la prise en charge de l’authentification unique. Pour plus d’informations, consultez :
+Les onglets et les bots Teams ont un flux similaire pour la prise en charge de l’authentification unique. Pour plus d’informations, consultez :
 
-1. [Authentification unique (SSO) dans Tabs](../tabs/how-to/authentication/auth-aad-sso.md)
+1. [Authentification unique (SSO) dans Tabs](../tabs/how-to/authentication/tab-sso-overview.md)
 2. [Authentification unique (SSO) dans Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
 
 ### <a name="simplified-sso-with-teamsfx"></a>Authentification unique simplifiée avec TeamsFx
@@ -340,7 +342,7 @@ TeamsFx permet de réduire les tâches des développeurs en utilisant l’authen
 
 Avec le Kit de développement logiciel (SDK) TeamsFx, vous pouvez écrire du code d’authentification utilisateur de manière simplifiée à l’aide des informations d’identification :
 
-1. Identité de l’utilisateur dans l’environnement du navigateur : `TeamsUserCredential` représente Teams’identité de l’utilisateur actuel.
+1. Identité de l’utilisateur dans l’environnement du navigateur : `TeamsUserCredential` représente l’identité de l’utilisateur actuel de Teams.
 2. Identité de l’utilisateur dans Node.js environnement : `OnBehalfOfUserCredentail` utilise le flux On-Behalf-Of et le jeton d’authentification unique.
 3. Identité d’application dans Node.js environnement : `AppCredential` représente l’identité de l’application.
 

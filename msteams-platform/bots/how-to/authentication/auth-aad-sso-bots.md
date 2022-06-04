@@ -2,14 +2,14 @@
 title: Support de l'identification unique pour les robots
 description: Décrit comment obtenir un jeton utilisateur. Actuellement, un développeur de bots peut utiliser une carte de connexion ou le service de bot Azure avec la prise en charge de la carte OAuth.
 keywords: jeton, jeton utilisateur, prise en charge de l’authentification unique pour les bots, autorisation, Microsoft Graph, Azure AD
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 49fac724cea263dac8e1540b0b40f5e3b8d267d8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111758"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887596"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Support de l'identification unique pour les robots
 
@@ -56,7 +56,7 @@ Les étapes suivantes vous guident pour développer l’authentification unique 
 
 ### <a name="register-your-app-through-the-azure-ad-portal"></a>Inscrire votre application via le portail Azure AD web
 
-Les étapes d’inscription de votre application via le portail Azure AD sont similaires au [flux d’authentification unique de l’onglet](../../../tabs/how-to/authentication/auth-aad-sso.md). Les étapes suivantes vous guident pour inscrire votre application :
+Les étapes d’inscription de votre application via le portail Azure AD sont similaires au [flux d’authentification unique de l’onglet](../../../tabs/how-to/authentication/tab-sso-overview.md). Les étapes suivantes vous guident pour inscrire votre application :
 
 1. Inscrivez une nouvelle application dans le portail [Microsoft Azure Active Directory - Enregistrer une application](https://go.microsoft.com/fwlink/?linkid=2083908).
 
@@ -96,7 +96,7 @@ Les étapes d’inscription de votre application via le portail Azure AD sont si
    >
    > Vous devez connaître les restrictions importantes suivantes :
    >
-   > * Seules les autorisations Microsoft API Graph au niveau de l’utilisateur, telles que l’e-mail, le profil, offline_access et OpenId, sont prises en charge. Si vous devez avoir accès à d'autres étendues Microsoft Graph telles que `User.Read` ou `Mail.Read`, consultez [Obtenir un jeton d'accès avec des autorisations Graph](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
+   > * Seules les autorisations Microsoft API Graph au niveau de l’utilisateur, telles que l’e-mail, le profil, offline_access et OpenId, sont prises en charge. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph, telles que `User.Read` ou `Mail.Read`, consultez [Étendre l’application onglet avec des autorisations et une étendue Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Le nom de domaine de votre application doit être le même que le nom de domaine que vous avez enregistré pour votre application Azure AD.
    > * Les domaines multiples par application ne sont actuellement pas pris en charge.
    > * Les applications qui utilisent le `azurewebsites.net` domaine ne sont pas prises en charge, car elles sont courantes et peuvent constituer un risque pour la sécurité.

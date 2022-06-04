@@ -3,12 +3,12 @@ title: Documentation pour développeurs Microsoft Teams – Glossaire
 description: En savoir plus sur les termes utilisés dans Microsoft Teams documentation du développeur
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795139"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887624"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -31,7 +31,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 | [Ressource Azure](../toolkit/provision.md) | Un service disponible via Azure que votre application Teams peut utiliser pour le déploiement Azure. Il peut s’agir de comptes de stockage, d’applications web, de bases de données, etc. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Service de gestion des identités et des accès basé sur le cloud de Microsoft. Il permet aux utilisateurs authentifiés d’accéder aux ressources Azure internes et externes. |
 | [Authentification](../concepts/authentication/authentication.md) | Processus de validation de l’accès utilisateur pour l’utilisation de votre application. Elle peut être effectuée à l’aide d’API Microsoft Graph ou d’une authentification web. <br> **Voir aussi :** [Fournisseurs d’identité](#i) ; [SSO](#s) |
-| [Flux d’authentification](../concepts/authentication/authentication.md#web-based-authentication-flow) | Dans Teams, il existe deux flux d’authentification pour authentifier un utilisateur à l’aide d’une application : l’authentification web et le flux OAuthPrompt. |
+| [Flux d’authentification](../concepts/authentication/authentication.md) | Dans Teams, il existe deux flux d’authentification pour authentifier un utilisateur à l’aide d’une application : l’authentification web et le flux OAuthPrompt. |
 
 ## <a name="b"></a>B
 
