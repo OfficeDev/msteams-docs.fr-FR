@@ -4,12 +4,12 @@ description: Décrit le schéma du manifeste pour Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755880"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887834"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -630,7 +630,7 @@ Fournissez votre ID d’application Azure Active Directory et vos informations d
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`id`|string|36 caractères|✔|Application Azure AD ID d’application. Cet ID doit être un GUID.|
-|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, https://notapplicable pour éviter une réponse d’erreur. |
+|`resource`|string|2 048 caractères|✔|URL de ressource de l’application pour l’acquisition du jeton du SSO. </br> **REMARQUE :** Si vous n’utilisez pas l’authentification unique, veillez à entrer une valeur de chaîne factice dans ce champ dans le manifeste de votre application, par exemple, <https://notapplicable> pour éviter une réponse d’erreur. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -747,7 +747,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
@@ -872,6 +872,85 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
     |**Name**|**Description**|
     |---|---|
     |`InAppPurchase.Allow.User`|Permet à l’application d’afficher les offres marketplace de l’utilisateur et d’effectuer les achats de l’utilisateur au sein de l’application, au nom de l’utilisateur connecté.|
+
+## <a name="create-a-manifest-file"></a>Créer un fichier manifeste
+
+Si votre application n’a pas de fichier manifeste d’application Teams, vous devez le créer.
+
+Pour créer un fichier manifeste d’application Teams :
+
+1. Utilisez le [exemple de schéma de manifeste](#sample-full-manifest) pour créer un fichier json.
+1. Enregistrez-le à la racine de votre dossier de projet en tant que `manifest.json`.
+
+<br>
+<details>
+<summary>Voici un exemple de schéma de manifeste pour une application d’onglet avec l’authentification unique activée :</summary>
+<br>
+
+> [!NOTE]
+> L’exemple de contenu du manifeste présenté ici concerne uniquement une application d’onglet. Il utilise des exemples de valeurs pour l’URI de sous-domaine et le nom du package. Pour plus d’informations, consultez [exemple de schéma de manifeste](#sample-full-manifest).
+
+  ```json
+{ 
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
+ "manifestVersion": "1.12", 
+ "version": "1.0.0", 
+ "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "packageName": "com.contoso.teamsauthsso", 
+ "developer": { 
+ "name": "Microsoft", 
+ "websiteUrl": "https://www.microsoft.com", 
+ "privacyUrl": "https://www.microsoft.com/privacy", 
+ "termsOfUseUrl": "https://www.microsoft.com/termsofuse" 
+  }, 
+
+  "name": { 
+    "short": "Teams Auth SSO", 
+    "full": "Teams Auth SSO" 
+  }, 
+
+
+  "description": { 
+    "short": "Teams Auth SSO app", 
+    "full": "The Teams Auth SSO app" 
+  }, 
+
+  "icons": { 
+    "outline": "outline.png", 
+    "color": "color.png" 
+  }, 
+
+  "accentColor": "#60A18E", 
+  "staticTabs": [ 
+    { 
+     "entityId": "auth", 
+     "name": "Auth", 
+     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
+     "scopes": [ "personal" ] 
+    } 
+  ], 
+
+  "configurableTabs": [ 
+    { 
+     "configurationUrl": "https://subdomain.example.com/Home/Configure", 
+     "canUpdateConfiguration": true, 
+     "scopes": [ 
+     "team" 
+      ] 
+    } 
+  ], 
+  "permissions": [ "identity", "messageTeamMembers" ], 
+  "validDomains": [ 
+   "{subdomain or ngrok url}" 
+  ], 
+  "webApplicationInfo": { 
+    "id": "{Azure AD AppId}", 
+    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
+  }
+} 
+```
+
+</details>
 
 ## <a name="see-also"></a>Voir aussi
 
