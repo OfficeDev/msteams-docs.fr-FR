@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: documentation du développeur Microsoft Teams
-summary: Bienvenue dans la vue d’ensemble de Microsoft Teams documentation du développeur. Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les contacts se réunissent, apprennent et travaillent de plus en plus.
+title: Documentation du développeur Microsoft Teams
+summary: Bienvenue dans la vue d’ensemble de la documentation du développeur Microsoft Teams. Microsoft Teams applications apportent des informations clés, des outils courants et des processus fiables là où les contacts se réunissent, apprennent et travaillent de plus en plus.
 metadata:
-  title: documentation du développeur Microsoft Teams
+  title: Documentation du développeur Microsoft Teams
   description: Présentation de la création d’applications pour Teams
   ms.service: msteams
   ms.subservice: subservice
@@ -12,26 +12,28 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 29c27dd095d3519ff78ed985f365f85999b3ae6e
-  ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+  ms.openlocfilehash: 8f1997bc2a3b51c16f1cd3fa3489bbf6aff6fe93
+  ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/25/2022
-  ms.locfileid: "65673005"
+  ms.lasthandoff: 06/06/2022
+  ms.locfileid: "65906238"
 landingContent:
 - title: 'Microsoft Build 2022 '
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Collaboration améliorée avec Live Share SDK [Préversion du développeur]
+    - text: Collaboration améliorée avec le Kit de développement logiciel (SDK) Live Share [préversion développeur]
       url: apps-in-teams-meetings/teams-live-share-overview.md
+    - text: Mettre à jour les événements de conversation et d’installation dans votre bot Teams [préversion développeur]
+      url: bots/how-to/conversations/subscribe-to-conversation-events.md
     - text: Envoyer vos applications Outlook et Office dans le store Teams
       url: m365-apps/overview.md
     - text: Conseils sur les applications et nouveautés de la version 2.0.0 de TeamsJS
       url: tabs/how-to/using-teams-client-sdk.md
     - text: La version 4.0.0 du kit de ressources de Teams pour Visual Studio Code est désormais en disponibilité générale
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: Présentation du manifeste d’application version 1.13
+    - text: Introduction de la version 1.13 du manifeste d’application
       url: resources/schema/manifest-schema.md
     - text: Bots et extensions de message dans GCC et GCCH
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
@@ -39,9 +41,9 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: Démarrage avec la création d’applications
+    - text: Prise en main de la création d’applications
       url: ../msteams-platform/get-started/get-started-overview.md
-    - text: Démarrage avec GitHub
+    - text: Bien démarrer avec GitHub
       url: /contribute/additional-resources
     - text: Glossaire
       url: ~/get-started/glossary.md
@@ -53,7 +55,7 @@ landingContent:
       url: sbs-gs-javascript.yml
     - text: Créer votre première application à l’aide de Blazor
       url: sbs-gs-blazorupdate.yml
-    - text: Créer une application avec SPFx
+    - text: Générer une application avec SPFx
       url: sbs-gs-spfx.yml
     - text: Générer une application avec C# ou .NET
       url: sbs-gs-csharp.yml
@@ -121,7 +123,7 @@ landingContent:
     links:
     - text: Accorder des autorisations d’appareil d’onglet
       url: ~/sbs-tab-device-permissions.yml
-    - text: Créer Teams bot de conversation
+    - text: Créer un bot de conversation Teams
       url: ~/sbs-teams-conversation-bot.yml
     - text: Créer un bot d’appel et de réunion
       url: ~/sbs-calling-and-meeting.yml
@@ -143,7 +145,7 @@ landingContent:
       url: sbs-gs-commandbot.yml
     - text: Créer un bot de notification avec JavaScript
       url: sbs-gs-notificationbot.yml
-    - text: Télécharger fichiers à Teams à partir d’un bot
+    - text: Charger des fichiers dans Teams à partir d’un bot
       url: ~/sbs-file-handling-in-bot.yml
     - text: Générer une bulle de contenu de réunion
       url: ~/sbs-meeting-content-bubble.yml
@@ -159,15 +161,15 @@ landingContent:
       url: ~/sbs-botbuilder-linkunfurling.yml
     - text: Créer des connecteurs Teams
       url: ~/sbs-teams-connectors.yml
-- title: scénarios d’application Teams
+- title: Scénarios d’application Teams
   linkLists:
   - linkListType: reference
     links:
-    - text: Créer des scénarios pour Teams application
+    - text: Scénarios de génération pour l’application Teams
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Meilleures pratiques pour les scénarios d’application Teams
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
-    - text: Explorer les applications à code faible pour Teams
+    - text: Explorer les applications à faible code pour Teams
       url: ~/samples/teams-low-code-solutions.md
 - title: Publier et distribuer
   linkLists:
@@ -177,7 +179,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Téléchargez votre application dans Microsoft Teams
       url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Publier dans Teams Store
+    - text: Publier dans le Magasin Teams
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: Recommandations en matière de validation du Store
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md

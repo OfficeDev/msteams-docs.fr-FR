@@ -4,12 +4,12 @@ description: Décrit comment obtenir un jeton utilisateur. Actuellement, un dév
 keywords: jeton, jeton utilisateur, prise en charge de l’authentification unique pour les bots, autorisation, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887596"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906255"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Support de l'identification unique pour les robots
 
@@ -385,4 +385,4 @@ Ouvrez [Teams exemple d’authentification](https://github.com/microsoft/BotBuil
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 
-Suivez le [guide pas à pas](../../../sbs-bots-with-sso.yml), qui vous aide à créer un bot avec l’authentification unique activée.
+Suivez le [guide pas à pas](../../../sbs-bots-with-sso.yml) pour créer un bot avec l’authentification unique.
