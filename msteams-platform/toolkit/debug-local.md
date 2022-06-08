@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756631"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938960"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
@@ -22,7 +22,6 @@ Teams Shared Computer Toolkit vous permet de déboguer et de prévisualiser votr
 * [Recharge à chaud](#hot-reload)
 * [Arrêter le débogage](#stop-debugging)  
 
-
 Pendant le processus de débogage, Teams Toolkit démarre automatiquement les services de l'application, lance les débogueurs et met l'application Teams sur la touche. L'application Teams est disponible en avant-première dans le client web Teams en local après débogage. Vous pouvez également personnaliser les paramètres de débogage pour utiliser les points de terminaison de votre robot, le certificat de développement ou le composant de débogage partiel pour charger votre application configurée.
 
 ## <a name="prerequisite"></a>Conditions préalables
@@ -31,27 +30,29 @@ Pendant le processus de débogage, Teams Toolkit démarre automatiquement les se
 
 ## <a name="key-features-of-teams-toolkit"></a>Principales fonctionnalités de Teams Shared Computer Toolkit
 
-#### <a name="start-debugging"></a>Démarrer le débogage
+La liste suivante fournit les principales fonctionnalités du Kit de ressources Teams :
 
-Vous pouvez effectuer une seule opération, sélectionnez **F5** pour démarrer le débogage. Le Teams Shared Computer Toolkit commence à vérifier les conditions préalables, à inscrire Azure Active Directory application, à inscrire Teams application, à inscrire un bot, à démarrer des services et à lancer le navigateur.
+### <a name="start-debugging"></a>Démarrer le débogage
 
-#### <a name="multi-target-debugging"></a>Débogage multi-cibles
+Vous pouvez effectuer une seule opération, sélectionnez **F5** pour démarrer le débogage. Le Kit de ressources Teams commence à vérifier les prérequis, inscrit l’application Azure Active Directory, l’application Teams et inscrit le bot, démarre les services et lance le navigateur.
+
+### <a name="multi-target-debugging"></a>Débogage multi-cibles
 
 Teams Toolkit utilise la fonctionnalité de débogage multi-cible pour déboguer simultanément l’onglet, le bot, l’extension de message et Azure Functions.
 
-#### <a name="toggle-breakpoints"></a>Basculez les points d’arrêt.
+### <a name="toggle-breakpoints"></a>Basculez les points d’arrêt.
 
 Vous pouvez activer/désactiver les points d’arrêt sur les codes sources des onglets, des bots, des extensions de message et des Azure Functions. Les points d'arrêt s'exécutent lorsque vous interagissez avec l'application Teams dans un navigateur Web. L’image suivante montre les points d’arrêt bascule :
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="basculez les points d’arrêt":::.
 
-#### <a name="hot-reload"></a>Recharge à chaud
+### <a name="hot-reload"></a>Recharge à chaud
 
 Vous pouvez mettre à jour et enregistrer les codes sources de tabulation, de bot, d’extension de message et de Azure Functions en même temps que vous déboguez l’application Teams. L’application se recharge et le débogueur se rattache aux langages de programmation.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="recharge à chaud pour les codes sources":::
 
-#### <a name="stop-debugging"></a>Arrêter le débogage
+### <a name="stop-debugging"></a>Arrêter le débogage
 
 Lorsque vous avez terminé le débogage local, vous pouvez sélectionner **Arrêter** ou **Déconnecter** dans la barre d'outils de débogage flottante pour arrêter toutes les sessions de débogage et terminer les tâches. L'image suivante montre l'action d'arrêt du débogage :
 
@@ -59,14 +60,13 @@ Lorsque vous avez terminé le débogage local, vous pouvez sélectionner **Arrê
 
 ## <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
-#### <a name="1-set-up-your-teams-toolkit"></a>1. Configurer votre Teams Shared Computer Toolkit
+Les étapes suivantes vous aident à déboguer votre application Teams localement :
 
-Pour déboguer votre application après avoir créé une application à l’aide de la Teams Shared Computer Toolkit :
+### <a name="set-up-your-teams-toolkit"></a>1. Configurer votre Teams Shared Computer Toolkit
 
-<br>
+Effectuez les étapes suivantes pour déboguer votre application après avoir créé une nouvelle application à l'aide du Teams Toolkit :
 
-<details>
-<summary><b>Fenêtres</b></summary>
+# <a name="windows"></a>[Fenêtres](#tab/Windows)
 
 1. **Sélectionnez Déboguer Edge** **ou Déboguer Chrome** à partir des **paramètres Exécuter et Déboguer** dans la barre d’activité.
 
@@ -79,7 +79,6 @@ Pour déboguer votre application après avoir créé une application à l’aide
 3. Sélectionnez **Comptes** et connectez-vous à votre compte Microsoft 365.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Connexion" border="true":::
-
 
    > [!TIP]
    > Vous pouvez sélectionner **En savoir plus pour** en savoir plus sur Microsoft 365 programme pour les développeurs. Votre navigateur web par défaut s’ouvre pour vous laisser vous Microsoft 365 à l’aide de vos informations d’identification.
@@ -95,12 +94,9 @@ Pour déboguer votre application après avoir créé une application à l’aide
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Autorité de certification" border="true":::
 
-Shared Computer Toolkit lance une nouvelle instance de navigateur Edge ou Chrome en fonction de votre sélection et ouvre une page web pour charger Teams client.  
+Toolkit lance une nouvelle instance du navigateur Edge ou Chrome en fonction de votre sélection et ouvre une page web pour charger le client Teams.  
 
-</details>
-
-<details>
-<summary><b>MacOS</b></summary>
+# <a name="macos"></a>[MacOS](#tab/macOS)
 
 1. **Sélectionnez Déboguer Edge** **ou Déboguer Chrome** à partir des **paramètres Exécuter et Déboguer** dans la barre d’activité.
 
@@ -130,16 +126,16 @@ Shared Computer Toolkit lance une nouvelle instance de navigateur Edge ou Chrome
 
 Shared Computer Toolkit lance une nouvelle instance de navigateur Edge ou Chrome en fonction de votre sélection et ouvre une page web pour charger Teams client.
 
-</details>
+---
 
-#### <a name="2-debug-your-app"></a>2. Déboguer votre application
+### <a name="debug-your-app"></a>Déboguer votre application
 
 Après le processus de mise en place initial, le Teams Shared Computer Toolkit démarre les processus suivants :
 
-a. [Démarre les services d’application](#starts-app-services). </br>
-b. [Lance les débogueurs](#launches-debuggers).   </br>c. [Désactiver l'application Teams](#sideloads-the-teams-app)
-        
-#### <a name="starts-app-services"></a>Démarre les services d’application.
+<br>
+
+<details>
+<summary><b>Démarre les services d’application</b>.</summary>
 
 Exécute les tâches définies comme `.vscode/tasks.json` suit :
 
@@ -153,7 +149,9 @@ L’image suivante affiche les noms des tâches sous l’onglet **Sortie****Term
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Démarrer les services d’application":::
 
-#### <a name="launches-debuggers"></a>Lance les débogueurs
+</details>
+<details>
+<summary><b>Lance les débogueurs</b>.</summary>
 
 Lance les configurations de débogage définies comme `.vscode/launch.json` suit :
 
@@ -175,17 +173,21 @@ Le tableau suivant répertorie les noms et les types de configuration de déboga
 |  Bot ou extension de message  |   **Attacher au bot** |  pwa-node  |
 |  Azure Functions |  **Attacher au backend** |  pwa-node |
 
-#### <a name="sideloads-the-teams-app"></a>Désactiver l'application Teams
+</details>
+<details>
+<summary><b>Désactiver l'application Teams</b></summary>
 
-La configuration **Attacher au bot frontal** ou **de lancement** lance une nouvelle instance de navigateur Edge ou Chrome et ouvre une page web pour charger Teams client. Une fois le client Teams chargé, Teams charge une version de version de l’application Teams contrôlée par l’URL de chargement de version secondaire définie dans les configurations de lancement [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  Lorsque Teams client se charge dans le navigateur web, sélectionnez **Ajouter** ou sélectionner un client dans la liste de listes.
+La configuration **Attacher au bot frontal** ou **de lancement** lance une nouvelle instance de navigateur Edge ou Chrome et ouvre une page web pour charger Teams client. Une fois le client Teams chargé, Teams sideload l'application Teams contrôlée par l'URL sideload définie dans les configurations de lancement [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  Lorsque Teams client se charge dans le navigateur web, sélectionnez **Ajouter** ou sélectionner un client dans la liste de listes.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="débogage local" border="true":::
 
    Votre application est ajoutée à Teams !
 
+</details>
+
 ## <a name="customize-debug-settings"></a>Personnaliser les paramètres de débogage
 
-Teams Toolkit vous permet de personnaliser les paramètres de débogage pour créer votre onglet ou votre bot en décochant certains prérequis :
+Teams Toolkit supprime certains prérequis et vous permet de personnaliser les paramètres de débogage pour créer votre onglet ou votre robot :
 
 <br>
 
@@ -194,7 +196,7 @@ Teams Toolkit vous permet de personnaliser les paramètres de débogage pour cr�
 
 1. Dans Visual Studio Code paramètres, **assurez-vous que Ngrok est installé et démarré (ngrok).**
 
-1. Définissez la configuration de point de terminaison dans `.fx/configs/config.local.json` sur votre point de terminaison.
+1. Définissez `siteEndpoint`la configuration`.fx/configs/config.local.json` de votre point de terminaison.
 
 ```json
 {
@@ -249,13 +251,12 @@ Teams Toolkit vous permet de personnaliser les paramètres de débogage pour cr�
 Vous pouvez ajouter des variables d’environnement à `.env.teamsfx.local` fichier pour l’onglet, le bot, l’extension de message et Azure Functions. Teams Shared Computer Toolkit charge les variables d’environnement que vous avez ajoutées pour démarrer les services pendant le débogage local.
 
  > [!NOTE]
- > Assurez-vous de démarrer un nouveau débogage local après avoir ajouté de nouvelles variables d'environnement, car les variables d'environnement ne supportent pas le rechargement à chaud.
+ > Assurez-vous de démarrer un nouveau débogage local après avoir ajouté de nouvelles variables d'environnement, car celles-ci ne prennent pas en charge le rechargement à chaud.
 
 </details>
 
 <details>
 <summary><b>Débogage d’un composant partiel</b></summary>
-
 
 Teams Toolkit utilise Visual Studio Code débogage multi-cible pour déboguer simultanément l’onglet, le bot, l’extension de message et Azure Functions. Vous pouvez mettre à jour `.vscode/launch.json` et `.vscode/tasks.json` déboguer un composant partiel. Si vous souhaitez déboguer l'onglet uniquement dans un projet tab plus bot avec Azure Functions, utilisez les étapes suivantes :
 
