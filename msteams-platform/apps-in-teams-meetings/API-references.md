@@ -1,16 +1,16 @@
 ---
 title: Références API des applications de réunion
 author: surbhigupta
-description: Identifiez les références d’API d’applications de réunion avec des exemples et des exemples de code, les applications Teams rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle de participant utilisateur.
+description: Identifiez les références d’API d’applications de réunion avec des exemples et des exemples de code, Teams applications rencontrent la requête de signal de notification de contexte utilisateur de l’API de rôle de participant utilisateur.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887575"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032787"
 ---
 # <a name="meeting-apps-api-references"></a>Références API des applications de réunion
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nom de la propriété | Objectif |
 |---|---|
 | **user.id** | ID de l’utilisateur. |
-| **user.aadObjectId** | ID d’objet Azure Active Directory de l’utilisateur. |
+| **user.aadObjectId** | Azure Active Directory ID d’objet de l’utilisateur. |
 | **user.name** | Nom de l'utilisateur. |
 | **user.givenName** | Prénom de l’utilisateur.|
 | **user.surname** | Nom de l’utilisateur. |
@@ -406,7 +406,7 @@ Le corps de la réponse JSON pour l’API Détails de la réunion est le suivant
 | Nom de la propriété | Objectif |
 |---|---|
 | **details.id** | ID de la réunion, encodé sous forme de chaîne BASE64. |
-| **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels d’API Graph MS. |
+| **details.msGraphResourceId** | MsGraphResourceId, utilisé spécifiquement pour les appels API Graph MS. |
 | **details.scheduledStartTime** | Heure de début planifiée de la réunion, au format UTC. |
 | **details.scheduledEndTime** | Heure de fin planifiée de la réunion, au format UTC. |
 | **details.joinUrl** | URL utilisée pour rejoindre la réunion. |
@@ -540,7 +540,7 @@ Le tableau suivant présente les codes de réponse :
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>Obtenir l’API d’état de partage de l’étape de contenu de l’API
 
-L’API `getAppContentStageSharingState` vous permet d’extraire des informations sur le partage des applications lors de la phase de réunion.
+L’API `getAppContentStageSharingState` vous permet d’extraire des informations sur le partage des applications lors de la phase de réunion pour mobile et bureau.
 
 ### <a name="query-parameter"></a>Paramètre de requête
 
@@ -819,7 +819,7 @@ Le code suivant fournit un exemple de charge utile d’événement de fin de ré
 | **from.id** | Identification de l'utilisateur qui a envoyé la demande. |
 | **from.aadObjectId** | Identification de l'objet Azure Active Directory de l'utilisateur qui a envoyé la demande. |
 | **conversation.isGroup** | Valeur booléenne indiquant si la conversation a plus de deux participants. |
-| **conversation.tenantId** | ID de locataire Azure Active Directory de la conversation ou de la réunion. |
+| **conversation.tenantId** | Azure Active Directory ID de locataire de la conversation ou de la réunion. |
 | **conversation.id** | ID de conversation de réunion. |
 | **recipient.id** | ID de l’utilisateur qui reçoit la demande. |
 | **recipient.name** | Nom de l’utilisateur qui reçoit la demande. |

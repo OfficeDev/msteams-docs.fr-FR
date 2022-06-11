@@ -5,12 +5,12 @@ keywords: teams message extensions message extensions search
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 13915bc3e67f6d5789fe9e977f6579a05a010542
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104398"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032941"
 ---
 # <a name="search-with-message-extensions"></a>Rechercher avec des extensions de message
 
@@ -130,13 +130,13 @@ En plus des propriétés standard de l’activité du bot, la charge utile conti
 |Nom de la propriété|Objectif|
 |---|---|
 |`type`| Type de requête ; doit être `invoke`. |
-|`name`| Type de commande émis pour votre service. Actuellement, les types suivants sont pris en charge : <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
-|`from.id`| ID de l’utilisateur qui a envoyé la demande. |
-|`from.name`| Nom de l’utilisateur qui a envoyé la demande. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) iD d’objet de l’utilisateur qui a envoyé la demande. |
+|`name`| Type de commande qui est émise à votre service. Actuellement, les types suivants sont pris en charge : <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
+|`from.id`| Identification de l'utilisateur qui a envoyé la demande. |
+|`from.name`| Nom de l'utilisateur qui a envoyé la demande. |
+|`from.aadObjectId`| Microsoft Azure Active Directory ID d’objet (Azure AD) de l’utilisateur qui a envoyé la demande. |
 |`channelData.tenant.id`| ID de locataire Microsoft Azure Active Directory (Azure AD). |
-|`channelData.channel.id`| ID de canal (si la demande a été effectuée dans un canal). |
-|`channelData.team.id`| ID d’équipe (si la demande a été effectuée dans un canal). |
+|`channelData.channel.id`| Identification du canal (si la demande a été faite dans un canal). |
+|`channelData.team.id`| Identification de l'équipe (si la demande a été faite dans un canal). |
 |`clientInfo`|Métadonnées facultatives sur le logiciel client utilisé pour envoyer le message d’un utilisateur. L’entité peut contenir deux propriétés :<br>Le `country` champ contient l’emplacement détecté par l’utilisateur.<br>Le `platform` champ décrit la plateforme cliente de messagerie. <br>Pour plus d’informations, *consultez* [les types d’entités non IRI ( clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)).|
 
 Les paramètres de requête lui-même se trouvent dans l’objet value, qui inclut les propriétés suivantes :
@@ -197,7 +197,7 @@ Les paramètres de requête lui-même se trouvent dans l’objet value, qui incl
 
 En guise d’alternative (ou en plus) à la recherche de votre service externe, vous pouvez utiliser une URL insérée dans la boîte de message de composition pour interroger votre service et retourner une carte. Dans la capture d’écran ci-dessous, un utilisateur a collé une URL pour un élément de travail dans Azure DevOps que l’extension de message a résolue dans une carte.
 
-![Exemple de déploiement de liens](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![Exemple de déploiement de lien](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 Pour permettre à votre extension de message d’interagir avec les liens de cette façon, vous devez d’abord ajouter le `messageHandlers` tableau au manifeste de votre application, comme dans l’exemple ci-dessous :
 
@@ -242,7 +242,7 @@ Votre service doit répondre avec les résultats correspondant à la requête ut
 |Nom de la propriété|Objectif|
 |---|---|
 |`composeExtension`|Enveloppe de réponse de niveau supérieur.|
-|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche la liste des résultats de la recherche <br>`auth`: demande à l’utilisateur de s’authentifier <br>`config`: demande à l’utilisateur de configurer l’extension de message <br>`message` : affiche un message en texte brut. |
+|`composeExtension.type`|Type de réponse. Les types suivants sont pris en charge : <br>`result`: affiche la liste des résultats de la recherche <br>`auth`: invite l’utilisateur à s’authentifier <br>`config`: invite l’utilisateur à configurer l’extension de message <br>`message` : affiche un message en texte brut. |
 |`composeExtension.attachmentLayout`|Spécifie la disposition des pièces jointes. Utilisé pour les réponses de type `result`. <br>Actuellement, les types suivants sont pris en charge : <br>`list`: liste d’objets de carte contenant des champs miniature, titre et texte <br>`grid`: grille d’images miniatures |
 |`composeExtension.attachments`|Tableau d’objets pièce jointe valides. Utilisé pour les réponses de type `result`. <br>Actuellement, les types suivants sont pris en charge : <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Actions suggérées. Utilisé pour les réponses de type `auth` ou `config`. |
@@ -486,13 +486,13 @@ Pour inviter un utilisateur non authentifié à se connecter, répondez avec une
 ```
 
 > [!NOTE]
-> Pour que l’expérience de connexion soit hébergée dans une fenêtre contextuelle Teams, la partie domaine de l’URL doit figurer dans la liste des domaines valides de votre application. Pour plus d’informations, consultez [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma de manifeste.
+> Pour que l’expérience de connexion soit hébergée dans une fenêtre contextuelle Teams, la partie domaine de l’URL doit figurer dans la liste des domaines valides de votre application. Pour plus d’informations, consultez [validDomains](~/resources/schema/manifest-schema.md#validdomains) dans le schéma du manifeste.
 
 ### <a name="start-the-sign-in-flow"></a>Démarrer le flux de connexion
 
-Votre expérience de connexion doit être réactive et tenir dans une fenêtre contextuelle. Il doit s’intégrer au [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client), qui utilise la transmission de messages.
+Votre expérience de connexion doit être réactive et tenir dans une fenêtre contextuelle. Il doit s’intégrer au [kit de développement logiciel (SDK) client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client), qui utilise la transmission de messages.
 
-Comme avec d’autres expériences incorporées s’exécutant dans Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler `microsoftTeams.initialize()`. Si votre code exécute un flux OAuth, vous pouvez passer l’ID d’utilisateur Teams dans votre fenêtre, qui peut ensuite le passer à l’URL de connexion OAuth.
+Comme pour les autres expériences incorporées s’exécutant dans Microsoft Teams, votre code à l’intérieur de la fenêtre doit d’abord appeler `microsoftTeams.initialize()`. Si votre code exécute un flux OAuth, vous pouvez passer l’ID d’utilisateur Teams dans votre fenêtre, qui peut ensuite le passer à l’URL de connexion OAuth.
 
 ### <a name="complete-the-sign-in-flow"></a>Terminer le flux de connexion
 
@@ -501,9 +501,9 @@ Une fois la demande de connexion terminée et redirigée vers votre page, elle d
 1. Générez un code de sécurité. (Il peut s’agir d’un nombre aléatoire.) Vous devez mettre en cache ce code sur votre service, ainsi que les informations d’identification obtenues via le flux de connexion, tels que les jetons OAuth 2.0.
 2. Appelez `microsoftTeams.authentication.notifySuccess` et transmettez le code de sécurité.
 
-À ce stade, la fenêtre se ferme et le contrôle est passé au client Teams. Le client peut maintenant réexécuter la requête utilisateur d’origine, ainsi que le code de sécurité dans la `state` propriété. Votre code peut utiliser le code de sécurité pour rechercher les informations d’identification stockées précédemment pour terminer la séquence d’authentification, puis terminer la demande de l’utilisateur.
+À ce stade, la fenêtre se ferme et le contrôle est passé au client Teams. Le client peut maintenant réexécuter la requête utilisateur d’origine, ainsi que le code de sécurité dans la `state` propriété. Votre code peut utiliser le code de sécurité pour rechercher les informations d’identification stockées précédemment afin de terminer la séquence d’authentification, puis la requête de l’utilisateur.
 
-#### <a name="reissued-request-example"></a>Exemple de demande rééditée
+#### <a name="reissued-request-example"></a>Exemple de nouvelle publication de requête
 
 ```json
 {
@@ -660,4 +660,4 @@ app.run();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemples Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Exemples Bot Framework](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

@@ -5,12 +5,12 @@ description: Découvrez comment déployer un lien, ouvrir la vue des étapes et 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756736"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033035"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Déploiement du lien des onglets et vue des étapes
 
@@ -87,7 +87,7 @@ Voici le processus d’appel de la vue d’étape :
 * Le robot répond avec un `200` code.
 
 > [!NOTE]
-> Sur les clients mobiles de Teams, l'invocation de l’Affichage étendu pour les applications distribuées par le [magasin Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur web par défaut de l'appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo`.
+> Sur les clients mobiles de Teams, l'invocation de l’Affichage étendu pour les applications distribuées par le [magasin Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) et ne disposant pas d'une expérience optimisée pour les mobiles ouvre le navigateur web par défaut de l'appareil. Le navigateur ouvre l’URL spécifiée dans le paramètre `websiteUrl` de l’objet `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invoquer la vue des étapes par le biais d'un lien profond
 

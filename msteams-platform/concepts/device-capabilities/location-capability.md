@@ -6,12 +6,12 @@ keywords: capacités de la carte de localisation autorisations pour les appareil
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757170"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033049"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement
 
@@ -58,7 +58,7 @@ Vous devez utiliser l'ensemble des API suivantes pour activer les capacités de 
 |[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Affiche l’emplacement sur la carte. |
 
 > [!NOTE]
-> L'`getLocation()`API s'accompagne des configurations[ d'entrée suivantes](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation`et`showMap`.<br/> Si la valeur de `allowChooseLocation`est *vraie*, alors les utilisateurs peuvent choisir l'emplacement de leur choix.<br/>  Si la valeur est *false*, les utilisateurs ne peuvent pas modifier leur emplacement actuel.<br/> Si la valeur est `showMap` *faux*, l’emplacement actuel est extrait sans afficher la carte. `showMap` est ignorée si `allowChooseLocation`elle est définie à *vrai*.
+> L'`getLocation()`API s'accompagne des configurations[ d'entrée suivantes](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops), `allowChooseLocation`et`showMap`.<br/> Si la valeur de `allowChooseLocation`est *vraie*, alors les utilisateurs peuvent choisir l'emplacement de leur choix.<br/>  Si la valeur est *false*, les utilisateurs ne peuvent pas modifier leur emplacement actuel.<br/> Si la valeur est `showMap` *faux*, l’emplacement actuel est extrait sans afficher la carte. `showMap` est ignorée si `allowChooseLocation`elle est définie à *vrai*.
 
 L'image suivante montre l'expérience de l'application web en matière de localisation :
 

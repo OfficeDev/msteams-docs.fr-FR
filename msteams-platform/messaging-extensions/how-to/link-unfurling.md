@@ -5,25 +5,25 @@ description: Découvrez comment ajouter un déploiement de lien avec l’extensi
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297183"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032972"
 ---
 # <a name="link-unfurling"></a>Déploiement de lien
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Ce document vous guide sur la façon d’ajouter un déploiement de lien à votre manifeste d’application à l’aide d’App Studio et manuellement. Avec le déploiement de liens, votre application peut s’inscrire pour recevoir une activité de `invoke` lorsque les URL d’un domaine particulier sont collées dans la zone de composition des messages. `invoke` contient l’URL complète, qui a été collée dans la zone de rédaction du message. Vous pouvez répondre à l’aide d’une carte que l’utilisateur peut déployer, et qui fournit des informations ou des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l’URL servant de terme de recherche.
+Ce document vous guide sur la façon d’ajouter un déploiement de lien à votre manifeste d’application à l’aide d’App Studio ou manuellement. Avec le déploiement de liens, votre application peut s’inscrire pour recevoir une activité de `invoke` lorsque les URL d’un domaine particulier sont collées dans la zone de composition des messages. Contient `invoke` l’URL complète collée dans la zone de message de composition. Vous pouvez répondre avec une carte que l’utilisateur peut déployer pour obtenir des informations ou des actions supplémentaires. Cela fonctionne comme une commande de recherche avec l’URL comme terme de recherche.
 
 > [!NOTE]
 >
 > * Actuellement, le déploiement de liens n’est pas pris en charge sur les clients mobiles.
 > * Le résultat du déploiement du lien est mis en cache pendant 30 minutes.
 
-L’extension de message Azure DevOps utilise le déploiement de liens pour rechercher les URL collées dans la zone de message de composition pointant vers un élément de travail. Dans l’image suivante, un utilisateur a collé une URL pour un élément de travail dans Azure DevOps, que l’extension de message a résolue dans une carte :
+L’extension de message Azure DevOps utilise le déploiement de liens pour rechercher les URL collées dans la zone de message de composition pointant vers un élément de travail. Dans l’image suivante, un utilisateur a collé une URL pour un élément dans Azure DevOps que l’extension de message a résolue dans une carte :
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemple de déploiement de lien":::
 
@@ -32,7 +32,7 @@ L’extension de message Azure DevOps utilise le déploiement de liens pour rech
 Pour ajouter un déploiement de lien à votre manifeste d’application, ajoutez un nouveau tableau `messageHandlers` à la section `composeExtensions` de votre manifeste d’application JSON. Vous pouvez ajouter le tableau à l’aide d’App Studio ou manuellement. Les listes de domaines peuvent inclure des caractères génériques, par exemple `*.example.com`. Cela correspond exactement à un segment du domaine, si vous devez faire correspondre `a.b.example.com`, puis utilisez `*.*.example.com`.
 
 > [!NOTE]
-> N’ajoutez pas de domaines qui sont en dehors de votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. En outre, les domaines de niveau supérieur sont interdits. Par exemple, `*.com`, `*.org`.
+> N’ajoutez pas de domaines qui ne sont pas dans votre contrôle, directement ou par le biais de caractères génériques. Par exemple, `yourapp.onmicrosoft.com` est valide, mais `*.onmicrosoft.com` n’est pas valide. Les domaines de niveau supérieur sont interdits, par exemple, `*.com``*.org`.
 
 ### <a name="add-link-unfurling-using-app-studio"></a>Ajouter un déploiement de lien à l’aide d’App Studio
 
@@ -43,6 +43,9 @@ Pour ajouter un déploiement de lien à votre manifeste d’application, ajoutez
     :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="Section gestionnaires de messages dans App Studio":::
 
 ### <a name="add-link-unfurling-manually"></a>Ajouter le déploiement manuel du lien
+
+> [!NOTE]
+> Si l’authentification est ajoutée via Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 Pour permettre à votre extension de message d’interagir avec des liens, vous devez d’abord ajouter le tableau `messageHandlers` au manifeste de votre application. L’exemple suivant explique comment ajouter manuellement un déploiement de lien :
 

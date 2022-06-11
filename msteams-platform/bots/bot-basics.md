@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: événement de canal de consentement de la carte de bot du gestionnaire d’activités
-ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757429"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032920"
 ---
 # <a name="bot-activity-handlers"></a>Gestionnaire d'activité du robot
 
@@ -24,6 +24,9 @@ Pour organiser la logique conversationnelle de votre bot, un gestionnaire d’ac
 Teams gestionnaire d’activités est dérivé du gestionnaire d’activités de Microsoft Bot Framework. Il achemine toutes les activités Teams avant d’autoriser la gestion des activités non Teams spécifiques.
 
 Lorsqu’un bot pour Teams reçoit une activité, il est routée vers les gestionnaires d’activités. Toutes les activités sont routées via un gestionnaire de base appelé gestionnaire de tour. Le gestionnaire de tours appelle le gestionnaire d’activités requis pour gérer le type d’activité reçu. Le bot Teams est dérivé de la `TeamsActivityHandler` classe, qui est dérivée de la classe bot `ActivityHandler` framework.
+
+> [!NOTE]
+> Si le traitement de l’activité du bot prend plus de 15 secondes, Teams envoyer une demande de nouvelle tentative au point de terminaison du bot. Par conséquent, vous verrez des demandes en double dans votre bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 

@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611461"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033014"
 ---
 # <a name="messages-in-bot-conversations"></a>Messages dans les conversations des robots
 
@@ -335,7 +335,7 @@ Les images sont envoyées en ajoutant des pièces jointes à un message. Pour pl
 
 Les images peuvent avoir au maximum 1 024×1 024 Mo et 1 Mo au format PNG, JPEG ou GIF. Le GIF animé n’est pas pris en charge.
 
-Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
+Spécifiez la hauteur et la largeur de chaque image à l’aide de XML. Dans Markdown, la taille par défaut de l’image est 256×256. Par exemple :
 
 * Utiliser : `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * N’utilisez pas : `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -382,13 +382,31 @@ Le message d’achèvement du formulaire s’affiche dans les cartes adaptatives
 
 * **Réussite** : lorsqu’une réponse envoyée au bot réussit, **votre réponse a été envoyée au message d’application** .
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Message de réussite"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="Message de réussite"border="true":::
 
-Vous pouvez sélectionner **Fermer** ou changer de conversation pour ignorer le message.
+     Vous pouvez sélectionner **Fermer** ou changer de conversation pour ignorer le message.
 
-**Réponse sur mobile** :
-
-Le message d’erreur s’affiche en bas de la carte adaptative.
+     Si vous ne souhaitez pas afficher le message de réussite, définissez l’attribut `hide` `true` sur la `msTeams` `feedback` propriété. Voici un exemple :
+    
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+    
 
 Pour plus d’informations sur les cartes et les cartes dans les bots, consultez la documentation sur les [cartes](~/task-modules-and-cards/what-are-cards.md).
 

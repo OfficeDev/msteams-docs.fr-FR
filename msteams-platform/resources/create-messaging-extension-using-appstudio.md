@@ -5,17 +5,17 @@ description: Découvrez comment créer une extension de messagerie Microsoft Tea
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 78c36a3adc711b4aeedc72fb6131d61b4df0c5fd
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887848"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032780"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>Créer une extension de messagerie à l’aide de App Studio
 
 > [!TIP]
-> Vous cherchez un moyen plus rapide de commencer ? Créez une [extension de messagerie à](../build-your-first-app/build-messaging-extension.md) l’aide du Kit de ressources Microsoft Teams.
+> Vous cherchez un moyen plus rapide de commencer ? Créez une [extension de messagerie à](../build-your-first-app/build-messaging-extension.md) l’aide du kit de ressources Microsoft Teams.
 
 À un niveau élevé, vous devez effectuer les étapes suivantes pour créer une extension de messagerie.
 
@@ -27,7 +27,7 @@ ms.locfileid: "65887848"
 
 La création de votre service web, la création de votre package d’application et l’inscription de votre service web auprès de Bot Framework peuvent être effectuées dans n’importe quel ordre. Étant donné que ces trois pièces sont si liées, quel que soit l’ordre dans lequel vous les faites, vous aurez besoin de revenir pour mettre à jour les autres. Votre inscription a besoin du point de terminaison de messagerie de votre service web déployé, et votre service web a besoin de l’ID et du mot de passe créés à partir de votre inscription. Votre manifeste d’application a également besoin de cet ID pour connecter Teams à votre service web.
 
-Lorsque vous créez votre extension de messagerie, vous passez régulièrement de la modification du manifeste de votre application au déploiement du code sur votre service web. Lorsque vous utilisez le manifeste de l’application, gardez à l’esprit que vous pouvez manipuler manuellement le fichier JSON ou apporter des modifications via App Studio. Dans les deux cas, vous devez redéployer (charger) votre application dans Teams lorsque vous apportez une modification au manifeste, mais il n’est pas nécessaire de le faire lorsque vous déployez des modifications sur votre service web.
+Lorsque vous créez votre extension de messagerie, vous passez régulièrement de la modification du manifeste de votre application au déploiement du code sur votre service web. Lorsque vous utilisez le manifeste de l’application, vérifiez que vous pouvez modifier manuellement le fichier JSON ou apporter des modifications via App Studio. Dans les deux cas, vous devez redéployer (charger) votre application dans Teams lorsque vous apportez une modification au manifeste, mais il n’est pas nécessaire de le faire lorsque vous déployez des modifications sur votre service web.
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
@@ -37,7 +37,7 @@ Le cœur de votre extension de messagerie est votre service web. Il définit un 
 
 * Utilisez l’un de nos didacticiels de [démarrage rapide](#learn-more) qui vous guideront tout au long de la création de votre service web.
 * Choisissez l’un des exemples d’extension de messagerie disponibles dans le [référentiel d’exemples Bot Framework](https://github.com/Microsoft/BotBuilder-Samples) à partir duquel commencer.
-* Si vous utilisez JavaScript, utilisez le [générateur Yeoman pour Microsoft Teams pour](https://github.com/OfficeDev/generator-teams) structurer votre application Teams, y compris votre service web.
+* Si vous utilisez JavaScript, utilisez le [générateur Yeoman pour Microsoft Teams](https://github.com/OfficeDev/generator-teams) pour structurer votre application Teams, y compris votre service web.
 * Créez votre service web de toutes pièces. Vous pouvez choisir d’ajouter le kit de développement logiciel (SDK) Bot Framework pour votre langue. Vous pouvez également travailler directement avec les charges utiles JSON.
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Inscrivez votre service web à l’aide de Bot Framework
@@ -84,8 +84,8 @@ La définition d’extension est un objet qui a la structure suivante :
 
 | Nom de la propriété | Objectif | Obligatoire ? |
 |---|---|---|
-| `botId` | ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Cela doit généralement être identique à l’ID de votre application Teams globale. | Oui |
-| `canUpdateConfiguration` | Active l’élément **de menu Paramètres** . | Non |
+| `botId` | ID d’application Microsoft unique pour le bot inscrit dans le Bot Framework. Cela doit généralement être le même que l’ID de votre application Teams globale. | Oui |
+| `canUpdateConfiguration` | Active **Paramètres** élément de menu. | Non |
 | `commands` | Tableau de commandes prises en charge par cette extension de messagerie. Vous êtes limité à 10 commandes. | Oui |
 
 #### <a name="define-your-commands"></a>Définir vos commandes
@@ -232,7 +232,7 @@ Lorsque vos utilisateurs déclenchent votre extension de messagerie, vous devez 
 > [!NOTE]
 > Si une réunion ou une conversation de groupe a fédéré des utilisateurs dans la liste, Teams supprime l’accès aux extensions de messagerie pour tous les utilisateurs, y compris l’organisateur.
 
-Une fois qu’une réunion commence, les participants à Teams peuvent interagir directement avec votre extension de messagerie pendant un appel en direct. Tenez compte des éléments suivants lors de la création de votre extension de messagerie en réunion :
+Une fois qu’une réunion commence, Teams participants peuvent interagir directement avec votre extension de messagerie pendant un appel en direct. Tenez compte des éléments suivants lors de la création de votre extension de messagerie en réunion :
 
 1. **Emplacement :** Votre extension de messagerie peut être appelée à partir de la zone de composition du message, de la zone de commande ou @mentioned dans la conversation de réunion.
 
@@ -248,7 +248,7 @@ Une fois qu’une réunion commence, les participants à Teams peuvent interagir
 * [Créer les commandes de recherche](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Déploiement de lien](~/messaging-extensions/how-to/link-unfurling.md)
 
-## <a name="learn-more"></a>En savoir plus
+## <a name="learn-more"></a>Si vous souhaitez en savoir plus
 
 Essayez-le dans un guide de démarrage rapide :
 
@@ -259,7 +259,7 @@ Essayez-le dans un guide de démarrage rapide :
   * [Extension de messagerie avec des commandes basées sur des actions](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [Extension de messagerie avec des commandes basées sur la recherche](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-En savoir plus sur les concepts de développement Teams :
+En savoir plus sur Teams concepts de développement :
 
 * [Comprendre les fonctionnalités de l’application Teams](../concepts/capabilities-overview.md)
 * [Que sont les extensions de messagerie ?](../messaging-extensions/what-are-messaging-extensions.md)

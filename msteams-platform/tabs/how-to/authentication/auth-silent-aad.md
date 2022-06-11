@@ -4,17 +4,17 @@ description: Décrit l’authentification silencieuse, l’authentification uniq
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Onglet Azure AD silencieux de l’authentification unique Teams
-ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887792"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033021"
 ---
 # <a name="silent-authentication"></a>Authentification en mode silencieux
 
 > [!IMPORTANT]
-> Le support et le développement Microsoft pour la bibliothèque d’authentification Active Directory (ADAL), y compris les correctifs de sécurité, se terminent le **30 juin 2022**. Mettez à jour vos applications pour utiliser la bibliothèque d’authentification Microsoft (MSAL) pour continuer à bénéficier du support. Consultez [Migrer des applications vers la bibliothèque d’authentification Microsoft (MSAL)](/azure/active-directory/develop/msal-migration).
+> Le support et le développement Microsoft pour la bibliothèque d’authentification Active Directory (ADAL), y compris les correctifs de sécurité, se terminent le **30 juin 2022**. Pour continuer à recevoir du support, mettez à jour vos applications pour utiliser la bibliothèque d’authentification Microsoft (MSAL). Consultez [Migrer des applications vers la bibliothèque d’authentification Microsoft (MSAL).](/azure/active-directory/develop/msal-migration)
 
 > [!NOTE]
 > Pour que l’authentification fonctionne pour votre onglet sur les clients mobiles, assurez-vous que vous utilisez le Kit de développement logiciel (SDK) JavaScript Teams version 1.4.1 ou ultérieure.

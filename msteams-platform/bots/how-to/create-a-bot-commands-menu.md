@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: '@mention de conversation de composition de message dans le menu commande'
-ms.openlocfilehash: 6d61b7566dd0dcb25fae94bf43f2f19bd219e9b0
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938939"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032961"
 ---
 # <a name="bot-command-menus"></a>Menus de commandes du bot
 
@@ -21,11 +21,11 @@ Pour définir un ensemble de commandes principales auxquelles votre bot peut ré
 
 # <a name="desktop"></a>[Imprimante de bureau](#tab/desktop)
 
-![Menu commande bot](./conversations/media/bot-menu-sample.png)
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
 # <a name="mobile"></a>[Mobile](#tab/mobile)
 
-![Menu de commande du bot mobile](./conversations/media/mobile-bot-menu-sample.png)
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
 * * *
 
@@ -40,11 +40,11 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 **Pour créer un menu de commandes pour votre bot à l’aide d’App Studio**
 
 1. Ouvrez Teams et sélectionnez **Apps** dans le volet gauche. Dans la page **applications**, recherchez **App Studio**, puis sélectionnez **Ouvrir**.
-    
+
    > [!WARNING]
    > Si vous utilisez App Studio, nous vous recommandons d’essayer le Developer Portal pour configurer, distribuer et gérer vos applications Teams. App Studio sera déconseillé d’ici le 30 juin 2022
 
-   :::image type="content" source="/media/AppStudio.png" alt-text="l’installation d’app studio"lightbox="media/AppStudio.png"border="true":::
+   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
 2. Dans **App Studio**, sélectionnez l’onglet de **Éditeur de manifeste**. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, voir [Mettre à jour un package d’application](~/get-started/deploy-csharp-app-studio.md).
 
@@ -52,7 +52,7 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 
 4. Dans le volet droit de **Éditeur de manifeste** et dans la section **commandes**, sélectionnez **Ajouter**. L’écran **Nouvelle commande** s’affiche.
 
-    :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="Sélectionnez le package d’application"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
+   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="Sélectionnez le package d’application" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
 
 5. Entrez le **texte de la commande** qui doit apparaître comme menu de commande pour votre bot.
 
@@ -60,7 +60,7 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 
 7. Activez les cases à cocher **Étendue** pour sélectionner l’emplacement où ce menu de commandes doit apparaître, puis sélectionnez **Enregistrer**.
 
-:::image type="content" source="/media/AppStudio-NewCommandMenu.png" alt-text="bouton de menu Nouvelles commandes App Studio"lightbox="/media/AppStudio-NewCommandMenu.png"border="true":::
+   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="Bouton de menu Nouvelles commandes d’App Studio "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Créer un menu de commandes pour votre bot en modifiant Manifest.json
 
