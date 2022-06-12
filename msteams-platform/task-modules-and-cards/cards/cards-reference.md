@@ -4,12 +4,12 @@ description: Décrit toutes les cartes et actions de carte disponibles pour les 
 ms.localizationpriority: high
 keywords: référence des cartes de bots
 ms.topic: reference
-ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757198"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032988"
 ---
 # <a name="types-of-cards"></a>Types de cartes
 
@@ -21,13 +21,15 @@ Avant d’identifier les différents types de cartes, sachez comment créer une 
 
 Pour créer une carte de bannière, une carte miniature ou une carte adaptative à partir d’App Studio :
 
-1. Accédez à **App Studio** depuis Teams.
-1. Sélectionnez **Éditeur de carte**.
-1. Sélectionnez **Créer une carte**.
-1. Sélectionnez **Créer** pour l’une des cartes parmi la **carte de bannière**, la **carte miniature** ou la **carte adaptative**. Les détails des métadonnées, les boutons et les exemples de code json, csharp et node sont affichés pour cette carte.
+1. Accédez au [portail des développeurs pour Teams](https://dev.teams.microsoft.com/home).
+1. Sélectionnez **Concevoir et générer des cartes adaptatives**.
+1. Sélectionnez **Nouvelle carte**.
+1. Entrez le nom de la carte, puis sélectionnez **Enregistrer**.
+1. Sélectionnez l’une des cartes à partir d’une **carte de bannière**, d’une **carte miniature** ou d’une **carte adaptative**.
 
-    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Détails de la carte de bannière":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. Sélectionnez **Enregistrer**.
 1. Sélectionnez **M’envoyer cette carte**. La carte vous est envoyée en tant que message de conversation.
 
 ## <a name="card-examples"></a>Exemples de carte

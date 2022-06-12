@@ -4,20 +4,21 @@ description: Décrit le schéma du manifeste pour Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 keywords: schéma du manifeste teams
-ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887834"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032930"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
 Le manifeste de l’application Microsoft Teams décrit comment votre application s’intègre au produit Microsoft Teams. Votre manifeste d’application doit être conforme au schéma hébergé sur [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) . Les versions précédentes 1.0, 1.1,...,1.12 et la version actuelle 1.13 (voir la remarque ci-dessous) sont toutes prises en charge (à l’aide de « v1.x » dans l’URL).
 Pour plus d’informations sur les modifications apportées dans chaque version, voir [le journal des modifications du manifeste.](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
 
-> [!Important]
-> La version `1.13` du schéma de manifeste d’application Microsoft Teams permet de prendre en charge [l’extension des applications Teams à Outlook et Office](../../m365-apps/overview.md). Pour les applications Teams uniquement, utilisez la version (ou une version `1.12` antérieure). Les schémas 1.12 et 1.13 sont sinon les mêmes. Pour plus d'informations, reportez-vous à la vue d’ensemble du [Kit de développement logiciel (SDK) du client JavaScript de Teams](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
+Le tableau suivant répertorie les versions teamsJS et les versions du manifeste d’application en fonction des différents scénarios d’application :
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 L’exemple de schéma suivant montre toutes les options d’extensibilité :
 
@@ -593,6 +594,9 @@ Un tableau de `string`, qui spécifie les permissions demandées par l'applicati
 * `messageTeamMembers` &emsp;Nécessite l’autorisation d’envoyer des messages directs aux membres de l’équipe.
 
 Si vous modifiez ces autorisations pendant la mise à jour de l'application, vos utilisateurs devront répéter le processus de consentement après avoir exécuté l'application mise à jour. Pour plus d'informations, voir [mise à jour de votre application](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
+
+> [!NOTE]
+> Les autorisations sont désormais déconseillées.
 
 ## <a name="devicepermissions"></a>devicePermissions
 

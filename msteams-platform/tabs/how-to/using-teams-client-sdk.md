@@ -6,12 +6,12 @@ description: Vue d’ensemble du Kit de développement logiciel (SDK) client Jav
 ms.localizationpriority: high
 keywords: onglets teams , canal de groupe configurable SDK statique JavaScript personnel m365
 ms.topic: conceptual
-ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757618"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033042"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams
 
@@ -24,13 +24,7 @@ Le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams peut v
 
 Voici les conseils de contrôle de version actuels pour différents scénarios d’application :
 
-|                  |[Version de TeamsJS](/javascript/api/overview/msteams-client) | [Version du manifeste de l’application](../../resources/schema/manifest-schema.md)| Étapes suivantes|
-|------------------|---------|--------|---|
-|**Applications Teams étendues à Office/Outlook**| TeamsJS v.2.0 ou version ultérieure  | **1.13** ou version ultérieure | [Étendre une application Teams pour l’exécuter sur Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) ou [Créer une application Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Applications Teams uniquement existantes**| Mettre à jour vers TeamsJS v.2.0 si possible (v.1.12 est toujours pris en charge*)  | 1.12 | [Comprendre la compatibilité descendante de TeamsJS](#backwards-compatibility) et [Mise à jour vers TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
-|**Nouvelles applications Teams uniquement**| TeamsJS v.2.0 ou version ultérieure | 1.12 | [Créer une application Teams à l’aide du kit de ressources Teams](../../toolkit/create-new-project.md) |
-
-**La meilleure pratique consiste à utiliser la dernière version de TeamsJS (v.2.0 ou ultérieure) dans la mesure du possible, afin de bénéficier des dernières améliorations et de la prise en charge des nouvelles fonctionnalités (même pour les applications Teams uniquement). TeamsJS v.1.12 continuera d’être pris en charge, mais aucune nouvelle fonctionnalité ou amélioration ne sera ajoutée.*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 Le reste de cet article vous guide tout au long de la structure et des dernières mises à jour du Kit de développement logiciel (SDK) du client JavaScript Teams.
 
@@ -231,7 +225,7 @@ async function example() {
 
 Une *fonctionnalité* est un regroupement logique (via un espace de noms) d’API qui fournissent des fonctionnalités similaires. Vous pouvez considérer Microsoft Teams, Outlook et Office comme des hôtes de votre application d’onglet. Un hôte prend en charge une fonctionnalité donnée s’il prend en charge toutes les API définies dans cette fonctionnalité. Un hôte ne peut pas implémenter partiellement une fonctionnalité. Les fonctionnalités peuvent être basées sur des fonctionnalités ou du contenu, telles que *l’authentification* ou *la boîte de dialogue*. Il existe également des fonctionnalités pour les types d’application tels que les *pages* et d’autres regroupements.
 
-À compter de TeamsJS v.2.0, les API sont définies en tant que fonctions dans un espace de noms JavaScript dont le nom correspond à la fonctionnalité requise. Par exemple, si une application s’exécute dans un hôte qui prend en charge la fonctionnalité de *boîte de dialogue* , l’application peut appeler en toute sécurité des API telles que `dialog.open` (en plus d’autres API liées au dialogue définies dans l’espace de noms). Si une application tente d’appeler une API qui n’est pas prise en charge dans cet hôte, l’API lève une exception. Pour vérifier si l’hôte actuel exécutant votre application prend en charge une fonctionnalité donnée, appelez la fonction [isSupported()](#differentiate-your-app-experience) de son espace de noms.
+À compter de TeamsJS v.2.0, les API sont définies en tant que fonctions dans un espace de noms JavaScript dont le nom correspond à la fonctionnalité requise. Par exemple, si une application s’exécute dans un hôte qui prend en charge la fonctionnalité de *boîte de dialogue* , l’application peut appeler en toute sécurité des API telles que `dialog.open` (en plus d’autres API liées au dialogue définies dans l’espace de noms). Si une application tente d’appeler une API qui n’est pas prise en charge dans cet hôte, l’API génère une exception. Pour vérifier si l’hôte actuel exécutant votre application prend en charge une fonctionnalité donnée, appelez la fonction [isSupported()](#differentiate-your-app-experience) de son espace de noms.
 
 #### <a name="differentiate-your-app-experience"></a>Différencier votre expérience d’application
 

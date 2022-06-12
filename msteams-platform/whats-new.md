@@ -3,12 +3,12 @@ title: Nouveautés pour les développeurs dans Teams
 description: Découvrez les nouvelles fonctionnalités de développement et les améliorations apportées à ces fonctionnalités dans Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906287"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032979"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -47,6 +47,7 @@ Les fonctionnalités de la plateforme Microsoft Teams qui sont disponibles pour 
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ----------------|
+| 08/06/2022 | Commentaires de carte facultatifs pour le message de réussite| Créer des bots > conversations de bot > [messages dans les conversations de bot](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 03/06/2022 | Mise à jour du module Ajouter l’authentification pour activer le l’authentification unique (SSO) sur l'application d'onglet avec une nouvelle structure et de nouvelles procédures. | Ajouter l’authentification > Onglets > [Activer l’authentification unique dans une application d’onglet](tabs/how-to/authentication/tab-sso-overview.md) |
 | 24/05/2022 | Conseils supplémentaires pour une approbation rapide de la publication de votre application liée à une offre SaaS | Publier dans le magasin Teams > Vue d’ensemble > [Conseils supplémentaires pour une approbation rapide afin de publier votre application liée à une offre SaaS](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 24/05/2022 | Envoyer vos applications Outlook et Office dans le store Teams | Étendre votre application à Microsoft 365 > [Vue d’ensemble](m365-apps/overview.md) |

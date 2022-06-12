@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: df9f38be8202f9b982292847a7cfcc982e72fcb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756788"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032815"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Téléchargez votre application dans Microsoft Teams
 
@@ -19,6 +19,9 @@ Vous pouvez télécharger les applications Microsoft Teams sans avoir à les pub
 * Vous souhaitez tester et déboguer une application localement vous-même ou avec d'autres développeurs.
 * Vous avez créé une application pour vous-même afin d’automatiser un flux de travail.
 * Vous avez créé une application pour un petit groupe d'utilisateurs, tel que votre groupe de travail.
+
+> [!NOTE]
+> Le chargement indépendant de votre application plusieurs fois affiche plusieurs instances pour les extensions de messagerie.
 
 > [!IMPORTANT]
 > Actuellement, les applications de chargement latéral sont disponibles dans Government Community Cloud (GCC), mais ne sont pas disponibles pour GCC-High et Department of Defence (DOD).
