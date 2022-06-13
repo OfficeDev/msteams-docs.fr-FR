@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: '@mention de conversation de composition de message dans le menu commande'
-ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032961"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048989"
 ---
 # <a name="bot-command-menus"></a>Menus de commandes du bot
 
@@ -46,7 +46,7 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
-2. Dans **App Studio**, sélectionnez l’onglet de **Éditeur de manifeste**. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, voir [Mettre à jour un package d’application](~/get-started/deploy-csharp-app-studio.md).
+2. Dans **App Studio**, sélectionnez l’onglet de **l’éditeur de manifeste**. Si vous n’avez pas de package d’application existant, vous pouvez créer ou importer une application existante. Pour plus d’informations, consultez [mettre à jour le package d’application C# dans App Studio](../../get-started/deploy-csharp-app-studio.md)
 
 3. Dans le volet gauche de **l’éditeur de manifeste** et dans la section **fonctionnalités**, sélectionnez **Bots**.
 
@@ -61,6 +61,7 @@ Un prérequis pour créer un menu de commande pour votre bot est que vous devez 
 7. Activez les cases à cocher **Étendue** pour sélectionner l’emplacement où ce menu de commandes doit apparaître, puis sélectionnez **Enregistrer**.
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="Bouton de menu Nouvelles commandes d’App Studio "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Créer un menu de commandes pour votre bot en modifiant Manifest.json
 

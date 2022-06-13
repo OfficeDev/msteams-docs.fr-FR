@@ -6,18 +6,18 @@ keywords: capacités de la carte de localisation autorisations pour les appareil
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033049"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048996"
 ---
 # <a name="integrate-location-capabilities"></a>Intégrer les fonctionnalités d’emplacement
 
 Vous pouvez intégrer les capacités de localisation de l'appareil natif à votre application Teams.  
 
-Vous pouvez utiliser [Microsoft Teams SDK client JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), qui fournit les outils nécessaires à votre application pour accéder aux [fonctionnalités d’appareil natif](native-device-permissions.md) de l’utilisateur. Utilisez les API de localisation, telles que [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) et [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true), pour intégrer ces fonctionnalités dans votre application.
+Vous pouvez utiliser [Microsoft Teams SDK client JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), qui fournit les outils nécessaires à votre application pour accéder aux [fonctionnalités d’appareil natif](native-device-permissions.md) de l’utilisateur. Utilisez les API de localisation, telles que [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) et [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?), pour intégrer ces fonctionnalités dans votre application.
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>Avantages de l'intégration des capacités de localisation
 
@@ -45,6 +45,7 @@ Mettez à jour le fichier [manifest.json](../../resources/schema/manifest-schema
 ```
 
 > [!NOTE]
+>
 > * L'invite **Demander des autorisations** s'affiche automatiquement lorsqu'une API Teams pertinente est lancée. Pour plus d'informations, reportez-vous à la section [Demander les autorisations de l'appareil](native-device-permissions.md).
 > * Les autorisations de l'appareil sont différentes dans le navigateur. Pour plus d'informations, voir les [autorisations d'appareil de navigation](browser-device-permissions.md).
 
@@ -54,8 +55,8 @@ Vous devez utiliser l'ensemble des API suivantes pour activer les capacités de 
 
 | API      | Description   |
 | --- | --- |
-|[getLocation()](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Donne l'emplacement actuel de l'appareil de l'utilisateur ou ouvre le sélecteur d'emplacement natif et renvoie l'emplacement choisi par l'utilisateur. |
-|[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | Affiche l’emplacement sur la carte. |
+|[getLocation()](/javascript/api/@microsoft/teams-js/location.locationprops) | Donne l'emplacement actuel de l'appareil de l'utilisateur ou ouvre le sélecteur d'emplacement natif et renvoie l'emplacement choisi par l'utilisateur. |
+|[showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) | Affiche l’emplacement sur la carte. |
 
 > [!NOTE]
 > L'`getLocation()`API s'accompagne des configurations[ d'entrée suivantes](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops), `allowChooseLocation`et`showMap`.<br/> Si la valeur de `allowChooseLocation`est *vraie*, alors les utilisateurs peuvent choisir l'emplacement de leur choix.<br/>  Si la valeur est *false*, les utilisateurs ne peuvent pas modifier leur emplacement actuel.<br/> Si la valeur est `showMap` *faux*, l’emplacement actuel est extrait sans afficher la carte. `showMap` est ignorée si `allowChooseLocation`elle est définie à *vrai*.

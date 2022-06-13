@@ -5,12 +5,12 @@ keywords: Résolution des problèmes de développement d’applications Teams
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 76a1a4d45757dff36d45c73f1ea5f2791fbe2e02
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032822"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048961"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Résoudre les problèmes de votre application Microsoft Teams
 
@@ -53,7 +53,7 @@ Lorsque vous ajoutez un onglet, si vous **sélectionnez Enregistrer** mais recev
 Sauf si vous effectuez une authentification silencieuse, vous devez suivre le processus d’authentification fourni par le [SDK client JavaScript Microsoft Teams](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
->Nous exigeons que tout le flux d’authentification démarre et se termine sur votre domaine, qui doit être répertorié dans l’objet `validDomains` dans votre manifeste.
+> Nous exigeons que tout le flux d’authentification démarre et se termine sur votre domaine, qui doit être répertorié dans l’objet `validDomains` dans votre manifeste.
 
 Pour plus d’informations sur l’authentification, consultez [Authentifier un utilisateur](~/concepts/authentication/authentication.md).
 

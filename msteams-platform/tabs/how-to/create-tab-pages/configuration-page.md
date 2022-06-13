@@ -6,12 +6,12 @@ keywords: onglets d'équipes canal de groupe configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887631"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048975"
 ---
 # <a name="create-a-configuration-page"></a>Créer une page de configuration
 
@@ -21,7 +21,7 @@ Une page de configuration est un type particulier de [page de contenu](content-p
 * Une [extension du message](~/messaging-extensions/what-are-messaging-extensions.md).
 * Un [connecteur Office 365](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurer un onglet de canal ou de groupe de conversation
 
@@ -171,7 +171,7 @@ Le fait de choisir le bouton approprié déclenche l'une ou l'autre `saveGray()`
 * Le `pages.config.registerOnSaveHandler()`gestionnaire d'événements est déclenché.
 * **Enregistrer** sur la page de configuration de l'application, est activé.
 
-Le code de la page de configuration informe les équipes que les exigences de configuration sont satisfaites et que l'installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer**, les paramètres sont `pages.config.setConfig()` définis, comme défini par l’interface `Config` . Pour plus d’informations, consultez [l’interface de configuration](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` est appelé pour indiquer que l'URL du contenu a été résolu avec succès.
+Le code de la page de configuration informe les équipes que les exigences de configuration sont satisfaites et que l'installation peut se poursuivre. Lorsque l’utilisateur sélectionne **Enregistrer**, les paramètres sont `pages.config.setConfig()` définis, comme défini par l’interface `Config` . Pour plus d’informations, consultez [l’interface de configuration](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` est appelé pour indiquer que l'URL du contenu a été résolu avec succès.
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ Authentifiez-vous avant de permettre à un utilisateur de configurer votre appli
 
 Définissez la propriété de `canUpdateConfiguration` votre manifeste sur `true`. Il permet aux utilisateurs de modifier, reconfigurer ou renommer un canal ou un onglet de groupe. Informez l’utilisateur de l’impact sur le contenu lorsqu’un onglet est supprimé. Pour ce faire, incluez une page d’options de suppression dans l’application et définissez une valeur pour la `removeUrl` propriété dans la `setConfig()` configuration (anciennement `setSettings()`). L'utilisateur peut désinstaller les onglets personnels mais ne peut pas les modifier. Pour plus d’informations, consultez [créer une page de suppression pour votre onglet](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Configuration de Microsoft Teams `setConfig()` (anciennement `setSettings()`) pour la page de suppression :
+`setConfig()` Microsoft Teams (anciennement`setSettings()`) configuration de la page de suppression :
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

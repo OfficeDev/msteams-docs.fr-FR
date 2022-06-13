@@ -3,12 +3,12 @@ title: Nouveautés pour les développeurs dans Teams
 description: Découvrez les nouvelles fonctionnalités de développement et les améliorations apportées à ces fonctionnalités dans Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032979"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048968"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -24,6 +24,7 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 | 24/05/2022 | La version 4.0.0 du kit de ressources de Teams pour Visual Studio Code est désormais en disponibilité générale | Outils et kits de développement logiciel (SDK) > Kit de ressources de Teams pour Visual Studio Code > <br> • [Vue d’ensemble du kit de ressources Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Créer un bot de commandes avec JavaScript](toolkit/add-capability.md) <br> • [Créer un bot de notification avec JavaScript](toolkit/add-capability.md) <br> • [Afficher un aperçu et personnaliser le manifeste de l’application Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Connecter aux API existantes](toolkit/add-API-connection.md) <br> • [Ajouter des fonctionnalités à vos applications Teams](toolkit/add-capability.md) <br> • [Ajouter une expérience d’authentification unique](toolkit/add-single-sign-on.md) <br> • [Ajouter des ressources cloud à l’application Teams](toolkit/add-resource.md) |
 | 24/05/2022 | Introduction de la version 1.13 du manifeste d’application | Manifeste d’application > [schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md) |
 | 24/05/2022 | Bots et extensions de message dans GCC et GCCH | • Planifier votre application > [Vue d’ensemble](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Création de bots > [Vue d’ensemble](bots/what-are-bots.md) </br> • Build d’extensions de messages > [Vue d’ensemble](messaging-extensions/what-are-messaging-extensions.md) |
+
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -206,7 +207,7 @@ Explorez les mises à jour des versions GA précédentes répertoriées ici.
 | 31/10/2019 | Nouvelle structure de la documentation et refactoriser les articles principaux. Signalez les liens morts ou les 404 en créant un GitHub. | Tous! |
 | 13/09/2019 | Le bot de requête est installé à partir de l’extension de messagerie basée sur l’action. | [Lancer des actions avec des extensions de messagerie](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 28/08/2019 | Prise en charge des canaux privés dans les onglets et les connecteurs. | [Obtenir un contexte Teams pour votre onglet](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 20/06/2019 | Partagez un site web externe, à partir d’un site web externe, dans un canal Teams externe. | [Partager avec Teams](~/share-to-teams.md) |
+| 20/06/2019 | Partagez un site web externe, à partir d’un site web externe, dans un canal Teams externe. | [Partager avec Teams](concepts/build-and-test/share-to-teams-overview.md). |
 | 25/05/2019 | Répondez avec un message de bot à partir du module de tâche. | [Répondre avec un message bot à partir du module de tâche](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 25/05/2019 | Les robots dans les discussions de groupe. | [Interagir avec un robot dans un chat ou un canal de groupe.](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 20/05/2019 | Localisation du manifeste de l’application. | [Localisation d’application](~/publishing/apps-localization.md) |

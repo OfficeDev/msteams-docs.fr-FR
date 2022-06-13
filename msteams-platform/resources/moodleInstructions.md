@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: b5e023041ad732c7580b8b01cd62bc7159a52887
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033056"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66049003"
 ---
 # <a name="install-moodle-lms"></a>Installer Moodle LMS
 
@@ -30,7 +30,7 @@ Dans cet article, vous allez apprendre à installer moodle LMS.
 >
 > Pour en savoir plus sur les fonctionnalités fournies par cette intégration, consultez [Microsoft Teams et Moodle](https://education.microsoft.com/resource/3dffb3a8).
 
-## <a name="prerequisites"></a>Conditions requises
+## <a name="prerequisites"></a>Conditions préalables
 
 Voici les conditions préalables à l’installation de Moodle :
 
@@ -287,7 +287,7 @@ Pour autoriser la création automatique d’onglets Moodle :
 Lorsqu’un cours Moodle est synchronisé, Microsoft Teams installe automatiquement l’application Moodle dans l’équipe, crée un onglet Moodle dans le canal Général de Teams et la configure pour contenir la page de cours du cours Moodle à partir duquel il est synchronisé. Vous pouvez maintenant commencer à utiliser vos cours Moodle directement à partir de Microsoft Teams.
 
 > [!NOTE]
-> Pour partager des demandes de fonctionnalités ou des commentaires avec nous, visitez notre [page User Voice](https://microsoftteams.uservoice.com/forums/916759-moodle).
+> Pour partager des demandes de fonctionnalités ou des commentaires avec nous, visitez notre [page User Voice](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 ## <a name="see-also"></a>Voir aussi
 
