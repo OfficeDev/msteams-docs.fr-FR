@@ -4,25 +4,36 @@ description: Découvrez comment ajouter le bouton Partager dans Teams incorporé
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Partager Teams – Partager dans Teams
-ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9a2223ebe89575d81db23ca696f88a2f2d519d31
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757058"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118942"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Partager vers Teams à partir d’applications web
 
-Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des boutons Partager dans Teams sur leurs pages web. Lorsque vous sélectionnez, il lance l’expérience Partager vers Teams dans une fenêtre contextuelle. Cela vous permet de partager un lien directement vers n’importe quelle personne ou Microsoft Teams canal sans changer de contexte. Ce document vous guide dans la création et l’incorporation d’un bouton Partager dans Teams pour votre site web, créer la préversion de votre site web et étendre Partager dans Teams pour l'éducation.
+Les sites web tiers peuvent utiliser le script du lanceur pour incorporer des boutons Partager dans Teams sur leurs pages web. Lorsque vous sélectionnez Partager pour Teams bouton, il lance l’expérience Partager pour Teams dans une fenêtre contextuelle. Cela vous permet de partager un lien directement vers n’importe quelle personne ou Microsoft Teams canal sans changer de contexte.
+
+L’image suivante affiche la fenêtre contextuelle pour Partager pour Teams expérience d’aperçu :
+
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Fenêtre contextuelle De partage à Teams" border="true":::
 
 > [!NOTE]
 >
 > * Seules les versions de bureau de Microsoft&nbsp;Edge et Google Chrome sont prises en charge.
-> * L’utilisation de Freemium ou de comptes invités n’est pas prise en charge.  
+> * L’utilisation de Freemium ou de comptes invités n’est pas prise en charge.
 
-L’image suivante affiche l’expérience contextuelle Partager dans Teams :
+Vous pouvez également ajouter un déploiement de liens pour les liens partagés via Partager vers Teams bouton hébergé dans l’application web, l’application personnelle ou l’onglet. Pour plus d’informations, consultez [le déploiement du lien](~/messaging-extensions/how-to/link-unfurling.md).
 
-:::image type="content" source="../../assets/images/share-to-teams-popup.png" alt-text="Fenêtre contextuelle Partager avec Teams":::
+L’image suivante affiche l’expérience de déploiement de lien via le bouton Partager vers Teams :
+
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Déploiement du lien de partage à Teams" border="true":::
+
+> [!NOTE]
+> Le déploiement de liens dans le partage vers Teams est actuellement disponible uniquement en préversion publique pour les développeurs.
+
+Cet article vous guide dans la création et l’incorporation d’un bouton Partager vers Teams pour votre site web, créer la préversion de votre site web et étendre Share à Teams pour l'éducation.
 
 ## <a name="embed-a-share-to-teams-button"></a>Incorporer bouton Partage dans Teams
 
@@ -43,9 +54,9 @@ L’image suivante affiche l’expérience contextuelle Partager dans Teams :
 
     Une fois cette opération terminée, l’icône Microsoft Teams est ajoutée à votre site web. L’image suivante montre l’icône Partager dans Teams :
 
-    ![Icône Partager dans Teams](~/assets/icons/share-to-teams-icon.png)
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Icône Partager dans Teams" border="true":::
 
-1. Sinon, si vous souhaitez une taille d’icône différente pour le bouton Partager dans Teams, utilisez l’attribut`data-icon-px-size`.
+1. Sinon, si vous souhaitez une taille d’icône différente pour le bouton Partager pour Teams, utilisez l’attribut`data-icon-px-size`.
 
     ```html
     <div
