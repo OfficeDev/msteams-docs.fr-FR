@@ -5,12 +5,12 @@ description: Découvrez comment intégrer des fonctionnalités d’appareil nati
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123835"
+ms.locfileid: "66130429"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
@@ -37,7 +37,7 @@ Utilisez les outils présents dans le [Kit de développement logiciel (SDK) clie
 
 ## <a name="integrate-device-capabilities"></a>Intégrer les fonctionnalités de l’appareil
 
-Une fois que vous avez accès aux fonctionnalités de l’appareil, utilisez les API de fonctionnalité multimédia Teams pour [intégrer des fonctionnalités multimédias](mobile-camera-image-permissions.md) à la plateforme Teams pour améliorer l’expérience utilisateur. Ces fonctionnalités intégrées permettent à votre application de :
+Une fois que vous avez accès aux fonctionnalités de l’appareil, utilisez les API de fonctionnalité multimédia Teams pour [intégrer des fonctionnalités multimédias](media-capabilities.md) à la plateforme Teams pour améliorer l’expérience utilisateur. Ces fonctionnalités intégrées permettent à votre application de :
 
 * Capturer des photos et des images.
 * Analysez le QR ou le code-barres à l’aide de [contrôle scanneur](qr-barcode-scanner-capability.md).

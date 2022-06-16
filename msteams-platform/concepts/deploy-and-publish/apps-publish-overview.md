@@ -1,17 +1,16 @@
 ---
 title: Vue d’ensemble – Distribuer votre application
-description: Décrit les options de publication de votre application Microsoft Teams, de chargement de votre application et de GCC.
+description: Dans cet article, découvrez les options de publication de votre application Microsoft Teams, de chargement et de déploiement de votre application et de Cloud de la communauté du secteur public.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: déployer le téléchargement d’application de publication gcc
-ms.openlocfilehash: e2c0af75b7cfb2e27255c9f6f194b5d9ab959093
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111954"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123530"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuer votre application Microsoft Teams
 

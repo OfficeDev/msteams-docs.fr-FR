@@ -428,7 +428,7 @@
     - name: Autorisations de périphérique pour le navigateur
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: Intégrer les fonctionnalités médias
-      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+      href: concepts/device-capabilities/media-capabilities.md
     - name: Intégrer la fonctionnalité de scanneur QR ou code-barres
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Intégrer les fonctionnalités d’emplacement

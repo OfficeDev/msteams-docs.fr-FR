@@ -1,17 +1,17 @@
 ---
 title: Onglets de conception pour ordinateur de bureau, web et mobile
-description: Découvrez comment concevoir un onglet Teams pour ordinateur de bureau, web et mobile, et obtenir le kit d’interface utilisateur de Microsoft Teams. Découvrez la fonctionnalité et l’apparence de l’onglet, la création de l’authentification utilisateur, les notifications de tabulation et la liaison approfondie dans les onglets.
+description: Découvrez comment concevoir un onglet pour ordinateur de bureau, le web et les appareils mobiles, et obtenir le kit d’interface utilisateur de Microsoft Teams. Découvrez l’onglet, la création de l’authentification utilisateur, les notifications d’onglet et le lien profond.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Discussion sur le thread de la vue basée sur le rôle de liaison approfondie de l’AUTHENTIFICATION unique de la configuration de l’onglet
-ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948585"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123257"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Concevoir votre onglet pour Microsoft Teams
 

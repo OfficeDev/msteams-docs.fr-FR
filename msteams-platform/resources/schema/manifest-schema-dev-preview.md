@@ -4,12 +4,12 @@ description: Découvrez l’exemple de fichier manifeste et la description de to
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1b1aa4e1e7cf1bff8ff37ec89d555bd1758d16db
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123040"
+ms.locfileid: "66130514"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
 
@@ -793,4 +793,4 @@ Les autorisations déléguées permettent à l’application d’accéder aux do
 * [Comprendre la structure de l’application Microsoft Teams](~/concepts/design/app-structure.md)
 * [Activer la personnalisation d’application](~/concepts/design/enable-app-customization.md)
 * [Localiser votre application](~/concepts/build-and-test/apps-localization.md)
-* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/media-capabilities.md)

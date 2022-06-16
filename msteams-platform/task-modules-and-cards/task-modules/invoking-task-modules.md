@@ -4,12 +4,12 @@ description: En savoir plus sur l’appel et le rejet de modules de tâches, l�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 04e27e780c1d2686be2ee73909c2d28bfc19fd23
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757303"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130409"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>Appeler et ignorer des modules de tâche
 
@@ -237,6 +237,6 @@ Microsoft Teams garantit que la navigation au clavier fonctionne correctement à
 ## <a name="see-also"></a>Voir aussi
 
 * [Demande des autorisations d’appareil](~/concepts/device-capabilities/native-device-permissions.md)
-* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/media-capabilities.md)
 * [Intégrer le QR ou la fonctionnalité de scanneur de code-barres dans Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Intégrer les fonctionnalités d’emplacement sur Teams](~/concepts/device-capabilities/location-capability.md)

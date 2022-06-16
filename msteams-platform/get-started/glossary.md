@@ -3,12 +3,12 @@ title: Documentation pour développeurs Microsoft Teams – Glossaire
 description: En savoir plus sur les termes utilisés dans Microsoft Teams documentation du développeur
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887624"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130423"
 ---
 # <a name="glossary"></a>Glossaire
 
@@ -117,7 +117,7 @@ Termes et définitions courants utilisés dans la documentation pour développeu
 
 | Terme | Définition |
 | --- | --- |
-| [Fonctionnalité multimédia](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Fonctionnalités natives de l’appareil, telles que la caméra et le microphone, que vous pouvez intégrer à votre application Teams. <br>**Voir aussi** : [Fonctionnalité](#c) ; [Fonctionnalité de l’appareil](#d) |
+| [Fonctionnalité multimédia](../concepts/device-capabilities/media-capabilities.md) | Fonctionnalités natives de l’appareil, telles que la caméra et le microphone, que vous pouvez intégrer à votre application Teams. <br>**Voir aussi** : [Fonctionnalité](#c) ; [Fonctionnalité de l’appareil](#d) |
 | [Bot de réunion](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots qui interagissent avec les appels et réunions Teams à l’aide de la voix, de la vidéo et du partage d’écran en temps réel. <br>**Voir aussi :** [Bot d’appel](#c) ; [Bot de conversation](#c) |
 | [Cycle de vie des réunions](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Il s’étend de l’expérience d’application de pré-réunion, en réunion et à la post-réunion. Vous pouvez intégrer des onglets, des bots et des extensions de message à chaque étape du cycle de vie de la réunion. <br>**Voir aussi** : [Expérience en réunion](#i) |
 | [Étape de la réunion](../sbs-meetings-stage-view.yml) | Fonctionnalité de l’application d’extension de réunion. Il s’agit d’un espace partagé accessible à tous les participants pendant la réunion. Il permet aux participants d’interagir et de collaborer avec le contenu de l’application en temps réel. <br>**Voir aussi :** [Vue des l’étapes](#s) |

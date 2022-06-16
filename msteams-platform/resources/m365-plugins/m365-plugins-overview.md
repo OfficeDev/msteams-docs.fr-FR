@@ -1,15 +1,15 @@
 ---
 title: Plug-ins Microsoft 365
-description: Détails sur les plug-ins Microsoft 365
+description: Dans cet article, vous aurez des plug-ins Microsoft 365, une liste de plug-ins et des étiquettes, Microsoft 365 et une interaction OneNote, etc.
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 3a1847a01687d2d363f29938ed589d3a12179c9c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63454001"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124045"
 ---
 # <a name="microsoft-365-plugins"></a>Plug-ins Microsoft 365
 
@@ -149,7 +149,7 @@ L’image suivante illustre l’interface utilisateur du bloc Microsoft :
 
 ## <a name="oembed-filter"></a>Filtre oEmbed
 
-Le plug-in de filtre oEmbed simplifie et améliore l’expérience utilisateur en facilitant l’inclusion de contenu HTML externe dans Moodle. Voici les avantages du filtre oEmbed. 
+Le plug-in de filtre oEmbed simplifie et améliore l’expérience utilisateur en facilitant l’inclusion de contenu HTML externe dans Moodle. Voici les avantages du filtre oEmbed.
 
 * Réduit le temps d’incorporation de vidéos dans une page HTML.
 * Permet l’incorporation de plusieurs fournisseurs de contenu vidéo.

@@ -1,16 +1,16 @@
 ---
 title: 'Vue d’ensemble : publier votre application dans le store Microsoft Teams'
-description: Décrit le processus d’envoi de votre application à Espace partenaires et de sa publication dans le Microsoft Teams Store (et AppSource).
+description: Découvrez le processus d’envoi de votre application à l’Espace partenaires et sa publication dans le Store Microsoft Teams (et AppSource).
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757282"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124031"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publiez votre application dans le store Microsoft Teams.
 
@@ -20,7 +20,7 @@ Les applications publiées dans le magasin Teams sont également automatiquement
 
 ## <a name="understand-the-publishing-process"></a>Comprendre le processus de publication
 
-Lorsque vous pensez que votre application est prête pour la production, vous pouvez commencer le processus d’obtention de sa liste dans le magasin Teams.
+Si votre application est prête pour la production, vous pouvez commencer le processus d’obtention de sa liste dans le magasin Teams.
 
 > [!TIP]
 > Suivre attentivement les étapes de pré-soumission peut augmenter le risque que Microsoft approuve votre application pour la publication.
@@ -51,7 +51,7 @@ Lorsque vous pensez que votre application est prête pour la production, vous po
 
 * **Tests fonctionnels et expérience approfondies**
 
-  Votre application est examinée en détail par un validateur pour garantir la conformité avec les stratégies de certification de la [Place de marché commerciale Microsoft](/legal/marketplace/certification-policies). 
+  Votre application est examinée en détail par un validateur pour garantir la conformité avec les stratégies de certification de la [Place de marché commerciale Microsoft](/legal/marketplace/certification-policies).
   L’accent sera mis sur les tests fonctionnels et d’expérience utilisateur approfondis, les vérifications d’utilisation et les vérifications des métadonnées. La validation des applications est effectuée sur les clients de bureau, web et mobiles. Nous mettons tout en œuvre pour vous fournir un rapport de test détaillé dans les 24 heures de travail qui suivent l’envoi.
 
 * **Publication d’application guidée via le service concierge**

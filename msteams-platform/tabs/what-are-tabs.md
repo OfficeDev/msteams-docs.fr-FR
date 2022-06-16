@@ -5,12 +5,12 @@ description: Une vue d’ensemble des onglets personnalisés sur la plateforme T
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 42d03b988268f9042bd6f6e84d180c8d4b0b2209
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672970"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130416"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Onglets de build pour Microsoft Teams
 
@@ -99,7 +99,7 @@ Vous pouvez avoir plusieurs canaux ou onglets de groupe, et jusqu’à 16 onglet
 
 * [Onglets personnalisés dans Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [Demande des autorisations d’appareil](../concepts/device-capabilities/native-device-permissions.md)
-* [Intégrer les fonctionnalités médias](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Intégrer les fonctionnalités médias](../concepts/device-capabilities/media-capabilities.md)
 * [Intégrer un détecteur de QR ou de code-barres](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Intégrer les fonctionnalités d’emplacement](../concepts/device-capabilities/location-capability.md)
 * [Onglets sur les appareils mobiles](design/tabs-mobile.md#tabs-on-mobile)
