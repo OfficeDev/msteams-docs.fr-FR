@@ -5,14 +5,13 @@ ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
 ms.localizationpriority: medium
-keywords: Connecteurs Microsoft Teams kronos
 ms.author: lajanuar
-ms.openlocfilehash: 78c76e93040354d37770988f45f1b94d35f6102c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 042b1196fb89206fc053711b117543890273ec36
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757352"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123856"
 ---
 # <a name="production-ready-shifts-connectors"></a>Connecteurs Shifts prêts pour la production  
 

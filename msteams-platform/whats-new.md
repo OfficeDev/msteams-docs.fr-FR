@@ -3,12 +3,12 @@ title: Nouveautés pour les développeurs dans Teams
 description: Découvrez les nouvelles fonctionnalités de développement et les améliorations apportées à ces fonctionnalités dans Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 8ca858211f87c9d514d655817b2a7887e70d4bf3
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048968"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118969"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -24,7 +24,6 @@ Découvrez les fonctionnalités de la plateforme Microsoft Teams qui sont géné
 | 24/05/2022 | La version 4.0.0 du kit de ressources de Teams pour Visual Studio Code est désormais en disponibilité générale | Outils et kits de développement logiciel (SDK) > Kit de ressources de Teams pour Visual Studio Code > <br> • [Vue d’ensemble du kit de ressources Teams](toolkit/teams-toolkit-fundamentals.md) <br> • [Créer un bot de commandes avec JavaScript](toolkit/add-capability.md) <br> • [Créer un bot de notification avec JavaScript](toolkit/add-capability.md) <br> • [Afficher un aperçu et personnaliser le manifeste de l’application Teams](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Connecter aux API existantes](toolkit/add-API-connection.md) <br> • [Ajouter des fonctionnalités à vos applications Teams](toolkit/add-capability.md) <br> • [Ajouter une expérience d’authentification unique](toolkit/add-single-sign-on.md) <br> • [Ajouter des ressources cloud à l’application Teams](toolkit/add-resource.md) |
 | 24/05/2022 | Introduction de la version 1.13 du manifeste d’application | Manifeste d’application > [schéma de manifeste pour Microsoft Teams](resources/schema/manifest-schema.md) |
 | 24/05/2022 | Bots et extensions de message dans GCC et GCCH | • Planifier votre application > [Vue d’ensemble](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Création de bots > [Vue d’ensemble](bots/what-are-bots.md) </br> • Build d’extensions de messages > [Vue d’ensemble](messaging-extensions/what-are-messaging-extensions.md) |
-
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -266,6 +265,7 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
+| 06/16/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web| Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Mettre à jour les événements de conversation et d’installation dans votre bot Teams |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Collaboration améliorée avec Live Share SDK |  Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

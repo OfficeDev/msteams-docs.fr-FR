@@ -1,15 +1,14 @@
 ---
 title: Vue d’ensemble du partage vers Teams
-description: Décrit comment créer un bouton partager-à-équipes
+description: Découvrez comment partager pour Teams vue d’ensemble et où vous pouvez créer le bouton partager-à-équipes dans les applications Teams et les applications onglet.
 ms.topic: how-to
 ms.localizationpriority: mediumss
-keywords: Vue d’ensemble du partage vers Teams
-ms.openlocfilehash: 1bc840c5b85042ef109d544a3b94cd55f6eae2ad
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: caf75bed6c741e5d504c91e2c7df5739ec786cbb
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297127"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123772"
 ---
 # <a name="share-to-teams"></a>Partager avec Teams
 

@@ -1,22 +1,22 @@
 ---
 title: Tester et déboguer votre bot
-description: Décrit comment tester des bots dans Microsoft Teams
+description: Cet article explique comment tester des bots dans Microsoft Teams
 keywords: tests des bots teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755913"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123453"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Tester et déboguer votre bot Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Lorsque vous testez votre bot, vous devez prendre en compte à la fois le ou les contextes dans lesquels vous souhaitez que votre bot s’exécute, ainsi que les fonctionnalités que vous avez peut-être ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Assurez-vous que la méthode que vous avez choisie pour tester votre bot s’aligne sur ses fonctionnalités.
+Lorsque vous testez votre bot, vous devez prendre en compte à la fois le ou les contextes dans lesquels vous souhaitez que votre bot s’exécute, ainsi que les fonctionnalités que vous avez peut-être ajoutées à votre bot qui nécessitent des données spécifiques à Microsoft Teams. Vérifiez que la méthode que vous avez choisie pour tester votre bot s’aligne sur ses fonctionnalités.
 
 ## <a name="test-by-uploading-to-teams"></a>Tester en chargeant dans Teams
 

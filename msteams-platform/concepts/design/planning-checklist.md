@@ -1,16 +1,16 @@
 ---
 title: Questions pour aider à planifier le développement de l'application Teams
 author: heath-hamilton
-description: "Questions à prendre en compte lors de la planification de votre application : comprendre l'utilisateur et ses besoins, comprendre les problèmes que votre application pourrait résoudre, planifier l'authentification de l'utilisateur et son expérience d'intégration."
+description: Questions à prendre en compte lorsque vous planifiez votre application, comprenez votre utilisateur et ses besoins, les problèmes que votre application résout, l’authentification des utilisateurs et leur expérience d’intégration.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756750"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123110"
 ---
 # <a name="teams-app-planning-checklist"></a>Liste de vérification de la planification d’applications Teams
 

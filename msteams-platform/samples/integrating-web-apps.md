@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
-description: Meilleures pratiques ou considérations relatives à l’intégration d’applications web existantes à Microsoft Teams
+description: Découvrez les meilleures pratiques ou considérations relatives à l’intégration d’applications web existantes à Microsoft Teams. Il fournit des informations sur les exigences de l’API, l’authentification et la liaison approfondie de votre application avec Teams.
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considérations relatives à l’intégration de Teams
-ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757639"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123800"
 ---
 # <a name="considerations-for-teams-integration"></a>Considérations relatives à l’intégration de Teams
 

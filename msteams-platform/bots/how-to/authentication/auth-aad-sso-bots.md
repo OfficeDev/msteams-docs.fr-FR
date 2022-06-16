@@ -4,12 +4,12 @@ description: Décrit comment obtenir un jeton utilisateur. Actuellement, un dév
 keywords: jeton, jeton utilisateur, prise en charge de l’authentification unique pour les bots, autorisation, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906255"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123467"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>Support de l'identification unique pour les robots
 
@@ -96,7 +96,7 @@ Les étapes d’inscription de votre application via le portail Azure AD sont si
    >
    > Vous devez connaître les restrictions importantes suivantes :
    >
-   > * Seules les autorisations Microsoft API Graph au niveau de l’utilisateur, telles que l’e-mail, le profil, offline_access et OpenId, sont prises en charge. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph, telles que `User.Read` ou `Mail.Read`, consultez [Étendre l’application onglet avec des autorisations et une étendue Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
+   > * Seules les autorisations Microsoft API Graph au niveau de l’utilisateur, telles que l’e-mail, le profil, offline_access et OpenId, sont prises en charge. Si vous avez besoin d’accéder à d’autres étendues Microsoft Graph, telles que `User.Read` ou `Mail.Read`, consultez [Étendre l’application onglet avec les autorisations et l’étendue Microsoft Graph](../../../tabs/how-to/authentication/tab-sso-graph-api.md).
    > * Le nom de domaine de votre application doit être le même que le nom de domaine que vous avez enregistré pour votre application Azure AD.
    > * Les domaines multiples par application ne sont actuellement pas pris en charge.
    > * Les applications qui utilisent le `azurewebsites.net` domaine ne sont pas prises en charge, car elles sont courantes et peuvent constituer un risque pour la sécurité.
@@ -379,9 +379,9 @@ Ouvrez [Teams exemple d’authentification](https://github.com/microsoft/BotBuil
 
 ## <a name="code-sample"></a>Exemple de code
 
-|**Exemple de nom** | **Description** |**.NET** |
-|----------------|-----------------|--------------|
-|Kit de développement logiciel (SDK) Bot Framework | Exemple d’utilisation du Kit de développement logiciel (SDK) bot framework |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**Exemple de nom** | **Description** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|Kit de développement logiciel (SDK) Bot Framework | Cet exemple de code montre comment commencer à utiliser l’authentification dans un bot pour Microsoft Teams. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>Guide pas à pas
 

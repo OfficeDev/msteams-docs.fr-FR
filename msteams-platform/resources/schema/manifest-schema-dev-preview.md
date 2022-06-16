@@ -1,16 +1,15 @@
 ---
 title: Informations de référence sur le schéma du manifeste de la préversion du développeur public
-description: Exemple de fichier manifeste et description de tous ses composants pris en charge pour Microsoft Teams
+description: Découvrez l’exemple de fichier manifeste et la description de tous ses composants pris en charge pour Microsoft Teams.
 ms.topic: reference
-keywords: Aperçu du développeur du schéma de manifeste teams
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757492"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123040"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>Référence : Schéma de manifeste de la version préliminaire du développeur public pour Microsoft Teams
 
@@ -692,7 +691,7 @@ Lorsqu'un champ d'installation de groupe est sélectionné, il définit la capac
 |Nom| Type| Taille maximale | Requis | Description|
 |---|---|---|---|---|
 |`team`|string|||Lorsque l'étendue de l'installation sélectionnée est `team`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
-|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
+|`groupchat`|string|||Lorsque l'étendue de l'installation sélectionnée est `groupchat`, ce champ indique la capacité par défaut disponible. Options : `tab`, `bot`, ou `connector`.|
 |`meetings`|string|||Lorsque l'étendue de l'installation sélectionnée est `meetings`, ce champ indique la capacité par défaut disponible. Options : `tab``bot`, , ou`connector` .|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
@@ -755,9 +754,9 @@ Les autorisations d’application permettent à l’application d’accéder aux
 
 #### <a name="resource-specific-delegated-permissions"></a>Autorisations déléguées spécifiques aux ressources
 
-Les autorisations déléguées permettent à l’application d’accéder aux données pour le compte de l’utilisateur. 
+Les autorisations déléguées permettent à l’application d’accéder aux données pour le compte de l’utilisateur.
 
-* **Autorisations déléguées spécifiques aux ressources pour les équipes** 
+* **Autorisations déléguées spécifiques aux ressources pour les équipes**
 
     |**Name**|**Description**|
     |---|---|

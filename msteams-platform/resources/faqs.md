@@ -1,15 +1,15 @@
 ---
 title: Foire aux questions
-description: Réponses à certaines questions courantes
+description: Dans cet article, récupérez les réponses à certaines questions fréquemment posées lors de l’utilisation de Moodle LMS.
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757548"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123481"
 ---
 # <a name="moodle-faq"></a>FAQ sur Moodle
 
@@ -65,7 +65,7 @@ L’image suivante montre les options de restrictions de création d’utilisate
 
 <summary><b>Nous souhaiterions que nos enseignants puissent synchroniser leurs cours avec Teams. Les administrateurs de Moodle sont-ils les seuls à pouvoir contrôler la synchronisation des cours ?</b></summary>
 
-Par défaut, seuls les administrateurs Moodle peuvent configurer la synchronisation. Le propriétaire de l'équipe peut contrôler si un cours est synchronisé avec les équipes et **Autoriser la configuration de la synchronisation de cours dans le cours** est activé. Dans ce cas, l’enseignant est le propriétaire de l’équipe. Le bloc affiche l’option de configuration pour les personnes ayant les autorisations de propriétaire appropriées. 
+Par défaut, seuls les administrateurs Moodle peuvent configurer la synchronisation. Le propriétaire de l'équipe peut contrôler si un cours est synchronisé avec les équipes et **Autoriser la configuration de la synchronisation de cours dans le cours** est activé. Dans ce cas, l’enseignant est le propriétaire de l’équipe. Le bloc affiche l’option de configuration pour les personnes ayant les autorisations de propriétaire appropriées.
 
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
@@ -189,5 +189,3 @@ Toutefois, vous pouvez accéder à l'invitation et ajouter manuellement les noms
 <summary><b>Existe-t-il un site de support où nous pouvons obtenir plus d’aide sur les produits et d’autres problèmes ?</b></summary>
 
 Pour obtenir de l'aide et de l'assistance sur les questions relatives aux produits et aux services ou pour obtenir de l'aide de la communauté des développeurs, consultez [Support et commentaires](/microsoftteams/platform/feedback).
-
-

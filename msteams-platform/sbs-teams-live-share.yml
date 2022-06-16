@@ -2,7 +2,7 @@
 title: Créer Agile Poker à l’aide du Kit de développement logiciel (SDK) Live Share
 metadata:
   title: Créer Agile Poker à l’aide du Kit de développement logiciel (SDK) Live Share
-  description: Dans ce tutoriel, vous allez apprendre à créer un exemple d’application de poker agile à l’aide du Kit de développement logiciel (SDK) Live Share.
+  description: Avec ce module d’apprentissage, vous allez apprendre à créer un exemple d’application de poker agile à l’aide du Kit de développement logiciel (SDK) Live Share.
   audience: Developer
   level: Beginner
   ms.date: 05/17/2022
@@ -11,15 +11,15 @@ metadata:
   nextTutorialTitle: En savoir plus sur Live Share SDK
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: ae046222d78b90dadf1d5d1a168631356d84483c
-  ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+  ms.openlocfilehash: c3c9dbc222089a620757234afbbd6c741da39f6c
+  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
   ms.translationtype: MT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 05/27/2022
-  ms.locfileid: "65756568"
+  ms.lasthandoff: 06/16/2022
+  ms.locfileid: "66122921"
 items:
 - durationInMinutes: 1
-  content: "> [!NOTE]\n> Le SDK Live Share est actuellement disponible uniquement en [préversion publique du développeur](~/resources/dev-preview/developer-preview-intro.md). Vous devez faire partie de la préversion publique du développeur pour Microsoft Teams utiliser le kit de développement logiciel (SDK) Live Share.\n\nLive Share SDK vous permet de créer des applications collaboratives et de découvrir d’autres façons de collaborer et de vous connecter via Teams. Vous pouvez créer des applications pour partager du contenu tel que regarder des films, jouer à des jeux en direct, etc., dans Teams appels en tête-à-tête, appels de groupe, planifier des réunions et se rencontrer maintenant.\n\nCe guide pas à pas vous aide à créer un exemple d’application Agile Poker à l’aide Live Share SDK. La sortie suivante s’affiche :\n\n :::image type=\"content\" source=\"~/assets/videos/agile-poker-gif.gif\" alt-text=\"Agile Poker gif\":::\n \n"
+  content: "> [!NOTE]\n> Le SDK de Live Share est actuellement disponible uniquement en [préversion publique du développeur](~/resources/dev-preview/developer-preview-intro.md). Vous devez faire partie de la préversion publique du développeur pour Microsoft Teams utiliser le kit de développement logiciel (SDK) de Live Share.\n\nLive Share SDK vous permet de créer des applications collaboratives et de découvrir d’autres façons de collaborer et de vous connecter via Teams. Vous pouvez créer des applications pour partager du contenu tel que regarder des films, jouer à des jeux en direct, etc., dans Teams appels en tête-à-tête, appels de groupe, planifier des réunions et se rencontrer maintenant.\n\nCe guide pas à pas vous aide à créer un exemple d’application Agile Poker à l’aide Live Share SDK. La sortie suivante s’affiche :\n\n :::image type=\"content\" source=\"~/assets/videos/agile-poker-gif.gif\" alt-text=\"Agile Poker gif\":::\n \n"
 - title: Conditions préalables
   durationInMinutes: 1
   content: "\nVeillez à installer les outils suivants et à configurer votre environnement de développement :\n\n* [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) avec un compte valide\n* [Dernière version de Visual Studio Code](https://code.visualstudio.com/download)\n* [Dernière version de nodejs](https://nodejs.org/en/download/)\n* [Dernière version de ngrok](https://ngrok.com/download) ou solution de tunneling équivalente\n  \n  > [!NOTE]\n  > Si vous téléchargez ngrok pour la première fois, inscrivez-vous et installez [authtoken](https://ngrok.com/download).\n"

@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938960"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123975"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
@@ -177,7 +177,7 @@ Le tableau suivant répertorie les noms et les types de configuration de déboga
 <details>
 <summary><b>Désactiver l'application Teams</b></summary>
 
-La configuration **Attacher au bot frontal** ou **de lancement** lance une nouvelle instance de navigateur Edge ou Chrome et ouvre une page web pour charger Teams client. Une fois le client Teams chargé, Teams sideload l'application Teams contrôlée par l'URL sideload définie dans les configurations de lancement [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  Lorsque Teams client se charge dans le navigateur web, sélectionnez **Ajouter** ou sélectionner un client dans la liste de listes.
+La configuration **Attacher au bot frontal** ou **de lancement** lance une nouvelle instance de navigateur Edge ou Chrome et ouvre une page web pour charger Teams client. Une fois le client Teams chargé, Teams sideload l'application Teams contrôlée par l'URL sideload définie dans les configurations de lancement [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). Lorsque Teams client se charge dans le navigateur web, sélectionnez **Ajouter** ou sélectionner un client dans la liste de listes.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="débogage local" border="true":::
 

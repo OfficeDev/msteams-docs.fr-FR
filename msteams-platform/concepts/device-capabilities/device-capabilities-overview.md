@@ -5,12 +5,12 @@ description: Découvrez comment intégrer des fonctionnalités d’appareil nati
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757030"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123835"
 ---
 # <a name="device-capabilities"></a>Fonctionnalités de l’appareil
 
@@ -45,3 +45,9 @@ Une fois que vous avez accès aux fonctionnalités de l’appareil, utilisez les
 * Partagez l’emplacement à l’aide du [sélecteur d’emplacement](location-capability.md).
 
 En outre, vous pouvez intégrer le [contrôle de sélecteur de personnes](people-picker-capability.md) natif Teams qui permet aux utilisateurs de rechercher et de sélectionner des personnes dans l’expérience d’application web.
+
+## <a name="code-sample"></a>Exemple de code
+
+| Exemple de nom           | Description | Node.js    |
+|:---------------------|:--------------|:---------|
+|Autorisations de l’appareil | Décrit comment illustrer Microsoft Teams’exemple d’application onglet pour les autorisations d’appareil. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

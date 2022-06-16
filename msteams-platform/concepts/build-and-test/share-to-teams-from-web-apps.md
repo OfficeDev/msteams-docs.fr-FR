@@ -3,13 +3,12 @@ title: Partager vers Teams à partir d’applications web
 description: Découvrez comment ajouter le bouton Partager dans Teams incorporé sur votre site web, avec un aperçu du site web, à l’aide d’exemples de code
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Partager Teams – Partager dans Teams
-ms.openlocfilehash: 9a2223ebe89575d81db23ca696f88a2f2d519d31
-ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
+ms.openlocfilehash: d08086d01132d86605137bb6b622821239695c84
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66118942"
+ms.locfileid: "66123460"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Partager vers Teams à partir d’applications web
 

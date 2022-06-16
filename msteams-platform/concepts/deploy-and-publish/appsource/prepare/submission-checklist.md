@@ -1,17 +1,16 @@
 ---
 title: Préparer l'envoi de votre magasin
-description: Décrit les étapes finales avant de soumettre votre application Microsoft Teams à répertorier sur le Store. Découvrez comment valider votre package d’application, compiler des instructions de test et créer les détails de votre description dans le Store.
+description: Découvrez les étapes finales avant de soumettre votre application Microsoft Teams à répertorier dans le Store. Apprenez à valider votre package d’application et bien plus encore.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: les instructions de validation de package d’application de la banque de soumissions sont localisées
-ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033007"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123166"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Préparer votre soumission au Microsoft Teams store
 
@@ -20,7 +19,7 @@ Vous avez conçu, créé et testé votre application Microsoft Teams. Vous êtes
 Regardez la vidéo suivante pour en savoir plus sur la publication de votre application dans l’App Store Microsoft Teams :
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Avant de soumettre votre application à [Espace partenaires](/office/dev/store/use-partner-center-to-submit-to-appsource), vérifiez que vous avez effectué les opérations suivantes.
