@@ -3,12 +3,12 @@ title: Référence du schéma du manifeste
 description: Dans cet article, vous aurez le schéma de manifeste pour la référence, le schéma et l’exemple de manifeste complet de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5c28429a69bad5149d6c7014ce1596dd7ea07b19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 49b3b1714d05f50ee6a4b186ff7a1a85d6209083
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123723"
+ms.locfileid: "66130507"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>Référence : schéma du manifeste pour Microsoft Teams
 
@@ -960,5 +960,5 @@ Pour créer un fichier manifeste d’application Teams :
 * [Comprendre la structure de l’application Microsoft Teams](~/concepts/design/app-structure.md)
 * [Activer la personnalisation d’application](~/concepts/design/enable-app-customization.md)
 * [Localiser votre application](~/concepts/build-and-test/apps-localization.md)
-* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/media-capabilities.md)
 * [Schéma de manifeste de prévisualisation pour les développeurs publics pour Microsoft Teams](manifest-schema-dev-preview.md)
