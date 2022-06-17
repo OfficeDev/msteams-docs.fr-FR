@@ -1,17 +1,17 @@
 ---
 title: Préparer des comptes pour créer des applications Teams
 author: zyxiaoyuer
-description: Préparer des comptes pour créer des applications Teams
+description: Dans ce module, découvrez comment préparer des comptes pour créer des applications Teams avec un compte et un programme pour les développeurs Microsoft 365 compte. Compte Azure pour héberger des ressources principales
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: a7b830ef0aba9b7e46a10d67de128aa9f3076eeb
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122914"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142212"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Préparer des comptes pour créer des applications Teams
 

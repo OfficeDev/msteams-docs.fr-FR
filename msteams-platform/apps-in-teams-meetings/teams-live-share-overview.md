@@ -4,12 +4,12 @@ description: Dans ce module, découvrez ce qu’est le Kit de développement log
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5fa509ee7835db80a99487ed7d42ab7d6ed8341d
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: dc05093f69627cc5872e25113e1ca2ca680c07c7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759654"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142499"
 ---
 ---
 
@@ -33,12 +33,12 @@ La création d’applications collaboratives peut être difficile, fastidieuse, 
 
 Voici quelques-uns des principaux avantages du SDK Live Share :
 
-* Gestion et sécurité des sessions sans souci
-* Structures de données distribuées avec état et sans état
-* Extensions multimédias pour synchroniser facilement la vidéo et l’audio
-* Respecter les privilèges de réunion à l’aide de la vérification de rôle
-* Service gratuit et entièrement managé avec une faible latence
-* Injection intelligente de l'audio
+* Gestion et sécurité des sessions sans souci.
+* Structures de données distribuées avec état et sans état.
+* Extensions multimédias pour synchroniser facilement la vidéo et l’audio.
+* Respecter les privilèges de réunion à l’aide de la vérification de rôle.
+* Service gratuit et entièrement managé avec une faible latence.
+* Injection intelligente de l'audio.
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Live Share Teams":::
 

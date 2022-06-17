@@ -1,16 +1,16 @@
 ---
 title: Bots dans Microsoft Teams
 author: surbhigupta
-description: Présentation des bots dans Microsoft Teams.
+description: Avec ce parcours d’apprentissage, commencez à utiliser des bots conversationnels dans Microsoft Teams et ses exemples de code.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602291"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143710"
 ---
 # <a name="bots-in-microsoft-teams"></a>Bots dans Microsoft Teams
 
@@ -39,7 +39,7 @@ Chaque interaction entre l’utilisateur et le bot est représentée comme une a
 
 Les bots sont des applications qui ont une interface de conversation. Vous pouvez interagir avec un bot à l’aide de texte, de cartes interactives et de reconnaissance vocale. Un bot se comporte différemment dans une conversation de canal ou de groupe et dans une conversation privée. Les conversations sont gérées via le connecteur Bot Framework. Voir [les informations de base des conversations](~/bots/how-to/conversations/conversation-basics.md).
 
-Votre bot nécessite des informations contextuelles, telles que les détails du profil utilisateur, pour accéder au contenu pertinent et améliorer l’expérience du bot. Consultez [obtenir le contexte Teams](~/bots/how-to/get-teams-context.md).
+Votre bot a besoin d’informations contextuelles, telles que les détails du profil utilisateur, pour accéder au contenu pertinent et améliorer l’expérience du bot. Voir [obtenir le contexte Teams](~/bots/how-to/get-teams-context.md).
 
 Vous pouvez envoyer et recevoir des fichiers via le bot à l’aide des API Graph ou des API de bot Teams. Consultez [Envoyer et recevoir des fichiers via un bot](~/bots/how-to/bots-filesv4.md).
 

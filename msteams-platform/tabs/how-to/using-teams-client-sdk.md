@@ -2,16 +2,15 @@
 title: Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams
 author: heath-hamilton
 ms.author: surbhigupta
-description: Vue d’ensemble du Kit de développement logiciel (SDK) client JavaScript Microsoft Teams, qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
+description: Dans ce module, découvrez le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams qui peut vous aider à créer des expériences d’application hébergées dans un <iframe> dans Teams, Office et Outlook.
 ms.localizationpriority: high
-keywords: onglets teams , canal de groupe configurable SDK statique JavaScript personnel m365
 ms.topic: conceptual
-ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033042"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144214"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Création d’onglets et d’autres expériences hébergées avec le Kit de développement logiciel (SDK) client JavaScript Microsoft Teams
 

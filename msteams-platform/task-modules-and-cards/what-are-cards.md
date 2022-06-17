@@ -1,15 +1,14 @@
 ---
 title: Cartes
-description: Décrit les cartes et leur utilisation dans des bots, des connecteurs et des extensions de messagerie
+description: Dans ce module, découvrez ce que sont les cartes et comment elles sont utilisées dans des bots, des connecteurs et des extensions de message
 ms.localizationpriority: high
-keywords: connecteurs bots cartes messagerie
 ms.topic: overview
-ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9ee24e4d66597cca4d614e21fde070ea65aa1825
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756477"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144137"
 ---
 # <a name="cards"></a>Cartes
 

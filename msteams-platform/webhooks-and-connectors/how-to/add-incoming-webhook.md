@@ -1,17 +1,16 @@
 ---
 title: Créer un webhook entrant
 author: laujan
-description: Ajouter un webhook entrant à l’application Teams et publier toutes les demandes externes à Teams à l’aide de celui-ci
-keywords: onglets teams webhook sortant
+description: Dans ce module, découvrez comment ajouter un webhook entrant à l’application Teams et publier des demandes externes à Teams à l’aide de celui-ci
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 5374b9327abb15949a31ab47443c273a111ad7b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104020"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142191"
 ---
 # <a name="create-an-incoming-webhook"></a>Créer un webhook entrant
 
@@ -89,6 +88,12 @@ Pour supprimer un webhook entrant d’un canal Teams, procédez comme suit :
 1. Complétez les champs et cases à cocher de la boîte de dialogue, puis sélectionnez **Supprimer**.
 
     ![Suppression finale](~/assets/images/finalremove.png)
+
+## <a name="code-sample"></a>Exemple de code
+
+| Exemple de nom           | Description | C#    | Node.js   |
+|:---------------------|:--------------|:---------|:--------|
+|Webhook entrant|Cet exemple de code montre comment envoyer une carte à l’aide du webhook entrant. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
 
 ## <a name="see-also"></a>Voir aussi
 

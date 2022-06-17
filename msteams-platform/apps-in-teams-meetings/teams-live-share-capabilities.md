@@ -4,12 +4,12 @@ description: Dans ce module, découvrez-en plus sur les fonctionnalités du Kit 
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756603"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143241"
 ---
 ---
 
@@ -29,13 +29,13 @@ Le [Kit de développement logiciel (SDK) Live Share](https://github.com/microsof
 **npm**
 
 ```bash
-$ npm install @microsoft/live-share --save
+npm install @microsoft/live-share --save
 ```
 
 **Yarn**
 
 ```bash
-$ yarn add @microsoft/live-share
+yarn add @microsoft/live-share
 ```
 
 ## <a name="register-rsc-permissions"></a>Inscrire des autorisations RSC
@@ -91,10 +91,10 @@ Pour activer le Kit de développement logiciel (SDK) Live Share pour votre exten
 
 Suivez les étapes pour rejoindre une session associée à la réunion d’un utilisateur :
 
-1. Initialiser le Kit de développement logiciel (SDK) client Teams
-2. Initialiser le [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)
-3. Définir les structure de données que vous voulez synchroniser. Par exemple, `SharedMap`
-4. rejoindre le conteneur
+1. Initialisez le Kit de développement logiciel (SDK) client Teams.
+2. Initialisez le [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient).
+3. Définir les structure de données que vous voulez synchroniser. Par exemple : `SharedMap`.
+4. Rejoindre le conteneur.
 
 Exemple :
 
