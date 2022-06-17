@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668073"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142100"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Étendre une extension de message Teams dans Microsoft 365
 
@@ -20,9 +20,9 @@ Le processus de mise à jour de votre extension de message Teams basée sur la r
 
 > [!div class="checklist"]
 >
-> * Mettre à jour le manifeste de l’application
-> * Ajouter un canal Outlook pour votre bot
-> * Charger une version test de votre application mise à jour dans Teams
+> * Mettez à jour le manifeste de votre application.
+> * Ajoutez un canal Outlook pour votre bot.
+> * Chargez une version test de votre application mise à jour dans Teams.
 
 Le reste de ce guide vous oriente tout au long de ces étapes et vous montre comment afficher un aperçu de votre extension de message dans Outlook pour Windows desktop et outlook.com.
 
@@ -30,10 +30,10 @@ Le reste de ce guide vous oriente tout au long de ces étapes et vous montre com
 
 Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
-* Un locataire de bac à sable du programme Microsoft 365 Developer
-* Inscription dans les *versions ciblées d’Office 365* pour votre client sandbox
-* Un environnement de test avec les applications Office installées à partir du *Canal bêta* des applications Microsoft 365
-* (Facultatif) code Microsoft Visual Studio avec l’extension du Kit de ressources Teams
+* Un locataire de bac à sable du programme Microsoft 365 Developer.
+* Inscription dans les *Versions ciblées d’Office 365* pour votre client de bac à sable.
+* Un environnement de test avec les applications Office installées à partir du *Canal bêta* de Microsoft 365 Apps.
+* (Facultatif) Microsoft Visual Studio Code avec l’extension du Kit de ressources Teams.
 
 > [!div class="nextstepaction"]
 > [Publier des applications Teams étendues pour Microsoft 365](publish.md)

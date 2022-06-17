@@ -1,16 +1,16 @@
 ---
 title: Déboguer votre Teams application
-description: Déboguer votre application Teams localement dans Teams Shared Computer Toolkit
+description: Dans ce module, découvrez comment déboguer votre application Teams localement dans le Kit de ressources Teams et les principales fonctionnalités du Kit de ressources Teams
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123975"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142226"
 ---
 # <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
 
@@ -58,7 +58,7 @@ Lorsque vous avez terminé le débogage local, vous pouvez sélectionner **Arrê
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="arrêter le débogage":::
 
-## <a name="debug-your-teams-app-locally"></a>Déboguer votre application Teams localement
+## <a name="debug-your-app-locally"></a>Déboguer votre application localement
 
 Les étapes suivantes vous aident à déboguer votre application Teams localement :
 

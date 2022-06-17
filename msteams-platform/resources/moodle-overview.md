@@ -1,26 +1,25 @@
 ---
 title: Système de gestion des formations Moodle
-description: Vue d’ensemble de l’intégration du système de gestion des formations Moodle à Teams
+description: Découvrez l’intégration de Moodle LMS à Teams, la gestion de l’apprentissage Moodle, mConnect et les liens profonds, l’accessibilité et les scénarios de conditions requises par l’utilisateur. Cette intégration fournit des appels audio, vidéo, des conversations, la gestion des activités et des cours, des informations analytiques, etc.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: liaisons profondes mConnect du système de gestion des formations moodle
-ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757345"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143304"
 ---
 # <a name="moodle-learning-management-system"></a>Système de gestion des formations Moodle
 
  Moodle est l’un des principaux systèmes de gestion des formations (LMS) open source qui fournit une expérience d’apprentissage à distance unique optimisée avec des services de confidentialité sécurisés. Le système de gestion des formations Moodle s’intègre à Microsoft Teams pour fournir les services suivants :
 
-* Appels audio ou vidéo
-* Conversations avec des étudiants
-* Gestion des activités et des cours
-* Badges et récompenses
-* Informations analytiques
+* Appels audio ou vidéo.
+* Conversations avec des étudiants.
+* Activités et cours.
+* Badges et récompenses.
+* Informations analytiques.
 
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
 This content is modified as per the requirement.-->
