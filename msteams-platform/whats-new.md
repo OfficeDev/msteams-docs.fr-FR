@@ -1,14 +1,14 @@
 ---
 title: Nouveautés pour les développeurs dans Teams
-description: Découvrez les nouvelles fonctionnalités de développement et les améliorations apportées à ces fonctionnalités dans Microsoft Teams.
+description: Dans ce parcours d’apprentissage, découvrez les nouvelles fonctionnalités de développement et les améliorations apportées à ces fonctionnalités dans Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8ca858211f87c9d514d655817b2a7887e70d4bf3
-ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
+ms.openlocfilehash: e7c361ab7ee2579e3b28df0e8d6f22538c8f4d52
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66118969"
+ms.locfileid: "66123187"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Nouveautés pour les développeurs dans Microsoft Teams
 
@@ -265,7 +265,7 @@ L'aperçu pour développeurs est un programme public qui fournit un accès antic
 
 | **Date** | **Mettre à jour** | **Recherchez ici** |
 | -------- | --------- | ------------------ |
-| 06/16/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web| Intégrer à Teams > Partager dans Teams > [Partager vers Teams à partir d’applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 16/06/2022 | Déploiement de liens pour le partage vers des équipes à partir d’applications web| Intégrer à Teams > Partager vers Teams > [Partager vers Teams à partir des applications web](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Mettre à jour les événements de conversation et d’installation dans votre bot Teams |  Créer des bots > Conversations de bot > Événements de conversation dans votre bot Teams > [Événements de configuration dans votre bot Teams](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |24/05/2022| Collaboration améliorée avec Live Share SDK |  Créer des applications pour les réunions Teams > une collaboration améliorée avec Live Share > [Vue d’ensemble](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 06/04/2022 | Partager dans Teams à partir d’une application ou d’un onglet personnel | Intégrer à Teams > Partager pour Teams > [Partager vers Teams à partir d’une application ou d’un onglet personnel](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

@@ -1,16 +1,15 @@
 ---
 title: Intégrer Sélecteur de personnes
-description: Comment utiliser le SDK client JavaScript de Teams pour intégrer le contrôle People Picker ?
-keywords: contrôle sélecteur de personnes
+description: Dans cet article, découvrez comment utiliser le Kit de développement logiciel (SDK) du client JavaScript Teams pour intégrer le contrôle Sélecteur de personnes et les avantages de l’utilisation du sélecteur de personnes.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757590"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130444"
 ---
 # <a name="integrate-people-picker"></a>Intégrer Sélecteur de personnes
 
@@ -52,7 +51,7 @@ L’image suivante affiche l’expérience de Sélecteur de personnes sur les ap
 Le contrôle d’entrée Sélecteur de personnes permet à l’utilisateur de rechercher et d’ajouter des personnes en procédant comme suit :
 
 1. Tapez le nom de la personne que vous voulez inviter. La liste s’affiche avec des suggestions de nom.
-1. Sélectionnez le nom de la personne requise dans la liste. 
+1. Sélectionnez le nom de la personne requise dans la liste.
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="S’il s’est s’il est mobile" border="true":::
 
@@ -61,7 +60,7 @@ Le contrôle d’entrée Sélecteur de personnes permet à l’utilisateur de re
 Le contrôle People Picker sur le web ou le bureau est lancé dans une fenêtre modale en haut de votre application web et pour ajouter des personnes, suivez les étapes suivantes :
 
 1. Tapez le nom de la personne que vous voulez inviter. La liste s’affiche avec des suggestions de nom.
-1. Sélectionnez le nom de la personne requise dans la liste. 
+1. Sélectionnez le nom de la personne requise dans la liste.
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="Sélecteur de personnes par nom bureau" border="true":::
 
@@ -106,6 +105,6 @@ Le tableau suivant répertorie les codes d’erreur et leurs descriptions :
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Intégrer les fonctionnalités médias](mobile-camera-image-permissions.md)
+* [Intégrer les fonctionnalités médias](~/concepts/device-capabilities/media-capabilities.md)
 * [Intégrer le code QR ou la fonctionnalité de scanneur de code-barres dans Teams](qr-barcode-scanner-capability.md)
 * [Intégrer les fonctionnalités d’emplacement sur Teams](location-capability.md)
