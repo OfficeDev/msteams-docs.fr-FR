@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 7e9ccfe5fd533f9502ea2de176efa8a46712524d
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: a7b830ef0aba9b7e46a10d67de128aa9f3076eeb
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938891"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122914"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Préparer des comptes pour créer des applications Teams
 
@@ -57,7 +57,7 @@ Vous pouvez vous inscrire au programme pour les développeurs à l’aide d’un
 
 ## <a name="azure-account-to-host-backend-resources"></a>Compte Azure pour héberger des ressources principales
 
-Le compte Azure est facultatif si votre application existante est hébergée sur un autre fournisseur de cloud et que vous souhaitez intégrer l’application existante sur la plateforme Teams.
+Si votre application existante est hébergée par un autre fournisseur de services de cloud et que vous souhaitez l'intégrer à la plateforme Teams, le compte Azure est facultatif.
 
 **ID Visual Studio**
 

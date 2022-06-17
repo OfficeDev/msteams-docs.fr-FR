@@ -1,17 +1,16 @@
 ---
 title: Aperçu du test pour les applications monétisées
 author: v-ypalikila
-description: Créez et testez les offres SaaS Preview pour l'application Teams avant de mettre l'offre en ligne.
+description: Découvrez comment créer et tester des offres d’aperçu SaaS pour l’application Teams avant de les mettre en ligne. Vous pouvez tester l’expérience d’achat de bout en bout pour vos applications monétisées dans Teams.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: équipes applications SaaS offre avant-première offre test avant-première saas monétisé
-ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073815"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123702"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Aperçu du test pour les applications monétisées
 

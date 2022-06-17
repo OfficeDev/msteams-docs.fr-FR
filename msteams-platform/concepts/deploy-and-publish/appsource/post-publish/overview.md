@@ -1,16 +1,16 @@
 ---
 title: Maintenir et prendre en charge votre application publiée
-description: Ce à quoi vous devez penser une fois que votre Store est répertoriée sur les magasins Teams et AppSource.
+description: Découvrez comment gérer votre application Microsoft Teams publiée et ce à quoi vous devez penser une fois que votre magasin est répertorié sur le Magasin Teams et AppSource.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887806"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123047"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Maintenir votre application Microsoft Teams publiée
 
@@ -64,7 +64,18 @@ Créez le lien à l’aide de l’URL suivante ajoutée à votre ID d’applicat
 
 ## <a name="complete-microsoft-365-certification"></a>Terminer la certification Microsoft 365
 
-[Microsoft 365 certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’une application ou un complément Office tiers est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, conforme aux meilleures pratiques de sécurité des applications cloud et prise en charge par Microsoft.
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) garantit que les données et la confidentialité sont correctement sécurisées et protégées lorsqu’une application Office tierce ou un complément est installé dans votre écosystème Microsoft 365. La certification confirme que votre application est compatible avec les technologies Microsoft, qu’elle est conforme aux meilleures pratiques de sécurité des applications cloud et qu’elle est prise en charge par Microsoft.
+
+## <a name="stop-app-distribution"></a>Arrêter la distribution des applications
+
+Vous pouvez supprimer une application de la [Place de marché commerciale Microsoft](/azure/marketplace/overview) pour empêcher sa découverte et son utilisation.
+
+Pour arrêter la distribution d’une application une fois que vous l’avez publié, procédez comme suit :
+
+1. Dans la page **Vue d’ensemble du produit**, **sélectionnez Arrêter la vente**. Elle supprime l’application de Microsoft AppSource.
+1. Pour lancer la suppression de la liste de l’application, dans **Espace partenaires**, sélectionnez la page **Vue d’ensemble**, puis **Arrêtez la vente**.
+
+Après avoir arrêté la distribution d’une application, vous pouvez toujours la voir dans Espace partenaires avec un état **Non disponible** . Si vous décidez de répertorier à nouveau l’application, suivez les instructions pour [publier votre application dans le Microsoft Teams Store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
 ## <a name="see-also"></a>Voir aussi
 
